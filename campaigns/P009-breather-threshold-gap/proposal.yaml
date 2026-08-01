@@ -1,0 +1,38 @@
+id: P009
+base_release: v0.8.0
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1E
+question: >-
+  Derive the exact energy deficit of the accepted sine-Gordon breather below
+  its two-kink threshold, audit its global behavior and mutations, and
+  distinguish that new positive quantity from T1E's duplicate oracle evidence
+  and definitional cross-program lift.
+invariants:
+  - C-SG-001 through C-SG-004 retain their normalized conventions
+  - the accepted two-kink threshold is 16 and the breather domain is 0 < omega < 1
+  - a threshold complement is not inflated into an independently derived interaction potential
+  - equality of two separately declared E0/sqrt(N) expressions does not establish physical object identity
+allowed_imports:
+  - C-SG-002 for exact breather energy and the two-kink threshold
+  - C-SG-004 for the distinct averaged gradient functional used by T1E's guard
+  - exact real calculus and SymPy
+  - predecessor bridge T1E at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Define the threshold deficit as 16 minus the accepted breather energy and derive its global properties
+  - id: B
+    description: Derive the deficit by integrating the exact marginal energy loss from the threshold endpoint
+  - id: C
+    description: Express the deficit through the accepted action parameterization as 16*(1-sin(J/16))
+uniqueness_evidence: null
+selection_criteria:
+  - exact dependency closure from accepted claims
+  - global domain behavior and endpoint limits
+  - no new fitted parameter or imported program identity
+  - independent calculus route and mutation sensitivity
+  - reusable package API with explicit threshold semantics
+claims_proposed:
+  - C-SG-005
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

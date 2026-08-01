@@ -362,3 +362,31 @@ claims:
     accepted_in: v0.8.0
     challenges: []
     supersedes: []
+  - id: C-SG-005
+    statement: >-
+      For every real omega with 0 < omega < 1, the C-SG-002 breather's deficit
+      below the normalized two-kink threshold is
+      Delta(omega)=16-E(omega)=16*(1-sqrt(1-omega^2)). It satisfies
+      0<Delta<16, is strictly increasing and strictly convex, tends to 0 as
+      omega approaches 0 from above, tends to 16 as omega approaches 1 from
+      below, and partitions the threshold exactly as E+Delta=16.
+    provenance: campaigns/P009-breather-threshold-gap/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-002
+    evidence:
+      - campaigns/P009-breather-threshold-gap/verify.py
+      - campaigns/P009-breather-threshold-gap/attempts/0001/result.yaml
+      - campaigns/P009-breather-threshold-gap/reviews/independent_marginal_review.py
+      - memory/vantasner/decisions/C-SG-005-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The threshold deficit is an energy difference in normalized sine-Gordon units, not a separately derived interaction potential.
+      - Endpoint values are one-sided limits because the frequency domain is open.
+    comparators: []
+    accepted_in: v0.9.0
+    challenges: []
+    supersedes: []

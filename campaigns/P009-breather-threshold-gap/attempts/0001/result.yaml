@@ -1,0 +1,9 @@
+attempt: 0001
+completed_at: '2026-08-01T12:14:50Z'
+elapsed_seconds: 2.7
+exit_code: 0
+terminal_tally: P009 ALL 13 CHECKS PASS
+verdict:
+  C-SG-005: symbolic_verified
+status: passed
+stdout: stdout.txt

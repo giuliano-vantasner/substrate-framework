@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1E
+framework_base: d35f3ee
+question: >-
+  Does the accepted breather energy define a globally controlled threshold
+  deficit while T1E's other oracle and lift statements remain duplicate or
+  conditional evidence?
+command: PYTHONPATH=src .venv/bin/python proposals/P009-breather-threshold-gap/verify.py
+oracle:
+  kind: exact_sympy_algebra_and_calculus
+  mutation_requirements:
+    - reject wrong threshold
+    - reject perturbed energy coefficient
+    - reject wrong energy power
+status: running

@@ -41,13 +41,20 @@ units:
       exact conditional optical acceleration, the mixed-scale guard, and the
       conditional virial classification; degree one is sufficient but not necessary.
   T1E:
-    disposition: partially_migrated
+    disposition: qualified
     accepted_claims:
       - C-SG-002
-    remaining_scope: >-
-      Cross-program lift and binding-gap encodings remain separate candidate
-      claims; their agreement with the accepted energy does not promote them.
-    note: C-SG-002 independently rederived the bridge's load-bearing Hamiltonian energy result.
+      - C-SG-004
+      - C-SG-005
+    qualification: >-
+      The Hamiltonian energy is duplicate evidence, the threshold complement is
+      accepted with precise deficit semantics, and the gradient functional stays
+      distinct. The triple-oracle and cross-program object/lift claims are not derived.
+    evidence:
+      - campaigns/P009-breather-threshold-gap/reviews/source_adjudication.md
+    note: >-
+      P009 promotes the exact threshold deficit and classifies T1E's point
+      evaluation as regression coverage and its lift identity as conditional definition.
   T1G:
     disposition: migrated
     accepted_claims:

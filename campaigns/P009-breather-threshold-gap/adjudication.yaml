@@ -1,0 +1,42 @@
+campaign: P009
+title: Exact sine-Gordon breather threshold deficit
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1E
+base_release: v0.8.0
+adjudicated_at: '2026-08-01T12:14:50Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The accepted threshold complement gives the exact positive quantity with
+    minimal dependencies, while independent marginal-loss integration proves
+    the same global function without relying on program-level lift claims.
+competing_candidates:
+  - id: B
+    decision: used_as_the_independent_definite_integral_construction
+  - id: C
+    decision: valid_but_not_load_bearing_to_avoid_an_unnecessary_action_dependency
+claims:
+  - id: C-SG-005
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_marginal_review.py
+  source_adjudication: reviews/source_adjudication.md
+source_disposition:
+  T1E: qualified
+qualification:
+  T1E: >-
+    Its exact energy, gradient distinction, and threshold deficit are mapped to
+    accepted claims, but the triple-oracle narrative is duplicate evidence and
+    the physical cross-program lift is only definitional conditional algebra.
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P009-breather-threshold-gap/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P009-breather-threshold-gap/reviews/independent_marginal_review.py
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+debt: []
+status: accepted

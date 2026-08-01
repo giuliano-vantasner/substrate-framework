@@ -58,6 +58,7 @@ from .sine_gordon import (
     breather_mean_gradient_integral,
     breather_peak_amplitude,
     breather_period,
+    breather_threshold_deficit,
     hamiltonian_density,
     sine_gordon_residual,
 )
@@ -96,6 +97,7 @@ __all__ = [
     "breather_mean_gradient_integral",
     "breather_peak_amplitude",
     "breather_period",
+    "breather_threshold_deficit",
     "capillary_critical_radius",
     "capillary_energy",
     "co_scaled_inverse_permeability",

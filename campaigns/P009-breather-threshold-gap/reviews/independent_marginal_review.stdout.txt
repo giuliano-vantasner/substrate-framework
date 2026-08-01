@@ -1,0 +1,6 @@
+PASS [C-SG-005-INDEPENDENT] integrating the marginal energy loss independently constructs the deficit
+PASS [C-SG-005-INDEPENDENT] the integral construction partitions the accepted threshold
+PASS [C-SG-005-INDEPENDENT] differentiating the independent integral recovers its positive integrand
+PASS [C-SG-005-INDEPENDENT] a wrong linear-power complement disagrees away from the endpoints
+ALL 4 CHECKS PASS [C-SG-005-INDEPENDENT]
+P009 INDEPENDENT REVIEW ALL 4 CHECKS PASS

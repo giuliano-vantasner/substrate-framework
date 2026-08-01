@@ -1,0 +1,15 @@
+PASS [C-SG-005] the threshold deficit has the exact closed form
+PASS [C-SG-005] breather energy and deficit partition the threshold exactly
+PASS [C-SG-005] rationalization gives an explicitly positive open-domain form
+PASS [C-SG-005] the deficit is strictly increasing on 0<omega<1
+PASS [C-SG-005] the deficit is strictly convex on 0<omega<1
+PASS [C-SG-005] the threshold-end limit is zero
+PASS [C-SG-005] the high-frequency endpoint limit is the full threshold
+PASS [C-SG-005] monotonicity and endpoint limits give the open bound 0<Delta<16
+PASS [C-SG-005] threshold, energy coefficient, and square-root power: baseline
+PASS [C-SG-005] threshold, energy coefficient, and square-root power: mutations supplied
+PASS [C-SG-005] threshold, energy coefficient, and square-root power: mutation 1 rejected
+PASS [C-SG-005] threshold, energy coefficient, and square-root power: mutation 2 rejected
+PASS [C-SG-005] threshold, energy coefficient, and square-root power: mutation 3 rejected
+ALL 13 CHECKS PASS [C-SG-005]
+P009 ALL 13 CHECKS PASS

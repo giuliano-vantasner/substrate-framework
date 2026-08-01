@@ -93,6 +93,12 @@ def breather_energy(omega: Any) -> sp.Expr:
     return 16 * breather_inverse_width(omega)
 
 
+def breather_threshold_deficit(omega: Any) -> sp.Expr:
+    """Return the energy deficit ``16-E(omega)`` below the two-kink threshold."""
+
+    return sp.simplify(16 - breather_energy(omega))
+
+
 def breather_period(omega: Any) -> sp.Expr:
     """Return the time period ``2*pi/omega``."""
 

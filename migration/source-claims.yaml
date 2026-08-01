@@ -8,9 +8,9 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  partially_migrated: 3
+  partially_migrated: 2
   pending_adjudication: 210
-  qualified: 2
+  qualified: 3
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -205,12 +205,18 @@ units:
   dynamic_check_calls: 3
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: partially_migrated
+  disposition: qualified
   accepted_claims:
   - C-SG-002
-  remaining_scope: Cross-program lift and binding-gap encodings remain separate candidate claims; their
-    agreement with the accepted energy does not promote them.
-  note: C-SG-002 independently rederived the bridge's load-bearing Hamiltonian energy result.
+  - C-SG-004
+  - C-SG-005
+  qualification: The Hamiltonian energy is duplicate evidence, the threshold complement is accepted with
+    precise deficit semantics, and the gradient functional stays distinct. The triple-oracle and cross-program
+    object/lift claims are not derived.
+  evidence:
+  - campaigns/P009-breather-threshold-gap/reviews/source_adjudication.md
+  note: P009 promotes the exact threshold deficit and classifies T1E's point evaluation as regression
+    coverage and its lift identity as conditional definition.
 - source_unit: T1G
   phase: phase-1
   path: merged-framework/bridges/phase-1/bridge_T1G_thermal_gate.py

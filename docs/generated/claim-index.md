@@ -84,6 +84,15 @@ For every real omega with 0 < omega < 1, the C-SG-001 breather's period-averaged
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-002, C-SG-003
 
+## C-SG-005
+
+For every real omega with 0 < omega < 1, the C-SG-002 breather's deficit below the normalized two-kink threshold is Delta(omega)=16-E(omega)=16*(1-sqrt(1-omega^2)). It satisfies 0<Delta<16, is strictly increasing and strictly convex, tends to 0 as omega approaches 0 from above, tends to 16 as omega approaches 1 from below, and partitions the threshold exactly as E+Delta=16.
+
+- Accepted in: `v0.9.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-002
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.
