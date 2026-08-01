@@ -1,0 +1,20 @@
+attempt: 0001
+campaign: P036
+base_release: v0.31.0
+base_commit: 9b42159
+source_unit: GW1
+source_sha256: 3aba56675f887f98c015de7caad1834893ffdbc27ca1daf3c7056694953102fc
+candidate: A
+oracles:
+  - exact local conservation of a translating 3D Gaussian tensor
+  - exact monopole, momentum, dipole, and second-moment derivatives
+  - independent inertial-particle and weak-boundary derivation
+  - finite-boundary-flux and nonsymmetric-tensor counterexamples
+mutations:
+  - permit nonzero monopole rate
+  - reverse the dipole-momentum sign
+  - accelerate the isolated dipole
+  - remove the factor two from the second-moment identity
+expected_positive_object: >-
+  A boundary- and symmetry-explicit conserved-stress moment theorem through
+  trace-free second order without a gravitational radiation assertion.

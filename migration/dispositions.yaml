@@ -517,3 +517,19 @@ units:
       P035 derives stabilizer dimension from bipartite support components and
       shows that degenerate spectra permit basis freedom beyond diagonal
       rephasings, so a nonzero quartet alone is not physical CP evidence.
+  GW1:
+    disposition: qualified
+    accepted_claims:
+      - C-MOM-001
+    qualification: >-
+      GW1's boundary/symmetry-qualified conserved moment identities and STF
+      algebra are accepted. Its explicit current/stress pair violates local
+      momentum conservation for arbitrary g(t), its binary is externally held,
+      and no accepted dependency establishes radiation, TT coupling, lowest
+      ell, 1+1 contrast, waveform, or power.
+    evidence:
+      - campaigns/P036-gw1-conserved-stress-moments/reviews/source_adjudication.md
+    note: >-
+      P036 supplies a fully conserved 3D Gaussian, independent inertial-particle
+      derivation, boundary-flux and nonsymmetric-tensor guards, and keeps
+      nonzero source moments distinct from radiation.

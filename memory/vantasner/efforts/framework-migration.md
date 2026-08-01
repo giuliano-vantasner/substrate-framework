@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T16:27:00Z'
+updated: '2026-08-01T16:58:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.31.0`, containing forty-four claims: the prior sector results plus the generic unitary rephasing and invariant theorem `C-MIX-002`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.32.0`, containing forty-five claims: the prior sector results plus the localized conserved-stress moment theorem `C-MOM-001`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 185 pending, 0 partially migrated, 3 migrated, 27 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 184 pending, 0 partially migrated, 3 migrated, 28 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -106,6 +106,7 @@ Attempts are append-only and individually reproducible.
 | 0044 | P033 exact quartic fluctuation spectrum and FG2 audit | `campaigns/P033-fg2-quartic-fluctuation-spectrum` | accepted in v0.29.0 with FG2 qualified | Twenty-seven main and eight independent checks derive and factor the complete two-level spectrum, identify the negative and translation modes, and refine the regression while exposing FG2's nonlocalized exact-sine wall and absent mass/quantum-number map | Audit FG3's mixing-matrix algebra without importing the rejected particle-family interpretation |
 | 0045 | P034 convention-complete matrix decomposition and FG3 audit | `campaigns/P034-fg3-flavor-mixing` | accepted in v0.30.0 with FG3 qualified | Thirty-five main and nine independent checks close rectangular and exceptional SVD cases, relative-basis unitarity, the row-transform conversion, and the real symmetric limit while exposing FG3's adjoint-orientation defect and absent physics dependencies | Audit FG4's unitary-matrix parameter and rephasing counts as algebra without importing a physical CKM sector |
 | 0046 | P035 generic unitary rephasing quotient and FG4 audit | `campaigns/P035-fg4-unitary-rephasing` | accepted in v0.31.0 with FG4 qualified | Thirty-one main and nine independent checks derive group dimensions, support-dependent stabilizers, the generic angle/phase count, N=2 real representative, N=3 quartet, and mutations while separating conjugation algebra from physical CP | Audit GW1's conserved multipole identities and radiation interpretation against accepted dimensional boundaries |
+| 0047 | P036 localized conserved-stress moments and GW1 audit | `campaigns/P036-gw1-conserved-stress-moments` | accepted in v0.32.0 with GW1 qualified | Thirty main and nine independent checks derive the boundary-qualified monopole, dipole, second-moment, and STF identities; a fully conserved translating Gaussian, boundary-flux and nonsymmetric-tensor counterexamples expose the source's unconserved arbitrary-current example and keep moment kinematics separate from radiation | Audit GW2's quadrupole-power claim against C-MOM-001 without importing an unaccepted gravity normalization |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -122,7 +123,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 185 bridge units remain pending, 3 are migrated, 27 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 184 bridge units remain pending, 3 are migrated, 28 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -154,11 +155,13 @@ P034 adds a convention-explicit finite complex SVD, matching Gram spectra, excep
 
 P035 adds the diagonal-rephasing action, support-component stabilizers, generic quotient and angle/phase dimensions, the N=2 real representative, and exact invariant quartets. It qualifies FG4 because its universal `2N-1` wording misses block and permutation strata, degenerate singular spectra allow basis freedom beyond rephasing, and no accepted interaction or physical CP map turns the abstract quartet into a Kobayashi-Maskawa result.
 
+P036 adds exact isolated symmetric conserved-stress identities for total energy, momentum, dipole, second moment, and both normalized STF conventions, with boundary and symmetry hypotheses made explicit. It qualifies GW1 because the source's arbitrary current and independently chosen compact stress violate local momentum conservation unless the current is constant, its binary is externally held, and neither a nonzero moment derivative nor imported TT and far-zone formulas establish radiation.
+
 ## Canonicalization
-The registry, `v0.31.0` manifest, current release, generated claim index, and generated framework memory agree on forty-four accepted claims. P001 through P035 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 185 pending, 0 partial, 3 migrated, 27 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.32.0` manifest, current release, generated claim index, and generated framework memory agree on forty-five accepted claims. P001 through P036 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 184 pending, 0 partial, 3 migrated, 28 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 185 pending, 3 migrated, 27 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit GW1's conserved multipole identities and radiation interpretation against accepted dimensional boundaries.
+The effort remains active. D4 is discharged, but D1 remains open with 184 pending, 3 migrated, 28 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit GW2's quadrupole-power claim against C-MOM-001 without importing an unaccepted gravity normalization.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

@@ -19,6 +19,13 @@ from .abelian_higgs_vortex import (
     vortex_energy_density,
     vortex_tension,
 )
+from .conserved_moments import (
+    DiscreteMassMoments,
+    IsolatedMomentRates,
+    discrete_mass_moments,
+    isolated_conserved_stress_moment_rates,
+    symmetric_trace_free,
+)
 
 from .governance import (
     GovernanceError,
@@ -225,7 +232,9 @@ __all__ = [
     "GovernanceError",
     "CheckFailure",
     "CheckLedger",
+    "DiscreteMassMoments",
     "IVPEvidence",
+    "IsolatedMomentRates",
     "LinearSystemDiagnostics",
     "BiunitaryDecomposition",
     "RealSymmetricRotation",
@@ -292,6 +301,7 @@ __all__ = [
     "exact_sine_qball_scaled_rhs",
     "finite_energy_winding_flux",
     "diagnose_linear_system",
+    "discrete_mass_moments",
     "biunitary_decomposition",
     "gram_eigenvalues",
     "real_symmetric_rotation",
@@ -302,6 +312,7 @@ __all__ = [
     "hamiltonian_density",
     "index_from_potential",
     "invariant_quartet",
+    "isolated_conserved_stress_moment_rates",
     "load_yaml",
     "line_energy",
     "local_u1_transform",
@@ -361,6 +372,7 @@ __all__ = [
     "spherical_field",
     "spherical_shell_energy",
     "symmetric_two_level_gate",
+    "symmetric_trace_free",
     "sine_gordon_residual",
     "validate_registry",
     "validate_release",

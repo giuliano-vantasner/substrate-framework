@@ -1,0 +1,17 @@
+source_unit: GW1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-12/bridge_GW1_multipole_lowest_quadrupole.py
+sha256: 3aba56675f887f98c015de7caad1834893ffdbc27ca1daf3c7056694953102fc
+reproduced_at: '2026-08-01T17:38:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-12/bridge_GW1_multipole_lowest_quadrupole.py
+environment:
+  python: repository virtual environment
+  sympy: 1.14.0
+exit_code: 0
+terminal_tally: ALL 24 CHECKS PASS
+observation: >-
+  Reproduction confirms only that the source assertions execute. Its explicit
+  current/stress pair is not locally momentum-conserving for arbitrary g(t),
+  and no assertion solves a gravitational field or radiation problem.

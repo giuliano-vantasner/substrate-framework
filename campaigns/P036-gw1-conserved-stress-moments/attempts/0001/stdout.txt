@@ -1,0 +1,32 @@
+PASS [P036-GW1] the audited GW1 source is the hash-pinned candidate unit
+PASS [P036-GW1] GW1 exits cleanly
+PASS [P036-GW1] GW1's declared twenty-four-check tally reproduces
+PASS [P036-GW1] a translating three-dimensional Gaussian obeys exact energy continuity
+PASS [P036-GW1] the same symmetric tensor obeys all three momentum equations
+PASS [P036-GW1] the normalized translating Gaussian has constant monopole and momentum
+PASS [P036-GW1] its dipole is affine rather than generally constant
+PASS [P036-GW1] its exact second moment satisfies ddot I equals twice integrated stress
+PASS [P036-GW1] the reusable isolated-source API reproduces the complete Gaussian ladder
+PASS [P036-GW1] the normalized STF acceleration is twice the STF integrated stress
+PASS [P036-GW1] GW1's quadrupole convention is exactly three times normalized STF
+PASS [P036-GW1] conserved moment coefficients: baseline
+PASS [P036-GW1] conserved moment coefficients: mutations supplied
+PASS [P036-GW1] conserved moment coefficients: mutation 1 rejected
+PASS [P036-GW1] conserved moment coefficients: mutation 2 rejected
+PASS [P036-GW1] conserved moment coefficients: mutation 3 rejected
+PASS [P036-GW1] conserved moment coefficients: mutation 4 rejected
+PASS [P036-GW1] a nonzero boundary flux changes the monopole despite local continuity
+PASS [P036-GW1] a nonsymmetric conserved tensor need not identify dipole velocity with momentum
+PASS [P036-GW1] stress symmetry is the load-bearing D-dot equals P premise
+PASS [P036-GW1] constant origin translation leaves the isolated second derivative unchanged
+PASS [P036-GW1] a nonzero static trace-free quadrupole does not imply time variation
+PASS [P036-GW1] GW1's explicit sloshing current has unconstrained nonzero total-momentum rate
+PASS [P036-GW1] GW1 chooses its current and compact stress independently instead of enforcing the local equation
+PASS [P036-GW1] a compact stress surface integral cannot cancel the arbitrary current's total derivative
+PASS [P036-GW1] GW1's orbit is externally held rather than closed as an isolated stress tensor
+PASS [P036-GW1] GW1's nonzero binary second moment is kinematic but not a radiation oracle
+PASS [P036-GW1] GW1 imports its retarded radiation rule and forward TT coupling
+PASS [P036-GW1] GW1's lowest-radiating-order function is a declared two-case lookup
+PASS [P036-GW1] conservation suppresses lower derivatives but supplies no gravitational field
+ALL 30 CHECKS PASS [P036-GW1]
+P036 GW1 CONSERVED-STRESS MOMENT AUDIT ALL 30 CHECKS PASS

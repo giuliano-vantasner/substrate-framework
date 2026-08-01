@@ -156,6 +156,15 @@ Conditional on the abstract N-by-N unitary relative-basis matrices of C-MIX-001,
 - Compatibility: `compatible_extension`
 - Dependencies: C-MIX-001
 
+## C-MOM-001
+
+Let T^{mu nu} be a smooth symmetric tensor in inertial flat 3+1 coordinates satisfying partial_mu T^{mu nu}=0. Assume localization strong enough that the surface terms for total charges and the coordinate- weighted first and second moments vanish. Define M=integral T^{00} d^3x, P^i=integral T^{0i} d^3x, D^i=integral x^i T^{00} d^3x, and I^{ij}=integral x^i x^j T^{00} d^3x. Then dot M=0, dot P^i=0, dot D^i=P^i, ddot D^i=0, and ddot I^{ij}=2*integral T^{ij} d^3x. Thus the dipole is generally affine in time rather than constant. For normalized STF I_STF=I-delta*Tr(I)/3, ddot I_STF^{ij}=2*integral [T^{ij}-delta^{ij} T^{kk}/3] d^3x. The alternative source convention Q=3*I-delta*Tr(I) is exactly 3*I_STF and has three times this acceleration. Constant translation of the spatial origin leaves ddot I unchanged because ddot M and ddot D vanish. Nonzero boundary flux invalidates the conserved integrated charges, and without T^{i0}=T^{0i}, dot D^i need not equal P^i. These identities establish no gravitational field equation, retarded solution, TT coupling, radiating multipole order, nonzero quadrupole radiation, waveform, power, gravitational coupling, 1+1 contrast, or substrate realization.
+
+- Accepted in: `v0.32.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.

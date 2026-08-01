@@ -1,0 +1,11 @@
+PASS [P036-INDEPENDENT] independent inertial particles conserve monopole and momentum
+PASS [P036-INDEPENDENT] their dipole derivative is momentum and acceleration vanishes
+PASS [P036-INDEPENDENT] direct differentiation independently gives the factor-two stress identity
+PASS [P036-INDEPENDENT] trace removal commutes with the exact second derivative
+PASS [P036-INDEPENDENT] constant translation does not change the isolated second-moment acceleration
+PASS [P036-INDEPENDENT] an independent finite-domain continuity example retains its boundary flux
+PASS [P036-INDEPENDENT] an independent nonsymmetric conserved example separates energy flux and momentum
+PASS [P036-INDEPENDENT] a static anisotropic STF tensor is nonzero but has zero time derivative
+PASS [P036-INDEPENDENT] moment identities contain no wave operator, coupling, or radiative boundary condition
+ALL 9 CHECKS PASS [P036-INDEPENDENT]
+P036 INDEPENDENT WEAK-MOMENT REVIEW ALL 9 CHECKS PASS

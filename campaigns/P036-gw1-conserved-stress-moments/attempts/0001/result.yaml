@@ -1,0 +1,18 @@
+attempt: 0001
+completed_at: '2026-08-01T17:44:29Z'
+exit_code: 0
+terminal_tally: 30
+verdict:
+  C-MOM-001: symbolic_verified
+evidence:
+  - fully conserved translating three-dimensional Gaussian
+  - exact moment ladder and STF normalization
+  - boundary-flux and nonsymmetric-stress counterexamples
+  - GW1 local-momentum inconsistency and radiation-import audit
+initial_failures:
+  - >-
+    The first final source-provenance check matched a phrase across a line
+    break; it was replaced by two stable tokens without changing the external-
+    orbit isolation criterion.
+status: passed_after_technical_repair
+stdout: stdout.txt

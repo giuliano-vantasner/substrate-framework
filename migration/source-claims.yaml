@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 185
-  qualified: 27
+  pending_adjudication: 184
+  qualified: 28
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2422,8 +2422,17 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOM-001
+  qualification: GW1's boundary/symmetry-qualified conserved moment identities and STF algebra are accepted.
+    Its explicit current/stress pair violates local momentum conservation for arbitrary g(t), its binary
+    is externally held, and no accepted dependency establishes radiation, TT coupling, lowest ell, 1+1
+    contrast, waveform, or power.
+  evidence:
+  - campaigns/P036-gw1-conserved-stress-moments/reviews/source_adjudication.md
+  note: P036 supplies a fully conserved 3D Gaussian, independent inertial-particle derivation, boundary-flux
+    and nonsymmetric-tensor guards, and keeps nonzero source moments distinct from radiation.
 - source_unit: GW2
   phase: phase-12
   path: merged-framework/bridges/phase-12/bridge_GW2_quadrupole_power.py

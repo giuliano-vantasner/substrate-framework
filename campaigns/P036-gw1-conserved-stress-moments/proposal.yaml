@@ -1,0 +1,47 @@
+id: P036
+base_release: v0.31.0
+base_commit: 9b42159
+source_baseline: substrate@6d1f4e0
+source_units: [GW1]
+question: >-
+  Derive the exact monopole, dipole, momentum, and second-moment identities of
+  a localized symmetric conserved stress tensor in flat 3+1 spacetime, then
+  determine whether those identities alone prove a lowest radiating
+  gravitational multipole.
+invariants:
+  - v0.31.0 contains no accepted 3+1 gravitational field equation or radiation sector
+  - local conservation yields integrated identities only after boundary fluxes are controlled
+  - the mass dipole is generally affine in time rather than constant
+  - stress symmetry is required to identify energy flux with momentum density and close the second-moment identity
+  - suppression of lower moment derivatives does not prove that a quadrupole radiates
+allowed_imports:
+  - smooth localized tensor calculus and exact integration by parts in flat 3+1 spacetime
+  - a declared symmetric tensor satisfying partial_mu T^{mu nu}=0
+  - GW1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote the exact localized conserved-stress moment ladder through
+      second order, including boundary terms and the trace-free quadrupole
+      derivative identity, while excluding gravitational radiation
+  - id: B
+    description: >-
+      Promote only conserved total energy/momentum and affine dipole motion if
+      the second-moment relation or source conventions do not close
+  - id: C
+    description: >-
+      Promote GW1's claim that mass quadrupole radiation is the lowest physical
+      3+1 gravitational radiation channel
+uniqueness_evidence: null
+selection_criteria:
+  - exact local-to-integrated derivation with displayed boundary terms
+  - explicit stress symmetry, index, sign, and measure conventions
+  - correct monopole, momentum, dipole, and second-moment time derivatives
+  - translation and constant-velocity consistency
+  - counterexamples with nonzero boundary flux or nonsymmetric tensors
+  - accepted dependency closure for every radiation interpretation
+claims_proposed:
+  - provisional C-MOM-001
+comparators_blinded_until: >-
+  conservation_boundary_symmetry_moment_ladder_and_radiation_dependency_boundary_frozen
+status: accepted
