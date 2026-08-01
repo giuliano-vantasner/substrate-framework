@@ -467,3 +467,20 @@ units:
       replaces separatrix shooting with exact quadratures, shows the source
       domain counts three half-orbits at omega=0.6, and retains EM1's exact
       width and profile mismatch.
+  FG2:
+    disposition: qualified
+    accepted_claims:
+      - C-QBL-001
+      - C-QBL-003
+    qualification: >-
+      FG2's conditional quartic scalar Hessian and complete two-level
+      Pöschl-Teller spectrum are accepted. Its exact-sine third level violates
+      the declared wall localization and lacks box refinement; negative and
+      zero Hessian levels do not establish stability, positive masses, or a
+      particle-generation tower.
+    evidence:
+      - campaigns/P033-fg2-quartic-fluctuation-spectrum/reviews/source_adjudication.md
+    note: >-
+      P033 closes the quartic spectrum by exact partner factorization and
+      refines its numerical regression. It measures the FG2 exact-sine wall
+      field near 0.29 and finds no executable mass or quantum-number map.

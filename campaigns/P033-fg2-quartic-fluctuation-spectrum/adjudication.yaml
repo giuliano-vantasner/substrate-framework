@@ -1,0 +1,40 @@
+campaign: P033
+title: Exact quartic fluctuation spectrum and FG2 family-tower audit
+source_baseline: substrate@6d1f4e0
+source_units: [FG2]
+base_release: v0.28.0
+adjudicated_at: '2026-08-01T17:01:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Exact second variation, two eigenpair residuals, terminating partner
+    factorization, L2/parity checks, and finite-difference refinement close the
+    complete quartic spectrum while fixing both mode roles.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_factorization_closes_completeness_and_the_continuum_threshold_without_importing_the_source_spectrum_formula
+  - id: C
+    decision: rejected_because_the_levels_are_negative_and_zero_and_no_particle_mass_or_quantum_number_map_is_constructed
+claims:
+  - id: C-QBL-003
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_factorization_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-QBL-003-review.md
+source_disposition:
+  FG2: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P033-fg2-quartic-fluctuation-spectrum/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-11/bridge_FG2_family_tower.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P033-fg2-quartic-fluctuation-spectrum/reviews/independent_factorization_review.py
+  - .venv/bin/python -m pytest -q tests/test_qball_fluctuations.py tests/test_quartic_qball.py
+debt: []
+status: accepted

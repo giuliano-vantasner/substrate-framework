@@ -122,6 +122,16 @@ from .quartic_qball import (
     quartic_qball_profile,
     quartic_qball_residual,
 )
+from .qball_fluctuations import (
+    FluctuationSpectrumEvidence,
+    quartic_fluctuation_bound_eigenvalues,
+    quartic_fluctuation_bound_modes,
+    quartic_fluctuation_continuum_threshold,
+    quartic_fluctuation_operator,
+    quartic_fluctuation_potential,
+    quartic_qball_effective_potential,
+    solve_quartic_fluctuation_spectrum,
+)
 from .sine_gordon import (
     breather_action,
     breather_action_lattice_adjacent_gap,
@@ -291,6 +301,14 @@ __all__ = [
     "quartic_qball_inverse_width",
     "quartic_qball_profile",
     "quartic_qball_residual",
+    "FluctuationSpectrumEvidence",
+    "quartic_fluctuation_bound_eigenvalues",
+    "quartic_fluctuation_bound_modes",
+    "quartic_fluctuation_continuum_threshold",
+    "quartic_fluctuation_operator",
+    "quartic_fluctuation_potential",
+    "quartic_qball_effective_potential",
+    "solve_quartic_fluctuation_spectrum",
     "single_scale_tension",
     "refinement_study",
     "render_claim_memory",

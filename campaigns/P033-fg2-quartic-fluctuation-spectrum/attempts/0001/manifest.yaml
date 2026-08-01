@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [FG2]
+framework_base: 3bc60b3
+question: >-
+  Which exact scalar fluctuation spectrum and mode roles survive FG2's
+  completeness, boundary, stability, and family-map audit?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P033-fg2-quartic-fluctuation-spectrum/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-11/bridge_FG2_family_tower.py
+oracle:
+  kind: exact_second_variation_partner_factorization_and_refined_spectrum
+  mutation_requirements:
+    - well constant shift and depth are load-bearing
+    - negative and zero modes retain their actual roles
+    - the exact-sine background must satisfy its declared wall condition
+    - particle generations require an executable state map
+status: passed

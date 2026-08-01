@@ -1,0 +1,13 @@
+source_unit: FG2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-11/bridge_FG2_family_tower.py
+sha256: aef0ed225fca1f12fcccb284015d97ce3faa25291f07addda24e82ebbc5ae166
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-11/bridge_FG2_family_tower.py
+observed_at: '2026-08-01T16:55:00Z'
+exit_code: 0
+terminal_tally: ALL 7 CHECKS PASS
+scope_note: >-
+  The source's quartic spectrum reproduces. P033 independently closes it
+  exactly. The exact-sine background used for the claimed third level is not
+  localized at the box wall, and the source does not box-refine that level.

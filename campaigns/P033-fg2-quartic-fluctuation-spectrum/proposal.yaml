@@ -1,0 +1,45 @@
+id: P033
+base_release: v0.28.0
+base_commit: 3bc60b3
+source_baseline: substrate@6d1f4e0
+source_units: [FG2]
+question: >-
+  Derive the fluctuation operator and exact bound spectrum of C-QBL-001's
+  quartic profile, then determine whether its modes establish stability,
+  particle generations, or masses.
+invariants:
+  - C-QBL-001 is a conditional stationary profile with no accepted stability theorem
+  - a translational zero mode follows from continuous translation symmetry and is not an excited family
+  - a negative unconstrained Hessian mode cannot be relabeled a positive particle mass
+  - particle generations require an independently defined Hilbert space and quantum-number map
+allowed_imports:
+  - C-QBL-001
+  - exact Sturm-Liouville and hyperbolic-function calculus
+  - finite-difference spectra only as resolution-bounded regression evidence
+  - FG2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote the exact conditional second-variation operator, complete two-mode
+      bound spectrum, eigenfunctions, parity, and continuum threshold while
+      excluding stability and family interpretations
+  - id: B
+    description: >-
+      Promote only the exact operator and exhibited eigenpairs if completeness,
+      threshold, or numerical refinement does not close
+  - id: C
+    description: >-
+      Interpret the bound modes as a physical particle-generation tower with
+      ordered positive masses and shared Standard-Model quantum numbers
+uniqueness_evidence: null
+selection_criteria:
+  - exact second variation in C-QBL-001's convention
+  - exact eigenpair residuals and L2 behavior
+  - completeness and continuum-threshold proof
+  - parity and translation-mode identification
+  - negative-mode and constrained-stability honesty
+  - absence of inserted family count or mass dictionary
+claims_proposed:
+  - provisional C-QBL-003
+comparators_blinded_until: operator_spectrum_threshold_and_interpretation_boundaries_frozen
+status: accepted

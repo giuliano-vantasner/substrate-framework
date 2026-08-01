@@ -183,6 +183,15 @@ Conditional on the dimensionless 1+1 stationary-profile equation f_xx=sin(f)/2-o
 - Compatibility: `compatible_extension`
 - Dependencies: C-U1-001, C-QBL-001
 
+## C-QBL-003
+
+Conditional on C-QBL-001 and the declared whole-line scalar energy E[f]=integral dx*[f_x^2/2+kappa^2*f^2/2-f^4/48], its positive quartic profile has unconstrained scalar Hessian L=-d_x^2+kappa^2-6*kappa^2*sech^2(kappa*(x-x0)). On L2(R), the complete discrete spectrum below the continuum threshold kappa^2 consists of exactly two simple levels: lambda_0=-3*kappa^2 with even nodeless mode proportional to sech^2(kappa*(x-x0)), and lambda_1=0 with odd one-node mode proportional to sech(kappa*(x-x0))*tanh(kappa*(x-x0)). The zero mode is exactly the translation tangent of the background. A terminating s=2 to s=1 to free partner factorization proves completeness, and the essential continuum begins at kappa^2. The negative and zero Hessian levels are not positive particle masses or generations; this scalar operator alone establishes no fixed-charge, spectral, orbital, or nonlinear Q-ball stability, exact-sine spectrum, Standard-Model quantum numbers, flavor tower, or substrate realization.
+
+- Accepted in: `v0.29.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-QBL-001
+
 ## C-RG-001
 
 For positive radius R and density lambda, the circumference line energy E_line = 2*pi*R*lambda is homogeneous of degree one, has constant positive derivative 2*pi*lambda, and has no stationary radius. For positive surface density sigma, E_shell = 4*pi*R^2*sigma is homogeneous of degree two and has radius-dependent derivative 8*pi*R*sigma. For positive line tension T and pressure P, E_cap = 2*pi*R*T - pi*R^2*P + C has the unique strict global maximum R = T/P. Conditional line constructions with coefficients T and the C-SG-002 breather energy share only the degree-one line form; their energies are equal for every positive R if and only if their coefficients are equal.

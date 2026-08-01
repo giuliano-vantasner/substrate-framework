@@ -1,0 +1,10 @@
+PASS [P033-INDEPENDENT] independent s=2 factorization is exact
+PASS [P033-INDEPENDENT] the s=2 partner is the s=1 operator
+PASS [P033-INDEPENDENT] the s=1 partner terminates at the free operator
+PASS [P033-INDEPENDENT] independent exact eigenpairs are minus three and zero in scaled units
+PASS [P033-INDEPENDENT] the modes are L2 and parity orthogonal
+PASS [P033-INDEPENDENT] the odd mode is the derivative of the sech background
+PASS [P033-INDEPENDENT] the free partner has continuum threshold zero before the plus-one shift
+PASS [P033-INDEPENDENT] the exact levels cannot both be positive particle masses
+ALL 8 CHECKS PASS [P033-INDEPENDENT]
+P033 INDEPENDENT FACTORIZATION REVIEW ALL 8 CHECKS PASS
