@@ -188,7 +188,7 @@ def log_hook_event(
         hook: Hook name (e.g. 'PreCompact', 'SessionStart',
               'SubagentStart', 'SubagentStop').
         outcome: 'ok', 'error', 'skip', 'empty'.
-        session_id: Claude Code session ID.
+        session_id: Agent runtime session ID.
         agent_type: Subagent type (for SubagentStart/Stop).
         context_bytes: Bytes of context loaded/saved.
         entries_written: Number of memory entries written.

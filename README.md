@@ -14,7 +14,7 @@ The central rule is that chronology is not authority. Campaigns are immutable re
 - `docs/generated/` is generated from the accepted registry; agents do not hand-edit it.
 - `memory-templates/` contains durable work, research, review, and promotion contracts.
 - `tools/agent-memory/` contains the memory CLI program only. No prior memory entries were copied.
-- `.claude/skills/physics-erdos-loop/` contains the persistent physics workflow.
+- `.agents/skills/physics-erdos-loop/` contains the repository-scoped native Codex physics workflow.
 
 ## Bootstrap
 

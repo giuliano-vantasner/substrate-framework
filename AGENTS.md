@@ -17,7 +17,7 @@ An effort succeeds only when all of the following are true:
 7. The full downstream dependency replay passes, including units, conventions, known limits, import inventories, formal statements, tests, and generated consumers.
 8. Reusable definitions and derivations live in importable modules with tests. Campaign code calls them rather than duplicating functions, constants, or proof-shaped prose.
 9. The accepted claim registry, release manifest, generated documentation, and durable memory agree.
-10. The debt ledger is empty: no unresolved assumptions, free parameters, imports, residuals, broken consumers, or narrative inconsistencies remain.
+10. The debt ledger is empty: no unresolved assumptions, residuals, broken consumers, or narrative inconsistencies remain.  Resolve imported parameters when appropriate.
 
 Only the user may change the objective or accept a reduced scope. Runtime interruption, missing authority, or an external dependency may pause execution, but it does not turn incomplete work into success.
 
@@ -37,7 +37,7 @@ Never silently edit an earlier campaign. Never edit files under `docs/generated/
 
 ## Start every durable task this way
 
-1. Load `.claude/skills/physics-erdos-loop/SKILL.md` for physics, derivation, simulation, formalization, campaign, claim, or framework-reconciliation work.
+1. Load `.agents/skills/physics-erdos-loop/SKILL.md` for physics, derivation, simulation, formalization, campaign, claim, or framework-reconciliation work.
 2. Read `governance/releases/current.yaml`, `governance/claims.yaml`, and the relevant accepted source modules.
 3. Search durable memory with the bundled `memory` CLI, then verify every reused fact at its source. Memory is an index and work record, not authority.
 4. Inspect git status and history. Separate committed baseline, uncommitted work, generated outputs, and attempt artifacts.
