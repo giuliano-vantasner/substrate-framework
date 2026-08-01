@@ -1,0 +1,9 @@
+PASS [C-OG-001-INDEPENDENT] Christoffel-to-Ricci reconstruction gives the claimed curvature
+PASS [C-OG-001-INDEPENDENT] independently reconstructed tensor Box(log(n)) equals Ricci curvature
+PASS [C-OG-001-INDEPENDENT] the metric connection independently gives c0^2*n_x/(2*n^3)
+PASS [C-OG-001-INDEPENDENT] the predecessor's concrete f(n)=n counterexample is genuinely off shell
+PASS [C-OG-002-INDEPENDENT] direct Christoffel substitution gives the exact conditional drift
+PASS [C-OG-001-INDEPENDENT] an explicit 3+1 radial optical metric rejects dimensional overextension
+ALL 5 CHECKS PASS [C-OG-001-INDEPENDENT]
+ALL 1 CHECKS PASS [C-OG-002-INDEPENDENT]
+P004 INDEPENDENT REVIEW ALL 6 CHECKS PASS

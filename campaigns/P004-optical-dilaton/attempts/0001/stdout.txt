@@ -1,0 +1,24 @@
+PASS [C-OG-001] the declared optical metric has constant determinant -1/c0^2
+PASS [C-OG-001] the static volume-form wave operator yields the canonical closed form
+PASS [C-OG-001] Box_g(log(n)) equals the optical Ricci scalar for arbitrary n(x)
+PASS [C-OG-001] arbitrary-profile n-double-prime matching forces f'(n)=1/n
+PASS [C-OG-001] n-prime-squared matching consistently forces f''(n)=-1/n^2
+PASS [C-OG-001] integrating the forced derivative gives log(n) up to a constant
+PASS [C-OG-001] an arbitrary additive dilaton constant leaves the identity invariant
+PASS [C-OG-001] general-composition scale and nonlogarithmic contamination: baseline
+PASS [C-OG-001] general-composition scale and nonlogarithmic contamination: mutations supplied
+PASS [C-OG-001] general-composition scale and nonlogarithmic contamination: mutation 1 rejected
+PASS [C-OG-001] general-composition scale and nonlogarithmic contamination: mutation 2 rejected
+PASS [C-OG-001] general-composition scale and nonlogarithmic contamination: mutation 3 rejected
+PASS [C-OG-002] the conditional dilaton is exactly log(1/(1+2*Phi/c0^2))
+PASS [C-OG-002] the weak-field dilaton coefficient is exactly -2*U/c0^2
+PASS [C-OG-002] the exact conditional drift is -(1+2*Phi/c0^2)*Phi_x
+PASS [C-OG-002] the scaled weak-field acceleration tends to -U_x
+PASS [C-OG-002] TF coefficient, sign, and geodesic normalization: baseline
+PASS [C-OG-002] TF coefficient, sign, and geodesic normalization: mutations supplied
+PASS [C-OG-002] TF coefficient, sign, and geodesic normalization: mutation 1 rejected
+PASS [C-OG-002] TF coefficient, sign, and geodesic normalization: mutation 2 rejected
+PASS [C-OG-002] TF coefficient, sign, and geodesic normalization: mutation 3 rejected
+ALL 12 CHECKS PASS [C-OG-001]
+ALL 9 CHECKS PASS [C-OG-002]
+P004 ALL 21 CHECKS PASS

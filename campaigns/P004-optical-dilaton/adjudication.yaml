@@ -1,0 +1,45 @@
+campaign: P004
+title: Exact 1+1 optical curvature-dilaton and conditional weak-field maps
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1B
+base_release: v0.3.0
+adjudicated_at: '2026-08-01T11:27:57Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Independent arbitrary-profile derivative coefficients prove both the exact
+    identity and the complete composition solution log(n)+C, correcting the
+    predecessor's weaker single-alternative uniqueness argument.
+competing_candidates:
+  - id: B
+    decision: used_as_independent_christoffel_ricci_and_geodesic_reconstruction
+  - id: C
+    decision: retained_as_counterexample_and_weak_field_sensitivity_route
+claims:
+  - id: C-OG-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-OG-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_tensor_review.py
+source_disposition:
+  T1B: partially_migrated
+remaining_source_scope:
+  T1B: >-
+    A matter-sourced dilaton action and Poisson normalization, plus any positive
+    3+1 gravity construction, remain outside the accepted claim delta.
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P004-optical-dilaton/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P004-optical-dilaton/reviews/independent_tensor_review.py
+  - .venv/bin/python -m pytest -q tests/test_optical_geometry.py
+debt: []
+status: accepted

@@ -10,6 +10,18 @@ allowed_dispositions:
   - duplicate_evidence
   - out_of_scope
 units:
+  T1B:
+    disposition: partially_migrated
+    accepted_claims:
+      - C-OG-001
+      - C-OG-002
+    remaining_scope: >-
+      The matter-sourced dilaton equation and its claimed Poisson normalization
+      remain unaccepted, and the verified 3+1 counterexample is only a scope
+      guard rather than a positive gravity construction.
+    note: >-
+      P004 promoted the exact 1+1 identity, its true uniqueness class modulo a
+      constant, and the conditional TF/geodesic weak-field map.
   T1E:
     disposition: partially_migrated
     accepted_claims:

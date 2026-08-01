@@ -3,6 +3,24 @@
 
 This document is generated from `governance/claims.yaml`.
 
+## C-OG-001
+
+For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.
+
+- Accepted in: `v0.4.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
+## C-OG-002
+
+Conditional on C-OG-001 and the imported constitutive relation n = 1/(1 + 2*Phi/c0^2), the optical dilaton is log(n) = -log(1 + 2*Phi/c0^2), with leading weak-field term -2*Phi/c0^2. The metric's static slow coordinate-geodesic acceleration is exactly -(1 + 2*Phi/c0^2)*Phi_x; under Phi = lambda*U it satisfies acceleration/lambda -> -U_x as lambda -> 0+.
+
+- Accepted in: `v0.4.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-OG-001
+
 ## C-SG-001
 
 For every real omega with 0 < omega < 1, eta = sqrt(1-omega^2), and real x,t, the field phi(x,t) = 4 atan(eta sin(omega t)/(omega cosh(eta x))) is spatially localized, periodic with period 2*pi/omega, and satisfies phi_tt - phi_xx + sin(phi) = 0 identically in normalized units.

@@ -1,0 +1,39 @@
+id: P004
+base_release: v0.3.0
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1B
+question: >-
+  Derive the exact 1+1 optical-metric curvature/dilaton identity, determine its
+  actual uniqueness class, and conditionally derive the weak-field potential
+  and geodesic-drift map without importing an unstated matter field equation.
+invariants:
+  - accepted claims C-SG-001 through C-SG-004 remain unchanged
+  - the optical result is strictly 1+1 dimensional
+  - the refractive index is positive and static
+  - the medium signal speed c0 is positive and explicit
+  - additive constants in the dilaton are physically and geometrically inert
+allowed_imports:
+  - the declared model metric g = diag(-1/n, n/c0^2)
+  - exact pseudo-Riemannian differential geometry and real calculus
+  - the conditional TF constitutive relation n = 1/(1 + 2*Phi/c0^2)
+  - predecessor bridge T1B at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Match independent n-double-prime and n-prime-squared coefficients for a general composition f(n) to derive f = log(n) plus a constant
+  - id: B
+    description: Derive curvature from Christoffels and the scalar wave operator from the constant metric volume form as independent tensor constructions
+  - id: C
+    description: Reproduce the predecessor's concrete profile guard and weak-field series without claiming general uniqueness
+uniqueness_evidence: null
+selection_criteria:
+  - exact arbitrary-profile identity
+  - genuine uniqueness modulo an explicitly identified symmetry
+  - independent curvature and wave-operator construction
+  - assumption and parameter economy
+  - strict 1+1 scope and honest conditional imports
+claims_proposed:
+  - C-OG-001
+  - C-OG-002
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: active

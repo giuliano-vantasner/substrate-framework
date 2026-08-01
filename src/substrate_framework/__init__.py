@@ -20,6 +20,15 @@ from .numerics import (
     solve_ivp_evidence,
     solve_method_of_lines,
 )
+from .optical_geometry import (
+    index_from_potential,
+    optical_box_static_1d,
+    optical_dilaton,
+    optical_metric_1d,
+    optical_ricci_scalar_1d,
+    slow_geodesic_acceleration_1d,
+    slow_geodesic_acceleration_from_potential,
+)
 from .sine_gordon import (
     breather_action,
     breather_energy,
@@ -56,7 +65,12 @@ __all__ = [
     "breather_peak_amplitude",
     "breather_period",
     "hamiltonian_density",
+    "index_from_potential",
     "load_yaml",
+    "optical_box_static_1d",
+    "optical_dilaton",
+    "optical_metric_1d",
+    "optical_ricci_scalar_1d",
     "refinement_study",
     "render_claim_memory",
     "render_claim_index",
@@ -64,6 +78,8 @@ __all__ = [
     "solve_bvp_evidence",
     "solve_ivp_evidence",
     "solve_method_of_lines",
+    "slow_geodesic_acceleration_1d",
+    "slow_geodesic_acceleration_from_potential",
     "sine_gordon_residual",
     "validate_registry",
     "validate_release",

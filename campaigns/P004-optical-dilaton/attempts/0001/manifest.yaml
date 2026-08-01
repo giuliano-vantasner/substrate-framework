@@ -1,0 +1,16 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1B
+framework_base: 5709eab
+question: Derive arbitrary-profile optical curvature matching and its true uniqueness class.
+command: PYTHONPATH=src .venv/bin/python proposals/P004-optical-dilaton/verify.py
+oracle:
+  kind: exact_sympy_differential_geometry
+  obligations:
+    - arbitrary-profile curvature and scalar-wave identity
+    - uniqueness modulo additive constants
+    - conditional index-potential and geodesic map
+    - mutation-sensitive scale, sign, and normalization checks
+status: running
