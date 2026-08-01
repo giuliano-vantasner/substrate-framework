@@ -484,3 +484,19 @@ units:
       P033 closes the quartic spectrum by exact partner factorization and
       refines its numerical regression. It measures the FG2 exact-sine wall
       field near 0.29 and finds no executable mass or quantum-number map.
+  FG3:
+    disposition: qualified
+    accepted_claims:
+      - C-MIX-001
+    qualification: >-
+      FG3's convention-correct SVD, relative-unitary, and real-symmetric
+      matrix subclaims are accepted through a generalized theorem. Its returned
+      row transform is incompatible with its mixing formula, zero and repeated
+      singular cases are omitted, and no accepted dependency establishes its
+      CKM, Cabibbo, current, GIM, anomaly, or substrate interpretations.
+    evidence:
+      - campaigns/P034-fg3-flavor-mixing/reviews/source_adjudication.md
+    note: >-
+      P034 supplies rectangular and rank-deficient closure and an exact
+      orientation counterexample in which FG3's formula differs from direct
+      field substitution even though both candidate matrices are unitary.

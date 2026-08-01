@@ -138,6 +138,15 @@ Conditional on positive action scale S, speed c, length a, and dimensionless rat
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-002, C-MED-001
 
+## C-MIX-001
+
+For every finite complex m-by-n matrix M, there are square unitary column bases U and V and a same-shape rectangular diagonal Sigma with nonnegative entries such that U^dagger*M*V=Sigma and M=U*Sigma*V^dagger. The nonzero spectra of M*M^dagger and M^dagger*M are the squared singular values with the shape-required additional zeros. Individual bases are noncanonical: a repeated nonzero singular block permits the same unitary rotation on its paired left and right bases, while left and right null blocks permit independent unitary choices. For two same-size unitary column bases U_a,U_b, R=U_a^dagger*U_b is unitary and identical ordered bases give R=I. If row transforms A_i instead satisfy A_i*M_i*B_i^dagger=Sigma_i and map original coordinates to diagonal coordinates, the corresponding relative transform is A_a*A_b^dagger, not A_a^dagger*A_b. For a real symmetric matrix [[a,b],[b,d]], the proper rotation [[cos(theta),sin(theta)],[-sin(theta),cos(theta)]] with 2*theta=atan2(2*b,d-a) diagonalizes by R^T*M*R; a scalar identity block has arbitrary rotation and the numerical API chooses theta=0. These matrix facts establish no fermion mass matrix, Yukawa texture, flavor or family ontology, CKM identity, Cabibbo prediction, CP-phase count, charged-current or GIM mechanism, anomaly result, or substrate realization.
+
+- Accepted in: `v0.30.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.

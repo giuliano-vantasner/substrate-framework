@@ -39,6 +39,15 @@ from .gauge_u1 import (
     u1_holonomy,
 )
 from .linear_systems import LinearSystemDiagnostics, diagnose_linear_system
+from .matrix_decompositions import (
+    BiunitaryDecomposition,
+    RealSymmetricRotation,
+    biunitary_decomposition,
+    gram_eigenvalues,
+    real_symmetric_rotation,
+    relative_left_basis,
+    unitarity_residual,
+)
 from .numerics import (
     BVPEvidence,
     IVPEvidence,
@@ -209,6 +218,8 @@ __all__ = [
     "CheckLedger",
     "IVPEvidence",
     "LinearSystemDiagnostics",
+    "BiunitaryDecomposition",
+    "RealSymmetricRotation",
     "NumericalFailure",
     "RefinementEvidence",
     "SolverTolerances",
@@ -271,6 +282,11 @@ __all__ = [
     "exact_sine_qball_scaled_rhs",
     "finite_energy_winding_flux",
     "diagnose_linear_system",
+    "biunitary_decomposition",
+    "gram_eigenvalues",
+    "real_symmetric_rotation",
+    "relative_left_basis",
+    "unitarity_residual",
     "gauged_scalar_kinetic_density",
     "hamiltonian_density",
     "index_from_potential",

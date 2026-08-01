@@ -1,0 +1,21 @@
+attempt: 0001
+campaign: P034
+base_release: v0.29.0
+base_commit: b7d8fbc
+source_unit: FG3
+source_sha256: 5030cf63716914a0effe2d89de2510c14a1c081784ffa2abfd73d24d982ea7cb
+candidate: A
+oracles:
+  - exact SymPy reconstruction, Gram spectra, and basis identities
+  - convention-sensitive direct field-substitution counterexample
+  - independent exact decomposition and rotation derivation
+  - NumPy full-SVD regression across rectangular, deficient, and repeated cases
+mutations:
+  - change one singular value
+  - swap only the right singular basis
+  - scale a unitary basis
+  - reverse the row-transform adjoint convention
+  - apply the real-symmetric angle formula to a complex texture
+expected_positive_object: >-
+  A convention-explicit general complex SVD and relative-basis theorem with
+  exceptional-spectrum freedoms and no imported physical flavor identity.

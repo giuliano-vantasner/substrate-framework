@@ -1,0 +1,48 @@
+id: P034
+base_release: v0.29.0
+base_commit: b7d8fbc
+source_baseline: substrate@6d1f4e0
+source_units: [FG3]
+question: >-
+  Determine the convention-complete finite-dimensional theorem relating a
+  complex mass matrix to its singular values and left/right bases, then decide
+  exactly what additional physical premises would be required to identify the
+  relative left-basis matrix with CKM flavor mixing.
+invariants:
+  - a matrix decomposition is not a derivation of a physical Yukawa texture
+  - left and right singular-vector conventions must be explicit and dimensionally compatible
+  - zero and repeated singular values make individual bases nonunique even though a decomposition exists
+  - a product of unitary basis matrices is unitary but is not thereby predicted or physically identified
+  - physical CKM language requires an accepted charged-current and fermion-family map absent from v0.29.0
+allowed_imports:
+  - the finite-dimensional complex spectral theorem and singular-value decomposition
+  - exact complex matrix algebra and resolution-bounded numerical regression
+  - FG3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote a convention-complete complex SVD theorem, nonnegative singular
+      spectrum, unitary relative left-basis matrix, degeneracy freedoms, and
+      the real symmetric two-by-two rotation as conditional matrix algebra
+  - id: B
+    description: >-
+      Promote only the unitary-product and real symmetric two-by-two results if
+      FG3's claimed left/right reconstruction or generality fails
+  - id: C
+    description: >-
+      Promote FG3's matrices as a substrate-derived physical CKM mechanism,
+      Cabibbo prediction, and fermion-family explanation
+uniqueness_evidence: null
+selection_criteria:
+  - convention-correct reconstruction for rectangular and square complex matrices
+  - exact eigenvalue and singular-value relationships
+  - correct treatment of zero and repeated singular values
+  - invariance under permitted basis and phase changes
+  - exact unitarity and real-symmetric limiting case
+  - accepted dependency closure and parameter economy
+  - no physical identification or prediction from arbitrary inserted textures
+claims_proposed:
+  - provisional C-MIX-001
+comparators_blinded_until: >-
+  decomposition_conventions_degeneracy_freedoms_dependency_closure_and_physical_identification_boundary_frozen
+status: accepted

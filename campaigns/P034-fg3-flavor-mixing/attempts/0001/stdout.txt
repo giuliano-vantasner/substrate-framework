@@ -1,0 +1,37 @@
+PASS [P034-FG3] the audited FG3 source is the hash-pinned candidate unit
+PASS [P034-FG3] FG3 exits cleanly
+PASS [P034-FG3] FG3's declared six-check tally reproduces
+PASS [P034-FG3] an independently computed exact complex SVD reconstructs its matrix
+PASS [P034-FG3] the exact column-basis convention diagonalizes as U-dagger M V
+PASS [P034-FG3] the exact square singular-vector bases are unitary
+PASS [P034-FG3] the exact singular values are nonnegative square roots of both Gram spectra
+PASS [P034-FG3] the exact theorem includes rectangular rank-deficient matrices
+PASS [P034-FG3] the rectangular Gram matrices share their sole nonzero eigenvalue
+PASS [P034-FG3] a repeated nonzero singular block admits a paired unitary basis rotation
+PASS [P034-FG3] left and right null bases are independently nonunique for the zero matrix
+PASS [P034-FG3] SVD reconstruction and basis checks: baseline
+PASS [P034-FG3] SVD reconstruction and basis checks: mutations supplied
+PASS [P034-FG3] SVD reconstruction and basis checks: mutation 1 rejected
+PASS [P034-FG3] SVD reconstruction and basis checks: mutation 2 rejected
+PASS [P034-FG3] SVD reconstruction and basis checks: mutation 3 rejected
+PASS [P034-FG3] the reusable full-basis API covers rectangular and zero-singular-value cases
+PASS [P034-FG3] the numeric Gram regression preserves the common nonzero squared spectrum
+PASS [P034-FG3] a relative column-basis matrix is exactly unitary up to solver roundoff
+PASS [P034-FG3] identical ordered bases give the identity
+PASS [P034-FG3] the reusable API rejects a fabricated nonunitary basis
+PASS [P034-FG3] FG3's returned diagonalizer and its mixing formula use incompatible orientations
+PASS [P034-FG3] unitarity alone is insensitive to FG3's orientation defect
+PASS [P034-FG3] field-rotation convention: baseline
+PASS [P034-FG3] field-rotation convention: mutations supplied
+PASS [P034-FG3] field-rotation convention: mutation 1 rejected
+PASS [P034-FG3] field-rotation convention: mutation 2 rejected
+PASS [P034-FG3] the real symmetric two-by-two formula diagonalizes in its declared convention
+PASS [P034-FG3] the reusable rotation API agrees with the exact pi-over-eight case
+PASS [P034-FG3] the real symmetric formula is not extended to a generic complex texture
+PASS [P034-FG3] one sector's diagonalizing angle does not determine a two-sector mixing angle
+PASS [P034-FG3] FG3 explicitly imports every physical current and fermion premise
+PASS [P034-FG3] FG3 inserts rather than derives its two Yukawa textures
+PASS [P034-FG3] FG3's anomaly check assumes a symbolic per-generation coefficient
+PASS [P034-FG3] FG3 excludes zero singular values instead of proving the general theorem
+ALL 35 CHECKS PASS [P034-FG3]
+P034 FG3 MATRIX-DECOMPOSITION AUDIT ALL 35 CHECKS PASS

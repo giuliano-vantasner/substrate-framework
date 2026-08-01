@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 187
-  qualified: 25
+  pending_adjudication: 186
+  qualified: 26
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2328,8 +2328,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MIX-001
+  qualification: FG3's convention-correct SVD, relative-unitary, and real-symmetric matrix subclaims are
+    accepted through a generalized theorem. Its returned row transform is incompatible with its mixing
+    formula, zero and repeated singular cases are omitted, and no accepted dependency establishes its
+    CKM, Cabibbo, current, GIM, anomaly, or substrate interpretations.
+  evidence:
+  - campaigns/P034-fg3-flavor-mixing/reviews/source_adjudication.md
+  note: P034 supplies rectangular and rank-deficient closure and an exact orientation counterexample in
+    which FG3's formula differs from direct field substitution even though both candidate matrices are
+    unitary.
 - source_unit: FG4
   phase: phase-11
   path: merged-framework/bridges/phase-11/bridge_FG4_cp_kobayashi_maskawa.py

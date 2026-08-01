@@ -1,0 +1,11 @@
+PASS [P034-INDEPENDENT] an independent exact SVD route reconstructs a different complex matrix
+PASS [P034-INDEPENDENT] the two exact Gram actions agree on every nonzero singular pair
+PASS [P034-INDEPENDENT] repeated singular values leave a nontrivial paired basis freedom
+PASS [P034-INDEPENDENT] zero singular blocks leave independent left and right freedoms
+PASS [P034-INDEPENDENT] relative column bases are unitary by direct multiplication
+PASS [P034-INDEPENDENT] direct field substitution fixes the row-transform orientation
+PASS [P034-INDEPENDENT] the independent two-by-two derivation exposes the exact angle condition
+PASS [P034-INDEPENDENT] arbitrary declared textures can realize continuously many relative angles
+PASS [P034-INDEPENDENT] matrix unitarity alone contains no representation or anomaly coefficient
+ALL 9 CHECKS PASS [P034-INDEPENDENT]
+P034 INDEPENDENT DECOMPOSITION REVIEW ALL 9 CHECKS PASS

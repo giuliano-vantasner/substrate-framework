@@ -1,0 +1,18 @@
+source_unit: FG3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-11/bridge_FG3_flavor_mixing_matrix.py
+sha256: 5030cf63716914a0effe2d89de2510c14a1c081784ffa2abfd73d24d982ea7cb
+reproduced_at: '2026-08-01T17:10:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-11/bridge_FG3_flavor_mixing_matrix.py
+environment:
+  python: repository virtual environment
+  sympy: 1.14.0
+  numpy: 2.5.1
+exit_code: 0
+terminal_tally: ALL 6 CHECKS PASS
+observation: >-
+  The source succeeds in the current environment despite documenting NumPy
+  1.26.4. Reproduction establishes only that its six assertions execute; P034
+  separately audits their convention sensitivity and physical scope.
