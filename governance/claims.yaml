@@ -1,2 +1,49 @@
 schema_version: 1
-claims: []
+claims:
+  - id: C-SG-001
+    statement: >-
+      For every real omega with 0 < omega < 1, eta = sqrt(1-omega^2), and real
+      x,t, the field phi(x,t) = 4 atan(eta sin(omega t)/(omega cosh(eta x)))
+      is spatially localized, periodic with period 2*pi/omega, and satisfies
+      phi_tt - phi_xx + sin(phi) = 0 identically in normalized units.
+    provenance: campaigns/P001-sine-gordon-root/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P001-sine-gordon-root/verify.py
+      - campaigns/P001-sine-gordon-root/attempts/0001/manifest.yaml
+      - campaigns/P001-sine-gordon-root/reviews/independent_rederivation.py
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The normalized real 1+1 dimensional sine-Gordon equation is the declared root model.
+      - Coordinates and field use c = m = beta = 1 dimensionless conventions.
+    comparators: []
+    accepted_in: v0.1.0
+    challenges: []
+    supersedes: []
+  - id: C-SG-002
+    statement: >-
+      The C-SG-001 breather has conserved normalized Hamiltonian energy
+      E(omega) = 16 sqrt(1-omega^2); E approaches the two-kink threshold 16 as
+      omega -> 0+ and approaches 0 as omega -> 1-.
+    provenance: campaigns/P001-sine-gordon-root/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-001
+    evidence:
+      - campaigns/P001-sine-gordon-root/verify.py
+      - campaigns/P001-sine-gordon-root/attempts/0001/manifest.yaml
+      - campaigns/P001-sine-gordon-root/reviews/independent_rederivation.py
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The normalized Hamiltonian density is (phi_t^2 + phi_x^2)/2 + 1 - cos(phi).
+    comparators: []
+    accepted_in: v0.1.0
+    challenges: []
+    supersedes: []

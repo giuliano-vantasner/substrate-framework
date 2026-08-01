@@ -34,6 +34,7 @@ REQUIRED_CLAIM_FIELDS = {
 REQUIRED_PROPOSAL_FIELDS = {
     "id",
     "base_release",
+    "source_baseline",
     "question",
     "invariants",
     "allowed_imports",
@@ -42,6 +43,14 @@ REQUIRED_PROPOSAL_FIELDS = {
     "claims_proposed",
     "comparators_blinded_until",
     "status",
+}
+
+REQUIRED_RELEASE_FIELDS = {
+    "schema_version",
+    "release",
+    "source_baseline",
+    "released_at",
+    "accepted_claims",
 }
 
 
@@ -198,6 +207,8 @@ def validate_proposal(data: dict[str, Any], source: str = "proposal") -> None:
         raise GovernanceError(f"{source} missing fields: {sorted(missing)}")
     if data["status"] not in {"draft", "active", "in_review", "accepted", "rejected", "rework"}:
         raise GovernanceError(f"{source}: invalid status {data['status']!r}")
+    if not isinstance(data["source_baseline"], str) or not data["source_baseline"].strip():
+        raise GovernanceError(f"{source}: source_baseline must name an immutable source revision")
     for field in ("invariants", "allowed_imports", "selection_criteria", "claims_proposed"):
         _as_string_list(data[field], field, source)
     candidates = data["candidates"]
@@ -213,6 +224,149 @@ def validate_proposal(data: dict[str, Any], source: str = "proposal") -> None:
             raise GovernanceError(
                 f"{source}: candidates[{index}] needs id and description"
             )
+
+
+def validate_release(
+    data: dict[str, Any],
+    registry: dict[str, Any],
+    *,
+    source: str = "release",
+    require_current_set: bool = False,
+) -> list[str]:
+    """Validate a pinned release claim set and its dependency closure."""
+
+    missing = REQUIRED_RELEASE_FIELDS - data.keys()
+    if missing:
+        raise GovernanceError(f"{source} missing fields: {sorted(missing)}")
+    if data["schema_version"] != 1:
+        raise GovernanceError(f"{source}: schema_version must be 1")
+
+    release_id = data["release"]
+    source_baseline = data["source_baseline"]
+    released_at = data["released_at"]
+    release_ids = _as_string_list(data["accepted_claims"], "accepted_claims", source)
+    if len(release_ids) != len(set(release_ids)):
+        raise GovernanceError(f"{source}: accepted_claims must not contain duplicates")
+
+    validate_registry(registry)
+    by_id = {claim["id"]: claim for claim in registry["claims"]}
+    if release_id is None:
+        if source_baseline is not None or released_at is not None or release_ids:
+            raise GovernanceError(f"{source}: null release must have null source and no claims")
+        return []
+    if not isinstance(release_id, str) or not release_id:
+        raise GovernanceError(f"{source}: release must be null or a non-empty id")
+    if not isinstance(source_baseline, str) or not source_baseline.strip():
+        raise GovernanceError(f"{source}: accepted release must pin source_baseline")
+    if not isinstance(released_at, str) or not released_at.strip():
+        raise GovernanceError(f"{source}: accepted release must record released_at")
+
+    unknown = set(release_ids) - by_id.keys()
+    if unknown:
+        raise GovernanceError(f"{source}: unknown claims {sorted(unknown)}")
+    release_set = set(release_ids)
+    for claim_id in release_ids:
+        claim = by_id[claim_id]
+        if claim["accepted_in"] is None or claim["review"] != "accepted":
+            raise GovernanceError(f"{source}: {claim_id} is not an accepted claim")
+        missing_dependencies = set(claim["dependencies"]) - release_set
+        if missing_dependencies:
+            raise GovernanceError(
+                f"{source}: {claim_id} has dependencies outside release: "
+                f"{sorted(missing_dependencies)}"
+            )
+
+    if require_current_set:
+        current_ids = {
+            claim_id
+            for claim_id, claim in by_id.items()
+            if claim["accepted_in"] is not None
+            and claim["epistemic"] in {"active", "qualified"}
+        }
+        if release_set != current_ids:
+            missing_current = current_ids - release_set
+            historical_only = release_set - current_ids
+            raise GovernanceError(
+                f"{source}: current set mismatch; missing {sorted(missing_current)}, "
+                f"noncurrent {sorted(historical_only)}"
+            )
+    return release_ids
+
+
+def render_claim_memory(claim: dict[str, Any], released_at: str) -> str:
+    """Render a deterministic accepted-claim memory entry from registry state."""
+
+    status = "active" if claim["epistemic"] in {"active", "qualified"} else "archived"
+    frontmatter = {
+        "description": f"Accepted framework claim {claim['id']}",
+        "author": "framework-registry",
+        "created": released_at,
+        "updated": released_at,
+        "tags": ["substrate-framework", "accepted-claim", claim["id"]],
+        "category": "claims",
+        "confidence": "established",
+        "status": status,
+    }
+    header = yaml.safe_dump(frontmatter, sort_keys=False).strip()
+    dependencies = ", ".join(claim["dependencies"]) or "none"
+    assumptions = ", ".join(claim["assumptions"]) or "none"
+    comparators = ", ".join(claim["comparators"]) or "none"
+    evidence = "\n".join(f"- `{item}`" for item in claim["evidence"])
+    return (
+        f"---\n{header}\n---\n"
+        f"# {claim['id']}\n\n"
+        "## Statement\n"
+        "The accepted statement is reproduced exactly from the claim registry.\n\n"
+        f"{claim['statement']}\n\n"
+        "## Status Axes\n"
+        "The four governance axes remain independent.\n\n"
+        f"Verification is `{claim['verification']}`; review is `{claim['review']}`; "
+        f"compatibility is `{claim['compatibility']}`; epistemic status is "
+        f"`{claim['epistemic']}`.\n\n"
+        "## Dependency and Import Closure\n"
+        "The registry records the accepted closure and declared non-claim inputs.\n\n"
+        f"Dependencies: {dependencies}. Assumptions: {assumptions}. "
+        f"Comparators: {comparators}.\n\n"
+        "## Provenance and Evidence\n"
+        "The accepted release and immutable campaign evidence are the authoritative pointers.\n\n"
+        f"Accepted in `{claim['accepted_in']}` with provenance `{claim['provenance']}`.\n\n"
+        f"{evidence}\n"
+    )
+
+
+def render_release_memory(
+    release: dict[str, Any], registry: dict[str, Any]
+) -> str:
+    """Render a deterministic accepted-release memory entry."""
+
+    by_id = {claim["id"]: claim for claim in registry["claims"]}
+    release_id = release["release"]
+    released_at = release["released_at"]
+    frontmatter = {
+        "description": f"Accepted framework release {release_id}",
+        "author": "framework-registry",
+        "created": released_at,
+        "updated": released_at,
+        "tags": ["substrate-framework", "accepted-release", release_id],
+        "category": "releases",
+        "confidence": "established",
+        "status": "active",
+    }
+    header = yaml.safe_dump(frontmatter, sort_keys=False).strip()
+    claim_lines = "\n".join(
+        f"- `{claim_id}` — {by_id[claim_id]['statement']}"
+        for claim_id in release["accepted_claims"]
+    )
+    return (
+        f"---\n{header}\n---\n"
+        f"# Release {release_id}\n\n"
+        "## Source Boundary\n"
+        "This release pins its predecessor evidence boundary and acceptance time.\n\n"
+        f"Source baseline: `{release['source_baseline']}`. Released at: `{released_at}`.\n\n"
+        "## Accepted Claim Set\n"
+        "The release materializes this dependency-closed claim set.\n\n"
+        f"{claim_lines}\n"
+    )
 
 
 def accepted_claims(data: dict[str, Any]) -> Iterable[dict[str, Any]]:

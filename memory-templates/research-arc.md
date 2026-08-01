@@ -103,7 +103,7 @@ Record accepted positive results and reproduction commands. For each failed rout
 Record extracted APIs/tests, accepted registry entries, immutable campaign location, release id, generated docs command, accepted-memory synchronization, and proposal/attempt memory separation.
 
 ## Done Gate
-Check every success condition from `AGENTS.md`, confirm `scripts/validate.sh`, targeted science checks, tests, downstream replay, and an empty debt ledger. Otherwise continue.
+Check every success condition from `AGENTS.md`, confirm targeted science checks, downstream replay, `scripts/validate.sh` (including its full test suite) once at the unchanged promotion boundary, and an empty debt ledger. Otherwise continue.
 
 ## Cross-References
 Link the proposal, source artifacts, claims, reviewers, campaign, release, generated outputs, and related memory entries.

@@ -49,8 +49,8 @@ Validation covers the actual objective, verifier sensitivity, limits, convention
 - Mutation/counterexample command:
 - Numerical solver-status, refinement, conservation/stability, and independent-route command (when applicable):
 - Dependency replay:
-- `scripts/validate.sh`:
-- `.venv/bin/python -m pytest`:
+- Targeted tests during implementation:
+- `scripts/validate.sh` (includes the full pytest suite; run once at the unchanged promotion boundary):
 - `git diff --check`:
 
 ## Debt Ledger

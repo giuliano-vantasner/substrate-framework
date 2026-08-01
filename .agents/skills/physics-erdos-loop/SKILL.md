@@ -40,11 +40,11 @@ Before deriving anything:
 
 1. Read `AGENTS.md`, `governance/releases/current.yaml`, and `governance/claims.yaml`.
 2. Inspect git status and history. Distinguish accepted release, committed provenance, uncommitted proposal work, and generated files.
-3. Search memory with `memory search` and `memory grep`; treat hits as pointers and verify facts at source.
+3. Search repository memory with `memory search ... --base "$PWD/memory"` and `memory grep ... --base "$PWD/memory"`; treat hits as pointers and verify facts at source. Validate repo-local memory with `memory validate "$PWD/memory"` because `validate` has no `--base` option and host configuration may redirect relative paths.
 4. Search importable source, campaign artifacts, tests, and dependency consumers.
 5. Record the last accepted boundary and the genuine unresolved objective in a contract from `memory-templates/`.
 
-Run `scripts/preflight.sh` to check the local tools and governance surfaces.
+Run `.agents/skills/physics-erdos-loop/scripts/preflight.sh` to check the local tools and governance surfaces.
 
 ## Phase 1 — write the success contract
 
@@ -159,7 +159,7 @@ For accepted claims:
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.
-6. Run `scripts/validate.sh`, targeted scientific checks, tests, and `git diff --check`.
+6. Run targeted scientific checks, `scripts/validate.sh` (which includes the full test suite), and `git diff --check`; do not repeat the unchanged full suite separately.
 
 ## Phase 10 — done gate
 

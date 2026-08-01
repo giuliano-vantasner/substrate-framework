@@ -1,0 +1,11 @@
+PASS [P001-INDEPENDENT-REVIEW] independently reconstructed field is exactly on shell
+PASS [P001-INDEPENDENT-REVIEW] field is localized for positive inverse width
+PASS [P001-INDEPENDENT-REVIEW] quarter-period gradient and potential density factor exactly
+PASS [P001-INDEPENDENT-REVIEW] quarter-period density transforms under y=tanh(eta*x)
+PASS [P001-INDEPENDENT-REVIEW] transformed energy integrand has the stated exact antiderivative
+PASS [P001-INDEPENDENT-REVIEW] independent quarter-period integral gives 16*sqrt(1-omega^2)
+PASS [P001-INDEPENDENT-REVIEW] independent result reaches kink-pair threshold at omega to zero
+PASS [P001-INDEPENDENT-REVIEW] independent result vanishes at omega to one
+PASS [P001-INDEPENDENT-REVIEW] independent wrong-width counterexample is off shell
+ALL 9 CHECKS PASS [P001-INDEPENDENT-REVIEW]
+P001 INDEPENDENT REVIEW ALL 9 CHECKS PASS

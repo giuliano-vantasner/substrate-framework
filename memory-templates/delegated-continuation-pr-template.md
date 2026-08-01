@@ -72,7 +72,7 @@ List individually accepted claims, source API/tests, immutable campaign record, 
 Record the verified positive result. If incomplete, preserve the exact next executable action and leave the contract active.
 
 ## Done Gate
-Check all success conditions from `AGENTS.md`, targeted checks, `scripts/validate.sh`, tests, downstream replay, generated-state consistency, and empty debt. Do not stop on an honest failure.
+Check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh` run (including its full test suite) at the unchanged promotion boundary, and empty debt. Do not stop on an honest failure.
 
 ## Cross-References
 Link parent/child contracts, proposal, claims, campaigns, source, tests, release, generated docs, and PR.

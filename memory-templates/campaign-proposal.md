@@ -60,6 +60,7 @@ Matching manifest:
 ```yaml
 id: P000
 base_release: <release-id>
+source_baseline: <repository and immutable commit or release>
 question: <exact question>
 invariants:
   - <accepted invariant>

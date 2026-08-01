@@ -1,0 +1,36 @@
+id: P001
+base_release: null
+source_baseline: substrate@6d1f4e0
+question: >-
+  In the normalized 1+1 dimensional sine-Gordon model, construct an exact
+  localized time-periodic breather and derive its conserved Hamiltonian energy
+  for every internal frequency 0 < omega < 1.
+invariants:
+  - phi_tt - phi_xx + sin(phi) = 0
+  - Hamiltonian density is phi_t^2/2 + phi_x^2/2 + 1 - cos(phi)
+  - x and t are real and the normalized units set c = m = beta = 1
+  - 0 < omega < 1 and eta = sqrt(1 - omega^2) > 0
+allowed_imports:
+  - exact real differentiation, integration, and trigonometric identities
+  - SymPy as an exact algebra and calculus oracle
+  - SciPy quadrature only as an independent numerical cross-check
+  - predecessor artifacts at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Direct arctangent breather ansatz with exact PDE substitution and Hamiltonian integration
+  - id: B
+    description: Baecklund or complex kink-pair construction followed by extraction of the real breather
+  - id: C
+    description: Time-periodic numerical boundary-value construction with convergence evidence
+uniqueness_evidence: null
+selection_criteria:
+  - exact satisfaction of the accepted normalized field equation
+  - no new fitted parameters or empirical inputs
+  - minimal branch and convention ambiguity
+  - strongest available verification verdict
+  - transparent limiting behavior and reusable API fit
+claims_proposed:
+  - C-SG-001
+  - C-SG-002
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

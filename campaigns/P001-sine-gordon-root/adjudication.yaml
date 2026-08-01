@@ -1,0 +1,39 @@
+campaign: P001
+title: Exact normalized sine-Gordon root
+source_baseline: substrate@6d1f4e0
+base_release: null
+adjudicated_at: '2026-08-01T10:49:03Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The direct arctangent construction has exact equation and Hamiltonian
+    closure, one physical parameter, no empirical input, no complex branch
+    auxiliaries, and a stronger verdict than the numerical BVP route.
+competing_candidates:
+  - id: B
+    decision: retained_as_unneeded_alternate_exact_construction
+  - id: C
+    decision: retained_as_resolution_bounded_fallback
+claims:
+  - id: C-SG-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+  - id: C-SG-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/manifest.yaml
+  independent_rederivation: reviews/independent_rederivation.py
+  source_inventory: evidence/source-inventory.yaml
+  source_tree_sha256: fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P001-sine-gordon-root/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P001-sine-gordon-root/reviews/independent_rederivation.py
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+debt: []
+status: accepted

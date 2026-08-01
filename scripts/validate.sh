@@ -12,6 +12,7 @@ fi
 
 PYTHONPATH="$repo_root/src" "$python_bin" "$repo_root/scripts/validate_repository.py"
 PYTHONPATH="$repo_root/src" "$python_bin" "$repo_root/scripts/render_docs.py" --check
+PYTHONPATH="$repo_root/src" "$python_bin" "$repo_root/scripts/render_memory.py" --check
 "$python_bin" -c 'import numpy, scipy, sympy, yaml'
 if ! command -v memory >/dev/null 2>&1; then
   echo "ERROR: memory is not on PATH; run scripts/bootstrap.sh" >&2
@@ -27,6 +28,7 @@ case "$installed_memory_version" in
     ;;
 esac
 memory --help >/dev/null
+memory validate "$repo_root/memory"
 "$python_bin" "$repo_root/.agents/skills/physics-erdos-loop/scripts/validate_skill.py" \
   "$repo_root/.agents/skills/physics-erdos-loop"
 "$python_bin" -m compileall -q "$repo_root/src" "$repo_root/tools/agent-memory/src"

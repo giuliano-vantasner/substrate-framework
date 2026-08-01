@@ -139,6 +139,8 @@ Use memory contracts as executable working state, not as a parallel source of sc
 
 Never merge old and new prose into a single timeless memory entry. Preserve provenance and status. Generate canonical memory from accepted claims; keep proposal and attempt memory visibly separate. Re-source paths, commits, equations, and verdicts before updating memory.
 
+For repository-local memory, pass `--base "$PWD/memory"` to search and grep, and validate with the absolute positional path `memory validate "$PWD/memory"`. The CLI's `validate` command has no `--base` option, and a host-level `AGENT_MEMORY_PATH` can otherwise redirect a relative `memory/` path outside this repository.
+
 Do not copy personal or historical memory into this repository. The bundled CLI is code only.
 
 ## Required validation before commit or promotion
@@ -147,9 +149,10 @@ Run:
 
 ```bash
 scripts/validate.sh
-.venv/bin/python -m pytest
 git diff --check
 ```
+
+`scripts/validate.sh` runs the complete pytest suite. Do not run that suite a second time at the same unchanged boundary; use targeted tests while developing, then one full workflow validation before commit or promotion.
 
 The bootstrap installs `memory` with `pipx`; agents call it directly without activating `.venv`. Also run every targeted scientific verifier and downstream consumer named by the claim delta. Before promotion, ensure generated files are current, the registry validates, the release claim set is closed, and the working-tree diff contains no unrelated or host-specific artifacts.
 

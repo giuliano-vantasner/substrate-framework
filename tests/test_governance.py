@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import pytest
 
-from substrate_framework.governance import GovernanceError, validate_registry
+from substrate_framework.governance import (
+    GovernanceError,
+    validate_proposal,
+    validate_registry,
+    validate_release,
+)
 from substrate_framework.verification import CheckFailure, CheckLedger
 
 
@@ -60,3 +65,47 @@ def test_supersession_preserves_historical_claim() -> None:
     new = claim("C2", [])
     new["supersedes"] = ["C1"]
     assert validate_registry({"schema_version": 1, "claims": [old, new]}) == ["C1", "C2"]
+
+
+def test_proposal_requires_immutable_source_baseline() -> None:
+    proposal = {
+        "id": "P000",
+        "base_release": None,
+        "source_baseline": "substrate@6d1f4e0",
+        "question": "derive a positive root claim",
+        "invariants": ["normalized sine-Gordon convention"],
+        "allowed_imports": ["real analysis"],
+        "candidates": [
+            {"id": "A", "description": "closed-form construction"},
+            {"id": "B", "description": "independent transform construction"},
+        ],
+        "selection_criteria": ["exact dependency closure"],
+        "claims_proposed": ["C-SG-001"],
+        "comparators_blinded_until": "structural review complete",
+        "status": "draft",
+    }
+
+    validate_proposal(proposal)
+    proposal["source_baseline"] = ""
+    with pytest.raises(GovernanceError, match="immutable source revision"):
+        validate_proposal(proposal)
+
+
+def test_release_requires_dependency_closed_claim_set() -> None:
+    registry = {
+        "schema_version": 1,
+        "claims": [claim("C1", []), claim("C2", ["C1"])],
+    }
+    release = {
+        "schema_version": 1,
+        "release": "v-test",
+        "source_baseline": "source@abc123",
+        "released_at": "2026-08-01T00:00:00Z",
+        "accepted_claims": ["C2"],
+    }
+
+    with pytest.raises(GovernanceError, match="dependencies outside release"):
+        validate_release(release, registry)
+
+    release["accepted_claims"] = ["C1", "C2"]
+    assert validate_release(release, registry, require_current_set=True) == ["C1", "C2"]

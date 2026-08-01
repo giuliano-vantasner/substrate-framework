@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from substrate_framework.governance import (
@@ -11,41 +12,107 @@ from substrate_framework.governance import (
     render_claim_index,
     validate_proposal,
     validate_registry,
+    validate_release,
 )
+
+
+def validate_memory_contract_categories(root: Path) -> None:
+    """Ensure every durable template can be instantiated by the memory CLI."""
+
+    config = load_yaml(root / ".agent-memory.yaml")
+    categories = config.get("categories")
+    if not isinstance(categories, list) or not all(
+        isinstance(category, str) and category for category in categories
+    ):
+        raise GovernanceError(".agent-memory.yaml categories must be a list of strings")
+
+    configured = set(categories)
+    used: set[str] = set()
+    for template in sorted((root / "memory-templates").glob("*.md")):
+        matches = re.findall(r"^category:\s*([A-Za-z0-9_-]+)\s*$", template.read_text(), re.MULTILINE)
+        if len(matches) != 1:
+            relative = template.relative_to(root)
+            raise GovernanceError(f"{relative}: expected exactly one contract category")
+        used.add(matches[0])
+
+    missing = used - configured
+    if missing:
+        raise GovernanceError(
+            f"memory templates use unconfigured categories: {sorted(missing)}"
+        )
+
+
+def validate_accepted_artifact_paths(root: Path, registry: dict) -> None:
+    """Require accepted provenance and evidence to resolve inside the repository."""
+
+    for claim in registry["claims"]:
+        if claim["accepted_in"] is None:
+            continue
+        artifacts = [claim["provenance"], *claim["evidence"]]
+        for artifact in artifacts:
+            if not isinstance(artifact, str) or not artifact:
+                raise GovernanceError(f"{claim['id']}: accepted artifact path must be a string")
+            relative = Path(artifact)
+            if relative.is_absolute() or ".." in relative.parts:
+                raise GovernanceError(
+                    f"{claim['id']}: accepted artifact must be repository-relative: {artifact}"
+                )
+            if not (root / relative).is_file():
+                raise GovernanceError(
+                    f"{claim['id']}: accepted artifact does not exist: {artifact}"
+                )
 
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
+    validate_memory_contract_categories(root)
     registry_path = root / "governance" / "claims.yaml"
     registry = load_yaml(registry_path)
     claim_ids = validate_registry(registry)
+    validate_accepted_artifact_paths(root, registry)
 
     proposal_count = 0
     for manifest in sorted((root / "proposals").glob("*/proposal.yaml")):
         validate_proposal(load_yaml(manifest), str(manifest.relative_to(root)))
         proposal_count += 1
 
-    current = load_yaml(root / "governance" / "releases" / "current.yaml")
-    if current.get("schema_version") != 1:
-        raise GovernanceError("current release must declare schema_version: 1")
-    accepted_ids = {
-        claim["id"]
-        for claim in registry["claims"]
-        if claim["accepted_in"] is not None and claim["epistemic"] in {"active", "qualified"}
-    }
-    release_ids = current.get("accepted_claims")
-    if not isinstance(release_ids, list) or not all(isinstance(item, str) for item in release_ids):
-        raise GovernanceError("current release accepted_claims must be a list of strings")
-    unknown_release_claims = set(release_ids) - accepted_ids
-    if unknown_release_claims:
-        raise GovernanceError(
-            f"current release references non-accepted claims: {sorted(unknown_release_claims)}"
-        )
-    if set(release_ids) != accepted_ids:
-        missing = accepted_ids - set(release_ids)
-        raise GovernanceError(
-            f"current release does not materialize all current accepted claims: {sorted(missing)}"
-        )
+    release_dir = root / "governance" / "releases"
+    pinned_releases: dict[str, dict] = {}
+    for release_path in sorted(release_dir.glob("*.yaml")):
+        if release_path.name == "current.yaml":
+            continue
+        relative = str(release_path.relative_to(root))
+        release_data = load_yaml(release_path)
+        validate_release(release_data, registry, source=relative)
+        release_id = release_data["release"]
+        if release_id != release_path.stem:
+            raise GovernanceError(
+                f"{relative}: release id {release_id!r} must match filename stem"
+            )
+        pinned_releases[release_id] = release_data
+
+    current_path = release_dir / "current.yaml"
+    current = load_yaml(current_path)
+    release_ids = validate_release(
+        current, registry, source="governance/releases/current.yaml", require_current_set=True
+    )
+    current_id = current["release"]
+    if current_id is not None:
+        if current_id not in pinned_releases:
+            raise GovernanceError(f"current release {current_id!r} has no pinned manifest")
+        pinned = pinned_releases[current_id]
+        for field in (
+            "schema_version",
+            "release",
+            "source_baseline",
+            "released_at",
+            "accepted_claims",
+        ):
+            if current[field] != pinned[field]:
+                raise GovernanceError(
+                    f"current release field {field} disagrees with pinned {current_id}"
+                )
+    accepted_ids = set(release_ids)
 
     generated = root / "docs" / "generated" / "claim-index.md"
     expected = render_claim_index(registry)

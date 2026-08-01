@@ -1,6 +1,14 @@
 """Canonical, importable definitions and derivations for Substrate."""
 
-from .governance import GovernanceError, load_yaml, render_claim_index, validate_registry
+from .governance import (
+    GovernanceError,
+    load_yaml,
+    render_claim_memory,
+    render_claim_index,
+    render_release_memory,
+    validate_registry,
+    validate_release,
+)
 from .numerics import (
     BVPEvidence,
     IVPEvidence,
@@ -11,6 +19,16 @@ from .numerics import (
     solve_bvp_evidence,
     solve_ivp_evidence,
     solve_method_of_lines,
+)
+from .sine_gordon import (
+    breather_energy,
+    breather_field,
+    breather_field_with_width,
+    breather_inverse_width,
+    breather_peak_amplitude,
+    breather_period,
+    hamiltonian_density,
+    sine_gordon_residual,
 )
 from .verification import CheckFailure, CheckLedger
 
@@ -23,13 +41,24 @@ __all__ = [
     "NumericalFailure",
     "RefinementEvidence",
     "SolverTolerances",
+    "breather_energy",
+    "breather_field",
+    "breather_field_with_width",
+    "breather_inverse_width",
+    "breather_peak_amplitude",
+    "breather_period",
+    "hamiltonian_density",
     "load_yaml",
     "refinement_study",
+    "render_claim_memory",
     "render_claim_index",
+    "render_release_memory",
     "solve_bvp_evidence",
     "solve_ivp_evidence",
     "solve_method_of_lines",
+    "sine_gordon_residual",
     "validate_registry",
+    "validate_release",
 ]
 
 __version__ = "0.0.0"

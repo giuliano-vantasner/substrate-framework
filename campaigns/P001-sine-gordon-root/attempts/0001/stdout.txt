@@ -1,0 +1,28 @@
+PASS [C-SG-001] direct breather has identically zero sine-Gordon residual
+PASS [C-SG-001] explicit-width profile localizes at positive spatial infinity
+PASS [C-SG-001] explicit-width profile localizes at negative spatial infinity
+PASS [C-SG-001] profile is exactly periodic with period 2*pi/omega
+PASS [C-SG-001] canonical period agrees with the field shift
+PASS [C-SG-001] peak field is attained at x=0 and quarter period
+PASS [C-SG-001] field equation normalization: baseline
+PASS [C-SG-001] field equation normalization: mutations supplied
+PASS [C-SG-001] field equation normalization: mutation 1 rejected
+PASS [C-SG-001] field equation normalization: mutation 2 rejected
+PASS [C-SG-001] field equation normalization: mutation 3 rejected
+PASS [C-SG-002] clean time slice derives purely kinetic density 8*eta^2*sech^2
+PASS [C-SG-002] positive-width sech-squared line integral is 2/eta
+PASS [C-SG-002] Hamiltonian integral independently derives the canonical energy
+PASS [C-SG-002] energy normalization: baseline
+PASS [C-SG-002] energy normalization: mutations supplied
+PASS [C-SG-002] energy normalization: mutation 1 rejected
+PASS [C-SG-002] energy normalization: mutation 2 rejected
+PASS [C-SG-002] omega to zero reaches the kink-antikink threshold 16
+PASS [C-SG-002] omega to one has vanishing breather energy
+PASS [C-SG-002] full-density quadrature conserves energy at omega=0.5
+PASS [C-SG-002] full-density quadrature conserves energy at omega=0.6
+PASS [C-SG-002] full-density quadrature conserves energy at omega=0.8
+PASS [C-SG-002] quadrature domain refinement reduces truncation error
+PASS [C-SG-002] refined full-density quadrature reaches the exact energy
+ALL 11 CHECKS PASS [C-SG-001]
+ALL 14 CHECKS PASS [C-SG-002]
+P001 ALL 25 CHECKS PASS

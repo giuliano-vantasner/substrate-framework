@@ -1,0 +1,24 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+framework_base: 6220237
+command: PYTHONPATH=src .venv/bin/python proposals/P001-sine-gordon-root/verify.py
+environment:
+  python: .venv/bin/python
+  precision: IEEE-754 binary64 for independent quadrature; exact SymPy expressions for headline claims
+  scipy_quadrature:
+    routine: scipy.integrate.quad
+    epsabs: 1.0e-11
+    epsrel: 1.0e-11
+    domain_widths_in_inverse_widths:
+      - 6.0
+      - 10.0
+      - 14.0
+      - 16.0
+elapsed_seconds: 3.2
+exit_code: 0
+terminal_tally: P001 ALL 25 CHECKS PASS
+verdict:
+  C-SG-001: symbolic_verified
+  C-SG-002: symbolic_verified
+status: passed
