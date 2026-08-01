@@ -1,0 +1,16 @@
+attempt: 0001
+completed_at: '2026-08-01T13:44:00Z'
+exit_code: 1
+terminal_tally: null
+verdict:
+  P017-MR1: verifier_representation_failure
+failure: >-
+  The reverse-implication check tried to substitute the composite expression
+  F_pi/(4*e) as if it were an atomic symbol, so SymPy left the mass difference
+  unchanged and the check failed after three preceding exact checks passed.
+diagnosis: representation
+next_attempt: >-
+  Substitute the equivalent primitive relation F_pi=16*pi*E_e*e explicitly,
+  leaving the candidate, coefficients, and oracle unchanged.
+status: failed
+stdout: stdout.txt

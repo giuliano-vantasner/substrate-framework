@@ -1,0 +1,7 @@
+PASS [P017-INDEPENDENT] direct coefficient division gives the unit ratio
+PASS [P017-INDEPENDENT] reverse substitution reconstructs exact mass equality
+PASS [P017-INDEPENDENT] different shape powers retain model dependence
+PASS [P017-INDEPENDENT] a changed medium coefficient breaks the accepted ratio
+PASS [P017-INDEPENDENT] coefficient equality contains no sector-allocation proposition
+ALL 5 CHECKS PASS [P017-INDEPENDENT]
+P017 INDEPENDENT REVIEW ALL 5 CHECKS PASS

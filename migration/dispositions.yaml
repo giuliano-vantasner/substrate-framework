@@ -204,3 +204,17 @@ units:
     note: >-
       P016 retains all dimensionless and physical premises and corrects AS2's
       implemented mass-density expression by restoring the declared factor one-half.
+  MR1:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-SK-001
+    duplicates:
+      - C-SK-001
+    evidence:
+      - campaigns/P017-mass-unit-identity/attempts/0002/result.yaml
+      - campaigns/P017-mass-unit-identity/reviews/source_adjudication.md
+    note: >-
+      P017 proves that MR1's common-unit factorization is exactly the conditional
+      iff already accepted as C-SK-001. Its generic cancellation adds no distinct
+      consumer, and its arbitrary-model and sector-bookkeeping readings are not
+      consequences of the equations.

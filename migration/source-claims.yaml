@@ -7,9 +7,10 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
+  duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 204
+  pending_adjudication: 203
   qualified: 10
 phase_counts:
   phase-1: 6
@@ -7680,8 +7681,16 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: duplicate_evidence
+  accepted_claims:
+  - C-SK-001
+  duplicates:
+  - C-SK-001
+  evidence:
+  - campaigns/P017-mass-unit-identity/attempts/0002/result.yaml
+  - campaigns/P017-mass-unit-identity/reviews/source_adjudication.md
+  note: P017 proves that MR1's shared-factor unit equality is exactly C-SK-001 and does not
+    establish its arbitrary-model or sector-bookkeeping narrative.
 - source_unit: MR2
   phase: phase-44
   path: merged-framework/bridges/phase-44/bridge_MR2_bps_normalization_pi_squared.py

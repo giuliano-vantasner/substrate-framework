@@ -1,0 +1,19 @@
+attempt: 0002
+candidate: B
+source_baseline: substrate@6d1f4e0
+source_units:
+  - MR1
+framework_base: c84f23d
+question: >-
+  Is MR1's common-unit factorization exactly equivalent to C-SK-001, and what
+  physical interpretations remain outside that algebra?
+command: >-
+  PYTHONPATH=src .venv/bin/python proposals/P017-mass-unit-identity/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-44/bridge_MR1_mass_unit_identity.py
+oracle:
+  kind: exact_symbolic_equivalence_and_scope_audit
+  mutation_requirements:
+    - changed coefficients reject the accepted ratio
+    - mismatched shape powers retain shape dependence
+    - a zero common factor breaks the iff
+status: passed

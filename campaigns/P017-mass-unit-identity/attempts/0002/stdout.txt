@@ -1,0 +1,19 @@
+PASS [P017-MR1] the audited MR1 source is the hash-pinned candidate unit
+PASS [P017-MR1] both accepted conditional masses factor through the same positive shape
+PASS [P017-MR1] mass equality is exactly common factor times unit equality
+PASS [P017-MR1] positive common-factor cancellation proves both directions of unit equality
+PASS [P017-MR1] MR1's solved unit ratio is exactly the accepted C-SK-001 iff
+PASS [P017-MR1] the solved ratio is invariant only with respect to the shared shape premise
+PASS [P017-MR1] the accepted coefficient and equal-power structure: baseline
+PASS [P017-MR1] the accepted coefficient and equal-power structure: mutations supplied
+PASS [P017-MR1] the accepted coefficient and equal-power structure: mutation 1 rejected
+PASS [P017-MR1] the accepted coefficient and equal-power structure: mutation 2 rejected
+PASS [P017-MR1] the accepted coefficient and equal-power structure: mutation 3 rejected
+PASS [P017-MR1] the accepted coefficient and equal-power structure: mutation 4 rejected
+PASS [P017-MR1] generic cancellation adds no stronger predicate than nonzero multiplication
+PASS [P017-MR1] the nonzero common-factor premise is load-bearing
+PASS [P017-MR1] the exact identity leaves every sector-allocation label unconstrained
+PASS [P017-MR1] MR1's two shape substitutions are instances of the exact cancellation
+PASS [P017-MR1] MR1's executable guard does not quarantine its corpus-specific shape inputs
+ALL 17 CHECKS PASS [P017-MR1]
+P017 MR1 EXACT AUDIT ALL 17 CHECKS PASS

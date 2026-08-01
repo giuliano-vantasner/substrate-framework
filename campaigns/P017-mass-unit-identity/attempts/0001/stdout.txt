@@ -1,0 +1,8 @@
+PASS [P017-MR1] the audited MR1 source is the hash-pinned candidate unit
+PASS [P017-MR1] both accepted conditional masses factor through the same positive shape
+PASS [P017-MR1] mass equality is exactly common factor times unit equality
+FAIL [P017-MR1] positive common-factor cancellation proves both directions of unit equality
+
+Exit code: 1
+Diagnosis: the verifier used a composite-expression substitution that did not
+rewrite the primitive pion-scale symbol. No scientific predicate failed.

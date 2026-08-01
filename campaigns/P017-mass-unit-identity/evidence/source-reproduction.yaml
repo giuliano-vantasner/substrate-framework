@@ -1,0 +1,13 @@
+source_unit: MR1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-44/bridge_MR1_mass_unit_identity.py
+sha256: d065f592390fe9322d27fbd2cf55262d8ccb8d45e6510cf8628058f716b6c875
+command: >-
+  python3 <substrate@6d1f4e0>/merged-framework/bridges/phase-44/bridge_MR1_mass_unit_identity.py
+observed_at: '2026-08-01T13:42:00Z'
+exit_code: 0
+terminal_tally: ALL 7 CHECKS PASS
+scope_note: >-
+  Reproduction establishes that MR1's own assertions execute. P017 separately
+  audits whether those assertions test a new accepted claim and whether their
+  prose conclusions stay within the conditional premises.

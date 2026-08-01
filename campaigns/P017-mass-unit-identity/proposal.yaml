@@ -1,0 +1,39 @@
+id: P017
+base_release: v0.15.0
+base_commit: c84f23d
+source_baseline: substrate@6d1f4e0
+source_units:
+  - MR1
+question: >-
+  Determine by exact factorization whether MR1 adds a distinct shared-shape
+  unit theorem, duplicates C-SK-001, or overreaches into physical calibration,
+  and give the source unit a terminal evidence-backed disposition.
+invariants:
+  - both mass formulas remain conditional premises
+  - common-factor cancellation cannot establish a physical sector ontology
+  - pending source dependencies are evidence rather than accepted imports
+  - numerical values cannot select or strengthen an exact algebraic identity
+allowed_imports:
+  - C-SK-001 and its accepted package implementation
+  - positive exact real algebra
+  - MR1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote a distinct generic shared-shape unit-equivalence theorem
+  - id: B
+    description: Classify MR1 as exact duplicate evidence for C-SK-001
+  - id: C
+    description: Promote MR1's physical calibration or double-counting interpretation
+uniqueness_evidence: null
+selection_criteria:
+  - exact logical equivalence and dependency closure
+  - assumption and parameter economy
+  - distinct reusable consumer need
+  - preservation of conditional premise status
+  - mutation-sensitive verification
+claims_proposed:
+  - C-SK-002
+comparators_blinded_until: structural_candidate_and_exact_test_plan_frozen
+claims_reviewed_not_promoted:
+  - C-SK-002
+status: accepted

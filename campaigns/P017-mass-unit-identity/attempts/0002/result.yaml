@@ -1,0 +1,16 @@
+attempt: 0002
+completed_at: '2026-08-01T13:45:25Z'
+exit_code: 0
+terminal_tally: 17
+verdict:
+  P017-MR1: duplicate_evidence_for_C-SK-001
+evidence:
+  - exact factorization through the common positive shape
+  - bidirectional equivalence of mass and unit equality
+  - exact identity with C-SK-001's ratio
+  - four load-bearing coefficient and power mutations
+  - zero-factor counterexample
+  - unconstrained sector-allocation symbol
+  - source-guard scope audit
+status: passed
+stdout: stdout.txt
