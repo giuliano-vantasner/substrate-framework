@@ -1,0 +1,20 @@
+source_unit: NC1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-15/bridge_NC1_nonlinear_chiral_current.py
+sha256: b7206df001095b2706818ea5f3ffde13d24887816d867f7252da460588b010f5
+command: >-
+  git -C /home/dan/substrate show
+  6d1f4e0:merged-framework/bridges/phase-15/bridge_NC1_nonlinear_chiral_current.py
+  | .venv/bin/python -
+exit_code: 0
+wall_time_seconds: 0.899658586
+terminal_tally: ALL 8 CHECKS PASS
+observed_checks: 8
+reproduction_notes:
+  - The two on-shell characteristic-current defects and light-cone factors pass.
+  - The off-shell topological-current identity and kink charge calculations pass.
+  - The executable does not test whether parity-odd transformation implies physical parity violation.
+  - The executable calls the small-field regime a free chiral limit, but normalized sine-Gordon linearizes to a massive Klein-Gordon equation whose characteristic currents remain sourced at first order.
+environment:
+  python: '3.12'
+  sympy: '1.14.0'

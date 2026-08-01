@@ -748,3 +748,23 @@ units:
       and factor-nine power conventions, differentiates the regular C-PDE-004
       coefficient with mesh/timestep/domain/sampling/estimator studies, and
       keeps G, R, and the formal epsilon explicit.
+  NC1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-011
+    qualification: >-
+      The exact sine-Gordon characteristic-current sources, normalized
+      off-shell topological current, integer vacuum-boundary charge, and
+      parity exchange of kink sectors are accepted. The source incorrectly
+      treats the small-field sine-Gordon limit as a massless chiral wave
+      theory and does not derive a selected winding sector, intrinsic parity
+      violation, V-A interaction, weak force, bosonization closure, particle
+      identity, or substrate realization.
+    evidence:
+      - campaigns/P048-nc1-nonlinear-chiral-balance/reviews/source_adjudication.md
+      - campaigns/P048-nc1-nonlinear-chiral-balance/evidence/source-reproduction.yaml
+    note: >-
+      P048 separates exact axial-current transformation and sector exchange
+      from physical symmetry violation, proves the equation remains parity
+      invariant, and preserves explicit smoothness, boundary, vacuum, and
+      asymptotic-flux hypotheses.

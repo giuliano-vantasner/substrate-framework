@@ -1,0 +1,51 @@
+id: P048
+base_release: v0.42.0
+base_commit: bd60154
+source_baseline: substrate@6d1f4e0
+source_units: [NC1]
+question: >-
+  Derive the exact fate of the naive left- and right-moving derivative
+  currents in the full normalized sine-Gordon equation, identify a genuinely
+  conserved nonlinear local current if one exists, and audit whether NC1's
+  claimed parity-violating interpretation follows from those identities.
+invariants:
+  - the normalized real 1+1 sine-Gordon equation is phi_tt-phi_xx+sin(phi)=0
+  - spacetime signature and light-cone derivative factors must be explicit
+  - the real sine-Gordon theory is not replaced by the independent complex U1 model
+  - current conservation, integrated-charge conservation, parity-sector exchange, and physical parity violation are distinct predicates
+  - unaccepted W1, W3, and W7 claims cannot enter accepted dependency closure
+allowed_imports:
+  - C-SG-001 normalized sine-Gordon equation convention
+  - C-TOP-001 abstract integer winding-sign character for composition only
+  - equality of mixed partial derivatives for sufficiently smooth real fields
+  - finite-energy sine-Gordon vacuum boundary values when explicitly declared
+  - NC1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Package the exact sourced balance laws for the naive derivative currents
+      together with the identically conserved topological current, finite-energy
+      winding charge, and parity exchange of winding sectors
+  - id: B
+    description: >-
+      Use conserved stress-energy currents and their light-cone components as
+      the nonlinear replacement for independently conserved chiral derivative
+      currents
+  - id: C
+    description: >-
+      Treat the conserved topological current or one selected winding sector as
+      a derived physical V-A interaction and nonlinear parity-violation mechanism
+uniqueness_evidence: null
+selection_criteria:
+  - exact compatibility with the accepted sine-Gordon equation and parity symmetry
+  - no dependence on pending weak-sector claims or an imported bosonization dictionary
+  - conservation law strength and explicit boundary hypotheses
+  - normalization and light-cone factor closure
+  - correct free-field, vacuum, kink, antikink, and spatial-parity limits
+  - assumption and parameter economy
+  - reusable API fit without consuming NC2 prematurely
+claims_proposed:
+  - provisional C-SG-011 exact nonlinear chiral balance and topological-current theorem
+comparators_blinded_until: >-
+  current_definitions_light_cone_conventions_parity_map_exact_oracles_mutations_and_scope_frozen
+status: accepted

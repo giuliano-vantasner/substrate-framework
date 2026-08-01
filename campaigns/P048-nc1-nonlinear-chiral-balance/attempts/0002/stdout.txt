@@ -1,0 +1,4 @@
+PASS [P048-NC1] 31 exact source, current, mutation, boundary, parity, kink, and limit checks
+ALL 31 CHECKS PASS [P048-NC1]
+PASS [P048-INDEPENDENT] 7 characteristic-coordinate, exterior-calculus, boundary, profile, parity, and limit checks
+ALL 7 CHECKS PASS [P048-INDEPENDENT]

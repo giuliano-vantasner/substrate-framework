@@ -1,0 +1,5 @@
+PASS [P048-INDEPENDENT] an independent characteristic-coordinate derivation fixes both half sources
+PASS [P048-INDEPENDENT] the antisymmetric orientation tensor independently gives the current components
+PASS [P048-INDEPENDENT] antisymmetry contracts the symmetric Hessian to zero without an equation of motion
+PASS [P048-INDEPENDENT] the fundamental theorem gives a boundary charge reversed by endpoint exchange
+FAIL [P048-INDEPENDENT] a direct profile calculation gives opposite unit charges

@@ -1,0 +1,15 @@
+attempt: 0002
+campaign: P048
+started_at: '2026-08-01T21:57:00Z'
+base_release: v0.42.0
+base_commit: bd60154
+source_unit: NC1
+source_sha256: b7206df001095b2706818ea5f3ffde13d24887816d867f7252da460588b010f5
+candidate: A
+repair_from: attempts/0001/result.yaml
+oracles:
+  - unchanged 31-check primary exact symbolic verifier
+  - representation-normalized independent light-cone and exterior-calculus review
+expected_positive_object: >-
+  The attempt-0001 object with raw unevaluated integrals normalized before
+  exact comparison and no change to the scientific predicate.

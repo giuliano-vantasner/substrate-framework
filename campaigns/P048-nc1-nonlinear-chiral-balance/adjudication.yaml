@@ -1,0 +1,57 @@
+campaign: P048
+title: Exact nonlinear sine-Gordon chiral balance and NC1 audit
+source_baseline: substrate@6d1f4e0
+source_units: [NC1]
+base_release: v0.42.0
+adjudicated_at: '2026-08-01T22:02:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The characteristic balances, topological current, boundary charge, and
+    parity-sector map close exactly from the accepted sine-Gordon convention
+    with fewer assumptions than a stress-tensor construction and without any
+    pending weak-sector dependency.
+competing_candidates:
+  - id: B
+    decision: retained_for_NC2_but_unneeded_for_NC1s_minimal_positive_object
+  - id: C
+    decision: rejected_by_parity_invariance_and_missing_accepted_weak_interaction_dependencies
+claims:
+  - id: C-SG-011
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0002/result.yaml
+  failed_attempts:
+    - attempts/0001/result.yaml
+  independent_review: reviews/independent_differential_form_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-SG-011-review.md
+source_disposition:
+  NC1: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P048-nc1-nonlinear-chiral-balance/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-15/bridge_NC1_nonlinear_chiral_current.py
+    --source-reproduction campaigns/P048-nc1-nonlinear-chiral-balance/evidence/source-reproduction.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P048-nc1-nonlinear-chiral-balance/reviews/independent_differential_form_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+    tests/test_topological_labels.py tests/test_u1_charge.py
+    tests/test_quartic_qball.py tests/test_exact_sine_qball.py
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P001-sine-gordon-root/verify.py
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P019-winding-parity-labels/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_EL2_baryonless_fermion.py
+    --source-reproduction campaigns/P019-winding-parity-labels/evidence/source-reproduction.yaml
+debt: []
+status: accepted

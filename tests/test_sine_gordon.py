@@ -23,7 +23,16 @@ from substrate_framework.sine_gordon import (
     breather_period,
     breather_secant_action_scale,
     breather_threshold_deficit,
+    naive_chiral_currents,
+    naive_chiral_transport_defects,
     sine_gordon_residual,
+    sine_gordon_chiral_sources,
+    sine_gordon_light_cone_chiral_sources,
+    spatial_parity_transform,
+    static_kink_field,
+    topological_charge_from_boundaries,
+    topological_current,
+    topological_current_divergence,
 )
 
 
@@ -32,6 +41,71 @@ def test_exact_breather_residual_vanishes() -> None:
     omega = sp.symbols("omega", positive=True)
     field = breather_field(x, t, omega)
     assert sp.simplify(sine_gordon_residual(field, x, t)) == 0
+
+
+def test_naive_chiral_currents_have_equal_sine_gordon_sources() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    current_plus, current_minus = naive_chiral_currents(field, x, t)
+    assert current_plus == sp.diff(field, t) + sp.diff(field, x)
+    assert current_minus == sp.diff(field, t) - sp.diff(field, x)
+
+    defect_plus, defect_minus = naive_chiral_transport_defects(field, x, t)
+    wave_operator = sp.diff(field, t, 2) - sp.diff(field, x, 2)
+    assert sp.simplify(defect_plus - wave_operator) == 0
+    assert sp.simplify(defect_minus - wave_operator) == 0
+    assert sine_gordon_chiral_sources(field) == (-sp.sin(field), -sp.sin(field))
+    assert sine_gordon_light_cone_chiral_sources(field) == (
+        -sp.sin(field) / 2,
+        -sp.sin(field) / 2,
+    )
+
+
+def test_topological_current_is_off_shell_conserved_with_load_bearing_sign() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    density, flux = topological_current(field, x, t)
+    assert density == sp.diff(field, x) / (2 * sp.pi)
+    assert flux == -sp.diff(field, t) / (2 * sp.pi)
+    assert topological_current_divergence(field, x, t) == 0
+
+    wrong_divergence = sp.simplify(
+        sp.diff(density, t) + sp.diff(-flux, x)
+    )
+    assert wrong_divergence != 0
+
+
+def test_kink_charge_and_parity_sector_exchange_are_exact() -> None:
+    x, t = sp.symbols("x t", real=True)
+    kink = static_kink_field(x)
+    antikink = static_kink_field(x, orientation=-1)
+    assert sp.simplify(sine_gordon_residual(kink, x, t)) == 0
+    assert sp.simplify(sine_gordon_residual(antikink, x, t)) == 0
+    assert topological_charge_from_boundaries(0, 2 * sp.pi) == 1
+    assert topological_charge_from_boundaries(2 * sp.pi, 0) == -1
+    assert sp.simplify(spatial_parity_transform(kink, x) - antikink) == 0
+
+
+def test_sine_gordon_equation_is_spatial_parity_invariant() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    parity_field = spatial_parity_transform(field, x)
+    parity_residual = sine_gordon_residual(parity_field, x, t)
+    reflected_residual = sine_gordon_residual(field, x, t).subs(x, -x)
+    assert sp.simplify(parity_residual - reflected_residual) == 0
+
+
+def test_small_amplitude_sine_gordon_is_massive_not_chiral_wave_limit() -> None:
+    epsilon = sp.symbols("epsilon", positive=True)
+    profile = sp.symbols("f", real=True)
+    source = sine_gordon_chiral_sources(epsilon * profile)[0]
+    assert sp.limit(source / epsilon, epsilon, 0, dir="+") == -profile
+
+
+@pytest.mark.parametrize("orientation", [0, 2, -2])
+def test_static_kink_rejects_nonunit_orientation(orientation: int) -> None:
+    with pytest.raises(ValueError, match="orientation"):
+        static_kink_field(sp.Symbol("x"), orientation=orientation)
 
 
 def test_breather_formulas_at_exact_frequency() -> None:

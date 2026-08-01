@@ -105,6 +105,132 @@ def sine_gordon_residual(field: Any, x: sp.Symbol, t: sp.Symbol) -> sp.Expr:
     return sp.diff(expression, t, 2) - sp.diff(expression, x, 2) + sp.sin(expression)
 
 
+def naive_chiral_currents(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return the characteristic derivatives ``(J_plus, J_minus)``.
+
+    The convention is ``J_plus=phi_t+phi_x`` and
+    ``J_minus=phi_t-phi_x``.  These are not independently conserved in the
+    normalized sine-Gordon theory.
+    """
+
+    expression = sp.sympify(field)
+    field_t = sp.diff(expression, t)
+    field_x = sp.diff(expression, x)
+    return sp.simplify(field_t + field_x), sp.simplify(field_t - field_x)
+
+
+def naive_chiral_transport_defects(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return ``(d_t J_plus-d_x J_plus, d_t J_minus+d_x J_minus)``.
+
+    Both entries equal ``phi_tt-phi_xx`` off shell.  On the sine-Gordon
+    equation they therefore equal ``-sin(phi)``; with light-cone derivatives
+    ``d_plus=(d_t+d_x)/2`` and ``d_minus=(d_t-d_x)/2``, both corresponding
+    sources are ``-sin(phi)/2``.
+    """
+
+    current_plus, current_minus = naive_chiral_currents(field, x, t)
+    return (
+        sp.simplify(sp.diff(current_plus, t) - sp.diff(current_plus, x)),
+        sp.simplify(sp.diff(current_minus, t) + sp.diff(current_minus, x)),
+    )
+
+
+def sine_gordon_chiral_sources(field: Any) -> tuple[sp.Expr, sp.Expr]:
+    """Return the two on-shell transport sources ``(-sin(phi), -sin(phi))``."""
+
+    source = -sp.sin(sp.sympify(field))
+    return source, source
+
+
+def sine_gordon_light_cone_chiral_sources(
+    field: Any,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return ``(d_minus J_plus, d_plus J_minus)`` on shell.
+
+    Light-cone derivatives include the explicit one-half convention.
+    """
+
+    source_plus, source_minus = sine_gordon_chiral_sources(field)
+    return sp.simplify(source_plus / 2), sp.simplify(source_minus / 2)
+
+
+def topological_current(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return ``(j0,j1)=(phi_x,-phi_t)/(2*pi)`` for ``epsilon**01=+1``.
+
+    This current is distinct from the Noether current of an independently
+    declared complex field.  Its divergence vanishes identically for every
+    sufficiently smooth real field, without using the sine-Gordon equation.
+    """
+
+    expression = sp.sympify(field)
+    return (
+        sp.diff(expression, x) / (2 * sp.pi),
+        -sp.diff(expression, t) / (2 * sp.pi),
+    )
+
+
+def topological_current_divergence(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> sp.Expr:
+    """Return ``d_t j0+d_x j1``, an off-shell mixed-partial identity."""
+
+    density, flux = topological_current(field, x, t)
+    return sp.simplify(sp.diff(density, t) + sp.diff(flux, x))
+
+
+def topological_charge_from_boundaries(
+    field_minus_infinity: Any,
+    field_plus_infinity: Any,
+) -> sp.Expr:
+    """Return ``(phi(+infinity)-phi(-infinity))/(2*pi)``.
+
+    Existence of the two boundary limits is a caller hypothesis.  The result
+    is integer-valued only when both limits are sine-Gordon vacua ``2*pi*n``.
+    """
+
+    lower = sp.sympify(field_minus_infinity)
+    upper = sp.sympify(field_plus_infinity)
+    return sp.simplify((upper - lower) / (2 * sp.pi))
+
+
+def spatial_parity_transform(field: Any, x: sp.Symbol) -> sp.Expr:
+    """Return the scalar-field parity image ``phi(t,-x)``."""
+
+    return sp.sympify(field).subs(x, -x)
+
+
+def static_kink_field(
+    x: Any,
+    center: Any = 0,
+    orientation: int = 1,
+) -> sp.Expr:
+    """Return the unit kink or antikink ``4*atan(exp(s*(x-x0)))``.
+
+    ``orientation=1`` has winding ``+1`` and ``orientation=-1`` has winding
+    ``-1``.  Both are static solutions in the normalized convention.
+    """
+
+    if orientation not in (-1, 1):
+        raise ValueError("orientation must be +1 or -1")
+    coordinate = sp.sympify(x)
+    origin = sp.sympify(center)
+    return 4 * sp.atan(sp.exp(orientation * (coordinate - origin)))
+
+
 def hamiltonian_density(field: Any, x: sp.Symbol, t: sp.Symbol) -> sp.Expr:
     """Return the normalized sine-Gordon Hamiltonian density."""
 

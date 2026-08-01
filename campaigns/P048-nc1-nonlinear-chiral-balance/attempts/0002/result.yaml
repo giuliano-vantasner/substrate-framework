@@ -1,0 +1,26 @@
+attempt: 0002
+completed_at: '2026-08-01T22:02:00Z'
+primary_exit_code: 0
+primary_terminal_tally: 31
+independent_exit_code: 0
+independent_terminal_tally: 7
+candidate: A
+verdict:
+  C-SG-011: symbolic_verified
+evidence:
+  - exact off-shell characteristic-current defects and on-shell sine-Gordon sources
+  - exact light-cone one-half factors with coefficient mutations
+  - off-shell topological-current conservation with flux-sign mutation
+  - integer vacuum-boundary winding and normalization mutations
+  - exact axial-current parity transformation and parity-invariant field equation
+  - exact kink and antikink residuals, limits, density integrals, and sector exchange
+  - independent characteristic-coordinate and antisymmetric-tensor derivation
+  - small-amplitude massive Klein-Gordon limit counterexample to a free chiral split
+qualifications:
+  - the naive J_plus and J_minus are characteristic derivatives, not separately conserved nonlinear currents
+  - integrated topological charge requires boundary limits and conservation requires vanishing asymptotic flux
+  - integer charge requires sine-Gordon vacuum boundaries
+  - the topological current is identically conserved for any smooth field and is not a nonlinear dynamical replacement selected by the SG equation
+  - spatial parity exchanges opposite-winding sectors while leaving the SG equation invariant
+  - no selected sector, intrinsic parity violation, V-A interaction, weak force, bosonization dictionary, particle identity, or substrate realization follows
+status: passed

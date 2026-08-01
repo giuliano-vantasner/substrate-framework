@@ -1,0 +1,18 @@
+attempt: 0001
+completed_at: '2026-08-01T21:56:00Z'
+primary_exit_code: 0
+primary_terminal_tally: 31
+independent_exit_code: 1
+independent_checks_before_failure: 4
+verdict: failed_attempt
+failure_class: representation
+mechanism: >-
+  SymPy left each whole-line kink derivative integral as an unevaluated
+  Integral object whose simplify result is exactly plus or minus one. The
+  independent review compared the raw representation directly to integers.
+scientific_status: >-
+  The primary exact derivation passed; the independent representation check did
+  not complete, so no claim was promoted at this boundary.
+next_attempt: >-
+  Normalize both exact integral objects with simplify before comparing them;
+  retain the boundary-limit route as a separate derivation.

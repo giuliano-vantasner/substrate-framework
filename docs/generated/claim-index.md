@@ -444,6 +444,15 @@ At omega=1/sqrt(2), let mu(t) be the exact centered breather energy second momen
 - Compatibility: `native`
 - Dependencies: C-SG-009
 
+## C-SG-011
+
+Let phi be a sufficiently smooth real field in normalized 1+1 sine-Gordon conventions and define J_plus=phi_t+phi_x and J_minus=phi_t-phi_x. Off shell, d_t J_plus-d_x J_plus=d_t J_minus+d_x J_minus=phi_tt-phi_xx. On the equation phi_tt-phi_xx+sin(phi)=0, both defects are -sin(phi); with d_plus=(d_t+d_x)/2 and d_minus=(d_t-d_x)/2, this is d_minus J_plus=d_plus J_minus=-sin(phi)/2. For orientation epsilon^(01)=+1, the topological current j^mu=epsilon^(mu nu)*partial_nu(phi)/(2*pi) has (j0,j1)=(phi_x,-phi_t)/(2*pi) and identically vanishing divergence by equality of mixed partials, without using the equation of motion. If the spatial boundary limits exist, its charge is Q=[phi(+infinity)-phi(-infinity)]/(2*pi); vacuum limits 2*pi*n give the integer winding n_plus-n_minus, and vanishing asymptotic flux makes Q time independent. Under scalar-field spatial parity phi_P(t,x)=phi(t,-x), j0 is odd, j1 is even, Q changes sign, and the sine-Gordon equation remains invariant. The exact unit kink 4*atan(exp(x-x0)) and its parity image have charges +1 and -1. The small-amplitude sine-Gordon limit is massive Klein-Gordon and retains the characteristic source at first field order. These facts establish neither independently conserved chiral currents nor a selected winding sector, intrinsic parity violation, V-A interaction, weak force, bosonization dictionary, particle identity, or substrate realization.
+
+- Accepted in: `v0.43.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

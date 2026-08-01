@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 173
-  qualified: 38
+  pending_adjudication: 172
+  qualified: 39
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2965,8 +2965,20 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-011
+  qualification: The exact sine-Gordon characteristic-current sources, normalized off-shell topological
+    current, integer vacuum-boundary charge, and parity exchange of kink sectors are accepted. The source
+    incorrectly treats the small-field sine-Gordon limit as a massless chiral wave theory and does not
+    derive a selected winding sector, intrinsic parity violation, V-A interaction, weak force, bosonization
+    closure, particle identity, or substrate realization.
+  evidence:
+  - campaigns/P048-nc1-nonlinear-chiral-balance/reviews/source_adjudication.md
+  - campaigns/P048-nc1-nonlinear-chiral-balance/evidence/source-reproduction.yaml
+  note: P048 separates exact axial-current transformation and sector exchange from physical symmetry violation,
+    proves the equation remains parity invariant, and preserves explicit smoothness, boundary, vacuum,
+    and asymptotic-flux hypotheses.
 - source_unit: NC2
   phase: phase-15
   path: merged-framework/bridges/phase-15/bridge_NC2_chiral_stress_tensor.py

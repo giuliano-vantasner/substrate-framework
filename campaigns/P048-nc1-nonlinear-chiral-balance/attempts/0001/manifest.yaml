@@ -1,0 +1,15 @@
+attempt: 0001
+campaign: P048
+started_at: '2026-08-01T21:55:00Z'
+base_release: v0.42.0
+base_commit: bd60154
+source_unit: NC1
+source_sha256: b7206df001095b2706818ea5f3ffde13d24887816d867f7252da460588b010f5
+candidate: A
+oracles:
+  - primary exact symbolic verifier
+  - independent light-cone and exterior-calculus review
+expected_positive_object: >-
+  Exact sourced characteristic balances, off-shell topological-current
+  conservation, integer boundary charge, and parity-sector exchange without a
+  physical parity-violation inference.

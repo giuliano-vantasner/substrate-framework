@@ -2198,3 +2198,54 @@ claims:
     accepted_in: v0.42.0
     challenges: []
     supersedes: []
+  - id: C-SG-011
+    statement: >-
+      Let phi be a sufficiently smooth real field in normalized 1+1
+      sine-Gordon conventions and define J_plus=phi_t+phi_x and
+      J_minus=phi_t-phi_x. Off shell,
+      d_t J_plus-d_x J_plus=d_t J_minus+d_x J_minus=phi_tt-phi_xx. On the
+      equation phi_tt-phi_xx+sin(phi)=0, both defects are -sin(phi); with
+      d_plus=(d_t+d_x)/2 and d_minus=(d_t-d_x)/2, this is
+      d_minus J_plus=d_plus J_minus=-sin(phi)/2. For orientation
+      epsilon^(01)=+1, the topological current
+      j^mu=epsilon^(mu nu)*partial_nu(phi)/(2*pi) has
+      (j0,j1)=(phi_x,-phi_t)/(2*pi) and identically vanishing divergence by
+      equality of mixed partials, without using the equation of motion. If the
+      spatial boundary limits exist, its charge is
+      Q=[phi(+infinity)-phi(-infinity)]/(2*pi); vacuum limits 2*pi*n give the
+      integer winding n_plus-n_minus, and vanishing asymptotic flux makes Q
+      time independent. Under scalar-field spatial parity
+      phi_P(t,x)=phi(t,-x), j0 is odd, j1 is even, Q changes sign, and the
+      sine-Gordon equation remains invariant. The exact unit kink
+      4*atan(exp(x-x0)) and its parity image have charges +1 and -1. The
+      small-amplitude sine-Gordon limit is massive Klein-Gordon and retains
+      the characteristic source at first field order. These facts establish
+      neither independently conserved chiral currents nor a selected winding
+      sector, intrinsic parity violation, V-A interaction, weak force,
+      bosonization dictionary, particle identity, or substrate realization.
+    provenance: campaigns/P048-nc1-nonlinear-chiral-balance/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-001
+    evidence:
+      - campaigns/P048-nc1-nonlinear-chiral-balance/verify.py
+      - campaigns/P048-nc1-nonlinear-chiral-balance/attempts/0002/result.yaml
+      - campaigns/P048-nc1-nonlinear-chiral-balance/reviews/independent_differential_form_review.py
+      - campaigns/P048-nc1-nonlinear-chiral-balance/reviews/source_adjudication.md
+      - campaigns/P048-nc1-nonlinear-chiral-balance/evidence/source-reproduction.yaml
+      - memory/vantasner/decisions/C-SG-011-review.md
+      - tests/test_sine_gordon.py
+      - tests/test_topological_labels.py
+    assumptions:
+      - The real field is sufficiently smooth for mixed partial derivatives to commute.
+      - The orientation convention is epsilon^(01)=+1 and the normalized topological charge denominator is 2*pi.
+      - Integrated charge requires existing spatial boundary limits; integer winding further requires sine-Gordon vacuum limits, and time conservation requires vanishing asymptotic flux difference.
+      - Spatial parity treats phi as a scalar and exchanges rather than selects opposite-winding sectors.
+      - No accepted weak-sector interaction or physical parity-violation map is imported.
+    comparators: []
+    accepted_in: v0.43.0
+    challenges: []
+    supersedes: []
