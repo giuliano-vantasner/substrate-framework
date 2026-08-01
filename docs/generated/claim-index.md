@@ -111,6 +111,15 @@ For each nonzero direction n in Euclidean three-space, the orthogonal TT project
 - Compatibility: `compatible_extension`
 - Dependencies: C-GW-001
 
+## C-GW-003
+
+Let two equal point masses m follow the declared paths x_1(t)=a*(cos(Omega*t),sin(Omega*t),0) and x_2(t)=-x_1(t), where a is each mass's orbital radius and the separation is 2*a. Their monopole is 2*m, their dipole is zero, and for the normalized moment I_STF=I-delta*Tr(I)/3 the exact Frobenius norms are |ddot I_STF|^2=32*m^2*a^4*Omega^4 and |dddot I_STF|^2=128*m^2*a^4*Omega^6. The triple convention Q=3*I_STF has derivative norms nine times larger. Conditional on h_TT=(A/R)*TT(ddot I_STF), line of sight n=(sin(i),0,cos(i)), and oriented transverse frame p=(cos(i),0,-sin(i)), v=(0,1,0), the conventional matrix read-offs are h_plus=-(2*A*m*a^2*Omega^2/R)*(1+cos(i)^2)*cos(2*Omega*t) and h_cross=-(4*A*m*a^2*Omega^2/R)*cos(i)*sin(2*Omega*t). The normalized C-GW-002 basis coordinates are sqrt(2) times these read-offs. Face-on coefficients have equal amplitude in quadrature; edge-on cross vanishes and plus has half the face-on amplitude. With the separately declared inputs A=2*G and B=1/(32*pi*G), C-GW-001 gives conditional power 128*G*m^2*a^4*Omega^6/5. Equivalently Q=3*I_STF requires waveform coefficient 2*G/3 and power coefficient G/45; combining Q with the unscaled coefficient creates a factor-three field and factor-nine power error. This theorem treats the paths as kinematic inputs and establishes no binding stress, orbital law, breather embedding, isolated conserved 3+1 source, gravitational action or coupling, retarded dynamics, energy loss, detector strain, astrophysical prediction, or substrate identity.
+
+- Accepted in: `v0.35.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-MOM-001, C-GW-001, C-GW-002
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

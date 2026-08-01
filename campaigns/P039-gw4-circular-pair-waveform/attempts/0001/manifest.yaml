@@ -1,0 +1,22 @@
+attempt: 0001
+campaign: P039
+base_release: v0.34.0
+base_commit: 3aed5a3
+source_unit: GW4
+source_sha256: 0e2637aa188c77a2b976b87e8efffc104eb64c25b759b739d0467d01790c4a15
+candidate: A
+oracles:
+  - exact discrete-particle monopole, dipole, and normalized-STF derivatives
+  - exact arbitrary-inclination TT-basis contractions
+  - conditional angular power reduction inherited from C-GW-001
+  - independent particle-dyad differentiation and viewing-frame construction
+  - second-order finite-difference refinement of the third derivative
+mutations:
+  - retain the triple quadrupole while leaving its waveform coefficient unscaled
+  - change the load-bearing derivative order
+  - change the quadrupole scale or inverse waveform rescaling
+  - compare static, translating, and accelerating paths
+expected_positive_object: >-
+  An exact convention-covariant circular-pair moment and conditional waveform
+  theorem for arbitrary inclination, excluding binding, breather identity, and
+  physical gravity.

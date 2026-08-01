@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 182 pending, 0 partially migrated, 3 migrated, 30 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 181 pending, 0 partially migrated, 3 migrated, 31 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -109,6 +109,7 @@ Attempts are append-only and individually reproducible.
 | 0047 | P036 localized conserved-stress moments and GW1 audit | `campaigns/P036-gw1-conserved-stress-moments` | accepted in v0.32.0 with GW1 qualified | Thirty main and nine independent checks derive the boundary-qualified monopole, dipole, second-moment, and STF identities; a fully conserved translating Gaussian, boundary-flux and nonsymmetric-tensor counterexamples expose the source's unconserved arbitrary-current example and keep moment kinematics separate from radiation | Audit GW2's quadrupole-power claim against C-MOM-001 without importing an unaccepted gravity normalization |
 | 0048 | P037 exact TT angular reduction and GW2 normalization audit | `campaigns/P037-gw2-quadrupole-power` | accepted in v0.33.0 with GW2 qualified | Thirty-four main and nine independent checks derive the 8*pi/5 sphere contraction, keep waveform and flux prefactors conditional, carry Q=3*I_STF through an inverse waveform rescaling, execute harmonic averaging, and expose GW2's factor-nine power error | Audit GW3's TT-projector and two-polarization claims against C-GW-001 without duplicating its angular theorem |
 | 0049 | P038 rank-two TT image and GW3 basis audit | `campaigns/P038-gw3-tt-polarization-basis` | accepted in v0.34.0 with GW3 qualified | Thirty-three main and eight independent checks establish the exact image dimension, normalized complete plus/cross basis, piecewise frame coverage, double-angle rotation and circular phases while exposing GW3's norm-two “orthonormal” tensors, wrong provenance tally, and imported physical mode map | Audit GW4's breather-quadrupole waveform against C-MOM-001/C-GW-001/C-GW-002 without importing pending FS2 |
+| 0050 | P039 exact circular-pair moments and conditional waveform | `campaigns/P039-gw4-circular-pair-waveform` | accepted in v0.35.0 with GW4 qualified | The pinned source stops after four checks at removed `np.trapz`; thirty-six main and nine independent checks derive arbitrary-inclination coefficients, correct a factor-three field/factor-nine power convention error, and exclude binding, breather embedding, and physical gravity | Audit FS1's exact 1+1 energy-density second moment without importing its pending 3+1 radiation consumers |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -125,7 +126,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 182 bridge units remain pending, 3 are migrated, 30 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 181 bridge units remain pending, 3 are migrated, 31 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -163,11 +164,13 @@ P037 adds exact transverse and TT projection, the full-sphere `8*pi/5` STF contr
 
 P038 adds the exact rank-two TT image, a normalized complete plus/cross basis, deterministic piecewise transverse frames, the double-angle rotation law, and circular weight-two phases. It qualifies GW3 because the source calls norm-squared-two tensors orthonormal, contradicts its executable trace-three guard with a provenance trace-four sentence, and imports the step from spatial projector rank to propagating graviton or physical helicity modes.
 
+P039 adds exact normalized-STF harmonics and arbitrary-inclination conditional TT coefficients for a declared equal-mass circular point pair. It qualifies GW4 because its source stops at removed `numpy.trapz`, combines `Q=3*I_STF` with an unscaled coefficient and therefore overstates field and power by factors three and nine, and supplies no binding stress, 3+1 breather embedding, or physical gravitational dynamics.
+
 ## Canonicalization
-The registry, `v0.34.0` manifest, current release, generated claim index, and generated framework memory agree on forty-seven accepted claims. P001 through P038 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 182 pending, 0 partial, 3 migrated, 30 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.35.0` manifest, current release, generated claim index, and generated framework memory agree on forty-eight accepted claims. P001 through P039 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 181 pending, 0 partial, 3 migrated, 31 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 182 pending, 3 migrated, 30 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit GW4's breather-quadrupole waveform against C-MOM-001, C-GW-001, and C-GW-002 without importing pending FS2.
+The effort remains active. D4 is discharged, but D1 remains open with 181 pending, 3 migrated, 31 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit FS1's exact 1+1 energy-density second moment without importing pending FS2-FS4 or treating it as a 3+1 radiation source.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

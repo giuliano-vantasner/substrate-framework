@@ -1,0 +1,49 @@
+id: P039
+base_release: v0.34.0
+base_commit: 3aed5a3
+source_baseline: substrate@6d1f4e0
+source_units: [GW4]
+question: >-
+  Derive the exact quadrupole harmonics and premise-explicit TT polarization
+  waveforms of a declared equal-mass circular point pair, then audit GW4's
+  identification of that kinematic pair with bound sine-Gordon breathers and
+  its physical radiation claims against the accepted normalization boundary.
+invariants:
+  - C-MOM-001 point-mass moments are kinematic unless binding or external stress closes local conservation
+  - C-GW-001 supplies only a conditional waveform/power reduction and requires quadrupole-convention covariance
+  - C-GW-002 supplies normalized basis coefficients but no physical detector or graviton interpretation
+  - accepted sine-Gordon claims do not embed a 1+1 breather as a compact 3+1 mass distribution or derive a two-breather circular bound state
+  - pending FS2 and P3D3 cannot be imported as accepted dependencies
+allowed_imports:
+  - C-SG-001 and C-SG-002 exact normalized breather profile and energy
+  - C-MOM-001 discrete source moments and normalized/triple STF conventions
+  - C-GW-001 conditional TT waveform normalization and C-GW-002 basis algebra
+  - a declared equal-mass circular point-pair path as kinematic input, without a binding claim
+  - GW4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote exact normalized-STF circular-pair quadrupole harmonics and
+      conditional plus/cross waveforms for arbitrary viewing inclination,
+      keeping mass, radius, frequency, coupling, and waveform premise explicit
+  - id: B
+    description: >-
+      Promote only the circular-pair moment and harmonic-doubling identities if
+      the TT waveform specialization cannot close without a new physical input
+  - id: C
+    description: >-
+      Promote GW4's concrete bound sine-Gordon-breather binary, Keplerian orbit,
+      physical strain, and radiated power as a substrate prediction
+uniqueness_evidence: null
+selection_criteria:
+  - exact center-of-mass moment and normalized/triple-STF conventions
+  - explicit orbital-radius and frequency definitions with no hidden binding law
+  - conditional waveform coefficient inherited consistently from C-GW-001
+  - normalized polarization extraction and arbitrary-inclination limits
+  - harmonic frequency, phase, orientation, and origin consistency
+  - independent differentiation, convention mutations, and accepted dependency closure
+claims_proposed:
+  - provisional C-GW-003
+comparators_blinded_until: >-
+  circular_source_conventions_waveform_premises_inclination_limits_and_selection_criteria_frozen
+status: accepted

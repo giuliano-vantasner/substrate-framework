@@ -26,6 +26,12 @@ from .conserved_moments import (
     isolated_conserved_stress_moment_rates,
     symmetric_trace_free,
 )
+from .circular_pair import (
+    ConditionalCircularPairWaveform,
+    conditional_equal_mass_circular_power,
+    conditional_equal_mass_circular_waveform,
+    equal_mass_circular_pair_moments,
+)
 from .tt_angular import (
     TTPolarizationBasis,
     circular_tt_polarizations,

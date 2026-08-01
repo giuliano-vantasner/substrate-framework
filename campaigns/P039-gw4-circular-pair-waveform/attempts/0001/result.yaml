@@ -1,0 +1,28 @@
+attempt: 0001
+completed_at: '2026-08-01T18:27:49Z'
+exit_code: 0
+terminal_tally: 36
+verdict:
+  C-GW-003: symbolic_verified
+evidence:
+  - exact monopole, dipole, normalized-STF derivatives, and harmonic frequency
+  - exact arbitrary-inclination conventional and normalized-basis coefficients
+  - face-on circular and edge-on linear-polarization limits
+  - convention-covariant conditional power and factor-nine source counterexample
+  - independent particle/viewing-frame derivation and finite-difference refinement
+initial_failures:
+  - >-
+    A source-declaration check used a phrase that crossed a wrapped line with a
+    missing word; it was repaired to match the actual declaration without
+    changing the scientific predicate.
+  - >-
+    The independent trace check compared an unsimplified trigonometric trace
+    directly with zero; trigonometric normalization repaired the representation
+    while leaving the exact STF construction unchanged.
+source_defects:
+  - the pinned source exits after four checks because NumPy removed the trapz alias
+  - the headline power factor thirty-two conflicts with the executable factor eleven hundred fifty-two
+  - using Q=3*I_STF with the normalized-I_STF waveform coefficient makes the field three times and power nine times too large
+  - a point-lump circular orbit, breather embedding, binding stress, and physical gravity are declared or imported rather than derived
+status: passed_after_implementation_and_representation_repairs
+stdout: stdout.txt

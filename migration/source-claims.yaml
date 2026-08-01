@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 182
-  qualified: 30
+  pending_adjudication: 181
+  qualified: 31
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2543,8 +2543,20 @@ units:
   dynamic_check_calls: 3
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOM-001
+  - C-GW-001
+  - C-GW-002
+  - C-GW-003
+  qualification: GW4's declared circular-point-pair moments and corrected conditional waveform map to
+    accepted claims. Its source stops at removed numpy.trapz, mixes Q=3*I_STF with the unscaled waveform
+    coefficient, and does not derive binding, a 3+1 breather source, or physical gravity.
+  evidence:
+  - campaigns/P039-gw4-circular-pair-waveform/reviews/source_adjudication.md
+  - campaigns/P039-gw4-circular-pair-waveform/evidence/source-reproduction.yaml
+  note: P039 supplies exact arbitrary-inclination coefficients, corrects the factor-three field and factor-nine
+    power normalization, and keeps every source, orbit, waveform, and flux premise explicit.
 - source_unit: FS1
   phase: phase-13
   path: merged-framework/bridges/phase-13/bridge_FS1_breather_internal_quadrupole.py

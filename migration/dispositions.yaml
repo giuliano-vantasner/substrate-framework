@@ -567,3 +567,22 @@ units:
       P038 supplies normalized completeness, piecewise all-direction frame
       coverage, double-angle and circular rotation laws, and an independent
       full constraint-space derivation.
+  GW4:
+    disposition: qualified
+    accepted_claims:
+      - C-MOM-001
+      - C-GW-001
+      - C-GW-002
+      - C-GW-003
+    qualification: >-
+      GW4's declared circular-point-pair moments and corrected conditional
+      waveform map to accepted claims. Its source stops at removed numpy.trapz,
+      mixes Q=3*I_STF with the unscaled waveform coefficient, and does not
+      derive binding, a 3+1 breather source, or physical gravity.
+    evidence:
+      - campaigns/P039-gw4-circular-pair-waveform/reviews/source_adjudication.md
+      - campaigns/P039-gw4-circular-pair-waveform/evidence/source-reproduction.yaml
+    note: >-
+      P039 supplies exact arbitrary-inclination coefficients, corrects the
+      factor-three field and factor-nine power normalization, and keeps every
+      source, orbit, waveform, and flux premise explicit.

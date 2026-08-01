@@ -1,0 +1,38 @@
+PASS [P039-GW4] the audited GW4 source is the hash-pinned candidate unit
+PASS [P039-GW4] GW4's current NumPy reproduction fails at removed trapz
+PASS [P039-GW4] GW4 reaches only its four pre-power checks
+PASS [P039-GW4] GW4 never reaches a terminal pass tally
+PASS [P039-GW4] the imported special breather energy agrees with the accepted exact energy
+PASS [P039-GW4] GW4 declares rather than derives the point-lump orbit model
+PASS [P039-GW4] GW4 explicitly imports the retarded TT waveform
+PASS [P039-GW4] the declared equal pair has constant monopole and zero center-of-mass dipole
+PASS [P039-GW4] the two source quadrupole conventions differ by exactly three
+PASS [P039-GW4] the normalized second-derivative norm has coefficient thirty-two
+PASS [P039-GW4] the normalized third-derivative norm has coefficient one hundred twenty-eight
+PASS [P039-GW4] the triple-normalized third-derivative norm has coefficient eleven hundred fifty-two
+PASS [P039-GW4] GW4's headline thirty-two and executable eleven-hundred-fifty-two power factors disagree
+PASS [P039-GW4] the accepted conditional inputs give corrected circular-pair power 128 G over five
+PASS [P039-GW4] GW4's written triple-Q convention overstates that same conditional power by nine
+PASS [P039-GW4] circular-pair quadrupole convention conversion: baseline
+PASS [P039-GW4] circular-pair quadrupole convention conversion: mutations supplied
+PASS [P039-GW4] circular-pair quadrupole convention conversion: mutation 1 rejected
+PASS [P039-GW4] circular-pair quadrupole convention conversion: mutation 2 rejected
+PASS [P039-GW4] circular-pair quadrupole convention conversion: mutation 3 rejected
+PASS [P039-GW4] load-bearing third derivative order: baseline
+PASS [P039-GW4] load-bearing third derivative order: mutations supplied
+PASS [P039-GW4] load-bearing third derivative order: mutation 1 rejected
+PASS [P039-GW4] load-bearing third derivative order: mutation 2 rejected
+PASS [P039-GW4] load-bearing third derivative order: mutation 3 rejected
+PASS [P039-GW4] the arbitrary-inclination conventional plus coefficient is exact
+PASS [P039-GW4] the arbitrary-inclination conventional cross coefficient is exact
+PASS [P039-GW4] normalized basis coordinates retain their square-root-two conversion
+PASS [P039-GW4] face-on plus and cross have equal amplitudes in quadrature at twice orbital frequency
+PASS [P039-GW4] edge-on cross vanishes while plus retains half the face-on amplitude
+PASS [P039-GW4] a static pair has exactly zero third moment derivative
+PASS [P039-GW4] a uniformly translating pair has exactly zero third moment derivative
+PASS [P039-GW4] constant origin translation leaves the third quadrupole derivative unchanged
+PASS [P039-GW4] the circular paths require nonzero acceleration not supplied by point kinematics
+PASS [P039-GW4] GW4's later FS2 and P3D3 annotations do not derive their premises in this source
+PASS [P039-GW4] the exact conditional waveform is not a physical breather-binary verdict
+ALL 36 CHECKS PASS [P039-GW4]
+P039 GW4 CIRCULAR-PAIR WAVEFORM AUDIT ALL 36 CHECKS PASS

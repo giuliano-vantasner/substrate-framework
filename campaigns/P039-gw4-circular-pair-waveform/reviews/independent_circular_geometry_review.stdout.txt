@@ -1,0 +1,11 @@
+PASS [P039-INDEPENDENT] direct particle dyads independently give the normalized STF moment
+PASS [P039-INDEPENDENT] direct differentiation independently gives the 32 and 128 norms
+PASS [P039-INDEPENDENT] the orbital-radius factor agrees with reduced-mass separation notation
+PASS [P039-INDEPENDENT] independent viewing-frame contraction gives the arbitrary-inclination plus factor
+PASS [P039-INDEPENDENT] independent viewing-frame contraction gives the arbitrary-inclination cross factor
+PASS [P039-INDEPENDENT] the chosen viewing frame is exactly transverse and oriented
+PASS [P039-INDEPENDENT] independent finite differences converge under two refinements
+PASS [P039-INDEPENDENT] triple quadrupole with an unscaled waveform coefficient is a factor-three field error
+PASS [P039-INDEPENDENT] the declared orbit needs acceleration and therefore an unmodeled force or stress
+ALL 9 CHECKS PASS [P039-INDEPENDENT]
+P039 INDEPENDENT CIRCULAR-GEOMETRY REVIEW ALL 9 CHECKS PASS

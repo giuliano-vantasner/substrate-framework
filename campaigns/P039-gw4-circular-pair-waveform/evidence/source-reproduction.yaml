@@ -1,0 +1,21 @@
+source_unit: GW4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-12/bridge_GW4_breather_quadrupole_waveform.py
+sha256: 0e2637aa188c77a2b976b87e8efffc104eb64c25b759b739d0467d01790c4a15
+reproduced_at: '2026-08-01T18:27:49Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-12/bridge_GW4_breather_quadrupole_waveform.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+exit_code: 1
+terminal_tally: absent
+checks_before_failure: 4
+failure: >-
+  AttributeError: module 'numpy' has no attribute 'trapz'. NumPy 2.5.1
+  provides numpy.trapezoid; the hash-pinned source targets the older alias.
+observation: >-
+  The compatibility failure occurs when GW4 first integrates its numerical
+  power. It is not a physics verdict. P039 independently derives the exact
+  moments and conditional waveform and does not edit the immutable source.
