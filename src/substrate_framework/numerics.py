@@ -16,6 +16,8 @@ from typing import Any
 import numpy as np
 from numpy.typing import ArrayLike, NDArray
 from scipy.integrate import solve_bvp, solve_ivp
+from scipy.interpolate import make_interp_spline
+from scipy.signal import savgol_filter
 
 FloatArray = NDArray[np.float64]
 
@@ -116,6 +118,109 @@ def trapezoid_integral(values: ArrayLike, coordinate: ArrayLike) -> float:
     if not np.isfinite(result):
         raise NumericalFailure("trapezoidal integration returned a non-finite value")
     return result
+
+
+def local_polynomial_time_derivative(
+    time: ArrayLike,
+    values: ArrayLike,
+    derivative_order: int,
+    *,
+    window_duration: float,
+    polynomial_order: int = 5,
+) -> FloatArray:
+    """Differentiate a uniformly sampled trace by local polynomial fitting.
+
+    ``window_duration`` is converted to the nearest symmetric odd-point window,
+    so refinement studies can preserve a physical support width while changing
+    the sample interval. SciPy's Savitzky--Golay implementation supplies the
+    local least-squares polynomial derivative. Endpoint extrapolations are
+    returned, but a scientific claim must exclude a justified boundary window
+    rather than interpreting them as interior evidence.
+    """
+
+    samples, data, spacing = _uniform_time_data(time, values)
+    order = _nonnegative_integer(derivative_order, "derivative_order")
+    degree = _nonnegative_integer(polynomial_order, "polynomial_order")
+    if degree < order:
+        raise ValueError("polynomial_order must be at least derivative_order")
+    duration = float(window_duration)
+    if not np.isfinite(duration) or duration <= 0.0:
+        raise ValueError("window_duration must be positive and finite")
+    half_intervals = max(1, int(round(duration / (2.0 * spacing))))
+    window_points = 2 * half_intervals + 1
+    if window_points <= degree:
+        raise ValueError("window_duration gives too few points for polynomial_order")
+    if window_points > samples.size:
+        raise ValueError("window_duration exceeds the sampled trace")
+    derivative = savgol_filter(
+        data,
+        window_length=window_points,
+        polyorder=degree,
+        deriv=order,
+        delta=spacing,
+        axis=-1,
+        mode="interp",
+    )
+    if not np.all(np.isfinite(derivative)):
+        raise NumericalFailure("local polynomial derivative became non-finite")
+    return np.asarray(derivative, dtype=np.float64)
+
+
+def interpolating_spline_time_derivative(
+    time: ArrayLike,
+    values: ArrayLike,
+    derivative_order: int,
+    *,
+    spline_degree: int = 5,
+) -> FloatArray:
+    """Differentiate sampled data with an independent interpolating B-spline.
+
+    Unlike :func:`local_polynomial_time_derivative`, this route performs no
+    local least-squares smoothing. Agreement between the two therefore probes
+    whether a reported derivative is set by the resolved trace rather than by
+    one estimator's filtering choice. Endpoint values still require exclusion
+    in claim-level evidence.
+    """
+
+    samples, data, _spacing = _uniform_time_data(time, values)
+    order = _nonnegative_integer(derivative_order, "derivative_order")
+    degree = _nonnegative_integer(spline_degree, "spline_degree")
+    if degree < 1:
+        raise ValueError("spline_degree must be positive")
+    if order > degree:
+        raise ValueError("derivative_order cannot exceed spline_degree")
+    if samples.size <= degree:
+        raise ValueError("sampled trace has too few points for spline_degree")
+    spline = make_interp_spline(samples, data, k=degree, axis=-1)
+    derivative = spline.derivative(order)(samples)
+    if not np.all(np.isfinite(derivative)):
+        raise NumericalFailure("interpolating spline derivative became non-finite")
+    return np.asarray(derivative, dtype=np.float64)
+
+
+def _uniform_time_data(
+    time: ArrayLike,
+    values: ArrayLike,
+) -> tuple[FloatArray, FloatArray, float]:
+    samples = _real_vector(time, name="time")
+    if samples.size < 3 or np.any(np.diff(samples) <= 0.0):
+        raise ValueError("time must contain at least three strictly increasing samples")
+    steps = np.diff(samples)
+    spacing = float(np.mean(steps))
+    if not np.allclose(steps, spacing, rtol=1.0e-10, atol=1.0e-13):
+        raise ValueError("time must be uniformly sampled")
+    data = np.asarray(values, dtype=np.float64)
+    if data.ndim == 0 or data.shape[-1] != samples.size:
+        raise ValueError("values must have time along its last axis")
+    if not np.all(np.isfinite(data)):
+        raise ValueError("values must contain only finite samples")
+    return samples, data, spacing
+
+
+def _nonnegative_integer(value: int, name: str) -> int:
+    if isinstance(value, bool) or int(value) != value or value < 0:
+        raise ValueError(f"{name} must be a nonnegative integer")
+    return int(value)
 
 
 def solve_ivp_evidence(

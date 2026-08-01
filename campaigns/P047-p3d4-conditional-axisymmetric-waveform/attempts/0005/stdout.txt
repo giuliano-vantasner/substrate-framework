@@ -1,0 +1,7 @@
+PASS [P047-INDEPENDENT] independent polynomial moment equations derive both seven-point stencils
+PASS [P047-INDEPENDENT] the direct stencils exactly differentiate their load-bearing polynomial limit
+PASS [P047-INDEPENDENT] direct projector algebra gives sine-squared plus and zero cross
+PASS [P047-INDEPENDENT] direct projection along the arbitrary symmetry axis is exactly null
+PASS [P047-INDEPENDENT] independent flux contraction gives G qthird squared/30 for triple Qzz
+PASS [P047-INDEPENDENT] using G/5 directly on the triple tensor is independently ninefold high
+KeyError: triple_qzz_second_rms

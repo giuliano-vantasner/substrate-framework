@@ -1,0 +1,74 @@
+campaign: P047
+title: Arbitrary-axis axisymmetric STF conditional map and P3D4 audit
+source_baseline: substrate@6d1f4e0
+source_units: [P3D4]
+base_release: v0.41.0
+adjudicated_at: '2026-08-01T23:36:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The exact arbitrary-axis tensor map closes, and corrected derivatives of
+    the accepted regular l=2 coefficient trace pass every frozen mesh,
+    timestep, domain, sampling, estimator, endpoint, and amplitude gate plus
+    an independent seven-point review.
+competing_candidates:
+  - id: B
+    decision: rejected_as_final_scope_because_all_preregistered_numeric_gates_closed_but_retained_as_the_exact_only_fallback
+  - id: C
+    decision: rejected_by_the_accepted_P3D3_residual_angular_energy_audit_factor_nine_convention_error_and_missing_derivative_refinements
+claims:
+  - id: C-GW-005
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-GW-006
+    verification: simulation_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0006/result.yaml
+  scientific_attempt: attempts/0004/result.yaml
+  exploratory_attempt: attempts/0001/result.yaml
+  intermediate_attempt: attempts/0003/result.yaml
+  failed_attempts:
+    - attempts/0002/result.yaml
+    - attempts/0005/result.yaml
+  independent_review: reviews/independent_axisymmetric_trace_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-GW-005-review.md
+    - memory/vantasner/decisions/C-GW-006-review.md
+source_disposition:
+  P3D4: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P047-p3d4-conditional-axisymmetric-waveform/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-14/bridge_P3D4_selfconsistent_power_waveform.py
+    --source-reproduction campaigns/P047-p3d4-conditional-axisymmetric-waveform/evidence/source-reproduction.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P047-p3d4-conditional-axisymmetric-waveform/reviews/independent_axisymmetric_trace_review.py
+    --primary-result campaigns/P047-p3d4-conditional-axisymmetric-waveform/attempts/0004/result.yaml
+  - >-
+    .venv/bin/python -m pytest -q tests/test_axisymmetric_radiation.py
+    tests/test_tt_angular.py tests/test_tt_polarizations.py
+    tests/test_separable_moments.py tests/test_breathing_mode.py
+    tests/test_numerics.py tests/test_sine_gordon_l_modes.py
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P042-fs3-conditional-breathing-wave/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-13/bridge_FS3_breathing_mode_power.py
+    --source-reproduction campaigns/P042-fs3-conditional-breathing-wave/evidence/source-reproduction.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P043-fs4-static-moment-decomposition/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-13/bridge_FS4_formfactor_into_radiation.py
+    --source-reproduction campaigns/P043-fs4-static-moment-decomposition/evidence/source-reproduction.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P046-p3d3-l2-perturbation-consistency/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-14/bridge_P3D3_l2_selfconsistent_quadrupole.py
+    --source-reproduction campaigns/P046-p3d3-l2-perturbation-consistency/evidence/source-reproduction.yaml
+debt: []
+status: accepted

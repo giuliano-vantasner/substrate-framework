@@ -1,0 +1,38 @@
+attempt: 0001
+campaign: P047
+started_at: '2026-08-01T22:49:00Z'
+base_release: v0.41.0
+base_commit: 6196b44
+source_unit: P3D4
+source_sha256: 055c001288217998406b73026bf9f1402e044c5b4b26aa1929241a31402b827f
+candidate: A
+oracles:
+  - exact arbitrary-axis STF tensor and TT projector tests
+  - corrected regular l=2 velocity-Verlet moment trace on three spatial meshes
+  - timestep, domain, sampling, and amplitude mutations
+  - nine-point fifth-order local polynomial and independent quintic B-spline derivatives
+expected_positive_object: >-
+  Exact convention-safe arbitrary-axis axisymmetric STF map plus qualified
+  interior second/third derivative and conditional waveform/power traces.
+numeric_contract:
+  background_initial_data: P(r,0)=3*exp(-(r/4)^2), P_t(r,0)=0
+  mode_initial_data: psi(r,0)=0.2*(r/4)^2*exp(-(r/4)^2), psi_t(r,0)=0
+  domain: 0<=r<=80 and 0<=t<=40
+  interpreted_time: 5<=t<=35
+  spatial_spacings: [0.2, 0.1, 0.05]
+  courant: 0.4
+  timestep_mutation_courant: 0.2
+  domain_mutation_outer_radius: 100.0
+  dense_sample_interval: 0.16
+  reported_sample_interval: 0.32
+  local_polynomial_points: 9
+  local_polynomial_order: 5
+  spline_degree: 5
+  rms_metric: symmetric RMS relative difference with explicit near-zero guard
+frozen_gates:
+  - mesh successive derivative differences decrease and fine difference is below five percent
+  - timestep, domain, and sampling derivative RMS changes are below five percent
+  - local polynomial and independent spline derivative RMS disagreement is below ten percent
+  - half amplitude gives half waveform derivative and one-quarter conditional power
+  - zero amplitude gives exact zero trace
+  - normalized/triple convention mutation changes the source power by factor nine

@@ -1,0 +1,33 @@
+{
+  "background_boundary_max": 2.1454135435736184e-19,
+  "completed": true,
+  "conditional_edge_on_waveform_R_over_G_rms": 6.891888112842413,
+  "conditional_power_over_G_mean": 12.250471856308678,
+  "conditional_power_over_G_min": 0.007580630853608864,
+  "domain_second_relative_rms": 1.8921773473134956e-14,
+  "domain_third_relative_rms": 9.128279071898404e-14,
+  "estimator_second_relative_rms": 0.045069229877521856,
+  "estimator_third_relative_rms": 0.05012674504930351,
+  "half_power_quarter_scaling_error": 0.0,
+  "half_second_scaling_error": 0.0,
+  "half_third_scaling_error": 0.0,
+  "mesh_second_relative_rms": [
+    0.025761969236228626,
+    0.006510273717392665
+  ],
+  "mesh_third_relative_rms": [
+    0.04297298601916222,
+    0.010992655060782211
+  ],
+  "mode_boundary_max": 3.1710772771312713e-19,
+  "sample_count_dense_interior": 187,
+  "sample_count_reported_interior": 94,
+  "sampling_second_relative_rms": 0.0413211895453081,
+  "sampling_third_relative_rms": 0.047554573100538566,
+  "source_wrong_convention_mean_power_ratio": 9.000000000000002,
+  "timestep_second_relative_rms": 0.005656476758558464,
+  "timestep_third_relative_rms": 0.010294776239153184,
+  "triple_qzz_second_rms": 13.783776225684827,
+  "triple_qzz_third_rms": 19.170658718188594,
+  "zero_trace_exact": true
+}

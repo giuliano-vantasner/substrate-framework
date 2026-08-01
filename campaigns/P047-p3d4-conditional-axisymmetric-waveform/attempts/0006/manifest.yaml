@@ -1,0 +1,17 @@
+attempt: 0006
+campaign: P047
+started_at: '2026-08-01T23:23:00Z'
+base_release: v0.41.0
+base_commit: 6196b44
+source_unit: P3D4
+source_sha256: 055c001288217998406b73026bf9f1402e044c5b4b26aa1929241a31402b827f
+candidate: A
+repair_from:
+  - attempts/0004/result.yaml
+  - attempts/0005/result.yaml
+oracles:
+  - unchanged status-zero 37-check primary verifier
+  - repaired independent seven-point finite-difference and direct projector/flux review
+expected_positive_object: >-
+  Exact arbitrary-axis map and independently confirmed qualified coefficient
+  traces with correct formal-epsilon labels.

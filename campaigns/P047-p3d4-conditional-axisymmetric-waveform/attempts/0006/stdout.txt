@@ -1,0 +1,11 @@
+PRIMARY: ALL 37 CHECKS PASS [P047-P3D4]
+PASS [P047-INDEPENDENT] independent polynomial moment equations derive both seven-point stencils
+PASS [P047-INDEPENDENT] the direct stencils exactly differentiate their load-bearing polynomial limit
+PASS [P047-INDEPENDENT] direct projector algebra gives sine-squared plus and zero cross
+PASS [P047-INDEPENDENT] direct projection along the arbitrary symmetry axis is exactly null
+PASS [P047-INDEPENDENT] independent flux contraction gives G qthird squared/30 for triple Qzz
+PASS [P047-INDEPENDENT] using G/5 directly on the triple tensor is independently ninefold high
+PASS [P047-INDEPENDENT] direct seven-point derivatives reproduce both primary RMS traces below ten percent
+PASS [P047-INDEPENDENT] direct finite differences reproduce the conditional waveform and power coefficients
+PASS [P047-INDEPENDENT] the independent trace is finite, endpoint-excluded, and boundary quiet
+ALL 9 CHECKS PASS [P047-INDEPENDENT]

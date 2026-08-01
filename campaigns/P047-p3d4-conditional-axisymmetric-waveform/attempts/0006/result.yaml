@@ -1,0 +1,26 @@
+attempt: 0006
+completed_at: '2026-08-01T23:23:02Z'
+exit_code: 0
+primary_attempt: attempts/0004/result.yaml
+primary_terminal_tally: 37
+independent_terminal_tally: 9
+candidate: A
+verdict:
+  C-GW-005: symbolic_verified
+  C-GW-006: simulation_evidence
+evidence:
+  - exact arbitrary-axis STF projector and convention map
+  - status-zero refined corrected-trace primary verifier
+  - independent seven-point derivative, direct TT projector, and flux contraction
+  - formal epsilon carried explicitly through waveform and power coefficients
+numeric_scope:
+  q_definition: q(t)=Qzz(t)/epsilon for the declared C-PDE-004 mode coefficient
+  triple_qzz_over_epsilon_second_rms: 13.783776225684827
+  triple_qzz_over_epsilon_third_rms: 19.170658718188594
+  conditional_edge_on_hplus_R_over_G_epsilon_rms: 6.891888112842413
+  conditional_power_over_G_epsilon_squared_mean: 12.250471856308678
+qualifications:
+  - all numeric values are dimensionless finite-time coefficient evidence
+  - the interpreted derivative window is 5<=t<=35
+  - no frequency, periodicity, physical gravity, absolute scale, or radiation-channel claim follows
+status: passed_after_formal_epsilon_and_review_key_repairs

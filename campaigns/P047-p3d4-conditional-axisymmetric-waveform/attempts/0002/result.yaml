@@ -1,0 +1,16 @@
+attempt: 0002
+completed_at: '2026-08-01T23:06:04Z'
+exit_code: 1
+terminal_tally: null
+passed_checks_before_failure: 37
+failed_check: no frequency, physical coupling, radiation-zone, scale, or backreaction claim is inferred
+diagnosis: >-
+  The scientific, source-audit, derivative, refinement, and mutation checks all
+  passed. The final negative source-string assertion searched the verifier for
+  a forbidden token that appeared inside the assertion itself. It tested
+  wording rather than the headline claim and was validation theater.
+continuation: >-
+  Remove the meaningless absence assertion without replacing it with another
+  ceremonial check. Enforce conditional scope through the exact API contract,
+  dependency inventory, claim review, registry text, and source adjudication.
+status: failed_workflow_check_after_scientific_checks

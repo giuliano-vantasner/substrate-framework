@@ -1,0 +1,39 @@
+source_unit: P3D4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-14/bridge_P3D4_selfconsistent_power_waveform.py
+sha256: 055c001288217998406b73026bf9f1402e044c5b4b26aa1929241a31402b827f
+reproduced_at: '2026-08-01T22:55:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-14/bridge_P3D4_selfconsistent_power_waveform.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+  integration_api: numpy.trapezoid selected by the source compatibility branch
+exit_code: 0
+elapsed_seconds: 14.5
+terminal_tally: ALL 4 CHECKS PASS
+reported_values:
+  core_omega: 0.8901
+  construction_q_omega: 1.8326
+  twice_core_omega: 1.7802
+  fft_bin_width: 0.0524
+  source_bandlimited_power_mean: 1.1723e+05
+  source_central_difference_line_amplitude: 124.35
+  source_bandlimited_line_amplitude: 124.66
+  source_q_line_sampling_difference: 1.2e-03
+  source_power_sampling_difference: 3.4e-04
+  source_transverse_hplus_amplitude: 396.45
+  source_omega_to_twice_omega_line_ratio: 1.529e-02
+  source_frozen_power_max: 0.0
+observation: >-
+  All four source checks execute with status zero under NumPy 2.5.1, and the
+  compatibility branch uses numpy.trapezoid rather than the removed legacy
+  name. The checks nevertheless inherit P3D3's rejected nonregular
+  multiplicative field construction and angular-gradient omission. Their
+  power applies G/5 to a triple-normalized tensor, producing a factor-nine
+  convention error. The claimed refinement only samples the same field
+  evolution every step instead of every other step, and its FFT derivative
+  cutoff is chosen as five times the measured carrier without mesh, timestep,
+  domain, endpoint, or independent-estimator evidence. The exact linear
+  polarization and axis-null geometry survives independently of those defects.

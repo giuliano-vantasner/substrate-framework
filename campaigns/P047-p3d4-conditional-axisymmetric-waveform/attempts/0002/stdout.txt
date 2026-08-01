@@ -1,0 +1,38 @@
+PASS [P047-P3D4] the audited P3D4 source is the hash-pinned candidate unit
+PASS [P047-P3D4] the exact source reproduction exits with its four-check tally
+PASS [P047-P3D4] P3D4 selects the current NumPy trapezoid API before its legacy fallback
+PASS [P047-P3D4] the arbitrary-axis tensor is STF with the exact axial eigenvalue and norm
+PASS [P047-P3D4] the triple convention multiplies the tensor by three and its norm by nine
+PASS [P047-P3D4] the natural arbitrary-axis TT frame has sine-squared plus and zero cross
+PASS [P047-P3D4] an arbitrary-axis axisymmetric STF tensor has an exact symmetry-axis TT null
+PASS [P047-P3D4] conditional axisymmetric power is convention invariant and keeps G explicit
+PASS [P047-P3D4] triple quadrupole convention scale: baseline
+PASS [P047-P3D4] triple quadrupole convention scale: mutations supplied
+PASS [P047-P3D4] triple quadrupole convention scale: mutation 1 rejected
+PASS [P047-P3D4] triple quadrupole convention scale: mutation 2 rejected
+PASS [P047-P3D4] a triple Qzz trace has hplus R/G=qddot/2 and P/G=qthird squared/30
+PASS [P047-P3D4] P3D4 applies the normalized G/5 coefficient to a triple tensor and is ninefold high
+PASS [P047-P3D4] P3D4 inherits P3D3's rejected multiplicative field construction
+PASS [P047-P3D4] the inherited source energy omits the nonradial angular-gradient term
+PASS [P047-P3D4] P3D4's claimed refinement is only denser sampling of the same field evolution
+PASS [P047-P3D4] P3D4 selects its FFT derivative cutoff from the observed source carrier
+PASS [P047-P3D4] P3D4 declares rather than derives its gravity law and effective coupling
+PASS [P047-P3D4] both derivative estimators recover an independently differentiated polynomial
+PASS [P047-P3D4] the static nonzero trace guard has zero third derivative and conditional power
+PASS [P047-P3D4] all corrected regular-mode evolutions complete with finite moment traces
+PASS [P047-P3D4] the interpreted finite-time interval is quiet at the outer boundary
+PASS [P047-P3D4] the three mesh derivative traces share the frozen interpreted time grid
+PASS [P047-P3D4] the second derivative self-converges and its fine difference is below five percent
+PASS [P047-P3D4] the third derivative self-converges and its fine difference is below five percent
+PASS [P047-P3D4] timestep, domain, and amplitude mutations share the interpreted time grid
+PASS [P047-P3D4] halving the timestep changes both derivative RMS traces by below five percent
+PASS [P047-P3D4] a causally disconnected domain extension preserves both derivative traces
+PASS [P047-P3D4] the dense and reported sampling grids align exactly in the interpreted window
+PASS [P047-P3D4] halving the sampling interval changes both derivative traces by below five percent
+PASS [P047-P3D4] local-polynomial and independent spline derivatives agree below ten percent
+PASS [P047-P3D4] halving the regular l=2 amplitude halves both derivative traces exactly
+PASS [P047-P3D4] zero regular l=2 amplitude gives an exact zero moment trace
+PASS [P047-P3D4] the qualified conditional trace has finite nonzero plus and nonnegative power coefficients
+PASS [P047-P3D4] half amplitude gives half conditional waveform and one-quarter power
+PASS [P047-P3D4] the live corrected trace exposes the source's exact factor-nine power mutation
+FAIL [P047-P3D4] no frequency, physical coupling, radiation-zone, scale, or backreaction claim is inferred

@@ -1,0 +1,14 @@
+attempt: 0005
+campaign: P047
+started_at: '2026-08-01T23:21:00Z'
+base_release: v0.41.0
+base_commit: 6196b44
+source_unit: P3D4
+source_sha256: 055c001288217998406b73026bf9f1402e044c5b4b26aa1929241a31402b827f
+candidate: A
+repair_from: attempts/0004/result.yaml
+oracles:
+  - independent seven-point finite-difference and direct projector/flux review
+expected_positive_object: >-
+  Independent confirmation of the corrected formal-epsilon coefficient labels
+  and primary numeric values.

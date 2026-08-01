@@ -1,0 +1,60 @@
+id: P047
+base_release: v0.41.0
+base_commit: 6196b44
+source_baseline: substrate@6d1f4e0
+source_units: [P3D4]
+question: >-
+  Derive a convention-safe arbitrary-axis axisymmetric STF readout and audit
+  whether P3D4 obtains a self-consistent conditional waveform and power from
+  the accepted regular l=2 energy-moment evolution, including converged time
+  derivatives if the finite-time numerical gates close.
+invariants:
+  - C-GW-001 makes the quadrupole waveform and flux formulas conditional on an external linearized-gravity rule
+  - normalized STF moments use waveform prefactor 2G and power coefficient G/5
+  - triple STF moments use waveform prefactor 2G/3 and power coefficient G/45
+  - C-GW-002 fixes the orthonormal TT plus and cross basis convention
+  - C-GW-004 supplies an exact source-specific axisymmetric conditional map but not a physical gravity derivation
+  - C-PDE-004 supplies only a specified finite-time dimensionless regular l=2 energy-moment trace
+  - a numerical third derivative requires its own resolution, timestep, estimator, domain, and mutation evidence
+  - no effective Newton constant, physical scale, asymptotic radiation zone, or backreaction law is accepted
+allowed_imports:
+  - C-GW-001 exact TT angular identity and conditional normalized/triple convention map
+  - C-GW-002 exact normalized TT polarization basis
+  - C-GW-004 exact conditional axisymmetric separable-source result
+  - C-PDE-003 exact regular l=2 perturbation equation
+  - C-PDE-004 qualified finite-time regular l=2 energy-moment evolution
+  - standard symmetric-trace-free tensor algebra
+  - SciPy interpolation and signal-processing machinery for explicitly qualified derivative evidence
+  - P3D4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Generalize the accepted axisymmetric STF algebra to an arbitrary symmetry
+      axis and apply it conditionally to converged second and third derivatives
+      of the accepted regular l=2 moment trace
+  - id: B
+    description: >-
+      Promote only the exact arbitrary-axis convention-safe STF readout and
+      power map if numerical differentiation of the finite-time trace does not
+      close the preregistered convergence and independent-estimator gates
+  - id: C
+    description: >-
+      Accept P3D4's field construction, quadrupole convention, derivative
+      method, power normalization, and physical-radiation interpretation as a
+      single self-consistent mechanism
+uniqueness_evidence: null
+selection_criteria:
+  - exact STF normalization and factor-of-three convention compatibility
+  - exact TT inclination and polarization geometry for an arbitrary symmetry axis
+  - dependency closure without an undeclared gravity law or fitted scale
+  - finite-time derivative estimator stability away from endpoint contamination
+  - spatial, timestep, sampling, domain, and estimator refinement
+  - amplitude scaling and wrong-convention mutation sensitivity
+  - assumption and parameter economy
+  - strict separation of conditional radiation algebra from physical-radiation claims
+claims_proposed:
+  - provisional C-GW-005 exact arbitrary-axis axisymmetric STF conditional map
+  - provisional C-GW-006 if finite-time derivative and conditional-trace gates close
+comparators_blinded_until: >-
+  exact_axisymmetric_map_derivative_estimators_refinement_thresholds_mutations_and_scope_frozen
+status: accepted

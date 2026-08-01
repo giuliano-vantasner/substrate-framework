@@ -53,7 +53,7 @@ Record verification, review, compatibility, and epistemic status separately. Bef
 - Relationship:
 
 ## Promotion Transaction
-List registry edit, importable implementation/tests, immutable campaign record, release manifest, generated docs, accepted-memory synchronization, source-unit disposition update, and validation commands. For terminal qualification, refutation, duplicate, or scope decisions, record the structured reason and durable evidence path; an unsupported label is not an adjudication.
+List registry edit, importable implementation/tests, immutable campaign record, release manifest, generated docs, accepted-memory synchronization, editable `migration/dispositions.yaml` update plus regenerated `migration/source-claims.yaml`, and validation commands. Never hand-edit the generated queue. For terminal qualification, refutation, duplicate, or scope decisions, record the structured reason and durable evidence path; an unsupported label is not an adjudication.
 
 ## Continuation if Not Accepted
 Non-acceptance is not campaign success. Name the repair or next candidate and leave the parent effort active. If a foundation issue is independently demonstrated, link the separate revision proposal.

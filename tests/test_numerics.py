@@ -6,6 +6,8 @@ from scipy.sparse import diags
 
 from substrate_framework.numerics import (
     SolverTolerances,
+    interpolating_spline_time_derivative,
+    local_polynomial_time_derivative,
     refinement_study,
     solve_bvp_evidence,
     solve_ivp_evidence,
@@ -95,3 +97,81 @@ def test_trapezoid_integral_supports_legacy_numpy_name(monkeypatch) -> None:
     monkeypatch.setattr(np, "trapz", current, raising=False)
     coordinate = np.linspace(0.0, 1.0, 101)
     assert trapezoid_integral(coordinate, coordinate) == 0.5
+
+
+def test_independent_time_derivatives_recover_an_exact_polynomial_interior() -> None:
+    time = np.linspace(-2.0, 2.0, 81)
+    values = time**5 - 2.0 * time**3 + 3.0 * time
+    expected_third = 60.0 * time**2 - 12.0
+    local = local_polynomial_time_derivative(
+        time,
+        values,
+        3,
+        window_duration=0.6,
+        polynomial_order=5,
+    )
+    spline = interpolating_spline_time_derivative(
+        time,
+        values,
+        3,
+        spline_degree=5,
+    )
+    interior = np.abs(time) <= 1.5
+    np.testing.assert_allclose(local[interior], expected_third[interior], atol=2.0e-9)
+    np.testing.assert_allclose(spline[interior], expected_third[interior], atol=2.0e-9)
+
+
+def test_local_polynomial_sine_derivative_converges_when_sampling_is_halved() -> None:
+    errors = []
+    for interval in (0.08, 0.04, 0.02):
+        time = np.arange(0.0, 8.0 + interval / 2.0, interval)
+        numeric = local_polynomial_time_derivative(
+            time,
+            np.sin(1.7 * time),
+            3,
+            window_duration=8.0 * interval,
+            polynomial_order=5,
+        )
+        interior = (time >= 1.0) & (time <= 7.0)
+        exact = -(1.7**3) * np.cos(1.7 * time[interior])
+        errors.append(float(np.sqrt(np.mean((numeric[interior] - exact) ** 2))))
+    assert errors[1] < errors[0]
+    assert errors[2] < errors[1]
+
+
+@pytest.mark.parametrize(
+    ("call", "message"),
+    [
+        (
+            lambda: local_polynomial_time_derivative(
+                [0.0, 0.5, 1.1],
+                [0.0, 1.0, 2.0],
+                1,
+                window_duration=1.0,
+            ),
+            "uniformly sampled",
+        ),
+        (
+            lambda: local_polynomial_time_derivative(
+                np.linspace(0.0, 1.0, 11),
+                np.ones(11),
+                3,
+                window_duration=0.2,
+                polynomial_order=2,
+            ),
+            "at least derivative_order",
+        ),
+        (
+            lambda: interpolating_spline_time_derivative(
+                np.linspace(0.0, 1.0, 11),
+                np.ones(11),
+                6,
+                spline_degree=5,
+            ),
+            "cannot exceed",
+        ),
+    ],
+)
+def test_invalid_sampled_time_derivative_inputs_are_rejected(call, message: str) -> None:
+    with pytest.raises(ValueError, match=message):
+        call()

@@ -126,6 +126,33 @@ class TTPolarizationBasis:
     cross: sp.Matrix
 
 
+@dataclass(frozen=True)
+class AxisymmetricSTFReadout:
+    """Natural-frame TT readout of an arbitrary-axis axisymmetric STF tensor.
+
+    ``axial_amplitude`` is the coefficient ``alpha`` in
+    ``S=scale*alpha*(e*e.T-I/3)``; it is not the eigenvalue along ``e``.
+    The axial eigenvalue is ``2*scale*alpha/3``. Basis coordinates use the
+    normalized tensors of :class:`TTPolarizationBasis`; conventional matrix
+    readouts are smaller by ``sqrt(2)``.
+    """
+
+    axial_amplitude: sp.Expr
+    quadrupole_scale: sp.Expr
+    symmetry_axis: sp.Matrix
+    direction: sp.Matrix
+    inclination_cosine: sp.Expr
+    inclination_sine_squared: sp.Expr
+    first_transverse: sp.Matrix
+    second_transverse: sp.Matrix
+    source_tensor: sp.Matrix
+    projected_tensor: sp.Matrix
+    normalized_plus_coordinate: sp.Expr
+    normalized_cross_coordinate: sp.Expr
+    conventional_plus_readout: sp.Expr
+    conventional_cross_readout: sp.Expr
+
+
 def tt_polarization_basis(
     direction: Any,
     reference: Any | None = None,
@@ -177,6 +204,122 @@ def tt_polarization_basis(
         second_transverse=second,
         plus=plus,
         cross=cross,
+    )
+
+
+def axisymmetric_stf_tensor(
+    axial_amplitude: Any,
+    symmetry_axis: Any,
+    quadrupole_scale: Any = 1,
+) -> sp.Matrix:
+    """Return ``scale*alpha*(e*e.T-I/3)`` for a nonzero symmetry axis.
+
+    Scale one is the normalized STF convention. Scale three is the
+    triple-normalized convention ``Q=3*I_STF``. Keeping the scale explicit
+    prevents a tensor constructed in one convention from silently receiving
+    the waveform or power coefficient of another.
+    """
+
+    amplitude = sp.sympify(axial_amplitude)
+    scale = sp.sympify(quadrupole_scale)
+    if sp.simplify(scale) == 0:
+        raise ValueError("quadrupole_scale must be nonzero")
+    axis = _column_three(symmetry_axis, "symmetry_axis")
+    axis_norm_squared = sp.simplify(axis.dot(axis))
+    if axis_norm_squared == 0:
+        raise ValueError("symmetry_axis must be nonzero")
+    unit_axis = sp.simplify(axis / sp.sqrt(axis_norm_squared))
+    return sp.simplify(
+        scale * amplitude * (unit_axis * unit_axis.T - sp.eye(3) / 3)
+    )
+
+
+def axisymmetric_stf_readout(
+    axial_amplitude: Any,
+    symmetry_axis: Any,
+    direction: Any,
+    quadrupole_scale: Any = 1,
+) -> AxisymmetricSTFReadout:
+    """Project an arbitrary-axis axisymmetric STF tensor in its natural frame.
+
+    The first transverse vector is the projected symmetry axis, so the natural
+    meridian frame has zero cross coordinate. When the line of sight is
+    parallel to the symmetry axis, the TT tensor is zero and a deterministic
+    fallback transverse frame is used only to represent that null tensor.
+    """
+
+    amplitude = sp.sympify(axial_amplitude)
+    scale = sp.sympify(quadrupole_scale)
+    axis = _column_three(symmetry_axis, "symmetry_axis")
+    line_of_sight = _column_three(direction, "direction")
+    axis_norm_squared = sp.simplify(axis.dot(axis))
+    direction_norm_squared = sp.simplify(line_of_sight.dot(line_of_sight))
+    if axis_norm_squared == 0:
+        raise ValueError("symmetry_axis must be nonzero")
+    if direction_norm_squared == 0:
+        raise ValueError("direction must be nonzero")
+    unit_axis = sp.simplify(axis / sp.sqrt(axis_norm_squared))
+    unit_direction = sp.simplify(
+        line_of_sight / sp.sqrt(direction_norm_squared)
+    )
+    cosine = sp.simplify(unit_axis.dot(unit_direction))
+    sine_squared = sp.simplify(1 - cosine**2)
+    first_raw = sp.simplify(unit_axis - cosine * unit_direction)
+    if sp.simplify(first_raw.dot(first_raw)) == 0:
+        basis = tt_polarization_basis(unit_direction)
+    else:
+        basis = tt_polarization_basis(unit_direction, first_raw)
+    tensor = axisymmetric_stf_tensor(amplitude, unit_axis, scale)
+    projected = tt_project_symmetric(tensor, unit_direction)
+    plus = sp.simplify(frobenius_inner_product(projected, basis.plus))
+    cross = sp.simplify(frobenius_inner_product(projected, basis.cross))
+    return AxisymmetricSTFReadout(
+        axial_amplitude=amplitude,
+        quadrupole_scale=scale,
+        symmetry_axis=unit_axis,
+        direction=unit_direction,
+        inclination_cosine=cosine,
+        inclination_sine_squared=sine_squared,
+        first_transverse=basis.first_transverse,
+        second_transverse=basis.second_transverse,
+        source_tensor=tensor,
+        projected_tensor=projected,
+        normalized_plus_coordinate=plus,
+        normalized_cross_coordinate=cross,
+        conventional_plus_readout=sp.simplify(plus / sp.sqrt(2)),
+        conventional_cross_readout=sp.simplify(cross / sp.sqrt(2)),
+    )
+
+
+def conditional_axisymmetric_stf_power(
+    axial_third_derivative: Any,
+    gravitational_coupling: Any,
+    quadrupole_scale: Any = 1,
+) -> sp.Expr:
+    """Return the conditional power for an axisymmetric STF derivative.
+
+    This imports the *declared* normalized waveform coefficient ``2G`` and
+    flux coefficient ``1/(32*pi*G)`` used by :func:`conditional_tt_power`.
+    ``axial_third_derivative`` is the derivative of the normalized underlying
+    ``alpha`` in ``I_STF=alpha*(e*e.T-I/3)``. A scale-three tensor therefore
+    carries three times the tensor components but receives waveform coefficient
+    ``2G/3``; the result is convention invariant and equals
+    ``2*G*alpha'''**2/15``. This algebra does not supply a gravity theory.
+    """
+
+    derivative = sp.sympify(axial_third_derivative)
+    coupling = sp.sympify(gravitational_coupling)
+    scale = sp.sympify(quadrupole_scale)
+    if sp.simplify(coupling) == 0:
+        raise ValueError("gravitational_coupling must be nonzero")
+    tensor = axisymmetric_stf_tensor(derivative, [1, 0, 0], scale)
+    waveform_prefactor = waveform_prefactor_for_quadrupole_convention(
+        2 * coupling, scale
+    )
+    return conditional_tt_power(
+        tensor,
+        waveform_prefactor,
+        1 / (32 * sp.pi * coupling),
     )
 
 

@@ -1,0 +1,50 @@
+attempt: 0003
+completed_at: '2026-08-01T23:08:04Z'
+exit_code: 0
+terminal_tally: 37
+candidate: A
+verdict:
+  C-GW-005: symbolic_verified
+  C-GW-006: simulation_evidence
+evidence:
+  - exact arbitrary-axis STF trace, eigenvalue, norm, projector, and natural polarization basis
+  - exact normalized/triple waveform and power convention invariance
+  - factor-three waveform and factor-nine power mutations
+  - hash-pinned status-zero P3D4 reproduction under NumPy 2.5.1 current trapezoid API
+  - exact audit of inherited P3D3 residual, omitted angular energy, resampling-only refinement, and selected FFT cutoff
+  - exact polynomial and static-trace derivative controls
+  - three spatial meshes, timestep halving, domain extension, and sampling halving
+  - independent quintic B-spline derivative estimator
+  - zero and half l=2 amplitude mutations
+numeric_scope:
+  background_initial_data: P(r,0)=3*exp(-(r/4)^2), P_t(r,0)=0
+  mode_initial_data: psi(r,0)=0.2*(r/4)^2*exp(-(r/4)^2), psi_t(r,0)=0
+  baseline_domain: 0<=r<=80, 0<=t<=40
+  interpreted_time: 5<=t<=35
+  baseline_spacing: 0.1
+  baseline_timestep: 0.04
+  reported_sample_interval: 0.32
+  derivative_estimator: nine-point degree-five local polynomial
+  independent_estimator: quintic interpolating B-spline
+  mesh_second_relative_rms: [0.025761969236228626, 0.006510273717392665]
+  mesh_third_relative_rms: [0.04297298601916222, 0.010992655060782211]
+  timestep_second_relative_rms: 0.005656476758558464
+  timestep_third_relative_rms: 0.010294776239153184
+  domain_second_relative_rms: 1.8921773473134956e-14
+  domain_third_relative_rms: 9.128279071898404e-14
+  sampling_second_relative_rms: 0.0413211895453081
+  sampling_third_relative_rms: 0.047554573100538566
+  estimator_second_relative_rms: 0.045069229877521856
+  estimator_third_relative_rms: 0.05012674504930351
+  triple_qzz_second_rms: 13.783776225684827
+  triple_qzz_third_rms: 19.170658718188594
+  conditional_edge_on_waveform_R_over_G_rms: 6.891888112842413
+  conditional_power_over_G_mean: 12.250471856308678
+qualifications:
+  - the finite-time derivative traces exclude five time units at both endpoints
+  - C-GW-006 inherits the linearized dimensionless finite-time scope of C-PDE-004
+  - no frequency or periodicity statement is accepted for the corrected trace
+  - G and R remain external conditional symbols; no absolute luminosity or waveform scale is supplied
+  - no gravity field equation, radiation zone, backreaction, nonlinear stability, or ontology follows
+  - P3D4's product-field construction and frequency conclusions remain rejected
+status: passed_after_removing_self_referential_scope_ceremony

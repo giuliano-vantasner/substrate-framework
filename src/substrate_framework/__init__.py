@@ -35,9 +35,17 @@ from .circular_pair import (
     conditional_equal_mass_circular_waveform,
     equal_mass_circular_pair_moments,
 )
+from .axisymmetric_radiation import (
+    ConditionalAxisymmetricRadiationCoefficients,
+    conditional_axisymmetric_radiation_coefficients,
+)
 from .tt_angular import (
+    AxisymmetricSTFReadout,
     TTPolarizationBasis,
+    axisymmetric_stf_readout,
+    axisymmetric_stf_tensor,
     circular_tt_polarizations,
+    conditional_axisymmetric_stf_power,
     conditional_tt_power,
     frobenius_inner_product,
     frobenius_norm_squared,
@@ -86,6 +94,8 @@ from .numerics import (
     NumericalFailure,
     RefinementEvidence,
     SolverTolerances,
+    interpolating_spline_time_derivative,
+    local_polynomial_time_derivative,
     refinement_study,
     solve_bvp_evidence,
     solve_ivp_evidence,
@@ -289,7 +299,9 @@ from .variational import (
 )
 
 __all__ = [
+    "AxisymmetricSTFReadout",
     "BVPEvidence",
+    "ConditionalAxisymmetricRadiationCoefficients",
     "GovernanceError",
     "CheckFailure",
     "CheckLedger",
@@ -309,6 +321,8 @@ __all__ = [
     "VortexParameters",
     "VortexSolution",
     "angular_log_coefficient",
+    "axisymmetric_stf_readout",
+    "axisymmetric_stf_tensor",
     "asymptotic_masses",
     "breather_action",
     "audit_source_tokens",
@@ -344,6 +358,8 @@ __all__ = [
     "co_scaled_wave_speed",
     "combined_winding_parity",
     "conditional_anw_mass",
+    "conditional_axisymmetric_stf_power",
+    "conditional_axisymmetric_radiation_coefficients",
     "conditional_one_loop_coefficient",
     "conditional_topological_mass",
     "dimensionless_group_count",
@@ -373,6 +389,7 @@ __all__ = [
     "hamiltonian_density",
     "index_from_potential",
     "invariant_quartet",
+    "interpolating_spline_time_derivative",
     "isolated_conserved_stress_moment_rates",
     "load_yaml",
     "line_energy",
@@ -380,6 +397,7 @@ __all__ = [
     "lattice_debye_energy",
     "lattice_reduced_responses",
     "local_wave_speed",
+    "local_polynomial_time_derivative",
     "lorentz_factor",
     "minkowski_dalembertian",
     "mass_from_dimensionless_coordinate",

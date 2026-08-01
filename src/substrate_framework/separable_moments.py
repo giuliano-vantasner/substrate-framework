@@ -14,9 +14,8 @@ import sympy as sp
 
 from .conserved_moments import symmetric_trace_free
 from .tt_angular import (
-    frobenius_inner_product,
-    tt_polarization_basis,
-    tt_project_symmetric,
+    axisymmetric_stf_readout,
+    axisymmetric_stf_tensor,
 )
 
 
@@ -91,15 +90,10 @@ def axisymmetric_separable_stf_derivative(
     already differentiated away.
     """
 
-    derivative = sp.sympify(longitudinal_derivative)
-    scale = sp.sympify(quadrupole_scale)
-    return sp.simplify(
-        scale
-        * sp.diag(
-            2 * derivative / 3,
-            -derivative / 3,
-            -derivative / 3,
-        )
+    return axisymmetric_stf_tensor(
+        longitudinal_derivative,
+        [1, 0, 0],
+        quadrupole_scale,
     )
 
 
@@ -118,20 +112,15 @@ def axisymmetric_stf_tt_readout(
     derivative = sp.sympify(longitudinal_derivative)
     angle = sp.sympify(inclination)
     direction = sp.Matrix([sp.cos(angle), 0, sp.sin(angle)])
-    first = sp.Matrix([sp.sin(angle), 0, -sp.cos(angle)])
-    basis = tt_polarization_basis(direction, first)
-    tensor = axisymmetric_separable_stf_derivative(derivative)
-    projected = tt_project_symmetric(tensor, direction)
-    plus = sp.simplify(frobenius_inner_product(projected, basis.plus))
-    cross = sp.simplify(frobenius_inner_product(projected, basis.cross))
+    generic = axisymmetric_stf_readout(derivative, [1, 0, 0], direction)
     return AxisymmetricTTReadout(
         inclination=angle,
-        direction=basis.direction,
-        first_transverse=basis.first_transverse,
-        second_transverse=basis.second_transverse,
-        projected_tensor=projected,
-        normalized_plus_coordinate=plus,
-        normalized_cross_coordinate=cross,
-        conventional_plus_readout=sp.simplify(plus / sp.sqrt(2)),
-        conventional_cross_readout=sp.simplify(cross / sp.sqrt(2)),
+        direction=generic.direction,
+        first_transverse=generic.first_transverse,
+        second_transverse=generic.second_transverse,
+        projected_tensor=generic.projected_tensor,
+        normalized_plus_coordinate=generic.normalized_plus_coordinate,
+        normalized_cross_coordinate=generic.normalized_cross_coordinate,
+        conventional_plus_readout=generic.conventional_plus_readout,
+        conventional_cross_readout=generic.conventional_cross_readout,
     )

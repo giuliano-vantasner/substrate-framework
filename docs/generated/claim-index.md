@@ -129,6 +129,24 @@ Let mu(t) be the exact C-SG-009 longitudinal moment and apply the conditional ax
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-009, C-MOM-002, C-GW-001, C-GW-002
 
+## C-GW-005
+
+Let e and n be nonzero three-vectors denoting an axis of symmetry and a line of sight, and replace them by their unit directions. For an axisymmetric normalized STF tensor S=alpha*(e*e^T-delta/3), and an explicit nonzero convention scale s, define S_s=s*S; s=1 is normalized and s=3 is the triple convention. Then Tr(S_s)=0, its eigenvalue along e is 2*s*alpha/3, and |S_s|^2=2*s^2*alpha^2/3. Let cos(i)=e.n. Away from the axial null choose the natural meridian frame p=(e-cos(i)*n)/sin(i), q=n cross p. The TT projection of S_s has normalized plus coordinate s*alpha*sin(i)^2/sqrt(2), conventional matrix readout s*alpha*sin(i)^2/2, and cross coordinate zero. Along n parallel to e the complete TT tensor is zero. Under the separately declared C-GW-001 inputs A=2*G and B=1/(32*pi*G), convention S_s requires waveform coefficient 2*G/s and gives the convention-invariant conditional conventional waveform h_plus=G*alpha''*sin(i)^2/R, h_cross=0, and power P=2*G*alpha'''^2/15. Equivalently, if lambda_s is the axial eigenvalue of S_s, h_plus*R/G=3*lambda_s''*sin(i)^2/(2*s) and P/G=3*lambda_s'''^2/(10*s^2). Combining a scale-three tensor with the scale-one coefficient multiplies the waveform by three and power by nine. These are exact conditional tensor identities. They establish no source dynamics, conserved isolated stress tensor, gravitational action or field equation, physical retarded solution or flux, detector strain, backreaction, absolute scale, or substrate realization.
+
+- Accepted in: `v0.42.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GW-001, C-GW-002
+
+## C-GW-006
+
+For the specified regular linearized l=2 IVP of C-PDE-004, write q(t)=Qzz(t)/epsilon for the z-axis eigenvalue of its triple-STF first-order energy-moment coefficient. Rerun that IVP on 0<=r<=80 and 0<=t<=40 with meshes dr=0.2, 0.1, and 0.05, Courant factor 0.4, and aligned dense sample interval 0.16. On the baseline dr=0.1, dt=0.04 trace, downsample to interval 0.32 and differentiate only on 5<=t<=35 with a nine-point degree-five local polynomial. The resulting q'' and q''' traces have RMS 13.7837762 and 19.1706587. Successive mesh relative-RMS differences are 0.025762 and 0.006510 for q'', and 0.042973 and 0.010993 for q'''. Timestep halving changes the two traces by 0.005656 and 0.010295, domain extension to 100 by below 1e-12, and sample-interval halving by 0.041321 and 0.047555. A quintic interpolating B-spline differs by 0.045069 and 0.050127, while an independently derived seven-point finite difference reproduces both summaries within ten percent. Under the scale-three conditional map of C-GW-005, h_plus*R/(G*epsilon)=q''*sin(i)^2/2, h_cross=0, and P/(G*epsilon^2)=q'''^2/30. The edge-on waveform coefficient has RMS 6.8918881 and the interpreted-window mean power coefficient is 12.2504719. Half mode coefficient gives exact half derivatives and waveform coefficient and one-quarter power; zero mode gives an exact zero trace. This is endpoint-qualified, dimensionless, linearized, finite-grid and finite-time simulation evidence for conditional coefficients. It establishes no frequency or periodicity result, nonlinear mode, conserved gravitational source, physical radiation channel, gravity theory, absolute waveform or luminosity, backreaction, detector observable, or substrate realization.
+
+- Accepted in: `v0.42.0`
+- Verification: `simulation_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-PDE-004, C-GW-005
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

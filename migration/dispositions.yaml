@@ -670,3 +670,81 @@ units:
       P043 supplies time-dependent offset mutations and a nonidentifiability
       proof, while excluding FS4's factor-nine power, strict positivity,
       pending T2C/G4 ceiling lift, tidal, backreaction, and radiation readings.
+  P3D1:
+    disposition: qualified
+    accepted_claims:
+      - C-PDE-001
+    qualification: >-
+      The specified radial Gaussian IVP supplies refined finite-time simulation
+      evidence for a localized sub-threshold oscillatory core. P3D1 does not
+      establish exact periodicity, an exponential leakage law, a stability
+      family, gravitational monopole silence or radiation, absolute scale,
+      particle identity, or substrate realization.
+    evidence:
+      - campaigns/P044-p3d1-radial-sine-gordon-oscillon/reviews/source_adjudication.md
+    note: >-
+      P044 corrects the source timestamp, adds spatial/timestep/domain/frequency
+      refinements and a transformed-field independent method, and promotes only
+      the resolution-bounded finite-time trajectory.
+  P3D2:
+    disposition: qualified
+    accepted_claims:
+      - C-MOM-003
+      - C-PDE-002
+    qualification: >-
+      The arbitrary-radial-density isotropic moment and STF null are exact, and
+      the accepted C-PDE-001 branch has a cutoff-qualified finite-time core
+      energy-radius moment near twice its contemporaneous field frequency. The
+      source does not establish exact frequency equality, an unrestricted
+      global moment relation, physical gravitational silence, a required
+      radiating l=2 mode, absolute scale, or substrate realization.
+    evidence:
+      - campaigns/P045-p3d2-spherical-stf-null/reviews/source_adjudication.md
+    note: >-
+      P045 separates the exact tensor theorem from simulation evidence, exposes
+      the source's bins-17/34 exact-ratio artifact and tautological numeric zero,
+      and preserves the radius-40 radiative-shell counterexample.
+  P3D3:
+    disposition: qualified
+    accepted_claims:
+      - C-MOM-003
+      - C-PDE-003
+      - C-PDE-004
+    qualification: >-
+      The corrected exact residual and regular l=2 linearized equation are
+      accepted, and a separately specified regular finite-time perturbation IVP
+      carries a converged nonzero first-order STF energy moment. The source's
+      multiplicative ansatz is not a field solution, omits angular-gradient
+      energy, and is nonregular at the origin; its coarse 2D route is unrefined,
+      its two-frequency radiating line is not established for the corrected
+      mode, and its definitional variance 3.8373 does not recover FS2's 0.64.
+    evidence:
+      - campaigns/P046-p3d3-l2-perturbation-consistency/reviews/source_adjudication.md
+    note: >-
+      P046 substitutes the source construction into the full PDE, builds the
+      regular transformed l=2 sector, supplies mesh/timestep/domain/amplitude
+      studies plus exact and DOP853 cross-checks, and keeps all gravity,
+      nonlinear-stability, periodicity, and absolute-scale conclusions outside
+      the accepted dependency closure.
+  P3D4:
+    disposition: qualified
+    accepted_claims:
+      - C-GW-005
+      - C-GW-006
+    qualification: >-
+      The arbitrary-axis linear-polarization and symmetry-null geometry is
+      exact, and a separately corrected application to the accepted regular
+      l=2 coefficient trace has refined endpoint-qualified derivative evidence.
+      The source inherits P3D3's invalid nonregular product field and omitted
+      angular energy, applies G/5 to a triple tensor, omits the waveform
+      prefactor, treats resampling as solver refinement, selects its FFT cutoff
+      from the carrier, and does not establish frequency doubling, physical
+      radiation, residual payment, absolute scale, or substrate realization.
+    evidence:
+      - campaigns/P047-p3d4-conditional-axisymmetric-waveform/reviews/source_adjudication.md
+      - campaigns/P047-p3d4-conditional-axisymmetric-waveform/evidence/source-reproduction.yaml
+    note: >-
+      P047 generalizes the exact tensor map, corrects the factor-three waveform
+      and factor-nine power conventions, differentiates the regular C-PDE-004
+      coefficient with mesh/timestep/domain/sampling/estimator studies, and
+      keeps G, R, and the formal epsilon explicit.

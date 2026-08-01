@@ -1,0 +1,15 @@
+attempt: 0005
+completed_at: '2026-08-01T23:21:02Z'
+exit_code: 1
+terminal_tally: null
+passed_checks_before_failure: 6
+failure: KeyError triple_qzz_second_rms
+diagnosis: >-
+  The independent review was redirected to attempt 0004 after the formal
+  epsilon label repair, but two primary-result lookup keys retained their
+  attempt-0003 names. The independent tensor, stencil, and convention checks
+  passed before the bookkeeping exception.
+continuation: >-
+  Update the two lookups to triple_qzz_over_epsilon_second_rms and
+  triple_qzz_over_epsilon_third_rms, then rerun the unchanged review.
+status: failed_artifact_key_migration

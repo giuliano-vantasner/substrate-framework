@@ -4,6 +4,9 @@ import pytest
 import sympy as sp
 
 from substrate_framework.tt_angular import (
+    axisymmetric_stf_readout,
+    axisymmetric_stf_tensor,
+    conditional_axisymmetric_stf_power,
     conditional_tt_power,
     frobenius_norm_squared,
     harmonic_stf_third_derivative_average,
@@ -12,6 +15,81 @@ from substrate_framework.tt_angular import (
     tt_project_symmetric,
     waveform_prefactor_for_quadrupole_convention,
 )
+
+
+def test_arbitrary_axis_axisymmetric_stf_tensor_has_exact_eigenstructure() -> None:
+    amplitude = sp.symbols("alpha", real=True)
+    axis = sp.Matrix([1, 2, 2])
+    normalized = axisymmetric_stf_tensor(amplitude, axis)
+    triple = axisymmetric_stf_tensor(amplitude, axis, 3)
+    unit_axis = axis / 3
+    assert sp.trace(normalized) == 0
+    assert sp.simplify(
+        normalized * unit_axis - 2 * amplitude * unit_axis / 3
+    ) == sp.zeros(3, 1)
+    assert sp.simplify(
+        frobenius_norm_squared(normalized) - 2 * amplitude**2 / 3
+    ) == 0
+    assert triple == 3 * normalized
+    assert sp.simplify(frobenius_norm_squared(triple) - 6 * amplitude**2) == 0
+
+
+def test_arbitrary_axis_natural_readout_has_sine_squared_plus_and_zero_cross() -> None:
+    amplitude = sp.symbols("alpha", real=True)
+    axis = sp.Matrix([1, 2, 2])
+    direction = sp.Matrix([2, -1, 2])
+    readout = axisymmetric_stf_readout(amplitude, axis, direction, 3)
+    expected_sine_squared = sp.Rational(65, 81)
+    assert readout.inclination_sine_squared == expected_sine_squared
+    assert sp.simplify(
+        readout.normalized_plus_coordinate
+        - 3 * amplitude * expected_sine_squared / sp.sqrt(2)
+    ) == 0
+    assert readout.normalized_cross_coordinate == 0
+    assert sp.simplify(
+        readout.conventional_plus_readout
+        - 3 * amplitude * expected_sine_squared / 2
+    ) == 0
+    assert readout.conventional_cross_readout == 0
+
+
+def test_arbitrary_axis_readout_has_exact_axis_null_and_rotation_covariance() -> None:
+    amplitude = sp.symbols("alpha", real=True)
+    axis = sp.Matrix([1, 2, 2])
+    null = axisymmetric_stf_readout(amplitude, axis, 2 * axis)
+    assert null.inclination_sine_squared == 0
+    assert null.projected_tensor == sp.zeros(3)
+    rotated = axisymmetric_stf_readout(amplitude, [0, 0, 1], [1, 0, 0])
+    assert rotated.projected_tensor == sp.diag(0, -amplitude / 2, amplitude / 2)
+    assert rotated.normalized_cross_coordinate == 0
+
+
+def test_axisymmetric_conditional_power_is_convention_invariant() -> None:
+    derivative, coupling = sp.symbols("alpha3 G", nonzero=True, real=True)
+    normalized = conditional_axisymmetric_stf_power(derivative, coupling, 1)
+    triple = conditional_axisymmetric_stf_power(derivative, coupling, 3)
+    assert sp.simplify(normalized - 2 * coupling * derivative**2 / 15) == 0
+    assert triple == normalized
+
+
+@pytest.mark.parametrize(
+    ("call", "message"),
+    [
+        (lambda: axisymmetric_stf_tensor(1, [0, 0, 0]), "symmetry_axis"),
+        (lambda: axisymmetric_stf_tensor(1, [1, 0, 0], 0), "quadrupole_scale"),
+        (
+            lambda: axisymmetric_stf_readout(1, [1, 0, 0], [0, 0, 0]),
+            "direction",
+        ),
+        (
+            lambda: conditional_axisymmetric_stf_power(1, 0),
+            "gravitational_coupling",
+        ),
+    ],
+)
+def test_invalid_axisymmetric_inputs_are_rejected(call, message: str) -> None:
+    with pytest.raises(ValueError, match=message):
+        call()
 
 
 def test_transverse_projector_and_tt_projection_have_exact_properties() -> None:
