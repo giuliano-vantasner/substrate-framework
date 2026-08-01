@@ -1,0 +1,49 @@
+id: P037
+base_release: v0.32.0
+base_commit: bb60762
+source_baseline: substrate@6d1f4e0
+source_units: [GW2]
+question: >-
+  Determine the strongest dependency-closed quadrupole-power theorem available
+  from C-MOM-001 plus an explicitly declared linear massless spin-2 field model,
+  and audit GW2's Einstein-formula, derivative-order, averaging, normalization,
+  and lowest-radiating-multipole claims without importing its answer.
+invariants:
+  - C-MOM-001 establishes source-moment identities but no gravitational field, retarded solution, TT map, radiation channel, or power
+  - a power coefficient must be derived from a convention-complete action and flux normalization rather than dimensional analysis or a named formula
+  - the source convention Q_ij=integral rho*(3*x_i*x_j-r^2*delta_ij) is three times the normalized STF moment
+  - periodic averaging cannot replace a wave-zone derivation or prove that an arbitrary source radiates
+  - monopole and dipole conservation alone do not establish completeness of the radiative multipole hierarchy
+allowed_imports:
+  - C-MOM-001 localized conserved-stress moments
+  - exact flat 3+1 tensor algebra, retarded Green-function calculus, and periodic averaging
+  - an explicitly declared quadratic massless spin-2 action and source coupling as a conditional model, with every normalization retained and independently checked
+  - GW2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Derive a convention-complete conditional quadrupole radiation theorem from
+      a declared linear massless spin-2 action through the retarded field, TT
+      projection, wave-zone flux, angular integral, and periodic average
+  - id: B
+    description: >-
+      Promote only exact third-derivative contraction and periodic-average
+      algebra for a declared quadrupole power functional if the field-to-flux
+      coefficient cannot be closed without an unapproved physical import
+  - id: C
+    description: >-
+      Promote GW2's Einstein quadrupole power and lowest-radiating-order
+      interpretation directly from conservation and dimensional consistency
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit physical premises
+  - convention-complete source coupling, field equation, Green function, TT normalization, and flux
+  - exact derivative order, tensor contraction, trace convention, and time average
+  - dimension, positivity, translation, static, and periodic limiting checks
+  - independent normalization derivation and load-bearing coefficient mutations
+  - clear separation of conditional model theorem from physical gravity and substrate interpretation
+claims_proposed:
+  - provisional C-GW-001
+comparators_blinded_until: >-
+  action_field_equation_retarded_solution_flux_average_and_selection_criteria_frozen
+status: accepted

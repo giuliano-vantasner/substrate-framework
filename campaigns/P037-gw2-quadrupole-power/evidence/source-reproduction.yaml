@@ -1,0 +1,17 @@
+source_unit: GW2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-12/bridge_GW2_quadrupole_power.py
+sha256: b41bf49ed7c13e22defc4c70003dad400ffcebcb6c04e852883e2e331badc1d7
+reproduced_at: '2026-08-01T17:53:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-12/bridge_GW2_quadrupole_power.py
+environment:
+  python: repository virtual environment
+  sympy: 1.14.0
+exit_code: 0
+terminal_tally: ALL 8 CHECKS PASS
+observation: >-
+  Reproduction confirms the exact angular integrations but not the two imported
+  field/flux inputs. The source combines Q=3*I_STF with the waveform coefficient
+  for I_STF, producing a factor-nine power error in its written convention.

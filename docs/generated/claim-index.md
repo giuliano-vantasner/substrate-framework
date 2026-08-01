@@ -93,6 +93,15 @@ Conditional on C-U1-001's smooth complex scalar, a positive coupling e, and a de
 - Compatibility: `compatible_extension`
 - Dependencies: C-U1-001
 
+## C-GW-001
+
+In Euclidean three-space let n be a unit direction, P_ij=delta_ij-n_i*n_j, and let Lambda be the symmetric transverse- traceless projector. For every real symmetric tensor S, integral_{S^2} |Lambda(n) S|^2 dOmega equals (8*pi/5)*|STF(S)|^2, where STF(S)=S-delta*Tr(S)/3; pure trace is therefore annihilated. Conditional on a declared far-field waveform h_TT=(A/r)*Lambda[ddot Q] and declared flux dP/dOmega=B*r^2*<dot h_TT:dot h_TT>, angular integration gives P=(8*pi/5)*B*A^2*<|STF(dddot Q)|^2>. The factors A and B are premises, not consequences of the angular integral. If the normalized source moment of C-MOM-001 is I_STF and Q_s=s*I_STF for nonzero s, the same waveform requires A_s=A_1/s and the power coefficient multiplying |dddot Q_s|^2 scales as 1/s^2. Thus the particular declared inputs A_1=2*G and B=1/(32*pi*G) give G/5 for I_STF, whereas the convention Q=3*I_STF gives G/45 for |dddot Q|^2, not G/5. For a single harmonic Q=C*cos(omega*t)+S*sin(omega*t), the exact cycle average of the squared STF third derivative is omega^6*(|STF(C)|^2+|STF(S)|^2)/2. These results establish only exact projector, angular, convention, and conditional-functional algebra; they establish no gravitational action or field equation, retarded solution, physical Isaacson flux, measured coupling, universal lowest radiating multipole, arbitrary-source radiation, nonlinear gravity, 1+1 lift, or substrate realization.
+
+- Accepted in: `v0.33.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-MOM-001
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

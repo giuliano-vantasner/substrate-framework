@@ -1,0 +1,11 @@
+PASS [P037-INDEPENDENT] independent sphere quadrature resolves the exact TT contraction
+PASS [P037-INDEPENDENT] quadrature refinement is stable rather than a one-mesh coincidence
+PASS [P037-INDEPENDENT] an independently shifted trace gives the same angular result
+PASS [P037-INDEPENDENT] independent rescaling preserves the waveform tensor
+PASS [P037-INDEPENDENT] the same rescaling preserves total conditional power
+PASS [P037-INDEPENDENT] using the normalized waveform coefficient on triple Q creates a factor-nine error
+PASS [P037-INDEPENDENT] direct particle differentiation gives the circular norm without a lookup formula
+PASS [P037-INDEPENDENT] the conditional circular power has the normalized thirty-two-over-five factor
+PASS [P037-INDEPENDENT] nonzero pure trace is a counterexample to zero power iff raw tensor zero
+ALL 9 CHECKS PASS [P037-INDEPENDENT]
+P037 INDEPENDENT TT NORMALIZATION REVIEW ALL 9 CHECKS PASS

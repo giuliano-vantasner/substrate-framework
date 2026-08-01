@@ -533,3 +533,20 @@ units:
       P036 supplies a fully conserved 3D Gaussian, independent inertial-particle
       derivation, boundary-flux and nonsymmetric-tensor guards, and keeps
       nonzero source moments distinct from radiation.
+  GW2:
+    disposition: qualified
+    accepted_claims:
+      - C-MOM-001
+      - C-GW-001
+    qualification: >-
+      GW2's exact TT projector, sphere contraction, and premise-explicit power
+      reduction are accepted. Its retarded waveform and Isaacson flux are
+      imported, its Q=3*I_STF convention makes its written G/5 formula nine
+      times too large, and its averaging and lowest-radiating-order claims are
+      not derived.
+    evidence:
+      - campaigns/P037-gw2-quadrupole-power/reviews/source_adjudication.md
+    note: >-
+      P037 independently refines the sphere integral, carries quadrupole
+      convention changes through the waveform coefficient, performs an exact
+      harmonic average, and excludes physical gravity from the accepted claim.

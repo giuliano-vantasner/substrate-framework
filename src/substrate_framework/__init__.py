@@ -26,6 +26,15 @@ from .conserved_moments import (
     isolated_conserved_stress_moment_rates,
     symmetric_trace_free,
 )
+from .tt_angular import (
+    conditional_tt_power,
+    frobenius_norm_squared,
+    harmonic_stf_third_derivative_average,
+    integrated_tt_norm_squared,
+    transverse_projector,
+    tt_project_symmetric,
+    waveform_prefactor_for_quadrupole_convention,
+)
 
 from .governance import (
     GovernanceError,

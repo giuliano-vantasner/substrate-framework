@@ -1,0 +1,21 @@
+attempt: 0001
+campaign: P037
+base_release: v0.32.0
+base_commit: bb60762
+source_unit: GW2
+source_sha256: b41bf49ed7c13e22defc4c70003dad400ffcebcb6c04e852883e2e331badc1d7
+candidate: B
+oracles:
+  - exact transverse and transverse-traceless projector identities
+  - direct full-sphere integration and reusable isotropic contraction
+  - independent Gauss-Legendre and periodic-azimuth quadrature refinement
+  - normalized versus triple-normalized quadrupole covariance
+  - exact harmonic average and direct circular two-body differentiation
+mutations:
+  - change the waveform prefactor
+  - change the declared flux prefactor
+  - retain the normalized waveform coefficient after Q is multiplied by three
+  - change the quadrupole scale without the inverse waveform rescaling
+expected_positive_object: >-
+  An exact TT angular-reduction and convention-covariant conditional power
+  theorem with waveform and flux normalizations retained as explicit premises.

@@ -1,0 +1,19 @@
+attempt: 0001
+completed_at: '2026-08-01T18:00:51Z'
+exit_code: 0
+terminal_tally: 34
+verdict:
+  C-GW-001: symbolic_verified
+evidence:
+  - exact rank-two/rank-four angular moments and TT projection
+  - direct and importable eight-pi-over-five sphere contraction
+  - convention-covariant conditional power with factor-sensitive mutations
+  - exact harmonic and circular-source examples
+  - independent refined sphere quadrature
+source_defects:
+  - the retarded waveform and Isaacson flux are imported rather than derived
+  - the triple-normalized Q is paired with the normalized-STF waveform coefficient
+  - the displayed angle-bracket time average is left symbolic
+  - the raw-component zero-power iff and lowest-radiating-order claims overreach the oracle
+status: passed
+stdout: stdout.txt

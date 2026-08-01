@@ -1,0 +1,36 @@
+PASS [P037-GW2] the audited GW2 source is the hash-pinned candidate unit
+PASS [P037-GW2] GW2 exits cleanly
+PASS [P037-GW2] GW2's declared eight-check tally reproduces
+PASS [P037-GW2] GW2 itself classifies the retarded waveform as imported
+PASS [P037-GW2] GW2 itself classifies the Isaacson flux as imported
+PASS [P037-GW2] the representative rank-two sphere moment is four pi over three
+PASS [P037-GW2] the independent rank-four representatives fix four pi over fifteen
+PASS [P037-GW2] the reusable transverse projector is exact and idempotent
+PASS [P037-GW2] the reusable TT image is symmetric transverse and traceless
+PASS [P037-GW2] direct sphere integration independently gives the eight-pi-over-five TT reduction
+PASS [P037-GW2] the importable integrated formula reproduces the direct angular integral
+PASS [P037-GW2] a pure trace is annihilated rather than assigned positive power
+PASS [P037-GW2] adding a trace leaves the integrated TT contraction unchanged
+PASS [P037-GW2] the one-fifth coefficient follows conditionally from both declared prefactors
+PASS [P037-GW2] the conditional coefficient depends on the waveform and flux normalizations: baseline
+PASS [P037-GW2] the conditional coefficient depends on the waveform and flux normalizations: mutations supplied
+PASS [P037-GW2] the conditional coefficient depends on the waveform and flux normalizations: mutation 1 rejected
+PASS [P037-GW2] the conditional coefficient depends on the waveform and flux normalizations: mutation 2 rejected
+PASS [P037-GW2] the conditional coefficient depends on the waveform and flux normalizations: mutation 3 rejected
+PASS [P037-GW2] Q equals three I-STF only when its waveform coefficient is divided by three
+PASS [P037-GW2] normalized and triple-normalized quadrupoles then give identical power
+PASS [P037-GW2] GW2's written Q and waveform conventions overstate the same power by nine
+PASS [P037-GW2] the triple-normalized convention carries G over forty-five
+PASS [P037-GW2] quadrupole convention conversion: baseline
+PASS [P037-GW2] quadrupole convention conversion: mutations supplied
+PASS [P037-GW2] quadrupole convention conversion: mutation 1 rejected
+PASS [P037-GW2] quadrupole convention conversion: mutation 2 rejected
+PASS [P037-GW2] quadrupole convention conversion: mutation 3 rejected
+PASS [P037-GW2] the exact harmonic cycle average is performed rather than left symbolic
+PASS [P037-GW2] GW2's source explicitly leaves its angle-bracket time average symbolic
+PASS [P037-GW2] a circular two-body relative coordinate has the exact constant third-derivative norm
+PASS [P037-GW2] the circular result is invariant under the two quadrupole conventions
+PASS [P037-GW2] zero TT power means zero STF part, not zero raw tensor
+PASS [P037-GW2] angular algebra does not derive the imported field, flux, or lowest-multipole premise
+ALL 34 CHECKS PASS [P037-GW2]
+P037 GW2 TT-ANGULAR NORMALIZATION AUDIT ALL 34 CHECKS PASS

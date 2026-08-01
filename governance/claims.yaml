@@ -1530,3 +1530,53 @@ claims:
     accepted_in: v0.32.0
     challenges: []
     supersedes: []
+  - id: C-GW-001
+    statement: >-
+      In Euclidean three-space let n be a unit direction,
+      P_ij=delta_ij-n_i*n_j, and let Lambda be the symmetric transverse-
+      traceless projector. For every real symmetric tensor S,
+      integral_{S^2} |Lambda(n) S|^2 dOmega equals
+      (8*pi/5)*|STF(S)|^2, where
+      STF(S)=S-delta*Tr(S)/3; pure trace is therefore annihilated. Conditional
+      on a declared far-field waveform
+      h_TT=(A/r)*Lambda[ddot Q] and declared flux
+      dP/dOmega=B*r^2*<dot h_TT:dot h_TT>, angular integration gives
+      P=(8*pi/5)*B*A^2*<|STF(dddot Q)|^2>. The factors A and B are premises,
+      not consequences of the angular integral. If the normalized source
+      moment of C-MOM-001 is I_STF and Q_s=s*I_STF for nonzero s, the same
+      waveform requires A_s=A_1/s and the power coefficient multiplying
+      |dddot Q_s|^2 scales as 1/s^2. Thus the particular declared inputs
+      A_1=2*G and B=1/(32*pi*G) give G/5 for I_STF, whereas the convention
+      Q=3*I_STF gives G/45 for |dddot Q|^2, not G/5. For a single harmonic
+      Q=C*cos(omega*t)+S*sin(omega*t), the exact cycle average of the squared
+      STF third derivative is
+      omega^6*(|STF(C)|^2+|STF(S)|^2)/2. These results establish only exact
+      projector, angular, convention, and conditional-functional algebra; they
+      establish no gravitational action or field equation, retarded solution,
+      physical Isaacson flux, measured coupling, universal lowest radiating
+      multipole, arbitrary-source radiation, nonlinear gravity, 1+1 lift, or
+      substrate realization.
+    provenance: campaigns/P037-gw2-quadrupole-power/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-MOM-001
+    evidence:
+      - campaigns/P037-gw2-quadrupole-power/verify.py
+      - campaigns/P037-gw2-quadrupole-power/attempts/0001/result.yaml
+      - campaigns/P037-gw2-quadrupole-power/reviews/independent_tt_normalization_review.py
+      - campaigns/P037-gw2-quadrupole-power/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-GW-001-review.md
+      - tests/test_tt_angular.py
+    assumptions:
+      - Spatial tensor contractions use the Cartesian Euclidean metric in exactly three dimensions.
+      - The tensor supplied to the projector is real and symmetric; zero conditional power means its STF part vanishes, not that an arbitrary raw tensor is zero.
+      - The waveform and flux prefactors are separately declared conditional inputs and no action-to-flux derivation is claimed.
+      - The angle-bracket average is linear and commutes with the direction integral; the harmonic formula concerns one exact nonzero-frequency cycle.
+      - Quadrupole convention changes use a nonzero constant scale and preserve the physical waveform by inverse rescaling of its coefficient.
+    comparators: []
+    accepted_in: v0.33.0
+    challenges: []
+    supersedes: []

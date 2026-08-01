@@ -1,0 +1,40 @@
+campaign: P037
+title: Exact TT angular reduction and GW2 quadrupole-power audit
+source_baseline: substrate@6d1f4e0
+source_units: [GW2]
+base_release: v0.32.0
+adjudicated_at: '2026-08-01T18:00:51Z'
+selected_candidate:
+  id: B
+  reason: >-
+    Exact sphere algebra, convention-covariant prefactors, sensitive mutations,
+    harmonic averaging, and independent refined quadrature close the strongest
+    reusable theorem without importing a physical gravitational action.
+competing_candidates:
+  - id: A
+    decision: rejected_for_this_claim_because_no_accepted_or_source_derived_action_to_field_to_flux_normalization_exists
+  - id: C
+    decision: rejected_because_the_source_imports_both_physical_inputs_and_mixes_its_quadrupole_normalization
+claims:
+  - id: C-GW-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_tt_normalization_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-GW-001-review.md
+source_disposition:
+  GW2: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P037-gw2-quadrupole-power/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-12/bridge_GW2_quadrupole_power.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P037-gw2-quadrupole-power/reviews/independent_tt_normalization_review.py
+  - .venv/bin/python -m pytest -q tests/test_tt_angular.py
+debt: []
+status: accepted
