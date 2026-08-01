@@ -318,3 +318,20 @@ units:
       P023 proves that required length and hadronic offset depend on the target
       comparator and that the restricted-namespace reconstruction is
       tautological after the comparator-derived offset is supplied.
+  QCD3:
+    disposition: qualified
+    accepted_claims:
+      - C-LIE-001
+      - C-RGE-001
+      - C-RGE-002
+    qualification: >-
+      QCD3's exact standard SU(3) invariants and premise-explicit one-loop
+      coefficient specialization are accepted. It does not derive the loop
+      weights or substrate field content and establishes neither unique SU(3)
+      selection, a physical substrate/QCD identity, nor confinement.
+    evidence:
+      - campaigns/P024-su3-one-loop-coefficient/reviews/source_adjudication.md
+    note: >-
+      P024 keeps the perturbative weights as explicit API inputs, replaces the
+      numerical running sweep by an exact derivative and limit, and excludes
+      pending YM1/EM5 from the accepted dependency closure.

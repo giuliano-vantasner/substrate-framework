@@ -1,0 +1,16 @@
+attempt: 0001
+completed_at: '2026-08-01T15:07:43Z'
+exit_code: 0
+terminal_tally: 27
+verdict:
+  C-LIE-001: symbolic_verified
+  C-RGE-002: symbolic_verified
+evidence:
+  - Hermiticity, tracelessness, trace normalization, and commutator closure
+  - exact structure constants and two adjoint-Casimir routes
+  - fundamental Casimir and dimension-index relation
+  - normalization and orientation mutations
+  - explicit imported-weight retention and four coefficient mutations
+  - exact flavor threshold, matter-only sign, derivative, and ultraviolet limit
+status: passed
+stdout: stdout.txt

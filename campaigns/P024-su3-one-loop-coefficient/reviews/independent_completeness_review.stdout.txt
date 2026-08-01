@@ -1,0 +1,7 @@
+PASS [P024-INDEPENDENT] fundamental completeness holds componentwise
+PASS [P024-INDEPENDENT] completeness gives the fundamental Casimir
+PASS [P024-INDEPENDENT] the total trace independently fixes the Dynkin index
+PASS [P024-INDEPENDENT] declared loop weights give the exact integer sign boundary
+PASS [P024-INDEPENDENT] changing the matter weight changes the sign boundary
+ALL 5 CHECKS PASS [P024-INDEPENDENT]
+P024 INDEPENDENT REVIEW ALL 5 CHECKS PASS

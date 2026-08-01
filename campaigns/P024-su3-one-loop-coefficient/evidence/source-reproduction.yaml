@@ -1,0 +1,13 @@
+source_unit: QCD3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-8/bridge_QCD3_asymptotic_freedom.py
+sha256: 7d7c9a9bc2f04c933fc62484fec3329c0eb7769bb54ba8cd67701da5110af0ca
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-8/bridge_QCD3_asymptotic_freedom.py
+observed_at: '2026-08-01T15:07:43Z'
+exit_code: 0
+terminal_tally: ALL 9 CHECKS PASS
+scope_note: >-
+  QCD3 explicitly identifies 11/3 and 4/3 as imported textbook loop weights.
+  P024 preserves that boundary and replaces its numerical running sweep with an
+  exact derivative and limit.

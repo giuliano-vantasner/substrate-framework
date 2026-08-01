@@ -1,0 +1,29 @@
+PASS [C-LIE-001/C-RGE-002] the audited QCD3 source is the hash-pinned candidate unit
+PASS [C-LIE-001/C-RGE-002] the eight fundamental generators are Hermitian and traceless
+PASS [C-LIE-001/C-RGE-002] the declared normalization has exact Dynkin index one-half
+PASS [C-LIE-001/C-RGE-002] all generator commutators close exactly
+PASS [C-LIE-001/C-RGE-002] the computed structure constants are antisymmetric
+PASS [C-LIE-001/C-RGE-002] load-bearing standard structure constants have exact values
+PASS [C-LIE-001/C-RGE-002] explicit fundamental and adjoint matrices give all three invariants
+PASS [C-LIE-001/C-RGE-002] direct structure-constant contraction independently gives C_A=3
+PASS [C-LIE-001/C-RGE-002] representation dimensions satisfy the Casimir-index relation
+PASS [C-LIE-001/C-RGE-002] generator normalization and commutator orientation: baseline
+PASS [C-LIE-001/C-RGE-002] generator normalization and commutator orientation: mutations supplied
+PASS [C-LIE-001/C-RGE-002] generator normalization and commutator orientation: mutation 1 rejected
+PASS [C-LIE-001/C-RGE-002] generator normalization and commutator orientation: mutation 2 rejected
+PASS [C-LIE-001/C-RGE-002] the conditional coefficient retains both imported loop weights
+PASS [C-LIE-001/C-RGE-002] declared standard weights specialize to eleven minus two-thirds flavors
+PASS [C-LIE-001/C-RGE-002] group factors and imported one-loop weights: baseline
+PASS [C-LIE-001/C-RGE-002] group factors and imported one-loop weights: mutations supplied
+PASS [C-LIE-001/C-RGE-002] group factors and imported one-loop weights: mutation 1 rejected
+PASS [C-LIE-001/C-RGE-002] group factors and imported one-loop weights: mutation 2 rejected
+PASS [C-LIE-001/C-RGE-002] group factors and imported one-loop weights: mutation 3 rejected
+PASS [C-LIE-001/C-RGE-002] group factors and imported one-loop weights: mutation 4 rejected
+PASS [C-LIE-001/C-RGE-002] the exact sign crossover is thirty-three halves
+PASS [C-LIE-001/C-RGE-002] integer flavors zero through sixteen give a positive coefficient
+PASS [C-LIE-001/C-RGE-002] integer flavors seventeen and above begin with negative coefficient
+PASS [C-LIE-001/C-RGE-002] six declared flavors give the conditional coefficient seven
+PASS [C-LIE-001/C-RGE-002] dropping the declared gauge-loop term leaves a negative matter term
+PASS [C-LIE-001/C-RGE-002] positive conditional coefficient gives exact decreasing ultraviolet running
+ALL 27 CHECKS PASS [C-LIE-001/C-RGE-002]
+P024 QCD3 EXACT AUDIT ALL 27 CHECKS PASS

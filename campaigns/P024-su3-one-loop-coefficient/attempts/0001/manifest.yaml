@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [QCD3]
+framework_base: 12205e9
+question: >-
+  Which SU(3) invariants are derived from explicit matrices, and what follows
+  only after the one-loop gauge and matter weights are declared?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P024-su3-one-loop-coefficient/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-8/bridge_QCD3_asymptotic_freedom.py
+oracle:
+  kind: exact_representation_invariants_and_conditional_coefficient
+  mutation_requirements:
+    - generator normalization and commutator orientation are load-bearing
+    - both Casimirs and the Dynkin index are computed from matrices
+    - both imported loop weights and both group factors are load-bearing
+    - the integer flavor threshold and abelian-term guard are exact
+status: passed

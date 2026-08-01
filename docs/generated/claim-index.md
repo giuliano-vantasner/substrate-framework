@@ -66,6 +66,15 @@ Conditional on C-RGE-001 and positive quantities satisfying mu0=S*c0/a, g0^2=bet
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-003, C-RGE-001
 
+## C-LIE-001
+
+For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.
+
+- Accepted in: `v0.21.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
 ## C-LIN-001
 
 For a finite exact real linear system M*x=b, the system is consistent if and only if rank(M)=rank([M|b]). When consistent, its solution-space dimension is columns(M)-rank(M); it is unique exactly when this dimension is zero and underdetermined exactly when it is positive. More equations than unknowns is only an equation-count property and implies neither consistency nor uniqueness. Adding an exact duplicate of a nonzero row leaves coefficient rank and nullity unchanged; the two-row duplicate subsystem is consistent exactly when the two right-hand sides agree.
@@ -137,6 +146,15 @@ For positive b0, mu0, and g0, a positive coupling on an interval that satisfies 
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none
+
+## C-RGE-002
+
+Conditional on C-LIE-001, a nonnegative integer flavor count n_f, and the declared four-dimensional one-loop formula b0=(11/3)*C_A-(4/3)*T_F*n_f for a gauge-plus-ghost term and Dirac fundamentals, exact substitution gives b0=11-(2/3)*n_f. Its zero is n_f=33/2; b0 is positive for integer 0<=n_f<=16 and negative for integer n_f>=17, with b0=7 at declared n_f=6. Combined with C-RGE-001, a positive b0 gives decreasing one-loop ultraviolet running with zero infinite-scale limit. The loop weights, field content, flavor count, perturbative regime, and physical gauge-sector identification are premises; the claim proves neither a substrate/QCD identity, unique SU(3) selection, nor confinement.
+
+- Accepted in: `v0.21.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-LIE-001, C-RGE-001
 
 ## C-SG-001
 

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 197
-  qualified: 16
+  pending_adjudication: 196
+  qualified: 17
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1708,8 +1708,20 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LIE-001
+  - C-RGE-001
+  - C-RGE-002
+  qualification: QCD3's exact standard SU(3) invariants and premise-explicit
+    one-loop coefficient specialization are accepted, but it does not derive the
+    loop weights or substrate field content and establishes neither unique SU(3)
+    selection, a physical substrate/QCD identity, nor confinement.
+  evidence:
+  - campaigns/P024-su3-one-loop-coefficient/reviews/source_adjudication.md
+  note: P024 passes loop weights as explicit API inputs, replaces the numerical
+    running sweep with an exact derivative and limit, and keeps YM1/EM5 outside
+    the accepted dependency closure.
 - source_unit: QCD5
   phase: phase-8
   path: merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py

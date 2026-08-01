@@ -1,0 +1,36 @@
+id: P024
+base_release: v0.20.0
+base_commit: 12205e9
+source_baseline: substrate@6d1f4e0
+source_units: [QCD3]
+question: >-
+  Derive QCD3's exact SU(3) invariants and determine the conditional one-loop
+  coefficient without treating the loop formula or field content as matrix algebra.
+invariants:
+  - T_a=lambda_a/2 and [T_a,T_b]=i*f_abc*T_c
+  - C-RGE-001 remains conditional on an explicit positive beta coefficient
+  - pending YM1 and EM5 claims are unavailable as authority
+allowed_imports:
+  - C-RGE-001 for downstream conditional composition
+  - exact complex matrix algebra
+  - the one-loop beta formula only as a declared premise
+  - QCD3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote exact SU(3) invariants and a conditional one-loop specialization
+  - id: B
+    description: Promote only exact SU(3) Lie-algebra invariants
+  - id: C
+    description: Promote physical substrate-sector asymptotic freedom
+uniqueness_evidence: null
+selection_criteria:
+  - exact convention and representation closure
+  - separation of derived group data from imported loop physics
+  - dependency and assumption economy
+  - coefficient and threshold sensitivity
+  - distinct reusable consumer reach
+claims_proposed:
+  - C-LIE-001
+  - C-RGE-002
+comparators_blinded_until: matrices_conventions_formula_imports_and_mutations_frozen
+status: accepted

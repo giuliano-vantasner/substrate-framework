@@ -1,0 +1,47 @@
+campaign: P024
+title: Exact SU(3) invariants and conditional one-loop coefficient
+source_baseline: substrate@6d1f4e0
+source_units: [QCD3]
+base_release: v0.20.0
+adjudicated_at: '2026-08-01T15:07:43Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Explicit matrices close both exact representation claims, while passing the
+    perturbative weights as arguments preserves a useful and honest conditional
+    specialization for C-RGE-001.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_weight_explicit_conditional_coefficient_is_a_distinct_reusable_consumer
+  - id: C
+    decision: rejected_because_YM1_EM5_field_content_and_substrate_identification_remain_unaccepted
+claims:
+  - id: C-LIE-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+  - id: C-RGE-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_completeness_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-LIE-001-review.md
+    - memory/vantasner/decisions/C-RGE-002-review.md
+source_disposition:
+  QCD3: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P024-su3-one-loop-coefficient/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-8/bridge_QCD3_asymptotic_freedom.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P024-su3-one-loop-coefficient/reviews/independent_completeness_review.py
+  - .venv/bin/python -m pytest -q tests/test_su3.py tests/test_renormalization.py
+debt: []
+status: accepted

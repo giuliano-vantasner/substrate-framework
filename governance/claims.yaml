@@ -922,3 +922,74 @@ claims:
     accepted_in: v0.20.0
     challenges: []
     supersedes: []
+  - id: C-LIE-001
+    statement: >-
+      For the eight explicit standard fundamental SU(3) generators
+      T_a=lambda_a/2, each generator is Hermitian and traceless and
+      Tr(T_a*T_b)=(1/2)*delta_ab. With
+      [T_a,T_b]=i*f_abc*T_c and
+      f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally
+      antisymmetric. The exact representation invariants are T_F=1/2,
+      C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both
+      sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and
+      sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic
+      facts and establish no physical gauge-sector identification.
+    provenance: campaigns/P024-su3-one-loop-coefficient/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P024-su3-one-loop-coefficient/verify.py
+      - campaigns/P024-su3-one-loop-coefficient/attempts/0001/result.yaml
+      - campaigns/P024-su3-one-loop-coefficient/reviews/independent_completeness_review.py
+      - campaigns/P024-su3-one-loop-coefficient/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-LIE-001-review.md
+      - tests/test_su3.py
+    assumptions:
+      - The explicit matrices use the standard Gell-Mann ordering and T_a=lambda_a/2 normalization.
+      - Generator and structure-constant indices run from zero through seven in the package API.
+      - The commutator convention is [T_a,T_b]=i*f_abc*T_c.
+      - No loop coefficient, matter content, or physical substrate interpretation is part of the claim.
+    comparators: []
+    accepted_in: v0.21.0
+    challenges: []
+    supersedes: []
+  - id: C-RGE-002
+    statement: >-
+      Conditional on C-LIE-001, a nonnegative integer flavor count n_f, and the
+      declared four-dimensional one-loop formula
+      b0=(11/3)*C_A-(4/3)*T_F*n_f for a gauge-plus-ghost term and Dirac
+      fundamentals, exact substitution gives b0=11-(2/3)*n_f. Its zero is
+      n_f=33/2; b0 is positive for integer 0<=n_f<=16 and negative for integer
+      n_f>=17, with b0=7 at declared n_f=6. Combined with C-RGE-001, a positive
+      b0 gives decreasing one-loop ultraviolet running with zero infinite-scale
+      limit. The loop weights, field content, flavor count, perturbative regime,
+      and physical gauge-sector identification are premises; the claim proves
+      neither a substrate/QCD identity, unique SU(3) selection, nor confinement.
+    provenance: campaigns/P024-su3-one-loop-coefficient/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-LIE-001
+      - C-RGE-001
+    evidence:
+      - campaigns/P024-su3-one-loop-coefficient/verify.py
+      - campaigns/P024-su3-one-loop-coefficient/attempts/0001/result.yaml
+      - campaigns/P024-su3-one-loop-coefficient/reviews/independent_completeness_review.py
+      - campaigns/P024-su3-one-loop-coefficient/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-RGE-002-review.md
+      - tests/test_su3.py
+      - tests/test_renormalization.py
+    assumptions:
+      - The weights 11/3 and 4/3 and their gauge-plus-ghost and Dirac-matter meanings are declared one-loop premises.
+      - The matter fields are counted by a nonnegative integer n_f in the fundamental representation.
+      - The one-loop running equation is used only in its declared perturbative regime.
+      - Removing the gauge term is an algebraic guard, not a complete derivation of a physical abelian theory.
+    comparators: []
+    accepted_in: v0.21.0
+    challenges: []
+    supersedes: []

@@ -99,6 +99,13 @@ from .skyrme_relations import (
     matched_pion_coupling_ratio,
 )
 from .source_audit import SourceAudit, SourceMatch, audit_source_tokens
+from .su3 import (
+    SU3Invariants,
+    conditional_one_loop_coefficient,
+    fundamental_generators,
+    invariants,
+    structure_constant,
+)
 from .thermal import (
     symmetric_two_level_gate,
     two_level_occupation_variance,
@@ -135,6 +142,7 @@ __all__ = [
     "SolverTolerances",
     "SourceAudit",
     "SourceMatch",
+    "SU3Invariants",
     "breather_action",
     "audit_source_tokens",
     "breather_action_lattice_adjacent_gap",
@@ -165,6 +173,7 @@ __all__ = [
     "co_scaled_wave_speed",
     "combined_winding_parity",
     "conditional_anw_mass",
+    "conditional_one_loop_coefficient",
     "conditional_topological_mass",
     "dimensionless_group_count",
     "dimensionless_mass_coordinate",
@@ -219,7 +228,10 @@ __all__ = [
     "u1_current_components",
     "u1_current_divergence",
     "euler_lagrange_expression",
+    "fundamental_generators",
+    "invariants",
     "solve_euler_lagrange_acceleration",
+    "structure_constant",
     "virial_scaling_exponents",
     "winding_parity",
 ]
