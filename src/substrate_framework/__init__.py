@@ -91,6 +91,17 @@ from .flux_tube import (
     tube_field_energy,
     uniform_tube_field,
 )
+from .exact_sine_qball import (
+    ExactSineChargeEvidence,
+    evaluate_exact_sine_qball_charge,
+    exact_sine_qball_charge_quadrature,
+    exact_sine_qball_coordinate_quadrature,
+    exact_sine_qball_effective_square,
+    exact_sine_qball_first_integral_residual,
+    exact_sine_qball_peak_amplitude,
+    exact_sine_qball_residual,
+    exact_sine_qball_scaled_rhs,
+)
 from .radial_energy import (
     capillary_critical_radius,
     capillary_energy,
@@ -239,6 +250,15 @@ __all__ = [
     "dimensionless_monomial_basis",
     "endpoint_force_slope",
     "endpoint_potential",
+    "ExactSineChargeEvidence",
+    "evaluate_exact_sine_qball_charge",
+    "exact_sine_qball_charge_quadrature",
+    "exact_sine_qball_coordinate_quadrature",
+    "exact_sine_qball_effective_square",
+    "exact_sine_qball_first_integral_residual",
+    "exact_sine_qball_peak_amplitude",
+    "exact_sine_qball_residual",
+    "exact_sine_qball_scaled_rhs",
     "finite_energy_winding_flux",
     "diagnose_linear_system",
     "gauged_scalar_kinetic_density",

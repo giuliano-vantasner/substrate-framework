@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [FG1]
+framework_base: b429159
+question: >-
+  Which exact branch, charge, and asymptotic statements survive FG1's numeric
+  and object-identity audit?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P032-fg1-exact-sine-qball/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-11/bridge_FG1_charged_soliton_reconciliation.py
+oracle:
+  kind: exact_energy_quadrature_and_scaled_asymptotic
+  mutation_requirements:
+    - sine potential normalization and frequency sign are load-bearing
+    - later roots cross a forbidden negative-square interval
+    - EM1 width and unit profile fail the relevant equations
+    - source separatrix rebound is distinguished from physical charge
+status: passed

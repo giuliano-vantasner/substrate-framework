@@ -174,6 +174,15 @@ Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega
 - Compatibility: `compatible_extension`
 - Dependencies: C-U1-001
 
+## C-QBL-002
+
+Conditional on the dimensionless 1+1 stationary-profile equation f_xx=sin(f)/2-omega^2*f, C-U1-001's stationary phase, and 0<omega<1/sqrt(2), define G_omega(u)=1-cos(u)-omega^2*u^2. The ratio (1-cos(u))/u^2 decreases strictly from 1/2 to 0 on 0<u<2*pi, so there is a unique peak f0 in that interval with G_omega(f0)=0 and G_omega(u)>0 for 0<u<f0. Up to translation and reflection, the positive even localized branch is specified by x=integral_f(x)^f0 du/sqrt(G_omega(u)); it has f(0)=f0, f_x(0)=0, and tends to zero as |x| tends to infinity. Its accepted U1 charge is the finite exact quadrature Q=4*omega*integral_0^f0 u^2 du/sqrt(G_omega(u)). With kappa=sqrt(1/2-omega^2), the scaled field f(x)=kappa*F(z), z=kappa*x, obeys F_zz=F-F^3/12+O(kappa^2), f0/kappa tends to sqrt(24), and Q/(96*omega*kappa) tends to one as kappa tends to zero, recovering C-QBL-001 only in this controlled small-amplitude limit. The claim establishes no elementary closed form, finite-amplitude identity with EM1, VK or nonlinear stability, physical electric charge, particle identity, or substrate realization.
+
+- Accepted in: `v0.28.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-U1-001, C-QBL-001
+
 ## C-RG-001
 
 For positive radius R and density lambda, the circumference line energy E_line = 2*pi*R*lambda is homogeneous of degree one, has constant positive derivative 2*pi*lambda, and has no stationary radius. For positive surface density sigma, E_shell = 4*pi*R^2*sigma is homogeneous of degree two and has radius-dependent derivative 8*pi*R*sigma. For positive line tension T and pressure P, E_cap = 2*pi*R*T - pi*R^2*P + C has the unique strict global maximum R = T/P. Conditional line constructions with coefficients T and the C-SG-002 breather energy share only the degree-one line form; their energies are equal for every positive R if and only if their coefficients are equal.

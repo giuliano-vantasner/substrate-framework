@@ -1,0 +1,40 @@
+campaign: P032
+title: Conditional exact-sine Q-ball family and FG1 reconciliation audit
+source_baseline: substrate@6d1f4e0
+source_units: [FG1]
+base_release: v0.27.0
+adjudicated_at: '2026-08-01T16:49:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Monotone peak calculus, the exact inverse-profile and charge quadratures,
+    and independent scaled asymptotics close a positive conditional family
+    without relying on FG1's unstable long separatrix shoot.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_unique_peak_and_global_implicit_quadrature_close_exactly_despite_the_source_numeric_failure
+  - id: C
+    decision: rejected_because_EM1s_width_and_unit_profile_fail_the_qball_equations_and_a_limit_does_not_establish_object_identity
+claims:
+  - id: C-QBL-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_energy_asymptotic_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-QBL-002-review.md
+source_disposition:
+  FG1: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P032-fg1-exact-sine-qball/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-11/bridge_FG1_charged_soliton_reconciliation.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P032-fg1-exact-sine-qball/reviews/independent_energy_asymptotic_review.py
+  - .venv/bin/python -m pytest -q tests/test_exact_sine_qball.py tests/test_quartic_qball.py tests/test_u1_charge.py
+debt: []
+status: accepted

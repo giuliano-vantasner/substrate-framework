@@ -1,0 +1,10 @@
+PASS [P032-INDEPENDENT] direct multiplication by f-prime derives the localized energy integral
+PASS [P032-INDEPENDENT] the peak condition is frequency-squared equals the decreasing sinc ratio
+PASS [P032-INDEPENDENT] the independent monotonicity witness has positive derivative on zero-to-pi
+PASS [P032-INDEPENDENT] the inverse quadrature independently solves the negative square-root branch
+PASS [P032-INDEPENDENT] evenness and the accepted density independently fix the charge quadrature
+PASS [P032-INDEPENDENT] independent scaling recovers the quartic differential equation
+PASS [P032-INDEPENDENT] independent peak scaling selects sqrt twenty-four
+PASS [P032-INDEPENDENT] the breather envelope width fails the quartic balance by one-half
+ALL 8 CHECKS PASS [P032-INDEPENDENT]
+P032 INDEPENDENT ENERGY/ASYMPTOTIC REVIEW ALL 8 CHECKS PASS

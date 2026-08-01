@@ -1,0 +1,15 @@
+source_unit: FG1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-11/bridge_FG1_charged_soliton_reconciliation.py
+sha256: f0e655828c2796d9f38aaff0d055dfe8a28562de700f408600e645dce2b2b45b
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-11/bridge_FG1_charged_soliton_reconciliation.py
+observed_at: '2026-08-01T16:42:00Z'
+exit_code: 1
+passed_before_failure: 5
+failure: AttributeError_numpy_has_no_attribute_trapz
+scope_note: >-
+  Checks A-E execute before the removed NumPy call stops check F. A separate
+  compatibility-only run aliasing trapz to trapezoid reaches ALL 8, but P032
+  shows the long IVP charge leaves the separatrix and counts three half-orbits;
+  that compatibility run is not accepted scientific evidence.

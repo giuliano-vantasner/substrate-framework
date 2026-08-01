@@ -1,0 +1,14 @@
+attempt: 0001
+completed_at: '2026-08-01T16:49:00Z'
+exit_code: 0
+terminal_tally: 30
+verdict:
+  C-QBL-002: symbolic_verified
+evidence:
+  - exact first integral and strictly decreasing peak ratio
+  - unique first root and implicit homoclinic profile
+  - finite accepted-current charge quadrature with independent integration
+  - scaled quartic operator peak and charge limits
+  - later-root sign width object and separatrix-rebound guards
+status: passed
+stdout: stdout.txt

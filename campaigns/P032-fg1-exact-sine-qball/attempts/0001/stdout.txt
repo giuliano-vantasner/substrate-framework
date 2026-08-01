@@ -1,0 +1,3 @@
+PASS [P032-FG1] 30 exact branch, quadrature, asymptotic, mutation, and source-boundary checks
+ALL 30 CHECKS PASS [P032-FG1]
+P032 FG1 EXACT-SINE QBALL AUDIT ALL 30 CHECKS PASS

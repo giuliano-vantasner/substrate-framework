@@ -449,3 +449,21 @@ units:
       P031 independently derives the first integral and accepted-current charge,
       rejects EM1's different width, and classifies same-data shooting as
       regression evidence rather than independent stability or existence proof.
+  FG1:
+    disposition: qualified
+    accepted_claims:
+      - C-U1-001
+      - C-QBL-001
+      - C-QBL-002
+    qualification: >-
+      FG1's declared exact-sine ODE supports the accepted unique first-root
+      implicit profile, charge quadrature, and controlled quartic limit. It
+      does not identify EM1's envelope with the Q-ball, validate its rebounding
+      long-IVP charge, or establish VK or nonlinear stability.
+    evidence:
+      - campaigns/P032-fg1-exact-sine-qball/reviews/source_adjudication.md
+    note: >-
+      The pinned source fails after five checks at removed np.trapz. P032
+      replaces separatrix shooting with exact quadratures, shows the source
+      domain counts three half-orbits at omega=0.6, and retains EM1's exact
+      width and profile mismatch.

@@ -1,0 +1,46 @@
+id: P032
+base_release: v0.27.0
+base_commit: b429159
+source_baseline: substrate@6d1f4e0
+source_units: [FG1]
+question: >-
+  Determine the exact first-integral and localized-profile content of FG1's
+  declared sine-potential stationary ODE, its quartic limit, and whether it
+  identifies the distinct EM1 and EM6 profile families.
+invariants:
+  - C-U1-001 fixes the stationary-phase current but no profile equation or physical charge map
+  - C-QBL-001 is conditional on its quartic ODE and explicitly rejects EM1 profile identity
+  - shared asymptotic shape or limiting coefficients do not establish object identity
+allowed_imports:
+  - C-U1-001
+  - C-QBL-001
+  - exact calculus and implicit quadrature
+  - SciPy only for resolution-bounded evidence if the source states a numeric claim precisely
+  - FG1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote the exact first integral, positive implicit homoclinic family,
+      accepted-current charge quadrature, and controlled quartic limit while
+      keeping all object and ontology readings conditional
+  - id: B
+    description: >-
+      Promote only the exact first integral and local small-amplitude reduction
+      if FG1's root selection, numerical profile, charge, or convergence oracle
+      does not close
+  - id: C
+    description: >-
+      Identify EM1's declared envelope, the quartic Q-ball, and the exact-sine
+      profile as one physical charged soliton
+uniqueness_evidence: null
+selection_criteria:
+  - exact first-integral signs and localized boundary conditions
+  - peak-root existence and branch selection
+  - accepted-current normalization and finite charge
+  - controlled small-amplitude scaling to C-QBL-001
+  - numerical refinement and independent quadrature if numeric content is promoted
+  - assumption and ontology economy
+claims_proposed:
+  - provisional C-QBL-002
+comparators_blinded_until: exact_integral_root_branch_charge_and_asymptotic_scaling_frozen
+status: accepted
