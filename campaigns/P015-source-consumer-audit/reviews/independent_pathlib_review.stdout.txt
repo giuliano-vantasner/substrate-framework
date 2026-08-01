@@ -1,0 +1,8 @@
+PASS [P015-INDEPENDENT] direct traversal independently finds zero action matches
+PASS [P015-INDEPENDENT] direct traversal independently finds 36 energy matches
+PASS [P015-INDEPENDENT] direct traversal independently finds four charge matches
+PASS [P015-INDEPENDENT] direct energy paths and hashes equal the durable report
+PASS [P015-INDEPENDENT] direct charge paths and hashes equal the durable report
+PASS [P015-INDEPENDENT] direct positive-control traversal finds the five expected files
+ALL 6 CHECKS PASS [P015-INDEPENDENT]
+P015 INDEPENDENT REVIEW ALL 6 CHECKS PASS

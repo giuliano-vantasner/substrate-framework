@@ -1,0 +1,179 @@
+schema_version: 1
+source_baseline: substrate@6d1f4e0
+source_tree_sha256: fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001
+lexical_only: true
+main_scan:
+  root: merged-framework/bridges
+  include_pattern: '**/*.py'
+  exclusions:
+    - phase-45
+  token_patterns:
+    action: hbar_eff|de[ _]Broglie|de_broglie|analog\s+Planck
+    charge: Q_N_closed|noether_charge|4\s*\*\s*omega\s*/\s*sp\.sqrt
+    energy: 16\s*\*\s*(sp\.)?sqrt\(\s*1\s*-|\bE0\b|\bE_0\b|\bE_breather\b
+  scanned_file_count: 213
+  group_counts:
+    action: 0
+    energy: 36
+    charge: 4
+  energy_action_intersection: []
+  charge_action_intersection: []
+  matched_files:
+    - path: phase-1/bridge_T1A_ring_equals_ring.py
+      sha256: 2960ca43cb2f3a30939548853de0aa464c11e0d779d4f74522f48c19c2864976
+      groups: [energy]
+    - path: phase-1/bridge_T1D_Rk_E0_divides_out.py
+      sha256: 51a62aac55097bfdb5c3db61ac5932b547881d6436d602ca04c3038a11a2c48a
+      groups: [energy]
+    - path: phase-1/bridge_T1E_E0_triple_oracle.py
+      sha256: bdd57d929b7bed2436ad5803f0a614d4887a35a7eab5ecd78b23041888e48a97
+      groups: [energy]
+    - path: phase-11/bridge_FG1_charged_soliton_reconciliation.py
+      sha256: f0e655828c2796d9f38aaff0d055dfe8a28562de700f408600e645dce2b2b45b
+      groups: [charge]
+    - path: phase-11/bridge_FG2_family_tower.py
+      sha256: aef0ed225fca1f12fcccb284015d97ce3faa25291f07addda24e82ebbc5ae166
+      groups: [energy]
+    - path: phase-12/bridge_GW1_multipole_lowest_quadrupole.py
+      sha256: 3aba56675f887f98c015de7caad1834893ffdbc27ca1daf3c7056694953102fc
+      groups: [energy]
+    - path: phase-12/bridge_GW4_breather_quadrupole_waveform.py
+      sha256: 0e2637aa188c77a2b976b87e8efffc104eb64c25b759b739d0467d01790c4a15
+      groups: [energy]
+    - path: phase-13/bridge_FS1_breather_internal_quadrupole.py
+      sha256: da6b3bb1a602e52abb6d6ec5c926285e99d5216d03a9d41abc00af06e50011c2
+      groups: [energy]
+    - path: phase-13/bridge_FS2_embedded_STF_quadrupole.py
+      sha256: 9e9edbde8810a9040047d13e328eafbea992a218060de4d10a4118080f20cc31
+      groups: [energy]
+    - path: phase-13/bridge_FS3_breathing_mode_power.py
+      sha256: 572e4e156897bf335784cc606123e9a482fdf13a16434a239e15583050a0ac90
+      groups: [energy]
+    - path: phase-13/bridge_FS4_formfactor_into_radiation.py
+      sha256: 2f3c1b02bbad06bded6a38d0e1c203b2ba9c71c63adea34645d041b820feb129
+      groups: [energy]
+    - path: phase-14/bridge_P3D1_radial_pulson_exists.py
+      sha256: f93b8dabfca0c49fb0bf1101c926e79c43dc2e9ebb35882083611a12ca9514fa
+      groups: [energy]
+    - path: phase-14/bridge_P3D3_l2_selfconsistent_quadrupole.py
+      sha256: 3f4532bac5e517b1324bf74153da9acdc9ef1cb10f53fc3df8cd0483d51e8fa2
+      groups: [energy]
+    - path: phase-16/bridge_QB2_clean_2omega_line.py
+      sha256: f7ff064a708d4b3072b247088bee532eda6b14ef4a9d9f5480ea80743a22bbff
+      groups: [energy]
+    - path: phase-18/bridge_PG3_roper_radial_excitation.py
+      sha256: 4e3b56ab04977d254a291dd56d28e3285d72e86b3d640e0cfc322d5818cf007f
+      groups: [energy]
+    - path: phase-2/bridge_T2A_moving_source.py
+      sha256: 669803de1403c8ca66e399aa4b7c0e762447e40df7c241fe530a6b4e06dde70a
+      groups: [energy]
+    - path: phase-2/bridge_T2B_dynamic_optionC_EP.py
+      sha256: c6826db8b4199977d602fc5bf92b6e432f60eea1d9805f9e42c1309ccff3c7af
+      groups: [energy]
+    - path: phase-2/bridge_T2C_tidal_MP.py
+      sha256: 651fd75287dd25b5c34208ea5789df89be50f5050ec139ae2d99f4962440c369
+      groups: [energy]
+    - path: phase-26/bridge_LB1_dissipative_lifetime.py
+      sha256: d2e36e0d9d8ff831bcd58efb264b68dc156f7f87eca7a104f53a6f287eed2b80
+      groups: [energy]
+    - path: phase-26/bridge_LB2_coherence_threshold.py
+      sha256: ae159aee3c076c1f86d77628a6bbbf206ad7e28dccd832e397250b71a981b28d
+      groups: [energy]
+    - path: phase-26/bridge_LB3_damped_sg_ringdown.py
+      sha256: 1b54ef5704fce1502464f44bd675c01824cfa48b6b98688b1df8f000d1030a2b
+      groups: [energy]
+    - path: phase-26/bridge_LB4_thermal_decoherence_gwindow.py
+      sha256: e33361e6985002e76342203716fd00ca72c22f905590825a6c064fe472b0d103
+      groups: [energy]
+    - path: phase-27/bridge_MC1_constitutive_reduction.py
+      sha256: 32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3
+      groups: [energy]
+    - path: phase-3/bridge_EM1_u1_noether_charge.py
+      sha256: 2f5c6e0236748bc6f3a8ce4a77bd18dc26b3cef235038d57bc71310361ea4850
+      groups: [charge, energy]
+    - path: phase-3/bridge_EM5_induced_gauge_sector.py
+      sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0
+      groups: [charge]
+    - path: phase-3/bridge_EM6_derived_profile_stability.py
+      sha256: 926df2dc5014042472b3d47576af06676eb654d9da4634f147c7044d4e91f897
+      groups: [energy]
+    - path: phase-3/bridge_EM7_fractal_force_law.py
+      sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22
+      groups: [energy]
+    - path: phase-31/bridge_CM3_crossover.py
+      sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb
+      groups: [energy]
+    - path: phase-31/bridge_CM7_gamow_crossover.py
+      sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2
+      groups: [energy]
+    - path: phase-36/bridge_BX1_l2_mode_box_artifact.py
+      sha256: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3
+      groups: [energy]
+    - path: phase-4/bridge_S1_nn_force_two_skyrmion.py
+      sha256: ebe1ba930be26f17671d8e82779d14fc00e7a8b988a4aada722a32d0d9328ddd
+      groups: [energy]
+    - path: phase-4/bridge_S2_meson_hedgehog_spectrum.py
+      sha256: 48a9eadf6fbc1e3ebe7fcd6b98c2d60cc10a3f5282404c84e4626910f296eaf7
+      groups: [energy]
+    - path: phase-44/bridge_MR2_bps_normalization_pi_squared.py
+      sha256: 2e62ce2d6cbee805a988046a27a742e622931291e8e013a9aede6ce16e48e990
+      groups: [energy]
+    - path: phase-46/bridge_EL2_lepton_is_baryonless_fermion.py
+      sha256: db90b921e0b3d6966597a39817ad48219cd94fa27ff8aa2a1de4a64c3ccf6965
+      groups: [charge]
+    - path: phase-5/bridge_G1_radiating_dilaton_source.py
+      sha256: 580783a214736b24e6f36a4c035b2c608f931f4ba8ece202ff7f6d260d46f876
+      groups: [energy]
+    - path: phase-5/bridge_G4_radiation_reaction_self_force.py
+      sha256: 308c8d82aff062fb0f0254498fb2bdb19fe6bdc207036cb0fa73643d3608c799
+      groups: [energy]
+    - path: phase-6/bridge_W4_neutrino_missing_energy.py
+      sha256: afa341c860ba89889d8d0a9fe6cd62948b5303f243e3884abf7d3acf24a7f602
+      groups: [energy]
+    - path: phase-7/bridge_YM2_yang_mills_3plus1_lift.py
+      sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c
+      groups: [energy]
+    - path: phase-8/bridge_QCD2_su3_3plus1_lift.py
+      sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f
+      groups: [energy]
+positive_controls:
+  shadow:
+    root: soliton-shadow/cut-and-project-shadow/sympy
+    scanned_file_count: 37
+    action_matches:
+      - path: reverse_probe2_de_broglie_clock.py
+        sha256: f1fce1784d665ea017146da1a9dc3c64e3dead28b5892d35c8caa8d57c036cf3
+      - path: sn_crossing_A_master_equation.py
+        sha256: 772318f28717eadac9fb9d3158a3f4ec7a3eb75d859ca88da01fbd0ff31bc837
+      - path: sn_crossing_B_self_localization.py
+        sha256: 9ab9cf59786a381352070e7288786e76580563de43a1447c76baa8abd0e06c9c
+      - path: sn_crossing_C_discrete_spectrum.py
+        sha256: 7c4ac75211e591baeba57146f3a5be92ccf2144f67ae47bee16a4dd03f4e9cf0
+      - path: sn_crossing_D_ring_circulation.py
+        sha256: 87b5bc4df638db76e5aae5996c786ece295596675599919f1fd61973de80e0a4
+    energy_action_intersection:
+      - reverse_probe2_de_broglie_clock.py
+      - sn_crossing_A_master_equation.py
+      - sn_crossing_B_self_localization.py
+      - sn_crossing_C_discrete_spectrum.py
+      - sn_crossing_D_ring_circulation.py
+  frozen:
+    root: pulson-backreaction-bridge/sympy/imported/soliton-shadow
+    scanned_file_count: 37
+    action_matches:
+      - path: reverse_probe2_de_broglie_clock.py
+        sha256: b4d027732d3e3b31245e1f2a5681dbdf8c6e665337e85217b2717014d49e258f
+      - path: sn_crossing_A_master_equation.py
+        sha256: 7ebfd612f8996f170b42ef8d38ddee558a5c1d1976ab91970f930f2f73917a2f
+      - path: sn_crossing_B_self_localization.py
+        sha256: 00ace05eb3484568c3e0d9b6d709f3334beac19f5f8a503410755789c4318901
+      - path: sn_crossing_C_discrete_spectrum.py
+        sha256: 15f6bbb1cb14a319ba27d643d632be24f68d1c92750a5df041a2fbd9a5f55e1d
+      - path: sn_crossing_D_ring_circulation.py
+        sha256: e9a9f994cf004f9c244eb4318a591a511137ae00345101313c6d7ca3e86df4bd
+    energy_action_intersection:
+      - reverse_probe2_de_broglie_clock.py
+      - sn_crossing_A_master_equation.py
+      - sn_crossing_B_self_localization.py
+      - sn_crossing_C_discrete_spectrum.py
+      - sn_crossing_D_ring_circulation.py

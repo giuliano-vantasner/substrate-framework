@@ -1,0 +1,22 @@
+PASS [P015-SOURCE-AUDIT] the complete supplied source tree matches the pinned baseline digest
+PASS [P015-SOURCE-AUDIT] the explicit exclusion leaves every and only non-phase-45 bridge file
+PASS [P015-SOURCE-AUDIT] the complete sorted matched-file report reproduces with exact hashes and groups
+PASS [P015-SOURCE-AUDIT] every reported match hash agrees with the independent full-tree inventory
+PASS [P015-SOURCE-AUDIT] the declared action tokens have no match outside the excluded phase
+PASS [P015-SOURCE-AUDIT] the energy token group reproduces all 36 lexical consumers
+PASS [P015-SOURCE-AUDIT] the charge token group names the four pinned lexical matches
+PASS [P015-SOURCE-AUDIT] the reported energy-action and charge-action lexical intersections are empty
+PASS [P015-SOURCE-AUDIT] shadow positive control reproduces the five action matches
+PASS [P015-SOURCE-AUDIT] shadow positive-control action hashes match the pinned inventory
+PASS [P015-SOURCE-AUDIT] frozen positive control reproduces the five action matches
+PASS [P015-SOURCE-AUDIT] frozen positive-control action hashes match the pinned inventory
+PASS [P015-SOURCE-AUDIT] removing the phase exclusion reveals action-token matches and changes the census
+PASS [P015-SOURCE-AUDIT] a comment-only occurrence is a counterexample to semantic dependency inference
+PASS [P015-SOURCE-AUDIT] content mutation changes the hash and removes the action-token intersection
+PASS [P015-SOURCE-AUDIT] token families and exclusions are load-bearing: baseline
+PASS [P015-SOURCE-AUDIT] token families and exclusions are load-bearing: mutations supplied
+PASS [P015-SOURCE-AUDIT] token families and exclusions are load-bearing: mutation 1 rejected
+PASS [P015-SOURCE-AUDIT] token families and exclusions are load-bearing: mutation 2 rejected
+PASS [P015-SOURCE-AUDIT] token families and exclusions are load-bearing: mutation 3 rejected
+ALL 20 CHECKS PASS [P015-SOURCE-AUDIT]
+P015 ALL 20 CHECKS PASS

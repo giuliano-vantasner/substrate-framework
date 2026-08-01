@@ -8,7 +8,8 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  pending_adjudication: 206
+  out_of_scope: 1
+  pending_adjudication: 205
   qualified: 9
 phase_counts:
   phase-1: 6
@@ -8096,8 +8097,15 @@ units:
   dynamic_check_calls: 3
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
+  disposition: out_of_scope
   accepted_claims: []
+  scope_basis: HE5 establishes a hash-pinned lexical source-consumer census rather than a mathematical
+    or physical predicate suitable for the accepted claim registry.
+  evidence:
+  - campaigns/P015-source-consumer-audit/evidence/consumer-report.yaml
+  - campaigns/P015-source-consumer-audit/reviews/source_adjudication.md
+  note: P015 reproduces the exact token sets and hashes, preserves them as impact evidence, and rejects
+    HE5's inference from lexical absence to semantic absence.
 - source_unit: EL1
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL1_import_is_one_pure_number.py

@@ -1,0 +1,16 @@
+attempt: 0002
+completed_at: '2026-08-01T13:21:15Z'
+exit_code: 1
+terminal_tally: null
+verdict:
+  P015-SOURCE-AUDIT: implementation_failure_after_15_checks
+failure: >-
+  The predicate return block was placed after the new tree-digest function's
+  return and became unreachable, so the mutation ledger rejected the otherwise
+  passing baseline as None.
+diagnosis: implementation
+next_attempt: >-
+  Restore the predicate return immediately after constructing its audit, with
+  no change to patterns, expected records, or acceptance criteria.
+status: failed
+stdout: stdout.txt

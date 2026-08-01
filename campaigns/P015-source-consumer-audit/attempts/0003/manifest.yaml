@@ -1,0 +1,21 @@
+attempt: 0003
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE5
+framework_base: 4724876
+question: >-
+  What exact lexical consumer sets does HE5's declared scan find in the pinned
+  source tree, and what conclusions are outside the semantic reach of that scan?
+command: >-
+  PYTHONPATH=src .venv/bin/python proposals/P015-source-consumer-audit/verify.py
+  --source-root <isolated-substrate@6d1f4e0-snapshot>
+oracle:
+  kind: deterministic_hashed_source_scan
+  repair: restore_reachable_baseline_predicate_return
+  mutation_requirements:
+    - removing the phase exclusion changes the result
+    - widening the action token group changes the result
+    - narrowing the energy token group changes the result
+    - changing matched content changes its hash and intersection
+status: passed

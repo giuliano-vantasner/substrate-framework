@@ -86,6 +86,7 @@ from .skyrme_relations import (
     conditional_topological_mass,
     matched_pion_coupling_ratio,
 )
+from .source_audit import SourceAudit, SourceMatch, audit_source_tokens
 from .thermal import (
     symmetric_two_level_gate,
     two_level_occupation_variance,
@@ -118,7 +119,10 @@ __all__ = [
     "NumericalFailure",
     "RefinementEvidence",
     "SolverTolerances",
+    "SourceAudit",
+    "SourceMatch",
     "breather_action",
+    "audit_source_tokens",
     "breather_action_lattice_adjacent_gap",
     "breather_action_lattice_energy",
     "breather_action_lattice_frequency",

@@ -1,0 +1,10 @@
+attempt: 0003
+completed_at: '2026-08-01T13:24:25Z'
+elapsed_seconds: 4.2
+exit_code: 0
+terminal_tally: P015 ALL 20 CHECKS PASS
+verdict:
+  source_audit: deterministic_verified
+  HE5_scientific_claim: out_of_scope
+status: passed
+stdout: stdout.txt

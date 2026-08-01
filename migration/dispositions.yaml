@@ -177,3 +177,15 @@ units:
     note: >-
       P011 corrects the continuous-derivative versus adjacent-spacing
       distinction and routes charge reciprocity to its actual pending unit HE3.
+  HE5:
+    disposition: out_of_scope
+    accepted_claims: []
+    scope_basis: >-
+      HE5 establishes a hash-pinned lexical source-consumer census rather than
+      a mathematical or physical predicate suitable for the accepted claim registry.
+    evidence:
+      - campaigns/P015-source-consumer-audit/evidence/consumer-report.yaml
+      - campaigns/P015-source-consumer-audit/reviews/source_adjudication.md
+    note: >-
+      P015 reproduces the exact token sets and hashes, preserves them as impact
+      evidence, and rejects HE5's inference from lexical absence to semantic absence.

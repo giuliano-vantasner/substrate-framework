@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T13:20:01Z'
+exit_code: 1
+terminal_tally: null
+verdict:
+  P015-SOURCE-AUDIT: verifier_environment_failure
+failure: >-
+  The campaign verifier imported scripts.inventory_source, but direct campaign
+  execution with PYTHONPATH=src does not put the repository root on sys.path.
+diagnosis: implementation
+next_attempt: >-
+  Recompute the pinned path-plus-content tree digest inside the campaign
+  verifier and remove the execution-environment-dependent script import.
+status: failed
+stdout: stdout.txt

@@ -1,0 +1,42 @@
+id: P015
+base_release: v0.14.0
+base_commit: 4724876
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE5
+question: >-
+  Build a reproducible hash-pinned audit of source files containing declared
+  token families, distinguish lexical occurrence from scientific dependency,
+  and adjudicate HE5 without promoting repository-text facts as physics.
+invariants:
+  - source text and chronology are provenance rather than scientific authority
+  - lexical token matches do not by themselves establish semantic dependency
+  - every scan records its root, include pattern, exclusions, token groups, and file hashes
+  - accepted scientific claims and the v0.14.0 release remain unchanged
+allowed_imports:
+  - the pinned substrate@6d1f4e0 source snapshot as read-only evidence
+  - migration/source-claims.yaml as the governed candidate-unit inventory
+  - exact filesystem traversal, UTF-8 decoding, hashing, and literal or regex matching
+  - predecessor bridge HE5 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Produce a generic deterministic token-consumer audit with explicit scan
+      scope and hashes, then classify HE5 as migration evidence rather than physics
+  - id: B
+    description: >-
+      Promote HE5's token counts and prose dependency conclusions as an accepted
+      scientific claim
+  - id: C
+    description: >-
+      Preserve only a manually copied consumer list without an executable audit
+uniqueness_evidence: null
+selection_criteria:
+  - exact reproducibility against the pinned source tree
+  - explicit lexical-versus-semantic boundary
+  - path and exclusion transparency
+  - mutation sensitivity to token, exclusion, and content changes
+  - reuse for later source-unit dependency audits
+claims_proposed: []
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

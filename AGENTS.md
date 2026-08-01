@@ -88,6 +88,7 @@ Once adjudicated, move the campaign record into `campaigns/` without rewriting i
 - Put canonical equations, constants, units, transformations, solvers, and derivations under `src/substrate_framework/`.
 - Give modules pure, documented APIs. Imports must not execute simulations or print tallies.
 - Put reusable verifier machinery in shared modules; do not redefine `PASS`, `check`, solvers, or profile functions in every campaign.
+- Campaign verifiers execute with `PYTHONPATH=src`; do not import repository `scripts/` as Python modules. Extract reusable logic into `src/substrate_framework/` and keep scripts as CLI adapters.
 - Reuse `src/substrate_framework/numerics.py` for SciPy IVP, BVP, method-of-lines, and refinement evidence. Keep the spatial operator, boundary data, error metric, and physical pass criteria explicit in the claim module.
 - Keep exploration and orchestration in proposals/campaigns. Once accepted, extract reusable logic into the package and test it there.
 - Formal developments must import shared framework definitions where practical rather than restating the entire theory in each capstone.
