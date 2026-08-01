@@ -20,3 +20,12 @@ The C-SG-001 breather has conserved normalized Hamiltonian energy E(omega) = 16 
 - Verification: `symbolic_verified`
 - Compatibility: `native`
 - Dependencies: C-SG-001
+
+## C-SG-003
+
+For every real omega with 0 < omega < 1, the C-SG-001 breather's canonical action normalized by J = (1/(2*pi))*closed_integral(p dq) is J(omega) = 16 arccos(omega). It satisfies dE/dJ = omega, maps the family onto 0 < J < 8*pi, and has inverse parameterization omega = cos(J/16) and E = 16 sin(J/16).
+
+- Accepted in: `v0.2.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001, C-SG-002

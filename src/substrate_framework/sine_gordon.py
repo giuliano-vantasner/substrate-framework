@@ -24,6 +24,14 @@ def _frequency(omega: Any) -> sp.Expr:
     return value
 
 
+def _action(action: Any) -> sp.Expr:
+    value = sp.sympify(action)
+    if value.is_number:
+        if value.is_real is not True or not 0.0 < float(value) < float(8 * sp.pi):
+            raise ValueError("action must be real and satisfy 0 < action < 8*pi")
+    return value
+
+
 def breather_inverse_width(omega: Any) -> sp.Expr:
     """Return ``eta = sqrt(1 - omega**2)`` in normalized units."""
 
@@ -97,3 +105,20 @@ def breather_peak_amplitude(omega: Any) -> sp.Expr:
     frequency = _frequency(omega)
     return 4 * sp.atan(breather_inverse_width(frequency) / frequency)
 
+
+def breather_action(omega: Any) -> sp.Expr:
+    """Return the canonical action variable ``J = 16*acos(omega)``."""
+
+    return 16 * sp.acos(_frequency(omega))
+
+
+def breather_frequency_from_action(action: Any) -> sp.Expr:
+    """Return ``omega = cos(J/16)`` for ``0 < J < 8*pi``."""
+
+    return sp.cos(_action(action) / 16)
+
+
+def breather_energy_from_action(action: Any) -> sp.Expr:
+    """Return ``E = 16*sin(J/16)`` for ``0 < J < 8*pi``."""
+
+    return 16 * sp.sin(_action(action) / 16)

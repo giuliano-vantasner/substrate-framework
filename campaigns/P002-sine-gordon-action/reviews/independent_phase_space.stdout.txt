@@ -1,0 +1,21 @@
+PASS [P002-INDEPENDENT-REVIEW] the reconstructed canonical momentum is the exact field derivative
+PASS [P002-INDEPENDENT-REVIEW] the spatial phase-space integrand has the stated exact antiderivative
+PASS [P002-INDEPENDENT-REVIEW] the exact spatial endpoints preserve the phase-space normalization
+PASS [P002-INDEPENDENT-REVIEW] direct phase-space integral agrees at omega=0.3
+PASS [P002-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.3
+PASS [P002-INDEPENDENT-REVIEW] canonical 1/(2*pi) normalization yields J at omega=0.3
+PASS [P002-INDEPENDENT-REVIEW] factor-two normalization mutation fails at omega=0.3
+PASS [P002-INDEPENDENT-REVIEW] direct phase-space integral agrees at omega=0.5
+PASS [P002-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.5
+PASS [P002-INDEPENDENT-REVIEW] canonical 1/(2*pi) normalization yields J at omega=0.5
+PASS [P002-INDEPENDENT-REVIEW] factor-two normalization mutation fails at omega=0.5
+PASS [P002-INDEPENDENT-REVIEW] direct phase-space integral agrees at omega=0.70710678
+PASS [P002-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.70710678
+PASS [P002-INDEPENDENT-REVIEW] canonical 1/(2*pi) normalization yields J at omega=0.70710678
+PASS [P002-INDEPENDENT-REVIEW] factor-two normalization mutation fails at omega=0.70710678
+PASS [P002-INDEPENDENT-REVIEW] direct phase-space integral agrees at omega=0.9
+PASS [P002-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.9
+PASS [P002-INDEPENDENT-REVIEW] canonical 1/(2*pi) normalization yields J at omega=0.9
+PASS [P002-INDEPENDENT-REVIEW] factor-two normalization mutation fails at omega=0.9
+ALL 19 CHECKS PASS [P002-INDEPENDENT-REVIEW]
+P002 INDEPENDENT REVIEW ALL 19 CHECKS PASS

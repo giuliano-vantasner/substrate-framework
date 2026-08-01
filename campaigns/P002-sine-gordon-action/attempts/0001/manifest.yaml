@@ -1,0 +1,14 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+framework_base: 1bb6c4a
+question: Derive the exact normalized breather action and its inverse map.
+command: PYTHONPATH=src .venv/bin/python proposals/P002-sine-gordon-action/verify.py
+oracle:
+  kind: exact_sympy_calculus
+  obligations:
+    - action-angle differential identity
+    - endpoint-fixed integration constant
+    - inverse frequency and energy maps
+    - mutation-sensitive normalization and branch checks
+status: running

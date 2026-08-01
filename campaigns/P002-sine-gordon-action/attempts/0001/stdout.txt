@@ -1,0 +1,21 @@
+PASS [C-SG-003] accepted energy and period derive dJ/domega = -16/sqrt(1-omega^2)
+PASS [C-SG-003] exact calculus integrates the action-angle differential relation
+PASS [C-SG-003] the vanishing-amplitude endpoint uniquely fixes the additive constant
+PASS [C-SG-003] the integrated result equals the canonical action API
+PASS [C-SG-003] dJ/dE equals T/(2*pi) exactly
+PASS [C-SG-003] the energy-action derivative is the breather frequency
+PASS [C-SG-003] action coefficient, endpoint, and branch: baseline
+PASS [C-SG-003] action coefficient, endpoint, and branch: mutations supplied
+PASS [C-SG-003] action coefficient, endpoint, and branch: mutation 1 rejected
+PASS [C-SG-003] action coefficient, endpoint, and branch: mutation 2 rejected
+PASS [C-SG-003] action coefficient, endpoint, and branch: mutation 3 rejected
+PASS [C-SG-003] the kink-pair endpoint has action supremum 8*pi
+PASS [C-SG-003] the harmonic endpoint has zero action
+PASS [C-SG-003] the action decreases strictly across 0 < omega < 1
+PASS [C-SG-003] the inverse frequency branch is omega = cos(J/16)
+PASS [C-SG-003] the inverse energy branch is E = 16*sin(J/16)
+PASS [C-SG-003] frequency inversion recovers every symbolic breather frequency
+PASS [C-SG-003] energy inversion recovers the accepted breather energy
+PASS [C-SG-003] the inverse energy derivative recovers omega on 0 < J < 8*pi
+ALL 19 CHECKS PASS [C-SG-003]
+P002 ALL 19 CHECKS PASS

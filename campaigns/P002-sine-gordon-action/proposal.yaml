@@ -1,0 +1,37 @@
+id: P002
+base_release: v0.1.0
+source_baseline: substrate@6d1f4e0
+question: >-
+  Derive the canonical action variable of the accepted normalized sine-Gordon
+  breather and its exact energy-action inversion without importing a
+  semiclassical spectrum or empirical action quantum.
+invariants:
+  - C-SG-001 exact breather and period T = 2*pi/omega
+  - C-SG-002 energy E = 16*sqrt(1-omega^2)
+  - 0 < omega < 1
+  - action is normalized as J = (1/(2*pi))*closed_integral(p dq)
+allowed_imports:
+  - C-SG-001
+  - C-SG-002
+  - the Hamiltonian action-angle identity dJ/dE = T/(2*pi)
+  - exact real calculus and SymPy
+  - high-precision field quadrature only as independent corroboration
+  - predecessor HE4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Integrate the exact action-angle differential relation with zero action at the harmonic endpoint
+  - id: B
+    description: Evaluate the closed phase-space field integral directly over one breather period
+  - id: C
+    description: Recover the action as the derivative of an independently derived on-shell Legendre functional
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure
+  - exact action-variable defining identity
+  - no empirical or fitted action scale
+  - minimal auxiliary assumptions and branch ambiguity
+  - strongest verification verdict
+claims_proposed:
+  - C-SG-003
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: active
