@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T14:12:01Z'
+exit_code: 0
+terminal_tally: 16
+verdict:
+  C-DIM-004: symbolic_verified
+evidence:
+  - exact unit elimination and inverse reconstruction
+  - dimensionless coordinate and wavelength forms
+  - four coefficient and exponent mutations
+  - coupling sensitivity
+  - primitive-kernel information audit
+  - moved-input counterexample
+status: passed
+stdout: stdout.txt

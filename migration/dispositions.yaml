@@ -251,3 +251,21 @@ units:
       P019 separates the exact label character from physical statistics and
       shows that EL2's negative-potential Derrick stationary point has negative
       curvature, so the advertised stability conclusion fails its own oracle.
+  EL3:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-002
+      - C-DIM-003
+      - C-DIM-004
+      - C-SK-001
+    qualification: >-
+      EL3's set-local mass monomial and premise-explicit unit-product
+      composition are accepted. It does not derive the input equations or
+      coupling, eliminate the mass coordinate, identify the length with
+      granularity, or establish an electron or Compton interpretation.
+    evidence:
+      - campaigns/P020-conditional-mass-length-coordinate/reviews/source_adjudication.md
+    note: >-
+      P020 retains arbitrary functions of the dimensionless coupling, identifies
+      the dropped mass column's nullspace coordinate, and classifies the
+      coupling-free alternative as a substitution of other free inputs.

@@ -1,0 +1,13 @@
+source_unit: EL3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-46/bridge_EL3_me_is_not_a_dimensionful_primitive.py
+sha256: ab4549b5c147113beec18c2513a42dfbdd34c25ad21d125dfa6d8e9d9f0de69d
+command: >-
+  python3 <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL3_me_is_not_a_dimensionful_primitive.py
+observed_at: '2026-08-01T14:10:00Z'
+exit_code: 0
+terminal_tally: ALL 9 CHECKS PASS
+scope_note: >-
+  Reproduction confirms the source algebra executes. P020 separately audits
+  whether declared equations are accepted premises and whether rank
+  preservation removes independent dimensionless information.

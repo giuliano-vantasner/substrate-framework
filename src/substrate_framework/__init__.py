@@ -55,6 +55,7 @@ from .dimensional_analysis import (
     dimensionless_group_count,
     dimensionless_monomial_basis,
     mass_from_dimensionless_coordinate,
+    mass_coordinate_from_unit_product,
     monomial_exponents,
 )
 from .radial_energy import (
@@ -171,6 +172,7 @@ __all__ = [
     "lorentz_factor",
     "minkowski_dalembertian",
     "mass_from_dimensionless_coordinate",
+    "mass_coordinate_from_unit_product",
     "monomial_exponents",
     "optical_box_static_1d",
     "optical_collective_acceleration",

@@ -92,3 +92,25 @@ def mass_from_dimensionless_coordinate(
     return sp.simplify(
         coordinate_value * action_value / (speed_value * length_value)
     )
+
+
+def mass_coordinate_from_unit_product(
+    coupling: Any,
+    unit_product_coefficient: Any,
+    mass_energy_coefficient: Any,
+) -> sp.Expr:
+    """Return a conditional mass coordinate from two declared unit equations.
+
+    The premises are ``U*L=r*S*c/e**2`` and ``U=k*m*c**2``. Their composition
+    gives ``m*c*L/S=r/(k*e**2)``. The coefficients and coupling are required
+    inputs; this helper does not derive or select them.
+    """
+
+    coupling_value = _positive(coupling, "coupling")
+    product_value = _positive(
+        unit_product_coefficient, "unit_product_coefficient"
+    )
+    energy_value = _positive(
+        mass_energy_coefficient, "mass_energy_coefficient"
+    )
+    return sp.simplify(product_value / (energy_value * coupling_value**2))

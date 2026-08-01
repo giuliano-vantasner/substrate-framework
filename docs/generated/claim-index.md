@@ -48,6 +48,15 @@ Relative to C-DIM-002's declared positive speed c0, action S, and length a, the 
 - Compatibility: `native`
 - Dependencies: C-DIM-002
 
+## C-DIM-004
+
+Conditional on positive quantities satisfying the declared equations U*L=S*c0/(2*e^2) and U=4*pi*m*c0^2, exact elimination gives m=S/(8*pi*e^2*L*c0). Relative to C-DIM-003 with basis length L, the mass coordinate is N_m=1/(8*pi*e^2), equivalently S/(m*c0)=8*pi*e^2*L. The coupling e and both equations are premises. The relation predicts no mass, length, coupling, or particle identity and does not eliminate independent information unless those premises are established separately.
+
+- Accepted in: `v0.18.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-DIM-003
+
 ## C-MED-001
 
 For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.

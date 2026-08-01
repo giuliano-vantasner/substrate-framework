@@ -1,0 +1,18 @@
+PASS [C-DIM-004] the audited EL3 source is the hash-pinned candidate unit
+PASS [C-DIM-004] the two declared Skyrme formulas have the exact natural-unit product
+PASS [C-DIM-004] stepwise elimination gives the exact conditional mass
+PASS [C-DIM-004] the declared coefficients give the exact C-DIM-003 coordinate
+PASS [C-DIM-004] the inverse coordinate API reconstructs the conditional mass
+PASS [C-DIM-004] the equivalent reduced-wavelength relation follows exactly
+PASS [C-DIM-004] the dimensionless coupling remains a load-bearing input
+PASS [C-DIM-004] unit-product coefficient, mass-energy coefficient, and coupling power: baseline
+PASS [C-DIM-004] unit-product coefficient, mass-energy coefficient, and coupling power: mutations supplied
+PASS [C-DIM-004] unit-product coefficient, mass-energy coefficient, and coupling power: mutation 1 rejected
+PASS [C-DIM-004] unit-product coefficient, mass-energy coefficient, and coupling power: mutation 2 rejected
+PASS [C-DIM-004] unit-product coefficient, mass-energy coefficient, and coupling power: mutation 3 rejected
+PASS [C-DIM-004] unit-product coefficient, mass-energy coefficient, and coupling power: mutation 4 rejected
+PASS [C-DIM-004] dimensional uniqueness does not select the coupling-dependent coefficient
+PASS [C-DIM-004] adding the mass column creates one dimensionless coordinate
+PASS [C-DIM-004] EL3's coupling-free form moves rather than eliminates free inputs
+ALL 16 CHECKS PASS [C-DIM-004]
+P020 EL3 EXACT AUDIT ALL 16 CHECKS PASS

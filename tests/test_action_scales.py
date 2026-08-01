@@ -13,6 +13,7 @@ from substrate_framework.dimensional_analysis import (
     dimensionless_mass_coordinate,
     dimensionless_monomial_basis,
     mass_from_dimensionless_coordinate,
+    mass_coordinate_from_unit_product,
     monomial_exponents,
 )
 
@@ -75,6 +76,29 @@ def test_mass_coordinate_retains_an_arbitrary_dimensionless_input() -> None:
     assert sp.diff(mass, coordinate) == action / (speed * length)
 
 
+def test_declared_unit_product_gives_conditional_mass_coordinate() -> None:
+    coupling = sp.symbols("e", positive=True)
+    coordinate = mass_coordinate_from_unit_product(
+        coupling,
+        sp.Rational(1, 2),
+        4 * sp.pi,
+    )
+    assert coordinate == 1 / (8 * sp.pi * coupling**2)
+    assert sp.diff(coordinate, coupling) == -1 / (4 * sp.pi * coupling**3)
+
+
+def test_declared_unit_product_retains_both_coefficients() -> None:
+    coupling, product_coefficient, energy_coefficient = sp.symbols(
+        "e r k", positive=True
+    )
+    coordinate = mass_coordinate_from_unit_product(
+        coupling,
+        product_coefficient,
+        energy_coefficient,
+    )
+    assert coordinate == product_coefficient / (energy_coefficient * coupling**2)
+
+
 @pytest.mark.parametrize(
     ("call", "message"),
     [
@@ -87,6 +111,15 @@ def test_mass_coordinate_retains_an_arbitrary_dimensionless_input() -> None:
         (lambda: dimensionless_mass_coordinate(1, 1, 0, 1), "action"),
         (lambda: dimensionless_mass_coordinate(1, 1, 1, 0), "length"),
         (lambda: mass_from_dimensionless_coordinate(0, 1, 1, 1), "coordinate"),
+        (lambda: mass_coordinate_from_unit_product(0, 1, 1), "coupling"),
+        (
+            lambda: mass_coordinate_from_unit_product(1, 0, 1),
+            "unit_product_coefficient",
+        ),
+        (
+            lambda: mass_coordinate_from_unit_product(1, 1, 0),
+            "mass_energy_coefficient",
+        ),
     ],
 )
 def test_numeric_positive_domains_are_enforced(call, message: str) -> None:

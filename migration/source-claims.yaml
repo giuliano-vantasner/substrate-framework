@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 201
-  qualified: 12
+  pending_adjudication: 200
+  qualified: 13
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -8253,8 +8253,19 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DIM-002
+  - C-DIM-003
+  - C-DIM-004
+  - C-SK-001
+  qualification: EL3's exact mass monomial and conditional unit-product composition are accepted,
+    but its equations and coupling are not derived and it does not eliminate the mass coordinate,
+    tie length to granularity, or establish an electron interpretation.
+  evidence:
+  - campaigns/P020-conditional-mass-length-coordinate/reviews/source_adjudication.md
+  note: P020 retains the dimensionless coupling freedom and identifies the mass column's lost
+    nullspace coordinate rather than treating unchanged dimension rank as information elimination.
 - source_unit: EL4
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL4_me_in_the_frontier_form.py

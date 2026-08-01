@@ -790,3 +790,36 @@ claims:
     accepted_in: v0.17.0
     challenges: []
     supersedes: []
+  - id: C-DIM-004
+    statement: >-
+      Conditional on positive quantities satisfying the declared equations
+      U*L=S*c0/(2*e^2) and U=4*pi*m*c0^2, exact elimination gives
+      m=S/(8*pi*e^2*L*c0). Relative to C-DIM-003 with basis length L, the mass
+      coordinate is N_m=1/(8*pi*e^2), equivalently
+      S/(m*c0)=8*pi*e^2*L. The coupling e and both equations are premises. The
+      relation predicts no mass, length, coupling, or particle identity and
+      does not eliminate independent information unless those premises are
+      established separately.
+    provenance: campaigns/P020-conditional-mass-length-coordinate/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-DIM-003
+    evidence:
+      - campaigns/P020-conditional-mass-length-coordinate/verify.py
+      - campaigns/P020-conditional-mass-length-coordinate/attempts/0001/result.yaml
+      - campaigns/P020-conditional-mass-length-coordinate/reviews/independent_unit_elimination_review.py
+      - campaigns/P020-conditional-mass-length-coordinate/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-DIM-004-review.md
+      - tests/test_action_scales.py
+    assumptions:
+      - U, L, S, c0, e, and m are positive.
+      - The unit-product coefficient one-half and mass-energy coefficient 4*pi are declared model premises.
+      - The dimensionless coupling e remains free and is not selected by dimensional analysis.
+      - No Skyrme, soliton, medium, Compton, or electron interpretation is part of the algebraic claim.
+    comparators: []
+    accepted_in: v0.18.0
+    challenges: []
+    supersedes: []

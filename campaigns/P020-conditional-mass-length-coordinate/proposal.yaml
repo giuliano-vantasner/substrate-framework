@@ -1,0 +1,37 @@
+id: P020
+base_release: v0.17.0
+base_commit: 7f518ab
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL3
+question: >-
+  Determine the exact conditional mass-coordinate consequence of EL3's declared
+  unit and length equations while retaining every coupling and physical premise.
+invariants:
+  - C-DIM-003 remains a lossless reparameterization with a free coordinate
+  - MR1's mass formulas remain conditional and its length is not accepted
+  - dimensionless coupling inputs cannot be eliminated by units
+  - EL2's electron-object narrative is qualified and unavailable as authority
+allowed_imports:
+  - C-DIM-003 and its accepted APIs
+  - C-SK-001 only for conditional consumer comparison
+  - positive exact real algebra
+  - EL3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote a conditional mass-length coordinate retaining the coupling
+  - id: B
+    description: Classify EL3 as duplicate evidence for C-DIM-003
+  - id: C
+    description: Promote EL3's claim that the mass import is physically eliminated
+uniqueness_evidence: null
+selection_criteria:
+  - exact premise and unit closure
+  - retention of dimensionless information
+  - dependency and assumption economy
+  - distinct reusable consumer reach
+  - coefficient and exponent sensitivity
+claims_proposed:
+  - C-DIM-004
+comparators_blinded_until: symbolic_equations_units_and_mutations_frozen
+status: accepted

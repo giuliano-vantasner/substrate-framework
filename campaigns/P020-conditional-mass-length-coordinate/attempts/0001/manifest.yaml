@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL3
+framework_base: 7f518ab
+question: >-
+  What exact mass coordinate follows from EL3's declared unit-product and
+  mass-energy equations, and which free inputs remain?
+command: >-
+  PYTHONPATH=src .venv/bin/python proposals/P020-conditional-mass-length-coordinate/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL3_me_is_not_a_dimensionful_primitive.py
+oracle:
+  kind: exact_conditional_elimination_and_information_audit
+  mutation_requirements:
+    - both coefficients and the coupling power are load-bearing
+    - coupling variation changes the mass coordinate
+    - matrix rank is distinguished from information count
+status: passed

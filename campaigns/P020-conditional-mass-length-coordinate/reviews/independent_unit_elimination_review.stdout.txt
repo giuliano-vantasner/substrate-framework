@@ -1,0 +1,7 @@
+PASS [P020-INDEPENDENT] direct elimination retains both declared coefficients
+PASS [P020-INDEPENDENT] declared EL3 coefficients give the exact conditional mass
+PASS [P020-INDEPENDENT] direct normalization gives the exact dimensionless coordinate
+PASS [P020-INDEPENDENT] varying the coupling varies the reconstructed mass
+PASS [P020-INDEPENDENT] dimensions allow an arbitrary function of the dimensionless coupling
+ALL 5 CHECKS PASS [P020-INDEPENDENT]
+P020 INDEPENDENT REVIEW ALL 5 CHECKS PASS
