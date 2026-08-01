@@ -1,0 +1,26 @@
+attempt: 0001
+completed_at: '2026-08-01T18:45:50Z'
+exit_code: 0
+terminal_tally: 31
+verdict:
+  C-SG-009: symbolic_verified
+evidence:
+  - exact transform-derived instantaneous energy-density second moment
+  - exact extrema, evenness, half-period, and base angular frequency
+  - coefficient and period mutations
+  - independent adaptive quadrature across four family points with tail refinement
+  - special-frequency mean and FFT regression from the exact formula
+initial_failures:
+  - >-
+    Two successive scope checks searched for source phrases that differed from
+    the actual wrapped wording around the static-kink declaration. Normalizing
+    whitespace and matching the actual T_00 phrase repaired the implementation
+    check without changing the scientific scope predicate.
+source_defects:
+  - four broad source checks bundle many scientific and implementation predicates
+  - the time-average decomposition is linear bookkeeping on the same sampled density, not an independent derivation
+  - only-even harmonics follow exact sign and half-period symmetry, not merely a quadratic-density slogan; higher even harmonics are present
+  - the source differentiates 4*atan(exp(x)) as 4*sech(x) instead of 2*sech(x)
+  - a scalar 1+1 width moment does not establish a 3+1 STF mass quadrupole or radiation
+status: passed_after_lexical_check_repairs
+stdout: stdout.txt

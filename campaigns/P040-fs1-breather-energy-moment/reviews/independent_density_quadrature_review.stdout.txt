@@ -1,0 +1,11 @@
+PASS [P040-INDEPENDENT] direct adaptive field-density quadrature matches the transform formula across the family
+PASS [P040-INDEPENDENT] scaled-domain tail refinement improves for every audited case
+PASS [P040-INDEPENDENT] doubling the time-kinetic half factor breaks the exact moment
+PASS [P040-INDEPENDENT] dropping the potential term breaks the exact moment
+PASS [P040-INDEPENDENT] the exact special-frequency series independently reproduces FS1's dominant 2-omega peak
+PASS [P040-INDEPENDENT] odd harmonics vanish while higher even harmonics show the moment is not a pure sinusoid
+PASS [P040-INDEPENDENT] the sampled special mean independently resolves to the source value
+PASS [P040-INDEPENDENT] the correctly differentiated static kink has exact second moment 2*pi-squared over three
+PASS [P040-INDEPENDENT] a time-independent density remains a constant-moment counterexample
+ALL 9 CHECKS PASS [P040-INDEPENDENT]
+P040 INDEPENDENT DENSITY-QUADRATURE REVIEW ALL 9 CHECKS PASS

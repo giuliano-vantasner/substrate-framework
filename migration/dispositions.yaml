@@ -586,3 +586,20 @@ units:
       P039 supplies exact arbitrary-inclination coefficients, corrects the
       factor-three field and factor-nine power normalization, and keeps every
       source, orbit, waveform, and flux premise explicit.
+  FS1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-001
+      - C-SG-002
+      - C-SG-009
+    qualification: >-
+      FS1's finite time-dependent 1+1 energy-density second moment is accepted
+      in exact family form. Its same-sample mean split is not an independent
+      oracle, its static-kink derivative is wrong by two, and no 3+1 STF source
+      or gravitational radiation follows from the scalar moment.
+    evidence:
+      - campaigns/P040-fs1-breather-energy-moment/reviews/source_adjudication.md
+    note: >-
+      P040 replaces special-frequency grid and FFT evidence with an exact
+      spatial-transform formula, exact extrema and period, plus independent
+      adaptive quadrature and tail refinement.

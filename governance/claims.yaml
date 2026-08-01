@@ -1679,3 +1679,46 @@ claims:
     accepted_in: v0.35.0
     challenges: []
     supersedes: []
+  - id: C-SG-009
+    statement: >-
+      For every C-SG-001 rest breather with 0<omega<1, let
+      eta=sqrt(1-omega^2), use the centered spatial coordinate x, and let T00 be
+      the normalized Hamiltonian density of C-SG-002. Its instantaneous scalar
+      second spatial moment is finite and exactly
+      mu(t)=integral_R x^2*T00(x,t) dx
+      =4*pi^2/(3*eta)+(16/eta)*asinh((eta/omega)*sin(omega*t))^2. It is even in
+      time, nonconstant, and has fundamental period pi/omega and therefore base
+      angular frequency 2*omega with only even harmonics of the field frequency.
+      Its cycle minimum is 4*pi^2/(3*eta), at sin(omega*t)=0, and its maximum is
+      4*pi^2/(3*eta)+(16/eta)*asinh(eta/omega)^2, at
+      |sin(omega*t)|=1. At omega=1/sqrt(2), the exact range is from
+      4*sqrt(2)*pi^2/3 to
+      4*sqrt(2)*pi^2/3+16*sqrt(2)*asinh(1)^2. This centered scalar width
+      functional establishes no three-dimensional mass density or STF
+      quadrupole, isolated conserved 3+1 source, gravitational action or field
+      equation, retarded solution, radiated power, detector observable,
+      physical finite-size coupling, or substrate realization.
+    provenance: campaigns/P040-fs1-breather-energy-moment/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-001
+      - C-SG-002
+    evidence:
+      - campaigns/P040-fs1-breather-energy-moment/verify.py
+      - campaigns/P040-fs1-breather-energy-moment/attempts/0001/result.yaml
+      - campaigns/P040-fs1-breather-energy-moment/reviews/independent_density_quadrature_review.py
+      - campaigns/P040-fs1-breather-energy-moment/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SG-009-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The field and Hamiltonian density use the normalized real 1+1 conventions and open frequency domain of C-SG-001 and C-SG-002.
+      - The breather is at rest and centered at x=0; a raw second moment is origin-dependent under translation.
+      - The spatial integral is over the full real line and eta is the positive square root.
+      - Harmonic terminology refers to the exact temporal Fourier structure of this scalar moment, not to a physical radiation spectrum.
+    comparators: []
+    accepted_in: v0.36.0
+    challenges: []
+    supersedes: []

@@ -345,6 +345,15 @@ For every C-SG-001 breather with 0<omega<1 and every real boost velocity v with 
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-002, C-SG-006
 
+## C-SG-009
+
+For every C-SG-001 rest breather with 0<omega<1, let eta=sqrt(1-omega^2), use the centered spatial coordinate x, and let T00 be the normalized Hamiltonian density of C-SG-002. Its instantaneous scalar second spatial moment is finite and exactly mu(t)=integral_R x^2*T00(x,t) dx =4*pi^2/(3*eta)+(16/eta)*asinh((eta/omega)*sin(omega*t))^2. It is even in time, nonconstant, and has fundamental period pi/omega and therefore base angular frequency 2*omega with only even harmonics of the field frequency. Its cycle minimum is 4*pi^2/(3*eta), at sin(omega*t)=0, and its maximum is 4*pi^2/(3*eta)+(16/eta)*asinh(eta/omega)^2, at |sin(omega*t)|=1. At omega=1/sqrt(2), the exact range is from 4*sqrt(2)*pi^2/3 to 4*sqrt(2)*pi^2/3+16*sqrt(2)*asinh(1)^2. This centered scalar width functional establishes no three-dimensional mass density or STF quadrupole, isolated conserved 3+1 source, gravitational action or field equation, retarded solution, radiated power, detector observable, physical finite-size coupling, or substrate realization.
+
+- Accepted in: `v0.36.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001, C-SG-002
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

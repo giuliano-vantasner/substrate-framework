@@ -1,0 +1,33 @@
+PASS [P040-FS1] the audited FS1 source is the hash-pinned candidate unit
+PASS [P040-FS1] FS1 exits cleanly
+PASS [P040-FS1] FS1's declared four-check tally reproduces
+PASS [P040-FS1] FS1 already carries the NumPy trapezoid compatibility fallback
+PASS [P040-FS1] the accepted Hamiltonian density reduces to the transform-ready rational form
+PASS [P040-FS1] the rational density separates into one denominator and its parameter derivative
+PASS [P040-FS1] the exact spatial transform gives its second-moment kernel by differentiation
+PASS [P040-FS1] the transform has the correct zero-parameter sech-squared limit
+PASS [P040-FS1] the two density denominator terms collapse before any source comparator
+PASS [P040-FS1] the transform route gives the exact instantaneous second moment
+PASS [P040-FS1] the package API is the transform-derived formula
+PASS [P040-FS1] zero and quarter phases attain the exact minimum and maximum
+PASS [P040-FS1] the moment is even in time and invariant under the density half-period
+PASS [P040-FS1] a quarter-period shift is not a period of the nonconstant moment
+PASS [P040-FS1] strict profile monotonicity makes pi over omega the fundamental period
+PASS [P040-FS1] half-period symmetry permits only even orbital harmonics
+PASS [P040-FS1] second-moment transform coefficients: baseline
+PASS [P040-FS1] second-moment transform coefficients: mutations supplied
+PASS [P040-FS1] second-moment transform coefficients: mutation 1 rejected
+PASS [P040-FS1] second-moment transform coefficients: mutation 2 rejected
+PASS [P040-FS1] second-moment transform coefficients: mutation 3 rejected
+PASS [P040-FS1] load-bearing density half-period: baseline
+PASS [P040-FS1] load-bearing density half-period: mutations supplied
+PASS [P040-FS1] load-bearing density half-period: mutation 1 rejected
+PASS [P040-FS1] load-bearing density half-period: mutation 2 rejected
+PASS [P040-FS1] load-bearing density half-period: mutation 3 rejected
+PASS [P040-FS1] FS1's special frequency has exact nonzero breathing range
+PASS [P040-FS1] FS1's mean decomposition is linear density bookkeeping rather than a second derivation
+PASS [P040-FS1] FS1's claimed quadrupole and radiation map is not derived by its scalar integral
+PASS [P040-FS1] FS1's static guard uses a factor-two-wrong kink derivative
+PASS [P040-FS1] the kink derivative defect does not establish or refute radiation
+ALL 31 CHECKS PASS [P040-FS1]
+P040 FS1 BREATHER ENERGY-MOMENT AUDIT ALL 31 CHECKS PASS

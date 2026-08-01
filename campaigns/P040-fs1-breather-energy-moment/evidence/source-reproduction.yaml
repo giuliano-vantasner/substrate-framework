@@ -1,0 +1,18 @@
+source_unit: FS1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-13/bridge_FS1_breather_internal_quadrupole.py
+sha256: da6b3bb1a602e52abb6d6ec5c926285e99d5216d03a9d41abc00af06e50011c2
+reproduced_at: '2026-08-01T18:45:50Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-13/bridge_FS1_breather_internal_quadrupole.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+exit_code: 0
+terminal_tally: ALL 4 CHECKS PASS
+observation: >-
+  FS1 reproduces and already uses numpy.trapezoid with a fallback to the older
+  alias. Its wide-grid moment and FFT values agree with P040's exact formula,
+  but each source check bundles many predicates and the source's physical
+  quadrupole/radiation interpretation is not part of those numerical facts.

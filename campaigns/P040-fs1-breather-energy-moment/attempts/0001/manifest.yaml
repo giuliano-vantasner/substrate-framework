@@ -1,0 +1,21 @@
+attempt: 0001
+campaign: P040
+base_release: v0.35.0
+base_commit: 4aff298
+source_unit: FS1
+source_sha256: da6b3bb1a602e52abb6d6ec5c926285e99d5216d03a9d41abc00af06e50011c2
+candidate: A
+oracles:
+  - exact rational reduction of the accepted Hamiltonian density
+  - Fourier-transform differentiation of the full-line spatial kernel
+  - exact phase, extrema, period, and even-harmonic identities
+  - independent adaptive field-density quadrature with scaled-domain refinement
+  - special-frequency FFT regression and corrected static-kink calculation
+mutations:
+  - change either transform-derived moment coefficient
+  - change the density half-period
+  - double the time-kinetic half factor
+  - remove the potential term
+expected_positive_object: >-
+  An exact importable scalar second-moment theorem for the normalized 1+1
+  breather, excluding a 3+1 quadrupole or radiation interpretation.

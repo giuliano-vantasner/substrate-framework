@@ -1,0 +1,48 @@
+id: P040
+base_release: v0.35.0
+base_commit: 4aff298
+source_baseline: substrate@6d1f4e0
+source_units: [FS1]
+question: >-
+  Derive and package the normalized 1+1 sine-Gordon breather's instantaneous
+  energy-density second moment, its exact temporal symmetries and harmonic
+  content where tractable, then audit FS1's promotion of that scalar moment to
+  a physical internal quadrupole or gravitational source.
+invariants:
+  - C-SG-001 fixes the exact normalized 1+1 field and C-SG-002 its Hamiltonian density and conserved total energy
+  - an x-squared moment of 1+1 energy density is a scalar width functional, not a 3+1 STF tensor
+  - temporal variation of a moment does not establish radiation without an accepted conserved 3+1 source and physical field law
+  - pending FS2, FS3, FS4, and P3D3 cannot serve as accepted dependencies
+  - numerical Fourier peaks may corroborate but cannot replace exact periodicity or select a candidate
+allowed_imports:
+  - C-SG-001 exact normalized breather field
+  - C-SG-002 normalized Hamiltonian density and conserved energy
+  - exact real calculus, parity, periodicity, Fourier symmetry, and convergent quadrature
+  - FS1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote a closed analytic formula for the instantaneous energy-density
+      second moment and derive its period, extrema, mean, and harmonic content
+  - id: B
+    description: >-
+      Promote an importable integral with exact symmetry and special-phase
+      identities plus refinement-bounded numerical evaluation if no useful
+      general closed form exists
+  - id: C
+    description: >-
+      Promote FS1's identification of the scalar 1+1 width moment as a physical
+      3+1 internal mass quadrupole and gravitational radiation source
+uniqueness_evidence: null
+selection_criteria:
+  - accepted Hamiltonian-density dependency closure and exact normalization
+  - finite localized x-squared integral on the full line
+  - analytic formula and exact temporal symmetries before Fourier comparison
+  - parameter-domain, phase, period, and endpoint consistency
+  - independent derivation or convergent quadrature with mutation-sensitive weights
+  - strict separation of the 1+1 scalar moment from a 3+1 STF or radiation claim
+claims_proposed:
+  - provisional C-SG-009
+comparators_blinded_until: >-
+  moment_definition_symmetry_oracles_parameter_domain_and_selection_criteria_frozen
+status: accepted

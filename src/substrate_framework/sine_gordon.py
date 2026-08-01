@@ -123,6 +123,44 @@ def breather_energy(omega: Any) -> sp.Expr:
     return 16 * breather_inverse_width(omega)
 
 
+def breather_energy_second_moment(
+    omega: Any,
+    time: Any,
+) -> sp.Expr:
+    """Return ``integral_R x**2*T00(x,t) dx`` for the rest breather.
+
+    This is a scalar width functional of the normalized 1+1 Hamiltonian
+    density.  It is not a three-dimensional STF mass quadrupole.  The exact
+    result follows from the spatial Fourier transform of
+    ``1/(cosh(y)**2 + b**2)`` with
+    ``y=sqrt(1-omega**2)*x`` and
+    ``b=sqrt(1-omega**2)*sin(omega*t)/omega``.
+    """
+
+    frequency = _frequency(omega)
+    instant = sp.sympify(time)
+    inverse_width = breather_inverse_width(frequency)
+    phase_ratio = (
+        inverse_width * sp.sin(frequency * instant) / frequency
+    )
+    return sp.simplify(
+        4 * sp.pi**2 / (3 * inverse_width)
+        + 16 * sp.asinh(phase_ratio) ** 2 / inverse_width
+    )
+
+
+def breather_energy_second_moment_extrema(
+    omega: Any,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return the exact minimum and maximum over a rest-breather cycle."""
+
+    frequency = _frequency(omega)
+    inverse_width = breather_inverse_width(frequency)
+    minimum = 4 * sp.pi**2 / (3 * inverse_width)
+    maximum = minimum + 16 * sp.asinh(inverse_width / frequency) ** 2 / inverse_width
+    return sp.simplify(minimum), sp.simplify(maximum)
+
+
 def breather_threshold_deficit(omega: Any) -> sp.Expr:
     """Return the energy deficit ``16-E(omega)`` below the two-kink threshold."""
 

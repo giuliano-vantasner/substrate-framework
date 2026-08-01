@@ -12,6 +12,8 @@ from substrate_framework.sine_gordon import (
     boosted_breather_energy_momentum,
     boosted_breather_phase_components,
     breather_energy,
+    breather_energy_second_moment,
+    breather_energy_second_moment_extrema,
     breather_energy_from_action,
     breather_field,
     breather_inverse_width,
@@ -51,6 +53,35 @@ def test_breather_formulas_at_exact_frequency() -> None:
     assert breather_action_secant_ratio(omega) == sp.Rational(3, 4) * sp.acos(
         sp.Rational(3, 5)
     )
+
+
+def test_breather_energy_second_moment_exact_phases_and_half_period() -> None:
+    omega = sp.Rational(3, 5)
+    eta = sp.Rational(4, 5)
+    time = sp.symbols("t", real=True)
+    moment = breather_energy_second_moment(omega, time)
+    minimum, maximum = breather_energy_second_moment_extrema(omega)
+    assert minimum == 5 * sp.pi**2 / 3
+    assert maximum == minimum + 20 * sp.asinh(sp.Rational(4, 3)) ** 2
+    assert moment.subs(time, 0) == minimum
+    assert sp.simplify(moment.subs(time, sp.pi / (2 * omega)) - maximum) == 0
+    assert sp.simplify(
+        moment.subs(time, time + sp.pi / omega) - moment
+    ) == 0
+    assert sp.simplify(moment.subs(time, -time) - moment) == 0
+
+
+def test_breather_energy_second_moment_special_value_is_not_a_pure_sinusoid() -> None:
+    omega = 1 / sp.sqrt(2)
+    moment = breather_energy_second_moment(omega, sp.symbols("t", real=True))
+    minimum, maximum = breather_energy_second_moment_extrema(omega)
+    assert minimum == 4 * sp.sqrt(2) * sp.pi**2 / 3
+    assert sp.simplify(
+        maximum
+        - minimum
+        - 16 * sp.sqrt(2) * sp.asinh(1) ** 2
+    ) == 0
+    assert moment.has(sp.asinh)
 
 
 def test_conditional_action_lattice_and_adjacent_gap() -> None:

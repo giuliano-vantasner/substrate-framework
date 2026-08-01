@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 181
-  qualified: 31
+  pending_adjudication: 180
+  qualified: 32
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2586,8 +2586,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-001
+  - C-SG-002
+  - C-SG-009
+  qualification: FS1's finite time-dependent 1+1 energy-density second moment is accepted in exact family
+    form. Its same-sample mean split is not an independent oracle, its static-kink derivative is wrong
+    by two, and no 3+1 STF source or gravitational radiation follows from the scalar moment.
+  evidence:
+  - campaigns/P040-fs1-breather-energy-moment/reviews/source_adjudication.md
+  note: P040 replaces special-frequency grid and FFT evidence with an exact spatial-transform formula,
+    exact extrema and period, plus independent adaptive quadrature and tail refinement.
 - source_unit: FS2
   phase: phase-13
   path: merged-framework/bridges/phase-13/bridge_FS2_embedded_STF_quadrupole.py

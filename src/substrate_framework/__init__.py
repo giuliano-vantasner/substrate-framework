@@ -179,6 +179,8 @@ from .sine_gordon import (
     boosted_breather_energy_momentum,
     boosted_breather_phase_components,
     breather_energy,
+    breather_energy_second_moment,
+    breather_energy_second_moment_extrema,
     breather_energy_from_action,
     breather_field,
     breather_field_with_width,
