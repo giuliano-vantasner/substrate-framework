@@ -1,0 +1,18 @@
+PASS [P003-INDEPENDENT-REVIEW] the reconstructed field gradient has the exact closed form
+PASS [P003-INDEPENDENT-REVIEW] the transformed squared-gradient integrand has an exact antiderivative
+PASS [P003-INDEPENDENT-REVIEW] the spatial endpoints yield the stated fixed-time integral factor
+PASS [P003-INDEPENDENT-REVIEW] averaged spatial integral agrees at omega=0.2
+PASS [P003-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.2
+PASS [P003-INDEPENDENT-REVIEW] half-gradient mutation fails at omega=0.2
+PASS [P003-INDEPENDENT-REVIEW] averaged spatial integral agrees at omega=0.5
+PASS [P003-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.5
+PASS [P003-INDEPENDENT-REVIEW] half-gradient mutation fails at omega=0.5
+PASS [P003-INDEPENDENT-REVIEW] averaged spatial integral agrees at omega=0.70710678
+PASS [P003-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.70710678
+PASS [P003-INDEPENDENT-REVIEW] half-gradient mutation fails at omega=0.70710678
+PASS [P003-INDEPENDENT-REVIEW] averaged spatial integral agrees at omega=0.9
+PASS [P003-INDEPENDENT-REVIEW] 30-to-50 digit refinement is stable at omega=0.9
+PASS [P003-INDEPENDENT-REVIEW] half-gradient mutation fails at omega=0.9
+PASS [P003-INDEPENDENT-REVIEW] direct nested field quadrature agrees at omega=0.5
+ALL 16 CHECKS PASS [P003-INDEPENDENT-REVIEW]
+P003 INDEPENDENT REVIEW ALL 16 CHECKS PASS

@@ -122,3 +122,16 @@ def breather_energy_from_action(action: Any) -> sp.Expr:
     """Return ``E = 16*sin(J/16)`` for ``0 < J < 8*pi``."""
 
     return 16 * sp.sin(_action(action) / 16)
+
+
+def breather_mean_gradient_integral(omega: Any) -> sp.Expr:
+    """Return the period average of ``integral(phi_x**2, x)``.
+
+    This is the squared-gradient integral itself, not the half-weighted
+    gradient contribution to the Hamiltonian.
+    """
+
+    frequency = _frequency(omega)
+    return sp.simplify(
+        breather_energy(frequency) - frequency * breather_action(frequency)
+    )

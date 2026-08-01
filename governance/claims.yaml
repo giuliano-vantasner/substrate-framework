@@ -75,3 +75,35 @@ claims:
     accepted_in: v0.2.0
     challenges: []
     supersedes: []
+  - id: C-SG-004
+    statement: >-
+      For every real omega with 0 < omega < 1, the C-SG-001 breather's
+      period-averaged squared-gradient integral is
+      Gbar = (1/T)*integral_0^T dt integral_R dx phi_x^2
+      = 16*(sqrt(1-omega^2) - omega*arccos(omega)) = E - omega*J.
+      It satisfies dGbar/domega = -J, approaches 16 as omega -> 0+, and
+      approaches 0 as omega -> 1-. Gbar is the full squared-gradient
+      integral; its Hamiltonian energy contribution is Gbar/2.
+    provenance: campaigns/P003-sine-gordon-gradient/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-001
+      - C-SG-002
+      - C-SG-003
+    evidence:
+      - campaigns/P003-sine-gordon-gradient/verify.py
+      - campaigns/P003-sine-gordon-gradient/attempts/0001/result.yaml
+      - campaigns/P003-sine-gordon-gradient/attempts/0002/result.yaml
+      - campaigns/P003-sine-gordon-gradient/reviews/independent_field_integral.py
+      - memory/vantasner/decisions/C-SG-004-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - Periodicity and localization justify the explicitly checked spacetime integration-by-parts boundary cancellations.
+      - The averaged squared-gradient integral excludes the Hamiltonian factor of one half.
+    comparators: []
+    accepted_in: v0.3.0
+    challenges: []
+    supersedes: []

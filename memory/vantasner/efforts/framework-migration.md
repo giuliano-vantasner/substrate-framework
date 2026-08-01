@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T11:04:10Z'
+updated: '2026-08-01T11:15:03Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.2.0`, containing dependency-root claims `C-SG-001/002` and the exact breather action claim `C-SG-003`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.3.0`, containing dependency-root claims `C-SG-001/002`, exact action claim `C-SG-003`, and exact averaged squared-gradient claim `C-SG-004`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -64,6 +64,8 @@ Attempts are append-only and individually reproducible.
 | 0002 | Candidate A, direct exact sine-Gordon root | `campaigns/P001-sine-gordon-root` and its exact/independent verifiers | accepted in v0.1.0 | Full residual, two energy derivations, mutations, limits, and successor replay passed | Extend the source inventory into the next dependency-ordered claim proposal |
 | 0003 | Initial full promotion replay | `scripts/validate.sh` | failed before terminal tally | Generated C-SG-002 review memory began one section with inline code, violating the memory index's plain-prose disclosure contract; suppressed validator output initially hid the diagnosis | Repair the section description and expose memory validation output in the workflow script, then rerun the unchanged full boundary |
 | 0004 | Candidate A, exact breather action with Candidate B review | `campaigns/P002-sine-gordon-action` exact and field phase-space verifiers | accepted in v0.2.0 | Endpoint-fixed exact calculus passed 19 checks; the independent phase-space construction passed 19 checks with precision refinement and a normalization mutation | Derive the nearest accepted-root functional consumer without importing its predecessor conclusion |
+| 0005 | P003 attempt 0001, implicit inverse-width limits | `campaigns/P003-sine-gordon-gradient/attempts/0001` | failed | SymPy could not infer positivity of `sqrt(1-omega^2)` inside the spatial limit oracle | Preserve the failure and expose the accepted positive inverse width explicitly only for localization checks |
+| 0006 | P003 attempt 0002, virial and direct-field routes | `campaigns/P003-sine-gordon-gradient` | accepted in v0.3.0 | Exact virial closure passed 25 checks; an independent field integral passed 16 checks and rejected the half-factor convention | Return to claim inventory and identify the next dependency-closed sector root |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -86,13 +88,13 @@ Every row must be discharged before the parent effort can close.
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion cannot be measured until claims, attempts, engineering layers, and narrative consumers are classified | Full corpus inventory with explicit in-scope categories and exclusions | open |
 
 ## Results
-The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion.
+The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion. P003 added the exact averaged squared-gradient integral and its virial-Legendre identity in `v0.3.0`, while preserving the full-versus-half factor convention.
 
 ## Canonicalization
-The registry, `v0.2.0` manifest, current release, generated claim index, and generated framework memory agree on `C-SG-001/002/003`. P001 and P002 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory.
+The registry, `v0.3.0` manifest, current release, generated claim index, and generated framework memory agree on `C-SG-001/002/003/004`. P001 through P003 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory.
 
 ## Done Gate
-The effort remains active. The breather root and action ladder is complete, but D1 and D4 remain open and the predecessor consumers are still a migration backlog. The next executable action is to preregister the independently derivable gradient/Legendre functional that consumes `C-SG-003`, rather than treating `v0.2.0` as whole-corpus completion.
+The effort remains active. The exact breather mechanics ladder is complete through its averaged gradient functional, but D1 and D4 remain open and the broader predecessor corpus is still a migration backlog. The next executable action is to complete the measurable claim-scope inventory and select the next dependency-closed sector root rather than treating `v0.3.0` as whole-corpus completion.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

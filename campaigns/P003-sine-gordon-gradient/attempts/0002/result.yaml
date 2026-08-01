@@ -1,0 +1,9 @@
+attempt: 0002
+completed_at: '2026-08-01T11:11:52Z'
+elapsed_seconds: 9.4
+exit_code: 0
+terminal_tally: P003 ALL 25 CHECKS PASS
+verdict:
+  C-SG-004: symbolic_verified
+status: passed
+stdout: stdout.txt

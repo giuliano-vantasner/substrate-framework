@@ -1,0 +1,13 @@
+attempt: 0001
+completed_at: '2026-08-01T11:10:00Z'
+exit_code: 1
+terminal_tally: null
+verdict:
+  C-SG-004: unverified
+failure_class: representation
+failure: >-
+  SymPy's spatial limit engine could not infer the sign of
+  sqrt(1-omega^2), despite the proposal's open-domain assumption.
+status: failed
+stdout: stdout.txt
+stderr: stderr.txt

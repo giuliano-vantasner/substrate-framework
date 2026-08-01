@@ -29,3 +29,12 @@ For every real omega with 0 < omega < 1, the C-SG-001 breather's canonical actio
 - Verification: `symbolic_verified`
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-002
+
+## C-SG-004
+
+For every real omega with 0 < omega < 1, the C-SG-001 breather's period-averaged squared-gradient integral is Gbar = (1/T)*integral_0^T dt integral_R dx phi_x^2 = 16*(sqrt(1-omega^2) - omega*arccos(omega)) = E - omega*J. It satisfies dGbar/domega = -J, approaches 16 as omega -> 0+, and approaches 0 as omega -> 1-. Gbar is the full squared-gradient integral; its Hamiltonian energy contribution is Gbar/2.
+
+- Accepted in: `v0.3.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001, C-SG-002, C-SG-003

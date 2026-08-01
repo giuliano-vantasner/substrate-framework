@@ -1,0 +1,14 @@
+attempt: 0002
+candidate: A
+source_baseline: substrate@6d1f4e0
+framework_base: 8f3335f
+parent_attempt: 0001
+repair: >-
+  Represent the accepted inverse width by an explicit positive symbol only
+  while auditing localization limits; retain the exact on-shell field for all
+  equation, period, and closed-form obligations.
+command: PYTHONPATH=src .venv/bin/python proposals/P003-sine-gordon-gradient/verify.py
+oracle:
+  kind: exact_sympy_virial_and_calculus
+  unchanged_scientific_thresholds: true
+status: running

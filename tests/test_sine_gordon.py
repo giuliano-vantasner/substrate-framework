@@ -10,6 +10,7 @@ from substrate_framework.sine_gordon import (
     breather_field,
     breather_inverse_width,
     breather_frequency_from_action,
+    breather_mean_gradient_integral,
     breather_peak_amplitude,
     breather_period,
     sine_gordon_residual,
@@ -33,6 +34,9 @@ def test_breather_formulas_at_exact_frequency() -> None:
     assert action == 16 * sp.acos(sp.Rational(3, 5))
     assert sp.simplify(breather_frequency_from_action(action) - omega) == 0
     assert sp.simplify(breather_energy_from_action(action) - breather_energy(omega)) == 0
+    assert breather_mean_gradient_integral(omega) == 16 * (
+        sp.Rational(4, 5) - sp.Rational(3, 5) * sp.acos(sp.Rational(3, 5))
+    )
 
 
 @pytest.mark.parametrize("omega", [0, 1, -sp.Rational(1, 2), 2, sp.I])

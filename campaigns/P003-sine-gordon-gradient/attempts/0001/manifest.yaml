@@ -1,0 +1,14 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+framework_base: 8f3335f
+question: Derive the exact averaged squared-gradient integral and Legendre relation.
+command: PYTHONPATH=src .venv/bin/python proposals/P003-sine-gordon-gradient/verify.py
+oracle:
+  kind: exact_sympy_virial_and_calculus
+  obligations:
+    - localized and periodic integration-by-parts boundary audit
+    - virial identification of the field integral
+    - Legendre closed form, derivatives, and limits
+    - mutation-sensitive factor and sign checks
+status: running

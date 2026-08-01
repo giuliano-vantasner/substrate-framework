@@ -1,0 +1,27 @@
+PASS [C-SG-004] the time integration-by-parts boundary cancels over one exact period
+PASS [C-SG-004] localized spatial boundary term 1 vanishes at plus infinity
+PASS [C-SG-004] localized spatial boundary term 1 vanishes at minus infinity
+PASS [C-SG-004] localized spatial boundary term 2 vanishes at plus infinity
+PASS [C-SG-004] localized spatial boundary term 2 vanishes at minus infinity
+PASS [C-SG-004] localized spatial boundary term 3 vanishes at plus infinity
+PASS [C-SG-004] localized spatial boundary term 3 vanishes at minus infinity
+PASS [C-SG-004] time integration-by-parts product rule has the required sign
+PASS [C-SG-004] the kinetic spatial product rule produces plus Kbar/2
+PASS [C-SG-004] the gradient spatial product rule produces plus Gbar/2
+PASS [C-SG-004] the potential product rule produces minus Vbar
+PASS [C-SG-004] virial, Hamiltonian, and action equations derive Gbar = E-omega*J
+PASS [C-SG-004] accepted energy and action give the exact closed form
+PASS [C-SG-004] the canonical API equals the independently assembled Legendre result
+PASS [C-SG-004] dGbar/domega equals minus the accepted canonical action
+PASS [C-SG-004] Gbar is strictly convex with curvature 16/sqrt(1-omega^2)
+PASS [C-SG-004] gradient normalization, endpoint, sign, and half-factor: baseline
+PASS [C-SG-004] gradient normalization, endpoint, sign, and half-factor: mutations supplied
+PASS [C-SG-004] gradient normalization, endpoint, sign, and half-factor: mutation 1 rejected
+PASS [C-SG-004] gradient normalization, endpoint, sign, and half-factor: mutation 2 rejected
+PASS [C-SG-004] gradient normalization, endpoint, sign, and half-factor: mutation 3 rejected
+PASS [C-SG-004] gradient normalization, endpoint, sign, and half-factor: mutation 4 rejected
+PASS [C-SG-004] the kink-pair endpoint reaches 16
+PASS [C-SG-004] the harmonic endpoint vanishes
+PASS [C-SG-004] the harmonic endpoint has the exact leading coefficient 32*sqrt(2)/3
+ALL 25 CHECKS PASS [C-SG-004]
+P003 ALL 25 CHECKS PASS

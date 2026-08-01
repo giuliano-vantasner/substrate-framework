@@ -1,0 +1,38 @@
+id: P003
+base_release: v0.2.0
+source_baseline: substrate@6d1f4e0
+question: >-
+  Derive the exact period-averaged spatial-gradient integral of the accepted
+  sine-Gordon breather and determine its relation to accepted energy and action.
+invariants:
+  - C-SG-001 exact localized periodic breather
+  - C-SG-002 exact normalized Hamiltonian energy
+  - C-SG-003 exact canonical action with dE/dJ = omega
+  - 0 < omega < 1
+  - Gbar means the average of integral(phi_x^2 dx), without a factor of one half
+allowed_imports:
+  - C-SG-001
+  - C-SG-002
+  - C-SG-003
+  - exact integration by parts applied to the accepted localized periodic field
+  - exact real calculus and SymPy
+  - high-precision field quadrature only as independent corroboration
+  - predecessor soliton-shadow closed-form script at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Derive a spacetime virial identity from the accepted field equation and combine it with the canonical phase-space action definition
+  - id: B
+    description: Integrate phi_x squared in space exactly and then close its period average directly
+  - id: C
+    description: Form the Legendre combination E minus omega times J and independently identify its field-theoretic meaning
+uniqueness_evidence: null
+selection_criteria:
+  - direct identification of the claimed field integral
+  - accepted dependency closure
+  - exact boundary and normalization control
+  - minimal auxiliary assumptions and branch ambiguity
+  - independent sensitivity to factor and sign mutations
+claims_proposed:
+  - C-SG-004
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: active

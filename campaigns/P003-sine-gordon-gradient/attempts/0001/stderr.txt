@@ -1,0 +1,3 @@
+Traceback in the first spatial-boundary check:
+  sp.limit(term, x, sp.oo)
+NotImplementedError: Result depends on the sign of sign(sqrt(1 - omega**2))

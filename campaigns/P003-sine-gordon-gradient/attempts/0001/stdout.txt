@@ -1,0 +1,1 @@
+PASS [C-SG-004] the time integration-by-parts boundary cancels over one exact period
