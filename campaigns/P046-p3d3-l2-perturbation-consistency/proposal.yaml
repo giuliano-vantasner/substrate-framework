@@ -1,0 +1,53 @@
+id: P046
+base_release: v0.40.0
+base_commit: 5bcb4b9
+source_baseline: substrate@6d1f4e0
+source_units: [P3D3]
+question: >-
+  Determine whether the P3D3 multiplicative l=2 deformation of the accepted
+  radial sine-Gordon trajectory satisfies the full 3+1 field equation, and
+  construct the correct importable l=2 perturbation sector with explicit
+  regularity, residual, and finite-time evidence if the source ansatz fails.
+invariants:
+  - C-PDE-001 supplies only a finite-time radial sine-Gordon IVP background
+  - C-MOM-003 supplies moment algebra but does not turn a prescribed density deformation into a field solution
+  - the full 3+1 scalar equation includes the angular Laplacian and the nonlinear sine term
+  - the axisymmetric P2 harmonic obeys Delta_Omega P2 = -6 P2
+  - a regular l=2 radial perturbation behaves as r squared at the origin
+  - nonzero STF moments do not establish a gravity theory, radiation law, or conserved source
+  - pending P3D4 cannot be an accepted dependency
+allowed_imports:
+  - C-PDE-001 radial background equation, IVP, conventions, and solver scope
+  - C-MOM-003 exact P2 moment algebra
+  - standard spherical harmonics and linearization of the sine-Gordon equation
+  - SciPy/NumPy finite-difference and adaptive-IVP machinery
+  - P3D3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Derive and evolve the true linearized l=2 radial perturbation about the
+      accepted time-dependent radial background, with residual and refinement evidence
+  - id: B
+    description: >-
+      Promote the exact nonlinear-ansatz residual and exact linearized l=2
+      equation only if a finite-time perturbation evolution does not close its numeric gates
+  - id: C
+    description: >-
+      Accept u=P(r,t)*(1+a*P2(cos theta)) as self-consistent from a nonzero
+      assembled quadrupole without checking its full field-equation residual
+uniqueness_evidence: null
+selection_criteria:
+  - exact full-field residual and first-order expansion
+  - native compatibility with the accepted radial background and angular eigenvalue
+  - origin regularity and explicit outer-boundary treatment
+  - parameter and assumption economy with no imported gravity sector
+  - solver status plus spatial, timestep or tolerance, domain, and amplitude refinement
+  - independent evolution or soluble-limit cross-check
+  - angular-harmonic leakage and load-bearing residual mutations
+  - strict separation between field consistency and moment kinematics
+claims_proposed:
+  - provisional C-PDE-003
+  - provisional C-PDE-004 if finite-time evolution gates close
+comparators_blinded_until: >-
+  full_pde_residual_linearized_equation_regularity_numeric_gates_and_scope_frozen
+status: accepted

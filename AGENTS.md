@@ -109,7 +109,7 @@ For ODE, BVP, and PDE work, state the equations, domain, initial/boundary data, 
 For each serious claim:
 
 - derive the checked quantity rather than hard-coding the expected result;
-- confirm clean process exit and the terminal tally;
+- confirm process status zero and the terminal tally independently; never pass a positive check count through `SystemExit` as though it were a success code;
 - mutate load-bearing inputs and require the relevant check to fail;
 - include counterexamples or wrong-convention probes;
 - run resolution/timestep/domain/tolerance refinement for numeric work;

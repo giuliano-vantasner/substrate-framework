@@ -1,0 +1,16 @@
+attempt: 0001
+campaign: P046
+started_at: '2026-08-01T20:35:02Z'
+base_release: v0.40.0
+base_commit: 5bcb4b9
+source_unit: P3D3
+source_sha256: 3f4532bac5e517b1324bf74153da9acdc9ef1cb10f53fc3df8cd0483d51e8fa2
+candidate: A
+oracles:
+  - exact multiplicative residual and finite-difference Taylor sensitivity
+  - transformed solid-harmonic operator limit
+  - analytic first-order P2 energy-moment normalization
+  - short regular linearized evolution and amplitude scaling
+expected_positive_object: >-
+  Importable exact l=2 perturbation equations and a regular finite-time
+  perturbation evolution about the accepted radial sine-Gordon model.

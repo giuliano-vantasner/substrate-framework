@@ -1,0 +1,14 @@
+PASS [P046-INDEPENDENT] the independent v=r*P transform removes the radial background first derivative
+PASS [P046-INDEPENDENT] the independent z=r*psi transform retains exactly the l=2 barrier six
+PASS [P046-INDEPENDENT] the independent transformed-field DOP853 integration exits cleanly
+PASS [P046-INDEPENDENT] the independent transformed solution preserves regular l=2 origin behavior
+PASS [P046-INDEPENDENT] DOP853 and velocity-Verlet background fields agree at the declared coarse mesh
+PASS [P046-INDEPENDENT] DOP853 and velocity-Verlet regular l=2 profiles agree
+PASS [P046-INDEPENDENT] the independent evolution reproduces the nonzero first-order STF moment
+PASS [P046-INDEPENDENT] independently rederived l=2 barrier: baseline
+PASS [P046-INDEPENDENT] independently rederived l=2 barrier: mutations supplied
+PASS [P046-INDEPENDENT] independently rederived l=2 barrier: mutation 1 rejected
+PASS [P046-INDEPENDENT] independently rederived l=2 barrier: mutation 2 rejected
+PASS [P046-INDEPENDENT] independently rederived l=2 barrier: mutation 3 rejected
+P046 independent metrics: nfev=2432, background_relative_l2=2.140695222e-02, mode_relative_l2=9.229429915e-03, Qzz=3.750347829e+02, Qzz_relative_error=2.009385172e-03
+ALL 12 CHECKS PASS [P046-INDEPENDENT]

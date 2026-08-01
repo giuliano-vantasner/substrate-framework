@@ -1,0 +1,46 @@
+attempt: 0004
+completed_at: '2026-08-01T20:50:36Z'
+exit_code: 0
+primary_terminal_tally: 31
+independent_terminal_tally: 12
+verdict:
+  C-PDE-003: symbolic_verified
+  C-PDE-004: simulation_evidence
+evidence:
+  - exact full-PDE residual of the multiplicative P3D3 construction
+  - exact first-order regular l=2 equation and transformed v=r*psi operator
+  - exact second-order P4 harmonic leakage and angular moment normalization
+  - regular l=2 Gaussian seed and zero/amplitude-scaling mutations
+  - three spatial meshes, timestep halving, domain extension, and boundary audit
+  - exact free spherical-Bessel l=2 box mode with energy convergence
+  - independent transformed-background/transformed-mode DOP853 evolution
+numeric_scope:
+  background_initial_data: P(r,0)=3*exp(-(r/4)^2), P_t(r,0)=0
+  mode_initial_data: psi(r,0)=0.2*(r/4)^2*exp(-(r/4)^2), psi_t(r,0)=0
+  baseline_domain: 0<=r<=80, 0<=t<=40
+  baseline_spacing: 0.1
+  baseline_timestep: 0.04
+  baseline_boundary: homogeneous Dirichlet without sponge
+  baseline_mode_norm_final_over_initial: 0.6229713348
+  baseline_qzz_coefficient_rms: 404.67815799
+  baseline_qzz_coefficient_max_abs: 680.58864010
+  background_self_errors: [0.02202321382, 0.00553449978]
+  mode_self_errors: [0.03233088498, 0.00841085263]
+  qzz_trace_self_errors: [0.01082067997, 0.00249825004]
+  background_energy_relative_ranges: [0.00329741634, 0.00081503475, 0.00020316348]
+  timestep_qzz_relative_rms: 0.00096866252
+  domain_mode_relative_l2: 0.0
+  free_mode_relative_errors: [0.00465363351, 0.00116325710, 0.00029080476]
+  independent_dop853_background_relative_l2: 0.02140695222
+  independent_dop853_mode_relative_l2: 0.00922942992
+  independent_dop853_qzz_relative_error: 0.00200938517
+qualifications:
+  - the multiplicative finite-amplitude construction is not a field solution and omits angular-gradient energy
+  - the source axisymmetric PDE seed violates l=2 origin regularity and has no refinement evidence
+  - the accepted numeric result is a linearized finite-time IVP, not nonlinear mode stability or periodicity
+  - no accepted frequency characterization of the corrected l=2 STF moment is made
+  - no gravitational coupling, retarded field, radiation, absolute scale, or substrate ontology follows
+  - I_perp=E0*(I_perp/E0) is definitional and the value 3.8373 does not recover FS2's 0.64
+status: passed_after_threshold_sampling_and_symbol-shadowing_repairs
+primary_stdout: primary.stdout.txt
+independent_stdout: ../../reviews/independent_transformed_mode_review.stdout.txt

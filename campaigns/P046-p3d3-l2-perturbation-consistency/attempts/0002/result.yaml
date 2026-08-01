@@ -1,0 +1,15 @@
+attempt: 0002
+completed_at: '2026-08-01T20:36:12Z'
+exit_code: 1
+verdict: technical_sampling_alignment_failure
+mechanism: >-
+  The three requested evolutions completed and produced convergent scalar
+  diagnostics, but the prototype tried to subtract recorded Q traces of 251
+  and 201 samples. A nominal sample_interval of 0.2 was not an integer
+  multiple of every mesh-dependent timestep: dr=0.2 recorded every 0.16 while
+  dr=0.1 recorded every 0.20.
+continuation: >-
+  Attempt 0003 uses sample_interval=0.4, an exact integer multiple of every
+  declared timestep in the mesh and timestep studies. The equations and
+  convergence criteria are unchanged.
+status: failed_preserved

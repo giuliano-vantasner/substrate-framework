@@ -1,0 +1,33 @@
+source_unit: P3D3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-14/bridge_P3D3_l2_selfconsistent_quadrupole.py
+sha256: 3f4532bac5e517b1324bf74153da9acdc9ef1cb10f53fc3df8cd0483d51e8fa2
+reproduced_at: '2026-08-01T20:34:38Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-14/bridge_P3D3_l2_selfconsistent_quadrupole.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+  integration_api: numpy.trapezoid selected by the source compatibility branch
+exit_code: 0
+elapsed_seconds: 125.7
+terminal_tally: ALL 5 CHECKS PASS
+reported_values:
+  construction_qzz_ac_amplitude: 259.01
+  construction_qxx_over_qzz: -0.5
+  core_fft_omega: 0.8901
+  construction_q_fft_omega: 1.8326
+  fft_bin_width: 0.0524
+  pde_qzz_ac_amplitude: 204.76
+  pde_spherical_max_abs_qzz: 2.960
+  solved_core_energy: 414.071
+  solved_sigma_perp_squared: 3.8373
+observation: >-
+  All declared checks execute, but none evaluates the full-PDE residual of the
+  multiplicative construction. Its l=2 part remains finite at the origin and
+  is not a regular scalar mode. The 2D PDE route uses one coarse grid with no
+  mesh, timestep, domain, boundary, or independent-method study, while the
+  exact ratio Qxx/Qzz=-1/2 follows from constructing an axisymmetric STF
+  diagonal. The claimed FS2 recovery is the definition
+  sigma_perp_squared=I_perp/E0 and yields 3.8373 rather than FS2's 0.64.

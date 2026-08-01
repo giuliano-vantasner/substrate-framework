@@ -1,0 +1,8 @@
+P046 primary: ALL 31 CHECKS PASS [P046-P3D3]
+P046 independent: ALL 12 CHECKS PASS [P046-INDEPENDENT]
+Targeted package replay: 34 passed
+P044 downstream replay: ALL 28 CHECKS PASS [P044-P3D1]
+P045 downstream replay: ALL 25 CHECKS PASS [P045-P3D2]
+
+The combined command exited with status 25 because the last successful
+verifier returned its positive check count through SystemExit.

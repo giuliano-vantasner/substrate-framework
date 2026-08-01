@@ -1,0 +1,12 @@
+P046 initial targeted unit run: 6 passed, 2 failed.
+
+Failure 1: transformed v=r^3 with ell=2 and cos(P)=0 had max absolute
+discrete acceleration 9.983454019163926e-10 versus threshold 3e-10. The
+mathematical centered-difference identity is exact; the residual grows from
+floating cancellation at the largest grid radii.
+
+Failure 2: composite trapezoidal quadrature of the analytic r^6 energy-moment
+integrand had relative error 2.1874475923971566e-5 versus threshold 2e-5.
+
+The run also reported a Python invalid-escape warning for the regex string
+matching [-1, 1].

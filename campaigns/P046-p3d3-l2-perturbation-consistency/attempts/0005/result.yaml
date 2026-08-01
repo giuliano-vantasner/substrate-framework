@@ -1,0 +1,22 @@
+attempt: 0005
+completed_at: '2026-08-01T20:56:12Z'
+exit_code: 25
+verdict: technical_success_tally_used_as_process_status
+passed_scientific_tallies:
+  P046_primary: 31
+  P046_independent: 12
+  P044_consumer: 28
+  P045_consumer: 25
+targeted_pytest_passed: 34
+mechanism: >-
+  CheckLedger.finish returned the positive number of passed checks. P044,
+  P045, and P046 entry points returned that value from main and therefore fed
+  it to SystemExit. Every assertion passed, but the final P045 process status
+  was 25 rather than zero, violating the clean-exit gate.
+continuation: >-
+  Attempt 0006 repairs the shared ledger without rewriting immutable earlier
+  campaigns: a backward-compatible success token formats as the real tally but
+  has integer value zero for SystemExit. AGENTS.md, the physics skill, and the
+  effort template codify the separate tally/status obligations, and regression
+  tests lock them.
+status: failed_preserved

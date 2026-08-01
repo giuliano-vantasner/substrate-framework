@@ -1,0 +1,14 @@
+attempt: 0005
+campaign: P046
+started_at: '2026-08-01T20:54:10Z'
+base_release: v0.40.0
+base_commit: 5bcb4b9
+candidate: A
+repair_from:
+  - attempts/0004/result.yaml
+oracles:
+  - clean process status and terminal tally for P046, P044, and P045
+  - targeted package and consumer replay
+expected_positive_object: >-
+  A promotion-boundary replay whose successful verifier tallies also return OS
+  process status zero.

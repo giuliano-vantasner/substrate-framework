@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 175
-  qualified: 36
+  pending_adjudication: 174
+  qualified: 37
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2876,8 +2876,27 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOM-003
+  - C-PDE-003
+  - C-PDE-004
+  qualification: >-
+    The corrected exact residual and regular l=2 linearized equation are
+    accepted, and a separately specified regular finite-time perturbation IVP
+    carries a converged nonzero first-order STF energy moment. The source's
+    multiplicative ansatz is not a field solution, omits angular-gradient
+    energy, and is nonregular at the origin; its coarse 2D route is unrefined,
+    its two-frequency radiating line is not established for the corrected
+    mode, and its definitional variance 3.8373 does not recover FS2's 0.64.
+  evidence:
+  - campaigns/P046-p3d3-l2-perturbation-consistency/reviews/source_adjudication.md
+  note: >-
+    P046 substitutes the source construction into the full PDE, builds the
+    regular transformed l=2 sector, supplies mesh/timestep/domain/amplitude
+    studies plus exact and DOP853 cross-checks, and keeps all gravity,
+    nonlinear-stability, periodicity, and absolute-scale conclusions outside
+    the accepted dependency closure.
 - source_unit: P3D4
   phase: phase-14
   path: merged-framework/bridges/phase-14/bridge_P3D4_selfconsistent_power_waveform.py

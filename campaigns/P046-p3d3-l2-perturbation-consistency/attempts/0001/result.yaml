@@ -1,0 +1,18 @@
+attempt: 0001
+completed_at: '2026-08-01T20:35:35Z'
+exit_code: 1
+verdict: technical_test_threshold_failure
+passed_tests: 6
+failed_tests: 2
+mechanism: >-
+  The implementation and analytic expectations agreed, but two regression
+  thresholds were marginally tighter than their declared numerical oracles.
+  Floating cancellation in the exactly annihilated discrete cubic reached
+  9.99e-10 against an absolute 3e-10 threshold. Composite trapezoidal
+  quadrature of r^6 had relative error 2.19e-5 against 2e-5. A regex literal
+  also emitted an invalid-escape warning.
+continuation: >-
+  Attempt 0002 retains the same equations and implementation, sets thresholds
+  that cover measured floating cancellation and second-order quadrature error,
+  and uses a raw regex string. The scientific selection criteria are unchanged.
+status: failed_preserved

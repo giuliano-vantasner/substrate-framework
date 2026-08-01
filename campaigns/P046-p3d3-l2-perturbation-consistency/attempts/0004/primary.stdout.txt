@@ -1,0 +1,20 @@
+P046 primary exact and numerical verifier completed with all 31 checks passing.
+
+The exact route established the multiplicative-ansatz residual, its nonzero
+first-order coefficient, second-order P4 leakage, the correct regular l=2
+equation, the v=r*psi transform, angular-barrier mutations, and the exact
+first-order triple-STF energy-moment normalization. It also exposed the source
+origin defect, omitted angular-gradient energy, structural STF ratio, and
+definitional/incompatible FS2 width comparison.
+
+Numerical metrics:
+  background self-errors = [0.02202321382, 0.00553449978]
+  mode self-errors = [0.03233088498, 0.00841085263]
+  Qzz trace self-errors = [0.01082067997, 0.00249825004]
+  background energy ranges = [0.00329741634, 0.00081503475, 0.00020316348]
+  timestep Qzz relative RMS = 0.00096866252
+  larger-domain mode relative L2 = 0.0
+  free j2 errors = [0.00465363351, 0.00116325710, 0.00029080476]
+  free energy ranges = [0.00170594903, 0.00042635612, 0.00010656804]
+
+ALL 31 CHECKS PASS [P046-P3D3]

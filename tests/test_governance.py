@@ -8,7 +8,11 @@ from substrate_framework.governance import (
     validate_registry,
     validate_release,
 )
-from substrate_framework.verification import CheckFailure, CheckLedger
+from substrate_framework.verification import (
+    CheckFailure,
+    CheckLedger,
+    SuccessfulCheckTally,
+)
 
 
 def claim(claim_id: str, dependencies: list[str], accepted: bool = True) -> dict:
@@ -56,6 +60,17 @@ def test_mutation_gate_rejects_insensitive_check() -> None:
     ledger = CheckLedger("C-test")
     with pytest.raises(CheckFailure, match="insensitive"):
         ledger.mutation_sensitive("value", lambda _: True, 1, [2])
+
+
+def test_successful_tally_formats_as_count_but_exits_with_status_zero() -> None:
+    ledger = CheckLedger("C-test")
+    ledger.check("one load-bearing assertion", True)
+    tally = ledger.finish()
+    assert isinstance(tally, SuccessfulCheckTally)
+    assert tally.passed_count == 1
+    assert f"{tally}" == "1"
+    assert int(tally) == 0
+    assert SystemExit(tally).code == 0
 
 
 def test_supersession_preserves_historical_claim() -> None:

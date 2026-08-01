@@ -1,0 +1,14 @@
+The primary P046 verifier ended with ALL 31 CHECKS PASS [P046-P3D3]. Its
+metrics were background self-errors [2.2023e-2, 5.5345e-3], mode self-errors
+[3.2331e-2, 8.4109e-3], STF trace self-errors [1.0821e-2, 2.4983e-3], and
+closed-box background energy ranges [3.2974e-3, 8.1503e-4, 2.0316e-4].
+
+The independent transformed-field review passed seven checks, including a
+clean DOP853 exit and agreement of the background, regular l=2 profile, and
+nonzero STF moment. It then failed at the baseline mutation check with:
+
+FAIL [P046-INDEPENDENT] independently rederived l=2 barrier: baseline --
+baseline was rejected
+
+Diagnosis: a local NumPy array named transformed_mode shadowed the earlier
+SymPy transformed-mode expression used by the mutation predicate.

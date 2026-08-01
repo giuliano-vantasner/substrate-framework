@@ -164,6 +164,17 @@ from .radial_sine_gordon import (
     radial_sine_gordon_energy,
     radial_sine_gordon_energy_radius_moment,
 )
+from .sine_gordon_l_modes import (
+    LinearizedAngularModeEvolution,
+    evolve_radial_background_with_linearized_mode,
+    legendre_p2,
+    linearized_mode_quadratic_energy,
+    linearized_p2_energy_triple_stf,
+    multiplicative_p2_first_order_residual_coefficient,
+    multiplicative_p2_residual,
+    regular_l_mode_gaussian_seed,
+    transformed_l_mode_acceleration,
+)
 from .renormalization import (
     one_loop_inverse_coupling_squared,
     one_loop_transmutation_scale,

@@ -1,0 +1,16 @@
+attempt: 0003
+completed_at: '2026-08-01T20:39:21Z'
+exit_code: 1
+primary_terminal_tally: 31
+independent_checks_before_failure: 7
+verdict: technical_symbol_shadowing_failure
+mechanism: >-
+  The primary exact and refinement verifier passed all 31 checks. The
+  independent DOP853 route also passed its derivation, solver-status,
+  regularity, field, mode, and STF comparisons, then rejected the correct
+  barrier in its mutation gate because the symbolic transformed-mode variable
+  had been shadowed by the reconstructed NumPy array of the same name.
+continuation: >-
+  Attempt 0004 gives symbolic and numeric transformed modes distinct names and
+  reruns the unchanged primary and independent scientific oracles.
+status: failed_preserved

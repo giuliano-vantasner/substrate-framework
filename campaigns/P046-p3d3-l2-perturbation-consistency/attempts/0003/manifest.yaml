@@ -1,0 +1,21 @@
+attempt: 0003
+campaign: P046
+started_at: '2026-08-01T20:37:05Z'
+base_release: v0.40.0
+base_commit: 5bcb4b9
+source_unit: P3D3
+source_sha256: 3f4532bac5e517b1324bf74153da9acdc9ef1cb10f53fc3df8cd0483d51e8fa2
+candidate: A
+repair_from:
+  - attempts/0001/result.yaml
+  - attempts/0002/result.yaml
+oracles:
+  - SymPy full-PDE residual, first-order l=2 equation, and P4 leakage
+  - three-mesh velocity-Verlet self-convergence on a regular l=2 seed
+  - timestep halving, causally quiet domain extension, and exact amplitude scaling
+  - exact free l=2 spherical-Bessel box mode with energy and second-order convergence
+  - independent transformed-field DOP853 evolution
+expected_positive_object: >-
+  Exact and finite-time verified regular l=2 perturbation sector about the
+  accepted radial sine-Gordon model, with P3D3's invalid construction separated
+  from the corrected mechanism.

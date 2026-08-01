@@ -1,0 +1,23 @@
+attempt: 0006
+completed_at: '2026-08-01T21:00:24Z'
+exit_code: 0
+scientific_evidence: ../0004/result.yaml
+terminal_tallies:
+  P046_primary: 31
+  P046_independent: 12
+  P044_consumer: 28
+  P045_consumer: 25
+tests:
+  verification_and_l_mode: 17
+  targeted_package_and_consumers: 34
+workflow_repair:
+  implementation: src/substrate_framework/verification.py
+  regression: tests/test_governance.py
+  codified_in:
+    - AGENTS.md
+    - .agents/skills/physics-erdos-loop/SKILL.md
+    - memory-templates/effort-contract.md
+verdict:
+  C-PDE-003: symbolic_verified
+  C-PDE-004: simulation_evidence
+status: passed_with_clean_process_exit_and_consumer_replay

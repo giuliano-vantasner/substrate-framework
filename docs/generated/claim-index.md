@@ -264,6 +264,24 @@ For the finite-time radial sine-Gordon branch of C-PDE-001, define the cutoff co
 - Compatibility: `native`
 - Dependencies: C-PDE-001
 
+## C-PDE-003
+
+In the dimensionless 3+1 sine-Gordon model of C-PDE-001, let P(r,t) satisfy the radial equation and let Y=P2(cos(theta)) with Delta_Omega Y=-6*Y. The finite multiplicative ansatz u=P*(1+a*Y) has exact full-field residual sin(P*(1+a*Y))-(1+a*Y)*sin(P)+6*a*P*Y/r^2. Its coefficient at first order in a is Y*(P*cos(P)-sin(P)+6*P/r^2), so the ansatz is not a generic solution; moreover its l=2 coefficient is nonregular wherever P(0,t) is nonzero. The correct infinitesimal ansatz u=P+epsilon*psi(r,t)*Y obeys at first order psi_tt-psi_rr-2*psi_r/r+6*psi/r^2+cos(P)*psi=0, with psi=O(r^2) at the origin. For v=r*psi this is v_tt=v_rr-6*v/r^2-cos(P)*v with v=O(r^3). At second order the multiplicative ansatz contains P4 harmonic leakage because P2^2=P0/5+2*P2/7+18*P4/35. These are exact field-equation statements, not a nonlinear mode-existence, stability, periodicity, gravity, or radiation theorem.
+
+- Accepted in: `v0.41.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-PDE-001
+
+## C-PDE-004
+
+Evolve the C-PDE-001 radial initial data P(r,0)=3*exp(-(r/4)^2), P_t(r,0)=0 together with the regular C-PDE-003 l=2 perturbation psi(r,0)=0.2*(r/4)^2*exp(-(r/4)^2), psi_t(r,0)=0. On the baseline closed domain 0<=r<=80 through 0<=t<=40, a velocity-Verlet evolution of P and v=r*psi with dr=0.1, dt=0.04, homogeneous outer Dirichlet data, and no sponge completes with finite values before boundary reflection. For u=P+epsilon*psi*P2, the first-order energy-density coefficient is h=P_t*psi_t+P_r*psi_r+sin(P)*psi; defining H=4*pi*integral r^4*h dr, exact angular integration gives the triple-STF coefficient Q/epsilon=diag(-H/5,-H/5,2*H/5). The baseline Qzz/epsilon trace has RMS 404.678 and maximum absolute value 680.589, while the final-to-initial mode norm ratio is 0.62297. Meshes dr=0.2, 0.1, and 0.05 give approximately second-order self-convergence of background, mode, Q trace, and closed-box energy error; timestep halving, a causally disconnected domain extension to 100, exact zero/half-amplitude mutations, an exact free spherical-Bessel l=2 box mode, and an independent transformed-variable DOP853 evolution preserve the finite-time nonzero-moment verdict. This is linearized, dimensionless, finite-grid and finite-time simulation evidence for the specified IVP, not a nonlinear stable or periodic l=2 mode, a frequency-doubling result, conserved gravitational source, radiation channel, absolute scale, or substrate realization.
+
+- Accepted in: `v0.41.0`
+- Verification: `simulation_evidence`
+- Compatibility: `native`
+- Dependencies: C-PDE-001, C-PDE-003, C-MOM-003
+
 ## C-QBL-001
 
 Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega^2-f^2/12)f, C-U1-001's stationary phase Psi=f*exp(-i*omega*t), and 0<omega<1/sqrt(2), let kappa=sqrt(1/2-omega^2). Then for every real center x0 the positive localized profile f=sqrt(24)*kappa*sech(kappa*(x-x0)) solves the equation exactly. Within a nonzero ansatz A*sech(k*(x-x0)), the independent sech powers force k^2=1/2-omega^2 and A^2=24*k^2. Its accepted U1 charge is Q=96*omega*sqrt(1/2-omega^2): Q tends to zero at both open endpoints, increases on (0,1/2), reaches its unique maximum 24 at omega=1/2, and decreases on (1/2,1/sqrt(2)). These derivative signs alone establish no VK, spectral, orbital, or nonlinear stability, forced complex ontology, electric charge, particle identity, or substrate realization.

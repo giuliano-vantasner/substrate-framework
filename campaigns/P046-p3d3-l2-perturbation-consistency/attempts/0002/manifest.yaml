@@ -1,0 +1,13 @@
+attempt: 0002
+campaign: P046
+started_at: '2026-08-01T20:36:10Z'
+base_release: v0.40.0
+base_commit: 5bcb4b9
+source_unit: P3D3
+candidate: A
+oracles:
+  - three-mesh nonlinear-background and l=2 mode self-convergence
+  - timestep, domain, amplitude, boundary, and free-mode studies
+expected_positive_object: >-
+  Frozen quantitative gates for the regular finite-time l=2 perturbation
+  evidence without borrowing P3D3's thresholds.

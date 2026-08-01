@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P046
+started_at: '2026-08-01T20:39:35Z'
+base_release: v0.40.0
+base_commit: 5bcb4b9
+source_unit: P3D3
+source_sha256: 3f4532bac5e517b1324bf74153da9acdc9ef1cb10f53fc3df8cd0483d51e8fa2
+candidate: A
+repair_from:
+  - attempts/0001/result.yaml
+  - attempts/0002/result.yaml
+  - attempts/0003/result.yaml
+oracles:
+  - unchanged 31-check exact and refined primary verifier
+  - repaired independent transformed-field DOP853 review and barrier mutation
+expected_positive_object: >-
+  Exact and finite-time verified regular l=2 perturbation sector about the
+  accepted radial sine-Gordon model.

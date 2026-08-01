@@ -1,0 +1,8 @@
+The dr=0.2, 0.1, and 0.05 evolutions completed on 0<=r<=80 and 0<=t<=40.
+Their Q RMS values were 399.9362, 403.5250, and 404.2925; final mode-norm
+ratios were 0.622837, 0.622971, and 0.623005; closed-box background-energy
+relative ranges decreased from 3.463e-3 to 8.546e-4 to 2.133e-4.
+
+The comparison then raised ValueError because trace shapes (251,) and (201,)
+could not be broadcast. The sampling cadence, not the field evolution, caused
+the mismatch.

@@ -1,0 +1,16 @@
+attempt: 0006
+campaign: P046
+started_at: '2026-08-01T20:56:20Z'
+base_release: v0.40.0
+base_commit: 5bcb4b9
+candidate: A
+repair_from:
+  - attempts/0005/result.yaml
+oracles:
+  - SuccessfulCheckTally unit and SystemExit smoke tests
+  - unchanged P046 primary and independent verifiers
+  - unchanged P044 and P045 downstream verifiers
+  - targeted package replay and diff hygiene
+expected_positive_object: >-
+  The verified regular l=2 sector plus a truthful status-zero promotion replay
+  that preserves visible historical check counts.
