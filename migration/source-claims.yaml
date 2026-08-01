@@ -8,8 +8,8 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  pending_adjudication: 209
-  qualified: 6
+  pending_adjudication: 208
+  qualified: 7
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7951,8 +7951,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-006
+  - C-ACT-001
+  - C-DIM-001
+  qualification: HE2's generic action/secant examples, breather ratio, and exact dimension kernels are
+    accepted, but its named medium-object identity, permanent- ceiling language, and physical measuring-unit
+    interpretation are not closed.
+  evidence:
+  - campaigns/P013-action-scale-dimensions/reviews/source_adjudication.md
+  note: P013 fixes the normalized-action convention, proves the general iff, and limits every Buckingham
+    conclusion to its declared primitive set.
 - source_unit: HE3
   phase: phase-45
   path: merged-framework/bridges/phase-45/bridge_HE3_charge_action_reciprocity.py

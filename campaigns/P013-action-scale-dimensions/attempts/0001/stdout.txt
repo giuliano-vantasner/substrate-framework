@@ -1,0 +1,24 @@
+PASS [C-ACT-001] the derivative of E/J is exactly the secant-equality residual
+PASS [C-ACT-001] E/frequency=J is equivalent to the zero derivative of E/J
+PASS [C-ACT-001] every positive linear energy law satisfies the action-secant identity
+PASS [C-ACT-001] a quadratic energy law gives half the action rather than the action
+PASS [C-ACT-001] the rigid-rotor contour action is normalized as I*omega
+PASS [C-ACT-001] the rigid-rotor secant is exactly half its normalized action
+PASS [C-ACT-001] the canonical derivative of rotor energy recovers angular frequency
+PASS [C-ACT-001] rotor energy half-factor and normalized-action coefficient: baseline
+PASS [C-ACT-001] rotor energy half-factor and normalized-action coefficient: mutations supplied
+PASS [C-ACT-001] rotor energy half-factor and normalized-action coefficient: mutation 1 rejected
+PASS [C-ACT-001] rotor energy half-factor and normalized-action coefficient: mutation 2 rejected
+PASS [C-ACT-001] rotor energy half-factor and normalized-action coefficient: mutation 3 rejected
+PASS [C-DIM-001] the E and omega primitive set has full rank and no dimensionless monomial
+PASS [C-DIM-001] adding one action scale creates exactly one dimensionless group
+PASS [C-DIM-001] the unique normalized exponent vector is (-1,1,1)
+PASS [C-DIM-001] the exponent vector represents S*omega/E
+PASS [C-DIM-001] frequency and action time dimensions: baseline
+PASS [C-DIM-001] frequency and action time dimensions: mutations supplied
+PASS [C-DIM-001] frequency and action time dimensions: mutation 1 rejected
+PASS [C-DIM-001] frequency and action time dimensions: mutation 2 rejected
+PASS [C-DIM-001] frequency and action time dimensions: mutation 3 rejected
+ALL 12 CHECKS PASS [C-ACT-001]
+ALL 9 CHECKS PASS [C-DIM-001]
+P013 ALL 21 CHECKS PASS

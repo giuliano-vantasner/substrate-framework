@@ -1,0 +1,17 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE2
+framework_base: dad5e56
+question: >-
+  What exact global criterion makes an energy-frequency secant equal normalized
+  action, and what dimensionless monomials exist before and after adding an
+  independent action primitive?
+command: PYTHONPATH=src .venv/bin/python proposals/P013-action-scale-dimensions/verify.py
+oracle:
+  kind: exact_sympy_calculus_and_linear_algebra
+  mutation_requirements:
+    - reject wrong rotor half-factor and action normalization
+    - reject wrong frequency and action dimension columns
+status: passed

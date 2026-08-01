@@ -1,0 +1,40 @@
+id: P013
+base_release: v0.12.0
+base_commit: dad5e56
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE2
+question: >-
+  Derive the exact criterion under which an energy-frequency secant equals a
+  normalized canonical action, classify the dimensionless monomials generated
+  by the breather energy/frequency primitives with and without a second action
+  scale, and adjudicate HE2 without overstating dimensional analysis.
+invariants:
+  - normalized action means (1/(2*pi))*closed_integral(p dq)
+  - canonical frequency is dE/dJ on a connected positive-action interval
+  - dimensional analysis classifies monomials from the declared primitive set only
+  - adding a new independent primitive invalidates any permanence claim from the smaller set
+allowed_imports:
+  - C-SG-006 for the breather secant-scale example
+  - exact real calculus and linear algebra
+  - generic harmonic and rigid-rotor systems as declared soluble limits
+  - predecessor bridge HE2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Prove the general E/(dE/dJ)=J iff E=CJ theorem and exact dimension-matrix kernels
+  - id: B
+    description: Promote only HE2's harmonic and rotor point examples without a general criterion
+  - id: C
+    description: Treat empty nullspace for the two-scale set as a permanent ban under all enlarged models
+uniqueness_evidence: null
+selection_criteria:
+  - convention-correct normalized action
+  - exact global iff statement
+  - primitive-set-local dimensional conclusion
+  - assumption and parameter economy
+  - independent derivation and mutation sensitivity
+claims_proposed:
+  - C-ACT-001
+  - C-DIM-001
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

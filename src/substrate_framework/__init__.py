@@ -1,5 +1,11 @@
 """Canonical, importable definitions and derivations for Substrate."""
 
+from .action_scales import (
+    rigid_rotor_energy,
+    rigid_rotor_normalized_action,
+    secant_action_scale,
+)
+
 from .governance import (
     GovernanceError,
     load_yaml,
@@ -41,6 +47,10 @@ from .constitutive import (
     co_scaled_permittivity,
     co_scaled_wave_speed,
     local_wave_speed,
+)
+from .dimensional_analysis import (
+    dimensionless_group_count,
+    dimensionless_monomial_basis,
 )
 from .radial_energy import (
     capillary_critical_radius,
@@ -121,6 +131,8 @@ __all__ = [
     "co_scaled_wave_speed",
     "conditional_anw_mass",
     "conditional_topological_mass",
+    "dimensionless_group_count",
+    "dimensionless_monomial_basis",
     "hamiltonian_density",
     "index_from_potential",
     "load_yaml",
@@ -138,6 +150,9 @@ __all__ = [
     "render_claim_memory",
     "render_claim_index",
     "render_release_memory",
+    "rigid_rotor_energy",
+    "rigid_rotor_normalized_action",
+    "secant_action_scale",
     "matched_pion_coupling_ratio",
     "solve_bvp_evidence",
     "solve_ivp_evidence",

@@ -523,3 +523,60 @@ claims:
     accepted_in: v0.12.0
     challenges: []
     supersedes: []
+  - id: C-ACT-001
+    statement: >-
+      On any connected interval with normalized canonical action J>0,
+      differentiable positive energy E(J), and positive frequency
+      omega=dE/dJ, the identity E/omega=J throughout the interval holds if
+      and only if E(J)=C*J for a positive constant C. Thus a linear harmonic
+      energy law has secant action equal to canonical action. For a rigid rotor
+      with normalized action J=I*omega and energy E=I*omega^2/2=J^2/(2I),
+      E/omega=J/2 instead.
+    provenance: campaigns/P013-action-scale-dimensions/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P013-action-scale-dimensions/verify.py
+      - campaigns/P013-action-scale-dimensions/attempts/0001/result.yaml
+      - campaigns/P013-action-scale-dimensions/reviews/independent_equation_review.py
+      - memory/vantasner/decisions/C-ACT-001-review.md
+      - tests/test_action_scales.py
+    assumptions:
+      - Canonical action uses the normalized convention (1/(2*pi))*closed_integral(p dq).
+      - The action interval is connected and E and dE/dJ are positive there.
+    comparators: []
+    accepted_in: v0.13.0
+    challenges: []
+    supersedes: []
+  - id: C-DIM-001
+    statement: >-
+      Over base dimensions energy E and time T, primitives consisting of an
+      energy and frequency have dimension matrix [[1,0],[0,-1]], rank two,
+      and zero kernel, so they form no nontrivial dimensionless monomial.
+      Adding an independent action primitive S gives matrix
+      [[1,0,1],[0,-1,1]], rank two, with one-dimensional kernel spanned by
+      (-1,1,1); up to powers its unique dimensionless monomial is S*omega/E.
+      Both conclusions are local to the declared primitive set and do not
+      prohibit groups after further independent primitives are added.
+    provenance: campaigns/P013-action-scale-dimensions/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P013-action-scale-dimensions/verify.py
+      - campaigns/P013-action-scale-dimensions/attempts/0001/result.yaml
+      - campaigns/P013-action-scale-dimensions/reviews/independent_equation_review.py
+      - memory/vantasner/decisions/C-DIM-001-review.md
+      - tests/test_action_scales.py
+    assumptions:
+      - Dimension-matrix rows are ordered as energy and time and columns follow the stated primitive order.
+      - Buckingham monomials use real exponent vectors in the matrix kernel.
+    comparators: []
+    accepted_in: v0.13.0
+    challenges: []
+    supersedes: []

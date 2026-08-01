@@ -115,6 +115,21 @@ units:
     note: >-
       P012 replaces component division by a regular four-vector relation and
       maps HE1's non-universality checks to C-SG-006.
+  HE2:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-006
+      - C-ACT-001
+      - C-DIM-001
+    qualification: >-
+      HE2's generic action/secant examples, breather ratio, and exact dimension
+      kernels are accepted, but its named medium-object identity, permanent-
+      ceiling language, and physical measuring-unit interpretation are not closed.
+    evidence:
+      - campaigns/P013-action-scale-dimensions/reviews/source_adjudication.md
+    note: >-
+      P013 fixes the normalized-action convention, proves the general iff, and
+      limits every Buckingham conclusion to its declared primitive set.
   HE4:
     disposition: qualified
     accepted_claims:

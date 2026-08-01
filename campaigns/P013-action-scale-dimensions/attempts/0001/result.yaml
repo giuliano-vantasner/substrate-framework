@@ -1,0 +1,10 @@
+attempt: 0001
+completed_at: '2026-08-01T12:53:41Z'
+elapsed_seconds: 1.0
+exit_code: 0
+terminal_tally: P013 ALL 21 CHECKS PASS
+verdict:
+  C-ACT-001: symbolic_verified
+  C-DIM-001: symbolic_verified
+status: passed
+stdout: stdout.txt

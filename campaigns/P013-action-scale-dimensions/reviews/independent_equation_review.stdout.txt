@@ -1,0 +1,9 @@
+PASS [C-ACT-001-INDEPENDENT] separating E'=E/J integrates to the positive linear family
+PASS [C-ACT-001-INDEPENDENT] the linear family has constant frequency and exact secant equality
+PASS [C-ACT-001-INDEPENDENT] the independent rotor Hamiltonian gives secant J/2
+PASS [C-DIM-001-INDEPENDENT] direct exponent equations for E^p*omega^q have only the zero solution
+PASS [C-DIM-001-INDEPENDENT] direct exponent elimination yields the one-parameter (-r,r,r) family
+PASS [C-DIM-001-INDEPENDENT] normalizing the action exponent produces S*omega/E
+ALL 3 CHECKS PASS [C-ACT-001-INDEPENDENT]
+ALL 3 CHECKS PASS [C-DIM-001-INDEPENDENT]
+P013 INDEPENDENT REVIEW ALL 6 CHECKS PASS

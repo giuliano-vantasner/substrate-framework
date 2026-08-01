@@ -3,6 +3,15 @@
 
 This document is generated from `governance/claims.yaml`.
 
+## C-ACT-001
+
+On any connected interval with normalized canonical action J>0, differentiable positive energy E(J), and positive frequency omega=dE/dJ, the identity E/omega=J throughout the interval holds if and only if E(J)=C*J for a positive constant C. Thus a linear harmonic energy law has secant action equal to canonical action. For a rigid rotor with normalized action J=I*omega and energy E=I*omega^2/2=J^2/(2I), E/omega=J/2 instead.
+
+- Accepted in: `v0.13.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
 ## C-CC-001
 
 Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(q)^2*qdot^2/c0^2), with positive n, c0, and E0, the exact coordinate-time acceleration is qddot = (c0^2-3*n^2*qdot^2)*n_q/(2*n^3). Its zero-velocity limit is c0^2*n_q/(2*n^3), matching C-OG-001, and its locally unique same-data IVP is independent of E0. The mixed-scale counterexample with E0 also inside the kinetic square root retains E0 and, for n=1+alpha*q at q=qdot=0, has initial acceleration E0*c0^2*alpha/2.
@@ -11,6 +20,15 @@ Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-VAR-001, C-OG-001
+
+## C-DIM-001
+
+Over base dimensions energy E and time T, primitives consisting of an energy and frequency have dimension matrix [[1,0],[0,-1]], rank two, and zero kernel, so they form no nontrivial dimensionless monomial. Adding an independent action primitive S gives matrix [[1,0,1],[0,-1,1]], rank two, with one-dimensional kernel spanned by (-1,1,1); up to powers its unique dimensionless monomial is S*omega/E. Both conclusions are local to the declared primitive set and do not prohibit groups after further independent primitives are added.
+
+- Accepted in: `v0.13.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
 
 ## C-MED-001
 
