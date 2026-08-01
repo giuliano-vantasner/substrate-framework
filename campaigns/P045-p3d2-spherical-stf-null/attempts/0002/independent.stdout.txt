@@ -1,0 +1,4 @@
+PASS [P045-INDEPENDENT] adaptive DOP853 method-of-lines evolution completes with finite moment data
+PASS [P045-INDEPENDENT] the independently integrated core moment is nonconstant
+PASS [P045-INDEPENDENT] independent detrended FFT interpolation resolves the twice-frequency relation
+FAIL [P045-INDEPENDENT] independent prominent-maximum periods resolve the twice-frequency relation

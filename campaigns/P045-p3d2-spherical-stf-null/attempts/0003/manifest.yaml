@@ -1,0 +1,17 @@
+attempt: 0003
+campaign: P045
+started_at: '2026-08-01T20:19:19Z'
+base_release: v0.39.0
+base_commit: aca7e79
+source_unit: P3D2
+source_sha256: 72802a3bb3ed46be3bf7b96e035028b0ded352ae02e587cb14b9db902b2125cb
+candidate: A
+repair_from:
+  - attempts/0001/result.yaml
+  - attempts/0002/result.yaml
+oracles:
+  - unchanged 25-check exact and refined primary verifier
+  - DOP853 versus leapfrog with independent FFT and sub-sample peak interpolation
+expected_positive_object: >-
+  Exact spherical STF null plus a finite-time, cutoff-qualified twice-frequency
+  core energy-radius moment characterization.

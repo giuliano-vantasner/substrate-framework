@@ -210,6 +210,15 @@ Let rho(x,y,z,t)=lambda(x,t)*g(y,z), where lambda is centered on the declared x 
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-009, C-MOM-001, C-GW-002
 
+## C-MOM-003
+
+Let rho(r) be any radial density for which J=integral_R3 rho(r)*r^2 d^3x exists, and define I_ij=integral_R3 rho(r)*x_i*x_j d^3x. Exact sphere integration gives integral_S2 n_i*n_j dOmega=(4*pi/3)*delta_ij and hence I_ij=(J/3)*delta_ij. Therefore Tr(I)=J, the normalized tensor I_STF=I-delta*Tr(I)/3 is identically zero, and the triple convention Q=3*I_STF is identically zero. For the axisymmetric deformation rho=f(r)*(1+a*P2(cos(theta))) with the same scalar J, the exact guard is I_STF=diag(-a*J/15,-a*J/15,2*a*J/15) and Q=diag(-a*J/5,-a*J/5,2*a*J/5), which is nonzero when a*J is nonzero and returns to the spherical null at a=0. These are moment-kinematic identities. They define no gravitational dynamics and do not by themselves establish physical radiation, non-radiation, or a required dynamical l=2 channel.
+
+- Accepted in: `v0.40.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-MOM-001
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.
@@ -245,6 +254,15 @@ Adopt the C-SG-001 normalized sine-Gordon potential as a declared dimensionless 
 - Verification: `simulation_evidence`
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-001
+
+## C-PDE-002
+
+For the finite-time radial sine-Gordon branch of C-PDE-001, define the cutoff core energy-radius moment S_R(t)=4*pi*integral_0^R r^4*T00(r,t) dr. On the baseline domain 0<=r<=200, 0<=t<=450, dr=0.05, dt=0.02, and for each core cutoff R=20, 25, or 30, the detrended moment has a resolved dominant frequency near twice the contemporaneous center-field fundamental. On windows beginning at t=220 and t=300, detrended Hann/quadratic FFT and quadratically interpolated prominent-maximum estimates give moment to field frequency ratios between 1.995 and 2.005; the baseline R=30 moment frequencies lie between 1.83 and 1.85 and its relative half-range exceeds 0.25. Meshes dr=0.1, 0.05, 0.025, timestep halving, domains 160/200/240, and an independent dr=0.2 DOP853 method-of-lines route preserve the near-two verdict. The relation is cutoff- and resolution-bounded: at R=40 radiative-shell drift dominates the FFT, and the weak dispersive seed has no combined persistent-core verdict. This is a finite-time scalar diagnostic, not exact frequency doubling, a global moment theorem, conserved charge, gravitational quadrupole, radiation result, or substrate realization.
+
+- Accepted in: `v0.40.0`
+- Verification: `simulation_evidence`
+- Compatibility: `native`
+- Dependencies: C-PDE-001
 
 ## C-QBL-001
 

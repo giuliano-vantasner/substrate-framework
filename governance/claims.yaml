@@ -1920,3 +1920,82 @@ claims:
     accepted_in: v0.39.0
     challenges: []
     supersedes: []
+  - id: C-MOM-003
+    statement: >-
+      Let rho(r) be any radial density for which
+      J=integral_R3 rho(r)*r^2 d^3x exists, and define
+      I_ij=integral_R3 rho(r)*x_i*x_j d^3x. Exact sphere integration gives
+      integral_S2 n_i*n_j dOmega=(4*pi/3)*delta_ij and hence
+      I_ij=(J/3)*delta_ij. Therefore Tr(I)=J, the normalized tensor
+      I_STF=I-delta*Tr(I)/3 is identically zero, and the triple convention
+      Q=3*I_STF is identically zero. For the axisymmetric deformation
+      rho=f(r)*(1+a*P2(cos(theta))) with the same scalar J, the exact guard is
+      I_STF=diag(-a*J/15,-a*J/15,2*a*J/15) and
+      Q=diag(-a*J/5,-a*J/5,2*a*J/5), which is nonzero when a*J is nonzero and
+      returns to the spherical null at a=0. These are moment-kinematic
+      identities. They define no gravitational dynamics and do not by
+      themselves establish physical radiation, non-radiation, or a required
+      dynamical l=2 channel.
+    provenance: campaigns/P045-p3d2-spherical-stf-null/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-MOM-001
+    evidence:
+      - campaigns/P045-p3d2-spherical-stf-null/verify.py
+      - campaigns/P045-p3d2-spherical-stf-null/attempts/0003/result.yaml
+      - campaigns/P045-p3d2-spherical-stf-null/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-MOM-003-review.md
+      - tests/test_conserved_moments.py
+    assumptions:
+      - The radial density has a finite scalar second radial moment J; positivity is not required for the angular identity.
+      - The z axis defines the P2 deformation convention, and P2(mu)=(3*mu^2-1)/2.
+      - The normalized and triple STF conventions are those fixed by C-MOM-001.
+    comparators: []
+    accepted_in: v0.40.0
+    challenges: []
+    supersedes: []
+  - id: C-PDE-002
+    statement: >-
+      For the finite-time radial sine-Gordon branch of C-PDE-001, define the
+      cutoff core energy-radius moment
+      S_R(t)=4*pi*integral_0^R r^4*T00(r,t) dr. On the baseline domain
+      0<=r<=200, 0<=t<=450, dr=0.05, dt=0.02, and for each core cutoff
+      R=20, 25, or 30, the detrended moment has a resolved dominant frequency
+      near twice the contemporaneous center-field fundamental. On windows
+      beginning at t=220 and t=300, detrended Hann/quadratic FFT and
+      quadratically interpolated prominent-maximum estimates give moment to
+      field frequency ratios between 1.995 and 2.005; the baseline R=30
+      moment frequencies lie between 1.83 and 1.85 and its relative half-range
+      exceeds 0.25. Meshes dr=0.1, 0.05, 0.025, timestep halving, domains
+      160/200/240, and an independent dr=0.2 DOP853 method-of-lines route
+      preserve the near-two verdict. The relation is cutoff- and
+      resolution-bounded: at R=40 radiative-shell drift dominates the FFT,
+      and the weak dispersive seed has no combined persistent-core verdict.
+      This is a finite-time scalar diagnostic, not exact frequency doubling,
+      a global moment theorem, conserved charge, gravitational quadrupole,
+      radiation result, or substrate realization.
+    provenance: campaigns/P045-p3d2-spherical-stf-null/adjudication.yaml
+    verification: simulation_evidence
+    review: accepted
+    compatibility: native
+    epistemic: qualified
+    dependencies:
+      - C-PDE-001
+    evidence:
+      - campaigns/P045-p3d2-spherical-stf-null/verify.py
+      - campaigns/P045-p3d2-spherical-stf-null/attempts/0003/result.yaml
+      - campaigns/P045-p3d2-spherical-stf-null/reviews/independent_moment_frequency_review.py
+      - campaigns/P045-p3d2-spherical-stf-null/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-PDE-002-review.md
+      - tests/test_radial_sine_gordon.py
+    assumptions:
+      - The field equation, initial data, boundary treatment, dimensionless convention, and finite-time epistemic ceiling are exactly those of C-PDE-001.
+      - The core cutoff is part of the diagnostic and is restricted to 20 through 30; no R-to-infinity claim is made.
+      - Linear detrending removes only the fitted slow drift on each stated analysis window; both frequency estimators operate on the same centered timestamps.
+    comparators: []
+    accepted_in: v0.40.0
+    challenges: []
+    supersedes: []

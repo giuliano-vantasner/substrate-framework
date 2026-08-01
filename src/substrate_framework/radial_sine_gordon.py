@@ -15,6 +15,7 @@ from dataclasses import dataclass
 
 import numpy as np
 from numpy.typing import ArrayLike, NDArray
+from scipy.signal import find_peaks
 
 from .numerics import (
     NumericalFailure,
@@ -35,6 +36,8 @@ class RadialEvolution:
     center: FloatArray
     core_energy: FloatArray
     total_energy: FloatArray
+    core_energy_radius_moment: FloatArray
+    total_energy_radius_moment: FloatArray
     final_field: FloatArray
     final_velocity: FloatArray
     spacing: float
@@ -63,6 +66,18 @@ class FrequencyEvidence:
         """Absolute disagreement between the FFT and crossing estimates."""
 
         return abs(self.spectral_omega - self.crossing_omega)
+
+
+@dataclass(frozen=True)
+class PeakFrequencyEvidence:
+    """Time-domain frequency evidence from successive prominent maxima."""
+
+    angular_frequency: float
+    mean_period: float
+    relative_period_standard_deviation: float
+    cycles: int
+    window_start: float
+    window_end: float
 
 
 def gaussian_radial_seed(radius: ArrayLike, amplitude: float, width: float) -> FloatArray:
@@ -140,10 +155,22 @@ def radial_sine_gordon_energy(
     u = _field_vector(field)
     v = _matching_vector(velocity, u.size, "velocity")
     r = _radial_coordinate(radius, expected_size=u.size)
-    spacing = _uniform_spacing(r)
-    gradient = radial_gradient(u, spacing)
-    density = 0.5 * np.square(v) + 0.5 * np.square(gradient) + 1.0 - np.cos(u)
+    density = _radial_sine_gordon_energy_density(u, v, r)
     return 4.0 * np.pi * trapezoid_integral(np.square(r) * density, r)
+
+
+def radial_sine_gordon_energy_radius_moment(
+    field: ArrayLike,
+    velocity: ArrayLike,
+    radius: ArrayLike,
+) -> float:
+    """Evaluate ``integral T00*r^2*d^3x = 4*pi*integral r^4*T00 dr``."""
+
+    u = _field_vector(field)
+    v = _matching_vector(velocity, u.size, "velocity")
+    r = _radial_coordinate(radius, expected_size=u.size)
+    density = _radial_sine_gordon_energy_density(u, v, r)
+    return 4.0 * np.pi * trapezoid_integral(np.power(r, 4) * density, r)
 
 
 def estimate_angular_frequency(
@@ -151,6 +178,7 @@ def estimate_angular_frequency(
     trace: ArrayLike,
     *,
     window_start: float,
+    detrend_linear: bool = False,
 ) -> FrequencyEvidence:
     """Estimate angular frequency by a windowed FFT and rising crossings.
 
@@ -172,7 +200,11 @@ def estimate_angular_frequency(
     if np.count_nonzero(selected) < 16:
         raise ValueError("frequency window must contain at least 16 samples")
     tw = t[selected]
-    centered = y[selected] - float(np.mean(y[selected]))
+    centered = np.array(y[selected], copy=True)
+    if detrend_linear:
+        centered -= np.polyval(np.polyfit(tw, centered, 1), tw)
+    else:
+        centered -= float(np.mean(centered))
     if np.max(np.abs(centered)) == 0.0:
         raise ValueError("trace has no oscillatory component")
 
@@ -203,6 +235,71 @@ def estimate_angular_frequency(
         crossing_omega=crossing_omega,
         fft_bin_width=bin_width,
         crossing_cycles=len(crossing_times) - 1,
+        window_start=float(tw[0]),
+        window_end=float(tw[-1]),
+    )
+
+
+def estimate_peak_angular_frequency(
+    time: ArrayLike,
+    trace: ArrayLike,
+    *,
+    window_start: float,
+    minimum_period: float,
+    prominence_fraction: float = 0.1,
+    detrend_linear: bool = True,
+) -> PeakFrequencyEvidence:
+    """Estimate angular frequency from prominent time-domain maxima.
+
+    ``minimum_period`` is a declared physical separation scale that prevents
+    high harmonics or sampling noise from being counted as extra cycles.  The
+    function optionally removes only a least-squares linear drift and reports
+    the period scatter rather than hiding it in a single mean.
+    """
+
+    t = _one_dimensional_finite(time, "time")
+    y = _matching_vector(trace, t.size, "trace")
+    if t.size < 16 or np.any(np.diff(t) <= 0.0):
+        raise ValueError("time must contain at least 16 strictly increasing samples")
+    steps = np.diff(t)
+    sample_step = float(np.mean(steps))
+    if not np.allclose(steps, sample_step, rtol=1.0e-8, atol=1.0e-12):
+        raise ValueError("peak frequency estimation requires uniform sampling")
+    period_floor = _positive_finite(minimum_period, "minimum_period")
+    if (
+        not np.isfinite(prominence_fraction)
+        or prominence_fraction <= 0.0
+        or prominence_fraction >= 1.0
+    ):
+        raise ValueError("prominence_fraction must lie strictly between zero and one")
+    selected = t >= window_start
+    if np.count_nonzero(selected) < 16:
+        raise ValueError("frequency window must contain at least 16 samples")
+    tw = t[selected]
+    analyzed = np.array(y[selected], copy=True)
+    if detrend_linear:
+        analyzed -= np.polyval(np.polyfit(tw, analyzed, 1), tw)
+    else:
+        analyzed -= float(np.mean(analyzed))
+    peak_to_peak = float(np.ptp(analyzed))
+    if peak_to_peak == 0.0:
+        raise ValueError("trace has no oscillatory component")
+    minimum_samples = max(1, int(np.floor(period_floor / sample_step)))
+    peaks, _ = find_peaks(
+        analyzed,
+        distance=minimum_samples,
+        prominence=prominence_fraction * peak_to_peak,
+    )
+    if peaks.size < 3:
+        raise NumericalFailure("fewer than two complete peak periods were resolved")
+    periods = np.diff(tw[peaks])
+    mean_period = float(np.mean(periods))
+    relative_scatter = float(np.std(periods) / mean_period)
+    return PeakFrequencyEvidence(
+        angular_frequency=float(2.0 * np.pi / mean_period),
+        mean_period=mean_period,
+        relative_period_standard_deviation=relative_scatter,
+        cycles=int(periods.size),
         window_start=float(tw[0]),
         window_end=float(tw[-1]),
     )
@@ -264,6 +361,8 @@ def evolve_radial_sine_gordon_leapfrog(
     centers: list[float] = []
     core_energies: list[float] = []
     total_energies: list[float] = []
+    core_energy_radius_moments: list[float] = []
+    total_energy_radius_moments: list[float] = []
     max_monitor = max(abs(float(field_previous[monitor_index])), abs(float(field_current[monitor_index])))
     final_velocity = np.zeros_like(field_current)
 
@@ -295,6 +394,8 @@ def evolve_radial_sine_gordon_leapfrog(
                 centers,
                 core_energies,
                 total_energies,
+                core_energy_radius_moments,
+                total_energy_radius_moments,
             )
         field_previous, field_current = field_current, field_next
         final_velocity = centered_velocity
@@ -307,6 +408,12 @@ def evolve_radial_sine_gordon_leapfrog(
         center=np.asarray(centers, dtype=np.float64),
         core_energy=np.asarray(core_energies, dtype=np.float64),
         total_energy=np.asarray(total_energies, dtype=np.float64),
+        core_energy_radius_moment=np.asarray(
+            core_energy_radius_moments, dtype=np.float64
+        ),
+        total_energy_radius_moment=np.asarray(
+            total_energy_radius_moments, dtype=np.float64
+        ),
         # ``final_velocity`` is centered on ``field_previous`` after the last
         # swap; return the state at that same time rather than mixing levels.
         final_field=field_previous,
@@ -369,6 +476,8 @@ def evolve_radial_sine_gordon_mol(
     centers: list[float] = []
     core_energies: list[float] = []
     total_energies: list[float] = []
+    core_energy_radius_moments: list[float] = []
+    total_energy_radius_moments: list[float] = []
     max_monitor = 0.0
     final_field = np.zeros_like(radius)
     final_velocity = np.zeros_like(radius)
@@ -387,6 +496,8 @@ def evolve_radial_sine_gordon_mol(
             centers,
             core_energies,
             total_energies,
+            core_energy_radius_moments,
+            total_energy_radius_moments,
         )
         max_monitor = max(max_monitor, abs(float(field[monitor_index])))
         final_field, final_velocity = field, velocity
@@ -397,6 +508,12 @@ def evolve_radial_sine_gordon_mol(
         center=np.asarray(centers, dtype=np.float64),
         core_energy=np.asarray(core_energies, dtype=np.float64),
         total_energy=np.asarray(total_energies, dtype=np.float64),
+        core_energy_radius_moment=np.asarray(
+            core_energy_radius_moments, dtype=np.float64
+        ),
+        total_energy_radius_moment=np.asarray(
+            total_energy_radius_moments, dtype=np.float64
+        ),
         final_field=final_field,
         final_velocity=final_velocity,
         spacing=h,
@@ -420,12 +537,38 @@ def _record_diagnostics(
     centers: list[float],
     core_energies: list[float],
     total_energies: list[float],
+    core_energy_radius_moments: list[float],
+    total_energy_radius_moments: list[float],
 ) -> None:
     times.append(time_value)
     centers.append(float(field[0]))
     total_energies.append(radial_sine_gordon_energy(field, velocity, radius))
     core_energies.append(
         radial_sine_gordon_energy(field[core_mask], velocity[core_mask], radius[core_mask])
+    )
+    total_energy_radius_moments.append(
+        radial_sine_gordon_energy_radius_moment(field, velocity, radius)
+    )
+    core_energy_radius_moments.append(
+        radial_sine_gordon_energy_radius_moment(
+            field[core_mask], velocity[core_mask], radius[core_mask]
+        )
+    )
+
+
+def _radial_sine_gordon_energy_density(
+    field: FloatArray,
+    velocity: FloatArray,
+    radius: FloatArray,
+) -> FloatArray:
+    spacing = _uniform_spacing(radius)
+    gradient = radial_gradient(field, spacing)
+    return np.asarray(
+        0.5 * np.square(velocity)
+        + 0.5 * np.square(gradient)
+        + 1.0
+        - np.cos(field),
+        dtype=np.float64,
     )
 
 

@@ -1,0 +1,36 @@
+PASS [P045-P3D2] the audited P3D2 source is the hash-pinned candidate unit
+PASS [P045-P3D2] the hash-matched source reproduction exits with its four-check tally
+PASS [P045-P3D2] P3D2 uses the current trapezoid API with an older-version fallback
+PASS [P045-P3D2] direct sphere integration gives four-pi-over-three times identity
+PASS [P045-P3D2] an arbitrary radial density has isotropic second moment and exact STF null
+PASS [P045-P3D2] the exact P2 deformation has a nonzero axisymmetric STF tensor
+PASS [P045-P3D2] independent polynomial moments reproduce the P2 diagonal coefficients
+PASS [P045-P3D2] independent direct angular quadrature agrees with the exact P2 API
+PASS [P045-P3D2] isotropic second-moment normalization: baseline
+PASS [P045-P3D2] isotropic second-moment normalization: mutations supplied
+PASS [P045-P3D2] isotropic second-moment normalization: mutation 1 rejected
+PASS [P045-P3D2] isotropic second-moment normalization: mutation 2 rejected
+PASS [P045-P3D2] isotropic second-moment normalization: mutation 3 rejected
+  coarse: retention=0.931711493, Rcore=30.0, window220=(fft=1.837019105, peaks=1.833065731, ratios=2.000825783/1.998537570), window300=(fft=1.846884713, peaks=1.840263479, ratios=2.000230508/1.999041261)
+  baseline: retention=0.931904002, Rcore=30.0, window220=(fft=1.836824895, peaks=1.833065731, ratios=2.000850743/1.998749311), window300=(fft=1.846654767, peaks=1.840263479, ratios=2.000303395/1.999259381)
+  fine: retention=0.931951615, Rcore=30.0, window220=(fft=1.836772939, peaks=1.833065731, ratios=2.000854652/1.998803116), window300=(fft=1.846596051, peaks=1.840263479, ratios=2.000323979/1.999314334)
+  timestep_fine: retention=0.931891575, Rcore=30.0, window220=(fft=1.836774383, peaks=1.833065731, ratios=2.000852872/1.998791177), window300=(fft=1.846549871, peaks=1.840263479, ratios=2.000296677/1.999293014)
+  domain_small: retention=0.931711446, Rcore=30.0, window220=(fft=1.837019106, peaks=1.833065731, ratios=2.000825786/1.998537534), window300=(fft=1.846884703, peaks=1.840263479, ratios=2.000230509/1.999041210)
+  domain_large: retention=0.931711501, Rcore=30.0, window220=(fft=1.837019082, peaks=1.833065731, ratios=2.000825783/1.998537551), window300=(fft=1.846884670, peaks=1.840263479, ratios=2.000230508/1.999041232)
+  core_20: retention=0.939544770, Rcore=20.0, window220=(fft=1.837002387, peaks=1.833065731, ratios=2.000807575/1.998537570), window300=(fft=1.847181432, peaks=1.840263479, ratios=2.000551864/1.999041261)
+  core_25: retention=0.935929720, Rcore=25.0, window220=(fft=1.836976995, peaks=1.833065731, ratios=2.000779918/1.998537570), window300=(fft=1.847099022, peaks=1.840263479, ratios=2.000462611/1.999041261)
+  core_40: retention=0.921201665, Rcore=40.0, window220=(fft=0.073918461, peaks=1.834712691, ratios=0.080509758/2.000333202), window300=(fft=0.062555718, peaks=1.840263479, ratios=0.067749684/1.999041261)
+  weak: no resolved combined moment-frequency verdict
+PASS [P045-P3D2] all radial evolutions complete and record finite derived moment traces
+PASS [P045-P3D2] the declared core energy-radius moment has resolved nontrivial breathing
+PASS [P045-P3D2] FFT and prominent-peak routes place the core moment near twice the field frequency
+PASS [P045-P3D2] the two moment-frequency estimators agree on both settled windows
+PASS [P045-P3D2] mesh, timestep, and domain changes preserve moment-frequency ratios
+PASS [P045-P3D2] core cutoffs from twenty through thirty preserve the resolved frequency
+PASS [P045-P3D2] persistent-core twice-frequency moment verdict: baseline
+PASS [P045-P3D2] persistent-core twice-frequency moment verdict: mutations supplied
+PASS [P045-P3D2] persistent-core twice-frequency moment verdict: mutation 1 rejected
+PASS [P045-P3D2] persistent-core twice-frequency moment verdict: mutation 2 rejected
+PASS [P045-P3D2] P3D2's numerical STF zero is exact-theorem regression rather than an independent oracle
+PASS [P045-P3D2] P3D2's exact FFT-bin ratio is resolution bounded rather than exact frequency equality
+ALL 25 CHECKS PASS [P045-P3D2]

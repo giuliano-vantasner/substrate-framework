@@ -1,0 +1,8 @@
+PASS [P045-INDEPENDENT] adaptive DOP853 method-of-lines evolution completes with finite moment data
+PASS [P045-INDEPENDENT] the independently integrated core moment is nonconstant
+PASS [P045-INDEPENDENT] independent detrended FFT interpolation resolves the twice-frequency relation
+PASS [P045-INDEPENDENT] independent prominent-maximum periods resolve the twice-frequency relation
+PASS [P045-INDEPENDENT] adaptive and leapfrog moment traces agree on their common finite-time window
+PASS [P045-INDEPENDENT] the independent integrator and leapfrog give the same frequency verdict
+P045 independent metrics: nfev=40517, ratios={'fft_140': 2.000189565453914, 'peaks_140': 2.0019059009018116, 'fft_180': 1.9965848643920532, 'peaks_180': 2.00147110278976}, leapfrog_fft_ratios=[2.0002304042864063, 1.996808914127387], moment_relative_rms=1.469230831e-02
+ALL 6 CHECKS PASS [P045-INDEPENDENT]

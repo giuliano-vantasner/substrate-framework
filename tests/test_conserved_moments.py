@@ -4,8 +4,10 @@ import pytest
 import sympy as sp
 
 from substrate_framework.conserved_moments import (
+    axisymmetric_p2_density_second_moments,
     discrete_mass_moments,
     isolated_conserved_stress_moment_rates,
+    spherical_density_second_moments,
     symmetric_trace_free,
 )
 
@@ -67,6 +69,31 @@ def test_a_static_anisotropic_quadrupole_is_not_a_radiation_verdict() -> None:
     moments = discrete_mass_moments([1, 1], [[1, 0, 0], [-1, 0, 0]])
     assert moments.trace_free_second_moment != sp.zeros(3)
     assert sp.diff(moments.trace_free_second_moment, t, 2) == sp.zeros(3)
+
+
+def test_spherical_density_has_isotropic_second_moment_and_zero_stf() -> None:
+    scalar = sp.symbols("J", real=True)
+    moments = spherical_density_second_moments(scalar)
+    assert moments.second_moment == scalar * sp.eye(3) / 3
+    assert sp.trace(moments.second_moment) == scalar
+    assert moments.trace_free_second_moment == sp.zeros(3)
+    assert moments.triple_normalized_quadrupole == sp.zeros(3)
+
+
+def test_axisymmetric_p2_deformation_is_a_sensitive_nonzero_guard() -> None:
+    scalar, amplitude = sp.symbols("J a", real=True)
+    moments = axisymmetric_p2_density_second_moments(scalar, amplitude)
+    assert moments.trace_free_second_moment == sp.diag(
+        -amplitude * scalar / 15,
+        -amplitude * scalar / 15,
+        2 * amplitude * scalar / 15,
+    )
+    assert moments.triple_normalized_quadrupole == sp.diag(
+        -amplitude * scalar / 5,
+        -amplitude * scalar / 5,
+        2 * amplitude * scalar / 5,
+    )
+    assert moments.triple_normalized_quadrupole.subs(amplitude, 0) == sp.zeros(3)
 
 
 @pytest.mark.parametrize(

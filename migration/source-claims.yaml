@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 176
-  qualified: 35
+  pending_adjudication: 175
+  qualified: 36
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2826,8 +2826,23 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOM-003
+  - C-PDE-002
+  qualification: >-
+    The arbitrary-radial-density isotropic moment and STF null are exact, and
+    the accepted C-PDE-001 branch has a cutoff-qualified finite-time core
+    energy-radius moment near twice its contemporaneous field frequency. The
+    source does not establish exact frequency equality, an unrestricted
+    global moment relation, physical gravitational silence, a required
+    radiating l=2 mode, absolute scale, or substrate realization.
+  evidence:
+  - campaigns/P045-p3d2-spherical-stf-null/reviews/source_adjudication.md
+  note: >-
+    P045 separates the exact tensor theorem from simulation evidence, exposes
+    the source's bins-17/34 exact-ratio artifact and tautological numeric zero,
+    and preserves the radius-40 radiative-shell counterexample.
 - source_unit: P3D3
   phase: phase-14
   path: merged-framework/bridges/phase-14/bridge_P3D3_l2_selfconsistent_quadrupole.py

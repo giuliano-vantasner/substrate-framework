@@ -1,0 +1,19 @@
+attempt: 0002
+completed_at: '2026-08-01T20:19:19Z'
+exit_code: 1
+primary_terminal_tally: 25
+independent_terminal_tally: null
+verdict: independent_review_failure
+failure: >-
+  The primary exact and refined simulation oracle passed all 25 checks. The
+  independent DOP853 FFT ratio passed, but peak periods taken at raw 0.2-unit
+  sample timestamps gave a late-window ratio 2.00554 and failed the 0.004
+  review threshold.
+diagnosis: time_peak_representation
+next_attempt: >-
+  Interpolate each smooth local maximum quadratically from its three adjacent
+  samples before averaging peak periods. Keep the same threshold, windows,
+  evolution, and physical claim.
+status: failed_preserved
+primary_stdout: primary.stdout.txt
+independent_stdout: independent.stdout.txt

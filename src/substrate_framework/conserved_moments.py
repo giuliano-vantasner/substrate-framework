@@ -41,6 +41,53 @@ class DiscreteMassMoments:
     triple_normalized_quadrupole: sp.Matrix
 
 
+@dataclass(frozen=True)
+class RadialDensitySecondMoments:
+    """Second moments of a radial density with an optional axisymmetric P2 factor."""
+
+    scalar_radial_moment: sp.Expr
+    second_moment: sp.Matrix
+    trace_free_second_moment: sp.Matrix
+    triple_normalized_quadrupole: sp.Matrix
+
+
+def axisymmetric_p2_density_second_moments(
+    scalar_radial_moment: Any,
+    deformation_amplitude: Any = 0,
+) -> RadialDensitySecondMoments:
+    """Return moments for ``rho=f(r)*(1+a*P2(cos(theta)))`` exactly.
+
+    ``scalar_radial_moment`` means ``integral rho*r^2*d^3x``.  Because the
+    angular mean of ``P2`` vanishes, it is also ``4*pi*integral f(r)*r^4 dr``
+    for every ``a``.  The symmetry axis is z.  Setting ``a=0`` gives an
+    arbitrary spherical density; no field equation or positivity assumption
+    is needed for this angular theorem.
+    """
+
+    scalar = sp.sympify(scalar_radial_moment)
+    amplitude = sp.sympify(deformation_amplitude)
+    second = sp.diag(
+        scalar * (sp.Rational(1, 3) - amplitude / 15),
+        scalar * (sp.Rational(1, 3) - amplitude / 15),
+        scalar * (sp.Rational(1, 3) + 2 * amplitude / 15),
+    )
+    trace_free = symmetric_trace_free(second)
+    return RadialDensitySecondMoments(
+        scalar_radial_moment=scalar,
+        second_moment=second,
+        trace_free_second_moment=trace_free,
+        triple_normalized_quadrupole=sp.simplify(3 * trace_free),
+    )
+
+
+def spherical_density_second_moments(
+    scalar_radial_moment: Any,
+) -> RadialDensitySecondMoments:
+    """Return the isotropic second moment and exact STF null of a radial density."""
+
+    return axisymmetric_p2_density_second_moments(scalar_radial_moment, 0)
+
+
 def discrete_mass_moments(
     masses: Sequence[Any],
     positions: Sequence[Sequence[Any]],

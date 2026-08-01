@@ -1,0 +1,16 @@
+attempt: 0002
+campaign: P045
+started_at: '2026-08-01T20:16:12Z'
+base_release: v0.39.0
+base_commit: aca7e79
+source_unit: P3D2
+source_sha256: 72802a3bb3ed46be3bf7b96e035028b0ded352ae02e587cb14b9db902b2125cb
+candidate: A
+repair_from: attempts/0001/result.yaml
+oracles:
+  - exact sphere and P2 angular integration with normalized symbolic comparison
+  - independent direct angular quadrature and coefficient mutations
+  - canonical radial energy-radius moment with all preregistered sensitivities
+expected_positive_object: >-
+  The unchanged exact spherical STF theorem and conditionally retained refined
+  finite-time moment-frequency characterization.

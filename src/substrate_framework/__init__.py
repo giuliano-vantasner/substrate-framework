@@ -22,8 +22,11 @@ from .abelian_higgs_vortex import (
 from .conserved_moments import (
     DiscreteMassMoments,
     IsolatedMomentRates,
+    RadialDensitySecondMoments,
+    axisymmetric_p2_density_second_moments,
     discrete_mass_moments,
     isolated_conserved_stress_moment_rates,
+    spherical_density_second_moments,
     symmetric_trace_free,
 )
 from .circular_pair import (
@@ -149,14 +152,17 @@ from .radial_energy import (
 )
 from .radial_sine_gordon import (
     FrequencyEvidence,
+    PeakFrequencyEvidence,
     RadialEvolution,
     estimate_angular_frequency,
+    estimate_peak_angular_frequency,
     evolve_radial_sine_gordon_leapfrog,
     evolve_radial_sine_gordon_mol,
     gaussian_radial_seed,
     radial_gradient,
     radial_laplacian,
     radial_sine_gordon_energy,
+    radial_sine_gordon_energy_radius_moment,
 )
 from .renormalization import (
     one_loop_inverse_coupling_squared,

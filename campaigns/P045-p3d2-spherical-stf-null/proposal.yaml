@@ -1,0 +1,50 @@
+id: P045
+base_release: v0.39.0
+base_commit: aca7e79
+source_baseline: substrate@6d1f4e0
+source_units: [P3D2]
+question: >-
+  Derive the exact second-moment and STF tensors of an arbitrary integrable
+  spherical density, then determine whether the accepted radial sine-Gordon
+  trajectory has a resolved oscillating core energy-radius moment near twice
+  its fundamental frequency without interpreting the algebraic STF null as a
+  physical gravitational-radiation theorem.
+invariants:
+  - C-MOM-001 fixes normalized and triple STF conventions but not a gravity theory
+  - C-PDE-001 supplies only finite-time simulation evidence for one radial IVP
+  - exact spherical symmetry makes the STF second moment zero independently of radial dynamics
+  - a zero supplied STF tensor is not by itself proof of a physical radiation null
+  - P3D3 and P3D4 are pending and cannot be accepted dependencies
+allowed_imports:
+  - C-MOM-001 second-moment and STF conventions
+  - C-PDE-001 canonical radial sine-Gordon IVP and simulation scope
+  - standard spherical angular measure and Legendre polynomial algebra
+  - P3D2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote an exact spherical-moment/STF-null theorem and a separately
+      classified refined numeric core energy-radius moment characterization
+  - id: B
+    description: >-
+      Promote only the exact spherical STF null if the scalar-moment frequency
+      is window, core-radius, or resolution dependent
+  - id: C
+    description: >-
+      Interpret the algebraic quadrupole null as proof that the radial scalar
+      field emits no physical gravitational radiation
+uniqueness_evidence: null
+selection_criteria:
+  - exact angular integration and convention-consistent STF normalization
+  - validity for arbitrary integrable radial density without PDE assumptions
+  - non-spherical deformation mutation with a nonzero exact STF tensor
+  - canonical rather than duplicated radial-PDE implementation
+  - solver status and mesh, timestep, window, domain, and core-radius sensitivity
+  - independent time/frequency and direct angular-quadrature routes
+  - strict separation of moment kinematics from a physical radiation theory
+claims_proposed:
+  - provisional C-MOM-003
+  - provisional C-PDE-002
+comparators_blinded_until: >-
+  angular_theorem_moment_definition_frequency_estimators_refinements_and_scope_frozen
+status: accepted

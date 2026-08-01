@@ -1,0 +1,6 @@
+PASS [P045-P3D2] the audited P3D2 source is the hash-pinned candidate unit
+PASS [P045-P3D2] the hash-matched source reproduction exits with its four-check tally
+PASS [P045-P3D2] P3D2 uses the current trapezoid API with an older-version fallback
+PASS [P045-P3D2] direct sphere integration gives four-pi-over-three times identity
+PASS [P045-P3D2] an arbitrary radial density has isotropic second moment and exact STF null
+P045 verifier failed: FAIL [P045-P3D2] the exact P2 deformation has a nonzero axisymmetric STF tensor

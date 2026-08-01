@@ -1,0 +1,38 @@
+attempt: 0003
+completed_at: '2026-08-01T20:20:29Z'
+exit_code: 0
+primary_terminal_tally: 25
+independent_terminal_tally: 6
+primary_verifier_sha256: 8db1c2a530eac69c443d26ed501b43d243985b56cc14c4807f2820438f2913f6
+independent_verifier_sha256: 7c6f9ae0559b95ae8f2306510bfd5f0769da9c2e02e11116c82cf863659525be
+verdict:
+  C-MOM-003: symbolic_verified
+  C-PDE-002: simulation_evidence
+evidence:
+  - exact sphere angular tensor and arbitrary radial-density reduction
+  - exact normalized and triple STF null with P2 deformation mutation
+  - independent Gauss-Legendre and azimuthal angular quadrature
+  - canonical centered r-squared-weighted core energy moment
+  - FFT and sub-sample prominent-peak frequencies on two settled windows
+  - three spatial meshes, timestep halving, three domains, and core cutoffs 20/25/30
+  - independent DOP853 method-of-lines trajectory and local frequency implementation
+numeric_scope:
+  initial_data: u(r,0)=3*exp(-(r/4)^2), u_t(r,0)=0
+  baseline_domain: 0<=r<=200, 0<=t<=450
+  baseline_spacing: 0.05
+  baseline_timestep: 0.02
+  accepted_core_cutoffs: 20<=Rcore<=30
+  analysis_windows: [220<=t<=450, 300<=t<=450]
+  baseline_moment_fft_omega: [1.836824895, 1.846654767]
+  baseline_moment_peak_omega: [1.833065731, 1.840263479]
+  baseline_fft_ratios: [2.000850743, 2.000303395]
+  baseline_time_ratios: [1.998749311, 1.999259381]
+qualifications:
+  - the exact STF null is moment kinematics and not a physical radiation theorem
+  - the twice-frequency relation is resolution-bounded and slowly chirped, not exact equality
+  - at core cutoff 40 the r-fourth-weighted radiative shell makes low-frequency drift dominate the FFT
+  - the source numerical STF zero is assembled from the exact isotropic form and is not independent evidence
+  - the weak dispersive seed has no resolved persistent-core moment verdict
+status: passed_after_symbolic_normalization_and_peak_interpolation_repairs
+primary_stdout: ../0002/primary.stdout.txt
+independent_stdout: ../../reviews/independent_moment_frequency_review.stdout.txt

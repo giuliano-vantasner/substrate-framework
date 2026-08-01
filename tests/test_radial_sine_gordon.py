@@ -5,11 +5,13 @@ import pytest
 
 from substrate_framework.radial_sine_gordon import (
     estimate_angular_frequency,
+    estimate_peak_angular_frequency,
     evolve_radial_sine_gordon_leapfrog,
     gaussian_radial_seed,
     radial_gradient,
     radial_laplacian,
     radial_sine_gordon_energy,
+    radial_sine_gordon_energy_radius_moment,
 )
 
 
@@ -40,6 +42,10 @@ def test_energy_uses_spherical_measure_and_current_trapezoid_api() -> None:
     assert radial_sine_gordon_energy(field, velocity, radius) == pytest.approx(
         expected, rel=2.0e-4
     )
+    expected_radius_moment = 2.0 * np.pi * 2.0**5 / 5.0
+    assert radial_sine_gordon_energy_radius_moment(
+        field, velocity, radius
+    ) == pytest.approx(expected_radius_moment, rel=7.0e-4)
 
 
 def test_frequency_estimates_agree_for_a_known_signal() -> None:
@@ -49,6 +55,24 @@ def test_frequency_estimates_agree_for_a_known_signal() -> None:
     assert evidence.spectral_omega == pytest.approx(0.83, abs=2.0e-3)
     assert evidence.crossing_omega == pytest.approx(0.83, abs=2.0e-3)
     assert evidence.crossing_cycles >= 9
+
+
+def test_peak_frequency_handles_linear_drift_and_harmonics() -> None:
+    time = np.linspace(0.0, 100.0, 5001)
+    trace = (
+        0.03 * time
+        + 1.2 * np.cos(1.66 * time + 0.2)
+        + 0.08 * np.cos(3.32 * time)
+    )
+    evidence = estimate_peak_angular_frequency(
+        time,
+        trace,
+        window_start=20.0,
+        minimum_period=2.5,
+    )
+    assert evidence.angular_frequency == pytest.approx(1.66, abs=2.0e-3)
+    assert evidence.relative_period_standard_deviation < 0.01
+    assert evidence.cycles >= 19
 
 
 def test_short_leapfrog_run_completes_with_finite_diagnostics() -> None:
@@ -65,6 +89,8 @@ def test_short_leapfrog_run_completes_with_finite_diagnostics() -> None:
     assert result.method == "centered-leapfrog"
     assert result.time.size >= 9
     assert np.all(np.isfinite(result.total_energy))
+    assert np.all(np.isfinite(result.core_energy_radius_moment))
+    assert np.all(np.isfinite(result.total_energy_radius_moment))
     assert result.total_energy.min() > 0.0
 
 

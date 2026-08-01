@@ -1,0 +1,23 @@
+attempt: 0001
+campaign: P045
+started_at: '2026-08-01T20:11:38Z'
+base_release: v0.39.0
+base_commit: aca7e79
+source_unit: P3D2
+source_sha256: 72802a3bb3ed46be3bf7b96e035028b0ded352ae02e587cb14b9db902b2125cb
+candidate: A
+oracles:
+  - exact sphere integration for all Cartesian unit-vector products
+  - arbitrary-radial-density isotropic moment and normalized/triple STF null
+  - exact P2 deformation coefficients plus independent angular quadrature
+  - canonical radial evolution with an actual r-squared-weighted energy moment
+  - FFT and prominent-peak time-domain frequencies on two settled windows
+  - mesh, timestep, domain, and core-radius sensitivity
+mutations:
+  - omit or alter the one-third spherical moment coefficient
+  - use nonzero P2 deformation amplitude
+  - replace the persistent branch with the dispersive seed
+expected_positive_object: >-
+  An exact spherical second-moment/STF-null theorem and, only if every numeric
+  sensitivity gate passes, a separately labeled finite-time core
+  energy-radius moment characterization near twice the field frequency.

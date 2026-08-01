@@ -1,0 +1,60 @@
+campaign: P045
+title: Exact spherical STF null, finite-time core moment, and P3D2 audit
+source_baseline: substrate@6d1f4e0
+source_units: [P3D2]
+base_release: v0.39.0
+adjudicated_at: '2026-08-01T20:21:47Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Exact angular integration closes the arbitrary-radial-density STF null,
+    while a separately cutoff-qualified core energy-radius moment survives
+    dual frequency estimators, mesh/timestep/domain/cutoff studies, an
+    independent integrator, and explicit counterexamples.
+competing_candidates:
+  - id: B
+    decision: rejected_for_cutoffs_20_through_30_but_required_for_any_unrestricted_or_global_moment_frequency_claim
+  - id: C
+    decision: rejected_because_moment_kinematics_without_gravitational_dynamics_cannot_establish_physical_radiation_or_silence
+claims:
+  - id: C-MOM-003
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+  - id: C-PDE-002
+    verification: simulation_evidence
+    review: accepted
+    compatibility: native
+    epistemic: qualified
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0003/result.yaml
+  failed_attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+  independent_review: reviews/independent_moment_frequency_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-MOM-003-review.md
+    - memory/vantasner/decisions/C-PDE-002-review.md
+source_disposition:
+  P3D2: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P045-p3d2-spherical-stf-null/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-14/bridge_P3D2_spherical_quadrupole_null.py
+    --source-reproduction campaigns/P045-p3d2-spherical-stf-null/evidence/source-reproduction.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P045-p3d2-spherical-stf-null/reviews/independent_moment_frequency_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_conserved_moments.py
+    tests/test_radial_sine_gordon.py tests/test_numerics.py
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P044-p3d1-radial-sine-gordon-oscillon/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-14/bridge_P3D1_radial_pulson_exists.py
+    --source-reproduction campaigns/P044-p3d1-radial-sine-gordon-oscillon/evidence/source-reproduction.yaml
+debt: []
+status: accepted
