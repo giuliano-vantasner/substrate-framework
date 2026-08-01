@@ -7,6 +7,7 @@ from substrate_framework.optical_geometry import (
     index_from_potential,
     optical_box_static_1d,
     optical_dilaton,
+    optical_dilaton_source_operator_1d,
     optical_metric_1d,
     optical_ricci_scalar_1d,
     slow_geodesic_acceleration_from_potential,
@@ -35,6 +36,15 @@ def test_conditional_potential_map_and_drift_are_exact() -> None:
         slow_geodesic_acceleration_from_potential(potential, x, c0)
         + (1 + 2 * potential / c0**2) * sp.diff(potential, x)
     ) == 0
+
+
+def test_conditional_source_operator_is_exact_not_just_weak_field() -> None:
+    x = sp.symbols("x", real=True)
+    c0 = sp.symbols("c0", positive=True)
+    potential = sp.Function("Phi")(x)
+    source_side = optical_dilaton_source_operator_1d(potential, x, c0)
+    assert sp.simplify(source_side - 2 * sp.diff(potential, x, 2)) == 0
+    assert c0 not in source_side.free_symbols
 
 
 @pytest.mark.parametrize(

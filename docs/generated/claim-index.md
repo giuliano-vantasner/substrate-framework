@@ -39,6 +39,15 @@ Conditional on C-OG-001 and the imported constitutive relation n = 1/(1 + 2*Phi/
 - Compatibility: `compatible_extension`
 - Dependencies: C-OG-001
 
+## C-OG-003
+
+Conditional on C-OG-001 and C-OG-002, for every twice-differentiable potential Phi(x) whose TF index n = 1/(1 + 2*Phi/c0^2) is positive, the exact source-side optical dilaton operator is -Box_g(log(n)) = 2*Phi_xx; no weak-field approximation is required and c0 cancels. Consequently, if a separate model declares -Box_g(phi) = kappa*rho, that equation is algebraically equivalent to Phi_xx = (kappa/2)*rho. This claim neither derives that matter equation nor assigns a physical normalization to kappa.
+
+- Accepted in: `v0.10.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-OG-001, C-OG-002
+
 ## C-RG-001
 
 For positive radius R and density lambda, the circumference line energy E_line = 2*pi*R*lambda is homogeneous of degree one, has constant positive derivative 2*pi*lambda, and has no stationary radius. For positive surface density sigma, E_shell = 4*pi*R^2*sigma is homogeneous of degree two and has radius-dependent derivative 8*pi*R*sigma. For positive line tension T and pressure P, E_cap = 2*pi*R*T - pi*R^2*P + C has the unique strict global maximum R = T/P. Conditional line constructions with coefficients T and the C-SG-002 breather energy share only the degree-one line form; their energies are equal for every positive R if and only if their coefficients are equal.

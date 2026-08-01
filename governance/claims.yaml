@@ -161,6 +161,39 @@ claims:
     accepted_in: v0.4.0
     challenges: []
     supersedes: []
+  - id: C-OG-003
+    statement: >-
+      Conditional on C-OG-001 and C-OG-002, for every twice-differentiable
+      potential Phi(x) whose TF index n = 1/(1 + 2*Phi/c0^2) is positive,
+      the exact source-side optical dilaton operator is
+      -Box_g(log(n)) = 2*Phi_xx; no weak-field approximation is required and
+      c0 cancels. Consequently, if a separate model declares
+      -Box_g(phi) = kappa*rho, that equation is algebraically equivalent to
+      Phi_xx = (kappa/2)*rho. This claim neither derives that matter equation
+      nor assigns a physical normalization to kappa.
+    provenance: campaigns/P010-optical-source-operator/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-OG-001
+      - C-OG-002
+    evidence:
+      - campaigns/P010-optical-source-operator/verify.py
+      - campaigns/P010-optical-source-operator/attempts/0001/result.yaml
+      - campaigns/P010-optical-source-operator/reviews/independent_density_review.py
+      - campaigns/P010-optical-source-operator/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-OG-003-review.md
+      - tests/test_optical_geometry.py
+    assumptions:
+      - The accepted static 1+1 optical metric and scalar-operator sign convention are retained.
+      - The TF index map is an approved conditional import and produces a positive index.
+      - Any matter-source equation and coupling kappa are separate premises, not consequences of this identity.
+    comparators: []
+    accepted_in: v0.10.0
+    challenges: []
+    supersedes: []
   - id: C-TH-001
     statement: >-
       For every real dimensionless splitting x, the normalized upper-state

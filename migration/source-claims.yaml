@@ -8,9 +8,9 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  partially_migrated: 2
+  partially_migrated: 1
   pending_adjudication: 210
-  qualified: 3
+  qualified: 4
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -122,14 +122,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: partially_migrated
+  disposition: qualified
   accepted_claims:
   - C-OG-001
   - C-OG-002
-  remaining_scope: The matter-sourced dilaton equation and its claimed Poisson normalization remain unaccepted,
-    and the verified 3+1 counterexample is only a scope guard rather than a positive gravity construction.
-  note: P004 promoted the exact 1+1 identity, its true uniqueness class modulo a constant, and the conditional
-    TF/geodesic weak-field map.
+  - C-OG-003
+  qualification: The exact 1+1 geometry, conditional TF drift, and source-operator pullback are accepted,
+    but T1B does not derive its matter equation, 8*pi*G_eff normalization, physical cross-program identity,
+    or a positive 3+1 gravity construction.
+  evidence:
+  - campaigns/P010-optical-source-operator/reviews/source_adjudication.md
+  note: P004 promoted the exact 1+1 identity and conditional TF/geodesic map; P010 promotes the exact
+    source-operator pullback and terminally audits the unproved dynamical interpretations.
 - source_unit: T1D
   phase: phase-1
   path: merged-framework/bridges/phase-1/bridge_T1D_Rk_E0_divides_out.py

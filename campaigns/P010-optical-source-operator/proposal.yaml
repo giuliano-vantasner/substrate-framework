@@ -1,0 +1,39 @@
+id: P010
+base_release: v0.9.0
+base_commit: e52dec9
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1B
+question: >-
+  Derive the exact pullback of the accepted 1+1 optical dilaton operator under
+  the conditional TF index map, determine precisely what Poisson equation is
+  equivalent to a separately declared matter-source equation, and terminally
+  adjudicate T1B without treating that declaration as a derived dynamics.
+invariants:
+  - C-OG-001 and C-OG-002 retain their exact 1+1 scope and conventions
+  - the TF index relation remains an explicit conditional import
+  - a kinematic operator identity does not establish a matter equation or coupling normalization
+  - the known 3+1 residual remains a scope guard rather than a positive gravity construction
+allowed_imports:
+  - C-OG-001 for the optical metric, dilaton, and curvature identity
+  - C-OG-002 for the conditional TF index map
+  - exact pseudo-Riemannian geometry and real calculus
+  - predecessor bridge T1B at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Pull the full curved dilaton operator through the TF map and simplify before taking any limit
+  - id: B
+    description: Promote the predecessor's matter-source and kappa normalization as a dynamical derivation
+  - id: C
+    description: Retain only the weak-field Taylor coefficient already implicit in C-OG-002
+uniqueness_evidence: null
+selection_criteria:
+  - dependency closure from accepted claims and declared imports
+  - exactness before approximation
+  - separation of kinematic identities from dynamical source laws
+  - parameter and assumption economy
+  - mutation sensitivity and independent tensor rederivation
+claims_proposed:
+  - C-OG-003
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1B
+framework_base: e52dec9
+question: >-
+  Does the full accepted 1+1 optical operator pull back exactly to twice the
+  potential Laplacian, while leaving the matter equation and coupling as
+  separate premises?
+command: PYTHONPATH=src .venv/bin/python proposals/P010-optical-source-operator/verify.py
+oracle:
+  kind: exact_sympy_geometry_and_algebra
+  mutation_requirements:
+    - reject the wrong source-operator sign
+    - reject a changed TF coefficient
+    - reject a changed TF exponent
+status: running

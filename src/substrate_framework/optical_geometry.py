@@ -89,3 +89,19 @@ def slow_geodesic_acceleration_from_potential(
 
     n_value = index_from_potential(potential, signal_speed)
     return slow_geodesic_acceleration_1d(n_value, coordinate, signal_speed)
+
+
+def optical_dilaton_source_operator_1d(
+    potential: Any, coordinate: sp.Symbol, signal_speed: Any
+) -> sp.Expr:
+    """Return ``-Box_g(log(n(Phi)))`` under the conditional TF index map.
+
+    This is the geometric source-side operator, not a matter field equation.
+    In the accepted 1+1 conventions it simplifies exactly to ``2*Phi_xx``.
+    """
+
+    n_value = index_from_potential(potential, signal_speed)
+    dilaton = optical_dilaton(n_value)
+    return sp.simplify(
+        -optical_box_static_1d(dilaton, n_value, coordinate, signal_speed)
+    )

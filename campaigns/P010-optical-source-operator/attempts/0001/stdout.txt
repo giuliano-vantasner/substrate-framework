@@ -1,0 +1,13 @@
+PASS [C-OG-003] the full curved source-side operator is exactly twice the potential Laplacian
+PASS [C-OG-003] the result is the negative accepted optical curvature under the TF map
+PASS [C-OG-003] the signal-speed factors cancel without a weak-field limit
+PASS [C-OG-003] the conditional source equation and Poisson-form equation have identical residuals up to two
+PASS [C-OG-003] the exact scaled family is linear in the potential amplitude
+PASS [C-OG-003] the weak-field quotient is a corollary of the exact identity
+PASS [C-OG-003] operator sign, TF coefficient, and TF exponent: baseline
+PASS [C-OG-003] operator sign, TF coefficient, and TF exponent: mutations supplied
+PASS [C-OG-003] operator sign, TF coefficient, and TF exponent: mutation 1 rejected
+PASS [C-OG-003] operator sign, TF coefficient, and TF exponent: mutation 2 rejected
+PASS [C-OG-003] operator sign, TF coefficient, and TF exponent: mutation 3 rejected
+ALL 11 CHECKS PASS [C-OG-003]
+P010 ALL 11 CHECKS PASS

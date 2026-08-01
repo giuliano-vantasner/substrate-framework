@@ -1,0 +1,42 @@
+campaign: P010
+title: Exact conditional optical dilaton source operator
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1B
+base_release: v0.9.0
+adjudicated_at: '2026-08-01T12:25:15Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Pulling the full curved operator through the TF map gives an exact
+    dependency-closed identity without a weak-field approximation or an
+    undeclared matter dynamics.
+competing_candidates:
+  - id: B
+    decision: rejected_because_no_matter_action_variation_or_coupling_derivation_exists
+  - id: C
+    decision: retained_as_a_valid_but_strictly_weaker_limit_of_candidate_A
+claims:
+  - id: C-OG-003
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_density_review.py
+  source_adjudication: reviews/source_adjudication.md
+source_disposition:
+  T1B: qualified
+qualification:
+  T1B: >-
+    Its exact 1+1 geometry, conditional TF drift, and source-operator pullback
+    map to accepted claims, but the matter equation, 8*pi*G_eff normalization,
+    physical cross-program identity, and positive 3+1 construction are not derived.
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P010-optical-source-operator/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P010-optical-source-operator/reviews/independent_density_review.py
+  - .venv/bin/python -m pytest -q tests/test_optical_geometry.py
+debt: []
+status: accepted

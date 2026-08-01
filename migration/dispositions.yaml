@@ -19,17 +19,22 @@ units:
       guards, the free-radius result, and the conditional breather coefficient
       while proving that shared form does not equate coefficients or objects.
   T1B:
-    disposition: partially_migrated
+    disposition: qualified
     accepted_claims:
       - C-OG-001
       - C-OG-002
-    remaining_scope: >-
-      The matter-sourced dilaton equation and its claimed Poisson normalization
-      remain unaccepted, and the verified 3+1 counterexample is only a scope
-      guard rather than a positive gravity construction.
+      - C-OG-003
+    qualification: >-
+      The exact 1+1 geometry, conditional TF drift, and source-operator
+      pullback are accepted, but T1B does not derive its matter equation,
+      8*pi*G_eff normalization, physical cross-program identity, or a positive
+      3+1 gravity construction.
+    evidence:
+      - campaigns/P010-optical-source-operator/reviews/source_adjudication.md
     note: >-
-      P004 promoted the exact 1+1 identity, its true uniqueness class modulo a
-      constant, and the conditional TF/geodesic weak-field map.
+      P004 promoted the exact 1+1 identity and conditional TF/geodesic map;
+      P010 promotes the exact source-operator pullback and terminally audits
+      the unproved dynamical interpretations.
   T1D:
     disposition: migrated
     accepted_claims:
