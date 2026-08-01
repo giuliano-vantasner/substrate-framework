@@ -1,0 +1,30 @@
+PASS [C-RG-001] circumference line energy is exactly homogeneous of degree one
+PASS [C-RG-001] line energy obeys the degree-one Euler identity
+PASS [C-RG-001] line marginal energy is constant in radius and positive
+PASS [C-RG-001] positive line energy has no stationary radius
+PASS [C-RG-001] spherical-shell energy is exactly homogeneous of degree two
+PASS [C-RG-001] shell energy obeys the degree-two Euler identity
+PASS [C-RG-001] shell marginal energy carries an explicit radius factor
+PASS [C-RG-001] the shell fails the degree-one line predicate
+PASS [C-RG-001] the full capillary form is not the isolated homogeneous line term
+PASS [C-RG-001] the positive-pressure capillary energy has stationary radius T/P
+PASS [C-RG-001] the capillary stationary radius is the unique strict global maximum
+PASS [C-RG-001] the conditional breather ring uses the accepted C-SG-002 coefficient
+PASS [C-RG-001] the conditional breather line has the accepted endpoint limits
+PASS [C-RG-001] the two line instantiations differ only by their independent densities
+PASS [C-RG-001] equality of both line energies is equivalent to explicit coefficient equality
+PASS [C-RG-001] circumference factor and radial degree: baseline
+PASS [C-RG-001] circumference factor and radial degree: mutations supplied
+PASS [C-RG-001] circumference factor and radial degree: mutation 1 rejected
+PASS [C-RG-001] circumference factor and radial degree: mutation 2 rejected
+PASS [C-RG-001] circumference factor and radial degree: mutation 3 rejected
+PASS [C-RG-001] coefficient equality must be explicit: baseline
+PASS [C-RG-001] coefficient equality must be explicit: mutations supplied
+PASS [C-RG-001] coefficient equality must be explicit: mutation 1 rejected
+PASS [C-RG-001] coefficient equality must be explicit: mutation 2 rejected
+PASS [C-RG-001] capillary critical point is a maximum only for positive drive: baseline
+PASS [C-RG-001] capillary critical point is a maximum only for positive drive: mutations supplied
+PASS [C-RG-001] capillary critical point is a maximum only for positive drive: mutation 1 rejected
+PASS [C-RG-001] capillary critical point is a maximum only for positive drive: mutation 2 rejected
+ALL 28 CHECKS PASS [C-RG-001]
+P006 ALL 28 CHECKS PASS

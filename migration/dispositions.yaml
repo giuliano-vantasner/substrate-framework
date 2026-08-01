@@ -10,6 +10,14 @@ allowed_dispositions:
   - duplicate_evidence
   - out_of_scope
 units:
+  T1A:
+    disposition: migrated
+    accepted_claims:
+      - C-RG-001
+    note: >-
+      P006 promotes the exact line/shell scaling classification, both shell
+      guards, the free-radius result, and the conditional breather coefficient
+      while proving that shared form does not equate coefficients or objects.
   T1B:
     disposition: partially_migrated
     accepted_claims:

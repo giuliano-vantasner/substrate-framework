@@ -7,9 +7,9 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
-  migrated: 1
+  migrated: 2
   partially_migrated: 3
-  pending_adjudication: 214
+  pending_adjudication: 213
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -83,8 +83,12 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: migrated
+  accepted_claims:
+  - C-RG-001
+  note: P006 promotes the exact line/shell scaling classification, both shell guards, the free-radius
+    result, and the conditional breather coefficient while proving that shared form does not equate coefficients
+    or objects.
 - source_unit: T1B
   phase: phase-1
   path: merged-framework/bridges/phase-1/bridge_T1B_phi_ln_n_potential.py

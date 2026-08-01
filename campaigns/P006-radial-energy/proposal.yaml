@@ -1,0 +1,39 @@
+id: P006
+base_release: v0.5.0
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1A
+question: >-
+  Derive the exact radial scaling class shared by positive line energies,
+  distinguish it from a spherical shell and a full capillary energy, and state
+  the strongest justified relation between the conditional pulson and breather
+  ring instantiations without equating their coefficients or objects.
+invariants:
+  - accepted release v0.5.0 remains unchanged outside the new radial-energy utility
+  - radius and energy-density coefficients are positive real quantities
+  - a shared scaling form does not imply equality of coefficients or physical objects
+  - the declared ring lift does not select or quantize a radius
+allowed_imports:
+  - C-SG-002 for the normalized sine-Gordon breather energy
+  - generic line energy density times circumference as a declared geometric construction
+  - generic shell energy density times spherical area as a counterexample
+  - generic capillary energy with independent tension, pressure, and core terms
+  - predecessor bridge T1A at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Classify radial energies by exact homogeneity under positive radius rescaling
+  - id: B
+    description: Classify them by the radius dependence of their exact marginal derivative
+  - id: C
+    description: Classify them by logarithmic slope and stationary-point structure
+uniqueness_evidence: null
+selection_criteria:
+  - exact scaling identity on the full positive-radius domain
+  - no identification of independent coefficients
+  - discrimination between line, shell, and full capillary energies
+  - explicit stationary-radius and limiting behavior
+  - mutation sensitivity to transverse measure and radial power
+claims_proposed:
+  - C-RG-001
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

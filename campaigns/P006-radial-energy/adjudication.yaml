@@ -1,0 +1,37 @@
+campaign: P006
+title: Exact radial line, shell, and capillary energy classification
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1A
+base_release: v0.5.0
+adjudicated_at: '2026-08-01T11:43:25Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Exact positive-radius homogeneity captures the shared line form without
+    identifying independent coefficients, while derivative and stationary
+    structure independently distinguish shell and full capillary energies.
+competing_candidates:
+  - id: B
+    decision: used_as_an_independent_marginal_derivative_classifier
+  - id: C
+    decision: used_for_logarithmic_degree_and_capillary_barrier_checks
+claims:
+  - id: C-RG-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_scaling_review.py
+source_disposition:
+  T1A: migrated
+remaining_source_scope: {}
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/reviews/independent_scaling_review.py
+  - .venv/bin/python -m pytest -q tests/test_radial_energy.py
+debt: []
+status: accepted

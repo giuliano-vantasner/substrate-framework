@@ -1,0 +1,10 @@
+PASS [C-RG-001-INDEPENDENT] direct transverse-measure ratios give scaling powers one and two
+PASS [C-RG-001-INDEPENDENT] independent logarithmic derivatives recover degrees one and two
+PASS [C-RG-001-INDEPENDENT] independent second derivatives separate line from shell
+PASS [C-RG-001-INDEPENDENT] completion of the square independently gives the capillary barrier
+PASS [C-RG-001-INDEPENDENT] the capillary line component alone cannot inherit the barrier radius
+PASS [C-RG-001-INDEPENDENT] direct subtraction retains the program-specific coefficient difference
+PASS [C-RG-001-INDEPENDENT] solving the equality independently requires coefficient equality
+PASS [C-RG-001-INDEPENDENT] a shell substitution fails both independent line diagnostics
+ALL 8 CHECKS PASS [C-RG-001-INDEPENDENT]
+P006 INDEPENDENT REVIEW ALL 8 CHECKS PASS

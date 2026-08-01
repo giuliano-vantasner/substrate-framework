@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1A
+framework_base: a4d0dc4
+question: >-
+  Does exact radial homogeneity give a reusable shared line-energy class while
+  rejecting coefficient identity, shell geometry, and a forced radius?
+command: PYTHONPATH=src .venv/bin/python proposals/P006-radial-energy/verify.py
+oracle:
+  kind: exact_sympy_algebra_and_calculus
+  mutation_requirements:
+    - reject incorrect radial powers
+    - reject the shell as a line
+    - reject coefficient equality without the equality premise
+    - reject a capillary minimum classification
+status: running

@@ -21,6 +21,15 @@ Conditional on C-OG-001 and the imported constitutive relation n = 1/(1 + 2*Phi/
 - Compatibility: `compatible_extension`
 - Dependencies: C-OG-001
 
+## C-RG-001
+
+For positive radius R and density lambda, the circumference line energy E_line = 2*pi*R*lambda is homogeneous of degree one, has constant positive derivative 2*pi*lambda, and has no stationary radius. For positive surface density sigma, E_shell = 4*pi*R^2*sigma is homogeneous of degree two and has radius-dependent derivative 8*pi*R*sigma. For positive line tension T and pressure P, E_cap = 2*pi*R*T - pi*R^2*P + C has the unique strict global maximum R = T/P. Conditional line constructions with coefficients T and the C-SG-002 breather energy share only the degree-one line form; their energies are equal for every positive R if and only if their coefficients are equal.
+
+- Accepted in: `v0.6.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-002
+
 ## C-SG-001
 
 For every real omega with 0 < omega < 1, eta = sqrt(1-omega^2), and real x,t, the field phi(x,t) = 4 atan(eta sin(omega t)/(omega cosh(eta x))) is spatially localized, periodic with period 2*pi/omega, and satisfies phi_tt - phi_xx + sin(phi) = 0 identically in normalized units.

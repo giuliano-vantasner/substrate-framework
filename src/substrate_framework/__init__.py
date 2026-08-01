@@ -29,6 +29,12 @@ from .optical_geometry import (
     slow_geodesic_acceleration_1d,
     slow_geodesic_acceleration_from_potential,
 )
+from .radial_energy import (
+    capillary_critical_radius,
+    capillary_energy,
+    line_energy,
+    spherical_shell_energy,
+)
 from .sine_gordon import (
     breather_action,
     breather_energy,
@@ -69,9 +75,12 @@ __all__ = [
     "breather_mean_gradient_integral",
     "breather_peak_amplitude",
     "breather_period",
+    "capillary_critical_radius",
+    "capillary_energy",
     "hamiltonian_density",
     "index_from_potential",
     "load_yaml",
+    "line_energy",
     "optical_box_static_1d",
     "optical_dilaton",
     "optical_metric_1d",
@@ -85,6 +94,7 @@ __all__ = [
     "solve_method_of_lines",
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",
+    "spherical_shell_energy",
     "symmetric_two_level_gate",
     "sine_gordon_residual",
     "validate_registry",
