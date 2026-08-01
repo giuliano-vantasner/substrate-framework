@@ -1216,3 +1216,47 @@ claims:
     accepted_in: v0.25.0
     challenges: []
     supersedes: []
+  - id: C-GAU-001
+    statement: >-
+      Conditional on C-U1-001's smooth complex scalar, a positive coupling e,
+      and a declared real local-U(1) connection A_mu, define
+      D_mu=partial_mu-i*e*A_mu and transform
+      Psi'=exp(i*e*chi)Psi, A_mu'=A_mu+partial_mu chi for arbitrary smooth
+      real chi. Then D_mu Psi transforms covariantly, a phase-independent
+      potential and (D_mu Psi)^*D^mu Psi are invariant, and in C-U1-001's
+      current convention the kinetic expansion is the bare term plus
+      e*A_mu*j^mu+e^2*A_mu*A^mu*|Psi|^2. The curvature
+      F_mu_nu=partial_mu A_nu-partial_nu A_mu is invariant and
+      [D_mu,D_nu]Psi=-i*e*F_mu_nu*Psi. Separately, conditional on nonzero
+      asymptotic amplitude, integer phase winding N, and angular energy with
+      logarithmic coefficient proportional to (N-e*A_theta*r)^2, finite energy
+      forces flux 2*pi*N/e; its charge-e holonomy is +1. A minus-one holonomy
+      requires a separately declared fractional flux. Local covariance leaves
+      every F^2 coefficient unconstrained and establishes no gauge kinetic
+      action, Maxwell equation, photon, force, physical electric charge, or
+      substrate electromagnetic sector.
+    provenance: campaigns/P030-em2-local-u1/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-U1-001
+    evidence:
+      - campaigns/P030-em2-local-u1/verify.py
+      - campaigns/P030-em2-local-u1/attempts/0001/result.yaml
+      - campaigns/P030-em2-local-u1/reviews/independent_sign_commutator_review.py
+      - campaigns/P030-em2-local-u1/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-GAU-001-review.md
+      - tests/test_gauge_u1.py
+      - tests/test_u1_charge.py
+    assumptions:
+      - The complex scalar, its conjugate, the real connection, and gauge parameter are smooth and mixed partial derivatives commute.
+      - The metric signature and Noether-current sign are exactly those of C-U1-001.
+      - The local transformation law and positive coupling are declared model structure.
+      - The flux clause additionally assumes integer phase winding, nonzero asymptotic amplitude, the stated angular-energy coefficient, and a loop enclosing the winding.
+      - Fractional flux, gauge-field dynamics, kinetic normalization, and every physical electromagnetic interpretation require separate premises.
+    comparators: []
+    accepted_in: v0.26.0
+    challenges: []
+    supersedes: []

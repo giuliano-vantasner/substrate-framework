@@ -1,0 +1,42 @@
+id: P030
+base_release: v0.25.0
+base_commit: 3b55681
+source_baseline: substrate@6d1f4e0
+source_units: [EM2]
+question: >-
+  Derive the exact local-U(1) covariance, kinetic invariance, current-coupling
+  sign, curvature commutator, and conditional winding-flux consequences of EM2
+  without importing a Maxwell kinetic term or physical electromagnetism.
+invariants:
+  - C-U1-001 fixes the global-current sign and (+,-) convention
+  - local gauge redundancy alone supplies no propagating gauge dynamics
+  - winding flux requires explicit asymptotic finite-energy and topology premises
+allowed_imports:
+  - C-U1-001
+  - C-TOP-001 only as abstract integer-label context
+  - exact complex calculus and differential algebra
+  - EM2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote convention-closed local-U1 covariance, invariant matter kinetic
+      algebra, curvature commutator, and separately conditional winding flux
+  - id: B
+    description: >-
+      Promote only covariant-derivative transformation if EM2's current sign,
+      curvature, or flux implications fail accepted-convention closure
+  - id: C
+    description: >-
+      Promote a physical electromagnetic gauge sector, photon dynamics, and
+      charged-particle interpretation from local redundancy alone
+uniqueness_evidence: null
+selection_criteria:
+  - exact arbitrary-function covariance
+  - accepted-current sign consistency
+  - curvature and wrong-sign mutation sensitivity
+  - topology and finite-energy premise visibility
+  - dependency and physical-interpretation economy
+claims_proposed:
+  - provisional C-GAU-001
+comparators_blinded_until: transformations_signs_topology_and_mutations_frozen
+status: accepted

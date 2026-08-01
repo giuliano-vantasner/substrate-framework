@@ -1,0 +1,3 @@
+PASS [P030-EM2] 22 exact covariance, sign, mutation, curvature, topology, and implication-boundary checks
+ALL 22 CHECKS PASS [P030-EM2]
+P030 EM2 LOCAL-U1 AUDIT ALL 22 CHECKS PASS

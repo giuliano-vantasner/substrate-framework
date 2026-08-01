@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 191
-  qualified: 21
+  pending_adjudication: 190
+  qualified: 22
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -491,8 +491,20 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GAU-001
+  qualification: >-
+    EM2's local covariance, invariant matter algebra, curvature commutator, and
+    conditional integer-winding flux are accepted in C-U1-001's convention. Its
+    opposite current label, half-flux inference, uniqueness claim, wall-probe
+    reading, Maxwell dynamics, photon, and physical electromagnetism are not.
+  evidence:
+  - campaigns/P030-em2-local-u1/reviews/source_adjudication.md
+  note: >-
+    P030 derives the accepted-current coupling sign, separates integer winding
+    from fractional holonomy, and proves that local symmetry leaves every
+    gauge-kinetic coefficient free.
 - source_unit: EM3
   phase: phase-3
   path: merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py

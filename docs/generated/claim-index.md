@@ -84,6 +84,15 @@ Conditional on positive flux Phi uniformly crossing a cross-section A that is fi
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-GAU-001
+
+Conditional on C-U1-001's smooth complex scalar, a positive coupling e, and a declared real local-U(1) connection A_mu, define D_mu=partial_mu-i*e*A_mu and transform Psi'=exp(i*e*chi)Psi, A_mu'=A_mu+partial_mu chi for arbitrary smooth real chi. Then D_mu Psi transforms covariantly, a phase-independent potential and (D_mu Psi)^*D^mu Psi are invariant, and in C-U1-001's current convention the kinetic expansion is the bare term plus e*A_mu*j^mu+e^2*A_mu*A^mu*|Psi|^2. The curvature F_mu_nu=partial_mu A_nu-partial_nu A_mu is invariant and [D_mu,D_nu]Psi=-i*e*F_mu_nu*Psi. Separately, conditional on nonzero asymptotic amplitude, integer phase winding N, and angular energy with logarithmic coefficient proportional to (N-e*A_theta*r)^2, finite energy forces flux 2*pi*N/e; its charge-e holonomy is +1. A minus-one holonomy requires a separately declared fractional flux. Local covariance leaves every F^2 coefficient unconstrained and establishes no gauge kinetic action, Maxwell equation, photon, force, physical electric charge, or substrate electromagnetic sector.
+
+- Accepted in: `v0.26.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-U1-001
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

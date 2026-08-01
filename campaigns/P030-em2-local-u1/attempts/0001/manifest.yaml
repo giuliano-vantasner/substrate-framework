@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [EM2]
+framework_base: 3b55681
+question: >-
+  Which local-U1 covariance, accepted-current coupling, curvature, and
+  finite-energy winding statements close exactly in one convention?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P030-em2-local-u1/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-3/bridge_EM2_gauge_u1_minimal_coupling.py
+oracle:
+  kind: exact_arbitrary_function_gauge_algebra
+  mutation_requirements:
+    - derivative phase and connection-shift signs are load-bearing
+    - accepted Noether-current sign is derived rather than relabeled
+    - integer winding and fractional holonomy are separated
+status: passed

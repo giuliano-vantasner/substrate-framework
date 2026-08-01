@@ -1,0 +1,13 @@
+source_unit: EM2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-3/bridge_EM2_gauge_u1_minimal_coupling.py
+sha256: 9787ae25521e19d926de0f9addafd16353bebc149cea83f3d9dd4c491fef91d6
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-3/bridge_EM2_gauge_u1_minimal_coupling.py
+observed_at: '2026-08-01T16:27:00Z'
+exit_code: 0
+terminal_tally: ALL 11 CHECKS PASS
+scope_note: >-
+  The source's raw polar expansions pass, but it labels +2*f^2*dtheta as the
+  EM1 current, opposite to accepted C-U1-001. Its half-flux checks are direct
+  substitutions rather than consequences of the integer-winding flux result.

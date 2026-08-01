@@ -1,0 +1,9 @@
+PASS [P030-INDEPENDENT] independent jet expansion proves local covariance
+PASS [P030-INDEPENDENT] independent polar expansion gives plus e A times accepted current
+PASS [P030-INDEPENDENT] independent nested derivatives give minus i e F psi
+PASS [P030-INDEPENDENT] independent logarithmic coefficient forces a to integer winding
+PASS [P030-INDEPENDENT] the resulting matter holonomy is one for integer winding
+PASS [P030-INDEPENDENT] half-flux minus one is outside the integer-winding consequence
+PASS [P030-INDEPENDENT] local symmetry cannot fix a gauge-kinetic coefficient
+ALL 7 CHECKS PASS [P030-INDEPENDENT]
+P030 INDEPENDENT SIGN/COMMUTATOR REVIEW ALL 7 CHECKS PASS

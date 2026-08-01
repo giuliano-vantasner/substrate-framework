@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T16:27:00Z'
+exit_code: 0
+terminal_tally: 22
+verdict:
+  C-GAU-001: symbolic_verified
+evidence:
+  - arbitrary-function local covariance in both components
+  - derivative phase and shift sign mutations
+  - invariant kinetic density and accepted-current expansion
+  - gauge-invariant curvature and exact covariant commutator
+  - free gauge-kinetic coefficient and pure/non-pure connection guards
+  - conditional integer-winding flux and fractional-holonomy separation
+status: passed
+stdout: stdout.txt

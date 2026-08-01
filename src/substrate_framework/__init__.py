@@ -29,6 +29,15 @@ from .governance import (
     validate_registry,
     validate_release,
 )
+from .gauge_u1 import (
+    finite_energy_winding_flux,
+    gauged_scalar_kinetic_density,
+    local_u1_transform,
+    u1_covariant_commutator,
+    u1_covariant_derivative,
+    u1_field_strength,
+    u1_holonomy,
+)
 from .linear_systems import LinearSystemDiagnostics, diagnose_linear_system
 from .numerics import (
     BVPEvidence,
@@ -222,11 +231,14 @@ __all__ = [
     "dimensionless_monomial_basis",
     "endpoint_force_slope",
     "endpoint_potential",
+    "finite_energy_winding_flux",
     "diagnose_linear_system",
+    "gauged_scalar_kinetic_density",
     "hamiltonian_density",
     "index_from_potential",
     "load_yaml",
     "line_energy",
+    "local_u1_transform",
     "lattice_debye_energy",
     "lattice_reduced_responses",
     "local_wave_speed",
@@ -277,6 +289,10 @@ __all__ = [
     "tube_field_energy",
     "u1_current_components",
     "u1_current_divergence",
+    "u1_covariant_commutator",
+    "u1_covariant_derivative",
+    "u1_field_strength",
+    "u1_holonomy",
     "uniform_tube_field",
     "euler_lagrange_expression",
     "fundamental_generators",
