@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 186
-  qualified: 26
+  pending_adjudication: 185
+  qualified: 27
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2381,8 +2381,19 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MIX-001
+  - C-MIX-002
+  qualification: FG4's generic quotient count, two-dimensional real representative, declared three-angle
+    quartet, and rephasing invariance are accepted as abstract matrix algebra. Its 2N-1 removable count
+    omits support-dependent stabilizers, and no accepted dependency establishes its physical CKM, Kobayashi-Maskawa,
+    generation, or CP interpretation.
+  evidence:
+  - campaigns/P035-fg4-unitary-rephasing/reviews/source_adjudication.md
+  note: P035 derives stabilizer dimension from bipartite support components and shows that degenerate
+    spectra permit basis freedom beyond diagonal rephasings, so a nonzero quartet alone is not physical
+    CP evidence.
 - source_unit: GW1
   phase: phase-12
   path: merged-framework/bridges/phase-12/bridge_GW1_multipole_lowest_quadrupole.py

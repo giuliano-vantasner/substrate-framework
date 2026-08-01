@@ -500,3 +500,20 @@ units:
       P034 supplies rectangular and rank-deficient closure and an exact
       orientation counterexample in which FG3's formula differs from direct
       field substitution even though both candidate matrices are unitary.
+  FG4:
+    disposition: qualified
+    accepted_claims:
+      - C-MIX-001
+      - C-MIX-002
+    qualification: >-
+      FG4's generic quotient count, two-dimensional real representative,
+      declared three-angle quartet, and rephasing invariance are accepted as
+      abstract matrix algebra. Its 2N-1 removable count omits support-dependent
+      stabilizers, and no accepted dependency establishes its physical CKM,
+      Kobayashi-Maskawa, generation, or CP interpretation.
+    evidence:
+      - campaigns/P035-fg4-unitary-rephasing/reviews/source_adjudication.md
+    note: >-
+      P035 derives stabilizer dimension from bipartite support components and
+      shows that degenerate spectra permit basis freedom beyond diagonal
+      rephasings, so a nonzero quartet alone is not physical CP evidence.

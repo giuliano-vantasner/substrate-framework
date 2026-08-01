@@ -1,0 +1,11 @@
+PASS [P035-INDEPENDENT] an independent K4,4 incidence calculation has rank seven and one kernel
+PASS [P035-INDEPENDENT] a four-edge permutation support has four stabilizer components
+PASS [P035-INDEPENDENT] independent dimension subtraction gives the quotient and residual-phase polynomials
+PASS [P035-INDEPENDENT] the independently parameterized two-dimensional quartet is identically real
+PASS [P035-INDEPENDENT] a different exact three-dimensional unitary has a nonzero imaginary quartet
+PASS [P035-INDEPENDENT] complex conjugation reverses that independent quartet
+PASS [P035-INDEPENDENT] the independent quartet phase cancellation is exact
+PASS [P035-INDEPENDENT] degenerate spectra enlarge basis freedom beyond diagonal rephasings
+PASS [P035-INDEPENDENT] the abstract invariant contains no interaction or physical CP map
+ALL 9 CHECKS PASS [P035-INDEPENDENT]
+P035 INDEPENDENT SUPPORT-INVARIANT REVIEW ALL 9 CHECKS PASS

@@ -1,0 +1,17 @@
+source_unit: FG4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-11/bridge_FG4_cp_kobayashi_maskawa.py
+sha256: d9ebb32d440fb87540c7cb2d02a846b76dd4ee405288895308561762cd720ceb
+reproduced_at: '2026-08-01T17:25:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-11/bridge_FG4_cp_kobayashi_maskawa.py
+environment:
+  python: repository virtual environment
+  sympy: 1.14.0
+exit_code: 0
+terminal_tally: ALL 7 CHECKS PASS
+observation: >-
+  Reproduction confirms the seven source assertions execute. It does not test
+  support-dependent stabilizers, degenerate-basis freedom, accepted physics
+  dependencies, or whether algebraic conjugation represents physical CP.

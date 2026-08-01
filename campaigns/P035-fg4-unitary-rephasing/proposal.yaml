@@ -1,0 +1,49 @@
+id: P035
+base_release: v0.30.0
+base_commit: 256e784
+source_baseline: substrate@6d1f4e0
+source_units: [FG4]
+question: >-
+  Derive the exact quotient and invariant structure of an N-by-N unitary
+  matrix under independent left and right diagonal rephasings, including its
+  stabilizers and low-dimensional limits, then determine what does and does not
+  follow about physical CP violation.
+invariants:
+  - C-MIX-001 supplies abstract unitary relative bases but no physical CKM sector
+  - the rephasing action and its kernel must be explicit before dimensions are subtracted
+  - orbit dimension can fall on nongeneric zero-pattern strata with larger stabilizers
+  - complex conjugation oddness of an invariant is mathematical and is not by itself a physical CP theorem
+  - a physical family count, quark rephasing freedom, and charged-current interpretation remain unaccepted
+allowed_imports:
+  - C-MIX-001
+  - finite-dimensional unitary-group and diagonal-torus algebra
+  - exact symbolic complex matrix identities
+  - FG4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote the generic diagonal-rephasing quotient dimension, its
+      angle/phase count, the two-dimensional real representative, and exact
+      rephasing/conjugation properties of a three-index quartet invariant
+  - id: B
+    description: >-
+      Promote only the polynomial budget identity and invariant quartet if the
+      effective action, stabilizers, or low-dimensional representatives do not close
+  - id: C
+    description: >-
+      Promote a substrate-derived Kobayashi-Maskawa mechanism, exactly three
+      physical generations, and observed CP violation
+uniqueness_evidence: null
+selection_criteria:
+  - exact rephasing action, kernel, and generic stabilizer
+  - correct quotient dimension for integer N at least two
+  - structural angle/phase decomposition without negative counts
+  - explicit N=2 real representative and vanishing quartet
+  - exact N=3 unitary parameterization and invariant formula if used
+  - rephasing invariance and complex-conjugation sensitivity
+  - accepted dependency closure and absence of empirical selection
+claims_proposed:
+  - provisional C-MIX-002
+comparators_blinded_until: >-
+  rephasing_action_kernel_generic_stratum_low_dimensional_limits_and_physical_boundary_frozen
+status: accepted

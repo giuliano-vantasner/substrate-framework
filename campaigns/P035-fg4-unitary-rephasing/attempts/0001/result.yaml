@@ -1,0 +1,19 @@
+attempt: 0001
+completed_at: '2026-08-01T17:32:26Z'
+exit_code: 0
+terminal_tally: 31
+verdict:
+  C-MIX-002: symbolic_verified
+evidence:
+  - exact U(N), O(N), torus-orbit, and quotient dimensions
+  - connected, block, and permutation support stabilizers
+  - exact N=2 real representative and zero quartet
+  - exact N=3 parameterization and invariant formula
+  - rephasing and complex-conjugation sensitivity
+initial_failures:
+  - >-
+    The first final source-provenance probe did not match the exact phrase
+    `the number of families N stays an INPUT`; two case/wording corrections
+    repaired only that hash-pinned-text assertion.
+status: passed_after_technical_repair
+stdout: stdout.txt

@@ -200,6 +200,15 @@ from .u1_charge import (
     u1_current_components,
     u1_current_divergence,
 )
+from .unitary_rephasing import (
+    RephasingCounts,
+    generic_rephasing_counts,
+    invariant_quartet,
+    rephase_unitary,
+    rephasing_orbit_dimension,
+    standard_three_angle_unitary,
+    support_stabilizer_dimension,
+)
 from .verification import CheckFailure, CheckLedger
 from .wilson_loops import (
     rectangular_area_law,
@@ -220,6 +229,7 @@ __all__ = [
     "LinearSystemDiagnostics",
     "BiunitaryDecomposition",
     "RealSymmetricRotation",
+    "RephasingCounts",
     "NumericalFailure",
     "RefinementEvidence",
     "SolverTolerances",
@@ -288,8 +298,10 @@ __all__ = [
     "relative_left_basis",
     "unitarity_residual",
     "gauged_scalar_kinetic_density",
+    "generic_rephasing_counts",
     "hamiltonian_density",
     "index_from_potential",
+    "invariant_quartet",
     "load_yaml",
     "line_energy",
     "local_u1_transform",
@@ -327,6 +339,8 @@ __all__ = [
     "solve_quartic_fluctuation_spectrum",
     "single_scale_tension",
     "refinement_study",
+    "rephase_unitary",
+    "rephasing_orbit_dimension",
     "render_claim_memory",
     "render_claim_index",
     "render_release_memory",
@@ -368,6 +382,8 @@ __all__ = [
     "invariants",
     "solve_euler_lagrange_acceleration",
     "structure_constant",
+    "standard_three_angle_unitary",
+    "support_stabilizer_dimension",
     "triality_phase",
     "rectangular_area_law",
     "rectangular_perimeter_law",

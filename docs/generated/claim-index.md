@@ -147,6 +147,15 @@ For every finite complex m-by-n matrix M, there are square unitary column bases 
 - Compatibility: `native`
 - Dependencies: none
 
+## C-MIX-002
+
+Conditional on the abstract N-by-N unitary relative-basis matrices of C-MIX-001, let the left/right diagonal phase action be V -> D_L*V*D_R^dagger. For a unitary V whose bipartite nonzero-support graph has c connected components, the diagonal-action stabilizer has real dimension c and its orbit has dimension 2*N-c. On the generic connected-support stratum c=1, so the effective orbit dimension is 2*N-1 and the quotient of U(N) has dimension (N-1)^2. Separating the N*(N-1)/2 real-orthogonal angle dimensions leaves (N-1)*(N-2)/2 irreducible complex-phase dimensions; these are zero for N=2 and one for N=3. Every U(2) matrix is diagonal-rephasing-equivalent to a real orthogonal matrix, and every two-row/two-column quartet has zero imaginary part. For any indices, the quartet Q_ik;jl=V_ij*V_kl*conjugate(V_il)*conjugate(V_kj) is invariant under the declared diagonal action and its imaginary part reverses sign under entrywise complex conjugation. For the declared unitary chart V=R23*R13(delta)*R12, Im(Q_01;12) equals cos(t12)*cos(t23)*cos(t13)^2*sin(t12)*sin(t23)*sin(t13)*sin(delta). Disconnected zero patterns and degenerate singular spectra have enlarged basis freedoms and require their own stabilizer audit. These statements establish no quark or generation map, physical CKM matrix, Cabibbo or KM mechanism, physical CP operation or violation, observed family count, charged current, GIM or anomaly result, measured angle or phase, or substrate realization.
+
+- Accepted in: `v0.31.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-MIX-001
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.

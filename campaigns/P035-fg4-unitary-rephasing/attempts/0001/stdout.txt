@@ -1,0 +1,33 @@
+PASS [P035-FG4] the audited FG4 source is the hash-pinned candidate unit
+PASS [P035-FG4] FG4 exits cleanly
+PASS [P035-FG4] FG4's declared seven-check tally reproduces
+PASS [P035-FG4] anti-Hermitian and real-skew generators give the exact group dimensions
+PASS [P035-FG4] the generic quotient and angle-phase split close symbolically
+PASS [P035-FG4] the reusable count API closes N equals one through five
+PASS [P035-FG4] the accepted low-dimensional generic counts are zero at N=2 and one at N=3
+PASS [P035-FG4] generic parameter budget: baseline
+PASS [P035-FG4] generic parameter budget: mutations supplied
+PASS [P035-FG4] generic parameter budget: mutation 1 rejected
+PASS [P035-FG4] generic parameter budget: mutation 2 rejected
+PASS [P035-FG4] generic parameter budget: mutation 3 rejected
+PASS [P035-FG4] the connected dense support has only the one-dimensional common-phase kernel
+PASS [P035-FG4] disconnected support has larger stabilizers and smaller rephasing orbits
+PASS [P035-FG4] the reusable support oracle distinguishes dense, block, and permutation strata
+PASS [P035-FG4] FG4 omits the support-stratum qualifier from its universal removable count
+PASS [P035-FG4] the exact two-dimensional phase dressing rephases to a real rotation
+PASS [P035-FG4] every quartet in the general two-dimensional factorization is real
+PASS [P035-FG4] the declared three-angle matrix is exactly unitary
+PASS [P035-FG4] its exact quartet imaginary part has the declared sine product
+PASS [P035-FG4] complex conjugation reverses the quartet imaginary part
+PASS [P035-FG4] quartet phase cancellation: baseline
+PASS [P035-FG4] quartet phase cancellation: mutations supplied
+PASS [P035-FG4] quartet phase cancellation: mutation 1 rejected
+PASS [P035-FG4] quartet phase cancellation: mutation 2 rejected
+PASS [P035-FG4] the reusable quartet is invariant under the declared diagonal action
+PASS [P035-FG4] the numeric regression agrees with the exact closed form
+PASS [P035-FG4] FG4 imports its unitary-matrix and physical flavor interpretation
+PASS [P035-FG4] FG4 leaves the family count and phase values declared
+PASS [P035-FG4] FG4 does not audit enlarged basis freedom from degenerate spectra
+PASS [P035-FG4] a nonzero abstract quartet is not promoted as physical CP evidence
+ALL 31 CHECKS PASS [P035-FG4]
+P035 FG4 UNITARY-REPHASING AUDIT ALL 31 CHECKS PASS

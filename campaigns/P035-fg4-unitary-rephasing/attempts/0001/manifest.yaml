@@ -1,0 +1,22 @@
+attempt: 0001
+campaign: P035
+base_release: v0.30.0
+base_commit: 256e784
+source_unit: FG4
+source_sha256: d9ebb32d440fb87540c7cb2d02a846b76dd4ee405288895308561762cd720ceb
+candidate: A
+oracles:
+  - exact group and quotient dimension algebra
+  - exact bipartite support-incidence ranks
+  - exact two-dimensional rephasing and quartet identity
+  - exact three-angle unitarity and quartet formula
+  - independent Fourier-matrix and degenerate-basis review
+mutations:
+  - forget the common phase kernel
+  - substitute the angle count for the irreducible-phase count
+  - claim one phase at N equals two
+  - remove one quartet conjugation
+  - change one balancing quartet index
+expected_positive_object: >-
+  A generic-stratum diagonal-rephasing quotient and invariant-quartet theorem
+  with explicit nongeneric stabilizers and no physical CP assignment.
