@@ -1,0 +1,21 @@
+attempt: 0001
+campaign: P041
+base_release: v0.36.0
+base_commit: dd17b57
+source_unit: FS2
+source_sha256: 9e9edbde8810a9040047d13e328eafbea992a218060de4d10a4118080f20cc31
+candidate: A
+oracles:
+  - exact Fubini-factorized second moments and both STF conventions
+  - arbitrary derivative tensors and Frobenius contractions
+  - exact axial and perpendicular TT projections
+  - accepted exact breather-moment third derivative
+  - independent Gaussian integration and finite-difference convergence
+mutations:
+  - use radial variance as a per-axis variance
+  - change the triple-normalized STF scale
+  - retain or inject pure trace
+  - let a constant transverse width enter positive time derivatives
+expected_positive_object: >-
+  Exact conditional moment and projection algebra for a centered axisymmetric
+  separable density, excluding a conserved physical 3+1 breather or gravity.

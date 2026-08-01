@@ -152,6 +152,10 @@ from .renormalization import (
     single_scale_tension,
     transmuted_mass_coordinate,
 )
+from .separable_moments import (
+    AxisymmetricSeparableMoments,
+    axisymmetric_separable_moments,
+)
 from .quartic_qball import (
     quartic_qball_amplitude,
     quartic_qball_charge,

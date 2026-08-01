@@ -1,0 +1,28 @@
+attempt: 0001
+completed_at: '2026-08-01T19:03:00Z'
+exit_code: 0
+terminal_tally: 31
+verdict:
+  C-MOM-002: symbolic_verified
+evidence:
+  - exact diagonal moment and normalized/triple STF tensors
+  - exact arbitrary derivatives, contraction factors, and width cancellation
+  - exact axial-null and perpendicular-plus TT geometry
+  - exact C-SG-009 third-derivative specialization
+  - independent Gaussian integration and O(dt^2) derivative refinement
+initial_failures:
+  - >-
+    The exact special triple derivative first failed direct structural equality
+    because SymPy produced different trigonometric normal forms; simplifying
+    the matrix difference repaired the representation without changing it.
+  - >-
+    The final source-scope check initially used a longer Gaussian phrase than
+    the source contains; whitespace-normalized exact declarations repaired the
+    lexical audit without changing its physical predicate.
+source_defects:
+  - the purported analytic spectral reference is an FFT of the same sampled mu_of_t data
+  - the working per-axis variance is 0.64 while a later unaccepted P3D3 annotation claims 3.84
+  - the trace-injection guard repeats accepted TT algebra and does not establish radiation
+  - the declared product density supplies no complete conserved 3+1 stress tensor or dynamics
+status: passed_after_representation_and_lexical_repairs
+stdout: stdout.txt

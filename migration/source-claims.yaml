@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 180
-  qualified: 32
+  pending_adjudication: 179
+  qualified: 33
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2631,8 +2631,21 @@ units:
   dynamic_check_calls: 2
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-009
+  - C-MOM-001
+  - C-GW-002
+  - C-MOM-002
+  qualification: FS2's declared centered product density has the accepted exact second-moment, STF, derivative-norm,
+    and viewing-projection algebra. Its same-data FFT is not an independent analytic oracle, its working
+    transverse variance conflicts with an unaccepted later annotation, and it supplies no complete 3+1
+    dynamics, conserved stress/current system, gravitational theory, or radiation result.
+  evidence:
+  - campaigns/P041-fs2-separable-density-stf/reviews/source_adjudication.md
+  - campaigns/P041-fs2-separable-density-stf/evidence/source-reproduction.yaml
+  note: P041 factors the conditional moments exactly, carries normalized and triple STF conventions through
+    derivatives and projections, and keeps pending FS3/P3D3 outside the accepted dependency closure.
 - source_unit: FS3
   phase: phase-13
   path: merged-framework/bridges/phase-13/bridge_FS3_breathing_mode_power.py

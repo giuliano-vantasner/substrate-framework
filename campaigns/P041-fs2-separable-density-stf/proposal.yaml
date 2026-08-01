@@ -1,0 +1,49 @@
+id: P041
+base_release: v0.36.0
+base_commit: dd17b57
+source_baseline: substrate@6d1f4e0
+source_units: [FS2]
+question: >-
+  Derive the exact second-moment, STF, derivative-norm, and viewing-direction
+  tensor algebra of a declared centered axisymmetric separable 3D density, then
+  audit whether FS2 derives that density as a conserved physical breather
+  source or gravitational quadrupole.
+invariants:
+  - C-SG-009 is a centered scalar 1+1 energy moment and explicitly is not a 3+1 embedding
+  - C-MOM-001 fixes normalized I_STF and triple Q=3*I_STF conventions
+  - C-GW-002 supplies only algebraic TT projection and basis conventions
+  - a normalized fixed transverse profile is a declared extension with its own per-axis variance
+  - density moments alone do not supply momentum flux, spatial stress, local conservation, or gravity
+  - pending FS3 and P3D3 cannot be accepted dependencies
+allowed_imports:
+  - C-SG-002 conserved normalized breather energy
+  - C-SG-009 exact centered longitudinal energy moment
+  - C-MOM-001 STF conventions and C-GW-002 TT basis algebra
+  - exact Fubini factorization for a declared centered normalized transverse profile
+  - FS2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote exact conditional moment/STF algebra for an axisymmetric separable
+      density, including derivative norms and axis/perpendicular TT geometry
+  - id: B
+    description: >-
+      Promote only the diagonal second-moment and STF formulas if derivative or
+      viewing-direction specialization adds hidden physical premises
+  - id: C
+    description: >-
+      Promote FS2's declared product density as a genuine conserved 3+1
+      sine-Gordon breather source and radiating gravitational quadrupole
+uniqueness_evidence: null
+selection_criteria:
+  - explicit normalization, centering, per-axis variance, and Fubini hypotheses
+  - exact normalized/triple STF convention consistency
+  - cancellation of constant transverse width from time derivatives
+  - exact derivative contraction and axis/perpendicular projection geometry
+  - mutations of trace, transverse variance, and quadrupole normalization
+  - accepted closure for any 3+1 source, conservation, or radiation interpretation
+claims_proposed:
+  - provisional C-MOM-002
+comparators_blinded_until: >-
+  separable_profile_moment_conventions_derivative_oracles_and_physical_scope_frozen
+status: accepted

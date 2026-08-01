@@ -192,6 +192,15 @@ Let T^{mu nu} be a smooth symmetric tensor in inertial flat 3+1 coordinates sati
 - Compatibility: `native`
 - Dependencies: none
 
+## C-MOM-002
+
+Let rho(x,y,z,t)=lambda(x,t)*g(y,z), where lambda is centered on the declared x axis with constant monopole M and longitudinal second moment mu(t), while g is a declared time-independent normalized centered axisymmetric transverse profile with per-axis variance sigma^2. Then the Cartesian second moment is diag(mu,M*sigma^2,M*sigma^2). Writing Delta=mu-M*sigma^2, the normalized trace-free moment is I_STF=diag(2*Delta/3,-Delta/3,-Delta/3), and the triple convention is Q=3*I_STF=diag(2*Delta,-Delta,-Delta). For every positive derivative order n, with M and sigma fixed, d^n I_STF/dt^n=diag(2*d^n mu/dt^n/3,-d^n mu/dt^n/3, -d^n mu/dt^n/3), whose Frobenius norm squared is 2*(d^n mu/dt^n)^2/3; the corresponding triple-tensor norm squared is 6*(d^n mu/dt^n)^2. The TT projection of this derivative tensor vanishes along the symmetry axis. Along a perpendicular declared z direction it is diag(d/2,-d/2,0), where d=d^n mu/dt^n, with normalized plus coordinate d/sqrt(2) and cross coordinate zero in the declared x-y basis. Pure trace additions are annihilated. C-SG-009 supplies an exact longitudinal specialization, but this conditional moment construction establishes no 3+1 field solution, momentum flux or spatial stress, local conservation, stability, gravitational action or coupling, retarded dynamics, radiation, detector observable, or substrate realization.
+
+- Accepted in: `v0.37.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-009, C-MOM-001, C-GW-002
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.

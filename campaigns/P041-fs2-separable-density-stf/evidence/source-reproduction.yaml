@@ -1,0 +1,19 @@
+source_unit: FS2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-13/bridge_FS2_embedded_STF_quadrupole.py
+sha256: 9e9edbde8810a9040047d13e328eafbea992a218060de4d10a4118080f20cc31
+reproduced_at: '2026-08-01T19:03:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-13/bridge_FS2_embedded_STF_quadrupole.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+exit_code: 0
+terminal_tally: ALL 5 CHECKS PASS
+elapsed_class: over_one_minute
+observation: >-
+  The source recomputes thousands of 60,001-point spatial integrals before its
+  time-refinement study. Its five bundled checks reproduce. The record may be
+  reused by P041 only when its source hash, exit code, and terminal tally match;
+  the exact canonical verifier remains independent of those sampled arrays.

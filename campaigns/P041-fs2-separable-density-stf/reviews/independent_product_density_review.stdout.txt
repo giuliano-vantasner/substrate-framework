@@ -1,0 +1,10 @@
+PASS [P041-INDEPENDENT] direct one-dimensional Gaussian factors normalize independently
+PASS [P041-INDEPENDENT] direct Gaussian integration gives per-axis variance s-squared and radial variance twice that
+PASS [P041-INDEPENDENT] centering independently kills all transverse first and mixed moments
+PASS [P041-INDEPENDENT] independent trace removal gives the normalized axisymmetric STF tensor
+PASS [P041-INDEPENDENT] independent projection gives an axial null and perpendicular plus-only image
+PASS [P041-INDEPENDENT] independent repeated central differences converge at second order to the exact third derivative
+PASS [P041-INDEPENDENT] constant total density does not by itself supply local conservation
+PASS [P041-INDEPENDENT] zero current is a concrete failed completion of that time-varying density
+ALL 8 CHECKS PASS [P041-INDEPENDENT]
+P041 INDEPENDENT PRODUCT-DENSITY REVIEW ALL 8 CHECKS PASS

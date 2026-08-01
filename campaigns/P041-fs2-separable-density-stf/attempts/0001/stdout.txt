@@ -1,0 +1,33 @@
+PASS [P041-FS2] the audited FS2 source is the hash-pinned candidate unit
+PASS [P041-FS2] FS2 exits cleanly
+PASS [P041-FS2] FS2's declared five-check tally reproduces
+PASS [P041-FS2] FS2 uses the current trapezoid API with an older-version fallback
+PASS [P041-FS2] Fubini and centered axisymmetry give the exact diagonal second moment
+PASS [P041-FS2] the transverse input is per-axis variance rather than radial variance
+PASS [P041-FS2] the normalized STF and triple quadrupole conventions are exact
+PASS [P041-FS2] both STF conventions are symmetric and traceless
+PASS [P041-FS2] constant transverse width cancels from derivative order 1
+PASS [P041-FS2] constant transverse width cancels from derivative order 2
+PASS [P041-FS2] constant transverse width cancels from derivative order 3
+PASS [P041-FS2] the third-derivative contractions retain the factor-nine convention ratio
+PASS [P041-FS2] the accepted exact breather moment gives a nonzero special third derivative
+PASS [P041-FS2] the exact source specialization replaces FS2's same-data spectral reference
+PASS [P041-FS2] viewing along the symmetry axis annihilates the axisymmetric STF derivative
+PASS [P041-FS2] a perpendicular view leaves the exact linear plus tensor
+PASS [P041-FS2] adding arbitrary pure trace leaves every TT projection unchanged
+PASS [P041-FS2] triple-normalized STF scale: baseline
+PASS [P041-FS2] triple-normalized STF scale: mutations supplied
+PASS [P041-FS2] triple-normalized STF scale: mutation 1 rejected
+PASS [P041-FS2] triple-normalized STF scale: mutation 2 rejected
+PASS [P041-FS2] triple-normalized STF scale: mutation 3 rejected
+PASS [P041-FS2] per-axis transverse variance scale: baseline
+PASS [P041-FS2] per-axis transverse variance scale: mutations supplied
+PASS [P041-FS2] per-axis transverse variance scale: mutation 1 rejected
+PASS [P041-FS2] per-axis transverse variance scale: mutation 2 rejected
+PASS [P041-FS2] per-axis transverse variance scale: mutation 3 rejected
+PASS [P041-FS2] FS2's Gaussian profile and width are declared in the audited source
+PASS [P041-FS2] FS2's later P3D3 annotation cannot replace its own incompatible width
+PASS [P041-FS2] FS2's spectral reference reuses a sampled source moment rather than the accepted exact formula
+PASS [P041-FS2] FS2 supplies density algebra but no conserved 3+1 stress or field dynamics
+ALL 31 CHECKS PASS [P041-FS2]
+P041 FS2 SEPARABLE-DENSITY STF AUDIT ALL 31 CHECKS PASS

@@ -603,3 +603,24 @@ units:
       P040 replaces special-frequency grid and FFT evidence with an exact
       spatial-transform formula, exact extrema and period, plus independent
       adaptive quadrature and tail refinement.
+  FS2:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-009
+      - C-MOM-001
+      - C-GW-002
+      - C-MOM-002
+    qualification: >-
+      FS2's declared centered product density has the accepted exact
+      second-moment, STF, derivative-norm, and viewing-projection algebra. Its
+      same-data FFT is not an independent analytic oracle, its working
+      transverse variance conflicts with an unaccepted later annotation, and
+      it supplies no complete 3+1 dynamics, conserved stress/current system,
+      gravitational theory, or radiation result.
+    evidence:
+      - campaigns/P041-fs2-separable-density-stf/reviews/source_adjudication.md
+      - campaigns/P041-fs2-separable-density-stf/evidence/source-reproduction.yaml
+    note: >-
+      P041 factors the conditional moments exactly, carries normalized and
+      triple STF conventions through derivatives and projections, and keeps
+      pending FS3/P3D3 outside the accepted dependency closure.
