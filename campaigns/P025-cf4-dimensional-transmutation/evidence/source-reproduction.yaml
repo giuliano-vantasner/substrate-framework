@@ -1,0 +1,13 @@
+source_unit: CF4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-10/bridge_CF4_dimensional_transmutation.py
+sha256: e8fa7072d78ba5462ef9410689090f4627528c3632d45afd528c0c118f863c6b
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF4_dimensional_transmutation.py
+observed_at: '2026-08-01T15:19:49Z'
+exit_code: 0
+terminal_tally: ALL 6 CHECKS PASS
+scope_note: >-
+  The six source assertions verify one-loop algebra, pole placement, and
+  dimensional matching. They do not test a nonperturbative confinement
+  observable; P025 audits that implication separately.

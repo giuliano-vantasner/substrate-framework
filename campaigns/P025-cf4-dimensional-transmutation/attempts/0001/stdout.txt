@@ -1,0 +1,9 @@
+PASS [C-DIM-006/CF4] the audited CF4 source is the hash-pinned candidate unit
+PASS [C-DIM-006/CF4] CF4.1 is exactly the already accepted C-RGE-001 solution
+PASS [C-DIM-006/CF4] the accepted inverse coupling has the declared boundary and ODE slope
+PASS [C-DIM-006/CF4] CF4.2 is exactly the C-RGE-001 formal inverse-coupling zero
+FAIL [C-DIM-006/CF4] a positive beta coefficient puts the formal zero below the reference
+
+Exit 1. The independent dimension/implication review passed all 6 checks and
+the focused package suite passed 22 tests; the failed main oracle was repaired
+in append-only attempt 0002.

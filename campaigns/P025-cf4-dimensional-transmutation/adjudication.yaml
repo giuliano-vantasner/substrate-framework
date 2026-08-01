@@ -1,0 +1,42 @@
+campaign: P025
+title: CF4 dimensional transmutation and confinement implication audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF4]
+base_release: v0.21.0
+adjudicated_at: '2026-08-01T15:19:49Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The one-scale dimension kernel supplies a distinct reusable exponent
+    theorem only when existence, sole-scale closure, and the free prefactor are
+    explicit. All RGE content is duplicate and does not imply confinement.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_one_scale_exponent_and_extra_scale_guard_are_distinct_reusable_content
+  - id: C
+    decision: rejected_by_a_same_flow_zero_tension_countermodel_and_absence_of_a_nonperturbative_oracle
+claims:
+  - id: C-DIM-007
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0002/result.yaml
+  failed_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_dimension_implication_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-DIM-007-review.md
+source_disposition:
+  CF4: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P025-cf4-dimensional-transmutation/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF4_dimensional_transmutation.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P025-cf4-dimensional-transmutation/reviews/independent_dimension_implication_review.py
+  - .venv/bin/python -m pytest -q tests/test_renormalization.py tests/test_su3.py
+debt: []
+status: accepted

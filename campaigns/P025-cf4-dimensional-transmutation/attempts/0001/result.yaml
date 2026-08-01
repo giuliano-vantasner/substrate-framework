@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T15:18:00Z'
+exit_code: 1
+terminal_tally: null
+failure_class: representation
+diagnosis: >-
+  SymPy retained exp(negative_symbolic_expression) < 1 as an unevaluated
+  relational, so the verifier failed before the scientific obligations. The
+  exact logarithm of the scale ratio has a provably negative sign and is the
+  appropriate oracle for pole placement.
+continuation: >-
+  Preserve the attempt, replace only the brittle relational with the exact
+  log-ratio sign test, and rerun as attempt 0002 without changing the claim.
+status: failed
+stdout: stdout.txt

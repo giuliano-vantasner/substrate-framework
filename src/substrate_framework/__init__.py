@@ -68,6 +68,7 @@ from .radial_energy import (
 from .renormalization import (
     one_loop_inverse_coupling_squared,
     one_loop_transmutation_scale,
+    single_scale_tension,
     transmuted_mass_coordinate,
 )
 from .sine_gordon import (
@@ -200,6 +201,7 @@ __all__ = [
     "optical_ricci_scalar_1d",
     "one_loop_inverse_coupling_squared",
     "one_loop_transmutation_scale",
+    "single_scale_tension",
     "refinement_study",
     "render_claim_memory",
     "render_claim_index",

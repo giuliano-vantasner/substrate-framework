@@ -1,0 +1,42 @@
+id: P025
+base_release: v0.21.0
+base_commit: 2b863d4
+source_baseline: substrate@6d1f4e0
+source_units: [CF4]
+question: >-
+  Determine which exact content in CF4 is already accepted, whether its
+  string-tension scaling is a distinct premise-explicit dimensional theorem,
+  and whether any stated confinement conclusion follows.
+invariants:
+  - C-RGE-001 remains a conditional one-loop theorem with no confinement interpretation
+  - C-RGE-002 supplies b0 only under declared loop weights and field content
+  - a formal inverse-coupling zero need not lie in a perturbatively controlled regime
+allowed_imports:
+  - C-RGE-001
+  - C-RGE-002
+  - exact dimensional algebra
+  - CF4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Classify the RGE content as duplicate and promote only a conditional
+      sigma=k*Lambda^2 dimensional-scaling theorem with free k
+  - id: B
+    description: >-
+      Classify all exact CF4 content as duplicate or elementary consequence
+      of accepted claims and promote no new claim
+  - id: C
+    description: >-
+      Promote the asserted physical equivalence between asymptotic freedom,
+      the one-loop transmutation scale, and confinement
+uniqueness_evidence: null
+selection_criteria:
+  - nonperturbative implication closure
+  - separation of dimensional form from dynamical existence
+  - dependency and assumption economy
+  - distinct reusable content beyond C-RGE-001 and C-RGE-002
+  - sensitivity to the sole-scale and dimensionless-prefactor premises
+claims_proposed:
+  - C-DIM-007
+comparators_blinded_until: source_subclaims_claim_map_and_mutations_frozen
+status: accepted

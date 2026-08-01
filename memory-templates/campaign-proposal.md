@@ -46,7 +46,11 @@ Name importable APIs, claim-appropriate exact/numeric/formal oracles, mutations,
 Append failed routes with diagnoses and next candidates. An ill-fitting concept is rejected or reformulated; unrelated earlier work is not rewritten to save it.
 
 ## Debt Ledger
-List new assumptions, imports, parameters, residuals, convention conflicts, and broken consumers. The campaign remains active until the ledger is empty.
+Begin with a plain-prose sentence describing what this campaign's ledger tracks;
+retain that sentence when a table or list follows because memory validation
+rejects a table or list as the section's first content. Then list new
+assumptions, imports, parameters, residuals, convention conflicts, and broken
+consumers. The campaign remains active until the ledger is empty.
 
 ## Review and Promotion Plan
 Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims. Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` decisions must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims.

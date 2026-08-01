@@ -993,3 +993,40 @@ claims:
     accepted_in: v0.21.0
     challenges: []
     supersedes: []
+  - id: C-DIM-007
+    statement: >-
+      Conditional on C-RGE-001, an independently existing positive observable
+      sigma with mass dimension two, and Lambda being its only independent
+      dimensionful mass scale, dimensional homogeneity fixes only the power
+      sigma=k*Lambda^2 for an unconstrained positive dimensionless k. The
+      prefactor remains free and load-bearing. If a second independent mass
+      scale M is admitted, the monomial family Lambda^(2-q)*M^q is
+      dimensionally allowed, so the sole-scale premise is essential. The
+      one-loop equations contain no sigma and admit both zero- and
+      positive-tension assignments; this claim establishes neither existence
+      of a string tension, confinement, a magnitude, nor perturbative control
+      at Lambda.
+    provenance: campaigns/P025-cf4-dimensional-transmutation/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-RGE-001
+    evidence:
+      - campaigns/P025-cf4-dimensional-transmutation/verify.py
+      - campaigns/P025-cf4-dimensional-transmutation/attempts/0002/result.yaml
+      - campaigns/P025-cf4-dimensional-transmutation/reviews/independent_dimension_implication_review.py
+      - campaigns/P025-cf4-dimensional-transmutation/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-DIM-007-review.md
+      - tests/test_renormalization.py
+    assumptions:
+      - Lambda is positive and has mass dimension one.
+      - The observable sigma independently exists, is positive, and has mass dimension two.
+      - Lambda is the only independent dimensionful mass scale available to sigma.
+      - The positive dimensionless ratio k is not fixed by dimensional analysis or the one-loop flow.
+      - No Wilson loop, area law, flux tube, static potential, mass gap, or physical confinement identification is part of the claim.
+    comparators: []
+    accepted_in: v0.22.0
+    challenges: []
+    supersedes: []

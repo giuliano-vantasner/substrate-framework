@@ -66,6 +66,15 @@ Conditional on C-RGE-001 and positive quantities satisfying mu0=S*c0/a, g0^2=bet
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-003, C-RGE-001
 
+## C-DIM-007
+
+Conditional on C-RGE-001, an independently existing positive observable sigma with mass dimension two, and Lambda being its only independent dimensionful mass scale, dimensional homogeneity fixes only the power sigma=k*Lambda^2 for an unconstrained positive dimensionless k. The prefactor remains free and load-bearing. If a second independent mass scale M is admitted, the monomial family Lambda^(2-q)*M^q is dimensionally allowed, so the sole-scale premise is essential. The one-loop equations contain no sigma and admit both zero- and positive-tension assignments; this claim establishes neither existence of a string tension, confinement, a magnitude, nor perturbative control at Lambda.
+
+- Accepted in: `v0.22.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RGE-001
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

@@ -59,6 +59,22 @@ def one_loop_transmutation_scale(
     )
 
 
+def single_scale_tension(scale: Any, dimensionless_ratio: Any) -> sp.Expr:
+    """Return the conditional mass-dimension-two single-scale form.
+
+    If an independently existing tension has mass dimension two and ``scale``
+    is its only dimensionful input with mass dimension one, dimensional
+    homogeneity fixes only the power: ``tension = ratio * scale**2``.  The
+    dimensionless ratio remains an unconstrained, load-bearing premise.  This
+    helper neither establishes that a tension exists nor supplies a
+    confinement mechanism.
+    """
+
+    scale_value = _positive(scale, "scale")
+    ratio_value = _positive(dimensionless_ratio, "dimensionless_ratio")
+    return sp.simplify(ratio_value * scale_value**2)
+
+
 def transmuted_mass_coordinate(
     coupling_squared: Any,
     beta_coefficient: Any,

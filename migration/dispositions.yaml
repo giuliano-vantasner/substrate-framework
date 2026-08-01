@@ -335,3 +335,19 @@ units:
       P024 keeps the perturbative weights as explicit API inputs, replaces the
       numerical running sweep by an exact derivative and limit, and excludes
       pending YM1/EM5 from the accepted dependency closure.
+  CF4:
+    disposition: qualified
+    accepted_claims:
+      - C-RGE-001
+      - C-RGE-002
+      - C-DIM-007
+    qualification: >-
+      CF4's one-loop solution, formal pole, and RG-invariance claims map to
+      accepted C-RGE-001/C-RGE-002, and its sole-scale exponent is accepted as
+      C-DIM-007. It does not establish a nonzero string tension, confinement, a
+      dimensionless prefactor, or perturbative control at Lambda.
+    evidence:
+      - campaigns/P025-cf4-dimensional-transmutation/reviews/source_adjudication.md
+    note: >-
+      P025 adds an extra-scale guard and a same-flow zero-tension countermodel;
+      CF4's numerical limit sweep is regression evidence only.

@@ -1,0 +1,3 @@
+PASS [C-DIM-006/CF4] 26 exact duplicate, dimension, mutation, limit, and implication-boundary checks
+ALL 26 CHECKS PASS [C-DIM-006/CF4]
+P025 CF4 CLAIM-BOUNDARY AUDIT ALL 26 CHECKS PASS

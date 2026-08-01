@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF4]
+framework_base: 2b863d4
+question: >-
+  Which CF4 equations duplicate accepted RGE claims, what conditional
+  single-scale tension theorem remains, and does the flow imply confinement?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P025-cf4-dimensional-transmutation/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF4_dimensional_transmutation.py
+oracle:
+  kind: exact_duplicate_dimension_and_implication_boundary
+  mutation_requirements:
+    - reference-point invariance is a total rather than partial derivative
+    - dimension, exponent, extra scale, and free prefactor are load-bearing
+    - beta sign changes formal pole placement
+    - one-loop identities admit a no-tension countermodel
+status: failed

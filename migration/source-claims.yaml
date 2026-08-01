@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 196
-  qualified: 17
+  pending_adjudication: 195
+  qualified: 18
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2073,8 +2073,19 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RGE-001
+  - C-RGE-002
+  - C-DIM-007
+  qualification: CF4's one-loop solution, formal pole, and RG-invariance claims
+    map to accepted C-RGE-001/C-RGE-002, and its sole-scale exponent is accepted
+    as C-DIM-007. The source does not establish a nonzero string tension,
+    confinement, a dimensionless prefactor, or perturbative control at Lambda.
+  evidence:
+  - campaigns/P025-cf4-dimensional-transmutation/reviews/source_adjudication.md
+  note: P025 supplies an extra-scale guard and same-flow zero-tension
+    countermodel; the source's numerical limit sweep is regression evidence only.
 - source_unit: CF5
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py

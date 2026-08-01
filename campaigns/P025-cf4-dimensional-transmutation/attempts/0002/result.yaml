@@ -1,0 +1,23 @@
+attempt: 0002
+completed_at: '2026-08-01T15:19:49Z'
+exit_code: 0
+terminal_tally: 26
+verdict:
+  C-RGE-001_duplicate: symbolic_verified
+  C-DIM-007: symbolic_verified
+  CF4_confinement_implication: rejected
+evidence:
+  - exact mapping of CF4.1 through CF4.3 to C-RGE-001
+  - total-versus-partial derivative and wrong-flow-sign probe
+  - unique one-scale mass-dimension exponent with four mutations
+  - free-prefactor and extra-scale counterexamples
+  - exact ultraviolet and formal-pole limits
+  - zero- and positive-tension assignments compatible with one identical flow
+  - beta-sign pole-placement mutation
+status: passed
+stdout: stdout.txt
+note: >-
+  The preserved stdout uses provisional identifier C-DIM-006. A pre-commit
+  provenance audit found that P023 had already used that identifier for a
+  rejected proposal, so the accepted claim was renumbered C-DIM-007 without
+  changing its statement or oracle.

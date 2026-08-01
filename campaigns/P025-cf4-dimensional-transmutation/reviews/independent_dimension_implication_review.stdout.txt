@@ -1,0 +1,8 @@
+PASS [P025-INDEPENDENT] one sole mass scale fixes the tension exponent to two
+PASS [P025-INDEPENDENT] two independent mass scales leave a one-parameter exponent family
+PASS [P025-INDEPENDENT] dimensional homogeneity leaves the multiplicative ratio arbitrary
+PASS [P025-INDEPENDENT] the independently rederived linear inverse coupling has a formal IR-side zero
+PASS [P025-INDEPENDENT] the one-loop equations impose no equation on sigma
+PASS [P025-INDEPENDENT] sigma zero and sigma positive are both compatible with the same flow
+ALL 6 CHECKS PASS [P025-INDEPENDENT]
+P025 INDEPENDENT REVIEW ALL 6 CHECKS PASS

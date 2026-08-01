@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T15:07:43Z'
+updated: '2026-08-01T15:19:49Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.21.0`, containing thirty-two claims: the prior sector results plus exact SU(3) representation invariants `C-LIE-001` and conditional one-loop specialization `C-RGE-002`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.22.0`, containing thirty-three claims: the prior sector results plus the conditional single-scale tension exponent `C-DIM-007`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 196 pending, 0 partially migrated, 3 migrated, 17 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 195 pending, 0 partially migrated, 3 migrated, 18 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -93,6 +93,9 @@ Attempts are append-only and individually reproducible.
 | 0031 | P022 exact linear-system consistency diagnostic | `campaigns/P022-linear-system-consistency` | accepted in v0.20.0 with EL5 qualified | Twenty-one exact and six independent checks distinguish row count, rank, augmented consistency, and solution dimension; the source's restored matrix has nullity zero and its ratio keeps two free inputs | Audit EL6's measured-value confrontation against the accepted free-coordinate and free-prefactor boundaries |
 | 0032 | P023 EL6 confrontation closure audit | `campaigns/P023-confrontation-closure-audit` | EL6 qualified; v0.20.0 unchanged | Twelve exact and five independent checks normalize the formula to C-DIM-005, expose comparator-dependent length and offset inverses, and reject the restricted-namespace reconstruction as a prediction | Audit QCD3's group-factor and one-loop coefficient claims before using them as physical premises of C-RGE-001 |
 | 0033 | P024 exact SU(3) invariants and conditional one-loop coefficient | `campaigns/P024-su3-one-loop-coefficient` | accepted in v0.21.0 with QCD3 qualified | Twenty-seven exact and five independent checks derive the standard representation invariants, retain both imported loop weights, mutate every coefficient, and replace a numerical running sweep with exact calculus | Audit CF4's dimensional-transmutation and confinement claims against C-RGE-001/C-RGE-002 without importing infrared physics |
+| 0034 | P025 CF4 dimensional-transmutation implication audit | `campaigns/P025-cf4-dimensional-transmutation` | accepted in v0.22.0 with CF4 qualified | One preserved symbolic-inequality failure preceded 26 exact and six independent checks; the accepted claim fixes only the one-scale exponent, while an extra-scale family and same-flow zero-tension countermodel reject the confinement narrative | Audit CF1's Nielsen-Olesen vortex equations and BVP as a conditional field model before any substrate or confinement interpretation |
+| 0035 | P025 targeted memory validation | `memory validate ... --base /home/dan/substrate-framework` | failed before the release gate | The first invocation used the configured external base; the corrected invocation then exposed a debt section beginning directly with a table, a recurring disclosure error | Add the required prose scope line, strengthen the campaign-proposal template at the shared contract surface, and rerun the changed boundary |
+| 0036 | P025 pre-commit provenance audit | accepted-claim ID and durable-decision scan | failed before commit | Provisional `C-DIM-006` collided with P023's rejected-claim review even though the identifier was absent from the accepted registry | Preserve P023 unchanged, renumber the new accepted claim `C-DIM-007`, regenerate consumers, and rerun the changed boundary |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -109,7 +112,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 196 bridge units remain pending, 3 are migrated, 17 are qualified, 1 is duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 195 bridge units remain pending, 3 are migrated, 18 are qualified, 1 is duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -119,11 +122,13 @@ The authority boundary and source commit are fixed. The memory-template category
 
 P024 adds exact standard SU(3) representation invariants and a weight-explicit conditional one-loop coefficient while qualifying QCD3's imported loop physics, group-selection, and substrate-identification readings.
 
+P025 adds the conditional single-scale tension exponent with a free prefactor and explicit extra-scale guard. It qualifies CF4 by mapping its RGE algebra to existing claims and rejecting the claimed confinement implication with a same-flow zero-tension countermodel.
+
 ## Canonicalization
-The registry, `v0.21.0` manifest, current release, generated claim index, and generated framework memory agree on thirty-two accepted claims. P001 through P024 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 196 pending, 0 partial, 3 migrated, 17 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.22.0` manifest, current release, generated claim index, and generated framework memory agree on thirty-three accepted claims. P001 through P025 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 195 pending, 0 partial, 3 migrated, 18 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 196 pending, 3 migrated, 17 qualified, 1 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit CF4's dimensional-transmutation and confinement claims against `C-RGE-001`/`C-RGE-002` without importing infrared physics.
+The effort remains active. D4 is discharged, but D1 remains open with 195 pending, 3 migrated, 18 qualified, 1 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit CF1's Nielsen-Olesen vortex equations and BVP as a conditional field model before any substrate or confinement interpretation.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

@@ -6,6 +6,7 @@ import sympy as sp
 from substrate_framework.renormalization import (
     one_loop_inverse_coupling_squared,
     one_loop_transmutation_scale,
+    single_scale_tension,
     transmuted_mass_coordinate,
 )
 
@@ -34,6 +35,15 @@ def test_transmutation_scale_is_inverse_coupling_zero() -> None:
         )
         == 0
     )
+
+
+def test_single_scale_tension_retains_free_dimensionless_ratio() -> None:
+    scale, ratio = sp.symbols("Lambda k", positive=True)
+    tension = single_scale_tension(scale, ratio)
+    assert tension == ratio * scale**2
+    assert sp.simplify(tension / scale**2) == ratio
+    assert sp.diff(tension, ratio) == scale**2
+    assert sp.diff(tension, scale) == 2 * ratio * scale
 
 
 def test_transmuted_mass_coordinate_retains_all_dimensionless_inputs() -> None:
@@ -68,6 +78,8 @@ def test_transmuted_mass_coordinate_retains_all_dimensionless_inputs() -> None:
         (lambda: one_loop_transmutation_scale(0, 1, 1), "reference_scale"),
         (lambda: one_loop_transmutation_scale(1, 0, 1), "reference_coupling"),
         (lambda: one_loop_transmutation_scale(1, 1, 0), "beta_coefficient"),
+        (lambda: single_scale_tension(0, 1), "scale"),
+        (lambda: single_scale_tension(1, 0), "dimensionless_ratio"),
         (lambda: transmuted_mass_coordinate(0, 1, 1), "coupling_squared"),
         (lambda: transmuted_mass_coordinate(1, 0, 1), "beta_coefficient"),
         (lambda: transmuted_mass_coordinate(1, 1, 0), "mass_energy_ratio"),
