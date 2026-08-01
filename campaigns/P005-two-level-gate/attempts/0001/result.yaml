@@ -1,0 +1,13 @@
+attempt: 0001
+completed_at: '2026-08-01T11:34:37Z'
+exit_code: 1
+terminal_tally: null
+verdict:
+  C-TH-001: unverified
+failure_class: representation
+failure: >-
+  Plain SymPy simplify did not reconcile the exponential derivative of P with
+  the equivalent hyperbolic form returned by the canonical variance API.
+status: failed
+stdout: stdout.txt
+stderr: stderr.txt

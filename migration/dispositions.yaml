@@ -30,6 +30,14 @@ units:
       Cross-program lift and binding-gap encodings remain separate candidate
       claims; their agreement with the accepted energy does not promote them.
     note: C-SG-002 independently rederived the bridge's load-bearing Hamiltonian energy result.
+  T1G:
+    disposition: migrated
+    accepted_claims:
+      - C-TH-001
+    note: >-
+      P005 promotes the normalized occupation, variance/sech identity, global
+      bounds and limits, both source guards, and the conditional shape relation
+      while keeping the macroscopic amplitude and mechanism outside the claim.
   HE4:
     disposition: partially_migrated
     accepted_claims:

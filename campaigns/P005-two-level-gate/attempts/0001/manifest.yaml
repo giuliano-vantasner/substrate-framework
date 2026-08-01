@@ -1,0 +1,16 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1G
+framework_base: 25aec1f
+question: Derive the exact normalized two-level variance gate and its global properties.
+command: PYTHONPATH=src .venv/bin/python proposals/P005-two-level-gate/verify.py
+oracle:
+  kind: exact_sympy_algebra_and_calculus
+  obligations:
+    - normalized partition occupation and variance
+    - exact sech identity and global properties
+    - honest conditional macroscopic amplitude relation
+    - normalization, coefficient, and half-angle mutations
+status: running

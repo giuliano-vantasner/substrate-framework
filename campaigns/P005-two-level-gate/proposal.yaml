@@ -1,0 +1,38 @@
+id: P005
+base_release: v0.4.0
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1G
+question: >-
+  Derive the exact normalized two-level occupation-variance gate, its sech
+  representation, global bounds, limits, and the precise conditional mapping
+  between single-event and macroscopic gate shapes.
+invariants:
+  - accepted release v0.4.0 remains unchanged outside the new thermal utility sector
+  - x is a real dimensionless level splitting over temperature
+  - the upper-state probability is the normalized two-level occupation
+  - a shape identity cannot determine a separate macroscopic amplitude
+allowed_imports:
+  - elementary two-level partition function Z = 1 + exp(-x)
+  - conditional single-event definition W = 2*P*(1-P)
+  - conditional macroscopic gate form A*sech(x/2)^2
+  - exact real calculus and SymPy
+  - predecessor bridge T1G at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Rewrite the normalized logistic occupation algebraically into the hyperbolic-secant gate
+  - id: B
+    description: Derive the occupation variance and susceptibility from the two-level partition function before converting its form
+  - id: C
+    description: Characterize the even gate through its differential equation, maximum, and asymptotic boundary data
+uniqueness_evidence: null
+selection_criteria:
+  - exact normalized occupation construction
+  - no fitted shape or amplitude parameter
+  - global rather than pointwise bounds and monotonicity
+  - independent partition-function derivation
+  - mutation sensitivity to normalization and half-angle
+claims_proposed:
+  - C-TH-001
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: active

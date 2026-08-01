@@ -161,3 +161,32 @@ claims:
     accepted_in: v0.4.0
     challenges: []
     supersedes: []
+  - id: C-TH-001
+    statement: >-
+      For every real dimensionless splitting x, the normalized upper-state
+      occupation of Z = 1 + exp(-x) is P = exp(-x)/Z = 1/(1+exp(x)). Its
+      Bernoulli variance is P*(1-P) = sech(x/2)^2/4, and the conditional
+      symmetric gate W = 2*P*(1-P) = sech(x/2)^2/2. W is even, has unique
+      global maximum 1/2 at x = 0, decreases strictly with |x|, and tends to
+      zero as x tends to either infinity. A shape A*sech(x/2)^2 equals 2*A*W;
+      this identity does not determine the independent amplitude A.
+    provenance: campaigns/P005-two-level-gate/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P005-two-level-gate/verify.py
+      - campaigns/P005-two-level-gate/attempts/0001/result.yaml
+      - campaigns/P005-two-level-gate/attempts/0002/result.yaml
+      - campaigns/P005-two-level-gate/reviews/independent_partition_review.py
+      - memory/vantasner/decisions/C-TH-001-review.md
+      - tests/test_thermal.py
+    assumptions:
+      - The two-level partition function is Z = 1 + exp(-x), with state occupations 0 and 1.
+      - Any single-event or macroscopic gate interpretation is conditional on separately approved definitions; no amplitude or causal mechanism is derived here.
+    comparators: []
+    accepted_in: v0.5.0
+    challenges: []
+    supersedes: []

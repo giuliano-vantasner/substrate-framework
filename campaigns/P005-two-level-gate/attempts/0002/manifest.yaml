@@ -1,0 +1,13 @@
+attempt: 0002
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1G
+framework_base: 25aec1f
+parent_attempt: 0001
+repair: Rewrite both sides of susceptibility identities into exponential normal form before exact simplification.
+command: PYTHONPATH=src .venv/bin/python proposals/P005-two-level-gate/verify.py
+oracle:
+  kind: exact_sympy_algebra_and_calculus
+  unchanged_scientific_thresholds: true
+status: running

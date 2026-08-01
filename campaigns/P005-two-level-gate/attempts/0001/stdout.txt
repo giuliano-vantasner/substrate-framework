@@ -1,0 +1,2 @@
+PASS [C-TH-001] normalized upper occupation equals the partition-function form
+PASS [C-TH-001] occupation variance has exact quarter-sech-squared form

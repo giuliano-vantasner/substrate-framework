@@ -1,0 +1,9 @@
+PASS [C-TH-001-INDEPENDENT] partition probabilities normalize exactly
+PASS [C-TH-001-INDEPENDENT] direct two-state moments derive P*(1-P)
+PASS [C-TH-001-INDEPENDENT] partition susceptibility independently equals occupation variance
+PASS [C-TH-001-INDEPENDENT] independent moments yield the exact symmetric sech gate
+PASS [C-TH-001-INDEPENDENT] a square identity proves the global bound without point sampling
+PASS [C-TH-001-INDEPENDENT] an unnormalized Boltzmann factor fails the gate identity
+PASS [C-TH-001-INDEPENDENT] a missing half-angle fails at an exact nonzero point
+ALL 7 CHECKS PASS [C-TH-001-INDEPENDENT]
+P005 INDEPENDENT REVIEW ALL 7 CHECKS PASS

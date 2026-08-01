@@ -43,6 +43,11 @@ from .sine_gordon import (
     hamiltonian_density,
     sine_gordon_residual,
 )
+from .thermal import (
+    symmetric_two_level_gate,
+    two_level_occupation_variance,
+    two_level_upper_occupation,
+)
 from .verification import CheckFailure, CheckLedger
 
 __all__ = [
@@ -80,9 +85,12 @@ __all__ = [
     "solve_method_of_lines",
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",
+    "symmetric_two_level_gate",
     "sine_gordon_residual",
     "validate_registry",
     "validate_release",
+    "two_level_occupation_variance",
+    "two_level_upper_occupation",
 ]
 
 __version__ = "0.0.0"

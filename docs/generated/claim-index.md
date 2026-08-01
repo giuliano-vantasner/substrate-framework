@@ -56,3 +56,12 @@ For every real omega with 0 < omega < 1, the C-SG-001 breather's period-averaged
 - Verification: `symbolic_verified`
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-002, C-SG-003
+
+## C-TH-001
+
+For every real dimensionless splitting x, the normalized upper-state occupation of Z = 1 + exp(-x) is P = exp(-x)/Z = 1/(1+exp(x)). Its Bernoulli variance is P*(1-P) = sech(x/2)^2/4, and the conditional symmetric gate W = 2*P*(1-P) = sech(x/2)^2/2. W is even, has unique global maximum 1/2 at x = 0, decreases strictly with |x|, and tends to zero as x tends to either infinity. A shape A*sech(x/2)^2 equals 2*A*W; this identity does not determine the independent amplitude A.
+
+- Accepted in: `v0.5.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none

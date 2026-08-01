@@ -7,8 +7,9 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
+  migrated: 1
   partially_migrated: 3
-  pending_adjudication: 215
+  pending_adjudication: 214
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -229,8 +230,12 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: migrated
+  accepted_claims:
+  - C-TH-001
+  note: P005 promotes the normalized occupation, variance/sech identity, global bounds and limits, both
+    source guards, and the conditional shape relation while keeping the macroscopic amplitude and mechanism
+    outside the claim.
 - source_unit: T1Z2
   phase: phase-1
   path: merged-framework/bridges/phase-1/bridge_T1Z2_same_minus_one.py

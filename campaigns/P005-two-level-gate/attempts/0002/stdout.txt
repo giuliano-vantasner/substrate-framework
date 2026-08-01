@@ -1,0 +1,18 @@
+PASS [C-TH-001] normalized upper occupation equals the partition-function form
+PASS [C-TH-001] occupation variance has exact quarter-sech-squared form
+PASS [C-TH-001] negative occupation susceptibility equals its variance
+PASS [C-TH-001] symmetric gate has exact half-sech-squared form
+PASS [C-TH-001] the gate is exactly even in the signed splitting
+PASS [C-TH-001] the exact derivative is negative for x>0 and positive for x<0
+PASS [C-TH-001] the global maximum gap is a nonnegative square
+PASS [C-TH-001] the maximum is one half at zero splitting
+PASS [C-TH-001] the gate vanishes at both infinite-splitting limits
+PASS [C-TH-001] a macroscopic sech-squared shape equals 2*A times the normalized gate
+PASS [C-TH-001] occupation normalization, gate factor, half-angle, and shape factor: baseline
+PASS [C-TH-001] occupation normalization, gate factor, half-angle, and shape factor: mutations supplied
+PASS [C-TH-001] occupation normalization, gate factor, half-angle, and shape factor: mutation 1 rejected
+PASS [C-TH-001] occupation normalization, gate factor, half-angle, and shape factor: mutation 2 rejected
+PASS [C-TH-001] occupation normalization, gate factor, half-angle, and shape factor: mutation 3 rejected
+PASS [C-TH-001] occupation normalization, gate factor, half-angle, and shape factor: mutation 4 rejected
+ALL 16 CHECKS PASS [C-TH-001]
+P005 ALL 16 CHECKS PASS

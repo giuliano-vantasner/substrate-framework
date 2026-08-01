@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T11:30:13Z'
+updated: '2026-08-01T11:36:49Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.4.0`, containing the four sine-Gordon mechanics claims and conditional optical claims `C-OG-001/002`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.5.0`, containing the four sine-Gordon mechanics claims, conditional optical claims `C-OG-001/002`, and exact normalized thermal gate `C-TH-001`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -68,6 +68,8 @@ Attempts are append-only and individually reproducible.
 | 0006 | P003 attempt 0002, virial and direct-field routes | `campaigns/P003-sine-gordon-gradient` | accepted in v0.3.0 | Exact virial closure passed 25 checks; an independent field integral passed 16 checks and rejected the half-factor convention | Return to claim inventory and identify the next dependency-closed sector root |
 | 0007 | Measurable predecessor scope and claim-candidate queue | `scripts/inventory_claims.py`, `migration/scope.yaml`, and `migration/source-claims.yaml` | passed | Hash-locks all 218 unique merged bridge units across phases 1-46, separates evidence roles from primary units, and validates accepted-claim mappings without granting source authority | Decompose the next pending dependency-root bridge into claim-level candidates |
 | 0008 | P004 general optical-dilaton derivation and independent tensor route | `campaigns/P004-optical-dilaton` | accepted in v0.4.0 | Exact profile-jet matching corrected uniqueness to `log(n)+C`; independent curvature and geodesic reconstruction passed with a 3+1 scope counterexample | Continue through pending phase-1 roots while preserving T1B's sourced-Poisson remainder |
+| 0009 | P005 attempt 0001, mixed SymPy normal forms | `campaigns/P005-two-level-gate/attempts/0001` | failed | Equivalent susceptibility and variance expressions remained in exponential and hyperbolic forms under plain simplification | Preserve the failure and normalize both sides to exponentials |
+| 0010 | P005 attempt 0002 and independent partition moments | `campaigns/P005-two-level-gate` | accepted in v0.5.0 | Sixteen exact and seven independent checks fix normalization, half-angle, global bound, and conditional amplitude relation | Decompose the remaining dependency-light phase-1 bridge T1A |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -84,7 +86,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 215 bridge units remain pending and 3 are only partially migrated | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 214 bridge units remain pending, 3 are partially migrated, and only 1 is fully migrated | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -93,10 +95,10 @@ Every row must be discharged before the parent effort can close.
 The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion. P003 added the exact averaged squared-gradient integral and its virial-Legendre identity in `v0.3.0`, while preserving the full-versus-half factor convention. The migration scope is now measurable: 218 unique reconciled bridge units are primary candidate units, other hash-locked roles are evidence or consumers, and application exclusions are explicit rather than inferred.
 
 ## Canonicalization
-The registry, `v0.4.0` manifest, current release, generated claim index, and generated framework memory agree on `C-SG-001/002/003/004` and `C-OG-001/002`. P001 through P004 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 215 pending and 3 partial units.
+The registry, `v0.5.0` manifest, current release, generated claim index, and generated framework memory agree on seven accepted claims. P001 through P005 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 214 pending, 3 partial, and 1 migrated unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 215 pending and 3 partially migrated bridge units. The next executable action is to preregister T1G's dependency-light thermal/logistic identity, separating its exact functional statement from imported ionization and macroscopic interpretations.
+The effort remains active. D4 is discharged, but D1 remains open with 214 pending, 3 partial, and 1 migrated bridge unit. The next executable action is to preregister T1A's precise shared line-energy statement, testing whether it earns an accepted structural claim or only a qualified source disposition.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
