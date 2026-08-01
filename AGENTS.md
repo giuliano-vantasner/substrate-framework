@@ -79,6 +79,8 @@ Use four independent status axes for every claim:
 
 Proposals use `challenges` relationships. Only an accepted replacement may use `supersedes`. A proposal may be partly accepted: promote claims individually and retain rejected candidates as historical attempt evidence.
 
+Migration dispositions are decisions, not queue labels. `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` units must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims. Never clear a source unit with an unsupported terminal word.
+
 Once adjudicated, move the campaign record into `campaigns/` without rewriting it. Create a release manifest pinning the exact claim set and source commit. `current` means the latest accepted release, never the newest directory or working-tree prose. When a campaign migrates predecessor material, update its source-unit disposition in `migration/dispositions.yaml` and regenerate `migration/source-claims.yaml`; partial migration must name the unaccepted remainder rather than marking a whole bridge complete.
 
 ## Implementation architecture

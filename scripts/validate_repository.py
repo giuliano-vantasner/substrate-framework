@@ -63,6 +63,79 @@ def validate_accepted_artifact_paths(root: Path, registry: dict) -> None:
                 )
 
 
+def validate_migration_unit_disposition(
+    root: Path,
+    unit: dict,
+    allowed: set[str],
+    accepted_registry: set[str],
+) -> None:
+    """Validate one source-unit disposition and its durable support."""
+
+    unit_id = unit.get("source_unit")
+    disposition = unit.get("disposition")
+    if disposition not in allowed:
+        raise GovernanceError(f"{unit_id}: invalid migration disposition {disposition!r}")
+    mapped = unit.get("accepted_claims")
+    if not isinstance(mapped, list) or not all(isinstance(item, str) for item in mapped):
+        raise GovernanceError(f"{unit_id}: accepted_claims must be a list of strings")
+    unknown_claims = set(mapped) - accepted_registry
+    if unknown_claims:
+        raise GovernanceError(
+            f"{unit_id}: maps to unknown accepted claims {sorted(unknown_claims)}"
+        )
+    if disposition == "pending_adjudication" and mapped:
+        raise GovernanceError(f"{unit_id}: pending unit cannot map accepted claims")
+    if disposition in {"migrated", "partially_migrated"} and not mapped:
+        raise GovernanceError(f"{unit_id}: migrated unit must map accepted claims")
+    if disposition == "partially_migrated" and not unit.get("remaining_scope"):
+        raise GovernanceError(f"{unit_id}: partial migration must name remaining scope")
+    if disposition in {"refuted", "out_of_scope"} and mapped:
+        raise GovernanceError(
+            f"{unit_id}: {disposition} unit cannot map accepted claims; use qualified for mixed scope"
+        )
+
+    required_text = {
+        "qualified": "qualification",
+        "refuted": "refutation",
+        "out_of_scope": "scope_basis",
+    }
+    text_field = required_text.get(disposition)
+    if text_field is not None:
+        value = unit.get(text_field)
+        if not isinstance(value, str) or not value.strip():
+            raise GovernanceError(
+                f"{unit_id}: {disposition} disposition must name {text_field}"
+            )
+    if disposition == "duplicate_evidence":
+        duplicates = unit.get("duplicates")
+        if not isinstance(duplicates, list) or not duplicates or not all(
+            isinstance(item, str) and item.strip() for item in duplicates
+        ):
+            raise GovernanceError(
+                f"{unit_id}: duplicate_evidence disposition must name duplicates"
+            )
+
+    terminal = {"qualified", "refuted", "duplicate_evidence", "out_of_scope"}
+    if disposition in terminal:
+        evidence = unit.get("evidence")
+        if not isinstance(evidence, list) or not evidence or not all(
+            isinstance(item, str) and item.strip() for item in evidence
+        ):
+            raise GovernanceError(
+                f"{unit_id}: {disposition} disposition needs evidence paths"
+            )
+        for artifact in evidence:
+            relative = Path(artifact)
+            if relative.is_absolute() or ".." in relative.parts:
+                raise GovernanceError(
+                    f"{unit_id}: disposition evidence must be repository-relative: {artifact}"
+                )
+            if not (root / relative).is_file():
+                raise GovernanceError(
+                    f"{unit_id}: disposition evidence does not exist: {artifact}"
+                )
+
+
 def validate_migration_inventory(root: Path, registry: dict) -> dict[str, int]:
     """Validate the measurable predecessor scope without promoting its units."""
 
@@ -115,23 +188,10 @@ def validate_migration_inventory(root: Path, registry: dict) -> dict[str, int]:
             raise GovernanceError(f"duplicate migration source unit: {unit_id}")
         actual[unit_id] = (unit.get("path"), unit.get("sha256"))
         disposition = unit.get("disposition")
-        if disposition not in allowed:
-            raise GovernanceError(f"{unit_id}: invalid migration disposition {disposition!r}")
+        validate_migration_unit_disposition(
+            root, unit, allowed, accepted_registry
+        )
         counts[disposition] = counts.get(disposition, 0) + 1
-        mapped = unit.get("accepted_claims")
-        if not isinstance(mapped, list) or not all(isinstance(item, str) for item in mapped):
-            raise GovernanceError(f"{unit_id}: accepted_claims must be a list of strings")
-        unknown_claims = set(mapped) - accepted_registry
-        if unknown_claims:
-            raise GovernanceError(
-                f"{unit_id}: maps to unknown accepted claims {sorted(unknown_claims)}"
-            )
-        if disposition == "pending_adjudication" and mapped:
-            raise GovernanceError(f"{unit_id}: pending unit cannot map accepted claims")
-        if disposition in {"migrated", "partially_migrated"} and not mapped:
-            raise GovernanceError(f"{unit_id}: migrated unit must map accepted claims")
-        if disposition == "partially_migrated" and not unit.get("remaining_scope"):
-            raise GovernanceError(f"{unit_id}: partial migration must name remaining scope")
 
     if actual != expected:
         missing = sorted(set(expected) - set(actual))

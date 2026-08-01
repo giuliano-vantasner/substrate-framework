@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A+B
+source_baseline: substrate@6d1f4e0
+source_units:
+  - S5
+framework_base: d8ea969
+question: >-
+  Which exact constitutive and formula-composition results survive when S5's
+  declared continuum law, imported formulas, later annotations, and visible
+  comparators are excluded from authority?
+command: PYTHONPATH=src .venv/bin/python proposals/P008-constitutive-qualification/verify.py
+oracle:
+  kind: exact_sympy_algebra_sensitivity_and_dimensions
+  mutation_requirements:
+    - unequal response exponents restore density or thermal dependence
+    - a changed hedgehog-coefficient power prevents cancellation
+    - no comparator value enters a scientific predicate
+status: running

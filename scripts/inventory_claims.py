@@ -151,10 +151,17 @@ def extract_candidate(
         "disposition": status,
         "accepted_claims": override.get("accepted_claims", []),
     }
-    if "remaining_scope" in override:
-        record["remaining_scope"] = override["remaining_scope"]
-    if "note" in override:
-        record["note"] = override["note"]
+    for field in (
+        "remaining_scope",
+        "qualification",
+        "refutation",
+        "duplicates",
+        "scope_basis",
+        "evidence",
+        "note",
+    ):
+        if field in override:
+            record[field] = override[field]
     return record
 
 

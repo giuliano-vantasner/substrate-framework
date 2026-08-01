@@ -1,0 +1,39 @@
+id: P008
+base_release: v0.7.0
+source_baseline: substrate@6d1f4e0
+source_units:
+  - S5
+question: >-
+  Extract the exact constitutive co-scaling and conditional mass-formula
+  consequences from S5, determine whether they establish Option-C physical
+  realizability or numerical predictions, and record an evidence-backed
+  qualified disposition without importing comparator-selected conclusions.
+invariants:
+  - accepted release v0.7.0 remains unchanged outside additive constitutive and conditional relation utilities
+  - a cancellation inside a declared constitutive ansatz cannot establish a separate continuum coupling law
+  - algebraic composition of imported formulas remains conditional and is not a parameter-free physical prediction
+  - empirical closeness cannot select or promote a formula already visible in the source
+allowed_imports:
+  - C-VIR-001 for the already accepted conditional Option-C slope classification
+  - positive real algebra and standard electromagnetic wave-speed definition
+  - the two mass formulas as explicit conditional premises only
+  - predecessor bridge S5 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote only the exact co-scaling theorem for the declared electromagnetic responses
+  - id: B
+    description: Promote the exact coefficient cancellation obtained by conditionally matching the two mass formulas
+  - id: C
+    description: Treat layer separation plus comparator closeness as proof of physical realizability and magnitude prediction
+uniqueness_evidence: null
+selection_criteria:
+  - dependency closure without declared physics becoming a derivation
+  - exact sensitivity to response exponents and formula powers
+  - dimensionally explicit conditional APIs
+  - separation of structural algebra from empirical comparison
+  - evidence-backed terminal source disposition
+claims_proposed:
+  - C-MED-001
+  - C-SK-001
+comparators_blinded_until: source_values_already_visible_before_P008_and_excluded_from_selection_and_verdict
+status: accepted

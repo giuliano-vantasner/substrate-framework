@@ -158,6 +158,7 @@ For accepted claims:
 
 1. Extract reusable logic into `src/substrate_framework/` and tests.
 2. Update `governance/claims.yaml` and a pinned release manifest. If predecessor units were consumed, update `migration/dispositions.yaml`, preserve any unmigrated subclaims explicitly, and regenerate `migration/source-claims.yaml`.
+   Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` dispositions require their structured reason and durable evidence paths; use `qualified` when a mixed unit also maps accepted claims.
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.

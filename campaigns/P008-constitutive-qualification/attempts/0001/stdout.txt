@@ -1,0 +1,23 @@
+PASS [C-MED-001] the declared responses have exact product epsilon*mu=1/c^2
+PASS [C-MED-001] common density and thermal factors cancel from local wave speed
+PASS [C-MED-001] both logarithmic scale sensitivities vanish exactly
+PASS [C-MED-001] density and thermal gradients cannot source an index within this ansatz
+PASS [C-MED-001] matched response exponents are load-bearing: baseline
+PASS [C-MED-001] matched response exponents are load-bearing: mutations supplied
+PASS [C-MED-001] matched response exponents are load-bearing: mutation 1 rejected
+PASS [C-MED-001] matched response exponents are load-bearing: mutation 2 rejected
+PASS [C-MED-001] matched response exponents are load-bearing: mutation 3 rejected
+PASS [C-SK-001] matching the two conditional premises solves F_pi exactly
+PASS [C-SK-001] the matched conditional ratio is 16*pi times electron rest energy
+PASS [C-SK-001] the shared hedgehog coefficient cancels exactly
+PASS [C-SK-001] substitution of the ratio proves the reverse implication
+PASS [C-SK-001] the conditional ratio has energy dimension
+PASS [C-SK-001] both prefactors and shared B1 powers are load-bearing: baseline
+PASS [C-SK-001] both prefactors and shared B1 powers are load-bearing: mutations supplied
+PASS [C-SK-001] both prefactors and shared B1 powers are load-bearing: mutation 1 rejected
+PASS [C-SK-001] both prefactors and shared B1 powers are load-bearing: mutation 2 rejected
+PASS [C-SK-001] both prefactors and shared B1 powers are load-bearing: mutation 3 rejected
+PASS [C-SK-001] both prefactors and shared B1 powers are load-bearing: mutation 4 rejected
+ALL 9 CHECKS PASS [C-MED-001]
+ALL 11 CHECKS PASS [C-SK-001]
+P008 ALL 20 CHECKS PASS

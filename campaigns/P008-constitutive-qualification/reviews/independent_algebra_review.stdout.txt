@@ -1,0 +1,9 @@
+PASS [C-MED-001-INDEPENDENT] direct exponent algebra gives half-difference sensitivities
+PASS [C-MED-001-INDEPENDENT] both sensitivities vanish exactly when corresponding exponents match
+PASS [C-MED-001-INDEPENDENT] a density exponent mismatch produces a nonzero index response
+PASS [C-SK-001-INDEPENDENT] direct coefficient division independently gives 16*pi*E_e
+PASS [C-SK-001-INDEPENDENT] the independently obtained ratio makes both premises equal
+PASS [C-SK-001-INDEPENDENT] a squared B1 premise independently prevents coefficient cancellation
+ALL 3 CHECKS PASS [C-MED-001-INDEPENDENT]
+ALL 3 CHECKS PASS [C-SK-001-INDEPENDENT]
+P008 INDEPENDENT REVIEW ALL 6 CHECKS PASS

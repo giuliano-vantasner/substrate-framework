@@ -57,19 +57,36 @@ units:
       bounds and limits, both source guards, and the conditional shape relation
       while keeping the macroscopic amplitude and mechanism outside the claim.
   T2B:
-    disposition: partially_migrated
+    disposition: qualified
     accepted_claims:
       - C-VAR-001
       - C-CC-001
       - C-VIR-001
-    remaining_scope: >-
-      The later Phase-4 S5 annotation claiming Option-C physical realizability
-      and microscopic-to-continuum layer separation remains unadjudicated.
-      A full 3D PDE time-stepper remains explicitly outside T2B's claim.
+    qualification: >-
+      P007 accepts the exact one-coordinate dynamics, but T2B's later annotation
+      that S5 closes Option-C physical realizability is unsupported. A full 3D
+      PDE time-stepper remains explicitly outside the source claim.
+    evidence:
+      - campaigns/P008-constitutive-qualification/reviews/source_adjudication.md
     note: >-
       P007 replaces duplicate integrations of an analytically identical RHS
-      with exact parameter elimination plus local uniqueness, and separates the
-      mixed-scale model by an exact initial-acceleration difference.
+      with exact parameter elimination plus local uniqueness; P008 adjudicates
+      the later S5 annotation without promoting it.
+  S5:
+    disposition: qualified
+    accepted_claims:
+      - C-VIR-001
+      - C-MED-001
+      - C-SK-001
+    qualification: >-
+      The exact virial, constitutive, and coefficient algebra survives, but the
+      source does not derive Option-C physical realizability, its mass formulas,
+      numerical predictions, correct length selection, or later AS annotations.
+    evidence:
+      - campaigns/P008-constitutive-qualification/reviews/source_adjudication.md
+    note: >-
+      P008 maps the narrow exact content while excluding every visible
+      comparator and documenting the missing continuum and formula premises.
   HE4:
     disposition: partially_migrated
     accepted_claims:

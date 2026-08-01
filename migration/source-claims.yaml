@@ -8,8 +8,9 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  partially_migrated: 4
-  pending_adjudication: 211
+  partially_migrated: 3
+  pending_adjudication: 210
+  qualified: 2
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -351,16 +352,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 6
   terminal_tally_literal_present: true
-  disposition: partially_migrated
+  disposition: qualified
   accepted_claims:
   - C-VAR-001
   - C-CC-001
   - C-VIR-001
-  remaining_scope: The later Phase-4 S5 annotation claiming Option-C physical realizability and microscopic-to-continuum
-    layer separation remains unadjudicated. A full 3D PDE time-stepper remains explicitly outside T2B's
-    claim.
+  qualification: P007 accepts the exact one-coordinate dynamics, but T2B's later annotation that S5 closes
+    Option-C physical realizability is unsupported. A full 3D PDE time-stepper remains explicitly outside
+    the source claim.
+  evidence:
+  - campaigns/P008-constitutive-qualification/reviews/source_adjudication.md
   note: P007 replaces duplicate integrations of an analytically identical RHS with exact parameter elimination
-    plus local uniqueness, and separates the mixed-scale model by an exact initial-acceleration difference.
+    plus local uniqueness; P008 adjudicates the later S5 annotation without promoting it.
 - source_unit: T2C
   phase: phase-2
   path: merged-framework/bridges/phase-2/bridge_T2C_tidal_MP.py
@@ -807,8 +810,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-VIR-001
+  - C-MED-001
+  - C-SK-001
+  qualification: The exact virial, constitutive, and coefficient algebra survives, but the source does
+    not derive Option-C physical realizability, its mass formulas, numerical predictions, correct length
+    selection, or later AS annotations.
+  evidence:
+  - campaigns/P008-constitutive-qualification/reviews/source_adjudication.md
+  note: P008 maps the narrow exact content while excluding every visible comparator and documenting the
+    missing continuum and formula premises.
 - source_unit: G1
   phase: phase-5
   path: merged-framework/bridges/phase-5/bridge_G1_radiating_dilaton_source.py

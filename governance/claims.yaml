@@ -308,3 +308,57 @@ claims:
     accepted_in: v0.7.0
     challenges: []
     supersedes: []
+  - id: C-MED-001
+    statement: >-
+      For positive density rho, thermal scale Theta, and reference speed c, the
+      declared co-scaled response laws epsilon=rho*Theta/c^2 and
+      mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed
+      sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore
+      cannot create an index within this ansatz. More generally, the logarithmic
+      sensitivities vanish exactly when the corresponding response exponents
+      match.
+    provenance: campaigns/P008-constitutive-qualification/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P008-constitutive-qualification/verify.py
+      - campaigns/P008-constitutive-qualification/attempts/0001/result.yaml
+      - campaigns/P008-constitutive-qualification/reviews/independent_algebra_review.py
+      - memory/vantasner/decisions/C-MED-001-review.md
+      - tests/test_constitutive.py
+    assumptions:
+      - The permittivity and inverse permeability response laws are declared constitutive premises with positive inputs.
+      - The conclusion is confined to common response scaling and does not derive a separate continuum coupling or physical medium realization.
+    comparators: []
+    accepted_in: v0.8.0
+    challenges: []
+    supersedes: []
+  - id: C-SK-001
+    statement: >-
+      Conditional on positive premises M_top=48*pi^3*B1*E_e and
+      M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if
+      F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels
+      exactly; changing either B1 power generally prevents that cancellation.
+    provenance: campaigns/P008-constitutive-qualification/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P008-constitutive-qualification/verify.py
+      - campaigns/P008-constitutive-qualification/attempts/0001/result.yaml
+      - campaigns/P008-constitutive-qualification/reviews/independent_algebra_review.py
+      - memory/vantasner/decisions/C-SK-001-review.md
+      - tests/test_skyrme_relations.py
+    assumptions:
+      - Both mass formulas are approved conditional premises rather than derived or empirically validated framework claims.
+      - B1, electron rest energy, pion scale, and Skyrme coupling are positive.
+      - No numerical comparator, individual F_pi or e value, or physical mass prediction is part of this claim.
+    comparators: []
+    accepted_in: v0.8.0
+    challenges: []
+    supersedes: []

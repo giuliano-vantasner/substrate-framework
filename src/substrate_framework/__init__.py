@@ -35,6 +35,12 @@ from .collective_dynamics import (
     slow_optical_collective_acceleration,
     virial_scaling_exponents,
 )
+from .constitutive import (
+    co_scaled_inverse_permeability,
+    co_scaled_permittivity,
+    co_scaled_wave_speed,
+    local_wave_speed,
+)
 from .radial_energy import (
     capillary_critical_radius,
     capillary_energy,
@@ -54,6 +60,11 @@ from .sine_gordon import (
     breather_period,
     hamiltonian_density,
     sine_gordon_residual,
+)
+from .skyrme_relations import (
+    conditional_anw_mass,
+    conditional_topological_mass,
+    matched_pion_coupling_ratio,
 )
 from .thermal import (
     symmetric_two_level_gate,
@@ -87,10 +98,16 @@ __all__ = [
     "breather_period",
     "capillary_critical_radius",
     "capillary_energy",
+    "co_scaled_inverse_permeability",
+    "co_scaled_permittivity",
+    "co_scaled_wave_speed",
+    "conditional_anw_mass",
+    "conditional_topological_mass",
     "hamiltonian_density",
     "index_from_potential",
     "load_yaml",
     "line_energy",
+    "local_wave_speed",
     "optical_box_static_1d",
     "optical_collective_acceleration",
     "optical_collective_lagrangian",
@@ -101,6 +118,7 @@ __all__ = [
     "render_claim_memory",
     "render_claim_index",
     "render_release_memory",
+    "matched_pion_coupling_ratio",
     "solve_bvp_evidence",
     "solve_ivp_evidence",
     "solve_method_of_lines",

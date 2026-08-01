@@ -6,6 +6,7 @@ from scripts.validate_repository import (
     validate_accepted_artifact_paths,
     validate_memory_contract_categories,
     validate_migration_inventory,
+    validate_migration_unit_disposition,
 )
 from substrate_framework.governance import GovernanceError
 
@@ -109,3 +110,30 @@ def test_migration_inventory_rejects_unknown_accepted_mapping(tmp_path) -> None:
 
     with pytest.raises(GovernanceError, match="unknown accepted claims"):
         validate_migration_inventory(tmp_path, {"claims": []})
+
+
+def test_terminal_migration_disposition_requires_reason_and_evidence(tmp_path) -> None:
+    allowed = {"qualified", "refuted", "duplicate_evidence", "out_of_scope"}
+    base = {
+        "source_unit": "A1",
+        "accepted_claims": ["C1"],
+        "disposition": "qualified",
+        "qualification": "narrow exact content only",
+    }
+    with pytest.raises(GovernanceError, match="needs evidence paths"):
+        validate_migration_unit_disposition(tmp_path, base, allowed, {"C1"})
+
+    artifact = tmp_path / "campaigns/P1/source-adjudication.md"
+    artifact.parent.mkdir(parents=True)
+    artifact.write_text("qualified with exact reasons\n", encoding="utf-8")
+    base["evidence"] = ["campaigns/P1/source-adjudication.md"]
+    validate_migration_unit_disposition(tmp_path, base, allowed, {"C1"})
+
+    refuted = {
+        "source_unit": "A2",
+        "accepted_claims": [],
+        "disposition": "refuted",
+        "evidence": ["campaigns/P1/source-adjudication.md"],
+    }
+    with pytest.raises(GovernanceError, match="must name refutation"):
+        validate_migration_unit_disposition(tmp_path, refuted, allowed, {"C1"})

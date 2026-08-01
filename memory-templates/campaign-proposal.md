@@ -49,7 +49,7 @@ Append failed routes with diagnoses and next candidates. An ill-fitting concept 
 List new assumptions, imports, parameters, residuals, convention conflicts, and broken consumers. The campaign remains active until the ledger is empty.
 
 ## Review and Promotion Plan
-Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims.
+Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims. Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` decisions must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims.
 
 ## Done Gate
 The campaign closes only on the complete positive success contract in `AGENTS.md`. If any gate fails, state the next attempt and continue.

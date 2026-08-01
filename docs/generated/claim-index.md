@@ -12,6 +12,15 @@ Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(
 - Compatibility: `compatible_extension`
 - Dependencies: C-VAR-001, C-OG-001
 
+## C-MED-001
+
+For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.
+
+- Accepted in: `v0.8.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.
@@ -74,6 +83,15 @@ For every real omega with 0 < omega < 1, the C-SG-001 breather's period-averaged
 - Verification: `symbolic_verified`
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-002, C-SG-003
+
+## C-SK-001
+
+Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.
+
+- Accepted in: `v0.8.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
 
 ## C-TH-001
 
