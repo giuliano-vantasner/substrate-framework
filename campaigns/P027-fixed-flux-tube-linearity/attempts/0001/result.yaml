@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T15:50:39Z'
+exit_code: 0
+terminal_tally: 22
+verdict:
+  C-FLX-001: symbolic_verified
+evidence:
+  - exact Gauss recovery and fixed-area field
+  - separate field-energy and endpoint-work slopes
+  - exact q=Phi/2 equality condition and factor-two counterexample
+  - three energy/Gauss mutations and two charge mutations
+  - expanding-area logarithmic and spherical Coulomb counterexamples
+  - effective-area inversion classified as reconstruction
+status: passed
+stdout: stdout.txt

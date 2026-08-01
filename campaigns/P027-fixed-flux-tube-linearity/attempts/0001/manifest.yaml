@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF2]
+framework_base: a02e56a
+question: >-
+  What fixed-area line-energy and endpoint-force slopes are exact, and when are
+  they the same coefficient?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P027-fixed-flux-tube-linearity/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+oracle:
+  kind: exact_work_energy_and_geometry_consistency
+  mutation_requirements:
+    - Gauss area power and energy one-half are load-bearing
+    - charge-flux equality is load-bearing
+    - variable-area and spherical counterexamples are explicit
+status: passed

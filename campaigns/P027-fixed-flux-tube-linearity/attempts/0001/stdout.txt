@@ -1,0 +1,3 @@
+PASS [C-FLX-001] 22 exact coefficient, mutation, geometry, and implication-boundary checks
+ALL 22 CHECKS PASS [C-FLX-001]
+P027 CF2 FIXED-FLUX AUDIT ALL 22 CHECKS PASS

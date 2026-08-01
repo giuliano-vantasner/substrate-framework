@@ -1,0 +1,40 @@
+campaign: P027
+title: Fixed-flux tube linearity and CF2 coefficient audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF2]
+base_release: v0.23.0
+adjudicated_at: '2026-08-01T15:50:39Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Separate exact derivations retain both useful linear slopes and expose their
+    missing equality premise rather than discarding valid fixed-area algebra.
+competing_candidates:
+  - id: B
+    decision: rejected_because_both_coefficients_and_their_iff_relation_are_distinct_reusable_content
+  - id: C
+    decision: rejected_because_no_accepted_dependency_maps_the_ideal_tube_to_quark_QCD_or_confinement_physics
+claims:
+  - id: C-FLX-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_work_energy_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-FLX-001-review.md
+source_disposition:
+  CF2: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P027-fixed-flux-tube-linearity/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P027-fixed-flux-tube-linearity/reviews/independent_work_energy_review.py
+  - .venv/bin/python -m pytest -q tests/test_flux_tube.py tests/test_abelian_higgs_vortex.py
+debt: []
+status: accepted

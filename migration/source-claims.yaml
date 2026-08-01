@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 194
-  qualified: 19
+  pending_adjudication: 193
+  qualified: 20
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2005,8 +2005,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-FLX-001
+  qualification: CF2's fixed-area field and field-energy linearity are accepted
+    together with the separately derived endpoint-work slope and exact equality
+    condition. It does not establish q=Phi/2, a CF1 tension identity, physical
+    quark/QCD variables, Riesz dynamics, area law, or confinement.
+  evidence:
+  - campaigns/P027-fixed-flux-tube-linearity/reviews/source_adjudication.md
+  note: P027 shows that CF2's executable energy path never uses q, adds
+    factor-of-two and variable-area counterexamples, and classifies effective
+    area inversion as reconstruction.
 - source_unit: CF3
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py

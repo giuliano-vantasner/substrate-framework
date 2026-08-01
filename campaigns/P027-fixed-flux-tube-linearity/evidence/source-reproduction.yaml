@@ -1,0 +1,12 @@
+source_unit: CF2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+sha256: e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+observed_at: '2026-08-01T15:50:39Z'
+exit_code: 0
+terminal_tally: ALL 15 CHECKS PASS
+scope_note: >-
+  The source checks its field-energy path but never uses declared endpoint
+  charge q in that path; P027 separately audits endpoint work.

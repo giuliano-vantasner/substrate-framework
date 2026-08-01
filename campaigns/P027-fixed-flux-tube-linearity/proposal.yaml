@@ -1,0 +1,41 @@
+id: P027
+base_release: v0.23.0
+base_commit: a02e56a
+source_baseline: substrate@6d1f4e0
+source_units: [CF2]
+question: >-
+  Determine what linear energy and endpoint-potential statements follow from a
+  fixed-area uniform-flux tube, and whether CF2 consistently identifies their
+  generally distinct slopes as one string tension.
+invariants:
+  - C-VTX-002 supplies only conditional bounded tension evidence for one radial model
+  - fixed cross-sectional area and uniform field are explicit premises
+  - a physical confinement interpretation requires a separately accepted map
+allowed_imports:
+  - exact Gauss-law and field-energy algebra in declared units
+  - C-VTX-001 and C-VTX-002 only as conditional downstream context
+  - CF2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote distinct exact line-energy and endpoint-force slopes and state
+      their equality iff the endpoint charge is half the tube flux
+  - id: B
+    description: >-
+      Promote only constant field and generic linearity because CF2's single
+      string-tension identification is internally inconsistent
+  - id: C
+    description: >-
+      Promote a physical linear quark potential and confinement conclusion
+      from the conditional fixed-area tube
+uniqueness_evidence: null
+selection_criteria:
+  - energy-force work consistency
+  - explicit fixed-area and uniform-field premises
+  - coefficient and factor-of-two sensitivity
+  - dependency and interpretation economy
+  - reusable composition with C-VTX-001 and C-VTX-002
+claims_proposed:
+  - C-FLX-001
+comparators_blinded_until: flux_area_charge_energy_and_force_conventions_frozen
+status: accepted

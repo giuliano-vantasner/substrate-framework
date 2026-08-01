@@ -1,0 +1,8 @@
+PASS [P027-INDEPENDENT] independent volume integration gives Phi squared L over two A
+PASS [P027-INDEPENDENT] independent endpoint work gives q Phi L over A
+PASS [P027-INDEPENDENT] the two independently derived slopes agree only at q equals Phi over two
+PASS [P027-INDEPENDENT] setting q equal to Phi doubles endpoint work relative to field energy
+PASS [P027-INDEPENDENT] independent expanding-area integration gives a logarithmic counterexample
+PASS [P027-INDEPENDENT] effective area inversion reconstructs its input tension tautologically
+ALL 6 CHECKS PASS [P027-INDEPENDENT]
+P027 INDEPENDENT WORK-ENERGY REVIEW ALL 6 CHECKS PASS

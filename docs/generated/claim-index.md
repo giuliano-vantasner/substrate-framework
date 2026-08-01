@@ -75,6 +75,15 @@ Conditional on C-RGE-001, an independently existing positive observable sigma wi
 - Compatibility: `compatible_extension`
 - Dependencies: C-RGE-001
 
+## C-FLX-001
+
+Conditional on positive flux Phi uniformly crossing a cross-section A that is fixed independently of positive length L, Gauss data give the constant field E=Phi/A. With declared field-energy density E^2/2, stored field energy is U(L)=Phi^2*L/(2A), linear with energy slope sigma_energy=Phi^2/(2A). Separately, for positive endpoint charge q and declared force F=qE, endpoint work is V(L)=q*Phi*L/A, linear with force slope sigma_force=q*Phi/A. The slopes agree if and only if q=Phi/2; for q=Phi the endpoint slope is twice the energy slope. Fixed area is load-bearing: A(L)=A0*(1+L/L0) gives logarithmic field energy, while spherical spreading gives an inverse-square field and curved Coulomb potential. Matching a supplied tension by A_eff=Phi^2/(2*sigma) defines an effective area and does not predict it. This theorem establishes no physical charge, flux tube, vortex-tension identity, QCD, area law, or confinement.
+
+- Accepted in: `v0.24.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

@@ -367,3 +367,18 @@ units:
       The pinned source fails at removed np.trapz before its numerical tally;
       P026 reconstructs it with one consistent general-g convention, shared
       solver evidence, full refinements, and independent finite differences.
+  CF2:
+    disposition: qualified
+    accepted_claims:
+      - C-FLX-001
+    qualification: >-
+      CF2's fixed-area field and field-energy linearity are accepted together
+      with the separately derived endpoint-work slope and exact equality
+      condition. It does not establish q=Phi/2, a CF1 tension identity, physical
+      quark/QCD variables, Riesz dynamics, area law, or confinement.
+    evidence:
+      - campaigns/P027-fixed-flux-tube-linearity/reviews/source_adjudication.md
+    note: >-
+      P027 shows that CF2's executable energy path never uses q, adds
+      factor-of-two and variable-area counterexamples, and classifies effective
+      area inversion as reconstruction.
