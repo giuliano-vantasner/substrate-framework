@@ -20,7 +20,7 @@ status: active
 Quote the exact statement, quantifiers, regime, conventions, proposed graph relationship, and positive framework role.
 
 ## Sourced Inputs
-List the base release, dependencies, proposal, derivation, verifier, attempt history, and consumer map read directly.
+List the base release, dependencies, proposal, derivation, verifier, attempt history, and consumer map read directly. For migration, include the hash-pinned source unit and audit which of its subclaims remain outside the proposed claim delta.
 
 ## Independence
 State what was independently rederived or implemented and what code, constants, or reasoning were intentionally not shared with the proposal path.
@@ -50,7 +50,7 @@ Record verification, review, compatibility, and epistemic status separately. Bef
 - Relationship:
 
 ## Promotion Transaction
-List registry edit, importable implementation/tests, immutable campaign record, release manifest, generated docs, accepted-memory synchronization, and validation commands.
+List registry edit, importable implementation/tests, immutable campaign record, release manifest, generated docs, accepted-memory synchronization, source-unit disposition update, and validation commands.
 
 ## Continuation if Not Accepted
 Non-acceptance is not campaign success. Name the repair or next candidate and leave the parent effort active. If a foundation issue is independently demonstrated, link the separate revision proposal.

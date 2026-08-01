@@ -41,7 +41,7 @@ Before deriving anything:
 1. Read `AGENTS.md`, `governance/releases/current.yaml`, and `governance/claims.yaml`.
 2. Inspect git status and history. Distinguish accepted release, committed provenance, uncommitted proposal work, and generated files.
 3. Search repository memory with `memory search ... --base "$PWD/memory"` and `memory grep ... --base "$PWD/memory"`; treat hits as pointers and verify facts at source. Validate repo-local memory with `memory validate "$PWD/memory"` because `validate` has no `--base` option and host configuration may redirect relative paths.
-4. Search importable source, campaign artifacts, tests, and dependency consumers.
+4. Search importable source, campaign artifacts, tests, and dependency consumers. For predecessor migration, start from the hash-pinned unit in `migration/source-claims.yaml`; do not double-count its dossiers, frozen rungs, formalizations, or memory entries as independent claims.
 5. Record the last accepted boundary and the genuine unresolved objective in a contract from `memory-templates/`.
 
 Run `.agents/skills/physics-erdos-loop/scripts/preflight.sh` to check the local tools and governance surfaces.
@@ -155,7 +155,7 @@ Assign each claim independent verification, review, compatibility, and epistemic
 For accepted claims:
 
 1. Extract reusable logic into `src/substrate_framework/` and tests.
-2. Update `governance/claims.yaml` and a pinned release manifest.
+2. Update `governance/claims.yaml` and a pinned release manifest. If predecessor units were consumed, update `migration/dispositions.yaml`, preserve any unmigrated subclaims explicitly, and regenerate `migration/source-claims.yaml`.
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.

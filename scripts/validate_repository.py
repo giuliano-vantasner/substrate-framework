@@ -63,6 +63,95 @@ def validate_accepted_artifact_paths(root: Path, registry: dict) -> None:
                 )
 
 
+def validate_migration_inventory(root: Path, registry: dict) -> dict[str, int]:
+    """Validate the measurable predecessor scope without promoting its units."""
+
+    scope = load_yaml(root / "migration" / "scope.yaml")
+    dispositions = load_yaml(root / "migration" / "dispositions.yaml")
+    candidates = load_yaml(root / "migration" / "source-claims.yaml")
+    source_inventory = load_yaml(root / scope["source_inventory"])
+
+    for data, name in (
+        (scope, "scope"),
+        (dispositions, "dispositions"),
+        (candidates, "source claims"),
+    ):
+        if data.get("schema_version") != 1:
+            raise GovernanceError(f"migration {name} must declare schema_version: 1")
+
+    baseline = source_inventory["source_baseline"]
+    tree_sha = source_inventory["tree_sha256"]
+    for data, name in (
+        (scope, "scope"),
+        (dispositions, "dispositions"),
+        (candidates, "source claims"),
+    ):
+        if data.get("source_baseline") != baseline:
+            raise GovernanceError(f"migration {name} source baseline disagrees")
+    if scope.get("tree_sha256") != tree_sha or candidates.get("tree_sha256") != tree_sha:
+        raise GovernanceError("migration inventory tree SHA-256 disagrees with source inventory")
+
+    bridge_records = source_inventory["bridge_records"]
+    expected = {
+        record["label"]: (record["path"], record["sha256"])
+        for record in bridge_records
+    }
+    units = candidates.get("units")
+    if not isinstance(units, list):
+        raise GovernanceError("migration source claims units must be a list")
+    actual: dict[str, tuple[str, str]] = {}
+    allowed = set(dispositions.get("allowed_dispositions", []))
+    accepted_registry = {
+        claim["id"] for claim in registry["claims"] if claim["accepted_in"] is not None
+    }
+    counts: dict[str, int] = {}
+    for unit in units:
+        if not isinstance(unit, dict):
+            raise GovernanceError("migration source claim unit must be a mapping")
+        unit_id = unit.get("source_unit")
+        if not isinstance(unit_id, str) or not unit_id:
+            raise GovernanceError("migration source unit needs a non-empty id")
+        if unit_id in actual:
+            raise GovernanceError(f"duplicate migration source unit: {unit_id}")
+        actual[unit_id] = (unit.get("path"), unit.get("sha256"))
+        disposition = unit.get("disposition")
+        if disposition not in allowed:
+            raise GovernanceError(f"{unit_id}: invalid migration disposition {disposition!r}")
+        counts[disposition] = counts.get(disposition, 0) + 1
+        mapped = unit.get("accepted_claims")
+        if not isinstance(mapped, list) or not all(isinstance(item, str) for item in mapped):
+            raise GovernanceError(f"{unit_id}: accepted_claims must be a list of strings")
+        unknown_claims = set(mapped) - accepted_registry
+        if unknown_claims:
+            raise GovernanceError(
+                f"{unit_id}: maps to unknown accepted claims {sorted(unknown_claims)}"
+            )
+        if disposition == "pending_adjudication" and mapped:
+            raise GovernanceError(f"{unit_id}: pending unit cannot map accepted claims")
+        if disposition in {"migrated", "partially_migrated"} and not mapped:
+            raise GovernanceError(f"{unit_id}: migrated unit must map accepted claims")
+        if disposition == "partially_migrated" and not unit.get("remaining_scope"):
+            raise GovernanceError(f"{unit_id}: partial migration must name remaining scope")
+
+    if actual != expected:
+        missing = sorted(set(expected) - set(actual))
+        extra = sorted(set(actual) - set(expected))
+        changed = sorted(
+            unit_id
+            for unit_id in set(actual) & set(expected)
+            if actual[unit_id] != expected[unit_id]
+        )
+        raise GovernanceError(
+            f"migration candidate queue mismatch: missing={missing}, extra={extra}, changed={changed}"
+        )
+    expected_count = scope.get("expected_primary_units")
+    if len(units) != expected_count or candidates.get("primary_unit_count") != expected_count:
+        raise GovernanceError("migration primary-unit count disagrees with scope")
+    if candidates.get("disposition_counts") != dict(sorted(counts.items())):
+        raise GovernanceError("migration disposition summary is stale")
+    return dict(sorted(counts.items()))
+
+
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     validate_memory_contract_categories(root)
@@ -70,6 +159,7 @@ def main() -> int:
     registry = load_yaml(registry_path)
     claim_ids = validate_registry(registry)
     validate_accepted_artifact_paths(root, registry)
+    migration_counts = validate_migration_inventory(root, registry)
 
     proposal_count = 0
     for manifest in sorted((root / "proposals").glob("*/proposal.yaml")):
@@ -121,7 +211,9 @@ def main() -> int:
 
     print(
         f"WORKFLOW VALID: {len(claim_ids)} claims, {len(accepted_ids)} accepted, "
-        f"{proposal_count} proposals"
+        f"{proposal_count} proposals; MIGRATION QUEUE: {sum(migration_counts.values())} units, "
+        f"{migration_counts.get('pending_adjudication', 0)} pending, "
+        f"{migration_counts.get('partially_migrated', 0)} partial"
     )
     return 0
 

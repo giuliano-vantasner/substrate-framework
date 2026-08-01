@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T11:15:03Z'
+updated: '2026-08-01T11:21:37Z'
 tags:
 - substrate-framework
 - effort
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Complete the source claim and dependency inventory from commit `6d1f4e0`; the hash-locked role/bridge inventory is generated, while exact claim decomposition remains active.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 216 pending and 2 partially migrated units.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -66,6 +66,7 @@ Attempts are append-only and individually reproducible.
 | 0004 | Candidate A, exact breather action with Candidate B review | `campaigns/P002-sine-gordon-action` exact and field phase-space verifiers | accepted in v0.2.0 | Endpoint-fixed exact calculus passed 19 checks; the independent phase-space construction passed 19 checks with precision refinement and a normalization mutation | Derive the nearest accepted-root functional consumer without importing its predecessor conclusion |
 | 0005 | P003 attempt 0001, implicit inverse-width limits | `campaigns/P003-sine-gordon-gradient/attempts/0001` | failed | SymPy could not infer positivity of `sqrt(1-omega^2)` inside the spatial limit oracle | Preserve the failure and expose the accepted positive inverse width explicitly only for localization checks |
 | 0006 | P003 attempt 0002, virial and direct-field routes | `campaigns/P003-sine-gordon-gradient` | accepted in v0.3.0 | Exact virial closure passed 25 checks; an independent field integral passed 16 checks and rejected the half-factor convention | Return to claim inventory and identify the next dependency-closed sector root |
+| 0007 | Measurable predecessor scope and claim-candidate queue | `scripts/inventory_claims.py`, `migration/scope.yaml`, and `migration/source-claims.yaml` | passed | Hash-locks all 218 unique merged bridge units across phases 1-46, separates evidence roles from primary units, and validates accepted-claim mappings without granting source authority | Decompose the next pending dependency-root bridge into claim-level candidates |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -82,19 +83,19 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Source chronology and synthesis prose do not provide an authoritative dependency graph | Generated, source-cited inventory and reviewed proposal manifests | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 216 bridge units remain pending and 2 are only partially migrated | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
-| D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion cannot be measured until claims, attempts, engineering layers, and narrative consumers are classified | Full corpus inventory with explicit in-scope categories and exclusions | open |
+| D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
 
 ## Results
-The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion. P003 added the exact averaged squared-gradient integral and its virial-Legendre identity in `v0.3.0`, while preserving the full-versus-half factor convention.
+The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion. P003 added the exact averaged squared-gradient integral and its virial-Legendre identity in `v0.3.0`, while preserving the full-versus-half factor convention. The migration scope is now measurable: 218 unique reconciled bridge units are primary candidate units, other hash-locked roles are evidence or consumers, and application exclusions are explicit rather than inferred.
 
 ## Canonicalization
 The registry, `v0.3.0` manifest, current release, generated claim index, and generated framework memory agree on `C-SG-001/002/003/004`. P001 through P003 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory.
 
 ## Done Gate
-The effort remains active. The exact breather mechanics ladder is complete through its averaged gradient functional, but D1 and D4 remain open and the broader predecessor corpus is still a migration backlog. The next executable action is to complete the measurable claim-scope inventory and select the next dependency-closed sector root rather than treating `v0.3.0` as whole-corpus completion.
+The effort remains active. D4 is discharged, but D1 remains open with 216 pending and 2 partially migrated bridge units. The next executable action is to preregister the nearest pending phase-1 unit whose dependencies can be independently established, beginning with T1B's optical-metric/dilaton identity rather than treating a bridge's pass tally as a claim.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

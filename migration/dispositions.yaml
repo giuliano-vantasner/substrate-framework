@@ -1,0 +1,29 @@
+schema_version: 1
+source_baseline: substrate@6d1f4e0
+default_disposition: pending_adjudication
+allowed_dispositions:
+  - pending_adjudication
+  - partially_migrated
+  - migrated
+  - qualified
+  - refuted
+  - duplicate_evidence
+  - out_of_scope
+units:
+  T1E:
+    disposition: partially_migrated
+    accepted_claims:
+      - C-SG-002
+    remaining_scope: >-
+      Cross-program lift and binding-gap encodings remain separate candidate
+      claims; their agreement with the accepted energy does not promote them.
+    note: C-SG-002 independently rederived the bridge's load-bearing Hamiltonian energy result.
+  HE4:
+    disposition: partially_migrated
+    accepted_claims:
+      - C-SG-003
+      - C-SG-004
+    remaining_scope: >-
+      The hbar_eff interpretation, charge reciprocity, quantization tower, and
+      literature-spectrum comparisons remain unaccepted candidate claims.
+    note: Only the classical action, inverse map, and gradient-Legendre identity have been promoted.

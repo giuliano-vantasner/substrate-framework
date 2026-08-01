@@ -5,6 +5,7 @@ import pytest
 from scripts.validate_repository import (
     validate_accepted_artifact_paths,
     validate_memory_contract_categories,
+    validate_migration_inventory,
 )
 from substrate_framework.governance import GovernanceError
 
@@ -45,3 +46,66 @@ def test_accepted_artifact_validation_rejects_missing_evidence(tmp_path) -> None
     provenance.write_text("status: accepted\n", encoding="utf-8")
     evidence.write_text("def test_claim(): pass\n", encoding="utf-8")
     validate_accepted_artifact_paths(tmp_path, registry)
+
+
+def test_migration_inventory_rejects_unknown_accepted_mapping(tmp_path) -> None:
+    migration = tmp_path / "migration"
+    evidence = tmp_path / "campaigns/P001/evidence"
+    migration.mkdir(parents=True)
+    evidence.mkdir(parents=True)
+    source_inventory = {
+        "source_baseline": "source@abc",
+        "tree_sha256": "tree",
+        "bridge_records": [
+            {"label": "A1", "path": "bridge_A1.py", "sha256": "file"}
+        ],
+    }
+    (evidence / "source-inventory.yaml").write_text(
+        __import__("yaml").safe_dump(source_inventory), encoding="utf-8"
+    )
+    (migration / "scope.yaml").write_text(
+        __import__("yaml").safe_dump(
+            {
+                "schema_version": 1,
+                "source_baseline": "source@abc",
+                "tree_sha256": "tree",
+                "source_inventory": "campaigns/P001/evidence/source-inventory.yaml",
+                "expected_primary_units": 1,
+            }
+        ),
+        encoding="utf-8",
+    )
+    (migration / "dispositions.yaml").write_text(
+        __import__("yaml").safe_dump(
+            {
+                "schema_version": 1,
+                "source_baseline": "source@abc",
+                "allowed_dispositions": ["migrated"],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (migration / "source-claims.yaml").write_text(
+        __import__("yaml").safe_dump(
+            {
+                "schema_version": 1,
+                "source_baseline": "source@abc",
+                "tree_sha256": "tree",
+                "primary_unit_count": 1,
+                "disposition_counts": {"migrated": 1},
+                "units": [
+                    {
+                        "source_unit": "A1",
+                        "path": "bridge_A1.py",
+                        "sha256": "file",
+                        "disposition": "migrated",
+                        "accepted_claims": ["C-UNKNOWN"],
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(GovernanceError, match="unknown accepted claims"):
+        validate_migration_inventory(tmp_path, {"claims": []})

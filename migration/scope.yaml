@@ -1,0 +1,30 @@
+schema_version: 1
+source_baseline: substrate@6d1f4e0
+tree_sha256: fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001
+source_inventory: campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml
+primary_unit_role: bridge
+expected_primary_units: 218
+scope_rule: >-
+  Every uniquely labelled Python bridge under merged-framework/bridges is a
+  primary candidate adjudication unit. Completion requires each unit to be
+  decomposed into exact claims and given a governed disposition; a bridge pass
+  tally or source status word never grants authority.
+supporting_roles:
+  campaign: Historical attempt and orchestration evidence; review when cited by a primary unit.
+  dossier: Claim narrative and provenance evidence; never an independent promotion unit.
+  formalization: Formal evidence whose exact theorem encoding must be audited against a candidate claim.
+  legacy_rung: Upstream or frozen derivation evidence; deduplicated through its consuming bridge.
+  source: Supporting scientific code or consumer outside the canonical reconciled bridge layer.
+  engineering: Downstream model, simulation, or consumer replay surface rather than a root claim source.
+  narrative: Navigation or synthesis prose; useful for scope discovery but not scientific authority.
+provenance_only_roles:
+  memory: Historical work index that must be re-sourced before reuse.
+  other: Data, configuration, binary, and reference assets that do not independently state governed claims.
+explicit_application_exclusions:
+  - Phenomenological spark-discharge engineering with inserted fudge gates remains downstream unless a bridge replaces a gate with derived framework physics.
+  - Importable DBD plasma, FEM piezo-acoustic, and Fourier-optics layers are consumer/import surfaces, not accepted substrate derivations.
+  - Design quantities such as events per pulse and uncomputed absolute cross-sections are not framework predictions.
+evidence_rule: >-
+  Supporting and provenance-only roles remain in the hash-locked source
+  inventory and must be replayed when a claim delta names them; excluding them
+  as independent units does not authorize ignoring their contradictions.

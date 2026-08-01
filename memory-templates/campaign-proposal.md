@@ -20,7 +20,7 @@ status: active
 State the exact question and object to derive. A no-go, failed concept, residual, or honest account of an obstruction does not complete this campaign.
 
 ## Base Release and Provenance
-Record the accepted release and commit. List source claims and modules actually read. Newer directories and working-tree prose are not authority.
+Record the accepted release and commit. List source claims and modules actually read. For predecessor work, name each hash-pinned `migration/source-claims.yaml` unit and its current disposition; its bridge is the candidate unit while linked dossiers, formalizations, and legacy rungs are evidence rather than extra claims. Newer directories and working-tree prose are not authority.
 
 ## Invariants, Conventions, and Allowed Imports
 Freeze what the campaign must preserve and every input it may use. Anything added later becomes explicit debt and requires proposal revision.
@@ -49,7 +49,7 @@ Append failed routes with diagnoses and next candidates. An ill-fitting concept 
 List new assumptions, imports, parameters, residuals, convention conflicts, and broken consumers. The campaign remains active until the ledger is empty.
 
 ## Review and Promotion Plan
-Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization.
+Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims.
 
 ## Done Gate
 The campaign closes only on the complete positive success contract in `AGENTS.md`. If any gate fails, state the next attempt and continue.

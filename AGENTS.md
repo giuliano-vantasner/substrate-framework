@@ -38,7 +38,7 @@ Never silently edit an earlier campaign. Never edit files under `docs/generated/
 ## Start every durable task this way
 
 1. Load `.agents/skills/physics-erdos-loop/SKILL.md` for physics, derivation, simulation, formalization, campaign, claim, or framework-reconciliation work.
-2. Read `governance/releases/current.yaml`, `governance/claims.yaml`, and the relevant accepted source modules.
+2. Read `governance/releases/current.yaml`, `governance/claims.yaml`, and the relevant accepted source modules. For predecessor migration, also locate the source unit in `migration/source-claims.yaml` and read its current disposition and scope policy.
 3. Search durable memory with the bundled `memory` CLI, then verify every reused fact at its source. Memory is an index and work record, not authority.
 4. Inspect git status and history. Separate committed baseline, uncommitted work, generated outputs, and attempt artifacts.
 5. Instantiate the appropriate contract from `memory-templates/` before substantive work.
@@ -79,7 +79,7 @@ Use four independent status axes for every claim:
 
 Proposals use `challenges` relationships. Only an accepted replacement may use `supersedes`. A proposal may be partly accepted: promote claims individually and retain rejected candidates as historical attempt evidence.
 
-Once adjudicated, move the campaign record into `campaigns/` without rewriting it. Create a release manifest pinning the exact claim set and source commit. `current` means the latest accepted release, never the newest directory or working-tree prose.
+Once adjudicated, move the campaign record into `campaigns/` without rewriting it. Create a release manifest pinning the exact claim set and source commit. `current` means the latest accepted release, never the newest directory or working-tree prose. When a campaign migrates predecessor material, update its source-unit disposition in `migration/dispositions.yaml` and regenerate `migration/source-claims.yaml`; partial migration must name the unaccepted remainder rather than marking a whole bridge complete.
 
 ## Implementation architecture
 
