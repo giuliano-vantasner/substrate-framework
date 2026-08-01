@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T21:47:44Z'
+updated: '2026-08-02T00:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.42.0`, containing fifty-nine claims: the prior sector results plus exact convention-safe axisymmetric STF readout claim `C-GW-005` and qualified finite-time waveform/power evidence `C-GW-006`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.43.0`, containing sixty claims: the prior sector results plus exact nonlinear characteristic-balance and topological-current claim `C-SG-011`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 173 pending, 0 partially migrated, 3 migrated, 38 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 172 pending, 0 partially migrated, 3 migrated, 39 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -124,6 +124,8 @@ Attempts are append-only and individually reproducible.
 | 0062 | P047 first full verifier | `campaigns/P047-p3d4-conditional-axisymmetric-waveform/attempts/0002` | failed after 37 substantive checks | A self-referential assertion searched the verifier source for a forbidden phrase, so its verdict depended on commentary text rather than the scientific object | Remove the validation-theater assertion and retain direct convention mutations and independent estimators |
 | 0063 | P047 corrected labels, independent replay, and promotion | `campaigns/P047-p3d4-conditional-axisymmetric-waveform/attempts/0004` and `attempts/0006`, then `scripts/validate.sh` | passed; commit `288e646` | Formal epsilon labels and independent artifact keys were repaired; 37 primary and 9 independent checks, three predecessor replays, and the full 335-test gate passed | Audit NC1's claimed nonlinear chiral conservation against accepted sine-Gordon identities |
 | 0064 | Authoritative migration-disposition repair | `migration/dispositions.yaml`, `scripts/inventory_claims.py`, and shared workflow contracts | passed in the P047 gate | P3D1-P3D3 terminal decisions had existed only as hand edits to generated queue output; backfilling the disposition source restored reproducibility and the contracts now forbid generated-queue edits | Continue from the regenerated NC1 frontier using only authoritative dispositions |
+| 0065 | P048 exact nonlinear balance with first independent review | `campaigns/P048-nc1-nonlinear-chiral-balance/attempts/0001` | failed after 31 primary and four independent checks | SymPy retained the direct kink-charge integral as an unevaluated object whose simplified value is exact; raw representation equality failed | Preserve the reproducer and normalize the exact integral representation without changing the predicate |
+| 0066 | P048 characteristic, topological, parity, and source audit | `campaigns/P048-nc1-nonlinear-chiral-balance/attempts/0002` plus `scripts/validate.sh` | accepted in v0.43.0; commit `757a509` | Thirty-one primary and seven independent checks derive the exact balances and current while parity invariance and the massive linear limit reject NC1's physical V-A and free-chiral inferences; the full workflow passed 342 tests | Audit NC2's stress-tensor light-cone balance without inheriting NC1's rejected parity-violation narrative |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -140,7 +142,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 173 bridge units remain pending, 3 are migrated, 38 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 172 bridge units remain pending, 3 are migrated, 39 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -196,11 +198,13 @@ P046 adds the exact regular l=2 perturbation equation about the accepted radial 
 
 P047 adds an exact convention-safe axisymmetric STF tensor, arbitrary-view TT readout, and conditional angular power map, together with qualified finite-time waveform and power evidence for the accepted regular l=2 coefficient. It corrects P3D4's factor-nine triple-moment power error, raw-moment waveform label, same-evolution sampling comparison, cutoff-selected carrier claim, and inherited nonregular ansatz. Mesh, timestep, domain, sampling, estimator, amplitude, and zero-input checks bound the numeric result without promoting periodicity, a preferred frequency, physical radiation, gravity, or absolute scale. The campaign also restores P3D1-P3D4 dispositions to the authoritative source and makes generated migration queues read-only workflow products.
 
+P048 adds the exact off-shell defects and on-shell sources of the two naive sine-Gordon characteristic derivatives, the convention-fixed off-shell topological current, integer vacuum-boundary winding charge, and spatial-parity exchange of kink sectors. It qualifies NC1 by proving that the normalized small-amplitude limit is massive Klein-Gordon rather than a massless chiral split, and that the same parity operation that flips winding leaves the sine-Gordon equation invariant. The exact axial-current transformation therefore supplies no selected sector, V-A interaction, weak force, bosonization closure, or intrinsic physical parity violation.
+
 ## Canonicalization
-The registry, `v0.42.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-nine accepted claims. P001 through P047 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 173 pending, 0 partial, 3 migrated, 38 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.43.0` manifest, current release, generated claim index, and generated framework memory agree on sixty accepted claims. P001 through P048 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 172 pending, 0 partial, 3 migrated, 39 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 173 pending, 3 migrated, 38 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit NC1's nonlinear chiral-current claim against accepted sine-Gordon equations and conservation identities, with candidate replacements registered before reading its comparator-bearing source conclusions.
+The effort remains active. D4 is discharged, but D1 remains open with 172 pending, 3 migrated, 39 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit NC2's claimed light-cone stress-tensor balance against `C-SG-011` and the accepted normalized Hamiltonian convention, without importing NC1's rejected physical parity-violation conclusion.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
