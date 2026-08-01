@@ -8,8 +8,8 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  pending_adjudication: 208
-  qualified: 7
+  pending_adjudication: 206
+  qualified: 9
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -446,8 +446,16 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-U1-001
+  - C-U1-002
+  qualification: EM1's conditional current theorem and declared-profile charge are accepted, but the complex
+    ontology, profile-generating potential, physical electric-charge map, and 3+1 stability are not derived.
+  evidence:
+  - campaigns/P014-u1-charge-reciprocity/reviews/source_adjudication.md
+  note: P014 separates the general U1 theorem from the declared sech-profile specialization and restores
+    its free amplitude before composition.
 - source_unit: EM2
   phase: phase-3
   path: merged-framework/bridges/phase-3/bridge_EM2_gauge_u1_minimal_coupling.py
@@ -7994,8 +8002,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 3
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-U1-002
+  - C-SG-006
+  - C-SG-008
+  qualification: HE3's exact amplitude-aware product, boosted composition, and exponent classification
+    are accepted, but universal-constant, effective-Planck, and quantum de Broglie interpretations are
+    not established.
+  evidence:
+  - campaigns/P014-u1-charge-reciprocity/reviews/source_adjudication.md
+  note: P014 promotes Q*H=64*A^2 rather than a normalization-independent 64 and records that the two kernel
+    generators differ by H=E/omega.
 - source_unit: HE4
   phase: phase-45
   path: merged-framework/bridges/phase-45/bridge_HE4_dhn_action_variable.py

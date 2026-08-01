@@ -1,0 +1,10 @@
+attempt: 0003
+completed_at: '2026-08-01T13:08:31Z'
+elapsed_seconds: 1.9
+exit_code: 0
+terminal_tally: P014 ALL 39 CHECKS PASS
+verdict:
+  C-U1-001: symbolic_verified
+  C-U1-002: symbolic_verified
+status: passed
+stdout: stdout.txt

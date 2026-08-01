@@ -1,0 +1,19 @@
+PASS [C-U1-001] the arbitrary-field current divergence reduces to the d'Alembertian identity
+PASS [C-U1-001] the raised spatial component carries the signature minus sign
+PASS [C-U1-001] a real phase-independent restoring coefficient conserves the current on shell
+PASS [C-U1-001] a complex restoring coefficient fails the real-coefficient cancellation
+PASS [C-U1-001] a genuinely real field has identically zero U1 current
+PASS [C-U1-001] the stationary phase ansatz has density 2*omega*f^2 and zero flux
+PASS [C-U1-001] stationary continuity is kinematic and does not substitute for the general theorem
+PASS [C-U1-001] a phase-breaking conjugate-field term produces the exact nonzero leakage
+PASS [C-U1-001] current normalization and raised spatial sign: baseline
+PASS [C-U1-001] current normalization and raised spatial sign: mutations supplied
+PASS [C-U1-001] current normalization and raised spatial sign: mutation 1 rejected
+PASS [C-U1-001] current normalization and raised spatial sign: mutation 2 rejected
+PASS [C-U1-001] current normalization and raised spatial sign: mutation 3 rejected
+PASS [C-U1-001] current normalization and raised spatial sign: mutation 4 rejected
+PASS [C-U1-002] the declared sech-squared profile has exact norm 2*A^2/eta
+PASS [C-U1-002] integrating the canonical density yields 4*A^2*omega/eta
+PASS [C-U1-002] the shared breather parameterization retains the declared amplitude
+PASS [C-U1-002] the charge is strictly increasing by an exact positive derivative on the open domain
+FAIL [C-U1-002] the one-sided charge limits are zero and positive infinity

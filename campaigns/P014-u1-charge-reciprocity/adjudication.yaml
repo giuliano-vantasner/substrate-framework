@@ -1,0 +1,55 @@
+campaign: P014
+title: Conditional U1 charge and normalization-aware reciprocity
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EM1
+  - HE3
+base_release: v0.13.0
+adjudicated_at: '2026-08-01T13:07:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Separating the general conditional symmetry theorem from the declared
+    profile preserves the accepted real-field boundary and exposes every
+    normalization and ontology premise before cross-sector composition.
+competing_candidates:
+  - id: B
+    decision: retained_as_kinematic_stationary_evidence_but_rejected_as_primary
+  - id: C
+    decision: rejected_by_real_field_zero_current_and_amplitude_rescaling_guards
+claims:
+  - id: C-U1-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-U1-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0003/result.yaml
+  pre_strengthening_attempt: attempts/0002/result.yaml
+  preserved_failed_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_polar_review.py
+  source_adjudication: reviews/source_adjudication.md
+source_disposition:
+  EM1: qualified
+  HE3: qualified
+qualification:
+  EM1: >-
+    Its conditional current theorem and declared-profile charge are accepted,
+    while the complex ontology, profile-generating potential, physical electric
+    charge map, and 3+1 stability are not derived.
+  HE3: >-
+    Its exact amplitude-aware composition and exponent classification are
+    accepted, while universal-constant, effective-Planck, and quantum de
+    Broglie interpretations are not established.
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P014-u1-charge-reciprocity/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P014-u1-charge-reciprocity/reviews/independent_polar_review.py
+  - .venv/bin/python -m pytest -q tests/test_u1_charge.py tests/test_sine_gordon.py
+debt: []
+status: accepted

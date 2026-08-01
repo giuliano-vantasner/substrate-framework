@@ -1,0 +1,18 @@
+attempt: 0001
+completed_at: '2026-08-01T13:00:44Z'
+exit_code: 1
+terminal_tally: null
+verdict:
+  C-U1-001: symbolic_checks_passed_before_later_failure
+  C-U1-002: verifier_representation_failure
+failure: >-
+  SymPy returned negative infinity for the bare one-sided limit of
+  4*A^2*omega/sqrt(1-omega^2), despite A and omega being positive, because it
+  did not retain positivity of the square-root branch at the endpoint.
+diagnosis: representation
+next_attempt: >-
+  Keep the exact formula and derivative checks, and evaluate the upper-endpoint
+  divergence through Abs(Q), which is insensitive to the symbolic branch
+  ambiguity and matches the claim's positive-domain magnitude.
+status: failed
+stdout: stdout.txt

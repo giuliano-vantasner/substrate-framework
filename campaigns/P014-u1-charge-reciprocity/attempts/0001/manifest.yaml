@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EM1
+  - HE3
+framework_base: 2b00560
+question: >-
+  Which U(1) conservation and declared-profile charge statements have exact
+  dependency closure, and what exact invariant composition survives amplitude
+  rescaling when combined with the accepted breather sector?
+command: PYTHONPATH=src .venv/bin/python proposals/P014-u1-charge-reciprocity/verify.py
+oracle:
+  kind: exact_sympy_field_calculus_integration_and_linear_algebra
+  mutation_requirements:
+    - reject wrong current normalization and raised spatial sign
+    - reject wrong profile coefficient, amplitude power, and width power
+    - reject wrong energy and secant normalizations
+status: failed

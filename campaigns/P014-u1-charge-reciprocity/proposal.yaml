@@ -1,0 +1,49 @@
+id: P014
+base_release: v0.13.0
+base_commit: 2b00560
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EM1
+  - HE3
+question: >-
+  Derive the conditional global-U(1) current and charge for a declared complex
+  scalar theory, specialize it without hidden ontology to the declared
+  sech-profile family, classify its exact composition with the accepted
+  sine-Gordon energy and secant scale, and adjudicate EM1 and HE3 claim by claim.
+invariants:
+  - the accepted real sine-Gordon field is not silently replaced by a complex scalar
+  - current conservation requires an on-shell global-U(1)-symmetric complex theory
+  - the sech profile, its amplitude, and its link to breather frequency are declared premises
+  - the accepted breather energy and secant scale retain their normalized conventions
+  - a normalization-bound constant is not described as a universal physical charge or quantum
+allowed_imports:
+  - C-SG-002 for the exact normalized breather energy
+  - C-SG-006 for the family-dependent energy-frequency secant scale
+  - C-SG-008 for the conditional boosted vector composition
+  - exact complex-scalar calculus and integration on 1+1 Minkowski spacetime
+  - predecessor bridges EM1 and HE3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Separate the conditional general Noether theorem from the declared-profile
+      specialization, then compose only those exact results with accepted breather claims
+  - id: B
+    description: >-
+      Retain only the stationary ansatz continuity identity without claiming a
+      general on-shell U(1) current
+  - id: C
+    description: >-
+      Identify the declared complex profile with the real sine-Gordon breather
+      and interpret its charge and the number 64 as universal physical quantities
+uniqueness_evidence: null
+selection_criteria:
+  - explicit separation of symmetry theorem, ontology, and profile declaration
+  - accepted dependency closure and convention consistency
+  - exact amplitude and frequency sensitivity
+  - regular Lorentz-vector composition without singular component division
+  - reusable pure APIs and independent derivation
+claims_proposed:
+  - C-U1-001
+  - C-U1-002
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted
