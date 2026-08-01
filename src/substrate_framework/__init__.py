@@ -15,6 +15,7 @@ from .governance import (
     validate_registry,
     validate_release,
 )
+from .linear_systems import LinearSystemDiagnostics, diagnose_linear_system
 from .numerics import (
     BVPEvidence,
     IVPEvidence,
@@ -128,6 +129,7 @@ __all__ = [
     "CheckFailure",
     "CheckLedger",
     "IVPEvidence",
+    "LinearSystemDiagnostics",
     "NumericalFailure",
     "RefinementEvidence",
     "SolverTolerances",
@@ -167,6 +169,7 @@ __all__ = [
     "dimensionless_group_count",
     "dimensionless_mass_coordinate",
     "dimensionless_monomial_basis",
+    "diagnose_linear_system",
     "hamiltonian_density",
     "index_from_potential",
     "load_yaml",

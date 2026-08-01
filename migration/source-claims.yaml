@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 199
-  qualified: 14
+  pending_adjudication: 198
+  qualified: 15
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -8360,8 +8360,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LIN-001
+  qualification: EL5's coefficient-rank and augmented-consistency distinctions are
+    accepted, but it does not derive a closed mass ratio, reopen a null direction in
+    its restored-electron matrix, establish an electron output, or replay accepted
+    framework consumers.
+  evidence:
+  - campaigns/P022-linear-system-consistency/reviews/source_adjudication.md
+  note: P022 preserves the seven predecessor subprocess tallies as compatibility
+    evidence while separating EL5's two different control matrices and retaining
+    the free shape and hadronic-offset inputs.
 - source_unit: EL6
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL6_confrontation_and_ledger.py

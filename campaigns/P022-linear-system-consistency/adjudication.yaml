@@ -1,0 +1,43 @@
+campaign: P022
+title: Exact linear-system consistency diagnostic
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL5
+base_release: v0.19.0
+adjudicated_at: '2026-08-01T14:37:44Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The exact diagnostic provides reusable semantic guards beyond raw rank
+    calls and correctly separates duplicate coefficients, augmented
+    consistency, uniqueness, and underdetermination.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_importable_status_object_prevents_repeated_rank_semantic_conflation
+  - id: C
+    decision: rejected_because_the_unpinned_hadronic_offset_can_reproduce_any_positive_ratio
+  - id: D
+    decision: rejected_because_standalone_predecessor_runs_are_regression_evidence_not_claim_verification
+claims:
+  - id: C-LIN-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_row_reduction_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-LIN-001-review.md
+source_disposition:
+  EL5: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P022-linear-system-consistency/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL5_od_instrument_and_consumers.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P022-linear-system-consistency/reviews/independent_row_reduction_review.py
+  - .venv/bin/python -m pytest -q tests/test_linear_systems.py tests/test_renormalization.py
+debt: []
+status: accepted

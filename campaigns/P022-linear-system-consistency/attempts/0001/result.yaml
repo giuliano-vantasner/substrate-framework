@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T14:37:44Z'
+exit_code: 0
+terminal_tally: 21
+verdict:
+  C-LIN-001: symbolic_verified
+evidence:
+  - unique, underdetermined, and inconsistent exact examples
+  - tall-system consistency counterexamples
+  - duplicate-row and right-hand-side mutations
+  - EL5 coefficient and augmented matrix replay
+  - restored-electron versus OD-v1 classification
+  - free-offset mass-ratio counterexample
+status: passed
+stdout: stdout.txt

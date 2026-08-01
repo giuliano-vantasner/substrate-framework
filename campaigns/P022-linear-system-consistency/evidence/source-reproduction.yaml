@@ -1,0 +1,21 @@
+source_unit: EL5
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-46/bridge_EL5_od_instrument_and_consumers.py
+sha256: 5684f2aba979501c81dc12c1afcc51c29cbeb7eb676678b76208cfcd23f01d1f
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL5_od_instrument_and_consumers.py
+observed_at: '2026-08-01T14:37:44Z'
+exit_code: 0
+terminal_tally: ALL 9 CHECKS PASS
+consumer_tallies:
+  S5: ALL 28 CHECKS PASS
+  NY1: ALL 9 CHECKS PASS
+  NY2: ALL 10 CHECKS PASS
+  NY3: ALL 15 CHECKS PASS
+  MR1: ALL 7 CHECKS PASS
+  OD: ALL 8 CHECKS PASS
+  AS4: ALL 7 CHECKS PASS
+scope_note: >-
+  The subprocesses are unchanged standalone predecessor scripts. Their clean
+  exits are compatibility evidence for the pinned corpus, not a replay of the
+  accepted package or proof of EL5's physical interpretation.

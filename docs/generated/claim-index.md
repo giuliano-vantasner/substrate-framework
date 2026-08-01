@@ -66,6 +66,15 @@ Conditional on C-RGE-001 and positive quantities satisfying mu0=S*c0/a, g0^2=bet
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-003, C-RGE-001
 
+## C-LIN-001
+
+For a finite exact real linear system M*x=b, the system is consistent if and only if rank(M)=rank([M|b]). When consistent, its solution-space dimension is columns(M)-rank(M); it is unique exactly when this dimension is zero and underdetermined exactly when it is positive. More equations than unknowns is only an equation-count property and implies neither consistency nor uniqueness. Adding an exact duplicate of a nonzero row leaves coefficient rank and nullity unchanged; the two-row duplicate subsystem is consistent exactly when the two right-hand sides agree.
+
+- Accepted in: `v0.20.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
 ## C-MED-001
 
 For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.

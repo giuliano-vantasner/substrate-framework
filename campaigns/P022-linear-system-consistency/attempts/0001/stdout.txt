@@ -1,0 +1,23 @@
+PASS [C-LIN-001] the audited EL5 source is the hash-pinned candidate unit
+PASS [C-LIN-001] a full-column-rank consistent system is unique
+PASS [C-LIN-001] a consistent rank-deficient system is underdetermined
+PASS [C-LIN-001] augmented rank above coefficient rank means inconsistent
+PASS [C-LIN-001] more equations than unknowns can still give a unique consistent system
+PASS [C-LIN-001] the same coefficient matrix can instead be inconsistent
+PASS [C-LIN-001] an exact duplicate row with equal right-hand sides is redundant and consistent
+PASS [C-LIN-001] an exact duplicate row with unequal right-hand sides is inconsistent
+PASS [C-LIN-001] duplicate-row identity and right-hand-side agreement: baseline
+PASS [C-LIN-001] duplicate-row identity and right-hand-side agreement: mutations supplied
+PASS [C-LIN-001] duplicate-row identity and right-hand-side agreement: mutation 1 rejected
+PASS [C-LIN-001] duplicate-row identity and right-hand-side agreement: mutation 2 rejected
+PASS [C-LIN-001] duplicate-row identity and right-hand-side agreement: mutation 3 rejected
+PASS [C-LIN-001] EL5's added coefficient row preserves rank, nullity, and uniqueness for consistent offsets
+PASS [C-LIN-001] the added source row increases coefficient dependencies rather than unknowns
+PASS [C-LIN-001] EL5's actual restored-electron matrix has no reopened null direction
+PASS [C-LIN-001] the separate OD-v1-shaped matrix is underdetermined
+PASS [C-LIN-001] the restored-electron and OD-v1 controls are logically different systems
+PASS [C-LIN-001] EL5's conditional ratio is exact algebra but retains both source inputs
+PASS [C-LIN-001] an unpinned hadronic offset can reproduce any positive mass ratio
+PASS [C-LIN-001] the mass relation is conditional rather than a free-parameter-free prediction
+ALL 21 CHECKS PASS [C-LIN-001]
+P022 EL5 EXACT AUDIT ALL 21 CHECKS PASS

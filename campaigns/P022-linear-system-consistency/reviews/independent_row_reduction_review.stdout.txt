@@ -1,0 +1,8 @@
+PASS [P022-INDEPENDENT] row reduction exposes one pivot for duplicate coefficients
+PASS [P022-INDEPENDENT] equal duplicate offsets preserve one augmented pivot
+PASS [P022-INDEPENDENT] unequal duplicate offsets create a second augmented pivot
+PASS [P022-INDEPENDENT] the restored-electron matrix independently has three pivots
+PASS [P022-INDEPENDENT] the separate OD-v1 matrix has four pivots and one free column
+PASS [P022-INDEPENDENT] the claimed ratio can be matched by selecting the free offset
+ALL 6 CHECKS PASS [P022-INDEPENDENT]
+P022 INDEPENDENT REVIEW ALL 6 CHECKS PASS

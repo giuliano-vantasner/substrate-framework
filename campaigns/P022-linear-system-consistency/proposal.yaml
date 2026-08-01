@@ -1,0 +1,38 @@
+id: P022
+base_release: v0.19.0
+base_commit: 240b3ad
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL5
+question: >-
+  Determine the exact coefficient-rank and augmented-consistency content of
+  EL5 without importing its unaccepted electron prefactor or physical labels.
+invariants:
+  - consistency requires equal coefficient and augmented ranks
+  - consistent solution-space dimension is columns minus coefficient rank
+  - excess equation count does not determine consistency or uniqueness
+  - C-DIM-005 retains the mass-energy ratio as a free input
+allowed_imports:
+  - C-DIM-003, C-RGE-001, and C-DIM-005
+  - finite exact real linear algebra
+  - EL5 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote an exact linear-system diagnostic and duplicate-row theorem
+  - id: B
+    description: Classify EL5 as duplicate evidence for direct rank calls
+  - id: C
+    description: Promote EL5's physical electron-hadron mass-ratio prediction
+  - id: D
+    description: Promote predecessor consumer pass status as scientific verification
+uniqueness_evidence: null
+selection_criteria:
+  - exact logical classification
+  - premise and free-input closure
+  - counterexample and mutation sensitivity
+  - distinct reusable consumer reach
+  - dependency and assumption economy
+claims_proposed:
+  - C-LIN-001
+comparators_blinded_until: matrix_rhs_classifications_and_mutations_frozen
+status: accepted

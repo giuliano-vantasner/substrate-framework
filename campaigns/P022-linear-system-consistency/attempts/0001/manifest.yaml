@@ -1,0 +1,20 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL5
+framework_base: 240b3ad
+question: >-
+  Which EL5 verdicts follow from coefficient and augmented ranks, and which
+  claimed physical conclusions retain free inputs?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P022-linear-system-consistency/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL5_od_instrument_and_consumers.py
+oracle:
+  kind: exact_rank_consistency_and_free_offset_audit
+  mutation_requirements:
+    - duplicate-row identity and right-hand-side agreement are load-bearing
+    - tall consistent and tall inconsistent systems are both represented
+    - restored-electron and OD-v1 matrices are classified separately
+    - the source mass ratio remains sensitive to every symbolic input
+status: passed
