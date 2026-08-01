@@ -125,10 +125,15 @@ from .skyrme_relations import (
 from .source_audit import SourceAudit, SourceMatch, audit_source_tokens
 from .su3 import (
     SU3Invariants,
+    center_conjugation,
+    center_element,
+    center_elements,
     conditional_one_loop_coefficient,
+    fundamental_commutant_basis,
     fundamental_generators,
     invariants,
     structure_constant,
+    triality_phase,
 )
 from .thermal import (
     symmetric_two_level_gate,
@@ -149,6 +154,11 @@ from .u1_charge import (
     u1_current_divergence,
 )
 from .verification import CheckFailure, CheckLedger
+from .wilson_loops import (
+    rectangular_area_law,
+    rectangular_perimeter_law,
+    static_potential_from_loop,
+)
 from .variational import (
     euler_lagrange_expression,
     solve_euler_lagrange_acceleration,
@@ -197,6 +207,9 @@ __all__ = [
     "capillary_energy",
     "charge_scale_exponent_matrix",
     "charge_for_slope_equality",
+    "center_conjugation",
+    "center_element",
+    "center_elements",
     "co_scaled_inverse_permeability",
     "co_scaled_permittivity",
     "co_scaled_wave_speed",
@@ -267,9 +280,14 @@ __all__ = [
     "uniform_tube_field",
     "euler_lagrange_expression",
     "fundamental_generators",
+    "fundamental_commutant_basis",
     "invariants",
     "solve_euler_lagrange_acceleration",
     "structure_constant",
+    "triality_phase",
+    "rectangular_area_law",
+    "rectangular_perimeter_law",
+    "static_potential_from_loop",
     "virial_scaling_exponents",
     "vortex_boundary_residual",
     "vortex_bvp_equations",

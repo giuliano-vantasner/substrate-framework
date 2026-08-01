@@ -1,0 +1,3 @@
+PASS [P028] 23 exact commutant, group, representation, mutation, limit, and implication-boundary checks
+ALL 23 CHECKS PASS [P028]
+P028 CF3 CENTER/WILSON AUDIT ALL 23 CHECKS PASS

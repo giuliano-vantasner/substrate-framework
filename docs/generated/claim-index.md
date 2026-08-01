@@ -93,6 +93,15 @@ For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, eac
 - Compatibility: `native`
 - Dependencies: none
 
+## C-LIE-002
+
+In the standard explicit fundamental SU(3) representation of C-LIE-001, the exact complex 3-by-3 commutant of all eight generators consists only of scalar matrices. Intersecting that commutant with unitary determinant-one matrices gives exactly {omega^k*I_3 | k=0,1,2}, where omega=-1/2+i*sqrt(3)/2, an order-three cyclic group isomorphic to Z_3. A fundamental vector has center phase omega^k, center conjugation on any 3-by-3 matrix and hence the adjoint matrix representation is trivial, and abstract integer trialities compose additively modulo three. This theorem establishes no substrate field assignment, quark or gluon identity, screening dynamics, Wilson law, string tension, or confinement.
+
+- Accepted in: `v0.25.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-LIE-001
+
 ## C-LIN-001
 
 For a finite exact real linear system M*x=b, the system is consistent if and only if rank(M)=rank([M|b]). When consistent, its solution-space dimension is columns(M)-rank(M); it is unique exactly when this dimension is zero and underdetermined exactly when it is positive. More equations than unknowns is only an equation-count property and implies neither consistency nor uniqueness. Adding an exact duplicate of a nonzero row leaves coefficient rank and nullity unchanged; the two-row duplicate subsystem is consistent exactly when the two right-hand sides agree.
@@ -326,3 +335,12 @@ Conditional on C-VTX-001 with (v,n,lambda,g)=(1,1,2,1), there is resolution-boun
 - Verification: `numeric_evidence`
 - Compatibility: `compatible_extension`
 - Dependencies: C-VTX-001
+
+## C-WIL-001
+
+For positive separation R, Euclidean duration T, and coefficient sigma, conditional on the separately declared rectangular loop expectation W_A(R,T)=exp(-sigma*R*T), the extraction V(R)=-lim_{T->infinity} log(W_A)/T gives V(R)=sigma*R, with derivative sigma and zero second derivative. Separately, for positive rho, the declared perimeter law W_P(R,T)=exp(-2*rho*(R+T)) gives V(R)=2*rho and zero separation derivative. These exact implications derive neither loop law, do not select the area law from center algebra, and establish no physical string tension, gauge phase, or confinement mechanism.
+
+- Accepted in: `v0.25.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none

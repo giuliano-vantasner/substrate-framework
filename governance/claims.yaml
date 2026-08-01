@@ -1149,3 +1149,70 @@ claims:
     accepted_in: v0.24.0
     challenges: []
     supersedes: []
+  - id: C-LIE-002
+    statement: >-
+      In the standard explicit fundamental SU(3) representation of C-LIE-001,
+      the exact complex 3-by-3 commutant of all eight generators consists only
+      of scalar matrices. Intersecting that commutant with unitary
+      determinant-one matrices gives exactly {omega^k*I_3 | k=0,1,2}, where
+      omega=-1/2+i*sqrt(3)/2, an order-three cyclic group isomorphic to Z_3.
+      A fundamental vector has center phase omega^k, center conjugation on any
+      3-by-3 matrix and hence the adjoint matrix representation is trivial,
+      and abstract integer trialities compose additively modulo three. This
+      theorem establishes no substrate field assignment, quark or gluon
+      identity, screening dynamics, Wilson law, string tension, or confinement.
+    provenance: campaigns/P028-su3-center-wilson/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-LIE-001
+    evidence:
+      - campaigns/P028-su3-center-wilson/verify.py
+      - campaigns/P028-su3-center-wilson/attempts/0001/result.yaml
+      - campaigns/P028-su3-center-wilson/reviews/independent_center_wilson_review.py
+      - campaigns/P028-su3-center-wilson/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-LIE-002-review.md
+      - tests/test_su3.py
+    assumptions:
+      - The fundamental generators and their normalization are exactly those of C-LIE-001.
+      - SU(3) group elements are complex unitary 3-by-3 matrices with determinant one.
+      - Triality denotes only the abstract center character unless a physical representation map is separately accepted.
+    comparators: []
+    accepted_in: v0.25.0
+    challenges: []
+    supersedes: []
+  - id: C-WIL-001
+    statement: >-
+      For positive separation R, Euclidean duration T, and coefficient sigma,
+      conditional on the separately declared rectangular loop expectation
+      W_A(R,T)=exp(-sigma*R*T), the extraction
+      V(R)=-lim_{T->infinity} log(W_A)/T gives V(R)=sigma*R, with derivative
+      sigma and zero second derivative. Separately, for positive rho, the
+      declared perimeter law W_P(R,T)=exp(-2*rho*(R+T)) gives V(R)=2*rho and
+      zero separation derivative. These exact implications derive neither
+      loop law, do not select the area law from center algebra, and establish
+      no physical string tension, gauge phase, or confinement mechanism.
+    provenance: campaigns/P028-su3-center-wilson/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P028-su3-center-wilson/verify.py
+      - campaigns/P028-su3-center-wilson/attempts/0001/result.yaml
+      - campaigns/P028-su3-center-wilson/reviews/independent_center_wilson_review.py
+      - campaigns/P028-su3-center-wilson/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-WIL-001-review.md
+      - tests/test_wilson_loops.py
+    assumptions:
+      - R, T, sigma, and rho are positive real quantities in one consistent convention.
+      - The logarithmic large-Euclidean-time extraction rule is declared.
+      - The area and perimeter expectation values are independent premises rather than outputs of this claim.
+      - No accepted claim maps either ansatz to a physical substrate or gauge sector.
+    comparators: []
+    accepted_in: v0.25.0
+    challenges: []
+    supersedes: []

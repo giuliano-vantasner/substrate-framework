@@ -1,0 +1,8 @@
+PASS [P028-INDEPENDENT] four independent generators already force the commutant to scalars
+PASS [P028-INDEPENDENT] unit determinant restricts a scalar commutant element to three roots
+PASS [P028-INDEPENDENT] all determinant roots have unit modulus
+PASS [P028-INDEPENDENT] direct logarithm exponents independently give the area-law limit
+PASS [P028-INDEPENDENT] direct logarithm exponents independently give the perimeter-law limit
+PASS [P028-INDEPENDENT] the perimeter countermodel preserves center algebra but removes linear slope
+ALL 6 CHECKS PASS [P028-INDEPENDENT]
+P028 INDEPENDENT CENTER/WILSON REVIEW ALL 6 CHECKS PASS

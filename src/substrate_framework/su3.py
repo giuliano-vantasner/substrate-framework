@@ -36,6 +36,64 @@ def fundamental_generators() -> tuple[sp.Matrix, ...]:
     return tuple(matrix / 2 for matrix in gell_mann)
 
 
+@cache
+def fundamental_commutant_basis() -> tuple[sp.Matrix, ...]:
+    """Derive a basis for matrices commuting with all fundamental generators.
+
+    The nullspace is computed from the explicit generators rather than assuming
+    Schur's lemma or preselecting scalar matrices.
+    """
+
+    entries = sp.symbols("m0:9")
+    candidate = sp.Matrix(3, 3, entries)
+    equations = tuple(
+        entry
+        for generator in fundamental_generators()
+        for entry in candidate * generator - generator * candidate
+    )
+    coefficient_matrix, _ = sp.linear_eq_to_matrix(equations, entries)
+    return tuple(
+        sp.Matrix(3, 3, list(vector))
+        for vector in coefficient_matrix.nullspace()
+    )
+
+
+def center_element(power: int = 1) -> sp.Matrix:
+    """Return ``omega**power I_3`` with ``omega=exp(2*pi*i/3)`` exactly."""
+
+    if not isinstance(power, int):
+        raise TypeError("power must be an integer")
+    omega = sp.Rational(-1, 2) + sp.sqrt(3) * sp.I / 2
+    phases = (sp.Integer(1), omega, sp.conjugate(omega))
+    return phases[power % 3] * sp.eye(3)
+
+
+def center_elements() -> tuple[sp.Matrix, ...]:
+    """Return the three elements of the fundamental SU(3) center."""
+
+    return tuple(center_element(power) for power in range(3))
+
+
+def triality_phase(triality: int, center_power: int = 1) -> sp.Expr:
+    """Return the center phase for an abstract integer triality sector."""
+
+    if not isinstance(triality, int):
+        raise TypeError("triality must be an integer")
+    if not isinstance(center_power, int):
+        raise TypeError("center_power must be an integer")
+    return sp.simplify(center_element(center_power)[0, 0] ** (triality % 3))
+
+
+def center_conjugation(matrix: Any, power: int = 1) -> sp.Matrix:
+    """Conjugate a 3-by-3 matrix by a fundamental center element."""
+
+    value = sp.Matrix(matrix)
+    if value.shape != (3, 3):
+        raise ValueError("matrix must be 3 by 3")
+    center = center_element(power)
+    return sp.simplify(center * value * center.inv())
+
+
 def _structure_constant(
     generators: tuple[sp.Matrix, ...], a: int, b: int, c: int
 ) -> sp.Expr:

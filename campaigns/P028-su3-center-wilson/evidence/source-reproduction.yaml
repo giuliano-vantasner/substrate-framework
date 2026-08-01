@@ -1,0 +1,13 @@
+source_unit: CF3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+sha256: 8655579ef3173730c315d60aa821f7085cc131920ae49cb93c60b075d884889d
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+observed_at: '2026-08-01T16:01:23Z'
+exit_code: 0
+terminal_tally: ALL 6 CHECKS PASS
+scope_note: >-
+  CF3 explicitly classifies the Wilson area-law criterion as imported and both
+  area and perimeter models as declared even though its result prose calls the
+  resulting area-law substitution derived confinement.

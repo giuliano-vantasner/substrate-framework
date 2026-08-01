@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF3]
+framework_base: 8ef57bf
+question: >-
+  Which SU(3) center and triality statements are exact, and what follows only
+  conditionally from CF3's separately declared area and perimeter loop laws?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P028-su3-center-wilson/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+oracle:
+  kind: exact_commutant_group_and_symbolic_limit
+  mutation_requirements:
+    - center phase determinant and order are load-bearing
+    - area exponent sign and area product are load-bearing
+    - a perimeter law is an explicit same-center countermodel
+status: passed

@@ -1,0 +1,16 @@
+attempt: 0001
+completed_at: '2026-08-01T16:01:23Z'
+exit_code: 0
+terminal_tally: 23
+verdict:
+  C-LIE-002: symbolic_verified
+  C-WIL-001: symbolic_verified
+evidence:
+  - exact one-dimensional fundamental commutant
+  - exhaustive Z3 membership closure and representation action
+  - determinant phase and order mutations
+  - exact area-law and perimeter-law large-time limits
+  - exponent sign product and perimeter countermodels
+  - explicit independence of center derivation from loop ansatz
+status: passed
+stdout: stdout.txt

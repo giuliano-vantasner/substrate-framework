@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 193
-  qualified: 20
+  pending_adjudication: 192
+  qualified: 21
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2057,8 +2057,21 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LIE-002
+  - C-WIL-001
+  qualification: >-
+    CF3's complete SU(3) center/triality algebra and the conditional large-time
+    consequences of its declared area and perimeter loop laws are accepted. It
+    does not derive or select a Wilson law, physical sector map, string tension,
+    screening dynamics, gauge phase, or confinement mechanism.
+  evidence:
+  - campaigns/P028-su3-center-wilson/reviews/source_adjudication.md
+  note: >-
+    P028 solves the full fundamental commutant, makes center membership and
+    order mutation-sensitive, and supplies a same-center perimeter-law
+    countermodel to CF3's physical interpretation.
 - source_unit: CF4
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF4_dimensional_transmutation.py

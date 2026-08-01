@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T15:50:39Z'
+updated: '2026-08-01T16:01:23Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.24.0`, containing thirty-six claims: the prior sector results plus coefficient-honest fixed-flux tube linearity `C-FLX-001`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.25.0`, containing thirty-eight claims: the prior sector results plus complete SU(3) center/triality algebra `C-LIE-002` and premise-explicit rectangular loop limits `C-WIL-001`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 193 pending, 0 partially migrated, 3 migrated, 20 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 192 pending, 0 partially migrated, 3 migrated, 21 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -98,6 +98,7 @@ Attempts are append-only and individually reproducible.
 | 0036 | P025 pre-commit provenance audit | accepted-claim ID and durable-decision scan | failed before commit | Provisional `C-DIM-006` collided with P023's rejected-claim review even though the identifier was absent from the accepted registry | Preserve P023 unchanged, renumber the new accepted claim `C-DIM-007`, regenerate consumers, and rerun the changed boundary |
 | 0037 | P026 conditional Abelian-Higgs vortex and CF1 audit | `campaigns/P026-abelian-higgs-vortex` | accepted in v0.23.0 with CF1 qualified | The pinned source fails after two exact checks at removed `np.trapz`; two preserved SymPy representation failures precede 31 main and six independent checks, with finite differences converging toward the collocation tension | Audit CF2's fixed-cross-section Gauss-law and linear-potential claims against the conditional vortex/tension boundary |
 | 0038 | P027 fixed-flux tube work/energy audit | `campaigns/P027-fixed-flux-tube-linearity` | accepted in v0.24.0 with CF2 qualified | Twenty-two exact and six independent checks separate field-energy slope from endpoint-force slope, derive equality iff `q=Phi/2`, and add factor-two, expanding-area, spherical, and effective-area reconstruction guards | Audit CF3's exact SU(3) center algebra separately from its declared Wilson area law and confinement interpretation |
+| 0039 | P028 exact SU(3) center and conditional Wilson-loop audit | `campaigns/P028-su3-center-wilson` | accepted in v0.25.0 with CF3 qualified | Twenty-three exact and six independent checks prove commutant completeness, Z3 closure/action, premise-explicit area/perimeter limits, and a same-center countermodel to confinement-law selection | Audit CF5's synthesis dependencies against the independently qualified CF1-CF4 boundaries |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -114,7 +115,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 193 bridge units remain pending, 3 are migrated, 20 are qualified, 1 is duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 192 bridge units remain pending, 3 are migrated, 21 are qualified, 1 is duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -130,11 +131,13 @@ P026 adds exact conditional Abelian-Higgs vortex equations, flux, and linearized
 
 P027 adds exact fixed-area field-energy and endpoint-work linearity while keeping their slopes distinct unless `q=Phi/2`. It qualifies CF2 by exposing the unused endpoint charge, factor-of-two counterexample, unproved CF1 identity, and physical confinement overreach.
 
+P028 adds the complete exact SU(3) center/triality theorem and the separately conditional area/perimeter rectangular-loop limits. It qualifies CF3 by proving commutant completeness while rejecting its declared-area-law, physical-sector, screening, tension, and confinement overreach.
+
 ## Canonicalization
-The registry, `v0.24.0` manifest, current release, generated claim index, and generated framework memory agree on thirty-six accepted claims. P001 through P027 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 193 pending, 0 partial, 3 migrated, 20 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.25.0` manifest, current release, generated claim index, and generated framework memory agree on thirty-eight accepted claims. P001 through P028 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 192 pending, 0 partial, 3 migrated, 21 qualified, 1 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 193 pending, 3 migrated, 20 qualified, 1 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit CF3's exact SU(3) center algebra separately from its declared Wilson area law and confinement interpretation.
+The effort remains active. D4 is discharged, but D1 remains open with 192 pending, 3 migrated, 21 qualified, 1 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit CF5's synthesis dependencies against the independently qualified CF1-CF4 boundaries.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

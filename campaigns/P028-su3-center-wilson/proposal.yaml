@@ -1,0 +1,42 @@
+id: P028
+base_release: v0.24.0
+base_commit: 8ef57bf
+source_baseline: substrate@6d1f4e0
+source_units: [CF3]
+question: >-
+  Derive CF3's exact SU(3) center and representation response, and distinguish
+  consequences of a declared Wilson area law from a derivation of that law or
+  of physical confinement.
+invariants:
+  - C-LIE-001 fixes the standard explicit SU(3) fundamental convention
+  - a Wilson area law cannot be both an input and the derived confinement result
+  - no accepted claim maps the conditional SU(3) algebra to a substrate gauge sector
+allowed_imports:
+  - C-LIE-001
+  - exact complex matrix and finite-group algebra
+  - a Wilson area law only as an explicit premise for a separate conditional claim
+  - CF3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote exact Z3 center/triality algebra and separately promote only the
+      conditional static-potential consequences of an assumed area law
+  - id: B
+    description: >-
+      Promote only exact center and representation algebra because the Wilson
+      portion merely restates its desired area-law premise
+  - id: C
+    description: >-
+      Promote a derived physical SU(3) area law and confinement mechanism
+uniqueness_evidence: null
+selection_criteria:
+  - premise-to-conclusion separation
+  - exact finite-group and representation closure
+  - area-versus-perimeter sensitivity
+  - dependency and interpretation economy
+  - reusable consumer reach beyond C-LIE-001
+claims_proposed:
+  - provisional C-LIE-002
+  - provisional C-WIL-001
+comparators_blinded_until: center_representation_and_wilson_premises_frozen
+status: accepted
