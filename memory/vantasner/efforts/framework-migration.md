@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T20:21:47Z'
+updated: '2026-08-01T21:03:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.40.0`, containing fifty-five claims: the prior sector results plus exact spherical moment theorem `C-MOM-003` and cutoff-qualified radial moment evidence `C-PDE-002`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.41.0`, containing fifty-seven claims: the prior sector results plus exact regular l=2 perturbation claim `C-PDE-003` and qualified finite-time mode evidence `C-PDE-004`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 175 pending, 0 partially migrated, 3 migrated, 36 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 174 pending, 0 partially migrated, 3 migrated, 37 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -117,6 +117,9 @@ Attempts are append-only and individually reproducible.
 | 0055 | P043 first full no-release replay | `scripts/validate.sh` | failed before tests | The FS4 duplicate review's existing-claim section began with an inline claim ID and violated the established plain-prose disclosure contract | Add one descriptive opening sentence and rerun the changed transaction without repeating scientific or source oracles |
 | 0056 | P044 finite-time radial sine-Gordon oscillon | `campaigns/P044-p3d1-radial-sine-gordon-oscillon` | accepted in v0.39.0 with P3D1 qualified | Twenty-eight main and ten transformed-field checks establish the specified finite-time localized sub-gap trajectory with mesh, timestep, domain, conservation, frequency-window, independent-method, and mutation evidence; exact-periodic, exponential-lifetime, gravitational, and ontology readings remain excluded | Audit P3D2's spherical STF null and scalar-moment frequency claim using the canonical radial solver without importing a physical gravity channel |
 | 0057 | P045 exact spherical STF null and cutoff-qualified core moment | `campaigns/P045-p3d2-spherical-stf-null` | accepted in v0.40.0 with P3D2 qualified | Two preserved representation failures precede twenty-five main and six independent checks; exact angular algebra closes the STF null, while refined leapfrog/DOP853 evidence restricts the near-two scalar-moment frequency to core cutoffs 20-30 and exposes the radius-40 drift counterexample | Audit P3D3's proposed l=2 field as an actual PDE perturbation rather than multiplying a solved radial profile by an angular ansatz |
+| 0058 | P046 exact regular l=2 sector and finite-time perturbation | `campaigns/P046-p3d3-l2-perturbation-consistency` | accepted in v0.41.0 with P3D3 qualified | Thirty-one main and twelve independent checks derive the nonzero product-ansatz residual, regular transformed equation, P4 leakage, first-order STF moment, and mesh/timestep/domain/amplitude/free-mode/DOP853 evidence while excluding the nonregular source construction and radiation narrative | Replay P044/P045 and require both tally and process status before promotion |
+| 0059 | P046 first promotion replay | `campaigns/P046-p3d3-l2-perturbation-consistency/attempts/0005` | failed after all scientific tallies | P044 and P045 passed 28 and 25 checks, but `CheckLedger.finish()` returned the positive count through `SystemExit`, so the successful chain ended with status 25 | Repair the shared ledger compatibly without rewriting immutable campaigns and codify the distinction in AGENTS, skill, and template |
+| 0060 | Status-zero tally repair and P046 promotion gate | `campaigns/P046-p3d3-l2-perturbation-consistency/attempts/0006` plus `scripts/validate.sh` | passed; commit `8632e73` | A tested success token preserves visible historical tallies while carrying OS status zero; P044/P045 replayed cleanly and the full workflow passed 316 tests | Audit P3D4 against the qualified linearized moment and the accepted conditional waveform/power premises |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -133,7 +136,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 175 bridge units remain pending, 3 are migrated, 36 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 174 bridge units remain pending, 3 are migrated, 37 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -185,11 +188,13 @@ P044 adds a pure 3+1 radial sine-Gordon solver and finite-time simulation eviden
 
 P045 adds the exact isotropic second moment and STF null of every integrable radial density, together with an exact nonzero `P2` deformation guard. It separately characterizes the `C-PDE-001` core energy-radius moment as near twice the contemporaneous field frequency under mesh, timestep, domain, window, cutoff, and DOP853 checks. The accepted cutoff is 20-30; radius 40 exposes radiative-shell drift. P3D2's bins-17/34 exact-ratio artifact, assembled numerical zero, physical no-radiation conclusion, and forced l=2 channel remain qualified.
 
+P046 adds the exact regular l=2 perturbation equation about the accepted radial sine-Gordon model and a separately qualified finite-time regular-mode evolution with a nonzero first-order STF energy moment. It rejects P3D3's multiplicative field through its exact residual, nonregular center, omitted angular-gradient energy, and nonlinear P4 leakage; its refined transformed-mode and DOP853 routes make no frequency, nonlinear stability, gravity, radiation, or FS2-width claim. The campaign also repairs a shared verifier-status defect so successful historical tallies now exit with status zero without rewriting immutable records.
+
 ## Canonicalization
-The registry, `v0.40.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-five accepted claims. P001 through P045 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 175 pending, 0 partial, 3 migrated, 36 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.41.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-seven accepted claims. P001 through P046 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 174 pending, 0 partial, 3 migrated, 37 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 175 pending, 3 migrated, 36 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit P3D3's proposed l=2 deformation against the full nonradial sine-Gordon PDE, because multiplying a solved radial trajectory by `1+a*P2` does not establish a self-consistent angular mode.
+The effort remains active. D4 is discharged, but D1 remains open with 174 pending, 3 migrated, 37 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit P3D4's power and waveform against the qualified linearized `C-PDE-004` moment and the premise-explicit `C-GW-001/002/004` maps, without importing P3D3's rejected finite deformation or physical radiation conclusion.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
