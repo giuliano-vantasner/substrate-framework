@@ -120,6 +120,15 @@ Let two equal point masses m follow the declared paths x_1(t)=a*(cos(Omega*t),si
 - Compatibility: `compatible_extension`
 - Dependencies: C-MOM-001, C-GW-001, C-GW-002
 
+## C-GW-004
+
+Let mu(t) be the exact C-SG-009 longitudinal moment and apply the conditional axisymmetric separable construction of C-MOM-002. Writing d=mu'''(t), the normalized tensor satisfies |I_STF'''|^2=2*d^2/3 and the triple tensor Q=3*I_STF satisfies |Q'''|^2=6*d^2. Under the separately declared C-GW-001 inputs A=2*G and B=1/(32*pi*G), the normalized convention therefore has conditional instantaneous power P(t)=2*G*d^2/15. The triple convention requires waveform coefficient 2*G/3 and power coefficient G/45 and gives the identical result; using 2*G and G/5 with triple Q multiplies the field by three and power by nine. This conditional power is nonnegative and nonzero at some phases, but it vanishes at the exact minimum and maximum symmetry phases where d=0. For a line of sight in the x-z plane at inclination i from the symmetry x axis, choose the oriented transverse frame p=(sin(i),0,-cos(i)), q=(0,1,0). If e=mu''(t), the normalized TT projection has plus coordinate e*sin(i)^2/sqrt(2), conventional matrix readout e*sin(i)^2/2, and zero cross coordinate. Thus the conditional waveform h_TT=(2*G/R)*TT[I_STF''] has conventional plus readout G*e*sin(i)^2/R, zero cross, and an exact symmetry-axis null; the inverse-rescaled triple convention gives the same waveform. These are exact consequences of declared moment, projector, waveform, and flux inputs. They establish no conserved isolated 3+1 source, gravitational action or field equation, physical retarded solution or flux, radiation channel, detector strain, backreaction, or substrate realization.
+
+- Accepted in: `v0.38.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-009, C-MOM-002, C-GW-001, C-GW-002
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.
@@ -362,6 +371,15 @@ For every C-SG-001 rest breather with 0<omega<1, let eta=sqrt(1-omega^2), use th
 - Verification: `symbolic_verified`
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-002
+
+## C-SG-010
+
+At omega=1/sqrt(2), let mu(t) be the exact centered breather energy second moment of C-SG-009, with period T=pi/omega, and define its cosine coefficients a_k=(2/T)*integral_0^T mu(t)*cos(2*k*omega*t) dt for positive integers k. Exact half-period symmetry permits only these even field-frequency harmonics, and Parseval gives <mu'''(t)^2>=(1/2)*sum_{k>=1}(2*k*omega)^6*a_k^2. Resolution-bounded direct adaptive quadrature of the exact third derivative, stable under 4, 8, 16, and 32 interval subdivisions, gives 379.4646380687 < <mu'''^2> < 379.4646380688. Independent sixty-digit manual differentiation and cosine quadrature through sixteen harmonics agree, with a decreasing truncation error before the double-precision floor. The k=1 term, at angular frequency 2*omega, contributes a fraction between 0.8053698716 and 0.8053698718 of the total derivative mean square and is larger than the combined higher-harmonic contribution. These numerical bounds concern this declared frequency and scalar 1+1 moment; they establish no family-wide dominance theorem, three-dimensional source, gravitational coupling, radiated power, waveform, detector signal, or substrate realization.
+
+- Accepted in: `v0.38.0`
+- Verification: `numeric_evidence`
+- Compatibility: `native`
+- Dependencies: C-SG-009
 
 ## C-SK-001
 

@@ -1,0 +1,23 @@
+source_unit: FS3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-13/bridge_FS3_breathing_mode_power.py
+sha256: 572e4e156897bf335784cc606123e9a482fdf13a16434a239e15583050a0ac90
+reproduced_at: '2026-08-01T19:14:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-13/bridge_FS3_breathing_mode_power.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+exit_code: 0
+terminal_tally: ALL 5 CHECKS PASS
+reported_values:
+  source_average_power: 455.17210
+  source_spectral_power: 455.35757
+  source_two_omega_fraction: 0.805
+observation: >-
+  The source carries the NumPy trapezoid compatibility fallback and reproduces
+  in seconds. Its source-average value is a finite-difference approximation;
+  the spectral value uses an FFT of the same 256 sampled moment values. P042
+  may reuse this record only with an exact source-hash match. Neither reported
+  power has corrected the factor-nine triple-quadrupole normalization.

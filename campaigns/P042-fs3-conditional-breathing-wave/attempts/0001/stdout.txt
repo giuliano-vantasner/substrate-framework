@@ -1,0 +1,6 @@
+PASS [P042-FS3] exact symbolic and source-reproduction checks through the special-frequency mean square
+PASS [P042-FS3] sixteen Fourier coefficient quadratures completed with controlled reported errors
+FAIL [P042-FS3] independent Fourier-Parseval truncation converges to the time-domain mean
+partial absolute errors for 4, 8, 12, 16 modes:
+  2.7024070822e-2, 1.1595949445e-7, 6.8212102633e-13, 9.0949470177e-13
+No terminal tally was emitted.

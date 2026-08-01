@@ -149,6 +149,34 @@ def breather_energy_second_moment(
     )
 
 
+def breather_energy_second_moment_derivative(
+    omega: Any,
+    time: Any,
+    order: int,
+) -> sp.Expr:
+    """Return an exact time derivative of the breather energy moment.
+
+    A private symbolic time is differentiated before the requested instant is
+    substituted, so callers may use either a symbolic coordinate or an exact
+    numeric instant.  This remains a derivative of the centered scalar 1+1
+    energy moment; it does not construct a three-dimensional source.
+    """
+
+    derivative_order = sp.sympify(order)
+    if derivative_order.is_integer is not True or int(derivative_order) < 0:
+        raise ValueError("order must be a nonnegative integer")
+    frequency = _frequency(omega)
+    instant = sp.sympify(time)
+    auxiliary_time = sp.Dummy("moment_time", real=True)
+    moment = breather_energy_second_moment(frequency, auxiliary_time)
+    return sp.simplify(
+        sp.diff(moment, auxiliary_time, int(derivative_order)).subs(
+            auxiliary_time,
+            instant,
+        )
+    )
+
+
 def breather_energy_second_moment_extrema(
     omega: Any,
 ) -> tuple[sp.Expr, sp.Expr]:

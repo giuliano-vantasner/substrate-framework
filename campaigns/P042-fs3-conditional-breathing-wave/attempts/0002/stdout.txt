@@ -1,0 +1,3 @@
+PASS [P042-FS3] 34 checks through source normalization, power, waveform, quadrature, Fourier, and strict-positivity audits
+FAIL [P042-FS3] FS3 repeats the factor-two static-kink derivative defect without affecting constancy
+No terminal tally was emitted.

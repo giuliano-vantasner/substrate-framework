@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 179
-  qualified: 33
+  pending_adjudication: 178
+  qualified: 34
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2678,8 +2678,23 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-009
+  - C-MOM-002
+  - C-GW-001
+  - C-GW-002
+  - C-SG-010
+  - C-GW-004
+  qualification: FS3's exact derivative, convention-corrected conditional power, viewing geometry, and
+    refined special-frequency Fourier fraction map to accepted claims. Its triple tensor is paired with
+    unrescaled coefficients, its strict positivity misses exact zero phases, its spectral oracle reuses
+    the same samples, and it supplies no conserved 3+1 source or physical gravitational radiation theory.
+  evidence:
+  - campaigns/P042-fs3-conditional-breathing-wave/reviews/source_adjudication.md
+  - campaigns/P042-fs3-conditional-breathing-wave/evidence/source-reproduction.yaml
+  note: P042 corrects FS3's factor-three waveform and factor-nine power, separates symbolic from numeric
+    evidence, and derives the full sine-squared plus, zero-cross, symmetry-axis-null viewing pattern.
 - source_unit: FS4
   phase: phase-13
   path: merged-framework/bridges/phase-13/bridge_FS4_formfactor_into_radiation.py

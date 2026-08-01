@@ -624,3 +624,26 @@ units:
       P041 factors the conditional moments exactly, carries normalized and
       triple STF conventions through derivatives and projections, and keeps
       pending FS3/P3D3 outside the accepted dependency closure.
+  FS3:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-009
+      - C-MOM-002
+      - C-GW-001
+      - C-GW-002
+      - C-SG-010
+      - C-GW-004
+    qualification: >-
+      FS3's exact derivative, convention-corrected conditional power, viewing
+      geometry, and refined special-frequency Fourier fraction map to accepted
+      claims. Its triple tensor is paired with unrescaled coefficients, its
+      strict positivity misses exact zero phases, its spectral oracle reuses
+      the same samples, and it supplies no conserved 3+1 source or physical
+      gravitational radiation theory.
+    evidence:
+      - campaigns/P042-fs3-conditional-breathing-wave/reviews/source_adjudication.md
+      - campaigns/P042-fs3-conditional-breathing-wave/evidence/source-reproduction.yaml
+    note: >-
+      P042 corrects FS3's factor-three waveform and factor-nine power, separates
+      symbolic from numeric evidence, and derives the full sine-squared plus,
+      zero-cross, symmetry-axis-null viewing pattern.

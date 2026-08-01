@@ -1,0 +1,15 @@
+attempt: 0002
+completed_at: '2026-08-01T19:27:00Z'
+exit_code: 1
+terminal_tally: null
+verdict: implementation_failure
+failure: >-
+  The static-kink audit compared two exact derivative forms using plain SymPy
+  simplification. Hyperbolic and exponential representations did not reduce to
+  zero even though rewriting sech to exponentials did.
+diagnosis: symbolic_representation
+next_attempt: >-
+  Rewrite the difference to the exponential representation before exact
+  simplification; do not change the derivative or the factor-two predicate.
+status: failed_preserved
+stdout: stdout.txt

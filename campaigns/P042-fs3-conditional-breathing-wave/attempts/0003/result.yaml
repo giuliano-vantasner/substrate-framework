@@ -1,0 +1,22 @@
+attempt: 0003
+completed_at: '2026-08-01T19:30:00Z'
+exit_code: 0
+terminal_tally: 37
+verdict:
+  C-GW-004: symbolic_verified
+  C-SG-010: numeric_evidence
+evidence:
+  - exact C-SG-009 second and third derivatives, symmetries, zeros, and nonzero phase
+  - exact normalized/triple contractions and convention-invariant conditional power
+  - exact arbitrary-inclination sine-squared plus pattern, zero cross, and axial null
+  - refined exact-expression quadrature for the special cycle mean
+  - independent Fourier-Parseval convergence and sixty-digit manual rederivation
+  - power and waveform normalization mutations
+source_defects:
+  - Q=3*I_STF is paired with coefficients for normalized I_STF, multiplying field by three and power by nine
+  - strict pointwise positivity is a sampling artifact because exact symmetry phases have zero third derivative
+  - the purported closed spectral sum is an FFT of the same 256 sampled moments
+  - the static kink derivative is too large by two
+  - the retarded waveform, gravity, and source dynamics are imported or absent
+status: passed_after_numeric_saturation_and_symbolic_representation_repairs
+stdout: stdout.txt

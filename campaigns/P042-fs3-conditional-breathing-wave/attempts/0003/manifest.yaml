@@ -1,0 +1,21 @@
+attempt: 0003
+campaign: P042
+base_release: v0.37.0
+base_commit: d6a90e3
+source_unit: FS3
+source_sha256: 572e4e156897bf335784cc606123e9a482fdf13a16434a239e15583050a0ac90
+candidate: A
+repair_from:
+  - attempts/0001/result.yaml
+  - attempts/0002/result.yaml
+oracles:
+  - exact moment derivatives, tensor contractions, power coefficients, and arbitrary-inclination TT readouts
+  - refined direct cycle quadrature and sixteen-mode Fourier-Parseval reconstruction
+  - independent sixty-digit manual derivative and Fourier route
+  - source reproduction, normalization, positivity, and physical-scope audit
+mutations:
+  - normalized versus triple power coefficient
+  - triple-tensor waveform coefficient
+expected_positive_object: >-
+  Exact conditional breathing-mode tensor and waveform theorem plus separately
+  classified numeric cycle-average and harmonic-fraction evidence.

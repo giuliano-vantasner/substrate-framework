@@ -1,0 +1,13 @@
+PASS [P042-INDEPENDENT] manual chain-rule differentiation equals the exact third profile derivative
+PASS [P042-INDEPENDENT] manual special-frequency derivatives have exact symmetry zeros and nonzero quarter phase
+PASS [P042-INDEPENDENT] sixty-digit direct period quadrature is subdivision stable
+PASS [P042-INDEPENDENT] independent direct quadrature resolves the special mean square
+PASS [P042-INDEPENDENT] high-precision Fourier-Parseval sums converge independently to direct quadrature
+PASS [P042-INDEPENDENT] the first allowed two-omega harmonic is numerically dominant
+PASS [P042-INDEPENDENT] direct trace subtraction gives the normalized derivative and contraction
+PASS [P042-INDEPENDENT] direct transverse contractions give sine-squared plus and zero cross
+PASS [P042-INDEPENDENT] independent coefficient accounting makes normalized and triple powers identical
+PASS [P042-INDEPENDENT] the source's triple tensor with G over five is exactly nine times too large
+PASS [P042-INDEPENDENT] independent mean-square evidence gives the corrected conditional average coefficient
+ALL 11 CHECKS PASS [P042-INDEPENDENT]
+P042 INDEPENDENT TIME-FOURIER REVIEW ALL 11 CHECKS PASS

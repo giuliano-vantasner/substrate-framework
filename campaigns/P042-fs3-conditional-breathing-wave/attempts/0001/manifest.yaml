@@ -1,0 +1,17 @@
+attempt: 0001
+campaign: P042
+base_release: v0.37.0
+base_commit: d6a90e3
+source_unit: FS3
+source_sha256: 572e4e156897bf335784cc606123e9a482fdf13a16434a239e15583050a0ac90
+candidate: A
+oracles:
+  - exact moment derivatives, tensor contractions, and TT readouts
+  - SciPy direct cycle quadrature and Fourier-Parseval reconstruction
+  - source normalization and physical-scope audit
+mutations:
+  - normalized versus triple power coefficient
+  - triple-tensor waveform coefficient
+expected_positive_object: >-
+  Exact conditional pointwise power and viewing algebra plus independently
+  converged special-frequency cycle and Fourier evidence.

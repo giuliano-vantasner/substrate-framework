@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T19:03:00Z'
+updated: '2026-08-01T19:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.37.0`, containing fifty claims: the prior sector results plus the exact conditional separable-density moment/STF theorem `C-MOM-002`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.38.0`, containing fifty-two claims: the prior sector results plus the exact conditional breathing-wave theorem `C-GW-004` and separately bounded Fourier evidence `C-SG-010`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 179 pending, 0 partially migrated, 3 migrated, 33 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 178 pending, 0 partially migrated, 3 migrated, 34 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -112,6 +112,7 @@ Attempts are append-only and individually reproducible.
 | 0050 | P039 exact circular-pair moments and conditional waveform | `campaigns/P039-gw4-circular-pair-waveform` | accepted in v0.35.0 with GW4 qualified | The pinned source stops after four checks at removed `np.trapz`; thirty-six main and nine independent checks derive arbitrary-inclination coefficients, correct a factor-three field/factor-nine power convention error, and exclude binding, breather embedding, and physical gravity | Audit FS1's exact 1+1 energy-density second moment without importing its pending 3+1 radiation consumers |
 | 0051 | P040 exact breather energy-density second moment | `campaigns/P040-fs1-breather-energy-moment` | accepted in v0.36.0 with FS1 qualified | Thirty-one main and nine independent checks replace a special grid/FFT result by an exact family formula, extrema, and fundamental half-period; they expose same-sample bookkeeping, higher even harmonics, a factor-two kink derivative error, and the absent 3+1 source/radiation map | Audit FS2's declared transverse embedding as conditional tensor algebra without importing FS3/P3D3 physics |
 | 0052 | P041 conditional axisymmetric separable-density moments | `campaigns/P041-fs2-separable-density-stf` | accepted in v0.37.0 with FS2 qualified | Thirty-one main and eight independent checks derive the product moments, both STF conventions, all positive-order derivative norms, and axis/perpendicular TT geometry while excluding a conserved 3+1 source and gravity; a hash-matched reproduction record avoids repeated minute-long source quadrature | Audit FS3's time-domain derivative and spectral claims against C-SG-009/C-MOM-002 without importing P3D3 physics |
+| 0053 | P042 conditional breathing-mode power, viewing, and Fourier audit | `campaigns/P042-fs3-conditional-breathing-wave` | accepted in v0.38.0 with FS3 qualified | Thirty-seven main and eleven independent checks correct factor-three field/factor-nine power conventions, replace grid positivity by exact zeros and nonzero phases, derive the arbitrary-inclination sine-squared plus pattern, and independently resolve the special mean and 80.5369% first-harmonic fraction | Audit FS4's static form-factor insertion without treating a static moment as a radiative suppression theorem |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -128,7 +129,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 179 bridge units remain pending, 3 are migrated, 33 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 178 bridge units remain pending, 3 are migrated, 34 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -172,11 +173,13 @@ P040 adds the exact centered second spatial moment of the normalized 1+1 breathe
 
 P041 adds exact conditional second-moment and STF algebra for a declared centered longitudinal density times a fixed centered axisymmetric transverse profile, including arbitrary positive-order derivative norms and exact symmetry-axis/perpendicular TT geometry. It qualifies FS2 because factorized density moments do not supply local conservation or 3+1 dynamics, the source's claimed analytic spectrum is an FFT of the same samples, its working transverse variance conflicts with an unaccepted later annotation, and no accepted gravity maps the tensor to radiation.
 
+P042 adds exact convention-consistent conditional power and arbitrary-inclination TT viewing algebra for the accepted separable breather moment, plus a separately labeled numeric-evidence claim for the special-frequency derivative mean and Fourier fraction. It qualifies FS3 because the source applies normalized coefficients to triple `Q`, misses exact zero-power symmetry phases, calls a same-data FFT closed form, repeats the factor-two kink derivative, and imports rather than derives source conservation and gravity.
+
 ## Canonicalization
-The registry, `v0.37.0` manifest, current release, generated claim index, and generated framework memory agree on fifty accepted claims. P001 through P041 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 179 pending, 0 partial, 3 migrated, 33 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.38.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-two accepted claims. P001 through P042 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 178 pending, 0 partial, 3 migrated, 34 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 179 pending, 3 migrated, 33 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit FS3's derivative and spectral claims against C-SG-009/C-MOM-002 without importing pending P3D3 physics.
+The effort remains active. D4 is discharged, but D1 remains open with 178 pending, 3 migrated, 34 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit FS4's static form-factor insertion against the accepted moment and conditional-wave boundaries without importing pending P3D3 physics.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

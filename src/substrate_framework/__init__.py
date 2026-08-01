@@ -154,7 +154,10 @@ from .renormalization import (
 )
 from .separable_moments import (
     AxisymmetricSeparableMoments,
+    AxisymmetricTTReadout,
     axisymmetric_separable_moments,
+    axisymmetric_separable_stf_derivative,
+    axisymmetric_stf_tt_readout,
 )
 from .quartic_qball import (
     quartic_qball_amplitude,
@@ -184,6 +187,7 @@ from .sine_gordon import (
     boosted_breather_phase_components,
     breather_energy,
     breather_energy_second_moment,
+    breather_energy_second_moment_derivative,
     breather_energy_second_moment_extrema,
     breather_energy_from_action,
     breather_field,

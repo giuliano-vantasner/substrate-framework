@@ -1772,3 +1772,101 @@ claims:
     accepted_in: v0.37.0
     challenges: []
     supersedes: []
+  - id: C-SG-010
+    statement: >-
+      At omega=1/sqrt(2), let mu(t) be the exact centered breather energy
+      second moment of C-SG-009, with period T=pi/omega, and define its cosine
+      coefficients a_k=(2/T)*integral_0^T mu(t)*cos(2*k*omega*t) dt for
+      positive integers k. Exact half-period symmetry permits only these even
+      field-frequency harmonics, and Parseval gives
+      <mu'''(t)^2>=(1/2)*sum_{k>=1}(2*k*omega)^6*a_k^2. Resolution-bounded
+      direct adaptive quadrature of the exact third derivative, stable under
+      4, 8, 16, and 32 interval subdivisions, gives
+      379.4646380687 < <mu'''^2> < 379.4646380688. Independent sixty-digit
+      manual differentiation and cosine quadrature through sixteen harmonics
+      agree, with a decreasing truncation error before the double-precision
+      floor. The k=1 term, at angular frequency 2*omega, contributes a fraction
+      between 0.8053698716 and 0.8053698718 of the total derivative mean square
+      and is larger than the combined higher-harmonic contribution. These
+      numerical bounds concern this declared frequency and scalar 1+1 moment;
+      they establish no family-wide dominance theorem, three-dimensional
+      source, gravitational coupling, radiated power, waveform, detector
+      signal, or substrate realization.
+    provenance: campaigns/P042-fs3-conditional-breathing-wave/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-009
+    evidence:
+      - campaigns/P042-fs3-conditional-breathing-wave/verify.py
+      - campaigns/P042-fs3-conditional-breathing-wave/attempts/0003/result.yaml
+      - campaigns/P042-fs3-conditional-breathing-wave/reviews/independent_time_fourier_review.py
+      - campaigns/P042-fs3-conditional-breathing-wave/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SG-010-review.md
+      - tests/test_breathing_mode.py
+    assumptions:
+      - The input moment and its exact period use the centered normalized 1+1 conventions of C-SG-009.
+      - Adaptive quadrature uses IEEE double precision in the primary route and 60 decimal digits in the independent route; the displayed intervals are resolution-bounded evidence rather than rigorous interval enclosures.
+      - Fourier coefficients use the period-T cosine normalization stated in the claim and Parseval applies to the smooth periodic exact moment.
+      - Harmonic dominance is asserted only at omega=1/sqrt(2) and only for the squared third-derivative mean.
+    comparators: []
+    accepted_in: v0.38.0
+    challenges: []
+    supersedes: []
+  - id: C-GW-004
+    statement: >-
+      Let mu(t) be the exact C-SG-009 longitudinal moment and apply the
+      conditional axisymmetric separable construction of C-MOM-002. Writing
+      d=mu'''(t), the normalized tensor satisfies
+      |I_STF'''|^2=2*d^2/3 and the triple tensor Q=3*I_STF satisfies
+      |Q'''|^2=6*d^2. Under the separately declared C-GW-001 inputs
+      A=2*G and B=1/(32*pi*G), the normalized convention therefore has
+      conditional instantaneous power P(t)=2*G*d^2/15. The triple convention
+      requires waveform coefficient 2*G/3 and power coefficient G/45 and gives
+      the identical result; using 2*G and G/5 with triple Q multiplies the
+      field by three and power by nine. This conditional power is nonnegative
+      and nonzero at some phases, but it vanishes at the exact minimum and
+      maximum symmetry phases where d=0. For a line of sight in the x-z plane
+      at inclination i from the symmetry x axis, choose the oriented
+      transverse frame p=(sin(i),0,-cos(i)), q=(0,1,0). If e=mu''(t), the
+      normalized TT projection has plus coordinate
+      e*sin(i)^2/sqrt(2), conventional matrix readout e*sin(i)^2/2, and zero
+      cross coordinate. Thus the conditional waveform
+      h_TT=(2*G/R)*TT[I_STF''] has conventional plus readout
+      G*e*sin(i)^2/R, zero cross, and an exact symmetry-axis null; the
+      inverse-rescaled triple convention gives the same waveform. These are
+      exact consequences of declared moment, projector, waveform, and flux
+      inputs. They establish no conserved isolated 3+1 source, gravitational
+      action or field equation, physical retarded solution or flux, radiation
+      channel, detector strain, backreaction, or substrate realization.
+    provenance: campaigns/P042-fs3-conditional-breathing-wave/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-SG-009
+      - C-MOM-002
+      - C-GW-001
+      - C-GW-002
+    evidence:
+      - campaigns/P042-fs3-conditional-breathing-wave/verify.py
+      - campaigns/P042-fs3-conditional-breathing-wave/attempts/0003/result.yaml
+      - campaigns/P042-fs3-conditional-breathing-wave/reviews/independent_time_fourier_review.py
+      - campaigns/P042-fs3-conditional-breathing-wave/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-GW-004-review.md
+      - tests/test_breathing_mode.py
+      - tests/test_separable_moments.py
+      - tests/test_tt_angular.py
+    assumptions:
+      - The longitudinal moment is centered and the transverse profile, monopole, and per-axis variance obey the declared time-independent C-MOM-002 hypotheses.
+      - G and R are positive declared parameters, and A, B, the retarded-waveform form, and the flux functional remain conditional premises from C-GW-001.
+      - Inclination is measured from the x symmetry axis in the x-z plane and the oriented p-q frame fixes plus/cross signs and normalization.
+      - Normalized basis coordinates differ from conventional matrix readouts by sqrt(2); neither is a detector observable without an accepted physical wave model.
+      - Nonzero conditional power of a supplied tensor does not establish local source conservation, a gravitational coupling, or physical radiation.
+    comparators: []
+    accepted_in: v0.38.0
+    challenges: []
+    supersedes: []
