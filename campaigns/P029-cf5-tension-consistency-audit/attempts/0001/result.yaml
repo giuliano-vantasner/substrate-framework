@@ -1,0 +1,19 @@
+attempt: 0001
+completed_at: '2026-08-01T16:14:00Z'
+exit_code: 0
+terminal_tally: 20
+verdict:
+  CF5: duplicate_evidence
+duplicates:
+  - C-VTX-001
+  - C-VTX-002
+  - C-FLX-001
+evidence:
+  - exact effective-area inversion and round-trip identity
+  - every positive alternative tension passes after redefining area
+  - dimensionless ratio is a transformed supplied tension
+  - source window accepts a factor-one-thousand tension interval
+  - vector/scalar length and free area-convention guards
+  - no smooth-profile observable enters the effective area
+status: passed
+stdout: stdout.txt

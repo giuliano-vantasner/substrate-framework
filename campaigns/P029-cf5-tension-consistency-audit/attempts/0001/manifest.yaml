@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF5]
+framework_base: 8e0fbbb
+question: >-
+  Does CF5 independently constrain a vortex core area or tension, or does its
+  effective-area definition only round-trip accepted inputs?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P029-cf5-tension-consistency-audit/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py
+oracle:
+  kind: exact_information_elimination_and_window_sensitivity
+  mutation_requirements:
+    - inversion and energy coefficients are load-bearing
+    - alternative positive tensions pass the algebraic round trip
+    - broad-window tension mutations expose comparison weakness
+status: passed

@@ -2,6 +2,9 @@
 
 Use one instance per claim. Review raw artifacts against frozen criteria; do not accept a campaign wholesale or inherit the proposing agent's preferred narrative.
 
+Begin every section with a plain-prose sentence. Inline code, a table, or a
+list does not satisfy the memory index's first-content disclosure contract.
+
 ```md
 ---
 description: Independent review of <claim-id>

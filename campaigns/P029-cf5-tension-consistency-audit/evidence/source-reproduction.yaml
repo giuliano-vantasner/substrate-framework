@@ -1,0 +1,15 @@
+source_unit: CF5
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py
+sha256: 0a449f8b95bc0a83fb0316992fb0d1776a6157e1445029623b4608246dc256f7
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py
+observed_at: '2026-08-01T16:14:00Z'
+exit_code: 1
+terminal_tally: none
+failure: >-
+  AttributeError at CHECK 1 energy quadrature because NumPy in the current
+  environment has no np.trapz attribute.
+scope_note: >-
+  Both BVP solves completed before the removed quadrature call failed. No CF5
+  check executed and the source emitted no terminal tally.

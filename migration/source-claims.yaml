@@ -7,10 +7,10 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
-  duplicate_evidence: 1
+  duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 192
+  pending_adjudication: 191
   qualified: 21
 phase_counts:
   phase-1: 6
@@ -2156,8 +2156,26 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: duplicate_evidence
+  accepted_claims:
+  - C-VTX-001
+  - C-VTX-002
+  - C-FLX-001
+  duplicates:
+  - C-VTX-001
+  - C-VTX-002
+  - C-FLX-001
+  duplicate_reason: >-
+    CF5 repeats the accepted vortex equations, flux, lengths, and demo tension,
+    then defines the effective area by inverting C-FLX-001's energy slope. The
+    resulting closure is an identity for every positive supplied tension, and
+    the ratio window supplies no independent profile geometry or constraint.
+  evidence:
+  - campaigns/P029-cf5-tension-consistency-audit/reviews/source_adjudication.md
+  note: >-
+    The pinned source currently fails before its first check at removed
+    np.trapz. P029 independently proves the information duplication and broad
+    comparison-window weakness without rerunning accepted BVP evidence.
 - source_unit: FG1
   phase: phase-11
   path: merged-framework/bridges/phase-11/bridge_FG1_charged_soliton_reconciliation.py

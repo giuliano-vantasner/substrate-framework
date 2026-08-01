@@ -1,0 +1,48 @@
+id: P029
+base_release: v0.25.0
+base_commit: 8e0fbbb
+source_baseline: substrate@6d1f4e0
+source_units: [CF5]
+question: >-
+  Determine whether CF5 supplies independent information beyond composing the
+  accepted conditional vortex tension with the accepted effective-area
+  inversion, or whether it merely reconstructs its supplied tension and adds
+  an uninformative broad-window comparison.
+invariants:
+  - C-VTX-002 is resolution-bounded evidence for one declared Abelian-Higgs model
+  - C-FLX-001 says A_eff=Phi^2/(2*sigma) reconstructs a supplied tension
+  - no accepted map identifies the smooth vortex with a uniform physical confinement tube
+allowed_imports:
+  - C-VTX-001
+  - C-VTX-002
+  - C-FLX-001
+  - exact algebra and dimensionless ratios
+  - CF5 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Classify CF5 as duplicate evidence because its effective area and
+      reconstructed slope contain no information beyond accepted inputs
+  - id: B
+    description: >-
+      Promote a narrowly scoped numerical composition claim if the
+      penetration-area ratio has independent predictive or consumer content
+  - id: C
+    description: >-
+      Promote physical equivalence of the smooth vortex and ideal uniform tube
+      and a confinement-scale consistency mechanism
+uniqueness_evidence: null
+selection_criteria:
+  - independent input-output information
+  - convention and geometry compatibility
+  - sensitivity of any numerical comparison window
+  - dependency and parameter economy
+  - reusable consumer reach beyond C-VTX-002 and C-FLX-001
+claims_proposed: []
+claims_reviewed:
+  - C-VTX-002
+  - C-FLX-001
+comparators_blinded_until: >-
+  formulas_conventions_and_sensitivity_frozen; inventory excerpt already
+  exposed 4.69 and the range 0.1_to_100, so neither may select the candidate
+status: accepted

@@ -1,0 +1,8 @@
+PASS [P029-INDEPENDENT] solving the ideal-tube equation gives one reconstructed area
+PASS [P029-INDEPENDENT] back-substitution is an identity for every positive tension
+PASS [P029-INDEPENDENT] independent elimination cancels the gauge coupling
+PASS [P029-INDEPENDENT] the source window maps to a factor-one-thousand tension interval
+PASS [P029-INDEPENDENT] the inverted area contains no profile-defined support criterion
+PASS [P029-INDEPENDENT] a free geometric area factor changes the alleged scale match
+ALL 6 CHECKS PASS [P029-INDEPENDENT]
+P029 INDEPENDENT INFORMATION REVIEW ALL 6 CHECKS PASS

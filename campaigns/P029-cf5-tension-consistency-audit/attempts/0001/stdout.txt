@@ -1,0 +1,3 @@
+PASS [P029-CF5] 20 exact information, coefficient, window, length-scale, and implication-boundary checks
+ALL 20 CHECKS PASS [P029-CF5]
+P029 CF5 INFORMATION AUDIT ALL 20 CHECKS PASS

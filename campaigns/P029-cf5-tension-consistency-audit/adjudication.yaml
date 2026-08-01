@@ -1,0 +1,47 @@
+campaign: P029
+title: CF5 effective-area information and sensitivity audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF5]
+base_release: v0.25.0
+adjudicated_at: '2026-08-01T16:14:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Exact elimination shows that the area and ratio are reversible transforms
+    of the supplied accepted tension, while the broad window and absent profile
+    geometry supply no independent discriminating information.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_ratio_has_no_independent_input_or_distinct_consumer_and_the_window_accepts_three_decades
+  - id: C
+    decision: rejected_because_no_profile_area_or_physical_cross_model_map_is_derived
+claims: []
+reviewed_existing:
+  - id: C-VTX-001
+    decision: unchanged_exact_inputs_replayed
+  - id: C-VTX-002
+    decision: unchanged_stronger_numeric_evidence_already_accepted
+  - id: C-FLX-001
+    decision: unchanged_effective_area_reconstruction_already_explicit
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_information_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  duplicate_review: memory/vantasner/decisions/CF5-duplicate-review.md
+source_disposition:
+  CF5: duplicate_evidence
+duplicates:
+  CF5:
+    - C-VTX-001
+    - C-VTX-002
+    - C-FLX-001
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P029-cf5-tension-consistency-audit/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P029-cf5-tension-consistency-audit/reviews/independent_information_review.py
+  - .venv/bin/python -m pytest -q tests/test_abelian_higgs_vortex.py tests/test_flux_tube.py
+debt: []
+status: accepted
