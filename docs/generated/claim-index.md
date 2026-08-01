@@ -192,6 +192,15 @@ For every real dimensionless splitting x, the normalized upper-state occupation 
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-TOP-001
+
+For integer winding under addition, p(w)=(-1)^w is a homomorphism from Z to the multiplicative signs {+1,-1}. Even winding has label +1 and odd winding has label -1. Adding any even winding, including zero, preserves the label; adding odd winding flips it. This is a mathematical winding character only. Without a separately accepted physical representation it determines no exchange statistics, spin, fermion or boson identity, baryon number, internal or electric charge, or existence of a composite.
+
+- Accepted in: `v0.17.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
 ## C-U1-001
 
 For an independently declared smooth complex scalar Psi on 1+1 Minkowski spacetime with signature (+,-), define the raised current j^mu=i*(Psi_conj*d^mu(Psi)-Psi*d^mu(Psi_conj)). Off shell it obeys the exact identity d_mu*j^mu=i*(Psi_conj*Box(Psi)-Psi*Box(Psi_conj)). If the conjugate equations of motion have Box(Psi)=F(|Psi|^2)*Psi with real F, the current is conserved on shell. A genuinely real field has zero current. For the separately declared stationary ansatz Psi=f(x)*exp(-i*omega*t) with real f and omega>0, the current is (j^0,j^1)=(2*omega*f^2,0); adding a real phase-breaking conjugate-field term lambda*Psi_conj to the equation gives divergence -2*lambda*f^2*sin(2*omega*t), which is generally nonzero.

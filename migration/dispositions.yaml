@@ -235,3 +235,19 @@ units:
       P018 supplies the exact forward/inverse coordinate APIs and demonstrates
       that EL1.6 confuses dimensionless with derived while EL1.7 tests only
       file-level token co-occurrence in a restricted phase subset.
+  EL2:
+    disposition: qualified
+    accepted_claims:
+      - C-TOP-001
+      - C-U1-001
+    qualification: >-
+      EL2's integer winding-sign character and conditional complex-field current
+      are accepted. It does not derive fermionic statistics, the claimed
+      composite's baryon number, a unit-normalized or electric charge, 3+1
+      stability, a Standard Model slot, or an electron identification.
+    evidence:
+      - campaigns/P019-winding-parity-labels/reviews/source_adjudication.md
+    note: >-
+      P019 separates the exact label character from physical statistics and
+      shows that EL2's negative-potential Derrick stationary point has negative
+      curvature, so the advertised stability conclusion fails its own oracle.

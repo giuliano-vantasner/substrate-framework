@@ -97,6 +97,7 @@ from .thermal import (
     two_level_occupation_variance,
     two_level_upper_occupation,
 )
+from .topological_labels import combined_winding_parity, winding_parity
 from .u1_charge import (
     breather_charge_energy_product,
     breather_charge_secant_product,
@@ -154,6 +155,7 @@ __all__ = [
     "co_scaled_inverse_permeability",
     "co_scaled_permittivity",
     "co_scaled_wave_speed",
+    "combined_winding_parity",
     "conditional_anw_mass",
     "conditional_topological_mass",
     "dimensionless_group_count",
@@ -206,6 +208,7 @@ __all__ = [
     "euler_lagrange_expression",
     "solve_euler_lagrange_acceleration",
     "virial_scaling_exponents",
+    "winding_parity",
 ]
 
 __version__ = "0.0.0"

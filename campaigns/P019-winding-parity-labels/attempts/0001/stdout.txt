@@ -1,0 +1,13 @@
+PASS [C-TOP-001] the audited EL2 source is the hash-pinned candidate unit
+PASS [C-TOP-001] the winding label is a homomorphism on a mutation-sensitive integer grid
+PASS [C-TOP-001] the two residue classes prove the homomorphism for all integers
+PASS [C-TOP-001] even and odd winding classes have distinct exact labels
+PASS [C-TOP-001] adding arbitrary even dressing preserves winding parity
+PASS [C-TOP-001] odd dressing is a load-bearing counterexample that flips parity
+PASS [C-TOP-001] the winding equation leaves statistics, baryon, and charge labels independent
+PASS [C-TOP-001] the same odd winding label admits distinct external label assignments
+PASS [C-TOP-001] the accepted conditional U1 charge is not fixed to one unit
+PASS [C-TOP-001] EL2's negative-potential Derrick stationary point is a maximum
+PASS [C-TOP-001] stationarity alone therefore cannot certify 3D stability
+ALL 11 CHECKS PASS [C-TOP-001]
+P019 EL2 EXACT AUDIT ALL 11 CHECKS PASS

@@ -1,0 +1,37 @@
+id: P019
+base_release: v0.16.0
+base_commit: 962422b
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL2
+question: >-
+  Extract EL2's exact integer-winding parity algebra while determining whether
+  it establishes fermionic statistics, baryon number, U1 charge, or a physical
+  composite.
+invariants:
+  - mathematical parity labels do not imply physical spin-statistics
+  - C-U1-001 and C-U1-002 retain their conditional non-particle scope
+  - baryon, winding, and internal U1 labels are independent absent a proved map
+  - pending source dependencies are evidence rather than accepted imports
+allowed_imports:
+  - integer additive-group arithmetic
+  - C-U1-001 and C-U1-002 only for their explicit conditional charge scope
+  - EL2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote exact winding-parity homomorphism with a physical ceiling
+  - id: B
+    description: Adjudicate EL2 without a new accepted label API
+  - id: C
+    description: Promote a forced charged baryonless fermion composite
+uniqueness_evidence: null
+selection_criteria:
+  - exact group law and domain closure
+  - dependency and assumption economy
+  - label-versus-physical-representation separation
+  - distinct reusable consumer reach
+  - mutation-sensitive verification
+claims_proposed:
+  - C-TOP-001
+comparators_blinded_until: symbolic_label_criteria_and_countermodels_frozen
+status: accepted

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 202
-  qualified: 11
+  pending_adjudication: 201
+  qualified: 12
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -8207,8 +8207,17 @@ units:
   dynamic_check_calls: 0
   assert_statements: 3
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-TOP-001
+  - C-U1-001
+  qualification: EL2's exact winding-sign character and conditional U1 current are accepted,
+    but fermionic statistics, composite baryon number, unit/electric charge, 3D stability,
+    Standard Model classification, and electron identity are not derived.
+  evidence:
+  - campaigns/P019-winding-parity-labels/reviews/source_adjudication.md
+  note: P019 proves the advertised Derrick stationary point is a maximum and keeps all physical
+    label maps outside the accepted winding character.
 - source_unit: EL3
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL3_me_is_not_a_dimensionful_primitive.py

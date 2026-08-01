@@ -1,0 +1,7 @@
+PASS [P019-INDEPENDENT] integer addition descends to addition modulo two
+PASS [P019-INDEPENDENT] the sign character turns residue addition into multiplication
+PASS [P019-INDEPENDENT] every even dressing is neutral
+PASS [P019-INDEPENDENT] every odd dressing flips the label
+PASS [P019-INDEPENDENT] external statistics and charge assignments are not fixed by the quotient
+ALL 5 CHECKS PASS [P019-INDEPENDENT]
+P019 INDEPENDENT REVIEW ALL 5 CHECKS PASS

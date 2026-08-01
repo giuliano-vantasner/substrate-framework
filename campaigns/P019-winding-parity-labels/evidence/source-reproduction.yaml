@@ -1,0 +1,13 @@
+source_unit: EL2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py
+sha256: db90b921e0b3d6966597a39817ad48219cd94fa27ff8aa2a1de4a64c3ccf6965
+command: >-
+  python3 <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py
+observed_at: '2026-08-01T14:00:00Z'
+exit_code: 0
+terminal_tally: ALL 11 CHECKS PASS
+scope_note: >-
+  Source execution includes a numerical shooting result but does not establish
+  that each assertion tests the headline composite, its statistics, or its
+  stability. P019 audits those implications separately.

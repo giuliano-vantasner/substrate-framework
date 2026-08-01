@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL2
+framework_base: 962422b
+question: >-
+  Which exact winding-parity statement survives EL2, and do its equations map
+  that label to fermionic statistics, baryon number, U1 charge, or stability?
+command: >-
+  PYTHONPATH=src .venv/bin/python proposals/P019-winding-parity-labels/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py
+oracle:
+  kind: exact_integer_quotient_and_physical_scope_audit
+  mutation_requirements:
+    - odd dressing flips the parity label
+    - external physical labels remain independent
+    - the Derrick stationary-point curvature is checked
+status: passed

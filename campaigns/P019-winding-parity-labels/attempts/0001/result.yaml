@@ -1,0 +1,14 @@
+attempt: 0001
+completed_at: '2026-08-01T14:03:06Z'
+exit_code: 0
+terminal_tally: 11
+verdict:
+  C-TOP-001: symbolic_verified
+evidence:
+  - exact integer-grid and residue-class homomorphism proofs
+  - even-dressing invariance and odd-dressing mutation
+  - independent statistics, baryon, and charge countermodels
+  - non-unit U1 charge sensitivity
+  - negative Derrick curvature at EL2's stationary point
+status: passed
+stdout: stdout.txt
