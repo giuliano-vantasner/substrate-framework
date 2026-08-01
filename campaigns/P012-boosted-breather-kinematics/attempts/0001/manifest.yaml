@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE1
+framework_base: e46beca
+question: >-
+  Are the boosted breather phase and energy-momentum vectors exactly
+  proportional by the accepted family-dependent secant scale, with consistent
+  invariant norms and a regular rest limit?
+command: PYTHONPATH=src .venv/bin/python proposals/P012-boosted-breather-kinematics/verify.py
+oracle:
+  kind: exact_sympy_lorentz_algebra
+  mutation_requirements:
+    - reject wrong phase frequency and spatial sign
+    - reject wrong energy normalization
+    - reject missing momentum boost factor
+status: passed

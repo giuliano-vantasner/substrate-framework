@@ -8,8 +8,8 @@ primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
   migrated: 3
-  pending_adjudication: 210
-  qualified: 5
+  pending_adjudication: 209
+  qualified: 6
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7904,8 +7904,19 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-001
+  - C-SG-002
+  - C-SG-006
+  - C-SG-008
+  qualification: HE1's exact rest energy, family-dependent secant scale, and Lorentz vector proportionality
+    are accepted, but its Planck/de Broglie language does not derive quantization, universality, or a
+    quantum ontology.
+  evidence:
+  - campaigns/P012-boosted-breather-kinematics/reviews/source_adjudication.md
+  note: P012 replaces component division by a regular four-vector relation and maps HE1's non-universality
+    checks to C-SG-006.
 - source_unit: HE2
   phase: phase-45
   path: merged-framework/bridges/phase-45/bridge_HE2_buckingham_breather_primitives.py

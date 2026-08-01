@@ -54,6 +54,8 @@ from .sine_gordon import (
     breather_action_lattice_energy,
     breather_action_lattice_frequency,
     breather_action_secant_ratio,
+    boosted_breather_energy_momentum,
+    boosted_breather_phase_components,
     breather_energy,
     breather_energy_from_action,
     breather_field,
@@ -66,6 +68,7 @@ from .sine_gordon import (
     breather_secant_action_scale,
     breather_threshold_deficit,
     hamiltonian_density,
+    lorentz_factor,
     sine_gordon_residual,
 )
 from .skyrme_relations import (
@@ -98,6 +101,8 @@ __all__ = [
     "breather_action_lattice_energy",
     "breather_action_lattice_frequency",
     "breather_action_secant_ratio",
+    "boosted_breather_energy_momentum",
+    "boosted_breather_phase_components",
     "breather_energy",
     "breather_energy_from_action",
     "breather_field",
@@ -121,6 +126,7 @@ __all__ = [
     "load_yaml",
     "line_energy",
     "local_wave_speed",
+    "lorentz_factor",
     "optical_box_static_1d",
     "optical_collective_acceleration",
     "optical_collective_lagrangian",

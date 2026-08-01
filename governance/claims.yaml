@@ -487,3 +487,39 @@ claims:
     accepted_in: v0.11.0
     challenges: []
     supersedes: []
+  - id: C-SG-008
+    statement: >-
+      For every C-SG-001 breather with 0<omega<1 and every real boost velocity
+      v with |v|<1 in units c=1, let gamma=1/sqrt(1-v^2). The boosted phase
+      components for phase Omega*t-k*x are (Omega,k)=(gamma*omega,
+      gamma*omega*v), while energy-momentum is (E,P)=(gamma*E0,
+      gamma*E0*v). They satisfy the division-free vector identity
+      (E,P)=H(omega)*(Omega,k), where H=E0/omega is C-SG-006's secant action
+      scale, and the invariant norms Omega^2-k^2=omega^2 and
+      E^2-P^2=E0^2. For v!=0 this implies E/Omega=P/k=H; the vector statement
+      remains well defined at v=0. This is a Lorentz-kinematic relation and
+      does not identify H as a universal quantum constant.
+    provenance: campaigns/P012-boosted-breather-kinematics/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-001
+      - C-SG-002
+      - C-SG-006
+    evidence:
+      - campaigns/P012-boosted-breather-kinematics/verify.py
+      - campaigns/P012-boosted-breather-kinematics/attempts/0001/result.yaml
+      - campaigns/P012-boosted-breather-kinematics/reviews/independent_rapidity_review.py
+      - campaigns/P012-boosted-breather-kinematics/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SG-008-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The normalized 1+1 Lorentz boost uses c=1, |v|<1, and phase convention Omega*t-k*x.
+      - The rest energy and phase frequency are the accepted C-SG-002 and C-SG-001 objects.
+      - The proportionality scale retains C-SG-006's family-dependent secant semantics.
+    comparators: []
+    accepted_in: v0.12.0
+    challenges: []
+    supersedes: []

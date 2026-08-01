@@ -1,0 +1,19 @@
+PASS [C-SG-008] the Lorentz factor satisfies the exact boost normalization
+PASS [C-SG-008] the boosted phase components follow from omega*gamma*(t-v*x)
+PASS [C-SG-008] the boosted energy-momentum components follow the same Lorentz boost
+PASS [C-SG-008] the full vectors are proportional by the accepted secant action scale
+PASS [C-SG-008] the phase covector retains its rest-frequency invariant norm
+PASS [C-SG-008] energy-momentum retains the accepted rest-energy invariant norm
+PASS [C-SG-008] the component-ratio form is a nonzero-velocity corollary
+PASS [C-SG-008] phase velocity and the boost-family group derivative have the expected values
+PASS [C-SG-008] vector proportionality remains well defined in the rest limit
+PASS [C-SG-008] a time-dilated frequency breaks the energy component proportionality
+PASS [C-SG-008] a momentum missing the Lorentz factor breaks the spatial proportionality
+PASS [C-SG-008] phase frequency, wave sign, energy normalization, and momentum boost: baseline
+PASS [C-SG-008] phase frequency, wave sign, energy normalization, and momentum boost: mutations supplied
+PASS [C-SG-008] phase frequency, wave sign, energy normalization, and momentum boost: mutation 1 rejected
+PASS [C-SG-008] phase frequency, wave sign, energy normalization, and momentum boost: mutation 2 rejected
+PASS [C-SG-008] phase frequency, wave sign, energy normalization, and momentum boost: mutation 3 rejected
+PASS [C-SG-008] phase frequency, wave sign, energy normalization, and momentum boost: mutation 4 rejected
+ALL 17 CHECKS PASS [C-SG-008]
+P012 ALL 17 CHECKS PASS

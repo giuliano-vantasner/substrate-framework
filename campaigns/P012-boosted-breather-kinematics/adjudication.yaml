@@ -1,0 +1,41 @@
+campaign: P012
+title: Exact boosted breather vector kinematics
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE1
+base_release: v0.11.0
+adjudicated_at: '2026-08-01T12:46:13Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Vector proportionality is Lorentz covariant, has a regular rest limit, and
+    closes directly from accepted rest energy, phase frequency, and secant scale.
+competing_candidates:
+  - id: B
+    decision: retained_as_a_nonzero_velocity_corollary_but_rejected_as_primary
+  - id: C
+    decision: rejected_because_C-SG-006_proves_the_scale_is_family_dependent
+claims:
+  - id: C-SG-008
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_rapidity_review.py
+  source_adjudication: reviews/source_adjudication.md
+source_disposition:
+  HE1: qualified
+qualification:
+  HE1: >-
+    Its exact rest energy, family-dependent secant scale, and Lorentz vector
+    proportionality are accepted, while Planck/de Broglie terminology does not
+    derive quantization, universality, or a quantum ontology.
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P012-boosted-breather-kinematics/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P012-boosted-breather-kinematics/reviews/independent_rapidity_review.py
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+debt: []
+status: accepted

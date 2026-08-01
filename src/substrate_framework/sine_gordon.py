@@ -24,6 +24,14 @@ def _frequency(omega: Any) -> sp.Expr:
     return value
 
 
+def _velocity(velocity: Any) -> sp.Expr:
+    value = sp.sympify(velocity)
+    if value.is_number:
+        if value.is_real is not True or not abs(float(value)) < 1.0:
+            raise ValueError("velocity must be real and satisfy abs(velocity) < 1")
+    return value
+
+
 def _action(action: Any) -> sp.Expr:
     value = sp.sympify(action)
     if value.is_number:
@@ -130,6 +138,40 @@ def breather_secant_action_scale(omega: Any) -> sp.Expr:
 
     frequency = _frequency(omega)
     return sp.simplify(breather_energy(frequency) / frequency)
+
+
+def lorentz_factor(velocity: Any) -> sp.Expr:
+    """Return ``gamma = 1/sqrt(1-v**2)`` for ``|v|<1`` in units ``c=1``."""
+
+    speed = _velocity(velocity)
+    return 1 / sp.sqrt(1 - speed**2)
+
+
+def boosted_breather_phase_components(
+    omega: Any, velocity: Any
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return ``(Omega, k)`` for phase ``Omega*t-k*x`` after a boost."""
+
+    frequency = _frequency(omega)
+    speed = _velocity(velocity)
+    gamma = lorentz_factor(speed)
+    return sp.simplify(gamma * frequency), sp.simplify(
+        gamma * frequency * speed
+    )
+
+
+def boosted_breather_energy_momentum(
+    omega: Any, velocity: Any
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return the boosted breather ``(E, P)`` in normalized units ``c=1``."""
+
+    frequency = _frequency(omega)
+    speed = _velocity(velocity)
+    gamma = lorentz_factor(speed)
+    rest_energy = breather_energy(frequency)
+    return sp.simplify(gamma * rest_energy), sp.simplify(
+        gamma * rest_energy * speed
+    )
 
 
 def breather_action_secant_ratio(omega: Any) -> sp.Expr:

@@ -120,6 +120,15 @@ Conditional on a fixed positive action increment h and the imposed lattice J_n=n
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-003
 
+## C-SG-008
+
+For every C-SG-001 breather with 0<omega<1 and every real boost velocity v with |v|<1 in units c=1, let gamma=1/sqrt(1-v^2). The boosted phase components for phase Omega*t-k*x are (Omega,k)=(gamma*omega, gamma*omega*v), while energy-momentum is (E,P)=(gamma*E0, gamma*E0*v). They satisfy the division-free vector identity (E,P)=H(omega)*(Omega,k), where H=E0/omega is C-SG-006's secant action scale, and the invariant norms Omega^2-k^2=omega^2 and E^2-P^2=E0^2. For v!=0 this implies E/Omega=P/k=H; the vector statement remains well defined at v=0. This is a Lorentz-kinematic relation and does not identify H as a universal quantum constant.
+
+- Accepted in: `v0.12.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001, C-SG-002, C-SG-006
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

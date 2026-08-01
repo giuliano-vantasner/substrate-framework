@@ -9,6 +9,8 @@ from substrate_framework.sine_gordon import (
     breather_action_lattice_energy,
     breather_action_lattice_frequency,
     breather_action_secant_ratio,
+    boosted_breather_energy_momentum,
+    boosted_breather_phase_components,
     breather_energy,
     breather_energy_from_action,
     breather_field,
@@ -66,6 +68,18 @@ def test_conditional_action_lattice_and_adjacent_gap() -> None:
     ) == 0
 
 
+def test_boosted_breather_vectors_share_the_secant_scale() -> None:
+    omega = sp.Rational(4, 5)
+    velocity = sp.Rational(3, 5)
+    phase = boosted_breather_phase_components(omega, velocity)
+    momentum = boosted_breather_energy_momentum(omega, velocity)
+    assert phase == (1, sp.Rational(3, 5))
+    assert momentum == (12, sp.Rational(36, 5))
+    scale = breather_secant_action_scale(omega)
+    assert scale == 12
+    assert momentum == tuple(sp.simplify(scale * item) for item in phase)
+
+
 @pytest.mark.parametrize("omega", [0, 1, -sp.Rational(1, 2), 2, sp.I])
 def test_numeric_frequency_domain_is_enforced(omega: sp.Expr) -> None:
     with pytest.raises(ValueError, match="0 < omega < 1"):
@@ -93,3 +107,9 @@ def test_numeric_action_lattice_domain_is_enforced(
 ) -> None:
     with pytest.raises(ValueError, match=message):
         breather_action_lattice_adjacent_gap(level, action_quantum)
+
+
+@pytest.mark.parametrize("velocity", [-1, 1, 2, sp.I])
+def test_numeric_velocity_domain_is_enforced(velocity: sp.Expr) -> None:
+    with pytest.raises(ValueError, match=r"abs\(velocity\) < 1"):
+        boosted_breather_phase_components(sp.Rational(1, 2), velocity)

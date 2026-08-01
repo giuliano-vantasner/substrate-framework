@@ -1,0 +1,7 @@
+PASS [C-SG-008-INDEPENDENT] rapidity gives componentwise proportionality without velocity ratios
+PASS [C-SG-008-INDEPENDENT] the hyperbolic identity fixes the phase invariant norm
+PASS [C-SG-008-INDEPENDENT] the same hyperbolic identity fixes the energy-momentum norm
+PASS [C-SG-008-INDEPENDENT] zero rapidity has a regular rest vector even though spatial ratios are undefined
+PASS [C-SG-008-INDEPENDENT] reversing only the phase spatial sign breaks vector proportionality
+ALL 5 CHECKS PASS [C-SG-008-INDEPENDENT]
+P012 INDEPENDENT REVIEW ALL 5 CHECKS PASS

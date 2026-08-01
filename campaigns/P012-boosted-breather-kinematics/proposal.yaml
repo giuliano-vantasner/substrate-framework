@@ -1,0 +1,40 @@
+id: P012
+base_release: v0.11.0
+base_commit: e46beca
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE1
+question: >-
+  Derive the exact Lorentz-covariant relation between the boosted breather's
+  phase covector and energy-momentum vector, including invariant norms and
+  velocity guards, and adjudicate HE1 without treating the family-dependent
+  proportionality scale as a universal Planck constant.
+invariants:
+  - C-SG-001, C-SG-002, and C-SG-006 retain normalized rest-frame conventions
+  - boosts use c=1 and real velocity with absolute value below one
+  - the boosted phase convention is omega*gamma*(t-v*x)
+  - component ratios are secondary to vector proportionality and may be undefined at rest
+allowed_imports:
+  - C-SG-001 for the breather's rest phase frequency
+  - C-SG-002 for the exact rest energy
+  - C-SG-006 for the family-dependent secant action scale
+  - exact 1+1 Lorentz kinematics
+  - predecessor bridge HE1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Prove proportionality and invariant norms for the full boosted phase and energy-momentum vectors
+  - id: B
+    description: Retain only E/Omega=P/k for nonzero velocity as two component ratios
+  - id: C
+    description: Interpret the proportionality scale as a universal Planck constant across the breather family
+uniqueness_evidence: null
+selection_criteria:
+  - Lorentz-covariant statement with a well-defined rest limit
+  - accepted dependency closure
+  - exact invariant norms and sign conventions
+  - semantic separation from universal quantum constants
+  - mutation and wrong-boost sensitivity
+claims_proposed:
+  - C-SG-008
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted

@@ -99,6 +99,22 @@ units:
     note: >-
       P008 maps the narrow exact content while excluding every visible
       comparator and documenting the missing continuum and formula premises.
+  HE1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-001
+      - C-SG-002
+      - C-SG-006
+      - C-SG-008
+    qualification: >-
+      HE1's exact rest energy, family-dependent secant scale, and Lorentz
+      vector proportionality are accepted, but its Planck/de Broglie language
+      does not derive quantization, universality, or a quantum ontology.
+    evidence:
+      - campaigns/P012-boosted-breather-kinematics/reviews/source_adjudication.md
+    note: >-
+      P012 replaces component division by a regular four-vector relation and
+      maps HE1's non-universality checks to C-SG-006.
   HE4:
     disposition: qualified
     accepted_claims:
