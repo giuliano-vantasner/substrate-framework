@@ -1,0 +1,32 @@
+PASS [C-DIM-002] the declared speed-action-length matrix has determinant -1 and full rank
+PASS [C-DIM-002] the full-rank primitive set has no dimensionless monomial kernel
+PASS [C-DIM-002] the mass target has its exact unique monomial exponents
+PASS [C-DIM-002] the energy target has its exact unique monomial exponents
+PASS [C-DIM-002] the time target has its exact unique monomial exponents
+PASS [C-DIM-002] the density target has its exact unique monomial exponents
+PASS [C-DIM-002] the stiffness target has its exact unique monomial exponents
+PASS [C-DIM-002] speed and length alone cannot span a mass dimension
+PASS [C-DIM-002] dimensional uniqueness leaves every dimensionless coefficient free
+PASS [C-DIM-002] speed, action, and length dimensions: baseline
+PASS [C-DIM-002] speed, action, and length dimensions: mutations supplied
+PASS [C-DIM-002] speed, action, and length dimensions: mutation 1 rejected
+PASS [C-DIM-002] speed, action, and length dimensions: mutation 2 rejected
+PASS [C-DIM-002] speed, action, and length dimensions: mutation 3 rejected
+PASS [C-DIM-002] speed, action, and length dimensions: mutation 4 rejected
+PASS [C-MED-002] the declared Debye scale retains its free dimensionless speed ratio
+PASS [C-MED-002] an independent thermal scale is not eliminated without the Debye premise
+PASS [C-MED-002] conditional substitution gives the exact reduced response formulas
+PASS [C-MED-002] the declared mass-density ratio supplies the load-bearing one-half
+PASS [C-MED-002] AS2's implemented rho expression without one-half is explicitly rejected
+PASS [C-MED-002] the co-scaled responses preserve the reference wave speed
+PASS [C-MED-002] density and stiffness dimensions agree with the primitive-basis theorem
+PASS [C-MED-002] dimensional analysis cannot select the mass-density conversion ratio
+PASS [C-MED-002] Debye, number-density, and mass-density premises: baseline
+PASS [C-MED-002] Debye, number-density, and mass-density premises: mutations supplied
+PASS [C-MED-002] Debye, number-density, and mass-density premises: mutation 1 rejected
+PASS [C-MED-002] Debye, number-density, and mass-density premises: mutation 2 rejected
+PASS [C-MED-002] Debye, number-density, and mass-density premises: mutation 3 rejected
+PASS [C-MED-002] Debye, number-density, and mass-density premises: mutation 4 rejected
+ALL 15 CHECKS PASS [C-DIM-002]
+ALL 14 CHECKS PASS [C-MED-002]
+P016 ALL 29 CHECKS PASS

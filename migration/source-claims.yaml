@@ -9,8 +9,8 @@ primary_unit_count: 218
 disposition_counts:
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 205
-  qualified: 9
+  pending_adjudication: 204
+  qualified: 10
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3648,8 +3648,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DIM-002
+  - C-MED-001
+  - C-MED-002
+  qualification: AS2's set-local dimension basis and corrected conditional substitutions are accepted,
+    but the Debye selection, free ratios, density dictionary, unique one-length ontology, and physical
+    realization are not derived.
+  evidence:
+  - campaigns/P016-primitive-unit-reduction/reviews/source_adjudication.md
+  note: P016 retains all dimensionless and physical premises and corrects AS2's implemented mass-density
+    expression by restoring the declared factor one-half.
 - source_unit: AS3
   phase: phase-21
   path: merged-framework/bridges/phase-21/bridge_AS3_sakharov_kappa_reduce.py

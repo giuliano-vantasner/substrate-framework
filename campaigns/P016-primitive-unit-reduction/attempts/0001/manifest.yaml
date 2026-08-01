@@ -1,0 +1,17 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - AS2
+framework_base: 30eaca9
+question: >-
+  What exact monomial unit basis follows from speed, action, and length, and
+  which AS2 medium reductions survive only as explicit conditional compositions?
+command: PYTHONPATH=src .venv/bin/python proposals/P016-primitive-unit-reduction/verify.py
+oracle:
+  kind: exact_sympy_linear_algebra_and_substitution
+  mutation_requirements:
+    - reject wrong speed, action, and length dimensions
+    - reject wrong Debye and number-density length powers
+    - reject omission or alteration of the mass-density one-half
+status: passed

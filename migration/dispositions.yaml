@@ -189,3 +189,18 @@ units:
     note: >-
       P015 reproduces the exact token sets and hashes, preserves them as impact
       evidence, and rejects HE5's inference from lexical absence to semantic absence.
+  AS2:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-002
+      - C-MED-001
+      - C-MED-002
+    qualification: >-
+      AS2's set-local dimension basis and corrected conditional substitutions
+      are accepted, but the Debye selection, free ratios, density dictionary,
+      unique one-length ontology, and physical realization are not derived.
+    evidence:
+      - campaigns/P016-primitive-unit-reduction/reviews/source_adjudication.md
+    note: >-
+      P016 retains all dimensionless and physical premises and corrects AS2's
+      implemented mass-density expression by restoring the declared factor one-half.

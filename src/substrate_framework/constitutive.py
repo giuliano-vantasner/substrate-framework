@@ -64,3 +64,54 @@ def co_scaled_wave_speed(
             co_scaled_inverse_permeability(density, thermal_scale),
         )
     )
+
+
+def lattice_debye_energy(
+    action_scale: Any,
+    reference_speed: Any,
+    length_scale: Any,
+    speed_ratio: Any = 1,
+) -> sp.Expr:
+    """Return the declared lattice scale ``Theta=kappa*S*c/a``.
+
+    This is a conditional Debye/zero-point premise. Dimensional analysis makes
+    the monomial available but does not select it dynamically or determine the
+    dimensionless speed ratio ``kappa``.
+    """
+
+    action = _positive(action_scale, "action_scale")
+    speed = _positive(reference_speed, "reference_speed")
+    length = _positive(length_scale, "length_scale")
+    ratio = _positive(speed_ratio, "speed_ratio")
+    return sp.simplify(ratio * action * speed / length)
+
+
+def lattice_reduced_responses(
+    action_scale: Any,
+    reference_speed: Any,
+    length_scale: Any,
+    speed_ratio: Any = 1,
+    mass_density_ratio: Any = sp.Rational(1, 2),
+) -> tuple[sp.Expr, sp.Expr, sp.Expr, sp.Expr]:
+    """Compose declared lattice and Debye premises with co-scaled responses.
+
+    Returns ``(Theta, epsilon, mu_inverse, mass_density)`` conditional on
+    ``n=a**-3``, ``Theta=kappa*S*c/a``, the co-scaled response laws, and
+    ``mass_density=mass_density_ratio*epsilon``.
+    """
+
+    action = _positive(action_scale, "action_scale")
+    speed = _positive(reference_speed, "reference_speed")
+    length = _positive(length_scale, "length_scale")
+    ratio = _positive(speed_ratio, "speed_ratio")
+    density_ratio = _positive(mass_density_ratio, "mass_density_ratio")
+    number_density = length**-3
+    thermal_scale = lattice_debye_energy(action, speed, length, ratio)
+    epsilon = co_scaled_permittivity(number_density, thermal_scale, speed)
+    inverse_mu = co_scaled_inverse_permeability(number_density, thermal_scale)
+    return (
+        thermal_scale,
+        sp.simplify(epsilon),
+        sp.simplify(inverse_mu),
+        sp.simplify(density_ratio * epsilon),
+    )

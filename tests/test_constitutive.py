@@ -7,6 +7,8 @@ from substrate_framework.constitutive import (
     co_scaled_inverse_permeability,
     co_scaled_permittivity,
     co_scaled_wave_speed,
+    lattice_debye_energy,
+    lattice_reduced_responses,
     local_wave_speed,
 )
 
@@ -21,6 +23,26 @@ def test_co_scaled_responses_cancel_from_wave_speed() -> None:
 
 def test_local_wave_speed_uses_inverse_permeability() -> None:
     assert local_wave_speed(sp.Rational(2, 9), 2) == 3
+
+
+def test_conditional_lattice_reduction_retains_all_coefficients() -> None:
+    action, speed, length, ratio = sp.symbols("S c a kappa", positive=True)
+    thermal, epsilon, inverse_mu, mass_density = lattice_reduced_responses(
+        action, speed, length, ratio
+    )
+    assert thermal == ratio * action * speed / length
+    assert epsilon == ratio * action / (length**4 * speed)
+    assert inverse_mu == ratio * action * speed / length**4
+    assert mass_density == ratio * action / (2 * length**4 * speed)
+    assert sp.simplify(epsilon / inverse_mu - 1 / speed**2) == 0
+
+
+def test_declared_debye_energy_keeps_speed_ratio_free() -> None:
+    action, speed, length = sp.symbols("S c a", positive=True)
+    assert (
+        lattice_debye_energy(action, speed, length, 3)
+        == 3 * action * speed / length
+    )
 
 
 @pytest.mark.parametrize(

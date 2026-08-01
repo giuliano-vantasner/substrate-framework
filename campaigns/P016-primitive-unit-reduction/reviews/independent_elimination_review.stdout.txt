@@ -1,0 +1,9 @@
+PASS [P016-INDEPENDENT] direct exponent elimination gives the unique mass monomial
+PASS [P016-INDEPENDENT] direct exponent elimination gives the unique energy monomial
+PASS [P016-INDEPENDENT] direct exponent elimination gives density and stiffness monomials
+PASS [P016-INDEPENDENT] direct premise substitution reconstructs both co-scaled responses
+PASS [P016-INDEPENDENT] direct substitution retains the mass-density one-half
+PASS [P016-INDEPENDENT] the wave-speed cancellation is independent of the free speed ratio
+PASS [P016-INDEPENDENT] changing the conversion ratio leaves dimensions but changes mass density
+ALL 7 CHECKS PASS [P016-INDEPENDENT]
+P016 INDEPENDENT REVIEW ALL 7 CHECKS PASS

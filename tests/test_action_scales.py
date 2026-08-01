@@ -11,6 +11,7 @@ from substrate_framework.action_scales import (
 from substrate_framework.dimensional_analysis import (
     dimensionless_group_count,
     dimensionless_monomial_basis,
+    monomial_exponents,
 )
 
 
@@ -30,6 +31,29 @@ def test_dimensionless_group_bases_are_exact() -> None:
     assert dimensionless_group_count(three_scale) == 1
     assert len(basis) == 1
     assert basis[0] == sp.Matrix([-1, 1, 1])
+
+
+def test_speed_action_length_basis_has_unique_target_exponents() -> None:
+    primitives = sp.Matrix(
+        [
+            [0, 1, 0],
+            [1, 2, 1],
+            [-1, -1, 0],
+        ]
+    )
+    assert monomial_exponents(primitives, sp.Matrix([1, 0, 0])) == sp.Matrix(
+        [-1, 1, -1]
+    )
+    assert monomial_exponents(primitives, sp.Matrix([1, 2, -2])) == sp.Matrix(
+        [1, 1, -1]
+    )
+
+
+def test_monomial_exponent_solver_rejects_nonunique_or_unspanned_targets() -> None:
+    with pytest.raises(ValueError, match="not unique"):
+        monomial_exponents(sp.Matrix([[1, 1], [0, 0]]), sp.Matrix([1, 0]))
+    with pytest.raises(ValueError, match="outside"):
+        monomial_exponents(sp.Matrix([[1], [0]]), sp.Matrix([0, 1]))
 
 
 @pytest.mark.parametrize(

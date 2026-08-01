@@ -30,6 +30,15 @@ Over base dimensions energy E and time T, primitives consisting of an energy and
 - Compatibility: `native`
 - Dependencies: none
 
+## C-DIM-002
+
+Over base-dimension rows (M,L,T), the declared primitive columns for a speed c0=(0,1,-1), action S=(1,2,-1), and length a=(0,1,0) form the matrix [[0,1,0],[1,2,1],[-1,-1,0]], which has determinant -1, rank three, and zero kernel. Every target dimension therefore has unique monomial exponents relative to this set. In particular mass, energy, time, density, and stiffness are represented by S/(c0*a), S*c0/a, a/c0, S/(c0*a^4), and S*c0/a^4. Speed and length alone cannot span mass. These statements are local to the declared primitive set and determine neither dimensionless coefficients nor which primitives or values a physical model must select.
+
+- Accepted in: `v0.15.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-DIM-001
+
 ## C-MED-001
 
 For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.
@@ -38,6 +47,15 @@ For positive density rho, thermal scale Theta, and reference speed c, the declar
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none
+
+## C-MED-002
+
+Conditional on positive action scale S, speed c, length a, and dimensionless ratio kappa, declare number density n=a^-3 and a Debye-like scale Theta=kappa*S*c/a. Composing these premises with C-MED-001's co-scaled laws gives epsilon=kappa*S/(a^4*c), mu_inverse=kappa*S*c/a^4, epsilon/mu_inverse=1/c^2, and local wave speed c. Under the additional declared dictionary rho_medium=epsilon/2, the mass density is rho_medium=kappa*S/(2*a^4*c). The Debye relation, kappa, the number-density law, and the one-half dictionary are premises; dimensions and response cancellation do not select them or establish a physical medium realization.
+
+- Accepted in: `v0.15.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-DIM-002, C-MED-001
 
 ## C-OG-001
 

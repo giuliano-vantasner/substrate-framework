@@ -46,11 +46,14 @@ from .constitutive import (
     co_scaled_inverse_permeability,
     co_scaled_permittivity,
     co_scaled_wave_speed,
+    lattice_debye_energy,
+    lattice_reduced_responses,
     local_wave_speed,
 )
 from .dimensional_analysis import (
     dimensionless_group_count,
     dimensionless_monomial_basis,
+    monomial_exponents,
 )
 from .radial_energy import (
     capillary_critical_radius,
@@ -157,9 +160,12 @@ __all__ = [
     "index_from_potential",
     "load_yaml",
     "line_energy",
+    "lattice_debye_energy",
+    "lattice_reduced_responses",
     "local_wave_speed",
     "lorentz_factor",
     "minkowski_dalembertian",
+    "monomial_exponents",
     "optical_box_static_1d",
     "optical_collective_acceleration",
     "optical_collective_lagrangian",

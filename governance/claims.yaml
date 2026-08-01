@@ -657,3 +657,73 @@ claims:
     accepted_in: v0.14.0
     challenges: []
     supersedes: []
+  - id: C-DIM-002
+    statement: >-
+      Over base-dimension rows (M,L,T), the declared primitive columns for a
+      speed c0=(0,1,-1), action S=(1,2,-1), and length a=(0,1,0) form the
+      matrix [[0,1,0],[1,2,1],[-1,-1,0]], which has determinant -1, rank three,
+      and zero kernel. Every target dimension therefore has unique monomial
+      exponents relative to this set. In particular mass, energy, time, density,
+      and stiffness are represented by S/(c0*a), S*c0/a, a/c0,
+      S/(c0*a^4), and S*c0/a^4. Speed and length alone cannot span mass. These
+      statements are local to the declared primitive set and determine neither
+      dimensionless coefficients nor which primitives or values a physical
+      model must select.
+    provenance: campaigns/P016-primitive-unit-reduction/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-DIM-001
+    evidence:
+      - campaigns/P016-primitive-unit-reduction/verify.py
+      - campaigns/P016-primitive-unit-reduction/attempts/0001/result.yaml
+      - campaigns/P016-primitive-unit-reduction/reviews/independent_elimination_review.py
+      - campaigns/P016-primitive-unit-reduction/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-DIM-002-review.md
+      - tests/test_action_scales.py
+    assumptions:
+      - Base-dimension rows are ordered as mass, length, and time, and primitive columns as speed, action, and length.
+      - Monomial exponent uniqueness is asserted only relative to the declared primitive set.
+      - Dimensionless multiplicative coefficients and the physical selection or values of primitives remain unconstrained.
+    comparators: []
+    accepted_in: v0.15.0
+    challenges: []
+    supersedes: []
+  - id: C-MED-002
+    statement: >-
+      Conditional on positive action scale S, speed c, length a, and
+      dimensionless ratio kappa, declare number density n=a^-3 and a Debye-like
+      scale Theta=kappa*S*c/a. Composing these premises with C-MED-001's
+      co-scaled laws gives epsilon=kappa*S/(a^4*c),
+      mu_inverse=kappa*S*c/a^4, epsilon/mu_inverse=1/c^2, and local wave speed
+      c. Under the additional declared dictionary rho_medium=epsilon/2, the
+      mass density is rho_medium=kappa*S/(2*a^4*c). The Debye relation,
+      kappa, the number-density law, and the one-half dictionary are premises;
+      dimensions and response cancellation do not select them or establish a
+      physical medium realization.
+    provenance: campaigns/P016-primitive-unit-reduction/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-DIM-002
+      - C-MED-001
+    evidence:
+      - campaigns/P016-primitive-unit-reduction/verify.py
+      - campaigns/P016-primitive-unit-reduction/attempts/0001/result.yaml
+      - campaigns/P016-primitive-unit-reduction/reviews/independent_elimination_review.py
+      - campaigns/P016-primitive-unit-reduction/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-MED-002-review.md
+      - tests/test_constitutive.py
+    assumptions:
+      - The Debye-like scale Theta=kappa*S*c/a and number density n=a^-3 are declared model premises.
+      - The co-scaled response laws retain C-MED-001's conditional status.
+      - The mass-density dictionary rho_medium=epsilon/2 is a separate declared conversion and its coefficient is load-bearing.
+      - No absolute scale, observed action value, sound-speed ratio, temperature, or continuum realization is derived.
+    comparators: []
+    accepted_in: v0.15.0
+    challenges: []
+    supersedes: []
