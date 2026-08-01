@@ -1,0 +1,24 @@
+attempt: 0004
+campaign: P051
+candidate: A_with_B_reference
+verdict: passed
+process_exit_code: 0
+terminal_tally: ALL 36 CHECKS PASS [P051-NC4]
+selected_result: >-
+  The source-defined w=0.6 calibrated IBVP has a converged negative finite-
+  interval endpoint-coordinate difference and opposite diagnostic boundary
+  correlations under both corrected leapfrog and DOP853 routes.
+source_claim_rejection: >-
+  The four-frequency sign-consistency headline is not an amplitude-only
+  robustness result. Holding phase 5.50 fixed gives negative dQ at w=0.6 but
+  positive dQ at w=0.8, and shifting phase by pi exactly swaps the two
+  eps-labelled drives. The source tuned a distinct phase to maximize each
+  frequency's discrimination.
+epistemic_ceiling: >-
+  The surviving result is finite-grid finite-time simulation evidence for one
+  explicitly calibrated Neumann IBVP. Its q_bulk is an endpoint coordinate,
+  not an integer topological charge absent vacuum endpoints, and it supplies
+  no physical chirality map or parity-violating dynamics.
+next_attempt: >-
+  Independently rederive the exact and numerical conclusions without calling
+  the new evolution APIs, then complete source adjudication and consumer replay.

@@ -1,0 +1,18 @@
+attempt: 0001
+campaign: P051
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_file: merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+source_sha256: 9efa788da093213f354cbd9e26b7bd0be81129d6f966128b5c0fd10fe0081570
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T01:37:00Z'
+elapsed_seconds: 2.19
+expected: >-
+  Preserve the literal hash-pinned source behavior before any compatibility
+  repair; success requires process status zero and a terminal tally.

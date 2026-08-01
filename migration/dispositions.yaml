@@ -818,3 +818,35 @@ units:
       sine and cosine phase conventions, gives implication counterexamples,
       and proves the accepted rest breather has zero complete-period
       correlation at every fixed boundary.
+  NC4:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-001
+      - C-SG-005
+      - C-SG-011
+      - C-SG-013
+    qualification: >-
+      NC4's compatibility-repaired source and corrected independent solvers
+      reproduce a tuned finite-time w=0.6 Neumann-IBVP endpoint response and
+      opposite diagnostic sign correlations. Its four-frequency result is not
+      an amplitude-only robustness sweep: phase, force amplitude, width,
+      duration, and frequency all change, with each phase calibrated to
+      maximize discrimination. A common phase reverses the dQ sign at w=0.8,
+      and a pi phase shift exactly swaps the epsilon labels. q_bulk is a finite-
+      interval endpoint coordinate without vacuum-endpoint evidence, the dQ and
+      W_Q headlines use different drive strengths, and the zero-drive guard
+      repeats identical inputs. No integer topological transfer, phase-to-
+      chirality map, parity-breaking boundary dynamics, V-A interaction, weak
+      force, particle identity, or substrate realization is established.
+    evidence:
+      - campaigns/P051-nc4-pde-robustness/reviews/source_adjudication.md
+      - campaigns/P051-nc4-pde-robustness/evidence/source-reproduction.yaml
+      - campaigns/P051-nc4-pde-robustness/evidence/numerical-audit.yaml
+      - memory/vantasner/decisions/C-SG-014-review.md
+    note: >-
+      P051 preserves the literal NumPy-2 np.trapz failure, reproduces the source
+      through a compatibility-only alias, then replaces its mismatched grid and
+      five-cell boundary overwrite with reusable version-independent leapfrog
+      and DOP853 APIs. Exact-breather, mesh, timestep, domain, tolerance,
+      energy-flux, phase-mutation, and independent Fourier/direct-solve_ivp
+      checks support only the declared tuned subcase and existing claims.

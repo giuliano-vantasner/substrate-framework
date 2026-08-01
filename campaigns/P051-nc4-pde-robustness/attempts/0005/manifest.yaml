@@ -1,0 +1,16 @@
+attempt: 0005
+campaign: P051
+candidate: B_independent_spectral_review
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P051-nc4-pde-robustness/reviews/independent_pde_review.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T02:10:00Z'
+elapsed_seconds: 0.99
+expected: >-
+  Independently evolve the whole-line breather with a periodic Fourier method
+  and audit the source-defined driven response with a direct solve_ivp route.

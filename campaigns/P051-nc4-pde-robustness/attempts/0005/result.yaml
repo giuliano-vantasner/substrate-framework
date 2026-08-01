@@ -1,0 +1,19 @@
+attempt: 0005
+campaign: P051
+candidate: B_independent_spectral_review
+verdict: failed
+process_exit_code: 1
+terminal_tally: null
+failure_class: numerical_domain_oracle
+failure_mechanism: >-
+  On the periodic box [-20,20), the independently evolved whole-line breather
+  had field and velocity RMS errors about 1.22e-7 at t=2, while the check
+  demanded 2e-9. The error is consistent with forcing the exponentially small
+  but nonzero whole-line tails to be periodic at the finite boundary.
+scientific_inference: >-
+  The failure is a domain-representation limit, not evidence against the exact
+  breather or the centered solver. Tightening or relaxing solver tolerance
+  cannot repair a periodic-boundary mismatch.
+next_attempt: >-
+  Enlarge the independent periodic box to [-30,30) at the same spatial spacing
+  and keep the original error threshold.

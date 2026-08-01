@@ -1,0 +1,7 @@
+..F...............................................................       [100%]
+FAILED tests/test_sine_gordon_1d.py::test_sampled_boundary_correlation_matches_harmonic_limit
+1 failed, 65 passed in 5.10s
+
+Obtained sampled correlation: -4.20951505499049
+Exact C-SG-013 value:          -4.21056454401319
+Original requested relative tolerance: 2.0e-6

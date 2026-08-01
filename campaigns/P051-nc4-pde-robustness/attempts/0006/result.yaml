@@ -1,0 +1,17 @@
+attempt: 0006
+campaign: P051
+candidate: B_independent_spectral_review
+verdict: passed
+process_exit_code: 0
+terminal_tally: ALL 9 CHECKS PASS [P051-INDEPENDENT]
+spectral_reference:
+  domain: [-30.0, 30.0]
+  points: 384
+  final_time: 2.0
+  field_rms_error: 3.339777918316441e-11
+  velocity_rms_error: 3.3490347834235706e-11
+independent_conclusion: >-
+  Direct solve_ivp reproduces the tuned w=0.6 response and the common-phase
+  w=0.8 sign reversal without calling canonical evolution APIs. The source
+  headline is therefore calibration-dependent even though its selected run is
+  numerically reproducible.

@@ -1,0 +1,19 @@
+attempt: 0003
+campaign: P051
+candidate: B
+verdict: failed
+process_exit_code: 1
+terminal_tally: 1 failed, 65 passed
+failure_class: numerical_oracle
+failure_mechanism: >-
+  The test assigned a 2e-6 relative tolerance to one trapezoidal sampling of
+  sign(sin(theta))*sin(theta+delta). The jump discontinuities make the sampled
+  rule first-order; 4001 points had the expected approximately 2.5e-4 relative
+  error, so the smooth-integrand tolerance was unjustified.
+scientific_inference: >-
+  The failure concerns the sampled quadrature oracle only. The exact harmonic
+  theorem remains C-SG-013, and numeric sampling must demonstrate its own
+  refinement rather than borrow exact status.
+next_attempt: >-
+  Require first-order error reduction across 1001, 2001, and 4001 samples and
+  a final resolution-bounded error consistent with that observed order.

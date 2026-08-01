@@ -1,0 +1,46 @@
+id: P051
+base_release: v0.45.0
+source_baseline: substrate@6d1f4e0
+question: >-
+  What finite-time, equation-and-data-specific nonlinear sine-Gordon boundary
+  correlation or topological statement, if any, survives a convergence,
+  conservation, parity, and independent-method audit of NC4?
+invariants:
+  - The normalized equation is phi_tt-phi_xx+sin(phi)=0 in 1+1 dimensions.
+  - C-SG-011 fixes topological-current orientation and charge semantics.
+  - C-SG-013 separates boundary sign correlation from winding and physical parity violation.
+  - Numerical evidence cannot strengthen an exact identity or supply missing boundary dynamics.
+allowed_imports:
+  - C-SG-001
+  - C-SG-002
+  - C-SG-011
+  - C-SG-012
+  - C-SG-013
+  - NC4 source-defined domain, initial data, boundary data, mesh, and diagnostic as audited premises
+candidates:
+  - id: A
+    description: >-
+      Reproduce and refine NC4's literal nonlinear finite-difference IBVP,
+      promoting only setup-specific finite-time statements that survive all gates.
+  - id: B
+    description: >-
+      Use an exact large-amplitude rest breather and its parity image as a
+      soluble nonlinear reference for solver, energy, charge, and correlation tests.
+  - id: C
+    description: >-
+      If NC4 underdeclares its boundary dynamics, formulate a separate explicit
+      driven half-line or mirrored full-line IBVP and test that conditional model.
+uniqueness_evidence: null
+selection_criteria:
+  - well-posed equation, domain, initial data, and boundary data
+  - compatibility with C-SG-011 and C-SG-013
+  - spatial, temporal, domain, and tolerance convergence
+  - controlled energy flux or conservation and stable topological accounting
+  - independent-method or exact-solution agreement
+  - assumption and parameter economy
+claims_proposed:
+  - C-SG-014
+comparators_blinded_until: >-
+  NC4's source values and conclusions remain unopened until this manifest and
+  the matching memory contract are instantiated.
+status: accepted

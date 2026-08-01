@@ -1,0 +1,37 @@
+PASS [P051-NC4] the NC4 source is the hash-pinned pending primary unit
+PASS [P051-NC4] the imported study solver is pinned at the audited baseline
+PASS [P051-NC4] literal current-environment reproduction fails before a tally
+PASS [P051-NC4] the compatibility-only adapter recovers the source's thirty checks
+PASS [P051-NC4] the removed quadrature name is source evidence rather than canonical code
+PASS [P051-NC4] NC4's source coordinate and stencil spacings are inconsistent
+PASS [P051-NC4] the imported right boundary overwrites five evolved cells
+PASS [P051-NC4] q_bulk is an endpoint coordinate on a finite subinterval
+PASS [P051-NC4] the source explicitly calibrates a phase separately at every frequency
+PASS [P051-NC4] the charge and correlation headlines use different drive strengths
+PASS [P051-NC4] source refinement couples space and time at one selected frequency
+PASS [P051-NC4] the zero-drive guard compares identical eps-independent inputs
+PASS [P051-NC4] the accepted nonlinear breather solves the exact PDE
+PASS [P051-NC4] the spatial operator sign is load-bearing: baseline
+PASS [P051-NC4] the spatial operator sign is load-bearing: mutations supplied
+PASS [P051-NC4] the spatial operator sign is load-bearing: mutation 1 rejected
+PASS [P051-NC4] the spatial operator sign is load-bearing: mutation 2 rejected
+PASS [P051-NC4] the nonlinear sine coefficient is load-bearing: baseline
+PASS [P051-NC4] the nonlinear sine coefficient is load-bearing: mutations supplied
+PASS [P051-NC4] the nonlinear sine coefficient is load-bearing: mutation 1 rejected
+PASS [P051-NC4] the nonlinear sine coefficient is load-bearing: mutation 2 rejected
+PASS [P051-NC4] the exact nonlinear breather has second-order spatial-temporal convergence
+PASS [P051-NC4] the periodic discrete-energy drift converges at second order
+PASS [P051-NC4] DOP853 independently agrees with leapfrog on the nonlinear reference
+PASS [P051-NC4] adaptive-tolerance refinement leaves a resolved common trajectory
+PASS [P051-NC4] the corrected w=0.6 endpoint response converges on three fine grids
+PASS [P051-NC4] the corrected diagnostic correlations converge with opposite fine-grid signs
+PASS [P051-NC4] driven energy-flux residuals decrease on fine-grid refinement
+PASS [P051-NC4] independent timestep halving approaches the fine-grid response
+PASS [P051-NC4] a same-spacing domain extension preserves the finite-time endpoint response
+PASS [P051-NC4] adaptive method-of-lines independently preserves the calibrated response signs
+PASS [P051-NC4] adaptive driven energy-flux residual decreases with spatial refinement
+PASS [P051-NC4] a common-drive phase counterexample reverses the alleged amplitude-sweep sign
+PASS [P051-NC4] a pi phase shift exactly relabels the two declared eps drives
+PASS [P051-NC4] fractional endpoint coordinates do not satisfy the integer-vacuum conclusion
+PASS [P051-NC4] the surviving numerical result is only a tuned IBVP response
+ALL 36 CHECKS PASS [P051-NC4]

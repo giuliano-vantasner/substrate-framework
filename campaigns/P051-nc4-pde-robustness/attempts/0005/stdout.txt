@@ -1,0 +1,5 @@
+FAIL [P051-INDEPENDENT] a Fourier spatial method independently evolves the exact nonlinear breather
+
+Field RMS error at t=2:    1.2193239406058415e-07
+Velocity RMS error at t=2: 1.2227033961259507e-07
+Required error:             less than 2.0e-09

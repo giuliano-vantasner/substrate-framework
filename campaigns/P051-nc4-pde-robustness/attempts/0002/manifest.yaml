@@ -1,0 +1,22 @@
+attempt: 0002
+campaign: P051
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_file: merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+source_sha256: 9efa788da093213f354cbd9e26b7bd0be81129d6f966128b5c0fd10fe0081570
+command: >-
+  .venv/bin/python -c "import runpy, numpy as np;
+  np.trapz = np.trapezoid;
+  runpy.run_path('<NC4>', run_name='__main__')"
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T01:39:00Z'
+elapsed_seconds: 27.32
+compatibility_adapter: >-
+  Define the removed legacy name as the current NumPy trapezoid function in
+  memory before executing the otherwise unmodified source.
+expected: >-
+  Recover the source's own checks and terminal tally without treating that
+  tally as claim validation.

@@ -1,0 +1,18 @@
+attempt: 0001
+campaign: P051
+candidate: A
+verdict: failed
+process_exit_code: 1
+terminal_tally: null
+failure_class: implementation_compatibility
+failure_mechanism: >-
+  NumPy 2.5.1 has removed np.trapz. NC4 reaches its first W_Q diagnostic after
+  the first pair of charge evolutions, then raises AttributeError before any
+  of its fifteen scientific checks or terminal tally execute.
+scientific_inference: >-
+  This is source-reproduction evidence only. It neither falsifies nor supports
+  the PDE headline and does not authorize replacing the source's expected
+  values, thresholds, calibrated phases, or boundary interpretation.
+next_attempt: >-
+  Inspect the imported solver and charge diagnostic, then reproduce NC4 with
+  only the quadrature name routed through the framework compatibility helper.

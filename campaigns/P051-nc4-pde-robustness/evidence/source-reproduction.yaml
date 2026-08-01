@@ -1,0 +1,18 @@
+source_unit: NC4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+sha256: 9efa788da093213f354cbd9e26b7bd0be81129d6f966128b5c0fd10fe0081570
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+process_exit_code: 1
+terminal_tally: null
+verdict: reproduction_failed_on_removed_numpy_api
+failure: >-
+  AttributeError at the first np.trapz call; no scientific check executes and
+  the claimed ALL N CHECKS PASS tail is not reached.
+attempt: attempts/0001/result.yaml

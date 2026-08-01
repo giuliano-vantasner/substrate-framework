@@ -1,0 +1,40 @@
+BRIDGE NC4 -- PDE robustness of chiral discrimination + W_Q sign-flip
+
+  AMPLITUDE SWEEP (full nonlinear PDE, Nx=2400):
+  w     fieldamp  | q(+)     q(-)     dQ        | W_Q(+)    W_Q(-)    flip
+  0.20  5.478     |   -0.590   -0.018    -0.572 |   +0.0741   -0.0751 YES
+  0.40  4.637     |   -0.006   +1.011    -1.017 |   +0.1898   -0.1968 YES
+  0.60  3.709     |   -1.019   +0.015    -1.035 |   +0.1797   -0.4487 YES
+  0.80  2.574     |   -0.953   +0.982    -1.935 |   -2.2377   +1.6519 YES
+
+  CONVERGENCE (w=0.6, Nx: 2400 -> 4800):
+    dQ:     -1.0347 -> -1.0389   (rel change 0.004)
+    W_Q(+): +0.1797 -> +0.1596   (rel change 0.112)
+
+  REJECTION GUARD (parity-even F0=0 elastic wall):
+  w     | q(+)     q(-)     dQ        | W_Q(+)    W_Q(-)
+  0.20  |  -0.1652  -0.1652   +0.0000 |   +0.0000   +0.0000
+  0.40  |  +0.1316  +0.1316   +0.0000 |   +0.0000   +0.0000
+  0.60  |  -0.1106  -0.1106   +0.0000 |   +0.0000   +0.0000
+  0.80  |  -0.0552  -0.0552   +0.0000 |   +0.0000   +0.0000
+
+  SUMMARY
+  -------
+  (NC4.1) Topological-charge discrimination is ROBUST across the full amplitude sweep
+          w in {0.2,..,0.8}: dQ = q(+)-q(-) is definite and CONSISTENTLY signed; it does
+          NOT degrade or flip as the breather field amplitude grows toward 2*pi (w->0,
+          where sin phi is most nonlinear and the linear chiral split is worst).  Where
+          absorption is partial the transfer is fractional with a CONSISTENT sign.
+  (NC4.2) The nonlinear boundary rectifier W_Q = trapz(sgn(phi_t)*phi_x) from the PDE
+          field FLIPS SIGN under eps -> -eps at EVERY w -- NC3's (4B/w)cos(delta)
+          sign-flip realised on the full nonlinear field.
+  (NC4.3) Both the dQ sign and the W_Q sign are STABLE under (dx/2, dt/2); dQ magnitude
+          converges (rel change 0.004 at w=0.6).
+  GUARD:  the parity-even F0=0 elastic wall gives dQ=0 and W_Q=0 EXACTLY for every w --
+          no chiral coupling, no discrimination -- while the chiral drive discriminates.
+  PROVENANCE: DERIVED (numeric) -- robustness of dQ + W_Q sign-flip + convergence + guard
+          on the FULL nonlinear PDE.  IMPORTED -- the integrator/breather (study.py),
+          eq.(7) and NC3's closed form.  DECLARED -- the per-w breather-matched coupling
+          phase and the diagnostic strength of the faithful W_Q witness.
+
+ALL 30 CHECKS PASS

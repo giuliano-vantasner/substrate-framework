@@ -1,0 +1,10 @@
+PASS [P051-INDEPENDENT] a Fourier spatial method independently evolves the exact nonlinear breather
+PASS [P051-INDEPENDENT] direct solve_ivp independently recovers the tuned w=0.6 endpoint response
+PASS [P051-INDEPENDENT] the independent diagnostic route recovers opposite tuned correlations
+PASS [P051-INDEPENDENT] the common-phase w=0.8 response independently reverses the sweep sign
+PASS [P051-INDEPENDENT] a phase shift by pi independently swaps the declared orientation labels
+PASS [P051-INDEPENDENT] the source amplitude sweep changes more than field amplitude
+PASS [P051-INDEPENDENT] the zero-drive guard is an identical-input identity
+PASS [P051-INDEPENDENT] the source's fractional endpoint result is not integer winding
+PASS [P051-INDEPENDENT] source dQ and W_Q do not come from one declared drive experiment
+ALL 9 CHECKS PASS [P051-INDEPENDENT]

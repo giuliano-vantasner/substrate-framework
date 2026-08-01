@@ -1,0 +1,49 @@
+periodic_exact_reference:
+  omega: 0.6
+  domain: [-20.0, 20.0]
+  final_time: 2.0
+  point_counts: [128, 256, 512]
+  l2_field_errors:
+    - 0.0031624089336771957
+    - 0.0007868751471250037
+    - 0.00019648650667053198
+  relative_discrete_energy_ranges:
+    - 0.0008406399580841925
+    - 0.00021014043161849387
+    - 0.00005253394657137168
+corrected_source_ibvp_w_0_6:
+  phase: 5.5
+  full_scale: 1.0
+  diagnostic_scale: 0.15
+  grids:
+    600:
+      dQ_endpoint_coordinate: -1.0329383713216063
+      diagnostic_wq: [0.07323336205482955, -0.40511154288832263]
+      full_scale_energy_balance_residuals: [0.10047233113260352, 0.05883231484239288]
+    1200:
+      dQ_endpoint_coordinate: -1.0372537599630791
+      diagnostic_wq: [0.11913451341567424, -0.4430665712811084]
+      full_scale_energy_balance_residuals: [0.034446864183518375, 0.04271369784028989]
+    2400:
+      dQ_endpoint_coordinate: -1.0383206729949392
+      diagnostic_wq: [0.13388416287969288, -0.43396090429036555]
+      full_scale_energy_balance_residuals: [0.013583359758328367, 0.01729798935358562]
+  timestep_halving_at_600:
+    dQ_endpoint_coordinate: -1.0372150235822248
+    diagnostic_wq: [0.10070748550646834, -0.4287006363554966]
+  same_spacing_domain_70:
+    dQ_endpoint_coordinate: -1.0329420279916168
+adaptive_dop853_w_0_6:
+  grids:
+    300:
+      dQ_endpoint_coordinate: -1.034633684275713
+      diagnostic_wq: [0.04356874394040797, -0.33815813249518134]
+    600:
+      dQ_endpoint_coordinate: -1.0390624740938421
+      diagnostic_wq: [0.09962725194478536, -0.4250874117496159]
+common_phase_counterexample:
+  fixed_phase: 5.5
+  grid: 600
+  dQ_w_0_6: -1.0329383713216063
+  dQ_w_0_8: 1.9474844708826313
+  verdict: source_amplitude_sweep_sign_is_not_phase_robust

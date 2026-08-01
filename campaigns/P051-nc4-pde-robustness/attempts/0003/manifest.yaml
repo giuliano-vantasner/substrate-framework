@@ -1,0 +1,16 @@
+attempt: 0003
+campaign: P051
+candidate: B
+command: >-
+  .venv/bin/python -m pytest -q tests/test_sine_gordon_1d.py
+  tests/test_numerics.py tests/test_sine_gordon.py
+  tests/test_boundary_correlations.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T01:54:00Z'
+elapsed_seconds: 5.30
+expected: >-
+  Verify the new solver and diagnostic APIs, including sampled recovery of the
+  exact harmonic boundary correlation.

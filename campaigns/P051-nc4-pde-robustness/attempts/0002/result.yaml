@@ -1,0 +1,32 @@
+attempt: 0002
+campaign: P051
+candidate: A
+verdict: source_checks_passed_pending_adjudication
+process_exit_code: 0
+terminal_tally: ALL 30 CHECKS PASS
+observations:
+  source_grid: 2400
+  refined_grid: 4800
+  dQ:
+    '0.2': -0.572
+    '0.4': -1.017
+    '0.6': -1.035
+    '0.8': -1.935
+  source_wq_pairs:
+    '0.2': [0.0741, -0.0751]
+    '0.4': [0.1898, -0.1968]
+    '0.6': [0.1797, -0.4487]
+    '0.8': [-2.2377, 1.6519]
+  refinement_at_w_0_6:
+    dQ_relative_change: 0.004
+    wq_plus_relative_change: 0.112
+scientific_ceiling: >-
+  The passing source predicates use per-frequency phases calibrated to
+  maximize discrimination, two different drive strengths for dQ and W_Q, a
+  coupled dx/dt refinement at only w=0.6, and the imported solver's endpoint
+  difference diagnostic. Independent numerical and interpretation gates are
+  still required.
+next_attempt: >-
+  Audit phase provenance, grid and boundary implementation, endpoint-vacuum
+  behavior, energy flux, separate refinements, and a corrected independent
+  evolution before selecting a candidate.

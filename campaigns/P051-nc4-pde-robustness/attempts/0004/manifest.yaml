@@ -1,0 +1,20 @@
+attempt: 0004
+campaign: P051
+candidate: A_with_B_reference
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P051-nc4-pde-robustness/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-15/bridge_NC4_pde_robustness.py
+  --study-file <substrate@6d1f4e0>/sg-breather-ionization/numerical/study.py
+  --source-reproduction proposals/P051-nc4-pde-robustness/evidence/source-reproduction.yaml
+  --migration-queue migration/source-claims.yaml
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T02:05:00Z'
+elapsed_seconds: 16.48
+expected: >-
+  Verify the canonical 1D solver on an exact nonlinear reference, audit the
+  corrected source-defined IBVP under all refinement axes, and require source
+  interpretation mutations and counterexamples to be visible.
