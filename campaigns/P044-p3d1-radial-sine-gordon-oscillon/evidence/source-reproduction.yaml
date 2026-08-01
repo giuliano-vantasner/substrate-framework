@@ -1,0 +1,32 @@
+source_unit: P3D1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-14/bridge_P3D1_radial_pulson_exists.py
+sha256: f93b8dabfca0c49fb0bf1101c926e79c43dc2e9ebb35882083611a12ca9514fa
+reproduced_at: '2026-08-01T19:44:56Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-14/bridge_P3D1_radial_pulson_exists.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+  integration_api: numpy.trapezoid
+exit_code: 0
+terminal_tally: ALL 6 CHECKS PASS
+reported_values:
+  deep_late_frequency: 0.9210
+  deep_late_core_amplitude: 4.454
+  deep_relative_core_leak_rate: 1.301e-4
+  coarse_closed_energy_variation: 2.930e-4
+  fine_closed_energy_variation: 7.416e-5
+  core_trajectory_difference_ratio: 3.05
+  near_gap_late_frequency: 1.005
+  near_gap_relative_core_leak_rate: 7.874e-3
+observation: >-
+  The source reproduces in about six seconds. NumPy 2.5.1 provides
+  numpy.trapezoid and has removed numpy.trapz, so the source's explicit
+  compatibility selection correctly chooses trapezoid. The run establishes
+  useful candidate trajectory evidence, but two seeds cannot identify an
+  exponential leakage law; a finite nonzero leak is not exact periodicity;
+  energy conservation in the declared scalar IVP is not a gravitational
+  monopole theorem; and the source has no independent integrator, domain
+  refinement, frequency-window refinement, or mutation-sensitive PDE oracle.

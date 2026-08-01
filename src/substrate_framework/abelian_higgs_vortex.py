@@ -14,7 +14,7 @@ import numpy as np
 from numpy.typing import ArrayLike, NDArray
 import sympy as sp
 
-from .numerics import BVPEvidence, solve_bvp_evidence
+from .numerics import BVPEvidence, solve_bvp_evidence, trapezoid_integral
 
 FloatArray = NDArray[np.float64]
 
@@ -320,7 +320,7 @@ def vortex_tension(solution: VortexSolution, *, quadrature_points: int = 20_001)
     )
     state = solution.state_at(radius)
     density = vortex_energy_density(radius, state, solution.parameters)
-    tension = float(2.0 * np.pi * np.trapezoid(radius * density, radius))
+    tension = 2.0 * np.pi * trapezoid_integral(radius * density, radius)
     if not np.isfinite(tension) or tension <= 0.0:
         raise ValueError("computed vortex tension must be positive and finite")
     return tension

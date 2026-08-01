@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 177
-  qualified: 34
+  pending_adjudication: 176
+  qualified: 35
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2779,8 +2779,21 @@ units:
   dynamic_check_calls: 4
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-PDE-001
+  qualification: >-
+    The specified radial Gaussian IVP supplies refined finite-time simulation
+    evidence for a localized sub-threshold oscillatory core. P3D1 does not
+    establish exact periodicity, an exponential leakage law, a stability
+    family, gravitational monopole silence or radiation, absolute scale,
+    particle identity, or substrate realization.
+  evidence:
+  - campaigns/P044-p3d1-radial-sine-gordon-oscillon/reviews/source_adjudication.md
+  note: >-
+    P044 corrects the source timestamp, adds spatial/timestep/domain/frequency
+    refinements and a transformed-field independent method, and promotes only
+    the resolution-bounded finite-time trajectory.
 - source_unit: P3D2
   phase: phase-14
   path: merged-framework/bridges/phase-14/bridge_P3D2_spherical_quadrupole_null.py

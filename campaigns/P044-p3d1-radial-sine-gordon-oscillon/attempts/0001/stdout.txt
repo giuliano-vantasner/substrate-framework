@@ -1,0 +1,38 @@
+PASS [P044-P3D1] the audited P3D1 source is the hash-pinned candidate unit
+PASS [P044-P3D1] the durable reproduction record is hash matched and exited cleanly
+PASS [P044-P3D1] the source's declared six-check terminal tally reproduced
+PASS [P044-P3D1] the source selects the current NumPy trapezoid API before its legacy fallback
+PASS [P044-P3D1] radial action variation gives the declared 3+1 sine-Gordon equation
+PASS [P044-P3D1] the radial PDE implies the exact local energy continuity equation
+PASS [P044-P3D1] linearization fixes the dimensionless continuum threshold at omega one
+PASS [P044-P3D1] the regular spherical Klein-Gordon mode validates the origin and radial operator
+PASS [P044-P3D1] three-dimensional geometric coefficient and regular-origin stencil: baseline
+PASS [P044-P3D1] three-dimensional geometric coefficient and regular-origin stencil: mutations supplied
+PASS [P044-P3D1] three-dimensional geometric coefficient and regular-origin stencil: mutation 1 rejected
+PASS [P044-P3D1] three-dimensional geometric coefficient and regular-origin stencil: mutation 2 rejected
+PASS [P044-P3D1] three-dimensional geometric coefficient and regular-origin stencil: mutation 3 rejected
+P044 finite-time metrics
+  coarse: retention=0.931711493, late_amp=4.355446945, omega220=(0.918130464,0.917203538), omega300=(0.923335938,0.920573034), slope=-1.301894329e-04
+  baseline: retention=0.931904002, late_amp=4.348390815, omega220=(0.918021947,0.917106373), omega300=(0.923187338,0.920472599), slope=-1.301390159e-04
+  fine: retention=0.931951615, late_amp=4.346158047, omega220=(0.917994186,0.917081686), omega300=(0.923148485,0.920447299), slope=-1.301300028e-04
+  timestep_fine: retention=0.931891575, late_amp=4.346644684, omega220=(0.917995725,0.917087164), omega300=(0.923137999,0.920457115), slope=-1.302386145e-04
+  domain_small: retention=0.931711446, late_amp=4.355255978, omega220=(0.918130464,0.917203555), omega300=(0.923335933,0.920573058), slope=-1.301853346e-04
+  domain_large: retention=0.931711501, late_amp=4.355441216, omega220=(0.918130453,0.917203547), omega300=(0.923335917,0.920573048), slope=-1.301893027e-04
+  weak_packet: retention=0.078534130, late_amp=0.023711686, omega220=(1.000114405,1.000447344), omega300=(0.999988205,1.000353339), slope=-7.875424136e-03
+PASS [P044-P3D1] all fixed-step evolutions complete with finite diagnostics
+PASS [P044-P3D1] the late core remains localized and oscillatory through t=430
+PASS [P044-P3D1] two estimators and two settled windows resolve a sub-threshold frequency
+PASS [P044-P3D1] the finite-time leakage observation is bounded without fitting an exponential law
+PASS [P044-P3D1] the center trajectory has second-order spatial self-convergence
+PASS [P044-P3D1] halving the timestep leaves load-bearing long-time metrics stable
+PASS [P044-P3D1] moving the sponge and outer boundary leaves core observables unchanged
+PASS [P044-P3D1] late localization is stable under the declared core-radius diagnostic
+PASS [P044-P3D1] closed-box energy variation decreases at second order on three grids
+PASS [P044-P3D1] the closed-box boundary remains causally quiet during the energy audit
+PASS [P044-P3D1] independent DOP853 method-of-lines evolution agrees with leapfrog
+PASS [P044-P3D1] finite-time localized sub-gap trajectory verdict: baseline
+PASS [P044-P3D1] finite-time localized sub-gap trajectory verdict: mutations supplied
+PASS [P044-P3D1] finite-time localized sub-gap trajectory verdict: mutation 1 rejected
+PASS [P044-P3D1] invalid explicit Courant factors are rejected before evolution
+P044 error controls: operator=[0.0005580403334781159, 0.00013992112487892783, 3.500600543676624e-05], spatial_rms=(5.532686611e-03, 1.361153947e-03), energy_variations=[0.0011780706200715967, 0.0002939039510595008, 7.34365395236583e-05], independent=(center_rms=9.952822602e-03, core_max=2.559595328e-03), core_fractions={10.0: 0.9408314293734434, 20.0: 0.947191342114177, 30.0: 0.9486623947159442, 40.0: 0.9509213357035528}
+ALL 28 CHECKS PASS [P044-P3D1]

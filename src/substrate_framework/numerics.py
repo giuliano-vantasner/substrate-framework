@@ -97,6 +97,27 @@ def _real_vector(values: ArrayLike, *, name: str) -> FloatArray:
     return array
 
 
+def trapezoid_integral(values: ArrayLike, coordinate: ArrayLike) -> float:
+    """Integrate sampled values across supported NumPy API generations.
+
+    NumPy 2 renamed ``trapz`` to ``trapezoid`` and later removed the legacy
+    alias, while this package also supports NumPy 1.26.  Resolve the current
+    name first and use the legacy name only when the installed version needs
+    it.  Keeping the dispatch here prevents scientific modules from carrying
+    inconsistent version probes.
+    """
+
+    implementation = getattr(np, "trapezoid", None)
+    if implementation is None:
+        implementation = getattr(np, "trapz", None)
+    if implementation is None:
+        raise NumericalFailure("NumPy provides neither trapezoid nor trapz")
+    result = float(implementation(values, coordinate))
+    if not np.isfinite(result):
+        raise NumericalFailure("trapezoidal integration returned a non-finite value")
+    return result
+
+
 def solve_ivp_evidence(
     rhs: Callable[[float, FloatArray], ArrayLike],
     time_span: tuple[float, float],

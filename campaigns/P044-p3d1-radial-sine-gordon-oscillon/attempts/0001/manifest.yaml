@@ -1,0 +1,24 @@
+attempt: 0001
+campaign: P044
+started_at: '2026-08-01T19:51:45Z'
+base_release: v0.38.0
+base_commit: 9413dbf
+source_unit: P3D1
+source_sha256: f93b8dabfca0c49fb0bf1101c926e79c43dc2e9ebb35882083611a12ca9514fa
+candidate: A
+oracles:
+  - exact radial Euler-Lagrange equation and local energy continuity identity
+  - regular-origin radial-operator soluble limit and second-order convergence
+  - closed-box energy convergence on three spatial grids
+  - finite-time core localization, persistence, and two-route frequency estimate
+  - spatial, timestep, outer-domain, frequency-window, and core-radius sensitivity
+  - independent DOP853 method-of-lines evolution
+  - dispersive-seed and geometric-term mutations
+mutations:
+  - remove the 2/r geometric term
+  - replace the deep A=3, width=4 seed by the dispersive A=4, width=3 seed
+  - use an unstable or invalid Courant factor
+expected_positive_object: >-
+  A finite-grid, finite-time radial sine-Gordon trajectory on 0<=r<=200 and
+  0<=t<=450 whose localized core persists and oscillates below the linear
+  threshold, with the numerical scope and error controls stated explicitly.

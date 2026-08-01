@@ -237,6 +237,15 @@ Conditional on C-OG-001 and C-OG-002, for every twice-differentiable potential P
 - Compatibility: `compatible_extension`
 - Dependencies: C-OG-001, C-OG-002
 
+## C-PDE-001
+
+Adopt the C-SG-001 normalized sine-Gordon potential as a declared dimensionless 3+1 flat-space radial model with action S=4*pi*integral dt dr r^2[u_t^2/2-u_r^2/2-(1-cos(u))]. Its equation is u_tt-u_rr-2*u_r/r+sin(u)=0, with even regularity u_r(0,t)=0. For initial data u(r,0)=3*exp(-(r/4)^2), u_t(r,0)=0, a direct-radial centered leapfrog on 0<=r<=200 and 0<=t<=450 with dr=0.05, dt=0.02, outer Dirichlet data, and a quadratic velocity sponge over 150<r<=200 gives finite-time simulation evidence for a localized oscillatory core. The mean energy inside r<=30 over 360<=t<=430 is more than 0.9318 of its mean over 120<=t<=180, and the late center half-range is greater than 4.34. Hann-FFT and rising-crossing estimates on windows beginning at t=220 and t=300 all give 0.90<omega<0.94, below the linear threshold one. Center traces on dr=0.1, 0.05, and 0.025 self-converge at approximately second order; closed-box total-energy relative ranges decrease from 1.179e-3 to 2.940e-4 to 7.344e-5. Timestep halving, domains 160/200/240, core-radius diagnostics, a regular soluble linear mode, and an independent DOP853 evolution of v=r*u with Simpson energy preserve the verdict. Changing the radial geometric coefficient or using the A=4, width-three dispersive seed breaks the relevant verdict. This is resolution-bounded evidence for the specified finite-time IVP, not an exact or eternal breather, exponential lifetime law, family-wide stability result, gravitational source or radiation statement, absolute-scale prediction, particle model, or substrate realization.
+
+- Accepted in: `v0.39.0`
+- Verification: `simulation_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-001
+
 ## C-QBL-001
 
 Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega^2-f^2/12)f, C-U1-001's stationary phase Psi=f*exp(-i*omega*t), and 0<omega<1/sqrt(2), let kappa=sqrt(1/2-omega^2). Then for every real center x0 the positive localized profile f=sqrt(24)*kappa*sech(kappa*(x-x0)) solves the equation exactly. Within a nonzero ansatz A*sech(k*(x-x0)), the independent sech powers force k^2=1/2-omega^2 and A^2=24*k^2. Its accepted U1 charge is Q=96*omega*sqrt(1/2-omega^2): Q tends to zero at both open endpoints, increases on (0,1/2), reaches its unique maximum 24 at omega=1/2, and decreases on (1/2,1/sqrt(2)). These derivative signs alone establish no VK, spectral, orbital, or nonlinear stability, forced complex ontology, electric charge, particle identity, or substrate realization.

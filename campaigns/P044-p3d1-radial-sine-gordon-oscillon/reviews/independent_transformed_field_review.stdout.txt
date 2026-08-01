@@ -1,0 +1,12 @@
+PASS [P044-INDEPENDENT] v=r*u removes the radial first-derivative singularity exactly
+PASS [P044-INDEPENDENT] the independent transformed-field integration exits successfully
+PASS [P044-INDEPENDENT] transformed-field and direct-radial center trajectories agree
+PASS [P044-INDEPENDENT] independent Simpson core energy agrees with canonical diagnostics
+PASS [P044-INDEPENDENT] the transformed-field route independently controls closed-box energy
+PASS [P044-INDEPENDENT] transformed-field geometric coefficient: baseline
+PASS [P044-INDEPENDENT] transformed-field geometric coefficient: mutations supplied
+PASS [P044-INDEPENDENT] transformed-field geometric coefficient: mutation 1 rejected
+PASS [P044-INDEPENDENT] transformed-field geometric coefficient: mutation 2 rejected
+PASS [P044-INDEPENDENT] transformed-field geometric coefficient: mutation 3 rejected
+P044 independent metrics: nfev=8129, center_relative_rms=9.940999643e-03, core_relative_max=2.534779411e-03, energy_relative_range=2.386282089e-03
+ALL 10 CHECKS PASS [P044-INDEPENDENT]

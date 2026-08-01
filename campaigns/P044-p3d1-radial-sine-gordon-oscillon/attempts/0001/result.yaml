@@ -1,0 +1,49 @@
+attempt: 0001
+completed_at: '2026-08-01T19:57:49Z'
+exit_code: 0
+terminal_tally: 28
+independent_terminal_tally: 10
+verdict:
+  C-PDE-001: simulation_evidence
+evidence:
+  - exact radial-action variation and local energy-continuity identity
+  - regular spherical linear mode with second-order operator convergence
+  - 450-time-unit localized core trajectory on three spatial meshes
+  - two frequency estimators on two settled windows
+  - timestep and outer-domain sensitivity studies
+  - three-grid closed-box energy-conservation convergence
+  - independent transformed-field DOP853 and Simpson-quadrature route
+  - geometric-term, dispersive-seed, and Courant mutations
+baseline_metrics:
+  equation: u_tt-u_rr-2*u_r/r+sin(u)=0
+  initial_data: u(r,0)=3*exp(-(r/4)^2), u_t(r,0)=0
+  domain: 0<=r<=200
+  time: 0<=t<=450
+  spacing: 0.05
+  timestep: 0.02
+  core_radius: 30
+  sponge: 150<r<=200 with maximum damping 1
+  settled_core_energy_retention: 0.931904002
+  late_center_half_range: 4.348390815
+  omega_window_220_fft: 0.918021947
+  omega_window_220_crossing: 0.917106373
+  omega_window_300_fft: 0.923187338
+  omega_window_300_crossing: 0.920472599
+  late_relative_core_energy_slope: -1.301390159e-4
+error_controls:
+  finest_closed_energy_relative_range: 7.343653952e-5
+  spatial_center_rms_coarse_fine: 5.532686611e-3
+  spatial_center_rms_fine_finer: 1.361153947e-3
+  independent_center_relative_rms: 9.940999643e-3
+  independent_core_relative_max: 2.534779411e-3
+source_defects:
+  - finite nonzero leakage is inconsistent with an exact time-periodic claim
+  - two seeds and one late linear fit cannot identify an exponential leakage law
+  - sub-gap fundamental frequency does not forbid radiation by nonlinear higher harmonics
+  - scalar energy conservation is not a gravitational monopole theorem
+  - source timestamps are one fixed step ahead of their centered state diagnostics
+  - no source domain refinement, independent integrator, or frequency-window refinement is present
+  - non-integrability by itself is not a proof that no exact localized periodic solution exists
+status: passed
+stdout: stdout.txt
+independent_stdout: ../../reviews/independent_transformed_field_review.stdout.txt

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import numpy as np
+import pytest
 from scipy.sparse import diags
 
 from substrate_framework.numerics import (
@@ -9,6 +10,7 @@ from substrate_framework.numerics import (
     solve_bvp_evidence,
     solve_ivp_evidence,
     solve_method_of_lines,
+    trapezoid_integral,
 )
 
 
@@ -78,3 +80,18 @@ def test_method_of_lines_heat_equation_has_second_order_spatial_convergence() ->
     assert study.errors_strictly_decrease
     assert study.final_error < 3.0e-5
     assert all(order is not None and order > 1.9 for order in study.observed_orders)
+
+
+def test_trapezoid_integral_uses_current_numpy_api() -> None:
+    coordinate = np.linspace(0.0, 1.0, 1001)
+    assert trapezoid_integral(coordinate**2, coordinate) == pytest.approx(
+        1.0 / 3.0, rel=2.0e-6
+    )
+
+
+def test_trapezoid_integral_supports_legacy_numpy_name(monkeypatch) -> None:
+    current = np.trapezoid
+    monkeypatch.setattr(np, "trapezoid", None)
+    monkeypatch.setattr(np, "trapz", current, raising=False)
+    coordinate = np.linspace(0.0, 1.0, 101)
+    assert trapezoid_integral(coordinate, coordinate) == 0.5

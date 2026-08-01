@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T19:39:00Z'
+updated: '2026-08-01T19:57:49Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.38.0`, containing fifty-two claims: the prior sector results plus the exact conditional breathing-wave theorem `C-GW-004` and separately bounded Fourier evidence `C-SG-010`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.39.0`, containing fifty-three claims: the prior sector results plus finite-time radial sine-Gordon simulation evidence `C-PDE-001`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 177 pending, 0 partially migrated, 3 migrated, 34 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 176 pending, 0 partially migrated, 3 migrated, 35 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -115,6 +115,7 @@ Attempts are append-only and individually reproducible.
 | 0053 | P042 conditional breathing-mode power, viewing, and Fourier audit | `campaigns/P042-fs3-conditional-breathing-wave` | accepted in v0.38.0 with FS3 qualified | Thirty-seven main and eleven independent checks correct factor-three field/factor-nine power conventions, replace grid positivity by exact zeros and nonzero phases, derive the arbitrary-inclination sine-squared plus pattern, and independently resolve the special mean and 80.5369% first-harmonic fraction | Audit FS4's static form-factor insertion without treating a static moment as a radiative suppression theorem |
 | 0054 | P043 FS4 constant-offset and form-factor distinctness audit | `campaigns/P043-fs4-static-moment-decomposition` | FS4 terminally duplicates C-SG-009/C-MOM-002/C-GW-004; v0.38.0 unchanged | Twenty-six main and eight independent checks prove accepted constant-offset invariance, break it with time-dependent mutations, and show arbitrary constant decompositions cannot identify the imported scalar as a form factor; source power/positivity and pending T2C/G4 readings remain excluded | Audit P3D1's claimed radial 3D pulson existence with a genuine PDE/refinement oracle rather than importing the 1D breather |
 | 0055 | P043 first full no-release replay | `scripts/validate.sh` | failed before tests | The FS4 duplicate review's existing-claim section began with an inline claim ID and violated the established plain-prose disclosure contract | Add one descriptive opening sentence and rerun the changed transaction without repeating scientific or source oracles |
+| 0056 | P044 finite-time radial sine-Gordon oscillon | `campaigns/P044-p3d1-radial-sine-gordon-oscillon` | accepted in v0.39.0 with P3D1 qualified | Twenty-eight main and ten transformed-field checks establish the specified finite-time localized sub-gap trajectory with mesh, timestep, domain, conservation, frequency-window, independent-method, and mutation evidence; exact-periodic, exponential-lifetime, gravitational, and ontology readings remain excluded | Audit P3D2's spherical STF null and scalar-moment frequency claim using the canonical radial solver without importing a physical gravity channel |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -131,7 +132,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 177 bridge units remain pending, 3 are migrated, 34 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 176 bridge units remain pending, 3 are migrated, 35 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -179,11 +180,13 @@ P042 adds exact convention-consistent conditional power and arbitrary-inclinatio
 
 P043 terminally classifies FS4 as duplicate evidence for the accepted exact moment, separable derivative, and conditional waveform/power claims. Its valid constant-offset identity is already subsumed; time-dependent mutations expose the premise, and nonunique decompositions prove that cancellation cannot identify its imported scalar as a form factor or lift pending tidal/backreaction ceilings.
 
+P044 adds a pure 3+1 radial sine-Gordon solver and finite-time simulation evidence for one Gaussian initial-data branch. Three spatial grids, timestep halving, domains 160/200/240, closed-box energy convergence, dual frequency estimators, core-radius diagnostics, a soluble radial mode, a transformed-field DOP853 review, and geometry/dispersive mutations support the localized sub-threshold trajectory. It qualifies P3D1's exact-periodic, exponential-leakage, gravitational-monopole, no-go, and ontology overclaims and centralizes NumPy 1.26/2.x trapezoidal-integration compatibility.
+
 ## Canonicalization
-The registry, `v0.38.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-two accepted claims. P001 through P043 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 177 pending, 0 partial, 3 migrated, 34 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.39.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-three accepted claims. P001 through P044 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 176 pending, 0 partial, 3 migrated, 35 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 177 pending, 3 migrated, 34 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit P3D1's radial 3D pulson-existence claim with a genuine equation, boundary, conservation, and refinement oracle rather than importing the exact 1D breather.
+The effort remains active. D4 is discharged, but D1 remains open with 176 pending, 3 migrated, 35 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit P3D2's spherical STF null and scalar radial-moment frequency claim using `C-PDE-001` and the canonical radial solver without importing a physical gravitational radiation conclusion.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

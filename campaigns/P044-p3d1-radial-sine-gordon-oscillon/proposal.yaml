@@ -1,0 +1,51 @@
+id: P044
+base_release: v0.38.0
+base_commit: 9413dbf
+source_baseline: substrate@6d1f4e0
+source_units: [P3D1]
+question: >-
+  Construct and verify a genuine finite-time, localized, oscillatory solution
+  of the declared 3+1 radial sine-Gordon initial-value problem with explicit
+  numerical error and boundary control, then audit whether P3D1 establishes an
+  exact periodic breather, exponential lifetime law, or later gravitational
+  and particle interpretations.
+invariants:
+  - C-SG-001 is an exact 1+1 solution and cannot be imported as a 3D radial solution
+  - the 3D radial equation must be derived from a declared 3+1 scalar action with the 2/r geometric term
+  - regularity at r=0 and the finite-domain outer boundary must be explicit
+  - finite-time oscillon simulation evidence is not an exact existence or infinite-lifetime theorem
+  - solver success, energy or boundary flux, localization, frequency, and refinement are load-bearing
+  - pending P3D2/P3D3 and source units C1/E1/E2 cannot be accepted dependencies
+allowed_imports:
+  - the normalized sine-Gordon potential 1-cos(u) as a declared 3+1 model extension
+  - standard radial calculus and spherical volume measure 4*pi*r^2 dr
+  - SciPy/NumPy finite-difference method-of-lines and an independent explicit scheme
+  - P3D1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote resolution-bounded finite-time oscillon evidence for a specified
+      radial sine-Gordon IVP, with conservation/localization/frequency metrics
+  - id: B
+    description: >-
+      Construct a time-periodic radial Fourier/BVP quasi-breather with an
+      explicitly controlled radiative tail if direct IVP evidence is ambiguous
+  - id: C
+    description: >-
+      Treat the exact 1+1 breather times a radial or transverse envelope as a
+      genuine 3D solution without solving the radial PDE
+uniqueness_evidence: null
+selection_criteria:
+  - exact equation and radial-action derivation with origin regularity
+  - clean solver exit and finite values
+  - spatial, timestep or tolerance, and domain refinement of claim metrics
+  - controlled total-energy balance and boundary-reflection audit
+  - persistent core localization and repeated oscillation over a predeclared finite window
+  - sub-threshold dominant frequency resolved independently of source comparators
+  - independent method or soluble linear/small-amplitude limit
+  - mutations that disperse, violate regularity, or remove the geometric term
+claims_proposed:
+  - provisional C-PDE-001
+comparators_blinded_until: >-
+  radial_equation_initial_data_boundaries_metrics_refinement_and_mutations_frozen
+status: accepted

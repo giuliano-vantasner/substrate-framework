@@ -87,6 +87,7 @@ from .numerics import (
     solve_bvp_evidence,
     solve_ivp_evidence,
     solve_method_of_lines,
+    trapezoid_integral,
 )
 from .optical_geometry import (
     index_from_potential,
@@ -145,6 +146,17 @@ from .radial_energy import (
     capillary_energy,
     line_energy,
     spherical_shell_energy,
+)
+from .radial_sine_gordon import (
+    FrequencyEvidence,
+    RadialEvolution,
+    estimate_angular_frequency,
+    evolve_radial_sine_gordon_leapfrog,
+    evolve_radial_sine_gordon_mol,
+    gaussian_radial_seed,
+    radial_gradient,
+    radial_laplacian,
+    radial_sine_gordon_energy,
 )
 from .renormalization import (
     one_loop_inverse_coupling_squared,
