@@ -1,0 +1,40 @@
+campaign: P031
+title: Conditional quartic Q-ball profile, charge curve, and EM6 stability audit
+source_baseline: substrate@6d1f4e0
+source_units: [EM6]
+base_release: v0.26.0
+adjudicated_at: '2026-08-01T16:37:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Exact residuals, independent coefficient balance, first-integral
+    rederivation, and accepted-current integration close the conditional
+    profile and charge curve while leaving stability as a separate theorem.
+competing_candidates:
+  - id: B
+    decision: rejected_because_the_charge_convention_and_exact_integral_close_against_C-U1-001
+  - id: C
+    decision: rejected_because_EM6_encodes_neither_a_fluctuation_operator_nor_the_VK_hypotheses_and_its_D_ge_2_import_does_not_settle_the_declared_1_plus_1_model
+claims:
+  - id: C-QBL-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_first_integral_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-QBL-001-review.md
+source_disposition:
+  EM6: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P031-em6-quartic-qball/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-3/bridge_EM6_derived_profile_stability.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P031-em6-quartic-qball/reviews/independent_first_integral_review.py
+  - .venv/bin/python -m pytest -q tests/test_quartic_qball.py tests/test_u1_charge.py
+debt: []
+status: accepted

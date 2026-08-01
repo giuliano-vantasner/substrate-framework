@@ -1,0 +1,9 @@
+PASS [P031-INDEPENDENT] multiplication by f-prime gives the conserved first integral
+PASS [P031-INDEPENDENT] the nonzero turning point independently fixes A-squared
+PASS [P031-INDEPENDENT] the independently constructed homoclinic profile obeys that integral
+PASS [P031-INDEPENDENT] differentiating the first-integral solution recovers the ODE
+PASS [P031-INDEPENDENT] direct norm integration gives the accepted-current charge
+PASS [P031-INDEPENDENT] independent differentiation fixes the charge maximum and branch signs
+PASS [P031-INDEPENDENT] profile and charge identities leave a spectral verdict unconstrained
+ALL 7 CHECKS PASS [P031-INDEPENDENT]
+P031 INDEPENDENT FIRST-INTEGRAL REVIEW ALL 7 CHECKS PASS

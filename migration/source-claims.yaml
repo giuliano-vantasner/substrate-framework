@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 190
-  qualified: 22
+  pending_adjudication: 189
+  qualified: 23
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -494,17 +494,14 @@ units:
   disposition: qualified
   accepted_claims:
   - C-GAU-001
-  qualification: >-
-    EM2's local covariance, invariant matter algebra, curvature commutator, and
-    conditional integer-winding flux are accepted in C-U1-001's convention. Its
-    opposite current label, half-flux inference, uniqueness claim, wall-probe
-    reading, Maxwell dynamics, photon, and physical electromagnetism are not.
+  qualification: EM2's local covariance, invariant matter algebra, curvature commutator, and conditional
+    integer-winding flux are accepted in C-U1-001's convention. Its opposite current label, half-flux
+    inference, uniqueness claim, wall-probe reading, Maxwell dynamics, photon, and physical electromagnetism
+    are not.
   evidence:
   - campaigns/P030-em2-local-u1/reviews/source_adjudication.md
-  note: >-
-    P030 derives the accepted-current coupling sign, separates integer winding
-    from fractional holonomy, and proves that local symmetry leaves every
-    gauge-kinetic coefficient free.
+  note: P030 derives the accepted-current coupling sign, separates integer winding from fractional holonomy,
+    and proves that local symmetry leaves every gauge-kinetic coefficient free.
 - source_unit: EM3
   phase: phase-3
   path: merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py
@@ -615,8 +612,17 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-QBL-001
+  qualification: EM6's declared quartic ODE has the accepted exact sech family and charge curve. Its charge-slope
+    signs do not establish VK, spectral, orbital, or nonlinear stability, and the missing theorem plus
+    a D>=2/1+1 mismatch defeats the claimed forced complex ontology.
+  evidence:
+  - campaigns/P031-em6-quartic-qball/reviews/source_adjudication.md
+  note: P031 independently derives the first integral and accepted-current charge, rejects EM1's different
+    width, and classifies same-data shooting as regression evidence rather than independent stability
+    or existence proof.
 - source_unit: EM7
   phase: phase-3
   path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py
@@ -1725,15 +1731,13 @@ units:
   - C-LIE-001
   - C-RGE-001
   - C-RGE-002
-  qualification: QCD3's exact standard SU(3) invariants and premise-explicit
-    one-loop coefficient specialization are accepted, but it does not derive the
-    loop weights or substrate field content and establishes neither unique SU(3)
-    selection, a physical substrate/QCD identity, nor confinement.
+  qualification: QCD3's exact standard SU(3) invariants and premise-explicit one-loop coefficient specialization
+    are accepted. It does not derive the loop weights or substrate field content and establishes neither
+    unique SU(3) selection, a physical substrate/QCD identity, nor confinement.
   evidence:
   - campaigns/P024-su3-one-loop-coefficient/reviews/source_adjudication.md
-  note: P024 passes loop weights as explicit API inputs, replaces the numerical
-    running sweep with an exact derivative and limit, and keeps YM1/EM5 outside
-    the accepted dependency closure.
+  note: P024 keeps the perturbative weights as explicit API inputs, replaces the numerical running sweep
+    by an exact derivative and limit, and excludes pending YM1/EM5 from the accepted dependency closure.
 - source_unit: QCD5
   phase: phase-8
   path: merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py
@@ -1970,15 +1974,14 @@ units:
   accepted_claims:
   - C-VTX-001
   - C-VTX-002
-  qualification: CF1's conditional Abelian-Higgs equations, finite-energy flux,
-    linearized inverse lengths, and rebuilt resolution-bounded BVP/tension
-    evidence are accepted. It does not establish a substrate, dual,
-    chromoelectric, QCD, confinement, absolute-scale, or v=0-uniqueness claim.
+  qualification: CF1's conditional Abelian-Higgs equations, finite-energy flux, linearized inverse lengths,
+    and rebuilt resolution-bounded BVP/tension evidence are accepted. It does not establish a substrate,
+    dual, chromoelectric, QCD, confinement, absolute-scale, or v=0-uniqueness claim.
   evidence:
   - campaigns/P026-abelian-higgs-vortex/reviews/source_adjudication.md
-  note: The pinned source fails at removed np.trapz before its numerical tally;
-    P026 reconstructs it with one consistent general-g convention, shared
-    solver evidence, full refinements, and independent finite differences.
+  note: The pinned source fails at removed np.trapz before its numerical tally; P026 reconstructs it with
+    one consistent general-g convention, shared solver evidence, full refinements, and independent finite
+    differences.
 - source_unit: CF2
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
@@ -2020,15 +2023,13 @@ units:
   disposition: qualified
   accepted_claims:
   - C-FLX-001
-  qualification: CF2's fixed-area field and field-energy linearity are accepted
-    together with the separately derived endpoint-work slope and exact equality
-    condition. It does not establish q=Phi/2, a CF1 tension identity, physical
-    quark/QCD variables, Riesz dynamics, area law, or confinement.
+  qualification: CF2's fixed-area field and field-energy linearity are accepted together with the separately
+    derived endpoint-work slope and exact equality condition. It does not establish q=Phi/2, a CF1 tension
+    identity, physical quark/QCD variables, Riesz dynamics, area law, or confinement.
   evidence:
   - campaigns/P027-fixed-flux-tube-linearity/reviews/source_adjudication.md
-  note: P027 shows that CF2's executable energy path never uses q, adds
-    factor-of-two and variable-area counterexamples, and classifies effective
-    area inversion as reconstruction.
+  note: P027 shows that CF2's executable energy path never uses q, adds factor-of-two and variable-area
+    counterexamples, and classifies effective area inversion as reconstruction.
 - source_unit: CF3
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
@@ -2073,17 +2074,13 @@ units:
   accepted_claims:
   - C-LIE-002
   - C-WIL-001
-  qualification: >-
-    CF3's complete SU(3) center/triality algebra and the conditional large-time
-    consequences of its declared area and perimeter loop laws are accepted. It
-    does not derive or select a Wilson law, physical sector map, string tension,
-    screening dynamics, gauge phase, or confinement mechanism.
+  qualification: CF3's complete SU(3) center/triality algebra and the conditional large-time consequences
+    of its declared area and perimeter loop laws are accepted. It does not derive or select a Wilson law,
+    physical sector map, string tension, screening dynamics, gauge phase, or confinement mechanism.
   evidence:
   - campaigns/P028-su3-center-wilson/reviews/source_adjudication.md
-  note: >-
-    P028 solves the full fundamental commutant, makes center membership and
-    order mutation-sensitive, and supplies a same-center perimeter-law
-    countermodel to CF3's physical interpretation.
+  note: P028 solves the full fundamental commutant, makes center membership and order mutation-sensitive,
+    and supplies a same-center perimeter-law countermodel to CF3's physical interpretation.
 - source_unit: CF4
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF4_dimensional_transmutation.py
@@ -2124,14 +2121,13 @@ units:
   - C-RGE-001
   - C-RGE-002
   - C-DIM-007
-  qualification: CF4's one-loop solution, formal pole, and RG-invariance claims
-    map to accepted C-RGE-001/C-RGE-002, and its sole-scale exponent is accepted
-    as C-DIM-007. The source does not establish a nonzero string tension,
+  qualification: CF4's one-loop solution, formal pole, and RG-invariance claims map to accepted C-RGE-001/C-RGE-002,
+    and its sole-scale exponent is accepted as C-DIM-007. It does not establish a nonzero string tension,
     confinement, a dimensionless prefactor, or perturbative control at Lambda.
   evidence:
   - campaigns/P025-cf4-dimensional-transmutation/reviews/source_adjudication.md
-  note: P025 supplies an extra-scale guard and same-flow zero-tension
-    countermodel; the source's numerical limit sweep is regression evidence only.
+  note: P025 adds an extra-scale guard and a same-flow zero-tension countermodel; CF4's numerical limit
+    sweep is regression evidence only.
 - source_unit: CF5
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py
@@ -2177,17 +2173,13 @@ units:
   - C-VTX-001
   - C-VTX-002
   - C-FLX-001
-  duplicate_reason: >-
-    CF5 repeats the accepted vortex equations, flux, lengths, and demo tension,
-    then defines the effective area by inverting C-FLX-001's energy slope. The
-    resulting closure is an identity for every positive supplied tension, and
-    the ratio window supplies no independent profile geometry or constraint.
+  duplicate_reason: CF5 repeats the accepted vortex equations, flux, lengths, and demo tension, then defines
+    effective area by inverting C-FLX-001's slope. The round trip holds for every positive supplied tension
+    and adds no geometry.
   evidence:
   - campaigns/P029-cf5-tension-consistency-audit/reviews/source_adjudication.md
-  note: >-
-    The pinned source currently fails before its first check at removed
-    np.trapz. P029 independently proves the information duplication and broad
-    comparison-window weakness without rerunning accepted BVP evidence.
+  note: The pinned source fails before its first check at removed np.trapz. P029 proves the duplication
+    and comparison-window weakness without rerunning accepted BVP evidence.
 - source_unit: FG1
   phase: phase-11
   path: merged-framework/bridges/phase-11/bridge_FG1_charged_soliton_reconciliation.py
@@ -7776,8 +7768,9 @@ units:
   evidence:
   - campaigns/P017-mass-unit-identity/attempts/0002/result.yaml
   - campaigns/P017-mass-unit-identity/reviews/source_adjudication.md
-  note: P017 proves that MR1's shared-factor unit equality is exactly C-SK-001 and does not
-    establish its arbitrary-model or sector-bookkeeping narrative.
+  note: P017 proves that MR1's common-unit factorization is exactly the conditional iff already accepted
+    as C-SK-001. Its generic cancellation adds no distinct consumer, and its arbitrary-model and sector-bookkeeping
+    readings are not consequences of the equations.
 - source_unit: MR2
   phase: phase-44
   path: merged-framework/bridges/phase-44/bridge_MR2_bps_normalization_pi_squared.py
@@ -8248,13 +8241,13 @@ units:
   - C-DIM-002
   - C-DIM-003
   - C-SK-001
-  qualification: EL1's exact basis, mass-coordinate bijection, and conditional mass-unit equality
-    are accepted, but it does not predict the coordinate, derive a ratio or absolute scale, eliminate
-    the import, or prove one semantic role for every lexical consumer.
+  qualification: EL1's primitive-basis mass unit, lossless dimensionless coordinate, and conditional Skyrme
+    equality are accepted. It does not predict the coordinate, eliminate the physical import, derive a
+    mass ratio or absolute scale, or prove one semantic role for every lexical consumer.
   evidence:
   - campaigns/P018-imported-mass-coordinate/reviews/source_adjudication.md
-  note: P018 preserves the arbitrary coordinate and replaces EL1's file-level regex semantics with
-    an explicit lexical-evidence ceiling.
+  note: P018 supplies the exact forward/inverse coordinate APIs and demonstrates that EL1.6 confuses dimensionless
+    with derived while EL1.7 tests only file-level token co-occurrence in a restricted phase subset.
 - source_unit: EL2
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py
@@ -8298,13 +8291,14 @@ units:
   accepted_claims:
   - C-TOP-001
   - C-U1-001
-  qualification: EL2's exact winding-sign character and conditional U1 current are accepted,
-    but fermionic statistics, composite baryon number, unit/electric charge, 3D stability,
-    Standard Model classification, and electron identity are not derived.
+  qualification: EL2's integer winding-sign character and conditional complex-field current are accepted.
+    It does not derive fermionic statistics, the claimed composite's baryon number, a unit-normalized
+    or electric charge, 3+1 stability, a Standard Model slot, or an electron identification.
   evidence:
   - campaigns/P019-winding-parity-labels/reviews/source_adjudication.md
-  note: P019 proves the advertised Derrick stationary point is a maximum and keeps all physical
-    label maps outside the accepted winding character.
+  note: P019 separates the exact label character from physical statistics and shows that EL2's negative-potential
+    Derrick stationary point has negative curvature, so the advertised stability conclusion fails its
+    own oracle.
 - source_unit: EL3
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL3_me_is_not_a_dimensionful_primitive.py
@@ -8346,13 +8340,14 @@ units:
   - C-DIM-003
   - C-DIM-004
   - C-SK-001
-  qualification: EL3's exact mass monomial and conditional unit-product composition are accepted,
-    but its equations and coupling are not derived and it does not eliminate the mass coordinate,
-    tie length to granularity, or establish an electron interpretation.
+  qualification: EL3's set-local mass monomial and premise-explicit unit-product composition are accepted.
+    It does not derive the input equations or coupling, eliminate the mass coordinate, identify the length
+    with granularity, or establish an electron or Compton interpretation.
   evidence:
   - campaigns/P020-conditional-mass-length-coordinate/reviews/source_adjudication.md
-  note: P020 retains the dimensionless coupling freedom and identifies the mass column's lost
-    nullspace coordinate rather than treating unchanged dimension rank as information elimination.
+  note: P020 retains arbitrary functions of the dimensionless coupling, identifies the dropped mass column's
+    nullspace coordinate, and classifies the coupling-free alternative as a substitution of other free
+    inputs.
 - source_unit: EL4
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL4_me_in_the_frontier_form.py
@@ -8401,15 +8396,14 @@ units:
   - C-DIM-003
   - C-DIM-005
   - C-RGE-001
-  qualification: EL4's declared one-loop flow and premise-explicit mass-coordinate
-    composition are accepted, but its beta function, soliton coefficient, hadronic
-    offset, granularity map, over-determination prediction, and electron identity are
-    not derived.
+  qualification: EL4's declared one-loop flow and premise-explicit mass-coordinate composition are accepted.
+    It does not derive the beta function, numerical soliton coefficient, hadronic offset, granularity
+    identification, over-determination prediction, electron mass, or electron identity.
   evidence:
   - campaigns/P021-frontier-rg-coordinate/reviews/source_adjudication.md
-  note: P021 distinguishes total from partial RG differentiation, retains the free
-    mass-energy ratio, and shows that EL4's fabricated free-length matrix remains
-    full-column-rank rather than destroying over-determination.
+  note: P021 distinguishes total from partial RG differentiation, retains the free mass-energy ratio,
+    and shows that EL4's fabricated free-length matrix has rank three and nullity zero rather than the
+    claimed loss of determination.
 - source_unit: EL5
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL5_od_instrument_and_consumers.py
@@ -8450,15 +8444,14 @@ units:
   disposition: qualified
   accepted_claims:
   - C-LIN-001
-  qualification: EL5's coefficient-rank and augmented-consistency distinctions are
-    accepted, but it does not derive a closed mass ratio, reopen a null direction in
-    its restored-electron matrix, establish an electron output, or replay accepted
-    framework consumers.
+  qualification: EL5's exact coefficient-rank and augmented-consistency distinctions are accepted. It
+    does not derive a closed electron/hadron ratio, reopen a null direction in its restored-electron matrix,
+    establish an electron output, or replay accepted-framework consumers.
   evidence:
   - campaigns/P022-linear-system-consistency/reviews/source_adjudication.md
-  note: P022 preserves the seven predecessor subprocess tallies as compatibility
-    evidence while separating EL5's two different control matrices and retaining
-    the free shape and hadronic-offset inputs.
+  note: P022 preserves the seven predecessor subprocess tallies as historical compatibility evidence,
+    distinguishes EL5's two different control matrices, and retains both free inputs in its conditional
+    ratio.
 - source_unit: EL6
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL6_confrontation_and_ledger.py
@@ -8504,12 +8497,10 @@ units:
   - C-DIM-003
   - C-DIM-005
   - C-SK-001
-  qualification: EL6's symbolic expression and conditional ratio map to accepted
-    coordinate and Skyrme relations, but its measured-value inversions calibrate free
-    inputs and do not establish an absolute mass, particle identity, parameter closure,
-    or empty framework debt ledger.
+  qualification: EL6's symbolic expression and conditional ratio map to accepted coordinate and Skyrme
+    relations. Its measured-value inversions calibrate free inputs and do not establish an absolute mass,
+    particle identity, parameter closure, or empty framework debt ledger.
   evidence:
   - campaigns/P023-confrontation-closure-audit/reviews/source_adjudication.md
-  note: P023 shows that required length and hadronic offset depend explicitly on the
-    target comparator and that the restricted-namespace reconstruction is tautological
-    after the comparator-derived offset is supplied.
+  note: P023 proves that required length and hadronic offset depend on the target comparator and that
+    the restricted-namespace reconstruction is tautological after the comparator-derived offset is supplied.

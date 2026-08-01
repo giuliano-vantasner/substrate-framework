@@ -1,0 +1,43 @@
+id: P031
+base_release: v0.26.0
+base_commit: 422bcaa
+source_baseline: substrate@6d1f4e0
+source_units: [EM6]
+question: >-
+  Derive EM6's quartic stationary-profile solution and accepted-current charge
+  curve, and determine which derivative-sign statements fall short of a
+  spectral or nonlinear stability theorem.
+invariants:
+  - C-U1-001 fixes the stationary-phase current and real-field zero-current result
+  - C-GAU-001 does not force a complex scalar ontology or gauge dynamics
+  - a VK sign criterion is an additional stability premise, not an equation residual
+allowed_imports:
+  - C-U1-001
+  - C-GAU-001 only as downstream local-gauge context
+  - exact ODE and hyperbolic-function calculus
+  - EM6 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote the exact conditional sech solution, forced width/amplitude
+      within its ansatz, charge curve, and derivative-sign classification
+      without calling that sign a stability proof
+  - id: B
+    description: >-
+      Promote only the exact stationary ODE solution if EM6's charge convention
+      or derivative branch does not close against C-U1-001
+  - id: C
+    description: >-
+      Promote a stable physical charged excitation and claim that stability
+      forces complex U1 ontology in the substrate
+uniqueness_evidence: null
+selection_criteria:
+  - exact ODE residual and ansatz coefficient completeness
+  - accepted-current normalization and domain closure
+  - distinction between charge-slope sign and spectral stability
+  - counterprofile and endpoint sensitivity
+  - dependency and ontology economy
+claims_proposed:
+  - provisional C-QBL-001
+comparators_blinded_until: ode_profile_charge_domain_and_stability_obligations_frozen
+status: accepted

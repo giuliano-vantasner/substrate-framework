@@ -156,6 +156,7 @@ def extract_candidate(
         "qualification",
         "refutation",
         "duplicates",
+        "duplicate_reason",
         "scope_basis",
         "evidence",
         "note",

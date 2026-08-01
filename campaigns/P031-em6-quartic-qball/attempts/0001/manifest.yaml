@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [EM6]
+framework_base: 422bcaa
+question: >-
+  Which exact profile and charge statements survive after separating charge
+  slope from spectral stability and ontology claims?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P031-em6-quartic-qball/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-3/bridge_EM6_derived_profile_stability.py
+oracle:
+  kind: exact_profile_first_integral_and_current_algebra
+  mutation_requirements:
+    - inverse width amplitude and quartic coefficient are load-bearing
+    - Gaussian and EM1-width counterprofiles fail the declared ODE
+    - a charge-slope sign cannot stand in for a spectral verdict
+status: passed

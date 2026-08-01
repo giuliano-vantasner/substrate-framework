@@ -382,3 +382,70 @@ units:
       P027 shows that CF2's executable energy path never uses q, adds
       factor-of-two and variable-area counterexamples, and classifies effective
       area inversion as reconstruction.
+  CF3:
+    disposition: qualified
+    accepted_claims:
+      - C-LIE-002
+      - C-WIL-001
+    qualification: >-
+      CF3's complete SU(3) center/triality algebra and the conditional
+      large-time consequences of its declared area and perimeter loop laws are
+      accepted. It does not derive or select a Wilson law, physical sector map,
+      string tension, screening dynamics, gauge phase, or confinement mechanism.
+    evidence:
+      - campaigns/P028-su3-center-wilson/reviews/source_adjudication.md
+    note: >-
+      P028 solves the full fundamental commutant, makes center membership and
+      order mutation-sensitive, and supplies a same-center perimeter-law
+      countermodel to CF3's physical interpretation.
+  CF5:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-VTX-001
+      - C-VTX-002
+      - C-FLX-001
+    duplicates:
+      - C-VTX-001
+      - C-VTX-002
+      - C-FLX-001
+    duplicate_reason: >-
+      CF5 repeats the accepted vortex equations, flux, lengths, and demo
+      tension, then defines effective area by inverting C-FLX-001's slope. The
+      round trip holds for every positive supplied tension and adds no geometry.
+    evidence:
+      - campaigns/P029-cf5-tension-consistency-audit/reviews/source_adjudication.md
+    note: >-
+      The pinned source fails before its first check at removed np.trapz. P029
+      proves the duplication and comparison-window weakness without rerunning
+      accepted BVP evidence.
+  EM2:
+    disposition: qualified
+    accepted_claims:
+      - C-GAU-001
+    qualification: >-
+      EM2's local covariance, invariant matter algebra, curvature commutator,
+      and conditional integer-winding flux are accepted in C-U1-001's
+      convention. Its opposite current label, half-flux inference, uniqueness
+      claim, wall-probe reading, Maxwell dynamics, photon, and physical
+      electromagnetism are not.
+    evidence:
+      - campaigns/P030-em2-local-u1/reviews/source_adjudication.md
+    note: >-
+      P030 derives the accepted-current coupling sign, separates integer
+      winding from fractional holonomy, and proves that local symmetry leaves
+      every gauge-kinetic coefficient free.
+  EM6:
+    disposition: qualified
+    accepted_claims:
+      - C-QBL-001
+    qualification: >-
+      EM6's declared quartic ODE has the accepted exact sech family and charge
+      curve. Its charge-slope signs do not establish VK, spectral, orbital, or
+      nonlinear stability, and the missing theorem plus a D>=2/1+1 mismatch
+      defeats the claimed forced complex ontology.
+    evidence:
+      - campaigns/P031-em6-quartic-qball/reviews/source_adjudication.md
+    note: >-
+      P031 independently derives the first integral and accepted-current charge,
+      rejects EM1's different width, and classifies same-data shooting as
+      regression evidence rather than independent stability or existence proof.

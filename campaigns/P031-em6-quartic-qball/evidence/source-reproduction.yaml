@@ -1,0 +1,14 @@
+source_unit: EM6
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-3/bridge_EM6_derived_profile_stability.py
+sha256: 926df2dc5014042472b3d47576af06676eb654d9da4634f147c7044d4e91f897
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-3/bridge_EM6_derived_profile_stability.py
+observed_at: '2026-08-01T16:33:00Z'
+exit_code: 0
+terminal_tally: ALL 11 CHECKS PASS
+scope_note: >-
+  The exact profile and charge checks reproduce. The source does not encode a
+  VK theorem or fluctuation spectrum; its two sample counts use one adaptive
+  solve at fixed tolerances, and its forced-ontology check is a Boolean chain
+  containing an imported D>=2 assertion for a declared 1+1 model.

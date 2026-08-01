@@ -103,6 +103,14 @@ from .renormalization import (
     single_scale_tension,
     transmuted_mass_coordinate,
 )
+from .quartic_qball import (
+    quartic_qball_amplitude,
+    quartic_qball_charge,
+    quartic_qball_charge_derivative,
+    quartic_qball_inverse_width,
+    quartic_qball_profile,
+    quartic_qball_residual,
+)
 from .sine_gordon import (
     breather_action,
     breather_action_lattice_adjacent_gap,
@@ -257,6 +265,12 @@ __all__ = [
     "one_loop_inverse_coupling_squared",
     "one_loop_transmutation_scale",
     "quantized_flux",
+    "quartic_qball_amplitude",
+    "quartic_qball_charge",
+    "quartic_qball_charge_derivative",
+    "quartic_qball_inverse_width",
+    "quartic_qball_profile",
+    "quartic_qball_residual",
     "single_scale_tension",
     "refinement_study",
     "render_claim_memory",

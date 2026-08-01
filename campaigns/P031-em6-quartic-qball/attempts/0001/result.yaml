@@ -1,0 +1,14 @@
+attempt: 0001
+completed_at: '2026-08-01T16:37:00Z'
+exit_code: 0
+terminal_tally: 24
+verdict:
+  C-QBL-001: symbolic_verified
+evidence:
+  - exact sech residual and independent coefficient solve
+  - first integral localization and accepted-current charge integration
+  - endpoint maximum and derivative-sign classification
+  - width amplitude coefficient Gaussian and EM1-width mutations
+  - missing fluctuation oracle and dimension-mismatch audit
+status: passed
+stdout: stdout.txt

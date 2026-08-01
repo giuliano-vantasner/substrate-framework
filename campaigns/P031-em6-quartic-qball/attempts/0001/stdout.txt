@@ -1,0 +1,3 @@
+PASS [P031-EM6] 24 exact profile, current, mutation, and implication-boundary checks
+ALL 24 CHECKS PASS [P031-EM6]
+P031 EM6 QUARTIC-QBALL AUDIT ALL 24 CHECKS PASS
