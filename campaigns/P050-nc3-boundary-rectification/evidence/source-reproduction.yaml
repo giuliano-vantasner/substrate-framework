@@ -1,0 +1,19 @@
+source_unit: NC3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-15/bridge_NC3_nonlinear_rectification.py
+sha256: dceed4b3d8f59daa75bbd6b31e9a726de99f180e252accb19f7d0ae625c5c9bd
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-15/bridge_NC3_nonlinear_rectification.py
+python: 3.12.2
+sympy: 1.14.0
+exit_code: 0
+elapsed_seconds: 0.48
+terminal_tally: ALL 18 CHECKS PASS
+audited_observations:
+  - The executable derives the fixed-coordinate parity sign and the sine-convention harmonic correlation exactly.
+  - The prose displays a cosine trace in one equation while the executable and later convention note use a sine trace; the unshifted cosine formula would instead be minus four B sin(delta) over omega.
+  - The bare sinusoidal boundary time derivative integrates to zero while the checked sign correlation is nonzero at delta zero, directly disproving the claimed charge-transfer discriminator implication.
+  - The checks encode observable parity weight but do not test invariance of the dynamics, domain, boundary condition, state ensemble, or a physical weak-sector map.
+  - The labels parity-even coupling and parity violation are narrative interpretations not established by the exact zero or sign-flip assertions.
+  - The integer charge-transfer statement and epsilon-to-phase-to-chirality dictionary are declared imported from pending NC4 and weak-sector source units.

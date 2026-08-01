@@ -1,0 +1,50 @@
+id: P050
+base_release: v0.44.0
+base_commit: 476e8a4
+source_baseline: substrate@6d1f4e0
+source_units: [NC3]
+question: >-
+  Derive the exact periodic full-field boundary rectification functional and
+  its parity, time-shift, scaling, and sinusoidal phase laws, then determine
+  whether NC3's claimed physical parity violation follows.
+invariants:
+  - the normalized real 1+1 sine-Gordon field and scalar spatial-parity convention are retained
+  - a coordinate derivative at a fixed parity center is distinguished from an outward-normal derivative on a chosen half-line boundary
+  - transformation of an observable, invariance of dynamics and boundary data, nonzero state value, and physical symmetry violation are distinct predicates
+  - the functional uses full-field boundary derivatives and imports no chiral decomposition
+  - C-SG-011 and C-SG-012 forbid a selected handed sector or V-A interpretation without additional accepted dynamics
+  - pending G1, G2, NC4, W1, and W3 claims cannot enter accepted dependency closure
+allowed_imports:
+  - C-SG-001 normalized sine-Gordon field and period convention
+  - C-SG-011 scalar spatial parity and interpretation ceiling
+  - C-SG-012 parity covariance of the canonical stress sector
+  - exact elementary integration of piecewise smooth periodic functions
+  - NC3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Define the coordinate-boundary correlation integral, derive its exact
+      pullback under parity and time translation, and evaluate a convention-
+      explicit sinusoidal pair without assigning physical symmetry breaking
+  - id: B
+    description: >-
+      Replace the coordinate spatial derivative by an outward-normal
+      derivative on a declared half-line boundary and audit the additional
+      orientation and domain data required for a physical boundary observable
+  - id: C
+    description: >-
+      Treat odd transformation or a nonzero value of the functional as a
+      self-sufficient nonlinear physical parity-violation or weak V-A mechanism
+uniqueness_evidence: null
+selection_criteria:
+  - exact compatibility with scalar parity and the accepted sine-Gordon dynamics
+  - explicit boundary point, domain orientation, time period, sign convention, and zero-set hypotheses
+  - exact harmonic phase and amplitude normalization
+  - correct centered-breather, parity-paired, phase-shift, amplitude-sign, and time-shift limits
+  - no pending weak, gravity, or NC4 dependency and no hidden boundary-condition premise
+  - reusable API fit and assumption economy
+claims_proposed:
+  - provisional C-SG-013 exact periodic boundary-rectification transformation and harmonic-correlation theorem
+comparators_blinded_until: >-
+  functional_boundary_orientation_phase_conventions_exact_oracles_mutations_and_interpretation_ceiling_frozen
+status: accepted

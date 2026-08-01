@@ -1,0 +1,28 @@
+attempt: 0001
+campaign: P050
+candidate: A
+status: passed
+verification: symbolic_verified
+primary_checks: 37
+independent_checks: 8
+targeted_tests: 61
+source_reproduction:
+  exit_code: 0
+  terminal_tally: ALL 18 CHECKS PASS
+positive_results:
+  - exact fixed-coordinate parity pullback at arbitrary boundary point and oddness at a parity center
+  - exact sine-convention sinusoidal correlation with temporal-amplitude orientation and relative phase
+  - separate exact right-half-line topological charge-change conversion
+  - exact distinction between fixed coordinate and parity-mapped outward-normal channels
+  - exact zero sign correlation for every fixed boundary of the accepted rest breather over one period
+counterexamples:
+  - nonzero sign correlation with zero integrated boundary field change and zero topological charge transfer
+  - zero sign correlation with a separately nonzero boundary field change and unit topological transfer
+  - continuously scalable half-unit sign correlation, excluding quantization
+source_qualifications:
+  - one NC3 prose equation uses cosine while the executable uses the declared sine convention
+  - the source conflates winding work and sign correlation under one W_Q name
+  - odd observable transformation and nonzero state value do not establish physical parity-violating dynamics
+  - quadrature-phase zero does not establish a parity-even coupling
+  - charge discrimination, integer transfer, epsilon-chirality mapping, and weak-force readings require pending imports
+debt: []

@@ -792,3 +792,29 @@ units:
       independently checks the Noether and Jacobian normalizations, proves the
       parity exchange and trace relation, and records the exact conversion
       from NC2's rescaled auxiliary quantities.
+  NC3:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-013
+    qualification: >-
+      NC3's fixed-coordinate parity pullback and the executable's sine-
+      convention full-period formula are exact. The source also uses an
+      unshifted cosine trace in one prose equation, conflates the boundary
+      winding integral with a distinct sign correlation under the same W_Q
+      label, and incorrectly treats that continuously scalable correlation as
+      a sufficient topological-charge discriminator. It does not transform
+      the half-line outward normal and domain, a quadrature-phase zero does not
+      prove a parity-even coupling, and odd observable transformation does not
+      establish physical parity-violating dynamics. Integer transfer,
+      epsilon-to-chirality mapping, chiral anomaly, V-A interaction, weak
+      force, particle identity, and substrate realization remain unproved
+      pending imports.
+    evidence:
+      - campaigns/P050-nc3-boundary-rectification/reviews/source_adjudication.md
+      - campaigns/P050-nc3-boundary-rectification/evidence/source-reproduction.yaml
+    note: >-
+      P050 separately names winding and sign-correlation functionals, derives
+      the general boundary-point and oriented-normal parity maps, fixes both
+      sine and cosine phase conventions, gives implication counterexamples,
+      and proves the accepted rest breather has zero complete-period
+      correlation at every fixed boundary.

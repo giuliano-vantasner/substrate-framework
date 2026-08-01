@@ -1,0 +1,6 @@
+PASS [P050-NC3] 37 exact definition, parity, phase, mutation, winding-independence, breather, and dependency checks
+ALL 37 CHECKS PASS [P050-NC3]
+PASS [P050-INDEPENDENT] 8 Fourier, chain-rule, orientation, winding, counterexample, and exact-breather checks
+ALL 8 CHECKS PASS [P050-INDEPENDENT]
+61 passed in targeted boundary-correlation, sine-Gordon, topological-label, and U1 replay
+P001, P048, and P049 verifiers exited with status zero and their accepted terminal tallies

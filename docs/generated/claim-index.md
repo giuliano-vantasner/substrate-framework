@@ -462,6 +462,15 @@ Let phi be a sufficiently smooth real field in normalized 1+1 sine-Gordon conven
 - Compatibility: `native`
 - Dependencies: C-SG-001, C-SG-011
 
+## C-SG-013
+
+Let phi be a sufficiently regular real scalar field and, at a fixed coordinate point b over a declared interval, define the boundary sign correlation R_b[phi]=integral sign(phi_t(t,b))*phi_x(t,b) dt. Under scalar spatial parity phi_P(t,x)=phi(t,-x), the exact fixed-coordinate pullback is R_b[phi_P]=-R_-b[phi]; at the parity center b=0 this is an odd observable. This differs from an outward-normal boundary channel: parity maps a right half-line and its outward derivative -partial_x to a left half-line and +partial_x, making the simultaneously transformed normal derivative unchanged. For sinusoidal traces phi_t=A*sin(omega*t+alpha) and phi_x=B*sin(omega*t+beta), with real nonzero A, real B, and omega>0, integration over one period gives R=4*sign(A)*B*cos(beta-alpha)/omega. A cosine convention for the second trace instead gives -4*sign(A)*B*sin(beta-alpha)/omega, so the phase convention is load-bearing. Separately, on a right half-line x>=b with orientation epsilon^(01)=+1 and time-independent field at positive infinity, the C-SG-011 topological charge changes by Delta Q=-Delta phi(b)/(2*pi)=-(1/(2*pi))*integral phi_t(t,b) dt. Neither this winding integral nor R implies the other: a complete sinusoidal phi_t period has Delta Q=0 while R can be nonzero, R can vanish for a separately nonzero boundary field change, and R scales continuously with B. For every fixed boundary point the exact C-SG-001 rest breather has zero complete-period R; at its symmetry center phi_x vanishes identically. These results establish a conditional boundary correlation and transformation law, not a topological or conserved charge, quantization, charge-transfer discriminator, parity-invariant or parity-breaking boundary condition, selected state, physical parity violation, chiral anomaly, V-A interaction, weak force, particle identity, or substrate realization.
+
+- Accepted in: `v0.45.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-001, C-SG-011, C-SG-012
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

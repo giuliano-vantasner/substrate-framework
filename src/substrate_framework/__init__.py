@@ -39,6 +39,11 @@ from .axisymmetric_radiation import (
     ConditionalAxisymmetricRadiationCoefficients,
     conditional_axisymmetric_radiation_coefficients,
 )
+from .boundary_correlations import (
+    boundary_sign_correlation_density,
+    right_half_line_topological_charge_change,
+    sinusoidal_boundary_sign_correlation,
+)
 from .tt_angular import (
     AxisymmetricSTFReadout,
     TTPolarizationBasis,
@@ -342,6 +347,7 @@ __all__ = [
     "axisymmetric_stf_readout",
     "axisymmetric_stf_tensor",
     "asymptotic_masses",
+    "boundary_sign_correlation_density",
     "breather_action",
     "audit_source_tokens",
     "breather_action_lattice_adjacent_gap",
@@ -457,6 +463,7 @@ __all__ = [
     "render_release_memory",
     "rigid_rotor_energy",
     "rigid_rotor_normalized_action",
+    "right_half_line_topological_charge_change",
     "secant_action_scale",
     "sech_profile_u1_charge",
     "matched_pion_coupling_ratio",
@@ -484,6 +491,7 @@ __all__ = [
     "sine_gordon_stress_tensor_contravariant",
     "sine_gordon_stress_tensor_covariant",
     "sine_gordon_stress_trace",
+    "sinusoidal_boundary_sign_correlation",
     "spatial_parity_transform",
     "static_kink_field",
     "topological_charge_from_boundaries",

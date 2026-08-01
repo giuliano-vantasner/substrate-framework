@@ -1,0 +1,29 @@
+attempt: 0001
+campaign: P050
+candidate: A
+base_release: v0.44.0
+base_commit: 476e8a4
+started_at: '2026-08-02T00:50:00Z'
+completed_at: '2026-08-02T01:02:00Z'
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P050-nc3-boundary-rectification/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-15/bridge_NC3_nonlinear_rectification.py
+    --source-reproduction proposals/P050-nc3-boundary-rectification/evidence/source-reproduction.yaml
+    --migration-queue migration/source-claims.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P050-nc3-boundary-rectification/reviews/independent_boundary_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_boundary_correlations.py
+    tests/test_sine_gordon.py tests/test_topological_labels.py tests/test_u1_charge.py
+verdict: passed
+mechanism: >-
+  The coordinate sign correlation, harmonic formula, half-line winding
+  conversion, oriented-normal distinction, exact rest-breather null, and
+  counterexamples all close exactly with separate names and no pending import.
+next: individual_claim_review_and_promotion_boundary
