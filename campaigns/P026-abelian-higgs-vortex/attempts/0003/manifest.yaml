@@ -1,0 +1,14 @@
+attempt: 0003
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF1]
+framework_base: cf65ac8
+question: >-
+  Do the exact vacuum linearization and strengthened BVP evidence close after
+  normalizing the source-specialization comparison?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P026-abelian-higgs-vortex/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+oracle:
+  kind: exact_variation_and_refinement_bounded_bvp
+status: failed

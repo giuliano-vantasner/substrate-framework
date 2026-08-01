@@ -1,0 +1,43 @@
+id: P026
+base_release: v0.22.0
+base_commit: cf65ac8
+source_baseline: substrate@6d1f4e0
+source_units: [CF1]
+question: >-
+  Determine which exact radial Abelian-Higgs vortex equations, finite-energy
+  boundary consequences, and resolution-bounded BVP evidence CF1 establishes
+  without importing a substrate, chromoelectric, QCD, or confinement identity.
+invariants:
+  - C-DIM-007 does not establish that a positive tension or flux tube exists
+  - integer winding is a model input and C-TOP-001 supplies no gauge-sector identity
+  - numerical BVP evidence remains resolution and domain bounded
+allowed_imports:
+  - exact variational calculus and cylindrical-coordinate algebra
+  - C-DIM-007 only for downstream dimensional composition
+  - scipy solve_bvp through src/substrate_framework/numerics.py
+  - CF1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote exact conditional vortex equations and flux plus separately
+      scoped numerical existence/tension evidence for declared parameters
+  - id: B
+    description: >-
+      Promote only the exact Euler-Lagrange and finite-energy boundary claims
+      because the source BVP evidence does not survive independent refinement
+  - id: C
+    description: >-
+      Promote CF1 as a physical chromoelectric flux tube or confinement
+      mechanism in the accepted substrate sector
+uniqueness_evidence: null
+selection_criteria:
+  - functional-to-equation convention closure
+  - boundary regularity and finite-energy necessity
+  - solver-status residual domain and tolerance refinement
+  - independent numerical or soluble-limit agreement
+  - dependency and interpretation economy
+claims_proposed:
+  - C-VTX-001
+  - C-VTX-002
+comparators_blinded_until: equations_boundary_data_error_norm_and_refinement_thresholds_frozen
+status: accepted

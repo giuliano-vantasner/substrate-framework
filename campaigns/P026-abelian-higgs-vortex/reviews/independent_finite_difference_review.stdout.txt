@@ -1,0 +1,11 @@
+PASS [P026-INDEPENDENT] independent large-radius energy analysis uniquely fixes a infinity
+PASS [P026-INDEPENDENT] independent line integration gives two pi winding over coupling
+FD N=101: max_residual=1.996e-12 tension=4.192120504
+FD N=201: max_residual=5.924e-12 tension=4.206577629
+FD N=401: max_residual=3.144e-11 tension=4.210369079
+PASS [P026-INDEPENDENT] all three finite-difference nonlinear solves close their discrete residuals
+PASS [P026-INDEPENDENT] independent profiles obey boundaries positivity and monotonicity
+PASS [P026-INDEPENDENT] finite-difference tension converges toward the collocation value
+PASS [P026-INDEPENDENT] independent scalar tail is consistent with the exact inverse length two
+ALL 6 CHECKS PASS [P026-INDEPENDENT]
+P026 INDEPENDENT FINITE-DIFFERENCE REVIEW ALL 6 CHECKS PASS

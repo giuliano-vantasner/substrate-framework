@@ -1,0 +1,5 @@
+PASS hash-pinned source
+PASS direct general-coupling functional variation
+FAIL source equations are the gauge-coupling-one specialization
+
+Exit 1. Exact residual inspection returned zero; repaired in attempt 0003.

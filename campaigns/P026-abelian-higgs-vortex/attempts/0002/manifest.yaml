@@ -1,0 +1,18 @@
+attempt: 0002
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF1]
+framework_base: cf65ac8
+question: >-
+  Do the general-coupling functional, exact boundary claims, and strengthened
+  BVP evidence support separate C-VTX-001 and C-VTX-002?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P026-abelian-higgs-vortex/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+oracle:
+  kind: exact_variation_and_refinement_bounded_bvp
+  mutation_requirements:
+    - all radial and coupling signs are load-bearing
+    - finite-energy boundary and flux normalization are load-bearing
+    - tolerance cutoff domain and guess variations are explicit
+status: failed

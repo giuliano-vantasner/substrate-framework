@@ -299,3 +299,21 @@ Conditional on the real virial slope formulas width_slope=(a-b)/2 and energy_slo
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none
+
+## C-VTX-001
+
+For positive g, lambda, and v and positive integer n, declare the radial Abelian-Higgs convention phi=f(r)*exp(i*n*theta), A_theta=a(r)/(g*r), and energy per unit length 2*pi*integral r*dr*[f'^2/2+f^2*(n-a)^2/(2*r^2) +(a'/r)^2/(2*g^2)+lambda*(f^2-v^2)^2/4]. Exact variation gives f''+f'/r-f*(n-a)^2/r^2-lambda*f*(f^2-v^2)=0 and a''-a'/r+g^2*(n-a)*f^2=0. If f approaches v, finite angular energy uniquely requires a to approach n; the declared connection then has flux 2*pi*n/g, while the ungauged positive-winding profile has a logarithmic divergence. Vacuum linearization gives vector and scalar inverse lengths g*v and v*sqrt(2*lambda), both tending to zero as v tends to zero. This conditional model establishes no substrate, dual, chromoelectric, QCD, or confinement identity and no vortex existence.
+
+- Accepted in: `v0.23.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
+## C-VTX-002
+
+Conditional on C-VTX-001 with (v,n,lambda,g)=(1,1,2,1), there is resolution-bounded numerical evidence on truncated radial domains for a nontrivial monotone solution with f(epsilon)=a(epsilon)=0 and f(R)=a(R)=1 and finite positive tension approximately 4.21160. The reference collocation solve uses epsilon=1e-4, R=20, 120 initial points, tolerance 1e-8, at most 100000 nodes, maximum RMS residual below 1.1e-8, and uniform 20001-point trapezoidal energy quadrature. Tightening tolerance reduces tension error; R from 10 through 25 agrees within 1e-5; inner-cutoff error decreases from 1e-2 toward 1e-4; exponential and rational guesses converge to the same branch; matched dimensionless v=1 and v=2 domains give tension ratio four within 1e-5. Independent central finite differences at 101, 201, and 401 points give tensions 4.19212, 4.20658, and 4.21037. This is numeric evidence, not a continuum existence or uniqueness theorem, absolute tension, or physical confinement result.
+
+- Accepted in: `v0.23.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-VTX-001

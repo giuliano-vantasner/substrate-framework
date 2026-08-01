@@ -1,0 +1,17 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF1]
+framework_base: cf65ac8
+question: >-
+  Does the hash-pinned predecessor CF1 reproduce its exact and numerical
+  vortex checks in the current accepted environment?
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+oracle:
+  kind: clean_source_reproduction
+  requirements:
+    - clean process exit
+    - terminal ALL 8 CHECKS PASS tally
+    - numerical checks execute before any verdict is reused
+status: failed

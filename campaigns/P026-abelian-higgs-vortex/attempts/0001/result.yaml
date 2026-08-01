@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T15:41:27Z'
+exit_code: 1
+terminal_tally: null
+failure_class: implementation_compatibility
+diagnosis: >-
+  CF1 passes its two exact variation checks, then exits before its first
+  numerical verdict because NumPy no longer provides np.trapz. No source BVP,
+  tension, screening, or v=0 tally is reproducible in the pinned environment.
+continuation: >-
+  Preserve the source unchanged. Rebuild the canonical calculation with
+  np.trapezoid, shared solver-status/residual evidence, cutoff/domain/tolerance
+  refinement, and an independent finite-difference method.
+status: failed
+stdout: stdout.txt

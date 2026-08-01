@@ -1,0 +1,3 @@
+PASS [C-VTX-001/C-VTX-002] 31 exact, mutation, residual, refinement, and interpretation-boundary checks
+ALL 31 CHECKS PASS [C-VTX-001/C-VTX-002]
+P026 CF1 CONDITIONAL VORTEX AUDIT ALL 31 CHECKS PASS

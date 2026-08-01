@@ -1,0 +1,13 @@
+attempt: 0002
+completed_at: '2026-08-01T15:41:27Z'
+exit_code: 1
+terminal_tally: null
+failure_class: representation
+diagnosis: >-
+  The direct functional variation passed, but a subsequent source-specialization
+  assertion compared algebraically equal SymPy expressions structurally.
+continuation: >-
+  Compare the exact residual difference to zero without changing equations or
+  claim scope.
+status: failed
+stdout: stdout.txt

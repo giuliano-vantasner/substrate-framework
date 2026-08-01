@@ -1,0 +1,17 @@
+attempt: 0004
+completed_at: '2026-08-01T15:41:27Z'
+exit_code: 0
+terminal_tally: 31
+verdict:
+  C-VTX-001: symbolic_verified
+  C-VTX-002: numeric_evidence
+evidence:
+  - exact general-coupling variation and source g=1 specialization
+  - five equation mutations and two boundary mutations
+  - finite-energy logarithmic coefficient and exact flux
+  - exact vacuum linearization and inverse-length limits
+  - solver status boundary residual and nonnegative energy
+  - tolerance outer-domain inner-cutoff and initial-guess studies
+  - matched-domain vacuum-scale-square test and tail regressions
+status: passed
+stdout: stdout.txt

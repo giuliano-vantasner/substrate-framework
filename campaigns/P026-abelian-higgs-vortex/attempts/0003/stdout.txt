@@ -1,0 +1,4 @@
+PASS 18 exact convention, mutation, finite-energy, and flux checks
+FAIL independent vacuum linearization gives the scalar and vector inverse lengths
+
+Exit 1. Rebuilding perturbed profiles before differentiation is attempt 0004.

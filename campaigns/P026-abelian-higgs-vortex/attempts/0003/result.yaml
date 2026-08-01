@@ -1,0 +1,14 @@
+attempt: 0003
+completed_at: '2026-08-01T15:41:27Z'
+exit_code: 1
+terminal_tally: null
+failure_class: representation
+diagnosis: >-
+  Eighteen exact and mutation checks passed. Substituting perturbations into an
+  already-built residual replaced profile values but did not propagate through
+  its derivative nodes, so the linearization oracle omitted derivative terms.
+continuation: >-
+  Construct the perturbed profiles before calling the canonical residual API,
+  then expand in the perturbation parameter.
+status: failed
+stdout: stdout.txt

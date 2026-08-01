@@ -1,0 +1,6 @@
+PASS CF1.1 exact variation
+PASS CF1.1b missing-friction guard
+Traceback at CF1 line 230:
+  AttributeError: module 'numpy' has no attribute 'trapz'
+
+Exit 1 before CF1.2; no terminal tally.

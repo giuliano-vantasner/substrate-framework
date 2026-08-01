@@ -5,6 +5,20 @@ from .action_scales import (
     rigid_rotor_normalized_action,
     secant_action_scale,
 )
+from .abelian_higgs_vortex import (
+    VortexParameters,
+    VortexSolution,
+    angular_log_coefficient,
+    asymptotic_masses,
+    euler_lagrange_residuals as vortex_euler_lagrange_residuals,
+    quantized_flux,
+    radial_energy_lagrangian as vortex_radial_energy_lagrangian,
+    solve_vortex_bvp,
+    vortex_boundary_residual,
+    vortex_bvp_equations,
+    vortex_energy_density,
+    vortex_tension,
+)
 
 from .governance import (
     GovernanceError,
@@ -144,6 +158,10 @@ __all__ = [
     "SourceAudit",
     "SourceMatch",
     "SU3Invariants",
+    "VortexParameters",
+    "VortexSolution",
+    "angular_log_coefficient",
+    "asymptotic_masses",
     "breather_action",
     "audit_source_tokens",
     "breather_action_lattice_adjacent_gap",
@@ -201,6 +219,7 @@ __all__ = [
     "optical_ricci_scalar_1d",
     "one_loop_inverse_coupling_squared",
     "one_loop_transmutation_scale",
+    "quantized_flux",
     "single_scale_tension",
     "refinement_study",
     "render_claim_memory",
@@ -214,6 +233,7 @@ __all__ = [
     "solve_bvp_evidence",
     "solve_ivp_evidence",
     "solve_method_of_lines",
+    "solve_vortex_bvp",
     "stationary_phase_field",
     "stationary_u1_charge_density",
     "slow_geodesic_acceleration_1d",
@@ -235,6 +255,12 @@ __all__ = [
     "solve_euler_lagrange_acceleration",
     "structure_constant",
     "virial_scaling_exponents",
+    "vortex_boundary_residual",
+    "vortex_bvp_equations",
+    "vortex_energy_density",
+    "vortex_euler_lagrange_residuals",
+    "vortex_radial_energy_lagrangian",
+    "vortex_tension",
     "winding_parity",
 ]
 

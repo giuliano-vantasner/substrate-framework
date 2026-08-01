@@ -1,0 +1,19 @@
+attempt: 0004
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units: [CF1]
+framework_base: cf65ac8
+question: >-
+  Do the exact conditional vortex and resolution-bounded numerical solution
+  survive sensitive verification and an independent discretization?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P026-abelian-higgs-vortex/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+oracle:
+  kind: exact_variation_and_refinement_bounded_bvp
+  mutation_requirements:
+    - five equation-convention mutations fail
+    - two wrong asymptotic boundaries fail
+    - tolerance domain cutoff and initial-guess evidence passes
+    - independent finite differences converge toward the collocation result
+status: passed

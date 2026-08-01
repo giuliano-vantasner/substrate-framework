@@ -1,0 +1,12 @@
+source_unit: CF1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+sha256: a4ec97923804f1b7c624b7619bc6b6a1cbb62f42d659897799545b257ca33f5d
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+observed_at: '2026-08-01T15:41:27Z'
+exit_code: 1
+terminal_tally: null
+scope_note: >-
+  Two exact checks pass. The source then fails at removed np.trapz before any
+  BVP, tension, screening, or v=0 check. P026 reconstructs rather than edits it.

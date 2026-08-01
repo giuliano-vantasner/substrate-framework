@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 195
-  qualified: 18
+  pending_adjudication: 194
+  qualified: 19
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1954,8 +1954,19 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-VTX-001
+  - C-VTX-002
+  qualification: CF1's conditional Abelian-Higgs equations, finite-energy flux,
+    linearized inverse lengths, and rebuilt resolution-bounded BVP/tension
+    evidence are accepted. It does not establish a substrate, dual,
+    chromoelectric, QCD, confinement, absolute-scale, or v=0-uniqueness claim.
+  evidence:
+  - campaigns/P026-abelian-higgs-vortex/reviews/source_adjudication.md
+  note: The pinned source fails at removed np.trapz before its numerical tally;
+    P026 reconstructs it with one consistent general-g convention, shared
+    solver evidence, full refinements, and independent finite differences.
 - source_unit: CF2
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
