@@ -19,9 +19,45 @@ The central rule is that chronology is not authority. Campaigns are immutable re
 ## Bootstrap
 
 ```bash
-python3 -m venv .venv
-.venv/bin/pip install -e . -e tools/agent-memory
+scripts/bootstrap.sh
 scripts/validate.sh
+```
+
+Bootstrap creates `.venv` for the importable physics package and its NumPy,
+SciPy, SymPy, and test dependencies. It installs the bundled `agent-memory`
+release with `pipx`, not project `pip`, so `memory` remains available without
+activating `.venv`:
+
+```bash
+memory --version
+.venv/bin/python -c "import substrate_framework"
+```
+
+The bundled CLI is the code-only `agent-memory` v0.2.0 release; no user or
+agent memory entries are included. See
+[`tools/agent-memory/UPSTREAM.md`](tools/agent-memory/UPSTREAM.md) for the pinned
+upstream source.
+
+## Numerical physics APIs
+
+`substrate_framework.numerics` provides shared SciPy-backed IVP,
+method-of-lines PDE, BVP, and refinement-evidence helpers. They standardize
+failure handling and evidence capture; they do not turn a numerical result
+into an exact proof. Claim verifiers must still supply the governing equation,
+boundary/initial data, convergence study, invariants, and independent checks
+appropriate to the claim.
+
+```python
+import numpy as np
+
+from substrate_framework import SolverTolerances, solve_ivp_evidence
+
+orbit = solve_ivp_evidence(
+    lambda _t, state: np.array([state[1], -state[0]]),
+    (0.0, 2.0 * np.pi),
+    [1.0, 0.0],
+    tolerances=SolverTolerances(rtol=1e-10, atol=1e-12),
+)
 ```
 
 Read `AGENTS.md` before starting any research or migration. A fresh effort begins by instantiating the appropriate file from `memory-templates/`; it does not begin by editing canonical prose.

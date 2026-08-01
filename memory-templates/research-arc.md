@@ -31,7 +31,7 @@ Record the accepted release, source commit, claim ids, importable modules, campa
 - Genuine unresolved objective:
 
 ## Definitions and Invariants
-Freeze variables, domains, units, normalizations, symmetries, topology, boundary conditions, known limits, and cross-sector invariants before candidate selection.
+Freeze variables, domains, units, normalizations, symmetries, topology, initial/boundary conditions, regularity assumptions, known limits, and cross-sector invariants before candidate selection. For numerical work also freeze the precision, discretization family, domain truncation, stability condition, and error norm before inspecting results.
 
 ## Permitted Imports and Assumptions
 List every permitted external or framework input with provenance. Any new item enters the debt ledger until independently accepted or eliminated.
@@ -55,14 +55,14 @@ List each claim proposed, challenged, qualified, or potentially superseded. A pr
 |  |  |  |  |  |  |
 
 ## Claim Ladder
-Build the smallest dependency-first ladder. Each row names the strongest practical oracle and sensitivity test.
+Build the smallest dependency-first ladder. Each row names the strongest practical oracle and sensitivity test. Use SymPy for exact algebraic obligations, Lean for an auditable formal theorem, and SciPy for root/spectrum/integral/optimization/ODE/BVP/PDE evidence when no tractable closed form exists; do not force every obligation into the same tool.
 
 | Step | Claim | Oracle | Sensitivity/counterexample | Prerequisites | Status |
 | --- | --- | --- | --- | --- | --- |
 | 1 |  |  |  |  | pending |
 
 ## Importable Implementation
-Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers.
+Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric.
 
 ## Attempts
 Append one row per attempt. Preserve source, stdout/stderr, elapsed time, and exact command. Failure triggers the next route; it never closes the arc.
@@ -75,7 +75,7 @@ Append one row per attempt. Preserve source, stdout/stderr, elapsed time, and ex
 Assess each candidate before empirical fit: invariant preservation, imports, free parameters, conventions, known limits, cross-sector consumers, and whether it demands unrelated narrative changes. Reject and replace an ill-fitting candidate before considering foundational revision.
 
 ## Verifier Audit
-Record clean exit and tally, derivation-vs-literal inspection, mutations, counterexamples, wrong conventions, refinement, conservation/limit tests, independent rederivation, and exact formal theorem/axioms where applicable.
+Record clean exit and tally, derivation-vs-literal inspection, mutations, counterexamples, wrong conventions, refinement, conservation/limit tests, independent rederivation, and exact formal theorem/axioms where applicable. For SciPy ODE/BVP/PDE evidence, record routine/algorithm, precision, solver status, domain, mesh, time policy, tolerances, residual/error norm, convergence order, and a soluble limit or independent method.
 
 ## Global Dependency Replay
 List direct and indirect consumers and every replay command. Local pass with a broken consumer is failure.

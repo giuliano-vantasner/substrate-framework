@@ -86,6 +86,7 @@ Once adjudicated, move the campaign record into `campaigns/` without rewriting i
 - Put canonical equations, constants, units, transformations, solvers, and derivations under `src/substrate_framework/`.
 - Give modules pure, documented APIs. Imports must not execute simulations or print tallies.
 - Put reusable verifier machinery in shared modules; do not redefine `PASS`, `check`, solvers, or profile functions in every campaign.
+- Reuse `src/substrate_framework/numerics.py` for SciPy IVP, BVP, method-of-lines, and refinement evidence. Keep the spatial operator, boundary data, error metric, and physical pass criteria explicit in the claim module.
 - Keep exploration and orchestration in proposals/campaigns. Once accepted, extract reusable logic into the package and test it there.
 - Formal developments must import shared framework definitions where practical rather than restating the entire theory in each capstone.
 - Encode conventions once and test conversions explicitly. Never mix parameterizations from different readings inside one calculation.
@@ -95,6 +96,10 @@ Run impact analysis before changing a canonical symbol. Record direct consumers,
 ## Verification is necessary, not sufficient
 
 An `ALL N CHECKS PASS` tail proves only that those assertions executed successfully. It does not prove that the assertions test the headline claim.
+
+Choose the oracle by the mathematical claim, not by a preferred tool. Use SymPy for exact identities, substitutions, series, and analytic limits; Lean for finite formal statements whose exact encoding and axioms can be audited; and NumPy/SciPy for roots, spectra, quadrature, optimization, ODEs, boundary-value problems, and discretized PDEs without a tractable closed form. Not every proof obligation belongs in SymPy or Lean. Conversely, a SciPy result earns numeric or simulation evidence only: it never becomes exact merely because tolerances are tight.
+
+For ODE, BVP, and PDE work, state the equations, domain, initial/boundary data, discretization, floating-point precision, solver, tolerances, mesh, timestep policy, stopping rule, and error norm. Check solver success before using its output. Run mesh/timestep/domain/tolerance refinement, test conservation or controlled dissipation, compare an independent method or soluble limit, and show that load-bearing input mutations break the relevant verdict. Use sparse operators and method-of-lines or an appropriate finite-difference, finite-volume, finite-element, or spectral method when the PDE requires them; tool choice follows the equation and claim.
 
 For each serious claim:
 
@@ -142,8 +147,12 @@ Run:
 
 ```bash
 scripts/validate.sh
-python3 -m pytest
+.venv/bin/python -m pytest
 git diff --check
 ```
 
-Also run every targeted scientific verifier and downstream consumer named by the claim delta. Before promotion, ensure generated files are current, the registry validates, the release claim set is closed, and the working-tree diff contains no unrelated or host-specific artifacts.
+The bootstrap installs `memory` with `pipx`; agents call it directly without activating `.venv`. Also run every targeted scientific verifier and downstream consumer named by the claim delta. Before promotion, ensure generated files are current, the registry validates, the release claim set is closed, and the working-tree diff contains no unrelated or host-specific artifacts.
+
+## Self improvement
+
+Modify your AGENTS.md, your memory task templates, and your skill to refine your process, improve accuracy, handle usage and gotchas.  Keep the goal of this project in mind, all instructions and files and workflows and skills and AGENT files should be self tuned toward that goal.  That does not mean that you should just sprawl skills and add new sections.  It means you should address the problems in your AGENTS, SKILLS and TEMPLATES, correct the language and correct the process, not just append new rules.  Do not fall into the trap of validation theater. If you have already validated a script several times, or many many times, why are you revalidating it with every new effort. So also optimize your validation scripts for honesty, but also for efficiency.

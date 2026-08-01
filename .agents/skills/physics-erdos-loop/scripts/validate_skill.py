@@ -33,6 +33,7 @@ def validate(skill_path: Path) -> None:
         "references/oracles.md",
         "scripts/preflight.sh",
         "assets/verify_claim.py",
+        "assets/verify_pde.py",
     ):
         if not (skill_path / relative).is_file():
             raise ValueError(f"missing skill resource: {relative}")

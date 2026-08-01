@@ -214,7 +214,7 @@ def config_set_cmd(ctx: click.Context, key: str, value: str) -> None:
 
     Examples:\n
       memory config set agent_id <agent-id>\n
-      memory config set repos.primary.path /root/projects/agent-memory/memory
+      memory config set repos.primary.path /srv/agent-memory/memory
     """
     use_json = ctx.obj.get("json", False)
     config = load_config() or {"version": 1}

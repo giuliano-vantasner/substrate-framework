@@ -80,6 +80,8 @@ Keep empirical comparators blinded until equations, conventions, criteria, and s
 
 Build the smallest dependency-first claim ladder. Implement reusable equations, constants, units, solvers, and transformations under `src/substrate_framework/`. Keep proposal scripts thin: import canonical functions and evaluate a candidate.
 
+Match implementation to the claim. Use exact symbolic algebra when an exact residual or identity is available, formal proof when the encoded theorem is the real obligation, and SciPy numerical methods when the claim is an IVP, BVP, spectral, optimization, integration, or PDE problem without a usable closed form. Reuse `substrate_framework.numerics` for common IVP, method-of-lines, BVP, and refinement evidence; the claim implementation must still own and expose its equation, discretization, boundary data, error norm, and physical acceptance thresholds.
+
 Do not:
 
 - execute simulations at import time;
@@ -89,7 +91,7 @@ Do not:
 - edit generated documentation;
 - weaken the target after a failed attempt without creating a distinct claim.
 
-Use the verifier asset at [verify_claim.py](assets/verify_claim.py) as a starting point. It uses the shared verification harness and requires mutation sensitivity.
+Use [verify_claim.py](assets/verify_claim.py) for exact or general claim checks and [verify_pde.py](assets/verify_pde.py) for a SciPy method-of-lines and mesh-refinement pattern. Both use shared framework APIs rather than campaign-local solver or tally copies.
 
 ## Phase 4 — run append-only attempts
 
@@ -117,6 +119,8 @@ Choose the strongest practical oracle using [oracles.md](references/oracles.md).
 - run resolution, timestep, domain, and tolerance refinement for numerics;
 - compare against an independently implemented or analytically solvable case;
 - inspect the exact statement of formal theorems and their axioms.
+
+For SciPy work, record the routine and algorithm (`solve_ivp`, `solve_bvp`, sparse eigensolver, optimizer, quadrature, or another justified method), floating-point precision, mesh and domain, initial/boundary data, tolerances, stopping status, and error norm. Treat solver success as a prerequisite, not the verdict. A PDE claim additionally needs spatial and temporal refinement, stability evidence, conservation or controlled-dissipation checks, and a method cross-check or soluble limit appropriate to the equation.
 
 A large pass tally with insensitive predicates does not promote a claim.
 
@@ -159,7 +163,7 @@ For accepted claims:
 
 ## Phase 10 — done gate
 
-Close only when every item in the success contract passes and the debt ledger is empty. An honest failure remains an active effort with a new candidate or repair queued. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion.
+Close only when every item in the success contract passes and the debt ledger is empty. An honest failure remains an active effort with a new candidate or repair queued. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
 
 ## Working with delegated agents
 

@@ -6,8 +6,8 @@ Use the strongest practical oracle for each claim and state exactly what verdict
 | --- | --- | --- |
 | Exact identity, ansatz residual, algebra, series, exact limit | SymPy or direct symbolic algebra | `symbolic_verified` |
 | Finite algebraic, order, combinatorial, or topological theorem | Lean with audited axioms | `formal_verified` |
-| Root, eigenvalue, BVP/IVP, integral, optimization without closed form | Independent numerical methods plus refinement | `numeric_evidence` |
-| Time-dependent PDE or nonlinear dynamics | Simulation plus convergence, conservation, and method cross-check | `simulation_evidence` |
+| Root, eigenvalue, BVP/IVP, integral, optimization without closed form | SciPy root/integration/optimization/sparse-linear-algebra method plus refinement and an independent route | `numeric_evidence` |
+| Time-dependent PDE or nonlinear dynamics | Appropriate spatial discretization plus SciPy time integration, convergence, conservation/stability, and a method cross-check | `simulation_evidence` |
 | Figure or visualization | Rendering tool | artifact only |
 
 Split composite claims so each part receives the right oracle. Discover numerically, then prove symbolically or formally when the structure permits.
@@ -24,7 +24,10 @@ An identity that holds only because both sides contain the same copied literal i
 
 ## Numerical checks
 
+- Use the numerical formulation natural to the claim: for example `scipy.integrate.solve_ivp` for an ODE or method-of-lines system, `solve_bvp` for a two-point BVP, `scipy.sparse.linalg` for large sparse spectra, and appropriate SciPy quadrature, root, or optimization routines for those claims.
+- For PDEs, state the spatial method (finite difference, finite volume, finite element, spectral, or another justified discretization), boundary implementation, mesh, time integrator, stability restriction, and error norm. A generic integrator does not validate an unspecified PDE discretization.
 - Record precision, solver, mesh/domain, timestep, tolerances, and stopping criteria.
+- Require the library's success/status result and finite outputs before evaluating physics assertions.
 - Refine resolution, timestep, domain, and tolerance independently.
 - Compare two methods or an analytically soluble limit.
 - Track conserved quantities and discretization error.
@@ -32,6 +35,8 @@ An identity that holds only because both sides contain the same copied literal i
 - Never loosen a tolerance after seeing failure without a prior physical or numerical error model.
 
 Numeric evidence does not become exact verification because it has many digits.
+
+Use `substrate_framework.numerics` for shared evidence capture when it fits. Its helpers standardize solver failure, invariant drift, collocation residuals, and empirical order; claim-specific code remains responsible for the governing equations, operators, data, norms, thresholds, and interpretation.
 
 ## Formal checks
 

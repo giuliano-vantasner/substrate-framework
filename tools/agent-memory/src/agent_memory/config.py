@@ -3,7 +3,7 @@
 Config file location: ~/.config/agent-memory/config.yaml
 Priority chain: CLI flag > env var > config file > cwd auto-detect > "memory" fallback.
 
-Supports multi-repo configuration (Dan's requirement) with a primary repo
+Supports multi-repo configuration with a primary repo
 and additional read-only paths (rules, skills, etc.).
 
 The base_path may be expressed in either of two equivalent shapes inside
@@ -84,12 +84,11 @@ def _config_primary_path(config: dict) -> str | None:
 def _config_top_level_base_path(config: dict) -> str | None:
     """Extract top-level ``base_path`` from config dict.
 
-    Backward-compat alias for ``repos.primary.path``. Some users (notably
-    on the kelvin host) write a flat config like::
+    Backward-compat alias for ``repos.primary.path``. A flat config may use::
 
         version: 1
-        agent_id: kelvin
-        base_path: /path/to/project/agent-memory/memory
+        agent_id: my-agent
+        base_path: /srv/agent-memory/memory
 
     Both shapes resolve to the same value. The structured nested form
     takes precedence when both are present.

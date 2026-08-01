@@ -56,7 +56,7 @@ def _resolve_scope_paths(
         if not target_id:
             raise ValueError(
                 "Agent ID required after 'agent:' prefix. "
-                "Example: --scope agent:kelvin"
+                "Example: --scope agent:other-agent"
             )
         return [str(base_path / target_id)]
     elif scope == "all":

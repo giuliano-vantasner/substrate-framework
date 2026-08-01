@@ -26,10 +26,10 @@ List the base release, dependencies, proposal, derivation, verifier, attempt his
 State what was independently rederived or implemented and what code, constants, or reasoning were intentionally not shared with the proposal path.
 
 ## Verification Status
-Assign one status and justify the maximum verdict earned. Confirm the assertions test the headline rather than copied literals or invariants unrelated to its values.
+Assign one status and justify the maximum verdict earned. Confirm the oracle fits the actual obligation and the assertions test the headline rather than copied literals or invariants unrelated to its values. An exact SymPy identity, an audited Lean theorem, SciPy numerical evidence, and a PDE simulation earn different maximum verdicts.
 
 ## Sensitivity and Counterexamples
-Record input mutations, wrong conventions, counterexamples, convergence/limit tests, and whether each relevant check failed when it should.
+Record input mutations, wrong conventions, counterexamples, convergence/limit tests, and whether each relevant check failed when it should. For numerical claims independently inspect solver status, precision, initial/boundary data, mesh/domain/time/tolerance refinement, residual or error norm, conservation/stability behavior, and an independent method or soluble limit.
 
 ## Framework Compatibility
 Assess invariants, assumptions, imports, parameters, units, conventions, limits, and cross-sector composition. If the concept does not fit, reject or return it for a different candidate; do not retrofit unrelated claims.

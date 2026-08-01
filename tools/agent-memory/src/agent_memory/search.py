@@ -91,7 +91,7 @@ def _resolve_scope(base_path: Path, scope: str, agent_id: str) -> list[Path]:
         target_id = scope[6:]
         if not target_id:
             raise ValueError(
-                "Agent ID required after 'agent:' prefix. Example: --scope agent:kelvin"
+                "Agent ID required after 'agent:' prefix. Example: --scope agent:other-agent"
             )
         return [base_path / target_id]
     elif scope == "all":
@@ -162,7 +162,7 @@ def _scope_prefix(scope: str, agent_id: str) -> str | None:
         target_id = scope[6:]
         if not target_id:
             raise ValueError(
-                "Agent ID required after 'agent:' prefix. Example: --scope agent:kelvin"
+                "Agent ID required after 'agent:' prefix. Example: --scope agent:other-agent"
             )
         return target_id + "/"
     elif scope == "all":

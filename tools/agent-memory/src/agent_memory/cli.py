@@ -15,6 +15,9 @@ from pathlib import Path
 
 import click
 
+from agent_memory import __version__
+from agent_memory.config import get_agent_id, resolve_base_path, resolve_file_path
+from agent_memory.config_cli import config_group
 from agent_memory.git_ops import (
     BranchMismatchError,
     commit_and_push,
@@ -25,7 +28,6 @@ from agent_memory.parser import (
     extract_section,
     parse_frontmatter,
     parse_sections,
-    read_entry,
     resolve_md_path,
 )
 from agent_memory.ripgrep import grep as ripgrep_search
@@ -43,6 +45,23 @@ class _SafeEncoder(json.JSONEncoder):
         if isinstance(obj, (datetime.datetime, datetime.date)):
             return obj.isoformat()
         return super().default(obj)
+
+
+def _resolve_base(base: str | None) -> Path:
+    """Resolve --base flag via config module priority chain.
+
+    Priority: CLI flag > AGENT_MEMORY_PATH env var > config file
+              > cwd auto-detect > "memory" fallback.
+    """
+    return Path(resolve_base_path(base))
+
+
+def _resolve_path_with_base(path: str, base: str | None) -> Path:
+    """Resolve a file/directory path relative to --base when it is relative.
+
+    If path is absolute, return it as-is. Otherwise, prepend the resolved base.
+    """
+    return Path(resolve_file_path(path, base))
 
 
 def _suggest_directories(base: Path) -> list[str]:
@@ -63,12 +82,16 @@ def _suggest_files(directory: Path) -> list[str]:
 
 
 @click.group()
+@click.version_option(version=__version__, prog_name="memory")
 @click.option("--json-output", "use_json", is_flag=True, help="Output as JSON.")
 @click.pass_context
 def cli(ctx: click.Context, use_json: bool) -> None:
     """Progressive disclosure memory management for autonomous agents."""
     ctx.ensure_object(dict)
     ctx.obj["json"] = use_json
+
+
+cli.add_command(config_group)
 
 
 def _log_end(cmd: str, start: float, result_count: int | None = None) -> None:
@@ -88,13 +111,46 @@ def _log_error(cmd: str, start: float, exc: Exception) -> None:
     )
 
 
+def _read_entry_tolerant(resolved: Path, display_path: str) -> tuple:
+    """Read a markdown file, tolerating missing YAML frontmatter.
+
+    Memory entries have frontmatter; rules and skill files may not.
+    Returns (Frontmatter, body) in both cases. On OSError, exits.
+    """
+    from agent_memory.parser import Frontmatter as _Fm
+
+    try:
+        text = resolved.read_text(encoding="utf-8")
+    except OSError as e:
+        click.echo(f"Error reading {display_path}: {e}", err=True)
+        sys.exit(1)
+
+    try:
+        return parse_frontmatter(text)
+    except ValueError:
+        fm = _Fm(description=resolved.stem, raw={"description": resolved.stem})
+        return fm, text
+
+
 @cli.command(name="ls")
 @click.argument("path", type=click.Path(), default=".")
+@click.option(
+    "--base",
+    default=None,
+    help="Base directory (default: config/env/cwd auto-detect).",
+)
+@click.option(
+    "--include-sources",
+    is_flag=True,
+    help="Also list files from configured additional sources (rules, skills).",
+)
 @click.pass_context
-def ls_cmd(ctx: click.Context, path: str) -> None:
+def ls_cmd(
+    ctx: click.Context, path: str, base: str | None, include_sources: bool,
+) -> None:
     """List memory entries with frontmatter descriptions."""
     start = time.monotonic()
-    target = Path(path)
+    target = _resolve_path_with_base(path, base)
     use_json = ctx.obj["json"]
 
     if not target.exists():
@@ -144,8 +200,15 @@ def ls_cmd(ctx: click.Context, path: str) -> None:
                 "confidence": "",
             })
 
+    source_entries: list[dict] = []
+    if include_sources:
+        source_entries = _collect_source_ls_entries()
+
     if use_json:
-        click.echo(json.dumps(entries, indent=2))
+        output: dict | list = entries
+        if source_entries:
+            output = {"memory": entries, "sources": source_entries}
+        click.echo(json.dumps(output, indent=2))
     else:
         for entry in entries:
             line = f"  {entry['file']}"
@@ -154,17 +217,64 @@ def ls_cmd(ctx: click.Context, path: str) -> None:
             if entry["confidence"]:
                 line += f" [{entry['confidence']}]"
             click.echo(line)
-    _log_end("ls", start, result_count=len(entries))
+        if source_entries:
+            for src_group in source_entries:
+                click.echo(f"\n  [{src_group['label']}] {src_group['path']}")
+                for sf in src_group["files"]:
+                    line = f"    {sf['file']}"
+                    if sf["description"]:
+                        line += f' -- "{sf["description"]}"'
+                    click.echo(line)
+    _log_end("ls", start, result_count=len(entries) + sum(
+        len(s["files"]) for s in source_entries
+    ))
+
+
+def _collect_source_ls_entries() -> list[dict]:
+    """Collect ls-style entries from configured additional sources."""
+    from agent_memory.sources import (
+        enumerate_source_files,
+        get_configured_sources,
+        parse_source_file,
+    )
+
+    results: list[dict] = []
+    for source in get_configured_sources():
+        source_path = Path(source["path"])
+        label = source.get("label", "") or source_path.name
+        files = enumerate_source_files(source_path, label)
+        file_entries: list[dict] = []
+        for sf in files:
+            entry = parse_source_file(sf)
+            if entry is None:
+                continue
+            file_entries.append({
+                "file": sf.rel_path,
+                "description": entry.frontmatter.description,
+            })
+        if file_entries:
+            results.append({
+                "label": label,
+                "path": str(source_path),
+                "files": file_entries,
+            })
+    return results
 
 
 @cli.command(name="toc")
 @click.argument("file_path", type=click.Path())
+@click.option(
+    "--base",
+    default=None,
+    help="Base directory (default: config/env/cwd auto-detect).",
+)
 @click.pass_context
-def toc_cmd(ctx: click.Context, file_path: str) -> None:
+def toc_cmd(ctx: click.Context, file_path: str, base: str | None) -> None:
     """Show table of contents for a memory entry."""
     start = time.monotonic()
     use_json = ctx.obj["json"]
-    resolved = resolve_md_path(file_path)
+    effective_path = str(_resolve_path_with_base(file_path, base))
+    resolved = resolve_md_path(effective_path)
 
     if not resolved.exists():
         parent = resolved.parent
@@ -177,11 +287,7 @@ def toc_cmd(ctx: click.Context, file_path: str) -> None:
         click.echo(msg, err=True)
         sys.exit(1)
 
-    try:
-        fm, body = read_entry(resolved)
-    except (ValueError, OSError) as e:
-        click.echo(f"Error reading {file_path}: {e}", err=True)
-        sys.exit(1)
+    fm, body = _read_entry_tolerant(resolved, file_path)
 
     sections = parse_sections(body)
 
@@ -213,12 +319,20 @@ def toc_cmd(ctx: click.Context, file_path: str) -> None:
 @cli.command(name="section")
 @click.argument("file_path", type=click.Path())
 @click.argument("title")
+@click.option(
+    "--base",
+    default=None,
+    help="Base directory (default: config/env/cwd auto-detect).",
+)
 @click.pass_context
-def section_cmd(ctx: click.Context, file_path: str, title: str) -> None:
+def section_cmd(
+    ctx: click.Context, file_path: str, title: str, base: str | None,
+) -> None:
     """Show content of a specific section (case-insensitive partial match)."""
     start = time.monotonic()
     use_json = ctx.obj["json"]
-    resolved = resolve_md_path(file_path)
+    effective_path = str(_resolve_path_with_base(file_path, base))
+    resolved = resolve_md_path(effective_path)
 
     if not resolved.exists():
         parent = resolved.parent
@@ -231,11 +345,7 @@ def section_cmd(ctx: click.Context, file_path: str, title: str) -> None:
         click.echo(msg, err=True)
         sys.exit(1)
 
-    try:
-        fm, body = read_entry(resolved)
-    except (ValueError, OSError) as e:
-        click.echo(f"Error reading {file_path}: {e}", err=True)
-        sys.exit(1)
+    fm, body = _read_entry_tolerant(resolved, file_path)
 
     matches = extract_section(body, title)
 
@@ -272,13 +382,22 @@ def section_cmd(ctx: click.Context, file_path: str, title: str) -> None:
 
 
 @cli.command(name="validate")
-@click.argument("path", type=click.Path(exists=True))
+@click.argument("path", type=click.Path())
+@click.option(
+    "--base",
+    default=None,
+    help="Base directory (default: config/env/cwd auto-detect).",
+)
 @click.pass_context
-def validate_cmd(ctx: click.Context, path: str) -> None:
+def validate_cmd(ctx: click.Context, path: str, base: str | None) -> None:
     """Validate frontmatter and section format of memory entries."""
     start = time.monotonic()
     use_json = ctx.obj["json"]
-    target = Path(path)
+    target = _resolve_path_with_base(path, base)
+
+    if not target.exists():
+        click.echo(f"Path not found: {target}", err=True)
+        sys.exit(1)
 
     if target.is_file():
         results = [validate_file(target)]
@@ -338,15 +457,15 @@ def validate_cmd(ctx: click.Context, path: str) -> None:
 @click.argument("agent_id")
 @click.option(
     "--base",
-    default="memory",
-    help="Base directory for memory entries (default: memory).",
+    default=None,
+    help="Base directory (default: config/env/cwd auto-detect).",
 )
 @click.pass_context
-def init_cmd(ctx: click.Context, agent_id: str, base: str) -> None:
+def init_cmd(ctx: click.Context, agent_id: str, base: str | None) -> None:
     """Create standard directory structure for a new agent."""
     start = time.monotonic()
     use_json = ctx.obj["json"]
-    base_path = Path(base) / agent_id
+    base_path = _resolve_base(base) / agent_id
     created = []
 
     for dirname in STANDARD_DIRS:
@@ -391,13 +510,18 @@ def init_cmd(ctx: click.Context, agent_id: str, base: str) -> None:
 )
 @click.option(
     "--base",
-    default="memory",
-    help="Base directory for memory entries. Default: memory.",
+    default=None,
+    help="Base directory for memory entries (default: config/env/cwd auto-detect).",
 )
 @click.option(
     "--no-cache",
     is_flag=True,
     help="Bypass SQLite index cache, read files directly.",
+)
+@click.option(
+    "--include-sources",
+    is_flag=True,
+    help="Also search configured additional sources (rules, skills).",
 )
 @click.pass_context
 def search_cmd(
@@ -411,19 +535,20 @@ def search_cmd(
     status: str | None,
     tag: str | None,
     limit: int,
-    base: str,
+    base: str | None,
     no_cache: bool,
+    include_sources: bool,
 ) -> None:
     """BM25 relevance-ranked search over memory sections."""
     start = time.monotonic()
     use_json = ctx.obj["json"]
-    base_path = Path(base)
+    base_path = _resolve_base(base)
 
     if not base_path.exists():
         click.echo(f"Base directory not found: {base_path}", err=True)
         sys.exit(1)
 
-    agent_id = os.environ.get("AGENT_ID", "")
+    agent_id = get_agent_id() or ""
 
     filters: dict[str, str | None] = {}
     if category is not None:
@@ -446,6 +571,7 @@ def search_cmd(
             field=field,
             limit=limit,
             no_cache=no_cache,
+            include_sources=include_sources,
             **filters,
         )
     except ValueError as e:
@@ -462,6 +588,7 @@ def search_cmd(
                 "score": r.score,
                 "file_frontmatter": r.file_frontmatter,
                 "snippet": r.snippet,
+                "source": r.source,
             }
             for r in results
         ]
@@ -472,9 +599,10 @@ def search_cmd(
             _log_end("search", start, result_count=0)
             return
         for r in results:
+            source_tag = f" [{r.source}]" if r.source != "memory" else ""
             click.echo(
                 f"[{r.rank}] {r.path} > {r.section}  "
-                f"(score: {r.score})"
+                f"(score: {r.score}){source_tag}"
             )
             if r.section_description:
                 click.echo(f"    {r.section_description}")
@@ -528,8 +656,8 @@ def search_cmd(
 )
 @click.option(
     "--base",
-    default="memory",
-    help="Base directory for memory entries. Default: memory.",
+    default=None,
+    help="Base directory for memory entries (default: config/env/cwd auto-detect).",
 )
 @click.pass_context
 def grep_cmd(
@@ -543,7 +671,7 @@ def grep_cmd(
     fixed_strings: bool,
     tag: str | None,
     links_to: str | None,
-    base: str,
+    base: str | None,
 ) -> None:
     """Ripgrep-based exact/regex search over memory entries.
 
@@ -566,7 +694,7 @@ def grep_cmd(
     """
     start = time.monotonic()
     use_json = ctx.obj["json"]
-    base_path = Path(base)
+    base_path = _resolve_base(base)
 
     if not base_path.exists():
         click.echo(f"Base directory not found: {base_path}", err=True)
@@ -579,7 +707,7 @@ def grep_cmd(
         )
         sys.exit(1)
 
-    agent_id = os.environ.get("AGENT_ID", "")
+    agent_id = get_agent_id() or ""
 
     try:
         results = ripgrep_search(
@@ -642,7 +770,6 @@ def grep_cmd(
             click.echo(f"  {r.match_count} match(es)")
 
             for m in r.matches:
-                prefix = "  " if m.is_context else "  "
                 marker = " " if m.is_context else ">"
                 click.echo(f" {marker}{m.line_number:4d}: {m.line_text}")
 
@@ -657,25 +784,23 @@ def _parse_tags(raw: str) -> list[str]:
 
 
 def _read_body(body_value: str | None, auto_stdin: bool = False) -> str | None:
-    """Resolve body content: read from stdin if '-', else return as-is.
+    """Resolve body content, with stdin support.
 
-    When body_value is '-', reads from stdin explicitly.
-    When body_value is None and auto_stdin is True, reads from stdin
-    if it is not a TTY (i.e., content is being piped in).
-    Raises click.UsageError if '-' is specified but stdin is empty.
+    When body_value is '-', reads from stdin explicitly and raises
+    click.UsageError if stdin is empty.
+    When body_value is None and auto_stdin is True, reads piped stdin
+    (non-TTY) automatically so heredoc/pipe input is not silently lost.
     """
     if body_value == "-":
         content = sys.stdin.read()
         if not content.strip():
             raise click.UsageError(
-                "Body flag '-b -' expects content on stdin, but stdin was empty. "
-                "Pipe content via: echo 'body' | memory new -b - ... "
-                "or use heredoc: memory new -b - ... <<'EOF'\\n...\\nEOF"
+                "Body flag '-b -' expects content on stdin, but stdin was "
+                "empty. Pipe content via: echo 'body' | memory new -b - ..."
             )
         return content
     if body_value is not None:
         return body_value
-    # Auto-read stdin when piped (not a TTY) and no explicit -b given
     if auto_stdin and not sys.stdin.isatty():
         content = sys.stdin.read()
         if content.strip():
@@ -728,7 +853,7 @@ def _read_body(body_value: str | None, auto_stdin: bool = False) -> str | None:
 @click.option(
     "--base",
     default=None,
-    help="Base directory (default: AGENT_MEMORY_PATH env var, fallback 'memory').",
+    help="Base directory (default: config/env/cwd auto-detect).",
 )
 @click.pass_context
 def new_cmd(
@@ -750,17 +875,18 @@ def new_cmd(
     start = time.monotonic()
     use_json = ctx.obj["json"]
 
-    # Resolve agent_id
-    agent_id = author or os.environ.get("AGENT_ID", "")
+    # Resolve agent_id: --author flag > env var > config file
+    agent_id = author or get_agent_id() or ""
     if not agent_id:
         click.echo(
-            "Agent ID required: set --author or AGENT_ID environment variable",
+            "Agent ID required: set --author, AGENT_ID env var,"
+            " or agent_id in config file",
             err=True,
         )
         sys.exit(1)
 
     # Resolve base path
-    base_path = Path(base or os.environ.get("AGENT_MEMORY_PATH", "") or "memory")
+    base_path = _resolve_base(base)
 
     # Parse tags
     tags = _parse_tags(raw_tags) if raw_tags else None
@@ -796,14 +922,6 @@ def new_cmd(
     git_sha = None
     if not no_git:
         try:
-            # Resolve the repo root from the memory base path -- NOT the
-            # current working directory. The file was just created under
-            # base_path; the branch guard and commit must run against the
-            # repository that actually contains it. Using Path.cwd() here
-            # (the pre-#82 behavior, reintroduced by the configurable-
-            # categories cherry-pick) ran the branch check against whatever
-            # repo the operator happened to be standing in, producing a
-            # phantom-branch refusal when cwd was a different checkout.
             repo_path = git_repo_root(base_path)
             git_sha = commit_and_push(
                 file_path,
@@ -826,15 +944,18 @@ def new_cmd(
             try:
                 file_path.unlink(missing_ok=True)
                 # Also remove the empty `<agent_id>/<category>/` tree that
-                # create_entry may have created via `mkdir(parents=True)`
+                # `_create_entry` may have created via `mkdir(parents=True)`
                 # solely for this entry. Walk up at most two levels (the
                 # category dir, then the agent_id dir). rmdir refuses to
                 # delete non-empty dirs, so each step is a no-op if the dir
                 # holds other entries.
                 #
                 # Bound the walk so it never touches `base_path` itself --
-                # the memory root belongs to the operator, not the rollback
-                # (PR #85 F1 fix: never trust ambient state to bound the walk).
+                # the memory root belongs to the operator, not the rollback.
+                # This protects `--shared` writes (where category_dir.parent
+                # IS base_path) and the empty-base case (where base_path
+                # could be empty if the just-rejected entry was the only
+                # thing in it).
                 base_resolved = base_path.resolve()
                 category_dir = file_path.parent
                 agent_dir = category_dir.parent
@@ -911,7 +1032,7 @@ def new_cmd(
     is_flag=True,
     help=(
         "Allow committing while HEAD is on a non-default branch. "
-        "Without this flag, updates refuse to land on feature branches "
+        "Without this flag, writes refuse to land on feature branches "
         "(issue #82 guard against orphaned commits)."
     ),
 )
@@ -954,8 +1075,13 @@ def update_cmd(
     tags = _parse_tags(raw_tags) if raw_tags is not None else None
     add_tags = _parse_tags(raw_add_tags) if raw_add_tags is not None else None
 
-    # Resolve body (stdin support)
-    resolved_body = _read_body(body)
+    # Resolve body (stdin support: -b - explicit, or auto-detect piped stdin)
+    try:
+        resolved_body = _read_body(body, auto_stdin=True)
+    except click.UsageError as e:
+        _log_error("update", start, e)
+        click.echo(f"Error: {e}", err=True)
+        sys.exit(1)
 
     # Snapshot original content before mutation so we can roll back on
     # BranchMismatchError below (issue #82 transactional behavior).
@@ -991,14 +1117,9 @@ def update_cmd(
                 sys.exit(1)
 
             entry_name = resolved.stem
-            # Resolve repo root from --base or the file itself -- NOT the
-            # current working directory. The file being updated lives in a
-            # specific repo; the branch guard and commit must run against
-            # that repo, not whatever checkout the operator is standing in.
+            # Resolve repo root from --base (via config) or from the file itself
             if base:
-                repo_path = git_repo_root(
-                    Path(base or os.environ.get("AGENT_MEMORY_PATH", "") or "memory")
-                )
+                repo_path = git_repo_root(_resolve_base(base))
             else:
                 repo_path = git_repo_root(resolved)
             git_sha = commit_and_push(
@@ -1010,14 +1131,15 @@ def update_cmd(
                 allow_non_default_branch=allow_non_main_branch,
             )
         except BranchMismatchError as e:
-            # Issue #82: roll back the in-place mutation so the failure is
-            # transactional. Without this, the file on disk would be modified
-            # but uncommitted -- a re-run after `git checkout main` would
-            # commit a half-state the user did not see.
+            # Issue #82: roll back the in-place mutation so the failure
+            # is transactional. Without this, the file on disk would be
+            # modified but uncommitted -- a re-run after `git checkout main`
+            # would commit a half-state the user did not see.
             #
             # Rollback failures are surfaced on stderr (not silently swallowed)
             # so the operator knows the file diverges from what the primary
-            # error implies.
+            # error implies. Without this warning the user sees only the
+            # branch error and assumes the file is unchanged.
             try:
                 resolved.write_text(original_content, encoding="utf-8")
             except OSError as rollback_exc:
@@ -1071,8 +1193,8 @@ def cache_group(ctx: click.Context) -> None:
 @cache_group.command(name="build")
 @click.option(
     "--base",
-    default="memory",
-    help="Base directory for memory entries. Default: memory.",
+    default=None,
+    help="Base directory for memory entries (default: config/env/cwd auto-detect).",
 )
 @click.option(
     "--verify-hash",
@@ -1081,13 +1203,13 @@ def cache_group(ctx: click.Context) -> None:
 )
 @click.pass_context
 def cache_build_cmd(
-    ctx: click.Context, base: str, verify_hash: bool
+    ctx: click.Context, base: str | None, verify_hash: bool
 ) -> None:
     """Build or refresh the SQLite index cache."""
     from agent_memory.cache import IndexCache, resolve_cache_path
 
     use_json = ctx.obj["json"]
-    base_path = Path(base)
+    base_path = _resolve_base(base)
 
     if not base_path.exists():
         click.echo(f"Base directory not found: {base_path}", err=True)
@@ -1125,16 +1247,16 @@ def cache_build_cmd(
 @cache_group.command(name="status")
 @click.option(
     "--base",
-    default="memory",
-    help="Base directory for memory entries. Default: memory.",
+    default=None,
+    help="Base directory for memory entries (default: config/env/cwd auto-detect).",
 )
 @click.pass_context
-def cache_status_cmd(ctx: click.Context, base: str) -> None:
+def cache_status_cmd(ctx: click.Context, base: str | None) -> None:
     """Show cache statistics."""
     from agent_memory.cache import IndexCache, resolve_cache_path
 
     use_json = ctx.obj["json"]
-    base_path = Path(base)
+    base_path = _resolve_base(base)
     cache_path = resolve_cache_path(base_path)
 
     if not cache_path.exists():
@@ -1186,16 +1308,16 @@ def cache_status_cmd(ctx: click.Context, base: str) -> None:
 @cache_group.command(name="clear")
 @click.option(
     "--base",
-    default="memory",
-    help="Base directory for memory entries. Default: memory.",
+    default=None,
+    help="Base directory for memory entries (default: config/env/cwd auto-detect).",
 )
 @click.pass_context
-def cache_clear_cmd(ctx: click.Context, base: str) -> None:
+def cache_clear_cmd(ctx: click.Context, base: str | None) -> None:
     """Delete the cache database file."""
     from agent_memory.cache import IndexCache, resolve_cache_path
 
     use_json = ctx.obj["json"]
-    base_path = Path(base)
+    base_path = _resolve_base(base)
     cache_path = resolve_cache_path(base_path)
 
     if not cache_path.exists():
@@ -1281,8 +1403,22 @@ def clone_cmd(ctx: click.Context) -> None:
     "--push-only", is_flag=True,
     help="Only push, do not pull remote changes.",
 )
+@click.option(
+    "--allow-non-main-branch",
+    is_flag=True,
+    help=(
+        "Allow committing uncommitted changes while HEAD is on a "
+        "non-default branch. Without this flag, sync refuses to commit "
+        "on feature branches (issue #82 guard against orphaned commits)."
+    ),
+)
 @click.pass_context
-def sync_cmd(ctx: click.Context, pull_only: bool, push_only: bool) -> None:
+def sync_cmd(
+    ctx: click.Context,
+    pull_only: bool,
+    push_only: bool,
+    allow_non_main_branch: bool,
+) -> None:
     """Sync the local memory repository with the remote.
 
     Pulls latest changes, pushes local uncommitted changes,
@@ -1298,10 +1434,11 @@ def sync_cmd(ctx: click.Context, pull_only: bool, push_only: bool) -> None:
         click.echo("Cannot use --pull-only and --push-only together.", err=True)
         sys.exit(1)
 
-    agent_id = os.environ.get("AGENT_ID", "")
+    agent_id = get_agent_id() or ""
     if not agent_id:
         click.echo(
-            "AGENT_ID environment variable is required for sync.",
+            "Agent ID required for sync: set AGENT_ID env var"
+            " or agent_id in config file.",
             err=True,
         )
         sys.exit(1)
@@ -1323,7 +1460,12 @@ def sync_cmd(ctx: click.Context, pull_only: bool, push_only: bool) -> None:
             agent_id=agent_id,
             pull_only=pull_only,
             push_only=push_only,
+            allow_non_default_branch=allow_non_main_branch,
         )
+    except BranchMismatchError as e:
+        _log_error("sync", start, e)
+        click.echo(f"error: {e}", err=True)
+        sys.exit(2)
     except RuntimeError as e:
         _log_error("sync", start, e)
         click.echo(f"Sync failed: {e}", err=True)

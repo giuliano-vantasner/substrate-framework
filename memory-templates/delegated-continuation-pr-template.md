@@ -53,8 +53,9 @@ Every failed row creates the next task.
 | Gate | Command/evidence | Result | Next task if not passed |
 | --- | --- | --- | --- |
 | Positive claim |  |  |  |
+| Claim-appropriate symbolic/formal/numerical oracle |  |  |  |
 | Verifier mutations/counterexamples |  |  |  |
-| Refinement/independent route |  |  |  |
+| Solver status, refinement, conservation/stability, and independent route where numerical |  |  |  |
 | Global dependency replay |  |  |  |
 | Importable API tests |  |  |  |
 | Registry/release validation |  |  |  |

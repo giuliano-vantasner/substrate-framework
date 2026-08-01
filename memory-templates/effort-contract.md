@@ -45,12 +45,12 @@ Attempts are append-only and individually reproducible. A failed row must name t
 ## Validation
 Validation covers the actual objective, verifier sensitivity, limits, conventions, dependencies, consumers, and generated state—not merely an exit code or check count.
 
-- Targeted scientific command:
+- Targeted scientific command and claim-appropriate oracle (SymPy, Lean, SciPy, or simulation):
 - Mutation/counterexample command:
-- Refinement or independent-route command:
+- Numerical solver-status, refinement, conservation/stability, and independent-route command (when applicable):
 - Dependency replay:
 - `scripts/validate.sh`:
-- `python3 -m pytest`:
+- `.venv/bin/python -m pytest`:
 - `git diff --check`:
 
 ## Debt Ledger

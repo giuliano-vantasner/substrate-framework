@@ -40,7 +40,7 @@ Order the structural selection criteria and state the comparator-blinding point.
 List claims proposed or challenged, their dependencies, evidence plan, and consumers. Do not use `supersedes` before acceptance.
 
 ## Implementation and Oracle Plan
-Name importable APIs, exact/numeric/formal oracles, mutations, counterexamples, refinements, independent routes, and global replay commands.
+Name importable APIs, claim-appropriate exact/numeric/formal oracles, mutations, counterexamples, refinements, independent routes, and global replay commands. State why SymPy, Lean, or a particular SciPy method fits each obligation. For ODE/BVP/PDE work, specify precision, equations, domain, initial/boundary data, discretization, mesh/time refinement, tolerances, error norm, invariants or controlled dissipation, solver-status gate, and method cross-check.
 
 ## Attempts and Continuation
 Append failed routes with diagnoses and next candidates. An ill-fitting concept is rejected or reformulated; unrelated earlier work is not rewritten to save it.

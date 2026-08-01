@@ -26,7 +26,7 @@ List exact release, claim ids, paths, equations, data, parent contract, and writ
 State conventions and accepted invariants. Name files the worker may edit and surfaces owned by others.
 
 ## Candidate and Method
-Record the assigned candidate or independent review route, oracle, selection criteria, and comparator gate. Do not change foundations to rescue the candidate.
+Record the assigned candidate or independent review route, claim-appropriate oracle, selection criteria, and comparator gate. Do not change foundations to rescue the candidate. If numerical, name the SciPy routine or other method, precision, equations/data, discretization, tolerances, status gate, refinement plan, error norm, and independent check.
 
 ## Steps
 List dependency-ordered implementation, verification, sensitivity, and consumer checks.

@@ -98,14 +98,22 @@ def _setup_file_logger(
     """
     logger = logging.getLogger(name)
 
-    # Avoid adding duplicate handlers on repeated calls
-    if logger.handlers:
-        return logger
+    # Reuse a handler only when it already targets the requested file. This
+    # matters for tests, containers, and long-running agents that change
+    # AGENT_MEMORY_LOG_PATH between invocations.
+    log_path = (log_dir / filename).resolve()
+    for handler in logger.handlers:
+        handler_path = getattr(handler, "baseFilename", None)
+        if handler_path and Path(handler_path).resolve() == log_path:
+            return logger
+
+    for handler in logger.handlers[:]:
+        handler.close()
+        logger.removeHandler(handler)
 
     logger.setLevel(logging.DEBUG)
     logger.propagate = False
 
-    log_path = log_dir / filename
     handler = TimedRotatingFileHandler(
         str(log_path),
         when="midnight",
@@ -188,7 +196,7 @@ def log_hook_event(
         hook: Hook name (e.g. 'PreCompact', 'SessionStart',
               'SubagentStart', 'SubagentStop').
         outcome: 'ok', 'error', 'skip', 'empty'.
-        session_id: Agent runtime session ID.
+        session_id: Claude Code session ID.
         agent_type: Subagent type (for SubagentStart/Stop).
         context_bytes: Bytes of context loaded/saved.
         entries_written: Number of memory entries written.
