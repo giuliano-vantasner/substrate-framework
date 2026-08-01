@@ -26,7 +26,7 @@ List the base release, dependencies, proposal, derivation, verifier, attempt his
 State what was independently rederived or implemented and what code, constants, or reasoning were intentionally not shared with the proposal path.
 
 ## Verification Status
-Assign one status and justify the maximum verdict earned. Confirm the oracle fits the actual obligation and the assertions test the headline rather than copied literals or invariants unrelated to its values. An exact SymPy identity, an audited Lean theorem, SciPy numerical evidence, and a PDE simulation earn different maximum verdicts.
+Assign one status and justify the maximum verdict earned. Confirm the oracle fits the actual obligation and the assertions test the headline rather than copied literals or invariants unrelated to its values. An exact SymPy identity, an audited Lean theorem, SciPy numerical evidence, and a PDE simulation earn different maximum verdicts. Treat a numerical run whose input or outcome is already fixed by an exact result as regression coverage, not independent evidence; for example, exact parameter elimination plus local ODE uniqueness already decides same-data trajectory independence.
 
 ## Sensitivity and Counterexamples
 Record input mutations, wrong conventions, counterexamples, convergence/limit tests, and whether each relevant check failed when it should. For numerical claims independently inspect solver status, precision, initial/boundary data, mesh/domain/time/tolerance refinement, residual or error norm, conservation/stability behavior, and an independent method or soluble limit.

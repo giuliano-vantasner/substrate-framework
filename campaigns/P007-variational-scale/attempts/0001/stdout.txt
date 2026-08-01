@@ -1,0 +1,26 @@
+PASS [C-VAR-001] an arbitrary fixed scale factors through the Euler-Lagrange operator
+PASS [C-VAR-001] a uniform scale squared also cancels, so degree one is not necessary
+PASS [C-VAR-001] the zero multiplier is excluded because it annihilates every equation
+PASS [C-VAR-001] the multiplier must be path and time independent: baseline
+PASS [C-VAR-001] the multiplier must be path and time independent: mutations supplied
+PASS [C-VAR-001] the multiplier must be path and time independent: mutation 1 rejected
+PASS [C-VAR-001] the multiplier must be path and time independent: mutation 2 rejected
+PASS [C-CC-001] the declared action is the timelike line element of C-OG-001
+PASS [C-CC-001] solving the declared action gives the exact full acceleration
+PASS [C-CC-001] the full acceleration removes only E0 and retains the index profile
+PASS [C-CC-001] the exact zero-velocity limit matches the accepted optical drift
+PASS [C-CC-001] same initial data have an E0-independent local IVP vector field
+PASS [C-CC-001] the source mixed-scale counterexample is not uniformly homogeneous
+PASS [C-CC-001] the same EL solve retains E0 for the mixed-scale counterexample
+PASS [C-CC-001] the mixed-scale model has exact E0-dependent initial acceleration
+PASS [C-CC-001] the kinetic-index exponent is load-bearing in the full acceleration
+PASS [C-VIR-001] the simultaneous half-slope equations uniquely select (a,b)=(0,1)
+PASS [C-VIR-001] Options A and B fail different halves of the declared predicate
+PASS [C-VIR-001] both target slopes are load-bearing: baseline
+PASS [C-VIR-001] both target slopes are load-bearing: mutations supplied
+PASS [C-VIR-001] both target slopes are load-bearing: mutation 1 rejected
+PASS [C-VIR-001] both target slopes are load-bearing: mutation 2 rejected
+ALL 7 CHECKS PASS [C-VAR-001]
+ALL 9 CHECKS PASS [C-CC-001]
+ALL 6 CHECKS PASS [C-VIR-001]
+P007 ALL 22 CHECKS PASS

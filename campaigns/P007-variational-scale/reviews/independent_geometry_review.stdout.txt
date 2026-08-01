@@ -1,0 +1,11 @@
+PASS [C-VAR-001-INDEPENDENT] directional first variation independently factors any fixed scale
+PASS [C-VAR-001-INDEPENDENT] a path-dependent multiplier adds an independent variation term
+PASS [C-CC-001-INDEPENDENT] direct Christoffel reconstruction gives the full coordinate-time acceleration
+PASS [C-CC-001-INDEPENDENT] the independently reconstructed slow limit retains the index gradient
+PASS [C-CC-001-INDEPENDENT] independent slow expansion gives an E0-sensitive mixed-scale acceleration
+PASS [C-VIR-001-INDEPENDENT] inverting the slope map independently gives a=w-e and b=-(w+e)
+PASS [C-VIR-001-INDEPENDENT] the inverted half-slope target gives Option C and not A or B
+ALL 2 CHECKS PASS [C-VAR-001-INDEPENDENT]
+ALL 3 CHECKS PASS [C-CC-001-INDEPENDENT]
+ALL 2 CHECKS PASS [C-VIR-001-INDEPENDENT]
+P007 INDEPENDENT REVIEW ALL 7 CHECKS PASS

@@ -1,0 +1,11 @@
+attempt: 0001
+completed_at: '2026-08-01T11:55:53Z'
+elapsed_seconds: 2.2
+exit_code: 0
+terminal_tally: P007 ALL 22 CHECKS PASS
+verdict:
+  C-VAR-001: symbolic_verified
+  C-CC-001: symbolic_verified
+  C-VIR-001: symbolic_verified
+status: passed
+stdout: stdout.txt

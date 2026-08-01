@@ -29,6 +29,12 @@ from .optical_geometry import (
     slow_geodesic_acceleration_1d,
     slow_geodesic_acceleration_from_potential,
 )
+from .collective_dynamics import (
+    optical_collective_acceleration,
+    optical_collective_lagrangian,
+    slow_optical_collective_acceleration,
+    virial_scaling_exponents,
+)
 from .radial_energy import (
     capillary_critical_radius,
     capillary_energy,
@@ -55,6 +61,10 @@ from .thermal import (
     two_level_upper_occupation,
 )
 from .verification import CheckFailure, CheckLedger
+from .variational import (
+    euler_lagrange_expression,
+    solve_euler_lagrange_acceleration,
+)
 
 __all__ = [
     "BVPEvidence",
@@ -82,6 +92,8 @@ __all__ = [
     "load_yaml",
     "line_energy",
     "optical_box_static_1d",
+    "optical_collective_acceleration",
+    "optical_collective_lagrangian",
     "optical_dilaton",
     "optical_metric_1d",
     "optical_ricci_scalar_1d",
@@ -94,6 +106,7 @@ __all__ = [
     "solve_method_of_lines",
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",
+    "slow_optical_collective_acceleration",
     "spherical_shell_energy",
     "symmetric_two_level_gate",
     "sine_gordon_residual",
@@ -101,6 +114,9 @@ __all__ = [
     "validate_release",
     "two_level_occupation_variance",
     "two_level_upper_occupation",
+    "euler_lagrange_expression",
+    "solve_euler_lagrange_acceleration",
+    "virial_scaling_exponents",
 ]
 
 __version__ = "0.0.0"

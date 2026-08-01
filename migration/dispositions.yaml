@@ -30,6 +30,16 @@ units:
     note: >-
       P004 promoted the exact 1+1 identity, its true uniqueness class modulo a
       constant, and the conditional TF/geodesic weak-field map.
+  T1D:
+    disposition: migrated
+    accepted_claims:
+      - C-VAR-001
+      - C-CC-001
+      - C-VIR-001
+    note: >-
+      P007 promotes the corrected general fixed-scale variational theorem, the
+      exact conditional optical acceleration, the mixed-scale guard, and the
+      conditional virial classification; degree one is sufficient but not necessary.
   T1E:
     disposition: partially_migrated
     accepted_claims:
@@ -46,6 +56,20 @@ units:
       P005 promotes the normalized occupation, variance/sech identity, global
       bounds and limits, both source guards, and the conditional shape relation
       while keeping the macroscopic amplitude and mechanism outside the claim.
+  T2B:
+    disposition: partially_migrated
+    accepted_claims:
+      - C-VAR-001
+      - C-CC-001
+      - C-VIR-001
+    remaining_scope: >-
+      The later Phase-4 S5 annotation claiming Option-C physical realizability
+      and microscopic-to-continuum layer separation remains unadjudicated.
+      A full 3D PDE time-stepper remains explicitly outside T2B's claim.
+    note: >-
+      P007 replaces duplicate integrations of an analytically identical RHS
+      with exact parameter elimination plus local uniqueness, and separates the
+      mixed-scale model by an exact initial-acceleration difference.
   HE4:
     disposition: partially_migrated
     accepted_claims:

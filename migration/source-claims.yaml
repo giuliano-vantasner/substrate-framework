@@ -7,9 +7,9 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
-  migrated: 2
-  partially_migrated: 3
-  pending_adjudication: 213
+  migrated: 3
+  partially_migrated: 4
+  pending_adjudication: 211
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -162,8 +162,14 @@ units:
   dynamic_check_calls: 3
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: migrated
+  accepted_claims:
+  - C-VAR-001
+  - C-CC-001
+  - C-VIR-001
+  note: P007 promotes the corrected general fixed-scale variational theorem, the exact conditional optical
+    acceleration, the mixed-scale guard, and the conditional virial classification; degree one is sufficient
+    but not necessary.
 - source_unit: T1E
   phase: phase-1
   path: merged-framework/bridges/phase-1/bridge_T1E_E0_triple_oracle.py
@@ -345,8 +351,16 @@ units:
   dynamic_check_calls: 0
   assert_statements: 6
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: partially_migrated
+  accepted_claims:
+  - C-VAR-001
+  - C-CC-001
+  - C-VIR-001
+  remaining_scope: The later Phase-4 S5 annotation claiming Option-C physical realizability and microscopic-to-continuum
+    layer separation remains unadjudicated. A full 3D PDE time-stepper remains explicitly outside T2B's
+    claim.
+  note: P007 replaces duplicate integrations of an analytically identical RHS with exact parameter elimination
+    plus local uniqueness, and separates the mixed-scale model by an exact initial-acceleration difference.
 - source_unit: T2C
   phase: phase-2
   path: merged-framework/bridges/phase-2/bridge_T2C_tidal_MP.py

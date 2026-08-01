@@ -112,6 +112,8 @@ Do not stop because routes are difficult or numerous. Generate another materiall
 
 Choose the strongest practical oracle using [oracles.md](references/oracles.md). Then audit the audit:
 
+Do not count a weaker oracle as independent evidence when a stronger result already fixes its input. In particular, after exact algebra removes a parameter from an ODE right-hand side, local uniqueness proves same-initial-data trajectory independence; integrating that identical right-hand side twice is only regression coverage. Use exact sensitivity or initial Taylor coefficients for analytically accessible counterexamples, and reserve simulation for behavior the exact result does not decide.
+
 - confirm clean exit and terminal tally;
 - mutate each load-bearing input and require a relevant check to fail;
 - test wrong signs, normalizations, conventions, and counterexamples;

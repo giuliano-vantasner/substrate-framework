@@ -1,0 +1,20 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1D
+  - T2B
+framework_base: 20e2d95
+question: >-
+  Can a general fixed-scale variational theorem and exact optical derivation
+  replace the predecessor's degree-one overstatement and redundant trajectory
+  integrations while preserving its genuine counterexample and scope ceiling?
+command: PYTHONPATH=src .venv/bin/python proposals/P007-variational-scale/verify.py
+oracle:
+  kind: exact_sympy_variational_algebra
+  mutation_requirements:
+    - reject path-dependent multipliers as harmless scales
+    - retain the refractive-index profile after energy-scale cancellation
+    - detect exact E0 sensitivity in the mixed-scale counterexample
+    - reject wrong virial options and slope targets
+status: running

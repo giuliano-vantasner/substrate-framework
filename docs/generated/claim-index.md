@@ -3,6 +3,15 @@
 
 This document is generated from `governance/claims.yaml`.
 
+## C-CC-001
+
+Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(q)^2*qdot^2/c0^2), with positive n, c0, and E0, the exact coordinate-time acceleration is qddot = (c0^2-3*n^2*qdot^2)*n_q/(2*n^3). Its zero-velocity limit is c0^2*n_q/(2*n^3), matching C-OG-001, and its locally unique same-data IVP is independent of E0. The mixed-scale counterexample with E0 also inside the kinetic square root retains E0 and, for n=1+alpha*q at q=qdot=0, has initial acceleration E0*c0^2*alpha/2.
+
+- Accepted in: `v0.7.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-VAR-001, C-OG-001
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.
@@ -71,6 +80,24 @@ For every real omega with 0 < omega < 1, the C-SG-001 breather's period-averaged
 For every real dimensionless splitting x, the normalized upper-state occupation of Z = 1 + exp(-x) is P = exp(-x)/Z = 1/(1+exp(x)). Its Bernoulli variance is P*(1-P) = sech(x/2)^2/4, and the conditional symmetric gate W = 2*P*(1-P) = sech(x/2)^2/2. W is even, has unique global maximum 1/2 at x = 0, decreases strictly with |x|, and tends to zero as x tends to either infinity. A shape A*sech(x/2)^2 equals 2*A*W; this identity does not determine the independent amplitude A.
 
 - Accepted in: `v0.5.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
+## C-VAR-001
+
+For any differentiable one-coordinate Lagrangian L0 and any nonzero multiplier A that is independent of the path coordinate, velocity, and evolution parameter, the Euler-Lagrange operator satisfies EL[A*L0] = A*EL[L0]. The two Euler-Lagrange equations therefore have the same solution set. The result holds for every fixed nonzero uniform factor, not only a factor of degree one in a named energy scale.
+
+- Accepted in: `v0.7.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
+## C-VIR-001
+
+Conditional on the real virial slope formulas width_slope=(a-b)/2 and energy_slope=-(a+b)/2, both slopes equal -1/2 if and only if (a,b)=(0,1). The alternatives (1,0) and (1,1) give slopes (1/2,-1/2) and (0,-1), respectively, and fail the simultaneous target.
+
+- Accepted in: `v0.7.0`
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none

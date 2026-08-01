@@ -223,3 +223,88 @@ claims:
     accepted_in: v0.6.0
     challenges: []
     supersedes: []
+  - id: C-VAR-001
+    statement: >-
+      For any differentiable one-coordinate Lagrangian L0 and any nonzero
+      multiplier A that is independent of the path coordinate, velocity, and
+      evolution parameter, the Euler-Lagrange operator satisfies
+      EL[A*L0] = A*EL[L0]. The two Euler-Lagrange equations therefore have the
+      same solution set. The result holds for every fixed nonzero uniform
+      factor, not only a factor of degree one in a named energy scale.
+    provenance: campaigns/P007-variational-scale/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P007-variational-scale/verify.py
+      - campaigns/P007-variational-scale/attempts/0001/result.yaml
+      - campaigns/P007-variational-scale/reviews/independent_geometry_review.py
+      - memory/vantasner/decisions/C-VAR-001-review.md
+      - tests/test_variational.py
+    assumptions:
+      - The multiplier is nonzero and constant with respect to the path, velocity, and evolution parameter.
+      - The Lagrangian is differentiable enough for the stated Euler-Lagrange operator.
+    comparators: []
+    accepted_in: v0.7.0
+    challenges: []
+    supersedes: []
+  - id: C-CC-001
+    statement: >-
+      Conditional on the timelike one-coordinate action
+      L = -(E0/sqrt(n(q)))*sqrt(1-n(q)^2*qdot^2/c0^2), with positive n, c0,
+      and E0, the exact coordinate-time acceleration is
+      qddot = (c0^2-3*n^2*qdot^2)*n_q/(2*n^3). Its zero-velocity limit is
+      c0^2*n_q/(2*n^3), matching C-OG-001, and its locally unique same-data IVP
+      is independent of E0. The mixed-scale counterexample with E0 also inside
+      the kinetic square root retains E0 and, for n=1+alpha*q at q=qdot=0,
+      has initial acceleration E0*c0^2*alpha/2.
+    provenance: campaigns/P007-variational-scale/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-VAR-001
+      - C-OG-001
+    evidence:
+      - campaigns/P007-variational-scale/verify.py
+      - campaigns/P007-variational-scale/attempts/0001/result.yaml
+      - campaigns/P007-variational-scale/reviews/independent_geometry_review.py
+      - memory/vantasner/decisions/C-CC-001-review.md
+      - tests/test_collective_dynamics.py
+    assumptions:
+      - The one-coordinate optical collective action is a declared effective model, not a derived full 3D field reduction.
+      - The path stays in a smooth positive-index timelike domain n(q)^2*qdot^2 < c0^2 where the IVP is locally unique.
+      - Energy scale E0 and signal speed c0 are fixed positive parameters.
+    comparators: []
+    accepted_in: v0.7.0
+    challenges: []
+    supersedes: []
+  - id: C-VIR-001
+    statement: >-
+      Conditional on the real virial slope formulas
+      width_slope=(a-b)/2 and energy_slope=-(a+b)/2, both slopes equal -1/2
+      if and only if (a,b)=(0,1). The alternatives (1,0) and (1,1) give
+      slopes (1/2,-1/2) and (0,-1), respectively, and fail the simultaneous
+      target.
+    provenance: campaigns/P007-variational-scale/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P007-variational-scale/verify.py
+      - campaigns/P007-variational-scale/attempts/0001/result.yaml
+      - campaigns/P007-variational-scale/reviews/independent_geometry_review.py
+      - memory/vantasner/decisions/C-VIR-001-review.md
+      - tests/test_collective_dynamics.py
+    assumptions:
+      - The two virial slope formulas are approved conditional inputs; their physical derivation and fitted predecessor slopes are not part of this claim.
+      - Parameters a and b are real.
+    comparators: []
+    accepted_in: v0.7.0
+    challenges: []
+    supersedes: []

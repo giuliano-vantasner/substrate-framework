@@ -1,0 +1,42 @@
+id: P007
+base_release: v0.6.0
+source_baseline: substrate@6d1f4e0
+source_units:
+  - T1D
+  - T2B
+question: >-
+  Derive the exact invariance of Euler-Lagrange dynamics under a nonzero
+  parameter-only action scale, derive the full optical collective-coordinate
+  acceleration and its scale dependence from the declared effective action,
+  and isolate the conditional virial classification without promoting a 3D
+  PDE or physical-realizability claim.
+invariants:
+  - accepted release v0.6.0 and its optical metric convention remain fixed
+  - the energy scale is a fixed positive parameter rather than a time-dependent field
+  - scale-independence of a declared effective action is not a general equivalence-principle proof
+  - exact ODE parameter elimination is not revalidated by duplicate integrations of an identical RHS
+allowed_imports:
+  - C-OG-001 for the positive static 1+1 optical metric and conventions
+  - exact Euler-Lagrange calculus and local ODE uniqueness on a smooth timelike domain
+  - conditional virial slope formulas W_slope=(a-b)/2 and E_slope=-(a+b)/2
+  - predecessor bridges T1D and T2B at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Prove parameter-only multiplicative scale invariance at the Euler-Lagrange operator level
+  - id: B
+    description: Derive the collective-coordinate equation independently from the accepted optical metric connection
+  - id: C
+    description: Compare parameterized trajectories numerically and use a mixed-scale Lagrangian as a guard
+uniqueness_evidence: null
+selection_criteria:
+  - exact general statement with correct necessary assumptions
+  - natural composition with the accepted optical metric
+  - separation of action-scale invariance from physical object identification
+  - counterexample sensitivity to nonuniform parameter placement
+  - no redundant simulation when exact parameter elimination and IVP uniqueness decide the trajectory claim
+claims_proposed:
+  - C-VAR-001
+  - C-CC-001
+  - C-VIR-001
+comparators_blinded_until: not_applicable_no_empirical_comparator
+status: accepted
