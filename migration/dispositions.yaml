@@ -269,3 +269,20 @@ units:
       P020 retains arbitrary functions of the dimensionless coupling, identifies
       the dropped mass column's nullspace coordinate, and classifies the
       coupling-free alternative as a substitution of other free inputs.
+  EL4:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-003
+      - C-DIM-005
+      - C-RGE-001
+    qualification: >-
+      EL4's declared one-loop flow and premise-explicit mass-coordinate
+      composition are accepted. It does not derive the beta function, numerical
+      soliton coefficient, hadronic offset, granularity identification,
+      over-determination prediction, electron mass, or electron identity.
+    evidence:
+      - campaigns/P021-frontier-rg-coordinate/reviews/source_adjudication.md
+    note: >-
+      P021 distinguishes total from partial RG differentiation, retains the free
+      mass-energy ratio, and shows that EL4's fabricated free-length matrix has
+      rank three and nullity zero rather than the claimed loss of determination.

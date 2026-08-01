@@ -1,0 +1,17 @@
+attempt: 0001
+completed_at: '2026-08-01T14:24:53Z'
+exit_code: 0
+terminal_tally: 22
+verdict:
+  C-RGE-001: symbolic_verified
+  C-DIM-005: symbolic_verified
+evidence:
+  - exact reciprocal-coupling solution and boundary recovery
+  - total-derivative invariant and nonzero fixed-coupling partial derivative
+  - beta-sign and normalization mutations
+  - transmuted-scale orientation and limiting cases
+  - premise-explicit mass-coordinate composition
+  - free-prefactor and augmented-rank counterexamples
+  - source free-length guard diagnosis
+status: passed
+stdout: stdout.txt

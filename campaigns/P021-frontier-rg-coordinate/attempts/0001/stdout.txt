@@ -1,0 +1,24 @@
+PASS [C-RGE-001/C-DIM-005] the audited EL4 source is the hash-pinned candidate unit
+PASS [C-RGE-001/C-DIM-005] the package API gives the exact separated one-loop solution
+PASS [C-RGE-001/C-DIM-005] the running solution recovers its boundary coupling
+PASS [C-RGE-001/C-DIM-005] the inverse coupling satisfies the declared flow equation
+PASS [C-RGE-001/C-DIM-005] the transmutation API retains the reference coupling and beta coefficient
+PASS [C-RGE-001/C-DIM-005] the transmuted scale is the exact zero of the inverse coupling
+PASS [C-RGE-001/C-DIM-005] RG invariance is the total derivative along the declared flow
+PASS [C-RGE-001/C-DIM-005] the partial reference-scale derivative at fixed coupling is not zero
+PASS [C-RGE-001/C-DIM-005] beta sign and one-loop normalization: baseline
+PASS [C-RGE-001/C-DIM-005] beta sign and one-loop normalization: mutations supplied
+PASS [C-RGE-001/C-DIM-005] beta sign and one-loop normalization: mutation 1 rejected
+PASS [C-RGE-001/C-DIM-005] beta sign and one-loop normalization: mutation 2 rejected
+PASS [C-RGE-001/C-DIM-005] beta sign and one-loop normalization: mutation 3 rejected
+PASS [C-RGE-001/C-DIM-005] positive asymptotically-free inputs put the invariant below the reference scale
+PASS [C-RGE-001/C-DIM-005] the declared action-speed reference gives the exact longer scale
+PASS [C-RGE-001/C-DIM-005] the declared mass-energy ratio gives the exact mass coordinate
+PASS [C-RGE-001/C-DIM-005] the mass coordinate retains all three dimensionless inputs
+PASS [C-RGE-001/C-DIM-005] two admissible mass-energy ratios give different masses at fixed scale and coupling
+PASS [C-RGE-001/C-DIM-005] an unpinned mass-energy ratio can reproduce any positive coordinate
+PASS [C-RGE-001/C-DIM-005] duplicate coefficient rows impose consistency only when their offsets are fixed
+PASS [C-RGE-001/C-DIM-005] EL4's fabricated free-length matrix remains full-column-rank
+PASS [C-RGE-001/C-DIM-005] frontier-form factorization does not determine a dimensionless prefactor
+ALL 22 CHECKS PASS [C-RGE-001/C-DIM-005]
+P021 EL4 EXACT AUDIT ALL 22 CHECKS PASS

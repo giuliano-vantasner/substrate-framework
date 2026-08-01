@@ -64,6 +64,11 @@ from .radial_energy import (
     line_energy,
     spherical_shell_energy,
 )
+from .renormalization import (
+    one_loop_inverse_coupling_squared,
+    one_loop_transmutation_scale,
+    transmuted_mass_coordinate,
+)
 from .sine_gordon import (
     breather_action,
     breather_action_lattice_adjacent_gap,
@@ -181,6 +186,8 @@ __all__ = [
     "optical_dilaton_source_operator_1d",
     "optical_metric_1d",
     "optical_ricci_scalar_1d",
+    "one_loop_inverse_coupling_squared",
+    "one_loop_transmutation_scale",
     "refinement_study",
     "render_claim_memory",
     "render_claim_index",
@@ -205,6 +212,7 @@ __all__ = [
     "validate_release",
     "two_level_occupation_variance",
     "two_level_upper_occupation",
+    "transmuted_mass_coordinate",
     "u1_current_components",
     "u1_current_divergence",
     "euler_lagrange_expression",

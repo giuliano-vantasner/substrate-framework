@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 200
-  qualified: 13
+  pending_adjudication: 199
+  qualified: 14
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -8309,8 +8309,20 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DIM-003
+  - C-DIM-005
+  - C-RGE-001
+  qualification: EL4's declared one-loop flow and premise-explicit mass-coordinate
+    composition are accepted, but its beta function, soliton coefficient, hadronic
+    offset, granularity map, over-determination prediction, and electron identity are
+    not derived.
+  evidence:
+  - campaigns/P021-frontier-rg-coordinate/reviews/source_adjudication.md
+  note: P021 distinguishes total from partial RG differentiation, retains the free
+    mass-energy ratio, and shows that EL4's fabricated free-length matrix remains
+    full-column-rank rather than destroying over-determination.
 - source_unit: EL5
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL5_od_instrument_and_consumers.py

@@ -1,0 +1,21 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL4
+framework_base: e268261
+question: >-
+  Which exact one-loop and mass-coordinate relations follow from EL4 after
+  every reference scale, coupling, beta coefficient, and mass prefactor is
+  retained?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P021-frontier-rg-coordinate/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL4_me_in_the_frontier_form.py
+oracle:
+  kind: exact_flow_invariant_coordinate_and_information_audit
+  mutation_requirements:
+    - beta sign and both one-loop normalization factors are load-bearing
+    - partial and total reference-scale derivatives are distinguished
+    - every dimensionless mass-coordinate input remains free
+    - coefficient rank is distinguished from augmented-system consistency
+status: passed

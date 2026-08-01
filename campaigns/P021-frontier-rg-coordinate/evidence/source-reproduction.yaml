@@ -1,0 +1,17 @@
+source_unit: EL4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-46/bridge_EL4_me_in_the_frontier_form.py
+sha256: 4ae8185505b11d3cf2beffcbb6ec786e4bfbdd57e00cd42b8fc223a28a17cf2f
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL4_me_in_the_frontier_form.py
+observed_at: '2026-08-01T14:24:53Z'
+exit_code: 0
+terminal_tally: ALL 10 CHECKS PASS
+numeric_observation:
+  baseline_b1: 1.23150067
+  refined_b1: 1.23145257
+  absolute_difference: 4.81e-05
+scope_note: >-
+  Reproduction confirms the source predicates execute. P021 separately checks
+  total RG differentiation, premise closure, augmented consistency, and whether
+  the source numerical evidence meets the framework's promotion standard.

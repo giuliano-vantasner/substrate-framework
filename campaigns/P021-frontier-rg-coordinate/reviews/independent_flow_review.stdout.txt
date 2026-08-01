@@ -1,0 +1,7 @@
+PASS [P021-INDEPENDENT] direct reciprocal-coupling integration satisfies its constant derivative
+PASS [P021-INDEPENDENT] the zero occurs at the exact logarithmic scale separation
+PASS [P021-INDEPENDENT] exponentiating the independently derived zero gives the invariant scale
+PASS [P021-INDEPENDENT] independent substitution retains the mass-energy ratio in the coordinate
+PASS [P021-INDEPENDENT] identical left-hand rows can still make an inconsistent augmented system
+ALL 5 CHECKS PASS [P021-INDEPENDENT]
+P021 INDEPENDENT REVIEW ALL 5 CHECKS PASS

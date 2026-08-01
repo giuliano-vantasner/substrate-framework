@@ -207,8 +207,13 @@ def validate_migration_inventory(root: Path, registry: dict) -> dict[str, int]:
     expected_count = scope.get("expected_primary_units")
     if len(units) != expected_count or candidates.get("primary_unit_count") != expected_count:
         raise GovernanceError("migration primary-unit count disagrees with scope")
-    if candidates.get("disposition_counts") != dict(sorted(counts.items())):
-        raise GovernanceError("migration disposition summary is stale")
+    actual_counts = dict(sorted(counts.items()))
+    recorded_counts = candidates.get("disposition_counts")
+    if recorded_counts != actual_counts:
+        raise GovernanceError(
+            "migration disposition summary is stale: "
+            f"recorded={recorded_counts}, actual={actual_counts}"
+        )
     return dict(sorted(counts.items()))
 
 

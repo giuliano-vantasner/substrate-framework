@@ -1,0 +1,38 @@
+id: P021
+base_release: v0.18.0
+base_commit: e268261
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL4
+question: >-
+  Determine whether EL4 supplies a distinct exact one-loop RG invariant and
+  conditional mass-coordinate composition while retaining every free input.
+invariants:
+  - C-DIM-003 remains a lossless coordinate map with a free coordinate
+  - C-DIM-004 remains conditional on its coupling and two unit equations
+  - RG invariance means a total derivative along the declared coupling flow
+  - no electron identity or observed hierarchy is accepted authority
+allowed_imports:
+  - C-DIM-002, C-DIM-003, and C-DIM-004
+  - positive exact real algebra and the explicitly declared one-loop ODE
+  - EL4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote a conditional one-loop RG invariant and any closed coordinate composition
+  - id: B
+    description: Classify the frontier mass form as duplicate coordinate evidence
+  - id: C
+    description: Promote the physical claim that the electron mass is derived
+uniqueness_evidence: null
+selection_criteria:
+  - exact ODE and total-derivative closure
+  - retention of independent scale, coupling, and coefficient inputs
+  - dimensional consistency and correct limits
+  - dependency and assumption economy
+  - distinct reusable consumer reach
+  - mutation sensitivity
+claims_proposed:
+  - C-RGE-001
+  - C-DIM-005
+comparators_blinded_until: symbolic_ode_units_dependencies_and_mutations_frozen
+status: accepted

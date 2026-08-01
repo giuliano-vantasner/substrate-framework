@@ -57,6 +57,15 @@ Conditional on positive quantities satisfying the declared equations U*L=S*c0/(2
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-003
 
+## C-DIM-005
+
+Conditional on C-RGE-001 and positive quantities satisfying mu0=S*c0/a, g0^2=beta^2, and m*c0^2=q*Lambda, the C-DIM-003 mass coordinate is N_m=m*c0*a/S=q*exp(-8*pi^2/(b0*beta^2)). The dimensionless inputs q, b0, and beta^2 all remain free and load-bearing. This composition predicts no mass, length, coupling, beta coefficient, prefactor, or particle identity; an unpinned q can reproduce any positive N_m.
+
+- Accepted in: `v0.19.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-DIM-003, C-RGE-001
+
 ## C-MED-001
 
 For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.
@@ -110,6 +119,15 @@ For positive radius R and density lambda, the circumference line energy E_line =
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-002
+
+## C-RGE-001
+
+For positive b0, mu0, and g0, a positive coupling on an interval that satisfies the declared one-loop equation mu*dg/dmu=-b0*g^3/(16*pi^2) with g(mu0)=g0 obeys 1/g(mu)^2=1/g0^2+b0*log(mu/mu0)/(8*pi^2). The formal zero of this inverse coupling is Lambda=mu0*exp(-8*pi^2/(b0*g0^2)). Lambda has zero total logarithmic-scale derivative along the declared flow, whereas its partial derivative with respect to mu0 at fixed g0 is Lambda/mu0. For b0>0, 0<Lambda/mu0<1. This conditional theorem does not derive the beta function or b0 and establishes no physical QCD, confinement, or strong-coupling interpretation.
+
+- Accepted in: `v0.19.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
 
 ## C-SG-001
 
