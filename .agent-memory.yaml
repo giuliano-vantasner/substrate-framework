@@ -1,0 +1,10 @@
+# Repository-local configuration for the bundled agent-memory CLI.
+categories:
+  - inventory
+  - structure
+  - synthesis
+  - claims
+  - proposals
+  - decisions
+  - releases
+  - attempts

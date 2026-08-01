@@ -1,0 +1,4 @@
+interface:
+  display_name: "Physics Erdős Loop"
+  short_description: "Persistent, verifier-backed physics research"
+  default_prompt: "Use $physics-erdos-loop to derive and promote a framework-consistent physics claim."

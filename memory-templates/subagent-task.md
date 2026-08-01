@@ -1,0 +1,51 @@
+# Delegated Worker Contract Template
+
+Use only when delegation is authorized. Give each worker one file and a disjoint write surface. Failure is returned as attempt evidence with a next route; it never masquerades as completion.
+
+```md
+---
+description: <single positive deliverable owned by this worker>
+author: <agent-id>
+created: '<ISO-8601>'
+updated: '<ISO-8601>'
+tags:
+- substrate-framework
+- delegated-task
+category: efforts
+confidence: working
+status: active
+---
+
+## Positive Deliverable
+State the exact object this worker must produce and the relevant success gates. No-go, residual, obstruction, or partial verifier is not an accepted substitute.
+
+## Sourced Inputs
+List exact release, claim ids, paths, equations, data, parent contract, and write surface. Provide facts rather than the parent agent's expected interpretation.
+
+## Invariants and Boundaries
+State conventions and accepted invariants. Name files the worker may edit and surfaces owned by others.
+
+## Candidate and Method
+Record the assigned candidate or independent review route, oracle, selection criteria, and comparator gate. Do not change foundations to rescue the candidate.
+
+## Steps
+List dependency-ordered implementation, verification, sensitivity, and consumer checks.
+
+## Attempts
+Append failed routes with commands, diagnoses, and next materially different attempts. Continue until the deliverable and debt gates pass.
+
+## Validation
+Record exact commands for the positive claim, mutation/counterexample behavior, refinement or independent route, and affected consumers.
+
+## Debt Ledger
+Record and discharge every new import, assumption, parameter, residual, convention conflict, or broken consumer.
+
+## Results
+Return the positive result, changed paths, status axes, reproduction commands, and claim delta. Failed attempts stay here while the contract remains active.
+
+## Done Gate
+Confirm the deliverable and applicable success conditions from `AGENTS.md`; otherwise name the next route.
+
+## Cross-References
+Link parent contract, proposal, claims, artifacts, and sibling awareness paths.
+```

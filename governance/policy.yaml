@@ -1,0 +1,16 @@
+schema_version: 1
+authority_order:
+  - accepted_release
+  - accepted_claim_registry
+  - adjudicated_campaign
+  - proposal
+  - attempt
+principles:
+  chronology_is_not_authority: true
+  campaigns_are_immutable: true
+  canonical_docs_are_generated: true
+  claims_are_promoted_individually: true
+  proposals_may_challenge_but_not_supersede: true
+  failure_is_not_completion: true
+  no_early_stopping: true
+  global_dependency_replay_required: true
