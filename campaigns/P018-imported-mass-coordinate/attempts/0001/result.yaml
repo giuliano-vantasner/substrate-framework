@@ -1,0 +1,16 @@
+attempt: 0001
+completed_at: '2026-08-01T13:54:42Z'
+exit_code: 0
+terminal_tally: 18
+verdict:
+  C-DIM-003: symbolic_verified
+evidence:
+  - exact dimension cancellation
+  - both forward and inverse compositions
+  - four factor and power mutations
+  - arbitrary-coordinate sensitivity
+  - conditional Skyrme consumer replay
+  - two-coordinate ratio counterexample
+  - lexical co-occurrence scope counterexample
+status: passed
+stdout: stdout.txt

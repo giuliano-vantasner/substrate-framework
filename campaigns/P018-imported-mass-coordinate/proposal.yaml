@@ -1,0 +1,38 @@
+id: P018
+base_release: v0.15.0
+base_commit: 791ae87
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL1
+question: >-
+  Construct the exact dimensionless coordinate for an imported mass relative
+  to the accepted speed-action-length basis and determine whether EL1 preserves
+  or falsely eliminates the independent input.
+invariants:
+  - C-DIM-002 remains set-local and coefficient-free
+  - reparameterization preserves rather than predicts independent information
+  - C-SK-001's mass formulas remain conditional premises
+  - numerical constants cannot select the symbolic claim
+allowed_imports:
+  - C-DIM-002 and its accepted dimensional-analysis API
+  - C-SK-001 only as a conditional consumer
+  - positive exact real algebra
+  - EL1 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote a lossless imported-mass coordinate bijection
+  - id: B
+    description: Classify EL1 wholly as duplicate evidence for C-DIM-002
+  - id: C
+    description: Treat the coordinate map as eliminating the import or closing absolute scale
+uniqueness_evidence: null
+selection_criteria:
+  - exact invertibility and dimensional closure
+  - preservation of independent information
+  - dependency and assumption economy
+  - distinct reusable consumer reach
+  - mutation-sensitive verification
+claims_proposed:
+  - C-DIM-003
+comparators_blinded_until: symbolic_api_criteria_and_mutations_frozen
+status: accepted

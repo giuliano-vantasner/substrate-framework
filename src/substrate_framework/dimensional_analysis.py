@@ -7,6 +7,13 @@ from typing import Any
 import sympy as sp
 
 
+def _positive(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.is_number and expression.is_positive is not True:
+        raise ValueError(f"{name} must be positive")
+    return expression
+
+
 def dimensionless_monomial_basis(dimension_matrix: Any) -> tuple[sp.Matrix, ...]:
     """Return a basis for exponent vectors with zero total dimensions.
 
@@ -49,3 +56,39 @@ def monomial_exponents(
     if parameters.rows:
         raise ValueError("target monomial exponents are not unique")
     return sp.Matrix(solution)
+
+
+def dimensionless_mass_coordinate(
+    mass: Any,
+    speed: Any,
+    action: Any,
+    length: Any,
+) -> sp.Expr:
+    """Return ``mass*speed*length/action`` for a declared positive basis.
+
+    This is a lossless reparameterization at fixed basis values. It does not
+    predict the coordinate or establish that the basis is physically complete.
+    """
+
+    mass_value = _positive(mass, "mass")
+    speed_value = _positive(speed, "speed")
+    action_value = _positive(action, "action")
+    length_value = _positive(length, "length")
+    return sp.simplify(mass_value * speed_value * length_value / action_value)
+
+
+def mass_from_dimensionless_coordinate(
+    coordinate: Any,
+    speed: Any,
+    action: Any,
+    length: Any,
+) -> sp.Expr:
+    """Return ``coordinate*action/(speed*length)`` for a positive basis."""
+
+    coordinate_value = _positive(coordinate, "coordinate")
+    speed_value = _positive(speed, "speed")
+    action_value = _positive(action, "action")
+    length_value = _positive(length, "length")
+    return sp.simplify(
+        coordinate_value * action_value / (speed_value * length_value)
+    )

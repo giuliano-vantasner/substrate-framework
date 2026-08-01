@@ -218,3 +218,20 @@ units:
       iff already accepted as C-SK-001. Its generic cancellation adds no distinct
       consumer, and its arbitrary-model and sector-bookkeeping readings are not
       consequences of the equations.
+  EL1:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-002
+      - C-DIM-003
+      - C-SK-001
+    qualification: >-
+      EL1's primitive-basis mass unit, lossless dimensionless coordinate, and
+      conditional Skyrme equality are accepted. It does not predict the
+      coordinate, eliminate the physical import, derive a mass ratio or absolute
+      scale, or prove one semantic role for every lexical consumer.
+    evidence:
+      - campaigns/P018-imported-mass-coordinate/reviews/source_adjudication.md
+    note: >-
+      P018 supplies the exact forward/inverse coordinate APIs and demonstrates
+      that EL1.6 confuses dimensionless with derived while EL1.7 tests only
+      file-level token co-occurrence in a restricted phase subset.

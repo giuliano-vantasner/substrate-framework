@@ -727,3 +727,35 @@ claims:
     accepted_in: v0.15.0
     challenges: []
     supersedes: []
+  - id: C-DIM-003
+    statement: >-
+      Relative to C-DIM-002's declared positive speed c0, action S, and length
+      a, the map from a positive mass m to N_m=m*c0*a/S is dimensionless and
+      bijective, with inverse m=N_m*S/(c0*a). For two masses represented using
+      the same primitive values, m_1/m_2=N_1/N_2. This is a lossless change of
+      coordinates: N_m remains one free dimensionless physics input, so the map
+      predicts no mass or ratio, selects no primitive value, and does not turn a
+      physical import into a derived quantity.
+    provenance: campaigns/P018-imported-mass-coordinate/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-DIM-002
+    evidence:
+      - campaigns/P018-imported-mass-coordinate/verify.py
+      - campaigns/P018-imported-mass-coordinate/attempts/0001/result.yaml
+      - campaigns/P018-imported-mass-coordinate/reviews/independent_exponent_review.py
+      - campaigns/P018-imported-mass-coordinate/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-DIM-003-review.md
+      - tests/test_action_scales.py
+    assumptions:
+      - The mass, speed, action, length, and dimensionless coordinate are positive.
+      - The speed, action, and length use the same declared primitive basis as C-DIM-002.
+      - The coordinate map is a reparameterization and supplies no equation fixing N_m or any primitive value.
+      - A ratio cancels shared dimensionful scales but still depends on the corresponding dimensionless coordinates.
+    comparators: []
+    accepted_in: v0.16.0
+    challenges: []
+    supersedes: []

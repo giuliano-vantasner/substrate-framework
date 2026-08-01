@@ -1,0 +1,13 @@
+source_unit: EL1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-46/bridge_EL1_import_is_one_pure_number.py
+sha256: d39debe384fed8383fdf65161e29b0a8de7e574dcc4f394d9011760814e4dae4
+command: >-
+  python3 <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL1_import_is_one_pure_number.py
+observed_at: '2026-08-01T13:52:00Z'
+exit_code: 0
+terminal_tally: ALL 9 CHECKS PASS
+scope_note: >-
+  Reproduction establishes source execution only. P018 separately tests the
+  mass-coordinate claim, independent-information boundary, and consumer-audit
+  reach.

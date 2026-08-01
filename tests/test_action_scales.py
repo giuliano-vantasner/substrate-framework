@@ -10,7 +10,9 @@ from substrate_framework.action_scales import (
 )
 from substrate_framework.dimensional_analysis import (
     dimensionless_group_count,
+    dimensionless_mass_coordinate,
     dimensionless_monomial_basis,
+    mass_from_dimensionless_coordinate,
     monomial_exponents,
 )
 
@@ -56,6 +58,23 @@ def test_monomial_exponent_solver_rejects_nonunique_or_unspanned_targets() -> No
         monomial_exponents(sp.Matrix([[1], [0]]), sp.Matrix([0, 1]))
 
 
+def test_dimensionless_mass_coordinate_is_an_exact_bijection() -> None:
+    mass, speed, action, length = sp.symbols("m c S a", positive=True)
+    coordinate = dimensionless_mass_coordinate(mass, speed, action, length)
+    assert coordinate == mass * speed * length / action
+    assert (
+        mass_from_dimensionless_coordinate(coordinate, speed, action, length)
+        == mass
+    )
+
+
+def test_mass_coordinate_retains_an_arbitrary_dimensionless_input() -> None:
+    coordinate, speed, action, length = sp.symbols("N c S a", positive=True)
+    mass = mass_from_dimensionless_coordinate(coordinate, speed, action, length)
+    assert mass == coordinate * action / (speed * length)
+    assert sp.diff(mass, coordinate) == action / (speed * length)
+
+
 @pytest.mark.parametrize(
     ("call", "message"),
     [
@@ -63,6 +82,11 @@ def test_monomial_exponent_solver_rejects_nonunique_or_unspanned_targets() -> No
         (lambda: secant_action_scale(1, 0), "frequency"),
         (lambda: rigid_rotor_energy(-1, 1), "inertia"),
         (lambda: rigid_rotor_normalized_action(1, -1), "angular_frequency"),
+        (lambda: dimensionless_mass_coordinate(0, 1, 1, 1), "mass"),
+        (lambda: dimensionless_mass_coordinate(1, 0, 1, 1), "speed"),
+        (lambda: dimensionless_mass_coordinate(1, 1, 0, 1), "action"),
+        (lambda: dimensionless_mass_coordinate(1, 1, 1, 0), "length"),
+        (lambda: mass_from_dimensionless_coordinate(0, 1, 1, 1), "coordinate"),
     ],
 )
 def test_numeric_positive_domains_are_enforced(call, message: str) -> None:

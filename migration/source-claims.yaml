@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 1
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 203
-  qualified: 10
+  pending_adjudication: 202
+  qualified: 11
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -8156,8 +8156,18 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DIM-002
+  - C-DIM-003
+  - C-SK-001
+  qualification: EL1's exact basis, mass-coordinate bijection, and conditional mass-unit equality
+    are accepted, but it does not predict the coordinate, derive a ratio or absolute scale, eliminate
+    the import, or prove one semantic role for every lexical consumer.
+  evidence:
+  - campaigns/P018-imported-mass-coordinate/reviews/source_adjudication.md
+  note: P018 preserves the arbitrary coordinate and replaces EL1's file-level regex semantics with
+    an explicit lexical-evidence ceiling.
 - source_unit: EL2
   phase: phase-46
   path: merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py

@@ -39,6 +39,15 @@ Over base-dimension rows (M,L,T), the declared primitive columns for a speed c0=
 - Compatibility: `native`
 - Dependencies: C-DIM-001
 
+## C-DIM-003
+
+Relative to C-DIM-002's declared positive speed c0, action S, and length a, the map from a positive mass m to N_m=m*c0*a/S is dimensionless and bijective, with inverse m=N_m*S/(c0*a). For two masses represented using the same primitive values, m_1/m_2=N_1/N_2. This is a lossless change of coordinates: N_m remains one free dimensionless physics input, so the map predicts no mass or ratio, selects no primitive value, and does not turn a physical import into a derived quantity.
+
+- Accepted in: `v0.16.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-DIM-002
+
 ## C-MED-001
 
 For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.

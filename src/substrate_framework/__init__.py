@@ -51,8 +51,10 @@ from .constitutive import (
     local_wave_speed,
 )
 from .dimensional_analysis import (
+    dimensionless_mass_coordinate,
     dimensionless_group_count,
     dimensionless_monomial_basis,
+    mass_from_dimensionless_coordinate,
     monomial_exponents,
 )
 from .radial_energy import (
@@ -155,6 +157,7 @@ __all__ = [
     "conditional_anw_mass",
     "conditional_topological_mass",
     "dimensionless_group_count",
+    "dimensionless_mass_coordinate",
     "dimensionless_monomial_basis",
     "hamiltonian_density",
     "index_from_potential",
@@ -165,6 +168,7 @@ __all__ = [
     "local_wave_speed",
     "lorentz_factor",
     "minkowski_dalembertian",
+    "mass_from_dimensionless_coordinate",
     "monomial_exponents",
     "optical_box_static_1d",
     "optical_collective_acceleration",

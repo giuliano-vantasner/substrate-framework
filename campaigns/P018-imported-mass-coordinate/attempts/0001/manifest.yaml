@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL1
+framework_base: 791ae87
+question: >-
+  Does a positive imported mass have an exact lossless dimensionless coordinate
+  relative to C-DIM-002, and which EL1 interpretations exceed that map?
+command: >-
+  PYTHONPATH=src .venv/bin/python proposals/P018-imported-mass-coordinate/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL1_import_is_one_pure_number.py
+oracle:
+  kind: exact_symbolic_bijection_and_source_scope_audit
+  mutation_requirements:
+    - every factor and exponent is load-bearing
+    - arbitrary coordinates reconstruct different masses
+    - dimensionless ratios retain their dimensionless coordinates
+status: passed

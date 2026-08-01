@@ -1,0 +1,8 @@
+PASS [P018-INDEPENDENT] direct elimination gives the unique speed-action-length mass exponents
+PASS [P018-INDEPENDENT] direct substitution proves inverse after forward
+PASS [P018-INDEPENDENT] direct substitution proves forward after inverse
+PASS [P018-INDEPENDENT] the coordinate remains a load-bearing free input
+PASS [P018-INDEPENDENT] shared scales cancel from a ratio but two coordinates remain
+PASS [P018-INDEPENDENT] changing the coordinate changes mass without changing dimensions
+ALL 6 CHECKS PASS [P018-INDEPENDENT]
+P018 INDEPENDENT REVIEW ALL 6 CHECKS PASS
