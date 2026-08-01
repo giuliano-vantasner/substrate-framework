@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T19:30:00Z'
+updated: '2026-08-01T19:39:00Z'
 tags:
 - substrate-framework
 - effort
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 178 pending, 0 partially migrated, 3 migrated, 34 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 177 pending, 0 partially migrated, 3 migrated, 34 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -113,6 +113,8 @@ Attempts are append-only and individually reproducible.
 | 0051 | P040 exact breather energy-density second moment | `campaigns/P040-fs1-breather-energy-moment` | accepted in v0.36.0 with FS1 qualified | Thirty-one main and nine independent checks replace a special grid/FFT result by an exact family formula, extrema, and fundamental half-period; they expose same-sample bookkeeping, higher even harmonics, a factor-two kink derivative error, and the absent 3+1 source/radiation map | Audit FS2's declared transverse embedding as conditional tensor algebra without importing FS3/P3D3 physics |
 | 0052 | P041 conditional axisymmetric separable-density moments | `campaigns/P041-fs2-separable-density-stf` | accepted in v0.37.0 with FS2 qualified | Thirty-one main and eight independent checks derive the product moments, both STF conventions, all positive-order derivative norms, and axis/perpendicular TT geometry while excluding a conserved 3+1 source and gravity; a hash-matched reproduction record avoids repeated minute-long source quadrature | Audit FS3's time-domain derivative and spectral claims against C-SG-009/C-MOM-002 without importing P3D3 physics |
 | 0053 | P042 conditional breathing-mode power, viewing, and Fourier audit | `campaigns/P042-fs3-conditional-breathing-wave` | accepted in v0.38.0 with FS3 qualified | Thirty-seven main and eleven independent checks correct factor-three field/factor-nine power conventions, replace grid positivity by exact zeros and nonzero phases, derive the arbitrary-inclination sine-squared plus pattern, and independently resolve the special mean and 80.5369% first-harmonic fraction | Audit FS4's static form-factor insertion without treating a static moment as a radiative suppression theorem |
+| 0054 | P043 FS4 constant-offset and form-factor distinctness audit | `campaigns/P043-fs4-static-moment-decomposition` | FS4 terminally duplicates C-SG-009/C-MOM-002/C-GW-004; v0.38.0 unchanged | Twenty-six main and eight independent checks prove accepted constant-offset invariance, break it with time-dependent mutations, and show arbitrary constant decompositions cannot identify the imported scalar as a form factor; source power/positivity and pending T2C/G4 readings remain excluded | Audit P3D1's claimed radial 3D pulson existence with a genuine PDE/refinement oracle rather than importing the 1D breather |
+| 0055 | P043 first full no-release replay | `scripts/validate.sh` | failed before tests | The FS4 duplicate review's existing-claim section began with an inline claim ID and violated the established plain-prose disclosure contract | Add one descriptive opening sentence and rerun the changed transaction without repeating scientific or source oracles |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -129,7 +131,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 178 bridge units remain pending, 3 are migrated, 34 are qualified, 2 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 177 bridge units remain pending, 3 are migrated, 34 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -175,11 +177,13 @@ P041 adds exact conditional second-moment and STF algebra for a declared centere
 
 P042 adds exact convention-consistent conditional power and arbitrary-inclination TT viewing algebra for the accepted separable breather moment, plus a separately labeled numeric-evidence claim for the special-frequency derivative mean and Fourier fraction. It qualifies FS3 because the source applies normalized coefficients to triple `Q`, misses exact zero-power symmetry phases, calls a same-data FFT closed form, repeats the factor-two kink derivative, and imports rather than derives source conservation and gravity.
 
+P043 terminally classifies FS4 as duplicate evidence for the accepted exact moment, separable derivative, and conditional waveform/power claims. Its valid constant-offset identity is already subsumed; time-dependent mutations expose the premise, and nonunique decompositions prove that cancellation cannot identify its imported scalar as a form factor or lift pending tidal/backreaction ceilings.
+
 ## Canonicalization
-The registry, `v0.38.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-two accepted claims. P001 through P042 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 178 pending, 0 partial, 3 migrated, 34 qualified, 2 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.38.0` manifest, current release, generated claim index, and generated framework memory agree on fifty-two accepted claims. P001 through P043 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 177 pending, 0 partial, 3 migrated, 34 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 178 pending, 3 migrated, 34 qualified, 2 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit FS4's static form-factor insertion against the accepted moment and conditional-wave boundaries without importing pending P3D3 physics.
+The effort remains active. D4 is discharged, but D1 remains open with 177 pending, 3 migrated, 34 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit P3D1's radial 3D pulson-existence claim with a genuine equation, boundary, conservation, and refinement oracle rather than importing the exact 1D breather.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

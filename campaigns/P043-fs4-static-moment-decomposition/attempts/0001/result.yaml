@@ -1,0 +1,23 @@
+attempt: 0001
+completed_at: '2026-08-01T19:39:00Z'
+exit_code: 0
+terminal_tally: 26
+verdict:
+  FS4: duplicate_evidence
+reviewed_existing:
+  C-SG-009: unchanged_exact_moment
+  C-MOM-002: unchanged_positive_derivative_offset_invariance
+  C-GW-004: unchanged_conditional_waveform_and_power_invariance
+evidence:
+  - exact constant cancellation through scalar and both STF conventions
+  - exact convention-correct conditional power and TT readout equality
+  - time-dependent offset mutations
+  - independent nonidentifiability of arbitrary constant decompositions
+source_defects:
+  - the form-factor value is imported and only compared to the sampled mean by inequality
+  - two arbitrary constant symbols are declared rather than derived as physical pieces
+  - one finite-difference operator supplies both sides of the numeric equality
+  - triple Q is again paired with G/5 and strict-positive sampled power
+  - pending T2C/G4 cannot close a tidal or backreaction interpretation
+status: passed_duplicate_classification
+stdout: stdout.txt

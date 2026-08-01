@@ -1,0 +1,52 @@
+id: P043
+base_release: v0.38.0
+base_commit: aa1fd5d
+source_baseline: substrate@6d1f4e0
+source_units: [FS4]
+question: >-
+  Derive the exact static-plus-zero-mean decomposition of the accepted breather
+  energy moment where it closes, prove which conditional derivative,
+  waveform, and power functionals are invariant under constant offsets, and
+  audit whether FS4 derives a physical form-factor, tidal, or backreaction map.
+invariants:
+  - C-SG-009 fixes the exact centered scalar moment and its true half-period
+  - C-MOM-002 makes every positive-order STF derivative depend only on the longitudinal moment derivative
+  - C-GW-004 fixes convention-correct conditional waveform and power functionals
+  - a time average and a fixed-profile spatial moment are distinct unless their equality is derived
+  - pending T2C, G4, FS4 consumers, and P3D3 cannot be accepted dependencies
+  - constant-offset cancellation does not establish a physical radiation or tidal mechanism
+allowed_imports:
+  - C-SG-009 exact breather energy second moment
+  - C-MOM-002 conditional separable STF derivative algebra
+  - C-GW-004 conditional breathing waveform and power algebra
+  - exact periodic integration and differentiation of constants
+  - FS4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote an exact static-mean plus zero-mean decomposition at the declared
+      special frequency and its constant-offset invariance consequences
+  - id: B
+    description: >-
+      Classify FS4 as duplicate evidence if it adds only the already accepted
+      fact that positive derivatives annihilate constant tensor offsets
+  - id: C
+    description: >-
+      Promote the static moment as a derived physical form factor controlling
+      tidal response, gravitational radiation, or backreaction
+uniqueness_evidence: null
+selection_criteria:
+  - exact derivation of any time mean independently of sampled averaging
+  - distinct definitions and dimensions for cycle mean, spatial form factor, and transverse width
+  - derivative and conditional waveform/power invariance under arbitrary constants
+  - mutation-sensitive exclusion of time-dependent offsets
+  - distinct importable consumer beyond already accepted algebra
+  - accepted closure for any tidal, gravity, or backreaction interpretation
+claims_proposed: []
+claims_reviewed:
+  - C-SG-009
+  - C-MOM-002
+  - C-GW-004
+comparators_blinded_until: >-
+  exact_mean_decomposition_offset_invariance_object_identity_and_physical_scope_frozen
+status: accepted

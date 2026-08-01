@@ -7,10 +7,10 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
-  duplicate_evidence: 2
+  duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 178
+  pending_adjudication: 177
   qualified: 34
 phase_counts:
   phase-1: 6
@@ -2727,8 +2727,25 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: duplicate_evidence
+  accepted_claims:
+  - C-SG-009
+  - C-MOM-002
+  - C-GW-004
+  duplicates:
+  - C-SG-009
+  - C-MOM-002
+  - C-GW-004
+  duplicate_reason: FS4's valid content is only that time-independent offsets disappear from the already
+    accepted moment derivatives and conditional derivative-based TT waveform and power. It adds no distinct
+    mean theorem, API, parameter relation, or consumer, and constant cancellation cannot identify its
+    imported scalar as a physical form factor.
+  evidence:
+  - campaigns/P043-fs4-static-moment-decomposition/reviews/source_adjudication.md
+  - campaigns/P043-fs4-static-moment-decomposition/evidence/source-reproduction.yaml
+  note: P043 supplies time-dependent offset mutations and a nonidentifiability proof, while excluding
+    FS4's factor-nine power, strict positivity, pending T2C/G4 ceiling lift, tidal, backreaction, and
+    radiation readings.
 - source_unit: P3D1
   phase: phase-14
   path: merged-framework/bridges/phase-14/bridge_P3D1_radial_pulson_exists.py

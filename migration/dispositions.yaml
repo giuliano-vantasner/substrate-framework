@@ -647,3 +647,26 @@ units:
       P042 corrects FS3's factor-three waveform and factor-nine power, separates
       symbolic from numeric evidence, and derives the full sine-squared plus,
       zero-cross, symmetry-axis-null viewing pattern.
+  FS4:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-SG-009
+      - C-MOM-002
+      - C-GW-004
+    duplicates:
+      - C-SG-009
+      - C-MOM-002
+      - C-GW-004
+    duplicate_reason: >-
+      FS4's valid content is only that time-independent offsets disappear from
+      the already accepted moment derivatives and conditional derivative-based
+      TT waveform and power. It adds no distinct mean theorem, API, parameter
+      relation, or consumer, and constant cancellation cannot identify its
+      imported scalar as a physical form factor.
+    evidence:
+      - campaigns/P043-fs4-static-moment-decomposition/reviews/source_adjudication.md
+      - campaigns/P043-fs4-static-moment-decomposition/evidence/source-reproduction.yaml
+    note: >-
+      P043 supplies time-dependent offset mutations and a nonidentifiability
+      proof, while excluding FS4's factor-nine power, strict positivity,
+      pending T2C/G4 ceiling lift, tidal, backreaction, and radiation readings.

@@ -1,0 +1,9 @@
+PASS [P043-FS4] source hash, clean exit, five-check tally, and NumPy trapezoid compatibility
+PASS [P043-FS4] scalar derivatives through fourth order ignore arbitrary constant offsets
+PASS [P043-FS4] normalized and triple STF derivatives ignore constant offsets
+PASS [P043-FS4] C-GW-004 conditional power and TT readouts are invariant
+PASS [P043-FS4] time-dependent quadratic and cubic offset mutations break the relevant identities
+PASS [P043-FS4] constant decomposition is nonunique and cannot identify a form factor
+PASS [P043-FS4] imported value, inequality, same-operator numeric, normalization, and scope audits
+ALL 26 CHECKS PASS [P043-FS4]
+P043 FS4 STATIC-MOMENT DUPLICATION AUDIT ALL 26 CHECKS PASS

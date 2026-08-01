@@ -1,0 +1,23 @@
+source_unit: FS4
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-13/bridge_FS4_formfactor_into_radiation.py
+sha256: 2f3c1b02bbad06bded6a38d0e1c203b2ba9c71c63adea34645d041b820feb129
+reproduced_at: '2026-08-01T19:34:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-13/bridge_FS4_formfactor_into_radiation.py
+environment:
+  python: repository virtual environment
+  numpy: 2.5.1
+exit_code: 0
+terminal_tally: ALL 5 CHECKS PASS
+reported_values:
+  sampled_moment_mean: 27.91546
+  imported_form_factor_moment: 13.957728
+  finite_difference_power_difference_ratio: 3.72e-11
+observation: >-
+  FS4 uses the current NumPy trapezoid API with an older-version fallback and
+  reproduces in tens of seconds. Its dense finite-difference replay checks the
+  same constant-offset identity proved symbolically. The imported form-factor
+  value is not computed, and the source retains FS3's triple-tensor power
+  normalization and strict-positive grid artifact.

@@ -1,0 +1,10 @@
+PASS [P043-INDEPENDENT] direct trace subtraction leaves only a constant STF offset
+PASS [P043-INDEPENDENT] direct normalized and triple derivatives of order 1 ignore the constant
+PASS [P043-INDEPENDENT] direct normalized and triple derivatives of order 2 ignore the constant
+PASS [P043-INDEPENDENT] direct normalized and triple derivatives of order 3 ignore the constant
+PASS [P043-INDEPENDENT] direct contractions and convention coefficients give identical conditional power
+PASS [P043-INDEPENDENT] quadratic and cubic time-dependent offsets defeat waveform and power invariance
+PASS [P043-INDEPENDENT] constant differentiation supplies no unique two-piece decomposition
+PASS [P043-INDEPENDENT] a nonzero static scalar cannot become a radiating amplitude without a new time law
+ALL 8 CHECKS PASS [P043-INDEPENDENT]
+P043 INDEPENDENT CONSTANT-OFFSET REVIEW ALL 8 CHECKS PASS

@@ -1,0 +1,18 @@
+attempt: 0001
+campaign: P043
+base_release: v0.38.0
+base_commit: aa1fd5d
+source_unit: FS4
+source_sha256: 2f3c1b02bbad06bded6a38d0e1c203b2ba9c71c63adea34645d041b820feb129
+candidate: B
+oracles:
+  - exact arbitrary constant-offset differentiation through fourth order
+  - normalized and triple STF derivative comparison
+  - convention-correct conditional power and TT readout comparison
+  - independent direct trace subtraction and identifiability audit
+mutations:
+  - quadratic and cubic time-dependent offsets
+  - alternative constant decompositions of the same mean
+expected_positive_object: >-
+  Terminal duplicate mapping to accepted claims plus an exact boundary showing
+  that constant cancellation cannot identify a physical form factor.
