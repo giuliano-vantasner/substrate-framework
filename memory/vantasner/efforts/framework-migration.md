@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-02T01:28:00Z'
+updated: '2026-08-02T02:35:00Z'
 tags:
 - substrate-framework
 - effort
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 170 pending, 0 partially migrated, 3 migrated, 41 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 169 pending, 0 partially migrated, 3 migrated, 42 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -129,6 +129,7 @@ Attempts are append-only and individually reproducible.
 | 0067 | P049 canonical stress tensor with raw SymPy equality tests | `campaigns/P049-nc2-light-cone-stress-balance/attempts/0001` | failed after 34 of 37 targeted tests | Three mathematically identical matrix and balance expressions used representation-sensitive equality instead of simplified zero differences | Preserve the reproducer and repair only the exact oracle representation |
 | 0068 | P049 Cartesian and null stress theorem with NC2 source audit | `campaigns/P049-nc2-light-cone-stress-balance/attempts/0002` plus `scripts/validate.sh` | accepted in v0.44.0; commit `5fcbda5` | Thirty-seven primary and seven independent checks derive the canonical tensor and residual-factorized balances, catch NC2's half normalization and energy-bridge error, and prove parity covariance; the full workflow passed 346 tests | Audit NC3's full-field boundary rectification and distinguish an odd observable from physical parity-violating dynamics |
 | 0069 | P050 exact boundary sign-correlation and NC3 audit | `campaigns/P050-nc3-boundary-rectification/attempts/0001` plus `scripts/validate.sh` | accepted in v0.45.0; commit `da71477` | Thirty-seven primary and eight independent checks derive the coordinate and oriented-normal parity maps, phase-convention-safe harmonic law, separate half-line winding, implication counterexamples, and the exact rest-breather null; the full workflow passed 357 tests | Audit NC4's numerical rectification claim with version-independent quadrature, equation-level diagnostics, refinement, and an independent solver |
+| 0070 | P051 corrected nonlinear PDE evolution and NC4 calibration audit | `campaigns/P051-nc4-pde-robustness/attempts/0001` through `0006`, then `scripts/validate.sh` | NC4 qualified; v0.45.0 unchanged; commit `8eaf104` | The literal source fails at removed `np.trapz`; a compatibility-only alias reproduces its 30 checks, while 36 primary and nine independent checks validate reusable leapfrog/DOP853 solvers and refute amplitude robustness with common-phase and phase-relabel counterexamples; the full workflow passed 365 tests | Audit QB1's claimed radial nonlinear eigenvalue/quasi-breather construction against accepted radial dynamics without importing its advertised eigenfrequency or lifetime |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -145,7 +146,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 170 bridge units remain pending, 3 are migrated, 41 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 169 bridge units remain pending, 3 are migrated, 42 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -207,11 +208,13 @@ P049 adds the exact canonical sine-Gordon stress tensor in Cartesian and declare
 
 P050 adds the exact fixed-coordinate boundary sign correlation, its general-point parity pullback, the distinct transformed-domain outward-normal law, phase-convention-safe sinusoidal formulas, and the separately named right-half-line winding conversion. Exact counterexamples prove correlation and topological charge transfer do not imply one another, while the accepted rest breather has zero full-period correlation at every fixed boundary. It qualifies NC3's shared nomenclature, sine/cosine transcription, charge-discriminator claim, parity-even phase label, and physical V-A interpretation. Canonical implementation uses exact integration and contains no version-specific `np.trapz` call.
 
+P051 adds reusable measured-grid 1+1 sine-Gordon leapfrog and DOP853 evolution surfaces, explicit Neumann/Sommerfeld boundary treatment, endpoint-coordinate and sampled-correlation diagnostics, and energy-flux accounting. It preserves NC4's literal NumPy 2 `np.trapz` failure and separately reproduces its 30 checks through a compatibility-only alias. Corrected mesh, timestep, domain, tolerance, energy, exact-breather, mutation, and independent Fourier/direct-solver checks support only the tuned `w=0.6` response. A common phase reverses the alleged amplitude-sweep sign at `w=0.8`, a pi phase shift swaps its epsilon labels, and the finite-subinterval endpoint coordinate lacks integer-vacuum hypotheses. NC4 is therefore qualified against existing claims; provisional C-SG-014 is refuted and no release change is made.
+
 ## Canonicalization
-The registry, `v0.45.0` manifest, current release, generated claim index, and generated framework memory agree on sixty-two accepted claims. P001 through P050 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 170 pending, 0 partial, 3 migrated, 41 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.45.0` manifest, current release, generated claim index, and generated framework memory agree on sixty-two accepted claims. P001 through P051 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 169 pending, 0 partial, 3 migrated, 42 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 170 pending, 3 migrated, 41 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is to audit NC4's numerical nonlinear rectification claim. Its removed `np.trapz` call is a source-reproduction compatibility fact, not a canonical API choice: framework work must use the shared trapezoidal helper, state the PDE/ODE and boundary data, check solver success, refine mesh, timestep, domain, and tolerances, compare an independent method or soluble limit, and require load-bearing mutations to change the verdict. Pending G1, G2, W1, and W3 claims cannot enter its accepted dependency closure.
+The effort remains active. D4 is discharged, but D1 remains open with 169 pending, 3 migrated, 42 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is QB1, which claims a radial sine-Gordon nonlinear eigenvalue/quasi-breather obtained through harmonic balance. Its boundary-value equations, regularity and decay data, truncation, phase convention, free parameter, residual norm, spectral refinement, continuation behavior, and relation to accepted finite-time radial dynamics must be audited before any frequency, lifetime, uniqueness, or particle interpretation is admitted. The source comparator and reported root cannot choose the candidate or enter the dependency closure.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
