@@ -1,0 +1,7 @@
+PASS [P023-INDEPENDENT] direct inversion makes the required offset proportional to the target
+PASS [P023-INDEPENDENT] direct inversion makes the required length inversely proportional to the target
+PASS [P023-INDEPENDENT] either inverse composes back to the same target
+PASS [P023-INDEPENDENT] the forward formula retains every declared symbol
+PASS [P023-INDEPENDENT] the ratio comparator fixes the shape rather than eliminating it
+ALL 5 CHECKS PASS [P023-INDEPENDENT]
+P023 INDEPENDENT REVIEW ALL 5 CHECKS PASS

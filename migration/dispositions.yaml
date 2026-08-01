@@ -301,3 +301,20 @@ units:
       P022 preserves the seven predecessor subprocess tallies as historical
       compatibility evidence, distinguishes EL5's two different control
       matrices, and retains both free inputs in its conditional ratio.
+  EL6:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-003
+      - C-DIM-005
+      - C-SK-001
+    qualification: >-
+      EL6's symbolic expression and conditional ratio map to accepted
+      coordinate and Skyrme relations. Its measured-value inversions calibrate
+      free inputs and do not establish an absolute mass, particle identity,
+      parameter closure, or empty framework debt ledger.
+    evidence:
+      - campaigns/P023-confrontation-closure-audit/reviews/source_adjudication.md
+    note: >-
+      P023 proves that required length and hadronic offset depend on the target
+      comparator and that the restricted-namespace reconstruction is
+      tautological after the comparator-derived offset is supplied.

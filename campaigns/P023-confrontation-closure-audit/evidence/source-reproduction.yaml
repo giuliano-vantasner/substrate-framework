@@ -1,0 +1,18 @@
+source_unit: EL6
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-46/bridge_EL6_confrontation_and_ledger.py
+sha256: f6ea408d674d2fcc88a9bb0d6564b56b21dfde124161f3786724dd1179259f5e
+command: >-
+  .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL6_confrontation_and_ledger.py
+observed_at: '2026-08-01T14:42:30Z'
+exit_code: 0
+terminal_tally: ALL 8 CHECKS PASS
+observations:
+  solved_b1: 1.23146889
+  reported_mass_ratio: 1832.7967
+  reported_relative_error_percent: -0.183
+  required_kappa_at_sG_1: 7.5741
+scope_note: >-
+  The required kappa value is computed from the electron comparator before the
+  restricted-namespace reconstruction. P023 classifies that reconstruction as
+  calibration, not independent prediction.

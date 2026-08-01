@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-01T14:42:30Z'
+exit_code: 0
+terminal_tally: 12
+verdict:
+  EL6: qualified
+  C-DIM-006: duplicate_not_promoted
+evidence:
+  - exact normalization to C-DIM-005
+  - six load-bearing source quantities
+  - comparator-dependent offset and length inverses
+  - tautological reconstruction counterexample
+  - assignment-scanner syntax counterexamples
+status: passed
+stdout: stdout.txt

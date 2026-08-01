@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: B
+source_baseline: substrate@6d1f4e0
+source_units: [EL6]
+framework_base: f71606c
+question: >-
+  Does EL6 close the mass prediction independently, or invert an accepted
+  coordinate relation using a target comparator?
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P023-confrontation-closure-audit/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL6_confrontation_and_ledger.py
+oracle:
+  kind: exact_inverse_composition_and_comparator_provenance_audit
+  mutation_requirements:
+    - every declared input remains load-bearing
+    - required offset and length expose target dependence
+    - comparator-derived inputs compose back only tautologically
+status: passed

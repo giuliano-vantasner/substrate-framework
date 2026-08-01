@@ -1,0 +1,40 @@
+campaign: P023
+title: EL6 confrontation and closure audit
+source_baseline: substrate@6d1f4e0
+source_units: [EL6]
+base_release: v0.20.0
+adjudicated_at: '2026-08-01T14:42:30Z'
+selected_candidate:
+  id: B
+  reason: >-
+    Exact normalization and inverse composition show that every symbolic EL6
+    relation is already covered by accepted coordinate claims, while its
+    required offset and length depend on the comparator.
+competing_candidates:
+  - id: A
+    decision: rejected_because_the_inverse_map_is_already_the_C-DIM-003_and_C-DIM-005_bijection
+  - id: C
+    decision: rejected_because_length_and_prefactor_remain_free_and_kappa_h_is_solved_from_the_target_mass
+claims_reviewed_not_promoted:
+  - id: C-DIM-006
+    verification: symbolic_verified
+    review: rejected
+    compatibility: native
+    epistemic: proposed
+    reason: duplicate_inverse_of_C-DIM-003_and_C-DIM-005
+evidence:
+  exact_verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_input_ledger_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-DIM-006-review.md
+source_disposition:
+  EL6: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P023-confrontation-closure-audit/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-46/bridge_EL6_confrontation_and_ledger.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P023-confrontation-closure-audit/reviews/independent_input_ledger_review.py
+debt: []
+status: accepted

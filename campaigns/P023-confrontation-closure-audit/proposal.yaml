@@ -1,0 +1,37 @@
+id: P023
+base_release: v0.20.0
+base_commit: f71606c
+source_baseline: substrate@6d1f4e0
+source_units:
+  - EL6
+question: >-
+  Determine whether EL6 predicts a mass from closed inputs or only inverts the
+  accepted free mass-coordinate relation using a measured comparator.
+invariants:
+  - C-DIM-003 retains the basis length and dimensionless coordinate
+  - C-DIM-005 retains q, b0, and beta^2
+  - measured values cannot become derivation inputs after confrontation
+allowed_imports:
+  - C-DIM-003, C-RGE-001, C-DIM-005, and C-LIN-001
+  - exact positive-real algebra
+  - EL6 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Promote a distinct exact inverse confrontation map
+  - id: B
+    description: Classify EL6 as evidence for existing coordinate claims
+  - id: C
+    description: Accept EL6's physical electron-mass prediction
+uniqueness_evidence: null
+selection_criteria:
+  - comparator-independent dependency closure
+  - retention of all free inputs
+  - exact inverse composition
+  - dimensional consistency
+  - distinct reusable consumer value
+claims_proposed:
+  - C-DIM-006
+comparators_blinded_until: symbolic_map_input_ledger_and_selection_frozen
+claims_reviewed_not_promoted:
+  - C-DIM-006
+status: accepted
