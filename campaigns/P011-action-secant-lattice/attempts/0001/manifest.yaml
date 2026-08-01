@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE4
+framework_base: 3ab45d5
+question: >-
+  What exact classical relation connects E/omega to the canonical action, and
+  what formulas including the true adjacent gap follow from a separately
+  imposed fixed action lattice?
+command: PYTHONPATH=src .venv/bin/python proposals/P011-action-secant-lattice/verify.py
+oracle:
+  kind: exact_sympy_calculus_and_trigonometry
+  mutation_requirements:
+    - reject wrong energy and action coefficients
+    - reject wrong frequency power in the secant scale
+    - reject wrong action-angle denominator
+    - reject an off-by-one adjacent level
+status: failed

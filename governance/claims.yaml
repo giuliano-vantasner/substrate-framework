@@ -423,3 +423,67 @@ claims:
     accepted_in: v0.9.0
     challenges: []
     supersedes: []
+  - id: C-SG-006
+    statement: >-
+      For every real omega with 0 < omega < 1, define the breather's
+      energy-frequency secant action scale H(omega)=E(omega)/omega. Then
+      H=16*sqrt(1-omega^2)/omega is positive and strictly decreasing from
+      positive infinity to zero. Its ratio to the canonical action is
+      Pi=J/H=omega*arccos(omega)/sqrt(1-omega^2), which is strictly increasing
+      with 0<Pi<1, tends to zero as omega->0+, and tends to one as omega->1-.
+      Moreover dE/dH=omega^3, whereas dE/dJ=omega, so H is not the canonical
+      action on the open family and agrees with it only asymptotically through
+      Pi->1 at the harmonic endpoint.
+    provenance: campaigns/P011-action-secant-lattice/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-002
+      - C-SG-003
+    evidence:
+      - campaigns/P011-action-secant-lattice/verify.py
+      - campaigns/P011-action-secant-lattice/attempts/0003/result.yaml
+      - campaigns/P011-action-secant-lattice/reviews/independent_angle_review.py
+      - campaigns/P011-action-secant-lattice/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SG-006-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The accepted normalized breather energy, action, and open frequency domain are retained.
+      - The name secant action scale denotes E/omega and does not identify a universal Planck constant.
+    comparators: []
+    accepted_in: v0.11.0
+    challenges: []
+    supersedes: []
+  - id: C-SG-007
+    statement: >-
+      Conditional on a fixed positive action increment h and the imposed
+      lattice J_n=n*h, every positive integer n with n*h<8*pi has
+      omega_n=cos(n*h/16) and E_n=16*sin(n*h/16), so n<8*pi/h and only
+      finitely many levels are admissible. The continuous interpolation obeys
+      dE/dn=h*cos(n*h/16)=h*omega_n. When (n+1)*h<8*pi, the actual adjacent
+      gap is E_(n+1)-E_n=32*sin(h/32)*cos((2*n+1)*h/32), which is generally
+      not h*omega_n. This claim does not derive the lattice premise or identify
+      h with a physical coupling or Planck constant.
+    provenance: campaigns/P011-action-secant-lattice/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-SG-003
+    evidence:
+      - campaigns/P011-action-secant-lattice/verify.py
+      - campaigns/P011-action-secant-lattice/attempts/0003/result.yaml
+      - campaigns/P011-action-secant-lattice/reviews/independent_angle_review.py
+      - campaigns/P011-action-secant-lattice/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SG-007-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - A fixed positive action increment h and positive-integer action lattice J_n=n*h are declared conditional inputs.
+      - Each claimed level lies in the accepted open action domain, and an adjacent gap requires both levels to lie there.
+    comparators: []
+    accepted_in: v0.11.0
+    challenges: []
+    supersedes: []

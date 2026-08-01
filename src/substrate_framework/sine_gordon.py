@@ -32,6 +32,28 @@ def _action(action: Any) -> sp.Expr:
     return value
 
 
+def _positive_action_quantum(action_quantum: Any) -> sp.Expr:
+    value = sp.sympify(action_quantum)
+    if value.is_number:
+        if value.is_real is not True or not float(value) > 0.0:
+            raise ValueError("action_quantum must be real and positive")
+    return value
+
+
+def _positive_integer_level(level: Any) -> sp.Expr:
+    value = sp.sympify(level)
+    if value.is_number:
+        if value.is_integer is not True or int(value) <= 0:
+            raise ValueError("level must be a positive integer")
+    return value
+
+
+def _lattice_action(level: Any, action_quantum: Any, offset: int = 0) -> sp.Expr:
+    level_value = _positive_integer_level(level)
+    quantum = _positive_action_quantum(action_quantum)
+    return _action((level_value + offset) * quantum)
+
+
 def breather_inverse_width(omega: Any) -> sp.Expr:
     """Return ``eta = sqrt(1 - omega**2)`` in normalized units."""
 
@@ -99,6 +121,26 @@ def breather_threshold_deficit(omega: Any) -> sp.Expr:
     return sp.simplify(16 - breather_energy(omega))
 
 
+def breather_secant_action_scale(omega: Any) -> sp.Expr:
+    """Return the energy-frequency secant scale ``H = E(omega)/omega``.
+
+    The result has action dimension in dimensional conventions, but it is not
+    the canonical action variable returned by :func:`breather_action`.
+    """
+
+    frequency = _frequency(omega)
+    return sp.simplify(breather_energy(frequency) / frequency)
+
+
+def breather_action_secant_ratio(omega: Any) -> sp.Expr:
+    """Return the dimensionless ratio ``J(omega)/(E(omega)/omega)``."""
+
+    frequency = _frequency(omega)
+    return sp.simplify(
+        breather_action(frequency) / breather_secant_action_scale(frequency)
+    )
+
+
 def breather_period(omega: Any) -> sp.Expr:
     """Return the time period ``2*pi/omega``."""
 
@@ -128,6 +170,34 @@ def breather_energy_from_action(action: Any) -> sp.Expr:
     """Return ``E = 16*sin(J/16)`` for ``0 < J < 8*pi``."""
 
     return 16 * sp.sin(_action(action) / 16)
+
+
+def breather_action_lattice_frequency(level: Any, action_quantum: Any) -> sp.Expr:
+    """Return ``cos(n*h/16)`` conditional on ``J_n=n*h`` in the action domain."""
+
+    return breather_frequency_from_action(_lattice_action(level, action_quantum))
+
+
+def breather_action_lattice_energy(level: Any, action_quantum: Any) -> sp.Expr:
+    """Return ``16*sin(n*h/16)`` conditional on ``J_n=n*h``."""
+
+    return breather_energy_from_action(_lattice_action(level, action_quantum))
+
+
+def breather_action_lattice_adjacent_gap(
+    level: Any, action_quantum: Any
+) -> sp.Expr:
+    """Return the exact adjacent gap ``E_(n+1)-E_n``.
+
+    Both ``n*h`` and ``(n+1)*h`` must lie in the accepted open action domain.
+    """
+
+    current_action = _lattice_action(level, action_quantum)
+    next_action = _lattice_action(level, action_quantum, offset=1)
+    return sp.simplify(
+        breather_energy_from_action(next_action)
+        - breather_energy_from_action(current_action)
+    )
 
 
 def breather_mean_gradient_integral(omega: Any) -> sp.Expr:

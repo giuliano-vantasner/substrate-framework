@@ -1,0 +1,10 @@
+PASS [C-SG-006-INDEPENDENT] the action-angle coordinate gives H=16*tan(theta) and J/H=theta*cot(theta)
+PASS [C-SG-006-INDEPENDENT] the independent derivative ratio gives dE/dH=cos(theta)^3
+PASS [C-SG-006-INDEPENDENT] theta-sin(theta)cos(theta) grows from zero on the physical angle interval
+PASS [C-SG-006-INDEPENDENT] theta*cot(theta) decreases with theta and therefore increases with omega
+PASS [C-SG-007-INDEPENDENT] direct sine subtraction gives the adjacent finite difference
+PASS [C-SG-007-INDEPENDENT] the finite difference rejects an off-by-one next level
+PASS [C-SG-007-INDEPENDENT] the continuous interpolation derivative is distinct at an exact anchor
+ALL 4 CHECKS PASS [C-SG-006-INDEPENDENT]
+ALL 3 CHECKS PASS [C-SG-007-INDEPENDENT]
+P011 INDEPENDENT REVIEW ALL 7 CHECKS PASS

@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-01T12:25:15Z'
+updated: '2026-08-01T12:37:56Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.10.0`, containing fifteen claims: the prior sine-Gordon, optical, thermal, radial, variational, collective, virial, constitutive, and conditional formula results plus the exact conditional optical source-operator identity `C-OG-003`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.11.0`, containing seventeen claims: the prior sine-Gordon, optical, thermal, radial, variational, collective, virial, constitutive, and conditional formula results plus the secant-scale classification `C-SG-006` and conditional action lattice `C-SG-007`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 210 pending, 1 partially migrated, 3 migrated, and 4 qualified units.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 210 pending, 0 partially migrated, 3 migrated, and 5 qualified units.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -76,6 +76,7 @@ Attempts are append-only and individually reproducible.
 | 0014 | P009 exact threshold complement and T1E oracle audit | `campaigns/P009-breather-threshold-gap` | accepted in v0.9.0 with T1E qualified | Thirteen exact and four independent checks establish the monotone convex deficit; source review separates one derivation from definitions, duplicate checks, and point regression | Adjudicate T1B's sourced-Poisson and 3+1 remainder against P004 evidence |
 | 0015 | P010 exact optical source-operator pullback and T1B audit | `campaigns/P010-optical-source-operator` | accepted in v0.10.0 with T1B qualified | Eleven exact and five independent checks prove the full curved identity; source review separates it from the unvaried matter EOM, assigned coupling, and 3+1 guard | Adjudicate HE4's remaining effective-action, charge, and quantization interpretations |
 | 0016 | P010 first full promotion replay | `scripts/validate.sh` | failed before tests | Three P010 proposal-memory sections began directly with tables and violated the existing plain-prose disclosure contract | Add the required section descriptions and rerun the changed promotion boundary |
+| 0017 | P011 exact secant/action classification and conditional lattice | `campaigns/P011-action-secant-lattice` | accepted in v0.11.0 with HE4 qualified | Two preserved representation failures preceded 25 exact and seven independent checks; the accepted claim corrects continuous derivative versus adjacent level spacing and quarantines the coupling/literature map | Audit HE1 against C-SG-002/006 before taking HE2 and HE3 in dependency order |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -92,19 +93,19 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 210 bridge units remain pending, 1 is partially migrated, 3 are migrated, and 4 are qualified | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 210 bridge units remain pending, 3 are migrated, and 5 are qualified | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
 
 ## Results
-The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion. P003 added the exact averaged squared-gradient integral and its virial-Legendre identity in `v0.3.0`, while preserving the full-versus-half factor convention. P004 and P005 added the exact conditional optical and normalized thermal roots. P006 replaced T1A's informal ring-identity title with the exact shared radial line class, shell guards, capillary barrier, and coefficient-equality ceiling. P007 established the general fixed-scale Euler-Lagrange theorem, derived conditional optical dynamics independently from the metric, and codified that duplicate integrations of an analytically identical right-hand side are regression coverage rather than new evidence. P008 extracted S5's exact constitutive and coefficient algebra while qualifying its unsupported physical closures; terminal migration dispositions now require structured reasons and durable evidence. P009 promoted the exact breather threshold deficit while qualifying T1E's definitional and duplicate-oracle narrative. P010 promoted the exact curved optical source-operator pullback while qualifying T1B's unvaried source law, assigned coupling, and dimensional overextension. The migration scope is measurable: 218 unique reconciled bridge units are primary candidate units, other hash-locked roles are evidence or consumers, and application exclusions are explicit rather than inferred.
+The authority boundary and source commit are fixed. The memory-template category mismatch and relative validation-path hazard were corrected at their shared contract surfaces. P001 produced the exact normalized sine-Gordon breather and energy APIs in `v0.1.0`. P002 added the exact canonical action and energy-action inversion in `v0.2.0`, while explicitly withholding every literature-dependent quantization conclusion. P003 added the exact averaged squared-gradient integral and its virial-Legendre identity in `v0.3.0`, while preserving the full-versus-half factor convention. P004 and P005 added the exact conditional optical and normalized thermal roots. P006 replaced T1A's informal ring-identity title with the exact shared radial line class, shell guards, capillary barrier, and coefficient-equality ceiling. P007 established the general fixed-scale Euler-Lagrange theorem, derived conditional optical dynamics independently from the metric, and codified that duplicate integrations of an analytically identical right-hand side are regression coverage rather than new evidence. P008 extracted S5's exact constitutive and coefficient algebra while qualifying its unsupported physical closures; terminal migration dispositions now require structured reasons and durable evidence. P009 promoted the exact breather threshold deficit while qualifying T1E's definitional and duplicate-oracle narrative. P010 promoted the exact curved optical source-operator pullback while qualifying T1B's unvaried source law, assigned coupling, and dimensional overextension. P011 promotes the exact secant/action distinction and a conditional action lattice while correcting HE4's continuous-derivative versus adjacent-spacing claim and quarantining its literature map. The migration scope is measurable: 218 unique reconciled bridge units are primary candidate units, other hash-locked roles are evidence or consumers, and application exclusions are explicit rather than inferred.
 
 ## Canonicalization
-The registry, `v0.10.0` manifest, current release, generated claim index, and generated framework memory agree on fifteen accepted claims. P001 through P010 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 210 pending, 1 partial, 3 migrated, and 4 qualified units.
+The registry, `v0.11.0` manifest, current release, generated claim index, and generated framework memory agree on seventeen accepted claims. P001 through P011 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 210 pending, 0 partial, 3 migrated, and 5 qualified units.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 210 pending, 1 partial, 3 migrated, and 4 qualified bridge units. The next executable action is to adjudicate HE4's remaining effective-Planck, charge-reciprocity, quantization-tower, and literature-spectrum interpretations against `C-SG-003/004`.
+The effort remains active. D4 is discharged, but D1 remains open with 210 pending, 3 migrated, and 5 qualified bridge units. The next executable action is to audit HE1's energy-frequency secant and boosted-ratio statements against `C-SG-002/006`, then take HE2 and HE3 in their declared dependency order.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

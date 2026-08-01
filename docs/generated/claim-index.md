@@ -102,6 +102,24 @@ For every real omega with 0 < omega < 1, the C-SG-002 breather's deficit below t
 - Compatibility: `native`
 - Dependencies: C-SG-002
 
+## C-SG-006
+
+For every real omega with 0 < omega < 1, define the breather's energy-frequency secant action scale H(omega)=E(omega)/omega. Then H=16*sqrt(1-omega^2)/omega is positive and strictly decreasing from positive infinity to zero. Its ratio to the canonical action is Pi=J/H=omega*arccos(omega)/sqrt(1-omega^2), which is strictly increasing with 0<Pi<1, tends to zero as omega->0+, and tends to one as omega->1-. Moreover dE/dH=omega^3, whereas dE/dJ=omega, so H is not the canonical action on the open family and agrees with it only asymptotically through Pi->1 at the harmonic endpoint.
+
+- Accepted in: `v0.11.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-002, C-SG-003
+
+## C-SG-007
+
+Conditional on a fixed positive action increment h and the imposed lattice J_n=n*h, every positive integer n with n*h<8*pi has omega_n=cos(n*h/16) and E_n=16*sin(n*h/16), so n<8*pi/h and only finitely many levels are admissible. The continuous interpolation obeys dE/dn=h*cos(n*h/16)=h*omega_n. When (n+1)*h<8*pi, the actual adjacent gap is E_(n+1)-E_n=32*sin(h/32)*cos((2*n+1)*h/32), which is generally not h*omega_n. This claim does not derive the lattice premise or identify h with a physical coupling or Planck constant.
+
+- Accepted in: `v0.11.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-003
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

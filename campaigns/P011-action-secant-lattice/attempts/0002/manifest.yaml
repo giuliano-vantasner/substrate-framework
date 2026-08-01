@@ -1,0 +1,19 @@
+attempt: 0002
+candidate: A
+repair: endpoint_and_derivative_positivity_certificate
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE4
+framework_base: 3ab45d5
+question: >-
+  Can the ratio monotonicity be certified without a branch-sensitive definite
+  antiderivative while retaining the exact secant and lattice claims?
+command: PYTHONPATH=src .venv/bin/python proposals/P011-action-secant-lattice/verify.py
+oracle:
+  kind: exact_sympy_calculus_and_trigonometry
+  mutation_requirements:
+    - reject wrong energy and action coefficients
+    - reject wrong frequency power in the secant scale
+    - reject wrong action-angle denominator
+    - reject an off-by-one adjacent level
+status: failed

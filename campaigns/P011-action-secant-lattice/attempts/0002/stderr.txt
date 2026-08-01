@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "proposals/P011-action-secant-lattice/verify.py", line 225, in <module>
+    run()
+  File "proposals/P011-action-secant-lattice/verify.py", line 124, in run
+    secant_checks.check(
+  File "src/substrate_framework/verification.py", line 23, in check
+    raise CheckFailure(f"FAIL [{self.claim_id}] {name}{suffix}")
+substrate_framework.verification.CheckFailure: FAIL [C-SG-006] the secant derivative gives omega cubed rather than the canonical frequency

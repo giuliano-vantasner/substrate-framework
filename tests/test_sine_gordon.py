@@ -5,6 +5,10 @@ import sympy as sp
 
 from substrate_framework.sine_gordon import (
     breather_action,
+    breather_action_lattice_adjacent_gap,
+    breather_action_lattice_energy,
+    breather_action_lattice_frequency,
+    breather_action_secant_ratio,
     breather_energy,
     breather_energy_from_action,
     breather_field,
@@ -13,6 +17,7 @@ from substrate_framework.sine_gordon import (
     breather_mean_gradient_integral,
     breather_peak_amplitude,
     breather_period,
+    breather_secant_action_scale,
     breather_threshold_deficit,
     sine_gordon_residual,
 )
@@ -40,6 +45,25 @@ def test_breather_formulas_at_exact_frequency() -> None:
     assert breather_mean_gradient_integral(omega) == 16 * (
         sp.Rational(4, 5) - sp.Rational(3, 5) * sp.acos(sp.Rational(3, 5))
     )
+    assert breather_secant_action_scale(omega) == sp.Rational(64, 3)
+    assert breather_action_secant_ratio(omega) == sp.Rational(3, 4) * sp.acos(
+        sp.Rational(3, 5)
+    )
+
+
+def test_conditional_action_lattice_and_adjacent_gap() -> None:
+    level = 2
+    action_quantum = sp.pi
+    assert breather_action_lattice_frequency(level, action_quantum) == sp.cos(
+        sp.pi / 8
+    )
+    assert breather_action_lattice_energy(level, action_quantum) == 16 * sp.sin(
+        sp.pi / 8
+    )
+    assert sp.simplify(
+        breather_action_lattice_adjacent_gap(level, action_quantum)
+        - 32 * sp.sin(sp.pi / 32) * sp.cos(5 * sp.pi / 32)
+    ) == 0
 
 
 @pytest.mark.parametrize("omega", [0, 1, -sp.Rational(1, 2), 2, sp.I])
@@ -52,3 +76,20 @@ def test_numeric_frequency_domain_is_enforced(omega: sp.Expr) -> None:
 def test_numeric_action_domain_is_enforced(action: sp.Expr) -> None:
     with pytest.raises(ValueError, match=r"0 < action < 8\*pi"):
         breather_energy_from_action(action)
+
+
+@pytest.mark.parametrize(
+    ("level", "action_quantum", "message"),
+    [
+        (0, 1, "positive integer"),
+        (sp.Rational(1, 2), 1, "positive integer"),
+        (1, 0, "real and positive"),
+        (1, 8 * sp.pi, r"0 < action < 8\*pi"),
+        (2, 3 * sp.pi, r"0 < action < 8\*pi"),
+    ],
+)
+def test_numeric_action_lattice_domain_is_enforced(
+    level: sp.Expr, action_quantum: sp.Expr, message: str
+) -> None:
+    with pytest.raises(ValueError, match=message):
+        breather_action_lattice_adjacent_gap(level, action_quantum)

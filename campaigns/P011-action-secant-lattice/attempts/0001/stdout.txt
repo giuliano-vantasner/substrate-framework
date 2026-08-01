@@ -1,0 +1,5 @@
+PASS [C-SG-006] the energy-frequency secant scale has the exact closed form
+PASS [C-SG-006] the secant scale is strictly decreasing across the open family
+PASS [C-SG-006] the secant scale spans positive infinity down to zero
+PASS [C-SG-006] the canonical-action to secant-scale ratio has the exact form
+PASS [C-SG-006] the ratio has endpoint limits zero and one

@@ -1,0 +1,43 @@
+id: P011
+base_release: v0.10.0
+base_commit: 3ab45d5
+source_baseline: substrate@6d1f4e0
+source_units:
+  - HE4
+question: >-
+  Classify the breather's energy-frequency secant scale against its accepted
+  canonical action, derive the exact consequences of a separately imposed
+  fixed action lattice including true adjacent gaps, and terminally adjudicate
+  HE4 without importing its literature comparison as framework authority.
+invariants:
+  - C-SG-002 through C-SG-004 retain their normalized energy and action conventions
+  - the canonical action is J=(1/(2*pi))*closed_integral(p dq)
+  - a declared action lattice is conditional and does not derive quantum physics
+  - a derivative of a continuous level interpolation is not an adjacent discrete spacing
+  - HE3 charge reciprocity remains a distinct pending source unit
+allowed_imports:
+  - C-SG-002 for the exact breather energy and frequency domain
+  - C-SG-003 for the canonical action, inverse map, and action range
+  - C-SG-004 for the distinct gradient Legendre transform
+  - exact real calculus and trigonometry
+  - primary DHN and Zamolodchikov literature only as quarantined comparison evidence
+  - predecessor bridge HE4 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: Derive the secant/action comparison and action lattice solely from accepted E(omega) and J(omega)
+  - id: B
+    description: Recompute the field phase-space integral before forming the secant comparison and lattice
+  - id: C
+    description: Select formulas by matching the cited semiclassical spectrum and truncation
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure
+  - exact global domain behavior
+  - separation of classical identities from imposed quantization
+  - correct discrete-versus-continuous level calculus
+  - parameter economy and mutation sensitivity
+claims_proposed:
+  - C-SG-006
+  - C-SG-007
+comparators_blinded_until: P011 proposal and exact formulas frozen at 2026-08-01T12:30:56Z
+status: accepted

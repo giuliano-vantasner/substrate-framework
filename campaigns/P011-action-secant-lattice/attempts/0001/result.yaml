@@ -1,0 +1,16 @@
+attempt: 0001
+completed_at: '2026-08-01T12:35:00Z'
+exit_code: 1
+terminal_tally: absent
+verdict:
+  C-SG-006: unverified
+  C-SG-007: unverified
+status: failed
+mechanism: >-
+  SymPy retained branch-sensitive square-root forms when differentiating the
+  circle-area antiderivative, so the positivity certificate did not normalize.
+next_attempt: >-
+  Prove positivity from f(omega)=acos(omega)-omega*sqrt(1-omega^2), its exact
+  derivative f'=-2*sqrt(1-omega^2), and endpoint f(1)=0.
+stdout: stdout.txt
+stderr: stderr.txt

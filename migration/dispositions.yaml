@@ -100,11 +100,20 @@ units:
       P008 maps the narrow exact content while excluding every visible
       comparator and documenting the missing continuum and formula premises.
   HE4:
-    disposition: partially_migrated
+    disposition: qualified
     accepted_claims:
+      - C-SG-001
       - C-SG-003
       - C-SG-004
-    remaining_scope: >-
-      The hbar_eff interpretation, charge reciprocity, quantization tower, and
-      literature-spectrum comparisons remain unaccepted candidate claims.
-    note: Only the classical action, inverse map, and gradient-Legendre identity have been promoted.
+      - C-SG-006
+      - C-SG-007
+    qualification: >-
+      HE4's exact classical action, secant comparison, Legendre relation, and
+      conditional lattice algebra are accepted, but physical quantization,
+      coupling identification, literature-spectrum equality, universal-Planck
+      semantics, and charge reciprocity are not established by this unit.
+    evidence:
+      - campaigns/P011-action-secant-lattice/reviews/source_adjudication.md
+    note: >-
+      P011 corrects the continuous-derivative versus adjacent-spacing
+      distinction and routes charge reciprocity to its actual pending unit HE3.
