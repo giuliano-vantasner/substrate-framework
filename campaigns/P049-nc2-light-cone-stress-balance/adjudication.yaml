@@ -1,0 +1,57 @@
+campaign: P049
+title: Canonical sine-Gordon light-cone stress balance and NC2 audit
+source_baseline: substrate@6d1f4e0
+source_units: [NC2]
+base_release: v0.43.0
+adjudicated_at: '2026-08-02T00:17:00Z'
+selected_candidate:
+  id: A
+  reason: >-
+    The canonical tensor and its null-coordinate transform factorize exactly
+    off shell with no improvement parameter, preserve parity covariance, and
+    expose NC2's half-normalization and energy-bridge error.
+competing_candidates:
+  - id: B
+    decision: rejected_as_unnecessary_parameterized_freedom_for_the_exact_canonical_obligation
+  - id: C
+    decision: rejected_by_parity_covariance_and_missing_accepted_weak_interaction_dependencies
+claims:
+  - id: C-SG-012
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0002/result.yaml
+  failed_attempts:
+    - attempts/0001/result.yaml
+  independent_review: reviews/independent_noether_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-SG-012-review.md
+source_disposition:
+  NC2: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P049-nc2-light-cone-stress-balance/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-15/bridge_NC2_chiral_stress_tensor.py
+    --source-reproduction campaigns/P049-nc2-light-cone-stress-balance/evidence/source-reproduction.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P049-nc2-light-cone-stress-balance/reviews/independent_noether_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+    tests/test_topological_labels.py tests/test_u1_charge.py
+    tests/test_quartic_qball.py tests/test_exact_sine_qball.py
+    tests/test_qball_fluctuations.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P001-sine-gordon-root/verify.py
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P048-nc1-nonlinear-chiral-balance/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-15/bridge_NC1_nonlinear_chiral_current.py
+    --source-reproduction campaigns/P048-nc1-nonlinear-chiral-balance/evidence/source-reproduction.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

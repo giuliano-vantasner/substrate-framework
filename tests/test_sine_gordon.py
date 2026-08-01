@@ -23,13 +23,23 @@ from substrate_framework.sine_gordon import (
     breather_period,
     breather_secant_action_scale,
     breather_threshold_deficit,
+    hamiltonian_density,
+    light_cone_derivatives,
     naive_chiral_currents,
     naive_chiral_transport_defects,
     sine_gordon_residual,
     sine_gordon_chiral_sources,
+    sine_gordon_lagrangian_density,
     sine_gordon_light_cone_chiral_sources,
+    sine_gordon_light_cone_stress_balances,
+    sine_gordon_light_cone_stress_components,
+    sine_gordon_potential,
     spatial_parity_transform,
     static_kink_field,
+    sine_gordon_stress_divergence,
+    sine_gordon_stress_tensor_contravariant,
+    sine_gordon_stress_tensor_covariant,
+    sine_gordon_stress_trace,
     topological_charge_from_boundaries,
     topological_current,
     topological_current_divergence,
@@ -100,6 +110,102 @@ def test_small_amplitude_sine_gordon_is_massive_not_chiral_wave_limit() -> None:
     profile = sp.symbols("f", real=True)
     source = sine_gordon_chiral_sources(epsilon * profile)[0]
     assert sp.limit(source / epsilon, epsilon, 0, dir="+") == -profile
+
+
+def test_canonical_sine_gordon_stress_tensor_and_divergence() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    field_t = sp.diff(field, t)
+    field_x = sp.diff(field, x)
+    potential = sine_gordon_potential(field)
+    assert potential == 1 - sp.cos(field)
+    assert sine_gordon_lagrangian_density(field, x, t) == (
+        field_t**2 / 2 - field_x**2 / 2 - potential
+    )
+    covariant = sine_gordon_stress_tensor_covariant(field, x, t)
+    contravariant = sine_gordon_stress_tensor_contravariant(field, x, t)
+    assert covariant == sp.Matrix(
+        [
+            [(field_t**2 + field_x**2) / 2 + potential, field_t * field_x],
+            [field_t * field_x, (field_t**2 + field_x**2) / 2 - potential],
+        ]
+    )
+    assert contravariant == sp.Matrix(
+        [
+            [covariant[0, 0], -field_t * field_x],
+            [-field_t * field_x, covariant[1, 1]],
+        ]
+    )
+    assert covariant[0, 0] == hamiltonian_density(field, x, t)
+    residual = sine_gordon_residual(field, x, t)
+    expected_divergence = sp.Matrix([field_t * residual, -field_x * residual])
+    assert all(
+        sp.simplify(entry) == 0
+        for entry in (
+            sine_gordon_stress_divergence(field, x, t) - expected_divergence
+        )
+    )
+    assert sine_gordon_stress_trace(field, x, t) == 2 * potential
+
+
+def test_light_cone_stress_components_and_off_shell_balances() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    current_plus, current_minus = naive_chiral_currents(field, x, t)
+    plus_plus, minus_minus, plus_minus = sine_gordon_light_cone_stress_components(
+        field,
+        x,
+        t,
+    )
+    assert sp.simplify(plus_plus - current_plus**2 / 4) == 0
+    assert sp.simplify(minus_minus - current_minus**2 / 4) == 0
+    assert plus_minus == sine_gordon_potential(field) / 2
+    balance_plus, balance_minus = sine_gordon_light_cone_stress_balances(
+        field,
+        x,
+        t,
+    )
+    residual = sine_gordon_residual(field, x, t)
+    assert sp.simplify(balance_plus - current_plus * residual / 4) == 0
+    assert sp.simplify(balance_minus - current_minus * residual / 4) == 0
+
+
+def test_light_cone_operator_and_source_normalization_conversion() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    plus, minus = light_cone_derivatives(field, x, t)
+    canonical_plus, canonical_minus, canonical_mixed = (
+        sine_gordon_light_cone_stress_components(field, x, t)
+    )
+    source_plus = plus**2 / 2
+    source_minus = minus**2 / 2
+    source_theta = (sp.cos(field) - 1) / 4
+    assert sp.simplify(source_plus - canonical_plus / 2) == 0
+    assert sp.simplify(source_minus - canonical_minus / 2) == 0
+    assert source_theta == -canonical_mixed / 2
+
+
+def test_stress_parity_exchange_and_exact_kink_pressure() -> None:
+    x, t = sp.symbols("x t", real=True)
+    field = sp.Function("phi")(x, t)
+    parity_field = spatial_parity_transform(field, x)
+    parity_components = sine_gordon_light_cone_stress_components(
+        parity_field,
+        x,
+        t,
+    )
+    original_components = tuple(
+        item.subs(x, -x)
+        for item in sine_gordon_light_cone_stress_components(field, x, t)
+    )
+    assert sp.simplify(parity_components[0] - original_components[1]) == 0
+    assert sp.simplify(parity_components[1] - original_components[0]) == 0
+    assert sp.simplify(parity_components[2] - original_components[2]) == 0
+
+    kink = static_kink_field(x)
+    kink_tensor = sine_gordon_stress_tensor_covariant(kink, x, t)
+    assert sp.simplify(kink_tensor[1, 1]) == 0
+    assert sp.simplify(kink_tensor[0, 0] - 2 * sine_gordon_potential(kink)) == 0
 
 
 @pytest.mark.parametrize("orientation", [0, 2, -2])

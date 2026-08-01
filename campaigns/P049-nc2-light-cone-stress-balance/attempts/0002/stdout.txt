@@ -1,0 +1,4 @@
+PASS [P049-NC2] 37 exact tensor, balance, mutation, source-normalization, parity, kink, and limit checks
+ALL 37 CHECKS PASS [P049-NC2]
+PASS [P049-INDEPENDENT] 7 general-potential Noether, Jacobian, source-audit, parity, and limit checks
+ALL 7 CHECKS PASS [P049-INDEPENDENT]

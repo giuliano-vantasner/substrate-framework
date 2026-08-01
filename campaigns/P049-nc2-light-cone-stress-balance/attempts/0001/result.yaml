@@ -1,0 +1,15 @@
+attempt: 0001
+completed_at: '2026-08-02T00:13:00Z'
+exit_code: 1
+tests_passed: 34
+tests_failed: 3
+verdict: failed_attempt
+failure_class: representation
+mechanism: >-
+  Raw SymPy equality rejected expanded versus factored but exactly equivalent
+  stress components and divergence expressions. Simplifying each difference
+  gives zero; no field equation, sign, coefficient, or scientific predicate
+  failed.
+next_attempt: >-
+  Compare exact simplified differences for identities whose canonical and
+  independent routes intentionally use different normal forms.

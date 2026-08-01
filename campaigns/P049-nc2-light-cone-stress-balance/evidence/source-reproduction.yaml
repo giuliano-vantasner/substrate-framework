@@ -1,0 +1,20 @@
+source_unit: NC2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-15/bridge_NC2_chiral_stress_tensor.py
+sha256: 6854fafe62ef7c8bfcf558573e3c89fec0d2144cb9a39df2e2ecb6d66d960136
+command: >-
+  git -C /home/dan/substrate show
+  6d1f4e0:merged-framework/bridges/phase-15/bridge_NC2_chiral_stress_tensor.py
+  | .venv/bin/python -
+exit_code: 0
+wall_time_seconds: 0.45345305
+terminal_tally: ALL 7 CHECKS PASS
+observed_checks: 7
+reproduction_notes:
+  - The light-cone operator, EOM sign, rescaled balance law, potential deletion, and mutation guards pass.
+  - The source defines T_plus_plus and T_minus_minus at one half of the canonical tensor-coordinate components and Theta at minus one half of the canonical mixed component.
+  - Its energy-conservation check constructs Cartesian T00 independently and does not test the claimed bridge from its rescaled null components; that bridge misses a kinetic factor two.
+  - Potential deletion gives a separate massless scalar theory, not the small-amplitude limit of normalized sine-Gordon.
+environment:
+  python: '3.12'
+  sympy: '1.14.0'

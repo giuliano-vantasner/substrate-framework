@@ -1,0 +1,49 @@
+id: P049
+base_release: v0.43.0
+base_commit: 35c4045
+source_baseline: substrate@6d1f4e0
+source_units: [NC2]
+question: >-
+  Derive the canonical normalized sine-Gordon stress tensor, its explicitly
+  normalized light-cone components and exact conservation balances, then audit
+  whether NC2's physical chiral or parity-violation interpretation follows.
+invariants:
+  - the normalized real 1+1 sine-Gordon equation and Hamiltonian convention are retained
+  - metric signature is (+,-) and Cartesian covariant versus contravariant components are distinguished
+  - x_plus=t+x and x_minus=t-x imply partial_plus=(partial_t+partial_x)/2 and partial_minus=(partial_t-partial_x)/2
+  - C-SG-011 fixes the characteristic-current sources and parity-invariant sector exchange
+  - exact stress conservation and physical V-A parity violation are distinct predicates
+  - pending W1 and W7 claims cannot enter accepted dependency closure
+allowed_imports:
+  - C-SG-001 normalized sine-Gordon equation and Hamiltonian density convention
+  - C-SG-011 exact characteristic balances and parity boundary
+  - canonical Noether stress tensor for a declared scalar Lagrangian in flat 1+1 spacetime
+  - equality of mixed partial derivatives for sufficiently smooth fields
+  - NC2 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Package the canonical symmetric Cartesian tensor, transform it to
+      half-normalized light-cone coordinates, and derive both balance laws as
+      exact multiples of the sine-Gordon residual
+  - id: B
+    description: >-
+      Add an improvement term to construct alternate conserved stress tensors
+      and select a light-cone decomposition from that family
+  - id: C
+    description: >-
+      Interpret the potential-linked light-cone exchange as a derived physical
+      left-right asymmetry or nonlinear V-A parity-violation mechanism
+uniqueness_evidence: null
+selection_criteria:
+  - exact compatibility with the accepted Lagrangian, EOM, Hamiltonian, and metric convention
+  - explicit coordinate-Jacobian and normalization closure
+  - off-shell factorization rather than only on-shell cancellation
+  - correct zero-potential, constant-vacuum, kink, breather, and parity limits
+  - no pending weak-sector dependency or unselected improvement parameter
+  - reusable API fit and assumption economy
+claims_proposed:
+  - provisional C-SG-012 exact canonical stress and light-cone balance theorem
+comparators_blinded_until: >-
+  cartesian_tensor_metric_light_cone_jacobian_balance_oracles_mutations_and_scope_frozen
+status: accepted

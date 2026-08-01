@@ -238,9 +238,172 @@ def hamiltonian_density(field: Any, x: sp.Symbol, t: sp.Symbol) -> sp.Expr:
     return (
         sp.diff(expression, t) ** 2 / 2
         + sp.diff(expression, x) ** 2 / 2
-        + 1
-        - sp.cos(expression)
+        + sine_gordon_potential(expression)
     )
+
+
+def sine_gordon_potential(field: Any) -> sp.Expr:
+    """Return the normalized potential ``V(phi)=1-cos(phi)``."""
+
+    expression = sp.sympify(field)
+    return 1 - sp.cos(expression)
+
+
+def sine_gordon_lagrangian_density(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> sp.Expr:
+    """Return ``(phi_t**2-phi_x**2)/2-V(phi)`` for signature ``(+,-)``."""
+
+    expression = sp.sympify(field)
+    return (
+        sp.diff(expression, t) ** 2 / 2
+        - sp.diff(expression, x) ** 2 / 2
+        - sine_gordon_potential(expression)
+    )
+
+
+def sine_gordon_stress_tensor_covariant(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> sp.Matrix:
+    """Return canonical symmetric ``T_mu_nu`` in coordinate order ``(t,x)``.
+
+    The definition is ``T_mu_nu=partial_mu(phi)*partial_nu(phi)-eta_mu_nu*L``
+    with ``eta=diag(+1,-1)``.
+    """
+
+    expression = sp.sympify(field)
+    gradient = sp.Matrix([sp.diff(expression, t), sp.diff(expression, x)])
+    metric = sp.diag(1, -1)
+    lagrangian = sine_gordon_lagrangian_density(expression, x, t)
+    return sp.simplify(gradient * gradient.T - metric * lagrangian)
+
+
+def sine_gordon_stress_tensor_contravariant(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> sp.Matrix:
+    """Return canonical ``T**(mu nu)`` in coordinate order ``(t,x)``."""
+
+    metric_inverse = sp.diag(1, -1)
+    covariant = sine_gordon_stress_tensor_covariant(field, x, t)
+    return sp.simplify(metric_inverse * covariant * metric_inverse)
+
+
+def sine_gordon_stress_divergence(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> sp.Matrix:
+    """Return ``partial_mu T**(mu nu)`` for ``nu=(t,x)``.
+
+    Off shell the result factorizes as
+    ``(phi_t*R, -phi_x*R)``, where ``R`` is the sine-Gordon residual.
+    """
+
+    tensor = sine_gordon_stress_tensor_contravariant(field, x, t)
+    return sp.Matrix(
+        [
+            sp.simplify(sp.diff(tensor[0, nu], t) + sp.diff(tensor[1, nu], x))
+            for nu in range(2)
+        ]
+    )
+
+
+def light_cone_derivatives(
+    expression: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return ``(partial_plus,partial_minus)`` for ``x_plus=t+x``.
+
+    The coordinate convention gives
+    ``partial_plus=(partial_t+partial_x)/2`` and
+    ``partial_minus=(partial_t-partial_x)/2``.
+    """
+
+    value = sp.sympify(expression)
+    time_derivative = sp.diff(value, t)
+    space_derivative = sp.diff(value, x)
+    return (
+        sp.simplify((time_derivative + space_derivative) / 2),
+        sp.simplify((time_derivative - space_derivative) / 2),
+    )
+
+
+def sine_gordon_light_cone_stress_components(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> tuple[sp.Expr, sp.Expr, sp.Expr]:
+    """Return covariant ``(T_plus_plus,T_minus_minus,T_plus_minus)``.
+
+    Components are transformed from the Cartesian covariant tensor with the
+    Jacobian of ``t=(x_plus+x_minus)/2`` and
+    ``x=(x_plus-x_minus)/2``.  Thus
+    ``T_plus_plus=(phi_t+phi_x)**2/4``,
+    ``T_minus_minus=(phi_t-phi_x)**2/4``, and
+    ``T_plus_minus=V(phi)/2``.
+    """
+
+    covariant = sine_gordon_stress_tensor_covariant(field, x, t)
+    cartesian_from_null = sp.Matrix(
+        [
+            [sp.Rational(1, 2), sp.Rational(1, 2)],
+            [sp.Rational(1, 2), -sp.Rational(1, 2)],
+        ]
+    )
+    transformed = sp.simplify(
+        cartesian_from_null.T * covariant * cartesian_from_null
+    )
+    return transformed[0, 0], transformed[1, 1], transformed[0, 1]
+
+
+def sine_gordon_light_cone_stress_balances(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> tuple[sp.Expr, sp.Expr]:
+    """Return the two off-shell null-coordinate stress balances.
+
+    The entries are
+    ``partial_minus(T_plus_plus)+partial_plus(T_plus_minus)`` and
+    ``partial_plus(T_minus_minus)+partial_minus(T_plus_minus)``.  They
+    factor as ``(J_plus*R/4,J_minus*R/4)`` and vanish on shell.
+    """
+
+    plus_plus, minus_minus, plus_minus = sine_gordon_light_cone_stress_components(
+        field,
+        x,
+        t,
+    )
+    plus_plus_plus, plus_plus_minus = light_cone_derivatives(plus_plus, x, t)
+    minus_minus_plus, minus_minus_minus = light_cone_derivatives(
+        minus_minus,
+        x,
+        t,
+    )
+    mixed_plus, mixed_minus = light_cone_derivatives(plus_minus, x, t)
+    del plus_plus_plus, minus_minus_minus
+    return (
+        sp.simplify(plus_plus_minus + mixed_plus),
+        sp.simplify(minus_minus_plus + mixed_minus),
+    )
+
+
+def sine_gordon_stress_trace(
+    field: Any,
+    x: sp.Symbol,
+    t: sp.Symbol,
+) -> sp.Expr:
+    """Return ``T**mu_mu=2*V(phi)`` in the declared 1+1 convention."""
+
+    covariant = sine_gordon_stress_tensor_covariant(field, x, t)
+    return sp.simplify(sp.trace(sp.diag(1, -1) * covariant))
 
 
 def breather_energy(omega: Any) -> sp.Expr:

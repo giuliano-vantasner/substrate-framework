@@ -1,0 +1,4 @@
+34 passed, 3 failed
+FAIL test_canonical_sine_gordon_stress_tensor_and_divergence: raw factorization equality
+FAIL test_light_cone_stress_components_and_off_shell_balances: expanded quadratic equality
+FAIL test_light_cone_operator_and_source_normalization_conversion: expanded quadratic equality

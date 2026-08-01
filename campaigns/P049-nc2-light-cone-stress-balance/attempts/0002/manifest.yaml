@@ -1,0 +1,15 @@
+attempt: 0002
+campaign: P049
+started_at: '2026-08-02T00:16:00Z'
+base_release: v0.43.0
+base_commit: 35c4045
+source_unit: NC2
+source_sha256: 6854fafe62ef7c8bfcf558573e3c89fec0d2144cb9a39df2e2ecb6d66d960136
+candidate: A
+repair_from: attempts/0001/result.yaml
+oracles:
+  - exact canonical stress and off-shell residual factorization verifier
+  - independent general-potential Noether and coordinate-Jacobian review
+expected_positive_object: >-
+  Canonically normalized Cartesian and null stress tensors with exact balances,
+  plus a source audit that keeps NC2's rescaled auxiliary law separate.

@@ -2249,3 +2249,57 @@ claims:
     accepted_in: v0.43.0
     challenges: []
     supersedes: []
+  - id: C-SG-012
+    statement: >-
+      Let phi be a sufficiently smooth real field in normalized 1+1
+      sine-Gordon conventions, with signature eta=diag(+1,-1), potential
+      V(phi)=1-cos(phi), Lagrangian density
+      L=(phi_t^2-phi_x^2)/2-V(phi), and residual
+      R=phi_tt-phi_xx+sin(phi). The canonical symmetric tensor
+      T_mu_nu=partial_mu(phi)*partial_nu(phi)-eta_mu_nu*L has covariant
+      components T_00=(phi_t^2+phi_x^2)/2+V, T_01=T_10=phi_t*phi_x, and
+      T_11=(phi_t^2+phi_x^2)/2-V. Raising both indices changes the mixed
+      components to T^01=T^10=-phi_t*phi_x, and its exact off-shell
+      divergences are partial_mu T^(mu 0)=phi_t*R and
+      partial_mu T^(mu 1)=-phi_x*R. Thus local stress conservation follows
+      on shell; integrated charges additionally require appropriate boundary
+      flux conditions. For x_plus=t+x, x_minus=t-x and
+      partial_plus=(partial_t+partial_x)/2,
+      partial_minus=(partial_t-partial_x)/2, the covariant null components
+      are T_pp=(phi_t+phi_x)^2/4, T_mm=(phi_t-phi_x)^2/4, and
+      T_pm=V/2. They obey the exact off-shell balances
+      partial_minus T_pp+partial_plus T_pm=(phi_t+phi_x)*R/4 and
+      partial_plus T_mm+partial_minus T_pm=(phi_t-phi_x)*R/4, while the
+      Cartesian trace is T^mu_mu=2*V=4*T_pm. Scalar-field spatial parity
+      exchanges T_pp and T_mm and leaves T_pm even. Deleting the potential
+      produces a distinct massless model with separately conserved null
+      stresses; it is not the small-amplitude limit of the fixed normalized
+      sine-Gordon theory. These identities establish neither a selected
+      handed sector, quantum chiral anomaly, V-A interaction, weak force,
+      bosonization dictionary, particle identity, nor substrate realization.
+    provenance: campaigns/P049-nc2-light-cone-stress-balance/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-SG-001
+      - C-SG-011
+    evidence:
+      - campaigns/P049-nc2-light-cone-stress-balance/verify.py
+      - campaigns/P049-nc2-light-cone-stress-balance/attempts/0002/result.yaml
+      - campaigns/P049-nc2-light-cone-stress-balance/reviews/independent_noether_review.py
+      - campaigns/P049-nc2-light-cone-stress-balance/reviews/source_adjudication.md
+      - campaigns/P049-nc2-light-cone-stress-balance/evidence/source-reproduction.yaml
+      - memory/vantasner/decisions/C-SG-012-review.md
+      - tests/test_sine_gordon.py
+    assumptions:
+      - The real field is sufficiently smooth for the displayed derivatives and equality of mixed partials.
+      - The metric signature is (+,-), Cartesian component order is (t,x), and covariant versus contravariant mixed-component signs are not interchangeable.
+      - The null coordinates and derivative one-half factors are exactly those stated; alternate null-coordinate conventions require explicit conversion.
+      - Integrated energy or momentum conservation requires the relevant spatial boundary flux to vanish or cancel.
+      - Potential deletion is a model deformation, not the small-amplitude limit of the accepted normalized equation, and no weak-sector interpretation is imported.
+    comparators: []
+    accepted_in: v0.44.0
+    challenges: []
+    supersedes: []

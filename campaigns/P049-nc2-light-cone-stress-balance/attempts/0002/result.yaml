@@ -1,0 +1,25 @@
+attempt: 0002
+completed_at: '2026-08-02T00:17:00Z'
+primary_exit_code: 0
+primary_terminal_tally: 37
+independent_exit_code: 0
+independent_terminal_tally: 7
+candidate: A
+verdict:
+  C-SG-012: symbolic_verified
+evidence:
+  - canonical scalar Lagrangian and Cartesian covariant and contravariant tensors
+  - off-shell energy-momentum divergence factorization by the SG residual
+  - exact coordinate-Jacobian null components and off-shell null balance factorization
+  - derivative scale, raising sign, mixed-component coefficient, balance sign, and normalization mutations
+  - exact trace-potential relation, parity exchange, and kink pressure limit
+  - independent general-potential Noether and matrix-Jacobian derivation
+  - exact audit of NC2's half-canonical auxiliary components and missing energy factor two
+  - potential-deletion massless-model limit separated from normalized SG small amplitude
+qualifications:
+  - Cartesian index positions and null covariant components use signature (+,-) and the stated Jacobian
+  - local conservation becomes integrated charge conservation only with vanishing boundary flux
+  - NC2's T_plus_plus and T_minus_minus are half the canonical null components and its Theta is minus half the canonical mixed component
+  - the potentialless free scalar is a separate model deformation rather than the small-amplitude normalized sine-Gordon limit
+  - no physical chiral anomaly, selected handed sector, V-A interaction, weak force, bosonization, particle identity, or substrate realization follows
+status: passed

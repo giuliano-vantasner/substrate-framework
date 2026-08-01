@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 172
-  qualified: 39
+  pending_adjudication: 171
+  qualified: 40
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3008,8 +3008,23 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-012
+  qualification: NC2's operator identity and uniformly half-scaled light-cone balance are exact and map
+    to the canonical stress theorem after explicit conversion. Its named auxiliaries are one half of the
+    canonical null stresses and minus one half of the canonical mixed component, so they are not the canonical
+    components in its declared coordinates. Its printed energy bridge misses a kinetic factor two, and
+    the executable energy check bypasses that bridge. Potential deletion defines a distinct massless model
+    rather than the small-amplitude fixed sine-Gordon limit, and the source does not derive a quantum
+    anomaly, handed-sector selection, V-A interaction, weak force, bosonization closure, particle identity,
+    or substrate realization.
+  evidence:
+  - campaigns/P049-nc2-light-cone-stress-balance/reviews/source_adjudication.md
+  - campaigns/P049-nc2-light-cone-stress-balance/evidence/source-reproduction.yaml
+  note: P049 derives the Cartesian tensor and both null balances off shell, independently checks the Noether
+    and Jacobian normalizations, proves the parity exchange and trace relation, and records the exact
+    conversion from NC2's rescaled auxiliary quantities.
 - source_unit: NC3
   phase: phase-15
   path: merged-framework/bridges/phase-15/bridge_NC3_nonlinear_rectification.py

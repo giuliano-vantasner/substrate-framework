@@ -1,0 +1,13 @@
+attempt: 0001
+campaign: P049
+started_at: '2026-08-02T00:12:00Z'
+base_release: v0.43.0
+base_commit: 35c4045
+source_unit: NC2
+source_sha256: 6854fafe62ef7c8bfcf558573e3c89fec0d2144cb9a39df2e2ecb6d66d960136
+candidate: A
+oracles:
+  - canonical package identity tests
+expected_positive_object: >-
+  Exact Cartesian and light-cone stress identities expressed independently of
+  a particular SymPy expansion or factorization normal form.

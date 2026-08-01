@@ -453,6 +453,15 @@ Let phi be a sufficiently smooth real field in normalized 1+1 sine-Gordon conven
 - Compatibility: `native`
 - Dependencies: C-SG-001
 
+## C-SG-012
+
+Let phi be a sufficiently smooth real field in normalized 1+1 sine-Gordon conventions, with signature eta=diag(+1,-1), potential V(phi)=1-cos(phi), Lagrangian density L=(phi_t^2-phi_x^2)/2-V(phi), and residual R=phi_tt-phi_xx+sin(phi). The canonical symmetric tensor T_mu_nu=partial_mu(phi)*partial_nu(phi)-eta_mu_nu*L has covariant components T_00=(phi_t^2+phi_x^2)/2+V, T_01=T_10=phi_t*phi_x, and T_11=(phi_t^2+phi_x^2)/2-V. Raising both indices changes the mixed components to T^01=T^10=-phi_t*phi_x, and its exact off-shell divergences are partial_mu T^(mu 0)=phi_t*R and partial_mu T^(mu 1)=-phi_x*R. Thus local stress conservation follows on shell; integrated charges additionally require appropriate boundary flux conditions. For x_plus=t+x, x_minus=t-x and partial_plus=(partial_t+partial_x)/2, partial_minus=(partial_t-partial_x)/2, the covariant null components are T_pp=(phi_t+phi_x)^2/4, T_mm=(phi_t-phi_x)^2/4, and T_pm=V/2. They obey the exact off-shell balances partial_minus T_pp+partial_plus T_pm=(phi_t+phi_x)*R/4 and partial_plus T_mm+partial_minus T_pm=(phi_t-phi_x)*R/4, while the Cartesian trace is T^mu_mu=2*V=4*T_pm. Scalar-field spatial parity exchanges T_pp and T_mm and leaves T_pm even. Deleting the potential produces a distinct massless model with separately conserved null stresses; it is not the small-amplitude limit of the fixed normalized sine-Gordon theory. These identities establish neither a selected handed sector, quantum chiral anomaly, V-A interaction, weak force, bosonization dictionary, particle identity, nor substrate realization.
+
+- Accepted in: `v0.44.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001, C-SG-011
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.
