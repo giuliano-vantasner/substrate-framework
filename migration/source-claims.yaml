@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 2
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 183
-  qualified: 29
+  pending_adjudication: 182
+  qualified: 30
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2500,8 +2500,17 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GW-001
+  - C-GW-002
+  qualification: GW3's exact TT image dimension and basis span are accepted with corrected normalization
+    and frame conventions. Its displayed tensors are not orthonormal, its provenance misstates the wrong-projector
+    trace, and the propagating graviton, physical polarization, and helicity readings are imported.
+  evidence:
+  - campaigns/P038-gw3-tt-polarization-basis/reviews/source_adjudication.md
+  note: P038 supplies normalized completeness, piecewise all-direction frame coverage, double-angle and
+    circular rotation laws, and an independent full constraint-space derivation.
 - source_unit: GW4
   phase: phase-12
   path: merged-framework/bridges/phase-12/bridge_GW4_breather_quadrupole_waveform.py

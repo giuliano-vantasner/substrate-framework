@@ -550,3 +550,20 @@ units:
       P037 independently refines the sphere integral, carries quadrupole
       convention changes through the waveform coefficient, performs an exact
       harmonic average, and excludes physical gravity from the accepted claim.
+  GW3:
+    disposition: qualified
+    accepted_claims:
+      - C-GW-001
+      - C-GW-002
+    qualification: >-
+      GW3's exact TT image dimension and basis span are accepted with corrected
+      normalization and frame conventions. Its displayed tensors are not
+      orthonormal, its provenance misstates the wrong-projector trace, and the
+      propagating graviton, physical polarization, and helicity readings are
+      imported.
+    evidence:
+      - campaigns/P038-gw3-tt-polarization-basis/reviews/source_adjudication.md
+    note: >-
+      P038 supplies normalized completeness, piecewise all-direction frame
+      coverage, double-angle and circular rotation laws, and an independent
+      full constraint-space derivation.

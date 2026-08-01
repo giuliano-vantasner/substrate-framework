@@ -7,6 +7,7 @@ energy-flux law; callers must pass those conditional prefactors explicitly.
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import Any
 
 import sympy as sp
@@ -64,6 +65,158 @@ def frobenius_norm_squared(tensor: Any) -> sp.Expr:
             sp.Integer(0),
         )
     )
+
+
+def frobenius_inner_product(left: Any, right: Any) -> sp.Expr:
+    """Return the exact Cartesian contraction ``A_ij*B_ij``."""
+
+    left_matrix = sp.Matrix(left)
+    right_matrix = sp.Matrix(right)
+    if left_matrix.shape != right_matrix.shape:
+        raise ValueError("tensor shapes must match")
+    return sp.simplify(
+        sum(
+            (
+                left_matrix[i, j] * right_matrix[i, j]
+                for i in range(left_matrix.rows)
+                for j in range(left_matrix.cols)
+            ),
+            sp.Integer(0),
+        )
+    )
+
+
+def _orthonormal_symmetric_basis() -> tuple[sp.Matrix, ...]:
+    diagonal = tuple(
+        sp.Matrix(3, 3, lambda i, j, axis=axis: int(i == axis and j == axis))
+        for axis in range(3)
+    )
+    off_diagonal = []
+    for first, second in ((0, 1), (0, 2), (1, 2)):
+        tensor = sp.zeros(3)
+        tensor[first, second] = 1 / sp.sqrt(2)
+        tensor[second, first] = 1 / sp.sqrt(2)
+        off_diagonal.append(tensor)
+    return diagonal + tuple(off_diagonal)
+
+
+def tt_operator_matrix(direction: Any) -> sp.Matrix:
+    """Return the TT operator on an orthonormal six-tensor basis."""
+
+    basis = _orthonormal_symmetric_basis()
+    return sp.simplify(
+        sp.Matrix(
+            6,
+            6,
+            lambda row, column: frobenius_inner_product(
+                basis[row], tt_project_symmetric(basis[column], direction)
+            ),
+        )
+    )
+
+
+@dataclass(frozen=True)
+class TTPolarizationBasis:
+    """An oriented transverse frame and normalized real TT tensor basis."""
+
+    direction: sp.Matrix
+    first_transverse: sp.Matrix
+    second_transverse: sp.Matrix
+    plus: sp.Matrix
+    cross: sp.Matrix
+
+
+def tt_polarization_basis(
+    direction: Any,
+    reference: Any | None = None,
+) -> TTPolarizationBasis:
+    """Construct a normalized plus/cross basis for a nonzero direction.
+
+    The reference must not be parallel to the direction.  If it is omitted, a
+    usable Cartesian axis is selected piecewise.  This is a deterministic
+    all-direction construction, not a claim of a globally continuous frame on
+    the sphere.
+    """
+
+    vector = _column_three(direction, "direction")
+    norm_squared = sp.simplify(vector.dot(vector))
+    if norm_squared == 0:
+        raise ValueError("direction must be nonzero")
+    unit_direction = sp.simplify(vector / sp.sqrt(norm_squared))
+
+    if reference is None:
+        selected_reference = None
+        for axis in (sp.Matrix([1, 0, 0]), sp.Matrix([0, 1, 0]), sp.Matrix([0, 0, 1])):
+            transverse = sp.simplify(
+                axis - unit_direction * unit_direction.dot(axis)
+            )
+            if sp.simplify(transverse.dot(transverse)) != 0:
+                selected_reference = axis
+                break
+        if selected_reference is None:
+            raise ValueError("could not select a transverse reference")
+    else:
+        selected_reference = _column_three(reference, "reference")
+
+    first_raw = sp.simplify(
+        selected_reference
+        - unit_direction * unit_direction.dot(selected_reference)
+    )
+    first_norm_squared = sp.simplify(first_raw.dot(first_raw))
+    if first_norm_squared == 0:
+        raise ValueError("reference must not be parallel to direction")
+    first = sp.simplify(first_raw / sp.sqrt(first_norm_squared))
+    second_raw = sp.simplify(unit_direction.cross(first))
+    second_norm_squared = sp.simplify(second_raw.dot(second_raw))
+    second = sp.simplify(second_raw / sp.sqrt(second_norm_squared))
+    plus = sp.simplify((first * first.T - second * second.T) / sp.sqrt(2))
+    cross = sp.simplify((first * second.T + second * first.T) / sp.sqrt(2))
+    return TTPolarizationBasis(
+        direction=unit_direction,
+        first_transverse=first,
+        second_transverse=second,
+        plus=plus,
+        cross=cross,
+    )
+
+
+def tt_basis_reconstruct(tensor: Any, basis: TTPolarizationBasis) -> sp.Matrix:
+    """Project a symmetric tensor using normalized plus/cross coefficients."""
+
+    source = _symmetric_three(tensor, "tensor")
+    return sp.simplify(
+        frobenius_inner_product(source, basis.plus) * basis.plus
+        + frobenius_inner_product(source, basis.cross) * basis.cross
+    )
+
+
+def rotated_tt_polarizations(
+    basis: TTPolarizationBasis,
+    angle: Any,
+) -> tuple[sp.Matrix, sp.Matrix]:
+    """Return plus/cross after rotating the transverse frame by ``angle``.
+
+    With ``u'=cos(angle)u+sin(angle)v`` and
+    ``v'=-sin(angle)u+cos(angle)v``, the tensor basis rotates through twice the
+    frame angle.
+    """
+
+    value = sp.sympify(angle)
+    cosine = sp.cos(2 * value)
+    sine = sp.sin(2 * value)
+    plus = sp.simplify(cosine * basis.plus + sine * basis.cross)
+    cross = sp.simplify(-sine * basis.plus + cosine * basis.cross)
+    return plus, cross
+
+
+def circular_tt_polarizations(
+    basis: TTPolarizationBasis,
+) -> tuple[sp.Matrix, sp.Matrix]:
+    """Return ``(plus+i*cross)/sqrt(2)`` and its conjugate convention."""
+
+    right = sp.simplify((basis.plus + sp.I * basis.cross) / sp.sqrt(2))
+    left = sp.simplify((basis.plus - sp.I * basis.cross) / sp.sqrt(2))
+    return right, left
 
 
 def integrated_tt_norm_squared(tensor: Any) -> sp.Expr:

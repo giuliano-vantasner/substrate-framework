@@ -1,0 +1,17 @@
+source_unit: GW3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-12/bridge_GW3_TT_projector_two_polarizations.py
+sha256: 3b941debf6933729b693b928579d4a7f1d73d906911c2fcedb9316ad08038326
+reproduced_at: '2026-08-01T18:07:00Z'
+command: >-
+  .venv/bin/python
+  <snapshot>/merged-framework/bridges/phase-12/bridge_GW3_TT_projector_two_polarizations.py
+environment:
+  python: repository virtual environment
+  sympy: 1.14.0
+exit_code: 0
+terminal_tally: ALL 15 CHECKS PASS
+observation: >-
+  The projector rank and axis-basis checks reproduce. The displayed plus/cross
+  tensors each have norm squared two despite being called orthonormal, and the
+  physical propagating-mode map is explicitly imported.

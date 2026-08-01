@@ -102,6 +102,15 @@ In Euclidean three-space let n be a unit direction, P_ij=delta_ij-n_i*n_j, and l
 - Compatibility: `compatible_extension`
 - Dependencies: C-MOM-001
 
+## C-GW-002
+
+For each nonzero direction n in Euclidean three-space, the orthogonal TT projector of C-GW-001 acting on the six-dimensional real vector space of symmetric 3-by-3 tensors has rank and trace two, with eigenvalues two ones and four zeros. Choose an oriented orthonormal frame (u,v,n_hat). The tensors e_plus=(u*u^T-v*v^T)/sqrt(2) and e_cross=(u*v^T+v*u^T)/sqrt(2) are symmetric, transverse, traceless, and Frobenius-orthonormal. They are complete for the image: TT_n(S)=(e_plus:S)*e_plus+(e_cross:S)*e_cross for every symmetric S. If the transverse frame changes by u'=cos(psi)u+sin(psi)v and v'=-sin(psi)u+cos(psi)v, then e_plus'=cos(2psi)e_plus+sin(2psi)e_cross and e_cross'=-sin(2psi)e_plus+cos(2psi)e_cross. Consequently the declared circular combinations (e_plus plus/minus i*e_cross)/sqrt(2) acquire the opposite algebraic phases exp(minus/plus 2*i*psi). A deterministic frame may cover all nonzero directions piecewise, but no global continuity is asserted. The unnormalized axis tensors used by GW3 have norm squared two and require coefficient division by two. These results establish no gravitational action, propagating field equation, constraint or gauge quotient, physical polarization observable, graviton count, physical helicity, quantum state, radiation channel, or substrate realization.
+
+- Accepted in: `v0.34.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GW-001
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

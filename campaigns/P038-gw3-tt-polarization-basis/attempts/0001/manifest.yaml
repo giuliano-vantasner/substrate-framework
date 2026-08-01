@@ -1,0 +1,21 @@
+attempt: 0001
+campaign: P038
+base_release: v0.33.0
+base_commit: cc9574a
+source_unit: GW3
+source_sha256: 3b941debf6933729b693b928579d4a7f1d73d906911c2fcedb9316ad08038326
+candidate: A
+oracles:
+  - exact six-dimensional symmetric-tensor operator rank and spectrum
+  - normalized plus/cross basis and dyadic completeness
+  - axis-safe piecewise transverse-frame construction
+  - exact double-angle and circular weight-two rotation laws
+  - independent full linear-constraint solution
+mutations:
+  - remove the square-root-two basis normalization
+  - halve or double the basis scale
+  - replace the double frame angle by one, three, or minus two times the angle
+  - retain the transverse in-plane trace direction
+expected_positive_object: >-
+  A rank-two TT image theorem with a normalized complete basis and explicit
+  frame conventions, excluding physical propagation or helicity claims.

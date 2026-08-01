@@ -1,0 +1,10 @@
+PASS [P038-INDEPENDENT] independent symmetric TT constraints have rank four and nullity two
+PASS [P038-INDEPENDENT] the complete constraint solution has only plus and cross coordinates
+PASS [P038-INDEPENDENT] independent basis normalization gives unit norms and zero overlap
+PASS [P038-INDEPENDENT] basis reconstruction independently matches the solved constraint form
+PASS [P038-INDEPENDENT] directly rotated vectors independently produce the double-angle basis
+PASS [P038-INDEPENDENT] a one-angle tensor rotation is an explicit counterexample
+PASS [P038-INDEPENDENT] GW3's displayed basis requires half-weighted coefficient extraction
+PASS [P038-INDEPENDENT] a nonzero static TT tensor is a counterexample to image membership implying propagation
+ALL 8 CHECKS PASS [P038-INDEPENDENT]
+P038 INDEPENDENT CONSTRAINT-BASIS REVIEW ALL 8 CHECKS PASS

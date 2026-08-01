@@ -1,0 +1,40 @@
+campaign: P038
+title: TT image dimension and normalized polarization-basis audit
+source_baseline: substrate@6d1f4e0
+source_units: [GW3]
+base_release: v0.33.0
+adjudicated_at: '2026-08-01T18:12:13Z'
+selected_candidate:
+  id: A
+  reason: >-
+    Exact operator rank, normalized basis completeness, axis-safe frame
+    coverage, double-angle rotations, and an independent constraint solution
+    close the distinct algebraic theorem without a physical graviton import.
+competing_candidates:
+  - id: B
+    decision: rejected_because_normalization_completeness_and_piecewise_frame_coverage_all_close
+  - id: C
+    decision: rejected_because_no_accepted_action_constraints_gauge_quotient_or_propagation_theorem_exists
+claims:
+  - id: C-GW-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0001/result.yaml
+  independent_rederivation: reviews/independent_constraint_basis_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_review: memory/vantasner/decisions/C-GW-002-review.md
+source_disposition:
+  GW3: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P038-gw3-tt-polarization-basis/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-12/bridge_GW3_TT_projector_two_polarizations.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P038-gw3-tt-polarization-basis/reviews/independent_constraint_basis_review.py
+  - .venv/bin/python -m pytest -q tests/test_tt_polarizations.py tests/test_tt_angular.py
+debt: []
+status: accepted

@@ -1,0 +1,35 @@
+PASS [P038-GW3] the audited GW3 source is the hash-pinned candidate unit
+PASS [P038-GW3] GW3 exits cleanly
+PASS [P038-GW3] GW3's declared fifteen-check tally reproduces
+PASS [P038-GW3] GW3 itself marks the physical TT and graviton map as imported
+PASS [P038-GW3] the transverse projector has exact rank two
+PASS [P038-GW3] the TT operator is an exact self-adjoint projector on symmetric tensors
+PASS [P038-GW3] the TT image has exact dimension two rather than a displayed-pair count
+PASS [P038-GW3] the transverse frame is orthonormal and positively oriented
+PASS [P038-GW3] plus and cross are individually symmetric transverse and traceless
+PASS [P038-GW3] plus and cross are Frobenius-orthonormal in the accepted convention
+PASS [P038-GW3] basis dyadic completeness equals the accepted TT projector
+PASS [P038-GW3] the normalized basis fixes exactly two coefficient coordinates
+PASS [P038-GW3] GW3's displayed tensors are orthogonal but not orthonormal
+PASS [P038-GW3] division by square root two repairs GW3's normalization
+PASS [P038-GW3] polarization normalization and completeness: baseline
+PASS [P038-GW3] polarization normalization and completeness: mutations supplied
+PASS [P038-GW3] polarization normalization and completeness: mutation 1 rejected
+PASS [P038-GW3] polarization normalization and completeness: mutation 2 rejected
+PASS [P038-GW3] polarization normalization and completeness: mutation 3 rejected
+PASS [P038-GW3] the piecewise frame covers coordinate direction [1, 0, 0]
+PASS [P038-GW3] the piecewise frame covers coordinate direction [0, 1, 0]
+PASS [P038-GW3] the piecewise frame covers coordinate direction [0, 0, 1]
+PASS [P038-GW3] direct transverse-frame rotation gives the exact double-angle tensor law
+PASS [P038-GW3] transverse-frame rotation weight: baseline
+PASS [P038-GW3] transverse-frame rotation weight: mutations supplied
+PASS [P038-GW3] transverse-frame rotation weight: mutation 1 rejected
+PASS [P038-GW3] transverse-frame rotation weight: mutation 2 rejected
+PASS [P038-GW3] transverse-frame rotation weight: mutation 3 rejected
+PASS [P038-GW3] the circular algebra has opposite weight-two frame phases
+PASS [P038-GW3] cross-sign reversal is a basis convention that preserves the projector span
+PASS [P038-GW3] omitting trace removal leaves a third transverse-symmetric direction
+PASS [P038-GW3] GW3's provenance narrative misreports its own guard trace as four
+PASS [P038-GW3] rank-two spatial algebra does not establish propagating gravitational modes
+ALL 33 CHECKS PASS [P038-GW3]
+P038 GW3 TT POLARIZATION-BASIS AUDIT ALL 33 CHECKS PASS

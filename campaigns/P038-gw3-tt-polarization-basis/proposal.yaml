@@ -1,0 +1,47 @@
+id: P038
+base_release: v0.33.0
+base_commit: cc9574a
+source_baseline: substrate@6d1f4e0
+source_units: [GW3]
+question: >-
+  Derive the exact two-dimensional image, normalized polarization basis, basis
+  completeness, and transverse-frame rotation law of the three-dimensional TT
+  projector already accepted in C-GW-001, then audit whether GW3 establishes
+  physical gravitational-wave or helicity degrees of freedom.
+invariants:
+  - C-GW-001 already accepts the TT projector and its sphere contraction, so P038 must add a distinct basis/dimension theorem
+  - the two-dimensional result is linear algebra on real symmetric spatial tensors for a fixed nonzero direction
+  - polarization tensors depend on a transverse-frame convention even though their span and projector do not
+  - a double-angle basis rotation is not by itself a physical helicity or propagating-degree theorem
+  - axial and sign conventions must be explicit and exceptional frame-construction directions must be handled
+allowed_imports:
+  - C-GW-001 exact three-dimensional TT projector algebra
+  - exact Euclidean linear algebra, orthonormal frames, rank-nullity, and complexification
+  - GW3 at substrate@6d1f4e0 as noncanonical evidence
+candidates:
+  - id: A
+    description: >-
+      Promote the exact rank-two TT image with an orthonormal plus/cross basis,
+      completeness relation, frame-rotation double angle, and circular-basis
+      phases while excluding physical gravity
+  - id: B
+    description: >-
+      Promote only the dimension-two kernel solution if normalization,
+      completeness, or global frame construction fails
+  - id: C
+    description: >-
+      Promote GW3's identification of the two algebraic basis tensors with two
+      propagating helicity-two gravitational-wave degrees of freedom
+uniqueness_evidence: null
+selection_criteria:
+  - exact rank/nullity calculation on the six-dimensional symmetric-tensor space
+  - normalized plus/cross tensors and completeness equal to the accepted projector
+  - transverse-frame sign/orientation and rotation conventions
+  - robust construction away from and at coordinate-axis degeneracies
+  - mutation-sensitive factors and independent constraint solving
+  - accepted dependency closure for any physical degree-of-freedom interpretation
+claims_proposed:
+  - provisional C-GW-002
+comparators_blinded_until: >-
+  rank_basis_completeness_rotation_conventions_and_physical_scope_frozen
+status: accepted

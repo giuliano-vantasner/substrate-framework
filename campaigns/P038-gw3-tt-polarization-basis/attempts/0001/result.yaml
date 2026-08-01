@@ -1,0 +1,23 @@
+attempt: 0001
+completed_at: '2026-08-01T18:12:13Z'
+exit_code: 0
+terminal_tally: 33
+verdict:
+  C-GW-002: symbolic_verified
+evidence:
+  - exact rank-two self-adjoint TT operator on the symmetric tensor space
+  - normalized plus/cross basis and complete reconstruction
+  - coordinate-axis coverage and exact frame-rotation law
+  - circular weight-two phases and convention sign guard
+  - independent rank-four constraint matrix with nullity two
+initial_failures:
+  - >-
+    The first circular-phase test compared trigonometric and exponential forms
+    that SymPy did not normalize; the oracle was repaired to the exact
+    cos(2*psi) plus/minus i*sin(2*psi) form without changing the theorem.
+source_defects:
+  - the displayed tensors have norm squared two but are called orthonormal
+  - the propagating-graviton and physical-amplitude map is imported
+  - the provenance paragraph says the wrong-projector trace is four while the code derives three
+status: passed_after_representation_repair
+stdout: stdout.txt
