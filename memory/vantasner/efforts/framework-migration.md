@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-02T17:35:00Z'
+updated: '2026-08-02T18:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.52.0`, containing seventy-two claims: the prior sector results plus the exact SU(3) trace-three cohomology, degree-normalized mathematical winding current, and embedded-hedgehog boundary charge `C-TOP-002`. Its fixed sign gives charge +1 for a profile decreasing from pi to zero, while explicitly withholding Noether, gauged-WZW, physical baryon, anomaly, and `N_c` meanings. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.53.0`, containing seventy-three claims:
+the prior sector results plus the dependency-free conditional quadratic
+heavy-field theorem `C-EFT-001`. It derives the exact stationary Schur
+complement, even-odd source cross term, finite inverse residual, and
+stationary-variation ceiling while explicitly withholding HLS, vector-meson,
+WZW, anomaly-coefficient, KSRF, baryon, `N_c`, scale, and substrate meanings.
+The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +54,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 162 pending, 0 partially migrated, 3 migrated, 49 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 161 pending, 0 partially migrated, 3 migrated, 50 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -138,6 +144,7 @@ Attempts are append-only and individually reproducible.
 | 0076 | P056 exact SU(3) trace-five cohomology and WZ1 audit | `campaigns/P056-wz1-wzw-five-form-inflow/attempts/0001` through `0006`, then `scripts/validate.sh` | accepted in v0.50.0 with WZ1 qualified; commit `23484eb` | Thirty-one primary and twenty-six independent checks build the exact CE complex twice, prove the real trace-five cocycle globally non-exact without a period, refute the source's false even-power guard, and retain only conditional filling and ungauged boundary identities; the full workflow and explicit replay each pass all 413 tests | Audit WZ2's claimed normalized integer period and level quantization without treating a hard-coded topology label or numerically close integral as a generator proof |
 | 0077 | P057 exact SU(3) primitive period and WZ2 audit | `campaigns/P057-wz2-pi5-period-level/attempts/0001` through `0003`, then the promotion replay | accepted in v0.51.0 with WZ2 qualified; commit `45e2fe9` | Twenty-six primary and nine independent checks reject WZ2's determinant and domain failures, derive the replacement map's degree +2 before its exact `-480*pi^3` period, converge a five-dimensional cubature, and fix the sphere-filling coefficient lattice without `N_c`; the full workflow and explicit replay each pass all 418 tests, and the workflow now prevents immutable historical verifiers from freezing unrelated future queue state | Audit WZ3's Goldstone-Wilczek current against the accepted ungauged boundary and period theorems without importing gauge descent, baryon normalization, or physical-current claims |
 | 0078 | P058 exact SU(3) winding current and WZ3 audit | `campaigns/P058-wz3-su3-winding-current/attempts/0001` through `0004`, then the promotion replay | accepted in v0.52.0 with WZ3 qualified; commit `ae23aea` | Twenty-six primary and ten independent checks preserve the native `np.trapz` failure, expose WZ3's post-derivation sign flip and structural baryon/anomaly checks, derive the trace-three cohomology, degree-one generator period, fixed-sign current, and exact hedgehog boundary charge, and show anomaly-consistent quark charges do not fix `N_c` from neutral-pion decay; the full workflow and explicit replay each pass all 424 tests | Audit WZ4's anomalous HLS vector-meson construction without importing its pending G2/G3/S3/S4 sectors or treating a declared local source coupling as a derived WZW route |
+| 0079 | P059 exact conditional heavy-field elimination and WZ4 audit | `campaigns/P059-wz4-hls-vector-elimination/attempts/0001` through `0004`, then the promotion replay | accepted in v0.53.0 with WZ4 qualified; commit `2740073` | Twenty-five primary and twenty-three independent checks derive the stationary Schur complement, even-odd cross term, noncommuting finite inverse residual, and anomaly chain-rule ceiling; arbitrary- and zero-contact mutations expose WZ4's copied normalization, while primary HLS sources retain four free homogeneous coefficients; the full workflow and explicit replay each pass all 431 tests | Audit PG1's exact Goldstone/masslessness construction without importing pending PG2/PG4/S2 or equating a conditional sigma-model Hessian with a derived physical pion sector |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -154,7 +161,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 162 bridge units remain pending, 3 are migrated, 49 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 161 bridge units remain pending, 3 are migrated, 50 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -312,11 +319,23 @@ target and literal three; anomaly-consistent general-`N_c` charges make the
 neutral-pion factor independent of `N_c`. Canonical and independent regression
 code use `np.trapezoid`, with no framework alias for the obsolete name.
 
+P059 adds the exact conditional quadratic heavy-field stationary reduction,
+including the inherited even-odd source cross term and exact left/right
+residuals of every finite Neumann inverse truncation. The stationary chain
+rule proves that eliminating a declared field preserves supplied explicit
+variation but cannot create a missing anomaly or select invariant local
+coefficients. WZ4 is qualified because its nine-check tally constructs no HLS
+action or vector equation, multiplies an imported WZW coefficient by a unit-
+limit form factor, omits the four free homogeneous HLS coefficients, and
+conflates physical pion parity with intrinsic parity. Canonical P059 code uses
+no quadrature API; the obsolete `np.trapz` name remains confined to immutable
+legacy evidence and explicit compatibility audits.
+
 ## Canonicalization
-The registry, `v0.52.0` manifest, current release, generated claim index, and generated framework memory agree on seventy-two accepted claims. P001 through P058 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 162 pending, 0 partial, 3 migrated, 49 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.53.0` manifest, current release, generated claim index, and generated framework memory agree on seventy-three accepted claims. P001 through P059 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 161 pending, 0 partial, 3 migrated, 50 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 162 pending, 3 migrated, 49 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable queue unit is WZ4, which claims a second local route to WZW physics by integrating out anomalous hidden-local-symmetry vector mesons. Its candidate dependencies G2, G3, S3, and S4 remain pending; WZ1 through WZ3 supply only accepted trace-five algebra, a sphere period, and a mathematical winding current, not a physical HLS sector, vector-meson action, anomalous coefficients, baryon coupling, or descent theorem. The new campaign must preregister literal source audit, a complete coefficient/field-elimination route, and an independent parity-odd operator-basis or anomaly-consistency route. It must keep a declared HLS effective action, algebraic tree-level elimination, derivative expansion, homogeneous WZW terms, anomaly matching, and substrate dynamics as separate obligations.
+The effort remains active. D4 is discharged, but D1 remains open with 161 pending, 3 migrated, 50 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable queue unit is PG1, which claims an exact massless physical pion from a linear-sigma-model Hessian, a nonlinear derivative expansion, and broken-generator counting. Its candidate dependencies PG2, PG4, and S2 remain pending and supply no explicit-breaking, spectrum, or physical-pion premise. The new campaign must preregister the general symmetry/Hessian theorem, at least one competing coset or orbit-stabilizer construction, the exact vacuum and kinetic conventions, and a strict ceiling between conditional Goldstone modes and an accepted physical pion sector.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
