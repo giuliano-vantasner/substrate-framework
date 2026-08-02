@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T04:30:00Z'
+updated: '2026-08-03T05:20:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,14 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.62.0`, containing ninety claims:
-the prior sector results plus the exact angular-defect ledger `C-DEF-001`.
-It derives the sharp annular fixed-degree energy, a declared matched-shell
-splitting ledger, the integer deck group of the polar order-parameter
-manifold, and a two-stiffness half-quantum-vortex preference residual. It
-supplies no finite-domain multi-core solution, material stiffnesses, core
-energies, defect existence or stability theorem, or substrate mechanism. The
-null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.63.0`, containing ninety-one claims:
+the prior sector results plus the exact scalar-lattice continuum ledger
+`C-LAT-001`. It derives the periodic Riemann-normalized action and site
+equation, centered-stencil Taylor remainder, exact Brillouin-zone symbol,
+linearized long-wave dispersion, and a smooth sampled-action error bound. It
+supplies no lattice existence, spacing selection, nonlinear solution
+convergence, material medium, EFT termination scale, or substrate mechanism.
+The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -55,7 +55,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 152 pending, 0 partially migrated, 3 migrated, 59 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 151 pending, 0 partially migrated, 3 migrated, 60 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -155,6 +155,7 @@ Attempts are append-only and individually reproducible.
 | 0086 | P066 exact cyclic/binary sign characters and OM1 audit | `campaigns/P066-om1-cyclic-sign-characters/attempts/0001` through `0003`, then the promotion replay | accepted in v0.60.0 with OM1 qualified; commit `0089e63` | Fifty-eight primary and thirty independent checks classify every finite cyclic sign character through order twelve and by full function enumeration through order eight, derive kernels/quotients/faithfulness and all C2-product characters, and expose equal-value/different-function counterexamples; OM1 collapses copied pending formulas by scalar set equality and misses the valid nonfaithful C4 sign character, while the single full workflow gate passes all 514 tests | Audit ME1's polar/ferromagnetic spin-1 mean-field selection without importing pending O1/ME2/ME3, treating two representative spinors as a global orbit classification, or converting a supplied c2 sign and mean-field functional into a substrate material derivation |
 | 0087 | P067 exact pure-spin-one orbits and ME1 audit | `campaigns/P067-me1-spin1-orbit-selection/attempts/0001` through `0003`, then the promotion replay | accepted in v0.61.0 with ME1 qualified; commit `417d55e` | Thirty-three primary and thirteen independent checks derive the exact singlet invariant, Cartesian endpoint normal forms, density-squared interval, and all fixed-density minimizers; ME1 uses random sampling as a global proof, checks representatives rather than equality sets, states a false interpolation formula, and omits density scaling and zero coupling, while the single full workflow gate and explicit replay each pass all 527 tests | Audit ME2's half-quantum-vortex energy claim without importing pending O1, conflating projective RP2 with the full condensate manifold, or treating additive isolated q-squared self-energies as a two-defect interaction theorem |
 | 0088 | P068 exact angular-defect energy/topology ledgers and ME2 audit | `campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0001` through `0003`, then the promotion replay | accepted in v0.62.0 with ME2 qualified; commit `3b4e9f2` | Forty-three primary and seventeen independent checks derive the sharp annular degree bound, matched-shell split ledger, full polar deck group, and unequal-stiffness/core residual; ME2 mistakes isolated-copy additivity for a fixed-boundary two-defect theorem, promotes a special 1/2 ratio to arbitrary splitting, and conflates projective `RP2` composition with the full manifold, while the single full workflow gate and explicit replay each pass all 541 tests | Audit ME3's lattice-to-continuum expansion without importing ME1/ME2 as dependencies, dropping the Riemann-sum factor or field dimensions, or extending a local Taylor series beyond the Brillouin and smooth-field regimes |
+| 0089 | P069 exact scalar-lattice action/symbol/convergence ledgers and ME3 audit | `campaigns/P069-me3-lattice-continuum/attempts/0001` through `0003`, then the promotion replay | accepted in v0.63.0 with ME3 qualified; commit `b2ccced` | Fifty-five primary and twenty-three independent checks derive the normalized periodic action and site equation, Taylor remainder, exact Brillouin symbol, long-wave dispersion, and smooth sampled-action bound; ME3 checks only local coefficients, supplies no action proof, overstates positive-spacing detectability, and turns a declared spacing into a termination scale, while the single full workflow gate and explicit replay each pass all 561 tests | Audit MH1's normalized overlap formulas without importing pending MH2/MH3, treating supplied profiles and condensates as derived generations, or converting free amplitudes and a declared mass map into an absolute hierarchy prediction |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -171,7 +172,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 152 bridge units remain pending, 3 are migrated, 59 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 151 bridge units remain pending, 3 are migrated, 60 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -447,11 +448,20 @@ vortex, and omitted stiffness and core terms can reverse the preference. The
 exact canonical and independent routes use no numerical quadrature or NumPy
 integration alias.
 
+P069 adds the exact periodic nearest-neighbour scalar action and site equation,
+centered-stencil Taylor coefficients and remainder, full Brillouin-zone
+symbol, controlled linearized dispersion, and a smooth sampled-action error
+bound. ME3 is qualified because it never constructs or varies its written
+action, states no domain or smoothness remainder, checks no full-zone behavior,
+and falsely promotes positive spacing to universal detectability and a
+termination-scale interpretation. The exact canonical and independent routes
+use no numerical quadrature or NumPy integration alias.
+
 ## Canonicalization
-The registry, `v0.62.0` manifest, current release, generated claim index, and generated framework memory agree on ninety accepted claims. P001 through P068 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 152 pending, 0 partial, 3 migrated, 59 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.63.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-one accepted claims. P001 through P069 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 151 pending, 0 partial, 3 migrated, 60 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 152 pending, 3 migrated, 59 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential executable unit is ME3, whose synopsis expands the centered lattice second difference, asserts a discrete-to-continuum sine-Gordon action, and matches the `-a^2 k^4/12` long-wave dispersion correction. ME1 and ME2 are source navigation references rather than required premises for this scalar lattice theorem. The new campaign must preregister literal-source, exact Fourier-symbol, Taylor-with-remainder, normalized discrete-action/Riemann-sum, and numerical convergence candidates; freeze the lattice and action normalization, field dimensions, time/space conventions, boundary/domain and interpolation choices, smoothness class, wave-number domain, lattice spacing, characteristic wavelength, comparator blinding, and physical-versus-conditional semantics before opening the executable. It must distinguish a pointwise truncation formula from operator and action convergence, retain the exact Brillouin-zone dispersion and its stability/aliasing limits, test the sign and coefficient independently, and keep the lattice spacing as a declared input rather than a derived substrate termination length.
+The effort remains active. D4 is discharged, but D1 remains open with 151 pending, 3 migrated, 60 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential executable unit is MH1, whose synopsis normalizes supplied hyperbolic-secant bound-mode profiles, overlaps their squared density with a supplied condensate, defines a mass as overlap times a free scale, and rejects using selected fluctuation eigenvalues as masses. MH2 and MH3 remain pending and supply no premise; EM6 and FG2 may be used only to the extent their exact accepted or qualified source fragments close independently. The new campaign must preregister literal-source, general normalized-expectation, exact beta/gamma overlap, sign/bound, dimensional/free-parameter, and spectral-alternative candidates; freeze the integration measure and domain, profile family and normalization, condensate amplitude/width, mode index and parity, coupling and mass dimensions, free scale, comparator blinding, and physical-versus-conditional semantics before opening the executable. It must distinguish a declared overlap mass functional from a derived Yukawa interaction, an exact positive expectation from a generation or hierarchy mechanism, one-dimensional Cartesian measure from radial measures, the inverse-width cancellation from absolute-scale determination, and a negative or zero fluctuation eigenvalue from a proof that overlap is the unique physical mass mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
