@@ -1,0 +1,55 @@
+campaign: P081
+title: Exact finite charge-trace and Abelian-normalization covariance ledger
+source_baseline: substrate@6d1f4e0
+source_units: [WM1]
+base_release: v0.72.0
+release_after_adjudication: v0.73.0
+adjudicated_at: '2026-08-03T18:00:00Z'
+selected_candidates:
+  - id: B
+    reason: The finite weighted trace ledger keeps table provenance and the complete cross-term decomposition explicit.
+  - id: C
+    reason: Covariant generator, coupling, and electric-coordinate transformations separate convention from a fixed-coordinate mutation.
+  - id: D
+    reason: The coupling-angle residual derives the exact additional equality premise.
+  - id: E
+    reason: Homogeneous-moment scaling proves that anomaly-zero equations cannot choose an overall Abelian normalization.
+  - id: F
+    reason: A common inverse-trace law is retained only as a separately supplied conditional premise.
+  - id: G
+    reason: Representation and normalization mutations expose both load-bearing arithmetic and missing provenance.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_source_regression
+claims:
+  - id: C-REP-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  verifier_repair_attempt: attempts/0002/result.yaml
+  validated_route: attempts/0003/result.yaml
+  record_finalization: attempts/0004/result.yaml
+  independent_review: reviews/independent_charge_trace_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  literature_audit: evidence/literature-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-REP-001-review.md
+source_disposition:
+  WM1: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P081-wm1-charge-trace-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P081-wm1-charge-trace-audit/reviews/independent_charge_trace_review.py
+  - .venv/bin/python -m pytest -q tests/test_charge_traces.py tests/test_gauge_u1.py tests/test_su3.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

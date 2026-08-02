@@ -1,0 +1,14 @@
+campaign: P081
+frozen_before_source_opening: true
+proposal_path: proposals/P081-wm1-charge-trace-audit/proposal.yaml
+proposal_sha256: f89b80e04638400b792896305bbc65b41ce6aadea81e30a280bce5272d3f23bd
+memory_contract_path: memory/vantasner/proposals/P081-wm1-charge-trace-audit.md
+memory_contract_sha256: 5e617149fa1acd2d1700ffeb0258f35a3f10e7ccd7baf971846a0c7f62bbf73b
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - source literal state-table implementation and output
+  - source common-trace-footing and weak-angle verdicts
+  - later WM2 and WM3 normalization mechanisms
+  - measured or running weak mixing angles and unification scales

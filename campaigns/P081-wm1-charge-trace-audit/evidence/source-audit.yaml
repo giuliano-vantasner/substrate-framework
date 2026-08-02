@@ -1,0 +1,74 @@
+source_unit: WM1
+campaign: P081
+checks:
+  WM1.0:
+    source_verdict: pass_qualified_supplied_table
+    audit: >-
+      The encoded multiplicities expand to fifteen weighted states. The
+      source does not derive that table, its representation, chirality basis,
+      physical field identity, or completeness from accepted claims.
+  WM1.1:
+    source_verdict: pass_exact_conditional_trace
+    audit: >-
+      The supplied table has Tr(T3^2)=2 exactly. This is a table property in
+      the declared generator convention, not a derived physical SU(2) sector.
+  WM1.2:
+    source_verdict: pass_exact_conditional_trace
+    audit: >-
+      The supplied table has Tr(Y^2)=10/3 exactly. Abelian rescaling changes
+      this value, and neither anomaly homogeneity nor local covariance selects
+      its absolute normalization.
+  WM1.3:
+    source_verdict: pass_exact_conditional_trace
+    audit: >-
+      Tr(T3*Y)=0 both globally and within the two declared doublets. A generic
+      finite ledger retains the cross term rather than assuming this special
+      cancellation.
+  WM1.4:
+    source_verdict: pass_exact_conditional_decomposition
+    audit: >-
+      Direct summation and the complete expansion agree at Tr(Q^2)=16/3 for
+      Q=T3+Y. This verifies finite arithmetic only.
+  WM1.5:
+    source_verdict: pass_trace_quotient_reject_physical_angle
+    audit: >-
+      The table quotient is exactly 3/8, but the physical coupling angle
+      gY^2/(g2^2+gY^2) equals it only after separately imposing
+      gY^2/g2^2=3/5, equivalently a common inverse-trace kinetic coefficient.
+      WM1 derives neither premise.
+  WM1.6:
+    source_verdict: refuted_guard
+    audit: >-
+      For Y_eRc=1+delta the quotient returns to 3/8 at delta=0 and delta=-2.
+      The nonzero root flips the singlet charge and preserves squared traces,
+      so the source predicate does not prove its stated only-at-zero claim.
+  WM1.7:
+    source_verdict: pass_exact_conditional_mutation
+    audit: >-
+      Removing colour multiplicities gives 9/28, showing that those supplied
+      weights are load bearing. It does not derive physical colour content.
+  WM1.8:
+    source_verdict: pass_exact_conditional_mutation
+    audit: >-
+      Omitting the charged singlet gives 6/13, showing table-content
+      sensitivity. Fabricated labels preserve the same algebra, so provenance
+      remains external.
+external_formula_audit:
+  evidence: evidence/literature-audit.yaml
+  verdict: >-
+    The cited primary derivation requires a simple unified-group embedding,
+    common normalized subgroup coupling, embedding-specific charge relation,
+    and scale/running treatment absent from accepted framework claims.
+uncovered_load_bearing_inputs:
+  - physical chiral representation and complete matter spectrum
+  - anomaly derivation and chirality-sign convention
+  - electroweak gauge action, neutral-sector convention, and Higgs sector
+  - SU(2) and U(1) kinetic coefficients and their common normalization
+  - simple unified-group embedding and breaking scale
+  - renormalization-group running to an observation scale
+headline_verdict: >-
+  Qualified. The exact finite-table traces, decomposition, normalization
+  covariance, and conditional coupling relation survive. WM1 does not derive
+  a physical weak mixing angle, representation, anomaly selection, common
+  induction law, unification boundary, or running prediction, and WM1.6 is
+  false as stated.

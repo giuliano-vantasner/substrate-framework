@@ -1,0 +1,53 @@
+campaign: P081
+purpose: >-
+  Record the premises of the primary source explicitly invoked by WM1 for the
+  trace formula, without treating that citation as an approved framework
+  import or as authority for WM1's supplied state table.
+citation:
+  authors: [Howard Georgi, Helen R. Quinn, Steven Weinberg]
+  title: Hierarchy of Interactions in Unified Gauge Theories
+  journal: Physical Review Letters
+  volume: 33
+  pages: 451-454
+  year: 1974
+  doi: 10.1103/PhysRevLett.33.451
+  primary_url: https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.33.451/fulltext
+inspection:
+  simple_unified_group_embedding:
+    status: required_by_cited_derivation
+    finding: >-
+      The observed gauge subgroups are assumed to be embedded in a larger
+      simple group, whose invariant normalization relates the subgroup
+      generators.
+  common_normalized_subgroup_coupling:
+    status: required_by_cited_derivation
+    finding: >-
+      Equality of the subgroup couplings follows only at the unified-group
+      footing and in a common normalized-generator convention.
+  charge_generator_coefficient:
+    status: embedding_specific
+    finding: >-
+      The coefficient relating electric charge to the subgroup generators is
+      fixed by the selected embedding; it is not inferred from a bare finite
+      table quotient.
+  breaking_and_running_scale:
+    status: required_for_physical_interpretation
+    finding: >-
+      The coupling relation applies above or near the superheavy breaking
+      scale, while lower-scale values require renormalization-group running.
+framework_status:
+  simple_unified_group_embedding: not_available_in_accepted_framework
+  common_normalized_subgroup_coupling: not_available_in_accepted_framework
+  electroweak_gauge_action: not_available_in_accepted_framework
+  physical_state_representation: not_available_in_accepted_framework
+  breaking_or_running_scale: not_available_in_accepted_framework
+adjudication_implication: >-
+  The exact 3/8 quotient can be retained only as a conditional property of
+  WM1's separately supplied finite charge table.  The cited physical
+  weak-angle interpretation is not dependency-closed in the accepted
+  framework because its unified embedding, common kinetic normalization,
+  coupling relation, matter representation, and scale are absent.
+authority_note: >-
+  This record documents a premise audit of an external primary paper.  It
+  does not approve that paper as a framework import and does not supersede
+  governance/claims.yaml.

@@ -1,0 +1,26 @@
+campaign: P081
+claim: C-REP-001
+base_release: v0.72.0
+accepted_interpretation_ceilings:
+  C-GAU-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/gauge_u1.py
+    use: unconstrained_abelian_coupling_and_kinetic_coefficient_ceiling_only
+  C-LIE-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/su3.py
+    use: representation_and_trace_normalization_convention_ceiling_only
+predecessor_evidence:
+  source_unit: WM1
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: 75dc34e168c39cd0af0a21cd4c7d039088ac74baefb6615ece98f5069f5b8953
+  authority: noncanonical_hash_pinned_attempt_evidence
+external_empirical_imports: []
+external_literature_audits:
+  - doi: 10.1103/PhysRevLett.33.451
+    role: premise_audit_not_approved_framework_import
+exact_oracle: SymPy finite sums, expansion, rescaling, rational identities, solve, and counterexamples
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 5
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 140
-  qualified: 69
+  pending_adjudication: 139
+  qualified: 70
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5037,8 +5037,34 @@ units:
   dynamic_check_calls: 2
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-REP-001
+  - C-GAU-001
+  - C-LIE-001
+  qualification: 'WM1''s separately supplied fifteen-state table has exact traces Tr(T3^2)=2, Tr(Y^2)=10/3,
+    Tr(T3*Y)=0, Tr(Q^2)=16/3 and bare quotient 3/8. The general finite trace decomposition, Abelian normalization
+    covariance, homogeneous-moment scaling, and conditional coupling-angle equality are accepted through
+    C-REP-001. However the source does not derive its physical representation, anomaly selection, gauge
+    action, kinetic coefficients, simple-group embedding, unification scale, or running. Equating its
+    quotient with a weak mixing angle requires the extra supplied ratio gY^2/g2^2=3/5, equivalently a
+    common inverse-trace coefficient. Equal couplings instead give 1/2. WM1.6 is false as stated: delta=-2
+    is a nonzero charged-singlet sign flip that preserves all squared traces and the 3/8 quotient while
+    breaking odd moments.'
+  evidence:
+  - campaigns/P081-wm1-charge-trace-audit/reviews/source_adjudication.md
+  - campaigns/P081-wm1-charge-trace-audit/evidence/source-reproduction.yaml
+  - campaigns/P081-wm1-charge-trace-audit/evidence/source-audit.yaml
+  - campaigns/P081-wm1-charge-trace-audit/evidence/literature-audit.yaml
+  - campaigns/P081-wm1-charge-trace-audit/evidence/candidate-comparison.yaml
+  - campaigns/P081-wm1-charge-trace-audit/evidence/primary-provenance.yaml
+  - campaigns/P081-wm1-charge-trace-audit/attempts/0001/result.yaml
+  - campaigns/P081-wm1-charge-trace-audit/attempts/0002/result.yaml
+  - campaigns/P081-wm1-charge-trace-audit/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-REP-001-review.md
+  note: P081 derives exact finite-table, generator-coordinate, coupling, and conditional common-coefficient
+    ledgers through canonical and independent symbolic routes. It uses no numerical integration or NumPy
+    alias.
 - source_unit: WM2
   phase: phase-23
   path: merged-framework/bridges/phase-23/bridge_WM2_common_induction_normalization.py

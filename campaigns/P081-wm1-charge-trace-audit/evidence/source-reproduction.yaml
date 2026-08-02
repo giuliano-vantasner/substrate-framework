@@ -1,0 +1,22 @@
+source_unit: WM1
+source_path: merged-framework/bridges/phase-23/bridge_WM1_sin2thetaw_trace_ratio.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 75dc34e168c39cd0af0a21cd4c7d039088ac74baefb6615ece98f5069f5b8953
+git_blob: 69ccceb7b7cfcd15e98e8baaa71d81b0c96f49bb
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-23/bridge_WM1_sin2thetaw_trace_ratio.py
+process_exit_status: 0
+terminal_tally: ALL 9 CHECKS PASS
+reported_exact_values:
+  weighted_state_count: 15
+  trace_t3_squared: 2
+  trace_hypercharge_squared: 10/3
+  trace_cross: 0
+  trace_electric_squared: 16/3
+  trace_quotient: 3/8
+  colour_removed_quotient: 9/28
+  charged_singlet_omitted_quotient: 6/13
+interpretation: supplied_table_arithmetic_reproduction_only
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

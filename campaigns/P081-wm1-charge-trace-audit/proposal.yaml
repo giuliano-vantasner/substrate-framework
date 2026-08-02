@@ -1,0 +1,57 @@
+id: P081
+base_release: v0.72.0
+base_commit: 2df90e9
+scientific_base_commit: 52e05eb
+prior_adjudication_commit: d5ab6eb
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM1]
+question: >-
+  Derive an exact multiplicity- and normalization-explicit charge-trace ledger
+  for a separately supplied finite chiral state table, and determine whether
+  WM1's ratio 3/8 is a physical weak mixing angle or only a convention-
+  dependent trace identity absent an accepted gauge-coupling normalization.
+invariants:
+  - No accepted claim supplies the Standard Model chiral representation table, hypercharge assignments, electroweak gauge action, Higgs sector, weak mixing angle, unification scale, or relation between SU(2) and U(1) kinetic coefficients.
+  - C-GAU-001 leaves every U(1) kinetic coefficient and physical charge map unconstrained; local covariance does not select a coupling normalization.
+  - C-LIE-001 makes trace normalization convention explicit and establishes no physical gauge-sector or matter-content identification.
+  - M1, W2, SM2, SM3, WM2, and WM3 remain pending and cannot provide physical representations, anomaly selection, common induction normalization, or coupling ratios.
+  - Rescaling an Abelian generator while inversely rescaling its coupling preserves the covariant product but changes a bare generator trace.
+  - A physical weak-angle relation requires separately declared positive couplings and a neutral-sector convention; a finite charge-table trace cannot supply that structure by itself.
+allowed_imports:
+  - exact rational arithmetic, finite weighted sums, matrix traces, and positive real rescaling algebra
+  - C-GAU-001 only for the unconstrained U(1) coupling and kinetic-normalization ceiling
+  - C-LIE-001 only for the principle that representation traces are normalization- and matter-content-specific
+  - a separately declared finite table of multiplicities, T3 eigenvalues, and Abelian charges with no physical identity inferred
+  - separately declared positive gauge couplings for a conditional weak-angle coordinate, without importing M1 or any physical electroweak action
+  - WM1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts validate
+candidates:
+  - id: A
+    description: Reproduce WM1 literally and test whether its state table, anomaly argument, common trace footing, coupling relation, scale, and weak-angle interpretation have accepted closure.
+  - id: B
+    description: Construct a pure finite weighted charge-trace ledger for declared multiplicities and exact T3 and Y eigenvalues, including Q=T3+Y and trace decomposition.
+  - id: C
+    description: Rescale Y by a positive factor rho, derive the full trace-ratio family, and conjugate the Abelian coupling inversely to expose normalization covariance.
+  - id: D
+    description: Separate the conditional coupling angle gY^2/(g2^2+gY^2) from the charge-trace ratio and derive the exact extra premise required to equate them.
+  - id: E
+    description: Audit homogeneous anomaly equations and show that zero anomaly polynomials cannot fix the overall Abelian normalization without an inhomogeneous input.
+  - id: F
+    description: Test a separately declared common inverse-kinetic-coefficient law as a conditional sufficient premise, while withholding it because WM2 and the physical gauge sectors are pending.
+  - id: G
+    description: Mutate multiplicities, chirality conventions, singlet charges, generator scale, and missing states to test representation completeness and source-oracle sensitivity.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for every state, representation, multiplicity, charge, coupling, kinetic coefficient, and scale
+  - exact finite trace decomposition, normalization covariance, anomaly homogeneity, and coupling-angle algebra
+  - distinction between a charge-table identity, generator convention, coupling convention, action normalization, boundary condition, and physical prediction
+  - parameter economy without silently selecting an Abelian scale, common loop coefficient, unification group, matter spectrum, or running scale
+  - mutation sensitivity to charge scale, coupling compensation, omitted states, multiplicities, cross trace, and kinetic-normalization assumptions
+  - reusable pure API only if the finite trace and covariance object is nonduplicate and interpretation-limited
+claims_proposed:
+  - provisional C-REP-001 finite weighted charge-trace, Abelian-normalization covariance, and conditional coupling-angle ledger if nonduplicate
+comparators_blinded_until: >-
+  Both contract representations, their hashes, and repository validation are
+  frozen. Until then the WM1 body, literal table implementation, output,
+  source verdict, later WM2/WM3 bodies, and empirical weak-angle values remain
+  closed; the generated queue synopsis is navigation metadata only.
+status: accepted

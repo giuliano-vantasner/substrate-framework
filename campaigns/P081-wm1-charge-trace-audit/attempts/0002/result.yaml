@@ -1,0 +1,20 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G]
+status: failed_verifier_representation_preserved
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P081-wm1-charge-trace-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P081-wm1-charge-trace-audit/reviews/independent_charge_trace_review.py
+failures:
+  - route: primary
+    symptom: source-structure predicate failed after all preceding scientific checks passed
+    cause: a raw count of the text fragment `import ` also counted prose, rather than only Python import nodes
+    repair: inspect the parsed AST and require exactly one SymPy import node
+  - route: independent
+    symptom: unequal kinetic-coefficient formula failed structural equality
+    cause: SymPy retained algebraically equal rational forms with denominators scaled by three
+    repair: compare the two formulas through an exact simplify-to-zero residual
+scientific_equations_changed: false
+contract_changed: false
+source_changed: false
+continuation: Rerun both exact routes as attempt 0003 after repairing only the verifier representations.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

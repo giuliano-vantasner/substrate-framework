@@ -1,0 +1,51 @@
+campaign: P081
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and explicit provenance for every state, charge, coupling, coefficient, and scale
+  - exact trace decomposition, normalization covariance, homogeneous-moment scaling, and coupling-angle algebra
+  - distinction between finite-table identity, generator convention, action normalization, boundary condition, and physical prediction
+  - parameter economy without importing an Abelian scale, unified group, matter spectrum, common loop coefficient, or running scale
+  - mutation sensitivity to rescaling, compensation, omitted states, multiplicities, singlet sign, and unequal kinetic coefficients
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All nine executable checks reproduce, but the physical headline lacks
+      accepted representation, anomaly, gauge-action, common-normalization,
+      embedding, and scale closure; its only-at-zero guard is also false.
+  B:
+    decision: selected
+    reason: >-
+      A pure finite weighted trace ledger preserves the complete cross-term
+      decomposition and makes the supplied-table boundary explicit.
+  C:
+    decision: selected
+    reason: >-
+      Generator, coupling, and electric-coordinate transformations expose the
+      exact Abelian normalization covariance and the fixed-coordinate family.
+  D:
+    decision: selected
+    reason: >-
+      Separating the supplied coupling angle from the trace angle derives the
+      exact necessary and sufficient three-fifths premise.
+  E:
+    decision: selected_as_normalization_ceiling
+    reason: >-
+      Homogeneous first- and third-moment zeros survive arbitrary positive
+      rescaling and therefore cannot select the generator scale.
+  F:
+    decision: selected_conditionally
+    reason: >-
+      A separately supplied common inverse-trace coefficient is sufficient,
+      while unequal coefficients expose the premise as load bearing.
+  G:
+    decision: selected_as_sensitivity_and_provenance_ceiling
+    reason: >-
+      Content, multiplicity, coefficient, and sign mutations distinguish
+      squared-trace sensitivity from representation and anomaly provenance.
+selected_claim: C-REP-001
+physical_ceiling:
+  - no physical representation, chirality basis, field content, or anomaly selection is derived
+  - no gauge action, kinetic coefficient, common induction constant, or coupling ratio is derived
+  - no simple unification group, boundary scale, renormalization running, or observed angle is established
+  - the exact 3/8 specialization remains a conditional property of a separately supplied table

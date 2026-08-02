@@ -588,6 +588,15 @@ Conditional on C-QBL-001 and the declared whole-line scalar energy E[f]=integral
 - Compatibility: `compatible_extension`
 - Dependencies: C-QBL-001
 
+## C-REP-001
+
+For a separately supplied nonempty finite table of positive integer multiplicities m_i and exact real generator eigenvalues t_i,y_i, and an exact real coefficient c, define Q_i=t_i+c*y_i and the weighted traces T_2=sum_i m_i*t_i^2, T_Y=sum_i m_i*y_i^2, T_X=sum_i m_i*t_i*y_i, and T_Q=sum_i m_i*Q_i^2. Then exactly T_Q=T_2+2*c*T_X+c^2*T_Y, and T_2/T_Q is a conditional table ratio when T_Q is provably nonzero. For every separately supplied positive rho and positive Abelian coupling g_Y, the coordinate change y_i'=rho*y_i, c'=c/rho, and g_Y'=g_Y/rho preserves every Q_i, every product g_Y*y_i, T_Q, T_2/T_Q, and g_Y^2*T_Y. Holding c fixed instead generally changes Q and the quotient. Every homogeneous Abelian moment H_p=sum_i m_i*y_i^p scales as rho^p, so H_p=0 cannot select the positive overall generator normalization. Separately, for positive supplied traces S_2,S_Y and couplings g_2,g_Y, the coupling coordinate A_g=g_Y^2/(g_2^2+g_Y^2) equals the trace coordinate A_T=S_2/(S_2+S_Y) if and only if g_Y^2/g_2^2=S_2/S_Y, equivalently the two inverse-trace coefficients 1/(g_i^2*S_i) are equal. Thus a common law 1/g_i^2=C*S_i is a sufficient separately supplied premise, not a consequence of the finite table. Applied only to WM1's declared fifteen-state table and Q=T3+Y, the exact table values are T_2=2, T_Y=10/3, T_X=0, T_Q=16/3, and T_2/T_Q=3/8; equality with a coupling angle additionally requires g_Y^2/g_2^2=3/5. These results establish no physical representation, anomaly derivation, gauge action, kinetic normalization, common induction mechanism, simple unification, boundary or running scale, weak mixing angle, observed value, Standard Model, or substrate realization.
+
+- Accepted in: `v0.73.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-RG-001
 
 For positive radius R and density lambda, the circumference line energy E_line = 2*pi*R*lambda is homogeneous of degree one, has constant positive derivative 2*pi*lambda, and has no stationary radius. For positive surface density sigma, E_shell = 4*pi*R^2*sigma is homogeneous of degree two and has radius-dependent derivative 8*pi*R*sigma. For positive line tension T and pressure P, E_cap = 2*pi*R*T - pi*R^2*P + C has the unique strict global maximum R = T/P. Conditional line constructions with coefficients T and the C-SG-002 breather energy share only the degree-one line form; their energies are equal for every positive R if and only if their coefficients are equal.

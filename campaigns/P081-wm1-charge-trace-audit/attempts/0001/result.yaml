@@ -1,0 +1,25 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: WM1
+source_path: merged-framework/bridges/phase-23/bridge_WM1_sin2thetaw_trace_ratio.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 75dc34e168c39cd0af0a21cd4c7d039088ac74baefb6615ece98f5069f5b8953
+git_blob: 69ccceb7b7cfcd15e98e8baaa71d81b0c96f49bb
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-23/bridge_WM1_sin2thetaw_trace_ratio.py
+process_exit_status: 0
+terminal_tally: ALL 9 CHECKS PASS
+surviving_exact_predicates:
+  - The separately supplied fifteen-state weighted table has Tr(T3^2)=2, Tr(Y^2)=10/3, Tr(T3*Y)=0, and Tr(Q^2)=16/3 for Q=T3+Y.
+  - Its bare finite-table quotient Tr(T3^2)/Tr(Q^2) is exactly 3/8.
+  - Removing colour multiplicities gives 9/28 and omitting the charged singlet gives 6/13.
+headline_failures:
+  - The source supplies rather than derives the chiral representation table, multiplicities, hypercharges, anomaly interpretation, and charge convention.
+  - The invoked Georgi-Quinn-Weinberg trace formula assumes a simple unified-group embedding and common normalized subgroup coupling that are absent from accepted framework claims.
+  - A physical coupling angle requires a separately supplied relation between gY and g2; the bare finite-table quotient supplies no gauge action or kinetic normalization.
+  - Abelian generator rescaling changes the bare trace quotient unless the electric coefficient is transformed covariantly, while inverse coupling rescaling preserves the covariant product.
+  - WM1.6 claims its perturbed quotient returns to 3/8 only at delta=0, but delta=-2 flips the charged-singlet sign and is an exact nonzero counterexample.
+  - WM2, WM3, M1, W2, SM2, and SM3 remain pending and cannot close the missing normalization, representation, or running premises.
+diagnosed_layer: source_claim_dependency_closure_normalization_and_verifier_semantics
+continuation: Candidates B-G proceed to an interpretation-limited finite trace, normalization-covariance, and conditional coupling-angle ledger.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias
