@@ -561,6 +561,15 @@ For integer winding under addition, p(w)=(-1)^w is a homomorphism from Z to the 
 - Compatibility: `native`
 - Dependencies: none
 
+## C-TOP-002
+
+In C-LIE-001's fundamental trace convention, let theta=U^dagger*dU for a smooth SU(3)-valued map. The exact invariant Chevalley-Eilenberg differentials have rank(d_2)=20 and rank(d_3)=35, so the degree-three cocycle kernel has dimension 21 and H^3 has dimension one. The real cochain Alt Tr(theta^3) has nine nonzero components, squared coefficient norm 9, is closed, and is not in image(d_2), since adjoining it raises the image rank from 20 to 21. On the unit quaternion sphere oriented as the boundary of (a0,a1,a2,a3), the upper-SU(2)-block map q(a)=a0*I+i*(a1*sigma1+a2*sigma2+a3*sigma3) embedded in SU(3) has a first-column real coordinate map of determinant and degree +1, hence is a pi_3(SU(3)) generator under the audited stable inclusion criterion. Its exact oriented tangent density is Alt Tr(theta^3)=12 and its raw period is 24*pi^2. Therefore omega_3=-Alt Tr(theta^3)/(24*pi^2) has period -1 on that positive generator. With epsilon^(0123)=+1, the corresponding coordinate current J^mu=-(1/(24*pi^2))*epsilon^(mu nu rho sigma)*Tr(L_nu L_rho L_sigma), L_mu=U^dagger*partial_mu U, is identically conserved for every smooth U: the full graded derivative reduces by Maurer-Cartan flatness to the alternating trace of four one-forms, which vanishes by graded cyclicity. For the static upper-block hedgehog U=cos(F(r))*I+i*sin(F(r))*rhat.sigma, its local density for r>0 is -sin(F)^2*F'/(2*pi^2*r^2), its angularly integrated radial density is -2*sin(F)^2*F'/pi, and its charge is [F-sin(F)*cos(F)]_(outer)^(inner)/pi. Smooth constant endpoint data F(0)=n*pi and F(infinity)=0 therefore give charge n, while reversing orientation reverses the charge. This is a mathematical winding-current theorem. It is not by itself a Noether current, gauged-WZW-response current, physical baryon current, anomaly, identification with N_c, representation selection, absolute-scale statement, or substrate realization.
+
+- Accepted in: `v0.52.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-LIE-001
+
 ## C-U1-001
 
 For an independently declared smooth complex scalar Psi on 1+1 Minkowski spacetime with signature (+,-), define the raised current j^mu=i*(Psi_conj*d^mu(Psi)-Psi*d^mu(Psi_conj)). Off shell it obeys the exact identity d_mu*j^mu=i*(Psi_conj*Box(Psi)-Psi*Box(Psi_conj)). If the conjugate equations of motion have Box(Psi)=F(|Psi|^2)*Psi with real F, the current is conserved on shell. A genuinely real field has zero current. For the separately declared stationary ansatz Psi=f(x)*exp(-i*omega*t) with real f and omega>0, the current is (j^0,j^1)=(2*omega*f^2,0); adding a real phase-breaking conjugate-field term lambda*Psi_conj to the equation gives divergence -2*lambda*f^2*sin(2*omega*t), which is generally nonzero.

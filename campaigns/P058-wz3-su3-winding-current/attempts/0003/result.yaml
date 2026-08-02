@@ -1,0 +1,45 @@
+attempt: 0003
+candidates: [B, C]
+status: independent_exact_and_regression_passed
+implementation: reviews/independent_winding_review.py
+canonical_wzw_helpers_imported: false
+initial_failed_runs:
+  - failure: complex_exponential_and_trigonometric_forms_not_reduced_to_common_exact_representation
+    diagnosis: oracle_representation
+    action: compare_the_exact_residual_after_expand_complex
+process_exit_code: 0
+terminal_tally: ALL 10 CHECKS PASS [P058-INDEPENDENT]
+exact_route:
+  quaternion_membership: passed
+  first_column_degree: 1
+  raw_density: 12
+  raw_period: 24*pi^2
+  graded_trace_three_closure: passed
+  pauli_hedgehog_radial_density: -2*sin(F)^2*Fprime/pi
+  boundary_charges: [1, 2, 0]
+numeric_regression:
+  api: numpy.trapezoid
+  profile: F(r)=2*atan((scale/r)^2)
+  domain: [0.0001, 100.0]
+  mesh: logarithmic
+  point_counts: [501, 1001, 2001, 4001, 8001]
+  absolute_errors:
+    - 0.00012725041216321564
+    - 0.00003181169225241476
+    - 0.000007952866139859793
+    - 0.0000019882129773662882
+    - 0.0000004970530220749225
+  deformation_scales: [0.7, 1.0, 1.4]
+  final_numerical_charges:
+    - 1.0000004970528222
+    - 1.0000004970513243
+    - 1.0000004970402392
+mutations:
+  orientation_reversal: charge_sign_flips
+  half_integer_endpoint: charge_one_half
+  trivial_endpoint: charge_zero
+  opposite_normalization_sign: generator_charge_plus_one
+anomaly_counterexample: >-
+  Anomaly-consistent general-N_c charges make
+  N_c*(Q_up^2-Q_down^2)=1, so the source's fixed-charge arithmetic is not an
+  independent color-count oracle.

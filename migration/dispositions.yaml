@@ -1042,3 +1042,41 @@ units:
       exact trace normalization, numerical cubature, and phase algebra. The
       factor two between the source's normalization and a primitive pi5 map is
       load-bearing, not a tolerance choice.
+  WZ3:
+    disposition: qualified
+    accepted_claims:
+      - C-TOP-002
+    qualification: >-
+      WZ3's explicit Pauli trace, hedgehog radial magnitude, boundary charge,
+      and off-shell trace-three closure survive after P058 fixes one
+      orientation convention and independently normalizes the current on a
+      degree-one SU2 quaternion generator. The native source aborts under
+      NumPy 2.5.1 because np.trapz is absent; an explicit np.trapezoid shim
+      reproduces its seven-check tally without modifying the immutable file.
+      That replay also exposes a load-bearing sign discontinuity: the source's
+      declared positive trace coefficient gives charge minus one for its
+      decreasing hedgehog, then NUMERIC_SIGN flips only the numerical
+      integrand to report plus one. Its conservation check omits the graded
+      derivative and mislabels loss of antisymmetry as an epsilon-sign guard;
+      reversing orientation preserves conservation. Its degree/baryon check is
+      round(B_unit) plus string and literal tuple labels, with no gauged WZW
+      action or U1 variation. Its anomaly check inserts fixed quark charges,
+      target amplitude one, and n=3; anomaly-consistent general-N_c charges
+      instead make N_c*(Q_up^2-Q_down^2)=1. P058 establishes a mathematical
+      winding current only. WZ3 establishes no S2 profile authority, S3 baryon
+      semantics, gauged-WZW response, local descent, electromagnetic anomaly,
+      n=N_c=3, color count, representation selection, physical baryon current,
+      absolute scale, or substrate realization.
+    evidence:
+      - campaigns/P058-wz3-su3-winding-current/reviews/source_adjudication.md
+      - campaigns/P058-wz3-su3-winding-current/evidence/source-reproduction.yaml
+      - campaigns/P058-wz3-su3-winding-current/evidence/source-audit.yaml
+      - campaigns/P058-wz3-su3-winding-current/evidence/topology-anomaly-provenance.yaml
+      - campaigns/P058-wz3-su3-winding-current/attempts/0001/result.yaml
+      - campaigns/P058-wz3-su3-winding-current/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-TOP-002-review.md
+    note: >-
+      P058 derives the SU3 trace-three cohomology, degree-one generator period,
+      fixed-sign current, hedgehog density, and boundary charge independently.
+      Canonical and review numerics use np.trapezoid; no legacy alias is added
+      to framework code.

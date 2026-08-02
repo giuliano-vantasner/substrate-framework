@@ -1,0 +1,19 @@
+attempt: 0001
+candidate: A
+status: rejected_as_positive_route
+source_native_exit_code: 1
+native_failure: numpy_2_5_1_has_no_np_trapz
+compatibility_replay_exit_code: 0
+terminal_tally: ALL 7 CHECKS PASS
+failure_class: implementation_compatibility_candidate_concept_and_oracle
+decisive_failures:
+  - the native source aborts at np.trapz before its terminal tally
+  - the exact trace sign is flipped only in the later numerical integrand to force charge plus one
+  - the conservation check omits the graded derivative and Maurer-Cartan substitution and mislabels loss of antisymmetry as a wrong orientation sign
+  - the degree and baryon linkage is round(B_unit) plus string and literal tuple labels
+  - no external U1 source, gauged WZW action, functional variation, or descent equation is constructed
+  - the anomaly check inserts fixed quark charges, target amplitude one, and selected n=3 without a measured-width oracle
+preserved_value: >-
+  The explicit Pauli trace establishes the hedgehog radial magnitude, and its
+  boundary antiderivative is reusable after one fixed orientation convention.
+continuation: candidates_B_and_C_exact_trace_three_generator_and_hedgehog

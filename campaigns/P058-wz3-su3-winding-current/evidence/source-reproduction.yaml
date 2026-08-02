@@ -1,0 +1,38 @@
+source_unit: WZ3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-17/bridge_WZ3_goldstone_wilczek_baryon_current.py
+sha256: 30da2ac41a0d46c48bd4e1b9733c3712d0b6c1c9b4838f1a1df3c4db22cc3569
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+native_run:
+  command: >-
+    /home/dan/substrate-framework/.venv/bin/python
+    /home/dan/substrate/merged-framework/bridges/phase-17/bridge_WZ3_goldstone_wilczek_baryon_current.py
+  exit_code: 1
+  checks_completed: 2
+  terminal_tally: null
+  failure: AttributeError module numpy has no attribute trapz
+compatibility_replay:
+  command: >-
+    /home/dan/substrate-framework/.venv/bin/python -c "import runpy, numpy as
+    np; np.trapz = np.trapezoid; runpy.run_path(SOURCE, run_name='__main__')"
+  shim: np.trapz=np.trapezoid
+  source_file_modified: false
+  exit_code: 0
+  terminal_tally: ALL 7 CHECKS PASS
+  reported_values:
+    shooting_parameter: 2.00843228
+    unit_charge: 0.999785
+    coarse_charge: 0.999738
+    fine_charge: 0.999785
+    doubled_closed_form: 2.0
+    trivial_charge: 0.0
+verdict: compatibility_reproduced_noncanonical_tally
+note: >-
+  The native failure confirms the version-specific API issue. The shimmed
+  replay preserves the immutable source and exposes its remaining assertions;
+  a clean replay does not repair the sign discontinuity, missing gauged-WZW
+  variation, rounded degree label, or circular anomaly inputs.

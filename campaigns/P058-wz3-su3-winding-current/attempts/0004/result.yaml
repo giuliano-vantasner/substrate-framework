@@ -1,0 +1,22 @@
+attempt: 0004
+candidate: D
+status: conditional_only_not_selected_as_WZW_derivation
+declared_construction: S_source=q*integral(A_mu*J^mu)
+exact_consequences:
+  functional_derivative_with_respect_to_A: q*J
+  gauge_shift_A_to_A_plus_d_chi: boundary_term_when_divergence_J_is_zero
+free_parameters: [q]
+missing_dependencies:
+  - external U1 transformation and charge normalization
+  - gauged WZW functional
+  - local descent equation
+  - representation charge matrix
+  - anomaly polynomial and microscopic matter content
+diagnosis: >-
+  A response current follows from this separately declared coupling by
+  construction, but C-WZW-001 and C-WZW-002 contain no premise selecting the
+  coupling or q. Renaming it a WZW variation would be circular.
+preserved_value: >-
+  The exact winding current can consistently be coupled to an external source
+  under an additional declared model, but that conditional composition is not
+  promoted as a new WZW or physical baryon claim.

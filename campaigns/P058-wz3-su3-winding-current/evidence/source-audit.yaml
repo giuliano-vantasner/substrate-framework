@@ -1,0 +1,66 @@
+source_unit: WZ3
+audited_against: substrate@6d1f4e0
+current_convention:
+  headline: +(1/(24*pi^2))*epsilon*Tr(L^3)
+  declared_epsilon_0123: 1
+  exact_trace_radial_integrand: +(2/pi)*sin(F)^2*Fprime
+  charge_for_F_pi_to_zero_under_headline_sign: -1
+  numerical_integrand_sign: minus_exact_trace_sign
+  numerical_charge_for_F_pi_to_zero: 1
+  verdict: sign_changed_after_derivation_to_force_positive_unit_charge
+conservation:
+  actual_checked_object: fully_alternating_trace_of_four_generic_2x2_matrices
+  checked_value: 0
+  full_graded_derivative_terms_constructed: false
+  maurer_cartan_substitution_constructed: false
+  claimed_wrong_sign_guard: symmetrized_non_antisymmetric_four_trace
+  epsilon_orientation_reversal_tested: false
+  orientation_reversal_preserves_conservation: true
+  verdict: correct_cyclic_kernel_but_incomplete_and_mislabeled_guard
+hedgehog:
+  explicit_pauli_trace: true
+  angular_reduction: true
+  source_profile_dependency: pending_S2
+  exact_boundary_formula_after_sign_choice: (F-sin(F)*cos(F))_outer_to_inner/pi
+  profile_ode_needed_for_charge_theorem: false
+  unit_and_double_endpoints_inserted: [pi, 2*pi]
+  verdict: radial_magnitude_and_boundary_formula_survive_with_repaired_fixed_sign
+numerics:
+  integration_api: np.trapz
+  available_in_numpy_2_5_1: false
+  replacement_api: np.trapezoid
+  solve_ivp_success_checked: false
+  root_solver_status_object_available: false
+  integration_domain: [0.05, 15.0]
+  ode_domain: [0.00001, 20.0]
+  grid_points: [3000, 8000, 12000]
+  timestep_or_max_step_refined: false
+  tolerance_refined: false
+  domain_refined: false
+  independent_profile_or_method: false
+  verdict: compatibility_regression_only_not_needed_for_exact_boundary_charge
+degree_and_baryon_link:
+  computed_degree_witness: round_of_numerical_charge
+  first_column_or_regular_value_degree: false
+  compactification_and_boundary_hypotheses_checked: false
+  S3_baryon_semantics_source: pending_S3
+  gauged_WZW_functional_constructed: false
+  local_U1_variation_computed: false
+  tuple_labels_and_literal_orders_used_as_check: true
+  verdict: mathematical_winding_survives_but_baryon_and_WZW_response_do_not
+anomaly_and_color:
+  fixed_inputs:
+    Q_up: 2/3
+    Q_down: -1/3
+    target_amplitude: 1
+    selected_n: 3
+  computed_expression: N_c*(Q_up^2-Q_down^2)=N_c/3
+  measured_width_loaded_or_compared: false
+  gauged_WZW_vertex_derived: false
+  equality_of_level_and_Nc_derived: false
+  anomaly_consistent_general_Nc_charges_considered: false
+  general_Nc_counterexample: >-
+    Q_up=(1+1/N_c)/2 and Q_down=(1/N_c-1)/2 give
+    N_c*(Q_up^2-Q_down^2)=1 identically.
+  verdict: circular_fixed_charge_arithmetic_does_not_force_Nc
+overall_disposition: qualified

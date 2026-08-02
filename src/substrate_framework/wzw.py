@@ -1,9 +1,10 @@
-"""Exact SU(3) trace-five form, generator period, and filling algebra.
+"""Exact SU(3) trace forms, generator periods, and filling algebra.
 
 This module contains mathematical differential-form statements only.  Its
-``S^5`` period and coefficient lattice use an explicit oriented generator and
-do not identify the integer coefficient with a color number, anomaly
-coefficient, baryon charge, or physical substrate quantity.
+normalized winding current and ``S^5`` coefficient lattice use explicit
+oriented generators.  Calling a winding a baryon number, coupling the current
+to an external source, or identifying a WZW coefficient with a color or
+anomaly coefficient requires separate governed physics.
 """
 
 from __future__ import annotations
@@ -68,6 +69,37 @@ class SU3Pi5PeriodEvidence:
     coefficient_lattice_step: sp.Expr
 
 
+@dataclass(frozen=True)
+class SU3WindingThreeEvidence:
+    """Exact cohomology and generator evidence for the trace three-form.
+
+    The quaternion sphere has the boundary orientation inherited from
+    ``(a0,a1,a2,a3)``.  Its explicit SU(2) block embedding has first-column
+    degree ``+1`` and raw trace-three period ``+24*pi**2``.  The normalized
+    form used by :func:`su3_winding_current` includes a minus sign, so that
+    this positive generator has period ``-1`` and the decreasing hedgehog
+    convention has charge ``+1``.
+    """
+
+    d2_rank: int
+    d3_rank: int
+    three_cocycle_dimension: int
+    third_cohomology_dimension: int
+    trace_nonzero_components: int
+    trace_norm_squared: sp.Expr
+    augmented_d2_trace_rank: int
+    differential_squares_to_zero: bool
+    trace_is_closed: bool
+    trace_is_exact: bool
+    column_projection_jacobian: sp.Expr
+    column_projection_degree: int
+    raw_generator_density: sp.Expr
+    sphere_volume: sp.Expr
+    raw_generator_period: sp.Expr
+    normalized_generator_period: sp.Expr
+    current_coefficient: sp.Expr
+
+
 def cochain_basis(degree: int, dimension: int = 8) -> tuple[CochainIndex, ...]:
     """Return the ordered exterior-cochain basis of a declared dimension."""
 
@@ -109,6 +141,175 @@ def alternating_trace(matrices: Sequence[Any]) -> sp.Expr:
             product *= values[index]
         total += _alternating_sign(order) * sp.trace(product)
     return sp.simplify(total)
+
+
+def su2_quaternion_embedding(point: Sequence[Any]) -> sp.ImmutableMatrix:
+    r"""Embed a unit quaternion in the upper ``SU(2)`` block of ``SU(3)``.
+
+    For ``a=(a0,a1,a2,a3)``, the upper block is
+    ``a0*I + i*(a1*sigma1+a2*sigma2+a3*sigma3)`` and the last diagonal entry
+    is one.  Exact algebra gives determinant ``sum(a_j**2)`` and unitarity on
+    the real unit three-sphere.
+    """
+
+    values = tuple(sp.sympify(value) for value in point)
+    if len(values) != 4:
+        raise ValueError("a quaternion point must have four real coordinates")
+    a0, a1, a2, a3 = values
+    return sp.ImmutableMatrix(
+        [
+            [a0 + sp.I * a3, a2 + sp.I * a1, 0],
+            [-a2 + sp.I * a1, a0 - sp.I * a3, 0],
+            [0, 0, 1],
+        ]
+    )
+
+
+def su2_quaternion_embedding_differential(
+    tangent: Sequence[Any],
+) -> sp.ImmutableMatrix:
+    """Return the differential of :func:`su2_quaternion_embedding`."""
+
+    values = tuple(sp.sympify(value) for value in tangent)
+    if len(values) != 4:
+        raise ValueError("a quaternion tangent must have four real coordinates")
+    v0, v1, v2, v3 = values
+    return sp.ImmutableMatrix(
+        [
+            [v0 + sp.I * v3, v2 + sp.I * v1, 0],
+            [-v2 + sp.I * v1, v0 - sp.I * v3, 0],
+            [0, 0, 0],
+        ]
+    )
+
+
+@cache
+def su2_quaternion_column_projection_jacobian() -> sp.Expr:
+    """Derive the oriented Jacobian of the quaternion first-column map.
+
+    Real coordinates on the first complex column are ordered as
+    ``(Re z0, Im z0, Re z1, Im z1)``.  The exact determinant fixes the
+    degree sign independently of the trace-three period.
+    """
+
+    a0, a1, a2, a3 = sp.symbols("a0 a1 a2 a3", real=True)
+    first_column = su2_quaternion_embedding((a0, a1, a2, a3))[:, 0]
+    target_coordinates = sp.ImmutableMatrix(
+        [
+            sp.re(first_column[0]),
+            sp.im(first_column[0]),
+            sp.re(first_column[1]),
+            sp.im(first_column[1]),
+        ]
+    )
+    return sp.simplify(
+        target_coordinates.jacobian((a0, a1, a2, a3)).det()
+    )
+
+
+@cache
+def su2_quaternion_trace_three_period() -> sp.Expr:
+    """Derive the raw trace-three period on the oriented quaternion sphere."""
+
+    north = (1, 0, 0, 0)
+    positive_frame = (
+        (0, 1, 0, 0),
+        (0, 0, 1, 0),
+        (0, 0, 0, 1),
+    )
+    group_value = su2_quaternion_embedding(north)
+    maurer_cartan_values = tuple(
+        sp.ImmutableMatrix(
+            group_value.H * su2_quaternion_embedding_differential(tangent)
+        )
+        for tangent in positive_frame
+    )
+    density = alternating_trace(maurer_cartan_values)
+    sphere_volume = 2 * sp.pi**2 / sp.gamma(2)
+    return sp.simplify(density * sphere_volume)
+
+
+@cache
+def su3_winding_current_coefficient() -> sp.Expr:
+    """Return the coefficient selecting charge ``+1`` for a decreasing hedgehog.
+
+    The coefficient is derived as minus the reciprocal of the explicit
+    positive-generator raw period rather than inserted as an expected answer.
+    """
+
+    return sp.simplify(-1 / su2_quaternion_trace_three_period())
+
+
+def su3_winding_current(
+    left_currents: Sequence[Any], orientation: int = 1
+) -> tuple[sp.Expr, sp.Expr, sp.Expr, sp.Expr]:
+    r"""Return the normalized topological current from four left currents.
+
+    With ``epsilon**0123=orientation`` and ``L_mu=U^dagger*d_mu U``, this is
+
+    ``J^mu=c*epsilon^(mu nu rho sigma)*Tr(L_nu L_rho L_sigma)``,
+
+    where ``c`` is derived by :func:`su3_winding_current_coefficient`.
+    The default sign makes a hedgehog with ``F(0)=pi`` and ``F(infinity)=0``
+    carry charge ``+1``.  This is a mathematical winding current, not by
+    itself a Noether, gauged-WZW-response, or physical baryon current.
+    """
+
+    if orientation not in (-1, 1):
+        raise ValueError("orientation must be +1 or -1")
+    values = tuple(sp.Matrix(value) for value in left_currents)
+    if len(values) != 4:
+        raise ValueError("exactly four spacetime left currents are required")
+    shape = values[0].shape
+    if shape[0] != shape[1] or any(value.shape != shape for value in values):
+        raise ValueError("left currents must be square matrices of one shape")
+    coefficient = su3_winding_current_coefficient()
+    components: list[sp.Expr] = []
+    for mu in range(4):
+        complement = tuple(index for index in range(4) if index != mu)
+        contraction = sp.Integer(0)
+        for order in permutations(complement):
+            sign = orientation * sp.LeviCivita(mu, *order)
+            contraction += sign * sp.trace(
+                values[order[0]] * values[order[1]] * values[order[2]]
+            )
+        components.append(sp.simplify(coefficient * contraction))
+    return tuple(components)  # type: ignore[return-value]
+
+
+def hedgehog_winding_density(profile: Any, radius: sp.Symbol) -> sp.Expr:
+    """Return the local static hedgehog density for positive ``radius``.
+
+    The convention is the default one in :func:`su3_winding_current`.  The
+    apparent ``radius**-2`` is a spherical-coordinate density; smooth
+    hedgehog regularity makes its volume-weighted radial form finite.
+    """
+
+    if not isinstance(radius, sp.Symbol):
+        raise TypeError("radius must be a SymPy symbol")
+    field = sp.sympify(profile)
+    return sp.simplify(
+        -sp.sin(field) ** 2 * sp.diff(field, radius)
+        / (2 * sp.pi**2 * radius**2)
+    )
+
+
+def hedgehog_winding_radial_density(profile: Any, radius: sp.Symbol) -> sp.Expr:
+    """Return ``4*pi*r**2`` times :func:`hedgehog_winding_density`."""
+
+    return sp.simplify(4 * sp.pi * radius**2 * hedgehog_winding_density(profile, radius))
+
+
+def hedgehog_winding_charge(inner_value: Any, outer_value: Any) -> sp.Expr:
+    """Return the exact hedgehog charge determined by its endpoint values."""
+
+    inner = sp.sympify(inner_value)
+    outer = sp.sympify(outer_value)
+
+    def primitive(value: sp.Expr) -> sp.Expr:
+        return value - sp.sin(value) * sp.cos(value)
+
+    return sp.simplify((primitive(inner) - primitive(outer)) / sp.pi)
 
 
 def _complex_cross_matrix(vector: Sequence[Any]) -> sp.ImmutableMatrix:
@@ -410,6 +611,57 @@ def su3_real_trace_five_cochain() -> sp.ImmutableDenseMatrix:
 
     return sp.ImmutableDenseMatrix(
         [sp.simplify(-sp.I * value) for value in su3_trace_power_cochain(5)]
+    )
+
+
+@cache
+def su3_winding_three_evidence() -> SU3WindingThreeEvidence:
+    """Derive exact cohomology and generator normalization for the winding form."""
+
+    d2 = chevalley_eilenberg_differential(2)
+    d3 = chevalley_eilenberg_differential(3)
+    trace_three = su3_trace_power_cochain(3)
+    d2_rank = int(d2.rank())
+    d3_rank = int(d3.rank())
+    augmented_rank = int(d2.row_join(trace_three).rank())
+    cocycle_dimension = len(cochain_basis(3, 8)) - d3_rank
+
+    north = (1, 0, 0, 0)
+    positive_frame = (
+        (0, 1, 0, 0),
+        (0, 0, 1, 0),
+        (0, 0, 0, 1),
+    )
+    group_value = su2_quaternion_embedding(north)
+    maurer_cartan_values = tuple(
+        sp.ImmutableMatrix(
+            group_value.H * su2_quaternion_embedding_differential(tangent)
+        )
+        for tangent in positive_frame
+    )
+    raw_density = alternating_trace(maurer_cartan_values)
+    sphere_volume = sp.simplify(2 * sp.pi**2 / sp.gamma(2))
+    raw_period = sp.simplify(raw_density * sphere_volume)
+    coefficient = su3_winding_current_coefficient()
+    column_jacobian = su2_quaternion_column_projection_jacobian()
+    return SU3WindingThreeEvidence(
+        d2_rank=d2_rank,
+        d3_rank=d3_rank,
+        three_cocycle_dimension=cocycle_dimension,
+        third_cohomology_dimension=cocycle_dimension - d2_rank,
+        trace_nonzero_components=sum(value != 0 for value in trace_three),
+        trace_norm_squared=sp.simplify((trace_three.T * trace_three)[0]),
+        augmented_d2_trace_rank=augmented_rank,
+        differential_squares_to_zero=(d3 * d2 == sp.zeros(d3.rows, d2.cols)),
+        trace_is_closed=(d3 * trace_three == sp.zeros(d3.rows, 1)),
+        trace_is_exact=(augmented_rank == d2_rank),
+        column_projection_jacobian=column_jacobian,
+        column_projection_degree=int(sp.sign(column_jacobian)),
+        raw_generator_density=raw_density,
+        sphere_volume=sphere_volume,
+        raw_generator_period=raw_period,
+        normalized_generator_period=sp.simplify(coefficient * raw_period),
+        current_coefficient=coefficient,
     )
 
 

@@ -1,0 +1,69 @@
+id: P058
+base_release: v0.51.0
+base_commit: 8f5850d
+source_baseline: substrate@6d1f4e0
+source_units: [WZ3]
+question: >-
+  Construct and normalize the strongest exact SU(3) winding-three-form and
+  identically conserved four-dimensional topological current supported by
+  accepted authority, prove its embedded hedgehog charge, and audit WZ3's
+  stronger WZW-response, baryon, and n=N_c claims without importing pending
+  S2, S3, or NC1.
+invariants:
+  - C-LIE-001 fixes the fundamental trace convention T_a=lambda_a/2 and therefore every trace-three normalization.
+  - C-WZW-001 and C-WZW-002 fix an ungauged trace-five form and a sphere-filling coefficient lattice but no gauge connection, local descent, response current, baryon map, anomaly coefficient, or N_c identification.
+  - A closed winding three-form, its Hodge-dual coordinate current, a Noether current, a response current, a physical baryon current, and a gauged-WZW descent current are distinct objects.
+  - Current conservation, integer charge, hedgehog boundary conditions, source-coupling response, and anomaly matching are separate obligations.
+  - Orientation, epsilon placement, Hermitian versus anti-Hermitian currents, normalized versus unnormalized alternating traces, and differential-form component conventions must be explicit.
+allowed_imports:
+  - C-LIE-001
+  - C-TOP-001 only as an abstract integer parity character, not as a baryon or degree theorem
+  - C-WZW-001
+  - C-WZW-002
+  - standard smooth pullback, Maurer-Cartan, Stokes, compactification, Brouwer degree, and oriented sphere-volume theorems with audited statements
+  - the explicit Pauli-matrix SU(2) embedding in SU(3), with all trace and orientation factors rederived in the campaign
+  - SymPy exact matrix and exterior-algebra calculations and deterministic quadrature only as a separately refined regression
+  - WZ3 at substrate@6d1f4e0 as noncanonical evidence after the contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce WZ3 literally and retain only those current, density, charge,
+      conservation, WZW-response, and anomaly subclaims whose actual data flow
+      and dependency closure survive audit.
+  - id: B
+    description: >-
+      Build the normalized closed trace-three form directly from the accepted
+      SU(3) convention, certify its SU(2) generator period independently, and
+      define its four-dimensional Hodge-dual coordinate current.
+  - id: C
+    description: >-
+      Derive the embedded SU(2) hedgehog density and charge from explicit
+      matrices and boundary data, then independently integrate the radial
+      density and compare it with the degree-normalized three-form.
+  - id: D
+    description: >-
+      Introduce a separately declared external one-form coupling A wedge
+      omega_3 and derive its response current and gauge-boundary variation,
+      while testing whether accepted ungauged WZW authority fixes that
+      coupling or identifies it with baryon number or N_c.
+uniqueness_evidence: null
+selection_criteria:
+  - exact compatibility with the accepted fundamental SU(3) trace convention
+  - off-shell closure and conservation derived from the actual Maurer-Cartan object
+  - independent generator-period and hedgehog integrations with explicit orientation
+  - no imported S2 or S3 baryon label, NC1 color count, copied unit charge, fitted coefficient, or anomaly comparator
+  - clear separation of topology, source response, WZW descent, physical baryon semantics, and anomaly matching
+  - sensitive sign, orientation, trace-normalization, boundary, trivial-map, and noninteger endpoint mutations
+  - minimal new assumptions and reusable pure APIs with explicit domains
+claims_proposed:
+  - provisional C-TOP-002 exact SU(3) winding-current and embedded-hedgehog charge theorem
+selected_candidate: [B, C]
+comparators_blinded_until: >-
+  The migration inventory necessarily exposes WZ3's synopsis, displayed
+  current coefficient, and claimed n=N_c=3 conclusion. Those values are barred
+  from candidate selection. The exact current convention, SU(2) embedding,
+  domain and orientation, generator-period oracle, hedgehog boundary formula,
+  conservation proof, mutation set, and interpretation ceiling are frozen in
+  this manifest and matching memory contract before the source executable or
+  its internal derivation and profile values are inspected.
+status: accepted

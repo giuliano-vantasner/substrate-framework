@@ -1,0 +1,31 @@
+attempt: 0002
+candidates: [B, C]
+status: exact_route_passed
+canonical_module: src/substrate_framework/wzw.py
+cohomology:
+  d2_rank: 20
+  d3_rank: 35
+  three_cocycle_dimension: 21
+  third_cohomology_dimension: 1
+  trace_nonzero_components: 9
+  trace_norm_squared: 9
+  augmented_d2_trace_rank: 21
+  trace_is_closed: true
+  trace_is_exact: false
+generator:
+  map: upper_SU2_quaternion_block_in_SU3
+  first_column_jacobian: 1
+  first_column_degree: 1
+  raw_oriented_density: 12
+  sphere_volume: 2*pi^2
+  raw_period: 24*pi^2
+normalization:
+  current_coefficient: -1/(24*pi^2)
+  positive_quaternion_generator_charge: -1
+  decreasing_pi_to_zero_hedgehog_charge: 1
+hedgehog:
+  local_density: -sin(F)^2*Fprime/(2*pi^2*r^2)
+  radial_density: -2*sin(F)^2*Fprime/pi
+  boundary_charge: (F_inner-sin(F_inner)*cos(F_inner)-F_outer+sin(F_outer)*cos(F_outer))/pi
+  integer_endpoints: F_inner=n*pi_and_F_outer=0_give_charge_n
+physical_identifications: []

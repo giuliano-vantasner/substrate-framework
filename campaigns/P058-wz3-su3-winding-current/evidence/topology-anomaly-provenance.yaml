@@ -1,0 +1,51 @@
+sources:
+  - authors: Thomas Puttmann and A. Rigas
+    title: Presentations of the first homotopy groups of the unitary groups
+    journal: Commentarii Mathematici Helvetici 78 (2003) 648-662
+    doi: 10.1007/s00014-003-0770-0
+    url: https://ems.press/content/serial-article-files/42980
+    audited_pages: [648, 652]
+    imported_statement: >-
+      Lemma 1.1 specializes at n=2 to: a map S3->U2 is a generator exactly
+      when a column projection has degree plus or minus one.
+    independently_reproduced_here:
+      - exact SU3 membership of the upper SU2 quaternion block
+      - positive determinant one of its first-column real coordinate map
+      - exact raw trace-three density 12 and period 24*pi^2
+  - author: Raoul Bott
+    title: The stable homotopy of the classical groups
+    journal: Annals of Mathematics 70 (1959) 313-337
+    doi: 10.2307/1970106
+    url: https://www.maths.ed.ac.uk/~v1ranick/papers/bott4.pdf
+    audited_pages: [313, 315]
+    imported_statement: >-
+      Stable odd unitary homotopy groups are Z; together with the standard
+      SU2->SU3->S5 fibration exact sequence, the upper SU2 block represents a
+      generator of pi3(SU3).
+  - author: Edward Witten
+    title: Current algebra, baryons, and quark confinement
+    journal: Nuclear Physics B 223 (1983) 433-444
+    doi: 10.1016/0550-3213(83)90064-0
+    url: https://doi.org/10.1016/0550-3213(83)90064-0
+    role: physical_context_only
+    statement_not_imported_as_framework_truth: >-
+      Baryons may be interpreted as current-algebra solitons under the paper's
+      QCD effective-theory premises. P058 does not possess those premises.
+  - authors: O. Baer and U.-J. Wiese
+    title: Can One See the Number of Colors?
+    journal: Nuclear Physics B 609 (2001) 225-246
+    doi: 10.1016/S0550-3213(01)00288-7
+    arxiv: hep-ph/0105258
+    url: https://arxiv.org/abs/hep-ph/0105258
+    audited_statement: >-
+      With anomaly-consistent N_c-dependent quark charges, neutral-pion decay
+      to two photons does not reveal N_c; for more than two flavors the
+      N_c-dependent WZW photon-pion contribution is canceled by the
+      N_c-dependent Goldstone-Wilczek term.
+    independently_reproduced_here: >-
+      Q_up=(1+1/N_c)/2 and Q_down=(1/N_c-1)/2 give
+      N_c*(Q_up^2-Q_down^2)=1 exactly.
+note: >-
+  The topology theorem selects the generator before its trace integral. The
+  Witten and Baer-Wiese sources constrain interpretation only; neither is used
+  to insert a desired winding charge or color count.

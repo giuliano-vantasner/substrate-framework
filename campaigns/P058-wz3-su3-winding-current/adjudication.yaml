@@ -1,0 +1,69 @@
+campaign: P058
+title: Exact SU(3) winding current, hedgehog charge, and WZ3 audit
+source_baseline: substrate@6d1f4e0
+source_units: [WZ3]
+base_release: v0.51.0
+release_after_adjudication: v0.52.0
+adjudicated_at: '2026-08-02T17:00:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B independently certifies the trace-three cohomology,
+      degree-one quaternion generator, raw period, and normalized off-shell
+      conserved current without using WZ3's reported charge.
+  - id: C
+    reason: >-
+      Candidate C derives the hedgehog density and boundary charge from
+      explicit Pauli matrices and agrees with a separately implemented exact
+      and refined current-API regression.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_positive_route_because_the_native_source_fails_on_np_trapz,
+      changes_its_sign_after_derivation_and_uses_rounding_strings_and_inserted
+      anomaly_targets_for_the_headline_links
+  - id: D
+    decision: >-
+      retained_only_as_conditional_external_source_coupling_algebra_with_free_q;
+      not_selected_as_a_derivation_from_the_accepted_ungauged_WZW_claims
+claims:
+  - id: C-TOP-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  exact_primary: attempts/0002/result.yaml
+  independent_review: reviews/independent_winding_review.py
+  independent_result: attempts/0003/result.yaml
+  preserved_failed_source: attempts/0001/result.yaml
+  conditional_source_coupling: attempts/0004/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  topology_anomaly_provenance: evidence/topology-anomaly-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-TOP-002-review.md
+source_disposition:
+  WZ3: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P058-wz3-su3-winding-current/verify.py --source-file
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-17/bridge_WZ3_goldstone_wilczek_baryon_current.py
+    --source-reproduction campaigns/P058-wz3-su3-winding-current/evidence/source-reproduction.yaml
+    --source-audit campaigns/P058-wz3-su3-winding-current/evidence/source-audit.yaml
+    --topology-provenance campaigns/P058-wz3-su3-winding-current/evidence/topology-anomaly-provenance.yaml
+    --independent-result campaigns/P058-wz3-su3-winding-current/attempts/0003/result.yaml
+    --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+    --release governance/releases/v0.52.0.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P058-wz3-su3-winding-current/reviews/independent_winding_review.py
+  - .venv/bin/python -m pytest -q tests/test_wzw.py tests/test_su3.py tests/test_governance.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted
