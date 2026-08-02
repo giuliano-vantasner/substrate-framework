@@ -1,0 +1,20 @@
+attempt: 0007
+campaign: P055
+candidate: repaired_repository_gate
+verdict: passed
+process_exit_code: 0
+workflow:
+  registry: 69 claims and 69 accepted
+  migration_queue: 218 units and 165 pending
+  memory: 248 files valid
+  skill: valid
+  pytest_in_workflow: 407 passed in 36.44s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+explicit_required_replay:
+  pytest: 407 passed in 36.04s
+  git_diff_check: passed
+scientific_boundary_change_from_attempt_0006: none
+release: v0.49.0
+source_disposition:
+  QB4: qualified
+debt: []

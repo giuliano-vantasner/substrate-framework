@@ -1,0 +1,30 @@
+attempt: 0001
+campaign: P055
+candidate: A_literal_QB4
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+source_resolution:
+  initial_command: >-
+    .venv/bin/python
+    merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+  initial_exit_code: 2
+  failure: >-
+    The migration queue stores a source-root-relative path, while the pinned
+    corpus is a sibling checkout at /home/dan/substrate rather than a child of
+    the framework repository.
+  repair: >-
+    Locate the unique QB4 path, verify that /home/dan/substrate is at source
+    commit 6d1f4e0, and require the file SHA-256 to equal the migration
+    inventory before execution. No source content was changed.
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+started_at: '2026-08-02T08:40:00Z'
+expected: >-
+  Hash-check and reproduce QB4, then audit its inherited source, quadrupole
+  convention, power coefficient, derivative estimator, TT frame, waveform
+  time series, temporal rank, ellipticity inference, guards, refinements, and
+  physical interpretation against the frozen P055 contract.

@@ -1,0 +1,89 @@
+attempt: 0001
+campaign: P055
+candidate: A_literal_QB4
+verdict: passed_source_tally_pending_adjudication
+process_exit_code: 0
+elapsed_seconds: 10.5
+terminal_tally: ALL 5 CHECKS PASS
+source:
+  baseline: substrate@6d1f4e0
+  path: merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+  sha256: 4523ad68636413bf628cd353e496c61b25af3c7f30bdf3e1e061930054fb9291
+  checkout_note: >-
+    The sibling source checkout contains unrelated uncommitted work, but the
+    audited QB4 file exactly matches the inventory hash and the checkout HEAD
+    is the pinned baseline commit.
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+reported:
+  core_frequency: 0.965311
+  averaged_mode_frequency: 1.0877
+  moment_radial_nodes: 500
+  dominant_Q_frequency: 1.9306
+  reported_average_power_G_equals_one: 1.3703e4
+  derivative_route_relative_difference: 0.039
+  generic_instantaneous_readout: [0.3124, 2.8702]
+  natural_z_instantaneous_readout: [-4.9714, -6.22e-12]
+static_audit:
+  numpy_quadrature: >-
+    The source already selects current np.trapezoid and uses np.trapz only as
+    a legacy fallback. This is compatible with NumPy 2.5.1 and matches the
+    repository's intentional version-dispatch policy.
+  inherited_source: >-
+    QB4 recomputes the same QB1/QB3 averaged finite-wall mode and finite-b
+    energy moment qualified by P054. It does not inherit an accepted localized
+    Floquet mode or self-consistent finite deformation.
+  energy_density: >-
+    The moment again omits the angular-gradient contribution and evaluates a
+    finite b=0.8 field assembled from a first-order perturbation without the
+    required second-order field corrections. Its nonlinear time series is not
+    accepted source dynamics.
+  quadrupole_scale: >-
+    Q_tensor returns the triple STF moment 3*I-delta*Tr(I), but the power line
+    applies G/5, which C-GW-001 derives for the normalized I_STF convention.
+    The conditional coefficient for this Q is G/45, so every reported power is
+    high by exactly a factor of nine even if the source time series is granted.
+  derivative_oracle: >-
+    The spectral derivative is exact only for the truncated periodic sampled
+    series it defines. The central difference is applied to that same
+    band-limited series and checked once at Nt=120 with a 5 percent threshold;
+    there is no timestep, cutoff, temporal-domain, radial, angular, wall, or
+    source-solver refinement. Positive squared derivative is structurally
+    valid but does not validate the inherited dynamics or normalization.
+  polarization_oracle: >-
+    QB4 evaluates h_plus and h_cross at one representative time and infers
+    elliptical two-mode radiation from both numbers being nonzero. Ellipticity
+    and temporal rank are properties of the full coefficient trajectory, so
+    this predicate cannot support the headline even for its own time series.
+  frame_choice: >-
+    Nonzero plus/cross coordinates depend on the arbitrary transverse basis.
+    A spin-two frame rotation can mix them, and a fixed-orientation rank-one
+    waveform can have both coordinates nonzero in one basis and one zero in
+    another. The two-dimensional TT image is not a temporal-mode or graviton
+    count.
+  axisymmetric_guard: >-
+    The source's polarization basis is deliberately aligned with the projected
+    z axis for most sightlines, so an axisymmetric tensor gives h_cross=0 in
+    that adapted basis. This is a valid linear-polarization limit, but it does
+    not make generic h_cross nonzero an invariant two-mode test.
+  frozen_guard: >-
+    A constant tensor has zero third derivative, so the frozen-field guard is
+    a valid limiting case. It is insensitive to the factor-nine convention
+    error, inherited source defects, missing derivative refinements, and the
+    false polarization classifier.
+  physical_ceiling: >-
+    No accepted claim derives physical gravity, a far-zone waveform from this
+    nonconserved finite-box source, or a graviton count. C-GW-001 makes the
+    radiation equations conditional on explicit additional premises.
+surviving_subclaims:
+  - exact TT projection of a nonaxisymmetric STF tensor can be nonzero along the z direction where the axisymmetric tensor is null
+  - two conventional TT coordinate readouts can both be nonzero for a generic sightline and chosen transverse frame
+  - a time-constant quadrupole has zero derivative-based conditional power
+  - the source uses the current NumPy trapezoid API with a legacy compatibility fallback
+next_attempt: >-
+  Quantify temporal rank and polarization trajectory on the literal source,
+  then derive the exact scale-safe conditional theorem and its independent
+  Cartesian review without importing QB3 numerical data.

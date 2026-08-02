@@ -1,0 +1,35 @@
+campaign: P055
+source_unit: QB4
+source_attempt: attempts/0002/result.yaml
+periodic_fft:
+  omega_2_over_omega: 1.1267678548900995
+  nearest_integer_defect: 0.12676785489009945
+  endpoint_tensor_relative_defect: 0.0960903602059915
+  frequency_closure_pass: false
+  endpoint_pass: false
+two_omega_power:
+  full_window_derivative_norm_fraction: 0.013344618074610676
+  source_interior_derivative_norm_fraction: 0.04168926326814613
+  preregistered_minimum_fraction: 0.5
+  dominance_pass: false
+literal_finite_b_rank:
+  diagonal_stf_rank: 2
+  diagonal_second_to_first_singular_ratio: 0.007355264915451972
+  generic_readout_rank: 2
+  generic_second_to_first_singular_ratio: 0.005276246032302193
+  ceiling: >-
+    The measured second direction belongs to the already-qualified finite-b
+    source with omitted angular-gradient energy and missing nonlinear field
+    corrections. QB4's own one-time predicate never measures this rank.
+same_fft_bin_identity:
+  relative_difference: 4.69592447489277e-15
+  independent_oracle: false
+power_convention:
+  reported_G_over_5_average: 13702.515280470343
+  triple_G_over_45_average_if_literal_series_granted: 1522.5016978300382
+  overstatement_factor: 9.0
+time_reversal_structure: >-
+  The literal field inputs are cos(omega*t) and cos(omega_2*t), making the
+  moment even in time. Each exact combination-frequency tensor amplitude is
+  real and linearly polarized; a multi-frequency superposition need not be a
+  single ellipse.

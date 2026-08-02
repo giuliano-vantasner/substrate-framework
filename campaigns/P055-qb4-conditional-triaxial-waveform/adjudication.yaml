@@ -1,0 +1,67 @@
+campaign: P055
+title: Convention-safe conditional real-m2 waveform, power, and QB4 audit
+source_baseline: substrate@6d1f4e0
+source_units: [QB4]
+base_release: v0.48.0
+release_after_adjudication: v0.49.0
+adjudicated_at: '2026-08-02T13:00:00Z'
+selected_candidate:
+  id: B
+  reason: >-
+    Candidate B supplies the reusable scale-safe conditional waveform and
+    power map with no QB3 numerical input. Candidates C and D are accepted as
+    its decisive fixed-rank counterexample and genuine two-trace comparison,
+    separating frame coordinates from temporal modes and circularity.
+competing_candidates:
+  - id: A
+    decision: >-
+      retained_as_clean_source_reproduction_but_qualified_for_inherited_source
+      periodicity_two_omega_dominance_power_convention_polarization_and_physics
+  - id: C
+    decision: accepted_exact_fixed_orientation_rank_one_corollary
+  - id: D
+    decision: >-
+      accepted_exact_conditional_rank_two_and_circular_comparison_without_any
+      claim_that_accepted_scalar_dynamics_supplies_the_independent_traces
+claims:
+  - id: C-GW-008
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0007/result.yaml
+  exact_primary: attempts/0003/result.yaml
+  independent_review: reviews/independent_cartesian_review.py
+  independent_result: attempts/0004/result.yaml
+  preserved_failed_or_qualified_attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0006/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  time_series_audit: evidence/time-series-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-GW-008-review.md
+source_disposition:
+  QB4: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P055-qb4-conditional-triaxial-waveform/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+    --source-reproduction campaigns/P055-qb4-conditional-triaxial-waveform/evidence/source-reproduction.yaml
+    --source-audit campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0001/result.yaml
+    --time-series-audit campaigns/P055-qb4-conditional-triaxial-waveform/evidence/time-series-audit.yaml
+    --independent-result campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0004/result.yaml
+    --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+  - >-
+    .venv/bin/python -m pytest -q
+    tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py
+    tests/test_triaxial_l2.py tests/test_axisymmetric_radiation.py
+    tests/test_circular_pair.py tests/test_governance.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

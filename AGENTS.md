@@ -106,6 +106,8 @@ Do not simulate a conclusion already fixed by stronger exact evidence. If exact 
 
 For ODE, BVP, PDE, quadrature, and spectral work, state the equations, domain, initial/boundary data, discretization, floating-point precision, solver, tolerances, mesh, timestep or sampling policy, stopping rule, and error norm. Predeclare thresholds against a dimensional or scale-relative error model; an absolute near-zero threshold is not meaningful without the observable scale. If such a threshold fails, preserve it, demonstrate refinement or roundoff behavior, and only then replace it with a justified scale-sensitive oracle while keeping any exact null as a separate analytic claim. Check solver success before using its output. Run mesh/timestep/domain/tolerance refinement, test conservation or controlled dissipation, compare an independent method or soluble limit, and show that load-bearing input mutations break the relevant verdict. Use sparse operators and method-of-lines or an appropriate finite-difference, finite-volume, finite-element, or spectral method when the PDE requires them; tool choice follows the equation and claim.
 
+Before FFT differentiation or line-power attribution, prove that the sampled window is periodic for every active frequency or quantify endpoint closure and use a nonperiodic method. Multiplying a coefficient from the same FFT by `(i*omega)^n` is an internal identity, not an independent derivative oracle. Resolve mixed or incommensurate frequencies and show the claimed line carries the preregistered fraction of the checked norm or power.
+
 For each serious claim:
 
 - derive the checked quantity rather than hard-coding the expected result;

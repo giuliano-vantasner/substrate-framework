@@ -1,0 +1,4 @@
+WORKFLOW VALID: 69 claims, 69 accepted, 0 proposals; MIGRATION QUEUE: 218 units, 165 pending, 0 partial
+memory/vantasner/proposals/P055-qb4-conditional-triaxial-waveform.md
+  [error] Section 'Debt Ledger': first content line is not plain prose
+1/248 file(s) have errors.

@@ -1,0 +1,25 @@
+attempt: 0002
+campaign: P055
+candidate: A_literal_QB4_time_series_audit
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0002/audit_source_series.py
+source_file: /home/dan/substrate/merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+frozen_gates:
+  periodic_fft:
+    frequency_ratio_to_integer_max: 1.0e-10
+    endpoint_tensor_relative_defect_max: 1.0e-3
+  claimed_dominant_line:
+    two_omega_derivative_power_fraction_min: 0.5
+  temporal_rank:
+    second_to_first_singular_value_ratio_min: 1.0e-3
+  convention:
+    triple_to_normalized_power_ratio: 0.1111111111111111
+interpretation: >-
+  A failed periodic-FFT gate invalidates the source's claim that its spectral
+  derivative is an analytic physical derivative, even if multiplication of
+  the same FFT bin by (i omega)^3 is internally exact. A rank-two result for
+  the literal finite-b moment is recorded but cannot promote dynamics already
+  qualified by QB3; a rank-one result directly refutes two-mode language.
+  Nonzero values at one time never establish ellipticity.
+started_at: '2026-08-02T08:55:00Z'

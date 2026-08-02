@@ -33,6 +33,7 @@ An identity that holds only because both sides contain the same copied literal i
 - Compare two methods or an analytically soluble limit.
 - Track conserved quantities and discretization error.
 - Separate solver convergence from physical-model validity.
+- Before FFT differentiation, establish commensurability of every active frequency with the sampled window or measure endpoint closure and use an appropriate nonperiodic derivative. Equality between an FFT coefficient and that same coefficient multiplied by `(i*omega)^n` is representation self-consistency, not independent evidence. For a claimed dominant line, report its fraction of the relevant derivative norm or power and require the preregistered dominance threshold.
 - Predeclare tolerances against a dimensional or scale-relative error model. If an absolute near-zero bound fails, preserve the attempt and require refinement, conditioning, or roundoff evidence before replacing it with a justified scale-sensitive bound; keep exact analytic nulls separate from numerical regression.
 
 Numeric evidence does not become exact verification because it has many digits.

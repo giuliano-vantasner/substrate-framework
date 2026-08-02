@@ -1,0 +1,18 @@
+attempt: 0005
+campaign: P055
+candidate: promotion_replay
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P055-qb4-conditional-triaxial-waveform/verify.py
+  --source-file /home/dan/substrate/merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+  --source-reproduction campaigns/P055-qb4-conditional-triaxial-waveform/evidence/source-reproduction.yaml
+  --source-audit campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0001/result.yaml
+  --time-series-audit campaigns/P055-qb4-conditional-triaxial-waveform/evidence/time-series-audit.yaml
+  --independent-result campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0004/result.yaml
+  --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+expected: >-
+  The source hash and clean tally, NumPy compatibility, convention mismatch,
+  periodicity and dominance failures, exact scaled-STF and real-m2 formulas,
+  temporal-rank counterexamples, independent result, reviewed claim axes, and
+  terminal QB4 mapping all pass against the assembled v0.49.0 transaction.
+started_at: '2026-08-02T12:45:00Z'

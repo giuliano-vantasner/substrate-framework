@@ -1,0 +1,17 @@
+attempt: 0006
+campaign: P055
+candidate: first_repository_gate
+verdict: failed_memory_section_disclosure
+process_exit_code: 1
+passed_before_failure:
+  - registry and release validation for 69 accepted claims
+  - migration queue validation for 218 units with 165 pending
+failed_check: >-
+  P055 proposal memory Debt Ledger section did not begin with a plain-prose
+  disclosure sentence before its table.
+failure_classification: implementation
+repair: >-
+  Add one sentence describing what the ledger tracks, as required by the
+  campaign template. Do not change any scientific threshold, claim, evidence,
+  disposition, or validation rule.
+next_attempt: rerun the complete repository gate after this schema-only repair

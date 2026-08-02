@@ -1,0 +1,43 @@
+{
+  "source_tally_preserved": "ALL 5 CHECKS PASS",
+  "periodic_fft_gate": {
+    "omega_2_over_omega": 1.1267678548900995,
+    "nearest_integer_defect": 0.12676785489009945,
+    "frequency_closure_pass": false,
+    "endpoint_tensor_relative_defect": 0.0960903602059915,
+    "endpoint_pass": false
+  },
+  "two_omega_power_gate": {
+    "bin_frequency": 1.9306221593985582,
+    "all_bandlimited_derivative_norm": 194068.7609818602,
+    "two_omega_derivative_norm": 2589.7734955158307,
+    "two_omega_fraction": 0.013344618074610676,
+    "source_interior_derivative_norm": 68512.5764023517,
+    "source_interior_two_omega_derivative_norm": 2856.238834816616,
+    "source_interior_two_omega_fraction": 0.04168926326814613,
+    "dominance_pass": false
+  },
+  "source_temporal_rank": {
+    "diagonal_stf_rank": 2,
+    "diagonal_second_to_first_ratio": 0.007355264915451972,
+    "diagonal_singular_values": [156.66554493756388, 1.152316586139428],
+    "generic_readout_rank": 2,
+    "generic_second_to_first_ratio": 0.005276246032302193,
+    "generic_singular_values": [472.2613731505407, 2.4917671962951258]
+  },
+  "same_fft_bin_identity": {
+    "constructed_analytic_line": 0.9929752338131747,
+    "spectral_derivative_line": 0.9929752338131793,
+    "relative_difference": 4.69592447489277e-15,
+    "independent_oracle": false
+  },
+  "power_convention": {
+    "reported_G_over_5_average": 13702.515280470343,
+    "triple_STF_G_over_45_average": 1522.5016978300382,
+    "factor_error": 9.0
+  },
+  "time_reversal_structure": {
+    "moment_is_even_in_time": true,
+    "consequence": "each exact combination-frequency line has real tensor amplitude and is linearly polarized; one-time nonzero coordinates do not prove an ellipse"
+  }
+}

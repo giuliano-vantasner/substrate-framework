@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 166
-  qualified: 45
+  pending_adjudication: 165
+  qualified: 46
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3333,8 +3333,30 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GW-008
+  qualification: QB4's exact conditional scaled-STF waveform and power algebra survives after keeping
+    the normalized/triple convention explicit, and a real-m2 tensor can have nonzero conditional z-direction
+    plus readout where the axisymmetric tensor is null. The source inherits QB3's unaccepted finite-wall
+    mode and finite deformation, omits angular-gradient energy and nonlinear field corrections, samples
+    incommensurate frequencies on a nonperiodic FFT window, and applies G/5 to a triple tensor. Its twice-frequency
+    bin contributes only 4.17 percent of the checked interior derivative norm. A one-time pair of nonzero
+    plus/cross values establishes neither an ellipse nor temporal rank, and the measured small rank-two
+    direction belongs only to the qualified finite-b array. QB4 therefore establishes no accepted rank-two
+    source evolution, physical waveform or flux, gravity, graviton count, detector observable, backreaction,
+    absolute scale, particle identity, or substrate realization.
+  evidence:
+  - campaigns/P055-qb4-conditional-triaxial-waveform/reviews/source_adjudication.md
+  - campaigns/P055-qb4-conditional-triaxial-waveform/evidence/source-reproduction.yaml
+  - campaigns/P055-qb4-conditional-triaxial-waveform/evidence/time-series-audit.yaml
+  - campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0001/result.yaml
+  - campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0002/result.yaml
+  - memory/vantasner/decisions/C-GW-008-review.md
+  note: P055 derives the conditional scale-safe theorem twice, proves that fixed orientation remains rank
+    one despite generic nonzero coordinates, and supplies an explicit two-trace circular comparison without
+    attributing it to scalar dynamics. The source already prefers current `np.trapezoid` with a legacy
+    fallback; no new quadrature alias is added.
 - source_unit: WZ1
   phase: phase-17
   path: merged-framework/bridges/phase-17/bridge_WZ1_wzw_5d_chern_simons.py

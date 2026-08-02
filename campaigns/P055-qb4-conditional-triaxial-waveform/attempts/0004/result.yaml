@@ -1,0 +1,29 @@
+attempt: 0004
+campaign: P055
+candidate: independent_Cartesian_sphere_review
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 58.2
+terminal_tally: ALL 23 CHECKS PASS [P055-INDEPENDENT]
+independent_derivation:
+  projection: direct P*S*P minus P*trace(P*S*P)/2 construction
+  angular_oracle: exact direct integration over mu and phi with no canonical angular reducer
+  polarization_basis: direct Cartesian natural-z and projected-reference bases
+  temporal_rank: exact two-sample determinants without the canonical SVD helper
+  proof_object_gate: unevaluated Integral, Sum, Product, or Limit objects raise failure
+established:
+  - each unit real-m2 cosine or sine tensor has full-sphere TT norm integral 16*pi/5
+  - the cosine and sine real-m2 tensors have zero integrated TT cross term
+  - the scale-three waveform coefficient 2*G/3 and flux 1/(32*pi*G) give 2*G*(q_c'''^2+q_s'''^2)/45
+  - direct natural-axis projection yields conventional readouts q_c and q_s before the waveform prefactor
+  - one fixed tensor has two nonzero generic-frame coordinates but zero temporal coefficient determinant
+  - a spin-two frame rotation eliminates that fixed-tensor cross coordinate
+  - independent quadrature samples have nonzero determinant and trace a circle
+mutations_rejected:
+  - one-third or zero substituted for the two-dimensional one-half TT trace removal
+  - normalized 2*G or half-sized G/3 substituted for the triple 2*G/3 waveform coefficient
+  - proportional or zero coefficient samples treated as temporal rank two
+scope: >-
+  Independent support for the exact conditional C-GW-008 candidate only. No
+  QB3 finite-b source, physical gravity, absolute amplitude, graviton count,
+  or accepted dynamical two-trace excitation is imported.

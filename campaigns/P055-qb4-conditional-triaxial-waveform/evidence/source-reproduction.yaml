@@ -1,0 +1,34 @@
+campaign: P055
+source_unit: QB4
+source_baseline: substrate@6d1f4e0
+source_root: /home/dan/substrate
+inventory_path: merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+resolved_path: /home/dan/substrate/merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py
+sha256: 4523ad68636413bf628cd353e496c61b25af3c7f30bdf3e1e061930054fb9291
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+process_exit_code: 0
+elapsed_seconds: 10.5
+terminal_tally: ALL 5 CHECKS PASS
+reported:
+  core_frequency: 0.965311
+  averaged_mode_frequency: 1.0877
+  dominant_Q_frequency: 1.9306
+  reported_average_power_G_equals_one: 1.3703e4
+  central_difference_relative_difference: 0.039
+  generic_instantaneous_plus_cross: [0.3124, 2.8702]
+  natural_z_instantaneous_plus_cross: [-4.9714, -6.22e-12]
+source_checkout: >-
+  The sibling checkout contains unrelated uncommitted work, but HEAD is the
+  pinned 6d1f4e0 baseline and the audited QB4 file exactly matches the
+  inventory hash. The initial framework-relative invocation failed because
+  inventory paths are source-root-relative; attempt 0001 preserves and repairs
+  that provenance-resolution failure without editing the source.
+adjudication_ceiling: >-
+  A clean source tally preserves provenance only. The inherited finite-b QB3
+  source, periodic-FFT premise, two-omega dominance, power convention,
+  polarization classifier, and physical interpretation require separate
+  adjudication.

@@ -1,0 +1,71 @@
+id: P055
+base_release: v0.48.0
+base_commit: 93e6718
+source_baseline: substrate@6d1f4e0
+source_units: [QB4]
+question: >-
+  Determine the strongest convention-safe waveform and power theorem supported
+  for the accepted real-l2 triaxial moment map, and audit QB4's inference from
+  generic nonzero plus/cross coordinates to elliptical two-mode radiation
+  without importing QB3's rejected eigenmode or deformation data.
+invariants:
+  - C-MOM-001 fixes the normalized STF moment while C-GW-007's real-l2 map uses the triple STF moment; every waveform and power coefficient must declare that scale.
+  - C-GW-001 makes quadrupole radiation conditional on a conserved localized source, a wave equation, a far-zone Green function, and an energy flux; the framework has not derived physical gravity from its scalar dynamics.
+  - C-GW-002 fixes a two-dimensional TT image but does not equate two nonzero basis coordinates with two independent temporal modes or a graviton count.
+  - C-GW-007 fixes temporal rank as the rank of the time-dependent STF coefficient trajectory; a fixed STF tensor times one scalar trace has rank one in every observer frame.
+  - C-PDE-009 and the QB3 adjudication supply no localized Floquet eigenmode or accepted finite-deformation triaxial source for QB4 to inherit.
+allowed_imports:
+  - C-MOM-001
+  - C-MOM-003
+  - C-GW-001
+  - C-GW-002
+  - C-GW-005
+  - C-GW-006
+  - C-GW-007
+  - C-PDE-004
+  - C-PDE-009
+  - standard symmetric-trace-free tensor algebra and exact polarization-frame rotations
+  - NumPy and SciPy for explicitly bounded derivative and rank evidence
+  - QB4 at substrate@6d1f4e0 as noncanonical evidence after the comparator gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce QB4's inherited tensor, derivative estimator, power formula,
+      sightline projection, and polarization classifier literally, retaining
+      only subclaims that survive provenance, convention, convergence, and
+      temporal-rank audits.
+  - id: B
+    description: >-
+      Derive the exact conditional arbitrary-view waveform and total-power map
+      for a general STF tensor Q_s=s I_STF, with the quadrupole scale s kept
+      symbolic and with normalized, triple, and wrong-scale probes.
+  - id: C
+    description: >-
+      Prove the fixed-orientation theorem Q_s(t)=q(t)T: generic plus and cross
+      coordinates can both be nonzero but are proportional, have temporal rank
+      one, and rotate to a transverse frame with one vanishing coordinate.
+  - id: D
+    description: >-
+      Construct the exact conditional two-component real-m2 comparison
+      Q_3(t)=q_c(t)T_c+q_s(t)T_s and characterize rank-one, rank-two, linear,
+      and circular limits without claiming that accepted scalar dynamics
+      supplies the independent traces.
+uniqueness_evidence: null
+selection_criteria:
+  - exact closure of normalized versus triple STF moment conventions
+  - separation of TT coordinate dimension, temporal source rank, polarization state, and graviton interpretation
+  - compatibility with C-GW-001's explicitly conditional radiation premises and C-GW-007's rank theorem
+  - no inherited QB3 eigenvalue, deformation amplitude, finite-box localization, or reported waveform value
+  - exact frame covariance, principal-axis, nodal-sightline, zero-amplitude, proportional-trace, and phase-quadrature limits
+  - derivative estimator status and timestep or tolerance refinement for every numerical source claim
+  - source conservation, localization, far-zone, and boundary-flux honesty
+  - assumption and parameter economy with independent normalization and tensor-contraction derivations
+claims_proposed:
+  - provisional C-GW-008 convention-safe conditional real-m2 waveform, power, and polarization-rank theorem
+comparators_blinded_until: >-
+  The symbolic quadrupole scale, tensor basis, waveform readout convention,
+  total-power coefficient, temporal-rank metric, frame-rotation law, derivative
+  convergence gates, candidate set, and conditional-physics ceiling are frozen
+  in this manifest and matching memory contract before QB4's executable,
+  reported amplitudes, powers, phases, or polarization labels are inspected.
+status: accepted

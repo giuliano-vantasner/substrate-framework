@@ -39,6 +39,14 @@ from .axisymmetric_radiation import (
     ConditionalAxisymmetricRadiationCoefficients,
     conditional_axisymmetric_radiation_coefficients,
 )
+from .conditional_triaxial_radiation import (
+    ConditionalScaledSTFWaveform,
+    conditional_real_m2_natural_axis_waveform,
+    conditional_real_m2_power,
+    conditional_scaled_stf_power,
+    conditional_scaled_stf_waveform,
+    real_m2_triple_stf_tensor,
+)
 from .boundary_correlations import (
     boundary_sign_correlation_density,
     right_half_line_topological_charge_change,
@@ -368,6 +376,7 @@ __all__ = [
     "AxisymmetricSTFReadout",
     "BVPEvidence",
     "ConditionalAxisymmetricRadiationCoefficients",
+    "ConditionalScaledSTFWaveform",
     "GovernanceError",
     "CheckFailure",
     "CheckLedger",
@@ -435,6 +444,10 @@ __all__ = [
     "conditional_anw_mass",
     "conditional_axisymmetric_stf_power",
     "conditional_axisymmetric_radiation_coefficients",
+    "conditional_real_m2_natural_axis_waveform",
+    "conditional_real_m2_power",
+    "conditional_scaled_stf_power",
+    "conditional_scaled_stf_waveform",
     "conditional_one_loop_coefficient",
     "conditional_topological_mass",
     "classify_harmonic_tail_channels",
@@ -466,6 +479,7 @@ __all__ = [
     "real_symmetric_rotation",
     "real_l2_triple_stf_tensor",
     "real_l2_tt_readout",
+    "real_m2_triple_stf_tensor",
     "regular_l_mode_origin_mismatch",
     "relative_left_basis",
     "unitarity_residual",

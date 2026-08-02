@@ -1,0 +1,16 @@
+[source checkout: substrate commit 6d1f4e0; audited file SHA-256 4523ad68636413bf628cd353e496c61b25af3c7f30bdf3e1e061930054fb9291]
+[QB1 core omega = 0.965311; QB3 l=2 mode omega_2 = 1.0877; moment grid downsampled to 500 radial nodes]
+QB4.1 THE POWER at 2 omega ... PASS
+  dominant Q line omega = 1.9306; 2 omega = 1.9306; <P> = 1.3703e+04
+  spectral dddQ_zz line = 0.9930; analytic line = 0.9930
+  central-difference versus spectral interior RMS relative difference = 0.039
+QB4.2 TWO POLARIZATIONS ... PASS
+  generic n=(1,1,1): h_+ = 0.3124, h_x = 2.8702
+  principal n=x: h_+ = -2.0172, h_x = 0
+QB4.3 BREAKS P3D4 AXIS-NULL ... PASS
+  n=z: h_+ = -4.9714, h_x = -6.22e-12
+QB4.4 AXISYMMETRIC LIMIT ... PASS
+  selected directions have h_x approximately zero; n=z is TT-null
+QB4.GA FROZEN TRIAXIAL FIELD ... PASS
+  max|Q| = 553.99; |Qxx-Qyy| = 298.15; P_frozen = 0; P_evolving = 1.370e+04
+ALL 5 CHECKS PASS

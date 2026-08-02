@@ -1,0 +1,19 @@
+attempt: 0003
+campaign: P055
+candidate: B_C_D_exact_conditional_theorem
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0003/verify_exact.py
+expected: >-
+  Derive the scaled-STF conditional waveform and power with an explicit
+  quadrupole convention, specialize the triple real-m2 natural-axis formulas,
+  prove fixed-orientation rank one despite generic nonzero coordinates, and
+  exhibit proportional and quadrature rank-one/rank-two comparisons.
+load_bearing_mutations:
+  - apply the normalized waveform coefficient to a triple STF tensor
+  - omit one off-diagonal term from the Frobenius contraction
+  - identify two nonzero proportional readouts as rank two
+  - change the transverse frame and treat rank as frame dependent
+  - replace quadrature traces by proportional traces while retaining circular polarization
+  - infer accepted source dynamics, gravity, or gravitons from conditional tensor algebra
+started_at: '2026-08-02T09:15:00Z'

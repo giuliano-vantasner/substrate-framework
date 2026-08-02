@@ -1,0 +1,8 @@
+attempt: 0006
+campaign: P055
+candidate: first_repository_gate
+command: scripts/validate.sh
+expected: >-
+  Registry, release, queue, generated docs and memory, durable memory schema,
+  skill integrity, imports, compilation, and the complete pytest suite pass.
+started_at: '2026-08-02T13:05:00Z'

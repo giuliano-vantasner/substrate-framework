@@ -1,0 +1,24 @@
+PASS [P055-INDEPENDENT] direct sphere integration gives sixteen-pi-over-five for both real-m2 tensors
+PASS [P055-INDEPENDENT] direct sphere integration makes the cosine and sine real-m2 tensors orthogonal
+PASS [P055-INDEPENDENT] two-dimensional TT trace removal requires one half: baseline
+PASS [P055-INDEPENDENT] two-dimensional TT trace removal requires one half: mutations supplied
+PASS [P055-INDEPENDENT] two-dimensional TT trace removal requires one half: mutation 1 rejected
+PASS [P055-INDEPENDENT] two-dimensional TT trace removal requires one half: mutation 2 rejected
+PASS [P055-INDEPENDENT] direct angular flux reduction gives two-G-over-forty-five real-m2 power
+PASS [P055-INDEPENDENT] triple convention requires the two-G-over-three waveform coefficient: baseline
+PASS [P055-INDEPENDENT] triple convention requires the two-G-over-three waveform coefficient: mutations supplied
+PASS [P055-INDEPENDENT] triple convention requires the two-G-over-three waveform coefficient: mutation 1 rejected
+PASS [P055-INDEPENDENT] triple convention requires the two-G-over-three waveform coefficient: mutation 2 rejected
+PASS [P055-INDEPENDENT] direct natural-axis projection separates conventional real-m2 plus and cross readouts
+PASS [P055-INDEPENDENT] declared scale-three waveform gives the exact natural-axis coefficients
+PASS [P055-INDEPENDENT] direct generic-frame projection gives two nonzero coordinates for one fixed tensor
+PASS [P055-INDEPENDENT] the fixed-tensor two-coordinate sample determinant is exactly zero
+PASS [P055-INDEPENDENT] a direct spin-two coordinate rotation eliminates fixed-tensor cross
+PASS [P055-INDEPENDENT] two temporal traces require a nonzero coefficient determinant: baseline
+PASS [P055-INDEPENDENT] two temporal traces require a nonzero coefficient determinant: mutations supplied
+PASS [P055-INDEPENDENT] two temporal traces require a nonzero coefficient determinant: mutation 1 rejected
+PASS [P055-INDEPENDENT] two temporal traces require a nonzero coefficient determinant: mutation 2 rejected
+PASS [P055-INDEPENDENT] direct quadrature coefficients trace a unit circle while one trace is linear
+PASS [P055-INDEPENDENT] primary waveform agrees with the independently frozen natural-axis result
+PASS [P055-INDEPENDENT] primary power agrees with the independently frozen sphere integral
+ALL 23 CHECKS PASS [P055-INDEPENDENT]

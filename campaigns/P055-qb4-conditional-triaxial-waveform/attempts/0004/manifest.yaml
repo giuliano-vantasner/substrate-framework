@@ -1,0 +1,19 @@
+attempt: 0004
+campaign: P055
+candidate: independent_Cartesian_sphere_review
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P055-qb4-conditional-triaxial-waveform/reviews/independent_cartesian_review.py
+independence: >-
+  Construct the TT projector, transverse basis, sphere integral, real-m2
+  tensors, frame rotation, and rank determinants directly. Freeze the direct
+  results before importing the primary conditional-triaxial module, then
+  compare its public outputs. Do not call conditional_tt_power,
+  integrated_tt_norm_squared, real_l2_tt_readout, or temporal_coefficient_rank.
+expected: >-
+  Exact sphere integration gives 16*pi/5 for each unit real-m2 tensor and zero
+  cross term; the declared scale-three waveform and flux premises then give
+  2*G*(q_c'''^2+q_s'''^2)/45. Direct projection proves the natural-axis
+  waveform and fixed-orientation/rank distinctions. Unevaluated Integral,
+  Sum, Product, or Limit objects are rejected as oracle failures.
+started_at: '2026-08-02T09:35:00Z'

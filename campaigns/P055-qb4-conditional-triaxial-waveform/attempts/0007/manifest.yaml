@@ -1,0 +1,11 @@
+attempt: 0007
+campaign: P055
+candidate: repaired_repository_gate
+commands:
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest -q
+  - git diff --check
+expected: >-
+  After the disclosure-only repair, the complete workflow, explicit pytest
+  replay, and whitespace gate pass without changing the scientific boundary.
+started_at: '2026-08-02T13:10:00Z'

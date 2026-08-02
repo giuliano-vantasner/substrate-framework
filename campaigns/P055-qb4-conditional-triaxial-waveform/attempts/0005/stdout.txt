@@ -1,0 +1,26 @@
+PASS [P055-QB4] QB4 is the hash-pinned primary source unit
+PASS [P055-QB4] the clean source reproduction and complete tally are preserved
+PASS [P055-QB4] the source uses current NumPy trapezoid before its legacy fallback
+PASS [P055-QB4] the source applies a normalized power coefficient to a triple STF tensor
+PASS [P055-QB4] QB4's claimed common FFT period fails frequency and endpoint closure
+PASS [P055-QB4] the twice-frequency bin fails its preregistered derivative-norm dominance gate
+PASS [P055-QB4] the same-bin spectral identity is recorded as non-independent
+PASS [P055-QB4] canonical scaled-STF power has the exact convention-safe general form
+PASS [P055-QB4] triple-STF power rejects normalized and other wrong scale factors: baseline
+PASS [P055-QB4] triple-STF power rejects normalized and other wrong scale factors: mutations supplied
+PASS [P055-QB4] triple-STF power rejects normalized and other wrong scale factors: mutation 1 rejected
+PASS [P055-QB4] triple-STF power rejects normalized and other wrong scale factors: mutation 2 rejected
+PASS [P055-QB4] triple-STF power rejects normalized and other wrong scale factors: mutation 3 rejected
+PASS [P055-QB4] normalized and triple scaled-STF waveforms are convention invariant
+PASS [P055-QB4] real-m2 tensor and natural-axis conditional waveform have exact components
+PASS [P055-QB4] real-m2 conditional power has the exact two-G-over-forty-five form
+PASS [P055-QB4] generic nonzero coordinates of one fixed tensor remain temporal rank one
+PASS [P055-QB4] rank two requires nonproportional traces: baseline
+PASS [P055-QB4] rank two requires nonproportional traces: mutations supplied
+PASS [P055-QB4] rank two requires nonproportional traces: mutation 1 rejected
+PASS [P055-QB4] rank two requires nonproportional traces: mutation 2 rejected
+PASS [P055-QB4] quadrature real-m2 comparison has constant conditional power
+PASS [P055-QB4] the independent Cartesian-sphere review has a clean sensitive tally
+PASS [P055-QB4] the promoted claim has the reviewed axes and dependency closure
+PASS [P055-QB4] the terminal QB4 disposition maps only the accepted exact claim
+ALL 25 CHECKS PASS [P055-QB4]

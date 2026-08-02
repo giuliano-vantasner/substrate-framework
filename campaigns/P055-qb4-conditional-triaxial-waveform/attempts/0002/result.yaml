@@ -1,0 +1,65 @@
+attempt: 0002
+campaign: P055
+candidate: A_literal_QB4_time_series_audit
+verdict: failed_headline_oracles
+process_exit_code: 0
+elapsed_seconds: 11.0
+source_tally_preserved: ALL 5 CHECKS PASS
+periodic_fft:
+  omega_2_over_omega: 1.1267678548900995
+  nearest_integer_defect: 0.12676785489009945
+  endpoint_tensor_relative_defect: 0.0960903602059915
+  frequency_closure_pass: false
+  endpoint_pass: false
+  diagnosis: >-
+    The source calls one core period a common period, but omega_2/omega is not
+    integral and the nonlinear moment contains mixed frequencies. The rFFT
+    therefore differentiates a discontinuous periodic extension rather than
+    the physical quasiperiodic time series.
+two_omega_power:
+  full_window_fraction: 0.013344618074610676
+  source_interior_fraction: 0.04168926326814613
+  dominance_pass: false
+  diagnosis: >-
+    The 2*omega bin contributes only 4.17 percent of the source-interior
+    band-limited third-derivative norm. The printed positive total power is not
+    dominated by the line used in the source's analytic-amplitude check.
+temporal_rank:
+  diagonal_stf_rank: 2
+  diagonal_second_to_first_singular_ratio: 0.007355264915451972
+  generic_readout_rank: 2
+  generic_second_to_first_singular_ratio: 0.005276246032302193
+  ceiling: >-
+    This small second direction belongs to the finite-b=0.8 nonlinear moment
+    built from the qualified QB3 mode, omitted angular-gradient energy, and
+    missing nonlinear field corrections. It is evidence about the literal
+    array only, not an accepted rank-two source. QB4 also never evaluates this
+    rank; its one-time nonzero predicate cannot establish it.
+same_bin_identity:
+  relative_difference: 4.69592447489277e-15
+  independent_oracle: false
+  diagnosis: >-
+    The purported analytic line and spectral derivative use the same FFT
+    coefficient, with the latter defined by multiplication by (i*omega)^3.
+    Their equality is algebraic self-consistency of one representation, not an
+    independent derivative check or validation of periodicity.
+power_convention:
+  reported_average: 13702.515280470343
+  corrected_triple_STF_average_if_source_granted: 1522.5016978300382
+  source_overstatement_factor: 9.0
+polarization:
+  diagnosis: >-
+    The constructed field and moment are even under time reversal. Each exact
+    combination-frequency coefficient tensor is real and thus linearly
+    polarized at that line. A superposition of differently oriented lines can
+    make a multi-frequency Lissajous trajectory, but two values at one time do
+    not prove a monochromatic ellipse, a two-mode source, or two gravitons.
+failure_classification:
+  - target statement: instantaneous nonzero coordinates are not an ellipticity oracle
+  - numerical method: rFFT periodicity premise is false and the derivative lacks domain/refinement evidence
+  - convention: normalized and triple STF power coefficients are mixed
+  - candidate concept: the finite-b inherited source is outside accepted QB3 dynamics
+next_attempt: >-
+  Select Candidates B through D and implement the exact conditional scaled-STF
+  waveform, power, fixed-orientation, and two-trace comparison theorem with
+  mutation-sensitive and independent Cartesian verification.

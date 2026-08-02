@@ -1,0 +1,40 @@
+attempt: 0003
+campaign: P055
+candidate: B_C_D_exact_conditional_theorem
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 2.0
+terminal_tally: ALL 21 CHECKS PASS [P055-EXACT]
+established:
+  - for Q_s=s*I_STF the conditional waveform coefficient is 2*G/(s*R)
+  - for Q_s=s*I_STF the conditional total power is G*norm(Q_s''')^2/(5*s^2)
+  - normalized and triple moment conventions give identical physical conditional waveforms and powers when their coefficients are converted together
+  - applying the normalized G/5 coefficient to a triple tensor overstates power by nine
+  - a triple real-m2 tensor has Qxx=-Qyy=q_c and Qxy=Qyx=q_s with Frobenius norm squared 2*(q_c^2+q_s^2)
+  - the natural-z conventional waveform is h_plus*R/G=2*q_c''/3 and h_cross*R/G=2*q_s''/3
+  - the triple real-m2 conditional power is 2*G*((q_c''')^2+(q_s''')^2)/45
+  - a fixed STF tensor can have two nonzero generic-frame coordinates while its coefficient trajectory remains rank one
+  - a spin-two transverse-frame rotation makes the fixed-orientation cross coordinate vanish
+  - two proportional traces remain rank one under every polarization-frame rotation
+  - independent quadrature real-m2 traces have rank two and give the exact circular comparison limit
+mutations_rejected:
+  - scale one, three-halves, or nine substituted for the triple scale three
+  - proportional nonzero readouts labeled rank two
+  - removal of the independent sine trace while retaining circular polarization
+  - polarization-frame rotation treated as changing temporal rank
+interpretation_ceiling: >-
+  This is exact conditional tensor and radiation algebra under C-GW-001. It
+  does not supply a conserved localized source, QB3 dynamics, physical
+  gravity, absolute amplitude, energy flux for the finite-box corpus source,
+  a graviton count, or evidence that a scalar soliton excites both traces.
+targeted_tests:
+  command: >-
+    .venv/bin/python -m pytest -q
+    tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py
+    tests/test_triaxial_l2.py tests/test_axisymmetric_radiation.py
+    tests/test_circular_pair.py
+  result: 56 passed in 9.82s
+next_attempt: >-
+  Independently rederive the angular coefficient and real-m2 waveform/power
+  using Cartesian contractions and direct sphere integration without calling
+  the primary scaled waveform or power functions.

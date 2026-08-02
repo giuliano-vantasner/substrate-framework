@@ -156,6 +156,15 @@ Let a scalar density's coefficients in the unnormalized real l=2 basis P2(n_z), 
 - Compatibility: `compatible_extension`
 - Dependencies: C-PDE-009, C-PDE-004, C-MOM-003, C-GW-002
 
+## C-GW-008
+
+Let I_STF be the normalized symmetric trace-free moment of C-MOM-001 and let Q_s=s*I_STF for a declared nonzero convention scale s. Under exactly the conditional C-GW-001 premises A=2*G for I_STF and B=1/(32*pi*G), the same field written with Q_s is h_TT=(2*G/(s*R))*TT(Q_s''), and its instantaneous or already-averaged total angular power is P=G*(Q_s'''_ij*Q_s'''_ij)/(5*s^2). Thus the triple convention s=3 requires waveform coefficient 2*G/3 and power coefficient G/45; applying 2*G and G/5 directly to the triple tensor multiplies the field by three and power by nine. For the C-GW-007 triple real-m2 tensor Q_3=[[q_c,q_s,0],[q_s,-q_c,0],[0,0,0]], viewed along z with x reference, the conventional conditional readouts are h_plus*R/G=2*q_c''/3 and h_cross*R/G=2*q_s''/3, while P/G=2*((q_c''')^2+(q_s''')^2)/45. If instead Q_s(t)=q(t)*T for one fixed STF tensor T, every observer-frame plus/cross pair is a constant vector times q''(t), has temporal rank at most one, and, when nonzero, admits a spin-two transverse-frame rotation with cross equal to zero; two nonzero coordinates in one frame do not establish elliptical or two-mode radiation. Rank two requires nonproportional coefficient traces. In the conditional comparison q_c=A0*cos(w*t), q_s=A0*sin(w*t), the natural-z waveform is circular with constant squared coordinate radius (2*G*A0*w^2/(3*R))^2 and constant power 2*G*A0^2*w^6/45. These are exact convention, TT, power, and temporal-rank consequences of the declared premises. They establish no conserved localized source, excitation of both traces by accepted scalar dynamics, gravitational action or field equation, physical retarded waveform or flux, graviton count, detector signal, backreaction, absolute scale, particle identity, or substrate realization.
+
+- Accepted in: `v0.49.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GW-001, C-GW-002, C-GW-007
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

@@ -1,0 +1,22 @@
+PASS [P055-EXACT] scaled-STF power is G times the Frobenius norm over five scale squared
+PASS [P055-EXACT] normalized and triple conventions produce the same waveform tensor
+PASS [P055-EXACT] natural-axis conventional waveform retains the two-G-over-scale-R coefficient
+PASS [P055-EXACT] triple-STF power requires the scale-three coefficient: baseline
+PASS [P055-EXACT] triple-STF power requires the scale-three coefficient: mutations supplied
+PASS [P055-EXACT] triple-STF power requires the scale-three coefficient: mutation 1 rejected
+PASS [P055-EXACT] triple-STF power requires the scale-three coefficient: mutation 2 rejected
+PASS [P055-EXACT] triple-STF power requires the scale-three coefficient: mutation 3 rejected
+PASS [P055-EXACT] real-m2 Cartesian tensor is symmetric trace free with both off-diagonal terms
+PASS [P055-EXACT] triple real-m2 natural-axis plus and cross waveforms are two-G-over-three-R
+PASS [P055-EXACT] triple real-m2 conditional power has the exact two-G-over-forty-five coefficient
+PASS [P055-EXACT] one fixed STF tensor can have two nonzero generic-frame coordinates
+PASS [P055-EXACT] a spin-two transverse-frame rotation sets the fixed-tensor cross coordinate to zero
+PASS [P055-EXACT] two temporal source modes require nonproportional coefficient traces: baseline
+PASS [P055-EXACT] two temporal source modes require nonproportional coefficient traces: mutations supplied
+PASS [P055-EXACT] two temporal source modes require nonproportional coefficient traces: mutation 1 rejected
+PASS [P055-EXACT] two temporal source modes require nonproportional coefficient traces: mutation 2 rejected
+PASS [P055-EXACT] polarization-frame rotation preserves rank one and rank two
+PASS [P055-EXACT] equal quadrature real-m2 traces give a constant-radius circular waveform
+PASS [P055-EXACT] the corresponding circular real-m2 conditional power is constant
+PASS [P055-EXACT] removing the sine trace collapses the natural-axis waveform to linear polarization
+ALL 21 CHECKS PASS [P055-EXACT]
