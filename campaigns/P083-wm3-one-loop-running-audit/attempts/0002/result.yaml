@@ -1,0 +1,37 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G, H]
+status: adjudication_validated
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P083-wm3-one-loop-running-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P083-wm3-one-loop-running-audit/reviews/independent_running_review.py
+  - .venv/bin/python -m pytest -q tests/test_renormalization.py tests/test_linear_systems.py tests/test_scale_constraints.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+scientific_tallies:
+  source: ALL 10 CHECKS PASS
+  primary: ALL 37 CHECKS PASS [P083]
+  independent: ALL 16 CHECKS PASS [P083-INDEPENDENT]
+  focused_canonical_tests: 58 passed
+  focused_governance_tests: 17 passed
+  integrated_repository_tests: 793 passed
+process_status: 0
+positive_result:
+  - Exact pairwise crossing, common-intersection, degeneracy, and reference-covariance ledgers are importable in renormalization.py.
+  - Exact WM3 reconstruction is classified as a three-coordinate inverse problem with every observation, coefficient, and normalization input load bearing.
+  - Fixed measured data are exactly inconsistent and have three unequal pairwise crossings under the supplied one-loop convention.
+  - Paired Abelian coordinate conversion preserves the electromagnetic relation but exposes matching equality as normalization dependent.
+  - Sector matching offsets realize every symbolic target unless independently constrained.
+  - Primary and independent derivations agree without numerical integration or a numerical solver.
+adjudication:
+  disposition: qualified
+  accepted_claims: [C-RGE-004]
+  release: v0.74.0
+  queue_counts:
+    pending_adjudication: 137
+    qualified: 71
+    duplicate_evidence: 6
+    migrated: 3
+    out_of_scope: 1
+pending: []
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

@@ -577,6 +577,39 @@ units:
       target, dependency, and nonduplication ledgers through primary and
       independent symbolic routes. It adds no claim, release, or canonical API
       and uses no numerical quadrature or NumPy integration alias.
+  WM3:
+    disposition: qualified
+    accepted_claims:
+      - C-RGE-004
+    qualification: >-
+      WM3's exact affine common-intersection, pairwise-crossing, degeneracy,
+      reference-covariance, Abelian-coordinate, and conditional inverse-
+      reconstruction content is accepted through C-RGE-004. With its supplied
+      readings the exact result is A=1639681/39530, B=186383/39530, and weak
+      coordinate 6296809/30335322. This is inverse inference from supplied
+      alpha_em, alpha_s, the coefficient triple, hypercharge normalization,
+      reference scale, and exact matching, not an ab-initio prediction. Holding
+      the source's measured weak coordinate fixed gives three unequal pairwise
+      crossings and no exact common intersection. SM4 remains pending; WM1 and
+      WM2 supply no accepted physical boundary or induction mechanism. The
+      source does not derive U1/SU2 coefficients, a simple-group embedding,
+      normalization, zero thresholds, weak-angle scheme, perturbative domain,
+      physical unification, Standard Model, or substrate realization.
+    evidence:
+      - campaigns/P083-wm3-one-loop-running-audit/reviews/source_adjudication.md
+      - campaigns/P083-wm3-one-loop-running-audit/evidence/source-reproduction.yaml
+      - campaigns/P083-wm3-one-loop-running-audit/evidence/source-audit.yaml
+      - campaigns/P083-wm3-one-loop-running-audit/evidence/literature-audit.yaml
+      - campaigns/P083-wm3-one-loop-running-audit/evidence/candidate-comparison.yaml
+      - campaigns/P083-wm3-one-loop-running-audit/evidence/primary-provenance.yaml
+      - campaigns/P083-wm3-one-loop-running-audit/attempts/0001/result.yaml
+      - campaigns/P083-wm3-one-loop-running-audit/attempts/0002/result.yaml
+      - memory/vantasner/decisions/C-RGE-004-review.md
+    note: >-
+      P083 derives exact signed-affine intersection and inverse-fit ledgers
+      through canonical and independent symbolic routes, distinguishes solved
+      from fixed weak coordinates, and uses no numerical quadrature or NumPy
+      integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

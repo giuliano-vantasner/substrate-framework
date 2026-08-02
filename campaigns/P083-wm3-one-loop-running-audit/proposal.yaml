@@ -1,0 +1,64 @@
+id: P083
+base_release: v0.73.0
+base_commit: f391c54
+scientific_base_commit: 0ec7d20
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM3]
+question: >-
+  Determine whether WM3 independently tests a three-coupling one-loop
+  intersection or instead solves an exactly determined inverse construction
+  for a weak-angle coordinate, logarithmic scale, and common coupling from two
+  supplied low-energy observations and imported slopes; retain any distinct,
+  dependency-honest affine-running consistency or identifiability object and
+  terminally adjudicate every WM3 subclaim.
+invariants:
+  - C-RGE-001 is a conditional one-coupling theorem in a positive-b0 convention and does not supply WM3's signed Standard-Model coefficient triple or physical sectors.
+  - C-RGE-002 conditionally derives only the SU(3) b0 specialization; its signed inverse-alpha map requires an explicit convention conversion and supplies neither the U(1) nor SU(2) coefficient.
+  - C-LIN-001 controls exact rank, consistency, and nullity; equation count alone is not an intersection test.
+  - C-IDN-001 controls exact left-null compatibility and coordinate identifiability but derives no physical row, slope, coupling, scale, or observation.
+  - C-REP-001 supplies no accepted physical weak-angle boundary, common induction mechanism, unification scale, or running law.
+  - SM4 remains pending; WM1 is qualified and WM2 is duplicate evidence, so their rejected physical interpretations cannot enter accepted dependency closure.
+  - Supplied alpha_em and alpha_s are observations or fit inputs, not ab-initio predictions.
+  - A three-line common intersection must be distinguished from solving three equations for three adjustable coordinates and from three pairwise crossings at fixed low-energy data.
+  - Hypercharge generator rescaling and coupling rescaling must transform the U(1) coupling coordinate and beta coefficient consistently.
+allowed_imports:
+  - exact real and rational algebra for separately supplied positive inverse couplings, affine logarithmic slopes, normalization factors, offsets, and reference scales
+  - C-LIN-001 and C-IDN-001 for generic exact consistency, nullity, compatibility, and identifiability ledgers
+  - C-RGE-001 and C-RGE-002 only as conditional convention ceilings and the accepted SU(3) b0 specialization
+  - C-REP-001 only for its finite-table and Abelian-coordinate covariance ceiling
+  - QCD3 only through its accepted C-LIE-001, C-RGE-001, and C-RGE-002 mappings
+  - WM3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts and their freeze record validate
+candidates:
+  - id: A
+    description: Reproduce WM3 literally and audit whether its boundary, all three coefficients, low-energy inputs, physical sector map, perturbative domain, and exact-unification premise have accepted closure.
+  - id: B
+    description: Derive a generic signed affine inverse-alpha ledger a_i(t)=a_i0+s_i*t with exact pairwise crossings, common-intersection compatibility, rank, and degeneracy cases.
+  - id: C
+    description: Treat the weak-angle coordinate, log scale, and common inverse coupling as unknowns and classify WM3 as an inverse fit when its three supplied line equations are uniquely solvable.
+  - id: D
+    description: Hold all low-energy coupling coordinates fixed and test actual three-way unification by comparing the three independently derived pairwise crossing scales.
+  - id: E
+    description: Open sector-specific threshold or matching offsets and determine the resulting free directions and arbitrary-target reconstruction.
+  - id: F
+    description: Audit signed-coefficient and GUT-normalized hypercharge conventions, including paired generator, coupling, and beta-coefficient transformations and a wrong-convention probe.
+  - id: G
+    description: Test nonunification and degeneracy countermodels, including parallel unequal lines, coincident lines, input mutations, and removal of the alpha_s equation.
+  - id: H
+    description: Compare a provisional reusable multi-line RGE intersection claim and API against exact composition of C-LIN-001, C-IDN-001, and elementary affine algebra; add nothing if duplicate.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for every sector, coefficient, normalization, observation, boundary, reference scale, and perturbative-domain premise
+  - exact signed affine consistency, rank, degeneracy, units, reference covariance, and pairwise-crossing equivalence
+  - separation of forward prediction, inverse construction, comparator use, and fixed-data unification test
+  - normalization-convention covariance and load-bearing mutation sensitivity
+  - parameter economy without silently imposing zero thresholds, exact common matching, or pending physical identities
+  - nonduplication and a distinct reusable consumer beyond C-LIN-001, C-IDN-001, C-RGE-001, C-RGE-002, and C-REP-001
+claims_proposed:
+  - provisional C-RGE-004 exact multi-line affine inverse-coupling intersection and inverse-fit ledger only if it is nonduplicate and has a distinct reusable consumer; otherwise no new claim
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. Until then the WM3 body,
+  literal equations, executable output, reported weak-angle and scale values,
+  measured weak-angle comparator, and later source interpretations remain
+  closed; the generated queue synopsis is navigation metadata only.
+status: accepted

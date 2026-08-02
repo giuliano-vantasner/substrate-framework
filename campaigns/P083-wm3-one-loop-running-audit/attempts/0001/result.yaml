@@ -1,0 +1,26 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: WM3
+source_path: merged-framework/bridges/phase-23/bridge_WM3_sin2thetaw_rg_running.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 2328ae4d6e66e1caa14a39042c362e57258406383f14ecaa5f5f6c468105e298
+git_blob: 1ab71b9b34723ce2f1ea048c973e6fff33500ff7
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-23/bridge_WM3_sin2thetaw_rg_running.py
+process_exit_status: 0
+terminal_tally: ALL 10 CHECKS PASS
+surviving_exact_predicates:
+  - Given E=1279/10, S=500/59, n=5/3, b=(41/10,-19/6,-7), and exact common matching, A=1639681/39530 and B=186383/39530.
+  - The resulting conditional weak coordinate is 6296809/30335322 and the boundary coordinate is 3/8.
+  - The declared scale convention gives Lambda=MZ*exp(2*pi*B).
+  - Equal slopes are singular and coefficient-sign mutation changes the reconstruction.
+headline_failures:
+  - The source re-hardcodes all three SM4 coefficients and the WM2 3/5 factor; SM4 remains pending and WM1/WM2 supply no accepted physical boundary.
+  - Three equations uniquely solve three adjustable coordinates A, B, and the weak angle, making the output conditional inverse reconstruction rather than an ab-initio framework result.
+  - Fixed measured weak-angle data give three unequal pairwise crossing coordinates and no exact common intersection.
+  - Abelian normalization changes preserve the electromagnetic equation under paired coefficient conversion but do not preserve unqualified cross-sector equality.
+  - Threshold offsets can realize every weak target, and the source derives neither their absence nor a decoupling prescription.
+  - The weak comparator has no scheme or uncertainty, while PDG distinguishes multiple inequivalent weak-angle definitions.
+diagnosed_layer: source_claim_dependency_closure_inverse_problem_classification_normalization_and_thresholds
+continuation: Candidates B-H proceed to the exact reusable affine intersection and inverse-reconstruction object, fixed-data countertest, covariance, sensitivity, and claim review.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

@@ -1,0 +1,50 @@
+campaign: P083
+title: Exact signed-affine running, intersection, and inverse-reconstruction audit
+source_baseline: substrate@6d1f4e0
+source_units: [WM3]
+base_release: v0.73.0
+release_after_adjudication: v0.74.0
+adjudicated_at: '2026-08-03T23:30:00Z'
+selected_candidates:
+  - id: B
+    reason: Exact signed-affine crossings, consistency, degeneracies, and reference covariance form the reusable C-RGE-004 core.
+  - id: C
+    reason: The three-coordinate system classifies the WM3 value as conditional inverse reconstruction.
+  - id: D
+    reason: Fixed measured data provide the structurally distinct common-intersection countertest.
+  - id: E
+    reason: Matching offsets expose the arbitrary-target free directions omitted by WM3.
+  - id: F
+    reason: Paired Abelian coordinate conversion preserves the electromagnetic row while exposing equality convention dependence.
+  - id: G
+    reason: Degeneracies, equation removal, and load-bearing mutations establish verifier sensitivity.
+  - id: H
+    reason: A distinct canonical API and current/future WM3/SM4 consumers justify C-RGE-004 beyond generic rank algebra.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_source_regression
+claims: [C-RGE-004]
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  validated_route: attempts/0002/result.yaml
+  independent_review: reviews/independent_running_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-RGE-004-review.md
+source_disposition:
+  WM3: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P083-wm3-one-loop-running-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P083-wm3-one-loop-running-audit/reviews/independent_running_review.py
+  - .venv/bin/python -m pytest -q tests/test_renormalization.py tests/test_linear_systems.py tests/test_scale_constraints.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

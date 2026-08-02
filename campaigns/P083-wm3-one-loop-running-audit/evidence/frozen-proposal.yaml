@@ -1,0 +1,16 @@
+campaign: P083
+frozen_before_source_opening: true
+proposal_path: proposals/P083-wm3-one-loop-running-audit/proposal.yaml
+proposal_sha256: c7dc37c656184a1173089d2a09d6506debd71340fd660af3f946ec92046a4990
+memory_contract_path: memory/vantasner/proposals/P083-wm3-one-loop-running-audit.md
+memory_contract_sha256: 0504e1e4d81ca5ca45e1b00b8118e886080929dbcfc9806e79bb8480720b019e
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - source literal equations, executable output, and reported weak-angle and scale values
+  - measured weak-angle comparator
+  - source terminal interpretation and later corpus interpretations
+  - any low-energy gauge-coupling values beyond generated navigation metadata

@@ -1,0 +1,55 @@
+campaign: P083
+base_release: v0.73.0
+accepted_claims_used:
+  C-LIN-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/linear_systems.py
+    use: exact_rank_augmented_consistency_and_nullity
+  C-RGE-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/renormalization.py
+    use: positive_b0_one_coupling_convention_ceiling_only
+  C-RGE-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/renormalization.py
+    use: conditional_SU3_b0_sign_specialization_only
+  C-IDN-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_constraints.py
+    use: generic_identifiability_and_left_null_comparison_only
+  C-REP-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/charge_traces.py
+    use: conditional_boundary_and_Abelian_normalization_ceiling_only
+predecessor_evidence:
+  source_unit: WM3
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: 2328ae4d6e66e1caa14a39042c362e57258406383f14ecaa5f5f6c468105e298
+  authority: noncanonical_hash_pinned_attempt_evidence
+candidate_dependencies:
+  QCD3:
+    disposition: qualified
+    accepted_mapping: [C-LIE-001, C-RGE-001, C-RGE-002]
+  SM4:
+    disposition: pending_adjudication
+    accepted_mapping: []
+  WM1:
+    disposition: qualified
+    accepted_mapping: [C-REP-001, C-GAU-001, C-LIE-001]
+  WM2:
+    disposition: duplicate_evidence
+    accepted_mapping: [C-REP-001, C-LIE-001]
+external_empirical_imports:
+  - alpha_em_inverse_at_declared_MZ_coordinate=1279/10
+  - alpha_s_at_declared_MZ_coordinate=59/500
+  - MZ=227969/2500_GeV
+  - opened_weak_angle_comparator=11561/50000_with_scheme_unspecified_by_source
+external_literature_imports:
+  - Georgi_Quinn_Weinberg_1974_as_premise_audit_only
+  - Amaldi_de_Boer_Furstenau_1991_as_nonunification_context_only
+  - PDG_2024_as_current_measurement_and_scheme_audit_only
+exact_oracle: SymPy rational elimination, rank, left-null residual, pairwise crossings, degeneracies, reference shifts, convention covariance, threshold counterfamily, source AST, and queue closure
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

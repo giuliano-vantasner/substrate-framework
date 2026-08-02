@@ -1,0 +1,93 @@
+source_unit: WM3
+campaign: P083
+checks:
+  WM3.1:
+    source_verdict: pass_literal_match_reject_derived_provenance
+    audit: >-
+      The source executes pending SM4 on import and compares its module values,
+      but also re-hardcodes all three coefficients locally. Only the conditional
+      SU3 sign specialization has accepted closure through C-RGE-002; SM4's U1
+      and SU2 coefficients remain pending.
+  WM3.2:
+    source_verdict: pass_conditional_coordinate_reject_physical_boundary
+    audit: >-
+      The source re-hardcodes 3/5 and obtains 3/8 exactly. C-REP-001 establishes
+      only a conditional finite-table/common-coefficient coordinate; WM1 and
+      WM2 do not supply an accepted physical boundary or unification mechanism.
+  WM3.3:
+    source_verdict: pass_conditional_inverse_reconstruction
+    audit: >-
+      Interpreting the decimals exactly, the two supplied observation equations
+      uniquely give A=1639681/39530 and B=186383/39530. The source uses a float
+      solve and approximate target checks; C-RGE-004 replaces this with exact
+      algebra and explicit input provenance.
+  WM3.4:
+    source_verdict: qualify_as_inverse_output_reject_ab_initio
+    audit: >-
+      The exact weak coordinate 6296809/30335322 follows after imposing exact
+      matching and supplying electromagnetic inverse coupling, strong coupling,
+      all three slopes, and hypercharge normalization. Equivalently, three
+      equations identify A, B, and the weak coordinate. This is a conditional
+      inverse reconstruction, not an ab-initio framework prediction.
+  WM3.5:
+    source_verdict: pass_conditional_scale_map
+    audit: >-
+      Lambda=MZ*exp(2*pi*B) is exact in the declared convention and retains the
+      supplied positive reference MZ. The source derives no physical matching
+      scale, threshold spectrum, or perturbative validity interval.
+  WM3.6:
+    source_verdict: pass_conditional_ordering
+    audit: >-
+      Given the declared coefficients and common-match reconstruction, the
+      weak coordinate is below 3/8. This ordering does not establish the
+      physical boundary, coefficients, normalization, or running sector.
+  WM3.7:
+    source_verdict: pass_nonzero_comparator_residual_reject_scheme_free_claim
+    audit: >-
+      The opened decimal comparator gives the exact relative residual
+      17933103821/175353328821. The source supplies no weak-angle
+      renormalization scheme or uncertainty; PDG documents several inequivalent
+      definitions. Numerical near-miss language cannot promote the mechanism.
+  WM3.8:
+    source_verdict: pass_degeneracy_direction_incomplete_solver_guard
+    audit: >-
+      Equal coefficients make all differences constant and the inverse
+      reconstruction denominator zero. The source checks only a zero split;
+      the canonical API explicitly rejects the singular solve and distinguishes
+      coincident from parallel-disjoint lines.
+  WM3.9:
+    source_verdict: pass_sensitivity_reject_physical_label
+    audit: >-
+      Flipping b3 changes the fitted B and scale, so the sign is load bearing.
+      A positive scale below the chosen reference is not intrinsically
+      unphysical; the mutation supplies sensitivity evidence only.
+  WM3.10:
+    source_verdict: pass_nonuse_guard_reject_ab_initio_inference
+    audit: >-
+      The measured weak-angle literal is absent from the solve right-hand side,
+      but electromagnetic and strong observations, exact matching, three
+      coefficients, hypercharge normalization, and MZ remain inputs. Nonuse of
+      one comparator does not make the reconstruction ab initio.
+fixed_data_test:
+  comparator_intercepts:
+    U1: 147490443/2500000
+    SU2: 14786519/500000
+    SU3: 500/59
+  pairwise_running_coordinates:
+    U1_SU2: 27584193/6812500
+    U1_SU3: 7451936137/1637250000
+    SU2_SU3: 1867213863/339250000
+  verdict: exact_three_way_inconsistent
+uncovered_load_bearing_inputs:
+  - accepted U1 and SU2 one-loop coefficients and physical sector maps
+  - an accepted simple-group embedding or common physical matching condition
+  - a fixed Abelian normalization and paired beta-coordinate convention
+  - threshold and matching corrections or a proof they vanish
+  - a weak-angle renormalization scheme and uncertainty model
+  - a perturbative-domain and decoupling prescription across the full scale interval
+  - accepted SM4, WM1-boundary, and WM2-common-induction mechanisms
+headline_verdict: >-
+  Qualified. WM3 supplies a valid conditional inverse reconstruction and scale
+  coordinate captured by C-RGE-004, but it does not derive an ab-initio weak
+  angle or a physical three-sector unification mechanism. Fixed measured data
+  instead have three unequal one-loop crossings under the supplied convention.

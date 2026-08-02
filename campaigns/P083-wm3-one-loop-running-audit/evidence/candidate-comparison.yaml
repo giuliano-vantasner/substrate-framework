@@ -1,0 +1,62 @@
+campaign: P083
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and explicit coefficient, sector, normalization, observation, boundary, and scale provenance
+  - exact signed-affine consistency, rank, degeneracy, units, reference covariance, and pairwise-crossing equivalence
+  - separation of forward prediction, inverse construction, comparator use, and fixed-data unification testing
+  - normalization covariance and parameter economy with thresholds explicit
+  - mutation sensitivity and nonduplication against accepted linear and running claims
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All ten source checks reproduce, but SM4 is pending, the coefficients and
+      3/5 factor are locally hard-coded, and the physical matching boundary has
+      no accepted closure.
+  B:
+    decision: selected_as_C-RGE-004_core
+    reason: >-
+      Exact affine intersection diagnostics add domain-specific pairwise
+      degeneracy, reference-covariance, and reusable future SM4/WM3 consumers
+      beyond a bare generic rank statement.
+  C:
+    decision: selected_as_inverse_identifiability_specialization
+    reason: >-
+      The equivalent three-by-three system shows that electromagnetic and
+      strong observations plus exact matching uniquely identify the weak
+      coordinate; equation removal reopens a null direction.
+  D:
+    decision: selected_as_fixed_data_countertest
+    reason: >-
+      Holding the measured weak coordinate fixed produces three exact unequal
+      pairwise crossings and augmented-rank inconsistency.
+  E:
+    decision: selected_as_assumption_ceiling
+    reason: >-
+      Two sector matching offsets realize every symbolic weak target, so zero
+      threshold corrections are load-bearing premises.
+  F:
+    decision: selected_as_convention_covariance
+    reason: >-
+      Paired Abelian inverse-coupling, beta, and electromagnetic-weight
+      rescaling preserves the low-energy relation but not an unqualified
+      cross-sector equality.
+  G:
+    decision: selected_as_sensitivity_and_degeneracy_evidence
+    reason: >-
+      Parallel/coincident branches, equal-slope singularity, coefficient and
+      observation mutations, and equation removal all alter the relevant
+      structural verdicts.
+  H:
+    decision: selected_as_new_claim
+    reason: >-
+      C-RGE-004 composes C-LIN-001 but adds a distinct signed-affine coupling
+      API, pairwise classification, inverse reconstruction, convention map,
+      reference covariance, and immediate WM3 plus pending SM4 consumers.
+selected_claims: [C-RGE-004]
+dependencies: [C-LIN-001]
+physical_ceiling:
+  - no beta function, U1 or SU2 coefficient, gauge sector, or threshold spectrum is derived
+  - no simple-group embedding, physical normalization, or exact matching boundary is established
+  - no observation, weak-angle scheme, uncertainty, or absolute scale is predicted
+  - the WM3 numerical specialization is conditional inverse reconstruction rather than ab-initio prediction

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 6
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 138
-  qualified: 70
+  pending_adjudication: 137
+  qualified: 71
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5171,8 +5171,31 @@ units:
   dynamic_check_calls: 3
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RGE-004
+  qualification: WM3's exact affine common-intersection, pairwise-crossing, degeneracy, reference-covariance,
+    Abelian-coordinate, and conditional inverse- reconstruction content is accepted through C-RGE-004.
+    With its supplied readings the exact result is A=1639681/39530, B=186383/39530, and weak coordinate
+    6296809/30335322. This is inverse inference from supplied alpha_em, alpha_s, the coefficient triple,
+    hypercharge normalization, reference scale, and exact matching, not an ab-initio prediction. Holding
+    the source's measured weak coordinate fixed gives three unequal pairwise crossings and no exact common
+    intersection. SM4 remains pending; WM1 and WM2 supply no accepted physical boundary or induction mechanism.
+    The source does not derive U1/SU2 coefficients, a simple-group embedding, normalization, zero thresholds,
+    weak-angle scheme, perturbative domain, physical unification, Standard Model, or substrate realization.
+  evidence:
+  - campaigns/P083-wm3-one-loop-running-audit/reviews/source_adjudication.md
+  - campaigns/P083-wm3-one-loop-running-audit/evidence/source-reproduction.yaml
+  - campaigns/P083-wm3-one-loop-running-audit/evidence/source-audit.yaml
+  - campaigns/P083-wm3-one-loop-running-audit/evidence/literature-audit.yaml
+  - campaigns/P083-wm3-one-loop-running-audit/evidence/candidate-comparison.yaml
+  - campaigns/P083-wm3-one-loop-running-audit/evidence/primary-provenance.yaml
+  - campaigns/P083-wm3-one-loop-running-audit/attempts/0001/result.yaml
+  - campaigns/P083-wm3-one-loop-running-audit/attempts/0002/result.yaml
+  - memory/vantasner/decisions/C-RGE-004-review.md
+  note: P083 derives exact signed-affine intersection and inverse-fit ledgers through canonical and independent
+    symbolic routes, distinguishes solved from fixed weak coordinates, and uses no numerical quadrature
+    or NumPy integration alias.
 - source_unit: NY1
   phase: phase-24
   path: merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
