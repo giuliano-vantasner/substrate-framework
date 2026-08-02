@@ -1,0 +1,32 @@
+source_unit: MH3
+checks_executed: 5
+check_trace:
+  MH3.1:
+    verdict: conditional asymmetric-overlap algebra survives
+    issue: b is a new free odd profile premise and the even mode is not C-QBL-003's actual mode
+  MH3.2:
+    verdict: abstract relative-basis unitarity duplicates C-MIX-001
+    issue: kappa cancels identically; b_u and b_d create the difference, and the row/column convention is inconsistent
+  MH3.3:
+    verdict: real-symmetric angle formula duplicates C-MIX-001
+    issue: the angle is basis/convention dependent and has no physical sector or current map
+  MH3.4:
+    verdict: rejected as hierarchy-and-mixing evidence
+    issue: unequal singular values are merely order-one splitting, b remains independently declared, and no mass object exists
+  MH3.5:
+    verdict: narrow equal-matrix and parity guards survive
+    issue: identical inputs include both kappa and b, while diagonal matrices can still have arbitrary bases under degeneracy
+exact_source_reduction:
+  matrix: 'pi*A/16 * [[4,sqrt(3)*b],[sqrt(3)*b,3]]'
+  derivative_with_respect_to_kappa: zero matrix
+  determinant: '3*pi^2*A^2*(4-b^2)/256'
+  trace: '7*pi*A/16'
+declared_parameters:
+  kappa_u: 1/2
+  kappa_d: 2/3
+  b_u: 1/3
+  b_d: 1/4
+unverified_or_overclaimed:
+  - width-sourced texture difference or shared one-parameter structure
+  - actual C-QBL-003 mode compression
+  - physical Yukawa matrix, hierarchy, sectors, CKM, Cabibbo angle, or charged current

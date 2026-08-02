@@ -1,0 +1,32 @@
+campaign: P072
+claim: C-OVL-003
+recorded_at: '2026-08-03T08:00:00Z'
+artifacts:
+  canonical_module:
+    path: src/substrate_framework/overlap_compressions.py
+    sha256: 17d23cdade4915a2a2bdefe08a260e5bba98dba534760004a19ef0a8be6315aa
+    size_bytes: 11455
+  focused_tests:
+    path: tests/test_overlap_compressions.py
+    sha256: 39b07d72c124499c27fa667a786cb3b1e1e5acc6f6b674e9b9ca892d24eda2ee
+    size_bytes: 7878
+  primary_verifier:
+    path: campaigns/P072-mh3-overlap-compression/verify.py
+    sha256: 8ffe28c04adcb4c4f4f38951f9fc4ef6f36ba855d0c990ea4e6ad62f85207fbe
+    size_bytes: 11720
+  independent_verifier:
+    path: campaigns/P072-mh3-overlap-compression/reviews/independent_compression_review.py
+    sha256: 18a3c4a6273a5c079f38b49284dfaedf6048e00828d4297ecc7808ce14be7412
+    size_bytes: 6990
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_overlap_compressions.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/reviews/independent_compression_review.py
+tallies:
+  focused_tests: 28 passed
+  primary: ALL 42 CHECKS PASS [P072]
+  independent: ALL 23 CHECKS PASS [P072-INDEPENDENT]
+numpy_quadrature_note: >-
+  The exact canonical and verifier routes contain neither np.trapz nor
+  np.trapezoid. Sampled trapezoidal work elsewhere is routed through the
+  shared substrate_framework.numerics.trapezoid_integral compatibility API.

@@ -1,0 +1,28 @@
+attempt: 0002
+candidates: [B, C, D, E, F]
+status: positive_exact_objects_verified
+commands:
+  - .venv/bin/python -m pytest -q tests/test_overlap_compressions.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/reviews/independent_compression_review.py
+process_exit_status: 0
+tallies:
+  focused_tests: 28 passed
+  primary: ALL 42 CHECKS PASS [P072]
+  independent: ALL 23 CHECKS PASS [P072-INDEPENDENT]
+  full_workflow: 637 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - A bounded real multiplication operator compressed to one ordered orthonormal finite basis is Hermitian, obeys its multiplier's Rayleigh bounds, and transforms by unitary similarity under a common basis change.
+  - Parity forces a cross entry to vanish when the mode and multiplier parities have odd product; changing an even width cannot break that block structure.
+  - Two Hermitian compressions on one identified finite space have a common unitary eigenbasis exactly when their commutator vanishes; matrix difference and relative-basis unitarity are insufficient oracles.
+  - For C-QBL-003's actual even sech-squared and odd sech-tanh modes, the explicitly asymmetric profile A*sech(z)*(1+b*tanh(z)) gives matrix [[9*pi*A/32,sqrt(2)*A*b/5],[sqrt(2)*A*b/5,3*pi*A/16]].
+  - The actual matrix is independent of the common inverse width, and its nonzero cross term requires the new odd-profile parameter b.
+  - Phase, ordering, and degenerate-block freedoms prevent a nonidentity relative eigenbasis from being a physical observable without additional identifications and operators.
+mutations_rejected:
+  - omitted complex conjugation in the overlap and Gram forms
+  - nonzero even-profile overlap between opposite-parity modes
+  - width-only texture or commutator change after exact normalization
+  - matrix inequality as an eigenbasis-misalignment oracle
+  - independent phase or ordering representatives as invariant nonidentity evidence
+  - arbitrary basis selection inside a degenerate eigenspace
+  - physical Yukawa, generation, CKM, Cabibbo, hierarchy, or charged-current interpretation from compression algebra alone

@@ -80,7 +80,7 @@ Keep empirical comparators blinded until equations, conventions, criteria, and s
 
 Build the smallest dependency-first claim ladder. Implement reusable equations, constants, units, solvers, and transformations under `src/substrate_framework/`. Keep proposal scripts thin: import canonical functions and evaluate a candidate.
 
-Match implementation to the claim. Use exact symbolic algebra when an exact residual or identity is available, formal proof when the encoded theorem is the real obligation, and SciPy numerical methods when the claim is an IVP, BVP, spectral, optimization, integration, or PDE problem without a usable closed form. Reuse `substrate_framework.numerics` for common IVP, method-of-lines, BVP, and refinement evidence; the claim implementation must still own and expose its equation, discretization, boundary data, error norm, and physical acceptance thresholds.
+Match implementation to the claim. Use exact symbolic algebra when an exact residual or identity is available, formal proof when the encoded theorem is the real obligation, and SciPy numerical methods when the claim is an IVP, BVP, spectral, optimization, integration, or PDE problem without a usable closed form. Reuse `substrate_framework.numerics` for common IVP, method-of-lines, BVP, refinement evidence, and sampled trapezoidal integration; call its `trapezoid_integral` compatibility API instead of a version-specific NumPy alias. The claim implementation must still own and expose its equation, discretization, boundary data, error norm, and physical acceptance thresholds.
 
 Do not:
 

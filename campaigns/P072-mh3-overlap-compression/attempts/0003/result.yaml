@@ -1,0 +1,19 @@
+attempt: 0003
+candidate: E
+status: implementation_bookkeeping_repaired
+diagnosed_layer: implementation
+issue: >-
+  The first spectral-multiplicity implementation reported m^2-1 parameters for
+  an m-fold degenerate block while documenting freedom additional to the m
+  ordinary eigenvector phases. That quotient has dimension m^2-m.
+repair: >-
+  Count dim(U(m))-dim(U(1)^m)=m^2-m for each repeated eigenspace, retain the
+  full arbitrary U(m) statement separately, and make the twofold test require
+  two additional parameters rather than three.
+commands:
+  - .venv/bin/python -m pytest -q tests/test_overlap_compressions.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/verify.py
+process_exit_status: 0
+tallies:
+  focused_tests: 28 passed
+  primary: ALL 42 CHECKS PASS [P072]

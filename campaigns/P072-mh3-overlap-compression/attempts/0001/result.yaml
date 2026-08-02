@@ -1,0 +1,20 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_but_headline_not_established
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH3_overlap_feeds_mixing.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+surviving_fragments:
+  - A real multiplier gives a symmetric overlap compression.
+  - A declared odd profile dressing produces a cross-parity matrix element proportional to its free amplitude b.
+  - Identical nondegenerate real symmetric matrices can use the same eigenbasis and give identity relative rotation.
+failure_mechanism:
+  - Every normalized matrix entry is independent of kappa, so changing the displayed widths does not change the texture.
+  - The two source matrices differ only because the independent declared asymmetries b_u=1/3 and b_d=1/4 differ.
+  - The source uses an even sech mode rather than C-QBL-003's actual even sech-squared mode.
+  - The odd dressing is a new undeveloped profile premise, not the accepted even EM6 background or a derived gradient correction.
+  - The imported routine returns row transforms but the reported relative product uses the column-basis orientation already rejected in FG3's audit.
+  - Unitarity, nonidentity in chosen eigenvectors, and nondegenerate singular-value splitting do not construct physical sectors, masses, currents, or mixing.
+next_attempt: >-
+  Derive the general multiplication compression, actual-mode asymmetric matrix,
+  parity blocks, exact commutator criterion, and basis/degeneracy ledger.

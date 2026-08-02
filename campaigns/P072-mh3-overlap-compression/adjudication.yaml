@@ -1,0 +1,51 @@
+campaign: P072
+title: Exact multiplication-compression and basis-identifiability ledgers
+source_baseline: substrate@6d1f4e0
+source_units: [MH3]
+base_release: v0.65.0
+release_after_adjudication: v0.66.0
+adjudicated_at: '2026-08-03T08:10:00Z'
+selected_candidates:
+  - id: B
+    reason: The general compression supplies Hermiticity, Rayleigh bounds, and basis covariance.
+  - id: C
+    reason: The parity theorem excludes cross-mode entries for every centered even width.
+  - id: D
+    reason: The exact commutator criterion distinguishes common eigenbases from matrix difference.
+  - id: E
+    reason: Phase, ordering, degeneracy, and missing-map probes bound relative-basis meaning.
+  - id: F
+    reason: The actual quartic modes yield a conditional asymmetric cross term with its new premise exposed.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_asymmetric_source_proxy_and_equal_input_regression
+claims:
+  - id: C-OVL-003
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  exact_route: attempts/0002/result.yaml
+  bookkeeping_repair: attempts/0003/result.yaml
+  independent_review: reviews/independent_compression_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-OVL-003-review.md
+source_disposition:
+  MH3: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P072-mh3-overlap-compression/reviews/independent_compression_review.py
+  - .venv/bin/python -m pytest -q tests/test_overlap_compressions.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

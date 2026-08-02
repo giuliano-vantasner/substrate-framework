@@ -1,0 +1,28 @@
+campaign: P072
+frozen_before_source_body: true
+selected:
+  - id: B
+    reason: The general real multiplication compression supplies the basis-covariant positive object with Hermiticity and Rayleigh bounds.
+  - id: C
+    reason: Exact parity blocks prove that an even width cannot create the claimed cross-mode entry.
+  - id: D
+    reason: The commuting-Hermitian criterion supplies the invariant common-eigenbasis decision on one identified finite space.
+  - id: E
+    reason: Phase, ordering, degeneracy, and missing-space-map probes set the correct ceiling on relative eigenbases.
+  - id: F
+    reason: The actual accepted quartic modes admit a conditional nonzero cross term only after a separately declared odd multiplier component is added.
+not_selected_as_stated:
+  - id: A
+    retained: exact asymmetric source-proxy matrix and equal-input guard
+    rejected: width-driven texture, shared-parameter hierarchy, and physical mixing interpretation
+criteria_results:
+  accepted_dependency_closure: pass
+  hilbert_space_and_conjugation_bookkeeping: pass
+  parity_and_width_limits: pass
+  basis_covariance_and_spectral_invariants: pass
+  commutator_and_degeneracy_limits: pass
+  mutation_sensitivity: pass
+  parameter_economy: >-
+    The asymmetric counterexample requires one visible free odd-profile
+    parameter. It is conditional evidence, not a derived physical mechanism.
+comparator_use: none

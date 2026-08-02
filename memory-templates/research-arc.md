@@ -62,7 +62,7 @@ Build the smallest dependency-first ladder. Each row names the strongest practic
 | 1 |  |  |  |  | pending |
 
 ## Importable Implementation
-Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric.
+Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric. Route sampled trapezoidal integration through its compatibility helper rather than spelling a NumPy-version-specific alias; keep tractable exact integrals symbolic.
 
 ## Attempts
 Append one row per attempt. Preserve source, stdout/stderr, elapsed time, and exact command. Failure triggers the next route; it never closes the arc.

@@ -1,0 +1,10 @@
+source_unit: MH3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH3_overlap_feeds_mixing.py
+sha256: f33ab10dadee8ae4f747328f1fc593733942d18ccdb280ca6f21c3961e03c425
+size_bytes: 24259
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH3_overlap_feeds_mixing.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+runtime_seconds: 7.5
+environment_note: Executed against the hash-pinned predecessor file with exact SymPy arithmetic.
