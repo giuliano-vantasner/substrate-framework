@@ -1,0 +1,41 @@
+campaign: P075
+base_release: v0.68.0
+base_commit: 33210978dc6cf0a06d48ffd90e0ad559cfd4c2bf
+scientific_base_commit: 9b5d99d
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+artifacts:
+  source:
+    path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+    sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f
+    size_bytes: 17278
+  linear_systems:
+    path: src/substrate_framework/linear_systems.py
+    sha256: c22a768b0f82acfc0774e3fbeac2e59b1e3536b674a9bb1bf8f2248816687311
+    size_bytes: 1913
+  scale_constraints:
+    path: src/substrate_framework/scale_constraints.py
+    sha256: 18bcfd9d3d13fdbb4f84782a1f4b08dcfae7b33f41947854842087f8052253de
+    size_bytes: 12918
+  linear_system_tests:
+    path: tests/test_linear_systems.py
+    sha256: e3fe0fb8bd37568c0fe9c594208d21f994e9c24c75271f021d5656258dd5241b
+    size_bytes: 2365
+  scale_constraint_tests:
+    path: tests/test_scale_constraints.py
+    sha256: d3a4e74fd3e9483cc1d3a22d95597b1dc1b7aff7098ee62fe95e14740dcfcae5
+    size_bytes: 9709
+  frozen_contract:
+    path_at_preregistration: proposals/P075-as4-overdetermination-v2-audit/proposal.yaml
+    path: campaigns/P075-as4-overdetermination-v2-audit/proposal.yaml
+    preregistration_sha256: 93055ce21a0dd146aef3f782636edb8f6a2acd352aad0bcd05bafe064d4b447e
+    size_bytes_at_preregistration: 4807
+    note: Administrative status may change at adjudication; candidate and blinding fields remain frozen.
+  primary_verifier:
+    path: proposals/P075-as4-overdetermination-v2-audit/verify.py
+    sha256: 551fff9a4667563a6988c31181dcd6f87bce362da90849bbd21cb3f4cf9c5b75
+    size_bytes: 10676
+  independent_verifier:
+    path: proposals/P075-as4-overdetermination-v2-audit/reviews/independent_as4_review.py
+    sha256: 5424ff418f7d7b37b6bdefd3582d7afc75acb2a4d35629f05e2c50cf0fddd0ca
+    size_bytes: 6191
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

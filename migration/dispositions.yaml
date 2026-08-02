@@ -282,6 +282,41 @@ units:
       coupling, coefficient-cutoff identifiability, and source-normalization
       ledgers through canonical and independent symbolic routes. It uses no
       numerical integration or version-specific NumPy alias.
+  AS4:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-LIN-001
+      - C-IDN-001
+    duplicates:
+      - C-LIN-001
+      - C-IDN-001
+    duplicate_reason: >-
+      AS4's valid exact content is the coefficient-rank and left-null
+      specialization already accepted through C-LIN-001 and C-IDN-001: its
+      four declared rows have two coefficient directions and require two
+      right-hand-side compatibility relations. It adds no distinct theorem,
+      API, or consumer. Its physical rows and independence are not established,
+      generic symbolic right-hand sides are inconsistent, its free-length
+      guard asserts nullity zero while claiming nullity reopens, its dimension
+      guard mis-encodes the length row, and it supplies no observations or
+      covariance.
+    evidence:
+      - campaigns/P075-as4-overdetermination-v2-audit/reviews/source_adjudication.md
+      - campaigns/P075-as4-overdetermination-v2-audit/evidence/source-reproduction.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/evidence/source-audit.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/evidence/candidate-comparison.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/evidence/primary-provenance.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/attempts/0001/result.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/attempts/0002/result.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/attempts/0003/result.yaml
+      - campaigns/P075-as4-overdetermination-v2-audit/attempts/0004/result.yaml
+      - memory/vantasner/decisions/AS4-duplicate-review.md
+    note: >-
+      P075 independently derives augmented-rank branches, both compatibility
+      relations, nuisance-restored and additive-baseline counterexamples, and
+      covariance and provenance ceilings through exact symbolic routes. It
+      adds no claim or canonical API and uses no numerical quadrature or NumPy
+      integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

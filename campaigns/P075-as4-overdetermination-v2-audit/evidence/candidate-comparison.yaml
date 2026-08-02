@@ -1,0 +1,48 @@
+campaign: P075
+selection_basis: frozen_structural_criteria_before_source_body
+comparators_opened: false
+candidates:
+  A:
+    decision: rejected
+    reason: >-
+      Literal promotion fails accepted dependency closure, augmented-rank,
+      provenance, nuisance, covariance, and mutation-sensitivity gates.
+  B:
+    decision: selected_as_duplicate_specialization
+    reason: >-
+      Exact coefficient and augmented ranks, nullspaces, compatibility, and
+      conditional coordinate status are valid but already owned by C-LIN-001
+      and C-IDN-001.
+  C:
+    decision: selected_as_duplicate_specialization
+    reason: >-
+      Choosing gravity and hadronic as a spanning pair produces two conditional
+      left-null relations, exactly the compatibility content already accepted
+      in C-IDN-001.
+  D:
+    decision: selected_as_counterexample
+    reason: >-
+      Restoring the source's admitted free sector coefficients yields a
+      five-coordinate rank-four design with a mixed null direction, while an
+      additive inverse-G baseline destroys the constant gravity log row.
+  E:
+    decision: selected_as_scope_ceiling
+    reason: >-
+      Declared-covariance GLS changes the residual ledger but cannot be
+      instantiated from AS4, which supplies no covariance or stochastic model.
+  F:
+    decision: selected_as_verifier_audit
+    reason: >-
+      Incompatible right-hand sides, fabricated provenance labels, wrong
+      coefficients, and a symbolic fitted input preserve AS4's source verdicts
+      while breaking their intended interpretation.
+selected_result: >-
+  Retain AS4 as duplicate evidence for C-LIN-001 and C-IDN-001, reject its
+  physical over-determination and absolute-scale narrative, and add no claim or
+  canonical API.
+selection_not_based_on:
+  - empirical comparator values
+  - numerical closeness
+  - source pass tally
+  - chronology
+  - row count alone

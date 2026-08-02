@@ -1,0 +1,68 @@
+campaign: P075
+title: AS4 exact over-determination specialization and source-oracle audit
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS4]
+base_release: v0.68.0
+release_after_adjudication: v0.68.0
+adjudicated_at: '2026-08-02T19:02:40Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      The exact supplied-system classification survives but is already a
+      direct specialization of C-LIN-001 and C-IDN-001.
+  - id: C
+    reason: >-
+      The two redundant rows yield exact left-null compatibility relations,
+      also already explicit in C-IDN-001's accepted P065 evidence.
+  - id: D
+    reason: >-
+      Nuisance restoration and the additive inverse-G baseline expose the
+      source's hidden parameter assumptions without requiring a new API.
+  - id: E
+    reason: >-
+      C-GLS-001 supplies the exact covariance ceiling, but AS4 does not
+      instantiate it because no covariance is declared.
+  - id: F
+    reason: >-
+      Coefficient, right-hand-side, provenance, guard, and fitted-symbol
+      counterexamples demonstrate that the source tally is not headline-sensitive.
+competing_candidates:
+  - id: A
+    decision: rejected_for_missing_dependency_closure_augmented_consistency_provenance_nuisance_covariance_and_sensitive_headline_oracles
+claims: []
+reviewed_existing:
+  - id: C-LIN-001
+    decision: unchanged_general_rank_semantics_already_subsume_AS4
+  - id: C-IDN-001
+    decision: unchanged_accepted_P065_evidence_already_contains_AS4_directions_and_compatibility
+  - id: C-GLS-001
+    decision: unchanged_and_not_instantiated_without_covariance
+evidence:
+  primary_verifier: verify.py
+  failed_harness: attempts/0001/result.yaml
+  source_reproduction: attempts/0002/result.yaml
+  verifier_representation_failure: attempts/0003/result.yaml
+  adjudication_replay: attempts/0004/result.yaml
+  independent_rederivation: reviews/independent_as4_review.py
+  source_reproduction_record: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  duplicate_review: memory/vantasner/decisions/AS4-duplicate-review.md
+source_disposition:
+  AS4: duplicate_evidence
+duplicates:
+  AS4:
+    - C-LIN-001
+    - C-IDN-001
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P075-as4-overdetermination-v2-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P075-as4-overdetermination-v2-audit/reviews/independent_as4_review.py
+  - .venv/bin/python -m pytest -q tests/test_linear_systems.py tests/test_scale_constraints.py tests/test_induced_gravity.py tests/test_scale_transmutation.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

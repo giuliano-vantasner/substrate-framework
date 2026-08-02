@@ -1,0 +1,100 @@
+source_unit: AS4
+headline_verdict: duplicate_exact_structure_with_unestablished_physical_interpretation
+checks:
+  - id: AS4.0
+    source_verdict: pass
+    audit_verdict: symbol_introspection_not_no_fit_proof
+    reason: >-
+      Nonnumeric symbols can represent fitted or imported quantities, and the
+      predicate does not trace any right-hand side, offset, or observation.
+  - id: AS4.1
+    source_verdict: pass
+    audit_verdict: partial_matrix_shape_not_row_provenance_or_independence
+    reason: >-
+      The exact displayed matrix is valid as supplied data, but the check omits
+      three load-bearing x coefficients and stays green when each is mutated.
+      Rows two and four add no coefficient direction, and cited sector names
+      do not establish physical or statistical independence.
+  - id: AS4.2
+    source_verdict: pass
+    audit_verdict: exact_coefficient_rank_without_augmented_consistency
+    reason: >-
+      Rank two and coefficient nullity zero are exact. Generic symbolic right-
+      hand sides give augmented rank three, so uniqueness and coordinate
+      identification are available only after imposing both compatibility
+      relations. More equations than coordinates is only a count property.
+  - id: AS4.3
+    source_verdict: pass
+    audit_verdict: shape_arithmetic_with_unestablished_causal_reductions
+    reason: >-
+      The declared 4x5 and 4x2 matrices have the stated coefficient ranks and
+      column-count difference. The source does not derive its OD-v1 rows or
+      establish that AS1-AS3 physically eliminate the three named nuisance
+      columns. Accepted C-GRV-001 retains a free induced coefficient and an
+      allowed additive baseline.
+  - id: AS4.4
+    source_verdict: pass
+    audit_verdict: conditional_compatibility_with_insensitive_symbol_occurrence_oracle
+    reason: >-
+      Solving two supplied compatible rows conditionally gives formulas for
+      the other two. The actual check merely asks whether expressions contain
+      two symbols and accepts wrong coefficients; it supplies no observations,
+      uncertainty, covariance, or provenance and therefore establishes no
+      empirical prediction.
+  - id: AS4.G1
+    source_verdict: pass
+    audit_verdict: predicate_refutes_its_own_prose
+    reason: >-
+      The source matrix has rank three over three columns and nullity zero, so
+      it conditionally pins all coordinates. Changing the last extra-length
+      coefficient from one to two makes the dependent rows proportional and
+      actually reopens one null direction.
+  - id: AS4.G2
+    source_verdict: pass
+    audit_verdict: correct_rank_conclusion_from_mislabeled_dimension_row
+    reason: >-
+      With columns declared M,L,T, the source encodes a as (1,0,0) rather than
+      (0,1,0). Both the wrong matrix and the corrected a,hbar,c matrix have rank
+      three, so the zero-dimensionless-monomial conclusion survives, but the
+      rank-only predicate cannot validate the convention or any physical row.
+exact_specialization:
+  coefficient_rank: 2
+  augmented_rank_with_generic_rhs: 3
+  coefficient_row_dependencies: 2
+  coefficient_informative_rows: [true, false, true, false]
+  compatibility_relations:
+    - 2*g + r = 0
+    - -2*h + s = 0
+  unique_solution_if_compatible:
+    x: g/2
+    y: (g + 2*h)/(2*k)
+  accepted_owner: C-IDN-001
+nuisance_restoration:
+  coordinates: [x, y, log_s_G, log_kappa_s, log_c_CF4]
+  design_rank: 4
+  nullity: 1
+  x_identifiable: false
+  y_identifiable: false
+  implication: AS4's admitted free residual coefficients cannot be hidden in fixed offsets while claiming absolute coordinate closure.
+dependency_audit:
+  AS1: qualified_C-RGE-003_only_no_physical_QCD_or_absolute_scale
+  AS2: qualified_C-DIM-002_C-MED-001_C-MED-002_only
+  AS3: qualified_C-GRV-001_only_with_free_coefficient_and_baseline
+  CF4: qualified_C-RGE-001_C-RGE-002_C-DIM-007_only
+  OD: qualified_C-IDN-001_C-GLS-001_only
+  QCD3: qualified_C-LIE-001_C-RGE-001_C-RGE-002_only
+  S5: qualified_C-VIR-001_C-MED-001_C-SK-001_only
+  G1: pending_not_imported
+  G2: pending_not_imported
+  G5: pending_not_imported
+  M1: pending_not_imported
+  M2: pending_not_imported
+  QCD5: pending_not_imported
+selected_candidates: [B, C, D, E, F]
+rejected_candidate: A
+new_claims: []
+duplicates: [C-LIN-001, C-IDN-001]
+gls_ceiling: >-
+  C-GLS-001 can classify residuals only after a covariance with provenance is
+  declared. AS4 supplies no covariance and therefore does not duplicate or
+  instantiate that claim.

@@ -1,0 +1,21 @@
+attempt: 0003
+candidates: [B, C, D, E, F]
+status: failed_preserved
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P075-as4-overdetermination-v2-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P075-as4-overdetermination-v2-audit/reviews/independent_as4_review.py
+  - .venv/bin/python -m pytest -q tests/test_linear_systems.py tests/test_scale_constraints.py tests/test_induced_gravity.py tests/test_scale_transmutation.py
+process_exit_status: 1
+tallies:
+  primary: failed after 20 passing predicates
+  independent: failed on first predicate
+  affected_canonical_tests: 78 passed
+failures:
+  - The primary route expected determinant -1 for the correctly ordered a,hbar,c dimension rows, but direct expansion gives +1; full rank and zero dimension-kernel nullity are unchanged.
+  - The independent route compared the full 4x2 reduced-row-echelon matrix with a 2x2 identity rather than comparing its two-row pivot block and two zero rows.
+diagnosed_layer: verifier_representation
+repair: >-
+  Assert the exact determinant +1 and the complete 4x2 RREF structure. Do not
+  change the design matrix, right-hand sides, nuisance ledger, source audit, or
+  candidate selection.
+next_route: Rerun both repaired exact routes and the same affected canonical tests.

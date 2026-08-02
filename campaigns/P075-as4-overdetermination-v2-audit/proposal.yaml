@@ -1,0 +1,56 @@
+id: P075
+base_release: v0.68.0
+base_commit: 3321097
+scientific_base_commit: 9b5d99d
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS4]
+question: >-
+  Classify AS4's declared four-row, two-coordinate log system exactly and
+  determine whether it supplies physically independent absolute-scale
+  constraints or only a conditional full-column-rank solve plus two
+  left-null compatibility conditions already governed by accepted linear,
+  identifiability, and covariance ledgers.
+invariants:
+  - C-LIN-001 distinguishes equation count, coefficient rank, augmented rank, consistency, uniqueness, and redundant rows.
+  - C-IDN-001 identifies coordinates only for a consistent supplied system, carries row provenance, and does not turn left-null compatibility into evidence that rows are physical or independent.
+  - C-GLS-001 requires a declared positive-definite covariance before weighted residuals or statistical independence can be interpreted.
+  - C-RGE-003 supplies only a conditional one-loop two-length log relation and a common-scale null direction; it does not establish AS4's physical hadronic or confinement rows.
+  - C-GRV-001 supplies only a conditional gravity scaling row with a free induced coefficient and possible baseline; it does not establish AS4's gravity right-hand side or absolute scale.
+  - AS2, CF4, G1, G2, G5, M1, M2, QCD3, QCD5, and S5 remain pending or have narrower accepted mappings than AS4's physical narrative requires.
+  - Four declared rows on two coordinates can have coefficient rank at most two; full column rank does not by itself establish consistency, provenance, independence, covariance, or prediction of supplied right-hand sides.
+allowed_imports:
+  - C-LIN-001 and substrate_framework.linear_systems for exact coefficient and augmented-rank classification
+  - C-IDN-001 and substrate_framework.scale_constraints for exact log rows, nullspaces, compatibility conditions, coordinate identifiability, and reference covariance
+  - C-GLS-001 and substrate_framework.scale_constraints for residual diagnostics only when covariance is explicitly declared
+  - C-RGE-003 and C-GRV-001 only within their accepted conditional ceilings
+  - AS4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after this contract is frozen
+  - exact symbolic row coefficients and symbolic right-hand sides copied from AS4 with source provenance, but no empirical interpretation or independence assumption
+candidates:
+  - id: A
+    description: Reproduce AS4 literally and test whether every physical row, independence assertion, and absolute-identification conclusion has accepted dependency closure.
+  - id: B
+    description: Treat AS4 solely as a declared exact 4x2 linear system and derive coefficient rank, coordinate nullspace, left-nullspace, compatibility equations, and augmented-rank cases.
+  - id: C
+    description: Reduce the redundant rows to two primary rows plus two explicit compatibility predictions, retaining their conditional dependence on the supplied right-hand sides.
+  - id: D
+    description: Restore omitted sector-specific offsets or coefficients as nuisance coordinates and test whether the advertised absolute identification survives the expanded parameter ledger.
+  - id: E
+    description: Model crosschecks through provenance-bearing covariance and generalized least squares rather than treating row count as statistical independence.
+  - id: F
+    description: Construct incompatible right-hand-side and provenance counterexamples that preserve the coefficient rank while breaking consistency or physical inference.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for every row and right-hand side
+  - exact coefficient rank, augmented rank, right and left nullspaces, and compatibility relations
+  - parameter and nuisance economy without silently setting sector offsets, induced coefficients, or baselines
+  - distinction between algebraic direction, empirical independence, statistical covariance, consistency, inference, and prediction
+  - mutation sensitivity to row coefficients, right-hand sides, nuisance restoration, and covariance choices
+  - reuse of accepted canonical APIs without adding a duplicate claim or implementation
+claims_proposed:
+  - no new claim unless AS4 contains a nonduplicate exact specialization not entailed by C-LIN-001, C-IDN-001, and C-GLS-001
+comparator_blinding: >-
+  No empirical observable, fitted constant, later AS5 operating point, or
+  source verdict may select a candidate or enter a right-hand side before the
+  exact matrix, compatibility, provenance, nuisance, and covariance tests are
+  frozen. The generated queue synopsis exposes only symbolic navigation data.
+status: accepted

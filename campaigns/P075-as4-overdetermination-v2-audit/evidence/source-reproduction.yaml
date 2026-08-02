@@ -1,0 +1,22 @@
+source_unit: AS4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+source_sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f
+source_size_bytes: 17278
+reproduced_at: '2026-08-02T18:56:00Z'
+failed_harness_attempt:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+  working_directory: /home/dan/substrate
+  process_exit_status: 127
+  diagnosis: The repository-relative framework virtualenv does not exist under the predecessor working directory.
+command: python3 merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 7 CHECKS PASS
+quadrature_note: >-
+  AS4 and P075 use exact SymPy linear algebra. They perform no sampled
+  quadrature and call neither numpy.trapz nor a version-specific replacement.
+authority: hash_pinned_noncanonical_source_evidence

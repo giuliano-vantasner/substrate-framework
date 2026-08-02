@@ -1,0 +1,32 @@
+attempt: 0002
+candidate: A
+status: source_reproduced_and_qualified
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+  sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f
+  size_bytes: 17278
+command: python3 merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 7 CHECKS PASS
+surviving_evidence:
+  - The declared 4x2 coefficient matrix has exact rank two, zero coefficient nullity, and two row dependencies.
+  - Given compatible supplied right-hand sides, the two coordinates have a unique conditional solution and the dependent rows give two exact compatibility relations.
+  - The corrected M,L,T dimension matrix for the declared a,hbar,c primitives is also full rank, so dimensional analysis alone supplies no dimensionless monomial.
+failed_headline_mechanisms:
+  - AS4 never computes augmented rank or left-null residuals; with its generic symbolic right-hand side the augmented rank is three and the system is inconsistent until two compatibility equations are separately imposed.
+  - Its four rows provide only two coefficient directions, so the phrase four genuinely-independent chains is false as a structural statement and physical or statistical independence is not established.
+  - Keeping x and y symbolic is not a no-fit oracle, and solving them in terms of supplied observables is conditional inverse inference rather than emergence of an absolute scale.
+  - The AS1-AS3 reductions and sector normalizations exceed their accepted claims; in particular C-GRV-001 retains a free induced coefficient and possible additive baseline.
+  - AS4.G1 asserts rank three and nullity zero while its prose says the extra length reopens a null direction and makes the system underdetermined.
+  - AS4.4 checks only symbol occurrence in two expressions; it does not test observed compatibility, uncertainty, covariance, provenance, or even the exact expected coefficients.
+  - The source calls dimensionless residual coefficients harmless while silently placing them in fixed offsets; if they are unknown they are nuisance parameters, not supplied constants.
+diagnosed_layer: candidate_concept_dependency_closure_and_oracle_scope
+next_route: >-
+  Continue with Candidates B-F through the accepted exact diagnostic APIs and
+  an independent SymPy derivation, including inconsistent right-hand sides,
+  corrected free-length mutations, nuisance restoration, and covariance and
+  provenance ceilings.

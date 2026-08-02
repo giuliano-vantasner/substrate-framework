@@ -1,0 +1,18 @@
+attempt: 0001
+candidate: A
+status: failed_preserved
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+  sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f
+  size_bytes: 17278
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+working_directory: /home/dan/substrate
+process_exit_status: 127
+stderr: /bin/bash reported that .venv/bin/python did not exist relative to the predecessor working directory.
+diagnosed_layer: execution_harness
+scientific_verdict: not_run
+repair: >-
+  Use the source's declared python3 command from /home/dan/substrate. The
+  framework virtualenv is repository-relative and must not be addressed by a
+  relative path after changing working directories.
+next_route: Reproduce the same hash-pinned source without changing its inputs or assertions.
