@@ -1,0 +1,41 @@
+attempt: 0006
+candidates: [B, C, E]
+status: promotion_replay_passed
+primary_verifier:
+  process_exit_code: 0
+  terminal_tally: ALL 31 CHECKS PASS [P063]
+independent_verifier:
+  process_exit_code: 0
+  terminal_tally: ALL 20 CHECKS PASS [P063-INDEPENDENT]
+focused_replay:
+  process_exit_code: 0
+  terminal_tally: 50 passed
+  scope:
+    - tests/test_axial_ward.py
+    - tests/test_symmetry_breaking.py
+    - tests/test_explicit_breaking.py
+    - tests/test_governance.py
+    - tests/test_source_inventory.py
+    - tests/test_claim_inventory.py
+    - tests/test_repository_validation.py
+workflow_replay:
+  command: scripts/validate.sh
+  process_exit_code: 0
+  claims: 83 accepted of 83
+  migration_queue: 218 units, 157 pending, 0 partial
+  pytest_collection: 474 tests
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+gitnexus_post_change:
+  risk: MEDIUM
+  changed_indexed_symbols: 196
+  changed_files: 29
+  affected_processes: 4
+  interpretation: >-
+    All affected processes are newly added pion-pole-remainder paths through
+    the new axial module; no pre-existing canonical execution flow is affected.
+scientific_verdict: >-
+  Promote C-WID-001 and C-GTR-001 individually in v0.57.0. Qualify PG4:
+  its conditional zero-transfer algebra survives, but the mixed current
+  convention, imported physical premises, assigned discrepancy power,
+  solve-back prediction, and constructed guard do not.
+remaining_campaign_debt: []

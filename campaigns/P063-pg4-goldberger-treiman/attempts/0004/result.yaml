@@ -1,0 +1,20 @@
+attempt: 0004
+candidates: [B, C, E]
+status: failed
+command: .venv/bin/python -m pytest -q tests/test_axial_ward.py
+process_exit_status: 1
+completed_tests: 10
+failed_tests: 1
+diagnosis:
+  category: implementation
+  mechanism: >-
+    The newly added explicit induced-current sign test used the
+    pseudoscalar bilinear in its contracted current before binding the
+    already evaluated matrix element to a local name. The independent
+    representation's equivalent new sign predicate and all 31 primary
+    checks passed in the same run.
+physics_delta: none
+next_attempt: >-
+  Bind the explicit ubar*gamma5*u matrix element once, reuse it in both the
+  two-mass identity and induced-current contraction, and rerun the complete
+  focused module without changing the declared current or verdict.

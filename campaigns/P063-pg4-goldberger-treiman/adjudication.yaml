@@ -1,0 +1,68 @@
+campaign: P063
+title: Exact axial Ward, pion-pole, discrepancy, and PG4 Goldberger--Treiman audit
+source_baseline: substrate@6d1f4e0
+source_units: [PG4]
+base_release: v0.56.0
+release_after_adjudication: v0.57.0
+adjudicated_at: '2026-08-02T22:00:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B derives the convention-complete equal-mass on-shell axial
+      divergence from explicit Dirac algebra while retaining both form factors.
+  - id: C
+    reason: >-
+      Candidate C separates declared PCAC and pole dominance, derives the pole
+      residue and regular-remainder correction, and distinguishes the
+      zero-transfer, pion-pole, and chiral limits.
+  - id: E
+    reason: >-
+      Candidate E proves the exact analytic-discrepancy premise and exposes
+      the rank-one GT constraint's three free parameter directions.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_a_physical_GT_derivation_because_the_source_omits_the_induced
+      two_mass_scale_checks_only_zero_transfer_assigns_the_discrepancy_power
+      imports_PCAC_and_pole_dominance_and_uses_solve_back_as_prediction
+  - id: D
+    decision: >-
+      not_promoted_because_the_minimal_declared_Yukawa_model_fixes_g_A_to_one
+      while_a_general_axial_coefficient_adds_an_unresolved_premise_and_ontology
+claims:
+  - id: C-WID-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-GTR-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  rejected_source_route: attempts/0001/result.yaml
+  failed_structural_test: attempts/0002/result.yaml
+  failed_independent_oracle: attempts/0003/result.yaml
+  failed_sign_test_binding: attempts/0004/result.yaml
+  exact_routes: attempts/0005/result.yaml
+  promotion_replay: attempts/0006/result.yaml
+  independent_review: reviews/independent_axial_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  ward_claim_review: memory/vantasner/decisions/C-WID-001-review.md
+  gt_claim_review: memory/vantasner/decisions/C-GTR-001-review.md
+source_disposition:
+  PG4: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P063-pg4-goldberger-treiman/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P063-pg4-goldberger-treiman/reviews/independent_axial_review.py
+  - .venv/bin/python -m pytest -q tests/test_axial_ward.py tests/test_symmetry_breaking.py tests/test_explicit_breaking.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

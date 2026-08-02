@@ -3329,3 +3329,89 @@ claims:
     accepted_in: v0.56.0
     challenges: []
     supersedes: []
+  - id: C-WID-001
+    statement: >-
+      Declare Minkowski metric (+---), q=p'-p, Q^2=-q^2, positive equal
+      on-shell mass M, positive F and m_pi^2, dimensionless form factors, and
+      the current bracket [gamma^mu*G_A(Q^2)+q^mu*G_P(Q^2)/(2*M)]*gamma5.
+      Exact on-shell contraction gives normalized divergence
+      G_A-Q^2*G_P/(4*M^2). Separately declaring the normalized PCAC source
+      F*m_pi^2*G_piNN(Q^2)/(M*(m_pi^2+Q^2)) yields a generalized residual that
+      retains G_P independently. Under the additional pion-pole-dominance
+      premise G_P=4*M*F*G_piNN/(m_pi^2+Q^2), the residual reduces exactly to
+      G_A-F*G_piNN/M. Adding an induced-form-factor remainder R(Q^2) finite at
+      zero and at Q^2=-m_pi^2 changes that residual by
+      -Q^2*R/(4*M^2), leaves the pole residue
+      4*M*F*G_piNN(-m_pi^2) unchanged, and drops out only at zero transfer.
+      The PCAC kernel m_pi^2/(m_pi^2+Q^2) has zero-transfer-then-chiral limit
+      one, chiral-then-zero-transfer limit zero, and fixed path
+      Q^2=rho*m_pi^2 value 1/(1+rho). This exact conditional theorem derives
+      no QCD current or PCAC identity, pion-pole dominance, physical pion or
+      nucleon, coupling value, effective action, or substrate realization.
+    provenance: campaigns/P063-pg4-goldberger-treiman/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P063-pg4-goldberger-treiman/verify.py
+      - campaigns/P063-pg4-goldberger-treiman/attempts/0001/result.yaml
+      - campaigns/P063-pg4-goldberger-treiman/attempts/0005/result.yaml
+      - campaigns/P063-pg4-goldberger-treiman/reviews/independent_axial_review.py
+      - campaigns/P063-pg4-goldberger-treiman/evidence/primary-provenance.yaml
+      - campaigns/P063-pg4-goldberger-treiman/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-WID-001-review.md
+      - tests/test_axial_ward.py
+    assumptions:
+      - The metric, momentum-transfer sign, equal-mass on-shell spinors, dimensionless form-factor normalization, isospin factor, and current decomposition are declared exactly as stated.
+      - The normalized PCAC source and pion-nucleon form factor are conditional premises; pion-pole dominance is a further independent premise and not a consequence of on-shell Dirac algebra.
+      - The regular remainder and coupling are finite at the stated evaluation points, and the positive scales are nonzero; changing conventions requires an explicit conversion of every displayed factor and sign.
+      - Primary literature supplies scope and convention provenance only; no empirical or lattice value, QCD state construction, or fitted parameter is imported.
+    comparators: []
+    accepted_in: v0.57.0
+    challenges: []
+    supersedes: []
+  - id: C-GTR-001
+    statement: >-
+      Conditional on C-WID-001's distinction between zero-transfer and
+      pion-pole couplings, let m_pi^2 and g0 be positive and declare the
+      regular expansion G_piNN(-m_pi^2)=g0-s*m_pi^2+R*m_pi^4 together with
+      the separate zero-transfer relation M*g_A=F*g0. The discrepancy
+      Delta=1-M*g_A/(F*G_piNN(-m_pi^2)) then equals
+      m_pi^2*(-s+R*m_pi^2)/(g0-s*m_pi^2+R*m_pi^4), has leading coefficient
+      -s/g0, and tends to zero in the chiral limit. A square-root coupling
+      counterexample proves that current conservation without the regularity
+      premise does not force mass-squared scaling. Separately, the supplied
+      monomial equation g_piNN*F=g_A*M has exponent row (1,1,-1,-1), rank
+      one, and a three-dimensional nullspace; exact common-scale,
+      inverse-decay/coupling, and inverse-mass/axial rescalings preserve it.
+      Solving this equation for g_A or g_piNN is therefore invertible
+      bookkeeping, not prediction. This exact conditional theorem derives no
+      discrepancy coefficient, physical parameter, EFT, QCD relation, state
+      dictionary, or substrate realization.
+    provenance: campaigns/P063-pg4-goldberger-treiman/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-WID-001
+    evidence:
+      - campaigns/P063-pg4-goldberger-treiman/verify.py
+      - campaigns/P063-pg4-goldberger-treiman/attempts/0001/result.yaml
+      - campaigns/P063-pg4-goldberger-treiman/attempts/0005/result.yaml
+      - campaigns/P063-pg4-goldberger-treiman/reviews/independent_axial_review.py
+      - campaigns/P063-pg4-goldberger-treiman/evidence/primary-provenance.yaml
+      - campaigns/P063-pg4-goldberger-treiman/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-GTR-001-review.md
+      - tests/test_axial_ward.py
+    assumptions:
+      - The zero-transfer relation is separately imposed, the coupling expansion is regular in m_pi^2 with finite supplied coefficients, and its denominator is nonzero in the evaluated neighborhood.
+      - The discrepancy definition uses the stated zero-transfer and pion-pole evaluation points; a different sign, coupling definition, or normalization requires a new derivation.
+      - The monomial inputs and rescaling parameter are positive and otherwise independent; the nullspace families demonstrate nonidentifiability rather than physical symmetries.
+      - No phenomenological value or pending PG4, S1, or S2 premise enters the relation, expansion, coefficient, or rank calculation.
+    comparators: []
+    accepted_in: v0.57.0
+    challenges: []
+    supersedes: []

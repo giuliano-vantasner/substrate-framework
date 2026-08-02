@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 158
-  qualified: 53
+  pending_adjudication: 157
+  qualified: 54
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3802,8 +3802,32 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-WID-001
+  - C-GTR-001
+  qualification: PG4's zero-transfer residual, declared mass-squared form, and algebraic solve-back survive
+    only as narrow conditional bookkeeping. Its current omits the induced 2*M scale while retaining the
+    dimensionless pole formula, and its zero-transfer check cannot detect that mismatch because the induced
+    term vanishes there. It imports PCAC, pion-pole dominance, physical states, and every coupling; assigns
+    rather than derives the discrepancy power; and leaves three continuous parameter directions. The corrected
+    conditional theorem separates the generalized Ward identity from pole dominance, retains regular remainders
+    and distinct zero/pole coupling points, and exposes noncommuting chiral and zero-transfer limits.
+    PG4 establishes no physical GT prediction, discrepancy coefficient, QCD current, pion/nucleon dictionary,
+    or substrate realization.
+  evidence:
+  - campaigns/P063-pg4-goldberger-treiman/reviews/source_adjudication.md
+  - campaigns/P063-pg4-goldberger-treiman/evidence/source-reproduction.yaml
+  - campaigns/P063-pg4-goldberger-treiman/evidence/source-audit.yaml
+  - campaigns/P063-pg4-goldberger-treiman/evidence/primary-provenance.yaml
+  - campaigns/P063-pg4-goldberger-treiman/attempts/0001/result.yaml
+  - campaigns/P063-pg4-goldberger-treiman/attempts/0005/result.yaml
+  - memory/vantasner/decisions/C-WID-001-review.md
+  - memory/vantasner/decisions/C-GTR-001-review.md
+  note: P063 derives the convention-complete conditional on-shell divergence, PCAC/pole/remainder identities,
+    pole residue, limit-order theorem, analytic discrepancy, and GT identifiability ledger through canonical
+    and independent exact routes. It requires no numerical quadrature and introduces no deprecated NumPy
+    integration alias.
 - source_unit: D3S
   phase: phase-19
   path: merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py

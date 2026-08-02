@@ -138,6 +138,15 @@ Conditional on positive quark-mass sum m_q, positive decay scale F, positive con
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-GTR-001
+
+Conditional on C-WID-001's distinction between zero-transfer and pion-pole couplings, let m_pi^2 and g0 be positive and declare the regular expansion G_piNN(-m_pi^2)=g0-s*m_pi^2+R*m_pi^4 together with the separate zero-transfer relation M*g_A=F*g0. The discrepancy Delta=1-M*g_A/(F*G_piNN(-m_pi^2)) then equals m_pi^2*(-s+R*m_pi^2)/(g0-s*m_pi^2+R*m_pi^4), has leading coefficient -s/g0, and tends to zero in the chiral limit. A square-root coupling counterexample proves that current conservation without the regularity premise does not force mass-squared scaling. Separately, the supplied monomial equation g_piNN*F=g_A*M has exponent row (1,1,-1,-1), rank one, and a three-dimensional nullspace; exact common-scale, inverse-decay/coupling, and inverse-mass/axial rescalings preserve it. Solving this equation for g_A or g_piNN is therefore invertible bookkeeping, not prediction. This exact conditional theorem derives no discrepancy coefficient, physical parameter, EFT, QCD relation, state dictionary, or substrate realization.
+
+- Accepted in: `v0.57.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-WID-001
+
 ## C-GW-001
 
 In Euclidean three-space let n be a unit direction, P_ij=delta_ij-n_i*n_j, and let Lambda be the symmetric transverse- traceless projector. For every real symmetric tensor S, integral_{S^2} |Lambda(n) S|^2 dOmega equals (8*pi/5)*|STF(S)|^2, where STF(S)=S-delta*Tr(S)/3; pure trace is therefore annihilated. Conditional on a declared far-field waveform h_TT=(A/r)*Lambda[ddot Q] and declared flux dP/dOmega=B*r^2*<dot h_TT:dot h_TT>, angular integration gives P=(8*pi/5)*B*A^2*<|STF(dddot Q)|^2>. The factors A and B are premises, not consequences of the angular integral. If the normalized source moment of C-MOM-001 is I_STF and Q_s=s*I_STF for nonzero s, the same waveform requires A_s=A_1/s and the power coefficient multiplying |dddot Q_s|^2 scales as 1/s^2. Thus the particular declared inputs A_1=2*G and B=1/(32*pi*G) give G/5 for I_STF, whereas the convention Q=3*I_STF gives G/45 for |dddot Q|^2, not G/5. For a single harmonic Q=C*cos(omega*t)+S*sin(omega*t), the exact cycle average of the squared STF third derivative is omega^6*(|STF(C)|^2+|STF(S)|^2)/2. These results establish only exact projector, angular, convention, and conditional-functional algebra; they establish no gravitational action or field equation, retarded solution, physical Isaacson flux, measured coupling, universal lowest radiating multipole, arbitrary-source radiation, nonlinear gravity, 1+1 lift, or substrate realization.
@@ -704,6 +713,15 @@ Conditional on C-VTX-001 with (v,n,lambda,g)=(1,1,2,1), there is resolution-boun
 - Verification: `numeric_evidence`
 - Compatibility: `compatible_extension`
 - Dependencies: C-VTX-001
+
+## C-WID-001
+
+Declare Minkowski metric (+---), q=p'-p, Q^2=-q^2, positive equal on-shell mass M, positive F and m_pi^2, dimensionless form factors, and the current bracket [gamma^mu*G_A(Q^2)+q^mu*G_P(Q^2)/(2*M)]*gamma5. Exact on-shell contraction gives normalized divergence G_A-Q^2*G_P/(4*M^2). Separately declaring the normalized PCAC source F*m_pi^2*G_piNN(Q^2)/(M*(m_pi^2+Q^2)) yields a generalized residual that retains G_P independently. Under the additional pion-pole-dominance premise G_P=4*M*F*G_piNN/(m_pi^2+Q^2), the residual reduces exactly to G_A-F*G_piNN/M. Adding an induced-form-factor remainder R(Q^2) finite at zero and at Q^2=-m_pi^2 changes that residual by -Q^2*R/(4*M^2), leaves the pole residue 4*M*F*G_piNN(-m_pi^2) unchanged, and drops out only at zero transfer. The PCAC kernel m_pi^2/(m_pi^2+Q^2) has zero-transfer-then-chiral limit one, chiral-then-zero-transfer limit zero, and fixed path Q^2=rho*m_pi^2 value 1/(1+rho). This exact conditional theorem derives no QCD current or PCAC identity, pion-pole dominance, physical pion or nucleon, coupling value, effective action, or substrate realization.
+
+- Accepted in: `v0.57.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
 
 ## C-WIL-001
 

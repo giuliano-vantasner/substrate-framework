@@ -1,0 +1,14 @@
+Command: python3 merged-framework/bridges/phase-18/bridge_PG4_goldberger_treiman.py
+Working directory: /home/dan/substrate
+Source baseline: substrate@6d1f4e0
+Source SHA-256: e13e68536d14bedb1c8fa7ec10110172d0a1b73e08ce365863013dc7db66f1e9
+Environment: Python 3.12.2; NumPy 1.26.4; SciPy 1.14.1; SymPy 1.14.0
+Elapsed: 0.47 seconds
+Exit status: 0
+Terminal tally: ALL 4 CHECKS PASS
+
+Printed checks:
+1. The declared q-squared-zero matching residual has the same algebraic form as the declared GT residual.
+2. The explicitly assigned expression K*m_pi^2 is proportional to m_pi^2 and tends to zero.
+3. Solving the declared GT equation and substituting the solution back is an identity.
+4. Replacing the declared source by an offset source and imposing GT leaves the constructed offset residual nonzero.

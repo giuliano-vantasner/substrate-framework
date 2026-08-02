@@ -1,0 +1,22 @@
+attempt: 0003
+candidates: [B, C, E]
+status: failed
+command: >-
+  PYTHONPATH=src .venv/bin/python -u
+  proposals/P063-pg4-goldberger-treiman/reviews/independent_axial_review.py
+process_exit_status: 1
+completed_checks: 14
+failed_check: nonanalytic coupling supplies a counterexample to mass-squared scaling
+diagnosis:
+  category: verifier_assumption
+  mechanism: >-
+    The independent counterexample reused a real symbol whose sign and
+    nonzero value were intentionally unconstrained for the pole-point ledger.
+    SymPy therefore could not certify that the one-sided divergent quotient
+    equals positive infinity, even though the intended counterexample used a
+    positive baseline coupling.
+physics_delta: none
+next_attempt: >-
+  Give the counterexample its own strictly positive baseline symbol while
+  leaving every Ward, pole, remainder, limit-order, discrepancy, rank, and
+  effective-model predicate unchanged; rerun the entire independent review.

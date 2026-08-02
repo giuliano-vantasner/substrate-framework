@@ -1,0 +1,82 @@
+id: P063
+base_release: v0.56.0
+base_commit: 756c264
+source_baseline: substrate@6d1f4e0
+source_units: [PG4]
+question: >-
+  Derive a reusable, convention-explicit account of the on-shell nucleon
+  axial-current divergence, pion-pole residue, generalized Ward identity,
+  Goldberger--Treiman limit, discrepancy terms, and parameter identifiability;
+  then audit whether PG4 actually derives those objects or instead assumes
+  PCAC, pion-pole dominance, physical state dictionaries, and the couplings it
+  claims to predict.
+invariants:
+  - C-SYM-001 and C-CHI-001 supply only conditional classical coordinate-model Hessian statements, not a quantum axial current, pion pole, nucleon state, decay constant, or chiral Ward identity.
+  - C-CHI-002 and C-GMR-001 expose convention and free-input ledgers but derive no physical pion, PCAC relation, nucleon coupling, or axial charge.
+  - A form-factor Ward identity constrains a combination of functions; it does not separately determine every form factor or coupling without pole, regularity, normalization, and state premises.
+  - The q-squared-to-zero limit, the pion-pole point, and the chiral mass-to-zero limit are distinct and their order may be load bearing.
+  - An algebraic solve-back is invertible bookkeeping, not a prediction of the solved parameter.
+  - Pending S1 and S2 and all phenomenological g_A, g_piNN, F_pi, M_N, and discrepancy values supply no accepted premise and cannot select a candidate.
+allowed_imports:
+  - C-SYM-001 and C-CHI-001 only for their explicit classical and nonphysical ceilings
+  - C-CHI-002 for fixed Pauli-generator and coordinate-normalization bookkeeping, not a physical pion action
+  - C-GMR-001 for the declared chiral-mass/free-input ledger, not as a derived PCAC theorem
+  - C-QBL-003 for the separation of classical spectra from physical particle labels and matrix elements
+  - exact finite-dimensional Dirac-matrix algebra, on-shell spinor equations, Lorentz covariance, and isospin-generator bookkeeping under one frozen convention
+  - a separately declared axial-current form-factor decomposition, PCAC identity, pion interpolating-field matrix element, and pion-nucleon vertex, each retained as an explicit conditional premise
+  - audited primary literature for the scope and convention dependence of the Goldberger--Treiman relation and discrepancy
+  - SymPy exact algebra, limits, residues, series, and free-symbol analysis
+  - PG4 at substrate@6d1f4e0 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce PG4 literally and retain only subclaims whose current,
+      on-shell divergence, pole residue, limits, normalization factors,
+      dependencies, and physical interpretation are evaluated sensitively.
+  - id: B
+    description: >-
+      Derive the general on-shell axial-current form-factor Ward identity from
+      an explicit gamma-matrix, metric, momentum-transfer, generator, and
+      spinor normalization convention, keeping axial and induced-
+      pseudoscalar form factors independent.
+  - id: C
+    description: >-
+      Add an explicit pion pole plus analytic remainder and derive the exact
+      residue, q-squared-to-zero relation, pion-pole-point relation, chiral
+      limit, order-of-limits behavior, and every term in a generalized
+      Goldberger--Treiman discrepancy.
+  - id: D
+    description: >-
+      Construct a declared minimal chiral nucleon-pion effective model and
+      derive its one-pion axial coupling and mass/coupling relation by a
+      Noether or field-redefinition route, retaining the model declaration and
+      its fixed or free g_A as premises.
+  - id: E
+    description: >-
+      Prove the parameter-identifiability ledger for the conditional GT
+      equation and generalized Ward identity, including continuous families
+      with the same constrained combination and mutations that distinguish a
+      derived residue from solve-back arithmetic.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and compatibility with existing classical and nonphysical ceilings
+  - exact Lorentz, gamma5, isospin-generator, state-normalization, sign, and factor-of-two consistency
+  - explicit separation of declared current identities, pole dominance, analytic remainders, couplings, masses, and physical dictionaries
+  - assumption and parameter economy with correct dimensions and free-symbol count
+  - correct zero-momentum, pion-pole, chiral, heavy-mass, zero-coupling, and order-of-limits behavior
+  - sensitivity to momentum convention, gamma5 anticommutation, generator normalization, pole sign, regular remainder, and coupling mutations
+  - independent trace/spinor or effective-action rederivation without copied target formulas or phenomenological values
+claims_proposed:
+  - provisional C-WID-001 conditional on-shell axial form-factor divergence and pole/remainder theorem
+  - provisional C-GTR-001 conditional Goldberger--Treiman limit, discrepancy, and identifiability ledger
+  - provisional C-EFT-002 declared-model chiral nucleon-pion relation only if Candidate D closes naturally
+selected_candidate: [B, C, E]
+comparators_blinded_until: >-
+  The queue synopsis necessarily exposes g_piNN*F_pi=g_A*M_N, an asserted
+  mass-squared discrepancy, and algebraic solution for g_A. No numerical
+  coupling, mass, decay constant, discrepancy, source coefficient, or target
+  factor may enter a convention choice, identity, limit, candidate ranking,
+  mutation threshold, or claim boundary. The current/state conventions,
+  candidates, structural criteria, and identifiability gates are frozen here
+  before PG4's executable or printed results are opened.
+status: accepted

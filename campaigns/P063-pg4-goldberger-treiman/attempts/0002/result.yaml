@@ -1,0 +1,18 @@
+attempt: 0002
+candidates: [B, C, E]
+status: failed
+command: .venv/bin/python -m pytest -q tests/test_axial_ward.py
+process_exit_status: 1
+completed_tests: 9
+failed_tests: 2
+diagnosis:
+  category: representation
+  mechanism: >-
+    Two exact rational expressions were algebraically identical but had
+    different expanded/factored SymPy trees. The tests used structural Python
+    equality instead of simplifying their differences to zero.
+physics_delta: none
+next_attempt: >-
+  Replace only the two structural comparisons by exact simplified-residual
+  checks and rerun all unchanged dimension, gamma-matrix, Ward, pole,
+  remainder, limit-order, discrepancy, and identifiability predicates.

@@ -1,0 +1,33 @@
+attempt: 0005
+candidates: [B, C, E]
+status: exact_primary_and_independent_routes_passed
+primary_verifier:
+  command: >-
+    PYTHONPATH=src .venv/bin/python -u
+    proposals/P063-pg4-goldberger-treiman/verify.py
+  process_exit_status: 0
+  terminal_tally: ALL 31 CHECKS PASS [P063]
+independent_verifier:
+  command: >-
+    PYTHONPATH=src .venv/bin/python -u
+    proposals/P063-pg4-goldberger-treiman/reviews/independent_axial_review.py
+  process_exit_status: 0
+  terminal_tally: ALL 20 CHECKS PASS [P063-INDEPENDENT]
+focused_tests:
+  command: .venv/bin/python -m pytest -q tests/test_axial_ward.py
+  process_exit_status: 0
+  terminal_tally: 11 passed
+verified_scope:
+  - dimension-complete Minkowski axial-current convention with an explicit induced-term spinor check
+  - equal-mass on-shell two-mass divergence and normalized spacelike-transfer form
+  - declared generalized PCAC source kept separate from pion-pole dominance
+  - exact pole residue at the pion-pole coupling point and a finite regular remainder
+  - noncommuting zero-transfer and chiral limits with proportional paths
+  - analytic mass-squared discrepancy factor and a nonanalytic counterexample
+  - rank-one GT constraint with three exact free parameter directions
+  - source convention, literal-discrepancy, full-matching, pole-sign, and solve-back mutations
+interpretation_ceiling: >-
+  These exact routes derive conditional form-factor, pole/remainder, limit,
+  discrepancy, and identifiability statements. They do not derive a QCD
+  current or PCAC identity, physical pion or nucleon, pion-pole dominance,
+  coupling value, chiral effective action, or substrate realization.

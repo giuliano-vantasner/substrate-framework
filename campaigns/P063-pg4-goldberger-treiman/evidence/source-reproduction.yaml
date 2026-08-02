@@ -1,0 +1,18 @@
+source_unit: PG4
+source_baseline: substrate@6d1f4e0
+source_path: merged-framework/bridges/phase-18/bridge_PG4_goldberger_treiman.py
+source_sha256: e13e68536d14bedb1c8fa7ec10110172d0a1b73e08ce365863013dc7db66f1e9
+reproduced_at: '2026-08-02T21:20:00Z'
+command: python3 merged-framework/bridges/phase-18/bridge_PG4_goldberger_treiman.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+elapsed_seconds: 0.47
+process_exit_status: 0
+terminal_tally: ALL 4 CHECKS PASS
+quadrature_note: >-
+  PG4 is pure SymPy and uses no numerical quadrature, numpy.trapz,
+  numpy.trapezoid, or compatibility dispatch.

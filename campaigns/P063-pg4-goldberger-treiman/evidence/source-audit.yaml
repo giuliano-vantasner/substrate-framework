@@ -1,0 +1,46 @@
+source_unit: PG4
+headline_verdict: not_established
+checks:
+  - id: PG4.1
+    source_verdict: pass
+    audit_verdict: conditional_zero_transfer_residual_only
+    reason: >-
+      The source imports its current decomposition, on-shell divergence, PCAC
+      source, pole saturation, induced form factor, and physical dictionaries.
+      It then checks only that the residual at q-squared zero has the named GT
+      form. The induced term vanishes at that point, so the check neither
+      derives nor tests its pole coefficient. Moreover, q_mu*G_P is paired
+      with the pole formula for q_mu*G_P/(2*M_N), mixing dimensions and a
+      factor of 2*M_N.
+  - id: PG4.2
+    source_verdict: pass
+    audit_verdict: declared_mass_squared_ansatz
+    reason: >-
+      The source sets R=K*m_pi^2 and then proves that this assigned expression
+      is proportional to m_pi^2 and vanishes. The m_pi-squared behavior is not
+      derived from PCAC. It requires a regular chiral expansion or EFT input;
+      the PCAC pole kernel itself has noncommuting zero-transfer and chiral
+      limits.
+  - id: PG4.3
+    source_verdict: pass
+    audit_verdict: invertible_bookkeeping
+    reason: >-
+      Solving one supplied monomial equation and back-substituting proves no
+      hidden additive constant in that equation, but leaves three independent
+      parameter directions and predicts none of the physical inputs.
+  - id: PG4.GUARD
+    source_verdict: pass
+    audit_verdict: constructed_offset_not_pole_oracle
+    reason: >-
+      The guard assumes GT, inserts an unrelated source F_pi*g+1 with no unit
+      for the offset, and recovers minus two. It does not construct a current,
+      inspect a rational pole, or show that the baseline pole identity follows
+      from accepted dynamics.
+dependencies:
+  PG1: qualified_classical_content_only
+  S1: pending_not_imported
+  S2: pending_not_imported
+selected_candidates: [B, C, E]
+deferred_candidate: D
+rejected_candidate: A
+proposed_claims: [C-WID-001, C-GTR-001]

@@ -1,0 +1,27 @@
+topic: axial nucleon form factors, PCAC, pion-pole dominance, and Goldberger-Treiman limits
+sources:
+  - title: Nucleon axial-vector and pseudoscalar form factors using twisted-mass fermion ensembles at the physical point
+    authors: [Constantia Alexandrou, Simone Bacchio, Martha Constantinou, Jacob Finkenrath, Roberto Frezzotti, Bartosz Kostrzewa, Giannis Koutsou, Gregoris Spanoudes, Carsten Urbach]
+    publication: Physical Review D 109, 034503 (2024)
+    doi: 10.1103/PhysRevD.109.034503
+    url: https://doi.org/10.1103/PhysRevD.109.034503
+    audited_content: >-
+      Equations 5 and 11-23 fix the dimensionless induced-pseudoscalar
+      convention q_mu*G_P/(2*m_N), the normalized form-factor PCAC identity,
+      pion-pole residue, coupling at Q-squared=-m_pi-squared, chiral-limit GT
+      relation, and the separate chiral-EFT d18 premise behind an
+      m_pi-squared discrepancy.
+  - title: Axial Nucleon and Nucleon to Delta form factors and the Goldberger-Treiman Relations from Lattice QCD
+    authors: [C. Alexandrou, G. Koutsou, Th. Leontiou, J. W. Negele, A. Tsapalis]
+    publication: Physical Review D 76, 094511 (2007), erratum D 80, 099901 (2009)
+    arxiv: '0706.3011'
+    url: https://arxiv.org/abs/0706.3011
+    audited_content: >-
+      The generalized relation uses G_A+q-squared*G_p/(4*m_N-squared) in the
+      timelike-q convention and treats pion-pole dominance as an assumption;
+      its ratios distinguish the general PCAC relation from the simplified
+      pole-dominance relation.
+scope_note: >-
+  These primary sources establish standard convention and conditional-scope
+  checks. Their QCD/lattice results, empirical parameters, and physical state
+  constructions are not imported as framework claims.

@@ -1,0 +1,39 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_rejected
+source_unit: PG4
+source_baseline: substrate@6d1f4e0
+source_sha256: e13e68536d14bedb1c8fa7ec10110172d0a1b73e08ce365863013dc7db66f1e9
+command: python3 merged-framework/bridges/phase-18/bridge_PG4_goldberger_treiman.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+elapsed_seconds: 0.47
+process_exit_status: 0
+terminal_tally: ALL 4 CHECKS PASS
+observations:
+  - PG4 reproduces its four symbolic checks and printed Goldberger--Treiman headline.
+  - The source explicitly imports PCAC, the nucleon axial matrix-element decomposition, pion-pole dominance, physical state and coupling definitions, and the nucleon mass.
+  - No numerical comparator is used by the executable checks.
+diagnosis:
+  category: target_statement_and_verifier
+  mechanism:
+    - The displayed current uses q_mu*G_P while the pole formula 4*M_N*F_pi*g/(m_pi^2-q^2) belongs to the dimensionless convention q_mu*G_P/(2*M_N); the source mixes the two conventions.
+    - PG4 never constructs gamma matrices or on-shell spinors. It declares the divergence and checks only that its q-squared-zero residual equals a separately named GT residual, where the induced term vanishes.
+    - The full source matching expression is not required to vanish, and the pole coefficient is not derived from the current or PCAC definitions.
+    - The claimed discrepancy is introduced literally as R=K*m_pi^2; its proportionality and vanishing limit therefore restate the declaration.
+    - Current conservation as m_pi tends to zero does not by itself prove GT because the PCAC pole kernel has noncommuting zero-transfer and chiral limits and the physical coupling is defined at the moving pion pole.
+    - Solving the one GT equation for g_A and substituting back is invertible algebra with three remaining parameter degrees of freedom, not a prediction.
+    - The guard assumes the GT relation, replaces the source by F_pi*g+1 with an undeclared unit for one, and checks the constructed offset; it evaluates neither pole absence nor a derived current.
+verdict: >-
+  The native process and tally are valid reproduction evidence. PG4 contains
+  useful conditional form-factor algebra but does not derive a physical axial
+  current, pion/nucleon identity, pole dominance, discrepancy coefficient, or
+  substrate Goldberger--Treiman theorem.
+next_attempt: >-
+  Implement the convention-complete on-shell divergence, generalized PCAC
+  identity, pole residue, distinct limit orders, analytic discrepancy ledger,
+  and free-parameter family before freezing a primary verifier.
