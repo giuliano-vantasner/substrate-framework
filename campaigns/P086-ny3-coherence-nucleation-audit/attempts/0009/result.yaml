@@ -1,0 +1,36 @@
+attempt: 0009
+candidates: [C, F, H, I]
+status: targeted_adjudication_validated
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+  - .venv/bin/python -m pytest -q tests/test_coherence_gates.py tests/test_radial_energy.py
+  - .venv/bin/python coherence_array.py from /home/dan/substrate/engineering/spark_discharge
+  - .venv/bin/python verify.py from /home/dan/substrate/engineering/spark_discharge
+scientific_tallies:
+  primary: ALL 37 CHECKS PASS [P086]
+  independent: ALL 12 CHECKS PASS [P086-INDEPENDENT]
+  focused_tests: 21 passed
+  coherence_consumer: process exit 0
+  engineering_consumer: ALL 61 CHECKS PASS
+process_status: 0
+environment_repair: >-
+  The first full engineering replay exited 1 before checks because the local
+  framework virtual environment lacked the consumer's declared scikit-fem
+  dependency. Installing scikit-fem 12.0.2 into that environment allowed the
+  unchanged hash-pinned verifier to pass all 61 checks. No repository source,
+  scientific predicate, or threshold changed.
+positive_result:
+  - The exact iid phase-ensemble expectation, Gaussian pair coherence, normalization covariance, conditional continuous threshold, and activated factor are reusable and mutation sensitive.
+  - The source-specific threshold and rate-ratio examples reproduce but reverse under admissible scale mutations.
+  - The full consumer confirms directional N-squared enhancement alongside phase-independent total N emission.
+adjudication:
+  disposition: qualified
+  accepted_claims: [C-COH-001]
+  rejected_interpretations:
+    - effective temperature or total population energy derived from directional intensity
+    - dependency-closed material nucleation or stochastic rate
+    - gate-to-nuclear-channel coupling or event payload
+pending:
+  - registry, release, generated-state, queue, claim-review, and integrated promotion replay
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

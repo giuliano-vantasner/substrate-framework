@@ -1,0 +1,51 @@
+campaign: P086
+base_release: v0.74.0
+base_commit: 3d162b6
+scientific_base_commit: 265b2ee
+accepted_claims_used:
+  C-RG-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/radial_energy.py
+    use: declared_capillary_energy_and_strict_maximum_only
+  C-DIM-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/dimensional_analysis.py
+    use: dimensionless_coefficient_ceiling_only
+  C-DIM-003:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_provenance.py
+    use: imported_coordinate_ceiling_only
+  C-SK-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/skyrme_relations.py
+    use: conditional_energy_ratio_and_physical_prediction_ceiling_only
+predecessor_evidence:
+  NY3:
+    sha256: b6fc332266e7795ca57ce657a5c57e196dbca78f7ffe219d29a9dfb56fbf8e88
+    git_blob: 77ac82592da90e707cac9278df68dbb8b60966f7
+    authority: noncanonical_hash_pinned_attempt_evidence
+  rung091:
+    sha256: 5872457368e81ad07760f17ebebe5b522c2f7a66acce0a1a37802ed3f91d323d
+    git_blob: e2980b67737bfec9ed7f303619d5ebb4122e0ead
+    authority: noncanonical_hash_pinned_dependency_evidence
+  rung092:
+    sha256: 5d71804a3a613300284e9c33dd8218b4bdbeda0788a365a0a7e5725040b55695
+    git_blob: 23944243e2f5d23ff0ff9b4f0fc105511c70f04f
+    authority: noncanonical_hash_pinned_dependency_evidence
+  BD1:
+    sha256: 42579012eda87243639248664c6f90945c454046aa66c8de166ad6d2e594abc7
+    git_blob: df313ad5586ce3288cf6f7b46a319c7426f7c9b0
+    disposition: pending_adjudication
+  BD3:
+    sha256: 8a8f2138c548d3ed90785fc3ea82302d39d71d4832cb3761f429938d9b94b950
+    git_blob: e3064ae21212a760fccb93fd0c054f1789b269eb
+    disposition: pending_adjudication
+contracts:
+  proposal_sha256: e7cbaf88d2fd8a3b3b86ece255de2e3fd35b822dbc4f343c70c78a5eab6cfbb1
+  memory_contract_sha256: 9f95de472160e0f5f4206c4e93c9a6bbac0ef137e4f5e4fd3c41d6e063445053
+  freeze_sha256: 23b01500e51dc7a980a61b9f3ec5e7705a03327f5a88022c6a74a285c6f53b31
+exact_oracle: SymPy finite-sum algebra, Gaussian characteristic integral, quadratic roots, derivatives, limits, capillary relative height, source AST, hashes, mutations, and queue closure
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

@@ -1,0 +1,15 @@
+attempt: 0008
+candidates: [D, I]
+status: failed_independent_unsupported_property
+command: PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+process_status: 1
+tally_before_failure: 10 checks passed
+failure: >-
+  The verifier queried a nonexistent SymPy `is_dimensionless` property on an
+  exponential expression after every preceding exact check passed.
+repair: >-
+  Prove the structural point directly: introduce an independent positive rate
+  prefactor, show it is absent from the exponential factor, and show the rate
+  divided by that prefactor returns the factor.
+next_attempt: Replay the repaired independent route and focused tests.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

@@ -1,0 +1,43 @@
+campaign: P086
+selection_frozen_before_source_body: true
+criteria_order:
+  - accepted dependency closure for state, coherence, normalization, scale, barrier, rate, channel, and consumer
+  - exact dimensions, domains, thresholds, monotonicity, limits, and mutation sensitivity
+  - separation of directional intensity, total energy, ensemble expectation, activation factor, rate, and payload
+  - parameter economy with every scale and prefactor explicit
+  - nonduplication against accepted capillary, dimensional, and Skyrme claims
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: Fifteen checks reproduce, but two scales are inserted or conditional and the channel coupling is absent.
+  B:
+    decision: selected_as_conditional_threshold_core
+    reason: The declared interpolation has an exact unique continuous root, endpoint limits, and a necessary E/theta greater than one ordering condition.
+  C:
+    decision: selected_as_C-COH-001_core
+    reason: The iid equal-amplitude phasor expectation independently derives N+N(N-1)V and Gaussian V=exp(-variance), with normalization and deterministic-phase counterexamples explicit.
+  D:
+    decision: selected_as_conditional_factor_ceiling
+    reason: Exact exponential calculus survives only as a dimensionless activated factor; a rate needs a separate prefactor and kinetic model.
+  E:
+    decision: rejected_absent_dynamics
+    reason: NY3 supplies no operational phase observable, population equation, stochastic process, or independent escape evidence.
+  F:
+    decision: rejected_absent_channel
+    reason: Scale separation provides no interaction, state map, reaction branch, deposition law, or governed nuclear consumer.
+  G:
+    decision: selected_as_sensitivity_evidence
+    reason: Per-source normalization, antiphase configuration, E/theta below one, N=1, and scale mutations change load-bearing verdicts.
+  H:
+    decision: selected_as_source_oracle_audit
+    reason: Literal bands and three-point samples are separated from exact derivatives, roots, and dependency tests.
+  I:
+    decision: selected_as_new_claim
+    reason: No accepted claim owns the iid phase-ensemble expectation, Gaussian pair coherence, normalization ceiling, general threshold root, or conditional activated-factor ledger.
+selected_claims: [C-COH-001]
+dependencies: []
+physical_ceiling:
+  - no emitter population, phase dynamics, coherence preparation, or observable normalization is derived
+  - directional expected intensity is not total or conserved energy and is not an effective temperature without a separate map
+  - no material barrier, stochastic prefactor, nucleation rate, or precursor identity is established
+  - no nuclear interaction, reaction branch, deposition law, event payload, or engine replacement is established

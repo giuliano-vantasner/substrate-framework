@@ -1,0 +1,28 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H, I]
+status: source_reproduced_headline_rejected
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY3_coherence_nucleation_threshold.py
+  - hash-pinned read-only inspection of rung091, rung092, BD1, BD3, and engineering/spark_discharge consumers
+scientific_tallies:
+  source: ALL 15 CHECKS PASS
+  rung091_noncanonical_evidence: ALL 21 CHECKS PASS
+  rung092_noncanonical_evidence: ALL 20 CHECKS PASS
+  BD1_pending_evidence: ALL 18 CHECKS PASS
+  BD3_pending_evidence: ALL 16 CHECKS PASS
+process_status: 0
+source_stdout_sha256: c84d610aeeb2c724225e1e2557b0da90dd267afc50ca8c8be81f6fa56bbdb569
+positive_result:
+  - The capillary maximum and relative height reproduce exactly.
+  - The declared population interpolation has an exact conditional threshold and activated-factor calculus.
+  - The predecessor directional-intensity consumer exposes the equal-amplitude phase-ensemble theorem as a distinct candidate.
+headline_failure:
+  - The N-squared quantity is an on-axis quadratic observable while the same consumer fixes total emission at N times the per-source power.
+  - The source inserts its barrier and per-breather scales and supplies no population Hamiltonian, effective-temperature map, or stochastic rate prefactor.
+  - BD1 and BD3 are pending; NY1 and NY2 supply no accepted nuclear payload or channel.
+  - No interaction maps barrier crossing to a reaction, branch, deposition law, or event consumer.
+next_attempt: >-
+  Extract the exact iid phase-ensemble, normalization, threshold, and
+  activated-factor theorem into a pure API, independently rederive it, and
+  retain every physical interpretation as an explicit ceiling.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

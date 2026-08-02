@@ -1,0 +1,17 @@
+attempt: 0007
+candidates: [D, I]
+status: failed_independent_sign_assumption
+command: PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+process_status: 1
+tally_before_failure: 9 checks passed
+failure: >-
+  The composed activated factor used a positive but not explicitly
+  unit-bounded symbolic coherence with an arbitrary positive continuous
+  population. SymPy therefore could not prove the interpolated scale positive
+  on the verifier's broader symbolic domain.
+repair: >-
+  Evaluate the barrier and coherence derivative signs at the explicitly
+  admissible populations n=1 and n=2, where positivity is manifest. The
+  canonical API continues to enforce its declared domains.
+next_attempt: Replay the repaired independent route and focused tests.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

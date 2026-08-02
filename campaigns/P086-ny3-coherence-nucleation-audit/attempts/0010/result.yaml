@@ -1,0 +1,37 @@
+attempt: 0010
+candidates: [B, C, D, G, H, I]
+status: promotion_gate_pending
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY3_coherence_nucleation_threshold.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P086-ny3-coherence-nucleation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+  - .venv/bin/python -m pytest -q tests/test_coherence_gates.py tests/test_radial_energy.py
+  - .venv/bin/python verify.py from /home/dan/substrate/engineering/spark_discharge
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+scientific_tallies:
+  source: ALL 15 CHECKS PASS
+  primary: ALL 37 CHECKS PASS [P086]
+  independent: ALL 12 CHECKS PASS [P086-INDEPENDENT]
+  focused_canonical_tests: 22 passed
+  engineering_consumer: ALL 61 CHECKS PASS
+  focused_governance_tests: 17 passed
+  integrated: 807 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+process_status: 0
+positive_result:
+  - C-COH-001 is implemented as a pure exact API with independent rederivation and load-bearing mutations.
+  - NY3 is qualified at claim level; no effective-temperature, material nucleation, nuclear-channel, or payload statement is promoted.
+adjudication:
+  disposition: qualified
+  accepted_claims: [C-COH-001]
+  release: v0.75.0
+queue_after:
+  pending: 134
+  partially_migrated: 0
+  migrated: 3
+  qualified: 72
+  duplicate_evidence: 8
+  out_of_scope: 1
+pending: []
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

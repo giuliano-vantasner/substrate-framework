@@ -1,0 +1,19 @@
+attempt: 0005
+candidates: [C, I]
+status: failed_independent_normal_form
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+process_status: 1
+tallies:
+  primary: ALL 37 CHECKS PASS [P086]
+  independent_before_failure: 0
+failure: >-
+  The fresh combinatorial expression and its target polynomial were
+  algebraically identical but compared with structural equality after only
+  one side had been expanded.
+repair: >-
+  Compare the expanded difference to zero. No equation, premise, threshold,
+  or expected result changes.
+next_attempt: Replay the unchanged primary route, repaired independent route, and focused tests.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

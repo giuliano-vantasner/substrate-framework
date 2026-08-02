@@ -677,6 +677,46 @@ units:
       ledgers through primary and independent exact routes. It adds no claim,
       release, external mutation, or canonical API and uses no numerical
       quadrature or NumPy integration alias.
+  NY3:
+    disposition: qualified
+    accepted_claims:
+      - C-COH-001
+    qualification: >-
+      NY3 contains the exact iid equal-amplitude directional expectation
+      I1*(N+N*(N-1)*V), its centered-Gaussian V=exp(-variance)
+      specialization, explicit normalization dependence, and a separately
+      conditional continuous threshold and activated-factor ledger. Its
+      source inserts the barrier, per-breather scale, population, and disputed
+      NY1/NY2 payload. The predecessor consumer conserves total emission at
+      N*I1 while only its on-axis intensity reaches N^2*I1. BD1 and BD3 remain
+      pending, and no accepted population Hamiltonian, effective-temperature
+      map, stochastic rate prefactor, precursor identity, nuclear interaction,
+      reaction branch, deposition law, or barrier-aware consumer closes the
+      claimed firing mechanism.
+    evidence:
+      - campaigns/P086-ny3-coherence-nucleation-audit/reviews/source_adjudication.md
+      - campaigns/P086-ny3-coherence-nucleation-audit/evidence/source-reproduction.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/evidence/source-audit.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/evidence/consumer-audit.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/evidence/candidate-comparison.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/evidence/primary-provenance.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0001/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0002/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0003/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0004/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0005/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0006/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0007/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0008/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0009/result.yaml
+      - campaigns/P086-ny3-coherence-nucleation-audit/attempts/0010/result.yaml
+      - memory/vantasner/decisions/C-COH-001-review.md
+    note: >-
+      P086 derives the exact phase-ensemble, Gaussian, normalization,
+      threshold, activated-factor, mutation, consumer, dependency, and
+      source-oracle ledgers through primary and independent symbolic routes.
+      Canonical and campaign work uses no numerical quadrature or NumPy
+      integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

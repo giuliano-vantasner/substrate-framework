@@ -1,0 +1,35 @@
+campaign: P086
+consumer: /home/dan/substrate/engineering/spark_discharge/coherence_array.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 7e1bd3cb1afeaca4c5f2af7ff817422ff84ddabf095e632c20b90aab5efa573d
+git_blob: bd5c4d2c063262abf14f91a394642365d2b4dbe7
+direct_replay:
+  command: .venv/bin/python coherence_array.py from /home/dan/substrate/engineering/spark_discharge
+  exit_status: 0
+  stdout_bytes: 776
+  stdout_sha256: c425907874c040ea1b573844f4dfd5278d7b998405ed6752124265053c3456be
+  observed_at_N16:
+    aligned_on_axis: 256
+    total_emission: 16
+full_verifier:
+  path: /home/dan/substrate/engineering/spark_discharge/verify.py
+  sha256: 11c0f7b448a44545fb161701cb7fa10b6c22fd4e183d66bfc2752afaead82d5e
+  git_blob: 07c4bd8e07e30b9789da62307d12234482b8c069
+  first_exit_status: 1
+  first_failure: ModuleNotFoundError for declared dependency skfem before any check
+  environment_repair: installed scikit-fem 12.0.2 into the local framework virtual environment
+  replay_exit_status: 0
+  terminal_tally: ALL 61 CHECKS PASS
+  stdout_bytes: 19
+  stdout_sha256: a3a68dc197cfe87b33372a78495660c4145e08b47d083e2c59fd30d3adbcab4b
+semantic_audit:
+  - array_on_axis_power implements I1*(N+N*(N-1)*V) with V=exp(-phase_rms^2)
+  - array_total_power returns N*I1 independently of phase and says beam narrowing compensates the directional enhancement
+  - spark_fom explicitly labels the N-squared phased-array law imported
+  - the module contains no E_star or Theta_eff barrier implementation
+  - nucleation_power multiplies an independently supplied event count by the disputed NY1/NY2 payload and does not derive either
+verdict: >-
+  The consumer supports the exact directional phase-ensemble theorem and
+  directly contradicts treating N-squared on-axis intensity as extra total
+  population energy. Its 61-check pass is regression evidence for its own
+  supplied engineering model, not evidence for a nuclear channel.

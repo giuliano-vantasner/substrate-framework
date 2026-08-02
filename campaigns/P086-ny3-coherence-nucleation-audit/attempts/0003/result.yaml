@@ -1,0 +1,19 @@
+attempt: 0003
+candidates: [B, C, D, G, I]
+status: failed_verifier_representation
+command: PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/verify.py
+process_status: 1
+tally_before_failure: 24 checks passed
+failure: >-
+  The primary verifier passed a symbolic population interpolation whose unit-
+  interval coherence obligation was external to SymPy into the public
+  positive-scale guard. The API correctly refused an expression it could not
+  prove positive. No scientific identity or threshold predicate failed.
+repair: >-
+  Verify the generic activated factor with an independently positive scale
+  symbol, and test its composition with the population law only on explicitly
+  admissible populations and coherences. Keep the public domain guard intact.
+next_attempt: >-
+  Apply only the verifier representation repair and replay both exact routes
+  plus focused package tests.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

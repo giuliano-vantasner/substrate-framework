@@ -1,0 +1,16 @@
+attempt: 0004
+candidates: [C, H, I]
+status: failed_source_token_probe
+command: PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/verify.py
+process_status: 1
+tally_before_failure: 30 checks passed
+failure: >-
+  The semantic source probe searched for "the cell's on-axis directivity"
+  while the pinned source says "cell's on-axis directivity". The adjacent
+  executable Theta_eff and crossing tokens were present. This was an overly
+  specific lexical article, not a failed scientific predicate.
+repair: >-
+  Match the exact pinned phrase while retaining the executable-function and
+  crossing tokens in the same conjunctive check.
+next_attempt: Replay both exact routes and focused package tests unchanged.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

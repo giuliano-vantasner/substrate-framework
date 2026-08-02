@@ -35,6 +35,13 @@ from .circular_pair import (
     conditional_equal_mass_circular_waveform,
     equal_mass_circular_pair_moments,
 )
+from .coherence_gates import (
+    activated_relative_response,
+    continuous_population_threshold,
+    gaussian_phase_pair_coherence,
+    iid_equal_amplitude_expected_intensity,
+    population_activation_scale,
+)
 from .axisymmetric_radiation import (
     ConditionalAxisymmetricRadiationCoefficients,
     conditional_axisymmetric_radiation_coefficients,
@@ -636,6 +643,7 @@ __all__ = [
     "SU3TraceFiveCohomology",
     "VortexParameters",
     "VortexSolution",
+    "activated_relative_response",
     "angular_log_coefficient",
     "affine_unification_scale",
     "alternating_trace",
@@ -688,6 +696,7 @@ __all__ = [
     "conditional_anw_mass",
     "conditional_axisymmetric_stf_power",
     "conditional_axisymmetric_radiation_coefficients",
+    "continuous_population_threshold",
     "conditional_real_m2_natural_axis_waveform",
     "conditional_real_m2_power",
     "conditional_scaled_stf_power",
@@ -800,6 +809,7 @@ __all__ = [
     "quartic_qball_residual",
     "project_sine_harmonics",
     "positive_kinetic_mass_evidence",
+    "population_activation_scale",
     "radial_harmonic_energy_density",
     "radial_harmonic_kinematics",
     "radial_quartic_potential",
@@ -883,6 +893,8 @@ __all__ = [
     "euler_lagrange_expression",
     "fundamental_generators",
     "fundamental_commutant_basis",
+    "gaussian_phase_pair_coherence",
+    "iid_equal_amplitude_expected_intensity",
     "invariants",
     "solve_euler_lagrange_acceleration",
     "structure_constant",

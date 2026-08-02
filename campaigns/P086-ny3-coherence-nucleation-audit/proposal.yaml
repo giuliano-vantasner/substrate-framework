@@ -1,0 +1,64 @@
+id: P086
+base_release: v0.74.0
+base_commit: 3d162b6
+scientific_base_commit: 265b2ee
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [NY3]
+question: >-
+  Determine whether NY3 derives a dependency-closed coherence-controlled
+  nucleation mechanism and nuclear-channel coupling, or only conditional
+  population-scaling, capillary-barrier, and Arrhenius identities whose
+  physical premises and payload remain unaccepted; terminally adjudicate every
+  NY3 subclaim and promote any genuinely distinct exact theorem individually.
+invariants:
+  - C-RG-001 supplies a declared capillary energy with a strict maximum at T/P; it does not derive a material barrier, stochastic escape law, or discharge channel.
+  - Coherent amplitude addition, incoherent ensemble averaging, local intensity, total energy, and an effective temperature are different objects and cannot be exchanged without an accepted normalization and state model.
+  - An N-squared intensity law follows only from a declared equal-amplitude phase-aligned sum; it does not by itself create energy, establish a population Hamiltonian, or identify a thermal scale.
+  - An Arrhenius expression is a conditional rate law requiring a positive prefactor, barrier, effective scale, stochastic dynamics, and domain; monotonicity cannot derive those premises.
+  - BD1 and BD3 remain pending source units and cannot supply accepted material, drive, barrier, or ignition dependencies.
+  - NY1 and NY2 are duplicate evidence only for C-SK-001; neither establishes a multi-Skyrmion reaction, nuclear payload, or coupling from a medium gate.
+  - Gate and payload coordinates remain independent unless an accepted interaction and consumer map them; a large scale separation is not a causal coupling.
+allowed_imports:
+  - exact positive-real algebra, finite complex amplitude sums, elementary exponential calculus, and dimension bookkeeping
+  - C-RG-001 only as its accepted conditional capillary energy and maximum, with physical realization excluded
+  - C-DIM-002 and C-DIM-003 only as dimensionless-parameter and imported-coordinate ceilings
+  - C-SK-001 only as its accepted conditional ratio and physical-interpretation ceiling
+  - P084, P085, NY1, and NY2 only as terminal duplicate evidence, not as authority for a nuclear yield or channel
+  - BD1 and BD3 only as hash-pinned pending navigation evidence whose claims cannot close NY3 dependencies
+  - NY3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce NY3 literally and test whether its coherence observable, effective scale, barrier, rate, nuclear channel, and consumer have accepted dependency closure.
+  - id: B
+    description: Treat the advertised population scale as a declared interpolation and derive its exact threshold, monotonicity, limiting cases, and free-coordinate ledger without assigning physical coherence or temperature.
+  - id: C
+    description: Derive coherent and incoherent scaling from a finite complex-amplitude ensemble, separating pointwise intensity, ensemble expectation, destructive interference, unequal amplitudes, and fixed-total normalization.
+  - id: D
+    description: Compose C-RG-001 with a separately declared positive Arrhenius law and derive only the exact relative barrier, rate monotonicity, and threshold inequalities supported by those premises.
+  - id: E
+    description: Require an operational phase-coherence observable, population dynamics, stochastic escape process, and independent rate evidence before interpreting algebraic thresholds as ignition.
+  - id: F
+    description: Audit the claimed gate-to-payload firewall and require an accepted state map, reaction interaction, branch, deposition law, and runtime consumer before calling barrier crossing a nuclear event.
+  - id: G
+    description: Construct parameter and normalization counterfamilies showing which thresholds and rates can be tuned to arbitrary positive targets while preserving dimensions and source-style algebra.
+  - id: H
+    description: Audit every source predicate for sensitivity to phase, normalization, population exponent, barrier, rate prefactor, and missing channel coupling instead of accepting the terminal tally.
+  - id: I
+    description: Compare any surviving exact theorem and proposed API against C-RG-001, C-DIM-002, C-DIM-003, and existing probability or coherence ledgers; add nothing without distinct content and a governed consumer.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for the population state, coherence observable, normalization, energy or temperature map, barrier, stochastic rate, channel coupling, and consumer
+  - exact dimensions, positivity domains, threshold inequalities, monotonicity, limiting cases, normalization covariance, and mutation sensitivity
+  - separation of pointwise interference intensity, integrated or conserved energy, ensemble expectation, effective temperature, activation barrier, event rate, and event payload
+  - parameter economy without silently fixing per-object scale, coherence interpolation, rate prefactor, barrier inputs, or payload
+  - nonduplication against C-RG-001, C-DIM-002, C-DIM-003, C-SK-001, P084, P085, and existing canonical consumers
+claims_proposed:
+  - no new claim unless Candidate I demonstrates a distinct reusable conditional coherence-threshold or activation theorem with complete assumptions and a governed consumer
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. The generated queue synopsis
+  has already exposed the candidate N versus N-squared and Arrhenius forms, but
+  until the freeze the NY3 body, literal constants, checks, executable output,
+  numerical scales, payload ratio, source citations, and consumer
+  interpretations remain closed.
+status: accepted

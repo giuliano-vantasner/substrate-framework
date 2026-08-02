@@ -1,0 +1,17 @@
+campaign: P086
+source_unit: NY3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-24/bridge_NY3_coherence_nucleation_threshold.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY3_coherence_nucleation_threshold.py
+git_blob: 77ac82592da90e707cac9278df68dbb8b60966f7
+sha256: b6fc332266e7795ca57ce657a5c57e196dbca78f7ffe219d29a9dfb56fbf8e88
+bytes: 8668
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY3_coherence_nucleation_threshold.py
+exit_status: 0
+terminal_tally: ALL 15 CHECKS PASS
+stdout_bytes: 136
+stdout_sha256: c84d610aeeb2c724225e1e2557b0da90dd267afc50ca8c8be81f6fa56bbdb569
+authority: noncanonical_hash_pinned_attempt_evidence
+quadrature:
+  np.trapz: absent
+  np.trapezoid: absent

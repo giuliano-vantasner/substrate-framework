@@ -1,0 +1,15 @@
+attempt: 0006
+candidates: [B, C, I]
+status: failed_independent_radical_normal_form
+command: PYTHONPATH=src .venv/bin/python proposals/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+process_status: 1
+tally_before_failure: 7 checks passed
+failure: >-
+  SymPy retained different but equivalent radical forms for
+  sqrt(E/theta)-E/theta and sqrt(E/theta)*(1-sqrt(E/theta)); the explicit
+  above-, below-, and at-one sign probes had passed inside the same predicate.
+repair: >-
+  Simplify the difference of the two exact forms instead of requiring
+  structural equality. Preserve all sign cases and assumptions.
+next_attempt: Replay the repaired independent route and focused tests.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

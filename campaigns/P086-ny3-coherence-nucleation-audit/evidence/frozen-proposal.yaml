@@ -1,0 +1,23 @@
+campaign: P086
+frozen_before_source_opening: true
+proposal_path: proposals/P086-ny3-coherence-nucleation-audit/proposal.yaml
+proposal_sha256: e7cbaf88d2fd8a3b3b86ece255de2e3fd35b822dbc4f343c70c78a5eab6cfbb1
+memory_contract_path: memory/vantasner/proposals/P086-ny3-coherence-nucleation-audit.md
+memory_contract_sha256: 9f95de472160e0f5f4206c4e93c9a6bbac0ef137e4f5e4fd3c41d6e063445053
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P086-ny3-coherence-nucleation-audit.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+queue_synopsis_disclosure: >-
+  Generated navigation metadata had already exposed the candidate N versus
+  N-squared population laws, threshold forms, Arrhenius dependence, named
+  dependencies, and qualitative gate/payload split. It did not open the source
+  implementation, literal constants, predicate structure, executable output,
+  source citations, or consumer details.
+comparators_blinded_at_freeze:
+  - NY3 source body, literal equations beyond the generated synopsis, checks, and executable output
+  - numerical barrier, per-object, threshold, and payload scales
+  - payload-to-gate ratio and any tolerance or comparison band
+  - source citation bodies and their claimed authority
+  - downstream consumer implementation and physical channel interpretations

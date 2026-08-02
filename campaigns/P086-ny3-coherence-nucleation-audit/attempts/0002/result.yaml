@@ -1,0 +1,20 @@
+attempt: 0002
+candidates: [B, C, D, G, I]
+status: failed_implementation_representation
+command: .venv/bin/python -m pytest -q tests/test_coherence_gates.py
+process_status: 1
+tally: 1 failed, 12 passed
+failure: >-
+  The threshold round-trip test fed a mathematically positive quadratic root
+  back through the public positive-domain guard, but SymPy did not infer that
+  positivity from the unsimplified radical. The threshold formula itself was
+  not contradicted; the test mixed an input-domain API check with an exact
+  rederivation obligation.
+repair: >-
+  Check the root against the independently written defining polynomial, while
+  retaining the public guard for caller-supplied inputs. Do not weaken any
+  domain, predicate, or expected result.
+next_attempt: >-
+  Repair only the representation of the round-trip oracle, then run the
+  focused exact suite and mutation-sensitive campaign verifier.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

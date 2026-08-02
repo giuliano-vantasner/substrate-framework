@@ -1,0 +1,68 @@
+campaign: P086
+source_unit: NY3
+source_check_count: 15
+checks:
+  - id: NY3.1
+    source_predicate: critical radius R_star=T/P
+    verdict: valid_duplicate
+    reason: Follows exactly from C-RG-001's accepted capillary energy.
+  - id: NY3.2
+    source_predicate: relative activation height E_star=pi*T^2/P
+    verdict: valid_consequence
+    reason: Exact subtraction from the accepted energy; the additive core cancels.
+  - id: NY3.3
+    source_predicate: critical radius is a concave barrier top
+    verdict: valid_duplicate
+    reason: C-RG-001 already states the unique strict global maximum.
+  - id: NY3.4
+    source_predicate: inserted 2 eV barrier lies in a declared 0.01 to 10 eV band
+    verdict: literal_input_check
+    reason: The band does not derive the barrier or a material realization.
+  - id: NY3.5
+    source_predicate: 16*pi times empirical electron energy lies in a MeV band
+    verdict: rejected_physical_interpretation
+    reason: P084 and P085 retain the empirical input and reject the nuclear-payload reading.
+  - id: NY3.6
+    source_predicate: inserted gate is much smaller than supplied payload
+    verdict: conditional_arithmetic_only
+    reason: Scale separation neither derives either scale nor couples them.
+  - id: NY3.7
+    source_predicate: fully coherent threshold is below incoherent threshold
+    verdict: qualified
+    reason: sqrt(x)<x holds only for x=E/theta greater than one; it reverses below one.
+  - id: NY3.8
+    source_predicate: endpoint thresholds obey sqrt relation
+    verdict: accepted_in_C-COH-001
+    reason: Exact consequence of the separately declared interpolation.
+  - id: NY3.9
+    source_predicate: N=16 aligned population crosses the barrier
+    verdict: source_specific_regression
+    reason: Follows from inserted 2 eV and 0.05 eV values and reverses under admissible unit-scale mutation.
+  - id: NY3.10
+    source_predicate: N=16 incoherent population does not cross
+    verdict: source_specific_regression
+    reason: Follows from the same inserted values and reverses under admissible mutation.
+  - id: NY3.11
+    source_predicate: activated factor increases from incoherent to aligned at N=16
+    verdict: accepted_conditionally_in_C-COH-001
+    reason: Exact only after declaring the population scale; N=1 gives no coherence dependence.
+  - id: NY3.12
+    source_predicate: three sampled visibility values are monotone
+    verdict: weak_regression
+    reason: C-COH-001 replaces the three-point check with an exact derivative and its domain.
+  - id: NY3.13
+    source_predicate: aligned to incoherent activated-factor ratio exceeds ten
+    verdict: input_conditioned_regression
+    reason: The exact exp(75/32) value depends on the inserted barrier, unit scale, and N=16.
+  - id: NY3.14
+    source_predicate: supplied Skyrme coordinate lies between 20 and 30 MeV
+    verdict: rejected_physical_interpretation
+    reason: A broad comparator band cannot turn C-SK-001 into an event payload.
+  - id: NY3.15
+    source_predicate: gate and payload are both framework supplied with no import
+    verdict: rejected
+    reason: The gate and per-object values are inserted, BD1/BD3 are pending, and NY1/NY2 supply no accepted payload.
+headline_verdict: >-
+  NY3 contains a valid conditional phase-ensemble and threshold theorem but
+  does not derive total population energy, effective temperature, a material
+  nucleation rate, a nuclear channel, or an event payload.
