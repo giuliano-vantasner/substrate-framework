@@ -1,0 +1,17 @@
+source_unit: OM1
+source_baseline: substrate@6d1f4e0
+source_path: merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py
+source_sha256: c5af6786d4873675ddb552c4a0ae222e4ee3ab7472b74844b28dc4d257358007
+reproduced_at: '2026-08-03T01:30:00Z'
+command: python3 merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+quadrature_note: >-
+  OM1 and P066 use exact finite algebra and no numerical quadrature,
+  numpy.trapz, numpy.trapezoid, or shared trapezoid compatibility dispatch.

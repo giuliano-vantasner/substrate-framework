@@ -1,0 +1,27 @@
+source unit: OM1
+source baseline: substrate@6d1f4e0
+source sha256: c5af6786d4873675ddb552c4a0ae222e4ee3ab7472b74844b28dc4d257358007
+command: python3 merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py
+working directory: /home/dan/substrate
+environment: Python 3.12.2; NumPy 1.26.4; SciPy 1.14.1; SymPy 1.14.0
+process exit status: 0
+
+Reproduced sections:
+  OM1.1: one check classifies the two characters of C2.
+  OM1.2: one check evaluates five locally copied formulas at selected inputs.
+  OM1.3: one check evaluates corresponding squares or double loops at +1.
+  OM1.G: one check rejects the selected primitive C3/C4 characters.
+  OM1.G2: one check evaluates two declared exchange phases and labels them distinct.
+
+Printed headline:
+  BRIDGE OM1 ESTABLISHED -- the single (-1) is ONE algebraic identity.
+
+Terminal tally:
+  ALL 5 CHECKS PASS
+
+Audit note:
+  The native tally is valid attempt evidence. OM1.1 is narrow exact parity
+  algebra already covered by C-TOP-001. The cross-oracle collapse remains a set
+  equality of scalar outputs without typed quotient or representation maps,
+  and the Z4 guard omits the valid character k -> (-1)^k. See result.yaml and
+  evidence/source-audit.yaml.

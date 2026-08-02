@@ -1320,3 +1320,34 @@ units:
       independent symbolic routes. It uses no numerical quadrature or NumPy
       integration alias and preserves all rows, covariance, and intervals as
       supplied provenance-bearing inputs.
+  OM1:
+    disposition: qualified
+    accepted_claims:
+      - C-TOP-001
+      - C-CHR-001
+    qualification: >-
+      OM1's unique nontrivial C2 character and selected conditional sign
+      evaluations are exact, but its cross-sector collapse is not. It copies
+      formulas from pending B1, G2, NA1, T1Z2, and W7, reduces their outputs to
+      one SymPy scalar set, and constructs no common typed domain, quotient
+      maps, representation intertwiners, operators, or accepted physical
+      identifications. Separate +1 double-loop values do not repair that
+      missing data. Its Z4 guard enumerates only the primitive character
+      1->i and misses the nonfaithful sign character 1->-1 with kernel {0,2};
+      every even C_n passes the two displayed sign values through a C2
+      quotient. The exchange-versus-parity physical distinction also remains
+      a pending typed premise rather than a consequence of scalar comparison.
+    evidence:
+      - campaigns/P066-om1-cyclic-sign-characters/reviews/source_adjudication.md
+      - campaigns/P066-om1-cyclic-sign-characters/evidence/source-reproduction.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/evidence/source-audit.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/evidence/primary-provenance.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/attempts/0001/result.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/attempts/0002/result.yaml
+      - memory/vantasner/decisions/C-CHR-001-review.md
+    note: >-
+      P066 composes C-TOP-001 with the complete finite cyclic and binary-
+      product sign-character classification, exact kernels, quotient order,
+      faithfulness, and equal-value/different-function counterexamples through
+      canonical and independent enumeration routes. It uses no numerical
+      quadrature or NumPy integration alias.

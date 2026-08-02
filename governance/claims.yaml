@@ -3594,3 +3594,48 @@ claims:
     accepted_in: v0.59.0
     challenges: []
     supersedes: []
+  - id: C-CHR-001
+    statement: >-
+      For a positive integer n, let C_n be the additive cyclic group and let
+      S={+1,-1} under multiplication. Every homomorphism C_n->S is fixed by
+      the generator image epsilon subject to epsilon^n=1. If n is odd only
+      epsilon=+1 is allowed; if n is even there are exactly two characters,
+      the trivial one and chi_n([k])=(-1)^k. The nontrivial even-order
+      character has the even-residue kernel of size n/2, quotient order two,
+      and is faithful exactly when n=2. Thus chi(1)=-1 and chi(2)=+1 alone
+      establish at most a supplied sign quotient, not that the source group is
+      C_2. For every positive r, all characters of C_2^r are
+      chi_a(x)=(-1)^(a dot x), indexed by a in C_2^r, so there are 2^r; every
+      nontrivial character has a kernel of size 2^(r-1), and a faithful sign
+      character exists exactly when r=1. Distinct characters can agree at -1
+      on a selected element while differing elsewhere and having different
+      kernels. Separately supplied quotient maps into C_2 may pull back the
+      same codomain sign character, but this does not identify their source
+      domains, maps, generators, orientations, representations, operators,
+      topologies, physical statistics, or substrate mechanisms.
+    provenance: campaigns/P066-om1-cyclic-sign-characters/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-TOP-001
+    evidence:
+      - campaigns/P066-om1-cyclic-sign-characters/verify.py
+      - campaigns/P066-om1-cyclic-sign-characters/attempts/0001/result.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/attempts/0002/result.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/attempts/0003/result.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/reviews/independent_character_review.py
+      - campaigns/P066-om1-cyclic-sign-characters/evidence/primary-provenance.yaml
+      - campaigns/P066-om1-cyclic-sign-characters/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-CHR-001-review.md
+      - tests/test_topological_labels.py
+    assumptions:
+      - C_n uses its additive generator presentation, C_2^r uses componentwise addition modulo two, and the codomain signs compose by multiplication.
+      - Group orders and binary ranks are positive concrete integers; elements and selectors use exact integer or binary coordinates.
+      - Function identity requires a common typed domain and agreement on every element; equal values at selected inputs are insufficient.
+      - Any common pullback requires separately supplied quotient maps, and no pending OM1 dependency or physical interpretation is imported.
+    comparators: []
+    accepted_in: v0.60.0
+    challenges: []
+    supersedes: []

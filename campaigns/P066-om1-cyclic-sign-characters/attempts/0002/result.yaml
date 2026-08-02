@@ -1,0 +1,27 @@
+attempt: 0002
+candidates: [B, C]
+status: exact_candidates_verified
+canonical_module: src/substrate_framework/topological_labels.py
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P066-om1-cyclic-sign-characters/verify.py
+  process_exit_status: 0
+  terminal_tally: ALL 58 CHECKS PASS [P066]
+independent_review:
+  command: PYTHONPATH=src .venv/bin/python proposals/P066-om1-cyclic-sign-characters/reviews/independent_character_review.py
+  process_exit_status: 0
+  terminal_tally: ALL 30 CHECKS PASS [P066-INDEPENDENT]
+targeted_tests:
+  command: .venv/bin/python -m pytest -q tests/test_topological_labels.py
+  process_exit_status: 0
+  terminal_tally: 19 passed
+results:
+  - Hom(C_n,{+1,-1}) has one character for odd n and two for even n, classified exactly by the generator relation epsilon**n=1.
+  - Every even-order nontrivial sign character has the even-residue kernel, quotient order two, and is faithful only when n=2.
+  - C4 and C6 nonfaithful sign characters send the selected generator to -1 and its double to +1, refuting OM1's source-group uniqueness guard.
+  - Hom(C2^r,{+1,-1}) has 2^r exact dot-product characters; every nontrivial character above rank one has a kernel of size 2^(r-1).
+  - Distinct product characters can agree at -1 on one point while differing elsewhere and retaining different kernels.
+  - Full-function independent enumeration through C8 and C2^3 reproduces the classification without importing the canonical API.
+scope_ceiling: >-
+  A shared sign codomain or separately supplied quotient through C2 does not
+  identify source domains, quotient maps, representations, operators,
+  topologies, orientations, physical statistics, or substrate mechanisms.

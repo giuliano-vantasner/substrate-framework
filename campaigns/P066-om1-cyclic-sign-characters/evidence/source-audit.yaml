@@ -1,0 +1,33 @@
+source_unit: OM1
+headline_verdict: not_established_by_source
+checks:
+  - id: OM1.1
+    source_verdict: pass
+    audit_verdict: exact_C2_character_duplicate
+    reason: The two generator roots and unique nontrivial C2 character are exact, but C-TOP-001 and its quotient review already own integer parity and the mod-two sign map.
+  - id: OM1.2
+    source_verdict: pass
+    audit_verdict: scalar_set_equality_not_cross_domain_identity
+    reason: The source checks that locally copied conditional formulas all evaluate to the same SymPy integer; it constructs no common domain, quotient maps, representation intertwiners, or accepted physical identifications.
+  - id: OM1.3
+    source_verdict: pass
+    audit_verdict: separate_square_values_not_shared_source_object
+    reason: Separate +1 evaluations are compatible with distinct pullbacks of the sign character and do not identify their domains or mechanisms; two parity legs are squared values rather than evaluated source composition laws.
+  - id: OM1.G
+    source_verdict: pass
+    audit_verdict: incomplete_character_enumeration_false_uniqueness
+    reason: Testing only C4's primitive generator image i misses the nonfaithful C4 character 1->-1 with kernel {0,2}; every even C_n supplies the same sign quotient and passes both displayed values.
+  - id: OM1.G2
+    source_verdict: pass
+    audit_verdict: conditional_value_difference_with_semantic_label
+    reason: exp(i/4) is distinct from plus or minus one, but the imported exchange formula and physical coupling are pending, and labeling another -1 as statistics rather than parity is not mechanically derived by scalar comparison.
+dependencies:
+  B1: pending_not_imported
+  G2: pending_not_imported
+  NA1: pending_not_imported
+  T1Z2: pending_not_imported
+  W7: pending_not_imported
+selected_candidates: [B, C, D]
+duplicate_candidate: E_for_C-TOP-001_fragment
+rejected_candidate: A
+proposed_claims: [C-CHR-001]

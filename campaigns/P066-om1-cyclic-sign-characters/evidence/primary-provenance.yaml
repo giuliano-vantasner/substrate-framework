@@ -1,0 +1,22 @@
+campaign: P066
+canonical_module: src/substrate_framework/topological_labels.py
+accepted_imports:
+  C-TOP-001:
+    source: src/substrate_framework/topological_labels.py
+    use: exact integer parity character and physical-interpretation ceiling
+mathematical_imports:
+  - finite additive cyclic groups and their generator presentations
+  - the multiplicative sign group {+1,-1}
+  - binary vector spaces with exact mod-two dot products
+  - finite kernels, quotient cardinalities, and function equality
+source_evidence:
+  OM1:
+    path: /home/dan/substrate/merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py
+    sha256: c5af6786d4873675ddb552c4a0ae222e4ee3ab7472b74844b28dc4d257358007
+    authority: noncanonical_reproduced_attempt
+not_imported:
+  - pending B1, G2, NA1, T1Z2, and W7 claims
+  - OM1's copied holonomy, Wilson, Berry, fermion-parity, Skyrmion, or exchange formulas as accepted physical objects
+  - pi_1(SO(3)) or pi_1(RP2) as a bridge-specific shared-domain identification
+  - any domain isomorphism, quotient map, representation intertwiner, orientation, operator identity, spin-statistics law, particle map, or substrate mechanism
+  - numerical quadrature, floating tolerance, or empirical comparator

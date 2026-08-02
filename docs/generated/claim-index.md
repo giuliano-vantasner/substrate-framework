@@ -48,6 +48,15 @@ Conditional on C-CHI-001's Pauli convention, let U=exp(i*q*tau3*pi/F) with posit
 - Compatibility: `compatible_extension`
 - Dependencies: C-BRK-001, C-CHI-001
 
+## C-CHR-001
+
+For a positive integer n, let C_n be the additive cyclic group and let S={+1,-1} under multiplication. Every homomorphism C_n->S is fixed by the generator image epsilon subject to epsilon^n=1. If n is odd only epsilon=+1 is allowed; if n is even there are exactly two characters, the trivial one and chi_n([k])=(-1)^k. The nontrivial even-order character has the even-residue kernel of size n/2, quotient order two, and is faithful exactly when n=2. Thus chi(1)=-1 and chi(2)=+1 alone establish at most a supplied sign quotient, not that the source group is C_2. For every positive r, all characters of C_2^r are chi_a(x)=(-1)^(a dot x), indexed by a in C_2^r, so there are 2^r; every nontrivial character has a kernel of size 2^(r-1), and a faithful sign character exists exactly when r=1. Distinct characters can agree at -1 on a selected element while differing elsewhere and having different kernels. Separately supplied quotient maps into C_2 may pull back the same codomain sign character, but this does not identify their source domains, maps, generators, orientations, representations, operators, topologies, physical statistics, or substrate mechanisms.
+
+- Accepted in: `v0.60.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-TOP-001
+
 ## C-DIM-001
 
 Over base dimensions energy E and time T, primitives consisting of an energy and frequency have dimension matrix [[1,0],[0,-1]], rank two, and zero kernel, so they form no nontrivial dimensionless monomial. Adding an independent action primitive S gives matrix [[1,0,1],[0,-1,1]], rank two, with one-dimensional kernel spanned by (-1,1,1); up to powers its unique dimensionless monomial is S*omega/E. Both conclusions are local to the declared primitive set and do not prohibit groups after further independent primitives are added.

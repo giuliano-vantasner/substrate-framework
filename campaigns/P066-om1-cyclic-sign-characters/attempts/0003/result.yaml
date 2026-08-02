@@ -1,0 +1,34 @@
+attempt: 0003
+candidate: promotion_replay
+status: passed
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python campaigns/P066-om1-cyclic-sign-characters/verify.py
+  process_exit_status: 0
+  terminal_tally: ALL 58 CHECKS PASS [P066]
+independent_review:
+  command: PYTHONPATH=src .venv/bin/python campaigns/P066-om1-cyclic-sign-characters/reviews/independent_character_review.py
+  process_exit_status: 0
+  terminal_tally: ALL 30 CHECKS PASS [P066-INDEPENDENT]
+repository_workflow:
+  command: scripts/validate.sh
+  process_exit_status: 0
+  registry_tally: 88 claims, 88 accepted, 0 proposals
+  migration_tally: 218 units, 154 pending, 0 partial
+  pytest_tally: 514 passed in 59.93s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+diff_checks:
+  unstaged: pass
+  staged: pass
+graph_detection:
+  risk: low
+  changed_indexed_symbols: 1
+  changed_files: 25
+  affected_processes: 0
+quadrature_note: >-
+  P066 uses exact finite algebra and no numerical quadrature, numpy.trapz,
+  numpy.trapezoid, or shared trapezoid compatibility dispatch.
+verdict: >-
+  Promote C-CHR-001 in v0.60.0 and qualify OM1. Retain OM1.1 as duplicate
+  C-TOP-001 evidence, reject the cross-domain identity headline, and keep all
+  source-sector quotient, representation, topology, statistics, and physical
+  maps unimported.

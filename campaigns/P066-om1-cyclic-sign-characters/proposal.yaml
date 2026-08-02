@@ -1,0 +1,67 @@
+id: P066
+base_release: v0.59.0
+base_commit: e62f213
+scientific_base_commit: 5f57c68
+source_baseline: substrate@6d1f4e0
+source_units: [OM1]
+question: >-
+  Classify exact homomorphisms from finite cyclic groups and binary product
+  groups to the multiplicative signs, including existence, uniqueness,
+  faithfulness, kernels, quotient factorization, and independent-factor
+  counterexamples; then audit whether OM1 derives shared source objects and
+  representations or merely observes the same scalar value in pending sectors.
+invariants:
+  - C-TOP-001 already owns the exact integer-winding character (-1)^w and its strict ceiling against physical statistics, particle, charge, and composite interpretations.
+  - Equality of scalar outputs does not identify domains, loops, connections, representations, operators, homotopy generators, orientations, or physical mechanisms.
+  - A homomorphism C_n to {+1,-1} is fixed by its generator image epsilon subject to epsilon^n=1; the source group need not be C_2 merely because epsilon=-1 and epsilon^2=1.
+  - Pending B1, G2, NA1, T1Z2, and W7 supply no accepted shared quotient map, representation, loop, or physical premise.
+  - Character equality requires typed domains and a declared identification or common pullback; matching evaluations at selected elements is weaker.
+allowed_imports:
+  - C-TOP-001 for the exact integer parity character and physical-interpretation ceiling
+  - finite additive cyclic groups, binary vector spaces, exact modular arithmetic, finite kernels, quotient maps, and multiplicative sign characters
+  - separately declared domain labels, quotient maps, generator choices, orientations, representations, and evaluation elements with provenance
+  - OM1 at substrate@6d1f4e0 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce OM1 literally and retain only predicates whose source domains,
+      quotient maps, representations, group laws, and equality claims are
+      constructed rather than named or imported.
+  - id: B
+    description: >-
+      Classify Hom(C_n,{+1,-1}) exactly from the generator relation, including
+      the even-order nontrivial character, its kernel, quotient through C_2,
+      and the fact that it is faithful only for n=2.
+  - id: C
+    description: >-
+      Derive all characters of C_2^r as binary dot-product signs, exposing the
+      2^r independent choices and counterexamples where equal -1 evaluations
+      do not collapse separate factors or domain objects.
+  - id: D
+    description: >-
+      Formalize the conditional pullback statement: separately supplied maps
+      q_i:X_i->C_2 let each observable use the same codomain sign character,
+      while preserving every X_i, q_i, representation, and mechanism as
+      distinct inputs.
+  - id: E
+    description: >-
+      Treat OM1 as duplicate evidence for C-TOP-001 if its only executable
+      content is integer parity and no nonduplicate classification or typed
+      cross-sector theorem survives.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit type/provenance for every domain, map, generator, representation, and evaluation
+  - exact homomorphism, kernel, quotient, faithfulness, and character-count semantics
+  - correct behavior for odd n, n=2, n=4, higher even n, trivial characters, independent C2 factors, changed generators, and reversed orientation
+  - separation of value equality, function equality, representation equivalence, domain isomorphism, and physical identity
+  - parameter economy and composition with rather than duplication of C-TOP-001
+  - independent enumeration and kernel/coset rederivation without importing OM1's expected verdict
+claims_proposed:
+  - provisional C-CHR-001 exact cyclic and binary-product sign-character classification if nonduplicate content survives
+comparators_blinded_until: >-
+  The generated synopsis exposes four or five printed -1 outputs, an asserted
+  unique C2 character, and claimed Z3/Z4 rejection. No exposed count, label,
+  sector name, scalar value, source verdict, or familiar topology may select
+  the domain, quotient, representation, candidate, or equality criterion.
+  These objects and criteria are frozen before opening OM1's body.
+status: accepted

@@ -1,0 +1,42 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_rejected
+source_unit: OM1
+source_baseline: substrate@6d1f4e0
+source_sha256: c5af6786d4873675ddb552c4a0ae222e4ee3ab7472b74844b28dc4d257358007
+command: python3 merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+observations:
+  - The classification of the unique nontrivial character of C2 is exact but is already contained in C-TOP-001's integer parity character and quotient review.
+  - The five oracle formulas are copied locally from pending source units; reproducing their declared algebra does not import their physical premises into the accepted framework.
+  - OM1.2 reduces all readings to SymPy scalar -1 and checks len(set(readings+[chi_g]))==1. This is value equality, not equality of domains, maps, representations, operators, or mechanisms.
+  - No q_i:X_i->C2 maps or domain identifications are constructed, so the phrase same character on the same generator is an unverified typing assertion.
+  - OM1.3 verifies separate +1 values, but separate sign homomorphisms can share both generator and square values without their source objects being identical.
+  - The Lean and Skyrmion double checks multiply a selected value by itself instead of constructing the source group addition and evaluating the doubled element.
+  - The Z4 guard tests only the primitive character with generator image i. It omits the nonfaithful sign character with generator image -1, kernel {0,2}, and doubled value +1.
+  - Every even cyclic group admits the same nontrivial sign quotient, so the two displayed values do not identify the source group as C2; they identify at most a supplied C2 quotient.
+  - The exchange/parity check establishes exp(i/4) differs from signs at one declared input, but the free-fermion semantic distinction is asserted in prose after another scalar -1 equality.
+diagnosis:
+  category: target_statement_and_verifier
+  mechanism:
+    - Matching evaluations do not establish equality of functions unless their domains and a domain identification are supplied.
+    - Matching homomorphism tables after separate pullbacks establish a shared codomain pattern, not one source object or physical mechanism.
+    - Enumerating one primitive character per cyclic order is not a classification of all characters.
+    - Pending B1, G2, NA1, T1Z2, and W7 cannot provide the missing topology, representation, or physical maps.
+verdict: >-
+  OM1 is retained as reproduced evidence for exact selected formulas and maps
+  narrowly to C-TOP-001. Its cross-sector identity and unique-source-group
+  headlines are not established. The correct positive continuation is a full
+  cyclic and binary-product sign-character classification with explicit
+  quotient and faithfulness ceilings.
+next_attempt: >-
+  Enumerate every C_n generator image and every C2-product character, derive
+  kernels and faithfulness, test C4/C6 counterexamples, and independently
+  distinguish equal point evaluations from function equality.
