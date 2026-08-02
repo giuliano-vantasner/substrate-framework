@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T22:30:00Z'
+updated: '2026-08-03T23:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,17 +23,17 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.73.0`, containing one hundred one claims.
-Its latest addition, C-REP-001, is an exact finite weighted charge-trace,
-Abelian-normalization covariance, homogeneous-moment, and conditional
-coupling-angle ledger. It supplies no physical representation, anomaly
-derivation, gauge action, common kinetic coefficient, unified embedding,
-boundary scale, or weak-angle running. WM1 is qualified accordingly, and its
-only-at-zero mutation claim is refuted by the exact nonzero delta=-2 sign flip.
-The latest terminal adjudication is P082 at commit `ed2241d`: WM2 is duplicate
-evidence because its declared common-coefficient law and trace ratios are
-already C-REP-001/C-LIE-001, while Abelian rescaling preserves that law and
-re-floats every numerical coupling coordinate. Release `v0.73.0` is unchanged.
+The current accepted frontier is `v0.74.0`, containing one hundred two claims.
+Its latest addition, C-RGE-004, is an exact signed-affine coupling-intersection,
+pairwise-degeneracy, reference-covariance, and conditional inverse-
+reconstruction ledger. It derives no beta function, U1 or SU2 coefficient,
+physical gauge sector, unified embedding, normalization, threshold spectrum,
+observation, scheme, reference scale, or perturbative domain. The latest
+terminal adjudication is P083 at commit `6aae8f2`: WM3 is qualified because its
+weak coordinate is an inverse reconstruction from supplied observations,
+coefficients, normalization, and exact matching, while fixed measured data
+have three unequal pairwise crossings. Its ab-initio and physical-unification
+semantics remain unaccepted.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -59,7 +59,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 138 pending, 0 partially migrated, 3 migrated, 70 qualified, 6 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 137 pending, 0 partially migrated, 3 migrated, 71 qualified, 6 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -173,6 +173,7 @@ Attempts are append-only and individually reproducible.
 | 0100 | P080 exact affine-pinning/compatibility and OD3 audit | `campaigns/P080-od3-beta-pinned-affine-audit/attempts/0001` through `0003`, then the terminal queue replay | OD3 is duplicate evidence for C-LIN-001 and C-IDN-001; v0.72.0 unchanged; commit `d5ab6eb` | Thirty-six primary and twenty-two independent checks derive exact coordinate pinning, its round trip, three left-null compatibility conditions, generic inconsistency, conditional uniqueness, pin/reference covariance, nuisance restoration, and same-rank countermodels; OD3 never checks augmented rank or three forced-row equalities, retains b0 and four offsets, conflicts internally between 4*pi and 0.245, and imports unaccepted physical rows, while 102 affected and 17 governance tests plus the single integrated gate pass all 755 tests | Audit WM1's 3/8 trace ratio without importing pending WM2/WM3 common-normalization claims, confusing an exact charge-table trace with a gauge-coupling relation, or treating anomaly homogeneity as normalization selection |
 | 0101 | P081 exact finite charge-trace/normalization ledger and WM1 audit | `campaigns/P081-wm1-charge-trace-audit/attempts/0001` through `0004`, then the promotion replay | accepted in v0.73.0 with WM1 qualified; commit `0ec7d20` | Thirty-three primary and twenty independent checks derive the complete weighted trace decomposition, positive Abelian coordinate covariance, homogeneous-moment scaling, and the exact extra coupling-ratio premise; the delta=-2 charged-singlet sign flip refutes WM1.6, the cited simple-group/common-coupling premises remain absent, and 39 affected plus 17 governance tests and the single integrated gate pass all 777 tests | Audit WM2's common-induction normalization without importing its pending EM5/YM1/QCD1 mechanisms, treating one shared symbol C as proof of common physical provenance, or using C-REP-001's conditional helper as a derivation of that premise |
 | 0102 | P082 exact common-coefficient/covariance/baseline and WM2 audit | `campaigns/P082-wm2-common-induction-audit/attempts/0001` through `0002`, then the terminal queue replay | WM2 is duplicate evidence for C-REP-001 and C-LIE-001; v0.73.0 unchanged; commit `ed2241d` | Twenty-four primary and fourteen independent checks reproduce the supplied traces and conditional ratio, derive the full positive Abelian coordinate counterfamily and arbitrary targets, expose independent coefficient and additive-baseline directions, and confirm all eight advertised mechanism dependencies are pending; 39 affected and 17 governance tests plus the single integrated gate pass all 777 tests | Audit WM3's one-loop running and inverse fit without importing WM1/WM2's rejected physical boundary, treating alpha_em and alpha_s as derivation inputs for an ab-initio prediction, or selecting a concept by closeness to the measured weak angle |
+| 0103 | P083 exact signed-affine intersection/inverse-reconstruction and WM3 audit | `campaigns/P083-wm3-one-loop-running-audit/attempts/0001` through `0002`, then the promotion replay | accepted in v0.74.0 with WM3 qualified; commit `6aae8f2` | Thirty-seven primary and sixteen independent checks derive exact pairwise crossings, common-intersection rank, degeneracies, reference and Abelian-coordinate covariance, the three-coordinate inverse reconstruction, fixed-data inconsistency, threshold counterfamilies, and source/dependency ceilings; 58 affected and 17 governance tests plus the single integrated gate pass all 793 tests | Audit NY1's claimed Skyrme energy unit without importing pending B1/S2/NY2 relations, treating cancellation between two supplied mass formulas as a derivation of either, calling an electron-mass input zero-parameter, or using the 24 MeV/34.1 MeV comparators to select the coefficient |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -189,7 +190,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 138 bridge units remain pending, 3 are migrated, 70 are qualified, 6 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 137 bridge units remain pending, 3 are migrated, 71 are qualified, 6 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -612,11 +613,23 @@ and no distinct theorem, API, or consumer survives beyond C-REP-001 and
 C-LIE-001, so WM2 is duplicate evidence and v0.73.0 remains unchanged. Both
 exact routes use no numerical quadrature or NumPy integration alias.
 
+P083 adds exact signed-affine inverse-coupling intersection, pairwise crossing,
+degeneracy, reference-covariance, Abelian-coordinate, and conditional inverse-
+reconstruction ledgers as C-RGE-004. WM3's supplied readings give exact
+`A=1639681/39530`, `B=186383/39530`, and weak coordinate
+`6296809/30335322`, but the equivalent three-equation system solves three
+coordinates from supplied observations and exact matching. Holding the opened
+weak comparator fixed instead produces three unequal pairwise crossings and no
+common intersection; threshold offsets can realize arbitrary targets. SM4 is
+pending, WM1/WM2 supply no accepted physical boundary, and the source omits a
+weak-angle scheme. Both exact routes require no numerical solver or quadrature
+and use no NumPy integration alias.
+
 ## Canonicalization
-The registry, `v0.73.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred one accepted claims. P001 through P082 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 138 pending, 0 partial, 3 migrated, 70 qualified, 6 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.74.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred two accepted claims. P001 through P083 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 137 pending, 0 partial, 3 migrated, 71 qualified, 6 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 138 pending, 3 migrated, 70 qualified, 6 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is WM3. Its generated synopsis imports the pending SM4 coefficients `(41/10,-19/6,-7)`, imposes exact three-coupling unification, supplies low-energy `alpha_em` and `alpha_s`, solves for a crossing near `6.7e14 GeV`, and reports a weak-angle output near 0.208 against a measured 0.23122 comparator. P083 must freeze competing direct-run, inverse-fit, pairwise-crossing, threshold, coefficient-convention, and nonunification candidates before opening the source body or output. It must blind the measured weak angle until equations, inputs, scale conventions, and structural selection criteria are fixed; separate supplied low-energy observations from predictions; and audit whether one-loop affine inverse-coupling evolution has a consistent three-way intersection. WM1 and WM2 supply no accepted physical boundary, SM4 is pending, and a near miss or honest failure cannot itself complete the positive running/identifiability object.
+The effort remains active. D4 is discharged, but D1 remains open with 137 pending, 3 migrated, 71 qualified, 6 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is NY1. Its generated synopsis combines two supplied predecessor relations for a proton/Skyrmion mass, cancels a shared `B1`, imports the electron mass, and advertises `F_pi/e=16*pi*m_e*c^2` near 25.69 MeV against 24 MeV and 34.1 MeV comparators. B1, S2, and NY2 are all pending with empty accepted mappings; NY2 is also a later consumer, not a dependency that can close NY1. P084 must freeze literal-promotion, conditional-cancellation, dimensional-free-coefficient, shared-premise/circularity, correction, comparator, and nonduplication candidates before opening the NY1 body or outputs. It must blind both energy comparators and any correction percentage until the exact equations, units, source independence, allowed mass import, coefficient provenance, and structural selection criteria are fixed; distinguish cancellation of a symbol from derivation of either input equation; and retain `m_e` as an empirical dimensionful import. A no-import or nuclear-yield interpretation cannot be accepted without closing the pending Skyrme, topological-mass, multi-soliton, and physical-sector dependencies.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
