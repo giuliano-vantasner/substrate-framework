@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-02T06:05:00Z'
+updated: '2026-08-02T09:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.46.0`, containing sixty-four claims: the prior sector results plus exact radial odd-harmonic projection and tail-channel theorem `C-PDE-005` and the qualified finite-box branch `C-PDE-006`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.47.0`, containing sixty-six claims: the prior sector results plus exact even-harmonic energy selection and spherical STF null `C-PDE-007` and the qualified finite-box scalar spectrum `C-PDE-008`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 168 pending, 0 partially migrated, 3 migrated, 43 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 167 pending, 0 partially migrated, 3 migrated, 44 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -131,6 +131,7 @@ Attempts are append-only and individually reproducible.
 | 0069 | P050 exact boundary sign-correlation and NC3 audit | `campaigns/P050-nc3-boundary-rectification/attempts/0001` plus `scripts/validate.sh` | accepted in v0.45.0; commit `da71477` | Thirty-seven primary and eight independent checks derive the coordinate and oriented-normal parity maps, phase-convention-safe harmonic law, separate half-line winding, implication counterexamples, and the exact rest-breather null; the full workflow passed 357 tests | Audit NC4's numerical rectification claim with version-independent quadrature, equation-level diagnostics, refinement, and an independent solver |
 | 0070 | P051 corrected nonlinear PDE evolution and NC4 calibration audit | `campaigns/P051-nc4-pde-robustness/attempts/0001` through `0006`, then `scripts/validate.sh` | NC4 qualified; v0.45.0 unchanged; commit `8eaf104` | The literal source fails at removed `np.trapz`; a compatibility-only alias reproduces its 30 checks, while 36 primary and nine independent checks validate reusable leapfrog/DOP853 solvers and refute amplitude robustness with common-phase and phase-relabel counterexamples; the full workflow passed 365 tests | Audit QB1's claimed radial nonlinear eigenvalue/quasi-breather construction against accepted radial dynamics without importing its advertised eigenfrequency or lifetime |
 | 0071 | P052 exact radial harmonic channels and finite-box QB1 branch | `campaigns/P052-qb1-radial-harmonic-balance/attempts/0001` through `0011`, then `scripts/validate.sh` | accepted in v0.46.0 with QB1 qualified; commit `7659414` | Forty-one primary and fourteen independent checks derive the odd-harmonic projection, origin rule, and radiative-tail ceiling; converge one explicit N=9 finite-box branch with DFT/Gauss projection, shooting, collocation, and finite differences; and expose source comparator calibration and wall resonance; the full workflow passed 372 tests | Audit QB2's claimed clean twice-frequency line against C-PDE-005/C-PDE-006 and accepted moment/radiation ceilings without treating its exactly periodic truncation as an exact PDE solution |
+| 0072 | P053 exact energy selection and finite-box QB2 scalar spectrum | `campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0001` through `0007`, then `scripts/validate.sh` | accepted in v0.47.0 with QB2 qualified; commit `b82b3f9` | Thirty-eight primary and twenty-two independent checks derive exact odd-bin absence, the complete cancellable local twice-frequency coefficient, and the spherical STF null; converge one declared core scalar line with residual, conservation, harmonic, temporal, radial, mesh, tolerance, wall, and independent Gauss/Simpson evidence; preserve a failed absolute roundoff threshold; and exclude eigenfunction-purity and radiation overclaims; the full workflow passed 383 tests | Audit QB3's claimed triaxial m=plus-or-minus-two construction against the accepted regular l=2 dynamics and finite-box harmonic branch without replacing a time-dependent perturbation problem by a time-averaged eigenvalue surrogate |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -225,11 +226,26 @@ fits its free amplitude to P3D1, puts every mode on one Dirichlet wall, and
 tests truncation only through frequency shifts. QB1 itself uses a periodic sum;
 canonical projection needs neither `np.trapz` nor `np.trapezoid`.
 
+P053 adds pure harmonic kinematics, canonical energy-density, direct real
+Fourier, radial integration, spherical second-moment, and per-axis variance
+APIs. `C-PDE-007` proves that an odd-cosine field gives only even energy
+harmonics and that its spherical second moment has zero STF part, while the
+complete local twice-frequency coefficient can cancel. `C-PDE-008` records a
+dominant coefficient about 591.470484 for a declared radius-12 scalar moment
+on the accepted finite-box branch, with harmonic, temporal, radial, mesh,
+tolerance, residual, energy, wall, and independent-quadrature evidence. QB2
+is qualified because its unchecked standalone N=1 branch is not C-PDE-006,
+spectral purity does not test the PDE, and a radial scalar line is not physical
+radiation. The source already prefers `np.trapezoid`; canonical integration
+uses the shared current-first legacy-fallback dispatcher. An unjustified
+absolute odd-bin threshold is preserved, and the workflow now requires a
+declared scale model before replacing such a failed numerical oracle.
+
 ## Canonicalization
-The registry, `v0.46.0` manifest, current release, generated claim index, and generated framework memory agree on sixty-four accepted claims. P001 through P052 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 168 pending, 0 partial, 3 migrated, 43 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.47.0` manifest, current release, generated claim index, and generated framework memory agree on sixty-six accepted claims. P001 through P053 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 167 pending, 0 partial, 3 migrated, 44 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 168 pending, 3 migrated, 43 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is QB2, which claims a clean `2*omega_p` radiating line read from QB1 harmonic balance and cites FS2, P3D1, P3D3, and QB1. Its exact half-period energy-density selection rule must be separated from the finite-box spectrum, windowing, line-width and amplitude oracles, stress conservation, multipole normalization, physical radiation map, and inherited qualified dependencies. The periodicity of a truncated ansatz cannot be promoted as an exact PDE periodic solution, and no P3D1 or source line value may choose the candidate.
+The effort remains active. D4 is discharged, but D1 remains open with 167 pending, 3 migrated, 44 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is QB3, which claims a genuinely triaxial `m=+/-2` perturbation and two-polarization waveform around the QB1 harmonic core. Its purported radial eigenmode must be audited against the regular time-dependent `C-PDE-003` l=2 equation, the finite-box and radiative-channel ceilings of `C-PDE-006`, m-degeneracy and real-harmonic conventions, source conservation, exact STF normalization, independent polarization data, and conditional gravity imports. A time-averaged potential or fitted box eigenvalue cannot silently replace the Floquet or driven perturbation problem, and no source frequency, deformation amplitude, waveform, or comparator may choose the candidate.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
