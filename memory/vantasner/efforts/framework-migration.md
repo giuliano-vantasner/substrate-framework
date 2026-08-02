@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-02T20:05:00Z'
+updated: '2026-08-02T21:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,16 +23,16 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.55.0`, containing seventy-eight claims:
-the prior sector results plus the exact periodic-breaking theorem `C-BRK-001`,
-the paired SU(2) kinetic/trace generalized-mass theorem `C-CHI-002`, and the
-conditional GMOR parameter ledger `C-GMR-001`. They derive periodic curvature,
-the local-curvature nonuniqueness family, convention-matched trace masses, the
-factor-four mismatch in PG2's advertised normalization, and fixed-other-input
-GMOR scaling while retaining every physical magnitude as an explicit input.
-They establish no physical pion sector, QCD matching, condensate calculation,
-or numerical mass prediction. The null release remains the recorded start
-state, not the current authority.
+The current accepted frontier is `v0.56.0`, containing eighty-one claims: the
+prior sector results plus the exact radial Hessian and continuum theorem
+`C-MOD-001`, the qualified stationary-profile and finite-box continuum
+evidence `C-MOD-002`, and the classical-mode scale ledger `C-SCL-001`. They
+derive the mixed-term-complete self-adjoint operator, exact Derrick and
+massless-threshold guards, independently refine the conditional profile and
+box ladder, and retain every action, inverse-time, background-energy, and
+quantization premise. They establish no positive bound radial mode, Roper,
+spin/isospin assignment, physical mass, or substrate realization. The null
+release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -57,7 +57,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 159 pending, 0 partially migrated, 3 migrated, 52 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 158 pending, 0 partially migrated, 3 migrated, 53 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -150,6 +150,7 @@ Attempts are append-only and individually reproducible.
 | 0079 | P059 exact conditional heavy-field elimination and WZ4 audit | `campaigns/P059-wz4-hls-vector-elimination/attempts/0001` through `0004`, then the promotion replay | accepted in v0.53.0 with WZ4 qualified; commit `2740073` | Twenty-five primary and twenty-three independent checks derive the stationary Schur complement, even-odd cross term, noncommuting finite inverse residual, and anomaly chain-rule ceiling; arbitrary- and zero-contact mutations expose WZ4's copied normalization, while primary HLS sources retain four free homogeneous coefficients; the full workflow and explicit replay each pass all 431 tests | Audit PG1's exact Goldstone/masslessness construction without importing pending PG2/PG4/S2 or equating a conditional sigma-model Hessian with a derived physical pion sector |
 | 0080 | P060 exact stationary symmetry-Hessian theorem and PG1 audit | `campaigns/P060-pg1-goldstone-hessian/attempts/0001` through `0004`, then the promotion replay | accepted in v0.54.0 with PG1 qualified; commit `d053f92` | Forty-two primary and twenty-four independent checks derive the general invariance identity, complete O(4) orbit/stabilizer rank, radial and tilted Hessians, positive-kinetic consequence, and both Pauli prefactor conventions; they expose PG1's factor-four final normalization error, substitution-only dispersion, label-only count, and absent physical-pion map; the one full workflow gate passes all 443 tests | Audit PG2's explicit-breaking/GMOR construction without importing pending S2, treating a declared cosine coefficient as a derived pion mass, or inheriting PG1's rejected physical field map |
 | 0081 | P061 exact periodic breaking, SU(2) normalization, and PG2 audit | `campaigns/P061-pg2-explicit-breaking/attempts/0001` through `0004`, then the promotion replay | accepted in v0.55.0 with PG2 qualified; commit `0c3585e` | Thirty-six primary and thirty independent checks derive periodic curvature and kinetics, paired trace mass, the factor-four correction, local nonuniqueness, and the conditional GMOR ledger; the single full workflow gate passes all 453 tests | Audit PG3's Roper radial-excitation construction without importing pending S2 or treating a local Hessian eigenmode, declared quantum labels, or inserted mass ratio as a physical Roper prediction |
+| 0082 | P062 exact radial Hessian, conditional profile, continuum classification, and PG3 audit | `campaigns/P062-pg3-roper-radial-mode/attempts/0001` through `0005`, then the promotion replay | accepted in v0.56.0 with PG3 qualified; commit `60933b1` | Thirty primary and sixteen independent checks derive the mixed-term-complete Hessian, Green form, Derrick curvature, zero continuum edge, refined Robin-tail profile, inverse-wall-squared box ladder, and free scale ledger; mutations expose PG3's omitted Hessian term, and the single full workflow gate passes all 463 tests | Audit PG4's Goldberger--Treiman construction without importing pending S1/S2, mistaking PCAC or pion-pole dominance for a framework derivation, or turning an algebraic solve-back into a physical prediction |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -361,11 +362,25 @@ all physical inputs rather than predicting a pion mass. Canonical and
 independent P061 code use exact algebra and no numerical quadrature; the
 deprecated NumPy alias occurs only in immutable source-adjudication prose.
 
+P062 adds the exact mixed-term-complete self-adjoint radial Hessian, Green
+boundary form, logarithmic Derrick tangent and curvature, and zero massless
+continuum edge for one explicitly declared reduced radial energy. A separately
+qualified numeric claim reconstructs the stationary Robin-tail profile and
+the corrected finite-box continuum ladder through DOP853/consistent-mass FEM
+and independent collocation/Simpson/mass-lumped finite-volume routes. The
+lowest positive box level collapses with outer-wall growth and is never below
+the exact zero edge. PG3 is qualified because it omits the mixed Hessian
+correction, removes the physical origin, holds both walls fixed, uses a
+comparator in its verdict, assigns rather than derives quantum labels, and
+compares a squared frequency to an energy. Canonical quadrature calls the
+shared helper that prefers `numpy.trapezoid`; the legacy alias remains only in
+the declared NumPy 1.26 compatibility branch and immutable source evidence.
+
 ## Canonicalization
-The registry, `v0.55.0` manifest, current release, generated claim index, and generated framework memory agree on seventy-eight accepted claims. P001 through P061 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 159 pending, 0 partial, 3 migrated, 52 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.56.0` manifest, current release, generated claim index, and generated framework memory agree on eighty-one accepted claims. P001 through P062 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 158 pending, 0 partial, 3 migrated, 53 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 159 pending, 3 migrated, 52 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable queue unit is PG3, which claims that a solved hedgehog's lowest nonzero radial fluctuation is the physical Roper excitation. Its B1, E2, E4, and S2 dependencies remain pending. The new campaign must preregister distinct Hessian, collective-coordinate, and identifiability constructions; derive the radial operator, kinetic weight, domain, boundary data, stationary-profile residual, and spectral ordering before inspecting the claimed mass ratio; and prevent a declared label, inserted nucleon scale, or comparator match from selecting the interpretation.
+The effort remains active. D4 is discharged, but D1 remains open with 158 pending, 3 migrated, 53 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable queue unit is PG4, which claims to derive the Goldberger--Treiman relation and its chiral-limit discrepancy from PCAC, pion-pole dominance, and a nucleon axial matrix element. PG1 is only conditionally mapped and S1/S2 remain pending. The new campaign must preregister distinct Ward-identity/form-factor, effective-current, and identifiability constructions; freeze current, state-normalization, momentum-transfer, pole-residue, sign, and factor-of-two conventions before opening the executable; and distinguish a theorem conditional on supplied PCAC/pole data from a derived physical pion-nucleon coupling, axial charge, nucleon state, chiral limit, or substrate map.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
