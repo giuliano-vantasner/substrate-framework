@@ -1,0 +1,26 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: WM2
+source_path: merged-framework/bridges/phase-23/bridge_WM2_common_induction_normalization.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 3c656894fc782dd40dcb495a91de5bbf5a46ec378bb3593eb30d7d4b387f34a3
+git_blob: 69ab71f073d422887d21c15016ecdde32a93e65c
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-23/bridge_WM2_common_induction_normalization.py
+process_exit_status: 0
+terminal_tally: ALL 10 CHECKS PASS
+surviving_exact_predicates:
+  - The separately supplied table has S2=2 and SY=10/3, while four declared colour triplet copies with T(F)=1/2 give S3=2.
+  - Conditional on zero additive baselines and one supplied common coefficient, the squared-coupling ratio is S2/SY=3/5.
+  - Rescaling the supplied Abelian generator by sqrt(3/5) makes its trace equal to two and converts the coupling coordinate by the reciprocal factor.
+  - Independent multiplicative coefficients retain the free ratio C2/CY, and changing the supplied colour content changes S3.
+headline_failures:
+  - The source explicitly declares rather than derives the one-common-C premise; EM5, YM1, QCD1, S2, S3, SM3, SM4, and W2 remain pending or otherwise unavailable as accepted induction dependencies.
+  - Positive Abelian generator rescaling with inverse coupling rescaling preserves the common-C law and every coupled charge while changing the numerical squared-coupling ratio arbitrarily.
+  - Choosing Y'=sqrt(3/5)Y makes the U(1) trace and coupling coordinate equal to the non-Abelian ones by convention; it does not select a physical normalization or unified action.
+  - The source supplies zero tree/counterterm baselines and one regulator/profile coefficient without computing any determinant, action, spectrum, counterterm, or cross-sector provenance.
+  - Sector-specific additive baselines or multiplicative coefficients preserve the declared traces while re-floating every advertised coupling equality.
+  - The absolute coupling remains free through C and no executable boundary scale is defined.
+diagnosed_layer: source_claim_dependency_closure_abelian_coordinate_covariance_and_omitted_baselines
+continuation: Candidates B-G proceed to exact coefficient, baseline, covariance, provenance, and nonduplication audits.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

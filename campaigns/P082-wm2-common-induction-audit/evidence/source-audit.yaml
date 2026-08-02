@@ -1,0 +1,77 @@
+source_unit: WM2
+campaign: P082
+checks:
+  WM2.1:
+    source_verdict: duplicate_exact_conditional_trace
+    audit: >-
+      S2=2 is the same supplied-table T3 trace accepted conditionally in
+      C-REP-001. It derives no physical weak representation or kinetic term.
+  WM2.2:
+    source_verdict: duplicate_composition
+    audit: >-
+      S3=2 follows from a supplied count of four colour triplet copies and
+      C-LIE-001's convention-specific T(F)=1/2. No accepted claim derives the
+      physical matter representation or common strong-sector induction.
+  WM2.3:
+    source_verdict: duplicate_exact_conditional_trace
+    audit: >-
+      SY=10/3 is C-REP-001's supplied-table Abelian trace. It changes under a
+      positive generator-coordinate rescaling.
+  WM2.4:
+    source_verdict: duplicate_conditional_common_law
+    audit: >-
+      The ratio 3/5 follows exactly after declaring zero additive baselines and
+      one common coefficient. C-REP-001 already states this law as a sufficient
+      premise, not a finite-table consequence. WM2 explicitly declares it.
+  WM2.5:
+    source_verdict: pass_coordinate_construction_reject_unification
+    audit: >-
+      Scaling Y by sqrt(3/5) makes its trace equal to two and its reciprocal
+      coupling coordinate equal to the non-Abelian one by construction. The
+      coupled charge is invariant, so this does not select a physical
+      normalization or derive a unified action.
+  WM2.6:
+    source_verdict: pass_coordinate_conversion
+    audit: >-
+      g1^2=(5/3)gY^2 is exactly the reciprocal coupling-coordinate conversion
+      paired with Y'=sqrt(3/5)Y. Calling it a derived GUT factor adds physical
+      semantics not supplied by the algebra.
+  WM2.7:
+    source_verdict: duplicate_conditional_angle
+    audit: >-
+      The 3/8 angle is the conditional common-coefficient specialization
+      already accepted in C-REP-001. No physical electroweak action, neutral
+      mass sector, boundary scale, or running is derived.
+  WM2.8:
+    source_verdict: pass_rejection_guard
+    audit: >-
+      Independent multiplicative coefficients retain C2/CY and correctly
+      expose the common coefficient as load bearing. Additive sector baselines
+      provide further untested free directions.
+  WM2.9:
+    source_verdict: pass_arithmetic_reject_wrong_normalization_label
+    audit: >-
+      Leaving Y unscaled gives unequal trace coordinates under the declared
+      common law. But positive Abelian rescalings are convention changes, not
+      right-versus-wrong physics; every target ratio remains reachable while
+      coupled charges are invariant.
+  WM2.10:
+    source_verdict: pass_conditional_content_mutation
+    audit: >-
+      Removing one supplied triplet copy changes S3 to 3/2. This shows table
+      sensitivity, not that the original physical spectrum or three-sector
+      kinetic equality was derived.
+uncovered_load_bearing_inputs:
+  - accepted U(1), SU(2), and SU(3) gauge actions with one physical matter representation
+  - a common regulator, cutoff, loop profile, field measure, and renormalization prescription
+  - equality of all multiplicative loop coefficients across sectors
+  - zero and equal tree-level and counterterm inverse-coupling baselines
+  - a physical Abelian generator normalization and charge map
+  - a boundary scale and renormalization-group running
+  - accepted EM5, YM1, QCD1, S2, S3, SM3, SM4, and W2 dependencies
+headline_verdict: >-
+  Duplicate evidence. The finite traces, conditional common-law ratio,
+  coordinate conversion, and coefficient mutation are already owned by
+  C-REP-001 and C-LIE-001. WM2 does not derive the declared common coefficient,
+  and the common law remains covariant under arbitrary positive Abelian
+  rescaling, so it fixes no physical normalization, unification, or weak angle.

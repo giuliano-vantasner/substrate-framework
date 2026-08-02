@@ -1,0 +1,55 @@
+id: P082
+base_release: v0.73.0
+base_commit: be28766
+scientific_base_commit: 0ec7d20
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM2]
+question: >-
+  Determine whether WM2 derives one common physical inverse-trace kinetic
+  coefficient across U(1), SU(2), and SU(3), or merely supplies the common-law
+  premise already isolated by C-REP-001; retain any nonduplicate exact
+  coefficient, offset, covariance, and identifiability ledger as an importable
+  object without promoting pending induction mechanisms.
+invariants:
+  - C-REP-001 proves that a common inverse-trace coefficient is sufficient for trace-angle equality but is a separately supplied premise, not a finite-table consequence.
+  - C-GAU-001 leaves the U(1) kinetic coefficient, gauge action, and physical charge map unconstrained.
+  - C-LIE-001 makes representation traces convention- and matter-content-specific and establishes no physical gauge-sector identity.
+  - EM5, YM1, QCD1, S2, S3, SM3, SM4, and W2 remain pending and cannot supply accepted cross-sector induction, representations, loop profiles, or running.
+  - Writing the same symbol in several declared equations does not prove common provenance, regulator equality, counterterm equality, or a unified physical action.
+  - Additive tree or counterterm contributions and sector-specific loop coefficients must remain explicit unless independently derived away.
+allowed_imports:
+  - exact positive real algebra for separately supplied traces, couplings, multiplicative coefficients, and additive inverse-coupling baselines
+  - C-REP-001 for the finite trace, Abelian-coordinate, and conditional common-coefficient theorem
+  - C-GAU-001 and C-LIE-001 as interpretation ceilings only
+  - WM1's declared table only through C-REP-001's accepted conditional specialization
+  - WM2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts validate
+candidates:
+  - id: A
+    description: Reproduce WM2 literally and test whether every common-loop, representation, regulator, profile, action, counterterm, and scale premise has accepted closure.
+  - id: B
+    description: Derive the generic sector-specific law 1/g_i^2=K_i+C_i*S_i and classify exactly when coupling ratios reduce to trace ratios.
+  - id: C
+    description: Specialize B to a separately supplied common zero-baseline coefficient and test whether its result is exactly duplicate of C-REP-001.
+  - id: D
+    description: Mutate one sector coefficient, regulator/profile factor, or additive baseline to test whether WM2's cancellation oracle is premise sensitive.
+  - id: E
+    description: Apply positive Abelian generator rescaling with inverse coupling transformation and determine which coefficient relations are coordinate covariant.
+  - id: F
+    description: Audit the cited pending EM5, YM1, QCD1, S2, S3, SM3, SM4, and W2 routes for accepted claim mappings and common physical provenance.
+  - id: G
+    description: Compare no-new-claim duplication against a provisional reusable sector-normalization provenance ledger with explicit free directions.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for every gauge sector, trace, loop coefficient, regulator, profile, baseline, coupling, and scale
+  - exact coefficient and offset algebra, Abelian coordinate covariance, domain conditions, and mutation sensitivity
+  - distinction between a supplied common symbol, shared regularization convention, unified action, boundary condition, and physical prediction
+  - parameter economy without silently setting tree terms, counterterms, sector coefficients, or pending representations equal or zero
+  - nonduplication against C-REP-001, C-GAU-001, C-LIE-001, and generic identifiability claims
+claims_proposed:
+  - provisional C-REP-002 sector-normalization provenance ledger only if it is nonduplicate and has a distinct reusable consumer; otherwise no new claim
+comparators_blinded_until: >-
+  Both contract representations, their hashes, and repository validation are
+  frozen. Until then the WM2 body, literal equations, output, source verdict,
+  later WM3 body, and any empirical coupling or weak-angle values remain
+  closed; the generated queue synopsis is navigation metadata only.
+status: accepted

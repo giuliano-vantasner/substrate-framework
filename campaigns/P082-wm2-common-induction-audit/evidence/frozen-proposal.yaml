@@ -1,0 +1,14 @@
+campaign: P082
+frozen_before_source_opening: true
+proposal_path: proposals/P082-wm2-common-induction-audit/proposal.yaml
+proposal_sha256: 3b56490c92229e727217a932f1852be2129c4e9d36a78f0c3c805bfe5b3551e0
+memory_contract_path: memory/vantasner/proposals/P082-wm2-common-induction-audit.md
+memory_contract_sha256: e64f0ddee9eb5467c590010bddbc35cad6aec5e85395d3fbf488d0cb631a731a
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - source literal inverse-coupling equations and output
+  - source cross-sector coefficient provenance and terminal verdict
+  - later WM3 running mechanism
+  - empirical gauge couplings, weak mixing angles, and unification scales

@@ -1,0 +1,29 @@
+campaign: P082
+base_release: v0.73.0
+accepted_claims_used:
+  C-REP-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/charge_traces.py
+    use: finite_trace_abelian_covariance_and_conditional_common_coefficient_theorem
+  C-LIE-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/su3.py
+    use: convention_specific_fundamental_dynkin_index_only
+accepted_interpretation_ceiling:
+  C-GAU-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/gauge_u1.py
+    use: unconstrained_abelian_kinetic_coefficient_and_physical_charge_map
+predecessor_evidence:
+  source_unit: WM2
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: 3c656894fc782dd40dcb495a91de5bbf5a46ec378bb3593eb30d7d4b387f34a3
+  authority: noncanonical_hash_pinned_attempt_evidence
+pending_dependencies: [EM5, YM1, QCD1, S2, S3, SM3, SM4, W2]
+external_empirical_imports: []
+external_literature_imports: []
+exact_oracle: SymPy finite sums, rational identities, affine baselines, positive rescaling, arbitrary-target construction, AST, and registry closure
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

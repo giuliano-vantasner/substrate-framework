@@ -1,0 +1,52 @@
+campaign: P082
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and explicit sector, representation, loop, regulator, baseline, and scale provenance
+  - exact coefficient and offset algebra plus Abelian coordinate covariance
+  - distinction between a repeated symbol, shared convention, unified action, boundary condition, and physical prediction
+  - parameter economy without zeroing tree terms or equating sector coefficients silently
+  - mutation sensitivity and nonduplication against accepted claims
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All ten checks reproduce, but the decisive common coefficient is
+      explicitly declared and every advertised induction dependency is pending.
+  B:
+    decision: selected_as_audit_counterfamily
+    reason: >-
+      The generic affine inverse-coupling law retains sector coefficients and
+      additive baselines, exposing the zero-common special case without a new
+      distinct consumer.
+  C:
+    decision: duplicate_of_C-REP-001
+    reason: >-
+      The common zero-baseline law, three-fifths ratio, and conditional
+      three-eighths angle are exactly C-REP-001's accepted specialization.
+  D:
+    decision: selected_as_sensitivity_evidence
+    reason: >-
+      Independent coefficient and baseline mutations break the advertised
+      ratio while leaving every supplied trace unchanged.
+  E:
+    decision: duplicate_of_C-REP-001
+    reason: >-
+      Positive Abelian rescaling and inverse coupling covariance are already
+      accepted and show that the common law selects no numeric normalization.
+  F:
+    decision: selected_as_dependency_ceiling
+    reason: >-
+      All eight advertised induction and representation sources lack accepted
+      claim mappings and cannot close WM2's physical premise.
+  G:
+    decision: no_new_claim
+    reason: >-
+      The surviving algebra has no distinct API or consumer beyond C-REP-001,
+      C-LIE-001, and source-audit countermodels; C-REP-002 would be registry
+      sprawl rather than a new framework object.
+selected_claims: []
+duplicates: [C-REP-001, C-LIE-001]
+physical_ceiling:
+  - no common loop determinant, regulator, profile, counterterm, or action is derived
+  - no physical Abelian normalization or unified coupling boundary is selected
+  - no weak mixing angle, running scale, observed value, Standard Model, or substrate realization is established

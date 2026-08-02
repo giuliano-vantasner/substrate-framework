@@ -1,0 +1,48 @@
+campaign: P082
+title: Common induction, Abelian covariance, and sector-baseline audit
+source_baseline: substrate@6d1f4e0
+source_units: [WM2]
+base_release: v0.73.0
+release_after_adjudication: v0.73.0_unchanged
+adjudicated_at: '2026-08-03T22:00:00Z'
+selected_candidates:
+  - id: B
+    reason: The generic affine inverse-coupling law exposes every omitted coefficient and baseline direction.
+  - id: C
+    reason: The common zero-baseline specialization is retained only as duplicate evidence for C-REP-001.
+  - id: D
+    reason: Sector coefficient and baseline mutations prove the decisive premise is load bearing.
+  - id: E
+    reason: Abelian coordinate covariance proves the common law selects no numeric normalization.
+  - id: F
+    reason: Registry audit establishes that every advertised induction and representation dependency lacks accepted closure.
+  - id: G
+    reason: Nonduplication analysis rejects C-REP-002 because no distinct API, theorem, or consumer survives.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_source_regression
+claims: []
+duplicates: [C-REP-001, C-LIE-001]
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  validated_route: attempts/0002/result.yaml
+  independent_review: reviews/independent_normalization_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  duplicate_review: memory/vantasner/decisions/WM2-duplicate-review.md
+source_disposition:
+  WM2: duplicate_evidence
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P082-wm2-common-induction-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P082-wm2-common-induction-audit/reviews/independent_normalization_review.py
+  - .venv/bin/python -m pytest -q tests/test_charge_traces.py tests/test_su3.py tests/test_gauge_u1.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

@@ -541,6 +541,42 @@ units:
       P081 derives exact finite-table, generator-coordinate, coupling, and
       conditional common-coefficient ledgers through canonical and independent
       symbolic routes. It uses no numerical integration or NumPy alias.
+  WM2:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-REP-001
+      - C-LIE-001
+    duplicates:
+      - C-REP-001
+      - C-LIE-001
+    duplicate_reason: >-
+      WM2's valid exact content is the finite supplied-table traces,
+      convention-specific fundamental Dynkin index, Abelian normalization
+      covariance, common inverse-trace coefficient condition, and conditional
+      coupling angle already accepted through C-REP-001 and C-LIE-001. The
+      source explicitly declares its decisive one-common-C premise, while
+      EM5, YM1, QCD1, S2, S3, SM3, SM4, and W2 remain pending with no accepted
+      mappings. Even granting one common zero-baseline coefficient, the law is
+      covariant under Y->rho*Y and gY->gY/rho: every coupled charge is preserved
+      while gY^2/g2^2 ranges over all positive values. The sqrt(3/5) choice
+      equalizes trace and coupling coordinates by construction. Independent
+      sector coefficients or additive tree/counterterm baselines re-float the
+      ratio. WM2 derives no common loop determinant, regulator, profile,
+      action, counterterm matching, boundary scale, or physical unification.
+    evidence:
+      - campaigns/P082-wm2-common-induction-audit/reviews/source_adjudication.md
+      - campaigns/P082-wm2-common-induction-audit/evidence/source-reproduction.yaml
+      - campaigns/P082-wm2-common-induction-audit/evidence/source-audit.yaml
+      - campaigns/P082-wm2-common-induction-audit/evidence/candidate-comparison.yaml
+      - campaigns/P082-wm2-common-induction-audit/evidence/primary-provenance.yaml
+      - campaigns/P082-wm2-common-induction-audit/attempts/0001/result.yaml
+      - campaigns/P082-wm2-common-induction-audit/attempts/0002/result.yaml
+      - memory/vantasner/decisions/WM2-duplicate-review.md
+    note: >-
+      P082 derives exact coefficient, baseline, Abelian-covariance, arbitrary-
+      target, dependency, and nonduplication ledgers through primary and
+      independent symbolic routes. It adds no claim, release, or canonical API
+      and uses no numerical quadrature or NumPy integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:
