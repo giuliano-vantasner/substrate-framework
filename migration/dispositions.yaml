@@ -392,6 +392,46 @@ units:
       coordinate-covariance, and off-fixed-orbit ledgers through canonical and
       independent symbolic routes. It uses no numerical integration or NumPy
       trapezoidal alias.
+  AS7:
+    disposition: qualified
+    accepted_claims:
+      - C-IDN-002
+      - C-GRV-001
+      - C-RGE-003
+      - C-IDN-001
+      - C-DIM-008
+      - C-SYM-002
+    qualification: >-
+      AS7's pure-branch inverse arithmetic survives only after observed G,
+      hbar, c, the hadronic length, b0=7, zero baseline, a conversion and
+      length orientation, and a coefficient interval are supplied. The
+      interval maps conditionally to a cutoff interval; every target cutoff
+      has a coefficient preimage, while the general additive baseline can
+      realize any supplied total. The two gravity/transmutation rows have rank
+      two on three log coordinates and one null direction. Supplying the
+      coefficient makes the coupling solve unique but input-conditioned; AS7
+      then substitutes that solved coupling back into the same relation, so
+      its alleged two-route equality is true by construction. Its selected
+      O(1..100) range, metre band, Planck and hadron labels, QCD coefficient,
+      physical coupling, vacuum, lattice termination, and granularity are not
+      derived. AS6 fixed-point occupancy was never accepted, and AS7 reverses
+      the accepted executable inverse-energy length orientation unless its
+      physical roles are independently remapped.
+    evidence:
+      - campaigns/P078-as7-gravity-scale-confrontation/reviews/source_adjudication.md
+      - campaigns/P078-as7-gravity-scale-confrontation/evidence/source-reproduction.yaml
+      - campaigns/P078-as7-gravity-scale-confrontation/evidence/source-audit.yaml
+      - campaigns/P078-as7-gravity-scale-confrontation/evidence/candidate-comparison.yaml
+      - campaigns/P078-as7-gravity-scale-confrontation/evidence/primary-provenance.yaml
+      - campaigns/P078-as7-gravity-scale-confrontation/attempts/0001/result.yaml
+      - campaigns/P078-as7-gravity-scale-confrontation/attempts/0002/result.yaml
+      - campaigns/P078-as7-gravity-scale-confrontation/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-IDN-002-review.md
+    note: >-
+      P078 derives exact conditional interval, additive-baseline,
+      arbitrary-target, joint-rank, fixed-input inverse, and sign-domain
+      ledgers through canonical and independent symbolic routes. It uses no
+      numerical integration or NumPy trapezoidal alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

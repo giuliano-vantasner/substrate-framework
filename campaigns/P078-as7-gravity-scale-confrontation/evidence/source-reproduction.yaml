@@ -1,0 +1,19 @@
+source_unit: AS7
+source_path: merged-framework/bridges/phase-22/bridge_AS7_gravity_confrontation_planck_granularity.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 710635ddf323b8995dc4a1481aeb8232938d6db14c37bd95a537b26d17df3e0f
+git_blob: bf9e6cffda02323a8e8081af8d7594f720c33b8f
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS7_gravity_confrontation_planck_granularity.py
+process_exit_status: 0
+terminal_tally: ALL 6 CHECKS PASS
+reported_values:
+  self_dual_length_ratio: 2.45
+  self_dual_cutoff_m: 5.71e-16
+  required_self_dual_coefficient: 1.25e39
+  unit_coefficient_cutoff_m: 1.62e-35
+  coefficient_12_cutoff_m: 5.60e-35
+  coefficient_60_cutoff_m: 1.25e-34
+  coefficient_1_coupling_squared: 0.2457
+  coefficient_60_coupling_squared: 0.2572
+  hard_coded_comparison_coupling_squared: 0.245
+interpretation: arithmetic_reproduction_only

@@ -1,0 +1,28 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: AS7
+source_path: merged-framework/bridges/phase-22/bridge_AS7_gravity_confrontation_planck_granularity.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 710635ddf323b8995dc4a1481aeb8232938d6db14c37bd95a537b26d17df3e0f
+git_blob: bf9e6cffda02323a8e8081af8d7594f720c33b8f
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS7_gravity_confrontation_planck_granularity.py
+process_exit_status: 0
+terminal_tally: ALL 6 CHECKS PASS
+surviving_exact_predicates:
+  - On the separately imposed zero-baseline branch, supplying positive G, c, hbar, and s gives a=sqrt(s*hbar*G/c^3).
+  - Supplying a positive length ratio larger than its conversion ratio permits algebraic inversion for a positive one-loop coupling.
+  - The source arithmetic reproduces its selected constants and intervals.
+headline_failures:
+  - The source imports observed G, hbar, c, a hadronic length, b0=7, and a selected coefficient interval; dimensionless final ratios do not erase those premises.
+  - Setting the additive inverse-coupling baseline to zero is an extra branch assumption, not a consequence of C-GRV-001.
+  - The asserted O(1..100) coefficient range and numerical Planck band are hard-coded premises rather than derived bounds.
+  - The relation labelled xi/a reverses the accepted AS1 inverse-energy length orientation unless its physical length roles are independently remapped.
+  - The reconstructed beta squared is obtained by solving the supplied length target and is not a parameter-free prediction.
+  - The two-route equality reuses beta squared defined from the gravity route, so it is a solve-back identity rather than an independent over-determination oracle.
+  - AS6 fixed-point occupancy was never accepted, so the comparison cannot refute an accepted framework operating point.
+  - ME3 and QCD3 provide no accepted cutoff ontology, coefficient interval, hadron dictionary, or physical selection of b0=7.
+  - A check that chosen cutoffs lie between 1e-36 and 1e-33 metres validates only a supplied numerical band.
+diagnosed_layer: candidate_concept_dependency_closure_and_verifier_semantics
+continuation: Candidates B-G proceed to the exact interval, additive-baseline, arbitrary-target, orientation, unit-coordinate, and joint rank ledgers.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

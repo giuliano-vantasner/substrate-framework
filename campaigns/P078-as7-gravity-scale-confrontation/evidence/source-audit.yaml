@@ -1,0 +1,56 @@
+source_unit: AS7
+campaign: P078
+checks:
+  AS7.0:
+    source_verdict: pass_rejected_semantics
+    audit: >-
+      The ratio a/ell_P=sqrt(s) is correct after supplying observed G and
+      imposing the pure zero-baseline branch. The source numerically imports
+      G, hbar, c, and xi; expressing later results as dimensionless ratios
+      does not remove those dimensionful premises or derive an absolute scale.
+  AS7.1:
+    source_verdict: pass_qualified_inverse
+    audit: >-
+      Supplying beta^2=4*pi, b0=7, xi=1.4 fm, observed G, and the source
+      length orientation reconstructs a coefficient near 1.25e39. Calling it
+      absurd additionally imports the unproved O(1..100) coefficient prior.
+      No accepted fixed-point occupancy is falsified.
+  AS7.2:
+    source_verdict: pass_rejected_derivation
+    audit: >-
+      A supplied coefficient interval maps monotonically to a conditional
+      cutoff interval on B=0. The source tests only the chosen samples 1, 12,
+      and 60 against a hard-coded metre band. Neither interval nor Planck,
+      lattice, healing-length, or continuum-breakdown semantics is derived.
+  AS7.3:
+    source_verdict: pass_qualified_inverse
+    audit: >-
+      The formula solves beta squared from supplied G, hbar, c, xi, b0, s,
+      zero baseline, conversion, and length orientation. Its output is inverse
+      reconstruction, not an over-determined or parameter-free prediction.
+  AS7.4:
+    source_verdict: pass_rejected_independence
+    audit: >-
+      The source first defines b2_star from the gravity-derived cutoff and then
+      substitutes that same value into the length inverse. Equality is true by
+      construction and is not an independent two-sector compatibility test.
+  AS7.5:
+    source_verdict: pass_rejected_semantics
+    audit: >-
+      The source hard-codes 245/1000 and compares it with 4*pi. C-SYM-002
+      accepted neither a physical AS6 duality nor fixed-point occupancy, while
+      AS7 has not derived a vacuum, beta function, or selected coupling.
+uncovered_load_bearing_inputs:
+  - zero additive inverse-coupling baseline
+  - observed G, hbar, c, and hadronic length
+  - coefficient interval and absurdity threshold
+  - b0=7 and its physical QCD interpretation
+  - reference and conversion factors
+  - physical mapping and orientation of the two lengths
+  - Planck, lattice, healing-length, granularity, and continuum-breakdown dictionary
+  - statistical or causal independence of the gravity and length rows
+headline_verdict: >-
+  Qualified. Exact interval, baseline, arbitrary-target, and joint-rank
+  bookkeeping survives. AS7 reconstructs selected inputs and supplies its
+  numerical scale prior; it does not derive a Planck granularity, physical
+  coupling, vacuum, or independent cross-sector over-determination.

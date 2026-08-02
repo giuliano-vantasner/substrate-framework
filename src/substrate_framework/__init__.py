@@ -359,6 +359,16 @@ from .coupling_duality import (
     reciprocal_coordinate_change_ledger,
     reciprocal_coupling_ledger,
 )
+from .gravity_scale_confrontation import (
+    FixedCoefficientJointSolution,
+    JointGravityTransmutationLogLedger,
+    PureGravityCutoffIntervalLedger,
+    induced_coefficient_for_target_cutoff,
+    inverse_newton_baseline_for_target,
+    joint_gravity_transmutation_log_ledger,
+    pure_gravity_cutoff_interval,
+    solve_joint_with_fixed_coefficient_ratio,
+)
 from .separable_moments import (
     AxisymmetricSeparableMoments,
     AxisymmetricTTReadout,

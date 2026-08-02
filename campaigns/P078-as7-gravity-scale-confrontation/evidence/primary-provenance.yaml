@@ -1,0 +1,31 @@
+campaign: P078
+claim: C-IDN-002
+base_release: v0.70.0
+accepted_dependencies:
+  C-GRV-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/induced_gravity.py
+    use: additive inverse-coupling family, pure positive branch, and gravity log row
+  C-RGE-003:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_transmutation.py
+    use: reference-explicit inverse-energy length relation and coupling inversion ceiling
+  C-IDN-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_constraints.py
+    use: exact row provenance, ranks, nullspaces, and coordinate identifiability
+interpretation_ceiling_dependencies:
+  C-DIM-008: absolute-scale and unit-coordinate ceiling
+  C-SYM-002: no accepted AS6 fixed-point occupancy or selected coupling
+predecessor_evidence:
+  source_unit: AS7
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: 710635ddf323b8995dc4a1481aeb8232938d6db14c37bd95a537b26d17df3e0f
+  authority: noncanonical_hash_pinned_attempt_evidence
+external_empirical_imports: []
+external_literature_imports: []
+exact_oracle: SymPy rank, nullspace, inverse solve, interval endpoint, and identity algebra
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

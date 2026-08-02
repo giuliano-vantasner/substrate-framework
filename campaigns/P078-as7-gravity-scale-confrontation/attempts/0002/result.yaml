@@ -1,0 +1,17 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G]
+status: failed_preserved
+command: PYTHONPATH=src .venv/bin/python proposals/P078-as7-gravity-scale-confrontation/verify.py
+process_exit_status: 1
+checks_before_failure: 19
+failure: >-
+  The unique symbolic solution was mathematically equal to the independently
+  derived expression, but the primary verifier compared two different exact
+  logarithmic representations structurally instead of simplifying their
+  residual.
+diagnosed_layer: verifier_representation
+scientific_state: unchanged
+repair: >-
+  Canonicalize the positive length/conversion logarithm as a difference of
+  logs and require the independently simplified solution residual to vanish.
+next_route: Rerun the primary and independent exact verifiers plus focused canonical tests.

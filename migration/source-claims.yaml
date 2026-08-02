@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 4
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 143
-  qualified: 67
+  pending_adjudication: 142
+  qualified: 68
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -4789,6 +4789,7 @@ units:
   - campaigns/P077-as6-self-dual-coupling-audit/attempts/0001/result.yaml
   - campaigns/P077-as6-self-dual-coupling-audit/attempts/0002/result.yaml
   - campaigns/P077-as6-self-dual-coupling-audit/attempts/0003/result.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/attempts/0004/result.yaml
   - memory/vantasner/decisions/C-SYM-002-review.md
   note: P077 derives exact reciprocal-involution, arbitrary-target, coordinate-covariance, and off-fixed-orbit
     ledgers through canonical and independent symbolic routes. It uses no numerical integration or NumPy
@@ -4830,8 +4831,38 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-IDN-002
+  - C-GRV-001
+  - C-RGE-003
+  - C-IDN-001
+  - C-DIM-008
+  - C-SYM-002
+  qualification: AS7's pure-branch inverse arithmetic survives only after observed G, hbar, c, the hadronic
+    length, b0=7, zero baseline, a conversion and length orientation, and a coefficient interval are supplied.
+    The interval maps conditionally to a cutoff interval; every target cutoff has a coefficient preimage,
+    while the general additive baseline can realize any supplied total. The two gravity/transmutation
+    rows have rank two on three log coordinates and one null direction. Supplying the coefficient makes
+    the coupling solve unique but input-conditioned; AS7 then substitutes that solved coupling back into
+    the same relation, so its alleged two-route equality is true by construction. Its selected O(1..100)
+    range, metre band, Planck and hadron labels, QCD coefficient, physical coupling, vacuum, lattice termination,
+    and granularity are not derived. AS6 fixed-point occupancy was never accepted, and AS7 reverses the
+    accepted executable inverse-energy length orientation unless its physical roles are independently
+    remapped.
+  evidence:
+  - campaigns/P078-as7-gravity-scale-confrontation/reviews/source_adjudication.md
+  - campaigns/P078-as7-gravity-scale-confrontation/evidence/source-reproduction.yaml
+  - campaigns/P078-as7-gravity-scale-confrontation/evidence/source-audit.yaml
+  - campaigns/P078-as7-gravity-scale-confrontation/evidence/candidate-comparison.yaml
+  - campaigns/P078-as7-gravity-scale-confrontation/evidence/primary-provenance.yaml
+  - campaigns/P078-as7-gravity-scale-confrontation/attempts/0001/result.yaml
+  - campaigns/P078-as7-gravity-scale-confrontation/attempts/0002/result.yaml
+  - campaigns/P078-as7-gravity-scale-confrontation/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-IDN-002-review.md
+  note: P078 derives exact conditional interval, additive-baseline, arbitrary-target, joint-rank, fixed-input
+    inverse, and sign-domain ledgers through canonical and independent symbolic routes. It uses no numerical
+    integration or NumPy trapezoidal alias.
 - source_unit: AS8
   phase: phase-22
   path: merged-framework/bridges/phase-22/bridge_AS8_superborn_quantum_face_of_granularity.py

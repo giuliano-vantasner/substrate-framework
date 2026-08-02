@@ -1,0 +1,13 @@
+campaign: P078
+frozen_before_source_opening: true
+proposal_path: proposals/P078-as7-gravity-scale-confrontation/proposal.yaml
+proposal_sha256: 8c7913e7d628145b9322fc2949931522b68a82943c93d70113eb5483c77fb522
+memory_contract_path: memory/vantasner/proposals/P078-as7-gravity-scale-confrontation.md
+memory_contract_sha256: 78090da4e79a01da7ccbeb0aac8dcb9c4ba76e79dcc20b297b52f5bb707c6d00
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - source CODATA values and hadronic length
+  - source coefficient interval and Planck band
+  - source reconstructed coupling and self-dual comparison

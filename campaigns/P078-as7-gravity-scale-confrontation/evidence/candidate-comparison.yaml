@@ -1,0 +1,50 @@
+campaign: P078
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and explicit provenance for every row
+  - exact interval, additive-baseline, target-preimage, rank, and domain algebra
+  - separation of prediction from inverse reconstruction and supplied priors
+  - mutation sensitivity to baseline, coefficient, conversion, orientation, and row removal
+  - parameter economy and natural fit with accepted gravity and scale ceilings
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All six checks reproduce, but their predicates encode selected constants,
+      a hard-coded interval, inverse reconstruction, or solve-back equality.
+  B:
+    decision: selected_as_conditional_interval
+    reason: >-
+      A supplied positive closed coefficient interval has an exact monotone
+      cutoff image only on the separately imposed zero-baseline branch.
+  C:
+    decision: selected
+    reason: >-
+      The general accepted additive baseline realizes any supplied total G
+      for arbitrary positive cutoff and nonzero real induced coefficient.
+  D:
+    decision: selected
+    reason: >-
+      Every positive target cutoff has a pure-branch coefficient preimage, and
+      the gravity log row retains its coefficient-cutoff null direction.
+  E:
+    decision: selected_as_orientation_ceiling
+    reason: >-
+      The accepted inverse-energy length map requires explicit conversions and
+      turns a supplied admissible ratio into an inferred free coupling.
+  F:
+    decision: selected
+    reason: >-
+      The two provenance-labelled rows have rank two on three coordinates;
+      supplying a coefficient row makes the solve unique but input-conditioned.
+  G:
+    decision: mapped_to_existing_claim
+    reason: >-
+      C-DIM-008 already distinguishes a dimensionful quantity from its unit
+      coordinate, so no duplicate canonical unit theorem is added.
+selected_claim: C-IDN-002
+physical_ceiling:
+  - no observed Newton constant or absolute length is derived
+  - no coefficient interval, beta coefficient, conversion, or coupling is selected
+  - no Planck, hadron, QCD, lattice, soliton, or granularity dictionary is established
+  - no cross-sector statistical or causal independence is established by row rank

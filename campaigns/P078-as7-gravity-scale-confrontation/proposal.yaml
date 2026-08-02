@@ -1,0 +1,62 @@
+id: P078
+base_release: v0.70.0
+base_commit: 214747b
+scientific_base_commit: 8a1b2bd
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS7]
+question: >-
+  Derive an exact premise- and provenance-explicit feasibility ledger for
+  confronting a cutoff-induced Newton relation with a separately declared
+  transmuted length relation, including free coefficients, additive inverse-
+  coupling baselines, conversions, and supplied intervals; then determine
+  whether AS7 derives a Planck-like granularity and new coupling or only
+  reconstructs free inputs from empirical targets.
+invariants:
+  - C-GRV-001 permits the pure formula G=a^2*c^3/(s*hbar) only after separately imposing a zero additive inverse-coupling baseline and positive s; general B can realize any supplied total.
+  - One supplied Newton ratio leaves the exact cutoff-coefficient log null direction (1,2), and a=sqrt(s*hbar*G/c^3) is inverse inference after supplying G and s.
+  - C-RGE-003 retains the reference, coupling, beta coefficient, conversion ratio, and correct inverse-energy length orientation; inversion of a supplied ratio is not prediction.
+  - C-DIM-008 denies dimensionless-only absolute-scale generation and distinguishes a fixed physical quantity from its numeric unit coordinate.
+  - C-SYM-002 establishes neither AS6 fixed-point occupancy nor any selected coupling; AS7 cannot refute an accepted operating point that was never accepted.
+  - A field-count or coefficient interval such as O(1..100), an observed Newton value, a hadronic length, and a Planck or granularity label are empirical or modeling premises unless separately accepted with provenance.
+allowed_imports:
+  - C-GRV-001 and substrate_framework.induced_gravity only for the declared induced inverse-coupling family, additive baseline, pure inverse, interval-free null direction, and physical ceilings
+  - C-RGE-003, C-DIM-008, and their canonical modules only for reference-explicit transmutation, conversion, inverse-energy orientation, arbitrary-target, and unit-coordinate semantics
+  - C-SYM-002 only for the absence of AS6 fixed-point selection and for premise-explicit reciprocal algebra
+  - C-IDN-001 and C-LIN-001 only for exact row provenance, compatibility, interval intersection, coordinate identifiability, and nullspace diagnostics
+  - exact positive real algebra and closed supplied intervals without empirical values before the comparator gate
+  - AS7 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after this contract validates
+candidates:
+  - id: A
+    description: Reproduce AS7 literally and test whether each claimed falsification, Planck-analog, sane-field-count, coupling reconstruction, and no-fit predicate establishes its advertised semantics.
+  - id: B
+    description: Analyze the zero-baseline pure-induced branch with supplied positive G and a separately supplied closed positive coefficient interval, deriving only its conditional cutoff interval.
+  - id: C
+    description: Retain the independent additive inverse-coupling baseline and construct the baseline required to match any supplied G for arbitrary positive cutoff and nonzero induced coefficient.
+  - id: D
+    description: Parameterize the coefficient-cutoff null family and arbitrary-target inverse maps to distinguish compatibility from unique absolute-scale identification.
+  - id: E
+    description: Compose the accepted reference-explicit inverse-energy length ratio with explicit conversions and invert only supplied admissible ratios for the free coupling.
+  - id: F
+    description: Build the exact joint log-row system with row provenance and determine rank, compatibility, identifiable coordinates, and remaining null directions under each declared input subset.
+  - id: G
+    description: Separate a dimensionful observed quantity from its unit coordinate and audit whether changing or naming units is being mistaken for a derived physical scale.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and provenance of every empirical row, coefficient interval, baseline, conversion, and reference
+  - exact compatibility, rank, nullspace, interval image, and arbitrary-target algebra before numerical comparison
+  - distinction between conditional falsification inside a supplied model, inverse parameter reconstruction, physical observation, and framework prediction
+  - mutation sensitivity to restoring the additive baseline, rescaling the coefficient and cutoff along the null direction, widening the coefficient interval, reversing the length orientation, changing conversions, and removing empirical rows
+  - parameter economy without silently fixing the induced coefficient, baseline, beta coefficient, coupling, reference, hadronic length, or observed Newton value
+  - natural compatibility with C-GRV-001, C-RGE-003, C-DIM-008, and C-SYM-002 without reinstating rejected AS3-AS6 headlines
+claims_proposed:
+  - provisional C-IDN-002 joint gravity/transmutation feasibility and inverse-reconstruction ledger only if the complete composition is nonduplicate and reusable
+comparators_blinded_until: >-
+  The generated queue synopsis exposes an approximately 0.6 fm cutoff, a
+  roughly 10^39 coefficient, a Planck-scale label near 10^-35 m, an asserted
+  O(1..100) coefficient window, and a reconstructed coupling near 0.245.
+  Those are quarantined as source claims and may not select a candidate,
+  interval, baseline, conversion, physical dictionary, tolerance, or verdict.
+  No AS7 source-body output, CODATA value, hadronic length, or later operating-
+  point number may be opened before this exact manifest and its memory contract
+  validate.
+status: accepted
