@@ -1,0 +1,73 @@
+campaign: P056
+source_unit: WZ1
+source_baseline: substrate@6d1f4e0
+source_sha256: 87bab354a83a6edd05ed77ed0778e1cdf11cf402f92414664f7a3196df0551b9
+local_closedness:
+  source_verdict: supported_with_exact_replacement
+  note: >-
+    WZ1's sampled six-trace cancellation is consistent with graded cyclicity.
+    The canonical CE calculation now proves d omega_5=0 exactly rather than
+    inferring it from random near-zero samples.
+pointwise_nonzero:
+  source_verdict: supported_with_exact_replacement
+  note: >-
+    The sampled chart gives a nonzero value. The canonical cochain has nine
+    exact nonzero components and squared coefficient norm 75/4 in the frozen
+    anti-Hermitian basis.
+global_non_exactness:
+  source_period_oracle: hard_coded
+  assigned_period: 1
+  source_verdict: not_established_by_source
+  replacement_oracle: exact_CE_nonimage_plus_compact_Haar_averaging
+  replacement_verdict: established_without_period_normalization
+  note: >-
+    Exact ranks give rank(d4)=35, rank(d5)=20, dim ker(d5)=36, and one
+    invariant fifth-cohomology class. Appending the trace cochain raises the
+    d4 image rank to 36. If a global primitive existed, normalized Haar
+    averaging on compact SU(3) would provide an invariant primitive, contrary
+    to this exact non-image result.
+metric_and_locality:
+  source_metric_predicate: omega5_weyl_equals_literal_one
+  source_locality_predicate: uses_first_derivs_only_literal_true
+  sensitive_source_oracle: false
+  surviving_statement: >-
+    By inspection, Tr((U^-1 dU)^5) is a metric-free finite polynomial in U,
+    U^-1, and first derivatives wherever U is a smooth SU(3) map. This does
+    not establish a physical bulk theory or a globally defined 4D primitive.
+even_power_guard:
+  source_claim: d_Tr_L4_equals_minus_4_Tr_L5_nonzero
+  verdict: 'false'
+  exact_counterexample: >-
+    Full wedge antisymmetrization gives Tr(L^4)=0 by a cyclic shift with sign
+    minus one. In d Tr(L^4), the four graded Leibniz terms have coefficients
+    +1,-1,+1,-1 after cyclic reordering and cancel. Equivalently d(L^4)=0
+    under dL=-L^2. The source retained one term and multiplied it by four.
+ungauged_variation:
+  exact_boundary_identity: true
+  identity: delta_Tr_L5_equals_d_5Tr_vL4
+  physical_inflow_established: false
+  missing_objects:
+    - gauge_connection
+    - anomaly_polynomial
+    - gauge_descent
+    - physical_current_map
+  note: >-
+    For delta U=U v, trace invariance removes the commutator part and d(L^4)=0
+    gives the exact boundary identity. This is an ungauged field variation,
+    not a derivation of a Goldstone-Wilczek baryon current, gauge anomaly,
+    Callan-Harvey inflow, or Chern-Simons descent.
+normalization_and_periods:
+  wzw_prefactor_status: imported_not_promoted
+  pi5_generator_status: pending_WZ2_not_imported
+  integer_period_status: not_established
+  phase_statement: >-
+    The phase ratio for two fillings is exp(i c (I_B-I_Bprime)). It equals one
+    only conditional on a declared coefficient-period lattice; P056 assigns
+    neither the lattice nor the physical level.
+source_disposition_recommendation: qualified
+remaining_subclaims:
+  - WZW period normalization and a genuine generator integral
+  - integer level quantization
+  - gauged Chern-Simons descent and anomaly polynomial
+  - Goldstone-Wilczek baryon-current identification
+  - N_c or representation selection

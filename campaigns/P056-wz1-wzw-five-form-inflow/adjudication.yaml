@@ -1,0 +1,67 @@
+campaign: P056
+title: Exact SU(3) trace-five cohomology, conditional extension, and WZ1 audit
+source_baseline: substrate@6d1f4e0
+source_units: [WZ1]
+base_release: v0.49.0
+release_after_adjudication: v0.50.0
+adjudicated_at: '2026-08-02T15:00:00Z'
+selected_candidate:
+  id: C
+  reason: >-
+    Candidate C derives a reusable nonzero closed and globally non-exact SU(3)
+    trace-five form from accepted exact Lie algebra without importing a period.
+    Candidate B supplies its local exterior identity, while Candidate D is
+    retained only as a conditional oriented-filling and ungauged boundary-
+    variation theorem.
+competing_candidates:
+  - id: A
+    decision: >-
+      retained_as_clean_source_reproduction_but_qualified_for_hard_coded_period
+      ceremonial_oracles_false_even_guard_and_physical_inflow_overreach
+  - id: B
+    decision: accepted_exact_local_closedness_and_trace_convention
+  - id: D
+    decision: >-
+      accepted_conditional_filling_difference_and_ungauged_boundary_identity
+      with_gauge_anomaly_and_physical_current_branches_rejected
+claims:
+  - id: C-WZW-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0006/result.yaml
+  exact_primary: attempts/0002/result.yaml
+  independent_review: reviews/independent_cohomology_review.py
+  independent_result: attempts/0003/result.yaml
+  preserved_failed_or_qualified_attempts:
+    - attempts/0001/result.yaml
+    - attempts/0004/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-WZW-001-review.md
+source_disposition:
+  WZ1: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P056-wz1-wzw-five-form-inflow/verify.py --source-file
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-17/bridge_WZ1_wzw_5d_chern_simons.py
+    --source-reproduction campaigns/P056-wz1-wzw-five-form-inflow/evidence/source-reproduction.yaml
+    --source-audit campaigns/P056-wz1-wzw-five-form-inflow/evidence/source-audit.yaml
+    --independent-result campaigns/P056-wz1-wzw-five-form-inflow/attempts/0003/result.yaml
+    --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+    --release governance/releases/current.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P056-wz1-wzw-five-form-inflow/reviews/independent_cohomology_review.py
+  - .venv/bin/python -m pytest -q tests/test_wzw.py tests/test_su3.py tests/test_governance.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

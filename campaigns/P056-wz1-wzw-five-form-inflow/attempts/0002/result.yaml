@@ -1,0 +1,24 @@
+attempt: 0002
+campaign: P056
+candidate: C_exact_CE_nonimage
+verdict: passed_focused_package_tests
+process_exit_code: 0
+elapsed_seconds: 4.60
+terminal_tally: 16 passed
+command: .venv/bin/python -m pytest tests/test_wzw.py tests/test_su3.py -q
+exact_results:
+  d4_shape: [56, 70]
+  d4_rank: 35
+  d5_shape: [28, 56]
+  d5_rank: 20
+  five_cocycle_dimension: 36
+  fifth_cohomology_dimension: 1
+  augmented_d4_trace_rank: 36
+  trace_five_nonzero_components: 9
+  trace_five_norm_squared: 75/4
+  trace_four_identically_zero: true
+  trace_four_derivative_multiplier: 0
+interpretation: >-
+  Exact invariant non-image plus normalized Haar averaging on compact SU(3)
+  establishes global non-exactness without assigning a generator period. The
+  extension phase remains conditional and no gauge anomaly is promoted.

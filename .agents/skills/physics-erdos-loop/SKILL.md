@@ -121,6 +121,8 @@ Do not count a weaker oracle as independent evidence when a stronger result alre
 - run resolution, timestep, domain, and tolerance refinement for numerics;
 - compare against an independently implemented or analytically solvable case;
 - inspect the exact statement of formal theorems and their axioms.
+- reject structural predicates implemented as literal booleans, stand-in constants, copied periods, or samples that do not evaluate the defining object;
+- for differential forms, expand all graded Leibniz and cyclic terms and audit nonvanishing, closedness, global non-exactness, periods, extension dependence, and gauge descent independently.
 
 For SciPy work, record the routine and algorithm (`solve_ivp`, `solve_bvp`, sparse eigensolver, optimizer, quadrature, or another justified method), floating-point precision, mesh and domain, initial/boundary data, tolerances, stopping status, and error norm. Tie near-zero and agreement thresholds to a declared dimensional or scale-relative error model. When an absolute threshold fails at roundoff scale, preserve the attempt, show refinement or conditioning evidence, and repair the oracle with a justified scale-sensitive bound; do not blur a separately exact null into a floating-point claim. Treat solver success as a prerequisite, not the verdict. A PDE claim additionally needs spatial and temporal refinement, stability evidence, conservation or controlled-dissipation checks, and a method cross-check or soluble limit appropriate to the equation.
 

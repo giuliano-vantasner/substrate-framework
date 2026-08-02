@@ -1,0 +1,28 @@
+attempt: 0003
+campaign: P056
+candidate: C_independent_dual_separator
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 6.36
+terminal_tally: ALL 26 CHECKS PASS [P056-INDEPENDENT]
+method:
+  - reconstruct all eight anti-Hermitian generators without importing the SU3 or WZW APIs
+  - derive every bracket coefficient by exact trace projection
+  - independently assemble the graded CE differentials
+  - separate the trace cochain from im(d4) using its exact dual pairing rather than rank augmentation
+  - derive the even-power cancellation and extension mutations independently
+exact_results:
+  trace_five_component_01234: -15/8
+  trace_five_nonzero_components: 9
+  trace_five_norm_squared: 75/4
+  trace_annihilates_d4_image: true
+  trace_self_pairing_nonzero: true
+mutations:
+  bracket_mutation_breaks_d_squared: true
+  removed_graded_signs_break_d_squared: true
+  wrong_gluing_orientations_rejected: 2
+  noninteger_phase_coefficients_rejected: 2
+  generator_scale_or_orientation_mutations_rejected: 2
+note: >-
+  The independent route imports only CheckLedger until all mathematical
+  objects and verdicts are frozen; it compares primary APIs in its last check.

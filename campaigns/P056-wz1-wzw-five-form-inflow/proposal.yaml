@@ -1,0 +1,67 @@
+id: P056
+base_release: v0.49.0
+base_commit: 90c6a8c
+source_baseline: substrate@6d1f4e0
+source_units: [WZ1]
+question: >-
+  Determine the strongest exact, reusable theorem supported for the SU(3)
+  Maurer-Cartan five-form and a five-dimensional extension action, and audit
+  WZ1's claims of global non-exactness, four-dimensional obstruction, boundary
+  descent, and anomaly inflow without inheriting pending S3, S4, WZ2, or WZ3.
+invariants:
+  - C-LIE-001 fixes the explicit Hermitian T_a=lambda_a/2 basis, trace normalization, commutator convention, and structure constants; it supplies no WZW action, gauge field, anomaly, representation assignment, or physical substrate map.
+  - C-TOP-001 is only an abstract integer sign character and supplies no SU(3) homotopy, cohomology, baryon number, statistics, or physical charge theorem.
+  - Closedness, pointwise nonvanishing, global non-exactness, nonzero or integer periods, extension ambiguity, boundary descent, and physical anomaly inflow are distinct obligations.
+  - A local five-dimensional density may define an extension functional without being a gauge Chern-Simons inflow action; the latter requires a declared gauge connection and a checked descent or boundary-variation identity.
+  - Anti-Hermitian Maurer-Cartan forms and Hermitian generators carry explicit factors of i, and orientation reversal must reverse every odd-dimensional integral.
+allowed_imports:
+  - C-LIE-001
+  - C-LIE-002 only for exact SU(3) group membership and center facts if a source check actually needs them
+  - standard exterior-algebra sign rules, the Maurer-Cartan identity, Stokes' theorem, and normalized Haar averaging on compact SU(3)
+  - exact finite-dimensional Chevalley-Eilenberg cochain algebra derived from C-LIE-001 structure constants
+  - SymPy for exact sparse linear algebra and NumPy/SciPy only for bounded source reproduction or regression evidence
+  - WZ1 at substrate@6d1f4e0 as noncanonical evidence after the comparator gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce WZ1 literally and retain only subclaims whose equations,
+      normalization, topology, descent, and sensitivity checks survive an
+      independent audit.
+  - id: B
+    description: >-
+      Derive local closedness of Alt Tr(theta^5) directly from the
+      Maurer-Cartan equation and graded cyclicity, keeping nonzero evaluation
+      and global non-exactness as separate questions.
+  - id: C
+    description: >-
+      Construct the exact SU(3) Chevalley-Eilenberg differentials from the
+      accepted structure constants, prove the trace five-cochain is closed,
+      nonzero, and outside im(d:C4->C5), and lift invariant non-exactness to
+      global de Rham non-exactness by Haar averaging.
+  - id: D
+    description: >-
+      Derive the conditional extension/gluing theorem: a closed five-form
+      gives a local five-dimensional extension functional whose difference
+      between fillings is a closed-cycle period; promote quantized phase
+      independence or anomaly inflow only if period normalization and an
+      explicit gauge-descent identity are independently established.
+uniqueness_evidence: null
+selection_criteria:
+  - exact separation of local closedness, pointwise nonvanishing, global non-exactness, periods, extension ambiguity, descent, and physical interpretation
+  - dependency closure from C-LIE-001 with every external differential-geometric theorem declared
+  - convention closure for Hermitian versus anti-Hermitian generators, trace normalization, wedge-product factorials, and orientation
+  - assumption and parameter economy without importing N_c, a WZW level, baryon number, anomaly coefficient, or representation comparator
+  - exact rank or image-membership evidence rather than copied antisymmetry prose or a hard-coded period
+  - correct SU(2) dimension, Abelian/commuting, zero-form, orientation-reversal, normalization-rescaling, and wrong-structure-constant limits
+  - independent exterior-algebra and Chevalley-Eilenberg routes with load-bearing mutations that reverse the relevant verdict
+  - honest ceiling between a mathematical extension functional and a physical gauge-anomaly inflow mechanism
+claims_proposed:
+  - provisional C-WZW-001 exact SU(3) trace-five-form cohomology and conditional extension theorem
+comparators_blinded_until: >-
+  The Maurer-Cartan convention, alternating-cochain normalization, exact
+  Chevalley-Eilenberg basis and image test, Hermiticity convention,
+  orientation law, gluing theorem, mutation set, and physical-interpretation
+  ceiling are frozen in this manifest and matching memory contract before
+  WZ1's executable, constants, reported periods, level, baryon, anomaly, or
+  representation values are inspected.
+status: accepted

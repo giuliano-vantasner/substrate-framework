@@ -1,0 +1,16 @@
+attempt: 0004
+campaign: P056
+candidate: assembled_primary_verifier
+verdict: failed_audit_scalar_type
+process_exit_code: 1
+terminal_error: >-
+  FAIL [P056-WZ1] the source's even-power rejection guard is mathematically false
+checks_completed_before_failure: 10
+diagnosis: >-
+  YAML parsed the unquoted audit verdict `false` as Boolean false, while the
+  verifier required the categorical string "false". Every mathematical
+  predicate in the composite check was true. This is an evidence-schema
+  serialization defect, not a scientific failure.
+repair: >-
+  Quote the categorical verdict in source-audit.yaml and rerun the unchanged
+  scientific verifier as a new append-only attempt.

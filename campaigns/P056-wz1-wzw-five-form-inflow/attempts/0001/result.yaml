@@ -1,0 +1,55 @@
+attempt: 0001
+campaign: P056
+candidate: A_literal_WZ1
+verdict: passed_source_tally_headline_not_established
+process_exit_code: 0
+elapsed_seconds: 0.51
+terminal_tally: ALL 12 CHECKS PASS
+source:
+  baseline: substrate@6d1f4e0
+  path: merged-framework/bridges/phase-17/bridge_WZ1_wzw_5d_chern_simons.py
+  sha256: 87bab354a83a6edd05ed77ed0778e1cdf11cf402f92414664f7a3196df0551b9
+environment:
+  numpy: 2.5.1
+  sympy: 1.14.0
+surviving_subclaims:
+  - the numerical chart is consistent with Maurer-Cartan flatness at its single declared finite-difference scale
+  - the sampled SU(3) chart has a nonzero imaginary alternating trace of five anti-Hermitian Maurer-Cartan components
+  - graded cyclicity makes the alternating trace of six odd matrix-valued one-forms vanish
+  - the ungauged trace-five density is a metric-free local polynomial in U and its first derivatives
+  - the infinitesimal variation of the ungauged trace-five form is an exact boundary derivative
+failed_or_unestablished_subclaims:
+  - >-
+    WZ1.7 assigns the normalized period to the literal constant 1 and the
+    exact-form period to 0; it does not construct a cycle, integrate the form,
+    or establish global non-exactness.
+  - >-
+    The metric check substitutes into a stand-in constant and the locality
+    check contains uses_first_derivs_only=True; both are prose-shaped
+    assertions rather than sensitive oracles.
+  - >-
+    The even-power guard is false: full wedge antisymmetrization makes
+    Tr(L^4)=0, and the four alternating exterior-derivative terms cancel.
+    The source keeps only one term and incorrectly reports
+    d Tr(L^4)=-4 Tr(L^5) != 0.
+  - >-
+    The exact variation of the ungauged map functional is not by itself a
+    Goldstone-Wilczek baryon current, gauge anomaly, Callan-Harvey inflow, or
+    Chern-Simons descent. No gauge connection, anomaly polynomial, gauge
+    transformation, or physical current map is present.
+  - >-
+    Pointwise nonzero, closedness, metric independence, locality, global
+    non-exactness, nonzero periods, phase quantization, and physical inflow are
+    conflated in the terminal classification.
+oracle_sensitivity:
+  effective:
+    - a wrong Maurer-Cartan sign would fail the finite-difference check
+    - random five-versus-six alternating traces distinguish nonzero and cyclic cancellation on the sampled matrices
+  ineffective:
+    - the hard-coded period check cannot detect a wrong cycle or normalization
+    - the stand-in metric and boolean locality checks do not inspect the actual implementation
+    - the purported even-power rejection guard asserts a mathematically false derivative identity
+next_attempt: >-
+  Build the exact C-LIE-001 Chevalley-Eilenberg complex, prove the real
+  trace-five cochain is a nonzero cocycle outside im(d:C4->C5), independently
+  separate it from the image, and retain only a conditional extension theorem.

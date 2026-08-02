@@ -1,0 +1,29 @@
+attempt: 0005
+campaign: P056
+candidate: C_exact_CE_with_D_conditional_extension
+verdict: passed_primary_scientific_verifier
+process_exit_code: 0
+elapsed_seconds: 4.46
+terminal_tally: ALL 27 CHECKS PASS [P056-WZ1]
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P056-wz1-wzw-five-form-inflow/verify.py --source-file
+  /home/dan/substrate/merged-framework/bridges/phase-17/bridge_WZ1_wzw_5d_chern_simons.py
+  --source-reproduction
+  campaigns/P056-wz1-wzw-five-form-inflow/evidence/source-reproduction.yaml
+  --source-audit
+  campaigns/P056-wz1-wzw-five-form-inflow/evidence/source-audit.yaml
+  --independent-result
+  campaigns/P056-wz1-wzw-five-form-inflow/attempts/0003/result.yaml
+coverage:
+  - source provenance and clean tally
+  - hard-coded period and ceremonial metric/locality predicates
+  - anti-Hermitian and real-form conventions
+  - exact rejection of the false even-power guard
+  - exact CE complex, cocycle, ranks, non-image, and dual separator
+  - compact-Haar lift to global non-exactness
+  - bracket, dimension, commuting, normalization, and orientation mutations
+  - conditional filling phase and strict no-anomaly-inflow ceiling
+next_attempt: >-
+  Complete claim-level review, source disposition, consumer replay, canonical
+  synchronization, and the single final repository gate.

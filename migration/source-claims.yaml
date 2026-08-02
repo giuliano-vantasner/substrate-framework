@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 165
-  qualified: 46
+  pending_adjudication: 164
+  qualified: 47
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3388,8 +3388,28 @@ units:
   dynamic_check_calls: 7
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-WZW-001
+  qualification: WZ1's Maurer-Cartan trace-five closedness, pointwise nonvanishing, metric-free local
+    density, and ungauged exact boundary variation survive with stronger exact evidence. Its global non-exactness
+    check instead assigns the period to the literal constant 1, its metric and locality predicates use
+    stand-in constants, and its even-power rejection guard is false because Tr(theta^4) and its full graded
+    derivative vanish. The exact CE non-image and compact-Haar argument establishes global non-exactness
+    without a period. WZ1 supplies no gauge connection, anomaly polynomial, descent equation, or physical
+    current map, so it establishes no normalized generator period, integer WZW level, Chern-Simons anomaly
+    inflow, Goldstone-Wilczek baryon current, N_c, representation selection, physical dynamics, absolute
+    scale, or substrate realization.
+  evidence:
+  - campaigns/P056-wz1-wzw-five-form-inflow/reviews/source_adjudication.md
+  - campaigns/P056-wz1-wzw-five-form-inflow/evidence/source-reproduction.yaml
+  - campaigns/P056-wz1-wzw-five-form-inflow/evidence/source-audit.yaml
+  - campaigns/P056-wz1-wzw-five-form-inflow/attempts/0001/result.yaml
+  - campaigns/P056-wz1-wzw-five-form-inflow/attempts/0004/result.yaml
+  - memory/vantasner/decisions/C-WZW-001-review.md
+  note: P056 constructs the exact SU(3) invariant cochain complex twice, proves the real trace-five cocycle
+    is outside the coboundary image by rank and dual separation, and keeps extension-phase independence
+    explicitly conditional on a separately supplied period lattice and coefficient.
 - source_unit: WZ2
   phase: phase-17
   path: merged-framework/bridges/phase-17/bridge_WZ2_level_quantization_pi5.py

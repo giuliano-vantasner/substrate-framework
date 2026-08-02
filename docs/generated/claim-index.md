@@ -623,3 +623,12 @@ For positive separation R, Euclidean duration T, and coefficient sigma, conditio
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none
+
+## C-WZW-001
+
+In the explicit fundamental SU(3) convention of C-LIE-001, let E_a=i*T_a, so E_a is anti-Hermitian and [E_a,E_b]=-f_abc*E_c, and define the real left-invariant five-cochain Omega_5=-i*Alt Tr(theta^5), where theta=g^{-1}dg and Alt is the unnormalized signed permutation sum with no hidden 1/5! factor. The exact Chevalley-Eilenberg differentials built from those structure constants obey d_5*d_4=0, have rank(d_4)=35 and rank(d_5)=20, and hence have a 36-dimensional degree-five cocycle kernel and one-dimensional invariant fifth cohomology. Omega_5 has nine nonzero basis components, squared coefficient norm 75/4, obeys d_5*Omega_5=0, and is not in image(d_4): appending it raises the image rank from 35 to 36, while independently Omega_5^T*d_4=0 and Omega_5^T*Omega_5=75/4. Because SU(3) is compact and Omega_5 is left invariant, a hypothetical global primitive could be averaged with normalized Haar measure to an invariant primitive; the exact non-image result therefore makes Omega_5 globally non-exact without assigning any period normalization. The density is a local, metric-free polynomial in a smooth group-valued map and its first derivatives. For an ungauged variation delta U=U*v, delta Tr(theta^5)=d(5*Tr(v*theta^4)); this is an exact boundary identity. If two compatible oriented fillings have integrals I_B and I_Bprime, their glued closed-cycle period is I_B-I_Bprime and the extension phase ratio for coefficient c is exp(i*c*(I_B-I_Bprime)); filling independence follows only under the additional premise that c times every allowed period lies in 2*pi*Z. The theorem fixes no generator period, integer level, WZW coefficient, N_c, baryon current or charge, gauge connection, Chern-Simons descent, anomaly inflow, representation selection, physical bulk or boundary dynamics, absolute scale, or substrate realization.
+
+- Accepted in: `v0.50.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-LIE-001

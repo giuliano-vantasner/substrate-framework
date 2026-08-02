@@ -1,0 +1,27 @@
+attempt: 0006
+campaign: P056
+candidate: accepted_C_with_conditional_D
+verdict: passed_complete_repository_workflow
+process_exit_code: 0
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+workflow_results:
+  accepted_claims: 70
+  accepted_claims_validated: 70
+  proposals_in_registry: 0
+  migration_units: 218
+  migration_pending: 164
+  migration_partial: 0
+  memory_files_validated: 252
+  skill_valid: true
+  pytest_passed: 413
+  pytest_elapsed_seconds: 41.34
+  explicit_pytest_passed: 413
+  explicit_pytest_elapsed_seconds: 43.00
+  git_diff_check: passed
+note: >-
+  The definitive full gate ran after the claim, release, generated docs and
+  memory, terminal WZ1 disposition, self-optimization edits, primary verifier,
+  independent review, and consumer scope were assembled. An earlier output
+  window lost its terminal status while the process continued; it was allowed
+  to finish before this separately captured definitive run began.
+remaining_debt: []

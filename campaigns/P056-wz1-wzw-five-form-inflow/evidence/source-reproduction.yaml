@@ -1,0 +1,24 @@
+campaign: P056
+source_unit: WZ1
+baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-17/bridge_WZ1_wzw_5d_chern_simons.py
+sha256: 87bab354a83a6edd05ed77ed0778e1cdf11cf402f92414664f7a3196df0551b9
+command: /home/dan/substrate-framework/.venv/bin/python bridge_WZ1_wzw_5d_chern_simons.py
+working_directory: /home/dan/substrate/merged-framework/bridges/phase-17
+exit_code: 0
+elapsed_seconds: 0.51
+terminal_tally: ALL 12 CHECKS PASS
+environment:
+  numpy: 2.5.1
+  sympy: 1.14.0
+observations:
+  maurer_cartan_max_error: 3.0e-11
+  sampled_trace_five_magnitude: 1.717
+  sampled_trace_six_maximum: 1.9e-12
+  sampled_variation_commutator_maximum: 9.5e-13
+  assigned_normalized_period: 1
+  assigned_exact_period: 0
+note: >-
+  This record reproduces process behavior only. The printed tally does not
+  validate the hard-coded period, the ceremonial metric/locality predicates,
+  the false even-power derivative guard, or the anomaly-inflow interpretation.
