@@ -1,0 +1,23 @@
+attempt: 0005
+campaign: P053
+candidate: independent_Gauss_Simpson_energy_spectrum
+verdict: failed
+process_exit_code: 1
+completed_checks: 4
+failed_check: Gauss integration independently annihilates every resolved odd coefficient
+primary_second_cos2: 591.4704842836684
+independent_second_cos2: 591.4680564616303
+maximum_resolved_odd_coefficient: 5.267395408736775e-10
+absolute_threshold: 2.0e-10
+classification: numerical_quadrature_oracle
+conclusion: >-
+  The independent integration reproduced and spectrally resolved the twice-
+  frequency coefficient, but the predeclared absolute odd-bin threshold was
+  tighter than accumulated float64 quadrature error on a moment of order
+  10^4. Preserve the failure. The repair must compare multiple independent
+  phase quadratures and use a scale-relative roundoff guard; the exact odd-
+  bin null remains a separate analytic symmetry theorem.
+next_attempt: >-
+  Add 96, 192, and 384 point Gauss-Legendre phase refinement, require cos(2
+  tau) convergence and odd-bin error below a scale-relative threshold, and
+  retain the exact symbolic parity and counterexample gates.

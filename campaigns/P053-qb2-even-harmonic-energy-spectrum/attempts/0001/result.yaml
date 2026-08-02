@@ -1,0 +1,47 @@
+attempt: 0001
+campaign: P053
+candidate: A_literal_QB2
+verdict: passed_source_tally_pending_adjudication
+process_exit_code: 0
+elapsed_seconds: 2.4
+terminal_tally: ALL 5 CHECKS PASS
+reported:
+  central_amplitude: 3.0
+  omega: 0.965311
+  radial_nodes: 6000
+  outer_radius: 100.0
+  even_bin_fraction: 1.0
+  two_omega_even_comb_fraction: 0.996567
+  odd_even_power_ratio: 9.77e-31
+  energy: 410.9313
+  mean_r_squared: 18.8357
+  per_axis_variance: 6.2786
+static_audit:
+  field_model: single_harmonic_Bessel_projection_not_the_accepted_N9_branch
+  observable: four_pi_integral_r4_T00_dr_radial_second_energy_moment
+  total_energy: four_pi_integral_r2_T00_dr_used_only_for_time_average_normalization
+  exact_selection: half_period_invariance_correctly_forces_odd_coefficients_to_zero
+  nonzero_two_omega: >-
+    The check proves separate nonzero kinetic and potential contributions but
+    omits the radial-gradient contribution and does not exclude cancellation
+    in their summed local or integrated coefficient.
+  spectral_purity: >-
+    Exact even-bin purity is imposed by the odd-harmonic time ansatz and exact-
+    period sampling; it does not test the radial field equation or distinguish
+    an eigenfunction from an arbitrary period-closed non-solution.
+  spherical_moment: >-
+    The derived per-axis variance is a valid spherical scalar moment but its
+    STF second moment is identically zero, so it is not a radiating quadrupole.
+  solver_status: >-
+    Neither shooting solve_ivp call checks success, message, finiteness, or
+    terminal integration before classifying or consuming its result.
+  refinement: absent_for_harmonics_radial_grid_wall_tolerance_and_transform
+  numpy_quadrature: >-
+    The source selects np.trapezoid on current NumPy and falls back to np.trapz
+    only for older versions; the canonical framework uses its shared
+    version-independent trapezoid_integral helper.
+next_attempt: >-
+  Implement the exact canonical energy coefficient including time and radial
+  derivatives, construct the accepted finite-box N=1..9 scalar-moment
+  spectrum, and require arbitrary half-period non-solutions to pass symmetry
+  but fail the independent PDE residual.

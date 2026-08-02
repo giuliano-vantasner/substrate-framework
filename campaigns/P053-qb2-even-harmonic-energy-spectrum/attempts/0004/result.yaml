@@ -1,0 +1,46 @@
+attempt: 0004
+campaign: P053
+candidate: B_exact_cutoff_refinement_repair
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 6.3
+core_cutoff: 12.0
+ladder:
+  N1:
+    second_cos2: 666.330281099295
+    full_box_energy_relative_range: 0.05815434484667283
+    full_core_remainder_rms: 0.10518483901135328
+  N3:
+    second_cos2: 591.504983104963
+    full_box_energy_relative_range: 0.0029401115702182737
+    full_core_remainder_rms: 0.013582507411015042
+  N5:
+    second_cos2: 591.4700221422127
+    full_box_energy_relative_range: 0.00016111219142915604
+    full_core_remainder_rms: 0.0014539946092809975
+  N7:
+    second_cos2: 591.470478410987
+    full_box_energy_relative_range: 9.287115917574861e-6
+    full_core_remainder_rms: 0.00014402450355826472
+  N9:
+    second_cos2: 591.4704842836684
+    full_box_energy_relative_range: 9.68707059937246e-7
+    full_core_remainder_rms: 1.3660057780928975e-5
+initial_mesh_N9:
+  points: [200, 300, 400]
+  second_cos2:
+    - 591.4740369366046
+    - 591.4704842836684
+    - 591.4747352152513
+tolerance_N9:
+  baseline_1e_8_cos2: 591.4704842836684
+  tight_1e_9_with_512_projection_cos2: 591.4635240040564
+  baseline_max_collocation_rms: 9.978728453559095e-9
+  tight_max_collocation_rms: 9.981243763127249e-10
+conclusion: >-
+  Exact-cutoff interpolation repairs attempt 0003. The twice-frequency core
+  coefficient is stable to initial mesh and tighter solver/projection settings,
+  while full-box energy variation and the independent full nonlinear
+  remainder decrease by about one order of magnitude per added odd harmonic.
+  The finite truncation is not exact, but its residual-sensitive conservation
+  defect is resolved below one part per million at N=9.

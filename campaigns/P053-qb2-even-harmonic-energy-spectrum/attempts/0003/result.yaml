@@ -1,0 +1,32 @@
+attempt: 0003
+campaign: P053
+candidate: B_solver_and_conservation_refinement
+verdict: failed_cutoff_grid_alignment
+process_exit_code: 0
+elapsed_seconds: 5.1
+mechanism: >-
+  The full-box diagnostics and harmonic remainder ladder are valid, but the
+  core moment was integrated after slicing a 0.001-to-40 uniform grid at
+  r<=12. The last retained point was below the declared cutoff, shifting the
+  twice-frequency coefficient from the exact-cutoff attempt-0002 value
+  591.470484 to 590.934571. A cutoff moment is sensitive to its moving shell;
+  an omitted endpoint cannot be treated as quadrature refinement.
+valid_diagnostics:
+  full_box_energy_relative_range_N1_N3_N5_N7_N9:
+    - 0.05815434484667283
+    - 0.0029401115702182737
+    - 0.00016111219142915604
+    - 9.287115917574861e-6
+    - 9.68707059937246e-7
+  core_full_remainder_rms_N1_N3_N5_N7_N9:
+    - 0.10542199987694673
+    - 0.013622086505365822
+    - 0.001458993736597249
+    - 0.0001445846050599028
+    - 1.3718663760668135e-5
+  tight_solver_max_collocation_rms: 9.981243763127249e-10
+classification: numerical_observable_grid_representation
+next_attempt: >-
+  Interpolate every solution onto a grid whose final coordinate is exactly
+  12.0 before integrating the core moment, then rerun unchanged initial-mesh,
+  tolerance, energy-variation, and remainder gates.

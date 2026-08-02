@@ -32,7 +32,7 @@ An identity that holds only because both sides contain the same copied literal i
 - Compare two methods or an analytically soluble limit.
 - Track conserved quantities and discretization error.
 - Separate solver convergence from physical-model validity.
-- Never loosen a tolerance after seeing failure without a prior physical or numerical error model.
+- Predeclare tolerances against a dimensional or scale-relative error model. If an absolute near-zero bound fails, preserve the attempt and require refinement, conditioning, or roundoff evidence before replacing it with a justified scale-sensitive bound; keep exact analytic nulls separate from numerical regression.
 
 Numeric evidence does not become exact verification because it has many digits.
 

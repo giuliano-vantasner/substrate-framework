@@ -1,0 +1,48 @@
+campaign: P053
+source_unit: QB2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+sha256: f7ff064a708d4b3072b247088bee532eda6b14ef4a9d9f5480ea80743a22bbff
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+process_exit_code: 0
+elapsed_seconds: 2.4
+terminal_tally: ALL 5 CHECKS PASS
+reported:
+  central_amplitude: 3.0
+  omega: 0.965311
+  even_bin_fraction: 1.0
+  two_omega_even_comb_fraction: 0.996567
+  odd_even_power_ratio: 9.77e-31
+  per_axis_variance: 6.2786
+static_audit:
+  branch: >-
+    A standalone single-harmonic Bessel shooting construction at amplitude 3,
+    not the accepted amplitude-2.5 N=9 finite-box branch of C-PDE-006.
+  scalar_observable: >-
+    S(t)=4*pi*integral r^4*T00 dr, the radial second energy moment rather than
+    total energy or an STF quadrupole.
+  exact_even_selection: correct_for_any_odd_harmonic_field
+  exact_nonzero_two_line: >-
+    Not established: the check treats kinetic and potential contributions
+    separately, omits the radial-gradient contribution in its conclusion, and
+    never checks the summed local or integrated coefficient for cancellation.
+  purity_oracle: >-
+    Insensitive to the radial field equation. Any arbitrary field with only
+    odd integer temporal harmonics has exactly even energy harmonics over an
+    exactly sampled period.
+  spherical_interpretation: >-
+    The per-axis variance identity is valid, but spherical isotropy makes the
+    STF second moment identically zero at every phase.
+  solver_status: unchecked_for_all_solve_ivp_calls
+  refinements: absent
+  numpy_quadrature: >-
+    The source chooses np.trapezoid when available and falls back to np.trapz
+    on older NumPy. Canonical code calls the shared compatibility helper.
+adjudication_ceiling: >-
+  The source reproduces an exactly even scalar-moment spectrum of its imposed
+  single-harmonic ansatz. It establishes neither an exact full-PDE periodic
+  eigenfunction nor a nonzero STF or physical radiating line.

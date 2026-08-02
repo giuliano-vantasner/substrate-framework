@@ -1,0 +1,7 @@
+PASS: the reviewed QB2 source is hash pinned
+PASS: the independently sampled dependency branch resolves with a sub-gap frequency
+PASS: Gauss phase and Simpson radius integration reproduce the primary twice-frequency coefficient
+PASS: the independent twice-frequency coefficient dominates the resolved even comb
+FAIL: Gauss integration independently annihilates every resolved odd coefficient
+independent coefficients: cos2=591.468056461630 cos4=-6.865663263461 max_odd=5.267e-10
+P053-INDEPENDENT: 4 passed, 1 failed

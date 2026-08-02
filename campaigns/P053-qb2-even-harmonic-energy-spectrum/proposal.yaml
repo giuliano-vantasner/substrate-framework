@@ -1,0 +1,62 @@
+id: P053
+base_release: v0.46.0
+base_commit: a1e9adf
+source_baseline: substrate@6d1f4e0
+source_units: [QB2]
+question: >-
+  Derive the exact temporal selection rules and a reusable, normalization-
+  explicit spectrum for energy observables of the accepted radial harmonic-
+  balance branch, then determine whether QB2's claimed clean twice-frequency
+  radiating line survives harmonic, radial, domain, window, residual, moment,
+  and physical-interpretation audits.
+invariants:
+  - The radial field equation, stress-energy density, dimensionless units, and regularity are those of C-PDE-001.
+  - C-PDE-005 supplies an exact finite-harmonic projection and channel theorem, not existence of an exact full-PDE periodic solution.
+  - C-PDE-006 supplies one finite-box family point with radiative standing-wave higher harmonics, not an infinite-domain eigenstate or the P3D1 trajectory.
+  - A spherically symmetric energy density has identically zero STF quadrupole under C-MOM-003 even when its scalar moments oscillate.
+  - Physical gravitational radiation requires separately accepted source conservation, nonspherical moments, waveform dynamics, and flux premises; a temporal FFT line alone supplies none of them.
+allowed_imports:
+  - C-PDE-001
+  - C-MOM-003
+  - C-PDE-003 and C-PDE-004 only for a separately declared regular infinitesimal l=2 route
+  - C-GW-005 and C-GW-006 only with their conditional and finite-time ceilings preserved
+  - C-PDE-005
+  - C-PDE-006
+  - standard Fourier orthogonality, periodic DFT algebra, and spherical angular integration
+  - SciPy quadrature or BVP methods with explicit status and refinement evidence
+  - QB2 at substrate@6d1f4e0 as noncanonical evidence after the comparator gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce QB2's harmonic-balance field, energy observable, temporal
+      spectrum, and line classifier literally, then retain only predicates
+      that survive normalization, resolution, mutation, and moment audits.
+  - id: B
+    description: >-
+      Derive exact half-period selection for canonical radial energy density
+      and implement direct even-harmonic coefficients and integrated scalar
+      energy moments on the accepted finite-box branch without window leakage.
+  - id: C
+    description: >-
+      If a radiating STF claim is intended, couple a separately regular
+      infinitesimal l=2 mode to the harmonic background under C-PDE-003 and
+      test its first-order moment spectrum without using a spherical scalar
+      energy line as a quadrupole surrogate.
+uniqueness_evidence: null
+selection_criteria:
+  - exact stress-energy and Fourier-normalization consistency
+  - half-period symmetry, spherical STF null, and regular l=2 origin behavior
+  - explicit distinction between local density, radial scalar moment, STF moment, conditional waveform, and physical radiation
+  - assumption and parameter economy without inserted source or P3D1 frequencies
+  - convergence in retained harmonics, temporal samples, radial quadrature, outer radius, and solver tolerance where numerical
+  - direct coefficient agreement with an independently normalized temporal transform and time-shift or parity mutations
+  - compatibility with the finite-box, linearized, conditional-gravity, and finite-time ceilings of accepted dependencies
+claims_proposed:
+  - provisional C-PDE-007 exact even-harmonic energy-selection theorem
+  - provisional C-PDE-008 finite-box scalar energy-spectrum evidence if all numerical gates pass
+comparators_blinded_until: >-
+  The stress-energy definition, candidate set, Fourier normalization, line
+  metric, symmetry and moment guards, refinement thresholds, and physical
+  interpretation ceiling are frozen in this manifest and matching memory
+  contract before QB2's executable spectrum or reported values are inspected.
+status: accepted

@@ -1,0 +1,19 @@
+P053 candidate B finite-box spectrum
+  harmonic ladder core r<=12:
+    N=1 omega=0.976908657117 cos2=666.330281099 two/even=0.995939354
+    N=3 omega=0.976876828530 cos2=591.504983105 two/even=0.999784687
+    N=5 omega=0.976873949847 cos2=591.470022142 two/even=0.999864970
+    N=7 omega=0.976873921614 cos2=591.470478411 two/even=0.999865184
+    N=9 omega=0.976873921394 cos2=591.470484284 cos4=-6.865682295
+      odd/even=4.72e-29 per_axis_variance=7.827021539 max_STF=0
+  phase refinement 256/512/1024 cos2:
+    591.470484284 591.470484284 591.470484284
+  radial refinement 1201/2401/4801 cos2:
+    591.470445344 591.470484284 591.470494040
+  walls 30/40/50/60 core cos2:
+    591.269664499 591.470484284 598.370080354 590.990332998
+  walls 30/40/50/60 full-box cos2:
+    691.968371966 692.263933502 692.607731279 692.209992638
+  walls 30/40/50/60 full-box per-axis variance:
+    8.879258390 8.882639767 9.271876632 8.882334604
+RESULT: converged dominant even scalar line; exact spherical STF null; finite-wall ceiling retained

@@ -1,0 +1,20 @@
+attempt: 0001
+campaign: P053
+candidate: A_literal_QB2
+source_file: merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+source_sha256: f7ff064a708d4b3072b247088bee532eda6b14ef4a9d9f5480ea80743a22bbff
+command: >-
+  PYTHONHASHSEED=0 .venv/bin/python
+  <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+started_at: '2026-08-02T06:20:00Z'
+completed_at: '2026-08-02T06:20:03Z'
+expected: >-
+  Reproduce the literal process and tally, then audit solver status, clipped
+  profile, field residual, observable definition, Fourier normalization,
+  nonzero-line inference, spherical STF meaning, radial/domain refinement,
+  and sensitivity of the purity oracle to arbitrary period-closed non-solutions.

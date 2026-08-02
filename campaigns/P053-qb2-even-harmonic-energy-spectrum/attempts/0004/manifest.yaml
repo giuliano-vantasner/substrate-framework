@@ -1,0 +1,15 @@
+attempt: 0004
+campaign: P053
+candidate: B_exact_cutoff_refinement_repair
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P053-qb2-even-harmonic-energy-spectrum/attempts/0004/refine.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T07:00:00Z'
+expected: >-
+  Preserve attempt 0003's solver, conservation, remainder, mesh and tolerance
+  gates while evaluating the radial second moment on a separately interpolated
+  grid ending exactly at r=12.

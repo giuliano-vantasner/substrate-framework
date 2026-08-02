@@ -1,0 +1,80 @@
+campaign: P053
+title: Exact even-harmonic energy selection, finite-box scalar spectrum, and QB2 audit
+source_baseline: substrate@6d1f4e0
+source_units: [QB2]
+base_release: v0.46.0
+release_after_adjudication: v0.47.0
+adjudicated_at: '2026-08-02T08:45:00Z'
+selected_candidate:
+  id: B
+  reason: >-
+    Candidate B supplies the requested positive object with the least new
+    structure: exact energy parity and spherical-moment meanings plus a
+    declared scalar spectrum on the already accepted finite-box branch. It
+    passes exact cancellation, independent normalization, residual,
+    refinement, wall, and interpretation gates without importing source or
+    P3D1 values.
+competing_candidates:
+  - id: A
+    decision: >-
+      retained_as_reproduction_evidence_but_qualified_for_branch_identity
+      solver_status_gradient_coefficient_pde_purity_and_radiation_meaning
+  - id: C
+    decision: >-
+      not_opened_because_the_requested_positive_scalar_object_is_complete_and
+      any_nonzero_STF_source_is_a_separate_regular_nonspherical_problem
+claims:
+  - id: C-PDE-007
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+  - id: C-PDE-008
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0007/result.yaml
+  independent_review: reviews/independent_energy_spectrum_review.py
+  independent_result: attempts/0006/result.yaml
+  preserved_failed_attempts:
+    - attempts/0003/result.yaml
+    - attempts/0005/result.yaml
+  exploratory_results:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0004/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  numerical_audit: evidence/numerical-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-PDE-007-review.md
+    - memory/vantasner/decisions/C-PDE-008-review.md
+source_disposition:
+  QB2: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P053-qb2-even-harmonic-energy-spectrum/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+    --source-reproduction campaigns/P053-qb2-even-harmonic-energy-spectrum/evidence/source-reproduction.yaml
+    --numerical-audit campaigns/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+    --independent-result campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0006/result.yaml
+    --migration-queue migration/source-claims.yaml
+    --claims governance/claims.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P053-qb2-even-harmonic-energy-spectrum/reviews/independent_energy_spectrum_review.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+    --primary-evidence campaigns/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+  - >-
+    .venv/bin/python -m pytest -q tests/test_radial_harmonic_observables.py
+    tests/test_radial_harmonic_balance.py tests/test_radial_sine_gordon.py
+    tests/test_conserved_moments.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

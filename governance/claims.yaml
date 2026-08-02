@@ -2466,3 +2466,105 @@ claims:
     accepted_in: v0.46.0
     challenges: []
     supersedes: []
+  - id: C-PDE-007
+    statement: >-
+      In the dimensionless radial sine-Gordon convention of C-PDE-005, let H
+      be a finite set of positive odd integers and let
+      u(r,tau)=sum_(n in H) a_n(r)*cos(n*tau), where tau=omega*t. Then u,
+      u_t, and u_r reverse sign under tau->tau+pi, while the canonical energy
+      density T00=(u_t^2+u_r^2)/2+1-cos(u) is invariant. Therefore T00 has
+      half the field period and every odd temporal Fourier coefficient of
+      T00, and of any defined time-independent radial linear functional of
+      T00, vanishes exactly. This selection rule permits only DC and even
+      harmonics; it does not require any allowed coefficient to be nonzero,
+      lowest, or dominant. In particular, for the local single-mode field
+      u=a(r)*cos(tau), the cos(2*tau) coefficient is
+      a_r^2/4-omega^2*a^2/4+2*J_2(a), so the gradient, kinetic, and potential
+      terms can cancel while a higher even coefficient remains nonzero. For
+      every radial energy density with finite second moment, C-MOM-003 gives
+      I_ij=(delta_ij/3)*4*pi*integral r^4*T00 dr and identically zero STF
+      part at each phase. These exact kinematic and Fourier statements do not
+      establish that the ansatz solves the full PDE, a nonzero STF source,
+      physical radiation, gravity, waveform, flux, absolute scale, particle
+      identity, or substrate realization.
+    provenance: campaigns/P053-qb2-even-harmonic-energy-spectrum/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-PDE-005
+      - C-MOM-003
+    evidence:
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/verify.py
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0007/result.yaml
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0006/result.yaml
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/reviews/independent_energy_spectrum_review.py
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-PDE-007-review.md
+      - tests/test_radial_harmonic_observables.py
+    assumptions:
+      - The finite odd-cosine ansatz, common phase origin, physical time derivative, canonical potential convention, and radial regularity are those of C-PDE-005 and its dependency closure.
+      - The amplitudes and radial functionals are sufficiently differentiable and integrable for every displayed derivative, Fourier coefficient, and moment to exist.
+      - The spherical STF conclusion uses the normalized moment convention of C-MOM-003; a nonzero anisotropic source would be different input data.
+      - Half-period selection is kinematic and applies even to an odd-harmonic non-solution, so it is not an equation-residual or existence oracle.
+    comparators: []
+    accepted_in: v0.47.0
+    challenges: []
+    supersedes: []
+  - id: C-PDE-008
+    statement: >-
+      On the accepted finite-box branch C-PDE-006, define the core radial
+      second energy moment
+      S_12(tau)=4*pi*integral_0.001^12 r^4*T00(r,tau) dr and the real series
+      S_12=a_0+sum_k(a_k*cos(k*tau)+b_k*sin(k*tau)). With central fundamental
+      2.5, wall radius 40, IEEE float64 adaptive collocation initialized by
+      300 radial points, 256 projection phases, tolerance 1e-8, a separate
+      2401-point exact-cutoff radial audit grid, and 512 endpoint-excluded
+      phases, the N=1, 3, 5, 7, and 9 values of a_2 are 666.330281099,
+      591.504983105, 591.470022142, 591.470478411, and 591.470484284. At N=9
+      the twice-frequency coefficient supplies 0.999865185 of the resolved
+      even coefficient power, the exact C-PDE-007 rule removes odd
+      coefficients, and the time-averaged core per-axis variance is
+      7.827021539. Temporal samples 256/512/1024, radial samples
+      1201/2401/4801, initial BVP meshes 200/300/400, and tolerance 1e-8 versus
+      1e-9 with 512 projection phases preserve a_2 within 0.008. Across the
+      harmonic ladder, the full nonlinear core remainder falls from 0.105185
+      to 1.36601e-5 and the full-box energy relative range from 0.0581543 to
+      9.6871e-7. Independent Gauss-Legendre phase and Simpson radial
+      integration gives a_2=591.468056462. Walls 30, 40, 50, and 60 give core
+      coefficients 591.269664499, 591.470484284, 598.370080354, and
+      590.990332998 and expose a full-box scalar-variance resonance near wall
+      50. This is numeric evidence for one cutoff scalar moment on one
+      finite-box, finite-harmonic family point. It establishes no wall-
+      independent or infinite-domain line, exact full-PDE periodic solution,
+      universal nonzero twice-frequency theorem, STF quadrupole, physical
+      radiation, gravity, waveform, flux, absolute scale, particle identity,
+      or substrate realization.
+    provenance: campaigns/P053-qb2-even-harmonic-energy-spectrum/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+    dependencies:
+      - C-PDE-006
+      - C-PDE-007
+    evidence:
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/verify.py
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0007/result.yaml
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0006/result.yaml
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/reviews/independent_energy_spectrum_review.py
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-PDE-008-review.md
+      - tests/test_radial_harmonic_observables.py
+      - tests/test_radial_harmonic_balance.py
+    assumptions:
+      - The finite-box branch, dimensionless convention, free central amplitude, origin cutoff, wall data, and harmonic meanings are exactly those of C-PDE-006.
+      - The core radius 12, radial second-moment weight, Fourier convention, audit grids, retained bins, and coefficient-power metric are declared diagnostic data.
+      - Exact odd-bin absence is inherited from C-PDE-007; all nonzero coefficient values and convergence bounds remain numeric evidence.
+      - Radiative-mode walls define standing-wave box data, so bounded core coefficients do not override the measured full-box resonance or establish an infinite-domain limit.
+    comparators: []
+    accepted_in: v0.47.0
+    challenges: []
+    supersedes: []

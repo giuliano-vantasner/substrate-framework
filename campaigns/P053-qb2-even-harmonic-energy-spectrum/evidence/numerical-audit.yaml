@@ -1,0 +1,87 @@
+campaign: P053
+candidate: B_canonical_finite_box_energy_spectrum
+precision: IEEE_float64
+dependency: C-PDE-006
+observable:
+  name: core_radial_second_energy_moment
+  definition: S_12(tau)=4*pi*integral_0.001^12 r^4*T00(r,tau) dr
+  energy_density: T00=(u_t^2+u_r^2)/2+1-cos(u)
+  coefficient_convention: S=a0+sum_k(a_k*cos(k*tau)+b_k*sin(k*tau))
+baseline:
+  central_fundamental: 2.5
+  outer_radius: 40.0
+  harmonics: [1, 3, 5, 7, 9]
+  omega: 0.976873921394286
+  origin_epsilon: 1.0e-3
+  solver_initial_radial_points: 300
+  solver_temporal_samples: 256
+  solver_tolerance: 1.0e-8
+  audit_radial_samples: 2401
+  audit_phase_samples: 512
+  second_dc: 10589.05518034079
+  second_cos2: 591.4704842836684
+  second_cos4: -6.865682294537714
+  two_even_coefficient_power_fraction: 0.9998651847883294
+  odd_even_coefficient_power_ratio: 4.72e-29
+  per_axis_variance: 7.827021539128655
+  max_spherical_stf: 0.0
+harmonic_refinement:
+  retained_maximum: [1, 3, 5, 7, 9]
+  second_cos2:
+    - 666.330281099295
+    - 591.504983104963
+    - 591.4700221422127
+    - 591.470478410987
+    - 591.4704842836684
+  full_box_energy_relative_range:
+    - 0.05815434484667283
+    - 0.0029401115702182737
+    - 0.00016111219142915604
+    - 9.287115917574861e-6
+    - 9.68707059937246e-7
+  full_core_remainder_rms:
+    - 0.10518483901135328
+    - 0.013582507411015042
+    - 0.0014539946092809975
+    - 0.00014402450355826472
+    - 1.3660057780928975e-5
+refinement:
+  phase_samples_256_512_1024_second_cos2:
+    - 591.4704842836691
+    - 591.4704842836684
+    - 591.4704842836688
+  radial_samples_1201_2401_4801_second_cos2:
+    - 591.4704453435045
+    - 591.4704842836684
+    - 591.4704940404384
+  initial_solver_mesh_200_300_400_second_cos2:
+    - 591.4740369366046
+    - 591.4704842836684
+    - 591.4747352152513
+  tolerance:
+    baseline_second_cos2: 591.4704842836684
+    tight_second_cos2: 591.4635240040564
+    baseline_max_collocation_rms: 9.978728453559095e-9
+    tight_max_collocation_rms: 9.981243763127249e-10
+domain_scan:
+  outer_radius: [30.0, 40.0, 50.0, 60.0]
+  core_second_cos2:
+    - 591.2696644990858
+    - 591.4704842836684
+    - 598.3700803540646
+    - 590.9903329979327
+  full_box_per_axis_variance:
+    - 8.87925838984912
+    - 8.88263976736023
+    - 9.271876631559222
+    - 8.882334604124983
+interpretation:
+  supported: >-
+    A dominant twice-frequency line is numerically resolved for the declared
+    core radial second energy moment of one accepted finite-box branch, and
+    its coefficient stabilizes through N=9 and all local refinements.
+  excluded: >-
+    Exact even-bin purity is a symmetry consequence rather than a PDE oracle;
+    the spherical STF tensor is zero; the full-box variance retains a wall
+    resonance; and no exact periodic full-PDE, nonspherical moment, conserved
+    radiating source, gravity, waveform, power, or physical scale follows.

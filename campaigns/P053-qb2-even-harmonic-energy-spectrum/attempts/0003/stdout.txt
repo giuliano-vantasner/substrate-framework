@@ -1,0 +1,8 @@
+P053 attempt 0003
+  full-box energy relative ranges N=1/3/5/7/9:
+    5.815434e-2 2.940112e-3 1.611122e-4 9.287116e-6 9.687071e-7
+  core nonlinear remainder RMS N=1/3/5/7/9:
+    1.054220e-1 1.362209e-2 1.458994e-3 1.445846e-4 1.371866e-5
+  reported core cos2 at N=9: 590.934570735
+  exact-cutoff attempt-0002 core cos2 at N=9: 591.470484284
+VERDICT: FAILED -- the sliced full-box grid omitted the exact r=12 cutoff endpoint

@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P053
+candidate: independent_refined_Gauss_Simpson_energy_spectrum
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P053-qb2-even-harmonic-energy-spectrum/reviews/independent_energy_spectrum_review.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+  --primary-evidence proposals/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T07:30:00Z'
+expected: >-
+  Repair attempt 0005 by requiring 96/192/384-node Gauss phase convergence
+  and scale-relative odd-bin roundoff, while retaining the independent
+  Simpson radial integration, mutation probes, non-solution counterexample,
+  local cos(2 tau) cancellation, and exact spherical STF null.

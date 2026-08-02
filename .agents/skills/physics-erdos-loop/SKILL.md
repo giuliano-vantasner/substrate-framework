@@ -122,7 +122,7 @@ Do not count a weaker oracle as independent evidence when a stronger result alre
 - compare against an independently implemented or analytically solvable case;
 - inspect the exact statement of formal theorems and their axioms.
 
-For SciPy work, record the routine and algorithm (`solve_ivp`, `solve_bvp`, sparse eigensolver, optimizer, quadrature, or another justified method), floating-point precision, mesh and domain, initial/boundary data, tolerances, stopping status, and error norm. Treat solver success as a prerequisite, not the verdict. A PDE claim additionally needs spatial and temporal refinement, stability evidence, conservation or controlled-dissipation checks, and a method cross-check or soluble limit appropriate to the equation.
+For SciPy work, record the routine and algorithm (`solve_ivp`, `solve_bvp`, sparse eigensolver, optimizer, quadrature, or another justified method), floating-point precision, mesh and domain, initial/boundary data, tolerances, stopping status, and error norm. Tie near-zero and agreement thresholds to a declared dimensional or scale-relative error model. When an absolute threshold fails at roundoff scale, preserve the attempt, show refinement or conditioning evidence, and repair the oracle with a justified scale-sensitive bound; do not blur a separately exact null into a floating-point claim. Treat solver success as a prerequisite, not the verdict. A PDE claim additionally needs spatial and temporal refinement, stability evidence, conservation or controlled-dissipation checks, and a method cross-check or soluble limit appropriate to the equation.
 
 A large pass tally with insensitive predicates does not promote a claim.
 

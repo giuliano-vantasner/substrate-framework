@@ -1,0 +1,90 @@
+attempt: 0002
+campaign: P053
+candidate: B_canonical_finite_box_energy_spectrum
+verdict: passed_as_primary_exploratory_evidence
+process_exit_code: 0
+elapsed_seconds: 7.6
+baseline:
+  central_fundamental: 2.5
+  outer_radius: 40.0
+  solver_temporal_samples: 256
+  phase_samples: 512
+  radial_audit_samples: 2401
+  core_radius: 12.0
+  tolerance: 1.0e-8
+harmonic_ladder_core:
+  N1:
+    omega: 0.9769086571172986
+    second_cos2: 666.330281099295
+    two_even_power_fraction: 0.9959393538535926
+  N3:
+    omega: 0.9768768285300755
+    second_cos2: 591.504983104963
+    two_even_power_fraction: 0.9997846868401722
+  N5:
+    omega: 0.9768739498473548
+    second_cos2: 591.4700221422127
+    two_even_power_fraction: 0.9998649702512716
+  N7:
+    omega: 0.976873921613576
+    second_cos2: 591.470478410987
+    two_even_power_fraction: 0.9998651838669388
+  N9:
+    omega: 0.976873921394286
+    second_dc: 10589.05518034079
+    second_cos2: 591.4704842836684
+    second_cos4: -6.865682294537714
+    two_even_power_fraction: 0.9998651847883294
+    odd_even_power_ratio: 4.72e-29
+    per_axis_variance: 7.827021539128655
+    max_spherical_stf: 0.0
+refinement:
+  phase_samples_256_512_1024_second_cos2:
+    - 591.4704842836691
+    - 591.4704842836684
+    - 591.4704842836688
+  radial_samples_1201_2401_4801_second_cos2:
+    - 591.4704453435045
+    - 591.4704842836684
+    - 591.4704940404384
+domain_scan:
+  walls: [30.0, 40.0, 50.0, 60.0]
+  core_second_cos2:
+    - 591.2696644990858
+    - 591.4704842836684
+    - 598.3700803540646
+    - 590.9903329979327
+  core_per_axis_variance:
+    - 7.826670455994826
+    - 7.827021539128655
+    - 7.843359640431369
+    - 7.826108199898546
+  full_box_second_cos2:
+    - 691.9683719664214
+    - 692.263933501795
+    - 692.6077312790942
+    - 692.209992637883
+  full_box_per_axis_variance:
+    - 8.87925838984912
+    - 8.88263976736023
+    - 9.271876631559222
+    - 8.882334604124983
+  observation: >-
+    The twice-frequency coefficient is bounded across the wall scan, but the
+    R=50 radiative standing-wave resonance visibly shifts the full-box DC
+    moment and per-axis variance. Frequency and line purity do not erase the
+    finite-wall dependence.
+interpretation:
+  supported: >-
+    The accepted finite-box branch has an exactly even temporal spectrum and
+    a numerically converged dominant twice-frequency line in its declared
+    radial second energy moment.
+  excluded: >-
+    The radial density's Cartesian second moment is isotropic and its STF part
+    is exactly zero at every phase. The line is not a quadrupole, a physical
+    radiation channel, or evidence that the finite-harmonic branch solves the
+    exact full PDE periodically.
+next_attempt: >-
+  Add tolerance refinement, compare direct DFT coefficients with an
+  independently normalized Gauss temporal and Simpson radial construction,
+  and correlate energy nonconservation with the full PDE truncation residual.

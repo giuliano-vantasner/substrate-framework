@@ -70,7 +70,7 @@ accepted_claims:
   - C-PDE-007
   - C-PDE-008
 note: >-
-  Adds the exact even-harmonic selection and spherical-STF-null theorem plus
-  one converged finite-box core radial-second-energy-moment spectrum, while
-  qualifying QB2's universal nonzero-line, eigenfunction-purity, and physical
-  radiation interpretations.
+  Adds the exact radial odd-harmonic projection, origin-curvature and tail-
+  channel theorem plus one converged, explicitly finite-box N=9 branch, while
+  qualifying QB1's calibrated recovery, unique-eigenvalue, and localized
+  infinite-domain quasibreather claims.

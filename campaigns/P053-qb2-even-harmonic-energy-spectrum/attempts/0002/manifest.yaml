@@ -1,0 +1,16 @@
+attempt: 0002
+campaign: P053
+candidate: B_canonical_finite_box_energy_spectrum
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P053-qb2-even-harmonic-energy-spectrum/attempts/0002/explore.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T06:35:00Z'
+expected: >-
+  Solve the accepted amplitude-2.5 branch through N=9, measure canonical
+  total energy and radial second-moment coefficients directly over one phase
+  period, refine time and radial quadrature, scan walls 30/40/50/60, and expose
+  rather than suppress finite-box or nonconservation sensitivity.

@@ -1,0 +1,18 @@
+attempt: 0005
+campaign: P053
+candidate: independent_Gauss_Simpson_energy_spectrum
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P053-qb2-even-harmonic-energy-spectrum/reviews/independent_energy_spectrum_review.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+  --primary-evidence proposals/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T07:15:00Z'
+expected: >-
+  Independently reconstruct the accepted N=9 branch with no new observable
+  API calls, integrate radius with Simpson and phase with Gauss-Legendre,
+  reject normalization, omega-factor and radial-measure mutations, and show
+  that even purity neither proves the PDE nor produces a spherical STF moment.

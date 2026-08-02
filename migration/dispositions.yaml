@@ -883,3 +883,34 @@ units:
       DFT/Gauss projection, DOP853 shooting, collocation, and extrapolated
       second-order finite differences. Its projection needs no NumPy
       trapezoidal-integration alias.
+  QB2:
+    disposition: qualified
+    accepted_claims:
+      - C-PDE-007
+      - C-PDE-008
+    qualification: >-
+      QB2's exact half-period energy-selection rule and spherical per-axis
+      scalar-moment identity are accepted, and P053 supplies a separately
+      converged dominant twice-frequency coefficient for the declared core
+      radial second energy moment on C-PDE-006. The source's standalone N=1
+      shooting branch is not the accepted N=9 branch, its nonzero-line proof
+      omits the radial-gradient coefficient, even spectral purity does not
+      test the PDE, and a spherical scalar moment has identically zero STF
+      part. QB2 therefore establishes no universal lowest or nonzero line,
+      exact full-PDE periodic eigenfunction, nonspherical source, physical
+      radiation, gravity, waveform, flux, absolute scale, particle identity,
+      or substrate realization.
+    evidence:
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/reviews/source_adjudication.md
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/evidence/source-reproduction.yaml
+      - campaigns/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+      - memory/vantasner/decisions/C-PDE-007-review.md
+      - memory/vantasner/decisions/C-PDE-008-review.md
+    note: >-
+      P053 replaces the source's unchecked single-mode shooting object with
+      the accepted finite-box branch, includes kinetic, radial-gradient, and
+      potential contributions in the local coefficient, separates exact
+      selection from nonzero amplitude, and verifies the scalar spectrum with
+      harmonic, temporal, radial, mesh, tolerance, wall, conservation, and
+      independent Gauss/Simpson checks. The source already prefers current
+      `np.trapezoid`; canonical code centralizes current/legacy dispatch.

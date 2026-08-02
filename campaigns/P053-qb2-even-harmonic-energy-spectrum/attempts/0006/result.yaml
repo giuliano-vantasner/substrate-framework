@@ -1,0 +1,43 @@
+attempt: 0006
+campaign: P053
+candidate: independent_refined_Gauss_Simpson_energy_spectrum
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 2.8
+terminal_tally: ALL 22 CHECKS PASS [P053-INDEPENDENT]
+branch:
+  harmonics: [1, 3, 5, 7, 9]
+  central_fundamental: 2.5
+  outer_radius: 40.0
+independent_coefficients:
+  second_cos2: 591.4680564616303
+  second_cos4: -6.8663083610740046
+  maximum_odd_absolute: 5.267395408736775e-10
+gauss_phase_refinement:
+  nodes: [96, 192, 384]
+  second_cos2:
+    - 591.4680564611017
+    - 591.4680564616303
+    - 591.4680564606008
+  maximum_odd_over_dc:
+    - 4.982167744084128e-15
+    - 4.974417444418249e-14
+    - 5.702140387070775e-14
+counterexamples:
+  arbitrary_non_solution_odd_even_power_ratio: 4.746e-31
+  arbitrary_non_solution_pde_residual_rms: 0.132448
+  local_cancellation_second_cos2: -9.714e-17
+  local_cancellation_fourth_cos4: -0.004953
+mutations_rejected:
+  - missing_or_doubled_time_derivative_frequency
+  - halved_or_sign_reversed_Fourier_normalization
+  - total_energy_instead_of_radial_second_moment_measure
+  - anisotropic_tensor_substituted_for_spherical_source
+conclusion: >-
+  Independent Gauss-Legendre phase and Simpson radial integration reproduce
+  the primary core radial-second-moment coefficient to 0.003 percent and are
+  stable across 96, 192, and 384 phase nodes. Odd coefficients are null only
+  to scale-relative quadrature roundoff, as expected from the separately
+  exact symmetry theorem. Even purity alone neither tests the field equation
+  nor forces a nonzero twice-frequency line, and the radial tensor has zero
+  STF part.

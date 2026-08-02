@@ -318,6 +318,24 @@ On the C-PDE-005 odd-harmonic system, declare the free branch coordinate a_1(0)=
 - Compatibility: `compatible_extension`
 - Dependencies: C-PDE-005
 
+## C-PDE-007
+
+In the dimensionless radial sine-Gordon convention of C-PDE-005, let H be a finite set of positive odd integers and let u(r,tau)=sum_(n in H) a_n(r)*cos(n*tau), where tau=omega*t. Then u, u_t, and u_r reverse sign under tau->tau+pi, while the canonical energy density T00=(u_t^2+u_r^2)/2+1-cos(u) is invariant. Therefore T00 has half the field period and every odd temporal Fourier coefficient of T00, and of any defined time-independent radial linear functional of T00, vanishes exactly. This selection rule permits only DC and even harmonics; it does not require any allowed coefficient to be nonzero, lowest, or dominant. In particular, for the local single-mode field u=a(r)*cos(tau), the cos(2*tau) coefficient is a_r^2/4-omega^2*a^2/4+2*J_2(a), so the gradient, kinetic, and potential terms can cancel while a higher even coefficient remains nonzero. For every radial energy density with finite second moment, C-MOM-003 gives I_ij=(delta_ij/3)*4*pi*integral r^4*T00 dr and identically zero STF part at each phase. These exact kinematic and Fourier statements do not establish that the ansatz solves the full PDE, a nonzero STF source, physical radiation, gravity, waveform, flux, absolute scale, particle identity, or substrate realization.
+
+- Accepted in: `v0.47.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-PDE-005, C-MOM-003
+
+## C-PDE-008
+
+On the accepted finite-box branch C-PDE-006, define the core radial second energy moment S_12(tau)=4*pi*integral_0.001^12 r^4*T00(r,tau) dr and the real series S_12=a_0+sum_k(a_k*cos(k*tau)+b_k*sin(k*tau)). With central fundamental 2.5, wall radius 40, IEEE float64 adaptive collocation initialized by 300 radial points, 256 projection phases, tolerance 1e-8, a separate 2401-point exact-cutoff radial audit grid, and 512 endpoint-excluded phases, the N=1, 3, 5, 7, and 9 values of a_2 are 666.330281099, 591.504983105, 591.470022142, 591.470478411, and 591.470484284. At N=9 the twice-frequency coefficient supplies 0.999865185 of the resolved even coefficient power, the exact C-PDE-007 rule removes odd coefficients, and the time-averaged core per-axis variance is 7.827021539. Temporal samples 256/512/1024, radial samples 1201/2401/4801, initial BVP meshes 200/300/400, and tolerance 1e-8 versus 1e-9 with 512 projection phases preserve a_2 within 0.008. Across the harmonic ladder, the full nonlinear core remainder falls from 0.105185 to 1.36601e-5 and the full-box energy relative range from 0.0581543 to 9.6871e-7. Independent Gauss-Legendre phase and Simpson radial integration gives a_2=591.468056462. Walls 30, 40, 50, and 60 give core coefficients 591.269664499, 591.470484284, 598.370080354, and 590.990332998 and expose a full-box scalar-variance resonance near wall 50. This is numeric evidence for one cutoff scalar moment on one finite-box, finite-harmonic family point. It establishes no wall- independent or infinite-domain line, exact full-PDE periodic solution, universal nonzero twice-frequency theorem, STF quadrupole, physical radiation, gravity, waveform, flux, absolute scale, particle identity, or substrate realization.
+
+- Accepted in: `v0.47.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-PDE-006, C-PDE-007
+
 ## C-QBL-001
 
 Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega^2-f^2/12)f, C-U1-001's stationary phase Psi=f*exp(-i*omega*t), and 0<omega<1/sqrt(2), let kappa=sqrt(1/2-omega^2). Then for every real center x0 the positive localized profile f=sqrt(24)*kappa*sech(kappa*(x-x0)) solves the equation exactly. Within a nonzero ansatz A*sech(k*(x-x0)), the independent sech powers force k^2=1/2-omega^2 and A^2=24*k^2. Its accepted U1 charge is Q=96*omega*sqrt(1/2-omega^2): Q tends to zero at both open endpoints, increases on (0,1/2), reaches its unique maximum 24 at omega=1/2, and decreases on (1/2,1/sqrt(2)). These derivative signs alone establish no VK, spectral, orbital, or nonlinear stability, forced complex ontology, electric charge, particle identity, or substrate realization.

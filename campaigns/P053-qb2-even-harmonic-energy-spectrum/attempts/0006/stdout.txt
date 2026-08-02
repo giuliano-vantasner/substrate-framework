@@ -1,0 +1,26 @@
+PASS [P053-INDEPENDENT] the reviewed QB2 source is hash pinned
+PASS [P053-INDEPENDENT] the independently sampled dependency branch resolves with a sub-gap frequency
+PASS [P053-INDEPENDENT] Gauss phase and Simpson radius integration reproduce the primary twice-frequency coefficient
+PASS [P053-INDEPENDENT] the independent twice-frequency coefficient dominates the resolved even comb
+PASS [P053-INDEPENDENT] the independent Gauss phase refinement stabilizes the twice-frequency coefficient
+PASS [P053-INDEPENDENT] resolved odd coefficients remain at scale-relative quadrature roundoff
+PASS [P053-INDEPENDENT] the physical time-derivative omega factor: baseline
+PASS [P053-INDEPENDENT] the physical time-derivative omega factor: mutations supplied
+PASS [P053-INDEPENDENT] the physical time-derivative omega factor: mutation 1 rejected
+PASS [P053-INDEPENDENT] the physical time-derivative omega factor: mutation 2 rejected
+PASS [P053-INDEPENDENT] the real Fourier coefficient normalization: baseline
+PASS [P053-INDEPENDENT] the real Fourier coefficient normalization: mutations supplied
+PASS [P053-INDEPENDENT] the real Fourier coefficient normalization: mutation 1 rejected
+PASS [P053-INDEPENDENT] the real Fourier coefficient normalization: mutation 2 rejected
+PASS [P053-INDEPENDENT] replacing the radial second-moment measure by total-energy measure changes the claim
+PASS [P053-INDEPENDENT] an arbitrary odd-harmonic non-solution retains exact even spectral purity
+PASS [P053-INDEPENDENT] the same spectrally pure fabricated field fails the radial sine-Gordon equation
+PASS [P053-INDEPENDENT] even selection does not force a nonzero twice-frequency coefficient
+PASS [P053-INDEPENDENT] the spherical twice-frequency second moment has an exact STF null
+PASS [P053-INDEPENDENT] a declared anisotropic mutation is nonzero but is different source data
+PASS [P053-INDEPENDENT] QB2 calls a radial scalar moment a radiating line without a nonspherical source
+PASS [P053-INDEPENDENT] QB2's leakage guard changes temporal closure rather than the field equation
+independent coefficients: cos2=591.468056461630 cos4=-6.866308361074 max_odd=5.267e-10
+Gauss phase refinement: 96:cos2=591.468056461102,odd/DC=4.982e-15, 192:cos2=591.468056461630,odd/DC=4.974e-14, 384:cos2=591.468056460601,odd/DC=5.702e-14
+fabricated odd/even=4.746e-31 residual_rms=0.132448; local_cancel_cos2=-9.714e-17 cos4=-0.004953
+ALL 22 CHECKS PASS [P053-INDEPENDENT]

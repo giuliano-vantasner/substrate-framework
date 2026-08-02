@@ -1,0 +1,39 @@
+attempt: 0007
+campaign: P053
+candidate: primary_exact_and_numeric_energy_spectrum_verifier
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 12.0
+terminal_tally: ALL 38 CHECKS PASS [P053-QB2]
+exact_result: >-
+  An odd-cosine radial field and both of its first derivatives reverse sign
+  after half a fundamental period. Canonical energy density is invariant, so
+  every odd temporal Fourier coefficient of the density and of each time-
+  independent radial linear functional vanishes. For one local fundamental
+  the complete cos(2 tau) coefficient is
+  a_r^2/4-omega^2*a^2/4+2*J_2(a); it can cancel while cos(4 tau) remains
+  nonzero. Spherical angular integration makes the Cartesian second moment
+  isotropic and its STF projection exactly zero.
+numeric_result: >-
+  On the accepted amplitude-2.5, R=40 finite-box branch, the core observable
+  S_12=4*pi*integral_0.001^12 r^4*T00 dr has cos(2 tau) coefficient
+  591.470484284 at N=9. It stabilizes through N=1,3,5,7,9; direct temporal,
+  radial, initial-mesh and tolerance refinements pass; the full-box energy
+  defect follows the nonlinear truncation remainder to below 1.1e-6; and an
+  independent Gauss/Simpson construction gives 591.468056462. Wall scans
+  keep the core coefficient bounded but shift it and expose a full-box
+  standing-wave resonance.
+source_qualification: >-
+  QB2 correctly obtains even-bin purity for its imposed odd-harmonic ansatz
+  and a positive spherical per-axis variance. Its standalone N=1 branch is
+  not C-PDE-006, its nonzero-line argument omits the gradient contribution,
+  symmetry does not test the PDE, the scalar radial moment has zero STF part,
+  and neither a clean FFT bin nor exact-period sampling establishes physical
+  radiation, an exact full-PDE solution, or a unique eigenfunction.
+numpy_compatibility: >-
+  QB2 selects np.trapezoid on current NumPy and only falls back to np.trapz on
+  older releases. Canonical observables call the shared trapezoid_integral
+  dispatcher and contain neither version-specific spelling.
+next_attempt: >-
+  Complete separate C-PDE-007 and C-PDE-008 reviews, the source and consumer
+  adjudications, and the single promotion-boundary repository gate.

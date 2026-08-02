@@ -1,0 +1,15 @@
+attempt: 0003
+campaign: P053
+candidate: B_solver_and_conservation_refinement
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P053-qb2-even-harmonic-energy-spectrum/attempts/0003/refine.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T06:50:00Z'
+expected: >-
+  Require initial-mesh and nonlinear-tolerance stability of the twice-
+  frequency coefficient and separately measure full-box energy variation
+  against the decreasing full nonlinear projection remainder through N=9.

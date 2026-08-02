@@ -1,0 +1,33 @@
+  [QB1 eigenfunction: A = 3.0, omega_eig = 0.965311, r in [0, 100.0], 6000 nodes]
+==============================================================================
+QB2.1 -- EVEN HARMONICS (SymPy EXACT): T_00(t+T/2) = T_00(t) -> period T/2 -> even harmonics only
+==============================================================================
+    T_00(t + T/2) - T_00(t) = 0  (== 0 -> period T/2)
+  QB2.1 EVEN HARMONICS (SymPy EXACT): for u(t) = a_1 cos(omega t), the half-period shift gives u(t+T/2) = -u(t), and T_00 = 1/2 u_t^2 + 1/2 u_r^2 + (1 - cos u) is invariant under u -> -u, so T_00(t + T/2) - T_00(t) simplifies to EXACTLY 0 -- T_00 has period T/2 and therefore carries ONLY EVEN harmonics of omega (DC, 2 omega, 4 omega, ...)  PASS
+==============================================================================
+QB2.2 -- THE 2 omega LINE (SymPy EXACT): cos(omega t) coeff = 0; cos(2 omega t) coeff ~ a_1^2 != 0
+==============================================================================
+    kinetic: cos(omega t) coeff = 0 (=0); cos(2 omega t) coeff = -a1**2*omega**2/4 (proportional to a_1^2)
+    potential (Jacobi-Anger): cos(omega) coeff = 0 (odd vanishes: True); cos(2 omega) coeff = 2 J_2(a_1) (numeric match: True)
+  QB2.2 THE 2 omega LINE (SymPy EXACT + Jacobi-Anger): the separate kinetic and potential checks pass  PASS
+==============================================================================
+QB2.3 -- CLEAN 2 omega LINE FROM THE EIGENFUNCTION (zero leakage)
+==============================================================================
+    dominant AC mode index = 2 (2 x omega_eig: True); even-bin fraction = 1.0000000000 (~1); 2 omega / even-comb = 0.996567; odd/even power ratio = 9.77e-31
+  QB2.3 CLEAN 2 omega LINE: the declared scalar moment passes the source thresholds  PASS
+==============================================================================
+QB2.4 -- sigma_perp^2 = <r^2>/3 DERIVED from the eigenfunction
+==============================================================================
+    eigenfunction: E0 = 410.9313, <r^2> = 18.8357, sigma_perp^2 = <r^2>/3 = 6.2786
+  QB2.4 sigma_perp^2 DERIVED: the spherical per-axis variance identity passes  PASS
+==============================================================================
+QB2.GA -- GUARD [NON-PERIOD-CLOSED FIELD -> ODD + INCOMMENSURATE LEAKAGE]
+==============================================================================
+    eigenfunction even-bin fraction = 1.000000 (clean) vs fabricated non-period-closed field = 0.2513 (LEAKS into odd/incommensurate lines)
+  QB2.GA GUARD: the incommensurate source fails even-bin purity  PASS
+==============================================================================
+RESULT
+==============================================================================
+  omega_eig = 0.965311; even-bin fraction = 1.000000; 2 omega / even-comb = 0.9966; sigma_perp^2 = 6.2786
+
+ALL 5 CHECKS PASS

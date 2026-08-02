@@ -1,0 +1,24 @@
+attempt: 0007
+campaign: P053
+candidate: primary_exact_and_numeric_energy_spectrum_verifier
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P053-qb2-even-harmonic-energy-spectrum/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py
+  --source-reproduction proposals/P053-qb2-even-harmonic-energy-spectrum/evidence/source-reproduction.yaml
+  --numerical-audit proposals/P053-qb2-even-harmonic-energy-spectrum/evidence/numerical-audit.yaml
+  --independent-result proposals/P053-qb2-even-harmonic-energy-spectrum/attempts/0006/result.yaml
+  --migration-queue migration/source-claims.yaml
+  --claims governance/claims.yaml
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+started_at: '2026-08-02T08:00:00Z'
+expected: >-
+  Pass exact parity, normalization, full local coefficient, cancellation,
+  spherical-STF and API guards; reproduce the accepted N=1..9 branch and its
+  scalar spectrum; pass time, radial, mesh, tolerance and wall refinements;
+  correlate energy defect with truncation residual; and preserve the source's
+  finite-box scalar and non-radiation ceiling.

@@ -1,0 +1,39 @@
+PASS [P053-QB2] QB2 is the hash-pinned primary source unit
+PASS [P053-QB2] the literal source exits cleanly with its complete tally
+PASS [P053-QB2] the source dependencies remain candidate navigation rather than hidden authority
+PASS [P053-QB2] the exact and numerical claim delta is atomic before or after promotion
+PASS [P053-QB2] QB2 selects the current NumPy trapezoid spelling before its legacy fallback
+PASS [P053-QB2] QB2 computes a radial second energy moment rather than total energy or an STF tensor
+PASS [P053-QB2] QB2 substitutes a standalone N=1 shooting branch for the accepted N=9 dependency
+PASS [P053-QB2] QB2 consumes its IVP shooting results without solver-status guards
+PASS [P053-QB2] QB2's nonzero twice-frequency argument omits the radial-gradient coefficient
+PASS [P053-QB2] QB2 supplies no harmonic, radial, wall, tolerance, or transform refinement
+PASS [P053-QB2] every retained odd cosine harmonic has exact half-period antisymmetry
+PASS [P053-QB2] an even temporal harmonic breaks the field antisymmetry
+PASS [P053-QB2] canonical energy density is exactly invariant under the half-period sign reversal
+PASS [P053-QB2] half-period invariance cancels every odd Fourier coefficient
+PASS [P053-QB2] the full local twice-frequency coefficient includes kinetic, gradient, and potential terms
+PASS [P053-QB2] the physical time-derivative frequency factor: baseline
+PASS [P053-QB2] the physical time-derivative frequency factor: mutations supplied
+PASS [P053-QB2] the physical time-derivative frequency factor: mutation 1 rejected
+PASS [P053-QB2] the physical time-derivative frequency factor: mutation 2 rejected
+PASS [P053-QB2] even selection does not force a nonzero or lowest twice-frequency line
+PASS [P053-QB2] a spherical radial second moment has an exact zero STF projection
+PASS [P053-QB2] an anisotropic source mutation produces a nonzero STF tensor
+PASS [P053-QB2] the direct real transform preserves DC, cosine, sine, and phase normalization
+PASS [P053-QB2] every canonical dependency solve completes with resolved collocation residuals
+PASS [P053-QB2] the core twice-frequency coefficient stabilizes through N=9
+PASS [P053-QB2] the full nonlinear core remainder decreases with every added odd harmonic
+PASS [P053-QB2] the full-box energy defect tracks the truncation hierarchy
+PASS [P053-QB2] the N=9 declared scalar moment has a dominant resolved twice-frequency line
+PASS [P053-QB2] fresh canonical coefficients reproduce the recorded primary evidence
+PASS [P053-QB2] endpoint-excluded temporal refinement preserves the direct coefficient
+PASS [P053-QB2] radial quadrature refinement converges the direct coefficient
+PASS [P053-QB2] initial BVP mesh refinement preserves the core coefficient
+PASS [P053-QB2] tolerance and projection refinement preserve the coefficient and reduce residual
+PASS [P053-QB2] the finite-box core line remains bounded but not wall independent
+PASS [P053-QB2] the full-box scalar variance exposes the accepted radiative wall resonance
+PASS [P053-QB2] the independent quadrature review reproduces the line and rejects false oracles
+PASS [P053-QB2] canonical observables centralize NumPy-version-independent trapezoid dispatch
+PASS [P053-QB2] the strongest result remains a finite-box scalar line with zero spherical STF
+ALL 38 CHECKS PASS [P053-QB2]

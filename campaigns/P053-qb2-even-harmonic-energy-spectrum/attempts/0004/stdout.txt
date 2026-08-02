@@ -1,0 +1,12 @@
+P053 attempt 0004 exact-cutoff refinement repair
+  N=1 cos2=666.330281099 energy_range=5.815434e-2 remainder=1.051848e-1
+  N=3 cos2=591.504983105 energy_range=2.940112e-3 remainder=1.358251e-2
+  N=5 cos2=591.470022142 energy_range=1.611122e-4 remainder=1.453995e-3
+  N=7 cos2=591.470478411 energy_range=9.287116e-6 remainder=1.440245e-4
+  N=9 cos2=591.470484284 energy_range=9.687071e-7 remainder=1.366006e-5
+  N9 initial meshes 200/300/400 cos2:
+    591.474036937 591.470484284 591.474735215
+  N9 tol 1e-8 / tol 1e-9+time512 cos2:
+    591.470484284 591.463524004
+  N9 collocation residual 9.978729e-9 -> 9.981244e-10
+RESULT: PASS -- exact cutoff restored; unchanged mesh, tolerance, conservation, and remainder gates pass
