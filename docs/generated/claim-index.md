@@ -264,6 +264,15 @@ For a supplied finite inverse kernel K(k2)=sum_j c_j*k2^s_j with k2 positive and
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-LAT-001
+
+Let N>=2, L>0, a=L/N, and let dimensionless real fields phi_j(t) live on a one-dimensional periodic uniform lattice. The Riemann-normalized nearest-neighbour sine-Gordon action has instantaneous Lagrangian a*sum_j[(dot(phi_j)^2)/2-((phi_(j+1)-phi_j)/a)^2/2 -m^2*(1-cos(phi_j))]. Its exact sitewise Euler-Lagrange equation is ddot(phi_j)-(phi_(j+1)-2*phi_j+phi_(j-1))/a^2+m^2*sin(phi_j)=0. The centered spatial operator has exact Fourier symbol -4*sin(k*a/2)^2/a^2, which is even and reciprocal-lattice periodic; on a declared first Brillouin zone its linearization has omega^2=m^2+4*sin(k*a/2)^2/a^2. At fixed k as a tends to zero this is m^2+k^2-a^2*k^4/12+a^4*k^6/360+O(a^6), while the exact zone-edge spatial value is 4/a^2 rather than pi^2/a^2. For a smooth field, the centered stencil derived from both neighbour jets is phi_xx+a^2*phi_xxxx/12+a^4*phi_6/360 plus a remainder bounded by M8*a^6/20160 when the eighth derivative is bounded by M8 on the local stencil interval. If an L-periodic sampled field on a fixed time interval T has uniform bounds Mx, Mxx, Mt, and Mtx on the absolute values of phi_x, phi_xx, phi_t, and phi_tx, then the absolute difference between the sampled discrete action and continuum action is at most T*L*(a*Mt*Mtx/2+a*m^2*Mx/2+a*Mx*Mxx+a^2*Mxx^2/8), and therefore tends to zero with a for fixed bounds. Removing the global factor a at one fixed spacing preserves the site equations under C-VAR-001 but destroys this action-value normalization across refinement. These exact conditional results derive no lattice existence, spacing value, hydrogen medium, EFT termination scale, nonlinear solution convergence, nonabelian sector, material realization, or substrate mechanism.
+
+- Accepted in: `v0.63.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-001, C-VAR-001
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.

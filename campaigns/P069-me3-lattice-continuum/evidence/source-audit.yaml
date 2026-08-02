@@ -1,0 +1,28 @@
+source_unit: ME3
+audit_status: complete
+literal_checks:
+  ME3.1:
+    narrow_verdict: supported_as_formal_taylor_coefficients
+    ceiling: no smoothness hypothesis or explicit remainder bound is checked
+  ME3.2:
+    narrow_verdict: leading_stencil_gradient_and_onsite_forms_supported
+    ceiling: the site sum, boundary condition, variation, and action convergence are never constructed
+  ME3.3:
+    narrow_verdict: normalized_linearized_long_wave_coefficients_supported
+    ceiling: the exact symbol is not asserted over a Brillouin zone and the two routes share one stencil and process
+  ME3.4:
+    narrow_verdict: one formal a-squared term vanishes as a tends to zero
+    ceiling: positive spacing does not imply a nonzero correction for constant fields, zero modes, or vanishing fourth derivative
+unsupported_readings:
+  - the continuum action has been derived merely because leading local coefficients match
+  - lambda is a wavelength rather than the declared inverse-wavenumber variation scale used by cos(x/lambda)
+  - every positive spacing is detectable from a nonzero leading correction
+  - the spacing is an EFT termination scale or candidate absolute-scale source
+  - the hydrogen-lattice ontology or ME1/ME2 ladder follows from the scalar stencil
+  - a shared-stencil consistency check is an independent derivation
+source_action_note: >-
+  The prose writes the necessary overall Riemann weight a, but none of the four
+  checks represents the sum, derives its Euler-Lagrange equation, or proves its
+  continuum value. A fixed-a unweighted action would share equations only by a
+  global multiplier and would not have the same continuum action normalization.
+disposition_recommendation: qualified

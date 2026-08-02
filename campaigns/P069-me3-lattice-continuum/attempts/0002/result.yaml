@@ -1,0 +1,15 @@
+attempt: 0002
+candidate: B-E initial package tests
+command: .venv/bin/python -m pytest tests/test_lattice_scalar.py -q
+exit_code: 1
+verdict: implementation_representation_failure
+passed: 18
+failed: 2
+mechanism:
+  - SymPy did not automatically rewrite the exponential shift eigenvalue into the half-angle sine normal form.
+  - Two algebraically identical constant-field Lagrangians were compared by structural equality instead of simplified difference.
+scientific_effect: none
+repair: >-
+  Normalize the independent exponential expression through complex expansion
+  and compare both identities after exact simplification; leave the canonical
+  formulas unchanged.

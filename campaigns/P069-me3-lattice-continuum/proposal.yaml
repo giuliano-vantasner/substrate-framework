@@ -1,0 +1,74 @@
+id: P069
+base_release: v0.62.0
+base_commit: 47a9f05
+scientific_base_commit: 3b4e9f2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [ME3]
+question: >-
+  Derive the exact nearest-neighbour scalar-lattice operator, its full
+  Brillouin-zone Fourier symbol and controlled long-wave expansion, and the
+  correctly normalized discrete sine-Gordon action and continuum limit; then
+  audit which of those statements ME3 actually establishes without deriving
+  a lattice spacing or substrate ontology.
+invariants:
+  - C-SG-001 fixes the normalized continuum equation phi_tt - phi_xx + sin(phi) = 0 and dimensionless c = m = beta = 1 convention; it does not derive a spatial lattice.
+  - A discrete-action convergence claim must state the spatial interval, boundary condition, number of sites, spacing, time interval, sampling/interpolation map, field smoothness, and Riemann-sum normalization.
+  - The centered second difference is an exact finite-lattice operator; its Taylor series is a local smooth-field asymptotic statement and not equality at finite spacing.
+  - The exact Fourier symbol is periodic in wave number and must be retained on the first Brillouin zone before any small-ka expansion.
+  - A pointwise truncation error, an operator-norm limit, an action limit, and solution convergence are distinct claims and require distinct hypotheses.
+  - Multiplying a fixed-spacing action by one nonzero global constant preserves its Euler-Lagrange equations under C-VAR-001, but a spacing-dependent omission can still destroy a finite continuum action limit.
+  - Lattice spacing a, characteristic wavelength, field normalization, and all dimensional conversion factors remain declared inputs; no Angstrom value or substrate termination scale may be inferred.
+  - Canonical numerical code uses NumPy's current trapezoid API through the shared compatibility helper; exact obligations do not require quadrature.
+allowed_imports:
+  - C-SG-001 for the normalized continuum sine-Gordon equation and field convention
+  - C-VAR-001 for the fixed-nonzero-global-action-multiplier theorem
+  - exact Taylor expansion with stated smoothness/remainder hypotheses, trigonometric identities, finite Fourier modes, and Riemann sums
+  - separately declared positive lattice spacing, periodic interval, time interval, smooth sampled field, and wave number in the first Brillouin zone
+  - shared substrate_framework.numerics.trapezoid_integral only if a sampled time integral is used as regression evidence
+  - ME3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce ME3 literally and retain only identities whose action
+      normalization, sign, smoothness, wave-number domain, and convergence
+      semantics are actually exercised.
+  - id: B
+    description: >-
+      Derive the exact periodic nearest-neighbour Laplacian and Fourier symbol
+      -4*sin(ka/2)^2/a^2, then expand it at ka=0 with a controlled remainder.
+  - id: C
+    description: >-
+      Derive the centered-difference physical-space Taylor formula through
+      sixth derivative with explicit regularity and pointwise remainder.
+  - id: D
+    description: >-
+      Construct the Riemann-normalized discrete sine-Gordon action on a fixed
+      periodic interval and derive its discrete Euler-Lagrange equation.
+  - id: E
+    description: >-
+      Prove modewise operator and action convergence for smooth periodic
+      trigonometric polynomials, separating exact finite-N statements from
+      asymptotic rates.
+  - id: F
+    description: >-
+      Preserve the unweighted site sum only up to fixed-spacing Euler-Lagrange
+      equivalence; reject it as a convergent action value unless a field or
+      measure normalization supplies the missing spacing factor.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without importing ME1, ME2, a material lattice, or a fitted spacing
+  - exact sign, coefficient, dimensions, boundary convention, and action measure normalization
+  - correct limits at a to zero, k to zero, the Brillouin edge, constant fields, and one Fourier mode
+  - explicit separation of pointwise Taylor, exact symbol, modified equation, action convergence, and solution convergence
+  - mutation sensitivity to sign reversal, one-sided differences, omitted spacing weights, copied coefficients, out-of-zone aliases, and hidden field rescaling
+  - parameter economy and an interpretation ceiling that leaves lattice realization and spacing selection unproved
+claims_proposed:
+  - provisional C-LAT-001 exact scalar-lattice operator, action, dispersion, and controlled continuum ledger if nonduplicate content survives
+comparators_blinded_until: >-
+  The generated synopsis exposes the coefficients 1/12 and 1/360, the
+  dispersion sign, and the claimed O((a/lambda)^2) limit. None may select an
+  action normalization, smoothness class, boundary condition, wavelength,
+  convergence notion, or physical lattice interpretation. Those objects,
+  candidates, limits, mutations, and the interpretation ceiling are frozen
+  here before ME3's executable body opens.
+status: accepted

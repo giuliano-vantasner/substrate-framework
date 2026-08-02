@@ -1,0 +1,24 @@
+attempt: 0003
+candidates: [B, C, D, E]
+status: positive_exact_objects_verified
+commands:
+  - .venv/bin/python -m pytest tests/test_lattice_scalar.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P069-me3-lattice-continuum/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P069-me3-lattice-continuum/reviews/independent_lattice_review.py
+process_exit_status: 0
+tallies:
+  focused_tests: 20 passed
+  primary: ALL 55 CHECKS PASS [P069]
+  independent: ALL 23 CHECKS PASS [P069-INDEPENDENT]
+  full_workflow: 561 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - The centered stencil has exact symbol -4*sin(k*a/2)^2/a^2 and a controlled even-derivative Taylor ledger.
+  - The Riemann-normalized periodic action varies to the exact discrete sine-Gordon equation.
+  - The linearized dispersion retains the full Brillouin-zone form and has fixed-k corrections -a^2*k^4/12+a^4*k^6/360.
+  - Uniform derivative bounds give an explicit sampled-action error bound that vanishes with spacing.
+mutations_rejected:
+  - wrong Taylor sign, factorial, derivative, and spacing order
+  - wrong dispersion sign, mass power, and coefficient
+  - omitted action measure, derivative terms, and forward-gradient error
+  - wrong EOM spatial sign, spacing denominator, and onsite nonlinearity
+  - global long-wave use at the Brillouin edge and positive-spacing detectability at the zero mode

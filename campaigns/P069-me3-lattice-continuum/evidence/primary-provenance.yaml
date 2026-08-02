@@ -1,0 +1,28 @@
+campaign: P069
+canonical_module: src/substrate_framework/lattice_scalar.py
+accepted_imports:
+  C-SG-001:
+    source: src/substrate_framework/sine_gordon.py
+    use: normalized continuum sine-Gordon equation and dimensionless convention only
+  C-VAR-001:
+    source: src/substrate_framework/variational.py
+    use: fixed-nonzero-global-action-multiplier equivalence only
+mathematical_imports:
+  - exact finite Taylor jets with an explicit Lagrange remainder bound
+  - exact nearest-neighbour shift eigenvalues and trigonometric identities
+  - periodic finite-site variation and left-Riemann error estimates
+conditional_imports:
+  - a declared one-dimensional periodic uniform lattice with a=L/N
+  - a sufficiently smooth periodic sampled field with fixed derivative bounds
+  - a selected first-Brillouin-zone representative for physical wave number
+source_evidence:
+  ME3:
+    path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME3_lattice_continuum.py
+    sha256: 8b5f888708b2edc202cb1acba37780aa62e7d71d002dc5042fd92e8afefbb0d0
+    authority: noncanonical_reproduced_attempt
+not_imported:
+  - ME1 or ME2 order-parameter and defect narratives
+  - a hydrogen medium, cubic lattice, material field, or absolute spacing
+  - the identification of spacing with an EFT termination scale
+  - nonlinear solution convergence, arbitrary-mode stability, or a nonabelian sector
+  - numerical quadrature or a NumPy integration alias

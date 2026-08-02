@@ -1,0 +1,24 @@
+attempt: 0001
+candidate: A
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME3_lattice_continuum.py
+exit_code: 0
+terminal_tally: ALL 4 CHECKS PASS
+verdict: reproduced_but_insufficient
+established:
+  - the formal centered-difference coefficients through the sixth derivative
+  - the leading forward-difference coefficient
+  - the normalized linearized long-wave dispersion coefficients through k fourth order
+  - the a-to-zero limit of the exact plane-wave dispersion
+not_established:
+  - variation or convergence of the written discrete action
+  - boundary conditions, sampling map, smoothness class, norm, or Taylor remainder
+  - full Brillouin-zone behavior or aliasing scope
+  - independence of the physical-space and Fourier checks, which share one stencil and process
+  - a nonzero correction for every positive spacing and every field or mode
+  - detectability, selection, or physical interpretation of the lattice spacing
+next_attempt: >-
+  Implement Candidates B through E with an exact symbol, a Taylor remainder,
+  a Riemann-normalized action and sitewise variation, an explicit convergence
+  bound, full-zone counterexamples, and independent rederivation.

@@ -1,0 +1,13 @@
+source_unit: ME3
+source_path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME3_lattice_continuum.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 8b5f888708b2edc202cb1acba37780aa62e7d71d002dc5042fd92e8afefbb0d0
+size_bytes: 19045
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME3_lattice_continuum.py
+exit_code: 0
+checks_passed: 4
+terminal_tally: ALL 4 CHECKS PASS
+numpy_quadrature: none
+artifact: campaigns/P069-me3-lattice-continuum/attempts/0001/output-summary.txt

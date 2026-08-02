@@ -1413,3 +1413,36 @@ units:
       projective/full polar covering distinction, and the explicit
       stiffness/core preference residual through canonical and independent
       exact routes. It uses no numerical quadrature or NumPy integration alias.
+  ME3:
+    disposition: qualified
+    accepted_claims:
+      - C-LAT-001
+    qualification: >-
+      ME3's formal centered-stencil coefficients and normalized mass-one
+      linearized long-wave coefficients are exact, and its prose writes the
+      necessary overall spacing weight in the discrete action. Its checks do
+      not construct or vary that action, declare a finite domain or boundary
+      condition, state smoothness and a Taylor remainder, prove action-value
+      convergence, or retain the exact Brillouin-zone symbol and aliases. The
+      physical-space and Fourier routes share one stencil and process rather
+      than supplying independent evidence. The claim that the correction is
+      nonzero iff a>0 fails for constant through cubic fields and the zero
+      mode. No check selects or makes a detectable spacing, identifies it as
+      an EFT termination scale, derives a hydrogen medium, imports ME1/ME2, or
+      addresses a nonabelian lattice. The cosine parameter called lambda is an
+      inverse-wavenumber variation scale; its full wavelength is 2*pi*lambda.
+    evidence:
+      - campaigns/P069-me3-lattice-continuum/reviews/source_adjudication.md
+      - campaigns/P069-me3-lattice-continuum/evidence/source-reproduction.yaml
+      - campaigns/P069-me3-lattice-continuum/evidence/source-audit.yaml
+      - campaigns/P069-me3-lattice-continuum/evidence/primary-provenance.yaml
+      - campaigns/P069-me3-lattice-continuum/attempts/0001/result.yaml
+      - campaigns/P069-me3-lattice-continuum/attempts/0002/result.yaml
+      - campaigns/P069-me3-lattice-continuum/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-LAT-001-review.md
+    note: >-
+      P069 derives the exact periodic scalar-lattice action and equation,
+      centered-stencil Taylor/remainder ledger, full Brillouin-zone symbol,
+      controlled linearized dispersion, and a smooth sampled-action error
+      bound through canonical and independent exact routes. It uses no
+      numerical quadrature or NumPy integration alias.

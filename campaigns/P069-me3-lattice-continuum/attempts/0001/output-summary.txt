@@ -1,0 +1,5 @@
+Native ME3 process exited 0 under the framework Python environment.
+ME3.1, ME3.2, ME3.3, and ME3.4 each printed PASS.
+Terminal line: ALL 4 CHECKS PASS.
+No NumPy integration API is imported or called.
+The tally reproduces the source assertions; it does not validate the wider action-convergence or termination-scale narrative.
