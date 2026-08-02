@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-02T15:20:00Z'
+updated: '2026-08-02T16:20:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.50.0`, containing seventy claims: the prior sector results plus exact SU(3) trace-five cohomology and conditional extension theorem `C-WZW-001`, including invariant non-image, compact-Haar global non-exactness, and an ungauged boundary identity with no imported period or physical anomaly claim. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.51.0`, containing seventy-one claims: the prior sector results plus exact SU(3) trace-five cohomology `C-WZW-001` and the explicit primitive-sphere period and coefficient-lattice theorem `C-WZW-002`. The latter fixes the oriented real period at `-480*pi^3` and the five-ball-filling coefficient step at `1/(240*pi^2)` without identifying the integer with `N_c` or a physical anomaly. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 164 pending, 0 partially migrated, 3 migrated, 47 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 163 pending, 0 partially migrated, 3 migrated, 48 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -136,6 +136,7 @@ Attempts are append-only and individually reproducible.
 | 0074 | P054 exact real-l2 tensor/rank theorem and QB3 audit | `campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0001` through `0008`, then `scripts/validate.sh` | accepted in v0.48.0 with QB3 qualified; commit `f27e2cd` | Twenty-two primary and twenty-two independent checks derive m-degeneracy, the complete real-l2 triple-STF/TT map, averaging defect, regular-origin condition, and temporal rank; a refined averaged spectrum is a super-threshold wall state rather than Floquet evidence; the repaired full workflow passed 396 tests and now enforces complete current/pinned release equality | Audit QB4's waveform and power construction using C-GW-007's rank-one ceiling and only the accepted conditional gravity imports |
 | 0075 | P055 convention-safe conditional real-m2 waveform/power and QB4 audit | `campaigns/P055-qb4-conditional-triaxial-waveform/attempts/0001` through `0007`, then `scripts/validate.sh` | accepted in v0.49.0 with QB4 qualified; commit `a57b0e0` | Twenty-five primary and twenty-three independent checks derive the scaled-STF and real-m2 formulas, factor-nine convention conversion, fixed-rank counterexample, and quadrature comparison; the source's incommensurate window has 9.61-percent endpoint mismatch and only 4.17-percent twice-frequency derivative fraction; the repaired full workflow passed 407 tests | Audit WZ1's closed/non-exact five-form and anomaly-inflow construction without importing its pending S3/S4/WZ2/WZ3 dependencies or equating symbolic topology with a physical action |
 | 0076 | P056 exact SU(3) trace-five cohomology and WZ1 audit | `campaigns/P056-wz1-wzw-five-form-inflow/attempts/0001` through `0006`, then `scripts/validate.sh` | accepted in v0.50.0 with WZ1 qualified; commit `23484eb` | Thirty-one primary and twenty-six independent checks build the exact CE complex twice, prove the real trace-five cocycle globally non-exact without a period, refute the source's false even-power guard, and retain only conditional filling and ungauged boundary identities; the full workflow and explicit replay each pass all 413 tests | Audit WZ2's claimed normalized integer period and level quantization without treating a hard-coded topology label or numerically close integral as a generator proof |
+| 0077 | P057 exact SU(3) primitive period and WZ2 audit | `campaigns/P057-wz2-pi5-period-level/attempts/0001` through `0003`, then the promotion replay | accepted in v0.51.0 with WZ2 qualified; commit `45e2fe9` | Twenty-six primary and nine independent checks reject WZ2's determinant and domain failures, derive the replacement map's degree +2 before its exact `-480*pi^3` period, converge a five-dimensional cubature, and fix the sphere-filling coefficient lattice without `N_c`; the full workflow and explicit replay each pass all 418 tests, and the workflow now prevents immutable historical verifiers from freezing unrelated future queue state | Audit WZ3's Goldstone-Wilczek current against the accepted ungauged boundary and period theorems without importing gauge descent, baryon normalization, or physical-current claims |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -152,7 +153,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 164 bridge units remain pending, 3 are migrated, 47 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 163 bridge units remain pending, 3 are migrated, 48 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -284,11 +285,25 @@ structural predicates and requires differential-form nonvanishing,
 closedness, non-exactness, periods, filling dependence, and gauge descent to
 be checked separately.
 
+P057 adds the primary-source Puttmann-Rigas embedding `eta:S5->SU3`, proves
+its first-column projection has two positive regular preimages and degree
+`+2`, and therefore certifies its primitive `pi5` class independently of the
+trace integral. Equivariance and one exact oriented tangent evaluation give
+the C-WZW-001 period `-480*pi^3`; a separately implemented five-coordinate
+finite-difference cubature converges to the same value. The resulting
+five-ball-filling coefficient lattice is `k/(240*pi^2)` for integer `k`. WZ2
+is qualified because its projector family has determinant `exp(iF)`, its
+suspension of `CP2` is not `S5`, its generator label uses the integral under
+review, and its doubling is literal multiplication. The campaign supplies no
+arbitrary-five-manifold period, `N_c`, baryon, anomaly, or substrate claim.
+It also corrects the shared verifier contracts so immutable historical
+campaigns do not assert unrelated future queue units remain pending.
+
 ## Canonicalization
-The registry, `v0.50.0` manifest, current release, generated claim index, and generated framework memory agree on seventy accepted claims. P001 through P056 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 164 pending, 0 partial, 3 migrated, 47 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.51.0` manifest, current release, generated claim index, and generated framework memory agree on seventy-one accepted claims. P001 through P057 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 163 pending, 0 partial, 3 migrated, 48 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 164 pending, 3 migrated, 47 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable queue unit is WZ2, which claims an explicit smooth generator of `pi_5(SU(3))`, a normalized integer trace-five period, and consequent WZW level quantization. WZ1 now supplies accepted closed/global-non-exact algebra but deliberately supplies no period lattice; S3 remains pending navigation evidence. The new campaign must resolve that dependency closure and preregister at least a literal source audit, a direct generator/period construction, and an independent topology or chart route. Before opening WZ2 values it must freeze the SU(3) map, group-membership and smoothness gates, domain atlas and singular sets, orientation, pullback five-form normalization, quadrature measure, convergence norm, and generator criterion. A period close to an integer cannot prove that the map represents a generator; mutations must change map degree, orientation, trace normalization, chart coverage, and level. The campaign must keep `pi_5` classification, normalized period, phase invariance, integer level, `N_c`, baryon current, anomaly matching, and physical WZW action as separate obligations.
+The effort remains active. D4 is discharged, but D1 remains open with 163 pending, 3 migrated, 48 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable queue unit is WZ3, which claims the Goldstone-Wilczek baryon current from a U(1) variation of the WZW construction. Accepted authority now supplies the ungauged trace-five boundary identity and a sphere period, but no gauge connection, external U(1) coupling, local descent equation, current normalization, representation trace, baryon identification, or physical anomaly. The new campaign must preregister at least a literal WZ3 audit, a convention-complete differential-form/current derivation, and an independent conservation/topological-charge route. It must keep the identically conserved winding current, a Noether or gauge-response current, its spatial charge, WZW descent, `N_c`, baryon number, anomaly matching, and substrate dynamics as separate obligations.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
