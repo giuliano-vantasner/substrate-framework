@@ -1,0 +1,28 @@
+attempt: 0008
+campaign: P054
+candidate: repaired_repository_promotion_gate
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 35.6
+repository:
+  claims: 68
+  accepted_claims: 68
+  active_proposals: 0
+migration:
+  primary_units: 218
+  pending_adjudication: 166
+  partially_migrated: 0
+  qualified: 45
+memory:
+  files_validated: 244
+  result: all valid
+skill: valid
+tests:
+  passed: 396
+  elapsed_seconds: 34.72
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+git_diff_check: passed
+repair_from_attempt_0007: >-
+  Both claim reviews now use the configured established confidence. No
+  scientific claim, evidence, threshold, or conclusion changed.
+debt: []

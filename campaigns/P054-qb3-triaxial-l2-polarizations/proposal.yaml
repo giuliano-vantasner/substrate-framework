@@ -1,0 +1,80 @@
+id: P054
+base_release: v0.47.0
+base_commit: fd5ee0b
+source_baseline: substrate@6d1f4e0
+source_units: [QB3]
+question: >-
+  Determine the strongest framework-consistent nonaxisymmetric l=2 object
+  behind QB3: distinguish exact m-degeneracy and triaxial moment/polarization
+  algebra from a genuine regular Floquet or finite-time perturbation of the
+  accepted radial harmonic background, then audit the claimed self-consistent
+  two-mode waveform without importing its eigenvalue or deformation data.
+invariants:
+  - C-PDE-003 fixes the full time-dependent regular l=2 equation and O(r^2) origin law for every m on a radial background.
+  - C-PDE-006 is a finite-box, finite-harmonic standing-wave branch rather than an exact periodic full-PDE or infinite-domain localized state.
+  - C-MOM-001 and C-MOM-003 fix normalized versus triple STF conventions and require localized conserved source hypotheses before moment dynamics are interpreted physically.
+  - C-GW-001 and C-GW-002 make TT projection and its two-dimensional image exact but keep waveform and gravity premises conditional.
+  - One fixed real STF tensor multiplied by one scalar time trace is one source mode even if a generic viewing frame has two nonzero coordinate readouts.
+allowed_imports:
+  - C-PDE-003
+  - C-PDE-004
+  - C-PDE-005
+  - C-PDE-006
+  - C-MOM-001
+  - C-MOM-003
+  - C-GW-001
+  - C-GW-002
+  - C-GW-005
+  - C-GW-006
+  - standard real l=2 spherical-harmonic and symmetric-trace-free tensor algebra
+  - SciPy sparse eigensolvers, IVP/BVP solvers, or matrix-free monodromy methods with declared refinement and status gates
+  - QB3 at substrate@6d1f4e0 as noncanonical evidence after the comparator gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce QB3's radial mode equation, boundary conditions, angular
+      deformation, moment tensor, TT readout, and line classifier literally,
+      then retain only subclaims that survive the accepted time-dependent
+      operator, regularity, normalization, refinement, and mode-rank audits.
+  - id: B
+    description: >-
+      Derive an exact real-l=2 basis-to-STF map, prove radial m-degeneracy on
+      every accepted radial background, and give arbitrary-view plus/cross
+      readouts with an explicit temporal-rank test separating triaxial shape
+      from two independent source modes.
+  - id: C
+    description: >-
+      Formulate and solve the genuine linear Floquet problem for regular l=2
+      perturbations about the C-PDE-006 time-periodic finite-box background,
+      with monodromy multipliers or quasifrequencies, harmonic/time/radial/wall
+      refinement, residuals, symplectic or energy diagnostics, and an
+      independent evolution or soluble vacuum limit.
+  - id: D
+    description: >-
+      Evolve two independently declared real l=2 components on the accepted
+      radial background over a finite interval, refine the PDE and moment
+      traces, and test whether their STF coefficient trajectory has temporal
+      rank two rather than merely two coordinate projections of one scalar
+      tensor.
+uniqueness_evidence: null
+selection_criteria:
+  - exact agreement with the C-PDE-003 time-dependent operator and regular origin law
+  - explicit real-harmonic, STF, quadrupole-scale, frame, and phase conventions
+  - temporal source-rank and polarization-rank distinction
+  - solver status, residual, mesh/time/domain/wall/harmonic refinement, and independent method where numerical
+  - source localization or boundary-flux honesty and compatibility with the C-PDE-006 standing-wave ceiling
+  - assumption and parameter economy without inserted source eigenvalues, deformation amplitudes, or waveform targets
+  - correct vacuum, zero-mode, axisymmetric, orientation, and phase limits
+  - predictive reach without converting conditional TT geometry into physical gravity
+claims_proposed:
+  - provisional C-PDE-009 exact radial-background l=2 m-degeneracy and time-averaging ceiling
+  - provisional C-GW-007 exact real-l=2 STF and temporal-rank polarization theorem
+  - provisional C-PDE-010 or C-GW-008 numerical Floquet or finite-time two-component evidence only if all relevant gates pass
+comparators_blinded_until: >-
+  The full time-dependent perturbation equation, regularity, angular and STF
+  normalization, source-rank metric, boundary model, refinement thresholds,
+  candidate set, and physical interpretation ceiling are frozen in this
+  manifest and matching memory contract before QB3's executable, reported
+  eigenvalue, deformation amplitude, moment coefficients, or waveform values
+  are inspected.
+status: accepted

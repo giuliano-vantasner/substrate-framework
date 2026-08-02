@@ -1,0 +1,18 @@
+PASS [P054-INDEPENDENT] the five Cartesian quadratic-form matrices are symmetric and traceless
+PASS [P054-INDEPENDENT] isotropic fourth-moment contraction independently reproduces the canonical map
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: baseline
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutations supplied
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutation 1 rejected
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutation 2 rejected
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutation 3 rejected
+PASS [P054-INDEPENDENT] direct normalized TT contractions give 2sqrt(2)Hc/5 and 2sqrt(2)Hs/5
+PASS [P054-INDEPENDENT] a pure real-m2 cosine tensor has three distinct eigenvalues when its coefficient is nonzero
+PASS [P054-INDEPENDENT] polarization rotation has determinant one and cannot change coefficient rank
+PASS [P054-INDEPENDENT] two nonzero proportional readouts have rank one while independent traces have rank two
+FAIL [P054-INDEPENDENT] independent Fourier integration gives the omitted minus-two-J2 coefficient
+Traceback (most recent call last):
+  File "reviews/independent_stf_review.py", line 111, in <module>
+    raise SystemExit(main())
+  File "reviews/independent_stf_review.py", line 82, in main
+    ledger.check(...)
+substrate_framework.verification.CheckFailure: FAIL [P054-INDEPENDENT] independent Fourier integration gives the omitted minus-two-J2 coefficient

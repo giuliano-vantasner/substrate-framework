@@ -1,0 +1,19 @@
+attempt: 0007
+campaign: P054
+candidate: first_repository_promotion_gate
+command: scripts/validate.sh
+verdict: failed_memory_frontmatter
+process_exit_code: 1
+elapsed_seconds: 6.1
+passed_before_failure:
+  repository_governance: WORKFLOW VALID, 68 claims, 68 accepted
+  migration_queue: 218 units, 166 pending, 0 partial
+failure:
+  files:
+    - memory/vantasner/decisions/C-GW-007-review.md
+    - memory/vantasner/decisions/C-PDE-009-review.md
+  error: "Invalid confidence 'verified' (allowed: established, working, exploratory)"
+repair: >-
+  Use the configured established confidence for accepted claim reviews. This
+  is a frontmatter-schema repair; no claim, evidence, threshold, or scientific
+  conclusion changes.

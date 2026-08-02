@@ -17,6 +17,7 @@ Split composite claims so each part receives the right oracle. Discover numerica
 - Derive expressions from canonical inputs.
 - Substitute the candidate into the governing equation.
 - Assert the unsimplified and simplified structure where sign or branch information matters.
+- Inspect the evaluated form before assigning an exact verdict. An unevaluated `Integral`, `Sum`, derivative, root object, or unresolved condition is not a symbolic proof merely because it appears inside an equality check. Preserve the failed attempt and change identity, representation, assumptions, or oracle; use independent refined numerics only as a cross-check when the claim remains exact.
 - Test domains, branches, dimensions, symmetries, special cases, and limits.
 - Mutate coefficients and signs; the residual check must fail.
 

@@ -1,0 +1,17 @@
+attempt: 0005
+campaign: P054
+candidate: repaired_independent_Cartesian_Bessel_review
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P054-qb3-triaxial-l2-polarizations/reviews/independent_cartesian_review.py
+repair: >-
+  Replace the unevaluated direct symbolic integral from attempt 0004 with the
+  independently derived identity I_2=-4*J_0''-2*J_0 and the Bessel equation
+  and recurrence, while retaining a direct Gauss-Legendre integral check at
+  several amplitudes. No formula, tolerance, or physical conclusion is
+  weakened.
+expected: >-
+  The independent Cartesian tensor derivation, exact Bessel recurrence,
+  scale-relative quadrature, normalization mutations, rank counterexamples,
+  regular-origin check, and accepted-trace transfer all pass.
+started_at: '2026-08-02T11:00:00Z'

@@ -147,6 +147,15 @@ For the specified regular linearized l=2 IVP of C-PDE-004, write q(t)=Qzz(t)/eps
 - Compatibility: `compatible_extension`
 - Dependencies: C-PDE-004, C-GW-005
 
+## C-GW-007
+
+Let a scalar density's coefficients in the unnormalized real l=2 basis P2(n_z), n_x^2-n_y^2, 2*n_x*n_y, 2*n_x*n_z, and 2*n_y*n_z have radial moments H_20, H_2c, H_2s, H_1c, and H_1s, where each H=4*pi*integral r^4*h(r) dr. In the C-MOM-003 triple-STF convention, exact angular integration gives Q_xx=-H_20/5+2*H_2c/5, Q_yy=-H_20/5-2*H_2c/5, Q_zz=2*H_20/5, Q_xy=2*H_2s/5, Q_xz=2*H_1c/5, and Q_yz=2*H_1s/5. A nonzero pure real-m=2 cosine coefficient therefore gives diag(2H/5,-2H/5,0), which is traceless and has three distinct eigenvalues. Along the z sightline with x reference, the conventional plus and cross matrix readouts are 2*H_2c/5 and 2*H_2s/5; coordinates in the normalized unit-Frobenius TT basis are larger by sqrt(2). For sampled, DC-removed coefficient traces, temporal source rank is the matrix rank with time samples as rows and declared angular components as columns. A fixed tensor direction times one scalar trace has rank at most one even when both coordinate readouts are nonzero; two nonproportional traces are required for rank two, and invertible polarization-frame rotation preserves that rank. By the exact m-degeneracy C-PDE-009, pairing the accepted C-PDE-004 radial solution with n_x^2-n_y^2 gives the genuine first-order finite-time tensor diag(q(t),-q(t),0), where q is C-PDE-004's accepted P2 Q_zz/epsilon trace. Its natural conventional plus trace therefore inherits RMS 404.678 and maximum absolute value 680.589, with cross zero and temporal rank one. These are exact moment, TT-coordinate, rank, and dependency- transfer statements. They establish no finite nonlinear deformation, localized or periodic eigenmode, rank-two source evolution, conserved gravitational source, gravity theory, physical waveform or radiation, flux, graviton count, absolute scale, or substrate realization.
+
+- Accepted in: `v0.48.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-PDE-009, C-PDE-004, C-MOM-003, C-GW-002
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.
@@ -335,6 +344,15 @@ On the accepted finite-box branch C-PDE-006, define the core radial second energ
 - Verification: `numeric_evidence`
 - Compatibility: `compatible_extension`
 - Dependencies: C-PDE-006, C-PDE-007
+
+## C-PDE-009
+
+In the dimensionless radial-background linearization of C-PDE-003, let n=(n_x,n_y,n_z) be a unit direction and use the unnormalized real l=2 angular basis P2(n_z), n_x^2-n_y^2, 2*n_x*n_y, 2*n_x*n_z, and 2*n_y*n_z. Every basis element obeys Delta_Omega Y=-6*Y. Consequently, for any sufficiently differentiable radial background P(r,t), every real m component has the same radial equation psi_tt-psi_rr-2*psi_r/r+6*psi/r^2+cos(P)*psi=0 and the same regular origin law psi=O(r^2); m-degeneracy does not supply a separated frequency, normalization, or mode existence. Replacing cos(P) by a time average Cbar(r) defines a different equation whose exact omitted term is (cos(P)-Cbar)*psi. For P=a(r)*cos(tau), Cbar=J_0(a) and cos(P)-Cbar=-2*J_2(a)*cos(2*tau)+2*J_4(a)*cos(4*tau)-..., with leading small-a term -a^2*cos(2*tau)/4. Thus an eigenfunction of the averaged radial operator is a solution of the full linearized equation only when the displayed pointwise defect vanishes or a separate Floquet argument supplies the missing time dependence. At a positive cutoff epsilon the regular leading series satisfies epsilon*psi_r-2*psi=O(epsilon^4), so zero value paired with nonzero derivative is not nontrivial regular l=2 data. These are exact angular, equation, and regularity statements. They establish no averaged or Floquet eigenmode, bound state, frequency, stability, nonlinear deformation, infinite-domain localization, gravity, radiation, absolute scale, or substrate realization.
+
+- Accepted in: `v0.48.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-PDE-003
 
 ## C-QBL-001
 

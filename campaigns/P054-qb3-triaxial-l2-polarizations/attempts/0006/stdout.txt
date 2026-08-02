@@ -1,0 +1,23 @@
+PASS [P054-QB3] QB3 is the hash-pinned primary source unit
+PASS [P054-QB3] the clean source reproduction and complete tally are preserved
+PASS [P054-QB3] the source uses the current NumPy trapezoid API before its legacy fallback
+PASS [P054-QB3] the audit records the averaged-operator, origin, wall, moment, and temporal-rank defects
+PASS [P054-QB3] the corrected averaged eigenpair is converged against its residual and soluble vacuum limit
+PASS [P054-QB3] the averaged mode fails the preregistered localized-state gates
+PASS [P054-QB3] the canonical real-l2 map has the complete exact triple-STF normalization
+PASS [P054-QB3] a nonzero pure real-m2 coefficient gives the exact triaxial eigenstructure
+PASS [P054-QB3] natural-axis TT readouts keep conventional and normalized scales distinct
+PASS [P054-QB3] the accepted P2 axial trace transfers exactly to a genuine real-m2 plus trace
+PASS [P054-QB3] full time-dependent equation rejects the averaged coefficient mutation: baseline
+PASS [P054-QB3] full time-dependent equation rejects the averaged coefficient mutation: mutations supplied
+PASS [P054-QB3] full time-dependent equation rejects the averaged coefficient mutation: mutation 1 rejected
+PASS [P054-QB3] full time-dependent equation rejects the averaged coefficient mutation: mutation 2 rejected
+PASS [P054-QB3] QB3's BVP start fails the exact regular-origin condition
+PASS [P054-QB3] two source modes require rank-two temporal coefficients: baseline
+PASS [P054-QB3] two source modes require rank-two temporal coefficients: mutations supplied
+PASS [P054-QB3] two source modes require rank-two temporal coefficients: mutation 1 rejected
+PASS [P054-QB3] two source modes require rank-two temporal coefficients: mutation 2 rejected
+PASS [P054-QB3] the independent Cartesian-Bessel review has a clean sensitive tally
+PASS [P054-QB3] the exact claim delta is promoted atomically or remains wholly prospective
+PASS [P054-QB3] the terminal QB3 disposition maps both accepted exact claims
+ALL 22 CHECKS PASS [P054-QB3]

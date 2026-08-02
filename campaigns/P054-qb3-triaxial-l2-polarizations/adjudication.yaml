@@ -1,0 +1,87 @@
+campaign: P054
+title: Exact real-l2 triaxial moments, temporal rank, and QB3 audit
+source_baseline: substrate@6d1f4e0
+source_units: [QB3]
+base_release: v0.47.0
+release_after_adjudication: v0.48.0
+adjudicated_at: '2026-08-02T11:30:00Z'
+selected_candidate:
+  id: B
+  reason: >-
+    Candidate B supplies the strongest positive object with no fitted radial
+    value: exact m-degeneracy, the complete real-l2 triple-STF and TT map, and
+    a temporal-rank theorem. Its application to the accepted C-PDE-004 trace
+    yields a genuine regular finite-time triaxial first-order object while
+    keeping one fixed source direction distinct from two temporal modes.
+competing_candidates:
+  - id: A
+    decision: >-
+      retained_as_source_reproduction_but_qualified_for_background_identity
+      time_averaging_origin_wall_localization_energy_and_temporal_rank
+  - id: C
+    decision: >-
+      averaged_precursor_rejected_as_superthreshold_wall_state_and_not_a
+      Floquet_solution; no general Floquet no-go is claimed
+  - id: D
+    decision: >-
+      positive_single_mode_finite_time_case_satisfied_by_exact_m_degenerate
+      transfer_of_C_PDE_004; a new rank_two_evolution was not needed or promoted
+claims:
+  - id: C-PDE-009
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+  - id: C-GW-007
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0006/result.yaml
+  exact_primary: attempts/0002/result.yaml
+  independent_review: reviews/independent_cartesian_review.py
+  independent_result: attempts/0005/result.yaml
+  preserved_failed_attempts:
+    - attempts/0004/result.yaml
+  exploratory_results:
+    - attempts/0001/result.yaml
+    - attempts/0003/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  numerical_audit: evidence/numerical-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-PDE-009-review.md
+    - memory/vantasner/decisions/C-GW-007-review.md
+release_erratum: >-
+  The historical v0.47.0 pinned manifest has the correct claim set but copied
+  v0.46.0's narrative note while current.yaml carried the correct v0.47.0
+  note. P054 does not rewrite that immutable file. v0.48.0 records the erratum,
+  and validation now requires complete mapping equality between current and
+  its named pinned manifest.
+source_disposition:
+  QB3: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P054-qb3-triaxial-l2-polarizations/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB3_triaxial_nonaxisymmetric.py
+    --source-reproduction campaigns/P054-qb3-triaxial-l2-polarizations/evidence/source-reproduction.yaml
+    --source-audit campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0001/result.yaml
+    --numerical-audit campaigns/P054-qb3-triaxial-l2-polarizations/evidence/numerical-audit.yaml
+    --independent-result campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0005/result.yaml
+    --migration-queue migration/source-claims.yaml
+    --claims governance/claims.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P054-qb3-triaxial-l2-polarizations/reviews/independent_cartesian_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_triaxial_l2.py
+    tests/test_tt_angular.py tests/test_sine_gordon_l_modes.py
+    tests/test_conserved_moments.py tests/test_governance.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

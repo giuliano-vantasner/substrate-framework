@@ -1,0 +1,13 @@
+[QB1 core: A = 3.0, omega = 0.965311, r in [0, 100.0], 4000 nodes]
+l=2 fluctuation eigenmode: omega_2 = 1.0877, g peak = 0.0141, localized = True; fluctuation-operator residual (rms/peak) = 8.98e-06
+QB3.1 SELF-CONSISTENT l=2 MODE ... PASS
+Q_xx = 438.49, Q_yy = 115.03, Q_zz = -553.52
+|Q_xx - Q_yy| = 323.458; all three distinct = True
+QB3.2 TRIAXIAL STF QUADRUPOLE ... PASS
+b = 0.0: |Q_xx - Q_yy| = 0.0000
+b = 0.2: |Q_xx - Q_yy| = 80.8654
+b = 0.4: |Q_xx - Q_yy| = 161.7304
+b = 0.8: |Q_xx - Q_yy| = 323.4584
+QB3.3 TRIAXIALITY IS THE m=2 DOING ... PASS
+QB3.GA GUARD [m=2 -> 0 COLLAPSES TO THE AXISYMMETRIC NULL] ... PASS
+ALL 4 CHECKS PASS

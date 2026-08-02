@@ -1,0 +1,67 @@
+attempt: 0001
+campaign: P054
+candidate: A_literal_QB3
+verdict: passed_source_tally_pending_adjudication
+process_exit_code: 0
+elapsed_seconds: 5.6
+terminal_tally: ALL 4 CHECKS PASS
+reported:
+  central_amplitude: 3.0
+  core_frequency: 0.965311
+  core_radial_nodes: 4000
+  core_outer_radius: 100.0
+  averaged_mode_frequency: 1.0877
+  mode_peak: 0.0141
+  sampled_averaged_operator_residual_over_peak: 8.98e-6
+  Q_xx: 438.49
+  Q_yy: 115.03
+  Q_zz: -553.52
+  triaxiality_xx_minus_yy: 323.458
+static_audit:
+  background: >-
+    A standalone amplitude-three N=1 shooting construction, not the accepted
+    amplitude-2.5 N=9 finite-box branch C-PDE-006. Its solve_ivp status and
+    finiteness are not checked before classification or use.
+  perturbation_operator: >-
+    The BVP replaces the full time-periodic coefficient
+    cos(a_1(r)*cos(omega*t)) by its time average J_0(a_1). This is an averaged
+    spectral approximation, not the C-PDE-003 linearized time-dependent
+    equation or a Floquet eigenmode.
+  origin_data: >-
+    At epsilon=0.01 the source imposes g(epsilon)=0 and
+    g'(epsilon)=1e-4. A nonzero regular l=2 series g=C*r^2+O(r^4) instead
+    requires g'=2*g/r+O(r^3), so the imposed pair has no nonzero regular
+    continuation to the origin.
+  outer_data: >-
+    omega_2=1.0877 exceeds the unit mass threshold. The far-field channel is
+    oscillatory, and g(R)=0 is a finite-box standing-wave node. The localized
+    predicate observes a tail explicitly overwritten with zero after the
+    wall, so it cannot test decay.
+  residual: >-
+    The finite-difference residual is computed only for the averaged operator
+    on 0.5<r<0.9*R. It does not test the time-dependent PDE, origin, wall, or
+    the manually zeroed exterior.
+  energy_density: >-
+    Q_tensor labels its density full T00 but includes only u_t, u_r, and the
+    potential. It omits the angular-gradient term
+    |grad_Omega u|^2/(2*r^2), and it evaluates finite-b nonlinear energy from
+    a merely first-order perturbation without the required second-order field
+    corrections.
+  tensor: >-
+    The triple-STF convention 3*I-delta*Tr(I), Gauss-Legendre mu measure, and
+    real sin^2(theta)*cos(2*phi) nonaxisymmetry are structurally correct. At
+    first order the exact tensor is proportional to diag(1,-1,0); source
+    values beyond that order are not self-consistent field evidence.
+  temporal_rank: >-
+    Only the single phase pair (0,0) is used for the headline tensor. No time
+    series, TT projection, plus/cross trace, derivative, or rank-two
+    coefficient trajectory is constructed. One fixed real-m2 tensor times
+    one scalar trace is one source mode even in a rotated frame.
+  refinement: absent_for_background_harmonics_mode_mesh_time_wall_tolerance_angular_grid_and_moment
+  numpy_quadrature: >-
+    The source selects np.trapezoid on current NumPy and falls back to np.trapz
+    only for older versions. Canonical code will use the shared dispatcher.
+next_attempt: >-
+  Derive the exact real-l2 angular-to-STF map, m-degeneracy, time-averaging
+  residual, arbitrary-view TT coordinates, and temporal-rank criterion before
+  attempting a regular Floquet or finite-time two-component construction.

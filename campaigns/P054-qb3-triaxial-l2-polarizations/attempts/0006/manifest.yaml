@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P054
+candidate: promotion_replay
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P054-qb3-triaxial-l2-polarizations/verify.py
+  --source-file /home/dan/substrate/merged-framework/bridges/phase-16/bridge_QB3_triaxial_nonaxisymmetric.py
+  --source-reproduction campaigns/P054-qb3-triaxial-l2-polarizations/evidence/source-reproduction.yaml
+  --source-audit campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0001/result.yaml
+  --numerical-audit campaigns/P054-qb3-triaxial-l2-polarizations/evidence/numerical-audit.yaml
+  --independent-result campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0005/result.yaml
+  --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+expected: >-
+  The hash, reproduction, source audit, corrected averaged-state rejection,
+  exact tensor and time-average formulas, origin and temporal-rank mutations,
+  independent result, atomic claim delta, and terminal QB3 mapping all pass
+  against the assembled v0.48.0 transaction.
+started_at: '2026-08-02T11:45:00Z'

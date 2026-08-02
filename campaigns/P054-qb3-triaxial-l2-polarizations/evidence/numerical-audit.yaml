@@ -1,0 +1,21 @@
+campaign: P054
+source_unit: QB3
+purpose: audit_QB3_time_averaged_l2_mode_against_C_PDE_006
+attempt: attempts/0003/result.yaml
+converged_averaged_operator:
+  lowest_eigenvalue_at_wall_40: 1.0207036932904188
+  continuum_threshold: 1.0
+  outer_quarter_v_norm_fraction: 0.24890863413194234
+  wall_30_to_40_eigenvalue_difference: 0.015870128113030013
+  relative_eigenpair_residual: 1.1461320359198145e-10
+  mesh_error_ratio: 4.996716235264305
+soluble_limit:
+  exact_vacuum_spherical_j2_box_eigenvalue: 1.020760913696417
+  numerical_value: 1.0207609116573175
+  absolute_error: 2.039099555872781e-09
+verdict: >-
+  The corrected averaged operator has a well-resolved finite-wall standing
+  wave, not a sub-threshold localized state. Its explicit time-dependent
+  coefficient defect also fails the preregistered equivalence gate, so the
+  result is neither a Floquet eigenmode nor evidence for QB3's self-consistent
+  nonlinear deformation.

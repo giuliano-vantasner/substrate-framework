@@ -1,0 +1,14 @@
+attempt: 0008
+campaign: P054
+candidate: repaired_repository_promotion_gate
+command: >-
+  scripts/validate.sh && git diff --check
+repair: >-
+  Replace the unsupported review confidence token verified with the configured
+  accepted-state token established in both P054 claim reviews. No scientific
+  content or oracle is changed.
+expected: >-
+  Repository governance, current/pinned release equality, generated docs and
+  memory, migration queue, all memory entries, skill, compile, complete pytest
+  suite, and whitespace checks pass once on the repaired transaction.
+started_at: '2026-08-02T12:00:00Z'

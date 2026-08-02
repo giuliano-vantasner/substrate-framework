@@ -1,0 +1,23 @@
+PASS [P054-INDEPENDENT] the five Cartesian quadratic-form matrices are symmetric and traceless
+PASS [P054-INDEPENDENT] isotropic fourth-moment contraction independently reproduces the canonical map
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: baseline
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutations supplied
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutation 1 rejected
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutation 2 rejected
+PASS [P054-INDEPENDENT] triple-STF normalization retains the factor two-fifths: mutation 3 rejected
+PASS [P054-INDEPENDENT] direct normalized TT contractions give 2sqrt(2)Hc/5 and 2sqrt(2)Hs/5
+PASS [P054-INDEPENDENT] a pure real-m2 cosine tensor has three distinct eigenvalues when nonzero
+PASS [P054-INDEPENDENT] polarization rotation has determinant one and preserves temporal rank
+PASS [P054-INDEPENDENT] proportional nonzero readouts have rank one while independent traces have rank two
+PASS [P054-INDEPENDENT] J0 differentiation and the Bessel recurrence give the exact minus-two-J2 coefficient
+PASS [P054-INDEPENDENT] the omitted twice-phase coefficient sign and factor are load bearing: baseline
+PASS [P054-INDEPENDENT] the omitted twice-phase coefficient sign and factor are load bearing: mutations supplied
+PASS [P054-INDEPENDENT] the omitted twice-phase coefficient sign and factor are load bearing: mutation 1 rejected
+PASS [P054-INDEPENDENT] the omitted twice-phase coefficient sign and factor are load bearing: mutation 2 rejected
+PASS [P054-INDEPENDENT] the omitted twice-phase coefficient sign and factor are load bearing: mutation 3 rejected
+PASS [P054-INDEPENDENT] direct Gauss-Legendre Fourier quadrature reproduces the Bessel coefficient
+PASS [P054-INDEPENDENT] wrong-sign Fourier mutation fails far above quadrature error
+PASS [P054-INDEPENDENT] regular real-l2 data obey r psi_r minus 2 psi at leading order
+PASS [P054-INDEPENDENT] QB3's epsilon data have the independently computed mismatch one-millionth
+PASS [P054-INDEPENDENT] the accepted P2 Qzz coefficient maps to real-m2 Qxx and natural plus
+ALL 22 CHECKS PASS [P054-INDEPENDENT]

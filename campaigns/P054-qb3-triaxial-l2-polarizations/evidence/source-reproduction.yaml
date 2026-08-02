@@ -1,0 +1,25 @@
+campaign: P054
+source_unit: QB3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-16/bridge_QB3_triaxial_nonaxisymmetric.py
+sha256: e9626f2e4829084635386eea271d0abdd39c81dfcd6899765d2f4bffac83e0c8
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+process_exit_code: 0
+elapsed_seconds: 5.6
+terminal_tally: ALL 4 CHECKS PASS
+reported:
+  core_frequency: 0.965311
+  averaged_mode_frequency: 1.0877
+  averaged_mode_residual_over_peak: 8.98e-6
+  Q_diagonal: [438.49, 115.03, -553.52]
+  triaxiality_xx_minus_yy: 323.458
+adjudication_ceiling: >-
+  The source reproduces a finite-box eigenfunction of a declared time-averaged
+  radial operator and a nonaxisymmetric instantaneous scalar-field energy
+  moment. It does not establish a regular localized mode of the full
+  time-dependent linearized equation, a self-consistent finite deformation,
+  two independent temporal polarizations, or physical radiation.

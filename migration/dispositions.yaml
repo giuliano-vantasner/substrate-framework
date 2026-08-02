@@ -914,3 +914,34 @@ units:
       harmonic, temporal, radial, mesh, tolerance, wall, conservation, and
       independent Gauss/Simpson checks. The source already prefers current
       `np.trapezoid`; canonical code centralizes current/legacy dispatch.
+  QB3:
+    disposition: qualified
+    accepted_claims:
+      - C-PDE-009
+      - C-GW-007
+    qualification: >-
+      QB3's real m=2 angular shape has the correct exact triaxial first-order
+      triple-STF structure, and P054 transfers the accepted regular C-PDE-004
+      radial trace to a genuine finite-time real-m2 tensor. The source's BVP
+      instead replaces the full time-dependent coefficient with its phase
+      average, imposes origin data with no nonzero regular l=2 continuation,
+      and calls a manually zeroed, super-threshold finite-wall standing wave
+      localized. Its finite-amplitude T00 omits angular-gradient energy and
+      lacks second-order field corrections. A fixed triaxial tensor times one
+      trace remains temporal rank one, so QB3 establishes no localized or
+      Floquet eigenmode, self-consistent nonlinear deformation, two independent
+      temporal modes, graviton count, physical radiation, gravity, waveform,
+      flux, absolute scale, particle identity, or substrate realization.
+    evidence:
+      - campaigns/P054-qb3-triaxial-l2-polarizations/reviews/source_adjudication.md
+      - campaigns/P054-qb3-triaxial-l2-polarizations/evidence/source-reproduction.yaml
+      - campaigns/P054-qb3-triaxial-l2-polarizations/evidence/numerical-audit.yaml
+      - memory/vantasner/decisions/C-PDE-009-review.md
+      - memory/vantasner/decisions/C-GW-007-review.md
+    note: >-
+      P054 separates exact l=2 m-degeneracy from an averaged operator, derives
+      the complete real-l2 angular-to-STF and TT map twice, makes temporal rank
+      explicit, and verifies the source's averaged state against mesh, wall,
+      residual, continuum-threshold, and soluble vacuum-box gates. The source
+      already prefers current `np.trapezoid`; canonical P054 code needs no new
+      quadrature spelling.

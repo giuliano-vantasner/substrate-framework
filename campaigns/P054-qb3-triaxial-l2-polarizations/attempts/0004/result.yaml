@@ -1,0 +1,17 @@
+attempt: 0004
+campaign: P054
+candidate: independent_Cartesian_STF_and_Fourier_review
+verdict: failed_oracle_representation
+process_exit_code: 1
+elapsed_seconds: 2.6
+passed_before_failure: 11
+failed_check: independent Fourier integration gives the omitted minus-two-J2 coefficient
+failure_mechanism: >-
+  SymPy retained integral(cos(2*tau)*cos(a*cos(tau)), tau=0..2*pi) as an
+  unevaluated Integral, so simplify could not compare it with -2*J_2(a).
+  This is a representation/oracle failure, not evidence against the identity.
+preserved_script: reviews/independent_stf_review.py
+next_attempt: >-
+  Independently derive the coefficient from the J_0 integral representation,
+  its second derivative, and the order-zero Bessel recurrence; add direct
+  Gauss-Legendre quadrature as a numerical mutation-sensitive check.

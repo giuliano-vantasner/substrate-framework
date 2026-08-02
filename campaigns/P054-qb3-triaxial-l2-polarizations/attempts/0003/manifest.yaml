@@ -1,0 +1,30 @@
+attempt: 0003
+campaign: P054
+candidate: C_time_averaged_spectral_precursor
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P054-qb3-triaxial-l2-polarizations/attempts/0003/explore_averaged_spectrum.py
+model: >-
+  Reconstruct the accepted C-PDE-006 N=9 finite-box background and solve the
+  self-adjoint averaged v=r*psi operator -d2/dr2+6/r2+<cos(P)> with regular
+  v(0)=0 and declared finite Dirichlet walls. This is only a precursor to the
+  full time-periodic Floquet problem.
+frozen_gates:
+  solver:
+    eigsh_relative_residual_max: 1.0e-8
+    vacuum_first_eigenvalue_absolute_error_max: 5.0e-4
+  mesh:
+    intervals: [800, 1600, 3200]
+    second_order_error_ratio_min: 2.0
+  bound_state_candidate:
+    continuum_gap_min: 5.0e-3
+    wall_30_to_40_eigenvalue_difference_max: 2.0e-3
+    outer_quarter_v_norm_fraction_max: 1.0e-4
+  full_equation_equivalence:
+    weighted_relative_defect_max: 1.0e-3
+interpretation: >-
+  Failure of the equivalence gate rejects an averaged eigenpair as a Floquet
+  solution regardless of spectral convergence. Passing the spectral gates can
+  support only a finite-box averaged-operator statement unless a separate
+  time-periodic monodromy or direct-evolution oracle passes.
+started_at: '2026-08-02T10:25:00Z'

@@ -2568,3 +2568,110 @@ claims:
     accepted_in: v0.47.0
     challenges: []
     supersedes: []
+  - id: C-PDE-009
+    statement: >-
+      In the dimensionless radial-background linearization of C-PDE-003, let
+      n=(n_x,n_y,n_z) be a unit direction and use the unnormalized real l=2
+      angular basis P2(n_z), n_x^2-n_y^2, 2*n_x*n_y, 2*n_x*n_z, and
+      2*n_y*n_z. Every basis element obeys Delta_Omega Y=-6*Y. Consequently,
+      for any sufficiently differentiable radial background P(r,t), every
+      real m component has the same radial equation
+      psi_tt-psi_rr-2*psi_r/r+6*psi/r^2+cos(P)*psi=0 and the same regular
+      origin law psi=O(r^2); m-degeneracy does not supply a separated
+      frequency, normalization, or mode existence. Replacing cos(P) by a
+      time average Cbar(r) defines a different equation whose exact omitted
+      term is (cos(P)-Cbar)*psi. For P=a(r)*cos(tau), Cbar=J_0(a) and
+      cos(P)-Cbar=-2*J_2(a)*cos(2*tau)+2*J_4(a)*cos(4*tau)-..., with leading
+      small-a term -a^2*cos(2*tau)/4. Thus an eigenfunction of the averaged
+      radial operator is a solution of the full linearized equation only when
+      the displayed pointwise defect vanishes or a separate Floquet argument
+      supplies the missing time dependence. At a positive cutoff epsilon the
+      regular leading series satisfies epsilon*psi_r-2*psi=O(epsilon^4), so
+      zero value paired with nonzero derivative is not nontrivial regular l=2
+      data. These are exact angular, equation, and regularity statements. They
+      establish no averaged or Floquet eigenmode, bound state, frequency,
+      stability, nonlinear deformation, infinite-domain localization,
+      gravity, radiation, absolute scale, or substrate realization.
+    provenance: campaigns/P054-qb3-triaxial-l2-polarizations/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-PDE-003
+    evidence:
+      - campaigns/P054-qb3-triaxial-l2-polarizations/verify.py
+      - campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0002/result.yaml
+      - campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0005/result.yaml
+      - campaigns/P054-qb3-triaxial-l2-polarizations/reviews/independent_cartesian_review.py
+      - campaigns/P054-qb3-triaxial-l2-polarizations/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-PDE-009-review.md
+      - tests/test_triaxial_l2.py
+      - tests/test_sine_gordon_l_modes.py
+    assumptions:
+      - The dimensionless field equation, radial-background regularity, and formal first-order perturbation meaning are exactly those of C-PDE-003.
+      - The five displayed real angular functions are deliberately unnormalized; any normalized spherical-harmonic convention requires explicit coefficient conversion.
+      - P, psi, and their derivatives and time averages exist on the declared domain, and the phase average for the harmonic example spans a full 2*pi interval.
+      - The pointwise averaging defect is an equation-equivalence test, not a general no-go theorem for Floquet solutions with independently solved time dependence.
+    comparators: []
+    accepted_in: v0.48.0
+    challenges: []
+    supersedes: []
+  - id: C-GW-007
+    statement: >-
+      Let a scalar density's coefficients in the unnormalized real l=2 basis
+      P2(n_z), n_x^2-n_y^2, 2*n_x*n_y, 2*n_x*n_z, and 2*n_y*n_z have radial
+      moments H_20, H_2c, H_2s, H_1c, and H_1s, where each
+      H=4*pi*integral r^4*h(r) dr. In the C-MOM-003 triple-STF convention,
+      exact angular integration gives Q_xx=-H_20/5+2*H_2c/5,
+      Q_yy=-H_20/5-2*H_2c/5, Q_zz=2*H_20/5,
+      Q_xy=2*H_2s/5, Q_xz=2*H_1c/5, and Q_yz=2*H_1s/5. A nonzero pure
+      real-m=2 cosine coefficient therefore gives diag(2H/5,-2H/5,0), which
+      is traceless and has three distinct eigenvalues. Along the z sightline
+      with x reference, the conventional plus and cross matrix readouts are
+      2*H_2c/5 and 2*H_2s/5; coordinates in the normalized unit-Frobenius TT
+      basis are larger by sqrt(2). For sampled, DC-removed coefficient traces,
+      temporal source rank is the matrix rank with time samples as rows and
+      declared angular components as columns. A fixed tensor direction times
+      one scalar trace has rank at most one even when both coordinate readouts
+      are nonzero; two nonproportional traces are required for rank two, and
+      invertible polarization-frame rotation preserves that rank. By the exact
+      m-degeneracy C-PDE-009, pairing the accepted C-PDE-004 radial solution
+      with n_x^2-n_y^2 gives the genuine first-order finite-time tensor
+      diag(q(t),-q(t),0), where q is C-PDE-004's accepted P2 Q_zz/epsilon
+      trace. Its natural conventional plus trace therefore inherits RMS
+      404.678 and maximum absolute value 680.589, with cross zero and temporal
+      rank one. These are exact moment, TT-coordinate, rank, and dependency-
+      transfer statements. They establish no finite nonlinear deformation,
+      localized or periodic eigenmode, rank-two source evolution, conserved
+      gravitational source, gravity theory, physical waveform or radiation,
+      flux, graviton count, absolute scale, or substrate realization.
+    provenance: campaigns/P054-qb3-triaxial-l2-polarizations/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-PDE-009
+      - C-PDE-004
+      - C-MOM-003
+      - C-GW-002
+    evidence:
+      - campaigns/P054-qb3-triaxial-l2-polarizations/verify.py
+      - campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0002/result.yaml
+      - campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0005/result.yaml
+      - campaigns/P054-qb3-triaxial-l2-polarizations/reviews/independent_cartesian_review.py
+      - campaigns/P054-qb3-triaxial-l2-polarizations/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-GW-007-review.md
+      - tests/test_triaxial_l2.py
+      - tests/test_tt_angular.py
+      - tests/test_sine_gordon_l_modes.py
+    assumptions:
+      - The scalar density has a finite radial fourth moment, and every H coefficient uses the displayed unnormalized real-l2 angular basis and triple-STF convention.
+      - TT coordinates use C-GW-002's normalized plus/cross basis; conventional matrix readouts differ by sqrt(2), and observer direction and transverse reference are explicit.
+      - Temporal-rank inputs contain finite samples of declared coefficient traces with irrelevant DC offsets removed; the numerical rank threshold is relative to the leading singular value.
+      - The C-PDE-004 application retains its formal epsilon, initial data, finite domain, finite time, mesh, dimensionless units, and simulation-evidence ceiling unchanged.
+    comparators: []
+    accepted_in: v0.48.0
+    challenges: []
+    supersedes: []

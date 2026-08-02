@@ -1,0 +1,26 @@
+attempt: 0002
+campaign: P054
+candidate: B_exact_real_l2_STF_and_temporal_rank
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 3.3
+terminal_tally: ALL 19 CHECKS PASS [P054-EXACT]
+established:
+  - all five declared real l=2 shapes have angular eigenvalue minus six and therefore a common radial equation on a radial background
+  - independent exact sphere integrals reproduce the complete real-l2 angular-to-triple-STF map
+  - natural-axis conventional plus and cross readouts are 2*H_2c/5 and 2*H_2s/5
+  - normalized TT coordinates differ from conventional matrix readouts by sqrt(2)
+  - the C-PDE-004 P2 axial coefficient transfers exactly to a real-m2 plus coefficient under m-degeneracy
+  - time averaging omits a load-bearing twice-phase term already at second order in background amplitude
+  - QB3's starting value and derivative violate the regular l=2 origin series
+  - temporal rank distinguishes two independent coefficient traces from two coordinate readouts of one fixed tensor
+mutations_rejected:
+  - nonzero harmonic backgrounds treated as static in the averaged-equation oracle
+  - proportional nonzero plus/cross coefficient columns treated as rank two
+  - identical coefficient columns treated as rank two
+  - frame rotation treated as a change of temporal rank
+interpretation_ceiling: >-
+  Candidate B supplies exact m-degeneracy, tensor, TT-coordinate, and temporal-
+  rank results. It does not supply a nonlinear finite-amplitude deformation,
+  localized Floquet eigenmode, rank-two source trajectory, gravity, or physical
+  radiation.

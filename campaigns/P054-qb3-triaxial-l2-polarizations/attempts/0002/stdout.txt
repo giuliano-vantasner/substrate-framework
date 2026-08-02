@@ -1,0 +1,20 @@
+PASS [P054-EXACT] all five declared real l=2 shapes have angular eigenvalue minus six
+PASS [P054-EXACT] independent sphere integrals reproduce every real-l2 triple-STF basis tensor
+PASS [P054-EXACT] every real-l2 tensor is symmetric and trace free
+PASS [P054-EXACT] natural-axis conventional TT readouts are 2H2c/5 and 2H2s/5
+PASS [P054-EXACT] normalized TT coordinates retain the explicit square-root-two scale
+PASS [P054-EXACT] the accepted P2 axial eigenvalue and the real-m2 plus readout share 2H/5
+PASS [P054-EXACT] time averaging omits a nonzero twice-phase coefficient at leading order
+PASS [P054-EXACT] averaged and full equations coincide only in the tested static mutation: baseline
+PASS [P054-EXACT] averaged and full equations coincide only in the tested static mutation: mutations supplied
+PASS [P054-EXACT] averaged and full equations coincide only in the tested static mutation: mutation 1 rejected
+PASS [P054-EXACT] averaged and full equations coincide only in the tested static mutation: mutation 2 rejected
+PASS [P054-EXACT] the regular r-squared origin series satisfies r psi_r minus 2 psi
+PASS [P054-EXACT] QB3's nonzero derivative paired with zero value fails the regular origin oracle
+PASS [P054-EXACT] two independent source traces require temporal coefficient rank two: baseline
+PASS [P054-EXACT] two independent source traces require temporal coefficient rank two: mutations supplied
+PASS [P054-EXACT] two independent source traces require temporal coefficient rank two: mutation 1 rejected
+PASS [P054-EXACT] two independent source traces require temporal coefficient rank two: mutation 2 rejected
+PASS [P054-EXACT] polarization-frame rotation preserves temporal coefficient rank
+PASS [P054-EXACT] zero real-m2 coefficients collapse the triaxial tensor to the declared axisymmetric sector
+ALL 19 CHECKS PASS [P054-EXACT]

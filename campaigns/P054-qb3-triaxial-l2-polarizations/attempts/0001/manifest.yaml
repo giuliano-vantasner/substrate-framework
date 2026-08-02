@@ -1,0 +1,17 @@
+attempt: 0001
+campaign: P054
+candidate: A_literal_QB3
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-16/bridge_QB3_triaxial_nonaxisymmetric.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+started_at: '2026-08-02T09:45:00Z'
+expected: >-
+  Hash-check and reproduce QB3, then audit its background identity, l=2
+  operator, time averaging, regular origin, finite wall, eigensolver status,
+  real-harmonic and STF normalization, TT readout, temporal source rank,
+  refinements, dependencies, and physical interpretation.

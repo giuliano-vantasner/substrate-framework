@@ -1,0 +1,13 @@
+attempt: 0002
+campaign: P054
+candidate: B_exact_real_l2_STF_and_temporal_rank
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P054-qb3-triaxial-l2-polarizations/attempts/0002/verify_exact.py
+expected: >-
+  Prove the common ell=2 angular eigenvalue for the real m basis, independently
+  integrate every angular-to-triple-STF normalization, distinguish normalized
+  TT coordinates from conventional readouts, prove the time-averaging defect,
+  reject QB3's origin data, and separate one fixed triaxial source direction
+  from a rank-two temporal coefficient trajectory under sensitive mutations.
+started_at: '2026-08-02T10:20:00Z'

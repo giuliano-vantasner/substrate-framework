@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P054
+candidate: independent_Cartesian_STF_and_Fourier_review
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P054-qb3-triaxial-l2-polarizations/reviews/independent_stf_review.py
+independence: >-
+  Reconstruct real l=2 harmonics from traceless Cartesian quadratic forms and
+  the isotropic fourth moment, derive TT contractions directly, and derive the
+  omitted averaged coefficient by Fourier integration. Compare with the
+  canonical API only after those formulas are fixed; do not call the primary
+  sphere-integration or temporal-rank paths.
+expected: >-
+  The Cartesian and Fourier derivation must reproduce the proposed formulas,
+  reject normalization, fixed-orientation rank, ell, averaging, and origin
+  mutations, and preserve the C-PDE-004 real-m2 transfer without adding
+  nonlinear, Floquet, gravity, or radiation premises.
+started_at: '2026-08-02T10:50:00Z'

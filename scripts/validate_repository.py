@@ -256,17 +256,15 @@ def main() -> int:
         if current_id not in pinned_releases:
             raise GovernanceError(f"current release {current_id!r} has no pinned manifest")
         pinned = pinned_releases[current_id]
-        for field in (
-            "schema_version",
-            "release",
-            "source_baseline",
-            "released_at",
-            "accepted_claims",
-        ):
-            if current[field] != pinned[field]:
-                raise GovernanceError(
-                    f"current release field {field} disagrees with pinned {current_id}"
-                )
+        if current != pinned:
+            differing = sorted(
+                field
+                for field in current.keys() | pinned.keys()
+                if current.get(field) != pinned.get(field)
+            )
+            raise GovernanceError(
+                f"current release disagrees with pinned {current_id}: {differing}"
+            )
     accepted_ids = set(release_ids)
 
     generated = root / "docs" / "generated" / "claim-index.md"

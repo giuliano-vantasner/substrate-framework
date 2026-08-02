@@ -323,6 +323,15 @@ from .thermal import (
     two_level_upper_occupation,
 )
 from .topological_labels import combined_winding_parity, winding_parity
+from .triaxial_l2 import (
+    RealL2TTReadout,
+    averaged_mode_equation_defect,
+    linearized_l_mode_residual,
+    real_l2_triple_stf_tensor,
+    real_l2_tt_readout,
+    regular_l_mode_origin_mismatch,
+    temporal_coefficient_rank,
+)
 from .u1_charge import (
     breather_charge_energy_product,
     breather_charge_secant_product,
@@ -369,6 +378,7 @@ __all__ = [
     "IsolatedMomentRates",
     "LinearSystemDiagnostics",
     "BiunitaryDecomposition",
+    "RealL2TTReadout",
     "RealSymmetricRotation",
     "RephasingCounts",
     "NumericalFailure",
@@ -387,6 +397,7 @@ __all__ = [
     "axisymmetric_stf_readout",
     "axisymmetric_stf_tensor",
     "asymptotic_masses",
+    "averaged_mode_equation_defect",
     "boundary_sign_correlation_density",
     "breather_action",
     "audit_source_tokens",
@@ -451,7 +462,11 @@ __all__ = [
     "discrete_mass_moments",
     "biunitary_decomposition",
     "gram_eigenvalues",
+    "linearized_l_mode_residual",
     "real_symmetric_rotation",
+    "real_l2_triple_stf_tensor",
+    "real_l2_tt_readout",
+    "regular_l_mode_origin_mismatch",
     "relative_left_basis",
     "unitarity_residual",
     "gauged_scalar_kinetic_density",
@@ -558,6 +573,7 @@ __all__ = [
     "topological_charge_from_boundaries",
     "topological_current",
     "topological_current_divergence",
+    "temporal_coefficient_rank",
     "time_averaged_per_axis_energy_variance",
     "validate_registry",
     "validate_release",

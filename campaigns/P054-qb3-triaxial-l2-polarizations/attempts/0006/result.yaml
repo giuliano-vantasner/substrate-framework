@@ -1,0 +1,25 @@
+attempt: 0006
+campaign: P054
+candidate: promotion_replay
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 1.8
+terminal_tally: ALL 22 CHECKS PASS [P054-QB3]
+targeted_consumer_tests:
+  command: >-
+    .venv/bin/python -m pytest -q tests/test_triaxial_l2.py
+    tests/test_tt_angular.py tests/test_sine_gordon_l_modes.py
+    tests/test_conserved_moments.py tests/test_governance.py
+  result: 61 passed in 3.12s
+independent_replay:
+  command: >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P054-qb3-triaxial-l2-polarizations/reviews/independent_cartesian_review.py
+  terminal_tally: ALL 22 CHECKS PASS [P054-INDEPENDENT]
+promoted_claims:
+  C-PDE-009: symbolic_verified
+  C-GW-007: symbolic_verified
+source_disposition:
+  QB3: qualified
+release: v0.48.0
+debt: []
