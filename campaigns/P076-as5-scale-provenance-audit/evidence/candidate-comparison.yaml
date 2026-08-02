@@ -1,0 +1,49 @@
+campaign: P076
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and dimensionful-input provenance
+  - exact MLT target membership and primitive ordering
+  - exact reference covariance and inverse-energy orientation
+  - parameter economy without hidden reference or target inputs
+  - unit-coordinate covariance and mutation sensitivity
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All six checks reproduce, but the no-import and hierarchy predicates do
+      not test their headlines. The exact dimension subclaims survive only in
+      the narrower accepted form.
+  B:
+    decision: selected
+    reason: >-
+      The reference-explicit map retains mu0, g2, b0, and the inverse-energy
+      conversion and cleanly separates the invariant ratio from absolute
+      outputs.
+  C:
+    decision: selected
+    reason: >-
+      Exact augmented rank proves a pure length is outside the c,hbar span;
+      adjoining a yields only the supplied-target exponent vector (0,0,1).
+  D:
+    decision: selected
+    reason: >-
+      Finite mu0 rescaling makes Lambda covariant with factor rho and the
+      inverse-energy length covariant with 1/rho while their dimensionless
+      ratios retain the fixed flow data.
+  E:
+    decision: selected
+    reason: >-
+      Exact inverse families reconstruct any positive energy or length target
+      by choosing mu0, exposing inverse inference rather than prediction.
+  F:
+    decision: selected
+    reason: >-
+      Rescaling a unit standard changes a fixed quantity's numeric coordinate
+      inversely and cannot provide or derive the physical quantity.
+comparators_opened: false
+selected_claim: C-DIM-008
+physical_ceiling:
+  - no physical beta function, coefficient, or coupling value is derived
+  - no reference energy, conversion constant, action, speed, or length is predicted
+  - no QCD, confinement, lattice, soliton, chemistry, gravity, or Planck identification is established
+  - no unit system is physically privileged and no coordinate convention supplies an observation

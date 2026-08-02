@@ -1,0 +1,60 @@
+source_unit: AS5
+campaign: P076
+checks:
+  AS5.0:
+    source_verdict: pass
+    audit: >-
+      Keeping a and beta2 as free symbols prevents this script from assigning
+      them literal numerical fits. It does not inspect mu0, b0, hbar, c0,
+      conversion provenance, or an upstream fitted boundary and therefore is
+      not a no-import or no-fit proof.
+  AS5.1:
+    source_verdict: pass
+    audit: >-
+      Lambda_gen explicitly equals mu0 times a dimensionless exponential and
+      a_from_Lambda also contains hbar and c0. The predicate excludes only a
+      and G; it accepts mu0 and even a nontransmutation mutant mu0*b0*beta2.
+      The claim that no dimensionful constant is imported is false.
+  AS5.2:
+    source_verdict: pass_qualified
+    audit: >-
+      The two declared primitive columns c and hbar have rank two and adjoining
+      a gives rank three. Rank alone does not prove target membership, and
+      calling the supplied physical length a a units choice conflates a
+      dimensionful input with its numerical coordinate in chosen units.
+  AS5.3:
+    source_verdict: pass_qualified
+    audit: >-
+      The exact c,hbar exponent system for a pure length is inconsistent.
+      Adjoining a makes it uniquely solvable with powers (0,0,1), which
+      selects the supplied target primitive and derives no magnitude.
+  AS5.4:
+    source_verdict: pass_qualified
+    audit: >-
+      The displayed ell_P contains G, so its value needs a supplied G. But the
+      variables ellP_dim, basis, and G_not_in_span do not enter the predicate;
+      in fact c,hbar,a span all M,L,T dimensions and G has exact powers
+      c^3*hbar^-1*a^2. Symbol occurrence supplies no source-value provenance.
+      The chemistry label is unsourced narrative and is unnecessary to the
+      accepted exact result.
+  AS5.5:
+    source_verdict: pass_rejected_orientation
+    audit: >-
+      The predicate establishes only absence of named dimensionful symbols and
+      accepts either exponential sign. With AS1's executable inverse-energy
+      assignments, a/xi=exp(+X), while AS5 labels exp(-X) as a/xi. It also
+      retains the load-bearing b0 while naming one coupling beta2.
+uncovered_load_bearing_inputs:
+  - dimensionful reference energy mu0
+  - action-speed conversion hbar*c0 or another inverse-energy conversion
+  - coupling squared beta2 and beta coefficient b0
+  - one-loop beta-function premise and formal-domain qualifications
+  - target length a when it is adjoined as a primitive
+  - physical provenance of every dimensionful quantity and unit standard
+  - any empirical identification, observation, or absolute-scale boundary
+headline_verdict: >-
+  Qualified. The exact M,L,T no-length target theorem survives, and the formal
+  one-loop expression is a valid conditional map. AS5 does not generate an
+  absolute dimensionful scale from dimensionless content: it retains mu0 and
+  conversion inputs, can reproduce any target by choosing mu0, reverses its
+  length-ratio label, and mistakes unit-coordinate covariance for derivation.

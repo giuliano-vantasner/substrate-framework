@@ -1,0 +1,57 @@
+id: P076
+base_release: v0.68.0
+base_commit: e73d2e5
+scientific_base_commit: 4d68afc
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS5]
+question: >-
+  Derive an exact provenance ledger for a one-loop transmutation scale and its
+  inverse-energy length, then determine whether AS5 generates an absolute
+  dimensionful scale from dimensionless content or retains a reference scale,
+  boundary datum, unit convention, circular target primitive, or other
+  dimensionful input.
+invariants:
+  - C-RGE-001 makes Lambda=mu0*exp(-8*pi^2/(b0*g0^2)) conditional on positive mu0, g0, b0 and a declared one-loop flow; its fixed-g0 partial derivative with respect to mu0 is Lambda/mu0.
+  - C-RGE-003 retains the reference energy, coupling squared, beta coefficient, conversion constants, and a common absolute length rescaling; it identifies no absolute scale.
+  - C-DIM-001 and dimensional_analysis make rank and monomial conclusions local to the declared dimension rows and primitive columns and leave dimensionless coefficients unconstrained.
+  - C-IDN-001 distinguishes a relative or supplied coordinate equation from prediction of a physical dimensionful coordinate.
+  - AS4 is duplicate evidence for C-LIN-001 and C-IDN-001 and supplies no physical row, observation, or absolute-scale equation.
+  - CF4 is qualified only through C-RGE-001, C-RGE-002, and C-DIM-007; QCD3 is qualified only through its accepted group and conditional one-loop claims.
+  - A numerical value in metres changes under a unit rescaling; the dimensionful quantity, its coordinate representation, and a physical prediction are distinct objects.
+allowed_imports:
+  - C-RGE-001 and substrate_framework.renormalization for the declared formal one-loop solution and transmutation scale only
+  - C-RGE-003 and substrate_framework.scale_transmutation for inverse-energy conversions, ratios, and common-rescaling identifiability only
+  - C-DIM-001 and substrate_framework.dimensional_analysis for exact M,L,T span, kernel, and target-exponent diagnostics
+  - C-IDN-001 for exact log-coordinate and reference-change semantics
+  - positive reference energy mu0, coupling squared g2, beta coefficient b0, action hbar, speed c, and any conversion factor only when each is declared with provenance
+  - AS5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after this contract is frozen
+candidates:
+  - id: A
+    description: Reproduce AS5 literally and test whether every scale-generation, no-import, Buckingham, and units-choice conclusion follows from accepted dependencies and its actual data flow.
+  - id: B
+    description: Treat dimensional transmutation as a conditional map from the supplied dimensionful boundary mu0 and dimensionless flow data to Lambda and an inverse-energy length.
+  - id: C
+    description: Prove in M,L,T dimensions that c and hbar plus dimensionless numbers cannot span a length target, while adjoining a as a primitive only assumes that target dimension.
+  - id: D
+    description: Derive finite reference-scale and inverse-length rescaling covariance at fixed dimensionless inputs, separating an invariant ratio from an absolute coordinate.
+  - id: E
+    description: Construct arbitrary-target and circular-input families showing that any positive Lambda or a can be reproduced by choosing the dimensionful reference or reusing the target.
+  - id: F
+    description: Audit unit-coordinate changes separately from physical parameter changes and reject numerical unit choice as an absolute prediction.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and provenance of every dimensionful primitive and boundary datum
+  - exact M,L,T span, target membership, monomial kernel, RG rescaling, inverse-energy orientation, and log-nullspace behavior
+  - distinction between a derived dimensionless ratio, a dimensionful quantity relative to a boundary, a coordinate in chosen units, and a parameter-free prediction
+  - parameter economy without hiding mu0, conversion factors, b0, g2, unit definitions, or the target a in constants or primitive sets
+  - mutation sensitivity to removing or rescaling mu0, reversing energy-to-length orientation, inserting a as an input, and relabeling a fitted scale as a unit choice
+  - reuse of C-RGE-001 and C-RGE-003 without promoting a duplicate claim unless the dimension-span and provenance composition is genuinely new
+claims_proposed:
+  - provisional C-DIM-008 dimensionful-scale provenance and reference-rescaling ledger if the composition is nonduplicate and reusable
+comparator_blinding: >-
+  The generated queue synopsis exposes the rejected 3.62 Angstrom and Planck-
+  length comparator names and one numerical value. They are quarantined as
+  navigation metadata and may not select a candidate, primitive, reference
+  scale, tolerance, unit convention, or verdict. No source-body comparator or
+  later AS6 operating point may be opened before the exact contract is frozen.
+status: accepted

@@ -1,0 +1,18 @@
+attempt: 0002
+candidates: [B, C, D, E, F]
+status: failed_preserved
+command: >-
+  .venv/bin/python scripts/inventory_claims.py --source-root
+  /home/dan/substrate --source-inventory
+  campaigns/P000-migration-foundation/evidence/source-inventory.yaml --scope
+  migration/scope.yaml --dispositions migration/dispositions.yaml --output
+  migration/source-claims.yaml
+process_exit_status: 1
+failure: >-
+  FileNotFoundError: the obsolete P000 source-inventory path does not exist.
+  The authoritative migration/scope.yaml names
+  campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml.
+diagnosed_layer: promotion_execution_harness
+scientific_state: unchanged
+repair: Resolve the inventory path from migration/scope.yaml and rerun only the failed queue generation step.
+next_route: Complete the governed synchronization and validation transaction without repeating already passing scientific routes unnecessarily.

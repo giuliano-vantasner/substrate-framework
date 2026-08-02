@@ -1,0 +1,29 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_and_headline_rejected
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS5_scale_generated_not_imported.py
+  sha256: 7b2399f5fb61dad1ac692fb8a809e8a0429359b2264ee1b8a3899de504ab3bea
+  size_bytes: 16696
+command: python3 merged-framework/bridges/phase-22/bridge_AS5_scale_generated_not_imported.py
+working_directory: /home/dan/substrate
+process_exit_status: 0
+terminal_tally: ALL 6 CHECKS PASS
+surviving_evidence:
+  - In M,L,T order the c and hbar primitive columns have rank two, while adjoining a length column gives rank three.
+  - The exact target system for a pure length is inconsistent with only c and hbar and has the unique exponent vector (0,0,1) after a itself is adjoined.
+  - The displayed formal one-loop expression and inverse-energy conversion are algebraically well formed when all of their inputs are retained.
+failed_headline_mechanisms:
+  - AS5.1 says no dimensionful input is imported while its displayed Lambda contains the positive dimensionful reference mu0 and its displayed length also contains hbar and c0.
+  - The AS5.1 predicate checks only that a and G are absent; it never checks whether mu0 or another dimensionful boundary is present.
+  - Adjoining a as a primitive makes the length target solvable by selecting a to the first power; this assumes the target dimension and does not derive its physical magnitude.
+  - AS5.4 computes dimension-span variables but does not use them in its verdict. Because c, hbar, and a span M,L,T, the dimension of G is in their span; symbol occurrence in ell_P establishes only that the displayed formula contains G.
+  - AS5.5 labels exp(-X) as a/xi even though AS1's executable inverse-energy assignments give a/xi=exp(+X). Its predicate checks symbol absence and is insensitive to reciprocal orientation.
+  - Keeping a and beta2 symbolic rules out a literal numerical fit in this script but does not prove an absolute scale, source provenance, parameter independence, or absence of a hidden fitted boundary.
+diagnosed_layer: candidate_concept_dependency_closure_and_oracle_scope
+next_route: >-
+  Continue with Candidates B-F through a canonical reference-explicit
+  provenance ledger and an independent exact derivation. Test target-span
+  membership, finite mu0 covariance, arbitrary-target reconstruction,
+  inverse-energy orientation, and unit-coordinate covariance.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

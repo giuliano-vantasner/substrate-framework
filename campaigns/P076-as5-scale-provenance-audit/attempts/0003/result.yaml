@@ -1,0 +1,37 @@
+attempt: 0003
+candidates: [B, C, D, E, F]
+status: adjudication_validated
+commands:
+  - python3 merged-framework/bridges/phase-22/bridge_AS5_scale_generated_not_imported.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P076-as5-scale-provenance-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P076-as5-scale-provenance-audit/reviews/independent_scale_provenance_review.py
+  - .venv/bin/python -m pytest -q tests/test_scale_provenance.py tests/test_scale_transmutation.py tests/test_renormalization.py tests/test_linear_systems.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+process_exit_status: 0
+tallies:
+  source: ALL 6 CHECKS PASS
+  primary: ALL 32 CHECKS PASS [P076]
+  independent: ALL 21 CHECKS PASS [P076-INDEPENDENT]
+  affected_canonical_tests: 62 passed
+  focused_governance: 17 passed
+  integrated_workflow: 705 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - Exact augmented rank proves that c and hbar do not span a pure length target in M,L,T dimensions.
+  - Appending a length primitive makes the target solve uniquely (0,0,1), demonstrating supplied-target selection rather than magnitude derivation.
+  - At fixed dimensionless inputs, mu0 rescaling changes Lambda covariantly and its inverse-energy length contravariantly while only the ratio stays fixed.
+  - Exact inverse families reconstruct any positive target by choosing mu0 and retain the target as a load-bearing input.
+  - Unit-standard rescaling changes the numeric coordinate while preserving the same dimensionful quantity.
+  - Source mutations expose that AS5's no-import and hierarchy predicates do not test their advertised semantics.
+adjudication:
+  disposition: qualified
+  accepted_claim: C-DIM-008
+  release: v0.69.0
+  queue_counts:
+    pending_adjudication: 144
+    qualified: 66
+    duplicate_evidence: 4
+    migrated: 3
+    out_of_scope: 1
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

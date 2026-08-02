@@ -1,0 +1,31 @@
+campaign: P076
+claim: C-DIM-008
+recorded_at: '2026-08-03T11:15:00Z'
+artifacts:
+  canonical_module:
+    path: src/substrate_framework/scale_provenance.py
+    sha256: 47e06f37e56c57481cf91cbd394e713eadf80a059dbed193c9aca5f8d72caa98
+    size_bytes: 8260
+  focused_tests:
+    path: tests/test_scale_provenance.py
+    sha256: 312240cd5272cd73248a8531c336a4d06cdcf2291ffa7d775a2d74ea0661354d
+    size_bytes: 6236
+  primary_verifier:
+    path: campaigns/P076-as5-scale-provenance-audit/verify.py
+    sha256: 7aaa744ca7bacc798628de304a487127e9dab4e3ff5bcff835344c44724fea13
+    size_bytes: 9855
+  independent_verifier:
+    path: campaigns/P076-as5-scale-provenance-audit/reviews/independent_scale_provenance_review.py
+    sha256: 8860f375afa671d196009081258cf0c81cf0550f3cddcea54c5462d8003b51aa
+    size_bytes: 5215
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_scale_provenance.py tests/test_scale_transmutation.py tests/test_renormalization.py tests/test_linear_systems.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P076-as5-scale-provenance-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P076-as5-scale-provenance-audit/reviews/independent_scale_provenance_review.py
+tallies:
+  affected_canonical_tests: 62 passed
+  primary: ALL 32 CHECKS PASS [P076]
+  independent: ALL 21 CHECKS PASS [P076-INDEPENDENT]
+numpy_quadrature_note: >-
+  The exact canonical and verifier routes contain neither NumPy trapezoidal
+  alias. No numerical integration is used.

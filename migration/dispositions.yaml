@@ -317,6 +317,42 @@ units:
       covariance and provenance ceilings through exact symbolic routes. It
       adds no claim or canonical API and uses no numerical quadrature or NumPy
       integration alias.
+  AS5:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-002
+      - C-RGE-001
+      - C-RGE-003
+      - C-IDN-001
+      - C-DIM-008
+    qualification: >-
+      AS5's exact M,L,T target-span result survives: c and hbar cannot form a
+      pure length, and adjoining a makes the target solvable only as a^1. Its
+      absolute-generation headline is false because Lambda explicitly retains
+      the dimensionful reference mu0 and the inverse-energy length retains a
+      conversion. Finite reference rescaling changes both absolute outputs,
+      arbitrary targets can be reconstructed by choosing mu0, and rescaling a
+      unit standard changes only a fixed quantity's numeric coordinate. AS5.1
+      never tests mu0 and accepts a nontransmutation mutant; AS5.5 accepts both
+      exponential signs and labels exp(-X) as a/xi despite AS1's executable
+      inverse-energy orientation giving exp(+X). No physical QCD, confinement,
+      lattice, soliton, chemistry, gravity, observed scale, or preferred unit
+      system is established.
+    evidence:
+      - campaigns/P076-as5-scale-provenance-audit/reviews/source_adjudication.md
+      - campaigns/P076-as5-scale-provenance-audit/evidence/source-reproduction.yaml
+      - campaigns/P076-as5-scale-provenance-audit/evidence/source-audit.yaml
+      - campaigns/P076-as5-scale-provenance-audit/evidence/candidate-comparison.yaml
+      - campaigns/P076-as5-scale-provenance-audit/evidence/primary-provenance.yaml
+      - campaigns/P076-as5-scale-provenance-audit/attempts/0001/result.yaml
+      - campaigns/P076-as5-scale-provenance-audit/attempts/0002/result.yaml
+      - campaigns/P076-as5-scale-provenance-audit/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-DIM-008-review.md
+    note: >-
+      P076 derives exact target-span, reference-covariance, arbitrary-target,
+      inverse-energy-orientation, and unit-coordinate ledgers through canonical
+      and independent symbolic routes. It uses no numerical integration or
+      NumPy trapezoidal alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

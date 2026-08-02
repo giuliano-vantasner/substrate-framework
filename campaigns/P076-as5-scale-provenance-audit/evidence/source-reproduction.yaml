@@ -1,0 +1,21 @@
+source_unit: AS5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS5_scale_generated_not_imported.py
+sha256: 7b2399f5fb61dad1ac692fb8a809e8a0429359b2264ee1b8a3899de504ab3bea
+size_bytes: 16696
+command: python3 merged-framework/bridges/phase-22/bridge_AS5_scale_generated_not_imported.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+exit_status: 0
+terminal_tally: ALL 6 CHECKS PASS
+textual_check_tokens: 7
+literal_checks_executed: 6
+numpy_quadrature: absent
+note: >-
+  The function definition contributes one textual check token; six calls
+  execute. Clean reproduction establishes source behavior only. It does not
+  establish the headline because the predicates omit the reference-scale data
+  flow, accept reciprocal hierarchy orientations, and do not use several
+  computed dimension-span variables.
