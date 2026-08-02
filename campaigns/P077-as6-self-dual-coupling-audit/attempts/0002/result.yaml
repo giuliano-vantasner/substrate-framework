@@ -1,0 +1,30 @@
+attempt: 0002
+candidate: A
+status: failed_headline_preserved
+source_unit: AS6
+source_path: merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 2f6c76d8aedde25b343f85cb54b2618cd03c816a29553fa70a523909265dd7f0
+git_blob: 65e9c4396b4a71ef85c280350784155a12445901
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py
+process_exit_status: 0
+terminal_tally: ALL 9 CHECKS PASS
+surviving_exact_predicates:
+  - The supplied map x -> 16*pi^2/x is an involution on x>0.
+  - Its supplied fixed-point equation has the unique positive solution x=4*pi.
+  - Substituting x=4*pi and b0=7 into 8*pi^2/(b0*x) gives 2*pi/7.
+  - The displayed exponential values and two comparator calculations reproduce their source arithmetic.
+headline_failures:
+  - No accepted action, partition function, observable, field map, or solution-family equivalence establishes the imposed reciprocal substitution as a framework duality.
+  - The coefficient 16*pi^2 is asserted, not derived; D_A(x)=A/x has fixed point sqrt(A), and choosing A=t^2 makes any positive target t fixed.
+  - A duality pairs generic off-fixed coordinates and does not require a theory to occupy its self-dual subfamily.
+  - The accepted C-SG-001 root uses the normalized classical beta=1 equation and cannot silently import Coleman's separate quantum sine-Gordon normalization.
+  - The exchange-phase substitution is not a derivation of fermionic statistics or a bosonization equivalence.
+  - AS6 sets b0=7 from an unaccepted physical QCD interpretation; it is not supplied by the fixed-point algebra.
+  - AS6 labels a/xi=exp(-X), reversing the inverse-energy length orientation accepted in C-RGE-003 and C-DIM-008.
+  - The X-ray and Bragg assertions lack an accepted physical cutoff, periodic medium, form factor, wavelength model, or scattering calculation.
+  - The two guards show separation from two selected comparators but cannot prove that the map coefficient or self-dual restriction was not selected by another imported premise.
+  - C-TOP-002 explicitly supplies no physical baryon-current identification, so WZ3 cannot justify electric/topological symmetry or selection here.
+  - AS6's own preamble records a later correction that the framework need not sit at the fixed point; pending AS7 is not used as authority for the present audit.
+diagnosed_layer: candidate_concept_and_dependency_closure
+continuation: Candidates B-F proceed to the exact reciprocal family, coordinate covariance, off-fixed counterfamily, action audit, and primary-literature audit.

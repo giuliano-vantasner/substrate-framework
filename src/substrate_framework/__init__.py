@@ -352,6 +352,13 @@ from .scale_provenance import (
     speed_action_length_dimension_ledger,
     unit_coordinate_ledger,
 )
+from .coupling_duality import (
+    ReciprocalCoordinateChangeLedger,
+    ReciprocalCouplingLedger,
+    reciprocal_coefficient_for_fixed_target,
+    reciprocal_coordinate_change_ledger,
+    reciprocal_coupling_ledger,
+)
 from .separable_moments import (
     AxisymmetricSeparableMoments,
     AxisymmetricTTReadout,

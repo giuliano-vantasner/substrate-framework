@@ -1,6 +1,6 @@
 # Campaign Proposal Template
 
-Instantiate before a campaign computes or inspects comparator values. Store the prose contract in memory and create a matching `proposals/<id>/proposal.yaml` manifest.
+Instantiate before a campaign computes or inspects comparator values. Store the prose contract in memory and create a matching `proposals/<id>/proposal.yaml` manifest. Run `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py` and preserve any schema failure before opening the source body or comparator values; a prose contract alone is not the freeze gate.
 
 Begin every section with a plain-prose sentence. Inline code, a table, or a
 list does not satisfy the memory index's first-content disclosure contract.
@@ -54,7 +54,7 @@ imports, parameters, residuals, convention conflicts, and broken consumers.
 The campaign remains active until the ledger is empty.
 
 ## Review and Promotion Plan
-Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims. Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` decisions must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims.
+Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims. Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` decisions must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims. Materialize each evidence path before registering it. If a final attempt summarizes the promotion gate, create it with an explicit in-progress status, finalize it after the gate, and rerun only record-sensitive repository/generation checks rather than the unchanged full suite.
 
 ## Done Gate
 The campaign closes only on the complete positive success contract in `AGENTS.md`. If any gate fails, state the next attempt and continue.

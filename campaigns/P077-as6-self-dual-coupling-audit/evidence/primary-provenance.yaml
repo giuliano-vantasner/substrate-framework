@@ -1,0 +1,70 @@
+campaign: P077
+recorded_at: '2026-08-03T12:45:00Z'
+contract:
+  path: campaigns/P077-as6-self-dual-coupling-audit/evidence/frozen-proposal.yaml
+  sha256: 56ae5926509fc4cf496ba1e153509d633cc9232d2b6d88bb5e3c8eac5779ec27
+artifacts:
+  canonical_module:
+    path: src/substrate_framework/coupling_duality.py
+    sha256: 37f94eb5a5cd36dc57c47ae9bdc3295d8101d64ff476b97d7d40d1d8f597b770
+    size_bytes: 4997
+  focused_tests:
+    path: tests/test_coupling_duality.py
+    sha256: defdf1b3af9a5501d1d4f44f2836f2e5339d0bb19a9c13c63de01e549890fc3a
+    size_bytes: 4260
+  primary_verifier:
+    path: campaigns/P077-as6-self-dual-coupling-audit/verify.py
+    sha256: 1660897aedb0524991de91d7cc4e9e3e56a07aab6d7507e5025f8c6ebf8c69c2
+    size_bytes: 8281
+  independent_verifier:
+    path: campaigns/P077-as6-self-dual-coupling-audit/reviews/independent_coupling_duality_review.py
+    sha256: 6aa28948f7b6693e8d48eb025b5b51372185306bc6f0243887c7ba3ecfb87b75
+    size_bytes: 5312
+sources:
+  coleman_1975:
+    title: Quantum sine-Gordon equation as the massive Thirring model
+    author: Sidney Coleman
+    journal: Physical Review D 11, 2088 (1975)
+    doi: https://doi.org/10.1103/PhysRevD.11.2088
+    official_url: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.11.2088
+    audited_scope: >-
+      In Coleman's quantum sine-Gordon normalization, beta^2=4*pi is
+      equivalent to the zero-charge sector of a free massive Fermi field, and
+      other beta values map to the massive Thirring model subject to the paper's
+      stated relation. This is a quantum action-level correspondence with its
+      own field normalization; it is not AS6's reciprocal-coupling theorem and
+      is not automatically an import into C-SG-001's classical beta=1 root.
+  lecheminant_gogolin_nersesyan_2002:
+    title: Criticality in self-dual sine-Gordon models
+    authors: [P. Lecheminant, A. O. Gogolin, A. A. Nersesyan]
+    arxiv: https://arxiv.org/abs/cond-mat/0203294
+    source_url: https://export.arxiv.org/e-print/cond-mat/0203294
+    source_archive_sha256: cc9ab4ae1f4d85f7db2fd3245e9bb6730751bb837d27edff6566219b11d90384
+    journal: Nuclear Physics B 639 (2002) 502-523
+    doi: https://doi.org/10.1016/S0550-3213(02)00474-1
+    audited_scope: >-
+      The paper defines a self-dual extension with both cos(beta*Phi) and
+      cos(beta_tilde*Theta). Equal dimensions and equal amplitudes make the
+      action invariant under Phi<->Theta. Its XY normalization gives the
+      relations beta=N/sqrt(K) and beta_tilde=2*pi*sqrt(K), hence
+      beta*beta_tilde=2*pi*N. Exchanging the two couplings acts on
+      x=beta^2 as x->4*pi^2*N^2/x; at N=2 this is AS6's
+      x->16*pi^2/x and has fixed x=4*pi. The N=2 equal-amplitude two-cosine
+      model refermionizes to one massive and one massless Majorana; unequal
+      amplitudes make both sectors massive. This conditionally sources AS6's
+      map only for that explicit extension and does not establish ordinary
+      one-cosine sine-Gordon self-duality or an accepted framework import.
+    reproduction: >-
+      curl -Ls https://export.arxiv.org/e-print/cond-mat/0203294 | gzip -dc
+adjudication:
+  - Coleman supports AS6's narrow attribution of a free-fermion point only within Coleman's explicit quantum normalization.
+  - The primary N=2 self-dual extension conditionally realizes AS6's reciprocal squared-coupling map, but requires a dual field and equal-amplitude second cosine absent from AS6 and the accepted root.
+  - Neither source makes that map an accepted framework symmetry or supplies a mechanism requiring the accepted framework to occupy its fixed subfamily.
+tallies:
+  affected_canonical_tests: 105 passed
+  primary: ALL 30 CHECKS PASS [P077]
+  independent: ALL 23 CHECKS PASS [P077-INDEPENDENT]
+  focused_governance: 17 passed
+numpy_quadrature_note: >-
+  The exact canonical and verifier routes contain neither NumPy trapezoidal
+  alias. No numerical integration is used.

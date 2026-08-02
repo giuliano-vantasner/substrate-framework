@@ -1,0 +1,15 @@
+source_unit: AS6
+campaign: P077
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py
+sha256: 2f6c76d8aedde25b343f85cb54b2618cd03c816a29553fa70a523909265dd7f0
+git_blob: 65e9c4396b4a71ef85c280350784155a12445901
+size_bytes: 19399
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py
+process_exit_status: 0
+terminal_tally: ALL 9 CHECKS PASS
+reproduced_at: '2026-08-03T12:30:00Z'
+scope: >-
+  Reproduction establishes only that the hash-pinned predicates execute and
+  their arithmetic passes. Attempt 0002 audits whether those predicates test
+  the advertised physical duality, selection, scale, and phenomenology.

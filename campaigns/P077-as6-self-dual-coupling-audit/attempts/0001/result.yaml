@@ -1,0 +1,12 @@
+attempt: 0001
+candidate: contract_representation
+status: failed_preserved
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+process_exit_status: 1
+failure: >-
+  GovernanceError: the P077 manifest used comparator_blinding while the
+  current proposal schema requires comparators_blinded_until.
+diagnosed_layer: contract_schema_representation
+scientific_state: not_started
+repair: Rename only the manifest key without changing candidates, criteria, allowed imports, or the blinding boundary.
+next_route: Validate both contract representations before opening or executing AS6.

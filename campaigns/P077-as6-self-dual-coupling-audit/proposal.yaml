@@ -1,0 +1,55 @@
+id: P077
+base_release: v0.69.0
+base_commit: 1ac6e75
+scientific_base_commit: 0940dd9
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS6]
+question: >-
+  Derive an exact normalization- and premise-explicit ledger for positive
+  reciprocal coupling involutions, then determine whether AS6 proves that an
+  accepted framework symmetry selects beta^2=4*pi or merely solves the fixed
+  point of an imposed convention-dependent map.
+invariants:
+  - C-SG-001 is a normalized beta=1 sine-Gordon root and supplies no accepted Coulomb-gas, bosonization, electric-magnetic, or coupling-selection theorem.
+  - C-RGE-001 treats the positive coupling and beta coefficient as declared boundary data and derives neither value.
+  - C-RGE-003 and C-DIM-008 retain coupling, beta coefficient, reference energy, conversion, and absolute-scale ceilings; AS5's dimensionless-only generation headline is rejected.
+  - A map D_A(x)=A/x on x>0 is an involution for every A>0 and has fixed point sqrt(A); algebra alone cannot derive A or require a physical theory to satisfy x=D_A(x).
+  - Under a positive coordinate reparameterization x'=rho*x, the same reciprocal relation has coefficient A'=rho^2*A and fixed coordinate rho*sqrt(A).
+  - A physical duality requires an accepted action or observable map, domains, normalization, and proof of equivalence; a symbolic substitution or copied literature label is insufficient.
+allowed_imports:
+  - C-SG-001 and substrate_framework.sine_gordon only for the accepted normalized classical sine-Gordon equation and its explicit physical-interpretation ceiling
+  - C-RGE-001, C-RGE-003, C-DIM-008, and their canonical modules only for free-coupling, hierarchy-orientation, reference, and absolute-scale semantics
+  - exact real algebra for a separately declared positive reciprocal coefficient and coupling coordinate
+  - primary literature only after contract freeze, for auditing AS6's explicit Coleman, free-fermion, and Coulomb-gas attributions without promoting them as framework premises
+  - AS6 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after this contract is frozen
+candidates:
+  - id: A
+    description: Reproduce AS6 literally and test whether each fixed-point, self-duality, Coleman, hierarchy, no-fit, and dependency predicate establishes its advertised semantics.
+  - id: B
+    description: Treat beta^2 -> 16*pi^2/beta^2 as one conditional reciprocal involution whose positive fixed point is exactly 4*pi after its coefficient and coordinate normalization are supplied.
+  - id: C
+    description: Derive the full family D_A(x)=A/x and show that any positive target is made self-dual by choosing A=target^2, so the coefficient remains load bearing.
+  - id: D
+    description: Transform the reciprocal map under positive coupling-coordinate rescaling and distinguish invariant orbit structure from convention-dependent numeric fixed coordinates.
+  - id: E
+    description: Audit whether any accepted framework action, partition function, observable, or solution family is proven invariant or equivalent under the proposed map.
+  - id: F
+    description: Separate conditional restriction to a self-dual subfamily from dynamical or empirical selection of that subfamily, and retain generic dual-pair counterexamples away from the fixed point.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted action-level dependency closure and explicit coupling normalization
+  - exact involution, fixed-point domain, coordinate covariance, orbit, and arbitrary-target algebra
+  - distinction between a formal map, a proven physical duality, an invariant subfamily, and selection of a coupling
+  - parameter economy without hiding the reciprocal coefficient, beta-function coefficient, reference scale, conversion, or literature normalization
+  - mutation sensitivity to changing 16*pi^2, rescaling the coupling coordinate, applying the map twice, selecting an off-fixed dual pair, and composing the wrong hierarchy orientation
+  - natural fit with the normalized accepted sine-Gordon root without rewriting its field or kinetic convention
+claims_proposed:
+  - provisional C-SYM-002 reciprocal-coupling involution, normalization-covariance, and fixed-point-selection ledger if the composition is nonduplicate and reusable
+comparators_blinded_until: >-
+  The generated queue synopsis exposes beta^2=4*pi and one approximately 0.41
+  hierarchy. Those are quarantined as source claims and may not select a
+  candidate, normalization, beta coefficient, physical map, tolerance, or
+  verdict. No source-body numeric output, later AS7 scale, observed coupling,
+  or phenomenological comparator may be opened before the exact contract is
+  frozen.
+status: accepted

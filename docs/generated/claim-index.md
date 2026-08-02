@@ -759,6 +759,15 @@ Let phi be a real nonempty n-entry scalar-coordinate column, let V(phi) be twice
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-SYM-002
+
+For explicitly positive real coordinates x and coefficients A, the map D_A(x)=A/x is an involution, every orbit has product x*D_A(x)=A, and its unique positive fixed coordinate is sqrt(A). Any supplied positive target t can be made fixed by the inverse construction A=t^2, so neither A nor t is selected by fixed-point algebra. If positive coupling coordinates beta and beta_tilde with separately supplied product P=beta*beta_tilde are exchanged and x=beta^2, the induced squared- coordinate map has A=P^2 and fixed x=P; in particular P=4*pi gives the conditional map x->16*pi^2/x and fixed coordinate 4*pi. Under a positive coordinate reparameterization x'=rho*x, conjugating the same reciprocal relation requires A'=rho^2*A, sends the numeric fixed coordinate to rho*sqrt(A), and preserves the dual-orbit structure. Generic positive x belongs to a valid off-fixed pair and is not thereby required to satisfy x=D_A(x). These exact facts establish no physical action or observable duality, no accepted coupling normalization or dual-product premise, no restriction to or mechanism selecting a self-dual subfamily, and no coupling value, beta coefficient, scale, particle interpretation, or substrate realization.
+
+- Accepted in: `v0.70.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-TH-001
 
 For every real dimensionless splitting x, the normalized upper-state occupation of Z = 1 + exp(-x) is P = exp(-x)/Z = 1/(1+exp(x)). Its Bernoulli variance is P*(1-P) = sech(x/2)^2/4, and the conditional symmetric gate W = 2*P*(1-P) = sech(x/2)^2/2. W is even, has unique global maximum 1/2 at x = 0, decreases strictly with |x|, and tends to zero as x tends to either infinity. A shape A*sech(x/2)^2 equals 2*A*W; this identity does not determine the independent amplitude A.

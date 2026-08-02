@@ -61,6 +61,8 @@ Instantiate `memory-templates/research-arc.md` for physics work or `campaign-pro
 
 Do not include failure, no-go, residual, or “best effort” as an accepted outcome.
 
+Validate the matching proposal manifest with `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py` before opening a predecessor source body or comparator values. The frozen prose and YAML must agree, and a schema failure is an append-only attempt rather than permission to proceed informally.
+
 ## Phase 2 — preregister competing concepts
 
 Register at least two plausible candidates unless uniqueness is already proved. For each, record its new objects, assumptions, parameters, expected limits, affected claims, and likely consumers.
@@ -160,7 +162,7 @@ Assign each claim independent verification, review, compatibility, and epistemic
 For accepted claims:
 
 1. Extract reusable logic into `src/substrate_framework/` and tests.
-2. Update `governance/claims.yaml` and a pinned release manifest. Compute release closure from accepted registry membership (`review: accepted` / non-null `accepted_in`), not from `epistemic: active`; accepted qualified claims remain release members. Use the governance validator rather than a verifier-local status filter. If predecessor units were consumed, edit only `migration/dispositions.yaml`, preserve any unmigrated subclaims explicitly, and regenerate `migration/source-claims.yaml`; never hand-edit that generated queue.
+2. Update `governance/claims.yaml` and a pinned release manifest. Compute release closure from accepted registry membership (`review: accepted` / non-null `accepted_in`), not from `epistemic: active`; accepted qualified claims remain release members. Use the governance validator rather than a verifier-local status filter. If predecessor units were consumed, edit only `migration/dispositions.yaml`, preserve any unmigrated subclaims explicitly, and regenerate `migration/source-claims.yaml`; never hand-edit that generated queue. Materialize every evidence path before registering it. A final attempt that summarizes the promotion gate may begin with an explicit in-progress status, then be finalized after the gate and checked with only record-sensitive repository/generation validation.
    Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` dispositions require their structured reason and durable evidence paths; use `qualified` when a mixed unit also maps accepted claims.
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.

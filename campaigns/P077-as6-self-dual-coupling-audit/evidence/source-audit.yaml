@@ -1,0 +1,79 @@
+source_unit: AS6
+campaign: P077
+checks:
+  AS6.0:
+    source_verdict: pass_qualified
+    audit: >-
+      Keeping a and xi symbolic prevents literal assignments to those two
+      variables. It does not source the reciprocal coefficient, b0=7,
+      coupling normalization, action map, reference energy, conversion, or
+      illustrative physical scales and therefore is not a no-import proof.
+  AS6.1:
+    source_verdict: pass_qualified
+    audit: >-
+      Conditional on the asserted positive map x->16*pi^2/x, exact solution
+      gives the unique positive fixed coordinate 4*pi. The general coefficient
+      A has fixed coordinate sqrt(A), so this check neither derives 16*pi^2 nor
+      establishes that an accepted theory obeys or must be fixed under the map.
+      A primary N=2 two-field SDSG action can conditionally source this
+      coefficient through beta*beta_tilde=4*pi, but AS6 does not construct its
+      dual field, second cosine, equal amplitudes, or accepted dictionary.
+  AS6.1b:
+    source_verdict: pass_qualified
+    audit: >-
+      The displayed reciprocal map is exactly an involution. Generic positive
+      x nevertheless belongs to an off-fixed dual pair, so involution does not
+      select the self-dual subfamily or a physical operating point.
+  AS6.2:
+    source_verdict: pass_rejected_semantics
+    audit: >-
+      exp(i*x/4) equals -1 at x=4*pi, but also at x=12*pi and infinitely many
+      other positive coordinates, so the phase predicate cannot uniquely
+      select 4*pi. Coleman proves a separate normalized quantum sine-Gordon to
+      massive-Thirring equivalence; AS6 supplies no such action or dictionary.
+  AS6.3a:
+    source_verdict: pass_qualified
+    audit: >-
+      The substitution 8*pi^2/(7*4*pi)=2*pi/7 is exact. Both b0=7 and the
+      coupling coordinate 4*pi remain supplied; neither comes from the
+      accepted one-loop theorem or the reciprocal algebra.
+  AS6.3b:
+    source_verdict: pass_rejected_orientation
+    audit: >-
+      AS6 calls exp(-X) the inverse-length ratio a/xi. C-RGE-003 and C-DIM-008
+      give a lower transmuted energy a longer inverse-energy length, with ratio
+      exp(+X) for equal conversions. AS6 therefore reverses the accepted
+      executable orientation while retaining unresolved physical labels.
+  AS6.4:
+    source_verdict: rejected_unsupported_physics
+    audit: >-
+      Arithmetic on supplied 0.6 fm, 1e5 fm, and 3.62 Angstrom numbers does not
+      establish an EFT cutoff, periodic structure, scattering form factor,
+      Bragg response, or X-ray invisibility. None is in accepted dependencies.
+  AS6.G1:
+    source_verdict: pass_qualified_guard
+    audit: >-
+      Solving against the supplied 2.6e5 target gives a coordinate distinct
+      from 4*pi. This excludes one comparator fit but cannot source the map
+      coefficient or prove that the self-dual restriction was premise-free.
+  AS6.G2:
+    source_verdict: pass_qualified_guard
+    audit: >-
+      The displayed near coincidence reproduces and 3/2 differs from 4*pi.
+      The check correctly rejects that one comparison as its stated basis but
+      adds no physical selection evidence.
+uncovered_load_bearing_inputs:
+  - reciprocal coefficient and positive coupling-coordinate normalization
+  - accepted action, field, operator, observable, domain, and duality dictionary
+  - extra restriction to a self-dual subfamily or another selection mechanism
+  - quantum sine-Gordon and massive-Thirring premises used by Coleman
+  - second dual field and equal-amplitude premise of the primary SDSG model
+  - one-loop beta function, beta coefficient b0=7, coupling, reference, and conversion
+  - physical cutoff, periodicity, X-ray wavelength model, form factor, and scattering oracle
+  - physical baryon-current identification explicitly excluded by C-TOP-002
+headline_verdict: >-
+  Qualified. The exact reciprocal-map algebra survives as a conditional
+  normalization-explicit ledger. AS6 does not prove an accepted physical
+  duality or select beta^2=4*pi; it reverses the accepted inverse-length
+  orientation and its free-fermion, hierarchy, cutoff, and X-ray semantics
+  require undeclared premises.

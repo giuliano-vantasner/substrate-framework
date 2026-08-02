@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 4
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 144
-  qualified: 66
+  pending_adjudication: 143
+  qualified: 67
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -4763,8 +4763,36 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SYM-002
+  - C-SG-001
+  - C-RGE-003
+  - C-DIM-008
+  - C-TOP-002
+  qualification: 'AS6''s supplied positive map x->16*pi^2/x is an involution with unique positive fixed
+    coordinate 4*pi, and its substitutions reproduce. The coefficient and fixed-subfamily restriction
+    remain premises: the general D_A family has fixed sqrt(A), any positive target is encoded by A=t^2,
+    coordinate rescaling changes A quadratically, and generic points form off-fixed dual pairs. Primary
+    literature conditionally realizes AS6''s map in an N=2 two-field, two-cosine equal-amplitude self-dual
+    extension, but AS6 and the accepted beta=1 classical root contain no such action or normalization
+    dictionary. Its exchange phase is also -1 at 12*pi and is not a unique selector. The hard-coded b0=7
+    remains free, exp(-2*pi/7) is labeled with the opposite inverse-energy length orientation from C-RGE-003,
+    and no accepted cutoff, periodic medium, scattering oracle, baryon identity, QCD, confinement, absolute
+    scale, or X-ray response is established.'
+  evidence:
+  - campaigns/P077-as6-self-dual-coupling-audit/reviews/source_adjudication.md
+  - campaigns/P077-as6-self-dual-coupling-audit/evidence/source-reproduction.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/evidence/source-audit.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/evidence/candidate-comparison.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/evidence/primary-provenance.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/attempts/0001/result.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/attempts/0002/result.yaml
+  - campaigns/P077-as6-self-dual-coupling-audit/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-SYM-002-review.md
+  note: P077 derives exact reciprocal-involution, arbitrary-target, coordinate-covariance, and off-fixed-orbit
+    ledgers through canonical and independent symbolic routes. It uses no numerical integration or NumPy
+    trapezoidal alias.
 - source_unit: AS7
   phase: phase-22
   path: merged-framework/bridges/phase-22/bridge_AS7_gravity_confrontation_planck_granularity.py

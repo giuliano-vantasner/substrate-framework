@@ -1,0 +1,12 @@
+attempt: 0003
+candidates: [B, C, D, E, F]
+status: failed_preserved
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+process_exit_status: 1
+failure: >-
+  GovernanceError: C-SYM-002 referenced the final promotion attempt before
+  that attempt artifact existed.
+diagnosed_layer: promotion_transaction_order
+scientific_state: unchanged
+repair: Preserve this ordering failure, point the validated route to attempt 0004, and rerun only the affected synchronization boundary before the single integrated gate.
+next_route: Complete generated synchronization, focused governance, final change detection, and one full workflow validation.

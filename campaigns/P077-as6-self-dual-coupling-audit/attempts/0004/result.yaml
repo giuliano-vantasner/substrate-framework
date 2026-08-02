@@ -1,0 +1,37 @@
+attempt: 0004
+candidates: [B, C, D, E, F]
+status: adjudication_validated
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P077-as6-self-dual-coupling-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P077-as6-self-dual-coupling-audit/reviews/independent_coupling_duality_review.py
+  - .venv/bin/python -m pytest -q tests/test_coupling_duality.py tests/test_scale_transmutation.py tests/test_scale_provenance.py tests/test_renormalization.py tests/test_sine_gordon.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+process_exit_status: 0
+tallies:
+  source: ALL 9 CHECKS PASS
+  primary: ALL 30 CHECKS PASS [P077]
+  independent: ALL 23 CHECKS PASS [P077-INDEPENDENT]
+  affected_canonical_tests: 105 passed
+  focused_governance: 17 passed
+  integrated_workflow: 720 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - For positive x and A, D_A(x)=A/x is an involution with orbit product A and unique positive fixed coordinate sqrt(A).
+  - Any positive target t can be encoded through A=t^2, exposing an inverse construction rather than parameter selection.
+  - Coupling-coordinate conjugation x'=rho*x requires A'=rho^2*A and rescales the numeric fixed coordinate by rho.
+  - Generic off-fixed dual pairs and the 12*pi phase counterexample separate a dual relation from fixed-point occupancy and unique selection.
+  - Primary literature conditionally realizes the AS6 map only in an N=2 dual-field equal-amplitude extension whose action premises are absent from the accepted root.
+  - AS6's hard-coded b0 remains free, its inverse-length label has the rejected reciprocal orientation, and its physical cutoff and X-ray semantics lack accepted dependencies.
+adjudication:
+  disposition: qualified
+  accepted_claim: C-SYM-002
+  release: v0.70.0
+  queue_counts:
+    pending_adjudication: 143
+    qualified: 67
+    duplicate_evidence: 4
+    migrated: 3
+    out_of_scope: 1
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

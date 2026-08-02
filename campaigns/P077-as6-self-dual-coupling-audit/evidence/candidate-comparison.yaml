@@ -1,0 +1,52 @@
+campaign: P077
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted action-level dependency closure and explicit normalization
+  - exact involution, fixed-point, orbit, and coordinate-covariance algebra
+  - separation of a dual map from a self-dual restriction and selection
+  - parameter economy without hidden map coefficients or flow inputs
+  - mutation sensitivity and compatibility with the normalized accepted root
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All nine checks reproduce, but they do not source a physical duality or
+      select its fixed subfamily. Several interpretations exceed accepted
+      dependencies and the hierarchy sign conflicts with the accepted ledger.
+  B:
+    decision: selected_as_specialization
+    reason: >-
+      The asserted A=16*pi^2 map conditionally has fixed coordinate 4*pi, with
+      exact involution and no numerical oracle needed.
+  C:
+    decision: selected
+    reason: >-
+      The full D_A family exposes A as load bearing and makes arbitrary-target
+      reconstruction explicit through A=target^2.
+  D:
+    decision: selected
+    reason: >-
+      Coordinate conjugation requires A'=rho^2*A and moves the numeric fixed
+      coordinate by rho while preserving reciprocal orbit structure.
+  E:
+    decision: selected_as_interpretation_ceiling
+    reason: >-
+      Neither AS6 nor accepted dependencies construct an invariant action,
+      partition function, observable, field map, or solution equivalence. A
+      primary N=2 dual-field extension conditionally realizes the map, but its
+      second cosine and equal-amplitude premises are absent here.
+  F:
+    decision: selected
+    reason: >-
+      A constructive off-fixed orbit shows that dual pairing does not force
+      occupation of the self-dual subfamily.
+comparators_opened_after_freeze:
+  - AS6 source-body values 4*pi, exp(-2*pi/7), 2.6e5, and the B1 coincidence
+  - Coleman 1975 quantum sine-Gordon/massive-Thirring primary paper
+  - Lecheminant-Gogolin-Nersesyan 2002 self-dual sine-Gordon primary paper
+selected_claim: C-SYM-002
+physical_ceiling:
+  - no physical duality or coupling coordinate is derived
+  - no fixed-point occupancy, coupling value, beta coefficient, or scale is selected
+  - no classical normalized beta=1 to quantum Coleman normalization map is supplied
+  - no free fermion, Coulomb gas, QCD, baryon, confinement, EFT cutoff, or X-ray response is established

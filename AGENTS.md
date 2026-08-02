@@ -41,7 +41,7 @@ Never silently edit an earlier campaign. Never edit files under `docs/generated/
 2. Read `governance/releases/current.yaml`, `governance/claims.yaml`, and the relevant accepted source modules. For predecessor migration, also locate the source unit in `migration/source-claims.yaml` and read its current disposition and scope policy.
 3. Search durable memory with the bundled `memory` CLI, then verify every reused fact at its source. Memory is an index and work record, not authority.
 4. Inspect git status and history. Separate committed baseline, uncommitted work, generated outputs, and attempt artifacts.
-5. Instantiate the appropriate contract from `memory-templates/` before substantive work.
+5. Instantiate the appropriate contract from `memory-templates/` before substantive work, validate its matching proposal manifest with `scripts/validate_repository.py`, and do not open the source body or comparator values until that schema gate passes.
 6. Record the exact base release, question, invariants, permitted imports, claim delta, candidate set, selection criteria, and comparator-blinding point.
 
 If an existing result appears to solve the task, reproduce and audit it. Reuse it only if its exact claim, assumptions, and dependency closure match the current objective.
@@ -164,6 +164,8 @@ git diff --check
 `scripts/validate.sh` runs the complete pytest suite. Do not run that suite a second time at the same unchanged boundary; use targeted tests while developing, then one full workflow validation before commit or promotion.
 
 The bootstrap installs `memory` with `pipx`; agents call it directly without activating `.venv`. Also run every targeted scientific verifier and downstream consumer named by the claim delta. Before promotion, ensure generated files are current, the registry validates, the release claim set is closed, and the working-tree diff contains no unrelated or host-specific artifacts.
+
+Materialize every evidence path before adding it to an accepted registry or disposition. When a final attempt record summarizes the promotion gate, create it explicitly as in progress before registry validation, finalize it after the gate, and rerun only record-sensitive repository and generation checks; do not repeat the unchanged full suite.
 
 ## Self improvement
 
