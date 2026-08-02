@@ -1,0 +1,41 @@
+sources:
+  - authors: Thomas Puttmann and A. Rigas
+    title: Presentations of the first homotopy groups of the unitary groups
+    journal: Commentarii Mathematici Helvetici 78 (2003) 648-662
+    doi: 10.1007/s00014-003-0770-0
+    url: https://ems.press/content/serial-article-files/42980
+    audited_pages: [648, 652, 653]
+    imported_statements:
+      - >-
+        Lemma 1.1: a map S^(2n-1)->U(n) is a generator exactly when a
+        column projection has degree plus or minus (n-1)!.
+      - >-
+        Theorem 2.1: eta(z)=z*z^T+A(conjugate(z)) maps S5 smoothly into
+        SU3 and generates pi5(SU3), with each column projection of degree 2.
+    independently_reproduced_here:
+      - exact SU3 membership modulo |z|^2=1
+      - two regular-value preimages and their two positive Jacobian determinants
+      - degree plus 2 of the first-column projection
+  - authors: Raoul Bott
+    title: The stable homotopy of the classical groups
+    journal: Annals of Mathematics 70 (1959) 313-337
+    doi: 10.2307/1970106
+    url: https://www.maths.ed.ac.uk/~v1ranick/papers/bott4.pdf
+    audited_pages: [313, 315]
+    imported_statements:
+      - stable odd unitary homotopy groups are Z
+      - the inclusion SU3 to U3 is in the stable range for pi5 as used by Puttmann-Rigas
+  - authors: Sen Hu and Zhi Hu
+    title: Classical and quantum aspects of five-dimensional Chern-Simons gauge theory
+    journal: International Journal of Modern Physics A 29 (2014) 1450003
+    doi: 10.1142/S0217751X14500031
+    url: https://doi.org/10.1142/S0217751X14500031
+    audited_pages: [1450003-4]
+    role: independent_comparator_only
+    statements_not_used_as_derivation_inputs:
+      - the explicit generator has column-projection degree 2
+      - its ordinary trace-five integral has magnitude 480*pi^3
+note: >-
+  The period normalization is derived inside P057 from C-WZW-001 and the
+  explicit generator. Hu-Hu's matching value was inspected only after the
+  exact density, orientation, and coefficient step were frozen and computed.

@@ -1,0 +1,53 @@
+source_unit: WZ2
+audited_against: substrate@6d1f4e0
+map:
+  expression: U=I+(exp(iF)-1)P
+  exact_determinant: exp(iF)
+  unitary: true
+  special_unitary_for_generic_F: false
+  source_checks_determinant: false
+  verdict: not_an_SU3_map
+domain:
+  source_identification: suspension_CP2_is_S5
+  actual_reduced_homology:
+    H3: Z
+    H5: Z
+  S5_reduced_H3: 0
+  smooth_manifold_at_suspension_poles: false
+  verdict: suspension_CP2_is_not_S5
+generator:
+  source_witness: reported_normalized_trace_integral_rounds_to_one
+  independent_of_period_under_review: false
+  verdict: circular_and_wrong_domain
+period:
+  source_normalization: 1/(i*240*pi^3)
+  primitive_pi5_trace_period_magnitude: 480*pi^3
+  source_factor_relative_to_pi5_generator: 2
+  finest_reported_value: 1.00573
+  integer_selected_with_round: true
+  finite_difference_step_refined: false
+  independent_integration_method: false
+  verdict: not_evidence_for_an_SU3_pi5_period
+doubling:
+  implementation: nwind_times_fixed_radial_integral
+  recomputes_doubled_map: false
+  exact_relation: winding_Na_2_equals_2_times_winding_Na_1_by_construction
+  verdict: tautological
+open_cycle_guard:
+  changes_chain_endpoint: true
+  tests_coordinate_reparametrization_of_same_chain: false
+  integer_requirement_for_open_chains: false
+  verdict: not_a_topological_rejection_oracle
+phase:
+  exact_iff_proved: false
+  sampled_integer_levels: [1, 2, 3, 10]
+  sampled_noninteger_level: 3/2
+  surviving_statement: >-
+    Conditional algebra: if a real primitive sphere period has magnitude
+    480*pi^3, coefficients k/(240*pi^2) with integer k give unit phase for
+    every integer sphere winding.
+physical_interpretation:
+  integer_mathematical_level_from_valid_replacement: true
+  Nc_identification: false
+  baryon_or_anomaly_claim: false
+overall_disposition: qualified

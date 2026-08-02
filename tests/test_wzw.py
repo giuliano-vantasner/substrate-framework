@@ -10,7 +10,12 @@ from substrate_framework.wzw import (
     extension_phase_ratio,
     glued_filling_period,
     maurer_cartan_power_derivative_multiplier,
+    sphere_extension_coefficient,
+    sphere_extension_phase_ratio,
+    su3_pi5_generator,
+    su3_pi5_period_evidence,
     su3_real_trace_five_cochain,
+    su3_sphere_trace_five_period,
     su3_trace_five_cohomology,
     su3_trace_power_cochain,
     trace_power_cyclic_shift_sign,
@@ -98,3 +103,64 @@ def test_filling_gluing_and_phase_are_explicitly_conditional() -> None:
     assert extension_phase_ratio(
         integer_level, 2 * sp.pi * integer_period, 0
     ) == 1
+
+
+def test_explicit_pi5_map_is_exactly_su3_on_the_unit_sphere() -> None:
+    z1, z2, z3, w1, w2, w3 = sp.symbols("z1 z2 z3 w1 w2 w3")
+    eta = su3_pi5_generator((z1, z2, z3)).xreplace(
+        {sp.conjugate(z1): w1, sp.conjugate(z2): w2, sp.conjugate(z3): w3}
+    )
+    eta_adjoint = eta.T.xreplace(
+        {z1: w1, z2: w2, z3: w3, w1: z1, w2: z2, w3: z3}
+    )
+    norm_squared = w1 * z1 + w2 * z2 + w3 * z3
+    gram_residual = sp.expand(eta_adjoint * eta - sp.eye(3))
+    assert sp.factor(eta.det()) == norm_squared**2
+    z = sp.Matrix([z1, z2, z3])
+    w = sp.Matrix([w1, w2, w3])
+    assert gram_residual == sp.expand((norm_squared - 1) * (sp.eye(3) + w * z.T))
+    assert su3_pi5_generator((1, 0, 0)).det() == 1
+
+
+def test_generator_degree_is_independent_of_trace_period() -> None:
+    evidence = su3_pi5_period_evidence()
+    assert evidence.positive_preimage_jacobian == 8
+    assert evidence.negative_preimage_jacobian == 8
+    assert evidence.projection_degree == 2
+    assert evidence.projection_degree != evidence.real_trace_density
+
+
+def test_exact_pi5_period_has_no_hidden_factorial_or_factor_two() -> None:
+    evidence = su3_pi5_period_evidence()
+    assert evidence.raw_trace_density == -480 * sp.I
+    assert evidence.real_trace_density == -480
+    assert evidence.sphere_volume == sp.pi**3
+    assert evidence.raw_trace_period == -480 * sp.I * sp.pi**3
+    assert evidence.real_trace_period == -480 * sp.pi**3
+    assert evidence.primitive_period_magnitude == 480 * sp.pi**3
+    assert evidence.coefficient_lattice_step == 1 / (240 * sp.pi**2)
+    assert su3_sphere_trace_five_period(-1) == 480 * sp.pi**3
+    assert su3_sphere_trace_five_period(2) == -960 * sp.pi**3
+
+
+def test_sphere_extension_level_lattice_and_mutations() -> None:
+    level = sp.Symbol("level", integer=True)
+    winding = sp.Symbol("winding", integer=True)
+    assert sphere_extension_coefficient(level) == level / (240 * sp.pi**2)
+    assert sphere_extension_phase_ratio(level, winding) == 1
+    assert sphere_extension_phase_ratio(sp.Rational(1, 2), 1) == -1
+    assert sp.simplify(
+        sp.exp(
+            sp.I
+            * sphere_extension_coefficient(1)
+            * (su3_sphere_trace_five_period(1) / 2)
+        )
+        + 1
+    ) == 0
+
+
+def test_wz2_projector_family_is_not_an_su3_map() -> None:
+    phase = sp.symbols("F", real=True)
+    determinant = sp.exp(sp.I * phase)
+    assert sp.simplify(determinant.subs(phase, sp.pi) + 1) == 0
+    assert sp.simplify(determinant - 1) != 0

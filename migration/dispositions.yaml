@@ -1008,3 +1008,37 @@ units:
       the real trace-five cocycle is outside the coboundary image by rank and
       dual separation, and keeps extension-phase independence explicitly
       conditional on a separately supplied period lattice and coefficient.
+  WZ2:
+    disposition: qualified
+    accepted_claims:
+      - C-WZW-002
+    qualification: >-
+      WZ2's conditional sphere-filling phase mechanism survives only after a
+      different, exact generator construction fixes the primitive period. Its
+      projector family U=I+(exp(iF)-1)P is unitary but not an SU(3) map because
+      det(U)=exp(iF) for generic F, and its claimed suspension CP2 domain is not
+      S5: it has nonzero reduced H3 and singular suspension poles. The source
+      labels the cycle a generator using the period under review, rounds coarse
+      grid values to select the integer, implements doubling by multiplying a
+      fixed radial integral by nwind, does not refine its finite-difference
+      step or compare an independent integral, and mislabels different open
+      subchains as parametrizations. P057 instead uses the primary-source
+      Puttmann-Rigas eta:S5->SU3 map, independently derives column degree +2,
+      and obtains the exact C-WZW-001 period -480*pi^3 and coefficient lattice
+      k/(240*pi^2). This establishes no arbitrary closed-five-manifold period,
+      N_c identification, baryon number, representation selection, gauge
+      anomaly, descent, inflow, physical WZW dynamics, absolute scale, or
+      substrate realization.
+    evidence:
+      - campaigns/P057-wz2-pi5-period-level/reviews/source_adjudication.md
+      - campaigns/P057-wz2-pi5-period-level/evidence/source-reproduction.yaml
+      - campaigns/P057-wz2-pi5-period-level/evidence/source-audit.yaml
+      - campaigns/P057-wz2-pi5-period-level/evidence/topology-provenance.yaml
+      - campaigns/P057-wz2-pi5-period-level/attempts/0001/result.yaml
+      - campaigns/P057-wz2-pi5-period-level/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-WZW-002-review.md
+    note: >-
+      P057 separates SU3 membership, sphere topology, primitive-class degree,
+      exact trace normalization, numerical cubature, and phase algebra. The
+      factor two between the source's normalization and a primitive pi5 map is
+      load-bearing, not a tolerance choice.

@@ -1,8 +1,9 @@
-"""Exact SU(3) trace-five-form and conditional filling algebra.
+"""Exact SU(3) trace-five form, generator period, and filling algebra.
 
-This module contains mathematical differential-form statements only.  It does
-not derive a WZW level, a period normalization, a baryon current, a gauge
-anomaly, or a physical substrate identification.
+This module contains mathematical differential-form statements only.  Its
+``S^5`` period and coefficient lattice use an explicit oriented generator and
+do not identify the integer coefficient with a color number, anomaly
+coefficient, baryon charge, or physical substrate quantity.
 """
 
 from __future__ import annotations
@@ -41,6 +42,30 @@ class SU3TraceFiveCohomology:
     trace_is_closed: bool
     trace_is_exact: bool
     trace_annihilates_coboundaries: bool
+
+
+@dataclass(frozen=True)
+class SU3Pi5PeriodEvidence:
+    """Exact normalization evidence for the oriented Puttmann--Rigas map.
+
+    The unit sphere has the boundary orientation inherited from
+    ``(Re z1, Im z1, Re z2, Im z2, Re z3, Im z3)``.  With that convention the
+    explicit map below has column-projection degree ``+2`` and represents the
+    positive generator selected by that degree.  The accepted real form is
+    negative on the corresponding oriented tangent frame, so its primitive
+    period is negative; reversing either orientation reverses the sign.
+    """
+
+    projection_degree: int
+    positive_preimage_jacobian: sp.Expr
+    negative_preimage_jacobian: sp.Expr
+    raw_trace_density: sp.Expr
+    real_trace_density: sp.Expr
+    sphere_volume: sp.Expr
+    raw_trace_period: sp.Expr
+    real_trace_period: sp.Expr
+    primitive_period_magnitude: sp.Expr
+    coefficient_lattice_step: sp.Expr
 
 
 def cochain_basis(degree: int, dimension: int = 8) -> tuple[CochainIndex, ...]:
@@ -84,6 +109,183 @@ def alternating_trace(matrices: Sequence[Any]) -> sp.Expr:
             product *= values[index]
         total += _alternating_sign(order) * sp.trace(product)
     return sp.simplify(total)
+
+
+def _complex_cross_matrix(vector: Sequence[Any]) -> sp.ImmutableMatrix:
+    """Return the conjugate-linear matrix used by the complex cross product."""
+
+    values = tuple(sp.sympify(value) for value in vector)
+    if len(values) != 3:
+        raise ValueError("the complex cross-product vector must have length three")
+    first, second, third = (sp.conjugate(value) for value in values)
+    return sp.ImmutableMatrix(
+        [
+            [0, -third, second],
+            [third, 0, -first],
+            [-second, first, 0],
+        ]
+    )
+
+
+def su3_pi5_generator(point: Sequence[Any]) -> sp.ImmutableMatrix:
+    r"""Return the Puttmann--Rigas map ``eta:S^5 -> SU(3)``.
+
+    For a unit vector ``z`` in ``C^3``,
+
+    ``eta(z) = z*z^T + cross_matrix(conjugate(z))``.
+
+    The transpose is deliberately not a Hermitian transpose.  Exact algebra
+    gives ``det eta(z)=|z|^4`` and ``eta(z)^dagger eta(z)=I`` on ``|z|=1``.
+    Puttmann and Rigas, Theorem 2.1, prove that this smooth embedding generates
+    ``pi_5(SU(3))``; their independent criterion is degree ``+2`` of a column
+    projection, reproduced exactly by :func:`su3_pi5_period_evidence`.
+    """
+
+    values = tuple(sp.sympify(value) for value in point)
+    if len(values) != 3:
+        raise ValueError("an S^5 point must have three complex coordinates")
+    column = sp.ImmutableMatrix(3, 1, values)
+    return sp.ImmutableMatrix(column * column.T + _complex_cross_matrix(values))
+
+
+def su3_pi5_generator_differential(
+    point: Sequence[Any], tangent: Sequence[Any]
+) -> sp.ImmutableMatrix:
+    """Return ``D eta_z(v)`` for the explicit ``pi_5`` generator map."""
+
+    point_values = tuple(sp.sympify(value) for value in point)
+    tangent_values = tuple(sp.sympify(value) for value in tangent)
+    if len(point_values) != 3 or len(tangent_values) != 3:
+        raise ValueError("point and tangent must each have three complex coordinates")
+    z = sp.ImmutableMatrix(3, 1, point_values)
+    v = sp.ImmutableMatrix(3, 1, tangent_values)
+    return sp.ImmutableMatrix(v * z.T + z * v.T + _complex_cross_matrix(tangent_values))
+
+
+def _first_column_differential(
+    point: Sequence[Any], tangent: Sequence[Any]
+) -> sp.ImmutableMatrix:
+    return sp.ImmutableMatrix(su3_pi5_generator_differential(point, tangent)[:, 0])
+
+
+def _oriented_target_coordinates(vector: Sequence[Any]) -> sp.ImmutableMatrix:
+    """Coordinates in the positive tangent frame at ``(1,0,0) in S^5``."""
+
+    values = tuple(sp.sympify(value) for value in vector)
+    return sp.ImmutableMatrix(
+        [
+            sp.im(values[0]),
+            sp.re(values[1]),
+            sp.im(values[1]),
+            sp.re(values[2]),
+            sp.im(values[2]),
+        ]
+    )
+
+
+@cache
+def su3_pi5_period_evidence() -> SU3Pi5PeriodEvidence:
+    """Derive the exact primitive ``S^5`` period in C-WZW-001's convention.
+
+    The first column has the regular value ``(1,0,0)`` at exactly the two
+    points ``(+/-1,0,0)``.  Its two oriented real Jacobians are computed rather
+    than inserted, so their positive signs give degree ``+2`` independently of
+    the trace-five integral.  Equivariance of the explicit map makes its
+    pullback of the bi-invariant trace form an invariant top form on ``S^5``;
+    one exact tangent-frame value therefore fixes the integral.
+    """
+
+    target = (sp.Integer(1), sp.Integer(0), sp.Integer(0))
+    jacobians: list[sp.Expr] = []
+    for sign in (sp.Integer(1), sp.Integer(-1)):
+        point = (sign, sp.Integer(0), sp.Integer(0))
+        domain_frame = (
+            (sign * sp.I, 0, 0),
+            (0, 1, 0),
+            (0, sp.I, 0),
+            (0, 0, 1),
+            (0, 0, sp.I),
+        )
+        jacobian = sp.Matrix.hstack(
+            *[
+                _oriented_target_coordinates(
+                    _first_column_differential(point, tangent)
+                )
+                for tangent in domain_frame
+            ]
+        )
+        jacobians.append(sp.factor(jacobian.det()))
+
+    positive_frame = (
+        (sp.I, 0, 0),
+        (0, 1, 0),
+        (0, sp.I, 0),
+        (0, 0, 1),
+        (0, 0, sp.I),
+    )
+    eta = su3_pi5_generator(target)
+    maurer_cartan_values = tuple(
+        sp.ImmutableMatrix(
+            eta.H * su3_pi5_generator_differential(target, tangent)
+        )
+        for tangent in positive_frame
+    )
+    raw_density = sp.simplify(alternating_trace(maurer_cartan_values))
+    real_density = sp.simplify(-sp.I * raw_density)
+    sphere_volume = sp.simplify(2 * sp.pi**3 / sp.gamma(3))
+    raw_period = sp.simplify(raw_density * sphere_volume)
+    real_period = sp.simplify(real_density * sphere_volume)
+    magnitude = sp.simplify(-real_period)
+    coefficient_step = sp.simplify(2 * sp.pi / magnitude)
+    degree = sum(1 if value > 0 else -1 for value in jacobians)
+    return SU3Pi5PeriodEvidence(
+        projection_degree=degree,
+        positive_preimage_jacobian=jacobians[0],
+        negative_preimage_jacobian=jacobians[1],
+        raw_trace_density=raw_density,
+        real_trace_density=real_density,
+        sphere_volume=sphere_volume,
+        raw_trace_period=raw_period,
+        real_trace_period=real_period,
+        primitive_period_magnitude=magnitude,
+        coefficient_lattice_step=coefficient_step,
+    )
+
+
+def su3_sphere_trace_five_period(winding: Any = 1) -> sp.Expr:
+    """Return the real trace-five period for an oriented ``pi_5`` winding.
+
+    The result concerns maps from the oriented five-sphere.  It does not assert
+    the period lattice for arbitrary closed five-manifolds or add spin/bordism
+    premises that are absent from the framework.
+    """
+
+    return sp.simplify(sp.sympify(winding) * su3_pi5_period_evidence().real_trace_period)
+
+
+def sphere_extension_coefficient(level: Any = 1) -> sp.Expr:
+    """Return the coefficient whose ``S^5`` ambiguity is ``2*pi*level``.
+
+    An integer ``level`` makes the phase independent of two ball fillings of a
+    common oriented ``S^4`` boundary.  The name is mathematical: no physical
+    identification of ``level`` is made here.
+    """
+
+    return sp.simplify(
+        sp.sympify(level) * su3_pi5_period_evidence().coefficient_lattice_step
+    )
+
+
+def sphere_extension_phase_ratio(level: Any, winding: Any) -> sp.Expr:
+    """Return the phase ratio for the declared level and sphere winding."""
+
+    return sp.simplify(
+        sp.exp(
+            sp.I
+            * sphere_extension_coefficient(level)
+            * su3_sphere_trace_five_period(winding)
+        )
+    )
 
 
 @cache

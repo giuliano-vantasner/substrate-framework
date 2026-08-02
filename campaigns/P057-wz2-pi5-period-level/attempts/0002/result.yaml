@@ -1,0 +1,24 @@
+attempt: 0002
+candidate: C
+status: exact_route_passed
+map: Puttmann-Rigas eta:S5->SU3
+membership:
+  determinant_on_unit_sphere: 1
+  gram_on_unit_sphere: identity
+generator_witness:
+  regular_value: [1, 0, 0]
+  preimages: [[1, 0, 0], [-1, 0, 0]]
+  oriented_jacobian_determinants: [8, 8]
+  first_column_degree: 2
+  primitive_pi5_class_by_primary_theorem: 1
+orientation: boundary_orientation_from_ReIm_C3
+exact_density:
+  raw_Alt_Tr_theta5: -480*i
+  real_minus_i_Alt_Tr_theta5: -480
+  sphere_volume: pi^3
+period:
+  raw_trace: -480*i*pi^3
+  real_C_WZW_001_form: -480*pi^3
+  orientation_reversal: 480*pi^3
+coefficient_lattice_step: 1/(240*pi^2)
+physical_identifications: []

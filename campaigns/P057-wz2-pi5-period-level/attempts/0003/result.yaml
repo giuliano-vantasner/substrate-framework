@@ -1,0 +1,37 @@
+attempt: 0003
+candidate: C
+status: independent_numeric_passed
+implementation: reviews/independent_period_review.py
+canonical_wzw_helpers_imported: false
+process_exit_code: 0
+terminal_tally: ALL 9 CHECKS PASS [P057-INDEPENDENT]
+finite_difference:
+  scheme: central_coordinate_difference
+  steps: [0.04, 0.02, 0.01, 0.005, 0.0025]
+  relative_density_errors:
+    - 0.0025517681722687455
+    - 0.0006385143512929409
+    - 0.00015966438221376266
+    - 0.000039918333129302294
+    - 0.000009979723228350936
+  observed_refinement: second_order
+cubature:
+  method: tensor_Gauss_Legendre_on_four_polar_angles_and_one_phase
+  finite_difference_step: 0.00002
+  orders: [3, 4, 5, 6]
+  periods:
+    - -20243.305373800267
+    - -14055.50491522815
+    - -14978.835768459554
+    - -14875.392626362913
+  relative_errors:
+    - 0.36016179230185763
+    - 0.055600831771905335
+    - 0.006438411574403169
+    - 0.0005120052156138977
+  target_derived_before_run: -480*pi^3
+mutations:
+  orientation_reversal: flips_density_sign
+  remove_minus_i: produces_imaginary_density
+  half_level: phase_minus_one
+  half_period: phase_minus_one

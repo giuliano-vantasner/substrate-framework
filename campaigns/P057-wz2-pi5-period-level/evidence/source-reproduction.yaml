@@ -1,0 +1,25 @@
+source_unit: WZ2
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-17/bridge_WZ2_level_quantization_pi5.py
+sha256: f991e222f038268077d3f50e759beeec95ac65f06a8369011ecc0e0ad79ce3ff
+command: >-
+  /home/dan/substrate-framework/.venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-17/bridge_WZ2_level_quantization_pi5.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+exit_code: 0
+terminal_tally: ALL 8 CHECKS PASS
+reported_grid_values:
+  6: 1.02316
+  8: 1.01295
+  10: 1.00827
+  12: 1.00573
+reported_double_at_grid_10: 2.01653
+verdict: reproduced_noncanonical_tally
+note: >-
+  The clean process exit proves only that WZ2's assertions ran. The map's
+  determinant, domain topology, primitive-class witness, normalization, and
+  non-tautological doubling were not checked by that tally.

@@ -1,0 +1,16 @@
+attempt: 0001
+candidate: A
+status: rejected_as_positive_route
+source_process_exit_code: 0
+terminal_tally: ALL 8 CHECKS PASS
+failure_class: candidate_concept_and_oracle
+decisive_failures:
+  - det(I+(exp(iF)-1)P)=exp(iF), not 1 for generic F
+  - suspension(CP2) is not S5 and has nonzero reduced H3
+  - the period under review is used to label the proposed cycle a generator
+  - doubling is implemented as literal multiplication of a fixed integral
+  - grid rounding has no independent integration or finite-difference refinement
+preserved_value: >-
+  The source correctly exposes a separable U(3) projector-form calculation and
+  the conditional phase idea, but it cannot establish an SU(3) pi5 theorem.
+continuation: candidate_C_explicit_generator_and_exact_invariant_density

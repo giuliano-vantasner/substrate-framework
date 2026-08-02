@@ -1,0 +1,70 @@
+id: P057
+base_release: v0.50.0
+base_commit: d358ed4
+source_baseline: substrate@6d1f4e0
+source_units: [WZ2]
+question: >-
+  Determine the normalized period lattice of C-WZW-001's SU(3) real
+  trace-five form on an independently certified pi_5 generator, and derive
+  the strongest consequent extension-phase level theorem while auditing WZ2
+  without importing pending S3 or selecting a map by its reported integral.
+invariants:
+  - C-WZW-001 fixes Omega_5=-i Alt Tr(theta^5) with no hidden 1/5! and proves closed global non-exactness but deliberately fixes no period lattice, generator, WZW coefficient, or physical level.
+  - C-LIE-001 fixes T_a=lambda_a/2 and the anti-Hermitian conversion E_a=i*T_a; trace rescaling or Hermitian/anti-Hermitian mixing changes the fifth-power normalization.
+  - Smooth SU(3) membership, global definition on S^5, homotopy-generator status, pullback orientation, numerical convergence, period normalization, and level quantization are distinct obligations.
+  - A period value cannot certify its own cycle as a generator; the generator invariant must be frozen and checked independently of the trace-five integral.
+  - Integer phase invariance is conditional algebra until both the primitive period and action coefficient convention are independently closed; it supplies no N_c, baryon, anomaly, or representation map.
+allowed_imports:
+  - C-LIE-001
+  - C-WZW-001
+  - standard smooth-manifold pullback, orientation, degree, Stokes, and change-of-variables theorems
+  - the standard principal fibration SU(2) -> SU(3) -> S^5 and exact homotopy-sequence facts only after primary-source provenance and exact statement audit
+  - exact sphere-volume and beta-function integrals derived in the campaign
+  - SymPy for exact normalization algebra and SciPy or deterministic/quasi-Monte-Carlo quadrature only with declared error and refinement evidence
+  - WZ2 at substrate@6d1f4e0 as noncanonical evidence after the comparator gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce WZ2 literally and retain only map, topology, integration, and
+      phase subclaims that survive provenance, global-smoothness, convergence,
+      normalization, and mutation audits.
+  - id: B
+    description: >-
+      Validate WZ2's proposed S^5-to-SU(3) map directly: prove SU(3)
+      membership and seam smoothness, certify its generator class by an
+      invariant independent of the WZW integral, then compute the pullback
+      period with explicit orientation and refinement.
+  - id: C
+    description: >-
+      Construct or certify a generator through the SU(2)->SU(3)->S^5
+      fibration, using the degree of the last-column projection or equivalent
+      clutching data, and derive the trace-five normalization by an exact
+      transgression or symmetry reduction with a separately implemented
+      numerical regression.
+  - id: D
+    description: >-
+      Derive the conditional extension-phase theorem from a symbolic primitive
+      period P: exp(i*c*n*P)=1 for every integer n exactly under the declared
+      coefficient lattice, without calling the coefficient N_c or a physical
+      WZW level unless the period and convention are independently established.
+uniqueness_evidence: null
+selection_criteria:
+  - generator status established independently of the trace-five period
+  - global smoothness, SU(3) membership, chart coverage, seam compatibility, and orientation closure
+  - exact consistency with C-WZW-001's anti-Hermitian trace and unnormalized alternating convention
+  - no fitted rescaling, inserted unit period, reported integer, level, N_c, baryon, anomaly, or representation comparator
+  - exact or converged pullback evaluation with a declared measure, precision, method, sample or mesh sequence, stopping rule, and scale-relative error norm
+  - independent topology and integration routes rather than two evaluations of one copied density
+  - degree-zero, orientation-reversed, multiply covered, trace-rescaled, chart-truncated, and noninteger-level mutations
+  - minimal imported topology with every homotopy and fibration fact sourced and interpretation-limited
+claims_proposed:
+  - provisional C-WZW-002 normalized SU(3) trace-five period and conditional integer-level theorem
+selected_candidate: C
+comparators_blinded_until: >-
+  The candidate map or map class, SU(3) and seam checks, independent generator
+  criterion, sphere orientation, pullback density convention, chart measure,
+  exact normalization target expressed symbolically, numerical refinement and
+  error gates, mutation set, and physical-interpretation ceiling are frozen in
+  this manifest and matching memory contract before WZ2's executable,
+  reported period, convergence table, level, or N_c values are inspected.
+status: accepted
