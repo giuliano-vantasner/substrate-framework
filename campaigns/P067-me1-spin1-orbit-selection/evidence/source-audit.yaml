@@ -1,0 +1,32 @@
+source_unit: ME1
+headline_verdict: not_established_by_source_but_exact_conditional_core_recoverable
+checks:
+  - id: ME1.1
+    source_verdict: pass
+    audit_verdict: exact_representative_values_only
+    reason: The standard matrices give zero and one on the two unit-normalized representatives, but one representative from each orbit does not prove equality-set exhaustion. The phrase sole discriminant is valid only inside the explicitly supplied fixed-density functional.
+  - id: ME1.2
+    source_verdict: pass
+    audit_verdict: global_bound_and_orbits_not_verified
+    reason: The claimed SOS proof is 4000 random substitutions with tolerance 1e-9. The check neither exhibits the exact singlet identity nor solves either equality condition; it checks only endpoint representatives. Its claimed cos(t)^2 interpolation formula is false away from endpoints and is not tested.
+  - id: ME1.3
+    source_verdict: pass
+    audit_verdict: conditional_unit_density_arithmetic_exact
+    reason: Given the exact global endpoints, -c2/2 is correct at norm one. At density n the energy difference is -c2*n^2/2. Strictness is transverse to the minimizing orbit inside the supplied functional, not uniqueness of a state or a material/continuum theorem.
+  - id: ME1.4
+    source_verdict: pass
+    audit_verdict: conditional_sign_guard_exact_with_projective_ceiling
+    reason: Negative c2 selects the upper endpoint and zero c2 leaves all pure rays degenerate. S2 is the ferromagnetic projective ray orbit with SO2 stabilizer, not a derivation of the full condensate order-parameter manifold; the source phrase that SO3 acts freely is false.
+dependencies:
+  O1: pending_not_imported
+  ME2: pending_not_imported
+  ME3: pending_not_imported
+selected_candidates: [B, C, D]
+rejected_candidates: [A_as_headline_verifier, E_as_redundant_to_global_exact_result, F]
+proposed_claims: [C-SPN-001]
+interpretation_ceiling:
+  - no material sign or coupling magnitude
+  - no atomic species or hyperfine-sector derivation
+  - no spatial condensate solution, trap, gradient, Zeeman, dipolar, or thermal term
+  - no full physical BEC order-parameter manifold or defect energetics
+  - no substrate realization

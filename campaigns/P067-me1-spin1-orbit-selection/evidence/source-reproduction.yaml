@@ -1,0 +1,13 @@
+source_unit: ME1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME1_polar_phase_selection.py
+sha256: 54d34a026b45d7ae01b53dae022cbcab61f380f4cda289d6a5862d2cc72adc71
+size_bytes: 18811
+command: >-
+  PYTHONHASHSEED=0 .venv/bin/python -u
+  /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME1_polar_phase_selection.py
+working_directory: /home/dan/substrate-framework
+process_exit_status: 0
+terminal_tally: ALL 4 CHECKS PASS
+stdout_summary: campaigns/P067-me1-spin1-orbit-selection/attempts/0001/output-summary.txt
+result: campaigns/P067-me1-spin1-orbit-selection/attempts/0001/result.yaml

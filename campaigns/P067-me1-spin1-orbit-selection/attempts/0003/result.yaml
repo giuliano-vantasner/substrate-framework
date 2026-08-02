@@ -1,0 +1,27 @@
+attempt: 0003
+candidates: [B, C, D]
+status: positive_exact_object_verified
+commands:
+  - .venv/bin/python -m pytest tests/test_spin1_mean_field.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P067-me1-spin1-orbit-selection/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P067-me1-spin1-orbit-selection/reviews/independent_spin1_review.py
+process_exit_status: 0
+tallies:
+  focused_tests: 13 passed
+  primary: ALL 33 CHECKS PASS [P067]
+  independent: ALL 13 CHECKS PASS [P067-INDEPENDENT]
+  full_workflow: 527 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - The standard matrices obey Hermiticity, su2, and spin-one Casimir normalization.
+  - Every complex pure spinor obeys |f|^2+|A|^2=n^2 with A=Psi_0^2-2 Psi_+ Psi_-.
+  - In Cartesian form d=u+i v, f=2 u cross v and A=d dot d.
+  - Zero spin is exactly the parallel-u-v polar projective orbit; upper saturation is exactly the orthogonal equal-norm ferromagnetic projective orbit.
+  - The supplied fixed-density functional selects polar for c2>0, ferromagnetic for c2<0, and every pure ray for c2=0.
+  - The polar-minus-ferromagnetic energy is -c2*n^2/2; no material value or physical continuum phase is inferred.
+mutations_rejected:
+  - wrong singlet sign
+  - missing singlet factor two
+  - wrong conjugation placement
+  - wrong density power
+  - reversed energy sign
+  - zero spinor, density matrix, nonpositive density, and undecidable coupling sign

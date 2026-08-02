@@ -1,0 +1,5 @@
+ME1.1 reference polar and ferromagnetic states PASS
+ME1.2 sampled general-spinor bound and endpoint representatives PASS
+ME1.3 unit-density positive-coupling energy ordering PASS
+ME1.4 negative-coupling sign guard PASS
+ALL 4 CHECKS PASS

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 154
-  qualified: 57
+  pending_adjudication: 153
+  qualified: 58
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -4056,8 +4056,31 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SPN-001
+  qualification: ME1's standard spin-one matrices, two unit-normalized representative values, and endpoint
+    sign arithmetic are exact, but its global proof is not. The claimed sum-of-squares oracle is 4000
+    pseudorandom substitutions with a floating tolerance, and the endpoint predicate checks one polar
+    and one ferromagnetic representative without exhausting either equality orbit. Its claimed interpolation
+    |f|^2=cos(t)^2 is false away from the checked endpoints. At general density n the energy gap is -c2*n^2/2,
+    and c2=0 leaves all pure rays degenerate. The source phrase that SO(3) acts freely on the ferromagnetic
+    ray orbit is false; its stabilizer is SO(2). O1, ME2, and ME3 remain pending, and no material coupling,
+    atomic realization, full condensate order-parameter manifold, spatial ground state, defect, or substrate
+    mechanism is imported.
+  evidence:
+  - campaigns/P067-me1-spin1-orbit-selection/reviews/source_adjudication.md
+  - campaigns/P067-me1-spin1-orbit-selection/evidence/source-reproduction.yaml
+  - campaigns/P067-me1-spin1-orbit-selection/evidence/source-audit.yaml
+  - campaigns/P067-me1-spin1-orbit-selection/evidence/primary-provenance.yaml
+  - campaigns/P067-me1-spin1-orbit-selection/attempts/0001/result.yaml
+  - campaigns/P067-me1-spin1-orbit-selection/attempts/0002/result.yaml
+  - campaigns/P067-me1-spin1-orbit-selection/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-SPN-001-review.md
+  note: P067 derives the exact pure-spin-one singlet identity, density-scaled interval, projective polar
+    and ferromagnetic equality orbits, and the complete conditional fixed-density selection for positive,
+    negative, and zero coupling through canonical and independent exact routes. It uses no numerical quadrature
+    or NumPy integration alias.
 - source_unit: ME2
   phase: phase-20
   path: merged-framework/bridges/phase-20/bridge_ME2_half_quantum_vortex.py

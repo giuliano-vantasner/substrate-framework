@@ -1,0 +1,23 @@
+attempt: 0002
+candidates: [B, C]
+status: implementation_convention_mismatch_repaired
+command: >-
+  .venv/bin/python -m pytest tests/test_spin1_mean_field.py -q and exact P067
+  primary/independent verifiers
+process_exit_status: 1
+failure:
+  category: representation_convention
+  symptom: >-
+    The first focused test and independent verifier rejected the stated
+    Cartesian cross-product spin relation while the matrix-derived components
+    agreed in two coordinates.
+  cause: >-
+    The spherical-to-Cartesian y-component convention was paired with the
+    opposite vector-basis convention. The test correctly evaluated the spin-1
+    matrices instead of accepting the prose formula.
+repair: >-
+  Freeze Psi_+=-(d_x-i d_y)/sqrt(2), Psi_0=d_z,
+  Psi_-=(d_x+i d_y)/sqrt(2), giving f=2 Re(d) cross Im(d), and update both
+  canonical and independent derivations. No scientific bound or selected
+  orbit changed.
+continuation: Re-run focused tests and both exact verifiers before promotion.

@@ -1,0 +1,75 @@
+id: P067
+base_release: v0.60.0
+base_commit: b51f139
+scientific_base_commit: 0089e63
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [ME1]
+question: >-
+  Classify the exact spin expectation attainable by a general normalized pure
+  spin-1 spinor, identify the polar and ferromagnetic equality orbits, and
+  determine the complete fixed-density minimizer set of the explicitly
+  supplied mean-field spin functional (c2/2)|Psi^dagger F Psi|^2, including
+  the c2=0 boundary and the ceiling on material, continuum, and substrate
+  interpretations; then audit which of those statements ME1 actually derives.
+invariants:
+  - The state is a general complex three-component pure spinor in the m=+1,0,-1 basis, not a real ansatz or a sample of representatives.
+  - The spin-1 matrices, Hermitian inner product, normalization n=Psi^dagger Psi, global phase quotient, and SO(3) action are explicit conventions.
+  - The dimensionful spin expectation obeys 0<=|Psi^dagger F Psi|^2<=n^2; a unit-normalized statement must not be reused at arbitrary density without the n^2 factor.
+  - Polar and ferromagnetic labels denote equality orbits of the pure-state spin-1 representation; representatives alone do not prove orbit exhaustion.
+  - The spin-independent density term is constant only at fixed density, while gradient, trap, Zeeman, dipolar, finite-temperature, and other omitted terms are outside the supplied functional.
+  - The sign and magnitude of c2 are declared inputs; no material coupling, atomic species, empirical phase, continuum existence, defect selection, or substrate realization may be inferred.
+allowed_imports:
+  - exact complex linear algebra for the standard irreducible spin-1 representation of su(2)
+  - Euclidean rotations, global U(1) phase, real and imaginary Cartesian-vector decomposition, Cauchy-Schwarz, and exact polynomial identities
+  - a positive fixed density n and a real declared coupling c2
+  - ME1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce ME1 literally and retain only the bounds, orbit statements,
+      density scaling, energy comparisons, and guards that follow from its
+      actually constructed general complex state and supplied functional.
+  - id: B
+    description: >-
+      Derive the invariant identity |f|^2=n^2-|A|^2 using the spin-singlet
+      amplitude A=Psi_0^2-2 Psi_+ Psi_-, then use it for the sharp global bound
+      and endpoint conditions.
+  - id: C
+    description: >-
+      Map the spinor to a complex Cartesian vector d=u+i v, prove
+      f is proportional to u cross v, and classify both equality sets modulo
+      global phase and SO(3) rather than extrapolating from representatives.
+  - id: D
+    description: >-
+      Minimize the declared fixed-density energy over the exact attainable
+      interval, yielding the polar orbit for c2>0, the ferromagnetic orbit for
+      c2<0, and the full normalized state space for c2=0 with the correct n^2
+      energy gap.
+  - id: E
+    description: >-
+      Use constrained stationary equations or tangent-space second variation
+      as an independent local classification and stability check at both
+      endpoint orbits.
+  - id: F
+    description: >-
+      Restrict the result to representative energy comparison if a global
+      pure-state orbit proof fails; this is attempt evidence and cannot satisfy
+      the positive global-classification objective.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with no authority imported from pending O1, ME2, or ME3
+  - exact coverage of every normalized complex pure spinor and exhaustion of both equality orbits
+  - explicit normalization, density scaling, basis, phase, rotation, sign, and omitted-term conventions
+  - correct behavior at c2>0, c2<0, c2=0, n>0, unnormalized rescaling, global phase, and arbitrary spatial rotation
+  - assumption and parameter economy, symmetry-native formulation, and composition of independent invariant and Cartesian derivations
+  - mutation sensitivity to a wrong spin matrix, missing complex phase, wrong density power, reversed coupling sign, mixed-state substitution, and representative-only sampling
+claims_proposed:
+  - provisional C-SPN-001 exact pure spin-1 orbit invariant and conditional fixed-density mean-field selection theorem
+comparators_blinded_until: >-
+  The generated synopsis exposes the representative values zero and one, a
+  claimed global interval, named RP2 and S2 targets, and an energy difference
+  -c2/2. These values and labels cannot select the proof, density convention,
+  orbit classification, or physical interpretation. The candidate set,
+  conventions, selection criteria, exact endpoint obligations, mutations, and
+  interpretation ceiling are frozen here before ME1's executable body opens.
+status: accepted

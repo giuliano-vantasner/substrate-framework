@@ -1,0 +1,24 @@
+campaign: P067
+canonical_module: src/substrate_framework/spin1_mean_field.py
+mathematical_imports:
+  - the standard irreducible spin-1 matrices in the m=(+1,0,-1) basis
+  - exact complex Hermitian linear algebra and the spin singlet amplitude
+  - the unitary spherical-to-complex-Cartesian vector transformation
+  - Euclidean cross-product and Lagrange identities
+  - global phase and spatial SO(3) projective orbit equivalence
+conditional_imports:
+  - the supplied fixed-density spin functional E_spin=(c2/2)|Psi^dagger F Psi|^2
+  - positive density n and a real coupling c2 with exactly decidable sign
+source_evidence:
+  ME1:
+    path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME1_polar_phase_selection.py
+    sha256: 54d34a026b45d7ae01b53dae022cbcab61f380f4cda289d6a5862d2cc72adc71
+    authority: noncanonical_reproduced_attempt
+not_imported:
+  - pending O1, ME2, or ME3 claims
+  - a material value or sign of c2 or c0
+  - a spin-1 atomic or hyperfine realization
+  - gradient, trap, Zeeman, dipolar, finite-temperature, or other omitted terms
+  - a spatial continuum ground state, defect, vortex, or substrate mechanism
+  - a mixed-state extension of the pure-spinor equality-orbit theorem
+  - numerical sampling, quadrature, floating tolerance, or empirical comparator

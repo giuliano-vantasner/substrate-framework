@@ -115,6 +115,23 @@ from .numerics import (
     solve_method_of_lines,
     trapezoid_integral,
 )
+from .spin1_mean_field import (
+    Spin1MeanFieldSelection,
+    Spin1OrbitLedger,
+    cartesian_to_spin1,
+    fixed_density_spin1_selection,
+    spin1_cartesian_spin,
+    spin1_expectation,
+    spin1_invariant_residual,
+    spin1_magnitude_squared,
+    spin1_matrices,
+    spin1_mean_field_energy,
+    spin1_norm,
+    spin1_orbit_ledger,
+    spin1_singlet_amplitude,
+    spin1_singlet_magnitude_squared,
+    spin1_to_cartesian,
+)
 from .optical_geometry import (
     index_from_potential,
     optical_box_static_1d,

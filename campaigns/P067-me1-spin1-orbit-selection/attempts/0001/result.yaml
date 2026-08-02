@@ -1,0 +1,40 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_not_verified
+source_unit: ME1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: 54d34a026b45d7ae01b53dae022cbcab61f380f4cda289d6a5862d2cc72adc71
+command: python3 merged-framework/bridges/phase-20/bridge_ME1_polar_phase_selection.py
+working_directory: /home/dan/substrate
+reproduction_working_directory: /home/dan/substrate-framework
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 4 CHECKS PASS
+observations:
+  - ME1.1 exactly evaluates the two declared unit-normalized representatives but does not classify their complete equality orbits.
+  - ME1.2 says it exhibits a sum-of-squares proof, but the executable only samples the residual at 4000 pseudorandom points and accepts a floating tolerance.
+  - The ME1.2 predicate checks only that one polar representative reaches zero, one ferromagnetic representative reaches the upper endpoint, and one interpolation reaches both endpoints.
+  - No condition for all zero-spin states or all upper-saturating states is solved, so the RP2 and S2 equality-orbit headlines are not verified by the native checks.
+  - The printed claim that the source interpolation has spin squared cos(t)^2 is false; at t=pi/4 the source path has spin squared 3/4 rather than 1/2. The executable checks only its endpoint values.
+  - ME1.3 and ME1.4 correctly compare the endpoint energies at norm one after assuming the global endpoint theorem, but omit the density-squared factor at general fixed density.
+  - The material sign, spin-1 hyperfine interpretation, spatial condensate, physical order-parameter manifold, and defect conclusions are imported or pending rather than derived.
+diagnosis:
+  category: verifier_and_target_scope
+  mechanism:
+    - finite random sampling is not a global nonnegativity proof for a polynomial
+    - endpoint representatives do not exhaust endpoint equality sets
+    - an endpoint-only interpolation predicate does not verify the asserted functional formula
+    - unit-normalized energy arithmetic cannot silently replace arbitrary-density scaling
+verdict: >-
+  ME1 is retained as cleanly reproduced evidence for its reference-state and
+  unit-density sign arithmetic. Its native verifier does not establish the
+  global bound proof, equality-orbit exhaustion, general density scaling, or
+  physical BEC interpretation claimed in the headline.
+next_attempt: >-
+  Derive the exact singlet-amplitude identity and an independent Cartesian
+  normal-form classification, then minimize the supplied functional over the
+  resulting exact interval for both signs and zero coupling.
