@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T14:00:00Z'
+updated: '2026-08-03T17:15:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.70.0`, containing ninety-eight claims:
-the prior sector results plus the exact reciprocal-coupling ledger
-`C-SYM-002`. It proves the positive `D_A(x)=A/x` involution, orbit product,
-fixed coordinate, arbitrary-target inverse family, and coordinate-conjugation
-law, while separating a dual pair from self-dual occupancy and parameter
-selection. It supplies no physical action duality, accepted coupling
-normalization, beta coefficient, scale, particle interpretation, or substrate
-realization. AS6 is qualified accordingly.
+The current accepted frontier is `v0.72.0`, containing one hundred claims. Its
+latest addition, C-PRB-001, is an exact continuous exponential-fixation,
+conditional-BVP, bias, target-preimage, and two-intensity normalization-
+covariance ledger. It supplies no stochastic microscopic process, quantum
+state, Born postulate, actualization rule, observable amplitude scale,
+empirical deviation, action quantum, or granularity. AS8 is qualified
+accordingly.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -166,6 +165,7 @@ Attempts are append-only and individually reproducible.
 | 0096 | P076 exact dimensionful-scale provenance and AS5 audit | `campaigns/P076-as5-scale-provenance-audit/attempts/0001` through `0003`, then the promotion replay | accepted in v0.69.0 with AS5 qualified; commit `0940dd9` | Thirty-two primary and twenty-one independent checks derive target-span failure, supplied-target selection, finite reference covariance, arbitrary-target inverse families, unit-coordinate covariance, and reciprocal-orientation guards; AS5 retains `mu0` and its conversion, its no-import predicate accepts a nontransmutation mutant, and its hierarchy predicate accepts both signs, while 62 affected canonical and 17 focused governance tests plus the single integrated gate pass all 705 tests | Audit AS6's claimed self-dual pin without assuming the duality map, Coleman/free-fermion interpretation, beta-function coefficient, or AS5 absolute-scale headline, and separate algebraic fixed points from a symmetry of an accepted action and physical parameter selection |
 | 0097 | P077 exact reciprocal-coupling involution/covariance ledger and AS6 audit | `campaigns/P077-as6-self-dual-coupling-audit/attempts/0001` through `0004`, then the promotion replay | accepted in v0.70.0 with AS6 qualified; commit `8a1b2bd` | Thirty primary and twenty-three independent checks derive the positive reciprocal family, arbitrary-target construction, coordinate conjugation, off-fixed counterorbit, phase nonuniqueness, and accepted hierarchy orientation; primary literature conditionally realizes the coefficient only in an N=2 dual-field equal-amplitude extension absent from the accepted root, while 105 affected and 17 governance tests plus the single integrated gate pass all 720 tests | Audit AS7's gravity confrontation without treating observed G, a hadronic xi, an O(1..100) field-count window, AS6 fixed-point occupancy, or a Planck-length label as accepted inputs or turning inverse parameter reconstruction into a derived operating point |
 | 0098 | P078 exact gravity/transmutation feasibility and AS7 audit | `campaigns/P078-as7-gravity-scale-confrontation/attempts/0001` through `0003`, then the promotion replay | accepted in v0.71.0 with AS7 qualified; commit `104b723` | Thirty-three primary and twenty-four independent checks derive the pure-branch interval, arbitrary-target coefficient, additive-baseline family, joint rank-two/null-one matrix, fixed-coefficient inverse, and coupling-sign domain; AS7 imports observed constants and a coefficient prior, reverses the accepted length orientation, and reuses its solved coupling in a solve-back identity, while 108 affected and 17 governance tests plus the single integrated gate pass all 734 tests | Audit AS8's Kimura/super-Born construction without importing AS7's rejected Planck granularity, treating absolute amplitude normalization as an observable scale, or importing pending S3 actualization dynamics |
+| 0099 | P079 exact continuous fixation/BVP/normalization ledger and AS8 audit | `campaigns/P079-as8-superborn-fixation-audit/attempts/0001` through `0004`, then the promotion replay | accepted in v0.72.0 with AS8 qualified; commit `52e05eb` | Thirty-five primary and twenty-seven independent checks derive the continuous neutral limit, exact probability and complement identities, conditional absorbing BVP, strict selection monotonicity, target preimage, and two-intensity covariance; AS8 supplies no stochastic generator or quantum map, its examples insert S, and its final action/granularity check has no executable dependency on its named quantities, while 82 affected and 17 governance tests plus the single integrated gate pass all 755 tests | Audit OD3's beta-pinned one-coordinate matrix without importing AS5's rejected absolute-scale closure, treating AS6's conditional fixed coordinate as physical occupancy, or confusing a rank-one coefficient column with compatibility of four supplied targets |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -182,7 +182,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 142 bridge units remain pending, 3 are migrated, 68 are qualified, 4 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 141 bridge units remain pending, 3 are migrated, 69 are qualified, 4 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -565,11 +565,22 @@ and verifies a coupling that was solved from the same target. Exact canonical
 and independent routes use no numerical integration or NumPy trapezoidal
 alias.
 
+P079 adds the exact continuous exponential-fixation family, conditional
+absorbing-boundary BVP, strict bias and target-preimage theorem, neutral
+series, and two-intensity normalization-covariance ledger as C-PRB-001. AS8 is
+qualified because no accepted state, measurement, stochastic generator,
+physical normalization, empirical deviation, medium action quantum, or
+granularity closes its physical interpretation; its examples insert their
+selection values and its final named action/cutoff quantities are unused.
+Exact canonical and independent routes require no numerical integration and
+therefore use neither the version-specific `np.trapz` name nor its
+`np.trapezoid` replacement.
+
 ## Canonicalization
-The registry, `v0.71.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-nine accepted claims. P001 through P078 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 142 pending, 0 partial, 3 migrated, 68 qualified, 4 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.72.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred accepted claims. P001 through P079 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 141 pending, 0 partial, 3 migrated, 69 qualified, 4 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 142 pending, 3 migrated, 68 qualified, 4 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is AS8. Its generated synopsis supplies the Kimura fixation expression `u(x0,S)=(1-exp(-S*x0))/(1-exp(-S))`, calls the neutral limit Born's rule, and interprets the rescaling `S->lambda^2*S` as an absolute quantum-sector scale tied to AS7's rejected Planck granularity. P079 must freeze literal-source, removable-limit, probability-domain, normalization/gauge, parameter-provenance, diffusion-process, and dependency candidates before opening the source body or its outputs. It must determine the exact continuous extension at `S=0`, monotonicity and boundary behavior on `0<=x0<=1`, whether amplitude rescaling changes a physical state or only an unnormalized representative, and which parameters in `S` are independently accepted. C-IDN-002 grants no Planck or granularity input; AS2 and pending S3 supply no accepted stochastic actualization mechanism. No quantum interpretation, Born postulate, absolute amplitude scale, medium action quantum, or empirical deviation may enter before independent provenance is established.
+The effort remains active. D4 is discharged, but D1 remains open with 141 pending, 3 migrated, 69 qualified, 4 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is OD3. Its generated synopsis moves the AS6 fixed-coordinate value `beta^2=4*pi` into four right-hand sides and calls the resulting coefficient column `[2,-4,-1,-2]^T` a one-unknown over-determination instrument. P080 must freeze literal-source, affine-compatibility, rank-versus-consistency, fixed-coordinate-provenance, nuisance/reference-scale, units, and dependency candidates before opening the source body or outputs. C-SYM-002 establishes only a conditional reciprocal fixed coordinate, not physical occupancy; C-DIM-008 rejects AS5's absolute-scale closure; and C-LIN-001/C-IDN-001 require left-null compatibility and row provenance rather than row count. No supplied comparator, pending sector equation, conditional beta coordinate, metre conversion, or rank-one matrix may be promoted as independent absolute-scale identification before those obligations close.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
