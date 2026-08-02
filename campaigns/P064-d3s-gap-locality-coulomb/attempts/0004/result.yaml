@@ -1,0 +1,27 @@
+attempt: 0004
+candidates: [B, C, D, E]
+status: exact_primary_and_independent_routes_passed
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P064-d3s-gap-locality-coulomb/verify.py
+  process_exit_status: 0
+  terminal_tally: ALL 36 CHECKS PASS [P064]
+independent_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P064-d3s-gap-locality-coulomb/reviews/independent_kernel_review.py
+  process_exit_status: 0
+  terminal_tally: ALL 16 CHECKS PASS [P064-INDEPENDENT]
+focused_tests:
+  command: .venv/bin/python -m pytest -q tests/test_momentum_kernels.py
+  process_exit_status: 0
+  terminal_tally: 10 passed
+verified_scope:
+  - exact closed form, beta-function coefficient sequence, convergence radius, and finite geometric remainder for the declared massive parameter kernel
+  - noncommuting zero-transfer and fixed-transfer massless limits
+  - exact finite inverse-moment identity for a declared spectral density with explicit convergence premises and counterexamples
+  - cancellation-sensitive and fractional-sensitive leading-power classification
+  - general d-dimensional Riesz kernel in a frozen Fourier convention and its d=3,s=1 specialization
+  - independent beta-integral, asymptotic-ratio, Schwinger-parameter, Gaussian-transform, and regulated spherical-Fourier routes
+interpretation_ceiling: >-
+  These routes derive consequences of declared kernels and measures. They do
+  not derive a charged loop field, regulator, bare gauge action, physical mass
+  or coupling, nonzero wave-function coefficient, spatial dimension, Coulomb
+  force law, electric charge dictionary, or substrate electromagnetic sector.

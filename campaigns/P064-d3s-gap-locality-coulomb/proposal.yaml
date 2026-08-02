@@ -1,0 +1,79 @@
+id: P064
+base_release: v0.57.0
+base_commit: 36bf559
+source_baseline: substrate@6d1f4e0
+source_units: [D3S]
+question: >-
+  Derive a reusable exact account of low-momentum analyticity for a declared
+  massive polarization kernel, the resulting local derivative expansion,
+  the leading-power and real-space Green-kernel classification of a supplied
+  inverse propagator, and the free assumptions that can preserve or change a
+  fractional exponent; then audit whether D3S actually derives locality,
+  s=1, three-dimensional Coulomb behavior, or a substrate electromagnetic
+  sector from accepted framework premises.
+invariants:
+  - C-SG-011 supplies only the normalized sine-Gordon small-amplitude massive Klein-Gordon limit, not a charged loop species, physical mass, vacuum polarization, gauge action, or dimension-changing map.
+  - C-GAU-001 derives local U1 covariance and curvature while explicitly leaving every F-squared coefficient, Maxwell equation, propagator, force, charge dictionary, and electromagnetic interpretation unconstrained.
+  - C-RGE-001 and C-RGE-002 are conditional one-loop running ledgers and derive neither an abelian polarization tensor nor physical field content.
+  - A mass gap can support a low-momentum analytic expansion only with spectral/integrability and vertex premises; it does not by itself select the lowest nonzero kernel coefficient.
+  - An analytic correction cannot erase an independently declared lower fractional power without a separately derived absence or cancellation theorem.
+  - Pending EM3, EM5, EM7, and QCD5 and every Coulomb or dimensional comparator supply no accepted premise and cannot select a candidate.
+allowed_imports:
+  - C-SG-001 and C-SG-011 only for the normalized local scalar equation and its dimensionless small-amplitude massive Klein-Gordon ceiling
+  - C-GAU-001 only for local U1 covariance, curvature, and its explicit absence of gauge kinetic dynamics
+  - C-DIM-001 through C-DIM-003 only for conditional dimensional and free-coordinate bookkeeping
+  - exact real and complex analysis for rational functions, Taylor series, beta/gamma integrals, Fourier transforms, and asymptotic leading powers under explicitly stated domains
+  - a separately declared positive mass, coupling coefficient, Feynman-parameter polarization integrand, or gapped spectral measure with every convergence premise visible
+  - a separately declared static inverse kernel and spatial dimension, with Fourier normalization fixed before evaluating its Green function
+  - SymPy exact integration, differentiation, residues, series, limits, gamma identities, rank, and free-symbol analysis
+  - D3S at substrate@6d1f4e0 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce D3S literally and retain only subclaims whose loop integrand,
+      tensor convention, expansion variable, leading kernel, Riesz transform,
+      dependencies, and physical interpretation are actually exercised.
+  - id: B
+    description: >-
+      Derive the exact Feynman-parameter kernel C*integral_0^1
+      u*(1-u)*Q2/(m2+u*(1-u)*Q2) du, including its coefficient formula,
+      convergence disk, sign pattern, zero-momentum value, and massless limit.
+  - id: C
+    description: >-
+      Derive a general gapped Stieltjes/spectral low-momentum expansion with
+      explicit inverse moments, separating the existence of a gap from the
+      additional moment-convergence and subtraction premises needed for
+      analyticity and a nonzero first coefficient.
+  - id: D
+    description: >-
+      Classify the leading exponent of a supplied inverse kernel containing
+      analytic integer powers and an optional fractional bare term, proving
+      exactly when an analytic polarization correction can or cannot select
+      the two-derivative power s=1.
+  - id: E
+    description: >-
+      Independently derive the d-dimensional static Fourier/Riesz Green
+      kernel for positive power s in its convergence regime, retaining the
+      dimension, normalization, exponent, contact-term, and long-range
+      premises rather than importing the Coulomb endpoint.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and compatibility with the local-U1 no-dynamics ceiling
+  - exact Euclidean momentum, polarization-tensor, inverse-kernel, Fourier, and sign convention closure
+  - explicit separation of mass gap, charged field content, vertex, regulator/subtraction, bare kernel, spectral moments, dimension, and physical dictionary
+  - assumption and parameter economy with correct mass dimensions and free-symbol count
+  - correct massive, massless, zero-momentum, threshold, fractional-power, vanishing-coefficient, and large-distance limits
+  - sensitivity to numerator power, mass, sign, subtraction, bare fractional exponent, spatial dimension, and Fourier normalization mutations
+  - independent coefficient-moment and Schwinger/Fourier rederivations without copied D3S targets or Coulomb comparators
+claims_proposed:
+  - provisional C-LOC-001 conditional massive polarization-kernel analyticity and derivative-expansion theorem
+  - provisional C-KRN-001 conditional inverse-kernel leading-power, fractional-persistence, and Riesz Green-function ledger
+comparators_blinded_until: >-
+  The generated queue synopsis necessarily exposes D3S's asserted first
+  coefficient, q-squared leading term, s=1 selection, d=3 Coulomb endpoint,
+  and source check count. No exposed coefficient, exponent, force law, source
+  label, or phenomenological value may select a convention, candidate,
+  theorem boundary, or mutation threshold. The candidates, domains,
+  conventions, structural criteria, and identifiability gates are frozen here
+  before D3S's executable internals or printed results are opened.
+status: accepted

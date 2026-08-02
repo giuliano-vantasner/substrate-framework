@@ -1,0 +1,70 @@
+campaign: P064
+title: Exact massive-kernel locality, leading-power, Riesz transform, and D3S audit
+source_baseline: substrate@6d1f4e0
+source_units: [D3S]
+base_release: v0.57.0
+release_after_adjudication: v0.58.0
+adjudicated_at: '2026-08-02T23:40:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B derives the full exact declared parameter kernel, beta
+      coefficient sequence, finite remainder, convergence disk, and
+      noncommuting massless/zero-transfer limits.
+  - id: C
+    reason: >-
+      Candidate C exposes the inverse-moment and subtraction premises behind
+      a general gapped spectral expansion and supplies divergent and zero
+      moment counterexamples to gap-only reasoning.
+  - id: D
+    reason: >-
+      Candidate D classifies the smallest provably nonzero supplied exponent,
+      refuses undecidable coefficients, and detects exact cancellation and
+      lower fractional terms missed by D3S.
+  - id: E
+    reason: >-
+      Candidate E independently derives the general convention-complete Riesz
+      kernel before specializing d and s, with Schwinger/Gaussian and
+      regulated spherical-Fourier routes.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_a_physical_derivation_because_D3S_imports_its_loop_kernel
+      inserts_a_bare_q2_term_never_requires_its_combined_coefficient_nonzero
+      hard_codes_the_leading_power_imports_d3_and_fits_an_exact_r_minus_one_array
+claims:
+  - id: C-LOC-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-KRN-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  rejected_source_route: attempts/0001/result.yaml
+  failed_representation_test: attempts/0002/result.yaml
+  failed_continuation_test: attempts/0003/result.yaml
+  exact_routes: attempts/0004/result.yaml
+  promotion_replay: attempts/0005/result.yaml
+  independent_review: reviews/independent_kernel_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  locality_claim_review: memory/vantasner/decisions/C-LOC-001-review.md
+  kernel_claim_review: memory/vantasner/decisions/C-KRN-001-review.md
+source_disposition:
+  D3S: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P064-d3s-gap-locality-coulomb/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P064-d3s-gap-locality-coulomb/reviews/independent_kernel_review.py
+  - .venv/bin/python -m pytest -q tests/test_momentum_kernels.py tests/test_gauge_u1.py tests/test_effective_actions.py tests/test_renormalization.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

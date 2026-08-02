@@ -1,0 +1,43 @@
+attempt: 0005
+candidates: [B, C, D, E]
+status: promotion_replay_passed
+primary_verifier:
+  process_exit_code: 0
+  terminal_tally: ALL 36 CHECKS PASS [P064]
+independent_verifier:
+  process_exit_code: 0
+  terminal_tally: ALL 16 CHECKS PASS [P064-INDEPENDENT]
+focused_replay:
+  process_exit_code: 0
+  terminal_tally: 57 passed
+  scope:
+    - tests/test_momentum_kernels.py
+    - tests/test_gauge_u1.py
+    - tests/test_effective_actions.py
+    - tests/test_renormalization.py
+    - tests/test_governance.py
+    - tests/test_source_inventory.py
+    - tests/test_claim_inventory.py
+    - tests/test_repository_validation.py
+workflow_replay:
+  command: scripts/validate.sh
+  process_exit_code: 0
+  claims: 85 accepted of 85
+  migration_queue: 218 units, 156 pending, 0 partial
+  pytest_collection: 484 tests
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+gitnexus_post_change:
+  risk: LOW
+  changed_indexed_symbols: 167
+  changed_files: 28
+  affected_processes: 0
+  interpretation: >-
+    The graph detects only newly added kernel APIs, tests, verifiers, campaign
+    records, and generated governance/memory sections. It finds no affected
+    pre-existing execution flow.
+scientific_verdict: >-
+  Promote C-LOC-001 and C-KRN-001 individually in v0.58.0. Qualify D3S: its
+  exact declared series and conditional Riesz endpoint survive, but its loop
+  provenance, bare-kernel circularity, missing nonzero condition, fractional
+  counterexample, dimensional lift, and physical Coulomb headline do not.
+remaining_campaign_debt: []

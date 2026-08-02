@@ -1,0 +1,28 @@
+source unit: D3S
+source baseline: substrate@6d1f4e0
+source sha256: a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71
+command: python3 merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py
+working directory: /home/dan/substrate
+environment: Python 3.12.2; NumPy 1.26.4; SciPy 1.14.1; SymPy 1.14.0
+process exit status: 0
+elapsed seconds: 0.535
+
+Reproduced sections:
+  D3S.1: four checks pass for the declared massive parameter integrand,
+           including coefficients 1/(6*m2) and -1/(30*m2**2).
+  D3S.2: three checks pass after the source inserts q2-Pi(q2), hard-codes
+           leading_power=2, and solves 2*s=2.
+  D3S.3: three checks pass after d=3 and the Riesz formula are imported;
+           the numerical leg fits the exact array r**(-1).
+  D3S.G: three checks pass for the fixed-transfer massless limit and a
+           separately fabricated square-root example.
+
+Printed headline:
+  D3S BRIDGE ESTABLISHED -- EM7's s=1 INPUT now DERIVED from the SG gap.
+
+Terminal tally:
+  ALL 13 CHECKS PASS
+
+Audit note:
+  The clean process exit and tally reproduce the source only. They do not
+  validate the headline data flow; see result.yaml and evidence/source-audit.yaml.

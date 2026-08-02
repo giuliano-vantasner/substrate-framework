@@ -219,6 +219,15 @@ Let I_STF be the normalized symmetric trace-free moment of C-MOM-001 and let Q_s
 - Compatibility: `compatible_extension`
 - Dependencies: C-GW-001, C-GW-002, C-GW-007
 
+## C-KRN-001
+
+For a supplied finite inverse kernel K(k2)=sum_j c_j*k2^s_j with k2 positive and exact positive real exponents, first combine equal exponents and remove coefficients that simplify exactly to zero. If every remaining coefficient is provably nonzero, the smallest remaining exponent s_star controls the infrared and the corresponding power of |k| is 2*s_star. Exact cancellation can expose a higher exponent, while any separately supplied lower fractional term remains leading over analytic integer-power corrections. An undecidable symbolic coefficient supplies only a condition and cannot be treated as nonzero. In the fixed convention G(x)=integral d^d k/(2*pi)^d exp(i*k.x)/[A*(k^2)^s], for r=|x|>0, A nonzero, and 0<s<d/2, the exact kernel away from contact terms is Gamma(d/2-s)*r^(2*s-d)/[A*4^s*pi^(d/2)*Gamma(s)]. The separately supplied specialization d=3,s=1,A=1 is 1/(4*pi*r), but the theorem does not select s, d, A, a source, boundary condition, force law, charge normalization, electromagnetic sector, or substrate realization.
+
+- Accepted in: `v0.58.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.
@@ -244,6 +253,15 @@ For a finite exact real linear system M*x=b, the system is consistent if and onl
 - Accepted in: `v0.20.0`
 - Verification: `symbolic_verified`
 - Compatibility: `native`
+- Dependencies: none
+
+## C-LOC-001
+
+Let Q2 be a Euclidean momentum-squared variable, m2 positive, and C a separately supplied coefficient. The declared kernel K(Q2)=C*integral_0^1[u*(1-u)*Q2/(m2+u*(1-u)*Q2)]du has the exact positive-Q2 closed form C*[1-4*m2*atanh(sqrt(Q2/(4*m2+Q2)))/sqrt(Q2*(4*m2+Q2))]. Its Q2^n coefficient for every integer n>=1 is C*(-1)^(n-1)*(n!)^2/[(2*n+1)!*m2^n], and its finite geometric remainder proves convergence for |Q2|<4*m2, with nearest continued threshold Q2=-4*m2. The Q2-to-zero limit is zero, while the m2-to-zero limit at fixed positive Q2 is C, so those iterated limits do not commute. More generally, for a separately declared spectral density rho(t) supported on t>=Delta>0, whenever the displayed inverse moments and remainder converge, integral[rho(t)*Q2/(t+Q2)]dt equals the order-N sum sum_(n=1)^N (-1)^(n-1)*Q2^n*integral[rho(t)/t^n]dt plus the exact remainder (-1)^N*Q2^(N+1)*integral[rho(t)/(t^N*(t+Q2))]dt. A positive support gap alone guarantees neither ultraviolet moment convergence nor a nonzero first moment. These exact conditional identities derive no charged field, loop vertex, regulator or subtraction, physical mass or coupling, gauge kinetic action, electromagnetic sector, or substrate realization.
+
+- Accepted in: `v0.58.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
 - Dependencies: none
 
 ## C-MED-001

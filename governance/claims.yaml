@@ -3415,3 +3415,89 @@ claims:
     accepted_in: v0.57.0
     challenges: []
     supersedes: []
+  - id: C-LOC-001
+    statement: >-
+      Let Q2 be a Euclidean momentum-squared variable, m2 positive, and C a
+      separately supplied coefficient. The declared kernel
+      K(Q2)=C*integral_0^1[u*(1-u)*Q2/(m2+u*(1-u)*Q2)]du has the exact
+      positive-Q2 closed form
+      C*[1-4*m2*atanh(sqrt(Q2/(4*m2+Q2)))/sqrt(Q2*(4*m2+Q2))]. Its Q2^n
+      coefficient for every integer n>=1 is
+      C*(-1)^(n-1)*(n!)^2/[(2*n+1)!*m2^n], and its finite geometric remainder
+      proves convergence for |Q2|<4*m2, with nearest continued threshold
+      Q2=-4*m2. The Q2-to-zero limit is zero, while the m2-to-zero limit at
+      fixed positive Q2 is C, so those iterated limits do not commute. More
+      generally, for a separately declared spectral density rho(t) supported
+      on t>=Delta>0, whenever the displayed inverse moments and remainder
+      converge, integral[rho(t)*Q2/(t+Q2)]dt equals the order-N sum
+      sum_(n=1)^N (-1)^(n-1)*Q2^n*integral[rho(t)/t^n]dt plus the exact
+      remainder (-1)^N*Q2^(N+1)*integral[rho(t)/(t^N*(t+Q2))]dt. A positive
+      support gap alone guarantees neither ultraviolet moment convergence nor
+      a nonzero first moment. These exact conditional identities derive no
+      charged field, loop vertex, regulator or subtraction, physical mass or
+      coupling, gauge kinetic action, electromagnetic sector, or substrate
+      realization.
+    provenance: campaigns/P064-d3s-gap-locality-coulomb/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P064-d3s-gap-locality-coulomb/verify.py
+      - campaigns/P064-d3s-gap-locality-coulomb/attempts/0001/result.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/attempts/0004/result.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/reviews/independent_kernel_review.py
+      - campaigns/P064-d3s-gap-locality-coulomb/evidence/primary-provenance.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-LOC-001-review.md
+      - tests/test_momentum_kernels.py
+    assumptions:
+      - The Euclidean momentum convention, positive mass squared, overall coefficient, parameter numerator u*(1-u), and subtraction K(0)=0 are declared exactly as stated; no accepted sine-Gordon claim supplies their loop interpretation.
+      - The closed form uses the positive-Euclidean branch, while the convergence radius is located with a separate complex continuation variable; other numerators or thresholds require a new coefficient and singularity derivation.
+      - The general spectral identity is promoted only as a finite pointwise algebraic expansion conditional on convergence of every displayed improper integral; a support gap does not discharge ultraviolet, regulator, subtraction, positivity, or nonzero-moment premises.
+      - No pending EM3, EM5, EM7, QCD5, physical comparator, or dimensional lift enters the kernel definition, coefficient sequence, remainder, or verdict.
+    comparators: []
+    accepted_in: v0.58.0
+    challenges: []
+    supersedes: []
+  - id: C-KRN-001
+    statement: >-
+      For a supplied finite inverse kernel K(k2)=sum_j c_j*k2^s_j with k2
+      positive and exact positive real exponents, first combine equal
+      exponents and remove coefficients that simplify exactly to zero. If
+      every remaining coefficient is provably nonzero, the smallest remaining
+      exponent s_star controls the infrared and the corresponding power of
+      |k| is 2*s_star. Exact cancellation can expose a higher exponent, while
+      any separately supplied lower fractional term remains leading over
+      analytic integer-power corrections. An undecidable symbolic coefficient
+      supplies only a condition and cannot be treated as nonzero. In the fixed
+      convention G(x)=integral d^d k/(2*pi)^d exp(i*k.x)/[A*(k^2)^s], for
+      r=|x|>0, A nonzero, and 0<s<d/2, the exact kernel away from contact terms
+      is Gamma(d/2-s)*r^(2*s-d)/[A*4^s*pi^(d/2)*Gamma(s)]. The separately
+      supplied specialization d=3,s=1,A=1 is 1/(4*pi*r), but the theorem does
+      not select s, d, A, a source, boundary condition, force law, charge
+      normalization, electromagnetic sector, or substrate realization.
+    provenance: campaigns/P064-d3s-gap-locality-coulomb/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P064-d3s-gap-locality-coulomb/verify.py
+      - campaigns/P064-d3s-gap-locality-coulomb/attempts/0001/result.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/attempts/0004/result.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/reviews/independent_kernel_review.py
+      - campaigns/P064-d3s-gap-locality-coulomb/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-KRN-001-review.md
+      - tests/test_momentum_kernels.py
+    assumptions:
+      - The inverse kernel, exact exponents, coefficients, and their zero or nonzero status are supplied in one convention; an unresolved coefficient condition must be discharged before assigning a unique leading exponent.
+      - The Fourier convention, nonzero inverse-kernel coefficient A, positive radius, spatial dimension, exponent, convergence domain 0<s<d/2, and exclusion of distributional contact terms are declared exactly as stated.
+      - The d=3,s=1 endpoint is a conditional specialization and not evidence that accepted U1 covariance, a mass gap, or a pending dimensional argument selects either input.
+      - No physical Coulomb comparator, Maxwell action, charge dictionary, 1+1-to-3-dimensional lift, or pending source claim enters the leading-power classification or Schwinger/Fourier derivation.
+    comparators: []
+    accepted_in: v0.58.0
+    challenges: []
+    supersedes: []

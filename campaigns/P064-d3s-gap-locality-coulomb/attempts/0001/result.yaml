@@ -1,0 +1,41 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_rejected
+source_unit: D3S
+source_baseline: substrate@6d1f4e0
+source_sha256: a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71
+command: python3 merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+elapsed_seconds: 0.535
+process_exit_status: 0
+terminal_tally: ALL 13 CHECKS PASS
+observations:
+  - The declared parameter integrand does have the checked first two coefficients, but the source does not derive that integrand from accepted sine-Gordon or U1 claims.
+  - The inverse propagator is introduced as q2-Pi(q2), so the bare q2 term whose locality is advertised as an output is already an input.
+  - The source computes Z=1-e2/(6*pi*m2) but never requires Z to be nonzero before hard-coding leading_power=2.
+  - The Riesz formula, s-to-kernel dictionary, d=3, and 1+1-to-3-dimensional lift come from pending predecessors or declarations.
+  - The numerical slope check applies polyfit to an array constructed exactly as r**(-1), so it is not an independent oracle.
+diagnosis:
+  category: target_statement_and_verifier
+  mechanism:
+    - A mass gap plus a separately declared rational integrand gives an analytic expansion, but a gap alone does not supply charged field content, vertices, subtraction, ultraviolet moment convergence, or a nonzero first moment.
+    - At the allowed exact tuning e2=6*pi*m2 the q2 coefficient cancels and the next q2-squared term leads, contradicting the unconditional s=1 verdict.
+    - An independently declared fractional bare term with exponent below one dominates every analytic correction and is not erased by the gap.
+    - The fixed-positive-q2 massless limit equals a constant while the q2-zero-first limit is zero; the two limits do not commute, so the source guard does not establish necessity.
+    - Gapped theories may contain a separately supplied local q2 term, so a gap is not necessary for a two-derivative inverse kernel.
+    - The general Riesz transform is conditional on the Fourier convention, 0<s<d/2, r>0, and treatment away from contact terms. D3S checks only the declared d=3,s=1 endpoint.
+    - Pending EM3, EM5, EM7, and QCD5 cannot provide accepted premises, while accepted C-GAU-001 explicitly supplies no gauge kinetic dynamics.
+verdict: >-
+  The native process and tally are valid attempt evidence. The exact series
+  fragment can be retained conditionally, but D3S does not derive locality,
+  s=1, d=3, Coulomb physics, a gauge action, or a substrate electromagnetic
+  sector from accepted framework claims.
+next_attempt: >-
+  Derive the full coefficient and remainder formulas for the declared kernel,
+  a premise-explicit spectral identity, a cancellation-sensitive leading-power
+  classifier, and the general Riesz kernel before testing the source endpoint.

@@ -1,0 +1,19 @@
+source_unit: D3S
+source_baseline: substrate@6d1f4e0
+source_path: merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py
+source_sha256: a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71
+reproduced_at: '2026-08-02T23:05:00Z'
+command: python3 merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+elapsed_seconds: 0.535
+process_exit_status: 0
+terminal_tally: ALL 13 CHECKS PASS
+quadrature_note: >-
+  D3S uses no quadrature. Its only NumPy numerical leg constructs r**(-1)
+  and fits that same exact array with polyfit. P064 uses exact SymPy algebra
+  and no numpy.trapz, numpy.trapezoid, or compatibility dispatch.

@@ -1,0 +1,29 @@
+topic: declared massive polarization kernels, scalar QED2 premises, and proper-time Fourier methods
+sources:
+  - title: On Gauge Invariance and Vacuum Polarization
+    authors: [Julian Schwinger]
+    publication: Physical Review 82, 664-679 (1951)
+    doi: 10.1103/PhysRev.82.664
+    url: https://doi.org/10.1103/PhysRev.82.664
+    audited_content: >-
+      The original calculation starts from a charged Dirac field in a
+      prescribed electromagnetic field and uses a proper-time representation
+      for its vacuum current/effective action. This supports treating charged
+      field content, gauge background, and proper-time kernel as model premises
+      rather than consequences of a generic scalar mass gap.
+  - title: Scalar QED2 with a topological term
+    authors: [Thomas Kloiber, Christof Gattringer]
+    publication: Proceedings of Science LATTICE2014, 345
+    url: https://pos.sissa.it/214/345/pdf
+    audited_content: >-
+      Equation 2.1 defines scalar QED2 with an explicitly complex charged
+      scalar, covariant derivative, mass and quartic terms, and a separate
+      beta*F_mu_nu*F_mu_nu/4 gauge kinetic term. It confirms that scalar-QED
+      matter ontology and the bare gauge action are distinct premises; neither
+      follows from local U1 covariance or a neutral sine-Gordon gap alone.
+scope_note: >-
+  These primary sources are used only to audit premise provenance and the
+  source's scalar-versus-Dirac terminology. Their physical models, parameters,
+  loop results, and electromagnetic interpretations are not imported into the
+  accepted framework claims. P064's mathematical identities are independently
+  rederived in its verifiers.

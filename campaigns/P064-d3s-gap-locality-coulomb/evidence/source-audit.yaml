@@ -1,0 +1,102 @@
+source_unit: D3S
+headline_verdict: not_established
+checks:
+  - id: D3S.1-a
+    source_verdict: pass
+    audit_verdict: conditional_integrand_analyticity_only
+    reason: >-
+      A positive denominator makes the separately imported rational integrand
+      analytic at zero. Accepted sine-Gordon and U1 claims do not derive that
+      loop integrand, its charged species, vertex, subtraction, or mass map.
+  - id: D3S.1-b
+    source_verdict: pass
+    audit_verdict: exact_first_coefficient_for_declared_kernel
+    reason: >-
+      The 1/(6*m2) coefficient is exact for the named u*(1-u) numerator. Its
+      finiteness does not prove that every gapped spectral kernel has a finite
+      ultraviolet moment or that an inverse propagator has no lower bare term.
+  - id: D3S.1-c
+    source_verdict: pass
+    audit_verdict: unrelated_normalized_parameter_substitution
+    reason: >-
+      Substituting m2=1 and e=1 only evaluates a declared dimensionless kernel.
+      C-SG-011, C-QBL-001, and C-PDE-001 do not identify their different mass or
+      frequency parameters with a physical charged loop mass and coupling.
+  - id: D3S.1-d
+    source_verdict: pass
+    audit_verdict: second_coefficient_not_full_convergence_proof
+    reason: >-
+      The checked -1/(30*m2**2) term is correct. P064 supplies the missing
+      general beta coefficient, exact finite remainder, and |Q2|<4*m2 disk.
+  - id: D3S.2-a
+    source_verdict: pass
+    audit_verdict: circular_bare_kernel_and_missing_nonzero_condition
+    reason: >-
+      The source inserts q2-Pi(q2), so a local bare q2 term is already present.
+      It also computes Z=1-e2/(6*pi*m2) without proving Z nonzero. The allowed
+      tuning e2=6*pi*m2 cancels q2 and makes q2-squared the leading term.
+  - id: D3S.2-b
+    source_verdict: pass
+    audit_verdict: solve_of_hard_coded_exponent
+    reason: >-
+      Solving 2*s=2 is valid algebra, but the right-hand side is assigned as
+      leading_power=2 after the missing cancellation and bare-term premises.
+  - id: D3S.2-c
+    source_verdict: pass
+    audit_verdict: conditional_symbol_specialization
+    reason: >-
+      The identity (k2)^1=k2 is exact. A lower independently declared
+      fractional term survives analytic loop corrections and changes the
+      leading exponent, so the gap does not select this family member.
+  - id: D3S.3-a
+    source_verdict: pass
+    audit_verdict: imported_riesz_endpoint
+    reason: >-
+      The coefficient 1/(4*pi) is the d=3,s=1 specialization of a declared
+      Riesz transform. Neither d=3 nor s=1 has accepted D3S closure.
+  - id: D3S.3-b
+    source_verdict: pass
+    audit_verdict: conditional_green_kernel_not_physical_coulomb
+    reason: >-
+      The inverse Fourier kernel is exact for the fixed convention, r>0, and
+      0<s<d/2. It does not supply sources, forces, charge normalization,
+      Maxwell dynamics, or a dimension-changing substrate map.
+  - id: D3S.3-c
+    source_verdict: pass
+    audit_verdict: tautological_regression
+    reason: >-
+      The source constructs G_num=r**(-1) and then measures its log-log slope.
+      This tests polyfit on its own input rather than a solved or transformed
+      Green function. P064 instead derives the Fourier normalization twice.
+  - id: D3S.G-a
+    source_verdict: pass
+    audit_verdict: nonuniform_limit_not_necessity_theorem
+    reason: >-
+      The fixed-positive-Q2 massless limit is constant, but Q2-to-zero first is
+      zero. The limits do not commute, and other separately declared gapped or
+      gapless inverse kernels may contain local q2 terms.
+  - id: D3S.G-b
+    source_verdict: pass
+    audit_verdict: fabricated_fractional_counterexample_only
+    reason: >-
+      The square-root function is declared rather than derived from the source
+      framework. It shows one nonanalytic alternative but does not exclude an
+      independent fractional bare term in the gapped case.
+  - id: D3S.G-c
+    source_verdict: pass
+    audit_verdict: comparison_of_assigned_models
+    reason: >-
+      Comparing the hard-coded exponent two with the fabricated exponent one
+      cannot establish that the mass gap uniquely selected either model.
+dependencies:
+  EM1: qualified_C-U1-001_and_C-U1-002_only
+  EM2: qualified_C-GAU-001_no_gauge_dynamics_ceiling
+  EM3: pending_not_imported
+  EM5: pending_not_imported
+  EM6: qualified_C-QBL-001_conditional_profile_only
+  EM7: pending_not_imported
+  P3D1: qualified_C-PDE-001_dimensionless_finite_time_model_only
+  QCD5: pending_not_imported
+selected_candidates: [B, C, D, E]
+rejected_candidate: A
+proposed_claims: [C-LOC-001, C-KRN-001]

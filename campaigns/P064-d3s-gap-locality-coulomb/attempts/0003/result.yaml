@@ -1,0 +1,22 @@
+attempt: 0003
+candidates: [B, C, D, E]
+status: failed
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P064-d3s-gap-locality-coulomb/verify.py
+  process_exit_status: 1
+  first_failed_check: nearest parameter singularity fixes the convergence radius
+independent_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P064-d3s-gap-locality-coulomb/reviews/independent_kernel_review.py
+  process_exit_status: 1
+  first_failed_check: fresh denominator extremum locates the nearest threshold
+diagnosis:
+  category: verifier_assumption
+  mechanism: >-
+    Both threshold checks attempted to solve Q2=-4*m2 while reusing a symbol
+    declared positive for the Euclidean evaluation domain. SymPy correctly
+    returned no negative solution. The analytic continuation variable needed
+    for locating the nearest complex singularity must be unconstrained.
+physics_delta: none
+next_attempt: >-
+  Introduce a separate unconstrained continuation variable only for the
+  threshold solve and rerun both complete exact verifiers.

@@ -1256,3 +1256,34 @@ units:
       analytic discrepancy, and GT identifiability ledger through canonical
       and independent exact routes. It requires no numerical quadrature and
       introduces no deprecated NumPy integration alias.
+  D3S:
+    disposition: qualified
+    accepted_claims:
+      - C-LOC-001
+      - C-KRN-001
+    qualification: >-
+      D3S's declared rational-kernel coefficients and conditional
+      d=3,s=1 Riesz specialization survive, but its gap-to-Coulomb headline
+      does not. The source imports the loop integrand and a bare q2 inverse
+      term, never proves Z=1-e2/(6*pi*m2) nonzero, hard-codes leading_power=2,
+      imports d=3 from pending QCD5, and fits an exactly constructed r**(-1)
+      array. Exact allowed cancellation changes the leading exponent, a lower
+      fractional bare term survives analytic corrections, and the massless
+      and zero-transfer limits do not commute. No accepted SG or U1 claim
+      supplies charged loop matter, regulator, gauge dynamics, spatial lift,
+      Coulomb force, electric charge, or substrate electromagnetic sector.
+    evidence:
+      - campaigns/P064-d3s-gap-locality-coulomb/reviews/source_adjudication.md
+      - campaigns/P064-d3s-gap-locality-coulomb/evidence/source-reproduction.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/evidence/source-audit.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/evidence/primary-provenance.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/attempts/0001/result.yaml
+      - campaigns/P064-d3s-gap-locality-coulomb/attempts/0004/result.yaml
+      - memory/vantasner/decisions/C-LOC-001-review.md
+      - memory/vantasner/decisions/C-KRN-001-review.md
+    note: >-
+      P064 derives the full beta coefficient sequence, convergence radius,
+      spectral remainder identity, cancellation-sensitive leading-power
+      theorem, and general Riesz normalization through canonical and
+      independent exact routes. It uses no numerical quadrature or deprecated
+      NumPy integration alias.
