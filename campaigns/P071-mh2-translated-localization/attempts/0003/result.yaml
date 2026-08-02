@@ -1,0 +1,17 @@
+attempt: 0003
+candidate: C
+status: finite_asymptotic_oracle_failure_preserved
+command: PYTHONPATH=src .venv/bin/python -m pytest tests/test_translated_localization.py -q -x
+process_exit_status: 1
+tally_before_failure: 11 passed
+observed: >-
+  The equal-rate test required the finite-displacement scaled overlap at a=12
+  to equal its limiting coefficient 8 within relative 1e-8, but the exact
+  value is 7.3333333345.
+diagnosis: >-
+  The claim is asymptotic, not finite equality. For alpha=beta=2 the exact
+  expansion contains the next factor (a-1), so dividing by a converges to 8
+  only at order 1/a. The oracle collapsed a limit into a finite value.
+repair: >-
+  Require approach toward the exact limiting coefficient under displacement
+  growth and separately show that omitting the linear prefactor diverges.

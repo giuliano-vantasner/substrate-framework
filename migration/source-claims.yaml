@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 150
-  qualified: 61
+  pending_adjudication: 149
+  qualified: 62
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -4303,8 +4303,37 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-OVL-001
+  - C-OVL-002
+  qualification: >-
+    MH2's finite-grid attenuation reproduces and its late slope is the exact
+    slower-core-tail limit for its declared planted wells. The alleged radial
+    tower instead uses Cartesian dx across negative x and six separately
+    centered isospectral wells with supplied depth, width, spacing, and count.
+    The free product kappa*d sets the asymptotic ratio; no origin condition,
+    radial measure, common spectrum, generated centers, physical generations,
+    observed hierarchy, or absolute masses follow. The lepton predicate is a
+    loose hand-coded label comparison and the flat-profile guard is
+    normalization algebra.
+  evidence:
+  - campaigns/P071-mh2-translated-localization/reviews/source_adjudication.md
+  - campaigns/P071-mh2-translated-localization/evidence/source-reproduction.yaml
+  - campaigns/P071-mh2-translated-localization/evidence/source-audit.yaml
+  - campaigns/P071-mh2-translated-localization/evidence/primary-provenance.yaml
+  - campaigns/P071-mh2-translated-localization/attempts/0001/result.yaml
+  - campaigns/P071-mh2-translated-localization/attempts/0002/result.yaml
+  - campaigns/P071-mh2-translated-localization/attempts/0003/result.yaml
+  - campaigns/P071-mh2-translated-localization/attempts/0004/result.yaml
+  - campaigns/P071-mh2-translated-localization/attempts/0005/result.yaml
+  - memory/vantasner/decisions/C-OVL-002-review.md
+  note: >-
+    P071 derives exact translated-sech convolution and tail ledgers, the exact
+    translated Poschl-Teller ground state, slower-tail coefficient, free
+    rate-spacing direction, and a Gaussian nonuniqueness countermodel through
+    canonical and independent routes. Canonical code uses no numerical
+    quadrature or NumPy integration alias.
 - source_unit: MH3
   phase: phase-20
   path: merged-framework/bridges/phase-20/bridge_MH3_overlap_feeds_mixing.py

@@ -1,0 +1,18 @@
+attempt: 0004
+candidates: [C, D]
+status: exact_oracle_representation_failures_preserved
+command: PYTHONPATH=src .venv/bin/python -m pytest tests/test_translated_localization.py -q
+process_exit_status: 1
+tally: 24 passed; 2 failed
+observed:
+  - Evaluating overlap*exp(48)/24 as one default-precision SymPy expression rounded the hypergeometric argument to its singular endpoint and returned infinity.
+  - Generic simplify did not close a translated sech/tanh identity in the exact ground-state residual even though the residual is algebraically zero.
+diagnosis: >-
+  Both failures are representation-sensitive exact-oracle problems. The first
+  loses precision by combining a tiny overlap with a large exponential before
+  high-precision evaluation. The second needs a common exponential basis for
+  hyperbolic identities.
+repair: >-
+  Evaluate the small overlap and exponential separately at 50 digits before
+  scaling, and rewrite the exact operator residual to exponentials before its
+  final simplification. No scientific tolerance or claim is changed.

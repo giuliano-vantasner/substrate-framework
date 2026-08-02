@@ -1,0 +1,21 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_but_headline_not_established
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH2_overlap_hierarchy.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+surviving_fragments:
+  - The supplied exact-sine same-center finite-box modes have order-one overlaps at the one declared parameter point.
+  - The six supplied translated-well ground states have positive overlaps that approach a constant log ratio for the declared inputs.
+  - A normalized density has equal expectation against a constant multiplier.
+failure_mechanism:
+  - The alleged radial tower is a one-dimensional Cartesian Dirichlet calculation on an interval extending to negative coordinate and uses unweighted dx.
+  - Each rung is the ground state of a separately centered external well; the centers, depth, width, spacing, and rung count are planted rather than derived from one operator.
+  - Grid doubling holds the asymmetric box and finite-difference method fixed and checks no eigen-residual, wall refinement, origin condition, or independent method.
+  - The asymptotic slope contains the declared free spacing d, so kappa alone does not predict the exponent or hierarchy magnitude.
+  - The lepton structural verdict uses permissive threshold predicates and cannot select the mechanism.
+  - The flat-profile guard follows from normalization and does not test whether the displaced wells are physically generated.
+next_attempt: >-
+  Derive the exact translated Poschl-Teller ground state, matched-width
+  convolution, tail-rate classification, and free-spacing ledger before using
+  numerical regression only to cover mismatched widths.

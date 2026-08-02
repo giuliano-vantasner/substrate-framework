@@ -1,0 +1,13 @@
+source_unit: MH2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH2_overlap_hierarchy.py
+sha256: 0596c06fb98205f5deca9cfcd99e1442216c95925d6182788c6cb01686a161d9
+size_bytes: 25595
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH2_overlap_hierarchy.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+runtime_seconds: 0.444
+environment_note: >-
+  Executed from the framework Python environment against the hash-pinned
+  predecessor file. The source uses explicit weighted sums and contains no
+  np.trapz or np.trapezoid call.

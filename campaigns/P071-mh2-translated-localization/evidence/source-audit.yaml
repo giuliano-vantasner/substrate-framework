@@ -1,0 +1,39 @@
+source_unit: MH2
+checks_executed: 5
+check_trace:
+  MH2.1:
+    oracle: finite-difference eigenmodes plus weighted grid sums at omega=0.45
+    verdict: narrow numeric fragment only
+    issue: exact-sine fluctuation modes are not an accepted dependency and only one box/parameter point is tested
+  MH2.2:
+    oracle: six separately centered finite-difference wells on x in [-6,32]
+    verdict: conditional numeric attenuation survives
+    issue: the wells and centers are supplied separate Cartesian operators, not a radial tower of one operator
+  MH2.3:
+    oracle: tail log-slope compared with -kappa*d within absolute 0.05
+    verdict: conditional slower-tail regression survives
+    issue: d is free, the first ratio is nonasymptotic, and no alternate tail-rate regime is tested
+  MH2.4:
+    oracle: hand-coded lepton log spacings and loose boolean thresholds
+    verdict: rejected as scientific evidence
+    issue: comparator labels do not validate a hierarchy prediction or select the mechanism
+  MH2.5:
+    oracle: constant profile against numerically normalized densities
+    verdict: exact normalization identity survives
+    issue: tautological flatness is insensitive to the well construction and does not establish physical localization
+parameters:
+  omega: 0.45
+  kappa: 0.5454356057317857
+  condensate_amplitude: 2.0*sqrt(6.0)*kappa
+  spacing: 4.0
+  rungs: 6
+  well_depth: 12.0
+  well_width: 0.7
+  source_grid_points: [8000, 16000]
+  source_domain: '[-6, N_GEN*D_SPACING+8]'
+unverified_or_overclaimed:
+  - radial domain, radial measure, regular origin, and one common self-adjoint operator
+  - derivation of well centers, spacing, depth, width, or generation count
+  - exact geometric decay at finite separation or universal exponent kappa
+  - hierarchy magnitude, generation identity, Yukawa sector, masses, or uniqueness
+numpy_quadrature: none

@@ -1,0 +1,53 @@
+campaign: P071
+title: Exact translated-localization and free-spacing ledgers
+source_baseline: substrate@6d1f4e0
+source_units: [MH2]
+base_release: v0.64.0
+release_after_adjudication: v0.65.0
+adjudicated_at: '2026-08-03T07:10:00Z'
+selected_candidates:
+  - id: B
+    reason: The beta-hypergeometric convolution supplies the exact displaced overlap and same-center closure.
+  - id: C
+    reason: The slower-tail and equal-rate-resonance theorem gives the controlled attenuation class without fitting a finite ladder.
+  - id: D
+    reason: The exact translated Poschl-Teller ground state exposes spectral equivalence and every supplied center.
+  - id: F
+    reason: The Gaussian countermodel proves that localization does not uniquely select geometric attenuation.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_conditional_finite_grid_regression_for_separately_planted_wells
+  - id: E
+    decision: not_selected_because_MH2_supplies_no_half_line_radial_operator_to_validate
+claims:
+  - id: C-OVL-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  representation_repairs:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+  exact_routes: attempts/0005/result.yaml
+  independent_review: reviews/independent_translation_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-OVL-002-review.md
+source_disposition:
+  MH2: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P071-mh2-translated-localization/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P071-mh2-translated-localization/reviews/independent_translation_review.py
+  - .venv/bin/python -m pytest -q tests/test_translated_localization.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

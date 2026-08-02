@@ -1,0 +1,6 @@
+MH2 native execution exits zero and prints ALL 5 CHECKS PASS.
+Same-center overlaps: [2.65994, 1.81582, 0.37607], spread 7.073.
+Planted-well overlaps: [2.612e0, 6.083e-1, 6.969e-2, 7.865e-3, 8.876e-4, 1.002e-4].
+Log ratios: [-1.4574, -2.1666, -2.1815, -2.1817, -2.1817].
+The declared asymptotic slope is -kappa*d = -2.18174; measured tail mean -2.18168.
+Flat multiplier overlaps are equal by normalization.

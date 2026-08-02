@@ -1485,3 +1485,42 @@ units:
       parity cross term, and dimension/free-rescaling ledger through canonical
       and independent exact routes. It uses no numerical quadrature or NumPy
       integration alias.
+  MH2:
+    disposition: qualified
+    accepted_claims:
+      - C-OVL-001
+      - C-OVL-002
+    qualification: >-
+      MH2's same-center finite-box values and six attenuated planted-well
+      overlaps reproduce, and its late log ratios correctly approach
+      -kappa*d for the declared parameters because the core sech has the
+      slower tail. The source calls the construction radial but uses Cartesian
+      dx on a Dirichlet interval extending to x=-6, with no radial Jacobian,
+      origin regularity, half-line domain, or common radial operator. Each rung
+      changes to a separately centered well with bare depth 12, width 0.7,
+      spacing 4, and six-rung count; whole-line translations are isospectral,
+      not distinct levels of one Hamiltonian. Grid doubling tests neither wall
+      dependence, eigen-residuals, nor an independent method. The asymptotic
+      exponent is the product of a tail rate and free spacing, equal tail rates
+      require a polynomial prefactor, and other localization families are not
+      geometric. The lepton boolean uses loose hand-coded comparator
+      thresholds, while the flat-profile guard is normalization algebra. No
+      radial tower, well-generation mechanism, generation identity, Yukawa
+      sector, observed hierarchy, mixing, or absolute mass is established.
+    evidence:
+      - campaigns/P071-mh2-translated-localization/reviews/source_adjudication.md
+      - campaigns/P071-mh2-translated-localization/evidence/source-reproduction.yaml
+      - campaigns/P071-mh2-translated-localization/evidence/source-audit.yaml
+      - campaigns/P071-mh2-translated-localization/evidence/primary-provenance.yaml
+      - campaigns/P071-mh2-translated-localization/attempts/0001/result.yaml
+      - campaigns/P071-mh2-translated-localization/attempts/0002/result.yaml
+      - campaigns/P071-mh2-translated-localization/attempts/0003/result.yaml
+      - campaigns/P071-mh2-translated-localization/attempts/0004/result.yaml
+      - campaigns/P071-mh2-translated-localization/attempts/0005/result.yaml
+      - memory/vantasner/decisions/C-OVL-002-review.md
+    note: >-
+      P071 derives exact translated-sech convolutions and tail classes, the
+      exact translated Poschl-Teller ground state and core-tail coefficient,
+      the free rate-spacing direction, and a Gaussian nonuniqueness
+      countermodel through canonical and independent routes. Canonical code
+      uses no numerical quadrature or NumPy integration alias.

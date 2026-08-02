@@ -1,0 +1,17 @@
+attempt: 0002
+candidates: [B, C, D, F]
+status: representation_failure_preserved
+command: PYTHONPATH=src .venv/bin/python -m pytest tests/test_translated_localization.py -q
+process_exit_status: 2
+observed:
+  - Two floating-power convolution cases entered SymPy hyperexpand through a broad simplify call and raised TypeError because a Float was passed to range.
+  - The remaining exact suite then spent excessive time in symbolic hypergeometric reduction and was manually interrupted after 95.97 seconds.
+diagnosis: >-
+  The beta-hypergeometric formula is correct; independent mpmath quadrature had
+  already matched it. The failure is the representation oracle: global
+  simplify invokes an unsuitable hyperexpand path for floating parameters and
+  performs unnecessary reduction for nonzero displacement.
+repair: >-
+  Preserve the hypergeometric expression without global simplification and
+  special-case zero displacement with the exact sech-power gamma integral.
+  Continue with direct numeric evaluation and narrowly scoped exact identities.

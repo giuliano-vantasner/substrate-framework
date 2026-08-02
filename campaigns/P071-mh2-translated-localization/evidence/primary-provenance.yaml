@@ -1,0 +1,31 @@
+campaign: P071
+claim: C-OVL-002
+recorded_at: '2026-08-03T07:00:00Z'
+artifacts:
+  canonical_module:
+    path: src/substrate_framework/translated_localization.py
+    sha256: 5a8bd4dbb77552c942c2b98afce67ff0f54431ccdc161e6408ebf7f2b6e985ec
+    size_bytes: 14122
+  focused_tests:
+    path: tests/test_translated_localization.py
+    sha256: 6c8a04644c94de532eafd0992cb0a28f85406a6a15a3001658b4b0e2a722673b
+    size_bytes: 8539
+  primary_verifier:
+    path: campaigns/P071-mh2-translated-localization/verify.py
+    sha256: 291b4da37540e5d7435763606c91888ec7639a807db9c72a4451ecf9cfa23b09
+    size_bytes: 9433
+  independent_verifier:
+    path: campaigns/P071-mh2-translated-localization/reviews/independent_translation_review.py
+    sha256: 1418e4ebadb549578c14c8013b1979c6f1c249a0fff417b6106558e44ba4c157
+    size_bytes: 8594
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_translated_localization.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P071-mh2-translated-localization/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P071-mh2-translated-localization/reviews/independent_translation_review.py
+tallies:
+  focused_tests: 27 passed
+  primary: ALL 43 CHECKS PASS [P071]
+  independent: ALL 27 CHECKS PASS [P071-INDEPENDENT]
+numpy_quadrature_note: >-
+  Canonical exact code contains neither NumPy integration spelling. Adaptive
+  SciPy quad appears only as independent regression for closed exact formulas.

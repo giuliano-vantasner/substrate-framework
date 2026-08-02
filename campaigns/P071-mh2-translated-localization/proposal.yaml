@@ -1,0 +1,77 @@
+id: P071
+base_release: v0.64.0
+base_commit: 5627814
+scientific_base_commit: ec1d640
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MH2]
+question: >-
+  Derive a premise-explicit translated-localization overlap theorem, its exact
+  or controlled large-separation attenuation law, and the parameter-
+  identifiability ceiling for any conditional geometric ladder; then audit
+  whether MH2 constructs one field operator and predicts a hierarchy rather
+  than supplying independently centered wells and a free spacing.
+invariants:
+  - C-OVL-001 supplies normalized Cartesian whole-line expectation bounds and same-center matched-width sech overlaps, not displaced modes, radial localization, a hierarchy, or a generation mechanism.
+  - C-QBL-003 supplies exactly two translated modes of one whole-line Hessian; translating the entire operator is unitary equivalence and does not create distinct eigenlevels or generations.
+  - A radial mode problem must declare half-line domain, radial measure, origin regularity, self-adjoint operator, boundary data, dimension, and normalization; renaming a Cartesian coordinate r does not supply these objects.
+  - Independently centered wells are different supplied operators unless they arise as modes of one declared coupled operator or one internally selected background.
+  - An overlap ladder must retain the condensate amplitude, widths, centers, spacing, measure, normalization, and external scale; a free separation cannot be fitted to a mass comparator and then called predicted.
+  - Approximate straightness of finitely many log overlaps is numeric evidence under a declared metric, not an exact geometric law or an infinite-tower theorem.
+  - Tail attenuation depends on both localized density and multiplier tails; equal tail exponents can acquire a polynomial prefactor, so one exponential ansatz is not universal.
+  - MH3 and O1 remain pending and supply no mixing, orbital, radial, or generation premise.
+allowed_imports:
+  - C-OVL-001 for normalized overlap conventions, matched-width same-center endpoints, and free-parameter ceilings
+  - C-QBL-001 for one conditional sech background and its free center and inverse width
+  - C-QBL-003 for the exact two-mode whole-line Hessian and its mass/generation interpretation ceiling
+  - exact translation/unitary-equivalence algebra, positive convolution identities, beta/gamma integrals, dominated convergence, and explicit exponential-tail estimates
+  - separately declared positive amplitudes, widths, displacement or ladder spacing, well parameters, finite domain, boundary data, mesh, tolerance, and error norm
+  - substrate_framework.numerics.trapezoid_integral for sampled regression only; exact obligations use no NumPy quadrature alias
+  - MH2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce MH2 literally and retain only hierarchy statements whose
+      operator, domain, measure, centers, parameters, refinements, and
+      comparator independence are executable.
+  - id: B
+    description: >-
+      Derive exact normalized whole-line overlap identities for explicitly
+      translated sech-power densities against a fixed core profile.
+  - id: C
+    description: >-
+      Derive the controlled large-displacement exponent and prefactor class,
+      including the slower-tail rule and equal-exponent resonance.
+  - id: D
+    description: >-
+      Construct a translated Poschl-Teller operator family and prove unitary
+      spectral equivalence, exposing every center as supplied data rather than
+      a new eigenlevel of one operator.
+  - id: E
+    description: >-
+      Formulate a genuine half-line radial eigenproblem with explicit measure,
+      origin boundary, outer boundary, normalization, convergence, and an
+      independent numerical route.
+  - id: F
+    description: >-
+      Compare a distinct localized family such as Gaussian or compact-support
+      modes to test whether geometric attenuation uniquely selects MH2's
+      displaced-well mechanism.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without MH3, O1, a flavor sector, or a fitted physical hierarchy
+  - one explicit self-adjoint operator or an honest declaration that each translated well is a separate input
+  - exact domain, measure, origin, boundary, normalization, amplitude, width, center, and dimension bookkeeping
+  - correct same-center, large-displacement, zero-spacing, domain-growth, and tail-exponent limits
+  - separation of exact convolution identities, asymptotic laws, finite numeric regressions, and physical hierarchy claims
+  - mutation sensitivity to omitted radial weight, moved boundaries, hidden spacing, altered tail family, failed solver status, copied log slope, and comparator-fitted parameters
+  - parameter economy and an identifiability ceiling that leaves generation labels and absolute masses unproved
+claims_proposed:
+  - provisional C-OVL-002 translated-localization overlap, attenuation, and free-spacing ledger if nonduplicate content survives
+comparators_blinded_until: >-
+  The generated synopsis exposes an observed lepton ratio, two log spacings,
+  an order-one same-center result, and claimed approximate geometric decay.
+  None may select the operator, dimension, measure, mode family, centers,
+  spacing, well depth, core width, attenuation metric, or physical labels.
+  Those objects, candidates, limits, mutations, refinements, and the
+  identifiability ceiling are frozen here before MH2's executable body opens.
+status: accepted

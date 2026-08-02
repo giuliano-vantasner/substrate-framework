@@ -1,0 +1,26 @@
+attempt: 0005
+candidates: [B, C, D, F]
+status: positive_exact_objects_verified
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_translated_localization.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P071-mh2-translated-localization/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P071-mh2-translated-localization/reviews/independent_translation_review.py
+process_exit_status: 0
+tallies:
+  focused_tests: 27 passed
+  primary: ALL 43 CHECKS PASS [P071]
+  independent: ALL 27 CHECKS PASS [P071-INDEPENDENT]
+  full_workflow: 609 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - Every positive-power matched-width translated sech density/core overlap has an exact beta-hypergeometric representation and closes to C-OVL-001 at zero displacement.
+  - The slower exact tail controls unequal-rate attenuation, while equal rates require a linear displacement prefactor.
+  - A translated Poschl-Teller well has an exact normalized ground state and center-independent eigenvalue; separate centers are unitarily equivalent operators, not one energy tower.
+  - For MH2's planted well parameters, the exact ground-density tail is faster than the core sech tail and the exact asymptotic slope is therefore -kappa*d.
+  - The reciprocal rate-spacing direction leaves the slope invariant, and a Gaussian countermodel produces nongeometric attenuation.
+mutations_rejected:
+  - finite-value replacement of an asymptotic limit
+  - universal core-tail exponent when the mode density has the slower tail
+  - omission of the equal-rate polynomial prefactor
+  - center-dependent translated-well eigenvalues
+  - hidden or changed center spacing
+  - constant-log-ratio uniqueness under a Gaussian localization family
