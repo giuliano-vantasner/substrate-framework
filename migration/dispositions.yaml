@@ -641,6 +641,42 @@ units:
       literature, dependency, and nonduplication ledgers through primary and
       independent symbolic routes. It adds no claim, release, or canonical API
       and uses no numerical quadrature or NumPy integration alias.
+  NY2:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-SK-001
+    duplicates:
+      - C-SK-001
+    duplicate_reason: >-
+      NY2 repeats C-SK-001's conditional 16*pi*E_e scale after inserting the
+      empirical electron energy, then sets the uncomputed coefficient in
+      Q=kappa*U to one. Its own prose admits that no multi-Skyrmion solution or
+      exact binding coefficient exists. The 23.86 and 24 MeV comparators imply
+      distinct nonunit coefficients and cannot select one through broad bands.
+      A D+D to 4He release requires a radiative branch and deposition model,
+      none of which is supplied, and cannot justify one common H2/D2 payload.
+      The pinned C035 engine/parity pair still requires imported 24 MeV while
+      separate predecessor engineering code embeds 25.686 MeV, so the claimed
+      replacement is neither accepted nor consistently implemented.
+    evidence:
+      - campaigns/P085-ny2-nuclear-yield-audit/reviews/source_adjudication.md
+      - campaigns/P085-ny2-nuclear-yield-audit/evidence/source-reproduction.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/evidence/source-audit.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/evidence/consumer-audit.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/evidence/literature-audit.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/evidence/candidate-comparison.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/evidence/primary-provenance.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/attempts/0001/result.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/attempts/0002/result.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/attempts/0003/result.yaml
+      - campaigns/P085-ny2-nuclear-yield-audit/attempts/0004/result.yaml
+      - memory/vantasner/decisions/NY2-duplicate-review.md
+    note: >-
+      P085 derives exact coefficient, multi-soliton sign, arbitrary-target,
+      radiative-kinematics, consumer, literature, dependency, and source-oracle
+      ledgers through primary and independent exact routes. It adds no claim,
+      release, external mutation, or canonical API and uses no numerical
+      quadrature or NumPy integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

@@ -1,0 +1,27 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: NY2
+source_path: merged-framework/bridges/phase-24/bridge_NY2_nuclear_yield_one_skyrme_unit.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: a0ab1c713ff4224a3f4e39e6770c1a1c8c5bdc4c2f7ef2bd8b18ab8fc87c18a3
+git_blob: b33bbc9bd0fe59a0cc584bf38ddbd3b5338c5560
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY2_nuclear_yield_one_skyrme_unit.py
+process_exit_status: 0
+terminal_tally: ALL 10 CHECKS PASS
+surviving_exact_predicates:
+  - Inserting E_e=0.51099895 MeV evaluates the C-SK-001 conditional scale to 25.68560875699357 MeV.
+  - The rounded comparator arithmetic gives 28.30-2*2.22=23.86 MeV.
+  - The coefficient-one scale differs from 23.86 MeV by 7.65% and from 24 MeV by 7.02%.
+  - The declared 0.85--1.15 coefficient band brackets both comparator values.
+  - The locally assigned expression is computationally independent of the comparator literals.
+headline_failures:
+  - NY1 is duplicate evidence for C-SK-001, which derives no physical nuclear yield and retains empirical E_e.
+  - NY2 explicitly admits that no multi-Skyrmion solution or exact binding coefficient exists.
+  - Dimensional analysis leaves kappa in Q=kappa*U free; coefficient one is imposed rather than derived.
+  - The D+D to 4He release belongs to a radiative channel with branch and deposition physics absent from NY2.
+  - The live C035 engine and parity oracle still require 24 MeV, while separate engineering code embeds 25.686 MeV.
+  - One D+D comparator cannot establish one common H2 and D2 per-event payload.
+diagnosed_layer: source_claim_dimensionless_coefficient_missing_objects_reaction_channel_consumer_and_comparator_selection
+continuation: Candidates B-H proceed to the exact coefficient inverse, multi-soliton sign family, reaction kinematics, consumer replay, literature audit, source-oracle classification, and terminal disposition.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

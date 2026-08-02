@@ -1,0 +1,62 @@
+campaign: P085
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted closure for the scale, mass functional, soliton solutions, states, reaction branch, units, and consumer
+  - exact coefficient, sign, multiplicity, inverse, limits, and mutation sensitivity
+  - separation of unit, binding coefficient, empirical release, engine literal, and runtime behavior
+  - parameter economy without coefficient-one or broad-band selection
+  - nonduplication against accepted dimensional and Skyrme ceilings
+candidates:
+  A:
+    decision: rejected_for_missing_dependency_closure
+    reason: >-
+      NY2 admits that no multi-Skyrmion solution or coefficient exists; NY1 is
+      duplicate evidence, HE4 is unrelated, and the engine replacement is not
+      implemented.
+  B:
+    decision: selected_as_nonpromoted_coordinate_ledger
+    reason: >-
+      Exact algebra gives Q=kappa*U and kappa=Q/U. C-DIM-002 already owns the
+      dimensionless-coefficient ceiling, so the identity needs no new API.
+  C:
+    decision: selected_as_missing_object_audit
+    reason: >-
+      Writing M_2=a_2*U and M_4=a_4*U leaves kappa=2*a_2-a_4 free with either
+      sign or zero; no mass functional, boundary problem, or solutions are supplied.
+  D:
+    decision: selected_as_reaction_ceiling
+    reason: >-
+      D+D to He4 with positive release requires another carrier such as a
+      photon and a declared branch/deposition model. NY2 supplies none.
+  E:
+    decision: selected_as_consumer_audit
+    reason: >-
+      The live calculator and parity oracle retain 24 MeV, while separate
+      engineering code embeds 25.686 MeV. This is inconsistent predecessor
+      state, not a completed accepted replacement.
+  F:
+    decision: selected_as_arbitrary_target_counterfamily
+    reason: >-
+      The reaction and engine comparators infer distinct nonunit kappa values;
+      every positive target is reachable, and the declared O(1) band contains
+      many incompatible choices.
+  G:
+    decision: selected_as_source_oracle_audit
+    reason: >-
+      All ten predicates test scale evaluation, comparator arithmetic, literal
+      bands, or recomputation; none loads the absent binding or reaction objects.
+  H:
+    decision: selected_as_no_new_claim
+    reason: >-
+      The only exact surviving source content is C-SK-001's conditional scale,
+      while the generic coefficient ceiling is already C-DIM-002 semantics.
+selected_result: >-
+  Retain NY2 as duplicate evidence for C-SK-001, reject its coefficient-one,
+  nuclear-yield, no-import, generic-event, and derived-engine-replacement
+  readings, and add no claim, API, or release.
+selection_not_based_on:
+  - source pass tally
+  - 7.65 percent reaction residual
+  - 7.02 percent engine shift
+  - the declared 0.85--1.15 or 20--30 MeV bands
+  - chronology or prose confidence

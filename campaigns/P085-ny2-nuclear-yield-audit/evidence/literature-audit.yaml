@@ -1,0 +1,50 @@
+campaign: P085
+purpose: >-
+  Audit NY2's D+D reaction comparator and event interpretation without using
+  external nuclear measurements to select the framework coefficient.
+sources:
+  - author: CODATA / National Institute of Standards and Technology
+    title: CODATA Recommended Values of the Fundamental Physical Constants, 2022
+    primary_url: https://physics.nist.gov/cuu/pdf/wall_2022.pdf
+    reported_values:
+      deuteron_mass_energy_MeV: 1875.61294500(58)
+      alpha_particle_mass_energy_MeV: 3727.3794118(12)
+      two_deuteron_minus_alpha_MeV: 23.8464782
+    finding: >-
+      The modern rest-mass difference corroborates that NY2's rounded 23.86
+      MeV comparator is reasonable for the D+D to alpha mass difference. It is
+      an external measurement and says nothing about a Skyrme coefficient,
+      reaction probability, or engine event definition.
+  - authors: [Zhou Shu-Hua, Zhou Jing, Fu Yuan-Yong, Li Cheng-Bo, Liu Zhi-Yi, Meng Qiu-Ying]
+    title: Measurement of Branching Ratio of Deuteron Induced Reactions on 2H at 20 keV
+    journal: Chinese Physics Letters
+    primary_url: https://cpl.iphy.ac.cn/article/id/39949
+    finding: >-
+      The measured channel is 2H(d,gamma)4He, and its gamma-to-proton-branch
+      ratio at 20 keV is (1.06+-0.42)e-7. A mass-difference Q value therefore
+      cannot be assigned to every generic D-D event, much less every H2 and D2
+      engine event, without branch and rate physics.
+  - authors: [C. A. Barnes, K. H. Chang, T. R. Donoghue, C. Rolfs, J. Kammeraad]
+    title: The 2H(d,gamma)4He reaction at low energy and the D-state admixture in 4He
+    journal: Physics Letters B
+    year: 1987
+    doi: 10.1016/0370-2693(87)90391-1
+    primary_url: https://authors.library.caltech.edu/records/k0x8x-rha69
+    finding: >-
+      The primary study treats a specific radiative-capture cross section and
+      angular distribution over 50--500 keV. It confirms that gamma emission
+      and transition dynamics are part of the channel; NY2 contains neither.
+framework_status:
+  mass_difference_comparator: external_and_approximately_reproduced
+  radiative_capture_channel: external_context_only
+  reaction_branching_or_cross_section: absent_from_framework
+  medium_gamma_deposition: absent_from_framework
+  H2_and_D2_common_event_map: absent_from_framework
+  multi_soliton_binding_coefficient: absent_from_framework
+adjudication_implication: >-
+  The external data validate the comparator's approximate magnitude while
+  defeating its use as a generic per-event payload. They cannot select
+  kappa=1, derive a reaction rate, or promote the engine substitution.
+authority_note: >-
+  These sources are comparator and channel audits only. They are not accepted
+  framework claims and do not supersede the registry.

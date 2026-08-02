@@ -1,0 +1,61 @@
+id: P085
+base_release: v0.74.0
+base_commit: 6e494d8
+scientific_base_commit: e269953
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [NY2]
+question: >-
+  Determine whether NY2 derives any dependency-closed nuclear reaction yield
+  or engine replacement beyond the conditional C-SK-001 energy ratio, or
+  instead sets an uncomputed dimensionless multi-Skyrmion binding coefficient
+  to one and selects that value through post hoc proximity to supplied
+  reaction and engine comparators; terminally adjudicate every NY2 subclaim.
+invariants:
+  - C-SK-001 supplies only a conditional equality between two supplied mass premises and F_pi/e=16*pi*E_e; it derives no absolute nuclear scale, Skyrmion state, binding energy, reaction, or engine value.
+  - P084 terminally classifies NY1 as duplicate evidence for C-SK-001 and explicitly retains E_e as an empirical dimensionful input.
+  - Dimensional equality Q=kappa*U introduces a dimensionless coefficient kappa; dimensional analysis alone neither fixes kappa nor makes kappa=1 preferred.
+  - A multi-Skyrmion binding difference requires an accepted mass functional, B=2 and B=4 solutions, state assignments, corrections, and subtraction convention.
+  - A D+D to He4 heat mapping requires accepted physical deuteron and helium state identities, channel bookkeeping, and an energy-release convention beyond a topological label.
+  - HE4 is qualified only for sine-Gordon action/secant/lattice algebra and supplies no accepted nuclear state, Skyrme binding, reaction, or engine mechanism.
+  - Proximity to a reaction value or an existing engine literal cannot select kappa or promote an implementation that has not been changed and tested.
+allowed_imports:
+  - exact positive-real algebra and energy-dimensional bookkeeping for a separately supplied scale U, dimensionless coefficient kappa, and target Q
+  - C-SK-001 only as its accepted conditional iff and physical-interpretation ceiling
+  - C-DIM-002 and C-DIM-003 only as dimensionless-coefficient and imported-coordinate ceilings
+  - P084 and NY1 only as terminal duplicate evidence, not as authority for zero-import or nuclear-yield readings
+  - HE4 only through its accepted C-SG-001, C-SG-003, C-SG-004, C-SG-006, and C-SG-007 mappings, none of which is a nuclear or engine premise
+  - NY2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce NY2 literally and test whether its scale, coefficient-one choice, multi-Skyrmion states, physical reaction map, comparator values, and engine consumer have accepted dependency closure.
+  - id: B
+    description: Derive the generic same-dimension coordinate Q=kappa*U and its inverse kappa=Q/U, retaining kappa as a free positive dimensionless input.
+  - id: C
+    description: Require an explicit Skyrme mass functional and independently solved B=2 and B=4 configurations before forming any conditional binding difference.
+  - id: D
+    description: Audit the map from topological sectors to deuteron and helium states, including sign, multiplicity, rest-energy subtraction, and correction conventions.
+  - id: E
+    description: Inspect the declared engine consumer and distinguish a proposed replacement, an implemented dependency, a changed runtime value, and a tested physical output.
+  - id: F
+    description: Keep the binding coefficient symbolic and construct the arbitrary-target family, opening reaction and engine comparators only after structural selection criteria freeze.
+  - id: G
+    description: Audit each source predicate for sensitivity to kappa, state-map mutations, missing solver output, and comparator removal rather than accepting its pass tally.
+  - id: H
+    description: Compare a provisional energy-ratio or yield claim and API against C-DIM-002, C-DIM-003, C-SK-001, and P084; add nothing without a distinct theorem and accepted consumer.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for the scale, mass functional, soliton solutions, state identities, binding subtraction, reaction channel, units, and engine consumer
+  - exact dimensional coefficient, sign, multiplicity, inverse map, limiting cases, and mutation sensitivity
+  - separation of an energy unit, dimensionless coefficient, binding difference, empirical reaction energy, engine literal, and implemented runtime behavior
+  - parameter economy without silently fixing an O(1) coefficient to one or treating a comparator band as a derivation oracle
+  - nonduplication against C-DIM-002, C-DIM-003, C-SK-001, P084, and existing canonical consumers
+claims_proposed:
+  - no new claim unless Candidate H demonstrates a distinct reusable energy-ratio or nuclear-binding theorem with an accepted consumer beyond existing dimensional and Skyrme ceilings
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. Until then the NY2 body,
+  literal checks, executable output, reported yield, empirical reaction value,
+  engine literal, comparison band, coefficient-one choice, and any downstream
+  interpretation remain closed; the generated queue synopsis is navigation
+  metadata only.
+status: accepted

@@ -1,0 +1,28 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G, H]
+status: targeted_adjudication_validated
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P085-ny2-nuclear-yield-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P085-ny2-nuclear-yield-audit/reviews/independent_yield_review.py
+  - node cross_check.js
+scientific_tallies:
+  source: ALL 10 CHECKS PASS
+  primary: ALL 34 CHECKS PASS [P085]
+  independent: ALL 11 CHECKS PASS [P085-INDEPENDENT]
+  c035_consumer: ALL PARITY CHECKS PASS (108905 comparisons, 6 gas branches, tol 1e-9)
+process_status: 0
+positive_result:
+  - Exact same-dimension algebra retains kappa with inverse kappa=Q/U and rejects coefficient-one mutations.
+  - Generic B=2/B=4 mass coefficients permit positive, zero, negative, and arbitrary positive binding factors.
+  - CM conservation requires a second final carrier for positive release; radiative kinematics partitions photon and recoil energy.
+  - Primary literature identifies a rare radiative D+D channel, not a generic H2/D2 per-event payload.
+  - Hash-pinned consumers expose an unapplied and internally inconsistent predecessor migration.
+  - Every source predicate is classified as duplicate scale evaluation, comparator arithmetic, band membership, or deterministic recomputation.
+adjudication:
+  disposition: duplicate_evidence
+  duplicates: [C-SK-001]
+  new_claims: []
+  release: v0.74.0_unchanged
+pending:
+  - focused canonical, governance, generated consumer, and integrated unchanged-boundary replay
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

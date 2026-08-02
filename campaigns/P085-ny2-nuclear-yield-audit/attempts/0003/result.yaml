@@ -1,0 +1,16 @@
+attempt: 0003
+candidate: validation_orchestration
+status: failed_before_scientific_replay
+command_context:
+  working_directory: /home/dan/substrate/pulson-backreaction-bridge/campaigns/c035-calculator
+  first_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+process_exit_status: 127
+stderr: '/bin/bash: line 1: .venv/bin/python: No such file or directory'
+diagnosed_layer: validation_invocation_working_directory
+scientific_checks_executed: 0
+scientific_thresholds_changed: false
+repair: >-
+  Run framework-relative commands from /home/dan/substrate-framework and run
+  the Node parity consumer separately from its own calculator directory.
+continuation: Attempt 0004 replays the unchanged scientific and repository boundary with explicit working directories.
+quadrature_note: no_scientific_code_executed

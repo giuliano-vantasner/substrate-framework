@@ -1,0 +1,64 @@
+campaign: P085
+title: NY2 nuclear-yield coefficient, reaction-channel, and consumer audit
+source_baseline: substrate@6d1f4e0
+source_units: [NY2]
+base_release: v0.74.0
+release_after_adjudication: v0.74.0
+adjudicated_at: '2026-08-04T00:55:00Z'
+selected_candidates:
+  - id: B
+    reason: Exact same-dimension algebra retains the free coefficient and inverse target map.
+  - id: C
+    reason: Generic B=2/B=4 masses expose the uncomputed coefficient and all sign branches.
+  - id: D
+    reason: CM and radiative kinematics expose the absent channel and deposition map.
+  - id: E
+    reason: Hash-pinned consumers prove the engine swap is unapplied and predecessor code is inconsistent.
+  - id: F
+    reason: Comparator inverses and the broad-band counterfamily reject coefficient-one selection.
+  - id: G
+    reason: All ten source predicates are classified and none loads the missing physical objects.
+  - id: H
+    reason: No theorem, API, formal object, or accepted consumer survives nonduplication review.
+competing_candidates:
+  - id: A
+    decision: rejected_for_missing_coefficient_solutions_state_map_reaction_branch_and_consumer_closure
+claims: []
+reviewed_existing:
+  - id: C-SK-001
+    decision: unchanged_conditional_scale_only
+  - id: C-DIM-002
+    decision: unchanged_dimensionless_coefficient_ceiling_only
+  - id: C-DIM-003
+    decision: unchanged_imported_coordinate_ceiling_only
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  targeted_route: attempts/0002/result.yaml
+  failed_validation_invocation: attempts/0003/result.yaml
+  validated_route: attempts/0004/result.yaml
+  independent_review: reviews/independent_yield_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  duplicate_review: memory/vantasner/decisions/NY2-duplicate-review.md
+source_disposition:
+  NY2: duplicate_evidence
+duplicates:
+  NY2: [C-SK-001]
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY2_nuclear_yield_one_skyrme_unit.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P085-ny2-nuclear-yield-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P085-ny2-nuclear-yield-audit/reviews/independent_yield_review.py
+  - node /home/dan/substrate/pulson-backreaction-bridge/campaigns/c035-calculator/cross_check.js
+  - .venv/bin/python -m pytest -q tests/test_skyrme_relations.py tests/test_action_scales.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

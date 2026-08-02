@@ -1,0 +1,17 @@
+campaign: P085
+frozen_before_source_opening: true
+proposal_path: proposals/P085-ny2-nuclear-yield-audit/proposal.yaml
+proposal_sha256: 97eff9083e36b2c7c9422db01c013519d5a44bb5d5acb0554551d9607d0c9507
+memory_contract_path: memory/vantasner/proposals/P085-ny2-nuclear-yield-audit.md
+memory_contract_sha256: 024e9f068af674685fb852169bb6296976b665b5c546ed7c82655aa808f3675d
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P085-ny2-nuclear-yield-audit.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - NY2 literal equations, checks, executable output, and reported yield
+  - empirical reaction energy and its nuclear binding-energy inputs
+  - engine nuclear-energy literal and any replacement implementation status
+  - comparison bands, residual percentage, and coefficient-one choice
+  - downstream consumer interpretations and physical state assignments

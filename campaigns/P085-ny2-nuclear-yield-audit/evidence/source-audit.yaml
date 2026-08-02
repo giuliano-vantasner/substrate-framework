@@ -1,0 +1,104 @@
+source_unit: NY2
+headline_verdict: duplicate_conditional_scale_with_uncomputed_coefficient_missing_reaction_map_and_unimplemented_consumer
+checks:
+  - id: NY2.1
+    source_verdict: pass
+    audit_verdict: duplicate_conditional_scale_evaluated_from_empirical_input
+    reason: >-
+      The 25.69 MeV value repeats C-SK-001/NY1 after inserting the measured
+      electron rest energy. It is neither a nuclear yield nor import free.
+  - id: NY2.2
+    source_verdict: pass
+    audit_verdict: arithmetic_on_rounded_external_comparators
+    reason: >-
+      28.30-2*2.22=23.86 MeV is correct for the supplied rounded binding
+      values. It is empirical nuclear-data arithmetic and derives no event or
+      Skyrmion coefficient.
+  - id: NY2.3
+    source_verdict: pass
+    audit_verdict: comparator_residual_not_selection_oracle
+    reason: >-
+      The coefficient-one scale differs from the source comparator by 7.65%.
+      A residual threshold cannot derive coefficient one.
+  - id: NY2.4
+    source_verdict: pass
+    audit_verdict: duplicate_narrower_comparator_band
+    reason: >-
+      The 5--10% assertion rechecks the same residual and supplies no model,
+      uncertainty, or independent physical prediction.
+  - id: NY2.5
+    source_verdict: pass
+    audit_verdict: arbitrary_declared_band_brackets_comparator
+    reason: >-
+      The 0.85--1.15 interval is a declared O(1) prior containing infinitely
+      many inequivalent coefficients. Bracketing 23.86 MeV cannot select one.
+  - id: NY2.6
+    source_verdict: pass
+    audit_verdict: arbitrary_declared_band_brackets_old_literal
+    reason: >-
+      The same broad band also brackets 24 MeV because that comparator is
+      nearby. It does not eliminate or derive the engine literal.
+  - id: NY2.7
+    source_verdict: pass
+    audit_verdict: very_broad_scale_regression
+    reason: >-
+      The 20--30 MeV interval is satisfied by the already evaluated scale and
+      tests neither an engine substitution nor a nuclear reaction.
+  - id: NY2.8
+    source_verdict: pass
+    audit_verdict: old_literal_proximity_not_consumer_migration
+    reason: >-
+      The proposed value differs from 24 MeV by 7.02%, but the pinned engine
+      and parity oracle still require 24.0e6 eV. Closeness does not implement
+      or validate the replacement.
+  - id: NY2.9
+    source_verdict: pass
+    audit_verdict: comparator_independence_with_empirical_mass_and_missing_map
+    reason: >-
+      The expression contains only E_e because the source assigns yield equal
+      to the scale before comparison. This proves no nuclear-data leakage into
+      that calculation, but retains E_e and supplies no relation from scale to
+      a physical event.
+  - id: NY2.10
+    source_verdict: pass
+    audit_verdict: deterministic_recomputation_not_predictive_independence
+    reason: >-
+      Re-evaluating the same expression returns the same float whether or not a
+      comparator is read. It cannot test the absent coefficient, solitons,
+      state map, reaction branch, or engine behavior.
+exact_scale_coordinate:
+  family: Q=kappa*U
+  inverse: kappa=Q/U
+  source_choice: kappa=1
+  selection_from_dimensions: false
+  source_empirical_kappa_exact: 29825000/(10219979*pi)
+  source_empirical_kappa_approx: 0.92892483980951
+  engine_kappa_exact: 30000000/(10219979*pi)
+  engine_kappa_approx: 0.9343753627589372
+generic_multi_soliton_ledger:
+  premises:
+    - M_2=a_2*U
+    - M_4=a_4*U
+  binding_difference: Q=(2*a_2-a_4)*U
+  retained_inputs: [a_2, a_4]
+  allowed_without_constraints: [positive, zero, negative]
+  arbitrary_positive_family: a_2=(kappa+1)/2, a_4=1
+reaction_kinematics:
+  one_body_final_with_positive_CM_release: impossible
+  radiative_channel: D+D_to_He4_plus_gamma
+  photon_energy_for_total_CM_energy_W_and_release_Delta: Delta-Delta^2/(2*W)
+  alpha_recoil_energy: Delta^2/(2*W)
+  source_branch_or_deposition_model: absent
+consumer_status:
+  c035_engine_value_eV: 24000000
+  c035_parity_asserts_old_value: true
+  engineering_value_approx_MeV: 25.68560875699357
+  consumers_agree: false
+  accepted_physical_consumer: false
+dependency_audit:
+  NY1: duplicate_evidence_for_C-SK-001_only
+  HE4: qualified_sine_Gordon_action_claims_only
+selected_candidates: [B, C, D, E, F, G, H]
+rejected_candidate: A
+new_claims: []
+duplicates: [C-SK-001]

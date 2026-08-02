@@ -1,0 +1,39 @@
+attempt: 0004
+candidates: [B, C, D, E, F, G, H]
+status: adjudication_validated
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY2_nuclear_yield_one_skyrme_unit.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P085-ny2-nuclear-yield-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P085-ny2-nuclear-yield-audit/reviews/independent_yield_review.py
+  - node cross_check.js from /home/dan/substrate/pulson-backreaction-bridge/campaigns/c035-calculator
+  - .venv/bin/python -m pytest -q tests/test_skyrme_relations.py tests/test_action_scales.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+scientific_tallies:
+  source: ALL 10 CHECKS PASS
+  primary: ALL 34 CHECKS PASS [P085]
+  independent: ALL 11 CHECKS PASS [P085-INDEPENDENT]
+  c035_consumer: ALL PARITY CHECKS PASS (108905 comparisons, 6 gas branches, tol 1e-9)
+  focused_canonical_tests: 25 passed
+  focused_governance_tests: 17 passed
+  integrated: 793 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+process_status: 0
+positive_result:
+  - Exact coefficient, multi-soliton sign, arbitrary-target, and reaction-kinematics ledgers are complete.
+  - Source, literature, dependency, and hash-pinned consumer audits terminally classify the physical overreach.
+  - The corrected validation invocation changes no scientific predicate, threshold, or evidence.
+adjudication:
+  disposition: duplicate_evidence
+  duplicates: [C-SK-001]
+  new_claims: []
+  release: v0.74.0_unchanged
+queue_after:
+  pending: 135
+  partially_migrated: 0
+  migrated: 3
+  qualified: 71
+  duplicate_evidence: 8
+  out_of_scope: 1
+pending: []
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

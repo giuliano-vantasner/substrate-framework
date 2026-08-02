@@ -1,0 +1,69 @@
+campaign: P085
+base_release: v0.74.0
+base_commit: 6e494d8
+scientific_base_commit: e269953
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+artifacts:
+  source:
+    path: /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY2_nuclear_yield_one_skyrme_unit.py
+    sha256: a0ab1c713ff4224a3f4e39e6770c1a1c8c5bdc4c2f7ef2bd8b18ab8fc87c18a3
+    git_blob: b33bbc9bd0fe59a0cc584bf38ddbd3b5338c5560
+    size_bytes: 7225
+    authority: noncanonical_hash_pinned_attempt_evidence
+  c035_engine:
+    path: /home/dan/substrate/pulson-backreaction-bridge/campaigns/c035-calculator/engine.js
+    sha256: 653484e15173a6d3ef5dc5cdc9a993872d02d3d6f390b885aba23a7b367e6bca
+    size_bytes: 12220
+  c035_parity:
+    path: /home/dan/substrate/pulson-backreaction-bridge/campaigns/c035-calculator/cross_check.js
+    sha256: d73d658d921b91f593b40d8e0c776528ce0c936201141718716402396308dffa
+    size_bytes: 4491
+  engineering_materials:
+    path: /home/dan/substrate/engineering/spark_discharge/materials.py
+    sha256: 971a101fcee44fb61e28e779da66f5ef24a0976d46c2c02566b249026b73815f
+    size_bytes: 12639
+  frozen_contract:
+    path_at_preregistration: proposals/P085-ny2-nuclear-yield-audit/proposal.yaml
+    preregistration_sha256: 97eff9083e36b2c7c9422db01c013519d5a44bb5d5acb0554551d9607d0c9507
+    note: Administrative status may change at adjudication; candidate and blinding fields remain frozen.
+  primary_verifier:
+    path: proposals/P085-ny2-nuclear-yield-audit/verify.py
+    sha256: d1504e4cc51f8e5fb624b7969dfe763ee0a861eb5beea1f338e6fdeaaf9748a3
+    size_bytes: 12232
+  independent_verifier:
+    path: proposals/P085-ny2-nuclear-yield-audit/reviews/independent_yield_review.py
+    sha256: 1d7f372aeac15c53aebdf709a98f5586f3b0cbecd5d05000a64dded2b79fa96f
+    size_bytes: 3644
+accepted_claims_used:
+  C-SK-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/skyrme_relations.py
+    use: conditional_energy_ratio_and_physical_prediction_ceiling_only
+  C-DIM-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/action_scales.py
+    use: dimensionless_multiplicative_coefficient_ceiling_only
+  C-DIM-003:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/action_scales.py
+    use: imported_physical_coordinate_ceiling_only
+candidate_dependencies:
+  NY1:
+    disposition: duplicate_evidence
+    accepted_mapping: [C-SK-001]
+    role: conditional_scale_evidence_only
+  HE4:
+    disposition: qualified
+    accepted_mapping: [C-SG-001, C-SG-003, C-SG-004, C-SG-006, C-SG-007]
+    role: unrelated_sine_Gordon_action_evidence
+external_empirical_imports:
+  - electron_rest_energy=0.51099895_MeV
+  - helium4_binding_comparator=28.30_MeV
+  - deuteron_binding_comparator=2.22_MeV
+  - reaction_comparator=23.86_MeV
+  - c035_engine_literal=24.0_MeV
+exact_oracle: SymPy energy-coordinate inverse, coefficient mutations, multi-soliton coefficient and sign family, CM one-body/radiative kinematics, source AST, registry/queue closure, and hash-pinned consumer audit
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent
