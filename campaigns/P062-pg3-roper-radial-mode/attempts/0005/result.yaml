@@ -1,0 +1,36 @@
+attempt: 0005
+candidate: independent_review
+status: passed
+command: PYTHONPATH=src .venv/bin/python -u proposals/P062-pg3-roper-radial-mode/reviews/independent_radial_review.py
+process_exit_status: 0
+elapsed_seconds: 1.94
+terminal_tally: ALL 16 CHECKS PASS [P062-INDEPENDENT]
+collocation_profiles:
+  - outer_radius: 12.0
+    shooting_slope: 2.007527688738
+    energy_coefficient: 1.230872962336
+    max_bvp_residual: 1.895e-08
+  - outer_radius: 18.0
+    shooting_slope: 2.007527628113
+    energy_coefficient: 1.231275988047
+    max_bvp_residual: 1.991e-08
+  - outer_radius: 24.0
+    shooting_slope: 2.007527624832
+    energy_coefficient: 1.231374099496
+    max_bvp_residual: 1.983e-08
+finite_volume_spectra:
+  - [12.0, 0.131130430, 0.346864843, 0.650382824, 1.104670292]
+  - [18.0, 0.061072018, 0.173659022, 0.327633458, 0.523389695]
+  - [24.0, 0.034754080, 0.101076182, 0.196302315, 0.316279040]
+node_counts: [0, 1, 2, 3]
+independence:
+  - Does not import substrate_framework.radial_modes.
+  - Derives the mixed coefficient by a fresh epsilon expansion.
+  - Uses solve_bvp collocation rather than canonical DOP853 shooting.
+  - Uses Simpson quadrature rather than canonical trapezoidal integration.
+  - Uses a mass-lumped finite-volume transform and scipy.linalg.eigh_tridiagonal rather than consistent-mass FEM and sparse eigsh.
+verdict: >-
+  The independent background, normalization, box spectra, node ordering,
+  domain collapse, source-like omitted-term reproduction, and free-scale
+  conclusions agree with the primary route.
+next_attempt: Complete source adjudication and individual claim review.

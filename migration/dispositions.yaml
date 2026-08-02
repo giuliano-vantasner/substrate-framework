@@ -1187,3 +1187,38 @@ units:
       paired SU(2) kinetic/trace generalized mass, and conditional GMOR
       parameter ledger through canonical and independent exact routes. It uses
       no numerical quadrature or deprecated NumPy alias.
+  PG3:
+    disposition: qualified
+    accepted_claims:
+      - C-MOD-001
+      - C-MOD-002
+      - C-SCL-001
+    qualification: >-
+      PG3's declared static energy and finite-difference profile evidence
+      survive conditionally, but its radial bound-state and Roper headline do
+      not. Exact second variation contains a mixed field/gradient correction
+      that PG3 omits. With the corrected self-adjoint Hessian and physical
+      origin, independent finite-element and finite-volume spectra collapse
+      toward the exact zero massless continuum edge as the outer wall grows.
+      PG3's fixed-wall mesh refinement therefore establishes no positive bound
+      mode. Its radial shift is not a rigid three-dimensional translation, its
+      quantum check assigns rather than derives J=1/2, and its gap ratio
+      compares a squared classical frequency to an energy while omitting the
+      action/time scale and quantization premises.
+    evidence:
+      - campaigns/P062-pg3-roper-radial-mode/reviews/source_adjudication.md
+      - campaigns/P062-pg3-roper-radial-mode/evidence/source-reproduction.yaml
+      - campaigns/P062-pg3-roper-radial-mode/evidence/source-audit.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0001/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0003/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0005/result.yaml
+      - memory/vantasner/decisions/C-MOD-001-review.md
+      - memory/vantasner/decisions/C-MOD-002-review.md
+      - memory/vantasner/decisions/C-SCL-001-review.md
+    note: >-
+      P062 derives the exact radial energy variation, Green form, Derrick and
+      continuum guards, reconstructs the conditional profile and box ladder
+      by two independent numeric routes, and exposes every classical-to-
+      quantum scale premise. Canonical quadrature uses the shared helper that
+      prefers the current trapezoid name; no new deprecated NumPy alias is
+      added.

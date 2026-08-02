@@ -273,6 +273,24 @@ Conditional on the abstract N-by-N unitary relative-basis matrices of C-MIX-001,
 - Compatibility: `compatible_extension`
 - Dependencies: C-MIX-001
 
+## C-MOD-001
+
+For r>0, declare the dimensionless reduced energy E=4*pi*integral[(r^2+2*sin(f)^2)*f'^2+2*sin(f)^2 +sin(f)^4/r^2]dr. Its exact Euler--Lagrange equation is (r^2+2*sin(f)^2)*f''+2*r*f'+sin(2*f)*(f'^2-1) -sin(2*f)*sin(f)^2/r^2=0. For f+epsilon*eta, the coefficient of epsilon^2 before integration by parts is A*eta'^2+B*eta*eta'+D*eta^2, where A=r^2+2*sin(f)^2, B=4*sin(2*f)*f', and D=2*cos(2*f)+2*cos(2*f)*f'^2 +2*sin(f)^2*(3*cos(f)^2-sin(f)^2)/r^2. Under endpoint data that cancel the boundary term, the self-adjoint quadratic operator is H*eta=-(A*eta')'+C*eta with C=D-B'/2 and separately declared kinetic weight W=A; its Green boundary form is A*(u*v'-u'*v). For the scale family f(exp(s)*r), the tangent is r*f' and the declared two-/four- derivative energy scales as exp(-s)*E2+exp(s)*E4, so E2=E4 gives zero first derivative but positive curvature E2+E4 rather than a dilation zero mode. For a regular-origin half-line realization with the declared massless tail f,f' tending to zero sufficiently fast, A/W tends to one and C/W tends to 2/r^2 and then zero, so the continuum edge is Omega^2=0. A positive finite-Dirichlet-box eigenvalue is therefore not below that continuum edge. These are exact conditional reduced-model identities. They derive no physical Skyrme action, soliton or bound state, nucleon, Roper, spin or isospin, quantization, absolute scale, or substrate realization.
+
+- Accepted in: `v0.56.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
+## C-MOD-002
+
+Conditional on C-MOD-001's declared massless radial model, two independent float64 routes give resolution-bounded evidence for the same nontrivial stationary branch and for a finite-box continuum ladder of its complete self-adjoint Hessian. DOP853 shooting from r=10^-4 with r*f'(R)+2*f(R)=0, rtol=10^-10, atol=10^-12, max step 0.02, walls R=12,18,24, and 801,1201,1601 uniform samples gives fitted origin slopes 2.007528281, 2.007528220, 2.007528217 and energy coefficients 1.230872939, 1.231275966, 1.231374077; the relative E2/E4 imbalance falls from 4.65e-4 to 5.81e-5, and independently finite-differenced EOM residuals fall by approximately four under each spacing halving. A consistent-mass linear-FEM generalized eigensolve with tolerance 10^-10 gives lowest squared box frequencies 0.131132401, 0.061072240, and 0.034754127 at those walls, maximum relative algebraic residual below 3e-9, and node counts 0,1,2,3 for the first four modes. An independent solve_bvp collocation route with tolerance 2e-8, Simpson quadrature, and a mass-lumped finite-volume tridiagonal eigensolve agrees on the profiles and lowest levels within 0.07 percent. The positive lowest level decreases under domain growth while its product with R^2 stabilizes; none lies below C-MOD-001's exact zero continuum edge. This is conditional numeric evidence for a stationary profile and wall-quantized continuum, not an existence or uniqueness proof, a positive bound mode, a resonance, a physical Skyrmion, nucleon or Roper, a quantum state, an absolute mass, or a substrate realization.
+
+- Accepted in: `v0.56.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-MOD-001
+
 ## C-MOM-001
 
 Let T^{mu nu} be a smooth symmetric tensor in inertial flat 3+1 coordinates satisfying partial_mu T^{mu nu}=0. Assume localization strong enough that the surface terms for total charges and the coordinate- weighted first and second moments vanish. Define M=integral T^{00} d^3x, P^i=integral T^{0i} d^3x, D^i=integral x^i T^{00} d^3x, and I^{ij}=integral x^i x^j T^{00} d^3x. Then dot M=0, dot P^i=0, dot D^i=P^i, ddot D^i=0, and ddot I^{ij}=2*integral T^{ij} d^3x. Thus the dipole is generally affine in time rather than constant. For normalized STF I_STF=I-delta*Tr(I)/3, ddot I_STF^{ij}=2*integral [T^{ij}-delta^{ij} T^{kk}/3] d^3x. The alternative source convention Q=3*I-delta*Tr(I) is exactly 3*I_STF and has three times this acceleration. Constant translation of the spatial origin leaves ddot I unchanged because ddot M and ddot D vanish. Nonzero boundary flux invalidates the conserved integrated charges, and without T^{i0}=T^{0i}, dot D^i need not equal P^i. These identities establish no gravitational field equation, retarded solution, TT coupling, radiating multipole order, nonzero quadrupole radiation, waveform, power, gravitational coupling, 1+1 contrast, or substrate realization.
@@ -461,6 +479,15 @@ Conditional on C-LIE-001, a nonnegative integer flavor count n_f, and the declar
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-LIE-001, C-RGE-001
+
+## C-SCL-001
+
+Let lambda, nu, S, E0, and epsilon0 be positive, with lambda a dimensionless classical Hessian eigenvalue, nu an inverse-time scale, S an action scale, and E0*epsilon0 a background energy. Conditional on a separately declared one-quantum harmonic interpretation, the dimensionless frequency is sqrt(lambda), the energy gap is S*nu*sqrt(lambda), and the gap-to-background ratio is S*nu*sqrt(lambda)/(E0*epsilon0). For every positive rho, replacing nu by rho*nu leaves the dimensionless Hessian problem unchanged while multiplying the gap and ratio by rho; analogous independent variation of S or E0 also changes the physical ratio. Thus a dimensionless squared classical frequency alone does not determine an excitation energy or mass ratio, and lambda itself cannot replace sqrt(lambda) in the harmonic gap. This exact conditional scale ledger supplies no quantization rule, value of S or nu, background normalization, spin, isospin, parity, particle or Roper dictionary, or substrate realization.
+
+- Accepted in: `v0.56.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-DIM-001
 
 ## C-SG-001
 

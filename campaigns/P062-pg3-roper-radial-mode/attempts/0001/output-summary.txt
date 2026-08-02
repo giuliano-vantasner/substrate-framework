@@ -1,0 +1,28 @@
+Native PG3 process exited with status zero after 166.65 seconds under Python
+3.12.2, NumPy 1.26.4, SciPy 1.14.1, and SymPy 1.14.0.
+
+Reported profile and static values:
+  f0(r_start) = 3.141573
+  f0(r_max) = 7.702e-11 at r_max=22
+  B1 = 1.23159
+  exact-RHS EOM residual = 8.188e-16
+  finite-difference EOM residual = 7.951e-06
+
+Reported finite-box spectrum and refinement:
+  Omega squared = 0.09995, 0.20301, 0.50000, 0.96959
+  N=8000 first level = 0.099953
+  N=16000 first level = 0.098329
+  relative change = 1.625e-02 under a declared 0.05 tolerance
+
+Reported auxiliary values:
+  |E2-E4|/E0 = 0.0003
+  (E2+E4)/E0 = 1.0000
+  interpolated radial-shift |dE|/E0 = 8.5741e-04
+  moment-of-inertia shape L = 5.9048
+  Omega squared divided by 3/(2L) = 0.3935
+  fabricated-profile residual = 4.29
+  fabricated-profile first level = 0.04538
+  tachyon-injected first level = -49.90005
+
+The source printed every named check as PASS and terminated with:
+  ALL 8 CHECKS PASS

@@ -1,0 +1,78 @@
+id: P062
+base_release: v0.55.0
+base_commit: d76ebb6
+source_baseline: substrate@6d1f4e0
+source_units: [PG3]
+question: >-
+  Derive a reusable, convention-explicit account of radial fluctuations about
+  a stationary spherical profile, including the kinetic weight, second-
+  variation operator, boundary conditions, Rayleigh quotient, spectral
+  ordering, and scale ledger; then audit whether PG3 actually constructs that
+  object and whether any resulting classical mode can be identified with the
+  physical Roper N(1440) without its pending dependencies or inserted data.
+invariants:
+  - A fluctuation spectrum is defined only after an action or paired kinetic and energy quadratic forms, a stationary background, a domain, and self-adjoint boundary conditions are fixed.
+  - A positive finite-box eigenvalue is not by itself a continuum bound state; the continuum threshold and domain refinement are load-bearing.
+  - The infinitesimal radial scaling tangent of f(lambda*r) is r*f'(r), not a translation mode, and it is an exact zero mode only when the declared action has the corresponding flat scale direction.
+  - Classical l=0 spatial symmetry does not supply spin one-half, isospin, fermionic quantization, baryon identity, or a Roper dictionary.
+  - A dimensionless frequency supplies no absolute gap or mass ratio without an independently derived time scale, background energy, and quantization rule in one convention.
+  - Pending B1, E2, E4, and S2 and all Roper or nucleon comparator values supply no accepted premise and cannot select a candidate.
+allowed_imports:
+  - C-SYM-001 stationary-Hessian logic and its exact stationarity requirement
+  - C-QBL-003 distinction between a classical scalar Hessian spectrum and particle masses or quantum labels
+  - C-SK-001 only as a conditional algebraic mass-matching identity with a free hedgehog coefficient, not as a solved hedgehog or nucleon theorem
+  - C-DIM-003 lossless mass-coordinate and free-ratio ledger
+  - exact variational calculus, Sturm-Liouville theory, Rayleigh-Ritz ordering, and finite-dimensional generalized eigenvalue algebra
+  - SciPy BVP and symmetric sparse or tridiagonal eigensolvers with explicit status, mesh, domain, tolerance, and refinement evidence when a complete declared radial model survives source audit
+  - PG3 at substrate@6d1f4e0 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce PG3 literally and retain only subclaims whose background
+      equation, stationary residual, quadratic forms, spectrum, scale, and
+      interpretation are exercised by sensitive checks.
+  - id: B
+    description: >-
+      Derive the general radial Sturm-Liouville problem from declared kinetic
+      and energy quadratic forms, including self-adjoint boundary terms,
+      Rayleigh quotient, generalized eigenvalues, continuum threshold, and
+      node ordering.
+  - id: C
+    description: >-
+      Derive a one-coordinate Derrick scaling reduction from a declared
+      profile family f(lambda*r), retaining its exact inertia and energy
+      curvature and testing rather than assuming whether the scale tangent is
+      zero or soft.
+  - id: D
+    description: >-
+      If PG3 exposes a complete Option-C action and boundary-value problem,
+      reconstruct its stationary profile and radial spectrum independently
+      with refined collocation and a separately assembled self-adjoint
+      discretization.
+  - id: E
+    description: >-
+      Prove the scale and interpretation ledger: identify which additional
+      premises are necessary to turn a classical dimensionless radial
+      frequency into an excitation energy, mass ratio, spin/parity state, and
+      physical Roper assignment.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and compatibility with existing classical and nonphysical ceilings
+  - derivation from an explicit action with stationary background, positive kinetic weight, self-adjoint domain, and dimensionally consistent conventions
+  - assumption and parameter economy with every scale, boundary, profile branch, and fitted coordinate visible
+  - correct regular-origin, asymptotic, scaling, zero-mode, continuum-threshold, and node-count limits
+  - sensitivity to operator coefficients, kinetic weight, boundary data, domain, mesh, tolerances, and scale insertions
+  - independent variational and numerical assembly without copied eigenvalues or physical comparator targets
+claims_proposed:
+  - provisional C-MOD-001 radial second-variation and generalized Sturm-Liouville theorem
+  - provisional C-MOD-002 conditional stationary-profile and refined radial-spectrum evidence if PG3's declared model closes
+  - provisional C-SCL-001 classical-mode scale and physical-interpretation identifiability ledger
+selected_candidate: [B, C, D, E]
+comparators_blinded_until: >-
+  The queue synopsis necessarily exposes a claimed positive eigenvalue near
+  0.097 and a Roper mass-ratio narrative. Neither number may enter equations,
+  tolerances, boundaries, branch selection, candidate ranking, or mutation
+  thresholds. The action-level obligations, candidate set, structural
+  criteria, and physical-interpretation ceilings are frozen here before the
+  PG3 executable or its printed numerical results are opened.
+status: accepted

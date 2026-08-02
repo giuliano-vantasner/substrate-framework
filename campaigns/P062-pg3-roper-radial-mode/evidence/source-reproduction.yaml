@@ -1,0 +1,22 @@
+source_unit: PG3
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-18/bridge_PG3_roper_radial_excitation.py
+sha256: 4e3b56ab04977d254a291dd56d28e3285d72e86b3d640e0cfc322d5818cf007f
+reproduced_at: '2026-08-02T20:35:00Z'
+command: python3 merged-framework/bridges/phase-18/bridge_PG3_roper_radial_excitation.py
+working_directory: /home/dan/substrate
+process_exit_status: 0
+elapsed_seconds: 166.65
+terminal_tally: ALL 8 CHECKS PASS
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+durable_output: proposals/P062-pg3-roper-radial-mode/attempts/0001/output-summary.txt
+attempt_result: proposals/P062-pg3-roper-radial-mode/attempts/0001/result.yaml
+note: >-
+  The source's version dispatch prefers numpy.trapezoid when available and
+  falls back to numpy.trapz under its pinned NumPy 1.26.4 environment. Current
+  framework code uses the centralized helper, which selects numpy.trapezoid
+  under the installed NumPy 2.5.1.

@@ -1,0 +1,30 @@
+attempt: 0003
+candidates: [B, C, D, E]
+status: passed
+command: PYTHONPATH=src .venv/bin/python -u proposals/P062-pg3-roper-radial-mode/verify.py
+process_exit_status: 0
+elapsed_seconds: 51.64
+terminal_tally: ALL 30 CHECKS PASS [P062]
+profile_domain_evidence:
+  - [12.0, 2.007528280970, 1.230872939282, 0.0004653373]
+  - [18.0, 2.007528220348, 1.231275965779, 0.0001378211]
+  - [24.0, 2.007528217203, 1.231374077319, 0.00005813157]
+finite_difference_stationarity_errors: [0.003760857, 0.0009429920, 0.0002360467]
+corrected_box_levels:
+  - [12.0, 0.131132401, 0.346885738, 0.650436514, 1.104758372]
+  - [18.0, 0.061072240, 0.173662046, 0.327647632, 0.523422073]
+  - [24.0, 0.034754127, 0.101076843, 0.196305780, 0.316290002]
+node_counts: [0, 1, 2, 3]
+mutation_levels:
+  baseline: 0.131132401
+  mixed_term_omitted: -0.230696129
+  kinetic_weight_doubled: 0.065566200
+  potential_shifted_by_minus_weight: -0.868867599
+verdict: >-
+  The exact self-adjoint Hessian, Derrick curvature, zero continuum threshold,
+  stationary Robin-tail profile, wall-collapse evidence, kinetic and potential
+  mutations, and free scale/quantization ledger all pass. The conditional
+  profile survives; a positive bound mode and Roper interpretation do not.
+next_attempt: >-
+  Independently rederive the mixed term, background, energy, and spectrum with
+  collocation, Simpson quadrature, and a mass-lumped finite-volume operator.

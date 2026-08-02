@@ -3188,3 +3188,144 @@ claims:
     accepted_in: v0.55.0
     challenges: []
     supersedes: []
+  - id: C-MOD-001
+    statement: >-
+      For r>0, declare the dimensionless reduced energy
+      E=4*pi*integral[(r^2+2*sin(f)^2)*f'^2+2*sin(f)^2
+      +sin(f)^4/r^2]dr. Its exact Euler--Lagrange equation is
+      (r^2+2*sin(f)^2)*f''+2*r*f'+sin(2*f)*(f'^2-1)
+      -sin(2*f)*sin(f)^2/r^2=0. For f+epsilon*eta, the coefficient of
+      epsilon^2 before integration by parts is A*eta'^2+B*eta*eta'+D*eta^2,
+      where A=r^2+2*sin(f)^2, B=4*sin(2*f)*f', and
+      D=2*cos(2*f)+2*cos(2*f)*f'^2
+      +2*sin(f)^2*(3*cos(f)^2-sin(f)^2)/r^2. Under endpoint data that cancel
+      the boundary term, the self-adjoint quadratic operator is
+      H*eta=-(A*eta')'+C*eta with C=D-B'/2 and separately declared kinetic
+      weight W=A; its Green boundary form is A*(u*v'-u'*v). For the scale
+      family f(exp(s)*r), the tangent is r*f' and the declared two-/four-
+      derivative energy scales as exp(-s)*E2+exp(s)*E4, so E2=E4 gives zero
+      first derivative but positive curvature E2+E4 rather than a dilation
+      zero mode. For a regular-origin half-line realization with the declared
+      massless tail f,f' tending to zero sufficiently fast, A/W tends to one
+      and C/W tends to 2/r^2 and then zero, so the continuum edge is
+      Omega^2=0. A positive finite-Dirichlet-box eigenvalue is therefore not
+      below that continuum edge. These are exact conditional reduced-model
+      identities. They derive no physical Skyrme action, soliton or bound
+      state, nucleon, Roper, spin or isospin, quantization, absolute scale, or
+      substrate realization.
+    provenance: campaigns/P062-pg3-roper-radial-mode/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P062-pg3-roper-radial-mode/verify.py
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0002/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0003/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0005/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/reviews/independent_radial_review.py
+      - campaigns/P062-pg3-roper-radial-mode/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-MOD-001-review.md
+      - tests/test_radial_modes.py
+    assumptions:
+      - The displayed dimensionless radial energy, positive radial coordinate, differentiability, kinetic mirror W=A, and endpoint or decay data are declared model premises rather than consequences of an accepted physical action.
+      - Integrations by parts require modes and coefficient functions regular enough that the displayed endpoint form vanishes; stationarity alone does not remove the mixed field/gradient Hessian term.
+      - The continuum-edge statement assumes the regular-origin half-line realization and the displayed massless coefficient limits; a different asymptotic potential, mass term, domain, or self-adjoint extension can change the edge.
+      - Derrick scaling concerns the explicitly declared family f(exp(s)*r); it is not a rigid translation and does not establish a spectral eigenfunction without a separate operator-domain test.
+    comparators: []
+    accepted_in: v0.56.0
+    challenges: []
+    supersedes: []
+  - id: C-MOD-002
+    statement: >-
+      Conditional on C-MOD-001's declared massless radial model, two
+      independent float64 routes give resolution-bounded evidence for the
+      same nontrivial stationary branch and for a finite-box continuum ladder
+      of its complete self-adjoint Hessian. DOP853 shooting from r=10^-4 with
+      r*f'(R)+2*f(R)=0, rtol=10^-10, atol=10^-12, max step 0.02, walls
+      R=12,18,24, and 801,1201,1601 uniform samples gives fitted origin slopes
+      2.007528281, 2.007528220, 2.007528217 and energy coefficients
+      1.230872939, 1.231275966, 1.231374077; the relative E2/E4 imbalance
+      falls from 4.65e-4 to 5.81e-5, and independently finite-differenced EOM
+      residuals fall by approximately four under each spacing halving. A
+      consistent-mass linear-FEM generalized eigensolve with tolerance
+      10^-10 gives lowest squared box frequencies 0.131132401, 0.061072240,
+      and 0.034754127 at those walls, maximum relative algebraic residual
+      below 3e-9, and node counts 0,1,2,3 for the first four modes. An
+      independent solve_bvp collocation route with tolerance 2e-8, Simpson
+      quadrature, and a mass-lumped finite-volume tridiagonal eigensolve
+      agrees on the profiles and lowest levels within 0.07 percent. The
+      positive lowest level decreases under domain growth while its product
+      with R^2 stabilizes; none lies below C-MOD-001's exact zero continuum
+      edge. This is conditional numeric evidence for a stationary profile and
+      wall-quantized continuum, not an existence or uniqueness proof, a
+      positive bound mode, a resonance, a physical Skyrmion, nucleon or Roper,
+      a quantum state, an absolute mass, or a substrate realization.
+    provenance: campaigns/P062-pg3-roper-radial-mode/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+    dependencies:
+      - C-MOD-001
+    evidence:
+      - campaigns/P062-pg3-roper-radial-mode/verify.py
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0002/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0003/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0004/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0005/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/reviews/independent_radial_review.py
+      - campaigns/P062-pg3-roper-radial-mode/evidence/source-audit.yaml
+      - memory/vantasner/decisions/C-MOD-002-review.md
+      - tests/test_radial_modes.py
+    assumptions:
+      - Every number is resolution-bounded float64 evidence for the exact declared model and stated solver settings; decimal agreement does not upgrade the result to an analytic half-line existence, uniqueness, or spectral theorem.
+      - The shooting branch uses origin data f(epsilon)=pi-C*epsilon and f'(epsilon)=-C plus the massless two-power Robin tail, while the independent collocation route fits the same branch with separately assembled boundary data.
+      - The finite-element and finite-volume spectra impose finite-box Dirichlet mode data and are classified only after comparison with C-MOD-001's independently derived half-line continuum edge.
+      - No physical comparator, PG3 target eigenvalue, pending B1/E2/E4/S2 unit, quantization rule, or particle dictionary enters branch selection, tolerances, or verdict thresholds.
+    comparators: []
+    accepted_in: v0.56.0
+    challenges: []
+    supersedes: []
+  - id: C-SCL-001
+    statement: >-
+      Let lambda, nu, S, E0, and epsilon0 be positive, with lambda a
+      dimensionless classical Hessian eigenvalue, nu an inverse-time scale, S
+      an action scale, and E0*epsilon0 a background energy. Conditional on a
+      separately declared one-quantum harmonic interpretation, the
+      dimensionless frequency is sqrt(lambda), the energy gap is
+      S*nu*sqrt(lambda), and the gap-to-background ratio is
+      S*nu*sqrt(lambda)/(E0*epsilon0). For every positive rho, replacing nu
+      by rho*nu leaves the dimensionless Hessian problem unchanged while
+      multiplying the gap and ratio by rho; analogous independent variation
+      of S or E0 also changes the physical ratio. Thus a dimensionless squared
+      classical frequency alone does not determine an excitation energy or
+      mass ratio, and lambda itself cannot replace sqrt(lambda) in the
+      harmonic gap. This exact conditional scale ledger supplies no
+      quantization rule, value of S or nu, background normalization, spin,
+      isospin, parity, particle or Roper dictionary, or substrate realization.
+    provenance: campaigns/P062-pg3-roper-radial-mode/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-DIM-001
+    evidence:
+      - campaigns/P062-pg3-roper-radial-mode/verify.py
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0003/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/attempts/0005/result.yaml
+      - campaigns/P062-pg3-roper-radial-mode/reviews/independent_radial_review.py
+      - campaigns/P062-pg3-roper-radial-mode/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SCL-001-review.md
+      - tests/test_radial_modes.py
+      - tests/test_action_scales.py
+    assumptions:
+      - The five displayed inputs are positive and independently supplied in one dimensionally consistent convention; lambda is a squared dimensionless classical frequency.
+      - The one-quantum gap rule is an explicit conditional interpretation and is not derived by the classical Hessian or by C-DIM-001.
+      - Any identification of S with Planck's constant, E0*epsilon0 with a particle mass, or the mode with a named quantum state requires separately accepted premises.
+    comparators: []
+    accepted_in: v0.56.0
+    challenges: []
+    supersedes: []

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 159
-  qualified: 52
+  pending_adjudication: 158
+  qualified: 53
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3741,8 +3741,33 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOD-001
+  - C-MOD-002
+  - C-SCL-001
+  qualification: PG3's declared static energy and finite-difference profile evidence survive conditionally,
+    but its radial bound-state and Roper headline do not. Exact second variation contains a mixed field/gradient
+    correction that PG3 omits. With the corrected self-adjoint Hessian and physical origin, independent
+    finite-element and finite-volume spectra collapse toward the exact zero massless continuum edge as
+    the outer wall grows. PG3's fixed-wall mesh refinement therefore establishes no positive bound mode.
+    Its radial shift is not a rigid three-dimensional translation, its quantum check assigns rather than
+    derives J=1/2, and its gap ratio compares a squared classical frequency to an energy while omitting
+    the action/time scale and quantization premises.
+  evidence:
+  - campaigns/P062-pg3-roper-radial-mode/reviews/source_adjudication.md
+  - campaigns/P062-pg3-roper-radial-mode/evidence/source-reproduction.yaml
+  - campaigns/P062-pg3-roper-radial-mode/evidence/source-audit.yaml
+  - campaigns/P062-pg3-roper-radial-mode/attempts/0001/result.yaml
+  - campaigns/P062-pg3-roper-radial-mode/attempts/0003/result.yaml
+  - campaigns/P062-pg3-roper-radial-mode/attempts/0005/result.yaml
+  - memory/vantasner/decisions/C-MOD-001-review.md
+  - memory/vantasner/decisions/C-MOD-002-review.md
+  - memory/vantasner/decisions/C-SCL-001-review.md
+  note: P062 derives the exact radial energy variation, Green form, Derrick and continuum guards, reconstructs
+    the conditional profile and box ladder by two independent numeric routes, and exposes every classical-to-
+    quantum scale premise. Canonical quadrature uses the shared helper that prefers the current trapezoid
+    name; no new deprecated NumPy alias is added.
 - source_unit: PG4
   phase: phase-18
   path: merged-framework/bridges/phase-18/bridge_PG4_goldberger_treiman.py

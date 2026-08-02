@@ -1,0 +1,17 @@
+attempt: 0004
+candidate: independent_review
+status: failed
+command: PYTHONPATH=src .venv/bin/python -u proposals/P062-pg3-roper-radial-mode/reviews/independent_radial_review.py
+process_exit_status: 1
+elapsed_seconds: 1.80
+completed_checks: 2
+failure: "TypeError: equations() takes 2 positional arguments but 3 were given"
+diagnosis:
+  category: implementation
+  mechanism: >-
+    SciPy solve_bvp passes the fitted parameter array to both the boundary and
+    ODE callbacks, while the independent ODE callback retained a parameter-free
+    two-argument signature.
+next_attempt: >-
+  Add the unused parameter slot to the independent callback and rerun every
+  unchanged exact, collocation, finite-volume, domain, and scale predicate.

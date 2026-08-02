@@ -1,0 +1,58 @@
+attempt: 0002
+candidates: [B, C, D, E]
+status: corrected_operator_and_domain_exploration_passed
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+exact_tests:
+  command: .venv/bin/python -m pytest tests/test_radial_modes.py -q
+  result: 10 passed
+  elapsed_seconds: 17.00
+profile_results:
+  - outer_radius: 12.0
+    points: 801
+    shooting_slope: 2.0075282809701847
+    energy_coefficient: 1.2308729392818205
+  - outer_radius: 18.0
+    points: 1201
+    shooting_slope: 2.0075282203477647
+    energy_coefficient: 1.2312759657790349
+  - outer_radius: 24.0
+    points: 1601
+    shooting_slope: 2.0075282172034767
+    energy_coefficient: 1.2313740773187027
+  - outer_radius: 30.0
+    points: 2001
+    shooting_slope: 2.0075282168271613
+    energy_coefficient: 1.2314090160460704
+corrected_spectra:
+  - outer_radius: 12.0
+    eigenvalues: [0.13113240098603374, 0.3468857380537959, 0.6504365135919692, 1.104758372285087]
+    node_counts: [0, 1, 2, 3]
+  - outer_radius: 18.0
+    eigenvalues: [0.06107224003037779, 0.17366204603725238, 0.32764763243992084, 0.5234220727195458]
+    node_counts: [0, 1, 2, 3]
+  - outer_radius: 24.0
+    eigenvalues: [0.03475412672211401, 0.10107684276888967, 0.19630577983726485, 0.3162900021670762]
+    node_counts: [0, 1, 2, 3]
+  - outer_radius: 30.0
+    eigenvalues: [0.022335272967085967, 0.06547907047071407, 0.12878944952058874, 0.21051418214754825]
+    node_counts: [0, 1, 2, 3]
+diagnosis:
+  category: candidate_concept
+  mechanism:
+    - Exact epsilon expansion and integration by parts produce the mixed-term correction absent from PG3.
+    - The Robin-tail profile slope and energy stabilize as the outer radius grows.
+    - Every corrected box level is positive and has the expected finite-box node ordering, but no level lies below the exact massless continuum threshold zero.
+    - The lowest level falls from 0.13113 to 0.02234 as the wall grows from 12 to 30, while its product with the squared wall radius approaches a constant near 20; this is wall quantization rather than a localized eigenvalue.
+    - The source's 0.097 comparator is unnecessary to reach the continuum classification.
+verdict: >-
+  Candidates B, C, and E remain structurally selected. Candidate D survives
+  only as conditional stationary-profile evidence and a finite-box continuum
+  regression; its proposed positive bound-mode reading is rejected.
+next_attempt: >-
+  Freeze scale-relative profile, finite-difference stationarity, solver
+  residual, domain, node-order, continuum, and mutation thresholds, then run a
+  primary verifier without the Roper or 0.097 values as selectors.

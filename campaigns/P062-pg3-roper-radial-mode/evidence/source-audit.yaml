@@ -1,0 +1,78 @@
+source_unit: PG3
+headline_verdict: not_established
+checks:
+  - id: PG3.1
+    source_verdict: pass
+    audit_verdict: qualified_numeric_profile
+    reason: >-
+      The source solves its declared finite-wall ODE and obtains B1=1.23159.
+      Independent Robin-tail shooting and collocation recover a domain-stable
+      slope near 2.007528 and B1 approaching 1.2314 without using 1.232 as a
+      selector. This is conditional profile evidence, not a nucleon theorem.
+  - id: PG3.2
+    source_verdict: pass
+    audit_verdict: partly_valid
+    reason: >-
+      The machine-epsilon residual substitutes the ODE right-hand side back
+      into the same residual and is algebraically zero by construction. The
+      finite-difference route is independent; P062 strengthens it with three
+      spacings whose max residual decreases by about four per refinement.
+  - id: PG3.3
+    source_verdict: pass
+    audit_verdict: rejected_bound_roper_reading
+    reason: >-
+      PG3 omits the mixed field/gradient Hessian correction, removes the
+      physical origin with a wall at 0.3, fixes another wall at 12, calls a
+      positive box level bound without deriving the continuum threshold, and
+      uses the exposed 0.097 value in its pass interval. The exact threshold
+      is zero and the corrected first box level collapses under domain growth.
+  - id: PG3.4
+    source_verdict: pass
+    audit_verdict: derrick_identity_only
+    reason: >-
+      The exact E2/E4 Derrick balance and positive logarithmic-scale curvature
+      survive. The one-dimensional interpolated radial shift is not a rigid
+      translation of the three-dimensional hedgehog and does not verify the
+      l=1 translational zero mode. The source prose also alternates between
+      calling dilation soft/zero and correctly computing it as stiff.
+  - id: PG3.5
+    source_verdict: pass
+    audit_verdict: rejected_label_assignment
+    reason: >-
+      The check sets roper_J equal to the declared nucleon J and proves only
+      elementary J(J+1) arithmetic and inequality with 3/2. It imports pending
+      collective quantization and does not derive spin, isospin, parity,
+      fermionic statistics, baryon identity, or a Roper dictionary from l=0.
+  - id: PG3.6
+    source_verdict: pass
+    audit_verdict: rejected_gap_ratio
+    reason: >-
+      The check requires only positivity and finiteness. It divides a squared
+      classical frequency by a rotational energy-like quantity. A harmonic
+      gap uses sqrt(lambda) and an explicit action and inverse-time scale, so
+      the displayed ratio is not a derived physical scale-free gap ratio.
+  - id: PG3.7
+    source_verdict: pass
+    audit_verdict: mesh_regression_only
+    reason: >-
+      Refining N at fixed artificial walls is useful box-regression evidence
+      but cannot establish an infinite-domain eigenvalue. Domain refinement is
+      load bearing and makes the corrected first level fall toward zero.
+  - id: PG3.8
+    source_verdict: pass
+    audit_verdict: partly_sensitive
+    reason: >-
+      Subtracting 50 times the mass matrix necessarily shifts every
+      generalized eigenvalue by minus 50 and shows only solver sign response.
+      Rejecting the fabricated profile because it misses the exposed 0.097
+      floor is comparator dependent. P062 instead mutates the exact mixed
+      term, kinetic weight, and potential and checks their derived effects.
+dependencies:
+  B1: pending_not_imported
+  E2: pending_not_imported
+  E4: pending_not_imported
+  S2: pending_not_imported
+selected_candidates: [B, C, E]
+qualified_candidate: D
+rejected_candidate: A
+proposed_claims: [C-MOD-001, C-MOD-002, C-SCL-001]

@@ -1,0 +1,41 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_rejected
+source_unit: PG3
+source_baseline: substrate@6d1f4e0
+source_sha256: 4e3b56ab04977d254a291dd56d28e3285d72e86b3d640e0cfc322d5818cf007f
+command: python3 merged-framework/bridges/phase-18/bridge_PG3_roper_radial_excitation.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+elapsed_seconds: 166.65
+process_exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+observations:
+  - The shooting profile reaches the finite wall and reports B1=1.23159.
+  - The source reports box levels 0.09995, 0.20301, 0.50000, and 0.96959 on the truncated interval 0.3 through 12.
+  - The N-to-2N first-level change is 1.625 percent at the same finite walls.
+  - The source assigns J=1/2 by setting roper_J equal to the previously declared nucleon J and checks the resulting labels.
+diagnosis:
+  category: target_statement_and_verifier
+  mechanism:
+    - The reported local potential coefficient is only one half of the pointwise field Hessian; it omits minus one half the radial derivative of the mixed field/gradient Hessian required by integration by parts.
+    - The stationarity residual using fpp_exact substitutes the ODE right-hand side back into the same ODE and is algebraically zero by construction; only the loose finite-difference cross-check probes the numerical profile independently.
+    - Both spectrum endpoints are artificial Dirichlet walls, including a lower wall at r=0.3 that removes the physical origin.
+    - The massless far-field operator has continuum threshold Omega squared equal to zero, so a positive finite-box level is not a bound state.
+    - The source uses the previously exposed 0.097 comparator in its pass interval and in its fabricated-profile rejection predicate.
+    - The radial shift made with one-dimensional interpolation is not a rigid translation of the three-dimensional hedgehog; the exact l=1 translation statement is asserted rather than evaluated.
+    - The quantum-number check is label assignment plus elementary rotational arithmetic and imports the unaccepted collective quantization map.
+    - Dividing a squared radial frequency by a rotational energy does not form a physical scale-free gap ratio without an additional time/action/energy convention; a harmonic gap would depend on the square root of the eigenvalue.
+verdict: >-
+  The native process and tally are valid reproduction evidence, and the
+  declared static profile is worth reconstructing. The source does not
+  establish a bound radial mode, a Roper state, or a physical gap ratio.
+next_attempt: >-
+  Derive the exact mixed-term-complete Hessian and massless threshold, replace
+  the finite zero tail with the r^-2 Robin condition, and measure the corrected
+  finite-box spectrum under domain expansion before freezing a primary
+  verifier.

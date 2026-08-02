@@ -1,0 +1,75 @@
+campaign: P062
+title: Exact radial Hessian, conditional continuum spectrum, and PG3 Roper audit
+source_baseline: substrate@6d1f4e0
+source_units: [PG3]
+base_release: v0.55.0
+release_after_adjudication: v0.56.0
+adjudicated_at: '2026-08-02T21:00:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B derives the mixed-term-complete self-adjoint radial Hessian,
+      Green boundary form, positive kinetic weight, and exact massless
+      continuum threshold from the declared reduced energy.
+  - id: C
+    reason: >-
+      Candidate C derives the logarithmic Derrick tangent and curvature,
+      proving that virial stationarity makes the declared dilation direction
+      stiff rather than automatically zero.
+  - id: D
+    reason: >-
+      Candidate D survives only in qualified form: two independent numerical
+      methods reproduce a conditional stationary profile and the corrected
+      finite-box continuum ladder, but no positive bound mode.
+  - id: E
+    reason: >-
+      Candidate E exposes every action, inverse-time, background-energy, and
+      quantization premise needed to interpret a squared classical frequency.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_a_positive_bound_roper_route_because_the_source_omits_the
+      mixed_hessian_correction_removes_the_origin_holds_artificial_walls_fixed
+      uses_a_zero_threshold_continuum_level_assigns_quantum_labels_and_compares
+      a_squared_frequency_to_an_energy
+claims:
+  - id: C-MOD-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-MOD-002
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+  - id: C-SCL-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  verifier: verify.py
+  exploration_result: attempts/0002/result.yaml
+  primary_result: attempts/0003/result.yaml
+  failed_independent_attempt: attempts/0004/result.yaml
+  independent_review: reviews/independent_radial_review.py
+  independent_result: attempts/0005/result.yaml
+  rejected_source_route: attempts/0001/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  radial_theorem_review: memory/vantasner/decisions/C-MOD-001-review.md
+  numeric_spectrum_review: memory/vantasner/decisions/C-MOD-002-review.md
+  scale_ledger_review: memory/vantasner/decisions/C-SCL-001-review.md
+source_disposition:
+  PG3: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P062-pg3-roper-radial-mode/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P062-pg3-roper-radial-mode/reviews/independent_radial_review.py
+  - .venv/bin/python -m pytest -q tests/test_radial_modes.py tests/test_numerics.py tests/test_action_scales.py tests/test_symmetry_breaking.py tests/test_qball_fluctuations.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted
