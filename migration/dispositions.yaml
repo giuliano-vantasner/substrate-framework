@@ -470,6 +470,43 @@ units:
       bias, inverse-target, and intensity-normalization ledgers through
       canonical and independent symbolic routes. It uses no numerical
       integration or NumPy trapezoidal alias.
+  OD3:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-LIN-001
+      - C-IDN-001
+    duplicates:
+      - C-LIN-001
+      - C-IDN-001
+    duplicate_reason: >-
+      OD3's valid exact content is affine substitution followed by the
+      coefficient-rank, augmented-consistency, left-null compatibility,
+      coordinate-identifiability, and reference-shift classification already
+      accepted through C-LIN-001 and C-IDN-001. Pinning any supplied y value
+      removes the second column, but the resulting four-by-one system has three
+      compatibility conditions and generic symbolic right-hand sides are
+      inconsistent. The source never checks them. AS6 does not physically
+      select four pi, AS7's alternative value is input-conditioned inverse
+      reconstruction, b0 and four row offsets remain free, the accepted
+      additive gravity baseline can invalidate the first row, and no physical
+      row provenance, observation, or covariance is supplied. OD3 adds no
+      distinct theorem, API, or consumer.
+    evidence:
+      - campaigns/P080-od3-beta-pinned-affine-audit/reviews/source_adjudication.md
+      - campaigns/P080-od3-beta-pinned-affine-audit/evidence/source-reproduction.yaml
+      - campaigns/P080-od3-beta-pinned-affine-audit/evidence/source-audit.yaml
+      - campaigns/P080-od3-beta-pinned-affine-audit/evidence/candidate-comparison.yaml
+      - campaigns/P080-od3-beta-pinned-affine-audit/evidence/primary-provenance.yaml
+      - campaigns/P080-od3-beta-pinned-affine-audit/attempts/0001/result.yaml
+      - campaigns/P080-od3-beta-pinned-affine-audit/attempts/0002/result.yaml
+      - campaigns/P080-od3-beta-pinned-affine-audit/attempts/0003/result.yaml
+      - memory/vantasner/decisions/OD3-duplicate-review.md
+    note: >-
+      P080 derives exact affine pinning, three-condition compatibility,
+      reference-covariance, nuisance-restoration, and source-oracle ledgers
+      through primary and independent symbolic routes. It adds no claim or
+      canonical API and uses no numerical quadrature or NumPy integration
+      alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

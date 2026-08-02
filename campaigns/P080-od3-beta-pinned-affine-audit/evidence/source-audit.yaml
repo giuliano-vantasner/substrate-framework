@@ -1,0 +1,119 @@
+source_unit: OD3
+headline_verdict: exact_affine_substitution_but_duplicate_rank_specialization_with_unclosed_pin_rows_and_compatibility
+checks:
+  - id: OD3.0
+    source_verdict: pass
+    audit_verdict: hard_coded_substitution_and_symbol_introspection_do_not_establish_pin_provenance
+    reason: >-
+      Substituting 4*pi into the symbol beta2 and subtracting 4*pi is an
+      assignment identity. A nonnumeric x may still encode a fitted or imported
+      value, and the predicate audits no action duality, normalization, fixed-
+      subfamily selection, observation, row, or offset.
+  - id: OD3.1
+    source_verdict: pass
+    audit_verdict: valid_affine_fold_with_supplied_rows_and_remaining_free_coefficient
+    reason: >-
+      Moving the supplied y column times y0 to the right-hand side is exact for
+      any pin. The check requires the hadronic and confinement right-hand sides
+      to contain b0; with k=8*pi^2/b0 and y0=1/(4*pi), k*y0=2*pi/b0 remains a
+      free supplied factor rather than a fully numeric prediction.
+  - id: OD3.2
+    source_verdict: pass
+    audit_verdict: coefficient_rank_only_omits_augmented_consistency
+    reason: >-
+      The four-by-one column has coefficient rank one and coefficient nullity
+      zero, but three row dependencies. Generic symbolic right-hand sides have
+      augmented rank two, no solution, and no identified coordinate. The source
+      computes no augmented rank and no left-null residual.
+  - id: OD3.3
+    source_verdict: pass
+    audit_verdict: conditional_column_removal_not_physical_selection
+    reason: >-
+      Re-floating the displayed y column restores rank two, so the pin is
+      algebraically load bearing. The column drop holds for every supplied pin
+      and does not prove that AS6 selects 4*pi, that AS7 selects 0.245, or that
+      either coordinate is physical.
+  - id: OD3.4
+    source_verdict: pass
+    audit_verdict: hard_coded_historical_counts_do_not_inventory_actual_parameters
+    reason: >-
+      Values five and two are literal assignments and one is the current
+      matrix column count. The predicate does not reconstruct OD-v1, audit
+      sector offsets, count b0 or the pin premise, restore the induced-gravity
+      coefficient and baseline, or establish causal elimination.
+  - id: OD3.5
+    source_verdict: pass
+    audit_verdict: forced_left_hand_sides_are_never_compared_with_supplied_rows
+    reason: >-
+      The source solves the gravity row, multiplies that solution by the other
+      three coefficients, and checks only symbol occurrence and absence of a
+      newly constructed symbol named y. Arbitrarily perturbing the other three
+      right-hand sides leaves the predicate green. Raw hadronic and confinement
+      observables also retain b0 and their offsets.
+  - id: OD3.G1
+    source_verdict: pass
+    audit_verdict: valid_load_bearing_pin_test_without_origin_or_value_selection
+    reason: >-
+      Adding the second column changes coefficient rank from one to two. This
+      verifies only that conditioning on y removes a coordinate; it does not
+      validate the source of the condition or make the four rows compatible.
+  - id: OD3.G2
+    source_verdict: pass
+    audit_verdict: tautological_pin_residual_and_symbolic_fit_trap
+    reason: >-
+      The beta predicate simplifies the literal expression 4*pi-4*pi and would
+      pass for any identically repeated value. Symbol introspection cannot tell
+      whether x was inferred from a supplied observation, and no compatibility
+      condition is evaluated.
+narrative_conflict:
+  prose_lines: 13-20
+  prose_value: beta_squared_approximately_0.245_from_AS7
+  executable_lines: 124-125
+  executable_value: beta_squared_equals_4_pi
+  accepted_verdict: >-
+    Neither value is physically selected. C-SYM-002 makes 4*pi conditional on
+    a supplied reciprocal map and fixed-subfamily premise; C-IDN-002 makes the
+    AS7 value input-conditioned inverse reconstruction.
+exact_specialization:
+  original_design: [[2, 0], [-4, 0], [-1, k], [-2, 2*k]]
+  original_coefficient_rank: 2
+  original_compatibility_relations:
+    - 2*g + m = 0
+    - -2*h + s = 0
+  pinned_design: [[2], [-4], [-1], [-2]]
+  pinned_coefficient_rank: 1
+  pinned_coefficient_row_dependencies: 3
+  pinned_augmented_rank_with_generic_rhs: 2
+  pinned_compatibility_relations:
+    - 2*g + m = 0
+    - g/2 + h - k*y_pin = 0
+    - g + s - 2*k*y_pin = 0
+  unique_solution_if_compatible: x = g/2 = -m/4 = -(h-k*y_pin) = -(s-2*k*y_pin)/2
+  accepted_owners: [C-LIN-001, C-IDN-001]
+nuisance_restoration:
+  design: pinned_column_plus_four_row_offsets
+  shape: [4, 5]
+  rank: 4
+  nullity: 1
+  x_identifiable: false
+  implication: >-
+    Treating the four symbolic offsets as unproved nuisance inputs makes every
+    right-hand side feasible and reopens the scale direction.
+dependency_audit:
+  AS1: qualified_C-RGE-003_with_b0_coupling_reference_and_conversion_free
+  AS2: qualified_dimensional_and_constitutive_content_only
+  AS3: qualified_C-GRV-001_with_free_coefficient_and_additive_baseline
+  AS4: duplicate_evidence_for_C-LIN-001_and_C-IDN-001
+  AS5: qualified_C-DIM-008_refutes_absolute_scale_generation
+  AS6: qualified_C-SYM-002_refutes_physical_fixed_subfamily_selection
+  AS7: qualified_C-IDN-002_classifies_its_coupling_as_input_conditioned_inverse
+  CF4: qualified_RGE_and_dimensional_content_without_nonzero_confinement
+  QCD3: qualified_one_loop_coefficient_with_field_content_and_QCD_identity_unproved
+  S5: qualified_narrow_algebra_without_mass_density_or_length_selection
+  G1: pending_not_imported
+  G2: pending_not_imported
+  G5: pending_not_imported
+selected_candidates: [B, C, D, E, F, G]
+rejected_candidate: A
+new_claims: []
+duplicates: [C-LIN-001, C-IDN-001]

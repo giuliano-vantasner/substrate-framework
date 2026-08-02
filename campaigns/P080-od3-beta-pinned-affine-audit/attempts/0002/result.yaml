@@ -1,0 +1,19 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G]
+status: failed_verifier_representation_preserved
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P080-od3-beta-pinned-affine-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P080-od3-beta-pinned-affine-audit/reviews/independent_od3_review.py
+failures:
+  - route: primary
+    symptom: frozen contract hash rejected before scientific checks
+    cause: verifier literal accidentally appended d5 to the correct 64-character SHA-256
+    repair: use the independently printed sha256sum value already frozen in evidence/frozen-proposal.yaml
+  - route: independent
+    symptom: inferred y expression failed a Python dictionary equality check
+    cause: SymPy returned (g+2*h)/(2*k), algebraically equal but structurally different from (g/2+h)/k
+    repair: compare both solved coordinates through exact simplify-to-zero residuals
+scientific_equations_changed: false
+contract_changed: false
+source_changed: false
+continuation: Rerun both exact routes as attempt 0003 after repairing only the verifier representations.

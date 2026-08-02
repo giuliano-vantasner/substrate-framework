@@ -1,0 +1,60 @@
+campaign: P080
+title: OD3 exact affine-pinning specialization and source-oracle audit
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [OD3]
+base_release: v0.72.0
+release_after_adjudication: v0.72.0
+adjudicated_at: '2026-08-03T18:00:00Z'
+selected_candidates:
+  - id: B
+    reason: Exact affine substitution survives but is ordinary conditioning of a supplied linear system.
+  - id: C
+    reason: The three left-null compatibility relations are already governed by C-LIN-001 and C-IDN-001.
+  - id: D
+    reason: Re-floating and nuisance restoration expose the source's hidden pin and offset assumptions.
+  - id: E
+    reason: Reference and reciprocal-coordinate covariance exclude an absolute numeric coordinate interpretation.
+  - id: F
+    reason: Same-rank compatible and incompatible cases expose the source oracles' insensitivity.
+  - id: G
+    reason: Complete nonduplication review finds no new claim, API, or consumer.
+competing_candidates:
+  - id: A
+    decision: rejected_for_missing_pin_scale_row_and_consistency_closure
+claims: []
+reviewed_existing:
+  - id: C-LIN-001
+    decision: unchanged_general_rank_semantics_subsume_OD3
+  - id: C-IDN-001
+    decision: unchanged_general_compatibility_and_reference_semantics_subsume_OD3
+  - id: C-SYM-002
+    decision: unchanged_and_does_not_select_fixed_subfamily_occupancy
+  - id: C-DIM-008
+    decision: unchanged_and_excludes_AS5_absolute_scale_premise
+evidence:
+  primary_verifier: verify.py
+  source_reproduction_attempt: attempts/0001/result.yaml
+  verifier_representation_failure: attempts/0002/result.yaml
+  adjudication_replay: attempts/0003/result.yaml
+  independent_rederivation: reviews/independent_od3_review.py
+  frozen_proposal: evidence/frozen-proposal.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  duplicate_review: memory/vantasner/decisions/OD3-duplicate-review.md
+source_disposition:
+  OD3: duplicate_evidence
+duplicates:
+  OD3: [C-LIN-001, C-IDN-001]
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P080-od3-beta-pinned-affine-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P080-od3-beta-pinned-affine-audit/reviews/independent_od3_review.py
+  - .venv/bin/python -m pytest -q tests/test_linear_systems.py tests/test_scale_constraints.py tests/test_coupling_duality.py tests/test_scale_provenance.py tests/test_induced_gravity.py tests/test_gravity_scale_confrontation.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

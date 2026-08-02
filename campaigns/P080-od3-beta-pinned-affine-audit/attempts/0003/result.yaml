@@ -1,0 +1,39 @@
+attempt: 0003
+candidates: [B, C, D, E, F, G]
+status: adjudication_validated
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_OD3_beta_pinned.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P080-od3-beta-pinned-affine-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P080-od3-beta-pinned-affine-audit/reviews/independent_od3_review.py
+  - .venv/bin/python -m pytest -q tests/test_linear_systems.py tests/test_scale_constraints.py tests/test_coupling_duality.py tests/test_scale_provenance.py tests/test_induced_gravity.py tests/test_gravity_scale_confrontation.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+scientific_tallies:
+  source: ALL 8 CHECKS PASS
+  primary: ALL 36 CHECKS PASS [P080]
+  independent: ALL 22 CHECKS PASS [P080-INDEPENDENT]
+  affected_canonical_tests: 102 passed
+  focused_governance_tests: 17 passed
+  integrated_repository_tests: 755 passed
+process_status: 0
+positive_result:
+  - Pinning a supplied coordinate is exact affine substitution and round-trips the original two-coordinate equations.
+  - The pinned coefficient column has rank one and three left-null compatibility conditions; generic symbolic right-hand sides are inconsistent.
+  - A compatible supplied branch has one conditional solution, while single-row and pin mutations break the exact compatibility oracle.
+  - Reference shifts preserve compatibility while moving the numeric coordinate; reciprocal-coordinate conjugation moves the numeric fixed point.
+  - Re-floating beta, restoring row offsets, or admitting the accepted inverse-gravity baseline defeats the advertised physical closure.
+  - The source retains b0, supplies no accepted row provenance or covariance, and never compares three forced values with their supplied equations.
+adjudication:
+  disposition: duplicate_evidence
+  duplicates: [C-LIN-001, C-IDN-001]
+  new_claims: []
+  release: v0.72.0_unchanged
+  queue_counts:
+    pending_adjudication: 140
+    qualified: 69
+    duplicate_evidence: 5
+    migrated: 3
+    out_of_scope: 1
+pending: []
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

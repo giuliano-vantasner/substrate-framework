@@ -1,0 +1,14 @@
+campaign: P080
+frozen_before_source_opening: true
+proposal_path: proposals/P080-od3-beta-pinned-affine-audit/proposal.yaml
+proposal_sha256: b12fabe8549ad427d18af52f4d7ee5e84f2b0474ed748542c1ecf885b30111c4d5
+memory_contract_path: memory/vantasner/proposals/P080-od3-beta-pinned-affine-audit.md
+memory_contract_sha256: 15789b8204ae74c72f514aa99875d14ad9df8dfee450348acfe6d203b662dbfe
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - source literal numerical constants and output
+  - source observed-value right-hand sides and fitted offsets
+  - source claims that beta is physically pinned or the scale is absolute
+  - pending sector dependency bodies and later consumer verdicts

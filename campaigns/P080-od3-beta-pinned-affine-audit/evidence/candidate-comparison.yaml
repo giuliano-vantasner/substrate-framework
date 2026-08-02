@@ -1,0 +1,55 @@
+campaign: P080
+selection_basis: frozen_structural_criteria_before_source_body
+comparators_opened: false
+candidates:
+  A:
+    decision: rejected
+    reason: >-
+      Literal promotion fails accepted beta-selection, absolute-scale, row-
+      provenance, augmented-consistency, nuisance, covariance, and verifier-
+      sensitivity gates.
+  B:
+    decision: selected_as_duplicate_specialization
+    reason: >-
+      Exact affine substitution moves the supplied pinned-column contribution
+      to the right-hand side and is ordinary conditioning of a supplied linear
+      system already governed by C-LIN-001 and C-IDN-001.
+  C:
+    decision: selected_as_duplicate_specialization
+    reason: >-
+      The rank-one column has three exact left-null compatibility relations;
+      uniqueness holds only on their common zero set, which C-LIN-001 and
+      C-IDN-001 already state generically.
+  D:
+    decision: selected_as_counterexample
+    reason: >-
+      Re-floating beta restores the prior two-coordinate system, while row
+      offsets and the accepted additive gravity baseline reopen or invalidate
+      the advertised closure.
+  E:
+    decision: selected_as_scope_ceiling
+    reason: >-
+      Exact reference shifts preserve compatibility while moving the numeric
+      log coordinate; reciprocal-coordinate conjugation also moves the numeric
+      fixed point, so neither value is an absolute observable.
+  F:
+    decision: selected_as_verifier_audit
+    reason: >-
+      Compatible and inconsistent right-hand sides have the same coefficient
+      rank, and source prediction checks stay green after three supplied rows
+      are perturbed.
+  G:
+    decision: selected_as_duplicate_ceiling
+    reason: >-
+      The complete surviving object adds no theorem, API, formal statement, or
+      consumer beyond accepted linear-system and scale-constraint machinery.
+selected_result: >-
+  Retain OD3 as duplicate evidence for C-LIN-001 and C-IDN-001, reject its
+  physical beta pin, absolute-scale, independence, prediction, and maximal-
+  falsifiability narratives, and add no claim or canonical API.
+selection_not_based_on:
+  - source pass tally
+  - numerical closeness to four pi or 0.245
+  - chronology or later correction prose
+  - coefficient row count or nullity alone
+  - hard-coded residual counts

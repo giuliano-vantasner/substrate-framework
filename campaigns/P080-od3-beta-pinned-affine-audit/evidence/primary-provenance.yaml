@@ -1,0 +1,39 @@
+campaign: P080
+base_release: v0.72.0
+accepted_interpretation_ceilings:
+  C-LIN-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/linear_systems.py
+    use: coefficient_rank_augmented_rank_consistency_and_equation_count
+  C-IDN-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_constraints.py
+    use: left_null_compatibility_provenance_identifiability_and_reference_covariance
+  C-SYM-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/coupling_duality.py
+    use: conditional_fixed_coordinate_and_normalization_covariance_ceiling
+  C-DIM-008:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_provenance.py
+    use: dimensionful_reference_and_unit_coordinate_ceiling
+  C-GRV-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/induced_gravity.py
+    use: free_coefficient_additive_baseline_and_conditional_log_row_ceiling
+  C-IDN-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/gravity_scale_confrontation.py
+    use: fixed_input_inverse_reconstruction_and_AS7_interpretation_ceiling
+predecessor_evidence:
+  source_unit: OD3
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: af96fa76a30c9ebb863e0a50b605ade5003a7595f28188ce7ca4d0884d67910c
+  authority: noncanonical_hash_pinned_attempt_evidence
+external_empirical_imports: []
+external_literature_imports: []
+exact_oracle: SymPy affine substitution, row reduction, nullspaces, augmented ranks, exact solves, differentiation, and coordinate conjugation
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

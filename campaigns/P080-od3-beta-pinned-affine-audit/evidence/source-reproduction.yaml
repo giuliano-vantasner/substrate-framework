@@ -1,0 +1,17 @@
+source_unit: OD3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-22/bridge_OD3_beta_pinned.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-22/bridge_OD3_beta_pinned.py
+bytes: 20906
+sha256: af96fa76a30c9ebb863e0a50b605ade5003a7595f28188ce7ca4d0884d67910c
+git_blob: 6834f14a12f083b29c7e7ef97d9ceb1ffb5e3e1f
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_OD3_beta_pinned.py
+process_exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+printed_coefficient_matrix: [[2], [-4], [-1], [-2]]
+printed_coefficient_rank: 1
+printed_coefficient_nullity: 0
+unprinted_augmented_rank_for_generic_symbolic_rhs: 2
+unprinted_left_nullity: 3
+numpy_quadrature_aliases: []
+reproduction_role: noncanonical_source_regression_only

@@ -1,0 +1,26 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: OD3
+source_path: merged-framework/bridges/phase-22/bridge_OD3_beta_pinned.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: af96fa76a30c9ebb863e0a50b605ade5003a7595f28188ce7ca4d0884d67910c
+git_blob: 6834f14a12f083b29c7e7ef97d9ceb1ffb5e3e1f
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_OD3_beta_pinned.py
+process_exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+surviving_exact_predicates:
+  - Substituting any separately supplied y value removes the second column and moves its contribution to the right-hand side.
+  - The displayed four-by-one coefficient column has rank one, coefficient nullity zero, and three row dependencies.
+  - Re-floating the displayed y column restores the displayed four-by-two matrix and coefficient rank two.
+headline_failures:
+  - The source never computes augmented rank or a left-null residual; generic symbolic right-hand sides are inconsistent and a unique solution exists only if three compatibility conditions hold.
+  - AS6 supplies only a conditional reciprocal fixed coordinate, not a physical requirement that the framework occupy beta-squared equals four pi.
+  - The opening correction instead calls AS7's approximately 0.245 value physical, but C-IDN-002 classifies that number as input-conditioned inverse reconstruction and the executable still uses four pi.
+  - The source's gravity, medium, hadronic, and confinement rows retain unaccepted physical provenance, free offsets, coefficients, an additive gravity baseline, and pending dependencies.
+  - The product k*y0 reduces to 2*pi/b0, and b0 is explicitly kept symbolic, so the hadronic and confinement observables are not fully numeric or free of residual parameters.
+  - OD3.5 solves only the gravity row, constructs three forced left-hand sides, and never compares them with the remaining supplied right-hand sides.
+  - OD3.0 and OD3.G2 prove hard-coded identities after substitution; they do not verify the origin, normalization, or physical selection of the pin.
+diagnosed_layer: source_claim_dependency_closure_augmented_consistency_and_verifier_semantics
+continuation: Candidates B-G proceed to the exact affine, compatibility, reference, nuisance, and duplication ledgers.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

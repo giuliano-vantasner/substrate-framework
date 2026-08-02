@@ -1,0 +1,58 @@
+id: P080
+base_release: v0.72.0
+base_commit: 8bb113f
+scientific_base_commit: 52e05eb
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [OD3]
+question: >-
+  Classify OD3's declared four-row one-coordinate affine system after a
+  supplied beta-squared coordinate is substituted, and determine whether the
+  substitution establishes a physically selected absolute scale or only
+  changes the right-hand side of a conditional compatibility problem.
+invariants:
+  - C-LIN-001 separates equation count, coefficient rank, augmented rank, consistency, uniqueness, and dependent rows.
+  - C-IDN-001 requires row provenance and left-null compatibility before a consistent log system identifies a coordinate.
+  - C-SYM-002 makes beta-squared equals 4*pi only the fixed coordinate of a separately supplied reciprocal map and supplies no physical fixed-subfamily occupancy.
+  - C-DIM-008 proves that AS5 retains a dimensionful reference and conversion and therefore does not generate an absolute scale.
+  - C-RGE-003 and C-GRV-001 retain their coefficients, baselines, reference scales, and physical interpretations as conditional inputs.
+  - C-IDN-002 shows that fixing an independently supplied coefficient can make a conditional inverse unique without deriving that coefficient or the target.
+  - Pinning one coordinate in a supplied affine system changes its right-hand side but cannot create row provenance, independence, compatibility, covariance, or physical selection.
+allowed_imports:
+  - C-LIN-001 and substrate_framework.linear_systems for exact coefficient and augmented-rank classification
+  - C-IDN-001 and substrate_framework.scale_constraints for exact left-null compatibility, provenance, coordinate status, and reference covariance
+  - C-SYM-002 and substrate_framework.coupling_duality only within the accepted conditional reciprocal-map ceiling
+  - C-DIM-008, C-RGE-003, C-GRV-001, and C-IDN-002 only within their accepted conditional statements
+  - P075 as adjudicated immutable evidence that the predecessor AS4 matrix already had two coefficient directions and two compatibility conditions
+  - OD3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts validate
+  - exact symbolic coefficients and right-hand-side symbols copied from OD3 with source provenance, but no empirical value or physical independence premise
+candidates:
+  - id: A
+    description: Reproduce OD3 literally and test whether AS5 and AS6 close the claimed absolute-scale and fixed-coupling premises.
+  - id: B
+    description: Treat beta-squared as a separately supplied constant and derive the exact affine reduction from four rows and two coordinates to a four-row one-coordinate system.
+  - id: C
+    description: Derive the three-dimensional left-nullspace and its three compatibility relations, separating a unique conditional solution from generic inconsistency.
+  - id: D
+    description: Restore beta-squared, sector offsets, induced coefficients, baselines, or reference scales as nuisance coordinates and recompute identifiability.
+  - id: E
+    description: Conjugate the log coordinate under a reference or unit change and test whether compatibility residuals remain invariant while the numeric coordinate shifts.
+  - id: F
+    description: Preserve the rank-one coefficient column while perturbing right-hand sides or provenance to construct incompatible and nonphysical counterexamples.
+  - id: G
+    description: Compare the complete specialization with C-LIN-001, C-IDN-001, C-SYM-002, and P075 to determine whether any nonduplicate claim or API remains.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for every pinned coordinate, row, coefficient, reference, and right-hand side
+  - exact affine substitution, coefficient and augmented ranks, left-nullspace, compatibility relations, and solution branches
+  - distinction between conditioning, inverse inference, physical selection, prediction, row independence, and consistency
+  - parameter and nuisance economy without silently fixing beta normalization, sector offsets, induced coefficients, baselines, or units
+  - reference-coordinate covariance, dimensional consistency, limiting recovery of the unpinned two-coordinate system, and mutation sensitivity
+  - reuse of accepted canonical APIs without promoting a duplicate specialization
+claims_proposed:
+  - no new claim unless parameter pinning yields a reusable exact theorem not entailed by C-LIN-001 and C-IDN-001
+comparators_blinded_until: >-
+  Both contract representations, their hashes, and repository validation are
+  frozen. Until then the OD3 body, literal numerical values, outputs, source
+  verdict, and pending dependency bodies remain closed; the generated queue
+  synopsis is navigation metadata only.
+status: accepted
