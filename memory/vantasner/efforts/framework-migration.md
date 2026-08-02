@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T02:05:00Z'
+updated: '2026-08-04T03:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,16 +23,16 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.75.0`, containing one hundred three claims.
-Its latest addition, C-COH-001, is the exact iid equal-amplitude directional
-phase-ensemble expectation, Gaussian pair coherence, normalization ceiling,
-conditional continuous threshold, and activated-factor ledger. It derives no
-emitter dynamics, total energy, effective temperature, stochastic rate,
-material barrier, precursor, nuclear channel, or payload. The latest terminal
-adjudication is P086 at commit `5fa7def`: NY3 is qualified because its exact
-conditional phase algebra survives, while its inserted scales, pending BD1/BD3
-dependencies, and absent gate-to-reaction interaction cannot establish the
-claimed firing mechanism.
+The current accepted frontier is `v0.76.0`, containing one hundred four claims.
+Its latest addition, C-SG-015, is the exact fixed-position sine-Gordon breather
+temporal parity, half-wave, Fourier-support, and fundamental-coefficient
+theorem. It derives no susceptibility, causal response, deposition or
+absorption law, seeded population, derivative-voltage coupling, breakdown
+gate, or engine mechanism. The latest terminal adjudication is P087 at commit
+`c77cae6`: SA1 is qualified because its exact field-trace theorem survives,
+while its full coefficient is misstated, its finite Gaussian is positive at
+DC, and its normalized free-scale overlap cannot establish the claimed
+physical transfer.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -58,7 +58,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 134 pending, 0 partially migrated, 3 migrated, 72 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 133 pending, 0 partially migrated, 3 migrated, 73 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -176,6 +176,7 @@ Attempts are append-only and individually reproducible.
 | 0104 | P084 exact Skyrme ratio/import/correction and NY1 audit | `campaigns/P084-ny1-skyrme-energy-unit-audit/attempts/0001` through `0002`, then the terminal queue replay | NY1 is duplicate evidence for C-SK-001; v0.74.0 unchanged; commit `e269953` | Twenty-eight primary and ten independent checks reproduce the conditional iff, derive the generic prefactor/power ledger, retain the empirical electron-energy coordinate, classify proton closure as substitution by construction, construct arbitrary-target correction and binding factors, and audit the ANW 30% wording; 5 canonical and 17 governance tests plus the single integrated gate pass all 793 tests | Audit NY2's one-unit nuclear-yield construction without converting NY1's duplicate conditional scale into a zero-import prediction, setting an uncomputed multi-Skyrmion binding coefficient to one, or selecting that coefficient by proximity to the 23.86/24 MeV comparators |
 | 0105 | P085 exact yield-coefficient/state/reaction/consumer and NY2 audit | `campaigns/P085-ny2-nuclear-yield-audit/attempts/0001` through `0004`, then the terminal queue replay | NY2 is duplicate evidence for C-SK-001; v0.74.0 unchanged; commit `265b2ee` | Thirty-four primary and eleven independent checks derive the free yield coefficient, multi-soliton sign family, arbitrary-target construction, radiative two-body kinematics, and source-oracle ceiling; the source supplies no multi-Skyrmion solution or reaction/deposition model, its empirical and engine comparators imply distinct nonunit coefficients, and its two predecessor consumers disagree, while 25 canonical and 17 governance tests, the 108905-comparison engine parity replay, and the single integrated gate pass all 793 tests | Audit NY3's coherence-nucleation gate without importing pending BD1/BD3 barrier claims, treating NY2's rejected physical yield as a payload, or inferring an N-squared coherent energy law and firing mechanism from phase-lock rhetoric |
 | 0106 | P086 exact iid phase-ensemble/threshold/factor and NY3 audit | `campaigns/P086-ny3-coherence-nucleation-audit/attempts/0001` through `0010`, then the promotion replay | accepted in v0.75.0 with NY3 qualified; commit `5fa7def` | Thirty-seven primary and twelve independent checks derive diagonal/pair phase counting, Gaussian coherence, normalization covariance, destructive-phase counterexamples, the unique continuous threshold, endpoint-order reversal, activated-factor signs, and source/dependency ceilings; the source inserts its two scales and population, its own consumer fixes total emission at N while on-axis intensity reaches N-squared, and no stochastic or nuclear coupling exists, while 22 focused and 17 governance tests, the 61-check engineering replay, and the single integrated gate pass all 807 tests | Audit SA1's seeding transfer function without equating odd-time parity or zero DC with a physical susceptibility, deriving dV/dt dependence from absence of a DC Fourier component, or treating a supplied spectral overlap and normalization as a seeded population prediction |
+| 0107 | P087 exact breather temporal-Fourier and SA1 transfer audit | `campaigns/P087-sa1-seeding-transfer-audit/attempts/0001` through `0008`, then the promotion and identifier-repair replay | accepted in v0.76.0 with SA1 qualified; commit `c77cae6` | Forty-two primary and fifteen independent checks derive fixed-position parity, half-wave support, the exact nonlinear fundamental coefficient, phase-origin covariance, finite-Gaussian DC, zero-DC counterkernels, overlap nonidentifiability, and consumer ceilings; the external mirror fails on six `np.trapz` calls and the C035 rungs still use inserted gates. The single integrated scientific gate passes all 810 tests, then the diff audit catches the reserved rejected C-SG-014 identifier, repairs P087 to C-SG-015, and adds a targeted governance guard without repeating the unchanged full suite | Audit SA2's dV/dt-not-V claim without importing SA1's rejected susceptibility/population interpretation, identifying DC-offset invariance with absolute-voltage independence above breakdown, or treating an inserted displacement-current spectrum and Michaelis curve as a derived seeding mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -662,11 +663,27 @@ at N times the source power and implements no barrier. Pending BD1/BD3 and
 duplicate NY1/NY2 supply neither stochastic escape nor a nuclear channel. Both
 exact routes use no numerical quadrature or NumPy integration alias.
 
+P087 adds C-SG-015's exact fixed-position temporal theorem. Oddness removes
+cosine coefficients, half-wave antisymmetry separately removes even sine
+coefficients, and integration by parts gives
+`b1(x)=8*a/(sqrt(1+a^2)+1)`, with core value `8*eta/(1+omega)` rather than
+SA1's leading `4*eta/omega`. A time shift rotates sine and cosine phases while
+preserving zero mean and line support. SA1 is qualified because an undriven
+field trace is not a susceptibility, its finite Gaussian pair is positive at
+DC and lacks the advertised odd comb, its per-spectrum normalization cancels
+the claimed magnitude input, and its free kernel amplitude realizes arbitrary
+continuous overlap coordinates without units, absorption, or counting. The
+external mirror fails under current NumPy at direct `np.trapz` calls, while the
+accepted framework already centralizes sampled trapezoidal work in the
+version-compatible helper. A final diff audit also prevents reuse of rejected
+NC4 identifier C-SG-014; P087 uses C-SG-015, and the repository validator and
+workflow contracts now reserve adjudicated rejected identifiers.
+
 ## Canonicalization
-The registry, `v0.75.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred three accepted claims. P001 through P086 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 134 pending, 0 partial, 3 migrated, 72 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.76.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred four accepted claims. P001 through P087 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 133 pending, 0 partial, 3 migrated, 73 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 134 pending, 3 migrated, 72 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is SA1. Its generated synopsis starts from the accepted sine-Gordon breather, notes that the fixed-position temporal core is odd, infers a zero-DC odd-harmonic sine comb and nonzero fundamental, then calls that Fourier structure a seeding susceptibility and defines a deposited-spectrum overlap divided by breather energy as population. It claims this produces the engine's voltage-slew rather than standing-voltage trigger. P087 must freeze literal-promotion, exact parity/Fourier, linear-response, interaction-kernel, spectral-overlap, normalization, slew-versus-voltage, arbitrary-target, source-oracle, and nonduplication candidates before opening the SA1 body or output. It must distinguish a field's Fourier coefficients from a physical susceptibility, supplied deposition spectrum, coupling matrix element, absorbed energy, and integer seeded population. Zero DC alone cannot derive differentiation with respect to voltage or a breakdown gate. A positive transfer claim requires an accepted drive-field interaction, response observable, units and normalization, causality, dissipation or absorption rule, and consumer implementation; absent objects must lead to a terminal source classification and continuation rather than a reduced objective.
+The effort remains active. D4 is discharged, but D1 remains open with 133 pending, 3 migrated, 73 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is SA2. Its generated synopsis depends on SA1 and SA4, treats SA1's rejected susceptibility and seeded-population readings as premises, then offers two alleged routes to a flat-in-voltage, rising-and-saturating-in-slew trigger: annihilation of a DC delta component and a displacement-current `omega^2*|V_tilde|^2` spectrum. P088 must freeze literal-promotion, exact distributional DC-shift, waveform-equivalence, electromagnetic constitutive, drive-interaction, amplitude/slew scaling, saturation, breakdown, consumer, dependency, source-oracle, and nonduplication candidates before opening the SA2 body or output. It must separate invariance under adding a constant to one waveform from independence of absolute voltage across physically different above-breakdown pulses, and a declared displacement-current identity from a derived coupling to C-SG-015's undriven field trace. A positive engine claim requires an accepted cell geometry and constitutive law, voltage-to-field boundary map, interaction and response observable, absorbed-energy or formation rule, waveform family, units, saturation mechanism, breakdown dynamics, and implemented consumer; missing dependencies require terminal qualification and continuation rather than inheritance from SA1 or pending SA4.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
