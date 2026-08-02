@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T00:05:00Z'
+updated: '2026-08-03T01:10:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,17 +23,16 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.58.0`, containing eighty-five claims:
-the prior sector results plus the exact conditional massive-parameter and
-spectral derivative-expansion theorem `C-LOC-001` and the cancellation-
-sensitive leading-power/Riesz theorem `C-KRN-001`. They derive the full beta
-coefficient sequence and convergence disk for one declared kernel, retain
-spectral moment convergence as a premise, refuse undecidable leading
-coefficients, expose exact cancellation and lower fractional terms, and
-derive the general convention-complete Riesz Green kernel. They establish no
-charged loop field, gauge action, exponent or dimension selection, physical
-Coulomb law, electric charge, or substrate electromagnetic sector. The null
-release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.59.0`, containing eighty-seven claims:
+the prior sector results plus the exact conditional positive-monomial
+identifiability theorem `C-IDN-001` and declared-covariance residual theorem
+`C-GLS-001`. They separate coordinate identification from row count and global
+uniqueness, derive left-null compatibility and reference covariance, retain
+row/covariance/interval provenance, and refuse inexact, nonreal, singular, or
+undeclared inputs. They establish no physical constraint row, observation,
+statistical independence, fitted constant, absolute scale, or substrate
+realization. The null release remains the recorded start state, not the
+current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -154,6 +153,7 @@ Attempts are append-only and individually reproducible.
 | 0082 | P062 exact radial Hessian, conditional profile, continuum classification, and PG3 audit | `campaigns/P062-pg3-roper-radial-mode/attempts/0001` through `0005`, then the promotion replay | accepted in v0.56.0 with PG3 qualified; commit `60933b1` | Thirty primary and sixteen independent checks derive the mixed-term-complete Hessian, Green form, Derrick curvature, zero continuum edge, refined Robin-tail profile, inverse-wall-squared box ladder, and free scale ledger; mutations expose PG3's omitted Hessian term, and the single full workflow gate passes all 463 tests | Audit PG4's Goldberger--Treiman construction without importing pending S1/S2, mistaking PCAC or pion-pole dominance for a framework derivation, or turning an algebraic solve-back into a physical prediction |
 | 0083 | P063 exact conditional axial Ward, pion-pole, discrepancy, and PG4 audit | `campaigns/P063-pg4-goldberger-treiman/attempts/0001` through `0006`, then the promotion replay | accepted in v0.57.0 with PG4 qualified; commit `42105b1` | Thirty-one primary and twenty independent checks derive the dimension-complete Minkowski current contraction, generalized PCAC/pole/remainder identities, pole-point residue, noncommuting limits, analytic discrepancy, and three-free-direction GT ledger; the source's omitted scale, assigned power, mixed matching, wrong pole sign, and solve-back fail sensitive probes, while the single full workflow gate passes all 474 tests | Audit D3S's claimed gap-to-locality-to-Coulomb chain without importing pending EM3/EM5/EM7/QCD5, treating a low-momentum series as a derived gauge action, or using an inserted massive loop integrand to select a fractional-Laplacian exponent |
 | 0084 | P064 exact conditional massive/spectral kernels, leading powers, Riesz transform, and D3S audit | `campaigns/P064-d3s-gap-locality-coulomb/attempts/0001` through `0005`, then the promotion replay | accepted in v0.58.0 with D3S qualified; commit `e2de2e4` | Thirty-six primary and sixteen independent checks derive the full beta sequence, convergence disk, spectral remainder, noncommuting limits, cancellation-sensitive exponent, fractional persistence, and general Riesz normalization; D3S inserts its loop and bare q2 kernels, misses an allowed exact cancellation, imports d=3, and regresses an exact r^-1 array, while the single full workflow gate passes all 484 tests | Audit OD's absolute-scale rank instrument and later flipped annotation without importing pending AS1-AS4/B1/CF4/G1-G5/M1/QCD5/S5 or mistaking row count, units, fitted comparators, or substituted constants for independent constraints |
+| 0085 | P065 exact log-scale identifiability, compatibility, uncertainty, and OD/AS4 audit | `campaigns/P065-od-absolute-scale-identifiability/attempts/0001` through `0006`, then the promotion replay | accepted in v0.59.0 with OD qualified; commit `5f57c68` | Forty primary and seventeen independent checks derive coordinate-nullspace identifiability, left-null compatibility, incremental coefficient/augmented information, reference covariance, exact intervals, and provenance-bearing GLS; OD's mixed null vector, hard-coded independence, fabricated rows, and insensitive guards fail audit, while AS4 has two directions plus two compatibility tests and its advertised free-length guard actually has nullity zero; the single full workflow gate passes all 501 tests | Audit OM1's claimed collapse of several source-sector minus signs without importing pending B1/G2/NA1/T1Z2/W7, conflating equal scalar outputs with one represented object, or duplicating C-TOP-001's accepted parity character |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -170,7 +170,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 156 bridge units remain pending, 3 are migrated, 55 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 155 bridge units remain pending, 3 are migrated, 56 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -404,11 +404,22 @@ array. The independent route derives the endpoint with a regulated spherical
 Fourier integral. Canonical P064 code uses exact SymPy algebra and no NumPy
 quadrature alias.
 
+P065 adds exact provenance-bearing positive-monomial log conversion,
+coordinate identifiability, left-null compatibility, incremental coefficient
+and augmented information, reference-shift covariance, exact interval
+intersection, and declared-covariance GLS. OD is qualified because its exact
+null direction mixes every declared coordinate, its physical rows and
+independence are assigned, and its guards do not test the advertised
+rejections. The pending AS4 annotation adds only two coefficient directions
+and two compatibility tests, and its free-length guard has nullity zero. The
+exact primary and independent routes use no numerical quadrature or NumPy
+integration alias.
+
 ## Canonicalization
-The registry, `v0.58.0` manifest, current release, generated claim index, and generated framework memory agree on eighty-five accepted claims. P001 through P064 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 156 pending, 0 partial, 3 migrated, 55 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.59.0` manifest, current release, generated claim index, and generated framework memory agree on eighty-seven accepted claims. P001 through P065 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 155 pending, 0 partial, 3 migrated, 56 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 156 pending, 3 migrated, 55 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential executable unit is OD, whose generated synopsis presents an absolute-scale over-determination diagnostic and a later annotation flipping its historical verdict by citing AS1-AS4. Every named dependency AS1-AS4, B1, CF4, G1-G3, G5, M1, QCD5, and S5 is pending or supplies at most separately qualified content and cannot enter as authority. The new campaign must preregister exact dimensional design-matrix, log-linear constraint, rank/nullspace, inconsistent-system, covariance-weighted residual, and identifiability constructions; freeze primitive units, unknown coordinates, constraint independence, uncertainty, comparator blinding, and absolute-versus-ratio semantics before opening the executable; and distinguish a reusable rank diagnostic from evidence that the framework actually supplies independent dimensionful equations or fixes a physical scale.
+The effort remains active. D4 is discharged, but D1 remains open with 155 pending, 3 migrated, 56 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential executable unit is OM1, whose synopsis claims that equal `-1` outputs from holonomy, Wilson-loop, Berry, parity, and center constructions are one unique nontrivial Z2 character. Its named B1, G2, NA1, T1Z2, and W7 dependencies remain pending and cannot supply object identifications or physical representations. The new campaign must freeze the domain group, quotient map, codomain, representation, loop composition, orientation/basepoint conventions, and equality notion before opening the executable; compare literal-source reuse with C-TOP-001's already accepted parity character, exact quotient-factorization and character-classification candidates, and a provenance-preserving product-of-oracles construction; and distinguish equal scalar character values from equality of topological spaces, loops, connections, group representations, operators, or physical mechanisms.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
