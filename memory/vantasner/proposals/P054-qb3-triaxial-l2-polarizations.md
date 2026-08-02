@@ -2,7 +2,7 @@
 description: Audit QB3 through regular l=2 dynamics and temporal-rank-safe polarization algebra
 author: vantasner
 created: '2026-08-02T09:30:00Z'
-updated: '2026-08-02T09:30:00Z'
+updated: '2026-08-02T12:10:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-QB3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P054 QB3 Triaxial l=2 and Polarization Audit
 
@@ -125,13 +125,19 @@ nonzero readouts to two independent modes.
 
 ## Attempts and Continuation
 
-Attempt 0001 will hash-check and reproduce QB3, then audit the exact radial
-equation, time averaging, angular field, regular origin, boundary conditions,
-moment normalization, TT basis, temporal-rank claim, solver status, and every
-reported numerical value. A literal failure routes first to Candidate B's
-exact positive theorem, then to Candidate C or D according to structural fit.
-An unsuccessful Floquet solve is not completion; representation, discretized
-monodromy, harmonic expansion, and finite-time alternatives remain available.
+Eight append-only attempts complete P054. Attempt 0001 reproduces QB3 and
+isolates its averaged operator, nonregular origin pair, finite wall,
+tautological localization test, incomplete energy density, and absent temporal
+rank oracle. Attempt 0002 passes 19 exact real-l2, STF, TT, averaging, origin,
+and rank checks. Attempt 0003 converges the corrected averaged box spectrum;
+its lowest state lies above threshold, follows the wall, and fails the full-
+equation equivalence gate. Attempt 0004 preserves an unevaluated-SymPy-integral
+oracle failure. Attempt 0005 repairs the representation through a Cartesian
+fourth-moment and Bessel-recurrence derivation and passes 22 checks. Attempt
+0006 passes the 22-check promotion verifier and 61 targeted consumer tests.
+Attempt 0007 preserves the first repository gate's invalid confidence token;
+attempt 0008 repairs only the frontmatter schema and passes the complete
+396-test workflow and whitespace gate.
 
 ## Debt Ledger
 
@@ -142,13 +148,13 @@ independent evidence, consumers, and canonical state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| QB3's literal eigenproblem, deformation, tensor, transform, and current-environment behavior are unaudited | Hash-check, run, and preserve the complete result or failure | open |
-| The claimed averaged radial eigenproblem may not solve C-PDE-003 | Substitute the full ansatz, compare operators exactly, and use Floquet/evolution evidence for any dynamical promotion | open |
-| Real l=2 angular and STF normalizations are not canonicalized for triaxial data | Implement exact basis-to-tensor and rotation APIs with wrong-normalization probes | open |
-| Two TT coordinate readouts may be conflated with two independent temporal modes | Define and mutate a temporal-rank oracle with proportional and phase-shifted counterexamples | open |
-| Regular finite-box nonaxisymmetric dynamics are unresolved | Complete Candidate C or D with status, residual, refinement, boundary, conservation, and independent-method evidence if a numerical claim is promoted | open |
-| Physical radiation and graviton language may exceed accepted imports | Audit local conservation, moment scale, conditional waveform premises, and every excluded interpretation | open |
-| Consumers and generated state are unreplayed | Complete impact analysis, targeted consumers, one final repository gate, and queue regeneration | open |
+| QB3's literal eigenproblem, deformation, tensor, transform, and current-environment behavior are unaudited | Hash-check, run, and preserve the complete result or failure | discharged by attempt 0001 and source reproduction |
+| The claimed averaged radial eigenproblem may not solve C-PDE-003 | Substitute the full ansatz, compare operators exactly, and use Floquet/evolution evidence for any dynamical promotion | discharged by C-PDE-009 and attempt 0003; no Floquet claim is promoted |
+| Real l=2 angular and STF normalizations are not canonicalized for triaxial data | Implement exact basis-to-tensor and rotation APIs with wrong-normalization probes | discharged by `triaxial_l2`, attempt 0002, and independent attempt 0005 |
+| Two TT coordinate readouts may be conflated with two independent temporal modes | Define and mutate a temporal-rank oracle with proportional and phase-shifted counterexamples | discharged by C-GW-007 and both exact verifiers |
+| Regular finite-box nonaxisymmetric dynamics are unresolved | Complete Candidate C or D with status, residual, refinement, boundary, conservation, and independent-method evidence if a numerical claim is promoted | discharged for P054 by exact m-degenerate transfer of accepted C-PDE-004; no new numerical dynamics claim is promoted |
+| Physical radiation and graviton language may exceed accepted imports | Audit local conservation, moment scale, conditional waveform premises, and every excluded interpretation | discharged by the source review and QB3 qualification |
+| Consumers and generated state are unreplayed | Complete impact analysis, targeted consumers, one final repository gate, and queue regeneration | discharged by attempts 0006/0008 and the promotion transaction |
 
 ## Review and Promotion Plan
 
@@ -162,8 +168,8 @@ generated docs and accepted memory, affected-consumer replay, one final
 
 ## Done Gate
 
-P054 closes only when the positive nonaxisymmetric l=2 object, full operator
-and regularity audit, tensor and temporal-rank theorem, any promoted numerical
-dynamics, source disposition, sensitive independent oracles, claim-level
+P054 is accepted in v0.48.0. The positive regular finite-time real-m2 object,
+full operator and regularity audit, exact tensor and temporal-rank theorem,
+qualified QB3 disposition, independent Cartesian/Bessel oracle, claim-level
 reviews, consumer replay, canonical synchronization, and empty campaign debt
-all pass. The parent migration then continues to the next pending unit.
+all pass. The parent migration remains active and continues to QB4.

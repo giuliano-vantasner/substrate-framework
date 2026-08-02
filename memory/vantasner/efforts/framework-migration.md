@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-02T09:05:00Z'
+updated: '2026-08-02T12:10:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.47.0`, containing sixty-six claims: the prior sector results plus exact even-harmonic energy selection and spherical STF null `C-PDE-007` and the qualified finite-box scalar spectrum `C-PDE-008`. The null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.48.0`, containing sixty-eight claims: the prior sector results plus exact real-l2 m-degeneracy and averaging ceiling `C-PDE-009` and the real-l2 triple-STF, TT-coordinate, and temporal-rank theorem `C-GW-007`. The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -48,7 +48,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 167 pending, 0 partially migrated, 3 migrated, 44 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 166 pending, 0 partially migrated, 3 migrated, 45 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -132,6 +132,8 @@ Attempts are append-only and individually reproducible.
 | 0070 | P051 corrected nonlinear PDE evolution and NC4 calibration audit | `campaigns/P051-nc4-pde-robustness/attempts/0001` through `0006`, then `scripts/validate.sh` | NC4 qualified; v0.45.0 unchanged; commit `8eaf104` | The literal source fails at removed `np.trapz`; a compatibility-only alias reproduces its 30 checks, while 36 primary and nine independent checks validate reusable leapfrog/DOP853 solvers and refute amplitude robustness with common-phase and phase-relabel counterexamples; the full workflow passed 365 tests | Audit QB1's claimed radial nonlinear eigenvalue/quasi-breather construction against accepted radial dynamics without importing its advertised eigenfrequency or lifetime |
 | 0071 | P052 exact radial harmonic channels and finite-box QB1 branch | `campaigns/P052-qb1-radial-harmonic-balance/attempts/0001` through `0011`, then `scripts/validate.sh` | accepted in v0.46.0 with QB1 qualified; commit `7659414` | Forty-one primary and fourteen independent checks derive the odd-harmonic projection, origin rule, and radiative-tail ceiling; converge one explicit N=9 finite-box branch with DFT/Gauss projection, shooting, collocation, and finite differences; and expose source comparator calibration and wall resonance; the full workflow passed 372 tests | Audit QB2's claimed clean twice-frequency line against C-PDE-005/C-PDE-006 and accepted moment/radiation ceilings without treating its exactly periodic truncation as an exact PDE solution |
 | 0072 | P053 exact energy selection and finite-box QB2 scalar spectrum | `campaigns/P053-qb2-even-harmonic-energy-spectrum/attempts/0001` through `0007`, then `scripts/validate.sh` | accepted in v0.47.0 with QB2 qualified; commit `b82b3f9` | Thirty-eight primary and twenty-two independent checks derive exact odd-bin absence, the complete cancellable local twice-frequency coefficient, and the spherical STF null; converge one declared core scalar line with residual, conservation, harmonic, temporal, radial, mesh, tolerance, wall, and independent Gauss/Simpson evidence; preserve a failed absolute roundoff threshold; and exclude eigenfunction-purity and radiation overclaims; the full workflow passed 383 tests | Audit QB3's claimed triaxial m=plus-or-minus-two construction against the accepted regular l=2 dynamics and finite-box harmonic branch without replacing a time-dependent perturbation problem by a time-averaged eigenvalue surrogate |
+| 0073 | P054 first independent Fourier representation and promotion frontmatter | `campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0004` and `attempts/0007` | failed and preserved | SymPy retained the direct twice-phase integral unevaluated after eleven independent checks; later the first full gate exposed two unsupported `verified` confidence tokens after governance passed | Change the exact representation through J0 differentiation/Bessel recurrence and repair only the configured frontmatter token |
+| 0074 | P054 exact real-l2 tensor/rank theorem and QB3 audit | `campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0001` through `0008`, then `scripts/validate.sh` | accepted in v0.48.0 with QB3 qualified; commit `f27e2cd` | Twenty-two primary and twenty-two independent checks derive m-degeneracy, the complete real-l2 triple-STF/TT map, averaging defect, regular-origin condition, and temporal rank; a refined averaged spectrum is a super-threshold wall state rather than Floquet evidence; the repaired full workflow passed 396 tests and now enforces complete current/pinned release equality | Audit QB4's waveform and power construction using C-GW-007's rank-one ceiling and only the accepted conditional gravity imports |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -148,7 +150,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 168 bridge units remain pending, 3 are migrated, 43 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 166 bridge units remain pending, 3 are migrated, 45 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -241,11 +243,23 @@ uses the shared current-first legacy-fallback dispatcher. An unjustified
 absolute odd-bin threshold is preserved, and the workflow now requires a
 declared scale model before replacing such a failed numerical oracle.
 
+P054 adds the exact radial-background real-l2 m-degeneracy and pointwise
+time-averaging defect, together with a complete unnormalized real-l2 density
+coefficient to triple-STF and TT-coordinate map and a temporal source-rank
+oracle. The accepted C-PDE-004 regular radial trace transfers exactly to a
+genuine finite-time real-m2 tensor `diag(q,-q,0)` while remaining rank one.
+QB3 is qualified because its averaged BVP has nonregular origin data, a
+super-threshold wall-following state, a manually zeroed localization guard,
+incomplete angular-gradient energy, and no rank-two coefficient trajectory.
+The source already prefers `np.trapezoid`. A preserved unevaluated-integral
+failure tightened symbolic-oracle guidance, and the v0.47 narrative-note
+erratum led the validator to require complete current/pinned manifest equality.
+
 ## Canonicalization
-The registry, `v0.47.0` manifest, current release, generated claim index, and generated framework memory agree on sixty-six accepted claims. P001 through P053 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 167 pending, 0 partial, 3 migrated, 44 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.48.0` manifest, current release, generated claim index, and generated framework memory agree on sixty-eight accepted claims. P001 through P054 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 166 pending, 0 partial, 3 migrated, 45 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 167 pending, 3 migrated, 44 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is QB3, which claims a genuinely triaxial `m=+/-2` perturbation and two-polarization waveform around the QB1 harmonic core. Its purported radial eigenmode must be audited against the regular time-dependent `C-PDE-003` l=2 equation, the finite-box and radiative-channel ceilings of `C-PDE-006`, m-degeneracy and real-harmonic conventions, source conservation, exact STF normalization, independent polarization data, and conditional gravity imports. A time-averaged potential or fitted box eigenvalue cannot silently replace the Floquet or driven perturbation problem, and no source frequency, deformation amplitude, waveform, or comparator may choose the candidate.
+The effort remains active. D4 is discharged, but D1 remains open with 166 pending, 3 migrated, 45 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next executable action is QB4, which consumes QB3's purported triaxial source to claim a two-polarization waveform and power. It must be audited against C-GW-007's distinction between two TT coordinates and temporal rank two, C-GW-001/C-GW-002's conditional waveform and projector premises, the exact normalized/triple moment conversion, C-PDE-009's averaging ceiling, the absence of a promoted QB3 Floquet mode, source conservation, derivative estimation, observer-frame conventions, and conditional rather than physical gravity. No reported amplitude, power, phase, or graviton-count comparator may choose the candidate.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
