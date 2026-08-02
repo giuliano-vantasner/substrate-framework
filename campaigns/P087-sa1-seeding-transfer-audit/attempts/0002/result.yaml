@@ -1,0 +1,23 @@
+attempt: 0002
+candidates: [A, G, H]
+status: external_consumer_replay_failed
+command: .venv/bin/python /home/dan/substrate/engineering/seeding_kernel.py
+process_status: 1
+failure_class: implementation_compatibility
+failure: >-
+  The hash-pinned noncanonical engineering mirror calls np.trapz at its first
+  spectrum normalization. The framework environment's current NumPy has no
+  trapz attribute and raises AttributeError before its terminal tally.
+diagnosis:
+  - SA1 itself uses manual trapezoid loops and does not call a NumPy quadrature alias.
+  - The engineering mirror directly calls np.trapz six times instead of routing sampled integration through a compatibility helper.
+  - The accepted framework's trapezoid_integral already prefers np.trapezoid and falls back to np.trapz for supported older NumPy versions.
+  - Repairing the read-only predecessor would not supply the missing susceptibility, absorption, population, or drive derivations.
+resolution: >-
+  Preserve the failed replay as consumer evidence. Do not edit the pinned
+  predecessor and do not treat a compatibility shim as scientific validation.
+  The promoted exact temporal-Fourier theorem has no dependency on this
+  consumer; the consumer's physical claims remain noncanonical and rejected.
+next_attempt: >-
+  Verify the exact canonical theorem and audit the external consumer by pinned
+  source structure, explicit algebra, and failure-sensitive probes.

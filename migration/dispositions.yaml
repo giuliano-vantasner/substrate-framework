@@ -717,6 +717,47 @@ units:
       source-oracle ledgers through primary and independent symbolic routes.
       Canonical and campaign work uses no numerical quadrature or NumPy
       integration alias.
+  SA1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-015
+    qualification: >-
+      SA1's exact fixed-position breather trace is odd about its declared time
+      origin, half-wave antisymmetric, zero mean, free of cosine and even sine
+      coefficients, and has the positive exact fundamental
+      8*a/(sqrt(1+a^2)+1), with core value 8*eta/(1+omega). The source instead
+      labels the leading term 4*eta/omega as the full coefficient. Its declared
+      finite-width Gaussian pair is positive at DC and is neither derived from
+      the field Fourier coefficients nor a causal susceptibility. Normalizing
+      each input spectrum erases its magnitude while the free kernel amplitude
+      scales the overlap arbitrarily. No driven equation, perturbing
+      interaction, response normalization, absorption law, units, integer
+      counting, dV/dt coupling, breakdown mechanism, or consuming C035 engine
+      closes the physical transfer claim. The external engineering mirror also
+      fails under current NumPy because it directly calls np.trapz six times;
+      named C035 rungs retain inserted Michaelis triggers.
+    evidence:
+      - campaigns/P087-sa1-seeding-transfer-audit/reviews/source_adjudication.md
+      - campaigns/P087-sa1-seeding-transfer-audit/evidence/source-reproduction.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/evidence/source-audit.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/evidence/consumer-audit.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/evidence/candidate-comparison.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/evidence/primary-provenance.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0001/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0002/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0003/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0004/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0005/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0006/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0007/result.yaml
+      - campaigns/P087-sa1-seeding-transfer-audit/attempts/0008/result.yaml
+      - memory/vantasner/decisions/C-SG-015-review.md
+    note: >-
+      P087 derives the exact temporal parity, half-wave, Fourier-support,
+      fundamental-coefficient, phase-origin, finite-DC, scaling, dimensional,
+      compatibility, and consumer ledgers through primary and independent
+      routes. Exact canonical work uses no numerical integration alias;
+      sampled framework work remains centralized in trapezoid_integral.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

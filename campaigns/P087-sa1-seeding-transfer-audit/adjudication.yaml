@@ -1,0 +1,62 @@
+campaign: P087
+title: Exact fixed-position sine-Gordon breather temporal-Fourier theorem
+source_baseline: substrate@6d1f4e0
+source_units: [SA1]
+base_release: v0.75.0
+release_after_adjudication: v0.76.0
+adjudicated_at: '2026-08-04T02:45:00Z'
+selected_candidates:
+  - id: B
+    reason: Exact oddness, half-wave antisymmetry, zero mean/cosine modes, and odd-only sine support follow from C-SG-001.
+  - id: C
+    reason: A full integration-by-parts derivation gives the positive fundamental coefficient and corrects SA1's leading-term label.
+  - id: E
+    reason: Inequivalent high-pass counterkernels prove that zero DC does not select a derivative voltage coupling.
+  - id: F
+    reason: Exact scaling and dimensional ledgers expose the normalized overlap as an arbitrary continuous coordinate, not an object count.
+  - id: G
+    reason: Source, mutation, finite-DC, normalization, version-compatibility, and consumer probes are headline-sensitive.
+  - id: H
+    reason: The field temporal theorem is distinct from accepted field definition and energy-observable harmonics while adding no response semantics.
+competing_candidates:
+  - id: A
+    decision: rejected_literal_promotion
+  - id: D
+    decision: retained_as_missing_response_requirements
+claims:
+  - id: C-SG-015
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  consumer_failure: attempts/0002/result.yaml
+  verifier_repair: attempts/0003/result.yaml
+  validated_route: attempts/0004/result.yaml
+  memory_command_repair: attempts/0005/result.yaml
+  integrated_gate: attempts/0006/result.yaml
+  identifier_repair: attempts/0007/result.yaml
+  record_validation: attempts/0008/result.yaml
+  independent_review: reviews/independent_temporal_fourier_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-SG-015-review.md
+source_disposition:
+  SA1: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P087-sa1-seeding-transfer-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P087-sa1-seeding-transfer-audit/reviews/independent_temporal_fourier_review.py
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+  - .venv/bin/python /home/dan/substrate/engineering/seeding_kernel.py (expected external compatibility failure, preserved in attempt 0002)
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

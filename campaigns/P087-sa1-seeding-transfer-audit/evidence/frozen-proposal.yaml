@@ -1,0 +1,23 @@
+campaign: P087
+frozen_before_source_opening: true
+proposal_path: proposals/P087-sa1-seeding-transfer-audit/proposal.yaml
+proposal_sha256: 6489d7d64f1c1c2b50abea71a069fc8c85465e0fd63913b48adbec58325eb724
+memory_contract_path: memory/vantasner/proposals/P087-sa1-seeding-transfer-audit.md
+memory_contract_sha256: 63f2aac98458e52310d37e3b9cea767eb0b7359f5b4d9253756475401be4a047
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P087-sa1-seeding-transfer-audit.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+queue_synopsis_disclosure: >-
+  Generated navigation metadata had already exposed the candidate odd-time,
+  zero-DC, odd-harmonic, nonzero-fundamental, spectral-overlap, energy-
+  denominator, and slew narrative. It did not open the source implementation,
+  coefficient formulas, literal spectra, check structure, executable output,
+  thresholds, or consumer details.
+comparators_blinded_at_freeze:
+  - SA1 source body, coefficient formulas, checks, and executable output
+  - numerical Fourier coefficients, spectral grids, widths, amplitudes, and overlap values
+  - transfer thresholds, population values, and source pass bands
+  - cited source bodies and claimed susceptibility authority
+  - downstream engine or engineering consumer implementation

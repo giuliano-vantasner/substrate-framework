@@ -1,0 +1,36 @@
+campaign: P087
+selection_order:
+  - accepted dependency closure
+  - exact parity and Fourier normalization
+  - separation of field, response, deposition, absorption, and counting objects
+  - parameter economy and dimensional closure
+  - nonduplication and governed consumer fit
+candidates:
+  - id: A
+    decision: rejected_literal_promotion
+    reason: Missing response, absorption, counting, drive, breakdown, and consumer dependencies; two headline formulas are false as stated.
+  - id: B
+    decision: selected
+    reason: Exact oddness, half-wave antisymmetry, zero mean/cosine modes, and odd-only sine support follow from C-SG-001.
+  - id: C
+    decision: selected_with_correction
+    reason: The full positive fundamental coefficient is exact but differs from SA1's leading-term expression.
+  - id: D
+    decision: requirement_confirmed_mechanism_absent
+    reason: No driven equation, perturbing interaction, input/output observables, retarded prescription, causality, or normalization exists.
+  - id: E
+    decision: selected_as_no_inference_ceiling
+    reason: Multiple inequivalent high-pass kernels vanish at DC, so zero mean does not select dV/dt coupling.
+  - id: F
+    decision: selected_as_nonidentifiability_ceiling
+    reason: Per-spectrum normalization removes deposition magnitude, free kernel amplitude sets any positive coordinate, and units/counting do not close.
+  - id: G
+    decision: selected
+    reason: Source checks, coefficient mutations, finite-DC probes, normalization scaling, and external replay distinguish regression from claim verification.
+  - id: H
+    decision: selected
+    reason: C-SG-015 is distinct from the accepted field definition and energy-observable harmonics while remaining a field-trace-only consequence.
+selection_basis: >-
+  B, corrected C, and the E/F ceilings are selected structurally before using
+  SA1's printed overlap values. Numerical closeness and the 21-check tally do
+  not choose the result.

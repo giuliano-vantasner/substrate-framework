@@ -9,6 +9,7 @@ from substrate_framework.sine_gordon import (
     breather_action_lattice_energy,
     breather_action_lattice_frequency,
     breather_action_secant_ratio,
+    breather_core_fundamental_sine_coefficient,
     boosted_breather_energy_momentum,
     boosted_breather_phase_components,
     breather_energy,
@@ -22,6 +23,8 @@ from substrate_framework.sine_gordon import (
     breather_peak_amplitude,
     breather_period,
     breather_secant_action_scale,
+    breather_temporal_argument_amplitude,
+    breather_temporal_fundamental_sine_coefficient,
     breather_threshold_deficit,
     hamiltonian_density,
     light_cone_derivatives,
@@ -233,6 +236,44 @@ def test_breather_formulas_at_exact_frequency() -> None:
     assert breather_action_secant_ratio(omega) == sp.Rational(3, 4) * sp.acos(
         sp.Rational(3, 5)
     )
+
+
+def test_exact_breather_temporal_parity_and_half_wave_support() -> None:
+    x, time = sp.symbols("x t", real=True)
+    omega = sp.Rational(3, 5)
+    period = breather_period(omega)
+    field = breather_field(x, time, omega)
+    assert sp.simplify(field.subs(time, -time) + field) == 0
+    assert sp.simplify(field.subs(time, time + period / 2) + field) == 0
+
+    phase = sp.symbols("y", real=True)
+    phase_trace = field.subs(time, phase / omega)
+    assert sp.simplify(phase_trace.subs(phase, 2 * sp.pi - phase) + phase_trace) == 0
+
+
+def test_exact_breather_temporal_fundamental_coefficient() -> None:
+    x = sp.symbols("x", real=True)
+    omega = sp.Rational(3, 5)
+    eta = sp.Rational(4, 5)
+    amplitude = breather_temporal_argument_amplitude(x, omega)
+    assert amplitude == 4 / (3 * sp.cosh(4 * x / 5))
+
+    coefficient = breather_temporal_fundamental_sine_coefficient(x, omega)
+    expected = 8 * amplitude / (sp.sqrt(1 + amplitude**2) + 1)
+    assert sp.simplify(coefficient - expected) == 0
+    assert breather_core_fundamental_sine_coefficient(omega) == 4
+    assert sp.simplify(coefficient.subs(x, 0) - 4) == 0
+
+    source_leading_term = 4 * eta / omega
+    assert source_leading_term == sp.Rational(16, 3)
+    assert source_leading_term != breather_core_fundamental_sine_coefficient(omega)
+
+
+def test_breather_fundamental_coefficient_has_correct_small_amplitude_limit() -> None:
+    amplitude = sp.symbols("a", positive=True)
+    exact = 8 * amplitude / (sp.sqrt(1 + amplitude**2) + 1)
+    assert sp.limit(exact / (4 * amplitude), amplitude, 0, dir="+") == 1
+    assert sp.simplify(exact - 8 * (sp.sqrt(1 + amplitude**2) - 1) / amplitude) == 0
 
 
 def test_breather_energy_second_moment_exact_phases_and_half_period() -> None:

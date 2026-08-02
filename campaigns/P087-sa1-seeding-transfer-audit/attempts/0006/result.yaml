@@ -1,0 +1,16 @@
+attempt: 0006
+candidates: [B, C, E, F, G, H]
+status: integrated_promotion_gate_passed
+command: scripts/validate.sh
+process_status: 0
+scientific_tallies:
+  repository_workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+  pytest: 810 passed
+  accepted_claims: 104
+  migration_units: 218
+  pending_units: 133
+  partial_units: 0
+boundary: >-
+  Unchanged v0.76.0 promotion boundary after targeted primary, independent,
+  focused canonical, governance, queue, generated-state, and memory checks.
+next_attempt: record-sensitive validation and commit; do not rerun the full unchanged boundary

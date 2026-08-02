@@ -7,6 +7,7 @@ from scripts.validate_repository import (
     validate_memory_contract_categories,
     validate_migration_inventory,
     validate_migration_unit_disposition,
+    validate_reserved_claim_identifiers,
 )
 from substrate_framework.governance import GovernanceError
 
@@ -47,6 +48,26 @@ def test_accepted_artifact_validation_rejects_missing_evidence(tmp_path) -> None
     provenance.write_text("status: accepted\n", encoding="utf-8")
     evidence.write_text("def test_claim(): pass\n", encoding="utf-8")
     validate_accepted_artifact_paths(tmp_path, registry)
+
+
+def test_rejected_claim_identifier_remains_reserved(tmp_path) -> None:
+    campaign = tmp_path / "campaigns/P1"
+    campaign.mkdir(parents=True)
+    (campaign / "adjudication.yaml").write_text(
+        "rejected_claims:\n"
+        "  - id: C-SG-014\n"
+        "    review: rejected\n"
+        "    epistemic: refuted\n",
+        encoding="utf-8",
+    )
+    registry = {
+        "claims": [{"id": "C-SG-014", "accepted_in": "v2"}]
+    }
+    with pytest.raises(GovernanceError, match="reuse adjudicated rejected"):
+        validate_reserved_claim_identifiers(tmp_path, registry)
+
+    registry["claims"][0]["id"] = "C-SG-015"
+    validate_reserved_claim_identifiers(tmp_path, registry)
 
 
 def test_migration_inventory_rejects_unknown_accepted_mapping(tmp_path) -> None:

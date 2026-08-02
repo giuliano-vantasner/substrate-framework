@@ -1,0 +1,26 @@
+campaign: P087
+source_unit: SA1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-25/bridge_SA1_seeding_transfer_function.py
+git_blob: afef0acafa3a75dcf28beafeca931b7b501e8e8b
+size_bytes: 13800
+sha256: b2cefcedb8c507b41defa4e43001bc7f4af052db39fc4b7481fd9a510514c72b
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA1_seeding_transfer_function.py
+process_status: 0
+stdout_bytes: 282
+stdout_sha256: 084c72efabbee87aab25289b1ffe1a67a667cd1e186bf9734e707a7a54cf55e1
+terminal_tally: ALL 21 CHECKS PASS
+printed_values:
+  kernel_dc_description: 0 in the sharp-comb limit
+  source_fundamental_description: 4*eta/omega_b
+  breather_energy: 11.3137
+  resonant_coordinate: 7.216878e-02
+  adiabatic_coordinate: 2.358730e-15
+  coordinate_ratio: 3.268e-14
+oracle_classification: >-
+  Read-only source regression. A clean exit and twenty-one passing predicates
+  do not validate the headline susceptibility, population, or slew mechanism.
+quadrature: >-
+  The source uses explicit 20,001-point manual trapezoid loops on [0,2]. It
+  calls neither np.trapz nor np.trapezoid and supplies no grid, domain, or
+  independent-method refinement.

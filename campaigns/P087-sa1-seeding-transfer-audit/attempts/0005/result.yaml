@@ -1,0 +1,12 @@
+attempt: 0005
+candidates: [G]
+status: validation_command_failed
+command: >-
+  memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P087-sa1-seeding-transfer-audit.md
+  /home/dan/substrate-framework/memory/vantasner/decisions/C-SG-015-review.md
+process_status: 2
+failure_class: command_usage
+failure: The memory CLI accepts one validation path rather than multiple positional paths.
+scientific_effect: none
+repair: Validate each absolute path in a separate invocation; both pass.
+next_attempt: proceed to record-sensitive repository validation

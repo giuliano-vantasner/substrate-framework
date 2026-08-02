@@ -1,0 +1,15 @@
+attempt: 0003
+candidates: [G]
+status: verifier_representation_failed
+command: PYTHONPATH=src .venv/bin/python proposals/P087-sa1-seeding-transfer-audit/verify.py
+process_status: 1
+passed_before_failure: 34
+failure_class: implementation
+failure: >-
+  A source-semantics probe searched for a sentence fragment spanning a source
+  line break and therefore missed the literal susceptibility assertion.
+scientific_effect: none
+repair: >-
+  Probe the stable load-bearing clause "fact IS the seeding susceptibility"
+  together with the chi_b definition and absent response-construction tokens.
+next_attempt: rerun the unchanged scientific oracle after the token-probe repair

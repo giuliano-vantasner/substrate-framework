@@ -79,6 +79,8 @@ Use four independent status axes for every claim:
 
 Proposals use `challenges` relationships. Only an accepted replacement may use `supersedes`. A proposal may be partly accepted: promote claims individually and retain rejected candidates as historical attempt evidence.
 
+Claim identifiers are durable provenance keys even when a proposal was rejected and never entered `governance/claims.yaml`. Before allocating an identifier, search the registry, campaigns, and durable memory; never reuse a provisional, rejected, refuted, superseded, or accepted identifier for a different statement.
+
 Migration dispositions are decisions, not queue labels. `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` units must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims. Never clear a source unit with an unsupported terminal word.
 
 Once adjudicated, move the campaign record into `campaigns/` without rewriting it. Create a release manifest pinning the exact accepted claim set and source commit. Release membership follows the independent review/acceptance decision (and `accepted_in`), not an `epistemic: active` filter: a current release may retain accepted `qualified` claims. Use the registry/release validator for closure instead of an ad hoc status subset. `current` means the latest accepted release, never the newest directory or working-tree prose. When a campaign migrates predecessor material, edit only `migration/dispositions.yaml` and regenerate `migration/source-claims.yaml`; never hand-edit that generated queue. Partial migration must name the unaccepted remainder rather than marking a whole bridge complete.

@@ -777,6 +777,15 @@ Let phi be a sufficiently regular real scalar field and, at a fixed coordinate p
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-001, C-SG-011, C-SG-012
 
+## C-SG-015
+
+For the C-SG-001 rest breather with 0<omega<1, eta=sqrt(1-omega^2), every fixed finite real position x, phase y=omega*t, and positive a_x=eta/(omega*cosh(eta*x)), the temporal field trace is m_x(y)=4*atan(a_x*sin(y)). It is 2*pi-periodic, odd about the declared origin, m_x(-y)=-m_x(y), and half-wave antisymmetric, m_x(y+pi)=-m_x(y). In the real Fourier convention a_n=(1/pi)*integral_0^(2*pi) m_x(y)*cos(n*y)dy and b_n=(1/pi)*integral_0^(2*pi) m_x(y)*sin(n*y)dy, its mean and every cosine coefficient vanish, every even sine coefficient vanishes, and only odd sine harmonics can remain. The exact fundamental coefficient is b_1(x)=8*a_x/(sqrt(1+a_x^2)+1)>0; at the core it is b_1(0)=8*eta/(1+omega). The expression 4*eta/omega is only the leading small-amplitude core term and becomes asymptotically equivalent as omega approaches one from below. A time-origin shift rotates sine and cosine phases while preserving zero mean and harmonic support. These statements concern the Fourier series of an undriven field trace. They establish no susceptibility, Green function, causal response, perturbing interaction, deposition or absorption spectrum, transfer efficiency, seeded population, derivative voltage coupling, breakdown law, engine replacement, event channel, or substrate realization.
+
+- Accepted in: `v0.76.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-SG-001
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

@@ -63,6 +63,45 @@ def validate_accepted_artifact_paths(root: Path, registry: dict) -> None:
                 )
 
 
+def validate_reserved_claim_identifiers(root: Path, registry: dict) -> None:
+    """Prevent accepted claims from reusing an adjudicated rejected identifier."""
+
+    accepted = {
+        claim["id"] for claim in registry["claims"] if claim["accepted_in"] is not None
+    }
+    rejected: dict[str, list[str]] = {}
+    for path in sorted((root / "campaigns").glob("*/adjudication.yaml")):
+        data = load_yaml(path)
+        candidates: list[dict] = []
+        for entry in data.get("rejected_claims", []) or []:
+            if isinstance(entry, dict):
+                candidates.append(entry)
+        for entry in data.get("claims", []) or []:
+            if isinstance(entry, dict) and (
+                entry.get("review") == "rejected"
+                or entry.get("epistemic") == "refuted"
+            ):
+                candidates.append(entry)
+        for entry in candidates:
+            claim_id = entry.get("id")
+            if not isinstance(claim_id, str) or not claim_id:
+                raise GovernanceError(
+                    f"{path.relative_to(root)}: rejected claim needs a non-empty id"
+                )
+            rejected.setdefault(claim_id, []).append(str(path.relative_to(root)))
+
+    collisions = sorted(accepted & rejected.keys())
+    if collisions:
+        details = "; ".join(
+            f"{claim_id} reserved by {', '.join(rejected[claim_id])}"
+            for claim_id in collisions
+        )
+        raise GovernanceError(
+            "accepted claim identifiers reuse adjudicated rejected provenance: "
+            f"{details}"
+        )
+
+
 def validate_migration_unit_disposition(
     root: Path,
     unit: dict,
@@ -224,6 +263,7 @@ def main() -> int:
     registry = load_yaml(registry_path)
     claim_ids = validate_registry(registry)
     validate_accepted_artifact_paths(root, registry)
+    validate_reserved_claim_identifiers(root, registry)
     migration_counts = validate_migration_inventory(root, registry)
 
     proposal_count = 0

@@ -56,6 +56,7 @@ Instantiate `memory-templates/research-arc.md` for physics work or `campaign-pro
 - invariants that must survive;
 - permitted imports and assumptions;
 - the claim delta and downstream consumers;
+- each proposed claim identifier and a repository-wide registry, campaign, and durable-memory collision search, because rejected provisional identifiers remain reserved;
 - what each oracle must establish;
 - the empty-debt and canonicalization gates.
 

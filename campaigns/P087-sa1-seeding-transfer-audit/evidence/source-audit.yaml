@@ -1,0 +1,95 @@
+campaign: P087
+source_unit: SA1
+source_check_count: 21
+checks:
+  - id: SA1.1
+    source_predicate: breather solves the normalized sine-Gordon equation at omega=1/sqrt(2)
+    verdict: valid_duplicate
+    reason: Exact specialization of accepted C-SG-001.
+  - id: SA1.2
+    source_predicate: breather solves the normalized sine-Gordon equation for general omega
+    verdict: valid_duplicate
+    reason: C-SG-001 already owns the exact field and equation residual.
+  - id: SA1.3
+    source_predicate: the core trace has the displayed arctangent-of-sine form
+    verdict: valid_duplicate
+    reason: Direct x=0 substitution in C-SG-001.
+  - id: SA1.4
+    source_predicate: the fixed-position trace is odd in the chosen time origin
+    verdict: accepted_in_C-SG-015
+    reason: Exact arctangent and sine parity; it constrains a field trace, not dV/dt coupling.
+  - id: SA1.5
+    source_predicate: the leading sine term has zero complete-period integral
+    verdict: valid_weak_regression
+    reason: Exact but weaker than the full half-wave cancellation theorem.
+  - id: SA1.6
+    source_predicate: first arctangent-series monomial has zero complete-period integral
+    verdict: valid_weak_regression
+    reason: Odd sine-power cancellation is exact but redundant.
+  - id: SA1.7
+    source_predicate: third-power arctangent-series monomial has zero complete-period integral
+    verdict: valid_weak_regression
+    reason: Termwise cancellation does not establish global Taylor convergence when eta/omega exceeds one.
+  - id: SA1.8
+    source_predicate: fifth-power arctangent-series monomial has zero complete-period integral
+    verdict: valid_weak_regression
+    reason: The full result follows from symmetry without a restricted series.
+  - id: SA1.9
+    source_predicate: seventh-power arctangent-series monomial has zero complete-period integral
+    verdict: valid_weak_regression
+    reason: The sampled truncation adds no global-series theorem.
+  - id: SA1.10
+    source_predicate: m(T-t)=-m(t) gives exact complete-period cancellation
+    verdict: accepted_in_C-SG-015
+    reason: This half-wave pairing establishes zero mean and, separately from oddness, removes even sine harmonics.
+  - id: SA1.11
+    source_predicate: high-precision numerical DC integral is near zero
+    verdict: duplicate_numeric_regression
+    reason: Numerical quadrature is unnecessary after the exact symmetry proof.
+  - id: SA1.12
+    source_predicate: the fundamental sine coefficient is nonzero because the leading term is nonzero
+    verdict: conclusion_valid_proof_invalid
+    reason: A nonzero first series contribution does not preclude cancellation by the remaining series; C-SG-015 instead derives the full positive coefficient.
+  - id: SA1.13
+    source_predicate: the full fundamental coefficient equals 4*eta/omega
+    verdict: rejected
+    reason: That is only the leading arctangent term. The exact core coefficient is 8*eta/(1+omega), equal asymptotically only as omega approaches one.
+  - id: SA1.14
+    source_predicate: cosine projection at the fundamental vanishes
+    verdict: qualified
+    reason: The computed projection is only for the leading term; C-SG-015 proves all cosine coefficients vanish for the full trace in the chosen origin.
+  - id: SA1.15
+    source_predicate: chi_b at zero tends to zero as tau tends to infinity
+    verdict: conditional_declared_kernel_limit
+    reason: True for the inserted Gaussian pair, but finite-width chi_b(0)=2*A*exp(-omega_b^2*tau^2)>0 and the sharp-width limit is not the advertised omega-to-zero limit.
+  - id: SA1.16
+    source_predicate: chi_b at omega_b tends to A as tau tends to infinity
+    verdict: conditional_declared_kernel_limit
+    reason: True for the inserted pair; no response derivation selects that kernel or normalization.
+  - id: SA1.17
+    source_predicate: the declared Gaussian pair prefers omega_b to zero in the sharp-width limit
+    verdict: conditional_declared_kernel_limit
+    reason: Exact for the arbitrary pair but not evidence that the field Fourier series is a susceptibility or odd-harmonic comb.
+  - id: SA1.18
+    source_predicate: the normalized resonant overlap coordinate is positive
+    verdict: source_specific_regression
+    reason: Positivity follows for the inserted positive Gaussian functions and free amplitude; it is not a seeded object count.
+  - id: SA1.19
+    source_predicate: the normalized adiabatic overlap coordinate is below 1e-6
+    verdict: source_specific_regression
+    reason: Depends on inserted center, widths, tau, amplitude, [0,2] domain, and grid, without refinement.
+  - id: SA1.20
+    source_predicate: adiabatic-to-resonant coordinate ratio is below 1e-3
+    verdict: source_specific_regression
+    reason: The ratio is a declared-kernel shape comparison, not a response, absorption, or population theorem.
+  - id: SA1.21
+    source_predicate: E_b=16*eta is positive
+    verdict: valid_duplicate
+    reason: Accepted C-SG-002; division by it does not supply absorption efficiency or integer counting.
+headline_verdict: >-
+  SA1 contains the distinct exact C-SG-015 temporal-Fourier theorem. It does
+  not derive a susceptibility, causal transfer function, deposition-to-
+  population law, derivative voltage coupling, breakdown gate, or C035
+  consumer. Its full fundamental coefficient and finite-width DC statements
+  are misstated, and its normalized overlap erases the claimed spectrum
+  magnitude while retaining a free kernel scale.

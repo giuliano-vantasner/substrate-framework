@@ -98,6 +98,57 @@ def breather_field(x: Any, t: Any, omega: Any) -> sp.Expr:
     )
 
 
+def breather_temporal_argument_amplitude(x: Any, omega: Any) -> sp.Expr:
+    """Return the positive fixed-position arctangent amplitude ``a(x)``.
+
+    With phase ``y=omega*t``, the exact rest breather at a fixed finite
+    position is ``4*atan(a(x)*sin(y))``.  This quantity is a field-profile
+    parameter, not a drive coupling or susceptibility normalization.
+    """
+
+    coordinate = sp.sympify(x)
+    frequency = _frequency(omega)
+    inverse_width = breather_inverse_width(frequency)
+    return sp.simplify(
+        inverse_width
+        / (frequency * sp.cosh(inverse_width * coordinate))
+    )
+
+
+def breather_temporal_fundamental_sine_coefficient(
+    x: Any,
+    omega: Any,
+) -> sp.Expr:
+    """Return the exact fixed-position fundamental sine coefficient.
+
+    The real Fourier convention is
+
+    ``b_1(x)=(1/pi)*integral_0^(2*pi) phi(x,y/omega)*sin(y) dy``.
+
+    For ``a=a(x)`` the exact result is
+    ``8*a/(sqrt(1+a**2)+1)``.  It is the coefficient of the field trace,
+    not a response function, spectral density, or absorbed-energy kernel.
+    """
+
+    amplitude = breather_temporal_argument_amplitude(x, omega)
+    return sp.simplify(8 * amplitude / (sp.sqrt(1 + amplitude**2) + 1))
+
+
+def breather_core_fundamental_sine_coefficient(omega: Any) -> sp.Expr:
+    """Return the exact core coefficient ``8*eta/(1+omega)``.
+
+    This is the ``x=0`` specialization of
+    :func:`breather_temporal_fundamental_sine_coefficient`.  Its leading
+    small-amplitude form is ``4*eta/omega``; that approximation is not the
+    full coefficient away from the ``omega -> 1`` limit.
+    """
+
+    frequency = _frequency(omega)
+    return sp.simplify(
+        8 * breather_inverse_width(frequency) / (1 + frequency)
+    )
+
+
 def sine_gordon_residual(field: Any, x: sp.Symbol, t: sp.Symbol) -> sp.Expr:
     """Return ``phi_tt - phi_xx + sin(phi)`` for a symbolic field."""
 

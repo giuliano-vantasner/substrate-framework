@@ -1,0 +1,31 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H]
+status: source_reproduced_headline_rejected
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA1_seeding_transfer_function.py
+  - hash-pinned read-only inspection of the SA1 source and accepted sine-Gordon authority
+scientific_tallies:
+  source: ALL 21 CHECKS PASS
+process_status: 0
+source_stdout_bytes: 282
+source_stdout_sha256: 084c72efabbee87aab25289b1ffe1a67a667cd1e186bf9734e707a7a54cf55e1
+positive_result:
+  - The accepted rest breather is odd in time at every fixed position.
+  - Its half-period antisymmetry removes every even temporal harmonic and its exact fundamental sine coefficient is strictly positive.
+  - The source's symmetric Gaussian pair has a conditional resonant-to-low-frequency overlap preference for its inserted widths and grid.
+headline_failure:
+  - The source computes only the leading arctangent-series contribution 4*eta/omega and mislabels it as the full fundamental coefficient; the exact core coefficient is 8*eta/(1+omega).
+  - The declared finite-width Gaussian kernel is positive at zero frequency, with chi(0)=2*A*exp(-omega_b^2*tau^2), and reaches zero only in a distinct sharp-width limit.
+  - A Fourier spectrum of an undriven field is not a susceptibility without an interaction, input and output observables, a retarded prescription, causality, and normalization.
+  - Zero mean does not identify a time-derivative drive coupling or the engine's dV/dt law.
+  - Normalizing each deposition spectrum by its own integral erases the supplied magnitude, while the free kernel amplitude scales the reported overlap arbitrarily.
+  - The overlap has no closed unit, absorption-efficiency, integer-count, breakdown, or downstream-consumer ledger and therefore is not a seeded breather population.
+next_attempt: >-
+  Extract the distinct exact fixed-position temporal-Fourier theorem into the
+  sine-Gordon API, independently rederive its coefficient and selection rules,
+  and retain the susceptibility, transfer, population, slew, and breakdown
+  readings as explicit rejected ceilings.
+quadrature_note: >-
+  Exact adjudication uses symbolic identities only. The source uses a manual
+  trapezoid loop; canonical sampled work must use trapezoid_integral and no
+  direct NumPy integration alias.

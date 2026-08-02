@@ -1,0 +1,17 @@
+attempt: 0007
+candidates: [H]
+status: claim_identifier_collision_repaired
+command: repository-wide claim-identifier and durable-memory diff audit
+process_status: 0
+failure_class: governance_provenance
+failure: >-
+  C-SG-014 was absent from the accepted registry but already named a rejected
+  NC4 proposal in the tracked C-SG-014 review. Allocating it to P087 would
+  reuse a durable provenance key for a different statement. Registry and
+  integrated validation did not detect the semantic collision.
+repair:
+  - Restore the tracked NC4 C-SG-014 review verbatim.
+  - Allocate C-SG-015 to P087 and update every campaign, registry, release, disposition, generated, and memory consumer.
+  - Codify repository-wide identifier collision search in AGENTS.md, the physics skill, and the campaign proposal template.
+scientific_effect: none; the exact theorem, dependency closure, code, and oracle results are unchanged
+next_attempt: run record-sensitive governance, generated-state, memory, skill, and diff validation without repeating the unchanged full scientific suite

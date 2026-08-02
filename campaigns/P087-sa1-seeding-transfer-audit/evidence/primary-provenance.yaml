@@ -1,0 +1,45 @@
+campaign: P087
+base_release: v0.75.0
+base_commit: 3000804
+scientific_base_commit: 5fa7def
+source_baseline: substrate@6d1f4e0
+frozen_inputs:
+  proposal_sha256: 6489d7d64f1c1c2b50abea71a069fc8c85465e0fd63913b48adbec58325eb724
+  freeze_sha256: 661eef14180dd4e8936a8ebaf056efea15ee4920794b72f444890d297c1189c2
+  source_sha256: b2cefcedb8c507b41defa4e43001bc7f4af052db39fc4b7481fd9a510514c72b
+  engineering_mirror_sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+  rung174_sha256: e0f470201313c76c77c54c0e027a01189180561d49f94fe1ef88bfe2f18a317d
+  rung175_sha256: b895622627bece5a154717b7aaab06cd0add9ed80a7c1643035c06c91fb3499c
+verified_outputs:
+  primary_verifier:
+    path: campaigns/P087-sa1-seeding-transfer-audit/verify.py
+    sha256: c412985d77edee08c3a1411faf860cfa54a535c24568dd230a9f53e7b839fec4
+    tally: ALL 42 CHECKS PASS
+  independent_review:
+    path: campaigns/P087-sa1-seeding-transfer-audit/reviews/independent_temporal_fourier_review.py
+    sha256: 7c05dfadb424705eeb968357dbcaceefc8a934ae25cac855ee6021dd454ba75b
+    tally: ALL 15 CHECKS PASS
+  canonical_module:
+    path: src/substrate_framework/sine_gordon.py
+    sha256: e7b288c0a1168bb85009b99a2fdc17172dfce05a842cd9086c478c27884b30e6
+  package_exports:
+    path: src/substrate_framework/__init__.py
+    sha256: 60361c93cee77a9efa861727e7f6eab7503a4c9429bc4d769f9e2a96a08918f3
+  focused_tests:
+    path: tests/test_sine_gordon.py
+    sha256: a04663dac8d64c2aadc5021da50c95a763b982e7028f84f226d9fd2c589c9e0a
+    tally: 40 passed
+evidence_hashes:
+  source_reproduction: b7aff99c9ab19ae129a6f710656c30c0ef27cab7013a55dea96c27a801d86b32
+  source_audit: 6fe6920aa86ce5c68c6d53f3c7a9a701e0fd4f1ca8a6c098d911b57d14fd18c3
+  consumer_audit: 53a9284c1b6c0736cdd81c4c91871e2562ecd8b5cab217c034d1e1710216d682
+  candidate_comparison: 7cdac9b0bc51927fbe0a21412ba754a497665175ee1f601a0a3d6dd656f6fc26
+oracle_classes:
+  exact: SymPy parity, half-wave, tangent substitution, integration by parts, limits, scaling, and mutations
+  independent: fresh symbolic derivation plus 50-digit mpmath coefficient regression at three amplitudes
+  source: read-only twenty-one-check regression only
+  external_consumer: failed compatibility replay plus hash-pinned structural audit
+integration_policy: >-
+  Exact canonical work uses no numerical integration alias. Sampled framework
+  work must use trapezoid_integral, which prefers np.trapezoid and retains a
+  compatibility fallback for NumPy 1.26.

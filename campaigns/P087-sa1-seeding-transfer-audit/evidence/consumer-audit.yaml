@@ -1,0 +1,48 @@
+campaign: P087
+source_unit: SA1
+source_baseline: substrate@6d1f4e0
+consumers:
+  - path: engineering/seeding_kernel.py
+    git_blob: 02d82604a603219c18b4d67da44706e6a20d3d69
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    relationship: noncanonical mirror claiming to replace the inserted trigger
+    runtime_command: .venv/bin/python /home/dan/substrate/engineering/seeding_kernel.py
+    runtime_status: 1
+    stdout_bytes: 0
+    stdout_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    stderr_bytes: 459
+    stderr_sha256: 7f3491bbea9993f03b3665224f0cea13ee210689ea3de5152b91a0783c2aa666
+    implementation_failure: >-
+      Direct np.trapz use fails under the framework's current NumPy before a
+      terminal tally. Six legacy-alias calls occur in the module.
+    scientific_failure: >-
+      It copies SA1's arbitrary Gaussian pair, susceptibility identity,
+      overlap-as-population interpretation, and free normalization. A
+      compatibility rename would not repair those missing derivations.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung174_c035_spark_discharge_coherence_channel.py
+    git_blob: 490c2b1de9d52941bceeb10286fda27984dad2df
+    sha256: e0f470201313c76c77c54c0e027a01189180561d49f94fe1ef88bfe2f18a317d
+    relationship: named pre-SA1 C035 trigger consumer
+    finding: >-
+      Retains the inserted Michaelis law dVdt/(dVdt+DVDT_SAT), imports no SA1
+      module, and multiplies a firewalled yield coordinate by that gate.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung175_c035_physical_engine_ionization_flow.py
+    git_blob: abebe6cd2a89a57ac243194327b1c209485582c7
+    sha256: b895622627bece5a154717b7aaab06cd0add9ed80a7c1643035c06c91fb3499c
+    relationship: named physical-units C035 trigger consumer
+    finding: >-
+      Retains the inserted excess/(excess+DVDT_SAT) law, imports no SA1 module,
+      and labels its absolute scales illustrative with a real-data fit owed.
+canonical_consumers:
+  - src/substrate_framework/sine_gordon.py
+  - src/substrate_framework/__init__.py
+  - tests/test_sine_gordon.py
+replay_decision: >-
+  C-SG-015's direct canonical consumers pass. The external failed replay is
+  preserved and excluded from the accepted dependency closure because the
+  promoted claim is only the exact field-trace theorem. No external consumer
+  is mutated and no susceptibility or engine claim is promoted.
+numpy_api_decision: >-
+  Sampled accepted framework code must call trapezoid_integral, which resolves
+  np.trapezoid first and falls back only on supported older NumPy. Exact P087
+  code performs no numerical integration.

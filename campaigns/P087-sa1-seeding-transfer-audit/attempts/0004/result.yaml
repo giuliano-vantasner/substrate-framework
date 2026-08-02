@@ -1,0 +1,18 @@
+attempt: 0004
+candidates: [B, C, E, F, G, H]
+status: exact_routes_validated
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P087-sa1-seeding-transfer-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P087-sa1-seeding-transfer-audit/reviews/independent_temporal_fourier_review.py
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon.py
+process_status: 0
+scientific_tallies:
+  primary: ALL 42 CHECKS PASS
+  independent: ALL 15 CHECKS PASS
+  focused_tests: 40 passed
+result: >-
+  The exact fixed-position temporal-Fourier theorem, corrected fundamental
+  coefficient, phase-origin ceiling, finite-Gaussian-DC counterexample,
+  overlap nonidentifiability, zero-DC counterfamily, source audit, and consumer
+  classification all pass. C-SG-015 is ready for individual review.
+remaining_work: governance promotion, generated-state synchronization, integrated gate, and final campaign record validation
