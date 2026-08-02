@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T06:20:00Z'
+updated: '2026-08-03T07:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,14 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.64.0`, containing ninety-two claims:
-the prior sector results plus the exact normalized-overlap ledger `C-OVL-001`.
-It derives general normalized expectation bounds, every positive-power
-matched-width sech gamma ratio, the actual C-QBL-003 even/odd expectations and
-parity cross term, and a dimension/free-rescaling ledger for a separately
-declared overlap-times-scale map. It supplies no fermion field, Yukawa
-interaction, generation assignment, hierarchy, mixing, physical condensate,
-absolute mass, or substrate mechanism.
+The current accepted frontier is `v0.65.0`, containing ninety-three claims:
+the prior sector results plus the exact translated-localization ledger
+`C-OVL-002`. It derives the beta-hypergeometric displaced-sech expectation,
+slower-tail and equal-rate-resonance classes, the exact translated Pöschl--
+Teller ground state and sech-core tail coefficient, the free rate-spacing
+direction, and a Gaussian nonuniqueness countermodel. It supplies no radial
+operator, common multi-rung spectrum, generated centers or spacing, generation
+identity, observed hierarchy, mixing, absolute mass, or substrate mechanism.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -56,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 150 pending, 0 partially migrated, 3 migrated, 61 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 149 pending, 0 partially migrated, 3 migrated, 62 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -158,6 +158,7 @@ Attempts are append-only and individually reproducible.
 | 0088 | P068 exact angular-defect energy/topology ledgers and ME2 audit | `campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0001` through `0003`, then the promotion replay | accepted in v0.62.0 with ME2 qualified; commit `3b4e9f2` | Forty-three primary and seventeen independent checks derive the sharp annular degree bound, matched-shell split ledger, full polar deck group, and unequal-stiffness/core residual; ME2 mistakes isolated-copy additivity for a fixed-boundary two-defect theorem, promotes a special 1/2 ratio to arbitrary splitting, and conflates projective `RP2` composition with the full manifold, while the single full workflow gate and explicit replay each pass all 541 tests | Audit ME3's lattice-to-continuum expansion without importing ME1/ME2 as dependencies, dropping the Riemann-sum factor or field dimensions, or extending a local Taylor series beyond the Brillouin and smooth-field regimes |
 | 0089 | P069 exact scalar-lattice action/symbol/convergence ledgers and ME3 audit | `campaigns/P069-me3-lattice-continuum/attempts/0001` through `0003`, then the promotion replay | accepted in v0.63.0 with ME3 qualified; commit `b2ccced` | Fifty-five primary and twenty-three independent checks derive the normalized periodic action and site equation, Taylor remainder, exact Brillouin symbol, long-wave dispersion, and smooth sampled-action bound; ME3 checks only local coefficients, supplies no action proof, overstates positive-spacing detectability, and turns a declared spacing into a termination scale, while the single full workflow gate and explicit replay each pass all 561 tests | Audit MH1's normalized overlap formulas without importing pending MH2/MH3, treating supplied profiles and condensates as derived generations, or converting free amplitudes and a declared mass map into an absolute hierarchy prediction |
 | 0090 | P070 exact normalized expectation/mode/parameter ledgers and MH1 audit | `campaigns/P070-mh1-normalized-overlap/attempts/0001` through `0008`, then the promotion replay | accepted in v0.64.0 with MH1 qualified; commit `ec1d640` | Fifty-one primary and twenty independent checks derive expectation bounds, the positive-power matched-width gamma ratio, actual even/odd overlaps and parity cross term, and a dimension/rescaling ledger; MH1 samples only three powers, replaces the actual odd mode, supplies no Yukawa or generation object, leaves amplitude and scale free, and mistakes the Hessian ceiling for mechanism selection, while the single full workflow gate and explicit replay each pass all 582 tests | Audit MH2's hierarchy construction without importing pending MH3/O1, fitting a free radial separation to the comparator, or treating translated externally centered wells as a derived generation tower |
+| 0091 | P071 exact translated-convolution/tail/operator ledgers and MH2 audit | `campaigns/P071-mh2-translated-localization/attempts/0001` through `0005`, then the promotion replay | accepted in v0.65.0 with MH2 qualified; commit `4ca91af` | Forty-three primary and twenty-seven independent checks derive the exact displaced-sech convolution, slower-tail/equal-rate asymptotics, translated Pöschl ground state and core-tail coefficient, rate-spacing null direction, and Gaussian countermodel; MH2 plants six separate Cartesian wells, leaves spacing and well data free, omits radial structure and independent refinement, and uses permissive lepton labels, while the single full workflow gate and explicit replay each pass all 609 tests | Audit MH3's overlap-matrix/mixing construction without importing a physical flavor sector, violating the exact parity cross-term zero, confusing different input bases with observable misalignment, or treating unitarity as evidence for nonzero mixing |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -174,7 +175,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 150 bridge units remain pending, 3 are migrated, 61 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 149 bridge units remain pending, 3 are migrated, 62 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -470,11 +471,23 @@ negative/zero mass ceiling as if it selected one replacement mechanism. The
 actual odd/even ratio is `2/3`, not a hierarchy. The exact canonical and
 independent routes use no numerical quadrature or NumPy integration alias.
 
+P071 adds the exact matched-width displaced-sech convolution, its slower-tail
+and equal-rate-resonance asymptotics, the normalized translated Pöschl--Teller
+ground state and exact sech-core tail coefficient, the reciprocal rate-spacing
+direction, and a Gaussian nonuniqueness countermodel. MH2 is qualified because
+its six rungs are separately planted Cartesian wells on an interval extending
+to negative coordinate, not one radial spectrum; the depth, width, centers,
+spacing, and count are supplied; grid doubling omits wall, residual, and
+independent-method checks; and the lepton comparison is a permissive label
+predicate. Its numeric attenuation and late `-kappa*d` slope nevertheless
+reproduce from the exact ground state. Canonical P071 code uses no numerical
+quadrature or NumPy integration alias.
+
 ## Canonicalization
-The registry, `v0.64.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-two accepted claims. P001 through P070 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 150 pending, 0 partial, 3 migrated, 61 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.65.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-three accepted claims. P001 through P071 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 149 pending, 0 partial, 3 migrated, 62 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 150 pending, 3 migrated, 61 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential executable unit is MH2, whose synopsis first measures same-center supplied modes as order-one overlap ratios and then introduces a radial ladder of independently centered finite-difference wells at `r_n=n*d` to obtain approximately geometric suppression against a core profile. MH3 and O1 remain pending and supply no premise; MH1, EM6, and FG2 may be used only through their exact accepted or independently closed fragments. The new campaign must preregister literal-source, exact translated-profile, asymptotic tail, independently solved eigenmode, identifiability, and alternative-localization candidates; freeze the half-line or whole-line domain, radial measure and origin boundary, well operator and boundary data, center and separation parameters, condensate width and amplitude, mode normalization, overlap definition, fit and refinement norms, comparator blinding, and physical-versus-conditional semantics before opening the executable. It must distinguish a conditional exponential tail from a predicted three-level hierarchy, supplied displaced wells from a derived generation mechanism, a free separation from an independently fixed scale, straightness in a short log plot from an exact geometric law, and one-dimensional translated wells from radial modes of one accepted field operator.
+The effort remains active. D4 is discharged, but D1 remains open with 149 pending, 3 migrated, 62 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential executable unit is MH3, whose synopsis builds diagonal and off-diagonal multiplication-overlap matrices, assigns two condensate widths to separate sectors, biunitarily diagonalizes them, and labels the relative left basis a nontrivial CKM-like mixing matrix. C-MIX-001, C-MIX-002, C-OVL-001, and C-OVL-002 may supply only their exact finite-matrix, rephasing, expectation, parity, and parameter-ceiling content; the source units FG3 and FG4 are already qualified, while no accepted fermion, charged-current, sector, Yukawa, or generation object exists. The new campaign must preregister literal-source, multiplication-operator compression, parity-block, simultaneous-diagonalization/commutator, basis-gauge/degeneracy, and asymmetric-profile candidates; freeze the common Hilbert space, domain, measure, ordered orthonormal basis, mode parity and centers, multiplier profiles and widths, matrix dimensions, conjugation convention, sector identification, left/right transformation convention, degeneracy handling, rephasing invariants, comparator blinding, and physical-versus-algebraic semantics before opening the executable. It must distinguish a nonzero off-diagonal entry from basis-dependent texture, parity-forced zero from generic mixing, different supplied matrices from a derived sector mechanism, matrix unitarity from nonidentity, nonidentity from basis-invariant physical mixing, and an overlap compression from a fermion mass or charged-current operator.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
