@@ -1,0 +1,44 @@
+sources:
+  - id: fujiwara-kugo-terao-uehara-yamawaki-1985
+    title: Non-Abelian Anomaly and Vector Mesons as Dynamical Gauge Bosons of Hidden Local Symmetries
+    authors: [Takanori Fujiwara, Taichiro Kugo, Haruhiko Terao, Shozo Uehara, Koichi Yamawaki]
+    journal: Progress of Theoretical Physics 73, 926-941
+    doi: 10.1143/PTP.73.926
+    url: https://academic.oup.com/ptp/article/73/4/926/1873501
+    audited_scope:
+      - The paper presents general solutions of the Wess-Zumino anomaly equation incorporating HLS vector mesons.
+      - Its abstract states that low-energy photon/pseudoscalar amplitudes including pi0-to-two-gamma and gamma-to-three-pion are unaffected no matter how vector mesons participate.
+      - Its abstract rejects complete vector-meson dominance for both processes.
+    imported_as: primary_definition_and_low_energy_theorem_context
+  - id: harada-matsuzaki-yamawaki-2011
+    title: Anomalous omega-Z-gamma Vertex from Hidden Local Symmetry
+    authors: [Masayasu Harada, Shinya Matsuzaki, Koichi Yamawaki]
+    journal: Physical Review D 84, 036010
+    doi: 10.1103/PhysRevD.84.036010
+    arxiv: 1104.3286v2
+    url: https://arxiv.org/abs/1104.3286
+    audited_equations_and_statements:
+      - >-
+        The WZ anomaly equation is inhomogeneous. Its general HLS solution is
+        Gamma_HLS_full=Gamma_WZW+Gamma_HLS_inv.
+      - >-
+        Gamma_HLS_inv=(N_c/(16*pi^2))*integral(sum_i=1^4 c_i L_i) and
+        delta Gamma_HLS_inv=0; c1 through c4 are free homogeneous coefficients
+        not fixed by the anomaly.
+      - >-
+        The homogeneous operators are intrinsic-parity odd but the classified
+        action terms are P- and C-even.
+      - >-
+        The omega-Z-gamma and omega-pi-gamma vertices depend on free
+        combinations including c3+c4; ratios can cancel shared free dependence,
+        but individual normalizations are not anomaly predictions.
+    imported_as: primary_author_clarification_of_general_hls_solution
+bibliographic_correction: >-
+  WZ4 cites Bando-Kugo-Yamawaki Physics Reports 164, 217 as 1985. Volume 164,
+  page 217 was published in 1988; this does not affect the decisive
+  coefficient-freedom audit but the source provenance is inaccurate.
+framework_conclusion: >-
+  The audited HLS literature supports vector participation without changing
+  anomaly-fixed low-energy theorems and supplies gauge-invariant homogeneous
+  terms with free coefficients. It does not support deriving Gamma_WZW or its
+  level by multiplying an already imported WZW coefficient by a form factor.

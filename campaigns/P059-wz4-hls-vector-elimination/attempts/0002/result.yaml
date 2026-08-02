@@ -1,0 +1,50 @@
+attempt: 0002
+candidate: B
+status: exact_route_passed
+canonical_module: src/substrate_framework/effective_actions.py
+canonical_tests: tests/test_effective_actions.py
+initial_failed_runs:
+  - failure: >-
+      scalar Neumann series test compared SymPy expression trees and rejected
+      an algebraically identical factored expression
+    diagnosis: oracle_representation
+    action: >-
+      compare the elementwise exact simplified residual to the zero matrix;
+      no tolerance or expected value changed
+  - failure: >-
+      primary verifier compared the simplified stationary column structurally
+      with SymPy's differently represented direct matrix inverse
+    diagnosis: oracle_representation
+    action: >-
+      compare the exact elementwise difference to the zero matrix while
+      retaining the independently derived equation-of-motion residual gate
+quadratic_action:
+  convention: L=V^T*K*V/2+V^T*J
+  premises:
+    - K is a nonempty symmetric invertible matrix
+    - V and J are matching columns
+  stationary_field: V_star=-K_inverse*J
+  stationarity_residual: K*V_star+J=0
+  reduced_term: -J^T*K_inverse*J/2
+parity_split:
+  source: J=J_even+J_odd
+  even_terms:
+    - -J_even^T*K_inverse*J_even/2
+    - -J_odd^T*K_inverse*J_odd/2
+  odd_cross: >-
+    -(J_even^T*K_inverse*J_odd+J_odd^T*K_inverse*J_even)/2
+inverse_expansion:
+  formula: sum_n=0^N((-M_inverse*D)^n*M_inverse)
+  exact_output_includes:
+    - left multiplication residual
+    - right multiplication residual
+  interpretation: formal_only_under_a_separately_declared_power_counting
+anomaly_chain_rule:
+  consequence: >-
+    stationary substitution removes the equation-of-motion-times-induced-field
+    term but neither supplies nor fixes the remaining explicit variation
+focused_test_result:
+  process_exit_code: 0
+  terminal_tally: 7 passed
+physical_identifications: []
+parameters_fixed_by_theorem: []

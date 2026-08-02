@@ -1,0 +1,78 @@
+source_unit: WZ4
+audit_status: native_tally_reproduced_headline_mechanism_not_exercised
+checks:
+  WZ4.1:
+    actual_object: scalar_propagator_series_and_four_sampled_denominator_signs
+    surviving_scope: exact_formal_series_at_q2_zero
+    missing_for_headline:
+      - declared vector action
+      - source coupling
+      - stationary field equation
+      - on-shell substitution
+      - uniform subthreshold sign proof
+  WZ4.2:
+    actual_object: epsilon_contraction_of_four_declared_polar_vectors
+    surviving_scope: a four-polar-vector epsilon contraction changes sign under parity
+    defect: >-
+      Pions are pseudoscalars. Each pion gradient has an additional intrinsic
+      minus sign under physical parity, so epsilon times three pion gradients
+      and one photon vector is P-even: det(P)*(-1)^3=+1. The literature calls
+      this sector intrinsic-parity odd while its action terms are P- and
+      C-even; the source conflates these notions.
+  WZ4.3:
+    actual_object: kinematic_epsilon_and_isospin_epsilon_samples
+    surviving_scope: declared_gamma_three_pion_vertex_is_antisymmetric
+    missing_for_headline: no HLS operator is expanded to generate this vertex
+  WZ4.4:
+    actual_object: imported_wzw_coefficient_times_declared_form_factor
+    definition: A_HLS=F_3pi_WZW*m_V**2/(m_V**2-q2)
+    decisive_identity: >-
+      A_HLS=F_3pi_WZW+F_3pi_WZW*q2/(m_V**2-q2). The pre-existing contact term
+      is the heavy-mass limit; the displayed exchange correction vanishes.
+    arbitrary_target_mutation: >-
+      Replacing F_3pi_WZW by any symbol C makes both q2=0 and m_V->infinity
+      checks return C, so the check cannot derive a normalization.
+    verdict: copied_answer_times_unit_limit
+  WZ4.5:
+    actual_object: derivative_and_substitution_of_the_imported_linear_N_c_formula
+    defect: >-
+      Linearity is true only because N_c was inserted in F_3pi_WZW. Accepted
+      C-WZW-002 quantizes a mathematical level but does not identify it with
+      N_c, and C-TOP-002 explicitly rejects WZ3's claim that n=N_c=3 was fixed.
+  WZ4.6:
+    actual_object: ratio_of_two_formulas_each_defined_with_the_same_inserted_N_c
+    defect: >-
+      The omega coupling is imported, g_omega remains free, and the general
+      HLS vertex also depends on homogeneous coefficients such as c3+c4. A
+      common copied factor does not create two predictions from one parameter.
+  WZ4.7:
+    actual_object: solving_the_imported_KSRF_equation_for_g_squared
+    defect: >-
+      S4 and its KSRF/HLS physical interpretation are pending, g_omega is a
+      distinct source symbol, and m_V->infinity at fixed F_pi drives g to
+      infinity rather than holding one pinned coupling fixed.
+  WZ4.8:
+    actual_object: antisymmetric_projection_of_one_metric_product_sample
+    surviving_scope: the chosen symmetric tensor has zero antisymmetric projection
+    missing_for_headline: no complete normal HLS operator basis or amplitude is evaluated
+  WZ4.9:
+    actual_object: symmetric_tensor_contracted_with_one_antisymmetric_pair
+    surviving_scope: exact symmetric-versus-antisymmetric contraction identity
+    missing_for_headline: it does not test vector elimination or anomaly matching
+absent_objects:
+  - HLS fields xi_L, xi_R, V and their transformations
+  - the four independent homogeneous operators L1 through L4
+  - coefficients c1 through c4
+  - the full solution Gamma_HLS_full=Gamma_WZW+Gamma_HLS_inv
+  - an HLS quadratic vector action and functional variation
+  - direct and exchange diagrams with independently derived coefficients
+  - electromagnetic gauge invariance and Ward identities
+  - anomaly variation before and after vector elimination
+  - derivative-order remainder or power counting
+dependency_conflicts:
+  - G2 and G3 are pending and supply no accepted gauge mechanism.
+  - S3 is pending and supplies no accepted baryon or N_c level identification.
+  - S4 is pending and supplies no accepted HLS action, KSRF relation, or vector-meson map.
+  - C-WZW-001 and C-WZW-002 are ungauged mathematical theorems only.
+  - C-TOP-002 is a mathematical current and expressly withholds physical baryon and N_c meanings.
+source_disposition_recommendation: qualified_if_positive_conditional_elimination_theorem_passes

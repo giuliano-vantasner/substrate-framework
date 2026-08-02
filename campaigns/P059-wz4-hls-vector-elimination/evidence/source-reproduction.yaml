@@ -1,0 +1,31 @@
+source_unit: WZ4
+source_path: /home/dan/substrate/merged-framework/bridges/phase-17/bridge_WZ4_hls_vector_meson_anomalous.py
+source_sha256: fca6b9c1d95bdf49e99b863470c7e800880e493b3f716159aa2341f8cf963d2b
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-17/bridge_WZ4_hls_vector_meson_anomalous.py
+working_directory: /home/dan/substrate-framework
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+  numpy: 2.5.1
+native_run:
+  exit_status: 0
+  terminal_tally: ALL 9 CHECKS PASS
+  runtime_data_access: false
+reported_values:
+  propagator_series: m_V**(-2) + q2/m_V**4
+  parity_matrix_determinant: -1
+  sampled_epsilon_contraction: -23
+  independent_gamma_three_pion_contraction: 1
+  declared_wzw_coefficient: N_c*e/(12*pi**2*F_pi**3)
+  declared_hls_amplitude: >-
+    N_c*e*m_V**2/(12*pi**2*F_pi**3*(m_V**2-q2))
+  declared_omega_pi_gamma_coupling: N_c*e*g_omega/(8*pi**2*F_pi)
+  assumed_ksrf_solution: m_V**2/(2*F_pi**2)
+reproduction_ceiling: >-
+  The clean native tally reproduces nine algebraic predicates. It does not
+  construct an anomalous HLS action, solve a vector equation of motion,
+  substitute a stationary vector field, derive any c_i coefficient, or test
+  the claimed independent WZW-generation mechanism.

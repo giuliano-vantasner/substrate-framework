@@ -1,0 +1,35 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_route_rejected
+source_exit_status: 0
+source_terminal_tally: ALL 9 CHECKS PASS
+surviving_exact_evidence:
+  - the scalar propagator has the stated formal low-q2 series
+  - epsilon and isospin epsilon contractions have the stated antisymmetry
+  - symmetric tensors annihilate the checked antisymmetric projection
+failure_mechanism:
+  classification: verifier_and_candidate_concept
+  findings:
+    - no anomalous HLS operator, vector equation, or on-shell action is constructed
+    - the HLS amplitude is the imported WZW answer multiplied by a form factor tending to one
+    - the displayed formula decomposes into the original contact answer plus a heavy-vector correction that vanishes
+    - every N_c linkage check differentiates or ratios formulas into which the same N_c factor was inserted
+    - the general homogeneous HLS coefficients c1 through c4 are omitted
+    - physical parity is conflated with intrinsic-parity-odd bookkeeping by treating three pion gradients as polar vectors
+    - KSRF, S4, the HLS field map, and physical vector couplings are unaccepted imports
+sensitivity_counterexamples:
+  arbitrary_contact_coefficient: >-
+    C*m_V**2/(m_V**2-q2) returns C at q2=0 and as m_V tends to infinity for
+    every C; therefore WZ4.4 is insensitive to the claimed normalization.
+  zero_wzw_contact: >-
+    Setting the imported contact coefficient to zero makes the displayed HLS
+    amplitude identically zero; the source contains no vector term that can
+    regenerate a nonzero anomaly coefficient.
+  physical_parity: >-
+    With pseudoscalar pion parity, det(P)*(-1)^3=+1, so the displayed
+    gamma-three-pion action structure is P-even while remaining in the
+    intrinsic-parity-odd sector.
+next_action: >-
+  Continue with Candidate B's exact quadratic-vector elimination, then use
+  Candidate D and the audited HLS general solution to track the unchanged
+  anomaly class and free homogeneous coefficients.

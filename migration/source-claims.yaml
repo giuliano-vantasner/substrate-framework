@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 162
-  qualified: 49
+  pending_adjudication: 161
+  qualified: 50
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3562,8 +3562,32 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-EFT-001
+  qualification: 'WZ4''s scalar low-momentum propagator series and sampled antisymmetric contractions
+    survive only as narrow algebraic evidence. Its clean nine-check tally constructs no HLS fields, four
+    homogeneous operators, quadratic vector action, stationary equation, on-shell substitution, Ward identity,
+    or anomaly variation. The displayed amplitude is an arbitrary imported contact C multiplied by m_V^2/(m_V^2-q^2):
+    both its zero-momentum and heavy-mass limits return C, its correction vanishes, and C=0 gives zero.
+    Audited primary HLS theory instead has the full solution Gamma_WZW+Gamma_HLS_inv with four free homogeneous
+    coefficients c1 through c4 that the anomaly does not fix. WZ4 also treats pion gradients as polar
+    vectors; three pseudoscalar intrinsic signs make the action term P-even while it remains intrinsic-parity
+    odd. Its N_c and cross-process checks propagate inserted factors, and its KSRF step imports pending
+    S4. WZ4 establishes no physical HLS sector, vector meson, WZW generation or normalization, vector
+    dominance, anomaly matching, KSRF physics, n=N_c=3, baryon interpretation, absolute scale, or substrate
+    realization.'
+  evidence:
+  - campaigns/P059-wz4-hls-vector-elimination/reviews/source_adjudication.md
+  - campaigns/P059-wz4-hls-vector-elimination/evidence/source-reproduction.yaml
+  - campaigns/P059-wz4-hls-vector-elimination/evidence/source-audit.yaml
+  - campaigns/P059-wz4-hls-vector-elimination/evidence/hls-anomaly-provenance.yaml
+  - campaigns/P059-wz4-hls-vector-elimination/attempts/0001/result.yaml
+  - campaigns/P059-wz4-hls-vector-elimination/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-EFT-001-review.md
+  note: P059 derives the exact conditional stationary elimination, source-cross term, finite inverse residual,
+    and anomaly chain-rule ceiling through canonical and independent routes. No numerical quadrature or
+    deprecated NumPy alias is used.
 - source_unit: PG1
   phase: phase-18
   path: merged-framework/bridges/phase-18/bridge_PG1_pion_goldstone_massless.py

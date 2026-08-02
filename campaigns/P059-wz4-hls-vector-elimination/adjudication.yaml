@@ -1,0 +1,70 @@
+campaign: P059
+title: Conditional quadratic heavy-field elimination and WZ4 HLS audit
+source_baseline: substrate@6d1f4e0
+source_units: [WZ4]
+base_release: v0.52.0
+release_after_adjudication: v0.53.0
+adjudicated_at: '2026-08-02T18:00:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B derives the positive exact stationary-elimination,
+      even-odd cross-term, and finite inverse-residual theorem from a complete
+      declared quadratic action through canonical and independent routes.
+  - id: D
+    reason: >-
+      Candidate D independently applies the stationary chain rule and a
+      zero-level mutation to prove the precise ceiling: elimination preserves
+      a supplied explicit anomaly variation but cannot create or normalize one.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_positive_HLS_route_because_the_clean_nine_check_tally_never
+      constructs_or_eliminates_a_vector_field_and_multiplies_the_imported_WZW
+      answer_by_a_form_factor_whose_relevant_limits_are_one
+  - id: C
+    decision: >-
+      retained_as_external_theory_audit_only; the_primary_HLS_solution_has
+      four_free_homogeneous_coefficients_and_no_accepted_framework_premise
+      selects_a_concrete_HLS_basis_or_UV_completion
+claims:
+  - id: C-EFT-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  exact_primary: attempts/0002/result.yaml
+  independent_review: reviews/independent_elimination_review.py
+  independent_result: attempts/0003/result.yaml
+  rejected_source_route: attempts/0001/result.yaml
+  external_hls_audit: attempts/0004/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  hls_anomaly_provenance: evidence/hls-anomaly-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-EFT-001-review.md
+source_disposition:
+  WZ4: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P059-wz4-hls-vector-elimination/verify.py --source-file
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-17/bridge_WZ4_hls_vector_meson_anomalous.py
+    --source-reproduction campaigns/P059-wz4-hls-vector-elimination/evidence/source-reproduction.yaml
+    --source-audit campaigns/P059-wz4-hls-vector-elimination/evidence/source-audit.yaml
+    --hls-provenance campaigns/P059-wz4-hls-vector-elimination/evidence/hls-anomaly-provenance.yaml
+    --independent-result campaigns/P059-wz4-hls-vector-elimination/attempts/0003/result.yaml
+    --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+    --release governance/releases/v0.53.0.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P059-wz4-hls-vector-elimination/reviews/independent_elimination_review.py
+  - .venv/bin/python -m pytest -q tests/test_effective_actions.py tests/test_governance.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

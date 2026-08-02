@@ -1,0 +1,29 @@
+attempt: 0004
+candidate: C
+status: external_hls_basis_audited_not_selected_as_framework_derivation
+primary_sources:
+  - doi: 10.1143/PTP.73.926
+    role: general_HLS_solutions_and_low_energy_theorem_context
+  - doi: 10.1103/PhysRevD.84.036010
+    arxiv: 1104.3286v2
+    role: explicit_full_solution_and_homogeneous_coefficient_freedom
+audited_structure:
+  full_solution: Gamma_HLS_full=Gamma_WZW+Gamma_HLS_inv
+  homogeneous_part: >-
+    Gamma_HLS_inv=(N_c/(16*pi^2))*integral(sum_i=1^4(c_i*L_i))
+  homogeneous_variation: delta_Gamma_HLS_inv=0
+  free_coefficients: [c1, c2, c3, c4]
+  classification: action_terms_are_P_even_and_C_even_but_intrinsic_parity_odd
+selection_result: >-
+  The anomaly equation has rank one across the inhomogeneous level direction
+  and a four-dimensional homogeneous coefficient kernel. It therefore cannot
+  determine c1 through c4. A concrete UV completion or phenomenological input
+  may select them, but no accepted framework premise does so.
+source_conflict: >-
+  WZ4 constructs none of L1 through L4, omits c1 through c4, and starts from
+  the desired WZW coefficient before multiplying it by a form factor.
+preserved_value: >-
+  The primary theory supports vector participation without changing the
+  anomaly-fixed low-energy theorem and clarifies that homogeneous anomalous
+  HLS terms are invariant additions, not a second derivation of Gamma_WZW.
+framework_claim_promoted_from_this_attempt: false

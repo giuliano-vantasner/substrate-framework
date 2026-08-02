@@ -1,0 +1,31 @@
+attempt: 0003
+candidates: [B, D]
+status: independent_exact_route_passed
+implementation: reviews/independent_elimination_review.py
+canonical_effective_action_helpers_imported: false
+process_exit_code: 0
+terminal_tally: ALL 23 CHECKS PASS [P059-INDEPENDENT]
+independent_derivations:
+  - component differentiation of a general symmetric two-by-two action
+  - adjugate stationary solution and direct on-shell substitution
+  - completion of the square
+  - even-odd source expansion and parity mutation
+  - noncommuting finite Neumann inverse and exact cubic residual
+  - anomaly-map rank and four-dimensional homogeneous kernel
+mutations_and_counterexamples:
+  - opposite stationary-source sign fails both field equations
+  - shifting one stationary component fails the field equations
+  - removing the quadratic one-half changes the stationary equation
+  - removing either source kills the odd cross term
+  - finite inverse truncation retains nonzero order-three residuals
+  - assigning anomaly variation to either homogeneous term fails invariance
+  - zero pre-existing anomaly level gives zero after stationary elimination
+  - arbitrary contact C survives WZ4's zero-momentum and heavy-mass limits
+  - zero imported contact makes WZ4's displayed form factor identically zero
+parity_result: >-
+  det(P)*(-1)^3=+1 for three pseudoscalar pion fields, while treating their
+  intrinsic factors as polar gives the source's minus sign; physical P-even
+  and intrinsic-parity-odd are distinct classifications
+dimensions:
+  declared_four_dimensional_example: >-
+    [V]=1, [K]=2, and [J]=3 make both V*K*V and J*K_inverse*J dimension four
