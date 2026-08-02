@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T08:40:00Z'
+updated: '2026-08-03T09:40:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,12 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.66.0`, containing ninety-four claims:
-the prior sector results plus the exact finite multiplication-compression
-ledger `C-OVL-003`. It derives Hermiticity and Rayleigh bounds, common-basis
-covariance, parity blocks, the commuting-Hermitian criterion, exact
-phase/order/degeneracy ceilings, and the conditional asymmetric compression of
-C-QBL-003's actual modes. It supplies no fermion, Yukawa interaction,
-generation assignment, physical sectors or charged current, hierarchy, CKM or
-Cabibbo observable, absolute mass, or substrate mechanism.
+The current accepted frontier is `v0.67.0`, containing ninety-five claims:
+the prior sector results plus the exact two-length transmutation ledger
+`C-RGE-003`. It derives the dimension kernel, conditional one-loop energy and
+inverse-energy length ratios, unequal-conversion prefactor, inverse-coupling
+domain, and common-scale log null direction. It supplies no lattice, soliton,
+QCD, confinement, operating point, absolute scale, or later-source closure.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -56,7 +54,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 148 pending, 0 partially migrated, 3 migrated, 63 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 147 pending, 0 partially migrated, 3 migrated, 64 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -160,6 +158,7 @@ Attempts are append-only and individually reproducible.
 | 0090 | P070 exact normalized expectation/mode/parameter ledgers and MH1 audit | `campaigns/P070-mh1-normalized-overlap/attempts/0001` through `0008`, then the promotion replay | accepted in v0.64.0 with MH1 qualified; commit `ec1d640` | Fifty-one primary and twenty independent checks derive expectation bounds, the positive-power matched-width gamma ratio, actual even/odd overlaps and parity cross term, and a dimension/rescaling ledger; MH1 samples only three powers, replaces the actual odd mode, supplies no Yukawa or generation object, leaves amplitude and scale free, and mistakes the Hessian ceiling for mechanism selection, while the single full workflow gate and explicit replay each pass all 582 tests | Audit MH2's hierarchy construction without importing pending MH3/O1, fitting a free radial separation to the comparator, or treating translated externally centered wells as a derived generation tower |
 | 0091 | P071 exact translated-convolution/tail/operator ledgers and MH2 audit | `campaigns/P071-mh2-translated-localization/attempts/0001` through `0005`, then the promotion replay | accepted in v0.65.0 with MH2 qualified; commit `4ca91af` | Forty-three primary and twenty-seven independent checks derive the exact displaced-sech convolution, slower-tail/equal-rate asymptotics, translated Pöschl ground state and core-tail coefficient, rate-spacing null direction, and Gaussian countermodel; MH2 plants six separate Cartesian wells, leaves spacing and well data free, omits radial structure and independent refinement, and uses permissive lepton labels, while the single full workflow gate and explicit replay each pass all 609 tests | Audit MH3's overlap-matrix/mixing construction without importing a physical flavor sector, violating the exact parity cross-term zero, confusing different input bases with observable misalignment, or treating unitarity as evidence for nonzero mixing |
 | 0092 | P072 exact multiplication-compression/parity/commutator ledgers and MH3 audit | `campaigns/P072-mh3-overlap-compression/attempts/0001` through `0003`, then the promotion replay | accepted in v0.66.0 with MH3 qualified; commit `4b141fe` | Forty-two primary and twenty-three independent checks derive Hermiticity and Rayleigh bounds, basis covariance, exact parity blocks, the commuting-Hermitian criterion, actual-mode asymmetric matrix, and phase/order/degeneracy ceilings; MH3's normalized matrix is width independent, differs only because it changes a new odd-profile input, substitutes the accepted even mode, mixes row/column conventions, and constructs no physical flavor sector, while a final diff audit repairs the degenerate quotient dimension and both full replays pass all 637 tests | Audit AS1's two-length transmutation claim without importing later AS4/AS6/AS7 conclusions, reversing UV/IR length assignments, treating a supplied coupling as predicted, or converting a one-loop scale relation into physical QCD confinement or absolute-scale closure |
+| 0093 | P073 exact two-length transmutation/identifiability ledgers and AS1 audit | `campaigns/P073-as1-two-length-transmutation/attempts/0001` through `0003`, then the promotion replay | accepted in v0.67.0 with AS1 qualified; commit `3758a02` | Forty primary and twenty-three independent checks derive the canonical dimension kernel, oriented energy/length ratios, unequal-conversion guard, inverse domain, and common-scale null direction; AS1 reverses its opening UV/IR length labels, calls reciprocal representatives identical, omits `b0` from its named reduced set, and turns inverse inference into prediction language, while 38 focused/governance tests and both full boundaries pass all 658 tests | Audit AS3's Sakharov-cutoff and kappa-reduction construction without importing pending G1/G2/G5/OD/S5 physics, treating dimensional scaling as coefficient derivation, or claiming that a free dimensionless field-count closes an absolute gravitational scale |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -176,7 +175,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 148 bridge units remain pending, 3 are migrated, 63 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 147 bridge units remain pending, 3 are migrated, 64 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -498,11 +497,20 @@ final diff audit corrected the extra degenerate freedom to
 trapezoidal alias, and the shared workflow now routes sampled trapezoidal
 integration through the compatibility helper.
 
+P073 adds the exact two-length-and-speed dimension kernel, composes C-RGE-001's
+formal one-loop energy ratio with explicit inverse-energy length conversions,
+retains unequal conversion factors and the positive inverse domain, and proves
+that one log ratio leaves the common rescaling direction. AS1 is qualified
+because its executable reverses its opening UV/IR length labels, calls `a/xi`
+the earlier `xi/a` group without deriving the kernel, omits `b0` from its named
+reduced set, and presents inference from a supplied ratio as prediction. The
+campaign uses exact symbolic algebra and no NumPy quadrature API.
+
 ## Canonicalization
-The registry, `v0.66.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-four accepted claims. P001 through P072 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 148 pending, 0 partial, 3 migrated, 63 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.67.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-five accepted claims. P001 through P073 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 147 pending, 0 partial, 3 migrated, 64 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 148 pending, 3 migrated, 63 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential unit is AS1, whose synopsis combines a Buckingham count for two lengths and one speed with the accepted one-loop exponential scale relation, then interprets the ratio as UV/IR Compton lengths and says one dimensionful scale has been removed. C-DIM-001 through C-DIM-005, C-RGE-001, C-RGE-002, C-SCL-001, and C-IDN-001 may supply only their exact set-local dimension, running, transmutation, and identifiability content; CF4 and QCD3 are already qualified, while AS4, AS6, AS7, G1/G2/G5, OD, and S5 cannot be imported as accepted physical closure. P073 must freeze competing literal-source, rank/nullspace, one-loop coordinate, inverse-orientation, extra-scale countermodel, and identifiability candidates; declare dimensions, signs, UV/IR definitions, beta-function convention, Compton conversion, free coupling and reference scale, parameter rank, limiting cases, and comparator blindness. It must distinguish a dimensionless ratio from its prediction, algebraic substitution from independent-scale elimination, one-loop running from nonperturbative confinement, and reduced coordinates from an absolute-scale or operating-point determination.
+The effort remains active. D4 is discharged, but D1 remains open with 147 pending, 3 migrated, 64 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is AS3. Its synopsis claims a Sakharov cutoff at `hbar*c0/a` fixes `G_eff` proportional to `a^2/s_G` and then pins a dilaton coupling `kappa`; the dimensionless field-count factor, cutoff prescription, induced-action coefficient, matter spectrum, regulator, and map between gravitational conventions remain prospective premises. P074 must preregister literal-source, pure-dimensional, heat-kernel/induced-action, counterterm/regulator, field-content, and identifiability candidates before reading the source body. It must distinguish dimensional power counting from a derived coefficient, a supplied cutoff from a generated lattice scale, an induced bare contribution from a renormalized Newton constant, and removal of a dimensionful coordinate from prediction of either `a`, `G_eff`, or `kappa`. Pending G1, G2, G5, OD, and S5 narratives cannot supply accepted closure merely because AS3 cites them.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
