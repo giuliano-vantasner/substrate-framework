@@ -1,0 +1,13 @@
+PASS [P052-INDEPENDENT] the reviewed QB1 source is hash pinned
+PASS [P052-INDEPENDENT] independent shooting resolves the fundamental branch
+PASS [P052-INDEPENDENT] Gauss-projected BVP independently agrees with shooting at N=1
+PASS [P052-INDEPENDENT] Gauss projection independently agrees with the DFT N=9 branch
+PASS [P052-INDEPENDENT] the independently reconstructed full nonlinear remainder decreases at every level
+PASS [P052-INDEPENDENT] the N=9 independent core remainder is resolved below two times ten to the minus five
+PASS [P052-INDEPENDENT] the fundamental is evanescent while the third harmonic is radiative
+PASS [P052-INDEPENDENT] an evanescent tail has converged radial energy
+PASS [P052-INDEPENDENT] a nonzero radiative one-over-r tail has linearly divergent radial energy
+FAIL [P052-INDEPENDENT] the source uses the accepted IVP frequency as an inversion target
+
+Diagnosis: the source spells the call eigen_omega(A_star), not
+omega_eig(A_star). The scientific calculations completed successfully.

@@ -1,0 +1,21 @@
+attempt: 0007
+campaign: P052
+candidate: independent_Gauss_projection_and_shooting_repaired_audit
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 2.4
+terminal_tally: ALL 12 CHECKS PASS [P052-INDEPENDENT]
+independence:
+  fundamental_solver: DOP853_event_shooting_with_bisection
+  multiharmonic_solver: direct_scipy_solve_bvp
+  temporal_projection: 96_point_Gauss_Legendre
+  primary_projection: periodic_DFT
+  canonical_harmonic_balance_API_called: false
+verified:
+  - shooting and Gauss BVP agree on the N=1 branch
+  - independent Gauss and primary DFT N=9 frequencies agree within 2e-7
+  - the full nonlinear remainder decreases by more than a factor five at every level through N=9
+  - the N=9 independent core remainder is below 2e-5
+  - the fundamental tail is evanescent and the third-harmonic tail is radiative
+  - evanescent radial energy converges while a nonzero radiative 1/r tail diverges linearly
+  - source target inversion, all-mode finite wall, and frequency-only truncation oracle are present

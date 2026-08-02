@@ -2362,3 +2362,107 @@ claims:
     accepted_in: v0.45.0
     challenges: []
     supersedes: []
+  - id: C-PDE-005
+    statement: >-
+      For the dimensionless three-dimensional radial sine-Gordon equation of
+      C-PDE-001, let H be a finite set of positive odd integers containing one
+      and set u(r,t)=sum_(n in H) a_n(r)*cos(n*omega*t). With
+      S_n[a]=(1/pi)*integral_0^(2*pi)
+      sin(sum_(m in H) a_m(r)*cos(m*tau))*cos(n*tau) dtau, exact Fourier
+      projection gives
+      a_n''+2*a_n'/r+(n*omega)^2*a_n-S_n[a]=0. Odd harmonics give exact
+      half-period antisymmetry. Even radial regularity gives a_n'(0)=0 and the
+      origin curvature law
+      3*a_n''(0)+(n*omega)^2*a_n(0)-S_n[a](0)=0. In the linear far field each
+      mode obeys
+      a_n''+2*a_n'/r+((n*omega)^2-1)*a_n=0: n*omega<1 is evanescent with rate
+      sqrt(1-(n*omega)^2), n*omega=1 is threshold, and n*omega>1 is radiative
+      with wavenumber sqrt((n*omega)^2-1). A nonzero real radiative one-over-r
+      tail has positive asymptotic energy per unit radial length and hence
+      infinite integrated three-dimensional energy. Thus a sub-threshold
+      fundamental does not localize its higher channels, and a Dirichlet wall
+      on a radiative harmonic fixes a finite-box standing-wave phase rather
+      than proving an infinite-domain finite-energy breather. These exact
+      conditional statements establish no existence, uniqueness, nonzero
+      radiative coefficient, exact periodic solution, lifetime, gravity,
+      particle identity, absolute scale, or substrate realization.
+    provenance: campaigns/P052-qb1-radial-harmonic-balance/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies:
+      - C-PDE-001
+    evidence:
+      - campaigns/P052-qb1-radial-harmonic-balance/verify.py
+      - campaigns/P052-qb1-radial-harmonic-balance/attempts/0011/result.yaml
+      - campaigns/P052-qb1-radial-harmonic-balance/attempts/0010/result.yaml
+      - campaigns/P052-qb1-radial-harmonic-balance/reviews/independent_harmonic_review.py
+      - campaigns/P052-qb1-radial-harmonic-balance/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-PDE-005-review.md
+      - tests/test_radial_harmonic_balance.py
+    assumptions:
+      - The dimensionless action, radial geometry, potential convention, regularity, and linear mass threshold one are exactly those of C-PDE-001.
+      - The amplitudes are sufficiently differentiable, the displayed Fourier projections exist, and the finite odd-harmonic ansatz fixes a common phase origin.
+      - The infinite-energy conclusion is conditional on a nonzero real radiative one-over-r coefficient; the theorem does not require every formal solution to excite such a coefficient.
+      - A finite outer wall is declared numerical model data and is not identified with spatial infinity.
+    comparators: []
+    accepted_in: v0.46.0
+    challenges: []
+    supersedes: []
+  - id: C-PDE-006
+    statement: >-
+      On the C-PDE-005 odd-harmonic system, declare the free branch coordinate
+      a_1(0)=2.5, origin cutoff 0.001, outer radius 40, a decaying Robin
+      condition on the evanescent fundamental, and finite-box Dirichlet data on
+      every radiative harmonic. SciPy adaptive collocation in IEEE float64,
+      initialized with 300 radial points, periodic-DFT projection with 256
+      temporal samples, tolerance 1e-8, and a fitted frequency constrained to
+      0<omega<1 completes through retained sets N=1, 3, 5, 7, and 9. The
+      frequencies are 0.976908657117, 0.976876828530, 0.976873949847,
+      0.976873921614, and 0.976873921394. On a uniform radial audit grid over
+      r<=12 with 1024 temporal phases, the RMS full nonlinear projection
+      remainder falls from 0.105422 to 0.0136221, 0.00145899, 0.000144585, and
+      1.37187e-5; the N=9 maximum collocation RMS residual is below 1e-8.
+      Initial-mesh 200/300/400, temporal-sample 256/512, and tolerance
+      1e-8/1e-9 refinements preserve the branch. Walls at radii 30, 40, 50,
+      and 60 keep the fitted frequency within 1e-4 but produce a nonmonotone
+      more-than-twentyfold resonance in the outer third-harmonic r*a_3 RMS,
+      exposing the standing-wave boundary dependence. Independent DOP853
+      shooting, Gauss-Legendre projected collocation, and second-order finite
+      differences with a three-grid zero-spacing extrapolation reproduce the
+      finite-box core branch and remainder trend. This is numeric evidence for
+      one declared finite-radius, finite-harmonic family point. The central
+      amplitude is not equation-derived, the P3D1 frequency is not an input,
+      and the result establishes no unique eigenfrequency, exponentially
+      localized infinite-domain state, exact or eternal quasibreather,
+      lifetime law, gravity, particle identity, absolute scale, or substrate
+      realization.
+    provenance: campaigns/P052-qb1-radial-harmonic-balance/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+    dependencies:
+      - C-PDE-005
+    evidence:
+      - campaigns/P052-qb1-radial-harmonic-balance/verify.py
+      - campaigns/P052-qb1-radial-harmonic-balance/attempts/0011/result.yaml
+      - campaigns/P052-qb1-radial-harmonic-balance/attempts/0010/result.yaml
+      - campaigns/P052-qb1-radial-harmonic-balance/reviews/independent_harmonic_review.py
+      - campaigns/P052-qb1-radial-harmonic-balance/evidence/numerical-audit.yaml
+      - campaigns/P052-qb1-radial-harmonic-balance/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-PDE-006-review.md
+      - tests/test_radial_harmonic_balance.py
+      - tests/test_numerics.py
+    assumptions:
+      - All fields, coordinates, frequencies, and residuals use the dimensionless C-PDE-001 convention and the exact projected system and channel meanings of C-PDE-005.
+      - The central fundamental amplitude, origin cutoff, finite wall, retained harmonics, temporal projection, and mixed outer conditions are explicit branch and numerical-model data.
+      - Core remainder means the RMS of the unretained time-dependent part of sin(u) over the declared r<=12 audit region and uniform temporal phases; it is not an infinite-domain norm.
+      - Radiative-mode Dirichlet data define finite-box standing waves, so frequency stability under wall motion does not override the independently observed tail resonance.
+      - The accepted C-PDE-001 IVP is only a post-selection comparator and is not identified with this harmonic-balance family point.
+    comparators:
+      - C-PDE-001 finite-time Gaussian-IVP frequency interval, inspected only after the candidate equations and structural criteria were frozen and never used as a fit target
+    accepted_in: v0.46.0
+    challenges: []
+    supersedes: []

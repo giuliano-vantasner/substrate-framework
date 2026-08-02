@@ -49,6 +49,24 @@ def test_bvp_records_collocation_residuals() -> None:
     np.testing.assert_allclose(result.state[0], np.sin(result.coordinate), atol=2.0e-8)
     assert result.max_rms_residual < 1.0e-8
     assert result.iterations > 0
+    assert result.parameters is None
+
+
+def test_bvp_records_fitted_parameters() -> None:
+    coordinate = np.linspace(0.0, 1.0, 11)
+    guess = coordinate[None, :]
+    result = solve_bvp_evidence(
+        lambda _x, state, parameter: np.full_like(state, parameter[0]),
+        lambda left, right, _parameter: np.array([left[0], right[0] - 1.0]),
+        coordinate,
+        guess,
+        initial_parameters=[0.8],
+        tolerance=1.0e-10,
+    )
+
+    np.testing.assert_allclose(result.state[0], result.coordinate, atol=1.0e-12)
+    assert result.parameters is not None
+    np.testing.assert_allclose(result.parameters, [1.0], atol=1.0e-12)
 
 
 def test_method_of_lines_heat_equation_has_second_order_spatial_convergence() -> None:

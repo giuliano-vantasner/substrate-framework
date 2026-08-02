@@ -1,0 +1,57 @@
+id: P052
+base_release: v0.45.0
+base_commit: 6039190
+source_baseline: substrate@6d1f4e0
+source_units: [QB1]
+question: >-
+  Construct a reusable radial sine-Gordon harmonic-balance formulation and
+  determine the strongest finite-domain or infinite-domain quasibreather
+  statement that survives equation, boundary, residual, truncation,
+  continuation, tail, and independent-method audits of QB1.
+invariants:
+  - The dimensionless radial equation is u_tt-u_rr-2*u_r/r+sin(u)=0.
+  - Regular radial modes obey a_n'(0)=0; every outer condition and its physical meaning must be explicit.
+  - C-PDE-001 supplies finite-time IVP evidence for one Gaussian branch, not an exact periodic solution or a unique frequency.
+  - The exact C-SG-001 one-dimensional breather cannot be lifted into three radial dimensions.
+  - A finite-harmonic finite-domain collocation solution is not by itself an exact localized infinite-domain solution.
+allowed_imports:
+  - C-SG-001
+  - C-PDE-001
+  - standard Fourier orthogonality and radial regularity
+  - SciPy BVP, nonlinear least-squares, quadrature, and continuation algorithms with explicit evidence
+  - QB1 at substrate@6d1f4e0 as noncanonical evidence after the comparator gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce QB1's odd-cosine harmonic-balance equations and numerical root
+      literally, then retain only predicates that survive residual and
+      mutation audit.
+  - id: B
+    description: >-
+      Build a parameter-explicit finite-radius odd-harmonic Galerkin BVP with
+      regular origin data, declared outer data, independent temporal
+      projection, and mesh/harmonic/domain/tolerance continuation.
+  - id: C
+    description: >-
+      Use radiation-aware asymptotic channels for every harmonic, distinguishing
+      evanescent sub-threshold modes from oscillatory super-threshold tails and
+      reporting a standing- or outgoing-tail quasibreather rather than a
+      localized exact eigenstate.
+uniqueness_evidence: null
+selection_criteria:
+  - exact agreement with the radial PDE and Fourier normalization
+  - regular origin and mathematically declared outer asymptotics
+  - assumption and parameter economy without an inserted target frequency
+  - convergence in radial mesh, temporal projection, harmonic truncation, domain, and nonlinear tolerance
+  - residual measured between collocation points and in omitted harmonics
+  - continuation stability and sensitivity to normalization, signs, and boundary choices
+  - compatibility with C-PDE-001's finite-time and epistemic ceilings
+  - independent reconstruction or time-domain consistency check
+claims_proposed:
+  - provisional C-PDE-005
+  - provisional C-PDE-006
+comparators_blinded_until: >-
+  The equations, conventions, candidates, selection criteria, structural
+  asymptotic tests, residual norms, and refinement plan are frozen in this
+  manifest and matching memory contract.
+status: accepted

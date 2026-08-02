@@ -1,0 +1,23 @@
+attempt: 0011
+campaign: P052
+candidate: primary_exact_and_numeric_verifier
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P052-qb1-radial-harmonic-balance/verify.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+  --source-reproduction proposals/P052-qb1-radial-harmonic-balance/evidence/source-reproduction.yaml
+  --numerical-audit proposals/P052-qb1-radial-harmonic-balance/evidence/numerical-audit.yaml
+  --migration-queue migration/source-claims.yaml
+  --claims governance/claims.yaml
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+started_at: '2026-08-01T23:53:30Z'
+completed_at: '2026-08-01T23:53:40Z'
+expected: >-
+  Pass the exact projection, origin, far-tail and mutation gates; reproduce the
+  channel-aware N=1..9 branch; refine initial mesh, temporal projection,
+  tolerance and domain; expose radiative wall sensitivity and free-amplitude
+  calibration; and finish with a status-zero terminal tally.

@@ -1,0 +1,11 @@
+PASS [P052-INDEPENDENT] the reviewed QB1 source is hash pinned
+PASS [P052-INDEPENDENT] independent shooting resolves the fundamental branch
+PASS [P052-INDEPENDENT] Gauss-projected BVP independently agrees with shooting at N=1
+PASS [P052-INDEPENDENT] Gauss projection independently agrees with the DFT N=9 branch
+PASS [P052-INDEPENDENT] the independently reconstructed full nonlinear remainder decreases at every level
+PASS [P052-INDEPENDENT] the N=9 independent core remainder is resolved below two times ten to the minus five
+FAIL [P052-INDEPENDENT] finite-difference least squares independently converges on three radial grids
+
+Post-failure solver audit: all three grids exited with scipy status 0 after
+max_nfev=200, despite residual RMS values below 1e-6. The run is rejected
+because solver success is a prerequisite.

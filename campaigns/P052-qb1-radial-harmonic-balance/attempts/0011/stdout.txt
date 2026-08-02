@@ -1,0 +1,42 @@
+PASS [P052-QB1] QB1 is the hash-pinned primary source unit
+PASS [P052-QB1] the literal source exits cleanly with its complete tally
+PASS [P052-QB1] the predecessor dependency is evidence rather than an accepted claim ID
+PASS [P052-QB1] the split claim delta is atomic before or after promotion
+PASS [P052-QB1] QB1 projects the radial equation with the correct sign convention
+PASS [P052-QB1] QB1 places every retained mode on one finite Dirichlet wall
+PASS [P052-QB1] QB1's truncation verdict observes only successive frequency shifts
+PASS [P052-QB1] QB1 calibrates its free amplitude to the accepted IVP comparator
+PASS [P052-QB1] QB1 omits domain and projection refinement
+PASS [P052-QB1] odd cosine harmonics have exact half-period antisymmetry
+PASS [P052-QB1] an even-harmonic mutation breaks half-period antisymmetry
+PASS [P052-QB1] the importable reconstruction preserves the exact antisymmetry
+PASS [P052-QB1] periodic projection independently matches Jacobi-Anger coefficients
+PASS [P052-QB1] the Fourier factor two is load-bearing: baseline
+PASS [P052-QB1] the Fourier factor two is load-bearing: mutations supplied
+PASS [P052-QB1] the Fourier factor two is load-bearing: mutation 1 rejected
+PASS [P052-QB1] the Fourier factor two is load-bearing: mutation 2 rejected
+PASS [P052-QB1] the three-dimensional radial-origin factor is load-bearing: baseline
+PASS [P052-QB1] the three-dimensional radial-origin factor is load-bearing: mutations supplied
+PASS [P052-QB1] the three-dimensional radial-origin factor is load-bearing: mutation 1 rejected
+PASS [P052-QB1] the three-dimensional radial-origin factor is load-bearing: mutation 2 rejected
+PASS [P052-QB1] the three-dimensional radial-origin factor is load-bearing: mutation 3 rejected
+PASS [P052-QB1] the evanescent one-over-r tail has positive radial Laplacian eigenvalue
+PASS [P052-QB1] the radiative one-over-r tail has negative radial Laplacian eigenvalue
+PASS [P052-QB1] a radiative one-over-r tail has positive asymptotic energy per radial length
+PASS [P052-QB1] the source-like fundamental is evanescent but every retained higher mode radiates
+PASS [P052-QB1] a sub-gap fundamental does not remove its nonlinear radiation channels
+PASS [P052-QB1] every canonical BVP completes with resolved collocation residuals
+PASS [P052-QB1] frequency increments shrink through the N=9 ladder
+PASS [P052-QB1] the full nonlinear core remainder decreases at every harmonic level
+PASS [P052-QB1] the N=9 full core remainder is below two times ten to the minus five
+PASS [P052-QB1] the recorded primary evidence matches the fresh N=9 solve
+PASS [P052-QB1] the canonical outer conditions expose every finite-wall radiative mode
+PASS [P052-QB1] adaptive collocation is insensitive to the initial radial mesh
+PASS [P052-QB1] temporal projection refinement preserves the branch
+PASS [P052-QB1] nonlinear tolerance refinement preserves the branch and reduces the solver residual
+PASS [P052-QB1] the finite-box core frequency remains numerically bounded across four walls
+PASS [P052-QB1] the radiative third-harmonic tail exposes a wall-standing-wave resonance
+PASS [P052-QB1] the central amplitude is a load-bearing free branch coordinate
+PASS [P052-QB1] no version-specific NumPy trapezoid call enters the canonical harmonic solver
+PASS [P052-QB1] the strongest result is a finite-box branch rather than a unique localized eigenstate
+ALL 41 CHECKS PASS [P052-QB1]

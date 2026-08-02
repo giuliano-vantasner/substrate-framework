@@ -1,0 +1,36 @@
+attempt: 0009
+campaign: P052
+candidate: independent_fd_h2_extrapolation_repair
+verdict: failed_solver_status_gate
+process_exit_code: 1
+elapsed_seconds: 28.6
+mechanism: >-
+  All three finite-difference residual RMS values were below 1e-6 and their
+  frequencies followed the expected h^2 trend, but scipy least_squares reached
+  max_nfev=200 with status 0 on every grid. Low residuals cannot substitute for
+  a successful solver status, so the independent method is not admissible yet.
+classification: numerical_method_stopping_policy
+diagnostic:
+  - points: 81
+    success: false
+    status: 0
+    nfev: 200
+    omega: 0.9776781179900856
+    residual_rms: 6.567892728841765e-7
+  - points: 121
+    success: false
+    status: 0
+    nfev: 200
+    omega: 0.9772282748831708
+    residual_rms: 9.548022958824969e-8
+  - points: 161
+    success: false
+    status: 0
+    nfev: 200
+    omega: 0.97707391630559
+    residual_rms: 6.73749466363454e-7
+next_attempt: >-
+  Preserve the physical residual and h^2 extrapolation thresholds, align the
+  optimizer's xtol/ftol/gtol with a 1e-6 residual objective, and expand its
+  iteration budget. Require an actual positive SciPy termination status on all
+  grids.

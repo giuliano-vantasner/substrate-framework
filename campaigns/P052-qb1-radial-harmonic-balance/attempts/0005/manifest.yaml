@@ -1,0 +1,16 @@
+attempt: 0005
+campaign: P052
+candidate: B_canonical_channel_aware_branch
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P052-qb1-radial-harmonic-balance/attempts/0005/explore.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T03:50:00Z'
+expected: >-
+  Exercise the reusable channel-aware BVP through N=9 and independently vary
+  initial radial mesh, temporal projection, nonlinear tolerance, and wall
+  radius. Report the dense full-PDE truncation remainder and radiative tail
+  norms, not frequency alone.

@@ -1,0 +1,16 @@
+attempt: 0002
+campaign: P052
+candidate: B_finite_box_and_tail_audit
+command: >-
+  .venv/bin/python
+  proposals/P052-qb1-radial-harmonic-balance/attempts/0002/explore.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T03:05:00Z'
+expected: >-
+  Independently reconstruct parameterized single- and multi-harmonic BVPs,
+  replace the fundamental wall with its decaying Robin condition, scan the
+  finite wall for radiative harmonics, and measure collocation and omitted-mode
+  residuals without using QB1's reported frequency as a solve target.

@@ -1,0 +1,15 @@
+attempt: 0004
+campaign: P052
+candidate: B_actual_harmonic_residual_refinement
+command: >-
+  .venv/bin/python
+  proposals/P052-qb1-radial-harmonic-balance/attempts/0004/explore.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T03:30:00Z'
+expected: >-
+  Continue the R=40 branch through odd harmonics 1,3,5,7,9 and measure the
+  actual time-space nonlinear remainder and first omitted projection. A small
+  frequency increment alone is explicitly not a convergence oracle.

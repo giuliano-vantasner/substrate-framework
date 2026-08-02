@@ -1,0 +1,18 @@
+SINGLE_ROBIN
+R=20 success=True omega=1.047879 max_residual=4.876e-08
+R=30 success=False omega=-25.518989 max_residual=6.546e-03
+R=40 success=True omega=1.023980 max_residual=9.792e-08
+R=60 success=False omega=0.976881 max_residual=2.395e-02
+
+MULTI_SOURCE_WALL
+R=30 success=True omega=1.193674 max(a_3)=2.108e+01 max_residual=9.993e-08
+R=40 success=False omega=1.155522 max(a_3)=1.092e+02 max_residual=3.628e+00
+R=50 success=False omega=1.172326 max(a_3)=4.661e-02 max_residual=3.904e-03
+R=60 success=False omega=1.173784 max(a_3)=4.467e-02 max_residual=7.846e-04
+
+MULTI_FUNDAMENTAL_ROBIN
+R=40 success=False omega=0.994313 max(a_3)=1.765e+01 max_residual=3.429e+00
+
+The full structured diagnostic was printed by explore.py. Above-gap nominal
+successes and failed node-budget runs are retained as branch-initialization
+evidence only.

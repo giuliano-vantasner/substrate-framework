@@ -1,0 +1,25 @@
+attempt: 0008
+campaign: P052
+candidate: independent_finite_difference_method_crosscheck
+verdict: failed_after_six_prior_checks
+process_exit_code: 1
+elapsed_seconds: 25.8
+mechanism: >-
+  The new finite-difference solves succeeded, but the oracle incorrectly
+  required the raw 121-point frequency to agree with the collocation limit at
+  2e-5. The declared centered radial stencil is second order; its raw errors at
+  81 and 121 points are 8.04e-4 and 3.54e-4, while their h^2 Richardson limit
+  already agrees within 5.6e-6. The failure is a missing discretization-error
+  model, not solver divergence.
+classification: verifier_convergence_oracle
+diagnostic:
+  Gauss_N5: 0.9768739500825541
+  FD81_N5: 0.9776781179900856
+  FD81_residual_rms: 6.567892728841765e-7
+  FD121_N5: 0.9772282748831708
+  FD121_residual_rms: 9.548022958824969e-8
+  two_level_h2_extrapolation: 0.976868400397639
+next_attempt: >-
+  Add a third radial grid, preregister the exact h^2 stencil model, require raw
+  errors to decrease, fit frequency against h^2, and compare only the
+  zero-spacing intercept with the Gauss BVP branch.

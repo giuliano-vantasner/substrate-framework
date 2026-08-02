@@ -1,0 +1,16 @@
+attempt: 0007
+campaign: P052
+candidate: independent_Gauss_projection_and_shooting_repaired_audit
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P052-qb1-radial-harmonic-balance/reviews/independent_harmonic_review.py
+  --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+  --primary-evidence proposals/P052-qb1-radial-harmonic-balance/evidence/numerical-audit.yaml
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T04:10:00Z'
+expected: >-
+  Repeat attempt 0006 after correcting only the static source-call spelling;
+  all eleven independent predicates and the terminal tally must pass.

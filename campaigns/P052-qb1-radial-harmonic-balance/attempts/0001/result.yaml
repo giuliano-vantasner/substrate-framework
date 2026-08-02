@@ -1,0 +1,22 @@
+attempt: 0001
+campaign: P052
+candidate: A_literal_QB1_reproduction
+verdict: source_checks_passed_pending_adjudication
+process_exit_code: 0
+terminal_tally: ALL 6 CHECKS PASS
+elapsed_seconds: 99.0
+reported_branch:
+  amplitude: [1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
+  omega: [0.992221, 0.985753, 0.976909, 0.965311, 0.950525, 0.932080]
+reported_multiharmonic_at_amplitude_2_5:
+  harmonics_1: 0.976909
+  harmonics_1_3: 0.976877
+  harmonics_1_3_5: 0.976874
+reported_comparator_inversion:
+  target_omega: 0.921
+  fitted_amplitude: 4.2575
+interpretation: >-
+  The literal script is reproducible, but this attempt establishes only that
+  its six predicates executed successfully. Equation normalization, outer
+  conditions for super-threshold harmonics, residual norms, convergence, and
+  comparator-dependent selection remain unadjudicated.

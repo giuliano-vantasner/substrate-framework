@@ -1,0 +1,51 @@
+attempt: 0005
+campaign: P052
+candidate: B_canonical_channel_aware_branch
+verdict: passed_as_primary_numerical_evidence
+process_exit_code: 0
+elapsed_seconds: 21.9
+model:
+  equation: u_tt-u_rr-2*u_r/r+sin(u)=0
+  central_fundamental: 2.5
+  origin_epsilon: 1.0e-3
+  outer_radius: 40.0
+  outer_conditions:
+    fundamental: decaying_robin
+    radiative_harmonics: dirichlet_box
+  temporal_samples: 256
+  tolerance: 1.0e-8
+baseline_levels:
+  - harmonics: [1]
+    omega: 0.9769086571172986
+    full_core_remainder_rms: 0.10542199987694674
+  - harmonics: [1, 3]
+    omega: 0.9768768285300755
+    full_core_remainder_rms: 0.013622086505365822
+  - harmonics: [1, 3, 5]
+    omega: 0.9768739498473548
+    full_core_remainder_rms: 0.001458993736597249
+  - harmonics: [1, 3, 5, 7]
+    omega: 0.976873921613576
+    full_core_remainder_rms: 0.0001445846050599028
+  - harmonics: [1, 3, 5, 7, 9]
+    omega: 0.976873921394286
+    full_core_remainder_rms: 1.3718663760668135e-5
+refinements:
+  radial_points_200_omega: 0.9768739212689068
+  radial_points_400_omega: 0.9768739212671684
+  temporal_samples_512_omega: 0.976873921394497
+  tolerance_1e_9_omega: 0.9768739210433163
+domain_scan_N9:
+  radius_30: 0.9768721198349387
+  radius_40: 0.976873921394286
+  radius_50: 0.9769343590524432
+  radius_60: 0.9768697965110076
+radiative_tail_observation: >-
+  The n=3 tail norm is non-monotone and is more than twenty times larger at
+  R=50 than at R=40 or R=60. This is standing-wave wall sensitivity even
+  though the core frequency varies by only about 6.5e-5.
+conclusion: >-
+  A channel-labelled finite-box Galerkin branch converges in the core through
+  N=9 and is stable to initial mesh, temporal projection, and tolerance. It is
+  not an infinite-domain localized eigenstate because every retained n>=3
+  mode is radiative and wall-quantized.

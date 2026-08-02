@@ -1,0 +1,50 @@
+source_unit: QB1
+source_baseline: substrate@6d1f4e0
+path: merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+sha256: 1f387c140ca80be0e457efd17146267bdecab1cbdbcdd10dd34287bc5de2dc7a
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+command: >-
+  PYTHONHASHSEED=0 .venv/bin/python
+  <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+process_exit_code: 0
+elapsed_seconds: 99.0
+terminal_tally: ALL 6 CHECKS PASS
+reported_branch:
+  amplitude: [1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
+  omega: [0.992221, 0.985753, 0.976909, 0.965311, 0.950525, 0.932080]
+reported_N1_N3_N5_at_amplitude_2_5:
+  omega: [0.976909, 0.976877, 0.976874]
+reported_target_inversion:
+  target_omega: 0.921
+  selected_amplitude: 4.2575
+static_audit:
+  projection_equation: correct
+  origin_condition: derivative_zero_at_r_1e_3_without_series_correction
+  outer_condition: every_retained_harmonic_zero_at_fixed_R_40
+  temporal_projection_samples: 96
+  harmonic_levels: [[1], [1, 3], [1, 3, 5]]
+  truncation_oracle: frequency_increment_only
+  domain_refinement: absent
+  radial_mesh_refinement: absent
+  temporal_projection_refinement: absent
+  nonlinear_tolerance_refinement: absent
+  omitted_harmonic_residual: absent
+  higher_harmonic_tail_classification: absent
+  comparator_role: >-
+    The accepted P3D1 frequency is inserted as target=0.921 and the free
+    central amplitude is bisected until the branch reproduces it.
+  source_solver_status: >-
+    solve_bvp success is included in the aggregate N=1/N=3/N=5 check; the
+    shooting solve_ivp status and finiteness are not checked before its event
+    classifier is used.
+  numpy_quadrature: >-
+    QB1 uses a periodic discrete sum and contains no np.trapz dependency. The
+    canonical implementation likewise uses an explicit DFT normalization;
+    version-specific quadrature names are unnecessary here.
+adjudication_ceiling: >-
+  The tally reproduces a finite-box Galerkin calculation. It does not establish
+  a unique frequency, an untuned recovery of C-PDE-001, or an exponentially
+  localized infinite-domain quasibreather.

@@ -1,0 +1,14 @@
+BOX R=30: omega N1/N3/N5 = 0.9769098361 / 0.9768761948 / 0.9768733294;
+  N5 max amplitudes = [2.5, 5.9583e-2, 3.0211e-3], omitted n=7 core RMS = 2.0830e-3.
+BOX R=40: omega N1/N3/N5 = 0.9769086596 / 0.9768768324 / 0.9768739537;
+  N5 max amplitudes = [2.5, 5.7755e-2, 2.9551e-3], omitted n=7 core RMS = 2.0550e-3.
+BOX R=50: omega N1/N3/N5 = 0.9769086432 / 0.9769311278 / 0.9769344070;
+  N5 max amplitudes = [2.5, 5.1294e-2, 1.9652e-3], omitted n=7 core RMS = 1.3084e-3.
+BOX R=60: omega N1/N3/N5 = 0.9769086429 / 0.9768726450 / 0.9768698232;
+  N5 max amplitudes = [2.5, 6.1929e-2, 3.0877e-3], omitted n=7 core RMS = 2.1293e-3.
+TIME_192: omega=0.9768739537, omitted n=7 core RMS=2.0550e-3.
+TOL_1E-8: omega=0.9768739525, max collocation RMS=9.9851e-9.
+ROBIN_CORRECTED: omega=0.9768739497, max collocation RMS=9.9851e-9.
+
+All successful retained systems classify n=1 as evanescent and n=3,n=5 as
+radiative. Full structured values remain reproducible from explore.py.

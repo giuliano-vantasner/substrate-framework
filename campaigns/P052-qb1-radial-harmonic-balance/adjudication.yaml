@@ -1,0 +1,86 @@
+campaign: P052
+title: Radial harmonic-balance projection, finite-box branch, and QB1 audit
+source_baseline: substrate@6d1f4e0
+source_units: [QB1]
+base_release: v0.45.0
+release_after_adjudication: v0.46.0
+adjudicated_at: '2026-08-02T02:05:00Z'
+selected_candidate:
+  id: B_with_C_tail_theorem
+  reason: >-
+    The explicit finite-radius Galerkin branch supplies the requested positive
+    solver object and converges under residual, mesh, projection, tolerance,
+    harmonic, and independent-method gates. Exact channel classification is
+    required to state its physical ceiling: the fundamental decays, while
+    every retained higher harmonic is a radiative finite-wall standing wave.
+competing_candidates:
+  - id: A
+    decision: >-
+      retained_as_reproduction_evidence_but_qualified_for_target_amplitude
+      calibration_all_mode_wall_semantics_and_frequency_only_truncation
+  - id: C
+    decision: >-
+      selected_for_the_exact_asymptotic_channel_theorem_while_a_distinct
+      outgoing_tail_numerical_solution_remains_outside_the_QB1_claim_delta
+claims:
+  - id: C-PDE-005
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+  - id: C-PDE-006
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+evidence:
+  verifier: verify.py
+  passing_attempt: attempts/0011/result.yaml
+  independent_review: reviews/independent_harmonic_review.py
+  independent_result: attempts/0010/result.yaml
+  preserved_failed_attempts:
+    - attempts/0002/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0008/result.yaml
+    - attempts/0009/result.yaml
+  exploratory_results:
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0007/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  numerical_audit: evidence/numerical-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-PDE-005-review.md
+    - memory/vantasner/decisions/C-PDE-006-review.md
+source_disposition:
+  QB1: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P052-qb1-radial-harmonic-balance/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+    --source-reproduction campaigns/P052-qb1-radial-harmonic-balance/evidence/source-reproduction.yaml
+    --numerical-audit campaigns/P052-qb1-radial-harmonic-balance/evidence/numerical-audit.yaml
+    --migration-queue migration/source-claims.yaml
+    --claims governance/claims.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P052-qb1-radial-harmonic-balance/reviews/independent_harmonic_review.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+    --primary-evidence campaigns/P052-qb1-radial-harmonic-balance/evidence/numerical-audit.yaml
+  - >-
+    .venv/bin/python -m pytest -q tests/test_numerics.py
+    tests/test_radial_harmonic_balance.py tests/test_radial_sine_gordon.py
+    tests/test_abelian_higgs_vortex.py
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P044-p3d1-radial-sine-gordon-oscillon/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-14/bridge_P3D1_radial_pulson_exists.py
+    --source-reproduction campaigns/P044-p3d1-radial-sine-gordon-oscillon/evidence/source-reproduction.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

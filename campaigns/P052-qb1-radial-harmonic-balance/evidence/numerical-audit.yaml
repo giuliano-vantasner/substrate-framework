@@ -1,0 +1,78 @@
+campaign: P052
+candidate: B_channel_aware_finite_box
+precision: IEEE_float64
+equation: u_tt-u_rr-2*u_r/r+sin(u)=0
+ansatz: u(r,tau)=sum_odd_n a_n(r)*cos(n*tau)
+branch_coordinate:
+  name: central_fundamental
+  value: 2.5
+  role: declared_free_family_coordinate
+baseline:
+  origin_epsilon: 1.0e-3
+  outer_radius: 40.0
+  initial_radial_points: 300
+  temporal_projection: periodic_DFT
+  temporal_samples: 256
+  bvp_solver: scipy.integrate.solve_bvp
+  tolerance: 1.0e-8
+  max_nodes: 50000
+  fundamental_outer_condition: decaying_Robin
+  radiative_outer_condition: finite_box_Dirichlet
+  levels:
+    - harmonics: [1]
+      omega: 0.9769086571172986
+      core_full_remainder_rms: 0.10542199987694674
+      first_omitted_projection_rms: 0.1486640628009343
+    - harmonics: [1, 3]
+      omega: 0.9768768285300755
+      core_full_remainder_rms: 0.013622086505365822
+      first_omitted_projection_rms: 0.01918970160493251
+    - harmonics: [1, 3, 5]
+      omega: 0.9768739498473548
+      core_full_remainder_rms: 0.001458993736597249
+      first_omitted_projection_rms: 0.0020550339063217364
+    - harmonics: [1, 3, 5, 7]
+      omega: 0.976873921613576
+      core_full_remainder_rms: 0.0001445846050599028
+      first_omitted_projection_rms: 0.00020365905472278267
+    - harmonics: [1, 3, 5, 7, 9]
+      omega: 0.976873921394286
+      core_full_remainder_rms: 1.3718663760668135e-5
+      first_omitted_projection_rms: 1.9325085169909972e-5
+      max_collocation_rms: 9.978728453559095e-9
+      tail_channels: [evanescent, radiative, radiative, radiative, radiative]
+refinement:
+  initial_radial_points:
+    values: [200, 300, 400]
+    omega: [0.9768739212689068, 0.976873921394286, 0.9768739212671684]
+  temporal_samples:
+    values: [256, 512]
+    omega: [0.976873921394286, 0.976873921394497]
+  nonlinear_tolerance:
+    values: [1.0e-8, 1.0e-9]
+    omega: [0.976873921394286, 0.9768739210433163]
+  outer_radius:
+    values: [30.0, 40.0, 50.0, 60.0]
+    omega:
+      - 0.9768721198349387
+      - 0.976873921394286
+      - 0.9769343590524432
+      - 0.9768697965110076
+    n3_tail_r_amplitude_rms:
+      - 0.00046541458947547764
+      - 0.0006818692695406058
+      - 0.015301011602381603
+      - 0.0007042666639348603
+interpretation:
+  supported: >-
+    A nontrivial finite-radius odd-harmonic Galerkin branch exists at the
+    declared amplitude, and its core nonlinear projection remainder decreases
+    by roughly one order of magnitude per added odd harmonic through N=9.
+  excluded: >-
+    The result is not an infinite-domain finite-energy eigenstate: modes n>=3
+    are above the linear threshold, their real tails are oscillatory 1/r
+    channels, and their finite-wall phase and norm vary with the wall.
+  comparator: >-
+    No C-PDE-001 frequency was used to choose the branch or any threshold. The
+    source's later inversion of its free amplitude to 0.921 is classified as
+    calibration, not recovery from the equation alone.

@@ -300,6 +300,24 @@ Evolve the C-PDE-001 radial initial data P(r,0)=3*exp(-(r/4)^2), P_t(r,0)=0 toge
 - Compatibility: `native`
 - Dependencies: C-PDE-001, C-PDE-003, C-MOM-003
 
+## C-PDE-005
+
+For the dimensionless three-dimensional radial sine-Gordon equation of C-PDE-001, let H be a finite set of positive odd integers containing one and set u(r,t)=sum_(n in H) a_n(r)*cos(n*omega*t). With S_n[a]=(1/pi)*integral_0^(2*pi) sin(sum_(m in H) a_m(r)*cos(m*tau))*cos(n*tau) dtau, exact Fourier projection gives a_n''+2*a_n'/r+(n*omega)^2*a_n-S_n[a]=0. Odd harmonics give exact half-period antisymmetry. Even radial regularity gives a_n'(0)=0 and the origin curvature law 3*a_n''(0)+(n*omega)^2*a_n(0)-S_n[a](0)=0. In the linear far field each mode obeys a_n''+2*a_n'/r+((n*omega)^2-1)*a_n=0: n*omega<1 is evanescent with rate sqrt(1-(n*omega)^2), n*omega=1 is threshold, and n*omega>1 is radiative with wavenumber sqrt((n*omega)^2-1). A nonzero real radiative one-over-r tail has positive asymptotic energy per unit radial length and hence infinite integrated three-dimensional energy. Thus a sub-threshold fundamental does not localize its higher channels, and a Dirichlet wall on a radiative harmonic fixes a finite-box standing-wave phase rather than proving an infinite-domain finite-energy breather. These exact conditional statements establish no existence, uniqueness, nonzero radiative coefficient, exact periodic solution, lifetime, gravity, particle identity, absolute scale, or substrate realization.
+
+- Accepted in: `v0.46.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-PDE-001
+
+## C-PDE-006
+
+On the C-PDE-005 odd-harmonic system, declare the free branch coordinate a_1(0)=2.5, origin cutoff 0.001, outer radius 40, a decaying Robin condition on the evanescent fundamental, and finite-box Dirichlet data on every radiative harmonic. SciPy adaptive collocation in IEEE float64, initialized with 300 radial points, periodic-DFT projection with 256 temporal samples, tolerance 1e-8, and a fitted frequency constrained to 0<omega<1 completes through retained sets N=1, 3, 5, 7, and 9. The frequencies are 0.976908657117, 0.976876828530, 0.976873949847, 0.976873921614, and 0.976873921394. On a uniform radial audit grid over r<=12 with 1024 temporal phases, the RMS full nonlinear projection remainder falls from 0.105422 to 0.0136221, 0.00145899, 0.000144585, and 1.37187e-5; the N=9 maximum collocation RMS residual is below 1e-8. Initial-mesh 200/300/400, temporal-sample 256/512, and tolerance 1e-8/1e-9 refinements preserve the branch. Walls at radii 30, 40, 50, and 60 keep the fitted frequency within 1e-4 but produce a nonmonotone more-than-twentyfold resonance in the outer third-harmonic r*a_3 RMS, exposing the standing-wave boundary dependence. Independent DOP853 shooting, Gauss-Legendre projected collocation, and second-order finite differences with a three-grid zero-spacing extrapolation reproduce the finite-box core branch and remainder trend. This is numeric evidence for one declared finite-radius, finite-harmonic family point. The central amplitude is not equation-derived, the P3D1 frequency is not an input, and the result establishes no unique eigenfrequency, exponentially localized infinite-domain state, exact or eternal quasibreather, lifetime law, gravity, particle identity, absolute scale, or substrate realization.
+
+- Accepted in: `v0.46.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-PDE-005
+
 ## C-QBL-001
 
 Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega^2-f^2/12)f, C-U1-001's stationary phase Psi=f*exp(-i*omega*t), and 0<omega<1/sqrt(2), let kappa=sqrt(1/2-omega^2). Then for every real center x0 the positive localized profile f=sqrt(24)*kappa*sech(kappa*(x-x0)) solves the equation exactly. Within a nonzero ansatz A*sech(k*(x-x0)), the independent sech powers force k^2=1/2-omega^2 and A^2=24*k^2. Its accepted U1 charge is Q=96*omega*sqrt(1/2-omega^2): Q tends to zero at both open endpoints, increases on (0,1/2), reaches its unique maximum 24 at omega=1/2, and decreases on (1/2,1/sqrt(2)). These derivative signs alone establish no VK, spectral, orbital, or nonlinear stability, forced complex ontology, electric charge, particle identity, or substrate realization.

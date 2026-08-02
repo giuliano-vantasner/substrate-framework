@@ -1,0 +1,20 @@
+PASS [P052-INDEPENDENT] the reviewed QB1 source is hash pinned
+PASS [P052-INDEPENDENT] independent shooting resolves the fundamental branch
+PASS [P052-INDEPENDENT] Gauss-projected BVP independently agrees with shooting at N=1
+PASS [P052-INDEPENDENT] Gauss projection independently agrees with the DFT N=9 branch
+PASS [P052-INDEPENDENT] the independently reconstructed full nonlinear remainder decreases at every level
+PASS [P052-INDEPENDENT] the N=9 independent core remainder is resolved below two times ten to the minus five
+PASS [P052-INDEPENDENT] finite-difference least squares independently converges on three radial grids
+PASS [P052-INDEPENDENT] the second-order finite-difference frequencies extrapolate to the Gauss BVP branch
+PASS [P052-INDEPENDENT] the fundamental is evanescent while the third harmonic is radiative
+PASS [P052-INDEPENDENT] an evanescent tail has converged radial energy
+PASS [P052-INDEPENDENT] a nonzero radiative one-over-r tail has linearly divergent radial energy
+PASS [P052-INDEPENDENT] the source uses the accepted IVP frequency as an inversion target
+PASS [P052-INDEPENDENT] the source imposes a finite wall on every retained harmonic
+PASS [P052-INDEPENDENT] the source's truncation check observes frequency only
+independent frequencies: shooting=0.976908657117 Gauss_N9=0.976873921630
+  FD81_N5=0.977678261906 FD121_N5=0.977228447752
+  FD161_N5=0.977073892256 FD_h2_limit=0.976871246116
+independent remainder ladder: [0.10557792642171716, 0.013648619275981795,
+  0.0014623804023201179, 0.00014496665002111336, 1.3758834900884028e-05]
+ALL 14 CHECKS PASS [P052-INDEPENDENT]

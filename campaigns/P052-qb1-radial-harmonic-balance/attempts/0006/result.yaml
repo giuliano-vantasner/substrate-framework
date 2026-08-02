@@ -1,0 +1,16 @@
+attempt: 0006
+campaign: P052
+candidate: independent_Gauss_projection_and_shooting
+verdict: failed_after_nine_scientific_checks
+process_exit_code: 1
+elapsed_seconds: 2.5
+mechanism: >-
+  The independent shooting, Gauss-projected N=9 branch, remainder convergence,
+  and tail-energy checks all passed. A static source-audit predicate searched
+  for the wrong function name, omega_eig(A_star), while the source calls
+  eigen_omega(A_star). This is a verifier implementation defect, not a
+  scientific failure.
+classification: verifier_static_string_defect
+next_attempt: >-
+  Correct only the source call spelling and rerun the unchanged independent
+  scientific construction.

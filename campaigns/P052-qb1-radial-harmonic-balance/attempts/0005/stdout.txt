@@ -1,0 +1,20 @@
+BASELINE R=40, A_1(0)=2.5, temporal samples=256, tolerance=1e-8
+N=1: omega=0.976908657117, core remainder RMS=1.054220e-1
+N=3: omega=0.976876828530, core remainder RMS=1.362209e-2
+N=5: omega=0.976873949847, core remainder RMS=1.458994e-3
+N=7: omega=0.976873921614, core remainder RMS=1.445846e-4
+N=9: omega=0.976873921394, core remainder RMS=1.371866e-5
+
+All retained collocation residuals are below 1.0e-8. The fundamental uses a
+decaying Robin condition. Modes 3,5,7,9 are radiative and use explicit
+finite-box Dirichlet conditions.
+
+N=9 domain scan: R=30 -> 0.976872119835; R=40 -> 0.976873921394;
+R=50 -> 0.976934359052; R=60 -> 0.976869796511. The n=3 tail r*a RMS is
+4.65e-4, 6.82e-4, 1.53e-2, and 7.04e-4 respectively, exposing a wall
+standing-wave resonance that frequency-only convergence hides.
+
+N=9 radial initial meshes 200/400 give omega 0.976873921269 and
+0.976873921267. Temporal projection 512 gives 0.976873921394. Tightening the
+BVP tolerance to 1e-9 gives 0.976873921043 and a maximum collocation RMS below
+1e-9. Full structured diagnostics remain reproducible from explore.py.

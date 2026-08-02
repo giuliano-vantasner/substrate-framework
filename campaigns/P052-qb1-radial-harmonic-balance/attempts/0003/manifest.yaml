@@ -1,0 +1,16 @@
+attempt: 0003
+campaign: P052
+candidate: B_continued_finite_box_branch
+command: >-
+  .venv/bin/python
+  proposals/P052-qb1-radial-harmonic-balance/attempts/0003/explore.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T03:20:00Z'
+expected: >-
+  Repair attempt 0002 by following the sub-gap fundamental branch from a
+  source-equivalent N=1 solve, continuing N=1 to N=3 to N=5, then varying the
+  wall, projection resolution, tolerance, and fundamental outer condition.
+  A valid result must reject failed or above-gap solver branches.

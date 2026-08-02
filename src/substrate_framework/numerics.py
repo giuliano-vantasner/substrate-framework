@@ -57,12 +57,13 @@ class IVPEvidence:
 
 @dataclass(frozen=True)
 class BVPEvidence:
-    """The converged mesh, state, and collocation residuals for a BVP."""
+    """The converged mesh, state, parameters, and residuals for a BVP."""
 
     coordinate: FloatArray
     state: FloatArray
     rms_residuals: FloatArray
     iterations: int
+    parameters: FloatArray | None = None
 
     @property
     def max_rms_residual(self) -> float:
@@ -300,16 +301,22 @@ def solve_method_of_lines(
 
 
 def solve_bvp_evidence(
-    equations: Callable[[FloatArray, FloatArray], ArrayLike],
-    boundary_residual: Callable[[FloatArray, FloatArray], ArrayLike],
+    equations: Callable[..., ArrayLike],
+    boundary_residual: Callable[..., ArrayLike],
     coordinate: ArrayLike,
     state_guess: ArrayLike,
     *,
+    initial_parameters: ArrayLike | None = None,
     tolerance: float = 1.0e-6,
     max_nodes: int = 10_000,
     **solver_options: Any,
 ) -> BVPEvidence:
-    """Solve a two-point BVP and retain collocation residual evidence."""
+    """Solve a two-point BVP and retain collocation and parameter evidence.
+
+    When ``initial_parameters`` is supplied, ``equations`` and
+    ``boundary_residual`` must accept SciPy's additional parameter argument.
+    Existing parameter-free callers retain their two-argument signatures.
+    """
 
     x = _real_vector(coordinate, name="coordinate")
     guess = np.asarray(state_guess, dtype=np.float64)
@@ -321,12 +328,16 @@ def solve_bvp_evidence(
         raise ValueError("tolerance must be positive and finite")
     if max_nodes < x.size:
         raise ValueError("max_nodes cannot be smaller than the initial mesh")
+    parameter_guess = None
+    if initial_parameters is not None:
+        parameter_guess = _real_vector(initial_parameters, name="initial_parameters")
 
     result = solve_bvp(
         equations,
         boundary_residual,
         x,
         guess,
+        p=parameter_guess,
         tol=tolerance,
         max_nodes=max_nodes,
         **solver_options,
@@ -341,6 +352,11 @@ def solve_bvp_evidence(
         state=np.asarray(result.y, dtype=np.float64),
         rms_residuals=np.asarray(result.rms_residuals, dtype=np.float64),
         iterations=int(result.niter),
+        parameters=(
+            None
+            if result.p is None
+            else np.asarray(result.p, dtype=np.float64)
+        ),
     )
 
 

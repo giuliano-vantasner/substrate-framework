@@ -1,0 +1,12 @@
+N={1}: omega=0.976908659604; full core remainder RMS=1.054846e-1;
+  next n=3 projection RMS=1.487521e-1.
+N={1,3}: omega=0.976876831156; full core remainder RMS=1.363278e-2;
+  next n=5 projection RMS=1.920474e-2.
+N={1,3,5}: omega=0.976873952462; full core remainder RMS=1.460359e-3;
+  next n=7 projection RMS=2.056955e-3.
+N={1,3,5,7}: omega=0.976873924228; full core remainder RMS=1.447386e-4;
+  next n=9 projection RMS=2.038758e-4.
+N={1,3,5,7,9}: omega=0.976873924009; full core remainder RMS=1.373486e-5;
+  next n=11 projection RMS=1.934788e-5.
+
+All five BVP stages succeed with maximum collocation RMS below 1.0e-8.

@@ -1,0 +1,18 @@
+attempt: 0002
+campaign: P052
+candidate: B_finite_box_and_tail_audit
+verdict: failed
+process_exit_code: 0
+elapsed_seconds: 116.0
+mechanism: >-
+  Directly seeding the parameterized BVP with a smooth exponential profile was
+  not branch-safe. The unconstrained frequency parameter crossed above the
+  mass threshold on nominal successes, while larger-domain and multi-harmonic
+  solves exhausted the node budget or landed on high-amplitude standing-wave
+  branches. The output cannot support physical conclusions.
+classification: numerical_method_and_branch_representation
+next_attempt: >-
+  Constrain the frequency to the sub-gap interval, obtain the fundamental
+  branch first through a shooting separatrix or a source-equivalent BVP, and
+  continue that converged state through boundary, domain, and harmonic changes
+  rather than solving N=5 cold.

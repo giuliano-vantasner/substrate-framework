@@ -1,0 +1,29 @@
+attempt: 0010
+campaign: P052
+candidate: independent_fd_stopping_policy_repair
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 8.3
+terminal_tally: ALL 14 CHECKS PASS [P052-INDEPENDENT]
+frequencies:
+  shooting_N1: 0.976908657117
+  Gauss_BVP_N9: 0.976873921630
+  finite_difference_N5:
+    points_81: 0.977678261906
+    points_121: 0.977228447752
+    points_161: 0.977073892256
+    h2_extrapolated: 0.976871246116
+  Gauss_BVP_N5: 0.976873950083
+independent_core_remainder_rms:
+  N1: 0.10557792642171716
+  N3: 0.013648619275981795
+  N5: 0.0014623804023201179
+  N7: 0.00014496665002111336
+  N9: 1.3758834900884028e-5
+conclusion: >-
+  DOP853 shooting, Gauss-Legendre projected collocation, and a separately
+  discretized nonlinear finite-difference least-squares method agree after the
+  latter's declared h^2 extrapolation. The finite-box core branch and harmonic
+  remainder convergence are method-robust. Exact tail analysis still excludes
+  an infinite-domain finite-energy localized state when radiative harmonics
+  are nonzero.

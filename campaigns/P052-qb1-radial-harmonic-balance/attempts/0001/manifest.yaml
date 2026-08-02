@@ -1,0 +1,16 @@
+attempt: 0001
+campaign: P052
+candidate: A_literal_QB1_reproduction
+command: >-
+  PYTHONHASHSEED=0 .venv/bin/python
+  <substrate@6d1f4e0>/merged-framework/bridges/phase-16/bridge_QB1_radial_eigenvalue_quasibreather.py
+source_sha256: 1f387c140ca80be0e457efd17146267bdecab1cbdbcdd10dd34287bc5de2dc7a
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+started_at: '2026-08-02T02:50:00Z'
+expected: >-
+  Reproduce the hash-pinned source exactly and preserve its process status,
+  terminal tally or failure, reported root, and solver diagnostics before any
+  compatibility or scientific repair.

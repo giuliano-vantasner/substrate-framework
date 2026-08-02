@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 169
-  qualified: 42
+  pending_adjudication: 168
+  qualified: 43
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3160,8 +3160,30 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-PDE-005
+  - C-PDE-006
+  qualification: QB1's odd-harmonic projected equation and its finite-box frequency ladder are reproducible,
+    and P052 promotes an exact origin and far-tail channel theorem plus one independently converged finite-box
+    N=9 branch. The central fundamental is a free family coordinate, however, and QB1 fits it to the accepted
+    P3D1 comparator. Its universal R=40 Dirichlet wall selects standing-wave phases for every super-threshold
+    harmonic, while its truncation check observes only shrinking frequency increments. Nonzero radiative
+    one-over-r tails have infinite integrated radial energy, and explicit wall scans expose a third-harmonic
+    resonance. QB1 therefore establishes no unique equation-derived eigenfrequency, exponentially localized
+    infinite-domain solution, exact or eternal quasibreather, lifetime law, gravity, particle identity,
+    absolute scale, or substrate realization.
+  evidence:
+  - campaigns/P052-qb1-radial-harmonic-balance/reviews/source_adjudication.md
+  - campaigns/P052-qb1-radial-harmonic-balance/evidence/source-reproduction.yaml
+  - campaigns/P052-qb1-radial-harmonic-balance/evidence/numerical-audit.yaml
+  - memory/vantasner/decisions/C-PDE-005-review.md
+  - memory/vantasner/decisions/C-PDE-006-review.md
+  note: P052 replaces the source's target-frequency inversion with an explicit amplitude coordinate, corrects
+    the finite-radius origin series, labels evanescent and radiative outer conditions separately, measures
+    the full omitted nonlinear remainder, and verifies the surviving branch with DFT/Gauss projection,
+    DOP853 shooting, collocation, and extrapolated second-order finite differences. Its projection needs
+    no NumPy trapezoidal-integration alias.
 - source_unit: QB2
   phase: phase-16
   path: merged-framework/bridges/phase-16/bridge_QB2_clean_2omega_line.py

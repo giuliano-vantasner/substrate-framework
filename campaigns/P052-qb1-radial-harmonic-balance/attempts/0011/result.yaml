@@ -1,0 +1,32 @@
+attempt: 0011
+campaign: P052
+candidate: primary_exact_and_numeric_verifier
+verdict: passed
+process_exit_code: 0
+elapsed_seconds: 9.6
+terminal_tally: ALL 41 CHECKS PASS [P052-QB1]
+exact_result: >-
+  Odd-cosine projection of the accepted radial equation gives the declared
+  mode equations and the three-dimensional regular-origin coefficient. A
+  harmonic with n*omega below the mass threshold has an evanescent one-over-r
+  tail, whereas one above threshold has an oscillatory one-over-r radiative
+  channel whose nonzero tail carries positive asymptotic energy per radial
+  length. A sub-gap fundamental therefore does not by itself establish a
+  finite-energy localized nonlinear state.
+numeric_result: >-
+  At the explicit branch coordinate a_1(0)=2.5 and finite wall R=40, the
+  channel-aware odd-harmonic BVP converges from N=1 through N=9 to
+  omega=0.976873921394, with the full nonlinear core remainder falling to
+  1.373e-5. Initial-mesh, temporal-projection, and tolerance refinements are
+  stable, while domain variation exposes a radiative third-harmonic standing-
+  wave resonance even though the fitted core frequency varies by less than
+  1e-4 over the audited walls.
+source_qualification: >-
+  QB1's fitted amplitude is chosen by inversion against the accepted P3D1
+  comparator, its all-mode Dirichlet wall is a box condition for radiative
+  harmonics, and its truncation check observes only successive frequency
+  shifts. It does not derive a unique infinite-domain localized eigenstate or
+  recover the comparator from the equation alone.
+next_attempt: >-
+  Complete separate exact and numerical claim reviews, source adjudication,
+  impact replay, and the governed promotion transaction.

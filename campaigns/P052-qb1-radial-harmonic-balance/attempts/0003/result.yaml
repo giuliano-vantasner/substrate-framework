@@ -1,0 +1,32 @@
+attempt: 0003
+campaign: P052
+candidate: B_continued_finite_box_branch
+verdict: passed_as_exploratory_finite_box_evidence
+process_exit_code: 0
+elapsed_seconds: 2.1
+baseline:
+  amplitude: 2.5
+  radius: 40.0
+  temporal_samples: 96
+  tolerance: 1.0e-7
+  omega_N1: 0.9769086596055877
+  omega_N3: 0.9768768324250502
+  omega_N5: 0.9768739536983434
+  amplitude_N3_max: 0.057754668833707154
+  amplitude_N5_max: 0.002955139009088058
+  omitted_N7_core_rms: 0.002055049890077908
+  max_collocation_rms: 9.95433389115307e-8
+refinements:
+  temporal_samples_192_omega: 0.9768739537028559
+  tolerance_1e_8_omega: 0.9768739524939833
+  corrected_origin_and_fundamental_robin_omega: 0.976873949720841
+domain_observation: >-
+  All N=5 box solves at radii 30, 40, 50, and 60 succeed, but their n=3
+  standing-wave tail norm is non-monotone and peaks near radius 50; the tiny
+  frequency shifts do not bound the omitted-harmonic or tail error.
+interpretation: >-
+  Continuation repairs attempt 0002 and confirms the source's finite-box
+  frequency values. It also shows that n=3 and n=5 are radiative channels and
+  that the first omitted projection is about four orders larger than the
+  retained collocation residual. Frequency-only truncation convergence is not
+  convergence of the full radial PDE.

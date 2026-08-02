@@ -1,0 +1,21 @@
+revision: 0001
+campaign: P052
+recorded_at: '2026-08-02T03:45:00Z'
+reason: >-
+  Source reconstruction showed that the exact Fourier projection and
+  far-field channel theorem require a symbolic verdict, while the finite-box
+  branch requires a separate numeric-evidence verdict. Keeping them in one
+  claim would collapse two independent verification axes.
+changes:
+  claims_proposed:
+    before: [provisional C-PDE-005]
+    after: [provisional C-PDE-005, provisional C-PDE-006]
+unchanged:
+  - question and positive deliverable
+  - invariants and permitted imports
+  - candidate set and structural selection criteria
+  - comparator blinding point and prohibition on target-frequency fitting
+replay_required: >-
+  Re-run exact projection, channel mutations, all numerical refinement,
+  independent reconstruction, consumer replay, and the final repository gate
+  against the split claim statements.
