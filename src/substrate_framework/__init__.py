@@ -128,6 +128,18 @@ from .numerics import (
     solve_method_of_lines,
     trapezoid_integral,
 )
+from .normalized_overlaps import (
+    ConditionalOverlapMassLedger,
+    MatchedSechOverlap,
+    QuarticBoundModeOverlapLedger,
+    conditional_overlap_mass_ledger,
+    matched_width_sech_overlap,
+    normalized_expectation_bounds,
+    overlap_mass_ratio,
+    quartic_bound_mode_overlap_ledger,
+    reciprocal_overlap_scale_rescaling,
+    sech_power_integral,
+)
 from .angular_defects import (
     EqualSplitShellLedger,
     FullPolarDeckTransformation,
@@ -454,6 +466,16 @@ from .variational import (
 __all__ = [
     "AxisymmetricSTFReadout",
     "BVPEvidence",
+    "ConditionalOverlapMassLedger",
+    "MatchedSechOverlap",
+    "QuarticBoundModeOverlapLedger",
+    "conditional_overlap_mass_ledger",
+    "matched_width_sech_overlap",
+    "normalized_expectation_bounds",
+    "overlap_mass_ratio",
+    "quartic_bound_mode_overlap_ledger",
+    "reciprocal_overlap_scale_rescaling",
+    "sech_power_integral",
     "ConditionalAxisymmetricRadiationCoefficients",
     "ConditionalScaledSTFWaveform",
     "GovernanceError",

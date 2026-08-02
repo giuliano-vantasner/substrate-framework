@@ -1,0 +1,56 @@
+campaign: P070
+title: Exact normalized whole-line overlap and free-parameter ledgers
+source_baseline: substrate@6d1f4e0
+source_units: [MH1]
+base_release: v0.63.0
+release_after_adjudication: v0.64.0
+adjudicated_at: '2026-08-03T06:00:00Z'
+selected_candidates:
+  - id: B
+    reason: The normalized expectation theorem fixes sign and essential-range bounds without physical labels.
+  - id: C
+    reason: The beta/gamma route proves every positive matched-width power and derives the sampled coefficient.
+  - id: D
+    reason: The actual C-QBL-003 modes repair MH1's pure-sech substitution for the odd mode.
+  - id: E
+    reason: The dimension and reciprocal-rescaling ledger exposes all free inputs in the declared product map.
+competing_candidates:
+  - id: A
+    decision: retained_only_for_selected_matched_width_ratios_and_common_scale_cancellation
+  - id: F
+    decision: retained_as_existing_C_QBL_003_interpretation_ceiling_not_as_overlap_selection_evidence
+claims:
+  - id: C-OVL-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  symbolic_repairs:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+  exact_routes: attempts/0008/result.yaml
+  independent_review: reviews/independent_overlap_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-OVL-001-review.md
+source_disposition:
+  MH1: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P070-mh1-normalized-overlap/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P070-mh1-normalized-overlap/reviews/independent_overlap_review.py
+  - .venv/bin/python -m pytest -q tests/test_normalized_overlaps.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

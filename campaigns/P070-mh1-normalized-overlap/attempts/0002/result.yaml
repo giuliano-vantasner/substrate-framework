@@ -1,0 +1,14 @@
+attempt: 0002
+candidate: B-E initial package tests
+command: .venv/bin/python -m pytest tests/test_normalized_overlaps.py -q
+exit_code: 1
+verdict: symbolic_representation_failure
+passed: 20
+failed: 1
+mechanism: >-
+  SymPy left the direct whole-line integral of sech(x)^2*tanh(x)^2
+  unevaluated even though the canonical beta-difference formula was closed.
+scientific_effect: none
+repair: >-
+  Apply the exact identity tanh(x)^2=1-sech(x)^2 before integration, preserving
+  the independent direct route and leaving the canonical formula unchanged.

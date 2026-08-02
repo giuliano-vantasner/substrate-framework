@@ -1,0 +1,24 @@
+attempt: 0008
+candidates: [B, C, D, E]
+status: positive_exact_objects_verified
+commands:
+  - .venv/bin/python -m pytest tests/test_normalized_overlaps.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P070-mh1-normalized-overlap/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P070-mh1-normalized-overlap/reviews/independent_overlap_review.py
+process_exit_status: 0
+tallies:
+  focused_tests: 21 passed
+  primary: ALL 51 CHECKS PASS [P070]
+  independent: ALL 20 CHECKS PASS [P070-INDEPENDENT]
+  full_workflow: 582 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - Every positive matched-width sech power has an exact normalized gamma-ratio overlap and the common width cancels.
+  - A normalized density expectation lies in the supplied multiplier profile's essential range.
+  - C-QBL-003's actual even and odd modes have overlaps 9*pi*A/32 and 3*pi*A/16 with zero even-odd cross term.
+  - A declared product m=y*v retains the profile and scale dimensions and one reciprocal rescaling direction.
+mutations_rejected:
+  - missing normalization amplitude and mode/profile powers
+  - wrong sign and out-of-range expectations
+  - replacing the actual odd mode by a pure sech power
+  - hidden external scale and wrong dimension sum
+  - treating a negative/zero Hessian spectrum as unique selection of one positive functional

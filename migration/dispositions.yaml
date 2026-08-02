@@ -1446,3 +1446,42 @@ units:
       controlled linearized dispersion, and a smooth sampled-action error
       bound through canonical and independent exact routes. It uses no
       numerical quadrature or NumPy integration alias.
+  MH1:
+    disposition: qualified
+    accepted_claims:
+      - C-QBL-003
+      - C-OVL-001
+    qualification: >-
+      MH1's normalized p=2 matched-width whole-line overlap 9*pi*A/32 and its
+      sampled p=1,2,3 pure-sech ratios are exact. Its every-p claim is based on
+      only those three substitutions, and FG2's actual odd translation mode is
+      sech*tanh rather than a pure sech power; its exact expectation is
+      3*pi*A/16, giving an order-one odd/even ratio 2/3. The negative and zero
+      Hessian levels already have C-QBL-003's non-mass ceiling, but rejecting
+      them does not uniquely select an overlap functional. The executable
+      declares m=y*v and differentiates that product; it constructs no fermion,
+      chirality, Yukawa interaction, physical condensate or VEV, generation,
+      hierarchy, mixing, or absolute mass. It gives no dimension ledger, treats
+      A as independent while prose also sets A=2*sqrt(6)*kappa, and imports
+      pending MH2/MH3 narrative. Whole-line Cartesian and matched-width formulas
+      do not establish radial or mismatched-width results.
+    evidence:
+      - campaigns/P070-mh1-normalized-overlap/reviews/source_adjudication.md
+      - campaigns/P070-mh1-normalized-overlap/evidence/source-reproduction.yaml
+      - campaigns/P070-mh1-normalized-overlap/evidence/source-audit.yaml
+      - campaigns/P070-mh1-normalized-overlap/evidence/primary-provenance.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0001/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0002/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0003/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0004/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0005/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0006/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0007/result.yaml
+      - campaigns/P070-mh1-normalized-overlap/attempts/0008/result.yaml
+      - memory/vantasner/decisions/C-OVL-001-review.md
+    note: >-
+      P070 derives the general normalized expectation bound, exact positive-
+      power matched-width gamma ratio, actual even/odd mode expectations and
+      parity cross term, and dimension/free-rescaling ledger through canonical
+      and independent exact routes. It uses no numerical quadrature or NumPy
+      integration alias.

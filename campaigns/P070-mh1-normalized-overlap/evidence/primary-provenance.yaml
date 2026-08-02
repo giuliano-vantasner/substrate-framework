@@ -1,0 +1,28 @@
+campaign: P070
+canonical_module: src/substrate_framework/normalized_overlaps.py
+accepted_imports:
+  C-QBL-001:
+    source: src/substrate_framework/quartic_qball.py
+    use: conditional inverse width and sech background convention only
+  C-QBL-003:
+    source: src/substrate_framework/qball_fluctuations.py
+    use: exact even and odd scalar-Hessian mode shapes, eigenvalues, and mass-interpretation ceiling
+mathematical_imports:
+  - exact beta/gamma whole-line integrals for positive sech powers
+  - normalized L2 multiplier expectation bounds
+  - exact even/odd parity under Cartesian whole-line measure
+conditional_imports:
+  - a matched positive inverse width for mode and multiplier profiles
+  - a declared real multiplier amplitude and external product scale
+  - supplied mass dimensions for the multiplier and external scale
+source_evidence:
+  MH1:
+    path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH1_yukawa_overlap_mass_formula.py
+    sha256: 6e32edbd129c40ed587408fa70128951f65c04f379a633414fd8202e80ca1854
+    authority: noncanonical_reproduced_attempt
+not_imported:
+  - pending MH2 or MH3 hierarchy and mixing narratives
+  - a physical condensate, VEV, fermion, chirality, or Yukawa interaction
+  - a generation assignment, Standard-Model quantum numbers, or absolute mass
+  - a radial or higher-dimensional measure
+  - numerical quadrature or a NumPy integration alias

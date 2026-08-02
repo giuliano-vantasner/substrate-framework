@@ -1,0 +1,70 @@
+id: P070
+base_release: v0.63.0
+base_commit: d808fc8
+scientific_base_commit: b2ccced
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MH1]
+question: >-
+  Derive exact normalized expectation bounds and hyperbolic-secant overlap
+  formulas for declared whole-line modes and profiles, expose every dimension
+  and free amplitude in a conditional mass map, and audit which of those
+  statements MH1 establishes without deriving generations, a Yukawa
+  interaction, a hierarchy, or an absolute mass.
+invariants:
+  - C-QBL-003 supplies exactly two bound modes of one declared quartic scalar Hessian and explicitly denies interpreting its eigenvalues as particle masses or generations.
+  - C-QBL-001 supplies one conditional quartic sech profile and inverse width; it does not derive a physical condensate, Yukawa coupling, flavor sector, or free profile amplitude.
+  - An overlap must declare its measure, domain, mode normalization, real or complex conjugation convention, profile sign and bounds, and dimensions.
+  - For an L2-normalized mode, an overlap with a multiplication profile is an expectation value bounded by that profile's essential range; positivity is conditional on the supplied profile.
+  - Whole-line Cartesian dx overlaps do not automatically transfer to radial or higher-dimensional measures.
+  - A conditional map m=y*v retains every amplitude, coupling, and scale needed for dimensional closure; algebraic positivity does not select or predict their values.
+  - Negative and zero Hessian eigenvalues are not positive particle masses under C-QBL-003, but that no-go does not make an overlap map unique or physical.
+  - MH2 and MH3 remain pending and may not supply hierarchy or mixing premises.
+allowed_imports:
+  - C-QBL-001 for the declared quartic inverse width and conditional sech background only
+  - C-QBL-003 for the exact even sech-squared and odd sech-times-tanh mode shapes, eigenvalues, and mass-interpretation ceiling
+  - exact whole-line beta/gamma integrals for positive hyperbolic-secant powers
+  - separately declared positive profile amplitude, positive inverse width, normalized mode exponent, multiplication-profile power, and free mass-map scale
+  - standard expectation bounds for a normalized L2 density under a bounded real multiplication profile
+  - MH1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce MH1 literally and retain only overlap identities whose mode,
+      measure, normalization, dimensions, and free inputs are constructed.
+  - id: B
+    description: >-
+      Derive the general normalized-expectation theorem and essential-range
+      bounds for a declared whole-line mode and multiplication profile.
+  - id: C
+    description: >-
+      Derive the exact gamma-function ratio for normalized sech-power density
+      against A*sech(kappa*x)^r, including the p=2,r=1 endpoint 9*pi*A/32.
+  - id: D
+    description: >-
+      Derive exact overlaps for C-QBL-003's even and odd bound-mode shapes and
+      show parity affects off-diagonal but not squared-density expectations.
+  - id: E
+    description: >-
+      Build a dimension and parameter ledger for y and a separately declared
+      m=y*v map, exposing amplitude and scale rescalings and non-identifiability.
+  - id: F
+    description: >-
+      Retain C-QBL-003's negative/zero-eigenvalue mass ceiling as a dependency
+      rather than treating it as evidence selecting the overlap mechanism.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without importing pending MH2/MH3 or a physical condensate and Yukawa sector
+  - exact normalization, conjugation, measure, domain, width, amplitude, and gamma-function bookkeeping
+  - correct limits and bounds as profile amplitude, width, exponent, and parity vary
+  - explicit separation of expectation algebra, a declared mass map, absolute prediction, hierarchy, and generation identity
+  - mutation sensitivity to missing normalization, wrong measure, omitted conjugation, copied 9*pi/32, hidden scale, and eigenvalue-as-unique-selection logic
+  - parameter economy and an interpretation ceiling preserving every free physical input
+claims_proposed:
+  - provisional C-OVL-001 exact normalized whole-line overlap and conditional mass-parameter ledger if nonduplicate content survives
+comparators_blinded_until: >-
+  The generated synopsis exposes 9*pi/32, positivity, selected fluctuation
+  eigenvalues, and generation-mass language. None may select a measure, mode
+  family, condensate profile, coupling, free scale, hierarchy, or physical
+  interpretation. Those objects, candidates, bounds, mutations, and the
+  dimensional ceiling are frozen here before MH1's executable body opens.
+status: accepted

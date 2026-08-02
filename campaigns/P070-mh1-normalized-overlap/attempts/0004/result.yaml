@@ -1,0 +1,15 @@
+attempt: 0004
+candidate: separated direct sech-power integrals
+command: .venv/bin/python -m pytest tests/test_normalized_overlaps.py -q
+exit_code: 1
+verdict: symbolic_representation_failure
+passed: 20
+failed: 1
+mechanism: >-
+  SymPy left each integral expressed with the sech function unevaluated in the
+  test environment, although MH1's reciprocal-cosh representation evaluates.
+scientific_effect: none
+next_attempt: >-
+  Use the algebraically identical reciprocal-cosh integrands that the
+  hash-pinned source demonstrated SymPy can close, still integrating each
+  power independently.

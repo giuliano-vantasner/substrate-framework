@@ -1,0 +1,23 @@
+attempt: 0001
+candidate: A
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH1_yukawa_overlap_mass_formula.py
+exit_code: 0
+terminal_tally: ALL 4 CHECKS PASS
+verdict: reproduced_but_insufficient
+established:
+  - the normalized whole-line p=2 overlap 9*pi*A/32
+  - finite positive matched-width overlaps for the sampled powers p=1,2,3 when A>0
+  - the accepted negative and zero quartic Hessian eigenvalues are not positive masses
+  - a separately declared common scale cancels from ratios of products y_n*v
+not_established:
+  - the claimed all-p>=1 theorem, since only three integer substitutions are checked
+  - the overlap of C-QBL-003's actual odd sech-times-tanh translation mode
+  - a fermion, Yukawa interaction, condensate VEV, generation assignment, hierarchy, or mixing sector
+  - dimensional closure or an absolute mass
+  - uniqueness or physical selection of the overlap map from the eigenvalue no-go
+next_attempt: >-
+  Implement Candidates B through E with exact gamma ratios, actual even/odd
+  mode overlaps, expectation bounds, measure and width typing, and an explicit
+  dimension/free-rescaling ledger.

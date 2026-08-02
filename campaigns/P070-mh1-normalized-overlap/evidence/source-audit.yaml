@@ -1,0 +1,30 @@
+source_unit: MH1
+audit_status: complete
+literal_checks:
+  MH1.1:
+    narrow_verdict: supported_for_the_declared_whole_line_p2_matched_width_profiles
+    ceiling: the physical condensate and Yukawa labels are imported rather than derived
+  MH1.2:
+    narrow_verdict: supported_only_for_sampled_integer_powers_1_2_3
+    ceiling: finite substitutions do not prove every p and the actual odd FG2 mode is not a pure sech power
+  MH1.3:
+    narrow_verdict: duplicates_the_C_QBL_003_mass_interpretation_ceiling
+    ceiling: rejecting one map does not select the overlap as unique or physical
+  MH1.4:
+    narrow_verdict: a_common_declared_v_cancels_from_product_ratios
+    ceiling: linearity is definitional and no dimensions coupling interaction or absolute scale are derived
+unsupported_readings:
+  - the two quartic Hessian modes form particle generations
+  - every source mode is sech to an integer power
+  - positive finite expectation algebra is a physical Yukawa mechanism
+  - the selected overlaps are ordered or provide a hierarchy
+  - the EM6 background is a separately derived physical condensate and A is both free and fixed without a convention choice
+  - m=y*v is dimensionally a mass without declared dimensions or coupling normalization
+  - an eigenvalue no-go uniquely selects the overlap functional
+  - pending MH2 or MH3 conclusions are available as premises
+source_parameter_note: >-
+  The prose names A=2*sqrt(6)*kappa from C-QBL-001 but the executable treats A
+  as independent. Either convention is conditional; neither selects kappa or
+  an absolute mass. In normalized Cartesian dx, y has the dimension of the
+  supplied multiplier profile after L2 normalization.
+disposition_recommendation: qualified

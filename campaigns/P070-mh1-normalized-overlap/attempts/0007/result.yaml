@@ -1,0 +1,15 @@
+attempt: 0007
+candidate: independent beta/gamma review first run
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P070-mh1-normalized-overlap/reviews/independent_overlap_review.py
+exit_code: 1
+verdict: exactness_representation_failure
+checks_passed_before_failure: 6
+mechanism: >-
+  Python integer division inside the review-local gamma lambda created binary
+  floating half-integers, preventing exact simplification of I2 and I4.
+scientific_effect: none
+repair: >-
+  Sympify the exponent before division so every gamma argument remains exact;
+  leave the canonical implementation and scientific formulas unchanged.

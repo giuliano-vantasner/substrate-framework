@@ -1,0 +1,5 @@
+Native MH1 process exited 0 under the framework Python environment.
+MH1.1, MH1.2, MH1.3, and MH1.4 each printed PASS.
+Terminal line: ALL 4 CHECKS PASS.
+No NumPy integration API is imported or called.
+The tally reproduces selected exact ratios and definitions; it does not validate a Yukawa interaction, generations, a hierarchy, or an absolute mass.

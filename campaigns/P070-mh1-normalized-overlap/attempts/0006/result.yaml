@@ -1,0 +1,13 @@
+attempt: 0006
+candidate: primary exact verifier first run
+command: PYTHONPATH=src .venv/bin/python campaigns/P070-mh1-normalized-overlap/verify.py
+exit_code: 1
+verdict: source_audit_count_failure
+checks_passed_before_failure: 22
+mechanism: >-
+  The verifier expected one textual overlap_sechp(p) occurrence, but the source
+  contains one function definition and one three-value comprehension call.
+scientific_effect: none
+repair: >-
+  Require exactly those two occurrences together with absence of beta/gamma
+  generalization; leave every scientific predicate unchanged.

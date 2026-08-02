@@ -1,0 +1,15 @@
+attempt: 0003
+candidate: independent odd-mode integral normalization
+command: .venv/bin/python -m pytest tests/test_normalized_overlaps.py -q
+exit_code: 1
+verdict: symbolic_representation_failure
+passed: 20
+failed: 1
+mechanism: >-
+  Even after rewriting tanh(x)^2 as 1-sech(x)^2, SymPy kept the combined
+  difference integral unevaluated.
+scientific_effect: none
+next_attempt: >-
+  Integrate each positive sech power independently and subtract the evaluated
+  exact values; this mirrors the beta reduction without importing the
+  canonical gamma API.

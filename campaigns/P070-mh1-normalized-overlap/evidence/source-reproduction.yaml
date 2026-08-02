@@ -1,0 +1,13 @@
+source_unit: MH1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH1_yukawa_overlap_mass_formula.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 6e32edbd129c40ed587408fa70128951f65c04f379a633414fd8202e80ca1854
+size_bytes: 17788
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-20/bridge_MH1_yukawa_overlap_mass_formula.py
+exit_code: 0
+checks_passed: 4
+terminal_tally: ALL 4 CHECKS PASS
+numpy_quadrature: none
+artifact: campaigns/P070-mh1-normalized-overlap/attempts/0001/output-summary.txt

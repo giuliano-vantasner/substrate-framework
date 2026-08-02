@@ -1,0 +1,14 @@
+attempt: 0005
+candidate: mismatched-width exact counterexample
+command: >-
+  .venv/bin/python -c "integrate sech(x)^4*sech(2*x) on the whole line"
+exit_code: 130
+verdict: symbolic_method_obstruction
+mechanism: >-
+  SymPy's heuristic integrator did not terminate promptly on the mismatched-
+  width product and the run was interrupted without a result.
+scientific_effect: none
+next_attempt: >-
+  Keep C-OVL-001 explicitly restricted to matched widths and use expectation
+  bounds and limiting counterexamples for the mismatch ceiling; do not turn an
+  expensive unevaluated integral into a load-bearing oracle.
