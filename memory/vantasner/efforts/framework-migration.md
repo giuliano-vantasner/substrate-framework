@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-03T10:55:00Z'
+updated: '2026-08-03T11:25:00Z'
 tags:
 - substrate-framework
 - effort
@@ -30,6 +30,10 @@ baseline counterfamily, coefficient-cutoff null direction, and source-coupling
 dimension guard. It supplies no QFT spectrum, regulator, induced-gravity
 mechanism, 3+1 dynamics, lattice ontology, observed constant, or absolute
 scale.
+P075 leaves that accepted frontier unchanged: AS4's exact 4x2 rank and two
+left-null compatibility relations are already explicit in C-LIN-001 and
+C-IDN-001, while its physical rows, independence, generic consistency,
+nuisance closure, and covariance are not established.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -55,7 +59,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 146 pending, 0 partially migrated, 3 migrated, 65 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 145 pending, 0 partially migrated, 3 migrated, 65 qualified, 4 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -161,6 +165,7 @@ Attempts are append-only and individually reproducible.
 | 0092 | P072 exact multiplication-compression/parity/commutator ledgers and MH3 audit | `campaigns/P072-mh3-overlap-compression/attempts/0001` through `0003`, then the promotion replay | accepted in v0.66.0 with MH3 qualified; commit `4b141fe` | Forty-two primary and twenty-three independent checks derive Hermiticity and Rayleigh bounds, basis covariance, exact parity blocks, the commuting-Hermitian criterion, actual-mode asymmetric matrix, and phase/order/degeneracy ceilings; MH3's normalized matrix is width independent, differs only because it changes a new odd-profile input, substitutes the accepted even mode, mixes row/column conventions, and constructs no physical flavor sector, while a final diff audit repairs the degenerate quotient dimension and both full replays pass all 637 tests | Audit AS1's two-length transmutation claim without importing later AS4/AS6/AS7 conclusions, reversing UV/IR length assignments, treating a supplied coupling as predicted, or converting a one-loop scale relation into physical QCD confinement or absolute-scale closure |
 | 0093 | P073 exact two-length transmutation/identifiability ledgers and AS1 audit | `campaigns/P073-as1-two-length-transmutation/attempts/0001` through `0003`, then the promotion replay | accepted in v0.67.0 with AS1 qualified; commit `3758a02` | Forty primary and twenty-three independent checks derive the canonical dimension kernel, oriented energy/length ratios, unequal-conversion guard, inverse domain, and common-scale null direction; AS1 reverses its opening UV/IR length labels, calls reciprocal representatives identical, omits `b0` from its named reduced set, and turns inverse inference into prediction language, while 38 focused/governance tests and both full boundaries pass all 658 tests | Audit AS3's Sakharov-cutoff and kappa-reduction construction without importing pending G1/G2/G5/OD/S5 physics, treating dimensional scaling as coefficient derivation, or claiming that a free dimensionless field-count closes an absolute gravitational scale |
 | 0094 | P074 exact induced-Newton dimension/counterterm/identifiability ledgers and AS3 audit | `campaigns/P074-as3-induced-gravity-scaling/attempts/0001` through `0003`, then the promotion replay | accepted in v0.68.0 with AS3 qualified; commit `9b5d99d` | Forty primary and twenty-six independent checks derive the Newton monomial, declared leading shift, additive baseline and cancellation families, coefficient-cutoff null direction, and source-normalization dimensions; the cited one-loop derivation confirms AS3 omits its tree term and spectrum-dependent coefficient, while AS3 leaves s_G free, imports pending kappa normalization, and never tests over-determination, and 48 focused/governance tests plus both full boundaries pass all 689 tests | Audit AS4's over-determination-v2 matrix against C-LIN-001/C-IDN-001 without importing comparator values as equations, treating tall/full-rank structure as physical independence, or claiming absolute identification before left-null compatibility and nuisance-parameter closure |
+| 0095 | P075 exact AS4 rank/compatibility/nuisance/covariance audit | `campaigns/P075-as4-overdetermination-v2-audit/attempts/0001` through `0004`, then the terminal queue replay | AS4 is duplicate evidence for C-LIN-001 and C-IDN-001; v0.68.0 unchanged; commit `4d68afc` | Twenty-eight primary and sixteen independent checks derive two coefficient directions, two compatibility relations, generic augmented inconsistency, the conditional unique solution, the source guard inversion, corrected dimensions, nuisance-restored nullity, additive-baseline curvature, and covariance/provenance ceilings; 78 affected canonical and 17 focused governance tests pass, followed by the single integrated 689-test workflow gate | Audit AS5's claim that dimensional transmutation generates an absolute scale without importing a dimensionful reference, using a itself as a primitive, or treating a change of units as physical prediction |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -177,7 +182,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 146 bridge units remain pending, 3 are migrated, 65 are qualified, 3 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 145 bridge units remain pending, 3 are migrated, 65 are qualified, 4 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -518,11 +523,22 @@ prevents identifying `a`; and pending G5 cannot normalize C-OG-003's source
 coupling. Exact canonical and independent routes use no numerical quadrature
 or NumPy integration alias.
 
+P075 derives AS4's exact two coefficient directions, two left-null
+compatibility relations, generic augmented inconsistency, and conditional
+unique solution, then restores its admitted sector nuisances and C-GRV-001's
+allowed additive baseline. AS4 is duplicate evidence because this valid
+structure was already accepted in C-LIN-001 and C-IDN-001. Its source checks
+do not establish physical row provenance, independence, observations, or
+covariance; three coefficient mutations evade AS4.1, AS4.4 accepts wrong
+prediction coefficients, its free-length guard has nullity zero, and its
+dimension guard mis-encodes the length row. Both P075 routes are exact and use
+no numerical quadrature or NumPy integration alias.
+
 ## Canonicalization
-The registry, `v0.68.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-six accepted claims. P001 through P074 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 146 pending, 0 partial, 3 migrated, 65 qualified, 3 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.68.0` manifest, current release, generated claim index, and generated framework memory agree on ninety-six accepted claims. P001 through P075 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 145 pending, 0 partial, 3 migrated, 65 qualified, 4 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 146 pending, 3 migrated, 65 qualified, 3 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is AS4. Its synopsis builds four declared log rows on only `log a` and `1/beta^2`, advertises rank two and nullity zero, and then says redundant rows over-determine and cross-check the same two coordinates. P075 must freeze literal-source, exact rank/left-null, provenance and independence, nuisance-restoration, covariance/GLS, and inconsistent-row candidates before opening the source body. It must distinguish full column rank from row provenance, physical or statistical independence, compatibility of the augmented system, and prediction of the supplied right-hand sides; it must also replay C-IDN-001's prior warning that AS4's annotation carries compatibility relations without accepted observations or covariance. AS1/AS2/AS3/CF4/G5/S5 mappings may enter only through their accepted narrow claims, never through the source's later physical narratives or comparator values.
+The effort remains active. D4 is discharged, but D1 remains open with 145 pending, 3 migrated, 65 qualified, 4 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is AS5. Its synopsis claims `Lambda=mu0*exp(-8*pi^2/(b0*beta^2))` generates a dimensionful scale from a dimensionless coupling with nothing dimensionful imported, while the displayed formula contains the dimensionful reference `mu0`; it then includes `a` in a full-rank primitive set and calls the resulting absolute value a units choice. P076 must freeze literal-source, RG-boundary/reference, Buckingham-kernel, unit-rescaling, circular-target, and dependency-provenance candidates before opening the source body or its rejected Angstrom and Planck comparators. It must distinguish generation of an RG-invariant scale relative to a supplied dimensionful boundary from creation of a dimensionful number out of dimensionless data, and a coordinate convention from a physical prediction. C-RGE-001 and C-RGE-003 may supply only their accepted conditional exponential and null-direction ledgers; AS4 contributes no physical scale equation, and pending AS6 or later operating-point narratives cannot close AS5.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
