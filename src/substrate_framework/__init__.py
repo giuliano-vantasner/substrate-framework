@@ -115,6 +115,19 @@ from .numerics import (
     solve_method_of_lines,
     trapezoid_integral,
 )
+from .angular_defects import (
+    EqualSplitShellLedger,
+    FullPolarDeckTransformation,
+    HalfQuantumPairLedger,
+    PolarTopologyLedger,
+    annular_angular_energy,
+    equal_split_shell_ledger,
+    full_polar_deck_transformation,
+    full_polar_loop_class,
+    half_quantum_pair_ledger,
+    polar_topology_ledger,
+    projective_rp2_loop_class,
+)
 from .spin1_mean_field import (
     Spin1MeanFieldSelection,
     Spin1OrbitLedger,
@@ -698,6 +711,17 @@ __all__ = [
     "vortex_radial_energy_lagrangian",
     "vortex_tension",
     "winding_parity",
+    "EqualSplitShellLedger",
+    "FullPolarDeckTransformation",
+    "HalfQuantumPairLedger",
+    "PolarTopologyLedger",
+    "annular_angular_energy",
+    "equal_split_shell_ledger",
+    "full_polar_deck_transformation",
+    "full_polar_loop_class",
+    "half_quantum_pair_ledger",
+    "polar_topology_ledger",
+    "projective_rp2_loop_class",
 ]
 
 __version__ = "0.0.0"

@@ -1,0 +1,39 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_rejected
+source_unit: ME2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: 40eec343312cc85d442471a224c0501071ea556308b517e5c8b1efe067a789e4
+command: python3 merged-framework/bridges/phase-20/bridge_ME2_half_quantum_vortex.py
+working_directory: /home/dan/substrate
+reproduction_working_directory: /home/dan/substrate-framework
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  scipy: 1.18.0
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 4 CHECKS PASS
+observations:
+  - E_vortex returns count*K*charge**2*L, so ME2.1 compares additive isolated copies and constructs no shared far field, separation, interaction, director texture, or core.
+  - Assigning the same outer logarithm to both half defects makes the one-half ratio by definition; it is not the energy ratio in one fixed-total-boundary-charge domain.
+  - ME2.2 repeats the independent-copy assumption for arbitrary 1/n charges even though RP2 permits only two loop classes and no arbitrary fractional ladder.
+  - The monotonic inequality is sampled at n=2 rather than proved for every positive integer, although the bare rational identity itself is exact.
+  - ME2.3 correctly represents the projective RP2 generator as order two, but a combined half-quantum vortex belongs to the full polar manifold whose fundamental group is Z; its square is a nontrivial integer phase vortex.
+  - ME2.4 correctly rejects half winding for a standalone scalar U1 field, but does not derive the topology or allowed defects of a spinor condensate phase.
+  - The common stiffness suppresses the distinct phase/director costs, and absent core energies can reverse the source's preference.
+diagnosis:
+  category: target_statement_and_energy_model
+  mechanism:
+    - additive self-energy copies omit fixed-total-charge far-field energy
+    - projective director topology is not the full condensate topology
+    - q-squared convexity cannot create topologically forbidden fractions
+    - stiffness and core assumptions are load-bearing for preference
+verdict: >-
+  ME2 is retained as reproduced evidence for conditional scalar annular
+  arithmetic and projective RP2 order two. Its cutoff-independent half-pair
+  preference, arbitrary fractionalization, and full half-quantum topology
+  headlines are not established.
+next_attempt: >-
+  Derive the annular lower bound, fixed-charge near/far shell ledger, both
+  covering groups, and the explicit two-stiffness/core preference residual.

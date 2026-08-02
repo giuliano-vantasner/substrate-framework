@@ -1,0 +1,13 @@
+source_unit: ME2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME2_half_quantum_vortex.py
+sha256: 40eec343312cc85d442471a224c0501071ea556308b517e5c8b1efe067a789e4
+size_bytes: 17211
+command: >-
+  PYTHONHASHSEED=0 .venv/bin/python -u
+  /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME2_half_quantum_vortex.py
+working_directory: /home/dan/substrate-framework
+process_exit_status: 0
+terminal_tally: ALL 4 CHECKS PASS
+stdout_summary: campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0001/output-summary.txt
+result: campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0001/result.yaml

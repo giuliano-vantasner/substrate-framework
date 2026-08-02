@@ -1,0 +1,24 @@
+campaign: P068
+canonical_module: src/substrate_framework/angular_defects.py
+accepted_imports:
+  C-SPN-001:
+    source: src/substrate_framework/spin1_mean_field.py
+    use: projective polar RP2 ray orbit and physical-order-parameter ceiling only
+mathematical_imports:
+  - exact polar-coordinate Dirichlet integration and circlewise Cauchy-Schwarz
+  - positive radii, stiffnesses, logarithms, and declared core energies
+  - universal covers and deck transformations of RP2 and (S2 x U1)/Z2
+conditional_imports:
+  - a matched near/far shell model with declared core, separation, and outer scales
+  - independent phase and director stiffnesses
+source_evidence:
+  ME2:
+    path: /home/dan/substrate/merged-framework/bridges/phase-20/bridge_ME2_half_quantum_vortex.py
+    sha256: 40eec343312cc85d442471a224c0501071ea556308b517e5c8b1efe067a789e4
+    authority: noncanonical_reproduced_attempt
+not_imported:
+  - pending O1 physical BEC or half-quantum claims
+  - ME2's common-stiffness, zero-core, and isolated-copy-as-pair premises
+  - arbitrary fractional charges not admitted by the declared topology
+  - an exact finite-domain multi-core solution, material, experiment, or substrate mechanism
+  - numerical quadrature or a NumPy integration alias

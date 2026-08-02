@@ -1,0 +1,25 @@
+attempt: 0003
+candidates: [B, C, D, E]
+status: positive_exact_objects_verified
+commands:
+  - .venv/bin/python -m pytest tests/test_angular_defects.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P068-me2-half-quantum-vortex-energetics/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P068-me2-half-quantum-vortex-energetics/reviews/independent_defect_review.py
+process_exit_status: 0
+tallies:
+  focused_tests: 14 passed
+  primary: ALL 43 CHECKS PASS [P068]
+  independent: ALL 17 CHECKS PASS [P068-INDEPENDENT]
+  full_workflow: 541 passed; ALL REPOSITORY WORKFLOW CHECKS PASS
+positive_result:
+  - The fixed-degree annular Dirichlet energy and sharp circlewise lower bound are pi*K*q^2*log(R/xi).
+  - The declared n-piece shell model retains a total-charge far term and reduces to the independent-copy 1/n ratio only when that far shell vanishes.
+  - Projective RP2 has fundamental group Z2, while the full polar manifold has deck group Z and a nontrivial squared generator.
+  - The isolated half-pair minus integer energy retains both stiffnesses and both core costs.
+mutations_rejected:
+  - missing pi, charge square, or logarithmic normalization
+  - omitted common far field
+  - wrong coincident or boundary-separated limit
+  - swapped projective and full generator squares
+  - hidden director stiffness or core energies
+  - invalid radii, counts, deck steps, and stiffnesses

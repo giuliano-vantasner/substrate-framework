@@ -1,0 +1,13 @@
+attempt: 0002
+candidates: [B, C]
+status: symbolic_normal_form_repaired
+commands:
+  - .venv/bin/python -m pytest tests/test_angular_defects.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P068-me2-half-quantum-vortex-energetics/verify.py
+process_exit_status: 1
+failure:
+  category: representation
+  symptom: The first focused and primary checks compared pi*log(4) structurally after SymPy rewrote it as log(4**pi).
+  cause: Equivalent exact logarithmic normal forms were compared with Python equality instead of an exact simplified residual.
+repair: Compare the expression difference after exact simplification; no coefficient, domain, topology, or verdict changed.
+continuation: Re-run the focused and primary exact gates.

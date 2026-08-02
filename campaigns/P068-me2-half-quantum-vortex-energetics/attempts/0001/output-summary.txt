@@ -1,0 +1,5 @@
+ME2.1 two additive half self-energies over one integer self-energy PASS
+ME2.2 additive n-copy ratio PASS
+ME2.3 RP2 charge-mod-one arithmetic PASS
+ME2.4 scalar U1 single-valuedness guard PASS
+ALL 4 CHECKS PASS

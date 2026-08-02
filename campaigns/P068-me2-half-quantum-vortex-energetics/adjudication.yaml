@@ -1,0 +1,50 @@
+campaign: P068
+title: Exact angular-defect energy and polar half-quantum topology ledgers
+source_baseline: substrate@6d1f4e0
+source_units: [ME2]
+base_release: v0.61.0
+release_after_adjudication: v0.62.0
+adjudicated_at: '2026-08-03T04:10:00Z'
+selected_candidates:
+  - id: B
+    reason: Exact integration and a sharp degree lower bound fix the annular normalization.
+  - id: C
+    reason: The fixed-charge shell ledger exposes the far field omitted by ME2's additive copies.
+  - id: D
+    reason: Explicit deck groups distinguish projective RP2 order two from the full polar integer group.
+  - id: E
+    reason: Independent stiffnesses and core energies give the exact conditional preference residual.
+competing_candidates:
+  - id: A
+    decision: retained_only_for_independent_copy_arithmetic_projective_order_two_and_scalar_U1_guard
+  - id: F
+    decision: retained_as_the_vanished_far_shell_endpoint_not_a_complete_fixed_boundary_object
+claims:
+  - id: C-DEF-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  rejected_source_route: attempts/0001/result.yaml
+  representation_repair: attempts/0002/result.yaml
+  exact_routes: attempts/0003/result.yaml
+  independent_review: reviews/independent_defect_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-DEF-001-review.md
+source_disposition:
+  ME2: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P068-me2-half-quantum-vortex-energetics/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P068-me2-half-quantum-vortex-energetics/reviews/independent_defect_review.py
+  - .venv/bin/python -m pytest -q tests/test_angular_defects.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

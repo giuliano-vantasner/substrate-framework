@@ -1,0 +1,73 @@
+id: P068
+base_release: v0.61.0
+base_commit: beb6ed2
+scientific_base_commit: 417d55e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [ME2]
+question: >-
+  Derive the exact logarithmic Dirichlet energy of declared angular defects,
+  distinguish isolated self-energy additivity from a split configuration at
+  fixed total boundary charge, classify the projective RP2 and full polar
+  condensate fundamental groups, and state the stiffness/core-energy
+  conditions under which two half-quantum defects can beat one integer phase
+  vortex; then audit which of those statements ME2 actually establishes.
+invariants:
+  - C-SPN-001 supplies only the projective polar ray orbit RP2; it derives no spatial condensate field, U1 phase stiffness, director stiffness, vortex core, or defect energy.
+  - A vortex energy statement must declare the functional, spatial domain, boundary degree, inner and outer cutoffs, stiffness normalization, separation scale, and core terms.
+  - The exact annular self-energy of an angular field is not the complete energy of several defects sharing one domain; cross/far-field contributions retain the fixed total boundary charge.
+  - Projective RP2 has a Z2 loop class, while the full polar condensate manifold (S2 times U1)/Z2 retains the condensate phase and need not have the same fundamental group.
+  - A half-quantum vortex combines a pi phase winding with a director half-turn; a director disclination in RP2 alone is not yet that combined physical defect.
+  - Phase and director stiffnesses and integer/half core energies are separately declared inputs; equality of their coefficients is not automatic.
+  - Arbitrary 1/n charge splitting requires an allowed topology for every fraction and cannot be selected by convexity alone.
+allowed_imports:
+  - C-SPN-001 for the exact projective polar RP2 ray orbit and its physical-order-parameter ceiling
+  - exact two-dimensional polar-coordinate Dirichlet integration, Cauchy-Schwarz, logarithms, and positive radii and stiffnesses
+  - universal-cover and deck-transformation classification for RP2 and (S2 times U1)/Z2
+  - separately declared phase/director stiffnesses, defect charges, cutoff/separation radii, and core energies with provenance
+  - ME2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce ME2 literally and retain only ratios whose topology, domain,
+      boundary charge, additivity, stiffness, cutoff, and core premises are
+      actually constructed and tested.
+  - id: B
+    description: >-
+      Derive the exact annular energy pi*K*q^2*log(R/xi) and its sharp
+      fixed-degree lower bound for one declared scalar angular field.
+  - id: C
+    description: >-
+      Construct a matched near/far shell ledger for n equal defects with fixed
+      total charge, exposing the surviving total-charge far-field energy and
+      the limited regime in which a 1/n self-energy ratio applies.
+  - id: D
+    description: >-
+      Classify pi1(RP2)=Z2 and pi1((S2 times U1)/Z2)=Z by explicit covers and
+      deck transformations, including the distinct square of the generator.
+  - id: E
+    description: >-
+      Derive the two-stiffness half-quantum self-energy and the exact
+      core-energy/separation inequality for favoring a split pair over one
+      integer phase vortex.
+  - id: F
+    description: >-
+      Preserve only the algebraic ratio two*(1/2)^2=1/2 under explicitly
+      independent identical outer domains; this conditional fragment cannot
+      satisfy the fixed-boundary energetic and topology objective alone.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without importing pending O1 or inflating C-SPN-001 beyond projective rays
+  - exact functional/domain/boundary/cutoff/stiffness/core bookkeeping and correct logarithmic normalization
+  - correct limits at one defect, coincident cores, large separation, equal/unequal stiffnesses, zero core difference, and fixed total boundary charge
+  - explicit separation of isolated-copy self energy, matched-shell approximation, true interaction energy, and physical energetic preference
+  - correct loop composition in RP2 and the full polar order parameter, including the square of a half-quantum generator
+  - mutation sensitivity to an omitted far field, missing cross contribution, false arbitrary fraction, swapped topology, equal-stiffness assumption, and hidden core energy
+claims_proposed:
+  - provisional C-DEF-001 exact angular-defect energy and polar half-quantum topology/selection ledger if nonduplicate content survives
+comparators_blinded_until: >-
+  The generated synopsis exposes the ratios 1/2 and 1/n, the labels Z2 and
+  half-quantum, and the claim that splitting is always favored. None may select
+  a topology, domain, energy functional, additivity premise, stiffness, or
+  physical verdict. Those objects, limits, candidate criteria, mutations, and
+  interpretation ceiling are frozen here before ME2's executable body opens.
+status: accepted

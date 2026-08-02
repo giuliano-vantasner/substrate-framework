@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 153
-  qualified: 58
+  pending_adjudication: 152
+  qualified: 59
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -4115,8 +4115,29 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DEF-001
+  qualification: ME2's q-squared arithmetic is exact only for additive isolated copies. It assigns each
+    half defect the same outer logarithm and constructs no shared far field, separation, interaction,
+    director stiffness, or core energy. In one fixed-charge matched-shell model the ratio depends on separation
+    and equals one-half only when the common far shell vanishes. Arbitrary 1/n fractions are not loops
+    of RP2. The projective RP2 generator does have order two, but the full polar manifold (S2 x U1)/Z2
+    has fundamental group Z and the half-quantum generator squares to a nontrivial integer phase vortex.
+    The scalar U1 guard is narrow and exact. O1 remains pending, and no material vortex, stability, experiment,
+    or substrate mechanism is imported.
+  evidence:
+  - campaigns/P068-me2-half-quantum-vortex-energetics/reviews/source_adjudication.md
+  - campaigns/P068-me2-half-quantum-vortex-energetics/evidence/source-reproduction.yaml
+  - campaigns/P068-me2-half-quantum-vortex-energetics/evidence/source-audit.yaml
+  - campaigns/P068-me2-half-quantum-vortex-energetics/evidence/primary-provenance.yaml
+  - campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0001/result.yaml
+  - campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0002/result.yaml
+  - campaigns/P068-me2-half-quantum-vortex-energetics/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-DEF-001-review.md
+  note: P068 derives exact annular and matched-shell energy ledgers, the projective/full polar covering
+    distinction, and the explicit stiffness/core preference residual through canonical and independent
+    exact routes. It uses no numerical quadrature or NumPy integration alias.
 - source_unit: ME3
   phase: phase-20
   path: merged-framework/bridges/phase-20/bridge_ME3_lattice_continuum.py

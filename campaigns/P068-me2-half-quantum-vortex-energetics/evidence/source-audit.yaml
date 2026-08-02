@@ -1,0 +1,30 @@
+source_unit: ME2
+headline_verdict: not_established_by_source_but_conditional_exact_fragments_recoverable
+checks:
+  - id: ME2.1
+    source_verdict: pass
+    audit_verdict: independent_copy_ratio_not_fixed_boundary_pair_energy
+    reason: The helper defines count times one isolated self energy with the same outer log. In one fixed-charge domain the common far shell remains, making the ratio separation-dependent; stiffness and core terms are also absent.
+  - id: ME2.2
+    source_verdict: pass
+    audit_verdict: algebraic_convexity_outside_allowed_topology
+    reason: n*(1/n)^2=1/n is exact for independent copies, but arbitrary 1/n charges are not loops of RP2, and fixed total boundary charge retains the far field. The all-n strict inequality is sampled only at n=2.
+  - id: ME2.3
+    source_verdict: pass
+    audit_verdict: exact_projective_RP2_order_but_wrong_full_half_quantum_composition
+    reason: The RP2 generator has order two. The full polar manifold (S2 x U1)/Z2 has fundamental group Z; the square of its half-quantum generator is a nontrivial integer phase vortex, not the identity.
+  - id: ME2.4
+    source_verdict: pass
+    audit_verdict: exact_standalone_U1_guard_with_spinor_ceiling
+    reason: A standalone complex scalar phase requires integer winding. This does not classify a spinor condensate or derive the source's ferromagnetic defect claims.
+dependencies:
+  ME1: qualified_only_through_C-SPN-001_projective_orbit
+  O1: pending_not_imported
+selected_candidates: [B, C, D, E]
+rejected_candidates: [A_as_headline_derivation, F_as_complete_object]
+proposed_claims: [C-DEF-001]
+interpretation_ceiling:
+  - no material stiffness or core energy
+  - no exact finite-domain multi-core interaction solution or equilibrium separation
+  - no vortex existence, stability, nucleation, or experiment
+  - no atomic or substrate realization
