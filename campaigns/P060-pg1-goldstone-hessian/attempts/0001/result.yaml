@@ -1,0 +1,39 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_physical_headline_route_rejected
+source_exit_status: 0
+source_terminal_tally: ALL 4 CHECKS PASS
+surviving_exact_evidence:
+  - the declared O(4) radial quartic has the stated stationary-vacuum Hessian
+  - Pauli trace normalization gives 2*sum_a(p_a**2)/F_pi**2 at leading order
+  - the two printed action prefactors actually give one half and one eighth
+  - the declared linear tilt gives transverse curvature c/s0 on its shifted stationary branch
+failure_mechanism:
+  classification: verifier_and_candidate_concept
+  findings:
+    - field names and cited model forms import rather than derive the physical pion identification
+    - no generator action, vacuum stabilizer, or tangent rank supports the Goldstone count
+    - the derivative-only expression makes a potential absent by construction
+    - the dispersion check is a substitution into an assumed polynomial rather than an equation-of-motion derivation
+    - the final summary contradicts the executed ANW normalization predicate by a factor of four
+    - the explicit-breaking identity is not a GMOR derivation
+    - pending PG2, PG4, and S2 are not accepted premises
+sensitivity_counterexamples:
+  arbitrary_coordinate_name: >-
+    Renaming every pi coordinate leaves all four predicates unchanged, so the
+    verifier cannot establish a physical-pion dictionary.
+  derivative_only_action: >-
+    Any three symbols placed only in a declared derivative quadratic form pass
+    the mass-term-absence logic; adding a potential changes the Hessian without
+    contradicting the trace calculation.
+  normalization: >-
+    With Tr(tau_a*tau_b)=2*delta_ab, F_pi**2/16 produces kinetic metric I/4,
+    not I; the final printed canonical coefficient is false in those coordinates.
+  count_labels: >-
+    Dimension subtraction can print three without checking that the named
+    subgroup is the actual stabilizer of the declared vacuum.
+next_action: >-
+  Continue with Candidates B through D: derive the general invariance identity,
+  construct the full O(4) generator orbit and stabilizer, derive both Pauli
+  kinetic conventions, and require breaking, stationarity, rank, and
+  normalization mutations to change the relevant verdicts.

@@ -1,0 +1,80 @@
+source_unit: PG1
+audit_status: native_tally_reproduced_conditional_model_algebra_survives_physical_headline_not_exercised
+checks:
+  PG1.1:
+    actual_object: >-
+      Exact gradient and Hessian of the declared O(4)-radial quartic at one
+      declared point on its nonzero stationary sphere.
+    surviving_scope: >-
+      For positive lambda and v, the declared Cartesian model has Hessian
+      diag(8*lambda*v**2,0,0,0) at (v,0,0,0).
+    missing_for_headline:
+      - construction and verification of the six O(4) generators
+      - actual vacuum-tangent rank and stabilizer kernel
+      - kinetic metric needed to interpret Hessian eigenvalues as quadratic masses
+      - a framework map from the four scalar coordinates to physical pion and sigma fields
+      - a quantum Goldstone theorem or particle-state argument
+  PG1.2:
+    actual_object: >-
+      An epsilon derivative of a truncated matrix exponential whose carrier
+      symbols p_a are declared to be field derivatives.
+    surviving_scope: >-
+      With Pauli trace normalization Tr(tau_a*tau_b)=2*delta_ab, the declared
+      leading trace is 2*sum_a(p_a**2)/F_pi**2. Therefore prefactors F_pi**2/4
+      and F_pi**2/16 give one half and one eighth, respectively.
+    defects:
+      - >-
+        The final RESULT says the F_pi**2/16 prefactor produces one half, but
+        the executed predicate and earlier prose derive one eighth.
+      - >-
+        Absence of a mass term is checked by introducing unrelated bare-field
+        symbols that never occur in an expression constructed only from p_a;
+        it is absence by the declared derivative-only action, not an
+        independent derivation of that action.
+      - >-
+        The dispersion predicate substitutes m_pi=0 into a declared polynomial
+        and never derives an Euler-Lagrange equation.
+      - >-
+        The calculation uses a derivative carrier rather than differentiating
+        U(phi(x)) with respect to spacetime coordinates, so it proves only the
+        leading declared-coordinate trace coefficient.
+  PG1.3:
+    actual_object: arithmetic_using_dim_su_n_equals_n_squared_minus_one
+    surviving_scope: the printed differences are 6-3=3 and 16-8=8
+    defect: >-
+      No group action, vacuum, generator, subgroup embedding, stabilizer, or
+      orbit tangent is constructed. Dimension-label subtraction alone does
+      not certify that the named H is the actual vacuum stabilizer or that all
+      broken tangents are independent.
+  PG1.GUARD:
+    actual_object: >-
+      Exact transverse Hessian of V-c*sigma at a declared shifted stationary
+      point satisfying c=4*lambda*s0*(s0**2-v**2).
+    surviving_scope: >-
+      The declared explicit linear tilt gives transverse curvature c/s0; for
+      the sampled positive branch s0=v+1 this is nonzero and positive.
+    defect: >-
+      The source calls this a GMOR-style result, but it is only a conditional
+      sigma-model identity and supplies no QCD order parameter, decay
+      constant, physical pion map, or GMOR derivation.
+absent_objects:
+  - an accepted SU(2)_L times SU(2)_R action on framework fields
+  - an accepted non-invariant vacuum or quark condensate
+  - all symmetry generators and their actual vacuum-tangent matrix
+  - an actual stabilizer calculation
+  - a declared positive kinetic metric for the radial-quartic Hessian
+  - an Euler-Lagrange derivation of a wave equation or dispersion relation
+  - a quantum field, vacuum state, charge algebra, pole, or one-particle spectrum
+  - a framework identification of a scalar coordinate with the physical pion
+  - a derivation of F_pi, the explicit-breaking coefficient, or a pion mass
+  - the claimed substrate lattice relation F_pi**2=8*J/a
+dependency_conflicts:
+  - PG2 is pending and supplies no accepted explicit-breaking or GMOR premise.
+  - PG4 is pending and supplies no accepted pion-to-Skyrmion or nucleon map.
+  - S2 is pending and supplies no accepted pion, hedgehog-spectrum, or ANW premise.
+  - Accepted framework claims contain no physical chiral sector or pion dictionary.
+source_disposition_recommendation: >-
+  qualified if the general stationary symmetry-Hessian theorem, actual O(4)
+  orbit rank, exact Pauli kinetic normalization, mutations, and independent
+  review pass; retain the physical-pion, quantum-particle, substrate, and GMOR
+  narratives as unaccepted source claims.

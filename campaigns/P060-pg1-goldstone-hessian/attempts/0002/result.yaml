@@ -1,0 +1,43 @@
+attempt: 0002
+candidates: [B, C, D]
+status: canonical_exact_route_passed_focused_tests
+canonical_module: src/substrate_framework/symmetry_breaking.py
+canonical_tests: tests/test_symmetry_breaking.py
+initial_failed_runs:
+  - failure: >-
+      The O(4) characteristic-polynomial test compared an expanded SymPy
+      polynomial structurally with an algebraically identical factored form.
+    diagnosis: oracle_representation
+    action: >-
+      Compare the exact simplified difference to zero; no eigenvalue,
+      multiplicity, coefficient, or expected result changed.
+  - failure: >-
+      The explicit-breaking kernel-residual test compared -c structurally with
+      the equivalent factor 4*lambda*s0*(v**2-s0**2).
+    diagnosis: oracle_representation
+    action: >-
+      Compare the elementwise exact simplified residual to the zero matrix;
+      the expected sign and stationary-source relation remain unchanged.
+exact_outputs:
+  - generic invariance residuals grad(V).T*T_a*phi
+  - differentiated identity residuals
+  - stationary gradient and Hessian
+  - actual generator-tangent matrix and rank
+  - supplied-generator span rank and coefficient-map kernel dimension
+  - provably-positive kinetic generalized mass operator and zero residual
+  - Pauli trace Gram and convention-explicit kinetic metric
+mutations_and_limits:
+  - a nonstationary point preserves invariance but loses the tangent Hessian zero
+  - an explicit linear tilt breaks invariance and lifts the transverse curvature
+  - the symmetric vacuum has tangent rank zero
+  - dependent generator inputs cannot be mislabeled as a stabilizer dimension
+  - a lifted Hessian is not repaired by a positive kinetic metric
+  - the F**2/16 prefactor gives kinetic metric I/4 rather than I
+focused_test_result:
+  process_exit_code: 0
+  terminal_tally: 12 passed
+interpretation_ceiling: >-
+  The API certifies exact finite-dimensional classical Hessian and generalized
+  quadratic-mass statements for declared inputs. It derives no quantum vacuum,
+  Goldstone particle, chiral sector, physical pion, decay constant, or
+  substrate realization.

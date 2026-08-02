@@ -1115,3 +1115,38 @@ units:
       term, finite inverse residual, and anomaly chain-rule ceiling through
       canonical and independent routes. No numerical quadrature or deprecated
       NumPy alias is used.
+  PG1:
+    disposition: qualified
+    accepted_claims:
+      - C-SYM-001
+      - C-CHI-001
+    qualification: >-
+      PG1's declared O(4) radial-quartic stationary Hessian and linear-tilt
+      transverse curvature survive as conditional classical model algebra.
+      P060 separately constructs all six generators, proves the actual
+      vacuum-tangent rank and stabilizer dimension, and derives the exact
+      stationary symmetry-Hessian theorem with a separately positive kinetic
+      premise. The Pauli trace also survives, but PG1's final RESULT says the
+      F_pi^2/16 prefactor is canonical even though its executed predicate gives
+      one eighth, a factor of four in the kinetic metric. Its mass-term absence
+      is true only because the action is declared derivative-only, its
+      dispersion check substitutes m_pi=0 into an assumed polynomial, and its
+      Goldstone count subtracts group labels without constructing the action
+      or stabilizer. PG1 establishes no accepted chiral symmetry action or
+      vacuum, quantum Goldstone particle, physical pion or sigma, GMOR
+      relation, Skyrmion or nucleon connection, F_pi value, absolute scale, or
+      substrate realization.
+    evidence:
+      - campaigns/P060-pg1-goldstone-hessian/reviews/source_adjudication.md
+      - campaigns/P060-pg1-goldstone-hessian/evidence/source-reproduction.yaml
+      - campaigns/P060-pg1-goldstone-hessian/evidence/source-audit.yaml
+      - campaigns/P060-pg1-goldstone-hessian/evidence/goldstone-provenance.yaml
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0001/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-SYM-001-review.md
+      - memory/vantasner/decisions/C-CHI-001-review.md
+    note: >-
+      P060 proves the reusable exact theorem, O(4) orbit rank, explicit-breaking
+      mutations, and both SU(2) kinetic conventions through canonical and
+      independent routes. It uses no numerical quadrature, deprecated
+      np.trapz alias, or compatibility shim.

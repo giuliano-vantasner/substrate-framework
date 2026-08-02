@@ -1,0 +1,37 @@
+source_unit: PG1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-18/bridge_PG1_pion_goldstone_massless.py
+source_sha256: a51ecc1833cd166bbef5aa799d2ab9eacc453b088660dbb98426591a7157aa74
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-18/bridge_PG1_pion_goldstone_massless.py
+working_directory: /home/dan/substrate-framework
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+  numpy: 2.5.1
+native_run:
+  exit_status: 0
+  terminal_tally: ALL 4 CHECKS PASS
+  runtime_data_access: false
+reported_values:
+  radial_quartic: lambda*(sigma**2+pi1**2+pi2**2+pi3**2-v**2)**2
+  selected_vacuum: [v, 0, 0, 0]
+  selected_vacuum_hessian: diag(8*lambda*v**2,0,0,0)
+  leading_pauli_trace: 2*(p1**2+p2**2+p3**2)/F_pi**2
+  physicist_prefactor: F_pi**2/4
+  physicist_quadratic_term: (p1**2+p2**2+p3**2)/2
+  anw_prefactor: F_pi**2/16
+  anw_quadratic_term: (p1**2+p2**2+p3**2)/8
+  printed_result_anw_quadratic_term: (p1**2+p2**2+p3**2)/2
+  declared_goldstone_counts: {su2: 3, su3: 8}
+  explicit_tilt_stationary_relation: c=4*lambda*s0*(s0**2-v**2)
+  explicit_tilt_transverse_hessian: c/s0
+reproduction_ceiling: >-
+  The native tally reproduces four symbolic predicates. The O(4) radial
+  potential and shifted-vacuum transverse Hessian are valid declared-model
+  calculations. The run does not construct the advertised chiral action,
+  vacuum order parameter, generator/stabilizer maps, Euler-Lagrange equation,
+  quantum state or spectrum, physical-pion dictionary, or substrate origin.
+  Its final result also prints the ANW prefactor as canonical even though the
+  executed predicate derives one eighth.

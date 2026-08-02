@@ -1,0 +1,43 @@
+sources:
+  - id: goldstone-1961
+    title: Field Theories with Superconductor Solutions
+    author: Jeffrey Goldstone
+    journal: Il Nuovo Cimento 19, 154-164
+    doi: 10.1007/BF02812722
+    url: https://cds.cern.ch/record/343400
+    audited_scope:
+      - The primary paper is the historical mass-zero-boson result for lower-symmetry solutions of field theories.
+    imported_as: external_quantum_theorem_context_only
+  - id: goldstone-salam-weinberg-1962
+    title: Broken Symmetries
+    authors: [Jeffrey Goldstone, Abdus Salam, Steven Weinberg]
+    journal: Physical Review 127, 965-970
+    doi: 10.1103/PhysRev.127.965
+    url: https://journals.aps.org/pr/abstract/10.1103/PhysRev.127.965
+    audited_scope:
+      - >-
+        The paper states the quantum-theory alternative that a continuous
+        Lagrangian symmetry is either also a vacuum symmetry or is accompanied
+        by spin-zero particles of zero mass.
+      - >-
+        Its conclusion is stronger than a finite-dimensional stationary
+        potential Hessian statement and requires quantum field-theory objects
+        not constructed by PG1 or P060.
+    imported_as: external_quantum_theorem_scope_and_interpretation_ceiling
+  - id: adkins-nappi-witten-1983
+    title: Static properties of nucleons in the Skyrme model
+    authors: [Gregory S. Adkins, Chiara R. Nappi, Edward Witten]
+    journal: Nuclear Physics B 228, 552-566
+    doi: 10.1016/0550-3213(83)90559-X
+    url: https://www.sciencedirect.com/science/article/abs/pii/055032138390559X
+    audited_scope:
+      - >-
+        The primary paper studies a declared SU(2) times SU(2) chiral theory
+        and Skyrme-model solitons interpreted as baryons; it does not derive
+        those model premises from this framework.
+    imported_as: source_model_provenance_not_framework_authority
+framework_conclusion: >-
+  P060 may accept an exact classical stationary symmetry-Hessian theorem and
+  declared O(4)/SU(2) model specializations. Neither the literature nor PG1
+  supplies an accepted framework chiral sector, physical pion dictionary, or
+  quantum Goldstone-particle proof by citation.

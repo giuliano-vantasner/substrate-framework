@@ -1,0 +1,75 @@
+campaign: P060
+title: Exact stationary symmetry-Hessian theorem and PG1 physical-pion audit
+source_baseline: substrate@6d1f4e0
+source_units: [PG1]
+base_release: v0.53.0
+release_after_adjudication: v0.54.0
+adjudicated_at: '2026-08-02T19:00:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B proves the reusable exact stationary invariance-Hessian
+      identity, actual tangent-rank rule, and positive-kinetic quadratic
+      consequence without importing a chiral or physical sector.
+  - id: C
+    reason: >-
+      Candidate C constructs all six O(4) generators, the actual vacuum orbit
+      and stabilizer, radial Hessian, symmetric-vacuum limit, and
+      explicit-breaking mutations through canonical and independent routes.
+  - id: D
+    reason: >-
+      Candidate D derives the Pauli trace Gram matrix and both action-prefactor
+      conventions, exposing rather than hiding PG1's factor-of-four printed
+      contradiction and derivative-only action premise.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_positive_physical_pion_route_because_the_clean_four_check
+      tally_imports_the_model_and_field_names_omits_the_generator_action_and
+      quantum_objects_and_checks_dispersion_by_zero_mass_substitution
+claims:
+  - id: C-SYM-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-CHI-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  exact_primary: attempts/0002/result.yaml
+  promotion_verifier_result: attempts/0004/result.yaml
+  independent_review: reviews/independent_symmetry_review.py
+  independent_result: attempts/0003/result.yaml
+  rejected_source_route: attempts/0001/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  goldstone_provenance: evidence/goldstone-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  symmetry_claim_review: memory/vantasner/decisions/C-SYM-001-review.md
+  specialization_claim_review: memory/vantasner/decisions/C-CHI-001-review.md
+source_disposition:
+  PG1: qualified
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P060-pg1-goldstone-hessian/verify.py --source-file
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-18/bridge_PG1_pion_goldstone_massless.py
+    --source-reproduction campaigns/P060-pg1-goldstone-hessian/evidence/source-reproduction.yaml
+    --source-audit campaigns/P060-pg1-goldstone-hessian/evidence/source-audit.yaml
+    --goldstone-provenance campaigns/P060-pg1-goldstone-hessian/evidence/goldstone-provenance.yaml
+    --independent-result campaigns/P060-pg1-goldstone-hessian/attempts/0003/result.yaml
+    --migration-queue migration/source-claims.yaml --claims governance/claims.yaml
+    --release governance/releases/v0.54.0.yaml
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P060-pg1-goldstone-hessian/reviews/independent_symmetry_review.py
+  - .venv/bin/python -m pytest -q tests/test_symmetry_breaking.py tests/test_governance.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

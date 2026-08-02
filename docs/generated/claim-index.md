@@ -21,6 +21,15 @@ Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(
 - Compatibility: `compatible_extension`
 - Dependencies: C-VAR-001, C-OG-001
 
+## C-CHI-001
+
+In the declared four-real-coordinate model phi=(sigma,pi1,pi2,pi3), use all six standard independent antisymmetric so(4) generators and V=lambda*(phi^T*phi-v^2)^2 with lambda>0 and v>0. At the declared vacuum phi_0=(v,0,0,0), all six infinitesimal invariance residuals and the gradient vanish, the generator-tangent matrix has rank three, its coefficient kernel has dimension three, and the exact Hessian is diag(8*lambda*v^2,0,0,0). Thus this declared classical model has one radial curvature and three independent zero generalized quadratic-mass directions when supplied a positive kinetic metric. At the symmetric stationary point phi=0 the tangent rank is zero. For the explicitly tilted potential V-c*sigma, a positive shifted stationary branch s0 obeys c=4*lambda*s0*(s0^2-v^2) and has transverse curvature c/s0; an anisotropic quadratic term likewise breaks the relevant invariance and lifts its tangent. Separately, for the declared coordinate model U=exp(i*tau_a*pi_a/F) with Pauli matrices and L=A*Tr(partial U*partial U^dagger), the exact leading trace is 2*sum_a(partial pi_a)^2/F^2 and the scalar kinetic metric is (4*A/F^2)*I. Consequently A=F^2/4 gives metric I and quadratic coefficient one half, while A=F^2/16 gives metric I/4 and coefficient one eighth in the same coordinates. A zero potential has zero Hessian; adding m^2*sum_a(pi_a^2)/2 gives Hessian m^2*I. These are conditional O(4) and SU(2) coordinate-model identities depending on C-SYM-001. They establish no chiral symmetry action or its physical breaking, no quantum Goldstone-particle theorem, no physical pion identification, no sigma or nucleon particle, no GMOR relation, no Skyrmion connection, no value of F_pi or a condensate, no absolute mass scale, and no substrate realization.
+
+- Accepted in: `v0.54.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SYM-001
+
 ## C-DIM-001
 
 Over base dimensions energy E and time T, primitives consisting of an energy and frequency have dimension matrix [[1,0],[0,-1]], rank two, and zero kernel, so they form no nontrivial dimensionless monomial. Adding an independent action primitive S gives matrix [[1,0,1],[0,-1,1]], rank two, with one-dimensional kernel spanned by (-1,1,1); up to powers its unique dimensionless monomial is S*omega/E. Both conclusions are local to the declared primitive set and do not prohibit groups after further independent primitives are added.
@@ -548,6 +557,15 @@ Let phi be a sufficiently regular real scalar field and, at a fixed coordinate p
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.
 
 - Accepted in: `v0.8.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
+## C-SYM-001
+
+Let phi be a real nonempty n-entry scalar-coordinate column, let V(phi) be twice differentiable, and let T_a be a finite nonempty supplied family of real n-by-n linear generators. Define the exact infinitesimal invariance residuals r_a(phi)=grad(V)^T*T_a*phi. Direct differentiation gives grad(r_a)=H*T_a*phi+T_a^T*grad(V), where H is the Hessian of V. Therefore, if every r_a vanishes identically and a declared vacuum phi_0 is actually stationary, then H(phi_0)*T_a*phi_0=0 for every supplied generator. The rank of the matrix whose columns are the actual tangents T_a*phi_0 is the number of independent Hessian zero directions certified by these premises. The kernel dimension of the coefficient-to-tangent map is a stabilizer dimension only when the supplied generator matrices form an independent basis; dependent labels cannot inflate the rank. If a separately supplied symmetric kinetic metric K is provably positive definite, the same tangents are zero directions of the generalized quadratic mass operator K^-1*H. Positive K preserves but does not create Hessian zeros. At a nonstationary point, under explicit symmetry breaking, or without an independent generator basis, the corresponding conclusion or interpretation does not follow. This is an exact conditional finite-dimensional classical quadratic theorem. It supplies no quantum Goldstone-particle theorem, no field-theory vacuum or charge algebra, no spectral pole, no group or representation selection, no physical field identification, no mass scale, and no substrate realization.
+
+- Accepted in: `v0.54.0`
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none

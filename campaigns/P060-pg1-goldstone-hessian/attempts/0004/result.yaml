@@ -1,0 +1,24 @@
+attempt: 0004
+candidates: [B, C, D]
+status: primary_promotion_verifier_passed
+implementation: verify.py
+initial_failed_runs:
+  - failure: >-
+      The release-closure check compared the release only with accepted claims
+      whose epistemic axis was active, omitting seven historically accepted
+      qualified claims that current releases intentionally retain.
+    diagnosis: governance_oracle_scope
+    action: >-
+      Compare the release with every registry entry whose independent review
+      axis is accepted. The release set, claim statuses, and scientific
+      conclusions were not changed to satisfy the repaired oracle.
+process_exit_code: 0
+terminal_tally: ALL 42 CHECKS PASS [P060-PG1]
+verified_boundaries:
+  - hash-pinned native PG1 reproduction and check-by-check data-flow audit
+  - exact general invariance-Hessian identity and premise failures
+  - complete O(4) generator basis, tangent rank, stabilizer, Hessian, and mutations
+  - positive kinetic generalized-mass implication and lifted counterexample
+  - Pauli trace and both coordinate-normalization prefactors
+  - primary-literature interpretation ceiling and pending dependency exclusions
+  - separate accepted claim axes, qualified PG1 queue entry, and release closure

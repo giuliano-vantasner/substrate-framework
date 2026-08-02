@@ -2957,3 +2957,109 @@ claims:
     accepted_in: v0.53.0
     challenges: []
     supersedes: []
+  - id: C-SYM-001
+    statement: >-
+      Let phi be a real nonempty n-entry scalar-coordinate column, let V(phi)
+      be twice differentiable, and let T_a be a finite nonempty supplied
+      family of real n-by-n linear generators. Define the exact infinitesimal
+      invariance residuals r_a(phi)=grad(V)^T*T_a*phi. Direct differentiation
+      gives grad(r_a)=H*T_a*phi+T_a^T*grad(V), where H is the Hessian of V.
+      Therefore, if every r_a vanishes identically and a declared vacuum phi_0
+      is actually stationary, then H(phi_0)*T_a*phi_0=0 for every supplied
+      generator. The rank of the matrix whose columns are the actual tangents
+      T_a*phi_0 is the number of independent Hessian zero directions certified
+      by these premises. The kernel dimension of the coefficient-to-tangent
+      map is a stabilizer dimension only when the supplied generator matrices
+      form an independent basis; dependent labels cannot inflate the rank. If
+      a separately supplied symmetric kinetic metric K is provably positive
+      definite, the same tangents are zero directions of the generalized
+      quadratic mass operator K^-1*H. Positive K preserves but does not create
+      Hessian zeros. At a nonstationary point, under explicit symmetry
+      breaking, or without an independent generator basis, the corresponding
+      conclusion or interpretation does not follow. This is an exact
+      conditional finite-dimensional classical quadratic theorem. It supplies
+      no quantum Goldstone-particle theorem, no field-theory vacuum or charge
+      algebra, no spectral pole, no group or representation selection, no
+      physical field identification, no mass scale, and no substrate
+      realization.
+    provenance: campaigns/P060-pg1-goldstone-hessian/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P060-pg1-goldstone-hessian/verify.py
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0002/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0003/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0004/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/reviews/independent_symmetry_review.py
+      - campaigns/P060-pg1-goldstone-hessian/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SYM-001-review.md
+      - tests/test_symmetry_breaking.py
+    assumptions:
+      - The coordinates and generator matrices are finite-dimensional over the reals, V is twice differentiable, and every displayed product has compatible nonzero dimension.
+      - Invariance means each actual residual grad(V)^T*T_a*phi vanishes identically as a function of the supplied coordinates; group names or dimension labels are not substitutes for this premise.
+      - Stationarity means the complete coordinate gradient vanishes at the declared point; a nonzero tangent at a nonstationary point need not be a Hessian zero direction.
+      - The tangent rank counts only the independent directions generated at that vacuum. Interpreting coefficient-map nullity as stabilizer dimension additionally requires an independent supplied generator basis spanning the declared Lie algebra.
+      - The generalized quadratic-mass statement assumes a separately proven symmetric positive-definite kinetic metric in the same coordinates; the theorem does not derive that metric or a relativistic quantum spectrum.
+    comparators: []
+    accepted_in: v0.54.0
+    challenges: []
+    supersedes: []
+  - id: C-CHI-001
+    statement: >-
+      In the declared four-real-coordinate model phi=(sigma,pi1,pi2,pi3), use
+      all six standard independent antisymmetric so(4) generators and
+      V=lambda*(phi^T*phi-v^2)^2 with lambda>0 and v>0. At the declared vacuum
+      phi_0=(v,0,0,0), all six infinitesimal invariance residuals and the
+      gradient vanish, the generator-tangent matrix has rank three, its
+      coefficient kernel has dimension three, and the exact Hessian is
+      diag(8*lambda*v^2,0,0,0). Thus this declared classical model has one
+      radial curvature and three independent zero generalized quadratic-mass
+      directions when supplied a positive kinetic metric. At the symmetric
+      stationary point phi=0 the tangent rank is zero. For the explicitly
+      tilted potential V-c*sigma, a positive shifted stationary branch s0
+      obeys c=4*lambda*s0*(s0^2-v^2) and has transverse curvature c/s0; an
+      anisotropic quadratic term likewise breaks the relevant invariance and
+      lifts its tangent. Separately, for the declared coordinate model
+      U=exp(i*tau_a*pi_a/F) with Pauli matrices and
+      L=A*Tr(partial U*partial U^dagger), the exact leading trace is
+      2*sum_a(partial pi_a)^2/F^2 and the scalar kinetic metric is
+      (4*A/F^2)*I. Consequently A=F^2/4 gives metric I and quadratic
+      coefficient one half, while A=F^2/16 gives metric I/4 and coefficient
+      one eighth in the same coordinates. A zero potential has zero Hessian;
+      adding m^2*sum_a(pi_a^2)/2 gives Hessian m^2*I. These are conditional
+      O(4) and SU(2) coordinate-model identities depending on C-SYM-001. They
+      establish no chiral symmetry action or its physical breaking, no quantum
+      Goldstone-particle theorem, no physical pion identification, no sigma or
+      nucleon particle, no GMOR relation, no Skyrmion connection, no value of
+      F_pi or a condensate, no absolute mass scale, and no substrate
+      realization.
+    provenance: campaigns/P060-pg1-goldstone-hessian/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-SYM-001
+    evidence:
+      - campaigns/P060-pg1-goldstone-hessian/verify.py
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0002/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0003/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/attempts/0004/result.yaml
+      - campaigns/P060-pg1-goldstone-hessian/reviews/independent_symmetry_review.py
+      - campaigns/P060-pg1-goldstone-hessian/reviews/source_adjudication.md
+      - campaigns/P060-pg1-goldstone-hessian/evidence/goldstone-provenance.yaml
+      - memory/vantasner/decisions/C-CHI-001-review.md
+      - tests/test_symmetry_breaking.py
+    assumptions:
+      - The O(4) coordinates, Euclidean inner product, six generator matrices, radial-quartic normalization, positive lambda and v, vacuum branch, and any kinetic metric are declared model data rather than derived physical fields.
+      - The nonzero-vacuum count uses the actual rank of all six generator tangents. The coefficient-kernel dimension is the stabilizer dimension because those six matrices are independently verified as a basis.
+      - The linear-tilt formula concerns a positive shifted stationary branch satisfying the displayed relation; it is a sigma-model curvature identity and not a QCD or GMOR derivation.
+      - The SU(2) expansion uses Hermitian Pauli generators with Tr(tau_a*tau_b)=2*delta_ab, the displayed exponential coordinate, and one fixed coordinate scale F. A field rescaling changes the coordinate convention and cannot make both action prefactors canonical simultaneously.
+      - Absence of a potential is a declared action premise. A zero classical Hessian plus a positive kinetic metric is not by itself a quantum particle or physical pion theorem.
+    comparators: []
+    accepted_in: v0.54.0
+    challenges: []
+    supersedes: []

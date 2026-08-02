@@ -1,0 +1,68 @@
+id: P060
+base_release: v0.53.0
+base_commit: c041831
+source_baseline: substrate@6d1f4e0
+source_units: [PG1]
+question: >-
+  Derive a reusable exact theorem connecting a continuously invariant scalar
+  potential, a nonzero stationary vacuum, broken generator tangents, Hessian
+  zero modes, and quadratic masslessness; specialize it to a declared O(4)
+  radial quartic model and an SU(2) derivative-only kinetic convention, then
+  audit whether PG1 derives a physical pion sector rather than conditional
+  Goldstone-model mathematics.
+invariants:
+  - Accepted framework claims define no chiral SU(2)_L times SU(2)_R action, O(4) scalar multiplet, vacuum condensate, pion field, or physical pion spectrum.
+  - A Hessian zero mode, a zero generalized mass eigenvalue, a derivative-only coordinate action, a Goldstone particle, and the physical pion are separate statements.
+  - Broken-generator count is the rank of the actual vacuum-tangent map, not a subtraction of printed group dimensions or labels.
+  - Kinetic normalization, potential normalization, vacuum branch, and explicit-breaking terms must remain visible and convention-consistent.
+  - Pending PG2, PG4, and S2 supply no accepted explicit-breaking, hedgehog-spectrum, decay-constant, or pion-identification premise.
+allowed_imports:
+  - exact multivariate calculus and finite-dimensional linear algebra over real scalar coordinates
+  - linear continuous group actions and their infinitesimal generator tangents
+  - positive-definite quadratic kinetic metrics as separately declared model data
+  - Pauli-matrix traces and exact matrix exponentiation only for a declared SU(2) coordinate model
+  - audited primary literature for the scope of Goldstone's theorem, treated as external theorem context rather than a framework physical-sector derivation
+  - SymPy exact differentiation, substitution, series, ranks, and nullspaces
+  - PG1 at substrate@6d1f4e0 as noncanonical evidence after the contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce PG1 literally and retain only subclaims whose mass matrix,
+      symmetry action, vacuum, kinetic normalization, count, and physical
+      interpretation are exercised by its checks.
+  - id: B
+    description: >-
+      Prove the general infinitesimal-symmetry Hessian theorem by differentiating
+      the actual invariance identity at an actual stationary vacuum and count
+      independent zero directions by the tangent-matrix rank.
+  - id: C
+    description: >-
+      Construct the O(4)-invariant radial quartic model, all six antisymmetric
+      generators, its vacuum stabilizer, Hessian spectrum, and explicit-breaking
+      mutations directly in Cartesian field coordinates.
+  - id: D
+    description: >-
+      Construct the SU(2) exponential-coordinate derivative action at quadratic
+      order, derive its kinetic metric from generator traces under two declared
+      prefactor conventions, and verify that absence of a potential—not the
+      field name—makes its Hessian zero.
+uniqueness_evidence: null
+selection_criteria:
+  - exact compatibility with the accepted framework's lack of a physical chiral or pion sector
+  - actual invariance residual, stationary gradient, Hessian kernel, and tangent rank rather than structural labels
+  - explicit kinetic and potential normalizations, dimensions, branches, and field-coordinate conventions
+  - parameter economy and no import of pending PG2, PG4, or S2
+  - independent differentiation and orbit-tangent derivations with sensitive symmetry, stationarity, mass-term, sign, and normalization mutations
+  - correct unbroken, symmetric-vacuum, explicit-breaking, zero-coupling, and zero-vacuum limits
+claims_proposed:
+  - provisional C-SYM-001 infinitesimal-symmetry stationary-Hessian zero-mode and rank theorem
+  - provisional C-CHI-001 conditional O(4) radial-quartic and SU(2) derivative-action quadratic specialization
+selected_candidate: [B, C, D]
+comparators_blinded_until: >-
+  The migration inventory necessarily exposes PG1's claimed O(4) Hessian,
+  derivative-only SU(2) action, and dimension-count narrative. Those synopsis
+  values cannot select a normalization, field identification, or candidate.
+  The general invariance identity, vacuum conditions, tangent-rank rule,
+  kinetic convention, mutations, claim ceilings, and candidate criteria are
+  frozen here before PG1's executable internals or printed values are opened.
+status: accepted

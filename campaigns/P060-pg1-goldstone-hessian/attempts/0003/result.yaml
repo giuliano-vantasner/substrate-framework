@@ -1,0 +1,40 @@
+attempt: 0003
+candidates: [B, C, D]
+status: independent_exact_route_passed
+implementation: reviews/independent_symmetry_review.py
+canonical_symmetry_breaking_helpers_imported: false
+initial_failed_runs:
+  - failure: >-
+      Substituting gradient components by zero in a combined expression also
+      propagated into higher derivative objects under SymPy substitution.
+    diagnosis: verifier_representation
+    action: >-
+      Isolate the additive T.T*gradient stationarity term and replace its
+      gradient atoms only; the already passing arbitrary-potential
+      differentiated identity remained unchanged.
+  - failure: >-
+      The independently derived Euler-Lagrange expression was algebraically
+      equal to its grouped expected form but not structurally identical.
+    diagnosis: oracle_representation
+    action: >-
+      Compare the exact simplified difference to zero without changing the
+      Lagrangian, equation, dispersion, or mass mutation.
+process_exit_code: 0
+terminal_tally: ALL 24 CHECKS PASS [P060-INDEPENDENT]
+independent_derivations:
+  - arbitrary two-coordinate potential and arbitrary linear generator component identity
+  - complete six-element antisymmetric O(4) basis and vacuum-tangent rank
+  - tangent-map nullspace as the three-dimensional stabilizer coefficient space
+  - direct radial-quartic gradient, Hessian, kernel, and characteristic data
+  - explicit anisotropic-mass and linear-tilt breaking routes
+  - explicit Pauli products and second-order exponential derivative trace
+  - classical quadratic mode Euler-Lagrange equation and dispersion
+mutations_and_counterexamples:
+  - two off-stationary vacuum candidates fail the gradient oracle
+  - an anisotropic mass term breaks invariance and lifts a tangent
+  - the ANW prefactor and a doubled action fail canonical normalization
+  - an added potential curvature lifts the derivative-only mode
+dimensions:
+  declared_four_dimensional_scalar_example: >-
+    [phi]=1, [partial]=1, [V]=4, [H]=2, and [linear source]=3.
+physical_identifications: []
