@@ -1,0 +1,61 @@
+source_unit: OD
+headline_verdict: not_established_by_source
+checks:
+  - id: OD.0
+    source_verdict: pass
+    audit_verdict: symbol_introspection_not_no_fit_proof
+    reason: A nonnumeric Symbol can still be set equal to a fitted or imported symbolic constant combination; the unused a_fit_attempt does not mutate the result.
+  - id: OD.1a
+    source_verdict: pass
+    audit_verdict: qualified_dimension_discriminator
+    reason: The two cited ratios are dimensionless, but this does not derive any absolute-scale constraint.
+  - id: OD.1b
+    source_verdict: pass
+    audit_verdict: fabricated_log_design
+    reason: The four rows and their unit coefficient on ln(a) are declared rather than derived from dimensionless reference-ratio forms of the cited equations.
+  - id: OD.2a
+    source_verdict: pass
+    audit_verdict: exact_rank_false_free_direction_description
+    reason: Rank 4 and nullity 1 are exact, but the null vector (-1,1,1,1,1) mixes every coordinate and is not exactly the ln(a) direction.
+  - id: OD.2b
+    source_verdict: pass
+    audit_verdict: independence_hard_coded
+    reason: G5_S5_independent is assigned True; source labels and different prose routes do not establish independent information or covariance.
+  - id: OD.G1
+    source_verdict: pass
+    audit_verdict: equality_condition_not_inconsistency
+    reason: The free relative scale satisfies the forced equality at log(lambda)=0; a nonzero-separation premise is neither encoded nor derived.
+  - id: OD.G2
+    source_verdict: pass
+    audit_verdict: source_introspection_not_load_bearing_mutation
+    reason: Searching source text for a numeric assignment does not test whether a symbolic comparator or fitted constant supplied a scale.
+  - id: OD.G3
+    source_verdict: pass
+    audit_verdict: conditional_dimension_matrix_only
+    reason: The declared square dimension matrix has rank 3, but this pins no primitive and does not validate OD's physical rows.
+later_AS4_annotation:
+  authority: pending_not_imported
+  native_tally: ALL 7 CHECKS PASS
+  audit:
+    - Its four coefficient rows have rank 2, so only two rows add coefficient directions; two are compatibility tests rather than four genuinely independent constraints.
+    - The gravity/medium coefficients are proportional and the hadronic/confinement coefficients are proportional; consistency requires two exact right-hand-side relations that AS4 does not compare with supplied observations or uncertainties.
+    - The AS1-AS3 reductions and physical row normalizations are pending premises and cannot change accepted absolute-scale status.
+    - Its fabricated free-length matrix is 4x3 with rank 3 and nullity 0. The guard asserts nullity 0 while its prose says nullity reopens and the system becomes underdetermined.
+    - Keeping a and beta symbolic does not reconcile the claim that both are pinned with the honesty bound that one observation is still required; the source is diagnosing a conditional supplied-observation system, not scale emergence from accepted claims.
+dependencies:
+  AS2: qualified_C-DIM-002_C-MED-001_C-MED-002_only
+  CF4: qualified_C-RGE-001_C-RGE-002_C-DIM-007_only
+  S5: qualified_C-VIR-001_C-MED-001_C-SK-001_only
+  AS1: pending_not_imported
+  AS3: pending_not_imported
+  AS4: pending_not_imported
+  B1: pending_not_imported
+  G1: pending_not_imported
+  G2: pending_not_imported
+  G3: pending_not_imported
+  G5: pending_not_imported
+  M1: pending_not_imported
+  QCD5: pending_not_imported
+selected_candidates: [B, C, D, E]
+rejected_candidate: A
+proposed_claims: [C-IDN-001, C-GLS-001]

@@ -1,0 +1,19 @@
+attempt: 0005
+candidate: exact_real_domain_guard
+status: test_fixture_failure_repaired
+command: .venv/bin/python -m pytest -q tests/test_scale_constraints.py tests/test_linear_systems.py
+process_exit_status: 1
+terminal_state: 2 failed, 24 passed
+failure:
+  category: implementation_and_fixture
+  mechanism:
+    - Tightening the exact API to require provably real entries correctly rejected AS4 test symbols whose domains had not been declared real.
+    - One error-message assertion still expected the earlier phrase exact values after the message became exact real values.
+repair: >-
+  Declare the synthetic AS4 coefficients and right-hand sides real and bind the
+  error assertion to the stronger exact-real contract. No rank, residual,
+  covariance, interval, tolerance, or scientific verdict changed.
+replay: 26 passed
+lesson: >-
+  A theorem over exact real systems should reject unknown-domain symbols; test
+  fixtures must carry the same domain assumptions as the promoted statement.

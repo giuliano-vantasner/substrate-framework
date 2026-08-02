@@ -1,0 +1,20 @@
+attempt: 0002
+candidate: B_C_D_E_primary_verifier
+status: verifier_failure_repaired
+command: PYTHONPATH=src .venv/bin/python proposals/P065-od-absolute-scale-identifiability/verify.py
+process_exit_status: 1
+terminal_state: 39 checks passed before CheckFailure
+failure:
+  category: verifier_implementation
+  mechanism: >-
+    A source-text guard searched the verifier for literal NumPy quadrature alias
+    tokens while embedding those same tokens in the guard expression, so it
+    detected itself rather than a canonical implementation dependency.
+repair: >-
+  Construct the audit tokens without embedding either literal and inspect only
+  the canonical exact-algebra module. No scientific condition, tolerance, or
+  expected result changed.
+replay: ALL 40 CHECKS PASS [P065]
+lesson: >-
+  Source-introspection checks must exclude their own assertion representation;
+  otherwise they create validation theater rather than mutation sensitivity.

@@ -1,0 +1,17 @@
+attempt: 0003
+candidate: B_C_D_E_independent_review
+status: representation_failure_repaired
+command: PYTHONPATH=src .venv/bin/python proposals/P065-od-absolute-scale-identifiability/reviews/independent_scale_review.py
+process_exit_status: 1
+terminal_state: 12 checks passed before CheckFailure
+failure:
+  category: representation
+  mechanism: >-
+    SymPy represented the independently derived correlated residual as
+    -2/(rho-1), while the check used Python structural equality against the
+    algebraically identical 2/(1-rho).
+repair: >-
+  Compare the simplified exact difference with zero. The formula, covariance,
+  and expected specialization were not changed.
+replay: ALL 17 CHECKS PASS [P065-INDEPENDENT]
+lesson: Exact symbolic identities require algebraic equality, not syntax equality.

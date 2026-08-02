@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 3
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 156
-  qualified: 55
+  pending_adjudication: 155
+  qualified: 56
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3938,8 +3938,31 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-IDN-001
+  - C-GLS-001
+  qualification: OD's exact coefficient-rank fragment survives only as conditional linear bookkeeping.
+    Its 4x5 null vector is (-1,1,1,1,1), not a free direction exactly along ln(a); its log rows are declared
+    rather than derived from dimensionless forms of accepted physical equations; its observable and pure
+    offsets are unspecified; and physical independence is assigned by a literal True Boolean. Its two-scale
+    and source-introspection guards do not test the advertised rejection. The later pending AS4 annotation
+    has two coefficient directions and two compatibility relations, supplies no accepted observations
+    or covariance, and asserts nullity zero in the same free-length guard whose prose says nullity reopens.
+    Neither source derives or fixes an absolute substrate scale.
+  evidence:
+  - campaigns/P065-od-absolute-scale-identifiability/reviews/source_adjudication.md
+  - campaigns/P065-od-absolute-scale-identifiability/evidence/source-reproduction.yaml
+  - campaigns/P065-od-absolute-scale-identifiability/evidence/source-audit.yaml
+  - campaigns/P065-od-absolute-scale-identifiability/evidence/primary-provenance.yaml
+  - campaigns/P065-od-absolute-scale-identifiability/attempts/0001/result.yaml
+  - campaigns/P065-od-absolute-scale-identifiability/attempts/0004/result.yaml
+  - memory/vantasner/decisions/C-IDN-001-review.md
+  - memory/vantasner/decisions/C-GLS-001-review.md
+  note: P065 composes C-LIN-001 into exact coordinate-identifiability, left-null compatibility, incremental
+    coefficient/augmented-rank, reference-shift, exact interval, and declared-covariance GLS ledgers through
+    canonical and independent symbolic routes. It uses no numerical quadrature or NumPy integration alias
+    and preserves all rows, covariance, and intervals as supplied provenance-bearing inputs.
 - source_unit: OM1
   phase: phase-19
   path: merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py

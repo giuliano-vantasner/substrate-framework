@@ -1,0 +1,26 @@
+source unit: OD
+source baseline: substrate@6d1f4e0
+source sha256: 300259218ca36063625d42487dc1d8f00def4b5d58ef6ffc0b4dc174852fdeb6
+command: python3 merged-framework/bridges/phase-19/bridge_OD_over_determination_test.py
+working directory: /home/dan/substrate
+environment: Python 3.12.2; NumPy 1.26.4; SciPy 1.14.1; SymPy 1.14.0
+process exit status: 0
+
+Reproduced sections:
+  OD.0: the source keeps its declared symbol a nonnumeric.
+  OD.1: a dimension discriminator and a four-row, five-column symbolic system pass.
+  OD.2: coefficient rank 4 and nullity 1 pass; independence is assigned True.
+  OD.G: symbolic two-scale, source-introspection, and Buckingham checks pass.
+
+Printed headline:
+  NOT YET OVER-DETERMINED -> the deferral is STILL CORRECT.
+
+Terminal tally:
+  ALL 8 CHECKS PASS
+
+Audit note:
+  The clean process exit and tally reproduce the source only. The coefficient
+  null vector is (-1,1,1,1,1), not a pure ln(a) direction; the rows are not
+  derived from the cited physics; and no actual right-hand-side agreement,
+  covariance, or physical independence is tested. See result.yaml and
+  evidence/source-audit.yaml.

@@ -1,0 +1,26 @@
+source_unit: OD
+source_baseline: substrate@6d1f4e0
+source_path: merged-framework/bridges/phase-19/bridge_OD_over_determination_test.py
+source_sha256: 300259218ca36063625d42487dc1d8f00def4b5d58ef6ffc0b4dc174852fdeb6
+reproduced_at: '2026-08-02T15:05:00Z'
+command: python3 merged-framework/bridges/phase-19/bridge_OD_over_determination_test.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+quadrature_note: >-
+  OD and P065 perform exact SymPy linear algebra and use no quadrature. They do
+  not call numpy.trapz, numpy.trapezoid, or the framework compatibility helper.
+later_annotation_reproduction:
+  source_unit: AS4
+  source_path: merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+  source_sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f
+  command: python3 merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+  working_directory: /home/dan/substrate
+  process_exit_status: 0
+  terminal_tally: ALL 7 CHECKS PASS
+  authority: pending_noncanonical_evidence

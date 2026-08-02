@@ -129,6 +129,15 @@ Conditional on C-U1-001's smooth complex scalar, a positive coupling e, and a de
 - Compatibility: `compatible_extension`
 - Dependencies: C-U1-001
 
+## C-GLS-001
+
+For a nonempty finite exact real design A of full column rank, an exact observation column b with row provenance, and a separately supplied exact symmetric positive-definite covariance Sigma with declared provenance, the unique generalized least-squares estimator is x_hat=(A^T*Sigma^-1*A)^-1*A^T*Sigma^-1*b. Its fitted column is A*x_hat, residual r=b-A*x_hat, residual projector P=I-A*(A^T*Sigma^-1*A)^-1*A^T*Sigma^-1, exact normal residual A^T*Sigma^-1*r=0, quadratic residual chi2=r^T*Sigma^-1*r, and residual degrees of freedom m-rank(A). P is idempotent and annihilates A. Changing a supplied off-diagonal covariance can change chi2 without changing the algebraic coefficient rank; a singular, indefinite, nonsymmetric, inexact, or dimension-mismatched covariance and a rank-deficient design do not satisfy this unique-estimator theorem. The exact chi2 ledger alone assigns no sampling distribution, p-value, source independence, model adequacy, physical observation, fitted scale, or substrate realization.
+
+- Accepted in: `v0.59.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-LIN-001
+
 ## C-GMR-001
 
 Conditional on positive quark-mass sum m_q, positive decay scale F, positive convention factor c, negative condensate Sigma, and the separately declared relation M^2*F^2=-c*m_q*Sigma, exact solution gives M^2=-c*m_q*Sigma/F^2>0. Holding the other inputs fixed, its logarithmic sensitivities with respect to m_q, Sigma, F, and c are respectively 1, 1, -2, and 1, and M^2 tends to zero as m_q tends to zero. If m_q, Sigma, F, and c have mass dimensions 1, 3, 1, and 0, both sides have mass dimension four. For every positive rho, replacing F by rho*F and Sigma by rho^2*Sigma leaves M^2 unchanged, so the relation alone does not determine its inputs or a numerical mass. This exact conditional parameter ledger does not derive GMOR, a chiral current or vacuum, a condensate convention or value, a decay constant, quark masses, a physical pion identity, QCD dynamics, or a substrate realization.
@@ -218,6 +227,15 @@ Let I_STF be the normalized symmetric trace-free moment of C-MOM-001 and let Q_s
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-GW-001, C-GW-002, C-GW-007
+
+## C-IDN-001
+
+Let A be a nonempty finite exact real m-by-n matrix with provenance for every row, and let b be an exact column. Conditional on separately supplied positive dimensionless ratios satisfying y_i=c_i*product_j(s_j/s_ref_j)^A_ij, taking logs gives A*x=b with x_j=log(s_j/s_ref_j) and b_i=log(y_i/c_i). Composing C-LIN-001, a consistent system identifies coordinate j exactly when every vector in null(A) has zero j component, equivalently when the jth coordinate covector lies in row(A); this can hold without global uniqueness or more rows than columns. Every left-null vector ell supplies the exact scale-free compatibility condition ell^T*b=0. Ordered prefix ranks of A and [A|b] distinguish a new coefficient direction, a consistent dependent row, and a conflicting dependent datum, but do not establish physical or statistical independence. A reference change x'=x-delta, b'=b-A*delta preserves nullspace, coordinate identifiability, and every left-null residual. For separately supplied exact closed intervals on one log coordinate, their intersection is [max lower_i,min upper_i]: a strict interval is a feasible range, equal endpoints identify one point, and reversed endpoints are a contradiction. These exact conditional ledgers derive no physical row, reference scale, observable, coefficient, covariance, independence premise, fitted constant, or substrate scale.
+
+- Accepted in: `v0.59.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: C-LIN-001
 
 ## C-KRN-001
 

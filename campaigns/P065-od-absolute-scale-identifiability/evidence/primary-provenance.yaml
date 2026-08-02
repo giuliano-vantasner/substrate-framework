@@ -1,0 +1,32 @@
+campaign: P065
+canonical_module: src/substrate_framework/scale_constraints.py
+accepted_imports:
+  C-LIN-001:
+    source: src/substrate_framework/linear_systems.py
+    use: exact coefficient rank, augmented rank, consistency, solution dimension, uniqueness, and row-count semantics
+  C-DIM-001_through_C-DIM-005:
+    source: src/substrate_framework/dimensional_analysis.py
+    use: primitive-coordinate and coefficient ceilings only; no physical scale value imported
+  C-DIM-007:
+    source: src/substrate_framework/renormalization.py
+    use: sole-scale interpretation ceiling only; no transmutation value or physical sector imported
+mathematical_imports:
+  - exact finite-dimensional real linear algebra
+  - positive dimensionless ratios and logarithms
+  - exact symmetric positive-definite covariance matrices
+  - exact closed ordered intervals
+source_evidence:
+  OD:
+    path: /home/dan/substrate/merged-framework/bridges/phase-19/bridge_OD_over_determination_test.py
+    sha256: 300259218ca36063625d42487dc1d8f00def4b5d58ef6ffc0b4dc174852fdeb6
+    authority: noncanonical_reproduced_attempt
+  AS4:
+    path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py
+    sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f
+    authority: pending_noncanonical_annotation_evidence
+not_imported:
+  - pending AS1, AS3, AS4, B1, G1, G2, G3, G5, M1, and QCD5 claims
+  - any observed absolute scale or fitted constant combination
+  - OD or AS4 coefficient rows as accepted physical equations
+  - statistical independence, a probability distribution, or a p-value
+  - floating-point rank or tolerance-based consistency

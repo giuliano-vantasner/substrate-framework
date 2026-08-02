@@ -1,0 +1,36 @@
+attempt: 0006
+candidate: promotion_replay
+status: passed
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python campaigns/P065-od-absolute-scale-identifiability/verify.py
+  process_exit_status: 0
+  terminal_tally: ALL 40 CHECKS PASS [P065]
+independent_review:
+  command: PYTHONPATH=src .venv/bin/python campaigns/P065-od-absolute-scale-identifiability/reviews/independent_scale_review.py
+  process_exit_status: 0
+  terminal_tally: ALL 17 CHECKS PASS [P065-INDEPENDENT]
+repository_workflow:
+  command: scripts/validate.sh
+  process_exit_status: 0
+  registry_tally: 87 claims, 87 accepted, 0 proposals
+  migration_tally: 218 units, 155 pending, 0 partial
+  pytest_tally: 501 passed in 60.49s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+diff_checks:
+  unstaged: pass
+  staged: pass
+graph_detection:
+  risk: medium
+  changed_symbols: 163
+  changed_files: 30
+  affected_processes: 4
+  interpretation: >-
+    All four flows are newly introduced internal paths rooted at
+    shift_log_references; no pre-existing execution process is affected.
+quadrature_note: >-
+  P065 uses exact SymPy algebra and no numerical quadrature, numpy.trapz,
+  numpy.trapezoid, or shared trapezoid compatibility dispatch.
+verdict: >-
+  Promote C-IDN-001 and C-GLS-001 individually in v0.59.0, qualify OD with
+  its exact source-audit ceiling, and retain every physical row, observation,
+  covariance, interval, and absolute scale as an unimported premise.

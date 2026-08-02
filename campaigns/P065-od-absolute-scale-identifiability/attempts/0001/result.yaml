@@ -1,0 +1,43 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_headline_rejected
+source_unit: OD
+source_baseline: substrate@6d1f4e0
+source_sha256: 300259218ca36063625d42487dc1d8f00def4b5d58ef6ffc0b4dc174852fdeb6
+command: python3 merged-framework/bridges/phase-19/bridge_OD_over_determination_test.py
+working_directory: /home/dan/substrate
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+  sympy: 1.14.0
+process_exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+observations:
+  - The declared 4x5 matrix has coefficient rank 4 and nullity 1.
+  - Its exact null vector is (-1,1,1,1,1), so the free direction mixes ln(a) with every nuisance coordinate rather than being exactly ln(a).
+  - All five coordinates are unidentifiable; this follows from the nonzero component of that null vector, not from row count or a selected symbolic solve.
+  - The four coefficient rows are generic declarations rather than log forms derived from the cited S5, G5, M1, and CF4 equations with dimensionless reference ratios.
+  - The source places unspecified observable and pure offsets on the right as though known, but supplies no values, provenance, shared-input covariance, or consistency residual.
+  - Its physical-independence predicate is the literal assignment G5_S5_independent=True.
+  - Its two-scale guard merely solves the imposed equality by setting the relative log scale to zero; it does not encode a nonzero separation and hence does not prove inconsistency.
+  - Its fit guard introspects source text and leaves a_fit_attempt unused, so it cannot detect a symbolic fitted or imported combination.
+  - Its Buckingham calculation is an exact rank result for a declared matrix but does not validate the physical constraint rows or fix an absolute primitive.
+diagnosis:
+  category: target_statement_and_verifier
+  mechanism:
+    - Exact rank is a useful conditional diagnostic, but equation count is neither necessary nor sufficient for coordinate identifiability.
+    - A coordinate is identified exactly when every coefficient-null vector vanishes in that coordinate, conditional on consistency.
+    - Dependent coefficient rows can still test right-hand-side compatibility, while provenance labels alone do not establish independent information.
+    - Logs of dimensionful quantities are reference-dependent; dimensionless ratios and the induced right-hand-side reference shift must be explicit.
+    - Accepted dependencies provide no physical equations populating OD's declared matrix or fixing an absolute scale.
+verdict: >-
+  OD is retained as reproduced attempt evidence and as motivation for an exact
+  identifiability diagnostic. Its historical deferral conclusion is compatible
+  with the accepted framework ceiling, but this executable does not prove that
+  conclusion from its cited physical chains and its instrument contains false
+  descriptions and insensitive guards.
+next_attempt: >-
+  Compose C-LIN-001 with exact nullspace-coordinate identifiability, left-null
+  compatibility, incremental coefficient and augmented ranks, reference-covariant
+  positive-monomial logs, declared-covariance GLS, and exact interval feasibility.

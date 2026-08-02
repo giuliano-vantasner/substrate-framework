@@ -1,0 +1,29 @@
+attempt: 0004
+candidates: [B, C, D, E]
+status: exact_candidates_verified
+canonical_module: src/substrate_framework/scale_constraints.py
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P065-od-absolute-scale-identifiability/verify.py
+  process_exit_status: 0
+  terminal_tally: ALL 40 CHECKS PASS [P065]
+independent_review:
+  command: PYTHONPATH=src .venv/bin/python proposals/P065-od-absolute-scale-identifiability/reviews/independent_scale_review.py
+  process_exit_status: 0
+  terminal_tally: ALL 17 CHECKS PASS [P065-INDEPENDENT]
+targeted_tests:
+  command: .venv/bin/python -m pytest -q tests/test_scale_constraints.py tests/test_linear_systems.py
+  process_exit_status: 0
+  terminal_tally: 26 passed
+results:
+  - Exact positive dimensionless monomial ratios map to a log-linear design with mandatory row provenance and no floating inputs.
+  - A consistent system identifies coordinate j exactly when every coefficient-null vector has zero j component, equivalently when the coordinate covector lies in the coefficient row space.
+  - Left-null residuals and ordered coefficient/augmented rank ledgers distinguish new directions, consistent duplicates, and conflicting dependent observations.
+  - Exact reference shifts preserve nullspace, coordinate identifiability, and compatibility residuals.
+  - Exact GLS for a declared SPD covariance satisfies the normal equations, retains its projector, residual, chi-square, and residual degrees of freedom, and refuses singular, indefinite, nonsymmetric, inexact, or rank-deficient inputs.
+  - Exact closed-interval intersection separates a nontrivial feasible range, point identification, and contradiction while retaining interval provenance.
+  - OD's null direction is mixed, and AS4 has two coefficient directions plus two compatibility relations; AS4's free-length guard has nullity zero rather than reopening a free direction.
+scope_ceiling: >-
+  These conditional ledgers derive no physical constraint row, observable,
+  covariance, independence premise, fitted constant, or absolute scale. OD
+  remains compatible with the accepted absolute-scale ceiling but is qualified
+  because its executable does not establish its physical headline.

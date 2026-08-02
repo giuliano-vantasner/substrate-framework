@@ -1,0 +1,72 @@
+id: P065
+base_release: v0.58.0
+base_commit: 1a94738
+scientific_base_commit: e2de2e4
+source_baseline: substrate@6d1f4e0
+source_units: [OD]
+question: >-
+  Construct a reusable exact and uncertainty-aware diagnostic for positive
+  monomial observables that constrain one or more logarithmic scale
+  coordinates, including rank, nullspace, scale-free compatibility,
+  covariance-weighted residual, and interval-feasibility ledgers; then audit
+  whether OD's historical or later annotated verdict actually receives
+  independent accepted dimensionful constraints that fix an absolute scale.
+invariants:
+  - C-DIM-002 fixes monomial exponents only relative to a declared c0,S,a primitive basis and explicitly leaves every dimensionless coefficient and primitive value free.
+  - C-DIM-003 is a lossless mass-coordinate reparameterization and supplies no equation fixing a coordinate or primitive value.
+  - C-LIN-001 already separates equation count, coefficient rank, augmented consistency, uniqueness, and duplicate rows for exact finite systems; P065 must reuse rather than duplicate it.
+  - C-RGE-001, C-RGE-002, and C-DIM-007 are conditional dimensional-transmutation and sole-scale ledgers and do not derive an observed scale, nonperturbative coefficient, or physical sector.
+  - Qualified AS2, CF4, and S5 content is limited to its accepted claims; pending AS1, AS3, AS4, B1, G1, G2, G3, G5, M1, and QCD5 provide no premise.
+  - Row count, repeated use of one comparator, a derived algebraic consequence, and a substituted or fitted constant do not create independent information.
+allowed_imports:
+  - C-DIM-001 through C-DIM-005 and C-DIM-007 only within their declared primitive, coefficient, and physical-interpretation ceilings
+  - C-LIN-001 for exact coefficient and augmented-rank semantics
+  - exact real linear algebra, positive-variable logarithms, monomial exponent matrices, row/left-null spaces, affine solution sets, and rational positive-definite covariance matrices
+  - separately declared positive observable values, dimensionless coefficients, exponent rows, covariance matrices, or closed uncertainty intervals with provenance labels
+  - OD at substrate@6d1f4e0 as noncanonical evidence after this contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce OD literally and retain only predicates whose unknown set,
+      dimension matrix, constraint rows, right-hand sides, provenance,
+      independence, uncertainty, and current dependency closure are exercised.
+  - id: B
+    description: >-
+      Transform supplied positive monomial equations y_i=c_i*product_j
+      s_j**A_ij into the exact log-linear system A*x=z, reuse C-LIN-001 for
+      rank/consistency, and expose the affine solution and free directions.
+  - id: C
+    description: >-
+      Derive the left-nullspace compatibility residuals and incremental-row
+      rank ledger, so duplicate or algebraically generated constraints are
+      distinguished from genuinely new scale-free tests.
+  - id: D
+    description: >-
+      Derive a covariance-weighted least-squares ledger for a supplied
+      positive-definite covariance, keeping the normal matrix, estimator,
+      projector, residual, chi-square, degrees of freedom, and singular or
+      shared-error guards explicit without assigning statistical significance.
+  - id: E
+    description: >-
+      Derive exact closed-interval feasibility for one scale coordinate from
+      independently supplied log-scale intervals, separating nonempty
+      intersection, unique point, and inconsistency without a Gaussian model.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and preservation of every dimensional free coefficient and primitive value
+  - exact separation of equation count, structural rank, augmented consistency, identifiable directions, residual tests, and physical-scale interpretation
+  - explicit constraint provenance, shared-input covariance, coefficient origin, and comparator-versus-derivation status
+  - correct behavior under duplicate rows, rescaled rows, derived rows, zero exponents, inconsistent offsets, singular covariance, common-mode uncertainty, and interval separation
+  - parameter economy, dimensionless log arguments, unit-rescaling covariance, and no hidden observed or fitted constant
+  - independent row-reduction, left-nullspace, normal-equation, and interval-intersection rederivations
+claims_proposed:
+  - provisional C-IDN-001 conditional log-monomial scale identifiability and compatibility theorem
+  - provisional C-GLS-001 conditional covariance-weighted constraint residual ledger if it adds a nonduplicate reusable result
+comparators_blinded_until: >-
+  The generated synopsis exposes OD's named absolute observables, its original
+  NOT-YET verdict, and a later claim of rank two over two unknowns with four
+  constraints. No exposed rank, row count, physical observable, fitted value,
+  historical verdict, or later annotation may select the unknown set,
+  coefficient matrix, independence criterion, covariance, tolerance, or
+  candidate. These objects and criteria are frozen before opening OD's body.
+status: accepted
