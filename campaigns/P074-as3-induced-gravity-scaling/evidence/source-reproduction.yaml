@@ -1,0 +1,15 @@
+source_unit: AS3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS3_sakharov_kappa_reduce.py
+sha256: f88cc85a3fb64d1b8aabdf53ced29168d78fce9470e586dc19564288a120903b
+size_bytes: 13023
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS3_sakharov_kappa_reduce.py
+exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+textual_check_tokens: 9
+literal_checks_executed: 8
+numpy_quadrature: absent
+note: >-
+  The function definition contributes one textual check token; eight calls
+  execute. Clean reproduction establishes source behavior only, not the
+  induced-gravity headline or its imported physical premises.

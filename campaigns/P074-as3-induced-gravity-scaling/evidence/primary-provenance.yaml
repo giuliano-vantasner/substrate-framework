@@ -1,0 +1,31 @@
+campaign: P074
+claim: C-GRV-001
+recorded_at: '2026-08-03T10:35:00Z'
+artifacts:
+  canonical_module:
+    path: src/substrate_framework/induced_gravity.py
+    sha256: ad3376cb53e2b2147b1f0630ad93b8220a2b190ca73c44ebfba91943e563b3d5
+    size_bytes: 8776
+  focused_tests:
+    path: tests/test_induced_gravity.py
+    sha256: 4d82be8631f0a3941980bc27df2004831f75e41feec7124252b654221086882d
+    size_bytes: 9924
+  primary_verifier:
+    path: campaigns/P074-as3-induced-gravity-scaling/verify.py
+    sha256: 9e36e312b450f89e8d050863dd56254199a3a0b269790d2d28eb1fbbdb7cb867
+    size_bytes: 10678
+  independent_verifier:
+    path: campaigns/P074-as3-induced-gravity-scaling/reviews/independent_induced_gravity_review.py
+    sha256: ad337bdc6edf3bf3229c13b4b7742c2d25fcdcc15471adb8dea1cc4eb6052cb3
+    size_bytes: 4962
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_induced_gravity.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P074-as3-induced-gravity-scaling/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P074-as3-induced-gravity-scaling/reviews/independent_induced_gravity_review.py
+tallies:
+  focused_tests: 31 passed
+  primary: ALL 40 CHECKS PASS [P074]
+  independent: ALL 26 CHECKS PASS [P074-INDEPENDENT]
+numpy_quadrature_note: >-
+  The exact canonical and verifier routes contain neither NumPy trapezoidal
+  alias. No numerical integration is used.

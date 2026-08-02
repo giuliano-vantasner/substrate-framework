@@ -1,0 +1,41 @@
+source_unit: AS3
+campaign: P074
+checks:
+  AS3.0:
+    source_verdict: pass
+    audit: Symbolic a and s_G prevent a literal fitted number but do not prove either is derived or identifiable.
+  AS3.1:
+    source_verdict: pass
+    audit: The exponent solve is exact and unique only for the declared complete primitive set; its dimensionless coefficient remains free.
+  AS3.1b:
+    source_verdict: pass
+    audit: This is exact substitution after both the cutoff-energy map and cutoff-squared induced form are assumed.
+  AS3.2:
+    source_verdict: pass
+    audit: The derivative is nonzero, but kappa=8*pi*G is imported from pending evidence and c0^3/(s_G*hbar) is not dimensionless in M,L,T units.
+  AS3.3:
+    source_verdict: pass
+    audit: Substitution of kappa=8*pi*G and eps0*mu0=1/c0^2 makes the displayed G5 relation tautological; neither premise is independently tested.
+  AS3.4:
+    source_verdict: pass
+    audit: The inverse solve is algebraically correct at supplied s_G, but the row 2*log(a)-log(s_G)=constant has null vector (1,2), so a is not identified when s_G remains free.
+  AS3.G1:
+    source_verdict: pass
+    audit: A derivative comparison distinguishes two expressions but never evaluates over-determination, rank, observations, or independent constraints.
+  AS3.G2:
+    source_verdict: pass
+    audit: Wrong a powers fail within the declared (a,hbar,c0) basis, but this does not derive the cutoff ontology or exclude added scales and counterterms.
+uncovered_load_bearing_inputs:
+  - quantum field action and species spectrum
+  - curvature couplings, statistics, regulator, subtraction, and finite terms
+  - induced coefficient and sign
+  - vanishing tree-level or bare inverse Newton coupling
+  - identification of cutoff energy with hbar*c0/a
+  - 3+1 Einstein-Hilbert convention and relation to the accepted 1+1 optical equation
+  - dimensional conversion and provenance for kappa=8*pi*G
+  - independent observation rows and covariance for the over-determination claim
+  - physical lattice, medium, Skyrmion, and absolute-scale maps
+headline_verdict: >-
+  Qualified. Exact dimensional and substitution algebra survives conditionally;
+  AS3 does not derive Sakharov induction, pin kappa or a, close the physical
+  gravity chain, or establish over-determination.

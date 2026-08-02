@@ -1,0 +1,55 @@
+id: P074
+base_release: v0.67.0
+base_commit: dcaa01f
+scientific_base_commit: 3758a02
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS3]
+question: >-
+  Derive the exact dimension, cutoff, counterterm, coupling-convention, and
+  log-identifiability ledger for a declared four-dimensional induced Newton
+  term, then audit whether AS3 derives its coefficient and physical coupling
+  or only parameterizes G as a squared cutoff length times free dimensionless
+  and bare inputs.
+invariants:
+  - C-DIM-001 and dimensional_analysis make exponent solutions local to declared base-dimension rows and primitive columns; dimensionless coefficients remain unconstrained.
+  - C-OG-003 supplies only a conditional 1+1 optical source equation and explicitly does not normalize its kappa to a Newton constant.
+  - C-IDN-001 distinguishes a supplied monomial row from identification of each coordinate and requires provenance for every row.
+  - G1, G2, G5, OD, S5, AS4, and every later physical narrative remain pending or qualified evidence and cannot supply accepted gravity dynamics, a physical source dictionary, an observed constant, or absolute-scale closure.
+  - In declared M,L,T dimensions, [G]=L^3*M^-1*T^-2, [hbar]=M*L^2*T^-1, [c]=L*T^-1, and [a]=L; dimensions can force G=q*a^2*c^3/hbar but cannot fix dimensionless q.
+  - A declared cutoff energy E_cut=hbar*c/a is a premise. A generic induced inverse coupling may coexist with an independent bare or renormalized counterterm, and dimensional analysis cannot set either coefficient or sign.
+  - A relation kappa=alpha*G requires a separately supplied convention factor alpha with the dimensions needed by the source equation; the numeral 8*pi is not a cross-dimensional identification theorem.
+allowed_imports:
+  - C-DIM-001 and substrate_framework.dimensional_analysis for exact exponent and kernel algebra only
+  - C-OG-003 and substrate_framework.optical_geometry for the accepted conditional 1+1 source-side identity and its explicit normalization ceiling
+  - C-LIN-001, C-IDN-001, and substrate_framework.scale_constraints for exact log-rank, nullspace, and coordinate-identifiability diagnostics
+  - positive declared cutoff length a, speed c, action scale hbar, dimensionless induced coefficient s, and any independently supplied bare inverse Newton coupling or source-normalization factor
+  - AS3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after this contract is frozen
+candidates:
+  - id: A
+    description: Reproduce AS3 literally and retain only predicates whose dimensions, conventions, dependencies, and parameter inventory survive audit.
+  - id: B
+    description: Derive the unique M,L,T monomial power of a, c, and hbar for G while retaining an arbitrary dimensionless multiplier.
+  - id: C
+    description: Represent a declared induced inverse-G contribution as s*hbar/(a^2*c^3), with s retaining field-content, regulator, sign, and normalization provenance.
+  - id: D
+    description: Add an independent bare inverse coupling and test whether it destroys pure a-squared scaling or permits cancellation and arbitrary renormalized values.
+  - id: E
+    description: Diagnose the log row relating G, a, and s, including the a/s null direction and the distinction between coordinate reduction and absolute identification.
+  - id: F
+    description: Audit the map from an optical source coupling to Newton G using an explicit convention factor and dimensional compatibility test.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without pending G1/G2/G5/OD/S5 or physical Sakharov lore as an undeclared premise
+  - exact M,L,T dimensions, primitive ordering, exponent signs, and inverse-coupling orientation
+  - explicit dimensionless coefficient, field-content, regulator, counterterm, source-normalization, and reference-scale inventory
+  - correct zero-induced, removed-cutoff, ultraviolet, bare-dominated, cancellation, common-rescaling, and supplied-observation inverse limits
+  - mutation sensitivity to cutoff power, omitted hbar or c factors, fixed s hidden as derived, dropped bare term, and dimensionally incompatible kappa-to-G identification
+  - parameter economy and an identifiability ceiling that distinguishes scaling from prediction of G, a, s, or kappa
+claims_proposed:
+  - provisional C-GRV-001 conditional induced-Newton dimensional, counterterm, and identifiability ledger if its nonduplicate positive object survives
+comparator_blinding: >-
+  No empirical Newton value, lattice length, field-count estimate, or later AS4
+  operating point may be inspected or used before the exact equations,
+  conventions, candidate comparison, tests, and selection verdict are frozen.
+  The generated queue synopsis is navigation metadata, not a comparator.
+status: accepted

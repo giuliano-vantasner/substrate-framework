@@ -1,0 +1,28 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_and_qualified
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS3_sakharov_kappa_reduce.py
+  sha256: f88cc85a3fb64d1b8aabdf53ced29168d78fce9470e586dc19564288a120903b
+  size_bytes: 13023
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS3_sakharov_kappa_reduce.py
+process_exit_status: 0
+terminal_tally: ALL 8 CHECKS PASS
+surviving_evidence:
+  - The declared M,L,T primitive set (a,hbar,c0) has the unique monomial powers (-2,1,-3) for inverse G.
+  - Substituting E_cut=hbar*c0/a into the separately declared cutoff-squared form gives hbar/(a^2*c0^3).
+  - The displayed inverse map a=sqrt(s_G*hbar*G/c0^3) is algebraically correct when G and s_G are separately supplied.
+failed_headline_mechanisms:
+  - Dimensional uniqueness fixes powers only; it does not derive the induced-gravity form, field coefficient, sign, cutoff ontology, zero tree term, or regulator.
+  - The free positive s_G can absorb any change in a at fixed G, so AS3.4 does not identify or pin a.
+  - The map kappa=8*pi*G is imported from pending G5/note-13 and is not supplied by accepted C-OG-003.
+  - The G5 cross-check is an identity after substituting both imported premises, not independent evidence.
+  - The free-kappa guard compares derivatives but never constructs or ranks the advertised over-determination system.
+  - The positive-solution filter contains `or True`, so it does not test branch positivity even though positive symbol assumptions happen to return the positive branch.
+  - Calling c0^3/(s_G*hbar) dimensionless is false in M,L,T units; G is not literally a^2 times a dimensionless number before choosing natural-unit references.
+diagnosed_layer: candidate_concept_and_oracle_scope
+next_route: >-
+  Continue with Candidates B-F: derive the exact dimensional monomial with a
+  free coefficient, add the bare/finite inverse-coupling family, expose the
+  a-versus-s null direction, and require an explicit dimensioned source
+  normalization before any kappa-to-G map.

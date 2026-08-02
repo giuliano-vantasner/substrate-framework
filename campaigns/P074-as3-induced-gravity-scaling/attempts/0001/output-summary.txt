@@ -1,0 +1,12 @@
+AS3 source reproduction
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS3_sakharov_kappa_reduce.py
+exit: 0
+tally: ALL 8 CHECKS PASS
+
+The source reports the unique inverse-G powers (-2,1,-3), equality of its
+declared cutoff and length forms, kappa=8*pi*G scaling, a G5 substitution
+identity, an inverse solve for a, and two derivative/unit guards. The output
+also admits that s_G and a remain symbolic and that the induced-gravity form
+and cutoff identification are imported. The successful tally does not test a
+bare inverse coupling, field spectrum, regulator, sign, source-coupling
+dimensions, or joint identifiability of a and s_G.

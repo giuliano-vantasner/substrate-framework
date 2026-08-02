@@ -241,6 +241,47 @@ units:
     note: >-
       P016 retains all dimensionless and physical premises and corrects AS2's
       implemented mass-density expression by restoring the declared factor one-half.
+  AS3:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-001
+      - C-OG-003
+      - C-IDN-001
+      - C-GRV-001
+    qualification: >-
+      AS3's exact M,L,T exponent solve and substitution of the declared cutoff
+      energy into a separately assumed cutoff-squared inverse-G form survive.
+      Dimensions fix only powers, not the induced form, field spectrum,
+      curvature couplings, regulator, sign, coefficient, cutoff ontology, or
+      zero tree term. The cited one-loop formula contains an additive bare
+      inverse coupling, spectrum-dependent coefficient, mass-log terms, and
+      finite terms. AS3 leaves s_G free, so its pure relation has log row
+      (2,-1) and null direction spanning (1,2); solving
+      a=sqrt(s_G*hbar*G/c0^3) at supplied s_G is inverse inference and does not
+      pin a. Its statement that G is a^2 times a dimensionless number is false
+      in its own M,L,T units, its free-kappa guard tests only derivatives, its
+      positive branch filter contains `or True`, and its G5 cross-check is
+      tautological after imported substitutions. The map kappa=8*pi*G comes
+      from pending evidence, while C-OG-003 explicitly leaves source
+      normalization open. No physical induced gravity, 3+1 dynamics, lattice
+      cutoff, medium map, over-determination, observed constant, or absolute
+      scale is established.
+    evidence:
+      - campaigns/P074-as3-induced-gravity-scaling/reviews/source_adjudication.md
+      - campaigns/P074-as3-induced-gravity-scaling/evidence/source-reproduction.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/evidence/source-audit.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/evidence/literature-audit.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/evidence/candidate-comparison.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/evidence/primary-provenance.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/attempts/0001/result.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/attempts/0002/result.yaml
+      - campaigns/P074-as3-induced-gravity-scaling/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-GRV-001-review.md
+    note: >-
+      P074 derives exact Newton-dimension, induced-plus-baseline inverse
+      coupling, coefficient-cutoff identifiability, and source-normalization
+      ledgers through canonical and independent symbolic routes. It uses no
+      numerical integration or version-specific NumPy alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

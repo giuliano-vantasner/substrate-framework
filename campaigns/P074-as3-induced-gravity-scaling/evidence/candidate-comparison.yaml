@@ -1,0 +1,51 @@
+campaign: P074
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure
+  - exact dimensions and inverse-coupling orientation
+  - explicit coefficient, regulator, field-content, counterterm, and convention inventory
+  - limiting cases and mutation sensitivity
+  - parameter economy and identifiability ceiling
+candidates:
+  A:
+    decision: retained_only_as_narrow_source_regression
+    reason: >-
+      The source reproduces exact exponent and substitution algebra, but its
+      physical conclusion imports the induced form, cutoff ontology, G5
+      normalization, and later over-determination narrative.
+  B:
+    decision: selected
+    reason: >-
+      Exact M,L,T solving uniquely gives G powers (2,3,-1) and inverse-G
+      powers (-2,-3,1) within the declared primitive basis while preserving a
+      free dimensionless coefficient.
+  C:
+    decision: selected_conditionally
+    reason: >-
+      The cutoff-squared shift is useful as a declared algebraic contribution,
+      but its coefficient, sign, field spectrum, regulator, and cutoff map
+      remain explicit premises rather than consequences of dimensions.
+  D:
+    decision: selected
+    reason: >-
+      An additive baseline inverse coupling is required by the cited one-loop
+      derivation and supplies decisive arbitrary-total and cancellation
+      counterfamilies to pure a-squared scaling.
+  E:
+    decision: selected
+    reason: >-
+      The exact row (2,-1) has a one-dimensional nullspace spanning (1,2), so
+      a free coefficient prevents identification of the cutoff length.
+  F:
+    decision: selected
+    reason: >-
+      Source-coupling dimensions show when c^-2, c^-4, or another dimensioned
+      factor is necessary; an unsupported numeric 8*pi cannot establish the
+      map from C-OG-003's kappa to 3+1 Newton G.
+comparators_opened: false
+selected_claim: C-GRV-001
+physical_ceiling:
+  - no quantum field action, spectrum, regulator, heat-kernel coefficient, or sign is derived
+  - no zero bare or renormalized inverse coupling is derived
+  - no physical cutoff-to-granularity, optical-to-Einstein, or source-density map is derived
+  - no observed Newton constant, cutoff length, field count, kappa, or absolute scale is predicted

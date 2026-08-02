@@ -1,0 +1,24 @@
+campaign: P074
+purpose: Audit AS3's explicit Sakharov and Visser induced-gravity citation without importing it as framework authority.
+sources:
+  - title: Vacuum quantum fluctuations in curved space and the theory of gravitation
+    author: A. D. Sakharov
+    publication: Dokl. Akad. Nauk SSSR 177 (1967) 70-71
+    url: https://www.mathnet.ru/eng/dan33444
+    use: historical primary provenance only
+  - title: "Sakharov's induced gravity: a modern perspective"
+    author: Matt Visser
+    identifier: arXiv:gr-qc/0204062v1
+    url: https://arxiv.org/abs/gr-qc/0204062v1
+    source_archive_sha256: 34cdc05c96d92525b321c7a124b8a42c63afaef03c63751294b5f3414ed472d3
+    source_archive_size_bytes: 19875
+    audited_equations:
+      - The regulated unrenormalized one-loop inverse Newton coupling contains a zero-loop 1/G0, a cutoff-squared supertrace coefficient, mass-log terms, and finite terms.
+      - One-loop dominance separately assumes zero tree-level constants, order-one dimensionless data, an explicit cutoff, and neglect of the cosmological and curvature-squared sectors.
+      - The leading coefficient is a statistics- and curvature-coupling-dependent supertrace rather than an automatically positive bare field count.
+      - Different induced-gravity routes impose different finiteness, dominance, or renormalization assumptions; cutoff scaling alone does not select one.
+framework_decision: >-
+  The literature supports Candidate D's counterterm and coefficient audit. It
+  does not approve AS3's medium cutoff, field spectrum, positive s_G, zero bare
+  term, or optical-kappa normalization, so the external papers remain audited
+  proposal evidence rather than accepted dependencies.

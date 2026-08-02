@@ -1,0 +1,52 @@
+campaign: P074
+title: Exact induced Newton dimension, counterterm, identifiability, and source-normalization ledgers
+source_baseline: substrate@6d1f4e0
+source_units: [AS3]
+base_release: v0.67.0
+release_after_adjudication: v0.68.0
+adjudicated_at: '2026-08-03T10:40:00Z'
+selected_candidates:
+  - id: B
+    reason: The exact dimension solve fixes powers while retaining the multiplier.
+  - id: C
+    reason: The declared leading shift preserves coefficient, sign, cutoff, and QFT premises.
+  - id: D
+    reason: The baseline family exposes the zero-tree-term assumption and cancellation ceiling.
+  - id: E
+    reason: The exact log row proves the a-versus-s null direction.
+  - id: F
+    reason: The source-dimension ledger blocks unsupported cross-dimensional coupling maps.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_narrow_source_regression
+claims:
+  - id: C-GRV-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  verifier_repair: attempts/0002/result.yaml
+  exact_route: attempts/0003/result.yaml
+  independent_review: reviews/independent_induced_gravity_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  literature_audit: evidence/literature-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-GRV-001-review.md
+source_disposition:
+  AS3: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P074-as3-induced-gravity-scaling/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P074-as3-induced-gravity-scaling/reviews/independent_induced_gravity_review.py
+  - .venv/bin/python -m pytest -q tests/test_induced_gravity.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

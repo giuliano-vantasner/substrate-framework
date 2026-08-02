@@ -1,0 +1,15 @@
+attempt: 0002
+candidates: [B, C, D, E, F]
+status: failed_preserved
+command: .venv/bin/python -m pytest -q tests/test_induced_gravity.py
+process_exit_status: 1
+tally: 2 failed, 28 passed
+failures:
+  - test_cutoff_length_inverse_round_trips_only_after_supplying_coefficient expected s to survive after substituting G=a^2*c^3/(s*hbar), although the exact round trip must cancel s.
+  - test_as3_log_row_leaves_a_coefficient_null_direction required the particular generator (1,2), while SymPy returned the equivalent basis vector (1/2,1).
+diagnosed_layer: verifier_representation
+repair: >-
+  Test load-bearing s dependence on the inverse with an independent supplied G,
+  then test the round trip separately. Test the nullspace equation and span up
+  to nonzero scalar normalization rather than one basis representative.
+next_route: Rerun the repaired focused tests without changing the scientific equations.
