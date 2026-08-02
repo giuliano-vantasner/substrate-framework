@@ -1,0 +1,28 @@
+campaign: P073
+clean_blinding: false
+blinding_repair: >-
+  Attempt 0001 preserves the early source exposure. Selection uses only the
+  frozen exact structural criteria and accepted dependencies; exposed values
+  and later-source conclusions are unused.
+selected:
+  - id: B
+    reason: The canonical dimension kernel derives one ratio without selecting its reciprocal orientation or value.
+  - id: C
+    reason: The common inverse-energy conversion gives the exact oriented reciprocal energy/length relation.
+  - id: D
+    reason: The one-row log system exposes the relative coordinate and surviving common-scale null direction.
+  - id: E
+    reason: Unequal conversion prefactors prove that a common physical conversion is a load-bearing premise.
+  - id: F
+    reason: The inverse-orientation probe detects AS1's swapped UV/IR physical labels.
+not_selected_as_stated:
+  - id: A
+    retained: rank count, formal one-loop ratio, and conditional inverse-energy algebra
+    rejected: reciprocal naming, physical label assignment, reduced parameter set, ratio prediction, and debt closure
+criteria_results:
+  accepted_dependency_closure: pass
+  exact_dimension_and_orientation_bookkeeping: pass
+  free_symbol_and_rank_accounting: pass
+  limiting_cases: pass
+  mutation_sensitivity: pass
+  comparator_use: none

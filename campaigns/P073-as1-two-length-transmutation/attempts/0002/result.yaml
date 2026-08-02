@@ -1,0 +1,20 @@
+attempt: 0002
+candidate: A
+status: source_reproduced_but_headline_not_verified
+source_sha256: baca25e9b2b999088c1dc2969f9979cd341c582b3bdcfd009432db0eae9ea6cf
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS1_two_length_transmutation.py
+process_exit_status: 0
+runtime_seconds: 0.7
+terminal_tally: ALL 10 CHECKS PASS
+retained:
+  - the exact rank-two and one-kernel-dimension count for two length columns and one speed column
+  - the conditional formal energy ratio Lambda/mu0=exp(-8*pi^2/(b0*beta^2))
+  - the inverse relation between a common inverse-energy length ratio and the energy ratio
+  - a fixed positive length ratio removes one relative log coordinate while leaving common rescaling
+rejected_or_unverified:
+  - the claim that a/xi and xi/a are the same Buckingham representative rather than reciprocals
+  - the opening identification of a as UV lattice length and xi as IR soliton length after the code assigns xi to mu0 and a to Lambda
+  - the parameter-set claim {a,beta^2}, because the displayed expression also retains b0 unless matter content is separately fixed
+  - the claim that dependence on a free beta^2 makes the ratio predicted or closes a physical second-scale debt
+  - the beta^2 inverse outside the required R>1 domain or as a prediction rather than inference from a supplied ratio
+  - QCD, confinement, lattice, soliton, hadron, AS4, S5, or absolute-scale closure

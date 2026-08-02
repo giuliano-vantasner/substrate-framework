@@ -189,6 +189,43 @@ units:
     note: >-
       P015 reproduces the exact token sets and hashes, preserves them as impact
       evidence, and rejects HE5's inference from lexical absence to semantic absence.
+  AS1:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-001
+      - C-RGE-001
+      - C-RGE-002
+      - C-IDN-001
+      - C-RGE-003
+    qualification: >-
+      AS1's two-length dimension rank, conditional one-loop exponential, and
+      inverse-energy length algebra survive only after conventions and free
+      inputs are restored. Its opening calls a the UV lattice length and xi the
+      IR soliton length, but its executable assigns xi=K/mu0 and a=K/Lambda
+      with Lambda<mu0, so a is the longer IR length. It then calls a/xi exactly
+      the earlier xi/a group while checking only dimensional cancellation.
+      The named reduced parameter set omits b0; beta squared, mu0, and the
+      conversion factors remain supplied; solving beta squared from a supplied
+      ratio requires a domain restriction and is inverse inference rather than
+      prediction. One ratio fixes only a relative log coordinate and leaves a
+      common scale free. No lattice, soliton, QCD, confinement, physical
+      operating point, absolute length, or later-source closure is established.
+    evidence:
+      - campaigns/P073-as1-two-length-transmutation/reviews/source_adjudication.md
+      - campaigns/P073-as1-two-length-transmutation/evidence/source-reproduction.yaml
+      - campaigns/P073-as1-two-length-transmutation/evidence/source-audit.yaml
+      - campaigns/P073-as1-two-length-transmutation/evidence/candidate-comparison.yaml
+      - campaigns/P073-as1-two-length-transmutation/evidence/primary-provenance.yaml
+      - campaigns/P073-as1-two-length-transmutation/attempts/0001/result.yaml
+      - campaigns/P073-as1-two-length-transmutation/attempts/0002/result.yaml
+      - campaigns/P073-as1-two-length-transmutation/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-RGE-003-review.md
+    note: >-
+      P073 derives the exact dimension-kernel, oriented energy/length-ratio,
+      unequal-conversion, inverse-domain, and common-scale-null ledgers through
+      canonical and independent symbolic routes. It requires no numerical
+      quadrature and uses no deprecated or version-specific NumPy integration
+      alias.
   AS2:
     disposition: qualified
     accepted_claims:

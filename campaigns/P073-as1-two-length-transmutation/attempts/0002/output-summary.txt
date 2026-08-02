@@ -1,0 +1,8 @@
+Process exit status: 0
+Runtime: below 1 second
+Terminal tally: ALL 10 CHECKS PASS
+
+AS1 prints one Buckingham group, a formal one-loop exponential ratio, one
+dependent-length substitution, two guards, and a symbolic inverse for beta^2.
+The process output itself alternates between xi/a and a/xi for the same positive
+exponential and labels the latter a prediction while leaving beta^2 free.

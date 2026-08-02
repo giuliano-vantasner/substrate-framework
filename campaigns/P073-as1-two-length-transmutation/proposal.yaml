@@ -1,0 +1,77 @@
+id: P073
+base_release: v0.66.0
+base_commit: 0296993
+scientific_base_commit: 4b141fe
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS1]
+question: >-
+  Derive the exact dimension-rank, one-loop energy-to-length ratio, and
+  log-coordinate identifiability ledger for two positive lengths; then audit
+  whether AS1 consistently assigns UV and IR quantities and actually removes
+  an independent scale rather than conditionally fixing one ratio with free
+  coupling and reference inputs.
+invariants:
+  - C-DIM-001 and C-DIM-002 make every Buckingham conclusion local to the declared primitive columns; rank does not select a primitive set, coefficient, or physical meaning.
+  - C-RGE-001 supplies only a conditional one-loop inverse-coupling zero Lambda=mu0*exp(-8*pi^2/(b0*g0^2)); its beta function, b0, reference data, perturbative domain, and physical interpretation remain premises.
+  - C-RGE-002 supplies the conditional SU(3) one-loop coefficient after declared loop weights and matter content; it proves neither physical QCD identity nor confinement.
+  - C-DIM-005 already records that the exponential coordinate retains b0, beta^2, and any mass-energy prefactor as free load-bearing inputs.
+  - C-IDN-001 distinguishes identification of a relative log coordinate from identification of either absolute scale; one relation in log(a),log(xi) leaves the common rescaling null direction.
+  - If E_IR<E_UV and one common positive Compton conversion ell=K/E is declared, then ell_IR>ell_UV and ell_IR/ell_UV=E_UV/E_IR. Names such as lattice, soliton, UV, and IR must follow this orientation consistently.
+  - Algebraically replacing xi/a by a function of a free coupling is a conditional coordinate reduction, not a prediction of the coupling, either length, a physical operating point, or an absolute scale.
+  - Later AS4, AS6, AS7, G1, G2, G5, OD, and S5 source narratives are not accepted dependencies and cannot close AS1.
+allowed_imports:
+  - C-DIM-001, C-DIM-002, and substrate_framework.dimensional_analysis for exact dimension-matrix rank and nullspace only
+  - C-RGE-001 and substrate_framework.renormalization for the conditional one-loop flow and formal transmutation scale
+  - C-RGE-002 for a separately declared one-loop SU(3) coefficient specialization only
+  - C-DIM-003 and C-DIM-005 for free dimensionless-coordinate and exponential-prefactor ceilings
+  - C-LIN-001, C-IDN-001, and substrate_framework.scale_constraints for exact log-system rank, nullspace, compatibility, and coordinate-identifiability ledgers
+  - a separately declared common positive energy-length conversion constant, positive lengths, positive reference energy, positive coupling, positive beta coefficient, exact orientation labels, and any distinct conversion prefactors
+  - AS1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as noncanonical evidence, with the pre-contract exposure incident recorded
+candidates:
+  - id: A
+    description: >-
+      Reproduce AS1 literally and retain only rank, ratio, and free-symbol
+      statements whose dimensions, UV/IR orientation, inputs, and dependency
+      closure are internally consistent.
+  - id: B
+    description: >-
+      Derive the exact Buckingham kernel for two positive lengths and one
+      speed, proving that the sole monomial group is their ratio while neither
+      orientation nor physical labels are selected by rank.
+  - id: C
+    description: >-
+      Compose C-RGE-001 with one common inverse-energy length conversion to
+      derive both energy and length ratios with explicit UV/IR orientation.
+  - id: D
+    description: >-
+      Express a fixed log length ratio as one exact row on log(a),log(xi),
+      exposing the common-rescaling null direction and the distinction between
+      ratio identification and absolute-scale identification.
+  - id: E
+    description: >-
+      Admit unequal conversion prefactors or one additional independent scale
+      to test whether the claimed reduction depends on hidden common-Compton
+      and sole-scale premises.
+  - id: F
+    description: >-
+      Reverse the proposed UV/IR length assignment and test both orientations
+      against positivity, Lambda/mu0<1, weak-coupling, and equal-scale limits.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without later phase-21/22 conclusions, physical QCD, confinement, Planck, lattice, soliton, or hadron premises
+  - exact dimension rows, column ordering, kernel orientation, beta-function sign, and energy-to-length conversion
+  - explicit free-symbol and parameter-rank accounting before and after adding the ratio relation
+  - correct weak-coupling, strong-coupling formal, b0-sign, equal-scale, common-rescaling, and extra-scale limits
+  - mutation sensitivity to ratio inversion, swapped UV/IR labels, fixed coupling hidden as derived, omitted conversion prefactor, and treating rank or substitution as absolute prediction
+  - parameter economy and an identifiability ceiling that leaves the common length, coupling, coefficient, reference scale, and every physical label unproved
+claims_proposed:
+  - provisional C-RGE-003 conditional one-loop length-ratio and common-scale-null ledger if its nonduplicate specialization survives
+comparator_blinding: >-
+  Compromised before contract instantiation: the queue synopsis and source
+  lines 1-180 exposed the symbolic exponential, the prose values 2.6e5,
+  3.62 Angstrom, 1.46 fm, beta^2=4*pi and approximately 0.245, and conflicting
+  UV/IR labels. No exposed value or later-source conclusion may select a
+  candidate, convention, orientation, parameter, threshold, or verdict.
+  Selection is restricted to the structural criteria frozen here and exact
+  accepted dependencies; all comparator use remains prohibited.
+status: accepted

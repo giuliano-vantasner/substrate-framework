@@ -1,0 +1,10 @@
+source_unit: AS1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS1_two_length_transmutation.py
+sha256: baca25e9b2b999088c1dc2969f9979cd341c582b3bdcfd009432db0eae9ea6cf
+size_bytes: 20587
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS1_two_length_transmutation.py
+process_exit_status: 0
+terminal_tally: ALL 10 CHECKS PASS
+runtime_seconds: 0.7
+environment_note: Executed against the hash-pinned predecessor file with exact SymPy algebra.

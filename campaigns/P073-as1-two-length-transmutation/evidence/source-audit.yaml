@@ -1,0 +1,49 @@
+source_unit: AS1
+checks_executed: 10
+check_trace:
+  AS1.0:
+    verdict: free-symbol guard survives narrowly
+    issue: symbolic inputs prevent a numeric fit but do not make the resulting ratio predicted
+  AS1.1:
+    verdict: rank and group count survive after canonical matrix orientation repair
+    issue: the source checks only rank and meter/meter dimensionality, not the claimed unique kernel vector
+  AS1.2a:
+    verdict: conditional n_f=6 substitution duplicates C-RGE-002
+    issue: n_f=6 and the physical gauge-sector reading are supplied; b0 remains symbolic later
+  AS1.2b:
+    verdict: common-Compton algebra survives conditionally
+    issue: the code assigns xi to the UV reference and a to the IR scale, reversing the opening lattice/soliton UV/IR labels
+  AS1.2c:
+    verdict: dimensionless-symbol cancellation survives
+    issue: it calls a/xi exactly the xi/a group while checking only absence of dimensionful symbols; the reciprocal error is invisible
+  AS1.3:
+    verdict: one conditional substitution survives
+    issue: xi_reduced contains a, beta2, and b0, so the stated parameter set omits a load-bearing coefficient
+  AS1.4:
+    verdict: rejected as physical debt closure
+    issue: dependence on free beta2 and b0 plus an undeveloped length identification does not predict the ratio
+  AS1.G1:
+    verdict: derivative distinction survives only as functional dependence
+    issue: nonzero derivative with respect to a free input does not establish that the input or ratio is fixed by the framework
+  AS1.G2:
+    verdict: positive-exponent inequality is exact but source oracle is underspecified
+    issue: the code samples b0=7 and beta2=1 instead of proving the declared all-positive domain, and the equal-scale value is a beta2-to-infinity limit
+  AS1.5:
+    verdict: conditional inverse algebra survives with domain repair
+    issue: positive beta2 requires R>1, and solving beta2 from an observed R is inference or fitting, not a parameter-free prediction
+orientation_audit:
+  accepted_one_loop_order: 0 < Lambda/mu0 < 1
+  common_inverse_energy_conversion: ell_Lambda/ell_mu0 = mu0/Lambda > 1
+  source_code_assignment: xi=ell_mu0 and a=ell_Lambda, hence a/xi>1
+  source_opening_assignment: a is UV lattice length and xi is IR soliton length, hence xi/a should be greater than 1
+  verdict: source swaps the physical labels when introducing the Compton reading
+free_parameter_audit:
+  ratio: exp(8*pi^2/(b0*beta2))
+  free_inputs: [b0, beta2]
+  absolute_null_direction: common positive rescaling of both lengths
+  additional_physical_premises: [common conversion constant, energy-to-length identification, lattice map, soliton map]
+headline_ceiling: >-
+  AS1 supports conditional rank, reciprocal-ratio, and relative-coordinate
+  algebra. It does not predict the ratio or coupling, identify either physical
+  length, remove the common absolute scale, establish QCD or confinement, or
+  close later over-determination and realizability claims.

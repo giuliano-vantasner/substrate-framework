@@ -1,0 +1,51 @@
+campaign: P073
+title: Exact two-length transmutation and identifiability ledgers
+source_baseline: substrate@6d1f4e0
+source_units: [AS1]
+base_release: v0.66.0
+release_after_adjudication: v0.67.0
+adjudicated_at: '2026-08-03T09:30:00Z'
+selected_candidates:
+  - id: B
+    reason: The canonical dimension kernel derives one ratio without selecting orientation or value.
+  - id: C
+    reason: Explicit inverse-energy conversions derive the oriented energy and length ratios.
+  - id: D
+    reason: The exact log row exposes the relative coordinate and common-scale null direction.
+  - id: E
+    reason: Unequal conversion prefactors expose the common-conversion premise.
+  - id: F
+    reason: The inverse-orientation probe detects AS1's swapped UV and IR labels.
+competing_candidates:
+  - id: A
+    decision: retained_only_as_rank_and_conditional_ratio_regression
+claims:
+  - id: C-RGE-003
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  contract_order_failure: attempts/0001/result.yaml
+  source_route: attempts/0002/result.yaml
+  exact_route: attempts/0003/result.yaml
+  independent_review: reviews/independent_scale_transmutation_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-RGE-003-review.md
+source_disposition:
+  AS1: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P073-as1-two-length-transmutation/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P073-as1-two-length-transmutation/reviews/independent_scale_transmutation_review.py
+  - .venv/bin/python -m pytest -q tests/test_scale_transmutation.py tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

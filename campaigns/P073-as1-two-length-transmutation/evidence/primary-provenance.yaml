@@ -1,0 +1,31 @@
+campaign: P073
+claim: C-RGE-003
+recorded_at: '2026-08-03T09:20:00Z'
+artifacts:
+  canonical_module:
+    path: src/substrate_framework/scale_transmutation.py
+    sha256: 1e165f78e19d706a7685c68a6585a549ce9630eff3aa15dbea8c717fbbc171bf
+    size_bytes: 7134
+  focused_tests:
+    path: tests/test_scale_transmutation.py
+    sha256: 64b6ba9bb904a4d3f8ce1e8073c13a9e4e14419e0fec08a61a1a3028de4616a7
+    size_bytes: 6799
+  primary_verifier:
+    path: campaigns/P073-as1-two-length-transmutation/verify.py
+    sha256: 4c0d4c507f7d3c26b25ce662dc1542aa7f7c9a8907006dd4915872d57e34a68a
+    size_bytes: 9694
+  independent_verifier:
+    path: campaigns/P073-as1-two-length-transmutation/reviews/independent_scale_transmutation_review.py
+    sha256: 399d3531a37f264651cee586fed9e26c907d74ef6040bf927d68245fdf32f9d0
+    size_bytes: 5354
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_scale_transmutation.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P073-as1-two-length-transmutation/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P073-as1-two-length-transmutation/reviews/independent_scale_transmutation_review.py
+tallies:
+  focused_tests: 21 passed
+  primary: ALL 40 CHECKS PASS [P073]
+  independent: ALL 23 CHECKS PASS [P073-INDEPENDENT]
+numpy_quadrature_note: >-
+  The exact canonical and verifier routes contain neither NumPy trapezoidal
+  alias. No numerical integration is used.

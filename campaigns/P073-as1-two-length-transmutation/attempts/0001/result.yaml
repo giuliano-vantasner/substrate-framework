@@ -1,0 +1,25 @@
+attempt: 0001
+candidate: workflow_contract_gate
+status: failed_preserved
+diagnosed_layer: workflow_order
+event: >-
+  Before P073's proposal files existed, a command displayed migration queue
+  context and source lines 1-180 of the pinned AS1 bridge while identifying the
+  next sequential unit.
+command: >-
+  sed -n '4400,4495p' migration/source-claims.yaml followed by sed -n '1,180p'
+  on /home/dan/substrate/merged-framework/bridges/phase-21/bridge_AS1_two_length_transmutation.py
+exposed_content:
+  - the Buckingham one-group claim for two lengths and one speed
+  - the formal exponential ratio exp(8*pi^2/(b0*beta^2))
+  - prose values 2.6e5, 3.62 Angstrom, 1.46 fm, beta^2=4*pi, and approximately 0.245
+  - later AS6/AS7 operating-point annotations
+  - conflicting prose assignments of a and xi to UV and IR roles
+impact: >-
+  Clean source-body and comparator blinding cannot be claimed. The source hash
+  and accepted dependency closure remain reproducible, but exposed values and
+  later conclusions are prohibited from candidate selection or thresholds.
+repair: >-
+  Instantiate the complete P073 contract, freeze candidates and structural
+  criteria from accepted claims, preserve this incident append-only, and use
+  exact countermodels and independent rederivation for selection.
