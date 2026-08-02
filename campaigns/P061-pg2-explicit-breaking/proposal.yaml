@@ -1,0 +1,77 @@
+id: P061
+base_release: v0.54.0
+base_commit: e637c81
+source_baseline: substrate@6d1f4e0
+source_units: [PG2]
+question: >-
+  Derive a reusable exact account of a declared periodic explicit-breaking
+  potential, its Taylor coefficients, its curvature relative to a supplied
+  positive kinetic metric, and its convention-sensitive SU(2) trace forms;
+  separately expose the parameter and sign content of a conditional GMOR
+  relation, then audit whether PG2 predicts a physical pion mass or merely
+  reparameterizes supplied coefficients and imports a physical dictionary.
+invariants:
+  - C-SYM-001 and C-CHI-001 are classical conditional coordinate theorems and define no physical pion, chiral vacuum, condensate, quark mass, decay constant, or GMOR relation.
+  - C-SG-001 fixes the normalized dimensionless potential 1-cos(phi) but supplies no map from phi or its unit coefficient to a physical pion coordinate, F_pi, or mass.
+  - A quadratic curvature becomes a generalized quadratic mass only relative to an explicit positive kinetic metric in the same field coordinates.
+  - Writing an amplitude as m squared times a scale squared makes m a parameterization unless independent accepted premises determine the amplitude and scale.
+  - Local quadratic agreement cannot select a global explicit-breaking potential because inequivalent potentials can share one vacuum curvature.
+  - Pending S2 and all physical comparator values supply no accepted premise and cannot select a candidate.
+allowed_imports:
+  - C-SG-001 normalized sine-Gordon potential convention
+  - C-SYM-001 stationary symmetry-Hessian theorem
+  - C-CHI-001 conditional O(4) tilt and SU(2) exponential-coordinate identities
+  - exact real calculus, Taylor series, finite-dimensional linear algebra, and dimensional bookkeeping
+  - explicit Pauli matrices and their accepted trace normalization for declared SU(2) coordinate models
+  - a separately declared positive scalar kinetic coefficient or positive-definite kinetic metric
+  - audited primary literature for the scope and assumptions of GMOR, treated only as an external conditional relation
+  - SymPy exact differentiation, substitution, matrix traces, series, limits, and residuals
+  - PG2 at substrate@6d1f4e0 as noncanonical evidence after the contract gate
+candidates:
+  - id: A
+    description: >-
+      Reproduce PG2 literally and retain only subclaims whose potential,
+      trace convention, coefficient provenance, GMOR inputs, and physical
+      interpretation are exercised by its checks.
+  - id: B
+    description: >-
+      Derive the general periodic model V=A*(1-cos(phi/F)) and its exact
+      vacuum curvature, Taylor coefficients, limits, and generalized mass
+      A/(K*F^2) for a supplied positive scalar kinetic coefficient K.
+  - id: C
+    description: >-
+      Derive competing SU(2) trace representations from explicit Pauli
+      matrices, keeping Tr(U-I), Tr(U+U^dagger-2I), additive constants,
+      signs, and action prefactors separate rather than copying a target.
+  - id: D
+    description: >-
+      Compare periodic breaking with the accepted conditional O(4) linear
+      tilt and a quadratic local model after matching one vacuum curvature,
+      testing whether local mass data can select the global mechanism.
+  - id: E
+    description: >-
+      Treat GMOR as a separately declared algebraic relation and expose its
+      sign domain, scaling, residual, solvable coordinate, and remaining free
+      inputs without importing phenomenological values.
+uniqueness_evidence: null
+selection_criteria:
+  - compatibility with accepted nonphysical and conditional claim ceilings
+  - exact coefficient, sign, trace, kinetic, field-coordinate, and dimension consistency
+  - assumption and parameter economy with every amplitude and scale provenance visible
+  - correct chiral, zero-amplitude, quadratic, periodic, and coordinate-rescaling limits
+  - sensitivity to amplitude, sign, trace-prefactor, kinetic, scale, and GMOR-input mutations
+  - independent matrix-trace and Taylor rederivations without copied target expressions
+claims_proposed:
+  - provisional C-BRK-001 periodic-potential curvature, kinetic normalization, and local-nonuniqueness theorem
+  - provisional C-CHI-002 conditional SU(2) trace and generalized-mass normalization identities
+  - provisional C-GMR-001 conditional GMOR parameter-ledger identities
+selected_candidate: [B, C, D, E]
+comparators_blinded_until: >-
+  The migration inventory necessarily exposes PG2's claimed cosine series,
+  trace equivalence, and GMOR scaling. Those synopsis values cannot select a
+  sign, trace prefactor, kinetic normalization, field dictionary, condensate,
+  decay scale, or physical mechanism. The general potential, competing trace
+  forms, local-nonuniqueness guard, conditional-GMOR ledger, criteria,
+  mutations, and claim ceilings are frozen here before PG2's executable
+  internals or printed values are opened.
+status: accepted

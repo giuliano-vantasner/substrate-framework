@@ -1,0 +1,35 @@
+attempt: 0002
+candidates: [B, C, D, E]
+status: canonical_exact_route_passed_focused_tests
+canonical_module: src/substrate_framework/explicit_breaking.py
+canonical_tests: tests/test_explicit_breaking.py
+initial_failed_runs:
+  - failure: >-
+      The primary verifier passed a composite convention-factor expression
+      2*c, and the first API tried to differentiate with respect to that
+      non-symbol expression when reporting log exponents.
+    diagnosis: implementation_generality
+    action: >-
+      Derive the four monomial log exponents from independent internal slot
+      symbols, then return those exact identities for arbitrary admissible
+      caller expressions. No potential, mass, trace, or expected coefficient changed.
+exact_outputs:
+  - general A*(1-cos(q*phi/F)) value, slope, period, curvature, fourth derivative, sixth-order series, and generalized mass squared
+  - matched-curvature periodic and quadratic potentials with exact periodicity and fourth-derivative discrimination
+  - SU(2) group element, Tr(U-I), Lagrangian breaking term, positive potential, kinetic coefficient, curvature, and coordinate-independent generalized mass
+  - conditional GMOR relation residual, four log exponents, zero-quark-mass limit, and scale-condensate degeneracy
+mutations_and_limits:
+  - changing the potential sign reverses the curvature and generalized mass squared
+  - changing the kinetic coefficient rescales the generalized mass while leaving coordinate curvature unchanged
+  - changing the exponential coordinate multiplier changes kinetic and curvature together while preserving their ratio
+  - replacing the cited trace prefactor by the PG2 matching prefactor exposes an exact factor four
+  - equal quadratic curvature does not make a quadratic potential periodic or match its fourth derivative
+  - scaling decay scale and condensate together exposes the conditional GMOR relation's continuous free-input family
+focused_test_result:
+  process_exit_code: 0
+  terminal_tally: 10 passed
+interpretation_ceiling: >-
+  The API certifies exact calculus and convention-covariant quadratic
+  statements for declared potential, kinetic, trace, and algebraic-relation
+  inputs. It derives no chiral action, QCD condensate, GMOR relation, physical
+  pion field, decay constant, quark mass, numerical mass, or substrate map.

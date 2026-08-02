@@ -1,0 +1,64 @@
+source_unit: PG2
+audit_status: native_tally_reproduced_exact_conditional_algebra_survives_normalization_and_physical_headline_fail
+checks:
+  PG2.1:
+    actual_object: >-
+      Taylor series and coordinate derivatives of a declared potential whose
+      amplitude is already parameterized by the desired symbol m_pi.
+    surviving_scope: >-
+      V=m_pi**2*F_pi**2*(1-cos(pi/F_pi)) has zero value and slope at the
+      origin, coordinate curvature m_pi**2, and the displayed quartic term.
+    defects:
+      - the amplitude and physical names are inputs, not consequences of the normalized C-SG-001 root
+      - no kinetic metric is included in the mass readout
+      - with C-CHI-001's F_pi**2/16 and pi/F_pi convention, K=1/4 and this V has generalized mass squared 4*m_pi**2
+  PG2.2:
+    actual_object: >-
+      Exact trace of a diagonal SU(2) exponential, followed by a different
+      prefactor from the one named in the question, citation, and final output.
+    surviving_scope: >-
+      Tr(U-I)=2*cos(pi/F_pi)-2, so every declared multiple is structurally a
+      cosine plus an additive constant.
+    defects:
+      - the cited 1/8 Lagrangian term is m_pi**2*F_pi**2*(cos-1)/4, not m_pi**2*F_pi**2*(cos-1)
+      - the passing check uses V=-(m_pi**2*F_pi**2/2)*Tr(U-I), four times the cited potential coefficient
+      - proportional functional shape does not establish equality of normalized actions or a substrate/chiral-field identity
+      - sign must distinguish a Lagrangian term from the positive potential rather than calling both signs positive mass terms
+  PG2.3:
+    actual_object: >-
+      Algebraic solution and log derivative of a separately imported relation
+      with condensate and decay scale held fixed.
+    surviving_scope: >-
+      For a declared M**2*F**2=-c*m_q*Sigma relation, M**2 is linear in m_q
+      at fixed c, Sigma, and F and its algebraic expression vanishes at m_q=0.
+    defects:
+      - the source derives neither the GMOR relation nor the chiral current, condensate, or decay constant entering it
+      - all magnitudes and the condensate convention remain free and load-bearing
+      - the native check substitutes one numerical sign sample instead of proving a complete sign domain
+      - the declared F_pi=2*f_pi conversion does not follow from the source's own displayed pair of GMOR formulas
+  PG2.GUARD:
+    actual_object: discrimination among three copied power or Taylor targets
+    surviving_scope: >-
+      The declared linear relation has log exponent one and differs from
+      square-root and square ansatzes; the declared cosine has coefficient one half.
+    defect: >-
+      The guard never mutates the load-bearing potential amplitude, kinetic
+      metric, trace prefactor, field dictionary, GMOR convention factor,
+      condensate, or decay scale.
+absent_objects:
+  - an accepted chiral action and explicit-breaking source
+  - an accepted physical pion coordinate or decay constant
+  - a derivation connecting C-SG-001's normalized dimensionless field and unit amplitude to the SU(2) field
+  - a matched kinetic metric in the source mass readout
+  - a QFT derivation of GMOR and its condensate convention
+  - independently fixed quark masses, condensate, decay scale, or mass
+  - a physical substrate realization
+dependency_conflicts:
+  - PG1 supplies only C-SYM-001 and C-CHI-001 with nonphysical conditional ceilings.
+  - S2 remains pending and supplies no accepted pion, Skyrme action, or mass-term premise.
+  - C-SG-001 fixes normalized dimensionless sine-Gordon conventions but no physical coefficient or coordinate map.
+source_disposition_recommendation: >-
+  qualified if the general periodic-potential theorem, paired SU(2)
+  kinetic/trace normalization, local-nonuniqueness guard, conditional GMOR
+  ledger, mutations, and independent review pass. Retain the physical-pion,
+  substrate identity, derived-GMOR, and prediction narratives as unaccepted.

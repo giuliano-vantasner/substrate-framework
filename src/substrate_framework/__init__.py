@@ -167,6 +167,16 @@ from .exact_sine_qball import (
     exact_sine_qball_residual,
     exact_sine_qball_scaled_rhs,
 )
+from .explicit_breaking import (
+    ConditionalGMOREvidence,
+    LocalCurvatureNonuniquenessEvidence,
+    PeriodicPotentialEvidence,
+    SU2TraceBreakingEvidence,
+    conditional_gmor_evidence,
+    matched_local_curvature_potentials,
+    periodic_potential_evidence,
+    su2_trace_breaking_evidence,
+)
 from .radial_energy import (
     capillary_critical_radius,
     capillary_energy,

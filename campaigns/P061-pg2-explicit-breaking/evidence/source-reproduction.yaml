@@ -1,0 +1,33 @@
+source_unit: PG2
+source_path: /home/dan/substrate/merged-framework/bridges/phase-18/bridge_PG2_gmor_pion_mass.py
+source_sha256: 0502a53f65d3bd11a3f17d26d55ed7d67a1e0f61d194b38cd41728873c4a06ad
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-18/bridge_PG2_gmor_pion_mass.py
+working_directory: /home/dan/substrate-framework
+environment:
+  python: 3.12.2
+  sympy: 1.14.0
+  numpy: 2.5.1
+native_run:
+  exit_status: 0
+  terminal_tally: ALL 4 CHECKS PASS
+  runtime_data_access: false
+reported_values:
+  declared_potential: m_pi**2*F_pi**2*(1-cos(pi/F_pi))
+  declared_coordinate_curvature: m_pi**2
+  trace_u_minus_identity: 2*cos(pi/F_pi)-2
+  cited_lagrangian_trace_prefactor: m_pi**2*F_pi**2/8
+  actual_cited_lagrangian_term: m_pi**2*F_pi**2*(cos(pi/F_pi)-1)/4
+  passing_check_potential_trace_prefactor: -m_pi**2*F_pi**2/2
+  passing_check_potential: m_pi**2*F_pi**2*(1-cos(pi/F_pi))
+  source_gmor_relation: m_pi**2*F_pi**2=-(m_u+m_d)*qbarq
+  source_gmor_log_exponent_at_fixed_other_inputs: 1
+reproduction_ceiling: >-
+  The tally reproduces exact Taylor, trace, and conditional scaling predicates.
+  It does not derive the chosen cosine amplitude, a kinetic normalization, the
+  imported GMOR equation, any parameter value, or a physical field map. The
+  PG2.2 check passes only after replacing the cited trace coefficient by a
+  factor-four larger potential coefficient, while the final prose conflates
+  both normalizations.

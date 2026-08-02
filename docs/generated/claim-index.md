@@ -12,6 +12,15 @@ On any connected interval with normalized canonical action J>0, differentiable p
 - Compatibility: `native`
 - Dependencies: none
 
+## C-BRK-001
+
+Let x be a real scalar coordinate, let A be real, and let F, q, and K be positive. For the declared periodic potential V(x)=A*(1-cos(q*x/F)) and scalar quadratic kinetic convention L_kin=K*(partial x)^2/2, x=0 is stationary, the period is 2*pi*F/q, the exact origin curvature and fourth derivative are A*q^2/F^2 and -A*q^4/F^4, and the generalized quadratic mass squared is A*q^2/(K*F^2). Its series through sixth order is A*q^2*x^2/(2*F^2)-A*q^4*x^4/(24*F^4) +A*q^6*x^6/(720*F^6). Separately, the periodic potential h*F^2*(1-cos(x/F)) and quadratic potential h*x^2/2 have the same origin Hessian h, but only the first is periodic and their origin fourth derivatives differ by -h/F^2. Thus local quadratic curvature does not select a global explicit-breaking potential. These are exact declared- coordinate identities. They derive no field ontology, symmetry-breaking source, physical mass, coefficient, absolute scale, or substrate map.
+
+- Accepted in: `v0.55.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-CC-001
 
 Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(q)^2*qdot^2/c0^2), with positive n, c0, and E0, the exact coordinate-time acceleration is qddot = (c0^2-3*n^2*qdot^2)*n_q/(2*n^3). Its zero-velocity limit is c0^2*n_q/(2*n^3), matching C-OG-001, and its locally unique same-data IVP is independent of E0. The mixed-scale counterexample with E0 also inside the kinetic square root retains E0 and, for n=1+alpha*q at q=qdot=0, has initial acceleration E0*c0^2*alpha/2.
@@ -29,6 +38,15 @@ In the declared four-real-coordinate model phi=(sigma,pi1,pi2,pi3), use all six 
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-SYM-001
+
+## C-CHI-002
+
+Conditional on C-CHI-001's Pauli convention, let U=exp(i*q*tau3*pi/F) with positive F and q, and declare the Lagrangian terms Z*Tr(partial U*partial U^dagger)+C*Tr(U-I_2), with positive Z and real C. Then Tr(U-I_2)=2*cos(q*pi/F)-2. Taking the potential as -C*Tr(U-I_2), the scalar kinetic coefficient is 4*Z*q^2/F^2, the origin potential curvature is 2*C*q^2/F^2, and the generalized quadratic mass squared is C/(2*Z), independent of q and F. In the separately declared Skyrme coefficient pair Z=F^2/16 and C=m^2*F^2/8, this generalized mass is m^2: q=1 gives kinetic coefficient 1/4 and curvature m^2/4, while q=2 gives coefficient one and curvature m^2. By contrast, pairing the q=1 kinetic coefficient 1/4 with V=m^2*F^2*(1-cos(pi/F)) gives generalized mass squared 4*m^2, and matching that V to -C*Tr(U-I_2) requires C=m^2*F^2/2, four times the declared Skyrme trace coefficient. These are convention-covariant coordinate identities. They establish no chiral action from the framework, physical pion or decay constant, derived coefficient, GMOR relation, numerical mass, or substrate realization.
+
+- Accepted in: `v0.55.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-BRK-001, C-CHI-001
 
 ## C-DIM-001
 
@@ -110,6 +128,15 @@ Conditional on C-U1-001's smooth complex scalar, a positive coupling e, and a de
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-U1-001
+
+## C-GMR-001
+
+Conditional on positive quark-mass sum m_q, positive decay scale F, positive convention factor c, negative condensate Sigma, and the separately declared relation M^2*F^2=-c*m_q*Sigma, exact solution gives M^2=-c*m_q*Sigma/F^2>0. Holding the other inputs fixed, its logarithmic sensitivities with respect to m_q, Sigma, F, and c are respectively 1, 1, -2, and 1, and M^2 tends to zero as m_q tends to zero. If m_q, Sigma, F, and c have mass dimensions 1, 3, 1, and 0, both sides have mass dimension four. For every positive rho, replacing F by rho*F and Sigma by rho^2*Sigma leaves M^2 unchanged, so the relation alone does not determine its inputs or a numerical mass. This exact conditional parameter ledger does not derive GMOR, a chiral current or vacuum, a condensate convention or value, a decay constant, quark masses, a physical pion identity, QCD dynamics, or a substrate realization.
+
+- Accepted in: `v0.55.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
 
 ## C-GW-001
 

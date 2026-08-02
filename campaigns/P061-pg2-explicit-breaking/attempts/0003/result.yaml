@@ -1,0 +1,19 @@
+attempt: 0003
+candidates: [B, C, D, E]
+status: independent_exact_route_passed
+independent_verifier: campaigns/P061-pg2-explicit-breaking/reviews/independent_breaking_review.py
+independence_boundary:
+  - does not import src/substrate_framework/explicit_breaking.py
+  - derives Taylor data from origin derivatives rather than the canonical series helper
+  - derives the SU(2) trace from Pauli eigenvalues rather than the canonical group-element evidence
+  - derives kinetic and curvature prefactors separately before taking their ratio
+  - constructs matched-curvature competitors directly
+  - derives the conditional GMOR residual and degeneracy from the declared equation
+execution:
+  process_exit_code: 0
+  terminal_tally: ALL 30 CHECKS PASS [P061-INDEPENDENT]
+  exact_scope: >-
+    Origin derivatives through sixth order, Pauli eigenvalue trace, independent
+    kinetic and potential normalization, generalized-mass covariance, PG2's
+    factor-four mismatch, local-potential nonuniqueness, conditional GMOR
+    scaling and free-input degeneracy, sign domain, and dimensions.

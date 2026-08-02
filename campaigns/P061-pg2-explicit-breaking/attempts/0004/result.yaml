@@ -1,0 +1,36 @@
+attempt: 0004
+candidates: [B, C, D, E]
+status: promotion_replay_passed
+primary_verifier:
+  process_exit_code: 0
+  terminal_tally: ALL 36 CHECKS PASS [P061]
+independent_verifier:
+  process_exit_code: 0
+  terminal_tally: ALL 30 CHECKS PASS [P061-INDEPENDENT]
+focused_replay:
+  process_exit_code: 0
+  terminal_tally: 31 passed
+  scope:
+    - tests/test_explicit_breaking.py
+    - tests/test_symmetry_breaking.py
+    - tests/test_governance.py
+workflow_replay:
+  command: scripts/validate.sh
+  process_exit_code: 0
+  claims: 78 accepted of 78
+  migration_queue: 218 units, 159 pending, 0 partial
+  pytest_collection: 453 tests
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+diff_hygiene:
+  command: git diff --check
+  process_exit_code: 0
+gitnexus_post_change:
+  risk: LOW
+  changed_indexed_symbols: 0
+  affected_processes: 0
+scientific_verdict: >-
+  Promote C-BRK-001, C-CHI-002, and C-GMR-001 individually in v0.55.0.
+  Qualify PG2: exact declared-potential, trace-shape, and conditional-scaling
+  algebra survives; the factor-four trace normalization, derived-GMOR,
+  physical-pion, prediction, and substrate claims do not.
+remaining_campaign_debt: []

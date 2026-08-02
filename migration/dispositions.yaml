@@ -1150,3 +1150,40 @@ units:
       mutations, and both SU(2) kinetic conventions through canonical and
       independent routes. It uses no numerical quadrature, deprecated
       np.trapz alias, or compatibility shim.
+  PG2:
+    disposition: qualified
+    accepted_claims:
+      - C-BRK-001
+      - C-CHI-002
+      - C-GMR-001
+    qualification: >-
+      PG2's declared cosine Taylor series, exact SU(2) trace shape, and
+      fixed-other-input linear scaling of a separately declared GMOR-form
+      relation survive within strict conditional ceilings. Its physical
+      headline and normalization do not. With the cited F_pi^2/16 kinetic and
+      m_pi^2*F_pi^2/8 trace coefficients, the q=1 coordinate has kinetic
+      metric 1/4 and potential curvature m_pi^2/4, giving generalized mass
+      m_pi^2; the canonically normalized q=2 coordinate gives both coefficients
+      one and m_pi^2. PG2 instead declares the four-times-larger full cosine
+      potential while retaining the quarter kinetic convention, then silently
+      changes the cited trace prefactor from 1/8 to -1/2 inside its passing
+      potential equality. It imports rather than derives GMOR, keeps every
+      magnitude free, and inconsistently converts its displayed relation under
+      F_pi=2*f_pi. It establishes no physical chiral action, pion, decay
+      constant, quark mass, condensate, numerical mass, S2 dependency, or
+      substrate realization.
+    evidence:
+      - campaigns/P061-pg2-explicit-breaking/reviews/source_adjudication.md
+      - campaigns/P061-pg2-explicit-breaking/evidence/source-reproduction.yaml
+      - campaigns/P061-pg2-explicit-breaking/evidence/source-audit.yaml
+      - campaigns/P061-pg2-explicit-breaking/evidence/primary-provenance.yaml
+      - campaigns/P061-pg2-explicit-breaking/attempts/0001/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/attempts/0003/result.yaml
+      - memory/vantasner/decisions/C-BRK-001-review.md
+      - memory/vantasner/decisions/C-CHI-002-review.md
+      - memory/vantasner/decisions/C-GMR-001-review.md
+    note: >-
+      P061 derives the periodic-potential and local-nonuniqueness theorem,
+      paired SU(2) kinetic/trace generalized mass, and conditional GMOR
+      parameter ledger through canonical and independent exact routes. It uses
+      no numerical quadrature or deprecated NumPy alias.

@@ -3063,3 +3063,128 @@ claims:
     accepted_in: v0.54.0
     challenges: []
     supersedes: []
+  - id: C-BRK-001
+    statement: >-
+      Let x be a real scalar coordinate, let A be real, and let F, q, and K
+      be positive. For the declared periodic potential
+      V(x)=A*(1-cos(q*x/F)) and scalar quadratic kinetic convention
+      L_kin=K*(partial x)^2/2, x=0 is stationary, the period is 2*pi*F/q,
+      the exact origin curvature and fourth derivative are A*q^2/F^2 and
+      -A*q^4/F^4, and the generalized quadratic mass squared is
+      A*q^2/(K*F^2). Its series through sixth order is
+      A*q^2*x^2/(2*F^2)-A*q^4*x^4/(24*F^4)
+      +A*q^6*x^6/(720*F^6). Separately, the periodic potential
+      h*F^2*(1-cos(x/F)) and quadratic potential h*x^2/2 have the same
+      origin Hessian h, but only the first is periodic and their origin fourth
+      derivatives differ by -h/F^2. Thus local quadratic curvature does not
+      select a global explicit-breaking potential. These are exact declared-
+      coordinate identities. They derive no field ontology, symmetry-breaking
+      source, physical mass, coefficient, absolute scale, or substrate map.
+    provenance: campaigns/P061-pg2-explicit-breaking/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P061-pg2-explicit-breaking/verify.py
+      - campaigns/P061-pg2-explicit-breaking/attempts/0002/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/attempts/0003/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/reviews/independent_breaking_review.py
+      - campaigns/P061-pg2-explicit-breaking/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-BRK-001-review.md
+      - tests/test_explicit_breaking.py
+    assumptions:
+      - The coordinate is real; F, q, and the scalar kinetic coefficient K are positive; and the displayed potential and kinetic convention are declared model data.
+      - Generalized quadratic mass means the one-coordinate operator K^-1 times the potential Hessian in the same coordinate convention.
+      - The matched-curvature comparison assumes positive F and uses the exact global functions displayed; equality of one Hessian is not action or ontology equivalence.
+      - No accepted physical map identifies A, F, q, K, or x with a chiral field, pion, decay constant, quark source, or substrate observable.
+    comparators: []
+    accepted_in: v0.55.0
+    challenges: []
+    supersedes: []
+  - id: C-CHI-002
+    statement: >-
+      Conditional on C-CHI-001's Pauli convention, let
+      U=exp(i*q*tau3*pi/F) with positive F and q, and declare the Lagrangian
+      terms Z*Tr(partial U*partial U^dagger)+C*Tr(U-I_2), with positive Z
+      and real C. Then Tr(U-I_2)=2*cos(q*pi/F)-2. Taking the potential as
+      -C*Tr(U-I_2), the scalar kinetic coefficient is 4*Z*q^2/F^2, the
+      origin potential curvature is 2*C*q^2/F^2, and the generalized
+      quadratic mass squared is C/(2*Z), independent of q and F. In the
+      separately declared Skyrme coefficient pair Z=F^2/16 and
+      C=m^2*F^2/8, this generalized mass is m^2: q=1 gives kinetic
+      coefficient 1/4 and curvature m^2/4, while q=2 gives coefficient one
+      and curvature m^2. By contrast, pairing the q=1 kinetic coefficient
+      1/4 with V=m^2*F^2*(1-cos(pi/F)) gives generalized mass squared 4*m^2,
+      and matching that V to -C*Tr(U-I_2) requires C=m^2*F^2/2, four times
+      the declared Skyrme trace coefficient. These are convention-covariant
+      coordinate identities. They establish no chiral action from the
+      framework, physical pion or decay constant, derived coefficient,
+      GMOR relation, numerical mass, or substrate realization.
+    provenance: campaigns/P061-pg2-explicit-breaking/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-BRK-001
+      - C-CHI-001
+    evidence:
+      - campaigns/P061-pg2-explicit-breaking/verify.py
+      - campaigns/P061-pg2-explicit-breaking/attempts/0002/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/attempts/0003/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/reviews/independent_breaking_review.py
+      - campaigns/P061-pg2-explicit-breaking/evidence/primary-provenance.yaml
+      - campaigns/P061-pg2-explicit-breaking/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-CHI-002-review.md
+      - tests/test_explicit_breaking.py
+      - tests/test_symmetry_breaking.py
+    assumptions:
+      - Pauli matrices are Hermitian with Tr(tau_a*tau_b)=2*delta_ab; the group coordinate, identity matrix, and signs of Lagrangian versus potential are exactly those displayed.
+      - F, q, and Z are positive; C is a separately declared real trace coefficient; and every comparison keeps kinetic and potential terms in the same scalar coordinate.
+      - The Skyrme coefficient pair is a conditional imported model convention, not a coefficient derived from C-SG-001 or substrate dynamics.
+      - Coordinate-multiplier cancellation concerns the generalized quadratic ratio only and does not identify globally rescaled fields or actions without the displayed conversion.
+    comparators: []
+    accepted_in: v0.55.0
+    challenges: []
+    supersedes: []
+  - id: C-GMR-001
+    statement: >-
+      Conditional on positive quark-mass sum m_q, positive decay scale F,
+      positive convention factor c, negative condensate Sigma, and the
+      separately declared relation M^2*F^2=-c*m_q*Sigma, exact solution gives
+      M^2=-c*m_q*Sigma/F^2>0. Holding the other inputs fixed, its logarithmic
+      sensitivities with respect to m_q, Sigma, F, and c are respectively
+      1, 1, -2, and 1, and M^2 tends to zero as m_q tends to zero. If m_q,
+      Sigma, F, and c have mass dimensions 1, 3, 1, and 0, both sides have
+      mass dimension four. For every positive rho, replacing F by rho*F and
+      Sigma by rho^2*Sigma leaves M^2 unchanged, so the relation alone does
+      not determine its inputs or a numerical mass. This exact conditional
+      parameter ledger does not derive GMOR, a chiral current or vacuum, a
+      condensate convention or value, a decay constant, quark masses, a
+      physical pion identity, QCD dynamics, or a substrate realization.
+    provenance: campaigns/P061-pg2-explicit-breaking/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P061-pg2-explicit-breaking/verify.py
+      - campaigns/P061-pg2-explicit-breaking/attempts/0002/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/attempts/0003/result.yaml
+      - campaigns/P061-pg2-explicit-breaking/reviews/independent_breaking_review.py
+      - campaigns/P061-pg2-explicit-breaking/evidence/primary-provenance.yaml
+      - campaigns/P061-pg2-explicit-breaking/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-GMR-001-review.md
+      - tests/test_explicit_breaking.py
+    assumptions:
+      - The displayed GMOR-form relation is an approved conditional premise for this algebraic claim rather than a framework derivation.
+      - The quark-mass sum, decay scale, and convention factor are positive, the condensate is negative, and the mass-dimension assignments are exactly those stated.
+      - Logarithmic sensitivities vary one nonzero input at a time while holding the others fixed; they do not describe an RG flow or correlated physical family.
+      - The positive-rho rescaling is an identifiability counterexample and supplies no physical transformation law for a condensate or decay constant.
+    comparators: []
+    accepted_in: v0.55.0
+    challenges: []
+    supersedes: []

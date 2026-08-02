@@ -1,0 +1,72 @@
+campaign: P061
+title: Exact periodic explicit breaking, SU2 normalization, and PG2 GMOR audit
+source_baseline: substrate@6d1f4e0
+source_units: [PG2]
+base_release: v0.54.0
+release_after_adjudication: v0.55.0
+adjudicated_at: '2026-08-02T20:00:00Z'
+selected_candidates:
+  - id: B
+    reason: >-
+      Candidate B derives the reusable periodic potential, Taylor data,
+      curvature, period, and generalized mass relative to supplied kinetics.
+  - id: C
+    reason: >-
+      Candidate C keeps SU(2) kinetic and trace prefactors in one coordinate
+      convention and proves coordinate-covariant generalized mass, exposing
+      PG2's factor-four trace switch.
+  - id: D
+    reason: >-
+      Candidate D supplies a decisive matched-curvature counterexample showing
+      that a local mass term cannot select a global periodic mechanism.
+  - id: E
+    reason: >-
+      Candidate E keeps the GMOR convention factor and every free input visible
+      while deriving only the exact conditional scaling and sign consequences.
+competing_candidates:
+  - id: A
+    decision: >-
+      rejected_as_positive_physical_pion_route_because_the_clean_four_check
+      tally_omits_the_kinetic_metric_switches_the_cited_trace_prefactor_by_four
+      imports_GMOR_and_never_constructs_a_physical_field_or_substrate_map
+claims:
+  - id: C-BRK-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-CHI-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+  - id: C-GMR-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  verifier: verify.py
+  exact_primary: attempts/0002/result.yaml
+  promotion_verifier_result: attempts/0004/result.yaml
+  independent_review: reviews/independent_breaking_review.py
+  independent_result: attempts/0003/result.yaml
+  rejected_source_route: attempts/0001/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  periodic_claim_review: memory/vantasner/decisions/C-BRK-001-review.md
+  trace_claim_review: memory/vantasner/decisions/C-CHI-002-review.md
+  gmor_claim_review: memory/vantasner/decisions/C-GMR-001-review.md
+source_disposition:
+  PG2: qualified
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P061-pg2-explicit-breaking/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P061-pg2-explicit-breaking/reviews/independent_breaking_review.py
+  - .venv/bin/python -m pytest -q tests/test_explicit_breaking.py tests/test_symmetry_breaking.py tests/test_governance.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

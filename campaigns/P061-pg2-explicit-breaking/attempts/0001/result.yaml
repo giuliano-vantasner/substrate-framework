@@ -1,0 +1,41 @@
+attempt: 0001
+candidate: A
+status: source_reproduced_exact_subclaims_survive_headline_route_rejected
+source_exit_status: 0
+source_terminal_tally: ALL 4 CHECKS PASS
+surviving_exact_evidence:
+  - the declared potential m_pi**2*F_pi**2*(1-cos(pi/F_pi)) has the printed Taylor series and coordinate curvature m_pi**2
+  - Tr(exp(i*tau3*pi/F_pi)-I) is exactly 2*cos(pi/F_pi)-2
+  - a separately declared GMOR relation has quark-mass-sum log exponent one when its other inputs are fixed
+  - the declared squared-mass expression vanishes algebraically with the quark-mass sum
+failure_mechanism:
+  classification: verifier_and_candidate_concept
+  findings:
+    - the potential amplitude m_pi**2*F_pi**2 is chosen so its coordinate curvature has the desired name; it is not derived from C-SG-001 or another accepted premise
+    - the same pi/F_pi coordinate has accepted cited-action kinetic metric 1/4, so coordinate curvature m_pi**2 would mean generalized mass squared 4*m_pi**2 rather than m_pi**2
+    - the cited (m_pi**2*F_pi**2/8)*Tr(U-I) term has one quarter of the advertised cosine amplitude
+    - the passing PG2.2 check silently replaces the cited trace prefactor 1/8 by a potential prefactor -1/2, a factor-four change
+    - the final output simultaneously names the 1/8 term and the incompatible -1/2 equality
+    - GMOR is an imported relation with free convention factor, quark-mass sum, condensate, and decay scale; its scaling is not a framework derivation or numerical prediction
+    - the declared F_pi=2*f_pi conversion is inconsistent with the source's own two displayed GMOR forms
+    - no accepted map identifies the normalized sine-Gordon field or coefficient with the declared chiral coordinate and physical pion
+sensitivity_counterexamples:
+  kinetic_normalization: >-
+    Holding PG2's V fixed while using C-CHI-001's F_pi**2/16 kinetic
+    prefactor and pi/F_pi coordinate gives K=1/4 and generalized mass squared
+    4*m_pi**2, even though PG2's curvature-only check still passes.
+  trace_prefactor: >-
+    The cited positive Lagrangian coefficient m_pi**2*F_pi**2/8 gives
+    V=m_pi**2*F_pi**2*(1-cos(pi/F_pi))/4; reproducing PG2's V requires the
+    four-times-larger coefficient m_pi**2*F_pi**2/2.
+  field_dictionary: >-
+    Renaming pi and F_pi leaves every source predicate unchanged, so the
+    native verifier does not establish the physical-pion or decay-constant map.
+  gmor_rescaling: >-
+    Scaling F by rho and the condensate by rho**2 leaves the declared mass
+    squared unchanged, exposing a continuous family of free inputs.
+next_action: >-
+  Continue with Candidates B through E: derive periodic curvature relative to
+  kinetics, pair SU(2) trace and kinetic prefactors in one convention,
+  construct locally matched but globally distinct potentials, and keep a
+  convention factor and all free inputs explicit in the conditional GMOR ledger.

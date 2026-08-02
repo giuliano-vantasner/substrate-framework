@@ -1,0 +1,40 @@
+scope: P061 external theorem and convention context
+sources:
+  - id: gell_mann_oakes_renner_1968
+    title: Behavior of Current Divergences under SU(3) x SU(3)
+    authors: [Murray Gell-Mann, R. J. Oakes, B. Renner]
+    publication: Physical Review 175, 2195-2199 (1968)
+    doi: 10.1103/PhysRev.175.2195
+    url: https://journals.aps.org/pr/abstract/10.1103/PhysRev.175.2195
+    role: >-
+      Primary historical source for the current-algebra symmetry-breaking
+      result called GMOR. It is external context, not an accepted substrate
+      derivation or a license to omit current, vacuum, and normalization premises.
+  - id: battye_manton_sutcliffe_wood_2009
+    title: Light Nuclei of Even Mass Number in the Skyrme Model
+    authors: [Richard A. Battye, Nicholas S. Manton, Paul M. Sutcliffe, Stephen W. Wood]
+    publication: Physical Review C 80, 034323 (2009)
+    arxiv: 0905.0099
+    url: https://arxiv.org/abs/0905.0099
+    audited_equation: 2
+    role: >-
+      Primary source for the paired F_pi**2/16 kinetic term and
+      m_pi**2*F_pi**2/8*Tr(U-I) Lagrangian term cited by PG2. The paper treats
+      F_pi, m_pi, and e as model parameters and does not identify a normalized
+      sine-Gordon substrate field with its pion field.
+  - id: cundy_lee_2011
+    title: Gell-Mann-Oakes-Renner relation for multiple chiral symmetries
+    authors: [Nigel Cundy, Weonjong Lee]
+    venue: Proceedings of Science Lattice 2011
+    arxiv: 1111.2638
+    url: https://arxiv.org/abs/1111.2638
+    audited_equations: [16, 18, 27]
+    role: >-
+      Primary derivation displaying the required current matrix element,
+      double-commutator mass formula, and a convention-specific condensate
+      expression. It confirms that current, condensate, and decay-constant
+      definitions are load-bearing rather than removable names.
+provenance_ceiling: >-
+  These sources delimit external Skyrme and GMOR conventions. They do not
+  become framework authority, determine the substrate's field dictionary, or
+  fix any coefficient or parameter value.
