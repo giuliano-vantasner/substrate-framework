@@ -1,0 +1,63 @@
+campaign: P084
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and independent provenance for both mass equations and physical state maps
+  - exact iff, coefficient and power sensitivity, dimensions, domain, and reverse implication
+  - separation of cancellation, empirical input, scale unit, classical matching, reaction yield, and comparator use
+  - explicit correction and binding coefficients with no arbitrary unit coefficient
+  - nonduplication against C-SK-001, C-DIM-003, canonical APIs, tests, and consumers
+candidates:
+  A:
+    decision: rejected_for_missing_dependency_closure
+    reason: >-
+      Both mass equations remain conditional premises; B1, S2, and NY2 are
+      pending, and the electron rest energy is inserted as an empirical value.
+  B:
+    decision: selected_as_strict_duplicate
+    reason: >-
+      NY1's exact equality, reverse implication, linear B1 cancellation, and
+      canonical expression are already C-SK-001's statement, verifier, API,
+      tests, and interpretation ceiling.
+  C:
+    decision: selected_as_nonpromoted_scope_ledger
+    reason: >-
+      Generic monomial division shows that prefactor ratios remain supplied and
+      B cancels only for equal powers. P008 already includes decisive
+      prefactor and power mutations, so no new claim is warranted.
+  D:
+    decision: selected_as_provenance_ceiling
+    reason: >-
+      A locally cited topological relation and ANW classical formula do not
+      form two accepted independent framework derivations.
+  E:
+    decision: selected_as_import_audit
+    reason: >-
+      The output has derivative 16*pi with respect to E_e and vanishes with
+      that input; evaluating it in MeV therefore retains the measured electron
+      energy rather than eliminating imports.
+  F:
+    decision: selected_as_arbitrary_target_counterfamily
+    reason: >-
+      A free dimensionless correction or binding factor realizes every
+      positive target, including the 34.1 and 24 MeV comparators.
+  G:
+    decision: retained_only_as_post_freeze_context
+    reason: >-
+      The 25% residual is real arithmetic, but primary literature does not
+      identify it as a universal 30% quantum correction and no correction is
+      calculated in NY1.
+  H:
+    decision: selected_as_no_new_claim
+    reason: >-
+      There is no distinct theorem, canonical API, formal object, or consumer
+      beyond C-SK-001 and its existing P008 evidence.
+selected_result: >-
+  Retain NY1 as duplicate evidence for C-SK-001, reject its zero-import,
+  derived nuclear-scale, proton-prediction, correction, and engine-yield
+  readings, and add no claim, API, or release.
+selection_not_based_on:
+  - source pass tally
+  - 25.69 MeV numerical value
+  - proximity to 24 MeV
+  - proximity to 34.1 MeV
+  - chronology or prose confidence

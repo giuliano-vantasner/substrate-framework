@@ -1,0 +1,16 @@
+campaign: P084
+frozen_before_source_opening: true
+proposal_path: proposals/P084-ny1-skyrme-energy-unit-audit/proposal.yaml
+proposal_sha256: ff8c53c7529198d7c09a8958956c9cc9d81219c61d920072f99e35c3743d79df
+memory_contract_path: memory/vantasner/proposals/P084-ny1-skyrme-energy-unit-audit.md
+memory_contract_sha256: d53cf3572228471d1be7a03e6d0d016256140657bf7802bb210d27c2b80e5691
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - NY1 literal equations, checks, executable output, and reported MeV result
+  - engine nuclear-energy value and any replacement claim
+  - physical-F_pi fit value and classical-to-quantum correction percentage
+  - later NY2 yield construction and all physical binding-energy values

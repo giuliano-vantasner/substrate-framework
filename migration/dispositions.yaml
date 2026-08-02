@@ -610,6 +610,37 @@ units:
       through canonical and independent symbolic routes, distinguishes solved
       from fixed weak coordinates, and uses no numerical quadrature or NumPy
       integration alias.
+  NY1:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-SK-001
+    duplicates:
+      - C-SK-001
+    duplicate_reason: >-
+      NY1's exact equality of the two supplied mass premises, reverse
+      implication, 16*pi*E_e ratio, and shared-linear-B1 cancellation are
+      already the statement, canonical API, tests, and mutation evidence of
+      C-SK-001. Its 25.69 MeV value inserts the empirical electron rest energy;
+      its proton closure is substitution by construction; and its 34.1 and 24
+      MeV comparisons require separately unconstrained correction or binding
+      coefficients. B1, S2, and the later NY2 consumer remain pending. NY1
+      computes no quantum correction, multi-soliton binding, nuclear state
+      map, reaction yield, or engine implementation.
+    evidence:
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/reviews/source_adjudication.md
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/evidence/source-reproduction.yaml
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/evidence/source-audit.yaml
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/evidence/literature-audit.yaml
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/evidence/candidate-comparison.yaml
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/evidence/primary-provenance.yaml
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/attempts/0001/result.yaml
+      - campaigns/P084-ny1-skyrme-energy-unit-audit/attempts/0002/result.yaml
+      - memory/vantasner/decisions/NY1-duplicate-review.md
+    note: >-
+      P084 derives exact coefficient, power, empirical-input, arbitrary-target,
+      literature, dependency, and nonduplication ledgers through primary and
+      independent symbolic routes. It adds no claim, release, or canonical API
+      and uses no numerical quadrature or NumPy integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

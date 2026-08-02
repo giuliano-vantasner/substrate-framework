@@ -1,0 +1,48 @@
+campaign: P084
+purpose: >-
+  Audit NY1's ANW and electron-mass attributions and its 30% correction wording
+  without treating external literature or measurements as accepted framework
+  derivations.
+sources:
+  - authors: [Gregory S. Adkins, Chiara R. Nappi, Edward Witten]
+    title: Static properties of nucleons in the Skyrme model
+    journal: Nuclear Physics B
+    volume: 228
+    pages: 552-566
+    year: 1983
+    doi: 10.1016/0550-3213(83)90559-X
+    primary_url: https://www.sciencedirect.com/science/article/abs/pii/055032138390559X
+    institutional_record: https://collaborate.princeton.edu/en/publications/static-properties-of-nucleons-in-the-skyrme-model/
+    finding: >-
+      The primary abstract reports that calculated static baryon properties
+      are generally within about 30% of experiment. That is a broad model-
+      performance statement, not a derivation of a universal multiplicative
+      30% quantum correction to F_pi/e or to NY1's residual.
+  - author: CODATA / National Institute of Standards and Technology
+    title: CODATA Recommended Values of the Fundamental Physical Constants, 2018
+    primary_url: https://physics.nist.gov/cuu/pdf/JPCRD2018CODATA.pdf
+    finding: >-
+      The electron mass-energy equivalent is reported as
+      0.51099895000(15) MeV. NY1's 0.51099895 literal is this empirical input
+      rounded to eight decimal places, not a substrate derivation.
+  - author: Particle Data Group
+    title: PDG particle database 2020
+    primary_url: https://pdg.lbl.gov/2020/download/db2020.pdf
+    finding: >-
+      The official database likewise lists the electron mass as
+      0.51099895000(15) MeV/c^2. Agreement verifies provenance of the imported
+      number only; it does not make the resulting energy unit parameter free.
+framework_status:
+  topological_proton_mass_premise: conditional_only
+  ANW_classical_mass_premise: conditional_only
+  empirical_electron_rest_energy: external_input
+  universal_30_percent_quantum_correction: not_established
+  computed_quantum_correction: absent
+  multi_soliton_binding_map: absent
+adjudication_implication: >-
+  Literature can document the classical-model context and measurement, but it
+  cannot promote NY1's supplied mass formulas, convert E_e into a prediction,
+  or select a correction or nuclear-yield coefficient by numerical closeness.
+authority_note: >-
+  These sources are premise and comparator audits only. The accepted registry
+  remains authoritative for framework claims.

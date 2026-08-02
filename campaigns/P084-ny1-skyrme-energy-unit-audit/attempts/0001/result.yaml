@@ -1,0 +1,26 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: NY1
+source_path: merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: b3531d7f906fe396a1326d44d68f34d09ae34988e86a8f721c360040c4aa0921
+git_blob: f4c61dfa3c96de890503023dc3a89727d32b2a24
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
+process_exit_status: 0
+terminal_tally: ALL 9 CHECKS PASS
+surviving_exact_predicates:
+  - Equality of the two supplied positive mass formulas is equivalent to F_pi/e=16*pi*E_e.
+  - The shared linear B1 factor cancels, while unequal powers prevent cancellation.
+  - Inserting E_e=0.51099895 MeV evaluates the conditional ratio to 25.68560875699357 MeV.
+  - Substitution of the solved ratio makes the two supplied mass expressions numerically equal.
+headline_failures:
+  - C-SK-001 already owns the exact iff, reverse implication, cancellation, canonical APIs, and mutation evidence.
+  - Both mass formulas remain conditional premises rather than accepted physical derivations.
+  - The result depends linearly on the inserted empirical electron rest energy, contradicting the no-import interpretation.
+  - The proton-mass closure is the defining equality evaluated after solving it and is not an independent prediction.
+  - The 34.1 MeV residual does not calculate or identify a quantum correction.
+  - No multi-soliton binding coefficient, nuclear state map, reaction yield, or engine implementation is constructed.
+diagnosed_layer: source_claim_dependency_closure_import_classification_duplication_and_physical_interpretation
+continuation: Candidates B-H proceed to strict duplication, generic coefficient and power audit, explicit empirical-input dependence, arbitrary-target correction family, literature audit, and terminal source disposition.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

@@ -1,0 +1,40 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G, H]
+status: adjudication_validated
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P084-ny1-skyrme-energy-unit-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P084-ny1-skyrme-energy-unit-audit/reviews/independent_skyrme_review.py
+  - .venv/bin/python -m pytest -q tests/test_skyrme_relations.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+scientific_tallies:
+  source: ALL 9 CHECKS PASS
+  primary: ALL 28 CHECKS PASS [P084]
+  independent: ALL 10 CHECKS PASS [P084-INDEPENDENT]
+  focused_canonical_tests: 5 passed
+  focused_governance_tests: 17 passed
+  integrated_repository_tests: 793 passed
+  integrated_workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+process_status: 0
+positive_result:
+  - The exact conditional iff and shared-linear-factor cancellation reproduce through canonical and independent symbolic routes.
+  - Generic monomial matching exposes every prefactor and coefficient-power freedom.
+  - The measured electron rest energy remains the sole dimensionful input and controls the output linearly.
+  - Proton closure is classified as substitution by construction rather than independent evidence.
+  - A dimensionless correction or binding coefficient realizes every positive comparator target unless separately derived.
+  - Literature and source audits distinguish broad 30% model accuracy from a computed universal correction.
+  - Strict claim, API, evidence, test, and consumer comparison finds no content beyond C-SK-001.
+adjudication:
+  disposition: duplicate_evidence
+  duplicates: [C-SK-001]
+  new_claims: []
+  release: v0.74.0_unchanged
+  queue_counts:
+    pending_adjudication: 136
+    qualified: 71
+    duplicate_evidence: 7
+    migrated: 3
+    out_of_scope: 1
+pending: []
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

@@ -1,0 +1,66 @@
+campaign: P084
+base_release: v0.74.0
+base_commit: 81a9a3d
+scientific_base_commit: 6aae8f2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+artifacts:
+  source:
+    path: /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
+    sha256: b3531d7f906fe396a1326d44d68f34d09ae34988e86a8f721c360040c4aa0921
+    git_blob: f4c61dfa3c96de890503023dc3a89727d32b2a24
+    size_bytes: 5809
+    authority: noncanonical_hash_pinned_attempt_evidence
+  canonical_module:
+    path: src/substrate_framework/skyrme_relations.py
+    sha256: 301ef58445f8c361faef13a0348cd42f24ceec3a38d0ec7a0b1de14c45004717
+    size_bytes: 1604
+  canonical_tests:
+    path: tests/test_skyrme_relations.py
+    sha256: 16f718195b50b230a172626c382abdae9c54a17999e0e2ded23909a6b2c6294c
+    size_bytes: 1235
+  accepted_verifier:
+    path: campaigns/P008-constitutive-qualification/verify.py
+    sha256: 40988d571095efcb52c27b04b4295a1d2fa3efa7d1833c3b40cedbd8a7117aa6
+    size_bytes: 6196
+  frozen_contract:
+    path_at_preregistration: proposals/P084-ny1-skyrme-energy-unit-audit/proposal.yaml
+    preregistration_sha256: ff8c53c7529198d7c09a8958956c9cc9d81219c61d920072f99e35c3743d79df
+    size_bytes_at_preregistration: 4787
+    note: Administrative status may change at adjudication; candidate and blinding fields remain frozen.
+  primary_verifier:
+    path: proposals/P084-ny1-skyrme-energy-unit-audit/verify.py
+    sha256: ad5f631e718db0bf00c53e5fa7ddc1f5a72d846bd3392863785f6d2d19d59f5d
+    size_bytes: 11285
+  independent_verifier:
+    path: proposals/P084-ny1-skyrme-energy-unit-audit/reviews/independent_skyrme_review.py
+    sha256: de972e496f20793feff13e20275c46259a123a3c7bbf2fdb0cb126fb2b23c8e6
+    size_bytes: 3081
+accepted_claims_used:
+  C-SK-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/skyrme_relations.py
+    use: exact_conditional_iff_and_interpretation_ceiling
+  C-DIM-003:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/action_scales.py
+    use: lossless_mass_coordinate_import_ceiling_only
+candidate_dependencies:
+  B1:
+    disposition: pending_adjudication
+    accepted_mapping: []
+  S2:
+    disposition: pending_adjudication
+    accepted_mapping: []
+  NY2:
+    disposition: pending_adjudication
+    accepted_mapping: []
+    role: later_consumer_not_dependency_authority
+external_empirical_imports:
+  - electron_rest_energy=0.51099895_MeV
+  - physical_pion_coupling_ratio_comparator=34.1_MeV
+  - engine_nuclear_energy_comparator=24_MeV_from_source_prose
+exact_oracle: SymPy elimination, reverse substitution, free-symbol and derivative audit, generic monomial powers, coefficient mutations, arbitrary-target correction inverse, source AST, and queue closure
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

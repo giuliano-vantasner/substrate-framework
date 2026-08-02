@@ -1,0 +1,58 @@
+id: P084
+base_release: v0.74.0
+base_commit: 81a9a3d
+scientific_base_commit: 6aae8f2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [NY1]
+question: >-
+  Determine whether NY1 adds any dependency-closed derivation beyond
+  C-SK-001's already accepted conditional equivalence between two supplied
+  mass formulas and F_pi/e=16*pi*E_e; audit the provenance of both premises,
+  the electron-rest-energy import, correction and coefficient freedoms, and
+  all nuclear-scale interpretations before terminally adjudicating NY1.
+invariants:
+  - C-SK-001 already states exactly that equality of the supplied positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e is equivalent to F_pi/e=16*pi*E_e.
+  - C-SK-001 explicitly treats both mass formulas, B1, electron rest energy, pion scale, and Skyrme coupling as supplied premises and excludes numerical comparators and physical mass prediction.
+  - Cancellation of a shared nonzero symbol proves no provenance, independence, or physical validity for either equation.
+  - A dimensionful result proportional to E_e retains that empirical dimensionful input and is not no-import or zero-parameter in the framework sense.
+  - B1, S2, and NY2 remain pending with empty accepted mappings; NY2 is a later consumer and cannot close NY1's derivation.
+  - An energy unit does not fix a nuclear reaction yield without a separately derived dimensionless multi-soliton binding coefficient and physical state map.
+allowed_imports:
+  - exact positive real algebra and energy-dimensional bookkeeping for separately supplied coefficients and mass-energy premises
+  - C-SK-001 and its canonical skyrme_relations.py APIs as the accepted conditional theorem and interpretation ceiling
+  - C-DIM-003 only as the general rule that a physical mass import remains a free coordinate under reparameterization
+  - B1, S2, and NY2 generated queue metadata only for dependency status, not scientific premises
+  - NY1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce NY1 literally and test whether both mass equations, B1, the electron rest energy, Skyrme-sector identity, and nuclear interpretation have accepted dependency closure.
+  - id: B
+    description: Map the exact shared-B1 cancellation and 16*pi*E_e iff to C-SK-001 and test strict theorem/API/evidence duplication.
+  - id: C
+    description: Generalize the two supplied monomials to independent prefactors and B1 powers, classifying exactly when cancellation occurs and which ratios remain free.
+  - id: D
+    description: Audit whether the two mass equations are independently derived or share one unaccepted source premise, fitted relation, or circular normalization.
+  - id: E
+    description: Retain the electron rest energy and unit conversion as explicit dimensionful imports and test the source's zero-parameter and no-import labels.
+  - id: F
+    description: Introduce a dimensionless classical, quantum, or multi-soliton correction coefficient and determine the arbitrary-target family left when it is not derived.
+  - id: G
+    description: Open the engine, physical-F_pi, and correction comparators only after structure freezes, using them as nonselecting context with uncertainties and conventions explicit.
+  - id: H
+    description: Compare duplicate classification against a provisional new coefficient-provenance or energy-scale claim; add nothing without a distinct theorem, API, and consumer beyond C-SK-001.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and independent provenance for both mass equations, coefficients, physical sectors, units, and state maps
+  - exact iff, coefficient/power sensitivity, dimensions, domain conditions, and reverse implication
+  - separation of algebraic cancellation, empirical input, scale unit, classical mass matching, reaction yield, and comparator use
+  - parameter economy without silently setting correction or binding coefficients to one
+  - nonduplication against C-SK-001, C-DIM-003, skyrme_relations.py, and existing focused tests
+claims_proposed:
+  - no new claim unless Candidate H demonstrates a distinct reusable coefficient-provenance or energy-scale theorem and consumer beyond C-SK-001
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. Until then the NY1 body,
+  literal checks, executable output, reported MeV value, engine 24 MeV value,
+  physical-F_pi fit value, correction percentage, and later NY2 interpretation
+  remain closed; the generated queue synopsis is navigation metadata only.
+status: accepted

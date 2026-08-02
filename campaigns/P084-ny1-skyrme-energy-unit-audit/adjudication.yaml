@@ -1,0 +1,58 @@
+campaign: P084
+title: NY1 conditional Skyrme energy-unit and empirical-import audit
+source_baseline: substrate@6d1f4e0
+source_units: [NY1]
+base_release: v0.74.0
+release_after_adjudication: v0.74.0
+adjudicated_at: '2026-08-04T00:18:00Z'
+selected_candidates:
+  - id: B
+    reason: NY1's exact iff and shared-linear-factor cancellation are strict duplicates of C-SK-001.
+  - id: C
+    reason: Generic monomial matching exposes prefactor and power premises but adds nothing beyond P008's mutation evidence.
+  - id: D
+    reason: Neither supplied mass formula has independent accepted physical provenance.
+  - id: E
+    reason: The output remains linearly controlled by the imported electron rest energy.
+  - id: F
+    reason: A free correction or binding factor realizes every positive target.
+  - id: G
+    reason: Literature and comparators provide context only and do not calculate a correction.
+  - id: H
+    reason: No distinct theorem, API, formal object, or consumer survives nonduplication review.
+competing_candidates:
+  - id: A
+    decision: rejected_for_missing_dependency_closure_and_false_zero_import_interpretation
+claims: []
+reviewed_existing:
+  - id: C-SK-001
+    decision: unchanged_exact_claim_API_tests_and_premise_ceiling_already_subsume_NY1
+  - id: C-DIM-003
+    decision: unchanged_lossless_coordinate_import_ceiling_only
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  validated_route: attempts/0002/result.yaml
+  independent_review: reviews/independent_skyrme_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  duplicate_review: memory/vantasner/decisions/NY1-duplicate-review.md
+source_disposition:
+  NY1: duplicate_evidence
+duplicates:
+  NY1: [C-SK-001]
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P084-ny1-skyrme-energy-unit-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P084-ny1-skyrme-energy-unit-audit/reviews/independent_skyrme_review.py
+  - .venv/bin/python -m pytest -q tests/test_skyrme_relations.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

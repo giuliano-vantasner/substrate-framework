@@ -1,0 +1,97 @@
+source_unit: NY1
+headline_verdict: duplicate_conditional_iff_with_visible_empirical_import_and_unestablished_nuclear_interpretation
+checks:
+  - id: NY1.1
+    source_verdict: pass
+    audit_verdict: exact_but_already_accepted_conditional_solution
+    reason: >-
+      Solving the two supplied positive mass premises gives X=16*pi*E_e
+      exactly. C-SK-001 has already accepted this same iff, with neither mass
+      premise promoted as physical fact.
+  - id: NY1.2
+    source_verdict: pass
+    audit_verdict: exact_shared_factor_cancellation_only
+    reason: >-
+      Linear B1 cancels algebraically. This proves neither the provenance nor
+      physical validity of either mass equation, and unequal B1 powers retain
+      the coefficient.
+  - id: NY1.3
+    source_verdict: pass
+    audit_verdict: false_zero_parameter_interpretation
+    reason: >-
+      The result's sole free symbol is E_e, so the predicate itself confirms
+      dependence on a dimensionful empirical input. Symbol count does not turn
+      an imported measurement into a framework prediction.
+  - id: NY1.4
+    source_verdict: pass
+    audit_verdict: exact_prefactor_arithmetic_duplicate
+    reason: >-
+      The ratio 48*pi^3/(3*pi^2)=16*pi is exact and is already checked by
+      C-SK-001. Both prefactors remain load bearing supplied premises.
+  - id: NY1.5
+    source_verdict: pass
+    audit_verdict: redundant_two_point_substitution
+    reason: >-
+      Substituting B1=1.232 and B1=0.9 reproduces the already exact equal-power
+      cancellation. It does not derive B1 or test a power mismatch.
+  - id: NY1.6
+    source_verdict: pass
+    audit_verdict: measured_input_evaluation_in_loose_band
+    reason: >-
+      The 25.69 MeV value follows only after inserting the literal empirical
+      electron rest energy 0.51099895 MeV. The wide 25.6--25.8 band is a
+      regression assertion, not an uncertainty or derivation oracle.
+  - id: NY1.7
+    source_verdict: pass
+    audit_verdict: comparator_band_on_identity_by_construction
+    reason: >-
+      With B1=1.232 and the same inserted electron energy, the reported 936.96
+      MeV is 48*pi^3*B1*E_e by substitution. The 900--970 MeV band neither
+      establishes the topological premise nor predicts the proton mass.
+  - id: NY1.8
+    source_verdict: pass
+    audit_verdict: floating_point_restatement_of_exact_identity
+    reason: >-
+      The two numeric masses agree because X was solved from their equality.
+      This is useful source regression but provides no independent closure.
+  - id: NY1.9
+    source_verdict: pass
+    audit_verdict: post_freeze_comparator_residual_without_correction_model
+    reason: >-
+      The 34.1 MeV literal produces a 24.68% gap. NY1 computes no quantum
+      correction, uncertainty, fit scheme, or multi-soliton binding
+      coefficient; numerical closeness cannot select any of those objects.
+exact_specialization:
+  supplied_topological_premise: M_top=48*pi^3*B1*E_e
+  supplied_classical_premise: M_ANW=3*pi^2*B1*X
+  conditional_iff: M_top=M_ANW iff X=16*pi*E_e
+  accepted_owner: C-SK-001
+generic_monomial_ledger:
+  premises:
+    - M_1=a*pi^3*B^p*E
+    - M_2=c*pi^2*B^q*X
+  matched_ratio: X=(a/c)*pi*B^(p-q)*E
+  cancellation_condition: p=q
+  retained_inputs: [a, c, E]
+empirical_import_audit:
+  inserted_electron_rest_energy_MeV: 0.51099895
+  evaluated_scale_exact: 10219979*pi/1250000 MeV
+  evaluated_scale_approx_MeV: 25.68560875699357
+  derivative_with_respect_to_E_e: 16*pi
+  zero_input_limit: 0
+correction_and_target_audit:
+  generic_family: Y=kappa*16*pi*E_e
+  arbitrary_target_inverse: kappa=T/(16*pi*E_e)
+  physical_fit_kappa_exact: 3875000/(929089*pi)
+  physical_fit_kappa_approx: 1.3275916612533232
+  engine_24_MeV_kappa_exact: 30000000/(10219979*pi)
+  engine_24_MeV_kappa_approx: 0.9343753627589372
+  multi_soliton_binding_coefficient: absent
+dependency_audit:
+  B1: pending_not_imported
+  S2: pending_not_imported
+  NY2: pending_later_consumer_not_imported
+selected_candidates: [B, C, D, E, F, G, H]
+rejected_candidate: A
+new_claims: []
+duplicates: [C-SK-001]

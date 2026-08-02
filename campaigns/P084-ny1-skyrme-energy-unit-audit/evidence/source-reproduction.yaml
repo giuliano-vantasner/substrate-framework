@@ -1,0 +1,27 @@
+source_unit: NY1
+source_path: merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: b3531d7f906fe396a1326d44d68f34d09ae34988e86a8f721c360040c4aa0921
+git_blob: f4c61dfa3c96de890503023dc3a89727d32b2a24
+bytes: 5809
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-24/bridge_NY1_skyrme_energy_unit.py
+process_exit_status: 0
+elapsed_seconds: 0.36484
+stdout_sha256: 3c08e8e60e2919414d9bdca0a07abcc7d6c806b872343159248f583a6a0da1f6
+stdout_bytes: 86
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+terminal_tally: ALL 9 CHECKS PASS
+reported_values:
+  electron_rest_energy_MeV: 0.51099895
+  hedgehog_coefficient: 1.232
+  conditional_ratio_exact: 16*pi*E_e
+  evaluated_ratio_MeV: 25.68560875699357
+  closed_mass_MeV: 936.9611225719967
+  physical_fit_comparator_MeV: 34.1
+  comparator_gap: 0.24675634143713873
+interpretation: numeric_source_regression_only
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent
