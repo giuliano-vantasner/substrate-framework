@@ -1,0 +1,32 @@
+campaign: P079
+claim: C-PRB-001
+base_release: v0.71.0
+accepted_interpretation_ceilings:
+  C-U1-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/u1_charge.py
+    use: explicit free-amplitude and no-quantum-normalization ceiling only
+  C-OVL-001:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/normalized_overlaps.py
+    use: declared normalization and uncancelled-amplitude ceiling only
+  C-DIM-008:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/scale_provenance.py
+    use: absolute-scale and unit-coordinate ceiling only
+  C-IDN-002:
+    source: governance/claims.yaml
+    canonical_module: src/substrate_framework/gravity_scale_confrontation.py
+    use: rejected AS7 Planck/granularity and inverse-reconstruction ceiling only
+predecessor_evidence:
+  source_unit: AS8
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: 47fda3732d8901b6949b2859952123be675eef2bb28bad0ac0d241948fe3ea73
+  authority: noncanonical_hash_pinned_attempt_evidence
+external_empirical_imports: []
+external_literature_imports: []
+exact_oracle: SymPy limit, series, differentiation, ODE residual, boundary solve, symmetry, and coordinate algebra
+quadrature: none
+numpy_alias_policy:
+  np.trapz: absent
+  np.trapezoid: absent

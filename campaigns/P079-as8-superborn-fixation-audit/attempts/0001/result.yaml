@@ -1,0 +1,27 @@
+attempt: 0001
+candidate: A
+status: failed_headline_preserved
+source_unit: AS8
+source_path: merged-framework/bridges/phase-22/bridge_AS8_superborn_quantum_face_of_granularity.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 47fda3732d8901b6949b2859952123be675eef2bb28bad0ac0d241948fe3ea73
+git_blob: 90bca645bbbbbe00940bae4234e3cb1e1c513960
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS8_superborn_quantum_face_of_granularity.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+surviving_exact_predicates:
+  - The supplied nonzero-S exponential ratio has neutral limit x as S approaches zero.
+  - A common positive amplitude rescaling leaves A1^2/(A1^2+A2^2) invariant and multiplies the raw squared-amplitude difference by lambda^2.
+  - The two selected numerical substitutions reproduce their displayed values.
+  - Substituting the symbol hbar for the separately introduced symbol hbar_med makes hbar_med*omega equal hbar*omega.
+headline_failures:
+  - No accepted quantum state space, Born postulate, measurement rule, collapse law, fixation generator, or microscopic stochastic dynamics identifies the supplied formula with quantum actualization.
+  - The source states neither the full probability domain nor the continuous definition at S=0, negative-S behavior, absorbing boundaries, or a derivation from a Wright-Fisher or Moran generator.
+  - The examples (2,1) and (10,5) have the same normalized frequency but total squared amplitudes 5 and 125; holding k fixed under this unnormalized coordinate change is an extra physical-normalization premise.
+  - With fixed unit normalization the two representatives reduce to the same intensities and raw contrast, while a compensating k->k/lambda^2 transformation also leaves S invariant.
+  - The numerical values S=3 and S=75 set the free coefficient k=1 implicitly; they do not derive it from Gamma, c_P, N_cap, Theta_eff, or accepted dynamics.
+  - The AS8.5 check defines Theta_form=hbar_med*omega and substitutes hbar_med=hbar; it never uses the cutoff a, never uses the declared Theta_eff symbol, and tests no relation between action and length granularity.
+  - AS2 supplies dimensional primitives rather than a quantum measurement model, AS7's Planck/granularity headline is rejected by C-IDN-002, and S3 remains pending.
+diagnosed_layer: candidate_concept_dependency_closure_normalization_and_verifier_semantics
+continuation: Candidates B-G proceed to the continuous fixation, conditional BVP, probability-domain, inverse-target, and intensity-coordinate covariance ledgers.
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

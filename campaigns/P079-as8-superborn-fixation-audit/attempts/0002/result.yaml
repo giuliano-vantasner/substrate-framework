@@ -1,0 +1,22 @@
+attempt: 0002
+candidates: [B, C, D, E, F, G]
+status: failed_preserved
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P079-as8-superborn-fixation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P079-as8-superborn-fixation-audit/reviews/independent_fixation_review.py
+process_exit_status: 1
+checks_before_failure:
+  primary: 29
+  independent: 21
+failure: >-
+  Both exact routes completed their mathematical checks, but a source-audit
+  predicate searched for the broad substring S_expr.subs. It matched AS8's
+  legitimate symbolic lambda-rescaling call and incorrectly treated that call
+  as a numerical derivation of the separately inserted S=3 and S=75 examples.
+diagnosed_layer: verifier_source_ast_precision
+scientific_state: unchanged
+repair: >-
+  Count executable AST loads of S_expr and verify that its sole use is the
+  symbolic rescaling assignment, while the two fixation examples remain direct
+  literal substitutions.
+next_route: Rerun both exact verifiers and the focused canonical tests.

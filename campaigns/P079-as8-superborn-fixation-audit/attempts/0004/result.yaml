@@ -1,0 +1,32 @@
+attempt: 0004
+candidates: [B, C, D, E, F, G]
+status: adjudication_validated
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS8_superborn_quantum_face_of_granularity.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P079-as8-superborn-fixation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P079-as8-superborn-fixation-audit/reviews/independent_fixation_review.py
+  - .venv/bin/python -m pytest -q tests/test_fixation_probability.py tests/test_thermal.py tests/test_normalized_overlaps.py tests/test_u1_charge.py tests/test_scale_provenance.py tests/test_gravity_scale_confrontation.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+scientific_tallies:
+  source: ALL 5 CHECKS PASS
+  primary: ALL 35 CHECKS PASS [P079]
+  independent: ALL 27 CHECKS PASS [P079-INDEPENDENT]
+  affected_canonical_tests: 82 passed
+  focused_governance_tests: 17 passed
+  integrated_repository_tests: 755 passed
+process_status: 0
+result:
+  positive_object: exact continuous exponential fixation and normalization-covariance ledger
+  accepted_claim: C-PRB-001
+  source_disposition: qualified
+  release: v0.72.0
+  queue_after_adjudication:
+    pending: 141
+    qualified: 69
+    migrated: 3
+    duplicate_evidence: 4
+    out_of_scope: 1
+pending: []
+quadrature_note: exact_symbolic_work_only_no_numpy_integration_alias

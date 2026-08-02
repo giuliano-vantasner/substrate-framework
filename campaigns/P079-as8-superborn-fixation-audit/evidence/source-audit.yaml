@@ -1,0 +1,50 @@
+source_unit: AS8
+campaign: P079
+checks:
+  AS8.1:
+    source_verdict: pass_qualified_limit
+    audit: >-
+      The supplied nonzero-selection expression has neutral limit x. Calling x
+      Born probability and the formula a quantum actualization law requires a
+      quantum state, normalization, measurement rule, and stochastic generator
+      absent from accepted dependencies.
+  AS8.2:
+    source_verdict: pass_rejected_absolute_scale
+    audit: >-
+      Common amplitude rescaling preserves the normalized intensity ratio and
+      scales the raw contrast quadratically when k is held fixed. Unit
+      normalization maps both representatives to the same intensities, while
+      k->k/lambda^2 preserves S. The algebra alone does not identify raw norm or
+      fixed k as a physical observable or absolute scale.
+  AS8.3:
+    source_verdict: pass_qualified_example
+    audit: >-
+      The displayed values reproduce, but (2,1) and (10,5) have total squared
+      amplitudes 5 and 125 and become identical after unit normalization. The
+      source inserts S=3 and S=75, equivalent to holding an unsourced k=1; it
+      does not compute them from the advertised medium factors.
+  AS8.4:
+    source_verdict: duplicate_limit_consequence
+    audit: >-
+      The deviation limit follows immediately by subtracting x from AS8.1's
+      neutral limit. It adds no independent oracle and no scale interpretation.
+  AS8.5:
+    source_verdict: pass_rejected_tautology
+    audit: >-
+      The executable defines hbar_med*omega, substitutes hbar_med=hbar, and
+      compares the result with hbar*omega. Theta_eff has no executable load and
+      cutoff a does not occur as an executable symbol. The check proves neither
+      a relation to length granularity nor a shared breakdown mechanism.
+uncovered_load_bearing_inputs:
+  - a quantum state space, normalization equivalence, Born postulate, and measurement map
+  - Wright-Fisher or Moran generator, boundary data, population convention, and microscopic noise law
+  - physical definitions and dimensions of Gamma, c_P, N_cap, Theta_eff, hbar_med, and omega
+  - evidence that raw state norm and fixed k are simultaneous observables rather than coordinate choices
+  - an empirical super-Born deviation or parameter value
+  - an accepted relation between action scale and cutoff length a
+  - AS7's rejected Planck/granularity interpretation and pending S3 actualization dynamics
+headline_verdict: >-
+  Qualified. The continuous exponential fixation family, conditional BVP, bias,
+  and intensity-coordinate algebra survive. AS8 does not derive quantum
+  actualization, an observable absolute amplitude scale, a medium action
+  quantum, or a shared Planck-like granularity.

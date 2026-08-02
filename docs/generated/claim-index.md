@@ -552,6 +552,15 @@ In the dimensionless radial-background linearization of C-PDE-003, let n=(n_x,n_
 - Compatibility: `native`
 - Dependencies: C-PDE-003
 
+## C-PRB-001
+
+For a separately supplied real initial frequency x in [0,1] and real dimensionless selection ratio S, define the continuous exponential fixation family by U(x,0)=x and, for S nonzero, U(x,S)=(1-exp(-S*x))/(1-exp(-S)). The value at zero is the unique continuous extension. For every real S, U(0,S)=0, U(1,S)=1, and U lies in [0,1]; for nonzero S its x derivative is S*exp(-S*x)/(1-exp(-S))>0, and U(x,S)+U(1-x,-S)=1. Conditional on the separately declared backward equation U_xx+S*U_x=0 with absorbing boundary values zero and one, this is its unique solution: for S nonzero the two-constant boundary matrix has determinant exp(-S)-1, while S=0 gives the unique linear solution U=x. For 0<x<1, U is strictly increasing in S because its S derivative is a positive factor times the strict-convexity gap (1-x)+x*exp(S)-exp(S*x)>0; its limits as S tends to negative and positive infinity are zero and one. Thus every supplied target in (0,1) has a unique implicit S preimage, which is inverse inference rather than a prediction. The neutral expansion is U=x+S*x*(1-x)/2+S^2*x*(1-x)*(1-2*x)/12 -S^3*x^2*(1-x)^2/24+O(S^4). Separately, for positive intensities I1,I2, total N=I1+I2 and x=I1/N, the raw contrast is I1-I2=N*(2*x-1). A declared S=kappa*(I1-I2) scales by lambda^2 under a common amplitude rescaling when kappa is held fixed, but kappa->kappa/lambda^2 preserves S, and unit-normalizing the intensities preserves S with kappa_unit=kappa*N. Hence raw-amplitude scale sensitivity requires a separately established physical normalization and coefficient convention. These exact facts establish no Wright-Fisher or Moran microscopic process, quantum state or Born postulate, measurement or actualization rule, empirical deviation, observable amplitude norm, parameter value, medium action quantum, cutoff, dimensional instability, or substrate granularity.
+
+- Accepted in: `v0.72.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-QBL-001
 
 Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega^2-f^2/12)f, C-U1-001's stationary phase Psi=f*exp(-i*omega*t), and 0<omega<1/sqrt(2), let kappa=sqrt(1/2-omega^2). Then for every real center x0 the positive localized profile f=sqrt(24)*kappa*sech(kappa*(x-x0)) solves the equation exactly. Within a nonzero ansatz A*sech(k*(x-x0)), the independent sech powers force k^2=1/2-omega^2 and A^2=24*k^2. Its accepted U1 charge is Q=96*omega*sqrt(1/2-omega^2): Q tends to zero at both open endpoints, increases on (0,1/2), reaches its unique maximum 24 at omega=1/2, and decreases on (1/2,1/sqrt(2)). These derivative signs alone establish no VK, spectral, orbital, or nonlinear stability, forced complex ontology, electric charge, particle identity, or substrate realization.

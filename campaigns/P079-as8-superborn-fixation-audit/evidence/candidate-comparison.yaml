@@ -1,0 +1,54 @@
+campaign: P079
+selection_frozen_before_comparators: true
+criteria_order:
+  - accepted dependency closure and explicit stochastic and normalization provenance
+  - exact continuous-limit, BVP, probability-domain, symmetry, bias, and covariance algebra
+  - invariance under representation changes and separation of raw from normalized intensity
+  - distinction between conditional fixation, inverse inference, quantum postulate, and empirical deviation
+  - parameter economy, mutation sensitivity, and compatibility with accepted scale ceilings
+candidates:
+  A:
+    decision: retained_only_as_source_regression
+    reason: >-
+      All five checks reproduce, but the physical predicates import an absent
+      quantum/stochastic model, hold a normalization-dependent coefficient
+      fixed, or reduce to a direct symbol substitution.
+  B:
+    decision: selected
+    reason: >-
+      The exponential ratio has an exact continuous neutral extension,
+      absorbing endpoints, frequency monotonicity, complement symmetry, and
+      signed small-selection bias.
+  C:
+    decision: selected_conditionally
+    reason: >-
+      The same family is the unique solution of u_xx+S*u_x=0 with supplied
+      absorbing boundaries; naming that equation a physical generator retains
+      separate provenance and convention debt.
+  D:
+    decision: selected
+    reason: >-
+      Total intensity and normalized frequency expose the raw contrast as
+      N*(2*x-1); fixed-k and covariant coefficient transformations are distinct.
+  E:
+    decision: selected_as_inverse_ceiling
+    reason: >-
+      Strict selection monotonicity and endpoint limits make a supplied
+      interior target an implicit unique S preimage, not a prediction.
+  F:
+    decision: selected_as_interpretation_ceiling
+    reason: >-
+      AS8 neither derives nor dimensionally audits the factors advertised in S,
+      and no accepted dependency connects them to a length granularity.
+  G:
+    decision: selected_as_normalization_ceiling
+    reason: >-
+      Unit normalization makes the two source representatives identical, and
+      coefficient covariance preserves S under a coordinate rescaling. A
+      physical raw-norm observable would require a new accepted model.
+selected_claim: C-PRB-001
+physical_ceiling:
+  - no quantum state, Born postulate, measurement, collapse, or actualization law is derived
+  - no Wright-Fisher or Moran microscopic process or convention is derived
+  - no physical amplitude normalization, selection coefficient, or empirical deviation is selected
+  - no medium action quantum, cutoff, Planck scale, or shared substrate granularity is established

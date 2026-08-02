@@ -1,0 +1,13 @@
+campaign: P079
+frozen_before_source_opening: true
+proposal_path: proposals/P079-as8-superborn-fixation-audit/proposal.yaml
+proposal_sha256: 0256eadcd40e26333fd19ad7815a4d9f5c25706fd8c6bb7c2c6bd801f0a6c4d5
+memory_contract_path: memory/vantasner/proposals/P079-as8-superborn-fixation-audit.md
+memory_contract_sha256: 3e983880d4702281b0b75b1ef8db46ab6a2e6ddd84c460990a9c9f9f0eea5673
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+source_body_state_at_freeze: unopened
+comparators_blinded_at_freeze:
+  - source numerical amplitude examples and fixation values
+  - source parameter-factor identifications
+  - source quantum, Born, action-quantum, and shared-granularity labels

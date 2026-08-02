@@ -1,0 +1,61 @@
+id: P079
+base_release: v0.71.0
+base_commit: b7af359
+scientific_base_commit: 104b723
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [AS8]
+question: >-
+  Derive an exact domain-, normalization-, and provenance-explicit ledger for
+  the supplied exponential fixation family, including its removable neutral
+  limit, boundary-value equation, probability bounds, symmetries, bias, and
+  intensity-coordinate covariance; then determine whether AS8 establishes a
+  quantum super-Born mechanism or absolute granularity scale rather than a
+  conditional stochastic formula with free normalization-dependent inputs.
+invariants:
+  - No accepted claim supplies a quantum state space, Born postulate, collapse or actualization dynamics, Wright-Fisher or Moran generator, microscopic noise law, or empirical super-Born deviation.
+  - C-IDN-002 accepts no Planck, hadron, cutoff-ontology, or substrate-granularity input from AS7; AS8 cannot inherit those rejected physical labels.
+  - C-DIM-008 denies absolute-scale generation from dimensionless factors without a separately supplied dimensionful reference and distinguishes a physical quantity from its numeric coordinate.
+  - C-U1-002 retains explicit amplitude dependence and denies normalization-independent meaning to a numeral obtained after setting a free amplitude; it supplies no quantum-wavefunction dictionary.
+  - C-OVL-001 treats normalization as a declared premise and retains uncancelled amplitudes; it supplies no stochastic actualization mechanism.
+  - A probability formula must state the domains of initial frequency and selection ratio, include its removable neutral point, and derive rather than sample boundary and range predicates.
+allowed_imports:
+  - exact real exponential calculus, continuous extension, series, inequalities, and two-point linear boundary-value algebra
+  - C-U1-002 and C-OVL-001 only for explicit normalization/amplitude bookkeeping and their no-quantum interpretation ceilings
+  - C-DIM-008 and C-IDN-002 only for absolute-scale, arbitrary-input, and rejected AS7-granularity ceilings
+  - a separately declared dimensionless selection-to-diffusion ratio S and initial frequency x in [0,1], without assigning them a physical origin
+  - AS8 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after this contract validates
+candidates:
+  - id: A
+    description: Reproduce AS8 literally and test whether its five predicates establish their advertised quantum, actualization, absolute-scale, and shared-granularity semantics.
+  - id: B
+    description: Construct the continuous exponential fixation family on x in [0,1] and real S, including the neutral limit, endpoint values, range, frequency monotonicity, complement symmetry, and small-S bias.
+  - id: C
+    description: Derive the same family as the unique solution of the separately declared backward equation u_xx+S*u_x=0 with absorbing boundary data, while retaining generator and convention provenance.
+  - id: D
+    description: Parameterize two positive intensities by total intensity N and normalized frequency x, exposing raw contrast N*(2*x-1), common-scale covariance, and the compensating coefficient transformation required for invariant S.
+  - id: E
+    description: Analyze inverse reconstruction of S from a supplied target probability, including sign and uniqueness where exact monotonicity is established, without treating a fitted deviation as prediction.
+  - id: F
+    description: Audit the product defining S for dimensionlessness, independent parameter provenance, normalization convention, and absence of an absolute length or action scale from the accepted closure.
+  - id: G
+    description: Compare unnormalized amplitude representatives, fixed-normalization states, and a separately justified physical amplitude observable before assigning any quantum interpretation to common rescaling.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for the generator, normalization, amplitudes, drive, noise, capacity, and medium factors
+  - exact removable-limit, boundary-value, probability-range, symmetry, sign, and covariance algebra before source examples or physical labels
+  - invariance under admissible representation changes and distinction between raw intensity, normalized frequency, and a physical observable
+  - separation of a conditional fixation formula, inverse parameter inference, stochastic-process model, quantum measurement postulate, and empirical deviation
+  - mutation sensitivity to S sign, boundary data, generator coefficient, common intensity scaling, compensating coefficient scaling, normalization fixing, and removal of pending dependencies
+  - natural compatibility with C-DIM-008, C-IDN-002, C-U1-002, and C-OVL-001 without importing AS7 or S3 headlines
+claims_proposed:
+  - provisional C-PRB-001 continuous exponential fixation, boundary-value, bias, and normalization-covariance ledger if the complete object is nonduplicate and reusable
+comparators_blinded_until: >-
+  The generated queue synopsis exposes the exponential fixation expression,
+  its asserted neutral Born limit, the amplitude rescaling S->lambda^2*S, and
+  an advertised connection to AS7 granularity. These are quarantined as source
+  claims and may not select a generator normalization, quantum dictionary,
+  amplitude ontology, coefficient, scale, example, tolerance, or verdict. No
+  AS8 source-body output, hard-coded example, pending S3 mechanism, or empirical
+  comparator may be opened before this manifest and its memory contract
+  validate.
+status: accepted

@@ -1,0 +1,16 @@
+source_unit: AS8
+source_path: merged-framework/bridges/phase-22/bridge_AS8_superborn_quantum_face_of_granularity.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 47fda3732d8901b6949b2859952123be675eef2bb28bad0ac0d241948fe3ea73
+git_blob: 90bca645bbbbbe00940bae4234e3cb1e1c513960
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-22/bridge_AS8_superborn_quantum_face_of_granularity.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+reported_values:
+  common_initial_frequency: 0.8
+  first_raw_selection: 3
+  second_raw_selection: 75
+  first_fixation_probability: 0.9569
+  second_fixation_probability: 1.0
+  squared_amplitude_scale_ratio: 25
+interpretation: arithmetic_and_symbolic_reproduction_only

@@ -369,6 +369,13 @@ from .gravity_scale_confrontation import (
     pure_gravity_cutoff_interval,
     solve_joint_with_fixed_coefficient_ratio,
 )
+from .fixation_probability import (
+    ExponentialFixationLedger,
+    IntensitySelectionLedger,
+    continuous_exponential_fixation_probability,
+    exponential_fixation_ledger,
+    two_intensity_selection_ledger,
+)
 from .separable_moments import (
     AxisymmetricSeparableMoments,
     AxisymmetricTTReadout,

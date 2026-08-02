@@ -432,6 +432,44 @@ units:
       arbitrary-target, joint-rank, fixed-input inverse, and sign-domain
       ledgers through canonical and independent symbolic routes. It uses no
       numerical integration or NumPy trapezoidal alias.
+  AS8:
+    disposition: qualified
+    accepted_claims:
+      - C-PRB-001
+      - C-U1-002
+      - C-OVL-001
+      - C-DIM-008
+      - C-IDN-002
+    qualification: >-
+      AS8's exponential expression has an exact continuous neutral extension,
+      absorbing-boundary BVP, complement symmetry, signed bias, strict
+      selection monotonicity, and implicit target preimages. Its raw amplitude
+      algebra also correctly shows that holding k fixed makes S scale
+      quadratically. However the source supplies no quantum state, Born
+      postulate, measurement or actualization rule, stochastic generator,
+      population convention, noise law, physical normalization, or empirical
+      deviation. Its two examples have squared-amplitude totals 5 and 125 but
+      identical unit-normalized intensities; a compensating k transformation
+      preserves S. The numerical S values are inserted. Its final check merely
+      substitutes hbar_med=hbar in hbar_med*omega: Theta_eff and cutoff a have
+      no executable loads, and C-IDN-002 accepted no AS7 Planck/granularity
+      premise. No medium action quantum or shared breakdown scale is derived.
+    evidence:
+      - campaigns/P079-as8-superborn-fixation-audit/reviews/source_adjudication.md
+      - campaigns/P079-as8-superborn-fixation-audit/evidence/source-reproduction.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/evidence/source-audit.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/evidence/candidate-comparison.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/evidence/primary-provenance.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/attempts/0001/result.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/attempts/0002/result.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/attempts/0003/result.yaml
+      - campaigns/P079-as8-superborn-fixation-audit/attempts/0004/result.yaml
+      - memory/vantasner/decisions/C-PRB-001-review.md
+    note: >-
+      P079 derives exact continuous-fixation, conditional-BVP, probability,
+      bias, inverse-target, and intensity-normalization ledgers through
+      canonical and independent symbolic routes. It uses no numerical
+      integration or NumPy trapezoidal alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

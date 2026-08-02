@@ -1,0 +1,19 @@
+attempt: 0003
+candidates: [B, C, D, E, F, G]
+status: failed_preserved
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P079-as8-superborn-fixation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P079-as8-superborn-fixation-audit/reviews/independent_fixation_review.py
+process_exit_status: 1
+checks_before_failure:
+  primary: 29
+  independent: 21
+failure: >-
+  The repaired AST predicate expected one load of S_expr, but AS8's single
+  symbolic rescaling check loads it twice on lines 111 and 112: once for the
+  substitution and once for comparison with lambda^2*S_expr. Neither load
+  occurs in the later numerical examples.
+diagnosed_layer: verifier_source_ast_cardinality
+scientific_state: unchanged
+repair: Require the exact hash-pinned load-line tuple (111,112), excluding the numerical example lines.
+next_route: Rerun both exact verifiers and focused tests without changing scientific predicates.
