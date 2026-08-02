@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T00:28:00Z'
+updated: '2026-08-04T01:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -29,12 +29,11 @@ pairwise-degeneracy, reference-covariance, and conditional inverse-
 reconstruction ledger. It derives no beta function, U1 or SU2 coefficient,
 physical gauge sector, unified embedding, normalization, threshold spectrum,
 observation, scheme, reference scale, or perturbative domain. The latest
-terminal adjudication is P084 at commit `e269953`: NY1 is duplicate evidence
-for C-SK-001 because its exact shared-B1 cancellation and `16*pi*E_e` iff were
-already accepted. Its 25.69 MeV evaluation retains the empirical electron
-energy, while its proton closure is substitution by construction and its
-correction and nuclear-yield readings require unestablished dimensionless
-coefficients.
+terminal adjudication is P085 at commit `265b2ee`: NY2 is duplicate evidence
+for C-SK-001 because it repeats the conditional `16*pi*E_e` scale, then fixes
+an uncomputed yield coefficient to one. The source constructs no multi-Skyrmion
+states or reaction map, while the pinned engine retains an imported 24 MeV
+payload and a separate predecessor consumer embeds 25.686 MeV.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -60,7 +59,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 136 pending, 0 partially migrated, 3 migrated, 71 qualified, 7 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 135 pending, 0 partially migrated, 3 migrated, 71 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -176,6 +175,7 @@ Attempts are append-only and individually reproducible.
 | 0102 | P082 exact common-coefficient/covariance/baseline and WM2 audit | `campaigns/P082-wm2-common-induction-audit/attempts/0001` through `0002`, then the terminal queue replay | WM2 is duplicate evidence for C-REP-001 and C-LIE-001; v0.73.0 unchanged; commit `ed2241d` | Twenty-four primary and fourteen independent checks reproduce the supplied traces and conditional ratio, derive the full positive Abelian coordinate counterfamily and arbitrary targets, expose independent coefficient and additive-baseline directions, and confirm all eight advertised mechanism dependencies are pending; 39 affected and 17 governance tests plus the single integrated gate pass all 777 tests | Audit WM3's one-loop running and inverse fit without importing WM1/WM2's rejected physical boundary, treating alpha_em and alpha_s as derivation inputs for an ab-initio prediction, or selecting a concept by closeness to the measured weak angle |
 | 0103 | P083 exact signed-affine intersection/inverse-reconstruction and WM3 audit | `campaigns/P083-wm3-one-loop-running-audit/attempts/0001` through `0002`, then the promotion replay | accepted in v0.74.0 with WM3 qualified; commit `6aae8f2` | Thirty-seven primary and sixteen independent checks derive exact pairwise crossings, common-intersection rank, degeneracies, reference and Abelian-coordinate covariance, the three-coordinate inverse reconstruction, fixed-data inconsistency, threshold counterfamilies, and source/dependency ceilings; 58 affected and 17 governance tests plus the single integrated gate pass all 793 tests | Audit NY1's claimed Skyrme energy unit without importing pending B1/S2/NY2 relations, treating cancellation between two supplied mass formulas as a derivation of either, calling an electron-mass input zero-parameter, or using the 24 MeV/34.1 MeV comparators to select the coefficient |
 | 0104 | P084 exact Skyrme ratio/import/correction and NY1 audit | `campaigns/P084-ny1-skyrme-energy-unit-audit/attempts/0001` through `0002`, then the terminal queue replay | NY1 is duplicate evidence for C-SK-001; v0.74.0 unchanged; commit `e269953` | Twenty-eight primary and ten independent checks reproduce the conditional iff, derive the generic prefactor/power ledger, retain the empirical electron-energy coordinate, classify proton closure as substitution by construction, construct arbitrary-target correction and binding factors, and audit the ANW 30% wording; 5 canonical and 17 governance tests plus the single integrated gate pass all 793 tests | Audit NY2's one-unit nuclear-yield construction without converting NY1's duplicate conditional scale into a zero-import prediction, setting an uncomputed multi-Skyrmion binding coefficient to one, or selecting that coefficient by proximity to the 23.86/24 MeV comparators |
+| 0105 | P085 exact yield-coefficient/state/reaction/consumer and NY2 audit | `campaigns/P085-ny2-nuclear-yield-audit/attempts/0001` through `0004`, then the terminal queue replay | NY2 is duplicate evidence for C-SK-001; v0.74.0 unchanged; commit `265b2ee` | Thirty-four primary and eleven independent checks derive the free yield coefficient, multi-soliton sign family, arbitrary-target construction, radiative two-body kinematics, and source-oracle ceiling; the source supplies no multi-Skyrmion solution or reaction/deposition model, its empirical and engine comparators imply distinct nonunit coefficients, and its two predecessor consumers disagree, while 25 canonical and 17 governance tests, the 108905-comparison engine parity replay, and the single integrated gate pass all 793 tests | Audit NY3's coherence-nucleation gate without importing pending BD1/BD3 barrier claims, treating NY2's rejected physical yield as a payload, or inferring an N-squared coherent energy law and firing mechanism from phase-lock rhetoric |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -192,7 +192,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 136 bridge units remain pending, 3 are migrated, 71 are qualified, 7 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 135 bridge units remain pending, 3 are migrated, 71 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -638,11 +638,23 @@ universal quantum correction, and NY1 computes neither that correction nor a
 multi-Skyrmion yield. Both exact routes use no numerical quadrature or NumPy
 integration alias.
 
+P085 proves that NY2 merely relabels C-SK-001's conditional energy coordinate
+as an event payload and sets the missing dimensionless coefficient in
+`Q=kappa*U` to one. Generic two- and four-soliton coefficients allow positive,
+zero, or negative release and realize every positive target; NY2 supplies none
+of the required configurations, reaction-state assignments, or corrections.
+The D+D radiative channel also requires a photon, recoil, branching, and
+deposition model. The empirical 23.86 MeV and imported engine 24 MeV values
+infer different nonunit coefficients, while the predecessor engine and
+engineering consumer retain inconsistent literals. NY2 is therefore duplicate
+evidence for C-SK-001, not a nuclear-yield claim or implemented replacement.
+Both exact routes use no numerical quadrature or NumPy integration alias.
+
 ## Canonicalization
-The registry, `v0.74.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred two accepted claims. P001 through P084 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 136 pending, 0 partial, 3 migrated, 71 qualified, 7 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.74.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred two accepted claims. P001 through P085 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 135 pending, 0 partial, 3 migrated, 71 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 136 pending, 3 migrated, 71 qualified, 7 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is NY2. Its generated synopsis takes NY1's conditional 25.69 MeV ratio as a derived zero-parameter scale, declares the unknown multi-Skyrmion coefficient to be order one, then uses the unit itself as a successor to the engine's imported 24 MeV value because it lies near a 23.86 MeV reaction comparator. NY1 is now terminal duplicate evidence for C-SK-001 rather than authority for that physical reading, and HE4 supplies no accepted nuclear-state or engine mechanism. P085 must freeze literal-promotion, dimensional-analysis, arbitrary-coefficient, multi-soliton, reaction-map, engine-consumer, comparator, and nonduplication candidates before opening the NY2 body or output. It must keep the binding coefficient symbolic, blind the reaction and engine values until the state map, mass functional, units, and structural selection criteria are fixed, and reject choosing coefficient one merely because the resulting scale is close. A positive nuclear-yield claim requires an accepted multi-soliton solution, state identification, binding-energy difference, and consumer implementation; absence of those objects must lead to a terminal source classification and continuation, not a reduced objective.
+The effort remains active. D4 is discharged, but D1 remains open with 135 pending, 3 migrated, 71 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is NY3. Its generated synopsis proposes a medium-scale Arrhenius gate, asserts coherent concentration proportional to `N^2` versus incoherent concentration proportional to `N`, and then assigns NY2's nuclear-scale value as the fired-channel payload. Its declared BD1 and BD3 barrier dependencies remain pending, while NY1 and NY2 are duplicate evidence for only C-SK-001 and supply no accepted nuclear channel. P086 must freeze literal-promotion, conditional scaling, phase-coherence, stochastic-rate, threshold, barrier-dependency, payload-firewall, arbitrary-target, and nonduplication candidates before opening the NY3 body or output. It must keep the single-event scale, coherence law, effective temperature, barrier, prefactor, state map, and payload independent; neither dimensional algebra nor an Arrhenius monotonicity identity can establish a discharge mechanism. Any positive gate claim requires dependency-closed medium dynamics, an operational coherence observable, a derived barrier and rate law, and a channel-coupling consumer. Missing physical objects must yield a terminal source classification and continuation, not a reduced objective.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
