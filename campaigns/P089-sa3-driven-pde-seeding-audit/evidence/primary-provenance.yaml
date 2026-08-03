@@ -1,0 +1,42 @@
+campaign: P089
+base_release: v0.76.0
+base_commit: e7cd684
+scientific_base_commit: aee1890
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+frozen_inputs:
+  normalized_proposal_sha256: 5e983910488a13104d250e3cb8e3d35c7f308126926ed282909a7e32a911e464
+  accepted_proposal_sha256: 51a3172e5ad1aa16ca578b66dc49101d3b68fd0512a9d5933eaba16d2b8755c5
+  freeze_sha256: 8e7f165f0f377116d44fa285f31826a5f4782b4ef5778f0c81aa7580b861f918
+  source_sha256: 3aec2a8bca448f28bceb175e44ff2a6c3dcba3b57c22a0dcbd93f8d405a17e8f
+verified_outputs:
+  primary_verifier:
+    path: campaigns/P089-sa3-driven-pde-seeding-audit/verify.py
+    sha256: a054bb6dc0a5c6fce0838a7a4e7d11d01be1b3fc5fdda01d7098e81807eba2f9
+    tally: ALL 22 CHECKS PASS [P089]
+  independent_review:
+    path: campaigns/P089-sa3-driven-pde-seeding-audit/reviews/independent_adaptive_review.py
+    sha256: e5b0f7f9e110529c45942f524a1866fe6e6c74e21c883785b6da9dbb0ab04939
+    tally: ALL 6 CHECKS PASS [P089-INDEPENDENT]
+evidence_hashes:
+  source_reproduction: 31e812dcbd8f553d0cf7341fb40724362d055b693dbfff88c9a9b6dd6ccaa437
+  source_audit: 6ffeb6879c0161aa77664384e21c3f48d57bea08b82ba74390da386e284d5331
+  consumer_audit: 0c8382b895d5de26a2ff8c41d5a10eaf6fd6c991c3f180a52035daabd6594dce
+  candidate_comparison: 7a3efb4cb5c666fcb5d003170b1866343204d687a53847d4d2bbf85486c4cc94
+  fine_adaptive_refinement: 9473392ab9cb9d108f9040e237b906917008c024a9afc14a60c5a75327a1d7cd
+  source_adjudication: f069484e7d09648709fa6a3edcb89f1725aeb3cf8f27f22bfc86b3add0d87b30
+  impact_analysis: 1e7019633110c8cc94b566fcde61f5e759d30bbfbd2fec7ebec58e5efc1d341e
+canonical_hashes:
+  sine_gordon_1d: 675ca4f29aa256e67d37243ffebe20e3b65a605b2a095415e84b36a14c7f6c3e
+  sine_gordon_1d_tests: 32fa3b080777663bd572e1805702b54ef21c724c62442bf621ad6961839c71e2
+  claim_review: f9534259ae4a98e23afcc48981f04e60f08edc6a652c8b4e5ef7dfea0f54921c
+claim_delta: [C-PDE-011]
+release_delta: v0.77.0
+oracle_classes:
+  exact: forced energy balance, Gaussian-sine norm, exact-family planted states
+  primary_numeric: centered leapfrog with grid/domain/sponge/target mutations
+  independent_numeric: adaptive DOP853, rising crossings, timestep approach, half-grid route
+  source: read-only five-check regression and AST audit
+integration_policy: >-
+  All canonical sampled integration uses trapezoid_integral. The direct NumPy
+  names occur only as a pinned source-compatibility assertion; no new framework
+  computation depends on a version-specific alias.

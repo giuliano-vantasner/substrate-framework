@@ -1,0 +1,12 @@
+attempt: 0003
+candidates: [B, D]
+status: energy_ledger_endpoint_repaired
+failure: >-
+  The first implementation reconstructed final leapfrog velocity with a raw
+  backward difference, manufacturing an O(dt) final-energy residual.
+diagnosis: numerical_diagnostic
+repair: >-
+  Reconstruct endpoint velocity with the final acceleration and centered
+  damping denominator. Residuals then decrease fourfold under timestep halving.
+scientific_effect: No source trajectory or classifier threshold changed.
+unit_test: test_bulk_leapfrog_energy_ledger_has_second_order_time_refinement

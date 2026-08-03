@@ -1,0 +1,14 @@
+attempt: 0005
+candidates: [C, D, E, G]
+status: independent_verification_passed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P089-sa3-driven-pde-seeding-audit/reviews/independent_adaptive_review.py
+process_exit_status: 0
+terminal_tally: ALL 6 CHECKS PASS [P089-INDEPENDENT]
+independent_objects:
+  - adaptive DOP853 time integration
+  - zero-crossing frequency estimator
+  - source-work energy ledger
+  - timestep approach to the adaptive frequency
+fine_grid_cross_check: evidence/fine-adaptive-refinement.yaml

@@ -1,0 +1,73 @@
+id: P089
+base_release: v0.76.0
+base_commit: e7cd684
+scientific_base_commit: aee1890
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SA3]
+question: >-
+  Determine whether SA3 supplies a well-posed, converged, mutation-sensitive
+  driven sine-Gordon initial-boundary-value problem whose post-drive state is
+  demonstrably a bound C-SG-001 breather seeded preferentially by a
+  structurally defined fast or resonant deposition, or only a source-specific
+  finite-box trajectory and classifier; terminally adjudicate every subclaim
+  and promote distinct reusable content only.
+invariants:
+  - C-SG-001 and C-SG-002 describe an exact undriven 1+1 breather and its normalized Hamiltonian energy; they supply no external source, formation probability, plasma map, or seeding efficiency.
+  - C-SG-015 is a fixed-position field-trace Fourier theorem and explicitly supplies no susceptibility, transfer function, deposition law, or population.
+  - SA1 and SA2 are terminally qualified; their rejected susceptibility, population, voltage-slew, breakdown, and engine readings are unavailable dependencies.
+  - C-PDE-001 is resolution-bounded evidence for one declared 3+1 radial Gaussian IVP and explicitly is not a lift of the exact 1+1 breather; it may inform numerical standards but not establish SA3's object.
+  - For phi_tt-phi_xx+sin(phi)=J with any declared damping or sponge, the exact energy ledger must retain source work, damping dissipation, and boundary flux with their signs and conventions explicit.
+  - A supplied localized source term is a declared forcing model unless an accepted action or interaction derives its shape, coefficient, units, and map from the physical deposition variables.
+  - A post-drive sub-gap central frequency or nonzero core energy alone does not identify a breather; the classifier must reject standing radiation, trapped box modes, kinks or kink pairs, residual forcing, sponge reflections, and generic oscillatory cores.
+  - Finite-box persistence is not asymptotic binding. Domain, sponge, mesh, timestep, duration, solver tolerance, diagnostic window, and source shutoff must be refined independently.
+  - Fast, slow, resonant, and off-resonant drives must be compared under a preregistered common normalization such as injected work, source norm, peak amplitude, or duration; changing several at once cannot identify the causal feature.
+  - No numerical or fitted output may select the waveform family, bound-state classifier, threshold, or pass tolerance after source values are inspected.
+allowed_imports:
+  - exact real, variational, Fourier, energy-balance, linearized Klein-Gordon, time-frequency, and dimensional algebra with explicit conventions
+  - C-SG-001 and C-SG-002 as the exact normalized undriven breather and energy only
+  - C-SG-011 and C-SG-012 only for declared topological/stress-energy identities and their boundary hypotheses
+  - C-SG-015 only for the exact undriven fixed-position temporal spectrum and its no-response ceiling
+  - C-PDE-001 only as a finite-time numerical-evidence standard and non-lift ceiling
+  - src/substrate_framework/numerics.py and sine_gordon_1d.py as reusable solver and diagnostic machinery, with claim-specific source, boundary, error, convergence, and physical verdicts still explicit
+  - P087 and P088 terminal adjudications as governance evidence; none of their rejected physical readings may be imported
+  - SA3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce SA3 literally and test whether its driven equation, source, numerical method, post-drive classifier, dependencies, and consumer closure support its full seeding headline.
+  - id: B
+    description: Derive the exact forced-and-damped sine-Gordon energy balance, including boundary flux, source work, sponge dissipation, and source-shutoff specialization.
+  - id: C
+    description: Validate any late-time breather classifier first on the exact C-SG-001 family and on planted nonbreather counterstates before applying it to the source trajectory.
+  - id: D
+    description: Reconstruct SA3's declared driven IBVP with solver-success, mesh, timestep, domain, sponge, duration, tolerance, and independent-method evidence while preserving its finite-time scope.
+  - id: E
+    description: Compare late-time localization, energy, frequency, phase-space shape, residual, radiation flux, and exact-breather projection classifiers and reject any classifier that accepts standing radiation or residual forcing.
+  - id: F
+    description: Compare fast, slow, resonant, off-resonant, DC, phase-shifted, and amplitude-scaled drive families under predeclared equal-work and alternative normalization controls.
+  - id: G
+    description: Mutate source amplitude, spatial localization, temporal frequency, duration, shutoff, damping, sponge, boundary, initial state, nonlinearity, and classifier inputs and require the corresponding verdict to change.
+  - id: H
+    description: Require an accepted physical interaction and deposition-to-source map before interpreting a declared J(x,t) as voltage slew, plasma absorption, object formation, or a seeded population.
+  - id: I
+    description: Trace SA4, engineering, and C035 consumers and separate an implemented numerical source experiment from a physical trigger or threshold law.
+  - id: J
+    description: Compare surviving exact or numerical content against C-SG-001/002/011/012/015, C-PDE-001, and existing 1D/numerics APIs; add nothing without distinct content and a governed consumer.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted closure for source action, interaction, physical deposition map, energy work, post-drive formation, and consumer
+  - well-posed PDE, domain, initial/boundary data, source shutoff, sponge, discretization, floating precision, solver success, tolerances, and stopping rule
+  - exact energy signs, dimensions, source-work accounting, boundary flux, damping dissipation, known limits, and mutation sensitivity
+  - convergent late-time localization and bound-state classification that rejects planted standing waves, radiation, residual forcing, kinks, and source-shaped transients
+  - parameter economy and fair drive comparison under frozen normalization rather than raw amplitude or duration differences
+  - nonduplication against accepted sine-Gordon and numerical claims plus an actual governed consumer
+claims_proposed:
+  - no new claim unless Candidate J identifies a distinct exact forced-energy theorem or resolution-bounded driven-formation object with complete assumptions, canonical implementation, sensitive verification, and a governed consumer
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. The generated queue synopsis
+  has exposed a localized sech source, fast or resonant versus slow deposition,
+  a nonlinear driven sine-Gordon PDE, and absorbing sponge language, but until
+  the freeze the SA3 body, equations beyond that synopsis, source parameters,
+  grids, timesteps, boundary implementation, checks, outputs, thresholds,
+  classifiers, and consumer code remain closed.
+status: accepted

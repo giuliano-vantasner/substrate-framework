@@ -1,0 +1,11 @@
+attempt: 0002
+candidates: [D]
+status: technical_representation_failure_repaired
+route: exploratory_DOP853
+failure: >-
+  A floating arange produced a final t_eval sample just beyond t_span, and
+  solve_ivp rejected the sample grid before integration.
+diagnosis: implementation
+repair: Use an explicit linspace whose first and last samples equal t_span.
+scientific_effect: none
+next_attempt: Re-run the intended continuum equation with validated sample times.

@@ -38,6 +38,11 @@ Work proceeds through these dependency-ordered steps and continues after failed 
 ## Attempts
 Attempts are append-only and individually reproducible. A failed row must name the diagnosed mechanism and next materially different attempt.
 
+When drift or fragmented campaign context may explain the failure, the next
+attempt also names the nearest accepted analogue, the source-verified
+construction that can transfer, and the mismatch that prevents literal reuse.
+Do not use memory prose or a generic external method as substitute authority.
+
 | Attempt | Candidate or repair | Artifact and command | Verdict | Mechanism | Next attempt |
 | --- | --- | --- | --- | --- | --- |
 | 0001 |  |  |  |  |  |

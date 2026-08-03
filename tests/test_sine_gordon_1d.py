@@ -4,14 +4,23 @@ import pytest
 from substrate_framework import (
     SolverTolerances,
     endpoint_charge_coordinate,
+    evolve_bulk_driven_sine_gordon_leapfrog,
+    evolve_bulk_driven_sine_gordon_mol,
     evolve_driven_sine_gordon_leapfrog,
     evolve_driven_sine_gordon_mol,
     evolve_periodic_sine_gordon_leapfrog,
     evolve_periodic_sine_gordon_mol,
+    fit_rest_breather_center_trace,
+    fit_rest_breather_snapshot,
+    gaussian_sine_full_line_l2,
     gaussian_sine_neumann_drive,
+    gaussian_sine_trace,
+    homogeneous_dirichlet_sine_gordon_energy,
+    localized_sech_bulk_source,
     moving_breather_samples,
     sampled_boundary_sign_correlation,
 )
+from substrate_framework.numerics import trapezoid_integral
 
 
 def test_moving_breather_samples_match_independent_finite_differences() -> None:
@@ -196,3 +205,156 @@ def test_evolvers_reject_inconsistent_grid_or_courant_step() -> None:
             0.2,
             bulk_start=0.5,
         )
+
+
+def test_gaussian_sine_full_line_norm_matches_independent_quadrature() -> None:
+    amplitude = 1.7
+    omega = 0.8
+    width = 2.1
+    phase = 0.37
+    trace = gaussian_sine_trace(amplitude, omega, -0.4, width, phase)
+    time = np.linspace(-18.0, 18.0, 20001)
+    samples = np.asarray([trace(float(value)) for value in time])
+    exact = gaussian_sine_full_line_l2(amplitude, omega, width, phase)
+    assert trapezoid_integral(np.square(samples), time) == pytest.approx(
+        exact,
+        rel=2.0e-12,
+    )
+    assert gaussian_sine_full_line_l2(
+        amplitude,
+        omega,
+        width,
+        phase + np.pi,
+    ) == pytest.approx(exact)
+    assert gaussian_sine_full_line_l2(
+        amplitude,
+        omega,
+        width,
+        phase + 0.5 * np.pi,
+    ) != pytest.approx(exact, rel=1.0e-3)
+
+
+def test_bulk_source_and_dirichlet_energy_keep_conventions_explicit() -> None:
+    coordinate = np.linspace(-2.0, 2.0, 9)
+    trace = gaussian_sine_trace(2.0, 0.7, 0.2, 1.3, 0.4)
+    source = localized_sech_bulk_source(coordinate, 0.8, trace)
+    instant = 0.9
+    assert source(instant) == pytest.approx(
+        trace(instant) / np.cosh(0.8 * coordinate)
+    )
+
+    field = 0.2 * np.sin(np.pi * (coordinate - coordinate[0]) / 4.0)
+    velocity = np.zeros_like(field)
+    assert homogeneous_dirichlet_sine_gordon_energy(field, velocity, 0.5) > 0.0
+    field[0] = 0.1
+    with pytest.raises(ValueError, match="homogeneous Dirichlet"):
+        homogeneous_dirichlet_sine_gordon_energy(field, velocity, 0.5)
+
+
+def test_zero_bulk_driven_problem_is_exact_for_both_methods() -> None:
+    coordinate = np.linspace(-4.0, 4.0, 81)
+    zero = np.zeros_like(coordinate)
+    damping = np.where(np.abs(coordinate) > 3.0, 0.2, 0.0)
+    def source(_time: float) -> np.ndarray:
+        return np.zeros_like(coordinate)
+    leapfrog = evolve_bulk_driven_sine_gordon_leapfrog(
+        coordinate,
+        zero,
+        zero,
+        source,
+        damping,
+        1.0,
+        0.04,
+        core_radius=1.0,
+        sample_interval=0.1,
+    )
+    adaptive = evolve_bulk_driven_sine_gordon_mol(
+        coordinate,
+        zero,
+        zero,
+        source,
+        damping,
+        np.linspace(0.0, 1.0, 11),
+        core_radius=1.0,
+    )
+    for result in (leapfrog, adaptive):
+        assert result.final_field == pytest.approx(zero)
+        assert result.final_velocity == pytest.approx(zero)
+        assert result.cumulative_source_work == 0.0
+        assert result.cumulative_damping_loss == 0.0
+        assert result.energy_balance_residual == 0.0
+
+
+def test_bulk_leapfrog_energy_ledger_has_second_order_time_refinement() -> None:
+    coordinate = np.linspace(-8.0, 8.0, 161)
+    zero = np.zeros_like(coordinate)
+    damping = np.where(np.abs(coordinate) > 6.0, 0.1, 0.0)
+    source = localized_sech_bulk_source(
+        coordinate,
+        1.0,
+        gaussian_sine_trace(0.1, 0.7, 1.5, 0.6),
+    )
+    residuals = []
+    for time_step in (0.04, 0.02, 0.01):
+        result = evolve_bulk_driven_sine_gordon_leapfrog(
+            coordinate,
+            zero,
+            zero,
+            source,
+            damping,
+            4.0,
+            time_step,
+            core_radius=2.0,
+            sample_interval=0.1,
+        )
+        residuals.append(abs(result.energy_balance_residual))
+    assert residuals[1] < residuals[0] / 3.8
+    assert residuals[2] < residuals[1] / 3.8
+    assert residuals[-1] < 3.0e-8
+
+
+def test_breather_trace_fit_recovers_on_shell_frequency_and_rejects_scaling() -> None:
+    time = np.linspace(10.0, 70.0, 1001)
+    omega = 0.47
+    phase = 0.3
+    relative_time = time - time[0]
+    inverse_width = np.sqrt(1.0 - omega**2)
+    trace = 4.0 * np.arctan(
+        inverse_width / omega * np.sin(omega * relative_time + phase)
+    )
+    exact_fit = fit_rest_breather_center_trace(time, trace)
+    scaled_fit = fit_rest_breather_center_trace(time, 0.6 * trace)
+    assert exact_fit.angular_frequency == pytest.approx(omega, abs=1.0e-10)
+    assert exact_fit.phase_at_window_start == pytest.approx(phase, abs=1.0e-10)
+    assert exact_fit.relative_rms_error < 1.0e-12
+    assert exact_fit.fitted_energy == pytest.approx(16.0 * inverse_width)
+    assert scaled_fit.relative_rms_error > 0.5
+
+
+def test_breather_snapshot_fit_uses_full_on_shell_phase_space_shape() -> None:
+    coordinate = np.linspace(-12.0, 12.0, 481)
+    omega = 0.53
+    phase = 1.1
+    field, velocity, _gradient = moving_breather_samples(
+        coordinate,
+        phase / omega,
+        omega,
+    )
+    exact_fit = fit_rest_breather_snapshot(
+        coordinate,
+        field,
+        velocity,
+        fit_radius=8.0,
+    )
+    scaled_fit = fit_rest_breather_snapshot(
+        coordinate,
+        0.7 * field,
+        0.7 * velocity,
+        fit_radius=8.0,
+    )
+    assert exact_fit.angular_frequency == pytest.approx(omega, abs=1.0e-10)
+    assert np.sin(exact_fit.phase) == pytest.approx(np.sin(phase), abs=1.0e-10)
+    assert np.cos(exact_fit.phase) == pytest.approx(np.cos(phase), abs=1.0e-10)
+    assert exact_fit.joint_relative_l2_error < 1.0e-11
+    assert exact_fit.gradient_relative_l2_error < 2.0e-3
+    assert scaled_fit.joint_relative_l2_error > 0.1

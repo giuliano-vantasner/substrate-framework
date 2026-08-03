@@ -109,6 +109,12 @@ After failure, choose the next action from the diagnosis:
 - target was misstated → correct the claim while preserving the user's objective;
 - accepted foundation appears inconsistent → open a separate foundational-revision proposal.
 
+Before inventing a replacement, inspect the nearest accepted campaign or
+canonical module with a related obligation. Verify its source, extract the
+construction and selection logic that actually worked, and record the
+transferable assumptions and the present mismatch. External research may
+supplement this step but does not replace framework-context reconciliation.
+
 Do not stop because routes are difficult or numerous. Generate another materially different route.
 
 ## Phase 5 — audit the verifier

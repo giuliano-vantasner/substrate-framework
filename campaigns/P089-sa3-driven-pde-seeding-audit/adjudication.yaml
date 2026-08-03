@@ -1,0 +1,83 @@
+campaign: P089
+title: SA3 driven sine-Gordon source, formation, and classifier audit
+source_baseline: substrate@6d1f4e0
+source_units: [SA3]
+base_release: v0.76.0
+release_after_adjudication: v0.77.0
+adjudicated_at: '2026-08-04T06:25:00Z'
+selected_candidates:
+  - id: B
+    reason: The exact forced-and-damped energy ledger fixes what deposited energy means but duplicates no accepted claim.
+  - id: C
+    reason: A constrained exact-family temporal and phase-space classifier replaces core energy plus raw FFT.
+  - id: D
+    reason: The exact parameter-pinned fast IBVP survives spatial, timestep, domain, sponge, and independent-method evidence.
+  - id: E
+    reason: The post-drive state is close to the exact rest-breather family only in a finite-time resolution-bounded sense.
+  - id: G
+    reason: Target, grid, timestep, domain, sponge, exact-state, standing-wave, kink, and method mutations are sensitive.
+  - id: H
+    reason: No accepted voltage, plasma, absorption, source-action, or formation-to-population map exists.
+  - id: I
+    reason: Named physical consumers do not import the trajectory and remain outside accepted closure.
+  - id: J
+    reason: The exact forced trajectory and its pure reusable solver/classifier APIs are distinct from accepted undriven and radial claims.
+competing_candidates:
+  - id: A
+    decision: rejected_literal_promotion
+  - id: F
+    decision: rejected_fast_slow_selectivity_mechanism
+claims:
+  - id: C-PDE-011
+    verification: simulation_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+reviewed_existing:
+  - id: C-SG-001
+    decision: unchanged_exact_undriven_breather
+  - id: C-SG-002
+    decision: unchanged_exact_energy_family
+  - id: C-SG-012
+    decision: unchanged_exact_stress_energy_identity
+  - id: C-SG-015
+    decision: unchanged_undriven_trace_and_no_response_ceiling
+  - id: C-PDE-001
+    decision: unchanged_separate_3d_radial_finite_time_branch
+source_subclaims:
+  SA3.1: partly_promoted_only_for_the_exact_parameter_pinned_fast_IBVP
+  SA3.2: partly_promoted_after_stronger_exact_family_classification
+  SA3.3: rejected_unequal_work_and_nonvacuum_slow_state
+  SA3.4: rejected_raw_FFT_bin_lock_replaced_by_real_refinement
+  SA3.5: rejected_second_core_energy_exceeds_single_breather_maximum
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  adaptive_sample_failure: attempts/0002/result.yaml
+  energy_ledger_repair: attempts/0003/result.yaml
+  primary_route: attempts/0004/result.yaml
+  independent_route: attempts/0005/result.yaml
+  integrated_gate_attempt: attempts/0006/result.yaml
+  record_repair_attempt: attempts/0007/result.yaml
+  independent_review: reviews/independent_adaptive_review.py
+  fine_adaptive_refinement: evidence/fine-adaptive-refinement.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-PDE-011-review.md
+source_disposition:
+  SA3: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA3_driven_sg_pde_seeding.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P089-sa3-driven-pde-seeding-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P089-sa3-driven-pde-seeding-audit/reviews/independent_adaptive_review.py
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon_1d.py tests/test_numerics.py tests/test_governance.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted

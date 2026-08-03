@@ -1,0 +1,14 @@
+attempt: 0004
+candidates: [B, C, D, E, F, G]
+status: primary_verification_passed
+command: PYTHONPATH=src .venv/bin/python proposals/P089-sa3-driven-pde-seeding-audit/verify.py
+process_exit_status: 0
+terminal_tally: ALL 22 CHECKS PASS [P089]
+surviving_object: exact-parameter finite-time fast-source breather-like trajectory
+rejected_objects:
+  - equal deposited energy
+  - slow drive relaxes to vacuum or forms nothing
+  - raw FFT frequency convergence
+  - robust proxy-target window
+  - second-frequency single breather
+  - physical voltage-slew or plasma mechanism

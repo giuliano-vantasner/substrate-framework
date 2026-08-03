@@ -1,0 +1,68 @@
+campaign: P089
+selection_order:
+  - accepted dependency and physical-source closure
+  - well-posed PDE and exact energy-work ledger
+  - exact-family classifier sensitivity
+  - spatial timestep domain sponge and method refinement
+  - fair drive normalization and load-bearing mutations
+  - nonduplication and governed framework role
+candidates:
+  - id: A
+    decision: rejected_literal_promotion
+    reason: >-
+      Three headline predicates fail directly, the source's frequency evidence
+      is bin locked, and SA1/SA2 physical-response dependencies are rejected.
+  - id: B
+    decision: selected_as_existing_exact_dependency
+    reason: >-
+      The forced energy balance is exact and load bearing, but follows directly
+      from C-SG-012 and warrants no duplicate exact claim.
+  - id: C
+    decision: selected
+    reason: >-
+      A constrained center-trace fit plus a full field/velocity snapshot fit
+      accepts planted exact breathers and rejects rescaling, standing radiation,
+      and a kink; source core-energy-plus-FFT checks alone do not.
+  - id: D
+    decision: selected_for_qualified_numeric_claim
+    reason: >-
+      The exact source-defined fast IBVP survives three spatial grids, timestep
+      refinement, domain extension, sponge mutations, and adaptive DOP853.
+  - id: E
+    decision: selected_with_finite_time_ceiling
+    reason: >-
+      The late fast state is close to the exact rest-breather family in temporal
+      and phase-space norms, but the evidence is finite-time and resolution
+      bounded and makes no asymptotic stability claim.
+  - id: F
+    decision: rejected_as_selectivity_mechanism
+    reason: >-
+      Equal full-line waveform norm is not equal work, the slow waveform is
+      truncated, and the exact proxy target 400 is a knife-edge: targets 380
+      and 420 fail the breather classifier.
+  - id: G
+    decision: selected
+    reason: >-
+      Target, mesh, timestep, domain, sponge, exact-state, standing-wave, kink,
+      and method mutations change or preserve the appropriate verdicts.
+  - id: H
+    decision: physical_mechanism_absent
+    reason: >-
+      No accepted voltage, plasma, absorption, or deposition-to-J interaction
+      fixes the declared source shape, coefficient, units, or population map.
+  - id: I
+    decision: consumers_qualified
+    reason: >-
+      SA4 and engineering use separate inserted trigger laws. LB3 and MC4 copy
+      numerical machinery but plant exact initial data and do not consume the
+      SA3 formation result.
+  - id: J
+    decision: selected_as_distinct_numeric_object
+    reason: >-
+      C-PDE-011 is the first governed finite-time bulk-forced 1+1 formation
+      trajectory and owns reusable Dirichlet bulk-source solvers and exact-family
+      classifiers; its exact energy identity is not duplicated.
+selection_basis: >-
+  Structural closure selects the exact-parameter numerical object and rejects
+  the broad seeding mechanism. Numerical closeness does not select the source
+  family, its proxy target, or a physical interpretation.

@@ -1,0 +1,32 @@
+campaign: P089
+source_unit: SA3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-25/bridge_SA3_driven_sg_pde_seeding.py
+sha256: 3aec2a8bca448f28bceb175e44ff2a6c3dcba3b57c22a0dcbd93f8d405a17e8f
+git_blob: dd8ae6fc142d201a8d3aa0045e73149ee2914e36
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA3_driven_sg_pde_seeding.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+reported_metrics:
+  primary_dx_0_05:
+    fast_proxy_norm: 400.0
+    slow_proxy_norm: 400.0
+    fast_late_core_mean: 15.4597
+    slow_late_core_mean: 0.2725
+    slow_fast_core_ratio: 0.0176
+    fast_relative_leak_slope: 3.30e-5
+    slow_relative_leak_slope: 6.92e-3
+    raw_fft_omega: 0.2790
+  refined_dx_0_025:
+    fast_late_core_mean: 15.674
+    slow_late_core_mean: 0.606
+    slow_fast_core_ratio: 0.0386
+    raw_fft_omega: 0.2793
+  second_drive_omega_0_6:
+    proxy_target: 700.0
+    fast_late_core_mean: 29.161
+    slow_late_core_mean: 0.830
+    raw_fft_omega: 0.2093
+reproduction_role: >-
+  Read-only regression evidence. A clean exit and five passing predicates do
+  not validate the headline or elevate the source above the accepted registry.

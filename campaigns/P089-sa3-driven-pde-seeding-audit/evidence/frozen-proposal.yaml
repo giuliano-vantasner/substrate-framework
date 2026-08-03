@@ -1,0 +1,26 @@
+campaign: P089
+frozen_before_source_opening: true
+proposal_path: proposals/P089-sa3-driven-pde-seeding-audit/proposal.yaml
+proposal_sha256: 5e983910488a13104d250e3cb8e3d35c7f308126926ed282909a7e32a911e464
+memory_contract_path: memory/vantasner/proposals/P089-sa3-driven-pde-seeding-audit.md
+memory_contract_sha256: 1715fd7b3fd4c1bd9f9b1e9a701588c02b50465d603d8510a69426171b00c9a2
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P089-sa3-driven-pde-seeding-audit.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+queue_synopsis_disclosure: >-
+  Generated navigation metadata had already exposed a normalized nonlinear
+  driven sine-Gordon PDE, a localized sech(eta*x) source, fast or resonant
+  versus slow deposition, absorbing quadratic sponge boundaries, and a claimed
+  bound core, plus candidate dependencies P3D1, SA1, and SA2. It did not open
+  the source implementation, complete equations, parameter values, grid,
+  timestep, boundaries, checks, output, thresholds, classifier, or consumers.
+comparators_blinded_at_freeze:
+  - SA3 source body, complete equations, literal checks, and executable output
+  - source amplitude, duration, phase, temporal family, and normalization
+  - spatial domain, mesh, timestep, precision, integrator, and stopping time
+  - sponge profile, boundary implementation, source shutoff, and energy budget
+  - late-time core radius, windows, FFT values, localization thresholds, and classifier logic
+  - fast, slow, resonant, off-resonant, and counterstate numerical outcomes
+  - downstream SA4, engineering, and C035 consumer implementation beyond already adjudicated ceilings

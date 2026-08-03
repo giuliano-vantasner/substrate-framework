@@ -1,0 +1,19 @@
+attempt: 0006
+candidates: [D, E, G, J]
+status: scientific_gate_passed_record_check_failed
+command: scripts/validate.sh && .venv/bin/python -m pytest && git diff --check
+process_exit_status: 2
+passing_results:
+  workflow_validator: WORKFLOW VALID with 105 accepted claims and 131 pending units
+  first_full_suite: 817 passed
+  second_full_suite: 817 passed
+failure: AGENTS.md line 36 had trailing whitespace in newly staged troubleshooting prose.
+diagnosis: record_formatting_and_validation_ceremony
+repair: >-
+  Remove the whitespace and consolidate the new guidance into the existing
+  continuation workflow. Preserve the already passing scientific boundary and
+  run only record-sensitive generation, skill, targeted, and diff checks.
+ceremony_note: >-
+  The standalone pytest command duplicated the suite already embedded in
+  scripts/validate.sh. AGENTS.md, the skill, and the effort template now state
+  one full suite per unchanged promotion boundary.

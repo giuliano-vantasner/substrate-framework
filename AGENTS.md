@@ -137,6 +137,13 @@ Attempts are bounded; the effort is not. Record attempts append-only and preserv
 5. Revisit the target when it was misstated, while preserving the user's actual objective.
 6. Open a separately governed foundational revision only when independent evidence requires it.
 
+Before inventing a replacement route, locate the nearest accepted campaign or
+canonical module that solved a related obligation. Verify it at source, extract
+the construction and selection logic that actually succeeded, and record both
+what transfers and what does not. External research may supplement that
+reconciliation, but a generic method is not a substitute for restoring the
+framework's dependency, invariant, convention, and consumer context.
+
 Do not lower the bar, inflate tolerances, convert a comparator into an input, or celebrate a no-go. A failure improves the next attempt; it does not finish the task.
 
 ## Memory discipline

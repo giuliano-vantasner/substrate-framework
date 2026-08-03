@@ -1,0 +1,13 @@
+attempt: 0001
+candidates: [A, C, D, E, F]
+status: source_reproduced_headline_partly_rejected
+source_unit: SA3
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA3_driven_sg_pde_seeding.py
+process_exit_status: 0
+terminal_tally: ALL 5 CHECKS PASS
+failure_mechanisms:
+  - The f-squared proxy is not PDE source work and the slow drive is truncated.
+  - Raw FFT outputs are fixed finite-window bins rather than frequency convergence.
+  - Radius-12 energy does not inspect the high-energy slow field outside the core.
+  - The second-frequency energy exceeds the one-breather maximum.
+next_attempt: Instrument work, damping, full energy, topology, and exact-family fits.

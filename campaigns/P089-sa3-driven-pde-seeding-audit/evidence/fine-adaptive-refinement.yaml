@@ -1,0 +1,25 @@
+campaign: P089
+route: independent_DOP853_half_grid
+command: >-
+  PYTHONPATH=src .venv/bin/python with evolve_bulk_driven_sine_gordon_mol on
+  dx=0.025, [-80,80], T=410, rtol=2e-8, atol=2e-10, max_step=0.025,
+  2564 diagnostic times, and the C-PDE-011 source/damping data
+process_exit_status: 0
+elapsed_seconds: 243.193
+function_evaluations: 204530
+metrics:
+  trace_omega: 0.25379551391043437
+  trace_relative_rms_error: 0.019635069928151328
+  snapshot_omega: 0.2512117954531988
+  snapshot_joint_relative_l2_error: 0.054641154560162115
+  late_core_mean: 15.65488587527834
+  final_core_energy: 15.625870353390841
+  final_total_energy: 16.278281969959487
+  source_work: 789.5721069956261
+  damping_loss: 773.2938227036011
+  energy_balance_residual: -2.3220654838951305e-6
+interpretation: >-
+  The half-grid adaptive route agrees with the dx=0.025 leapfrog frequency to
+  about 1.2 percent and independently preserves the exact-family verdict. It
+  was run once as the expensive scientific cross-check and is not duplicated
+  by the ordinary repository validation boundary.

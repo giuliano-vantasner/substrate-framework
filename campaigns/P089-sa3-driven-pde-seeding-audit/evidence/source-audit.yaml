@@ -1,0 +1,55 @@
+campaign: P089
+source_unit: SA3
+source_sha256: 3aec2a8bca448f28bceb175e44ff2a6c3dcba3b57c22a0dcbd93f8d405a17e8f
+equation:
+  declared: phi_tt - phi_xx + sin(phi) = J
+  source: A*sech(eta*x)*exp(-(t-t0)^2/(2*tau^2))*sin(omega*(t-t0))
+  initial_data: phi=0 and phi_t=0
+  boundary_data: homogeneous Dirichlet at plus and minus L
+  source_domain: 1+1 normalized dimensionless sine-Gordon
+numerics:
+  source_scheme: explicit centered leapfrog followed by a quadratic sponge update
+  source_courant: 0.4
+  source_grids: [0.05, 0.025]
+  source_domain_half_width: 160.0
+  source_sponge_width: 40.0
+  source_final_time: 410.0
+  source_late_window_start: 320.0
+  source_core_radius: 12.0
+  timestamp_defect: >-
+    The loop records phi_cur and its centered velocity at (n-1)*dt but appends
+    the label n*dt. Spacing is unchanged, but absolute phases and window edges
+    are shifted by one step.
+  frequency_defect: >-
+    The source applies raw FFT argmax without interpolation or an independent
+    estimator. Its reported primary values are bin 4 on both grids and the
+    second-frequency value is bin 3, so the claimed frequency stability is
+    finite-window bin locking rather than convergence.
+normalization:
+  source_name: deposited_energy
+  actual_quantity: full-line integral of f(t)^2
+  omitted_quantities: [field, field_velocity, spatial_source, source_work, damping_loss]
+  slow_window_truncation: >-
+    The slow Gaussian is centered at t=30 with width 40, but the PDE begins at
+    t=0. Its applied-window squared norm is about 347.97 rather than 400.
+  source_work_result: >-
+    Canonical instrumentation gives about 789.25 work units for the fast run
+    and 2641.92 for the slow run, so the source does not compare equal deposited
+    energy and the slow field receives more than three times the work.
+classifier:
+  source_inputs: [late mean radius-12 energy, relative slope, raw center FFT, exact breather energy]
+  omitted_guards: [full phase-space shape, topology, radiation, standing modes, work ledger, independent frequency estimator]
+  second_frequency_failure: >-
+    The reported second-frequency core mean 29.161 exceeds the maximum
+    C-SG-002 single-breather energy 16, so it cannot identify one breather.
+  slow_control_failure: >-
+    Full-field instrumentation finds a high-energy zero-net-winding
+    multi-transition state. A small radius-12 late tally is not relaxation to
+    vacuum and does not establish no soliton formation.
+subclaim_verdicts:
+  SA3.1: qualified_exact_parameter_fast_trajectory_only
+  SA3.2: qualified_after_exact_family_trace_and_snapshot_fit
+  SA3.3: rejected_unequal_work_and_nonvacuum_slow_state
+  SA3.4: rejected_source_fft_bin_lock_replaced_by_real_refinement
+  SA3.5: rejected_core_energy_above_single_breather_maximum
+headline_verdict: qualified

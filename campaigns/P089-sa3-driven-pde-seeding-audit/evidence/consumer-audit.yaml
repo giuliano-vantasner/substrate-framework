@@ -1,0 +1,36 @@
+campaign: P089
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+consumers:
+  SA4:
+    path: merged-framework/bridges/phase-25/bridge_SA4_threshold_saturation_guard.py
+    sha256: 55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e
+    verdict: >-
+      Imports no SA3 implementation and constructs threshold, integer count,
+      free gain, and saturation from the already rejected SA1/SA2 response story.
+  LB3:
+    path: merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py
+    sha256: 1b54ef5704fce1502464f44bd675c01824cfa48b6b98688b1df8f000d1030a2b
+    verdict: >-
+      Textually cites the SA3 leapfrog but duplicates its local stencil and
+      starts from an exact planted breather. It does not consume SA3 formation.
+  MC4:
+    path: merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+    sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+    verdict: >-
+      Textually cites SA3 diagnostics but duplicates the solver and plants an
+      exact physical-units breather. It neither imports nor validates SA3's source.
+  engineering_seeding_kernel:
+    path: engineering/seeding_kernel.py
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    verdict: >-
+      Implements the SA1/SA2 spectral kernel and no driven-PDE formation result.
+  engineering_pipeline:
+    path: engineering/dbd/pipeline.py
+    sha256: 5354b39d3bc25439a7f6e83c175474358b3104b2f844cc6aa3a2ee2a84439669
+    verdict: >-
+      Imports the noncanonical seeding kernel, not SA3 or a governed PDE source.
+governed_framework_role: >-
+  C-PDE-011 and the package tests are the first canonical consumers of the new
+  pure bulk-source evolution and exact-family classifier APIs. Pending LB3 and
+  MC4 remain future migration consumers and receive no authority here.
+physical_consumer_closure: absent

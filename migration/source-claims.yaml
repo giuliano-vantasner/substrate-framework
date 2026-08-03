@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 132
-  qualified: 74
+  pending_adjudication: 131
+  qualified: 75
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5531,8 +5531,32 @@ units:
   dynamic_check_calls: 5
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-PDE-011
+  qualification: SA3 contains one exact parameter-pinned dimensionless fast-source IBVP whose late state
+    is close to the exact rest-breather family under temporal, phase-space, spatial, timestep, domain,
+    sponge, energy-ledger, adaptive-method, and mutation checks. Its broader seeding mechanism does not
+    survive. The declared integral of f squared is a waveform proxy, not deposited PDE energy; the applied
+    slow waveform is truncated and receives more than three times the actual source work. The slow run
+    ends in a high-energy eight-transition state rather than vacuum. Source frequencies are raw locked
+    FFT bins, the second-frequency core energy exceeds the one-breather maximum, and target mutations
+    380 and 420 expose the target 400 branch as narrow rather than robust. No accepted voltage, plasma,
+    absorption, probability, population, or physical dV/dt map is supplied.
+  evidence:
+  - campaigns/P089-sa3-driven-pde-seeding-audit/reviews/source_adjudication.md
+  - campaigns/P089-sa3-driven-pde-seeding-audit/evidence/source-reproduction.yaml
+  - campaigns/P089-sa3-driven-pde-seeding-audit/evidence/source-audit.yaml
+  - campaigns/P089-sa3-driven-pde-seeding-audit/evidence/consumer-audit.yaml
+  - campaigns/P089-sa3-driven-pde-seeding-audit/evidence/candidate-comparison.yaml
+  - campaigns/P089-sa3-driven-pde-seeding-audit/evidence/fine-adaptive-refinement.yaml
+  - campaigns/P089-sa3-driven-pde-seeding-audit/attempts/0004/result.yaml
+  - campaigns/P089-sa3-driven-pde-seeding-audit/attempts/0005/result.yaml
+  - memory/vantasner/decisions/C-PDE-011-review.md
+  note: P089 adds pure bulk-source Dirichlet evolvers, exact Gaussian-source normalization, source-work
+    and damping ledgers, and constrained exact-family temporal and phase-space classifiers. Sampled integration
+    uses the shared trapezoid_integral compatibility layer; no new direct version-specific NumPy integration
+    call is introduced.
 - source_unit: SA4
   phase: phase-25
   path: merged-framework/bridges/phase-25/bridge_SA4_threshold_saturation_guard.py

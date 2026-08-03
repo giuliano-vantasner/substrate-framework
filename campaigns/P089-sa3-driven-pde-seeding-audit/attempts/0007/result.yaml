@@ -1,0 +1,20 @@
+attempt: 0007
+candidates: [D, E, G, J]
+status: promotion_record_gate_passed
+commands:
+  - git diff --check
+  - .venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py .agents/skills/physics-erdos-loop
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - .venv/bin/python scripts/render_docs.py --check
+  - .venv/bin/python scripts/render_memory.py --check
+  - .venv/bin/python -m pytest -q tests/test_sine_gordon_1d.py tests/test_repository_validation.py
+process_exit_status: 0
+targeted_tally: 19 passed
+repository_tally: WORKFLOW VALID with 105 accepted claims and 131 pending units
+full_suite_basis: attempts/0006/result.yaml records 817 passing tests on the unchanged scientific tree
+self_improvement: >-
+  Troubleshooting guidance is consolidated into existing continuation phases
+  and the effort template rather than appended as a parallel section. The
+  validation boundary explicitly forbids repeating scripts/validate.sh's full
+  pytest suite.
+debt: []
