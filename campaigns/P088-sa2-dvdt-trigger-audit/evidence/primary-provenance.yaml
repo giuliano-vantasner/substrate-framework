@@ -1,0 +1,55 @@
+campaign: P088
+base_release: v0.76.0
+base_commit: 650120c
+scientific_base_commit: c77cae6
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+frozen_inputs:
+  proposal_sha256: 2254bfa45353d7e21b20876ff84fc8a4c169218a3dfa5ed730f43ee7fdc71c41
+  freeze_sha256: bd3ae087eb10f348daf02b6fb944266584bddf5d4d5ba84bb68f2e36735b74ac
+  memory_contract_sha256: b8aa36fb065c4e289c4ee061a7424fe3b6f84d769a74a98205c8c672ed82f4c0
+  source_sha256: 4772f0e52f08e68197662383efe2ee91426769b1281dc2db1d20aa40c8a8398e
+  pending_SA4_sha256: 55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e
+  engineering_mirror_sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+  nucleation_consumer_sha256: bad798b39d850ecf92a97e25bfb0341ef7ae80b036c26a88037efdd618d8d3b8
+  rung174_sha256: e0f470201313c76c77c54c0e027a01189180561d49f94fe1ef88bfe2f18a317d
+  rung175_sha256: b895622627bece5a154717b7aaab06cd0add9ed80a7c1643035c06c91fb3499c
+verified_outputs:
+  primary_verifier:
+    path: campaigns/P088-sa2-dvdt-trigger-audit/verify.py
+    sha256: 02a357850484715be5fd772776473ff7cb30761cab28fb4551682999b55b8eac
+    size_bytes: 16496
+    tally: ALL 37 CHECKS PASS
+  independent_review:
+    path: campaigns/P088-sa2-dvdt-trigger-audit/reviews/independent_transform_waveform_review.py
+    sha256: dec3fe6f74fb66fc54b762933cc98188e548fd57eb6fe02131c27606a6c647f2
+    size_bytes: 7393
+    tally: ALL 14 CHECKS PASS
+evidence_hashes:
+  source_reproduction: 527c9efc2a550f9473fbe2549f10a7d21fe8f91bcac1dd939a0ab406cdb6507c
+  source_audit: e06bb70ed6109162f1f4b18276b0c18064abfd32c9998e6291aba072abc78df5
+  consumer_audit: ac47b930e5662928dd538178f83ca760f999eec0929b8fc360976506d74c4166
+  candidate_comparison: 9858f0cdc9ecdddcff611348946e099788800cfe1a4518751242bcae7b2361e5
+  source_adjudication: 985e716a5f9d534226a2a1ed7bec000f7ea98320a10c7c0491121df5e80eb964
+  impact_analysis: 5c3aee00f6215e4efa57d91d4375089cd9183dad94bcca5150be65c35c70df85
+accepted_claims_used:
+  C-SG-015: undriven fixed-position field-trace Fourier theorem and explicit no-response ceiling
+  C-MED-001: conditional co-scaled constitutive ansatz only
+  C-DIM-002: coefficient and unit ceiling only
+  C-DIM-003: imported physical-coordinate ceiling only
+oracle_classes:
+  exact: >-
+    SymPy Gaussian completion and ordered limits, finite-window transform,
+    power-spectrum expansion, constitutive product rule, Fourier endpoint
+    ledger, spectral-family derivatives and limits, inverse Gaussian transform,
+    same-slew counterfamily, AST mutations, and hash-pinned dependency audit.
+  independent: >-
+    Fresh symbolic reconstruction plus 40-digit mpmath regression for opposite
+    inserted-versus-fixed-peak overlap trends.
+  source: Read-only twelve-check regression only.
+  external_consumers: Failed compatibility and optional-dependency replays plus structural audits.
+integration_policy: >-
+  Primary exact work uses no numerical quadrature and no NumPy integration
+  alias. The independent trend regression uses mpmath.quad. Accepted sampled
+  framework work remains routed through trapezoid_integral.
+claim_delta: none
+release_delta: none

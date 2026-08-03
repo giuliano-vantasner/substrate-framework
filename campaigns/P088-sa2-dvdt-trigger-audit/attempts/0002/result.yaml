@@ -1,0 +1,16 @@
+attempt: 0002
+candidate: H
+status: verifier_representation_failure_preserved
+command: PYTHONPATH=src .venv/bin/python proposals/P088-sa2-dvdt-trigger-audit/verify.py
+process_exit_status: 1
+passed_before_failure: 28
+failed_check: same-maximum-slew sinusoids can have different band overlap
+diagnosis: >-
+  SymPy left positivity of S^2*(1-exp(-16)/9) undecided, so `.is_positive`
+  returned None despite positive S. The countermodel was correct; its boolean
+  representation was not explicit enough for the verifier.
+repair: >-
+  Compare the exact positive ratio of scores, 9*exp(16)>1. This preserves the
+  same-slew countermodel and makes the oracle representation-independent.
+scientific_change: none
+continuation: Re-run both exact routes and retain this failed harness attempt.

@@ -1,0 +1,23 @@
+attempt: 0006
+status: record_validation_passed
+scope: >-
+  Finalized attempt 0005 and materialized the terminal record reference after
+  the unchanged integrated scientific boundary passed.
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - PYTHONPATH=src .venv/bin/python scripts/render_docs.py --check
+  - PYTHONPATH=src .venv/bin/python scripts/render_memory.py --check
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P088-sa2-dvdt-trigger-audit.md
+  - git diff --check
+process_exit_statuses: [0, 0, 0, 0, 0]
+terminal_tallies:
+  repository: WORKFLOW VALID 104 claims 104 accepted 0 proposals MIGRATION QUEUE 218 units 132 pending 0 partial
+  docs: generated documentation current
+  generated_memory: generated accepted memory current
+  memory_contract: one file valid
+  diff_check: clean
+full_suite_repeated: false
+decision: >-
+  Final campaign, disposition, queue, and archived-memory records agree. No
+  scientific, package, registry, release, or generated accepted-content delta
+  occurred after attempt 0005.

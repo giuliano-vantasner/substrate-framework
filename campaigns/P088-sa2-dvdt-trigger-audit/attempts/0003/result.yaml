@@ -1,0 +1,22 @@
+attempt: 0003
+candidates: [B, C, D, E, F, G, H, I]
+status: exact_routes_passed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P088-sa2-dvdt-trigger-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P088-sa2-dvdt-trigger-audit/reviews/independent_transform_waveform_review.py
+process_exit_statuses: [0, 0]
+terminal_tallies:
+  primary: ALL 37 CHECKS PASS
+  independent: ALL 14 CHECKS PASS
+verified:
+  - Contract, freeze, source, pending dependency, and consumer hashes are pinned.
+  - The sharp-kernel-first DC oracle is rejected by a resonant-packet mutation.
+  - Linear infinite-domain offset invariance is separated from finite-window leakage and power-spectrum algebra.
+  - Constitutive product-rule, geometry, and Fourier endpoint premises remain explicit.
+  - Inserted and fixed-peak Gaussian normalizations have opposite large-slew behavior.
+  - Same maximum slew does not determine spectral overlap.
+  - No accepted physical response or consumer closes the source headline.
+quadrature_note: >-
+  The primary route is exact. Independent high-precision mpmath quadrature is
+  only a normalization-trend regression and uses no NumPy integration alias.
+next_attempt: Preserve external consumer failures and terminally adjudicate SA2.

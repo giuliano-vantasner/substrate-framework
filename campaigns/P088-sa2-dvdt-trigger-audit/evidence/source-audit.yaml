@@ -1,0 +1,85 @@
+campaign: P088
+source_unit: SA2
+source_check_count: 12
+checks:
+  - id: SA2.1
+    source_predicate: chi_b(0) tends to zero as tau tends to infinity
+    verdict: conditional_declared_kernel_limit
+    reason: >-
+      True for the inherited unnormalised Gaussian pair, whose finite-width
+      value is positive. The same sharp-kernel-first limit also sends the
+      overlap with a packet centered exactly at omega_b to zero.
+  - id: SA2.2
+    source_predicate: the Gaussian delta proxy has zero overlap after tau-to-infinity then e-to-zero
+    verdict: invalid_headline_oracle
+    reason: >-
+      Exact completion of the square gives A/sqrt(1+2*e^2*tau^2) times an
+      exponential. Taking tau first collapses the total kernel mass and returns
+      zero for every fixed packet center, including exact resonance.
+  - id: SA2.3
+    source_predicate: N[V+c]-N[V]=0
+    verdict: conclusion_not_evaluated
+    reason: >-
+      The assigned delta_N contains neither V nor c; it divides the insensitive
+      Gaussian limit by E_b. Conditional linear distributional offset
+      invariance requires an explicit transform and zero-DC functional, while
+      a power spectrum and finite record require different algebra.
+  - id: SA2.4
+    source_predicate: omega^2 vanishes at omega=0
+    verdict: valid_conditional_identity
+    reason: >-
+      Exact polynomial fact. It does not select a physical voltage-to-field,
+      displacement-current, coupling, absorption, or seeding map.
+  - id: SA2.5
+    source_predicate: omega^2 is increasing for positive omega
+    verdict: valid_weak_regression
+    reason: >-
+      The source substitutes one point even though d(omega^2)/domega=2*omega is
+      exactly positive. Frequency weighting is not monotonicity in a scalar
+      waveform slew coordinate.
+  - id: SA2.6
+    source_predicate: dN/ds is positive at s=1/4
+    verdict: valid_for_inserted_family_only
+    reason: >-
+      Pointwise positivity follows exactly from the unnormalised supplied
+      exp(-(omega/s)^2) family, so midpoint sampling adds no mechanism evidence.
+  - id: SA2.7
+    source_predicate: dN/ds is positive at s=1/2
+    verdict: valid_for_inserted_family_only
+    reason: Same exact family-specific derivative as SA2.6.
+  - id: SA2.8
+    source_predicate: dN/ds is positive at s=1
+    verdict: valid_for_inserted_family_only
+    reason: Same exact family-specific derivative as SA2.6.
+  - id: SA2.9
+    source_predicate: dN/ds is positive at s=2
+    verdict: valid_for_inserted_family_only
+    reason: Same exact family-specific derivative as SA2.6.
+  - id: SA2.10
+    source_predicate: N(2) exceeds N(1/4)
+    verdict: valid_for_inserted_family_only
+    reason: >-
+      Exact pointwise monotonicity proves this for the inserted normalization.
+      Fixing time-domain pulse amplitude introduces an s^-2 spectral factor and
+      reverses the trend for s above the sampled band.
+  - id: SA2.11
+    source_predicate: N(1/1000) is below 1e-6 and represents no-slew or DC
+    verdict: numerical_value_valid_interpretation_rejected
+    reason: >-
+      The unnormalised spectrum loses integrated mass as s tends to zero; it is
+      not a same-power or same-amplitude pure-DC limit and no breakdown event is
+      represented.
+  - id: SA2.12
+    source_predicate: the F2 flat-in-V and rising-in-dVdt law is derived
+    verdict: rejected
+    reason: >-
+      The offset is absent from delta_N, the slew family and normalization are
+      inserted, SA1 response semantics are rejected, SA4 is pending, and the
+      executable graph contains no cell, field map, driven interaction,
+      response, absorption, formation, threshold, or engine consumer.
+headline_verdict: >-
+  SA2 establishes only standard conditional derivative/Fourier facts and exact
+  monotonicity plus a fixed-band limit for its own unnormalised Gaussian
+  spectral family. Its main DC oracle is insensitive to a resonant mutation,
+  its population difference never evaluates V or c, scalar slew does not fix a
+  spectrum, and the physical dV/dt-not-V seeding/breakdown mechanism is absent.

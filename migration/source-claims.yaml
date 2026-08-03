@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 133
-  qualified: 73
+  pending_adjudication: 132
+  qualified: 74
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5467,8 +5467,40 @@ units:
   dynamic_check_calls: 1
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
+  disposition: qualified
   accepted_claims: []
+  qualification: SA2's omega-squared DC value and exact monotonic/fixed-band limits for its declared unnormalised
+    Gaussian spectral family are conditional algebra, not a physical trigger derivation. Its sharp-kernel-first
+    Gaussian overlap tends to zero for a packet centered at DC and for one centered exactly at resonance,
+    so the headline DC oracle is mutation-insensitive; delta_N contains neither the offset c nor a waveform
+    V. A linear infinite-domain zero-DC functional can conditionally ignore an additive constant, but
+    finite records leak, power spectra have cross terms, and offset invariance does not imply independence
+    under physical pulse- amplitude or breakdown changes. J_D=partial_t D retains a product-rule term
+    for varying response; epsilon*dV/dt/d requires constant linear response, fixed-gap quasi-static geometry,
+    and Fourier endpoint conditions. The inserted exp(-(omega/s)^2) family does not keep time- domain
+    amplitude fixed; fixed-peak normalization reverses its large-slew trend, and equal-maximum-slew waveforms
+    can have different spectra. No accepted cell map, driven interaction, causal response, absorption,
+    formation, counting, breakdown, saturation, or C035 consumer closes the claim. The engineering mirror
+    inserts its threshold and fails on six np.trapz calls under current NumPy; downstream consumers retain
+    inserted DVDT_SAT/Michaelis gates and pending SA4 cannot supply authority.
+  evidence:
+  - campaigns/P088-sa2-dvdt-trigger-audit/reviews/source_adjudication.md
+  - campaigns/P088-sa2-dvdt-trigger-audit/evidence/source-reproduction.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/evidence/source-audit.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/evidence/consumer-audit.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/evidence/candidate-comparison.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/evidence/primary-provenance.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/attempts/0001/result.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/attempts/0002/result.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/attempts/0003/result.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/attempts/0004/result.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/attempts/0005/result.yaml
+  - campaigns/P088-sa2-dvdt-trigger-audit/attempts/0006/result.yaml
+  - memory/vantasner/proposals/P088-sa2-dvdt-trigger-audit.md
+  note: P088 derives the exact Gaussian limit-order, distributional offset, finite-window, power-spectrum,
+    constitutive product-rule, Fourier endpoint, waveform-normalization, same-slew counterfamily, dependency,
+    source-oracle, and consumer ledgers through primary and independent routes. Exact primary work uses
+    no numerical integration alias; independent sampled regression uses mpmath only.
 - source_unit: SA3
   phase: phase-25
   path: merged-framework/bridges/phase-25/bridge_SA3_driven_sg_pde_seeding.py

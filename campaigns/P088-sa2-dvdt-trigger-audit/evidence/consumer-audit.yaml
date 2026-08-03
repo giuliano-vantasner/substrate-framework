@@ -1,0 +1,64 @@
+campaign: P088
+source_unit: SA2
+source_baseline: substrate@6d1f4e0
+consumers:
+  - path: engineering/seeding_kernel.py
+    git_blob: 02d82604a603219c18b4d67da44706e6a20d3d69
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    relationship: noncanonical mirror claiming to implement SA1, SA2, and SA4
+    runtime_command: .venv/bin/python /home/dan/substrate/engineering/seeding_kernel.py
+    runtime_status: 1
+    stdout_bytes: 0
+    stdout_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    stderr_bytes: 459
+    stderr_sha256: 7f3491bbea9993f03b3665224f0cea13ee210689ea3de5152b91a0783c2aa666
+    implementation_finding: >-
+      Six direct np.trapz calls fail under the current NumPy. The framework
+      compatibility helper is not used.
+    scientific_finding: >-
+      g_trigger_derived inserts `if V <= Vbd: return 0`; above that branch V is
+      unused. It inserts exp(-(omega/s)^2), the inherited Gaussian kernel, and
+      normalizes by their finite-band ceiling. Thus zero below breakdown and
+      flatness above it are implemented conditions, not SA2 consequences.
+  - path: engineering/nucleation_efficiency_model.py
+    git_blob: 208382dea889a387d64044e783257491bfb5c132
+    sha256: bad798b39d850ecf92a97e25bfb0341ef7ae80b036c26a88037efdd618d8d3b8
+    relationship: downstream importer of g_trigger_derived
+    runtime_command: cd /home/dan/substrate/engineering && /home/dan/substrate-framework/.venv/bin/python nucleation_efficiency_model.py
+    runtime_status: 1
+    stdout_bytes: 0
+    stdout_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    stderr_bytes: 215
+    stderr_sha256: 36d92884c36d7c080f9214e0e1ecb132497608b2b346d2341259bd807a741245
+    implementation_finding: Top-level replay stops because matplotlib is absent.
+    scientific_finding: >-
+      The model sets SLEW_SCALE_PER_KVUS=1/DVDT_SAT_KVUS despite describing it
+      as derived, retains a direct Michaelis gate, and returns at least 0.05
+      seeds per site even when the imported trigger returns zero.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung174_c035_spark_discharge_coherence_channel.py
+    git_blob: 490c2b1de9d52941bceeb10286fda27984dad2df
+    sha256: e0f470201313c76c77c54c0e027a01189180561d49f94fe1ef88bfe2f18a317d
+    relationship: named synthetic C035 consumer
+    finding: >-
+      Retains the inserted branch V<V_BD followed by
+      dVdt/(dVdt+DVDT_SAT), and imports no SA2 code.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung175_c035_physical_engine_ionization_flow.py
+    git_blob: abebe6cd2a89a57ac243194327b1c209485582c7
+    sha256: b895622627bece5a154717b7aaab06cd0add9ed80a7c1643035c06c91fb3499c
+    relationship: named physical-units C035 consumer
+    finding: >-
+      Retains Paschen and excess-slew branches followed by the inserted
+      excess/(excess+DVDT_SAT) law, and imports no SA2 code.
+pending_dependency:
+  path: merged-framework/bridges/phase-25/bridge_SA4_threshold_saturation_guard.py
+  git_blob: 09b5c329c1f1d7e955e852a5ba1e93a3a4d01c3b
+  sha256: 55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e
+  finding: >-
+    SA4 repeats the inserted Gaussian kernel and exp(-(omega/s)^2) family,
+    chooses G_BIG=900, floors an overlap divided by breather energy, and fits a
+    Michaelis curve. Its pending status cannot close SA2.
+canonical_impact: none
+replay_decision: >-
+  No external file is modified or admitted to accepted dependency closure.
+  Compatibility failures and scientific mismatches are preserved as evidence;
+  renaming np.trapz would repair only one runtime layer.

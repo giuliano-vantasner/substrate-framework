@@ -1,0 +1,64 @@
+id: P088
+base_release: v0.76.0
+base_commit: 650120c
+scientific_base_commit: c77cae6
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SA2]
+question: >-
+  Determine whether SA2 derives a dependency-closed physical dV/dt-not-V
+  seeding and breakdown trigger from an accepted cell, drive interaction, and
+  response law, or only conditional Fourier/displacement-current identities
+  plus an inserted waveform family; terminally adjudicate every SA2 subclaim
+  and promote distinct exact content only.
+invariants:
+  - C-SG-015 supplies exact Fourier structure for an undriven breather field trace and explicitly supplies no susceptibility, drive interaction, transfer efficiency, or seeded population.
+  - SA1 is qualified and its susceptibility, Gaussian-kernel, population, and engine readings are not accepted dependencies; SA4 remains pending.
+  - Adding a constant to one declared waveform is not the same operation as changing physical pulse voltage, field amplitude, pulse energy, gap breakdown, or post-breakdown plasma state.
+  - A DC-shift Fourier identity requires an explicit transform domain and distribution or finite-window convention; finite windows can leak a constant into nonzero discrete bins unless the window/grid/detrending conditions are stated.
+  - J_D=partial_t D and D=epsilon*E imply epsilon*partial_t E only for an explicitly declared linear time-independent constitutive law; E=V/d additionally requires a cell geometry and quasi-static voltage-to-field map.
+  - Multiplication by i*frequency in Fourier space proves a derivative identity, not coupling to the sine-Gordon field, absorption, breather formation, or a physical count.
+  - A scalar slew value does not uniquely determine a waveform spectrum; monotonicity and saturation require a frozen one-parameter waveform family, normalization, kernel, and physical mechanism.
+  - Breakdown is a separate nonlinear plasma and boundary event and cannot be inferred from zero DC or a displacement-current spectrum.
+allowed_imports:
+  - exact real, complex, distributional, Fourier-transform, time-scaling, derivative, positivity, and dimensional algebra with explicit conventions
+  - C-SG-015 only as the accepted undriven fixed-position field-trace Fourier theorem and its physical-interpretation ceilings
+  - C-MED-001 only as a conditional declared co-scaled permittivity ansatz, not as a cell constitutive derivation or voltage-to-field map
+  - C-DIM-002 and C-DIM-003 only as coefficient, unit, and imported-coordinate ceilings
+  - P087 and the terminal SA1 disposition as accepted governance evidence; no rejected SA1 physical reading may be imported
+  - SA2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce SA2 literally and test whether its kernel, waveform, displacement-current, breakdown, saturation, population, and engine dependencies are accepted and consumed.
+  - id: B
+    description: Derive the exact conditional infinite-domain distributional identity for adding a constant and state the hypotheses under which a zero-at-DC linear functional is invariant.
+  - id: C
+    description: Compare additive-offset invariance with physically distinct voltage and pulse-amplitude changes, including finite-window leakage and waveform counterexamples.
+  - id: D
+    description: Derive the conditional displacement-current and Fourier-derivative identities while retaining constitutive, geometry, boundary, and transform assumptions.
+  - id: E
+    description: Require an explicit voltage-to-field map, driven sine-Gordon interaction, input/output observables, causal response, absorption, and formation rule before inferring seeding.
+  - id: F
+    description: Audit whether a scalar slew orders spectral overlap or saturation, and construct same-slew/different-spectrum and scaling counterfamilies.
+  - id: G
+    description: Separate any exact AC identity from a breakdown gate and trace the actual C035 and engineering consumers.
+  - id: H
+    description: Audit every source predicate for sensitivity to DC support, transform convention, waveform shape, amplitude, duration, permittivity, gap, interaction, kernel, and consumer absence.
+  - id: I
+    description: Compare surviving conditional Fourier identities against accepted harmonic, dimensional, constitutive, and signal utilities; add nothing without distinct content and a governed consumer.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for cell geometry, constitutive response, voltage-to-field map, interaction, causal response, absorption, formation, breakdown, saturation, and consumer
+  - exact transform convention, distribution pairing, boundary terms, waveform family, dimensions, signs, support, limits, and mutation sensitivity
+  - separation of DC-offset invariance, voltage-amplitude dependence, slew, spectral bandwidth, displacement current, deposited energy, and seeded population
+  - parameter economy without silently fixing pulse shape, duration, bandwidth, gap, permittivity, coupling, efficiency, threshold, or saturation scale
+  - nonduplication against C-SG-015, C-MED-001, C-DIM-002, C-DIM-003, and existing Fourier utilities
+claims_proposed:
+  - no new claim unless Candidate I demonstrates a distinct reusable conditional waveform or Fourier-derivative theorem with complete assumptions and a governed consumer
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. The generated queue synopsis
+  has already exposed the candidate DC-offset, displacement-current,
+  omega-squared, flat-in-voltage, rising-and-saturating-in-slew narrative, but
+  until the freeze the SA2 body, literal waveform, formulas, checks, output,
+  thresholds, saturation values, and consumer implementation remain closed.
+status: draft

@@ -1,0 +1,27 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H, I]
+status: source_reproduced_headline_rejected
+source_unit: SA2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA2_dvdt_not_v_emerges.py
+process_exit_status: 0
+terminal_tally: ALL 12 CHECKS PASS
+source_stdout_bytes: 376
+source_stdout_sha256: 17172529bd2555303d490cc1cdd24ab6fb9adaff0f68fc84671f619b244c6000
+surviving_exact_predicates:
+  - omega^2 vanishes at zero and increases for positive frequency.
+  - The inserted unnormalised exp(-(omega/s)^2) family gives an exactly increasing positive fixed-band overlap and a finite large-s limit.
+  - A conditional linear infinite-domain functional can ignore a DC offset under explicit zero-support hypotheses.
+headline_failures:
+  - The inherited finite-width Gaussian kernel is positive at DC.
+  - The sharp-kernel-first overlap limit also returns zero for an input packet centered exactly at resonance.
+  - delta_N contains neither c nor V and never evaluates N[V+c]-N[V].
+  - The source supplies no cell geometry, constitutive voltage map, driven interaction, response, absorption, formation, count, breakdown, or accepted consumer.
+  - Scalar slew does not fix a waveform spectrum, and the source's amplitude-fixed description is false for its Gaussian normalization.
+next_attempt: >-
+  Derive the Gaussian limit, finite-window, constitutive, Fourier-boundary, and
+  waveform-scaling ledgers exactly; mutate the DC packet to resonance and trace
+  every named consumer.
+quadrature_note: >-
+  Source reproduction uses its manual midpoint loops. P088 exact work uses no
+  NumPy integration alias.

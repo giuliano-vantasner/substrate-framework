@@ -1,0 +1,24 @@
+campaign: P088
+frozen_before_source_opening: true
+proposal_path: proposals/P088-sa2-dvdt-trigger-audit/proposal.yaml
+proposal_sha256: 2254bfa45353d7e21b20876ff84fc8a4c169218a3dfa5ed730f43ee7fdc71c41
+memory_contract_path: memory/vantasner/proposals/P088-sa2-dvdt-trigger-audit.md
+memory_contract_sha256: b8aa36fb065c4e289c4ee061a7424fe3b6f84d769a74a98205c8c672ed82f4c0
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P088-sa2-dvdt-trigger-audit.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+queue_synopsis_disclosure: >-
+  Generated navigation metadata had already exposed the candidate DC-offset,
+  zero-DC-kernel, displacement-current, omega-squared, flat-in-voltage, and
+  rising-and-saturating-in-slew narrative plus candidate dependencies SA1 and
+  SA4. It did not open the source implementation, literal waveform, formulas,
+  check structure, executable output, thresholds, saturation values, or
+  consumer details.
+comparators_blinded_at_freeze:
+  - SA2 source body, literal waveform, formulas, checks, and executable output
+  - numerical transform grids, pulse widths, amplitudes, slew values, overlaps, and thresholds
+  - saturation law, scale, and source pass bands
+  - cited source bodies and claimed electromagnetic or susceptibility authority
+  - downstream C035 or engineering consumer implementation

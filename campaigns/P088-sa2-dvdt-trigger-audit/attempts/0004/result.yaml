@@ -1,0 +1,24 @@
+attempt: 0004
+candidate: G
+status: external_consumers_failed_and_structurally_audited
+commands:
+  - .venv/bin/python /home/dan/substrate/engineering/seeding_kernel.py
+  - cd /home/dan/substrate/engineering && /home/dan/substrate-framework/.venv/bin/python nucleation_efficiency_model.py
+process_exit_statuses: [1, 1]
+seeding_kernel_failure:
+  stderr_bytes: 459
+  stderr_sha256: 7f3491bbea9993f03b3665224f0cea13ee210689ea3de5152b91a0783c2aa666
+  reason: Current NumPy has no np.trapz attribute; six calls occur.
+nucleation_model_failure:
+  stderr_bytes: 215
+  stderr_sha256: 36d92884c36d7c080f9214e0e1ecb132497608b2b346d2341259bd807a741245
+  reason: Top-level replay requires unavailable matplotlib before reaching the trigger path.
+structural_findings:
+  - The engineering mirror inserts the breakdown branch and ignores V above it.
+  - The nucleation consumer maps through DVDT_SAT_KVUS, retains a Michaelis gate, and imposes a 0.05 seed floor.
+  - Named C035 rungs retain inserted trigger laws and import no SA2 implementation.
+  - Pending SA4 repeats the source waveform, a gain of 900, floor counting, and a Michaelis fit.
+compatibility_decision: >-
+  Do not patch read-only external evidence. Replacing np.trapz would repair a
+  runtime compatibility layer but not the missing scientific dependencies.
+next_attempt: Finalize durable records, regenerate the queue, and run one integrated boundary gate.

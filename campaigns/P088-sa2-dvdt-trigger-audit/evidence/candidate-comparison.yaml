@@ -1,0 +1,64 @@
+campaign: P088
+selection_order:
+  - accepted physical dependency closure
+  - exact transform and waveform hypotheses
+  - separation of offset, voltage amplitude, slew, spectrum, current, seeding, and breakdown
+  - parameter economy and normalization sensitivity
+  - nonduplication and governed consumer fit
+candidates:
+  - id: A
+    decision: rejected_literal_promotion
+    reason: >-
+      SA1's response/population reading is rejected, SA4 is pending, and no
+      cell, interaction, response, absorption, formation, breakdown, or accepted
+      consumer exists in SA2's graph.
+  - id: B
+    decision: selected_as_conditional_ceiling_only
+    reason: >-
+      A linear infinite-domain functional can be invariant under V->V+c when
+      the transform and distribution pairing are explicit and its kernel
+      vanishes at zero. This standard identity does not support the headline.
+  - id: C
+    decision: selected
+    reason: >-
+      Finite-window leakage, power-spectrum cross terms, and distinct physical
+      voltage changes prove that additive-offset invariance is narrower than
+      flat yield across voltage controls.
+  - id: D
+    decision: selected_as_conditional_ceiling_only
+    reason: >-
+      J_D=partial_t D and Fourier differentiation survive with product-rule,
+      constitutive, geometry, and endpoint premises explicit; no coupling or
+      seeding follows.
+  - id: E
+    decision: requirement_confirmed_mechanism_absent
+    reason: >-
+      SA2 has no voltage-to-field map, driven sine-Gordon interaction,
+      observables, retarded response, absorption, or formation rule.
+  - id: F
+    decision: selected_as_nonuniversality_countermodel
+    reason: >-
+      The source family is exactly monotone and fixed-band saturating only under
+      its unnormalised spectrum. Fixed time-domain peak reverses the large-slew
+      trend, and same-slew sinusoids can have different band overlap.
+  - id: G
+    decision: selected
+    reason: >-
+      Breakdown is inserted in consumers, named C035 rungs retain their old
+      Michaelis gates, and the engineering chain is not an accepted consumer.
+  - id: H
+    decision: selected
+    reason: >-
+      The resonant-packet mutation passes SA2's alleged DC oracle, while source
+      AST, normalization, finite-window, endpoint, and consumer probes expose
+      the other missing load-bearing objects.
+  - id: I
+    decision: selected_no_new_claim
+    reason: >-
+      Surviving facts are standard conditional calculus with no distinct
+      governed consumer or importable framework object. C-SG-015 and C-MED-001
+      remain unchanged ceilings.
+selection_basis: >-
+  Structural closure and exact mutations select B-I before source numerical
+  values are used. The twelve-check tally and numerical closeness select no
+  concept.

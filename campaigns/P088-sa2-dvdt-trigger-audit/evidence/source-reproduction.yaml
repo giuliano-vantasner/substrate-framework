@@ -1,0 +1,31 @@
+campaign: P088
+source_unit: SA2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA2_dvdt_not_v_emerges.py
+  git_blob: 5f980f33c1dbb94af07428e709a8d2c4e0878304
+  sha256: 4772f0e52f08e68197662383efe2ee91426769b1281dc2db1d20aa40c8a8398e
+  size_bytes: 9672
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA2_dvdt_not_v_emerges.py
+process_exit_status: 0
+terminal_tally: ALL 12 CHECKS PASS
+stdout_bytes: 376
+stdout_sha256: 17172529bd2555303d490cc1cdd24ab6fb9adaff0f68fc84671f619b244c6000
+stderr_bytes: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+ast:
+  literal_check_sites: 9
+  runtime_check_count: 12
+  loop_expansion: four dN/ds samples
+source_numerics:
+  method: explicit 4000-point midpoint rule
+  domain: [0, 1/sqrt(2)]
+  refinement: absent
+  numpy_integration_alias: absent
+printed_regression:
+  N_low: 7.9957e-04
+  N_high: 6.7056e-02
+  N_dc: 2.974e-13
+authority: >-
+  The clean exit and tally reproduce noncanonical source behavior only. Exact
+  P088 analysis separately tests whether each predicate supports the headline.

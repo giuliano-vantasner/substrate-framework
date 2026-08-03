@@ -1,0 +1,66 @@
+campaign: P088
+title: SA2 DC-offset, displacement-current, waveform-slew, and trigger audit
+source_baseline: substrate@6d1f4e0
+source_units: [SA2]
+base_release: v0.76.0
+release_after_adjudication: v0.76.0
+adjudicated_at: '2026-08-04T03:45:00Z'
+selected_candidates:
+  - id: B
+    reason: Conditional infinite-domain linear offset invariance survives only with explicit transform and zero-DC pairing premises.
+  - id: C
+    reason: Finite-window, power-spectrum, and physical-voltage distinctions prevent promoting flat-in-voltage yield.
+  - id: D
+    reason: Exact displacement-current and Fourier-derivative identities retain constitutive, geometry, and endpoint premises.
+  - id: E
+    reason: The required driven interaction, response, absorption, and formation mechanism is absent.
+  - id: F
+    reason: Exact normalization and same-slew countermodels confine monotonicity and saturation to the inserted waveform family.
+  - id: G
+    reason: Breakdown and downstream trigger behavior are inserted in consumers rather than derived or imported from accepted authority.
+  - id: H
+    reason: A resonant-packet mutation passes the source's alleged DC oracle, and all twelve predicates receive individual verdicts.
+  - id: I
+    reason: Surviving conditional calculus has no distinct governed consumer or reusable framework object and warrants no new claim.
+competing_candidates:
+  - id: A
+    decision: rejected_literal_promotion
+claims: []
+reviewed_existing:
+  - id: C-SG-015
+    decision: unchanged_undriven_field_trace_and_no_response_ceiling
+  - id: C-MED-001
+    decision: unchanged_conditional_constitutive_ansatz_only
+  - id: C-DIM-002
+    decision: unchanged_coefficient_ceiling_only
+  - id: C-DIM-003
+    decision: unchanged_imported_coordinate_ceiling_only
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  verifier_representation_failure: attempts/0002/result.yaml
+  exact_route: attempts/0003/result.yaml
+  external_consumer_route: attempts/0004/result.yaml
+  integrated_gate: attempts/0005/result.yaml
+  record_validation: attempts/0006/result.yaml
+  independent_review: reviews/independent_transform_waveform_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  SA2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA2_dvdt_not_v_emerges.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P088-sa2-dvdt-trigger-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P088-sa2-dvdt-trigger-audit/reviews/independent_transform_waveform_review.py
+  - .venv/bin/python /home/dan/substrate/engineering/seeding_kernel.py (expected external compatibility failure)
+  - cd /home/dan/substrate/engineering && /home/dan/substrate-framework/.venv/bin/python nucleation_efficiency_model.py (expected missing optional plotting dependency)
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

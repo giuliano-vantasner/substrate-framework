@@ -1,0 +1,29 @@
+attempt: 0005
+candidates: [B, C, D, E, F, G, H, I]
+status: integrated_gate_passed
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P088-sa2-dvdt-trigger-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P088-sa2-dvdt-trigger-audit/reviews/independent_transform_waveform_review.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+boundary: >-
+  Registry, package, generated accepted documentation, and release remain
+  unchanged. SA2 disposition, campaign evidence, queue, and archived proposal
+  memory are the only intended durable delta.
+process_exit_statuses: [0, 0, 0, 0, 0]
+terminal_tallies:
+  primary: ALL 37 CHECKS PASS
+  independent: ALL 14 CHECKS PASS
+  repository: WORKFLOW VALID 104 claims 104 accepted 0 proposals MIGRATION QUEUE 218 units 132 pending 0 partial
+  memory: All 383 files valid
+  skill: Skill is valid
+  pytest: 811 passed
+  workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+decision: >-
+  SA2 is terminally qualified without a claim or release delta. The campaign
+  debt ledger is empty and corpus migration continues to SA3.
+repeat_policy: >-
+  Finalizing append-only records does not change the tested scientific or
+  canonical boundary. Run only record-sensitive validation after this attempt.
