@@ -1,0 +1,27 @@
+campaign: P124
+attempt: 0005
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+repair: The two middle-versus-ground comparisons now pass the declared operator scale into the canonical API.
+expected:
+  primary_exit_code: 0
+  independent_exit_code: 0
+  debt: []
+results:
+  primary: {exit_code: 0, tally: 41}
+  independent: {exit_code: 0, tally: 24}
+  source_runtime_predicates_adjudicated: 13
+  direct_consumers: {scripts: 2, checks: 52}
+  reused_transitive_consumers: {scripts: 12, checks: 524}
+result: >-
+  Canonical symmetric-spin, deterministic finite-array, accepted iid ensemble,
+  exact SI input, physical countermodel, dependency, consumer, and
+  nonduplication routes agree. GB3's abstract ground-edge algebra survives;
+  its binary wavelength gate and physical rate asymmetry do not.
+compatibility_event: none
+next_attempt: >-
+  Complete predicate, input, provenance, impact, and terminal review records;
+  register the qualified no-release disposition and run one integrated gate.

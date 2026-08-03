@@ -1,0 +1,49 @@
+campaign: P124
+attempt: 0008
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  source_tally: 13
+  primary_tally: 41
+  independent_tally: 24
+  direct_consumer_scripts: 2
+  direct_consumer_checks: 52
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 96
+  qualified_units: 110
+  memory_files: 511
+  pytest_tests: 1090
+  debt: []
+results:
+  source: {exit_code: 0, tally: 13}
+  primary: {exit_code: 0, tally: 41}
+  independent: {exit_code: 0, tally: 24}
+  direct_consumers:
+    GB4: {exit_code: 0, tally: 23}
+    GB6: {exit_code: 0, tally: 29}
+    total: {scripts: 2, checks: 52}
+  reused_transitive_consumers: {scripts: 12, checks: 524, evidence: campaigns/P122-gb1-channel-branching-audit/evidence/consumer-audit.yaml}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 96, qualified_units: 110}
+  memory: {files_valid: 511}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: 103.60}
+  diff_check: {exit_code: 0}
+result: >-
+  GB3 is terminally qualified through unchanged C-SPN-002 and C-COH-001 with
+  no claim, package API, or release change. Source, exact primary, fresh
+  independent, direct consumers, durable transitive replay, governance, queue,
+  memory, skill, full-suite, and whitespace checks close with no debt.
+compatibility_event: none
+next_attempt: >-
+  Commit the immutable P124 scientific adjudication, checkpoint the parent
+  effort separately, and continue with the next pending source unit GB4.

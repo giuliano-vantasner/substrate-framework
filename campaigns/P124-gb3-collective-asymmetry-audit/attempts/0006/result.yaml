@@ -1,0 +1,35 @@
+campaign: P124
+attempt: 0006
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  source_tally: 13
+  primary_tally: 41
+  independent_tally: 24
+  direct_consumer_scripts: 2
+  direct_consumer_checks: 52
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 96
+  qualified_units: 110
+  memory_files: 511
+  pytest_tests: 1090
+  debt: []
+failure_class: workflow
+result: >-
+  Targeted preflight stopped before the integrated commands because the GB3
+  decision memory's Sensitivity section began with inline mathematical code
+  rather than a plain-prose disclosure line. Repository and YAML validation
+  passed; no scientific verifier, threshold, or disposition failed.
+compatibility_event: none
+next_attempt: >-
+  Add a prose opening to the affected memory section, revalidate that record,
+  and run the complete terminal boundary after preserving any repair failure.

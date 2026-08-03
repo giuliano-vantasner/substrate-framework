@@ -88,4 +88,4 @@ comparators_blinded_until: >-
   copy, and memory contract pass validation. Queue metadata already exposes the
   advertised coefficient and numerical wavelength comparison, so only
   predicate-detail and source-output blinding remains.
-status: draft
+status: accepted

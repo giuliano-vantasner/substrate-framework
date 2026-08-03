@@ -1,0 +1,32 @@
+campaign: P124
+attempt: 0004
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+expected:
+  primary_exit_code: 0
+  independent_exit_code: 0
+  direct_consumer_checks: 52
+  debt: []
+results:
+  primary:
+    exit_code: 1
+    passed_before_failure: 8
+    failure: middle-rung expected expression did not match the canonical API
+  independent: {exit_code: 0, tally: 24}
+  direct_consumers:
+    GB4: {exit_code: 0, tally: 23}
+    GB6: {exit_code: 0, tally: 29}
+failure_class: implementation
+result: >-
+  The independent phase route and both direct consumers close. The primary
+  fails at a campaign expectation for the N=100 middle rung; no source,
+  canonical API, phase criterion, or physical conclusion is implicated.
+compatibility_event: none
+next_attempt: >-
+  Inspect the exact canonical middle-rung expression, correct the campaign
+  expectation, and rerun the primary and independent routes.

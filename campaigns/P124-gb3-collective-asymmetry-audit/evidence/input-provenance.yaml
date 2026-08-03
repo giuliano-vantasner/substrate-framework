@@ -1,0 +1,23 @@
+campaign: P124
+base_release: v0.98.0
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source: {unit: GB3, sha256: a168a03545312409cd41cb9b5217f54759c8564eba0e7d8ad2252faf8bcee70d, authority: noncanonical_candidate_evidence}
+authoritative_constant_source:
+  title: BIPM SI defining constants
+  url: https://www.bipm.org/en/measurement-units/si-defining-constants
+  exact_values:
+    c_m_per_s: 299792458
+    h_J_s: 6.62607015e-34
+    e_C: 1.602176634e-19
+  status: exact_defining_values_without_uncertainty
+derived:
+  hc_eV_nm: 1239.8419843320026
+  wavelength_at_3_MeV_pm: 0.4132806614440009
+  energy_for_100_pm_wavelength_eV: 12398.419843320026
+source_inputs:
+  hc_eV_nm: {value: 1239.84, verdict: rounded_from_exact_SI_constants}
+  E_gamma_eV: {value: 3000000, verdict: representative_external_input_without_accepted_transition_or_uncertainty}
+  d_nuclear_pm: {value: 100, verdict: assigned_external_lattice_scale_mislabeled_as_nuclear_spacing}
+  phonon_coherence_pm: {value: 10000, verdict: assigned_in_code_without_mode_material_extent_or_uncertainty_provenance}
+comparators: []
+debt: []

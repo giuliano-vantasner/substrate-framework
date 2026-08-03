@@ -1,0 +1,55 @@
+campaign: P124
+title: GB3 collective-spin asymmetry and wavelength-gate audit
+source_baseline: substrate@6d1f4e0
+source_units: [GB3]
+base_release: v0.98.0
+release_after_adjudication: v0.98.0
+adjudicated_at: '2026-08-08T14:00:00Z'
+selected_candidates:
+  - {id: B, reason: C-SPN-002 exactly subsumes the normalized ground-edge algebra and physical ceiling.}
+  - {id: C, reason: Deterministic finite-array phases refute necessity and sufficiency of the source gate.}
+  - {id: D, reason: C-COH-001 separates iid directional endpoints and normalization from rates.}
+  - {id: E, reason: Full phase extent direction and phase matching replace the nearest-spacing slogan.}
+  - {id: F, reason: Exact SI constants reproduce only a conditional wavelength while physical inputs remain external.}
+  - {id: G, reason: Zero coupling density and phase countermodels reject the rate asymmetry.}
+  - {id: H, reason: Existing accepted claims subsume the exact surface and close terminal no-release qualification.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-SPN-002, decision: unchanged_complete_symmetric_spin_and_complex_coupling_theorem}
+  - {id: C-COH-001, decision: unchanged_iid_directional_intensity_and_normalization_ceiling}
+evidence:
+  provenance_failure: attempts/0001/result.yaml
+  freeze_gate: attempts/0002/result.yaml
+  source_reproduction: attempts/0003/result.yaml
+  verifier_expectation_failure: attempts/0004/result.yaml
+  exact_routes: attempts/0005/result.yaml
+  memory_preflight_failure: attempts/0006/result.yaml
+  repair_patch_failure: attempts/0007/result.yaml
+  terminal_gate: attempts/0008/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_phase_review.py
+  source_reproduction_record: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/GB3-qualified-review.md
+source_disposition:
+  GB3: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+  - direct consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

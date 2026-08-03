@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 97
-  qualified: 109
+  pending_adjudication: 96
+  qualified: 110
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7707,8 +7707,45 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SPN-002
+  - C-COH-001
+  qualification: 'GB3''s normalized ground-edge coefficient s*sqrt(N), algebraic square s^2*N, and ratio
+    to the N=1 algebraic square are already governed by C-SPN-002, whose arbitrary complex couplings also
+    govern deterministic site phases, bright projection, total image norm, and dark remainder. C-COH-001
+    separately governs iid directional intensity at fixed declared normalization, with incoherent and
+    aligned endpoints N and N^2. Neither quadratic object is a physical rate. The source''s rule that
+    collective exponent one is earned iff lambda>=nearest spacing is neither sufficient nor necessary:
+    lambda=2d can give an axial pi phase and exact two-site cancellation, while d=2lambda or transverse
+    geometry can align despite lambda<d. Roots-of-unity arrays cancel and extended phase-matched arrays
+    remain bright. Full site positions, wavevector direction, array extent, phase differences modulo 2*pi,
+    and an approximation tolerance are load bearing. Exact BIPM defining constants give hc=1239.841984332...
+    eV nm and conditionally 0.413280661... pm at the source''s external 3 MeV. The 3 MeV energy, 100-pm
+    spacing, and code-assigned 10000-pm phonon coherence length lack accepted state, material, mode, extent,
+    or uncertainty provenance. The source''s hbar^2*N has action-squared dimensions, not inverse time.
+    An incoherent N-emitter directional total at fixed per- source normalization scales as N rather than
+    N^0. No state preparation, interaction, coupling, mode normalization, spectral density, linewidth,
+    decoherence, resonance, Golden-rule regime, physical soft/gamma rate asymmetry, phonon coherence,
+    nuclear transition, material enhancement, magnitude, yield, heat, or observation is accepted.'
+  evidence:
+  - campaigns/P124-gb3-collective-asymmetry-audit/reviews/source_adjudication.md
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/source-reproduction.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/source-audit.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/check-adjudication.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/input-provenance.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/dependency-audit.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/consumer-audit.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/candidate-comparison.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/evidence/primary-provenance.yaml
+  - campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  - campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+  - memory/vantasner/decisions/GB3-qualified-review.md
+  note: P124 closes 41 primary and 24 independent exact checks after four preserved provenance, verifier-expectation,
+    workflow, or patch failures. GB4 and GB6 replay 52 direct checks; P122 supplies the unchanged twelve-script,
+    524-check transitive replay. C-SPN-002 and C-COH-001 subsume the exact surface, so no canonical API,
+    accepted claim, or release is added. No sampled integration or NumPy compatibility event occurs.
 - source_unit: GB4
   phase: phase-32
   path: merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py

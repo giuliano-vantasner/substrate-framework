@@ -1,0 +1,21 @@
+campaign: P124
+source_unit: GB3
+accepted_surfaces:
+  C-SPN-002:
+    coverage: all normalized rungs arbitrary complex couplings symmetric projection total norm dark norm and physical-rate ceiling
+    canonical_api: src/substrate_framework/symmetric_spin.py
+  C-COH-001:
+    coverage: iid equal-amplitude directional intensity fixed-normalization endpoints and dynamics ceiling
+    canonical_api: src/substrate_framework/coherence_gates.py
+distinct_audit_surface:
+  - exact counterexamples to lambda greater-than-or-equal-to spacing as a necessary and sufficient coherence gate
+  - source input and physical-rate adjudication
+assessment: >-
+  Deterministic phases are already arbitrary complex couplings under
+  C-SPN-002; ensemble endpoints are C-COH-001. The gate counterexamples and
+  input audit qualify the source but have no separate accepted consumer.
+new_claim: null
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

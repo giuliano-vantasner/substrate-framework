@@ -1,0 +1,14 @@
+campaign: P124
+source_unit: GB3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py
+sha256: a168a03545312409cd41cb9b5217f54759c8564eba0e7d8ad2252faf8bcee70d
+git_blob: ef3ea3f6e1b600842ebaa384b4f40418d652756d
+bytes: 9617
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py
+exit_code: 0
+terminal_tally: ALL 13 CHECKS PASS
+static_check_calls: 13
+runtime_predicates: 13
+compatibility_preflight: {np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0, event: none}
+interpretation: Native reproduction validates only the executed predicates, not their phase gate or physical rate labels.

@@ -1,0 +1,20 @@
+campaign: P124
+source_unit: GB3
+authority_warning: Candidate dependency edges identify replay scope and grant no accepted physical-rate authority.
+dependencies:
+  PN3:
+    disposition: qualified
+    accepted_claims: [C-SPN-002]
+    evidence: campaigns/P111-pn3-symmetric-spin-ladder-audit/adjudication.yaml
+    surviving_surface: normalized symmetric-spin ladder and arbitrary complex coupling projection
+    excluded_surface: squared-coefficient rate state preparation common mode spectral density material and observation
+accepted_context:
+  C-SPN-002: exact finite-dimensional algebra with explicit non-rate ceiling
+  C-COH-001: exact iid directional intensity expectation with explicit normalization and dynamics ceilings
+accepted_rate_claims: []
+candidate_cycles: []
+verdict: >-
+  PN3 closes the abstract spin algebra only. Neither accepted context supplies
+  the states, interaction, mode, phase geometry, final-state density, or
+  material premises required by GB3's channel-rate asymmetry.
+debt: []

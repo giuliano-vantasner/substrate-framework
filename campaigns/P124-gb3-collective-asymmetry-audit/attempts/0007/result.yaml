@@ -1,0 +1,14 @@
+campaign: P124
+attempt: 0007
+status: failed
+candidates: [B, C, D, E, F, G, H]
+failure_class: implementation
+failed_surface: atomic_memory_repair_patch
+result: >-
+  A combined repair patch expected the Preserved Failures paragraph at a later
+  anchor and was rejected atomically. No file changed; this is independent of
+  the memory disclosure defect in attempt 0006.
+compatibility_event: none
+next_attempt: >-
+  Apply smaller edits against the inspected current anchors, then use attempt
+  0008 for the terminal integrated boundary.

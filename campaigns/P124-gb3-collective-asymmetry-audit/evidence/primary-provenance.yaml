@@ -1,0 +1,15 @@
+campaign: P124
+source: {path: merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py, sha256: a168a03545312409cd41cb9b5217f54759c8564eba0e7d8ad2252faf8bcee70d, git_blob: ef3ea3f6e1b600842ebaa384b4f40418d652756d}
+freeze: {path: campaigns/P124-gb3-collective-asymmetry-audit/evidence/frozen-proposal.yaml, sha256: 496610e0a00e36ce7faaa6fc4a26a21db49a4674d21316825cfe4ea54f5159b9}
+primary:
+  path: campaigns/P124-gb3-collective-asymmetry-audit/verify.py
+  sha256: f6eb3acea9eabdd87e94a63ad16d407edd9fafb46ffb056f88ddc136bff8094c
+  route: canonical symmetric-spin deterministic phases iid coherence exact SI dimensions mutations dependencies consumers and nonduplication
+  tally: 41
+independent:
+  path: campaigns/P124-gb3-collective-asymmetry-audit/reviews/independent_phase_review.py
+  sha256: 4ec6e4fd22815fb605cf774cbfcded2361f8f42dd5e61bf59bccc38596e1356e
+  route: fresh explicit one-excitation vectors finite arrays pair counting exact SI and zero-rate countermodels
+  tally: 24
+independence: The independent route imports neither the primary verifier nor canonical spin or coherence helpers.
+compatibility_event: none

@@ -1,0 +1,18 @@
+campaign: P124
+selection_criteria:
+  - accepted dependency closure normalized state operator and observable conventions
+  - exact phase geometry array extent direction wavelength and limiting behavior
+  - rate-premise completeness input provenance mutation sensitivity and countermodels
+  - parameter economy nonduplication and predicate and consumer closure
+candidates:
+  A: {verdict: retained_as_source_evidence, reason: Native GB3 reproduces thirteen predicates but its green tally grants no authority.}
+  B: {verdict: selected, reason: C-SPN-002 exactly subsumes the normalized ground-edge algebra and physical ceiling.}
+  C: {verdict: selected, reason: Deterministic phase factors refute both directions of the wavelength-spacing iff.}
+  D: {verdict: selected, reason: C-COH-001 separates iid directional endpoints and normalization from deterministic arrays and rates.}
+  E: {verdict: selected, reason: Full phase diameter and phase-matched extended arrays replace the nearest-spacing slogan.}
+  F: {verdict: selected, reason: Exact SI constants reproduce only the conditional wavelength while other physical inputs remain unsourced.}
+  G: {verdict: selected, reason: Zero coupling density and phase countermodels leave algebra unchanged and defeat rate claims.}
+  H: {verdict: selected, reason: Accepted claims subsume the exact surface and terminal qualification avoids a duplicate API.}
+selection: [B, C, D, E, F, G, H]
+comparators_used_for_selection: []
+debt: []

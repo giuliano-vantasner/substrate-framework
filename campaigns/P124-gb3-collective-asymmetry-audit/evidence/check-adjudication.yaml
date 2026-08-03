@@ -1,0 +1,21 @@
+campaign: P124
+source_unit: GB3
+runtime_check_total: 13
+checks:
+  GB3.1: {runtime_checks: 1, source_predicate: ground-edge amplitude is hbar*sqrt(N), verdict: exact_under_C-SPN-002, qualification: Requires normalized symmetric states and declared operator scale.}
+  GB3.2: {runtime_checks: 1, source_predicate: squared coefficient hbar^2*N is an FGR rate, verdict: algebraic_square_exact_rate_label_rejected, qualification: Its dimensions are action squared and no interaction or final-state factor appears.}
+  GB3.3: {runtime_checks: 1, source_predicate: squared-coefficient ratio to N=1 equals N, verdict: exact_algebraic_ratio, qualification: The ratio remains a vector-space identity rather than a physical rate enhancement.}
+  GB3.4: {runtime_checks: 1, source_predicate: lambda at least d earns exponent one, verdict: definition_regression_physical_iff_refuted, qualification: lambda=2d can produce a pi phase and exact two-site cancellation.}
+  GB3.5: {runtime_checks: 1, source_predicate: lambda below d earns exponent zero, verdict: definition_regression_physical_iff_refuted, qualification: d=2lambda or transverse geometry can align phases exactly.}
+  GB3.6: {runtime_checks: 1, source_predicate: three MeV gives about 0.41 pm, verdict: correct_conditional_rounded_input_calculation, qualification: Exact SI constants give about 0.41328066 pm; the transition energy is external.}
+  GB3.7: {runtime_checks: 1, source_predicate: selected gamma wavelength is over one hundred times shorter than 100 pm, verdict: correct_conditional_inequality, qualification: Both energy and spacing are external and the inequality is not a coherence theorem.}
+  GB3.8: {runtime_checks: 1, source_predicate: gamma exponent is zero, verdict: assigned_by_refuted_gate, qualification: Array phase structure and observable normalization are absent.}
+  GB3.9: {runtime_checks: 1, source_predicate: soft exponent is one, verdict: assigned_from_unsourced_coherence_length, qualification: The code inserts 10000 pm and never compares it with participant extent or a mode function.}
+  GB3.10: {runtime_checks: 1, source_predicate: R_soft is N-dependent, verdict: algebraic_consequence_of_assigned_exponent, qualification: Differentiating a formal integer-symbol extension does not derive a rate.}
+  GB3.11: {runtime_checks: 1, source_predicate: R_gamma is N-independent, verdict: algebraic_consequence_of_assigned_exponent, qualification: An incoherent N-emitter total is generally N at fixed per-emitter normalization.}
+  GB3.12: {runtime_checks: 1, source_predicate: gamma carrying N is rejected, verdict: circular_gate_consequence, qualification: It repeats the refuted binary gate and excludes phase-matched extended arrays.}
+  GB3.13: {runtime_checks: 1, source_predicate: soft carrying N passes, verdict: circular_gate_consequence, qualification: It repeats the invented coherence-length input and constructs no physical mode or rate.}
+headline_coverage: >-
+  All thirteen predicates are classified. The accepted normalized spin algebra
+  survives; the binary gate, exponents, rate labels, channel asymmetry, and
+  physical interpretations do not.

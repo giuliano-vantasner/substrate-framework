@@ -1,0 +1,19 @@
+campaign: P124
+source_unit: GB3
+surviving_exact_surface:
+  - C-SPN-002 already governs the normalized ground-edge coefficient s*sqrt(N) and algebraic norm square s^2*N.
+  - C-SPN-002's arbitrary complex couplings govern deterministic site phases, bright projection, total image norm, and dark remainder.
+  - C-COH-001 already governs iid directional intensity endpoints once per-source normalization and pair coherence are declared.
+source_oracle_limits:
+  - Squared action-valued ladder coefficients have action-squared dimensions, not inverse time, and no Golden-rule prefactor is constructed.
+  - lambda greater-than-or-equal-to nearest spacing is neither necessary nor sufficient for collective phase alignment.
+  - The gate ignores wavevector direction, every site position, full array extent, phase modulo 2*pi, finite-array structure factors, and approximation tolerance.
+  - The source assigns 3 MeV, 100 pm, and a 10000 pm phonon coherence length; it derives none from an accepted state, material, or mode.
+  - Incoherent N-emitter directional intensity at fixed per-source normalization scales as N, not generically N^0.
+physical_ceiling:
+  - No initial or final state, preparation, interaction, coupling, mode normalization, spectral density, linewidth, decoherence, resonance, or Golden-rule regime is supplied.
+  - Zero coupling or zero final-state density leaves the accepted spin algebra intact and makes a rate zero.
+  - No physical soft/gamma asymmetry, phonon coherence, nuclear transition, material enhancement, magnitude, yield, heat, or observation is accepted.
+headline_verdict: accepted_spin_algebra_with_binary_wavelength_gate_and_physical_rate_asymmetry_rejected
+compatibility_event: none
+debt: []

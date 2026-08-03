@@ -1,0 +1,27 @@
+campaign: P124
+attempt: 0003
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+command: >-
+  .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB3_dicke_asymmetry.py
+expected:
+  source_sha256: a168a03545312409cd41cb9b5217f54759c8564eba0e7d8ad2252faf8bcee70d
+  native_exit_code: 0
+  static_check_calls: 13
+  compatibility_preflight: no sampled integration expected from queue metadata
+results:
+  source_sha256: a168a03545312409cd41cb9b5217f54759c8564eba0e7d8ad2252faf8bcee70d
+  native_exit_code: 0
+  terminal_tally: ALL 13 CHECKS PASS
+  static_check_calls: 13
+  dynamic_check_calls: 0
+  integration_symbols_found: []
+result: >-
+  GB3 reproduces natively. Its thirteen literal predicates are open for exact
+  phase, dimensional, input, physical-rate, dependency, consumer, and
+  nonduplication adjudication. No NumPy compatibility path is triggered.
+compatibility_event: none
+next_attempt: >-
+  Verify the external wavelength constant, derive exact two-site and finite-
+  array phase factors, and test the source gate's necessity and sufficiency
+  before assigning any collective exponent.

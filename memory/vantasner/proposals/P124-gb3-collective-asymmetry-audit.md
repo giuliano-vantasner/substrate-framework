@@ -2,7 +2,7 @@
 description: Audit GB3's collective-emission asymmetry and wavelength gate against accepted spin and coherence theorems
 author: vantasner
 created: '2026-08-08T13:15:00Z'
-updated: '2026-08-08T13:15:00Z'
+updated: '2026-08-08T14:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-GB3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P124 GB3 Collective Asymmetry Audit
 
@@ -181,6 +181,23 @@ predicate, physical rate ceilings, dependencies, consumers, nonduplication,
 terminal disposition, and an empty debt ledger agree. A square-root
 coefficient, wavelength comparison, channel label, or pass tally is not
 sufficient alone.
+
+## Adjudicated Outcome
+
+P124 terminally qualifies GB3 without changing v0.98.0. Forty-one primary and
+twenty-four independent exact checks close normalized spin algebra,
+deterministic finite-array phases, iid directional endpoints, observable
+normalization, exact SI wavelength conversion, source inputs, zero-rate
+countermodels, dependencies, consumers, and nonduplication.
+
+The physical headline fails. The wavelength-spacing gate is neither necessary
+nor sufficient, the gamma N^0 label conflicts with an incoherent N-emitter
+total at fixed per-source normalization, the phonon coherence length is
+inserted, and no interaction or final-state measure creates a rate. GB4 and
+GB6 replay 52 checks; P122 supplies the unchanged 524-check transitive replay.
+C-SPN-002 and C-COH-001 already govern the exact surface, so no claim, API, or
+release is duplicated. No sampled integration or NumPy compatibility event
+occurs.
 
 ## Cross-References
 
