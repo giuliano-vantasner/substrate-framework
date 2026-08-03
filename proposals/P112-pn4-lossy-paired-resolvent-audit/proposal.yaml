@@ -1,0 +1,70 @@
+id: P112
+base_release: v0.93.0
+base_commit: 762ead2ec767bf237df65ff2329d0e9a5021af02
+scientific_base_commit: df3df9facbe1a5a01230b2516b1c3c5ebfbe111c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [PN4]
+question: >-
+  Derive and independently verify the exact off-diagonal finite resolvent or
+  Schur-complement contribution of symmetric detuning pairs with a declared
+  common complex shift, including signs, factors, dimensions, zero-loss,
+  small-loss, large-loss, extrema, asymmetry, coupling phases, and system-size
+  normalization; then adjudicate PN4 without turning a phenomenological
+  non-Hermitian denominator into derived open-system dynamics or inferring a
+  physical channel, probability, rate, nuclear process, phonon mechanism,
+  material realization, magnitude, or observation.
+invariants:
+  - Endpoint and intermediate finite-dimensional spaces, block ordering, projection convention, spectral parameter, and resolvent sign are declared before an effective element is computed.
+  - For a pair at plus and minus Delta with Delta nonzero, common shift minus i*Gamma/2, real equal product coupling c, and E=0, the two denominators sum conditionally to -i*c*Gamma/(Delta^2+Gamma^2/4).
+  - Zero-loss cancellation requires symmetric detunings and matching complex coupling products; it is not a generic interference theorem.
+  - A positive common Gamma makes the conditional paired element nonzero, but its magnitude vanishes both as Gamma tends to zero and infinity and one pair peaks at Gamma=2*abs(Delta).
+  - Adding pairs at fixed per-pair coupling changes system size rather than refining one fixed model; extensive and normalized coupling conventions must be separated.
+  - A non-Hermitian effective Hamiltonian may describe conditional no-jump evolution or a phenomenological self-energy only under separately declared open-system premises; it is not a Lindblad derivation.
+  - A nonzero effective off-diagonal element does not establish a transition probability or rate without states, time evolution, energy matching, normalization, and a measurement or spectral rule.
+  - PN5 is a forward pending unit that depends back on PN4; the cycle supplies no allowed premise.
+allowed_imports:
+  - exact complex arithmetic, finite matrices, block inversion, Schur complements, resolvents, rational functions, and standard calculus
+  - C-EFT-001 only for the general finite stationary-elimination pattern and its explicit physical ceiling, not for a complex open-system model
+  - C-DYN-001 only for the distinction between an abstract damping parameter and physical decoherence or material loss
+  - C-SG-019 and C-SPN-002 only for PN1 and PN3 algebraic ceilings; PN2 supplies no accepted claim
+  - SymPy exact matrices, rational simplification, series, limits, derivatives, residues, and mutations
+  - NumPy only for finite matrix regression if the source uses it; exact SymPy inversion remains the primary oracle
+  - PN4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - primary literature named by PN4 only after freeze and only for attribution, never as a derivation premise
+candidates:
+  - id: A
+    description: Reproduce PN4 literally and classify every symbolic, finite-matrix, refinement, dependency, literature, and physical predicate.
+  - id: B
+    description: Derive the exact paired complex-resolvent identity and all sign and factor conventions.
+  - id: C
+    description: Independently reconstruct the endpoint block by direct inversion of the complete finite matrix and compare Schur-complement conventions.
+  - id: D
+    description: Classify zero, small, large, stationary, and multi-detuning loss regimes by exact limits and derivatives.
+  - id: E
+    description: Generalize to unequal detunings and complex coupling products and derive the exact cancellation locus.
+  - id: F
+    description: Compare fixed per-pair, fixed total-norm, and continuum-weight system-size scalings rather than calling L to 2L refinement.
+  - id: G
+    description: Test non-Hermitian, Lindblad, conditional-evolution, matrix-element, probability, and rate interpretations with explicit countermodels.
+  - id: H
+    description: Audit accepted ceilings, the PN4-PN5 cycle, literature attribution, and every direct and transitive consumer.
+  - id: I
+    description: Test nonduplication and promote C-RES-001 plus a pure API only if a distinct reusable theorem and governed consumer survive.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit spaces, block, projection, energy, sign, coupling, and complex-shift conventions
+  - exact agreement of rational pair summation and full finite-matrix inversion
+  - correct zero and asymptotic limits, stationary points, dimensions, and load-bearing mutations
+  - explicit cancellation locus under unequal detunings, magnitudes, and phases
+  - honest system-size normalization and separation of enlargement from numerical refinement
+  - strict separation of conditional non-Hermitian algebra from complete open-system dynamics, probability, and rate
+  - assumption economy, API reuse, nonduplication, literature honesty, and complete consumer closure
+claims_proposed: [C-RES-001]
+comparators_blinded_until: >-
+  The queue exposes the paired denominator formula, zero-loss cancellation,
+  positive-loss term, chain-length comparison, dependency list, and physical
+  channel narrative. P112 freezes exact matrix, sign, limit, asymmetry,
+  normalization, open-system, mutation, literature, and consumer gates before
+  executing PN4 or reading its twenty-two predicate implementations. Exposed
+  formulas and magnitudes cannot select the concept or pass threshold.
+status: draft
