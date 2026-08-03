@@ -1,0 +1,58 @@
+campaign: P109
+source_unit: PN1
+direct_or_named_consumers:
+  PN2:
+    sha256: 66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a
+    verdict: >-
+      Cites PN1 for existence of a one-high many-low vertex. C-SG-019 supplies
+      only a formal classical coefficient and cannot close PN2's quantum
+      energies, subdivision count, state channel, or rate.
+  PN4:
+    sha256: 45ac6c039805964efa41ae8167f6257af18c5ef2b066d376efa19ec79dfd0c67
+    verdict: >-
+      Scans PN1 as an honesty guard. This is a source-text dependency, not a
+      scientific derivation edge and gains no accepted physical premise.
+  PN6:
+    sha256: 50ebbf97568fef13e69fc926db3e57457aba4685f3140ac8786bed525e71289f
+    verdict: >-
+      Mentions PN1 through cross-script coverage. Its lossy/lossless model and
+      exchange conclusions remain independent pending claims.
+  WN1:
+    sha256: 3764b29955c3bd51c10278159e08a52ff616a7041510e56917b091f1a802cdde
+    verdict: >-
+      Independently rederives the unit-coordinate factorial coefficient, then
+      treats its square as a rate-natural candidate. C-SG-019 validates the
+      coefficient and factorial decay but expressly does not validate a rate
+      weight or the physical subdivision count.
+  WN2:
+    sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c
+    verdict: >-
+      Uses PN1 parity to refute identification of |c_n|^2 with a strictly
+      positive weight. That refutation must be independently adjudicated; the
+      accepted coefficient supplies no positive physical weight.
+  WN3:
+    sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88
+    verdict: >-
+      Correctly notices c_n becomes A^n*c_n under a low-coordinate rescaling.
+      Its bosonic multiplicity, matrix element, Poisson weight, and state
+      normalization require separate quantum premises absent from C-SG-019.
+  WN6:
+    sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+    verdict: >-
+      Imposes |phi_L|<=pi as PN1's single-vacuum physical domain. C-SG-019 says
+      only that a finite Taylor approximation needs a declared remainder
+      domain; the entire expansion itself has no such hard amplitude bound.
+  MD3:
+    sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128
+    verdict: >-
+      Challenges WN6 with a quantum vertex operator. C-SG-019 neither supplies
+      that operator nor endorses the single-vacuum bound it challenges.
+canonical_consumers:
+  - src/substrate_framework/cosine_vertices.py
+  - tests/test_cosine_vertices.py
+  - campaigns/P109-pn1-cosine-mixed-vertex-audit/verify.py
+  - campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+verdict: >-
+  The new API is additive. Pending consumers may reuse the exact classical
+  coefficient with explicit conventions, but none inherits a quantized mode,
+  matrix element, weight, kinematic channel, transition rate, or material map.

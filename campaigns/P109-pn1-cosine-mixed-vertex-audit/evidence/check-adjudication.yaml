@@ -1,0 +1,71 @@
+campaign: P109
+source_unit: PN1
+runtime_check_total: 32
+predicate_groups:
+  PN1.1:
+    runtime_checks: 7
+    source_predicate: one-high coefficients through n=7 equal the displayed odd formula and vanish for even n
+    verdict: accepted_and_generalized_by_C-SG-019
+    reason: >-
+      Exact derivative and independent binomial routes prove the formula for
+      all nonnegative orders with explicit amplitude and coordinate scales.
+      The words high, low, quantum, and phonon are coordinate labels only.
+  PN1.2:
+    runtime_checks: 1
+    source_predicate: the n=15 coefficient is nonzero and therefore multiplicity is unbounded with no cutoff
+    verdict: formal_nonzero_subsequence_accepted_physical_multiplicity_rejected
+    reason: >-
+      The entire series has nonzero unit-coordinate coefficients at every odd
+      n, and their magnitudes are 1/n! and tend to zero. Formal nonzero order
+      supplies no state multiplicity, accessibility, occupation, or rate.
+  PN1.3:
+    runtime_checks: 2
+    source_predicate: the H*L and H*L^3 coefficients are 1 and -1/6 and prove genuine multiphonon coupling
+    verdict: coefficients_accepted_quantum_coupling_label_rejected
+    reason: >-
+      Both local coefficients are exact in the declared coordinates. Without
+      canonical mode normalization, operators, states, and spacetime matrix
+      elements, they are not one-to-one or one-to-three quantum amplitudes.
+  PN1.4:
+    runtime_checks: 12
+    source_predicate: mixed coefficients on a j=1..3 k=1..4 grid are nonzero iff total degree is even
+    verdict: accepted_and_extended_by_C-SG-019
+    reason: >-
+      C-SG-019 proves the positive-order vacuum rule for arbitrary
+      nonnegative j and k. At background pi/2 positive-order support exchanges
+      parity, so the rule is explicitly local to the vacuum expansion.
+  PN1.5:
+    runtime_checks: 6
+    source_predicate: pure low-field terms through sixth order have the displayed alternating coefficients and signs
+    verdict: duplicate_specialization_of_C_BRK_001_and_C_SG_019
+    reason: >-
+      The values are exact but add no independent physical premise. C-BRK-001
+      already owns the univariate sixth-order surface and C-SG-019 embeds it in
+      the general mixed formula.
+  PN1.6:
+    runtime_checks: 1
+    source_predicate: the degree-eight extracted polynomial reproduces the cosine through degree eight
+    verdict: accepted_as_finite_truncation_identity
+    reason: >-
+      Exact scaled-series subtraction verifies the finite-order identity. It
+      is not a global error bound or equality with the full function.
+  PN1.7:
+    runtime_checks: 1
+    source_predicate: a nonzero degree-ten remainder proves the ladder is infinite
+    verdict: accepted_as_analytic_nontermination_only
+    reason: >-
+      The omitted coefficient is exact and the cosine series is entire. This
+      does not prove a physical channel, nonnegligible amplitude, or absence of
+      a cutoff in a separately quantized effective theory.
+  PN1.8:
+    runtime_checks: 2
+    source_predicate: a nonzero mixed derivative rejects an additive separable fake
+    verdict: accepted_for_the_declared_coordinate_function
+    reason: >-
+      The declared local function is not f(H)+g(L). That algebra alone neither
+      selects a physical field split nor establishes energy exchange.
+headline_coverage: >-
+  All 32 runtime checks and all thirteen static check sites are covered. The
+  exact classical Taylor content is promoted with wider conventions; the
+  intrinsic multiphonon, quantum, nuclear, transfer, and material headline is
+  not.

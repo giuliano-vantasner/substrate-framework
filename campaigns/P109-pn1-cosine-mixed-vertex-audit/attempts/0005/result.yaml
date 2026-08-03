@@ -1,0 +1,21 @@
+campaign: P109
+attempt: 0005
+candidate: independent_complex_exponential_and_binomial_route
+status: completed
+command: PYTHONPATH=src .venv/bin/python proposals/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+exit_status: 0
+terminal_tally: ALL 33 CHECKS PASS [C-SG-019-INDEPENDENT]
+verdict: independent_exact_route_passes_after_recorded_oracle_repairs
+mechanism: >-
+  A review implementation that imports no canonical coefficient helper derives
+  the cycle from complex exponentials and reconstructs every mixed monomial by
+  the binomial theorem. It independently confirms the one-high subsequence,
+  positive-order background parity exchange, coefficient-to-derivative
+  factorials, coordinate-rescaling powers, factorial decay, and the first
+  omitted truncation term. It also confirms that the local coefficient surface
+  contains no time, space, state, quantum, phonon, matrix-element, or rate data.
+compatibility_event: none
+next_attempt: >-
+  Complete claim-level source, dependency, consumer, and nonduplication audits;
+  then run the primary, independent, focused, and downstream gates at the
+  promotion boundary.

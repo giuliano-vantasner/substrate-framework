@@ -1,0 +1,41 @@
+campaign: P109
+claims:
+  C-SG-019:
+    accepted_dependencies: [C-SG-012]
+    declared_inputs:
+      - independent real formal coordinates H and L
+      - real amplitude, background, and coordinate scale factors
+      - the declared classical local potential A*(1-cos(phi0+a_H*H+a_L*L))
+      - nonnegative integer derivative orders j and k
+    mathematical_imports:
+      - exact real and complex differentiation
+      - entire cosine and exponential series
+      - binomial theorem, factorials, and multivariate Taylor coefficients
+    excluded:
+      - selected field or normal-mode decomposition
+      - kinetic or canonical normalization and action coefficient
+      - quantization, creation and annihilation operators, or state normalization
+      - matrix elements, occupation factors, phase space, overlap, kinematics, resonance, linewidth, rates, and material realization
+compatibility_only:
+  C-BRK-001: >-
+    Owns the univariate cosine expansion through sixth order and the coordinate
+    and ontology ceiling. It is a nonduplication comparator, not a derivation
+    dependency of the all-order mixed theorem.
+  C-SG-009: >-
+    Is the accepted ceiling of FS1. Its classical moment identities supply no
+    high/low mode split or quantum premise and are not imported.
+  C-SG-011: >-
+    Is the accepted ceiling of NC1. Its topological-current identities supply
+    no mode split, quantization, or transition premise and are not imported.
+missing_for_quantum_process:
+  - a physically derived split into normalized high- and low-frequency modes
+  - canonical kinetic terms and operator normalization
+  - an interaction Hamiltonian with its dimensional prefactor
+  - specified initial and final states and occupation factors
+  - spacetime overlap and energy-momentum conservation
+  - resonance, detuning, linewidth, perturbative regime, and transition-rate rule
+  - a material and nuclear-state dictionary with an independently accepted scale
+closure: >-
+  C-SG-019 closes exactly as a classical local coefficient theorem through
+  C-SG-012 and standard calculus. None of PN1's quantum-process labels is in
+  the dependency closure.

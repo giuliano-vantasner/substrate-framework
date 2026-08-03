@@ -1,0 +1,36 @@
+campaign: P109
+selection_basis:
+  - accepted classical-potential dependency closure
+  - exact agreement of mixed-derivative, complex-exponential, and binomial routes
+  - explicit amplitude, background, coordinate-scale, and factorial conventions
+  - total-parity, sign, constant-term, rescaling, convergence, and truncation sensitivity
+  - separation of formal classical coefficients from quantum process data
+  - nonduplication and complete pinned-consumer accounting
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: PN1 passes but its physics nouns never enter its mathematical model or oracle.
+  B:
+    decision: selected_as_C_SG_019_closed_form
+    reason: The entire cosine series and binomial theorem give the arbitrary-order mixed coefficient exactly.
+  C:
+    decision: selected_as_independent_derivative_and_exponential_routes
+    reason: Fresh mixed derivatives and complex exponentials reproduce every coefficient and factorial independently.
+  D:
+    decision: selected_as_background_ceiling
+    reason: A pi/2 background exchanges positive-order parity support and disproves a background-free universal rule.
+  E:
+    decision: selected_as_normalization_ceiling
+    reason: Explicit scale powers and derivative factorials show that bare c_n is coordinate and convention dependent.
+  F:
+    decision: selected_as_convergence_and_truncation_ceiling
+    reason: The exact nonzero subsequence decays factorially, and finite reconstruction leaves an explicit next term.
+  G:
+    decision: selected_as_quantum_interpretation_ceiling
+    reason: The local polynomial contains none of the state, operator, spacetime, kinematic, resonance, or rate inputs needed for a quantum process.
+  H:
+    decision: selected_nonduplication_positive
+    reason: C-BRK-001 stops at a univariate sixth-order surface; an all-order mixed API serves multiple pending consumers without duplicating a physical model.
+comparator_use: >-
+  No empirical value, material scale, rate, or later consumer conclusion selects
+  a candidate, coefficient, normalization, background, or claim.

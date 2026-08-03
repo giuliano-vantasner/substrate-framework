@@ -1,0 +1,24 @@
+campaign: P109
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-30/bridge_PN1_multiphonon_vertex.py
+  sha256: f2fcd58c97b9e9aa0b92e0ece9d92ff6c7ddaddec1b385b10a68a156ac3df985
+frozen_inputs:
+  proposal_snapshot: proposals/P109-pn1-cosine-mixed-vertex-audit/evidence/frozen-proposal.yaml
+  proposal_snapshot_sha256: a3e4a230ba74d4c2c0c8c2a3e0355121e60ff25cb410a84c8d14c2549265ad15
+implementation:
+  module: src/substrate_framework/cosine_vertices.py
+  module_sha256: 41a161262a63a8c9b533cdd2e80bfc0fae2b6ca0d892dc83790bccb87a71a486
+  tests: tests/test_cosine_vertices.py
+  tests_sha256: 99b0369c4f0111c6a02d9ab9f81eaf44e6124ceb5fa9934fbd0e9a87e617ca16
+verification:
+  primary: proposals/P109-pn1-cosine-mixed-vertex-audit/verify.py
+  primary_sha256: 86882dc2dadc0ca29bdfbc3a9bcd055b89307dddb4cdd77644a01b191bbe1bd3
+  independent: proposals/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+  independent_sha256: 6e21e44a5b2a9e830d9506363504264be59bafa1d5edcf0509b1be848fb40611
+exact_surface:
+  potential: A*(1-cos(phi0+a_H*H+a_L*L))
+  coefficient: A*g^(j+k)(phi0)*a_H^j*a_L^k/(j!*k!) where g=1-cos
+  vacuum_one_high: zero for even n and A*(-1)^((n-1)/2)*a_H*a_L^n/n! for odd n
+  verification_ceiling: classical_local_symbolic_theorem
+status: promotion_candidate

@@ -1,0 +1,22 @@
+campaign: P109
+attempt: 0001
+candidate: A
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN1_multiphonon_vertex.py
+exit_status: 0
+elapsed_seconds: 0.93
+terminal_tally: ALL 32 CHECKS PASS
+source_sha256: f2fcd58c97b9e9aa0b92e0ece9d92ff6c7ddaddec1b385b10a68a156ac3df985
+compatibility_event: none
+verdict: exact_origin_coefficient_evidence_survives_physical_interpretation_pending
+mechanism: >-
+  The source correctly computes unit-normalized zero-background mixed
+  coefficients, finite parity controls, one n=15 coefficient, an eighth-order
+  truncation, and a separability counterexample. It executes 32 loop-expanded
+  checks although static inventory sees thirteen call sites. Its high/low,
+  frequency, quantum, phonon, nuclear, mode, and energy-transfer labels never
+  enter an equation or oracle.
+next_attempt: >-
+  Implement the all-order coefficient theorem with explicit normalization and
+  background, test direct derivative and binomial routes, and preserve quantum
+  process requirements as interpretation debt rather than coefficient inputs.

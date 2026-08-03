@@ -1517,6 +1517,40 @@ units:
       closest-reaction families, and sample/state countermodels through 34
       primary and 19 independent checks. E5 and exact P108 work use no NumPy
       or sampled quadrature, so there is no np.trapz compatibility event.
+  PN1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-019
+    qualification: >-
+      PN1's unit-normalized zero-background mixed Taylor coefficients, total-
+      parity rule, alternating signs, one-high odd-order formula, finite
+      reconstruction, nonzero later remainder, and nonseparability check are
+      exact classical local-coordinate results. C-SG-019 generalizes them to
+      explicit amplitude, background, coordinate scales, arbitrary derivative
+      orders, coefficient-versus-derivative factorials, and the factorially
+      decaying nonzero subsequence. The source never derives normalized high-
+      and low-frequency modes, kinetic or canonical normalization, quantum
+      operators or states, occupation factors, overlap, kinematics, resonance,
+      linewidth, transition rule, rate, material realization, or nuclear
+      process. Its intrinsic multiphonon-coupling and energy-transfer headline
+      is therefore not accepted, and formal nonzero order is not physical
+      multiplicity or accessibility.
+    evidence:
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/source_adjudication.md
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/source-reproduction.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/source-audit.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/check-adjudication.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/dependency-audit.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/consumer-audit.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/candidate-comparison.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/primary-provenance.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/verify.py
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+      - memory/vantasner/decisions/C-SG-019-review.md
+    note: >-
+      P109 closes 99 primary and 33 independent exact checks plus focused
+      package replay. PN1 and all exact P109 work use no NumPy or sampled
+      quadrature, so there is no np.trapz compatibility event.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

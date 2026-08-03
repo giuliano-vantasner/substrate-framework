@@ -1,0 +1,26 @@
+campaign: P109
+attempt: 0007
+candidate: integrated_promotion_gate
+status: completed
+command: scripts/validate.sh
+started_at: '2026-08-07T19:50:00Z'
+preconditions:
+  - primary exact verifier passes all 99 checks
+  - independent exact verifier passes all 33 checks
+  - focused package and compatibility replay passes 68 tests
+  - source predicates, dependencies, consumers, and claim review are closed
+  - registry, v0.92.0, current release, generated docs, and generated memory are synchronized
+  - GitNexus reports LOW additive impact and zero affected execution processes
+compatibility_event: none
+completed_at: '2026-08-07T19:55:00Z'
+exit_status: 0
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+workflow_summary:
+  registry: 127 claims and 127 accepted
+  proposals: 0
+  migration_queue: 218 units, 111 pending, 0 partial
+  memory: 469 files valid
+  skill: valid
+  tests: 1003 passed in 90.47 seconds
+verdict: promotion_gate_passed
+debt: []

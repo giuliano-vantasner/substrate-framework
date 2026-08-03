@@ -48,6 +48,13 @@ from .coherence_gates import (
     iid_equal_amplitude_expected_intensity,
     population_activation_scale,
 )
+from .cosine_vertices import (
+    cosine_mixed_coefficient,
+    cosine_mixed_derivative,
+    cosine_mixed_taylor_polynomial,
+    vacuum_cosine_mixed_coefficient,
+    vacuum_one_high_coefficient,
+)
 from .axisymmetric_radiation import (
     ConditionalAxisymmetricRadiationCoefficients,
     conditional_axisymmetric_radiation_coefficients,
@@ -898,6 +905,9 @@ __all__ = [
     "coth_gated_reduced_shape",
     "coth_gated_response_shape",
     "coth_gated_stationary_coordinate_upper_bound",
+    "cosine_mixed_coefficient",
+    "cosine_mixed_derivative",
+    "cosine_mixed_taylor_polynomial",
     "conditional_real_m2_natural_axis_waveform",
     "conditional_real_m2_power",
     "conditional_scaled_stf_power",
@@ -1183,6 +1193,8 @@ __all__ = [
     "two_level_upper_occupation",
     "two_length_log_constraint",
     "two_length_speed_dimension_ledger",
+    "vacuum_cosine_mixed_coefficient",
+    "vacuum_one_high_coefficient",
     "transmuted_mass_coordinate",
     "tube_energy_slope",
     "tube_field_energy",

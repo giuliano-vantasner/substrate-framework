@@ -975,6 +975,15 @@ Under C-MED-003, exact differentiation of the physical sine-Gordon residual at e
 - Compatibility: `compatible_extension`
 - Dependencies: C-MED-003
 
+## C-SG-019
+
+Let H and L be independent real formal coordinates, let A, a_H, a_L, and phi_0 be real, and declare the classical local function V(H,L)=A*(1-cos(phi_0+a_H*H+a_L*L)). For nonnegative integers j and k, the coefficient of H^j*L^k is A*g^(j+k)(phi_0)*a_H^j*a_L^k/(j!*k!), where g(phi)=1-cos(phi). Equivalently, the raw mixed origin derivative is this coefficient multiplied by j!*k!. At phi_0=0 the constant coefficient is zero; every positive odd-total coefficient is zero; and for positive even m=j+k the coefficient is A*(-1)^(m/2+1)*a_H^j*a_L^k/(j!*k!). Hence the one-high coefficient [H*L^n]V vanishes for even n and equals A*(-1)^((n-1)/2)*a_H*a_L^n/n! for odd n. For unit amplitude and scales, its nonzero magnitudes 1/n! tend to zero along the odd subsequence even though the entire series has no finite terminal order. A finite Taylor polynomial is not the full cosine and requires separate remainder control for approximation claims. The parity support is expansion- background dependent, and every coefficient carries the displayed coordinate-scale powers. These are exact classical local-coordinate identities. They establish no selected frequency or normal-mode split, canonical normalization, quantization, matrix element, occupation factor, phase space, spacetime overlap, energy-momentum channel, resonance, transition rate, material realization, or nuclear process.
+
+- Accepted in: `v0.92.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-012
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

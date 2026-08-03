@@ -11,7 +11,7 @@ tags:
 - migration-PN1
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P109 PN1 Cosine Mixed-Vertex Audit
 
@@ -212,3 +212,20 @@ all thirteen PN1 predicates, physical interpretation boundary, dependencies,
 consumers, claim review, canonical records, and empty debt ledger agree. A
 nonzero formal coefficient, infinite series, or source tally is not sufficient
 by itself.
+
+## Adjudicated Outcome
+
+P109 accepted C-SG-019 in release v0.92.0. Exact derivative, entire-series,
+complex-exponential, and binomial routes agree on the arbitrary-order mixed
+coefficient with amplitude, background, coordinate scales, and both factorials
+explicit. Positive-order vacuum parity, the one-high odd subsequence,
+factorial decay, and the first omitted finite-truncation term are mutation
+sensitive. The package API is additive and pure.
+
+PN1 is qualified. Its 32 runtime checks reproduce, but its high/low, quantum,
+phonon, nuclear, mode, multiplicity, and energy-transfer labels never enter an
+equation or oracle. No frequency-mode normalization, operator, state, overlap,
+kinematic channel, resonance, or transition-rate premise is accepted. Attempts
+0002 through 0004 preserve one wrong expected sign and two independent-oracle
+defects; the scientific formula did not change. Exact P109 work uses no NumPy
+or sampled quadrature and has no `np.trapz` compatibility event.

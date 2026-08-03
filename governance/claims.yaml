@@ -5134,6 +5134,65 @@ claims:
     accepted_in: v0.82.0
     challenges: []
     supersedes: []
+  - id: C-SG-019
+    statement: >-
+      Let H and L be independent real formal coordinates, let A, a_H, a_L,
+      and phi_0 be real, and declare the classical local function
+      V(H,L)=A*(1-cos(phi_0+a_H*H+a_L*L)). For nonnegative integers j and k,
+      the coefficient of H^j*L^k is
+      A*g^(j+k)(phi_0)*a_H^j*a_L^k/(j!*k!), where g(phi)=1-cos(phi).
+      Equivalently, the raw mixed origin derivative is this coefficient
+      multiplied by j!*k!. At phi_0=0 the constant coefficient is zero;
+      every positive odd-total coefficient is zero; and for positive even
+      m=j+k the coefficient is
+      A*(-1)^(m/2+1)*a_H^j*a_L^k/(j!*k!). Hence the one-high coefficient
+      [H*L^n]V vanishes for even n and equals
+      A*(-1)^((n-1)/2)*a_H*a_L^n/n! for odd n. For unit amplitude and scales,
+      its nonzero magnitudes 1/n! tend to zero along the odd subsequence even
+      though the entire series has no finite terminal order. A finite Taylor
+      polynomial is not the full cosine and requires separate remainder
+      control for approximation claims. The parity support is expansion-
+      background dependent, and every coefficient carries the displayed
+      coordinate-scale powers. These are exact classical local-coordinate
+      identities. They establish no selected frequency or normal-mode split,
+      canonical normalization, quantization, matrix element, occupation
+      factor, phase space, spacetime overlap, energy-momentum channel,
+      resonance, transition rate, material realization, or nuclear process.
+    provenance: campaigns/P109-pn1-cosine-mixed-vertex-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-SG-012
+    evidence:
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/verify.py
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0002/result.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0003/result.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0004/result.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0005/result.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0006/result.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/source_adjudication.md
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/source-reproduction.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/source-audit.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/check-adjudication.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/dependency-audit.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/consumer-audit.yaml
+      - campaigns/P109-pn1-cosine-mixed-vertex-audit/evidence/candidate-comparison.yaml
+      - memory/vantasner/decisions/C-SG-019-review.md
+      - tests/test_cosine_vertices.py
+    assumptions:
+      - H and L are independent real formal coordinates and A, a_H, a_L, and phi_0 are declared real parameters; zero scales are allowed but can make otherwise supported terms vanish.
+      - Polynomial coefficients and raw mixed derivatives use exactly the displayed factorial convention.
+      - The vacuum parity specialization uses phi_0=0 modulo 2*pi; other backgrounds use the general derivative formula and need not share its support.
+      - Infinite-series equality follows from the entire cosine, while any finite approximation claim separately declares a field domain and remainder control.
+      - No field name or formal-coordinate split supplies a kinetic term, canonical mode normalization, quantum operator, physical state, or transition rule.
+    comparators:
+      - PN1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; its exact unit-coordinate vacuum coefficients were reproduced after freeze, while its quantum and multiphonon interpretation was rejected
+    accepted_in: v0.92.0
+    challenges: []
+    supersedes: []
   - id: C-LAT-002
     statement: >-
       Let N>=2 and let dimensionless real phases u_j(t) live on a

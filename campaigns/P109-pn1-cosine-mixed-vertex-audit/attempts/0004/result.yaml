@@ -1,0 +1,15 @@
+campaign: P109
+attempt: 0004
+candidate: independent_background_and_remainder_repair
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+exit_status: 1
+passed_before_failure: 30
+failure: fresh finite polynomial has a nonzero degree-ten remainder
+mechanism: >-
+  SymPy returned the lambda^10 coefficient as an expanded homogeneous
+  polynomial while the expected value remained factored as (H+L)^10/10!.
+  Raw representation equality failed although their exact difference is zero.
+repair: >-
+  Compare the simplified difference to zero without changing the coefficient,
+  sign, truncation order, or scientific predicate.

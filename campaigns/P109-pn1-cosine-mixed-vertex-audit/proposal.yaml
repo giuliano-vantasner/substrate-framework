@@ -62,4 +62,4 @@ comparators_blinded_until: >-
   countermodels, convergence and truncation gates, quantum interpretation
   ceiling, and claim-selection criteria before executing PN1 or inspecting its
   thirteen predicate implementations.
-status: draft
+status: accepted

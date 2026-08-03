@@ -1,0 +1,54 @@
+campaign: P109
+title: PN1 all-order cosine mixed-coordinate coefficient and interpretation audit
+source_baseline: substrate@6d1f4e0
+source_units: [PN1]
+base_release: v0.91.0
+release_after_adjudication: v0.92.0
+adjudicated_at: '2026-08-07T19:30:00Z'
+selected_candidates:
+  - {id: B, reason: Entire-series and binomial derivation gives the arbitrary-order mixed coefficient.}
+  - {id: C, reason: Independent derivative and complex-exponential routes confirm signs and factorials.}
+  - {id: D, reason: General background exposes the exact limit of the vacuum parity rule.}
+  - {id: E, reason: Explicit coordinate scales and raw derivatives expose normalization dependence.}
+  - {id: F, reason: Entire convergence, factorial decay, and remainder checks separate nontermination from physical accessibility.}
+  - {id: G, reason: The interpretation audit identifies every absent quantum-process premise.}
+  - {id: H, reason: Nonduplication finds one reusable all-order mixed theorem with multiple pending consumers.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims:
+  - {id: C-SG-019, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-SG-012, decision: unchanged_classical_potential_and_quantum_ceiling}
+  - {id: C-BRK-001, decision: unchanged_univariate_sixth_order_and_coordinate_ceiling}
+  - {id: C-SG-009, decision: unchanged_FS1_ceiling}
+  - {id: C-SG-011, decision: unchanged_NC1_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  focused_test_sign_failure: attempts/0002/result.yaml
+  independent_background_failure: attempts/0003/result.yaml
+  independent_representation_failure: attempts/0004/result.yaml
+  independent_exact_route: attempts/0005/result.yaml
+  focused_promotion_gate: attempts/0006/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_vertex_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-SG-019-review.md
+source_disposition:
+  PN1: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN1_multiphonon_vertex.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P109-pn1-cosine-mixed-vertex-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+  - .venv/bin/python -m pytest -q tests/test_cosine_vertices.py tests/test_sine_gordon.py tests/test_explicit_breaking.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

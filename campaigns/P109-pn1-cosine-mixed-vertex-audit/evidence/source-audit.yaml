@@ -1,0 +1,33 @@
+campaign: P109
+source_unit: PN1
+source_sha256: f2fcd58c97b9e9aa0b92e0ece9d92ff6c7ddaddec1b385b10a68a156ac3df985
+static_surface:
+  imports: [sympy]
+  static_check_calls: 13
+  literal_check_calls: 6
+  dynamic_check_calls: 7
+  runtime_checks: 32
+  local_check_helper: true
+  assert_statements: 0
+  terminal_tally: ALL 32 CHECKS PASS
+  numpy_surface: none
+declared_function: 1-cos(phi_H+phi_L)
+declared_expansion_point: {phi_H: 0, phi_L: 0}
+declared_coordinate_scales: {phi_H: 1, phi_L: 1}
+surviving_surface:
+  - The polynomial coefficient is the mixed origin derivative divided by both factorials.
+  - Positive even total degree has the exact alternating binomial coefficient and positive odd total degree vanishes.
+  - The one-high coefficient is nonzero for odd low order and equals (-1)^((n-1)/2)/n! in the declared unit coordinates.
+  - The finite total-degree polynomial agrees with the full cosine through its declared order and has a nonzero later remainder.
+  - The mixed second derivative rejects additive separation of the two declared coordinates.
+source_weaknesses:
+  - The labels high-frequency, low-frequency, nuclear, breather, phonon, quantum, multiplicity, medium, and energy exchange never enter an equation or oracle.
+  - The split phi=phi_H+phi_L fixes both coordinate scales to one without a normalization or mode-function derivation.
+  - Only expansion about the zero vacuum is tested, so the parity statement is not background independent.
+  - The source calls a Taylor coefficient a coupling vertex without declaring an action prefactor, spacetime dimension, kinetic normalization, canonical fields, or coefficient-versus-derivative convention beyond the local polynomial.
+  - Nonzero coefficients at arbitrarily high formal order are factorially suppressed and establish neither perturbative relevance nor kinematic accessibility.
+  - No quantization, operator expansion, state normalization, occupation factor, overlap integral, energy-momentum constraint, resonance, linewidth, transition rule, rate, or material realization is supplied.
+compatibility_verdict: >-
+  PN1 imports no NumPy and performs no sampled integration. There is no
+  np.trapz compatibility event and no alias-only replay is needed.
+headline_verdict: exact_classical_mixed_taylor_theorem_with_quantum_process_interpretation_rejected

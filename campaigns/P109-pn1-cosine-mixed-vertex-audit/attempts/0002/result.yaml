@@ -1,0 +1,17 @@
+campaign: P109
+attempt: 0002
+candidate: focused_canonical_coefficient_tests
+status: failed
+command: .venv/bin/python -m pytest -q tests/test_cosine_vertices.py tests/test_sine_gordon.py tests/test_explicit_breaking.py
+exit_status: 1
+passed: 67
+failed: 1
+failure: test_raw_derivative_and_polynomial_coefficient_differ_by_factorials
+mechanism: >-
+  The test expected a negative H^2 L^4 coefficient at total order six. The
+  sixth-order term of 1-cos(H+L) is positive, giving coefficient +1/48 and raw
+  mixed derivative +1. The implementation and general grid theorem were
+  correct; the isolated expected sign was wrong.
+repair: >-
+  Correct the order-six expected coefficient and derivative signs without
+  changing the implementation or any tolerance.

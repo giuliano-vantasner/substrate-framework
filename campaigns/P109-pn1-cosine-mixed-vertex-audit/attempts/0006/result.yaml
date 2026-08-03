@@ -1,0 +1,25 @@
+campaign: P109
+attempt: 0006
+candidate: focused_promotion_boundary
+status: completed
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P109-pn1-cosine-mixed-vertex-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+  - .venv/bin/python -m pytest -q tests/test_cosine_vertices.py tests/test_sine_gordon.py tests/test_explicit_breaking.py
+exit_status: 0
+terminal_tallies:
+  primary: ALL 99 CHECKS PASS [C-SG-019]
+  independent: ALL 33 CHECKS PASS [C-SG-019-INDEPENDENT]
+  focused_tests: 68 passed
+verdict: exact_classical_claim_and_interpretation_ceiling_ready_for_integrated_gate
+mutation_coverage:
+  - total parity and alternating sign
+  - each factorial and coefficient-versus-derivative conversion
+  - amplitude and independent coordinate scales
+  - expansion background
+  - finite truncation versus full entire function
+  - factorial decay versus an unsuppressed ladder
+compatibility_event: none
+next_attempt: >-
+  Refresh graph impact, close generated records and parent continuation, begin
+  the final attempt in progress, and run the integrated workflow once.

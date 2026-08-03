@@ -1,0 +1,19 @@
+campaign: P109
+attempt: 0003
+candidate: primary_and_independent_exact_routes
+status: failed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P109-pn1-cosine-mixed-vertex-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P109-pn1-cosine-mixed-vertex-audit/reviews/independent_vertex_review.py
+primary_terminal_tally: ALL 99 CHECKS PASS [C-SG-019]
+independent_passed_before_failure: 24
+failure: fresh pi-over-two background exchanges even and odd derivative support
+mechanism: >-
+  The independent review included total order zero with positive even
+  derivatives. At background pi/2 every positive even derivative vanishes,
+  but the zeroth Taylor coefficient is the retained constant
+  1-cos(pi/2)=1. The all-order implementation and positive-order parity
+  theorem were correct; the independent check conflated value and derivative.
+repair: >-
+  Check the background constant separately and restrict the exchanged support
+  statement to positive derivative orders.
