@@ -1,0 +1,70 @@
+id: P096
+base_release: v0.81.0
+base_commit: 0ea16bb2d745a1d2d9d0811f66f11fb60dd014c7
+scientific_base_commit: 7b4fecc86f25fc5b3fe995fb176f776c7675163a
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MC2]
+question: >-
+  Derive the exact linearized physical sine-Gordon dispersion and real-
+  frequency exterior-tail classification from accepted C-MED-003, distinguish
+  one-sided evanescence from a global square-integrable linear eigenmode and
+  from nonlinear breather existence, prove the strongest correct whole-line
+  time-harmonic statement in the gapped and gapless limits, and terminally
+  adjudicate every MC2 spectrum, band, decay, threshold, above-gap, no-bound-
+  state, material, and consumer subclaim without importing pending MC3.
+invariants:
+  - C-MED-003 fixes the declared dimensional cosine density, c, omega_0, ell, coordinate map, and material ceiling.
+  - C-SG-017 fixes the exact nonlinear physical breather and its inverse-tail scale eta/ell without proving a general spectral theorem.
+  - C-SG-011 fixes the normalized small-amplitude massive Klein-Gordon limit and forbids calling it a massless free chiral theory.
+  - C-LAT-001 keeps continuum and lattice dispersions distinct; no finite spacing or lattice material is imported.
+  - C-PDE-005 supplies a radial harmonic-tail analogue and its existence ceiling, not authority for the 1D physical theorem.
+  - Plane-wave propagation, exterior evanescence, whole-line L2 time-harmonic modes, traveling wave packets, nonlinear breathers, finite-box standing waves, and material realizations remain distinct objects.
+  - Pending MC3, MC4, material, lifetime, thermal, spark, DBD, and synthesis consumers are unavailable as authority.
+allowed_imports:
+  - C-MED-003 and substrate_framework.dimensional_sine_gordon for the declared physical field equation and positive scales
+  - C-SG-017 and C-SG-001 for the exact nonlinear breather and its asymptotic tail as a cross-check only
+  - C-SG-011 for the normalized small-amplitude massive Klein-Gordon limit
+  - C-LAT-001 for nonduplication and the continuum fixed-mode limit only
+  - C-PDE-005 for tail-semantics and existence-ceiling comparison only
+  - exact Taylor linearization, Fourier substitution, constant-coefficient ODE classification, integration by parts, and elementary L2/H1 reasoning with every domain and boundary hypothesis stated
+  - MC2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+candidates:
+  - id: A
+    description: Reproduce MC2 literally and classify each of its twenty-one predicates against the exact object it evaluates.
+  - id: B
+    description: Linearize the accepted dimensional cosine residual directly at a vacuum and derive the physical Klein-Gordon equation.
+  - id: C
+    description: Derive the real-wavenumber dispersion, band floor, phase velocity, group velocity, and normalized limit.
+  - id: D
+    description: Classify sub-gap, threshold, and above-gap real-frequency solutions on each exterior half-line with explicit branch and boundary semantics.
+  - id: E
+    description: Prove that the constant-coefficient whole-line linearized operator has no nonzero L2 real-frequency time-harmonic eigenfunction in any branch.
+  - id: F
+    description: Match the exact nonlinear C-SG-017 breather tail to the independently derived sub-gap exterior exponent without using the breather to derive the spectrum.
+  - id: G
+    description: Construct localized finite-energy traveling wave packets of the gapless wave equation to reject any broader claim that a gapless medium has no localized solutions at all.
+  - id: H
+    description: Separate infinite-line radiative branches from finite-box standing waves and from outgoing or scattering boundary conditions.
+  - id: I
+    description: Trace MC3, MC4, MD, engineering, and synthesis consumers and prevent sequential use from deriving a material or absolute scale.
+  - id: J
+    description: Compare the surviving exact theorem against accepted normalized, radial, and lattice claims before reserving a canonical API.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and direct linearization from C-MED-003
+  - exact domain, branch, boundary, norm, sign, unit, and Fourier-convention consistency
+  - structural separation of propagation, evanescence, global L2 modes, traveling packets, and nonlinear existence
+  - mutation sensitivity to mass, speed, sign, frequency, wavenumber, exponent, threshold, and boundary changes
+  - correct gapless, threshold, normalized, low-wavenumber, and high-wavenumber limits
+  - parameter economy, nonduplication, material ceiling, natural framework fit, and consumer closure
+claims_proposed:
+  - C-SG-018
+comparators_blinded_until: >-
+  The generated queue and P095 consumer audit already exposed MC2's principal
+  dispersion, band floor, tail exponent, and rejection narrative, so fresh
+  formula blinding is impossible and is not claimed. P096 freezes candidates,
+  norm and boundary semantics, the whole-line theorem, counterexamples,
+  selection criteria, and claim ceilings before complete MC2 body inspection,
+  execution, literal-check inspection, terminal output, or additional consumer
+  body and output inspection.
+status: draft

@@ -1,0 +1,38 @@
+campaign: P096
+frozen_before_complete_source_body_inspection: true
+frozen_before_source_execution: true
+proposal_path: proposals/P096-mc2-dispersion-tail-classification/proposal.yaml
+proposal_sha256: 6f62689a8d3c6b32f73f3c8bd4d82dfd1d28d503c5535ae9c5cd648934a48ae9
+memory_contract_path: memory/vantasner/proposals/P096-mc2-dispersion-tail-classification.md
+memory_contract_sha256: c230e4a39a32b69286abd5fcf4bafe006a9c0bef15d5b41806640c2cd458af5f
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate
+  /home/dan/substrate-framework/memory/vantasner/proposals/P096-mc2-dispersion-tail-classification.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: partially_exposed_by_generated_queue_and_P095_consumer_snippets
+source_execution_state_at_freeze: not_executed_under_P096
+identifier_collision_search:
+  candidates: [C-SG-018]
+  surfaces: [governance, campaigns, proposals, memory, src, tests]
+  collisions: []
+disclosure: >-
+  The generated queue and P095 consumer audit exposed MC2's title, main
+  dispersion, band floor, tail exponent, and gapless and above-gap narrative.
+  P096 therefore cannot claim fresh formula blinding. Its exact linearization,
+  velocity, exterior-branch, whole-line L2, traveling-packet, finite-box,
+  material-ceiling, consumer, and nonduplication candidates and structural
+  criteria were frozen before complete source-body inspection, execution,
+  all literal-predicate inspection, terminal output, or additional consumer
+  body and output inspection.
+already_exposed_at_freeze:
+  - MC2 source path, hash, size, phase, twenty-one literal-check count, and candidate dependencies MC1, ME3, and QB1
+  - proposed physical Klein-Gordon dispersion and band floor
+  - proposed sub-gap tail exponent and gapless and above-gap rejection narrative
+  - selected source excerpts read only for P095's MC1 consumer audit
+comparators_still_blinded_at_freeze:
+  - the complete MC2 implementation, full predicate set, examples, thresholds, and terminal output
+  - unchanged-source runtime behavior and tally under P096
+  - additional MC3, MC4, MD, material, and engineering consumer bodies and outputs
+  - any empirical material frequency, speed, length, or localization comparator
