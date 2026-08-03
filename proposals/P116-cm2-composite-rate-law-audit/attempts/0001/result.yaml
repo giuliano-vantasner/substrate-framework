@@ -1,0 +1,19 @@
+campaign: P116
+attempt: 0001
+candidate: freeze_provenance
+status: failed
+command: >-
+  git rev-parse 734ddec && git rev-parse 2cbc423; compare with proposal and
+  frozen-manifest base hashes
+exit_status: 0
+failure: >-
+  The draft proposal and frozen copy used correctly identified short commits
+  but incorrectly guessed their full SHA suffixes. Schema validation could not
+  detect that provenance mismatch.
+diagnosis: provenance_transcription_error
+scientific_effect: >-
+  No CM2 source execution, whole-body inspection, comparator inspection, or
+  scientific selection occurred under the invalid draft freeze.
+actual_base_commit: 734ddec8e3ffa1eb2e127d5601d7b851062ff353
+actual_scientific_base_commit: 2cbc423215cb24ec1402740a47174e302d7a3828
+next_attempt: repair_both_manifests_and_memory_then_repeat_freeze_checks

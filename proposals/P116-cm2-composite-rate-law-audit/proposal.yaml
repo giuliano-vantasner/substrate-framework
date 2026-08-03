@@ -1,0 +1,67 @@
+id: P116
+base_release: v0.95.0
+base_commit: 734ddec8e3ffa1eb2e127d5601d7b851062ff353
+scientific_base_commit: 2cbc423215cb24ec1402740a47174e302d7a3828
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM2]
+question: >-
+  Derive and independently verify the exact typed product of a declared
+  activation factor, positive counts, a symmetric paired-resolvent magnitude,
+  a nominal finite-window cycle factor, and a two-level thermal gate; classify
+  its loss-domain limits, discontinuities, monotonicity, stationary points,
+  normalization freedoms, dimensions, and identifiability; then adjudicate
+  CM2 without confusing factor multiplication with a coherent-medium nuclear
+  rate, physical sweet spot, channel, probability, yield, heat, material
+  realization, or observation.
+invariants:
+  - C-RG-002 supplies only a conditional positive barrier under declared constitutive inputs; exp(-E_star/Theta) remains a dimensionless activation factor and not a rate.
+  - PN2 contributes conditional quotient arithmetic only; no accepted quantum subdivision process, final state, or transfer law may be imported.
+  - C-SPN-002 supplies normalized symmetric-spin ladder coefficients; their squares are not rates and their N-scaling depends on rung, operator scale, state preparation, and coupling normalization.
+  - C-RES-001 supplies a finite complex matrix element. At E=0 and equal product c its magnitude is abs(c)*Gamma/(Delta^2+Gamma^2/4); it is not a probability or rate.
+  - C-DYN-001 distinguishes nominal omega_0/(2*pi*Gamma) from actual omega_d/(2*pi*Gamma) cycles in a declared 1/Gamma quadratic-envelope window and supplies no phase-coherence or material-breather population.
+  - C-TH-001 supplies the dimensionless symmetric two-level gate sech(x/2)^2/2 and no independent amplitude or physical thermal state.
+  - On 0<Gamma<2*omega, multiplying the equal-pair magnitude by the nominal omega/(2*pi*Gamma) factor cancels Gamma exactly and leaves a function strictly decreasing with Gamma; an interior positive-loss maximum requires an additional loss-dependent factor or different premise.
+  - Extending the nominal product by zero at Gamma=0 and Gamma>=2*omega creates endpoint jumps unless a separately defined continuous extension is chosen; discrete grid maxima do not prove a sweet spot.
+  - The composite has the dimension of the resolvent coupling product divided by energy. It is an inverse-time rate only after an independently approved unit convention and kinetic prefactor, neither of which is imported.
+  - B1 is pending, forward CM/GB consumers are pending, and source dependency cycles create provenance rather than authority.
+  - Comparator values and selected grids may test frozen formulas but cannot select the concept, rate interpretation, or optimum claim.
+allowed_imports:
+  - C-RG-002 conditional capillary barrier algebra and its explicit constitutive ceilings
+  - C-DYN-001 exact oscillator regimes and nominal-versus-actual cycle-count distinction
+  - C-TH-001 exact symmetric two-level gate
+  - C-SPN-002 normalized symmetric-spin identities and explicit non-rate ceiling
+  - C-RES-001 exact paired-resolvent magnitude, loss limits, peak, and physical ceiling
+  - elementary exact products, dimensions, derivatives, inequalities, limits, one-sided limits, piecewise functions, rank, and scale analysis
+  - CM2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - SymPy exact simplification, calculus, limits, rank, and load-bearing mutations
+candidates:
+  - id: A
+    description: Reproduce CM2 literally and classify all twenty-one symbolic, numeric, guard, dependency, rate, and sweet-spot predicates.
+  - id: B
+    description: Derive the exact typed nominal-cycle composite, including cancellation, dimensions, scale freedoms, endpoints, cutoff jumps, and loss monotonicity.
+  - id: C
+    description: Replace the nominal cycle factor by C-DYN-001's actual underdamped-cycle factor and compare the resulting continuous critical-boundary behavior without calling either factor phase coherence.
+  - id: D
+    description: Test alternative loss-dependent prefactors, zero interaction, zero density, arbitrary kinetic normalization, unequal couplings, and free loading or temperature maps as countermodels to rate and optimum claims.
+  - id: E
+    description: Independently rederive the exact factor product, derivatives, limits, dimensions, and identifiability without importing the new canonical implementation.
+  - id: F
+    description: Audit B1 and all cited predecessor ceilings, source cycles, direct and indirect consumers, claim nonduplication, and every source predicate.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit domain, dimension, state, normalization, and cutoff conventions
+  - exact product simplification, endpoint and one-sided limits, discontinuity classification, and stationary-point analysis
+  - sensitivity to loss-factor power, damping frequency, coupling normalization, prefactors, and cutoff convention
+  - separation of nominal window cycles, actual oscillations, phase coherence, matrix element, probability, and rate
+  - scale covariance, parameter economy, identifiability, reusable API fit, and nonduplication
+  - complete predicate, dependency, cycle, and downstream-consumer review
+claims_proposed: [C-CMP-001]
+comparators_blinded_until: >-
+  Queue metadata and prior consumer audits exposed the displayed six-factor
+  product, its nominal 1/Gamma cycle factor, the paired-loss factor, and the
+  claimed positive-loss sweet spot. P116 records that exposure and freezes the
+  stronger dimension, cancellation, one-sided-limit, discontinuity,
+  monotonicity, alternative-cycle, prefactor, identifiability, countermodel,
+  dependency, consumer, and twenty-one-predicate gates before executing CM2,
+  reading its body as a whole, or inspecting its selected numeric grid.
+status: draft
