@@ -1,0 +1,14 @@
+campaign: P122
+attempt: 0001
+status: failed_template_path
+candidate: workflow_preflight
+command: sed -n '1,260p' memory-templates/proposal.md
+result: >-
+  The authority, queue, source status, and registry searches completed, but the
+  trailing template read failed because the file is named
+  memory-templates/campaign-proposal.md.
+diagnosis: local_template_path_assumption
+scientific_effect: none
+next_attempt: >-
+  Read the complete campaign-proposal template, instantiate its manifest and
+  prose contract, validate the freeze, then open GB1.

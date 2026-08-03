@@ -1,0 +1,16 @@
+campaign: P122
+attempt: 0002
+status: failed_provenance_transcription
+candidate: workflow_freeze
+command: >-
+  Compare proposal and frozen hashes, validate the repository and memory, and
+  resolve the full base and scientific commit identifiers with git rev-parse.
+result: >-
+  The manifests were byte identical and all schemas passed, but explicit git
+  resolution showed that both manually expanded abbreviated commits were
+  transcribed incorrectly.
+diagnosis: full_commit_hash_transcription
+scientific_effect: none
+next_attempt: >-
+  Replace both commit identifiers in the matching manifests and memory with
+  git-resolved values, repeat the freeze validation, and only then inspect GB1.

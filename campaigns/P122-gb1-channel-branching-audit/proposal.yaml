@@ -1,0 +1,96 @@
+id: P122
+base_release: v0.97.0
+base_commit: c8d0fbdf907a502ff4884b701bd09a8a10696300
+scientific_base_commit: 59e1e9e3293ef396115aa3d5fad6f279e74a8c9a
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GB1]
+question: >-
+  Reproduce and independently audit GB1's two declared rate-valued objects,
+  normalized branching fractions, odds and relative-enhancement reductions,
+  dimensions, domains, endpoints, free normalizations, weight and count
+  premises, dependency closure, and selected-symbol absence scan; determine
+  whether a reusable exact two-channel allocation theorem survives beyond
+  C-CMP-001 and C-SPN-002, and terminally adjudicate every predicate without
+  converting declared dimensions or algebraic fractions into physical
+  de-excitation channels, coherence, a nuclear rate, material branching,
+  enhancement, yield, heat, or observation.
+invariants:
+  - >-
+    For nonnegative channel rates A and B not both zero, the normalized shares
+    A/(A+B) and B/(A+B) lie in [0,1], sum to one, preserve their zero and unit
+    endpoints, and depend only on the rate ratio; they are undefined at A=B=0.
+  - >-
+    Calling an input a rate requires an inverse-time dimension and accepted
+    states, interaction and normalization for a physical interpretation.
+    Algebra can propagate a declared rate dimension but cannot derive it.
+  - >-
+    In the specialization A=r_s*w*N and B=r_gamma, w and N must be
+    dimensionless for A to share r_s's rate dimension. Positivity, finite N,
+    and the domain of w remain explicit premises.
+  - >-
+    The reduction with rho=r_gamma/r_s requires r_s>0. Odds and any
+    ratio-of-ratios enhancement additionally require nonzero denominators and
+    a nonzero declared baseline weight.
+  - >-
+    Common positive scaling of both channel rates cancels from branching
+    fractions, while relative scaling changes them. Free r_s, r_gamma, w, and
+    N prevent a predicted branching fraction or magnitude.
+  - >-
+    C-SPN-002 supplies normalized finite-dimensional ladder coefficients and
+    explicitly states that their squares are not rates. PN2 supplies qualified
+    arithmetic only and no accepted claim.
+  - >-
+    C-CMP-001 supplies a conditional factor with one matrix-element dimension,
+    not a phase-coherent probability, transition rate, nuclear channel,
+    material magnitude, yield, heat, or observation.
+  - >-
+    Absence of selected symbol names from one expression or free-symbol set is
+    finite syntactic evidence only; aliases, functions, constants, imported
+    values, and semantically equivalent constructions remain possible.
+  - >-
+    Source candidate dependency edges and cycles grant no authority. Every
+    direct and transitive consumer inherits only individually accepted claims.
+  - >-
+    The source body, runtime output, and exact predicates remain unopened in
+    P122 at freeze; queue excerpts have already exposed the headline formulas,
+    declared dependencies, and advertised result.
+allowed_imports:
+  - C-CMP-001 only for its exact conditional composition and explicit non-rate non-channel ceiling
+  - C-SPN-002 only for normalized symmetric-spin algebra and its explicit squared-coefficient non-rate ceiling
+  - P110 and PN2 adjudication only as qualified arithmetic evidence with no accepted scientific claim
+  - exact real algebra inequalities limits derivatives dimensions ratio invariance and countermodels
+  - GB1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - SymPy exact simplification substitution differentiation limits and logical domain checks
+candidates:
+  - id: A
+    description: Reproduce GB1 literally and classify every symbolic dimension free-symbol mutation and tally predicate.
+  - id: B
+    description: Derive a reusable two-nonnegative-rate allocation theorem with the excluded zero denominator endpoints odds limits derivatives and common-scale invariance.
+  - id: C
+    description: Specialize the theorem to r_s*w*N and r_gamma and audit rho reduction units count and weight domains.
+  - id: D
+    description: Derive the ratio-of-ratios enhancement with all nonzero baseline premises and arbitrary-weight identifiability.
+  - id: E
+    description: Construct zero-rate arbitrary-prefactor unequal-normalization negative-weight and dimension-mutation countermodels.
+  - id: F
+    description: Audit CM2 PN2 and PN3 dependencies against C-CMP-001 C-SPN-002 and the absence of an accepted PN2 rate premise.
+  - id: G
+    description: Audit the selected-symbol absence rule for scope collisions aliases imports equivalent semantics and data flow.
+  - id: H
+    description: Determine whether the surviving algebra is already governed or too source-specific for a new claim and independently close predicates cycles consumers and nonduplication.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure exact positivity denominator and endpoint domains
+  - dimensional consistency normalization covariance limits and derivative signs
+  - free-parameter identifiability and separation of declared rate dimensions from physical rates
+  - mutation sensitivity scan completeness and semantic specificity
+  - mathematical novelty parameter economy reusable API value and downstream reach
+  - complete predicate dependency cycle nonduplication and consumer review
+claims_proposed:
+  - C-BRN-001
+comparators_blinded_until: >-
+  GB1's body and runtime output remain unopened until this proposal and its
+  immutable copy pass repository validation. Queue metadata already exposes
+  the headline formulas and advertised reductions, so only source-body,
+  predicate-detail, selected-value, and output blinding remains.
+status: draft
