@@ -1,0 +1,31 @@
+campaign: P092
+frozen_before_source_opening: false
+frozen_before_source_execution: true
+proposal_path: proposals/P092-lb2-coherence-threshold/proposal.yaml
+proposal_sha256: e924970e0f0cfe6df2cddebf81fb3bdde8908efc395c8c2f6b00fa3bf2bc8f9f
+memory_contract_path: memory/vantasner/proposals/P092-lb2-coherence-threshold.md
+memory_contract_sha256: 1df877435aff6f00ab5c1c25f5aeed814b87269b9f6b5751a8174a8d450eceab
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate --base /home/dan/substrate-framework
+  /home/dan/substrate-framework/memory/vantasner/proposals/P092-lb2-coherence-threshold.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: exposed_during_P091_consumer_audit
+source_execution_state_at_freeze: not_executed_under_P092
+disclosure: >-
+  P091's preregistered consumer audit necessarily exposed LB2's complete body,
+  so P092 cannot honestly claim fresh source blinding. The P092 question,
+  invariants, candidate set, structural selection criteria, exact oscillator
+  and field countermodels, and proposed claim boundary were frozen before
+  executing LB2, reading its output, inspecting additional consumer bodies,
+  or using physical or numerical comparator values.
+already_exposed_at_freeze:
+  - LB2 source body and literal formulas
+  - the source's seventeen-check structure
+  - candidate dependency names LB1, MC3, and SA2
+comparators_still_blinded_at_freeze:
+  - LB2 execution output and runtime behavior
+  - additional LB3, LB4, engineering, lifetime, nucleation, and DBD consumer bodies
+  - physical Gamma, density, collision, cross-section, frequency, and unit-map values
+  - any nonlinear transient simulation values or fitted survival thresholds
