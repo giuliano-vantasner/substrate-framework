@@ -1,0 +1,11 @@
+attempt: 0007
+status: record_validation_path_failure
+command: memory validate memory/vantasner/efforts/framework-migration.md
+process_exit_status: 1
+failure: >-
+  The CLI resolved the relative argument beneath
+  /home/dan/agent-memory/memory and reported a nonexistent doubled memory path.
+diagnosis: invocation_path
+scientific_effect: none
+repair: Validate the same record using its repository-absolute path.
+ceremony_guard: Do not repeat the integrated repository workflow for this record-only invocation repair.

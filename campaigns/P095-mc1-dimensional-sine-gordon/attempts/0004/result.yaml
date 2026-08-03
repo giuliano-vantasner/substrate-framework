@@ -1,0 +1,16 @@
+attempt: 0004
+candidate: E
+status: verifier_structural_equality_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+process_exit_status: 1
+passed_before_failure: 17
+failure: >-
+  SymPy represents d(tanh(z))/dz as 1-tanh(z)^2, so direct structural
+  equality with sech(z)^2 returned false although their simplified
+  difference is exactly zero.
+diagnostic_conditions: [true, false, true, true, true]
+diagnosis: implementation_oracle
+scientific_effect: none
+repair: Compare the independently differentiated antiderivative and integrand by exact symbolic simplification.

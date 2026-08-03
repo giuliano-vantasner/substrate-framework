@@ -1,0 +1,18 @@
+attempt: 0005
+candidate: H
+status: oracle_assumption_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+process_exit_status: 1
+passed_before_failure: 27
+failure: >-
+  The profile-length limit returned infinity multiplied by
+  sign(1/sqrt(1-w^2)); positivity of the generic w symbol again did not encode
+  the breather-domain condition w<1.
+diagnosis: representation
+scientific_effect: none
+repair: >-
+  Hold a separately declared positive finite eta fixed when taking the
+  coefficient limit. This is exactly the eta=sqrt(1-w^2)>0 branch of a fixed
+  normalized breather and does not select a comparison value.

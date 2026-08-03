@@ -10,7 +10,7 @@ tags:
 - migration-MC1
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P095 MC1 Dimensional Sine-Gordon Reduction
 

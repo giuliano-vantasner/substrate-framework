@@ -1,0 +1,20 @@
+campaign: P095
+base_release: v0.80.0
+preregistration_commit: 5d0e87d
+primary_verifier:
+  path: proposals/P095-mc1-dimensional-sine-gordon/verify.py
+  sha256: c23ac0b9432294301b48402a9c69bb2f4ce1a80d75aae6d273e2f96718843115
+  terminal_tally: ALL 49 CHECKS PASS [P095]
+independent_review:
+  path: proposals/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+  sha256: 89af32818177d7cd6795d56909dd7b0d0df80b4de9e7a0b87c521b494f07bf15
+  terminal_tally: ALL 30 CHECKS PASS [P095-INDEPENDENT]
+canonical_module:
+  path: src/substrate_framework/dimensional_sine_gordon.py
+  sha256: f47c04a35a224f1fd9424aac15dadd3f5c296031da34be1cfd15e11580f2b77e
+focused_tests:
+  path: tests/test_dimensional_sine_gordon.py
+  sha256: 8ef9b94d4b9c92658d8aed457439e7d238c42c0082ba6a21ad0c0c03f35f3af0
+  result: 16 passed
+oracle: exact SymPy calculus, algebra, limits, dimensions, and mutation-sensitive predicates
+quadrature_note: Exact P095 work uses no NumPy quadrature alias.

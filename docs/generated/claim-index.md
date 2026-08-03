@@ -381,6 +381,15 @@ Conditional on positive action scale S, speed c, length a, and dimensionless rat
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-002, C-MED-001
 
+## C-MED-003
+
+Conditional on a dimensionless real field u, physical coordinates x and t, exact positive coefficients lambda, T, and mu, and the declared energy-per-length density L=lambda*u_t^2/2-T*u_x^2/2-mu*(1-cos(u)), the Euler-Lagrange equation is lambda*u_tt-T*u_xx+mu*sin(u)=0 and the positive scales are c=sqrt(T/lambda), omega_0=sqrt(mu/lambda), ell=sqrt(T/mu)=c/omega_0, E_scale=sqrt(T*mu), and J_scale=sqrt(lambda*T), with E_scale=omega_0*J_scale. Under base rows (energy,length,time), the coefficient columns (lambda,T,mu) are (1,-1,2), (1,1,0), and (1,-1,0), a full-rank matrix. The coordinate map X=x/ell and tau=omega_0*t sends the dimensional residual exactly to mu times U_tau_tau-U_XX+sin(U). The logarithmic map from coefficients to (c,omega_0,ell) has rank two and right nullspace spanned by (1,1,1): at fixed positive c and omega_0 the inverse coefficient family is (lambda,lambda*c^2,lambda*omega_0^2) for an arbitrary positive lambda. A common coefficient multiplier preserves c, omega_0, ell and the field solution set while multiplying physical energy and canonical action by that factor. This is a conditional continuum cosine model; dimensions, periodicity, ratio closure, or symbol absence does not derive a material, select coefficient values, or remove the common energy/action scale.
+
+- Accepted in: `v0.81.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-VAR-001, C-DIM-002
+
 ## C-MIX-001
 
 For every finite complex m-by-n matrix M, there are square unitary column bases U and V and a same-shape rectangular diagonal Sigma with nonnegative entries such that U^dagger*M*V=Sigma and M=U*Sigma*V^dagger. The nonzero spectra of M*M^dagger and M^dagger*M are the squared singular values with the shape-required additional zeros. Individual bases are noncanonical: a repeated nonzero singular block permits the same unitary rotation on its paired left and right bases, while left and right null blocks permit independent unitary choices. For two same-size unitary column bases U_a,U_b, R=U_a^dagger*U_b is unitary and identical ordered bases give R=I. If row transforms A_i instead satisfy A_i*M_i*B_i^dagger=Sigma_i and map original coordinates to diagonal coordinates, the corresponding relative transform is A_a*A_b^dagger, not A_a^dagger*A_b. For a real symmetric matrix [[a,b],[b,d]], the proper rotation [[cos(theta),sin(theta)],[-sin(theta),cos(theta)]] with 2*theta=atan2(2*b,d-a) diagonalizes by R^T*M*R; a scalar identity block has arbitrary rotation and the numerical API chooses theta=0. These matrix facts establish no fermion mass matrix, Yukawa texture, flavor or family ontology, CKM identity, Cabibbo prediction, CP-phase count, charged-current or GIM mechanism, anomaly result, or substrate realization.
@@ -821,6 +830,15 @@ For the exact undamped C-SG-001 rest-breather family with 0<omega<1, C-SG-003 ac
 - Verification: `simulation_evidence`
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-001, C-SG-002, C-SG-003, C-SG-012
+
+## C-SG-017
+
+Under C-MED-003 and for every real normalized frequency 0<omega<1, eta=sqrt(1-omega^2), the physical-coordinate pullback u(x,t)=4*atan(eta*sin(omega*omega_0*t)/ (omega*cosh(eta*x/ell))) satisfies lambda*u_tt-T*u_xx+mu*sin(u)=0 identically. Its physical angular frequency is omega*omega_0, period is 2*pi/(omega*omega_0), inverse-tail scale is eta/ell, and profile or asymptotic tail length is ell/eta; the sech-envelope core one-over-e distance is acosh(e)*ell/eta. With the C-SG-002 Hamiltonian and C-SG-003 canonical action convention, its physical energy and action are E=sqrt(T*mu)*16*eta and J=sqrt(lambda*T)*16*acos(omega), and dE/dJ=omega*omega_0. At fixed normalized omega, mu->0+ with lambda and T fixed sends physical frequency and energy to zero and profile length to infinity; at fixed positive physical frequency the ratio omega_b/omega_0 instead leaves the breather domain before that limit. These statements are an exact lift of the accepted normalized family. They do not prove that every gapless medium lacks every localized periodic solution, select a material or coefficient scale, or authorize treating normalized 16*eta as a physical energy without its scale factor.
+
+- Accepted in: `v0.81.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-001, C-SG-002, C-SG-003, C-MED-003
 
 ## C-SK-001
 

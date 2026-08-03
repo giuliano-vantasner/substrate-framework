@@ -1,0 +1,58 @@
+campaign: P095
+title: MC1 dimensional sine-Gordon reduction and scale audit
+source_baseline: substrate@6d1f4e0
+source_units: [MC1]
+base_release: v0.80.0
+release_after_adjudication: v0.81.0
+adjudicated_at: '2026-08-04T14:00:00Z'
+selected_candidates:
+  - {id: B, reason: Direct first variation closes the conditional field equation.}
+  - {id: C, reason: Exact rank and inverse-family analysis exposes the common coefficient scale.}
+  - {id: D, reason: The accepted normalized breather pulls back with exact physical frequency and profile scales.}
+  - {id: E, reason: Independent Hamiltonian and phase-space Jacobians restore energy and action units.}
+  - {id: F, reason: The coefficient and derived-scale dimensions close in the declared density convention.}
+  - {id: G, reason: An alternative periodic potential enforces the cosine-model ceiling.}
+  - {id: H, reason: The universal gap-tail theorem remains outside MC1.}
+  - {id: I, reason: Downstream consumers do not fix the common scale or material premise.}
+  - {id: J, reason: Only distinct dimensional APIs enter the canonical package.}
+competing_candidates:
+  - {id: A, decision: reproduction_only}
+claims:
+  - {id: C-MED-003, decision: accepted_symbolic_verified}
+  - {id: C-SG-017, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-SG-001, decision: unchanged_normalized_field}
+  - {id: C-SG-002, decision: unchanged_normalized_energy}
+  - {id: C-SG-003, decision: unchanged_normalized_action}
+  - {id: C-VAR-001, decision: unchanged_multiplier_principle}
+  - {id: C-DIM-002, decision: unchanged_set_local_dimension_logic}
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  representation_failures:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+  integrated_gate: attempts/0006/result.yaml
+  terminal_record_validation: attempts/0007/result.yaml
+  independent_review: reviews/independent_dimensional_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  MC1: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC1_constitutive_reduction.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P095-mc1-dimensional-sine-gordon/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+  - .venv/bin/python -m pytest -q tests/test_dimensional_sine_gordon.py tests/test_sine_gordon.py tests/test_variational.py tests/test_action_scales.py tests/test_constitutive.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

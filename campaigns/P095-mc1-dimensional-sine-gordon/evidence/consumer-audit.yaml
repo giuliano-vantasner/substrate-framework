@@ -1,0 +1,61 @@
+campaign: P095
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+consumers:
+  MC2:
+    sha256: b73b5a623ae645b1232b09a3f144eb6429f89fbb0cb130a3d223f42129bacef0
+    status: pending_source_unit
+    finding: It consumes c, ell, and omega_0 for a dispersion and tail argument. It neither needs nor fixes the common energy/action scale; its universal gap claims require separate P096 adjudication.
+  MC3:
+    sha256: 74fbddc086781a0d61d5dd22effabf48d7ff37f47c6d97ebde0b2fb6186464a5
+    status: pending_source_unit
+    finding: It proposes lattice and gas parameter maps after MC1. Sequential placement cannot retroactively derive MC1's cosine material or validate those maps.
+  MC4:
+    sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+    status: pending_simulation_source
+    finding: It chooses the special normalization lambda=1/c^2, T=1, mu=1/ell^2, for which C-SG-017 gives E_scale=1/ell and hence 16*eta/ell. This is consistent special-case evidence, not a selection of the general coefficient scale.
+  medium_omega0:
+    sha256: 09d45f212bb28f124b05f99f9cb57acef7b815a1b4e99cfaa3e98bfc35f3f477
+    status: noncanonical_engineering_consumer
+    finding: It correctly distinguishes w from omega_b=w*omega_0 but inserts w=1/sqrt(2) and imports pending material maps. It supplies no absolute coefficient or energy scale.
+  lifetime_kernel:
+    sha256: 51bd4f46593363ac37d99b4e95ca0bef1b572a3b075505968adf77404db4cac5
+    status: noncanonical_engineering_consumer
+    finding: It uses normalized 16*eta as E_b inside physical thermal prose without the sqrt(T*mu) energy factor; P094 already rejected its physical stochastic closure.
+  seeding_kernel:
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    status: noncanonical_engineering_consumer
+    finding: It divides a deposition-spectrum overlap by normalized 16*eta. Without a declared normalized spectrum or the physical energy scale, MC1 does not close this physical population interpretation.
+  commensurate:
+    sha256: 6f85aafcb330af6619aa0f98fed36212c573c0e9831ee76b7628143992eeff4f
+    status: noncanonical_engineering_consumer
+    finding: It pins the gap to a chosen SAW geometry and speed. That external design identification is not a consequence of the conditional cosine density.
+  MD1:
+    sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+    status: pending_later_source
+    finding: It consumes only ell=c/omega_0 in a density-of-states construction and adds a separate granularity scale; it does not select MC1 coefficients.
+  MD2:
+    sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+    status: pending_later_source
+    finding: It explicitly depends on ell/a and a stiffness/action convention, confirming rather than eliminating the need for an additional scale.
+  MK1:
+    sha256: 98ff5459ae3c6cb64a9a7632fbaa8613f1f5b1adb68419de25ffa06b1c3a3222
+    status: pending_later_source
+    finding: It identifies a gap label across a different model. That dictionary is additional physics and cannot broaden C-MED-003.
+  HE2:
+    sha256: 88cfd8aae98c81e1b5fc7b556c24e661c8b687443659e98ad2a6fa5660973623
+    status: pending_later_source_with_convention_conflict
+    finding: It calls w dimensionless and then assigns it frequency dimension while using normalized 16*eta as a physical energy. C-SG-017 requires omega_b=w*omega_0 and E_phys=sqrt(T*mu)*16*eta, so its Buckingham primitive matrix needs later re-audit.
+accepted_consumers:
+  - src/substrate_framework/dimensional_sine_gordon.py
+  - tests/test_dimensional_sine_gordon.py
+  - proposals/P095-mc1-dimensional-sine-gordon/verify.py
+  - proposals/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+replayed_dependencies:
+  - tests/test_sine_gordon.py
+  - tests/test_variational.py
+  - tests/test_action_scales.py
+  - tests/test_constitutive.py
+verdict: >-
+  The exact dimensional APIs have closed governed consumers. No external
+  consumer derives a material realization, fixes the common coefficient scale,
+  or authorizes omission of the energy and action Jacobians.

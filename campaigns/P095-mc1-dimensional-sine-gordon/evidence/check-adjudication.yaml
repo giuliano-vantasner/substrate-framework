@@ -1,0 +1,112 @@
+campaign: P095
+source_unit: MC1
+source_sha256: 32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3
+terminal_tally: ALL 24 CHECKS PASS
+review_rule: >-
+  Each passing predicate is reviewed against the headline. Definitions,
+  one-point samples, lexical symbol checks, and a failed trial profile do not
+  establish dimensions, identifiability, material provenance, or universal
+  existence claims.
+checks:
+  - id: 1
+    predicate: dL/du_t equals lambda*u_t
+    decision: accepted_exact_derivative
+    reason: Direct differentiation and independent variation agree.
+  - id: 2
+    predicate: dL/du_x equals -T*u_x
+    decision: accepted_exact_derivative
+    reason: Direct differentiation and independent variation agree.
+  - id: 3
+    predicate: dL/du equals -mu*sin(u)
+    decision: accepted_exact_derivative
+    reason: Direct differentiation fixes the potential sign.
+  - id: 4
+    predicate: the divided Euler-Lagrange equation has coefficients T/lambda and mu/lambda
+    decision: accepted_by_independent_variation
+    reason: The primary and independent routes derive all signs and reject sign and coefficient mutations.
+  - id: 5
+    predicate: c squared equals T/lambda
+    decision: accepted_formula_source_self_equality
+    reason: The source compares its definition with itself; the formula survives the independent normalization and dimension audit.
+  - id: 6
+    predicate: omega_0 squared equals mu/lambda
+    decision: accepted_formula_source_self_equality
+    reason: The source compares its definition with itself; the small-field coefficient and exact normalization independently support it.
+  - id: 7
+    predicate: ell squared equals T/mu equals c squared over omega_0 squared
+    decision: accepted_exact_ratio_identity
+    reason: The relation follows exactly but leaves one common coefficient scale free.
+  - id: 8
+    predicate: the physical cosine coefficient is mu/T equals 1/ell squared
+    decision: accepted_exact_ratio_identity
+    reason: This is the divided field equation in the declared convention.
+  - id: 9
+    predicate: the coordinate map sends the dimensional residual to the normalized residual
+    decision: accepted_by_independent_chain_rule
+    reason: Both routes obtain the exact residual factor; the canonical coefficient form is mu times the normalized operator.
+  - id: 10
+    predicate: omega_0 squared ell squared over c squared equals one
+    decision: duplicate_ratio_identity
+    reason: This is check 7 restated as the coordinate prefactor.
+  - id: 11
+    predicate: the physical-coordinate breather solves the declared dimensional equation
+    decision: accepted_symbolic_verified
+    reason: Direct differentiation of the pulled-back accepted breather gives zero residual in both routes.
+  - id: 12
+    predicate: w is in (0,1) iff 0<omega_b<omega_0
+    decision: source_oracle_rejected_claim_rederived
+    reason: The source evaluates only omega_b=1/2 and omega_0=1. Positivity makes the equivalence elementary, but the stated iff was not tested by this predicate.
+  - id: 13
+    predicate: w_phys=ell/eta makes the sech argument x/w_phys
+    decision: accepted_profile_scale_qualified_name
+    reason: The inverse-tail scale is exact; it is not the exact core one-over-e distance, which is acosh(e)*ell/eta for the sech envelope.
+  - id: 14
+    predicate: eta equals sqrt(1-(omega_b/omega_0)^2)
+    decision: accepted_definition
+    reason: This is the normalized accepted parameter after frequency conversion.
+  - id: 15
+    predicate: ell/eta diverges at the upper gap edge
+    decision: accepted_conditional_limit
+    reason: The exact profile scale diverges for fixed positive ell as eta tends to zero from above.
+  - id: 16
+    predicate: 16*eta survives as a dimensionless invariant
+    decision: split_and_completed
+    reason: The normalized number is C-SG-002. Physical energy is sqrt(T*mu)*16*eta, so the source omits the load-bearing energy scale.
+  - id: 17
+    predicate: setting omega_0=1 returns normalized energy 16*sqrt(1-omega_b^2)
+    decision: duplicate_normalized_unit_check
+    reason: This is check 16 in the normalized convention and adds no physical-unit validation.
+  - id: 18
+    predicate: one chosen finite-width arctan-sech trial does not solve the linear wave equation
+    decision: reproduced_trial_rejected_universal_no_go
+    reason: The nonzero residual is correct for that trial only; it is not a universal localized-periodic no-go theorem.
+  - id: 19
+    predicate: mu=0 makes omega_0 zero
+    decision: accepted_exact_coefficient_limit
+    reason: This follows from omega_0=sqrt(mu/lambda) at fixed positive lambda.
+  - id: 20
+    predicate: mu tending to zero sends ell to infinity
+    decision: accepted_exact_coefficient_limit
+    reason: This follows at fixed positive T; the physical breather frequency simultaneously softens at fixed normalized w.
+  - id: 21
+    predicate: the gapped breather residual vanishes while the selected gapless trial residual does not
+    decision: accepted_contrast_rejected_universal_reading
+    reason: The two residual facts are exact, but the contrast does not quantify over all localized periodic solutions of the gapless equation.
+  - id: 22
+    predicate: no symbol named a appears
+    decision: refuted_absolute_scale_guard
+    reason: The ratio-map Jacobian has common null direction (1,1,1); a common multiplier rescales energy and action without changing c, omega_0, or ell.
+  - id: 23
+    predicate: omega_0 is a positive symbolic object
+    decision: hygiene_only
+    reason: Symbolic naming neither selects a coefficient value nor derives a physical material.
+  - id: 24
+    predicate: omega_b is a positive symbolic input allegedly bounded by omega_0
+    decision: hygiene_only_bound_not_tested
+    reason: The predicate checks positivity only and does not encode omega_b<omega_0.
+summary:
+  accepted_or_rederived: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 14, 15, 19, 20]
+  qualified_or_split: [12, 13, 16, 21]
+  duplicates: [10, 17]
+  rejected_or_nonprobative: [18, 22, 23, 24]
+  debt: []

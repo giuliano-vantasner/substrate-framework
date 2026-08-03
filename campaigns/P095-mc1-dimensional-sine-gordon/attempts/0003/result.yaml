@@ -1,0 +1,17 @@
+attempt: 0003
+candidate: E
+status: oracle_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+process_exit_status: 1
+passed_before_failure: 17
+failure: >-
+  This SymPy version also retained Integral(sech(z)^2,(z,-oo,oo))
+  unevaluated after the positive-width substitution.
+diagnosis: implementation_oracle
+scientific_effect: none
+repair: >-
+  Verify d(tanh(z))/dz=sech(z)^2 and compute the improper integral from
+  the independently evaluated endpoint limits of tanh.
+validation_guard: The antiderivative identity and both endpoint limits remain explicit verifier obligations.

@@ -1,0 +1,16 @@
+source_unit: MC1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-27/bridge_MC1_constitutive_reduction.py
+source_sha256: 32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3
+source_blob: f5bb79a30d764627225dee11c23f558a968a2f9f
+source_unchanged: true
+process_exit_status: 0
+elapsed_seconds: 2.66
+maximum_resident_kb: 55768
+terminal_tally: ALL 24 CHECKS PASS
+scientific_verdict: >-
+  Reproduced as conditional exact and historical evidence. The tally supports
+  the declared field equation, ratio map, coordinate normalization, and pulled-
+  back profile, but it does not derive a material, close dimensions or the
+  inverse coefficient family, restore physical energy or action units, prove a
+  universal gapless no-go, or eliminate the common coefficient scale.

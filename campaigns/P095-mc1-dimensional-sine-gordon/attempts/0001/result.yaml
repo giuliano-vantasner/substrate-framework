@@ -1,0 +1,35 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H, I, J]
+status: source_reproduced_headline_requires_scale_completion
+source_unit: MC1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: 32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3
+source_blob: f5bb79a30d764627225dee11c23f558a968a2f9f
+command: >-
+  /usr/bin/time -f 'ELAPSED=%e MAX_RSS_KB=%M EXIT=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC1_constitutive_reduction.py
+process_exit_status: 0
+elapsed_seconds: 2.66
+maximum_resident_kb: 55768
+terminal_tally: ALL 24 CHECKS PASS
+surviving_content:
+  - The declared constant-coefficient cosine Lagrangian has field equation lambda*u_tt-T*u_xx+mu*sin(u)=0.
+  - Positive ratios give c^2=T/lambda, omega_0^2=mu/lambda, ell^2=T/mu, and ell=c/omega_0.
+  - X=x/ell and tau=omega_0*t map the dimensional equation exactly to the accepted normalized equation.
+  - Pulling back C-SG-001 gives physical angular frequency omega*omega_0 and profile scale ell/sqrt(1-omega^2).
+headline_qualification:
+  - Most coefficient-identification checks compare definitions with themselves and do not audit dimensions, inverse uniqueness, or a common-multiplier mutation.
+  - The source's interval iff check evaluates only the sample omega_b/omega_0=1/2.
+  - The phrase physical width denotes the sech profile or asymptotic tail scale; the exact 1/e point from the core is arcosh(e) times that scale.
+  - The normalized energy 16*eta is not a physical energy invariant. Restoring the original density gives E_phys=sqrt(T*mu)*16*eta.
+  - The canonical action likewise acquires the independent scale sqrt(lambda*T), with E_scale=omega_0*J_scale.
+  - The ratios have log-Jacobian rank two and common null direction (1,1,1); multiplying lambda,T,mu together preserves the equation and all three ratios but rescales physical energy and action.
+  - Symbol absence does not prove absence of an absolute scale; lambda,T,mu already contain the free common coefficient direction.
+  - At fixed positive dimensionless omega, mu->0 sends omega_b_phys to zero and the profile scale to infinity. Holding a finite omega_b_phys instead leaves the breather domain before the limit.
+  - One arbitrary arctan-sech trial failing the linear wave equation does not prove the source's universal no-breather headline; MC2 owns the full linear gap and tail classification.
+next_attempt: >-
+  Implement the exact coefficient family, coordinate maps, pulled-back field,
+  and energy/action transforms; derive them independently and audit every source
+  predicate and downstream consumer.
+integration_note: Exact P095 work needs no numerical integration or NumPy trapezoidal alias.

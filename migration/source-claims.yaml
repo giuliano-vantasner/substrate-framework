@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 126
-  qualified: 80
+  pending_adjudication: 125
+  qualified: 81
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5882,8 +5882,30 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MED-003
+  - C-SG-001
+  - C-SG-002
+  - C-SG-003
+  - C-SG-017
+  qualification: MC1 contains an exact conditional dimensional cosine-field reduction and physical-coordinate
+    lift of the accepted normalized breather. Its three kinematic ratios have a common coefficient null
+    direction, so the source does not eliminate an absolute energy/action scale. Physical energy and canonical
+    action are sqrt(T*mu)*16*eta and sqrt(lambda*T)*16*acos(omega), not bare normalized quantities. The
+    profile scale ell/eta is not the exact core one-over-e distance, symbol absence does not prove scale
+    closure, one failed linear trial is not a universal gapless no-go, and no material or coefficient
+    value is derived.
+  evidence:
+  - campaigns/P095-mc1-dimensional-sine-gordon/reviews/source_adjudication.md
+  - campaigns/P095-mc1-dimensional-sine-gordon/evidence/check-adjudication.yaml
+  - campaigns/P095-mc1-dimensional-sine-gordon/evidence/consumer-audit.yaml
+  - campaigns/P095-mc1-dimensional-sine-gordon/verify.py
+  - campaigns/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+  - memory/vantasner/decisions/C-MED-003-review.md
+  - memory/vantasner/decisions/C-SG-017-review.md
+  note: P095 promotes the conditional coefficient theorem and dimensional breather lift only. Exact work
+    uses no NumPy quadrature alias.
 - source_unit: MC2
   phase: phase-27
   path: merged-framework/bridges/phase-27/bridge_MC2_dispersion_gap_rejection.py

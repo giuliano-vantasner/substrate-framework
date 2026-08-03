@@ -1,0 +1,41 @@
+source_unit: MC1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-27/bridge_MC1_constitutive_reduction.py
+source_sha256: 32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3
+source_blob: f5bb79a30d764627225dee11c23f558a968a2f9f
+source_unchanged: true
+ast_check_calls: 24
+literal_check_calls: 24
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, sympy]
+accepted_framework_imports: []
+local_functions: [check, phys_eom, linear_eom]
+execution_model: module_level_exact_symbolic_checks_and_prints
+supporting_source_evidence:
+  fulceri_drift:
+    path: vantasner-framework/tf-paper/scripts/verify_fulceri_drift.py
+    sha256: 69ba1e218e7b49816282181117b02d7022ba9035f11d9aec4fa1c34534d7f1a7
+    blob: 6afba740acfff507dabc93ee75155c577142d285
+    finding: >-
+      Declares an inhomogeneous coefficient model and numerically checks a
+      drift law. It is not an accepted derivation of a homogeneous physical
+      material and does not close MC1's absolute coefficient scale.
+  rung147:
+    path: pulson-backreaction-bridge/sympy/rungs/rung147_c024_breather_energy_amplitude.py
+    sha256: 50c64e77738751de8412c380ca0a3b99bd1e0d149af02b77287f3935e3065c51
+    blob: 0549d150ab0ca3bc5efcf4fec0c88158c385790c
+    finding: >-
+      Re-derives the normalized breather and normalized energy 16*eta. Accepted
+      C-SG-001 and C-SG-002 already supply stronger governed authority; neither
+      rung147 nor MC1 transforms that energy into physical units.
+primary_structural_defects:
+  - ratio definitions are checked without their inverse-rank and common-multiplier direction
+  - normalized energy is called an invariant without restoring the physical density and spatial measure
+  - canonical phase-space action and its distinct scale are omitted
+  - a sampled interval check is labeled an iff
+  - symbol absence is treated as evidence that no absolute scale is present
+  - one failed trial ansatz is generalized into a universal gapless-medium no-go
+  - profile scale is called an exact one-over-e amplitude width
+  - a declared cosine continuum is narrated as a produced physical material
+audit_verdict: requires_exact_scale_and_identifiability_completion

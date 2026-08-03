@@ -1,0 +1,26 @@
+attempt: 0002
+candidate: E
+status: oracle_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P095-mc1-dimensional-sine-gordon/reviews/independent_dimensional_review.py
+process_exit_status: 1
+passed_before_failure: 17
+failure: >-
+  SymPy left the whole-line integral of sech(X*sqrt(1-w^2))^2
+  unevaluated because a symbol declared merely positive does not encode the
+  load-bearing breather-domain assumption w<1.
+diagnosis: representation
+scientific_effect: none
+preserved_evidence:
+  - The direct first variation, dimensions, ratio-map rank, common-scale mutation, chain rule, and independently differentiated normalized breather all passed before the failure.
+  - The failure prevents an unqualified use of sqrt(1-w^2) as a positive change-of-variable Jacobian.
+repair: >-
+  Introduce an independently positive inverse-width symbol for the elementary
+  sech-squared integral, evaluate the normalized kinetic slice in that
+  variable, and only then substitute eta=sqrt(1-w^2) under the declared
+  breather domain.
+prohibited_repairs:
+  - Do not hard-code the expected integral as the oracle.
+  - Do not discard the exact integral or relax the equality.
+  - Do not infer w<1 from positivity of w alone.

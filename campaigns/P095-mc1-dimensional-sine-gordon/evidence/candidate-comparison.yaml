@@ -1,0 +1,40 @@
+campaign: P095
+selection_basis:
+  - accepted dependency closure and direct variational derivation
+  - exact dimensions, conventions, limits, and multiplier covariance
+  - mutation sensitivity and independent rederivation
+  - structural distinction, parameter economy, and consumer closure
+  - no selection by source tally, terminology, or later consumer confidence
+candidates:
+  A:
+    decision: selected_as_reproduction_only
+    reason: The pinned source exits cleanly with all twenty-four checks, but every predicate is separately classified and several do not test their narrated conclusion.
+  B:
+    decision: selected_and_promoted
+    reason: Direct first variation gives the exact conditional cosine-field equation and agrees with the canonical residual under sign and coefficient mutations.
+  C:
+    decision: selected_and_promoted
+    reason: The forward ratio map has rank two, its inverse is a positive coefficient ray, and the common multiplier is the unique unidentifiable direction.
+  D:
+    decision: selected_and_promoted
+    reason: Pullback of C-SG-001 gives an exact dimensional solution with physical angular frequency omega*omega_0 and inverse-tail scale eta/ell.
+  E:
+    decision: selected_and_promoted
+    reason: Direct Hamiltonian and phase-space Jacobians give distinct energy and action scales and reproduce dE/dJ=omega*omega_0.
+  F:
+    decision: selected_and_promoted
+    reason: The declared energy-per-length density fixes a full-rank coefficient dimension matrix and all derived scales have the required dimensions.
+  G:
+    decision: selected_as_claim_ceiling
+    reason: A second-harmonic periodic potential changes the force, so periodicity or a medium label alone does not select exact sine-Gordon.
+  H:
+    decision: selected_as_scope_ceiling
+    reason: MC1 closes coefficient limits and the exact pullback but not the full spectral tail or universal gapless no-go; MC2 remains independently pending.
+  I:
+    decision: selected_as_consumer_ceiling
+    reason: Later consumers reuse ratios, insert material maps or design values, or omit the physical energy scale; none removes the common coefficient direction.
+  J:
+    decision: selected
+    reason: The dimensional reduction and physical breather lift are new importable APIs, while normalized breather formulas remain owned by C-SG-001 through C-SG-003.
+selected_claims: [C-MED-003, C-SG-017]
+source_disposition: qualified
