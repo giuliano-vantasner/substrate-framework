@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-08T06:30:00Z'
+updated: '2026-08-08T07:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,13 +23,12 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.97.0`, containing one hundred thirty-two
-claims. P117 adds C-XOV-001's exact continuous strictly increasing range and
-level-crossing theorem, exponential inverse, and C-SCR-001 shifted-factor
-specialization. CM3 is qualified because its zero-floor surrogate differs from
-the actual positive-shift factor, its free normalized scale and level do not
-predict an energy, and formal curve ordering supplies no physical rate or
-channel dominance. CM4 and later units remain pending.
+The current accepted frontier remains `v0.97.0`, containing one hundred thirty-
+two claims. P118 adds no claim, release, or package API. Its exact continuous
+and integer derivative ledger shows that CM4 is an elementary corollary of
+C-RG-002, C-SPN-002, and C-CMP-001, while its array-order predicate is neither a
+validated derivative nor a mechanism-specific experimental bar. CM4 is
+qualified and CM5 and later units remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -55,7 +54,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 103 pending, 0 partially migrated, 3 migrated, 103 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 102 pending, 0 partially migrated, 3 migrated, 104 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -205,6 +204,7 @@ Attempts are append-only and individually reproducible.
 | 0136 | P115 exact conditional shifted inverse-square-root factor, stable composition, prefactor ceiling, and CM1 audit | `campaigns/P115-cm1-screened-barrier-ceiling-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-SCR-001 with CM1 qualified in v0.95.0; commit `2cbc423` | Forty-six primary and fourteen independent exact checks plus twelve focused package tests derive composition, range, global derivative signs, endpoint limits, enhancement behavior, common-scale covariance, conditional U_max direction, and stable direct evaluation. Two SymPy sign-representation failures and one promotion-lifecycle verifier failure are preserved before repair. The four-model maximum is selected regression evidence, and zero/arbitrary prefactors block cross-section, rate, yield, or material inference. GitNexus reports LOW additive impact and zero affected processes; five direct pending consumers replay 145 checks. The single integrated workflow passes all 1,043 tests with 487 memory files and the physics skill valid. | Freeze CM2's composite coherence-factor audit before source execution |
 | 0137 | P116 exact paired-loss and cycle-factor composition, endpoint discontinuity, rate ceiling, and CM2 audit | `campaigns/P116-cm2-composite-rate-law-audit/attempts/0001` through `0010`, then promotion boundary | accepted as C-CMP-001 with CM2 qualified in v0.96.0; commit `3a56c15` | Forty-six primary and twenty-two independent exact checks plus seventeen focused package tests derive common-loss composition, strict decrease, zero and critical one-sided limits, two source-cutoff jumps, nonattained supremum, actual-cycle comparison, dimension and scale laws, and the general changed-loss-power stationary surface. One pre-freeze full-hash transcription failure and five independent-oracle defects are preserved before repair. The source's floating null, definition grid, lexical scans, same-call repeat, and Boolean marker do not establish a sweet spot or rate. GitNexus reports LOW additive impact and zero affected processes; seven direct and fourteen transitive consumers replay 692 checks. The single integrated workflow passes all 1,060 tests with 491 memory files and the physics skill valid. | Freeze CM3's exact crossover and physical-dominance audit before source execution |
 | 0138 | P117 exact monotone range, exponential and shifted-factor inverse, identifiability ceiling, and CM3 audit | `campaigns/P117-cm3-monotone-crossover-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-XOV-001 with CM3 qualified in v0.97.0; commit `67d4cc5` | Forty-five primary and thirty-five independent exact checks plus fifteen focused package tests derive all range and endpoint cases, both inverses, sensitivities, scale covariance, and strictness, continuity, nonmonotonicity, zero-normalization, and arbitrary-target countermodels. Eight package or primary oracle defects and two independent-route defects are preserved before repair. The source's sampled signs, four-point solve comparison, bisection, dense sweep, zero-floor surrogate, flat-rate premise, and curve ordering do not establish a physical crossover. GitNexus reports LOW additive impact and zero affected processes; two direct and three transitive consumers replay 148 checks. The single integrated workflow passes all 1,075 tests with 495 memory files and the physics skill valid. | Freeze CM4's discriminating-derivative audit before source execution; require exact derivative, dimension, normalization, baseline, state, loading, parameter, and falsifiability premises, compare flat and nonmonotone countermodels, audit all ten predicates and consumers, and do not turn conditional N or A-squared algebra into a collective rate, material loading law, experimental signature, or observation |
+| 0139 | P118 exact conditional response derivatives, integer differences, report-gate countermodels, and CM4 audit | `campaigns/P118-cm4-discriminating-derivative-audit/attempts/0001` through `0004`, then terminal no-release boundary | CM4 qualified through C-RG-002, C-SPN-002, and C-CMP-001 with v0.97.0 unchanged; commit `02ccf6f` | Forty primary and twenty-nine independent exact checks derive continuous derivatives, integer forward differences, log elasticities, limits, loading-curvature change, scale conventions, and free-normalization families. One pre-source YAML schema failure and one independent registry-string failure are preserved before repair. Reversed and duplicate controls, mismatched lengths, reversed or nonpositive A-squared values, a one-ulp rise, affine alternatives, and nonmonotone limbs expose the source predicate's missing derivative and specificity premises. GitNexus reports LOW record-only impact and zero affected processes; three direct and three transitive consumers replay 158 checks. The single integrated workflow passes all 1,075 tests with 497 memory files and the physics skill valid. | Freeze CM5's excess-electrical audit before source execution; require the exact time-derivative and cycle-average radiation formula, frequency and amplitude conventions, units and normalization, total-power versus focused-intensity distinction, static and DC-seeding limits, shared-observable closure, zero-coupling and arbitrary-prefactor countermodels, every one of the eighteen predicates, cycles, and consumers, and do not infer a coherent-to-EM channel, N-rings-squared total power, material signal, heat correlation, magnitude, or observation from formal derivatives and geometry factors |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1114,11 +1114,22 @@ observable, coherent-channel dominance, material crossover, predicted energy,
 rate, yield, heat, or observation. Five downstream source consumers reproduce
 but inherit only C-XOV-001.
 
+P118 adds no claim, release, or package API. Exact primary and fresh routes
+derive CM4's declared response derivatives, integer count difference, log
+elasticities, loading limits and curvature, scale transformations, and free-
+normalization ceiling. The result is already governed by C-RG-002's conditional
+inverse-A-squared barrier, C-SPN-002's normalized-vector and non-rate ceiling,
+and C-CMP-001's conditional non-rate composition. CM4 is qualified because its
+array predicate ignores control order, duplicate coordinates, paired lengths,
+positive domains, spacing, derivative magnitude, calibration, uncertainty,
+thresholds, and alternative mechanisms. Six source consumers reproduce but
+inherit no collective rate, loading law, discriminator, or observation.
+
 ## Canonicalization
-The registry, `v0.97.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirty-two accepted claims. P001 through P117 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 103 pending, 0 partial, 3 migrated, 103 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.97.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirty-two accepted claims. P001 through P118 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 102 pending, 0 partial, 3 migrated, 104 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 103 pending, 3 migrated, 103 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential unit is CM4, pinned at SHA-256 `984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019`. Its queue entry proposes `R=c*N*exp(-C/(A^2*Theta))`, positive derivatives with respect to N and A-squared, and a report-level bar requiring N>=2 plus a positive swept derivative. P118 must freeze the exact conditional derivative theorem, domains, units, parameter and state normalizations, baseline choice, finite-difference versus analytic derivative distinction, flat, decreasing, nonmonotone, arbitrary-prefactor, and zero-interaction countermodels, C-RG-002 loading ceiling, C-SPN-002 state and normalization ceiling, C-CMP-001 non-rate ceiling, all ten predicates, cycles, and full consumer closure before renewed source execution. It must not treat a declared N factor as collective rate enhancement, A-squared as a derived material loading law, a positive derivative as a unique CMNC signature, a syntactic report gate as physical falsifiability, or selected normalized values as an experiment, mechanism, magnitude, material, yield, heat, or observation.
+The effort remains active. D4 is discharged, but D1 remains open with 102 pending, 3 migrated, 104 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential unit is CM5, pinned at SHA-256 `8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841`. Its queue entry proposes an electrical output proportional to the cycle average of the squared third time derivative of a moment modulation, simplifies it to `(2*omega_b)^6*B^2`, multiplies by a geometric `N_rings^2` concentration factor, invokes a dV/dt seeding gate, and asserts shared dependence on CM2 controls and frequency. P119 must freeze the exact waveform, derivative, cycle-average, frequency, amplitude, unit, radiation-normalization, and static limits; distinguish emitted total power, local intensity, focusing, and detector response; audit geometric coherence, seeding, medium-frequency, shared-observable, and heat-channel premises; test zero coupling, arbitrary prefactors, phase disorder, finite bandwidth, alternative radiators, and DC or ramp inputs; review all eighteen predicates, dependency cycles, imports, and consumers; and keep comparator values blinded. It must not infer a coherent-to-EM channel, physical dipole or multipole radiation law, N-rings-squared total power, shared heat mechanism, material signature, magnitude, yield, heat, or observation from formal nonzero derivatives, selected geometry factors, or common symbol names.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
