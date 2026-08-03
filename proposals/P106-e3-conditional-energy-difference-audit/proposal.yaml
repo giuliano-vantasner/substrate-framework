@@ -1,0 +1,61 @@
+id: P106
+base_release: v0.89.0
+base_commit: 0a2805732df5c6db701f71311f04fb9be553aa96
+scientific_base_commit: f28cf74e646fc1eaca0a2593520b8b22d91cc526
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [E3]
+question: >-
+  Derive and independently verify the exact conditional linear-combination
+  algebra and sign or uncertainty propagation formed from accepted E2 branch
+  coefficients; determine whether it is a distinct accepted claim or only a
+  composition of C-RPROF-002 with a declared normalization; and adjudicate
+  whether E3 supplies the missing physical mass map, deuteron and helium state
+  assignments, reaction channel, empirical scale, or nuclear-yield prediction.
+invariants:
+  - C-RPROF-002 supplies resolution-bounded coefficients for three declared stationary branches and explicitly supplies no mass, baryon, nucleus, binding, reaction, yield, or variational bound.
+  - C-SK-001 supplies only the conditional equality F_pi/e=16*pi*E_e from two declared mass premises and explicitly makes no numerical physical prediction.
+  - C-DIM-002 and C-DIM-003 preserve dimensionless coefficients and imported physical coordinates; matching dimensions or choosing a scale cannot select a state map or coefficient.
+  - A linear combination of stationary-branch energies remains a reduced-model number unless a physical action normalization and state map are separately accepted.
+  - Differencing variational upper bounds does not in general bound the difference of the underlying minima.
+  - Empirical D+D and helium values are comparators only and cannot select a model, normalization, coefficient, or interpretation.
+allowed_imports:
+  - C-RPROF-001 and C-RPROF-002 only for their exact declared radial surface, numeric stationary-branch coefficients, and explicit interpretation ceilings
+  - C-RMAP-001 and C-RMAP-002 only through the dependency closure already accepted by C-RPROF-002
+  - C-SK-001 only for its conditional scale identity and stated premise ceiling
+  - C-DIM-002 and C-DIM-003 only for dimensional-coordinate and imported-parameter ceilings
+  - exact real linear algebra, interval arithmetic, uncertainty propagation, and elementary counterexamples
+  - SymPy for exact identities and mutations and Decimal or interval endpoints for transparent resolution-bounded arithmetic
+  - E3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - hash-pinned E4, HE4, M1, NY1, NY2, and narrative consumers only as post-freeze noncanonical impact evidence
+candidates:
+  - id: A
+    description: Reproduce E3 unchanged and classify each predicate, import, normalization, comparator, and terminal inference.
+  - id: B
+    description: Derive the generic conditional coefficient kappa=alpha*(n*b_initial-b_final), including inverse, sign, cancellation, units, and exact mutations.
+  - id: C
+    description: Independently derive the same combination from a declared mass and binding ledger, keeping action normalization, multiplicities, and state assignments explicit.
+  - id: D
+    description: Propagate separate accepted C-RPROF-002 numerical uncertainties or conservative method spreads through the linear combination without promoting exact decimal status.
+  - id: E
+    description: Test whether separate upper-bound statements can justify a bound on their signed difference using explicit counterexamples.
+  - id: F
+    description: Audit physical state, reaction, scale, empirical comparator, and later BPS or generalized-model premises independently of the algebraic combination.
+  - id: G
+    description: Compare the surviving algebra with C-DIM-002/003, C-SK-001, and C-RPROF-002 to avoid promoting a definition or direct composition as a redundant claim.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit action normalization, state map, multiplicities, and reaction convention
+  - exact algebraic equivalence, sign, cancellation, units, limiting cases, interval propagation, and mutation sensitivity
+  - preservation of C-RPROF-002 numeric status and interpretation ceilings
+  - rejection of difference-of-upper-bounds and comparator-selection fallacies
+  - assumption and parameter economy, nonduplication, complete source-predicate and downstream-consumer classification
+claims_proposed: []
+comparators_blinded_until: >-
+  No numerical comparator blinding remains. The generated queue exposes the
+  physical question, formula 3*pi^2*(2*b(2)-b(4)), advertised coefficient near
+  8.4, empirical 23.86 MeV value, and claimed overbinding factor near nine.
+  P105 already exposed E3's use of its branch values. P106 freezes exact and
+  independent constructions, uncertainty and bound counterchecks, dependency
+  inventory, interpretation ceilings, and nonduplication criteria before
+  opening or executing E3's body and predicates.
+status: draft

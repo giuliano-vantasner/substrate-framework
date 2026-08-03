@@ -1,0 +1,44 @@
+campaign: P106
+frozen_at: '2026-08-07T16:05:00Z'
+base_release: v0.89.0
+base_commit: 0a2805732df5c6db701f71311f04fb9be553aa96
+scientific_base_commit: f28cf74e646fc1eaca0a2593520b8b22d91cc526
+proposal_path: proposals/P106-e3-conditional-energy-difference-audit/proposal.yaml
+proposal_sha256: c4c1b535a2a4254544635d43667f671c52384e68fe9059b63713947743de1673
+memory_contract_path: memory/vantasner/proposals/P106-e3-conditional-energy-difference-audit.md
+memory_contract_sha256: 26547b41e5ae12ddd35665192b779865ebc5a433caf0225fb30839d0834eb02e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+source_size_bytes: 13377
+source_sha256: aa76b9e675d4fbb45594e9d3df5107af175e927a24840260ca71ffda1bad3315
+source_blob: cecea225e4735cfbb393389a23903b4eeab4286c
+source_worktree_state: clean_relative_to_pinned_commit
+source_checkout_overlay: >-
+  The explicit current-NumPy compatibility overlay and unrelated later Phase
+  47/48 work remain excluded from scientific authority. E3 itself matches the
+  pinned blob and hash.
+source_body_exposure: >-
+  The generated queue exposes the physical question, formula
+  3*pi^2*(2*b(2)-b(4)), advertised coefficient near 8.4, empirical 23.86 MeV
+  comparison, factor-near-nine overbinding narrative, five literal checks, and
+  candidate dependencies. P105's consumer audit exposes that E3 composes its
+  accepted B=2 and B=4 stationary-branch values and calls the result a D+D
+  yield coefficient. P106 claims no comparator blinding and freezes exact,
+  interval, bound, dependency, physical-interpretation, and nonduplication
+  tests before inspecting or executing the source body.
+source_execution_state_at_freeze: not_executed_under_P106
+terminal_output_state_at_freeze: unknown_beyond_generated_five_check_metadata
+algebra_interval_bounds_normalization_state_reaction_comparator_and_nonduplication_tests_frozen: true
+claims_reserved: []
+compatibility_preflight:
+  e3_numpy_imports: true_from_inventory_metadata
+  e3_sampled_integration_api: unknown_until_post_freeze_static_inspection
+  canonical_sampled_integration_if_needed: substrate_framework.numerics.trapezoid_integral
+  mutable_numpy_integration_if_needed: np.trapezoid
+  np_trapz_compatibility_action: alias_only_recorded_replay_if_immutable_source_aborts
+  compatibility_abort_counts_as_scientific_failure: false
+validation:
+  repository: WORKFLOW VALID 121 claims 121 accepted 1 proposals 218 units 115 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen
