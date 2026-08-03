@@ -1,0 +1,67 @@
+id: P107
+base_release: v0.90.0
+base_commit: 7dbe02f90b09c378e4a92ddb13542eda20753b09
+scientific_base_commit: e0c2142cacf3e4ec765210a60f032540dccfc28c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [E4]
+question: >-
+  Derive and independently verify the exact BPS square-completion bound for a
+  declared sextic-plus-potential energy, its oriented degree normalization and
+  equality conditions; separate those facts from sectorwise existence and
+  exact zero binding; derive the premise-explicit near-BPS cancellation; and
+  adjudicate E4 without importing a physical baryon, nucleus, reaction, or
+  numerical small-binding interpretation.
+invariants:
+  - The accepted framework has no BPS-Skyrme action, coupling, potential, saturation-existence, or physical state-map claim at v0.90.0.
+  - C-RDIFF-001 supplies only a premise-explicit signed mass and binding transform; it supplies no BPS endpoint, perturbation, state map, or physical coefficient.
+  - Signed map degree, absolute degree, a physical baryon number, a nucleus, and an observed state remain distinct unless a governed map connects them.
+  - Pointwise square completion and the degree integration theorem establish a lower bound but do not establish a saturating field in any degree sector.
+  - A bound linear in absolute degree gives exact zero binding only for sector energies that actually attain that same bound in the compared positive-degree sectors.
+  - Formal O(epsilon) cancellation does not determine its coefficient, sign, numerical size, or physical interpretation.
+allowed_imports:
+  - C-RDIFF-001 only for the exact signed linear-energy and binding transform and its interpretation ceiling
+  - C-DIM-002 only for dimensional consistency and its explicit inability to select dimensionless coefficients or physical primitives
+  - the standard oriented degree/pullback integration theorem for smooth maps between compact connected oriented three-manifolds
+  - exact real algebra, nonnegative integration, elementary measure identities, asymptotic remainder algebra, and explicit counterexamples
+  - SymPy for exact identities, signs under declared assumptions, limits, and mutation-sensitive regression
+  - E4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - hash-pinned E2, E3, M1, KI, MK, and MR units only as post-freeze noncanonical dependency or consumer evidence
+candidates:
+  - id: A
+    description: Reproduce E4 unchanged and classify every action, potential, topological, saturation, perturbative, and physical predicate.
+  - id: B
+    description: Derive the bound by exact pointwise square completion with both orientation branches and an explicit normalized pullback density.
+  - id: C
+    description: Independently derive the same lower bound from pointwise AM-GM followed by the oriented degree integration theorem.
+  - id: D
+    description: Treat sector mass as an infimum and derive exact linear mass and zero binding only when the bound is attained in every compared sector.
+  - id: E
+    description: Construct admissible potentials or field classes where the algebraic bound exists but saturation is absent, obstructed, or unproved.
+  - id: F
+    description: Apply C-RDIFF-001 to a controlled near-BPS expansion with explicit coefficient and remainder, preserving every free premise.
+  - id: G
+    description: Audit downstream KI, MK, and MR uses for coupling, convention, existence, interpolation, and physical-state imports.
+  - id: H
+    description: Test nonduplication against accepted claims and reserve only reusable theorem surfaces with governed consumers.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact action, density, target measure, orientation, potential, regularity, and degree conventions
+  - exact agreement of square-completion and AM-GM or degree-theorem routes
+  - explicit separation of lower bound, equality condition, sectorwise attainment, and physical interpretation
+  - correct dimensions, signs, absolute-degree behavior, zero-potential and wrong-normalization counterexamples, and limiting cases
+  - controlled asymptotic remainder algebra without importing a numerical coefficient or empirical comparator
+  - assumption and parameter economy, nonduplication, and complete downstream convention audit
+claims_proposed:
+  - C-BPS-001
+  - C-BPS-002
+  - C-BPS-003
+comparators_blinded_until: >-
+  No body or comparator blinding remains. The generated queue exposes E4's
+  energy, square completion, target-space average, bound, saturation equation,
+  linear-mass and zero-binding conclusion, and near-BPS narrative. P106's
+  consumer audit exposed the composition, and the queue exposes later KI, MK,
+  and MR convention disputes. P107 freezes definitions, competing derivations,
+  counterexamples, equality-versus-existence gates, remainder requirements,
+  and interpretation ceilings before executing E4 or inspecting its predicate
+  implementation.
+status: draft
