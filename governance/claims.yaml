@@ -5366,3 +5366,103 @@ claims:
     accepted_in: v0.87.0
     challenges: []
     supersedes: []
+  - id: C-RMAP-001
+    statement: >-
+      Let S^2 carry its oriented unit round metric and normalized average
+      <F>=(1/(4*pi))*integral_{S^2} F dOmega, with stereographic coordinate
+      z=tan(theta/2)*exp(i*phi). For a declared nonconstant coprime holomorphic
+      rational map R(z)=p(z)/q(z) of exact algebraic degree B>=1, define its
+      conformal Jacobian J_R=((1+|z|^2)/(1+|R|^2)*|dR/dz|)^2, understood in a
+      homogeneous polynomial representation at target poles. The pullback-area
+      identity gives <J_R>=B. Hence the angular functional I[R]=<J_R^2> obeys
+      I[R]>=B^2, with exact deficit I[R]-B^2=<(J_R-B)^2>. Polynomial degree is
+      assigned only after exact common-factor cancellation. For the axial map
+      R(z)=z^B, explicit radial substitution and Euler-beta integration give
+      I_B=(B^3/3)*(1+Gamma(2-1/B)*Gamma(2+1/B)); in particular I_1=1 and
+      I_2=pi+8/3 exactly. These conditional sphere-geometric results do not
+      select a global fixed-degree minimizer, derive a physical Skyrme action
+      or rational-map ansatz, solve a radial profile, identify map degree with
+      a physical baryon or nucleus, or supply a mass, binding energy, reaction,
+      yield, material, or observation map.
+    provenance: campaigns/P104-e1-rational-map-angular-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P104-e1-rational-map-angular-audit/verify.py
+      - campaigns/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/source-reproduction.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/source-audit.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/check-adjudication.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/dependency-audit.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/consumer-audit.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/candidate-comparison.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/primary-provenance.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-RMAP-001-review.md
+      - tests/test_rational_maps.py
+    assumptions:
+      - The domain and target are oriented unit round two-spheres with the displayed stereographic coordinate, measure, complex-derivative convention, and normalization.
+      - With u=cos(theta), sin(theta)*dtheta=-du; a positive u integral runs from -1 to 1 only after reversing the bounds transformed from theta in [0,pi].
+      - The numerator and denominator are exact nonzero complex polynomials, have no common nonconstant factor after reduction, and define a nonconstant holomorphic map of positive integer degree. Antiholomorphic maps or other orientations require a separate sign convention.
+      - The pullback area/degree theorem, Euler beta/gamma identities, and nonnegativity of a real square are declared standard mathematical imports. No physical field theory is imported by using rational-map terminology.
+      - The axial formula evaluates the supplied family R=z^B. It is not a theorem that this family minimizes I among all maps of degree B.
+      - Compatibility at B=1 with C-MOD-001 concerns only the coefficient I=1 in a separately declared radial functional; it does not derive the general rational-map energy or physical action.
+      - Algebraic degree, topological degree, physical baryon number, nuclear species, and observed state are distinct unless an accepted model and state map explicitly connect them.
+    comparators:
+      - E1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; values and map labels were exposed before source execution, while P104 froze exact transformations, methods, mutations, and interpretation ceilings before body inspection
+    accepted_in: v0.88.0
+    challenges: []
+    supersedes: []
+  - id: C-RMAP-002
+    statement: >-
+      Conditional on C-RMAP-001 and on the exact declared rational map
+      R_4(z)=(z^4+2*i*sqrt(3)*z^2+1)/(z^4-2*i*sqrt(3)*z^2+1), exact polynomial
+      reduction makes the numerator and denominator coprime and the map degree
+      four. Homogeneous-Wronskian tensor Gauss-Legendre cubature on
+      u=cos(theta),phi at orders 16x32 through 64x128 gives normalized pullback
+      area converging to four and angular functional converging to
+      20.6496264884189 in IEEE-754 binary64/complex128. An independent nested
+      adaptive integration split between direct and reciprocal stereographic
+      charts at relative and absolute tolerances 1e-7, 1e-9, and 1e-11 agrees
+      within 2e-12 relative. Axis rotations preserve the two integrals, while
+      changing the imaginary quadratic coefficient to 3.2*i preserves degree
+      area and changes I to about 20.7744. This is resolution-bounded evidence
+      for one declared map only; it proves neither full cubic symmetry nor
+      global degree-four minimality and supplies no radial solution, physical
+      state, baryon or nucleus identification, energy, mass, binding, reaction,
+      yield, material, or observation.
+    provenance: campaigns/P104-e1-rational-map-angular-audit/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-RMAP-001
+    evidence:
+      - campaigns/P104-e1-rational-map-angular-audit/verify.py
+      - campaigns/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/source-reproduction.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/source-audit.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/check-adjudication.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/dependency-audit.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/consumer-audit.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/candidate-comparison.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/evidence/primary-provenance.yaml
+      - campaigns/P104-e1-rational-map-angular-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-RMAP-002-review.md
+      - tests/test_rational_maps.py
+    assumptions:
+      - All C-RMAP-001 sphere, orientation, normalization, and mathematical-import assumptions hold.
+      - The numerator and denominator coefficients are exactly the displayed algebraic numbers; floating-point cubature receives their complex128 evaluation after exact coprimality and degree are established separately.
+      - Tensor orders, adaptive tolerances, direct/reciprocal chart split, homogeneous Wronskian, binary64 precision, finite solver outputs, degree-area error, and successive-value error are part of the evidence and bound its status.
+      - Agreement of two numerical methods and symmetry-preserving rotations is resolution-bounded verification, not an exact closed form for I[R_4].
+      - The coefficient mutation and shifted-map comparator test load-bearing inputs but do not constitute a global fixed-degree variational search.
+      - Names such as cubic, alpha, or B=4 do not establish a full symmetry group, physical Skyrmion, baryon, nucleus, or nuclear reaction.
+    comparators:
+      - E1's source value 20.63 and its cited literature neighborhood; P104's structural selection and tolerances were frozen before source execution, and the source value is rejected as a final accuracy oracle
+    accepted_in: v0.88.0
+    challenges: []
+    supersedes: []

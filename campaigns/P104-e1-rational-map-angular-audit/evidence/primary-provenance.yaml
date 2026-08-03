@@ -1,0 +1,71 @@
+campaign: P104
+base_release: v0.87.0
+base_commit: 37be46c04133b49212f006ec985a748740faede5
+preregistration_commit: 4baddb2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+claim_delta: [C-RMAP-001, C-RMAP-002]
+primary:
+  command: PYTHONPATH=src .venv/bin/python campaigns/P104-e1-rational-map-angular-audit/verify.py
+  terminal_tally: ALL 35 CHECKS PASS [C-RMAP-001/002]
+  exit_status: 0
+  note: attempt 0003's 34-check pass was rejected as an inadequate oracle and repaired in attempts 0005 and 0006
+independent:
+  command: >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+  canonical_rational_map_imports: []
+  terminal_tally: ALL 18 CHECKS PASS [C-RMAP-001/002-INDEPENDENT]
+  exit_status: 0
+source_reproduction:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py
+  tally: ALL 6 CHECKS PASS
+  exit_status: 0
+exact_methods:
+  - exact polynomial gcd and rational degree after cancellation
+  - pullback-area degree theorem and normalized-square lower-bound derivation
+  - radial substitution into three Euler-beta terms
+  - gamma reflection and exact identity and degree-two controls
+orientation_convention: >-
+  With u=cos(theta), sin(theta)dtheta=-du. Both cubatures integrate the positive
+  measure du*dphi on u in [-1,1] after reversing the theta-transformed bounds;
+  attempts/0010 records this clarification to the frozen proposal shorthand.
+numeric_methods:
+  canonical_cubature: tensor Gauss-Legendre in u=cos(theta) and phi using a homogeneous Wronskian
+  canonical_orders: [[16, 32], [24, 48], [32, 64], [48, 96], [64, 128]]
+  independent_cubature: nested SciPy adaptive integration in direct and reciprocal stereographic charts
+  independent_tolerances: [1.0e-7, 1.0e-9, 1.0e-11]
+  precision: IEEE-754 binary64/complex128
+  corrected_degree_two: 5.80825932025646
+  corrected_cubic_degree_four: 20.6496264884189
+mutations:
+  - common polynomial factor and apparent degree
+  - derivative and sphere-normalization factors
+  - flat theta-phi measure
+  - cubic polynomial coefficient
+  - domain and target axial rotations
+  - shifted degree-two map
+counterexamples:
+  - exact identity and degree-two values expose the source's endpoint-loss bias
+  - two endpoint-excluding grids can agree more closely than either agrees with the exact answer
+  - one higher same-degree deformation does not prove a global minimum
+quadrature_compatibility:
+  canonical_sampled_trapezoid: none
+  source_current_branch: np.trapezoid
+  native_compatibility_abort: none
+focused_gate:
+  status: passed
+  attempt: attempts/0008/result.yaml
+  primary_tally: ALL 35 CHECKS PASS [C-RMAP-001/002]
+  independent_tally: ALL 18 CHECKS PASS [C-RMAP-001/002-INDEPENDENT]
+  pytest_tally: 11 passed in 1.34s
+  parsed_yaml_records: 15
+  memory_tally: All 3 files valid
+integrated_gate:
+  status: passed
+  attempt: attempts/0009/result.yaml
+  workflow_tally: WORKFLOW VALID 119 claims 119 accepted 0 proposals 218 units 116 pending 0 partial
+  memory_tally: All 443 files valid
+  skill_tally: Skill is valid
+  pytest_tally: 953 passed in 83.55s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+status: accepted

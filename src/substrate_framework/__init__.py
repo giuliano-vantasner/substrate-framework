@@ -493,6 +493,15 @@ from .first_passage import (
     summarize_censored_first_passage,
     thresholded_completed_only_rate,
 )
+from .rational_maps import (
+    RationalMapDegreeEvidence,
+    RationalMapSphereEvidence,
+    axial_rational_map_angular_integral,
+    exact_rational_map_degree,
+    rational_map_angular_lower_bound,
+    rational_map_sphere_integrals,
+    rotate_rational_map_about_axis,
+)
 from .charge_traces import (
     AbelianNormalizationLedger,
     ChargeCouplingAngleLedger,
@@ -714,6 +723,8 @@ __all__ = [
     "ConditionalOverlapMassLedger",
     "FrankCoreSensitivityLedger",
     "FirstPassageQuadratureEvidence",
+    "RationalMapDegreeEvidence",
+    "RationalMapSphereEvidence",
     "MatchedSechOverlap",
     "OneLoopLengthRatioLedger",
     "QuarticBoundModeOverlapLedger",
@@ -915,6 +926,8 @@ __all__ = [
     "fit_rest_breather_snapshot",
     "forward_difference",
     "free_reflected_absorbing_mfpt",
+    "axial_rational_map_angular_integral",
+    "exact_rational_map_degree",
     "frank_core_line_tension",
     "frank_core_log_sensitivities",
     "frank_quadratic_capillary_map",
@@ -1048,6 +1061,9 @@ __all__ = [
     "refinement_study",
     "reflected_absorbing_backward_residual",
     "reflected_absorbing_mfpt",
+    "rational_map_angular_lower_bound",
+    "rational_map_sphere_integrals",
+    "rotate_rational_map_about_axis",
     "rescale_dimensional_sine_gordon_coefficients",
     "reduced_collective_euler_lagrange",
     "reduced_collective_lagrangian",

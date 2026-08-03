@@ -1,0 +1,38 @@
+campaign: P104
+attempt: 2
+route: canonical_exact_degree_axial_and_gauss_legendre_api
+status: passed
+commands:
+  - .venv/bin/python -m pytest -q tests/test_rational_maps.py
+  - >-
+    PYTHONPATH=src .venv/bin/python -c '<evaluate identity, axial degree-two,
+    cubic degree-four, and shifted degree-two maps at tensor orders
+    16x32,24x48,32x64,48x96,64x128>'
+process:
+  pytest_exit_status: 0
+  pytest_tally: 11 passed in 1.34s
+exact:
+  identity_integral: 1
+  axial_degree_two_integral: pi+8/3
+  axial_degree_two_decimal: 5.80825932025646
+  cubic_exact_degree: 4
+  cubic_coprime: true
+numeric_refinement:
+  orders: [[16, 32], [24, 48], [32, 64], [48, 96], [64, 128]]
+  cubic_normalized_area: [4.00002326291706, 3.99999998703943, 3.99999999996477, 3.99999999999999, 4.0]
+  cubic_angular_integral: [20.6516204432472, 20.6496235931113, 20.6496264778951, 20.6496264884189, 20.6496264884189]
+  shifted_degree_two_angular_integral: [9.75387721391719, 9.75356663685136, 9.75356728956345, 9.75356728860532, 9.7535672886053]
+findings:
+  - The homogeneous Wronskian formula avoids division at denominator poles and the compact sphere cubature samples neither stereographic endpoint.
+  - Identity is exact to roundoff, degree-two converges to its exact beta/gamma value, and cubic pullback area converges to degree four.
+  - The cubic angular value converges to 20.6496264884189, while the source's 20.6295 is biased by endpoint-excluding trapezoidal integration.
+  - The exact degree-two value 5.80825932025646 differs from the source's 5.79616 for the same numerical reason.
+  - A shifted degree-two map evaluates higher, but that single comparison remains insufficient to prove global minimality.
+next_route: >-
+  Build the exact campaign verifier and an independent high-precision sphere
+  integration that imports no canonical rational-map API; include measure,
+  derivative, coprimality, coefficient, rotation, and minimality mutations.
+debt:
+  - independent numerical route
+  - exact theorem and source predicate verifier
+  - dependency, consumer, review, disposition, and promotion closure

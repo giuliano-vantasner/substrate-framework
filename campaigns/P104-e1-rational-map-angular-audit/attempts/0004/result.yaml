@@ -1,0 +1,35 @@
+campaign: P104
+attempt: 4
+route: independent_symbolic_and_adaptive_two_chart_review
+status: passed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+process:
+  exit_status: 0
+  elapsed_seconds: 12.92127456
+  terminal_tally: ALL 18 CHECKS PASS [C-RMAP-001/002-INDEPENDENT]
+independence:
+  canonical_rational_map_imports: []
+  exact_route: fresh SymPy polynomial algebra and direct radial integration
+  numeric_route: nested SciPy adaptive integration in direct and reciprocal stereographic charts
+  tolerances: [1.0e-7, 1.0e-9, 1.0e-11]
+results:
+  exact_degree_two_area: 2
+  exact_degree_two_angular_integral: pi+8/3
+  cubic_normalized_area: 4.000000000000001
+  cubic_angular_integral: 20.6496264884189
+  cubic_tensor_agreement: true
+  coefficient_mutation_angular_integral: 20.774392993
+  shifted_degree_two_angular_integral: 9.7535672886053
+mutation_sensitivity:
+  - common-factor cancellation changes apparent polynomial degree
+  - cubic coefficient mutation preserves degree area but changes the angular integral
+  - independent domain and target rotations preserve both integrals
+  - exact controls reject the source endpoint-loss decimals as final values
+  - one higher same-degree deformation does not prove global minimization
+next_route: >-
+  Complete the claim-level source and consumer audit, preserving the exact
+  theorem separately from the resolution-bounded cubic evaluation.
+debt:
+  - source-check, dependency, consumer, review, disposition, and promotion closure

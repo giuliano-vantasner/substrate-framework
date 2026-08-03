@@ -1,0 +1,29 @@
+campaign: P104
+attempt: 6
+route: repaired_exact_primary_and_independent_oracles
+status: passed
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P104-e1-rational-map-angular-audit/verify.py
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+process:
+  primary_exit_status: 0
+  primary_elapsed_seconds: 2.21411974
+  primary_terminal_tally: ALL 35 CHECKS PASS [C-RMAP-001/002]
+  independent_exit_status: 0
+  independent_elapsed_seconds: 13.002356694
+  independent_terminal_tally: ALL 18 CHECKS PASS [C-RMAP-001/002-INDEPENDENT]
+oracle_repairs:
+  - The primary route expands the transformed axial radial integrand into three distinct Euler-beta kernels and evaluates those kernels to the gamma formula.
+  - The lower bound is derived by substituting the degree-area identity into the normalized integral of the nonnegative square (J-B)^2.
+  - The independent route separately evaluates the same three beta terms and retains its direct degree-two radial integral.
+result: >-
+  The previously vacuous assertions are gone. Exact theorem checks, compact
+  tensor cubature, independent adaptive two-chart integration, exact controls,
+  coefficient and convention mutations, and interpretation ceilings all pass.
+next_route: complete source, dependency, consumer, claim-review, and promotion closure
+debt:
+  - source-check, dependency, consumer, review, disposition, and promotion closure

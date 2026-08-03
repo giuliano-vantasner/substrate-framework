@@ -1,0 +1,22 @@
+campaign: P104
+attempt: 5
+route: verifier_oracle_audit
+status: failed
+failed_layer: verifier
+diagnosis: >-
+  The 34-check primary verifier exited successfully, but its named axial-beta
+  check assigned beta_reduction and preregistered to the same expression, and
+  its named Cauchy-deficit check only expanded an expression against itself.
+  Those assertions did not derive either headline and therefore do not support
+  C-RMAP-001 despite the passing terminal tally.
+preserved_evidence:
+  - attempts/0003/result.yaml records the exact command and misleading successful tally
+  - the canonical implementation and non-tautological degree, control, mutation, and numerical checks remain useful regression evidence
+next_route: >-
+  Derive the axial formula from the transformed radial integrand through three
+  explicit Euler-beta terms, and derive I-B^2 as the normalized integral of
+  (J-B)^2 after substituting the exact degree-area identity. Rerun both the
+  primary and independent routes with these load-bearing checks.
+debt:
+  - repaired exact oracle and renewed independent review
+  - source-check, dependency, consumer, review, disposition, and promotion closure

@@ -1,0 +1,36 @@
+campaign: P104
+claims:
+  C-RMAP-001:
+    accepted_dependencies: []
+    mathematical_imports:
+      - the oriented unit Riemann sphere and its normalized round measure
+      - stereographic coordinates and the target round metric
+      - coprime holomorphic rational maps and algebraic degree
+      - the pullback area/degree theorem
+      - Euler beta and gamma identities and Cauchy-Schwarz
+    closure: dependency-root conditional mathematics
+  C-RMAP-002:
+    accepted_dependencies: [C-RMAP-001]
+    declared_inputs:
+      numerator: z^4+2*i*sqrt(3)*z^2+1
+      denominator: z^4-2*i*sqrt(3)*z^2+1
+      exact_degree: 4
+    closure: one resolution-bounded specialization of the exact theorem
+compatibility_anchors:
+  C-MOD-001: owns one declared B=1 radial reduced energy and physical-action ceiling; it supplies no general rational-map theorem
+  C-MOD-002: owns one resolution-bounded B=1 radial branch and explicitly imports no pending E1 or E2 result
+  C-SK-001: owns a conditional common-unit cancellation and supplies no angular functional or multi-Skyrmion state
+  C-TOP-002: owns a distinct conditional SU(3) winding-current theorem and explicitly supplies no physical baryon identification
+  C-DIM-002: retains all physical coefficient and scale choices
+missing_for_broader_interpretation:
+  - an accepted physical Skyrme action and rational-map ansatz
+  - proof that a supplied map is a global fixed-degree minimizer
+  - an accepted radial profile equation and solver for each degree
+  - a state map from rational degree to a baryon, deuteron, alpha particle, or material configuration
+  - absolute scales, masses, binding energies, reaction channels, yields, and observation maps
+closure: >-
+  C-RMAP-001 changes no accepted invariant and needs no framework scientific
+  dependency. C-RMAP-002 depends only on that exact geometry plus one fully
+  declared polynomial pair. Accepted radial, topological, dimensional, and
+  mass claims act only as interpretation ceilings; no pending E2, E4, NY2,
+  PG3, S2, or later source result is imported.

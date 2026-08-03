@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 117
-  qualified: 89
+  pending_adjudication: 116
+  qualified: 90
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -6410,8 +6410,34 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOD-001
+  - C-RMAP-001
+  - C-RMAP-002
+  qualification: E1's exact identity-map normalization, conditional round-sphere functional, supplied-map
+    evaluations, selected ordering, and load-bearing measure survive. P104 derives the exact coprime-degree
+    area theorem, lower bound, axial-family beta/gamma formula, and corrected I(2)=pi+8/3, and independently
+    refines the declared degree-four map to I=20.6496264884189. The source applies trapezoidal reduction
+    to endpoint-excluding midpoint arrays, so its numerical identity, 5.79 and 20.63 decimals, and grid-change
+    check do not validate its claimed accuracy. One higher shifted map proves neither global minimality
+    nor a general degree-ordering theorem. No accepted radial ansatz, physical baryon or nuclear-state
+    map, binding calculation, reaction, or yield closes the broader interpretation.
+  evidence:
+  - campaigns/P104-e1-rational-map-angular-audit/reviews/source_adjudication.md
+  - campaigns/P104-e1-rational-map-angular-audit/evidence/source-reproduction.yaml
+  - campaigns/P104-e1-rational-map-angular-audit/evidence/source-audit.yaml
+  - campaigns/P104-e1-rational-map-angular-audit/evidence/check-adjudication.yaml
+  - campaigns/P104-e1-rational-map-angular-audit/evidence/dependency-audit.yaml
+  - campaigns/P104-e1-rational-map-angular-audit/evidence/consumer-audit.yaml
+  - campaigns/P104-e1-rational-map-angular-audit/evidence/candidate-comparison.yaml
+  - campaigns/P104-e1-rational-map-angular-audit/verify.py
+  - campaigns/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+  - memory/vantasner/decisions/C-RMAP-001-review.md
+  - memory/vantasner/decisions/C-RMAP-002-review.md
+  note: E1 executes the current `np.trapezoid` branch without a compatibility abort. Canonical P104 cubature
+    uses Gauss-Legendre weights and introduces no version-specific NumPy trapezoidal alias. Sequential
+    E2 adjudication must replace its duplicated endpoint-loss integral before judging radial sensitivity.
 - source_unit: E2
   phase: phase-29
   path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py

@@ -1,0 +1,37 @@
+campaign: P104
+source_unit: E1
+literal_checks: 6
+checks:
+  - index: 1
+    source_predicate: the identity map has an exactly unit angular functional
+    verdict: accepted
+    surviving_claim: C-RMAP-001
+    qualification: compatibility with C-MOD-001 is conditional and supplies no general multi-Skyrmion action
+  - index: 2
+    source_predicate: the sampled identity value lies within 0.5 percent of one
+    verdict: rejected_as_integrator_validation
+    surviving_observation: the loose predicate passes at 0.99792
+    excluded_reading: exact-control agreement does not validate the same flawed endpoint-excluding rule for nonconstant maps
+  - index: 3
+    source_predicate: sampled degree-two and degree-four values lie in broad literature-centered bands
+    verdict: qualified
+    surviving_claim: C-RMAP-002 evaluates the declared cubic map; C-RMAP-001 gives the exact axial degree-two value
+    excluded_reading: global minimality, physical state identification, or final source decimals
+  - index: 4
+    source_predicate: the two endpoint-excluding grids change by less than one percent
+    verdict: rejected_as_accuracy_or_convergence_evidence
+    excluded_reading: the successive change is smaller than the remaining exact error because both grids share the same domain-loss defect
+  - index: 5
+    source_predicate: the three supplied values obey I1<I2<I4
+    verdict: accepted_only_for_selected_maps
+    excluded_reading: a theorem that minimal I is monotone in every degree, or a per-baryon energy or binding hierarchy
+  - index: 6
+    source_predicate: flat weight changes I1 and one shifted degree-two map has larger I than z squared
+    verdict: qualified
+    surviving_claim: the round-sphere measure is load bearing and the one shifted comparator is higher
+    excluded_reading: one comparison proves that z squared is the global degree-two minimizer
+terminal_tally_verdict: >-
+  All six predicates execute. The tally supports the exact identity and selected
+  map evaluations only after stronger correction; it does not validate the
+  source quadrature, global minimality, a general degree ordering, a radial
+  energy, a nucleus, or a yield.

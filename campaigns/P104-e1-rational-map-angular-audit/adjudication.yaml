@@ -1,0 +1,60 @@
+campaign: P104
+title: E1 rational-map sphere theorem and declared-map evaluation audit
+source_baseline: substrate@6d1f4e0
+source_units: [E1]
+base_release: v0.87.0
+release_after_adjudication: v0.88.0
+adjudicated_at: '2026-08-07T12:30:00Z'
+selected_candidates:
+  - {id: B, reason: The pullback degree theorem and normalized-square identity derive the exact area and lower bound.}
+  - {id: C, reason: Explicit radial substitution and three Euler-beta terms derive the exact axial family.}
+  - {id: D, reason: Homogeneous-Wronskian tensor Gauss-Legendre cubature meets exact-control and refinement gates.}
+  - {id: E, reason: Fresh adaptive direct/reciprocal-chart integration independently reproduces the declared maps.}
+  - {id: F, reason: Exact coprimality and degree plus two numeric methods support the declared cubic-map evaluation only.}
+  - {id: H, reason: Consumer tracing preserves every radial, minimization, state, scale, reaction, and yield premise.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: G, decision: rejected_as_global_minimization_route}
+claims:
+  - {id: C-RMAP-001, decision: accepted_symbolic_verified}
+  - {id: C-RMAP-002, decision: accepted_numeric_evidence}
+reviewed_existing:
+  - {id: C-MOD-001, decision: unchanged_B1_radial_compatibility_only}
+  - {id: C-MOD-002, decision: unchanged_B1_numeric_and_pending_dependency_ceiling}
+  - {id: C-SK-001, decision: unchanged_mass_cancellation_ceiling}
+  - {id: C-TOP-002, decision: unchanged_distinct_winding_current_and_no_physical_baryon_ceiling}
+  - {id: C-DIM-002, decision: unchanged_coefficient_and_scale_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  api_and_refinement_route: attempts/0002/result.yaml
+  inadequate_primary_pass: attempts/0003/result.yaml
+  initial_independent_pass: attempts/0004/result.yaml
+  failed_oracle_audit: attempts/0005/result.yaml
+  repaired_primary_and_independent: attempts/0006/result.yaml
+  failed_focused_invocation: attempts/0007/result.yaml
+  focused_gate: attempts/0008/result.yaml
+  integrated_promotion_gate: attempts/0009/result.yaml
+  orientation_notation_clarification: attempts/0010/result.yaml
+  failed_staging_invocation: attempts/0011/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_rational_map_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  E1: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P104-e1-rational-map-angular-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+  - .venv/bin/python -m pytest -q tests/test_rational_maps.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

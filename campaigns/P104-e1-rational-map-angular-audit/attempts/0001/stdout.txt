@@ -1,0 +1,50 @@
+==============================================================================
+CHECK 1 -- I(1)=1 EXACTLY for R=z (analytic, SymPy) [DERIVED]
+==============================================================================
+    I(1) analytic = 1
+  E1.1 [DERIVED, SymPy] for the degree-1 minimal map R=z the HMS bracket ((1+|z|^2)/(1+|R|^2))|R'| is identically 1, so I(1) = (1/4pi) int sin th dth dphi = 1 EXACTLY -- the B=1 case reduces the rational-map energy to the corpus hedgehog energy (Option-C, I=1), confirming the (B,I) generalization is consistent at B=1  PASS
+==============================================================================
+CHECK 2 -- numeric I(1) recovers the exact 1 (validates the sphere integrator) [DERIVED]
+==============================================================================
+    I(1) numeric = 0.99792  (exact 1)
+  E1.2 [DERIVED-here] the numeric round-sphere integrator recovers I(1)=1 to <0.5% (0.995..1.005): the quadrature on the (theta,phi) sphere with the sin(theta) measure is validated against the exact analytic value before it is trusted for B=2,4  PASS
+==============================================================================
+CHECK 3 -- I(2)=5.79 (R=z^2) and I(4)=20.63 (cubic O_h map) [DERIVED, numeric]
+==============================================================================
+    I(2) = 5.7962  (HMS literature 5.81)
+    I(4) = 20.6295  (HMS literature 20.65)
+  E1.3 [DERIVED-here, numeric] the degree-2 axial map R=z^2 gives I(2)=5.79 (HMS 5.81) and the cubic O_h-symmetric degree-4 map gives I(4)=20.63 (HMS 20.65) -- the angular integrals that carry the B=2 (deuteron) and B=4 (alpha) Skyrmion energies, computed from the maps with no fit  PASS
+==============================================================================
+CHECK 4 -- grid convergence: I(2),I(4) stable under refinement [DERIVED]
+==============================================================================
+    I(2): 5.79616 -> 5.80019  (rel change 6.96e-04)
+    I(4): 20.62952 -> 20.63622  (rel change 3.25e-04)
+  E1.4 [DERIVED-here] refining the sphere grid (2400x480 -> 3600x720) changes I(2) and I(4) by < 1% -- the integrals are converged quadratures, not grid artifacts (numeric_evidence)  PASS
+==============================================================================
+CHECK 5 -- I increases with B: I(1) < I(2) < I(4) [DERIVED]
+==============================================================================
+    I(1)=0.998 < I(2)=5.796 < I(4)=20.630
+  E1.5 [DERIVED-here] the angular integral grows with baryon number, I(1)<I(2)<I(4): a higher-degree map distributes more topological charge over the sphere and carries a larger Skyrme(angular) energy -- the monotonic input to E2's per-baryon hierarchy  PASS
+==============================================================================
+CHECK 6 -- GUARD: wrong measure and a suboptimal map are REJECTED [GUARD]
+==============================================================================
+    flat-measure I(1) = 1.5669  (!= 1 -> REJECTED)
+    suboptimal R=z^2+0.6 : I = 9.7520  vs minimal I(2)=5.7962 (larger -> R=z^2 is the minimizer)
+  E1.6 [GUARD, REJECTION] the result is discriminating: (A) using a FLAT dxdy measure instead of the round-sphere sin(theta) measure destroys the exact I(1)=1 normalization (|I_flat-1|>0.1) -> REJECTED, so the correct measure is load-bearing; (B) a SUBOPTIMAL degree-2 map R=z^2+c (same B=2) carries MORE angular energy than the minimal R=z^2 (I_sub > I(2)), consistent with R=z^2 being the energy minimizer -- the I-values are not an artifact of an arbitrary map choice  PASS
+==============================================================================
+RESULT
+==============================================================================
+  E1 ESTABLISHED. The HMS rational-map angular integral I(B) is computed for the
+  minimal maps: I(1)=1 EXACTLY (R=z, analytic -- the B=1 case IS the corpus Option-C
+  hedgehog), I(2)=5.796 (R=z^2, deuteron), I(4)=20.630 (cubic O_h map, alpha).
+  The integrator is validated on the exact I(1)=1, converges under grid refinement,
+  and I increases with B. These I-values are the angular inputs to E2's (B,I) radial
+  Skyrmion solve. This is the FIRST multi-Skyrmion machinery in the corpus.
+  PROVENANCE: DERIVED here -- I(1)=1 analytically, the numeric I(B) over the round-sphere
+  measure, convergence, the I-ordering, the guards; IMPORTED -- the rational-map ansatz
+  and the minimal-map identification (Houghton-Manton-Sutcliffe 1998); DECLARED -- the
+  minimal maps (their global optimality is the HMS minimization, not re-run; the guard
+  shows a deformed map costs more).
+
+ALL 6 CHECKS PASS
+ELAPSED_SECONDS=1.88 MAX_RSS_KB=450120 EXIT_STATUS=0

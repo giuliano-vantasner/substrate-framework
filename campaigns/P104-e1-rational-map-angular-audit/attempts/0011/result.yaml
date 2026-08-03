@@ -1,0 +1,14 @@
+campaign: P104
+attempt: 11
+route: final_staging_first_invocation
+status: failed
+failed_layer: git_pathspec
+diagnosis: >-
+  The explicit git add command named the old proposals/P104 directory after
+  git mv had already removed that path. Git rejected the nonexistent pathspec
+  before staging the remaining listed files.
+scientific_effect: none
+next_route: >-
+  Stage the existing campaigns/P104 directory and explicit promotion files;
+  the tracked proposal-to-campaign move is already present in the index.
+debt: []

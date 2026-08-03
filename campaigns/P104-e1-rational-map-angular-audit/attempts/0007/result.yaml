@@ -1,0 +1,21 @@
+campaign: P104
+attempt: 7
+route: focused_record_gate_first_invocation
+status: failed
+failed_layer: tooling_invocation
+commands:
+  - parse all P104 YAML records
+  - memory validate three paths in one invocation
+  - git diff --check
+results:
+  yaml: PARSED 15 YAML RECORDS
+  memory_exit_status: 2
+  memory_diagnostic: memory validate accepts exactly one PATH positional argument
+  diff_check_exit_status: 0
+scientific_effect: none
+next_route: >-
+  Validate each memory path in a separate invocation, preserving the already
+  passing YAML and diff results without rerunning scientific verifiers.
+debt:
+  - repaired focused record gate
+  - promotion and integrated validation

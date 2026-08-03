@@ -1,0 +1,86 @@
+campaign: P104
+direct_framework_consumers:
+  - path: src/substrate_framework/__init__.py
+    verdict: additive pure exports only
+  - path: tests/test_rational_maps.py
+    verdict: eleven focused degree, exact-control, refinement, rotation, invalid-input, and compatibility tests pass
+  - path: proposals/P104-e1-rational-map-angular-audit/verify.py
+    verdict: ALL 35 CHECKS PASS after the vacuous-oracle route was preserved and repaired
+  - path: proposals/P104-e1-rational-map-angular-audit/reviews/independent_rational_map_review.py
+    verdict: ALL 18 CHECKS PASS without canonical rational-map imports
+pinned_direct_source_consumers:
+  - path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+    sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f
+    git_blob: 6a2ec5e0cca1255605d3644a5e421ac655734835
+    execution: deferred to sequential E2 adjudication
+    verdict: duplicates E1's biased midpoint-plus-trapezoid integral and adds an unaccepted rational-map radial BVP and nuclear labels
+  - path: merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+    sha256: aa76b9e675d4fbb45594e9d3df5107af175e927a24840260ca71ffda1bad3315
+    git_blob: cecea225e4735cfbb393389a23903b4eeab4286c
+    execution: static audit only
+    verdict: duplicates the biased integral and adds pending profiles, mass maps, binding differences, empirical comparators, and a reaction-yield interpretation
+  - path: merged-framework/bridges/phase-34/bridge_KI5_kappa_is_not_a_variational_bound.py
+    sha256: 5db475be67e6668f9064096055b0452bb2a762c435132ae324896cce3f9863fe
+    git_blob: 92e227a30699daa435f34403f77080aeee1c1dba
+    execution: static audit only
+    verdict: its exact difference-of-upper-bounds warning is structurally distinct, while its numeric route duplicates the pending E2/E3 machinery and biased integral
+  - path: merged-framework/bridges/phase-40/bridge_TX1_b2_intrinsic_quadrupole.py
+    sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff
+    git_blob: 9cf4a5cee7d4b05ab3190bc4531660dfb6880874
+    execution: static audit only
+    verdict: reuses rational-map angular density but adds pending radial energy density, physical state, intrinsic quadrupole, and no-free-amplitude claims
+  - path: merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py
+    sha256: c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f
+    git_blob: a8dd0757f4712cd15ddc6c4a0454b3e8aaf0779c
+    execution: static audit only
+    verdict: adds a fixed-degree Hessian, rigid-rotor, Floquet, fission, and full-stability narrative not established by angular evaluation
+  - path: merged-framework/bridges/phase-43/bridge_MK5_generalized_solve_kappa.py
+    sha256: a5ecb5d0d2ba96cf8083a9cfb32ddb44c2a4f4841bf776ebbccb91bc12b246f8
+    git_blob: 29bfc9960d9a3548f218be6c95b5ab28b7bb3ee4
+    execution: static audit only
+    verdict: reuses I as a declared squared-Jacobian factor but adds unaccepted L2+L4+L6+L0 coefficients, continuation solves, scale, and kappa claims
+  - path: merged-framework/bridges/phase-44/bridge_MR5_solve_at_derived_e.py
+    sha256: 0da10adafe3badb7f3eab225543bc601996df45b142f2d59b5d0ddd6dd9117d7
+    git_blob: 01e2a9490f1d931691bedd04b9c19700721df78e
+    execution: static audit only
+    verdict: repeats the map factor inside a later unaccepted generalized-model mass and coupling calculation
+pinned_narrative_and_indirect_consumers:
+  - path: merged-framework/bridges/phase-29/dossiers/Phase29-NYE-dossier.md
+    sha256: 68555e15ba1647bad98bdcbdd7feedb7426b30912a45e2fa5292b66673028465
+    git_blob: 3180a9eacf519dbadec1b5cd27c9d4893f1edc82
+    verdict: repeats integrator-validation, minimizer, state, binding, and yield headlines without repairing their dependencies
+  - path: merged-framework/bridges/phase-43/dossiers/Phase43-MK-dossier.md
+    sha256: 498eaaa453bc01da2bd8f054365a9b84b68fa493818abeecf11bfd0ae9c5c023
+    git_blob: 266df2bac110ca279e9051d1cf7deac98f2904e7
+    verdict: narrative consumer of the later generalized model only
+  - path: merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+    sha256: f1815eefc73e577734992a3147d9ec6cea2b50fad8532e9f436e1afb465dfea7
+    git_blob: 279bfb747a8663577d9f040df4cb6a822503c287
+    verdict: indirect E3 consumer; its separate BPS theorem does not validate E1 minimization or physical mapping
+  - path: merged-framework/bridges/phase-29/bridge_E5_independent_fuel_test.py
+    sha256: f1754902fb112f63c9c9052b60cdeca5455023560680e4e31889669cddf764af
+    git_blob: 9824f55b14c21d0d678ce12f68ea38da91be86c9
+    verdict: indirect E2 hierarchy consumer adding empirical fuel and final-state premises
+  - path: merged-framework/bridges/README.md
+    sha256: 9258406a320d9c9edc032e8ad0d93284a254df879f19df985ccc3f2b35924979
+    git_blob: dbc471423a5e1be372ec3b2af1a5b48bdebd4ff6
+    verdict: narrative rollup repeating the provisional integrator, minimizer, state, and yield readings
+  - path: merged-framework/UNIFIED-SYNTHESIS.md
+    sha256: 9088613693a2a6484e0bd395b658d8d66b98c782620e7613d2c68e761536db52
+    git_blob: ab9d022f17c090054583141043c867d30611b177
+    verdict: narrative rollup only; it is not accepted framework authority
+  - path: merged-framework/frontier.md
+    sha256: 7ca6b1116b05a7da20f5bac2ce7868b05b75f0cb1243a5415d5a0f9de2139a4e
+    git_blob: d83906df1984fe21f77ae8d84138693e1ef1ed11
+    verdict: planning narrative only; it does not close the mathematical or physical dependency graph
+compatibility:
+  canonical_sampled_trapezoid_calls: none
+  source_native_branch: np.trapezoid
+  source_compatibility_abort: none
+  mutable_direct_np_trapz_calls_added: none
+impact: >-
+  The new module and exports are additive and no accepted canonical module
+  imports them. Pinned source consumers are immutable pending evidence that
+  duplicate formulas rather than callers of the new API. Their corrected
+  migration and downstream numerical sensitivity must be handled in their own
+  sequential campaigns, beginning with E2.

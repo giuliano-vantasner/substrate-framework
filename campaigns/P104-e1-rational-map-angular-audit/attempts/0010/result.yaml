@@ -1,0 +1,17 @@
+campaign: P104
+attempt: 10
+route: post_gate_orientation_notation_audit
+status: passed
+diagnosis: >-
+  The frozen proposal writes dOmega=dphi*d(cos(theta)) as shorthand. With
+  u=cos(theta), the oriented differential is sin(theta)dtheta=-du; the positive
+  integration rule on theta in [0,pi] becomes integral over u in [-1,1] only
+  after reversing the transformed bounds. Omitting that explanation is
+  sign-ambiguous even though both implemented cubatures used positive
+  Gauss/adaptive weights on [-1,1] and reproduced positive degree area.
+repair:
+  - preserve the frozen proposal unchanged
+  - state the minus sign and bound reversal explicitly in the accepted claim assumptions and provenance
+  - regenerate claim documentation and memory, then rerun record-sensitive checks only
+scientific_effect: none; exact and numerical values are unchanged
+debt: []

@@ -1,0 +1,49 @@
+campaign: P104
+attempt: 1
+route: pinned_source_reproduction_and_static_quadrature_audit
+status: source_reproduced_oracle_not_accepted
+command: >-
+  /usr/bin/time -f 'ELAPSED_SECONDS=%e MAX_RSS_KB=%M EXIT_STATUS=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py
+source:
+  path: merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py
+  sha256: 1afa9ba8ade88912e7361bbbd6f59a9fce5cc114c75ddf604a6439bc066ae2d1
+  git_blob: ca226759fef9ea3276e8e7069867ef881910c6e1
+  worktree_state: clean_relative_to_pinned_blob
+process:
+  exit_status: 0
+  elapsed_seconds: 1.88
+  maximum_resident_kib: 450120
+  terminal_tally: ALL 6 CHECKS PASS
+  stdout: attempts/0001/stdout.txt
+numpy_compatibility:
+  source_dispatch: np.trapezoid if available else np.trapz
+  current_branch: np.trapezoid
+  compatibility_abort: false
+source_results:
+  exact_identity: 1
+  coarse_identity: 0.99792
+  coarse_degree_two: 5.79616
+  fine_degree_two: 5.80019
+  coarse_degree_four: 20.62952
+  fine_degree_four: 20.63622
+  degree_two_relative_change: 6.96e-4
+  degree_four_relative_change: 3.25e-4
+  flat_measure_identity: 1.5669
+  shifted_degree_two: 9.7520
+oracle_findings:
+  - The exact identity-map calculation survives independently of the source grid.
+  - The source evaluates the declared degree-two and degree-four maps and preserves their selected ordering.
+  - The source uses midpoint theta and phi nodes but then applies trapezoidal integration over those endpoint-excluding coordinates; its identity result exposes a 0.208 percent missing-domain bias.
+  - Refining one endpoint-excluding trapezoidal grid to another gives a small successive change but does not establish the stated quadrature accuracy or remove the leading endpoint loss.
+  - One shifted degree-two map with larger I is not a global minimization proof.
+  - Map labels such as deuteron and alpha and downstream E2 or NY2 roles have no accepted state, radial-solution, reaction, or yield authority.
+next_route: >-
+  Implement the preregistered exact degree and axial theorems and a compact
+  Gauss-Legendre sphere evaluator; compare four refinement levels with exact
+  identity and degree-two values before evaluating the cubic map.
+debt:
+  - exact general and axial theorem
+  - independent chart-stable numeric route
+  - every source predicate, dependency, consumer, minimality, and interpretation audit

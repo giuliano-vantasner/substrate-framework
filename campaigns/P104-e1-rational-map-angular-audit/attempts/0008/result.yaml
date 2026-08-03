@@ -1,0 +1,31 @@
+campaign: P104
+attempt: 8
+route: focused_scientific_and_record_gate
+status: passed
+scientific_evidence_reused_without_duplicate_execution:
+  source_reproduction: attempts/0001/result.yaml; ALL 6 CHECKS PASS
+  canonical_api_tests: attempts/0002/result.yaml; 11 passed in 1.34s
+  repaired_primary: attempts/0006/result.yaml; ALL 35 CHECKS PASS
+  repaired_independent: attempts/0006/result.yaml; ALL 18 CHECKS PASS
+commands:
+  - parse every P104 YAML record with yaml.safe_load
+  - validate each P104 memory contract and claim review separately with the bundled memory CLI
+  - git diff --check
+process:
+  yaml_exit_status: 0
+  yaml_tally: PARSED 15 YAML RECORDS
+  memory_exit_status: 0
+  memory_tally: All 3 files valid
+  diff_check_exit_status: 0
+failed_predecessor: attempts/0007/result.yaml records the rejected multi-path CLI invocation
+verdict: >-
+  The exact theorem, independent derivation, corrected numerical evaluator,
+  source predicates, dependency closure, consumers, two individual claim
+  reviews, and append-only failed-oracle history are ready for one staged
+  promotion transaction.
+next_route: >-
+  Materialize C-RMAP-001 and C-RMAP-002, release v0.88.0, qualified E1
+  disposition, adjudication, generated docs and memory, then run one integrated
+  repository workflow.
+debt:
+  - promotion and integrated validation

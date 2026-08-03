@@ -1,0 +1,33 @@
+campaign: P104
+source_unit: E1
+status: qualified
+surviving_subclaims:
+  - The displayed round-sphere angular functional and identity-map specialization are mathematically well defined under the declared stereographic conventions.
+  - For R=z the conformal Jacobian is one and the normalized angular functional is exactly one.
+  - The source evaluates supplied axial degree-two and declared cubic degree-four rational maps, and the selected values obey I(identity)<I(axial two)<I(cubic four).
+  - A flat theta-phi weight breaks the identity-map normalization, so the round-sphere measure is load bearing.
+  - The supplied shifted degree-two map has a larger angular functional than the axial map.
+qualified_or_rejected_subclaims:
+  - claim: the source sphere integrator is validated and converged
+    verdict: rejected
+    reason: midpoint nodes are reduced by a trapezoid formula as though they included the coordinate endpoints; exact controls expose a persistent leading domain-loss bias
+  - claim: I(2)=5.79 and I(4)=20.63 are final computed values
+    verdict: qualified
+    reason: the supplied maps are evaluated, but stronger oracles give exact I(2)=pi+8/3=5.80825932025646 and refined I(4)=20.6496264884189
+  - claim: the displayed maps are globally minimal among all degree-two or degree-four rational maps
+    verdict: rejected_as_unproved
+    reason: one higher shifted map and invariant rotations do not search the full fixed-degree space or establish a variational theorem
+  - claim: I increases with rational-map degree in general
+    verdict: rejected_as_overgeneralized
+    reason: three supplied maps establish only their selected ordering; the exact theorem gives I>=B^2 but no monotonicity theorem across selected minimizers
+  - claim: the angular ordering is a multi-Skyrmion energy or per-baryon binding hierarchy
+    verdict: rejected_as_outside_executable_scope
+    reason: no accepted multi-map ansatz, radial profile, action, boundary-value solve, or energy comparison enters E1
+  - claim: degree two and four identify a deuteron and alpha particle
+    verdict: rejected_as_unproved_interpretation
+    reason: algebraic map degree is not an accepted physical baryon, nuclear state, mass, or observation map
+  - claim: E1 closes E2, NY2, or a nuclear yield
+    verdict: rejected
+    reason: the pending consumers add radial, scale, state, reaction, and observational premises absent from both E1 and the accepted registry
+terminal_disposition: qualified
+accepted_mapping: [C-MOD-001, C-RMAP-001, C-RMAP-002]

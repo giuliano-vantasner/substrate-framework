@@ -732,6 +732,24 @@ For a separately supplied finite family of at least two exact real inverse-coupl
 - Compatibility: `compatible_extension`
 - Dependencies: C-LIN-001
 
+## C-RMAP-001
+
+Let S^2 carry its oriented unit round metric and normalized average <F>=(1/(4*pi))*integral_{S^2} F dOmega, with stereographic coordinate z=tan(theta/2)*exp(i*phi). For a declared nonconstant coprime holomorphic rational map R(z)=p(z)/q(z) of exact algebraic degree B>=1, define its conformal Jacobian J_R=((1+|z|^2)/(1+|R|^2)*|dR/dz|)^2, understood in a homogeneous polynomial representation at target poles. The pullback-area identity gives <J_R>=B. Hence the angular functional I[R]=<J_R^2> obeys I[R]>=B^2, with exact deficit I[R]-B^2=<(J_R-B)^2>. Polynomial degree is assigned only after exact common-factor cancellation. For the axial map R(z)=z^B, explicit radial substitution and Euler-beta integration give I_B=(B^3/3)*(1+Gamma(2-1/B)*Gamma(2+1/B)); in particular I_1=1 and I_2=pi+8/3 exactly. These conditional sphere-geometric results do not select a global fixed-degree minimizer, derive a physical Skyrme action or rational-map ansatz, solve a radial profile, identify map degree with a physical baryon or nucleus, or supply a mass, binding energy, reaction, yield, material, or observation map.
+
+- Accepted in: `v0.88.0`
+- Verification: `symbolic_verified`
+- Compatibility: `native`
+- Dependencies: none
+
+## C-RMAP-002
+
+Conditional on C-RMAP-001 and on the exact declared rational map R_4(z)=(z^4+2*i*sqrt(3)*z^2+1)/(z^4-2*i*sqrt(3)*z^2+1), exact polynomial reduction makes the numerator and denominator coprime and the map degree four. Homogeneous-Wronskian tensor Gauss-Legendre cubature on u=cos(theta),phi at orders 16x32 through 64x128 gives normalized pullback area converging to four and angular functional converging to 20.6496264884189 in IEEE-754 binary64/complex128. An independent nested adaptive integration split between direct and reciprocal stereographic charts at relative and absolute tolerances 1e-7, 1e-9, and 1e-11 agrees within 2e-12 relative. Axis rotations preserve the two integrals, while changing the imaginary quadratic coefficient to 3.2*i preserves degree area and changes I to about 20.7744. This is resolution-bounded evidence for one declared map only; it proves neither full cubic symmetry nor global degree-four minimality and supplies no radial solution, physical state, baryon or nucleus identification, energy, mass, binding, reaction, yield, material, or observation.
+
+- Accepted in: `v0.88.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RMAP-001
+
 ## C-SCL-001
 
 Let lambda, nu, S, E0, and epsilon0 be positive, with lambda a dimensionless classical Hessian eigenvalue, nu an inverse-time scale, S an action scale, and E0*epsilon0 a background energy. Conditional on a separately declared one-quantum harmonic interpretation, the dimensionless frequency is sqrt(lambda), the energy gap is S*nu*sqrt(lambda), and the gap-to-background ratio is S*nu*sqrt(lambda)/(E0*epsilon0). For every positive rho, replacing nu by rho*nu leaves the dimensionless Hessian problem unchanged while multiplying the gap and ratio by rho; analogous independent variation of S or E0 also changes the physical ratio. Thus a dimensionless squared classical frequency alone does not determine an excitation energy or mass ratio, and lambda itself cannot replace sqrt(lambda) in the harmonic gap. This exact conditional scale ledger supplies no quantization rule, value of S or nu, background normalization, spin, isospin, parity, particle or Roper dictionary, or substrate realization.

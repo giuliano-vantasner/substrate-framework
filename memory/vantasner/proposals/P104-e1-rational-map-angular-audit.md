@@ -2,15 +2,15 @@
 description: Derive rational-map sphere integrals and audit E1 map evaluation and minimality claims
 author: vantasner
 created: '2026-08-07T12:00:00Z'
-updated: '2026-08-07T12:00:00Z'
+updated: '2026-08-07T12:37:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - rational-map
 - migration-E1
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P104 E1 Rational-Map Angular Audit
 
@@ -241,3 +241,22 @@ decimals are not completion.
 This campaign cross-references E1, E2, E4, NY2, PG3, S2, C-DIM-002,
 C-SK-001, C-TOP-002, C-MOD-001, C-MOD-002, P058, P062, P084, P085, and the
 canonical radial-model, Skyrme-relation, topology, and numerics modules.
+
+## Terminal Adjudication
+
+P104 promotes C-RMAP-001 as an exact dependency-root sphere theorem and
+C-RMAP-002 as resolution-bounded evidence for one declared degree-four map.
+The first primary verifier's passing but tautological beta and variance checks
+are preserved as failed-oracle evidence; the repaired route explicitly derives
+three Euler-beta kernels and the nonnegative-square deficit. Independent
+direct/reciprocal-chart adaptive integration agrees with homogeneous-Wronskian
+tensor cubature at `I=20.6496264884189`.
+
+E1 is qualified. Its exact identity and selected-map ordering survive, but
+trapezoidal reduction over midpoint coordinate arrays loses endpoint strips;
+the source's `5.79`, `20.63`, and grid-change checks do not establish final
+accuracy. A single higher deformation does not prove global minimality, and
+no radial, physical-state, reaction, or yield claim follows. E1 runs its
+current `np.trapezoid` branch without compatibility failure, while canonical
+P104 cubature uses no NumPy trapezoidal alias. Claim-level debt is empty after
+the integrated 953-test gate; the corpus migration continues with E2.

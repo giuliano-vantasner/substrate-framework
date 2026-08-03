@@ -1,0 +1,31 @@
+campaign: P104
+attempt: 3
+route: frozen_exact_and_tensor_verifier
+status: passed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P104-e1-rational-map-angular-audit/verify.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 34 CHECKS PASS [C-RMAP-001/002]
+checked_surfaces:
+  - preregistration and pinned-source hashes
+  - exact polynomial degree, coprimality, common-factor reduction, and coefficient mutation
+  - conformal Jacobian, degree-area identity, Cauchy lower bound, and exact axial-family formula
+  - identity and degree-two exact controls
+  - chart-stable tensor Gauss-Legendre refinement for the declared cubic map
+  - target and domain axial-rotation invariance
+  - shifted-map comparator and explicit global-minimality ceiling
+  - source endpoint-loss bias and all interpretation ceilings
+mutation_sensitivity:
+  - a common polynomial factor changes apparent degree but not rational degree
+  - changing the cubic coefficient preserves degree area and changes the angular functional
+  - using the source midpoint-plus-trapezoid convention misses exact identity and degree-two controls
+  - a shifted degree-two map evaluates higher but cannot prove a global minimum
+next_route: >-
+  Re-derive degree and axial formulas with fresh SymPy expressions and evaluate
+  the same maps with independent adaptive two-chart integration importing no
+  canonical rational-map implementation.
+debt:
+  - independent exact and numerical review
+  - source-check, dependency, consumer, review, disposition, and promotion closure

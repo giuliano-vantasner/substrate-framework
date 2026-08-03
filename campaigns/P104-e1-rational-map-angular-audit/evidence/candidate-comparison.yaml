@@ -1,0 +1,43 @@
+campaign: P104
+selection_basis:
+  - accepted dependency closure and nonduplication
+  - exact sphere normalization, degree, lower-bound, and axial-family derivation
+  - independent chart-stable numerical methods and exact controls
+  - assumption and parameter economy
+  - strict separation of map evaluation, map minimization, radial energy, and physical interpretation
+  - no selection by the exposed 1, 5.79, or 20.63 comparators
+candidates:
+  - id: A
+    decision: reproduction_evidence_only
+    reason: source execution exposes the actual maps and quadrature defect but its tally cannot validate accuracy or interpretation
+  - id: B
+    decision: selected
+    reason: pullback degree and the normalized-square deficit give the exact general theorem with no physical model dependency
+  - id: C
+    decision: selected
+    reason: explicit radial substitution and Euler-beta reduction derive the entire axial family and exact controls
+  - id: D
+    decision: selected
+    reason: homogeneous-Wronskian tensor Gauss-Legendre cubature is pole-stable and satisfies frozen refinements
+  - id: E
+    decision: selected
+    reason: fresh direct/reciprocal-chart adaptive integration agrees without importing the canonical evaluator
+  - id: F
+    decision: selected_as_declared_map_evaluation
+    reason: exact coprimality and degree plus two independent cubatures support the declared cubic-map value
+  - id: G
+    decision: rejected_as_minimization_route
+    reason: one shifted comparator does not search the fixed-degree space; no global-minimum claim is promoted
+  - id: H
+    decision: selected_as_interpretation_ceiling
+    reason: all radial, physical-state, scale, reaction, yield, and observation premises remain outside the claim delta
+claim_decisions:
+  C-RMAP-001: accept after integrated promotion gate
+  C-RMAP-002: accept as numeric evidence after integrated promotion gate
+source_decision:
+  E1: qualified
+nonselection_by_comparator: >-
+  The candidate set, exact formula, chart conventions, refinement requirements,
+  mutations, and interpretation ceilings were frozen before source-body
+  inspection. Advertised values were already exposed, so P104 claims no numeric
+  blinding and uses exact controls and structural criteria instead.

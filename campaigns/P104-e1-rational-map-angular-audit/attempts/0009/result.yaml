@@ -1,0 +1,34 @@
+campaign: P104
+attempt: 9
+route: integrated_promotion_gate
+status: passed
+started_at: '2026-08-07T12:35:00Z'
+completed_at: '2026-08-07T12:37:00Z'
+commands:
+  - scripts/validate.sh
+  - git diff --check
+scientific_replays_preserved_without_duplication:
+  source: attempts/0001/result.yaml
+  canonical_api_tests: attempts/0002/result.yaml
+  repaired_primary_and_independent: attempts/0006/result.yaml
+  focused_records: attempts/0008/result.yaml
+expected_transaction:
+  claims: [C-RMAP-001, C-RMAP-002]
+  release: v0.88.0
+  source_disposition: {E1: qualified}
+  debt: []
+process:
+  workflow_exit_status: 0
+  workflow_tally: WORKFLOW VALID 119 claims 119 accepted 0 proposals 218 units 116 pending 0 partial
+  memory_tally: All 443 files valid
+  skill_tally: Skill is valid
+  pytest_tally: 953 passed in 83.55s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+  diff_check_exit_status: 0
+verdict: >-
+  C-RMAP-001 and C-RMAP-002 are dependency-closed and individually reviewed;
+  release v0.88.0, qualified E1 disposition, generated documentation, generated
+  memory, and the migration queue agree. Claim-level debt is empty. The parent
+  corpus migration continues with E2.
+next_route: parent checkpoint and preregistered E2 audit
+debt: []
