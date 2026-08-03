@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T20:15:00Z'
+updated: '2026-08-04T22:15:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,13 +23,15 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.84.0`, containing one hundred fourteen
-claims. Its latest addition is C-RG-002's exact conditional Frank/core and
-quadratic-loading capillary map, dimension family, sensitivity ledger, sign
-domain, and identifiability ceiling. The latest terminal adjudication is P099:
-BD1 is qualified because its central substitution survives, but its material,
-pulson, `k~omega`, firing, rate, and output-power readings do not. B1, E1, and
-E2 are queue label collisions; BD4 and later consumers remain pending.
+The current accepted frontier is `v0.85.0`, containing one hundred fifteen
+claims. Its latest addition is C-TH-002's exact conditional coth-gated response
+family, source-prefactor maximum and bound, alternative-prefactor ceiling,
+derivative regimes, and scale non-identifiability. The latest terminal
+adjudication is P100: BD2 is qualified because its gate and conditional coth
+algebra survive, but `q/2` is not the full-rate optimum, its loading and
+wavenumber signs are regime dependent, and no physical bath, mode, stochastic
+rate, DBD event, power, or operating recommendation follows. BD3-BD5 and later
+consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -186,6 +188,7 @@ Attempts are append-only and individually reproducible.
 | 0117 | P097 exact physical phase-chain, isotope-ledger, mixed-coordinate scale, and MC3 audit | `campaigns/P097-mc3-medium-gap-maps/attempts/0001` through `0006`, then terminal record replay | accepted as C-LAT-002 and C-MED-004 with MC3 qualified in v0.83.0; commit `8ddc58b` | Forty-three primary and twenty-eight independent checks derive the phase-chain variation and exact band, the displacement-to-phase inertia and coupling lift, the complete two-host gap ratio and counterfamilies, the mixed-coordinate characteristic, rank-one scale family, hyperbolic map, and absorption-rate dimensional completion. MC3's bare-mass expression has speed units, sqrt(2) needs equal curvature and phase scale, `alpha` is not a frequency squared, and gap positivity does not prove a nonlinear or material state. Forty-three focused and 114 adjacent dependency tests pass, and the single integrated workflow passes all 893 tests; exact work uses no NumPy quadrature alias and the memory-CLI absolute-path gotcha is codified without repeating the full suite | Audit MC4's continuum simulation without duplicating the exact breather theorem, mistaking finite-grid persistence for material existence, accepting unrefined numerical agreement, or retaining its local NumPy trapezoidal fallback instead of the shared helper |
 | 0118 | P098 exact similarity, controlled exact-family PDE regression, gapless ceiling, and MC4 audit | `campaigns/P098-mc4-physical-pde-regression/attempts/0001` through `0007`, then terminal record replay | MC4 qualified with v0.83.0 unchanged; commit `8ad0ed8` | Twenty-five primary and sixteen independent checks show that both source media are one normalized trajectory, expose the noncovariant width proxy, identify the FFT values as rescaled eleventh bins, and retain an exact finite-energy gapless traveling packet. Two preregistered accuracy gates fail before the repaired study reaches four spatial levels with order two, three timesteps, three domains, DOP853, 0.284 percent exact-family error, and 0.153 percent cross-time-method agreement. The source is seeded by exact C-SG-017 data and adds regression only; 96 focused tests and the single integrated 893-test workflow pass, and all new sampled integration uses `trapezoid_integral` | Audit BD1's real-variable barrier map without importing pending B1/BD4/E1/E2, conflating line tension with temperature, or treating sourced constitutive decompositions and selected drive laws as first-principles material closure |
 | 0119 | P099 exact conditional capillary composition, dimensions, sensitivities, identifiability, and BD1 audit | `campaigns/P099-bd1-capillary-constitutive-map/attempts/0001` through `0011`, then terminal record replay | accepted as C-RG-002 with BD1 qualified in v0.84.0; commit `bda89f2` | Forty-one primary and eighteen independent checks derive the relative barrier, Frank annulus, quadratic drive composition, amplitude-dimension family, state-dependent component elasticities, full sign domain, rank-two observation map, and three drive-preserving null directions. BD1's dimension predicate checked only symbol occurrence, dimensions cannot select its quadratic law, k~omega is undeclared, and no material or rate follows. Nineteen focused tests, P006's 28 checks, the 16-check source engineering consumer, and the single integrated workflow pass all 904 tests; exact work uses no NumPy or quadrature alias | Audit BD2's thermal/rate construction without turning C-TH-001's bounded single-event gate into a macroscopic rate, importing pending inertia or noise laws, assuming k~omega, or calling a crossover an optimized physical operating temperature |
+| 0120 | P100 exact conditional coth-gated response, stationary theorem, prefactor ceiling, derivative regimes, and BD2 audit | `campaigns/P100-bd2-thermal-rate-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-TH-002 with BD2 qualified in v0.85.0; commit `020ab1f` | Forty-one primary and twenty-one independent checks derive the declared coth limits, capillary-reduced rate, exact cubic stationary equation, unique maximum above 1.039 q, general prefactor family, constant-prefactor no-optimum countermodel, sign-changing loading and fixed-q wavenumber elasticities, q(k) total-derivative reversal, sensitivity-coordinate distinction, and non-identifiability. The source's q/2 point is imposed, not optimized. Fifty-five focused tests pass; the single integrated workflow passes all 914 tests with 426 memory files valid. BD3-BD5/CM2/CM4 reproduce only pending tallies, while the DBD consumers' legacy np.trapz calls are a mechanical compatibility defect scheduled for the next self-optimization boundary rather than scientific campaign failure | Audit BD3's ignition-threshold construction without re-promoting C-COH-001's general threshold, identifying theta1 with hbar*omega_b absent an accepted energy map, importing a physical population Hamiltonian, or calling a conditional N-squared concentration an ignition event |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -863,11 +866,22 @@ is qualified because substitution does not derive a material, dispersion,
 rate, firing event, or output power. Exact P099 work uses no NumPy or
 quadrature alias.
 
+P100 adds C-TH-002 for the exact conditional composition of C-TH-001's gate,
+the capillary-reduced prefactor, a declared coth scale, and a supplied attempt
+frequency. The reduced source response has one maximum with
+`u_*<1/sqrt(5)`, forcing `vartheta_*>1.039*q`; the source's `vartheta=q/2`
+point is not stationary. A constant prefactor removes the finite maximum, and
+the source loading/wavenumber signs reverse at `E/Theta=1/2`. Common energy
+rescaling and a free attempt frequency leave scale and magnitude unidentified.
+BD2 is qualified because no bath, mode, dispersion, stochastic process,
+physical objective, DBD event, or power follows. Its broken DBD consumers use
+version-specific `np.trapz`; exact P100 code imports no NumPy.
+
 ## Canonicalization
-The registry, `v0.84.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fourteen accepted claims. P001 through P099 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 121 pending, 0 partial, 3 migrated, 85 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.85.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifteen accepted claims. P001 through P100 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 120 pending, 0 partial, 3 migrated, 86 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 121 pending, 3 migrated, 85 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is BD2, pinned at SHA-256 `91f2344bd59618b5915d018e1ee7d728b86f59a29e42e1a0a60cd833747f7a65`. Its generated excerpt combines C-RG-002's conditional barrier with C-TH-001's exact bounded two-level gate, a declared effective-noise scale, a prefactor, k~omega, and an asserted operating optimum. P100 must freeze literal reproduction, exact gate reuse, generic Arrhenius/Kramers candidates, alternative prefactors and noise laws, monotonicity and stationary-point criteria, dimension and symbol ledgers, limiting cases, identifiability, nonduplication, BD3-BD5/engineering consumers, and pending-dependency ceilings before opening or executing the source. It must keep line tension distinct from temperature; distinguish the single-event gate from a macroscopic rate; refuse to import pending inertia, frequency, or physical-noise premises; and treat a crossover or curvature feature as an optimum only if a fully declared objective has an interior extremum.
+The effort remains active. D4 is discharged, but D1 remains open with 120 pending, 3 migrated, 86 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is BD3, pinned at SHA-256 `8a8f2138c548d3ed90785fc3ea82302d39d71d4832cb3761f429938d9b94b950`. Its generated excerpt composes C-COH-001's conditional population thresholds with C-RG-002's barrier and identifies the free per-source scale with `hbar*omega_b`, then calls threshold crossing ignition. P101 must freeze literal reproduction, duplicate-threshold reuse, conditional composition and sensitivity candidates, alternative energy maps, integer-ceiling conventions, normalization and identifiability, below-threshold guards, consumer/nonduplication, and pending-dependency ceilings before opening or executing the body. It must not re-promote C-COH-001, import a population Hamiltonian or physical coherence dynamics, identify `theta1` with a breather quantum without accepted units and state mapping, infer `k~omega`, or turn an algebraic concentration threshold into a DBD or nuclear event.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
