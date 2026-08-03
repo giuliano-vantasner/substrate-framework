@@ -64,4 +64,4 @@ comparators_blinded_until: >-
   monotonicity, alternative-cycle, prefactor, identifiability, countermodel,
   dependency, consumer, and twenty-one-predicate gates before executing CM2,
   reading its body as a whole, or inspecting its selected numeric grid.
-status: draft
+status: accepted

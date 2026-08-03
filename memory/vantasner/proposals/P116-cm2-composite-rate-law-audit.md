@@ -2,7 +2,7 @@
 description: Derive a typed composite loss-cycle theorem and adjudicate CM2's rate and sweet-spot interpretations
 author: vantasner
 created: '2026-08-08T03:00:00Z'
-updated: '2026-08-08T03:00:00Z'
+updated: '2026-08-08T05:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - loss-boundary
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P116 CM2 Composite Rate-Law Audit
 
@@ -209,3 +209,19 @@ downstream replay pass with no debt.
 See CM2, B1, BD1, LB2, PN2, PN3, PN4, T1G, C-RG-002, C-DYN-001, C-TH-001,
 C-SPN-002, C-RES-001, provisional C-CMP-001, v0.95.0, and the framework-
 migration effort.
+
+## Terminal Adjudication
+
+P116 accepts C-CMP-001 in v0.96.0 and qualifies CM2. The canonical and fresh
+routes prove exact cancellation of the source's linear loss factor against its
+nominal inverse-loss cycle count, strict loss decrease, positive one-sided
+limits, two source-cutoff jumps, lack of any positive-loss maximizer, the
+actual-cycle critical limit, dimension and scale laws, and the general changed-
+loss-power stationary surface.
+
+CM2's 21 predicates execute, but its symbolic K_pos substitution, point signs,
+definition grid, floating null, lexical scans, same-call repeat, and Boolean
+import marker do not validate the headline. Zero and arbitrary kinetic
+prefactors block a nuclear-rate or magnitude inference. Twenty-one downstream
+source consumers replay 692 checks but inherit only the conditional theorem.
+The campaign debt ledger is empty.

@@ -1,0 +1,18 @@
+campaign: P116
+attempt: 0009
+candidate: F_dependency_cycle_and_consumer_closure
+status: completed
+commands: hash_pinned_absolute_source_commands_in_evidence_consumer_audit
+exit_statuses_all_zero: true
+terminal_tallies:
+  direct_consumers: {scripts: 7, checks: 116}
+  indirect_consumers: {scripts: 14, checks: 576}
+  total: {scripts: 21, checks: 692}
+compatibility_event: none
+verdict: downstream_candidate_graph_reproduced
+results: >-
+  CM1's cycle return and six pending direct consumers execute, as do fourteen
+  transitive consumers. Their tallies are reproduction evidence only. The
+  accepted dependency audit leaves B1 pending, PN2 arithmetic-only, PN3 and
+  PN4 explicitly non-rate, LB2 nominal-cycle-only, and T1G dimensionless.
+next_attempt: claim_level_review_and_promotion_assembly

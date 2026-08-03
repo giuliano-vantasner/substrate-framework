@@ -1,0 +1,54 @@
+campaign: P116
+title: CM2 exact paired-loss and cycle-factor composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [CM2]
+base_release: v0.95.0
+release_after_adjudication: v0.96.0
+adjudicated_at: '2026-08-08T05:30:00Z'
+selected_candidates:
+  - {id: B, reason: Exact nominal composition supplies cancellation, strict loss monotonicity, endpoints, dimensions, and the no-maximizer theorem.}
+  - {id: C, reason: The accepted actual-cycle alternative closes the critical-boundary comparison without importing phase coherence.}
+  - {id: D, reason: Scale, loss-power, zero-interaction, and arbitrary-prefactor countermodels close the physical and identifiability ceilings.}
+  - {id: E, reason: Fresh full-block inversion and independent calculus confirm every load-bearing result.}
+  - {id: F, reason: Claim, predicate, dependency, cycle, consumer, and nonduplication audits close governance.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims:
+  - {id: C-CMP-001, decision: accepted_symbolic_verified}
+reviewed_existing: [C-RES-001, C-DYN-001, C-RG-002, C-TH-001, C-SPN-002]
+evidence:
+  freeze_provenance_failure: attempts/0001/result.yaml
+  source_route: attempts/0002/result.yaml
+  independent_sign_failure_one: attempts/0003/result.yaml
+  independent_sign_failure_two: attempts/0004/result.yaml
+  independent_actual_sign_failure: attempts/0005/result.yaml
+  independent_dimension_failure: attempts/0006/result.yaml
+  independent_expression_failure: attempts/0007/result.yaml
+  exact_and_package_routes: attempts/0008/result.yaml
+  consumer_replay: attempts/0009/result.yaml
+  integrated_promotion_gate: attempts/0010/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_composite_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-CMP-001-review.md
+source_disposition:
+  CM2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P116-cm2-composite-rate-law-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_composite_factors.py
+  - hash-pinned consumer commands in attempts/0009/result.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

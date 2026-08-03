@@ -1,0 +1,17 @@
+campaign: P116
+attempt: 0010
+candidate: integrated_promotion_gate
+status: completed
+command: scripts/validate.sh && git diff --check
+compatibility_event: none
+expected_boundary: >-
+  C-CMP-001, v0.96.0, canonical module and tests, P116, CM2 disposition,
+  generated docs and memory, source queue, pinned consumers, and parent effort
+  agree with 131 dependency-closed accepted claims.
+exit_status: 0
+terminal_tally: >-
+  ALL REPOSITORY WORKFLOW CHECKS PASS; 131 claims, 131 accepted, 0
+  proposals; 218 source units, 104 pending, 0 partial; 491 memory files;
+  physics skill valid; 1060 tests passed in 93.57s; git diff --check clean.
+verdict: promotion_boundary_verified
+next_attempt: commit_P116_then_checkpoint_parent_and_freeze_P117

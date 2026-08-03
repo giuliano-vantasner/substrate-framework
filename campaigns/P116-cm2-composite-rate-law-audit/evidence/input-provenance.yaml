@@ -1,0 +1,42 @@
+campaign: P116
+source_unit: CM2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+imports:
+  - path: engineering/barrier_scaling.py
+    sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+    git_blob: 2650b4ed068f673c33094be06734db1f04d1f466
+    use: E_star_scaling_and_thermal_gate
+selected_numeric_inputs:
+  resolvent:
+    pair_count: 3
+    coupling_per_edge: 0.1
+    detunings: [1.0, -1.0, 2.0, -2.0, 3.0, -3.0]
+    spectral_energy: 0.0
+  nominal_window:
+    omega_b: 1.0
+    Gamma_grid: {start: 0.0, stop: 2.0, points: 41}
+  thermal_and_loading:
+    Theta_eff: 5.0
+    N_reference: 4.0
+    A2_reference: 1.0
+    subdivision_count_default: 1
+    K_F: 1.0
+    defect_strength: 1.0
+    R_o: 1.35
+    r_c: 1.0
+    loading_coupling: 1.0
+    wavenumber: 1.0
+    thickness: 1.0
+symbolic_only_inputs: [Omega, omega_ph, Cbar, K_pos]
+unresolved_inputs:
+  - absolute units and the hbar=1 map
+  - physical nuclear and phonon states
+  - interaction Hamiltonian and coupling normalization
+  - final-state density or spectral measure
+  - bath and loss mechanism
+  - material parameter map and uncertainty
+  - kinetic prefactor, flux, probability, rate, yield, and observation map
+verdict: >-
+  All selected values are declared source regressions in normalized gap units.
+  No accepted import fixes them or propagates uncertainty. The numeric path
+  sets n=1 directly rather than deriving floor(Omega/omega_ph).

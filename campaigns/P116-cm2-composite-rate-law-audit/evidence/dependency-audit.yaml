@@ -1,0 +1,49 @@
+campaign: P116
+base_release: v0.95.0
+accepted_dependencies:
+  C-RG-002: >-
+    Supplies a conditional capillary barrier under explicit constitutive
+    premises. It does not derive a material loading law, temperature, or rate.
+  C-DYN-001: >-
+    Supplies abstract oscillator regimes and distinguishes nominal
+    omega_0/(2*pi*Gamma) from actual omega_d/(2*pi*Gamma) cycles in a declared
+    1/Gamma quadratic-envelope window. It supplies no phase coherence,
+    breather population, or material map.
+  C-TH-001: >-
+    Supplies the dimensionless sech-squared two-level gate and no independent
+    amplitude, bath state, or kinetic law.
+  C-SPN-002: >-
+    Supplies normalized symmetric-spin ladder coefficients and explicitly
+    states that their squares are not rates. Rung, state, operator scale, and
+    equal-coupling premises remain load bearing.
+  C-RES-001: >-
+    Supplies the exact finite paired-resolvent matrix element, common-loss
+    magnitude, cancellation, and normalization ceilings. It supplies no
+    probability, rate, bath, nuclear channel, or material realization.
+qualified_sources:
+  BD1: {disposition: qualified, accepted_claims: [C-RG-001, C-RG-002]}
+  LB2: {disposition: qualified, accepted_claims: [C-DYN-001]}
+  PN2: {disposition: qualified, accepted_claims: [], ceiling: arithmetic_only}
+  PN3: {disposition: qualified, accepted_claims: [C-SPN-002]}
+  PN4: {disposition: qualified, accepted_claims: [C-RES-001]}
+  T1G: {disposition: migrated, accepted_claims: [C-TH-001]}
+unaccepted_dependencies:
+  B1:
+    disposition: pending_adjudication
+    use_in_CM2: none_in_executable_body
+    verdict: supplies_no_premise
+  PN4_H5b:
+    use_in_CM2: boolean_citation_marker_only
+    verdict: supplies_no_absolute_normalization_or_pass_condition
+dependency_cycles:
+  - CM1 lists CM2 and CM2 lists no accepted CM1 premise; the return edge is provenance only.
+  - CM3 through CM7 and GB1 are pending consumers and cannot validate CM2.
+claim_closure:
+  proposed_claim: C-CMP-001
+  dependencies: [C-RES-001, C-DYN-001]
+  typed_positive_multipliers: [C-RG-002, C-TH-001, C-SPN-002]
+  note: >-
+    The new theorem needs only the accepted paired magnitude and the declared
+    nominal/actual cycle conventions. Other accepted factors may multiply it
+    conditionally without changing its Gamma classification.
+debt: []

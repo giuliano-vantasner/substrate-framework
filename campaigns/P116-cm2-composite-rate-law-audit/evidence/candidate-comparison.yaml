@@ -1,0 +1,47 @@
+campaign: P116
+selection_frozen_before_source_execution: true
+criteria_order:
+  - accepted dependency closure and typed domains
+  - exact simplification, limits, jumps, and stationary classification
+  - mutation sensitivity and alternative-cycle behavior
+  - dimension, scale, normalization, and identifiability closure
+  - semantic separation of factors, coherence, matrix elements, and rates
+  - reusable API, nonduplication, and full consumer replay
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: >-
+      All 21 checks execute, but several are point samples, definitions,
+      lexical guards, tautological repeats, or Boolean markers, and the
+      symbolic assembly removes K_loss's Gamma dependence.
+  B:
+    decision: selected
+    reason: >-
+      Exact canonical composition proves the cancellation, strict loss
+      decrease, one-sided limits, jumps, dimensions, and lack of a maximizer.
+  C:
+    decision: selected
+    reason: >-
+      C-DYN-001's actual-cycle factor supplies the honest near-critical
+      comparison and removes the upper jump without creating an optimum.
+  D:
+    decision: selected
+    reason: >-
+      Zero and arbitrary kinetic prefactors, scale changes, coupling
+      normalization, and loss-power mutations close the physical ceiling and
+      state exactly which changed premise can create an interior stationary point.
+  E:
+    decision: selected
+    reason: >-
+      Fresh full-block inversion and independent calculus reproduce the exact
+      theorem after five preserved oracle defects.
+  F:
+    decision: selected
+    reason: >-
+      Accepted dependency ceilings, B1, source cycles, 21 predicates, and 21
+      downstream scripts are individually closed.
+claim_decision:
+  C-CMP-001: accept_symbolic_verified
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

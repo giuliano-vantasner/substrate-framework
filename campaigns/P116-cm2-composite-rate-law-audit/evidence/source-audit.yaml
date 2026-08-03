@@ -1,0 +1,36 @@
+campaign: P116
+source_unit: CM2
+headline_verdict: qualified
+surviving_content:
+  - The displayed activation factor increases with A2 under the declared Cbar/A2 barrier premise.
+  - The two-level gate identity and bounds reproduce C-TH-001.
+  - The equal-positive-product finite resolvent magnitude is zero exactly at Gamma=0 and positive for Gamma>0.
+  - The declared nominal inverse-loss factor decreases with Gamma on Gamma>0.
+  - Multiplication by declared positive n and N is algebraically linear in each.
+  - The source-defined piecewise function is positive on 0<Gamma<2*omega_b and zero outside by construction.
+rejected_or_qualified_content:
+  - The symbolic assembly replaces K_loss(Gamma) by an unrelated positive K_pos, so it cannot establish the assembled loss dependence.
+  - The finite matrix element times dimensionless gates retains a matrix-element dimension and is not a rate law.
+  - PN2 supplies no physical subdivision process; the numeric path sets n=1 directly.
+  - C-SPN-002's squared coefficient is not a rate and its N scaling depends on state and normalization premises.
+  - C-DYN-001's nominal cycle count is not phase coherence and omega_b is not an accepted linear natural frequency.
+  - Positive support on an open interval is not an interior sweet spot or optimum.
+  - The exact nominal product is strictly decreasing throughout the open interval and has no maximizer.
+  - Assigning zero at Gamma=0 creates a jump from a finite positive right limit; assigning zero at 2*omega creates a second jump.
+  - The actual-cycle alternative also decreases but vanishes continuously at criticality.
+  - The lexical free-symbol and square-root scans do not prove absence of barrier physics; W_nuc explicitly contains E_star.
+  - A Boolean import marker does not supply an absolute nuclear matrix element or normalization.
+  - Zero interaction or final-state density makes the physical rate zero, while a free kinetic prefactor fits any reported positive magnitude.
+exact_new_result: >-
+  For real nonzero Delta_j, real nonnegative c_j with at least one positive,
+  Gamma>0, and omega>0, K=Gamma*sum_j c_j/(Delta_j^2+Gamma^2/4) and
+  Q_nom=omega/(2*pi*Gamma) compose to
+  H=omega/(2*pi)*sum_j c_j/(Delta_j^2+Gamma^2/4). H is positive and strictly
+  decreasing, has positive finite limit omega/(2*pi)*sum_j c_j/Delta_j^2 at
+  zero, and has no positive-loss stationary point. The source zero-cutoff
+  extension therefore has two jumps and no maximizer.
+physical_ceiling: >-
+  No nuclear state, phonon state, interaction Hamiltonian, final-state measure,
+  bath, loading law, coherence observable, probability, kinetic prefactor,
+  physical rate, yield, heat, material realization, or observation follows.
+compatibility_event: none

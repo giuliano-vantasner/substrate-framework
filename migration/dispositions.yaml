@@ -1761,6 +1761,54 @@ units:
       dimensionless conditional theorem. CM1 and all canonical P115 work call
       no sampled integration routine and trigger no np.trapz compatibility
       event.
+  CM2:
+    disposition: qualified
+    accepted_claims:
+      - C-CMP-001
+      - C-RES-001
+      - C-DYN-001
+    qualification: >-
+      CM2's individual conditional factors partly survive, but its assembled
+      interpretation does not. For its equal positive coupling products,
+      C-RES-001 gives K_loss=Gamma*sum_j
+      c_j/(Delta_j^2+Gamma^2/4). Multiplication by its nominal
+      omega/(2*pi*Gamma) factor cancels Gamma exactly, so the product is
+      strictly decreasing throughout Gamma>0. The source-style extension sets
+      the value to zero at Gamma=0 despite a finite positive right limit and
+      to zero at Gamma=2*omega despite a positive nominal left limit. It has
+      two jumps, a nonattained zero-loss supremum, and no positive-loss
+      maximizer; the forty-one-point grid selects only its first positive node.
+      C-DYN-001's actual-cycle alternative remains strictly decreasing and
+      reaches zero continuously at criticality, but neither factor is phase
+      coherence or nonlinear breather existence. PN2 supplies arithmetic only,
+      C-SPN-002's squared ladder coefficient is not a rate, C-RES-001's matrix
+      element is not a probability or rate, B1 is pending and unused, and the
+      H5b Boolean marker supplies no normalization. The activation and thermal
+      gates and count factors are dimensionless, so the product retains the
+      matrix-element dimension. Zero interaction or final-state density gives
+      zero rate and a free kinetic prefactor fits any magnitude. No nuclear or
+      phonon state, Hamiltonian, bath, physical coherence, probability, rate,
+      channel, material, yield, heat, magnitude, or observation is accepted.
+    evidence:
+      - campaigns/P116-cm2-composite-rate-law-audit/reviews/source_adjudication.md
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/source-reproduction.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/source-audit.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/check-adjudication.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/input-provenance.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/dependency-audit.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/consumer-audit.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/candidate-comparison.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/evidence/primary-provenance.yaml
+      - campaigns/P116-cm2-composite-rate-law-audit/verify.py
+      - campaigns/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+      - memory/vantasner/decisions/C-CMP-001-review.md
+    note: >-
+      P116 closes 46 primary and 22 independent exact checks plus 17 focused
+      package tests after one pre-freeze provenance repair and five preserved
+      independent-oracle failures. Seven direct and fourteen transitive
+      consumers replay 692 checks and inherit only the conditional theorem.
+      CM2 and all canonical P116 work call no sampled integration routine and
+      trigger no np.trapz compatibility event.
   PN6:
     disposition: qualified
     accepted_claims:

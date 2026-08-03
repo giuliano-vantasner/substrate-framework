@@ -1,0 +1,18 @@
+campaign: P116
+attempt: 0003
+candidate: E_independent_exact_rederivation
+status: failed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+exit_status: 1
+passed_before_failure: 2
+failure: >-
+  SymPy returned an unknown is_negative predicate for the derivative of a
+  rational sum in the nonnegative squared-loss coordinate.
+diagnosis: oracle_sign_representation
+scientific_effect: >-
+  The derivative simplified exactly to a negative positive-coefficient
+  rational expression; the scientific statement was not contradicted, but the
+  inference-only oracle was too weak.
+next_attempt: check_the_exact_derivative_identity_and_positive_kernel_separately

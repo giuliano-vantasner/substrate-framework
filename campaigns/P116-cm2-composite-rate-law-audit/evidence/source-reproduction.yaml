@@ -1,0 +1,30 @@
+campaign: P116
+source_unit: CM2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py
+sha256: c75fee880740765d3ef3e32634bf05360fd9789e46bd579fd07af60d29a79fa2
+git_blob: 10c77e6db3aab923d4f4c6d6945768f954d5eba7
+size_bytes: 15745
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py
+exit_status: 0
+terminal_tally: ALL 21 CHECKS PASS
+reported_values:
+  K_loss_Gamma_0: 5.089e-19
+  K_loss_Gamma_1: 1.143e-02
+  R_Gamma_0: 0.0
+  R_Gamma_2omega: 0.0
+  R_Gamma_3omega: 0.0
+  R_Gamma_omega: 1.179246e-03
+  dR_forward_N_4_to_5: 2.948e-04
+  dR_forward_A2_1_to_1_3: 3.467e-04
+compatibility_preflight:
+  np_trapz: absent
+  np_trapezoid: absent
+  trapezoid_integral: absent
+  event: none
+classification: reproduction_evidence_only
+note: >-
+  The source exits cleanly, but the reported zero is a floating residual below
+  a tolerance, the symbolic route substitutes a positive K_pos rather than the
+  actual Gamma-dependent kernel, and the support grid does not test an
+  interior maximum or convergence.

@@ -1,0 +1,25 @@
+campaign: P116
+claim: C-CMP-001
+contract:
+  proposal_sha256: ee57cf8778eeb7e0ef2122cbab6cf3dd790abffe04ff0e55c1e5cc40a53da451
+  frozen_proposal_sha256: ee57cf8778eeb7e0ef2122cbab6cf3dd790abffe04ff0e55c1e5cc40a53da451
+source:
+  cm2_sha256: c75fee880740765d3ef3e32634bf05360fd9789e46bd579fd07af60d29a79fa2
+  barrier_scaling_sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+implementation:
+  module: src/substrate_framework/composite_factors.py
+  sha256: e51e6c35cf92537bd45fb38e936d2b5d76af100171fc48240ef6e6bb29f86504
+  tests: tests/test_composite_factors.py
+  tests_sha256: 07a9a398a6df7959ba3ffdd7f175bff876fd42247dbe1827c13e724d7f06d80b
+primary_verifier:
+  path: campaigns/P116-cm2-composite-rate-law-audit/verify.py
+  sha256: b4c0ad074e14bac7746c3e31c7854937f5333154e953d60c16fb61756534e9f8
+  tally: 46
+independent_verifier:
+  path: campaigns/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+  sha256: 03d4b7949dd4105a13a346cd18852534f7afb58f0d7b4235fb8422280481c3a9
+  tally: 22
+package_tests: 17
+oracle: exact_symbolic_and_fresh_full_matrix_inversion
+sampled_integration: none
+numpy_compatibility_event: none

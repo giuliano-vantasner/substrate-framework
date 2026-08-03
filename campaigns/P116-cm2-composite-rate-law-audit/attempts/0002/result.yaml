@@ -1,0 +1,31 @@
+campaign: P116
+attempt: 0002
+candidate: A_literal_CM2_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py
+exit_status: 0
+source_sha256: c75fee880740765d3ef3e32634bf05360fd9789e46bd579fd07af60d29a79fa2
+source_git_blob: 10c77e6db3aab923d4f4c6d6945768f954d5eba7
+imported_module:
+  path: engineering/barrier_scaling.py
+  sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+  git_blob: 2650b4ed068f673c33094be06734db1f04d1f466
+compatibility_event: none
+terminal_tally: ALL 21 CHECKS PASS
+reported_values:
+  K_loss_at_zero: 5.089e-19
+  K_loss_at_one: 1.143e-02
+  R_at_zero: 0.0
+  R_at_two_omega: 0.0
+  R_overdamped: 0.0
+  R_at_omega: 1.179246e-03
+verdict: reproduction_evidence_only
+limitations: >-
+  The alleged exact zero is a floating residual accepted below 1e-12; the
+  source substitutes positive K_pos in its symbolic product rather than the
+  Gamma-dependent Schur expression; its sign checks use selected values; its
+  forty-one-point support grid proves neither a maximum nor a sweet spot; and
+  a dimensionful finite matrix element multiplied by dimensionless factors is
+  labelled a rate without a kinetic normalization, state map, or final-state
+  measure.
+next_attempt: derive_the_exact_loss_cycle_product_and_endpoint_classification

@@ -1,0 +1,29 @@
+campaign: P116
+source_unit: CM2
+static_predicate_count: 21
+predicates:
+  - {index: 1, label: A1_R_linear_in_N, verdict: conditional_algebra_only, reason: One explicit N factor is linear but does not make the product a rate.}
+  - {index: 2, label: A1_sqrtN_square, verdict: exact_existing_identity, reason: The square-root identity survives C-SPN-002; the rate reading does not.}
+  - {index: 3, label: A2_loading_derivative, verdict: qualified, reason: The sign is exact under the declared Cbar/A2 barrier but the source checks one substitution and derives no loading model.}
+  - {index: 4, label: A2_inverse_A2_scaling, verdict: exact_conditional, reason: This is direct C-RG-002 conditional algebra.}
+  - {index: 5, label: A3_thermal_gate_identity, verdict: exact_duplicate, reason: This reproduces C-TH-001.}
+  - {index: 6, label: A3_thermal_gate_limits, verdict: exact_duplicate_with_path_label_issue, reason: The code takes Theta to infinity rather than omega_b to zero; both send the ratio to zero but are different physical paths.}
+  - {index: 7, label: A4_inverse_loss_derivative, verdict: exact_nominal_only, reason: The nominal window count decreases but is neither actual near-critical cycles nor coherence.}
+  - {index: 8, label: A5_free_symbol_subset, verdict: weak_lexical, reason: Cbar is a barrier constant and a symbol whitelist cannot establish a physical mechanism.}
+  - {index: 9, label: A5_no_sqrt_ratio, verdict: weak_lexical, reason: Absence of a square-root power does not make the product barrier free; W_nuc explicitly contains an activation barrier.}
+  - {index: 10, label: A6_N2_fake, verdict: exact_vector_identity_only, reason: The comparison distinguishes chosen factors but supplies no Golden-rule rate.}
+  - {index: 11, label: B1_zero_loss_null, verdict: qualified_numeric, reason: The source reports 5.089e-19 and accepts a tolerance; C-RES-001 gives the exact null independently.}
+  - {index: 12, label: B1_positive_loss, verdict: exact_under_equal_positive_products, reason: Positivity survives the source coupling convention but is a matrix-element statement, not channel opening.}
+  - {index: 13, label: B1_small_loss_rise, verdict: regression_only, reason: Four selected points establish neither global monotonicity nor a rate; K_loss itself later peaks.}
+  - {index: 14, label: B2_zero_at_zero, verdict: declared_endpoint_only, reason: The code assigns zero, while the composed open expression has a positive right limit.}
+  - {index: 15, label: B2_zero_at_cutoff, verdict: declared_endpoint_only, reason: The branch returns zero by construction; C-DYN-001 supplies no coherent-breather existence theorem.}
+  - {index: 16, label: B2_positive_interior, verdict: conditional_algebra, reason: Positive declared factors give positivity, not an optimum or physical rate.}
+  - {index: 17, label: B2_open_support, verdict: definition_check, reason: The grid repeats the piecewise definition and does not prove a genuine loss tension.}
+  - {index: 18, label: B3_forward_N_difference, verdict: regression_only, reason: It samples declared linearity and does not validate collective rate enhancement.}
+  - {index: 19, label: B3_forward_A2_difference, verdict: regression_only, reason: It samples the conditional barrier factor with fixed selected inputs.}
+  - {index: 20, label: B3_neutral_uncapped, verdict: tautological_repeat, reason: It compares one function call to the identical call and positivity.}
+  - {index: 21, label: B3_import_cited_only, verdict: boolean_marker_only, reason: A hard-coded True plus R_ref positivity does not audit magnitude provenance.}
+summary:
+  exact_or_conditional_survivals: 10
+  qualified_weak_or_rejected: 11
+  terminal_disposition: qualified

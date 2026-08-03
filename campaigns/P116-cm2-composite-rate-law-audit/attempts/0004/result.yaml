@@ -1,0 +1,17 @@
+campaign: P116
+attempt: 0004
+candidate: E_independent_positive_loss_sign
+status: failed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+exit_status: 1
+passed_before_failure: 3
+failure: >-
+  The repaired squared-loss proof passed, but a later duplicate direct
+  is_negative query on the expanded Gamma derivative remained undecidable.
+diagnosis: repeated_oracle_sign_representation
+scientific_effect: >-
+  No counterexample appeared. The already verified squared-loss derivative and
+  Gamma>0 imply the strict Gamma sign exactly.
+next_attempt: propagate_the_verified_squared_loss_kernel_instead_of_reasking_inference

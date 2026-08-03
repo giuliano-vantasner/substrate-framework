@@ -1,0 +1,24 @@
+campaign: P116
+attempt: 0008
+candidate: B_C_D_E_exact_composition_routes
+status: completed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P116-cm2-composite-rate-law-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_composite_factors.py
+exit_statuses: [0, 0, 0]
+terminal_tallies:
+  primary: ALL 46 CHECKS PASS [C-CMP-001]
+  independent: ALL 22 CHECKS PASS [C-CMP-001-INDEPENDENT]
+  package: 17 passed in 2.45s
+compatibility_event: none
+verdict: exact_routes_and_package_verified
+results: >-
+  The common positive-product pair magnitude times the nominal inverse-loss
+  cycle factor cancels one Gamma exactly and is strictly decreasing for every
+  Gamma>0. The source-style zero extension jumps at Gamma=0 and 2*omega and
+  has a supremum but no positive-loss maximizer. The actual-cycle alternative
+  remains decreasing and tends continuously to zero at criticality. Dimension
+  and scale tests retain the finite matrix-element dimension; zero and free
+  kinetic prefactors block a rate or magnitude inference.
+next_attempt: complete_source_dependency_and_consumer_adjudication

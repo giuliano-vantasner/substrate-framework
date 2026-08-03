@@ -1,0 +1,18 @@
+campaign: P116
+attempt: 0006
+candidate: E_independent_dimension_scaling
+status: failed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+exit_status: 1
+passed_before_failure: 13
+failure: >-
+  The common-scale check rescaled Gamma, omega, and c but retained the selected
+  detunings 1, 2, and 3 as fixed numbers, so it was not a common dimensional
+  transformation.
+diagnosis: verifier_dimension_model_omitted_detunings
+scientific_effect: >-
+  The failed check invalidates that oracle route, not the proposed dimension
+  law. The repair must use independent symbolic detunings and scale each one.
+next_attempt: rebuild_scaling_with_all_energy_like_inputs_symbolic

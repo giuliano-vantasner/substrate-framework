@@ -1,0 +1,18 @@
+campaign: P116
+attempt: 0005
+candidate: E_independent_actual_cycle_sign
+status: failed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P116-cm2-composite-rate-law-audit/reviews/independent_composite_review.py
+exit_status: 1
+passed_before_failure: 8
+failure: >-
+  SymPy again left is_negative undecided, now for the actual-cycle log
+  derivative containing both a square root and the positive rational sum.
+diagnosis: oracle_sign_representation
+scientific_effect: >-
+  The exact derivative decomposes into two strictly negative terms on the
+  predeclared underdamped domain; the failed inference was not scientific
+  evidence against the theorem.
+next_attempt: verify_the_log_derivative_decomposition_and_each_positive_kernel

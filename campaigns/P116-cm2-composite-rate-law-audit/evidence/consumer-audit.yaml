@@ -1,0 +1,36 @@
+campaign: P116
+root_source_unit: CM2
+inventory: campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml
+authority_warning: Candidate dependency edges identify replay scope, not accepted scientific authority.
+direct_consumers:
+  - {source_unit: CM1, disposition_at_replay: qualified, path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py, sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc, checks: 13, relation: cycle_return}
+  - {source_unit: CM3, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM3_crossover.py, sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb, checks: 10}
+  - {source_unit: CM4, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py, sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019, checks: 10}
+  - {source_unit: CM5, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py, sha256: 8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841, checks: 18}
+  - {source_unit: CM6, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py, sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5, checks: 20}
+  - {source_unit: CM7, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py, sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2, checks: 27}
+  - {source_unit: GB1, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-32/bridge_GB1_channel_definitions.py, sha256: ace0515d7ea362ef45a55db22308aecffdad9a003d03f2b1209c0a11874b489b, checks: 18}
+indirect_consumers:
+  - {source_unit: GB4, path: merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py, sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0, checks: 23}
+  - {source_unit: GB6, path: merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py, sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a, checks: 29}
+  - {source_unit: WN2, path: merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py, sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c, checks: 70}
+  - {source_unit: WN3, path: merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py, sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88, checks: 48}
+  - {source_unit: WN4, path: merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py, sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2, checks: 43}
+  - {source_unit: WN5, path: merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py, sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc, checks: 41}
+  - {source_unit: WN6, path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py, sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10, checks: 32}
+  - {source_unit: WN7, path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py, sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50, checks: 59}
+  - {source_unit: MD1, path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py, sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba, checks: 27}
+  - {source_unit: MD2, path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py, sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0, checks: 26}
+  - {source_unit: MD3, path: merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py, sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128, checks: 41}
+  - {source_unit: MD4, path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py, sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144, checks: 34}
+  - {source_unit: MD5, path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py, sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb, checks: 63}
+  - {source_unit: MD6, path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py, sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf, checks: 40}
+replay:
+  direct: {scripts: 7, checks: 116, exit_statuses_all_zero: true}
+  indirect: {scripts: 14, checks: 576, exit_statuses_all_zero: true}
+  total: {scripts: 21, checks: 692, exit_statuses_all_zero: true}
+interpretation: >-
+  Reproduction does not promote consumer narratives. CM1's return edge cannot
+  lend authority to CM2, and every pending consumer inherits only the exact
+  conditional C-CMP-001 ceiling after promotion.
+debt: []
