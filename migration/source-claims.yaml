@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 128
-  qualified: 78
+  pending_adjudication: 127
+  qualified: 79
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5711,19 +5711,15 @@ units:
   disposition: qualified
   accepted_claims:
   - C-DYN-001
-  qualification: >-
-    LB2's exact characteristic-root classification survives only for a
-    separately declared abstract oscillator. Its nominal
-    omega_b/(2*pi*Gamma) count uses the undamped natural frequency rather than
-    the actual damped frequency and stays nonzero at the source's critical
-    boundary. The normalized damped sine-Gordon linearization instead gives
-    real Fourier-mode natural frequency sqrt(1+k^2)>=1, so a finite-amplitude
-    sub-gap breather frequency is not that mode frequency and can reverse the
-    damping classification. Positive uniform damping with zero boundary flux
-    excludes any nontrivial exact time-periodic finite-energy field for every
-    Gamma>0; finite-time transient ringing is a different, undefined LB2
-    predicate. No accepted survival, population, material, spark, or DBD map
-    exists.
+  qualification: LB2's characteristic roots, abstract under/critical/overdamped regimes, and nominal natural-frequency
+    cycle expression are exact for its separately declared SHO. The normalized damped sine-Gordon linearization
+    instead has real-mode natural frequency sqrt(1+k^2)>=1; substituting a finite-amplitude sub-gap breather
+    frequency can reverse the damping classification. Actual underdamped cycles in a 1/Gamma quadratic-envelope
+    window use omega_d and vanish at criticality, while mechanical energy obeys dE/dt=-Gamma*q_dot^2 rather
+    than a pointwise exponential. Positive uniform damping with zero integrated boundary flux excludes
+    a nontrivial exactly periodic finite-energy field for any Gamma>0. LB2 defines no finite-time transient
+    classifier, phase coherence, survival probability, population, material map, or spark/DBD mechanism;
+    its decreasing-number and constant-floor checks do not supply those missing predicates.
   evidence:
   - campaigns/P092-lb2-coherence-threshold/reviews/source_adjudication.md
   - campaigns/P092-lb2-coherence-threshold/evidence/source-reproduction.yaml
@@ -5734,10 +5730,9 @@ units:
   - campaigns/P092-lb2-coherence-threshold/verify.py
   - campaigns/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
   - memory/vantasner/decisions/C-DYN-001-review.md
-  note: >-
-    P092 adds pure exact oscillator and normalized field-mode APIs and tests.
-    Exact work uses no quadrature and introduces no version-specific NumPy
-    integration alias.
+  note: P092 promotes exact oscillator, observable, field-mode, countermodel, and periodicity-obstruction
+    content through primary and independent symbolic routes. Exact work uses no quadrature and introduces
+    no version-specific NumPy integration alias.
 - source_unit: LB3
   phase: phase-26
   path: merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py
@@ -5769,8 +5764,31 @@ units:
   dynamic_check_calls: 6
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-016
+  - C-DYN-001
+  qualification: LB3 reproduces finite-grid ring-down trends but adds no distinct claim. Its centered-damping
+    recurrence duplicates the canonical leapfrog solver; its finite-core energy balance includes unmeasured
+    boundary flux; and its fitted log slope is a window average over a materially drifting family, not
+    an instantaneous current-frequency rate. All four source slopes are closer to the accepted C-SG-016
+    evolving-law window regression than to the source's selected coarse FFT-bin point comparator. Gamma=1.75
+    remains underdamped for the accepted normalized k=0 field mode, and the finite-time sign/energy guard
+    establishes neither an exact nonlinear boundary nor a survival probability, population, material,
+    spark, or DBD mechanism.
+  evidence:
+  - campaigns/P093-lb3-damped-sg-ringdown/reviews/source_adjudication.md
+  - campaigns/P093-lb3-damped-sg-ringdown/evidence/source-reproduction.yaml
+  - campaigns/P093-lb3-damped-sg-ringdown/evidence/source-audit.yaml
+  - campaigns/P093-lb3-damped-sg-ringdown/evidence/consumer-audit.yaml
+  - campaigns/P093-lb3-damped-sg-ringdown/evidence/candidate-comparison.yaml
+  - campaigns/P093-lb3-damped-sg-ringdown/attempts/0001/result.yaml
+  - campaigns/P093-lb3-damped-sg-ringdown/attempts/0005/result.yaml
+  - campaigns/P093-lb3-damped-sg-ringdown/verify.py
+  - campaigns/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+  - memory/vantasner/proposals/P093-lb3-damped-sg-ringdown.md
+  note: P093 maps LB3 to existing C-SG-016 and C-DYN-001 ceilings. Its primary and independent code makes
+    no direct NumPy trapezoidal call; sampled canonical integration remains behind trapezoid_integral.
 - source_unit: LB4
   phase: phase-26
   path: merged-framework/bridges/phase-26/bridge_LB4_thermal_decoherence_gwindow.py

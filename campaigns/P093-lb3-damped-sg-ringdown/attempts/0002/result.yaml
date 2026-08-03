@@ -1,0 +1,14 @@
+attempt: 0002
+candidates: [A, B, C, D, E, G, I]
+status: primary_verifier_self_introspection_failure
+command: PYTHONPATH=src .venv/bin/python proposals/P093-lb3-damped-sg-ringdown/verify.py
+process_exit_status: 1
+passed_before_failure: 34
+failure: >-
+  Every scientific and mutation check passed. The final integration-hygiene
+  check then found the literal text np.trapezoid inside its own search pattern,
+  making the self-introspection predicate reject itself.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: Construct both forbidden spellings from split string literals.
+next_attempt: Re-run the unchanged scientific verifier with the repaired self-introspection predicate.

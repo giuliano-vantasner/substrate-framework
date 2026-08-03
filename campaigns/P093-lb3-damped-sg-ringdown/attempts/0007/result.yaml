@@ -1,0 +1,23 @@
+attempt: 0007
+candidate: terminal_disposition_boundary
+status: passed
+commands:
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - scripts/validate.sh
+results:
+  queue_generation_exit_status: 0
+  repository_workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+  full_test_suite: 836 passed in 80.80s
+  workflow_exit_status: 0
+  repository_summary: 107 claims, 107 accepted, 0 proposals
+  migration_summary: 218 units, 127 pending, 0 partial, 3 migrated, 79 qualified, 8 duplicate evidence, 1 out of scope
+  memory_summary: all 397 files valid
+  skill_summary: Skill is valid
+note: >-
+  The integrated gate ran once after the terminal qualified disposition,
+  immutable campaign move, and generated queue were in place. Final attempt,
+  adjudication references, and parent continuation prose receive only
+  record-sensitive checks; the unchanged full suite is not repeated.
+integration_note: >-
+  P093 introduces no direct call to np.trapz or np.trapezoid. The immutable
+  source compatibility branch remains hash-pinned historical evidence.

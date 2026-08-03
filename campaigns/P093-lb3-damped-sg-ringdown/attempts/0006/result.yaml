@@ -1,0 +1,17 @@
+attempt: 0006
+candidate: generated_migration_queue
+status: source_inventory_path_failure
+command: >-
+  .venv/bin/python scripts/inventory_claims.py --source-root
+  /home/dan/substrate --source-inventory migration/source-inventory.yaml
+  --scope migration/scope.yaml --dispositions migration/dispositions.yaml
+  --output migration/source-claims.yaml
+process_exit_status: 1
+failure: >-
+  The command used a guessed migration/source-inventory.yaml path that does not
+  exist. The authoritative path is declared explicitly by migration/scope.yaml
+  as campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml.
+scientific_verdict: unchanged
+selection_criteria_changed: false
+repair: Re-run the generator against the scope-declared source inventory.
+next_attempt: Regenerate the queue, then run the terminal integrated gate.

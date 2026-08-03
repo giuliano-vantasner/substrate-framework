@@ -946,6 +946,37 @@ units:
       periodicity-obstruction content through primary and independent symbolic
       routes. Exact work uses no quadrature and introduces no version-specific
       NumPy integration alias.
+  LB3:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-016
+      - C-DYN-001
+    qualification: >-
+      LB3 reproduces finite-grid ring-down trends but adds no distinct claim.
+      Its centered-damping recurrence duplicates the canonical leapfrog solver;
+      its finite-core energy balance includes unmeasured boundary flux; and its
+      fitted log slope is a window average over a materially drifting family,
+      not an instantaneous current-frequency rate. All four source slopes are
+      closer to the accepted C-SG-016 evolving-law window regression than to
+      the source's selected coarse FFT-bin point comparator. Gamma=1.75 remains
+      underdamped for the accepted normalized k=0 field mode, and the finite-time
+      sign/energy guard establishes neither an exact nonlinear boundary nor a
+      survival probability, population, material, spark, or DBD mechanism.
+    evidence:
+      - campaigns/P093-lb3-damped-sg-ringdown/reviews/source_adjudication.md
+      - campaigns/P093-lb3-damped-sg-ringdown/evidence/source-reproduction.yaml
+      - campaigns/P093-lb3-damped-sg-ringdown/evidence/source-audit.yaml
+      - campaigns/P093-lb3-damped-sg-ringdown/evidence/consumer-audit.yaml
+      - campaigns/P093-lb3-damped-sg-ringdown/evidence/candidate-comparison.yaml
+      - campaigns/P093-lb3-damped-sg-ringdown/attempts/0001/result.yaml
+      - campaigns/P093-lb3-damped-sg-ringdown/attempts/0005/result.yaml
+      - campaigns/P093-lb3-damped-sg-ringdown/verify.py
+      - campaigns/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+      - memory/vantasner/proposals/P093-lb3-damped-sg-ringdown.md
+    note: >-
+      P093 maps LB3 to existing C-SG-016 and C-DYN-001 ceilings. Its primary
+      and independent code makes no direct NumPy trapezoidal call; sampled
+      canonical integration remains behind trapezoid_integral.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

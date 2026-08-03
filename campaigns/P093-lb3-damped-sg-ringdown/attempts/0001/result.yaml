@@ -1,0 +1,65 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H, I, J]
+status: source_reproduced_claim_requires_qualification
+source_unit: LB3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: 1b54ef5704fce1502464f44bd675c01824cfa48b6b98688b1df8f000d1030a2b
+source_blob: f4305bce529bc4dc0288ac364c64802cb6f08763
+command: >-
+  /usr/bin/time -f 'ELAPSED=%e MAX_RSS_KB=%M EXIT=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py
+process_exit_status: 0
+elapsed_seconds: 27.22
+maximum_resident_kb: 45284
+terminal_tally: ALL 8 CHECKS PASS
+reported_small_damping:
+  omega_0_0.7_gamma_0.01:
+    measured_rate: 0.00954640
+    fft_frequency: 0.9425
+    pointwise_prediction: 0.00960991
+    source_relative_error: 0.007
+  omega_0_0.5_gamma_0.01:
+    measured_rate: 0.00919841
+    fft_frequency: 0.8639
+    pointwise_prediction: 0.00905358
+    source_relative_error: 0.016
+  omega_0_0.7_gamma_0.005:
+    measured_rate: 0.00451065
+    fft_frequency: 0.8639
+    pointwise_prediction: 0.00452679
+    source_relative_error: 0.004
+  omega_0_0.7_gamma_0.015:
+    measured_rate: 0.0148707
+    fft_frequency: 0.9425
+    pointwise_prediction: 0.0144149
+    source_relative_error: 0.032
+reported_controls:
+  lossless_fractional_core_energy_drift: 0.0001
+  lossless_fitted_rate: -4.753e-10
+  dx_0.05_rate: 0.00954640
+  dx_0.025_rate: 0.00954661
+  high_damping_gamma: 1.75
+  high_damping_source_boundary: 1.4
+  high_damping_sign_changes_after_one_source_period: 0
+  high_damping_reported_surviving_fraction: 0.0
+surviving_content:
+  - The centered-damping source recurrence reproduces its lossless limit and stable small-damping trajectories.
+  - The source's finite-window core-energy slopes reproduce the accepted conditional family-ringdown trend at two initial frequencies and three small damping values.
+  - The lossless planted breather and grid-halving regressions pass in the declared finite-box setup.
+headline_qualification:
+  - The finite core-energy balance contains unmeasured flux through the core boundary in addition to bulk damping.
+  - The fitted log slope is a window average over t in [40,120], while the accepted frequency and form factor drift materially across that window.
+  - The FFT frequencies 0.9425 and 0.8639 are the twelfth and eleventh bins of a pi/40 angular-frequency grid, not continuously resolved current frequencies.
+  - The reported rates are closer to the C-SG-016 reduced-law finite-window regression than to Gamma*D at the selected FFT bin, so the run is regression evidence for an existing claim rather than a distinct pointwise-rate confrontation.
+  - Gamma=1.75 is below the normalized k=0 field-mode critical value 2, so the high-damping run cannot validate the rejected Gamma=2*omega_b field threshold.
+  - The high-damping sign/energy predicate is a finite-time operational relaxation result, not exact nonlinear existence, coherent survival probability, population, or spark/DBD selection.
+next_attempt: >-
+  Build mutation-sensitive primary and independent audits of scheme equivalence,
+  core flux, reduced-law window slopes, FFT resolution, high-damping semantics,
+  and claim/API nonduplication before deciding whether any new simulation is
+  scientifically warranted.
+integration_note: >-
+  The immutable source selects np.trapezoid on the current NumPy and falls
+  back to np.trapz only on older versions. New P093 work will use no direct
+  NumPy trapezoidal alias.

@@ -1,0 +1,63 @@
+campaign: P093
+title: LB3 damped sine-Gordon ring-down and nonduplication audit
+source_baseline: substrate@6d1f4e0
+source_units: [LB3]
+base_release: v0.79.0
+release_after_adjudication: v0.79.0
+adjudicated_at: '2026-08-04T10:15:00Z'
+selected_candidates:
+  - id: B
+    reason: The source recurrence is exactly the existing centered-damping leapfrog update before its separate sponge step.
+  - id: C
+    reason: The exact finite-control-volume balance exposes unmeasured core-boundary flux in the fitted observable.
+  - id: D
+    reason: The accepted evolving reduced law explains every reported finite-window slope more closely than the source point comparator.
+  - id: E
+    reason: Exact sampling reconstruction identifies the printed frequencies as adjacent coarse FFT bins across a drifting family.
+  - id: G
+    reason: Exact field-mode discriminants classify the high-Gamma run as an operational finite-time transient only.
+  - id: H
+    reason: The second frequency and Gamma sweep add regression evidence but no predictive reach beyond C-SG-016.
+  - id: J
+    reason: Claim, API, and consumer replay finds no distinct governed object to promote.
+competing_candidates:
+  - {id: A, decision: rejected_literal_promotion}
+  - {id: F, decision: rejected_unnecessary_duplicate_simulation}
+  - {id: I, decision: rejected_new_api_as_implementation_duplication}
+claims: []
+reviewed_existing:
+  - {id: C-SG-016, decision: unchanged_existing_reduced_law_and_stronger_simulation_evidence}
+  - {id: C-DYN-001, decision: unchanged_field_mode_and_periodicity_ceiling}
+  - {id: C-SG-012, decision: unchanged_control_volume_balance}
+  - {id: C-PDE-011, decision: unchanged_solver_and_ledger_machinery}
+evidence:
+  source_route: attempts/0001/result.yaml
+  verifier_self_audit_failures:
+    - attempts/0002/result.yaml
+    - attempts/0004/result.yaml
+  independent_representation_failure: attempts/0003/result.yaml
+  combined_scientific_route: attempts/0005/result.yaml
+  queue_generation_path_failure: attempts/0006/result.yaml
+  integrated_gate: attempts/0007/result.yaml
+  terminal_record_validation: attempts/0008/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_ringdown_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  LB3: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P093-lb3-damped-sg-ringdown/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_damped_oscillator.py tests/test_sine_gordon.py tests/test_sine_gordon_1d.py tests/test_numerics.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P091-lb1-dissipative-breather-lifetime/verify.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

@@ -1,0 +1,22 @@
+attempt: 0008
+candidate: record_only_finalization
+status: passed
+changed_surfaces:
+  - attempts/0007/result.yaml
+  - attempts/0008/result.yaml
+  - adjudication.yaml
+planned_commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory
+  - .venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py .agents/skills/physics-erdos-loop
+  - git diff --check
+suite_policy: >-
+  The 836-test integrated boundary is unchanged and already passed in attempt
+  0007. Repeating it for final tally prose would be validation ceremony.
+results:
+  repository_validation: WORKFLOW VALID; 107 claims, 107 accepted, 0 proposals; 218 migration units, 127 pending, 0 partial
+  memory_validation: all 397 files valid
+  skill_validation: Skill is valid
+  diff_check: passed
+  exit_statuses: [0, 0, 0, 0]
+next_campaign: P094 LB4 thermal-decoherence and g_window audit

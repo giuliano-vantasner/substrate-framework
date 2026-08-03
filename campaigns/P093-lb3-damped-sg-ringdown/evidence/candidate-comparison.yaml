@@ -1,0 +1,74 @@
+campaign: P093
+selection_basis:
+  - accepted dependency and observable closure
+  - exact scheme, flux, window, FFT, and classifier semantics
+  - mutation sensitivity and independent rederivation
+  - numerical refinement only for genuinely distinct simulation content
+  - canonical reuse and nonduplication before new execution
+candidates:
+  A:
+    decision: reproduced_then_qualified
+    reason: >-
+      All eight checks pass unchanged, but they establish only the source's
+      finite-grid predicates and do not close its pointwise-rate, continuum,
+      survival, or physical interpretations.
+  B:
+    decision: selected_as_duplicate_implementation
+    reason: >-
+      The semi-implicit recurrence is algebraically identical to the canonical
+      centered-damping leapfrog before the source's separate sponge update.
+  C:
+    decision: selected_as_claim_ceiling
+    reason: >-
+      A finite core energy has explicit boundary flux in addition to bulk
+      damping. LB3 measures neither that flux nor a core energy ledger.
+  D:
+    decision: selected
+    reason: >-
+      The C-SG-016 nonlinear reduced energy law predicts all four reported
+      finite-window log slopes within 1.5 percent and more closely than the
+      source's Gamma*D at one FFT bin. The source evidence is a window-average
+      regression for the existing claim, not a pointwise current-rate theorem.
+  E:
+    decision: selected_as_frequency_qualification
+    reason: >-
+      The two reported frequencies are exactly the eleventh and twelfth bins
+      of a pi/40 grid. Accepted family frequency drifts by more than one bin in
+      every fit window, so one unwindowed peak is not a resolved instantaneous
+      frequency.
+  F:
+    decision: rejected_as_unnecessary_new_campaign
+    reason: >-
+      LB3 has only coupled dx/dt halving for one metric and no method, domain,
+      core-radius, fit-window, or energy-ledger refinement. C-SG-016 already
+      has stronger total-energy mesh, domain, method, damping-rate, and
+      lossless evidence. Repeating it would be validation ceremony unless a
+      distinct claim survived, and none did.
+  G:
+    decision: selected_as_operational_only
+    reason: >-
+      The Gamma=1.75 run relaxes under the source's finite-time sign and energy
+      thresholds, but the accepted k=0 field mode remains underdamped until
+      Gamma=2. Its result is not the rejected 2*omega_b field boundary, exact
+      nonlinear existence, or coherent-survival probability.
+  H:
+    decision: duplicate_evidence
+    reason: >-
+      The second initial frequency and three-Gamma sweep support the already
+      accepted conditional C-SG-016 trend but add no distinct equation,
+      parameter-free prediction, or governed consumer.
+  I:
+    decision: selected_no_new_api
+    reason: >-
+      Canonical solver, energy, classifier, exact form-factor, verification,
+      and trapezoidal compatibility APIs already exist. Source-local copies do
+      not justify another implementation.
+  J:
+    decision: selected_no_new_claim
+    reason: >-
+      External consumers are narrative repetitions or pending machinery users.
+      No accepted claim or package collision-free object remains to promote.
+claims_added: []
+existing_claim_mappings: [C-SG-016, C-DYN-001]
+source_disposition: qualified
+release_change: none

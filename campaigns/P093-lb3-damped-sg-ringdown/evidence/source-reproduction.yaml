@@ -1,0 +1,15 @@
+source_unit: LB3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py
+source_sha256: 1b54ef5704fce1502464f44bd675c01824cfa48b6b98688b1df8f000d1030a2b
+source_blob: f4305bce529bc4dc0288ac364c64802cb6f08763
+source_unchanged: true
+process_exit_status: 0
+elapsed_seconds: 27.22
+maximum_resident_kb: 45284
+terminal_tally: ALL 8 CHECKS PASS
+scientific_verdict: >-
+  Reproduced as historical finite-grid evidence. The output supports an
+  existing conditional damped-family trend but does not by itself establish a
+  pointwise current-frequency rate, a flux-free total-energy law, a continuum
+  limit, or a nonlinear survival threshold.

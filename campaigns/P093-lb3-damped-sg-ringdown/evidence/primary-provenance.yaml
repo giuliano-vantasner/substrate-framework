@@ -1,0 +1,76 @@
+campaign: P093
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+base_release: v0.79.0
+base_commit: 0c046509c0df8da5c131d939fe089d881920604f
+scientific_base_commit: f17091e7eb86e58e60c8ab1bc5181165c2f7835a
+proposal_commit: e02a72bcafd0cde3ccb254ea2abdd3b135848c6e
+source:
+  path: merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py
+  sha256: 1b54ef5704fce1502464f44bd675c01824cfa48b6b98688b1df8f000d1030a2b
+  blob: f4305bce529bc4dc0288ac364c64802cb6f08763
+frozen_inputs:
+  proposal_sha256: edd362c2de354142924f0c3ccbce311d87feca4bf0a6a832b473a385dfae3461
+  freeze_sha256: 6464965ad5471502f9db64df6227566736340034f92726794ce8943fcf38632b
+  memory_contract_sha256: b5842b190efcf1601adc8155e25987b1e7fa4203f4d4aed0af06709ace3da308
+verified_outputs:
+  primary_verifier:
+    path: campaigns/P093-lb3-damped-sg-ringdown/verify.py
+    pre_migration_path: proposals/P093-lb3-damped-sg-ringdown/verify.py
+    sha256: 8246a344eb6ea5583c8fb1d7b1dc996823dbff8abf1266aede190a24f7ba37f7
+    tally: ALL 35 CHECKS PASS [P093]
+  independent_review:
+    path: campaigns/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+    pre_migration_path: proposals/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+    sha256: 5bf00d41183fc4c5996fb5c91f4ac72f536a5c22e6fa3255908d84dbba7e1739
+    tally: ALL 24 CHECKS PASS [P093-INDEPENDENT]
+  accepted_dependency_replay:
+    path: campaigns/P091-lb1-dissipative-breather-lifetime/verify.py
+    sha256: 4f89088395ffa6b8f58dc833cd17589d28f6903e96a208a39259256026846f3d
+    tally: ALL 33 CHECKS PASS [P091]
+  canonical_solver:
+    path: src/substrate_framework/sine_gordon_1d.py
+    sha256: 675ca4f29aa256e67d37243ffebe20e3b65a605b2a095415e84b36a14c7f6c3e
+  numerical_integration_api:
+    path: src/substrate_framework/numerics.py
+    sha256: a6271efbb5c5694cf05cfdd5a67b126ad4ebe8eaf432ba90c715c306a125afe1
+focused_tests:
+  tally: 84 passed
+  files:
+    tests/test_damped_oscillator.py: aa6a3412920de904678f1d3364e157c5ef4c3f1ce815a3781506f9e6836243b6
+    tests/test_sine_gordon.py: 8e0d75bc8205c12f11c32af1cfd75a56ad9181db76484c31c0c3fa6f67c7da16
+    tests/test_sine_gordon_1d.py: 32fa3b080777663bd572e1805702b54ef21c724c62442bf621ad6961839c71e2
+    tests/test_numerics.py: 1907c3b03bb9d9f6490ace46f0000e3436a0ca9010d1666514cd88a46a2f87d0
+evidence_hashes:
+  source_reproduction: 472f6782131d44c28d6a062bc80cae36b8267bdba238ae18318f17556cc6c685
+  source_audit: cb18c9e420ea9c581f67be1c8da6e80636b5070069af9409b497da700cef2bfe
+  consumer_audit: 58a39fdbc37777f162ddb3514b67f5c8570be812a3dc0b2cf9107170620f6d9f
+  candidate_comparison: 6e7f21f1cf7f4860a076881c06a9dfb2b3f959e75ebe8a40715f6b3bd98a4752
+  source_adjudication: d92a11ba995aa64fbb969d4d794c82ba3f94562c29a8de90a671b69ec0bad3c9
+  impact_analysis: 35898e3da333210c273f89859867f91132babf42ee22efc13251e3916d40d7f0
+accepted_claims_used:
+  C-SG-016: >-
+    exact family form factor, conditional evolving action, energy, and
+    frequency law, plus already stronger controlled finite-time PDE evidence
+  C-DYN-001: >-
+    normalized gap-one field-mode threshold and exact positive-damping
+    periodicity obstruction
+  C-SG-012: exact finite-control-volume energy balance with boundary flux
+  C-PDE-011: reusable finite-grid solver and energy-ledger machinery only
+oracle_classes:
+  source: Read-only eight-check numerical regression with pinned process output.
+  exact: >-
+    Recurrence equivalence, control-volume balance, reduced-law window
+    regression, exact FFT sampling grid, field-mode discriminants, AST source
+    audit, and load-bearing mutations.
+  independent: >-
+    Fresh smooth-field balance derivation, finite-interval integration,
+    independent least-squares reconstruction, sampling/bin reconstruction,
+    exact discriminants, and separate mutations.
+claim_delta: none
+release_delta: none
+canonical_implementation_delta: none
+integration_policy: >-
+  The immutable source selected np.trapezoid on the installed NumPy and retained
+  np.trapz as a historical fallback. P093's primary and independent code make no
+  direct call to either alias; sampled canonical work remains behind
+  substrate_framework.numerics.trapezoid_integral.

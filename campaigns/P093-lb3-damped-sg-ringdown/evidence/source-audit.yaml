@@ -1,0 +1,40 @@
+source_unit: LB3
+ast_check_calls: 8
+literal_queue_check_calls: 2
+dynamic_queue_check_calls: 6
+assert_statements: 1
+imports: [sys, numpy, mpmath]
+accepted_framework_imports: []
+local_redefinitions:
+  - check ledger
+  - centered Laplacian and gradient
+  - exact breather initial data
+  - damped leapfrog evolution
+  - log-energy fit
+  - FFT core-frequency estimator
+  - breather form-factor quadrature
+diagnostic_equation: phi_tt - phi_xx + sin(phi) = -Gamma*phi_t
+domain: [-120, 120]
+boundary_data: homogeneous field endpoints plus a separate quadratic edge sponge
+spatial_method: centered finite differences
+time_method: centered semi-implicit damping recurrence
+time_step_policy: dt=0.4*dx
+core_radius: 14
+fit_window: [40, 120]
+frequency_method: unwindowed real FFT of the mean-subtracted core trace
+integration_branch: np.trapezoid if present, otherwise np.trapz
+what_the_checks_actually_cover:
+  - two source form-factor values from repeated local quadrature
+  - exact Gamma-zero recurrence reduction
+  - one lossless planted-breather core-energy regression
+  - two small-damping initial frequencies and a three-Gamma rate sweep
+  - coupled dx and dt halving for one fitted rate
+  - one finite-time high-damping sign-change and mean-core-energy classifier
+missing_oracles:
+  - full or core control-volume energy ledger including sponge and core-boundary flux
+  - independent timestep, domain, method, core-radius, and fit-window refinement
+  - endpoint closure, leakage, bin-resolution, or alternate frequency estimator
+  - pointwise comparison at a declared time rather than a drifting-window regression
+  - accepted normalized field-mode or nonlinear-existence boundary for the high-damping label
+  - survival probability, population, physical medium, spark, or DBD map
+audit_verdict: qualified

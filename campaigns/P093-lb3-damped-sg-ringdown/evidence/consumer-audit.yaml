@@ -1,0 +1,42 @@
+campaign: P093
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+consumers:
+  bridges_readme:
+    status: noncanonical_narrative
+    finding: >-
+      Repeats that Gamma_meas equals Gamma*D at a current frequency, calls
+      coupled dx/dt halving grid convergence to five significant figures, and
+      promotes the high-damping run as an overdamped guard. P093 qualifies all
+      three readings.
+  phase26_lb_dossier:
+    status: noncanonical_narrative
+    finding: >-
+      Summarizes the same eight-check source and adds no independent oracle or
+      accepted dependency.
+  unified_synthesis:
+    status: noncanonical_narrative
+    finding: >-
+      Uses LB3 inside a lifetime/decoherence storyline and near the claimed
+      phase-visibility exponent. LB3 implements neither phase diffusion nor a
+      survival probability, and cannot support that consumer.
+  MC4:
+    status: pending_adjudication
+    finding: >-
+      Cites SA3/LB3/P3D1 for a stencil, sponge, and interior diagnostic when
+      mapping a later physical-units PDE. It imports numerical machinery, not
+      a validated LB3 lifetime or survival threshold, and remains unavailable
+      authority.
+  engineering:
+    status: no_direct_executable_LB3_dependency
+    finding: >-
+      Hash-pinned engineering searches find lifetime and survival consumers of
+      LB1/LB2/LB4, but no executable import of LB3's measured rates or core
+      trajectory.
+accepted_framework_consumers:
+  - C-SG-016 already governs the conditional family law and stronger total-energy PDE evidence.
+  - C-DYN-001 governs the field-mode, transient, cycle, and exact-periodicity distinctions.
+  - Existing sine_gordon_1d and numerics APIs govern the reusable solver and integration machinery.
+verdict: >-
+  LB3 creates no new accepted consumer. Narrative repetitions remain corrected
+  through its qualified migration disposition rather than edits to immutable
+  predecessor evidence.

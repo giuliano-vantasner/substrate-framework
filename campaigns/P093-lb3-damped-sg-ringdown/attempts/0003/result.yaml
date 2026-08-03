@@ -1,0 +1,17 @@
+attempt: 0003
+candidates: [C, D, E, G]
+status: independent_local_balance_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+process_exit_status: 1
+failure: >-
+  The first independent check represented phi_t and phi_x as constant symbols,
+  so differentiating their product with respect to x erased the intended flux
+  divergence. The review stopped before a scientific verdict.
+scientific_output: none
+selection_criteria_changed: false
+repair: >-
+  Derive the energy-density identity from a smooth symbolic field phi(x,t),
+  differentiate it explicitly, and substitute the damped PDE on shell.
+next_attempt: Re-run the full independent review from its first check.

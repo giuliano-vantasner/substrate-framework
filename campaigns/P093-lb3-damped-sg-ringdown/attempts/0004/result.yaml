@@ -1,0 +1,18 @@
+attempt: 0004
+candidates: [I]
+status: primary_verifier_text_audit_still_self_referential
+command: PYTHONPATH=src .venv/bin/python proposals/P093-lb3-damped-sg-ringdown/verify.py
+process_exit_status: 1
+passed_before_failure: 34
+failure: >-
+  The split forbidden-pattern construction no longer contained the searched
+  call spelling in the hygiene predicate, but the verifier intentionally
+  quoted LB3's immutable compatibility assignment elsewhere in its source
+  audit. Text search therefore still rejected the audit file after all
+  scientific checks passed.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: >-
+  Parse the verifier AST and reject only actual calls to np.trapz or
+  np.trapezoid, ignoring quoted immutable-source evidence.
+next_attempt: Re-run the primary verifier with the semantic call-site audit.

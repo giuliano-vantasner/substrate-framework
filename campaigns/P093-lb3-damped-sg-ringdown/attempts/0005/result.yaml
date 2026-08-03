@@ -1,0 +1,33 @@
+attempt: 0005
+candidates: [A, B, C, D, E, F, G, H, I, J]
+status: primary_and_independent_audits_passed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P093-lb3-damped-sg-ringdown/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P093-lb3-damped-sg-ringdown/reviews/independent_ringdown_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_damped_oscillator.py tests/test_sine_gordon.py tests/test_sine_gordon_1d.py tests/test_numerics.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P091-lb1-dissipative-breather-lifetime/verify.py
+process_exit_statuses: [0, 0, 0, 0]
+terminal_tallies:
+  - ALL 35 CHECKS PASS [P093]
+  - ALL 24 CHECKS PASS [P093-INDEPENDENT]
+  - 84 passed in 10.46s
+  - ALL 33 CHECKS PASS [P091]
+verdict: >-
+  LB3 reproduces as finite-grid regression evidence for C-SG-016. Its source
+  recurrence duplicates the canonical solver; finite-core decay contains an
+  unmeasured boundary flux; the reported slopes are finite-window averages and
+  are closer to the accepted evolving reduced law than to the selected FFT-bin
+  point rates; the FFT values are adjacent coarse bins; and the high-damping
+  run is linearly underdamped in the accepted normalized field convention.
+  No distinct claim, API, or governed consumer survives.
+candidate_f_decision: >-
+  No new expensive PDE campaign is scientifically warranted. C-SG-016 already
+  has mesh, timestep, domain, method, damping-rate, lossless, and energy-ledger
+  controls stronger than LB3. Repeating those computations would add no new
+  claim and would be validation ceremony.
+next_attempt: >-
+  Materialize the terminal qualified disposition, archive the immutable
+  campaign, update the generated migration queue, and run one integrated gate.
+integration_note: >-
+  P093 code contains no direct NumPy trapezoidal call. The source's current and
+  legacy names remain historical hash-pinned evidence only.

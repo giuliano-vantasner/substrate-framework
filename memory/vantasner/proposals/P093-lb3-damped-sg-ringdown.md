@@ -2,7 +2,7 @@
 description: Audit LB3 damped sine-Gordon ring-down numerics and nonduplication
 author: vantasner
 created: '2026-08-04T09:30:00Z'
-updated: '2026-08-04T09:30:00Z'
+updated: '2026-08-04T10:15:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-LB3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P093 LB3 Damped Sine-Gordon Ring-Down Audit
 
@@ -200,3 +200,29 @@ passing source tally or a failed over-damping interpretation is not completion.
 See LB3, LB1, LB2, LB4, MC3, P3D1, SA3, P089, P091, P092, C-SG-001,
 C-SG-002, C-SG-012, C-SG-016, C-DYN-001, C-PDE-011, the canonical 1D solver
 and numerical APIs, and the parent framework-migration effort.
+
+## Terminal Adjudication
+
+P093 qualifies LB3 without adding a claim, release, or canonical API. The
+source reproduces all eight checks, and its centered-damping recurrence is the
+already canonical leapfrog scheme. Its fitted observable is finite-core energy,
+whose exact balance contains unmeasured core-boundary flux. Its reported slope
+is a least-squares window average over `[40,120]`, not an instantaneous rate;
+for all four small-damping configurations, the accepted C-SG-016 evolving
+energy law predicts that slope more closely than the source's selected FFT-bin
+point comparator. The printed frequencies are adjacent bins on the exact
+`pi/40` angular-frequency grid while the accepted family frequency drifts by
+more than one bin across every fit.
+
+The `Gamma=1.75` run is underdamped for the accepted normalized `k=0` field
+mode because its natural frequency is one and the critical value is two. Its
+zero-sign-change and residual-core-energy tests remain a finite-time,
+threshold-defined relaxation classifier, not an exact nonlinear-existence,
+survival-probability, population, or spark/DBD result. Primary and independent
+audits pass 35 and 24 mutation-sensitive checks, 84 focused tests pass, and the
+accepted P091 exact verifier replays all 33 checks. Repeating P091's already
+stronger mesh, domain, method, damping-rate, lossless, and energy-ledger PDE
+campaign would add no distinct object and is intentionally omitted. P093 code
+makes no direct NumPy trapezoidal call; the source's current/legacy branch is
+historical evidence only. Campaign debt is empty and migration continues to
+LB4.
