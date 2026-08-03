@@ -1,0 +1,65 @@
+id: P118
+base_release: v0.97.0
+base_commit: 97851c6ddad47bf792ef4e854e87e27df2b025c5
+scientific_base_commit: 67d4cc5363d7aba1cf0cc281273a850b48d18f2c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM4]
+question: >-
+  Derive and independently verify the exact conditional response and derivative
+  ledger for R=nu*N*exp(-C/(L*Theta)), with continuous versus integer-count
+  variation, limits, elasticities, finite differences, dimensions,
+  identifiability, report-gate semantics, and countermodels explicit; then
+  determine whether CM4 adds any theorem beyond C-RG-002, C-SPN-002, and
+  C-CMP-001, and terminally adjudicate all ten predicates without treating a
+  declared N factor as collective rate enhancement, L=A^2 as a material
+  loading law, a positive derivative as a unique mechanism signature, or a
+  syntactic report predicate as experimental falsifiability.
+invariants:
+  - For positive declared factors, R=nu*N*exp(-C/(L*Theta)) is linear in continuous N and strictly increasing in positive L, but these are conditional formula properties rather than a physical-rate theorem.
+  - When N is a count, the exact forward difference R(N+1)-R(N) is the natural discrete comparison; a formal derivative requires a declared continuous extension.
+  - C-RG-002 supplies only a conditional inverse-A-squared capillary barrier under explicit constitutive inputs, dimensions, and held-fixed conventions; it supplies no material loading law or rate.
+  - C-SPN-002 supplies normalized finite-vector ladder coefficients with state, rung, phase, and operator-scale premises and explicitly states that a squared coefficient is not a rate.
+  - C-CMP-001's conditional composite remains a matrix-element-dimensional factor rather than a transition rate, and its N multiplier is declared rather than dynamically derived.
+  - "A positive response derivative is not mechanism-specific: unrelated monotone functions and arbitrary positive prefactors can satisfy the same sign bar, while zero interaction can preserve the declared inputs and eliminate a physical rate."
+  - A report-level predicate has no experimental force without a common observable, units, calibration, uncertainties, sampling protocol, derivative estimator, threshold, alternative hypotheses, and error model.
+  - Exact source algebra must be separated from selected normalized values, finite-difference regression, Boolean gates, and physical signature prose.
+  - Comparator values and prior ten-check execution may regress frozen formulas but cannot select a new claim or physical interpretation.
+allowed_imports:
+  - C-RG-002 exact conditional inverse-A-squared barrier and its constitutive, dimension, sensitivity, identifiability, and physical ceilings
+  - C-SPN-002 exact normalized symmetric-spin ladder identities and explicit non-rate ceiling
+  - C-CMP-001 exact conditional composite-factor dimension and non-rate ceiling
+  - elementary real exponentials, derivatives, finite differences, limits, inequalities, dimensions, and identifiability reasoning
+  - CM4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - SymPy exact simplification, differentiation, limits, series, solving, and load-bearing mutations
+candidates:
+  - id: A
+    description: Reproduce CM4 literally and classify all ten symbolic, numeric, self-test, import, and report-gate predicates.
+  - id: B
+    description: Derive the exact positive-factor response ledger, continuous derivatives, integer forward differences, elasticities, limits, and common-unit scaling.
+  - id: C
+    description: Show that the source specialization is already governed by C-RG-002, C-SPN-002, and C-CMP-001 and terminally qualify CM4 without a new claim or release.
+  - id: D
+    description: Test whether a generalized monomial response family or exact report-gate classification supplies a distinct reusable theorem not already accepted.
+  - id: E
+    description: Construct flat, decreasing, nonmonotone, zero-interaction, arbitrary-prefactor, alternative-monotone, discrete-count, and noisy-report countermodels.
+  - id: F
+    description: Independently rederive the ledger and audit dependencies, novelty, dimensions, every predicate, cycles, consumers, and semantic ceilings.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure, exact domains, and continuous-versus-discrete variable typing
+  - mathematical novelty beyond accepted response, capillary, spin, and composition ceilings
+  - dimension, normalization, held-fixed convention, limit, and finite-difference consistency
+  - mutation sensitivity and discrimination against structurally different countermodels
+  - parameter economy, identifiability, reusable API fit, and physical-semantic honesty
+  - complete predicate, dependency, cycle, nonduplication, and downstream-consumer review
+claims_proposed: []
+comparators_blinded_until: >-
+  Queue metadata and P116's prior consumer replay exposed the displayed
+  response family, positive N and A-squared derivative headline, report-gate
+  idea, and ten-check tally. P118 records that exposure and freezes the
+  continuous/discrete distinction, exact-domain, novelty, dimensions,
+  elasticities, limits, identifiability, alternative-monotone, zero-rate,
+  arbitrary-prefactor, noisy-report, dependency, consumer, predicate, and
+  semantic gates before renewed CM4 execution, whole-body inspection, or
+  additional numeric output review.
+status: draft

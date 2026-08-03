@@ -1,0 +1,14 @@
+campaign: P118
+attempt: 0001
+candidate: pre_source_contract_freeze
+status: failed
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+exit_status: 1
+failure: >-
+  An invariant containing an unquoted colon parsed as a one-entry YAML mapping,
+  while the proposal schema requires every invariant to be a string.
+diagnosis: yaml_plain_scalar_colon
+scientific_effect: none
+source_execution_before_failure: false
+source_body_inspected_before_failure: false
+next_attempt: quote_the_invariant_in_live_and_frozen_contracts_then_revalidate
