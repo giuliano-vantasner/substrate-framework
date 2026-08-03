@@ -1,0 +1,41 @@
+attempt: 0006
+candidates: [B, C, D, E, F, G, H, I, J]
+status: exact_independent_and_pde_routes_pass
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P091-lb1-dissipative-breather-lifetime/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P091-lb1-dissipative-breather-lifetime/reviews/independent_lifetime_review.py
+  - PYTHONPATH=src .venv/bin/python proposals/P091-lb1-dissipative-breather-lifetime/reviews/pde_lifetime_evidence.py
+process_exit_statuses: [0, 0, 0]
+terminal_tallies:
+  primary: ALL 33 CHECKS PASS [P091]
+  independent: ALL 16 CHECKS PASS [P091-INDEPENDENT]
+  pde: ALL 12 CHECKS PASS [P091-PDE]
+exact_results:
+  mean_kinetic_integral: 16*omega*acos(omega)
+  form_factor: omega*acos(omega)/sqrt(1-omega**2)
+  working_form_factor: pi/4
+  reduced_action: J0*exp(-Gamma*t)
+  reduced_energy: 16*sin((J0/16)*exp(-Gamma*t))
+  integrated_energy_efold: log(theta0/asin(sin(theta0)/e))/Gamma
+independent_results:
+  dimensionless_integrated_efold: 1.093440429719919
+  dimensionless_initial_tangent_time: 1.2732395447351628
+pde_results:
+  gamma_002_fine_energy_rms: 0.005809385246682397
+  gamma_002_fine_action_rms: 0.006421535499697086
+  gamma_002_fine_balance_residual: 0.00005256536975209244
+  gamma_001_equal_slow_time_energy_rms: 0.0029366474926589134
+  gamma_001_equal_slow_time_action_rms: 0.003243431793139368
+  frozen_initial_D_energy_rms: 0.03139178515869604
+interpretation: >-
+  The exact undamped-family and conditional phase-averaged identities survive.
+  Simulation supports adiabatic tracking in the declared slow-damping finite-
+  time regime. The source's 1/(Gamma*D) full-amplitude e-fold headline is
+  rejected as a frozen initial tangent time, and no physical Gamma map exists.
+next_attempt: >-
+  Complete claim-level review, consumer impact, qualified-source disposition,
+  immutable campaign promotion, generated records, and one integrated gate.
+integration_note: >-
+  Exact work uses no quadrature. Independent field evidence uses scipy.quad;
+  sampled solver ledgers use the shared trapezoid_integral helper. No np.trapz
+  alias is introduced.

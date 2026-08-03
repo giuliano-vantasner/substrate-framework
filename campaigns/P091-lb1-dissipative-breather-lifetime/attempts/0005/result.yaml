@@ -1,0 +1,15 @@
+attempt: 0005
+candidates: [B, C, D, E, G, I, J]
+status: verifier_numeric_conversion_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P091-lb1-dissipative-breather-lifetime/verify.py
+process_exit_status: 1
+checks_passed_before_failure: 23
+failure: >-
+  SymPy retained Gamma inside log(r**(1/Gamma)), so float(Gamma*tau)
+  refused conversion even though the prior exact e-fold crossing passed.
+selection_criteria_changed: false
+next_attempt: >-
+  Evaluate the dimensionless Gamma*tau comparison at Gamma=1, preserving the
+  exact general-Gamma crossing check and all frozen candidate criteria.

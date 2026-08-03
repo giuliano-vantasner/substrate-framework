@@ -1,0 +1,39 @@
+attempt: 0001
+candidates: [A, B, C, D, E, G]
+status: source_reproduced_lifetime_headline_requires_qualification
+source_unit: LB1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: d2e36e0d9d8ff831bcd58efb264b68dc156f7f87eca7a104f53a6f287eed2b80
+command: >-
+  /usr/bin/time -f 'ELAPSED=%e MAX_RSS_KB=%M EXIT=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-26/bridge_LB1_dissipative_lifetime.py
+process_exit_status: 0
+elapsed_seconds: 18.97
+maximum_resident_kb: 60384
+terminal_tally: ALL 27 CHECKS PASS
+reported_form_factors:
+  '0.999': 0.999333
+  '0.900': 0.931254
+  '0.700': 0.779647
+  '0.500': 0.604600
+  '0.300': 0.398171
+  '0.100': 0.147804
+surviving_content:
+  - The exact damped energy balance is boundary flux minus Gamma times the spatial velocity-squared integral.
+  - The undamped-family period average and the resulting form-factor table are reproducible.
+  - The small-amplitude edge has D tending to one, so action and energy e-fold times both tend to 1/Gamma in the phase-averaged family reduction.
+headline_qualification:
+  - The table is the closed form D(omega)=omega*acos(omega)/sqrt(1-omega**2), derivable without nested quadrature from the accepted canonical action.
+  - For finite action, 1/(Gamma*D(omega)) is the instantaneous local energy-decay time -E/(dE/dt), not the integrated energy e-fold time.
+  - In the phase-averaged family reduction J(t)=J0*exp(-Gamma*t), while E(t)=16*sin((J0/16)*exp(-Gamma*t)); D therefore changes along the trajectory.
+  - The source's exponential-energy checks replay a frozen small-amplitude model and cannot validate the claimed full-amplitude e-fold law.
+  - Gamma is inserted in normalized inverse-time units; LB1 derives no accepted map to a material, collision, density, cross-section, or physical lifetime.
+next_attempt: >-
+  Derive and mutation-test the exact kinetic average, form factor, monotonicity,
+  conditional phase-averaged trajectory, instantaneous time, and integrated
+  energy e-fold time before testing family tracking against the damped PDE.
+integration_note: >-
+  The unchanged source uses mpmath adaptive quadrature. Canonical exact work
+  will use the action identity, and sampled framework work will use the shared
+  trapezoid_integral helper rather than the version-specific np.trapz alias.

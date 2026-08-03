@@ -10,6 +10,7 @@ from substrate_framework.sine_gordon import (
     breather_action_lattice_frequency,
     breather_action_secant_ratio,
     breather_core_fundamental_sine_coefficient,
+    breather_damping_form_factor,
     boosted_breather_energy_momentum,
     boosted_breather_phase_components,
     breather_energy,
@@ -18,6 +19,8 @@ from substrate_framework.sine_gordon import (
     breather_energy_from_action,
     breather_field,
     breather_inverse_width,
+    breather_instantaneous_energy_decay_time,
+    breather_mean_kinetic_integral,
     breather_frequency_from_action,
     breather_mean_gradient_integral,
     breather_peak_amplitude,
@@ -43,6 +46,10 @@ from substrate_framework.sine_gordon import (
     sine_gordon_stress_tensor_contravariant,
     sine_gordon_stress_tensor_covariant,
     sine_gordon_stress_trace,
+    phase_averaged_breather_energy_efold_time,
+    phase_averaged_damped_breather_action,
+    phase_averaged_damped_breather_energy,
+    phase_averaged_damped_breather_frequency,
     topological_charge_from_boundaries,
     topological_current,
     topological_current_divergence,
@@ -227,6 +234,12 @@ def test_breather_formulas_at_exact_frequency() -> None:
     assert breather_peak_amplitude(omega) == 4 * sp.atan(sp.Rational(4, 3))
     action = breather_action(omega)
     assert action == 16 * sp.acos(sp.Rational(3, 5))
+    assert breather_mean_kinetic_integral(omega) == (
+        sp.Rational(48, 5) * sp.acos(sp.Rational(3, 5))
+    )
+    assert breather_damping_form_factor(omega) == (
+        sp.Rational(3, 4) * sp.acos(sp.Rational(3, 5))
+    )
     assert sp.simplify(breather_frequency_from_action(action) - omega) == 0
     assert sp.simplify(breather_energy_from_action(action) - breather_energy(omega)) == 0
     assert breather_mean_gradient_integral(omega) == 16 * (
@@ -236,6 +249,74 @@ def test_breather_formulas_at_exact_frequency() -> None:
     assert breather_action_secant_ratio(omega) == sp.Rational(3, 4) * sp.acos(
         sp.Rational(3, 5)
     )
+
+
+def test_phase_averaged_damped_breather_trajectory_and_lifetimes() -> None:
+    omega = 1 / sp.sqrt(2)
+    gamma, time = sp.symbols("Gamma t", positive=True)
+    action = phase_averaged_damped_breather_action(omega, gamma, time)
+    frequency = phase_averaged_damped_breather_frequency(omega, gamma, time)
+    energy = phase_averaged_damped_breather_energy(omega, gamma, time)
+
+    assert action == 4 * sp.pi * sp.exp(-gamma * time)
+    assert frequency == sp.cos(sp.pi * sp.exp(-gamma * time) / 4)
+    assert energy == 16 * sp.sin(sp.pi * sp.exp(-gamma * time) / 4)
+    assert breather_damping_form_factor(omega) == sp.pi / 4
+    assert breather_instantaneous_energy_decay_time(omega, gamma) == (
+        4 / (sp.pi * gamma)
+    )
+
+    energy_efold = phase_averaged_breather_energy_efold_time(omega, gamma)
+    assert sp.simplify(
+        gamma * energy_efold
+        - sp.log(sp.pi / (4 * sp.asin(sp.sqrt(2) * sp.exp(-1) / 2)))
+    ) == 0
+    assert sp.simplify(
+        phase_averaged_damped_breather_energy(omega, gamma, energy_efold)
+        - breather_energy(omega) / sp.E
+    ) == 0
+    assert sp.simplify(
+        sp.diff(energy, time)
+        + gamma * frequency * action
+    ) == 0
+    assert sp.simplify(
+        energy_efold - breather_instantaneous_energy_decay_time(omega, gamma)
+    ) != 0
+
+
+def test_phase_averaged_damped_breather_zero_rate_and_small_action_limits() -> None:
+    omega, gamma, time = sp.symbols("omega Gamma t", positive=True)
+    assert phase_averaged_damped_breather_action(omega, 0, time) == (
+        breather_action(omega)
+    )
+    assert phase_averaged_damped_breather_energy(omega, 0, time) == (
+        breather_energy_from_action(breather_action(omega))
+    )
+    assert sp.limit(breather_damping_form_factor(omega), omega, 1, dir="-") == 1
+    assert sp.limit(
+        gamma * phase_averaged_breather_energy_efold_time(omega, gamma),
+        omega,
+        1,
+        dir="-",
+    ) == 1
+
+
+@pytest.mark.parametrize(
+    ("function", "arguments", "message"),
+    [
+        (phase_averaged_damped_breather_action, (sp.Rational(1, 2), -1, 0), "damping_rate"),
+        (phase_averaged_damped_breather_action, (sp.Rational(1, 2), 1, -1), "time"),
+        (breather_instantaneous_energy_decay_time, (sp.Rational(1, 2), 0), "positive"),
+        (phase_averaged_breather_energy_efold_time, (sp.Rational(1, 2), -1), "positive"),
+    ],
+)
+def test_damped_breather_reduction_rejects_invalid_numeric_domains(
+    function: object,
+    arguments: tuple[sp.Expr, ...],
+    message: str,
+) -> None:
+    with pytest.raises(ValueError, match=message):
+        function(*arguments)  # type: ignore[operator]
 
 
 def test_exact_breather_temporal_parity_and_half_wave_support() -> None:

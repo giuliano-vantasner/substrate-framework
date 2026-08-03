@@ -795,6 +795,15 @@ For the C-SG-001 rest breather with 0<omega<1, eta=sqrt(1-omega^2), every fixed 
 - Compatibility: `native`
 - Dependencies: C-SG-001
 
+## C-SG-016
+
+For the exact undamped C-SG-001 rest-breather family with 0<omega<1, C-SG-003 action J=16*acos(omega), and energy E=16*sqrt(1-omega^2), the exact period average is <integral_R phi_t^2 dx>=omega*J=16*omega*acos(omega). Hence the family damping form factor is D(omega)=omega*J/E=omega*acos(omega)/sqrt(1-omega^2). Writing theta=acos(omega) gives D=theta*cot(theta): D is strictly increasing in omega, tends to zero as omega approaches zero, tends to one as omega approaches one, and equals pi/4 at omega=1/sqrt(2). For the bulk-damped equation phi_tt-phi_xx+sin(phi)=-Gamma*phi_t with Gamma>=0, C-SG-012 gives the exact energy balance dE/dt=boundary_flux-Gamma*integral_R phi_t^2 dx. Conditional on negligible boundary flux, period averaging, slow damping, and tracking the undamped family, dJ/dt=-Gamma*J, so J(t)=J0*exp(-Gamma*t), omega(t)=cos((J0/16)*exp(-Gamma*t)), and E(t)=16*sin((J0/16)*exp(-Gamma*t)). Thus 1/(Gamma*D(omega)) is the instantaneous tangent scale -E/(dE/dt), not the finite full-amplitude energy e-fold time. For Gamma>0 and theta0=acos(omega0), the reduced energy e-fold time is log(theta0/asin(sin(theta0)/e))/Gamma and tends to 1/Gamma only as omega0 approaches one. At omega0=1/sqrt(2), the two dimensionless times are about 1.27324 and 1.09344. For the normalized zero-source PDE with uniform Gamma=0.02, exact phase-zero omega0=1/sqrt(2) data, final time 50, domains [-60,60] and [-80,80], homogeneous Dirichlet endpoints, leapfrog dx=0.2,0.1,0.05 with dt=dx/2, and DOP853 at dx=0.2, the reduced law has fine-grid energy RMS error 0.00581 and action RMS error 0.00642 relative to their initial values; the energy-ledger residual falls to 5.26e-5 relative, the domain and method checks agree, and the frozen-D energy law has RMS error 0.03139. At Gamma=0.01 and equal slow time the energy and action errors improve to 0.00294 and 0.00324; Gamma=0 is a lossless numerical control. This is finite-time simulation evidence for the declared adiabatic regime, not an exact positive-Gamma breather, global exponential energy or amplitude law, fixed-frequency decay, physical medium lifetime, collision or density map, coherence probability, population, event channel, or substrate realization.
+
+- Accepted in: `v0.78.0`
+- Verification: `simulation_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-001, C-SG-002, C-SG-003, C-SG-012
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

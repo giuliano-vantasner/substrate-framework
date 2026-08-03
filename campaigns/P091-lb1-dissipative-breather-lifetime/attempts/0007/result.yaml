@@ -1,0 +1,14 @@
+attempt: 0007
+candidates: [J]
+status: promotion_staging_path_failure
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+process_exit_status: 1
+failure: >-
+  C-SG-016's accepted provenance path
+  campaigns/P091-lb1-dissipative-breather-lifetime/adjudication.yaml does not
+  exist while the still-editable record remains under proposals/.
+scientific_state: unchanged
+next_attempt: >-
+  Finalize the adjudication and provenance records, move the proposal once to
+  its immutable campaign path, and rerun the integrated workflow without
+  weakening accepted-artifact validation.

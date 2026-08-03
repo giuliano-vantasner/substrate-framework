@@ -879,6 +879,39 @@ units:
       independent regression uses adaptive SciPy integration and no NumPy
       trapezoidal alias. Unchanged external np.trapz failures are cited from
       P088 rather than rerun as validation ceremony.
+  LB1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-016
+    qualification: >-
+      LB1's exact bulk-damped energy balance, undamped-family kinetic average,
+      form-factor values, endpoint limits, and small-amplitude lifetime survive.
+      The full-amplitude form factor is exactly
+      omega*acos(omega)/sqrt(1-omega^2), so no nested quadrature is needed.
+      Period-averaged adiabatic damping gives exponential action but nonlinear
+      energy; the source's 1/(Gamma*D(initial)) is an instantaneous tangent
+      time, not the integrated finite-amplitude energy e-fold. Slow-damping
+      finite-time PDE simulations support the reduced action law with explicit
+      sub-percent error, refinement, domain, method, and lossless ceilings, but
+      do not create an exact damped breather. Gamma remains a normalized
+      inverse-time input with no accepted material, collision, density,
+      cross-section, thermal, coherence, population, or physical-unit map.
+    evidence:
+      - campaigns/P091-lb1-dissipative-breather-lifetime/reviews/source_adjudication.md
+      - campaigns/P091-lb1-dissipative-breather-lifetime/evidence/source-reproduction.yaml
+      - campaigns/P091-lb1-dissipative-breather-lifetime/evidence/source-audit.yaml
+      - campaigns/P091-lb1-dissipative-breather-lifetime/evidence/consumer-audit.yaml
+      - campaigns/P091-lb1-dissipative-breather-lifetime/evidence/candidate-comparison.yaml
+      - campaigns/P091-lb1-dissipative-breather-lifetime/attempts/0001/result.yaml
+      - campaigns/P091-lb1-dissipative-breather-lifetime/attempts/0006/result.yaml
+      - campaigns/P091-lb1-dissipative-breather-lifetime/reviews/independent_lifetime_review.py
+      - campaigns/P091-lb1-dissipative-breather-lifetime/reviews/pde_lifetime_evidence.py
+      - memory/vantasner/decisions/C-SG-016-review.md
+    note: >-
+      P091 adds pure exact family and conditional phase-averaged APIs. Exact
+      work uses no quadrature, independent field evidence uses adaptive SciPy
+      quadrature, and sampled PDE ledgers use the shared trapezoid_integral
+      helper rather than the version-specific np.trapz alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

@@ -1,0 +1,16 @@
+attempt: 0002
+candidates: [F]
+status: implementation_interface_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P091-lb1-dissipative-breather-lifetime/reviews/pde_lifetime_evidence.py
+process_exit_status: 1
+failure: >-
+  TypeError: zero_source() missing 1 required positional argument: 'coordinate'.
+  The shared BulkSource protocol accepts time only and requires each callback
+  to close over the coordinate vector.
+scientific_output: none
+selection_criteria_changed: false
+next_attempt: >-
+  Pass a time-only zero-source closure for each frozen grid and rerun the same
+  preregistered damping, time, mesh, domain, and method configurations.

@@ -1,0 +1,28 @@
+campaign: P091
+source_unit: LB1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-26/bridge_LB1_dissipative_lifetime.py
+git_blob: 0be1ee0510232a04a2342fedd730752eeb0485b4
+sha256: d2e36e0d9d8ff831bcd58efb264b68dc156f7f87eca7a104f53a6f287eed2b80
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-26/bridge_LB1_dissipative_lifetime.py
+process_exit_status: 0
+terminal_tally: ALL 27 CHECKS PASS
+elapsed_seconds: 18.97
+maximum_resident_kb: 60384
+reported_form_factors:
+  '0.999': 0.999333
+  '0.900': 0.931254
+  '0.700': 0.779647
+  '0.500': 0.604600
+  '0.300': 0.398171
+  '0.100': 0.147804
+reproduction_scope: >-
+  This is one read-only literal regression. Clean exit and tally establish only
+  that the source predicates ran; exact, independent, mutation, PDE, and
+  consumer audits determine their scientific classification.
+integration_compatibility: >-
+  LB1 uses mpmath quadrature and no NumPy trapezoidal alias. P091 exact work
+  avoids numerical integration, while sampled solver ledgers use the shared
+  trapezoid_integral helper rather than np.trapz.

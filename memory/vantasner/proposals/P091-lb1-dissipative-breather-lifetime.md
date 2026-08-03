@@ -2,7 +2,7 @@
 description: Derive and audit LB1's damped-breather action and energy lifetime
 author: vantasner
 created: '2026-08-04T07:55:00Z'
-updated: '2026-08-04T07:55:00Z'
+updated: '2026-08-04T08:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-LB1
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P091 LB1 Dissipative Breather Lifetime
 
@@ -207,3 +207,18 @@ or `ALL CHECKS PASS` tally is not sufficient alone.
 See LB1, MC3, LB2, LB3, P002, P049, P089, C-SG-001 through C-SG-003,
 C-SG-012, C-PDE-011, the canonical exact and 1D numerical APIs, and the parent
 migration effort.
+
+## Terminal Adjudication
+
+P091 qualifies LB1 and promotes `C-SG-016` in `v0.78.0`. The exact form factor
+is `omega*acos(omega)/sqrt(1-omega^2)`, while phase-averaged damping makes
+action exponential and energy nonlinear. The source's finite-amplitude
+`1/(Gamma*D(initial))` is an instantaneous tangent time; the actual reduced
+energy e-fold is shorter and has a separately solved crossing. Exact,
+independent, mutation, mesh, timestep, domain, damping-rate, energy-ledger,
+lossless, and method checks pass in the declared regime. Gamma remains a
+normalized input with no physical medium, coherence, population, or event map.
+Canonical exact work uses no quadrature, independent field evidence uses SciPy
+adaptive quadrature, and sampled PDE ledgers use `trapezoid_integral` rather
+than a version-specific NumPy alias. Campaign debt is empty and the parent
+migration continues to LB2.

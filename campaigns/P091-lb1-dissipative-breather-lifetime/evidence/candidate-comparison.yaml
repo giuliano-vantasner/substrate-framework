@@ -1,0 +1,43 @@
+campaign: P091
+selection_order:
+  - accepted dependency and unit closure
+  - exact energy balance and canonical action normalization
+  - observable-specific lifetime semantics
+  - adiabatic error and numerical refinement
+  - mutation sensitivity and independent rederivation
+  - nonduplication and governed consumer role
+candidates:
+  - id: A
+    decision: rejected_literal_promotion
+    reason: The full-amplitude e-fold headline freezes a changing form factor.
+  - id: B
+    decision: selected_as_existing_exact_dependency
+    reason: The damped energy balance is exactly C-SG-012 specialized to R=-Gamma*phi_t.
+  - id: C
+    decision: selected
+    reason: The canonical action and independent field quadrature both give the exact mean kinetic integral.
+  - id: D
+    decision: selected
+    reason: Phase averaging yields a closed action ODE and nonlinear energy/frequency trajectories.
+  - id: E
+    decision: selected
+    reason: The exact theta*cot(theta) form proves limits, monotonicity, series, and pi/4 working value.
+  - id: F
+    decision: selected_with_simulation_ceiling
+    reason: The finite-time slow-damping PDE tracks the reduced action law with sub-percent RMS error and improving slower-damping evidence.
+  - id: G
+    decision: selected
+    reason: Action, energy, and instantaneous tangent times are separated; no envelope lifetime is inferred without an observable definition.
+  - id: H
+    decision: selected_as_import_ceiling
+    reason: No accepted map turns normalized Gamma into a material lifetime.
+  - id: I
+    decision: selected
+    reason: Normalization, frozen-D, small-amplitude-time, damping-rate, mesh, domain, method, and lossless probes are verdict sensitive.
+  - id: J
+    decision: selected_with_consumer_qualification
+    reason: LB2 uses the valid small-amplitude limit, LB3 uses the local current-frequency rate, while LB4 and engineering globalize unaccepted exponential and medium premises.
+selection_basis: >-
+  Structural closure selects the exact family identity and the narrowly
+  qualified phase-averaged finite-time model. Numerical agreement supports
+  its approximation regime but does not select a material interpretation.

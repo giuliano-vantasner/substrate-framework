@@ -1,0 +1,16 @@
+attempt: 0004
+candidates: [B, C, D, E, G, I, J]
+status: verifier_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P091-lb1-dissipative-breather-lifetime/verify.py
+process_exit_status: 1
+checks_passed_before_failure: 12
+failure: >-
+  SymPy represented sin(theta)*cos(theta) as sin(2*theta)/2 and left
+  1+sin(theta)^2-cos(theta)^2 uncontracted. The exact expressions agree after
+  subtracting and simplifying; no scientific premise or tolerance failed.
+selection_criteria_changed: false
+next_attempt: >-
+  Assert simplified zero residuals between the equivalent representations and
+  rerun the unchanged exact and mutation checks.

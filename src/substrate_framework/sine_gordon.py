@@ -56,6 +56,22 @@ def _positive_integer_level(level: Any) -> sp.Expr:
     return value
 
 
+def _nonnegative_real(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.is_number:
+        if expression.is_real is not True or float(expression) < 0.0:
+            raise ValueError(f"{name} must be real and nonnegative")
+    return expression
+
+
+def _positive_real(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.is_number:
+        if expression.is_real is not True or not float(expression) > 0.0:
+            raise ValueError(f"{name} must be real and positive")
+    return expression
+
+
 def _lattice_action(level: Any, action_quantum: Any, offset: int = 0) -> sp.Expr:
     level_value = _positive_integer_level(level)
     quantum = _positive_action_quantum(action_quantum)
@@ -606,6 +622,124 @@ def breather_action(omega: Any) -> sp.Expr:
     """Return the canonical action variable ``J = 16*acos(omega)``."""
 
     return 16 * sp.acos(_frequency(omega))
+
+
+def breather_mean_kinetic_integral(omega: Any) -> sp.Expr:
+    """Return the period average of ``integral(phi_t**2, x)``.
+
+    In the canonical ``J=(1/(2*pi))*oint p dq`` convention this is
+    ``omega*J``.  The result is an exact property of the undamped breather
+    family, not an assertion that a damped field remains on that family.
+    """
+
+    frequency = _frequency(omega)
+    return sp.simplify(frequency * breather_action(frequency))
+
+
+def breather_damping_form_factor(omega: Any) -> sp.Expr:
+    """Return the exact undamped-family ratio ``<int phi_t**2 dx>/E``.
+
+    The closed form is
+    ``omega*acos(omega)/sqrt(1-omega**2)`` for ``0 < omega < 1``.  It may be
+    used as an instantaneous phase-averaged damping factor; freezing it along
+    a finite decay does not produce an integrated energy e-fold time.
+    """
+
+    frequency = _frequency(omega)
+    return sp.simplify(
+        breather_mean_kinetic_integral(frequency) / breather_energy(frequency)
+    )
+
+
+def phase_averaged_damped_breather_action(
+    omega_initial: Any,
+    damping_rate: Any,
+    time: Any,
+) -> sp.Expr:
+    """Return ``J0*exp(-Gamma*t)`` in the adiabatic family reduction.
+
+    This conditional model follows by period-averaging the exact bulk-damped
+    energy balance and using ``dE/dJ=omega``.  It is not an exact solution of
+    the damped sine-Gordon PDE.  ``Gamma`` and ``t`` are normalized inverse
+    time and time; numerical inputs must be nonnegative.
+    """
+
+    frequency = _frequency(omega_initial)
+    rate = _nonnegative_real(damping_rate, "damping_rate")
+    instant = _nonnegative_real(time, "time")
+    return sp.simplify(breather_action(frequency) * sp.exp(-rate * instant))
+
+
+def phase_averaged_damped_breather_frequency(
+    omega_initial: Any,
+    damping_rate: Any,
+    time: Any,
+) -> sp.Expr:
+    """Return the conditional family frequency along phase-averaged damping."""
+
+    action = phase_averaged_damped_breather_action(
+        omega_initial,
+        damping_rate,
+        time,
+    )
+    return sp.cos(action / 16)
+
+
+def phase_averaged_damped_breather_energy(
+    omega_initial: Any,
+    damping_rate: Any,
+    time: Any,
+) -> sp.Expr:
+    """Return ``16*sin((J0/16)*exp(-Gamma*t))`` conditionally.
+
+    Away from the small-action edge this energy is not exponential even
+    though the reduced action is.  The function describes only the
+    phase-averaged adiabatic family model.
+    """
+
+    action = phase_averaged_damped_breather_action(
+        omega_initial,
+        damping_rate,
+        time,
+    )
+    return 16 * sp.sin(action / 16)
+
+
+def breather_instantaneous_energy_decay_time(
+    omega: Any,
+    damping_rate: Any,
+) -> sp.Expr:
+    """Return the local phase-averaged scale ``-E/(dE/dt)``.
+
+    The result ``1/(Gamma*D(omega))`` is an instantaneous tangent timescale,
+    not the finite full-amplitude energy e-fold time.
+    """
+
+    rate = _positive_real(damping_rate, "damping_rate")
+    return sp.simplify(1 / (rate * breather_damping_form_factor(omega)))
+
+
+def phase_averaged_breather_energy_efold_time(
+    omega_initial: Any,
+    damping_rate: Any,
+) -> sp.Expr:
+    """Return the integrated energy e-fold time in the reduced model.
+
+    If ``theta0=acos(omega_initial)``, the crossing is
+    ``log(theta0/asin(sin(theta0)/e))/Gamma``.  This differs from the frozen
+    instantaneous scale except in the small-action limit.
+    """
+
+    frequency = _frequency(omega_initial)
+    rate = _positive_real(damping_rate, "damping_rate")
+    theta_initial = sp.acos(frequency)
+    return sp.simplify(
+        sp.log(
+            theta_initial
+            / sp.asin(sp.sin(theta_initial) / sp.E)
+        )
+        / rate
+    )
 
 
 def breather_frequency_from_action(action: Any) -> sp.Expr:

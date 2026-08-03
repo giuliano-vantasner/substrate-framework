@@ -1,0 +1,51 @@
+campaign: P091
+source_unit: LB1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: d2e36e0d9d8ff831bcd58efb264b68dc156f7f87eca7a104f53a6f287eed2b80
+subclaims:
+  exact_damped_energy_balance:
+    verdict: survives_as_existing_dependency
+    reason: >-
+      C-SG-012 with residual R=-Gamma*phi_t gives boundary flux minus
+      Gamma*integral(phi_t^2)dx, with sign-definite bulk loss for Gamma>=0.
+  small_amplitude_kinetic_average:
+    verdict: survives_as_asymptotic_limit
+    reason: >-
+      The displayed sech profile is the leading small-amplitude field, so its
+      equality to E is exact for that leading model and asymptotic for the full
+      breather. The exact full-family ratio tends to one.
+  full_amplitude_form_factor:
+    verdict: survives_and_strengthened
+    reason: >-
+      Nested quadrature is exactly D=omega*acos(omega)/sqrt(1-omega^2), with
+      endpoint limits 0 and 1 and strict monotonicity proved analytically.
+  full_amplitude_lifetime:
+    verdict: headline_rejected_and_replaced
+    reason: >-
+      1/(Gamma*D(omega_initial)) is -E/E_dot at the initial point. It is not
+      the integrated e-fold time because D changes as action decays.
+  phase_averaged_trajectory:
+    verdict: survives_as_controlled_conditional_model
+    reason: >-
+      Period averaging and dE/dJ=omega give dJ/dt=-Gamma*J, hence nonlinear
+      energy and frequency trajectories. Refinement, domain, damping-rate,
+      energy-ledger, lossless, and independent-method evidence support the
+      declared slow-damping finite-time approximation.
+  lossless_limit:
+    verdict: survives
+    reason: >-
+      Gamma=0 recovers constant action and energy; positive-rate lifetime
+      scales diverge as Gamma tends to zero.
+  physical_medium_lifetime:
+    verdict: not_derived
+    reason: >-
+      Gamma remains an input in normalized inverse-time units. LB1 imports no
+      accepted collision, density, cross-section, material, or unit map, and
+      pending MC3 cannot supply authority.
+  source_rejection_guards:
+    verdict: insufficient_for_headline
+    reason: >-
+      The exponential trial checks validate a frozen small-amplitude ODE. They
+      reject Gamma-free times but do not discriminate the finite-amplitude
+      nonlinear energy trajectory from a frozen form factor.
+disposition: qualified

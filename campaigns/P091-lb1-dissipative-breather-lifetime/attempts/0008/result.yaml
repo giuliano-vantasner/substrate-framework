@@ -1,0 +1,26 @@
+attempt: 0008
+candidates: [J]
+status: integrated_gate_pass_after_memory_cli_interface_repair
+precheck_interface_failure: >-
+  An auxiliary command passed two paths to memory validate even though the CLI
+  accepts one PATH. Each file then passed separately; no memory content failed.
+commands:
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory/vantasner/decisions/C-SG-016-review.md
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory/vantasner/proposals/P091-lb1-dissipative-breather-lifetime.md
+  - git diff --check
+  - scripts/validate.sh
+process_exit_statuses: [0, 0, 0, 0]
+workflow_results:
+  repository: 'WORKFLOW VALID: 106 claims, 106 accepted, 0 proposals; MIGRATION QUEUE: 218 units, 129 pending, 0 partial'
+  memory: All 392 files valid
+  skill: Skill is valid
+  pytest: 823 passed in 77.57s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+scientific_routes_cited_unchanged:
+  primary: ALL 33 CHECKS PASS [P091]
+  independent: ALL 16 CHECKS PASS [P091-INDEPENDENT]
+  pde: ALL 12 CHECKS PASS [P091-PDE]
+debt: []
+next_attempt: >-
+  Validate the final append-only records and generated consumers without
+  rerunning the unchanged full scientific and repository suites.

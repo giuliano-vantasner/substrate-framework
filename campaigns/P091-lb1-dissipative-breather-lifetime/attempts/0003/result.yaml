@@ -1,0 +1,25 @@
+attempt: 0003
+candidates: [F]
+status: partial_numeric_evidence_then_independent_method_interface_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P091-lb1-dissipative-breather-lifetime/reviews/pde_lifetime_evidence.py
+process_exit_status: 1
+failure: >-
+  The four leapfrog configurations completed, then DOP853 construction failed
+  because SolverTolerances fields are rtol and atol rather than relative and
+  absolute.
+leapfrog_results:
+  - {half_domain: 60.0, dx: 0.2, energy_rms: 0.0060690, action_rms: 0.0066787, balance_residual: 0.00088297}
+  - {half_domain: 60.0, dx: 0.1, energy_rms: 0.0058326, action_rms: 0.0064428, balance_residual: 0.00021233}
+  - {half_domain: 60.0, dx: 0.05, energy_rms: 0.0058094, action_rms: 0.0064215, balance_residual: 0.000052565}
+  - {half_domain: 80.0, dx: 0.1, energy_rms: 0.0058326, action_rms: 0.0064428, balance_residual: 0.00021233}
+interpretation: >-
+  The physical family-reduction discrepancy stabilizes near 0.6 percent while
+  the numerical balance residual decreases at second order and the larger
+  domain agrees to displayed precision. This is useful partial simulation
+  evidence, but the preregistered independent-method requirement has not run.
+selection_criteria_changed: false
+next_attempt: >-
+  Use the shared rtol=1e-9 and atol=1e-11 field names and rerun the same frozen
+  configurations through clean process exit.
