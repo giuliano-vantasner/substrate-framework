@@ -1988,6 +1988,53 @@ units:
       Three direct and two transitive source consumers replay 138 checks. No
       canonical API, accepted claim, release, sampled integration, or NumPy
       compatibility event is added.
+  CM7:
+    disposition: qualified
+    accepted_claims:
+      - C-XOV-001
+      - C-SCR-001
+    qualification: >-
+      CM7's complete exact shifted inverse-square-root crossing is already
+      governed by C-XOV-001 with C-SCR-001 as its conditional-factor
+      dependency. For E>=0, G>0, and U>0 the response rises from the attained
+      floor exp(-sqrt(G/U)) to the unattained limit one; a unique positive
+      crossing exists exactly for floor<c<1 and is G/log(c)^2-U, with the floor
+      crossing at zero and c=1 only at infinity. The squared-log expression is
+      spurious outside that real range. Its exact sensitivities, divergent
+      floor elasticities, and common-scale covariance survive, but every
+      positive target can be fitted by selecting the free level c, and
+      independent channel normalizations move the crossing. The reported 1.84
+      percent is the selected fraction below one eV only under a uniform log-c
+      measure; uniform-c and concentrated laws differ, so it is not a
+      probability. The maximum U_e=26.367367161568605 eV is over four selected
+      Ni, Pd, Ti, and Zr models that all assign Z_conduction=1, with no
+      uncertainty or universal-ceiling field; changing that model changes the
+      maximum. The fixed [0,1e9] keV bisection fails for admissible c=0.9999,
+      and five hundred seeded samples exclude endpoints and cannot prove the
+      arbitrary domain. No predicted coherent rate, common observable,
+      channel dominance, universal material screening maximum, one-eV
+      operating probability, nuclear or coherent mechanism, material
+      selection, yield, heat, or observation is accepted.
+    evidence:
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/source_adjudication.md
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/source-reproduction.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/source-audit.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/check-adjudication.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/input-provenance.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/dependency-audit.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/consumer-audit.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/candidate-comparison.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/evidence/primary-provenance.yaml
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+      - campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/independent_crossover_review.py
+      - memory/vantasner/decisions/CM7-qualified-review.md
+    note: >-
+      P121 closes 44 primary and 34 independent checks after five preserved
+      symbolic-representation or verifier-assumption failures. Three direct and
+      two transitive source consumers replay 131 checks. No canonical API,
+      accepted claim, release, sampled integration, or NumPy compatibility
+      event is added.
   PN6:
     disposition: qualified
     accepted_claims:

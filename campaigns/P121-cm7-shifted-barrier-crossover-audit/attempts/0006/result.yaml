@@ -1,0 +1,22 @@
+campaign: P121
+attempt: 0006
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/independent_crossover_review.py
+results:
+  primary: {exit_code: 0, tally: 44}
+  independent: {exit_code: 0, tally: 34}
+result: >-
+  Both routes derive the complete shifted-factor range, endpoint, inverse,
+  sensitivity, elasticity, scale, free-level identifiability, and threshold-
+  measure ledgers. They reproduce the selected screening inputs and expose the
+  fixed-bracket bisection failure, finite-random-scan limitation, selected
+  one-electron material model, and absent rate normalization. The surviving
+  exact surface is already governed by C-XOV-001 with C-SCR-001.
+compatibility_event: none
+debt: []
+next_attempt: >-
+  Complete predicate, provenance, dependency, nonduplication, impact,
+  consumer, disposition, and integrated-gate records.

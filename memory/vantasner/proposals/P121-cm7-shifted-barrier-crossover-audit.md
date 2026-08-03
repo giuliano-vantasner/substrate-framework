@@ -2,7 +2,7 @@
 description: Exact shifted-barrier inverse, threshold-measure, material-input, and CM7 audit
 author: vantasner
 created: '2026-08-08T10:00:00Z'
-updated: '2026-08-08T10:00:00Z'
+updated: '2026-08-08T10:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - crossover
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P121 CM7 Shifted Barrier Crossover Audit
 

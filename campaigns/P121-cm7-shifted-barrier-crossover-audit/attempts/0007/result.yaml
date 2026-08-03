@@ -1,0 +1,16 @@
+campaign: P121
+attempt: 0007
+status: failed_reporting_query
+candidate: H
+command: >-
+  Generate migration/source-claims.yaml, run targeted repository and memory
+  validation, then summarize dispositions with an inline YAML query.
+result: >-
+  Queue generation and repository validation succeeded with 218 units and 99
+  pending, and both new memory records validated. The trailing reporting query
+  raised KeyError because it guessed the top-level key source_claims.
+diagnosis: generated_queue_reporting_schema_assumption
+scientific_effect: none
+next_attempt: >-
+  Inspect the generated top-level shape, query its actual unit collection, and
+  reserve attempt 0008 for the integrated terminal gate.

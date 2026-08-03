@@ -1,0 +1,25 @@
+campaign: P121
+attempt: 0001
+status: reproduced
+candidate: A
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py
+source_sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2
+exit_code: 0
+terminal_tally: ALL 27 CHECKS PASS
+selected_output:
+  E_G_keV: 985.7655246160418
+  U_e_max_eV: 26.367367161568605
+  floor_c: 1.065e-84
+  one_eV_threshold_c: 3.766e-83
+  excluded_log_window_percent: 1.84
+result: >-
+  The pinned source reproduces all twenty-seven predicates. Its exact inverse
+  and domain remain subject to C-XOV-001, while the numerical bisection,
+  selected material inputs, free-level scan, and physical payoff require the
+  frozen audit.
+compatibility_event: none
+next_attempt: >-
+  Run primary and independent exact domain, elasticity, identifiability,
+  measure, material-provenance, solver, predicate, and novelty audits.

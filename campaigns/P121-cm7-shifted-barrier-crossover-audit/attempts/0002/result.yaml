@@ -1,0 +1,18 @@
+campaign: P121
+attempt: 0002
+status: failed_oracle_representation
+candidate: B-C
+command: >-
+  PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+result: >-
+  Ten checks passed through provenance, source predicate count, compatibility,
+  exact range, monotonicity, and branch residual. The next check failed while
+  comparing SymPy's returned inequality representation structurally with an
+  interval object.
+diagnosis: symbolic_set_representation
+scientific_effect: none
+next_attempt: >-
+  Inspect the exact solver output, compare the positive-domain result
+  extensionally or by endpoint membership, and rerun without changing the
+  inequality or admissible domain.

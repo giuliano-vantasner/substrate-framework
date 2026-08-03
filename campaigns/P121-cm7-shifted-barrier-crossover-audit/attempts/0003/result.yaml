@@ -1,0 +1,18 @@
+campaign: P121
+attempt: 0003
+status: failed_verifier_boolean_conversion
+candidate: E
+command: >-
+  PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+result: >-
+  Thirty checks passed through exact domain, endpoints, invalid-level guards,
+  sensitivities, elasticities, scale covariance, arbitrary-target
+  identifiability, and distinct log-uniform and uniform-c fractions. The next
+  counterexample raised TypeError because SymPy BooleanTrue is not accepted by
+  int() in this version.
+diagnosis: verifier_boolean_conversion
+scientific_effect: none
+next_attempt: >-
+  Evaluate the exact symbolic orderings with bool() and retain the same
+  below-threshold and above-threshold concentrated probability examples.

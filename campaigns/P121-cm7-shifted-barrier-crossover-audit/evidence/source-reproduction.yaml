@@ -1,0 +1,34 @@
+campaign: P121
+source_unit: CM7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py
+sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2
+git_blob: 5cfd67d2301cfe5b72154bd39b50218d136f599c
+size_bytes: 19709
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py
+exit_status: 0
+terminal_tally: ALL 27 CHECKS PASS
+selected_output:
+  E_G_keV: 985.7655246160418
+  U_e_max_eV: 26.367367161568605
+  selected_max_material: Ni
+  floor_c: 1.065e-84
+  one_eV_threshold_c: 3.766e-83
+  excluded_log_window_percent: 1.84
+historical_exposure: >-
+  CM6 executed CM7 and exposed extensive line content before P121. The source
+  queue also exposed its inverse, derivatives, selected inputs, and headline.
+  P121 therefore claims no fresh body or output blinding and froze stronger
+  domain, measure, provenance, solver, mutation, and physical-ceiling gates.
+compatibility:
+  sampled_integration: none
+  np_trapz: absent
+  np_trapezoid: absent
+  native_abort: false
+interpretation: >-
+  The run reproduces twenty-seven source predicates and the selected numeric
+  values. It does not make the free level c a predicted rate, the four-material
+  maximum universal, the log-window length a probability, or the bisection an
+  independent derivation.

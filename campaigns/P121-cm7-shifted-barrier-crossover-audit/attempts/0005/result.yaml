@@ -1,0 +1,17 @@
+campaign: P121
+attempt: 0005
+status: failed_independent_sign_representation
+candidate: H
+command: >-
+  PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/independent_crossover_review.py
+result: >-
+  Nine independent checks passed through hashes, predicate count, fresh
+  inversion, positive domain, and endpoint limits. SymPy then refused to coerce
+  the symbolic finite-input inequality exp(-sqrt(G/(U+1)))<1 to bool.
+diagnosis: independent_symbolic_sign_representation
+scientific_effect: none
+next_attempt: >-
+  Check the exact exponent's negative sign and nonzero status directly, which
+  proves the finite response lies strictly between zero and one without a
+  numeric substitution or weakened premise.

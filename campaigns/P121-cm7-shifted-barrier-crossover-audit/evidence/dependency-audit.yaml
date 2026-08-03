@@ -1,0 +1,34 @@
+campaign: P121
+base_release: v0.97.0
+accepted_claims_reviewed:
+  C-XOV-001: unchanged_complete_shifted_factor_range_inverse_sensitivity_scale_and_nonidentifiability_theorem
+  C-SCR-001: unchanged_conditional_shifted_factor_and_nonrate_nonmaterial_ceiling
+  C-CMP-001: unchanged_conditional_composite_factor_with_no_flat_physical_rate_or_common_observable
+source_candidate_dependencies:
+  CM1: {disposition: qualified, authority: only_through_C_SCR_001}
+  CM3: {disposition: qualified, authority: only_through_C_XOV_001_and_C_SCR_001}
+  CM6: {disposition: qualified, authority: none_from_lexical_classification}
+  CM7: {disposition: qualified_by_P121, authority: only_through_C_XOV_001_and_C_SCR_001}
+  GB6: {disposition: pending_adjudication, authority: none}
+  WN7: {disposition: pending_adjudication, authority: none}
+dependency_cycles:
+  - CM1 lists CM7 while CM7 imports CM1's factor narrative; only C-SCR-001 supplies authority in either direction.
+  - CM3 lists CM7 while CM7 calls its positive-floor window narrower than CM3's surrogate; only C-XOV-001 supplies the reconciled theorem.
+  - CM6 classifies CM7 as A-side while CM7 lists CM6; the finite lexical result grants no physical premise.
+  - GB6 and WN7 are downstream scanner descendants and their green execution cannot validate CM7's physics.
+dependency_closure:
+  exact_factor: C-SCR-001
+  exact_range_and_inverse: C-XOV-001
+  flat_rate_rejection: C-CMP-001
+  imported_physical_rate: none
+  imported_material_realization: none
+  imported_probability_distribution_over_c: none
+  imported_universal_screening_maximum: none
+novelty_closure:
+  claims_proposed: []
+  claims_mapped_by_disposition: [C-XOV-001, C-SCR-001]
+  note: >-
+    The source's complete surviving exact surface is already accepted. Mapping
+    C-XOV-001 and its factor dependency records reuse; it does not blanket-
+    promote the selected screening model or physical prose.
+debt: []

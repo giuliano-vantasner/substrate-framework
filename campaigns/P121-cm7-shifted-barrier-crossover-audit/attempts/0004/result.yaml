@@ -1,0 +1,19 @@
+campaign: P121
+attempt: 0004
+status: failed_verifier_convergence_assumption
+candidate: G
+command: >-
+  PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+result: >-
+  Thirty-nine checks passed, including screening-model provenance, the exact
+  1.84-percent measure statement, selected bisection agreement, and failure of
+  the fixed bracket for an admissible near-one level. The next probe failed
+  because sixty and three hundred iterations were assumed bitwise identical
+  despite the source's very wide initial bracket.
+diagnosis: verifier_iteration_saturation_assumption
+scientific_effect: none
+next_attempt: >-
+  Measure errors at several iteration counts, require monotone convergence to
+  the exact inverse and identify the actual float64 saturation range without
+  weakening the source's bracket-failure result.

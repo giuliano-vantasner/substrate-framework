@@ -1,0 +1,23 @@
+campaign: P121
+source_unit: CM7
+contract:
+  proposal_sha256: e7e6b6d1fffa9aa9606e9aed825544f78ae4b8213547aed6d0f623023a280045
+  frozen_proposal_sha256: e7e6b6d1fffa9aa9606e9aed825544f78ae4b8213547aed6d0f623023a280045
+source:
+  CM7_sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2
+  screening_sha256: 8ed6d54c8e3626f58ee2b3da78ce6eea7f4689092103dc23ed888b985e4cb4c3
+  materials_sha256: 3639e1348fce91d38392c9405f62321059aec0452c4628262a515297d9a27f30
+verification:
+  primary:
+    path: campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+    sha256: c3681c96bee0e1a30945fc3d4e960e8a41c0f6f5f23780583cc008ad7e61ee1a
+    tally: 44
+  independent:
+    path: campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/independent_crossover_review.py
+    sha256: f88aade3c03182af632d07dc77f03084bab7d1758f7ba735577b0ab84f35b73a
+    tally: 34
+canonical_implementation_changed: false
+new_package_API: none
+oracle: exact_real_calculus_accepted_API_match_probability_measure_countermodels_pinned_model_rederivation_and_bracket_status
+sampled_integration: none
+numpy_compatibility_event: none

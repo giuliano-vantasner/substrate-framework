@@ -1,0 +1,34 @@
+campaign: P121
+source_unit: CM7
+headline_verdict: qualified
+surviving_content:
+  - For E>=0, G>0, and U>0, P(E)=exp(-sqrt(G/(E+U))) is continuous and strictly increasing from the attained floor exp(-sqrt(G/U)) to the unattained limit one.
+  - A unique positive crossing exists exactly for exp(-sqrt(G/U))<c<1 and is E_x=G/log(c)^2-U; the floor crosses at zero and c=1 occurs only at infinite input.
+  - The exact interior sensitivities are partial_c E_x=-2G/(c*log(c)^3)>0, partial_G E_x=1/log(c)^2>0, and partial_U E_x=-1.
+  - The inverse is homogeneous of degree one under a common energy rescaling, and its relative sensitivities diverge at the zero-crossing floor.
+  - Every positive target energy can be produced by choosing c=P(E_T), so a free c leaves the crossing nonidentified.
+  - Under a declared uniform log-c measure only, the fraction below threshold E_T is 1-sqrt(U/(U+E_T)).
+  - The selected source inputs give G=985.7655246160418 keV and a four-model maximum U=26.367367161568605 eV for Ni.
+qualified_or_rejected_content:
+  - SymPy's squared-log solve does not establish the real c domain; for c>1 the same expression returns a factor 1/c rather than c.
+  - The source's derivative sign probes use selected substitutions; P121 supplies the global branch proof.
+  - The four metals all assign Z_conduction=1 as a model choice, carry no uncertainty or universal-ceiling field, and do not exhaust materials.
+  - Mutating Ni's assigned conduction count from one to sixty-four doubles U because the declared model scales as n_e^(1/6), so the reported maximum is model dependent.
+  - The one-eV 1.84-percent statement is a length fraction in one chosen log-c measure, not a probability over levels, materials, experiments, or operating states.
+  - Uniform-c gives a different fraction, and concentrated probability laws can make the below-threshold probability zero or one.
+  - The source bisection uses the fixed bracket [0,1e9] keV without checking that the response brackets c; an admissible c=0.9999 has an exact root above the bracket and returns a false boundary result.
+  - Three hundred bisection iterations greatly exceed float64 saturation for selected bracketed cases; convergence is regression, not independent evidence for an exact inverse.
+  - The random interval excludes both endpoints and the bottom 0.1 percent of the log window, and five hundred seeded draws cannot prove arbitrary-level validity.
+  - A dimensionless factor equality has no common-observable normalization; independent channel prefactors move the formal crossing.
+  - The imported Gamow and screening formulas remain conditional source models and do not derive a coherent rate, cross section, material mechanism, yield, heat, or observation.
+exact_positive_surface: >-
+  The complete exact mathematical surface is already C-XOV-001, whose
+  dependency C-SCR-001 owns the conditional shifted factor and explicit
+  physical ceiling. P121 adds source-level audit evidence, not a theorem.
+physical_and_governance_ceiling: >-
+  No predicted level, physical rate equality, common observable, channel
+  dominance, universal material screening maximum, one-eV operating
+  probability, nuclear or coherent mechanism, yield, heat, or observation
+  follows from CM7.
+novelty_verdict: no_new_scientific_claim_or_package_API
+compatibility_event: none

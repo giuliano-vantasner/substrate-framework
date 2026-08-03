@@ -1,0 +1,50 @@
+campaign: P121
+source_unit: CM7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+inputs:
+  - unit: CM7
+    role: noncanonical_candidate
+    path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py
+    sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2
+    git_blob: 5cfd67d2301cfe5b72154bd39b50218d136f599c
+    size_bytes: 19709
+  - unit: screening_support
+    role: selected_noncanonical_parameter_model
+    path: engineering/screening/screening.py
+    sha256: 8ed6d54c8e3626f58ee2b3da78ce6eea7f4689092103dc23ed888b985e4cb4c3
+    git_blob: 728fa930cb5539e701c777490e66ea51dc372ef1
+    size_bytes: 19339
+  - unit: materials_support
+    role: live_imported_noncanonical_constants
+    path: engineering/dbd/materials.py
+    sha256: 3639e1348fce91d38392c9405f62321059aec0452c4628262a515297d9a27f30
+    git_blob: c99a0e02a50f1c1ffc396a0fcfc20c3f3eda8784
+    size_bytes: 27628
+selected_model:
+  pair: d+d
+  gamow_energy_keV: 985.7655246160418
+  metals: [Ni, Pd, Ti, Zr]
+  conduction_electrons_per_atom: [1.0, 1.0, 1.0, 1.0]
+  selected_maximum_material: Ni
+  selected_maximum_screening_eV: 26.367367161568605
+  conduction_count_status: source_design_choice
+  uncertainty_field: absent
+  universal_ceiling_field: absent
+  exhaustion_of_materials: false
+mutated_model:
+  material: Ni
+  assigned_conduction_electrons_per_atom: 64.0
+  screening_ratio_to_selected_model: 2.0
+  interpretation: >-
+    The declared Thomas-Fermi model scales as n_e^(1/6); changing a design
+    assignment changes the maximum without changing any accepted theorem.
+authority:
+  - C-XOV-001 and src/substrate_framework/crossovers.py govern the exact range inverse sensitivities scale covariance and physical ceiling.
+  - C-SCR-001 and src/substrate_framework/screened_barrier.py govern only the conditional factor and its explicit non-rate non-material ceiling.
+  - C-CMP-001 is used only to reject importing CM2 as a flat physical rate or common observable.
+  - The three pinned source files are evidence, not accepted premises.
+external_overlay:
+  source_repo_dirty_compatibility_changes_excluded: true
+  source_HEAD_pinned: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  CM7_bytes_modified_by_overlay: false
+debt: []

@@ -1,0 +1,38 @@
+campaign: P121
+selection_frozen_before_renewed_source_inspection: true
+criteria_order:
+  - accepted dependency closure and exact response domain range endpoints logarithm and inverse
+  - dimensions common-scale covariance sensitivities and elasticities
+  - free-level identifiability and separation from common physical observables
+  - threshold-measure declaration distribution dependence and parameter provenance
+  - mutation sensitivity solver completeness novelty parameter economy and API value
+  - complete predicate dependency cycle input nonduplication and consumer review
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: All twenty-seven predicates execute, but selected symbolic and numeric checks do not establish their broad physical narrative.
+  B:
+    decision: selected_as_accepted_exact_closure
+    reason: C-XOV-001 and C-SCR-001 close the complete exact range inverse endpoint sensitivity scale and ceiling ledger.
+  C:
+    decision: selected_as_branch_and_mutation_audit
+    reason: Endpoint outside-range wrong-sign unscreened and c-above-one probes make the logarithm domain load bearing.
+  D:
+    decision: selected_as_identifiability_audit
+    reason: Exact elasticities and arbitrary-target inversion show scale behavior and the free-level degeneracy.
+  E:
+    decision: selected_as_measure_audit
+    reason: Log-uniform uniform-c and concentrated measures separate window geometry from probability.
+  F:
+    decision: selected_as_parameter_provenance_audit
+    reason: Pinned material models and a conduction-count mutation bound the four-material maximum.
+  G:
+    decision: selected_as_numeric_regression_audit
+    reason: Bracketed roots converge while an admissible near-one level exposes the fixed-bracket defect.
+  H:
+    decision: selected_no_new_claim_or_API
+    reason: Independent derivation and complete governance closure find no theorem beyond accepted APIs.
+claims_decision: no_new_claim
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

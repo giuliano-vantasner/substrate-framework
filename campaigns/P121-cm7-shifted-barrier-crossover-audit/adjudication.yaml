@@ -1,0 +1,56 @@
+campaign: P121
+title: CM7 shifted-barrier crossover and threshold-measure audit
+source_baseline: substrate@6d1f4e0
+source_units: [CM7]
+base_release: v0.97.0
+release_after_adjudication: v0.97.0
+adjudicated_at: '2026-08-08T10:30:00Z'
+selected_candidates:
+  - {id: B, reason: Accepted C-XOV-001 and C-SCR-001 close the exact range inverse endpoint sensitivity scale and ceiling ledger.}
+  - {id: C, reason: Branch endpoint and mutation probes make the real level domain load bearing.}
+  - {id: D, reason: Exact elasticities and arbitrary-target inversion close scale and free-level identifiability.}
+  - {id: E, reason: Competing measures and concentrated laws separate window length from probability.}
+  - {id: F, reason: Pinned model inputs and a conduction-count mutation bound the selected material maximum.}
+  - {id: G, reason: Bracket and convergence auditing qualifies bisection and random scans as regression only.}
+  - {id: H, reason: Independent predicate dependency impact nonduplication and consumer review closes governance.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-XOV-001, decision: unchanged_complete_shifted_crossover_theorem_and_nonidentifiability_ceiling}
+  - {id: C-SCR-001, decision: unchanged_conditional_factor_and_nonrate_nonmaterial_ceiling}
+  - {id: C-CMP-001, decision: unchanged_no_flat_physical_rate_or_common_observable}
+evidence:
+  source_reproduction_attempt: attempts/0001/result.yaml
+  primary_symbolic_set_failure: attempts/0002/result.yaml
+  primary_boolean_failure: attempts/0003/result.yaml
+  primary_convergence_assumption_failure: attempts/0004/result.yaml
+  independent_sign_representation_failure: attempts/0005/result.yaml
+  exact_routes: attempts/0006/result.yaml
+  queue_reporting_failure: attempts/0007/result.yaml
+  terminal_gate: attempts/0008/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_crossover_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/CM7-qualified-review.md
+source_disposition:
+  CM7: qualified
+validation_commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/independent_crossover_review.py
+  - hash-pinned consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

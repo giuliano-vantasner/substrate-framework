@@ -1,0 +1,28 @@
+campaign: P121
+distinct_new_scientific_theorem: rejected
+surviving_surface:
+  shifted_factor_range: C-XOV-001
+  shifted_factor_inverse: C-XOV-001
+  endpoint_and_domain_classification: C-XOV-001
+  sensitivities_and_scale_covariance: C-XOV-001
+  arbitrary_target_nonidentifiability: C-XOV-001
+  conditional_factor_definition: C-SCR-001
+  physical_nonrate_and_nonmaterial_ceiling: C-SCR-001
+additional_campaign_evidence:
+  - threshold window fractions depend on the declared measure and probability law
+  - the selected four-material maximum depends on assigned screening-model inputs
+  - the fixed source bisection bracket fails for an admissible near-one level
+  - the finite random interval is not an arbitrary-domain proof
+package_search:
+  canonical_symbol: shifted_barrier_crossover_energy
+  impact: LOW
+  direct_dependents: 2
+  affected_processes: 0
+promotion_decision: >-
+  Retain threshold-measure, material-provenance, solver, and predicate auditing
+  inside immutable P121. Add no duplicate claim, package API, focused package
+  test, release, or generated accepted documentation.
+registry_delta: none
+release_delta: none
+package_delta: none
+debt: []

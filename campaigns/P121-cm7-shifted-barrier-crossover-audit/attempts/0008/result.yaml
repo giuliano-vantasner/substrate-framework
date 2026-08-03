@@ -1,0 +1,35 @@
+campaign: P121
+attempt: 0008
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P121-cm7-shifted-barrier-crossover-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P121-cm7-shifted-barrier-crossover-audit/reviews/independent_crossover_review.py
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  primary_tally: 44
+  independent_tally: 34
+  accepted_claims: 132
+  source_units: 218
+  pending_units: 99
+  qualified_units: 107
+  pytest_tests: 1075
+  debt: []
+results:
+  primary: {exit_code: 0, tally: 44}
+  independent: {exit_code: 0, tally: 34}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 132, source_units: 218, pending_units: 99, qualified_units: 107}
+  memory: {files_valid: 503}
+  skill: {valid: true}
+  pytest: {passed: 1075, seconds: 95.66}
+  diff_check: {exit_code: 0}
+result: >-
+  CM7 is terminally qualified through C-XOV-001 and C-SCR-001. The exact and
+  independent routes, repository governance, generated queue, all memory,
+  skill validation, full test suite, and whitespace check pass with no debt.
+compatibility_event: none
+next_attempt: >-
+  Commit the immutable P121 scientific adjudication, checkpoint the parent
+  effort separately, and continue with the next pending source unit GB1.

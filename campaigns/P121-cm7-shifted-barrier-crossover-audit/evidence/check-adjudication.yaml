@@ -1,0 +1,36 @@
+campaign: P121
+source_unit: CM7
+predicate_count: 27
+predicates:
+  - {index: 1, label: symbolic_solve_one_root, verdict: qualified_algebraic_reproduction, reason: SymPy returns one squared-log expression under positive symbols but does not by itself prove the real response range or branch domain.}
+  - {index: 2, label: symbolic_root_closed_form, verdict: exact_conditional, reason: The formula is exact on the declared real branch exp(-sqrt(G/U))<c<1 and is already C-XOV-001.}
+  - {index: 3, label: branch_residual, verdict: exact, reason: Substitution c=exp(-k) with k>0 gives zero residual on the positive square-root branch.}
+  - {index: 4, label: admissibility_rearrangement, verdict: qualified_identity_only, reason: The checked rational identity is exact but does not itself prove the inequality direction logarithm sign or endpoint classification.}
+  - {index: 5, label: floor_matches_zero_input_limit, verdict: exact, reason: The attained floor is exp(-sqrt(G/U)).}
+  - {index: 6, label: upper_limit_one, verdict: exact_with_unattained_endpoint, reason: The supremum is one and no finite input attains it.}
+  - {index: 7, label: positive_floor_narrows_window, verdict: weak_selected_predicate, reason: The check only compares the floor with zero; the exact range and CM3 surrogate distinction are governed by C-XOV-001.}
+  - {index: 8, label: shift_derivative, verdict: exact, reason: The interior derivative with respect to U at fixed G and c is minus one.}
+  - {index: 9, label: barrier_derivative, verdict: exact_formula_selected_sign_probe, reason: The formula is globally positive on the interior although the source proves the sign at one substituted c.}
+  - {index: 10, label: level_derivative, verdict: exact_formula_selected_sign_probe, reason: The formula is globally positive for 0<c<1 although the source checks one point.}
+  - {index: 11, label: upper_endpoint_divergence, verdict: exact, reason: E_x tends to positive infinity as c approaches one from below.}
+  - {index: 12, label: floor_endpoint_zero, verdict: exact, reason: The nonnegative crossing at c equal to the floor is exactly E=0 rather than an interior positive crossing.}
+  - {index: 13, label: free_symbol_audit, verdict: exact_syntax_with_nonidentifiability_ceiling, reason: The expression contains G U and c, but syntax alone does not make c physically independent; arbitrary-target inversion proves its free-level nonidentifiability.}
+  - {index: 14, label: selected_true_residual, verdict: numeric_regression, reason: The selected floating formula satisfies the declared response within tolerance.}
+  - {index: 15, label: sign_flipped_fake_rejection, verdict: selected_mutation_regression, reason: The chosen wrong shift sign fails the defining equality at the selected point.}
+  - {index: 16, label: unscreened_fake_rejection, verdict: selected_mutation_regression, reason: Omitting the positive shift fails the selected shifted equation; U=0 is a different valid specialization.}
+  - {index: 17, label: above_one_fake_margin, verdict: selected_tolerance_regression, reason: The selected fabricated root misses by more than the declared margin but does not replace the exact domain proof.}
+  - {index: 18, label: selected_inside_domain, verdict: numeric_regression, reason: The chosen level is between the selected floor and one.}
+  - {index: 19, label: below_floor_rejection, verdict: selected_domain_regression, reason: The source guard rejects one chosen below-floor level; the exact classifier covers the whole range.}
+  - {index: 20, label: level_at_or_above_one_rejection, verdict: selected_domain_regression, reason: The guard rejects its chosen upper invalid values; exact response range supplies the proof.}
+  - {index: 21, label: six_scan_levels_admissible, verdict: selected_numeric_regression, reason: Six chosen levels lie in the selected admissible interval and are not an exhaustive domain test.}
+  - {index: 22, label: closed_form_matches_bisection, verdict: qualified_numeric_regression, reason: Agreement holds for six bracketed values, but bisection repeats the same equation and the fixed bracket fails at admissible c=0.9999.}
+  - {index: 23, label: selected_scan_increasing, verdict: selected_numeric_regression, reason: Ordering of six values is consistent with the exact positive derivative but does not prove global monotonicity.}
+  - {index: 24, label: one_eV_threshold, verdict: exact_conditional_selected_inputs, reason: The threshold identity is exact for declared G U and E_T; it is not a predicted physical operating level.}
+  - {index: 25, label: bottom_ten_percent_log_window, verdict: qualified_measure_statement, reason: The 1.84-percent result holds for the selected U and a uniform log-c window length, not an undeclared probability law or universal fraction.}
+  - {index: 26, label: random_residual_scan, verdict: finite_numeric_regression, reason: Five hundred seeded interior samples pass but exclude endpoints and cannot prove arbitrary levels.}
+  - {index: 27, label: random_energy_span, verdict: selected_seed_regression, reason: The seeded sample spans sub-eV and multi-keV values but supplies no distributional prediction or physical population.}
+summary:
+  source_predicates_reproduced: 27
+  scientific_claims_promoted: 0
+  mapped_existing_claims: [C-XOV-001, C-SCR-001]
+  terminal_disposition: qualified
