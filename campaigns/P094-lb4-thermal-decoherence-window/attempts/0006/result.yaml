@@ -1,0 +1,32 @@
+attempt: 0006
+candidates: [B, C, D, E, G, I, J]
+status: targeted_scientific_and_dependency_route_passed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P094-lb4-thermal-decoherence-window/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P094-lb4-thermal-decoherence-window/reviews/independent_stochastic_review.py
+  - .venv/bin/python -m pytest -q tests/test_coherence_gates.py tests/test_damped_oscillator.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P086-ny3-coherence-nucleation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P092-lb2-coherence-threshold/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P091-lb1-dissipative-breather-lifetime/verify.py
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory
+  - git diff --check
+results:
+  primary_verifier: ALL 60 CHECKS PASS [P094]
+  independent_review: ALL 37 CHECKS PASS [P094-INDEPENDENT]
+  focused_tests: 36 passed
+  C_COH_001_replay: ALL 37 CHECKS PASS [P086]
+  C_DYN_001_replay: ALL 38 CHECKS PASS [C-DYN-001]
+  C_SG_016_replay: ALL 33 CHECKS PASS [P091]
+  repository_validation: WORKFLOW VALID; 107 claims, 107 accepted, 1 proposals; 218 migration units, 127 pending, 0 partial
+  memory_validation: all 399 files valid
+  diff_check: passed
+process_exit_statuses: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+scientific_verdict: >-
+  Candidate B closes as a distinct exact conditional Brownian-phase theorem.
+  Candidate C independently refutes LB4's universal coefficient under an
+  explicit Langevin convention. Candidates E, G, and I bound lifetime,
+  comparator, and consumer interpretations. No physical FDT, temperature,
+  breather-survival, population, or discharge claim is promoted.
+selected_claim: C-COH-002
+next_attempt: Execute the governed promotion transaction and one integrated validation boundary.

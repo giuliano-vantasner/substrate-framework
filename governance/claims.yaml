@@ -4792,3 +4792,54 @@ claims:
     accepted_in: v0.79.0
     challenges: []
     supersedes: []
+  - id: C-COH-002
+    statement: >-
+      For the declared Brownian phase process
+      delta_t=sqrt(2*D)*W_t with D>=0, t>=0, delta_0=0, and a standard real
+      Wiener process, the exact integer-harmonic characteristic is
+      E[exp(i*n*delta_t)]=exp(-n^2*D*t), and Var(delta_t)=2*D*t. Hence the
+      one-ensemble mean phasor is exp(-D*t), while the iid same-time pair
+      coherence is its square exp(-2*D*t); neither is a survival probability.
+      For a positive uniform observation window T, their temporal averages
+      are respectively (1-exp(-D*T))/(D*T) and
+      (1-exp(-2*D*T))/(2*D*T), with continuous value one at D=0, and they are
+      not their endpoint values. Separately, if an independent deterministic
+      coordinate-amplitude envelope exp(-Gamma*t/2) with Gamma>=0 is declared,
+      its product with the Brownian mean phasor is the coherent mean-field
+      factor exp(-(Gamma/2+D)*t), whose quadratic factor is
+      exp(-(Gamma+2*D)*t). These formulas derive no physical diffusion
+      coefficient, fluctuation-dissipation normalization, effective
+      temperature, oscillator or breather phase projection, total energy,
+      lifetime, survival fraction, population, event rate, or material or
+      discharge map.
+    provenance: campaigns/P094-lb4-thermal-decoherence-window/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-COH-001
+      - C-DYN-001
+    evidence:
+      - campaigns/P094-lb4-thermal-decoherence-window/verify.py
+      - campaigns/P094-lb4-thermal-decoherence-window/reviews/independent_stochastic_review.py
+      - campaigns/P094-lb4-thermal-decoherence-window/evidence/source-reproduction.yaml
+      - campaigns/P094-lb4-thermal-decoherence-window/evidence/source-audit.yaml
+      - campaigns/P094-lb4-thermal-decoherence-window/evidence/check-adjudication.yaml
+      - campaigns/P094-lb4-thermal-decoherence-window/evidence/consumer-audit.yaml
+      - campaigns/P094-lb4-thermal-decoherence-window/evidence/candidate-comparison.yaml
+      - campaigns/P094-lb4-thermal-decoherence-window/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-COH-002-review.md
+      - tests/test_coherence_gates.py
+    assumptions:
+      - The phase process is declared exactly as delta_t=sqrt(2*D)*W_t with constant exact D>=0, standard real Wiener normalization Var(W_t)=t, delta_0=0, and t>=0.
+      - Characteristic harmonics are integers. The pair formula additionally assumes two iid phase samples at the same elapsed time.
+      - Uniform-window averages use normalized Lebesgue time averaging over [0,T] with T>0 and the continuous D=0 extension.
+      - The damped composition assumes an independent deterministic coordinate-amplitude envelope exp(-Gamma*t/2); its quadratic factor is the square of that coherent mean factor, not pointwise mechanical energy.
+      - D and Gamma are supplied nonnegative inverse-time quantities in one convention. No stochastic field equation, bath spectrum, quantum model, temperature, energy, action, physical unit, or phase-coordinate map is imported.
+      - Mean phasor, iid pair coherence, endpoint value, temporal average, coordinate amplitude, quadratic factor, energy, survival probability, population, and rate retain distinct meanings.
+    comparators:
+      - LB4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; main formulas and the 0.125 target were previously exposed, while P094 froze candidates and structural criteria before source execution, remaining-body inspection, output, or additional consumer output
+    accepted_in: v0.80.0
+    challenges: []
+    supersedes: []

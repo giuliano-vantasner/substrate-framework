@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 127
-  qualified: 79
+  pending_adjudication: 126
+  qualified: 80
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5823,8 +5823,36 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-COH-001
+  - C-COH-002
+  - C-SG-016
+  - C-DYN-001
+  qualification: LB4 contains a distinct exact conditional Brownian-phase theorem, but it does not derive
+    its physical phase process or diffusion coefficient. Its FDT predicate is a self-equality; the cited
+    Ohmic and coth sources do not derive nonzero white zero-point noise at omega_b; and dimensional consistency
+    cannot fix the admitted phase-projection constant. For the declared Brownian convention, variance
+    is 2*D*t, mean phasor is exp(-D*t), iid pair coherence is exp(-2*D*t), and finite-window averages
+    differ from endpoint factors. An explicit Langevin oscillator gives an angle-dependent phase diffusion
+    and fixed-energy average D=Gamma*Theta/(4*E) under its conventions, not LB4's factor-one formula,
+    while its energy evolves stochastically. C-SG-016 also rejects a global fixed-energy lifetime composition.
+    The broad free grid can reproduce any target in (0,1), so bracketing 0.125 is not predictive. No survival,
+    population, accumulation, spark, DBD, material, or physical-unit map is accepted.
+  evidence:
+  - campaigns/P094-lb4-thermal-decoherence-window/reviews/source_adjudication.md
+  - campaigns/P094-lb4-thermal-decoherence-window/evidence/source-reproduction.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/evidence/source-audit.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/evidence/check-adjudication.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/evidence/consumer-audit.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/evidence/candidate-comparison.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/attempts/0001/result.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/attempts/0006/result.yaml
+  - campaigns/P094-lb4-thermal-decoherence-window/verify.py
+  - campaigns/P094-lb4-thermal-decoherence-window/reviews/independent_stochastic_review.py
+  - memory/vantasner/decisions/C-COH-002-review.md
+  note: P094 promotes only C-COH-002's exact conditional Brownian-phase and observable-separation APIs.
+    Exact code uses no NumPy quadrature alias; sampled integration remains behind trapezoid_integral.
 - source_unit: MC1
   phase: phase-27
   path: merged-framework/bridges/phase-27/bridge_MC1_constitutive_reduction.py

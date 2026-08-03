@@ -1,0 +1,184 @@
+campaign: P094
+source_unit: LB4
+source_sha256: e33361e6985002e76342203716fd00ca72c22f905590825a6c064fe472b0d103
+terminal_tally: ALL 40 CHECKS PASS
+review_rule: >-
+  A passing source predicate is classified individually. Literal
+  self-equalities, algebra conditional on rejected premises, comparator
+  overlap, parameter declarations, asymptotic extrapolations, and naming
+  hygiene do not validate the physical headline.
+checks:
+  - id: 1
+    predicate: FDT noise strength equals 2*Gamma*Theta_eff
+    decision: rejected_self_equality
+    reason: The source defines the two sides identically and supplies no stochastic equation, covariance derivation, bath limit, or phase projection.
+  - id: 2
+    predicate: classical limit Theta_eff/(k_B*T_op) tends to one
+    decision: qualified_conditional_algebra
+    reason: The coth expression has this exact limit, but that expression is not thereby the noise scale of the breather phase.
+  - id: 3
+    predicate: classical leading term Theta_eff is k_B*T_op
+    decision: qualified_conditional_algebra
+    reason: This is the leading coth expansion for the supplied scale only.
+  - id: 4
+    predicate: zero-temperature Theta_eff tends to hbar*omega_b/2
+    decision: qualified_conditional_algebra
+    reason: This is an exact fixed-frequency coth limit, not a derivation of nonzero white zero-point phase noise.
+  - id: 5
+    predicate: Theta_eff is at least hbar*omega_b/2
+    decision: qualified_formula_bound
+    reason: The bound follows from the supplied positive-frequency coth formula; the physical noise interpretation remains unproved.
+  - id: 6
+    predicate: Gamma_phi equals Gamma*Theta_eff/E_b
+    decision: rejected_undeclared_phase_projection
+    reason: Dimensional consistency cannot fix the admitted order-one projection coefficient, and an explicit Langevin oscillator gives a different averaged coefficient.
+  - id: 7
+    predicate: Gamma_phi increases with T_op
+    decision: qualified_algebra_of_rejected_model
+    reason: The derivative is correct only after importing the unaccepted Gamma_phi formula and mode assignment.
+  - id: 8
+    predicate: sampled low-temperature Gamma_phi is below sampled high-temperature Gamma_phi
+    decision: duplicate_conditional_sample
+    reason: The sampled inequality adds no authority beyond check 7.
+  - id: 9
+    predicate: derivative of Gamma_phi with E_b is negative
+    decision: qualified_algebra_of_rejected_model
+    reason: The sign is elementary for the supplied quotient but does not derive the quotient.
+  - id: 10
+    predicate: sampled energy derivative is negative
+    decision: duplicate_conditional_sample
+    reason: This repeats check 9 at declared inputs.
+  - id: 11
+    predicate: Gamma_phi tends to zero with Gamma
+    decision: qualified_algebra_of_rejected_model
+    reason: This is a limit of the inserted proportionality, not an independently derived fluctuation-dissipation limit.
+  - id: 12
+    predicate: Gamma_phi is linear in Gamma
+    decision: qualified_algebra_of_rejected_model
+    reason: Linearity is built into the asserted formula.
+  - id: 13
+    predicate: visibility exp(-variance/2) equals exp(-Gamma_phi*t)
+    decision: split_and_corrected
+    reason: >-
+      C-COH-002 accepts exp(-D*t) as the mean phasor for a declared Brownian
+      phase of variance 2*D*t. Pair visibility is exp(-2*D*t), and neither is
+      a survival probability or a validation of LB4's physical D.
+  - id: 14
+    predicate: phase_rms squared equals Gamma_phi*t
+    decision: refuted_factor_two
+    reason: Under the declared delta=sqrt(2*D)*W convention, phase variance and RMS squared equal 2*D*t.
+  - id: 15
+    predicate: Gamma_dec equals Gamma/2 plus Gamma_phi
+    decision: accepted_only_as_declared_mean_factor
+    reason: >-
+      Independent multiplication of a deterministic coordinate-amplitude
+      envelope and Brownian mean phasor gives this exponent. It is not energy,
+      pair coherence, survival, population, or a breather lifetime.
+  - id: 16
+    predicate: endpoint exponential equals one at zero exponent
+    decision: accepted_elementary_endpoint
+    reason: This is an exact property of the declared coherent mean factor, not a finite-window average.
+  - id: 17
+    predicate: endpoint exponential lies in (0,1] for positive inputs
+    decision: accepted_elementary_endpoint
+    reason: The bound is exact for the declared endpoint factor only.
+  - id: 18
+    predicate: derivative with respect to Gamma_dec is negative
+    decision: accepted_elementary_endpoint
+    reason: The derivative is exact for positive window and rate.
+  - id: 19
+    predicate: sampled Gamma_dec derivative is negative
+    decision: duplicate_conditional_sample
+    reason: This repeats check 18 at declared inputs.
+  - id: 20
+    predicate: derivative with respect to t_w is negative
+    decision: accepted_elementary_endpoint
+    reason: The derivative is exact for positive rate and window.
+  - id: 21
+    predicate: sampled window derivative is negative
+    decision: duplicate_conditional_sample
+    reason: This repeats check 20 at declared inputs.
+  - id: 22
+    predicate: all declared grid endpoint factors lie in (0,1]
+    decision: reproduced_declared_inputs
+    reason: This is guaranteed by the exponential form and does not validate the ranges or physical interpretation.
+  - id: 23
+    predicate: the grid band brackets 0.125
+    decision: rejected_comparator_conditioned
+    reason: Broad free input ranges can bracket the inserted comparator and do not constitute a prediction.
+  - id: 24
+    predicate: the grid maximum exceeds twice the minimum
+    decision: reproduced_arbitrary_range
+    reason: The width follows from the selected parameter box; no physical range was derived.
+  - id: 25
+    predicate: the grid overlaps [0.03,0.4]
+    decision: rejected_comparator_conditioned
+    reason: The interval is chosen around the comparator and supplies no discriminating oracle.
+  - id: 26
+    predicate: the central value is within roughly a factor three of 0.125
+    decision: rejected_comparator_conditioned
+    reason: The central inputs are unsupported and closeness cannot select the model.
+  - id: 27
+    predicate: A_acc equals tau*f_rep equals f_rep/Gamma
+    decision: qualified_dimensionless_identity
+    reason: The identity follows only after declaring tau=1/Gamma; C-SG-016 rejects that as a global finite-amplitude lifetime.
+  - id: 28
+    predicate: the selected DBD example has A_acc much greater than one
+    decision: rejected_selected_input
+    reason: No population, repetition-rate, formation, persistence, or exclusivity dynamics derive the DBD selector.
+  - id: 29
+    predicate: the selected spark example has A_acc at most order one
+    decision: rejected_selected_input
+    reason: The conclusion is inserted through example values and an unproved event classification.
+  - id: 30
+    predicate: A_acc increases as Gamma falls
+    decision: qualified_elementary_identity
+    reason: This is exact for f_rep/Gamma with fixed f_rep, but it does not validate the lifetime or discharge map.
+  - id: 31
+    predicate: lossless limit gives endpoint factor one
+    decision: qualified_model_limit
+    reason: The limit follows from LB4's assumed proportional diffusion coefficient; C-COH-002 separately gives the declared zero-rate limit without deriving that physical coefficient.
+  - id: 32
+    predicate: infinite damping gives endpoint factor zero and no breather
+    decision: rejected_out_of_regime_extrapolation
+    reason: The exponential tends to zero, but the weak-noise underdamped phase model does not prove an overdamped existence or survival theorem.
+  - id: 33
+    predicate: a fabricated positive constant fails the infinite-damping limit
+    decision: tautological_countercomparison
+    reason: Rejecting an arbitrary constant does not validate LB4's model outside its derivation regime.
+  - id: 34
+    predicate: the source exponential and fabricated constant have different limits
+    decision: tautological_countercomparison
+    reason: This restates check 33.
+  - id: 35
+    predicate: E_b tending to zero sends the endpoint factor to zero
+    decision: rejected_singular_extrapolation
+    reason: Fixed-energy phase averaging and a phase coordinate fail in the singular small-energy, high-noise regime.
+  - id: 36
+    predicate: a temperature-independent fake rate has zero temperature derivative
+    decision: tautological_countercomparison
+    reason: This does not derive the source temperature law or its physical mode assignment.
+  - id: 37
+    predicate: a Gamma-independent fake rate fails the zero-damping limit
+    decision: tautological_countercomparison
+    reason: This does not derive the source fluctuation-dissipation normalization.
+  - id: 38
+    predicate: no absolute scale a appears
+    decision: hygiene_only
+    reason: Symbol absence neither closes units nor supplies the missing normalized-to-physical map.
+  - id: 39
+    predicate: omega_b is carried as a named symbolic input
+    decision: hygiene_only
+    reason: Naming an input does not show it is the bath mode or the phase stiffness.
+  - id: 40
+    predicate: T_op avoids collision with the tension symbol T
+    decision: hygiene_only
+    reason: The naming convention is useful but has no bearing on the headline physics.
+summary:
+  accepted_within_C_COH_002: [13, 15, 16, 17, 18, 20]
+  corrected_by_C_COH_002: [13, 14, 15]
+  conditional_or_qualified: [2, 3, 4, 5, 7, 9, 11, 12, 27, 30, 31]
+  duplicate_samples: [8, 10, 19, 21]
+  reproduced_only: [22, 24]
+  rejected_or_nonprobative: [1, 6, 23, 25, 26, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+  debt: []

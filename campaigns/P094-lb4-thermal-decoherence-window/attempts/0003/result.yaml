@@ -1,0 +1,17 @@
+attempt: 0003
+candidates: [B, J]
+status: canonical_window_average_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python -m pytest -q
+  tests/test_coherence_gates.py tests/test_damped_oscillator.py
+process_exit_status: 1
+result: 35 passed, 1 failed
+failure: >-
+  The new helper simplified `(1-exp(-D*T))/(D*T)` into the equivalent form
+  `(exp(D*T)-1)*exp(-D*T)/(D*T)`, while the focused test intentionally required
+  the documented canonical expression tree. No scientific predicate or later
+  verifier executed after pytest stopped the command chain.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: Return the documented unsimplified quotient; retain simplified residual checks separately.
+next_attempt: Re-run focused tests and both exact audit routes from their starts.

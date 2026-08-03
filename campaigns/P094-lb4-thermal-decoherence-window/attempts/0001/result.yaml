@@ -1,0 +1,50 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H, I, J]
+status: source_reproduced_headline_requires_reconstruction
+source_unit: LB4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: e33361e6985002e76342203716fd00ca72c22f905590825a6c064fe472b0d103
+source_blob: 3a9010042a3b841a71dd70d35912db14eea36645
+command: >-
+  /usr/bin/time -f 'ELAPSED=%e MAX_RSS_KB=%M EXIT=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-26/bridge_LB4_thermal_decoherence_gwindow.py
+process_exit_status: 0
+elapsed_seconds: 0.79
+maximum_resident_kb: 54404
+terminal_tally: ALL 40 CHECKS PASS
+reported_grid:
+  delta: [0.02, 0.06, 0.10, 0.14, 0.20]
+  theta: [0.05, 0.15, 0.30, 0.45, 0.60]
+  omega_t_window: [5.0, 10.0, 18.0, 30.0]
+  minimum: 0.0014
+  maximum: 0.9465
+  median: 0.4215
+  central_parameters: {delta: 0.10, theta: 0.30, omega_t_window: 18.0}
+  central_value: 0.2369
+reported_accumulation:
+  delta: 0.10
+  dbd_frequency_ratio: 0.5
+  dbd_factor: 5.0
+  spark_frequency_ratio: 0.01
+  spark_factor: 0.10
+surviving_content:
+  - The supplied coth energy scale has the displayed classical and zero-temperature algebraic limits.
+  - A declared Brownian phase increment with variance 2*D*t has mean temporal phasor exp(-D*t).
+  - Positive exponential point factors and the declared accumulation ratio have the source's elementary monotonicities and limits inside their stated algebraic domains.
+headline_qualification:
+  - The FDT check subtracts an expression from itself; the cited rung derives a low-frequency classical relation but does not derive LB4's white noise 2*Gamma*Theta_eff(omega_b,T).
+  - D_delta=Gamma*Theta_eff/E_b is declared by dimensions with an admitted absorbed order-one constant, while dimensions cannot fix that constant or the phase projection.
+  - The exact one-coordinate Langevin phase projection is angle dependent before averaging and does not equal the declared coefficient without extra normalization premises.
+  - The source's delta2 is 2*D*t, but it renames D*t as phase_rms_sq; engineering pair visibility exp(-variance) would be exp(-2*D*t), not the mean phasor exp(-D*t).
+  - Gamma/2 plus D is a coherent mean-field amplitude exponent under independent declared factors, not a survival probability or population fraction.
+  - C-SG-016 does not provide a global finite-amplitude exp(-Gamma*t/2) field-amplitude law, and a phase coefficient proportional to 1/E cannot stay constant while energy decays.
+  - omega_b*t_w is angular phase advance; a cycle count is omega_b*t_w/(2*pi).
+  - All three grid ranges and the central point are declared, unvalidated inputs. Their six-decade-wide band nearly spans (0,1), so bracketing 0.125 is non-discriminating.
+  - The overdamped and high-noise limits extrapolate the phase-diffusion approximation outside the regime where a regular underdamped phase coordinate or weak-noise energy scale exists.
+  - The accumulation examples insert both repetition rates and supply no state, formation, exclusivity, memory, or population evolution law.
+next_attempt: >-
+  Derive the conditional Brownian-phase and explicit Langevin-coordinate routes,
+  audit factor-two and phase-projection mutations, then decide C-COH-002
+  nonduplication before touching canonical APIs.
+integration_note: Exact P094 work uses no numerical quadrature or NumPy trapezoidal alias.

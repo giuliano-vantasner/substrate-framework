@@ -1,0 +1,71 @@
+campaign: P094
+selection_basis:
+  - accepted dependency closure and explicit stochastic conventions
+  - observable separation and exact limiting behavior
+  - mutation sensitivity and independent rederivation
+  - parameter economy, nonduplication, and consumer closure
+  - no selection by the source tally or comparator closeness
+candidates:
+  A:
+    decision: selected_as_reproduction_only
+    reason: >-
+      The unchanged source exits cleanly with all forty checks passing, but its
+      tally evaluates supplied identities and a broad declared parameter box.
+      Each predicate is separately classified in the check ledger.
+  B:
+    decision: selected_and_promoted
+    reason: >-
+      A declared Brownian phase closes an exact characteristic theorem and
+      cleanly separates mean phasor, iid pair coherence, endpoint factors, and
+      uniform-window averages. Primary and independent derivations agree.
+  C:
+    decision: selected_as_countermodel
+    reason: >-
+      An explicit classical Langevin oscillator has the Gibbs equilibrium and
+      an angle-dependent Ito phase quadratic variation. Fixed-energy phase
+      averaging gives D=Gamma*Theta/(4*E) under the declared conventions, not
+      LB4's coefficient, while exact energy dynamics invalidate fixed E.
+  D:
+    decision: narrowed_to_distinct_dynamic_theorem
+    reason: >-
+      Static supplied-Gaussian algebra is already C-COH-001. Only the explicit
+      Brownian time law, harmonic characteristic equation, observable-specific
+      window averages, and declared damped composition are new.
+  E:
+    decision: selected_as_claim_ceiling
+    reason: >-
+      C-SG-016 supplies evolving action, energy, and frequency rather than a
+      global exponential finite-amplitude energy. A diffusion coefficient
+      proportional to inverse energy would therefore be time dependent.
+  F:
+    decision: qualified_input_algebra_only
+    reason: >-
+      The coth limits are exact for the supplied expression, but neither the
+      relevant bath mode nor normalized-to-physical temperature, energy,
+      damping, and time conversions are derived.
+  G:
+    decision: selected_as_nonidentifiability_result
+    reason: >-
+      For every target g in (0,1), the free surface
+      n_w=-log(g)/(delta*(1/2+theta)) reproduces it. The source grid nearly
+      spans the unit interval, so bracketing 0.125 cannot select the model.
+  H:
+    decision: rejected_hard_gate
+    reason: >-
+      The continuous endpoint exponential stays positive at critical damping
+      and only tends to zero asymptotically. A discontinuous overdamping cutoff
+      is a separate unproved engineering rule.
+  I:
+    decision: selected_as_consumer_ceiling
+    reason: >-
+      Lifetime, coherence-array, DBD, nucleation, and synthesis consumers copy
+      inputs or formulas but supply no independent stochastic derivation,
+      population dynamics, or physical map.
+  J:
+    decision: selected
+    reason: >-
+      Pure exact Brownian-phase APIs are structurally distinct and reusable.
+      No FDT coefficient, effective-temperature map, survival fraction, or
+      discharge selector enters the canonical package.
+selected_claim: C-COH-002
+source_disposition: qualified

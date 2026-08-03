@@ -1,0 +1,23 @@
+attempt: 0008
+candidates: [B, C, D, E, F, G, H, I, J]
+status: integrated_promotion_gate_pass
+command: scripts/validate.sh
+process_exit_status: 0
+terminal_results:
+  governance: WORKFLOW VALID; 108 claims, 108 accepted, 0 proposals
+  migration: 218 units, 126 pending, 0 partial
+  memory: all 401 files valid
+  skill: Skill is valid
+  pytest: 845 passed in 86.45s
+  workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+scientific_verdict: >-
+  C-COH-002, its accepted dependency closure, pure APIs, focused and mutation
+  tests, primary and independent derivations, qualified LB4 disposition,
+  release v0.80.0, generated docs, queue, and memory agree. No FDT, physical
+  diffusion coefficient, thermal breather, survival, population, or discharge
+  claim was imported.
+ceremony_note: >-
+  This is the single complete suite at the P094 implementation, claim,
+  governance, release, generated-consumer, and disposition boundary. Later
+  record-only additions receive record-sensitive validation only.
+next_attempt: Validate the terminal record delta, inspect the final diff, and commit the closed P094 scientific transaction.

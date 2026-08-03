@@ -1,0 +1,17 @@
+attempt: 0009
+candidates: [J]
+status: terminal_record_validation_pass
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P094-lb4-thermal-decoherence-window.md
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/decisions/C-COH-002-review.md
+  - git diff --check
+process_exit_statuses: [0, 0, 0, 0]
+terminal_tallies:
+  governance: WORKFLOW VALID; 108 claims, 108 accepted, 0 proposals; 218 units, 126 pending, 0 partial
+  memory_records: both valid
+  diff_check: passed
+scope: >-
+  Record-sensitive terminal validation after the unchanged 845-test integrated
+  gate. No scientific or executable content changed after that full gate.
+next_attempt: Commit the closed P094 scientific transaction and synchronize the parent migration effort.

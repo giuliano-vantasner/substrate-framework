@@ -66,4 +66,4 @@ comparators_blinded_until: >-
   distinctions, dimensional requirements, selection criteria, and
   nonduplication gate before executing LB4, opening its remaining body and
   output, or reading additional consumer outputs.
-status: draft
+status: accepted

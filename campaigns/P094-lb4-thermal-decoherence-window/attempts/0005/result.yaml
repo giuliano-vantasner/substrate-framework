@@ -1,0 +1,20 @@
+attempt: 0005
+candidates: [B, C, D, E, G, I, J]
+status: accepted_consumer_replay_path_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P086-phase-ensemble-coherence/verify.py
+process_exit_status: 2
+preceding_results:
+  primary_verifier: ALL 60 CHECKS PASS [P094]
+  independent_review: ALL 37 CHECKS PASS [P094-INDEPENDENT]
+  focused_tests: 36 passed
+failure: >-
+  The replay command used an inferred campaign directory name that does not
+  exist. The accepted C-COH-001 verifier lives under
+  campaigns/P086-ny3-coherence-nucleation-audit/verify.py. This was an
+  orchestration failure after the P094 science and focused tests had passed.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: Resolve the accepted claim's provenance path from the registry and replay that exact verifier.
+next_attempt: Run P086, P092, and P091 dependency replays plus targeted repository and memory validation.

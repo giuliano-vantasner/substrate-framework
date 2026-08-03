@@ -2,7 +2,7 @@
 description: Audit LB4 thermal phase diffusion and coherence-window construction
 author: vantasner
 created: '2026-08-04T10:45:00Z'
-updated: '2026-08-04T10:45:00Z'
+updated: '2026-08-04T12:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-LB4
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P094 LB4 Thermal Decoherence and Coherence-Window Audit
 
@@ -215,3 +215,17 @@ See LB4, LB1, LB2, LB3, MC3, P005, P086, P091, P092, P093, C-TH-001,
 C-COH-001, C-SG-001 through C-SG-003, C-SG-016, C-DYN-001, the canonical
 coherence, thermal, sine-Gordon, and oscillator APIs, and the parent migration
 effort.
+
+## Terminal Outcome
+
+P094 promotes `C-COH-002` in release `v0.80.0`. The exact Brownian
+characteristic, mean-phasor and iid-pair distinction, uniform-window averages,
+and declared deterministic-envelope composition pass primary and independent
+symbolic routes with load-bearing mutations and pure canonical APIs.
+
+LB4 is qualified. Its FDT self-equality, phase-projection coefficient,
+effective-temperature mode assignment, fixed-energy breather reading,
+endpoint-as-window substitution, comparator bracket, survival population, and
+spark/DBD selector remain outside accepted authority. All forty source checks
+have individual durable dispositions, accepted dependencies replay, and the
+campaign debt ledger is empty.

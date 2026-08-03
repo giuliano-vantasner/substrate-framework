@@ -1,0 +1,15 @@
+attempt: 0002
+candidates: [B]
+status: primary_combined_exponential_representation_failure
+command: PYTHONPATH=src .venv/bin/python proposals/P094-lb4-thermal-decoherence-window/verify.py
+process_exit_status: 1
+passed_before_failure: 24
+failure: >-
+  SymPy retained the product of deterministic and Brownian exponentials as a
+  different expression tree from the combined exponential. The expressions
+  are mathematically identical, but direct structural equality rejected the
+  verifier before any terminal scientific verdict.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: Compare the combined mean and quadratic factors by exact simplified residuals.
+next_attempt: Re-run the complete primary route from the first check.

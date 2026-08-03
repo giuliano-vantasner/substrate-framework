@@ -1,0 +1,85 @@
+campaign: P094
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+base_release: v0.79.0
+base_commit: 0768bc564549abd1dd564b956356e844033e4d59
+scientific_base_commit: e589e43004c94fbd942607ae1a20c97b18c538aa
+proposal_commit: 25eb816093060987b63c9965bf36749c83f876e5
+source:
+  path: merged-framework/bridges/phase-26/bridge_LB4_thermal_decoherence_gwindow.py
+  sha256: e33361e6985002e76342203716fd00ca72c22f905590825a6c064fe472b0d103
+  blob: 3a9010042a3b841a71dd70d35912db14eea36645
+frozen_inputs:
+  proposal_sha256: 89b384e018b2a485b8483a5c6295469a8248c2183e501e0748c5318ddcac0d09
+  freeze_sha256: 4f5c18bf9dfc48de28a56f5b9a9e309a54541504a1f3f9c38cbdde1ad98fef87
+  memory_contract_sha256: 36cd46dc35445cd126f067818022822c7cbba074abe2cd35b793bac8c857af6e
+verified_outputs:
+  primary_verifier:
+    path: campaigns/P094-lb4-thermal-decoherence-window/verify.py
+    pre_migration_path: proposals/P094-lb4-thermal-decoherence-window/verify.py
+    sha256: 20d1c35912ae213778dfd3097650f85277b720d1383da4acf321b73d08739f4d
+    tally: ALL 60 CHECKS PASS [P094]
+  independent_review:
+    path: campaigns/P094-lb4-thermal-decoherence-window/reviews/independent_stochastic_review.py
+    pre_migration_path: proposals/P094-lb4-thermal-decoherence-window/reviews/independent_stochastic_review.py
+    sha256: c4f020692d14e5be9e77cb4526d37d2f7172ec90548680adbc82481a3c20efa1
+    tally: ALL 37 CHECKS PASS [P094-INDEPENDENT]
+  C_COH_001_replay:
+    path: campaigns/P086-ny3-coherence-nucleation-audit/verify.py
+    sha256: d0e996f8c5e47d413c2e76af424a22146841c88c3077b89cc4bf92cae905141f
+    tally: ALL 37 CHECKS PASS [P086]
+  C_DYN_001_replay:
+    path: campaigns/P092-lb2-coherence-threshold/verify.py
+    sha256: 3dedb4e74abc793fc768d95ed8bfc3c43cc3945130b51290f5bd18eb06c9913d
+    tally: ALL 38 CHECKS PASS [C-DYN-001]
+  C_SG_016_replay:
+    path: campaigns/P091-lb1-dissipative-breather-lifetime/verify.py
+    sha256: 4f89088395ffa6b8f58dc833cd17589d28f6903e96a208a39259256026846f3d
+    tally: ALL 33 CHECKS PASS [P091]
+canonical_implementation:
+  module:
+    path: src/substrate_framework/coherence_gates.py
+    sha256: 6c837e6343f8733c91cafdb5037ecd3f75e58b1d3f658d9bb176e5d9ccc8f741
+  package_exports:
+    path: src/substrate_framework/__init__.py
+    sha256: 808cef473763786e683116d4f92c22f384e6e78229db692c50f1eeef6a55e245
+focused_tests:
+  tally: 36 passed
+  files:
+    tests/test_coherence_gates.py: 69ac9a87fcac8cf5020f7d088e4413241d5145f5754e65139d0894dc65ef1857
+    tests/test_damped_oscillator.py: aa6a3412920de904678f1d3364e157c5ef4c3f1ce815a3781506f9e6836243b6
+evidence_hashes:
+  source_reproduction: d6476fc3c005acd7706990c510c19ac4682e745c9f74e693fbf57b9f80ea0012
+  source_audit: dd2d63135d76f5c61e40e1cf99f79bf7433e5eaef3ffdcf7e68b64d404ab8a28
+  check_adjudication: 6acb49beb0db7a459b178713bfe5bc2d7f837cf1fba0059f1e12ff4f9f6d9556
+  consumer_audit: 855d15ce4cf994af28c7e51984fab80124ff48a4906b5b3da514825aad276e3e
+  candidate_comparison: 7feb8bef96db777c858f4923332662c3428baa2882b81b9c54f5e96ca6892b82
+  source_adjudication: 47d9185f1225de2fe1382f9fd253f970e71368931cf39d355e50777d1506a13c
+  impact_analysis: 44139ec622ea0d5e4e772bdeb5ef1691ba0f1e02cb379563c8262f61b48a3acc
+accepted_claims_used:
+  C-COH-001: exact supplied-Gaussian mean-phasor and iid pair-coherence semantics
+  C-DYN-001: exact declared deterministic coordinate-amplitude envelope and observable separation
+  C-SG-016: exact and qualified evolving action, energy, and frequency ceiling only
+oracle_classes:
+  source: Read-only forty-check symbolic and parameter-grid regression with pinned output.
+  exact: >-
+    Gaussian characteristic ODE, Brownian moments, observable factors,
+    uniform-window integrals, Langevin Ito projection, Gibbs stationarity,
+    energy generator, cycle conversion, grid inverse, AST audit, and mutations.
+  independent: >-
+    Direct Gaussian normalization and characteristic integration, fresh window
+    integration, Fokker-Planck equilibrium, angular phase projection, energy
+    generator, target inversion, and independent mutations.
+claim_delta: C-COH-002
+release_delta: v0.79.0_to_v0.80.0
+integration_policy: >-
+  Exact P094 code uses no numerical quadrature and introduces neither np.trapz
+  nor np.trapezoid. Sampled framework integration remains behind
+  substrate_framework.numerics.trapezoid_integral.
+integrated_promotion_gate:
+  command: scripts/validate.sh
+  governance: 108 claims, 108 accepted, 0 proposals
+  migration: 218 units, 126 pending, 0 partial
+  memory: all 401 files valid
+  skill: Skill is valid
+  pytest: 845 passed in 86.45s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS

@@ -1,0 +1,62 @@
+source_unit: LB4
+ast_check_calls: 40
+literal_check_calls: 40
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, math, sympy, itertools]
+accepted_framework_imports: []
+local_functions: [check, A_acc]
+execution_model: module_level_symbolic_checks_parameter_grid_and_prints
+check_groups:
+  supplied_FDT_and_coth_scale: 5
+  declared_phase_diffusion_and_monotonicity: 7
+  visibility_and_combined_rate: 3
+  generic_exponential_window: 6
+  declared_parameter_grid_and_comparator: 5
+  accumulation_examples: 4
+  asymptotic_and_fake_model_guards: 7
+  symbol_hygiene: 3
+supporting_source_evidence:
+  rung047:
+    path: pulson-backreaction-bridge/sympy/rungs/rung047_intrinsic_mode_noise_sector.py
+    sha256: 0b18c568b902bc036ebafcacf5d45f60ad2f3d0768ec6cd19a6ef080bd64bb64
+    blob: 5452a919369f75388700a6dbe4f18a93600c072d
+    finding: >-
+      Starts from an assumed Ohmic spectral density and symmetrized quantum
+      noise spectrum. Its omega->0 route gives 2*gamma*Theta, while its
+      zero-temperature route gives a frequency-dependent eta*hbar*omega term.
+      It does not derive replacing the low-frequency Theta by LB4's
+      Theta_eff at omega_b or a white zero-point phase force.
+  rung056:
+    path: pulson-backreaction-bridge/sympy/rungs/rung056_theta_eff_concrete_dispersion.py
+    sha256: ec52262567b1fb9466bae6b632057f62ceef995e7104a2a4f90c78fe11dc8d34
+    blob: 0743ccb0f016d336b06216236a08b688646cf805
+    finding: >-
+      Defines the coth scale and checks limits, then explicitly says the slow
+      collective mode rather than a fast internal mode must set it. LB4 uses
+      omega_b without deriving that it is the applicable bath mode.
+  coherence_array:
+    path: engineering/spark_geometry/coherence_array.py
+    sha256: 7e1bd3cb1afeaca4c5f2af7ff817422ff84ddabf095e632c20b90aab5efa573d
+    blob: bd5c4d2c063262abf14f91a394642365d2b4dbe7
+    finding: >-
+      Uses V=exp(-phase_rms**2) as pair coherence in the N+N(N-1)V
+      directional observable. With LB4 variance 2*D*t, this V is exp(-2*D*t),
+      not LB4's exp(-D*t) mean phasor.
+  lifetime_kernel:
+    path: engineering/lifetime_kernel.py
+    sha256: 51bd4f46593363ac37d99b4e95ca0bef1b572a3b075505968adf77404db4cac5
+    blob: 676f06b136e8b0149daa03e99eb789a059ff6b2e
+    finding: >-
+      Copies the formula, central point, broad grid, and rejected LB2 hard
+      cutoff and therefore supplies no independent stochastic or physical
+      validation.
+primary_structural_defects:
+  - self-equality substitutes for a fluctuation-dissipation derivation
+  - dimensional analysis is claimed to fix an admitted order-one coefficient
+  - mean phasor, pair coherence, field amplitude, survival fraction, and population are conflated
+  - angular phase advance is mislabeled as a number of cycles
+  - declared parameter bands are used to bracket their downstream target
+  - underdamped weak-noise formulas are extrapolated through overdamped and singular-energy limits
+  - repetition rates and population accumulation semantics are inserted
+audit_verdict: requires_exact_reconstruction

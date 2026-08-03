@@ -1,0 +1,17 @@
+attempt: 0004
+candidates: [B, J]
+status: canonical_harmonic_domain_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P094-lb4-thermal-decoherence-window/verify.py
+process_exit_status: 1
+passed_before_failure: 17
+failure: >-
+  The primary derivation declared its Fourier mode as a generic positive real
+  symbol, while the canonical circle-phase API correctly requires a provable
+  integer harmonic. The raw heat-equation check passed, but canonical domain
+  enforcement stopped the route before a scientific verdict.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: Declare the load-bearing Fourier harmonic as an exact integer symbol.
+next_attempt: Re-run the primary verifier and the previously skipped focused and P086 consumer replays.

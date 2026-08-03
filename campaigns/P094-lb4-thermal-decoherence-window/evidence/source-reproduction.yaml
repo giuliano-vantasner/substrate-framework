@@ -1,0 +1,23 @@
+source_unit: LB4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-26/bridge_LB4_thermal_decoherence_gwindow.py
+source_sha256: e33361e6985002e76342203716fd00ca72c22f905590825a6c064fe472b0d103
+source_blob: 3a9010042a3b841a71dd70d35912db14eea36645
+source_unchanged: true
+process_exit_status: 0
+elapsed_seconds: 0.79
+maximum_resident_kb: 54404
+terminal_tally: ALL 40 CHECKS PASS
+stdout_summary:
+  grid_minimum: 0.0014
+  grid_maximum: 0.9465
+  grid_median: 0.4215
+  central_value: 0.2369
+  central_asymmetric_range: {upper: 0.710, lower: 0.236}
+  dbd_accumulation: 5.0
+  spark_accumulation: 0.10
+scientific_verdict: >-
+  Reproduced as historical symbolic and parameter-sweep evidence only. The
+  tally validates the code's supplied formulas and broad input grid; it does
+  not derive the stochastic phase coordinate, noise normalization, physical
+  parameter ranges, coherent-survival semantics, or discharge selector.

@@ -1,0 +1,14 @@
+attempt: 0007
+candidates: [J]
+status: premature_registry_validation_failure
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+process_exit_status: 1
+failure: >-
+  The accepted registry and release were edited before the adjudicated proposal
+  directory had been moved to campaigns, so the governance validator correctly
+  rejected C-COH-002's not-yet-present immutable provenance path. The preceding
+  diff check passed and no scientific predicate was affected.
+scientific_verdict: none_terminal
+selection_criteria_changed: false
+repair: Complete the single promotion transaction by moving P094 to campaigns before validating the accepted graph.
+next_attempt: Regenerate the source queue, docs, and memory, then run the integrated promotion gate once.
