@@ -1,0 +1,66 @@
+id: P101
+base_release: v0.85.0
+base_commit: 9ba65e0ff1d938b25df5d8d6de1faa9de3d2143b
+scientific_base_commit: 020ab1f8eef254e13f98aa88e85d96362ba57346
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [BD3]
+question: >-
+  Audit BD3's composition of the accepted conditional capillary barrier and
+  continuous coherence-population threshold, derive its exact domains,
+  sensitivities, integer-count convention, normalization and identifiability
+  ceilings, and determine which source predicates survive without identifying
+  a free per-source scale with hbar times a breather frequency, importing a
+  population Hamiltonian or coherence dynamics, or calling threshold crossing
+  a physical DBD, nuclear, or ignition event.
+invariants:
+  - C-COH-001 already owns the declared continuous interpolation Theta(n,V)=theta*n*(1+(n-1)*V), its unique positive threshold, endpoint formulas, ordering condition, and non-rate and non-event ceilings.
+  - C-RG-001 and C-RG-002 own the generic relative capillary barrier and its conditional Frank/core and quadratic-loading specialization; neither supplies a population, coherence, quantum, temperature, kinetic, or event map.
+  - The positive per-source scale theta and positive barrier E must share one declared energy convention before E/theta is meaningful; dimensional compatibility does not identify their physical origins or values.
+  - A normalized classical breather energy, a physical classical breather energy, hbar times an angular frequency, a thermal scale, and a population energy are distinct objects unless an accepted state and unit map equates them.
+  - Continuous threshold coordinates are not positive-integer source counts unless monotonicity and an explicit ceiling convention are declared and checked, including the E/theta<=1 regime.
+  - Crossing a declared algebraic scale is not ignition, escape, nucleation, breakdown, a nuclear reaction, or a deposited event without an accepted dynamics, channel, and observable map.
+  - The source checkout's NumPy compatibility overlay does not modify BD3 and is not a new scientific baseline; the hash-pinned source commit remains provenance.
+allowed_imports:
+  - C-COH-001 and the canonical coherence-gates APIs for the conditional population scale and continuous threshold only
+  - C-RG-001 and C-RG-002 and the canonical radial-energy APIs for the generic and conditional relative barriers only
+  - accepted registry statements solely to test whether any hbar-frequency, classical-energy, population-state, coherence-dynamics, or event interpretation is actually closed
+  - exact positive-real algebra, monotonicity, ceiling logic, dimensions, logarithmic sensitivities, rank, nullspace, and constructive rescaling analysis
+  - BD3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation and freeze
+  - hash-pinned predecessor and downstream units only after freeze and only as noncanonical dependency and impact evidence
+candidates:
+  - id: A
+    description: Reproduce BD3 unchanged and classify every import, literal predicate, numerical sample, negative guard, and terminal tally.
+  - id: B
+    description: Map the endpoint and general continuous threshold algebra directly to C-COH-001 and classify it as duplicate claim surface.
+  - id: C
+    description: Compose C-COH-001 with C-RG-001 or C-RG-002 and derive exact threshold formulas and chain-rule sensitivities while retaining theta as an independent positive scale.
+  - id: D
+    description: Compare an independently supplied theta with source-style hbar-frequency and accepted classical-energy candidates, requiring an explicit unit and state map before any identification.
+  - id: E
+    description: Derive the minimum positive-integer threshold from strict population monotonicity and an explicit ceiling convention, including the subunit continuous-root regime.
+  - id: F
+    description: Derive common-scale covariance and constructive rescaling families to expose which threshold ratios and constituent parameters are identifiable.
+  - id: G
+    description: Separate a below-threshold algebraic guard from ignition, escape, nucleation, breakdown, nuclear-channel, and deposition predicates.
+  - id: H
+    description: Compare the E/theta greater-than, equal-to, and less-than one regimes so coherent alignment is not assumed to lower every threshold.
+  - id: I
+    description: Trace predecessor and downstream consumers, audit nonduplication, and enforce the pending-dependency ceiling.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and nonduplication against C-COH-001, C-RG-001, and C-RG-002
+  - exact domains, dimensions, normalization covariance, monotonicity, limiting regimes, integer semantics, and mutation-sensitive coefficients
+  - strict separation of an algebraic threshold from a state, preparation mechanism, kinetic crossing, event channel, observable, and deposited payload
+  - assumption and parameter economy with theta retained independently unless an accepted state and unit map closes an identification
+  - chain-rule sensitivity discipline, constructive non-identifiability, canonical API reuse, and complete consumer classification
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue and P100 consumer replay already exposed the endpoint
+  formulas N_coh=sqrt(E/theta), N_inc=E/theta, the source identification
+  theta=hbar*omega_b, positive loading and drive assertions, below-threshold
+  guards, and an ignition label. P101 therefore claims no formula or output
+  blinding. Before renewed source-body inspection or execution it freezes the
+  general-V and endpoint composition, the E/theta regime split, integer-ceiling
+  convention, chain-rule sensitivities, common-scale covariance,
+  identifiability tests, interpretation ceiling, and nonduplication gate.
+status: draft
