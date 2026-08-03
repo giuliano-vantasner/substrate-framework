@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T07:45:00Z'
+updated: '2026-08-04T08:25:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,16 +23,14 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.77.0`, containing one hundred five claims.
-Its latest addition, C-PDE-011, is qualified finite-time numeric evidence that
-one explicitly declared fast bulk-source branch approaches the accepted exact
-sine-Gordon breather family under mesh and timestep refinement. It does not
-derive the source, a voltage or plasma map, a population law, a robust
-threshold, or an engine mechanism. The latest terminal adjudication is P090 at
-commit `f79909e`: SA4 is qualified without a claim delta because free gain and
-normalization set its threshold and count, its finite-width kernel is nonzero
-at DC, its fitted saturation scale has the wrong structural dependence, and
-every physical consumer retains inserted breakdown, scale, or population data.
+The current accepted frontier is `v0.78.0`, containing one hundred six claims.
+Its latest addition, C-SG-016, gives the exact undamped-family mean kinetic
+integral and damping form factor plus qualified finite-time simulation evidence
+for the conditional phase-averaged slow-damping action law. The latest terminal
+adjudication is P091 at commit `6c444a6`: LB1 is qualified because its
+full-amplitude `1/(Gamma*D(initial))` is an instantaneous tangent time rather
+than the integrated energy e-fold, and Gamma remains a normalized input with
+no material, coherence, population, or physical-unit map.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -58,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 130 pending, 0 partially migrated, 3 migrated, 76 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 129 pending, 0 partially migrated, 3 migrated, 77 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -180,6 +178,7 @@ Attempts are append-only and individually reproducible.
 | 0108 | P088 exact DC-offset/displacement-current/waveform and SA2 trigger audit | `campaigns/P088-sa2-dvdt-trigger-audit/attempts/0001` through `0006`, then the terminal queue replay | SA2 qualified with v0.76.0 unchanged; commit `aee1890` | Thirty-seven primary and fourteen independent checks derive the Gaussian overlap and limit-order defect, linear distributional offset ceiling, finite-window leakage, power-spectrum cross terms, constitutive product rule, Fourier boundary term, exact inserted-family monotonicity, fixed-peak reversal, same-slew spectral counterfamily, and consumer closure. The resonant mutation passes SA2's alleged DC oracle; engineering consumers insert threshold/Michaelis behavior, one restores a seed floor, and six `np.trapz` calls fail under current NumPy. The single integrated gate passes all 811 tests and record-only validation closes without repeating the suite | Audit SA3's driven sine-Gordon PDE seeding claim without importing SA1's rejected susceptibility/population, SA2's rejected physical trigger, or P3D1's qualified radial-oscillon interpretation; freeze PDE, source, drive, energy, bound-state, damping/sponge, refinement, amplitude-threshold, comparator, consumer, and nonduplication candidates before opening the body |
 | 0109 | P089 driven sine-Gordon formation audit | `campaigns/P089-sa3-driven-pde-seeding-audit/attempts/0001` through `0007`, then promotion replay | C-PDE-011 accepted in v0.77.0 and SA3 qualified; commit `aec2125` | Twenty-two primary and six independent checks establish the declared fast branch with leapfrog refinement, DOP853 rederivation, exact-breather trace and phase-space classifiers, core-energy comparison, and a source-work energy ledger. The source's integral of force squared is not work, its slow branch is not vacuum, its FFT locks to coarse bins, and target mutations 380 and 420 break the classifier. The integrated workflow passes all 817 tests; the accidental unchanged duplicate suite is recorded as ceremony, and record-only repair closes without a third replay | Audit SA4's threshold/saturation law without importing rejected SA1 response/population, rejected SA2 trigger physics, or SA3's absent voltage/plasma mechanism; freeze literal, threshold, floor, normalization, saturation, breakdown, physical-mechanism, consumer, dependency, and nonduplication candidates before opening the uninspected remainder or executing it |
 | 0110 | P090 exact threshold/floor/gain/saturation and SA4 audit | `campaigns/P090-sa4-threshold-saturation-audit/attempts/0001` through `0007`, then terminal queue replay | SA4 qualified with v0.77.0 unchanged; commit `f79909e` | Thirty-nine primary and thirteen independent checks derive the free-gain and normalization orbit, floor/remainder versus ceiling semantics, the accepted family's zero energy infimum, finite-tau DC counterexample, exact inserted-family derivative and ceiling, fixed-peak reversal, Gaussian-band moment, sharp-lobe half scale, Michaelis asymptotic mismatch, and consumer closure. The source inserts G_BIG=900 to force a crossing; its constant-kernel guard is tautological, and consumers retain breakdown, unit, base-count, floor, or Michaelis knobs. Eighteen focused tests and the single integrated 817-test workflow pass; final records receive only record-sensitive replay | Audit LB1's dissipative lifetime claim against the exact stress-energy balance and accepted breather family; freeze the full-amplitude kinetic integral, time average, adiabatic modulation, exponential-decay premise, lifetime convention, damping regime, numerical cross-check, physical Gamma map, consumer, dependency, and nonduplication candidates before opening the body |
+| 0111 | P091 exact kinetic/form-factor/action law and LB1 lifetime audit | `campaigns/P091-lb1-dissipative-breather-lifetime/attempts/0001` through `0009`, then terminal queue replay | accepted as qualified C-SG-016 in v0.78.0; commit `6c444a6` | Thirty-three primary, sixteen independent, and twelve PDE checks derive the exact `omega*J` kinetic average, `theta*cot(theta)` form factor, nonlinear reduced energy/frequency law, instantaneous versus integrated e-fold distinction, and normalized-unit ceiling. Three leapfrog grids, a larger domain, DOP853, slower damping, lossless control, and energy ledgers give sub-percent controlled evidence; the frozen-D source law is more than four times worse. The integrated workflow passes all 823 tests and final records receive only record-sensitive replay | Audit LB2's damped-oscillator threshold and coherent-cycle semantics without globalizing the small-amplitude reduction, importing pending MC3/SA2, or identifying underdamped linear response with a nonlinear coherent-breather existence theorem |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -733,11 +732,26 @@ work uses no quadrature; its independent source regression uses adaptive SciPy
 integration, and unchanged external `np.trapz` failures are cited from P088
 rather than rerun.
 
+P091 adds C-SG-016's exact undamped-family mean kinetic integral
+`16*omega*acos(omega)` and form factor
+`omega*acos(omega)/sqrt(1-omega^2)`. Conditional phase averaging under uniform
+linear damping gives `J(t)=J0*exp(-Gamma*t)` but nonlinear energy and frequency.
+At `omega0=1/sqrt(2)` the reduced energy e-fold has `Gamma*t=1.09344`, while
+the source's frozen initial tangent time has `Gamma*t=1.27324`. Direct field
+quadrature, an independent action IVP/root solve, three PDE grids, domain and
+method changes, a slower-damping branch, lossless control, and a convergent
+energy ledger support the declared finite-time adiabatic regime. LB1 is
+qualified because this is not an exact damped breather or physical material
+lifetime, and its engineering consumers globalize small-amplitude or pending
+thermal premises. Exact canonical work uses no quadrature, independent field
+evidence uses adaptive SciPy integration, and sampled PDE ledgers use the
+shared `trapezoid_integral` helper rather than `np.trapz`.
+
 ## Canonicalization
-The registry, `v0.77.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred five accepted claims. P001 through P090 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 130 pending, 0 partial, 3 migrated, 76 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.78.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred six accepted claims. P001 through P091 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 129 pending, 0 partial, 3 migrated, 77 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 130 pending, 3 migrated, 76 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is LB1. Its generated synopsis claims that linear damping `-Gamma*phi_t` gives `dE/dt=-Gamma*integral(phi_t^2)dx`, that the small-amplitude time average equals the breather energy, and therefore that energy decays exponentially with lifetime `1/Gamma`; it also advertises a full-amplitude form factor. The pinned source SHA-256 is `d2e36e0d9d8ff831bcd58efb264b68dc156f7f87eca7a104f53a6f287eed2b80`, its verifier has twenty-two runtime checks from twenty-one literal sites, and it names pending MC3 as a dependency. P091 must freeze literal-promotion, exact damped energy balance, exact full-amplitude velocity-squared integral and time average, small-amplitude limit, kinetic-to-total-energy form factor, adiabatic collective-coordinate approximation, frequency and amplitude drift, exponential-versus-nonlinear decay, energy- and amplitude-lifetime conventions, perturbative damping regime, solver/refinement cross-check, physical Gamma and units map, consumer, dependency, and nonduplication candidates before opening the LB1 body or output. It may use C-SG-001/C-SG-002 and C-SG-012's exact stress-energy identities, but cannot import pending MC3's per-medium frequency map or infer an exact damped breather by inserting the undamped ansatz. A positive lifetime law requires either an exact damped solution or a controlled adiabatic derivation with declared error and numerical validation; otherwise preserve the exact balance and qualified asymptotic approximation while continuing.
+The effort remains active. D4 is discharged, but D1 remains open with 129 pending, 3 migrated, 77 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is LB2. Its generated synopsis claims that the small-amplitude damped-oscillator reduction is underdamped iff `Gamma<2*omega_b`, declares no coherent breather for `Gamma>=2*omega_b`, and defines `N_coh=omega_b/(2*pi*Gamma)` using LB1's limiting energy e-fold. The pinned source SHA-256 is `ae159aee3c076c1f86d77628a6bbbf206ad7e28dccd832e397250b71a981b28d`, its verifier has seventeen literal checks, and it names LB1, pending MC3, and qualified-without-claim SA2 as candidate dependencies. P091's consumer audit necessarily exposed LB2's implementation, so P092 must record that comparator exposure rather than claim fresh blinding. It must still freeze literal-promotion, exact characteristic-root/discriminant algebra, critical/overdamped linear-mode semantics, full nonlinear PDE countermodels, coherent-cycle observable and `2*pi` convention, energy-versus-amplitude decay, finite-time numerical regime, physical Gamma/omega map, survival-function discontinuity, consumer, dependency, and nonduplication candidates before executing LB2 or opening additional downstream comparators. Accepted C-SG-016 supplies only the small-amplitude lifetime limit and controlled adiabatic ceiling; it cannot turn a linear local-mode discriminant into a global nonlinear breather-existence, spark/DBD, survival-probability, or material threshold theorem.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
