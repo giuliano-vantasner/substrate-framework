@@ -2,7 +2,7 @@
 description: Audit E3's conditional energy difference and physical nuclear-yield interpretation
 author: vantasner
 created: '2026-08-07T16:00:00Z'
-updated: '2026-08-07T16:00:00Z'
+updated: '2026-08-07T16:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -126,12 +126,27 @@ execution.
 
 ## Proposed Claim Delta
 
-P106 proposes no claim at freeze. Candidate G first tests whether the generic
-linear identity and accepted-value specialization are a reusable theorem or
-merely definition unfolding and direct composition of C-RPROF-002 with an
-unaccepted mass premise. A distinct claim may be proposed only after collision
-and consumer review, with its identifier, dependency closure, and evidence
-added through an explicit proposal revision before promotion.
+P106 froze with no proposed claim. Candidate G then found no accepted registry
+statement for the signed mass/binding identity or its interval propagation,
+while E4, KI2--KI5, MK5, MR2, and MR5 reuse the combination and several retain
+E3's biased 8.46 anchor or promote it to a ceiling. Recorded proposal revision
+0001 therefore reserves two claims before package implementation.
+
+`C-RDIFF-001` may state the exact conditional theorem
+`Q=n*M_A-M_(nA)=B_E(nA)-n*B_E(A)=alpha*U*(n*b_A-b_(nA))`, its scale-free
+coefficient, inverse, sign and zero surfaces, sharp rectangular interval
+propagation for positive normalization, and the countertheorem that separate
+upper bounds do not order their signed difference without a slack relation.
+Every mass normalization, multiplicity, coefficient, scale, and binding
+definition remains an explicit premise.
+
+`C-RDIFF-002` may record the separately reviewed resolution-bounded
+specialization of C-RDIFF-001 to C-RPROF-002's B=2 and B=4 stationary-branch
+coefficients and declared `alpha=3*pi^2`. The canonical composition is about
+8.4824173188 and the independent P105 route about 8.4824148688; a rectangular
+two-method sensitivity envelope is not a confidence interval or rigorous error
+bound. This claim remains a conditional reduced-model coordinate and names no
+physical mass, state, reaction, or yield.
 
 C-RPROF-001/002, C-SK-001, C-DIM-002/003, and C-RMAP-001/002 are reviewed but
 not challenged or superseded. No physical mass map, binding hierarchy,
@@ -161,10 +176,14 @@ importing primary expressions.
 Post-freeze work pins and executes E3, inventories imports and literal checks,
 adjudicates each predicate, traces E4, HE4, M1, NY1, NY2 and narrative
 consumers, and compares the surviving surface with accepted claims and APIs.
-Reusable package code is added only if Candidate G finds a nontrivial distinct
-object; campaign-only audit code must not create a ceremonial API. Targeted
-checks, repository schema, generated queue and memory checks, one full workflow
-at the terminal boundary, and `git diff --check` close the campaign.
+Proposal revision 0001 records Candidate G's positive nonduplication result. A
+minimal pure `energy_differences.py` module will own only the normalized linear
+difference, scaled coefficient, and monotone interval transformation; it will
+not own E3's physical vocabulary, empirical literals, or profile solves. The
+campaign verifiers call that API for regression after their independent exact
+derivations. Targeted checks, repository schema, generated queue and memory
+checks, one full workflow at the terminal boundary, and `git diff --check`
+close the campaign.
 
 ## Attempts and Continuation
 

@@ -49,7 +49,9 @@ selection_criteria:
   - preservation of C-RPROF-002 numeric status and interpretation ceilings
   - rejection of difference-of-upper-bounds and comparator-selection fallacies
   - assumption and parameter economy, nonduplication, complete source-predicate and downstream-consumer classification
-claims_proposed: []
+claims_proposed:
+  - C-RDIFF-001
+  - C-RDIFF-002
 comparators_blinded_until: >-
   No numerical comparator blinding remains. The generated queue exposes the
   physical question, formula 3*pi^2*(2*b(2)-b(4)), advertised coefficient near

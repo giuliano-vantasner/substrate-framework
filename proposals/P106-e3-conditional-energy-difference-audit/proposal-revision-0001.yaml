@@ -1,0 +1,38 @@
+revision: 0001
+campaign: P106
+recorded_at: '2026-08-07T16:30:00Z'
+reason: >-
+  Post-freeze registry and consumer review found no accepted statement for the
+  exact signed mass/binding identity or monotone interval propagation, while
+  E4, KI2 through KI5, MK5, MR2, and MR5 reuse the combination and several
+  retain E3's biased 8.46 anchor or an invalid ceiling interpretation. A small
+  canonical transformation and a separately numeric accepted-input
+  specialization reduce downstream duplication without importing physical
+  state or reaction premises.
+changes:
+  claims_proposed:
+    before: []
+    after: [C-RDIFF-001, C-RDIFF-002]
+  implementation:
+    before: no package API unless nonduplication succeeds
+    after: >-
+      one pure energy_differences module owning normalized difference, scaled
+      coefficient, and monotone rectangular interval propagation
+  proposal_sha256:
+    before: c4c1b535a2a4254544635d43667f671c52384e68fe9059b63713947743de1673
+    after: c5a0f09005ad8c6716814e85c374b8e21dacd94ef8efb80a647b30db8784c1a2
+  memory_contract_sha256:
+    before: 26547b41e5ae12ddd35665192b779865ebc5a433caf0225fb30839d0834eb02e
+    after: cef3d10175c9f9d5a0937890193321bee88bd672dc407c01f1ca517528dce62d
+unchanged:
+  - base release source hash question invariants and permitted imports
+  - candidate set selection criteria and comparator exposure
+  - exact direct and independent binding constructions
+  - prohibition on physical mass state reaction yield and comparator selection
+  - one full workflow gate at the terminal boundary
+replay_required: >-
+  Re-run exact algebra, factor and sign mutations, interval propagation,
+  difference-of-upper-bounds counterexamples, independent review, source and
+  consumer adjudication, focused package tests, and the final repository gate
+  against separate exact and numeric claim statements.
+status: recorded_before_package_implementation
