@@ -1674,6 +1674,49 @@ units:
       package tests. Eight direct and sixteen transitive pending consumers
       inherit only the finite complex-matrix ceiling. PN4 uses no sampled
       integration and triggered no np.trapz compatibility event.
+  PN5:
+    disposition: qualified
+    accepted_claims:
+      - C-RES-001
+    qualification: >-
+      PN5's seven selected divisions close exactly as 24,000,000,000;
+      8,000,000,000; 2,400,000,000; 800,000,000; 240,000,000; 80,000,000;
+      and 24,000,000. Their exact range is therefore 24 million through 24
+      billion, while the source's 10 million through 100 billion band is only
+      a loose containing envelope. Thirty meV gives exactly 800 million for
+      the externally supplied rounded 24 MeV total. P110 already governs the
+      quotient, remainder, sharp plateau, scaling, representation, and
+      physical ceilings as immutable terminal evidence without a distinct
+      accepted claim. Common rescaling preserves every quotient, arbitrary
+      target counts follow by selecting unit=total/n, and binary floating
+      floor can cross exact decimal thresholds. PN5's pair magnitude, unique
+      optimum Gamma=2*abs(Delta), peak, and limits duplicate C-RES-001. Its
+      numeric grid is regression coverage with a tolerance that admits nearby
+      wrong optima, and its endpoint checks are finite samples rather than
+      limit proofs. The named arXiv v2 record contains neither an explicit
+      retraction nor PN5's bare floor formula. No derived input, quantum
+      subdivision process, prediction, bath, physical channel, probability,
+      rate, yield, material scale, magnitude, or observation is accepted. The
+      PN5-PN4 candidate cycle grants no authority.
+    evidence:
+      - campaigns/P113-pn5-magnitude-reproduction-audit/reviews/source_adjudication.md
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/source-reproduction.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/source-audit.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/check-adjudication.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/dependency-audit.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/literature-audit.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/consumer-audit.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/candidate-comparison.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/evidence/primary-provenance.yaml
+      - campaigns/P113-pn5-magnitude-reproduction-audit/verify.py
+      - campaigns/P113-pn5-magnitude-reproduction-audit/reviews/independent_magnitude_review.py
+      - memory/vantasner/decisions/PN5-qualified-review.md
+    note: >-
+      P113 closes 58 primary and 21 independent exact checks after one
+      preserved dimension-ledger implementation failure. Two direct and
+      twenty-two transitive consumers inherit only P110's bookkeeping ceiling
+      and C-RES-001. PN5 calls no sampled integration routine and triggered no
+      np.trapz compatibility event.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

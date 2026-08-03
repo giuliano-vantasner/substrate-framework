@@ -1,0 +1,20 @@
+campaign: P113
+attempt: 0004
+candidate: integrated_terminal_qualification_gate
+status: completed
+command: scripts/validate.sh && git diff --check
+exit_status: 0
+terminal_tally: >-
+  ALL REPOSITORY WORKFLOW CHECKS PASS; 129 claims, 129 accepted, 0
+  proposals; 218 source units, 107 pending, 0 partial; 481 memory files;
+  physics skill valid; 1031 tests passed in 92.85s; git diff --check clean
+compatibility_event: none
+verdict: terminal_qualification_boundary_verified
+mechanism: >-
+  Immutable campaign, terminal review, PN5 disposition, regenerated source
+  queue, exact primary and independent oracles, and parent continuation state
+  are synchronized with registry and v0.94.0 intentionally unchanged. This is
+  the single full validation pass for the terminal record boundary.
+next_attempt: >-
+  Commit the PN5 adjudication, checkpoint the parent effort with that immutable
+  commit, then freeze P114 before inspecting or executing PN6.

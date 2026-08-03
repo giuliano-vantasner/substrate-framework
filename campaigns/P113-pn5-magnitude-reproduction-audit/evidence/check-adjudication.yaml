@@ -1,0 +1,26 @@
+campaign: P113
+source_unit: PN5
+static_check_site_count: 11
+runtime_predicate_count: 11
+predicates:
+  - {id: PN5-01, source_site: selected_counts_inside_loose_band, runtime_case: seven_inputs, verdict: qualified, ceiling: selected_finite_set_property_not_exact_image_or_prediction}
+  - {id: PN5-02, source_site: thirty_meV_comparator_band, runtime_case: one_input, verdict: qualified, ceiling: exact_800000000_from_external_inputs_not_mechanism}
+  - {id: PN5-03, source_site: counts_vary, runtime_case: seven_inputs, verdict: retained, ceiling: nonconstant_list_regression_only}
+  - {id: PN5-04, source_site: raw_maximum, runtime_case: selected_list, verdict: qualified, ceiling: exact_maximum_of_inputs_not_no_hidden_selection_or_validity}
+  - {id: PN5-05, source_site: numeric_argmax, runtime_case: uniform_20001_grid, verdict: duplicate, ceiling: regression_of_exact_C_RES_001_optimum_with_loose_tolerance}
+  - {id: PN5-06, source_site: interior_maximum, runtime_case: Gamma_0p001_2_10, verdict: duplicate, ceiling: three_point_specialization_of_C_RES_001}
+  - {id: PN5-07, source_site: raw_peak, runtime_case: uniform_grid, verdict: qualified, ceiling: no_detected_cap_and_grid_regression_only}
+  - {id: PN5-08, source_site: small_loss_sample, runtime_case: Gamma_1e_minus_6, verdict: qualified, ceiling: one_finite_sample_not_exact_limit}
+  - {id: PN5-09, source_site: large_loss_sample, runtime_case: Gamma_1e4, verdict: qualified, ceiling: one_finite_comparison_not_exact_limit}
+  - {id: PN5-10, source_site: recomputed_thirty_meV, runtime_case: same_binary_float_expression, verdict: duplicate, ceiling: same_representation_recalculation_not_independent_route}
+  - {id: PN5-11, source_site: raw_positive_guard, runtime_case: count_and_peak, verdict: qualified, ceiling: positivity_does_not_test_clamping_or_physical_meaning}
+narrative_verdicts:
+  exact_selected_counts: retained_with_exact_representation
+  exact_selected_range: corrected_to_24000000_through_24000000000
+  correct_order_of_magnitude: qualified_selected_external_input_overlap_only
+  kinematic_subdivision_process: rejected_floor_bookkeeping_only
+  toy_optimum: duplicate_of_C_RES_001
+  magnitude_reproduction: rejected_no_predicted_physical_magnitude
+  retraction_honesty: rejected_named_arXiv_v2_contains_no_explicit_retraction
+  neutral_uncapped: qualified_no_clamp_is_not_derivation_or_validation
+status: complete

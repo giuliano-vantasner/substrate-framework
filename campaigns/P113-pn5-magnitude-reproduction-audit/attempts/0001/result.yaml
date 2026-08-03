@@ -1,0 +1,26 @@
+campaign: P113
+attempt: 0001
+candidate: literal_source_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN5_magnitude_reproduction.py
+source_sha256: 8b2a35a873d9414653f9add48ceeed50d0d32142064bd67b95845b92aeaf87eb
+compatibility_preflight: >-
+  If immutable source fails only because np.trapz is absent, preserve the
+  version event and replay with an alias only. Do not classify compatibility
+  as scientific failure.
+status_after_run: completed
+exit_status: 0
+terminal_tally: ALL 11 CHECKS PASS
+compatibility_event: none
+verdict: literal_numeric_regression_reproduced
+mechanism: >-
+  The seven selected counts reproduce exactly as 24,000,000 through
+  24,000,000,000, and 30 meV gives 800,000,000. All lie inside the source's
+  much looser 1e7-to-1e11 envelope. A 20,001-point grid finds Gamma about
+  1.9998 near the already exact C-RES-001 optimum 2*Delta. Raw-positive and
+  no-clamp predicates test reporting paths, not derivation or physical meaning.
+  The source imports NumPy but calls no sampled integration routine.
+next_attempt: >-
+  Derive exact quotient, plateau, set, scaling, representation, pair optimum,
+  peak, limit, dimension, and countermodel results; independently reconstruct
+  them; then audit attribution, source cycle, nonduplication, and consumers.

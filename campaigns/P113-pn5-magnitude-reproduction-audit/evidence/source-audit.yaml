@@ -1,0 +1,40 @@
+campaign: P113
+source_unit: PN5
+source_sha256: 8b2a35a873d9414653f9add48ceeed50d0d32142064bd67b95845b92aeaf87eb
+imports: [sys, math, numpy]
+declared_dependencies: [PN2, PN4]
+declared_inputs:
+  total_energy: {value: 24.0, unit: MeV, provenance: named_external_input}
+  unit_energies_eV: [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0]
+  pair_detuning: {value: 1.0, unit: toy}
+  pair_coupling: {value: 0.1, unit: toy}
+exact_surface:
+  selected_count_minimum: 24000000
+  selected_count_maximum: 24000000000
+  thirty_meV_count: 800000000
+  quotient_rule: floor(total_energy/unit_energy)
+  pair_magnitude: g^2*Gamma/(Delta^2+Gamma^2/4)
+  pair_optimum: Gamma=2*abs(Delta)
+  pair_peak: g^2/abs(Delta)
+numeric_surface:
+  Gamma_domain: [0.001, 10.0]
+  sample_count: 20001
+  uniform_step: 0.00049995
+  optimum_tolerance: 0.002
+oracle_ceilings:
+  count_band: selected_finite_input_property_not_prediction
+  count_variation: nonconstant_list_not_process_or_mechanism
+  raw_reporting: no_detected_cap_not_scientific_validity
+  numeric_argmax: regression_of_exact_C_RES_001_optimum
+  endpoint_samples: finite_samples_not_limit_proofs
+  toy_magnitude: finite_matrix_element_not_probability_or_rate
+omissions:
+  - exact rational or decimal-prefix construction before floor
+  - quotient remainder and sharp inverse plateau endpoints
+  - uncertainties or derivation for total and unit energies
+  - state, operator, matrix element normalization, energy closure, or rate rule
+  - microscopic bath, open-system dynamics, nuclear or phonon channel
+  - prediction criterion independent of the selected input list
+  - literature text or equation supporting the bare floor formula
+compatibility_event: none
+status: audited

@@ -2,7 +2,7 @@
 description: Audit PN5's selected energy counts and finite pair magnitude without converting input overlap into a mechanism
 author: vantasner
 created: '2026-08-08T00:15:00Z'
-updated: '2026-08-08T00:15:00Z'
+updated: '2026-08-08T00:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - paired-resolvent
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P113 PN5 Magnitude-Reproduction Audit
 

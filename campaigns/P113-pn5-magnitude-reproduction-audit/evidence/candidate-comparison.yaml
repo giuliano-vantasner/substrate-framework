@@ -1,0 +1,23 @@
+campaign: P113
+selection_frozen_by: proposals/P113-pn5-magnitude-reproduction-audit/evidence/frozen-proposal.yaml
+selected:
+  - {id: B, reason: Exact Fraction, Decimal, and scaled-integer routes reproduce the counts and expose sharp range, plateaus, jumps, and scaling.}
+  - {id: C, reason: C-RES-001 exactly supplies the pair optimum, peak, limits, normalization, and physical ceiling.}
+  - {id: D, reason: Binary-threshold, independent-scale, and arbitrary-target families expose representation and input selection.}
+  - {id: E, reason: Set semantics distinguish selected-value containment from an exact image, prediction, or mechanism.}
+  - {id: F, reason: The source cycle, literature wording, accepted ceilings, and all twenty-four consumers are explicit.}
+  - {id: G, reason: Registry and campaign audit find no distinct theorem or reusable API beyond P110 evidence and C-RES-001.}
+reproduction_only:
+  - {id: A, reason: PN5 reproduces but its eleven predicates are selected-input regressions, duplicate pair checks, or weak reporting guards.}
+criteria_results:
+  dependency_closure: passed_through_existing_exact_ceilings_only
+  exact_representation: passed_with_Fraction_Decimal_and_scaled_integers
+  selected_range: corrected_to_24000000_through_24000000000
+  threshold_sensitivity: binary_float_counterexample_reproduced
+  scale_identifiability: rejected_by_common_scaling_and_arbitrary_target_families
+  pair_surface: duplicate_of_C_RES_001
+  numeric_argmax: regression_only_and_source_tolerance_accepts_nearby_wrong_values
+  physical_interpretation: no_process_probability_rate_yield_or_material_map
+  nonduplication: no_new_claim_release_or_package_API
+decision: qualify_PN5_through_P110_evidence_and_C_RES_001_with_v0_94_0_unchanged
+status: complete

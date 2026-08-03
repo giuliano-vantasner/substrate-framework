@@ -1,0 +1,32 @@
+campaign: P113
+new_claims: []
+mathematical_inputs:
+  - positive exact total and unit energies
+  - Euclidean division, floor plateaus, exact decimal-prefix definitions, and finite set extrema
+  - elementary rational calculus for the finite pair magnitude
+accepted_claim_ceiling:
+  C-RES-001: >-
+    Supplies the exact finite paired-resolvent element, loss limits, unique
+    positive optimum, peak, and physical ceiling. PN5 adds no distinct pair
+    theorem and receives no open-system, probability, rate, or channel premise.
+immutable_adjudication_ceiling:
+  P110: >-
+    Establishes the exact quotient, remainder, plateau, scaling, and binary-
+    float ceilings as terminal evidence without a distinct accepted claim or
+    API. PN5's same seven counts add no new mathematical surface.
+compatibility_only:
+  C-SG-019: PN1 classical local coefficient only; no quantum process or rate.
+  C-SPN-002: PN3 finite symmetric-spin algebra only; no interaction or rate.
+source_dependencies:
+  - {id: PN2, authority: P110_terminal_evidence_only, role: exact_bookkeeping_ceiling}
+  - {id: PN4, authority: C-RES-001_only, role: exact_finite_pair_ceiling}
+candidate_cycle: [PN5, PN4, PN5]
+cycle_authority: none
+physical_imports_not_allowed:
+  - derived transition or mode energies
+  - physical initial and final states or normalized operators
+  - interaction Hamiltonian, matrix element, occupation, or spectral density
+  - bath dynamics, resonance, linewidth, decoherence, or measurement rule
+  - probability, rate, branching, yield, material realization, or observation
+dependency_closure: existing_exact_ceilings_only
+status: complete

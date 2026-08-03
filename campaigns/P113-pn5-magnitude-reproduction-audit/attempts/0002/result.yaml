@@ -1,0 +1,19 @@
+campaign: P113
+attempt: 0002
+candidate: primary_exact_count_and_pair_audit
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P113-pn5-magnitude-reproduction-audit/verify.py
+exit_status: 1
+terminal_tally: 48 checks passed before failure
+compatibility_event: none
+verdict: verifier_dimension_implementation_failure
+mechanism: >-
+  Exact source, contract, quotient, remainder, representation, plateau,
+  scaling, arbitrary-target, pair, derivative, peak, limit, and mutation
+  predicates passed. The dimension predicate used Python tuple concatenation
+  `(2,0)+(-1,0)` instead of adding exponents, so a correct matrix-element
+  dimension statement evaluated false before later audit predicates ran.
+next_attempt: >-
+  Express the energy exponent arithmetically as 2+1-2=1, retain the explicit
+  inequality with inverse-time dimensions, and rerun the unchanged primary
+  oracle from the beginning.

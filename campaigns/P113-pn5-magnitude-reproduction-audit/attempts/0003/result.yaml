@@ -1,0 +1,24 @@
+campaign: P113
+attempt: 0003
+candidate: exact_existing_ceiling_reconciliation
+status: completed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P113-pn5-magnitude-reproduction-audit/verify.py &&
+  PYTHONPATH=src .venv/bin/python
+  proposals/P113-pn5-magnitude-reproduction-audit/reviews/independent_magnitude_review.py
+exit_status: 0
+terminal_tally: 58 primary and 21 independent checks pass
+compatibility_event: none
+verdict: exact_surfaces_duplicate_existing_governance
+mechanism: >-
+  Fraction, scaled-integer, Decimal, and symbolic routes agree on every count,
+  selected range, threshold, plateau, scaling law, pair optimum, peak, and
+  limit. Input and coupling mutations are load bearing. Arbitrary target counts
+  can be manufactured by selecting the unit input. P110 already governs the
+  bookkeeping evidence and C-RES-001 already owns the pair theorem; no distinct
+  claim or API remains.
+next_attempt: >-
+  Complete terminal qualification review, synchronize PN5 disposition, source
+  queue, campaign and durable memory, then run one integrated record boundary
+  with v0.94.0 unchanged.

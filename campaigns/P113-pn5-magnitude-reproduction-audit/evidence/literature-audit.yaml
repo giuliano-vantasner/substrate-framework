@@ -1,0 +1,25 @@
+campaign: P113
+source_unit: PN5
+primary_record: arXiv:2501.08338v2
+primary_url: https://arxiv.org/abs/2501.08338
+reused_audit:
+  path: campaigns/P110-pn2-energy-subdivision-count-audit/evidence/literature-audit.yaml
+  sha256: 9deb0376a5c0e7fc6f7d2cb671be6abcd4a49f3d988c45f932e98ed4cce05497
+rechecked_surfaces:
+  explicit_retraction_word_found: false
+  floor_subdivision_formula_found: false
+  paper_transition_energy: 23848109 eV
+  PN5_rounded_input: 24000000 eV
+  mode_energy_role: >-
+    The paper's meV/eV mode values occur inside declared Hamiltonian, state,
+    density-of-states, and rate models; they are not derived by PN5 and do not
+    make its bare floor quotient a transition theorem.
+  direct_loss_correction: >-
+    The paper distinguishes a small complex direct correction from possible
+    interference-mediated rate changes. It does not support PN5's statement
+    that arXiv:2501.08338 retracted the latter claim.
+authority_ceiling: >-
+  The paper is provenance for its own model and wording, not accepted
+  framework authority or an input derivation. P113 imports none of its
+  Hamiltonians, states, matrix elements, mode choices, densities, or rates.
+status: audited

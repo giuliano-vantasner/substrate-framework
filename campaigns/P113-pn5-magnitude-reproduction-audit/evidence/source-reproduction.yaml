@@ -1,0 +1,19 @@
+campaign: P113
+source_unit: PN5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-30/bridge_PN5_magnitude_reproduction.py
+sha256: 8b2a35a873d9414653f9add48ceeed50d0d32142064bd67b95845b92aeaf87eb
+git_blob: d6cc905bc053d9279478fd3608d39fb1dbba41bf
+bytes: 8127
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN5_magnitude_reproduction.py
+exit_status: 0
+static_check_sites: 11
+runtime_checks: 11
+terminal_tally: ALL 11 CHECKS PASS
+reported_values:
+  counts: [24000000000, 8000000000, 2400000000, 800000000, 240000000, 80000000, 24000000]
+  thirty_meV_count: 800000000
+  numeric_Gamma_optimum: 1.9998
+  analytic_Gamma_optimum: 2.0
+numpy_compatibility_event: none
+status: reproduced
