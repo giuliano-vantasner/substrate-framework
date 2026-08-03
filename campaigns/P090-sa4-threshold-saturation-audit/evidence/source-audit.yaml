@@ -1,0 +1,98 @@
+campaign: P090
+source_unit: SA4
+source_check_count: 13
+checks:
+  - id: SA4.1
+    source_predicate: the G=1, s=0.2 example has E_seed below E_b
+    verdict: valid_input_conditioned_example
+    reason: >-
+      The numerical inequality reproduces, but G is a free dimensionful input.
+      Choosing G=E_b/f_tilde_sq(0.2) places the same example exactly at threshold.
+  - id: SA4.2
+    source_predicate: a sub-unit energy gives floor count zero and means zero below breakdown
+    verdict: exact_bookkeeping_physical_interpretation_rejected
+    reason: >-
+      floor(E/E_b)=0 for 0<=E<E_b is exact. E_b is the energy of an existing
+      fixed-frequency breather, not a formation-work theorem, while electrical
+      breakdown is absent from the executable and inserted only in consumers.
+  - id: SA4.3
+    source_predicate: the G_BIG=900 count sequence is nondecreasing in slew
+    verdict: valid_for_inserted_family_only
+    reason: >-
+      Exact differentiation proves monotonicity for the unnormalised supplied
+      exp(-(omega/s)^2) family. Fixed-peak normalization reverses the large-s
+      trend, and equal maximum slew does not fix spectral overlap.
+  - id: SA4.4
+    source_predicate: the G_BIG=900 sequence crosses from zero to at least one
+    verdict: gain_selected_regression
+    reason: >-
+      The source explicitly chooses G_BIG so strong slew clears several
+      breathers. Free gain realizes every nonnegative integer count and places
+      the crossing at any positive overlap.
+  - id: SA4.5
+    source_predicate: late increments of f_tilde_sq shrink toward zero
+    verdict: valid_for_inserted_family_only
+    reason: >-
+      The positive fixed-band integral is strictly increasing and approaches a
+      finite ceiling for this normalization. Its unnormalised Gaussian band
+      mass itself tends to zero as tau grows.
+  - id: SA4.6
+    source_predicate: f_tilde_sq(1e4) approximates the finite-band ceiling
+    verdict: valid_limit_regression
+    reason: >-
+      Dominated convergence gives the limit exactly. One large parameter sample
+      is regression coverage, not derivation of a physical saturation scale.
+  - id: SA4.7
+    source_predicate: a Michaelis curve gives a good fit to eight normalized samples
+    verdict: weak_numerical_fit
+    reason: >-
+      Independent optimization reproduces residual 0.196, corresponding to
+      normalized RMS error above 0.15. Gaussian fill and Michaelis response have
+      different small- and large-s asymptotics and are not the same law.
+  - id: SA4.8
+    source_predicate: 0.05<best_ssat<5 proves a physical omega_b/bandwidth scale
+    verdict: rejected_insensitive_oracle
+    reason: >-
+      The broad interval merely contains the fitted 0.90. In the sharp-lobe
+      limit the half-fill scale is omega_b/sqrt(log(2)), independent of tau and
+      therefore not omega_b divided by bandwidth 1/tau.
+  - id: SA4.9
+    source_predicate: the supplied adiabatic Gaussian has normalized chi overlap below 1e-6
+    verdict: valid_supplied_kernel_regression
+    reason: >-
+      The value reproduces for the planted centers, widths, and tau. The checked
+      object is overlap(S,chi)/total(S), not E_seed or N_count.
+  - id: SA4.10
+    source_predicate: planted adiabatic-to-resonant normalized overlap is below 1e-3
+    verdict: valid_supplied_kernel_regression
+    reason: >-
+      The ratio reproduces but depends on the supplied source and kernel widths.
+      It is not a formation probability, population ratio, or voltage-slew law.
+  - id: SA4.11
+    source_predicate: a constant kernel gives comparable adiabatic and resonant overlaps
+    verdict: tautological_countermodel
+    reason: >-
+      Normalizing the integral of S times one by the integral of S returns one
+      for every positive S. The check evaluates the definition of the planted
+      constant rather than falsifying a competing physical susceptibility.
+  - id: SA4.12
+    source_predicate: the fabricated kernel is rejected because its DC value is nonzero while real chi_b(0)=0
+    verdict: false_exact_label
+    reason: >-
+      At finite tau the source Gaussian has chi_b(0)=2*exp(-tau^2*omega_b^2)>0.
+      Its tau=10 value only passes a 1e-9 tolerance, and tau=5 breaks that guard.
+      C-SG-015's exact zero mean is a field-trace fact, not this susceptibility.
+  - id: SA4.13
+    source_predicate: the real/fabricated normalized ratios differ by more than one thousand
+    verdict: planted_discriminator_regression
+    reason: >-
+      The comparison reproduces because the fake ratio is identically one and
+      the selected real-kernel ratio is tiny. It does not test gain, energy,
+      floor count, formation, breakdown, or a consumer.
+headline_verdict: >-
+  SA4 contains exact conditional floor/remainder and inserted-family
+  monotonic-limit algebra, but it derives no physical threshold, population,
+  saturation scale, electrical breakdown, or engine law. The gain is free, the
+  spectral normalization is covariant, the accepted breather family has no
+  positive global energy minimum, the finite Gaussian kernel is nonzero at DC,
+  and all external physical mappings remain supplied.

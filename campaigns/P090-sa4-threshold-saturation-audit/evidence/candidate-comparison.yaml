@@ -1,0 +1,66 @@
+campaign: P090
+selection_order:
+  - accepted physical dependency closure
+  - exact dimensions, normalization, threshold, floor, monotonicity, and limits
+  - formation, electrical-breakdown, and consumer closure
+  - parameter economy and mutation sensitivity
+  - nonduplication and governed framework role
+candidates:
+  - id: A
+    decision: rejected_literal_promotion
+    reason: >-
+      SA1 and SA2 are qualified dependencies, SA3 supplies no physical map, and
+      SA4 imports no accepted response, deposition, formation, breakdown, or
+      population mechanism.
+  - id: B
+    decision: selected_as_conditional_bookkeeping_only
+    reason: >-
+      Exact floor/remainder division survives for a supplied positive energy
+      and unit. It assigns neither the remainder nor a physical state.
+  - id: C
+    decision: selected_as_semantic_ceiling
+    reason: >-
+      Floor counts completed units while ceiling counts units required to meet
+      a target. Neither convention is a formation theorem; C-COH-001 already
+      records the need for separately justified integer rounding.
+  - id: D
+    decision: selected_as_nonidentifiability_result
+    reason: >-
+      Free gain realizes arbitrary thresholds and counts, and inverse gain
+      exactly compensates spectral-amplitude normalization.
+  - id: E
+    decision: selected_as_family_conditional_ceiling
+    reason: >-
+      The supplied unnormalised family is monotone and bounded, but a fixed-peak
+      family reverses its trend, Gaussian fill is not Michaelis, and the
+      sharp-lobe half scale is independent of bandwidth.
+  - id: F
+    decision: requirement_confirmed_mechanism_absent
+    reason: >-
+      No accepted drive-to-work, work-to-state, formation, stability,
+      exclusivity, or state-to-count map exists.
+  - id: G
+    decision: requirement_confirmed_breakdown_inserted
+    reason: >-
+      Electrical breakdown appears only as branches and constants in external
+      consumers and is absent from SA4's executable variables.
+  - id: H
+    decision: selected
+    reason: >-
+      Tau and normalization mutations break the zero-DC and rising-saturation
+      verdicts; gain, floor, asymptotic, and AST probes expose the other inputs.
+  - id: I
+    decision: selected
+    reason: >-
+      All physical consumers retain inserted breakdown, unit, gain, base-count,
+      floor, or Michaelis objects and remain outside accepted closure.
+  - id: J
+    decision: selected_no_new_claim
+    reason: >-
+      Surviving floor and monotone-limit algebra is elementary, family-specific,
+      already bounded by accepted claims and P088, and has no distinct governed
+      consumer or canonical API.
+selection_basis: >-
+  Structural closure, exact scaling, and mutations select B-J. The source's
+  thirteen-check tally, count sequence, fitted scale, and overlap ratios select
+  no physical concept.

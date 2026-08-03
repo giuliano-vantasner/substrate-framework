@@ -1,0 +1,17 @@
+attempt: 0004
+candidate: independent_source_regression
+status: failed_comparator
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P090-sa4-threshold-saturation-audit/reviews/independent_threshold_review.py
+process_exit_status: 1
+passed_before_failure: 0
+failure: adaptive quadrature resolves the source band ceiling
+mechanism: >-
+  The check compared the adaptive result 0.08950891947072855 to an
+  over-rounded remembered decimal 0.0895116. The integrator error estimate was
+  3.81e-14; the source itself prints only 0.0895. This was a hard-coded
+  comparator defect, not a quadrature or scientific failure.
+next_attempt: >-
+  Derive the independent full-line Gaussian second moment
+  sqrt(pi)*(omega_b^2/tau+1/(2*tau^3)) and bound the finite [0,2] tail against it.

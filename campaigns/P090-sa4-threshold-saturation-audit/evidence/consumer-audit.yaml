@@ -1,0 +1,67 @@
+campaign: P090
+source_unit: SA4
+source_baseline: substrate@6d1f4e0
+consumers:
+  - path: engineering/seeding_kernel.py
+    git_blob: 02d82604a603219c18b4d67da44706e6a20d3d69
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    relationship: noncanonical mirror claiming to implement SA1 through SA4
+    implementation_finding: >-
+      Six direct np.trapz calls fail under current NumPy, as already preserved
+      by immutable P088 evidence. P090 does not rerun the unchanged failure.
+    scientific_finding: >-
+      g_trigger_derived inserts `if V<=Vbd: return 0`; V occurs only in that
+      comparison. Above it, a supplied unnormalised spectrum is divided by its
+      ceiling. Zero below breakdown and flatness above it are implemented
+      branches, while finite-tau chi_b(0) is positive.
+  - path: engineering/nucleation_efficiency_model.py
+    git_blob: 208382dea889a387d64044e783257491bfb5c132
+    sha256: bad798b39d850ecf92a97e25bfb0341ef7ae80b036c26a88037efdd618d8d3b8
+    relationship: downstream importer of g_trigger_derived
+    scientific_finding: >-
+      SLEW_SCALE_PER_KVUS is set to 1/DVDT_SAT_KVUS, M_SAT_BASE is set to
+      2.5 for continuity, and the result is clamped to at least 0.05. The
+      consumer therefore restores the design scale and a nonzero floor.
+  - path: engineering/dbd/pipeline.py
+    git_blob: 5455f84dee58b559da7b3052da8b5e3d88b3473a
+    sha256: 5354b39d3bc25439a7f6e83c175474358b3104b2f844cc6aa3a2ee2a84439669
+    relationship: later noncanonical engineering pipeline
+    implementation_finding: Two direct np.trapz calls remain.
+    scientific_finding: >-
+      The pipeline normalizes by max(S), sets SEED_BASE_PER_SITE=2.5, retains
+      overlap_G as an input, and returns a continuous product rather than
+      SA4's integer floor count. It openly confirms that absolute count is not
+      predicted.
+  - path: engineering/dbd/commensurate.py
+    git_blob: 434196f47df726af45358aa1aecc6e734dbcfc91
+    sha256: 6f85aafcb330af6619aa0f98fed36212c573c0e9831ee76b7628143992eeff4f
+    relationship: later conditional physical-units map
+    scientific_finding: >-
+      The function maps slew through abs(dV/dt)/V_scale/m_phys using supplied
+      voltage and medium scales. It neither derives those inputs nor imports
+      SA4's count, floor, gain, or fitted scale.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung174_c035_spark_discharge_coherence_channel.py
+    git_blob: 490c2b1de9d52941bceeb10286fda27984dad2df
+    sha256: e0f470201313c76c77c54c0e027a01189180561d49f94fe1ef88bfe2f18a317d
+    relationship: named synthetic C035 consumer
+    scientific_finding: >-
+      Retains DVDT_SAT=1 and the direct dVdt/(dVdt+DVDT_SAT) Michaelis law;
+      imports no SA4 implementation.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung175_c035_physical_engine_ionization_flow.py
+    git_blob: abebe6cd2a89a57ac243194327b1c209485582c7
+    sha256: b895622627bece5a154717b7aaab06cd0add9ed80a7c1643035c06c91fb3499c
+    relationship: named physical-units C035 consumer
+    scientific_finding: >-
+      Retains DVDT_SAT=5 kV/us and excess/(excess+DVDT_SAT), then multiplies
+      by an imported event payload. It imports no SA4 implementation.
+accepted_dependency_replay:
+  C-SG-002: unchanged exact energy of an existing breather
+  C-SG-005: unchanged normalized threshold-complement identity
+  C-COH-001: unchanged continuous conditional threshold and integer-count ceiling
+  C-SG-015: unchanged undriven temporal-field theorem and no-response ceiling
+  C-PDE-011: unchanged finite-time exact-source trajectory and no-physical-map ceiling
+canonical_impact: none
+replay_decision: >-
+  No external source is edited or admitted to accepted closure. Unchanged
+  np.trapz compatibility failures from P088 are cited rather than rerun as
+  ceremony; P090's own exact and adaptive checks use no NumPy integration alias.

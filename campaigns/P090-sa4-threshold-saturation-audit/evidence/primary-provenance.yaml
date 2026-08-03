@@ -1,0 +1,58 @@
+campaign: P090
+base_release: v0.77.0
+base_commit: bf7418a
+scientific_base_commit: aec2125
+proposal_commit: 002c5fd
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+frozen_inputs:
+  proposal_sha256: c469e191827e6b450f13b4b42022d7b3a936d64494a0dba6bd8fbf1cbd2d0896
+  freeze_sha256: 888dece23cbc2bf73500d3d80fe92a14d86b88cad299ca88f76a5f97d861c399
+  memory_contract_sha256: 749e10a3bb855654300d6ffc16a06361a55e8310a82f727407cc9a21696e0b45
+  source_sha256: 55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e
+  engineering_mirror_sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+  nucleation_consumer_sha256: bad798b39d850ecf92a97e25bfb0341ef7ae80b036c26a88037efdd618d8d3b8
+  dbd_pipeline_sha256: 5354b39d3bc25439a7f6e83c175474358b3104b2f844cc6aa3a2ee2a84439669
+  commensurate_map_sha256: 6f85aafcb330af6619aa0f98fed36212c573c0e9831ee76b7628143992eeff4f
+  rung174_sha256: e0f470201313c76c77c54c0e027a01189180561d49f94fe1ef88bfe2f18a317d
+  rung175_sha256: b895622627bece5a154717b7aaab06cd0add9ed80a7c1643035c06c91fb3499c
+verified_outputs:
+  primary_verifier:
+    path: campaigns/P090-sa4-threshold-saturation-audit/verify.py
+    sha256: 7b2e9ef3787acd0a3bcf8e1dedf291eaaa5e52d721f5e52cb8329a75f3994e8a
+    tally: ALL 39 CHECKS PASS
+  independent_review:
+    path: campaigns/P090-sa4-threshold-saturation-audit/reviews/independent_threshold_review.py
+    sha256: 1d2ad062a959f8c71ee10ac6ff4c7da983543101632887eab0722b2b17ffd61c
+    tally: ALL 13 CHECKS PASS
+evidence_hashes:
+  source_reproduction: e6059bb0f4127bf8dd4f10ab12e497d00dba3ba4182bd01a967b2440e0a0c31c
+  source_audit: ae542f8029f55b85929de8e1846446d42950468e9ed73489bd27cc05f3542598
+  consumer_audit: 89c1a2973c9cb739426a7df5d6d976eefe5f1c24c883f63e3395d56c9c834fe9
+  candidate_comparison: 57f1bbeadb85b9bf00633f3b7891467d0571a240f784ce8a1fb1fad73c8482ae
+  source_adjudication: 25160e83921837fec8f0e57b7136768f3fd758a9d83b7ae1c692ff1746c54326
+  impact_analysis: 183454c5e3306c0522e1ece5db0c2f6c796ca86adb47534209e692c9f1fc6d5d
+accepted_claims_used:
+  C-SG-002: exact energy of an already-existing normalized breather only
+  C-SG-005: exact normalized two-kink threshold complement only
+  C-COH-001: continuous conditional threshold and explicit integer-rounding ceiling
+  C-SG-015: undriven field-trace Fourier theorem and no-response ceiling
+  C-PDE-011: qualified exact-source trajectory and no-physical-map ceiling
+oracle_classes:
+  exact: >-
+    SymPy finite-tau DC value and mutation, accepted-family energy limits,
+    gain and normalization orbits, floor/ceiling and remainder semantics,
+    spectral-family derivatives and limits, Gaussian-band moment, sharp-lobe
+    scale, Michaelis asymptotics, dimensional ledger, AST source audit, and
+    hash-pinned dependency/consumer trace.
+  independent: >-
+    Fresh symbolic reconstruction plus scipy.integrate.quad with 1e-13
+    absolute/relative tolerances, analytic Gaussian-moment cross-check, and an
+    independently successful bounded scalar fit used only as source regression.
+  source: Read-only thirteen-check regression only.
+  external_consumers: Static replay plus immutable P088 compatibility-failure evidence.
+integration_policy: >-
+  Primary work uses no numerical quadrature. Independent source regression
+  uses adaptive SciPy quadrature and no NumPy trapezoidal alias. The unchanged
+  external np.trapz failures are cited from P088 rather than rerun as ceremony.
+claim_delta: none
+release_delta: none

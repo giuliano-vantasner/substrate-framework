@@ -1,0 +1,14 @@
+attempt: 0002
+candidate: H
+status: failed_implementation
+command: PYTHONPATH=src .venv/bin/python proposals/P090-sa4-threshold-saturation-audit/verify.py
+process_exit_status: 1
+passed_before_failure: 8
+failure: source counts are floor operations on two separately gained energies
+mechanism: >-
+  The AST helper records the loaded module name `math` for the attribute call
+  `math.floor`; the check incorrectly expected a bare loaded name `floor`.
+  Direct inspection confirms N_count and N_big load math, their respective
+  energy functions, E_b, and the local energy value.
+scientific_effect: none
+next_attempt: Require the `math` load and retain the separate E_seed/E_seed_big dependency checks.

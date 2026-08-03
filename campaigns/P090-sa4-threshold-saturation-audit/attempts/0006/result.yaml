@@ -1,0 +1,23 @@
+attempt: 0006
+candidate: terminal_promotion_boundary
+status: passed
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P090-sa4-threshold-saturation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P090-sa4-threshold-saturation-audit/reviews/independent_threshold_review.py
+  - .venv/bin/python -m pytest -q tests/test_governance.py tests/test_source_inventory.py tests/test_claim_inventory.py tests/test_repository_validation.py
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory
+  - scripts/validate.sh
+  - git diff --check
+results:
+  primary_tally: ALL 39 CHECKS PASS [P090]
+  independent_tally: ALL 13 CHECKS PASS [P090-INDEPENDENT]
+  focused_tests: 18 passed in 1.48s
+  repository_workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+  full_test_suite: 817 passed in 83.39s
+  workflow_exit_status: 0
+  repository_summary: 105 claims, 105 accepted, 0 proposals
+  migration_summary: 218 units, 130 pending, 0 partial, 3 migrated, 76 qualified, 8 duplicate evidence, 1 out of scope
+note: >-
+  The integrated gate ran once after the terminal disposition and generated
+  queue were in place. Final attempt and provenance records receive only
+  record-sensitive checks; the unchanged full suite is not repeated.

@@ -1,0 +1,41 @@
+attempt: 0001
+candidates: [A, B, C, D, E, F, G, H]
+status: source_reproduced_headline_rejected
+source_unit: SA4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: 55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e
+command: >-
+  /usr/bin/time -f 'ELAPSED=%e MAX_RSS_KB=%M EXIT=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA4_threshold_saturation_guard.py
+process_exit_status: 0
+elapsed_seconds: 0.44
+maximum_resident_kb: 48408
+terminal_tally: ALL 13 CHECKS PASS
+reported_values:
+  breather_energy: 11.3137
+  count_sequence: [0, 0, 3, 4, 6, 6, 7, 7]
+  band_ceiling: 0.0895
+  michaelis_fit_residual: 0.1960
+  fitted_saturation_scale: 0.90
+  real_adiabatic_to_resonant_ratio: 3.27e-14
+  fabricated_ratio: 1.00
+surviving_exact_predicates:
+  - A positive energy divided by a positive declared unit has zero floor below one unit and an exact Euclidean remainder.
+  - The source's positive integral family is strictly increasing in its positive slew coordinate and has a finite large-s ceiling.
+  - The corresponding floor coordinate is nondecreasing and bounded for fixed positive gain.
+headline_failures:
+  - The source sets G=1 for the below-threshold example and separately inserts G_BIG=900 solely to make a crossing exist; no accepted equation fixes either gain.
+  - At finite tau the Gaussian chi_b(0) is exactly 2*exp(-tau^2*omega_b^2), which is positive rather than zero.
+  - The Gaussian chi_b is inherited from qualified SA1 and is neither the exact C-SG-015 line spectrum nor an accepted susceptibility or deposition kernel.
+  - The source calls a broad bounded coarse-fit interval a derived physical saturation scale without deriving voltage-slew units, bandwidth mapping, or a material response.
+  - The adiabatic guard evaluates a separately normalized overlap, not E_seed or N_count, and the constant-kernel result is true by construction.
+  - C-SG-002 gives the energy of an existing fixed-frequency breather, not a minimum formation-work or integer-population theorem; the exact family has energies arbitrarily close to zero as omega approaches one.
+  - No accepted electrical breakdown, plasma, drive-to-work, work-to-state, formation, probability, population, or consumer map exists.
+next_attempt: >-
+  Derive the exact gain/normalization orbit, floor/remainder and floor/ceiling
+  semantics, sharp-lobe saturation scale, Michaelis asymptotic mismatch, and
+  finite-tau DC counterexample; then audit all thirteen predicates and consumers.
+quadrature_note: >-
+  The source uses manual midpoint and trapezoidal loops. P090's load-bearing
+  audit is exact and will not use np.trapz or another version-specific alias.

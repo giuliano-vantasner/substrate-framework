@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 131
-  qualified: 75
+  pending_adjudication: 130
+  qualified: 76
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5586,8 +5586,39 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
+  disposition: qualified
   accepted_claims: []
+  qualification: SA4's floor and fixed-band monotonic-limit identities are conditional bookkeeping for
+    supplied positive quantities, not a physical threshold, population, or breakdown derivation. C-SG-002
+    gives the energy of an already-existing fixed-frequency breather; the accepted family has energies
+    approaching zero and supplies no positive universal formation floor. The source uses G=1 for its below-threshold
+    example and separately inserts G_BIG=900 to force a crossing; free gain and spectral normalization
+    realize arbitrary thresholds and integer counts. Its finite-tau Gaussian chi_b is positive at DC,
+    and reducing tau breaks the tolerance guard. The supplied unnormalised spectral family is increasing
+    and bounded, but fixed-peak normalization reverses its large-slew trend; its sharp-lobe half-fill
+    scale is omega_b/sqrt(log(2)), independent of bandwidth, and its asymptotics are not Michaelis. The
+    normalized adiabatic guard does not evaluate E_seed or N, while the constant-kernel result is tautological.
+    External consumers insert breakdown, unit maps, gain, base counts, nonzero floors, and Michaelis constants
+    and remain outside accepted closure.
+  evidence:
+  - campaigns/P090-sa4-threshold-saturation-audit/reviews/source_adjudication.md
+  - campaigns/P090-sa4-threshold-saturation-audit/evidence/source-reproduction.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/evidence/source-audit.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/evidence/consumer-audit.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/evidence/candidate-comparison.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/evidence/primary-provenance.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/attempts/0001/result.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/attempts/0002/result.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/attempts/0003/result.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/attempts/0004/result.yaml
+  - campaigns/P090-sa4-threshold-saturation-audit/attempts/0005/result.yaml
+  - memory/vantasner/proposals/P090-sa4-threshold-saturation-audit.md
+  note: P090 derives gain/normalization nonidentifiability, floor/remainder and floor/ceiling semantics,
+    the finite-tau DC counterexample, exact spectral-family derivatives and limits, the Gaussian-band
+    moment, sharp-lobe scale, Michaelis asymptotic mismatch, and consumer ceilings through primary and
+    independent routes. Exact work uses no quadrature; independent regression uses adaptive SciPy integration
+    and no NumPy trapezoidal alias. Unchanged external np.trapz failures are cited from P088 rather than
+    rerun as validation ceremony.
 - source_unit: LB1
   phase: phase-26
   path: merged-framework/bridges/phase-26/bridge_LB1_dissipative_lifetime.py

@@ -1,0 +1,28 @@
+campaign: P090
+source_unit: SA4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-25/bridge_SA4_threshold_saturation_guard.py
+git_blob: 09b5c329c1f1d7e955e852a5ba1e93a3a4d01c3b
+sha256: 55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-25/bridge_SA4_threshold_saturation_guard.py
+process_exit_status: 0
+terminal_tally: ALL 13 CHECKS PASS
+elapsed_seconds: 0.44
+reported_values:
+  breather_energy: 11.3137
+  count_sequence: [0, 0, 3, 4, 6, 6, 7, 7]
+  band_ceiling: 0.0895
+  michaelis_fit_residual: 0.1960
+  fitted_saturation_scale: 0.90
+  real_adiabatic_to_resonant_ratio: 3.27e-14
+  fabricated_ratio: 1.00
+reproduction_scope: >-
+  This is a read-only literal regression. Clean exit and tally establish only
+  that the thirteen source predicates ran; exact and independent audits supply
+  their scientific classification.
+integration_compatibility: >-
+  SA4 uses explicit midpoint and endpoint-weighted loops rather than NumPy.
+  P090 exact work uses no quadrature, and its independent regression uses
+  scipy.integrate.quad rather than np.trapz.

@@ -2,7 +2,7 @@
 description: Audit SA4's threshold, integer-count, and saturation construction
 author: vantasner
 created: '2026-08-04T06:50:00Z'
-updated: '2026-08-04T06:50:00Z'
+updated: '2026-08-04T07:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-SA4
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P090 SA4 Threshold and Saturation Audit
 
@@ -192,6 +192,19 @@ individual verdict, primary and independent routes plus load-bearing mutations
 pass, consumers replay, campaign debt is empty, and the parent migration can
 continue. A floor identity, fitted curve, named breakdown threshold, or literal
 terminal tally is not sufficient alone.
+
+## Terminal Adjudication
+
+P090 terminally qualifies SA4 without changing `v0.77.0`. Exact and
+independent routes show that the floor operation is conditional bookkeeping,
+free gain realizes every threshold and integer count, finite-tau `chi_b(0)` is
+positive, fixed-peak normalization reverses the slew trend, and the sharp-lobe
+half-fill scale is independent of bandwidth. The Michaelis fit is a loose
+regression with different asymptotics, and every physical consumer retains an
+inserted breakdown, unit, gain, base-count, floor, or saturation object. All
+thirteen source predicates have individual verdicts, no distinct canonical
+claim or API survives, campaign debt is empty, and the parent migration
+continues to LB1.
 
 ## Cross-References
 

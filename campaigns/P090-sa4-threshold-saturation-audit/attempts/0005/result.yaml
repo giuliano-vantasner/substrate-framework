@@ -1,0 +1,23 @@
+attempt: 0005
+candidates: [B, C, D, E, F, G, H, I, J]
+status: primary_and_independent_audits_passed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P090-sa4-threshold-saturation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P090-sa4-threshold-saturation-audit/reviews/independent_threshold_review.py
+process_exit_statuses: [0, 0]
+terminal_tallies:
+  - ALL 39 CHECKS PASS [P090]
+  - ALL 13 CHECKS PASS [P090-INDEPENDENT]
+verdict: >-
+  SA4's exact floor and inserted-family algebra survives only conditionally.
+  Free gain and normalization set every count and crossing; the exact breather
+  family has no positive universal energy floor; finite-tau chi_b(0) is
+  positive; the sharp-lobe scale is not omega_b/bandwidth; Michaelis asymptotics
+  differ; and no accepted formation, electrical-breakdown, or consumer path
+  exists. Candidate J selects no distinct claim or canonical API.
+next_attempt: Materialize source, consumer, candidate, impact, and terminal disposition records.
+quadrature_note: >-
+  The load-bearing route is exact. Independent scipy.integrate.quad regression
+  uses adaptive Gauss-Kronrod integration with 1e-13 absolute and relative
+  tolerances and agrees with the analytic Gaussian second moment. No NumPy
+  trapezoidal alias is used.

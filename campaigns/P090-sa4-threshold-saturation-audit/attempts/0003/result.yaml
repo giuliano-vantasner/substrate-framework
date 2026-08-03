@@ -1,0 +1,17 @@
+attempt: 0003
+candidates: [B, C, D, E, F, G, H, I, J]
+status: primary_exact_audit_passed
+command: PYTHONPATH=src .venv/bin/python proposals/P090-sa4-threshold-saturation-audit/verify.py
+process_exit_status: 0
+terminal_tally: ALL 38 CHECKS PASS [P090]
+findings:
+  - Finite-tau chi_b(0)=2*exp(-tau^2*omega_b^2)>0, and reducing tau from 10 to 5 breaks the source tolerance verdict.
+  - The accepted breather family has energy range (0,16), so the fixed working-point energy is not a positive universal minimum.
+  - Free gain realizes every nonnegative integer floor count and compensates arbitrary spectral-amplitude normalization.
+  - Floor division retains an unassigned remainder and differs from a ceiling convention for required input units.
+  - The inserted unnormalised spectrum is increasing with a fixed-band ceiling, while fixed-peak normalization reverses its large-s trend.
+  - The sharp-lobe half-fill scale depends on omega_b and not tau, and its small- and large-s asymptotics are not Michaelis.
+  - The adiabatic guard is a separately normalized overlap rather than E_seed or N, while the constant-kernel ratio is one by construction.
+  - Engineering consumers insert breakdown, units, saturation, and population knobs and retain version-specific np.trapz calls.
+next_attempt: Independently rederive the exact ledgers and reproduce only the source-specific quadrature as regression evidence.
+quadrature_note: The primary route is exact and uses no numerical integration alias.
