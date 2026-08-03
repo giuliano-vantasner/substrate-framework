@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 107
-  qualified: 99
+  pending_adjudication: 106
+  qualified: 100
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7042,8 +7042,39 @@ units:
   dynamic_check_calls: 1
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RES-001
+  qualification: 'PN6''s equal-product pair identity and exact finite sum survive as a block-diagonal
+    corollary of C-RES-001. At zero loss an individual pair cancels exactly when its positive- and negative-detuning
+    complex products match; a full sum can instead cancel across nonzero pairs. For common Gamma>0, real
+    nonnegative pair products, real nonzero detunings, and at least one positive product, the finite sum
+    is strictly negative imaginary. The source omits the nontriviality premise: all-zero couplings refute
+    unrestricted strictness, while signed or complex products can cancel. A complex square g^2 must not
+    be substituted for a Hermitian product abs(g)^2 without a declared coupling convention. If each pair
+    shares its own positive loss, nonuniform pair losses preserve the sign; unequal shifts inside one
+    pair break the simple formula. The exact small- and large-loss coefficients are finite sums, and unequal
+    detunings do not inherit the one-pair optimum. Adding pairs changes the finite model, with fixed-per-pair
+    and fixed-total normalizations distinct from numerical refinement. The uniform-ladder digamma identity
+    is exact but specialized, and seven floating block sizes are regression only. The named arXiv v2 record
+    has no explicit retraction wording. No bath, physical loss, channel, probability, rate, nuclear or
+    phonon mechanism, material realization, magnitude, or observation is accepted.'
+  evidence:
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/reviews/source_adjudication.md
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/source-reproduction.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/source-audit.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/check-adjudication.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/dependency-audit.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/literature-audit.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/consumer-audit.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/candidate-comparison.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/evidence/primary-provenance.yaml
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/verify.py
+  - campaigns/P114-pn6-general-finite-pair-sum-audit/reviews/independent_finite_pair_review.py
+  - memory/vantasner/decisions/PN6-qualified-review.md
+  note: P114 closes 44 primary and 15 independent exact checks plus 14 focused package tests after two
+    preserved verifier implementation failures. PN6 has no direct or transitive source consumer. It calls
+    no sampled integration routine and triggered no np.trapz compatibility event.
 - source_unit: CM1
   phase: phase-31
   path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py

@@ -1,0 +1,17 @@
+campaign: P114
+attempt: 0003
+candidate: primary_exact_oracle_v2
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P114-pn6-general-finite-pair-sum-audit/verify.py
+exit_status: 1
+successful_checks_before_failure: 41
+failed_check: accepted_finite_block_claim_already_owns_PN6_exact_algebra_and_ceiling
+failure_class: verifier_implementation
+mechanism: >-
+  One case-sensitive phrase expected "Changing L" while the accepted statement
+  contains "changing L" after a semicolon. The matrix, cancellation,
+  normalization, and physical-ceiling clauses are all present.
+scientific_effect: none
+compatibility_event: none
+repair: use stable case-normalized clause fragments
+next_attempt: rerun_primary_after_semantic_nonduplication_guard

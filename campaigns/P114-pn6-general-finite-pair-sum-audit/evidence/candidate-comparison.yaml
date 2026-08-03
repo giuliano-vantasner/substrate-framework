@@ -1,0 +1,28 @@
+campaign: P114
+selection_frozen_by: proposals/P114-pn6-general-finite-pair-sum-audit/evidence/frozen-proposal.yaml
+selected:
+  - {id: B, reason: Exact summation supplies the finite identity and the sharp real-nonnegative-product strictness condition.}
+  - {id: C, reason: A complete independently assembled diagonal block reproduces the pairwise sum.}
+  - {id: D, reason: Zero, unequal, signed, complex, and unequal-shift countermodels expose every missing premise.}
+  - {id: E, reason: Exact limits, stationary equation, and size normalization prevent one-pair and refinement extrapolations.}
+  - {id: F, reason: Accepted dependencies, literature wording, all predicates, empty consumers, and nonduplication are explicit.}
+reproduction_only:
+  - {id: A, reason: PN6 reproduces, but its strictness implementation narrows the prose to positive symbols and a uniform ladder.}
+criteria_results:
+  dependency_closure: passed_through_C_RES_001_only
+  exact_finite_sum: passed_symbolically
+  independent_full_block: passed_for_multiple_nonuniform_pairs
+  pairwise_lossless_cancellation: iff_products_match
+  full_lossless_cancellation: can_occur_across_nonzero_pairs
+  common_positive_loss_strictness: iff_at_least_one_real_nonnegative_product_is_positive
+  unrestricted_couplings: rejected_by_zero_signed_and_complex_countermodels
+  nonuniform_pair_losses: compatible_when_each_pair_shares_one_positive_loss
+  unequal_member_shifts: simple_common_phase_formula_rejected
+  asymptotics: exact_small_and_large_coefficients_pass
+  stationary_scope: unequal_detunings_do_not_inherit_one_pair_optimum
+  size_scope: model_enlargement_with_fixed_per_pair_and_fixed_total_conventions
+  physical_interpretation: no_bath_channel_probability_rate_material_map_or_observation
+  consumer_closure: empty
+  nonduplication: no_new_claim_release_or_package_API
+decision: qualify_PN6_through_C_RES_001_with_v0_94_0_unchanged
+status: complete

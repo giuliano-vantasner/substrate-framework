@@ -1,0 +1,21 @@
+campaign: P114
+source_unit: PN6
+method: >-
+  Inspect candidate_dependencies in the generated 218-unit queue for direct
+  PN6 references, then traverse any matches. The pinned queue contains no
+  direct PN6 consumer, so the transitive closure is empty.
+consumers: []
+closure:
+  direct_count: 0
+  indirect_count: 0
+  accepted_consumers: 0
+  pending_consumers: 0
+  interpretation: >-
+    No source edge inherits PN6. Canonical C-RES-001 consumers remain governed
+    by P112 and do not make PN6 authoritative.
+canonical_consumers:
+  - src/substrate_framework/paired_resolvent.py
+  - tests/test_paired_resolvent.py
+  - campaigns/P112-pn4-lossy-paired-resolvent-audit/verify.py
+  - campaigns/P112-pn4-lossy-paired-resolvent-audit/reviews/independent_resolvent_review.py
+status: complete

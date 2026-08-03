@@ -2,7 +2,7 @@
 description: Audit PN6's arbitrary finite symmetric-pair sum as a possible C-RES-001 corollary
 author: vantasner
 created: '2026-08-08T01:15:00Z'
-updated: '2026-08-08T01:15:00Z'
+updated: '2026-08-08T01:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - finite-sum
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P114 PN6 General Finite-Pair Sum Audit
 
@@ -136,6 +136,21 @@ P114 closes only when the finite sum, block inverse, strictness conditions,
 countermodels, asymptotics, normalization, source predicates, dependencies,
 nonduplication, and empty consumer closure are complete; PN6 has a durable
 terminal disposition; and the campaign debt ledger is empty.
+
+## Terminal Result
+
+P114 qualifies PN6 through existing C-RES-001 with v0.94.0 unchanged. Exact
+primary and fresh full-block routes establish the finite sum, cancellation
+conditions, real-nonnegative strictness premise, zero/signed/complex and shift
+countermodels, both asymptotic coefficients, stationary scope, and size
+normalization. The source's all-coupling strictness wording is narrowed because
+all-zero products give zero and signed or complex products can cancel.
+
+No new claim or package API survives nonduplication. The thirty source
+predicates are individually adjudicated, the consumer closure is empty, two
+verifier implementation failures are preserved before repair, and the
+campaign debt ledger is empty. The immutable terminal record is
+`campaigns/P114-pn6-general-finite-pair-sum-audit`.
 
 ## Cross-References
 

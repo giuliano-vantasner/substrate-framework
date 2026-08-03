@@ -1,0 +1,19 @@
+campaign: P114
+attempt: 0005
+candidate: integrated_terminal_qualification_gate
+status: completed
+command: scripts/validate.sh && git diff --check
+compatibility_event: none
+exit_status: 0
+terminal_tally: >-
+  ALL REPOSITORY WORKFLOW CHECKS PASS; 129 claims, 129 accepted, 0
+  proposals; 218 source units, 106 pending, 0 partial; 483 memory files;
+  physics skill valid; 1031 tests passed in 92.94s; git diff --check clean
+verdict: terminal_qualification_boundary_verified
+mechanism: >-
+  Immutable campaign, terminal review, PN6 disposition, regenerated source
+  queue, exact primary and independent oracles, and parent continuation state
+  agree with registry and v0.94.0 intentionally unchanged.
+next_attempt: >-
+  Commit the PN6 adjudication, checkpoint the parent effort with that immutable
+  commit, then freeze P115 before inspecting or executing CM1.

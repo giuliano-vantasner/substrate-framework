@@ -1,0 +1,28 @@
+campaign: P114
+attempt: 0001
+candidate: literal_source_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN6_general_L_lossless_null.py
+source_sha256: 50ebbf97568fef13e69fc926db3e57457aba4685f3140ac8786bed525e71289f
+compatibility_preflight: >-
+  If immutable source fails only because np.trapz is absent, preserve the
+  version event and replay with an alias only. Do not classify compatibility
+  as scientific failure.
+status_after_run: completed
+exit_status: 0
+terminal_tally: ALL 30 CHECKS PASS
+compatibility_event: none
+verdict: literal_symbolic_and_numeric_regression_reproduced
+mechanism: >-
+  The exact pair and finite-sum identities, lossless null, uniform-ladder
+  digamma recurrence, positive-symbol specialization, and seven finite block
+  regressions reproduce. The strict-positive result uses positive symbols and
+  a uniform nonzero coupling, so it does not cover all arbitrary couplings in
+  the prose; an all-zero family is an immediate counterexample. Numeric block
+  agreement is regression of the exact identity. NumPy is used for finite
+  matrices only and no sampled integration routine is called.
+next_attempt: >-
+  Derive exact finite-sum strictness conditions, full-sum versus pairwise
+  cancellation, zero and complex countermodels, unequal shifts, limiting
+  coefficients, size conventions, and stationary scope; independently invert
+  full blocks and complete nonduplication and dependency review.

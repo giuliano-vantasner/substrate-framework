@@ -1,0 +1,16 @@
+campaign: P114
+source_unit: PN6
+primary_record: arXiv:2501.08338v2
+primary_url: https://arxiv.org/abs/2501.08338
+reused_audit:
+  path: campaigns/P110-pn2-energy-subdivision-count-audit/evidence/literature-audit.yaml
+  sha256: 9deb0376a5c0e7fc6f7d2cb671be6abcd4a49f3d988c45f932e98ed4cce05497
+rechecked_surfaces:
+  explicit_retraction_word_found: false
+  direct_complex_correction_distinguished_from_interference_rate_model: true
+source_wording_verdict: >-
+  PN6's statement that the named author retracted the loss-enhancement claim is
+  not supported as explicit retraction wording by the pinned v2 record. The
+  paper's own model is not framework authority and none of its states,
+  couplings, rates, or material parameters are imported here.
+status: audited

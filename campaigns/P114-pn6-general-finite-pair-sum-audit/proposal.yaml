@@ -59,4 +59,4 @@ comparators_blinded_until: >-
   interpretation, dependency, and nonduplication gates before executing PN6 or
   reading its thirty predicate implementations. Exposed examples cannot select
   a concept or pass threshold.
-status: draft
+status: accepted

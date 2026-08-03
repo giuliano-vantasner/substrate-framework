@@ -1,0 +1,25 @@
+campaign: P114
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-30/bridge_PN6_general_L_lossless_null.py
+  sha256: 50ebbf97568fef13e69fc926db3e57457aba4685f3140ac8786bed525e71289f
+frozen_inputs:
+  proposal_snapshot: proposals/P114-pn6-general-finite-pair-sum-audit/evidence/frozen-proposal.yaml
+  proposal_snapshot_sha256: 539ba98bb24b64c3a918a273632a0ef94948a7c5a69360a93aeda7d320016659
+verification:
+  primary: proposals/P114-pn6-general-finite-pair-sum-audit/verify.py
+  primary_sha256: 2fe7a930f4eb70e1f4bb35a084269af82523583abfb5efab9e575ad289e48ff5
+  independent: proposals/P114-pn6-general-finite-pair-sum-audit/reviews/independent_finite_pair_review.py
+  independent_sha256: b5dc74884d20e0f059bf19a36e0361bd2807913d3ba4d13d2ae6b467ab031bff
+existing_implementation:
+  module: src/substrate_framework/paired_resolvent.py
+  tests: tests/test_paired_resolvent.py
+  governing_claim: C-RES-001
+exact_surface:
+  finite_sum: -i*Gamma*sum_j(c_j/(Delta_j^2+Gamma^2/4))
+  strictness: real_nonnegative_c_j_and_at_least_one_positive
+  small_loss_coefficient: -i*sum_j(c_j/Delta_j^2)
+  large_loss_coefficient: -4i*sum_j(c_j)
+  stationary_equation: sum_j(c_j*(Delta_j^2-Gamma^2/4)/(Delta_j^2+Gamma^2/4)^2)=0
+  verification_ceiling: exact_finite_matrix_corollary_not_bath_channel_probability_or_rate
+status: terminal_qualification_candidate

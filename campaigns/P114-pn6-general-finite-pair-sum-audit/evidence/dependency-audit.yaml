@@ -1,0 +1,37 @@
+campaign: P114
+new_claims: []
+mathematical_inputs:
+  - finite-dimensional complex block matrices and exact diagonal inversion
+  - finite sums, rational identities, inequalities, derivatives, and exact limits
+  - explicitly declared real nonnegative or general complex coupling products
+accepted_claim_ceiling:
+  C-RES-001: >-
+    Supplies the arbitrary exact finite effective block, unequal and equal pair
+    products, E=0 cancellation condition, one-pair limits, size conventions,
+    and physical ceiling. PN6's exact finite sum is a block-diagonal corollary.
+  C-DYN-001: >-
+    Supplies only the distinction between abstract damping and a physical map;
+    it does not turn Gamma into loss, decoherence, a bath, or a rate.
+  C-SG-019: >-
+    Supplies PN1's classical cosine-coordinate coefficient ceiling only and no
+    quantum intermediate states, products, channel, or magnitude.
+immutable_adjudication_ceiling:
+  P112: accepted_C_RES_001_only
+  P113: exact_bookkeeping_evidence_and_C_RES_001_only
+source_dependencies:
+  - {id: LB2, authority: none, role: pending_candidate_provenance_only}
+  - {id: PN1, authority: C-SG-019_only, role: classical_algebraic_ceiling}
+  - {id: PN4, authority: C-RES-001_only, role: exact_finite_resolvent_ceiling}
+  - {id: PN5, authority: P113_terminal_evidence_only, role: no_new_premise}
+  - {id: S1, authority: none, role: pending_candidate_provenance_only}
+  - {id: S2, authority: none, role: pending_candidate_provenance_only}
+  - {id: S3, authority: none, role: pending_candidate_provenance_only}
+  - {id: S4, authority: none, role: pending_candidate_provenance_only}
+  - {id: S5, authority: none, role: pending_candidate_provenance_only}
+physical_imports_not_allowed:
+  - microscopic Hermitian system-bath Hamiltonian or derived self-energy
+  - Markov, Born, secular, Lindblad, trace-preserving, or measurement assumptions
+  - normalized state, probability, transition rate, branching, or yield rule
+  - nuclear or phonon channel, material realization, parameter map, or observation
+dependency_closure: existing_C_RES_001_finite_block_ceiling_only
+status: complete

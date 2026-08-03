@@ -1,0 +1,51 @@
+campaign: P114
+title: PN6 exact finite-pair sum and strictness-premise audit
+source_baseline: substrate@6d1f4e0
+source_units: [PN6]
+base_release: v0.94.0
+release_after_adjudication: v0.94.0
+adjudicated_at: '2026-08-08T01:30:00Z'
+selected_candidates:
+  - {id: B, reason: Exact finite summation derives the identity and sharp nonnegative-product strictness condition.}
+  - {id: C, reason: Fresh full-block inversion independently reproduces the finite sum.}
+  - {id: D, reason: Zero, signed, complex, asymmetric-product, and unequal-shift countermodels close the premise ledger.}
+  - {id: E, reason: Exact limits, stationary scope, and size normalization prevent extrapolation.}
+  - {id: F, reason: Predicate, dependency, literature, consumer, and nonduplication audits close governance.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-RES-001, decision: unchanged_exact_finite_block_pair_theorem_and_physical_ceiling}
+  - {id: C-DYN-001, decision: unchanged_abstract_damping_physical_map_ceiling}
+  - {id: C-SG-019, decision: unchanged_PN1_classical_coefficient_ceiling}
+  - {id: P113, decision: unchanged_PN5_terminal_evidence_only}
+evidence:
+  source_route: attempts/0001/result.yaml
+  failed_model_size_oracle: attempts/0002/result.yaml
+  failed_nonduplication_oracle: attempts/0003/result.yaml
+  exact_and_independent_routes: attempts/0004/result.yaml
+  integrated_terminal_gate: attempts/0005/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_finite_pair_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  literature_audit: evidence/literature-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/PN6-qualified-review.md
+source_disposition:
+  PN6: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN6_general_L_lossless_null.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P114-pn6-general-finite-pair-sum-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P114-pn6-general-finite-pair-sum-audit/reviews/independent_finite_pair_review.py
+  - .venv/bin/python -m pytest -q tests/test_paired_resolvent.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

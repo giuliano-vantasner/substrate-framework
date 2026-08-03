@@ -1,0 +1,49 @@
+campaign: P114
+source_unit: PN6
+static_check_site_count: 30
+literal_check_site_count: 29
+dynamic_check_site_count: 1
+runtime_predicate_count: 30
+predicates:
+  - {id: PN6-01, source_site: S1a_pair_closed_form, verdict: duplicate, ceiling: exact_C_RES_001_equal_product_pair}
+  - {id: PN6-02, source_site: S1b_pair_lossless_null, verdict: duplicate, ceiling: exact_C_RES_001_on_shell_equal_product_cancellation}
+  - {id: PN6-03, source_site: S1c_individual_paths_nonzero, verdict: qualified, ceiling: positive_nonzero_representative_g_only}
+  - {id: PN6-04, source_site: S1d_paths_are_negatives, verdict: duplicate, ceiling: exact_C_RES_001_pair_cancellation}
+  - {id: PN6-05, source_site: S1e_positive_loss_nonzero, verdict: qualified, ceiling: positive_nonzero_representative_symbols_only}
+  - {id: PN6-06, source_site: S2a_general_index_summand, verdict: duplicate, ceiling: algebraic_C_RES_001_pair_identity}
+  - {id: PN6-07, source_site: S2b_general_index_lossless_null, verdict: qualified, ceiling: equal_products_within_each_pair_required}
+  - {id: PN6-08, source_site: S2c_symbolic_L_lossless_sum, verdict: qualified, ceiling: termwise_equal_product_corollary_not_arbitrary_product_theorem}
+  - {id: PN6-09, source_site: S2d_symbolic_L_lossy_sum, verdict: retained, ceiling: exact_finite_sum_corollary_of_C_RES_001}
+  - {id: PN6-10, source_site: S2e_same_sign, verdict: qualified, ceiling: substitution_uses_positive_Delta_r_and_g_r}
+  - {id: PN6-11, source_site: S3a_digamma_base, verdict: retained, ceiling: exact_uniform_ladder_specialization}
+  - {id: PN6-12, source_site: S3b_digamma_recurrence, verdict: retained, ceiling: exact_uniform_ladder_recurrence}
+  - {id: PN6-13, source_site: S3c_induction_conclusion, verdict: retained, ceiling: exact_uniform_ladder_identity_only}
+  - {id: PN6-14, source_site: S3d_numeric_digamma_corroboration, verdict: qualified, ceiling: finite_regression_of_exact_base_and_recurrence}
+  - {id: PN6-15, source_site: S4a_positive_base, verdict: qualified, ceiling: uniform_positive_symbols_only}
+  - {id: PN6-16, source_site: S4b_positive_increment, verdict: qualified, ceiling: uniform_positive_symbols_only}
+  - {id: PN6-17, source_site: S4c_positive_uniform_sum, verdict: qualified, ceiling: uniform_ladder_positive_nonzero_products_only}
+  - {id: PN6-18, source_site: S4d_full_lossy_magnitude_positive, verdict: qualified, ceiling: one_uniform_positive_g_not_arbitrary_couplings}
+  - {id: PN6-19, source_site: S4e_small_loss_limit, verdict: duplicate, ceiling: one_term_C_RES_001_limit_specialization}
+  - {id: PN6-20, source_site: S4f_incoherent_uniform_path_sum, verdict: qualified, ceiling: positive_uniform_ladder_bookkeeping_not_dynamics}
+  - {id: PN6-21, source_site: S5a_finite_block_lossless_null, verdict: qualified, ceiling: seven_float_regressions_of_exact_identity}
+  - {id: PN6-22, source_site: S5b_finite_block_lossy_finite, verdict: qualified, ceiling: finiteness_is_weaker_than_nonzero_and_uses_fixed_positive_example}
+  - {id: PN6-23, source_site: S5c_finite_block_formula_agreement, verdict: qualified, ceiling: seven_numeric_regressions_of_exact_diagonal_inverse}
+  - {id: PN6-24, source_site: S6a_fake_residual_rejected, verdict: retained, ceiling: mutation_of_lossless_identity}
+  - {id: PN6-25, source_site: S6b_unpaired_spectrum_nonzero, verdict: retained, ceiling: exact_pairing_countermodel}
+  - {id: PN6-26, source_site: S6c_loss_kills_rejected, verdict: qualified, ceiling: positive_uniform_specialization_not_physical_channel}
+  - {id: PN6-27, source_site: S6d_Gamma_independent_fake, verdict: retained, ceiling: elementary_dependence_guard}
+  - {id: PN6-28, source_site: S6e_free_symbol_inventory, verdict: qualified, ceiling: lexical_no_import_guard_not_dependency_or_physical_validation}
+  - {id: PN6-29, source_site: S6f_three_literal_self_scan, verdict: qualified, ceiling: three_constructed_literals_only_not_general_import_audit}
+  - {id: PN6-30, source_site: S6g_literal_scan_self_test, verdict: retained, ceiling: scanner_unit_test_only}
+narrative_verdicts:
+  exact_finite_sum: retained_as_C_RES_001_finite_block_corollary
+  arbitrary_real_detunings: retained_when_nonzero_and_pairwise_symmetric
+  arbitrary_real_couplings_lossless: qualified_equal_products_within_each_pair
+  arbitrary_real_couplings_positive_loss_strict: corrected_to_at_least_one_nonzero_real_coupling
+  arbitrary_complex_couplings_positive_loss_strict: rejected_signed_or_complex_products_can_cancel
+  uniform_ladder_digamma: retained_as_specialized_identity
+  general_truncation_upgrade: qualified_finite_family_identity_not_numerical_refinement
+  coherent_exchange_channel: rejected_finite_matrix_element_only
+  loss_enhancement_retraction: rejected_named_arXiv_v2_has_no_explicit_retraction
+  physical_mechanism: rejected_no_bath_probability_rate_or_material_map
+status: complete

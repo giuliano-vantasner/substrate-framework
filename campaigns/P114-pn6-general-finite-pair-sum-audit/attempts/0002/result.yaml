@@ -1,0 +1,20 @@
+campaign: P114
+attempt: 0002
+candidate: primary_exact_oracle_v1
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P114-pn6-general-finite-pair-sum-audit/verify.py
+exit_status: 1
+successful_checks_before_failure: 33
+failed_check: source_changes_finite_model_size_rather_than_numerical_resolution
+failure_class: verifier_implementation
+mechanism: >-
+  The guard searched the complete source text for generic prose tokens such as
+  mesh and timestep. A narrative occurrence can fail that lexical negative
+  even though the executed implementation varies L by rebuilding a finite
+  (2+2L)-dimensional matrix and declares no discretization variable.
+scientific_effect: none
+compatibility_event: none
+repair: >-
+  Inspect the build_model_re AST and exact source assignments for dimension and
+  L iteration, rather than treating ordinary prose as executable evidence.
+next_attempt: rerun_primary_after_AST_scoped_model_size_guard

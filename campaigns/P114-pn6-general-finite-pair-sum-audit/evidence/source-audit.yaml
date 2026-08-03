@@ -1,0 +1,50 @@
+campaign: P114
+source_unit: PN6
+source_sha256: 50ebbf97568fef13e69fc926db3e57457aba4685f3140ac8786bed525e71289f
+imports: [sys, os, numpy, sympy]
+declared_dependencies: [LB2, PN1, PN4, PN5, S1, S2, S3, S4, S5]
+declared_model:
+  spectral_energy: 0
+  endpoint_count: 2
+  intermediate_structure: finite_symmetric_detuning_pairs
+  intermediate_shift: -i*Gamma/2
+  pair_products: g_j^2
+  direct_endpoint_coupling: 0
+exact_surface:
+  equal_product_pair: -i*Gamma*g_j^2/(Delta_j^2+Gamma^2/4)
+  finite_sum: -i*Gamma*sum_j(g_j^2/(Delta_j^2+Gamma^2/4))
+  pairwise_lossless_null: exact_when_positive_and_negative_products_match
+  common_positive_loss_strictness: >-
+    Valid for real nonnegative products with at least one positive product;
+    false for the unrestricted all-zero, signed, or complex-product classes.
+  uniform_ladder_digamma: exact_specialization_only
+  finite_matrix_regression: regression_of_exact_diagonal_resolvent_identity
+implementation_narrowing:
+  pair_symbols: Delta_and_g_are_positive
+  general_sign_probe: Delta_r_and_g_r_are_positive
+  strict_general_L_proof: uniform_ladder_with_one_positive_nonzero_g
+  zero_coupling_case: not_tested
+  signed_or_complex_products: not_tested
+  unequal_products_within_pair: not_tested
+  nonuniform_pair_losses: not_tested
+  unequal_member_shifts: not_tested
+oracle_ceilings:
+  arbitrary_real_couplings: >-
+    The exact identity permits zero real g_j, while strict nonvanishing needs
+    at least one nonzero g_j. Negative real g_j is harmless because g_j^2 is
+    positive, but an unrestricted complex g_j makes g_j^2 signed or complex.
+  loss_opens_channel: finite_effective_matrix_element_only
+  destructive_interference: pairwise_algebra_only_not_full_dynamics
+  general_truncation: finite_model_family_not_numerical_refinement_or_infinite_limit
+  loss: declared_non_Hermitian_shift_not_derived_bath_or_decoherence
+  physical_surface: no_probability_rate_nuclear_phonon_material_magnitude_or_observation
+omissions:
+  - necessary and sufficient pairwise and full-sum cancellation conditions
+  - all-zero, signed, and complex-product countermodels
+  - distinction between g^2 and a Hermitian product abs(g)^2
+  - nonuniform pair loss and unequal member-shift cases
+  - finite-sum small- and large-loss coefficients
+  - unequal-detuning stationary equation and failure of one-pair optimum inheritance
+  - fixed-per-pair versus fixed-total size normalization
+compatibility_event: none
+status: audited

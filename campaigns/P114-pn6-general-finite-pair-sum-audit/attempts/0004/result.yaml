@@ -1,0 +1,21 @@
+campaign: P114
+attempt: 0004
+candidate: exact_finite_sum_and_independent_block_routes
+status: completed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P114-pn6-general-finite-pair-sum-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P114-pn6-general-finite-pair-sum-audit/reviews/independent_finite_pair_review.py
+  - .venv/bin/python -m pytest -q tests/test_paired_resolvent.py
+exit_statuses: [0, 0, 0]
+terminal_tallies:
+  primary: ALL 44 CHECKS PASS [PN6-EXACT-AUDIT]
+  independent: ALL 15 CHECKS PASS [PN6-INDEPENDENT]
+  targeted_package: 14 passed
+compatibility_event: none
+verdict: >-
+  The exact finite sum, direct block inverse, cancellation conditions,
+  countermodels, nonuniform pair losses, asymptotic coefficients, stationary
+  equation, and size conventions close. PN6's strict positive-loss statement
+  is valid only for real nonnegative pair products with at least one positive
+  product. C-RES-001 already governs the surviving exact surface.
+next_attempt: terminal_adjudication_and_integrated_replay
