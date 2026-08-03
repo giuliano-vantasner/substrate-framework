@@ -1,0 +1,71 @@
+id: P105
+base_release: v0.88.0
+base_commit: d09de1dc36239c407e9be34413638254952065af
+scientific_base_commit: 42337ce
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [E2]
+question: >-
+  Derive the exact conditional rational-map radial functional, Euler-Lagrange
+  equation, scaling identity, and endpoint exponents; solve the declared
+  degree-one, degree-two, and degree-four stationary branches with corrected
+  accepted angular inputs using independent asymptotic-boundary methods; and
+  adjudicate whether E2 establishes only conditional single-profile energies
+  or also a global multi-Skyrmion minimum, physical baryon or nuclear state,
+  binding hierarchy, reaction, or yield.
+invariants:
+  - C-RMAP-001 supplies exact degree, area, bound, I(1)=1, and I(2)=pi+8/3 but no radial action, minimizer, or physical state.
+  - C-RMAP-002 supplies resolution-bounded I(4)=20.6496264884189 for one declared degree-four map but no global map minimization or physical interpretation.
+  - C-MOD-001 owns only the B=1,I=1 specialization of the declared radial functional and its exact equation and scaling identities.
+  - C-MOD-002 is resolution-bounded evidence for one B=1 stationary branch with an asymptotic Robin tail; it is a compatibility anchor, not a multi-degree derivation input.
+  - A stationary branch of a declared single-profile rational-map reduction is distinct from a global minimizer of the reduced functional, a solution of a full three-dimensional field theory, and a physical particle or nucleus.
+  - Exact variational and endpoint statements remain separate from resolution-bounded profile and energy evidence.
+  - The origin cutoff, outer domain, asymptotic boundary data, solver status, residual norm, quadrature, and tail correction are load-bearing numerical inputs.
+allowed_imports:
+  - C-RMAP-001 and C-RMAP-002 only for their exact declared maps and angular values and explicit interpretation ceilings
+  - C-MOD-001 and C-MOD-002 only for B=1 exact and numerical compatibility and nonduplication
+  - standard one-dimensional Euler-Lagrange calculus, Frobenius or dominant-balance endpoint analysis, Derrick scaling, ODE uniqueness where its hypotheses hold, and numerical shooting/collocation theory
+  - SymPy for exact variation, series, exponent equations, scaling, and normalization identities
+  - substrate_framework.numerics solve_ivp_evidence, solve_bvp_evidence, SolverTolerances, refinement machinery, and trapezoid_integral
+  - SciPy bracketing, DOP853 shooting, and solve_bvp collocation with explicit status, tolerances, nodes, domains, and residuals
+  - E2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after contract validation and freeze
+  - hash-pinned direct and indirect consumers only after freeze and only as noncanonical impact evidence
+candidates:
+  - id: A
+    description: Reproduce E2 unchanged and classify every literal predicate, boundary convention, solver gate, energy normalization, comparator, and terminal tally.
+  - id: B
+    description: Derive the exact generalized radial density, Euler-Lagrange residual, B=1 reduction, Derrick split, and virial identity for declared positive B and I.
+  - id: C
+    description: Derive the regular-origin and massless-tail exponents and use them as two-sided asymptotic Robin data rather than hard finite-wall Dirichlet values.
+  - id: D
+    description: Implement pure DOP853 amplitude shooting with accepted angular inputs, explicit solver evidence, domain/cutoff/tolerance/sample refinement, energy components, and tail estimates.
+  - id: E
+    description: Independently solve the same branches by solve_bvp collocation using boundary residuals and initialization that do not import the canonical shooting solution.
+  - id: F
+    description: Quantify sensitivity of profiles, energies, virial balance, and selected ordering to corrected versus source-biased angular values and to I=B^2.
+  - id: G
+    description: Compare stationary branch evidence with actual local/global minimization obligations and reject any unsupported minimum or uniqueness reading.
+  - id: H
+    description: Trace E3, E4, E5, KI5, TX1/TX4, MK5/MR5, and narrative consumers while preserving every action, state, scale, reaction, and observation premise.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and nonduplication against C-RMAP-001/002 and C-MOD-001/002
+  - exact variational derivation, endpoint exponents, B=1 reduction, scale identity, dimensions, and sign conventions
+  - independent solver success with explicit residual, cutoff, mesh, domain, tolerance, and tail convergence
+  - stable conditional energy values and ordering under corrected accepted angular inputs without selection by exposed source decimals
+  - honest separation of stationary branch, reduced-functional minimization, full-field solution, and physical state or yield
+  - assumption and parameter economy, canonical API reuse, complete consumer classification, and mutation sensitivity
+claims_proposed:
+  - C-RPROF-001
+  - C-RPROF-002
+comparators_blinded_until: >-
+  No body or numeric comparator blinding remains. P104's consumer audit exposed
+  E2's header, full advertised b(1), b(2)/2, and b(4)/4 values, the generalized
+  density and ODE, the duplicated biased angular integrator, the finite-wall
+  solve_bvp function through its initial guess and boundary data, the energy
+  quadrature, portions of check labels including the I=B^2 guard, and the
+  six-check count. E2 has not been executed under P105 and its remaining body,
+  actual check predicates, complete output, and terminal tally have not been
+  inspected. P105 freezes endpoint analysis, corrected inputs, two independent
+  methods, error gates, mutations, and interpretation ceilings before further
+  inspection or execution.
+status: active

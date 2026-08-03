@@ -1,0 +1,45 @@
+campaign: P105
+frozen_at: '2026-08-07T13:05:00Z'
+base_release: v0.88.0
+base_commit: d09de1dc36239c407e9be34413638254952065af
+scientific_base_commit: 42337ce
+proposal_path: proposals/P105-e2-rational-map-radial-profiles/proposal.yaml
+proposal_sha256: ab05676296c4396dfd60f5b82343a96f9046c9380d6dc381a3fbbdef5187fbd5
+memory_contract_path: memory/vantasner/proposals/P105-e2-rational-map-radial-profiles.md
+memory_contract_sha256: 469b2b3a24fa1e8a8ea641ceaad189ed81d70db2ee8e8dd63936de594ecac718
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+source_size_bytes: 12692
+source_sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f
+source_blob: 6a2ec5e0cca1255605d3644a5e421ac655734835
+source_worktree_state: clean_relative_to_pinned_commit
+source_checkout_overlay: >-
+  The explicit current-NumPy compatibility overlay and unrelated later Phase
+  47/48 work remain excluded from scientific authority. E2 itself matches the
+  pinned blob and hash.
+source_body_exposure: >-
+  P104's consumer audit inspected E2's header and source through the energy
+  helper, exposing the generalized density and ODE, duplicated
+  midpoint-plus-trapezoid angular integration, hard finite-wall solve_bvp
+  boundary data, solver tolerance, mesh, maximum nodes, initial guess, sampled
+  energy quadrature, advertised b(1), b(2)/2, and b(4)/4 values, and snippets
+  of later check labels including the I=B^2 guard. The generated queue and
+  parent effort expose six literal checks and the hierarchy headline. P105
+  claims no body or comparator blinding and freezes stronger structural and
+  numerical tests before inspecting the remaining source or executing it.
+source_execution_state_at_freeze: not_executed_under_P105
+terminal_output_state_at_freeze: unknown_beyond_generated_six_check_metadata
+variation_endpoint_shooting_collocation_refinement_tail_minimality_and_interpretation_tests_frozen: true
+claims_reserved: [C-RPROF-001, C-RPROF-002]
+compatibility_preflight:
+  e2_numpy_imports: true
+  e2_dispatch: np.trapezoid when present with a legacy np.trapz fallback
+  current_source_branch: np.trapezoid
+  canonical_energy_integration: substrate_framework.numerics.trapezoid_integral
+  direct_numpy_trapezoid_allowed_in_new_work: false
+  expected_compatibility_abort: none
+validation:
+  repository: WORKFLOW VALID 119 claims 119 accepted 1 proposals 218 units 116 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen
