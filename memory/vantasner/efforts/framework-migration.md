@@ -23,14 +23,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.85.0`, containing one hundred fifteen
-claims. Its latest addition is C-TH-002's exact conditional coth-gated response
-family, source-prefactor maximum and bound, alternative-prefactor ceiling,
-derivative regimes, and scale non-identifiability. The latest terminal
-adjudication is P100: BD2 is qualified because its gate and conditional coth
-algebra survive, but `q/2` is not the full-rate optimum, its loading and
-wavenumber signs are regime dependent, and no physical bath, mode, stochastic
-rate, DBD event, power, or operating recommendation follows. BD3-BD5 and later
+The current accepted frontier is `v0.86.0`, containing one hundred sixteen
+claims. Its latest addition is C-COL-001's exact collective-coordinate metric,
+variable-metric Euler-Lagrange equation, stationary classification, and
+coordinate-covariance theorem. The latest terminal adjudication is P102: BD4
+is qualified because its pullback inertia and capillary saddle growth scale
+survive conditionally, but no field profile, material closure, stable mode,
+quantized onset, stochastic escape, or DBD event follows. BD5 and later
 consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
@@ -57,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 121 pending, 0 partially migrated, 3 migrated, 85 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 118 pending, 0 partially migrated, 3 migrated, 88 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -191,6 +190,7 @@ Attempts are append-only and individually reproducible.
 | 0120 | P100 exact conditional coth-gated response, stationary theorem, prefactor ceiling, derivative regimes, and BD2 audit | `campaigns/P100-bd2-thermal-rate-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-TH-002 with BD2 qualified in v0.85.0; commit `020ab1f` | Forty-one primary and twenty-one independent checks derive the declared coth limits, capillary-reduced rate, exact cubic stationary equation, unique maximum above 1.039 q, general prefactor family, constant-prefactor no-optimum countermodel, sign-changing loading and fixed-q wavenumber elasticities, q(k) total-derivative reversal, sensitivity-coordinate distinction, and non-identifiability. The source's q/2 point is imposed, not optimized. Fifty-five focused tests pass; the single integrated workflow passes all 914 tests with 426 memory files valid. BD3-BD5/CM2/CM4 reproduce only pending tallies, while the DBD consumers' legacy np.trapz calls are a mechanical compatibility defect scheduled for the next self-optimization boundary rather than scientific campaign failure | Audit BD3's ignition-threshold construction without re-promoting C-COH-001's general threshold, identifying theta1 with hbar*omega_b absent an accepted energy map, importing a physical population Hamiltonian, or calling a conditional N-squared concentration an ignition event |
 | 0121 | NumPy trapezoidal compatibility and workflow self-optimization | `memory/vantasner/efforts/numpy-trapezoid-compatibility.md` | process-only repair; v0.85.0 unchanged; commit `6cf93af` | Nine active external calls now use `np.trapezoid`; an optional plotting import is lazy and guarded. Kernel/L1/pipeline/scaling/master/uncertainty/optimizer/CM5 checks and the optional nucleation consumer all execute on current NumPy. GitNexus reports LOW risk and no affected process. AGENTS, the physics skill, and four task templates now require compatibility repair before scientific adjudication; the single integrated workflow passes all 914 tests with 427 memory files valid | Freeze and execute P101's BD3 audit from the unchanged accepted v0.85.0 frontier, treating the external edits as a compatibility overlay and the pinned source commit as provenance |
 | 0122 | P101 exact threshold composition, regime, integer, sensitivity, identifiability, guard, and BD3 audit | `campaigns/P101-bd3-ignition-threshold-audit/attempts/0001` through `0006`, then terminal record replay | BD3 qualified through C-COH-001 and C-RG-002 with v0.85.0 unchanged; commit `b96c496` | Fifty primary and sixteen independent exact checks derive the general and endpoint threshold composition, all input elasticities, the E/theta ordering split, integer ceilings, common-scale covariance, rank-one endpoint observations with five null directions, arbitrary-target families, and the source example's V=1/3 guard boundary. The hbar-frequency check is constructed, symbol presence derives no isotope shift, k~omega is undeclared, and algebraic crossing is not ignition. Forty-two focused tests, P006/P086/P099 replays, the 16-check direct consumer, repaired 16-check DBD pipeline, 49-check master, and optional nucleation consumer pass; the single integrated workflow passes all 914 tests with 429 memory files valid | Audit BD4's collective-coordinate inertia and barrier-top frequency claim without importing a profile, coordinate normalization, stable-mode interpretation, or hbar onset equality; freeze literal reproduction, dimensional closure, collective-coordinate reduction, factor normalization, profile and boundary conditions, coordinate covariance, stable-versus-unstable curvature, sensitivity, identifiability, consumer, and nonduplication candidates before renewed body inspection or execution |
+| 0123 | P102 exact collective-coordinate pullback, stationary classification, covariance, and BD4 audit | `campaigns/P102-bd4-collective-inertia-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-COL-001 with BD4 qualified in v0.86.0; commit `bb94cc1` | Forty-six primary and seventeen independent checks derive the field-profile metric, variable-metric Euler-Lagrange equation, curvature signs, coordinate covariance, dimensions, profile counterexamples, scaling, and identifiability. The 14-check source reproduces; its Lean file compiles but encodes only weak algebra and dimensions. The 16-check engineering consumer and 13-check BD5 consumer use BD4 narratively, while legacy 11- and 4-check consumers independently support the saddle reading. Seventy-one focused tests and the single integrated 928-test, 433-memory workflow pass; GitNexus reports LOW impact. | Audit BD5's stochastic escape simulation without importing BD4's rejected physical inertia or onset, treating an overdamped supplied-gamma model as validation of `m_R`, accepting inverse completed-escape time under censoring as a Kramers rate, or calling temperature and population algebra ignition |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -207,7 +207,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 121 bridge units remain pending, 3 are migrated, 85 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 118 bridge units remain pending, 3 are migrated, 88 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -896,11 +896,27 @@ accepted quantized state, population Hamiltonian, isotope map, k-omega law,
 coherence dynamics, kinetic event, or DBD/nuclear channel closes its ignition
 reading. Exact P101 work imports no NumPy or quadrature.
 
+P102 adds C-COL-001 for the exact pullback of a declared field profile
+`u(x,t)=phi(x,q(t))` with fixed domain to the metric
+`M(q)=lambda*integral(phi_q^2 dx)`. The reduced Lagrangian gives
+`M*q_ddot + M'*q_dot^2/2 + U'=0`; at a stationary point, positive, zero, and
+negative curvature classify stable, neutral, and unstable linear behavior.
+Under a regular coordinate change the metric and stationary Hessian both gain
+the same squared Jacobian, so their ratio is invariant, while a gradient-chain
+term prevents the same Hessian statement away from stationarity. For the
+capillary barrier, `R*=T/P` has `U''=-2*pi*P`, making
+`sqrt(2*pi*P/M)` an exponential saddle rate rather than a stable frequency.
+BD4 is qualified because its unspecified profile and material coefficients do
+not close a physical inertia, and no cross-sector action, hbar onset equality,
+stochastic escape, or event follows. Its direct engineering and BD5 consumers
+use the result only in prose; two legacy consumers independently preserve the
+saddle interpretation. Exact P102 work imports no NumPy or quadrature.
+
 ## Canonicalization
-The registry, `v0.85.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifteen accepted claims. P001 through P101 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 119 pending, 0 partial, 3 migrated, 87 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.86.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixteen accepted claims. P001 through P102 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 118 pending, 0 partial, 3 migrated, 88 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 119 pending, 3 migrated, 87 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is BD4, pinned at SHA-256 `2f590473719f614f4ca641ad9443d6b4271429aba27337b94d5d064cc70c9929`. Its generated excerpt proposes the collective-coordinate inertia `m_R=lambda*integral(du/dR)^2 dx` and uses the capillary barrier-top curvature magnitude to define `omega_R=sqrt(2*pi*P/m_R)`, then treats this unstable-top scale as a physical frequency resolving an earlier onset ceiling. P102 must freeze literal reproduction, dimensional closure, variational collective-coordinate reduction, kinetic factor conventions, profile and boundary dependence, coordinate-reparameterization covariance, stable-mode versus barrier-top growth classification, accepted-medium imports, sensitivities, identifiability, consumers, and nonduplication before renewed source-body inspection or execution. The body and tally were already exposed during P100 consumer replay, so P102 must claim no false blinding. It must not infer a finite inertia from dimensions alone, treat an unspecified profile integral as derived, call negative barrier-top curvature a stable oscillation, equate `hbar*omega_R` with an onset energy, or use pending BD5/CM consumers as authority.
+The effort remains active. D4 is discharged, but D1 remains open with 118 pending, 3 migrated, 88 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is BD5, pinned at SHA-256 `fd1fd9e54990bbac4a60bc669a37f1c15a89ebd2595203aef7d2bddb88b99cf9`. It implements an overdamped Euler-Maruyama path ensemble on a reflected left boundary and absorbing right boundary, reports the inverse mean escape time among completed paths, checks an Arrhenius regression, and attaches temperature and population narratives. P103 must freeze the exact SDE, domain and boundary implementation, reflection bias, absorbing position, timestep, ensemble, horizon, seed, censoring and survivorship treatment, estimator meaning, Arrhenius window and regression, refinement, uncertainty, independent backward-equation or Fokker-Planck oracle, mutations, temperature monotonicity versus optimization, population noncoupling, consumer reach, and nonduplication before renewed source inspection or execution. Its body and tally were already exposed during P102 consumer replay, so P103 must claim no false blinding. It must not import BD4's rejected physical inertia or onset, promote supplied damping as material closure, equate the censored completed-path estimator with a Kramers hazard, treat different-seed runs as pure timestep convergence, or call a constructed half-ratio and inserted population algebra an optimized ignition event.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
