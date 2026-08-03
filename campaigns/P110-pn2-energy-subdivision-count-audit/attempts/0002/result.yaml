@@ -1,0 +1,17 @@
+campaign: P110
+attempt: 0002
+candidate: primary_exact_and_dependency_audit
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P110-pn2-energy-subdivision-count-audit/verify.py
+exit_status: 1
+passed_before_failure: 49
+failure: FS4 duplicate-disposition schema lookup
+mechanism: >-
+  The verifier read a nonexistent `qualification` field from FS4. Duplicate
+  dispositions store their explanatory ceiling under `duplicate_reason`. All
+  quotient, unit, interval, discontinuity, representation, uncertainty,
+  modulation-scale, and C-SG-019 checks had already passed; no scientific
+  predicate or tolerance failed.
+repair: >-
+  Read FS4's governed `duplicate_reason` field and leave the source,
+  mathematical predicates, and selection criteria unchanged.

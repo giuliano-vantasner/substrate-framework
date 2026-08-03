@@ -1,0 +1,24 @@
+campaign: P110
+attempt: 0001
+candidate: A
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN2_subdivision_count.py
+exit_status: 0
+elapsed_seconds: 0.39
+terminal_tally: ALL 25 CHECKS PASS
+source_sha256: 66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a
+compatibility_event: none
+verdict: conditional_quotient_evidence_survives_physical_and_oracle_audit_pending
+mechanism: >-
+  The source executes fourteen static check sites into twenty-five runtime
+  checks. Exact local identities and selected rational brackets survive. The
+  named-scale path instead uses binary floats, checks monotonicity only on
+  seven points, reports a loose enclosing decade band rather than the sharp
+  image, and gives no input uncertainty. The FS4 echo verifies only a constant
+  derivative and one nonzero cosine derivative; neither predicate proves that
+  a modulation transports the full energy budget. PN1 and the retraction
+  narrative never enter an executable premise.
+next_attempt: >-
+  Verify the named primary paper, derive the exact interval partition with
+  integer arithmetic, audit threshold-adjacent floating behavior and input
+  provenance, and preserve every physical interpretation as a separate claim.

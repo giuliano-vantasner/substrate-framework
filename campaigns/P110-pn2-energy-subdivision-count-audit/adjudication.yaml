@@ -1,0 +1,53 @@
+campaign: P110
+title: PN2 exact energy quotient and quantum subdivision interpretation audit
+source_baseline: substrate@6d1f4e0
+source_units: [PN2]
+base_release: v0.92.0
+release_after_adjudication: v0.92.0
+adjudicated_at: '2026-08-07T21:00:00Z'
+selected_candidates:
+  - {id: B, reason: Exact quotient and remainder close for declared positive commensurate inputs.}
+  - {id: C, reason: Exact prefix arithmetic and a binary-floor counterexample expose representation sensitivity.}
+  - {id: D, reason: Sharp plateaus and one-sided jumps replace sampled monotonicity.}
+  - {id: E, reason: Exact input rectangles expose count sensitivity and uncertainty debt.}
+  - {id: F, reason: C-SG-019 rejects the PN1 quantum-channel import.}
+  - {id: G, reason: FS4 constant cancellation does not route the energy budget.}
+  - {id: H, reason: Primary-source audit corrects the retraction and 1.3-percent narrative.}
+  - {id: I, reason: Fifteen pending consumers inherit no physical process.}
+  - {id: J, reason: P090 nonduplication leaves no distinct claim or canonical API.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-SG-019, decision: unchanged_classical_coefficient_and_quantum_ceiling}
+  - {id: C-SG-009, decision: unchanged_FS4_duplicate_ceiling}
+  - {id: C-MOM-002, decision: unchanged_FS4_duplicate_ceiling}
+  - {id: C-GW-004, decision: unchanged_FS4_duplicate_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  verifier_schema_failure: attempts/0002/result.yaml
+  exact_and_independent_routes: attempts/0003/result.yaml
+  terminal_gate: attempts/0004/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_integer_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  literature_audit: evidence/literature-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: memory/vantasner/decisions/PN2-qualified-review.md
+source_disposition:
+  PN2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN2_subdivision_count.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P110-pn2-energy-subdivision-count-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P110-pn2-energy-subdivision-count-audit/reviews/independent_integer_review.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

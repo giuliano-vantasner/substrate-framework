@@ -10,7 +10,7 @@ tags:
 - migration-PN2
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P110 PN2 Energy Subdivision Count Audit
 
@@ -180,6 +180,25 @@ PN2 predicates, literature provenance, quantum-process boundary, dependencies,
 consumers, nonduplication, terminal disposition, and empty debt ledger agree.
 A floor identity, large integer, cited range, or source tally is not sufficient
 alone.
+
+## Adjudicated Outcome
+
+P110 terminally qualified PN2 without changing v0.92.0. Exact Fraction and
+scaled-integer routes reproduce the seven chosen counts, sharpen the selected
+image to 24,000,000 through 24,000,000,000, derive the half-open inverse
+plateaus and divisor jumps, and expose exact-representation and input-interval
+sensitivity. P090 already governs this elementary bookkeeping ceiling, so no
+claim or canonical API is duplicated.
+
+The quantum subdivision headline does not close. C-SG-019 supplies only a
+classical coordinate coefficient, FS4 supplies only duplicate constant-offset
+derivative cancellation, and a zero matrix element leaves the quotient intact
+while the rate vanishes. Fifteen pending consumers inherit no physical band,
+state, weight, branching law, or rate. The primary v2 paper contains no
+explicit retraction; its about-1.3-percent value is a component ratio, not the
+direct magnitude change, and its interference-mediated rate narrative remains.
+PN2 and exact P110 work use no NumPy or sampled quadrature and have no
+`np.trapz` compatibility event.
 
 ## Cross-References
 

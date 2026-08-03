@@ -1,0 +1,24 @@
+campaign: P110
+attempt: 0003
+candidate: exact_fraction_and_independent_integer_routes
+status: completed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P110-pn2-energy-subdivision-count-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P110-pn2-energy-subdivision-count-audit/reviews/independent_integer_review.py
+exit_status: 0
+terminal_tallies:
+  primary: ALL 53 CHECKS PASS [PN2-EXACT-AUDIT]
+  independent: ALL 15 CHECKS PASS [PN2-INDEPENDENT]
+verdict: exact_kinematic_bookkeeping_and_physical_ceiling_pass
+mechanism: >-
+  Exact Fractions and an independent scaled-integer divmod route reproduce all
+  seven selected counts, derive sharp plateaus and discontinuities, expose a
+  binary-float floor counterexample, and bound rectangular input intervals.
+  Amplitude and zero-matrix-element countermodels show that quotient arithmetic
+  supplies neither modulation energy nor a transition rate. Literature and
+  accepted-dependency gates reject the retraction, PN1, and FS4 overreads.
+compatibility_event: none
+next_attempt: >-
+  Complete predicate, consumer, nonduplication, provenance, and terminal
+  no-release records, then run only the workflow boundary justified by the
+  record delta.

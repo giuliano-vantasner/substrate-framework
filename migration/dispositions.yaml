@@ -1551,6 +1551,49 @@ units:
       P109 closes 99 primary and 33 independent exact checks plus focused
       package replay. PN1 and all exact P109 work use no NumPy or sampled
       quadrature, so there is no np.trapz compatibility event.
+  PN2:
+    disposition: qualified
+    accepted_claims: []
+    qualification: >-
+      PN2's quotient, same-unit remainder, selected exact counts, and
+      nonincrease with positive unit energy survive as conditional arithmetic
+      for declared commensurate inputs. P110 derives the sharp plateaus
+      Omega/(n+1)<omega<=Omega/n, one-sided divisor jumps, common-scale
+      covariance, exact input-rectangle count bounds, and decimal-prefix
+      representation ceiling. The seven selected counts span exactly 2.4e7 to
+      2.4e10, not the endpoints of the loose 1e7-to-1e11 envelope. The source
+      uses binary floats; exact 0.3/0.1 gives three while its binary quotient
+      floors to two, so threshold-adjacent results require exact construction.
+      The rounded 24 MeV total and meV-to-eV band are external inputs without
+      accepted state, material, or uncertainty provenance. C-SG-019 supplies
+      no quantum mode or matrix element, and FS4's duplicate constant-
+      derivative identity does not force a modulation to carry the energy
+      budget. The cited v2 paper contains no explicit retraction; its about-
+      1.3-percent value is an imaginary-to-real component ratio, the direct
+      magnitude changes about 0.00868 percent, and the paper retains a
+      potentially large interference-mediated rate narrative. No equal-unit
+      final state, operator, matrix element, kinematics with residual products,
+      resonance, probability, rate, branching, deposition, or material
+      process is accepted.
+    evidence:
+      - campaigns/P110-pn2-energy-subdivision-count-audit/reviews/source_adjudication.md
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/source-reproduction.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/source-audit.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/check-adjudication.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/dependency-audit.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/consumer-audit.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/candidate-comparison.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/literature-audit.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/evidence/primary-provenance.yaml
+      - campaigns/P110-pn2-energy-subdivision-count-audit/verify.py
+      - campaigns/P110-pn2-energy-subdivision-count-audit/reviews/independent_integer_review.py
+      - memory/vantasner/decisions/PN2-qualified-review.md
+    note: >-
+      P110 closes 54 primary and 15 independent exact checks after one
+      preserved schema-key failure. P090 already governs the elementary floor
+      and remainder ceiling, so no claim, canonical API, or release change is
+      warranted. PN2 and exact P110 work use no NumPy or sampled quadrature and
+      have no np.trapz compatibility event.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

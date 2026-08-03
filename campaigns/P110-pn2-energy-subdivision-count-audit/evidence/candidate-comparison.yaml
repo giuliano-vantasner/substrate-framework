@@ -1,0 +1,42 @@
+campaign: P110
+selection_basis:
+  - exact positive commensurate inputs and decimal-prefix representation
+  - agreement of Fraction and independently scaled integer divmod routes
+  - sharp quotient intervals, endpoints, discontinuities, scale covariance, and uncertainty image
+  - separation of named physical inputs and literature from mathematical derivation
+  - explicit rejection of PN1 FS4 quantum and full-budget overreads
+  - nonduplication against P090 and complete pending-consumer closure
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: The source passes but mixes exact bookkeeping, floating examples, loose envelopes, and unsupported process labels.
+  B:
+    decision: selected_exact_bookkeeping
+    reason: Unique quotient and remainder close exactly for declared positive commensurate energies.
+  C:
+    decision: selected_representation_ceiling
+    reason: Exact prefix arithmetic reproduces the sample while 0.3/0.1 exposes a binary-floor counterexample.
+  D:
+    decision: selected_interval_theorem
+    reason: Exact plateaus have strict lower and closed upper endpoints with one-sided jumps.
+  E:
+    decision: selected_input_sensitivity_ceiling
+    reason: Input rectangles map to count sets or bounds rather than an unjustified exact physical integer.
+  F:
+    decision: selected_C_SG_019_ceiling
+    reason: A classical coordinate coefficient is not a quantum n-particle channel.
+  G:
+    decision: selected_FS4_ceiling
+    reason: Constant-derivative cancellation neither fixes a modulation amplitude nor routes a complete energy budget.
+  H:
+    decision: selected_literature_correction
+    reason: The v2 paper supplies no explicit retraction and distinguishes a small direct complex correction from a potentially large interference-mediated rate effect.
+  I:
+    decision: selected_pending_consumer_ceiling
+    reason: Fifteen consumers reuse the band or count but close no accepted physical process.
+  J:
+    decision: selected_terminal_nonduplication
+    reason: P090 already owns the governed no-claim floor/remainder audit; no distinct API or accepted claim survives.
+comparators: >-
+  The rounded 24 MeV input, meV-to-eV band, paper values, and cited count range
+  select no theorem, unit convention, tolerance, disposition, or claim.

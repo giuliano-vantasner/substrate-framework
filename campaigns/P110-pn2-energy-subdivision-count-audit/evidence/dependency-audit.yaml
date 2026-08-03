@@ -1,0 +1,32 @@
+campaign: P110
+source_unit: PN2
+new_claims: []
+mathematical_inputs:
+  - positive commensurate total and unit energies
+  - exact floor and Euclidean division
+  - exact decimal-prefix definitions
+compatibility_only:
+  C-SG-019: >-
+    Supplies PN1's exact classical coefficient and expressly excludes a
+    selected mode split, quantization, matrix element, kinematic channel, and
+    transition rate. It cannot be a physical PN2 precondition.
+  C-SG-009_C-MOM-002_C-GW-004: >-
+    These accepted claims are FS4's duplicate ceiling. Time-independent
+    offsets disappear from specified derivatives, but no energy subdivision,
+    radiation budget, or transfer mechanism follows.
+historical_nonduplication:
+  P090: >-
+    Already derived positive-energy floor/remainder bookkeeping and found no
+    distinct claim or API. PN2's exact arithmetic adds no new accepted surface.
+missing_for_physical_interpretation:
+  - accepted initial and final quantum states and normalized modes
+  - a Hamiltonian or interaction operator and dimensional coupling
+  - nonzero matrix element, selection rules, occupation factors, and phase space
+  - energy-momentum closure including the residual and all final products
+  - resonance, detuning, linewidth, coherence, and perturbative domain
+  - transition probability, rate, branching, deposition, and material map
+  - independently accepted total energy and phonon or plasmon spectrum with uncertainties
+closure: >-
+  Exact quotient bookkeeping closes through standard mathematics and declared
+  inputs, with no accepted-claim dependency and no new claim. PN1, FS4, and the
+  primary paper do not close the physical process.

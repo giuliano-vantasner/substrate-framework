@@ -1,0 +1,27 @@
+campaign: P110
+attempt: 0004
+candidate: integrated_terminal_adjudication_gate
+status: completed
+command: scripts/validate.sh
+started_at: '2026-08-07T21:20:00Z'
+preconditions:
+  - primary exact verifier passes all 54 checks
+  - independent scaled-integer verifier passes all 15 checks
+  - all fourteen static source sites and twenty-five runtime predicates have individual verdicts
+  - every dependency and all fifteen pinned pending consumers have explicit ceilings
+  - PN2 is qualified without a claim, package API, release, or generated accepted-document change
+  - the regenerated queue contains 110 pending and 96 qualified units
+  - GitNexus reports LOW record-only risk and zero affected execution processes
+compatibility_event: none
+completed_at: '2026-08-07T21:25:00Z'
+exit_status: 0
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+workflow_summary:
+  registry: 127 claims and 127 accepted
+  proposals: 0
+  migration_queue: 218 units, 110 pending, 0 partial
+  memory: 471 files valid
+  skill: valid
+  tests: 1003 passed in 90.36 seconds
+verdict: terminal_no_release_adjudication_passed
+debt: []

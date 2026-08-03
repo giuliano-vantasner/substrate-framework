@@ -1,0 +1,89 @@
+campaign: P110
+source_unit: PN2
+runtime_check_total: 25
+checks:
+  PN2.1:
+    runtime_checks: 1
+    source_predicate: Omega equals floor(Omega/omega)*omega plus the defined remainder
+    verdict: exact_definition
+    qualification: The identity holds by the source's definition and does not prove a physical partition.
+  PN2.2:
+    runtime_checks: 1
+    source_predicate: remainder equals omega times the fractional part
+    verdict: exact_definition
+    qualification: This is algebraically equivalent to the floor definition for positive commensurate quantities.
+  PN2.3:
+    runtime_checks: 1
+    source_predicate: the symbolic fractional part is nonnegative
+    verdict: exact_floor_property
+    qualification: The general nonnegative property survives under the declared positive real ratio.
+  PN2.4:
+    runtime_checks: 4
+    source_predicate: four exact rational fractional parts lie in the half-open unit interval
+    verdict: exact_samples_extended_by_P110
+    qualification: P110 uses the general Euclidean-division theorem; four examples alone are not its proof.
+  PN2.5:
+    runtime_checks: 3
+    source_predicate: three exact rational quotient brackets hold
+    verdict: exact_samples_extended_by_P110
+    qualification: The general bracket and quotient uniqueness hold for every declared positive pair.
+  PN2.6:
+    runtime_checks: 1
+    source_predicate: the third derivative of a static moment vanishes so the static channel radiates none
+    verdict: derivative_identity_duplicate_physical_radiation_label_rejected
+    qualification: FS4 already duplicates the constant-offset derivative identity; no radiation theory or budget follows.
+  PN2.7:
+    runtime_checks: 1
+    source_predicate: a cosine has nonzero third derivative and therefore carries the whole down-conversion budget
+    verdict: derivative_identity_accepted_full_budget_inference_rejected
+    qualification: The squared derivative scales as a free amplitude squared times frequency to the sixth power and can approach zero or infinity independently of the quotient.
+  PN2.8:
+    runtime_checks: 1
+    source_predicate: every selected count lies in 1e7 to 1e11
+    verdict: true_loose_envelope_for_external_sample
+    qualification: The exact selected image is 2.4e7 to 2.4e10; the input total and mode band are external and uncertainty free.
+  PN2.9:
+    runtime_checks: 1
+    source_predicate: 30 meV gives a count in 1e8 to 1e9
+    verdict: exact_conditional_arithmetic
+    qualification: Exact decimal arithmetic gives 800000000 for the supplied rounded 24 MeV input; it is not a framework prediction or process rate.
+  PN2.10:
+    runtime_checks: 1
+    source_predicate: count is nonincreasing over the seven ordered mode energies
+    verdict: sampled_observation_extended_exactly_by_P110
+    qualification: The exact theorem is nonincreasing with divisor jumps and sharp plateau endpoints.
+  PN2.11:
+    runtime_checks: 1
+    source_predicate: count changes across the chosen band
+    verdict: selected_sample_observation
+    qualification: Nonconstancy on seven points adds no transition or physical band theorem.
+  PN2.12:
+    runtime_checks: 7
+    source_predicate: binary-float remainders lie in the half-open interval on every selected point
+    verdict: regression_only_representation_ceiling
+    qualification: These particular divisions happen to close, but exact 0.3/0.1 demonstrates a one-count binary-floor error at another threshold.
+  PN2.13:
+    runtime_checks: 1
+    source_predicate: floor passes the selected kinematic-count guard
+    verdict: exact_selected_domain_bookkeeping
+    qualification: The remainder law uniquely selects floor on the tested band but supplies no final state or matrix element.
+  PN2.14:
+    runtime_checks: 1
+    source_predicate: a hard-coded constant 1e8 fails the selected guard
+    verdict: valid_counterexample_only
+    qualification: Rejecting one fake does not validate the source's quantum, material, literature, or full-budget narrative.
+narrative_only:
+  PN2.retraction:
+    verdict: mischaracterized_primary_source
+    reason: The v2 paper makes no explicit retraction and retains a potentially large interference-mediated rate effect.
+  PN2.PN1:
+    verdict: rejected_dependency_overread
+    reason: C-SG-019 is a classical coordinate coefficient and establishes no n-quantum channel.
+  PN2.FS4:
+    verdict: rejected_dependency_overread
+    reason: Static derivative cancellation does not force the complete energy budget into modulation.
+headline_coverage: >-
+  Every static site, all 25 runtime predicates, and all narrative-only physical
+  dependencies are adjudicated. Exact conditional arithmetic survives; a
+  quantum subdivision process, named physical band prediction, full-budget
+  channel, matrix element, rate, and explicit retraction do not.

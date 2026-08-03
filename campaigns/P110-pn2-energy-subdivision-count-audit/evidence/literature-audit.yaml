@@ -1,0 +1,45 @@
+campaign: P110
+source_unit: PN2
+primary_source:
+  title: Models for nuclear fusion in the solid state
+  authors: [Peter L. Hagelstein, Florian Metzler, Matt K. Lilley, Jonah F. Messinger, Nicola Galvanetto]
+  identifier: arXiv:2501.08338v2
+  url: https://arxiv.org/abs/2501.08338
+  submitted: '2024-12-30'
+  revised: '2025-02-02'
+  pages: 234
+audit:
+  explicit_retraction_word_found: false
+  floor_subdivision_formula_found: false
+  transition_energy_surface:
+    common_rounded_value: 23.85 MeV
+    more_precise_value_in_paper: 23848109 eV
+    PN2_input: 24 MeV
+    verdict: rounded_external_input_not_framework_derivation
+  mode_energy_surface: >-
+    The paper discusses meV/eV optical-phonon and plasmon quanta, but embeds
+    them in declared Hamiltonians, matrix elements, mode excitation, density
+    of states, and rate models. It does not make PN2's bare floor quotient a
+    sufficient transition theorem.
+  direct_matrix_element_loss_surface:
+    without_loss_scalar: 0.0362
+    with_loss_scalar: 0.0362+i*0.000477
+    imaginary_to_real_percent: 1.31767955801105
+    magnitude_increase_percent: 0.00868102028743482
+    paper_interpretation: >-
+      The paper states that pathway differences associated with this complex
+      correction can lead to a large acceleration of the excitation-transfer
+      rate through destructive-interference changes.
+    PN2_interpretation: >-
+      Calls the review a retraction of dramatic direct-element enhancement and
+      summarizes the correction as about 1.3 percent.
+    verdict: >-
+      The 1.3-percent number is the imaginary-component to real-component
+      ratio, not the relative magnitude change. The v2 paper distinguishes the
+      small direct complex correction from a potentially large interference-
+      mediated rate effect but does not explicitly retract the latter.
+authority_ceiling: >-
+  The paper is primary provenance for its own model and wording, not accepted
+  framework authority. None of its Hamiltonians, mode choices, matrix
+  elements, density of states, rates, material assumptions, or energy values
+  enters P110's exact quotient derivation.

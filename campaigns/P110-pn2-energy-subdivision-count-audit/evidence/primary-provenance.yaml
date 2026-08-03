@@ -1,0 +1,24 @@
+campaign: P110
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-30/bridge_PN2_subdivision_count.py
+  sha256: 66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a
+frozen_inputs:
+  proposal_snapshot: proposals/P110-pn2-energy-subdivision-count-audit/evidence/frozen-proposal.yaml
+  proposal_snapshot_sha256: b3e485d453558ba356623d409dc2081eb43b1d34f300989be8c947ad6932b97d
+verification:
+  primary: proposals/P110-pn2-energy-subdivision-count-audit/verify.py
+  primary_sha256: 9f834588f74e35a0b0784ae085f929555a714cf8e18f561eb8042bfd83dfd16a
+  independent: proposals/P110-pn2-energy-subdivision-count-audit/reviews/independent_integer_review.py
+  independent_sha256: 149d50cb51621ccecadf3932ae674d226b281895e2e81ce2596f90081f37c30d
+exact_surface:
+  quotient: n=floor(Omega/omega)
+  remainder: r=Omega-n*omega with 0<=r<omega
+  inverse_plateau: Omega/(n+1)<omega<=Omega/n for n>=1
+  selected_exact_image: [24000000, 24000000000]
+  verification_ceiling: conditional_bookkeeping_no_quantum_process
+implementation:
+  canonical_module_delta: none
+  canonical_test_delta: none
+  reason: P090 nonduplication already terminally governs the elementary floor and remainder surface.
+status: terminal_no_release_candidate
