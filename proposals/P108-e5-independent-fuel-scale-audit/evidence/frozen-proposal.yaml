@@ -1,0 +1,67 @@
+id: P108
+base_release: v0.91.0
+base_commit: f328b04bc96e4dd50a594bc58673c9514645e34d
+scientific_base_commit: 2297324
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [E5]
+question: >-
+  Determine exactly what follows when four supplied nuclear-reaction release
+  values are divided by the supplied 25.686 MeV coordinate; test scale
+  covariance, reaction and unit bookkeeping, finite-sample and selection
+  effects, alternative scales and samples, and physical state-map closure; and
+  terminally adjudicate E5 without converting imported data or a vague O(1)
+  label into a framework derivation or identifying nuclei with map degrees.
+invariants:
+  - C-SK-001 supplies only a conditional energy-coordinate iff and derives no absolute nuclear scale, reaction yield, or physical state.
+  - NY1 and NY2 are duplicate evidence for C-SK-001 and explicitly leave empirical inputs, multi-soliton coefficients, state assignments, reaction branches, and consumers unresolved.
+  - C-RPROF-002 supplies conditional stationary rational-map branches for declared inputs; it supplies no nucleus, alpha particle, binding table, quantum correction, or reaction map.
+  - C-RDIFF-001 supplies a premise-explicit signed mass-difference transform; it does not make supplied masses or labels physical framework outputs.
+  - O1 remains pending and concerns a spin-1 polar order-parameter topology, so it is neither authority nor a nuclear-state or fusion-scale import.
+  - A finite selected sample of positive dimensionless ratios establishes only those ratios; universality, typicality, robustness, or an O(1) law requires a declared sampling frame and quantitative criterion.
+  - Rescaling a freely supplied positive denominator rescales every ratio inversely, and no observed ratio interval selects that denominator without an independent scale rule.
+  - A shared integer label does not identify a rational-map degree, baryon number, isotope, nucleus, or reaction product.
+allowed_imports:
+  - exact real and rational algebra, positive-order inequalities, finite-set extrema, dimensionless ratios, and elementary descriptive statistics
+  - C-DIM-002 and C-DIM-003 only for dimensionless-coefficient and imported-coordinate ceilings
+  - C-SK-001 only for its accepted conditional iff and explicit physical-interpretation ceiling
+  - C-RDIFF-001 only for the premise-explicit signed difference transform
+  - C-RPROF-001 and C-RPROF-002 only for their conditional rational-map equations and stationary branches, not as physical nuclear states
+  - P084/NY1 and P085/NY2 only as terminal duplicate and comparator audits, not as nuclear-scale authority
+  - O1 only as hash-pinned pending dependency evidence after freeze, never as accepted authority
+  - E5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce E5 unchanged and classify every imported datum, scale, reaction, ratio, bracket, O(1), robustness, and state-identification predicate.
+  - id: B
+    description: Build an exact reaction-energy ledger from separately declared reactant and product values, with stoichiometry, sign, units, and uncertainty provenance visible.
+  - id: C
+    description: Derive the dimensionless coordinate family r_i=Q_i/U, its inverse U=Q_i/r_i, and the common inverse rescaling under U to a*U.
+  - id: D
+    description: Treat the four ratios only as a finite selected sample and predeclare quantitative spread statistics and a sampling-frame requirement before using typical, robust, bracket, or O(1).
+  - id: E
+    description: Test alternative positive scales, added or removed reactions, zero and negative releases, and arbitrary-target scales as counterexamples to universal-scale selection.
+  - id: F
+    description: Audit reaction-channel and product bookkeeping, including multiplicity, branch, deposition, rate, and uncertainty distinctions.
+  - id: G
+    description: Audit every proposed identification between nuclear labels and rational-map degree sectors against accepted state-map dependencies.
+  - id: H
+    description: Test nonduplication against C-DIM, C-SK, C-RDIFF, C-RPROF, P084, and P085 and add no canonical claim or API for mere arithmetic composition.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for every scale, reaction datum, unit, uncertainty, branch, sampling frame, and physical state map
+  - exact stoichiometry, sign, multiplicity, dimensionless ratio, inverse map, and common-scale covariance
+  - predeclared quantitative spread statistic with sensitivity to denominator and sample mutations
+  - robustness to alternative scales, reaction-set additions and removals, and zero or negative counterexamples
+  - separation of descriptive finite-sample arithmetic from prediction, universality, causation, rate, deposition, or model selection
+  - no empirical selection of a free scale and no identification of physical states through a shared integer label
+  - assumption economy, nonduplication, mutation sensitivity, and complete consumer/dependency audit
+claims_proposed: []
+comparators_blinded_until: >-
+  No comparator blinding remains. The generated queue exposes the four reaction
+  releases, the 25.686 MeV denominator, all four ratios, their 0.34--0.93 range,
+  the factor-three and O(1) language, and the alpha/degree-four interpretation;
+  P085 already exposed the D+D comparator and scale. P108 freezes data and
+  state-map ceilings, competing ratio and sample analyses, alternative-scale
+  mutations, selection criteria, and nonduplication before executing E5 or
+  inspecting its predicate implementations.
+status: draft
