@@ -1,0 +1,65 @@
+id: P113
+base_release: v0.94.0
+base_commit: 6d789be73726ba87ab7bdc3bdb8755a79ecdaa57
+scientific_base_commit: fb4ef2c16b1495acd9097cbe4316bc4aee570942
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [PN5]
+question: >-
+  Reproduce and exactly audit PN5's declared energy quotient and finite
+  single-pair loss magnitude, including exact unit representation, quotient
+  plateaus and endpoint sensitivity, set and decade summaries, input and scale
+  covariance, C-RES-001 signs and normalization, optimum and limiting regimes,
+  dimensions, literature attribution, nonduplication, and every consumer;
+  then terminally adjudicate PN5 without turning externally supplied 24 MeV or
+  meV-to-eV values, a floor count, a toy-model optimum, or numerical decade
+  overlap into a derived quantum process, mechanism, prediction, rate, yield,
+  material scale, magnitude, or observation.
+invariants:
+  - Every total energy, unit energy, detuning, coupling product, and loss value is a declared input with exact representation and units; names and literature ranges do not derive them.
+  - For positive commensurate energies, floor(total/unit) is conditional Euclidean-division bookkeeping with a residual and supplies no subdivision process, state, operator, or rate.
+  - Decimal-prefix conversions and floor boundaries are load bearing; binary floating division may cross an exact quotient threshold.
+  - C-RES-001 supplies the exact finite pair magnitude and its peak at Gamma=2*abs(Delta), but no microscopic bath, open-system dynamics, probability, rate, nuclear or phonon channel, or material map.
+  - A finite list that intersects or spans named decades establishes only a selected-input set property; it neither predicts the inputs nor validates a mechanism.
+  - Common rescaling of total and unit energies preserves their quotient, while independent rescaling changes it; the count has no absolute-scale identifiability.
+  - PN4's accepted C-RES-001 theorem may be imported, but PN4's rejected physical narrative and the PN4-PN5 source cycle supply no premise.
+  - No claim is promoted unless nonduplication identifies a distinct reusable positive object beyond P110's exact bookkeeping evidence and C-RES-001.
+allowed_imports:
+  - exact integers, rational numbers, decimal-prefix definitions, Euclidean division, floor plateaus, interval images, elementary set extrema, and dimensional analysis
+  - C-RES-001 only for the exact declared finite paired-resolvent identity, loss limits, optimum, size conventions, and explicit physical ceiling
+  - P110 immutable adjudication evidence only for reproduced quotient, remainder, plateau, binary-float counterexample, input provenance, and physical ceiling; it supplies no accepted new claim
+  - C-SG-019 only as PN1's classical coefficient ceiling and C-SPN-002 only as PN3's finite spin ceiling; neither supplies the PN5 physical process
+  - SymPy exact rational simplification, derivatives, limits, inequalities, and mutations; Python Fraction and Decimal for an independent representation route
+  - PN5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - primary literature named by PN5 only after freeze and only for attribution, never as a derivation premise
+candidates:
+  - id: A
+    description: Reproduce PN5 literally and classify each quotient, set, toy-magnitude, optimum, guard, provenance, and narrative predicate.
+  - id: B
+    description: Reconstruct every declared energy with exact decimal-prefix arithmetic and derive quotient, remainder, plateaus, jumps, set extrema, and rescaling laws.
+  - id: C
+    description: Reuse C-RES-001 to derive the single-pair magnitude, optimum, peak, both loss limits, dimensions, and coupling normalization without source constants.
+  - id: D
+    description: Test binary-float, endpoint, input-rescaling, arbitrary-band, and arbitrary-target countermodels against magnitude-reproduction language.
+  - id: E
+    description: Separate set intersection, containment, span, and selected-value closeness from prediction, mechanism, probability, rate, and yield.
+  - id: F
+    description: Audit the PN4-PN5 candidate cycle, literature attribution, accepted ceilings, and all direct and transitive consumers.
+  - id: G
+    description: Test nonduplication and add no claim or API if exact quotient content is already governed by P110 evidence and pair content by C-RES-001.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact declared input and unit provenance
+  - representation-safe quotient, remainder, plateau, jump, and set-summary algebra
+  - exact agreement with C-RES-001 including signs, normalization, optimum, limits, and dimensions
+  - sensitivity to threshold, independent input scaling, coupling-product, detuning, and loss mutations
+  - strict separation of selected-input numerical overlap from mechanism, prediction, probability, rate, yield, and material scale
+  - assumption and parameter economy, nonduplication, literature honesty, and complete consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue exposes 24 MeV, the meV-to-eV band, a claimed
+  1e7-to-1e11 count span, a cited 1e8-to-1e9 neighborhood, and the pair optimum
+  Gamma=2*Delta. P113 freezes exact representation, interval, set, scaling,
+  C-RES-001, dimensional, mutation, interpretation, literature, nonduplication,
+  and consumer gates before executing PN5 or reading its eleven predicate
+  implementations. Exposed values cannot select a concept or pass threshold.
+status: draft
