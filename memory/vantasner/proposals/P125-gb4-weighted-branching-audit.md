@@ -2,7 +2,7 @@
 description: Audit GB4's weighted branching specialization against the accepted exact allocation theorem
 author: vantasner
 created: '2026-08-08T14:15:00Z'
-updated: '2026-08-08T14:15:00Z'
+updated: '2026-08-08T14:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-GB4
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P125 GB4 Weighted Branching Audit
 
@@ -181,6 +181,23 @@ every GB4 predicate, physical branching ceilings, dependencies, cycles,
 consumers, nonduplication, terminal disposition, and an empty debt ledger agree.
 A negative partial derivative, named weight family, enhancement label, or pass
 tally is not sufficient alone.
+
+## Adjudicated Outcome
+
+P125 terminally qualifies GB4 without changing v0.98.0. Forty-nine primary and
+twenty-nine independent exact checks close the accepted fixed-weight fractions,
+continuous derivative, direct adjacent-integer difference, endpoints, relative
+odds, free-target family, coupled-weight conditions, source predicates,
+dependencies, consumers, and nonduplication.
+
+The unrestricted headline fails. If n varies with N, the sign depends on growth
+of `N*w(n(N))`; a positive inverse weight can flatten or reverse the result, and
+the named exponential weight with n=N reverses after `alpha*N=1`. Rho, weight
+normalization, alpha, k, n, and the n(N) law remain free. The source builds no
+physical rates or exhaustive channel set. All fourteen durable consumer hashes
+still match P122's 576-check replay. C-BRN-001 already governs the reusable
+surface, so no claim, API, or release is duplicated. No sampled integration or
+NumPy compatibility event occurs.
 
 ## Cross-References
 

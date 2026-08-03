@@ -1,0 +1,47 @@
+campaign: P125
+attempt: 0007
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  source_tally: 23
+  primary_tally: 49
+  independent_tally: 29
+  durable_consumer_scripts: 14
+  durable_consumer_checks: 576
+  focused_package_tests: 15
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 95
+  qualified_units: 111
+  memory_files: 513
+  pytest_tests: 1090
+  debt: []
+results:
+  source: {exit_code: 0, tally: 23}
+  primary: {exit_code: 0, tally: 49}
+  independent: {exit_code: 0, tally: 29}
+  durable_consumers: {scripts: 14, checks: 576, hashes_unchanged: true, evidence: campaigns/P122-gb1-channel-branching-audit/evidence/consumer-audit.yaml}
+  focused_package_tests: {passed: 15}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 95, qualified_units: 111}
+  memory: {files_valid: 513}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: not_asserted}
+  diff_check: {exit_code: 0}
+result: >-
+  GB4 is terminally qualified through unchanged C-BRN-001 with no claim,
+  package API, or release change. Native source, exact primary, fresh
+  independent, focused package, durable consumer, governance, queue, memory,
+  skill, full-suite, and whitespace gates close with no debt. The integrated
+  command exited cleanly, but its nested output forwarding omitted the pytest
+  wall time, so no duration is invented.
+compatibility_event: none
+next_attempt: >-
+  Commit the immutable P125 scientific adjudication, checkpoint the parent
+  effort separately, and continue with the next pending source unit GB5.

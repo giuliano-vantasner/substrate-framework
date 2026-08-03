@@ -1,0 +1,33 @@
+campaign: P125
+source_unit: GB4
+inputs:
+  rho:
+    role: positive ratio of declared gamma and soft baselines
+    provenance: named_never_valued
+    authority: C-BRN-001 permits a declared positive ratio but derives no physical baselines
+  n:
+    role: positive subdivision count argument of the weight
+    provenance: symbolic_only
+    authority: PN2 supplies qualified quotient arithmetic but no physical subdivision state or n(N) law
+  linear_weight:
+    expression: w(n)=n
+    provenance: candidate_regime
+    authority: none
+  exponential_weight:
+    expression: w(n)=exp(-alpha*n)
+    provenance: candidate_regime_with_free_positive_alpha
+    authority: none
+  power_weight:
+    expression: w(n)=n^k
+    provenance: candidate_regime_with_free_positive_k
+    authority: none
+  baseline_weight:
+    expression: w(1)
+    provenance: declared_independent_positive_symbol_in_executable
+    authority: same-baseline relation must be imposed for a relative-odds interpretation
+findings:
+  - The source never values rho and therefore predicts no branching magnitude.
+  - No accepted claim selects one weight family or fixes its normalization alpha k n or coupling to N.
+  - Treating n as fixed makes every named family a positive constant in the N derivative; treating n as N changes the exponential verdict.
+  - Free-symbol absence from an expression cannot rule out shared parameter dependence inside a modeled weight.
+debt: []

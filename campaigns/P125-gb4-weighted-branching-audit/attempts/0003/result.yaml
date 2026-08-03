@@ -1,0 +1,22 @@
+campaign: P125
+attempt: 0003
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+results:
+  primary: {exit_code: 0, tally: 49}
+  independent: {exit_code: 1, checks_before_failure: 1}
+failure_class: independent_oracle
+failed_surface: fixed_weight_adjacent_difference_structural_equality
+result: >-
+  The primary exact audit passed forty-nine checks. The independent review
+  compared algebraically identical denominators by structural equality:
+  SymPy returned N*w+rho+w while the oracle wrote (N+1)*w+rho. The scientific
+  expression was unchanged; the equality oracle was representation-sensitive.
+compatibility_event: none
+next_attempt: >-
+  Compare the independent difference to its expected form through exact
+  simplification, then rerun the fresh review and the unchanged primary once at
+  the repaired scientific boundary.

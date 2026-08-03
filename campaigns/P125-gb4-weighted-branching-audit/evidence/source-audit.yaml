@@ -1,0 +1,22 @@
+campaign: P125
+source_unit: GB4
+surviving_exact_surface:
+  - C-BRN-001 already governs both normalized fractions from two declared common-dimension nonnegative inputs.
+  - At fixed positive weight its comparison fraction has the displayed negative positive-real derivative and an exact negative adjacent-integer difference.
+  - Relative weighted odds equal w(n)*N/w(1) when both evaluations use the same positive channel baselines.
+  - A common population factor on both declared inputs cancels from the normalized fractions.
+source_oracle_limits:
+  - The source treats w and each w(n) substitution as independent of N while using language that does not state fixed n.
+  - If n=n(N), monotonicity requires growth of N*w(n(N)); positivity of w alone is insufficient.
+  - For n=N and w=exp(-alpha*n), N*w peaks at N=1/alpha, so B_gamma decreases before and increases after that point.
+  - The bound checks and suppression helper use isolated sample points; they are regression guards rather than global oracles.
+  - The enhancement free-symbol check cannot expose parameter dependence hidden inside w and w(1).
+  - A fraction approaching one does not prove an uncapped physical rate, and a unit baseline identity does not prove absence of physical suppression.
+physical_ceiling:
+  - rho, the weight normalization, n, alpha, k, and any n(N) relation remain free or declared rather than derived.
+  - No common initial state, exhaustive channel set, interaction, final-state measure, spectral density, kinetics, normalization, parameter provenance, or measurement map is supplied.
+  - Zero or absent physical couplings, a third channel, unequal gates, or changed baselines leave the algebraic identities while changing the physical reading.
+  - No physical gamma suppression, soft channel, nuclear branching, emitted spectrum, material rate, enhancement magnitude, yield, heat, or observation is accepted.
+headline_verdict: fixed_weight_allocation_exact_coupled_regime_independence_and_physical_suppression_rejected
+compatibility_event: none
+debt: []

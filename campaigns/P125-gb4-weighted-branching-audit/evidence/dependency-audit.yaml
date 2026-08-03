@@ -1,0 +1,35 @@
+campaign: P125
+source_unit: GB4
+authority_warning: Candidate dependency edges identify replay scope and grant no physical-channel authority.
+dependencies:
+  GB1:
+    disposition: qualified
+    accepted_claims: [C-BRN-001]
+    surviving_surface: exact two-channel allocation weighted specialization fixed-weight derivative relative odds and identifiability ceiling
+    excluded_surface: physical rates exhaustive channels subdivision weight material branching enhancement yield heat and observation
+  GB3:
+    disposition: qualified
+    accepted_claims: [C-SPN-002, C-COH-001]
+    surviving_surface: normalized collective spin algebra deterministic complex couplings and iid directional intensity at declared normalization
+    excluded_surface: physical soft or gamma rates binary wavelength gate channel asymmetry phonon coherence material enhancement and observation
+  PN2:
+    disposition: qualified
+    accepted_claims: []
+    surviving_surface: conditional quotient and remainder arithmetic only
+    excluded_surface: physical subdivision quanta spectrum weight law rate and material process
+  PN3:
+    disposition: qualified
+    accepted_claims: [C-SPN-002]
+    surviving_surface: normalized symmetric-spin ladder only
+    excluded_surface: squared-coefficient rate physical nuclear or phonon states common mode and material process
+accepted_context:
+  C-BRN-001: exact conditional allocation theorem with explicit physical and identifiability ceilings
+accepted_physical_rate_claims: []
+cycles:
+  - WN2 depends on GB4 plus WN3 and WN4 while WN3 depends on WN2 and WN4 depends on WN3.
+  - WN5 and WN7 inherit that pending WN cycle; MD1 through MD6 are pending descendants and add no authority.
+verdict: >-
+  C-BRN-001 closes all reusable GB4 algebra. The other dependencies supply no
+  physical rate, weight law, exhaustive channel set, or magnitude, and the
+  pending consumer cycle cannot promote those missing premises.
+debt: []

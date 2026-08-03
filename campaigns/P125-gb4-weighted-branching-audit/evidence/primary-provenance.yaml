@@ -1,0 +1,15 @@
+campaign: P125
+source: {path: merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py, sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0, git_blob: ef80d690efac994d211290d682c5a6189fbbd459}
+freeze: {path: campaigns/P125-gb4-weighted-branching-audit/evidence/frozen-proposal.yaml, sha256: 3e3201507deb309161485a50b2257f1cac6ee0386ec2ef36fe019a7f6409e569}
+primary:
+  path: campaigns/P125-gb4-weighted-branching-audit/verify.py
+  sha256: cf61cd1641bd821bec7578eec52e28112e14dca0a561129f864f33e6f4e1c1f6
+  route: canonical allocation fixed and coupled calculus integer differences weight countermodels identifiability physical ceilings dependencies consumers and nonduplication
+  tally: 49
+independent:
+  path: campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+  sha256: 74d97b24db14d829db1d798d00c9b2336319538d217a0e7984c00cc363ee6e01
+  route: fresh normalization cross multiplication exact sequences turning point target fitting and channel countermodels
+  tally: 29
+independence: The independent route imports neither the primary verifier nor any canonical branching helper.
+compatibility_event: none

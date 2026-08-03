@@ -1,0 +1,19 @@
+campaign: P125
+attempt: 0005
+status: failed
+candidates: [C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+results:
+  independent: {exit_code: 1, checks_before_failure: 15}
+failure_class: independent_oracle
+failed_surface: exponential_product_derivative_structural_equality
+result: >-
+  The coupled and sequence checks passed through the exact exponential reversal.
+  SymPy then expanded the derivative of N*exp(-alpha*N) rather than retaining
+  the oracle's factored form. This is a representation defect, not a change to
+  the turning-point result.
+compatibility_event: none
+next_attempt: >-
+  Compare the exponential derivative through an exact zero residual and
+  continue only the changed independent route.

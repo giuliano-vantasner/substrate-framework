@@ -1,0 +1,19 @@
+campaign: P125
+source_unit: GB4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0
+git_blob: ef80d690efac994d211290d682c5a6189fbbd459
+bytes: 10295
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+exit_code: 0
+terminal_tally: ALL 23 CHECKS PASS
+static_check_calls: 16
+literal_check_calls: 13
+dynamic_check_calls: 3
+runtime_predicates: 23
+compatibility_preflight: {np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0, event: none}
+interpretation: >-
+  Native reproduction validates only the executed predicates. It does not bind
+  n independently of N, derive a weight law or physical rates, establish an
+  exhaustive channel set, or make a finite one-point guard global.

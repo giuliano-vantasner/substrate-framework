@@ -1,0 +1,25 @@
+campaign: P125
+attempt: 0002
+status: verified
+candidates: [A]
+commands:
+  - rg -n 'np\.trapz|np\.trapezoid|trapezoid_integral' /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+expected:
+  source_sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0
+  terminal_tally: ALL 23 CHECKS PASS
+  compatibility_event: none
+results:
+  source_sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0
+  exit_code: 0
+  terminal_tally: ALL 23 CHECKS PASS
+  compatibility_preflight: {np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0}
+result: >-
+  GB4 reproduces all twenty-three runtime checks from sixteen static call
+  sites. Native success establishes only the displayed fixed-weight algebra and
+  regression guards; it does not establish the source's regime-independent or
+  physical suppression interpretations.
+compatibility_event: none
+next_attempt: >-
+  Classify all predicates, derive fixed and coupled continuous and discrete
+  population laws, and test the exact physical and identifiability ceilings.

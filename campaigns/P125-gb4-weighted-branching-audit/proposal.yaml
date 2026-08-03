@@ -87,4 +87,4 @@ comparators_blinded_until: >-
   copy, memory contract, and freeze validation pass. Queue metadata already
   exposes the headline formulas and weight families, so predicate-detail and
   source-output blinding remain.
-status: draft
+status: accepted

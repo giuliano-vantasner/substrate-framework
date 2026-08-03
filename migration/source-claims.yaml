@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 96
-  qualified: 110
+  pending_adjudication: 95
+  qualified: 111
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7774,8 +7774,43 @@ units:
   dynamic_check_calls: 3
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BRN-001
+  qualification: GB4's two normalized fractions, positive and zero-endpoint domains, fixed-positive-weight
+    population derivative, common-scale law, relative weighted odds, unequal-gate residual, and arbitrary-target
+    family are already governed by C-BRN-001. A fresh direct adjacent-integer difference is strictly negative
+    at fixed positive weight. The source's executable differentiates with n, alpha, k, and w fixed; under
+    that premise its linear, exponential, and power regimes are merely positive constants in N. If n depends
+    on N, the total derivative instead has sign opposite w+N*w', and the integer step depends on growth
+    of N*w. Positive w=1/N makes B_gamma constant, faster inverse weights make it increase, and for n=N
+    with w=exp(-alpha*n), B_gamma decreases before alpha*N=1 and increases after it. Thus positivity alone
+    does not establish the unrestricted regime-independent headline. The source's bounds and suppression
+    helper use isolated samples; the helper accepts a function that rises elsewhere. E_supp=w(n)*N/w(1)
+    is a same-baseline relative-odds ratio, not a physical suppression, and hidden parameter dependence
+    inside w evades its free-symbol check. Rho, weight normalization, n, alpha, k, and any n(N) law remain
+    free, so every interior fraction can be fitted. No common initial state, exhaustive channel set, interaction,
+    final-state measure, spectral density, kinetics, channel normalization, parameter provenance, physical
+    soft/gamma rate, nuclear branching, spectrum, material enhancement, magnitude, yield, heat, or observation
+    is accepted.
+  evidence:
+  - campaigns/P125-gb4-weighted-branching-audit/reviews/source_adjudication.md
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/source-reproduction.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/source-audit.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/check-adjudication.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/input-provenance.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/dependency-audit.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/consumer-audit.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/candidate-comparison.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/evidence/primary-provenance.yaml
+  - campaigns/P125-gb4-weighted-branching-audit/verify.py
+  - campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+  - memory/vantasner/decisions/GB4-qualified-review.md
+  note: P125 closes 49 primary and 29 independent exact checks after three preserved independent normal-form
+    failures. All fourteen consumer hashes remain identical to P122's 576-check replay; fifteen focused
+    package tests pass. C-BRN-001 subsumes the reusable surface, so no canonical API, accepted claim,
+    or release is added. No sampled integration or NumPy compatibility event occurs.
 - source_unit: GB5
   phase: phase-32
   path: merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py

@@ -1,0 +1,26 @@
+campaign: P125
+attempt: 0006
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+  - .venv/bin/python -m pytest tests/test_branching.py -q
+  - gitnexus analyze --index-only
+  - gitnexus impact weighted_channel_allocation --repo substrate-framework --depth 3
+results:
+  primary: {exit_code: 0, tally: 49}
+  independent: {exit_code: 0, tally: 29}
+  focused_package_tests: {passed: 15, seconds: 1.53}
+  durable_consumer_replay: {evidence: campaigns/P122-gb1-channel-branching-audit/evidence/consumer-audit.yaml, scripts: 14, checks: 576, hashes_unchanged: true}
+  gitnexus: {risk: LOW, direct_impacts: 0, processes_affected: 0, canonical_changes: 0}
+result: >-
+  Exact primary and fresh cross-product routes agree. GB4's fixed-n surface is
+  already C-BRN-001; direct integer differences close the occupation statement,
+  while coupled positive weights expose the missing monotonicity premise. All
+  focused package tests and durable consumer hashes pass with no canonical API
+  or release change indicated.
+compatibility_event: none
+next_attempt: >-
+  Complete claim-level review, terminal disposition, durable decision memory,
+  and one final integrated governance boundary.

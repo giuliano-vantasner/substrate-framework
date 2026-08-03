@@ -1,0 +1,56 @@
+campaign: P125
+title: GB4 weighted branching and population-monotonicity audit
+source_baseline: substrate@6d1f4e0
+source_units: [GB4]
+base_release: v0.98.0
+release_after_adjudication: v0.98.0
+adjudicated_at: '2026-08-08T14:45:00Z'
+selected_candidates:
+  - {id: B, reason: C-BRN-001 exactly subsumes the fixed-positive-weight allocation algebra.}
+  - {id: C, reason: Direct adjacent-integer differences close the occupation statement without borrowed calculus.}
+  - {id: D, reason: Total derivatives and sequence cross products expose the missing n(N) premise.}
+  - {id: E, reason: Positive inverse and coupled exponential weights refute positivity-only regime independence.}
+  - {id: F, reason: Same-baseline odds and arbitrary-target families expose normalization and magnitude nonidentifiability.}
+  - {id: G, reason: Third-channel unequal-gate and zero-coupling models reject physical branching claims.}
+  - {id: H, reason: Existing C-BRN-001 subsumes the exact surface and closes terminal no-release qualification.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-BRN-001, decision: unchanged_complete_allocation_weighted_specialization_and_physical_ceiling}
+  - {id: C-SPN-002, decision: unchanged_spin_algebra_and_nonrate_ceiling}
+  - {id: C-COH-001, decision: unchanged_directional_coherence_and_normalization_ceiling}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  source_reproduction: attempts/0002/result.yaml
+  independent_normal_form_failure_1: attempts/0003/result.yaml
+  independent_normal_form_failure_2: attempts/0004/result.yaml
+  independent_normal_form_failure_3: attempts/0005/result.yaml
+  exact_routes: attempts/0006/result.yaml
+  terminal_gate: attempts/0007/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_branching_review.py
+  source_reproduction_record: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/GB4-qualified-review.md
+source_disposition:
+  GB4: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+  - durable consumer replay recorded in evidence/consumer-audit.yaml
+  - .venv/bin/python -m pytest tests/test_branching.py -q
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

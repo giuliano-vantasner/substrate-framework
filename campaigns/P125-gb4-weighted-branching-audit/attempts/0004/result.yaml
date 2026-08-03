@@ -1,0 +1,22 @@
+campaign: P125
+attempt: 0004
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P125-gb4-weighted-branching-audit/reviews/independent_branching_review.py
+results:
+  primary: {exit_code: 0, tally: 49}
+  independent: {exit_code: 1, checks_before_failure: 9}
+failure_class: independent_oracle
+failed_surface: coupled_adjacent_difference_structural_equality
+result: >-
+  The repaired fixed-weight difference passed, as did seven exact integer
+  steps. The general coupled difference then repeated the same denominator
+  normal-form mistake under structural equality. The primary remained green
+  and the scientific expression was unchanged.
+compatibility_event: none
+next_attempt: >-
+  Replace the coupled structural comparison by an exact zero residual and
+  rerun only the changed independent review; do not repeat the twice-green
+  unchanged primary oracle.

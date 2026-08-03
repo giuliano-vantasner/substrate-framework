@@ -1,0 +1,20 @@
+campaign: P125
+source_unit: GB4
+accepted_surfaces:
+  C-BRN-001:
+    coverage: two-channel fractions endpoints odds scaling weighted positive-integer specialization fixed-weight continuous derivative relative weighted odds unequal-gate residual arbitrary-target family and physical ceiling
+    canonical_api: src/substrate_framework/branching.py
+distinct_audit_surface:
+  - exact adjacent-integer difference for the already accepted weighted specialization
+  - coupled n(N) counterexamples to the source's regime-independent language
+  - source predicate and physical-interpretation adjudication
+assessment: >-
+  The integer difference is an immediate exact corollary with no distinct
+  governed consumer. The coupled-law counterexamples qualify the source but do
+  not create a reusable positive theorem beyond C-BRN-001's explicit fixed-
+  weight scope and free-weight ceiling.
+new_claim: null
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

@@ -1,0 +1,36 @@
+campaign: P125
+source_unit: GB4
+static_call_sites: 16
+runtime_predicate_count: 23
+predicates:
+  - {index: 1, label: fraction_partition, verdict: exact_partition_physical_exhaustion_rejected, reason: The two displayed terms sum to one by construction; no common state or exhaustive physical channel set is derived.}
+  - {index: 2, label: soft_fraction_bounds, verdict: exact_on_strict_positive_domain_weak_oracle, reason: The identity is exact, but one substituted point is not a global bound proof; C-BRN-001 supplies the complete nonnegative domain.}
+  - {index: 3, label: gamma_fraction_bounds, verdict: exact_on_strict_positive_domain_weak_oracle, reason: Both inequalities are tested at one point only; the denominator theorem, not that sample, proves the global bounds.}
+  - {index: 4, label: soft_fraction_large_N_limit, verdict: exact_at_fixed_positive_weight_rate_label_rejected, reason: A fraction tending to one says nothing about whether the underlying rate is uncapped or even physical.}
+  - {index: 5, label: gamma_partial_derivative, verdict: exact_at_fixed_positive_weight, reason: This is already C-BRN-001 and is a partial derivative holding n and w fixed.}
+  - {index: 6, label: gamma_derivative_sample_1, verdict: regression_only, reason: One positive sample cannot establish a global sign.}
+  - {index: 7, label: gamma_derivative_sample_2, verdict: regression_only, reason: One positive sample cannot establish a global sign.}
+  - {index: 8, label: gamma_derivative_sample_3, verdict: regression_only, reason: One positive sample cannot establish a global sign.}
+  - {index: 9, label: gamma_derivative_sample_4, verdict: regression_only, reason: One positive sample cannot establish a global sign.}
+  - {index: 10, label: soft_partial_derivative, verdict: exact_at_fixed_positive_weight, reason: It is the complementary C-BRN-001 derivative and does not derive a physical soft channel.}
+  - {index: 11, label: linear_weight_closed_form, verdict: exact_at_fixed_n, reason: Substituting positive n for a weight preserves the fixed-weight identity but supplies no weight law.}
+  - {index: 12, label: linear_weight_sign_sample, verdict: conditional_regression, reason: The one-point sign is exact; if n varies with N the total derivative must be evaluated separately.}
+  - {index: 13, label: exponential_weight_closed_form, verdict: exact_at_fixed_n, reason: The code differentiates with respect to N while holding n fixed.}
+  - {index: 14, label: exponential_weight_sign_sample, verdict: conditional_regression_global_regime_claim_refuted, reason: With n=N the sign reverses after alpha*N exceeds one.}
+  - {index: 15, label: power_weight_closed_form, verdict: exact_at_fixed_n, reason: The code differentiates with respect to N while holding n and k fixed.}
+  - {index: 16, label: power_weight_sign_sample, verdict: conditional_regression, reason: One point does not state the n(N) premise; positive k remains monotone under n=N but that is a separate total derivative.}
+  - {index: 17, label: enhancement_rho_free, verdict: exact_local_expression_only, reason: The displayed independent symbols omit rho, but a physical weight or baseline may share hidden parameter dependence.}
+  - {index: 18, label: enhancement_unit_baseline, verdict: exact_identity_interpretation_rejected, reason: Substituting N=1 and w=w1 gives one by definition; it does not establish no physical suppression.}
+  - {index: 19, label: enhancement_partial_derivative, verdict: exact_at_fixed_weight_global_claim_refuted, reason: The derivative is w/w1 only when the weight is fixed; coupled exponential weights become nonmonotone.}
+  - {index: 20, label: gamma_odds_consistency, verdict: exact_conditional, reason: It is an algebraic rewrite of the same fraction and adds no independent channel evidence.}
+  - {index: 21, label: symmetric_N_fake_cancellation, verdict: exact_conditional, reason: A common N factor cancels, but this does not prove the asymmetric physical rate premise.}
+  - {index: 22, label: true_branching_guard, verdict: local_sample_only, reason: The helper evaluates one point and accepts expressions that decline there but rise elsewhere.}
+  - {index: 23, label: symmetric_fake_rejection, verdict: exact_local_rejection_physical_asymmetry_unproved, reason: The zero derivative fails the helper, but many nonconstant countermodels also pass locally without global or physical validity.}
+summary:
+  source_predicates_reproduced: 23
+  accepted_exact_claims: [C-BRN-001]
+  terminal_disposition: qualified
+  headline: >-
+    Fixed-n allocation algebra survives. Regime-independent monotonicity under
+    an unspecified n(N), physical gamma suppression, exhaustive branching,
+    and predicted enhancement do not.
