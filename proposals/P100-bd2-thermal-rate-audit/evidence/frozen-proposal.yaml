@@ -1,0 +1,30 @@
+campaign: P100
+frozen_at: '2026-08-03T11:49:51Z'
+base_release: v0.84.0
+base_commit: c8bef91123bdac3b0cc8a0b7c3ca31d1527f8fe9
+scientific_base_commit: bda89f264f27c8dd77ebcb6975ce99247e1da923
+proposal_path: proposals/P100-bd2-thermal-rate-audit/proposal.yaml
+proposal_sha256: 4926b46554871d50e27c4a4ff00a173dc2556aa564bc4fda34820e8cdd5f303a
+memory_contract_path: memory/vantasner/proposals/P100-bd2-thermal-rate-audit.md
+memory_contract_sha256: 0be8e4049ccf8454917fbfe2c16fae767ce661282cde795c7df2a40d9441d3e4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-28/bridge_BD2_scaling_law_thermal_optimum.py
+source_size_bytes: 10677
+source_sha256: 91f2344bd59618b5915d018e1ee7d728b86f59a29e42e1a0a60cd833747f7a65
+source_blob: 901b16a0c05e81da0867a6c19dbdce37df87d139
+source_body_exposure: >-
+  Only the generated queue excerpts were read. They expose the normalized
+  two-level gate, the BD1 conditional barrier, the coth effective scale, the
+  source rate expression, two asserted partial trends, and an advertised
+  optimum near the energy quantum. The source body, imports, full predicates,
+  citations, numerical examples, and terminal output were unopened.
+source_execution_state_at_freeze: not_executed_under_P100
+terminal_output_state_at_freeze: unopened_under_P100
+independent_stationary_prefactor_noise_and_identifiability_tests_frozen: true
+claims_reserved:
+  - C-TH-002
+validation:
+  repository: WORKFLOW VALID 114 claims 114 accepted 1 proposals 218 units 121 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen

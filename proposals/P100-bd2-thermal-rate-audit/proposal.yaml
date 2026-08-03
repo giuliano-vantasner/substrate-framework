@@ -1,0 +1,69 @@
+id: P100
+base_release: v0.84.0
+base_commit: c8bef91123bdac3b0cc8a0b7c3ca31d1527f8fe9
+scientific_base_commit: bda89f264f27c8dd77ebcb6975ce99247e1da923
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [BD2]
+question: >-
+  Derive and audit the strongest dependency-closed conditional theorem behind
+  BD2's composition of the accepted capillary barrier, exact two-level gate,
+  a declared coth effective scale, and a dimensionful attempt frequency;
+  determine its exact temperature, loading, and drive behavior, the existence
+  and location of any stationary operating point, its prefactor and noise-law
+  dependence, and which BD2 statements survive without importing a physical
+  noise mechanism, k-omega law, inertia, Kramers dynamics, or fitted optimum.
+invariants:
+  - C-TH-001 supplies only a dimensionless two-level occupation and symmetric single-event gate; it derives no rate amplitude, effective temperature, or causal mechanism.
+  - C-RG-002 supplies only a conditional capillary barrier from declared Frank/core and quadratic-loading premises; it derives no thermal law, frequency map, or stochastic rate.
+  - C-COH-001 supplies only the dimensionless activated factor exp(-E/Theta) and explicitly requires a dimensionful prefactor and kinetic model before it is a rate.
+  - Line tension tau has energy per length and is never thermodynamic temperature; the positive thermal coordinate is the energy vartheta=k_B*T_temp.
+  - A positive energy quantum q may be declared, but identifying q=hbar*omega with a breather, medium mode, drive frequency, or barrier curvature requires a separately accepted map.
+  - A mathematical maximum of a fully declared response family is not a physical operating optimum without an accepted objective, domain, control map, and kinetic applicability model.
+  - Pending BD3, BD4, BD5, CM2, and CM4 and noncanonical engineering code are evidence only and cannot close missing physical premises.
+allowed_imports:
+  - C-TH-001 for the exact normalized occupation and symmetric gate only
+  - C-RG-001 and C-RG-002 for the generic relative barrier and the conditional BD1 constitutive specialization only
+  - C-COH-001 for the conditional dimensionless activated factor and its explicit non-rate ceiling
+  - exact positive-real algebra, calculus, hyperbolic identities, dimensions, limits, rank, and nullspace analysis
+  - BD2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation and freeze
+  - hash-pinned BD3-BD5 and engineering consumers only after freeze and only as noncanonical impact evidence
+candidates:
+  - id: A
+    description: Reproduce BD2 unchanged and classify each literal predicate, named import, numerical sample, and terminal tally.
+  - id: B
+    description: Map the occupation and symmetric gate directly to C-TH-001 and reject this portion as duplicate claim surface.
+  - id: C
+    description: Declare positive q and vartheta, Theta_coth=q*coth(q/(2*vartheta))/2, and compose the exact gate and activated factor into a conditional rate with a supplied attempt frequency.
+  - id: D
+    description: Eliminate line tension and area drive through E_barrier=pi*tau^2/p to derive the dimensionless rate shape and its symbol and unit ledger.
+  - id: E
+    description: Derive the exact stationary equation and uniqueness result for the source prefactor proportional to Theta_coth^(-1/2), with the optimum stated implicitly and bounded independently of source values.
+  - id: F
+    description: Compare constant, inverse-square-root, and general power-law prefactors and alternative positive noise scales to determine which finite optima are premise dependent.
+  - id: G
+    description: Derive conditional loading and wavenumber partials only under an explicit fixed-q, fixed-gate, fixed-prefactor convention, and reject a total drive-frequency derivative without a declared q(k) map.
+  - id: H
+    description: Construct rescaling and arbitrary-target families for attempt frequency, barrier ratio, temperature scale, and constitutive inputs to expose the identifiability ceiling.
+  - id: I
+    description: Trace BD3-BD5, CM2, CM4, and engineering consumers and audit nonduplication against thermal, radial-energy, and coherence-gate APIs.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and strict separation of gate, activated factor, rate, stochastic mechanism, objective, and physical operating point
+  - exact dimensions, symbol roles, positive domains, limits, stationary equations, global extrema, and mutation-sensitive coefficients
+  - explicit assumption and parameter economy with no pending inertia, dispersion, effective-noise, or kinetic imports
+  - robustness under alternative admissible prefactors and noise laws before any optimum or scaling statement is promoted
+  - partial-versus-total derivative discipline, identifiability rank, constructive counterfamilies, canonical reuse, and consumer nonduplication
+claims_proposed:
+  - C-TH-002
+comparators_blinded_until: >-
+  The generated queue has exposed Pocc=1/(1+exp(x)),
+  W=sech(x/2)^2/2, x=q/vartheta, Theta_coth=q*coth(x/2)/2,
+  and R=nu*tau/sqrt(p*Theta_coth)*exp(-E_barrier/Theta_coth)*W,
+  plus asserted positive loading/drive trends and an optimum near
+  vartheta comparable to q. P100 therefore claims no blinding for those
+  excerpts. It freezes the exact transformed shape
+  u^(1/2)*(1-u^2)*exp(-2*b*u), its stationary criterion and bound,
+  alternative prefactor/noise families, derivative conventions,
+  identifiability tests, dependency ceiling, and consumer gate before opening
+  or executing the BD2 body or inspecting additional consumer values.
+status: draft
