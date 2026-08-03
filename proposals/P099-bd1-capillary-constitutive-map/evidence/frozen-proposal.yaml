@@ -1,0 +1,27 @@
+campaign: P099
+frozen_at: '2026-08-04T18:30:00Z'
+base_release: v0.83.0
+base_commit: 6277786fee53907d5e4f499f8389268e19d3bedd
+scientific_base_commit: 8ad0ed8
+proposal_path: proposals/P099-bd1-capillary-constitutive-map/proposal.yaml
+proposal_sha256: 9b6f356ab1d152c5bdb6b3798fc5bab00c02fe48886074a9c1b9b698e6eee277
+memory_contract_path: memory/vantasner/proposals/P099-bd1-capillary-constitutive-map.md
+memory_contract_sha256: 7a296d4bd535a7006e26b17373e34126c869b2a5b9543a41abcb5f165f35d6a3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-28/bridge_BD1_real_variable_barrier.py
+source_sha256: 42579012eda87243639248664c6f90945c454046aa66c8de166ad6d2e594abc7
+source_blob: df313ad5586ce3288cf6f7b46a319c7426f7c9b0
+source_body_exposure: >-
+  Only the generated queue excerpt exposing the generic capillary maximum and
+  two candidate constitutive substitutions was read. The source body, full
+  predicates, imports, citations, literals, and terminal output were unopened.
+source_execution_state_at_freeze: not_executed_under_P099
+terminal_output_state_at_freeze: unopened_under_P099
+independent_dimension_and_identifiability_tests_frozen: true
+claims_reserved:
+  - C-RG-002
+validation:
+  repository: WORKFLOW VALID 113 claims 113 accepted 1 proposals 218 units 122 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen

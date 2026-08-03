@@ -1,0 +1,63 @@
+id: P099
+base_release: v0.83.0
+base_commit: 6277786
+scientific_base_commit: 8ad0ed8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [BD1]
+question: >-
+  Derive an importable exact conditional composition from positive Frank/core
+  line-tension inputs and a declared quadratic loading law to the C-RG-001
+  capillary critical radius and barrier, retaining every parameter, dimension
+  convention, monotonicity, and identifiability symmetry; determine exactly
+  which BD1 statements survive without importing pending dependencies or
+  promoting a sourced constitutive ansatz into a material prediction.
+invariants:
+  - C-RG-001 fixes the generic positive-pressure capillary energy, unique strict maximum, and independent coefficient ceiling.
+  - Line tension has energy per length, area drive has energy per area, radius has length, and the barrier has energy.
+  - The symbol T_line denotes line tension and never thermodynamic temperature.
+  - A dimensionless defect strength and cutoff logarithm do not fix the Frank constant, core line energy, or cutoff ratio.
+  - The quadratic law h=g*A^2*k^2/4 is a declared specialization; its dimensional closure depends on the amplitude convention and cannot select g.
+  - Pending B1, BD4, E1, and E2 are evidence only and cannot supply accepted premises.
+allowed_imports:
+  - C-RG-001 for the generic capillary energy and strict maximum only
+  - exact real algebra, calculus, logarithms, dimensions, and rank/nullspace analysis
+  - BD1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+  - hash-pinned predecessor sources named by BD1 only after freeze and only as provenance evidence
+candidates:
+  - id: A
+    description: Reproduce BD1 unchanged and classify each of its eighteen predicates and named imports.
+  - id: B
+    description: Replay the generic capillary extremum through C-RG-001 and reject it as a duplicate claim surface.
+  - id: C
+    description: Compose a positive Frank/core line tension and positive quadratic loading pressure into exact critical-radius and barrier APIs.
+  - id: D
+    description: Preserve a general amplitude length exponent and derive the coupling dimension required for h=g*A^2*k^2/4.
+  - id: E
+    description: Derive exact partial derivatives and log elasticities for the specialized barrier while separating composite line-tension dependence.
+  - id: F
+    description: Derive parameter-rescaling null directions and arbitrary-target families showing that one barrier cannot identify its inputs.
+  - id: G
+    description: Audit positive, zero, and negative drive domains, cutoff ordering, sign-insensitive squared variables, and limiting behavior.
+  - id: H
+    description: Compare alternative positive drive laws and retain only the source quadratic specialization as a declared premise.
+  - id: I
+    description: Trace BD2-BD4 and engineering consumers and audit nonduplication against C-RG-001 and coherence-gate APIs.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted capillary dependency closure and symbol/convention consistency
+  - exact dimensional closure for every factor before monotonicity or consumer use
+  - explicit assumption and free-parameter ledger with no pending dependency imports
+  - correct extrema, signs, limits, derivatives, and mutation-sensitive coefficient factors
+  - parameter-identifiability rank and constructive counterfamilies
+  - alternative-law comparison, canonical API reuse, and downstream nonduplication
+claims_proposed:
+  - C-RG-002
+comparators_blinded_until: >-
+  The generated queue exposed the capillary maximum and the candidate
+  substitutions T_line=pi*K_F*s^2*log(R_o/r_c)+epsilon_core and
+  P_drive=g*A^2*k^2*l_m/2. P099 therefore claims no formula blinding for those
+  excerpts. It freezes the dimension family, candidate set, domains,
+  identifiability tests, alternative-law gate, consumer ceiling, and exact
+  claim criteria before opening or executing the BD1 body, trusting its
+  predecessor citations, or inspecting additional consumer outputs.
+status: draft
