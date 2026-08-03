@@ -1,0 +1,36 @@
+campaign: P122
+source_unit: GB1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-32/bridge_GB1_channel_definitions.py
+sha256: ace0515d7ea362ef45a55db22308aecffdad9a003d03f2b1209c0a11874b489b
+git_blob: 145bfcaeed8353efcc3b81bcd87a596fa7bea4da
+size_bytes: 9360
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB1_channel_definitions.py
+exit_status: 0
+static_check_call_sites: 12
+runtime_predicates: 18
+terminal_tally: ALL 18 CHECKS PASS
+selected_output:
+  R_soft: r_s*w(n)*N
+  R_gamma: r_gamma
+  rho: r_gamma/r_s
+  B_soft: w*N/(w*N+rho)
+  B_gamma: rho/(w*N+rho)
+  E_supp: w*N/w1
+historical_exposure: >-
+  Generated queue metadata exposed the headline formulas, named dependencies,
+  free-symbol result, and static check shape before P122. The source body,
+  exact predicate wording, and runtime output remained unopened until the
+  validated freeze commit da195d1.
+compatibility:
+  sampled_integration: none
+  np_trapz: absent
+  np_trapezoid: absent
+  native_abort: false
+interpretation: >-
+  The run reproduces eighteen predicates. It does not bind rho independently,
+  derive w from n, execute common gating factors, establish semantic barrier
+  absence, construct physical rates or exhaustive channels, or predict a
+  branching fraction or enhancement.

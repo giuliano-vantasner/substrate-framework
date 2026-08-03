@@ -2,7 +2,7 @@
 description: Exact two-channel branching, normalization, dependency, and GB1 audit
 author: vantasner
 created: '2026-08-08T11:00:00Z'
-updated: '2026-08-08T11:00:00Z'
+updated: '2026-08-08T11:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - rate-ceiling
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P122 GB1 Channel Branching Audit
 

@@ -1,0 +1,26 @@
+campaign: P122
+attempt: 0011
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python -c "import pathlib, yaml; yaml.safe_load(pathlib.Path(...).read_text())"
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+expected:
+  attempt_yaml_valid: true
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 98
+  qualified_units: 108
+results:
+  attempt_yaml: {valid: true}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 98, qualified_units: 108}
+  diff_check: {exit_code: 0}
+result: >-
+  The final GB1 attempt records parse with the repository environment, the
+  registry and migration queue remain closed, and the whitespace check passes.
+  No unchanged scientific or full-suite verifier was rerun.
+compatibility_event: none
+next_attempt: >-
+  Commit the immutable P122 scientific adjudication, checkpoint the parent
+  effort separately, and continue with GB2.

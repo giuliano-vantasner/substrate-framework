@@ -1,0 +1,14 @@
+campaign: P122
+attempt: 0004
+status: failed_patch_context
+candidate: B
+command: apply branching module tests exports and source-reproduction record
+result: >-
+  The patch was rejected atomically because one __all__ insertion context did
+  not match the current large package initializer. No file was partially
+  written.
+diagnosis: mechanical_patch_anchor_mismatch
+scientific_effect: none
+next_attempt: >-
+  Add the module tests and attempts independently, inspect exact initializer
+  anchors, then add exports without changing the API design.

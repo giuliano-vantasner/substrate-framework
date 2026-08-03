@@ -48,6 +48,15 @@ Let x be a real scalar coordinate, let A be real, and let F, q, and K be positiv
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-BRN-001
+
+Let A and B be exact nonnegative real quantities in one common dimension with A+B>0. Define q_A=A/(A+B) and q_B=B/(A+B). Then exactly 0<=q_A,q_B<=1, q_A+q_B=1, (A,B)=(0,B) gives (q_A,q_B)=(0,1), and (A,B)=(A,0) gives (1,0); the double-zero point is undefined. For A,B>0, q_A/q_B=A/B, partial_A q_A=B/(A+B)^2>0, and partial_B q_A=-A/(A+B)^2<0. At fixed B>0, q_A tends from zero to one as A runs from zero to infinity. Common positive scaling (A,B)->(s*A,s*B) leaves both fractions invariant, while independent channel scaling generally changes them. If positive common-dimension baselines r_w and r_c, a positive dimensionless weight w, and a positive integer N are separately declared, then A=r_w*w*N, B=r_c, and rho=r_c/r_w give q_A=w*N/(w*N+rho) and q_B=rho/(w*N+rho). On the positive continuous N extension, partial_N q_B=-rho*w/(w*N+rho)^2<0. Relative to the same positive baselines at population one and positive baseline weight w_1, the ratio of A/B odds is w*N/w_1. A common positive gate cancels, but unequal positive gates C_A and C_B change q_A by A*B*(C_A-C_B)/((A+B)*(C_A*A+C_B*B)). Every target 0<q<1 can be fitted by rho=w*N*(1-q)/q, so free baselines or weights do not predict a branching fraction. These are exact conditional normalization identities. They do not establish that the inputs are physical rates, that two channels exhaust a state, or derive states, interactions, final-state measures, kinetics, coherence, subdivision weights, nuclear transitions, material branching, enhancement magnitude, yield, heat, or observation.
+
+- Accepted in: `v0.98.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-CC-001
 
 Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(q)^2*qdot^2/c0^2), with positive n, c0, and E0, the exact coordinate-time acceleration is qddot = (c0^2-3*n^2*qdot^2)*n_q/(2*n^3). Its zero-velocity limit is c0^2*n_q/(2*n^3), matching C-OG-001, and its locally unique same-data IVP is independent of E0. The mixed-scale counterexample with E0 also inside the kinetic square root retains E0 and, for n=1+alpha*q at q=qdot=0, has initial acceleration E0*c0^2*alpha/2.

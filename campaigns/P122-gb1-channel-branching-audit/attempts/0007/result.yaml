@@ -1,0 +1,16 @@
+campaign: P122
+attempt: 0007
+status: failed_graph_lock
+candidate: H
+command: >-
+  Refresh the GitNexus index, query two_channel_allocation impact, and detect
+  changed-process risk.
+result: >-
+  A concurrent analyzer refresh retained the LadybugDB write lock. A separate
+  impact query returned UNKNOWN with the documented database-unavailable
+  message, while change detection reported no process changes.
+diagnosis: local_graph_index_rebuild_overlap
+scientific_effect: none
+next_attempt: >-
+  Let the in-flight repository-only index finish, then rerun the new-symbol
+  context and impact query without changing the claim or consumer ledger.

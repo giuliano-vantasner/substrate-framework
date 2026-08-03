@@ -1,0 +1,38 @@
+campaign: P122
+selection_frozen_before_source_execution: true
+criteria_order:
+  - accepted dependency closure exact positivity denominator and endpoint domains
+  - dimensional consistency normalization covariance partition derivatives and limits
+  - free-parameter identifiability and separation of declared dimensions from physical rates
+  - mutation sensitivity scan completeness and semantic specificity
+  - mathematical novelty parameter economy reusable API value and downstream reach
+  - complete predicate dependency cycle nonduplication and consumer review
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: All eighteen predicates run, but several are tautological finite-syntax or declared-typing checks and do not establish the headline physics.
+  B:
+    decision: selected_as_new_exact_claim
+    reason: The general nonnegative two-channel allocation closes endpoints bounds odds derivatives limits and common-scale covariance with no source-specific premise.
+  C:
+    decision: selected_as_claim_corollary
+    reason: The weighted specialization exactly recovers GB1 while adding explicit integer weight and dimension domains.
+  D:
+    decision: selected_as_conditional_corollary
+    reason: Ratio-of-ratios cancellation is exact only with positive comparison and baseline inputs and identical normalizations.
+  E:
+    decision: selected_as_sensitivity_and_physical_ceiling
+    reason: Double-zero negative dimension unequal-gate zero-interaction and arbitrary-target countermodels expose every load-bearing premise.
+  F:
+    decision: selected_as_dependency_audit
+    reason: C-CMP-001 C-SPN-002 and PN2 provide no physical rate premise for GB1.
+  G:
+    decision: selected_as_finite_syntax_audit
+    reason: Benign square roots opaque symbols non-square-root barriers and hidden weight semantics expose both collision directions.
+  H:
+    decision: selected
+    reason: Independent total-coordinate derivation and complete impact nonduplication cycle and consumer review close governance.
+claims_decision: accept_C_BRN_001
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

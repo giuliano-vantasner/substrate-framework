@@ -1,0 +1,37 @@
+campaign: P122
+base_release: v0.97.0
+accepted_claims_reviewed:
+  C-CMP-001: unchanged_conditional_composite_and_nonrate_nonchannel_ceiling
+  C-SPN-002: unchanged_normalized_ladder_and_squared_coefficient_nonrate_ceiling
+new_claim:
+  C-BRN-001:
+    dependencies: []
+    reason: >-
+      The allocation theorem begins from two declared common-dimension
+      nonnegative inputs and uses exact normalization only. It does not import
+      either source candidate's physical labels or formulas.
+source_candidate_dependencies:
+  CM2: {disposition: qualified, authority: only_through_individually_accepted_C_CMP_001_C_RES_001_C_DYN_001}
+  PN2: {disposition: qualified, authority: none}
+  PN3: {disposition: qualified, authority: only_through_C_SPN_002}
+  GB1: {disposition: qualified_by_P122, authority: only_through_C_BRN_001}
+dependency_findings:
+  - GB1 re-expresses source formulas and imports no CM2, PN2, or PN3 module at runtime.
+  - PN2's quotient arithmetic does not derive a physical subdivision process or positive weight law.
+  - C-SPN-002 gives a normalized ladder coefficient and explicitly rejects interpreting its square as a rate.
+  - C-CMP-001 retains a matrix-element dimension and explicitly supplies no transition rate or physical channel.
+  - The named factor N in GB1 is not derived from C-SPN-002 and the function w(n) is not implemented.
+  - The common gating-factor equality required for cancellation is an unverified prose premise.
+cycles:
+  - GB4 and GB6 depend directly on GB1 while remaining pending; their clean runs cannot validate GB1.
+  - WN2 depends on GB1 plus WN3 and WN4, while WN3 depends on WN2 and WN4 depends on WN3, forming a pending source cycle.
+  - WN5 depends on GB1 GB4 WN3 and WN4 and therefore inherits that cycle without authority.
+  - WN6 WN7 and MD1 through MD6 are downstream of the WN cycle; navigation reach is not dependency closure.
+novelty_closure:
+  claims_proposed: [C-BRN-001]
+  existing_claims_mapped_by_disposition: []
+  note: >-
+    C-BRN-001 is the first canonical exact nonnegative two-channel allocation
+    theorem and is directly reusable by GB4. It does not absorb C-CMP-001 or
+    C-SPN-002 and grants no authority to source channel labels.
+debt: []

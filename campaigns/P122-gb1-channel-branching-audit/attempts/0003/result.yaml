@@ -1,0 +1,21 @@
+campaign: P122
+attempt: 0003
+status: reproduced
+candidate: A
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB1_channel_definitions.py
+source_sha256: ace0515d7ea362ef45a55db22308aecffdad9a003d03f2b1209c0a11874b489b
+exit_code: 0
+terminal_tally: ALL 18 CHECKS PASS
+result: >-
+  The source reproduces eighteen predicates and requires no quadrature
+  compatibility path. Its generic branching identities survive audit, but the
+  rho check substitutes the desired ratio into itself; n, Omega, and omega_ph
+  are unused; common-factor cancellation is prose only; and the free-symbol
+  and square-root scans are finite syntax rather than semantic closure.
+compatibility_event: none
+next_attempt: >-
+  Implement and test the general nonnegative two-channel allocation theorem,
+  then build independent source-domain, dimension, scan, dependency, and
+  physical-ceiling verifiers.

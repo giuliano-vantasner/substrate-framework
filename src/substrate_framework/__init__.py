@@ -84,6 +84,14 @@ from .bps_energy import (
     normalized_sqrt_potential_average,
     target_three_sphere_volume,
 )
+from .branching import (
+    TwoChannelAllocation,
+    WeightedChannelAllocation,
+    channel_odds,
+    relative_weighted_odds_enhancement,
+    two_channel_allocation,
+    weighted_channel_allocation,
+)
 from .tt_angular import (
     AxisymmetricSTFReadout,
     TTPolarizationBasis,
@@ -796,6 +804,8 @@ __all__ = [
     "TailSpacingLedger",
     "TranslatedSechOverlap",
     "TwoLengthDimensionLedger",
+    "TwoChannelAllocation",
+    "WeightedChannelAllocation",
     "normalized_gaussian_overlap",
     "poschl_teller_ground_ledger",
     "poschl_teller_ground_state",
@@ -1276,6 +1286,10 @@ __all__ = [
     "half_quantum_pair_ledger",
     "polar_topology_ledger",
     "projective_rp2_loop_class",
+    "channel_odds",
+    "relative_weighted_odds_enhancement",
+    "two_channel_allocation",
+    "weighted_channel_allocation",
 ]
 
 __version__ = "0.0.0"

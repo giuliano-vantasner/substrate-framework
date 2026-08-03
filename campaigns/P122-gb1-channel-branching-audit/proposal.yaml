@@ -93,4 +93,4 @@ comparators_blinded_until: >-
   immutable copy pass repository validation. Queue metadata already exposes
   the headline formulas and advertised reductions, so only source-body,
   predicate-detail, selected-value, and output blinding remains.
-status: draft
+status: accepted

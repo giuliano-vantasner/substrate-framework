@@ -2078,6 +2078,51 @@ units:
       package tests after two preserved verifier implementation failures. PN6
       has no direct or transitive source consumer. It calls no sampled
       integration routine and triggered no np.trapz compatibility event.
+  GB1:
+    disposition: qualified
+    accepted_claims:
+      - C-BRN-001
+    qualification: >-
+      GB1's two-channel normalization survives as C-BRN-001 with complete
+      nonnegative domains, individual zero endpoints, double-zero rejection,
+      odds, derivatives, limits, common-scale invariance, weighted positive-
+      integer specialization, relative-odds corollary, unequal-gate residual,
+      and arbitrary-target family. The source's first rho predicate is a
+      substitution tautology that contains no independent rho after inserting
+      r_gamma/r_s. Its executable uses a free symbol w rather than a function
+      of n; n, Omega, and omega_ph never enter either rate, fraction, or
+      enhancement. The declared common K_loss, G_coh, Wc, and W_nuc factors
+      appear only in prose and are not checked; unequal gates do not cancel.
+      Assigning inverse-time dimensions to r_s and r_gamma propagates rate
+      units when w and N are dimensionless but does not derive a physical rate.
+      The free-symbol whitelist and square-root detector are finite syntax:
+      benign square roots collide, while non-square-root barriers, aliases,
+      imports, opaque constants, and semantics hidden inside w evade. PN2 has
+      no accepted claim, C-SPN-002's squared ladder coefficient is not a rate,
+      and C-CMP-001 supplies no physical transition rate. No physical excited
+      state, exhaustive soft or gamma channel, coherent preparation,
+      interaction, subdivision weight, nuclear transition, rate magnitude,
+      material branching fraction, enhancement prediction, yield, heat, or
+      observation is accepted.
+    evidence:
+      - campaigns/P122-gb1-channel-branching-audit/reviews/source_adjudication.md
+      - campaigns/P122-gb1-channel-branching-audit/evidence/source-reproduction.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/source-audit.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/check-adjudication.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/input-provenance.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/dependency-audit.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/consumer-audit.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/candidate-comparison.yaml
+      - campaigns/P122-gb1-channel-branching-audit/evidence/primary-provenance.yaml
+      - campaigns/P122-gb1-channel-branching-audit/verify.py
+      - campaigns/P122-gb1-channel-branching-audit/reviews/independent_branching_review.py
+      - memory/vantasner/decisions/C-BRN-001-review.md
+    note: >-
+      P122 closes 42 primary and 26 independent exact checks plus 15 focused
+      package tests after seven preserved workflow implementation oracle or
+      graph-state failures. Four direct and ten transitive consumers replay 576
+      checks. No sampled integration or NumPy compatibility event occurs.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

@@ -1,0 +1,24 @@
+campaign: P122
+attempt: 0008
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P122-gb1-channel-branching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P122-gb1-channel-branching-audit/reviews/independent_branching_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_branching.py
+results:
+  primary: {exit_code: 0, tally: 42}
+  independent: {exit_code: 0, tally: 26}
+  package_tests: {exit_code: 0, passed: 15}
+result: >-
+  The exact routes close the nonnegative allocation, excluded double-zero
+  denominator, endpoints, odds, derivatives, limits, common-scale covariance,
+  weighted specialization, ratio-of-ratios enhancement, free-target family,
+  unequal-gate residual, dimensions, source tautology, unused kinematics,
+  scan evasions, and physical-rate ceiling. The result is reusable by GB4 and
+  distinct from C-CMP-001 and C-SPN-002.
+compatibility_event: none
+debt: []
+next_attempt: >-
+  Complete predicate, dependency, impact, consumer, claim-review, registry,
+  release, generated-state, and integrated promotion records.

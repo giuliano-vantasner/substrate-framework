@@ -1,0 +1,17 @@
+campaign: P122
+attempt: 0006
+status: failed_dimension_mutation
+candidate: C-E
+command: PYTHONPATH=src .venv/bin/python campaigns/P122-gb1-channel-branching-audit/verify.py
+result: >-
+  Twenty-five primary checks passed through exact allocation, endpoints,
+  derivatives, odds, specialization, enhancement, invalid domains, and common
+  inverse-time scaling. The dimensionful-weight mutation failed because it
+  divided only the weight by the time scale, which reproduced the intended
+  rate scaling rather than adding an extra dimension.
+diagnosis: mutation_did_not_change_total_dimension
+scientific_effect: none
+next_attempt: >-
+  Rescale both the baseline rate and the deliberately dimensionful weight so
+  the soft object gains two inverse-time powers while the comparison object
+  gains one, then rerun unchanged scientific predicates.

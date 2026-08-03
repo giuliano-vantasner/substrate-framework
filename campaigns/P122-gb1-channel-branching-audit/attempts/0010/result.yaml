@@ -1,0 +1,16 @@
+campaign: P122
+attempt: 0010
+status: failed
+candidates: [B, C, D, E, F, G, H]
+command: >-
+  ruby -e "require 'yaml'; YAML.safe_load(...); puts 'P122 FINAL ATTEMPT YAML VALID'"
+failure_class: implementation
+result: >-
+  The auxiliary record-only YAML parse did not execute because Ruby is not
+  installed in the validation environment (exit 127). The repository validator
+  and git diff check in the same boundary passed. This does not alter the
+  already completed scientific or integrated repository gate in attempt 0009.
+compatibility_event: none
+next_attempt: >-
+  Parse the final attempt record with the repository virtual environment's
+  installed PyYAML package, then retain only record-sensitive validation.

@@ -1,0 +1,30 @@
+campaign: P122
+distinct_new_scientific_theorem: accepted
+registry_search:
+  branching_claim_id_present_before_P122: false
+  generic_two_nonnegative_input_allocation_present: false
+nearby_accepted_surfaces:
+  C-CMP-001: conditional_loss_cycle_composition_with_matrix_element_dimension_and_nonrate_ceiling
+  C-SPN-002: normalized_symmetric_spin_ladder_with_squared_coefficient_nonrate_ceiling
+  C-PRB-001: fixation_probability_for_a_declared_stochastic_process_not_two_channel_rate_normalization
+new_surface:
+  - two nonnegative common-dimension inputs with an explicitly positive total
+  - both zero and unit endpoints plus double-zero rejection
+  - exact complementary shares odds derivatives and monotone limits
+  - common positive scaling invariance and independent-scaling sensitivity
+  - weighted positive-integer specialization and conditional relative-odds enhancement
+  - arbitrary-target ratio family unequal-gate residual and physical-rate ceiling
+reusable_consumer:
+  source_unit: GB4
+  relation: exact_branching_bounds_partition_and_population_derivative
+  current_status: pending_adjudication
+package_delta:
+  module: src/substrate_framework/branching.py
+  tests: tests/test_branching.py
+  exported_APIs:
+    - two_channel_allocation
+    - channel_odds
+    - weighted_channel_allocation
+    - relative_weighted_odds_enhancement
+promotion_decision: accept_C_BRN_001
+debt: []

@@ -1,0 +1,28 @@
+campaign: P122
+source_unit: GB1
+static_call_sites: 12
+runtime_predicate_count: 18
+predicates:
+  - {index: 1, label: rho_definition, verdict: rejected_as_independent_check, reason: Substituting r_gamma/r_s into rho makes the residual zero without binding or testing a separately supplied rho.}
+  - {index: 2, label: soft_fraction_reduction, verdict: exact_conditional, reason: The reduction holds for positive r_s after substituting r_gamma=rho*r_s.}
+  - {index: 3, label: gamma_fraction_reduction, verdict: exact_conditional, reason: The complementary reduction holds on the same positive domain.}
+  - {index: 4, label: fraction_partition_and_channel_exhaustion, verdict: exact_partition_rejected_physical_exhaustion, reason: The sum is one by normalization; no state or complete physical channel set is constructed.}
+  - {index: 5, label: relative_odds_enhancement, verdict: exact_conditional, reason: The algebra holds when comparison and baseline odds exist and use identical positive channel normalizations and nonzero w1.}
+  - {index: 6, label: enhancement_free_symbol_independence, verdict: exact_local_expression_only, reason: r_s r_gamma and rho cancel from the displayed expression while w N and w1 remain free and can hide ungoverned inputs.}
+  - {index: 7, label: soft_rate_dimension, verdict: exact_declared_typing_only, reason: r_s*w*N has inverse-time dimension if r_s does and w and N are dimensionless; the check does not derive a physical rate.}
+  - {index: 8, label: gamma_rate_dimension, verdict: exact_declared_typing_only, reason: R_gamma inherits the dimension assigned to r_gamma and supplies no kinetics.}
+  - {index: 9, label: rho_dimension, verdict: exact_declared_typing_only, reason: A ratio of common-dimension positive inputs is dimensionless, but source predicate one does not independently bind rho.}
+  - {index: 10, label: soft_fraction_dimensionless, verdict: exact_under_common_rate_units, reason: The fraction is dimensionless only when its summed inputs share a unit.}
+  - {index: 11, label: gamma_fraction_dimensionless, verdict: exact_under_common_rate_units, reason: The complementary fraction has the same premise.}
+  - {index: 12, label: enhancement_dimensionless, verdict: exact_under_dimensionless_weight_and_count, reason: The ratio is dimensionless when w N and w1 are dimensionless and the odds denominators exist.}
+  - {index: 13, label: free_symbol_whitelist, verdict: exact_finite_syntax_only, reason: The constructed expressions use a subset of the chosen names, while n Omega and omega_ph are unused and aliases imports constants or hidden semantics evade.}
+  - {index: 14, label: soft_rate_sqrt_absence, verdict: exact_selected_expression_only, reason: The local monomial has no exponent one-half; this is not semantic barrier independence.}
+  - {index: 15, label: gamma_rate_sqrt_absence, verdict: exact_selected_expression_only, reason: The local symbol has no exponent one-half and may still represent an imported or precomputed model.}
+  - {index: 16, label: soft_fraction_sqrt_absence, verdict: exact_selected_expression_only, reason: The displayed rational expression has no square root before substituting the unconstrained weight.}
+  - {index: 17, label: gamma_fraction_sqrt_absence, verdict: exact_selected_expression_only, reason: The displayed rational expression has no square root before substituting source semantics.}
+  - {index: 18, label: enhancement_sqrt_absence, verdict: exact_selected_expression_only, reason: The displayed ratio has no square root; the detector has benign false positives and semantic false negatives.}
+summary:
+  source_predicates_reproduced: 18
+  accepted_exact_claims: [C-BRN-001]
+  rejected_or_qualified_interpretations: 18
+  terminal_disposition: qualified

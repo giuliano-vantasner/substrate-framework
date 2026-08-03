@@ -1,0 +1,33 @@
+campaign: P122
+source_unit: GB1
+headline_verdict: qualified
+surviving_content:
+  - For two declared positive common-dimension inputs, normalizing by their sum gives complementary fractions that partition to one.
+  - With A=r_s*w*N, B=r_gamma, and rho=r_gamma/r_s, the exact fractions reduce to w*N/(w*N+rho) and rho/(w*N+rho).
+  - The weighted-to-comparison odds relative to a population-one baseline with weight w1 reduce to w*N/w1 when the same positive channel normalizations are used twice.
+  - If r_s and r_gamma have one common inverse-time dimension while w and N are dimensionless, A and B share that rate dimension and the fractions are dimensionless.
+  - The local source expressions contain no square-root powers and use only their displayed free symbols.
+qualified_or_rejected_content:
+  - The rho predicate substitutes r_gamma/r_s for rho inside rho and therefore simplifies to zero without testing an independent equality or binding.
+  - The executable rates use w as an independent positive symbol; n, Omega, and omega_ph never enter R_soft, R_gamma, either fraction, or the enhancement.
+  - The common K_loss, G_coh, Wc, and W_nuc factors occur only in prose and comments; no executable cancellation or equality premise is checked.
+  - Partition to one follows from defining two normalized terms and does not prove that two physical channels exhaust a state.
+  - Positive source symbols exclude the zero endpoints and undefined double-zero denominator; C-BRN-001 restores both individual endpoints and rejects the double zero.
+  - A declared inverse-time dimension propagates through multiplication but does not derive a state, Hamiltonian, interaction, final-state measure, or physical rate.
+  - The free ratio rho and arbitrary positive weight fit any interior branching fraction, so no fraction or magnitude is predicted.
+  - Common positive channel factors cancel, while unequal factors change the fractions by an exact residual proportional to their difference.
+  - The square-root detector flags every square root including benign sqrt(w), misses non-square-root barriers, and cannot see aliases, imports, opaque constants, or semantics hidden inside w.
+  - Whitelisting free-symbol names proves only the local expression surface; it does not establish independence from screening, tunnelling, barrier, empirical, or imported inputs.
+  - PN2 has no accepted claim, C-SPN-002 says its squared ladder coefficient is not a rate, and C-CMP-001's composition is not a transition rate or physical channel.
+exact_positive_surface: >-
+  C-BRN-001 owns the exact two-nonnegative-input allocation theorem, odds,
+  endpoints, derivatives, limits, common-scale invariance, weighted
+  specialization, ratio-of-ratios corollary, and physical interpretation
+  ceiling. GB1 supplies the motivating specialization and finite source audit.
+physical_and_governance_ceiling: >-
+  No physical excited state, exhaustive soft or gamma channel, interaction,
+  coherent preparation, subdivision law, nuclear transition, rate magnitude,
+  material branching fraction, enhancement prediction, yield, heat, or
+  observation follows.
+novelty_verdict: new_reusable_exact_claim_C_BRN_001
+compatibility_event: none

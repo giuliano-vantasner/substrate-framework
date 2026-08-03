@@ -1,0 +1,14 @@
+campaign: P122
+attempt: 0005
+status: failed_test_oracle_representation
+candidate: B
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_branching.py
+result: >-
+  Thirteen focused checks passed. One endpoint test matched an error-message
+  word not present in the API contract, and one derivative test compared
+  equivalent unsimplified SymPy forms structurally.
+diagnosis: test_message_and_symbolic_normal_form
+scientific_effect: none
+next_attempt: >-
+  Match the explicit-positive contract and compare derivatives after exact
+  simplification without changing domains or formulas.
