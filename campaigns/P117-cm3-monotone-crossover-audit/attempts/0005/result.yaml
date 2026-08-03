@@ -1,0 +1,15 @@
+campaign: P117
+attempt: 0005
+candidate: C_D_primary_upper_limit_probe
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/verify.py
+exit_status: 1
+passed_before_failure: 15
+failure: >-
+  The strict exact-domain API rejected the symbolic level 1-epsilon because a
+  merely positive epsilon does not establish 0<=1-epsilon<1 globally.
+diagnosis: underconstrained_limit_parameterization
+scientific_effect: >-
+  Parameterizing c=u/(1+u) with u>0 supplies the required global domain and
+  reaches c->1 from below as u->infinity.
+next_attempt: use_positive_odds_upper_limit

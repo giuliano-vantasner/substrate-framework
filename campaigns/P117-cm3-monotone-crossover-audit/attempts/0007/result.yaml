@@ -1,0 +1,15 @@
+campaign: P117
+attempt: 0007
+candidate: C_D_primary_zero_normalization_countermodel
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/verify.py
+exit_status: 1
+passed_before_failure: 28
+failure: >-
+  SymPy did not label the unspecialized exponential response positive even
+  though E>0 and E0>0; the countermodel does not require that global query.
+diagnosis: unnecessary_global_sign_in_countermodel
+scientific_effect: >-
+  A single exact nonzero witness at E=E0 proves the normalized response is
+  nontrivial while multiplication by a zero physical prefactor annihilates it.
+next_attempt: exact_nonzero_response_witness

@@ -1,0 +1,33 @@
+campaign: P117
+source_unit: CM3
+headline_verdict: qualified
+surviving_content:
+  - A continuous strictly increasing real function crosses a horizontal level at most once.
+  - Existence follows when continuity holds and the level lies strictly between the attained lower endpoint and the unattained upper limit.
+  - The surrogate S(E)=1-exp(-E/E0) has range [0,1) for E>=0 and E0>0.
+  - For 0<=c<1 the exact surrogate inverse is E=-E0*log(1-c), with a positive interior crossing for 0<c<1.
+  - Loss of strict monotonicity can permit multiple or plateau crossings.
+rejected_or_qualified_content:
+  - CM1's actual positive-shift C-SCR factor has floor exp(-sqrt(G/U))>0 rather than the surrogate floor zero.
+  - CM2 does not supply a positive flat physical rate; C-CMP-001 varies with loss and retains a matrix-element dimension.
+  - The free c=0.5 and E0=1 are selected normalized inputs, not predictions or accepted parameter imports.
+  - Four substitutions do not prove the solve identity, one derivative point does not prove a global sign, and two ordering points do not prove the global order.
+  - The bisection and 200001-point sweep are regression evidence only because the inverse and uniqueness are exact.
+  - A sampled sinusoidal fake demonstrates one failure mode but does not classify the distinct roles of continuity, strictness, monotonicity, and range.
+  - Formal ordering of two normalized curves does not establish coherent-channel dominance or screened-tunnelling sufficiency.
+  - CM7 is pending source evidence and cannot validate CM3, though its formula is independently recovered from C-SCR-001.
+exact_new_result: >-
+  A continuous strictly increasing f on [0,infinity), with attained lower value
+  a and unattained finite upper limit b>a, has no crossing below a or above b,
+  crosses a at zero, has exactly one finite crossing for every level in (a,b),
+  and reaches b only as a limit. For S(E)=1-exp(-E/E0), the unique inverse is
+  -E0*log(1-c). For C-SCR-001's shifted factor P(E,U,G), the positive-shift
+  floor is exp(-sqrt(G/U)) and the interior inverse is G/log(c)^2-U; it is
+  positive exactly above the floor. Both inverses have exact sensitivities and
+  common-energy scale covariance.
+physical_ceiling: >-
+  The theorem locates conditional dimensionless level crossings. It supplies
+  no common observable, state, interaction, normalization, rate, coherent
+  channel, tunnelling channel, material parameter map, predicted energy,
+  probability, yield, heat, or observation.
+compatibility_event: none

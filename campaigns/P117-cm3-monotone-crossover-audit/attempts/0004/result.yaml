@@ -1,0 +1,15 @@
+campaign: P117
+attempt: 0004
+candidate: C_D_primary_signed_factor_reduction
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/verify.py
+exit_status: 1
+passed_before_failure: 11
+failure: >-
+  The residual reduction reached the exact factor sqrt(1+u)-1, but SymPy did
+  not infer that this factor is positive from u>0.
+diagnosis: missing_explicit_conjugate_sign_certificate
+scientific_effect: >-
+  The conjugate identity (sqrt(1+u)-1)(sqrt(1+u)+1)=u supplies the exact sign
+  certificate without a sampled substitution or tolerance.
+next_attempt: certify_root_difference_with_positive_conjugate

@@ -1,0 +1,24 @@
+campaign: P117
+attempt: 0001
+candidate: A_literal_CM3_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM3_crossover.py
+exit_status: 0
+source_sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb
+source_git_blob: 21d09380d7f83f84312dc13e845ea12d657d30df
+compatibility_event: none
+terminal_tally: ALL 10 CHECKS PASS
+reported_values:
+  E0: 1.0
+  c: 0.5
+  bisection_crossover: 0.693147
+  closed_crossover: 0.693147
+verdict: reproduction_evidence_only
+limitations: >-
+  The solve equivalence is sampled at four substitutions, positivity and
+  below/above ordering are each checked at one level, numeric bisection and a
+  200001-point sweep duplicate the exact inverse, and continuity is asserted
+  rather than checked. The surrogate floor is zero rather than C-SCR-001's
+  positive-shift floor, while c is a free dimensionless level rather than an
+  accepted flat CM2 physical rate.
+next_attempt: derive_general_exponential_and_shifted_factor_crossing_theorems

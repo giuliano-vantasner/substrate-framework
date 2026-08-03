@@ -1,0 +1,14 @@
+campaign: P117
+attempt: 0008
+candidate: C_D_primary_lifecycle_epilogue
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/verify.py
+exit_status: 1
+passed_before_error: 45
+failure: >-
+  A local symbolic square-root variable shadowed the campaign Path named root,
+  causing AttributeError in the final lifecycle check after every scientific
+  and mutation check had passed.
+diagnosis: local_name_shadowing
+scientific_effect: none
+next_attempt: rename_symbolic_root_term

@@ -1,0 +1,16 @@
+campaign: P117
+attempt: 0006
+candidate: C_D_primary_shifted_floor_sign
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/verify.py
+exit_status: 1
+passed_before_failure: 22
+failure: >-
+  SymPy could not infer that exp(-q) exceeds
+  exp(-q*sqrt((X+U)/U)) from X,U,q>0 under the first positive-crossing
+  parameterization.
+diagnosis: nested_radical_obscures_floor_margin
+scientific_effect: >-
+  Reparameterize G=U(q+r)^2 with r>0. Then log(level/floor)=r and the crossing
+  equals U*r*(2q+r)/q^2, giving exact positive certificates.
+next_attempt: logarithmic_floor_margin_parameterization

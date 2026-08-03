@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 104
-  qualified: 102
+  pending_adjudication: 103
+  qualified: 103
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7245,8 +7245,36 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-XOV-001
+  - C-SCR-001
+  qualification: 'CM3''s core continuous strictly increasing level-crossing theorem and its exponential
+    inverse survive in C-XOV-001 with exact range, endpoints, sensitivities, limits, scale covariance,
+    and counterexamples. The source substitutes a zero-floor surrogate for CM1, while C-SCR-001''s actual
+    positive-shift factor has floor exp(-sqrt(G/U)) and inverse G/log(c)^2-U only above that floor. CM2
+    supplies no accepted flat physical rate: C-CMP-001''s conditional factors vary with loss and retain
+    a matrix- element dimension. The selected E0=1 and c=1/2 are free normalized inputs, so log(2) is
+    not a predicted energy. Formal curve ordering establishes no common observable, coherent-channel dominance,
+    tunnelling sufficiency, material crossover, rate, yield, heat, or observation. CM7 remains pending
+    and supplies no premise.'
+  evidence:
+  - campaigns/P117-cm3-monotone-crossover-audit/reviews/source_adjudication.md
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/source-reproduction.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/source-audit.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/check-adjudication.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/input-provenance.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/dependency-audit.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/consumer-audit.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/candidate-comparison.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/evidence/primary-provenance.yaml
+  - campaigns/P117-cm3-monotone-crossover-audit/verify.py
+  - campaigns/P117-cm3-monotone-crossover-audit/reviews/independent_crossover_review.py
+  - memory/vantasner/decisions/C-XOV-001-review.md
+  note: P117 closes 45 primary and 35 independent exact checks plus 15 focused package tests after eight
+    preserved primary or package verifier defects and two independent-route defects. Two direct and three
+    transitive source consumers replay 148 checks and inherit only the conditional theorem. CM3 and all
+    canonical P117 work call no sampled integration routine and trigger no np.trapz compatibility event.
 - source_unit: CM4
   phase: phase-31
   path: merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py

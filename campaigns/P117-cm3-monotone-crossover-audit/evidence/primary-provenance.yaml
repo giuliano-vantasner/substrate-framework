@@ -1,0 +1,24 @@
+campaign: P117
+claim: C-XOV-001
+contract:
+  proposal_sha256: faa958c93d9a7478bd6abd2f8cc10cea58267d217b3b0b6f04e0f8b8b3efa1d1
+  frozen_proposal_sha256: faa958c93d9a7478bd6abd2f8cc10cea58267d217b3b0b6f04e0f8b8b3efa1d1
+source:
+  cm3_sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb
+implementation:
+  module: src/substrate_framework/crossovers.py
+  sha256: 0522233fecbcae6b76cb41373fe904d8558da2cd8ab9f13f35fe41b0a5189493
+  tests: tests/test_crossovers.py
+  tests_sha256: 1768b63100fc5d69ce0676eb624d35d3e97eece41e1474788f90a3c48ce8d05e
+primary_verifier:
+  path: campaigns/P117-cm3-monotone-crossover-audit/verify.py
+  sha256: 92ae0ff2d94167d47fd3c4edfe8ac628cfa19f7ce526639afce378cb164f29ed
+  tally: 45
+independent_verifier:
+  path: campaigns/P117-cm3-monotone-crossover-audit/reviews/independent_crossover_review.py
+  sha256: 9e5537876e631476df2840acc32d0f581599920b5f71ba428c6674d2434d1ede
+  tally: 35
+package_tests: 15
+oracle: exact_symbolic_calculus_range_certificates_and_fresh_nonimporting_derivation
+sampled_integration: none
+numpy_compatibility_event: none

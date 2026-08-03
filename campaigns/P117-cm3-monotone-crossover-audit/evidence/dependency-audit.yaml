@@ -1,0 +1,31 @@
+campaign: P117
+base_release: v0.96.0
+accepted_dependencies:
+  C-SCR-001: >-
+    Supplies the actual dimensionless shifted inverse-square-root factor,
+    positive-shift floor, strict monotonicity, limits, and common-scale
+    covariance. It supplies no physical rate, universal screening energy,
+    material map, or channel comparison.
+reviewed_ceiling:
+  C-CMP-001: >-
+    Establishes that CM2's accepted nominal and actual products vary with loss,
+    retain a matrix-element dimension, and are not physical rates. It is used
+    to reject the source interpretation, not to derive C-XOV-001.
+qualified_sources:
+  CM1: {disposition: qualified, accepted_claims: [C-SCR-001]}
+  CM2: {disposition: qualified, accepted_claims: [C-CMP-001]}
+unaccepted_dependencies:
+  CM7:
+    disposition: pending_adjudication
+    use_in_CM3: forward_citation_and_formula_only
+    verdict: supplies_no_premise
+dependency_cycles:
+  - CM1 lists CM3 while CM3 cites CM1; only accepted C-SCR-001 may cross that cycle.
+  - CM7 lists CM3 while CM3 cites CM7; the passing pending consumer cannot validate its predecessor.
+claim_closure:
+  proposed_claim: C-XOV-001
+  dependencies: [C-SCR-001]
+  note: >-
+    The general range theorem and exponential specialization are elementary.
+    The shifted specialization imports only C-SCR-001's exact factor.
+debt: []

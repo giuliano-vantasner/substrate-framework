@@ -1,0 +1,26 @@
+campaign: P117
+source_unit: CM3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+imports: []
+selected_numeric_inputs:
+  exponential:
+    E0: 1.0
+    c: 0.5
+    bisection_interval: [0.0, 50.0]
+    bisection_steps: 200
+    sweep: {start: 0.000001, stop: 50.0, points: 200001}
+  nonmonotone_guard:
+    function: 0.5+0.4*sin(E)
+    domain: {start: 0.1, stop: 20.0, points: 4000}
+symbolic_inputs: [E, E0, c]
+unresolved_inputs:
+  - physical meaning, units, and provenance of E0
+  - common observable and normalization for the two compared curves
+  - accepted value or physical interpretation of c
+  - states, interactions, kinetics, and channel definitions
+  - material parameter map and uncertainty
+  - rate, yield, heat, or observation map
+verdict: >-
+  E0=1 and c=1/2 are arbitrary normalized demonstration values. No accepted
+  import fixes them, so log(2) is a specialization rather than a predicted
+  crossover energy. Exact P117 work uses no sampled quadrature.

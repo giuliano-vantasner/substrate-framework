@@ -1,0 +1,21 @@
+campaign: P117
+attempt: 0003
+candidate: C_D_primary_symbolic_verifier
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/verify.py
+exit_status: 1
+passed_before_failure: 11
+failure: >-
+  SymPy did not infer the sign of the below/above differences after the
+  exponential inverse was substituted, even though strict monotonicity and
+  the exact inverse had already been established.
+repair_audit: >-
+  Inspection also found that the first declared inverse mutation was
+  algebraically identical to the baseline after c=u/(1+u), so it was not a
+  mutation at all.
+diagnosis: symbolic_sign_representation_and_nonmutating_probe
+scientific_effect: >-
+  Neither defect challenges the theorem. Reduce the two ordering residuals to
+  products with manifestly signed factors, and replace the unchanged probe by
+  a genuinely wrong scale factor.
+next_attempt: exact_signed_factor_reduction_and_load_bearing_mutation

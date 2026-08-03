@@ -1,0 +1,16 @@
+campaign: P117
+attempt: 0010
+candidate: F_independent_identifiability_probe
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/reviews/independent_crossover_review.py
+exit_status: 1
+passed_before_failure: 20
+failure: >-
+  After separating exponential odds u from shifted-factor log coordinate q,
+  the arbitrary-target scale probe still divided by q and mixed the two
+  independent parameterizations.
+diagnosis: parameterization_dependency_mixup
+scientific_effect: >-
+  The exponential fitted scale is E_target/log(1+u); q belongs only to the
+  shifted-factor level exp(-q).
+next_attempt: use_exponential_log_coordinate_for_scale_fit

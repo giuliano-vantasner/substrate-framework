@@ -1,0 +1,45 @@
+campaign: P117
+selection_frozen_before_source_execution: true
+criteria_order:
+  - accepted dependency closure and exact range and endpoint domains
+  - continuity, strictness, monotonicity, and range sensitivity
+  - faithful specialization to C-SCR-001 and dimensional consistency
+  - exact sensitivities, scaling, and identifiability
+  - physical-semantic honesty and countermodels
+  - reusable API, independent derivation, predicate review, and consumer closure
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: >-
+      All ten checks execute, but most global results are sampled and the
+      physical flat-rate and channel-dominance readings lack accepted premises.
+  B:
+    decision: selected
+    reason: >-
+      The general continuous strictly increasing range theorem separates
+      existence, uniqueness, endpoint, and out-of-range cases exactly.
+  C:
+    decision: selected
+    reason: >-
+      The exponential inverse, sensitivities, convexity, limits, and scale
+      covariance are exact and reusable.
+  D:
+    decision: selected
+    reason: >-
+      C-SCR-001's actual positive floor and inverse expose the surrogate
+      mismatch and recover the conditional shifted crossing honestly.
+  E:
+    decision: selected
+    reason: >-
+      Plateau, discontinuity, nonmonotone, zero-normalization, arbitrary-target,
+      and free-prefactor models delimit the mathematical and physical claim.
+  F:
+    decision: selected
+    reason: >-
+      A fresh nonimporting symbolic derivation and complete dependency,
+      predicate, cycle, nonduplication, and consumer audits close governance.
+claim_decision:
+  C-XOV-001: accept_symbolic_verified
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

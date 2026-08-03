@@ -1,0 +1,17 @@
+campaign: P117
+attempt: 0011
+candidate: integrated_promotion_gate
+status: completed
+command: scripts/validate.sh && git diff --check
+compatibility_event: none
+expected_boundary: >-
+  C-XOV-001, v0.97.0, canonical module and tests, P117, CM3 disposition,
+  generated docs and memory, source queue, pinned consumers, and parent effort
+  agree with 132 dependency-closed accepted claims.
+exit_status: 0
+terminal_tally: >-
+  ALL REPOSITORY WORKFLOW CHECKS PASS; 132 claims, 132 accepted, 0
+  proposals; 218 source units, 103 pending, 0 partial; 495 memory files;
+  physics skill valid; 1075 tests passed in 93.47s; git diff --check clean.
+verdict: promotion_boundary_verified
+next_attempt: commit_P117_then_checkpoint_parent_and_freeze_P118

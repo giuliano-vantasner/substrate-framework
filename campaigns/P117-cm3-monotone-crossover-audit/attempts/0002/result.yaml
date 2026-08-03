@@ -1,0 +1,22 @@
+campaign: P117
+attempt: 0002
+candidate: C_D_canonical_crossover_APIs
+status: failed
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_crossovers.py
+exit_status: 1
+passed: 13
+failed: 2
+failures:
+  - >-
+    sp.simplify rewrote -E0*log(4/7) as -log((4/7)^E0), so the exact
+    nonnegative input guard could not infer the already established sign when
+    the inverse was substituted back into the response.
+  - >-
+    The scale derivative appeared as -log(3)+log(5), algebraically identical
+    to -log(3/5), while the test compared expression trees.
+diagnosis: sign_transparency_and_expression_representation
+scientific_effect: >-
+  Neither failure changes the inverse or derivative. The implementation should
+  retain the sign-transparent product, and the oracle should simplify the
+  logarithmic difference.
+next_attempt: preserve_inverse_factorization_and_compare_logs_algebraically

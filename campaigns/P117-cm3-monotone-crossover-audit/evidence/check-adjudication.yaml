@@ -1,0 +1,18 @@
+campaign: P117
+source_unit: CM3
+static_predicate_count: 10
+predicates:
+  - {index: 1, label: surrogate_derivative, verdict: qualified_exact_formula, reason: The derivative identity is exact but the source tests positivity at one substitution; P117 proves the global sign.}
+  - {index: 2, label: surrogate_floor_and_supremum, verdict: exact_surrogate_only, reason: The limits are exact for S but its zero floor is not C-SCR-001's positive-shift floor.}
+  - {index: 3, label: unique_closed_solution, verdict: qualified_sampling, reason: Four substitutions regress the algebraic equivalence; P117 derives the exact inverse and range theorem.}
+  - {index: 4, label: positive_crossover, verdict: qualified_single_level, reason: The source tests c=1/2 only; positivity holds exactly for every 0<c<1.}
+  - {index: 5, label: below_above_channel_ordering, verdict: mathematical_order_only, reason: Two points regress normalized curve order; no physical channel dominance follows.}
+  - {index: 6, label: bisection_matches_inverse, verdict: regression_only, reason: Two hundred bisection steps duplicate the exact logarithmic inverse.}
+  - {index: 7, label: dense_sweep_one_crossing, verdict: regression_only, reason: A 200001-point sign sweep neither proves uniqueness nor adds resolution evidence to the exact theorem.}
+  - {index: 8, label: sampled_true_monotonicity, verdict: regression_only, reason: Positive finite differences on one grid are weaker than the exact derivative.}
+  - {index: 9, label: sampled_nonmonotone_rejection, verdict: valid_counterexample_sample, reason: The sinusoid rejects strict monotonicity but does not classify plateaus or discontinuities.}
+  - {index: 10, label: sampled_multiple_crossings, verdict: valid_counterexample_sample, reason: Multiple sampled sign changes illustrate nonuniqueness; P117 supplies an exact two-root countermodel.}
+summary:
+  exact_or_conditional_survivals: 5
+  qualified_regression_or_rejected_physics: 5
+  terminal_disposition: qualified

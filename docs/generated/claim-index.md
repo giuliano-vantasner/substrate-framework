@@ -1181,3 +1181,12 @@ In C-WZW-001's convention Omega_5=-i*Alt Tr(theta^5), orient the unit S^5 as the
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-WZW-001
+
+## C-XOV-001
+
+Let f be a real continuous strictly increasing function on [0,infinity), let a=f(0), and suppose f has a finite limit b>a at infinity that it never attains at finite input. A horizontal level below a or above b has no crossing, level a has the unique crossing zero, every level strictly between a and b has exactly one finite positive crossing, and level b occurs only as an infinite-input limit. If S(E;E0)=1-exp(-E/E0) for real E>=0 and E0>0, then S has range [0,1) and its unique finite inverse for 0<=c<1 is E_x=-E0*log(1-c). On 0<c<1, partial_c E_x=E0/(1-c)>0, partial_c^2 E_x=E0/(1-c)^2>0, and partial_E0 E_x=-log(1-c)=E_x/E0>0; E_x tends to infinity as c tends to one from below. For C-SCR-001's shifted factor P(E,U,G)=exp(-sqrt(G/(E+U))), with G>0 and U>0 in the same energy unit, the attained lower value is p0=exp(-sqrt(G/U)), the unattained upper limit is one, and every p0<c<1 has the unique positive inverse E_x=G/log(c)^2-U. Its sensitivities are partial_c E_x=-2*G/(c*log(c)^3)>0, partial_G E_x=1/log(c)^2>0, and partial_U E_x=-1. At U=0 the lower endpoint is zero in the limiting convention and the inverse is G/log(c)^2. Common positive rescaling of all energy inputs rescales each crossover energy by the same factor. Continuity, strict monotonicity, and actual range are independently load bearing: a discontinuity can skip a level, a plateau can give repeated crossings, and a nonmonotone response can give multiple crossings. These are conditional dimensionless level-crossing identities. A free level, response scale, or physical normalization makes any selected positive crossing nonidentifying, and formal curve ordering alone establishes no common observable, state, interaction, coherent or tunnelling channel, transition rate, material crossover, predicted energy, yield, heat, or observation.
+
+- Accepted in: `v0.97.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SCR-001

@@ -1,0 +1,15 @@
+campaign: P117
+attempt: 0009
+candidate: F_independent_exponential_derivation
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P117-cm3-monotone-crossover-audit/reviews/independent_crossover_review.py
+exit_status: 1
+passed_before_failure: 0
+failure: >-
+  SymPy did not infer 1-exp(-q)>0 from q>0 in the independent derivation.
+diagnosis: opaque_exponential_interior_level_parameterization
+scientific_effect: >-
+  Use the independent positive-odds parameterization c=u/(1+u), whose interior
+  range and logarithmic inverse E0*log(1+u) carry manifest exact signs. Retain
+  q>0 separately for the shifted-factor specialization.
+next_attempt: positive_odds_exponential_rederivation

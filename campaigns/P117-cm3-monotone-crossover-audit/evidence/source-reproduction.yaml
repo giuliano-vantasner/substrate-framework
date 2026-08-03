@@ -1,0 +1,26 @@
+campaign: P117
+source_unit: CM3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-31/bridge_CM3_crossover.py
+sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb
+git_blob: 21d09380d7f83f84312dc13e845ea12d657d30df
+size_bytes: 9364
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM3_crossover.py
+exit_status: 0
+terminal_tally: ALL 10 CHECKS PASS
+reported_values:
+  E0: 1.0
+  c: 0.5
+  bisection_crossover: 0.693147
+  closed_crossover: 0.693147
+compatibility_preflight:
+  np_trapz: absent
+  np_trapezoid: absent
+  trapezoid_integral: absent
+  event: none
+classification: reproduction_evidence_only
+note: >-
+  The source samples the solve identity, positivity, ordering, monotonicity,
+  and nonmonotone guard; its bisection and dense sweep duplicate an exact
+  inverse. The free dimensionless c is not an accepted CM2 physical rate, and
+  the zero-floor surrogate is not C-SCR-001's positive-shift factor.
