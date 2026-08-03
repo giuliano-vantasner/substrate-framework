@@ -1,0 +1,31 @@
+campaign: P093
+frozen_before_source_opening: false
+frozen_before_source_execution: true
+proposal_path: proposals/P093-lb3-damped-sg-ringdown/proposal.yaml
+proposal_sha256: edd362c2de354142924f0c3ccbce311d87feca4bf0a6a832b473a385dfae3461
+memory_contract_path: memory/vantasner/proposals/P093-lb3-damped-sg-ringdown.md
+memory_contract_sha256: b5842b190efcf1601adc8155e25987b1e7fa4203f4d4aed0af06709ace3da308
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate --base /home/dan/substrate-framework
+  /home/dan/substrate-framework/memory/vantasner/proposals/P093-lb3-damped-sg-ringdown.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: exposed_during_P091_and_P092_consumer_audits
+source_execution_state_at_freeze: not_executed_under_P093
+disclosure: >-
+  Earlier preregistered consumer audits necessarily exposed LB3's complete
+  implementation and declared configurations, so P093 cannot honestly claim
+  fresh source or numerical-value blinding. P093's scheme, control-volume,
+  finite-window, FFT-resolution, refinement, transient-classifier,
+  integration, and nonduplication criteria were frozen before source
+  execution, terminal output, additional consumer outputs, or any selection
+  based on reproduced agreement.
+already_exposed_at_freeze:
+  - complete LB3 source body, formulas, declared grids, windows, tolerances, and predicate structure
+  - source use of a current-NumPy trapezoid branch with an older-NumPy np.trapz fallback
+  - source candidate dependencies and narrative conclusions
+comparators_still_blinded_at_freeze:
+  - P093 unchanged-source execution output, measured rates, frequencies, errors, and runtime
+  - additional LB4, lifetime, DBD, and synthesis execution outputs
+  - any physical Gamma, material, density, collision, frequency, survival, or discharge comparator

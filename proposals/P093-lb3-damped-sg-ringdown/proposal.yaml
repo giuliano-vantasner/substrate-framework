@@ -1,0 +1,69 @@
+id: P093
+base_release: v0.79.0
+base_commit: 0c04650
+scientific_base_commit: f17091e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [LB3]
+question: >-
+  Determine whether LB3 adds distinct, dependency-closed simulation evidence
+  for damped sine-Gordon breather-family tracking, or whether its core-energy
+  exponential fit, FFT frequency, convergence sample, and alleged overdamped
+  survival guard duplicate accepted C-SG-016 evidence while inheriting LB2's
+  rejected threshold semantics; terminally adjudicate every numerical and
+  interpretive subclaim without repeating expensive validation as ceremony.
+invariants:
+  - C-SG-001 and C-SG-002 fix the exact undamped normalized breather family and its full-space energy.
+  - C-SG-012 fixes the local and integrated energy balance, including explicit spatial boundary flux and bulk damping loss.
+  - C-SG-016 fixes the exact family form factor and qualified phase-averaged action law, plus stronger finite-time total-energy PDE evidence with mesh, domain, method, damping-rate, and lossless controls.
+  - C-DYN-001 separates abstract oscillator damping from normalized field modes and rejects Gamma=2*omega_b as a general field-mode or nonlinear exact-existence boundary.
+  - C-PDE-011 supplies reusable homogeneous-Dirichlet leapfrog and DOP853 machinery, energy ledgers, and exact-family classifiers, not LB3's physical interpretation.
+  - A finite core energy obeys a control-volume balance with boundary flux and cannot be identified with total bulk dissipation unless that flux is measured or negligible.
+  - A log-slope over a finite window is a window-averaged rate; it is not automatically the instantaneous current-frequency rate when the frequency and form factor drift.
+  - An FFT peak has resolution and leakage set by its sample window; rounding and reusing that peak inside a prediction is not an independent frequency oracle.
+  - Pending LB4 and MC3 and qualified SA3/LB2 readings cannot supply survival, physical medium, or per-material premises.
+allowed_imports:
+  - C-SG-001 and C-SG-002 only for the exact normalized undamped breather family, initial data, and full-space energy
+  - C-SG-012 for the exact local and integrated stress-energy balance with boundary flux
+  - C-SG-016 for the exact form factor, conditional reduced law, its simulation evidence, and explicit interpretation ceilings
+  - C-DYN-001 for exact oscillator, field-mode, transient, cycle, and exact-periodicity distinctions
+  - C-PDE-011 and substrate_framework.sine_gordon_1d for reusable finite-grid solvers, energy ledgers, and exact-family classifiers only
+  - substrate_framework.numerics.trapezoid_integral for every sampled trapezoidal integral; no direct np.trapz or version-specific alias in new code
+  - LB3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+candidates:
+  - id: A
+    description: Reproduce LB3 unchanged and map each of its runtime predicates to the exact numerical object it evaluates.
+  - id: B
+    description: Prove the source semi-implicit recurrence is the already canonical centered-damping leapfrog specialization and classify it as implementation duplication unless a distinct scheme property survives.
+  - id: C
+    description: Audit the core-energy exponential fit using the exact finite-control-volume flux balance and distinguish radiation through the core boundary from uniform bulk damping.
+  - id: D
+    description: Compare the finite-window log slope with the evolving C-SG-016 reduced energy law and classify it as a window average rather than a pointwise current-frequency rate.
+  - id: E
+    description: Audit the source FFT peak against its exact bin width, endpoint closure, leakage, zero-crossing or constrained-family alternatives, and frequency-drift bandwidth.
+  - id: F
+    description: Require independent mesh, timestep, domain, method, core-radius, and fit-window variation for any distinct LB3 simulation claim beyond accepted C-SG-016.
+  - id: G
+    description: Test the high-damping run as an operational finite-time relaxation classifier and reject any identification with the C-DYN-001 field-mode or exact nonlinear-existence boundary.
+  - id: H
+    description: Determine whether the second initial frequency and three-Gamma sweep add distinct predictive reach or only regression evidence for C-SG-016's already accepted conditional law.
+  - id: I
+    description: Replace copied stencils, local checks, quadrature aliases, and form-factor integrations with canonical APIs if and only if reusable distinct content remains.
+  - id: J
+    description: Trace LB4, lifetime, DBD, and synthesis consumers and perform a claim and API nonduplication audit before reserving any new identifier.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for PDE, energy flux, form factor, transient classifier, and consumer semantics
+  - exact scheme, boundary, energy, window, FFT, and observable definitions before numerical closeness
+  - independent variation of mesh, timestep, domain, method, core radius, and fit window when a new simulation claim depends on them
+  - mutation sensitivity to damping, sponge, core boundary, fit interval, frequency estimator, high-damping threshold, and integration convention
+  - parameter economy, canonical API reuse, and nonduplication against C-SG-016, C-DYN-001, and C-PDE-011
+claims_proposed:
+  - no new claim unless Candidate J establishes a distinct simulation statement beyond C-SG-016 and C-DYN-001 with complete refinement, a governed consumer, and a fresh collision-free identifier
+comparators_blinded_until: >-
+  LB3's complete body and declared numerical configurations were necessarily
+  exposed during P091/P092 consumer audits, so fresh source or value blinding
+  is impossible and is not claimed. P093 freezes its question, candidate set,
+  selection criteria, flux/window/FFT countermodels, and nonduplication gate
+  before executing LB3, reading its terminal output, or opening additional
+  downstream consumer outputs.
+status: draft
