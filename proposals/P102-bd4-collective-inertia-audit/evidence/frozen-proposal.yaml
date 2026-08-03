@@ -1,0 +1,50 @@
+campaign: P102
+frozen_at: '2026-08-03T13:03:42Z'
+base_release: v0.85.0
+base_commit: fcede2ea89da17030f99888779e618ec5b4f9617
+scientific_base_commit: 020ab1f8eef254e13f98aa88e85d96362ba57346
+proposal_path: proposals/P102-bd4-collective-inertia-audit/proposal.yaml
+proposal_sha256: 8b54bc0f8b3c8dc8dc7feca578621eee0f536d0eea6b51b7cbc80d72803c9144
+memory_contract_path: memory/vantasner/proposals/P102-bd4-collective-inertia-audit.md
+memory_contract_sha256: 222524ead7d231dfaac4133e231d374a7ec696e9a39735bb3e04f470c170a89f
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+source_size_bytes: 11824
+source_sha256: 2f590473719f614f4ca641ad9443d6b4271429aba27337b94d5d064cc70c9929
+source_blob: 69c5b5bf918daf044562c55b386e944ddff44b34
+source_worktree_state: clean_relative_to_pinned_commit
+source_checkout_overlay: >-
+  Four unrelated engineering files carry the explicit current-NumPy
+  compatibility overlay. BD4 itself matches the pinned blob and hash; later
+  dirty Phase 47/48 and synthesis work is excluded from authority.
+predecessor_path: pulson-backreaction-bridge/sympy/rungs/rung098_material_handle.py
+predecessor_sha256: 2e5034841668d10684ef23ac4a1fb7e71d6f08e0c66086c951760049cccd7ee1
+predecessor_blob: f9b797be1e19659142a1ae94e106737f98cd3fe0
+predecessor_label_resolution: >-
+  BD4's candidate dependency M2 denotes leg M2 of legacy rung098, not the
+  unrelated phase-7 Meissner/Proca bridge unit whose source-unit label is M2.
+source_body_exposure: >-
+  No genuine body blinding remains. P100 executed BD4 as a pending consumer and
+  recorded ALL 14 CHECKS PASS. The generated queue and parent memory exposed
+  the proposed inertia, barrier-top scale, and ceiling-retirement headline.
+  Legacy rung098 has also been re-sourced and explicitly calls the capillary
+  top an inverted saddle. P102 froze structural alternatives and decisive tests
+  before renewed BD4 inspection or execution.
+source_execution_state_at_freeze: previously_executed_under_P100_not_yet_reexecuted_under_P102
+terminal_output_state_at_freeze: previously_exposed_as_ALL_14_CHECKS_PASS
+profile_reduction_sign_covariance_normalization_and_interpretation_tests_frozen: true
+claims_reserved: [C-COL-001]
+compatibility_preflight:
+  bd4_imports_numpy: false
+  quadrature_required_by_exact_new_work: false
+  np_trapz_compatibility_action: none_required
+validation:
+  repository: WORKFLOW VALID 115 claims 115 accepted 1 proposals 218 units 119 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+  note: >-
+    The first memory CLI invocation used its external default base and reported
+    a path-resolution error. Re-running with --base /home/dan/substrate-framework
+    validated the actual contract; this was a CLI-addressing error, not
+    scientific or candidate evidence.
+status: frozen
