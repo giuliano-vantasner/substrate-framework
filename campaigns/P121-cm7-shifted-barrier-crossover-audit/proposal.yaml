@@ -1,0 +1,109 @@
+id: P121
+base_release: v0.97.0
+base_commit: 0ebb6762117cf593cc76f0b4842855843938a7ca
+scientific_base_commit: c8c323ed23015f636700bbd743a4cc025f752ea0
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM7]
+question: >-
+  Reproduce and independently audit CM7's exact shifted inverse-square-root
+  level crossing, full domain and endpoint classification, sensitivities,
+  dimensions, scale covariance, threshold-window measure, imported screening
+  inputs, and numerical regressions; then determine whether any theorem remains
+  beyond C-XOV-001 and C-SCR-001 and terminally adjudicate all twenty-seven
+  predicates without converting a free horizontal level into a physical rate,
+  predicted material crossover, channel dominance, yield, heat, or observation.
+invariants:
+  - >-
+    For E>=0, G>0, and U>0 in one energy unit, the declared factor
+    P(E)=exp(-sqrt(G/(E+U))) is continuous and strictly increasing with attained
+    floor p0=exp(-sqrt(G/U)) and unattained upper limit one.
+  - >-
+    A unique positive crossing exists exactly for p0<c<1 and is
+    E_x=G/log(c)^2-U. At c=p0 the unique nonnegative crossing is E=0; at c=1
+    only the infinite-input limit exists; outside the range there is no crossing.
+  - >-
+    Real natural logarithms require a positive dimensionless level. The sign
+    and squared logarithm do not authorize c>1 or negative c, and branch
+    conditions must be carried rather than inferred from an algebraic residual.
+  - >-
+    The exact sensitivities are partial_c E_x=-2G/(c*log(c)^3)>0,
+    partial_G E_x=1/log(c)^2>0, and partial_U E_x=-1 on the interior domain.
+    Elasticities depend on E_x and become singular at the zero-crossing floor.
+  - >-
+    E, G, and U share one energy dimension while c is dimensionless. Common
+    positive rescaling of G and U rescales E_x and any energy threshold by the
+    same factor; holding one energy fixed defines a different comparison.
+  - >-
+    Every positive target E_T can be produced by choosing
+    c=P(E_T;G,U). A free c therefore makes the crossover energy nonidentifying
+    even when the inverse formula is exact.
+  - >-
+    For E_T>=0 the threshold level is c_T=exp(-sqrt(G/(U+E_T))). Under a
+    declared uniform log-c measure, the below-threshold fraction of the
+    admissible log window is 1-sqrt(U/(U+E_T)); another measure or distribution
+    gives a different fraction and must not be implied.
+  - >-
+    C-XOV-001 already owns the full shifted-factor range, inverse,
+    sensitivities, scale covariance, load-bearing counterexamples, and physical
+    nonidentifiability ceiling with dependency C-SCR-001.
+  - >-
+    C-SCR-001 declares the factor conditionally and explicitly does not derive
+    a Coulomb model, physical screening energy, universal material maximum,
+    cross section, rate, coherent channel, yield, heat, or observation.
+  - >-
+    A maximum over four assigned screening models is a selected source input,
+    not a universal material ceiling. Its units, models, constants, uncertainty,
+    and version must remain explicit.
+  - >-
+    Bisection, random scans, and selected fake formulas are regression and
+    sensitivity evidence once an exact inverse and range theorem are known;
+    numerical agreement cannot become independent derivation.
+  - >-
+    Prior CM7 execution and extensive source-line exposure may regress frozen
+    formulas but cannot select a new claim or physical interpretation.
+allowed_imports:
+  - C-XOV-001 exact monotone range theorem and shifted-barrier inverse sensitivities scale covariance and physical ceiling
+  - C-SCR-001 exact conditional shifted inverse-square-root factor and material rate and observation ceilings
+  - C-CMP-001 only as the accepted reason CM2 supplies no flat physical rate or common observable
+  - src/substrate_framework/crossovers.py and src/substrate_framework/screened_barrier.py as accepted canonical implementations
+  - exact real calculus logarithms inequalities dimensions changes of variables and probability-measure countermodels
+  - CM7 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - engineering/screening/screening.py at its pinned bytes as selected noncanonical parameter-model evidence only after freeze
+  - SymPy exact simplification differentiation limits and substitutions
+candidates:
+  - id: A
+    description: Reproduce CM7 literally and classify all twenty-seven symbolic, numeric, domain, mutation, import, and tally predicates.
+  - id: B
+    description: Reuse C-XOV-001 and C-SCR-001 to close the exact range, endpoint, inverse, residual, uniqueness, sensitivity, dimension, and scale ledger.
+  - id: C
+    description: Audit logarithm branches, c outside the range, U=0, c at the floor or one, wrong signs, unscreened and shifted variants, and nonmonotone alternatives.
+  - id: D
+    description: Derive target-level identifiability and level, barrier, shift, and common-scale elasticities including singular endpoint behavior.
+  - id: E
+    description: Derive threshold-level fractions under log-uniform, uniform-c, and arbitrary probability measures and separate measure choice from a physical population statement.
+  - id: F
+    description: Audit the selected screening ladder, four-material maximum, units, conversions, constants, uncertainty, and absence of a universal material premise.
+  - id: G
+    description: Treat bisection and random scans as exact-formula regressions and audit brackets, stopping rules, tolerances, convergence, residuals, and mutation sensitivity.
+  - id: H
+    description: Determine whether all surviving content is already governed and independently review every predicate, dependency, cycle, import, consumer, and nonduplication decision.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact response domain range endpoint logarithm and inverse conventions
+  - dimensional consistency common-scale covariance and complete sensitivity and elasticity behavior
+  - identifiability under free level and explicit separation of equality from common physical observables
+  - threshold-measure declaration distribution dependence and parameter provenance
+  - mutation sensitivity at range boundaries wrong signs shifted and unscreened alternatives
+  - mathematical novelty beyond C-XOV-001 and C-SCR-001 parameter economy and reusable API value
+  - complete predicate solver import dependency cycle nonduplication and downstream-consumer review
+claims_proposed: []
+comparators_blinded_until: >-
+  Fresh CM7 body and output blinding is impossible because CM6's audit exposed
+  much of the source line surface and executed all twenty-seven checks, while
+  the generated queue exposes the inverse, admissible range, derivatives,
+  selected screening inputs, and result summary. P121 records that exposure and
+  freezes the exact domain, endpoint, logarithm, inverse, sensitivity,
+  elasticity, scale, identifiability, threshold-measure, material-provenance,
+  solver, mutation, predicate, dependency, cycle, import, and consumer gates
+  before renewed line-by-line CM7 inspection or execution.
+status: draft
