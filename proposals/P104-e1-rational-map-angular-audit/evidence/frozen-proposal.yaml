@@ -1,0 +1,42 @@
+campaign: P104
+frozen_at: '2026-08-07T12:00:00Z'
+base_release: v0.87.0
+base_commit: 37be46c04133b49212f006ec985a748740faede5
+scientific_base_commit: bcf5bfddfba2ec95d7c2bd07a6c6eea687d131a6
+proposal_path: proposals/P104-e1-rational-map-angular-audit/proposal.yaml
+proposal_sha256: 8fea2a864993960cb837bc26ae61fe97a5701a474edceaeb0a35de77c5b1bd4e
+memory_contract_path: memory/vantasner/proposals/P104-e1-rational-map-angular-audit.md
+memory_contract_sha256: 1aa8872603645e25d978df86669299c458ead3ab09f08654fe74e5aa73c5c1b9
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py
+source_size_bytes: 11655
+source_sha256: 1afa9ba8ade88912e7361bbbd6f59a9fce5cc114c75ddf604a6439bc066ae2d1
+source_blob: ca226759fef9ea3276e8e7069867ef881910c6e1
+source_worktree_state: clean_relative_to_pinned_commit
+source_checkout_overlay: >-
+  The explicit current-NumPy compatibility overlay and unrelated later Phase
+  47/48 work remain excluded from scientific authority. E1 itself matches the
+  pinned blob and hash.
+source_body_exposure: >-
+  The generated queue and parent effort expose E1's angular functional, the
+  supplied identity, axial degree-two and cubic degree-four map descriptions,
+  the advertised values 1, 5.79, and 20.63, a convergence headline, and six
+  literal checks. The source body, actual predicates, grids, tolerances,
+  implementation details, and terminal output have not been inspected or
+  executed under P104. P104 freezes structural alternatives and decisive
+  tests without claiming comparator blinding.
+source_execution_state_at_freeze: not_inspected_or_executed_under_P104
+terminal_output_state_at_freeze: unknown_beyond_generated_six_check_metadata
+degree_area_bound_axial_chart_refinement_minimality_and_interpretation_tests_frozen: true
+claims_reserved: [C-RMAP-001, C-RMAP-002]
+compatibility_preflight:
+  e1_numpy_imports: unknown_until_post_freeze_static_inspection
+  e1_sampled_quadrature_api: unknown_until_post_freeze_static_inspection
+  canonical_cubature: tensor_gauss_legendre_with_explicit_weights
+  sampled_trapezoid_required_by_new_work: false
+  np_trapz_compatibility_action: inspect_after_freeze_and_alias_only_replay_if_immutable_source_aborts
+validation:
+  repository: WORKFLOW VALID 117 claims 117 accepted 1 proposals 218 units 117 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen
