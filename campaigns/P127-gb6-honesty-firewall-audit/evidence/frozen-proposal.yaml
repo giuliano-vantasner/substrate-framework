@@ -1,0 +1,73 @@
+id: P127
+base_release: v0.98.0
+base_commit: 58046a01425019c3c9df2d23eb3683e2c12f0239
+scientific_base_commit: af24b7652f1c4cb2f4dd9d9ca98782e01aa19802
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GB6]
+question: >-
+  Reproduce and independently audit GB6's Phase-32 honesty firewall, exact
+  finite matcher, import and empirical gates, clamp scan, four physics guards,
+  self-tests, dependencies, consumer, and nonduplication; distinguish lexical,
+  AST, import-graph, and data-flow evidence from semantic or physical proof.
+invariants:
+  - >-
+    A finite scanner proves only its declared proposition on hash-pinned bytes,
+    decoding, paths, token rules, exemption semantics, and scope. It does not
+    prove semantic completeness, mechanism absence, data independence, or
+    scientific correctness.
+  - >-
+    P120 already establishes that case-folded line scans with a case-sensitive
+    [IMPORT] exemption admit construction, alias, getattr, Unicode, imported-
+    helper, equivalent-formula, configuration, and dynamic-load evasions, while
+    comments, docstrings, negation, and benign substrings can collide.
+  - >-
+    AST identifiers improve code-versus-prose separation but remain finite
+    syntax. Import closure and pass-condition data flow require independent
+    graph and dependency analysis.
+  - >-
+    Absence of a few min, cap, ceiling, empirical-name, or numeric literals
+    cannot establish uncapped magnitudes or a closed data gate. Clamp and
+    comparator semantics can be expressed through conditionals, helpers,
+    nonlinearities, tables, configuration, or imported values.
+  - >-
+    Injected fakes establish non-vacuity only for their exact fixtures. A
+    physics rejection guard must evaluate the claimed mathematical object over
+    its declared domain and remain sensitive to materially different fakes.
+  - >-
+    GB1 through GB5 are individually qualified. C-BRN-001 governs only GB1's
+    exact allocation algebra; the other units grant no physical rate, spectrum,
+    material channel, data independence, or mechanism authority.
+  - >-
+    CM6 is qualified finite-syntax evidence with no accepted claim. GB6 may
+    reuse its method and ceiling but cannot inherit scientific authority.
+  - >-
+    GB6's body, exact token lists, path lists, predicate implementations, and
+    runtime output remain unopened at freeze. Queue metadata and durable
+    consumer evidence already expose its headline, dependencies, four fakes,
+    selected tokens, and twenty-nine-check tally.
+allowed_imports:
+  - P120 and CM6 exact finite-scanner methods and semantic ceiling
+  - qualified GB1 through GB5 dispositions and C-BRN-001 only within its accepted statement
+  - Python AST tokenize Unicode normalization import-graph and exact symbolic counterexamples
+  - GB6 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - {id: A, description: Reproduce GB6 literally and classify all expanded predicates and self-tests.}
+  - {id: B, description: State the exact hash-pinned finite lexical theorem without semantic overread.}
+  - {id: C, description: Audit executable AST identifiers imports constants and pass-condition data flow across GB1-GB5.}
+  - {id: D, description: Mutate construction alias Unicode tagging comments strings and equivalent semantics to test scanner coverage.}
+  - {id: E, description: Compare clamp and empirical detectors with conditional helper table configuration and import alternatives.}
+  - {id: F, description: Audit each physics fake against the actual claimed object and adversarial locally passing alternatives.}
+  - {id: G, description: Close qualified dependencies cycles WN7 replay scope and physical-governance ceilings.}
+  - {id: H, description: Test novelty and terminal disposition without creating a scanner-derived scientific claim.}
+uniqueness_evidence: null
+selection_criteria:
+  - pinned scope decoding token and exemption fidelity
+  - executable syntax import closure data-flow completeness and evasion sensitivity
+  - physics-object relevance false-positive control and independent reproduction
+  - accepted dependency fit assumption economy nonduplication and consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  GB6's body, exact matcher details, and runtime output remain unopened until the
+  proposal, immutable copy, memory contract, and freeze gate pass. Queue and
+  durable replay metadata already expose the advertised categories and tally.
+status: draft

@@ -1,0 +1,19 @@
+campaign: P127
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P127-gb6-honesty-firewall-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P127-gb6-honesty-firewall-audit/proposal.yaml campaigns/P127-gb6-honesty-firewall-audit/evidence/frozen-proposal.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected: {accepted_claims: 133, source_units: 218, pending_units: 94, pytest_tests: 1090, source_body_opened: false, debt: []}
+result: >-
+  Proposal and frozen copy are byte-identical at SHA-256
+  28ca23f3f2184f5dc5e68859c4006a85b0f7f765689f4c81c864775ecd5f35c4.
+  Repository validation reports 133 accepted claims and 94 pending source
+  units; all 516 memory records, the physics skill, and all 1090 tests pass.
+  GB6 remained unopened throughout the freeze boundary.
+compatibility_event: none
+next_attempt: Commit the frozen P127 contract, then reproduce and inspect GB6.
