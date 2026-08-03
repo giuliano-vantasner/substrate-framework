@@ -1,0 +1,17 @@
+campaign: P118
+attempt: 0003
+candidate: F_independent_nonduplication_review
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P118-cm4-discriminating-derivative-audit/reviews/independent_derivative_review.py
+exit_status: 1
+passed_before_failure: 21
+failure: >-
+  The C-RG-002 nonduplication probe searched for a shortened assignment string,
+  while the accepted statement includes the intermediate equality
+  E_barrier=E(R_*)-E(0) before the same formula.
+diagnosis: whitespace_and_context_sensitive_registry_substring
+scientific_effect: >-
+  The exact fresh composition already matches C-RG-002 algebraically. Search
+  only for the canonical formula token and keep the symbolic equality as the
+  load-bearing nonduplication oracle.
+next_attempt: semantic_formula_token_plus_exact_composition

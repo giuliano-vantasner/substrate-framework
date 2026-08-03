@@ -1,0 +1,17 @@
+campaign: P118
+attempt: 0004
+candidate: integrated_terminal_gate
+status: completed
+command: scripts/validate.sh && git diff --check
+compatibility_event: none
+expected_boundary: >-
+  P118, CM4's qualified disposition, unchanged C-RG-002, C-SPN-002,
+  C-CMP-001 and v0.97.0, generated memory, source queue, pinned consumers, and
+  parent effort agree with 132 accepted claims and no canonical API delta.
+exit_status: 0
+terminal_tally: >-
+  ALL REPOSITORY WORKFLOW CHECKS PASS; 132 claims, 132 accepted, 0
+  proposals; 218 source units, 102 pending, 0 partial; 497 memory files;
+  physics skill valid; 1075 tests passed in 94.17s; git diff --check clean.
+verdict: terminal_qualification_boundary_verified
+next_attempt: commit_P118_then_checkpoint_parent_and_freeze_P119

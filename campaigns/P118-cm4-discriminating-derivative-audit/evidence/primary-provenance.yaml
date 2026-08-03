@@ -1,0 +1,28 @@
+campaign: P118
+source_unit: CM4
+contract:
+  proposal_sha256: 41bccffea4bb1ece5651116b441731257fc487c44da843b5e0d11aee8cd644eb
+  frozen_proposal_sha256: 41bccffea4bb1ece5651116b441731257fc487c44da843b5e0d11aee8cd644eb
+source:
+  cm4_sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019
+  barrier_scaling_sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+verification:
+  primary:
+    path: campaigns/P118-cm4-discriminating-derivative-audit/verify.py
+    sha256: 2d71b68cabee62b7d5b4890f6161c1858f724a143e27696294f106c8af16458d
+    tally: 40
+  independent:
+    path: campaigns/P118-cm4-discriminating-derivative-audit/reviews/independent_derivative_review.py
+    sha256: 69b56cf20fe748b4814d09b3ed336ce2d24037e8d3bf4374086193f18286c105
+    tally: 29
+existing_implementation:
+  modules:
+    - src/substrate_framework/radial_energy.py
+    - src/substrate_framework/symmetric_spin.py
+    - src/substrate_framework/composite_factors.py
+  governing_claims: [C-RG-002, C-SPN-002, C-CMP-001]
+  changed: false
+new_package_API: none
+oracle: exact_symbolic_calculus_discrete_differences_countermodels_and_fresh_composition
+sampled_integration: none
+numpy_compatibility_event: none

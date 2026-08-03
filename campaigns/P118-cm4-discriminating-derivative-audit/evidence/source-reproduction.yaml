@@ -1,0 +1,29 @@
+campaign: P118
+source_unit: CM4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py
+sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019
+git_blob: fe6df257920f43b309fdc002af6ac1108ab1d55c
+size_bytes: 8870
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py
+exit_status: 0
+terminal_tally: ALL 10 CHECKS PASS
+imported_source:
+  path: engineering/barrier_scaling.py
+  sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+  git_blob: 2650b4ed068f673c33094be06734db1f04d1f466
+reported_values:
+  E_star_A2_1: 5.585022107789923
+  E_star_A2_1_69: 3.3047468093431496
+  barrier_ratio: 0.5917159763313609
+compatibility_preflight:
+  np_trapz: absent
+  np_trapezoid: absent
+  trapezoid_integral: absent
+  scipy_integration: absent
+  event: none
+classification: reproduction_evidence_only
+note: >-
+  The source exits cleanly, but analytic signs are sampled and the array gate
+  tests response order without validating control order, paired lengths,
+  positive domains, spacing, derivative magnitude, uncertainty, or mechanism.

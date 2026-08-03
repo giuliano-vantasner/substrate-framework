@@ -1,0 +1,32 @@
+campaign: P118
+source_unit: CM4
+headline_verdict: qualified
+surviving_content:
+  - For positive declared inputs, R=nu*N*exp(-C/(A2*Theta)) is positive and linear in a continuous N extension.
+  - Its exact integer unit forward difference is nu*exp(-C/(A2*Theta)) and is positive.
+  - Its A2 derivative is R*C/(A2^2*Theta)>0 under the held-fixed inverse-A2 barrier premise.
+  - Its response tends from zero to nu*N as A2 runs from zero to infinity.
+  - The source predicate rejects its selected flat, decreasing, and singleton examples.
+rejected_or_qualified_content:
+  - The declared N multiplier is not derived from C-SPN-002 and does not establish collective rate enhancement.
+  - N=1 is one declared factor in C-SPN-002, not an accepted two-body or textbook-Rabi baseline.
+  - C-RG-002 makes inverse-A2 barrier scaling conditional and supplies no physical material loading law.
+  - C-CMP-001's composite retains a matrix-element dimension and is not a transition rate.
+  - A positive derivative is not mechanism specific; an affine response and infinitely many monomial families share the sign.
+  - The source gate uses differences in supplied response order rather than quotient slopes against validated ordered controls.
+  - Reversed and duplicate N controls, mismatched array lengths, reversed or nonpositive A2 controls, and a one-ulp rise can pass.
+  - The A2 OR branch bypasses the stated N>=2 sweep requirement.
+  - No units, calibration, uncertainty, derivative estimator, threshold, alternative-hypothesis model, or experimental data enter the gate.
+  - A syntactic nonvacuous predicate is not a falsifiable or unique CMNC signature.
+exact_reproduced_surface: >-
+  With x=C/(A2*Theta), the exact log elasticities of the declared response
+  against (N,A2,Theta,C,nu) are (1,x,x,-x,1). The A2 curvature is
+  R*x*(x-2)/A2^2 and changes sign at x=2. Common (C,Theta) or (C,A2)
+  co-scaling leaves the response invariant. These are direct conditional
+  corollaries of accepted premises rather than a distinct claim.
+physical_ceiling: >-
+  No physical state, symmetric preparation, interaction, rate normalization,
+  material loading map, observable, experimental signature, mechanism
+  discrimination, magnitude, yield, heat, or observation follows.
+novelty_verdict: no_new_claim_or_package_API
+compatibility_event: none

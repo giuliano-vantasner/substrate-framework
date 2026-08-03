@@ -1,0 +1,18 @@
+campaign: P118
+source_unit: CM4
+static_predicate_count: 10
+predicates:
+  - {index: 1, label: continuous_N_derivative, verdict: exact_conditional_formula, reason: The identity survives globally, but the source checks its sign at one substitution and the N factor is declared rather than collective dynamics.}
+  - {index: 2, label: N_minus_one_baseline, verdict: exact_algebra_with_rejected_semantics, reason: The difference is exact for the continuous extension; N=1 is not an accepted two-body or Rabi baseline.}
+  - {index: 3, label: A2_derivative, verdict: exact_conditional_formula, reason: The positive derivative follows under held-fixed inverse-A2 barrier inputs, not a derived loading law or rate.}
+  - {index: 4, label: imported_barrier_drop, verdict: regression_duplicate, reason: Two selected values reproduce C-RG-002's exact inverse-A2 dependence and add no material premise.}
+  - {index: 5, label: selected_N_sweep_clears, verdict: circular_synthetic_regression, reason: The report is generated from the formula whose positive trend the predicate is designed to accept.}
+  - {index: 6, label: selected_A2_sweep_clears, verdict: circular_synthetic_regression, reason: The selected formula-generated sequence bypasses the N branch and does not test control validation.}
+  - {index: 7, label: flat_report_fails, verdict: algorithm_behavior_only, reason: Rejecting one flat array does not identify a mechanism.}
+  - {index: 8, label: singleton_N1_fails, verdict: report_policy_only, reason: A one-point array cannot show a trend, but the N1 physical label is unsupported.}
+  - {index: 9, label: decreasing_report_fails, verdict: algorithm_behavior_only, reason: The input-order check rejects this selected sequence but accepts reversed controls with negative quotient slopes.}
+  - {index: 10, label: selected_nonvacuity, verdict: weak_boolean_composition, reason: Passing one generated report and failing selected fakes does not establish specificity, robustness, or falsifiability.}
+summary:
+  exact_conditional_survivals: 3
+  regression_algorithmic_or_rejected_semantics: 7
+  terminal_disposition: qualified

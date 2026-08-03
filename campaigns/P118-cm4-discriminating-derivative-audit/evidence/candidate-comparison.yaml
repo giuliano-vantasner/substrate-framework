@@ -1,0 +1,44 @@
+campaign: P118
+selection_frozen_before_source_execution: true
+criteria_order:
+  - accepted dependency closure and continuous-versus-discrete typing
+  - mathematical novelty beyond accepted conditional claims
+  - exact dimensions, held-fixed conventions, limits, and finite differences
+  - mutation and countermodel sensitivity
+  - parameter economy, identifiability, reusable API fit, and semantic honesty
+  - complete predicate, dependency, cycle, nonduplication, and consumer review
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: >-
+      All ten predicates execute, but analytic signs are sampled and the gate
+      tests selected response-array ordering rather than a validated derivative.
+  B:
+    decision: selected_as_exact_audit_ledger
+    reason: >-
+      Exact derivatives, integer differences, elasticities, limits, curvature,
+      scale laws, and fitting families close the conditional algebra.
+  C:
+    decision: selected
+    reason: >-
+      C-RG-002, C-SPN-002, and C-CMP-001 already govern the supportable source
+      surface and its physical ceilings, so no new claim or release is needed.
+  D:
+    decision: rejected_as_artificial_novelty
+    reason: >-
+      A generalized exponent family adds free parameters without a distinct
+      source object or consumer, while the report gate is under-specified.
+  E:
+    decision: selected
+    reason: >-
+      Reversed, duplicate, mismatched, nonpositive, one-ulp, affine,
+      nonmonotone, arbitrary-prefactor, and zero-rate models expose the bar.
+  F:
+    decision: selected
+    reason: >-
+      A fresh nonimporting derivation and complete dependency, predicate,
+      cycle, consumer, and nonduplication audits close governance.
+claims_decision: no_new_claim
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

@@ -1,0 +1,34 @@
+campaign: P118
+base_release: v0.97.0
+accepted_dependencies:
+  C-RG-002: >-
+    Supplies the conditional inverse-A-squared capillary barrier, dimensions,
+    held-fixed sensitivities, identifiability, and explicit no-material/no-rate
+    ceiling. The CM4 A2 derivative is its elementary exponential corollary.
+  C-SPN-002: >-
+    Supplies normalized finite symmetric-spin ladder coefficients and states
+    that their squares are not rates. It does not derive CM4's N multiplier,
+    state preparation, interaction, or N=1 physical label.
+  C-CMP-001: >-
+    Supplies the conditional composite-factor dimension and non-rate ceiling.
+    It does not make the N multiplier a collective law or a derivative a
+    mechanism-specific observable.
+qualified_sources:
+  BD1: {disposition: qualified, accepted_claims: [C-RG-001, C-RG-002]}
+  CM2: {disposition: qualified, accepted_claims: [C-CMP-001]}
+  PN3: {disposition: qualified, accepted_claims: [C-SPN-002]}
+noncanonical_import:
+  engineering/barrier_scaling.py:
+    role: selected_numeric_regression_only
+    verdict: supplies_no_additional_authority
+dependency_cycles:
+  - CM1 lists CM4 while CM4 cites no accepted CM1 premise; the edge is replay provenance only.
+  - CM6 and CM7 list CM4 and participate in the CM1-CM3-CM7 cycle; passing descendants cannot validate CM4.
+novelty_closure:
+  claims_proposed: []
+  governing_claims: [C-RG-002, C-SPN-002, C-CMP-001]
+  note: >-
+    The exact continuous and discrete derivative ledger is an elementary
+    corollary of the displayed accepted conditional inputs. The source report
+    predicate is too under-specified and non-specific to promote.
+debt: []

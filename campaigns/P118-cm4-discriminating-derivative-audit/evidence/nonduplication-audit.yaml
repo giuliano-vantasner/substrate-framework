@@ -1,0 +1,26 @@
+campaign: P118
+candidate_D_distinct_theorem: rejected
+exact_surface:
+  response: nu*N*exp(-C/(A2*Theta))
+  continuous_N_derivative: nu*exp(-C/(A2*Theta))
+  integer_unit_difference: nu*exp(-C/(A2*Theta))
+  A2_derivative: R*C/(A2^2*Theta)
+  log_elasticities_N_A2_Theta_C_nu: [1, x, x, -x, 1]
+  loading_limits: [0, nu*N]
+  loading_curvature: R*x*(x-2)/A2^2
+accepted_coverage:
+  C-RG-002: inverse_A2_barrier_dimensions_and_no_material_rate_ceiling
+  C-SPN-002: normalized_count_coefficient_and_explicit_non_rate_ceiling
+  C-CMP-001: declared_positive_factor_composition_dimension_and_non_rate_ceiling
+novel_details:
+  - continuous-versus-integer variation is made explicit in P118 evidence
+  - loading curvature changes sign at x=2
+  - the source report predicate's structural false positives are enumerated
+promotion_decision: >-
+  These details are elementary audit corollaries without a new physical object
+  or canonical consumer. Generalizing exponents would add free parameters only
+  to manufacture novelty. The under-specified report gate is not promotable.
+registry_delta: none
+release_delta: none
+package_delta: none
+debt: []

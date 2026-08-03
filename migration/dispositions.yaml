@@ -1847,6 +1847,47 @@ units:
       consumers replay 148 checks and inherit only the conditional theorem.
       CM3 and all canonical P117 work call no sampled integration routine and
       trigger no np.trapz compatibility event.
+  CM4:
+    disposition: qualified
+    accepted_claims:
+      - C-RG-002
+      - C-SPN-002
+      - C-CMP-001
+    qualification: >-
+      CM4's exact conditional response ledger is already governed. Under
+      positive declared inputs, R=nu*N*exp(-C/(A2*Theta)) is linear in a
+      continuous N extension, has the same positive integer unit forward
+      difference, and increases with A2 under C-RG-002's held-fixed inverse-A2
+      barrier premise. C-SPN-002 does not derive the N multiplier or an N=1
+      two-body/Rabi baseline, and C-CMP-001 leaves the product with a matrix-
+      element dimension rather than a transition rate. The source report gate
+      is only an array-order predicate: reversed or duplicate controls,
+      mismatched lengths, reversed or nonpositive A2 values, a one-ulp rise,
+      unrelated affine trends, and selected nonmonotone limbs expose missing
+      derivative, domain, uncertainty, and specificity checks. No collective
+      rate enhancement, material loading law, mechanism-specific signature,
+      falsifiability criterion, magnitude, yield, heat, or observation is
+      accepted.
+    evidence:
+      - campaigns/P118-cm4-discriminating-derivative-audit/reviews/source_adjudication.md
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/source-reproduction.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/source-audit.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/check-adjudication.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/input-provenance.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/dependency-audit.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/consumer-audit.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/candidate-comparison.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/evidence/primary-provenance.yaml
+      - campaigns/P118-cm4-discriminating-derivative-audit/verify.py
+      - campaigns/P118-cm4-discriminating-derivative-audit/reviews/independent_derivative_review.py
+      - memory/vantasner/decisions/CM4-qualified-review.md
+    note: >-
+      P118 closes 40 primary and 29 independent exact checks after one
+      pre-source YAML schema failure and one preserved independent
+      nonduplication-oracle failure. Three direct and three transitive source
+      consumers replay 158 checks. No canonical API, accepted claim, release,
+      sampled integration, or NumPy compatibility event is added.
   PN6:
     disposition: qualified
     accepted_claims:

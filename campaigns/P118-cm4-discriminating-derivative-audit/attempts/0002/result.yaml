@@ -1,0 +1,25 @@
+campaign: P118
+attempt: 0002
+candidate: A_literal_CM4_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py
+exit_status: 0
+source_sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019
+source_git_blob: fe6df257920f43b309fdc002af6ac1108ab1d55c
+barrier_scaling_sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+barrier_scaling_git_blob: 2650b4ed068f673c33094be06734db1f04d1f466
+compatibility_event: none
+terminal_tally: ALL 10 CHECKS PASS
+reported_values:
+  E_star_A2_1: 5.585022107789923
+  E_star_A2_1_69: 3.3047468093431496
+  barrier_ratio: 0.5917159763313609
+verdict: reproduction_evidence_only
+limitations: >-
+  Global derivative signs are sampled at selected substitutions. The report
+  predicate compares response values in supplied array order but does not
+  validate control ordering, equal lengths, positive A-squared values,
+  spacing, derivative magnitude, units, uncertainty, or mechanism
+  specificity. The N=1 two-body/Rabi and physical-rate readings are not
+  accepted dependency results.
+next_attempt: derive_exact_continuous_and_discrete_ledger_and_stress_actual_gate
