@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T06:40:00Z'
+updated: '2026-08-04T07:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -28,11 +28,11 @@ Its latest addition, C-PDE-011, is qualified finite-time numeric evidence that
 one explicitly declared fast bulk-source branch approaches the accepted exact
 sine-Gordon breather family under mesh and timestep refinement. It does not
 derive the source, a voltage or plasma map, a population law, a robust
-threshold, or an engine mechanism. The latest terminal adjudication is P089 at
-commit `aec2125`: SA3 is qualified because its slow branch is not vacuum, its
-reported source proxy is not source work, and neighboring target amplitudes
-destroy the fitted-breather verdict even though the knife-edge fast branch is
-reproducible by independent integrators.
+threshold, or an engine mechanism. The latest terminal adjudication is P090 at
+commit `f79909e`: SA4 is qualified without a claim delta because free gain and
+normalization set its threshold and count, its finite-width kernel is nonzero
+at DC, its fitted saturation scale has the wrong structural dependence, and
+every physical consumer retains inserted breakdown, scale, or population data.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -58,7 +58,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 131 pending, 0 partially migrated, 3 migrated, 75 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 130 pending, 0 partially migrated, 3 migrated, 76 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -179,6 +179,7 @@ Attempts are append-only and individually reproducible.
 | 0107 | P087 exact breather temporal-Fourier and SA1 transfer audit | `campaigns/P087-sa1-seeding-transfer-audit/attempts/0001` through `0008`, then the promotion and identifier-repair replay | accepted in v0.76.0 with SA1 qualified; commit `c77cae6` | Forty-two primary and fifteen independent checks derive fixed-position parity, half-wave support, the exact nonlinear fundamental coefficient, phase-origin covariance, finite-Gaussian DC, zero-DC counterkernels, overlap nonidentifiability, and consumer ceilings; the external mirror fails on six `np.trapz` calls and the C035 rungs still use inserted gates. The single integrated scientific gate passes all 810 tests, then the diff audit catches the reserved rejected C-SG-014 identifier, repairs P087 to C-SG-015, and adds a targeted governance guard without repeating the unchanged full suite | Audit SA2's dV/dt-not-V claim without importing SA1's rejected susceptibility/population interpretation, identifying DC-offset invariance with absolute-voltage independence above breakdown, or treating an inserted displacement-current spectrum and Michaelis curve as a derived seeding mechanism |
 | 0108 | P088 exact DC-offset/displacement-current/waveform and SA2 trigger audit | `campaigns/P088-sa2-dvdt-trigger-audit/attempts/0001` through `0006`, then the terminal queue replay | SA2 qualified with v0.76.0 unchanged; commit `aee1890` | Thirty-seven primary and fourteen independent checks derive the Gaussian overlap and limit-order defect, linear distributional offset ceiling, finite-window leakage, power-spectrum cross terms, constitutive product rule, Fourier boundary term, exact inserted-family monotonicity, fixed-peak reversal, same-slew spectral counterfamily, and consumer closure. The resonant mutation passes SA2's alleged DC oracle; engineering consumers insert threshold/Michaelis behavior, one restores a seed floor, and six `np.trapz` calls fail under current NumPy. The single integrated gate passes all 811 tests and record-only validation closes without repeating the suite | Audit SA3's driven sine-Gordon PDE seeding claim without importing SA1's rejected susceptibility/population, SA2's rejected physical trigger, or P3D1's qualified radial-oscillon interpretation; freeze PDE, source, drive, energy, bound-state, damping/sponge, refinement, amplitude-threshold, comparator, consumer, and nonduplication candidates before opening the body |
 | 0109 | P089 driven sine-Gordon formation audit | `campaigns/P089-sa3-driven-pde-seeding-audit/attempts/0001` through `0007`, then promotion replay | C-PDE-011 accepted in v0.77.0 and SA3 qualified; commit `aec2125` | Twenty-two primary and six independent checks establish the declared fast branch with leapfrog refinement, DOP853 rederivation, exact-breather trace and phase-space classifiers, core-energy comparison, and a source-work energy ledger. The source's integral of force squared is not work, its slow branch is not vacuum, its FFT locks to coarse bins, and target mutations 380 and 420 break the classifier. The integrated workflow passes all 817 tests; the accidental unchanged duplicate suite is recorded as ceremony, and record-only repair closes without a third replay | Audit SA4's threshold/saturation law without importing rejected SA1 response/population, rejected SA2 trigger physics, or SA3's absent voltage/plasma mechanism; freeze literal, threshold, floor, normalization, saturation, breakdown, physical-mechanism, consumer, dependency, and nonduplication candidates before opening the uninspected remainder or executing it |
+| 0110 | P090 exact threshold/floor/gain/saturation and SA4 audit | `campaigns/P090-sa4-threshold-saturation-audit/attempts/0001` through `0007`, then terminal queue replay | SA4 qualified with v0.77.0 unchanged; commit `f79909e` | Thirty-nine primary and thirteen independent checks derive the free-gain and normalization orbit, floor/remainder versus ceiling semantics, the accepted family's zero energy infimum, finite-tau DC counterexample, exact inserted-family derivative and ceiling, fixed-peak reversal, Gaussian-band moment, sharp-lobe half scale, Michaelis asymptotic mismatch, and consumer closure. The source inserts G_BIG=900 to force a crossing; its constant-kernel guard is tautological, and consumers retain breakdown, unit, base-count, floor, or Michaelis knobs. Eighteen focused tests and the single integrated 817-test workflow pass; final records receive only record-sensitive replay | Audit LB1's dissipative lifetime claim against the exact stress-energy balance and accepted breather family; freeze the full-amplitude kinetic integral, time average, adiabatic modulation, exponential-decay premise, lifetime convention, damping regime, numerical cross-check, physical Gamma map, consumer, dependency, and nonduplication candidates before opening the body |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -195,7 +196,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 131 bridge units remain pending, 3 are migrated, 75 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 130 bridge units remain pending, 3 are migrated, 76 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -714,11 +715,29 @@ knife-edge mathematical branch. Reusable source, evolution, energy-ledger, and
 exact-breather classifiers now live in the canonical package and route sampled
 integration through `trapezoid_integral`, not a version-specific NumPy alias.
 
+P090 terminally qualifies SA4 without changing the accepted release. Exact
+floor division retains an unassigned remainder and is not a formation theorem;
+C-SG-002 supplies the energy of an existing fixed-frequency breather, while the
+accepted family has energies approaching zero and therefore no positive global
+minimum. SA4 uses `G=1` for its below-threshold example and inserts
+`G_BIG=900` to force a crossing; free gain and Fourier-amplitude normalization
+realize arbitrary thresholds and counts. Its finite-tau Gaussian kernel is
+positive at DC, its unnormalised slew family is only conditionally monotone and
+bounded, and fixed-peak normalization reverses the large-s trend. In the sharp-
+lobe limit the half-fill scale is `omega_b/sqrt(log(2))`, independent of
+bandwidth, and Gaussian fill has different asymptotics from a Michaelis law.
+The adiabatic guard does not evaluate source energy or count, while the constant-
+kernel ratio is one by construction. External consumers retain inserted
+breakdown, units, base counts, floors, and saturation constants. P090's exact
+work uses no quadrature; its independent source regression uses adaptive SciPy
+integration, and unchanged external `np.trapz` failures are cited from P088
+rather than rerun.
+
 ## Canonicalization
-The registry, `v0.77.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred five accepted claims. P001 through P089 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 131 pending, 0 partial, 3 migrated, 75 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.77.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred five accepted claims. P001 through P090 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 130 pending, 0 partial, 3 migrated, 76 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 131 pending, 3 migrated, 75 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is SA4, whose generated synopsis claims a design-report seeding law that is flat below breakdown, rises with voltage slew, and saturates. Its pinned source SHA-256 is `55243c459d40fded73ec03260e2b66c79a60e29e47ec3d363145d25538507f6e`, its literal verifier has thirteen checks, and it names rejected SA1 and SA2 as dependencies. P090 must freeze literal-promotion, exact threshold and integer-floor behavior, energy and population integrality, free gain, spectral normalization, saturation scale, breakdown premise, monotonicity and floor discontinuity, physical mechanism, consumer, dependency, and nonduplication candidates before opening the still-uninspected source remainder or executing the artifact. The top portion was already exposed during P089's consumer audit, so P090 must record partial prior exposure rather than claim complete comparator blinding. It may audit the algebra of `E_seed=G*|f_tilde|^2`, the floor count, and the inserted saturation family, but cannot import SA1's rejected response/population, SA2's rejected physical trigger, or SA3's absent voltage/plasma map. A positive physical seeding law requires a derived coupling and normalization, dimensionally closed energy and integer-count semantics, an accepted breakdown mechanism, and an independent consumer; otherwise preserve the conditional mathematics and qualify the design narrative.
+The effort remains active. D4 is discharged, but D1 remains open with 130 pending, 3 migrated, 76 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is LB1. Its generated synopsis claims that linear damping `-Gamma*phi_t` gives `dE/dt=-Gamma*integral(phi_t^2)dx`, that the small-amplitude time average equals the breather energy, and therefore that energy decays exponentially with lifetime `1/Gamma`; it also advertises a full-amplitude form factor. The pinned source SHA-256 is `d2e36e0d9d8ff831bcd58efb264b68dc156f7f87eca7a104f53a6f287eed2b80`, its verifier has twenty-two runtime checks from twenty-one literal sites, and it names pending MC3 as a dependency. P091 must freeze literal-promotion, exact damped energy balance, exact full-amplitude velocity-squared integral and time average, small-amplitude limit, kinetic-to-total-energy form factor, adiabatic collective-coordinate approximation, frequency and amplitude drift, exponential-versus-nonlinear decay, energy- and amplitude-lifetime conventions, perturbative damping regime, solver/refinement cross-check, physical Gamma and units map, consumer, dependency, and nonduplication candidates before opening the LB1 body or output. It may use C-SG-001/C-SG-002 and C-SG-012's exact stress-energy identities, but cannot import pending MC3's per-medium frequency map or infer an exact damped breather by inserting the undamped ansatz. A positive lifetime law requires either an exact damped solution or a controlled adiabatic derivation with declared error and numerical validation; otherwise preserve the exact balance and qualified asymptotic approximation while continuing.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
