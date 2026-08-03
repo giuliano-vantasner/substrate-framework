@@ -1,0 +1,25 @@
+campaign: P111
+attempt: 0001
+candidate: literal_source_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN3_dicke_collective_scaling.py
+source_sha256: da472079f418368926e27d22567cdf3ad8f32c836146ed8107ae2874f377b58b
+compatibility_preflight: >-
+  If native execution fails only because immutable source calls removed
+  np.trapz, record that version event and replay with an alias only. Do not
+  classify compatibility as a scientific failure.
+status_after_run: completed
+exit_status: 0
+terminal_tally: ALL 14 CHECKS PASS
+compatibility_event: none
+verdict: literal_symbolic_regression_reproduced
+mechanism: >-
+  Nine static check sites expand to fourteen passing predicates. The source
+  proves the standard maximal-spin ladder formula at the ground edge and its
+  N=1 limit, but its two rate predicates only square the bare coefficient and
+  rename that square. It supplies no interaction or Golden-rule premises and
+  does not examine general-rung order-N amplitudes.
+next_attempt: >-
+  Implement the normalized all-rung theorem, unequal-coupling ledger, exact
+  tensor-product and representation oracles, physical-rate countermodels,
+  and complete direct and transitive consumer audit.

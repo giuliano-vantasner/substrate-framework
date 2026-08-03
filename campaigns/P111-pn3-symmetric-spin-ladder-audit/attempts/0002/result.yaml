@@ -1,0 +1,24 @@
+campaign: P111
+attempt: 0002
+candidate: normalized_all_rung_and_independent_routes
+status: completed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P111-pn3-symmetric-spin-ladder-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P111-pn3-symmetric-spin-ladder-audit/reviews/independent_spin_review.py
+  - .venv/bin/python -m pytest tests/test_symmetric_spin.py -q
+exit_status: 0
+terminal_tallies:
+  primary: ALL 75 CHECKS PASS [C-SPN-002]
+  independent: ALL 37 CHECKS PASS [C-SPN-002-INDEPENDENT]
+  package: 14 passed
+verdict: exact_normalized_collective_spin_theorem_passed
+mechanism: >-
+  Normalized subset counting, explicit tensor matrices, and independent
+  irreducible su(2) matrices agree on every rung and edge. Mutations expose
+  normalization and equal-phase premises. Central rungs are order N, unequal
+  phases populate a dark sector, and zero-interaction or zero-density
+  countermodels preserve the ladder while removing any conditional rate.
+compatibility_event: none
+next_attempt: >-
+  Complete claim review, source disposition, provenance, impact, release,
+  generated documentation, durable memory, and downstream promotion replay.

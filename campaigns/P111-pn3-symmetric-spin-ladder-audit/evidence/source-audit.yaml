@@ -1,0 +1,28 @@
+campaign: P111
+source_unit: PN3
+source_sha256: da472079f418368926e27d22567cdf3ad8f32c836146ed8107ae2874f377b58b
+imports: [sys, sympy]
+declared_dependencies: []
+context_only_reference:
+  path: agent-memory/substrate/efforts/nonlinear-screening-research-d-superradiant-review.md
+  source_label: quarantined_and_not_verified
+  executable_use: none
+exact_surface:
+  representation: j=N/2 and m=-j only for the evaluated collective specialization
+  ladder: hbar*sqrt((j-m)*(j+m+1))
+  ground_edge: hbar*sqrt(N)
+  single_factor: hbar
+  algebraic_square: hbar^2*N
+omissions:
+  - normalized tensor-product state construction
+  - nonmaximal-spin sectors and representation multiplicity
+  - general-rung asymptotics
+  - interaction Hamiltonian and site-coupling normalization
+  - unequal coupling magnitudes and phases
+  - state preparation and coherence
+  - bosonic mode matrix element or occupation factor
+  - energy conservation, resonance, spectral density, or density of states
+  - linewidth, decoherence, weak-coupling, continuum, or long-time Golden-rule regime
+  - nuclear, phonon, material, or supertransfer map
+compatibility_event: none
+status: audited

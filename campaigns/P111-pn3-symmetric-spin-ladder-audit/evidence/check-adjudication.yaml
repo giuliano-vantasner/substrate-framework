@@ -1,0 +1,27 @@
+campaign: P111
+source_unit: PN3
+static_check_site_count: 9
+runtime_predicate_count: 14
+predicates:
+  - {id: PN3-01, source_site: ground_rung_symbolic, runtime_case: symbolic_N, verdict: retained, ceiling: normalized_maximal_spin_ground_edge_only}
+  - {id: PN3-02, source_site: ground_rung_loop, runtime_case: N_1, verdict: duplicate, ceiling: PN3-01_specialization}
+  - {id: PN3-03, source_site: ground_rung_loop, runtime_case: N_2, verdict: duplicate, ceiling: PN3-01_specialization}
+  - {id: PN3-04, source_site: ground_rung_loop, runtime_case: N_4, verdict: duplicate, ceiling: PN3-01_specialization}
+  - {id: PN3-05, source_site: ground_rung_loop, runtime_case: N_9, verdict: duplicate, ceiling: PN3-01_specialization}
+  - {id: PN3-06, source_site: ground_rung_loop, runtime_case: N_16, verdict: duplicate, ceiling: PN3-01_specialization}
+  - {id: PN3-07, source_site: ground_rung_loop, runtime_case: N_100, verdict: duplicate, ceiling: PN3-01_specialization}
+  - {id: PN3-08, source_site: squared_ground_coefficient, runtime_case: symbolic_N, verdict: qualified, ceiling: algebraic_magnitude_square_not_FGR_rate}
+  - {id: PN3-09, source_site: squared_ratio, runtime_case: N_over_1, verdict: qualified, ceiling: equal_normalization_algebraic_ratio_not_rate_enhancement}
+  - {id: PN3-10, source_site: single_factor_limit, runtime_case: N_1, verdict: retained, ceiling: local_ladder_element_not_physical_Rabi_coupling}
+  - {id: PN3-11, source_site: square_root_limit, runtime_case: N_1, verdict: duplicate, ceiling: arithmetic_identity}
+  - {id: PN3-12, source_site: reject_linear_amplitude, runtime_case: N_4_ground_edge, verdict: qualified, ceiling: ground_edge_only_central_rungs_are_order_N}
+  - {id: PN3-13, source_site: reject_quadratic_square, runtime_case: symbolic_ground_edge, verdict: qualified, ceiling: bare_square_only_not_physical_rate}
+  - {id: PN3-14, source_site: free_symbol_quarantine, runtime_case: symbolic_expression, verdict: qualified, ceiling: lexical_provenance_guard_not_dependency_or_physics_closure}
+narrative_verdicts:
+  symmetric_spin_algebra: retained_with_explicit_normalization
+  ground_edge_sqrt_N: retained_conditionally
+  universal_amplitude_sqrt_N: rejected_general_rung_counterexample
+  FGR_rate_linear_N: rejected_missing_interaction_and_Golden_rule_premises
+  ordinary_Rabi_coupling: rejected_missing_Hamiltonian_coupling
+  nuclear_Dicke_or_phonon_map: rejected_missing_physical_identification
+status: complete

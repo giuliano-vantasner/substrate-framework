@@ -1,0 +1,25 @@
+campaign: P111
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-30/bridge_PN3_dicke_collective_scaling.py
+  sha256: da472079f418368926e27d22567cdf3ad8f32c836146ed8107ae2874f377b58b
+frozen_inputs:
+  proposal_snapshot: proposals/P111-pn3-symmetric-spin-ladder-audit/evidence/frozen-proposal.yaml
+  proposal_snapshot_sha256: 967417b5835737457e5ab181bbba8dfe1499967a624bc98b90ab16d0d9883eaf
+implementation:
+  module: src/substrate_framework/symmetric_spin.py
+  module_sha256: 2f7efd4c355e069bc02c86180fa98bbb44e43a0eba86e6aed8e17cfbf9138d4e
+  tests: tests/test_symmetric_spin.py
+  tests_sha256: 87a227c06b79763c24dfe6952c0a2d6a9140bd91480833d980a503dd0eaa2d08
+verification:
+  primary: proposals/P111-pn3-symmetric-spin-ladder-audit/verify.py
+  primary_sha256: 15735414d90681e8177de2855c332811ae69be8c7ff328780dc8807974cac989
+  independent: proposals/P111-pn3-symmetric-spin-ladder-audit/reviews/independent_spin_review.py
+  independent_sha256: de27e02df640e33b99092a9a3e2fa14ef9508766a099a872913c41bbb3aa4859
+exact_surface:
+  normalized_rung: s*sqrt((N-k)*(k+1))
+  ground_edge: s*sqrt(N)
+  central_scaling: order_N
+  unequal_symmetric_projection: a*sum(g_i)/sqrt(N)
+  verification_ceiling: finite_dimensional_symbolic_theorem_not_rate
+status: promotion_candidate

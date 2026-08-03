@@ -10,7 +10,7 @@ tags:
 - migration-PN3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P111 PN3 Symmetric Spin Ladder Audit
 
@@ -192,6 +192,22 @@ consumer has an explicit verdict, physical-rate premises are separated, the
 claim and source disposition are reviewed, all generated consumers agree, and
 the campaign debt ledger is empty. A familiar formula or passing source tally
 alone is insufficient.
+
+## Adjudicated Outcome
+
+P111 accepted C-SPN-002 in v0.93.0 and qualified PN3. Normalized subset
+counting, explicit tensor matrices, fresh bitmasks, and irreducible su(2)
+matrices agree on every excitation rung, edge, commutator, and Casimir. The
+ground-edge coefficient scales as square root N, while central rungs are order
+N. Unequal complex couplings split symmetric and dark strength and make the
+equal-phase premise explicit.
+
+PN3's bare coefficient square is not a rate. It has action-squared rather than
+inverse-time dimensions, and zero-interaction or zero-density countermodels
+leave the algebra unchanged while removing a conditional Golden-rule rate.
+No nuclear, phonon, interaction, coherence, spectral, material, supertransfer,
+or observed-rate map is promoted. Exact P111 work uses no NumPy, quadrature,
+or `np.trapz` compatibility path.
 
 ## Cross-References
 

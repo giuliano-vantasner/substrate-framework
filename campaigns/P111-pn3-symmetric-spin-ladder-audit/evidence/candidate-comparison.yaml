@@ -1,0 +1,21 @@
+campaign: P111
+selection_frozen_by: proposals/P111-pn3-symmetric-spin-ladder-audit/evidence/frozen-proposal.yaml
+selected:
+  - {id: B, reason: Normalized subset counting derives the complete all-rung coefficient and edge cases.}
+  - {id: C, reason: Independent irreducible matrices reproduce the ladder, commutator, and Casimir.}
+  - {id: D, reason: Unequal complex couplings expose the equal-phase premise and dark sector.}
+  - {id: E, reason: Zero-interaction and zero-density countermodels separate the coefficient square from a rate.}
+  - {id: F, reason: Ten direct and seventeen indirect pending consumers inherit only the algebraic ceiling.}
+  - {id: G, reason: No accepted theorem duplicates the normalized collective spin-half ladder.}
+reproduction_only:
+  - {id: A, reason: PN3 reproduces but tests only the ground edge and renames a square as a rate.}
+criteria_results:
+  dependency_closure: passed_for_abstract_finite_dimensional_theorem
+  normalization: passed_with_sum_operator_and_normalized_Dicke_states_explicit
+  independent_route: passed_by_bitmask_and_irreducible_matrix_constructions
+  all_rung_behavior: passed_and_corrects_ground_edge_extrapolation
+  unequal_couplings: passed_with_symmetric_and_dark_norm_split
+  rate_interpretation: source_physical_label_rejected
+  nonduplication: distinct_from_C-SPN-001_C-TH-001_and_reserved_rejected_C-REP-002
+decision: promote_C-SPN-002_and_qualify_PN3_physical_readings
+status: complete

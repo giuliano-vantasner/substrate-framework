@@ -1,0 +1,14 @@
+campaign: P111
+source_unit: PN3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-30/bridge_PN3_dicke_collective_scaling.py
+sha256: da472079f418368926e27d22567cdf3ad8f32c836146ed8107ae2874f377b58b
+git_blob: 780233dbf80acaf9a23ec6a29c8923915db0974d
+bytes: 7687
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN3_dicke_collective_scaling.py
+exit_status: 0
+static_check_sites: 9
+runtime_checks: 14
+terminal_tally: ALL 14 CHECKS PASS
+numpy_compatibility_event: none
+status: reproduced

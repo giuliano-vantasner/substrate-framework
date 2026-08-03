@@ -1,0 +1,26 @@
+campaign: P111
+proposed_claim: C-SPN-002
+mathematical_imports:
+  - finite-dimensional complex Hilbert spaces and tensor products
+  - orthonormal computational bases and normalized finite sums
+  - binomial coefficients and exact subset counting
+  - standard su(2) commutators and Casimir in an independently checked normalization
+accepted_claim_ceiling:
+  C-SPN-001: >-
+    Existing pure spin-one orbit and fixed-density functional theorem; no
+    tensor product, spin-half constituent, Dicke state, or collective ladder.
+  C-TH-001: >-
+    Existing declared two-state partition gate; explicitly no amplitude or
+    causal mechanism and therefore no collective interaction premise.
+source_dependencies: []
+physical_imports_not_allowed:
+  - nuclear two-level states or transition energy
+  - common phonon or bosonic bath and occupation state
+  - symmetric preparation or maintained coherence
+  - identical interaction strengths and phases
+  - interaction Hamiltonian or rotating-wave approximation
+  - resonance, continuum, spectral density, linewidth, or decoherence
+  - weak-coupling and long-time Golden-rule regime
+  - supertransfer, material, observed rate, or absolute scale
+dependency_closure: exact_mathematical_claim_only
+status: complete

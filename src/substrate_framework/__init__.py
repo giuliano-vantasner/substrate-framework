@@ -260,6 +260,13 @@ from .spin1_mean_field import (
     spin1_singlet_magnitude_squared,
     spin1_to_cartesian,
 )
+from .symmetric_spin import (
+    GroundCouplingLedger,
+    SymmetricSpinRung,
+    ground_coupling_ledger,
+    symmetric_spin_ladder_coefficient,
+    symmetric_spin_rung,
+)
 from .optical_geometry import (
     index_from_potential,
     optical_box_static_1d,
@@ -795,6 +802,7 @@ __all__ = [
     "ConditionalScaledSTFWaveform",
     "GovernanceError",
     "GravitySourceNormalizationLedger",
+    "GroundCouplingLedger",
     "GroupCoordinateKineticEvidence",
     "CheckFailure",
     "CheckLedger",
@@ -832,6 +840,7 @@ __all__ = [
     "SolverTolerances",
     "SourceAudit",
     "SourceMatch",
+    "SymmetricSpinRung",
     "SU3Invariants",
     "SU3TraceFiveCohomology",
     "VortexParameters",
@@ -1006,6 +1015,7 @@ __all__ = [
     "gaussian_sine_full_line_l2",
     "gaussian_sine_trace",
     "generic_rephasing_counts",
+    "ground_coupling_ledger",
     "gravity_source_normalization_ledger",
     "hamiltonian_density",
     "homogeneous_dirichlet_sine_gordon_energy",
@@ -1165,6 +1175,8 @@ __all__ = [
     "spherical_radial_second_moment_tensor",
     "spherical_shell_energy",
     "symmetric_two_level_gate",
+    "symmetric_spin_ladder_coefficient",
+    "symmetric_spin_rung",
     "symmetric_trace_free",
     "summarize_censored_first_passage",
     "sine_gordon_residual",

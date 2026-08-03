@@ -1,0 +1,27 @@
+campaign: P111
+attempt: 0003
+candidate: integrated_promotion_gate
+status: completed
+command: scripts/validate.sh
+started_at: '2026-08-07T22:45:00Z'
+preconditions:
+  - primary exact verifier passes all 75 checks
+  - independent bitmask and irreducible-matrix verifier passes all 37 checks
+  - focused package and adjacent dependency replay passes 40 tests
+  - all fourteen runtime source predicates have individual verdicts
+  - ten direct and seventeen transitive consumers are hash pinned
+  - registry, v0.93.0, current release, generated docs, generated memory, and the 218-unit source ledger are synchronized
+  - GitNexus reports LOW additive impact and zero affected execution processes
+compatibility_event: none
+completed_at: '2026-08-07T22:50:00Z'
+exit_status: 0
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+workflow_summary:
+  registry: 128 claims and 128 accepted
+  proposals: 0
+  migration_queue: 218 units, 109 pending, 0 partial
+  memory: 475 files valid
+  skill: valid
+  tests: 1017 passed in 91.07 seconds
+verdict: promotion_gate_passed
+debt: []

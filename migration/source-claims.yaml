@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 110
-  qualified: 96
+  pending_adjudication: 109
+  qualified: 97
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -6844,8 +6844,38 @@ units:
   dynamic_check_calls: 1
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SPN-002
+  qualification: PN3's standard maximal-spin ladder formula, normalized ground-edge coefficient hbar*sqrt(N),
+    and N=1 specialization survive inside the stronger C-SPN-002 theorem. P111 constructs the normalized
+    Dicke states, derives every excitation rung by subset counting, independently closes the irreducible
+    su(2) commutator and Casimir, and exposes that central rungs are order N rather than square-root N.
+    The collective sum and normalized symmetric sector are explicit premises. With unequal complex site
+    couplings, the symmetric projection is proportional to sum(g_i)/sqrt(N), the complete image norm depends
+    on sum(|g_i|^2), and phase cancellation can leave a wholly dark image. PN3's source squares the bare
+    ladder coefficient and calls the result a Fermi-Golden-Rule rate, but that square has action-squared
+    dimensions and the source supplies no interaction Hamiltonian, coupling normalization, bosonic occupation,
+    energy match, final-state density, linewidth, decoherence, or Golden-rule regime. Zero-interaction
+    and zero-density countermodels preserve the coefficient and give zero rate. No physical nuclear two-level
+    states, phonon bath, coherent preparation, supertransfer, material mechanism, or observed rate is
+    accepted.
+  evidence:
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/reviews/source_adjudication.md
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/source-reproduction.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/source-audit.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/check-adjudication.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/dependency-audit.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/consumer-audit.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/candidate-comparison.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/evidence/primary-provenance.yaml
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/verify.py
+  - campaigns/P111-pn3-symmetric-spin-ladder-audit/reviews/independent_spin_review.py
+  - memory/vantasner/decisions/C-SPN-002-review.md
+  note: P111 closes 75 primary and 37 independent exact checks plus 14 focused package tests. Ten direct
+    and seventeen transitive pending consumers inherit only the normalized finite-dimensional algebraic
+    ceiling. PN3 and all exact P111 work use no NumPy or sampled quadrature and have no np.trapz compatibility
+    event.
 - source_unit: PN4
   phase: phase-30
   path: merged-framework/bridges/phase-30/bridge_PN4_lossy_exchange_and_guard.py
