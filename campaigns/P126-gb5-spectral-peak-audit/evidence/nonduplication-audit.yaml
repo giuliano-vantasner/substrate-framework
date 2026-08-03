@@ -1,0 +1,14 @@
+campaign: P126
+source_unit: GB5
+prior_surfaces:
+  P110: exact quotient remainder plateaus jumps scaling representation and physical ceiling
+  P123: quotient-zero mean-error limit-path finite-guard and spectral-overread ceiling
+distinct_audit_surface:
+  - finite spectral countermeasures and mode edge cases
+  - source data-flow and physical-spectrum adjudication
+assessment: The identity is definitional and the counterexamples qualify source interpretation without a positive governed spectrum.
+new_claim: null
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

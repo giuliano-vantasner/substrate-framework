@@ -1,0 +1,7 @@
+campaign: P126
+source: {path: merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py, sha256: 0f7f1a4a1ba4ab548b27de1924c84af984971eb84f50de3544045a3150dbec3e, git_blob: 1655a6a60a3d3adbba89998948de4269e136cd26}
+freeze: {path: campaigns/P126-gb5-spectral-peak-audit/evidence/frozen-proposal.yaml, sha256: 4333c27de763b8a8411ecae03f933d00988caa0c43ffcd7b7290588bc81590f1}
+primary: {path: campaigns/P126-gb5-spectral-peak-audit/verify.py, sha256: ba8001c206f4c13277898b0578a1943db189e9adac86be9ccc1d36867e2c93ad, route: exact division identity scale finite spectra edge cases AST data flow physical ceilings dependencies consumers and nonduplication, tally: 42}
+independent: {path: campaigns/P126-gb5-spectral-peak-audit/reviews/independent_spectrum_review.py, sha256: 9fb2234f7ec151c5fd93c99e0dd8f99fc324d3d10a959a9ab72bf356886ad95c, route: fresh finite support weighted modes partitions jumps scaling ties and detector reweighting, tally: 15}
+independence: The independent route imports neither the primary verifier nor any spectrum or quotient package helper.
+compatibility_event: none

@@ -2269,6 +2269,49 @@ units:
       pass. C-BRN-001 subsumes the reusable surface, so no canonical API,
       accepted claim, or release is added. No sampled integration or NumPy
       compatibility event occurs.
+  GB5:
+    disposition: qualified
+    accepted_claims: []
+    qualification: >-
+      GB5's equation peak(omega_ph)=omega_ph, derivative one, strict
+      monotonicity, and weight-symbol absence are exact only as a declared
+      identity. GB2 and PN2 provide qualified quotient-remainder arithmetic and
+      no constituent energies or spectrum. At total ten and divisor three, the
+      quotient is three with remainder one; an added equal-quanta ansatz peaks
+      at three, but equally energy-conserving spectra peak at two or five while
+      the same arithmetic ledger remains true. Quotient zero supplies no
+      divisor-energy entry, quotient one can tie with its remainder, detector
+      weighting can move the mode, and zero occupation has none. At fixed
+      total, changing the divisor changes quotient and remainder stairwise;
+      common scaling preserves the quotient while moving the asserted peak.
+      The source sweep copies its input list, its conservation check rearranges
+      a defined remainder without testing the bound, tuple checks accept
+      arbitrary empirical values, and the final no-fit predicate is literal
+      True. The pinned paper supports the provenance of order-1-2-keV soft
+      X-rays and optical excitation records, but GB5 extracts no modal value,
+      distribution, uncertainty, or common observable. No state, interaction,
+      matrix element, density of states, occupation, linewidth, broadening,
+      detector response, material mapping, emitted quanta, phonon identity,
+      physical peak, observed line, yield, heat, or observation is accepted.
+    evidence:
+      - campaigns/P126-gb5-spectral-peak-audit/reviews/source_adjudication.md
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/source-reproduction.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/source-audit.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/check-adjudication.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/input-provenance.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/dependency-audit.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/consumer-audit.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/candidate-comparison.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/evidence/primary-provenance.yaml
+      - campaigns/P126-gb5-spectral-peak-audit/verify.py
+      - campaigns/P126-gb5-spectral-peak-audit/reviews/independent_spectrum_review.py
+      - memory/vantasner/decisions/GB5-qualified-review.md
+    note: >-
+      P126 closes 42 primary and 15 independent exact checks with no failed
+      scientific route. Three consumer hashes retain P123's 101-check replay.
+      No claim, API, release, sampled integration, or NumPy compatibility event
+      is added.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

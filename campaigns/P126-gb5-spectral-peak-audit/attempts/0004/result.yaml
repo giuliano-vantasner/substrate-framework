@@ -1,0 +1,29 @@
+campaign: P126
+attempt: 0004
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P126-gb5-spectral-peak-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P126-gb5-spectral-peak-audit/reviews/independent_spectrum_review.py
+  - scripts/validate.sh
+  - git diff --check
+expected: {source_tally: 13, primary_tally: 42, independent_tally: 15, accepted_claims: 133, source_units: 218, pending_units: 94, qualified_units: 112, debt: []}
+results:
+  source: {exit_code: 0, tally: 13}
+  primary: {exit_code: 0, tally: 42}
+  independent: {exit_code: 0, tally: 15}
+  durable_consumers: {scripts: 3, checks: 101, hashes_unchanged: true}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 94, qualified_units: 112}
+  memory: {files_valid: 515}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: not_asserted}
+  diff_check: {exit_code: 0}
+result: >-
+  GB5 is terminally qualified with no claim, package API, or release change.
+  Native source, exact primary, fresh independent, durable consumer, governance,
+  queue, memory, skill, full-suite, and whitespace gates close with no debt.
+  The nested tail was not forwarded, so no pytest duration is invented.
+compatibility_event: none
+next_attempt: Commit the P126 adjudication, checkpoint the parent separately, and continue with GB6.

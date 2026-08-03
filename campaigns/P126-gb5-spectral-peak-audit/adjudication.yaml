@@ -1,0 +1,39 @@
+campaign: P126
+title: GB5 spectral-peak identity and finite-measure audit
+source_baseline: substrate@6d1f4e0
+source_units: [GB5]
+base_release: v0.98.0
+release_after_adjudication: v0.98.0
+adjudicated_at: '2026-08-08T15:45:00Z'
+selected_candidates: [B, C, D, E, F, G, H]
+competing_candidates: [{id: A, decision: reproduction_evidence_only}]
+claims: []
+reviewed_existing: []
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  source_reproduction: attempts/0002/result.yaml
+  exact_routes: attempts/0003/result.yaml
+  terminal_gate: attempts/0004/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_spectrum_review.py
+  source_reproduction_record: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/GB5-qualified-review.md
+source_disposition: {GB5: qualified}
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P126-gb5-spectral-peak-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P126-gb5-spectral-peak-audit/reviews/independent_spectrum_review.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

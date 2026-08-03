@@ -1,0 +1,13 @@
+campaign: P126
+candidates:
+  A: {verdict: retained_as_source_evidence, reason: Native GB5 reproduces thirteen predicates but grants no spectral authority.}
+  B: {verdict: selected, reason: The identity and derivative survive only as definitions.}
+  C: {verdict: selected_with_explicit_extra_premise, reason: Equal-quanta support can peak at omega for multiplicity above one but is not derived by division.}
+  D: {verdict: selected, reason: Alternative exact spectra refute uniqueness of the mode.}
+  E: {verdict: selected, reason: Quotient and remainder change stairwise when the divisor varies.}
+  F: {verdict: selected, reason: Scale and AST audits separate local no-fit from validation.}
+  G: {verdict: selected, reason: Zero-coupling occupation and detector models defeat the physical reading.}
+  H: {verdict: selected, reason: No accepted claim or distinct reusable spectral theorem survives.}
+selection: [B, C, D, E, F, G, H]
+comparators_used_for_selection: []
+debt: []

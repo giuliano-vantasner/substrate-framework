@@ -1,0 +1,24 @@
+campaign: P126
+attempt: 0002
+status: verified
+candidates: [A]
+commands:
+  - rg -n 'np\.trapz|np\.trapezoid|trapezoid_integral' /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py
+expected:
+  source_sha256: 0f7f1a4a1ba4ab548b27de1924c84af984971eb84f50de3544045a3150dbec3e
+  terminal_tally: ALL 13 CHECKS PASS
+  compatibility_event: none
+results:
+  source_sha256: 0f7f1a4a1ba4ab548b27de1924c84af984971eb84f50de3544045a3150dbec3e
+  exit_code: 0
+  terminal_tally: ALL 13 CHECKS PASS
+  compatibility_preflight: {np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0}
+result: >-
+  GB5 reproduces thirteen runtime checks from eleven static sites. Native
+  success validates its assigned identity and finite no-fit guard only; it does
+  not construct a spectral measure or derive its mode from conservation.
+compatibility_event: none
+next_attempt: >-
+  Classify every predicate and derive exact arithmetic, finite-spectrum,
+  scale, data-flow, and physical countermodels.

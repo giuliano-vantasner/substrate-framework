@@ -1,0 +1,21 @@
+campaign: P126
+source_unit: GB5
+inputs:
+  Omega: {role: total energy, provenance: free_symbol, authority: qualified arithmetic only}
+  omega_ph: {role: divisor and asserted peak, provenance: free_positive_symbol, authority: no accepted phonon or material scale}
+  weight_regimes: {role: claimed irrelevant alternatives, provenance: named_only, authority: none}
+  Klimov_band:
+    source_record: /home/dan/substrate/engineering/screening/Detonation_in_Hydrogen-Carbon_Cluster_Heterogeneou.pdf
+    paper_text: describes soft X-ray quantum energy of order 1-2 keV and a typical spectrum figure
+    source_use: inert tuple only
+    qualification: no digitized distribution modal estimator uncertainty or pointwise comparison
+  optical_lines:
+    source_record: same local paper
+    paper_text: lists N II 23.13 eV and C II 20.95 and 27.41 eV excitation energies
+    source_use: rounded inert tuple 23 and 27 eV
+    qualification: excitation energies are not a derived soft-emission modal energy
+findings:
+  - Comparator provenance is locally reproducible but excluded from selection and validation.
+  - Common scaling moves omega_ph and any asserted peak while preserving the quotient.
+  - The source's statement that many quanta reconcile a meV-eV peak with a keV band changes total energy or multiplicity, not the identity's peak location.
+debt: []

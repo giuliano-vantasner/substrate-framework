@@ -1,0 +1,19 @@
+campaign: P126
+source_unit: GB5
+static_call_sites: 11
+runtime_predicate_count: 13
+predicates:
+  - {index: 1, label: peak_equals_unit, verdict: exact_assigned_identity_spectral_interpretation_rejected, reason: peak is assigned to omega_ph before the check; no measure or mode is derived.}
+  - {index: 2, label: identity_derivative, verdict: exact_definitional, reason: Differentiating omega_ph with respect to itself gives one and adds no dynamics.}
+  - {index: 3, label: positive_slope, verdict: exact_definitional, reason: Positivity follows from the assigned identity, not a spectral response model.}
+  - {index: 4, label: linear_weight_independence, verdict: syntactic_identity_only, reason: The assigned peak contains no weight by construction.}
+  - {index: 5, label: exponential_weight_independence, verdict: syntactic_identity_only, reason: The loop never inserts the weight into a spectral measure.}
+  - {index: 6, label: power_weight_independence, verdict: syntactic_identity_only, reason: The loop's wexpr-is-not-None conjunct is tautological.}
+  - {index: 7, label: quotient_remainder_consistency, verdict: rearrangement_only, reason: The check expands a defined remainder and does not test its half-open bound or constituent energies.}
+  - {index: 8, label: sampled_monotonicity, verdict: copied_input_regression, reason: peaks is a direct copy of omega_band, so the sample adds no oracle independent of the identity.}
+  - {index: 9, label: sampled_equality, verdict: copied_input_tautology, reason: Each float is subtracted from itself.}
+  - {index: 10, label: symbolic_data_gate, verdict: exact_local_no_numeric_peak, reason: The assigned expression is symbolic but that does not validate it as a spectrum.}
+  - {index: 11, label: Klimov_tuple_gate, verdict: inert_type_check_only, reason: Any tuple values pass; the check audits neither the paper nor data flow beyond this local expression.}
+  - {index: 12, label: optical_tuple_gate, verdict: inert_type_check_only, reason: Any tuple values pass and no spectrum is confronted.}
+  - {index: 13, label: qualitative_no_fit_note, verdict: vacuous_true_sentinel, reason: The condition is literal True and cannot fail under a fitted or false spectral claim.}
+summary: {source_predicates_reproduced: 13, accepted_exact_claims: [], terminal_disposition: qualified}

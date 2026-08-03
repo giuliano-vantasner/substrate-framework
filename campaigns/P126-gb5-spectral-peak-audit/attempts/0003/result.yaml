@@ -1,0 +1,21 @@
+campaign: P126
+attempt: 0003
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P126-gb5-spectral-peak-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P126-gb5-spectral-peak-audit/reviews/independent_spectrum_review.py
+  - gitnexus analyze --index-only
+  - gitnexus detect-changes --repo substrate-framework
+results:
+  primary: {exit_code: 0, tally: 42}
+  independent: {exit_code: 0, tally: 15}
+  durable_consumers: {scripts: 3, checks: 101, hashes_unchanged: true, evidence: campaigns/P123-gb2-subdivision-kinematics-audit/evidence/consumer-audit.yaml}
+  gitnexus: {canonical_changes: 0, processes_affected: 0}
+result: >-
+  Exact arithmetic and fresh finite-spectrum routes agree that the identity is
+  definitional and conservation does not select a modal energy. Edge cases,
+  weight and detector mutations, source data flow, the GB2 cycle, durable
+  consumers, and nonduplication close without a canonical change.
+compatibility_event: none
+next_attempt: Complete terminal review, disposition, memory, queue synchronization, and the integrated gate.

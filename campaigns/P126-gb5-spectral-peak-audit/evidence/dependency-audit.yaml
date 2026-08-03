@@ -1,0 +1,10 @@
+campaign: P126
+source_unit: GB5
+dependencies:
+  GB2: {disposition: qualified, accepted_claims: [], surviving_surface: exact quotient remainder bookkeeping, excluded_surface: constituent energies spectrum phonon mode rate and material process}
+  PN2: {disposition: qualified, accepted_claims: [], surviving_surface: exact selected quotient arithmetic, excluded_surface: physical subdivision equal quanta spectrum and rate}
+candidate_cycle: [GB2, GB5, GB2]
+cycle_grants_authority: false
+accepted_spectral_claims: []
+verdict: Qualified arithmetic neither derives nor receives spectral authority through the GB2-GB5 cycle.
+debt: []

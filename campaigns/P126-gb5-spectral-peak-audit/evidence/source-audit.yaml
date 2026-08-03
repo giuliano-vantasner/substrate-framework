@@ -1,0 +1,20 @@
+campaign: P126
+source_unit: GB5
+surviving_exact_surface:
+  - The declared identity p(omega)=omega has derivative one and is strictly increasing.
+  - Exact quotient and half-open remainder arithmetic survives only through qualified P110 and P123 evidence.
+  - The source file does not use its named empirical values to select or numerically fit the assigned symbolic expression.
+source_oracle_limits:
+  - No spectral measure support weights occupations resolution or tie convention is constructed.
+  - The conservation predicate is a rearrangement of the defined remainder and omits the remainder bound.
+  - Alternative exact partitions of one total energy have different modes while the quotient identity remains true.
+  - Quotient zero gives no entries at omega; quotient one with a nonzero remainder can tie under equal counting weights.
+  - The sampled sweep copies its input list and the final no-fit predicate is literal True.
+  - Large multiplicity changes total energy or line weight, not the per-quantum modal location asserted by the identity.
+physical_ceiling:
+  - No states interaction matrix element phase space density occupation linewidth broadening detector material or measurement map is supplied.
+  - Zero coupling or zero occupation leaves arithmetic intact and gives no emission spectrum or peak.
+  - No emitted quanta phonon identity physical spectral peak material line observation yield or heat is accepted.
+headline_verdict: declared_identity_exact_spectral_peak_and_physical_prediction_rejected
+compatibility_event: none
+debt: []

@@ -1,0 +1,17 @@
+campaign: P126
+root_source_unit: GB5
+direct_consumers:
+  - {source_unit: GB2, disposition: qualified, checks: 19, relation: circular_arithmetic_predecessor, evidence: campaigns/P123-gb2-subdivision-kinematics-audit/evidence/source-reproduction.yaml}
+  - {source_unit: GB6, disposition: pending_adjudication, checks: 29, relation: lexical_firewall_consumer}
+transitive_consumers:
+  - {source_unit: WN7, disposition: pending_adjudication, checks: 59, relation: GB6_firewall_descendant}
+durable_replay:
+  evidence: campaigns/P123-gb2-subdivision-kinematics-audit/evidence/consumer-audit.yaml
+  noncyclic_scripts: 3
+  checks: 101
+  hashes_unchanged_at_P126: true
+  exit_statuses_all_zero: true
+current_root_reproduction: {source_unit: GB5, checks: 13, exit_status: 0}
+compatibility_preflight: {scripts_scanned: 3, np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0, compatibility_events: 0}
+interpretation: The cycle and lexical guards supply no spectral measure physical channel material peak or observation.
+debt: []

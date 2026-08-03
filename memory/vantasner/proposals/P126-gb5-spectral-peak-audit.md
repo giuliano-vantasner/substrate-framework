@@ -2,7 +2,7 @@
 description: Audit GB5's peak identity against exact subdivision arithmetic and the requirements for a spectrum
 author: vantasner
 created: '2026-08-08T15:15:00Z'
-updated: '2026-08-08T15:15:00Z'
+updated: '2026-08-08T15:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-GB5
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P126 GB5 Spectral Peak Audit
 
@@ -179,6 +179,18 @@ units, scale, data gate, every GB5 predicate, physical spectrum ceilings,
 dependencies, cycles, consumers, nonduplication, terminal disposition, and an
 empty debt ledger agree. A unit identity, derivative one, comparator absence,
 or pass tally is not sufficient alone.
+
+## Adjudicated Outcome
+
+P126 terminally qualifies GB5 without changing v0.98.0. Forty-two primary and
+fifteen independent checks close exact arithmetic, the declared identity,
+finite spectral measures, alternative partitions, quotient-zero and tie cases,
+scale, data flow, physical countermodels, dependencies, consumers, and
+nonduplication. Three equal-total spectra peak at different energies; the
+source sweep copies its inputs and its final no-fit guard is literal `True`.
+The pinned empirical values are unused comparator provenance, not validation.
+No positive spectral theorem, claim, API, release, or NumPy compatibility event
+survives.
 
 ## Cross-References
 
