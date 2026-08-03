@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-08T00:00:00Z'
+updated: '2026-08-08T01:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -24,14 +24,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
 The current accepted frontier is `v0.94.0`, containing one hundred twenty-nine
-claims. Its latest addition is C-RES-001's exact finite paired complex-resolvent
-theorem, including declared block conventions, energy dependence, cancellation
-locus, loss limits and unique peak, and pair-count normalization. The latest
-terminal adjudication is P112: PN4 is qualified because its specialized E=0
-matrix identity survives, but its zero-loss no-transfer, numerical-refinement,
-physical-channel, open-system, probability, rate, nuclear, phonon, material,
-magnitude, and observation readings do not. PN5 and later consumers remain
-pending.
+claims. Its latest addition remains C-RES-001's exact finite paired complex-
+resolvent theorem. The latest terminal adjudication is P113: PN5 is qualified
+without a release change because its exact quotient evidence is already
+governed by immutable P110 and its pair optimum, peak, and limits duplicate
+C-RES-001. Selected external input overlap establishes no quantum subdivision
+process, mechanism, prediction, rate, yield, material scale, magnitude, or
+observation. PN6 and later consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -57,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 108 pending, 0 partially migrated, 3 migrated, 98 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 107 pending, 0 partially migrated, 3 migrated, 99 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -202,6 +201,7 @@ Attempts are append-only and individually reproducible.
 | 0131 | P110 exact quotient, remainder, representation, interval, and PN2 interpretation audit | `campaigns/P110-pn2-energy-subdivision-count-audit/attempts/0001` through `0004`, then terminal no-release boundary | PN2 qualified through existing bookkeeping ceilings with v0.92.0 unchanged; commit `263014e` | Fifty-four primary and fifteen independent exact checks reproduce the selected counts, derive sharp half-open plateaus and divisor jumps, propagate rectangular input bounds, and expose a binary-float floor counterexample. The source's seven values span 2.4e7 through 2.4e10, not the loose envelope endpoints. C-SG-019 and FS4 supply no quantum process; a zero-matrix-element countermodel leaves the quotient unchanged and the rate zero. The cited v2 paper contains no explicit retraction and its 1.3-percent number is a component ratio. GitNexus reports LOW record-only risk and zero affected processes; the single integrated workflow passes all 1,003 tests with 471 memory files and the physics skill valid. | Audit PN3's exact symmetric-spin ladder matrix element, representation and normalization premises, general-rung versus ground-rung scaling, and rate interpretation without importing nuclear two-level systems, a common phonon mode, an interaction Hamiltonian, Fermi's golden rule, decoherence, state preparation, or a material realization |
 | 0132 | P111 normalized symmetric-spin ladder, unequal-coupling, rate-ceiling, and PN3 audit | `campaigns/P111-pn3-symmetric-spin-ladder-audit/attempts/0001` through `0003`, then promotion boundary | accepted as C-SPN-002 with PN3 qualified in v0.93.0; commit `df3df9f` | Seventy-five primary and thirty-seven independent checks plus fourteen focused package tests derive every normalized Dicke rung by subset counting, bitmasks, and irreducible matrices; close the commutator and Casimir; and expose operator-scale and phase sensitivity. The ground edge is square-root N, central rungs are order N, and unequal phases can move all strength into a dark sector. The source's bare square has action-squared rather than rate dimensions; zero interaction and zero density leave the ladder while removing the rate. GitNexus reports LOW additive impact and zero affected processes; the single integrated workflow passes all 1,017 tests with 475 memory files and the physics skill valid. | Audit PN4's lossy symmetric-detuning Schur-complement model without importing forward-dependent PN5, treating a non-Hermitian resolvent insertion as derived open-system dynamics, equating a nonzero effective matrix element with a rate or physical channel, or inheriting PN1-PN3's rejected quantum and material readings |
 | 0133 | P112 exact finite paired complex-resolvent, loss-regime, dynamics-ceiling, and PN4 audit | `campaigns/P112-pn4-lossy-paired-resolvent-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-RES-001 with PN4 qualified in v0.94.0; commit `fb4ef2c` | Forty-nine primary and twenty independent exact checks plus fourteen focused package tests derive the energy-dependent pair by rational summation and fresh full-matrix inversion; close sign, half-width, loss limits, unique peak, unequal-product cancellation, and size normalization; and expose zero-loss full transfer at second order. PN4's source run passes 27 predicates but its own zero-loss B component is nonzero, its L comparison enlarges the model, and its non-Hermitian component is not a normalized open-system probability. GitNexus reports LOW additive impact and zero affected processes; the single integrated workflow passes all 1,031 tests with 479 memory files and the physics skill valid. | Audit PN5's externally supplied 24 MeV and meV-to-eV band, exact quotient reuse, and C-RES-001 single-pair peak without treating numerical decade overlap as mechanism, prediction, rate, material scale, or validation of the rejected PN2 and PN4 narratives |
+| 0134 | P113 exact selected-count, representation, duplicate pair-optimum, and PN5 audit | `campaigns/P113-pn5-magnitude-reproduction-audit/attempts/0001` through `0004`, then terminal no-release boundary | PN5 qualified through immutable P110 evidence and C-RES-001 with v0.94.0 unchanged; commit `1e669ea` | Fifty-eight primary and twenty-one independent exact checks derive the selected quotient and remainder ledger, sharp plateaus, exact extrema, scale covariance, arbitrary-target family, C-RES-001 optimum, peak, and limits. The exact range is 24 million through 24 billion; 30 meV gives 800 million only for the external 24 MeV input. A preserved dimension-ledger implementation failure precedes repair. The source grid is regression-only and its tolerance accepts nearby wrong optima. GitNexus reports no canonical change and zero affected processes; the single integrated workflow passes all 1,031 tests with 481 memory files and the physics skill valid. | Audit PN6's arbitrary finite family of symmetric detuning pairs and equal real coupling products against C-RES-001's general block theorem, including exact sum, positivity conditions, cancellation locus, detuning degeneracy, phases, nonuniform loss, size normalization, and physical ceiling |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1050,11 +1050,24 @@ or rate. H5a, H5b, H7, and the literature wording remain at their audited
 algebraic, presence-marker, lexical, and attribution ceilings. P112 uses no
 sampled integration and triggers no NumPy compatibility event.
 
+P113 adds no claim, release, or package API. Exact Fraction, Decimal,
+scaled-integer, and symbolic routes reproduce PN5's seven selected counts and
+show their exact range is 24 million through 24 billion, much narrower than
+the advertised containing envelope. The counts are scale-free under common
+rescaling and arbitrary under selected unit inputs. The single-pair optimum,
+peak, and endpoint limits duplicate C-RES-001; the source's grid adds only
+regression coverage. Its named arXiv v2 record contains neither an explicit
+retraction nor the bare floor formula. PN5 is qualified because neither
+selected input overlap nor a finite toy matrix element supplies a predicted
+magnitude, quantum process, bath, probability, rate, yield, material scale, or
+observation. P113 uses no sampled integration and triggers no NumPy
+compatibility event.
+
 ## Canonicalization
-The registry, `v0.94.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-nine accepted claims. P001 through P112 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 108 pending, 0 partial, 3 migrated, 98 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.94.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-nine accepted claims. P001 through P113 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 107 pending, 0 partial, 3 migrated, 99 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 108 pending, 3 migrated, 98 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN5, pinned at SHA-256 `8b2a35a873d9414653f9add48ceeed50d0d32142064bd67b95845b92aeaf87eb`. Its queue entry supplies 24 MeV and a meV-to-eV band, reuses PN2's floor count, and reuses PN4's single-pair magnitude to report the selected count decades and the exact toy optimum. P113 must freeze input provenance, exact unit conversions, quotient interval image, floor endpoint sensitivity, C-RES-001 normalization and physical ceiling, numerical decade-set criteria, literature wording, nonduplication, and every downstream consumer before source execution. It must not convert externally selected scale overlap into derivation, mechanism, prediction, rate, yield, material realization, or validation of PN2's rejected quantum-process reading or PN4's rejected physical-channel narrative.
+The effort remains active. D4 is discharged, but D1 remains open with 107 pending, 3 migrated, 99 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN6, pinned at SHA-256 `50ebbf97568fef13e69fc926db3e57457aba4685f3140ac8786bed525e71289f`. Its queue entry generalizes PN4's E=0 equal-product symmetric-pair sum to arbitrary finite L, real nonzero detunings, real couplings, and uniform positive loss, claiming an exact zero-loss null and strictly nonzero positive-loss element. P114 must freeze its relationship to C-RES-001's arbitrary finite block and pair specializations, signs, coupling products and phases, detuning degeneracy, zero-coupling counterexamples, uniform versus nonuniform loss, finite-sum cancellation and positivity conditions, size normalization, asymptotic regimes, source dependencies, nonduplication, and every consumer before source execution. It must not promote an already governed specialization, treat a phenomenological imaginary shift as a derived bath, or infer a physical channel, probability, rate, nuclear or phonon mechanism, material realization, magnitude, or observation.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
