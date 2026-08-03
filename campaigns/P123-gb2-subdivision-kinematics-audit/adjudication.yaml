@@ -1,0 +1,58 @@
+campaign: P123
+title: GB2 quotient kinematics and physical subdivision audit
+source_baseline: substrate@6d1f4e0
+source_units: [GB2]
+base_release: v0.98.0
+release_after_adjudication: v0.98.0
+adjudicated_at: '2026-08-08T12:45:00Z'
+selected_candidates:
+  - {id: B, reason: Exact Euclidean division closes quotient zero uniqueness and half-open remainder.}
+  - {id: C, reason: Exact finite mean error and path-qualified relative limits close the only distinct GB2 algebra.}
+  - {id: D, reason: Exact plateaus left continuity right jumps weak monotonicity scaling and representation sensitivity close.}
+  - {id: E, reason: P090 and P110 nonduplication leaves no new claim package API or release.}
+  - {id: F, reason: PN2 grants arithmetic only and the GB2-GB5 candidate cycle grants no authority.}
+  - {id: G, reason: Unequal partitions zero coupling and common scaling reject the physical headline.}
+  - {id: H, reason: Independent predicate impact consumer and governance review closes terminal qualification.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-BRN-001, decision: unchanged_physical_channel_and_subdivision_ceiling}
+reviewed_historical:
+  - {campaign: P090, decision: unchanged_governed_floor_remainder_nonduplication_surface}
+  - {campaign: P110, decision: unchanged_exact_quotient_and_physical_subdivision_ceiling}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  source_reproduction: attempts/0002/result.yaml
+  continuity_convention_failure: attempts/0003/result.yaml
+  atomic_patch_failure: attempts/0004/result.yaml
+  consumer_replay: attempts/0005/result.yaml
+  symbolic_normal_form_failure: attempts/0006/result.yaml
+  mutation_fixture_failure: attempts/0007/result.yaml
+  exact_routes: attempts/0008/result.yaml
+  terminal_gate: attempts/0009/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_division_review.py
+  source_reproduction_record: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/GB2-qualified-review.md
+source_disposition:
+  GB2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB2_subdivision_kinematics.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/reviews/independent_division_review.py
+  - hash-pinned consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

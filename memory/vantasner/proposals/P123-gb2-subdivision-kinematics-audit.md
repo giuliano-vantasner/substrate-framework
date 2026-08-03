@@ -2,7 +2,7 @@
 description: Audit GB2's exact quotient kinematics and unsupported physical subdivision reading
 author: vantasner
 created: '2026-08-08T12:00:00Z'
-updated: '2026-08-08T12:00:00Z'
+updated: '2026-08-08T12:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-GB2
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P123 GB2 Subdivision Kinematics Audit
 
@@ -61,8 +61,9 @@ Let `Omega>=0` and `omega>0` be exact quantities in one declared unit. Then
 
 The mean `Omega/n` exists only for `n>=1` and equals `omega+r/n`, so its exact
 nonnegative error from `omega` is `r/n<omega/n`. Any asymptotic claim must state
-which scale is fixed. The quotient is a weakly nonincreasing staircase in the
-divisor, not a differentiable or strictly decreasing response.
+which scale is fixed. The quotient is a weakly nonincreasing, left-continuous
+staircase in the divisor, with a downward jump immediately to the right of
+each positive exact divisor. It is not differentiable or strictly decreasing.
 
 Integers, rationals, or exact decimal construction govern threshold-adjacent
 floors. P090 and P110 may be used only as historical exact and nonduplication
@@ -137,6 +138,11 @@ dependency, consumer, or verifier failure is preserved append-only with its
 mechanism and next materially different route. Failure of the physical
 subdivision reading does not end either the exact audit or the corpus effort.
 
+Attempt 0003 preserves a post-freeze convention error: the immutable manifest
+said right-continuous, while exact one-sided evaluation makes the divisor
+staircase left-continuous. The active proposal is corrected without changing
+the frozen record, candidate set, criteria, comparator gate, or source verdict.
+
 ## Debt Ledger
 
 P123 tracks the source hash and native execution, all eleven static sites and
@@ -165,6 +171,23 @@ weak monotonicity, finite error, limiting path, every GB2 predicate,
 dependencies, cycles, consumers, nonduplication, terminal disposition, and an
 empty debt ledger agree. A floor identity, informal arrow, or pass tally is not
 sufficient alone.
+
+## Adjudicated Outcome
+
+P123 terminally qualifies GB2 without changing v0.98.0. Fifty-five primary and
+twenty independent exact checks close quotient zero, uniqueness, half-open
+remainder, plateaus, left continuity, right jumps, weak monotonicity, common
+scaling, exact representation, finite mean error, path-qualified limits,
+finite-guard mutations, physical countermodels, dependencies, consumers, and
+nonduplication.
+
+The physical headline does not close. An arithmetic mean assigns no individual
+quantum energy, the GB2-GB5 spectral dependency is circular, zero coupling
+leaves the quotient intact with zero rate, and common scaling moves the free
+energy unit. GB5, GB6, and WN7 replay 101 checks but inherit no state, spectrum,
+phonon, channel, material, magnitude, yield, heat, or observation. P090 and
+P110 already govern the exact bookkeeping, so no claim, API, or release is
+duplicated. No sampled integration or NumPy compatibility event occurs.
 
 ## Cross-References
 

@@ -20,7 +20,7 @@ invariants:
     The quotient-zero regime Omega<omega is valid arithmetic, but Omega/n is
     undefined there. Any per-item mean therefore requires n>=1.
   - >-
-    For fixed positive Omega, n is a right-continuous nonincreasing staircase
+    For fixed positive Omega, n is a left-continuous nonincreasing staircase
     in omega with exact plateau and one-sided divisor boundaries; it is not
     strictly decreasing or differentiable at its jumps.
   - >-
@@ -84,4 +84,9 @@ comparators_blinded_until: >-
   immutable copy, and the proposal memory pass repository validation. Queue
   metadata already exposes the advertised equations and conclusions, so only
   predicate-detail and source-output blinding remains.
-status: draft
+status: accepted
+amendments:
+  - attempt: 0003
+    field: invariants.divisor_staircase_continuity
+    change: right-continuous corrected to left-continuous at exact positive divisors
+    effect: No candidate selection criterion comparator or source conclusion changed.

@@ -1,0 +1,50 @@
+campaign: P123
+attempt: 0009
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB2_subdivision_kinematics.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/reviews/independent_division_review.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  source_tally: 19
+  primary_tally: 55
+  independent_tally: 20
+  consumer_scripts: 3
+  consumer_checks: 101
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 97
+  qualified_units: 109
+  memory_files: 509
+  pytest_tests: 1090
+  debt: []
+results:
+  source: {exit_code: 0, tally: 19}
+  primary: {exit_code: 0, tally: 55}
+  independent: {exit_code: 0, tally: 20}
+  consumers:
+    GB5: {exit_code: 0, tally: 13}
+    GB6: {exit_code: 0, tally: 29}
+    WN7: {exit_code: 0, tally: 59}
+    total: {scripts: 3, checks: 101}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 97, qualified_units: 109}
+  memory: {files_valid: 509}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: 106.72}
+  diff_check: {exit_code: 0}
+result: >-
+  GB2 is terminally qualified with no claim, package API, or release change.
+  Native source, exact primary, fresh independent, all direct and transitive
+  consumers, governance, generated queue, memory, skill, full-suite, and
+  whitespace checks pass with no debt.
+compatibility_event: none
+next_attempt: >-
+  Commit the immutable P123 scientific adjudication, checkpoint the parent
+  effort separately, and continue with the next pending source unit GB3.

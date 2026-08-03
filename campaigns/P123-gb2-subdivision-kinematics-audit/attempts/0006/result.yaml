@@ -1,0 +1,27 @@
+campaign: P123
+attempt: 0006
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/reviews/independent_division_review.py
+expected:
+  primary_exit_code: 0
+  independent_exit_code: 0
+  debt: []
+results:
+  primary:
+    exit_code: 1
+    passed_before_failure: 11
+    failure: generic SymPy floor-plus-frac expression did not simplify to zero
+  independent: {exit_code: 0, tally: 20}
+failure_class: representation
+result: >-
+  The independent scaled-integer route closes. The primary route fails only
+  because plain simplify does not rewrite frac(x) to x-floor(x) for the generic
+  nonnegative symbol; exact grid quotient and uniqueness checks had passed.
+compatibility_event: none
+next_attempt: >-
+  Use SymPy's explicit floor rewrite for the symbolic identity, retain the
+  exact integer-grid oracle, and rerun both routes so their final tallies share
+  one repaired evidence boundary.

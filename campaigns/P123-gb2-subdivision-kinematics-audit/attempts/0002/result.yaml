@@ -1,0 +1,30 @@
+campaign: P123
+attempt: 0002
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+command: >-
+  .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB2_subdivision_kinematics.py
+expected:
+  source_sha256: e76bf26d134f48b74ba1d23bc90c5ee49d3e980edc10304a24b85af421c2b54c
+  native_exit_code: 0
+  static_check_calls: 11
+  compatibility_preflight: no sampled integration expected from queue metadata
+results:
+  source_sha256: e76bf26d134f48b74ba1d23bc90c5ee49d3e980edc10304a24b85af421c2b54c
+  native_exit_code: 0
+  terminal_tally: ALL 19 CHECKS PASS
+  static_check_calls: 11
+  dynamic_expansion:
+    fractional_remainder_samples: 4
+    bracket_samples: 3
+    per_item_samples: 4
+  integration_symbols_found: []
+result: >-
+  GB2 reproduces natively. Its nineteen predicates are now open for exact,
+  physical, dependency, consumer, and nonduplication adjudication. The source
+  uses no sampled integration and triggers no NumPy compatibility path.
+compatibility_event: none
+next_attempt: >-
+  Build primary and independent exact routes for quotient zero, uniqueness,
+  plateau boundaries, jumps, representation, finite error and limiting paths;
+  classify all source predicates and the physical interpretation separately.

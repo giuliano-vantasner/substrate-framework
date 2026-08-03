@@ -1,0 +1,21 @@
+campaign: P123
+source_unit: GB2
+prior_surfaces:
+  P090:
+    role: governed historical no-claim floor and remainder bookkeeping ceiling
+    evidence: campaigns/P090-sa4-threshold-saturation-audit/reviews/source_adjudication.md
+  P110:
+    role: exact quotient remainder plateaus jumps monotonicity scaling representation and physical ceiling
+    evidence: campaigns/P110-pn2-energy-subdivision-count-audit/adjudication.yaml
+distinct_gb2_surface:
+  - finite exact mean error r/n and relative error below 1/n
+  - fixed-unit and fixed-total path qualification of the ratio limit
+assessment: >-
+  These are immediate elementary consequences of the already governed quotient
+  and remainder. No accepted consumer needs a new package API; GB5's spectral
+  use is circular and physically unsupported.
+new_claim: null
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

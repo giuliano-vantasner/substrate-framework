@@ -1,0 +1,21 @@
+campaign: P123
+source_unit: GB2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-32/bridge_GB2_subdivision_kinematics.py
+sha256: e76bf26d134f48b74ba1d23bc90c5ee49d3e980edc10304a24b85af421c2b54c
+git_blob: f3a29718a2ca4a7486aa676a2f926dc6db03045d
+bytes: 8221
+command: >-
+  .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB2_subdivision_kinematics.py
+exit_code: 0
+terminal_tally: ALL 19 CHECKS PASS
+static_check_calls: 11
+runtime_predicates: 19
+compatibility_preflight:
+  np_trapz: 0
+  np_trapezoid: 0
+  trapezoid_integral: 0
+  event: none
+interpretation: >-
+  Native execution reproduces the source predicates. Green output is evidence
+  for those predicates only and does not establish the physical headline.

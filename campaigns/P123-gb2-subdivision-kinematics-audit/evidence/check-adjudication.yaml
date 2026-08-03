@@ -1,0 +1,76 @@
+campaign: P123
+source_unit: GB2
+runtime_check_total: 19
+checks:
+  GB2.1:
+    runtime_checks: 1
+    source_predicate: the defined remainder reconstructs the total
+    verdict: exact_definition
+    qualification: The identity follows from the definition and proves no physical partition.
+  GB2.2:
+    runtime_checks: 1
+    source_predicate: remainder equals the unit times the fractional part
+    verdict: exact_floor_identity
+    qualification: This is exact for the declared positive ratio.
+  GB2.3:
+    runtime_checks: 1
+    source_predicate: the symbolic fractional part is nonnegative
+    verdict: exact_but_incomplete_range_check
+    qualification: The general strict upper bound is not checked at this site and is supplied independently.
+  GB2.4:
+    runtime_checks: 4
+    source_predicate: four exact rational fractional parts lie in the half-open unit interval
+    verdict: exact_samples_extended_independently
+    qualification: Four samples are regression coverage, not the general floor theorem.
+  GB2.5:
+    runtime_checks: 3
+    source_predicate: three exact rational floor brackets hold
+    verdict: exact_samples_extended_independently
+    qualification: P123 derives the general bracket, uniqueness, quotient-zero case, and plateau endpoints.
+  GB2.6:
+    runtime_checks: 1
+    source_predicate: the mean-to-unit ratio tends to one in deep subdivision
+    verdict: exact_relative_limit_with_path_qualification
+    qualification: The finite error is r/n and the ratio tends to one; only a fixed-unit path approaches a fixed nonzero scale.
+  GB2.7:
+    runtime_checks: 4
+    source_predicate: four binary-float per-item means lie between the unit and unit times one plus one over n
+    verdict: regression_only_mean_bound
+    qualification: The exact bound survives, but binary threshold floors and n=0 are omitted and an arithmetic mean does not assign constituent energies.
+  GB2.8:
+    runtime_checks: 1
+    source_predicate: count is nonincreasing on seven ordered units
+    verdict: sampled_observation_extended_exactly
+    qualification: The exact function is weakly nonincreasing with plateaus and one-sided jumps.
+  GB2.9:
+    runtime_checks: 1
+    source_predicate: count changes across the selected broad band
+    verdict: selected_sample_observation
+    qualification: Exact floor counts are constant on nonempty divisor plateaus.
+  GB2.10:
+    runtime_checks: 1
+    source_predicate: floor passes the finite kinematic-count guard
+    verdict: finite_regression_not_function_theorem
+    qualification: A lookup-table fake passes, while a valid floor on one plateau fails the variation clause.
+  GB2.11:
+    runtime_checks: 1
+    source_predicate: one hard-coded constant count fails the guard
+    verdict: valid_counterexample_only
+    qualification: Rejecting one fake does not validate a physical subdivision or the guard outside its samples.
+narrative_only:
+  energy_conservation:
+    verdict: arithmetic_decomposition_only
+    reason: No before-and-after physical state or dynamical conservation law is constructed.
+  individual_soft_quanta:
+    verdict: rejected
+    reason: The arithmetic mean does not identify individual constituents or a quantum state.
+  characteristic_phonon_energy:
+    verdict: rejected
+    reason: The declared unit remains free and common scaling preserves the quotient while moving it.
+  branching_soft_channel:
+    verdict: rejected
+    reason: No accepted states interaction matrix element phase space or rate is supplied.
+headline_coverage: >-
+  Every static site and all nineteen runtime predicates are classified. Exact
+  conditional arithmetic survives; physical subdivision, individual quanta,
+  spectral scale, soft channel, material, yield, heat, and observation do not.

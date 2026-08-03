@@ -1,0 +1,27 @@
+campaign: P123
+source_unit: GB2
+authority_warning: Candidate dependency edges are navigation hints and grant no accepted authority.
+dependencies:
+  PN2:
+    disposition: qualified
+    accepted_claims: []
+    evidence: campaigns/P110-pn2-energy-subdivision-count-audit/adjudication.yaml
+    surviving_surface: exact conditional quotient arithmetic only
+    excluded_surface: quantum subdivision process state mode interaction rate and material map
+  GB5:
+    disposition_at_freeze: pending_adjudication
+    accepted_claims: []
+    relation: GB2 names GB5 as the intended spectral consumer while GB5 names GB2 as its premise
+    authority: none
+candidate_edges:
+  - [GB2, GB5]
+  - [GB2, PN2]
+  - [GB5, GB2]
+  - [GB5, PN2]
+candidate_cycle: [GB2, GB5, GB2]
+cycle_grants_authority: false
+accepted_dependency_closure: []
+verdict: >-
+  PN2 is qualified arithmetic evidence, GB5 is pending and circular with GB2,
+  and neither edge constructs a physical subdivision or spectral theorem.
+debt: []

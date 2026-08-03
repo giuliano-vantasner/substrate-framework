@@ -1,0 +1,18 @@
+campaign: P123
+selection_criteria:
+  - accepted dependency closure and exact domains units and representation
+  - quotient remainder zero-regime plateau jump monotonicity error and limit correctness
+  - physical honesty mutation sensitivity parameter economy and nonduplication
+  - complete predicate cycle and consumer closure
+candidates:
+  A: {verdict: retained_as_source_evidence, reason: Native GB2 reproduces all nineteen predicates but a tally grants no authority.}
+  B: {verdict: selected, reason: Exact Euclidean division closes with quotient zero uniqueness and half-open remainder.}
+  C: {verdict: selected_with_qualification, reason: The finite mean error and relative limit are exact once n is positive and the limiting path is declared.}
+  D: {verdict: selected, reason: Exact plateaus weak monotonicity left continuity right jumps scaling and binary representation sensitivity close.}
+  E: {verdict: selected, reason: P090 and P110 nonduplication leaves no distinct claim package API or release.}
+  F: {verdict: selected, reason: PN2 grants arithmetic only and the GB2-GB5 candidate cycle grants no authority.}
+  G: {verdict: selected, reason: Unequal partitions zero coupling and common scaling preserve the arithmetic while defeating the physical headline.}
+  H: {verdict: selected, reason: Independent exact and consumer routes close a terminal qualified disposition.}
+selection: [B, C, D, E, F, G, H]
+comparators_used_for_selection: []
+debt: []

@@ -1,0 +1,18 @@
+campaign: P123
+attempt: 0003
+status: failed
+candidates: [A, B, C, D, E, F, G, H]
+failure_class: representation
+failed_surface: divisor_staircase_continuity
+result: >-
+  The immutable frozen proposal called n(omega)=floor(Omega/omega)
+  right-continuous. At omega=Omega/k its value is k, the nearby left value is
+  k, and the nearby right value is k-1, so the staircase is left-continuous at
+  each positive exact divisor and has a downward jump immediately to the
+  right. The candidate set and selection criteria remain valid, but the active
+  convention must be corrected before verifier construction.
+compatibility_event: none
+next_attempt: >-
+  Preserve the frozen manifest unchanged, correct the active proposal and
+  memory with an explicit post-freeze amendment, then test both one-sided
+  boundary values through an exact independent route.

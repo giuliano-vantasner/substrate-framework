@@ -2123,6 +2123,53 @@ units:
       package tests after seven preserved workflow implementation oracle or
       graph-state failures. Four direct and ten transitive consumers replay 576
       checks. No sampled integration or NumPy compatibility event occurs.
+  GB2:
+    disposition: qualified
+    accepted_claims: []
+    qualification: >-
+      GB2's nonnegative-total positive-unit floor quotient, half-open
+      same-unit remainder, bracket, and weak nonincrease survive as exact
+      conditional arithmetic. P123 closes the omitted quotient-zero regime,
+      uniqueness, open-lower closed-upper divisor plateaus, left continuity at
+      exact divisors, downward jumps immediately to their right, common-scale
+      covariance, and binary-representation ceiling. For positive quotient,
+      the arithmetic mean is omega plus remainder/n and its relative excess is
+      strictly below 1/n. A fixed-unit increasing-total path approaches a fixed
+      omega, while a fixed-total shrinking-omega path only makes the ratio to a
+      moving unit tend to one. Four fractional-part, three bracket, and four
+      binary-float mean cases are regression examples. The seven-point count
+      guard accepts an off-grid-wrong lookup table and rejects a correct floor
+      restricted to one plateau because it requires sample variation. An
+      arithmetic mean does not assign individual constituent energies; unequal
+      partitions share it. Zero coupling preserves the quotient with zero
+      rate, and common energy scaling preserves the count while moving the
+      alleged characteristic scale. PN2 supplies qualified arithmetic only;
+      the GB2-GB5 candidate dependency is circular and grants no authority. No
+      state, mode operator, interaction, matrix element, phase space,
+      resonance, linewidth, probability, rate, phonon identity, emitted
+      spectrum, soft channel, material response, magnitude, yield, heat, or
+      observation is accepted.
+    evidence:
+      - campaigns/P123-gb2-subdivision-kinematics-audit/reviews/source_adjudication.md
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/source-reproduction.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/source-audit.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/check-adjudication.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/input-provenance.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/dependency-audit.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/consumer-audit.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/candidate-comparison.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/evidence/primary-provenance.yaml
+      - campaigns/P123-gb2-subdivision-kinematics-audit/verify.py
+      - campaigns/P123-gb2-subdivision-kinematics-audit/reviews/independent_division_review.py
+      - memory/vantasner/decisions/GB2-qualified-review.md
+    note: >-
+      P123 closes 55 primary and 20 independent exact checks after four
+      preserved representation, patch, symbolic-normal-form, or verifier-
+      fixture failures. Two direct and one transitive consumer replay 101
+      checks. P090 and P110 already govern the bookkeeping ceiling, so no
+      canonical API, accepted claim, or release is added. No sampled
+      integration or NumPy compatibility event occurs.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

@@ -1,0 +1,22 @@
+campaign: P123
+source_unit: GB2
+surviving_exact_surface:
+  - Exact nonnegative-total positive-unit Euclidean division gives a unique nonnegative floor quotient and half-open same-unit remainder.
+  - Quotient zero is valid when the total is below one unit, and the per-item mean is then undefined.
+  - For fixed positive total the quotient has open-lower closed-upper plateaus, is weakly nonincreasing, is left-continuous at exact divisors, and jumps downward immediately to their right.
+  - For positive quotient the mean is unit plus remainder divided by quotient, with relative excess strictly below one over the quotient.
+  - Both fixed-unit increasing-total and fixed-total shrinking-unit paths make the mean-to-unit ratio approach one; only the first approaches a fixed nonzero unit.
+source_oracle_limits:
+  - Four fractional parts and three brackets are examples, not a general proof.
+  - The four mean checks use binary floats and omit quotient zero and threshold-adjacent representation failures.
+  - Nonincrease and nonconstancy are tested on one broad seven-point band; exact quotient functions are constant on every plateau.
+  - The finite guard accepts a lookup table that agrees only on its seven samples and rejects a correct floor restricted to a single plateau because variation is not a local validity condition.
+  - The symbolic limit checks a normalized ratio and does not construct constituent energies or a spectrum.
+physical_ceiling:
+  - A quotient and remainder construct no initial or final state, number operator, interaction, matrix element, phase space, resonance, linewidth, probability, rate, or material channel.
+  - The total divided by the quotient is an arithmetic mean; unequal constituent partitions share that mean, so no individual quantum energy follows.
+  - Common scaling preserves the quotient while changing every energy scale, and zero coupling preserves all arithmetic while making a transition rate zero.
+  - No spectral peak, phonon identity, coherent subdivision, soft channel, magnitude, yield, heat, or observation is accepted.
+headline_verdict: exact_conditional_arithmetic_duplicate_with_physical_subdivision_and_spectral_reading_rejected
+compatibility_event: none
+debt: []

@@ -1,0 +1,27 @@
+campaign: P123
+attempt: 0008
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/reviews/independent_division_review.py
+repair: The invalid nonincreasing mutation is replaced by a strictly increasing sequence.
+expected:
+  primary_exit_code: 0
+  independent_exit_code: 0
+  debt: []
+results:
+  primary: {exit_code: 0, tally: 55}
+  independent: {exit_code: 0, tally: 20}
+  source_runtime_predicates_adjudicated: 19
+  consumer_replay: {scripts: 3, checks: 101}
+result: >-
+  Exact Fraction, SymPy, scaled-integer, boundary, limit, mutation, physical
+  countermodel, dependency, cycle, consumer, and nonduplication routes agree.
+  GB2's conditional arithmetic survives, while the physical subdivision and
+  spectral readings do not. The debt ledger is empty.
+compatibility_event: none
+next_attempt: >-
+  Complete graph impact and provenance records, register the terminal
+  qualified disposition, run one integrated promotion-equivalent boundary,
+  and continue to GB3.

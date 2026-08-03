@@ -1,0 +1,30 @@
+campaign: P123
+attempt: 0007
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P123-gb2-subdivision-kinematics-audit/reviews/independent_division_review.py
+repair: >-
+  Rewrite frac(x) explicitly to x-floor(x) for the symbolic identity and
+  classify SymPy's undecided generic strict bound rather than claiming it
+  proved that inequality. Exact divmod grids remain the range oracle.
+expected:
+  primary_exit_code: 0
+  independent_exit_code: 0
+  debt: []
+results:
+  primary:
+    exit_code: 1
+    passed_before_failure: 47
+    failure: the second mutation was reversed range(7), which is validly nonincreasing
+  independent: {exit_code: 0, tally: 20}
+failure_class: implementation
+result: >-
+  The symbolic repair succeeds. The primary mutation fixture fails because its
+  allegedly wrong reversed sequence is in fact nonincreasing and satisfies the
+  tested order predicate; this is a verifier-input defect, not a theorem defect.
+compatibility_event: none
+next_attempt: >-
+  Replace the mistaken fixture with a genuinely increasing sequence and rerun
+  the unchanged exact and independent routes.

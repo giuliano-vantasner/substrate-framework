@@ -1,0 +1,28 @@
+campaign: P123
+base_release: v0.98.0
+base_commit: 14ce8c17b962f655c1674b09284f2e81e5fcfba8
+scientific_base_commit: 974b498d799019761ce235682f1c1e0bf98c5c4e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  unit: GB2
+  sha256: e76bf26d134f48b74ba1d23bc90c5ee49d3e980edc10304a24b85af421c2b54c
+  authority: noncanonical_candidate_evidence
+authority_read:
+  - governance/releases/current.yaml at v0.98.0
+  - governance/claims.yaml including C-BRN-001's physical-channel ceiling
+  - migration/source-claims.yaml entries GB2 and PN2
+  - campaigns/P110-pn2-energy-subdivision-count-audit
+  - campaigns/P090-sa4-threshold-saturation-audit nonduplication evidence
+memory_recall:
+  query: GB2 subdivision floor quotient remainder PN2 constant count
+  results_verified_at_source:
+    - memory/vantasner/decisions/PN2-qualified-review.md
+    - memory/vantasner/proposals/P110-pn2-energy-subdivision-count-audit.md
+queue_exposure_before_freeze:
+  - quotient and remainder formulas
+  - floor bracket and weak monotonicity headline
+  - deep-subdivision per-item limit
+  - constant-count rejection
+  - GB5 and PN2 candidate dependencies
+comparators: []
+undeclared_inputs: []

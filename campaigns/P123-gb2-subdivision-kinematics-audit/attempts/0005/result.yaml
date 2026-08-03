@@ -1,0 +1,27 @@
+campaign: P123
+attempt: 0005
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB5_spectral_peak.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+expected:
+  direct_consumers: [GB5, GB6]
+  transitive_consumers: [WN7]
+  compatibility_symbols: []
+results:
+  GB5: {exit_code: 0, tally: 13}
+  GB6: {exit_code: 0, tally: 29}
+  WN7: {exit_code: 0, tally: 59}
+  total: {scripts: 3, checks: 101, exit_statuses_all_zero: true}
+  compatibility_scan: {matches: 0}
+result: >-
+  Both direct GB2 consumers and the only noncyclic transitive queue consumer
+  reproduce from pinned bytes. Their 101 green predicates remain pending
+  evidence and grant no physical subdivision, spectrum, or channel authority.
+  The no-match integration scan confirms no NumPy compatibility event.
+compatibility_event: none
+next_attempt: >-
+  Complete exact primary and independent adjudication, including the GB2-GB5
+  candidate cycle and the spectral-peak overread.

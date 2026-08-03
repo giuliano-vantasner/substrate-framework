@@ -1,0 +1,14 @@
+campaign: P123
+attempt: 0004
+status: failed
+candidates: [A, B, C, D, E, F, G, H]
+failure_class: implementation
+failed_surface: atomic_proposal_amendment_patch
+result: >-
+  A combined apply_patch used a paragraph anchor that did not match the memory
+  file's actual line wrapping. The patch was rejected atomically and changed no
+  file. This is independent of the continuity correction in attempt 0003.
+compatibility_event: none
+next_attempt: >-
+  Apply the attempt records, active manifest correction, and memory amendment
+  through smaller anchors verified against the current files.
