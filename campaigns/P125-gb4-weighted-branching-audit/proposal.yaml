@@ -1,0 +1,90 @@
+id: P125
+base_release: v0.98.0
+base_commit: 7839416ad40662f1f4f1e9d9f7f26b6e806c17d4
+scientific_base_commit: 205d8be304a9433bdc24c0eed973f3646b9ee835
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GB4]
+question: >-
+  Reproduce and independently audit GB4's weighted two-channel fractions,
+  continuous and discrete population monotonicity, subdivision-weight regimes,
+  relative-odds enhancement, domains, normalization freedoms, dependencies,
+  predicates, consumers, and nonduplication; distinguish fixed n from n(N) and
+  conditional allocation algebra from a physical gamma suppression, material
+  branching fraction, yield, heat, or observation.
+invariants:
+  - >-
+    C-BRN-001 exactly governs two nonnegative common-dimension inputs, their
+    normalized fractions, endpoints, odds, scaling laws, weighted positive-
+    integer specialization, positive-real population derivative at fixed
+    positive weight, relative weighted odds, and free-target ceiling.
+  - >-
+    For fixed rho>0 and fixed w>0, B_gamma(N)=rho/(N*w+rho) is strictly
+    decreasing on positive real N, and its positive-integer forward difference
+    is -rho*w/((N*w+rho)*((N+1)*w+rho)).
+  - >-
+    If w depends on n and n depends on N, the total continuous derivative has
+    sign opposite w(N)+N*w'(N), while the discrete comparison has sign opposite
+    (N+1)*w_(N+1)-N*w_N. Positivity of w alone does not fix either sign.
+  - >-
+    The regimes w=n, w=exp(-alpha*n), and w=n^k are conditional weight choices,
+    not derived subdivision dynamics. At fixed n they differ only by a positive
+    constant in the N dependence. Under n=N, the exponential regime is
+    nonmonotone once alpha*N crosses one.
+  - >-
+    The expression w(n)*N/w(1) is a relative weighted-to-comparison odds ratio
+    only with the same positive channel baselines at the target and baseline.
+    Its rho independence is cancellation, not a predicted gamma suppression.
+  - >-
+    Free rho, weight normalization, alpha, k, n, and any n(N) law prevent the
+    conditional fractions or relative odds from predicting a magnitude.
+  - >-
+    GB1 is qualified through C-BRN-001; GB3, PN2, and PN3 supply no physical
+    soft/gamma rate, subdivision-weight law, or nuclear channel. Dependency
+    edges and passing consumers grant no additional authority.
+  - >-
+    A physical branching fraction additionally requires a common initial
+    state, exhaustive channels, interactions, final-state measures or spectral
+    densities, kinetics, channel normalization, parameter provenance, and a
+    measurement map.
+  - >-
+    GB4's body, output, and predicate implementations remain unopened at
+    freeze. Queue metadata already exposed its formulas, three weight families,
+    advertised derivative, enhancement baseline, fake, dependencies, and tally.
+allowed_imports:
+  - C-BRN-001 exact two-channel allocation theorem and its physical interpretation ceiling
+  - GB1 only through its qualified disposition and C-BRN-001 mapping
+  - GB3 only through its qualified C-SPN-002 and C-COH-001 mappings and rate ceiling
+  - PN2 only as qualified quotient-remainder arithmetic with no physical subdivision process
+  - PN3 only through C-SPN-002 and its explicit physical-rate ceiling
+  - exact real algebra finite differences calculus inequalities limits and countermodels
+  - GB4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce GB4 literally and classify every branching regime enhancement fake and tally predicate.
+  - id: B
+    description: Map the fixed-positive-weight formula exactly to C-BRN-001 including endpoints derivatives and odds.
+  - id: C
+    description: Derive the positive-integer forward difference rather than infer discrete occupation behavior from calculus alone.
+  - id: D
+    description: Audit coupled n(N) weight laws through the total derivative and exact adjacent-population condition.
+  - id: E
+    description: Compare linear exponential power constant and compensating weight families under predeclared structural criteria.
+  - id: F
+    description: Audit relative-odds enhancement baselines free normalizations and arbitrary-target identifiability.
+  - id: G
+    description: Construct zero-channel nonexhaustive-channel unequal-gate and free-parameter physical countermodels.
+  - id: H
+    description: Close every dependency predicate cycle consumer and nonduplication obligation with a terminal disposition.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact positive or endpoint domain fidelity
+  - fixed versus coupled variable discipline discrete and continuous agreement and correct limits
+  - weight-law assumption cost parameter economy normalization clarity and identifiability
+  - physical branching-premise completeness mutation sensitivity nonduplication and consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  GB4's body and runtime output remain unopened until the proposal, immutable
+  copy, memory contract, and freeze validation pass. Queue metadata already
+  exposes the headline formulas and weight families, so predicate-detail and
+  source-output blinding remain.
+status: draft

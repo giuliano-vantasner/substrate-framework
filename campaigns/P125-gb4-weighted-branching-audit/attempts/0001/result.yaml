@@ -1,0 +1,41 @@
+campaign: P125
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P125-gb4-weighted-branching-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P125-gb4-weighted-branching-audit/proposal.yaml campaigns/P125-gb4-weighted-branching-audit/evidence/frozen-proposal.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  proposal_sha256: 3e3201507deb309161485a50b2257f1cac6ee0386ec2ef36fe019a7f6409e569
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 96
+  memory_files: 512
+  pytest_tests: 1090
+  source_body_opened: false
+  debt: []
+results:
+  proposal_sha256: 3e3201507deb309161485a50b2257f1cac6ee0386ec2ef36fe019a7f6409e569
+  proposal_memory: {valid: true}
+  manifest_copy: {identical: true}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 96}
+  memory: {files_valid: 512}
+  skill: {valid: true}
+  pytest: {passed: 1090}
+  diff_check: {exit_code: 0}
+  source_body_opened: false
+result: >-
+  P125's proposal and immutable copy are byte-identical and valid, the accepted
+  repository is unchanged, and GB4 remained unopened through the complete
+  freeze boundary. The integrated workflow completed successfully; its verbose
+  captured output was truncated by the interface after preserving the exit
+  status, so no wall-time value is asserted.
+compatibility_event: none
+next_attempt: >-
+  Commit the frozen P125 contract, then reproduce GB4 natively and inspect its
+  sixteen predicates under the preregistered fixed-versus-coupled weight and
+  physical-branching criteria.
