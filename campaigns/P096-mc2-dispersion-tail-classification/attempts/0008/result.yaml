@@ -1,0 +1,9 @@
+campaign: P096
+attempt: 8
+status: record_validation_invocation_failure
+command: memory validate PATH1 PATH2 PATH3
+process_exit_status: 2
+failure: The memory CLI accepts exactly one path per invocation.
+scientific_effect: none
+repair: Validate the proposal, decision, and effort records in three separate commands.
+ceremony_guard: Do not repeat the already green integrated workflow or exact verifiers.

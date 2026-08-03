@@ -1,0 +1,56 @@
+campaign: P096
+title: MC2 physical sine-Gordon dispersion and tail classification
+source_baseline: substrate@6d1f4e0
+source_units: [MC2]
+base_release: v0.81.0
+release_after_adjudication: v0.82.0
+adjudicated_at: '2026-08-04T15:00:00Z'
+selected_candidates:
+  - {id: B, reason: Direct vacuum differentiation closes the physical linear equation.}
+  - {id: C, reason: Exact Fourier analysis closes the spectrum and velocities.}
+  - {id: D, reason: Time separation classifies all exterior frequency branches.}
+  - {id: E, reason: Matching and norm arguments close the whole-line L2 theorem.}
+  - {id: F, reason: The accepted nonlinear breather supplies an independent tail cross-check.}
+  - {id: G, reason: A finite-energy d'Alembert packet enforces the gapless claim ceiling.}
+  - {id: H, reason: Exact mean flux separates oscillation from outgoing radiation.}
+  - {id: I, reason: Later consumers add material, numeric, cutoff, or engineering premises.}
+  - {id: J, reason: The new API is distinct from accepted normalized, radial, and lattice claims.}
+competing_candidates:
+  - {id: A, decision: reproduction_only}
+claims:
+  - {id: C-SG-018, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-MED-003, decision: unchanged_physical_coefficients_and_scales}
+  - {id: C-SG-017, decision: unchanged_nonlinear_breather_cross_check}
+  - {id: C-SG-011, decision: unchanged_normalized_linear_limit}
+  - {id: C-LAT-001, decision: unchanged_lattice_continuum_distinction}
+  - {id: C-PDE-005, decision: unchanged_radial_tail_analogue}
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  focused_test_failure: attempts/0002/result.yaml
+  naming_failure: attempts/0003/result.yaml
+  verifier_representation_failure: attempts/0004/result.yaml
+  dependency_invocation_failure: attempts/0005/result.yaml
+  integrated_gate: attempts/0006/result.yaml
+  terminal_record_validation: attempts/0009/result.yaml
+  independent_review: reviews/independent_dispersion_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  MC2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC2_dispersion_gap_rejection.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P096-mc2-dispersion-tail-classification/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P096-mc2-dispersion-tail-classification/reviews/independent_dispersion_review.py
+  - .venv/bin/python -m pytest -q tests/test_dimensional_sine_gordon.py tests/test_sine_gordon.py tests/test_lattice_scalar.py tests/test_radial_harmonic_balance.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

@@ -1,0 +1,19 @@
+campaign: P096
+attempt: 3
+route: canonical_branch_naming_review
+status: failed_then_repairable
+failure_class: representation
+finding: >-
+  The initial canonical ledger named every negative tail-coefficient branch
+  radiative. The exact constant-coefficient ODE establishes oscillation and
+  failure of half-line L2 localization, but radiation additionally requires
+  an outgoing boundary condition or a nonzero directed energy-flux test.
+load_bearing_consequence: >-
+  Keeping the name would encode MC2's narrative overclaim in the importable
+  API even though the proposed claim explicitly separates oscillation from
+  radiation.
+repair: >-
+  Rename the branch to oscillatory and verify separately that standing and
+  traveling waves obey the same dispersion while having zero and nonzero
+  time-averaged flux, respectively.
+debt: []

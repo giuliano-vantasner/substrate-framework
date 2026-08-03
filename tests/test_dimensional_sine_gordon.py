@@ -7,7 +7,9 @@ import substrate_framework as framework
 from substrate_framework.dimensional_sine_gordon import (
     DimensionalBreatherObservables,
     DimensionalSineGordonCoefficients,
+    DimensionalSineGordonLinearSpectrum,
     DimensionalSineGordonScales,
+    DimensionalSineGordonTimeHarmonicLedger,
     dimensional_breather_field,
     dimensional_breather_observables,
     dimensional_sine_gordon_coefficient_dimension_matrix,
@@ -16,10 +18,18 @@ from substrate_framework.dimensional_sine_gordon import (
     dimensional_sine_gordon_hamiltonian_density,
     dimensional_sine_gordon_lagrangian_density,
     dimensional_sine_gordon_log_ratio_jacobian,
+    dimensional_sine_gordon_linear_spectrum,
+    dimensional_sine_gordon_linearized_residual,
     dimensional_sine_gordon_normalized_coordinates,
     dimensional_sine_gordon_physical_coordinates,
     dimensional_sine_gordon_residual,
     dimensional_sine_gordon_scales,
+    dimensional_sine_gordon_tail_coefficient,
+    dimensional_sine_gordon_time_harmonic_ledger,
+    evanescent_half_line_matching_matrix,
+    linear_wave_energy_density,
+    linear_wave_residual,
+    linear_wave_traveling_field,
     rescale_dimensional_sine_gordon_coefficients,
 )
 
@@ -27,6 +37,11 @@ from substrate_framework.dimensional_sine_gordon import (
 def test_public_package_exports_dimensional_sine_gordon_api() -> None:
     assert framework.DimensionalSineGordonCoefficients is DimensionalSineGordonCoefficients
     assert framework.DimensionalSineGordonScales is DimensionalSineGordonScales
+    assert framework.DimensionalSineGordonLinearSpectrum is DimensionalSineGordonLinearSpectrum
+    assert (
+        framework.DimensionalSineGordonTimeHarmonicLedger
+        is DimensionalSineGordonTimeHarmonicLedger
+    )
     assert framework.DimensionalBreatherObservables is DimensionalBreatherObservables
     assert framework.dimensional_breather_field is dimensional_breather_field
     assert framework.dimensional_breather_observables is dimensional_breather_observables
@@ -118,6 +133,91 @@ def test_pulled_back_breather_solves_the_dimensional_equation() -> None:
     ) == 0
 
 
+def test_linearized_residual_and_plane_wave_dispersion_are_exact() -> None:
+    x, t = sp.symbols("x t", real=True)
+    k, angular = sp.symbols("k Omega", real=True)
+    coefficients = dimensional_sine_gordon_coefficients(2, 8, 18)
+    field = sp.exp(sp.I * (k * x - angular * t))
+    characteristic = sp.simplify(
+        dimensional_sine_gordon_linearized_residual(
+            field,
+            x,
+            t,
+            coefficients,
+        )
+        / field
+    )
+    assert characteristic == -2 * angular**2 + 8 * k**2 + 18
+    assert sp.simplify(characteristic.subs(angular**2, 9 + 4 * k**2)) == 0
+
+
+def test_linear_spectrum_tracks_gap_group_and_phase_velocities() -> None:
+    coefficients = dimensional_sine_gordon_coefficients(2, 8, 18)
+    zero = dimensional_sine_gordon_linear_spectrum(0, coefficients)
+    assert zero.angular_frequency == 3
+    assert zero.group_velocity == 0
+    assert zero.phase_velocity is None
+
+    spectrum = dimensional_sine_gordon_linear_spectrum(4, coefficients)
+    assert spectrum.angular_frequency_squared == 73
+    assert spectrum.angular_frequency == sp.sqrt(73)
+    assert spectrum.group_velocity == 16 / sp.sqrt(73)
+    assert spectrum.phase_velocity == sp.sqrt(73) / 4
+    assert sp.simplify(spectrum.group_velocity * spectrum.phase_velocity - 4) == 0
+
+
+def test_time_harmonic_ledger_separates_half_line_tails_from_global_l2_modes() -> None:
+    coefficients = dimensional_sine_gordon_coefficients(2, 8, 18)
+    subgap = dimensional_sine_gordon_time_harmonic_ledger(1, coefficients)
+    assert subgap.behavior == "evanescent"
+    assert subgap.spatial_coefficient == 2
+    assert subgap.spatial_rate == sp.sqrt(2)
+    assert subgap.right_half_line_l2_dimension == 1
+    assert subgap.left_half_line_l2_dimension == 1
+    assert subgap.whole_line_l2_dimension == 0
+
+    threshold = dimensional_sine_gordon_time_harmonic_ledger(3, coefficients)
+    oscillatory = dimensional_sine_gordon_time_harmonic_ledger(5, coefficients)
+    assert threshold.behavior == "threshold"
+    assert threshold.spatial_rate == 0
+    assert threshold.whole_line_l2_dimension == 0
+    assert oscillatory.behavior == "oscillatory"
+    assert oscillatory.spatial_rate == 2
+    assert oscillatory.whole_line_l2_dimension == 0
+
+
+def test_evanescent_half_line_branches_have_only_the_zero_smooth_global_match() -> None:
+    kappa = sp.symbols("kappa", positive=True, real=True)
+    matching = evanescent_half_line_matching_matrix(kappa)
+    assert matching == sp.Matrix([[1, -1], [-kappa, -kappa]])
+    assert matching.det() == -2 * kappa
+    assert matching.rank() == 2
+    assert matching.nullspace() == []
+
+
+def test_tail_coefficient_matches_exact_breather_inverse_width() -> None:
+    coefficients = dimensional_sine_gordon_coefficients(2, 8, 18)
+    omega = sp.Rational(1, 2)
+    physical_angular = 3 * omega
+    coefficient = dimensional_sine_gordon_tail_coefficient(
+        physical_angular,
+        coefficients,
+    )
+    observables = dimensional_breather_observables(omega, coefficients)
+    assert sp.simplify(coefficient - observables.inverse_width**2) == 0
+
+
+def test_gapless_traveling_profile_is_exact_and_has_translated_energy_density() -> None:
+    x, t, z = sp.symbols("x t z", real=True)
+    profile = sp.Function("F")
+    field = linear_wave_traveling_field(profile, x, t, 2)
+    assert field == profile(x - 2 * t)
+    assert sp.simplify(linear_wave_residual(field, x, t, 2)) == 0
+    density = linear_wave_energy_density(field, x, t, 2, 8)
+    expected = 8 * sp.Subs(sp.Derivative(profile(z), z), z, x - 2 * t) ** 2
+    assert sp.simplify(density - expected) == 0
+
+
 def test_dimensional_breather_observables_include_physical_scales() -> None:
     coefficients = dimensional_sine_gordon_coefficients(2, 8, 18)
     observables = dimensional_breather_observables(sp.Rational(1, 2), coefficients)
@@ -161,6 +261,24 @@ def test_dimensional_breather_observables_include_physical_scales() -> None:
                 DimensionalSineGordonCoefficients(1, -1, 1),
             ),
             "gradient",
+        ),
+        (
+            lambda: dimensional_sine_gordon_time_harmonic_ledger(
+                sp.Symbol("Omega", nonnegative=True),
+                dimensional_sine_gordon_coefficients(1, 4, 9),
+            ),
+            "decidable relation",
+        ),
+        (lambda: evanescent_half_line_matching_matrix(0), "rate"),
+        (
+            lambda: linear_wave_traveling_field(
+                sp.Function("F"),
+                sp.Symbol("x"),
+                sp.Symbol("t"),
+                1,
+                direction=0,
+            ),
+            "direction",
         ),
     ],
 )

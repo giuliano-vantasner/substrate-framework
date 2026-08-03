@@ -1,0 +1,14 @@
+campaign: P096
+attempt: 4
+route: primary_verifier_first_run
+status: failed_then_repairable
+failure_class: verifier_representation
+command: PYTHONPATH=src .venv/bin/python proposals/P096-mc2-dispersion-tail-classification/verify.py
+passed_before_failure: 22
+failure: positive spectrum has the exact nonzero band floor
+cause: >-
+  The predicate used structural equality between (T*k^2+mu)/lambda and the
+  algebraically identical expanded sum T*k^2/lambda+mu/lambda. The canonical
+  result, limit, and band excess were correct.
+repair: Replace the structural comparison with exact symbolic simplification.
+debt: []

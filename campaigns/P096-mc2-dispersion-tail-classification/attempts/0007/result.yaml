@@ -1,0 +1,11 @@
+campaign: P096
+attempt: 7
+status: record_patch_context_failure
+operation: update parent effort result canonicalization and done gate
+failure: >-
+  The combined patch expected a wrapped P095 sentence that did not match the
+  file's actual line wrapping, so none of that patch was applied.
+diagnosis: patch_context_only
+scientific_effect: none
+repair: Locate exact section anchors and apply smaller record-only patches.
+ceremony_guard: Do not repeat the already green integrated workflow.

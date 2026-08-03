@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 125
-  qualified: 81
+  pending_adjudication: 124
+  qualified: 82
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5938,8 +5938,31 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MED-003
+  - C-SG-017
+  - C-SG-018
+  qualification: MC2's physical vacuum linearization, positive dispersion branch, band floor, exterior
+    tail coefficient, threshold, and normalized limits are exact. A decaying exponential exists on each
+    sub-gap exterior half-line, but the two branches have a full-rank smooth origin matching matrix; exp(-kappa*abs(x))
+    instead has a derivative jump and is not a homogeneous whole-line bound state. Above-gap oscillation
+    is non-L2 but is not automatically outgoing radiation. The gapless equation has no nonzero L2 real-frequency
+    separated mode, while still admitting localized finite-energy traveling packets. The source's gap
+    iff is sampled only at c=ell=1, sign predicates allow finite numeric fallbacks, the named frequency's
+    upper bound is not tested, and symbol absence supplies no material or scale closure.
+  evidence:
+  - campaigns/P096-mc2-dispersion-tail-classification/reviews/source_adjudication.md
+  - campaigns/P096-mc2-dispersion-tail-classification/evidence/source-reproduction.yaml
+  - campaigns/P096-mc2-dispersion-tail-classification/evidence/source-audit.yaml
+  - campaigns/P096-mc2-dispersion-tail-classification/evidence/check-adjudication.yaml
+  - campaigns/P096-mc2-dispersion-tail-classification/evidence/consumer-audit.yaml
+  - campaigns/P096-mc2-dispersion-tail-classification/evidence/candidate-comparison.yaml
+  - campaigns/P096-mc2-dispersion-tail-classification/verify.py
+  - campaigns/P096-mc2-dispersion-tail-classification/reviews/independent_dispersion_review.py
+  - memory/vantasner/decisions/C-SG-018-review.md
+  note: P096 promotes only the exact conditional linear spectrum, exterior and whole-line L2 classification,
+    and its explicit nonlinear/radiation/ material ceilings. Exact work uses no NumPy quadrature alias.
 - source_unit: MC3
   phase: phase-27
   path: merged-framework/bridges/phase-27/bridge_MC3_per_medium_omega0.py

@@ -1,0 +1,20 @@
+campaign: P096
+base_release: v0.81.0
+preregistration_commit: 534499a
+primary_verifier:
+  path: proposals/P096-mc2-dispersion-tail-classification/verify.py
+  sha256: c523b394613ebaa1b840b69c6b26526b1cc90299afc654df11c97b6e5a9b9998
+  terminal_tally: ALL 45 CHECKS PASS [P096]
+independent_review:
+  path: proposals/P096-mc2-dispersion-tail-classification/reviews/independent_dispersion_review.py
+  sha256: 05d4b528e5df20a6f1da7a03836a3a59f29bc50a9642dda013a81f5f1d18b08a
+  terminal_tally: ALL 24 CHECKS PASS [P096-INDEPENDENT]
+canonical_module:
+  path: src/substrate_framework/dimensional_sine_gordon.py
+  sha256: 4a5552209d459620cdfa88e09c2014112a5e9063b78ac03b34984c4ce0e49524
+focused_tests:
+  path: tests/test_dimensional_sine_gordon.py
+  sha256: e447b97503e90d00d012a75ea8bb81e00465ef098247b979d499a9d96cb6be60
+  result: 25 passed
+oracle: exact SymPy calculus, algebra, branch classification, L2 reasoning, flux, limits, and mutation-sensitive predicates
+quadrature_note: Exact P096 work uses no NumPy quadrature alias.

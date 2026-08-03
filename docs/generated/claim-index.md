@@ -840,6 +840,15 @@ Under C-MED-003 and for every real normalized frequency 0<omega<1, eta=sqrt(1-om
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-001, C-SG-002, C-SG-003, C-MED-003
 
+## C-SG-018
+
+Under C-MED-003, exact differentiation of the physical sine-Gordon residual at every vacuum u=2*pi*n gives lambda*psi_tt-T*psi_xx+mu*psi=0. Its positive real-wavenumber branch is Omega(k)=sqrt(omega_0^2+c^2*k^2), with floor omega_0. For k>0 its phase and group velocities are v_p=Omega/k and v_g=c^2*k/Omega, so v_p*v_g=c^2, v_p>c, 0<v_g<c; v_g tends to zero and v_p diverges as k->0+, while both tend to c as k->infinity. For a real frequency Omega>=0, a separated field a(x)*exp(-i*Omega*t) obeys a''=((omega_0^2-Omega^2)/c^2)*a. Below the gap there is one decaying L2 branch on each exterior half-line with rate kappa=sqrt(omega_0^2-Omega^2)/c, but smooth whole-line matching has matrix [[1,-1],[-kappa,-kappa]] and determinant -2*kappa, so only the zero global L2 mode remains. At threshold the affine branches, and above the gap the oscillatory branches, are likewise non-L2 on a half-line unless zero. Thus the homogeneous constant-coefficient whole-line linearized equation has no nonzero L2 real-frequency separated mode in any branch. The C-SG-017 nonlinear breather independently supplies a core whose exterior rate eta/ell equals this sub-gap rate; exterior decay alone does not prove such a core exists. Above-gap oscillation alone does not imply outgoing radiation, because standing and directed waves on the same dispersion can have zero and nonzero mean flux. In the gapless limit the no-L2 separated-mode statement persists, but the wave equation admits localized finite-energy traveling packets such as sech(x-c*t). These conditional results derive no material, coefficient value, defect, finite-box mode, nonlinear existence theorem beyond C-SG-017, outgoing boundary condition, density of states, cutoff, lifetime, population, or absolute scale.
+
+- Accepted in: `v0.82.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-MED-003
+
 ## C-SK-001
 
 Conditional on positive premises M_top=48*pi^3*B1*E_e and M_ANW=3*pi^2*B1*F_pi/e, equality M_top=M_ANW holds if and only if F_pi/e=16*pi*E_e. The shared linear hedgehog coefficient B1 cancels exactly; changing either B1 power generally prevents that cancellation.

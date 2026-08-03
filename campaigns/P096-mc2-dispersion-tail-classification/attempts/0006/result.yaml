@@ -1,0 +1,23 @@
+campaign: P096
+candidates: [B, C, D, E, F, G, H, I, J]
+status: integrated_repository_gate_passed
+command: scripts/validate.sh
+process_exit_status: 0
+workflow_summary:
+  claims: 111
+  accepted_claims: 111
+  proposals: 0
+  migration_units: 218
+  pending_units: 124
+  partial_units: 0
+  memory_files: 411
+  pytest: 870 passed in 93.40s
+  skill_validation: passed
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+scope: >-
+  This is the single integrated P096 promotion gate. It includes governance
+  closure, generated documentation and memory checks, dependency imports,
+  memory validation, skill validation, compilation, and the full pytest suite.
+ceremony_guard: >-
+  Do not repeat the full suite for subsequent record-only attempt, effort, or
+  commit metadata changes; use record-sensitive validation and git diff checks.

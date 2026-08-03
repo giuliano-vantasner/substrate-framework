@@ -10,7 +10,7 @@ tags:
 - migration-MC2
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P096 MC2 Dispersion and Tail Classification
 
@@ -135,25 +135,35 @@ positive theorem while the requested classification remains active.
 
 ## Debt Ledger
 
-The ledger tracks source reproduction, linearization, Fourier convention,
-dimensions, branches, norms, half-line and whole-line boundaries, threshold,
-counterexamples, nonlinear cross-check, material ceiling, consumers,
-nonduplication, independent review, generated state, and queue disposition. It
-must be empty before promotion.
+The P096 ledger is empty. Source reproduction, linearization, Fourier
+convention, dimensions, branches, norms, half-line and whole-line boundaries,
+threshold, counterexamples, nonlinear cross-check, material ceiling,
+consumers, nonduplication, independent review, generated state, and queue
+disposition all have durable closing artifacts.
 
 ## Review and Promotion Plan
 
-Every proposed claim receives an independent claim-review contract. Accepted
-logic must be importable and tested; all twenty-one source predicates and all
-named consumers receive durable ledgers. Promotion, if earned, updates the
-registry, a pinned release, qualified MC2 disposition, generated queue, docs,
-accepted memory, and parent effort in one governed transaction. A single
-integrated workflow gate is followed only by record-sensitive validation.
+The completed review accepted C-SG-018 as a symbolic-verified compatible
+extension. Importable logic and tests, all twenty-one source-predicate
+decisions, consumer ceilings, qualified MC2 disposition, release v0.82.0,
+generated state, and parent continuation are synchronized. The single
+integrated workflow gate passed 870 tests; later record edits receive only
+record-sensitive validation.
+
+## Results
+
+P096 derives the exact physical vacuum spectrum, phase and group velocities,
+and the evanescent/threshold/oscillatory exterior trichotomy. Full-rank
+sub-gap matching, affine threshold behavior, and positive norm per
+oscillatory period prove that the homogeneous whole-line equation has no
+nonzero L2 real-frequency separated mode. The accepted nonlinear breather's
+tail rate agrees without being used as an existence proof. Exact flux and
+d'Alembert counterexamples prevent radiation and gapless-dynamics overreach.
+MC2 is qualified and exact P096 work uses no NumPy quadrature alias.
 
 ## Done Gate
 
-P096 closes only when the positive physical spectrum-and-tail theorem exists,
-dependencies and consumers replay, primary and independent exact oracles are
-sensitive, every MC2 subclaim is terminally adjudicated, generated state
-agrees, and the debt ledger is empty. Otherwise the next materially distinct
-attempt remains active.
+P096 is closed: the positive theorem exists, dependencies and consumers replay,
+the 45-check primary and 24-check independent exact oracles are sensitive,
+every MC2 subclaim is terminally adjudicated, generated state agrees, and the
+campaign debt ledger is empty. The parent corpus effort continues to MC3.

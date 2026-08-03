@@ -1,0 +1,14 @@
+attempt: 0002
+candidate: D
+status: focused_test_fixture_failure
+command: .venv/bin/python -m pytest tests/test_dimensional_sine_gordon.py -q
+process_exit_status: 1
+result: 1 failed, 24 passed
+failure: >-
+  The domain-error test expected an undecidable gap comparison but supplied
+  Omega=3/2 with coefficients whose gap is exactly 3. The API correctly
+  classified that value as sub-gap and did not raise.
+diagnosis: test_input
+scientific_effect: none
+repair: Replace the concrete rational with a provably nonnegative symbolic frequency whose relation to the gap is genuinely undecidable.
+prohibited_repair: Do not weaken or remove the API's decidable-branch requirement.

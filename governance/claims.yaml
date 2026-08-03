@@ -4946,3 +4946,61 @@ claims:
     accepted_in: v0.81.0
     challenges: []
     supersedes: []
+  - id: C-SG-018
+    statement: >-
+      Under C-MED-003, exact differentiation of the physical sine-Gordon
+      residual at every vacuum u=2*pi*n gives
+      lambda*psi_tt-T*psi_xx+mu*psi=0. Its positive real-wavenumber branch is
+      Omega(k)=sqrt(omega_0^2+c^2*k^2), with floor omega_0. For k>0 its phase
+      and group velocities are v_p=Omega/k and v_g=c^2*k/Omega, so
+      v_p*v_g=c^2, v_p>c, 0<v_g<c; v_g tends to zero and v_p diverges as
+      k->0+, while both tend to c as k->infinity. For a real frequency
+      Omega>=0, a separated field a(x)*exp(-i*Omega*t) obeys
+      a''=((omega_0^2-Omega^2)/c^2)*a. Below the gap there is one decaying L2
+      branch on each exterior half-line with rate
+      kappa=sqrt(omega_0^2-Omega^2)/c, but smooth whole-line matching has
+      matrix [[1,-1],[-kappa,-kappa]] and determinant -2*kappa, so only the
+      zero global L2 mode remains. At threshold the affine branches, and above
+      the gap the oscillatory branches, are likewise non-L2 on a half-line
+      unless zero. Thus the homogeneous constant-coefficient whole-line
+      linearized equation has no nonzero L2 real-frequency separated mode in
+      any branch. The C-SG-017 nonlinear breather independently supplies a
+      core whose exterior rate eta/ell equals this sub-gap rate; exterior decay
+      alone does not prove such a core exists. Above-gap oscillation alone does
+      not imply outgoing radiation, because standing and directed waves on the
+      same dispersion can have zero and nonzero mean flux. In the gapless
+      limit the no-L2 separated-mode statement persists, but the wave equation
+      admits localized finite-energy traveling packets such as sech(x-c*t).
+      These conditional results derive no material, coefficient value, defect,
+      finite-box mode, nonlinear existence theorem beyond C-SG-017, outgoing
+      boundary condition, density of states, cutoff, lifetime, population, or
+      absolute scale.
+    provenance: campaigns/P096-mc2-dispersion-tail-classification/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-MED-003
+    evidence:
+      - campaigns/P096-mc2-dispersion-tail-classification/verify.py
+      - campaigns/P096-mc2-dispersion-tail-classification/reviews/independent_dispersion_review.py
+      - campaigns/P096-mc2-dispersion-tail-classification/evidence/source-reproduction.yaml
+      - campaigns/P096-mc2-dispersion-tail-classification/evidence/source-audit.yaml
+      - campaigns/P096-mc2-dispersion-tail-classification/evidence/check-adjudication.yaml
+      - campaigns/P096-mc2-dispersion-tail-classification/evidence/consumer-audit.yaml
+      - campaigns/P096-mc2-dispersion-tail-classification/evidence/candidate-comparison.yaml
+      - campaigns/P096-mc2-dispersion-tail-classification/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-SG-018-review.md
+      - tests/test_dimensional_sine_gordon.py
+    assumptions:
+      - All C-MED-003 model, positivity, coordinate, coefficient, and physical-unit assumptions hold, and the linearization is taken about an exact vacuum u=2*pi*n.
+      - The spatial domain is the whole real line unless an exterior half-line is explicitly named; real-frequency separated modes use the standard Lebesgue L2 norm and require field and first-derivative matching in the homogeneous equation.
+      - Phase and group velocity inequalities use the positive-frequency branch and k>0. The k=0 phase velocity is undefined, while the band floor is its positive one-sided frequency limit.
+      - Calling an oscillatory solution radiative requires separately declared outgoing or scattering data or a directed-flux condition. A defect, nonlinear core, boundary wall, or source changes the matching problem and is not inferred here.
+      - The C-SG-017 comparison is a cross-check of the independently derived exterior exponent, not an assumption used to derive the linear spectrum or a general nonlinear existence theorem.
+    comparators:
+      - MC2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; opened and executed only after P096 froze candidates, domain, boundary, norm, and solution-class criteria
+    accepted_in: v0.82.0
+    challenges: []
+    supersedes: []

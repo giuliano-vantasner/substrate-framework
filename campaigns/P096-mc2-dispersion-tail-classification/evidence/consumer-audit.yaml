@@ -1,0 +1,78 @@
+campaign: P096
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+consumers:
+  MC3:
+    sha256: 74fbddc086781a0d61d5dd22effabf48d7ff37f47c6d97ebde0b2fb6186464a5
+    status: pending_material_source
+    finding: >-
+      It repeats the dispersion, then supplies Frenkel-Kontorova and
+      Maxwell-Bloch material maps, isotope premises, sampled signs, and
+      external imports. P096 derives none of those maps and cannot authorize
+      its broad positive-gap-implies-breather language.
+  MC4:
+    sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+    status: pending_simulation_source
+    finding: >-
+      It simulates exact-breather initial data in a chosen special
+      normalization and compares a gapped nonlinear equation with the gapless
+      wave equation. Its existence, persistence, frequency, energy, and
+      convergence claims require their own numeric review. It already defines
+      a NumPy-version-compatible trapezoidal fallback.
+  MD1:
+    sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+    status: pending_later_source
+    finding: >-
+      It lifts the one-dimensional branch into a declared isotropic 3-D mode
+      measure and adds volume, polarization count, cell size, and a Debye
+      cutoff. Those are not consequences of C-SG-018.
+  MD2:
+    sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+    status: pending_later_source
+    finding: >-
+      It consumes MD1's 3-D measure and cutoff and adds a quantum oscillator,
+      stiffness, Planck scale, and granularity ratio. P096 supplies only the
+      conditional classical dispersion entering that construction.
+  medium_omega0:
+    sha256: 09d45f212bb28f124b05f99f9cb57acef7b815a1b4e99cfaa3e98bfc35f3f477
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It converts pending MC3 maps into host selectors and treats positive gap
+      as sufficient to host a breather. C-SG-018 supports the sub-gap tail
+      necessity only, not material selection or nonlinear existence.
+  lifetime_kernel:
+    sha256: 51bd4f46593363ac37d99b4e95ca0bef1b572a3b075505968adf77404db4cac5
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It reuses the sub-gap ratio in a separately declared damping and thermal
+      survival model and still defaults to normalized breather energy in
+      physical prose. No lifetime law follows from the spectrum theorem.
+  seeding_kernel:
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It declares a spectral overlap and population map, uses normalized energy,
+      and directly calls np.trapz. The source is immutable evidence; its future
+      migration must use the shared version-compatible integration helper and
+      independently validate the population interpretation.
+  commensurate:
+    sha256: 6f85aafcb330af6619aa0f98fed36212c573c0e9831ee76b7628143992eeff4f
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It identifies a chosen SAW frequency with the gap, labels twice the
+      breather frequency radiating, and derives engineering numbers from that
+      external design. P096 supplies neither the identification nor radiation.
+accepted_consumers:
+  - src/substrate_framework/dimensional_sine_gordon.py
+  - src/substrate_framework/__init__.py
+  - tests/test_dimensional_sine_gordon.py
+  - proposals/P096-mc2-dispersion-tail-classification/verify.py
+  - proposals/P096-mc2-dispersion-tail-classification/reviews/independent_dispersion_review.py
+replayed_dependencies:
+  - tests/test_sine_gordon.py
+  - tests/test_lattice_scalar.py
+  - tests/test_radial_harmonic_balance.py
+verdict: >-
+  C-SG-018 has closed governed consumers and a strict claim ceiling. No later
+  consumer derives a material, nonlinear existence theorem, outgoing boundary,
+  density of states, cutoff, lifetime, population, or absolute scale.
+debt: []

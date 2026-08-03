@@ -1,0 +1,25 @@
+source_unit: MC2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-27/bridge_MC2_dispersion_gap_rejection.py
+source_sha256: b73b5a623ae645b1232b09a3f144eb6429f89fbb0cb130a3d223f42129bacef0
+source_blob: 54fe0f85f72c1bf66cc395517a69a3038fab6407
+source_unchanged: true
+ast_check_calls: 21
+literal_check_calls: 21
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, sympy]
+accepted_framework_imports: []
+local_functions: [check]
+execution_model: module_level_exact_symbolic_checks_with_sampled_order_fallbacks
+primary_structural_defects:
+  - the gap iff predicate evaluates only c=ell=1 even though positivity was already assumed
+  - several regime predicates accept a finite sampled fallback when symbolic assumptions are indeterminate
+  - the positive-x exponential check is narrated as a global exp(-kappa*abs(x)) bound state without testing the cusp or matching conditions
+  - a decaying exterior branch is treated as sufficient for global bound-state and nonlinear-breather existence
+  - oscillatory above-gap solutions are called radiating without an outgoing boundary or flux predicate
+  - the gapless claim does not specify time-harmonic separation, L2 or finite-energy norm, whole-line domain, or the traveling-packet counterclass
+  - phase and group velocities and their causal limits are omitted
+  - a positive symbolic omega_b is called bounded by omega_0 although no upper-bound predicate is evaluated
+  - symbol absence is treated as scale and material discipline
+audit_verdict: requires_exact_domain_boundary_norm_and_solution_class_completion

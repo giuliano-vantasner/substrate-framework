@@ -1,0 +1,41 @@
+campaign: P096
+selection_basis:
+  - accepted dependency closure and direct vacuum linearization from C-MED-003
+  - exact domain, branch, boundary, norm, flux, units, and Fourier conventions
+  - mutation sensitivity, independent rederivation, counterexamples, and limiting cases
+  - separation of linear exterior behavior, global L2 modes, nonlinear existence, and transient packets
+  - no selection by source tally, finite sampled signs, terminology, or later consumer confidence
+candidates:
+  A:
+    decision: selected_as_reproduction_only
+    reason: MC2 exits cleanly with twenty-one checks, but several predicates test a narrower object than their bound-state, radiation, material, or bound narrative.
+  B:
+    decision: selected_and_promoted
+    reason: Direct differentiation at every vacuum gives the exact conditional physical Klein-Gordon operator.
+  C:
+    decision: selected_and_promoted
+    reason: Fourier substitution gives the positive branch, band floor, and exact phase/group velocities with their limiting behavior.
+  D:
+    decision: selected_and_promoted
+    reason: Constant-coefficient separation gives exact evanescent, threshold, and oscillatory exterior branches.
+  E:
+    decision: selected_and_promoted
+    reason: Full-rank sub-gap matching, affine threshold behavior, and positive norm per oscillatory period prove the whole-line L2 theorem.
+  F:
+    decision: selected_as_cross_check
+    reason: C-SG-017's exact nonlinear tail rate matches the independently derived exterior rate, but is not used to infer linear spectral existence.
+  G:
+    decision: selected_as_counterexample
+    reason: Exact finite-energy d'Alembert packets refute the broader gapless no-localized-dynamics reading without weakening the separated-mode theorem.
+  H:
+    decision: selected_as_semantic_ceiling
+    reason: Standing and outgoing waves share the dispersion but have zero and nonzero mean flux, so oscillation alone is not radiation.
+  I:
+    decision: selected_as_consumer_ceiling
+    reason: Later material, simulation, density-of-states, cutoff, lifetime, and engineering consumers add premises and remain independently pending or noncanonical.
+  J:
+    decision: selected
+    reason: The physical linear spectrum and tail ledger extend C-MED-003 without duplicating the normalized, lattice, or radial claims.
+selected_claims: [C-SG-018]
+source_disposition: qualified
+debt: []

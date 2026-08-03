@@ -1,0 +1,14 @@
+campaign: P096
+attempt: 9
+status: terminal_record_validation_passed
+commands:
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P096-mc2-dispersion-tail-classification.md
+  - memory validate /home/dan/substrate-framework/memory/vantasner/decisions/C-SG-018-review.md
+  - memory validate /home/dan/substrate-framework/memory/vantasner/efforts/framework-migration.md
+  - git diff --check
+process_exit_status: 0
+result: >-
+  All three durable records validate independently and the complete working
+  diff has no whitespace errors. The earlier integrated scientific gate and
+  exact-verifier replays remain unchanged.
+debt: []

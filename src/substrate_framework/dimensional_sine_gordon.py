@@ -13,7 +13,7 @@ material, select any coefficient, or remove the common coefficient scale.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Literal
 
 import sympy as sp
 
@@ -31,6 +31,24 @@ def _positive_exact(value: Any, name: str) -> sp.Expr:
         raise ValueError(f"{name} must be exact rather than floating")
     if expression.is_real is not True or expression.is_positive is not True:
         raise ValueError(f"{name} must be provably positive and real")
+    return expression
+
+
+def _nonnegative_exact(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.has(sp.Float):
+        raise ValueError(f"{name} must be exact rather than floating")
+    if expression.is_real is not True or expression.is_nonnegative is not True:
+        raise ValueError(f"{name} must be provably nonnegative and real")
+    return expression
+
+
+def _real_exact(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.has(sp.Float):
+        raise ValueError(f"{name} must be exact rather than floating")
+    if expression.is_real is not True:
+        raise ValueError(f"{name} must be provably real")
     return expression
 
 
@@ -79,6 +97,33 @@ class DimensionalBreatherObservables:
     profile_length: sp.Expr
     energy: sp.Expr
     action: sp.Expr
+
+
+TailBehavior = Literal["evanescent", "threshold", "oscillatory"]
+
+
+@dataclass(frozen=True)
+class DimensionalSineGordonLinearSpectrum:
+    """Exact positive-frequency branch of the linearized physical spectrum."""
+
+    wavenumber: sp.Expr
+    angular_frequency_squared: sp.Expr
+    angular_frequency: sp.Expr
+    group_velocity: sp.Expr
+    phase_velocity: sp.Expr | None
+
+
+@dataclass(frozen=True)
+class DimensionalSineGordonTimeHarmonicLedger:
+    """Exterior and whole-line classification at one real angular frequency."""
+
+    angular_frequency: sp.Expr
+    spatial_coefficient: sp.Expr
+    behavior: TailBehavior
+    spatial_rate: sp.Expr
+    right_half_line_l2_dimension: int
+    left_half_line_l2_dimension: int
+    whole_line_l2_dimension: int
 
 
 def _validated_coefficients(
@@ -216,6 +261,180 @@ def dimensional_sine_gordon_residual(
         validated.inertia * sp.diff(expression, time, 2)
         - validated.gradient * sp.diff(expression, coordinate, 2)
         + validated.onsite * sp.sin(expression)
+    )
+
+
+def dimensional_sine_gordon_linearized_residual(
+    field: Any,
+    coordinate: sp.Symbol,
+    time: sp.Symbol,
+    coefficients: DimensionalSineGordonCoefficients,
+) -> sp.Expr:
+    """Return the vacuum linearization ``lambda*u_tt-T*u_xx+mu*u``."""
+
+    expression = sp.sympify(field)
+    validated = _validated_coefficients(coefficients)
+    return (
+        validated.inertia * sp.diff(expression, time, 2)
+        - validated.gradient * sp.diff(expression, coordinate, 2)
+        + validated.onsite * expression
+    )
+
+
+def dimensional_sine_gordon_linear_spectrum(
+    wavenumber: Any,
+    coefficients: DimensionalSineGordonCoefficients,
+) -> DimensionalSineGordonLinearSpectrum:
+    r"""Return the positive branch of ``Omega^2=omega_0^2+c^2*k^2``.
+
+    The signed phase velocity ``Omega/k`` is undefined at concrete ``k=0``;
+    the record uses ``None`` there. For a symbolic wave number, callers are
+    responsible for declaring ``k != 0`` before using the phase velocity.
+    """
+
+    k = _real_exact(wavenumber, "wavenumber")
+    scales = dimensional_sine_gordon_scales(coefficients)
+    squared = sp.simplify(
+        scales.gap_frequency**2 + scales.signal_speed**2 * k**2
+    )
+    angular = sp.sqrt(squared)
+    group = sp.simplify(scales.signal_speed**2 * k / angular)
+    phase = None if k.is_zero is True else sp.simplify(angular / k)
+    return DimensionalSineGordonLinearSpectrum(
+        wavenumber=k,
+        angular_frequency_squared=squared,
+        angular_frequency=angular,
+        group_velocity=group,
+        phase_velocity=phase,
+    )
+
+
+def dimensional_sine_gordon_tail_coefficient(
+    angular_frequency: Any,
+    coefficients: DimensionalSineGordonCoefficients,
+) -> sp.Expr:
+    r"""Return ``(omega_0^2-Omega^2)/c^2`` in ``a''=coefficient*a``."""
+
+    angular = _nonnegative_exact(angular_frequency, "angular_frequency")
+    scales = dimensional_sine_gordon_scales(coefficients)
+    return sp.simplify(
+        (scales.gap_frequency**2 - angular**2) / scales.signal_speed**2
+    )
+
+
+def evanescent_half_line_matching_matrix(rate: Any) -> sp.ImmutableMatrix:
+    r"""Return the origin matching matrix for two decaying half-line branches.
+
+    The right branch is ``A*exp(-kappa*x)`` and the left branch is
+    ``B*exp(kappa*x)``. Continuity of the field and first derivative at zero
+    gives this matrix on ``(A,B)``. Its determinant is ``-2*kappa``.
+    """
+
+    kappa = _positive_exact(rate, "rate")
+    return sp.ImmutableMatrix([[1, -1], [-kappa, -kappa]])
+
+
+def dimensional_sine_gordon_time_harmonic_ledger(
+    angular_frequency: Any,
+    coefficients: DimensionalSineGordonCoefficients,
+) -> DimensionalSineGordonTimeHarmonicLedger:
+    """Classify exterior branches and global L2 modes on the homogeneous line.
+
+    Sub-gap equations have one decaying solution on each exterior half-line,
+    but their smooth whole-line matching matrix is full rank. Threshold and
+    oscillatory constant-coefficient solutions have no nonzero half-line L2
+    branch. Thus the global homogeneous linear equation has no nonzero L2
+    real-frequency separated mode in any branch. A nonlinear or defect core is
+    additional structure and is not inferred by this ledger.
+    """
+
+    angular = _nonnegative_exact(angular_frequency, "angular_frequency")
+    coefficient = dimensional_sine_gordon_tail_coefficient(
+        angular,
+        coefficients,
+    )
+    if coefficient.is_positive is True:
+        behavior: TailBehavior = "evanescent"
+        rate = sp.sqrt(coefficient)
+        matching = evanescent_half_line_matching_matrix(rate)
+        whole_line_dimension = 2 - matching.rank()
+        right_dimension = left_dimension = 1
+    elif coefficient.is_zero is True:
+        behavior = "threshold"
+        rate = sp.Integer(0)
+        whole_line_dimension = 0
+        right_dimension = left_dimension = 0
+    elif coefficient.is_negative is True:
+        behavior = "oscillatory"
+        rate = sp.sqrt(-coefficient)
+        whole_line_dimension = 0
+        right_dimension = left_dimension = 0
+    else:
+        raise ValueError(
+            "angular_frequency must have a decidable relation to the gap frequency"
+        )
+    return DimensionalSineGordonTimeHarmonicLedger(
+        angular_frequency=angular,
+        spatial_coefficient=coefficient,
+        behavior=behavior,
+        spatial_rate=rate,
+        right_half_line_l2_dimension=right_dimension,
+        left_half_line_l2_dimension=left_dimension,
+        whole_line_l2_dimension=whole_line_dimension,
+    )
+
+
+def linear_wave_traveling_field(
+    profile: Any,
+    coordinate: Any,
+    time: Any,
+    signal_speed: Any,
+    *,
+    direction: int = 1,
+) -> sp.Expr:
+    """Return ``F(x-direction*c*t)`` for a callable symbolic profile ``F``."""
+
+    if direction not in {-1, 1}:
+        raise ValueError("direction must be -1 or 1")
+    speed = _positive_exact(signal_speed, "signal_speed")
+    if not callable(profile):
+        raise TypeError("profile must be callable")
+    argument = sp.sympify(coordinate) - direction * speed * sp.sympify(time)
+    return sp.sympify(profile(argument))
+
+
+def linear_wave_residual(
+    field: Any,
+    coordinate: sp.Symbol,
+    time: sp.Symbol,
+    signal_speed: Any,
+) -> sp.Expr:
+    """Return the gapless wave residual ``u_tt-c^2*u_xx``."""
+
+    speed = _positive_exact(signal_speed, "signal_speed")
+    expression = sp.sympify(field)
+    return sp.diff(expression, time, 2) - speed**2 * sp.diff(
+        expression,
+        coordinate,
+        2,
+    )
+
+
+def linear_wave_energy_density(
+    field: Any,
+    coordinate: sp.Symbol,
+    time: sp.Symbol,
+    inertia: Any,
+    gradient: Any,
+) -> sp.Expr:
+    """Return ``lambda*u_t^2/2+T*u_x^2/2`` for a gapless linear medium."""
+
+    lam = _positive_exact(inertia, "inertia")
+    tension = _positive_exact(gradient, "gradient")
+    expression = sp.sympify(field)
+    return (
+        lam * sp.diff(expression, time) ** 2 / 2
+        + tension * sp.diff(expression, coordinate) ** 2 / 2
     )
 
 
