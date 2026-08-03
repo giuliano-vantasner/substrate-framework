@@ -1,0 +1,14 @@
+campaign: P099
+attempt: 11
+route: staged_diff_hygiene
+status: failed_extra_blank_lines_at_eof
+command: git diff --cached --check
+process:
+  exit_status: 2
+  affected_files: 8
+classification: record_formatting
+repair: Remove only the extra terminal blank line from the reported evidence and review files.
+next_route: restage_and_recheck_cached_diff
+debt:
+  - pass staged diff hygiene
+  - commit scientific transaction

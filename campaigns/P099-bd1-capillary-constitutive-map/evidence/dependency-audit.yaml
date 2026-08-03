@@ -1,0 +1,35 @@
+source_unit: BD1
+accepted_dependency_closure:
+  - claim: C-RG-001
+    role: generic positive-drive capillary maximum
+declared_unaccepted_predecessors:
+  - path: pulson-backreaction-bridge/sympy/rungs/rung016_disclination_ring_energetics.py
+    git_blob: 543d31d66a2a8926c573134bdc154fd81634ecdd
+    role: source of declared Frank/core and tilted-well premises
+    authority: evidence_only
+  - path: pulson-backreaction-bridge/sympy/rungs/rung017_pulson_sources_the_drive.py
+    git_blob: 126f5ac82863d5c7aa657d9aa4dd54949e0e4004
+    role: source of declared standing-profile quadratic loading premise
+    authority: evidence_only
+  - path: pulson-backreaction-bridge/sympy/rungs/rung091_R_gate_medium_escape.py
+    git_blob: e2980b67737bfec9ed7f303619d5ebb4122e0ead
+    role: later source replay of the capillary barrier
+    authority: duplicate_evidence_for_C-RG-001
+queue_candidate_dependency_resolution:
+  B1:
+    resolution: false_positive_label_collision
+    detail: BD1 cites rung016 check B1; bridge B1 is an unrelated Berry-connection unit.
+  E1:
+    resolution: false_positive_label_collision
+    detail: BD1 cites rung016 check E1; bridge E1 concerns rational-map angular integrals.
+  E2:
+    resolution: false_positive_label_collision
+    detail: BD1 cites rung016 check E2; bridge E2 concerns multi-Skyrmion BVPs.
+  BD4:
+    resolution: downstream_not_dependency
+    detail: BD4 consumes generic barrier curvature and adds a pending inertia premise.
+closure_method: >-
+  P099 independently derives every mathematical premise it promotes and states
+  the Frank/core and quadratic loading formulas as explicit conditional inputs.
+  It inherits no physical material, pulson, or frequency authority from pending rungs.
+verdict: closed_on_C-RG-001_only

@@ -1,0 +1,19 @@
+campaign: P099
+attempt: 9
+route: pre_generation_registry_and_memory_validation
+status: expected_generated_state_stale
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/decisions/C-RG-002-review.md
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P099-bd1-capillary-constitutive-map.md
+  - git diff --check
+process:
+  repository: {exit_status: 1, reason: generated claim index is stale}
+  decision_memory: {exit_status: 0, verdict: valid}
+  proposal_memory: {exit_status: 0, verdict: valid}
+  diff: {exit_status: 0, verdict: clean}
+classification: expected_generation_boundary
+next_route: run_scripts_render_docs_then_revalidate
+debt:
+  - generate canonical docs and accepted memory
+  - run integrated promotion gate

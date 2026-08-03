@@ -1,0 +1,46 @@
+campaign: P099
+base_release: v0.83.0
+base_commit: 6277786fee53907d5e4f499f8389268e19d3bedd
+preregistration_commit: a69a243
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+claim: C-RG-002
+primary:
+  command: PYTHONPATH=src .venv/bin/python proposals/P099-bd1-capillary-constitutive-map/verify.py
+  oracle: SymPy exact algebra plus source AST and hash audit through canonical APIs
+  terminal_tally: ALL 41 CHECKS PASS [C-RG-002]
+  exit_status: 0
+independent:
+  command: >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P099-bd1-capillary-constitutive-map/reviews/independent_capillary_review.py
+  oracle: independent annulus, well, profile-average, completed-square, exponent, and rank derivations
+  canonical_constitutive_imports: []
+  terminal_tally: ALL 18 CHECKS PASS [P099-INDEPENDENT]
+  exit_status: 0
+focused_tests:
+  command: .venv/bin/python -m pytest -q tests/test_radial_energy.py
+  tally: 19 passed
+accepted_dependency_replay:
+  command: PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+  terminal_tally: P006 ALL 28 CHECKS PASS
+mutations:
+  - relative-barrier pi coefficient
+  - area-drive factor two
+  - amplitude power
+  - wavenumber power
+  - cutoff order
+  - zero loading coordinates
+countermodels:
+  - negative-drive monotone landscape
+  - linear-amplitude dimensionally closed law for dimensionless amplitude
+  - three-parameter drive-preserving rescaling family
+numeric_or_simulation_claims: none
+quadrature: none
+numpy_integration_aliases_in_new_work: none
+integrated_gate:
+  command: scripts/validate.sh
+  repository: WORKFLOW VALID 114 claims 114 accepted 0 proposals 218 units 121 pending 0 partial
+  memory: All 422 file(s) valid
+  pytest: 904 passed in 81.49s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+status: passed_promotion

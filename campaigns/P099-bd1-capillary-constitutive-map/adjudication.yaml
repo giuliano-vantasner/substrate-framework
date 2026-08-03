@@ -1,0 +1,59 @@
+campaign: P099
+title: BD1 conditional capillary constitutive map and identifiability audit
+source_baseline: substrate@6d1f4e0
+source_units: [BD1]
+base_release: v0.83.0
+release_after_adjudication: v0.84.0
+adjudicated_at: '2026-08-04T20:00:00Z'
+selected_candidates:
+  - {id: C, reason: The conditional composition is exact and dependency closed.}
+  - {id: D, reason: The amplitude-dimension family removes a hidden source convention.}
+  - {id: E, reason: Exact effective and Frank/core sensitivities retain additive-state dependence.}
+  - {id: F, reason: Exact ranks and constructive counterfamilies establish the identifiability ceiling.}
+  - {id: G, reason: Positive, zero, and negative drive domains are fully classified.}
+  - {id: H, reason: Alternative monomial laws prove that dimensions do not select the quadratic premise.}
+  - {id: I, reason: Pinned consumers remain at their governed scope.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: B, decision: duplicate_of_C-RG-001}
+claims:
+  - {id: C-RG-002, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-RG-001, decision: unchanged_generic_capillary_maximum}
+evidence:
+  source_route: attempts/0001/result.yaml
+  representation_failures:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+  primary_failures:
+    - attempts/0005/result.yaml
+  independent_failures:
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+  consumer_invocation_failure: attempts/0008/result.yaml
+  generation_boundary: attempts/0009/result.yaml
+  integrated_gate: attempts/0010/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_capillary_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  BD1: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD1_real_variable_barrier.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P099-bd1-capillary-constitutive-map/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P099-bd1-capillary-constitutive-map/reviews/independent_capillary_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+  - .venv/bin/python -m pytest -q tests/test_radial_energy.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

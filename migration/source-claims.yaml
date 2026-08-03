@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 122
-  qualified: 84
+  pending_adjudication: 121
+  qualified: 85
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -6117,8 +6117,31 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RG-001
+  - C-RG-002
+  qualification: 'BD1''s exact conditional substitution survives: a declared Frank/core tension and quadratic
+    loading drive compose with the positive capillary maximum to give the displayed radius, relative barrier,
+    and conditional scaling. The source does not actually check dimensions, identify its many inputs,
+    select an amplitude convention or quadratic law, derive k~omega, establish a material or pulson stress,
+    or validate a temperature, firing, rate, event, nuclear, or output-power claim. P099 supplies the
+    missing dimension family, full sign domain, exact sensitivities, alternative-law countermodel, identifiability
+    ranks, and constructive drive-preserving parameter families.'
+  evidence:
+  - campaigns/P099-bd1-capillary-constitutive-map/reviews/source_adjudication.md
+  - campaigns/P099-bd1-capillary-constitutive-map/evidence/source-reproduction.yaml
+  - campaigns/P099-bd1-capillary-constitutive-map/evidence/source-audit.yaml
+  - campaigns/P099-bd1-capillary-constitutive-map/evidence/check-adjudication.yaml
+  - campaigns/P099-bd1-capillary-constitutive-map/evidence/dependency-audit.yaml
+  - campaigns/P099-bd1-capillary-constitutive-map/evidence/consumer-audit.yaml
+  - campaigns/P099-bd1-capillary-constitutive-map/evidence/candidate-comparison.yaml
+  - campaigns/P099-bd1-capillary-constitutive-map/verify.py
+  - campaigns/P099-bd1-capillary-constitutive-map/reviews/independent_capillary_review.py
+  - memory/vantasner/decisions/C-RG-002-review.md
+  note: P099 promotes only the dependency-closed conditional constitutive theorem. B1, E1, and E2 are
+    queue label collisions; BD4 and the remaining DBD/CM consumers stay pending. Exact P099 work uses
+    no NumPy or quadrature.
 - source_unit: BD2
   phase: phase-28
   path: merged-framework/bridges/phase-28/bridge_BD2_scaling_law_thermal_optimum.py

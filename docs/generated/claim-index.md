@@ -669,6 +669,15 @@ For positive radius R and density lambda, the circumference line energy E_line =
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-002
 
+## C-RG-002
+
+Conditional on positive Frank constant K_F with energy-per-length dimension, real dimensionless defect strength s, ordered positive cutoffs R_o>r_c, positive core line energy epsilon_core, positive coupling g and thickness l_m, and nonzero real amplitude A and wavenumber k, declare T=pi*K_F*s^2*log(R_o/r_c)+epsilon_core and P=g*A^2*k^2*l_m/2. Composing these premises with C-RG-001 gives the unique positive capillary maximum R_*=2*T/(g*A^2*k^2*l_m) and relative barrier E_barrier=E(R_*)-E(0)=2*pi*T^2/(g*A^2*k^2*l_m); a radius-independent core offset cancels only from this relative height. If [A]=L^alpha, dimensional closure requires [g]=E*L^(-1-2*alpha), giving [P]=E/L^2, [R_*]=L, and [E_barrier]=E for every declared real alpha, so dimensions select neither alpha nor the quadratic loading premise. Holding T fixed, the log elasticities of both radius and barrier against (g,A,k,l_m) are (-1,-2,-2,-1), while the barrier elasticity against T is two and the radius elasticity is one. Writing T_el=pi*K_F*s^2*log(R_o/r_c), the T elasticities against (K_F,s,R_o,r_c,epsilon_core) are (T_el/T,2*T_el/T,pi*K_F*s^2/T,-pi*K_F*s^2/T,epsilon_core/T); the radius inherits them and the barrier doubles them. The exact log-exponent matrix for (R_*,E_barrier) against (T,g,A,k,l_m) has rank two and three null directions: radius plus barrier identifies effective T but not the four drive constituents, while a barrier observation alone has rank one and identifies none. Zero drive has no finite maximum and negative drive is strictly increasing for positive radius. These results derive no material, coupling value, amplitude convention, k-omega dispersion, temperature law, nucleation rate, DBD event, isotope effect, nuclear process, or output power.
+
+- Accepted in: `v0.84.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RG-001
+
 ## C-RGE-001
 
 For positive b0, mu0, and g0, a positive coupling on an interval that satisfies the declared one-loop equation mu*dg/dmu=-b0*g^3/(16*pi^2) with g(mu0)=g0 obeys 1/g(mu)^2=1/g0^2+b0*log(mu/mu0)/(8*pi^2). The formal zero of this inverse coupling is Lambda=mu0*exp(-8*pi^2/(b0*g0^2)). Lambda has zero total logarithmic-scale derivative along the declared flow, whereas its partial derivative with respect to mu0 at fixed g0 is Lambda/mu0. For b0>0, 0<Lambda/mu0<1. This conditional theorem does not derive the beta function or b0 and establishes no physical QCD, confinement, or strong-coupling interpretation.

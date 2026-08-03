@@ -1,0 +1,24 @@
+campaign: P099
+attempt: 5
+route: first_primary_exact_claim_verifier
+status: failed_terminal_limit_oracle_after_39_checks
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P099-bd1-capillary-constitutive-map/verify.py
+process:
+  exit_status: 1
+  passed_before_failure: 39
+failure: >-
+  SymPy returned infinity times sign(T_real**2) for A and g approaching zero
+  because separate positive R_o and r_c symbols do not encode the declared
+  strict ordering R_o>r_c. The API contract requires that ordering, but the
+  limit oracle had not supplied it.
+classification: verifier_assumption_encoding
+repair: >-
+  Prove the no-loading limits with an explicitly positive effective line
+  tension, which is the exact domain of C-RG-001, while retaining separate
+  cutoff-order tests for the Frank/core constructor.
+next_route: repaired_primary_domain_oracle
+debt:
+  - replay primary verifier
+  - complete records and integrated gate

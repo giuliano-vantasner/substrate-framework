@@ -1,0 +1,32 @@
+campaign: P099
+attempt: 1
+route: unchanged_hash_pinned_source_reproduction_and_body_audit
+status: source_reproduced_conditional_composition_requires_scope_repair
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD1_real_variable_barrier.py
+  sha256: 42579012eda87243639248664c6f90945c454046aa66c8de166ad6d2e594abc7
+  git_blob: df313ad5586ce3288cf6f7b46a319c7426f7c9b0
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD1_real_variable_barrier.py
+process:
+  exit_status: 0
+  elapsed_wall_seconds: 0.58
+  maximum_resident_kib: 53928
+  terminal_tally: ALL 18 CHECKS PASS
+diagnosis:
+  - The relative barrier composition and its declared positive-input derivatives are exact symbolic identities.
+  - The source imports only sys and sympy; it imports no accepted framework claim or canonical API.
+  - Its line-tension dimension predicate tests only symbol occurrence and does not check any dimension.
+  - Its physical wall-stress and material labels rely on pending source rungs and are not established by substitution.
+  - The parenthetical k approximately omega relation is asserted without a dispersion or unit convention.
+  - The no-loading limit proves barrier divergence inside the declared capillary law, not that a physical channel never fires.
+  - The negative-coupling predicate samples one unit substitution rather than proving the full positive-radius domain.
+  - Neither one barrier nor radius plus barrier identifies the coupling, amplitude, wavenumber, and thickness separately.
+next_route: >-
+  Promote only a conditional constitutive theorem with a complete dimension
+  family, exact domain proof, sensitivity ledger, alternative-law comparison,
+  and constructive non-identifiability counterfamilies.
+debt:
+  - complete canonical API and independent exact verifier
+  - terminal predicate, dependency, consumer, and nonduplication records

@@ -256,6 +256,69 @@ claims:
     accepted_in: v0.6.0
     challenges: []
     supersedes: []
+  - id: C-RG-002
+    statement: >-
+      Conditional on positive Frank constant K_F with energy-per-length
+      dimension, real dimensionless defect strength s, ordered positive
+      cutoffs R_o>r_c, positive core line energy epsilon_core, positive
+      coupling g and thickness l_m, and nonzero real amplitude A and
+      wavenumber k, declare
+      T=pi*K_F*s^2*log(R_o/r_c)+epsilon_core and
+      P=g*A^2*k^2*l_m/2. Composing these premises with C-RG-001 gives the
+      unique positive capillary maximum
+      R_*=2*T/(g*A^2*k^2*l_m) and relative barrier
+      E_barrier=E(R_*)-E(0)=2*pi*T^2/(g*A^2*k^2*l_m); a radius-independent
+      core offset cancels only from this relative height. If [A]=L^alpha,
+      dimensional closure requires [g]=E*L^(-1-2*alpha), giving
+      [P]=E/L^2, [R_*]=L, and [E_barrier]=E for every declared real alpha,
+      so dimensions select neither alpha nor the quadratic loading premise.
+      Holding T fixed, the log elasticities of both radius and barrier against
+      (g,A,k,l_m) are (-1,-2,-2,-1), while the barrier elasticity against T is
+      two and the radius elasticity is one. Writing
+      T_el=pi*K_F*s^2*log(R_o/r_c), the T elasticities against
+      (K_F,s,R_o,r_c,epsilon_core) are
+      (T_el/T,2*T_el/T,pi*K_F*s^2/T,-pi*K_F*s^2/T,epsilon_core/T); the radius
+      inherits them and the barrier doubles them. The exact log-exponent
+      matrix for (R_*,E_barrier) against (T,g,A,k,l_m) has rank two and three
+      null directions: radius plus barrier identifies effective T but not the
+      four drive constituents, while a barrier observation alone has rank one
+      and identifies none. Zero drive has no finite maximum and negative
+      drive is strictly increasing for positive radius. These results derive
+      no material, coupling value, amplitude convention, k-omega dispersion,
+      temperature law, nucleation rate, DBD event, isotope effect, nuclear
+      process, or output power.
+    provenance: campaigns/P099-bd1-capillary-constitutive-map/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-RG-001
+    evidence:
+      - campaigns/P099-bd1-capillary-constitutive-map/verify.py
+      - campaigns/P099-bd1-capillary-constitutive-map/reviews/independent_capillary_review.py
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/source-reproduction.yaml
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/source-audit.yaml
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/check-adjudication.yaml
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/dependency-audit.yaml
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/consumer-audit.yaml
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/candidate-comparison.yaml
+      - campaigns/P099-bd1-capillary-constitutive-map/reviews/source_adjudication.md
+      - campaigns/P099-bd1-capillary-constitutive-map/evidence/primary-provenance.yaml
+      - memory/vantasner/decisions/C-RG-002-review.md
+      - tests/test_radial_energy.py
+    assumptions:
+      - K_F, epsilon_core, g, and l_m are exact, real, constant, and strictly positive; s is exact and real; R_o and r_c are positive lengths with R_o>r_c; A and k are exact nonzero real quantities.
+      - The displayed Frank/core and quadratic-loading formulas are declared constitutive premises. Their physical origin, coefficient values, material applicability, and completeness are not derived by the composition.
+      - The amplitude length exponent alpha is declared and the coupling dimension changes with it. Dimensional closure alone neither selects alpha nor distinguishes the quadratic law from alternative monomial loading laws.
+      - Barrier height means E(R_*)-E(0). An additive radius-independent energy offset remains in the absolute energy at the top.
+      - Log elasticities hold the other displayed effective inputs fixed. Frank/core sensitivities are local and state dependent because the line tension is additive.
+      - Identifiability statements concern exact positive log coordinates of the displayed effective monomial map; observations, noise models, and independent calibration equations are not supplied.
+    comparators:
+      - BD1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; executed and opened only after P099 froze the dimension family, domains, alternatives, identifiability criteria, and consumer ceiling
+    accepted_in: v0.84.0
+    challenges: []
+    supersedes: []
   - id: C-VAR-001
     statement: >-
       For any differentiable one-coordinate Lagrangian L0 and any nonzero

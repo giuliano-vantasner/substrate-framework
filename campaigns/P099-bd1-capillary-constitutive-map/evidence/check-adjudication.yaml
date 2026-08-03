@@ -1,0 +1,79 @@
+source_unit: BD1
+checks:
+  - id: 1
+    predicate: R_star=T/P is stationary
+    verdict: duplicate_accepted
+    mapping: C-RG-001
+  - id: 2
+    predicate: E_second=-2*pi*P gives a barrier top
+    verdict: duplicate_accepted
+    mapping: C-RG-001
+  - id: 3
+    predicate: relative barrier is pi*T**2/P
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 4
+    predicate: radius-independent E_core cancels from the relative barrier
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 5
+    predicate: curvature magnitude is 2*pi*P and BD4 converts it to frequency
+    verdict: partly_duplicate_partly_excluded
+    mapping: C-RG-001
+    qualification: The curvature identity survives; the BD4 frequency construction is downstream and pending.
+  - id: 6
+    predicate: declared Frank/core expression is a line tension
+    verdict: accepted_only_with_repaired_dimension_ledger
+    mapping: C-RG-002
+    qualification: The source check tests symbol occurrence, not dimensions or cutoff order.
+  - id: 7
+    predicate: tension increases with R_o
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 8
+    predicate: h=g*A**2*k**2/4 is sourced wall stress
+    verdict: formula_premise_accepted_physical_label_excluded
+    mapping: C-RG-002
+  - id: 9
+    predicate: P=2*h*l_m=g*A**2*k**2*l_m/2
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 10
+    predicate: composed relative barrier is 2*pi*T_real**2/(g*A**2*k**2*l_m)
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 11
+    predicate: barrier depends on real material and drive variables
+    verdict: algebra_accepted_real_material_label_excluded
+    mapping: C-RG-002
+  - id: 12
+    predicate: internal T and P are mapped out
+    verdict: qualified_reparameterization
+    mapping: C-RG-002
+    qualification: More primitive inputs replace T and P conditionally; their values are not derived or identified.
+  - id: 13
+    predicate: dE_barrier/dA is negative
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 14
+    predicate: dE_barrier/dk is negative and k is proportional to omega
+    verdict: derivative_accepted_dispersion_excluded
+    mapping: C-RG-002
+  - id: 15
+    predicate: dE_barrier/dh is negative
+    verdict: accepted_conditional
+    mapping: C-RG-002
+  - id: 16
+    predicate: declared scaling is T**2*A**-2*k**-2*l_m**-1
+    verdict: accepted_conditional_not_law_selection
+    mapping: C-RG-002
+  - id: 17
+    predicate: A-to-zero sends the barrier to infinity and the channel never fires
+    verdict: limit_accepted_firing_claim_excluded
+    mapping: C-RG-002
+  - id: 18
+    predicate: negative g yields no positive capillary barrier top
+    verdict: accepted_with_general_domain_repair
+    mapping: C-RG-002
+    qualification: P099 proves the complete positive-radius domain rather than one unit substitution.
+terminal_verdict: all_eighteen_individually_adjudicated

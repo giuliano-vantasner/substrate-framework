@@ -1,0 +1,23 @@
+campaign: P099
+attempt: 6
+route: first_independent_exact_rederivation
+status: failed_terminal_wrong_sign_root_oracle_after_16_checks
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P099-bd1-capillary-constitutive-map/reviews/independent_capillary_review.py
+process:
+  exit_status: 1
+  passed_before_failure: 16
+failure: >-
+  The negative-drive stationary equation has the real solution R=-tau/q. The
+  verifier incorrectly required an empty real solution set instead of proving
+  that the unique root is negative and therefore outside the physical R>0
+  domain.
+classification: verifier_domain_encoding
+repair: >-
+  Derive the real root explicitly, require it to equal -tau/q and be negative,
+  and separately require the derivative to be positive for R>0.
+next_route: repaired_independent_domain_oracle
+debt:
+  - replay independent verifier
+  - complete source and consumer adjudication

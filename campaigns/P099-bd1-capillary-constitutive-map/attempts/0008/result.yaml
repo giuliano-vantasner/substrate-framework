@@ -1,0 +1,22 @@
+campaign: P099
+attempt: 8
+route: first_hash_pinned_engineering_consumer_replay
+status: failed_interpreter_path_before_python_start
+command: >-
+  cd /home/dan/substrate/engineering && /usr/bin/time -v
+  .venv/bin/python /home/dan/substrate/engineering/barrier_scaling.py
+process:
+  exit_status: 127
+  elapsed_wall_seconds: 0.00
+failure: >-
+  The source working directory was required for its local imports, but the
+  framework virtual-environment interpreter was addressed relative to that
+  directory and therefore did not exist.
+classification: invocation
+repair: >-
+  Keep the source working directory and invoke
+  /home/dan/substrate-framework/.venv/bin/python by absolute path.
+next_route: repaired_hash_pinned_engineering_consumer_replay
+debt:
+  - replay core engineering consumer
+  - complete consumer evidence

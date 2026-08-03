@@ -1,0 +1,23 @@
+campaign: P099
+attempt: 7
+route: first_independent_domain_repair_replay
+status: failed_terminal_limit_assumption_after_17_checks
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P099-bd1-capillary-constitutive-map/reviews/independent_capillary_review.py
+process:
+  exit_status: 1
+  passed_before_failure: 17
+failure: >-
+  The wrong-sign root repair passed. The final no-loading check still used the
+  expanded Frank/core tension with separately positive but unordered cutoff
+  symbols, so SymPy could not prove that the squared coefficient was nonzero.
+classification: verifier_assumption_encoding
+repair: >-
+  Use the independently declared positive effective line tension for the
+  no-loading capillary limit. Keep the separate annulus and constitutive
+  substitution checks as the evidence for the expanded formula.
+next_route: repaired_independent_positive_tension_limit
+debt:
+  - replay independent verifier
+  - complete source and consumer records

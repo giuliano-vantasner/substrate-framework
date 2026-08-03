@@ -1,0 +1,19 @@
+campaign: P099
+attempt: 10
+route: integrated_promotion_gate
+status: passed
+command: scripts/validate.sh
+process:
+  exit_status: 0
+  repository: WORKFLOW VALID 114 claims 114 accepted 0 proposals 218 units 121 pending 0 partial
+  memory: All 422 file(s) valid
+  skill: valid
+  pytest: 904 passed in 81.49s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+claim_oracles:
+  primary: ALL 41 CHECKS PASS [C-RG-002]
+  independent: ALL 18 CHECKS PASS [P099-INDEPENDENT]
+  focused_radial_energy: 19 passed
+  accepted_dependency_P006: P006 ALL 28 CHECKS PASS
+debt: []
+next_route: commit_scientific_transaction_then_checkpoint_parent_effort

@@ -1,0 +1,38 @@
+campaign: P099
+selection_order:
+  - accepted capillary dependency closure
+  - symbol and dimension consistency
+  - complete premise and parameter ledger
+  - exact domains and mutation sensitivity
+  - identifiability and alternative-law comparison
+  - canonical reuse and consumer closure
+candidates:
+  A:
+    decision: retained_as_reproduction_evidence
+    reason: The untouched source passes 18 checks but its tally does not validate its physical labels.
+  B:
+    decision: rejected_as_new_claim
+    reason: The generic capillary maximum is already C-RG-001.
+  C:
+    decision: selected
+    reason: The exact conditional composition is dependency closed and retains every free input.
+  D:
+    decision: selected
+    reason: The alpha-family dimension ledger prevents a hidden amplitude convention.
+  E:
+    decision: selected
+    reason: Effective monomial elasticities are constant while Frank/core component sensitivities are state dependent.
+  F:
+    decision: selected
+    reason: Exact ranks and constructive rescalings prove the observation ceiling.
+  G:
+    decision: selected
+    reason: Only positive area drive supplies a positive strict maximum; zero and negative drive do not.
+  H:
+    decision: selected_as_scope_guard
+    reason: Dimensionally valid alternatives show that dimensions cannot select the quadratic loading law.
+  I:
+    decision: selected
+    reason: All consumers are pinned and no pending consumer broadens the claim.
+selected_claim: C-RG-002
+claim_scope: conditional_constitutive_theorem_not_material_prediction

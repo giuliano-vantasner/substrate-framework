@@ -1,0 +1,24 @@
+campaign: P099
+attempt: 4
+route: repaired_generic_representation_and_downstream_replay
+status: failed_new_test_oracle_while_accepted_consumer_passed
+commands:
+  - .venv/bin/python -m pytest -q tests/test_radial_energy.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+process:
+  focused_tests: {exit_status: 1, tally: '1 failed, 18 passed'}
+  P006_replay: {exit_status: 0, terminal_tally: 'P006 ALL 28 CHECKS PASS'}
+failure: >-
+  The composite radius retained the additive line-tension subexpression, but
+  the new unit test compared two algebraically equal SymPy quotient trees with
+  structural equality.
+classification: verifier
+repair: >-
+  Require an exact zero simplified residual for formula equality and separately
+  assert that the returned radius contains T and the barrier contains T**2.
+  This preserves representation sensitivity without mistaking harmless
+  multiplication-tree canonicalization for a scientific failure.
+next_route: repaired_focused_test_oracle
+debt:
+  - replay focused tests and P006
+  - complete independent P099 verification and adjudication

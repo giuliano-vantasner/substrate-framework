@@ -2,7 +2,7 @@
 description: Derive and audit the BD1 conditional capillary constitutive map
 author: vantasner
 created: '2026-08-04T18:30:00Z'
-updated: '2026-08-04T18:30:00Z'
+updated: '2026-08-04T20:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-BD1
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P099 BD1 Capillary Constitutive Map
 
@@ -197,3 +197,20 @@ completion.
 
 See BD1-BD4, B1, E1, E2, C-RG-001, P006, P086, the radial-energy and
 coherence-gate APIs, and the parent framework-migration effort.
+
+## Terminal Adjudication
+
+P099 accepts C-RG-002 and qualifies BD1. The source reproduces all eighteen
+checks, while the primary canonical route passes 41 checks, the independent
+annulus/completed-square route passes 18, the focused radial-energy suite
+passes 19 tests, and P006 replays 28 checks. The promoted result is the exact
+conditional radius and relative barrier with complete dimensions,
+sensitivities, sign domains, alternative-law ceiling, and constructive
+non-identifiability.
+
+The source's physical pulson, material, `k~omega`, firing, rate, and output-
+power readings do not survive the authority audit. B1, E1, and E2 are queue
+label collisions, while BD4 and later DBD/CM files are downstream and pending.
+The core engineering consumer reproduces 16 checks but transfers no broader
+authority. Claim debt is empty, new work uses no NumPy or quadrature alias, and
+the migration continues to BD2.

@@ -1,0 +1,21 @@
+campaign: P099
+attempt: 2
+route: first_focused_canonical_api_test
+status: failed_representation_repaired_before_replay
+command: .venv/bin/python -m pytest -q tests/test_radial_energy.py
+process:
+  exit_status: 1
+  tally: 1 failed, 18 passed
+failure: >-
+  frank_core_line_tension simplified pi*K_F*s**2*log(R_o/r_c) into
+  log((R_o/r_c)**(pi*K_F*s**2)), so the exact value survived but the declared
+  additive Frank/core constitutive structure was obscured.
+classification: representation
+repair: >-
+  Remove the outer simplify from the canonical line-tension constructor and
+  retain the explicit additive expression. Replay the focused test and exact
+  downstream identities without weakening any assertion.
+next_route: repaired_focused_canonical_api_test
+debt:
+  - replay focused tests
+  - finish independent verification and source adjudication

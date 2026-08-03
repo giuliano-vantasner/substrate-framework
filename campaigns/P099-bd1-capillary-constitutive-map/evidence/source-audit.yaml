@@ -1,0 +1,30 @@
+source_unit: BD1
+literal_check_calls: 18
+assert_statements: 0
+imports: [sys, sympy]
+accepted_framework_imports: []
+declared_equations:
+  capillary_energy: E(R)=2*pi*R*T-pi*R**2*P+E_core
+  line_tension: T=pi*K_F*s**2*log(R_o/r_c)+eps_core
+  quadratic_bias: h=g*A**2*k**2/4
+  area_drive: P=2*h*l_m=g*A**2*k**2*l_m/2
+  relative_barrier: E_barrier=pi*T**2/P
+what_the_checks_cover:
+  - symbolic differentiation and substitution inside the declared capillary form
+  - symbol occurrence in the declared Frank/core expression
+  - algebraic quadratic-drive composition and selected derivatives
+  - one no-loading limit and one sampled negative-coupling sign
+missing_oracles_repaired_by_P099:
+  - actual energy/length dimensions and the amplitude-convention family
+  - ordered-cutoff and zero/negative-drive domains
+  - independent annulus, tilted-well, profile-average, and completed-square derivations
+  - mutation sensitivity for pi, factor two, amplitude power, and wavenumber power
+  - state-dependent Frank/core sensitivities
+  - barrier-only and radius-plus-barrier identifiability ranks
+  - constructive parameter counterfamilies and alternative dimensionally valid laws
+unsupported_source_interpretations:
+  - the declared standing profile is a real pulson or a material-specific wall stress
+  - k is proportional to omega without a dispersion and unit convention
+  - symbolic substitution predicts a physical rate, output power, firing, or nucleation event
+  - the added parameters are measured, selected, or identifiable from the barrier
+audit_verdict: qualified
