@@ -1,0 +1,38 @@
+campaign: P094
+frozen_before_source_opening: true
+frozen_before_source_execution: true
+proposal_path: proposals/P094-lb4-thermal-decoherence-window/proposal.yaml
+proposal_sha256: 89b384e018b2a485b8483a5c6295469a8248c2183e501e0748c5318ddcac0d09
+memory_contract_path: memory/vantasner/proposals/P094-lb4-thermal-decoherence-window.md
+memory_contract_sha256: 36cd46dc35445cd126f067818022822c7cbba074abe2cd35b793bac8c857af6e
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate --base /home/dan/substrate-framework
+  /home/dan/substrate-framework/memory/vantasner/proposals/P094-lb4-thermal-decoherence-window.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: partially_exposed_by_generated_queue_and_P091_P092_consumer_audits
+source_execution_state_at_freeze: not_executed_under_P094
+identifier_collision_search:
+  candidate: C-COH-002
+  surfaces: [governance, campaigns, proposals, memory, src, tests]
+  collisions: []
+disclosure: >-
+  The generated queue and earlier preregistered consumer audits exposed LB4's
+  title, principal formulas, proposed classical and zero-point limits, target
+  0.125 gate, and broad consumer semantics. P094 therefore cannot claim fresh
+  source or target blinding. Its stochastic-coordinate countermodel,
+  mean-phasor versus pair-coherence distinction, lifetime and dimensional
+  audits, parameter-identifiability gate, candidates, and structural selection
+  criteria were frozen before opening the remaining source body, executing
+  LB4, reading its terminal output, or opening additional consumer outputs.
+already_exposed_at_freeze:
+  - LB4 source path, hash, size, static forty-check count, and candidate dependency names
+  - asserted noise strength, phase-diffusion coefficient, exponential coherence language, and classical and zero-point labels
+  - use of LB1/LB2 lifetime and damping premises beyond their accepted ceilings
+  - comparator target near 0.125 and existence of noncanonical lifetime and DBD consumers
+comparators_still_blinded_at_freeze:
+  - remaining LB4 implementation details, all literal parameter ranges, exact check predicates, and terminal output
+  - unchanged-source runtime behavior and process tally under P094
+  - additional lifetime, nucleation, DBD, spark, and synthesis execution outputs
+  - any independently sourced physical temperature, energy, damping, noise, material, density, collision, or discharge data

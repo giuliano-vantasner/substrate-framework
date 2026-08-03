@@ -1,0 +1,69 @@
+id: P094
+base_release: v0.79.0
+base_commit: 0768bc5
+scientific_base_commit: e589e43
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [LB4]
+question: >-
+  Determine whether LB4 derives a distinct, dependency-closed stochastic
+  phase-diffusion or coherence-window theorem, or only composes an asserted
+  fluctuation-dissipation normalization, an unproved breather phase coordinate,
+  LB1's qualified deterministic lifetime, and adjustable thermal/energy ratios
+  to bracket the downstream 0.125 gate; terminally adjudicate every exact,
+  stochastic, dimensional, lifetime, threshold, and consumer subclaim.
+invariants:
+  - C-COH-001 maps a supplied centered-Gaussian phase variance to mean-phasor and pair-coherence algebra but explicitly derives no phase-noise dynamics.
+  - C-SG-016 supplies a deterministic normalized slow-damping family law, not stochastic forcing, a physical temperature map, or a globally exponential finite-amplitude lifetime.
+  - C-DYN-001 separates an abstract oscillator, field modes, nonlinear periodic existence, phase coherence, survival, population, and physical discharge thresholds.
+  - A fluctuation-dissipation relation requires a specified stochastic equation, mobility or damping convention, noise covariance, equilibrium measure, calculus convention, and units.
+  - Mean phasor amplitude, pair coherence or visibility, finite-window average, threshold event, survival probability, and population fraction are distinct observables.
+  - A Brownian phase law can be exact conditional mathematics while its diffusion coefficient and map to a breather remain unproved physical premises.
+  - A comparator value or bracket cannot determine a free temperature-to-energy ratio and then count as a prediction.
+  - Pending MC3 and all noncanonical lifetime, nucleation, spark, DBD, and synthesis consumers are unavailable as authority.
+allowed_imports:
+  - C-COH-001 and substrate_framework.coherence_gates for the exact supplied-Gaussian phase characteristic-function and pair-coherence semantics only
+  - C-SG-001, C-SG-002, C-SG-003, and C-SG-016 for the normalized undamped family and qualified deterministic slow-damping law only
+  - C-DYN-001 and substrate_framework.damped_oscillator for exact oscillator and field-mode distinctions only
+  - C-TH-001 only for its normalized two-level occupation and symmetric gate, not for noise temperature or fluctuation-dissipation physics
+  - exact Itô and Gaussian algebra for explicitly declared stochastic differential equations, with every covariance and convention stated
+  - LB4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+candidates:
+  - id: A
+    description: Reproduce LB4 literally and map each of its forty predicates to the exact mathematical or inserted object it evaluates.
+  - id: B
+    description: Derive the conditional Brownian-phase characteristic function and separate mean phasor, pair coherence, point visibility, and window-averaged observables.
+  - id: C
+    description: Start from an explicit fluctuation-dissipation Langevin oscillator and derive the phase-coordinate drift and diffusion, including phase averaging and normalization factors.
+  - id: D
+    description: Treat LB4's phase-diffusion coefficient as a declared premise and classify the remaining visibility and monotonicity algebra as a specialization of C-COH-001.
+  - id: E
+    description: Replace the global 1/Gamma lifetime substitution by C-SG-016's observable-specific finite-amplitude action and energy trajectories and test whether constant phase diffusion survives.
+  - id: F
+    description: Audit normalized and physical units, classical and zero-point limits, and all rescalings of temperature, energy, action, frequency, and time.
+  - id: G
+    description: Prove the parameter-identifiability and comparator-covariance structure of the claimed 0.125 coherence-window bracket.
+  - id: H
+    description: Separate any LB2-style hard cutoff or overdamping gate from stochastic visibility and exact nonlinear existence.
+  - id: I
+    description: Trace lifetime, nucleation, spark, DBD, and synthesis consumers and reject sequential propagation as derivation evidence.
+  - id: J
+    description: Compare any surviving conditional theorem against C-COH-001 and existing APIs before reserving implementation or promotion work.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for stochastic dynamics, phase coordinate, temperature, energy, lifetime, observable, and consumer semantics
+  - exact SDE, covariance, calculus convention, units, and observable definitions before numerical or comparator agreement
+  - structural distinction and nonduplication against C-COH-001, C-SG-016, C-DYN-001, and existing package APIs
+  - correct zero-noise, zero-damping, zero-time, long-time, weak-noise, small-action, classical, and zero-point limits
+  - mutation sensitivity to noise normalization, phase projection, factor two, lifetime window, temperature-to-energy ratio, threshold, and physical-unit map
+  - parameter economy, natural framework fit, predictive reach, and governed consumer closure
+claims_proposed:
+  - C-COH-002
+comparators_blinded_until: >-
+  LB4's title, principal formulas, target 0.125 gate, and some consumer
+  semantics were necessarily exposed by the generated queue and P091/P092
+  consumer audits, so fresh source or target blinding is impossible and is not
+  claimed. P094 freezes its candidates, stochastic countermodel, observable
+  distinctions, dimensional requirements, selection criteria, and
+  nonduplication gate before executing LB4, opening its remaining body and
+  output, or reading additional consumer outputs.
+status: draft
