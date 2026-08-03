@@ -1,0 +1,37 @@
+campaign: P095
+frozen_before_source_opening: true
+frozen_before_source_execution: true
+proposal_path: proposals/P095-mc1-dimensional-sine-gordon/proposal.yaml
+proposal_sha256: 499f703f8d90b613b2ed0dfd9c5edb2ac73116466e956eaf2b42bfbc42cbb5af
+memory_contract_path: memory/vantasner/proposals/P095-mc1-dimensional-sine-gordon.md
+memory_contract_sha256: f9858aa0e712e865e581221a4b82894d7f2feb142c9a1896c44c6f91336b6c1a
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate --base /home/dan/substrate-framework
+  /home/dan/substrate-framework/memory/vantasner/proposals/P095-mc1-dimensional-sine-gordon.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: partially_exposed_by_generated_queue_only
+source_execution_state_at_freeze: not_executed_under_P095
+identifier_collision_search:
+  candidates: [C-MED-003, C-SG-017]
+  surfaces: [governance, campaigns, proposals, memory, src, tests]
+  collisions: []
+disclosure: >-
+  The generated queue exposed MC1's title, declared Lagrangian, field equation,
+  coefficient ratios, coordinate map, and proposed physical-coordinate
+  breather. P095 therefore cannot claim fresh formula blinding. Its direct
+  field-variation route, ratio-rank and common-multiplier classification,
+  energy/action Jacobians, alternative-potential countermodel, candidates,
+  claim ceilings, and structural selection criteria were frozen before opening
+  the source body, executing MC1, reading literal predicates or output, or
+  opening additional MC2/MC3 and engineering consumer bodies or outputs.
+already_exposed_at_freeze:
+  - MC1 source path, hash, size, phase, twenty-four literal-check count, and no candidate dependencies
+  - declared cosine Lagrangian and proposed dimensional Euler-Lagrange equation
+  - proposed speed, gap, length, coordinate normalization, and physical-breather interpretation
+comparators_still_blinded_at_freeze:
+  - MC1 implementation details, exact check predicates, imported citations, literal examples, and terminal output
+  - unchanged-source runtime behavior and process tally under P095
+  - additional MC2, MC3, lifetime, thermal, material, and engineering consumer bodies and outputs
+  - any independently sourced material coefficient values or empirical frequency, length, energy, and action comparators

@@ -1,0 +1,69 @@
+id: P095
+base_release: v0.80.0
+base_commit: 433c25c80355666c252c9390a6a6294f211c25a7
+scientific_base_commit: 1553412cb68e686dd5ff4c2915f87eb2e7a1df4a
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MC1]
+question: >-
+  Determine the exact conditional field equation, dimension ledger,
+  coordinate normalization, parameter-identifiability class, and physical-
+  coordinate breather consequences of a declared positive-coefficient
+  dimensional cosine-medium Lagrangian; distinguish ratio-fixed dynamics from
+  its free overall action and energy scale, and terminally adjudicate every MC1
+  variational, rescaling, frequency, width, energy, action, material, and
+  consumer subclaim without importing pending MC2 or MC3.
+invariants:
+  - C-SG-001 is the normalized dimensionless 1+1 sine-Gordon breather with 0<omega<1 and c=m=beta=1 conventions.
+  - C-SG-002 and C-SG-003 fix normalized energy and canonical action; any dimensional lift must transform the density, measure, time, momentum, energy, and action explicitly.
+  - A common nonzero multiplier of a declared Lagrangian leaves its Euler-Lagrange solution set unchanged but rescales action and conserved energy.
+  - Positive coefficient ratios can set a speed, gap frequency, and length while leaving one common multiplicative coefficient direction free.
+  - A declared cosine on-site Lagrangian is a conditional model input, not a derivation of a material, substrate, Josephson medium, or unique constitutive law.
+  - Dimensionless frequency omega, physical angular frequency omega_b, gap omega_0, normalized coordinates, and physical coordinates remain distinct.
+  - Pending MC2, MC3, and all material, lifetime, thermal, spark, DBD, and synthesis consumers are unavailable as authority.
+allowed_imports:
+  - C-SG-001, C-SG-002, C-SG-003, and substrate_framework.sine_gordon for normalized field, energy, action, domain, and convention only
+  - C-VAR-001 for the general constant-multiplier principle, with the field-density case independently derived
+  - C-DIM-002 and substrate_framework.dimensional_analysis for set-local dimension-matrix logic only
+  - exact Euler-Lagrange calculus, chain rules, Jacobians, Noether energy, and dimensional algebra with every field and coordinate convention stated
+  - MC1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+candidates:
+  - id: A
+    description: Reproduce MC1 literally and map each of its twenty-four predicates to the exact derived, declared, duplicated, or unsupported object it evaluates.
+  - id: B
+    description: Derive the dimensional field Euler-Lagrange equation directly from an abstract positive-coefficient cosine Lagrangian density.
+  - id: C
+    description: Derive the forward and inverse coordinate normalization and prove the one-parameter common-multiplier nonidentifiability class at fixed speed, gap, and length.
+  - id: D
+    description: Pull back C-SG-001 into physical coordinates and derive its frequency, period, inverse width, localization domain, and exact PDE residual.
+  - id: E
+    description: Transform the Hamiltonian and canonical phase-space action measures to derive dimensional energy and action scaling from C-SG-002 and C-SG-003.
+  - id: F
+    description: Audit the base dimensions of all coefficients, field, coordinates, speed, gap, length, energy, and action under both density and integrated-action conventions.
+  - id: G
+    description: Compare cosine, general periodic, and alternative on-site potentials to identify which exact sine-Gordon conclusions require the declared cosine form.
+  - id: H
+    description: Keep linear dispersion, gap-tail rejection, and per-medium frequency selection outside MC1 unless they follow already from the exact nonlinear reduction without pending MC2 or MC3.
+  - id: I
+    description: Trace MC2, MC3, lifetime, thermal, and engineering consumers and prevent sequential use from deriving a material or fixing the free coefficient scale.
+  - id: J
+    description: Compare surviving exact content against accepted claims and APIs before reserving canonical implementation or promotion work.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact field variational derivation
+  - dimension, sign, coordinate, frequency, energy, and action convention consistency
+  - structural distinction and nonduplication against C-SG-001 through C-SG-003, C-VAR-001, and C-DIM-002
+  - correct multiplier covariance, zero-potential, small-amplitude, sub-gap, and normalized limits
+  - mutation sensitivity to kinetic, gradient, potential, coordinate, Jacobian, frequency, width, energy, and action factors
+  - parameter economy, explicit free directions, natural framework fit, predictive reach, and governed consumer closure
+claims_proposed:
+  - C-MED-003
+  - C-SG-017
+comparators_blinded_until: >-
+  The generated migration queue has already exposed MC1's principal
+  Lagrangian, equation, coefficient ratios, coordinate map, and proposed
+  physical breather interpretation, so fresh formula blinding is impossible
+  and is not claimed. P095 freezes candidates, dimensions, multiplier freedom,
+  energy/action transforms, selection criteria, and claim ceilings before
+  opening or executing MC1, reading its literal checks or output, or opening
+  additional MC2/MC3 and engineering consumer bodies or outputs.
+status: draft
