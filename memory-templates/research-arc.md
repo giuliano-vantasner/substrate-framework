@@ -62,10 +62,10 @@ Build the smallest dependency-first ladder. Each row names the strongest practic
 | 1 |  |  |  |  | pending |
 
 ## Importable Implementation
-Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric. Route sampled trapezoidal integration through its compatibility helper rather than spelling a NumPy-version-specific alias; keep tractable exact integrals symbolic.
+Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric. Route canonical sampled trapezoidal integration through its compatibility helper; mutable standalone scripts for the current environment use `np.trapezoid`, never removed `np.trapz`, and tractable exact integrals stay symbolic.
 
 ## Attempts
-Append one row per attempt. Preserve source, stdout/stderr, elapsed time, and exact command. Failure triggers the next route; it never closes the arc.
+Append one row per scientific attempt. Preserve source, stdout/stderr, elapsed time, and exact command. A native immutable-source abort caused only by missing `np.trapz` is compatibility provenance: run an alias-only compatibility replay and use that replay for scientific adjudication rather than consuming or rejecting a candidate. Failure of the repaired scientific route triggers the next route; it never closes the arc.
 
 | Attempt | Candidate/method | Artifact | Verdict | Diagnosed layer | Next materially different route |
 | --- | --- | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ Assess each candidate before empirical fit: invariant preservation, imports, fre
 Record clean exit and tally, derivation-vs-literal inspection, mutations, counterexamples, wrong conventions, refinement, conservation/limit tests, independent rederivation, and exact formal theorem/axioms where applicable. For SciPy ODE/BVP/PDE evidence, record routine/algorithm, precision, solver status, domain, mesh, time policy, tolerances, residual/error norm, convergence order, and a soluble limit or independent method.
 
 ## Global Dependency Replay
-List direct and indirect consumers and every replay command. Local pass with a broken consumer is failure.
+List direct and indirect consumers and every replay command. Repair a mutable consumer's removed `np.trapz` call to `np.trapezoid`—or use an alias-only replay for immutable evidence—before assigning a scientific verdict. Local pass with a scientifically broken repaired consumer is failure.
 
 | Consumer | Why affected | Command or proof | Result | Repair if needed |
 | --- | --- | --- | --- | --- |
