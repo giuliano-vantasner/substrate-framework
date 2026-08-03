@@ -1,0 +1,109 @@
+id: P120
+base_release: v0.97.0
+base_commit: 5a2be849f9599d1ed71c6e8784d1e716e792c9f1
+scientific_base_commit: cb08beb439f15c65f1994739cac542ef8ad427c3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM6]
+question: >-
+  Derive and independently verify the exact scope, normalization, matching,
+  exemption, and failure semantics of CM6's finite literal scanner; compare it
+  with AST and data-flow-sensitive alternatives; then terminally adjudicate all
+  twenty runtime predicates without converting absence of selected substrings
+  into barrier-free physics, empirical independence, uncapped magnitude,
+  mechanism separation, or scientific validation.
+invariants:
+  - >-
+    A literal scan proves only a proposition about the declared bytes, files,
+    normalization, token list, exemption rule, and matching algorithm. It does
+    not prove a semantic or physical absence outside that closed proposition.
+  - >-
+    Source code, comments, docstrings, string constants, identifiers, imports,
+    generated names, aliases, runtime attribute access, and external data are
+    distinct syntactic or semantic locations and must not be conflated.
+  - >-
+    Case folding, whitespace, punctuation, Unicode normalization, substring
+    matching, line splitting, and comment or tag treatment are load-bearing
+    scanner conventions and must be stated exactly.
+  - >-
+    An exemption marker such as [IMPORT] is metadata only. It cannot authorize
+    executable code or make every other token on its line scientifically valid.
+  - >-
+    Constructed strings, aliases, equivalent formulas, helper calls, getattr,
+    imported constants, configuration files, and data-flow dependencies can
+    evade a finite literal list while preserving the prohibited semantics.
+  - >-
+    Benign identifiers, explanatory prose, counterexamples, and quoted or
+    negated terms can collide with a substring detector; false positives and
+    false negatives require separate mutations.
+  - >-
+    Absence of min(cap), cap=, or ceiling= cannot establish an uncapped map.
+    Saturation can arise through clipping, maxima, conditionals, helper calls,
+    bounded nonlinearities, denominators, domains, or finite lookup tables.
+  - >-
+    Absence of selected empirical words or numbers cannot establish data
+    independence. Input inventories and provenance or data-flow audits are the
+    relevant oracle.
+  - >-
+    File lists and hashes are part of the claim. Unscanned imports, generated
+    files, dynamic loads, errors, symlinks, or later revisions remain outside
+    the finite scan unless explicitly closed.
+  - >-
+    Dependency cycles establish provenance only. Pending CM7 and any source
+    assertion provide no accepted premise to CM6.
+  - >-
+    Accepted C-SCR-001, C-RG-002, C-SPN-002, C-CMP-001, C-GW-001,
+    C-COH-001, C-SG-017, and C-RES-001 retain their exact scopes and semantic
+    ceilings; scanner prose cannot enlarge them.
+  - >-
+    Prior CM6 consumer executions exposed its terminal tally and some body
+    structure. They may serve only as regression evidence after the present
+    structural criteria are frozen.
+allowed_imports:
+  - C-SCR-001 exact screened-barrier factor, ceiling, and non-rate limits
+  - C-RG-002 exact conditional capillary algebra and its nonmaterial ceiling
+  - C-SPN-002 exact symmetric spin-ladder identities and non-rate ceiling
+  - C-CMP-001 exact conditional composite-factor algebra and non-rate ceiling
+  - C-GW-001 and C-COH-001 exact conditional harmonic and directional-coherence algebra with their physical ceilings
+  - C-SG-017 exact dimensional breather-frequency map and material-selection ceiling
+  - C-RES-001 exact finite paired-resolvent algebra and non-channel ceiling
+  - CM1, CM2, CM4, CM5, and CM7 pinned source bytes as noncanonical scan inputs only after freeze
+  - Python lexical rules, ast parsing, pathlib file reads, exact finite-set logic, and explicit counterexample programs
+  - CM6 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce CM6 literally and classify all twenty source, partition, self-test, import-exemption, and tally predicates.
+  - id: B
+    description: Derive the exact finite lexical theorem for CM6's file set, token lists, normalization, substring matcher, and exemption rule.
+  - id: C
+    description: Parse the scanned Python with AST-based location classes and compare executable names, calls, attributes, literals, comments, and docstrings.
+  - id: D
+    description: Exercise evasion and collision mutations spanning construction, aliases, getattr, case, Unicode, whitespace, comments, prose, benign substrings, and tag smuggling.
+  - id: E
+    description: Audit completeness of file closure, imported modules, external configuration, dynamic loads, read failures, revisions, and dependency cycles.
+  - id: F
+    description: Compare literal clamp and empirical-token absence with semantic saturation and explicit input-provenance or data-flow countermodels.
+  - id: G
+    description: Determine whether the surviving finite scanner statement has a reusable framework consumer or remains campaign-level governance evidence with no new scientific claim.
+  - id: H
+    description: Independently rederive scanner semantics and review every predicate, accepted dependency, source cycle, nonduplication decision, and downstream consumer.
+uniqueness_evidence: null
+selection_criteria:
+  - exact closure over files, hashes, decoding, normalization, tokens, exemptions, match locations, and error behavior
+  - sensitivity to constructed-token, alias, semantic-equivalent, external-input, and omitted-file evasions
+  - specificity against comments, docstrings, quotations, negation, benign substrings, imports, and tag-smuggling collisions
+  - AST and data-flow relevance to executable behavior rather than raw prose alone
+  - honest separation of finite lexical results from barrier, mechanism, magnitude, empirical, and validation claims
+  - accepted dependency closure, parameter economy, reusable API value, and mathematical or governance novelty
+  - complete predicate, dependency, cycle, nonduplication, input-provenance, and downstream-consumer review
+claims_proposed: []
+comparators_blinded_until: >-
+  Fresh CM6 source and output blinding is impossible because its body was
+  partially exposed by provenance searches and its twenty-check output was
+  executed repeatedly as a downstream consumer in P116, P118, and P119. The
+  generated queue also exposes its forbidden-token, clamp-token,
+  empirical-token, partition, exemption, injection, and tally summaries. P120
+  records that exposure and freezes the exact file, byte, case, substring,
+  line, tag, comment, AST, alias, construction, Unicode, clamp, empirical,
+  data-flow, scope, error, cycle, predicate, and consumer gates before renewed
+  line-by-line CM6 inspection, execution, or additional consumer review.
+status: draft
