@@ -1,0 +1,87 @@
+id: P123
+base_release: v0.98.0
+base_commit: 14ce8c17b962f655c1674b09284f2e81e5fcfba8
+scientific_base_commit: 974b498d799019761ce235682f1c1e0bf98c5c4e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GB2]
+question: >-
+  Reproduce and independently audit GB2's floor quotient, remainder, bracket,
+  weak monotonicity, scale and deep-subdivision mean; close its domains, units,
+  boundary behavior, limit path, dependency cycle, predicates, consumers, and
+  nonduplication against P090 and P110 without converting Euclidean division
+  into physical quanta, an emitted spectrum, a phonon energy, a dynamical soft
+  channel, material response, yield, heat, or observation.
+invariants:
+  - >-
+    For exact quantities Omega>=0 and omega>0 in one common unit,
+    n=floor(Omega/omega) and r=Omega-n*omega uniquely satisfy integer n>=0,
+    Omega=n*omega+r, and 0<=r<omega.
+  - >-
+    The quotient-zero regime Omega<omega is valid arithmetic, but Omega/n is
+    undefined there. Any per-item mean therefore requires n>=1.
+  - >-
+    For fixed positive Omega, n is a right-continuous nonincreasing staircase
+    in omega with exact plateau and one-sided divisor boundaries; it is not
+    strictly decreasing or differentiable at its jumps.
+  - >-
+    On n>=1, Omega/n=omega+r/n and the exact error from omega is r/n. A
+    limiting statement must declare what remains fixed and cannot identify a
+    physical characteristic scale from the quotient identity.
+  - >-
+    Exact threshold-adjacent floors use integers, rationals, or decimal
+    constructions. Binary floating representation may change a quotient at an
+    exact boundary and cannot silently define the theorem.
+  - >-
+    P110 and PN2 govern the same conditional quotient-remainder arithmetic as
+    qualified campaign evidence and explicitly grant no quantum subdivision,
+    state, mode, interaction, rate, material, or observation premise.
+  - >-
+    GB5 is pending noncanonical evidence and cannot supply GB2 authority. Any
+    GB2-GB5 dependency cycle must be broken at individually accepted claims or
+    rejected as circular.
+  - >-
+    Source candidate dependency edges and runtime tallies grant no authority.
+    Every direct and transitive consumer inherits only accepted claims and
+    explicitly qualified arithmetic ceilings.
+  - >-
+    The GB2 body, output, and predicate implementations remain unopened at
+    freeze. Queue metadata has already exposed the quotient, remainder,
+    bracket, monotonicity, deep-subdivision result, dependencies, and tally
+    shape, so those excerpts cannot select a candidate.
+allowed_imports:
+  - P090 and P110 only as governed historical nonduplication and exact conditional arithmetic evidence
+  - PN2 only through its terminal qualified disposition with no accepted physical subdivision claim
+  - exact integer rational decimal and SymPy floor remainder inequality and limit reasoning
+  - GB2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - GB5 queue metadata only for dependency and cycle auditing with no scientific authority
+candidates:
+  - id: A
+    description: Reproduce GB2 literally and classify every quotient remainder bracket monotonicity rejection and tally predicate.
+  - id: B
+    description: Re-derive exact Euclidean division with the quotient-zero regime uniqueness units and boundary conventions explicit.
+  - id: C
+    description: Derive the finite per-item error and all legitimate deep-subdivision limiting paths rather than accepting an informal arrow.
+  - id: D
+    description: Derive exact quotient plateaus weak monotonicity divisor jumps common scaling and representation-sensitive counterexamples.
+  - id: E
+    description: Test nonduplication against P090 P110 and PN2 and add no claim or package API if the same arithmetic surface survives.
+  - id: F
+    description: Audit the GB5 and PN2 dependency edges cycles and every direct and transitive consumer against accepted authority.
+  - id: G
+    description: Construct zero-matrix-element arbitrary-scale no-state and nonphonon countermodels that preserve the arithmetic while falsifying the physical headline.
+  - id: H
+    description: Independently close all predicates provenance compatibility and terminal source disposition with no comparator-selected concept.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure explicit positivity common units and exact representation
+  - quotient remainder uniqueness endpoint and quotient-zero correctness
+  - plateau boundary jump monotonicity scale covariance error-bound and limit correctness
+  - physical interpretation honesty parameter economy and countermodel sensitivity
+  - nonduplication reusable API value complete predicate cycle and consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  GB2's body and runtime output remain unopened until this manifest, its
+  immutable copy, and the proposal memory pass repository validation. Queue
+  metadata already exposes the advertised equations and conclusions, so only
+  predicate-detail and source-output blinding remains.
+status: draft

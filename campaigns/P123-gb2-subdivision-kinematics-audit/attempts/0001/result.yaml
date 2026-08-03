@@ -1,0 +1,38 @@
+campaign: P123
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P123-gb2-subdivision-kinematics-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P123-gb2-subdivision-kinematics-audit/proposal.yaml campaigns/P123-gb2-subdivision-kinematics-audit/evidence/frozen-proposal.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  proposal_sha256: 73ef2f8604bbc40278e4e5de63d82fad56e938f2d117abfaddb011deb254fb58
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 98
+  memory_files: 508
+  pytest_tests: 1090
+  source_body_opened: false
+  debt: []
+results:
+  proposal_sha256: 73ef2f8604bbc40278e4e5de63d82fad56e938f2d117abfaddb011deb254fb58
+  proposal_memory: {valid: true}
+  manifest_copy: {identical: true}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 98}
+  memory: {files_valid: 508}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: 105.55}
+  diff_check: {exit_code: 0}
+  source_body_opened: false
+result: >-
+  P123's proposal and immutable copy are byte-identical and valid, the accepted
+  repository is unchanged, and the source body remained unopened through the
+  complete freeze boundary.
+compatibility_event: none
+next_attempt: >-
+  Commit the frozen P123 contract, then reproduce GB2 natively and inspect all
+  predicates under the preregistered exact and nonduplication criteria.
