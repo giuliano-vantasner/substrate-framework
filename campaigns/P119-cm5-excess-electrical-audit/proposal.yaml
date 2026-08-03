@@ -1,0 +1,115 @@
+id: P119
+base_release: v0.97.0
+base_commit: da9f3f65729d4e79d2c3a492560c75f51ebfee29
+scientific_base_commit: 02ccf6f1fba17d26a383cb34bb6eef37c81b0e9f
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM5]
+question: >-
+  Derive and independently verify the exact waveform, third-derivative,
+  cycle-average, dimensional-normalization, static-limit, coherent-array, and
+  voltage-input ledgers needed to interpret a proposed excess-electrical
+  output; then determine whether CM5 adds any theorem beyond C-GW-001,
+  C-COH-001, C-SG-017, C-CMP-001, and C-RES-001, and terminally adjudicate all
+  eighteen predicates without converting formal harmonic calculus into an
+  electromagnetic radiation law, directional N-squared concentration into
+  total power, derivative input algebra into a seeding mechanism, or common
+  controls and frequency names into a shared heat channel or observation.
+invariants:
+  - >-
+    For delta_mu(t)=mu_static+A*cos(Omega*t)+D*sin(Omega*t), the static term
+    disappears from every positive derivative and the exact cycle average of
+    the squared third derivative is Omega^6*(A^2+D^2)/2; any scalar or tensor
+    convention and any omitted factor must be explicit.
+  - >-
+    A squared third derivative has dimensions [delta_mu]^2/time^6 and becomes
+    power only after a separately derived radiation functional, coupling,
+    units, source type, normalization, and validity regime are supplied.
+  - >-
+    Different electromagnetic multipoles use different derivative orders,
+    tensor contractions, angular patterns, and constants; the word electrical
+    or a nonzero derivative does not choose an electric-dipole, magnetic-dipole,
+    quadrupole, antenna, near-field, or detector law.
+  - >-
+    C-GW-001 owns exact conditional STF third-derivative cycle-average algebra
+    and explicitly does not establish a physical radiation channel; FS4 is
+    duplicate evidence only for cancellation of time-independent offsets.
+  - >-
+    C-COH-001 owns the iid equal-amplitude directional intensity ledger at
+    fixed per-source normalization. Its aligned N^2 endpoint is neither an
+    integrated total-power law nor invariant under normalization changes or
+    phase disorder.
+  - >-
+    Emitted total power, far-field angular intensity, focused local intensity,
+    collection efficiency, transmission, and detector response are distinct
+    observables and may not be multiplied or renamed without a complete
+    normalization and conservation ledger.
+  - >-
+    C-SG-017 supplies omega_b=omega*omega_0 only for its accepted dimensional
+    sine-Gordon breather under C-MED-003; a common frequency symbol does not
+    establish common source amplitude, coupling, observable, or heat channel.
+  - >-
+    C-CMP-001 and C-RES-001 remain conditional finite-matrix factors rather
+    than probabilities, rates, heat, yields, or physical channels, and CM2 or
+    PN4 names cannot close CM5's electromagnetic premises.
+  - >-
+    A DC input has zero ordinary derivative, a ramp has nonzero derivative,
+    finite records carry endpoint terms, and nonlinear or time-varying
+    constitutive response adds product terms. Derivative algebra alone is not
+    a physical dV/dt seeding law.
+  - >-
+    Exact source algebra must be separated from proportionality notation,
+    selected parameter values, normalized geometry figures, Boolean import
+    markers, self-tests, regression samples, and mechanism prose.
+  - >-
+    Comparator values and the prior eighteen-check executions may regress
+    frozen formulas but cannot select a new claim or physical interpretation.
+allowed_imports:
+  - C-GW-001 exact conditional STF projector, normalization, and single-harmonic third-derivative cycle-average algebra with its physical-radiation ceiling
+  - C-COH-001 exact iid phasor directional-intensity and normalization ledger with its total-energy and physical-population ceilings
+  - C-SG-017 exact dimensional breather frequency omega_b=omega*omega_0 under C-MED-003 and its material-selection ceiling
+  - C-CMP-001 exact conditional composite-factor algebra, dimension, and non-rate ceiling
+  - C-RES-001 exact finite paired-resolvent algebra and non-channel ceiling
+  - FS4's adjudicated duplicate-evidence status and P087/P088's immutable source audits as scope and nonauthority evidence only
+  - elementary exact trigonometric calculus, Fourier endpoint identities, complex phasor sums, angular integration, dimensions, limits, and countermodels
+  - CM5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - SymPy exact differentiation, integration, simplification, limits, and load-bearing mutations
+candidates:
+  - id: A
+    description: Reproduce CM5 literally and classify all eighteen symbolic, numeric, self-test, import, geometry, seeding, and shared-observable predicates.
+  - id: B
+    description: Derive the exact scalar and tensor single-harmonic third-derivative and cycle-average ledger, including phase, static offsets, derivative order, units, prefactors, and limits.
+  - id: C
+    description: Classify candidate electromagnetic radiator laws and prove which source type, derivative, coupling, angular pattern, and normalization premises are missing from a bare proportionality.
+  - id: D
+    description: Derive the exact finite-array phasor, phase-disorder, per-source normalization, directional-intensity, angular-total, focusing, transmission, and detector ledgers.
+  - id: E
+    description: Audit DC, ramp, sinusoidal, finite-window, nonlinear-response, and zero-coupling input models against the claimed dV/dt seeding interpretation.
+  - id: F
+    description: Test whether C-GW-001, C-COH-001, C-SG-017, C-CMP-001, and C-RES-001 already govern all surviving CM5 content and terminally qualify it without a new claim or release.
+  - id: G
+    description: Construct zero-radiation-coupling, arbitrary-prefactor, incoherent-phase, finite-bandwidth, alternative-radiator, equal-frequency-independent-channel, and heat-decoupled countermodels.
+  - id: H
+    description: Independently rederive the exact ledgers and audit novelty, dimensions, every predicate, dependency cycles, imports, consumers, and semantic ceilings.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact waveform, tensor, frequency, derivative, and averaging conventions
+  - physical source, coupling, unit, radiation-zone, angular-normalization, and conservation completeness
+  - separation of total power, directional intensity, focusing, collection, transmission, and detector response
+  - phase, per-source normalization, DC, ramp, finite-window, zero-coupling, and bandwidth limiting behavior
+  - mathematical novelty beyond accepted harmonic, coherence, dimensional-frequency, resolvent, and composite claims
+  - mutation sensitivity, parameter economy, identifiability, reusable API fit, and physical-semantic honesty
+  - complete predicate, dependency, cycle, nonduplication, import, and downstream-consumer review
+claims_proposed: []
+comparators_blinded_until: >-
+  Fresh CM5 body and output blinding is impossible because P116 replayed it as
+  a direct consumer and the NumPy compatibility effort executed its eighteen
+  checks; the generated queue exposed the headline proportionality, frequency,
+  geometry, seeding, dependency, and tally summaries. Targeted pre-freeze
+  provenance searches also exposed related engineering module identifiers and
+  comments. P119 records that exposure and freezes the exact factor, derivative
+  order, unit, radiation-law, phase-array normalization, total-versus-local
+  observable, DC/ramp, finite-window, zero-coupling, arbitrary-prefactor,
+  alternative-radiator, bandwidth, shared-channel, dependency, predicate, and
+  consumer gates before dedicated line-by-line CM5 inspection, renewed CM5
+  execution, literal-value review, or additional consumer output review.
+status: draft

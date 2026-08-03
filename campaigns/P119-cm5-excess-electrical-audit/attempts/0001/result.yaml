@@ -1,0 +1,17 @@
+campaign: P119
+attempt: 0001
+candidate: pre_source_contract_freeze
+status: failed
+command: apply_patch raw_git_diff_to_frozen_proposal
+exit_status: 1
+failure: >-
+  The patch utility rejected a raw git-diff envelope because local edits require
+  its explicit Begin-Patch and Add-File form.
+diagnosis: patch_envelope_mismatch
+scientific_effect: none
+source_execution_before_failure: false
+dedicated_source_body_inspection_before_failure: false
+historical_source_exposure: >-
+  CM5 had already executed during P116 consumer replay and the NumPy
+  compatibility effort, as recorded in the frozen contract.
+next_attempt: materialize_the_same_frozen_bytes_with_the_required_apply_patch_envelope_then_validate
