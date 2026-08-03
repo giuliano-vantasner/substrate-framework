@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-07T18:15:00Z'
+updated: '2026-08-07T18:50:00Z'
 tags:
 - substrate-framework
 - effort
@@ -24,14 +24,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
 The current accepted frontier is `v0.91.0`, containing one hundred twenty-six
-claims. Its latest additions are C-BPS-001's exact two-orientation conditional
-topological bound, C-BPS-002's attained-sector zero-difference theorem, and
-C-BPS-003's controlled near-BPS signed expansion. The latest terminal
-adjudication is P107: E4 is qualified because its square and conditional
-algebra survive, but universal saturation, naive L2 perturbative control, a
-physical action or state map, numerical couplings, interpolation, reaction,
-empirical coefficient, overbinding resolution, and yield do not. E5 and later
-consumers remain pending.
+claims. Its latest additions remain C-BPS-001's exact two-orientation
+conditional topological bound, C-BPS-002's attained-sector zero-difference
+theorem, and C-BPS-003's controlled near-BPS signed expansion. The latest
+terminal adjudication is P108: E5 is qualified because its external-data
+arithmetic and finite selected ratios survive, but the scale-selection,
+robustness, aneutronic, independent-corroboration, reaction-closure, and
+degree-to-alpha readings do not. PN1 and later consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -57,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 113 pending, 0 partially migrated, 3 migrated, 93 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 112 pending, 0 partially migrated, 3 migrated, 94 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -197,6 +196,7 @@ Attempts are append-only and individually reproducible.
 | 0126 | P105 exact generalized radial theorem, two-method stationary branches, and E2 audit | `campaigns/P105-e2-rational-map-radial-profiles/attempts/0001` through `0007`, then promotion boundary | accepted as C-RPROF-001 and C-RPROF-002 with E2 qualified in v0.89.0; commit `f28cf74` | Forty-five primary and nine independent checks derive the exact generalized equation, split, endpoint powers, and scale identity; solve corrected B=1,2,4 branches with vacuum-complement DOP853 shooting and fresh collocation; isolate quadrature, cutoff, domain, tolerance, and maximum-step refinements; and distinguish accepted, biased, I=B, and I=B^2 inputs. Direct-f shooting loses the tiny B4 origin signal and is preserved before repair. The source omits solver gates, uses finite-wall vacua and biased I values, and its I=B guard preserves the ordering it claims would be destroyed. The integrated workflow passes all 968 tests with 449 memory files and the physics skill valid; GitNexus assigns automatic MEDIUM staged-change risk to four new self-contained solver flows, while direct impact remains LOW with no pre-existing caller or process. | Audit E3's conditional coefficient algebra without importing a physical mass map, reaction identity, empirical scale, BPS model, or treating selected stationary-branch energy differences as a physical fusion yield |
 | 0127 | P106 exact signed energy-difference theorem, corrected conditional coefficient, and E3 audit | `campaigns/P106-e3-conditional-energy-difference-audit/attempts/0001` through `0006`, then promotion boundary | accepted as C-RDIFF-001 and C-RDIFF-002 with E3 qualified in v0.90.0; commit `e0c2142` | Thirty-three primary and eleven independent checks derive the direct-mass and binding ledgers, inverse, sign and zero surfaces, monotone interval image, factor and multiplicity sensitivity, and exact counterexamples to subtracting separate upper bounds. Accepted P105 inputs give kappa 8.482417318795, independent collocation gives 8.482414868844, and their rectangular method-spread envelope is only sensitivity evidence. The source's biased 8.457 comes from repeated endpoint-loss angular quadrature and unchecked hard-wall solves; its broad band admits ten-percent normalization mutations. GitNexus reports LOW additive impact and no affected process; the single integrated workflow passes all 978 tests with 455 memory files and the physics skill valid. | Audit E4's BPS square completion, topological normalization, saturation and zero-binding conditions, and near-BPS expansion without importing physical states or treating formal O(epsilon) cancellation as a numerical O(1) yield explanation |
 | 0128 | P107 exact conditional BPS bound, attained-sector zero difference, controlled near-BPS expansion, and E4 audit | `campaigns/P107-e4-bps-zero-binding-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-BPS-001 through C-BPS-003 with E4 qualified in v0.91.0; commit `2297324` | Thirty-five primary and twenty-one independent checks derive both orientation branches, normalized target pairing, dimensions, equality conditions, sector slacks, attainment, controlled remainders, and the lambda_A=pi^2*lambda_B convention map. Zero potential disproves universal saturation; the standard V=1-cos(chi) compacton has a logarithmically divergent naive L2 correction. GitNexus reports LOW additive impact and no affected process; the single integrated workflow passes all 991 tests with 463 memory files and the physics skill valid. | Audit E5's empirical multi-reaction scale comparison without importing nuclear binding tables as derivations, treating a finite list of positive fractions as a universal bracket or O(1) theorem, identifying alpha products with accepted map-degree states, or using NY1/NY2/O1 as authority beyond their accepted conditional ceilings |
+| 0129 | P108 exact selected reaction ledger, scale covariance, finite-sample ceiling, and E5 audit | `campaigns/P108-e5-independent-fuel-scale-audit/attempts/0001` through `0006`, then terminal no-release boundary | E5 qualified through existing dimensional, conditional-difference, scale, and rational-map ceilings with v0.91.0 unchanged; commit `3dc3703` | Thirty-four primary and nineteen independent checks derive the exact four-value ledger, inverse denominator rescaling, pairwise scale cancellation, the nonunique bracket interval, arbitrary-target and closest-reaction families, and sample/state countermodels. The binding values are direct inputs despite their comparator-only label; D+T is neutron producing; D+D omits its radiative channel; and E2 supplies no alpha-state map. GitNexus reports LOW risk and zero affected processes; the single integrated workflow passes all 991 tests with 465 memory files and the physics skill valid. | Audit PN1's cosine Taylor cross-vertices without turning formal classical coefficients into a one-high-quantum-to-many-phonon process, importing a quantization or mode-normalization map, or mistaking nonzero formal series terms for rates, resonant transfer, kinematic accessibility, or material dynamics |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -982,11 +982,22 @@ while zero potential and sector slacks enforce the existence ceiling. For the
 standard potential compacton, the naive L2 first-order correction diverges
 logarithmically. Exact P107 work uses no NumPy or sampled quadrature.
 
+P108 adds no claim or canonical API. E5's rounded external binding values give
+the exact conditional releases 23.848, 18.354, 17.590, and 8.683 MeV, but those
+values directly calculate every Q and ratio. The absolute coordinates rescale
+inversely with the supplied denominator, a continuum of denominators satisfies
+the source's 0.3-to-1 bracket, and setting the denominator equal to any release
+makes that reaction closest to one. Pairwise Q ratios and finite multiplicative
+spread are scale free but select no physical scale. D+T contradicts the
+aneutronic label, D+D requires omitted radiative bookkeeping, and
+C-RPROF-002 explicitly supplies no alpha or nucleus map. Exact P108 and E5 use
+no NumPy or sampled quadrature.
+
 ## Canonicalization
-The registry, `v0.91.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-six accepted claims. P001 through P107 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 113 pending, 0 partial, 3 migrated, 93 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.91.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-six accepted claims. P001 through P108 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 112 pending, 0 partial, 3 migrated, 94 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 113 pending, 3 migrated, 93 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is E5, pinned at SHA-256 `f1754902fb112f63c9c9052b60cdeca5455023560680e4e31889669cddf764af`. Its source divides four imported nuclear-reaction releases by a declared 25.686 MeV scale, calls the resulting 0.34--0.93 finite sample a robust O(1) scale bracket, and identifies alpha products with an E2 degree-four branch. P108 must freeze data provenance, unit and uncertainty conventions, reaction bookkeeping, finite-sample and selection effects, dimensionless-ratio algebra, alternative scale and reaction sets, statistical or structural criteria, degree-to-state and product maps, NY1/NY2/O1 dependency ceilings, comparator-only status, and consumer impact before body execution. It must not treat imported binding tables as framework predictions, infer a universal scale law from four selected positive reactions, use vague O(1) as a sensitive oracle, or identify a nuclear alpha with a rational-map degree from a shared integer label.
+The effort remains active. D4 is discharged, but D1 remains open with 112 pending, 3 migrated, 94 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN1, pinned at SHA-256 `f2fcd58c97b9e9aa0b92e0ece9d92ff6c7ddaddec1b385b10a68a156ac3df985`. Its source expands `1-cos(phi_H+phi_L)`, identifies the one-high and n-low Taylor coefficient for odd n, and calls the formal infinite family an intrinsic multi-phonon ladder. P109 must freeze field and derivative conventions, coefficient-versus-vertex normalization, parity and analyticity, finite-order truncation, mode and quantum normalization, energy-momentum and resonance requirements, rates and dynamics, FS1/NC1/NC2 ceilings, consumer impact, and nonduplication before body execution. It must not convert a classical Taylor monomial into a quantum transition, infer nonzero transfer or material realization from a nonzero coefficient, or treat unbounded formal order as unsuppressed or kinematically accessible multiplicity.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
