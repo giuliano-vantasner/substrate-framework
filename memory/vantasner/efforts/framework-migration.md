@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-07T18:50:00Z'
+updated: '2026-08-07T20:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,14 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.91.0`, containing one hundred twenty-six
-claims. Its latest additions remain C-BPS-001's exact two-orientation
-conditional topological bound, C-BPS-002's attained-sector zero-difference
-theorem, and C-BPS-003's controlled near-BPS signed expansion. The latest
-terminal adjudication is P108: E5 is qualified because its external-data
-arithmetic and finite selected ratios survive, but the scale-selection,
-robustness, aneutronic, independent-corroboration, reaction-closure, and
-degree-to-alpha readings do not. PN1 and later consumers remain pending.
+The current accepted frontier is `v0.92.0`, containing one hundred twenty-seven
+claims. Its latest addition is C-SG-019's exact all-order classical mixed-
+coordinate coefficient theorem with amplitude, background, coordinate scales,
+factorials, parity, convergence, and truncation ceilings explicit. The latest
+terminal adjudication is P109: PN1 is qualified because its unit-coordinate
+Taylor algebra survives, but its normalized frequency modes, quantization,
+matrix element, multiphonon process, resonance, rate, energy-transfer, and
+material readings do not. PN2 and later consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -56,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 112 pending, 0 partially migrated, 3 migrated, 94 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 111 pending, 0 partially migrated, 3 migrated, 95 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -197,6 +197,7 @@ Attempts are append-only and individually reproducible.
 | 0127 | P106 exact signed energy-difference theorem, corrected conditional coefficient, and E3 audit | `campaigns/P106-e3-conditional-energy-difference-audit/attempts/0001` through `0006`, then promotion boundary | accepted as C-RDIFF-001 and C-RDIFF-002 with E3 qualified in v0.90.0; commit `e0c2142` | Thirty-three primary and eleven independent checks derive the direct-mass and binding ledgers, inverse, sign and zero surfaces, monotone interval image, factor and multiplicity sensitivity, and exact counterexamples to subtracting separate upper bounds. Accepted P105 inputs give kappa 8.482417318795, independent collocation gives 8.482414868844, and their rectangular method-spread envelope is only sensitivity evidence. The source's biased 8.457 comes from repeated endpoint-loss angular quadrature and unchecked hard-wall solves; its broad band admits ten-percent normalization mutations. GitNexus reports LOW additive impact and no affected process; the single integrated workflow passes all 978 tests with 455 memory files and the physics skill valid. | Audit E4's BPS square completion, topological normalization, saturation and zero-binding conditions, and near-BPS expansion without importing physical states or treating formal O(epsilon) cancellation as a numerical O(1) yield explanation |
 | 0128 | P107 exact conditional BPS bound, attained-sector zero difference, controlled near-BPS expansion, and E4 audit | `campaigns/P107-e4-bps-zero-binding-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-BPS-001 through C-BPS-003 with E4 qualified in v0.91.0; commit `2297324` | Thirty-five primary and twenty-one independent checks derive both orientation branches, normalized target pairing, dimensions, equality conditions, sector slacks, attainment, controlled remainders, and the lambda_A=pi^2*lambda_B convention map. Zero potential disproves universal saturation; the standard V=1-cos(chi) compacton has a logarithmically divergent naive L2 correction. GitNexus reports LOW additive impact and no affected process; the single integrated workflow passes all 991 tests with 463 memory files and the physics skill valid. | Audit E5's empirical multi-reaction scale comparison without importing nuclear binding tables as derivations, treating a finite list of positive fractions as a universal bracket or O(1) theorem, identifying alpha products with accepted map-degree states, or using NY1/NY2/O1 as authority beyond their accepted conditional ceilings |
 | 0129 | P108 exact selected reaction ledger, scale covariance, finite-sample ceiling, and E5 audit | `campaigns/P108-e5-independent-fuel-scale-audit/attempts/0001` through `0006`, then terminal no-release boundary | E5 qualified through existing dimensional, conditional-difference, scale, and rational-map ceilings with v0.91.0 unchanged; commit `3dc3703` | Thirty-four primary and nineteen independent checks derive the exact four-value ledger, inverse denominator rescaling, pairwise scale cancellation, the nonunique bracket interval, arbitrary-target and closest-reaction families, and sample/state countermodels. The binding values are direct inputs despite their comparator-only label; D+T is neutron producing; D+D omits its radiative channel; and E2 supplies no alpha-state map. GitNexus reports LOW risk and zero affected processes; the single integrated workflow passes all 991 tests with 465 memory files and the physics skill valid. | Audit PN1's cosine Taylor cross-vertices without turning formal classical coefficients into a one-high-quantum-to-many-phonon process, importing a quantization or mode-normalization map, or mistaking nonzero formal series terms for rates, resonant transfer, kinematic accessibility, or material dynamics |
+| 0130 | P109 all-order cosine mixed-coordinate theorem and PN1 interpretation audit | `campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-SG-019 with PN1 qualified in v0.92.0; commit `87c045a` | Ninety-nine primary and thirty-three independent checks derive the arbitrary-order coefficient by derivative, complex-exponential, and binomial routes; expose amplitude, background, coordinate-scale, and factorial conventions; and distinguish an entire nonzero formal subsequence from a quantized process. Three oracle defects are preserved before repair. GitNexus reports LOW additive impact and zero affected processes; the single integrated workflow passes all 1,003 tests with 469 memory files and the physics skill valid. | Audit PN2's exact positive-energy Euclidean-division count and unit conversions without borrowing a nuclear release or phonon frequency, treating a floor identity as a quantum subdivision mechanism, importing PN1's rejected process reading, or inferring a matrix element, rate, material channel, or energy transfer from kinematics alone |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -213,7 +214,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 113 bridge units remain pending, 3 are migrated, 93 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 111 bridge units remain pending, 3 are migrated, 95 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -993,11 +994,23 @@ aneutronic label, D+D requires omitted radiative bookkeeping, and
 C-RPROF-002 explicitly supplies no alpha or nucleus map. Exact P108 and E5 use
 no NumPy or sampled quadrature.
 
+P109 adds C-SG-019 for the exact all-order coefficient of
+`H^j*L^k` in a declared classical cosine potential, with arbitrary background,
+amplitude, coordinate scales, coefficient-versus-derivative factorials,
+vacuum total parity, factorial decay, and finite-truncation ceilings explicit.
+PN1 is qualified because its 32 runtime checks establish only unit-coordinate
+local Taylor algebra. The source's frequency, quantum, phonon, nuclear,
+multiplicity, coupling, and energy-transfer nouns never enter an equation or
+oracle. The eight pinned scientific or interpretive consumers plus the PN4
+honesty-scan edge inherit no mode normalization, operator, state, matrix
+element, kinematic channel, resonance, rate, or material map. Exact P109 work
+uses no NumPy or sampled quadrature.
+
 ## Canonicalization
-The registry, `v0.91.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-six accepted claims. P001 through P108 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 112 pending, 0 partial, 3 migrated, 94 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.92.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-seven accepted claims. P001 through P109 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 111 pending, 0 partial, 3 migrated, 95 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 112 pending, 3 migrated, 94 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN1, pinned at SHA-256 `f2fcd58c97b9e9aa0b92e0ece9d92ff6c7ddaddec1b385b10a68a156ac3df985`. Its source expands `1-cos(phi_H+phi_L)`, identifies the one-high and n-low Taylor coefficient for odd n, and calls the formal infinite family an intrinsic multi-phonon ladder. P109 must freeze field and derivative conventions, coefficient-versus-vertex normalization, parity and analyticity, finite-order truncation, mode and quantum normalization, energy-momentum and resonance requirements, rates and dynamics, FS1/NC1/NC2 ceilings, consumer impact, and nonduplication before body execution. It must not convert a classical Taylor monomial into a quantum transition, infer nonzero transfer or material realization from a nonzero coefficient, or treat unbounded formal order as unsuppressed or kinematically accessible multiplicity.
+The effort remains active. D4 is discharged, but D1 remains open with 111 pending, 3 migrated, 95 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN2, pinned at SHA-256 `66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a`. Its source derives `n=floor(Omega/omega_ph)` and a remainder for positive supplied energies, then evaluates named MeV/meV inputs and composes them with PN1 and FS4 narratives. P110 must freeze the positivity, units, exact Euclidean-division convention, discontinuities, remainder, large-integer representation, input provenance, comparator and literature boundary, FS4 and C-SG-019 ceilings, and complete consumer map before source-body execution. It must not convert a kinematic floor identity into a quantum subdivision process, import a nuclear release or material phonon frequency as a derivation, use PN1's rejected multiphonon reading, or infer a matrix element, rate, resonance, branching, deposition, or energy transfer from the count alone.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
