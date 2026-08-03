@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T15:15:00Z'
+updated: '2026-08-04T16:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,15 +23,16 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.82.0`, containing one hundred eleven
-claims. Its latest addition, C-SG-018, gives the exact physical sine-Gordon
-vacuum spectrum, velocity relations, exterior branch trichotomy, and
-whole-line L2 real-frequency separated-mode theorem. The latest terminal
-adjudication is P096: MC2 is qualified because a decaying exterior branch is
-not a smooth global bound state or nonlinear existence proof, oscillation is
-not automatically radiation, and the gapless wave equation retains localized
-finite-energy traveling packets. No material, cutoff, lifetime, population,
-or engineering interpretation is accepted.
+The current accepted frontier is `v0.83.0`, containing one hundred thirteen
+claims. Its latest additions are C-LAT-002's exact physical phase-chain action,
+band, displacement lift, and conditional host-gap ratio and C-MED-004's exact
+mixed-coordinate sine-Gordon characteristic, hyperbolic map, and scale
+non-identifiability theorem. The latest terminal adjudication is P097: MC3 is
+qualified because bare mass is not phase inertia, the isotope ratio retains
+host curvature and coordinate-scale premises, a mixed length-time coefficient
+is not an angular-frequency squared, and positive linear curvature neither
+selects a material nor proves nonlinear-breather existence. No material,
+cutoff, lifetime, population, or engineering interpretation is accepted.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -57,7 +58,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 124 pending, 0 partially migrated, 3 migrated, 82 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 123 pending, 0 partially migrated, 3 migrated, 83 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -185,6 +186,7 @@ Attempts are append-only and individually reproducible.
 | 0114 | P094 exact Brownian-phase/observable/window classification and LB4 audit | `campaigns/P094-lb4-thermal-decoherence-window/attempts/0001` through `0009`, then terminal record replay | accepted as C-COH-002 with LB4 qualified in v0.80.0; commit `1553412` | Sixty primary and thirty-seven independent checks derive the Brownian harmonic characteristic, variance, mean and pair factors, uniform-window averages, and typed damped composition; an explicit Gibbs-stationary Langevin oscillator gives an angle-dependent phase projection and fixed-energy average `Gamma*Theta/(4*E)`, refuting LB4's universal coefficient. Every one of the forty passing source predicates is individually adjudicated, and the free target surface exposes the 0.125 bracket as nonidentifying. Thirty-six focused tests, P086/P092/P091 dependency replays, and the single integrated workflow pass all 845 tests; final records receive only record-sensitive replay | Audit MC1's dimensional constitutive reduction and physical breather rescaling without treating a declared medium Lagrangian as a derived material, conflating normalized and physical frequencies, or importing later MC2/MC3 parameter selections |
 | 0115 | P095 exact dimensional cosine-field reduction, scale-identifiability class, and physical breather lift | `campaigns/P095-mc1-dimensional-sine-gordon/attempts/0001` through `0007`, then terminal record replay | accepted as C-MED-003 and C-SG-017 with MC1 qualified in v0.81.0; commit `7b4fecc` | Forty-nine primary and thirty independent checks derive the field variation, full-rank coefficient dimensions, rank-two kinematic-ratio map, common coefficient ray, exact coordinate pullback, physical frequency/profile scales, energy `sqrt(T*mu)*16*eta`, canonical action `sqrt(lambda*T)*16*acos(omega)`, and physical `dE/dJ`. The source's lexical scale guard is refuted, its interval iff is only one sample, `ell/eta` is not the exact core one-over-e distance, and one failed linear trial is not a universal gapless no-go. Sixteen focused module tests and the single integrated workflow pass all 861 tests; generated records, 407 memory files, and the skill validate, and exact work uses no NumPy quadrature alias | Audit MC2's linearized dispersion and tail-localization theorem without importing MC3 material selections, treating a failed profile as a universal spectral theorem, or confusing absence of propagating plane waves with absence of every localized solution |
 | 0116 | P096 exact physical spectrum, exterior-tail, whole-line L2, and MC2 audit | `campaigns/P096-mc2-dispersion-tail-classification/attempts/0001` through `0009`, then terminal record replay | accepted as C-SG-018 with MC2 qualified in v0.82.0; commit `b0113d5` | Forty-five primary and twenty-four independent checks derive the vacuum linearization, positive dispersion and velocity limits, exact tail trichotomy, full-rank sub-gap matching, threshold and oscillatory norm obstructions, nonlinear-tail cross-check, standing-versus-directed flux, and a finite-energy gapless traveling packet. MC2's half-line exponential is not a smooth global bound state, sampled sign fallbacks do not prove iff claims, and symbol hygiene supplies no material closure. Ninety-seven focused dependency tests and the single integrated workflow pass all 870 tests; generated records, 411 memory files, and the skill validate, and exact work uses no NumPy quadrature alias | Audit MC3's per-medium gap maps without importing unreviewed Frenkel-Kontorova or Maxwell-Bloch reductions, Born-Oppenheimer equality, external isotope numbers, later MC4 simulation, or treating positive linear gap as sufficient nonlinear-breather existence |
+| 0117 | P097 exact physical phase-chain, isotope-ledger, mixed-coordinate scale, and MC3 audit | `campaigns/P097-mc3-medium-gap-maps/attempts/0001` through `0006`, then terminal record replay | accepted as C-LAT-002 and C-MED-004 with MC3 qualified in v0.83.0; commit `8ddc58b` | Forty-three primary and twenty-eight independent checks derive the phase-chain variation and exact band, the displacement-to-phase inertia and coupling lift, the complete two-host gap ratio and counterfamilies, the mixed-coordinate characteristic, rank-one scale family, hyperbolic map, and absorption-rate dimensional completion. MC3's bare-mass expression has speed units, sqrt(2) needs equal curvature and phase scale, `alpha` is not a frequency squared, and gap positivity does not prove a nonlinear or material state. Forty-three focused and 114 adjacent dependency tests pass, and the single integrated workflow passes all 893 tests; exact work uses no NumPy quadrature alias and the memory-CLI absolute-path gotcha is codified without repeating the full suite | Audit MC4's continuum simulation without duplicating the exact breather theorem, mistaking finite-grid persistence for material existence, accepting unrefined numerical agreement, or retaining its local NumPy trapezoidal fallback instead of the shared helper |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -201,7 +203,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 124 bridge units remain pending, 3 are migrated, 82 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 123 bridge units remain pending, 3 are migrated, 83 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -824,11 +826,25 @@ finite-energy gapless traveling-packet counterexample. MC2 is qualified, all
 twenty-one predicates have individual verdicts, and exact P096 work uses no
 quadrature alias.
 
+P097 adds C-LAT-002 for the exact dimensionless-phase chain with physical
+coefficients and C-MED-004 for the exact mixed-coordinate sine-Gordon scale
+theorem. Site variation gives
+`Omega^2=(V0+4*K*sin^2(k*a/2))/I`; a displacement `q=b*u` supplies
+`I=m*b^2` and `K=kappa*b^2`, so the two-host gap ratio retains curvature,
+mass, and phase-scale ratios and reduces to sqrt(2) only under explicit equal-
+curvature, equal-scale, and doubled-mass premises. For
+`theta_z_tau=g*sin(theta)`, dimensions require `g` to be inverse length-time,
+the linear characteristic is `k*Omega=g`, and normalized coordinates leave a
+reciprocal length-time scale freedom. MC3 is qualified because its material,
+isotope, gas-frequency, host, and nonlinear-existence readings do not follow.
+Exact P097 work uses no quadrature alias, while pending sampled consumers must
+use the shared `trapezoid_integral` helper.
+
 ## Canonicalization
-The registry, `v0.82.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred eleven accepted claims. P001 through P096 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 124 pending, 0 partial, 3 migrated, 82 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.83.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirteen accepted claims. P001 through P097 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 123 pending, 0 partial, 3 migrated, 83 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 124 pending, 3 migrated, 82 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is MC3, pinned at SHA-256 `74fbddc086781a0d61d5dd22effabf48d7ff37f47c6d97ebde0b2fb6186464a5`. Its generated queue proposes a Frenkel-Kontorova small-oscillation gap, an exact sqrt(2) isotope ratio, and a Maxwell-Bloch/self-induced-transparency gas gap. P097 must freeze at least two material-map candidates, unit and coordinate conventions, same-potential isotope assumptions, effective-mass corrections, primary-source imports, light-cone versus laboratory dispersion, coefficient and absolute-scale identifiability, nonlinearity-versus-gap-versus-breather existence, MC4 and engineering consumers, and nonduplication before executing the source or trusting its imported predecessor self-tests. Positive curvature can conditionally open a linear gap; it does not by itself derive the claimed host, exact isotope law, gas reduction, or nonlinear localized state.
+The effort remains active. D4 is discharged, but D1 remains open with 123 pending, 3 migrated, 83 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is MC4, pinned at SHA-256 `db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698`. Its body was exposed during P097's required consumer audit, so fresh source-body blinding is impossible and must not be claimed; source execution and its output remain untrusted until the P098 freeze. P098 must preregister literal-reproduction, canonical-solver regression, independent-method, refinement, conservation/error-ledger, exact-breather, gapless-control, duplicate-evidence, consumer, and nonduplication candidates. It must distinguish finite-grid persistence from exact C-SG-017 existence and from any lattice or material conclusion, and route every sampled integral through `substrate_framework.numerics.trapezoid_integral` rather than a local `np.trapezoid`/`np.trapz` fallback.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
