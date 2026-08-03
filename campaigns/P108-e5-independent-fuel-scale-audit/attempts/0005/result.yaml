@@ -1,0 +1,11 @@
+campaign: P108
+attempt: 0005
+candidate: independent_exact_rederivation
+status: passed
+command: PYTHONPATH=src .venv/bin/python proposals/P108-e5-independent-fuel-scale-audit/reviews/independent_scale_review.py
+exit_status: 0
+terminal_tally: ALL 19 CHECKS PASS [P108-INDEPENDENT]
+oracle: >-
+  Fresh exact rational bookkeeping and scale/sample algebra without importing
+  the primary ledger's definitions or expressions.
+verdict: agrees_with_primary_ceiling

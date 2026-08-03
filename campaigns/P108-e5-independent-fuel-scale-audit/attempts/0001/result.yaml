@@ -1,0 +1,22 @@
+campaign: P108
+attempt: 0001
+candidate: A
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E5_independent_fuel_test.py
+exit_status: 0
+elapsed_seconds: 0.24
+terminal_tally: ALL 5 CHECKS PASS
+source_sha256: f1754902fb112f63c9c9052b60cdeca5455023560680e4e31889669cddf764af
+compatibility_event: none
+verdict: reproduction_passed_headline_promotion_rejected_pending_audit
+mechanism: >-
+  The source runs cleanly and reproduces its selected table. Inspection shows
+  that the values labelled comparator-only are direct inputs to Q and every
+  ratio; the 0.3-to-1 bracket is a postdeclared literal interval; D+T includes
+  a neutron despite the aneutronic label; the alpha predicate scans a sample
+  preselected to contain 4He; and no accepted claim maps degree four to an
+  alpha particle.
+next_attempt: >-
+  Derive the exact ratio and scale-covariance ledger, mutate denominator and
+  sample membership, independently recompute the result, and adjudicate every
+  predicate against accepted dependency ceilings.

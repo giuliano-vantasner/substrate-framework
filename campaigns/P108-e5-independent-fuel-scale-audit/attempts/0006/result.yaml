@@ -1,0 +1,28 @@
+campaign: P108
+attempt: 0006
+candidate: terminal_no_release_adjudication_gate
+status: passed
+command: scripts/validate.sh
+scope: >-
+  P108 campaign, E5 qualified disposition, regenerated 218-unit queue,
+  unchanged v0.91.0 accepted release, all repository tests, memory, skill, and
+  generated-consumer checks.
+expected_release: v0.91.0
+expected_claims: 126
+expected_queue:
+  pending: 112
+  qualified: 94
+  migrated: 3
+  duplicate_evidence: 8
+  out_of_scope: 1
+full_suite_policy: >-
+  This is the single integrated workflow at the P108 adjudication boundary.
+  After completion only record-sensitive repository generation memory and diff
+  checks are rerun; the unchanged full test suite is not repeated.
+exit_status: 0
+workflow_tally: WORKFLOW VALID 126 claims 126 accepted 0 proposals 218 units 112 pending 0 partial
+memory_tally: All 465 file(s) valid
+skill_tally: Skill is valid
+pytest_tally: 991 passed in 89.19s
+terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+verdict: terminal_no_release_adjudication_passed

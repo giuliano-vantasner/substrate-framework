@@ -1,0 +1,35 @@
+campaign: P108
+purpose: Establish data and channel provenance as comparator evidence only.
+sources:
+  - authors: [W. J. Huang, Meng Wang, F. G. Kondev, G. Audi, S. Naimi]
+    title: The AME 2020 atomic mass evaluation (I). Evaluation of input data and adjustment procedures
+    primary_url: https://hepnp.ihep.ac.cn/article/doi/10.1088/1674-1137/abddb0
+    findings:
+      - Part II contains recommended mass values and uncertainties.
+      - AME uncertainties are one standard deviation.
+      - Reaction energies and masses are adjusted in a correlated least-squares data network rather than theory outputs.
+      - The electron rest energy used in E5's denominator is an evaluated empirical input.
+    E5_implication: >-
+      E5's rounded binding literals need explicit rows, units, correlations, and
+      uncertainties to be a reproducible data ledger. Calling them
+      comparator-only does not change their executable role as Q inputs.
+  - organization: United States Department of Energy Office of Science
+    title: DOE Explains Fusion Reactions
+    primary_url: https://www.energy.gov/science/doe-explainsfusion-reactions
+    finding: D-T fusion produces a helium nucleus and a high-energy neutron.
+    E5_implication: >-
+      The source's collective description of D+T with the other listed fuels
+      as aneutronic is false by its own displayed product and by the
+      authoritative reaction description.
+  - source_campaign: P085
+    primary_evidence: campaigns/P085-ny2-nuclear-yield-audit/evidence/literature-audit.yaml
+    finding: >-
+      The D+D to 4He channel is radiative and its gamma branch is extremely
+      suppressed relative to the proton branch at the cited low energy.
+    E5_implication: >-
+      A D+D to 4He mass difference is not a generic D+D event or generic fuel
+      payload; E5 omits the gamma, branch, rate, and deposition model.
+authority_note: >-
+  These sources classify the imported data and reaction statements. They do
+  not become framework claims, select the 25.686 MeV coordinate, or map a
+  rational-map degree to a nucleus.

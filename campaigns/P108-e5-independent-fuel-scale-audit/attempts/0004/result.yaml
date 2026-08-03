@@ -1,0 +1,19 @@
+campaign: P108
+attempt: 0004
+candidate: primary_exact_scale_and_sample_audit
+status: passed
+command: PYTHONPATH=src .venv/bin/python proposals/P108-e5-independent-fuel-scale-audit/verify.py
+exit_status: 0
+terminal_tally: ALL 34 CHECKS PASS [P108]
+oracle: >-
+  Source hash and AST, exact rational reaction arithmetic, SymPy scale
+  covariance and inverse maps, finite-set extrema and spread, denominator and
+  sample mutations, accepted-claim ceilings, and source-predicate inspection.
+mutations:
+  - denominator changed from the supplied unit to 10 and 100 MeV
+  - denominator set in turn to each selected release
+  - arbitrary positive target coordinate
+  - zero negative and distant-positive sample additions
+  - non-alpha positive reaction entry
+  - degree/state label separation
+verdict: passed_at_comparator_and_interpretation_ceiling

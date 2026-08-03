@@ -1,0 +1,36 @@
+campaign: P108
+source_unit: E5
+declared_dependencies:
+  E2:
+    disposition: qualified
+    accepted_surface: [C-RPROF-001, C-RPROF-002]
+    allowed_content: conditional_reduced_radial_model_and_three_stationary_branches
+    excluded_content: [physical_action, global_minimum, baryon, deuteron, alpha, nucleus, binding_hierarchy, reaction, yield]
+  NY1:
+    disposition: duplicate_evidence
+    accepted_surface: [C-SK-001]
+    allowed_content: conditional_F_pi_over_e_equals_16_pi_E_e_iff
+    excluded_content: [absolute_prediction, nuclear_scale, state_map, reaction, yield]
+  NY2:
+    disposition: duplicate_evidence
+    accepted_surface: [C-SK-001]
+    allowed_content: source_comparator_audit_only
+    excluded_content: [coefficient_one_selection, multi_soliton_binding, reaction_rate, generic_event_payload]
+  O1:
+    disposition: pending_adjudication
+    accepted_surface: []
+    subject: spin1_polar_order_parameter_topology
+    authority_for_E5: none
+accepted_supporting_ceiling:
+  C-DIM-002: dimensions_do_not_select_dimensionless_coefficients
+  C-DIM-003: imported_dimensionful_coordinates_remain_visible
+  C-RDIFF-001: conditional_signed_difference_transform_only
+unclosed_imports:
+  - source binding-energy data rows and uncertainties
+  - independently selected F_pi/e physical value
+  - representative reaction sampling frame
+  - reaction branches rates and deposition
+  - rational-map degree to nuclear-state map
+  - physical alpha binding hierarchy and correction model
+claim_delta: []
+verdict: no_dependency_closed_new_claim

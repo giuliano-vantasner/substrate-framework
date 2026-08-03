@@ -1,0 +1,16 @@
+campaign: P108
+attempt: 0003
+candidate: primary_exact_audit_queue_lookup
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P108-e5-independent-fuel-scale-audit/verify.py
+exit_status: 1
+passed_before_failure: 30
+failure: TypeError string indices must be integers not str
+mechanism: >-
+  The verifier treated migration/source-claims.yaml as a top-level sequence.
+  Its governed schema is a mapping whose units key contains the sequence, so
+  iteration returned metadata keys rather than unit records. All preceding
+  scientific checks had passed.
+repair: >-
+  Resolve O1 through queue[units], matching the existing queue helpers and
+  leaving the scientific predicates unchanged.

@@ -1474,6 +1474,49 @@ units:
       E4 uses no NumPy or sampled quadrature, so there is no np.trapz
       compatibility event. Exact P107 work uses symbolic integration and
       algebra only.
+  E5:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-002
+      - C-DIM-003
+      - C-SK-001
+      - C-RDIFF-001
+      - C-RPROF-002
+    qualification: >-
+      E5's four exact decimal binding-energy differences, conditional ratios,
+      selected finite-sample extrema, supplied-denominator ordering, and
+      rejection of exact one-unit equality survive only as external-data and
+      coordinate arithmetic. The binding-energy literals directly compute
+      every Q and ratio despite being labelled comparator-only, and the source
+      supplies no uncertainty ledger. A continuum of denominators gives the
+      same 0.3-to-1 bracket; rescaling moves every absolute ratio; choosing a
+      denominator equal to any release makes that reaction closest to one;
+      and sample additions defeat positivity or factor-three claims. D+T is
+      neutron-producing despite the aneutronic label, D+D omits its radiative
+      channel, and the alpha predicate scans a sample selected to contain 4He.
+      C-RPROF-002 explicitly supplies no alpha, nucleus, reaction, or yield
+      map. No physical scale, representative reaction law, degree-to-state
+      identity, reaction rate, deposition model, or per-event yield is
+      accepted.
+    evidence:
+      - campaigns/P108-e5-independent-fuel-scale-audit/reviews/source_adjudication.md
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/source-reproduction.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/source-audit.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/check-adjudication.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/dependency-audit.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/consumer-audit.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/candidate-comparison.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/literature-audit.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/evidence/primary-provenance.yaml
+      - campaigns/P108-e5-independent-fuel-scale-audit/verify.py
+      - campaigns/P108-e5-independent-fuel-scale-audit/reviews/independent_scale_review.py
+      - memory/vantasner/decisions/E5-qualified-review.md
+    note: >-
+      P108 derives exact scale covariance, the nonunique bracket interval,
+      pairwise scale cancellation, finite-sample spread, arbitrary-target and
+      closest-reaction families, and sample/state countermodels through 34
+      primary and 19 independent checks. E5 and exact P108 work use no NumPy
+      or sampled quadrature, so there is no np.trapz compatibility event.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

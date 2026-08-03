@@ -2,7 +2,7 @@
 description: Audit E5's finite multi-reaction ratios, scale selection, and physical state map
 author: vantasner
 created: '2026-08-07T18:20:00Z'
-updated: '2026-08-07T18:20:00Z'
+updated: '2026-08-07T18:40:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-E5
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P108 E5 Independent Fuel Scale Audit
 

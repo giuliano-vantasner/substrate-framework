@@ -1,0 +1,69 @@
+campaign: P108
+source_unit: E5
+source_sha256: f1754902fb112f63c9c9052b60cdeca5455023560680e4e31889669cddf764af
+literal_checks: 4
+dynamic_checks: 1
+headline_verdict: selected_external_data_arithmetic_with_scale_and_state_interpretation_overreach
+data_flow:
+  binding_energy_literals:
+    d_MeV: 2.224
+    t_MeV: 8.482
+    He3_MeV: 7.718
+    He4_MeV: 28.296
+    B11_MeV: 76.205
+  role_in_code: direct_inputs_to_Q_of_and_all_ratios
+  source_label: comparator_only_never_derivation_inputs
+  audit_verdict: source_label_contradicted_by_executable_data_flow
+  uncertainties: absent
+  table_row_or_primary_citation: absent
+exact_release_ledger:
+  D_plus_D_to_He4_MeV: 2981/125
+  D_plus_He3_to_He4_plus_p_MeV: 9177/500
+  D_plus_T_to_He4_plus_n_MeV: 1759/100
+  p_plus_B11_to_3alpha_MeV: 8683/1000
+  status: exact_arithmetic_conditional_on_rounded_external_inputs
+scale_ledger:
+  supplied_unit: 10219979*pi/1250000 MeV
+  source_origin: conditional_C-SK-001_coordinate_evaluated_with_empirical_electron_energy
+  ratio_definition: r_i=Q_i/U
+  rescaling: U_to_aU_implies_r_i_to_r_i/a
+  scale_free_content: r_i/r_j=Q_i/Q_j
+  source_bracket: 3/10_less_than_r_i_less_than_1
+  exact_denominator_interval_for_source_sample: max(Q_i)_less_than_U_less_than_10*min(Q_i)/3
+  interval_is_nonempty: true
+  selected_unit_is_unique: false
+  arbitrary_target_inverse: U=Q_i/t_i
+  closest_to_one: each_reaction_can_be_made_exactly_closest_by_choosing_U_equal_to_its_Q
+finite_sample_ledger:
+  sample_size: 4
+  selected_for_positive_release: true
+  selected_for_alpha_products: true
+  multiplicative_spread_exact: 23848/8683
+  multiplicative_spread_approx: 2.74674651618104
+  additive_ratio_range_scale_invariant: false
+  population_or_sampling_frame: absent
+  uncertainty_or_selection_model: absent
+  robust_or_universal_inference: unsupported
+reaction_ledger:
+  D_plus_D_label: incomplete_one_body_final_state
+  required_radiative_channel_from_P085: D+D_to_He4_plus_gamma
+  D_plus_T_contains_neutron: true
+  source_calls_all_four_aneutronic: true
+  aneutronic_label_verdict: false_for_D_plus_T
+  branch_rate_deposition_model: absent
+  alpha_predicate: preselected_product_membership_and_positive_Q_only
+state_map:
+  source_identification: physical_He4_equals_E2_degree_four_branch
+  accepted_map: absent
+  C-RPROF-002_ceiling: explicitly_excludes_alpha_particle_nucleus_reaction_and_yield
+  verdict: rejected_label_conflation
+source_guard:
+  fabricated_all_one_rejected: true_for_supplied_sample
+  spread_is_nonzero: true_for_supplied_sample
+  anchor_independence_implementation: recomputes_F_PI_OVER_E_from_the_identical_expression
+  comparator_independence_ceiling: no_nuclear_binding_input_enters_anchor_expression
+  physical_independence_or_scale_selection: not_established
+selected_candidates: [B, C, D, E, F, G, H]
+rejected_candidate: A
+new_claims: []
+overall: qualified

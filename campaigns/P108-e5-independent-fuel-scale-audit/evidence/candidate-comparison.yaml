@@ -1,0 +1,33 @@
+campaign: P108
+source_unit: E5
+selection_criteria_frozen_before_source_execution: true
+candidates:
+  A:
+    decision: rejected_as_literal_promotion
+    reason: External inputs, free scale, selected sample, incomplete reaction bookkeeping, and missing state map prevent dependency closure.
+  B:
+    decision: selected_as_conditional_arithmetic
+    result: Exact rational Q ledger survives only conditional on rounded supplied binding values.
+  C:
+    decision: selected
+    result: r_i=Q_i/U, inverse rescaling, pairwise scale cancellation, and arbitrary-target families are exact.
+  D:
+    decision: selected
+    result: Finite extrema and multiplicative spread are descriptive; no population or robustness inference closes.
+  E:
+    decision: selected
+    result: Alternative denominators and sample additions falsify the absolute bracket and closest-reaction interpretation.
+  F:
+    decision: selected
+    result: D+T contradicts the aneutronic label and D+D requires omitted channel bookkeeping; no rate or deposition model exists.
+  G:
+    decision: selected
+    result: Accepted rational-map claims explicitly exclude alpha nucleus reaction and yield identities.
+  H:
+    decision: selected_no_claim
+    result: All exact reusable content is elementary composition of existing dimensional and conditional-difference ceilings.
+comparison_values_used_for_selection: false
+new_claims: []
+canonical_api_delta: []
+release_delta: none
+source_disposition: qualified

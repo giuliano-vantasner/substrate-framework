@@ -1,0 +1,32 @@
+campaign: P108
+source_unit: E5
+scan_root: /home/dan/substrate/merged-framework/bridges
+direct_identifier_scan:
+  patterns: [E5, bridge_E5_independent_fuel_test]
+  consumers_excluding_source: []
+  verdict: no_direct_bridge_consumer
+related_literal_users:
+  - NY2
+  - NY3
+  - E2
+  - E3
+  - KI1
+  - MK3
+  - MK6
+  - MR1
+  - MR6
+  - EL1
+  - BM6
+relationship: >-
+  These units independently contain F_pi/e or nearby scale literals; none
+  imports E5 or receives authority from its five predicates. Their existing or
+  future adjudications remain governed separately.
+canonical_package_consumers: []
+release_consumers: []
+generated_consumers:
+  - migration/source-claims.yaml
+  - generated source-unit documentation through scripts/render_docs.py
+impact_of_terminal_qualification: >-
+  The generated queue disposition changes. No accepted claim, package API,
+  release claim set, or execution flow changes.
+verdict: additive_governance_evidence_only

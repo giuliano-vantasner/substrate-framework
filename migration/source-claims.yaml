@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 113
-  qualified: 93
+  pending_adjudication: 112
+  qualified: 94
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -6662,8 +6662,40 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DIM-002
+  - C-DIM-003
+  - C-SK-001
+  - C-RDIFF-001
+  - C-RPROF-002
+  qualification: E5's four exact decimal binding-energy differences, conditional ratios, selected finite-sample
+    extrema, supplied-denominator ordering, and rejection of exact one-unit equality survive only as external-data
+    and coordinate arithmetic. The binding-energy literals directly compute every Q and ratio despite
+    being labelled comparator-only, and the source supplies no uncertainty ledger. A continuum of denominators
+    gives the same 0.3-to-1 bracket; rescaling moves every absolute ratio; choosing a denominator equal
+    to any release makes that reaction closest to one; and sample additions defeat positivity or factor-three
+    claims. D+T is neutron-producing despite the aneutronic label, D+D omits its radiative channel, and
+    the alpha predicate scans a sample selected to contain 4He. C-RPROF-002 explicitly supplies no alpha,
+    nucleus, reaction, or yield map. No physical scale, representative reaction law, degree-to-state identity,
+    reaction rate, deposition model, or per-event yield is accepted.
+  evidence:
+  - campaigns/P108-e5-independent-fuel-scale-audit/reviews/source_adjudication.md
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/source-reproduction.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/source-audit.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/check-adjudication.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/dependency-audit.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/consumer-audit.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/candidate-comparison.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/literature-audit.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/evidence/primary-provenance.yaml
+  - campaigns/P108-e5-independent-fuel-scale-audit/verify.py
+  - campaigns/P108-e5-independent-fuel-scale-audit/reviews/independent_scale_review.py
+  - memory/vantasner/decisions/E5-qualified-review.md
+  note: P108 derives exact scale covariance, the nonunique bracket interval, pairwise scale cancellation,
+    finite-sample spread, arbitrary-target and closest-reaction families, and sample/state countermodels
+    through 34 primary and 19 independent checks. E5 and exact P108 work use no NumPy or sampled quadrature,
+    so there is no np.trapz compatibility event.
 - source_unit: PN1
   phase: phase-30
   path: merged-framework/bridges/phase-30/bridge_PN1_multiphonon_vertex.py

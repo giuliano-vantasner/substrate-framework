@@ -1,0 +1,54 @@
+campaign: P108
+title: E5 finite selected fuel-ratio and physical-state audit
+source_baseline: substrate@6d1f4e0
+source_units: [E5]
+base_release: v0.91.0
+release_after_adjudication: v0.91.0
+adjudicated_at: '2026-08-07T18:40:00Z'
+selected_candidates:
+  - {id: B, reason: Exact rational bookkeeping preserves the conditional external-data arithmetic.}
+  - {id: C, reason: Exact ratio covariance and arbitrary-target inverses expose the free denominator.}
+  - {id: D, reason: Finite-set statistics separate description from population inference.}
+  - {id: E, reason: Denominator and sample mutations defeat scale selection and robustness.}
+  - {id: F, reason: Reaction bookkeeping exposes the D+T aneutronic contradiction and omitted D+D channel.}
+  - {id: G, reason: Accepted rational-map ceilings reject degree-to-alpha identification.}
+  - {id: H, reason: Nonduplication leaves no claim or canonical API delta.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-DIM-002, decision: unchanged_dimensionless_coefficient_ceiling}
+  - {id: C-DIM-003, decision: unchanged_imported_coordinate_ceiling}
+  - {id: C-SK-001, decision: unchanged_conditional_scale_iff}
+  - {id: C-RDIFF-001, decision: unchanged_conditional_difference_transform}
+  - {id: C-RPROF-001, decision: unchanged_reduced_model_ceiling}
+  - {id: C-RPROF-002, decision: unchanged_stationary_branch_and_state_map_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  verifier_representation_failure: attempts/0002/result.yaml
+  verifier_queue_schema_failure: attempts/0003/result.yaml
+  targeted_primary_route: attempts/0004/result.yaml
+  targeted_independent_route: attempts/0005/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_scale_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  literature_audit: evidence/literature-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: memory/vantasner/decisions/E5-qualified-review.md
+source_disposition:
+  E5: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E5_independent_fuel_test.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P108-e5-independent-fuel-scale-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P108-e5-independent-fuel-scale-audit/reviews/independent_scale_review.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

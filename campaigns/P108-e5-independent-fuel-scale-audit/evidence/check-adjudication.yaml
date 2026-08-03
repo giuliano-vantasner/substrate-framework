@@ -1,0 +1,58 @@
+campaign: P108
+source_unit: E5
+checks:
+  - index: 1
+    source_predicate: rounded binding-energy differences reproduce four supplied reaction Q values within 0.1 MeV
+    verdict: qualified_external_input_arithmetic
+    surviving_observation: >-
+      The exact decimal arithmetic gives 23.848, 18.354, 17.590, and 8.683
+      MeV from the source literals.
+    qualification: >-
+      The binding-energy table directly calculates the Q values and supplies
+      no uncertainty ledger or independent comparison. It is external data
+      arithmetic, not a framework prediction.
+    maps_to: [C-DIM-003, C-RDIFF-001]
+  - index: 2
+    source_predicate: all four ratios are positive and in the literal interval 0.3 to 1 so the supplied unit is the right controlling scale
+    verdict: qualified_sample_arithmetic_rejected_scale_inference
+    surviving_observation: all four selected ratios lie in the interval for the supplied denominator
+    qualification: >-
+      A continuum of denominators satisfies the same bracket. Rescaling the
+      denominator moves every absolute ratio, while zero, negative, or distant
+      sample additions defeat the conclusion. No sampling frame or scale
+      selection rule is supplied.
+    maps_to: [C-DIM-002, C-DIM-003]
+  - index: 3
+    source_predicate: D+D is closest to one unit and therefore the strongest individual scale case
+    verdict: qualified_coordinate_order_rejected_corroboration
+    surviving_observation: D+D is closest for the supplied denominator and selected sample
+    qualification: >-
+      Setting the denominator equal to any one of the four releases makes that
+      reaction exactly one and uniquely closest. The ordering is conditional
+      on the unselected coordinate and cannot validate it.
+    maps_to: [C-DIM-003]
+  - index: 4
+    source_predicate: every exothermic fuel ends in an alpha identified with E2's most-bound degree-four branch
+    verdict: rejected_selected_sample_and_missing_state_map
+    qualification: >-
+      The predicate merely checks membership in a table selected to include
+      4He and positive Q. D+T is neutron producing despite the source's
+      aneutronic label, the D+D shorthand omits its radiative product, and
+      C-RPROF-002 explicitly supplies no alpha, nucleus, reaction, or yield map.
+    maps_to: []
+  - index: 5
+    source_predicate: not all fuels equal one unit within five percent and the anchor is independent of binding data
+    verdict: qualified_guard_rejected_independence_oracle
+    surviving_observation: the four supplied ratios are unequal and not all within five percent of one
+    qualification: >-
+      The anchor guard recomputes the same expression, so it is tautological.
+      Nuclear binding values do not enter that expression, but the conditional
+      scale still imports the electron rest energy and its coefficient; this
+      proves neither physical independence nor correct scale selection.
+    maps_to: [C-SK-001]
+terminal_verdict: qualified
+terminal_reason: >-
+  Exact conditional arithmetic and finite-sample descriptions survive. The
+  universal or robust scale reading, independent corroboration, aneutronic
+  classification, physical reaction closure, and alpha/degree-four identity do
+  not.

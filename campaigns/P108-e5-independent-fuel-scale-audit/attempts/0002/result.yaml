@@ -1,0 +1,18 @@
+campaign: P108
+attempt: 0002
+candidate: primary_exact_audit
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P108-e5-independent-fuel-scale-audit/verify.py
+exit_status: 1
+passed_before_failure: 24
+failure: alpha predicate only inspects the preselected product table and release sign
+mechanism: >-
+  The verifier inspected the fourth check call's condition, but that condition
+  is only the name produces_alpha. The load-bearing generator expression lives
+  in the preceding assignment, so string matching the call argument could not
+  see it. This is an AST indirection and representation defect in the audit,
+  not evidence for or against the source claim.
+repair: >-
+  Resolve the produces_alpha assignment structurally and inspect its AST for
+  the 4He membership and positive-Q comparisons without depending on quote
+  style or expression inlining.
