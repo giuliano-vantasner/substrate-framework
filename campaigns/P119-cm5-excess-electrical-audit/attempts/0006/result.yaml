@@ -1,0 +1,13 @@
+campaign: P119
+attempt: 0006
+candidate: H_independent_electrical_review
+status: failed
+command: PYTHONPATH=src .venv/bin/python campaigns/P119-cm5-excess-electrical-audit/reviews/independent_electrical_review.py
+exit_status: 1
+failure: >-
+  The iid visibility endpoint check compared an unexpanded polynomial directly
+  to its simplified N and N-squared forms.
+diagnosis: symbolic_structural_comparison_without_simplification
+scientific_effect: none
+checks_passed_before_failure: 15
+next_attempt: simplify_both_visibility_endpoint_differences_exactly_and_rerun

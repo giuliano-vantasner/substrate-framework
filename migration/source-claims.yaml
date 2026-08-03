@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 102
-  qualified: 104
+  pending_adjudication: 101
+  qualified: 105
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -7370,8 +7370,47 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GW-001
+  - C-COH-001
+  - C-SG-017
+  - C-CMP-001
+  - C-RES-001
+  qualification: CM5's exact harmonic calculus is already governed. For a peak-amplitude cosine at Omega=2*omega_b,
+    the squared third-derivative cycle average is (2*omega_b)^6*B^2/2; the source computes that one-half
+    in one check but omits it from its later assembled expression. A free proportionality can absorb the
+    factor only while leaving the unitful radiation normalization unresolved. C-GW-001 supplies conditional
+    tensor calculus, not an EM action, coupling, field solution, or flux. C-SG-017 supplies the conditional
+    frequency omega_b=w*omega_0, not a shared heat channel. The declared B=b0*sqrt(N)*exp(-C/(A2*Theta))*Gamma
+    is not derived from CM2 or PN4 and grows like Gamma^2, opposite C-CMP-001's decreasing composite and
+    C-RES-001's vanishing large-loss element. C-COH-001 permits an aligned fixed-per-source N^2 directional
+    endpoint, not integrated total power; the cited geometry source calls focus local concentration at
+    the same total power and warns against double counting it. CM5 does not import that geometry and substitutes
+    literals. Its imported finite Gaussian has chi_b(0)>0 at finite width, and CM5 evaluates no voltage
+    waveform, slew spectrum, population, constitutive law, interaction, or source work. The shared guard
+    tests float equality rather than provenance. No coherent-to- EM channel, radiation law, total power,
+    detector response, dV/dt seeding, shared heat mechanism, material signature, magnitude, yield, heat,
+    or observation is accepted.
+  evidence:
+  - campaigns/P119-cm5-excess-electrical-audit/reviews/source_adjudication.md
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/source-reproduction.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/source-audit.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/check-adjudication.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/input-provenance.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/dependency-audit.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/consumer-audit.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/candidate-comparison.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/evidence/primary-provenance.yaml
+  - campaigns/P119-cm5-excess-electrical-audit/verify.py
+  - campaigns/P119-cm5-excess-electrical-audit/reviews/independent_electrical_review.py
+  - memory/vantasner/decisions/CM5-qualified-review.md
+  note: P119 closes 66 primary and 34 independent exact checks after seven preserved workflow or verifier
+    failures. Three direct and three transitive source consumers replay 158 checks. CM5 itself uses no
+    sampled integration. The compatibility-only self-optimization removes nine remaining legacy NumPy
+    integration references from eight mutable engineering scripts; no scientific candidate fails for API
+    compatibility. No canonical API, accepted claim, or release is added.
 - source_unit: CM6
   phase: phase-31
   path: merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py

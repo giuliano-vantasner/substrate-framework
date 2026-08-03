@@ -1,0 +1,31 @@
+campaign: P119
+source_unit: CM5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py
+sha256: 8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841
+git_blob: d142e9eb0066de22bafa278fd601c1b3e8c36b99
+size_bytes: 13980
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py
+exit_status: 0
+terminal_tally: ALL 18 CHECKS PASS
+selected_output:
+  omega_b: 0.70711
+  twice_omega_b: 1.41421
+  focused_demo: 1.082682e+02
+  magnitude_label: neutral_uncapped
+historical_exposure: >-
+  CM5 had already executed during P116 consumer replay and the NumPy
+  compatibility effort. Queue formulas, dependencies, support-module names,
+  and the tally were exposed before freeze; P119 froze stronger structural
+  criteria before its dedicated line-by-line audit and renewed execution.
+compatibility:
+  cm5_sampled_integration: none
+  seeding_kernel: np.trapezoid
+  spark_geometry: np.trapezoid
+  native_abort: false
+  scientific_candidate_rejected_for_compatibility: false
+interpretation: >-
+  The run reproduces the source's implemented predicates. It is regression
+  evidence only and does not establish an electromagnetic channel, absolute
+  power, focus-normalized total power, seeding mechanism, shared heat channel,
+  magnitude, or observation.

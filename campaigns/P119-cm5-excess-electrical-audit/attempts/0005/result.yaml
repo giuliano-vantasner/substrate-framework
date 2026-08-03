@@ -1,0 +1,14 @@
+campaign: P119
+attempt: 0005
+candidate: B_through_G_primary_exact_verifier
+status: failed
+command: PYTHONPATH=src .venv/bin/python campaigns/P119-cm5-excess-electrical-audit/verify.py
+exit_status: 1
+failure: >-
+  The zero-coupling control also required SymPy to certify the uncoupled
+  derivative average as strictly positive, but the verifier had declared the
+  nonzero harmonic amplitude only real rather than positive.
+diagnosis: symbolic_domain_underdeclared
+scientific_effect: none
+checks_passed_before_failure: 20
+next_attempt: declare_the_frozen_nonzero_reference_amplitude_positive_and_rerun_the_same_oracle

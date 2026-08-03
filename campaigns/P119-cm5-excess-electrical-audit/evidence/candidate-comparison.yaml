@@ -1,0 +1,56 @@
+campaign: P119
+selection_frozen_before_dedicated_source_inspection: true
+criteria_order:
+  - accepted dependency closure and exact waveform derivative frequency and average conventions
+  - physical source coupling unit radiation-zone angular and conservation completeness
+  - separation of total power directional intensity focus collection and detector response
+  - phase normalization DC ramp finite-window zero-coupling and bandwidth limits
+  - mathematical novelty beyond accepted claims
+  - mutation sensitivity parameter economy API fit and semantic honesty
+  - complete predicate dependency cycle import nonduplication and consumer review
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: >-
+      All eighteen predicates execute, but several are literals, same-call
+      regressions, selected thresholds, or floating equality checks.
+  B:
+    decision: selected_as_exact_audit_ledger
+    reason: >-
+      Exact scalar and tensor harmonic calculus closes the one-half factor,
+      phase, static, zero-frequency, unit, and finite-bandwidth ledgers.
+  C:
+    decision: selected_as_physical_ceiling_audit
+    reason: >-
+      Second- and third-derivative functionals with arbitrary couplings prove
+      that the bare proportionality selects no electromagnetic radiator law.
+  D:
+    decision: selected_as_array_normalization_audit
+    reason: >-
+      Exact phasors, C-COH-001, fixed-total normalization, phase cancellation,
+      and local-focus conservation separate directional N^2 from total power.
+  E:
+    decision: selected_as_input_coupling_audit
+    reason: >-
+      Finite-width DC positivity, ramp and finite-window terms, constitutive
+      product rules, and zero coupling reject the claimed seeding inference.
+  F:
+    decision: selected
+    reason: >-
+      C-GW-001, C-COH-001, C-SG-017, C-CMP-001, and C-RES-001 already govern
+      every surviving positive surface; no new claim or release is needed.
+  G:
+    decision: selected
+    reason: >-
+      Zero coupling, arbitrary prefactors, phase disorder, finite bandwidth,
+      alternate derivative laws, and independent heat couplings close the
+      semantic and identifiability ceilings.
+  H:
+    decision: selected
+    reason: >-
+      A fresh nonimporting derivation plus complete predicate, dependency,
+      cycle, import, consumer, and nonduplication audits close governance.
+claims_decision: no_new_claim
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

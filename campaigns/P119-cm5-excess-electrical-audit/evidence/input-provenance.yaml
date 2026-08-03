@@ -1,0 +1,61 @@
+campaign: P119
+source_unit: CM5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+imports:
+  - path: engineering/medium_omega0.py
+    sha256: 09d45f212bb28f124b05f99f9cb57acef7b815a1b4e99cfaa3e98bfc35f3f477
+    git_blob: dd2ca6928f06308bbe1b4badac44ff2a9796525b
+    baseline_blob: dd2ca6928f06308bbe1b4badac44ff2a9796525b
+    use: selected_float_regression_of_C_SG_017_frequency_map
+  - path: engineering/seeding_kernel.py
+    sha256: 88e802df9347135a7d47d46dced9eca917de350797fa9bae70165ea26354aba6
+    git_blob: 6c35b3ac3a777053f5ebaeea7356ff3326de5559
+    baseline_blob: 02d82604a603219c18b4d67da44706e6a20d3d69
+    use: finite_Gaussian_kernel_regression_only
+    compatibility_delta: direct_np_trapz_calls_replaced_by_np_trapezoid
+  - path: engineering/spark_geometry/isotropic_coherence.py
+    sha256: fab8c407edccb0bdc56b754ce96a9045e4c488aea2e67f9a2dabc44272541d8d
+    git_blob: 7e25101e0a9ede62f783bcb08038d6c1f54ee01e
+    baseline_blob: 299ba58c8d9120fe95ab622943c7a4147148b2a5
+    use: cited_but_not_imported_geometry_scope_evidence
+    compatibility_delta: legacy_fallback_replaced_by_direct_np_trapezoid
+selected_inputs:
+  frequency:
+    OMEGA_0: 1.0
+    W_WORK: 1/sqrt(2)
+    interpretation: normalized_demo_not_absolute_frequency
+  waveform:
+    delta_mu: cos(2*omega_b*t)
+    peak_amplitude: 1
+    tensor_or_multipole_mapping: absent
+  modulation:
+    B: b0*sqrt(N)*exp(-C/(A2*Theta))*Gamma
+    b0: free_positive_normalization
+    origin: declared_in_CM5_not_derived_from_CM2_or_PN4
+  geometry:
+    Phi_iso_ringmatched: 1.0
+    Phi_iso_1d: 0.1
+    ring_counts: [5, 9]
+    points_aperture_phase_error_angular_pattern: absent
+  seeding:
+    tau: 10.0
+    kernel_amplitude: 1.0
+    voltage_or_slew_waveform: absent
+  focused_demo:
+    N: 4.0
+    A2: 1.0
+    Gamma: 1.0
+    rings: 5
+    C: 5.0
+    Theta: 5.0
+unresolved_physical_inputs:
+  - moment definition, amplitude convention, dimensions, and physical source
+  - electromagnetic interaction, coupling, multipole, field equation, and radiation regime
+  - angular normalization, aperture, phase distribution, collection, transmission, and detector
+  - CM2 state, amplitude, heat observable, and cross-channel correlation
+  - voltage waveform, constitutive law, Fourier endpoints, deposition, source work, and seeding interaction
+  - material parameters, absolute scale, uncertainty, magnitude, yield, heat, and observation
+verdict: >-
+  Every displayed numerical value is a normalized demonstration or literal
+  support-module input. None is inferred from a physical electrical or heat
+  observation. Exact P119 work uses no numerical quadrature.

@@ -2,7 +2,7 @@
 description: Repair legacy NumPy trapezoidal calls without misclassifying compatibility aborts as scientific campaign failures
 author: vantasner
 created: '2026-08-03T12:24:00Z'
-updated: '2026-08-03T12:45:00Z'
+updated: '2026-08-08T08:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -19,7 +19,7 @@ This effort makes the active DBD consumers execute on the pinned current NumPy A
 The framework starts from release v0.85.0 at commit `b34721e`; the external source checkout remains based on `substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64`. P100 attempt 0008 preserves the earlier native DBD abort, while the two targeted external files are clean relative to that source commit and unrelated source-repository changes are excluded.
 
 ## Constraints and Invariants
-The edit surface is `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, the applicable files under `memory-templates/`, this effort record, and the clean external files `engineering/dbd/{pipeline.py,l1_plasma.py}`, `engineering/seeding_kernel.py`, and `engineering/nucleation_efficiency_model.py`. Historical adjudicated campaigns, generated documents, hash-pinned bridge sources, unrelated dirty source files, equations, grids, tolerances, and scientific predicates remain unchanged.
+The workflow edit surface is `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, the applicable files under `memory-templates/`, and this effort record. The compatibility overlay covers mutable current-environment files under `engineering/`: the original DBD, shared seeding, and optional plotting consumers plus the remaining spark-discharge, ideal-coherence, spark-geometry, and screening integration call sites found during P119. Historical adjudicated campaigns, `runs/` attempt artifacts, hash-pinned bridge sources, unrelated dirty source files, equations, grids, tolerances, and scientific predicates remain unchanged.
 
 ## Decomposition
 Work proceeds through a compatibility-first path and does not consume a scientific candidate attempt for a missing library alias.
@@ -44,6 +44,7 @@ Attempts are append-only and distinguish environment compatibility from scientif
 | 0003 | Shared-kernel downstream replay | framework interpreter on the graph-identified consumers | eight scientific consumers pass; optional plotting consumer aborts at import | `nucleation_efficiency_model.py` documents plotting as optional but imports Matplotlib unconditionally, while the current-NumPy framework venv does not install it | Move the optional import into its guarded plotting block, then rerun the consumer |
 | 0004 | First targeted skill validation | `.venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py` | usage exit 1 | The validator requires the skill-directory positional argument | Rerun with `.agents/skills/physics-erdos-loop` and retain the first invocation as command-usage evidence |
 | 0005 | First terminal-record patch | `apply_patch` on this effort | context verification failure | The patch omitted the still-open workflow-ambiguity row from its expected debt-table context | Re-read the file and apply a context-complete terminal update |
+| 0006 | P119 all-engineering compatibility sweep | `rg -n 'np\.trapz' engineering --glob '*.py'` plus targeted module replays | compatibility completion; one aggregate replay blocked | Nine legacy references remained in eight mutable engineering scripts; the ideal-coherence aggregate imports absent Matplotlib before either changed module | Replace every mutable engineering reference with `np.trapezoid`, then directly run the edited ideal-coherence modules instead of installing an unrelated plotting dependency |
 
 ## Validation
 Validation targets the repaired runtime paths and consolidated instructions, not the already-passed P100 scientific claim.
@@ -61,12 +62,14 @@ The ledger is empty: active aliases, the shared-kernel alias, the optional plott
 | --- | --- | --- | --- | --- |
 
 ## Results
-The compatibility-only repair changes nine legacy calls to `np.trapezoid` across `engineering/dbd/pipeline.py`, `engineering/dbd/l1_plasma.py`, and `engineering/seeding_kernel.py`; `engineering/nucleation_efficiency_model.py` now imports its documented optional plotting dependency only inside the existing guarded plot block. The current-NumPy framework interpreter passes the seeding kernel's 14 checks, L1's 20, pipeline's 16, scaling law's 16, master DBD verifier's 49, uncertainty's 15, optimizer's 27, and CM5's 18; the optional nucleation consumer exits zero and passes its self-checks. GitNexus classifies every pre-edit impact and the final combined diff as LOW risk with no affected execution process.
+The compatibility-only repair now changes eighteen legacy integration references across eleven numerical scripts: the original nine direct calls in `engineering/dbd/pipeline.py`, `engineering/dbd/l1_plasma.py`, and `engineering/seeding_kernel.py`, followed by seven fallback assignments in the spark-discharge, ideal-coherence, and spark-geometry phase-matching/FEM/coherence modules and two direct calls in `engineering/screening/dynamic_fluctuations.py`. `engineering/nucleation_efficiency_model.py` separately imports its documented optional plotting dependency only inside the existing guarded plot block. A repository-wide search of mutable `engineering/**/*.py` now finds no `np.trapz` token; immutable bridge and run evidence remains untouched.
+
+The current-NumPy framework interpreter passes the seeding kernel's 14 checks, L1's 20, pipeline's 16, scaling law's 16, master DBD verifier's 49, uncertainty's 15, optimizer's 27, spark-discharge's 61, spark-geometry's 55, the screening self-report, CM5's 18, and direct ideal-coherence phase-matching and FEM executions plus an exact import identity check. The ideal-coherence aggregate verifier remains blocked before the edited modules by its unrelated unconditional Matplotlib import; this is recorded rather than hidden or repaired by installing a plotting stack. GitNexus classifies the canonical reuse as LOW risk with no affected execution process.
 
 The workflow repair is consolidated in `AGENTS.md`, the physics skill, and four applicable task templates. The corrected skill validator passes, targeted repository validation reports 115 accepted claims and 120 pending units, both repositories pass `git diff --check`, and the one integrated workflow gate passes all 914 tests with all 427 memory files and the skill valid.
 
 ## Canonicalization
-This process-only effort changes no accepted claim, release, generated documentation, or migration disposition. Framework workflow assets are committed in the framework repository. The four external script edits remain an explicit compatibility overlay on clean target files so the source checkout stays at pinned baseline `6d1f4e02f87a0bd1dc326cb68af01872d1e88c64`; historical source hashes and native-error records are unchanged.
+This process-only effort changes no accepted claim, release, or generated accepted-claim documentation. Framework workflow assets are committed in the framework repository. The twelve external mutable-script edits remain an explicit compatibility overlay so the source checkout stays at pinned baseline `6d1f4e02f87a0bd1dc326cb68af01872d1e88c64`; historical bridge hashes, run artifacts, and native-error records are unchanged. P119 records the later overlay hashes separately from the baseline blobs.
 
 ## Done Gate
 The effort is complete because the mutable consumers use the current API, the repaired scientific routes pass, compatibility provenance is separated from scientific verdicts, workflow assets agree, validation is sensitive, and the debt ledger is empty.

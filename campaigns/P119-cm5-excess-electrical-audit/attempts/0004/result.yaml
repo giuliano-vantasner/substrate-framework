@@ -1,0 +1,17 @@
+campaign: P119
+attempt: 0004
+candidate: numpy_trapezoid_engineering_compatibility
+status: failed
+command: /home/dan/substrate-framework/.venv/bin/python verify.py
+workdir: /home/dan/substrate/engineering/ideal_coherence
+exit_status: 1
+failure: >-
+  The aggregate ideal-coherence verifier aborted while importing optimize.py
+  because matplotlib is absent, before it exercised either edited integration
+  module.
+diagnosis: unrelated_optional_plot_dependency_missing
+scientific_effect: none
+compatibility_effect: >-
+  Spark-discharge 61 checks, spark-geometry 55 checks, the screening module,
+  and CM5's 18 checks all exited cleanly after the np.trapezoid-only edits.
+next_attempt: run_the_edited_ideal_coherence_phase_matching_and_fem_modules_directly_without_the_optimizer_plot_import

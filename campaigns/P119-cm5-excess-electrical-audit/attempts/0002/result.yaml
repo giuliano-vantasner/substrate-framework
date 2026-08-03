@@ -1,0 +1,18 @@
+campaign: P119
+attempt: 0002
+candidate: A_literal_CM5_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py
+exit_status: 0
+source_sha256: 8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841
+source_git_blob: d142e9eb0066de22bafa278fd601c1b3e8c36b99
+terminal_tally: ALL 18 CHECKS PASS
+compatibility_preflight: >-
+  CM5 itself calls no numerical quadrature. The mutable seeding kernel uses
+  np.trapezoid. Three spark-geometry modules retain version-dispatch fallbacks
+  that prefer np.trapezoid and mention np.trapz only for older NumPy; no
+  compatibility abort occurred.
+scientific_effect: >-
+  Literal regression reproduced. Individual predicates remain unaudited and
+  the tally does not establish the electrical-channel headline.
+next_attempt: derive_exact_harmonic_geometry_seeding_and_physical_closure_ledgers

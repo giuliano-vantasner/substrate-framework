@@ -1,0 +1,32 @@
+campaign: P119
+source_unit: CM5
+contract:
+  proposal_sha256: 7dfce14aca38eeafcd4c73675cca70268ee76177c519a09a6efc51560c872f13
+  frozen_proposal_sha256: 7dfce14aca38eeafcd4c73675cca70268ee76177c519a09a6efc51560c872f13
+source:
+  cm5_sha256: 8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841
+  medium_omega0_sha256: 09d45f212bb28f124b05f99f9cb57acef7b815a1b4e99cfaa3e98bfc35f3f477
+  seeding_kernel_sha256: 88e802df9347135a7d47d46dced9eca917de350797fa9bae70165ea26354aba6
+  isotropic_coherence_sha256: fab8c407edccb0bdc56b754ce96a9045e4c488aea2e67f9a2dabc44272541d8d
+verification:
+  primary:
+    path: campaigns/P119-cm5-excess-electrical-audit/verify.py
+    sha256: 08eee507fd87a59997af7ca2053a982bc3a3736275b259df877c21624c2127da
+    tally: 66
+  independent:
+    path: campaigns/P119-cm5-excess-electrical-audit/reviews/independent_electrical_review.py
+    sha256: 3c83a51798e0983a04a6bd8682e7fcb26f9698d4c6a5325724781ce0437bc01b
+    tally: 34
+existing_implementation:
+  modules:
+    - src/substrate_framework/tt_angular.py
+    - src/substrate_framework/coherence_gates.py
+    - src/substrate_framework/dimensional_sine_gordon.py
+    - src/substrate_framework/composite_factors.py
+    - src/substrate_framework/paired_resolvent.py
+  governing_claims: [C-GW-001, C-COH-001, C-SG-017, C-CMP-001, C-RES-001]
+  changed: false
+new_package_API: none
+oracle: exact_harmonic_calculus_dimensions_phase_arrays_input_countermodels_and_fresh_rederivation
+sampled_integration: none
+numpy_compatibility_event: mutable_engineering_scripts_completed_on_np_trapezoid

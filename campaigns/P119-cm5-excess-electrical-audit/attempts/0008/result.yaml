@@ -1,0 +1,14 @@
+campaign: P119
+attempt: 0008
+candidate: H_independent_registry_ceiling_review
+status: failed
+command: PYTHONPATH=src .venv/bin/python campaigns/P119-cm5-excess-electrical-audit/reviews/independent_electrical_review.py
+exit_status: 1
+failure: >-
+  The revised ceiling check still searched C-RES-001 for "physical channel";
+  the accepted statement instead says "transition rate" and "nuclear or
+  phonon channel".
+diagnosis: second_registry_prose_substring_mismatch
+scientific_effect: none
+checks_passed_before_failure: 32
+next_attempt: use_the_exact_C_RES_001_transition_rate_and_nuclear_or_phonon_channel_terms

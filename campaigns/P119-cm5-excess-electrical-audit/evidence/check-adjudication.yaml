@@ -1,0 +1,26 @@
+campaign: P119
+source_unit: CM5
+static_predicate_count: 18
+predicates:
+  - {index: 1, label: shared_omega_numeric_map, verdict: exact_numeric_regression_with_rejected_shared_channel_semantics, reason: The value matches C-SG-017 at the selected w and omega_0, but value equality does not establish shared provenance or coupling.}
+  - {index: 2, label: twice_frequency_selected_value, verdict: exact_numeric_regression_with_rejected_radiating_line_semantics, reason: Twice the selected frequency is sqrt(2), but no EM spectral line or radiator is derived.}
+  - {index: 3, label: static_third_derivative_zero, verdict: exact_calculus_with_rejected_radiation_semantics, reason: The derivative identity survives; the implication that the constant is a physical radiator with zero power does not follow without a radiation law.}
+  - {index: 4, label: modulation_third_derivative, verdict: exact_calculus, reason: The displayed unit cosine has third derivative 8*omega_b^3*sin(2*omega_b*t); nonzero derivative alone is not radiation.}
+  - {index: 5, label: static_zero_and_cycle_average, verdict: exact_conditional_average, reason: The average is 32*omega_b^6=(2*omega_b)^6/2, exposing the one-half absent from the later assembled expression.}
+  - {index: 6, label: selected_N_derivative, verdict: exact_for_invented_formula_only, reason: The point sign is globally true for the declared B, but B's N dependence and collective or heat interpretation are not derived.}
+  - {index: 7, label: selected_A2_derivative, verdict: exact_for_invented_formula_only, reason: The point sign is globally true under held-fixed inputs, but no material loading or output map is supplied.}
+  - {index: 8, label: linear_N_power, verdict: exact_for_invented_formula_with_rejected_Dicke_semantics, reason: Squaring sqrt(N) gives N by construction; C-SPN-002 does not supply this amplitude or a rate.}
+  - {index: 9, label: selected_ring_square_values, verdict: self_asserted_geometry_regression, reason: The local helper is defined to square its clipped input and is not imported from spark_geometry or normalized as total power.}
+  - {index: 10, label: ring_growth_inequality, verdict: weak_nonspecific_regression, reason: The inequality also accepts every power above one, including N^(3/2), and does not identify a square law.}
+  - {index: 11, label: Phi_iso_literal_ordering, verdict: literal_assumption_only, reason: Values 1.0 and 0.1 are assigned locally; no points, angular integration, phase errors, uncertainty, or geometry consumer enters.}
+  - {index: 12, label: neutral_uncapped_repeat, verdict: tautological_same_call_regression, reason: The value is compared to the same function call and absence of a clamp neither normalizes power nor closes a physical channel.}
+  - {index: 13, label: chi_b_DC_threshold, verdict: finite_width_approximation_misreported_exact, reason: The imported Gaussian is strictly positive at finite tau; the less-than threshold proves only numerical suppression and would accept negative values.}
+  - {index: 14, label: chi_b_peak_threshold, verdict: selected_kernel_value_only, reason: The free-amplitude lobe exceeds 0.9 but no voltage spectrum, slew, coupling, work, or population is evaluated.}
+  - {index: 15, label: repeated_static_zero_guard, verdict: duplicate_exact_calculus, reason: This repeats predicate 3 and adds no radiation model.}
+  - {index: 16, label: fabricated_static_amplitude_guard, verdict: conditional_counterexample_only, reason: It rejects a raw static-amplitude formula under the assumed derivative functional but cannot select that functional as electromagnetism.}
+  - {index: 17, label: selected_shared_guard_pass, verdict: floating_value_equality_only, reason: Any independently constructed equal float passes, so identity, provenance, common observable, and shared coupling are untested.}
+  - {index: 18, label: selected_fake_frequency_rejection, verdict: weak_selected_counterexample, reason: Rejecting 0.9 only proves a tolerance comparison; it does not make the accepted equal value a shared physical channel.}
+summary:
+  exact_or_conditional_calculus_survivals: 8
+  regression_literal_tautological_approximate_or_rejected_semantics: 10
+  terminal_disposition: qualified

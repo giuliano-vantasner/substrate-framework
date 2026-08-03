@@ -1,0 +1,13 @@
+campaign: P119
+attempt: 0003
+candidate: H_dependency_and_consumer_inventory
+status: failed
+command: python_yaml_query_assuming_top_level_list
+exit_status: 1
+failure: >-
+  The query iterated the top-level mapping keys in migration/source-claims.yaml
+  and then indexed each string as a source-unit mapping.
+diagnosis: generated_queue_schema_assumption
+scientific_effect: none
+source_execution_before_failure: true
+next_attempt: inspect_the_generated_queue_top_level_keys_and_query_its_units_sequence

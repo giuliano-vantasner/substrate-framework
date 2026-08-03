@@ -1,0 +1,41 @@
+campaign: P119
+base_release: v0.97.0
+accepted_dependencies:
+  C-GW-001: >-
+    Supplies exact conditional STF third-derivative cycle-average algebra and
+    explicitly does not derive a physical radiation action, field equation,
+    flux, coupling, or channel.
+  C-COH-001: >-
+    Supplies iid fixed-per-source directional intensity from N through N^2 and
+    explicitly separates normalization, total energy, population, dynamics,
+    and material interpretation.
+  C-SG-017: >-
+    Supplies omega_b=omega*omega_0 only for the accepted dimensional
+    sine-Gordon breather under C-MED-003; it selects no material or EM channel.
+  C-CMP-001: >-
+    Supplies a strictly decreasing conditional common-loss composite and an
+    explicit non-rate, non-heat ceiling; it does not derive CM5's B amplitude.
+  C-RES-001: >-
+    Supplies the finite paired-resolvent loss element, which vanishes at both
+    loss endpoints, and explicitly supplies no physical channel or rate.
+qualified_or_duplicate_sources:
+  FS4: {disposition: duplicate_evidence, accepted_claims: [C-SG-009, C-MOM-002, C-GW-004]}
+  CM2: {disposition: qualified, accepted_claims: [C-CMP-001, C-RES-001, C-DYN-001]}
+  PN4: {disposition: qualified, accepted_claims: [C-RES-001]}
+noncanonical_imports:
+  engineering/medium_omega0.py: selected_numeric_map_regression_only
+  engineering/seeding_kernel.py: finite_Gaussian_and_declared_overlap_model_only
+  engineering/spark_geometry/isotropic_coherence.py: cited_geometry_model_not_imported_by_CM5
+dependency_cycles:
+  - CM1 lists CM5 while CM5 does not import CM1; the edge is phase-cluster replay provenance.
+  - CM6 scans CM5 text and depends on CM1, CM2, CM4, CM5, CM7, and PN4; its clean tally cannot validate the scanned physics.
+  - CM7 lists CM5 and CM6 while deriving an A-side crossover independent of CM5's electrical formula.
+  - CM3, GB6, and WN7 are indirect cycle or firewall descendants and grant no upstream authority.
+novelty_closure:
+  claims_proposed: []
+  governing_claims: [C-GW-001, C-COH-001, C-SG-017, C-CMP-001, C-RES-001]
+  note: >-
+    The exact positive harmonic and directional-array surfaces are already
+    governed. CM5's new links are undeclared physical premises or contradicted
+    support interpretations, not promotable theorems.
+debt: []

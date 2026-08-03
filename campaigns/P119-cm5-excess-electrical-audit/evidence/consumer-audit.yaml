@@ -1,0 +1,21 @@
+campaign: P119
+root_source_unit: CM5
+inventory: campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml
+authority_warning: Candidate dependency edges identify replay scope, not accepted scientific authority.
+direct_consumers:
+  - {source_unit: CM1, disposition_at_replay: qualified, path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py, sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc, checks: 13, relation: cycle_return}
+  - {source_unit: CM6, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py, sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5, checks: 20, relation: lexical_scan}
+  - {source_unit: CM7, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py, sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2, checks: 27, relation: cycle_listing}
+indirect_consumers:
+  - {source_unit: CM3, disposition_at_replay: qualified, path: merged-framework/bridges/phase-31/bridge_CM3_crossover.py, sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb, checks: 10, relation: cycle_descendant}
+  - {source_unit: GB6, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py, sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a, checks: 29, relation: firewall_descendant}
+  - {source_unit: WN7, disposition_at_replay: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py, sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50, checks: 59, relation: firewall_descendant}
+replay:
+  direct: {scripts: 3, checks: 60, exit_statuses_all_zero: true}
+  indirect: {scripts: 3, checks: 98, exit_statuses_all_zero: true}
+  total: {scripts: 6, checks: 158, exit_statuses_all_zero: true}
+interpretation: >-
+  CM1 and CM3 are qualified cycle nodes. CM6, CM7, GB6, and WN7 remain
+  pending. Clean execution promotes none of their narratives and creates no
+  new CM5 authority.
+debt: []

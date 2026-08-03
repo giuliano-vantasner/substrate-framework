@@ -10,7 +10,7 @@ tags:
 - electrical-channel
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P119 CM5 Excess Electrical Audit
 

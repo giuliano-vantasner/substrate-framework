@@ -1,0 +1,36 @@
+campaign: P119
+attempt: 0009
+candidate: integrated_terminal_gate
+status: completed
+commands:
+  - scripts/validate.sh
+  - git diff --check
+  - git -C /home/dan/substrate diff --check
+already_closed_targeted_routes:
+  source: ALL 18 CHECKS PASS
+  primary: ALL 66 CHECKS PASS
+  independent: ALL 34 CHECKS PASS
+  consumers: 6 scripts and 158 checks with zero exits
+expected_state:
+  accepted_claims: 132
+  pending_units: 101
+  qualified_units: 105
+  release: v0.97.0
+  campaign_debt: []
+note: >-
+  This record is finalized only after the integrated command exits cleanly.
+  Later edits to this result receive record-sensitive validation only; the
+  unchanged full suite is not rerun ceremonially.
+results:
+  scripts_validate_exit_status: 0
+  workflow: WORKFLOW VALID 132 claims 132 accepted 0 proposals
+  migration_queue: 218 units 101 pending 0 partial
+  memory_files_valid: 499
+  physics_skill_valid: true
+  pytest: 1075 passed in 94.05s
+  repository_workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+  framework_diff_check_exit_status: 0
+  source_overlay_diff_check_exit_status: 0
+scientific_verdict: >-
+  CM5 is terminally qualified through existing accepted claims with no new
+  claim, package API, or release. The campaign debt ledger is empty.

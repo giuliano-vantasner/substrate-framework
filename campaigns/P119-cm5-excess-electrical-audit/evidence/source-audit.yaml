@@ -1,0 +1,37 @@
+campaign: P119
+source_unit: CM5
+headline_verdict: qualified
+surviving_content:
+  - A time-independent additive offset disappears from every positive ordinary time derivative.
+  - For delta_mu=B*cos(2*omega_b*t), the exact third derivative is 8*B*omega_b^3*sin(2*omega_b*t).
+  - The exact squared cycle average is 32*B^2*omega_b^6=(2*omega_b)^6*B^2/2.
+  - Under the source's freely declared B=b0*sqrt(N)*exp(-C/(A2*Theta))*Gamma, the normalized derivative-square family is linear in N and increases with positive A2 and Gamma.
+  - C-SG-017 gives the conditional dimensional breather frequency omega_b=w*omega_0 under its accepted model.
+  - Aligned fixed-per-source phasors can give an N^2 directional-intensity endpoint.
+rejected_or_qualified_content:
+  - The source computes the one-half cycle-average factor but omits it from its assembled P_elec; a free proportionality constant can absorb the factor only by leaving absolute power unnormalized.
+  - A squared third derivative is not power without a source type, unitful coupling, field equation, retarded solution, radiation-zone limit, angular pattern, tensor convention, and normalization.
+  - Static cancellation is calculus and does not prove that the remaining modulation radiates electromagnetically or carries all physical output.
+  - B is invented rather than derived. Its Gamma factor grows without bound, unlike C-RES-001's paired element and C-CMP-001's strictly decreasing composite.
+  - Common symbols N, A2, Gamma, and omega_b do not establish a common state, amplitude, coupling, heat observable, or correlation.
+  - CM5 never imports or evaluates spark_geometry; it reasserts a focus helper and literal Phi_iso values.
+  - The cited geometry module calls focus higher local intensity at the same total power and explicitly warns not to multiply focal gain into its headline array factor.
+  - N^2 depends on phases and fixed per-source normalization. Phase cancellation, disorder, fixed-total normalization, finite aperture, and angular integration change the result.
+  - The imported finite Gaussian chi_b has chi_b(0)=2*A*exp(-(omega_b*tau)^2)>0 for every finite positive tau, not the exact zero claimed by CM5.
+  - CM5 calls chi_b only. It evaluates no V, dV/dt spectrum, seeded population, constitutive response, interaction, or source work.
+  - DC, ramp, sinusoidal, finite-window, and time-varying-medium inputs are distinct; finite records retain endpoints and zero coupling gives zero seeding at any slew.
+  - The shared-frequency guard compares floating values and cannot establish common provenance; an independently constructed equal value passes.
+  - A selected second-derivative functional, a third-derivative functional, and arbitrary unitful prefactors can all fit one comparator; the source does not select an EM radiator law.
+  - Finite bandwidth changes the monochromatic sixth-power average.
+exact_reproduced_surface: >-
+  With Omega=2*omega_b and
+  B=b0*sqrt(N)*exp(-C/(A2*Theta))*Gamma, the normalized exact derivative-square
+  average is Omega^6*b0^2*N*Gamma^2*exp(-2*C/(A2*Theta))/2. This is conditional
+  algebra with a free amplitude and no radiation normalization.
+physical_ceiling: >-
+  No coherent-to-EM interaction, electric or magnetic multipole, antenna law,
+  radiation coupling, total power, detector response, dV/dt seeding mechanism,
+  shared heat channel, material signature, magnitude, yield, heat, or
+  observation follows.
+novelty_verdict: no_new_claim_or_package_API
+compatibility_event: mutable_engineering_np_trapezoid_completion_only

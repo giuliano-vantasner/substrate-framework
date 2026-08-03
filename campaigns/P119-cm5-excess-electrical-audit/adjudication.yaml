@@ -1,0 +1,57 @@
+campaign: P119
+title: CM5 harmonic electrical-output, geometry, and seeding audit
+source_baseline: substrate@6d1f4e0
+source_units: [CM5]
+base_release: v0.97.0
+release_after_adjudication: v0.97.0
+adjudicated_at: '2026-08-08T08:30:00Z'
+selected_candidates:
+  - {id: B, reason: Exact scalar and tensor harmonic calculus closes the factor phase static unit and bandwidth ledgers.}
+  - {id: C, reason: Competing derivative functionals and arbitrary couplings close the radiation-law ceiling.}
+  - {id: D, reason: Exact phasors normalization and local-focus conservation close the geometry ledger.}
+  - {id: E, reason: DC ramp finite-window constitutive and zero-coupling models close the seeding ledger.}
+  - {id: F, reason: Accepted claims fully govern every supportable source surface.}
+  - {id: G, reason: Zero-coupling arbitrary-prefactor phase bandwidth radiator and heat countermodels close semantic ceilings.}
+  - {id: H, reason: Fresh derivation and complete dependency predicate cycle import consumer and nonduplication audits close governance.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-GW-001, decision: unchanged_conditional_harmonic_average_and_nonradiation_ceiling}
+  - {id: C-COH-001, decision: unchanged_directional_phase_ensemble_and_normalization_ceiling}
+  - {id: C-SG-017, decision: unchanged_dimensional_breather_frequency_and_material_ceiling}
+  - {id: C-CMP-001, decision: unchanged_conditional_composite_and_nonrate_nonheat_ceiling}
+  - {id: C-RES-001, decision: unchanged_paired_loss_element_and_nonchannel_ceiling}
+evidence:
+  pre_source_patch_failure: attempts/0001/result.yaml
+  source_route: attempts/0002/result.yaml
+  queue_schema_failure: attempts/0003/result.yaml
+  compatibility_optional_dependency_failure: attempts/0004/result.yaml
+  primary_domain_failure: attempts/0005/result.yaml
+  independent_simplification_failure: attempts/0006/result.yaml
+  independent_registry_failures: [attempts/0007/result.yaml, attempts/0008/result.yaml]
+  primary_verifier: verify.py
+  independent_review: reviews/independent_electrical_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/CM5-qualified-review.md
+source_disposition:
+  CM5: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P119-cm5-excess-electrical-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P119-cm5-excess-electrical-audit/reviews/independent_electrical_review.py
+  - hash-pinned consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

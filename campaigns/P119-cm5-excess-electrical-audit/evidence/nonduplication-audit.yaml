@@ -1,0 +1,28 @@
+campaign: P119
+distinct_new_theorem: rejected
+exact_surface:
+  scalar_cycle_average: Omega^6*(A^2+D^2)/2
+  unit_twice_frequency_average: 32*omega_b^6
+  source_conditional_family: Omega^6*b0^2*N*Gamma^2*exp(-2*C/(A2*Theta))/2
+  directional_iid_intensity: I1*(N+N*(N-1)*V)
+  physical_frequency: omega_b=w*omega_0
+accepted_coverage:
+  C-GW-001: tensor_harmonic_third_derivative_average_and_nonradiation_ceiling
+  C-COH-001: directional_phase_ensemble_normalization_and_total_energy_ceiling
+  C-SG-017: dimensional_breather_frequency_and_material_selection_ceiling
+  C-CMP-001: common_loss_composition_and_nonrate_nonheat_ceiling
+  C-RES-001: paired_loss_element_and_nonchannel_ceiling
+audit_details:
+  - The scalar one-half and source factor mismatch are elementary audit corollaries of accepted harmonic calculus.
+  - The source B composition is a free declaration and conflicts with accepted loss limits; it is not a positive new theorem.
+  - Local focus versus integrated total and finite-width DC corrections qualify source interpretations rather than define a new framework object.
+  - The source has no distinct accepted consumer requiring a new API.
+promotion_decision: >-
+  The exact surviving content is already governed or elementary audit algebra.
+  The proposed electrical, focus, seeding, and heat links are missing premises,
+  not a dependency-closed positive object. A new identifier or API would
+  manufacture novelty around an unaccepted physical interpretation.
+registry_delta: none
+release_delta: none
+package_delta: none
+debt: []
