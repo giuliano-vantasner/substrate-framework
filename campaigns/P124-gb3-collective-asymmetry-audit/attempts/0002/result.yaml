@@ -1,0 +1,38 @@
+campaign: P124
+attempt: 0002
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P124-gb3-collective-asymmetry-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P124-gb3-collective-asymmetry-audit/proposal.yaml campaigns/P124-gb3-collective-asymmetry-audit/evidence/frozen-proposal.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  proposal_sha256: 496610e0a00e36ce7faaa6fc4a26a21db49a4674d21316825cfe4ea54f5159b9
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 97
+  memory_files: 510
+  pytest_tests: 1090
+  source_body_opened: false
+  debt: []
+results:
+  proposal_sha256: 496610e0a00e36ce7faaa6fc4a26a21db49a4674d21316825cfe4ea54f5159b9
+  proposal_memory: {valid: true}
+  manifest_copy: {identical: true}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 97}
+  memory: {files_valid: 510}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: 106.55}
+  diff_check: {exit_code: 0}
+  source_body_opened: false
+result: >-
+  P124's corrected proposal and immutable copy are byte-identical and valid,
+  the accepted repository is unchanged, and GB3 remained unopened through the
+  complete freeze boundary.
+compatibility_event: none
+next_attempt: >-
+  Commit the frozen P124 contract, then reproduce GB3 natively and inspect its
+  thirteen predicates under the preregistered phase and rate criteria.

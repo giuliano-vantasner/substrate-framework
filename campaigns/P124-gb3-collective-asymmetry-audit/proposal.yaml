@@ -1,0 +1,91 @@
+id: P124
+base_release: v0.98.0
+base_commit: c27879644e064f48a32c4614620ef1be71f8d66a
+scientific_base_commit: 1ec8b1db1da2846239fc8257a145dc8ed40d8d48
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GB3]
+question: >-
+  Reproduce and independently audit GB3's normalized ground-edge ladder
+  coefficient, squared-coefficient label, wavelength and spacing gate,
+  collective-exponent asymmetry, input provenance, dependencies, predicates,
+  consumers, and nonduplication; distinguish deterministic finite-array and
+  ensemble coherence from rates, and do not turn algebra or one wavelength
+  comparison into a physical soft/gamma transition, material enhancement,
+  yield, heat, or observation.
+invariants:
+  - >-
+    C-SPN-002 exactly governs normalized symmetric-spin rungs and arbitrary
+    complex site couplings. Its ground-edge squared coefficient is N*s^2 only
+    under the declared symmetric state and common operator scale, and is not a
+    rate.
+  - >-
+    For site phases phi_j, the normalized symmetric bright projection is
+    proportional to |sum_j exp(i*phi_j)|^2/N. Equal phases maximize it, while
+    unequal phases can partly or fully cancel it without eliminating the total
+    one-excitation norm.
+  - >-
+    A wavelength-to-nearest-spacing inequality is neither necessary nor
+    sufficient for phase alignment. The relevant deterministic quantities are
+    wavevector direction, every site position, array extent, and phase
+    differences modulo 2*pi.
+  - >-
+    A small-sample sufficient condition compares the full emitter-cloud
+    diameter with wavelength and requires an explicit approximation tolerance.
+    Extended phase-matched arrays can remain directional even when wavelength
+    is shorter than a nearest-neighbor spacing.
+  - >-
+    C-COH-001 separates fixed-per-source directional intensity N versus N^2
+    endpoints from fixed-total normalization and supplies no transition rate or
+    state-preparation theorem.
+  - >-
+    A physical rate additionally needs initial and final states, interaction
+    coupling, mode normalization, energy conservation, final-state measure or
+    spectral density, linewidth, decoherence, and regime validity. Setting any
+    load-bearing factor to zero leaves the spin algebra intact and kills a rate.
+  - >-
+    The gamma wavelength, emitter spacing, phonon coherence length, material,
+    and uncertainty are external inputs unless independently sourced and
+    accepted. Their numerical comparison cannot select a concept.
+  - >-
+    PN3 is qualified through C-SPN-002. Candidate dependency edges and green
+    consumer tallies grant no additional authority.
+  - >-
+    GB3's body, output, and predicate implementations remain unopened at
+    freeze. Queue metadata already exposed its coefficient, N label, wavelength
+    values, gate, channel assignments, dependency, and advertised result.
+allowed_imports:
+  - C-SPN-002 exact symmetric-spin and arbitrary complex coupling theorem with its physical-rate ceiling
+  - C-COH-001 exact fixed-normalization directional phasor theorem with its rate and dynamics ceiling
+  - PN3 only through its qualified disposition and C-SPN-002 mapping
+  - exact complex algebra finite sums trigonometric identities inequalities and countermodels
+  - GB3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce GB3 literally and classify every ladder wavelength gate asymmetry fake and tally predicate.
+  - id: B
+    description: Map the normalized ground-edge algebra exactly to C-SPN-002 and audit operator and state conventions.
+  - id: C
+    description: Derive deterministic two-emitter and finite-array bright factors from arbitrary complex site phases.
+  - id: D
+    description: Compare the deterministic result with C-COH-001 ensemble directional endpoints and normalization changes.
+  - id: E
+    description: Replace the spacing slogan by full-array phase-diameter conditions and phase-matched counterexamples.
+  - id: F
+    description: Audit photon wavelength spacing and phonon-coherence inputs with dimensions provenance and uncertainty.
+  - id: G
+    description: Construct zero-coupling zero-density off-resonance dephasing and directional-versus-total countermodels.
+  - id: H
+    description: Close PN3 dependencies every predicate consumers and nonduplication with a terminal source disposition.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure normalized state operator and observable conventions
+  - exact phase-factor structure sample extent direction wavelength and limiting behavior
+  - rate-premise completeness input provenance mutation sensitivity and countermodels
+  - parameter economy nonduplication and complete predicate dependency and consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  GB3's body and runtime output remain unopened until the proposal, immutable
+  copy, and memory contract pass validation. Queue metadata already exposes the
+  advertised coefficient and numerical wavelength comparison, so only
+  predicate-detail and source-output blinding remains.
+status: draft

@@ -1,0 +1,15 @@
+campaign: P124
+attempt: 0001
+status: failed
+candidates: [A, B, C, D, E, F, G, H]
+failure_class: provenance
+failed_surface: manually_expanded_framework_commit
+result: >-
+  The draft manifests contained a manually expanded base commit that did not
+  match git rev-parse and used an abbreviated scientific commit. The error was
+  caught before memory-contract creation, validation, source-body access, or
+  candidate selection.
+compatibility_event: none
+next_attempt: >-
+  Replace both manifests with the exact repository-resolved full commit IDs,
+  then instantiate and validate the complete pre-source contract.
