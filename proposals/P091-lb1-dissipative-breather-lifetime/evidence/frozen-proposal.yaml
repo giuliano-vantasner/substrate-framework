@@ -1,0 +1,27 @@
+campaign: P091
+frozen_before_source_opening: true
+proposal_path: proposals/P091-lb1-dissipative-breather-lifetime/proposal.yaml
+proposal_sha256: 9c5299c34c662998543608a953aa5d3e4f8968ecc1e771cb7c13328c480a4863
+memory_contract_path: memory/vantasner/proposals/P091-lb1-dissipative-breather-lifetime.md
+memory_contract_sha256: 910ba4905bcdf681d1e8762a5280f65137a35cefb196a842a95c1bc35d57b876
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate --base /home/dan/substrate-framework
+  /home/dan/substrate-framework/memory/vantasner/proposals/P091-lb1-dissipative-breather-lifetime.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: unopened
+queue_synopsis_disclosure: >-
+  Generated navigation metadata exposes the normalized linear-damping energy
+  balance, small-amplitude velocity-square average, tau=1/Gamma headline, and
+  existence of a full-amplitude form factor plus candidate dependency MC3.
+consumer_search_disclosure: >-
+  Filename and token searches expose later noncanonical g_window formulas,
+  overdamped cutoff language, and inserted A_DECOHERE/X_CRIT consumers. Their
+  implementations and LB1's body were not opened.
+comparators_blinded_at_freeze:
+  - LB1 source body, complete formulas, and all literal predicates
+  - full-amplitude form-factor values, samples, fits, thresholds, and output
+  - source numerical integration method, precision, meshes, tolerances, and mutations
+  - LB2, LB3, lifetime_kernel, nucleation, DBD, and C035 consumer implementations
+  - physical Gamma, density, collision, cross-section, frequency, and unit-map values

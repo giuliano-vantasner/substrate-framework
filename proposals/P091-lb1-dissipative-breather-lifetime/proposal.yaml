@@ -1,0 +1,68 @@
+id: P091
+base_release: v0.77.0
+base_commit: bb3ab57
+scientific_base_commit: f79909e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [LB1]
+question: >-
+  Determine whether LB1 derives an exact or controlled physical breather
+  lifetime under linear damping, or conflates the exact damped energy balance,
+  an undamped-family time average, a small-amplitude limit, and an inserted
+  medium loss rate; terminally adjudicate every subclaim and promote distinct
+  reusable content only.
+invariants:
+  - C-SG-001 and C-SG-002 supply the exact undamped normalized breather and energy, not an exact damped solution or medium lifetime.
+  - C-SG-003 fixes J=16*acos(omega), dE/dJ=omega, and E=16*sin(J/16) in the canonical 1/(2*pi) action convention.
+  - C-SG-012 gives the exact off-shell energy divergence; residual R=-Gamma*phi_t yields boundary flux minus Gamma times the velocity-squared integral.
+  - The undamped breather with fixed or slowly varying frequency is not an exact positive-Gamma solution; family tracking is an adiabatic approximation with explicit phase-average, radiation, deformation, boundary, and error terms.
+  - The undamped period average of integral(phi_t^2)dx is omega*J, so the exact family form factor is omega*J/E and approaches one only at the small-amplitude edge.
+  - Within the phase-averaged family reduction dJ/dt=-Gamma*J, but E(t)=16*sin((J0/16)*exp(-Gamma*t)); energy is not fully exponential away from small action.
+  - Energy, action, amplitude, and field-envelope e-fold times must be named separately.
+  - Gamma has inverse normalized-time units; physical collision, density, cross-section, material, or per-medium frequency maps require separate accepted premises.
+  - Pending MC3 and later LB units are unavailable as authority; C-PDE-011 contributes numerical machinery and standards only.
+allowed_imports:
+  - exact real, trigonometric, variational, action-angle, asymptotic, dimensional, and ODE algebra with explicit domains and conventions
+  - C-SG-001 and C-SG-002 only as the exact undamped normalized breather and energy
+  - C-SG-003 as the exact canonical action, energy-action map, and dE/dJ relation
+  - C-SG-012 as the exact stress-energy divergence and boundary-flux convention
+  - C-PDE-011 only for reusable damped finite-time solvers, energy ledgers, and numerical-evidence ceilings
+  - P002's independent field phase-space derivation as source-verified action normalization
+  - LB1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce LB1 literally and test whether it distinguishes exact balance, undamped averaging, adiabatic reduction, energy/action lifetimes, physical Gamma, dependencies, and consumers.
+  - id: B
+    description: Derive the exact damped sine-Gordon energy balance with explicit boundary flux, signs, Gamma units, and zero-damping limit.
+  - id: C
+    description: Derive the exact undamped period average of the velocity-squared integral from the canonical action and independently from the field.
+  - id: D
+    description: Derive the phase-averaged adiabatic action ODE, its exponential solution, and the corresponding nonlinear energy and frequency trajectories.
+  - id: E
+    description: Derive the full-amplitude kinetic-to-total-energy form factor, endpoint series, working-point value, and monotonicity.
+  - id: F
+    description: Validate or falsify adiabatic family tracking with damped-PDE mesh, timestep, domain, damping-rate, energy-ledger, and independent-method evidence.
+  - id: G
+    description: Separate action, energy, amplitude, and envelope e-fold conventions and solve their crossings without calling all of them 1/Gamma.
+  - id: H
+    description: Require an accepted normalized-to-physical damping map before inferring a material lifetime, density window, collision law, or engineering gate.
+  - id: I
+    description: Mutate Gamma, damping sign, kinetic normalization, form factor, frequency, phase average, lifetime observable, and source checks and require relevant verdicts to fail.
+  - id: J
+    description: Trace LB2/LB3 and engineering consumers and compare surviving content against C-SG-003, C-SG-012, C-PDE-011, and existing package APIs.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for equation, damping, boundary flux, action, physical units, and consumers
+  - exact residuals, action normalization, signs, domains, chain rules, form factor, limits, and lifetime conventions
+  - controlled adiabatic error, PDE solver success, energy ledger, mesh/timestep/domain/damping refinement, and method agreement
+  - mutation sensitivity to damping coefficient, sign, normalization, frequency, average, observable, and physical map
+  - parameter economy and nonduplication against accepted action, stress-energy, and numerical claims
+claims_proposed:
+  - C-SG-016
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. The generated synopsis and
+  consumer-name search expose the exact balance, small-amplitude tau=1/Gamma
+  headline, existence of a full-amplitude form factor, and later g_window
+  formula names, but the LB1 body, full formulas, checks, output, values, fits,
+  and consumer implementations remain closed until the freeze.
+status: draft
