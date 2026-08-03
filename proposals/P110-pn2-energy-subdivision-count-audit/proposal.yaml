@@ -1,0 +1,71 @@
+id: P110
+base_release: v0.92.0
+base_commit: a41cf600e4176ec205b148e4efa816d70335911f
+scientific_base_commit: 87c045aa6b966950b2f34fa555526994bc44cd49
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [PN2]
+question: >-
+  Derive and independently verify the exact quotient, remainder, unit,
+  interval, boundary, monotonicity, discontinuity, and input-sensitivity
+  structure of n=floor(Omega/omega) for declared positive commensurate
+  energies; then adjudicate PN2 without converting kinematic bookkeeping into
+  a quantum subdivision process, importing physical energy or phonon scales,
+  inheriting PN1's rejected process interpretation, or inferring a matrix
+  element, rate, resonance, branching, deposition, or material mechanism.
+invariants:
+  - Positive commensurate energies Omega and omega must be declared before their quotient can define an integer and same-unit remainder.
+  - Euclidean division gives n=floor(Omega/omega) and r=Omega-n*omega with 0<=r<omega; it is bookkeeping, not an existence, formation, exclusivity, stability, or transition theorem.
+  - For fixed positive Omega the quotient is nonincreasing in omega and discontinuous at exact divisors; the inverse interval for n>=1 is Omega/(n+1)<omega<=Omega/n.
+  - Decimal-prefix conversion and large integer construction must be exact; binary floating-point floor near a threshold can change the integer verdict.
+  - C-SG-019 supplies only a classical local Taylor coefficient with explicit normalization dependence and no quantum-process premise.
+  - FS4 is duplicate evidence for cancellation of time-independent offsets from already accepted derivative observables; it supplies no energy quantum, subdivision, phonon, transition, or rate.
+  - Named MeV, eV, meV, or literature values are external inputs or comparators and cannot select the structural theorem or become framework predictions.
+  - A kinematically allowed integer partition does not establish a nonzero matrix element, density of states, occupation, overlap, energy-momentum channel, resonance, linewidth, probability, rate, or material realization.
+allowed_imports:
+  - exact integer and rational arithmetic, order properties, floor, Euclidean division, and standard SI decimal-prefix definitions
+  - C-SG-019 only for PN1's accepted classical coefficient formula and its explicit quantum-process ceiling
+  - C-SG-009, C-MOM-002, and C-GW-004 only as the accepted duplicate ceiling of FS4's constant-offset derivative cancellation
+  - P090 only as governed historical nonduplication evidence that floor/remainder bookkeeping alone earned no distinct claim
+  - SymPy and Python exact integers or Fractions for exact quotient, remainder, intervals, limits, and boundary mutations
+  - PN2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - primary literature named by PN2 only after freeze and only to audit attribution or retraction context, never as a hidden derivation premise
+candidates:
+  - id: A
+    description: Reproduce PN2 literally and classify all quotient, unit, monotonicity, band, guard, PN1, FS4, literature, and physical-process predicates.
+  - id: B
+    description: Derive exact positive-energy Euclidean division and quotient-remainder uniqueness with all domains and units explicit.
+  - id: C
+    description: Audit exact decimal-prefix conversions and compare integer-safe construction with binary floating-point floor at threshold-adjacent inputs.
+  - id: D
+    description: Derive quotient plateaus, inverse omega intervals, exact boundary inclusions, monotonicity, and jump discontinuities.
+  - id: E
+    description: Propagate declared input intervals or uncertainties to the sharp attainable integer set rather than reporting a single fragile large count.
+  - id: F
+    description: Test composition with C-SG-019 and reject the inference from a formal classical coefficient to a one-to-many quantum transition.
+  - id: G
+    description: Test composition with FS4 and reject the inference from static derivative cancellation to an energy-subdivision or silent-transfer channel.
+  - id: H
+    description: Audit every named physical input and literature or retraction statement at its primary source without using it to select the theorem.
+  - id: I
+    description: Trace direct and indirect consumers and prevent narrative repetition from closing a missing matrix element, rate, or material map.
+  - id: J
+    description: Test nonduplication against P090 and existing exact APIs; promote no claim or module if only elementary conditional bookkeeping survives.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit positivity, commensurate units, exact representation, quotient, remainder, and boundary conventions
+  - exact agreement of Euclidean-division and independent interval-partition routes
+  - correct unit conversions, plateau intervals, discontinuities, large-integer handling, and threshold-adjacent mutations
+  - separation of declared inputs and literature comparators from framework-derived quantities
+  - explicit separation of kinematic arithmetic from quantum dynamics, rates, and materials
+  - assumption and parameter economy, nonduplication, and complete downstream consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  No source-body conclusion blinding remains. The generated queue exposes the
+  floor formula, quotient remainder, monotonicity claim, named MeV/meV sweep,
+  order-of-magnitude comparison, PN1 and FS4 compositions, and a literature
+  retraction narrative. P110 freezes exact domains, units, boundary intervals,
+  representation and uncertainty mutations, physical ceilings, candidates,
+  and selection criteria before executing PN2 or inspecting its fourteen
+  predicate implementations. Exposed numbers cannot select a candidate or
+  pass threshold.
+status: draft
