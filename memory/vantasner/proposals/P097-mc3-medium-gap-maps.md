@@ -10,7 +10,7 @@ tags:
 - migration-MC3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P097 MC3 Medium Gap Maps
 
@@ -35,10 +35,11 @@ dirty Phase 47/48 files remain excluded. MC3 is
 and git blob `8a6dc1e87bc2f46fe1ef6d56c2eb90afd2f363e4`.
 
 MC3's complete source body was already inspected during P096's required
-consumer audit. Fresh body or formula blinding is therefore impossible and is
-not claimed. MC3 has not been executed under P097, its imported predecessor
-self-tests have not been trusted, its primary literature has not been opened,
-and additional consumer outputs have not been inspected.
+consumer audit. Fresh body or formula blinding was therefore impossible and
+was not claimed. At the P097 freeze, MC3 had not been executed under P097,
+its imported predecessor self-tests had not been trusted, its primary
+literature had not been opened, and additional consumer outputs had not been
+inspected.
 
 Direct accepted sources are release `v0.82.0`, C-LAT-001, C-MED-003,
 C-SG-017, C-SG-018, and C-DIM-002 with their canonical modules and adjudicated
@@ -168,3 +169,21 @@ and consumers replay, primary and independent exact oracles are sensitive,
 every MC3 subclaim and external import is terminally adjudicated, generated
 state agrees, and the campaign debt ledger is empty. Otherwise the next
 materially distinct attempt remains active.
+
+## Final Adjudication
+
+P097 reproduced MC3's 29-check source tally, audited every predicate and named
+import, and promoted only the two positive conditional objects reserved at
+freeze. `C-LAT-002` gives the physical phase-chain action, equation, exact
+band, displacement lift, and fully qualified host-gap ratio.
+`C-MED-004` gives the mixed-coordinate sine-Gordon characteristic, explicit
+hyperbolic map, and one-parameter scale non-identifiability. The source's bare
+mass gap, exact isotope ratio, gas `sqrt(alpha)` frequency, host selection,
+and positive-gap-implies-breather readings remain excluded.
+
+The primary verifier passed 43 checks, the independent rederivation passed 28,
+the focused dependency replay passed 43 tests, and the integrated repository
+gate passed all 893 tests. Release `v0.83.0` pins 113 accepted claims; MC3 is
+qualified, generated documentation and memory agree, and the campaign debt
+ledger is empty. The immutable campaign is
+`campaigns/P097-mc3-medium-gap-maps/`.

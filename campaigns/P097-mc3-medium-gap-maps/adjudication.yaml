@@ -1,0 +1,56 @@
+campaign: P097
+title: MC3 physical phase-chain and mixed-coordinate gap audit
+source_baseline: substrate@6d1f4e0
+source_units: [MC3]
+base_release: v0.82.0
+release_after_adjudication: v0.83.0
+adjudicated_at: '2026-08-04T16:00:00Z'
+selected_candidates:
+  - {id: B, reason: Exact sitewise variation closes the physical phase-chain equation.}
+  - {id: C, reason: The displacement lift derives the missing phase inertia and coupling scale.}
+  - {id: D, reason: The general host ratio exposes every premise required for sqrt(2).}
+  - {id: E, reason: Curvature and phase-scale counterfamilies enforce the isotope ceiling.}
+  - {id: F, reason: Direct cross-derivative linearization closes the mixed characteristic.}
+  - {id: G, reason: The explicit light-cone map closes signs and scale identifiability.}
+  - {id: H, reason: Primary literature limits the optical interpretation to a conditional model.}
+  - {id: I, reason: Gap positivity is separated from nonlinear existence and host selection.}
+  - {id: J, reason: Separate APIs preserve accepted lattice and continuum invariants.}
+competing_candidates:
+  - {id: A, decision: reproduction_only}
+claims:
+  - {id: C-LAT-002, decision: accepted_symbolic_verified}
+  - {id: C-MED-004, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-LAT-001, decision: unchanged_normalized_lattice_and_continuum_ceiling}
+  - {id: C-MED-003, decision: unchanged_lab_coordinate_continuum_model}
+  - {id: C-SG-017, decision: unchanged_continuum_nonlinear_breather}
+  - {id: C-SG-018, decision: unchanged_lab_coordinate_linear_spectrum}
+  - {id: C-DIM-002, decision: unchanged_primitive_local_dimension_rule}
+evidence:
+  verifier: verify.py
+  source_route: attempts/0001/result.yaml
+  representation_failure: attempts/0002/result.yaml
+  exact_implementation: attempts/0003/result.yaml
+  integrated_gate: attempts/0006/result.yaml
+  independent_review: reviews/independent_medium_gap_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  imported_source_audit: evidence/imported-source-audit.yaml
+  literature_audit: evidence/literature-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  MC3: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC3_per_medium_omega0.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P097-mc3-medium-gap-maps/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+  - .venv/bin/python -m pytest -q tests/test_lattice_scalar.py tests/test_mixed_sine_gordon.py tests/test_dimensional_sine_gordon.py tests/test_sine_gordon.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

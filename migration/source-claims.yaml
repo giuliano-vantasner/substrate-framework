@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 124
-  qualified: 82
+  pending_adjudication: 123
+  qualified: 83
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5995,8 +5995,38 @@ units:
   dynamic_check_calls: 3
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LAT-001
+  - C-LAT-002
+  - C-MED-003
+  - C-SG-017
+  - C-SG-018
+  - C-MED-004
+  qualification: MC3's normalized continuum formulas and on-site cosine curvature are exact conditional
+    algebra, but its material maps are not accepted as written. For a dimensionless phase, the physical
+    inertia is I=m*b^2 after declaring q=b*u, so sqrt(V0/m) has speed rather than frequency units. The
+    general host ratio retains both curvatures, masses, and phase scales; sqrt(2) additionally requires
+    exact equal host curvature and phase scale plus doubled effective mass. The mixed equation has coefficient
+    dimension 1/(length*time), characteristic k*Omega=g, and a reciprocal coordinate-scale family; inverse-length
+    absorption is not a laboratory angular-frequency squared. Positive gap and a sub-gap input do not
+    prove a nonlinear discrete breather or material realization.
+  evidence:
+  - campaigns/P097-mc3-medium-gap-maps/reviews/source_adjudication.md
+  - campaigns/P097-mc3-medium-gap-maps/evidence/source-reproduction.yaml
+  - campaigns/P097-mc3-medium-gap-maps/evidence/source-audit.yaml
+  - campaigns/P097-mc3-medium-gap-maps/evidence/imported-source-audit.yaml
+  - campaigns/P097-mc3-medium-gap-maps/evidence/literature-audit.yaml
+  - campaigns/P097-mc3-medium-gap-maps/evidence/check-adjudication.yaml
+  - campaigns/P097-mc3-medium-gap-maps/evidence/consumer-audit.yaml
+  - campaigns/P097-mc3-medium-gap-maps/evidence/candidate-comparison.yaml
+  - campaigns/P097-mc3-medium-gap-maps/verify.py
+  - campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+  - memory/vantasner/decisions/C-LAT-002-review.md
+  - memory/vantasner/decisions/C-MED-004-review.md
+  note: P097 promotes only the conditional physical phase-chain spectrum and host-ratio ledger plus the
+    conditional mixed-coordinate equation and scale-identifiability ceiling. Exact work uses no NumPy
+    quadrature alias; external seeding_kernel.py remains quarantined for its own np.trapz migration.
 - source_unit: MC4
   phase: phase-27
   path: merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py

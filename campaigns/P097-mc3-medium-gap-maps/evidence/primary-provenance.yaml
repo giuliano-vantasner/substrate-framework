@@ -1,0 +1,28 @@
+campaign: P097
+base_release: v0.82.0
+preregistration_commit: 75c50f4
+primary_verifier:
+  path: campaigns/P097-mc3-medium-gap-maps/verify.py
+  sha256: 44ee263a5f8b804b0c1c37eeb99764927737cd09ddf6416908f8a8766552e477
+  terminal_tally: ALL 43 CHECKS PASS [P097]
+independent_review:
+  path: campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+  sha256: ed17270f810e1e6cc146d3008e7e400f04ba8e6d7f55e74391c1da34ba6ebe85
+  terminal_tally: ALL 28 CHECKS PASS [P097-INDEPENDENT]
+canonical_modules:
+  lattice:
+    path: src/substrate_framework/lattice_scalar.py
+    sha256: dca3575b3d8fb065c713dbd79307981549e98bde431058d8539e631977d79248
+  mixed_coordinate:
+    path: src/substrate_framework/mixed_sine_gordon.py
+    sha256: 359c3ad26af222ad53ba4bd9f0c5c588f5a0eb73770cc1dd2c4efb352f9a49b6
+focused_tests:
+  lattice:
+    path: tests/test_lattice_scalar.py
+    sha256: f0131d4a8741b6d4a7cb13c59bf54a4681e6769fd61be40a5a3a78e8b412e732
+  mixed_coordinate:
+    path: tests/test_mixed_sine_gordon.py
+    sha256: 9e31b2dc7453c1db37ca48e3fb59cfde5b5a31334d43c6ae35a3d97a5f6e5033
+  result: 43 passed
+oracle: exact SymPy variation, Fourier algebra, dimensions, coordinate transformations, rank/nullspace, limits, counterfamilies, and mutation-sensitive predicates
+quadrature_note: Exact P097 work uses no NumPy quadrature alias.

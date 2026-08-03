@@ -1,0 +1,53 @@
+campaign: P097
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+imports:
+  rung165:
+    path: pulson-backreaction-bridge/sympy/rungs/rung165_c030_isotope_shift_prediction.py
+    sha256: 0a825e893439a87c143fb73524624ab523ff6467acd205698d8ce8456ca9909b
+    lines_reviewed: 217
+    actual_inputs:
+      - a predecessor forward model imported by path and accepted when its local PASS list has length twelve
+      - a fitted or recovered H-host comparator hbar*omega=0.187 eV
+      - exact sqrt(2) imposed as a pure-H harmonic-mass premise
+      - hard-coded conversion constants and a seeded 300-trial synthetic curve-fit comparison
+    disposition: noncanonical_empirical_and_synthetic_evidence
+    finding: >-
+      The script can illustrate consequences of a supplied harmonic isotope
+      premise, but it does not derive a physical phase inertia, prove that the
+      0.187 eV feature is a hydrogenic collective mode, or confront an H/D
+      material data set. Its own status is UNCONFRONTED-MODEL-ONLY.
+  rung176:
+    path: pulson-backreaction-bridge/sympy/rungs/rung176_c035_gas_type_collisional_rate.py
+    sha256: 54c9c63a91a63bdab93d5c297db0c0c7052de8925fbc7c36a592c244fd4537ee
+    lines_reviewed: 436
+    actual_inputs:
+      - the declared collisional rate Gamma=n*sigma*v_bar
+      - an assumed gas-independent formation time
+      - illustrative H2 pressure, recovery, Paschen, duty, and nuclear-yield constants
+      - a hand-entered gas registry of molecular masses, relative cross sections, and Paschen parameters
+    disposition: noncanonical_conditional_engineering_model
+    finding: >-
+      The exact algebraic scaling n_star proportional to sqrt(m)/sigma follows
+      inside the declared rate model. The script does not derive the reference
+      pressure, formation time, cross sections, breather channel, or a
+      self-induced-transparency spectral gap; it labels its scales
+      ILLUSTRATIVE and the real-data fit OWED.
+  ME3:
+    path: merged-framework/bridges/phase-20/bridge_ME3_lattice_continuum.py
+    sha256: 8b5f888708b2edc202cb1acba37780aa62e7d71d002dc5042fd92e8afefbb0d0
+    lines_reviewed: 297
+    actual_inputs:
+      - a normalized one-dimensional periodic scalar Frenkel-Kontorova chain
+      - symbolic spacing a and normalized on-site mass coefficient
+    disposition: already_qualified_as_C-LAT-001_evidence
+    finding: >-
+      Its centered-stencil expansion and exact lattice dispersion are already
+      governed by C-LAT-001. It explicitly leaves the spacing undetermined and
+      does not derive a hydrogen or nickel medium, a physical phase inertia,
+      an isotope law, or existence of a nonlinear discrete breather.
+verdict: >-
+  The three green imported scripts are provenance evidence only. None closes
+  MC3's missing displacement scale, effective-inertia assumptions,
+  mixed-coordinate coefficient, laboratory frequency map, material
+  realization, or nonlinear-existence theorem.
+debt: []

@@ -1,0 +1,131 @@
+campaign: P097
+source_unit: MC3
+source_sha256: 74fbddc086781a0d61d5dd22effabf48d7ff37f47c6d97ebde0b2fb6186464a5
+terminal_tally: ALL 29 CHECKS PASS
+review_rule: >-
+  Every predicate is classified against its actual coordinate, dimensions,
+  imported premises, and solution class. Algebra inside a malformed units map,
+  a predecessor PASS count, a string guard, or a necessary gap condition does
+  not validate the headline material or nonlinear-existence claim.
+checks:
+  - id: 1
+    decision: duplicate_accepted_continuum_dispersion
+    predicate: physical continuum dispersion
+    reason: Already governed by C-SG-018 and independently replayed here only as a dependency.
+  - id: 2
+    decision: duplicate_accepted_continuum_gap
+    predicate: omega_0=c/ell
+    reason: Already governed by C-MED-003 and C-SG-018.
+  - id: 3
+    decision: duplicate_normalized_reduction
+    predicate: c=ell=1 gives omega squared=1+k squared
+    reason: This is the normalized specialization of checks 1 and 2.
+  - id: 4
+    decision: duplicate_breather_kinematics_qualified_energy_units
+    predicate: omega_b=omega_0*w, eta squared=1-w squared, and E=16*eta
+    reason: C-SG-017 governs the frequency and normalized energy; physical energy requires its accepted scale factor.
+  - id: 5
+    decision: accepted_conditional_curvature
+    predicate: V0*(1-cos u) has curvature V0 at u=0
+    reason: Exact differentiation confirms the phase-coordinate energy curvature.
+  - id: 6
+    decision: refuted_bare_mass_gap
+    predicate: sqrt(V0/m_eff) is an angular frequency
+    reason: For dimensionless u and energy V0 this has speed units; q=b*u instead gives I=m_eff*b^2 and sqrt(V0/I).
+  - id: 7
+    decision: refuted_dimensionally_incomplete_eom
+    predicate: cos(sqrt(V0/m_eff)*t) solves the physical small-oscillation equation
+    reason: The symbolic expression is algebraically self-consistent but dimensionally incomplete for a bare mass and physical time.
+  - id: 8
+    decision: qualified_general_ratio
+    predicate: the host ratio is sqrt(m_D/m_H)
+    reason: The exact ratio also retains both host curvatures and phase scales; the displayed reduction requires both to be equal.
+  - id: 9
+    decision: accepted_only_under_explicit_exact_premises
+    predicate: the isotope ratio is exactly sqrt(2)
+    reason: It follows only from identical V0, identical b, and exact doubled effective inertia or mass.
+  - id: 10
+    decision: comparator_only
+    predicate: tabulated atomic masses give a number near sqrt(2)
+    reason: Atomic masses neither establish a collective loaded inertia nor convert an approximate ratio into an identity.
+  - id: 11
+    decision: qualified_counterexample_too_narrow
+    predicate: equal masses imply no isotope shift
+    reason: Equal masses give ratio one only when host curvature and phase scale are also equal.
+  - id: 12
+    decision: nonprobative_import_tally
+    predicate: rung165 has at least twelve local passes
+    reason: The count does not audit its fitted 0.187 eV input, synthetic trials, or UNCONFRONTED status.
+  - id: 13
+    decision: duplicate_shared_assumption
+    predicate: rung165's numerical ratio agrees with sqrt(2)
+    reason: Both routes impose the same harmonic mass premise, so agreement is not independent evidence.
+  - id: 14
+    decision: nonprobative_import_tally
+    predicate: ME3 has at least four local passes
+    reason: C-LAT-001 already qualifies its normalized lattice theorem and explicitly derives no material or nonlinear discrete breather.
+  - id: 15
+    decision: split_subgap_necessity_from_existence
+    predicate: w*omega_0 is below omega_0 and therefore is a discrete breather
+    reason: The inequality is exact for 0<w<1; existence of a localized nonlinear lattice solution is not tested.
+  - id: 16
+    decision: accepted_static_identity_not_cited_equation
+    predicate: 4*atan(exp z) satisfies the normalized static kink equation
+    reason: Exact algebra confirms the kink, but the predicate never evaluates theta_z_tau=g*sin(theta) or a Maxwell-Bloch reduction.
+  - id: 17
+    decision: refuted_units_and_characteristic
+    predicate: omega_0_gas squared equals alpha and scales with N
+    reason: Alpha is inverse length, g is inverse length-time, and a laboratory omega squared is inverse time squared; the mixed plane-wave law is k*Omega=g.
+  - id: 18
+    decision: refuted_derivative_of_malformed_map
+    predicate: doubling dipole doubles omega_0_gas
+    reason: This follows only after the dimensionally invalid alpha-to-frequency identification.
+  - id: 19
+    decision: nonprobative_import_tally
+    predicate: rung176 has at least eleven local passes
+    reason: The illustrative engineering model labels its scales illustrative and real-data fit owed.
+  - id: 20
+    decision: qualified_imported_window_not_gap
+    predicate: D2 has a near-sqrt2 higher collisional density window
+    reason: It is conditional on equal cross sections and gas-independent formation time and does not establish a SIT spectral gap.
+  - id: 21
+    decision: literal_only
+    predicate: the H2 operating point equals 0.05 bar
+    reason: The code compares a literal assignment to the same literal and supplies no measurement or derivation.
+  - id: 22
+    decision: string_hygiene_only
+    predicate: the two-channel deliverable contains expected substrings
+    reason: Dictionary keys and strings do not validate either physical map.
+  - id: 23
+    decision: accepted_linear_gap_limit_qualified_existence
+    predicate: V0 tending to zero closes the lattice gap and removes a breather
+    reason: Gap closure is exact at fixed I; absence or existence of every nonlinear solution is not proved by the limit.
+  - id: 24
+    decision: refuted_gas_gap_interpretation
+    predicate: N tending to zero closes omega_0_gas
+    reason: It is a limit of the malformed alpha-to-frequency definition, not a laboratory spectral theorem.
+  - id: 25
+    decision: rejected_sufficiency_predicate
+    predicate: a positive gap that closes with V0 hosts a breather
+    reason: The helper encodes only positivity and one limit, neither localization nor nonlinear existence.
+  - id: 26
+    decision: accepted_narrow_fake_rejection
+    predicate: a constant seven fails the chosen gap-closing condition
+    reason: This rejects one fabricated formula but does not make the condition sufficient for a physical gap or breather.
+  - id: 27
+    decision: conditional_dimensionless_ratio
+    predicate: sqrt(2) is dimensionless
+    reason: True under check 9's exact premises; dimensionality alone supplies none of them.
+  - id: 28
+    decision: refuted_lexical_scale_guard
+    predicate: no symbol named a means no scale is missing
+    reason: The load-bearing phase scale b is absent, and symbol-name absence is not a Buckingham or identifiability proof.
+  - id: 29
+    decision: narrative_hygiene_only
+    predicate: a string records a later external observation
+    reason: The string neither proves scale rank nor supplies the observation or a governed consumer.
+summary:
+  accepted_or_duplicate: [1, 2, 3, 5, 9, 16, 26]
+  qualified_or_split: [4, 8, 11, 15, 20, 23, 27]
+  rejected_or_nonprobative: [6, 7, 10, 12, 13, 14, 17, 18, 19, 21, 22, 24, 25, 28, 29]
+  debt: []

@@ -1,0 +1,33 @@
+campaign: P097
+attempt: 1
+route: unchanged_MC3_source_reproduction_and_initial_audit
+status: source_reproduced_claim_requires_dimensional_and_import_completion
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC3_per_medium_omega0.py
+  sha256: 74fbddc086781a0d61d5dd22effabf48d7ff37f47c6d97ebde0b2fb6186464a5
+  blob: 8a6dc1e87bc2f46fe1ef6d56c2eb90afd2f363e4
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC3_per_medium_omega0.py
+process_exit_status: 0
+terminal_tally: ALL 29 CHECKS PASS
+elapsed_seconds: 1.99
+maximum_resident_kib: 118544
+execution_effects:
+  - dynamically imports and executes rung165
+  - dynamically imports and executes ME3
+  - dynamically imports and executes rung176
+findings:
+  - The first four continuum identities reproduce accepted C-MED-003, C-SG-017, and C-SG-018 results.
+  - For dimensionless u and energy V0, sqrt(V0/m_eff) has speed rather than inverse-time units when m_eff is a mass; a displacement scale b is missing and the physical phase inertia is m_eff*b^2.
+  - The sqrt(2) isotope ratio is exact only under exact same-potential, same-coordinate-scale, and doubled-effective-inertia premises, not from isotope names or Born-Oppenheimer wording alone.
+  - The real-mass comparison is a numerical comparator and does not establish the loaded effective mass or exact ratio.
+  - A sub-gap input inequality is not a discrete-breather existence theorem.
+  - The gas check validates a normalized static kink rather than the cited mixed Maxwell-Bloch area equation.
+  - The declared absorption alpha has inverse-length units, so assigning omega_0_gas squared equal to alpha is dimensionally incomplete.
+  - Imported green check counts, a literal 0.05 operating point, string deliverables, and lexical symbol absence are not independent material or scale oracles.
+next_routes:
+  - derive the dimension-complete physical phase-chain action and isotope ledger
+  - derive the mixed-coordinate plane-wave and scale-identifiability ledger
+  - audit hash-pinned imported modules and primary McCall-Hahn equations
+debt: []

@@ -1,0 +1,28 @@
+campaign: P097
+attempt: 6
+route: integrated_repository_promotion_gate
+status: passed
+commands:
+  targeted_primary: >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P097-mc3-medium-gap-maps/verify.py
+  targeted_independent: >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+  integrated: scripts/validate.sh
+results:
+  primary_verifier: ALL 43 CHECKS PASS [P097]
+  independent_review: ALL 28 CHECKS PASS [P097-INDEPENDENT]
+  focused_dependency_replay: 43 passed
+  adjacent_dependency_replay: 114 passed
+  integrated_pytest: 893 passed in 93.47s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+scope_note: >-
+  The integrated gate ran once at the completed scientific promotion boundary.
+  Subsequent edits only reconcile archived paths, durable memory, this attempt
+  record, and the already-correct memory-CLI instruction; record-sensitive
+  checks replace a duplicate full-suite run.
+quadrature_note: >-
+  Exact P097 code has no NumPy dependency or integration alias. Pending
+  numerical consumers must use substrate_framework.numerics.trapezoid_integral.
+debt: []

@@ -327,6 +327,15 @@ Let N>=2, L>0, a=L/N, and let dimensionless real fields phi_j(t) live on a one-d
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-001, C-VAR-001
 
+## C-LAT-002
+
+Let N>=2 and let dimensionless real phases u_j(t) live on a one-dimensional periodic nearest-neighbour chain with exact positive physical phase inertia I, coupling energy K, on-site energy V0, and spacing a. The per-site-energy Lagrangian sum_j[I*dot(u_j)^2/2-K*(u_(j+1)-u_j)^2/2 -V0*(1-cos(u_j))] has exact site equation I*ddot(u_j)-K*(u_(j+1)-2*u_j+u_(j-1))+V0*sin(u_j)=0. Linearization about a vacuum has first-zone dispersion Omega^2=(V0+4*K*sin(k*a/2)^2)/I, gap sqrt(V0/I), zone-edge frequency sqrt((V0+4*K)/I), and long-wave speed a*sqrt(K/I). Under base rows (mass,length,time), the columns (I,K,V0,a,m,b) are (1,2,0), (1,2,-2), (1,2,-2), (0,1,0), (1,0,0), and (0,1,0). If a physical displacement is declared by q=b*u, then I=m*b^2; if its neighbour stiffness is kappa, then K=kappa*b^2. Thus sqrt(V0/m) has speed rather than frequency units when m is a bare mass. For two declared hosts A and B, Omega_A(0)/Omega_B(0)=sqrt(V_A*I_B/(I_A*V_B)), or after displacement lifts sqrt(V_A*m_B*b_B^2/(V_B*m_A*b_A^2)). The H-over-D value sqrt(2) follows only if V_D=V_H, b_D=b_H, and m_D=2*m_H exactly; changing either curvature or phase scale can remove that shift. At fixed I, V0->0+ closes the linear gap. These exact conditional results derive no lattice or material realization, coefficient value, collective effective mass, exact isotope prediction, nonlinear discrete-breather existence, lifetime, radiation, or absolute frequency.
+
+- Accepted in: `v0.83.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-LAT-001, C-DIM-002
+
 ## C-LIE-001
 
 For the eight explicit standard fundamental SU(3) generators T_a=lambda_a/2, each generator is Hermitian and traceless and Tr(T_a*T_b)=(1/2)*delta_ab. With [T_a,T_b]=i*f_abc*T_c and f_abc=-2*i*Tr([T_a,T_b]*T_c), the structure constants are totally antisymmetric. The exact representation invariants are T_F=1/2, C_F=4/3 from sum_a T_a^2=(4/3)I_3, and C_A=3 from both sum_a F_a^2=3I_8 for (F_a)_bc=-i*f_abc and sum_cd f_acd*f_bcd=3*delta_ab. These are convention-specific algebraic facts and establish no physical gauge-sector identification.
@@ -389,6 +398,15 @@ Conditional on a dimensionless real field u, physical coordinates x and t, exact
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-VAR-001, C-DIM-002
+
+## C-MED-004
+
+Conditional on a dimensionless real field theta, a physical length coordinate z, a physical time coordinate tau, and an exact positive coefficient g with dimensions 1/(length*time), the mixed-coordinate equation theta_z_tau=g*sin(theta) linearizes at a vacuum to theta_z_tau=g*theta. A plane wave exp(i*(k*z-Omega*tau)) therefore has characteristic k*Omega=g; for positive k its branch Omega=g/k has phase velocity g/k^2, group velocity -g/k^2, tends to infinity as k->0+, and tends to zero as k->infinity, so it has no finite k-independent laboratory angular-frequency floor. With xi=z/L and eta=tau/T, the normalized coefficient is g*L*T. Imposing g*L*T=1 leaves the exact positive family T=1/(g*L) for arbitrary L; its logarithmic scale Jacobian with respect to (L,T) is [1,1], with reciprocal null direction (-1,1). The map X=xi+eta and S=xi-eta sends the equation exactly to theta_SS-theta_XX+sin(theta)=0. Under rows (length,time), the columns (g,alpha,rate,Omega_squared) are (-1,-1), (-1,0), (0,-1), and (0,-2): an inverse-length absorption alpha is neither g nor a laboratory frequency squared and requires a separately supplied inverse-time rate and dimensionless prefactor even to form g. The normalized static kink is a coordinate-map cross-check only. These exact conditional results derive no Maxwell-Bloch reduction, self-induced-transparency regime, optical coefficient, gas or isotope map, material, nonlinear pulse existence, laboratory gap, damping, or absolute scale.
+
+- Accepted in: `v0.83.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-001, C-DIM-002
 
 ## C-MIX-001
 

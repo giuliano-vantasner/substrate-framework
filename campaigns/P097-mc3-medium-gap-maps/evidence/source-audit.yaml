@@ -1,0 +1,20 @@
+campaign: P097
+source_unit: MC3
+source_sha256: 74fbddc086781a0d61d5dd22effabf48d7ff37f47c6d97ebde0b2fb6186464a5
+execution_model: exact_symbolic_fragments_plus_dynamic_import_counts_float_comparators_and_literal_guards
+primary_structural_defects:
+  - The source treats u as a dimensionless phase and V0 as an energy but divides V0 by a bare mass; sqrt(V0/m_eff) then has speed units, not angular-frequency units.
+  - A physical displacement q=b*u gives phase inertia I=m_eff*b^2 and gap sqrt(V0/I); the omitted b is load bearing and defeats the lexical no-a scale guard.
+  - The exact isotope ratio retains both host curvatures and effective inertias; sqrt(2) additionally assumes identical potential and phase scale and an exact doubled effective inertia.
+  - Atomic H and D mass examples neither equal an exact factor two nor establish loaded collective effective masses in a nickel host.
+  - The source checks only that imported predecessor PASS lengths exceed thresholds and does not audit their equations, inputs, comparator provenance, or accepted status.
+  - ME3 supplies a normalized conditional lattice theorem and explicitly derives no hydrogen medium, lattice existence, spacing, or nonlinear discrete breather.
+  - The sub-gap inequality is a necessary exterior-tail condition and does not prove an intrinsic localized mode exists in the proposed physical lattice.
+  - The self-induced-transparency predicate differentiates a normalized static kink and never evaluates the mixed theta_x_tau equation or derives it from Maxwell-Bloch variables.
+  - The declared alpha=N*d^2*omega21/(hbar*c*epsilon0) has inverse-length units, while a lab angular-frequency squared has inverse-time-squared units.
+  - Equating omega_0_gas squared with alpha therefore omits a time or velocity scale and the light-cone-to-laboratory coordinate map.
+  - The gas density and dipole scaling predicates are covariance of the inserted formula, not a derivation of its coefficient or host applicability.
+  - The 0.05 bar operating point is tested against the same literal, and the deliverable predicate searches strings in a locally constructed dictionary.
+  - Gap closing and positivity are necessary coefficient limits but not sufficient nonlinear-breather or material-host classifiers.
+  - Symbol absence and an external-observation sentence do not establish Buckingham rank, scale identifiability, or material provenance.
+audit_verdict: requires_physical_phase_inertia_mixed_coordinate_and_import_completion

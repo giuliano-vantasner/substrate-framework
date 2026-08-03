@@ -1,0 +1,44 @@
+campaign: P097
+question: >-
+  Do the cited McCall-Hahn primary records authorize MC3's physical retarded-time
+  equation and the identification omega_0_gas^2=alpha?
+primary_records:
+  - citation: S. L. McCall and E. L. Hahn, Phys. Rev. Lett. 18, 908-911 (1967)
+    doi: 10.1103/PhysRevLett.18.908
+    official_url: https://journals.aps.org/prl/issues/18/21
+    audited_scope: >-
+      The official issue record identifies the original pulsed coherent-light
+      self-induced-transparency paper. It is a source for the named optical
+      phenomenon, not an accepted framework coefficient map.
+  - citation: S. L. McCall and E. L. Hahn, Phys. Rev. 183, 457-485 (1969)
+    doi: 10.1103/PhysRev.183.457
+    official_url: https://link.aps.org/doi/10.1103/PhysRev.183.457
+    open_manuscript_url: https://escholarship.org/uc/item/9sr1d25d
+    audited_scope: >-
+      The primary record studies a resonant two-level absorber in the ideal
+      plane-wave, short-pulse, negligible-damping regime, with inhomogeneous
+      broadening and explicit later corrections. Its stable transparent pulse
+      is a conditional 2-pi sech-area solution. These assumptions do not
+      establish a universal gas or material frequency.
+independent_equation_audit:
+  mc3_equation: theta_z_tau=(alpha/2)*sin(theta)
+  declared_coordinates: z_is_length_and_tau_is_physical_retarded_time
+  left_hand_dimensions: inverse_length_time
+  mc3_alpha: N*d^2*omega21/(hbar*c*epsilon0)
+  alpha_dimensions: inverse_length
+  finding: >-
+    With the coordinates MC3 declares, alpha/2 alone cannot be the mixed
+    derivative coefficient. An inverse-time factor or an explicitly
+    normalized retarded-time coordinate is missing.
+  plane_wave_linearization: k*Omega=g_for_theta_z_tau=g_theta
+  consequence: >-
+    The mixed-coordinate characteristic is k*Omega=g, not
+    Omega^2=omega_0^2+c^2*k^2. It has no finite k-independent laboratory
+    angular-frequency floor.
+  coordinate_normalization: >-
+    For xi=z/L and eta=tau/T, the normalized coefficient is g*L*T.
+    Choosing g*L*T=1 leaves one free positive aspect scale. The subsequent
+    light-cone map X=xi+eta, S=xi-eta gives a normalized hyperbolic
+    sine-Gordon equation, but it does not select L, T, or a laboratory gap.
+verdict: cited_reduction_is_conditional_and_mc3_frequency_identification_is_not_authorized
+debt: []

@@ -1,0 +1,71 @@
+campaign: P097
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+consumers:
+  MC4:
+    sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+    status: pending_simulation_source
+    finding: >-
+      It simulates the accepted conditional continuum cosine equation using
+      exact-breather initial data and a gapless wave control. It supplies no
+      lattice-to-material map or discrete-breather theorem. Its local
+      trapezoidal fallback is version compatible but remains pending numeric
+      migration to the shared helper.
+  MD1:
+    sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+    status: pending_later_source
+    finding: >-
+      It consumes the continuum Klein-Gordon dispersion and adds a declared
+      isotropic three-dimensional measure, polarization count, cell volume,
+      and Debye cutoff. Neither P097 claim authorizes those premises.
+  medium_omega0:
+    sha256: 09d45f212bb28f124b05f99f9cb57acef7b815a1b4e99cfaa3e98bfc35f3f477
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It copies MC3's dimensionally incomplete sqrt(V0/m_eff), gas sqrt(alpha),
+      exact material isotope, and positive-gap-implies-breather rules. These
+      must be replaced by the phase-inertia and mixed-coordinate APIs before
+      any future promotion.
+  lifetime_kernel:
+    sha256: 51bd4f46593363ac37d99b4e95ca0bef1b572a3b075505968adf77404db4cac5
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It cites MC3 for a per-medium frequency and then applies separately
+      declared damping and thermal survival laws. P097 supplies neither the
+      material coefficients nor the lifetime law.
+  seeding_kernel:
+    sha256: 6e771b3bf20f6c9cc91b19987b28220b867540ed089a9df6a13ea94ac820bca5
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It imports MC3's material frequency premise into a spectral population
+      map, uses normalized energy in physical prose, and directly calls
+      np.trapz. Its eventual migration must use trapezoid_integral and derive
+      its population and material mappings independently.
+  commensurate:
+    sha256: 6f85aafcb330af6619aa0f98fed36212c573c0e9831ee76b7628143992eeff4f
+    status: noncanonical_engineering_consumer
+    finding: >-
+      It identifies a chosen SAW frequency and speed with continuum gap scales,
+      propagates MC3's exact isotope and gas maps, and labels twice the
+      breather frequency radiative. Those design identifications and radiation
+      conditions are outside P097.
+accepted_consumers:
+  - src/substrate_framework/lattice_scalar.py
+  - src/substrate_framework/mixed_sine_gordon.py
+  - src/substrate_framework/__init__.py
+  - tests/test_lattice_scalar.py
+  - tests/test_mixed_sine_gordon.py
+  - campaigns/P097-mc3-medium-gap-maps/verify.py
+  - campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+replayed_dependencies:
+  - tests/test_dimensional_sine_gordon.py
+  - tests/test_sine_gordon.py
+verdict: >-
+  The governed consumers close the two conditional mathematical claims. No
+  pending or engineering consumer derives a nickel, hydrogen, deuterium, gas,
+  self-induced-transparency, discrete-breather, lifetime, radiation,
+  population, or absolute-frequency conclusion.
+quadrature_note: >-
+  Exact P097 code uses no NumPy quadrature alias. The direct np.trapz calls in
+  immutable external seeding_kernel.py remain quarantined for its own future
+  migration; MC4 already uses a local version-compatible fallback.
+debt: []

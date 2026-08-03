@@ -1,0 +1,11 @@
+campaign: P097
+attempt: 5
+route: separate_claim_memory_validation_with_relative_paths
+status: command_path_resolution_failure_only
+result: >-
+  The memory CLI resolved repository-relative arguments against its configured
+  memory root and reported duplicated memory/memory paths. The files exist in
+  the framework repository; no content validator ran.
+classification: implementation_command_path_resolution
+next_route: validate_each_file_by_absolute_path_as_required_by_the_configured_cli
+debt: []

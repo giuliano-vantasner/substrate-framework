@@ -1,0 +1,18 @@
+campaign: P097
+attempt: 4
+route: targeted_promotion_replay
+status: command_invocation_failure_only
+successful_results:
+  repository_validation: WORKFLOW VALID 113 claims, 113 accepted, 0 proposals; 218 units, 123 pending, 0 partial
+  generated_docs: current
+  generated_memory: current
+  primary_verifier: ALL 43 CHECKS PASS [P097]
+  independent_review: ALL 28 CHECKS PASS [P097-INDEPENDENT]
+  focused_dependencies: 114 passed
+failure: >-
+  memory validate was supplied two positional file paths although the CLI
+  accepts one PATH per invocation. No memory file was rejected and no
+  scientific or governance check failed.
+classification: implementation_command_invocation
+next_route: validate_each_new_claim_review_in_a_separate_process
+debt: []

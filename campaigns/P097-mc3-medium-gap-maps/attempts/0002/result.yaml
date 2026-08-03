@@ -1,0 +1,18 @@
+campaign: P097
+attempt: 2
+route: initial_exact_module_and_focused_test_run
+status: failed_representation_oracle
+command: >-
+  .venv/bin/python -m pytest tests/test_lattice_scalar.py
+  tests/test_mixed_sine_gordon.py -q
+result: 42 passed, 1 failed
+failure: >-
+  SymPy trigsimp left the exact normalized kink residual in an unreduced
+  arctangent/exponential form. The failure is in the simplification
+  representation: all coefficient, variation, dispersion, dimension,
+  coordinate-map, and mutation-facing tests passed.
+classification: representation
+next_route: >-
+  Rewrite sin(4*atan(y)) through exact rational trigonometric expansion before
+  simplification, without changing the field, equation, sign, or tolerance.
+debt: []

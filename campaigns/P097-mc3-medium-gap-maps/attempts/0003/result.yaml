@@ -1,0 +1,28 @@
+campaign: P097
+attempt: 3
+route: exact_physical_phase_chain_and_mixed_coordinate_implementation
+status: passed
+canonical_surfaces:
+  - src/substrate_framework/lattice_scalar.py
+  - src/substrate_framework/mixed_sine_gordon.py
+focused_command: >-
+  .venv/bin/python -m pytest tests/test_lattice_scalar.py
+  tests/test_mixed_sine_gordon.py -q
+focused_result: 43 passed
+primary_verifier:
+  command: PYTHONPATH=src .venv/bin/python proposals/P097-mc3-medium-gap-maps/verify.py
+  result: ALL 43 CHECKS PASS [P097]
+independent_review:
+  command: >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+  result: ALL 28 CHECKS PASS [P097-INDEPENDENT]
+findings:
+  - The physical phase inertia is I=m*b^2 for q=b*u, and the exact lattice gap is sqrt(V0/I).
+  - The exact host ratio retains both curvatures, both masses, and both phase scales.
+  - Two preregistered counterfamilies remove the nominal sqrt(2) shift.
+  - The mixed-coordinate coefficient has dimensions 1/(length*time), and k*Omega=g is its linear characteristic.
+  - Fixing g leaves a reciprocal length/time normalization direction and no unique laboratory frequency floor.
+  - Positive curvature and gap closure do not establish a nonlinear discrete breather or a material realization.
+quadrature_note: Exact P097 code has no NumPy dependency or quadrature alias.
+debt: []

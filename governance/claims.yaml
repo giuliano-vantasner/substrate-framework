@@ -5004,3 +5004,117 @@ claims:
     accepted_in: v0.82.0
     challenges: []
     supersedes: []
+  - id: C-LAT-002
+    statement: >-
+      Let N>=2 and let dimensionless real phases u_j(t) live on a
+      one-dimensional periodic nearest-neighbour chain with exact positive
+      physical phase inertia I, coupling energy K, on-site energy V0, and
+      spacing a. The per-site-energy Lagrangian
+      sum_j[I*dot(u_j)^2/2-K*(u_(j+1)-u_j)^2/2
+      -V0*(1-cos(u_j))] has exact site equation
+      I*ddot(u_j)-K*(u_(j+1)-2*u_j+u_(j-1))+V0*sin(u_j)=0. Linearization about
+      a vacuum has first-zone dispersion
+      Omega^2=(V0+4*K*sin(k*a/2)^2)/I, gap sqrt(V0/I), zone-edge frequency
+      sqrt((V0+4*K)/I), and long-wave speed a*sqrt(K/I). Under base rows
+      (mass,length,time), the columns (I,K,V0,a,m,b) are (1,2,0), (1,2,-2),
+      (1,2,-2), (0,1,0), (1,0,0), and (0,1,0). If a physical displacement is
+      declared by q=b*u, then I=m*b^2; if its neighbour stiffness is kappa,
+      then K=kappa*b^2. Thus sqrt(V0/m) has speed rather than frequency units
+      when m is a bare mass. For two declared hosts A and B,
+      Omega_A(0)/Omega_B(0)=sqrt(V_A*I_B/(I_A*V_B)), or after displacement
+      lifts sqrt(V_A*m_B*b_B^2/(V_B*m_A*b_A^2)). The H-over-D value sqrt(2)
+      follows only if V_D=V_H, b_D=b_H, and m_D=2*m_H exactly; changing either
+      curvature or phase scale can remove that shift. At fixed I, V0->0+
+      closes the linear gap. These exact conditional results derive no
+      lattice or material realization, coefficient value, collective
+      effective mass, exact isotope prediction, nonlinear discrete-breather
+      existence, lifetime, radiation, or absolute frequency.
+    provenance: campaigns/P097-mc3-medium-gap-maps/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-LAT-001
+      - C-DIM-002
+    evidence:
+      - campaigns/P097-mc3-medium-gap-maps/verify.py
+      - campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+      - campaigns/P097-mc3-medium-gap-maps/evidence/source-reproduction.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/source-audit.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/imported-source-audit.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/check-adjudication.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/consumer-audit.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/candidate-comparison.yaml
+      - campaigns/P097-mc3-medium-gap-maps/reviews/source_adjudication.md
+      - campaigns/P097-mc3-medium-gap-maps/evidence/primary-provenance.yaml
+      - memory/vantasner/decisions/C-LAT-002-review.md
+      - tests/test_lattice_scalar.py
+    assumptions:
+      - The chain is one-dimensional, periodic, uniform, and nearest-neighbour with N>=2; u is dimensionless and I, K, V0, and a are exact, real, constant, and strictly positive.
+      - The displayed Lagrangian is a per-site energy sum, so I has phase-inertia dimensions and K and V0 have energy dimensions; no Riemann continuum measure or material origin is inferred.
+      - The Fourier wave number uses a declared first-Brillouin-zone representative, and the gap and band statements concern the linearization about an exact cosine minimum.
+      - The displacement lift additionally assumes one exact positive coordinate scale b for each host and, when used, a displacement stiffness kappa; bare mass and phase inertia remain distinct.
+      - The sqrt(2) specialization requires exact equality of the two on-site energies and coordinate scales and an exact doubled effective mass. Atomic isotope labels, tabulated atomic masses, or Born-Oppenheimer wording do not establish these premises.
+      - Gap positivity, gap closure, and a supplied sub-gap frequency are not sufficient nonlinear-existence or host-selection criteria.
+    comparators:
+      - MC3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; its body was exposed during P096, while P097 froze units, alternatives, isotope premises, and criteria before source execution and imported self-tests
+    accepted_in: v0.83.0
+    challenges: []
+    supersedes: []
+  - id: C-MED-004
+    statement: >-
+      Conditional on a dimensionless real field theta, a physical length
+      coordinate z, a physical time coordinate tau, and an exact positive
+      coefficient g with dimensions 1/(length*time), the mixed-coordinate
+      equation theta_z_tau=g*sin(theta) linearizes at a vacuum to
+      theta_z_tau=g*theta. A plane wave exp(i*(k*z-Omega*tau)) therefore has
+      characteristic k*Omega=g; for positive k its branch Omega=g/k has phase
+      velocity g/k^2, group velocity -g/k^2, tends to infinity as k->0+, and
+      tends to zero as k->infinity, so it has no finite k-independent
+      laboratory angular-frequency floor. With xi=z/L and eta=tau/T, the
+      normalized coefficient is g*L*T. Imposing g*L*T=1 leaves the exact
+      positive family T=1/(g*L) for arbitrary L; its logarithmic scale
+      Jacobian with respect to (L,T) is [1,1], with reciprocal null direction
+      (-1,1). The map X=xi+eta and S=xi-eta sends the equation exactly to
+      theta_SS-theta_XX+sin(theta)=0. Under rows (length,time), the columns
+      (g,alpha,rate,Omega_squared) are (-1,-1), (-1,0), (0,-1), and (0,-2):
+      an inverse-length absorption alpha is neither g nor a laboratory
+      frequency squared and requires a separately supplied inverse-time rate
+      and dimensionless prefactor even to form g. The normalized static kink
+      is a coordinate-map cross-check only. These exact conditional results
+      derive no Maxwell-Bloch reduction, self-induced-transparency regime,
+      optical coefficient, gas or isotope map, material, nonlinear pulse
+      existence, laboratory gap, damping, or absolute scale.
+    provenance: campaigns/P097-mc3-medium-gap-maps/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-SG-001
+      - C-DIM-002
+    evidence:
+      - campaigns/P097-mc3-medium-gap-maps/verify.py
+      - campaigns/P097-mc3-medium-gap-maps/reviews/independent_medium_gap_review.py
+      - campaigns/P097-mc3-medium-gap-maps/evidence/source-reproduction.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/source-audit.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/literature-audit.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/check-adjudication.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/consumer-audit.yaml
+      - campaigns/P097-mc3-medium-gap-maps/evidence/candidate-comparison.yaml
+      - campaigns/P097-mc3-medium-gap-maps/reviews/source_adjudication.md
+      - campaigns/P097-mc3-medium-gap-maps/evidence/primary-provenance.yaml
+      - memory/vantasner/decisions/C-MED-004-review.md
+      - tests/test_mixed_sine_gordon.py
+    assumptions:
+      - Theta is dimensionless, z is a physical length, tau is a physical time, and g is exact, real, constant, strictly positive, and has inverse-length-time dimension.
+      - The mixed-coordinate equation is a declared conditional model. No Maxwell-Bloch variables, rotating-wave or sharp-line approximation, absorption formula, damping law, or material is imported by naming tau retarded time.
+      - The plane-wave statement uses positive real k and the displayed exp(i*(k*z-Omega*tau)) convention. It is a mixed-coordinate characteristic, not C-SG-018's laboratory Klein-Gordon dispersion.
+      - L and T are exact positive coordinate scales. The hyperbolic map uses the displayed orientation; alternative half-scaled light-cone conventions move exact factors and must be transformed explicitly.
+      - An absorption coefficient and inverse-time rate, if supplied, remain independent physical imports; dimensional completion alone does not derive their value or optical interpretation.
+    comparators:
+      - MC3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 and the cited McCall-Hahn primary records; P097 opened the literature only after freezing coordinate, unit, and interpretation criteria
+    accepted_in: v0.83.0
+    challenges: []
+    supersedes: []

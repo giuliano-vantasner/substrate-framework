@@ -1,0 +1,41 @@
+campaign: P097
+selection_basis:
+  - accepted dependency closure and direct action or coordinate-map derivation
+  - exact dimensions, field-coordinate meaning, Fourier convention, and signs
+  - explicit inertia, mass, phase scale, curvature, and isotope premises
+  - mixed-coordinate versus laboratory-dispersion consistency
+  - mutation sensitivity, counterfamilies, limits, parameter economy, and consumer closure
+candidates:
+  A:
+    decision: selected_as_reproduction_only
+    reason: MC3 exits cleanly with twenty-nine checks, but its lattice and gas headline formulas omit load-bearing dimensions and several predicates inspect pass counts, literals, strings, or narrower equations.
+  B:
+    decision: selected_and_promoted
+    reason: Direct sitewise variation and Fourier substitution give the exact dimensionless-phase chain and finite-spacing spectrum.
+  C:
+    decision: selected_and_promoted
+    reason: The declared displacement q=b*u derives I=m*b^2 and K=kappa*b^2, closing the units without a fitted scale.
+  D:
+    decision: selected_and_promoted
+    reason: The general host ratio retains curvature, effective mass, and phase scale; sqrt(2) is a conditional reduction under three exact equalities.
+  E:
+    decision: selected_as_counterexample
+    reason: Changing either D-host curvature or phase scale cancels the nominal sqrt(2) ratio while retaining a doubled mass.
+  F:
+    decision: selected_and_promoted
+    reason: Direct mixed-equation linearization gives k*Omega=g and coefficient dimensions 1/(length*time).
+  G:
+    decision: selected_and_promoted
+    reason: The explicit normalized light-cone map fixes the hyperbolic sign while leaving one reciprocal length/time scale direction.
+  H:
+    decision: selected_as_scope_ceiling
+    reason: The primary McCall-Hahn records support a conditional resonant two-level pulse model, not MC3's alpha-to-laboratory-gap identification.
+  I:
+    decision: selected_as_semantic_ceiling
+    reason: Positive curvature and a sub-gap inequality are necessary statements in declared models, not nonlinear discrete-breather existence or host-selection theorems.
+  J:
+    decision: selected
+    reason: The new APIs extend C-LAT-001 and C-MED-003 without merging the independent lattice and optical mechanisms or authorizing pending consumers.
+selected_claims: [C-LAT-002, C-MED-004]
+source_disposition: qualified
+debt: []

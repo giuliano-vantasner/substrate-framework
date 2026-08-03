@@ -157,7 +157,7 @@ Use memory contracts as executable working state, not as a parallel source of sc
 
 Never merge old and new prose into a single timeless memory entry. Preserve provenance and status. Generate canonical memory from accepted claims; keep proposal and attempt memory visibly separate. Re-source paths, commits, equations, and verdicts before updating memory.
 
-For repository-local memory, pass `--base "$PWD/memory"` to search and grep, and validate with an explicit repository base plus absolute target: `memory validate --base "$PWD" "$PWD/memory"`. A host-level `AGENT_MEMORY_PATH` can otherwise redirect a relative `memory/` path outside this repository.
+For repository-local memory, pass `--base "$PWD/memory"` to search and grep. Validate one target per invocation, using an explicit repository base and an absolute target, for example `memory validate --base "$PWD" "$PWD/memory"`; use the same absolute-path form for an individual memory file. A host-level `AGENT_MEMORY_PATH` can otherwise redirect a relative target outside this repository or make a repository-relative path resolve twice.
 
 Do not copy personal or historical memory into this repository. The bundled CLI is code only.
 
