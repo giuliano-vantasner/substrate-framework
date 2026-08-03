@@ -1,0 +1,26 @@
+campaign: P098
+frozen_at: '2026-08-04T17:00:00Z'
+base_release: v0.83.0
+base_commit: cb1e182087dc72e20d9df2fc148ca88b6fb8b201
+scientific_base_commit: 8ddc58b
+proposal_path: proposals/P098-mc4-physical-pde-regression/proposal.yaml
+proposal_sha256: 8b0cf8610796d75eced40caaf78bb248b62e5f237952982490ecf082d9f96ece
+memory_contract_path: memory/vantasner/proposals/P098-mc4-physical-pde-regression.md
+memory_contract_sha256: 5b2acfb8a57e52fcc55f7a5e37add82afeb4d19e376c75a3e35b08be398b9552
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+source_sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+source_blob: cd790522ac0ea9f5c7f331ac230c7372292b2e38
+source_body_exposure: >-
+  The complete MC4 body and numerical configurations were exposed during
+  P097's required consumer audit. P098 claims no fresh source-body or
+  configuration blinding.
+source_execution_state_at_freeze: not_executed_under_P098
+terminal_output_state_at_freeze: unopened_under_P098
+independent_experiment_frozen: true
+claims_reserved: []
+validation:
+  repository: WORKFLOW VALID 113 claims 113 accepted 1 proposals 218 units 123 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen

@@ -1,0 +1,67 @@
+id: P098
+base_release: v0.83.0
+base_commit: cb1e182087dc72e20d9df2fc148ca88b6fb8b201
+scientific_base_commit: 8ddc58b
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MC4]
+question: >-
+  Determine whether MC4 contributes a distinct, dependency-closed simulation
+  claim for the physical-coordinate sine-Gordon PDE, or only a finite-grid
+  regression of the exact C-SG-017 breather and C-SG-018 gapless control;
+  terminally adjudicate every numerical and interpretive subclaim while
+  replacing local NumPy quadrature dispatch with the shared compatibility API
+  in any reusable framework work.
+invariants:
+  - C-MED-003 fixes the dimensional cosine equation and coefficient conventions.
+  - C-SG-017 exactly fixes the physical-coordinate breather, frequency, period, profile scale, energy, and action.
+  - C-SG-018 fixes the linear physical spectrum, tail ceilings, and gapless traveling-packet counterexample.
+  - C-PDE-011 and substrate_framework.sine_gordon_1d provide finite-grid periodic leapfrog and adaptive method-of-lines machinery whose evidence remains simulation-bounded.
+  - The physical equation u_tt-c^2*u_xx+omega_0^2*sin(u)=0 with omega_0=c/ell is exactly similar to the normalized equation under X=x/ell and tau=omega_0*t.
+  - Finite-box persistence cannot prove exact existence, material realization, nonlinear stability, or an infinite-time theorem.
+  - Every new sampled trapezoidal integral uses substrate_framework.numerics.trapezoid_integral, never a direct np.trapz or np.trapezoid call.
+allowed_imports:
+  - C-MED-003 for the declared positive-coefficient physical cosine field equation and units
+  - C-SG-017 for the exact physical-coordinate breather and observables
+  - C-SG-018 for the conditional spectrum and gapless finite-energy traveling-packet ceiling
+  - C-SG-001 and C-SG-002 for the normalized exact breather and conserved energy
+  - C-PDE-011 and substrate_framework.sine_gordon_1d for reusable finite-grid solvers, energy diagnostics, and exact-family regression only
+  - substrate_framework.numerics for solver-status, refinement, and trapezoid_integral compatibility machinery
+  - MC4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+candidates:
+  - id: A
+    description: Reproduce MC4 unchanged and map each runtime predicate to the numerical object it actually evaluates.
+  - id: B
+    description: Derive the exact physical-to-normalized similarity map and test whether MC4's medium constants add anything beyond C-MED-003 and C-SG-017.
+  - id: C
+    description: Reproduce the gapped exact-breather evolution with the canonical periodic leapfrog surface and measure phase-space error and energy drift under spatial and temporal refinement.
+  - id: D
+    description: Cross-check the same semidiscrete gapped problem with adaptive DOP853 method-of-lines evolution and tolerance refinement.
+  - id: E
+    description: Audit the gapless control against the exact C-SG-018 traveling-wave family and distinguish one selected profile's evolution from a universal no-localization theorem.
+  - id: F
+    description: Classify finite-grid persistence, width, frequency, and energy diagnostics against exact C-SG-017 observables without promoting stability, material, or infinite-time language.
+  - id: G
+    description: Determine whether any numerical implementation or claim is distinct from existing canonical periodic solvers, exact profiles, energy diagnostics, and accepted PDE evidence.
+  - id: H
+    description: Trace downstream medium, lifetime, density-of-states, and engineering consumers and prevent them from importing unsupported material or absolute-scale conclusions.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency and convention closure before numerical agreement
+  - exact similarity and analytic-solution comparison before finite-grid interpretation
+  - explicit equation, domain, boundary data, float precision, mesh, timestep, solver status, and scale-relative error norms
+  - one-at-a-time spatial, temporal, domain, and adaptive-tolerance refinement plus energy-conservation evidence
+  - mutation sensitivity to onsite curvature, width-frequency relation, initial velocity, boundary condition, and coordinate scaling
+  - independent time integrator, parameter economy, canonical API reuse, and nonduplication
+claims_proposed: []
+comparators_blinded_until: >-
+  MC4's complete body was exposed during P097's required consumer audit, so
+  fresh source-body or configuration blinding is impossible and is not
+  claimed. P098 freezes the still-load-bearing equations, similarity map,
+  candidate set, independent canonical experiment, error norms, refinement
+  requirements, interpretation ceilings, and nonduplication criteria before
+  executing MC4 or opening its terminal output. The independent experiment
+  uses c=3/2, ell=5/4, omega_0=6/5, normalized breather frequency 3/5,
+  normalized domains with half-widths 20, 30, and 40, spatial steps 1/5,
+  1/10, and 1/20, Courant ratios 2/5 and 1/5, four exact periods, and DOP853
+  tolerances (1e-8,1e-11), (1e-9,1e-12), and (1e-10,1e-13).
+status: draft
