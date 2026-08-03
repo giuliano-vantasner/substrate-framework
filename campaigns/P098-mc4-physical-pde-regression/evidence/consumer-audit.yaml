@@ -1,0 +1,60 @@
+campaign: P098
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+executable_import_search:
+  finding: No pinned-baseline Python consumer imports or executes MC4.
+  exception: >-
+    Phase-45 HE2 mentions the MC1/MC4 physical reading in a comment; its
+    dimensional rank calculation needs only C-MED-003/C-SG-017 and no MC4
+    numerical result.
+consumers:
+  phase27_dossier:
+    path: merged-framework/bridges/phase-27/dossiers/Phase27-MC-dossier.md
+    git_blob: 97b48cf7ddb25068e076e5a19a6a11651d31fc30
+    sha256: ff5796bf7e28d540d6fd580c4fd102397ae33314554472989e641859646173b1
+    verdict: >-
+      Restates MC4 persistence, width, and gapless no-host language and compounds
+      it with MC1-MC3 material claims. C-SG-017 supplies the exact conditional
+      solution and width; C-SG-018 blocks the universal gapless reading; P097
+      already qualifies the material channels.
+  bridges_readme:
+    path: merged-framework/bridges/README.md
+    git_blob: dbc471423a5e1be372ec3b2af1a5b48bdebd4ff6
+    sha256: 9258406a320d9c9edc032e8ad0d93284a254df879f19df985ccc3f2b35924979
+    verdict: >-
+      Copies the five-check tally and 1.84 width ratio. It is source navigation,
+      not authority, and inherits the noncovariant width diagnostic.
+  unified_synthesis:
+    path: merged-framework/UNIFIED-SYNTHESIS.md
+    git_blob: ab9d022f17c090054583141043c867d30611b177
+    sha256: 9088613693a2a6484e0bd395b658d8d66b98c782620e7613d2c68e761536db52
+    verdict: >-
+      Uses MC4 as a negative theorem that a gapless medium does not host a
+      breather and folds it into material and engineering conclusions. The
+      source only shows fixed-core drainage for one seed; C-SG-018 preserves
+      localized gapless traveling packets, and no material map follows.
+  frontier:
+    path: merged-framework/frontier.md
+    git_blob: d83906df1984fe21f77ae8d84138693e1ef1ed11
+    sha256: 7ca6b1116b05a7da20f5bac2ce7868b05b75f0cb1243a5415d5a0f9de2139a4e
+    verdict: Navigation-only reference to the MC1-MC4 rung.
+  HE2:
+    path: merged-framework/bridges/phase-45/bridge_HE2_buckingham_breather_primitives.py
+    git_blob: 19a46c53ba3676bc94586d334277068fc3c4c922
+    sha256: 88cfd8aae98c81e1b5fc7b556c24e661c8b687443659e98ad2a6fa5660973623
+    verdict: >-
+      Its comment uses w as a dimensionless physical-frequency ratio. The
+      executable Buckingham matrix neither calls MC4 nor consumes its
+      simulation; accepted dimensional claims suffice.
+working_tree_guard: >-
+  Modified predecessor README, synthesis, and frontier files were not used as
+  evidence. Every consumer hash above is computed from the pinned commit blob.
+framework_consumers:
+  - src/substrate_framework/dimensional_sine_gordon.py
+  - src/substrate_framework/sine_gordon_1d.py
+  - src/substrate_framework/numerics.py
+  - tests/test_dimensional_sine_gordon.py
+  - tests/test_sine_gordon_1d.py
+  - tests/test_numerics.py
+  - tests/test_sine_gordon.py
+quadrature: New P098 sampled integration uses trapezoid_integral only.
+debt: []

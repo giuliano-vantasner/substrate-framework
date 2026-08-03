@@ -1,0 +1,32 @@
+campaign: P098
+base_release: v0.83.0
+preregistration_commit: e391a5e
+proposal_sha256: 8b0cf8610796d75eced40caaf78bb248b62e5f237952982490ecf082d9f96ece
+freeze_sha256: fd76aad4b593d7c7464abeabf13445b211edfe3e123add634e718327ca8e62c3
+primary_verifier:
+  path: campaigns/P098-mc4-physical-pde-regression/verify.py
+  sha256: d6fc63cf076cbcc284ffc073fb4fedd41b098ce54dc5c90575ce5dace2bd8e51
+  terminal_tally: ALL 25 CHECKS PASS [P098]
+independent_review:
+  path: campaigns/P098-mc4-physical-pde-regression/reviews/independent_similarity_review.py
+  sha256: 5ac154c50bbf35d7597af8f1f0a0ae450f8e0d3aac0cdbe015d2f7247462dbad
+  terminal_tally: ALL 16 CHECKS PASS [P098-INDEPENDENT]
+canonical_modules:
+  dimensional:
+    path: src/substrate_framework/dimensional_sine_gordon.py
+    sha256: 4a5552209d459620cdfa88e09c2014112a5e9063b78ac03b34984c4ce0e49524
+  solver:
+    path: src/substrate_framework/sine_gordon_1d.py
+    sha256: 675ca4f29aa256e67d37243ffebe20e3b65a605b2a095415e84b36a14c7f6c3e
+  numerics:
+    path: src/substrate_framework/numerics.py
+    sha256: a6271efbb5c5694cf05cfdd5a67b126ad4ebe8eaf432ba90c715c306a125afe1
+focused_tests:
+  result: 96 passed in 11.81s
+  files:
+    - {path: tests/test_dimensional_sine_gordon.py, sha256: e447b97503e90d00d012a75ea8bb81e00465ef098247b979d499a9d96cb6be60}
+    - {path: tests/test_sine_gordon_1d.py, sha256: 32fa3b080777663bd572e1805702b54ef21c724c62442bf621ad6961839c71e2}
+    - {path: tests/test_numerics.py, sha256: 1907c3b03bb9d9f6490ace46f0000e3436a0ca9010d1666514cd88a46a2f87d0}
+    - {path: tests/test_sine_gordon.py, sha256: 8e0d75bc8205c12f11c32af1cfd75a56ad9181db76484c31c0c3fa6f67c7da16}
+oracle: exact similarity plus controlled exact-solution PDE regression and independent physical-coordinate rederivation
+quadrature_note: Every new sampled trapezoidal integral calls trapezoid_integral.

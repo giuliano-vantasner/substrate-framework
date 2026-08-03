@@ -1,0 +1,65 @@
+campaign: P098
+source_unit: MC4
+checks:
+  - id: MC4.1
+    source_predicate: >-
+      Late core energy exceeds half the exact breather energy and the absolute
+      fitted relative slope is below 5e-3.
+    runtime: pass
+    verdict: qualified_duplicate_regression
+    reason: >-
+      The run begins with exact C-SG-017 initial data, so retained finite-grid
+      energy confirms the copied integrator but does not discover existence,
+      stability, a material host, or an infinite-time persistent state.
+  - id: MC4.2
+    source_predicate: >-
+      The largest nonzero late-window FFT bin at the core lies below omega_0
+      with a one-percent margin.
+    runtime: pass
+    verdict: qualified_resolution_bounded_duplicate
+    reason: >-
+      C-SG-017 fixes the seeded frequency exactly below the gap. The printed
+      0.6912 and 0.3456 values are the eleventh bins of windows whose angular
+      spacings are 2*pi/100 and pi/100; the source tests neither line dominance
+      nor agreement more finely than half a bin.
+  - id: MC4.3
+    source_predicate: >-
+      Two measured RMS width proxies have ratio within 0.3 of two and their
+      normalized shape constants agree within fifteen percent.
+    runtime: pass
+    verdict: diagnostic_refuted_exact_claim_already_accepted
+    reason: >-
+      The two runs are exact normalized rescalings, but the proxy omits the
+      inverse-ell-squared onsite weight and is not scale covariant. The source
+      result 1.8365 therefore does not validate width scaling. C-SG-017 proves
+      the exact ell/eta profile scale independently, and P098's covariant
+      diagnostic gives ratio exactly two.
+  - id: MC4.4
+    source_predicate: >-
+      One closed-box energy range is below three percent and two coupled
+      dx/dt runs have stable FFT bins and core traces.
+    runtime: pass
+    verdict: qualified_weak_convergence_regression
+    reason: >-
+      Two coupled levels cannot establish spatial order or independent time
+      convergence. P098 repairs the evidence with four spatial levels, three
+      time steps, three domains, DOP853, exact phase-space errors, and energy
+      drift, but this remains regression of C-SG-017 rather than a new claim.
+  - id: MC4.5
+    source_predicate: >-
+      The selected zero-field localized-velocity seed leaves less than one
+      tenth as much late fixed-core energy in the wave equation as in the
+      gapped exact-breather run.
+    runtime: pass
+    verdict: qualified_fixed_core_control_only
+    reason: >-
+      The selected wave data transport energy out of the fixed core. This does
+      not prove universal delocalization, a nonlinear no-go, or that a gap
+      alone is sufficient; C-SG-018 supplies exact finite-energy localized
+      traveling packets in the gapless equation.
+headline_verdict: >-
+  All five runtime predicates reproduce, but none promotes a distinct claim.
+  The exact solution, frequency, and width scale are already C-SG-017; the
+  spectrum and gapless ceiling are C-SG-018; the source's width diagnostic is
+  noncovariant and its numerical convergence is incomplete.
+debt: []

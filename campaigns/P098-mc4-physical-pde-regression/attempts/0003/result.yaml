@@ -1,0 +1,46 @@
+campaign: P098
+attempt: 3
+route: finer_spatial_mesh_plus_preregistered_time_method_crosscheck
+status: spatial_gate_passed_cross_method_gate_failed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P098-mc4-physical-pde-regression/verify.py
+process:
+  exit_status: 1
+  failure: time-refined leapfrog and tight DOP853 agree below one-half percent
+spatial_refinement:
+  steps: [0.2, 0.1, 0.05, 0.025]
+  phase_space_errors:
+    - 0.18298833127305789
+    - 0.04550962365032668
+    - 0.011367467554571666
+    - 0.0028416032287844977
+  observed_orders:
+    - 2.007508093387442
+    - 2.0012607694431725
+    - 2.0001338551140893
+  finest_relative_energy_drift: 3.120323444072426e-10
+time_refinement:
+  spatial_step: 0.1
+  courant_ratios: [0.4, 0.2]
+  phase_space_errors: [0.04550962365032668, 0.027146202034215472]
+domain_errors: [0.011366649449740357, 0.011367467554571666, 0.011367380394732465]
+dop853:
+  phase_space_errors:
+    - 0.021031057991996848
+    - 0.021031057992074623
+    - 0.021031057992166664
+  function_evaluations: [25160, 25160, 25160]
+cross_method_relative_phase_space_error: 0.006122199399376644
+diagnosis: >-
+  The added spatial level satisfies the fixed 0.5 percent exact-family gate
+  with clean second-order convergence. The first one-at-a-time timestep
+  halving reduces leapfrog error, but its state remains 0.612 percent from the
+  spatially identical DOP853 state, narrowly above the fixed 0.5 percent
+  cross-method gate. The DOP853 tolerance sweep is max-step/spatially
+  saturated, as shown by identical function-evaluation counts.
+next_route: >-
+  Halve only the leapfrog timestep again at fixed dX=0.1 and compare that state
+  with the unchanged tight DOP853 result; retain the 0.5 percent threshold.
+debt:
+  - complete mutations, gapless control, source predicate, consumer, and nonduplication ledgers

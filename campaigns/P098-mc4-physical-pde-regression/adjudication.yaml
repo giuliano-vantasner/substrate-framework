@@ -1,0 +1,54 @@
+campaign: P098
+title: MC4 physical-coordinate PDE regression and nonduplication audit
+source_baseline: substrate@6d1f4e0
+source_units: [MC4]
+base_release: v0.83.0
+release_after_adjudication: v0.83.0
+adjudicated_at: '2026-08-04T17:45:00Z'
+selected_candidates:
+  - {id: B, reason: Exact similarity identifies both source media as one normalized trajectory.}
+  - {id: C, reason: Four meshes and three timesteps close exact-family regression honestly.}
+  - {id: D, reason: DOP853 supplies an independent time-integrator cross-check.}
+  - {id: E, reason: The exact gapless traveling packet fixes the source control ceiling.}
+  - {id: F, reason: Finite-grid persistence is separated from exact existence and stability.}
+  - {id: G, reason: Claim and API replay finds no distinct object to promote.}
+  - {id: H, reason: Pinned consumers are quarantined at their actual dependency scope.}
+competing_candidates:
+  - {id: A, decision: reproduction_only}
+claims: []
+reviewed_existing:
+  - {id: C-MED-003, decision: unchanged_physical_equation_and_scale_convention}
+  - {id: C-SG-017, decision: unchanged_exact_physical_breather_and_width}
+  - {id: C-SG-018, decision: unchanged_spectrum_and_gapless_packet_ceiling}
+  - {id: C-PDE-011, decision: unchanged_solver_provenance_not_source_claim_mapping}
+evidence:
+  source_route: attempts/0001/result.yaml
+  accuracy_failure: attempts/0002/result.yaml
+  cross_method_failure: attempts/0003/result.yaml
+  repaired_regression: attempts/0004/result.yaml
+  representation_failure: attempts/0005/result.yaml
+  final_targeted: attempts/0006/result.yaml
+  integrated_gate: attempts/0007/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_similarity_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  numerical_regression: evidence/numerical-regression.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  MC4: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P098-mc4-physical-pde-regression/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P098-mc4-physical-pde-regression/reviews/independent_similarity_review.py
+  - .venv/bin/python -m pytest -q tests/test_dimensional_sine_gordon.py tests/test_sine_gordon_1d.py tests/test_numerics.py tests/test_sine_gordon.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

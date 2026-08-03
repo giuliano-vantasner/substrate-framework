@@ -1,0 +1,70 @@
+campaign: P098
+model: normalized periodic 1+1 sine-Gordon exact-breather regression
+physical_parameters:
+  c: 1.5
+  ell: 1.25
+  omega_0: 1.2
+  normalized_frequency: 0.6
+  final_normalized_time: four exact periods
+precision: float64
+primary_method:
+  spatial_operator: centered periodic second difference
+  time_integrator: velocity Verlet
+  domain_half_width: 30.0
+  courant_ratio: 0.4
+  spatial_steps: [0.2, 0.1, 0.05, 0.025]
+  relative_phase_space_errors:
+    - 0.18298833127305789
+    - 0.04550962365032668
+    - 0.011367467554571666
+    - 0.0028416032287844977
+  observed_orders:
+    - 2.007508093387442
+    - 2.0012607694431725
+    - 2.0001338551140893
+  relative_energy_drifts:
+    - 0.00019379604027175423
+    - 0.0000030896267655400322
+    - 0.000000042685670276210175
+    - 0.0000000003120323444072426
+time_refinement:
+  spatial_step: 0.1
+  courant_ratios: [0.4, 0.2, 0.1]
+  relative_phase_space_errors:
+    - 0.04550962365032668
+    - 0.027146202034215472
+    - 0.022559785399334602
+domain_refinement:
+  spatial_step: 0.05
+  half_widths: [20.0, 30.0, 40.0]
+  relative_phase_space_errors:
+    - 0.011366649449740357
+    - 0.011367467554571666
+    - 0.011367380394732465
+independent_time_method:
+  method: SciPy DOP853 method of lines
+  spatial_step: 0.1
+  domain_half_width: 30.0
+  max_step: 0.02
+  tolerance_levels:
+    - [1.0e-8, 1.0e-11]
+    - [1.0e-9, 1.0e-12]
+    - [1.0e-10, 1.0e-13]
+  relative_phase_space_errors:
+    - 0.021031057991996848
+    - 0.021031057992074623
+    - 0.021031057992166664
+  function_evaluations: [25160, 25160, 25160]
+  interpretation: >-
+    Identical counts and errors show max-step/spatial saturation; tolerance
+    refinement neither improves nor destabilizes the resolved state.
+cross_time_method_relative_phase_space_error: 0.0015307063763470331
+independent_physical_similarity:
+  scale_covariant_width_ratio: 2.0
+  source_proxy_width_ratio: 1.8414372508828278
+  physical_energy_ratio_ell_1_to_ell_2: 2.0
+  wrong_curvature_mutation: rejected
+  wrong_initial_velocity_scale_mutation: rejected
+oracle_status: controlled_simulation_regression_not_new_claim
+quadrature: all sampled trapezoidal diagnostics call trapezoid_integral
+debt: []

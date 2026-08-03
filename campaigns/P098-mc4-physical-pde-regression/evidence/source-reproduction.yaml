@@ -1,0 +1,24 @@
+campaign: P098
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: MC4
+path: merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+bytes: 29430
+sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+git_blob: cd790522ac0ea9f5c7f331ac230c7372292b2e38
+execution:
+  command: >-
+    /usr/bin/time -v .venv/bin/python
+    /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+  exit_status: 0
+  elapsed_wall_seconds: 8.73
+  maximum_resident_kib: 32012
+  terminal_tally: ALL 5 CHECKS PASS
+environment:
+  interpreter: framework .venv Python
+  numeric_stack: pinned framework environment
+  quadrature_branch: numpy.trapezoid
+authority: >-
+  Reproduction proves only that the five implemented predicates passed for
+  the pinned source and environment. It does not promote the source headline,
+  copied solver, chosen tolerances, or physical interpretation.

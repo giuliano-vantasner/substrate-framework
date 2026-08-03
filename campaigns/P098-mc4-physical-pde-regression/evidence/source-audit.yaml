@@ -1,0 +1,79 @@
+campaign: P098
+source_unit: MC4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+ast:
+  runtime_check_calls: 5
+  literal_terminal_tally: true
+  imports: [sys, numpy]
+  accepted_framework_imports: []
+  copied_functions:
+    - check
+    - lap1d
+    - grad1d
+    - breather_ic
+    - evolve
+    - dominant_omega
+    - retained_core
+    - core_width_rms
+equation:
+  gapped: u_tt = c^2*u_xx - (c/ell)^2*sin(u)
+  gapless_control: u_tt = c^2*u_xx
+  source_coefficient_normalization: [lambda=1/c^2, T=1, mu=1/ell^2]
+  exact_coordinates: [X=x/ell, tau=c*t/ell]
+primary_configuration:
+  precision: float64
+  c: 1.0
+  frequency_ratio: 0.7
+  ell: 1.0
+  domain: [-120.0, 120.0]
+  dx: 0.05
+  dt: 0.02
+  final_time: 300.0
+  core_radius: 14.0
+  sponge_width: 30.0
+  record_interval: 0.16
+  late_window: [200.0, 300.0]
+scaled_configuration:
+  ell: 2.0
+  domain: [-240.0, 240.0]
+  dx: 0.10
+  dt: 0.04
+  final_time: 600.0
+  core_radius: 28.0
+  sponge_width: 60.0
+  finding: >-
+    Every dimensionful grid, time, boundary, and diagnostic radius is scaled
+    by ell, so this is the same normalized discrete trajectory rather than an
+    independent medium realization.
+closed_box_configuration:
+  ell: 1.0
+  domain: [-80.0, 80.0]
+  dx: 0.05
+  dt: 0.02
+  final_time: 60.0
+  boundary: homogeneous Dirichlet endpoints
+  sponge_width: 0.0
+  finding: >-
+    The source checks an approximate continuum Hamiltonian range after an
+    exact-breather seed. It does not measure boundary flux, though the exact
+    tail is exponentially small on the chosen box.
+numerical_limitations:
+  - The source uses two coupled dx/dt levels and computes no observed order.
+  - The FFT checks only the largest nonzero bin and no line-power fraction or endpoint closure.
+  - The retained-core leak is an absolute fitted slope over a selected window and does not establish infinite-time stability.
+  - The exact breather initial data make the persistence run a solver regression, not a numerical construction of a solution.
+  - The gapless control changes the equation and measures drainage from a fixed core; it does not exclude traveling localized packets.
+width_diagnostic:
+  source_weight: u_x^2 + 1 - cos(u)
+  scale_covariant_weight: u_x^2 + ell^-2*(1-cos(u))
+  defect: >-
+    Multiplying the source weight by ell^2 leaves
+    U_X^2+ell^2*(1-cos(U)), so its normalized shape depends spuriously on ell.
+    The independent review obtains ratio 1.841437 with the source proxy and
+    exactly 2.0 with the Hamiltonian-covariant proxy.
+quadrature:
+  source_dispatch: np.trapezoid if present else np.trapz
+  status: historical_reproduction_only
+  canonical_rule: substrate_framework.numerics.trapezoid_integral
+debt: []

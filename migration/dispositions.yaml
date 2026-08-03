@@ -1118,6 +1118,40 @@ units:
       scale-identifiability ceiling. Exact work uses no NumPy quadrature alias;
       external seeding_kernel.py remains quarantined for its own np.trapz
       migration.
+  MC4:
+    disposition: qualified
+    accepted_claims:
+      - C-MED-003
+      - C-SG-017
+      - C-SG-018
+    qualification: >-
+      MC4 reproduces five finite-grid predicates but adds no distinct claim.
+      Its gapped runs start from the exact C-SG-017 breather and its ell=1 and
+      ell=2 cases are the same normalized discrete trajectory. The source
+      width proxy omits the inverse-ell-squared onsite weight, is not scale
+      covariant, and yields 1.8365 rather than validating the exact factor two.
+      Its FFT outputs are resolution-bounded bins, its two meshes co-refine
+      space and time, and finite-window core retention does not establish
+      stability or material realization. The selected wave-equation seed
+      drains a fixed core, but C-SG-018 retains exact localized finite-energy
+      traveling packets, so no universal gapless delocalization theorem follows.
+    evidence:
+      - campaigns/P098-mc4-physical-pde-regression/reviews/source_adjudication.md
+      - campaigns/P098-mc4-physical-pde-regression/evidence/source-reproduction.yaml
+      - campaigns/P098-mc4-physical-pde-regression/evidence/source-audit.yaml
+      - campaigns/P098-mc4-physical-pde-regression/evidence/check-adjudication.yaml
+      - campaigns/P098-mc4-physical-pde-regression/evidence/numerical-regression.yaml
+      - campaigns/P098-mc4-physical-pde-regression/evidence/dependency-audit.yaml
+      - campaigns/P098-mc4-physical-pde-regression/evidence/consumer-audit.yaml
+      - campaigns/P098-mc4-physical-pde-regression/evidence/candidate-comparison.yaml
+      - campaigns/P098-mc4-physical-pde-regression/verify.py
+      - campaigns/P098-mc4-physical-pde-regression/reviews/independent_similarity_review.py
+      - memory/vantasner/proposals/P098-mc4-physical-pde-regression.md
+    note: >-
+      P098 supplies controlled exact-family regression only: four spatial
+      levels converge at order two, timestep and domain refinements pass, and
+      DOP853 agrees with refined leapfrog. No direct NumPy trapezoidal call is
+      introduced; sampled integration uses trapezoid_integral.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

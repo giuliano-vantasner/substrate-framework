@@ -1,0 +1,22 @@
+campaign: P098
+attempt: 7
+route: integrated_repository_disposition_gate
+status: passed
+prerequisites:
+  source_reproduction: ALL 5 CHECKS PASS
+  primary_verifier: ALL 25 CHECKS PASS [P098]
+  independent_review: ALL 16 CHECKS PASS [P098-INDEPENDENT]
+  focused_dependency_replay: 96 passed
+  repository: WORKFLOW VALID 113 claims 113 accepted 0 proposals 218 units 122 pending 0 partial
+command: scripts/validate.sh
+result:
+  repository: WORKFLOW VALID 113 claims 113 accepted 0 proposals 218 units 122 pending 0 partial
+  memory: All 418 file(s) valid
+  skill: Skill is valid
+  pytest: 893 passed in 88.95s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+scope_note: >-
+  This full gate ran once at the final scientific/disposition boundary.
+  Finalizing this append-only record and syncing the parent effort require only
+  record-sensitive validation.
+debt: []

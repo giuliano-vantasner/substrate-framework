@@ -1,0 +1,25 @@
+campaign: P098
+attempt: 5
+route: direct_sympy_whole_line_gapless_packet_energy_integral
+status: failed_representation_oracle
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P098-mc4-physical-pde-regression/verify.py
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P098-mc4-physical-pde-regression/reviews/independent_similarity_review.py
+process:
+  primary_exit_status: 1
+  independent_exit_status: 1
+  shared_failure: gapless traveling packet has finite positive energy
+observed_form: Integral(tanh(x)**2*sech(x)**2, (x, -oo, oo))
+diagnosis: >-
+  Both exact routes reduce the energy density correctly to
+  tanh(x)^2*sech(x)^2, but SymPy leaves its direct improper integral
+  unevaluated. The wave residual and all preceding similarity checks pass.
+next_route: >-
+  Verify the exact antiderivative tanh(x)^3/3 by differentiation and evaluate
+  its two endpoint limits, yielding 2/3 without numerical quadrature.
+debt:
+  - rerun both exact routes with the antiderivative oracle

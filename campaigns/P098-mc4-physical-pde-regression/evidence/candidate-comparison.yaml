@@ -1,0 +1,40 @@
+campaign: P098
+selection_basis:
+  - accepted dependency and convention closure
+  - exact similarity before numerical agreement
+  - explicit scale-relative numerical evidence and independent time method
+  - mutation sensitivity and correct gapless counterexamples
+  - canonical reuse and nonduplication
+decisions:
+  A:
+    decision: reproduction_only
+    reason: All five checks reproduce but their tally does not validate the headline interpretation.
+  B:
+    decision: selected_exact_similarity
+    reason: >-
+      The physical equation and two source media reduce exactly to one
+      normalized equation; this is already C-MED-003/C-SG-017 content.
+  C:
+    decision: selected_controlled_regression
+    reason: Four meshes and three timesteps give scale-relative second-order exact-family evidence.
+  D:
+    decision: selected_time_method_crosscheck
+    reason: DOP853 agrees with time-refined leapfrog while exposing spatial/max-step saturation.
+  E:
+    decision: selected_gapless_ceiling
+    reason: >-
+      The source fixed-core drainage is true for its seed, while an exact
+      finite-energy traveling packet rejects universal gapless delocalization.
+  F:
+    decision: selected_qualified_semantics
+    reason: Finite-grid persistence is regression only and cannot promote stability or material language.
+  G:
+    decision: selected_no_new_claim_or_api
+    reason: Every reusable exact and numerical surface already exists canonically.
+  H:
+    decision: selected_consumer_quarantine
+    reason: Narrative consumers broaden MC4 without executable dependency closure.
+claim_delta: []
+source_disposition: qualified
+framework_fit: native_reuse_without_canonical_change
+debt: []

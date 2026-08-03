@@ -1,0 +1,43 @@
+campaign: P098
+attempt: 1
+route: unchanged_hash_pinned_source_reproduction_and_body_audit
+status: source_reproduced_claim_requires_similarity_and_diagnostic_repair
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+  sha256: db001de1fde9684282bb5353ec0a5ef4ddcf168809e0c02ca99878fb3f5ff698
+  git_blob: cd790522ac0ea9f5c7f331ac230c7372292b2e38
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-27/bridge_MC4_physical_units_pde.py
+process:
+  exit_status: 0
+  elapsed_wall_seconds: 8.73
+  maximum_resident_kib: 32012
+  terminal_tally: ALL 5 CHECKS PASS
+reported_values:
+  good_ell_1_retained_core: 11.4267
+  good_ell_1_relative_leak_per_time: 1.49e-09
+  good_ell_1_fft_angular_frequency: 0.6912
+  good_ell_1_width_proxy: 1.5320
+  good_ell_2_fft_angular_frequency: 0.3456
+  good_ell_2_width_proxy: 2.8135
+  width_ratio: 1.8365
+  closed_box_fractional_energy_range: 0.0001
+  two_grid_core_trace_max_difference: 0.0538
+  gapless_to_gapped_retained_core_ratio: 0.0163
+diagnosis:
+  - The gapped run starts from exact C-SG-017 breather data, so finite-grid persistence is regression evidence rather than a numerical existence construction.
+  - Scaling ell, domain, grid, final time, sponge, and core radius together leaves the normalized finite-difference problem unchanged; the two-medium comparison is a similarity replay, not independent material evidence.
+  - The width proxy uses u_x squared plus one-minus-cos-u without the required inverse-ell-squared coefficient, mixes scale dimensions, and is not covariant under the claimed similarity. Its 1.8365 ratio therefore cannot validate the exact ratio two.
+  - The FFT check tests only that the largest nonzero bin is below the gap; it does not test line dominance, endpoint closure, leakage, or agreement with the seeded exact frequency at resolution finer than its bin width.
+  - The two-grid comparison co-refines dx and dt, supplies no third mesh or observed order, and does not independently refine timestep, domain, or time integrator.
+  - The gapless wave control shows this selected initial velocity leaves a fixed core; it does not refute localized finite-energy traveling packets or prove that a mass gap alone is sufficient for nonlinear localization.
+quadrature:
+  source_dispatch: np.trapezoid if available else np.trapz
+  framework_rule: new work must call substrate_framework.numerics.trapezoid_integral
+next_route: >-
+  Derive and test the exact similarity with scale-covariant diagnostics, run
+  the frozen three-mesh and independent-time refinements through canonical
+  APIs, and compare the gapless control with C-SG-018's exact traveling packet.
+debt:
+  - complete predicate, import, mutation, consumer, and nonduplication ledgers

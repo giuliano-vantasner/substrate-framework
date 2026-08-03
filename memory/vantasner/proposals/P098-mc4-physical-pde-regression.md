@@ -10,7 +10,7 @@ tags:
 - migration-MC4
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P098 MC4 Physical PDE Regression Audit
 
@@ -199,3 +199,24 @@ tally or an already exact breather formula is not completion.
 See MC4, P089, P093, P095, P096, C-MED-003, C-SG-001, C-SG-002, C-SG-017,
 C-SG-018, C-PDE-011, the dimensional and exact sine-Gordon modules, the 1D
 solver and numerics modules, and the parent framework-migration effort.
+
+## Terminal Adjudication
+
+P098 qualifies MC4 without adding a claim, release, canonical API, or test.
+The source reproduces all five checks, but its gapped runs seed the exact
+C-SG-017 breather and are numerical regression rather than an existence
+construction. Its two `ell` cases are one normalized discrete trajectory, and
+its mixed-unit width proxy breaks exact similarity: the independent route
+finds ratio 1.841437 for that proxy and exactly 2.0 for the scale-covariant
+Hamiltonian diagnostic.
+
+The repaired canonical regression passes 25 primary checks with four spatial
+levels, three timesteps, three domains, exact phase-space errors, energy drift,
+and DOP853 cross-checking. It converges at order two, reaches 0.284 percent
+phase-space error, and agrees across time methods to 0.153 percent. The
+independent physical-coordinate route passes 16 checks and shows the source
+FFT values are rescaled eleventh bins. Its exact gapless traveling packet
+limits MC4's control to fixed-core drainage for one seed, not a universal
+localization no-go. The focused dependency replay passes 96 tests. MC4 maps
+C-MED-003, C-SG-017, and C-SG-018; campaign debt is empty and every new sampled
+integral uses `trapezoid_integral`.

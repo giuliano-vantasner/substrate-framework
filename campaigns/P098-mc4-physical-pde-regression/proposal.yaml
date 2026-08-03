@@ -64,4 +64,4 @@ comparators_blinded_until: >-
   normalized domains with half-widths 20, 30, and 40, spatial steps 1/5,
   1/10, and 1/20, Courant ratios 2/5 and 1/5, four exact periods, and DOP853
   tolerances (1e-8,1e-11), (1e-9,1e-12), and (1e-10,1e-13).
-status: draft
+status: accepted

@@ -1,0 +1,25 @@
+campaign: P098
+attempt: 6
+route: final_targeted_similarity_regression_and_dependency_replay
+status: passed
+commands:
+  primary: >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P098-mc4-physical-pde-regression/verify.py
+  independent: >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P098-mc4-physical-pde-regression/reviews/independent_similarity_review.py
+  focused: >-
+    .venv/bin/python -m pytest -q tests/test_dimensional_sine_gordon.py
+    tests/test_sine_gordon_1d.py tests/test_numerics.py tests/test_sine_gordon.py
+results:
+  primary: ALL 25 CHECKS PASS [P098]
+  independent: ALL 16 CHECKS PASS [P098-INDEPENDENT]
+  focused: 96 passed in 11.81s
+scientific_verdict: >-
+  The source is qualified and maps existing exact claims. Its numerical runs
+  are finite-grid regression evidence, its width proxy is noncovariant, and
+  its gapless control is not a universal localization theorem. No new claim,
+  release, or canonical API is warranted.
+quadrature_note: New P098 sampled integrations use trapezoid_integral only.
+debt: []

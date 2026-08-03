@@ -1,0 +1,47 @@
+campaign: P098
+attempt: 4
+route: repaired_four_mesh_and_three_timestep_canonical_regression
+status: passed_preliminary_primary_without_final_gapless_ledger
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P098-mc4-physical-pde-regression/verify.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 23 CHECKS PASS [P098]
+evidence:
+  spatial_phase_space_errors:
+    - 0.18298833127305789
+    - 0.04550962365032668
+    - 0.011367467554571666
+    - 0.0028416032287844977
+  spatial_orders:
+    - 2.007508093387442
+    - 2.0012607694431725
+    - 2.0001338551140893
+  spatial_energy_drifts:
+    - 0.00019379604027175423
+    - 0.0000030896267655400322
+    - 0.000000042685670276210175
+    - 0.0000000003120323444072426
+  timestep_phase_space_errors:
+    - 0.04550962365032668
+    - 0.027146202034215472
+    - 0.022559785399334602
+  domain_phase_space_errors:
+    - 0.011366649449740357
+    - 0.011367467554571666
+    - 0.011367380394732465
+  dop853_phase_space_errors:
+    - 0.021031057991996848
+    - 0.021031057992074623
+    - 0.021031057992166664
+  dop853_function_evaluations: [25160, 25160, 25160]
+  cross_time_method_error: 0.0015307063763470331
+classification: >-
+  The canonical exact-family regression is controlled simulation evidence.
+  It confirms implementation convergence but adds no existence theorem beyond
+  C-SG-017 and no distinct source mechanism.
+next_route: add the exact gapless traveling-packet and independent similarity ledgers
+debt:
+  - gapless exact energy oracle
+  - source predicate, consumer, and nonduplication records

@@ -1,0 +1,38 @@
+campaign: P098
+attempt: 2
+route: preregistered_three_mesh_exact_family_regression
+status: failed_accuracy_gate_with_clean_second_order_convergence
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P098-mc4-physical-pde-regression/verify.py
+process:
+  exit_status: 1
+  failure: finest leapfrog exact-family error is below one-half percent
+spatial_steps: [0.2, 0.1, 0.05]
+phase_space_errors:
+  - 0.18298833127305789
+  - 0.04550962365032668
+  - 0.011367467554571666
+observed_orders:
+  - 2.007508093387442
+  - 2.0012607694431725
+relative_energy_drifts:
+  - 0.00019379604027175423
+  - 0.0000030896267655400322
+  - 0.000000042685670276210175
+diagnosis: >-
+  The centered spatial and velocity-Verlet discretization converges at second
+  order and its energy drift is already small, but four-period phase
+  accumulation leaves the preregistered finest grid at 1.137 percent error,
+  above the fixed 0.5 percent gate. This is resolution insufficiency, not a
+  reason to loosen the threshold.
+additional_verifier_issue: >-
+  Inspection found that a lexical no-quadrature assertion would contain the
+  prohibited spellings inside its own string literals. Replace it with an AST
+  audit of actual NumPy attribute calls rather than wait for a tautological
+  self-match failure.
+next_route: >-
+  Add the materially finer dX=1/40 level, retain the 0.5 percent threshold,
+  and use an AST call audit for direct NumPy integration functions.
+debt:
+  - complete timestep, domain, DOP853, mutation, control, and consumer gates

@@ -1,0 +1,57 @@
+campaign: P098
+accepted_dependencies:
+  C-MED-003:
+    use: physical cosine equation coefficient and unit convention
+    status: unchanged
+  C-SG-001:
+    use: normalized exact breather field
+    status: unchanged
+  C-SG-002:
+    use: exact normalized breather energy
+    status: unchanged
+  C-SG-017:
+    use: exact physical pullback, sub-gap frequency, period, width, and energy scaling
+    status: unchanged_and_stronger_than_source_existence_reading
+  C-SG-018:
+    use: physical spectrum and gapless traveling-packet ceiling
+    status: unchanged_and_rejects_universal_gapless_delocalization
+  C-PDE-011:
+    use: provenance for canonical periodic solver and simulation-evidence discipline only
+    status: unchanged_not_mapped_as_an_MC4_claim
+source_queue_candidates:
+  B1:
+    disposition: pending_adjudication
+    use_in_source: none
+    verdict: unrelated_and_unauthorized
+  G1:
+    disposition: pending_adjudication
+    use_in_source: none
+    verdict: unrelated_and_unauthorized
+  G2:
+    disposition: pending_adjudication
+    use_in_source: none
+    verdict: unrelated_and_unauthorized
+  LB3:
+    disposition: qualified
+    accepted_mappings: [C-SG-016, C-DYN-001]
+    use_in_source: copied numerical pattern named only in prose
+    verdict: no scientific premise imported
+  P3D1:
+    disposition: qualified
+    accepted_mappings: [C-PDE-001]
+    use_in_source: named only in prose
+    verdict: radial_three_dimensional_evidence_is_not_an_MC4_dependency
+  SA3:
+    disposition: qualified
+    accepted_mappings: [C-PDE-011]
+    use_in_source: copied sponge and diagnostic pattern named only in prose
+    verdict: no physical seeding interpretation imported
+actual_runtime_imports: [sys, numpy]
+nonduplication:
+  exact_physical_model: C-MED-003
+  exact_physical_breather: C-SG-017
+  exact_spectrum_and_gapless_ceiling: C-SG-018
+  periodic_solver_and_energy: substrate_framework.sine_gordon_1d
+  shared_numerical_evidence: substrate_framework.numerics
+  new_claim_or_api_needed: false
+debt: []
