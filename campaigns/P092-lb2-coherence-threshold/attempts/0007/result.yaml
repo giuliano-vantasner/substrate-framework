@@ -1,0 +1,15 @@
+attempt: 0007
+candidates: [B, C, D, E, F]
+status: independent_verifier_cycle_normalization_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+process_exit_status: 1
+failure: >-
+  Four independent checks passed. The fifth compared equivalent cycle-count
+  expressions structurally after a zero-spacing derivation, so harmless
+  normalization differences caused rejection before any scientific verdict.
+scientific_output: none
+selection_criteria_changed: false
+repair: Compare the exact simplified difference to zero.
+next_attempt: Re-run the full independent review from its first check.

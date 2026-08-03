@@ -1,0 +1,20 @@
+attempt: 0006
+candidates: [B, C, D, E, F]
+status: independent_verifier_radical_branch_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+process_exit_status: 1
+failure: >-
+  SymPy represented the matrix radicals as sqrt(Gamma-2*omega_0) times
+  sqrt(Gamma+2*omega_0), while the target used sqrt(Gamma^2-4*omega_0^2).
+  Those expressions require branch care and are not structurally identical.
+  The characteristic-polynomial check passed; execution stopped at the second
+  check before a scientific verdict.
+scientific_output: none
+selection_criteria_changed: false
+repair: >-
+  Avoid an invalid global radical rewrite. Verify both returned eigenvalues
+  against the independently derived polynomial and its exact Vieta sum and
+  product instead.
+next_attempt: Re-run the same independent review with branch-safe root checks.

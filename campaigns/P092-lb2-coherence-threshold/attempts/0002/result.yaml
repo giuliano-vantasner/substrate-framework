@@ -1,0 +1,19 @@
+attempt: 0002
+candidates: [A]
+status: provenance_command_path_failure
+command: >-
+  git -C /home/dan/substrate rev-parse
+  6d1f4e02f87a0bd1dc326cb68af01872d1e88c64:/merged-framework/bridges/phase-26/bridge_LB2_coherence_threshold.py
+process_exit_status: 128
+failure: >-
+  The Git object path incorrectly began with a slash, so rev-parse reported
+  that the path did not exist. The preceding filesystem SHA-256 check passed,
+  the chained source execution did not run, and no scientific output existed.
+scientific_output: none
+selection_criteria_changed: false
+repair_command: >-
+  git -C /home/dan/substrate rev-parse
+  6d1f4e02f87a0bd1dc326cb68af01872d1e88c64:merged-framework/bridges/phase-26/bridge_LB2_coherence_threshold.py
+repair_exit_status: 0
+repair_result: f5f0283886e686722bf9a10dce9172cd285b680d
+next_attempt: Re-run the unchanged source only after the corrected blob check succeeds.

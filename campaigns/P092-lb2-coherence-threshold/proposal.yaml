@@ -63,4 +63,4 @@ comparators_blinded_until: >-
   P092 freezes its contracts and structural criteria before executing LB2,
   reading its output, inspecting additional downstream consumer bodies, or
   using any physical or numerical comparator values.
-status: draft
+status: accepted

@@ -1,0 +1,20 @@
+attempt: 0012
+candidates: [J]
+status: terminal_record_validation_pass
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P092-lb2-coherence-threshold/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P092-lb2-coherence-threshold.md
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/decisions/C-DYN-001-review.md
+  - git diff --check
+process_exit_statuses: [0, 0, 0, 0, 0, 0]
+terminal_tallies:
+  primary: ALL 38 CHECKS PASS [C-DYN-001]
+  independent: ALL 23 CHECKS PASS [P092-INDEPENDENT]
+  governance: WORKFLOW VALID; 107 claims, 107 accepted, 0 proposals; 218 units, 128 pending, 0 partial
+  memory_records: both valid
+scope: >-
+  Record-sensitive terminal replay after the unchanged 836-test integrated
+  gate. No scientific or executable content changed after that full gate.
+next_attempt: Commit the closed P092 scientific transaction and synchronize the parent effort.

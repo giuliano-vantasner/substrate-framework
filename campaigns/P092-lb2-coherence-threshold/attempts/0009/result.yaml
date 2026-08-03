@@ -1,0 +1,19 @@
+attempt: 0009
+candidates: [J]
+status: memory_validation_interface_failure
+command: >-
+  memory validate --base /home/dan/substrate-framework
+  memory/vantasner/proposals/P092-lb2-coherence-threshold.md
+  memory/vantasner/decisions/C-DYN-001-review.md
+process_exit_status: 2
+failure: >-
+  memory validate accepts one path per invocation. Repository validation had
+  already passed with 107 accepted claims and the command made no scientific
+  or governance change.
+scientific_output: none
+selection_criteria_changed: false
+repair_commands:
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P092-lb2-coherence-threshold.md
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/decisions/C-DYN-001-review.md
+repair_exit_statuses: [0, 0]
+next_attempt: Run the unchanged integrated promotion workflow once.

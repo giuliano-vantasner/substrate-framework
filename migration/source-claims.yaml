@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 129
-  qualified: 77
+  pending_adjudication: 128
+  qualified: 78
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -5708,8 +5708,36 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-DYN-001
+  qualification: >-
+    LB2's exact characteristic-root classification survives only for a
+    separately declared abstract oscillator. Its nominal
+    omega_b/(2*pi*Gamma) count uses the undamped natural frequency rather than
+    the actual damped frequency and stays nonzero at the source's critical
+    boundary. The normalized damped sine-Gordon linearization instead gives
+    real Fourier-mode natural frequency sqrt(1+k^2)>=1, so a finite-amplitude
+    sub-gap breather frequency is not that mode frequency and can reverse the
+    damping classification. Positive uniform damping with zero boundary flux
+    excludes any nontrivial exact time-periodic finite-energy field for every
+    Gamma>0; finite-time transient ringing is a different, undefined LB2
+    predicate. No accepted survival, population, material, spark, or DBD map
+    exists.
+  evidence:
+  - campaigns/P092-lb2-coherence-threshold/reviews/source_adjudication.md
+  - campaigns/P092-lb2-coherence-threshold/evidence/source-reproduction.yaml
+  - campaigns/P092-lb2-coherence-threshold/evidence/source-audit.yaml
+  - campaigns/P092-lb2-coherence-threshold/evidence/consumer-audit.yaml
+  - campaigns/P092-lb2-coherence-threshold/evidence/candidate-comparison.yaml
+  - campaigns/P092-lb2-coherence-threshold/attempts/0003/result.yaml
+  - campaigns/P092-lb2-coherence-threshold/verify.py
+  - campaigns/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+  - memory/vantasner/decisions/C-DYN-001-review.md
+  note: >-
+    P092 adds pure exact oscillator and normalized field-mode APIs and tests.
+    Exact work uses no quadrature and introduces no version-specific NumPy
+    integration alias.
 - source_unit: LB3
   phase: phase-26
   path: merged-framework/bridges/phase-26/bridge_LB3_damped_sg_ringdown.py

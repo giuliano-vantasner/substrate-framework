@@ -1,0 +1,67 @@
+campaign: P092
+title: LB2 damped oscillator and coherence-threshold adjudication
+source_baseline: substrate@6d1f4e0
+source_units: [LB2]
+base_release: v0.78.0
+release_after_adjudication: v0.79.0
+adjudicated_at: '2026-08-04T09:15:00Z'
+selected_candidates:
+  - id: B
+    reason: The exact characteristic roots and regimes close independently of LB2's physical reading.
+  - id: C
+    reason: Amplitude, quadratic envelope, mechanical energy, nominal cycles, and actual damped cycles are explicitly separated.
+  - id: D
+    reason: C-SG-011 supplies the exact normalized gap-one Fourier-mode mapping.
+  - id: E
+    reason: C-SG-012 supplies the exact positive-damping period-integrated obstruction.
+  - id: F
+    reason: Exact sub-gap and critical-limit countermodels reject the load-bearing substitutions.
+  - id: H
+    reason: The absence of a normalized-to-physical parameter map remains an explicit ceiling.
+  - id: I
+    reason: Discriminant, sign, period, mass, mode, and flux mutations are verdict sensitive.
+  - id: J
+    reason: Pure APIs and governed tests survive while physical consumers remain pending or noncanonical.
+competing_candidates:
+  - {id: A, decision: rejected_literal_promotion}
+  - {id: G, decision: rejected_undefined_nonlinear_transient_classifier}
+claims:
+  - {id: C-DYN-001, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-SG-011, decision: unchanged_normalized_gap_one_linearization}
+  - {id: C-SG-012, decision: unchanged_exact_energy_balance}
+  - {id: C-SG-016, decision: unchanged_qualified_adiabatic_family_law}
+evidence:
+  verifier: verify.py
+  source_route: attempts/0003/result.yaml
+  recall_failure: attempts/0001/result.yaml
+  provenance_failure: attempts/0002/result.yaml
+  independent_representation_failures:
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+  combined_scientific_route: attempts/0008/result.yaml
+  memory_validation_interface_failure: attempts/0009/result.yaml
+  generated_memory_staging_failure: attempts/0010/result.yaml
+  integrated_gate: attempts/0011/result.yaml
+  terminal_record_validation: attempts/0012/result.yaml
+  independent_review: reviews/independent_oscillator_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  LB2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-26/bridge_LB2_coherence_threshold.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P092-lb2-coherence-threshold/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+  - .venv/bin/python -m pytest -q tests/test_damped_oscillator.py tests/test_sine_gordon.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

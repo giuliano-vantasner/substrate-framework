@@ -1,0 +1,15 @@
+source_unit: LB2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-26/bridge_LB2_coherence_threshold.py
+source_sha256: ae159aee3c076c1f86d77628a6bbbf206ad7e28dccd832e397250b71a981b28d
+source_blob: f5f0283886e686722bf9a10dce9172cd285b680d
+source_unchanged: true
+process_exit_status: 0
+elapsed_seconds: 0.38
+maximum_resident_kb: 52432
+terminal_tally: ALL 17 CHECKS PASS
+scientific_verdict: >-
+  Reproduced as historical evidence. The tally establishes only the script's
+  abstract-SHO identities and chosen nominal-cycle limits. It does not close
+  the sine-Gordon mode premise, nonlinear breather existence, survival, or
+  spark/DBD claims.

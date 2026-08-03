@@ -1,0 +1,21 @@
+attempt: 0011
+candidates: [B, C, D, E, F, H, I, J]
+status: integrated_promotion_gate_pass
+command: scripts/validate.sh
+process_exit_status: 0
+terminal_results:
+  governance: WORKFLOW VALID; 107 claims, 107 accepted, 0 proposals
+  migration: 218 units, 128 pending, 0 partial
+  memory: All 396 files valid
+  skill: Skill is valid
+  pytest: 836 passed in 80.60s
+  workflow: ALL REPOSITORY WORKFLOW CHECKS PASS
+scientific_verdict: >-
+  The complete accepted dependency closure, canonical package, immutable
+  campaign, generated consumers, memory, governance, and test suite agree on
+  C-DYN-001 and the qualified LB2 disposition.
+ceremony_note: >-
+  This was the single complete suite after the generated-memory freshness
+  repair. Subsequent campaign-record additions receive record-sensitive
+  validation only unless scientific or executable content changes.
+next_attempt: Validate only the terminal record delta, inspect the final diff, and commit the scientific transaction.

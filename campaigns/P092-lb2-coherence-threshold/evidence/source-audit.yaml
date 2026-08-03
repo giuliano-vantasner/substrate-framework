@@ -1,0 +1,22 @@
+source_unit: LB2
+literal_check_calls: 17
+imports: [sys, sympy]
+accepted_framework_imports: []
+declared_equation: x'' + Gamma*x' + omega_b^2*x = 0
+load_bearing_imported_premises:
+  - LB1 supplies the damped-SHO reduction with omega_b as natural frequency.
+  - LB1 supplies tau=1/Gamma as an energy e-fold time.
+  - MC3 is cited by a later annotation for a per-medium omega_b map.
+what_the_checks_actually_cover:
+  - sampled and factorized discriminant classification of the declared oscillator
+  - source-defined nominal N_coh identities, limits, and monotonicity
+  - rejection of one arbitrary constant-floor comparator
+missing_oracles:
+  - derivation of the declared oscillator from the normalized damped sine-Gordon linearization
+  - distinction between natural and damped cycle frequencies
+  - exact mechanical-energy evolution rather than a quadratic-envelope convention
+  - positive-damping obstruction to nontrivial exact periodic fields
+  - operational definition or calibration of coherence survival
+  - accepted normalized-to-physical loss and frequency maps
+  - any spark/DBD, population, probability, or material consumer validation
+audit_verdict: qualified

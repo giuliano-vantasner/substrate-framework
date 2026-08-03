@@ -1,0 +1,70 @@
+campaign: P092
+selection_basis:
+  - accepted dependency closure
+  - exact branch, energy, mode, and periodicity semantics
+  - mutation sensitivity and independent rederivation
+  - parameter economy and nonduplication
+  - no selection by comparator closeness or source tally
+candidates:
+  A:
+    decision: rejected_literal_promotion
+    reason: >-
+      The seventeen checks reproduce the declared SHO identities but never
+      derive that oscillator with omega_b as natural frequency from the
+      normalized field, define survival, or validate a spark/DBD consumer.
+  B:
+    decision: selected
+    reason: >-
+      The exact characteristic polynomial, roots, three regimes, and general
+      underdamped solution are closed and independently reproduced by a
+      first-order state matrix.
+  C:
+    decision: selected_with_observable_qualification
+    reason: >-
+      Coordinate amplitude has envelope exp(-Gamma*t/2), its square has
+      envelope exp(-Gamma*t), and mechanical energy has exact derivative
+      -Gamma*q_dot^2. Actual damped cycles use omega_d; the source's omega_0
+      count is only a nominal weak-damping convention.
+  D:
+    decision: selected
+    reason: >-
+      The accepted normalized small-amplitude field equation gives real-mode
+      natural frequency sqrt(1+k^2) and critical damping 2*sqrt(1+k^2).
+  E:
+    decision: selected
+    reason: >-
+      The accepted stress-energy identity proves that positive uniform damping
+      and zero integrated boundary flux exclude a nontrivial exactly periodic
+      finite-energy field.
+  F:
+    decision: selected
+    reason: >-
+      Gamma=6/5, k=0, and omega_b=1/2 is an exact countermodel: the normalized
+      field mode is underdamped while the source substitution is overdamped.
+      The actual damped cycle count also vanishes at criticality while the
+      source nominal count remains 1/(4*pi).
+  G:
+    decision: rejected_as_undefined_in_LB2
+    reason: >-
+      LB2 supplies no finite observation window, nonlinear transient
+      classifier, phase-coherence observable, solver, or error norm. Pending
+      LB3 cannot be imported to repair that missing claim.
+  H:
+    decision: selected_as_claim_ceiling
+    reason: >-
+      No accepted map from normalized Gamma, omega_b, or k to material loss,
+      density, collision, discharge, spark, or DBD variables exists.
+  I:
+    decision: selected
+    reason: >-
+      Discriminant factor, damping sign, period factor, mass gap, boundary
+      flux, and natural-frequency substitutions all change load-bearing
+      verdicts in primary or independent checks.
+  J:
+    decision: selected
+    reason: >-
+      The exact surviving content is distinct enough for a pure reusable
+      oscillator module. LB3, LB4, lifetime, and DBD consumers remain pending
+      or noncanonical and cannot broaden the accepted theorem.
+selected_claim: C-DYN-001
+source_disposition: qualified

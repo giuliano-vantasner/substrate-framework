@@ -1,0 +1,18 @@
+attempt: 0005
+candidates: [B, C, D, E, F]
+status: independent_verifier_symbol_identity_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+process_exit_status: 1
+failure: >-
+  SymPy Matrix.charpoly cloned the requested generator without its assumptions,
+  producing a same-named but symbolically distinct lambda. Expansion therefore
+  could not cancel the two printed lambda polynomials. The verifier again
+  stopped at its first check and made no scientific verdict.
+scientific_output: none
+selection_criteria_changed: false
+repair: >-
+  Derive the characteristic polynomial directly as det(lambda*I-A), which
+  preserves the exact declared lambda object and is independently auditable.
+next_attempt: Re-run the same matrix, energy, dispersion, and periodicity review.

@@ -1,0 +1,17 @@
+attempt: 0004
+candidates: [B, C, D, E, F]
+status: independent_verifier_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+process_exit_status: 1
+failure: >-
+  The first independent matrix check used structural equality between an
+  algebraically equivalent factored characteristic polynomial and its expanded
+  target. The verifier stopped before any scientific verdict.
+scientific_output: none
+selection_criteria_changed: false
+repair: >-
+  Compare the expanded polynomial difference to exact zero, preserving the
+  same preregistered matrix derivation and target polynomial.
+next_attempt: Re-run the independent review unchanged apart from the exact normalization.

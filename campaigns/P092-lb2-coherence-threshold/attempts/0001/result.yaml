@@ -1,0 +1,21 @@
+attempt: 0001
+candidates: [J]
+status: recall_interface_failure
+command: >-
+  memory grep "damped oscillator|critical damping|coherent cycles" --limit 20
+process_exit_status: 2
+failure: >-
+  The bundled memory grep command has no --limit option. No scientific source,
+  comparator, or consumer was opened and no claim-selection criterion changed.
+scientific_output: none
+selection_criteria_changed: false
+repair_command: >-
+  memory grep "damped oscillator|critical damping|coherent cycles"
+repair_exit_status: 0
+repair_result: >-
+  The supported command completed and returned only the active migration
+  effort and P091 lifetime records; it found no accepted damped-oscillator or
+  coherence-threshold claim to reuse.
+next_attempt: >-
+  Reproduce the hash-pinned LB2 source unchanged, then test its predicates
+  against the preregistered oscillator, field-mode, and periodicity semantics.

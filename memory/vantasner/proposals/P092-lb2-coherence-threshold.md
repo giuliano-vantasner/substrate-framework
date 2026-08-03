@@ -2,7 +2,7 @@
 description: Separate LB2's damped-oscillator threshold from nonlinear coherence claims
 author: vantasner
 created: '2026-08-04T08:30:00Z'
-updated: '2026-08-04T08:30:00Z'
+updated: '2026-08-04T09:15:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-LB2
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P092 LB2 Coherence Threshold Audit
 
@@ -193,3 +193,19 @@ continue. An exact discriminant or terminal source tally is not sufficient.
 See LB2, LB1, LB3, LB4, MC3, SA2, P048, P091, C-SG-001, C-SG-011,
 C-SG-012, C-SG-016, the canonical exact modules, and the parent migration
 effort.
+
+## Terminal Adjudication
+
+P092 qualifies LB2 and promotes `C-DYN-001` in `v0.79.0`. The declared
+abstract oscillator has the standard exact roots and regimes, but actual
+underdamped cycles use `omega_d`, mechanical energy obeys
+`dE/dt=-Gamma*q_dot^2`, and the source's natural-frequency count remains
+nonzero at critical damping. The normalized field linearization instead has
+mode frequency `sqrt(1+k^2)>=1`; a sub-gap breather frequency is not that
+linear natural frequency. Positive uniform damping with zero integrated
+boundary flux excludes a nontrivial exactly periodic finite-energy field for
+every positive Gamma, while finite-time transient ringing and survival require
+separate definitions and evidence. Primary, independent, mutation, consumer,
+focused, and governance checks pass. Exact P092 work needs no quadrature and
+introduces no version-specific NumPy integration alias. Campaign debt is empty
+and the parent migration continues to LB3.

@@ -1,0 +1,15 @@
+attempt: 0010
+candidates: [J]
+status: integrated_gate_generated_memory_stale
+command: scripts/validate.sh
+process_exit_status: 1
+completed_boundary: >-
+  Repository governance passed with 107 accepted claims and a 218-unit queue
+  containing 128 pending units.
+failure: >-
+  The workflow stopped before the test suite because the generated accepted
+  memory file set had not yet been rendered for C-DYN-001 and v0.79.0.
+scientific_output: none
+selection_criteria_changed: false
+repair_command: PYTHONPATH=src .venv/bin/python scripts/render_memory.py
+next_attempt: Render canonical accepted memory, validate its freshness, then rerun the integrated gate once.

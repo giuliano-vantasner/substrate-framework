@@ -1,0 +1,18 @@
+attempt: 0008
+candidates: [B, C, D, E, F, H, I, J]
+status: scientific_routes_pass
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P092-lb2-coherence-threshold/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_damped_oscillator.py tests/test_sine_gordon.py
+process_exit_statuses: [0, 0, 0]
+terminal_tallies:
+  primary: ALL 38 CHECKS PASS [C-DYN-001]
+  independent: ALL 23 CHECKS PASS [P092-INDEPENDENT]
+  focused_pytest: 59 passed
+scientific_verdict: >-
+  Exact oscillator, observable, normalized field-mode, countermodel, and
+  positive-damping periodicity-obstruction claims pass primary and independent
+  routes with load-bearing mutations. Literal nonlinear survival and
+  spark/DBD promotion is rejected.
+next_attempt: Stage claim-level governance, immutable campaign, release, docs, and memory for the integrated promotion gate.

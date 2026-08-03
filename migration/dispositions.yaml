@@ -912,6 +912,40 @@ units:
       work uses no quadrature, independent field evidence uses adaptive SciPy
       quadrature, and sampled PDE ledgers use the shared trapezoid_integral
       helper rather than the version-specific np.trapz alias.
+  LB2:
+    disposition: qualified
+    accepted_claims:
+      - C-DYN-001
+    qualification: >-
+      LB2's characteristic roots, abstract under/critical/overdamped regimes,
+      and nominal natural-frequency cycle expression are exact for its
+      separately declared SHO. The normalized damped sine-Gordon
+      linearization instead has real-mode natural frequency sqrt(1+k^2)>=1;
+      substituting a finite-amplitude sub-gap breather frequency can reverse
+      the damping classification. Actual underdamped cycles in a 1/Gamma
+      quadratic-envelope window use omega_d and vanish at criticality, while
+      mechanical energy obeys dE/dt=-Gamma*q_dot^2 rather than a pointwise
+      exponential. Positive uniform damping with zero integrated boundary
+      flux excludes a nontrivial exactly periodic finite-energy field for any
+      Gamma>0. LB2 defines no finite-time transient classifier, phase
+      coherence, survival probability, population, material map, or spark/DBD
+      mechanism; its decreasing-number and constant-floor checks do not supply
+      those missing predicates.
+    evidence:
+      - campaigns/P092-lb2-coherence-threshold/reviews/source_adjudication.md
+      - campaigns/P092-lb2-coherence-threshold/evidence/source-reproduction.yaml
+      - campaigns/P092-lb2-coherence-threshold/evidence/source-audit.yaml
+      - campaigns/P092-lb2-coherence-threshold/evidence/consumer-audit.yaml
+      - campaigns/P092-lb2-coherence-threshold/evidence/candidate-comparison.yaml
+      - campaigns/P092-lb2-coherence-threshold/attempts/0003/result.yaml
+      - campaigns/P092-lb2-coherence-threshold/verify.py
+      - campaigns/P092-lb2-coherence-threshold/reviews/independent_oscillator_review.py
+      - memory/vantasner/decisions/C-DYN-001-review.md
+    note: >-
+      P092 promotes exact oscillator, observable, field-mode, countermodel, and
+      periodicity-obstruction content through primary and independent symbolic
+      routes. Exact work uses no quadrature and introduces no version-specific
+      NumPy integration alias.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:
