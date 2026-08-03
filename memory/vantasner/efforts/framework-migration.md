@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T10:30:00Z'
+updated: '2026-08-04T12:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,16 +23,15 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.79.0`, containing one hundred seven claims.
-Its latest addition, C-DYN-001, gives exact damped-oscillator roots, regimes,
-observable-specific energy/envelope/cycle semantics, the normalized
-sine-Gordon Fourier-mode map, and the positive-damping exact-periodicity
-obstruction. The latest terminal adjudication is P093 at commit `e589e43`: LB3
-is qualified as regression evidence for C-SG-016 and C-DYN-001 because its
-finite-core energy fit omits boundary flux, its coarse FFT-bin comparator is
-not an instantaneous frequency oracle, and its alleged high-damping boundary
-conflicts with the accepted normalized field-mode convention. P093 adds no
-claim or release delta.
+The current accepted frontier is `v0.80.0`, containing one hundred eight claims.
+Its latest addition, C-COH-002, gives the exact characteristic of a declared
+Brownian phase, separates mean phasor from iid pair coherence, derives their
+uniform-window averages, and types the independent damped mean and quadratic
+factors. The latest terminal adjudication is P094 at commit `1553412`: LB4 is
+qualified because its FDT check is a self-equality, its physical diffusion
+coefficient and fixed-energy breather projection are unproved, and its broad
+free parameter grid cannot predict the inserted 0.125 gate. No physical
+thermal, survival, population, or discharge interpretation is accepted.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -58,7 +57,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 127 pending, 0 partially migrated, 3 migrated, 79 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 126 pending, 0 partially migrated, 3 migrated, 80 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -183,6 +182,7 @@ Attempts are append-only and individually reproducible.
 | 0111 | P091 exact kinetic/form-factor/action law and LB1 lifetime audit | `campaigns/P091-lb1-dissipative-breather-lifetime/attempts/0001` through `0009`, then terminal queue replay | accepted as qualified C-SG-016 in v0.78.0; commit `6c444a6` | Thirty-three primary, sixteen independent, and twelve PDE checks derive the exact `omega*J` kinetic average, `theta*cot(theta)` form factor, nonlinear reduced energy/frequency law, instantaneous versus integrated e-fold distinction, and normalized-unit ceiling. Three leapfrog grids, a larger domain, DOP853, slower damping, lossless control, and energy ledgers give sub-percent controlled evidence; the frozen-D source law is more than four times worse. The integrated workflow passes all 823 tests and final records receive only record-sensitive replay | Audit LB2's damped-oscillator threshold and coherent-cycle semantics without globalizing the small-amplitude reduction, importing pending MC3/SA2, or identifying underdamped linear response with a nonlinear coherent-breather existence theorem |
 | 0112 | P092 exact oscillator/mode/periodicity classification and LB2 audit | `campaigns/P092-lb2-coherence-threshold/attempts/0001` through `0012`, then terminal record replay | accepted as C-DYN-001 with LB2 qualified in v0.79.0; commit `f17091e` | Thirty-eight primary and twenty-three independent checks derive exact roots, regimes, energy/envelope distinctions, actual versus nominal cycle counts, the normalized gap-one Fourier-mode boundary, an exact sub-gap countermodel, and the positive-damping periodicity obstruction. LB2's source passes seventeen checks but never derives its nonlinear survival or spark/DBD reading; LB3's alleged overdamped guard is still linearly underdamped in the accepted field convention. Fifty-nine focused tests and the single repaired integrated workflow pass all 836 tests; final records receive only record-sensitive replay | Audit LB3's nonlinear damped-field ring-down numerics without importing LB2's rejected threshold, mistaking finite-time relaxation for an exact existence boundary, duplicating C-SG-016's adiabatic PDE evidence, or relying on version-specific trapezoidal aliases |
 | 0113 | P093 finite-core/window/FFT/transient classification and LB3 audit | `campaigns/P093-lb3-damped-sg-ringdown/attempts/0001` through `0008`, then terminal record replay | LB3 qualified with v0.79.0 unchanged; commit `e589e43` | Thirty-five primary and twenty-four independent checks prove scheme duplication, retain finite-core boundary flux, reconstruct the exact fit sampling and `pi/40` FFT bins, show all four slopes favor C-SG-016's evolving-law window regression over the source point comparator, and reverse the source's high-damping label under the accepted gap-one field mode. The eight-check source reproduces, 84 focused tests and P091's 33 exact checks replay, and the single integrated gate passes all 836 tests. No distinct claim, API, or expensive duplicate PDE campaign is warranted; final records receive only record-sensitive replay | Audit LB4's fluctuation-dissipation, phase-diffusion, visibility, and `g_window` construction without globalizing LB1's small-amplitude decay, importing an unproved stochastic collective coordinate, or fitting the inserted 0.125 consumer gate |
+| 0114 | P094 exact Brownian-phase/observable/window classification and LB4 audit | `campaigns/P094-lb4-thermal-decoherence-window/attempts/0001` through `0009`, then terminal record replay | accepted as C-COH-002 with LB4 qualified in v0.80.0; commit `1553412` | Sixty primary and thirty-seven independent checks derive the Brownian harmonic characteristic, variance, mean and pair factors, uniform-window averages, and typed damped composition; an explicit Gibbs-stationary Langevin oscillator gives an angle-dependent phase projection and fixed-energy average `Gamma*Theta/(4*E)`, refuting LB4's universal coefficient. Every one of the forty passing source predicates is individually adjudicated, and the free target surface exposes the 0.125 bracket as nonidentifying. Thirty-six focused tests, P086/P092/P091 dependency replays, and the single integrated workflow pass all 845 tests; final records receive only record-sensitive replay | Audit MC1's dimensional constitutive reduction and physical breather rescaling without treating a declared medium Lagrangian as a derived material, conflating normalized and physical frequencies, or importing later MC2/MC3 parameter selections |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -199,7 +199,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 127 bridge units remain pending, 3 are migrated, 79 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 126 bridge units remain pending, 3 are migrated, 80 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -781,11 +781,25 @@ dependency, and integrated checks pass. No direct NumPy trapezoidal call is
 introduced, and P091's already stronger PDE refinements are not repeated as
 validation ceremony.
 
+P094 adds C-COH-002 for the declared Brownian phase
+`delta_t=sqrt(2*D)*W_t`. Its exact characteristic is
+`exp(-n^2*D*t)`, variance is `2*D*t`, mean phasor is `exp(-D*t)`, and iid
+same-time pair coherence is `exp(-2*D*t)`. Uniform-window averages retain
+their normalized integrals rather than endpoint substitutions, and independent
+deterministic damping composes into explicitly typed mean and quadratic
+factors. An independent Langevin-coordinate derivation shows why LB4's
+physical coefficient does not close: phase diffusion is angle dependent,
+fixed-energy averaging gives a different factor under the declared SDE, and
+energy itself evolves stochastically. All forty source predicates have separate
+verdicts, and the free parameter surface makes the 0.125 bracket
+nonpredictive. Exact P094 work uses no quadrature alias, while sampled framework
+integration remains behind `trapezoid_integral`.
+
 ## Canonicalization
-The registry, `v0.79.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seven accepted claims. P001 through P093 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 127 pending, 0 partial, 3 migrated, 79 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.80.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred eight accepted claims. P001 through P094 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 126 pending, 0 partial, 3 migrated, 80 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 127 pending, 3 migrated, 79 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is LB4. Its hash-pinned symbolic source combines an asserted fluctuation-dissipation noise strength, a declared phase-diffusion coefficient, an exponential visibility model, LB1's damping lifetime, and inserted operational temperature, energy, and coherence thresholds to reproduce a `g_window` near the downstream 0.125 gate. P094 must freeze literal reproduction, stochastic-coordinate derivation, noise normalization and units, classical and zero-point limits, phase reduction, visibility observable, lifetime convention, threshold covariance, parameter identifiability, comparator blinding, accepted FDT imports, consumer, dependency, and claim-delta candidates before executing LB4 or reading its additional outputs. C-SG-016 supplies only a normalized deterministic damped-family law, C-DYN-001 supplies no stochastic phase coordinate or survival probability, and existing engineering gates cannot become derivation inputs.
+The effort remains active. D4 is discharged, but D1 remains open with 126 pending, 3 migrated, 80 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is MC1, pinned at SHA-256 `32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3`. The generated queue exposes a declared dimensional sine-Gordon medium Lagrangian, its Euler-Lagrange equation, characteristic speed, gap and length, a normalization map, and a physical-coordinate breather form. P095 must freeze literal reproduction, variational derivation, dimensions and positivity, coordinate and frequency conventions, action and energy scaling, boundary/domain assumptions, material-identification ceiling, uniqueness and parameter-identifiability alternatives, later-consumer audit, and claim nonduplication before opening or executing the source. A constitutive Lagrangian can support an exact conditional reduction without becoming a derived substrate material or fixing its parameters.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
