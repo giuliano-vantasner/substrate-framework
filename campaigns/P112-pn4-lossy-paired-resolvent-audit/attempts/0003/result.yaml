@@ -1,0 +1,19 @@
+campaign: P112
+attempt: 0003
+candidate: canonical_exact_pair_resolvent
+status: failed
+command: .venv/bin/python -m pytest tests/test_paired_resolvent.py -q
+exit_status: 1
+terminal_tally: 1 failed, 13 passed
+compatibility_event: none
+verdict: verifier_representation_failure
+mechanism: >-
+  The fixed-per-pair scaling predicate compared two algebraically identical
+  SymPy expressions with structural equality. One side was rationally
+  simplified and the other retained factored complex denominators, so the
+  scientific identity held while the representation-sensitive assertion
+  failed.
+next_attempt: >-
+  Preserve the scaling statement and replace structural comparison by an
+  exact zero-residual assertion, then rerun the otherwise unchanged focused
+  oracle and compile and diff checks.

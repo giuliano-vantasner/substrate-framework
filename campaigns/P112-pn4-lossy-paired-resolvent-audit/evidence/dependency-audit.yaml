@@ -1,0 +1,35 @@
+campaign: P112
+proposed_claim: C-RES-001
+mathematical_imports:
+  - finite-dimensional complex vector spaces and exact matrix inversion
+  - declared block decomposition and Schur-complement algebra
+  - rational functions, derivatives, exact limits, and complex magnitudes
+accepted_claim_ceiling:
+  C-EFT-001: >-
+    General real stationary elimination pattern only. It supplies neither a
+    complex spectral resolvent nor a common imaginary shift or open-system map.
+  C-DYN-001: >-
+    Abstract real damping distinctions only. It explicitly supplies no
+    material, decoherence, population, or physical loss parameter map.
+  C-SG-019: >-
+    PN1 formal cosine-coordinate coefficient ceiling only; no quantum channel.
+  C-SPN-002: >-
+    PN3 normalized finite spin ladder ceiling only; no interaction or rate.
+source_dependencies:
+  - {id: FS1, authority: none, role: candidate_provenance_only}
+  - {id: LB1, authority: none, role: candidate_provenance_only}
+  - {id: LB2, authority: none, role: candidate_provenance_only}
+  - {id: PN1, authority: C-SG-019_only, role: algebraic_ceiling}
+  - {id: PN2, authority: none, role: pending_source_only}
+  - {id: PN3, authority: C-SPN-002_only, role: algebraic_ceiling}
+  - {id: PN5, authority: none, role: forward_pending_source_and_cycle_member}
+candidate_cycle: [PN4, PN5, PN4]
+cycle_authority: none
+physical_imports_not_allowed:
+  - complete-system Hermiticity or microscopic bath Hamiltonian
+  - Markov, Born, secular, rotating-wave, or Lindblad assumptions
+  - jump operators, trace preservation, no-jump conditioning, or measurement rule
+  - nuclear states, phonons, multiphonon interaction, or common-mode coupling
+  - transition probability, rate, yield, material realization, or observed scale
+dependency_closure: exact_finite_complex_matrix_claim_only
+status: complete

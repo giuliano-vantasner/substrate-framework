@@ -1,0 +1,53 @@
+campaign: P112
+title: PN4 exact finite paired complex-resolvent and interpretation audit
+source_baseline: substrate@6d1f4e0
+source_units: [PN4]
+base_release: v0.93.0
+release_after_adjudication: v0.94.0
+adjudicated_at: '2026-08-07T23:30:00Z'
+selected_candidates:
+  - {id: B, reason: Exact denominator algebra fixes the general and zero-energy pair forms.}
+  - {id: C, reason: Independent full-matrix inversion closes the declared Schur complement.}
+  - {id: D, reason: Exact calculus fixes both loss boundaries and the unique positive peak.}
+  - {id: E, reason: Unequal complex products expose the precise cancellation locus.}
+  - {id: F, reason: Competing size conventions separate enlargement from numerical refinement.}
+  - {id: G, reason: Short-time and norm countermodels enforce the dynamics and probability ceiling.}
+  - {id: H, reason: Dependency, cycle, literature, predicate, and consumer audits prevent premise inheritance.}
+  - {id: I, reason: Nonduplication supports one distinct pure package theorem.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims:
+  - {id: C-RES-001, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-EFT-001, decision: unchanged_real_stationary_elimination_ceiling}
+  - {id: C-DYN-001, decision: unchanged_abstract_damping_and_physical_map_ceiling}
+  - {id: C-SG-019, decision: unchanged_PN1_classical_coefficient_ceiling}
+  - {id: C-SPN-002, decision: unchanged_PN3_finite_spin_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  implementation_repairs: [attempts/0002/result.yaml, attempts/0003/result.yaml, attempts/0005/result.yaml]
+  exact_package_route: attempts/0004/result.yaml
+  exact_and_independent_routes: attempts/0006/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_resolvent_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-RES-001-review.md
+source_disposition:
+  PN4: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN4_lossy_exchange_and_guard.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P112-pn4-lossy-paired-resolvent-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P112-pn4-lossy-paired-resolvent-audit/reviews/independent_resolvent_review.py
+  - .venv/bin/python -m pytest -q tests/test_paired_resolvent.py tests/test_effective_actions.py tests/test_damped_oscillator.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

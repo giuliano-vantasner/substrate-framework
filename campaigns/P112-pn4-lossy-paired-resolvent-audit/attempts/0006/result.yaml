@@ -1,0 +1,23 @@
+campaign: P112
+attempt: 0006
+candidate: primary_and_independent_exact_resolvent
+status: completed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P112-pn4-lossy-paired-resolvent-audit/verify.py &&
+  PYTHONPATH=src .venv/bin/python
+  proposals/P112-pn4-lossy-paired-resolvent-audit/reviews/independent_resolvent_review.py
+exit_status: 0
+terminal_tally: 49 primary and 20 independent checks pass
+compatibility_event: none
+verdict: exact_claim_and_source_ceiling_verified
+mechanism: >-
+  Exact rational summation and a fresh full-matrix inversion agree. Sign,
+  half-width, energy, coupling equality and phase, zero and infinite limits,
+  peak loss, pair-count convention, and consumer hashes are load-bearing. A
+  fresh short-time series disproves the source's zero-loss no-transfer prose;
+  non-Hermitian raw component weights do not derive probabilities or rates.
+next_attempt: >-
+  Complete claim review and impact analysis, promote only C-RES-001, qualify
+  PN4, synchronize release, docs, memory, and source ledger, then run one
+  integrated terminal gate.

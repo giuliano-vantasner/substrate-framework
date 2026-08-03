@@ -1,0 +1,26 @@
+campaign: P112
+attempt: 0001
+candidate: literal_source_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-30/bridge_PN4_lossy_exchange_and_guard.py
+source_sha256: 45ac6c039805964efa41ae8167f6257af18c5ef2b066d376efa19ec79dfd0c67
+compatibility_preflight: >-
+  If immutable source fails only because np.trapz is absent, preserve the
+  version event and replay with an alias only. Do not classify compatibility
+  as scientific failure.
+status_after_run: completed
+exit_status: 0
+terminal_tally: ALL 27 CHECKS PASS
+compatibility_event: none
+verdict: literal_mixed_symbolic_numeric_regression_reproduced
+mechanism: >-
+  Twenty-two static sites expand to twenty-seven passing predicates. Exact
+  E=0 symmetric-pair cancellation and the positive-loss conditional element
+  reproduce. The same run gives nonzero lossless B population, disproving the
+  source's stronger only-with-loss narrative. L to 2L adds states at fixed
+  coupling rather than refining one model. The H5b marker and literal scanner
+  are provenance-policy checks, not physical or literature oracles.
+next_attempt: >-
+  Implement the exact energy-dependent pair and block resolvent, limits,
+  extrema, asymmetry and size-normalization ledgers; independently invert the
+  full matrix; and audit dynamics, literature, dependency cycle, and consumers.

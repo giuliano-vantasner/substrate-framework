@@ -1,0 +1,47 @@
+campaign: P112
+source_unit: PN4
+method: >-
+  Traverse candidate_dependencies in the generated 218-unit queue from PN4,
+  exclude the PN4 root reached again through the PN4-PN5 cycle, and pin every
+  remaining reachable source file at the source baseline. Edges are provenance
+  only and grant no accepted authority.
+consumers:
+  - {source_unit: CM2, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py, sha256: c75fee880740765d3ef3e32634bf05360fd9789e46bd579fd07af60d29a79fa2}
+  - {source_unit: CM5, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py, sha256: 8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841}
+  - {source_unit: CM6, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py, sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5}
+  - {source_unit: CM7, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py, sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2}
+  - {source_unit: GB6, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py, sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a}
+  - {source_unit: PN5, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-30/bridge_PN5_magnitude_reproduction.py, sha256: 8b2a35a873d9414653f9add48ceeed50d0d32142064bd67b95845b92aeaf87eb}
+  - {source_unit: PN6, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-30/bridge_PN6_general_L_lossless_null.py, sha256: 50ebbf97568fef13e69fc926db3e57457aba4685f3140ac8786bed525e71289f}
+  - {source_unit: WN7, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py, sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50}
+  - {source_unit: CM1, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py, sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc}
+  - {source_unit: CM3, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM3_crossover.py, sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb}
+  - {source_unit: CM4, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py, sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019}
+  - {source_unit: GB1, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-32/bridge_GB1_channel_definitions.py, sha256: ace0515d7ea362ef45a55db22308aecffdad9a003d03f2b1209c0a11874b489b}
+  - {source_unit: GB4, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py, sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0}
+  - {source_unit: MD1, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py, sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba}
+  - {source_unit: MD2, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py, sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0}
+  - {source_unit: MD3, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py, sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128}
+  - {source_unit: MD4, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py, sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144}
+  - {source_unit: MD5, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py, sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb}
+  - {source_unit: MD6, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py, sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf}
+  - {source_unit: WN2, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py, sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c}
+  - {source_unit: WN3, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py, sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88}
+  - {source_unit: WN4, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py, sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2}
+  - {source_unit: WN5, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py, sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc}
+  - {source_unit: WN6, relation: indirect, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py, sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10}
+closure:
+  direct_count: 8
+  indirect_count: 16
+  accepted_consumers: 0
+  excluded_cycle_root: PN4
+  interpretation: >-
+    No edge supplies a microscopic bath, trace-preserving dynamics, nuclear or
+    phonon state, physical coupling, probability rule, transition rate, or
+    material scale. Each consumer remains independently pending.
+canonical_consumers:
+  - src/substrate_framework/paired_resolvent.py
+  - tests/test_paired_resolvent.py
+  - campaigns/P112-pn4-lossy-paired-resolvent-audit/verify.py
+  - campaigns/P112-pn4-lossy-paired-resolvent-audit/reviews/independent_resolvent_review.py
+status: complete

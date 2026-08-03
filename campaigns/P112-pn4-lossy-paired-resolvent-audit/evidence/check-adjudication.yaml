@@ -1,0 +1,43 @@
+campaign: P112
+source_unit: PN4
+static_check_site_count: 22
+runtime_predicate_count: 27
+predicates:
+  - {id: PN4-01, source_site: L3_zero_loss_effective_element, runtime_case: L3, verdict: retained, ceiling: exact_E0_symmetric_equal_product_cancellation}
+  - {id: PN4-02, source_site: L3_positive_loss_effective_element, runtime_case: L3, verdict: retained, ceiling: conditional_finite_matrix_element_only}
+  - {id: PN4-03, source_site: L3_positive_over_zero_ratio, runtime_case: L3, verdict: qualified, ceiling: denominator_is_roundoff_near_exact_zero_not_physical_enhancement}
+  - {id: PN4-04, source_site: L6_zero_loss_effective_element, runtime_case: L6, verdict: duplicate, ceiling: PN4_01_model_enlargement}
+  - {id: PN4-05, source_site: L6_positive_loss_effective_element, runtime_case: L6, verdict: duplicate, ceiling: PN4_02_model_enlargement}
+  - {id: PN4-06, source_site: L3_to_L6_stability, runtime_case: fixed_per_state_coupling, verdict: rejected, ceiling: changes_model_size_not_numerical_refinement}
+  - {id: PN4-07, source_site: nonhermitian_time_domain, runtime_case: raw_B_component, verdict: qualified, ceiling: comparative_raw_component_not_zero_loss_null_or_probability}
+  - {id: PN4-08, source_site: gamma_independent_fake, runtime_case: identical_inputs, verdict: retained, ceiling: mutation_self_test_only}
+  - {id: PN4-09, source_site: positive_loss_increase, runtime_case: Gamma_1p5_Delta, verdict: qualified, ceiling: local_comparison_not_monotone_loss_law}
+  - {id: PN4-10, source_site: H5a_offdiagonal, runtime_case: two_by_two_Dirac_toy, verdict: retained, ceiling: basis_matrix_identity_only}
+  - {id: PN4-11, source_site: H5a_angle, runtime_case: two_by_two_Dirac_toy, verdict: retained, ceiling: exact_rotation_angle_only}
+  - {id: PN4-12, source_site: H5a_small_momentum, runtime_case: formal_series, verdict: retained, ceiling: local_series_only}
+  - {id: PN4-13, source_site: H5a_large_c_limit, runtime_case: formal_limit, verdict: retained, ceiling: toy_angle_limit_only}
+  - {id: PN4-14, source_site: H5a_constant_fake, runtime_case: one_seventh, verdict: retained, ceiling: mutation_self_test_only}
+  - {id: PN4-15, source_site: H5a_free_symbols, runtime_case: c_and_P, verdict: qualified, ceiling: omission_guard_not_physical_normalization_derivation}
+  - {id: PN4-16, source_site: H5b_marker, runtime_case: boolean_true, verdict: qualified, ceiling: import_presence_only_not_literature_or_magnitude_oracle}
+  - {id: PN4-17, source_site: H7_PN1_scan, runtime_case: three_literals, verdict: qualified, ceiling: lexical_policy_only}
+  - {id: PN4-18, source_site: H7_PN2_scan, runtime_case: three_literals, verdict: qualified, ceiling: lexical_policy_only}
+  - {id: PN4-19, source_site: H7_PN3_scan, runtime_case: three_literals, verdict: qualified, ceiling: lexical_policy_only}
+  - {id: PN4-20, source_site: H7_PN4_scan, runtime_case: three_literals, verdict: qualified, ceiling: lexical_policy_only}
+  - {id: PN4-21, source_site: H7_PN5_scan, runtime_case: three_literals, verdict: qualified, ceiling: lexical_policy_only}
+  - {id: PN4-22, source_site: H7_tagged_import_hit, runtime_case: PN4, verdict: qualified, ceiling: provenance_presence_only}
+  - {id: PN4-23, source_site: H7_untagged_self_test, runtime_case: synthetic_bad_line, verdict: retained, ceiling: scanner_unit_test_only}
+  - {id: PN4-24, source_site: H7_tagged_self_test, runtime_case: synthetic_good_line, verdict: retained, ceiling: scanner_unit_test_only}
+  - {id: PN4-25, source_site: H7_nonvacuity_self_test, runtime_case: synthetic_bad_line, verdict: retained, ceiling: scanner_unit_test_only}
+  - {id: PN4-26, source_site: H7_PN2_no_clamp, runtime_case: lexical_code_scan, verdict: qualified, ceiling: no_detected_clamp_not_numeric_validity}
+  - {id: PN4-27, source_site: H7_PN5_no_clamp, runtime_case: lexical_code_scan, verdict: qualified, ceiling: no_detected_clamp_not_numeric_validity}
+narrative_verdicts:
+  exact_E0_pair_identity: retained_with_explicit_conventions
+  loss_opens_physical_channel: rejected_matrix_element_is_not_channel_or_rate
+  zero_loss_has_no_transfer: rejected_by_source_output_and_short_time_series
+  L_to_2L_refinement: rejected_model_enlargement_at_fixed_per_state_coupling
+  positive_loss_monotonicity: rejected_pair_magnitude_peaks_then_vanishes
+  complete_open_system_dynamics: rejected_not_a_Lindblad_derivation
+  H5a_composite_echo: rejected_only_a_two_state_basis_identity
+  H5b_retraction_wording: rejected_not_supported_by_named_arXiv_record
+  H7_scientific_closure: rejected_three_literal_lexical_guard_only
+status: complete

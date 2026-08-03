@@ -1,0 +1,21 @@
+campaign: P112
+attempt: 0004
+candidate: canonical_exact_pair_resolvent
+status: completed
+command: >-
+  .venv/bin/python -m pytest tests/test_paired_resolvent.py -q &&
+  .venv/bin/python -m py_compile src/substrate_framework/paired_resolvent.py
+  tests/test_paired_resolvent.py && git diff --check
+exit_status: 0
+terminal_tally: 14 passed
+compatibility_event: none
+verdict: exact_package_surface_verified
+mechanism: >-
+  Exact pair summation, general spectral energy, asymmetric coupling products,
+  zero and infinite loss limits, the unique positive-loss extremum, full block
+  inversion, size conventions, sign and phase mutations, and domain guards all
+  pass. No sampled integration or fitted comparator is used.
+next_attempt: >-
+  Build primary and independently rederived campaign oracles, then audit all
+  source predicates, the PN4-PN5 cycle, literature wording, and every pinned
+  direct and transitive consumer.

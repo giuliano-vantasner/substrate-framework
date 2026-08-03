@@ -1,0 +1,25 @@
+campaign: P112
+selection_frozen_by: proposals/P112-pn4-lossy-paired-resolvent-audit/evidence/frozen-proposal.yaml
+selected:
+  - {id: B, reason: Exact common-denominator algebra derives the energy-dependent paired resolvent with declared signs and half-width.}
+  - {id: C, reason: A fresh complete finite-matrix inversion independently reproduces the endpoint block.}
+  - {id: D, reason: Exact limits and calculus derive both vanishing regimes and the unique positive-loss peak.}
+  - {id: E, reason: Unequal complex coupling products expose the exact cancellation locus and phase premise.}
+  - {id: F, reason: Fixed-per-pair and fixed-total conventions distinguish model enlargement from refinement.}
+  - {id: G, reason: Short-time and norm-balance countermodels reject automatic channel, probability, and rate readings.}
+  - {id: H, reason: Accepted ceilings, the PN4-PN5 cycle, literature wording, and all twenty-four consumers are explicit.}
+  - {id: I, reason: No accepted claim duplicates the finite complex energy-dependent pair theorem or its pure API.}
+reproduction_only:
+  - {id: A, reason: PN4 reproduces but its exact E=0 matrix identity does not validate its stronger dynamics and physical prose.}
+criteria_results:
+  dependency_closure: passed_for_exact_finite_complex_matrix_theorem
+  block_conventions: passed_with_explicit_P_Q_energy_and_E_minus_H_orientation
+  independent_route: passed_by_fresh_direct_full_matrix_partition
+  loss_regimes: passed_with_exact_small_large_stationary_and_peak_results
+  asymmetry: passed_with_equal_complex_product_cancellation_locus
+  size_normalization: passed_and_rejects_L_to_2L_as_numerical_refinement
+  dynamics_interpretation: source_zero_loss_and_channel_narratives_rejected
+  open_system_interpretation: source_nonhermitian_input_qualified_not_Lindblad
+  nonduplication: distinct_from_C_EFT_001_and_C_DYN_001
+decision: promote_C_RES_001_and_qualify_PN4_physical_readings
+status: complete

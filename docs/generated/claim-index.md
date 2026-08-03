@@ -723,6 +723,15 @@ For a separately supplied nonempty finite table of positive integer multipliciti
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-RES-001
+
+Let H_PP be a finite square complex endpoint block, H_QQ a finite square complex intermediate block, and H_PQ and H_QP compatible complex blocks. At a declared real spectral energy E for which E*I-H_QQ is invertible, define the exact finite effective block H_eff(E)=H_PP+H_PQ*(E*I-H_QQ)^-1*H_QP. For a two-state intermediate block with diagonal energies +Delta-i*Gamma/2 and -Delta-i*Gamma/2, real nonzero Delta, real Gamma>=0, and declared off-diagonal coupling products c_plus and c_minus, its paired endpoint contribution is exactly R(E)=c_plus/(E-Delta+i*Gamma/2)+c_minus/(E+Delta+i*Gamma/2). When both products equal c, this becomes 2*c*(E+i*Gamma/2)/((E+i*Gamma/2)^2-Delta^2), and at E=0 it is -i*c*Gamma/(Delta^2+Gamma^2/4). At zero loss and E=0 the contribution cancels exactly if and only if c_plus=c_minus; away from E=0 the equal- product zero-loss expression is 2*c*E/(E^2-Delta^2) where defined. For nonzero c, the magnitude of the equal-product E=0 contribution on Gamma>0 vanishes as Gamma tends to zero and infinity, has small-loss coefficient -i*c/Delta^2 and large-loss coefficient -4*i*c/Gamma, and has its unique positive maximum |c|/|Delta| at Gamma=2*|Delta|. A sum of L identical pairs grows by L when each pair product is fixed and is invariant when the total product weight is held fixed by using c/L per pair; changing L is model enlargement, not a numerical refinement. These are exact finite complex-matrix identities. A common imaginary shift is a declared phenomenological input and the theorem establishes no microscopic bath, complete open-system or Lindblad dynamics, physical loss mechanism, normalized probability, transition rate, nuclear or phonon channel, material realization, magnitude, or observation.
+
+- Accepted in: `v0.94.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-RG-001
 
 For positive radius R and density lambda, the circumference line energy E_line = 2*pi*R*lambda is homogeneous of degree one, has constant positive derivative 2*pi*lambda, and has no stationary radius. For positive surface density sigma, E_shell = 4*pi*R^2*sigma is homogeneous of degree two and has radius-dependent derivative 8*pi*R*sigma. For positive line tension T and pressure P, E_cap = 2*pi*R*T - pi*R^2*P + C has the unique strict global maximum R = T/P. Conditional line constructions with coefficients T and the C-SG-002 breather energy share only the degree-one line form; their energies are equal for every positive R if and only if their coefficients are equal.

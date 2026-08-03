@@ -1635,6 +1635,45 @@ units:
       inherit only the normalized finite-dimensional algebraic ceiling. PN3
       and all exact P111 work use no NumPy or sampled quadrature and have no
       np.trapz compatibility event.
+  PN4:
+    disposition: qualified
+    accepted_claims:
+      - C-RES-001
+    qualification: >-
+      PN4's declared finite-matrix convention and equal-product E=0 pair
+      identity survive inside C-RES-001. P112 derives the full energy-dependent
+      pair, exact small- and large-loss coefficients, unique positive-loss
+      peak, unequal complex-product cancellation locus, complete block inverse,
+      and fixed-per-pair versus fixed-total size conventions. PN4's stronger
+      narrative does not survive. Its own zero-loss time propagation reports a
+      nonzero B component, and the exact full Hamiltonian has nonzero
+      second-order A-to-B amplitude at zero loss. L=3 to L=6 adds intermediate
+      states at fixed per-state coupling rather than refining a numerical
+      approximation. The non-Hermitian exponential is not a derived Lindblad
+      evolution and its raw B component is not a normalized probability. H5a
+      is a two-state rotation identity without a composite or nuclear map;
+      H5b is a Boolean import marker; H7 is a three-literal lexical guard. The
+      named arXiv v2 record does not explicitly retract the earlier claim. No
+      microscopic loss, physical channel, rate, nuclear or phonon mechanism,
+      material realization, magnitude, or observation is accepted. The
+      PN4-PN5 candidate cycle grants no authority.
+    evidence:
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/reviews/source_adjudication.md
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/source-reproduction.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/source-audit.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/check-adjudication.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/dependency-audit.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/consumer-audit.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/candidate-comparison.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/primary-provenance.yaml
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/verify.py
+      - campaigns/P112-pn4-lossy-paired-resolvent-audit/reviews/independent_resolvent_review.py
+      - memory/vantasner/decisions/C-RES-001-review.md
+    note: >-
+      P112 closes 49 primary and 20 independent exact checks plus 14 focused
+      package tests. Eight direct and sixteen transitive pending consumers
+      inherit only the finite complex-matrix ceiling. PN4 uses no sampled
+      integration and triggered no np.trapz compatibility event.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

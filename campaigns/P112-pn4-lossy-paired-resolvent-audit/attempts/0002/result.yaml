@@ -1,0 +1,16 @@
+campaign: P112
+attempt: 0002
+candidate: canonical_module_atomic_patch
+status: failed
+command: apply_patch paired_resolvent module tests and package exports
+exit_status: 1
+terminal_tally: null
+compatibility_event: none
+verdict: implementation_anchor_failure
+mechanism: >-
+  The atomic patch found no exact __all__ anchor named
+  energy_difference_interval in the current package initializer. The patch
+  aborted before changing any file; no scientific predicate executed.
+next_attempt: >-
+  Add the module and tests independently, inspect exact initializer anchors,
+  then apply a minimal export-only patch and run the unchanged focused oracle.

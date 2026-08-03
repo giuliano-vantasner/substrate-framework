@@ -1,0 +1,42 @@
+campaign: P112
+source_unit: PN4
+source_sha256: 45ac6c039805964efa41ae8167f6257af18c5ef2b066d376efa19ec79dfd0c67
+imports: [sys, os, numpy, scipy.linalg, sympy]
+declared_dependencies: [FS1, LB1, LB2, PN1, PN2, PN3, PN5]
+exact_surface:
+  endpoint_space: two degenerate basis states A and B with zero direct element
+  intermediate_space: L declared pairs at plus and minus Delta0*j
+  common_shift: -i*Gamma/2 on every intermediate diagonal
+  coupling: equal real g from both endpoints to every intermediate
+  spectral_energy: E=0
+  effective_convention: H_PP+H_PQ*(E*I-H_QQ)^-1*H_QP
+  paired_element: -i*g^2*Gamma/(Delta^2+Gamma^2/4)
+conditional_numeric_surface:
+  chain_sizes: [3, 6]
+  per_state_coupling_fixed: 0.1
+  base_detuning_fixed: 1.0
+  representative_loss_fixed: 1.5
+  time_grid: {tmax: 200.0, samples: 400}
+oracle_ceilings:
+  chain_size_change: model_enlargement_not_mesh_or_domain_refinement
+  nonhermitian_propagation: phenomenological_or_conditional_not_lindblad
+  raw_B_modulus_squared: unconditioned_component_weight_not_normalized_probability
+  H5a: exact_two_by_two_rotation_only_not_composite_or_nuclear_map
+  H5b: boolean_import_presence_marker_only
+  H7: three_literal_lexical_policy_guard_only
+omissions:
+  - energy-dependent or self-consistent resolvent analysis
+  - unequal detunings, coupling magnitudes, products, or phases
+  - fixed-total-coupling or continuum-weight size normalization
+  - open-system derivation, jump operators, trace preservation, or bath state
+  - normalized conditional probability or complete density-matrix evolution
+  - resonance, spectral density, physical state map, or rate rule
+  - nuclear, phonon, material, or absolute-scale derivation
+  - an actual numerical convergence parameter for the L to 2L comparison
+literature_audit: >-
+  The arXiv v2 record for 2501.08338 does not explicitly retract the earlier
+  claim. It distinguishes a small direct complex correction from possible
+  interference-mediated rate changes. PN4's stronger retraction wording is
+  therefore not retained.
+compatibility_event: none
+status: audited

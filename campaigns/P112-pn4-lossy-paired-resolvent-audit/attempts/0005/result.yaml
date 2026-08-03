@@ -1,0 +1,18 @@
+campaign: P112
+attempt: 0005
+candidate: primary_exact_and_source_audit
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P112-pn4-lossy-paired-resolvent-audit/verify.py
+exit_status: 1
+terminal_tally: 37 checks passed before failure
+compatibility_event: none
+verdict: verifier_literal_mismatch
+mechanism: >-
+  The mathematical, mutation, finite-block, limit, dynamics, and first H5a
+  predicates passed. The next audit searched for the phrase "no
+  physical/nuclear normalization", while the pinned source's actual check
+  label says "no nuclear normalization". The intended omission is present;
+  only the verifier literal was over-specific.
+next_attempt: >-
+  Match the exact pinned source phrase and rerun the otherwise unchanged
+  primary oracle from the beginning.

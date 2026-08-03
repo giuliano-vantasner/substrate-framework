@@ -1,0 +1,20 @@
+campaign: P112
+attempt: 0007
+candidate: integrated_promotion_gate
+status: completed
+command: scripts/validate.sh && git diff --check
+exit_status: 0
+terminal_tally: >-
+  ALL REPOSITORY WORKFLOW CHECKS PASS; 129 claims, 129 accepted, 0
+  proposals; 218 source units, 108 pending, 0 partial; 479 memory files;
+  physics skill valid; 1031 tests passed in 92.95s; git diff --check clean
+compatibility_event: none
+verdict: promotion_boundary_verified
+mechanism: >-
+  Registry, release, immutable campaign, generated documentation and memory,
+  source disposition, queue regeneration, package exports, exact primary and
+  independent oracles, and focused dependency replay are synchronized. This
+  is the single full validation pass for the unchanged promotion boundary.
+next_attempt: >-
+  Commit the scientific transaction, checkpoint the parent effort with that
+  immutable commit, then freeze P113 before inspecting or executing PN5.
