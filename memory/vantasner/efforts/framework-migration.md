@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T03:05:00Z'
+updated: '2026-08-04T04:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -28,11 +28,11 @@ Its latest addition, C-SG-015, is the exact fixed-position sine-Gordon breather
 temporal parity, half-wave, Fourier-support, and fundamental-coefficient
 theorem. It derives no susceptibility, causal response, deposition or
 absorption law, seeded population, derivative-voltage coupling, breakdown
-gate, or engine mechanism. The latest terminal adjudication is P087 at commit
-`c77cae6`: SA1 is qualified because its exact field-trace theorem survives,
-while its full coefficient is misstated, its finite Gaussian is positive at
-DC, and its normalized free-scale overlap cannot establish the claimed
-physical transfer.
+gate, or engine mechanism. The latest terminal adjudication is P088 at commit
+`aee1890`: SA2 is qualified without a claim delta because its alleged DC oracle
+also rejects a resonant packet, its slew curve depends on an inserted
+normalization, and no accepted cell, interaction, response, formation,
+breakdown, or engine consumer closes the physical trigger headline.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -58,7 +58,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 133 pending, 0 partially migrated, 3 migrated, 73 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 132 pending, 0 partially migrated, 3 migrated, 74 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -177,6 +177,7 @@ Attempts are append-only and individually reproducible.
 | 0105 | P085 exact yield-coefficient/state/reaction/consumer and NY2 audit | `campaigns/P085-ny2-nuclear-yield-audit/attempts/0001` through `0004`, then the terminal queue replay | NY2 is duplicate evidence for C-SK-001; v0.74.0 unchanged; commit `265b2ee` | Thirty-four primary and eleven independent checks derive the free yield coefficient, multi-soliton sign family, arbitrary-target construction, radiative two-body kinematics, and source-oracle ceiling; the source supplies no multi-Skyrmion solution or reaction/deposition model, its empirical and engine comparators imply distinct nonunit coefficients, and its two predecessor consumers disagree, while 25 canonical and 17 governance tests, the 108905-comparison engine parity replay, and the single integrated gate pass all 793 tests | Audit NY3's coherence-nucleation gate without importing pending BD1/BD3 barrier claims, treating NY2's rejected physical yield as a payload, or inferring an N-squared coherent energy law and firing mechanism from phase-lock rhetoric |
 | 0106 | P086 exact iid phase-ensemble/threshold/factor and NY3 audit | `campaigns/P086-ny3-coherence-nucleation-audit/attempts/0001` through `0010`, then the promotion replay | accepted in v0.75.0 with NY3 qualified; commit `5fa7def` | Thirty-seven primary and twelve independent checks derive diagonal/pair phase counting, Gaussian coherence, normalization covariance, destructive-phase counterexamples, the unique continuous threshold, endpoint-order reversal, activated-factor signs, and source/dependency ceilings; the source inserts its two scales and population, its own consumer fixes total emission at N while on-axis intensity reaches N-squared, and no stochastic or nuclear coupling exists, while 22 focused and 17 governance tests, the 61-check engineering replay, and the single integrated gate pass all 807 tests | Audit SA1's seeding transfer function without equating odd-time parity or zero DC with a physical susceptibility, deriving dV/dt dependence from absence of a DC Fourier component, or treating a supplied spectral overlap and normalization as a seeded population prediction |
 | 0107 | P087 exact breather temporal-Fourier and SA1 transfer audit | `campaigns/P087-sa1-seeding-transfer-audit/attempts/0001` through `0008`, then the promotion and identifier-repair replay | accepted in v0.76.0 with SA1 qualified; commit `c77cae6` | Forty-two primary and fifteen independent checks derive fixed-position parity, half-wave support, the exact nonlinear fundamental coefficient, phase-origin covariance, finite-Gaussian DC, zero-DC counterkernels, overlap nonidentifiability, and consumer ceilings; the external mirror fails on six `np.trapz` calls and the C035 rungs still use inserted gates. The single integrated scientific gate passes all 810 tests, then the diff audit catches the reserved rejected C-SG-014 identifier, repairs P087 to C-SG-015, and adds a targeted governance guard without repeating the unchanged full suite | Audit SA2's dV/dt-not-V claim without importing SA1's rejected susceptibility/population interpretation, identifying DC-offset invariance with absolute-voltage independence above breakdown, or treating an inserted displacement-current spectrum and Michaelis curve as a derived seeding mechanism |
+| 0108 | P088 exact DC-offset/displacement-current/waveform and SA2 trigger audit | `campaigns/P088-sa2-dvdt-trigger-audit/attempts/0001` through `0006`, then the terminal queue replay | SA2 qualified with v0.76.0 unchanged; commit `aee1890` | Thirty-seven primary and fourteen independent checks derive the Gaussian overlap and limit-order defect, linear distributional offset ceiling, finite-window leakage, power-spectrum cross terms, constitutive product rule, Fourier boundary term, exact inserted-family monotonicity, fixed-peak reversal, same-slew spectral counterfamily, and consumer closure. The resonant mutation passes SA2's alleged DC oracle; engineering consumers insert threshold/Michaelis behavior, one restores a seed floor, and six `np.trapz` calls fail under current NumPy. The single integrated gate passes all 811 tests and record-only validation closes without repeating the suite | Audit SA3's driven sine-Gordon PDE seeding claim without importing SA1's rejected susceptibility/population, SA2's rejected physical trigger, or P3D1's qualified radial-oscillon interpretation; freeze PDE, source, drive, energy, bound-state, damping/sponge, refinement, amplitude-threshold, comparator, consumer, and nonduplication candidates before opening the body |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -193,7 +194,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 134 bridge units remain pending, 3 are migrated, 72 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 132 bridge units remain pending, 3 are migrated, 74 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -679,11 +680,28 @@ version-compatible helper. A final diff audit also prevents reuse of rejected
 NC4 identifier C-SG-014; P087 uses C-SG-015, and the repository validator and
 workflow contracts now reserve adjudicated rejected identifiers.
 
+P088 terminally qualifies SA2 without changing the accepted release. Exact
+completion of the square shows that SA2's sharp-kernel-first Gaussian overlap
+vanishes for both a DC packet and a packet centered at its advertised
+resonance, so the claimed DC oracle is mutation-insensitive; its `delta_N`
+expression contains neither `c` nor `V`. Linear infinite-domain offset
+invariance survives only with explicit transform and zero-DC pairing premises,
+while finite records leak and power spectra retain cross terms. The exact
+displacement-current identity keeps constitutive product-rule, cell-geometry,
+and Fourier endpoint assumptions and supplies no driven interaction or
+formation law. SA2's inserted spectral family is pointwise monotone and has a
+fixed-band ceiling, but its implied time-domain voltage peak scales with the
+slew parameter; fixed-peak normalization reverses the large-slew trend, and
+equal-maximum-slew waveforms can have different band overlap. External
+consumers insert breakdown and Michaelis behavior, retain the old design scale,
+and do not close an accepted engine path. Primary exact work uses no numerical
+integration alias; the independent sampled regression uses mpmath only.
+
 ## Canonicalization
-The registry, `v0.76.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred four accepted claims. P001 through P087 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 133 pending, 0 partial, 3 migrated, 73 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.76.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred four accepted claims. P001 through P088 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 132 pending, 0 partial, 3 migrated, 74 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 133 pending, 3 migrated, 73 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is SA2. Its generated synopsis depends on SA1 and SA4, treats SA1's rejected susceptibility and seeded-population readings as premises, then offers two alleged routes to a flat-in-voltage, rising-and-saturating-in-slew trigger: annihilation of a DC delta component and a displacement-current `omega^2*|V_tilde|^2` spectrum. P088 must freeze literal-promotion, exact distributional DC-shift, waveform-equivalence, electromagnetic constitutive, drive-interaction, amplitude/slew scaling, saturation, breakdown, consumer, dependency, source-oracle, and nonduplication candidates before opening the SA2 body or output. It must separate invariance under adding a constant to one waveform from independence of absolute voltage across physically different above-breakdown pulses, and a declared displacement-current identity from a derived coupling to C-SG-015's undriven field trace. A positive engine claim requires an accepted cell geometry and constitutive law, voltage-to-field boundary map, interaction and response observable, absorbed-energy or formation rule, waveform family, units, saturation mechanism, breakdown dynamics, and implemented consumer; missing dependencies require terminal qualification and continuation rather than inheritance from SA1 or pending SA4.
+The effort remains active. D4 is discharged, but D1 remains open with 132 pending, 3 migrated, 74 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is SA3. Its generated synopsis claims that a full nonlinear driven sine-Gordon PDE with a localized `sech(eta*x)` source, fast or resonant temporal deposition, and absorbing sponge boundaries directly seeds a bound breather, and names P3D1, SA1, and SA2 as dependencies. P089 must freeze literal-promotion, accepted-equation, source-action, drive normalization, energy injection, domain/boundary/sponge, discretization, convergence, independent-method, conservation/dissipation, load-bearing mutation, post-drive bound-state classifier, radiation rejection, amplitude/threshold, analytic-limit, consumer, dependency, and nonduplication candidates before opening the SA3 body or output. It may use C-SG-001/C-SG-002 and accepted numerical machinery, but cannot import P3D1's qualified radial-oscillon reading, SA1's rejected susceptibility/population, or SA2's rejected physical dV/dt trigger. A positive seeding claim requires a well-posed driven IBVP, derived source coupling and units, solver-success and refinement evidence, an independent method or soluble limit, and a mutation-sensitive late-time bound-state observable that distinguishes a breather from retained source energy, standing radiation, sponge artifacts, or a fitted waveform; otherwise preserve the numerical attempt and continue.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
