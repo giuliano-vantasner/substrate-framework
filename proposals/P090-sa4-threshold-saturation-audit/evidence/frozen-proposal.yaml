@@ -1,0 +1,31 @@
+campaign: P090
+frozen_before_uninspected_remainder_opening: true
+frozen_after_partial_prior_exposure: true
+proposal_path: proposals/P090-sa4-threshold-saturation-audit/proposal.yaml
+proposal_sha256: c469e191827e6b450f13b4b42022d7b3a936d64494a0dba6bd8fbf1cbd2d0896
+memory_contract_path: memory/vantasner/proposals/P090-sa4-threshold-saturation-audit.md
+memory_contract_sha256: 749e10a3bb855654300d6ffc16a06361a55e8310a82f727407cc9a21696e0b45
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate --base /home/dan/substrate-framework
+  /home/dan/substrate-framework/memory/vantasner/proposals/P090-sa4-threshold-saturation-audit.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: partially_exposed_during_P089_consumer_audit
+prior_exposure: >-
+  Approximately the first 150 source lines were viewed during P089. That
+  exposure included Gaussian spectral lobes, the energy expression using a
+  free gain and squared coefficient, examples G=1 and G_BIG=900, integer floor
+  counting, and an inserted slew family. These facts are recorded as unblinded
+  source evidence and cannot select P090's concepts, criteria, or thresholds.
+queue_synopsis_disclosure: >-
+  Generated navigation metadata exposes E_seed=G*|f_tilde(omega_b)|^2, a
+  breather-energy divisor, zero below an energy threshold, integer floor count,
+  rising/saturating slew language, thirteen literal checks, and candidate
+  dependencies SA1 and SA2.
+comparators_blinded_at_freeze:
+  - the source remainder beyond the previously viewed top portion
+  - complete literal check predicates and their sensitivity to mutations
+  - terminal executable output and exact printed example values not previously exposed
+  - downstream consumer implementation beyond the governed P088 and P089 summaries
+  - any additional frequency, bandwidth, saturation, breakdown, count, or fit values in the uninspected remainder

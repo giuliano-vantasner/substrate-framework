@@ -1,0 +1,72 @@
+id: P090
+base_release: v0.77.0
+base_commit: bf7418a
+scientific_base_commit: aec2125
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SA4]
+question: >-
+  Determine whether SA4 derives a dependency-closed physical law that is zero
+  below electrical breakdown, rises with voltage slew, and saturates at an
+  integer breather population, or only combines a supplied spectral scalar,
+  free gain, accepted breather-energy coordinate, floor operation, and
+  inserted response family; terminally adjudicate every subclaim and promote
+  distinct reusable content only.
+invariants:
+  - C-SG-002 is the normalized energy of an already-existing exact breather, not a minimum formation work or arbitrary-energy population theorem.
+  - C-SG-005 is an exact complement to the normalized two-kink threshold, not a physical binding or breakdown mechanism.
+  - C-COH-001 declares a continuous activation coordinate and explicitly requires a separately justified integer rounding convention; it supplies no physical population or deposition law.
+  - C-SG-015 is an undriven temporal-field Fourier theorem and supplies no susceptibility, absorbed spectral energy, voltage response, or count.
+  - C-PDE-011 is finite-time evidence for one knife-edge mathematical forcing branch and supplies no voltage, plasma, threshold, probability, or population map.
+  - SA1, SA2, and SA3 are qualified; their rejected response, population, voltage-slew, breakdown, broad formation, and engine readings are unavailable dependencies.
+  - A supplied squared Fourier coefficient becomes energy only through a dimensionally specified coupling and transform convention; free gain or normalization covariance can realize arbitrary positive thresholds.
+  - Euclidean division by a positive energy unit proves floor and remainder bookkeeping, not formation, stability, exclusivity, or maximum population.
+  - Electrical breakdown is a separate material and circuit event and cannot be identified with a breather-energy threshold without an accepted map.
+  - A saturation statement requires a frozen response family, controlled input, normalization, scale, and asymptote; scalar slew alone does not determine a spectrum.
+allowed_imports:
+  - exact real, integer, floor, ceiling, inequality, Fourier-scaling, dimensional, monotonicity, and asymptotic algebra with explicit conventions
+  - C-SG-002 only as the exact normalized energy coordinate of an existing breather
+  - C-SG-005 only as the exact normalized two-kink energy complement and its interpretation ceiling
+  - C-COH-001 only for its declared continuous-threshold algebra and explicit integer/population ceiling
+  - C-SG-015 only for its undriven fixed-position temporal spectrum and no-response ceiling
+  - C-PDE-011 only as one qualified finite-time driven trajectory and its no-physical-map ceiling
+  - P087, P088, and P089 terminal adjudications as governance evidence; none of their rejected physical readings may be imported
+  - SA4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after both contracts and the immutable freeze record validate
+candidates:
+  - id: A
+    description: Reproduce SA4 literally and test whether its threshold, floor, saturation, breakdown, dependencies, and consumers support the full physical headline.
+  - id: B
+    description: Derive exact Euclidean energy partition into a floor count and sub-unit remainder while preserving its bookkeeping-only interpretation.
+  - id: C
+    description: Separate completed-unit floor counts from required-input ceiling thresholds and audit integer-boundary discontinuities.
+  - id: D
+    description: Derive gain, waveform-amplitude, and Fourier-normalization covariance and the resulting arbitrary-target inverse family.
+  - id: E
+    description: Audit the inserted saturation family through exact derivatives and limits and compare equally plausible nonsaturating or differently normalized counterfamilies.
+  - id: F
+    description: Require an accepted drive-to-work, work-to-state, formation, stability, and state-to-count mechanism before interpreting energy bookkeeping as physical seeding.
+  - id: G
+    description: Require a material, cell, and circuit state transition before identifying any mathematical energy threshold with electrical breakdown.
+  - id: H
+    description: Mutate gain, normalization, floor convention, energy unit, saturation scale, source shape, and breakdown inputs and require the corresponding source predicates to change.
+  - id: I
+    description: Trace engineering, C035, LB, MC, and package consumers and separate literal repetition from an implemented accepted law.
+  - id: J
+    description: Compare surviving content against C-SG-002, C-SG-005, C-COH-001, C-SG-015, C-PDE-011, and existing package APIs; add nothing without distinct content and a governed consumer.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure for drive, deposition, energy, formation, count, electrical breakdown, and consumer
+  - exact dimensions, signs, domains, transform normalization, floor and remainder semantics, threshold convention, monotonicity, discontinuities, and limits
+  - mutation sensitivity to gain, waveform normalization, Fourier convention, integer boundary, saturation scale, asymptote, and breakdown inputs
+  - parameter economy without silently fixing gain, bandwidth, efficiency, threshold, response family, cell, or material law
+  - compatibility and nonduplication against accepted energy, threshold, coherence, Fourier, and driven-trajectory claims
+claims_proposed:
+  - no new claim unless Candidate J establishes distinct reusable content beyond Euclidean division or an inserted saturation family, with complete assumptions, a governed consumer, and a fresh collision-free identifier
+comparators_blinded_until: >-
+  Both contract representations, their hashes, repository validation, and an
+  immutable frozen-proposal record are complete. P089 previously exposed
+  approximately the first 150 source lines, including Gaussian lobes, gains 1
+  and 900, floor counting, and an inserted slew family, so those values are not
+  claimed blind. The uninspected SA4 remainder, complete literal predicate
+  bodies, terminal output, and consumers beyond existing P088/P089 summaries
+  remain closed until the freeze.
+status: draft
