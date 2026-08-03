@@ -1,0 +1,73 @@
+id: P103
+base_release: v0.86.0
+base_commit: b562048fcf00f82f0cf3fa473bac62faa078bad7
+scientific_base_commit: bb94cc1ed281090f37fa4f1d04a6f2da63f77bf3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [BD5]
+question: >-
+  Derive the conditional mean-first-passage theorem for a one-dimensional
+  overdamped diffusion with a reflecting left boundary and absorbing right
+  boundary, implement a refined independent numerical oracle, and adjudicate
+  whether BD5's Euler-Maruyama experiment establishes that theorem, an
+  Arrhenius asymptotic, a constant Kramers hazard, a temperature optimum,
+  population ignition, physical collective inertia, or only bounded
+  dimensionless simulation evidence.
+invariants:
+  - C-RG-001 and C-RG-002 supply only conditional capillary potentials and constitutive maps; they do not supply a stochastic process, damping, mobility, bath, or event channel.
+  - C-COL-001 classifies the capillary maximum as a conservative local instability and explicitly distinguishes it from stochastic escape and a Kramers rate.
+  - C-TH-002 separates a declared coth scale and supplied attempt frequency from a physical bath, stochastic law, objective, and operating optimum.
+  - C-COH-001 owns conditional population and coherence algebra but supplies no population dynamics, stochastic coupling, or ignition event.
+  - A reflected overdamped diffusion is defined by its drift, diffusion coefficient, domain, boundary conditions, initial state, and stochastic convention; a passing path ensemble cannot supply omitted premises.
+  - The inverse mean first-passage time, a finite-horizon completed-path statistic, a time-dependent hazard, a local saddle exponent, and an asymptotic Kramers rate are distinct quantities.
+  - Numerical evidence must expose timestep, ensemble, horizon, seed policy, boundary discretization, censoring, uncertainty, convergence, and an independent backward-equation or Fokker-Planck oracle.
+  - The source checkout's explicit NumPy compatibility overlay is not a scientific baseline change; BD5 itself remains hash-identical to the pinned source commit.
+allowed_imports:
+  - C-RG-001 and C-RG-002 only for the declared capillary energy shape and its conditional loading dependence
+  - C-COL-001 only for the stable-versus-unstable local classification and its explicit escape-rate ceiling
+  - C-TH-001 and C-TH-002 only for their exact conditional gate and coth-scale algebra, not as a bath or optimum
+  - C-COH-001 only for its exact population/coherence algebra and explicit no-dynamics ceiling
+  - standard one-dimensional Ito diffusion, reflecting Skorokhod boundary, absorbing stopping time, backward-generator calculus, elementary probability, and exact dimensional analysis as declared mathematical imports
+  - SciPy adaptive quadrature and a separately implemented backward BVP or finite-difference solve with explicit tolerances and refinement
+  - NumPy Euler-Maruyama only as resolution-bounded regression evidence with declared seeds, ensembles, timesteps, horizon, boundary rule, censoring, and uncertainty
+  - BD5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation and freeze
+  - hash-pinned predecessor and downstream consumers only after freeze and only as noncanonical impact evidence
+candidates:
+  - id: A
+    description: Reproduce BD5 unchanged and classify every literal predicate, path statistic, guard, and terminal tally.
+  - id: B
+    description: Derive the exact backward boundary-value problem and positive integral representation for the reflected-to-absorbing mean first-passage time.
+  - id: C
+    description: Evaluate the integral by adaptive quadrature and rederive it with a refined independent backward-equation discretization or collocation solve.
+  - id: D
+    description: Reimplement the reflected Euler-Maruyama experiment with explicit administrative censoring, uncertainty, and coupled timestep and ensemble refinements.
+  - id: E
+    description: Audit the completed-only inverse-time statistic against the uncensored mean first-passage time, restricted mean, survival curve, and hazard semantics.
+  - id: F
+    description: Derive the boundary-well Arrhenius asymptotic for the source quadratic barrier and distinguish its prefactor corrections from a fitted slope near minus one.
+  - id: G
+    description: Compare absolute-value reflection, a backward reflecting boundary, alternative absorbing locations, and drift or noise mutations.
+  - id: H
+    description: Separate the coth-scale temperature monotonicity and declared half-ratio from an optimized stochastic objective.
+  - id: I
+    description: Trace population, collective-inertia, engineering, and later consumers and reject every event interpretation lacking an accepted coupling and observable.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and nonduplication against C-RG-001, C-RG-002, C-COL-001, C-TH-002, C-COH-001, and C-PRB-001
+  - exact backward-equation derivation, boundary conditions, dimensions, positivity, additive-potential invariance, soluble limits, and mutation sensitivity
+  - independent quadrature and BVP agreement with solver-status, tolerance, mesh, domain, and error gates declared before comparison
+  - honest separation of uncensored first passage, finite-horizon censoring, restricted means, completed-only statistics, hazards, and asymptotic rates
+  - assumption and parameter economy with damping, bath, boundary, material, population, and event premises retained explicitly unless derived
+  - canonical API reuse, consumer classification, and no concept selection by the source tally or fitted Arrhenius slope
+claims_proposed:
+  - C-FPT-001
+comparators_blinded_until: >-
+  No genuine source-body or output blinding remains. P102 executed BD5 and
+  recorded ALL 13 CHECKS PASS, while the generated queue and parent memory
+  exposed the quadratic barrier, reflected overdamped SDE, absorbing boundary,
+  completed-path inverse-mean estimator, Arrhenius regression, temperature
+  sweep, population guards, and convergence headline. Before renewed BD5 body
+  inspection or execution, P103 freezes the backward BVP and integral route,
+  the finite-horizon censoring distinction, the independent numerical methods,
+  the boundary and load-bearing mutations, the temperature-versus-optimum
+  test, and the no-event interpretation ceiling.
+status: active

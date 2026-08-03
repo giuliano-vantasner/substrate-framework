@@ -1,0 +1,42 @@
+campaign: P103
+frozen_at: '2026-08-03T13:42:00Z'
+base_release: v0.86.0
+base_commit: b562048fcf00f82f0cf3fa473bac62faa078bad7
+scientific_base_commit: bb94cc1ed281090f37fa4f1d04a6f2da63f77bf3
+proposal_path: proposals/P103-bd5-kramers-escape-audit/proposal.yaml
+proposal_sha256: 48fff634b6d54c15309bff60767e1515a4b545c50d585895234e1645f610e39a
+memory_contract_path: memory/vantasner/proposals/P103-bd5-kramers-escape-audit.md
+memory_contract_sha256: c355d18355150ea23e47126fe800e23547664f6dd300d34eb8845ce8e6b94b9d
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+source_size_bytes: 10583
+source_sha256: fd1fd9e54990bbac4a60bc669a37f1c15a89ebd2595203aef7d2bddb88b99cf9
+source_blob: 6cfb444f3ab0bda8b456ac188f00a7faf904ccb8
+source_worktree_state: clean_relative_to_pinned_commit
+source_checkout_overlay: >-
+  The explicit current-NumPy compatibility overlay and unrelated later Phase
+  47/48 work remain excluded from scientific authority. BD5 itself matches the
+  pinned blob and hash.
+source_body_exposure: >-
+  No genuine body, method, parameter, or tally blinding remains. P102 executed
+  BD5 and recorded ALL 13 CHECKS PASS. The generated queue and parent effort
+  exposed the scaled quadratic barrier, reflected overdamped SDE, absorbing
+  boundary, completed-only inverse-mean estimator, Arrhenius fit, temperature
+  sweep, population guards, and convergence headline. P103 froze structural
+  alternatives and decisive tests before renewed source inspection or
+  execution.
+source_execution_state_at_freeze: previously_executed_under_P102_not_yet_reexecuted_under_P103
+terminal_output_state_at_freeze: previously_exposed_as_ALL_13_CHECKS_PASS
+backward_bvp_censoring_boundary_refinement_asymptotic_and_interpretation_tests_frozen: true
+claims_reserved: [C-FPT-001]
+compatibility_preflight:
+  bd5_imports_numpy: true
+  bd5_known_sampled_quadrature_calls: none
+  new_adaptive_integrator: scipy.integrate.quad
+  sampled_quadrature_required_by_exact_new_work: false
+  np_trapz_compatibility_action: none_expected_but_recheck_after_freeze
+validation:
+  repository: WORKFLOW VALID 116 claims 116 accepted 1 proposals 218 units 118 pending 0 partial
+  memory: All 1 file(s) valid
+  diff: clean
+status: frozen
