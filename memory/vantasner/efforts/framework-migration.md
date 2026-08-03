@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-07T12:45:00Z'
+updated: '2026-08-07T15:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,15 +23,15 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.88.0`, containing one hundred nineteen
-claims. Its latest additions are C-RMAP-001's exact rational-map sphere
-degree/area theorem, lower bound, and axial beta/gamma family, and C-RMAP-002's
-resolution-bounded evaluation of one declared degree-four map. The latest
-terminal adjudication is P104: E1 is qualified because its exact identity and
-selected-map ordering survive, but midpoint nodes reduced as endpoint-including
-trapezoids bias its decimals, one higher deformation does not prove global
-minimality, and no radial, nuclear-state, reaction, or yield premise follows.
-E2 and later consumers remain pending.
+The current accepted frontier is `v0.89.0`, containing one hundred twenty-one
+claims. Its latest additions are C-RPROF-001's exact conditional generalized
+radial functional, equation, scale identity, and endpoint theorem, and
+C-RPROF-002's two-method resolution-bounded stationary branches for accepted
+degree-one, degree-two, and declared degree-four angular inputs. The latest
+terminal adjudication is P105: E2 is qualified because its conditional branch
+ordering survives corrected inputs and stronger numerics, but no physical
+action, global minimum, baryon or nucleus, binding, reaction, or yield premise
+follows. E3 and later consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -194,6 +194,7 @@ Attempts are append-only and individually reproducible.
 | 0123 | P102 exact collective-coordinate pullback, stationary classification, covariance, and BD4 audit | `campaigns/P102-bd4-collective-inertia-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-COL-001 with BD4 qualified in v0.86.0; commit `bb94cc1` | Forty-six primary and seventeen independent checks derive the field-profile metric, variable-metric Euler-Lagrange equation, curvature signs, coordinate covariance, dimensions, profile counterexamples, scaling, and identifiability. The 14-check source reproduces; its Lean file compiles but encodes only weak algebra and dimensions. The 16-check engineering consumer and 13-check BD5 consumer use BD4 narratively, while legacy 11- and 4-check consumers independently support the saddle reading. Seventy-one focused tests and the single integrated 928-test, 433-memory workflow pass; GitNexus reports LOW impact. | Audit BD5's stochastic escape simulation without importing BD4's rejected physical inertia or onset, treating an overdamped supplied-gamma model as validation of `m_R`, accepting inverse completed-escape time under censoring as a Kramers rate, or calling temperature and population algebra ignition |
 | 0124 | P103 exact reflected first-passage theorem, censoring and hazard distinctions, and BD5 audit | `campaigns/P103-bd5-kramers-escape-audit/attempts/0001` through `0013`, then promotion boundary | accepted as C-FPT-001 with BD5 qualified in v0.87.0; commit `bcf5bfd` | Thirty-seven primary and twenty-one independent checks derive the reflected backward equation, positive integral, uniqueness, additive-potential invariance, linear and free controls, censoring distinctions, nonexponential counterexample, boundary sensitivity, and boundary-well asymptotic. Adaptive quadrature, 45-digit quadrature, collocation, separate timestep and ensemble studies, and preserved failed thresholds keep exact and resolution-bounded evidence distinct. The 13-check source and 21-check legacy rung reproduce, but completed-only inverse time, a five-percent zero, a joint dt/ensemble/seed comparison, an assigned half-ratio, and uncoupled population guards do not establish a constant Kramers hazard, convergence, optimum, ignition, material, or event. The focused gate passes 115 tests and the single integrated workflow passes all 942 tests with 437 memory files valid; GitNexus reports LOW impact and no affected process. | Audit E1's rational-map angular integral without importing E2/E4/NY2/PG3/S2 as authority, selecting maps by their advertised numeric values, mistaking grid agreement with an exact sphere theorem, or importing a nuclear-yield interpretation |
 | 0125 | P104 exact rational-map sphere theorem, independent declared-map cubature, and E1 audit | `campaigns/P104-e1-rational-map-angular-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-RMAP-001 and C-RMAP-002 with E1 qualified in v0.88.0; commit `42337ce` | Thirty-five repaired primary and eighteen independent checks derive exact reduced degree, pullback area, the normalized-square lower bound, the axial beta/gamma family, exact identity and degree-two controls, and independently refined cubic-map area and I. A passing but tautological verifier route is preserved and repaired. E1's endpoint-excluding midpoint arrays are reduced with trapezoids and bias 0.99792, 5.79616, and 20.62952; stronger routes give I2=pi+8/3 and I4=20.6496264884189. One shifted map does not prove minimality, and map degree supplies no nucleus or yield. The single integrated workflow passes all 953 tests with 443 memory files valid; GitNexus reports LOW impact, 67 changed graph symbols, and no affected process. | Audit E2's rational-map radial BVP using corrected canonical I values, explicit origin/asymptotic boundary analysis, solver-status and residual gates, mesh/domain/tolerance refinement, an independent shooting or collocation route, energy-tail control, and strict separation of conditional profile energies from physical baryon, nuclear binding, and yield claims |
+| 0126 | P105 exact generalized radial theorem, two-method stationary branches, and E2 audit | `campaigns/P105-e2-rational-map-radial-profiles/attempts/0001` through `0007`, then promotion boundary | accepted as C-RPROF-001 and C-RPROF-002 with E2 qualified in v0.89.0; commit `f28cf74` | Forty-five primary and nine independent checks derive the exact generalized equation, split, endpoint powers, and scale identity; solve corrected B=1,2,4 branches with vacuum-complement DOP853 shooting and fresh collocation; isolate quadrature, cutoff, domain, tolerance, and maximum-step refinements; and distinguish accepted, biased, I=B, and I=B^2 inputs. Direct-f shooting loses the tiny B4 origin signal and is preserved before repair. The source omits solver gates, uses finite-wall vacua and biased I values, and its I=B guard preserves the ordering it claims would be destroyed. The integrated workflow passes all 968 tests with 449 memory files and the physics skill valid; GitNexus assigns automatic MEDIUM staged-change risk to four new self-contained solver flows, while direct impact remains LOW with no pre-existing caller or process. | Audit E3's conditional coefficient algebra without importing a physical mass map, reaction identity, empirical scale, BPS model, or treating selected stationary-branch energy differences as a physical fusion yield |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -210,7 +211,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 116 bridge units remain pending, 3 are migrated, 90 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 115 bridge units remain pending, 3 are migrated, 91 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -942,11 +943,24 @@ nucleus, radial energy, reaction, or yield. The source uses its current
 `np.trapezoid` branch without compatibility failure; canonical P104 cubature
 uses Gauss-Legendre weights and no NumPy trapezoidal alias.
 
+P105 adds C-RPROF-001 for the exact conditional generalized radial functional,
+Euler--Lagrange equation, energy split, scale identity, and endpoint powers,
+plus C-RPROF-002 for independent shooting/collocation evidence on corrected
+B=1,2,4 stationary branches. E2 is qualified because its source uses biased
+duplicated angular inputs, exact finite-wall vacua, no solver-status or
+residual gate, combined refinements, and comparator-selected bands. Its I=B
+guard materially changes energy but preserves the selected ordering. Neither
+the surviving branch ordering nor scale curvature establishes a physical
+action, global minimum, baryon or nucleus, binding, reaction, or yield. The
+source executes `np.trapezoid` without compatibility failure; canonical
+sampled work uses only `trapezoid_integral`, and the independent route uses
+Simpson integration.
+
 ## Canonicalization
-The registry, `v0.88.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred nineteen accepted claims. P001 through P104 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 116 pending, 0 partial, 3 migrated, 90 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.89.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-one accepted claims. P001 through P105 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 115 pending, 0 partial, 3 migrated, 91 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 116 pending, 3 migrated, 90 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is E2, pinned at SHA-256 `fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f`. The generated inventory says it inserts E1's degree-one, degree-two, and degree-four angular values into a declared rational-map radial functional, solves three SciPy boundary-value problems, advertises per-degree energies near 1.232, 1.208, and 1.136, a decreasing per-degree hierarchy, and six literal checks. P105 must freeze the corrected C-RMAP-001/002 inputs, radial Euler-Lagrange derivation, origin and infinity expansions, finite-domain boundary semantics, solver status and residuals, mesh/domain/tolerance refinement, an independent shooting or variational route, tail-energy control, energy normalization, sensitivity to the corrected E1 values, and consumer/interpretation ceilings before further source inspection or execution. P104 already exposed E2's header, duplicated midpoint-plus-trapezoid angular integrator, declared BVP, advertised values, and the first part of its implementation during consumer audit; P105 must declare that exposure rather than claim body or comparator blinding. It must not call rational-map degree a physical baryon, label profiles deuteron or alpha states, infer true multi-Skyrmion binding from a conditional single-profile ansatz, or import pending E3, PG3, or S2 as authority.
+The effort remains active. D4 is discharged, but D1 remains open with 115 pending, 3 migrated, 91 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is E3, pinned at SHA-256 `aa76b9e675d4fbb45594e9d3df5107af175e927a24840260ca71ffda1bad3315`. Its algebra forms `3*pi^2*(2*b(2)-b(4))` from E2 branch values and then imports a mass/reaction map and empirical comparison. P106 must freeze the exact linear-combination algebra, sign/error propagation, accepted conditional inputs, scale and state-map inventory, comparator separation, later BPS and generalized-model consumers, and strict ceiling between a dimensionless reduced-model difference and a physical D+D reaction yield before body execution. It must not infer a variational bound by differencing upper bounds, import pending E4/HE4/M1/NY1/NY2 as authority, or use empirical 23.86 MeV to select a model or coefficient.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
