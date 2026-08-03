@@ -1,0 +1,62 @@
+id: P117
+base_release: v0.96.0
+base_commit: d9cc3ae1ffe62fc08e5640671a6d677cb158a641
+scientific_base_commit: 3a56c1553e977b4aed15253924b591a3bcc672b7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM3]
+question: >-
+  Derive and independently verify the exact range and uniqueness theorem for a
+  horizontal level crossing a continuous strictly increasing response, its
+  exponential-saturation specialization, and the actual C-SCR-001 shifted-
+  barrier specialization; classify endpoint cases, sensitivities, scale
+  covariance, counterexamples, and identifiability; then adjudicate CM3 without
+  treating a free constant as an accepted CM2 rate, its zero-floor surrogate
+  as the screened factor, or formal curve ordering as physical channel
+  dominance, crossover prediction, yield, heat, material, or observation.
+invariants:
+  - A continuous strictly increasing response crosses a horizontal level at most once; existence additionally requires the level to lie in the actual finite range, with endpoint conventions stated separately.
+  - For E>=0 and E0>0, S(E)=1-exp(-E/E0) has range [0,1), and S(E)=c has the unique finite solution E=-E0*log(1-c) exactly for 0<=c<1; the solution is positive exactly for 0<c<1.
+  - Strict monotonicity, continuity, and range are independently load bearing. Plateaus, discontinuities, nonmonotone functions, and out-of-range levels supply distinct counterexamples.
+  - C-SCR-001's positive-shift factor has a finite positive zero-energy limit rather than S(0)=0. Its crossing range and inverse must be derived from C-SCR-001, not borrowed from pending CM7.
+  - C-CMP-001 establishes no flat physical rate; its nominal and actual loss products vary with Gamma and retain a matrix-element dimension. CM3's c is a free dimensionless level only.
+  - Comparing two normalized mathematical curves does not establish physical channel dominance unless states, observables, units, and normalizations are independently common.
+  - The exponential crossover is covariant under (E,E0)->rho*(E,E0), while free c and E0 make any selected positive crossover nonidentifying.
+  - CM1 and CM2 are qualified accepted-source consumers only through C-SCR-001 and C-CMP-001; CM7 and later cycles are pending and supply no premise.
+  - Comparator values and bisection output may regress frozen formulas but cannot select the theorem or physical interpretation.
+allowed_imports:
+  - C-SCR-001 exact shifted inverse-square-root factor, range, limits, monotonicity, and physical ceiling
+  - C-CMP-001 exact non-rate and non-flat loss-cycle composition ceiling
+  - elementary real continuity, strict monotonicity, intermediate-value reasoning, exponentials, logarithms, derivatives, limits, inequalities, and dimensional analysis
+  - CM3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - SymPy exact simplification, solving, calculus, limits, and load-bearing mutations
+candidates:
+  - id: A
+    description: Reproduce CM3 literally and classify all ten symbolic, numeric, guard, dependency, crossover, and channel-ordering predicates.
+  - id: B
+    description: Prove the general continuous strictly increasing range-crossing theorem with explicit finite and endpoint cases.
+  - id: C
+    description: Derive the exact exponential-saturation inverse, sensitivities, convexity, limits, and common-energy scaling.
+  - id: D
+    description: Derive the actual C-SCR-001 shifted-factor crossing independently, including its positive floor, admissible level interval, sensitivities, and zero-shift limit.
+  - id: E
+    description: Test plateau, discontinuous, nonmonotone, out-of-range, arbitrary-target, free-normalization, and zero-rate countermodels.
+  - id: F
+    description: Independently rederive the theorem and audit CM1/CM2 ceilings, CM7 cycles, all predicates, consumers, and nonduplication.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit domain, range, endpoint, unit, and normalization conventions
+  - exact existence and uniqueness conditions rather than a numeric root alone
+  - sensitivity to continuity, strict monotonicity, response floor, saturation, and level range
+  - faithful specialization to C-SCR-001 instead of substituting a convenient surrogate
+  - scale covariance, parameter economy, identifiability, reusable API fit, and physical-semantic honesty
+  - complete predicate, cycle, and downstream-consumer review
+claims_proposed: [C-XOV-001]
+comparators_blinded_until: >-
+  Queue metadata and prior consumer replays exposed the surrogate
+  1-exp(-E/E0), the free c=0.5 example, the log(2) crossover, and the ten-check
+  tally. P117 records that exposure and freezes the stronger general-range,
+  endpoint, strictness, discontinuity, actual-screened-factor, sensitivity,
+  scale, identifiability, physical-countermodel, dependency, consumer, and
+  predicate gates before renewed CM3 execution, whole-body inspection, or
+  additional numeric output review.
+status: draft
