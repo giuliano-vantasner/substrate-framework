@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-04T23:00:00Z'
+updated: '2026-08-07T12:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,15 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.86.0`, containing one hundred sixteen
-claims. Its latest addition is C-COL-001's exact collective-coordinate metric,
-variable-metric Euler-Lagrange equation, stationary classification, and
-coordinate-covariance theorem. The latest terminal adjudication is P102: BD4
-is qualified because its pullback inertia and capillary saddle growth scale
-survive conditionally, but no field profile, material closure, stable mode,
-quantized onset, stochastic escape, or DBD event follows. BD5 and later
-consumers remain pending.
+The current accepted frontier is `v0.88.0`, containing one hundred nineteen
+claims. Its latest additions are C-RMAP-001's exact rational-map sphere
+degree/area theorem, lower bound, and axial beta/gamma family, and C-RMAP-002's
+resolution-bounded evaluation of one declared degree-four map. The latest
+terminal adjudication is P104: E1 is qualified because its exact identity and
+selected-map ordering survive, but midpoint nodes reduced as endpoint-including
+trapezoids bias its decimals, one higher deformation does not prove global
+minimality, and no radial, nuclear-state, reaction, or yield premise follows.
+E2 and later consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -56,7 +57,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 118 pending, 0 partially migrated, 3 migrated, 88 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 116 pending, 0 partially migrated, 3 migrated, 90 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -192,6 +193,7 @@ Attempts are append-only and individually reproducible.
 | 0122 | P101 exact threshold composition, regime, integer, sensitivity, identifiability, guard, and BD3 audit | `campaigns/P101-bd3-ignition-threshold-audit/attempts/0001` through `0006`, then terminal record replay | BD3 qualified through C-COH-001 and C-RG-002 with v0.85.0 unchanged; commit `b96c496` | Fifty primary and sixteen independent exact checks derive the general and endpoint threshold composition, all input elasticities, the E/theta ordering split, integer ceilings, common-scale covariance, rank-one endpoint observations with five null directions, arbitrary-target families, and the source example's V=1/3 guard boundary. The hbar-frequency check is constructed, symbol presence derives no isotope shift, k~omega is undeclared, and algebraic crossing is not ignition. Forty-two focused tests, P006/P086/P099 replays, the 16-check direct consumer, repaired 16-check DBD pipeline, 49-check master, and optional nucleation consumer pass; the single integrated workflow passes all 914 tests with 429 memory files valid | Audit BD4's collective-coordinate inertia and barrier-top frequency claim without importing a profile, coordinate normalization, stable-mode interpretation, or hbar onset equality; freeze literal reproduction, dimensional closure, collective-coordinate reduction, factor normalization, profile and boundary conditions, coordinate covariance, stable-versus-unstable curvature, sensitivity, identifiability, consumer, and nonduplication candidates before renewed body inspection or execution |
 | 0123 | P102 exact collective-coordinate pullback, stationary classification, covariance, and BD4 audit | `campaigns/P102-bd4-collective-inertia-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-COL-001 with BD4 qualified in v0.86.0; commit `bb94cc1` | Forty-six primary and seventeen independent checks derive the field-profile metric, variable-metric Euler-Lagrange equation, curvature signs, coordinate covariance, dimensions, profile counterexamples, scaling, and identifiability. The 14-check source reproduces; its Lean file compiles but encodes only weak algebra and dimensions. The 16-check engineering consumer and 13-check BD5 consumer use BD4 narratively, while legacy 11- and 4-check consumers independently support the saddle reading. Seventy-one focused tests and the single integrated 928-test, 433-memory workflow pass; GitNexus reports LOW impact. | Audit BD5's stochastic escape simulation without importing BD4's rejected physical inertia or onset, treating an overdamped supplied-gamma model as validation of `m_R`, accepting inverse completed-escape time under censoring as a Kramers rate, or calling temperature and population algebra ignition |
 | 0124 | P103 exact reflected first-passage theorem, censoring and hazard distinctions, and BD5 audit | `campaigns/P103-bd5-kramers-escape-audit/attempts/0001` through `0013`, then promotion boundary | accepted as C-FPT-001 with BD5 qualified in v0.87.0; commit `bcf5bfd` | Thirty-seven primary and twenty-one independent checks derive the reflected backward equation, positive integral, uniqueness, additive-potential invariance, linear and free controls, censoring distinctions, nonexponential counterexample, boundary sensitivity, and boundary-well asymptotic. Adaptive quadrature, 45-digit quadrature, collocation, separate timestep and ensemble studies, and preserved failed thresholds keep exact and resolution-bounded evidence distinct. The 13-check source and 21-check legacy rung reproduce, but completed-only inverse time, a five-percent zero, a joint dt/ensemble/seed comparison, an assigned half-ratio, and uncoupled population guards do not establish a constant Kramers hazard, convergence, optimum, ignition, material, or event. The focused gate passes 115 tests and the single integrated workflow passes all 942 tests with 437 memory files valid; GitNexus reports LOW impact and no affected process. | Audit E1's rational-map angular integral without importing E2/E4/NY2/PG3/S2 as authority, selecting maps by their advertised numeric values, mistaking grid agreement with an exact sphere theorem, or importing a nuclear-yield interpretation |
+| 0125 | P104 exact rational-map sphere theorem, independent declared-map cubature, and E1 audit | `campaigns/P104-e1-rational-map-angular-audit/attempts/0001` through `0011`, then promotion boundary | accepted as C-RMAP-001 and C-RMAP-002 with E1 qualified in v0.88.0; commit `42337ce` | Thirty-five repaired primary and eighteen independent checks derive exact reduced degree, pullback area, the normalized-square lower bound, the axial beta/gamma family, exact identity and degree-two controls, and independently refined cubic-map area and I. A passing but tautological verifier route is preserved and repaired. E1's endpoint-excluding midpoint arrays are reduced with trapezoids and bias 0.99792, 5.79616, and 20.62952; stronger routes give I2=pi+8/3 and I4=20.6496264884189. One shifted map does not prove minimality, and map degree supplies no nucleus or yield. The single integrated workflow passes all 953 tests with 443 memory files valid; GitNexus reports LOW impact, 67 changed graph symbols, and no affected process. | Audit E2's rational-map radial BVP using corrected canonical I values, explicit origin/asymptotic boundary analysis, solver-status and residual gates, mesh/domain/tolerance refinement, an independent shooting or collocation route, energy-tail control, and strict separation of conditional profile energies from physical baryon, nuclear binding, and yield claims |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -208,7 +210,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 117 bridge units remain pending, 3 are migrated, 89 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 116 bridge units remain pending, 3 are migrated, 90 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -927,11 +929,24 @@ couples its population guards into the SDE. The canonical theorem uses adaptive
 quadrature; the legacy sampled route already uses `np.trapezoid`, so no
 version-only compatibility abort enters the scientific verdict.
 
+P104 adds C-RMAP-001 for the exact conformal Jacobian area identity,
+`I>=B^2` square-deficit bound, reduced polynomial degree, and axial beta/gamma
+family, plus C-RMAP-002 for two-method numerical evidence on one exact declared
+degree-four map. E1 is qualified because its midpoint coordinate arrays are
+integrated as though they contained endpoints: its numerical identity exposes
+the bias, and its small grid changes do not bound the remaining exact error.
+The corrected values are `I(2)=pi+8/3` and
+`I(4)=20.6496264884189`. One higher shifted map supplies no global minimization
+theorem, and neither map degree nor angular evaluation supplies a physical
+nucleus, radial energy, reaction, or yield. The source uses its current
+`np.trapezoid` branch without compatibility failure; canonical P104 cubature
+uses Gauss-Legendre weights and no NumPy trapezoidal alias.
+
 ## Canonicalization
-The registry, `v0.87.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventeen accepted claims. P001 through P103 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 117 pending, 0 partial, 3 migrated, 89 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.88.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred nineteen accepted claims. P001 through P104 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 116 pending, 0 partial, 3 migrated, 90 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 117 pending, 3 migrated, 89 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is E1, pinned at SHA-256 `1afa9ba8ade88912e7361bbbd6f59a9fce5cc114c75ddf604a6439bc066ae2d1`. The generated inventory says it evaluates the rational-map angular integral for declared degree-one, degree-two axial, and degree-four cubic maps, advertises exact `I(1)=1`, numeric `I(2)=5.79` and `I(4)=20.63`, and passes six literal checks. P104 must freeze the sphere measure and stereographic conventions, degree and ramification checks, exact identity-map theorem, angular-integrand regularity at poles and denominator zeros, independent quadrature or symmetry reduction, precision and domain refinement, map-coefficient and coordinate-chart mutations, map-selection versus map-evaluation semantics, comparison blinding, dependencies, consumers, and nonduplication before opening or executing the source. It must not import pending E2, E4, NY2, PG3, or S2 as authority, treat advertised comparator values as derivation inputs, infer global minimality from evaluating one supplied map, or turn conditional angular integrals into a nuclear-yield prediction.
+The effort remains active. D4 is discharged, but D1 remains open with 116 pending, 3 migrated, 90 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential pending unit is E2, pinned at SHA-256 `fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f`. The generated inventory says it inserts E1's degree-one, degree-two, and degree-four angular values into a declared rational-map radial functional, solves three SciPy boundary-value problems, advertises per-degree energies near 1.232, 1.208, and 1.136, a decreasing per-degree hierarchy, and six literal checks. P105 must freeze the corrected C-RMAP-001/002 inputs, radial Euler-Lagrange derivation, origin and infinity expansions, finite-domain boundary semantics, solver status and residuals, mesh/domain/tolerance refinement, an independent shooting or variational route, tail-energy control, energy normalization, sensitivity to the corrected E1 values, and consumer/interpretation ceilings before further source inspection or execution. P104 already exposed E2's header, duplicated midpoint-plus-trapezoid angular integrator, declared BVP, advertised values, and the first part of its implementation during consumer audit; P105 must declare that exposure rather than claim body or comparator blinding. It must not call rational-map degree a physical baryon, label profiles deuteron or alpha states, infer true multi-Skyrmion binding from a conditional single-profile ansatz, or import pending E3, PG3, or S2 as authority.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
