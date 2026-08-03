@@ -1,0 +1,62 @@
+id: P114
+base_release: v0.94.0
+base_commit: e72cfcd088e20ca5d0e14c8734d3804104a2e1e0
+scientific_base_commit: 1e669eaec34b46923d52c13d47126ee83078127f
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [PN6]
+question: >-
+  Derive and independently verify the exact E=0 finite sum for arbitrary
+  symmetric detuning pairs, including block and sign conventions, equal versus
+  unequal complex coupling products, necessary and sufficient zero-loss
+  cancellation, exact conditions for a strictly nonzero common-positive-loss
+  sum, zero couplings, uniform and nonuniform loss, small- and large-loss
+  limits, size normalization, and nonduplication; then adjudicate PN6 without
+  promoting a C-RES-001 corollary twice or inferring a bath, physical channel,
+  probability, rate, nuclear or phonon mechanism, material realization,
+  magnitude, or observation.
+invariants:
+  - C-RES-001's finite block, E*I-H_QQ orientation, spectral energy, common negative imaginary shift, and physical ceiling remain unchanged.
+  - Each zero-loss symmetric pair cancels at E=0 only when its positive- and negative-detuning complex coupling products match; cancellation of the full sum alone need not be pairwise.
+  - With real nonnegative pair products g_j^2, real nonzero detunings, one common Gamma>0, and at least one nonzero g_j, the sum is strictly negative imaginary; arbitrary couplings without that nontriviality premise do not imply strictness.
+  - Signed or complex products, unequal products within a pair, unequal detuning partners, or unequal shifts can change phase and permit cancellation.
+  - Adding pairs at fixed per-pair coupling changes model size; fixed-total normalization and continuum weighting are distinct conventions, not numerical refinement.
+  - Finite-sum small- and large-loss coefficients are exact; an unequal-detuning sum does not inherit the one-pair optimum without a separate stationary analysis.
+  - Pending LB2, PN1, S1 through S5, and rejected PN4 or PN5 narratives supply no premise; only their accepted claim ceilings may be imported.
+  - No new claim or API is warranted unless a distinct reusable theorem survives C-RES-001 nonduplication.
+allowed_imports:
+  - exact finite complex matrices, diagonal resolvents, finite sums, rational functions, inequalities, derivatives, and limits
+  - C-RES-001 for the arbitrary finite effective block, pair specialization, one-pair regimes, normalization distinction, and physical ceiling
+  - C-DYN-001 only for the distinction between an abstract damping input and physical loss or decoherence
+  - C-SG-019 only as PN1's classical coefficient ceiling; qualified PN4 and PN5 contribute only their accepted mappings
+  - SymPy exact matrices, sums, simplification, limits, derivatives, assumptions, and mutations
+  - PN6 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce PN6 literally and classify every general-L, example, guard, dependency, and physical predicate.
+  - id: B
+    description: Sum the C-RES-001 pair identity for arbitrary finite detunings and real nonnegative products and derive exact strictness conditions.
+  - id: C
+    description: Independently invert complete finite block matrices for multiple nonuniform pairs and compare direct summation.
+  - id: D
+    description: Generalize to unequal complex products, signed products, zero couplings, detuning asymmetry, and nonuniform shifts to map all cancellation failures.
+  - id: E
+    description: Derive finite-sum small- and large-loss coefficients, size conventions, and the unequal-detuning stationary equation without borrowing the one-pair optimum.
+  - id: F
+    description: Audit accepted dependencies, source narratives, nonduplication, and the empty downstream consumer closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit finite spaces, E value, sign, shift, detuning, and coupling-product conventions
+  - exact agreement of pairwise summation and complete finite-block inversion
+  - necessary and sufficient cancellation and strict-nonzero premises with zero and complex countermodels
+  - exact limiting coefficients, dimensions, normalization, and stationary-equation scope
+  - strict separation of finite matrix algebra from bath, channel, probability, rate, and material interpretations
+  - assumption economy, nonduplication, and complete predicate and consumer review
+claims_proposed: []
+comparators_blinded_until: >-
+  The queue exposes the general finite sum, lossless null, positive-loss
+  narrative, and claimed arbitrary inputs. P114 freezes exact block,
+  strictness, countermodel, nonuniformity, asymptotic, normalization,
+  interpretation, dependency, and nonduplication gates before executing PN6 or
+  reading its thirty predicate implementations. Exposed examples cannot select
+  a concept or pass threshold.
+status: draft
