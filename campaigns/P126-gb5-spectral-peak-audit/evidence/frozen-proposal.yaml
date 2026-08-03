@@ -1,0 +1,85 @@
+id: P126
+base_release: v0.98.0
+base_commit: b22e667a81eeffb93d2d371cf7ac65673ce1e607
+scientific_base_commit: bbc6b6dc9815ee45a9e4dd9b3fd987e3db90b5ae
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GB5]
+question: >-
+  Reproduce and independently audit GB5's peak-equals-unit identity,
+  derivative, monotonicity, weight-regime independence, data gate, quotient-
+  remainder dependency, predicates, consumers, and nonduplication; distinguish
+  a declared energy unit and equal-quanta ansatz from a spectral distribution
+  and do not turn arithmetic subdivision into emitted quanta, a phonon line,
+  material spectrum, yield, heat, or observation.
+invariants:
+  - >-
+    For exact Omega>=0 and omega>0 in one unit, Euclidean division uniquely
+    gives n=floor(Omega/omega) and r=Omega-n*omega with 0<=r<omega. GB2 and PN2
+    are qualified arithmetic only and grant no physical constituent energies.
+  - >-
+    Defining a function p(omega)=omega gives dp/domega=1 and strict monotonicity
+    by identity. It does not derive p as the mode of a probability or intensity
+    measure.
+  - >-
+    A spectral peak requires a declared spectral measure, support, weights or
+    occupations, resolution and tie convention. Conservation of total energy
+    alone admits partitions and spectra with different modes.
+  - >-
+    The ansatz of n equally weighted lines or quanta at omega plus a remainder
+    is additional to Euclidean division. Even then n=0 and n=1 require explicit
+    empty-spectrum, remainder, multiplicity, and tie handling.
+  - >-
+    At fixed Omega, varying omega changes n by plateaus and jumps and changes
+    r. Differentiating only the declared identity p=omega suppresses those
+    load-bearing changes rather than predicting a complete spectral response.
+  - >-
+    Absence of w from an identity makes that identity weight-independent but
+    supplies no weight regime, interaction, rate, occupation, or spectral
+    robustness theorem.
+  - >-
+    Omega and omega are free declared scales. Common energy scaling preserves n
+    while moving omega and any asserted peak, so arithmetic does not fix an
+    absolute spectral value.
+  - >-
+    A physical emission spectrum additionally requires states, interactions,
+    matrix elements, phase space or density of states, occupations, linewidth,
+    broadening, detector response, material provenance, and a measurement map.
+  - >-
+    GB5's body, output, and predicate implementations remain unopened at
+    freeze. Queue metadata already exposed its identity, derivative, regime
+    claim, data-gate statement, dependencies, and tally.
+allowed_imports:
+  - GB2 and PN2 only as qualified exact quotient-remainder arithmetic with their physical ceilings
+  - P123 exact quotient-zero plateau jump scaling representation and constituent-energy ceilings
+  - exact rational arithmetic finite measures calculus units and counterdistributions
+  - GB5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce GB5 literally and classify every identity monotonicity data-gate fake and tally predicate.
+  - id: B
+    description: Retain peak-equals-unit only as a declared identity with exact derivative and unit covariance.
+  - id: C
+    description: Add an explicit equal-quanta spectral ansatz and audit multiplicity remainder quotient-zero and tie cases.
+  - id: D
+    description: Construct alternative exact spectra and energy partitions sharing the same quotient-remainder bookkeeping but different modes.
+  - id: E
+    description: Track n and r under omega variation and separate their staircase response from the identity derivative.
+  - id: F
+    description: Audit weight absence free-scale covariance and finite data-gate semantics without importing a comparator.
+  - id: G
+    description: Construct zero-coupling zero-occupation broadening and detector countermodels to the physical spectral reading.
+  - id: H
+    description: Close the GB2 cycle every predicate dependency consumer and nonduplication obligation with a terminal disposition.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact quotient remainder domain fidelity
+  - explicit spectral measure support weights tie convention units and varying-parameter discipline
+  - assumption and parameter economy scale covariance physical-premise completeness and counterexamples
+  - mutation sensitivity data-gate specificity nonduplication and predicate dependency and consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  GB5's body and runtime output remain unopened until the proposal, immutable
+  copy, memory contract, and freeze validation pass. Queue metadata already
+  exposes the identity and data-gate headline, so predicate-detail and source-
+  output blinding remain.
+status: draft

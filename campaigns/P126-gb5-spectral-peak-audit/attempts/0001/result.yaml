@@ -1,0 +1,39 @@
+campaign: P126
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P126-gb5-spectral-peak-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P126-gb5-spectral-peak-audit/proposal.yaml campaigns/P126-gb5-spectral-peak-audit/evidence/frozen-proposal.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  accepted_claims: 133
+  source_units: 218
+  pending_units: 95
+  memory_files: 514
+  pytest_tests: 1090
+  source_body_opened: false
+  debt: []
+results:
+  proposal_sha256: 4333c27de763b8a8411ecae03f933d00988caa0c43ffcd7b7290588bc81590f1
+  proposal_memory: {valid: true}
+  manifest_copy: {identical: true}
+  repository_workflow: {exit_code: 0, tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+  workflow: {accepted_claims: 133, source_units: 218, pending_units: 95}
+  memory: {files_valid: 514}
+  skill: {valid: true}
+  pytest: {passed: 1090, seconds: not_asserted}
+  diff_check: {exit_code: 0}
+  source_body_opened: false
+result: >-
+  P126's proposal and immutable copy are byte-identical and valid, the accepted
+  repository is unchanged, and GB5 remained unopened through the complete
+  freeze boundary. The integrated command exited cleanly; its concise nested
+  tail was not forwarded by the interface, so no wall time is invented.
+compatibility_event: none
+next_attempt: >-
+  Commit the frozen P126 contract, then reproduce GB5 natively and inspect its
+  runtime predicates under the preregistered arithmetic-versus-spectrum and
+  data-gate criteria.
