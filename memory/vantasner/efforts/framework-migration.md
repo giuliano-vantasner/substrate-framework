@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-07T20:00:00Z'
+updated: '2026-08-07T21:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -27,10 +27,11 @@ The current accepted frontier is `v0.92.0`, containing one hundred twenty-seven
 claims. Its latest addition is C-SG-019's exact all-order classical mixed-
 coordinate coefficient theorem with amplitude, background, coordinate scales,
 factorials, parity, convergence, and truncation ceilings explicit. The latest
-terminal adjudication is P109: PN1 is qualified because its unit-coordinate
-Taylor algebra survives, but its normalized frequency modes, quantization,
-matrix element, multiphonon process, resonance, rate, energy-transfer, and
-material readings do not. PN2 and later consumers remain pending.
+terminal adjudication is P110: PN2 is qualified because exact positive-energy
+quotient and remainder bookkeeping survives, but its binary-float boundary,
+borrowed physical inputs, quantum subdivision mechanism, matrix element, rate,
+energy-transfer, material, and literature-retraction readings do not. PN3 and
+later consumers remain pending.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -56,7 +57,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 111 pending, 0 partially migrated, 3 migrated, 95 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 110 pending, 0 partially migrated, 3 migrated, 96 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -198,6 +199,7 @@ Attempts are append-only and individually reproducible.
 | 0128 | P107 exact conditional BPS bound, attained-sector zero difference, controlled near-BPS expansion, and E4 audit | `campaigns/P107-e4-bps-zero-binding-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-BPS-001 through C-BPS-003 with E4 qualified in v0.91.0; commit `2297324` | Thirty-five primary and twenty-one independent checks derive both orientation branches, normalized target pairing, dimensions, equality conditions, sector slacks, attainment, controlled remainders, and the lambda_A=pi^2*lambda_B convention map. Zero potential disproves universal saturation; the standard V=1-cos(chi) compacton has a logarithmically divergent naive L2 correction. GitNexus reports LOW additive impact and no affected process; the single integrated workflow passes all 991 tests with 463 memory files and the physics skill valid. | Audit E5's empirical multi-reaction scale comparison without importing nuclear binding tables as derivations, treating a finite list of positive fractions as a universal bracket or O(1) theorem, identifying alpha products with accepted map-degree states, or using NY1/NY2/O1 as authority beyond their accepted conditional ceilings |
 | 0129 | P108 exact selected reaction ledger, scale covariance, finite-sample ceiling, and E5 audit | `campaigns/P108-e5-independent-fuel-scale-audit/attempts/0001` through `0006`, then terminal no-release boundary | E5 qualified through existing dimensional, conditional-difference, scale, and rational-map ceilings with v0.91.0 unchanged; commit `3dc3703` | Thirty-four primary and nineteen independent checks derive the exact four-value ledger, inverse denominator rescaling, pairwise scale cancellation, the nonunique bracket interval, arbitrary-target and closest-reaction families, and sample/state countermodels. The binding values are direct inputs despite their comparator-only label; D+T is neutron producing; D+D omits its radiative channel; and E2 supplies no alpha-state map. GitNexus reports LOW risk and zero affected processes; the single integrated workflow passes all 991 tests with 465 memory files and the physics skill valid. | Audit PN1's cosine Taylor cross-vertices without turning formal classical coefficients into a one-high-quantum-to-many-phonon process, importing a quantization or mode-normalization map, or mistaking nonzero formal series terms for rates, resonant transfer, kinematic accessibility, or material dynamics |
 | 0130 | P109 all-order cosine mixed-coordinate theorem and PN1 interpretation audit | `campaigns/P109-pn1-cosine-mixed-vertex-audit/attempts/0001` through `0007`, then promotion boundary | accepted as C-SG-019 with PN1 qualified in v0.92.0; commit `87c045a` | Ninety-nine primary and thirty-three independent checks derive the arbitrary-order coefficient by derivative, complex-exponential, and binomial routes; expose amplitude, background, coordinate-scale, and factorial conventions; and distinguish an entire nonzero formal subsequence from a quantized process. Three oracle defects are preserved before repair. GitNexus reports LOW additive impact and zero affected processes; the single integrated workflow passes all 1,003 tests with 469 memory files and the physics skill valid. | Audit PN2's exact positive-energy Euclidean-division count and unit conversions without borrowing a nuclear release or phonon frequency, treating a floor identity as a quantum subdivision mechanism, importing PN1's rejected process reading, or inferring a matrix element, rate, material channel, or energy transfer from kinematics alone |
+| 0131 | P110 exact quotient, remainder, representation, interval, and PN2 interpretation audit | `campaigns/P110-pn2-energy-subdivision-count-audit/attempts/0001` through `0004`, then terminal no-release boundary | PN2 qualified through existing bookkeeping ceilings with v0.92.0 unchanged; commit `263014e` | Fifty-four primary and fifteen independent exact checks reproduce the selected counts, derive sharp half-open plateaus and divisor jumps, propagate rectangular input bounds, and expose a binary-float floor counterexample. The source's seven values span 2.4e7 through 2.4e10, not the loose envelope endpoints. C-SG-019 and FS4 supply no quantum process; a zero-matrix-element countermodel leaves the quotient unchanged and the rate zero. The cited v2 paper contains no explicit retraction and its 1.3-percent number is a component ratio. GitNexus reports LOW record-only risk and zero affected processes; the single integrated workflow passes all 1,003 tests with 471 memory files and the physics skill valid. | Audit PN3's exact symmetric-spin ladder matrix element, representation and normalization premises, general-rung versus ground-rung scaling, and rate interpretation without importing nuclear two-level systems, a common phonon mode, an interaction Hamiltonian, Fermi's golden rule, decoherence, state preparation, or a material realization |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -214,7 +216,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 111 bridge units remain pending, 3 are migrated, 95 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 110 bridge units remain pending, 3 are migrated, 96 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1006,11 +1008,24 @@ honesty-scan edge inherit no mode normalization, operator, state, matrix
 element, kinematic channel, resonance, rate, or material map. Exact P109 work
 uses no NumPy or sampled quadrature.
 
+P110 adds no claim or canonical API. For declared positive commensurate
+energies, PN2's quotient and same-unit remainder are exact conditional
+bookkeeping, and independent Fraction and scaled-integer routes agree on the
+selected values, plateau endpoints, divisor jumps, scaling, and interval
+bounds. Exact decimal 0.3/0.1 gives quotient three while the source's binary
+float quotient floors to two, so threshold-adjacent counts require exact
+construction. The supplied 24 MeV and meV-to-eV band remain external inputs.
+C-SG-019 is classical and FS4 is derivative-cancellation evidence; neither
+constructs a quantum state, operator, matrix element, rate, or material
+channel. The cited v2 paper contains no explicit retraction and distinguishes
+its small direct complex correction from a potentially larger interference-
+mediated rate effect. Exact P110 work uses no NumPy or sampled quadrature.
+
 ## Canonicalization
-The registry, `v0.92.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-seven accepted claims. P001 through P109 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 111 pending, 0 partial, 3 migrated, 95 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.92.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred twenty-seven accepted claims. P001 through P110 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 110 pending, 0 partial, 3 migrated, 96 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 111 pending, 3 migrated, 95 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN2, pinned at SHA-256 `66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a`. Its source derives `n=floor(Omega/omega_ph)` and a remainder for positive supplied energies, then evaluates named MeV/meV inputs and composes them with PN1 and FS4 narratives. P110 must freeze the positivity, units, exact Euclidean-division convention, discontinuities, remainder, large-integer representation, input provenance, comparator and literature boundary, FS4 and C-SG-019 ceilings, and complete consumer map before source-body execution. It must not convert a kinematic floor identity into a quantum subdivision process, import a nuclear release or material phonon frequency as a derivation, use PN1's rejected multiphonon reading, or infer a matrix element, rate, resonance, branching, deposition, or energy transfer from the count alone.
+The effort remains active. D4 is discharged, but D1 remains open with 110 pending, 3 migrated, 96 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-ready sequential unit is PN3, pinned at SHA-256 `da472079f418368926e27d22567cdf3ad8f32c836146ed8107ae2874f377b58b`. Its queue entry invokes the exact symmetric-spin ladder matrix element and specializes the ground rung to an amplitude proportional to `sqrt(N)`, then labels its square a Fermi-golden-rule rate proportional to `N`. P111 must freeze the Hilbert space, tensor-product and permutation-symmetry premises, total-spin normalization, ladder convention, general-rung and edge cases, asymptotics, interaction-operator map, rate-law assumptions, representation multiplicities, mutations, nonduplication, and consumer closure before source-body execution. It must not infer physical nuclear two-level systems, a shared phonon bath, coherent preparation, coupling homogeneity, a transition Hamiltonian, Fermi's golden rule, a linewidth, decoherence law, supertransfer, rate, or material mechanism from abstract SU(2) ladder algebra alone.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
