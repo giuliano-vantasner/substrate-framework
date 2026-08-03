@@ -1,0 +1,62 @@
+id: P111
+base_release: v0.92.0
+base_commit: 640f02ab72fdd7a6333e1ddabdbe956e178ebe97
+scientific_base_commit: 263014ecf56830051f5db4c49965c44bcb38d20a
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [PN3]
+question: >-
+  Derive the exact normalized collective raising and lowering matrix elements
+  on the permutation-symmetric subspace of N declared two-state factors,
+  including representation premises, all excitation rungs, edge cases,
+  unequal-coupling and normalization sensitivity, and the precise ceiling
+  between squared algebraic matrix elements and physical transition rates;
+  then adjudicate PN3 without importing nuclear states, a common phonon mode,
+  coherent preparation, a coupling Hamiltonian, Fermi's golden rule, a
+  linewidth, decoherence, supertransfer, or a material realization.
+invariants:
+  - N is a positive integer and the tensor-product basis, inner product, local raising convention, and permutation-symmetric subspace are declared explicitly.
+  - The normalized k-excitation Dicke vector is the equal superposition of all binomial(N,k) computational basis states with exactly k excitations.
+  - With J_plus=hbar*sum_i sigma_plus_i, the exact symmetric-rung coefficient is hbar*sqrt((N-k)*(k+1)); the ground-edge value hbar*sqrt(N) is not the scaling of every rung.
+  - The equivalent j=N/2 and m=k-N/2 notation is a representation coordinate, not a derivation of physical constituents or preparation in the maximal-spin sector.
+  - Squaring a bare ladder coefficient is algebraic. A Fermi-golden-rule rate additionally requires a declared interaction, states, coupling normalization, energy conservation or spectral density, and validity regime.
+  - Unequal magnitudes or phases replace the equal-coupling symmetric matrix element by an explicit coupling sum and can create bright and dark combinations; N alone does not determine it.
+  - Abstract two-state factors must not be identified with nuclei or C-TH-001's thermal occupations without a separately accepted physical map.
+allowed_imports:
+  - finite-dimensional complex Hilbert spaces, tensor products, orthonormal computational bases, binomial coefficients, and exact linear algebra
+  - standard su(2) commutators and the finite irreducible ladder formula, independently rederived in the declared normalization
+  - C-SPN-001 only for nonduplication with the existing spin-one pure-state theorem
+  - C-TH-001 only as a ceiling that a declared two-state partition function supplies no collective operator or causal mechanism
+  - SymPy exact matrices, integers, radicals, polynomial identities, and finite exhaustive constructions
+  - PN3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce PN3 literally and classify every ladder, normalization, scaling, guard, and physical-rate predicate.
+  - id: B
+    description: Construct normalized symmetric k-excitation states combinatorially and count every contributing local raise and lower transition.
+  - id: C
+    description: Independently derive the same coefficients from the irreducible j=N/2 su(2) representation, commutator, and Casimir.
+  - id: D
+    description: Generalize the ground-rung coupling to unequal complex site couplings and classify symmetric, bright, and dark amplitudes.
+  - id: E
+    description: Separate algebraic squared coefficients from conditional Golden-rule rates through dimension, spectral, resonance, and zero-density countermodels.
+  - id: F
+    description: Trace all direct and transitive queue consumers and prevent reuse of sqrt(N) from supplying missing physical premises.
+  - id: G
+    description: Test nonduplication and promote C-SPN-002 plus a pure module only if a distinct reusable theorem and governed consumers survive.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit Hilbert-space, basis, normalization, symmetry-sector, and operator premises
+  - exact agreement of combinatorial and irreducible-representation routes on every rung and edge case
+  - correct N and k asymptotics rather than extrapolation from the ground rung
+  - sensitivity to state normalization, operator normalization, symmetry-sector choice, and unequal complex couplings
+  - strict separation of algebraic matrix elements from interaction and rate-law assumptions
+  - assumption economy, reusable API fit, nonduplication, and complete consumer closure
+claims_proposed: [C-SPN-002]
+comparators_blinded_until: >-
+  The generated queue already exposes the standard ladder formula, the ground-
+  rung sqrt(N) statement, the N=1 limit, and the advertised linear rate label.
+  P111 freezes stronger all-rung, normalization, unequal-coupling, rate-ceiling,
+  mutation, consumer, and nonduplication gates before executing PN3 or reading
+  its nine predicate implementations. Exposed formulas cannot select the
+  concept or supply a physical pass criterion.
+status: draft
