@@ -493,6 +493,13 @@ from .first_passage import (
     summarize_censored_first_passage,
     thresholded_completed_only_rate,
 )
+from .energy_differences import (
+    LinearDifferenceInterval,
+    linear_difference_coefficient,
+    linear_difference_interval,
+    linear_energy_difference,
+    normalized_linear_difference,
+)
 from .rational_maps import (
     RationalMapDegreeEvidence,
     RationalMapSphereEvidence,
@@ -938,6 +945,11 @@ __all__ = [
     "fit_rest_breather_snapshot",
     "forward_difference",
     "free_reflected_absorbing_mfpt",
+    "LinearDifferenceInterval",
+    "linear_difference_coefficient",
+    "linear_difference_interval",
+    "linear_energy_difference",
+    "normalized_linear_difference",
     "axial_rational_map_angular_integral",
     "exact_rational_map_degree",
     "RadialEndpointExponents",

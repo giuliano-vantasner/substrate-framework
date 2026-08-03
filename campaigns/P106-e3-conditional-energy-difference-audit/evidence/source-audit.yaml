@@ -1,0 +1,46 @@
+campaign: P106
+source_unit: E3
+static_surface:
+  imports: [numpy, sympy, scipy.integrate.solve_bvp]
+  literal_checks: 5
+  local_check_helper: true
+  assert_statements: 1
+  dynamic_terminal_tally: true
+  trapezoid_dispatch: np.trapezoid when present with immutable np.trapz fallback
+numeric_route:
+  angular_integral:
+    method: midpoint theta and phi arrays followed by trapezoidal reduction
+    inherited_defect: >-
+      This is the endpoint-loss method rejected for final values by P104; the
+      accepted inputs are I2=pi+8/3 and I4=20.6496264884189.
+  radial_profile:
+    method: solve_bvp on [1e-4,16] with 3000 initial nodes tolerance 1e-6 and maximum 120000 nodes
+    boundary_data: exact f(inner)=pi and f(outer)=0 at finite walls
+    missing_gates:
+      - solver success or status
+      - collocation residual
+      - independent domain mesh and tolerance refinement
+      - asymptotic Robin boundary residuals
+      - endpoint energy estimates
+    repeated_work: >-
+      E3 reruns the already-adjudicated E2 branch calculation instead of
+      composing C-RPROF-002's durable accepted evidence.
+  energy:
+    samples: 20000
+    integration: selected NumPy trapezoid alias
+    endpoint_control: none
+algebra:
+  surviving_surface: >-
+    Conditional on M(B)=alpha*b(B)*U, B_E(B)=B*M(1)-M(B), and conserved
+    multiplicity, Q=n*M(A)-M(nA)=B_E(nA)-n*B_E(A)=alpha*U*(n*b(A)-b(nA)).
+  source_specialization: alpha=3*pi^2 A=2 n=2
+  accepted_repair: C-RDIFF-001 exact theorem and C-RDIFF-002 accepted-input numeric specialization
+source_predicate_weaknesses:
+  - The 7.5-to-9.5 coefficient band admits both 0.9 and 1.1 normalization mutations.
+  - Comparator inertness does not validate the mass normalization or state and reaction maps.
+  - Empirical comparisons are arithmetic on supplied external literals, not framework predictions.
+  - The BPS endpoint and near-BPS explanation import pending E4 and an unproved interpolation.
+  - Calling the branch combination a classical Skyrme result imports an unaccepted action and ansatz-to-state theorem.
+compatibility_verdict: >-
+  E3 executed on np.trapezoid. No alias-only replay was needed, and no
+  compatibility event affected the scientific adjudication.

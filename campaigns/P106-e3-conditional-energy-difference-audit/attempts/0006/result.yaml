@@ -1,0 +1,34 @@
+campaign: P106
+attempt: 0006
+route: terminal_promotion_gate
+status: terminal_promotion_gate_passed
+started_at: '2026-08-07T17:15:00Z'
+scientific_replay:
+  primary: ALL 33 CHECKS PASS [P106]
+  independent: ALL 11 CHECKS PASS [P106-INDEPENDENT]
+  focused_tests: 10 passed
+pre_gate_state:
+  repository: WORKFLOW VALID 123 claims 123 accepted 0 proposals 218 units 114 pending 0 partial
+  generated_docs: current
+  generated_memory: current
+  decision_and_proposal_memory: valid
+  git_diff_check: pass
+command: scripts/validate.sh && git diff --check
+expected_scope: >-
+  One integrated repository boundary only. The script includes the complete
+  pytest suite, governance and release closure, generated-state checks, memory
+  validation, skill validation, and migration queue validation.
+completion_rule: >-
+  Finalize this record only after process exit zero and terminal workflow tally;
+  then rerun only record-sensitive schema generation memory and diff checks.
+completed_at: '2026-08-07T17:20:00Z'
+result:
+  exit_status: 0
+  repository: WORKFLOW VALID 123 claims 123 accepted 0 proposals
+  migration_queue: 218 units 114 pending 0 partial
+  memory_files: 455 valid
+  skill: valid
+  pytest: 978 passed in 88.33 seconds
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+  git_diff_check: pass
+debt: []

@@ -1,0 +1,24 @@
+campaign: P106
+attempt: 0005
+route: promotion_schema_precheck
+status: generated_state_ordering_failure
+commands:
+  - command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+    exit_status: 1
+    failure: generated claim index is stale
+  - command: .venv/bin/python scripts/render_docs.py --check
+    exit_status: 1
+    failure: generated claim index is stale
+  - command: .venv/bin/python scripts/render_memory.py --check
+    exit_status: 1
+    failure: generated accepted memory file set is stale
+mechanism: >-
+  The registry and release were edited before their canonical generated claim
+  index and accepted-memory files were rendered. Running check mode first can
+  only diagnose that expected ordering state; it is not evidence against either
+  claim.
+repair: >-
+  Run each canonical generator once, then rerun repository and generated-state
+  checks. Do not rerun unchanged scientific verifiers for this record-only
+  ordering defect.
+next_attempt: generated-state synchronization followed by targeted schema checks

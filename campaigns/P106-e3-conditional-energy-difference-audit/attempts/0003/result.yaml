@@ -1,0 +1,26 @@
+campaign: P106
+attempt: 0003
+candidate: B_C_D_E
+status: focused_exact_gate_passed
+commands:
+  - command: PYTHONPATH=src .venv/bin/python proposals/P106-e3-conditional-energy-difference-audit/verify.py
+    exit_status: 0
+    terminal_tally: ALL 32 CHECKS PASS [P106]
+  - command: PYTHONPATH=src .venv/bin/python proposals/P106-e3-conditional-energy-difference-audit/reviews/independent_difference_review.py
+    exit_status: 0
+    terminal_tally: ALL 11 CHECKS PASS [P106-INDEPENDENT]
+accepted_input_composition:
+  normalized_difference: 0.2864828542962012
+  coefficient: 8.482417318795285
+  cross_method_coefficient: 8.482414868843847
+  rectangular_method_spread_envelope:
+    lower: 8.482414867768218
+    upper: 8.482417319870914
+    interpretation: sensitivity envelope from two P105 methods, not a confidence interval or rigorous discretization enclosure
+findings:
+  - The exact direct-mass and independent binding ledgers agree and cancel the declared one-body term only when final degree equals the initial multiplicity times initial degree.
+  - Normalization, multiplicity, subtraction sign, and both branch coefficients are load bearing.
+  - Separate energy upper bounds do not bound their signed difference unless their relative slacks are controlled.
+  - E3's 7.5-to-9.5 band admits both 0.9 and 1.1 normalization mutations and cannot validate accepted numeric provenance.
+  - No profile solve or sampled integration is required to compose already accepted P105 evidence.
+next_attempt: complete source-predicate dependency consumer and nonduplication adjudication before deciding whether any claim or API delta exists

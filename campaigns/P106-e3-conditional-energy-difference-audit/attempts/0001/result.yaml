@@ -1,0 +1,53 @@
+campaign: P106
+attempt: 0001
+candidate: A
+status: completed_reproduction_only
+started_at: '2026-08-07T16:10:00Z'
+objective: >-
+  Reproduce the hash-pinned E3 process unchanged in the current environment,
+  capture its actual profile values, five predicates, terminal tally, exit
+  status, NumPy integration branch, and runtime before scientific adjudication.
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+  sha256: aa76b9e675d4fbb45594e9d3df5107af175e927a24840260ca71ffda1bad3315
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+compatibility_preflight:
+  dispatch: np.trapezoid when present with immutable np.trapz fallback
+  current_branch: np.trapezoid
+  alias_only_replay_needed: false
+observed_static_risks:
+  - Repeats E1's endpoint-excluding midpoint arrays with trapezoidal reduction instead of importing accepted C-RMAP-001/002 values.
+  - Repeats E2's hard finite-wall solve_bvp route and does not check solver success, residuals, or refinement before using sol.sol.
+  - A 7.5-to-9.5 coefficient band is too broad to validate the accepted-value combination or its provenance.
+  - Physical mass, state, reaction, scale, BPS, and empirical comparisons are not accepted dependencies.
+next_if_process_passes: >-
+  Preserve the output as reproduction evidence, audit all predicates
+  individually, and derive the conditional combination from accepted P105
+  values without rerunning the BVP.
+completed_at: '2026-08-07T16:12:00Z'
+process:
+  exit_code: 0
+  wall_time_seconds: 3.09
+  terminal_tally: ALL 5 CHECKS PASS
+  compatibility_abort: false
+observed_values:
+  source_b1: 1.2314
+  source_b2: 2.4154
+  source_b4: 4.5452
+  source_kappa: 8.457
+  source_Q_MeV: 217.2
+  source_overbind_ratio: 9.1
+verdict: >-
+  The process and all five literal predicates pass on the current
+  np.trapezoid branch. This establishes source reproducibility only. The
+  profile route repeats the already-adjudicated biased angular and hard-wall
+  methods, omits solver-status and residual gates, and produces kappa=8.457
+  rather than the accepted-input composition. Its mass normalization, electron
+  value, state map, reaction, empirical data, and BPS limit are imported or
+  pending, not accepted derivation inputs.
+next_attempt: >-
+  Derive the exact generic combination and an independent binding ledger from
+  fresh symbols, then specialize only to accepted P105 values and transparent
+  numerical provenance.

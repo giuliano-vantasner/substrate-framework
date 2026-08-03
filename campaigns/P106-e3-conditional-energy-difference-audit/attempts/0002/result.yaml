@@ -1,0 +1,23 @@
+campaign: P106
+attempt: 0002
+candidate: B
+status: verifier_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P106-e3-conditional-energy-difference-audit/verify.py
+exit_status: 1
+passed_before_failure: 8
+failed_check: scale cancels only after the mass normalization is declared
+mechanism: >-
+  SymPy represented dQ/dU as -alpha*b_f+alpha*b_i*n and the factored
+  coefficient as alpha*(-b_f+b_i*n). Their structural Python equality is
+  false even though simplify(dQ/dU-coefficient) is exactly zero. This is a
+  verifier representation defect, not a candidate or algebra failure.
+independent_route_same_boundary:
+  exit_status: 0
+  terminal_tally: ALL 11 CHECKS PASS [P106-INDEPENDENT]
+repair: >-
+  Replace the representation-sensitive equality with exact symbolic
+  simplification of the difference, leaving the mathematical predicate and
+  all load-bearing inputs unchanged.
+next_attempt: rerun the primary verifier and retain every later check as unexecuted until the repaired process reaches it

@@ -1402,6 +1402,41 @@ units:
       `substrate_framework.numerics.trapezoid_integral`; the independent route
       uses Simpson integration. Version-only alias availability is not counted
       as a scientific failure or success.
+  E3:
+    disposition: qualified
+    accepted_claims:
+      - C-RDIFF-001
+      - C-RDIFF-002
+    qualification: >-
+      E3's premise-explicit direct mass and binding subtraction survives as the
+      exact C-RDIFF-001 transformation, and its B=2/B=4 specialization survives
+      after replacing repeated biased angular quadrature and unchecked hard-wall
+      BVPs with C-RPROF-002's accepted snapshots. The corrected conditional
+      coefficient is 8.482417318795285, with an independent value
+      8.482414868843847 and a transparent rectangular two-method sensitivity
+      envelope [8.482414867768218,8.482417319870914]. The source's 7.5-to-9.5
+      gate admits ten-percent normalization mutations, and comparator
+      inertness does not validate its physical premises. No physical Skyrme
+      action, variational bound, global minimum, multi-baryon mass map,
+      deuteron or helium state, quantum correction, reaction channel,
+      empirical scale, overbinding prediction, BPS endpoint or interpolation,
+      deposition model, or yield is accepted.
+    evidence:
+      - campaigns/P106-e3-conditional-energy-difference-audit/reviews/source_adjudication.md
+      - campaigns/P106-e3-conditional-energy-difference-audit/evidence/source-reproduction.yaml
+      - campaigns/P106-e3-conditional-energy-difference-audit/evidence/source-audit.yaml
+      - campaigns/P106-e3-conditional-energy-difference-audit/evidence/check-adjudication.yaml
+      - campaigns/P106-e3-conditional-energy-difference-audit/evidence/dependency-audit.yaml
+      - campaigns/P106-e3-conditional-energy-difference-audit/evidence/consumer-audit.yaml
+      - campaigns/P106-e3-conditional-energy-difference-audit/evidence/candidate-comparison.yaml
+      - campaigns/P106-e3-conditional-energy-difference-audit/verify.py
+      - campaigns/P106-e3-conditional-energy-difference-audit/reviews/independent_difference_review.py
+      - memory/vantasner/decisions/C-RDIFF-001-review.md
+      - memory/vantasner/decisions/C-RDIFF-002-review.md
+    note: >-
+      E3 executes the current `np.trapezoid` branch without a compatibility
+      abort. P106 composes accepted P105 evidence and performs no new sampled
+      integration; version-only alias availability affects neither claim.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

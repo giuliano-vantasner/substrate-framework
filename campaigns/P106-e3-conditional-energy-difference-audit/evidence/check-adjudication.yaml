@@ -1,0 +1,42 @@
+campaign: P106
+source_unit: E3
+checks:
+  E3.1:
+    source_predicate: direct mass and binding subtraction identity with one-body cancellation
+    verdict: qualified_and_replaced_by_C-RDIFF-001
+    reason: >-
+      The algebra is exact under declared mass normalization, binding
+      definition, and conserved multiplicity. The D+D and helium labels do not
+      follow from those declarations.
+  E3.2:
+    source_predicate: coefficient lies between 7.5 and 9.5 after source profile solves
+    verdict: numeric_surface_replaced_by_C-RDIFF-002
+    reason: >-
+      The band is insensitive to ten-percent normalization mutations and uses
+      biased angular inputs and unchecked hard-wall solves. Accepted P105
+      inputs instead give 8.482417318795 with an independent value
+      8.482414868844.
+  E3.3:
+    source_predicate: selected scaled value and binding values exceed empirical literals by factors above five
+    verdict: comparator_arithmetic_only
+    reason: >-
+      The inequalities follow from supplied scale and empirical literals, but
+      no accepted physical mass normalization, state map, reaction channel, or
+      correction ledger closes the overbinding claim.
+  E3.4:
+    source_predicate: empirical coefficient lies between BPS zero and source classical coefficient and is below one fifth of it
+    verdict: rejected_as_framework_derivation
+    reason: >-
+      The zero endpoint and near-BPS interpretation import pending E4, while
+      the empirical coordinate imports measurement and the claimed bracket
+      supplies no governed interpolating model.
+  E3.5:
+    source_predicate: source result misses empirical literal by more than ten percent and recomputation omits comparator variables
+    verdict: qualified_guard_only
+    reason: >-
+      Comparator inertness is a useful negative guard but cannot validate
+      biased branch inputs, a broad coefficient band, or any physical premise.
+headline_coverage: >-
+  All five predicates are individually adjudicated. The source tally proves
+  only that these predicates executed; C-RDIFF-001/002 are supported by
+  stronger exact, mutation, interval, and independent evidence.

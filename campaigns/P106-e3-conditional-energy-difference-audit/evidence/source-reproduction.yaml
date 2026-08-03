@@ -1,0 +1,33 @@
+campaign: P106
+source_unit: E3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+source_size_bytes: 13377
+source_sha256: aa76b9e675d4fbb45594e9d3df5107af175e927a24840260ca71ffda1bad3315
+source_blob: cecea225e4735cfbb393389a23903b4eeab4286c
+source_matches_pinned_commit: true
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+process:
+  exit_status: 0
+  wall_time_seconds: 3.09
+  terminal_tally: ALL 5 CHECKS PASS
+  compatibility_abort: false
+  numpy_integration_branch: np.trapezoid
+reported_values:
+  b1: 1.2314
+  b2: 2.4154
+  b4: 4.5452
+  kappa: 8.457
+  scaled_energy_MeV: 217.2
+  empirical_ratio: 9.1
+attempt: attempts/0001/result.yaml
+scientific_status: reproduction_evidence_only
+reason: >-
+  The source runs and its five implemented predicates pass, but it recomputes
+  biased angular inputs and hard-wall profiles without solver-status or
+  residual gates. Its physical mass normalization, empirical electron value,
+  state map, reaction channel, and BPS interpretation are not accepted
+  derivation inputs. Compatibility success is neither a scientific success nor
+  failure.

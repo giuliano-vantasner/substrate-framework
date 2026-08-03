@@ -1,0 +1,30 @@
+campaign: P106
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-29/bridge_E3_yield_coefficient_overbinding.py
+  sha256: aa76b9e675d4fbb45594e9d3df5107af175e927a24840260ca71ffda1bad3315
+frozen_inputs:
+  proposal_sha256: c5a0f09005ad8c6716814e85c374b8e21dacd94ef8efb80a647b30db8784c1a2
+  proposal_revision_sha256: d8ddc173aa2951a24eb285ad1898bb11c4280e22c4898d9ddf0bf71b58272a93
+  initial_freeze_sha256: 21e54dd267cfca015bdc99fa6be24d30decbf0a8dca460fa22e176f5729664aa
+  p105_canonical_snapshot_sha256: 33e58ec644a0181c9395b20fe171dbd5a612b533b9e24f696f99cb859be375f6
+  p105_independent_snapshot_sha256: 28f7d2b3e85c0d32bb869c3af69d8603c2b2c022b485aa01b70e7767490de2d3
+implementation:
+  module: src/substrate_framework/energy_differences.py
+  module_sha256: ad9f82d978eb95e2c33321ea400de82facd69b7d7fed6260bc56becaae8c1b3c
+  package_exports: src/substrate_framework/__init__.py
+  package_exports_sha256: 36715238cc793cde376ce29c0e5d4fbfff069a0c7c513c5b8c80270ca33d0b47
+  tests: tests/test_energy_differences.py
+  tests_sha256: 6a3ebfe8987d66a126ca19780dd9c09f068a699ada99f1ca32e5dc4c8dd3012a
+verification:
+  primary: campaigns/P106-e3-conditional-energy-difference-audit/verify.py
+  primary_sha256: fce5d66fec029a4adad32c593cdddd732f3bcecdc6257f57785a84ad7bfe9862
+  independent: campaigns/P106-e3-conditional-energy-difference-audit/reviews/independent_difference_review.py
+  independent_sha256: 74e8b1c7ecf1292dba5bc10a0e98101fa5c9a6cb52ce3630da2d64f262ece17e
+numeric_surface:
+  normalized_difference: 0.2864828542962012
+  canonical_coefficient: 8.482417318795285
+  independent_coefficient: 8.482414868843847
+  method_spread_lower: 8.482414867768218
+  method_spread_upper: 8.482417319870914
+status: promotion_candidate

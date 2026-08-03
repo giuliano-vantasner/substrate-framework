@@ -1,0 +1,26 @@
+campaign: P106
+attempt: 0004
+candidate: B_D_package_regression
+status: verifier_float_representation_failure
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P106-e3-conditional-energy-difference-audit/verify.py
+exit_status: 1
+passed_before_failure: 23
+focused_package_tests:
+  exit_status: 0
+  terminal_tally: 10 passed
+independent_review:
+  exit_status: 0
+  terminal_tally: ALL 11 CHECKS PASS [P106-INDEPENDENT]
+failed_check: canonical API regresses the independently derived exact and interval formulas
+mechanism: >-
+  The canonical binary64 normalized difference is
+  0.28648285429620124, while converting the exact finite-decimal SymPy result
+  to binary64 gives 0.2864828542962012. The values differ by exactly one ULP;
+  structural float equality is not an exact-algebra oracle. The scaled values
+  likewise differ by one ULP and already pass the declared numeric bound.
+repair: >-
+  Keep SymPy simplification as the exact oracle and compare only the package
+  binary64 regression to the independently derived float within one ULP.
+next_attempt: rerun the full primary verifier without changing the API or scientific thresholds

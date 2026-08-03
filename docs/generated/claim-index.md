@@ -669,6 +669,24 @@ Conditional on C-QBL-001 and the declared whole-line scalar energy E[f]=integral
 - Compatibility: `compatible_extension`
 - Dependencies: C-QBL-001
 
+## C-RDIFF-001
+
+Let U and alpha be positive, let A and n be positive integers, and let b(A) and b(n*A) be real dimensionless coefficients. Conditional on the declared masses M(k)=alpha*b(k)*U and binding convention B_E(k)=k*M(1)-M(k), the signed difference satisfies exactly Q=n*M(A)-M(n*A)=B_E(n*A)-n*B_E(A) =alpha*U*(n*b(A)-b(n*A)). Hence kappa=Q/U has inverse b(n*A)=n*b(A)-kappa/alpha, and for positive alpha its sign is the sign of n*b(A)-b(n*A), with zero surface b(n*A)=n*b(A). If independent input intervals are b(A) in [l_A,u_A] and b(n*A) in [l_F,u_F], their sharp rectangular image is alpha*(n*l_A-u_F) <= kappa <= alpha*(n*u_A-l_F). Separate upper bounds on M(A) and M(n*A) do not in general bound their signed difference: their unknown nonnegative slacks enter with opposite signs. This is an exact conditional linear transformation. It derives no mass formula, scale, action, minimum, state identity, binding convention, reaction, yield, material, or observation.
+
+- Accepted in: `v0.90.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-DIM-002
+
+## C-RDIFF-002
+
+Conditional on C-RDIFF-001, C-RPROF-002's resolution-bounded total stationary-branch energy coefficients b(2)=2.4162704269425106 and b(4)=4.54605799958882, multiplicity n=2, and the separately declared normalization alpha=3*pi^2, the normalized signed difference is 2*b(2)-b(4)=0.2864828542962012 and the coefficient is kappa=8.482417318795285 in IEEE-754 binary64 evaluation. Applying the same transformation to P105's independent collocation values gives 8.482414868843847. Treating the componentwise extrema of those two methods as a rectangular sensitivity input gives [8.482414867768218,8.482417319870914], whose positive lower endpoint preserves the conditional sign. This envelope is method-spread sensitivity evidence, not a confidence interval or rigorous discretization enclosure. The result is a conditional reduced-model coordinate only: it is not a variational bound, physical mass, binding energy, baryon or nucleus map, deuteron or helium state, reaction, empirical comparison, quantum correction, BPS limit, or yield.
+
+- Accepted in: `v0.90.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RDIFF-001, C-RPROF-002
+
 ## C-REP-001
 
 For a separately supplied nonempty finite table of positive integer multiplicities m_i and exact real generator eigenvalues t_i,y_i, and an exact real coefficient c, define Q_i=t_i+c*y_i and the weighted traces T_2=sum_i m_i*t_i^2, T_Y=sum_i m_i*y_i^2, T_X=sum_i m_i*t_i*y_i, and T_Q=sum_i m_i*Q_i^2. Then exactly T_Q=T_2+2*c*T_X+c^2*T_Y, and T_2/T_Q is a conditional table ratio when T_Q is provably nonzero. For every separately supplied positive rho and positive Abelian coupling g_Y, the coordinate change y_i'=rho*y_i, c'=c/rho, and g_Y'=g_Y/rho preserves every Q_i, every product g_Y*y_i, T_Q, T_2/T_Q, and g_Y^2*T_Y. Holding c fixed instead generally changes Q and the quotient. Every homogeneous Abelian moment H_p=sum_i m_i*y_i^p scales as rho^p, so H_p=0 cannot select the positive overall generator normalization. Separately, for positive supplied traces S_2,S_Y and couplings g_2,g_Y, the coupling coordinate A_g=g_Y^2/(g_2^2+g_Y^2) equals the trace coordinate A_T=S_2/(S_2+S_Y) if and only if g_Y^2/g_2^2=S_2/S_Y, equivalently the two inverse-trace coefficients 1/(g_i^2*S_i) are equal. Thus a common law 1/g_i^2=C*S_i is a sufficient separately supplied premise, not a consequence of the finite table. Applied only to WM1's declared fifteen-state table and Q=T3+Y, the exact table values are T_2=2, T_Y=10/3, T_X=0, T_Q=16/3, and T_2/T_Q=3/8; equality with a coupling angle additionally requires g_Y^2/g_2^2=3/5. These results establish no physical representation, anomaly derivation, gauge action, kinetic normalization, common induction mechanism, simple unification, boundary or running scale, weak mixing angle, observed value, Standard Model, or substrate realization.

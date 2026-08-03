@@ -1,0 +1,49 @@
+campaign: P106
+claims:
+  C-RDIFF-001:
+    accepted_dependencies: [C-DIM-002]
+    declared_inputs:
+      - positive energy scale U and normalization alpha
+      - positive integer initial degree A and multiplicity n
+      - real dimensionless coefficients b(A) and b(nA)
+      - M(k)=alpha*b(k)*U and B_E(k)=k*M(1)-M(k)
+      - independent input intervals when the interval statement is used
+    mathematical_imports:
+      - exact real linear algebra
+      - monotonic image of a rectangle under a signed affine map
+    excluded:
+      - any physical action state map mass value reaction yield or empirical scale
+      - any inference from separate energy upper bounds to their difference
+  C-RDIFF-002:
+    accepted_dependencies: [C-RDIFF-001, C-RPROF-002]
+    declared_inputs:
+      normalization: 3*pi^2
+      initial_degree: 2
+      final_degree: 4
+      multiplicity: 2
+    numeric_inputs:
+      canonical:
+        b2: 2.4162704269425106
+        b4: 4.54605799958882
+        source: campaigns/P105-e2-rational-map-radial-profiles/attempts/0006/result.yaml
+      independent:
+        b2: 2.41627038555235
+        b4: 4.546057999552492
+        source: campaigns/P105-e2-rational-map-radial-profiles/attempts/0005/result.yaml
+    closure: resolution-bounded conditional coefficient only
+compatibility_only:
+  C-SK-001: >-
+    Confirms that 3*pi^2 and a shared energy scale can occur in a separately
+    declared B=1 mass premise, but does not extend that premise to B=2 or B=4
+    and is not a derivation input to C-RDIFF-002.
+missing_for_physical_interpretation:
+  - accepted physical Skyrme action and normalization
+  - proof connecting declared rational-map stationary branches to physical global minima
+  - degree-to-baryon deuteron and helium state maps
+  - quantum and rotational correction ledger
+  - accepted empirical energy scale
+  - physical reaction channel branching rate and deposition model
+  - uncertainty relation controlling differences of any variational upper bounds
+closure: >-
+  Both claims close at their conditional mathematical ceilings without E4,
+  HE4, M1, NY1, NY2, or any later KI, MK, MR, engine, or empirical source.

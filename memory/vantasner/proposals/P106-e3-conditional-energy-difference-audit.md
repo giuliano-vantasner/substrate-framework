@@ -2,7 +2,7 @@
 description: Audit E3's conditional energy difference and physical nuclear-yield interpretation
 author: vantasner
 created: '2026-08-07T16:00:00Z'
-updated: '2026-08-07T16:30:00Z'
+updated: '2026-08-07T17:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - energy-difference
 - migration-E3
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P106 E3 Conditional Energy-Difference Audit
 
@@ -230,3 +230,24 @@ mismatch, or a well-documented missing mass map is not completion alone.
 This campaign cross-references E2 through E5, HE4, M1, NY1, NY2,
 C-RPROF-001, C-RPROF-002, C-RMAP-001, C-RMAP-002, C-SK-001, C-DIM-002,
 C-DIM-003, P084, P085, P104, P105, and the framework-migration effort.
+
+## Terminal Adjudication
+
+P106 promotes C-RDIFF-001 as the exact conditional signed mass/binding
+difference, interval transform, and difference-of-upper-bounds ceiling. It
+promotes C-RDIFF-002 as the separately numeric accepted-input specialization:
+the canonical coefficient is `8.482417318795285`, the independent P105 route
+gives `8.482414868843847`, and the rectangular two-method sensitivity envelope
+is `[8.482414867768218, 8.482417319870914]`.
+
+Attempts 0002 and 0004 preserve representation-sensitive verifier failures:
+structurally unequal SymPy forms with exact zero difference, and finite-decimal
+versus binary64 values separated by one ULP. Both repairs changed only the
+oracle representation. The exact theorem remains symbolic and the numeric
+specialization remains resolution bounded.
+
+E3 is qualified. Its direct algebra survives after accepted-input correction,
+but its repeated biased angular quadrature, unchecked hard-wall BVPs, broad
+band, empirical scale, mass and state map, reaction, overbinding, BPS endpoint,
+and near-BPS interpretation are not promoted. The campaign ledger is empty and
+the corpus migration continues with E4.

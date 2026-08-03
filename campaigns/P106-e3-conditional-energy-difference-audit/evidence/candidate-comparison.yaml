@@ -1,0 +1,36 @@
+campaign: P106
+selection_basis:
+  - accepted dependency closure and explicit normalization multiplicity and sign
+  - exact direct and independent derivations
+  - mutation-sensitive normalization multiplicity subtraction and input coordinates
+  - honest propagation of P105 numeric status
+  - difference-of-upper-bounds counterexamples
+  - physical-premise separation and downstream nonduplication
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: source process passes but its numerical route and physical dependencies do not meet the claim gates
+  B:
+    decision: selected_as_C-RDIFF-001
+    reason: exact generic coefficient inverse sign and zero surfaces close under explicit premises
+  C:
+    decision: selected_as_independent_derivation
+    reason: fresh binding ledger cancels the one-body term and agrees without importing the primary expression
+  D:
+    decision: selected_as_C-RDIFF-002_numeric_evidence
+    reason: accepted and independent P105 snapshots yield a narrow transparent method-spread envelope without upgrading status
+  E:
+    decision: selected_as_exact_ceiling
+    reason: explicit slack algebra and counterexamples prevent a signed difference from inheriting separate upper-bound status
+  F:
+    decision: selected_to_reject_broader_E3_interpretation
+    reason: action state reaction empirical scale correction BPS and deposition premises remain outside accepted closure
+  G:
+    decision: selected_after_proposal_revision_0001
+    reason: >-
+      The registry lacks this transformation while multiple pending consumers
+      duplicate it with divergent decimals or meanings; one minimal pure module
+      is a distinct reusable object rather than campaign ceremony.
+comparator_use: >-
+  The exposed 23.86 MeV and factor-near-nine values select no candidate,
+  normalization, claim, threshold, or API.

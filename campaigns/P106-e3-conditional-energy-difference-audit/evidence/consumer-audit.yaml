@@ -1,0 +1,61 @@
+campaign: P106
+source_unit: E3
+inventory_reverse_dependencies:
+  E2:
+    use: names a future positive yield in source prose
+    verdict: accepted C-RPROF-001/002 are already independent of E3 and remain unchanged
+  E4:
+    use: contrasts the signed L2+L4 combination with zero BPS binding and a near-BPS interpretation
+    verdict: may import C-RDIFF-001/002 only for the conditional combination; BPS action saturation perturbation and physical smallness remain pending
+  KI2:
+    use: treats the classical coefficient as a fixed standard-sector coordinate beside an independent BPS scale
+    verdict: conditional coordinate survives; scale independence and generalized-model claims remain pending
+  KI3:
+    use: treats zero and 8.46 as endpoints of a sharp interpolation range
+    verdict: C-RDIFF supplies neither interpolation existence continuity endpoint limits nor a ceiling; source anchor must update to 8.482 if used
+  KI4:
+    use: contrasts the source coefficient with an empirical back-solve
+    verdict: conditional comparator-inert coefficient survives; inverse-model and physical conclusions remain separate
+  KI5:
+    use: rejects the claim that the signed combination is a variational upper bound
+    verdict: C-RDIFF-001's exact slack counterexample supports this later audit; KI5's own recomputation and ansatz claims remain pending
+  SC2:
+    use: candidate dependency is a false token collision with its internally numbered equation E3
+    verdict: no semantic or code dependency
+  MK1:
+    use: mentions Phase-29 conventions collectively
+    verdict: no coefficient derivation dependency; medium-coupling map remains pending
+  MK3:
+    use: copies E3's anti-comparator guard style and empirical literals
+    verdict: no derivation dependency; epsilon and coupling premises remain pending
+  MK5:
+    use: regresses a generalized solver against source 8.46 then assigns endpoint and overbinding meanings
+    verdict: classical regression anchor should become C-RDIFF-002 8.482; generalized action couplings solver and physical interpretation remain pending
+  MK6:
+    use: compares generalized coefficients and mass ratios with the source classical value
+    verdict: conditional comparison only; physical mass and confrontation claims remain pending
+  MR2:
+    use: cites the E2/E3 classical-limit normalization anchor
+    verdict: may use the canonical transform; its BPS normalization theorem requires independent adjudication
+  MR5:
+    use: regresses another generalized solver against source 8.46
+    verdict: anchor should become C-RDIFF-002 8.482; generalized equations couplings and physical mass outputs remain pending
+additional_lexical_consumers:
+  KI_and_MK_narratives: >-
+    Several units copy kappa_classical wording without an importable dependency;
+    they gain a canonical API but no automatic scientific promotion.
+  phase47_and_phase48_worktree: >-
+    Uncommitted later source work is outside the pinned baseline and not a P106
+    consumer or authority.
+  framework_narratives: >-
+    README frontier synthesis and dossiers are noncanonical prose and must
+    follow later generated or governed adjudications rather than chronology.
+canonical_consumers:
+  - src/substrate_framework/energy_differences.py
+  - tests/test_energy_differences.py
+  - campaigns/P106-e3-conditional-energy-difference-audit/verify.py
+  - campaigns/P106-e3-conditional-energy-difference-audit/reviews/independent_difference_review.py
+verdict: >-
+  P106 provides one canonical conditional transform and corrected numeric
+  anchor. It changes no existing execution flow and grants no physical premise
+  to pending consumers.
