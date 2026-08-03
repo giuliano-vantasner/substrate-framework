@@ -1,0 +1,22 @@
+campaign: P115
+attempt: 0004
+candidate: canonical_and_independent_shifted_barrier_theorem
+status: completed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P115-cm1-screened-barrier-ceiling-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P115-cm1-screened-barrier-ceiling-audit/reviews/independent_screened_barrier_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_screened_barrier.py
+exit_statuses: [0, 0, 0]
+terminal_tallies:
+  primary: ALL 46 CHECKS PASS [C-SCR-001]
+  independent: ALL 14 CHECKS PASS [C-SCR-001-INDEPENDENT]
+  focused_package: 12 passed
+compatibility_event: none
+verdict: exact_conditional_shifted_barrier_theorem_verified
+mechanism: >-
+  Canonical and fresh routes close composition, range, all derivative signs,
+  endpoint limits, enhancement singularity, common-scale covariance,
+  conditional shift-ceiling direction, stable evaluation, mutations, and
+  zero/arbitrary-prefactor countermodels. The source numeric surface remains
+  regression evidence only.
+next_attempt: complete_claim_review_consumer_replay_and_promotion_boundary

@@ -1,0 +1,28 @@
+campaign: P115
+selection_frozen_by: proposals/P115-cm1-screened-barrier-ceiling-audit/evidence/frozen-proposal.yaml
+selected:
+  - {id: B, reason: Exact conditional algebra supplies the dimensionless shifted-factor theorem with complete domain and derivative signs.}
+  - {id: C, reason: Exact ratio composition exposes the divergent enhancement and finite composed low-energy limit.}
+  - {id: D, reason: Shift monotonicity gives the conditional U_max ceiling while prefactor and alternative-shape countermodels block rate inference.}
+  - {id: E, reason: A fresh implementation-independent route confirms identities, limits, scale covariance, and countermodels.}
+  - {id: F, reason: Input, cycle, predicate, consumer, and nonduplication audits close governance and physical scope.}
+reproduction_only:
+  - {id: A, reason: CM1 reproduces, but several predicates are point tests, selected thresholds, same-route regressions, or tautological reporting guards.}
+criteria_results:
+  dependency_closure: passed_as_dependency_free_conditional_algebra
+  dimensions: common_energy_unit_and_dimensionless_exponents_pass
+  exact_composition: passed
+  range: zero_less_than_bare_less_than_or_equal_to_shifted_less_than_one
+  energy_and_shift_monotonicity: passed_globally
+  barrier_scale_monotonicity: passed_globally
+  enhancement_energy_direction: strictly_decreasing_for_positive_shift
+  endpoints: bare_zero_shifted_finite_positive_enhancement_divergent_at_low_energy_and_all_unit_at_high_energy
+  stable_evaluation: direct_composed_exponent_passes_zero_times_infinity_counterexample
+  common_scale_covariance: passed
+  conditional_U_max_bound: passed_direction_only_without_material_derivation
+  source_material_maximum: selected_four_model_regression_only
+  physical_rate_or_yield: rejected_by_zero_and_arbitrary_prefactor_families
+  consumer_closure: five_direct_pending_consumers_with_no_authority
+  nonduplication: distinct_C_SCR_001_and_importable_module_survive
+decision: promote_C_SCR_001_and_qualify_CM1
+status: complete

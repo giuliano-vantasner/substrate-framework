@@ -1,0 +1,49 @@
+campaign: P115
+source_unit: CM1
+source_sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc
+imports: [os, sys, numpy, sympy, engineering_screening]
+declared_dependencies: [CM2, CM3, CM4, CM5, CM6, CM7]
+external_module:
+  path: engineering/screening/screening.py
+  sha256: 8ed6d54c8e3626f58ee2b3da78ce6eea7f4689092103dc23ed888b985e4cb4c3
+  git_blob: 728fa930cb5539e701c777490e66ea51dc372ef1
+exact_surface:
+  bare_factor: exp(-sqrt(E_G/E))
+  enhancement: exp(sqrt(E_G/E)-sqrt(E_G/(E+U_e)))
+  shifted_factor: exp(-sqrt(E_G/(E+U_e)))
+  bare_low_energy_limit: 0
+  shifted_low_energy_limit_for_positive_U: exp(-sqrt(E_G/U_e))
+  high_energy_limit: 1
+  shifted_energy_monotonicity: strictly_increasing
+numeric_surface:
+  pair: d_plus_d
+  selected_metals: [Ni, Pd, Ti, Zr]
+  selected_max_shift_eV: 26.37
+  collision_energy_domain_keV: [1.0e-6, 100.0]
+  sample_count: 9
+  low_threshold: shifted_factor_at_1eV_less_than_1e-10
+  high_threshold: shifted_factor_at_100keV_greater_than_1e-3
+oracle_ceilings:
+  symbolic_energy_monotonicity: representative_substitution_not_global_sign_proof
+  gamow_shaped_guard: increasing_at_one_point_not_inverse_square_root_shape
+  selected_material_maximum: maximum_of_four_assigned_models_not_universal_or_uncertainty_bounded
+  numeric_identity: same_formula_regression_at_one_point
+  numeric_sweep: nine_selected_samples_not_continuous_proof
+  low_negligibility: arbitrary_dimensionless_threshold_without_rate_prefactor
+  high_opening: arbitrary_dimensionless_threshold
+  neutral_uncapped: exact_repeat_call_tautology
+  firewall: algebraic_dependence_inside_one_constructed_expression_not_systemwide_dataflow_proof
+  rate_and_yield: dimensionless_penetrability_factor_only
+contradictions:
+  - low-input-null wording conflicts with the exact finite nonzero U_e-positive limit
+  - U_e is called a maximal static ceiling but only four selected metal models are compared
+  - rate and yield language omits flux, cross section or S factor, attempt frequency, density, and branching
+omissions:
+  - common energy-dimension ledger and scale covariance
+  - global U_e and E_G derivative signs
+  - U_e=0 boundary and enhancement endpoint behavior
+  - uncertainty propagation or proof that selected U_e bounds a material
+  - zero and arbitrary physical-prefactor countermodels
+  - independent structural oracle
+compatibility_event: none
+status: audited

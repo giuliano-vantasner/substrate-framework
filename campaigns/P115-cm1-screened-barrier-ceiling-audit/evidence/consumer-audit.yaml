@@ -1,0 +1,25 @@
+campaign: P115
+source_unit: CM1
+method: >-
+  Traverse reverse candidate_dependencies in the generated 218-unit queue,
+  exclude CM1 when CM3, CM6, or CM7 cycles return to the root, and pin every
+  remaining source file at the source baseline. Edges are provenance only.
+consumers:
+  - {source_unit: CM3, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM3_crossover.py, sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb, role: imports_monotone_bounded_shape_but_replaces_positive_floor_by_zero_surrogate}
+  - {source_unit: CM6, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py, sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5, role: lexical_presence_and_absence_scan_only}
+  - {source_unit: CM7, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py, sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2, role: algebraically_inverts_the_shifted_factor_against_free_dimensionless_c}
+  - {source_unit: GB6, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py, sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a, role: tagged_lexical_citation_only}
+  - {source_unit: WN7, relation: direct, disposition_at_freeze: pending_adjudication, path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py, sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50, role: tagged_lexical_citation_only}
+closure:
+  direct_count: 5
+  indirect_count: 0
+  pending_consumers: 5
+  excluded_cycle_root: CM1
+  interpretation: >-
+    Only CM3 and CM7 use mathematical shape or inversion. CM6, GB6, and WN7
+    use lexical presence or tagged citation. None supplies a physical rate,
+    coherent-channel magnitude, material bound, reaction, yield, or observation.
+canonical_consumers:
+  - src/substrate_framework/screened_barrier.py
+  - tests/test_screened_barrier.py
+status: complete

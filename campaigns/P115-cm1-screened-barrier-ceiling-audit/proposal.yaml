@@ -57,4 +57,4 @@ comparators_blinded_until: >-
   dimension, bound, limit, prefactor, countermodel, rate-ceiling, dependency,
   consumer, and nonduplication gates before executing CM1, inspecting its
   thirteen predicate bodies as a whole, or reading numeric material values.
-status: draft
+status: accepted

@@ -2,7 +2,7 @@
 description: Derive a conditional shifted-barrier theorem and adjudicate CM1's rate-ceiling interpretation
 author: vantasner
 created: '2026-08-08T02:00:00Z'
-updated: '2026-08-08T02:00:00Z'
+updated: '2026-08-08T02:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - gamow-factor
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P115 CM1 Screened-Barrier Ceiling Audit
 
@@ -165,6 +165,20 @@ P115 closes only when the exact shifted-barrier object, enhancement,
 monotonicity, limits, range, dimensions, scale covariance, conditional ceiling,
 stable evaluation, countermodels, all thirteen predicates, source inputs,
 consumer closure, governance records, and downstream replay pass with no debt.
+
+## Terminal Adjudication
+
+P115 accepts C-SCR-001 in v0.95.0 and qualifies CM1. The canonical and fresh
+routes prove the exact dimensionless bare, shifted, and enhancement factors,
+all derivative signs, endpoint limits, scale covariance, conditional U_max
+bound, and stable composed evaluation. Two SymPy sign-representation failures
+are preserved before exact-kernel repairs.
+
+CM1's one-point shape checks, four-model maximum, thresholds, and raw-repeat
+guard remain regression or weak evidence. Its positive-shift floor is finite,
+not null. Zero and arbitrary-prefactor countermodels prove the factor is not a
+cross section, rate, yield, heat, material ceiling, or observation. All five
+direct consumers replay but remain pending. The campaign debt ledger is empty.
 
 ## Cross-References
 

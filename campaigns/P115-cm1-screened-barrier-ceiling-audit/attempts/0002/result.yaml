@@ -1,0 +1,19 @@
+campaign: P115
+attempt: 0002
+candidate: canonical_shifted_barrier_tests_v1
+status: failed
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_screened_barrier.py
+exit_status: 1
+passing_tests_before_failure_summary: 11_of_12
+failed_test: test_enhancement_decreases_with_energy_for_positive_shift
+failure_class: verifier_representation
+mechanism: >-
+  SymPy returned an undecided sign for the derivative of log of a product of
+  exponentials even though its simplified difference of inverse-three-halves
+  powers is strictly negative for positive shift.
+scientific_effect: none
+compatibility_event: none
+repair: >-
+  Prove exact equality to the difference of a strictly decreasing x^(-3/2)
+  kernel and verify that kernel's derivative sign under a positive symbol.
+next_attempt: rerun_focused_tests_with_kernel_monotonicity_oracle

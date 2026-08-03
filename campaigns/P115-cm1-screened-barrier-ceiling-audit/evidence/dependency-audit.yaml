@@ -1,0 +1,31 @@
+campaign: P115
+proposed_claim: C-SCR-001
+mathematical_imports:
+  - positive real energy variables and exact dimensionless ratios
+  - elementary exponentials, square roots, derivatives, limits, inequalities, and common scaling
+accepted_claim_dependencies: []
+external_candidate_inputs:
+  engineering_screening: >-
+    Hash-pinned source evidence for one standard Gamow formula, Thomas-Fermi
+    model, selected material constants, and numeric regressions only. It is not
+    accepted framework authority and none of its material values enter the
+    proposed conditional claim.
+source_dependencies:
+  - {id: CM2, authority: none, role: forward_pending_candidate_narrative}
+  - {id: CM3, authority: none, role: forward_pending_cycle_member}
+  - {id: CM4, authority: none, role: forward_pending_candidate_narrative}
+  - {id: CM5, authority: none, role: forward_pending_candidate_narrative}
+  - {id: CM6, authority: none, role: forward_pending_cycle_member}
+  - {id: CM7, authority: none, role: forward_pending_cycle_member}
+candidate_cycles:
+  - [CM1, CM3, CM1]
+  - [CM1, CM6, CM1]
+  - [CM1, CM7, CM1]
+cycle_authority: none
+physical_imports_not_allowed:
+  - physical Coulomb potential or derivation of the Gamow approximation
+  - Thomas-Fermi validity, conduction-electron count, material screening scale, or universal U_e maximum
+  - reaction state, cross section, astrophysical S factor, collision flux, attempt frequency, or density
+  - branching, weak or strong interaction dynamics, transition rate, yield, heat, or observation
+dependency_closure: conditional_elementary_barrier_algebra_only
+status: complete

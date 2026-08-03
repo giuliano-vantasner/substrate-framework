@@ -1,0 +1,24 @@
+campaign: P115
+attempt: 0005
+candidate: pinned_direct_consumer_replay
+status: completed
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM3_crossover.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+exit_statuses: [0, 0, 0, 0, 0]
+terminal_tallies:
+  CM3: ALL 10 CHECKS PASS
+  CM6: ALL 20 CHECKS PASS
+  CM7: ALL 27 CHECKS PASS
+  GB6: ALL 29 CHECKS PASS
+  WN7: ALL 59 CHECKS PASS
+compatibility_event: none
+verdict: pinned_consumers_reproduce_under_claim_ceiling
+mechanism: >-
+  CM3 and CM7 remain pending mathematical consumers; CM6, GB6, and WN7 are
+  lexical consumers. Their source tallies reproduce, but none gains physical
+  rate, yield, material, coherent-channel, or observation authority.
+next_attempt: promotion_and_integrated_dependency_replay

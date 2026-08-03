@@ -1,0 +1,22 @@
+campaign: P115
+source_unit: CM1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py
+sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc
+git_blob: 8cd33750623af98eaee6cd2201670b205cd71a3a
+bytes: 11249
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py
+exit_status: 0
+static_check_sites: 13
+literal_check_sites: 13
+dynamic_check_sites: 0
+runtime_checks: 13
+terminal_tally: ALL 13 CHECKS PASS
+reported_values:
+  E_G_keV: 985.8
+  selected_U_e_max_eV: 26.37
+  energy_grid_keV: [1.0e-6, 1.0e-5, 1.0e-4, 1.0e-3, 1.0e-2, 1.0e-1, 1.0, 10.0, 100.0]
+  shifted_factors: [1.068969e-84, 1.104821e-84, 1.535173e-84, 3.765511e-83, 3.151326e-72, 4.387358e-39, 3.473648e-14, 4.940253e-05, 4.331413e-02]
+numpy_compatibility_event: none
+integration_surface: none
+status: reproduced

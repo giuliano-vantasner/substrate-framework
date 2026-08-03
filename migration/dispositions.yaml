@@ -1717,6 +1717,50 @@ units:
       twenty-two transitive consumers inherit only P110's bookkeeping ceiling
       and C-RES-001. PN5 calls no sampled integration routine and triggered no
       np.trapz compatibility event.
+  CM1:
+    disposition: qualified
+    accepted_claims:
+      - C-SCR-001
+    qualification: >-
+      CM1's exact bare, shifted, and enhancement identities survive in
+      C-SCR-001 with common energy dimensions, global derivative signs, sharp
+      range, endpoint limits, common-scale covariance, conditional U_max
+      direction, and stable composed evaluation. At positive shift the
+      low-energy shifted factor approaches a finite positive floor rather than
+      vanishing, while the separate enhancement diverges. The source proves
+      energy monotonicity and Gamow shape only at one substituted point; an
+      increasing rational counterexample passes that weak shape guard. Its
+      selected U_e maximum compares four Thomas-Fermi models with assigned
+      one-electron conduction counts, imported constants, and no uncertainty;
+      it is not a universal material ceiling. Nine energy samples and the
+      1e-10 and 1e-3 thresholds are dimensionless regressions. The firewall is
+      an identity inside one constructed expression, and the neutral-uncapped
+      check repeats the same function call. A zero rate prefactor leaves the
+      barrier factor but kills the rate, while arbitrary prefactors rescale it.
+      No Coulomb or Gamow derivation, cross section, S factor, flux, attempt
+      frequency, density, branching, physical rate, maximum yield, heat,
+      coherent channel, material realization, magnitude, or observation is
+      accepted. Forward CM source cycles grant no authority.
+    evidence:
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/reviews/source_adjudication.md
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/source-reproduction.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/source-audit.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/check-adjudication.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/input-provenance.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/dependency-audit.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/consumer-audit.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/candidate-comparison.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/primary-provenance.yaml
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/verify.py
+      - campaigns/P115-cm1-screened-barrier-ceiling-audit/reviews/independent_screened_barrier_review.py
+      - memory/vantasner/decisions/C-SCR-001-review.md
+    note: >-
+      P115 closes 46 primary and 14 independent exact checks plus 12 focused
+      package tests after two preserved SymPy sign-representation failures.
+      Five direct pending consumers replay 145 checks and inherit only the
+      dimensionless conditional theorem. CM1 and all canonical P115 work call
+      no sampled integration routine and trigger no np.trapz compatibility
+      event.
   PN6:
     disposition: qualified
     accepted_claims:

@@ -831,6 +831,15 @@ Let lambda, nu, S, E0, and epsilon0 be positive, with lambda a dimensionless cla
 - Compatibility: `native`
 - Dependencies: C-DIM-001
 
+## C-SCR-001
+
+Let E and G be positive real energies and U a nonnegative real energy in the same unit. Define the dimensionless bare inverse-square-root barrier factor B(E,G)=exp(-sqrt(G/E)), the shifted factor P(E,U,G)=exp(-sqrt(G/(E+U))), and the enhancement F=P/B. Then exactly F=exp(sqrt(G/E)-sqrt(G/(E+U))), with 0<B<=P<1 and equality B=P iff U=0. The logarithmic derivatives of P are partial_E log(P)=partial_U log(P)=sqrt(G)/(2*(E+U)^(3/2))>0 and partial_G log(P)=-1/(2*sqrt(G)*sqrt(E+U))<0. For U>0, F>1 and decreases strictly with E. As E tends to zero from above, B tends to zero, P tends to the finite positive value exp(-sqrt(G/U)), and F tends to infinity; for U=0, P=B and both tend to zero. As E tends to infinity, P and F tend to one. Common positive rescaling (E,U,G)->rho*(E,U,G) leaves all three factors invariant. Consequently, if an independent premise establishes 0<=U<=U_max, then P(E,U,G)<=P(E,U_max,G); the theorem neither derives U_max nor establishes a material screening model. Direct evaluation of P avoids the separate numerical zero-times-infinity form B*F at very small E. These are exact conditional dimensionless identities. They do not derive a Coulomb or Gamow approximation, physical screening energy, universal material ceiling, cross section, astrophysical S factor, collision flux, attempt frequency, density, branching, transition rate, reaction yield, heat, coherent channel, material realization, or observation.
+
+- Accepted in: `v0.95.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-SG-001
 
 For every real omega with 0 < omega < 1, eta = sqrt(1-omega^2), and real x,t, the field phi(x,t) = 4 atan(eta sin(omega t)/(omega cosh(eta x))) is spatially localized, periodic with period 2*pi/omega, and satisfies phi_tt - phi_xx + sin(phi) = 0 identically in normalized units.

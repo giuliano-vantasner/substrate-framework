@@ -1,0 +1,27 @@
+campaign: P115
+attempt: 0001
+candidate: literal_source_reproduction
+status: completed
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py
+source_sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc
+exit_status: 0
+terminal_tally: ALL 13 CHECKS PASS
+reported_values:
+  dd_barrier_scale_keV: 985.8
+  selected_four_metal_U_max_eV: 26.37
+  one_eV_shifted_factor: 3.765511e-83
+  one_hundred_keV_shifted_factor: 4.331413e-02
+compatibility_event: none
+integration_surface: none
+verdict: literal_symbolic_and_selected_numeric_surface_reproduced
+mechanism: >-
+  The exact bare-times-enhancement identity and endpoint limits reproduce, as
+  do the selected material calculations and nine-point sweep. The source's
+  monotonicity proof and Gamow-shape guard evaluate one representative point;
+  the selected four-metal maximum is not a universal material ceiling; and
+  the computed object is dimensionless, so it is not by itself a rate, yield,
+  or reaction-channel bound.
+next_attempt: >-
+  Implement and independently verify the exact conditional shifted-barrier
+  theorem, including U monotonicity, enhancement limits, scale covariance,
+  sharp conditional ceiling direction, and physical-prefactor countermodels.

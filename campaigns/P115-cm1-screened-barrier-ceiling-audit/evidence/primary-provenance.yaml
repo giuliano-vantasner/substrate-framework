@@ -1,0 +1,28 @@
+campaign: P115
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py
+  sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc
+external_source:
+  path: engineering/screening/screening.py
+  sha256: 8ed6d54c8e3626f58ee2b3da78ce6eea7f4689092103dc23ed888b985e4cb4c3
+frozen_inputs:
+  proposal_snapshot: proposals/P115-cm1-screened-barrier-ceiling-audit/evidence/frozen-proposal.yaml
+  proposal_snapshot_sha256: d609e568e6647f2858c3dbf7f06ce5bb43203829aee104ff00287ce0a8be22b4
+implementation:
+  module: src/substrate_framework/screened_barrier.py
+  module_sha256: 63424f483fa0989b0953d2916b972b32808471580ec12e1b5710c51af12ecaa5
+  tests: tests/test_screened_barrier.py
+  tests_sha256: 668c9aef0351b67b0a01d6a194e2b3369242c773ce4885900d8b8223f9676978
+verification:
+  primary: proposals/P115-cm1-screened-barrier-ceiling-audit/verify.py
+  primary_sha256: 20fbd7f3d286423e2caf78bc538f578f1463fe730d80c7b6c1407af554239108
+  independent: proposals/P115-cm1-screened-barrier-ceiling-audit/reviews/independent_screened_barrier_review.py
+  independent_sha256: a7c9f40d83e2c08dc2534c2442745be7e436a9b55940c15ffd2f3afa44acf577
+exact_surface:
+  bare_factor: exp(-sqrt(G/E))
+  shifted_factor: exp(-sqrt(G/(E+U)))
+  enhancement: shifted_factor/bare_factor
+  domain: E_and_G_positive_U_nonnegative_common_energy_dimension
+  verification_ceiling: exact_dimensionless_conditional_algebra_not_cross_section_rate_yield_or_material_prediction
+status: promotion_candidate

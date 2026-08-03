@@ -1,0 +1,20 @@
+campaign: P115
+attempt: 0006
+candidate: promoted_path_primary_replay_v1
+status: failed
+command: PYTHONPATH=src .venv/bin/python campaigns/P115-cm1-screened-barrier-ceiling-audit/verify.py
+exit_status: 1
+successful_checks_before_failure: 44
+failed_check: C_SCR_001_is_a_distinct_provisional_claim_identifier
+failure_class: verifier_lifecycle_design
+mechanism: >-
+  The pre-promotion nonduplication guard required C-SCR-001 to remain absent
+  from the accepted registry. After the intended promotion that mutable-state
+  assertion necessarily failed even though the registry contained exactly one
+  accepted record with the correct provenance.
+scientific_effect: none
+compatibility_event: none
+repair: >-
+  Make the guard lifecycle-aware: require absence while the proposal is draft,
+  and exactly one accepted, active, provenance-pinned record after promotion.
+next_attempt: rerun_promoted_primary_then_prepare_integrated_gate

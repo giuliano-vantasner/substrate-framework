@@ -1,0 +1,17 @@
+campaign: P115
+attempt: 0003
+candidate: independent_exact_review_v1
+status: failed
+command: PYTHONPATH=src .venv/bin/python proposals/P115-cm1-screened-barrier-ceiling-audit/reviews/independent_screened_barrier_review.py
+exit_status: 1
+successful_checks_before_failure: 11
+failed_check: fresh_increasing_non_Gamow_counterexample_defeats_shape_by_sign
+failure_class: verifier_representation
+mechanism: >-
+  SymPy left the sign of the unsimplified derivative of E/(E+G) undecided,
+  although exact simplification gives G/(E+G)^2, which is strictly positive
+  for the declared positive symbols.
+scientific_effect: none
+compatibility_event: none
+repair: compare to the exact positive derivative before asserting its sign
+next_attempt: rerun_independent_review_with_normalized_rational_derivative

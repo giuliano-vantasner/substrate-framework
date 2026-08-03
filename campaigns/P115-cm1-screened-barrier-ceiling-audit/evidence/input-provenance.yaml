@@ -1,0 +1,23 @@
+campaign: P115
+source_unit: CM1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+external_module:
+  path: engineering/screening/screening.py
+  sha256: 8ed6d54c8e3626f58ee2b3da78ce6eea7f4689092103dc23ed888b985e4cb4c3
+  git_blob: 728fa930cb5539e701c777490e66ea51dc372ef1
+numeric_inputs:
+  dd_reduced_mass_MeV: 937.806471285
+  fine_structure_constant: 1/137.035999084
+  derived_dd_E_G_keV: 985.7655246160418
+  selected_material_models:
+    - {name: Ni, density_g_cm3: 8.908, molar_mass_g_mol: 58.6934, Z_conduction: 1.0, computed_U_e_eV: 26.367367161568605}
+    - {name: Pd, density_g_cm3: 12.023, molar_mass_g_mol: 106.42, Z_conduction: 1.0, computed_U_e_eV: 25.10151161006259}
+    - {name: Ti, density_g_cm3: 4.506, molar_mass_g_mol: 47.867, Z_conduction: 1.0, computed_U_e_eV: 24.34972755465371}
+    - {name: Zr, density_g_cm3: 6.511, molar_mass_g_mol: 91.224, Z_conduction: 1.0, computed_U_e_eV: 23.25187827236888}
+  selected_set_maximum: Ni
+provenance_ceiling: >-
+  These are imported constants and outputs of one Thomas-Fermi engineering
+  model with assigned Z_conduction=1 for four selected metals. They reproduce
+  CM1 but do not enter C-SCR-001, establish uncertainty, validate the material
+  model, or bound all metals, loading states, screening regimes, or reactions.
+status: audited

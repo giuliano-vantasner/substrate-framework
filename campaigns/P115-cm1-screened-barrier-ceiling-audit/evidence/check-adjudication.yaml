@@ -1,0 +1,33 @@
+campaign: P115
+source_unit: CM1
+static_check_site_count: 13
+literal_check_site_count: 13
+dynamic_check_site_count: 0
+runtime_predicate_count: 13
+predicates:
+  - {id: CM1-01, source_site: symbolic_bare_times_enhancement_identity, verdict: retained, ceiling: exact_dimensionless_shifted_factor_identity}
+  - {id: CM1-02, source_site: shifted_factor_monotone_in_energy, verdict: qualified, ceiling: derivative_formula_exact_but_source_sign_checked_at_one_float_substitution}
+  - {id: CM1-03, source_site: bare_low_energy_limit, verdict: retained, ceiling: exact_dimensionless_factor_limit}
+  - {id: CM1-04, source_site: shifted_low_energy_limit, verdict: retained, ceiling: exact_finite_nonzero_limit_for_positive_shift}
+  - {id: CM1-05, source_site: shifted_high_energy_limit, verdict: retained, ceiling: exact_dimensionless_factor_limit}
+  - {id: CM1-06, source_site: U_e_firewall_derivative_residual, verdict: qualified, ceiling: same_expression_identity_not_systemwide_dataflow_or_physical_slot_proof}
+  - {id: CM1-07, source_site: true_factor_is_gamow_shaped, verdict: qualified, ceiling: increasing_at_one_substitution_not_inverse_square_root_shape_or_global_proof}
+  - {id: CM1-08, source_site: flat_fake_rejected, verdict: retained, ceiling: one_weak_counterexample_only_many_non_Gamow_increasing_functions_pass}
+  - {id: CM1-09, source_site: numeric_composition_at_1keV, verdict: qualified, ceiling: one_point_same_module_regression_with_shared_inputs}
+  - {id: CM1-10, source_site: nine_point_energy_monotonicity, verdict: qualified, ceiling: selected_grid_regression_not_continuous_proof}
+  - {id: CM1-11, source_site: one_eV_less_than_1e_minus_10, verdict: qualified, ceiling: selected_dimensionless_threshold_without_rate_prefactor_or_uncertainty}
+  - {id: CM1-12, source_site: one_hundred_keV_greater_than_1e_minus_3, verdict: qualified, ceiling: selected_dimensionless_threshold_not_universal_opening_scale}
+  - {id: CM1-13, source_site: neutral_uncapped_raw_value, verdict: qualified, ceiling: exact_repeat_call_tautology_not_provenance_or_validity}
+narrative_verdicts:
+  exact_shifted_factor: retained_as_C_SCR_001_candidate
+  energy_monotonicity: retained_with_global_exact_proof
+  screening_shift_monotonicity: added_by_P115
+  low_input_null: rejected_positive_shift_limit_is_finite_and_nonzero
+  low_input_small_for_selected_inputs: retained_as_numeric_regression_only
+  maximal_static_screening: qualified_maximum_of_four_assigned_models_only
+  Channel_A_rate_ceiling: rejected_dimensionless_penetrability_without_prefactor
+  maximum_two_body_yield: rejected_no_flux_cross_section_S_factor_density_branching_or_time
+  material_realization: rejected_external_Thomas_Fermi_inputs_not_accepted_framework_claims
+  firewall: qualified_constructed_expression_dependency_only
+  neutral_uncapped: qualified_no_clamp_is_not_derivation_or_validation
+status: complete
