@@ -1,0 +1,41 @@
+campaign: P097
+frozen_before_source_execution: true
+frozen_before_imported_self_test_execution: true
+frozen_before_primary_literature_inspection: true
+frozen_before_additional_consumer_output_inspection: true
+frozen_before_complete_source_body_inspection: false
+proposal_path: proposals/P097-mc3-medium-gap-maps/proposal.yaml
+proposal_sha256: de6b8fae8c205288895af43f4336f7bc04797553923cb2a036c3bc2bfdb73ad9
+memory_contract_path: memory/vantasner/proposals/P097-mc3-medium-gap-maps.md
+memory_contract_sha256: 2fbb7e644d6f88aee7189817fb7ce5cff7ac08103381f8cc01cc12a44c8c2467
+validation_command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+validation_exit_status: 0
+memory_validation_command: >-
+  memory validate
+  /home/dan/substrate-framework/memory/vantasner/proposals/P097-mc3-medium-gap-maps.md
+memory_validation_exit_status: 0
+source_body_state_at_freeze: completely_exposed_by_required_P096_consumer_audit
+source_execution_state_at_freeze: not_executed_under_P097
+imported_self_test_state_at_freeze: not_executed_or_trusted_under_P097
+primary_literature_state_at_freeze: not_opened_under_P097
+identifier_collision_search:
+  candidates: [C-LAT-002, C-MED-004]
+  surfaces: [governance, campaigns, proposals, memory, src, tests]
+  collisions: []
+disclosure: >-
+  P096's required MC3 consumer audit exposed the entire source body, formulas,
+  imported files, examples, and predicates before P097 began. P097 therefore
+  claims no source-body or formula blinding. It freezes the competing action,
+  displacement, isotope, mixed-coordinate, primary-literature, existence,
+  consumer, and nonduplication routes and structural criteria before source
+  execution, imported self-test execution, primary-literature inspection, or
+  additional consumer output inspection.
+already_exposed_at_freeze:
+  - MC3 source path, size, hash, blob, phase, twenty-nine static checks, and ME3 candidate dependency
+  - the complete MC3 body including both channel formulas, imported rung165 and rung176 self-tests, sample values, guards, and terminal code
+  - P096's conclusion that MC3 material maps remain unreviewed and positive gap is not sufficient nonlinear-breather existence
+comparators_still_blinded_at_freeze:
+  - unchanged-source runtime behavior, imported runtime behavior, tally, elapsed time, and output
+  - primary McCall-Hahn equations and regime as retrieved from original publications
+  - any additional effective-mass, Born-Oppenheimer, isotope-correction, material-frequency, or experimental comparator
+  - MC4 and engineering runtime outputs

@@ -1,0 +1,71 @@
+id: P097
+base_release: v0.82.0
+base_commit: f8290a0
+scientific_base_commit: b0113d5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MC3]
+question: >-
+  Derive the exact dimensionally closed small-oscillation gap and isotope-ratio
+  ledger for a declared physical Frenkel-Kontorova phase chain, derive the
+  strongest correct scale and identifiability theorem for a mixed-coordinate
+  sine-Gordon equation used in self-induced transparency, separate both
+  conditional models from host selection and nonlinear-breather existence,
+  and terminally adjudicate every MC3 lattice, gas, isotope, material,
+  gap-closing, absolute-scale, and consumer subclaim without importing MC4.
+invariants:
+  - C-LAT-001 fixes the normalized periodic scalar-lattice action, exact Brillouin symbol, and continuum ceiling but derives no physical lattice or material.
+  - C-MED-003 fixes physical continuum coefficient dimensions and their common multiplier; its ratios do not select a material or coefficient value.
+  - C-SG-018 fixes the conditional continuum gap and separated-mode theorem; positive gap is not sufficient for a nonlinear breather or material realization.
+  - C-SG-017 supplies one exact nonlinear breather only under the accepted continuum cosine model and cannot be inferred from curvature alone.
+  - A dimensionless lattice phase has a kinetic inertia with energy-times-time-squared units; identifying it with mass requires an explicit displacement scale.
+  - A mixed space-time derivative coefficient and a laboratory angular-frequency squared remain dimensionally and geometrically distinct until a coordinate map is declared.
+  - Pending MC4, MD, material, isotope, gas, lifetime, and engineering consumers are unavailable as authority.
+allowed_imports:
+  - C-LAT-001 for normalized discrete sine-Gordon structure and its exact finite-spacing symbol
+  - C-MED-003, C-SG-017, and C-SG-018 for continuum coefficient, nonlinear-existence, and gap ceilings
+  - C-DIM-002 for primitive-set-local dimensional reasoning only
+  - exact Euler-Lagrange variation, Fourier substitution, coordinate transformation, dimension matrices, limits, and positive-parameter algebra
+  - MC3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after contract validation
+  - hash-pinned rung165, rung176, and ME3 files as noncanonical provenance evidence after source execution
+  - primary McCall-Hahn self-induced-transparency literature after the freeze, for citation and equation auditing rather than imported acceptance
+candidates:
+  - id: A
+    description: Reproduce MC3 literally and classify every predicate and imported self-test against the object it actually evaluates.
+  - id: B
+    description: Derive the general dimensionless-phase Frenkel-Kontorova chain with inertia I, coupling K, on-site amplitude V0, spacing a, and exact linear spectrum.
+  - id: C
+    description: Introduce a physical displacement q=b*u and derive I=m*b^2, exposing the missing coordinate scale in sqrt(V0/m).
+  - id: D
+    description: Derive the general two-host gap ratio and the exact additional assumptions needed to reduce it to sqrt(m_D/m_H) or sqrt(2).
+  - id: E
+    description: Construct same-label counterfamilies with isotope-dependent potential, coordinate scale, or effective inertia to test material and exactness claims.
+  - id: F
+    description: Derive the dimensions, plane-wave relation, and independent coordinate-scale family of theta_z_tau=g*sin(theta).
+  - id: G
+    description: Transform the mixed-coordinate equation to standard hyperbolic coordinates under explicit length and time maps and inventory the remaining free scale and sign choices.
+  - id: H
+    description: Audit the cited primary self-induced-transparency reduction, its regime, coefficient units, and whether it supplies a lab-frame spectral gap.
+  - id: I
+    description: Separate positive linear curvature and gap closing from nonlinear breather existence, discrete-breather theorems, and host selection.
+  - id: J
+    description: Trace MC4, MD, lifetime, seeding, commensurate, and medium-map consumers and compare the surviving APIs with accepted lattice and continuum claims.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact action or coordinate-map derivation
+  - dimensional, field-coordinate, Fourier, sign, and boundary consistency
+  - explicit separation of inertia, mass, displacement scale, curvature, and effective parameters
+  - exact statement of isotope and Born-Oppenheimer assumptions without upgrading approximations to identities
+  - mixed-coordinate versus laboratory-dispersion consistency and scale identifiability
+  - mutation sensitivity, counterfamilies, limits, parameter economy, natural framework fit, and consumer closure
+claims_proposed:
+  - C-LAT-002
+  - C-MED-004
+comparators_blinded_until: >-
+  MC3's complete body and formulas were already exposed during P096's required
+  consumer audit, so body and formula blinding is impossible and is not
+  claimed. P097 freezes candidates, unit and coordinate conventions,
+  isotope-exactness conditions, mixed-coordinate alternatives, primary-source
+  questions, nonlinear-existence ceiling, selection criteria, and claim
+  identifiers before executing MC3, trusting its imported self-tests, opening
+  its external primary literature, or inspecting additional consumer output.
+status: draft
