@@ -1,0 +1,65 @@
+id: P109
+base_release: v0.91.0
+base_commit: 9626c2bbf4c3dd5d5d6e3f54ee60efb57cf4d44e
+scientific_base_commit: 3dc3703aa3b5f06523e7be1a9ebd8aee359b1882
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [PN1]
+question: >-
+  Derive and independently verify the complete mixed Taylor-coefficient
+  theorem for a declared cosine potential split into two normalized real
+  coordinates, including total-parity selection, signs, factorials,
+  background and coordinate-rescaling sensitivity, convergence and truncation
+  ceilings; then adjudicate PN1 without identifying formal classical
+  monomials with quantum transitions, phonons, rates, resonance, or material
+  energy transfer.
+invariants:
+  - C-SG-012 supplies the normalized classical potential 1-cos(phi) and stress identities but no field split, mode normalization, quantization, phonon map, interaction-picture amplitude, or rate.
+  - C-BRK-001 owns a declared univariate cosine potential and its Taylor data through sixth order; a new claim must add a distinct all-order mixed-coordinate theorem and consumer surface.
+  - FS1, NC1, and NC2 are qualified only through C-SG-009, C-SG-011, and C-SG-012 and supply no high/low mode decomposition or quantum process.
+  - Taylor coefficients depend on coordinate normalization, expansion background, and coefficient-versus-derivative factorial convention.
+  - Simultaneous evenness under (H,L) to (-H,-L) selects even total degree at a vacuum background; it does not imply separate evenness in H or L.
+  - A nonzero classical local coefficient establishes no matrix element, occupation factor, spatial overlap, energy-momentum conservation, resonance, transition probability, rate, or material realization.
+  - An entire series can have nonzero terms at unbounded order while their normalized magnitudes are factorially suppressed; formal order is not accessible multiplicity.
+allowed_imports:
+  - C-SG-012 only for the declared normalized classical sine-Gordon potential and Lagrangian convention
+  - C-BRK-001 only for the univariate cosine Taylor and coordinate-normalization ceiling
+  - C-SG-009, C-SG-011, and C-SG-012 only as the exact accepted ceilings of FS1, NC1, and NC2
+  - exact real and complex calculus, multivariate Taylor series, binomial coefficients, factorials, parity, and the entire cosine/exponential series
+  - SymPy for exact derivatives, series, coefficients, signs, substitutions, limits, and mutation-sensitive regression
+  - PN1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce PN1 literally and classify every coefficient, parity, high/low, quantum, phonon, multiplicity, and transfer predicate.
+  - id: B
+    description: Derive the complete coefficient of H^j L^k in 1-cos(a_H H+a_L L) from the entire cosine series and binomial theorem.
+  - id: C
+    description: Independently derive the same coefficient from mixed derivatives at the origin divided by j!k! and verify the one-high specialization.
+  - id: D
+    description: Expand about a general background phi0 and show precisely when odd-total coefficients appear, defeating a background-free universal parity reading.
+  - id: E
+    description: Track independent coordinate and mode rescalings a_H and a_L and distinguish polynomial coefficients from raw mixed derivatives.
+  - id: F
+    description: Prove entire convergence and factorial decay for the normalized one-high subsequence while keeping finite truncation and remainder distinct from equality.
+  - id: G
+    description: Audit the missing quantum-mode normalization, matrix element, occupation, overlap, energy-momentum, resonance, rate, and material premises.
+  - id: H
+    description: Test nonduplication against C-BRK-001 and accepted sine-Gordon APIs and reserve only an all-order mixed theorem with governed consumers.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit potential sign, field split, background, coordinate, derivative, and coefficient conventions
+  - exact agreement of binomial-series and mixed-derivative routes for arbitrary nonnegative j and k
+  - correct total parity, alternating sign, factorial, zero-order, one-high, background, and rescaling behavior
+  - convergence and truncation statements that do not convert formal nonzero order into unsuppressed physical multiplicity
+  - explicit separation of classical local coefficients from quantum matrix elements, kinematics, dynamics, rates, and materials
+  - assumption and parameter economy, mutation sensitivity, nonduplication, and complete downstream consumer audit
+claims_proposed:
+  - C-SG-019
+comparators_blinded_until: >-
+  No source-body conclusion blinding remains. The generated queue exposes the
+  cosine expansion, odd-n one-high coefficient, alternating sign, unbounded
+  formal order, and multi-phonon interpretation. P109 freezes the full
+  coefficient convention, independent derivation, background and rescaling
+  countermodels, convergence and truncation gates, quantum interpretation
+  ceiling, and claim-selection criteria before executing PN1 or inspecting its
+  thirteen predicate implementations.
+status: draft
