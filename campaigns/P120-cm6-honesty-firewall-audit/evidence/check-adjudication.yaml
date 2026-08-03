@@ -1,0 +1,29 @@
+campaign: P120
+source_unit: CM6
+static_predicate_count: 12
+runtime_predicate_count: 20
+predicates:
+  - {index: 1, label: CM2_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Holds on pinned CM2 bytes under four substrings and the line-wide exemption; aliases and equivalent semantics remain outside it.}
+  - {index: 2, label: CM4_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Holds on pinned CM4 bytes under the same narrow matcher; it is not a semantic mechanism audit.}
+  - {index: 3, label: CM5_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Holds on pinned CM5 bytes but does not inspect imported modules or data flow.}
+  - {index: 4, label: CM1_raw_U_e_presence, verdict: exact_substring_with_rejected_machinery_inference, reason: Raw presence holds and executable AST also contains U_e, but the predicate itself would accept a comment.}
+  - {index: 5, label: CM7_raw_U_e_presence, verdict: exact_substring_with_rejected_machinery_inference, reason: Raw presence holds and executable AST also contains U_e, but the predicate proves no physical licensing.}
+  - {index: 6, label: declared_B_side_raw_U_e_absence, verdict: exact_for_three_files_only, reason: Holds for CM2 CM4 and CM5; omitted B-side CM3 contains U_e in prose and is not scanned.}
+  - {index: 7, label: A_B_filename_disjointness, verdict: tautological_incomplete_partition, reason: Two hard-coded lists are disjoint even when relevant files are omitted.}
+  - {index: 8, label: CM7_A_not_B_membership, verdict: tautological_classification, reason: The assertion repeats the literal list assignments and supplies no independent classification oracle.}
+  - {index: 9, label: CM2_two_pattern_clamp_absence, verdict: exact_matcher_result_with_rejected_uncapped_inference, reason: Many bounded implementations evade and benign capacity names can collide.}
+  - {index: 10, label: CM5_two_pattern_clamp_absence, verdict: exact_matcher_result_with_rejected_uncapped_inference, reason: Missing selected spellings neither proves unboundedness nor normalizes a reported magnitude.}
+  - {index: 11, label: CM2_empirical_identifier_absence, verdict: exact_three_token_result_only, reason: Numeric and imported comparators are not audited as pass-condition data flow.}
+  - {index: 12, label: CM4_empirical_identifier_absence, verdict: exact_three_token_result_only, reason: Comments can trigger while external inputs evade.}
+  - {index: 13, label: CM5_empirical_identifier_absence, verdict: exact_three_token_result_only, reason: No input inventory or provenance closure follows.}
+  - {index: 14, label: CM1_empirical_identifier_absence, verdict: exact_three_token_result_only, reason: The A-side label changes no data-flow limitation.}
+  - {index: 15, label: CM7_empirical_identifier_absence, verdict: exact_three_token_result_only, reason: Absence of three names does not establish a closed empirical gate.}
+  - {index: 16, label: injected_U_e_detection, verdict: exact_selected_self_test, reason: Shows one literal is detected in one untagged line but constructed and tagged variants evade.}
+  - {index: 17, label: injected_Gamow_detection, verdict: exact_selected_self_test, reason: Shows the short token is non-vacuous but not complete for equivalent barrier semantics.}
+  - {index: 18, label: tagged_citation_exemption, verdict: exact_exemption_with_smuggling_risk, reason: The marker exempts every token on the line and is not restricted to comments or citations.}
+  - {index: 19, label: injected_empirical_identifier_detection, verdict: exact_selected_self_test, reason: Detects one chosen name but not a hard-coded number or imported comparator.}
+  - {index: 20, label: detected_literal_identity, verdict: exact_internal_regression, reason: Rechecks that the first fake reports u_e and adds no completeness oracle.}
+summary:
+  implemented_predicates_reproduced: 20
+  scientific_or_semantic_claims_promoted: 0
+  terminal_disposition: qualified

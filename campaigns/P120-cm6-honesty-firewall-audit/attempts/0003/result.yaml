@@ -1,0 +1,19 @@
+campaign: P120
+attempt: 0003
+status: failed_verifier_fixture
+candidate: B-C-D-E-F
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P120-cm6-honesty-firewall-audit/verify.py
+result: >-
+  Thirty-eight checks passed through source hashes, exact source behavior,
+  self-tests, AST separation, evasion and false-positive mutations, clamp
+  countermodels, empirical countermodels, and omitted imported modules. The
+  next check failed because the verifier guessed
+  bridge_CM3_monotone_crossover.py rather than resolving CM3's actual pinned
+  inventory filename.
+diagnosis: primary_verifier_fixture_path
+scientific_effect: none
+next_attempt: >-
+  Resolve CM3 from the pinned phase-31 inventory, replace the guessed filename,
+  and rerun the unchanged scientific predicates without weakening any gate.

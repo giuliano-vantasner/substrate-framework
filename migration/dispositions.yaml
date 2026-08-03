@@ -1940,6 +1940,54 @@ units:
       remaining legacy NumPy integration references from eight mutable
       engineering scripts; no scientific candidate fails for API compatibility.
       No canonical API, accepted claim, or release is added.
+  CM6:
+    disposition: qualified
+    accepted_claims: []
+    qualification: >-
+      CM6's twenty predicates reproduce as finite lexical statements on pinned
+      source bytes, but its headline honesty firewall is not a semantic or
+      physical proof. The three declared B-side files contain none of four
+      selected case-folded substrings outside a line bearing the exact
+      case-sensitive [IMPORT] marker; CM1 and CM7 contain raw U_e, the two
+      filename lists are disjoint, the narrow clamp detector finds no match in
+      CM2 or CM5, and five files contain none of three selected empirical
+      identifier strings. These are exact matcher results only. CM3 labels
+      itself B-side but is omitted from CM6's B_SIDE list; its prose contains
+      U_e and Gamow, so including it refutes the literal confinement claim even
+      though its executable AST has no U_e identifier. Across pinned phase-31
+      Python files, executable U_e identifiers do occur only in CM1 and CM7,
+      but that remains syntactic evidence. The line-wide exemption can hide
+      executable syntax, while concatenation, aliases, getattr, Unicode,
+      equivalent formulas, imports, configuration, and dynamic loads evade the
+      tokens. Comments, docstrings, negation, and benign substrings can collide.
+      The clamp scan misses ordinary saturation spellings, and numeric or
+      imported comparator pass conditions evade the empirical list. CM6 pins
+      no hashes or transitive imports at runtime and omits imported domain
+      modules. Its self-tests establish selected non-vacuity, not completeness.
+      No barrier-free physics, hidden-input absence, data independence,
+      uncapped or honest magnitude, mechanism separation, material
+      realization, yield, heat, observation, or scientific validation is
+      accepted. No scientific claim maps to this campaign-level source audit.
+    evidence:
+      - campaigns/P120-cm6-honesty-firewall-audit/reviews/source_adjudication.md
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/source-reproduction.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/source-audit.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/check-adjudication.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/input-provenance.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/dependency-audit.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/consumer-audit.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/candidate-comparison.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/evidence/primary-provenance.yaml
+      - campaigns/P120-cm6-honesty-firewall-audit/verify.py
+      - campaigns/P120-cm6-honesty-firewall-audit/reviews/independent_firewall_review.py
+      - memory/vantasner/decisions/CM6-qualified-review.md
+    note: >-
+      P120 closes 47 primary and 35 independent finite-syntax checks after one
+      missing-interpreter-path event and one preserved verifier fixture failure.
+      Three direct and two transitive source consumers replay 138 checks. No
+      canonical API, accepted claim, release, sampled integration, or NumPy
+      compatibility event is added.
   PN6:
     disposition: qualified
     accepted_claims:

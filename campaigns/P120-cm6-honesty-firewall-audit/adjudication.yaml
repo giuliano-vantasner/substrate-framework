@@ -1,0 +1,58 @@
+campaign: P120
+title: CM6 finite scanner, AST, and honesty-firewall audit
+source_baseline: substrate@6d1f4e0
+source_units: [CM6]
+base_release: v0.97.0
+release_after_adjudication: v0.97.0
+adjudicated_at: '2026-08-08T09:30:00Z'
+selected_candidates:
+  - {id: B, reason: Exact pinned-byte matching closes the finite lexical ledger.}
+  - {id: C, reason: AST locations separate executable identifiers from prose without claiming full semantics.}
+  - {id: D, reason: Evasion and collision mutations close sensitivity and specificity.}
+  - {id: E, reason: CM3 imports hashes and read-policy audits close finite scope.}
+  - {id: F, reason: Saturation and input countermodels close uncapped and empirical ceilings.}
+  - {id: G, reason: No scientific claim or reusable package API survives.}
+  - {id: H, reason: Independent predicate dependency impact nonduplication and consumer review closes governance.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-SCR-001, decision: unchanged_exact_barrier_and_nonrate_ceiling}
+  - {id: C-RG-002, decision: unchanged_conditional_capillary_and_nonmaterial_ceiling}
+  - {id: C-SPN-002, decision: unchanged_ladder_and_nonrate_ceiling}
+  - {id: C-CMP-001, decision: unchanged_composite_and_nonrate_nonheat_ceiling}
+  - {id: C-GW-001, decision: unchanged_harmonic_and_nonradiation_ceiling}
+  - {id: C-COH-001, decision: unchanged_directional_coherence_and_normalization_ceiling}
+  - {id: C-SG-017, decision: unchanged_frequency_and_material_ceiling}
+  - {id: C-RES-001, decision: unchanged_resolvent_and_nonchannel_ceiling}
+evidence:
+  interpreter_path_failure: attempts/0001/result.yaml
+  source_route: attempts/0002/result.yaml
+  primary_fixture_failure: attempts/0003/result.yaml
+  exact_routes: attempts/0004/result.yaml
+  terminal_gate: attempts/0005/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_firewall_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/CM6-qualified-review.md
+source_disposition:
+  CM6: qualified
+validation_commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P120-cm6-honesty-firewall-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P120-cm6-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - hash-pinned consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

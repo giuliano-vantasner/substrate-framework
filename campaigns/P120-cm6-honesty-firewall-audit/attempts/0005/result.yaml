@@ -1,0 +1,23 @@
+campaign: P120
+attempt: 0005
+status: complete
+candidate: terminal_adjudication_gate
+planned_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P120-cm6-honesty-firewall-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P120-cm6-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - scripts/validate.sh
+  - git diff --check
+preconditions:
+  source_reproduction: {exit_code: 0, tally: 20}
+  consumer_replay: {scripts: 5, checks: 138, exit_statuses_all_zero: true}
+  queue: {units: 218, pending: 100, partial: 0, qualified: 106, migrated: 3, duplicate_evidence: 8, out_of_scope: 1}
+  release: v0.97.0
+  accepted_claims: 132
+result:
+  workflow: {claims: 132, accepted: 132, proposals: 0, migration_units: 218, pending: 100, partial: 0}
+  memory: {files: 501, all_valid: true}
+  skill_valid: true
+  pytest: {passed: 1075, duration_seconds: 94.11}
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+  git_diff_check: true
+debt: []

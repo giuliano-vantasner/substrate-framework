@@ -1,0 +1,26 @@
+campaign: P120
+distinct_new_scientific_theorem: rejected
+surviving_surface:
+  finite_literal_scan: exact_only_for_pinned_bytes_tokens_and_exemptions
+  phase31_AST_U_e_location: executable_identifier_present_only_in_CM1_and_CM7
+existing_governance:
+  scripts/validate_repository.py: registry_release_campaign_and_migration_schema_validation
+  src/substrate_framework/verification.py: shared_check_ledger_only
+  accepted_claims: [C-SCR-001, C-RG-002, C-SPN-002, C-CMP-001, C-GW-001, C-COH-001, C-SG-017, C-RES-001]
+related_source_patterns:
+  PN4: predecessor_literal_scan_pattern_noncanonical
+  GB6: downstream_literal_scan_pattern_pending
+  WN7: downstream_literal_scan_pattern_pending
+audit_details:
+  - None of the accepted claims is a source-code lexical theorem, and CM6 supplies no scientific extension to them.
+  - The repository validator governs canonical record consistency rather than arbitrary scientific semantics in source scripts.
+  - A general static analyzer would require a separately scoped security or provenance objective, interprocedural data flow, explicit policies, and production consumers.
+  - Adding literal_scan to src would canonize an incomplete campaign-specific token list and create no current framework consumer.
+promotion_decision: >-
+  Retain the exact scanner and AST comparison inside immutable P120 evidence.
+  Add no claim identifier, package module, test surface, release, or generated
+  accepted documentation.
+registry_delta: none
+release_delta: none
+package_delta: none
+debt: []

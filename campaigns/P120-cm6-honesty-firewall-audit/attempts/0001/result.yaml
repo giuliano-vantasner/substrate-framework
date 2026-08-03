@@ -1,0 +1,16 @@
+campaign: P120
+attempt: 0001
+status: failed_before_scientific_execution
+candidate: A
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate/.venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py
+result: >-
+  Bash exited 127 because /home/dan/substrate/.venv/bin/python does not exist;
+  the CM6 module was never opened by an interpreter and no predicate ran.
+diagnosis: environment_interpreter_path
+scientific_effect: none
+next_attempt: >-
+  Reuse the framework's existing .venv interpreter from the framework working
+  directory with PYTHONDONTWRITEBYTECODE=1; CM6 imports only the standard
+  library, so no source-local environment or dependency is required.

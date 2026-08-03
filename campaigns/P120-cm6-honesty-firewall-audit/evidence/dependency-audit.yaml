@@ -1,0 +1,32 @@
+campaign: P120
+base_release: v0.97.0
+accepted_claims_reviewed:
+  C-SCR-001: unchanged_exact_screened_barrier_factor_and_nonrate_ceiling
+  C-RG-002: unchanged_conditional_capillary_algebra_and_nonmaterial_ceiling
+  C-SPN-002: unchanged_symmetric_ladder_identities_and_nonrate_ceiling
+  C-CMP-001: unchanged_conditional_composite_factor_and_nonrate_nonheat_ceiling
+  C-GW-001: unchanged_conditional_harmonic_functional_and_nonradiation_ceiling
+  C-COH-001: unchanged_directional_coherence_and_normalization_ceiling
+  C-SG-017: unchanged_dimensional_breather_frequency_and_material_ceiling
+  C-RES-001: unchanged_finite_resolvent_and_nonchannel_ceiling
+source_candidate_dependencies:
+  CM1: {disposition: qualified, authority: only_through_C_SCR_001}
+  CM2: {disposition: qualified, authority: only_through_C_CMP_001_and_other_individually_governed_claims}
+  CM4: {disposition: qualified, authority: only_through_C_RG_002_C_SPN_002_C_CMP_001}
+  CM5: {disposition: qualified, authority: none_beyond_its_individually_reviewed_existing_claims}
+  CM7: {disposition: pending_adjudication, authority: none}
+  PN4: {disposition: qualified, authority: only_through_C_RES_001}
+dependency_cycles:
+  - CM1 lists CM6 while CM6 scans CM1; this is a phase-cluster cycle and grants no authority in either direction.
+  - CM7 lists CM6 while CM6 classifies CM7; CM7 remains pending and cannot license the A-side label.
+  - GB6 and WN7 reuse the scanner pattern downstream; their clean tallies cannot validate CM6 or their scanned physics.
+  - CM3 is an indirect cycle node and simultaneously demonstrates the hard-coded file-list omission.
+novelty_closure:
+  claims_proposed: []
+  claims_mapped_by_disposition: []
+  note: >-
+    The exact finite lexical and AST surfaces are campaign-level source audit
+    evidence. They neither restate nor extend a scientific accepted claim, so
+    mapping the scanner to all claims mentioned in scanned files would be a
+    blanket promotion and is intentionally rejected.
+debt: []

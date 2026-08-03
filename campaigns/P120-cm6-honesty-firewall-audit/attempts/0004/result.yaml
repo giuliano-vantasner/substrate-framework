@@ -1,0 +1,21 @@
+campaign: P120
+attempt: 0004
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P120-cm6-honesty-firewall-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P120-cm6-honesty-firewall-audit/reviews/independent_firewall_review.py
+results:
+  primary: {exit_code: 0, tally: 47}
+  independent: {exit_code: 0, tally: 35}
+result: >-
+  Both routes reproduce the exact finite lexical verdicts and independently
+  expose line-wide tag smuggling, constructed-name and Unicode evasions,
+  comment and benign-substring collisions, clamp and empirical false
+  negatives, omitted imports and files, and the CM3 scope contradiction. A
+  phase-wide AST finds executable U_e identifiers only in CM1 and CM7, but
+  that is pinned syntactic evidence rather than a physical firewall.
+debt: []
+next_attempt: >-
+  Complete predicate, dependency, nonduplication, impact, input-provenance,
+  consumer, disposition, and integrated-gate records.

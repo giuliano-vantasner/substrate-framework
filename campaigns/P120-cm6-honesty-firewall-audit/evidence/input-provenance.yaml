@@ -1,0 +1,35 @@
+campaign: P120
+source_unit: CM6
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+scanned_inputs:
+  - {unit: CM1, path: merged-framework/bridges/phase-31/bridge_CM1_separation_boundary.py, sha256: 0f6881d96469274664ed1b762ff56a88b94ecdca599c22f8bb181052bd7f3ccc, git_blob: 8cd33750623af98eaee6cd2201670b205cd71a3a}
+  - {unit: CM2, path: merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py, sha256: c75fee880740765d3ef3e32634bf05360fd9789e46bd579fd07af60d29a79fa2, git_blob: 10c77e6db3aab923d4f4c6d6945768f954d5eba7}
+  - {unit: CM4, path: merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py, sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019, git_blob: fe6df257920f43b309fdc002af6ac1108ab1d55c}
+  - {unit: CM5, path: merged-framework/bridges/phase-31/bridge_CM5_excess_electrical.py, sha256: 8af42e5229ba59b31dfb30dbf94e904a2670c4f2f2b57373f9dd25ab169c2841, git_blob: d142e9eb0066de22bafa278fd601c1b3e8c36b99}
+  - {unit: CM7, path: merged-framework/bridges/phase-31/bridge_CM7_gamow_crossover.py, sha256: 10344b842a47b24651c891dfa55a030dd193e3e48e0b128b93bf74f29af6cee2, git_blob: 5cfd67d2301cfe5b72154bd39b50218d136f599c}
+scanner_input:
+  unit: CM6
+  sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5
+  git_blob: 7d6d3b0d3229941efa54dad7fa2480258f79851f
+omitted_counterexample:
+  unit: CM3
+  path: merged-framework/bridges/phase-31/bridge_CM3_crossover.py
+  sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb
+  role: named_B_side_file_omitted_by_CM6_and_literal_false_positive_on_prose
+unscanned_imports_observed:
+  - screening
+  - barrier_scaling
+  - medium_omega0
+  - seeding_kernel
+runtime_file_policy:
+  hashes_checked_by_CM6: false
+  explicit_encoding: false
+  caught_read_errors: false
+  symlink_policy: none
+  transitive_import_closure: none
+  dynamic_load_audit: none
+empirical_input_inventory: absent
+verdict: >-
+  P120 pins every byte used for its finite result. CM6 itself does not, and its
+  scan cannot close imported or external inputs. No empirical independence or
+  physical data-gate claim is accepted.

@@ -1,0 +1,22 @@
+campaign: P120
+source_unit: CM6
+contract:
+  proposal_sha256: c0ab7a4616234878ddad9808ca8e5711b865d934f51b89472f69a5f23e5f326b
+  frozen_proposal_sha256: c0ab7a4616234878ddad9808ca8e5711b865d934f51b89472f69a5f23e5f326b
+source:
+  CM6_sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5
+  omitted_CM3_sha256: d62d8deadbba30c4d240ed57c204149ffe0d6b2ec49ed0e200206a4b4a8eccdb
+verification:
+  primary:
+    path: campaigns/P120-cm6-honesty-firewall-audit/verify.py
+    sha256: bd683aa993a3f1990604ad0abc4d231667f973ddbc0b1a6e132df21d8e5570e7
+    tally: 47
+  independent:
+    path: campaigns/P120-cm6-honesty-firewall-audit/reviews/independent_firewall_review.py
+    sha256: 91dac37b9b648094cf2b23a1ae1f5a001ac86a86299106c53b6ead6c7011771c
+    tally: 35
+canonical_implementation_changed: false
+new_package_API: none
+oracle: exact_finite_text_matching_Python_AST_tokenization_mutations_scope_and_provenance_counterexamples
+sampled_integration: none
+numpy_compatibility_event: none

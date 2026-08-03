@@ -10,7 +10,7 @@ tags:
 - honesty-firewall
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P120 CM6 Honesty Firewall Audit
 

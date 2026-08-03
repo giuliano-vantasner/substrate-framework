@@ -1,0 +1,38 @@
+campaign: P120
+selection_frozen_before_renewed_source_inspection: true
+criteria_order:
+  - exact file hash decoding normalization token exemption location and error closure
+  - evasion sensitivity and collision specificity
+  - executable AST and input data-flow relevance
+  - separation of finite syntax from physical and governance claims
+  - accepted dependency closure parameter economy API value and novelty
+  - complete predicate dependency cycle input nonduplication and consumer review
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: All twenty predicates execute, but their matcher and self-tests do not establish semantic completeness.
+  B:
+    decision: selected_as_exact_finite_ledger
+    reason: The exact six-file byte and matcher surface is reproducible and honestly bounded.
+  C:
+    decision: selected_as_stronger_syntactic_comparison
+    reason: AST identifiers separate executable names from CM3 prose and source comments without claiming full semantics.
+  D:
+    decision: selected_as_sensitivity_and_specificity_audit
+    reason: Construction Unicode tag-smuggling prose and benign-name mutations expose both false negatives and positives.
+  E:
+    decision: selected_as_scope_audit
+    reason: CM3 omitted imports unhashed reads and absent error policy close the finite-scope ledger.
+  F:
+    decision: selected_as_semantic_countermodel_audit
+    reason: Saturation and empirical-input countermodels refute uncapped and data-independent inferences.
+  G:
+    decision: selected_no_new_claim_or_API
+    reason: The surviving object is campaign-level source evidence with no scientific claim or production consumer.
+  H:
+    decision: selected
+    reason: Fresh matcher AST and complete predicate dependency impact nonduplication and consumer review close governance.
+claims_decision: no_new_claim
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

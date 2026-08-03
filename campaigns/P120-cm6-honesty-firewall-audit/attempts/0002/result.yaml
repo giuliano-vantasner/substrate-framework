@@ -1,0 +1,18 @@
+campaign: P120
+attempt: 0002
+status: reproduced
+candidate: A
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-31/bridge_CM6_honesty_firewall_guard.py
+source_sha256: 60a8d1de7693783c7859d32b5d7b90bd46c6304cbd7c14fd06fb5235acadf3c5
+exit_code: 0
+terminal_tally: ALL 20 CHECKS PASS
+result: >-
+  The pinned source executes all twenty expanded predicates successfully with
+  the framework interpreter and no numerical integration or compatibility
+  alias. This is literal regression evidence only; semantic scope remains for
+  the primary and independent audits.
+next_attempt: >-
+  Run the frozen primary finite-scanner, AST, evasion, clamp, empirical,
+  scope, and governance-ceiling verifier.

@@ -106,4 +106,4 @@ comparators_blinded_until: >-
   line, tag, comment, AST, alias, construction, Unicode, clamp, empirical,
   data-flow, scope, error, cycle, predicate, and consumer gates before renewed
   line-by-line CM6 inspection, execution, or additional consumer review.
-status: draft
+status: accepted

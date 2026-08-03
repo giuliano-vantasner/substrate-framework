@@ -1,0 +1,37 @@
+campaign: P120
+source_unit: CM6
+headline_verdict: qualified
+surviving_content:
+  - The pinned CM2, CM4, and CM5 bytes contain none of four case-folded substrings outside a line containing the exact case-sensitive marker [IMPORT].
+  - The pinned CM1 and CM7 bytes contain the raw substring U_e, while the three declared B-side files do not.
+  - The two hard-coded filename lists are disjoint and place CM7 only in the A list.
+  - CM2 and CM5 contain no line matching CM6's two narrow clamp patterns after splitting at the first hash character.
+  - The five declared files contain none of three selected empirical identifier substrings outside an exempt line.
+  - The five injected examples exercise the listed substrings and uppercase exemption under the same matcher.
+  - Across all pinned phase-31 Python files, executable AST identifiers named U_e occur in CM1 and CM7 only.
+qualified_or_rejected_content:
+  - The claim of literal confinement to only CM1 and CM7 is false phase-wide because CM3 and CM6 itself contain U_e and Gamow in prose.
+  - CM3 calls itself B-side but is omitted from CM6's B_SIDE list; adding it makes the literal scan fail even though CM3 has no executable U_e identifier.
+  - The [IMPORT] marker is case-sensitive, exempts an entire line, and also works inside string data, so it can hide executable syntax.
+  - Barrier tokens constructed by concatenation, aliases, getattr, Unicode variants, equivalent formulas, imported helpers, configuration, and dynamic loads evade the list.
+  - Comments, docstrings, negated prose, and benign names such as tau_evolution can be false positives.
+  - The raw A-side presence check can be satisfied by a comment and therefore does not prove barrier machinery.
+  - The tagged barrier scan and the raw B-side U_e absence check use inconsistent exemption semantics.
+  - The longer gamow_energy_kev token is redundant with the shorter gamow token and yields two matches on one line.
+  - The clamp matcher misses whitespace variants, np.clip, conditionals, helpers, bounded nonlinearities, denominators, and tables, while benign capacity names can trigger it.
+  - Splitting at the first hash character treats a hash inside string data as a comment delimiter.
+  - The empirical matcher scans all text rather than pass-condition data flow; numeric literals and imported comparators evade it while comments can trigger it.
+  - Disjoint selected lists do not establish an exhaustive partition, and CM6 pins no hashes, import closure, decoding, symlink, dynamic-load, or read-error policy.
+  - The five scanned bridges import unscanned screening, barrier_scaling, medium_omega0, and seeding_kernel modules.
+  - A green self-test shows non-vacuity for selected fixtures, not semantic completeness or scientific validation.
+exact_positive_surface: >-
+  For the six pinned bridge files and exact CM6 matcher, all twenty implemented
+  predicates reproduce. The stronger phase-wide AST observation is that the
+  identifier U_e occurs executably in CM1 and CM7 only. Both are finite
+  syntactic statements with explicit hashes and neither is a physical theorem.
+physical_and_governance_ceiling: >-
+  No barrier-free field or rate model, absence of hidden inputs, data
+  independence, uncapped or honest magnitude, mechanism separation, material
+  realization, yield, heat, observation, or scientific validation follows.
+novelty_verdict: no_new_scientific_claim_or_package_API
+compatibility_event: none
