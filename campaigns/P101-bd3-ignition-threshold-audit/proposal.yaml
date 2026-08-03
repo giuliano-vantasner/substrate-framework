@@ -63,4 +63,4 @@ comparators_blinded_until: >-
   general-V and endpoint composition, the E/theta regime split, integer-ceiling
   convention, chain-rule sensitivities, common-scale covariance,
   identifiability tests, interpretation ceiling, and nonduplication gate.
-status: draft
+status: accepted

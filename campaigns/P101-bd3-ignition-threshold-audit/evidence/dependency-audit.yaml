@@ -1,0 +1,43 @@
+source_unit: BD3
+accepted_dependency_closure:
+  - claim: C-COH-001
+    role: declared population-scale interpolation, general and endpoint continuous thresholds, ordering condition, and explicit integer and event ceilings
+  - claim: C-RG-001
+    role: generic positive-drive capillary relative barrier
+  - claim: C-RG-002
+    role: conditional BD1 Frank/core and quadratic-loading barrier, dimensions, sensitivities, and identifiability only
+accepted_comparators_not_population_maps:
+  - claim: C-SG-017
+    role: distinct classical physical breather energy and angular frequency under C-MED-003; no hbar quantization or population identity
+  - claim: C-LAT-002
+    role: conditional phase-chain gap and host-ratio ledger; no breather quantum or population Hamiltonian
+  - claim: C-MED-004
+    role: conditional mixed-coordinate scale theorem; no absolute laboratory gap or population scale
+source_predecessor_resolution:
+  NY3:
+    disposition: qualified
+    accepted_claims: [C-COH-001]
+    ceiling: Its inserted barrier, per-source scale, effective-temperature, firing, and nuclear readings remain unaccepted.
+  BD1:
+    disposition: qualified
+    accepted_claims: [C-RG-001, C-RG-002]
+    ceiling: Its constitutive composition derives no material, k-omega law, rate, event, or absolute scale.
+  MC3:
+    disposition: qualified
+    accepted_claims: [C-LAT-002, C-MED-003, C-SG-017, C-SG-018, C-MED-004]
+    ceiling: Its material and isotope maps require extra curvature, phase-scale, mass, and realization premises and do not identify theta=hbar*omega_b.
+missing_dependencies:
+  - a quantized breather state or independently derived population Hamiltonian
+  - a unit and state map from hbar*omega_b or classical breather energy to C-COH-001's theta
+  - a preparation and phase-coherence dynamics for the declared population and V
+  - an accepted material, isotope, and k-omega dispersion or control map
+  - a positive-integer source-count convention and population measurement
+  - a kinetic crossing equation, finite-time classifier, event channel, and observable
+  - a DBD breakdown, nuclear interaction, reaction branch, deposition law, or payload
+  - independent calibration of the barrier and per-source energy scales
+closure_method: >-
+  P101 retains E, theta, V, and the population interpolation as explicit
+  conditional inputs. It composes only C-COH-001 and C-RG-002, derives exact
+  sensitivities and identifiability ceilings, and adds no physical label or
+  new claim.
+verdict: exact_composition_closed_interpretive_headline_open_and_rejected

@@ -1,0 +1,27 @@
+campaign: P101
+attempt: 3
+route: repaired_exact_verifiers_with_registry_provenance_probe
+status: independent_passed_primary_registry_field_lookup_failed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/reviews/independent_threshold_review.py
+process:
+  primary_exit_status: 1
+  primary_checks_passed_before_failure: 48
+  independent_exit_status: 0
+  independent_terminal_tally: ALL 16 CHECKS PASS [P101-INDEPENDENT]
+failure: >-
+  The final accepted-provenance group searched the C-COH-001 statement for the
+  explicit warning that calling Theta energy or temperature needs additional
+  premises. That exact warning is stored in the claim assumptions rather than
+  the statement field, so the combined assertion failed.
+diagnosis:
+  - The registry contains the required ceiling and no hbar-frequency population map.
+  - This is a field-location error in the verifier, not missing scientific provenance.
+  - No tolerance, candidate, formula, or expected verdict changes.
+next_route: >-
+  Inspect the accepted claim's assumptions for the already verified wording,
+  retain the statement-level checks for the free per-source scale and
+  k-omega ceiling, and rerun the complete primary verifier.
+debt:
+  - rerun the complete primary verifier after the registry-field repair

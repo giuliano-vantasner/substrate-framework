@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 120
-  qualified: 86
+  pending_adjudication: 119
+  qualified: 87
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -6227,8 +6227,33 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-COH-001
+  - C-RG-002
+  qualification: BD3's general model and endpoint continuous roots are already C-COH-001, and composing
+    its free positive per-source scale with C-RG-002's conditional capillary barrier gives the displayed
+    loading and fixed-wavenumber sensitivities. P101 derives the complete E/theta regime split, integer-ceiling
+    convention, exact input elasticities, common-scale covariance, rank-one endpoint identifiability,
+    and source guard boundary. The source instead assigns theta=hbar*omega_b and tests the assignment;
+    no accepted quantized state, population Hamiltonian, unit map, isotope law, k-omega relation, coherence
+    dynamics, kinetic event, DBD breakdown, nuclear channel, deposition law, payload, or absolute-scale
+    calibration closes those interpretations. Algebraic threshold crossing is not physical ignition.
+  evidence:
+  - campaigns/P101-bd3-ignition-threshold-audit/reviews/source_adjudication.md
+  - campaigns/P101-bd3-ignition-threshold-audit/evidence/source-reproduction.yaml
+  - campaigns/P101-bd3-ignition-threshold-audit/evidence/source-audit.yaml
+  - campaigns/P101-bd3-ignition-threshold-audit/evidence/check-adjudication.yaml
+  - campaigns/P101-bd3-ignition-threshold-audit/evidence/dependency-audit.yaml
+  - campaigns/P101-bd3-ignition-threshold-audit/evidence/consumer-audit.yaml
+  - campaigns/P101-bd3-ignition-threshold-audit/evidence/candidate-comparison.yaml
+  - campaigns/P101-bd3-ignition-threshold-audit/verify.py
+  - campaigns/P101-bd3-ignition-threshold-audit/reviews/independent_threshold_review.py
+  - memory/vantasner/decisions/BD3-qualified-review.md
+  note: P101 adds no claim, canonical API, test, or release. Direct threshold and current-NumPy engineering
+    consumers execute, but their supplied event, isotope, payload, and power maps remain noncanonical.
+    BD4, BD5, CM2, and CM4 remain pending for independent audits; exact P101 work imports no NumPy or
+    quadrature.
 - source_unit: BD4
   phase: phase-28
   path: merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py

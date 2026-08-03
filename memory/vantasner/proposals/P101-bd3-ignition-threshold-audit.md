@@ -2,7 +2,7 @@
 description: Audit BD3's conditional coherence-population threshold composition
 author: vantasner
 created: '2026-08-03T12:37:45Z'
-updated: '2026-08-03T12:37:45Z'
+updated: '2026-08-03T14:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-BD3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P101 BD3 Ignition Threshold Audit
 
@@ -208,3 +208,21 @@ completion.
 This campaign cross-references BD1, BD3, NY3, BD4, BD5, CM2, CM4, C-RG-001,
 C-RG-002, C-COH-001, P086, P099, P100, and the canonical radial-energy and
 coherence-gate modules.
+
+## Terminal Adjudication
+
+P101 qualifies BD3 without adding a claim, API, test, or release. The source
+reproduces all sixteen checks. Fifty primary and sixteen independent exact
+checks establish the general and endpoint threshold composition, complete
+elasticities, E/theta regime split, integer-ceiling semantics, common-scale
+covariance, rank-one endpoint identifiability, arbitrary-target families, and
+the exact one-third guard boundary for the source example.
+
+Every exact survivor is already owned by C-COH-001 or C-RG-002. The source's
+`theta=hbar*omega_b` check is a constructed assignment; accepted classical
+breather and medium-frequency claims supply no population Hamiltonian or state
+map. Symbol presence derives no isotope shift, `k~omega` supplies no
+dispersion, and an algebraic scale comparison is not ignition. Direct
+engineering consumers execute after the separate NumPy compatibility repair
+but retain their own event, payload, and power assumptions. Campaign debt is
+empty and migration continues to BD4.

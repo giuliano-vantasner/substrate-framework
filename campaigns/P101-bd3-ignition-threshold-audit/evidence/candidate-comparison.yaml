@@ -1,0 +1,44 @@
+campaign: P101
+selection_order:
+  - accepted dependency closure and nonduplication
+  - exact domains dimensions normalization monotonicity limits and integer semantics
+  - state kinetic channel and observable separation
+  - assumption and parameter economy
+  - sensitivity identifiability canonical reuse and consumer closure
+candidates:
+  A:
+    decision: retained_as_reproduction_evidence
+    reason: The untouched source passes sixteen checks but several headline labels are untested or constructed.
+  B:
+    decision: selected_as_duplicate_claim_surface
+    reason: C-COH-001 already owns the general and endpoint continuous thresholds, ordering split, integer caveat, and event ceiling.
+  C:
+    decision: selected_as_nonpromoted_composition_ledger
+    reason: Exact substitution into C-RG-002 produces complete sensitivities but no theorem requiring a new API or claim.
+  D:
+    decision: rejected_absent_state_and_unit_map
+    reason: Neither hbar*omega_b nor the accepted classical breather energy is identified with one population member's energy.
+  E:
+    decision: selected_as_integer_semantics_guard
+    reason: Strict monotonicity permits a separately declared ceiling; the source does not state it and subunit roots collapse to one count.
+  F:
+    decision: selected_as_nonidentifiability_ledger
+    reason: Common energy rescaling preserves thresholds, independent theta rescaling changes them, and endpoint readings have rank one.
+  G:
+    decision: selected_as_interpretation_ceiling
+    reason: Algebraic scale comparisons survive while physical ignition, escape, breakdown, and nuclear readings lack dynamics and channels.
+  H:
+    decision: selected_as_regime_guard
+    reason: Alignment lowers the continuous endpoint threshold only above unit E/theta and reverses below it.
+  I:
+    decision: selected_as_consumer_and_nonduplication_audit
+    reason: Direct consumers reproduce supplied models but add no accepted state or event authority; later bridges remain independently pending.
+selected_result: >-
+  Qualify BD3 as exact conditional composition and duplicate evidence for
+  C-COH-001 and C-RG-002, reject its hbar-frequency, isotope, k-omega, integer,
+  ignition, and absolute-scale readings, and add no claim, API, or release.
+selection_not_based_on:
+  - source terminal tally
+  - inserted E=2 eV or theta=0.05 eV values
+  - later consumer outputs or claimed watts
+  - chronology, issue labels, or prose confidence

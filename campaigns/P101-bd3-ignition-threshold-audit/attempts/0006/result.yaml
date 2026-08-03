@@ -1,0 +1,24 @@
+campaign: P101
+attempt: 6
+route: integrated_terminal_adjudication_gate
+status: passed
+command: scripts/validate.sh
+preconditions:
+  - BD3 disposition is qualified and the generated queue reports 119 pending units.
+  - Primary and independent exact routes pass 50 and 16 checks.
+  - Focused dependency and direct consumer replays pass.
+  - No claim, canonical API, test, or release changes are proposed.
+expected_outputs:
+  - repository workflow validation with zero active proposals
+  - all durable memory valid
+  - complete pytest suite passing once
+  - generated documentation and queue current
+  - terminal ALL REPOSITORY WORKFLOW CHECKS PASS
+result:
+  exit_status: 0
+  repository: WORKFLOW VALID 115 claims 115 accepted 0 proposals 218 units 119 pending 0 partial
+  memory: All 429 file(s) valid
+  skill: valid
+  pytest: 914 passed in 80.48s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+debt: []

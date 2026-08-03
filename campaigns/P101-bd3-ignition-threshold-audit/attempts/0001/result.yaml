@@ -1,0 +1,42 @@
+campaign: P101
+attempt: 1
+route: unchanged_hash_pinned_source_reproduction_and_headline_audit
+status: source_reproduced_interpretive_and_oracle_defects_identified
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
+  sha256: 8a8f2138c548d3ed90785fc3ea82302d39d71d4832cb3761f429938d9b94b950
+  git_blob: e3064ae21212a760fccb93fd0c054f1789b269eb
+  worktree_relative_to_pinned_blob: clean
+command: >-
+  /usr/bin/time -f elapsed_seconds=%e maxrss_kib=%M exit_status=%x
+  /home/dan/substrate-framework/.venv/bin/python
+  merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
+process:
+  exit_status: 0
+  elapsed_wall_seconds: 0.39
+  maximum_resident_kib: 52388
+  terminal_tally: ALL 16 CHECKS PASS
+surviving_results:
+  - The two endpoint continuous roots reproduce C-COH-001.
+  - The conditional BD1 barrier reproduces C-RG-002.
+  - At fixed independent positive theta, the composed endpoint thresholds fall with loading amplitude and wavenumber under the displayed quadratic-loading premise.
+  - The exact numerical inequalities for x=E/theta=40 are arithmetically correct.
+failed_headline_routes:
+  - The hbar*omega_b identification is constructed by assigning theta1_framework to that product and then testing the assignment; no accepted state, Hamiltonian, quantization, or unit map identifies it with C-COH-001's free theta.
+  - Symbol presence in N_coh_fw does not derive an isotope shift, and narration k~omega supplies no accepted dispersion or control map.
+  - The check labeled ratio less than one verifies only an identity; it never tests the required E>theta domain, and the ordering reverses for E/theta<1.
+  - Three derivative checks sample a single all-ones point rather than derive the complete exact elasticity ledger.
+  - Continuous roots are called populations without an integer-ceiling convention; for E/theta<1 both endpoint counts ceiling to one.
+  - The guard booleans compare a declared algebraic scale with a barrier. No kinetics, state preparation, material map, DBD breakdown, nuclear channel, deposition law, or event observable makes either verdict ignition physics.
+  - The placeholder eV values remain inserted, while common energy rescaling and independent theta choices expose the normalization and identifiability ceiling.
+  - The script duplicates local PASS/check machinery and tests no general-V threshold, dimensions, rank, nullspace, consumer, or accepted-claim collision.
+next_route: >-
+  Execute primary canonical and independent direct exact derivations covering
+  the general threshold, regime split, full sensitivities, integer semantics,
+  rescaling and identifiability, guard boundary, mutations, accepted
+  dependencies, and nonduplication, then adjudicate every source predicate and
+  consumer.
+debt:
+  - complete primary and independent mutation-sensitive verifiers
+  - inspect and classify predecessor and downstream consumers
+  - materialize predicate, dependency, candidate, consumer, review, disposition, and terminal validation records

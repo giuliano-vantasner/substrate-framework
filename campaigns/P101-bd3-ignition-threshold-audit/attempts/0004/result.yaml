@@ -1,0 +1,22 @@
+campaign: P101
+attempt: 4
+route: corrected_assumption_field_with_overliteral_statement_substring
+status: primary_registry_wording_probe_failed_after_48_passes
+command: PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/verify.py
+process:
+  exit_status: 1
+  checks_passed_before_failure: 48
+failure: >-
+  The revised provenance assertion found the assumption-level interpretation
+  ceiling, but still searched the C-COH-001 statement for the prose substring
+  `per-source scale theta`. The canonical statement encodes the exact premise
+  as `theta>0`, so that wording probe was false.
+diagnosis:
+  - C-COH-001 does explicitly retain theta as a positive supplied scale and contains the exact threshold formulas.
+  - The other three provenance predicates passed individually.
+  - The verifier should assert the registry's actual exact notation rather than a paraphrase.
+next_route: >-
+  Replace the paraphrased substring with the exact `theta>0` statement token
+  and rerun the complete primary verifier.
+debt:
+  - rerun the complete primary verifier after the exact registry-token repair

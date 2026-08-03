@@ -1,0 +1,31 @@
+campaign: P101
+attempt: 2
+route: first_primary_and_independent_exact_verifier_execution
+status: verifier_representation_and_structural_equality_failures
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/reviews/independent_threshold_review.py
+process:
+  primary_exit_status: 1
+  independent_exit_status: 1
+  compile_exit_status: 0
+failures:
+  - >-
+    The primary passed five provenance checks, then passed a generic symbolic
+    positive root back through population_activation_scale. Its honest API
+    domain guard rejected the expression because SymPy could not prove the
+    unsimplified root positive from a merely symbolic V>0 declaration.
+  - >-
+    The independent route passed direct root substitution, then compared two
+    algebraically equal derivative forms with structural equality; the
+    unfactored derivative did not compare equal before simplification.
+diagnosis:
+  - Both failures are verifier representation defects; neither changes the threshold formula or source adjudication.
+  - The canonical threshold API itself returned the expected root before the failed round trip.
+  - Exact substitution and derivative equality should be checked after algebraic simplification, without weakening any domain or tolerance.
+next_route: >-
+  Substitute the returned root directly into the declared exact polynomial,
+  and compare the independently differentiated polynomial after simplification;
+  then rerun both complete verifiers.
+debt:
+  - rerun every primary and independent exact check after the representation repair

@@ -1,0 +1,39 @@
+campaign: P101
+attempt: 5
+route: repaired_exact_oracles_dependency_replay_and_direct_consumer_audit
+status: targeted_scientific_evidence_passed_records_and_terminal_gate_pending
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P101-bd3-ignition-threshold-audit/reviews/independent_threshold_review.py
+  - .venv/bin/python -m pytest -q tests/test_coherence_gates.py tests/test_radial_energy.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P099-bd1-capillary-constitutive-map/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+  - /home/dan/substrate-framework/.venv/bin/python barrier_scaling.py from /home/dan/substrate/engineering
+  - /home/dan/substrate-framework/.venv/bin/python nucleation_efficiency_model.py from /home/dan/substrate/engineering
+  - /home/dan/substrate-framework/.venv/bin/python pipeline.py from /home/dan/substrate/engineering/dbd
+  - /home/dan/substrate-framework/.venv/bin/python verify.py from /home/dan/substrate/engineering/dbd
+results:
+  primary: ALL 50 CHECKS PASS [P101]
+  independent: ALL 16 CHECKS PASS [P101-INDEPENDENT]
+  focused_tests: 42 passed in 2.68s
+  P086_independent: ALL 12 CHECKS PASS [P086-INDEPENDENT]
+  P099_primary: ALL 41 CHECKS PASS [C-RG-002]
+  P006_primary: P006 ALL 28 CHECKS PASS
+  barrier_scaling: ALL 16 CHECKS PASS
+  nucleation_efficiency_model: self_checks_pass_exit_0
+  dbd_pipeline: ALL 16 CHECKS PASS
+  dbd_master: ALL 49 CHECKS PASS
+scientific_result:
+  - BD3's endpoint thresholds and barrier are exact composition of C-COH-001 and C-RG-002, not a new claim.
+  - The endpoint threshold observation matrix has rank one and five null directions after theta is retained.
+  - Common E/theta rescaling, subunit threshold ordering, integer ceilings, exact elasticities, and the one-third source guard boundary pass independent derivations.
+  - No accepted hbar-frequency population map, isotope-threshold law, k-omega relation, preparation dynamics, kinetic crossing, or event channel exists.
+  - Direct consumers execute after the separate compatibility repair but remain noncanonical supplied models.
+next_route: >-
+  Materialize the terminal check, dependency, candidate, consumer, review, and
+  disposition records; regenerate the queue; run one integrated adjudication
+  boundary; archive P101 and continue to BD4.
+debt:
+  - finalize durable adjudication records and qualified BD3 disposition
+  - run the single integrated workflow boundary and close record-sensitive checks

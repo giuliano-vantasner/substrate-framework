@@ -1,0 +1,39 @@
+source_unit: BD3
+literal_check_calls: 16
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, math, sympy]
+accepted_framework_imports: []
+declared_equations:
+  population_scale: Theta=theta*(N*(1-V)+N**2*V)
+  coherent_continuous_threshold: N_coh=sqrt(E/theta)
+  incoherent_continuous_threshold: N_inc=E/theta
+  source_per_breather_identification: theta=hbar*omega_b
+  conditional_barrier: E=2*pi*T**2/(g*A**2*k**2*l_m)
+what_the_checks_cover:
+  - duplicate coherent and incoherent endpoint roots and their square relation
+  - the ratio identity with an ordering condition only in the check label
+  - a constructed hbar-frequency assignment and a symbol-presence probe
+  - three derivative signs sampled at one positive parameter point
+  - four exact comparisons using inserted E=2 eV and theta=0.05 eV
+  - a deliberately wrong incoherent N-squared boolean compared with the declared linear endpoint
+  - the E/theta=1 endpoint equality
+missing_oracles_repaired_by_P101:
+  - the general-V positive root and direct substitution
+  - the complete E/theta greater-than, equal-to, and less-than one ordering split
+  - exact chain-rule elasticities for every barrier constituent and theta
+  - an explicit minimum-positive-integer ceiling convention and subunit-root limit
+  - common-scale covariance and independent-scale mutations
+  - endpoint rank, nullspace, arbitrary-target, and inherited barrier identifiability
+  - the exact inverse-coherence guard boundary
+  - accepted-claim collision and hbar-frequency provenance audits
+  - separation of algebraic crossing from state preparation, kinetics, and an event
+unsupported_source_interpretations:
+  - hbar times a physical or normalized breather frequency is the energy of one member of the declared population
+  - a classical breather has been quantized or assigned a population Hamiltonian
+  - symbol dependence on omega_b derives a material or isotope threshold shift
+  - the drive wavenumber is proportional to the breather frequency
+  - a continuous population coordinate is already a positive-integer count
+  - a scale comparison proves or excludes ignition, escape, breakdown, nucleation, a nuclear reaction, or deposited energy
+  - inserted or consumer-derived scales constitute an over-determined absolute prediction
+audit_verdict: qualified

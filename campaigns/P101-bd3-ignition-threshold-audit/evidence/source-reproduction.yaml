@@ -1,0 +1,28 @@
+source_unit: BD3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
+sha256: 8a8f2138c548d3ed90785fc3ea82302d39d71d4832cb3761f429938d9b94b950
+git_blob: e3064ae21212a760fccb93fd0c054f1789b269eb
+size_bytes: 9762
+source_worktree_state: clean_relative_to_pinned_commit
+compatibility_overlay_relation: unaffected
+command: >-
+  /home/dan/substrate-framework/.venv/bin/python
+  merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
+working_directory: /home/dan/substrate
+exit_status: 0
+elapsed_wall_seconds: 0.39
+maximum_resident_kib: 52388
+terminal_tally: ALL 16 CHECKS PASS
+literal_check_calls: 16
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, math, sympy]
+numpy_imported: false
+native_compatibility_repair_needed: false
+scientific_verdict: >-
+  Reproduction establishes only that the sixteen source predicates execute.
+  Exact threshold and barrier identities survive conditionally, while
+  hbar-frequency, isotope, k-omega, physical ignition, and absolute-scale
+  readings require separate adjudication.

@@ -1,0 +1,77 @@
+source_unit: BD3
+checks:
+  - line: 55
+    predicate: fully coherent continuous crossing is sqrt(E/theta)
+    verdict: accepted_duplicate
+    maps_to: [C-COH-001]
+  - line: 59
+    predicate: incoherent continuous crossing is E/theta
+    verdict: accepted_duplicate
+    maps_to: [C-COH-001]
+  - line: 61
+    predicate: N_coh=sqrt(N_inc)
+    verdict: accepted_duplicate
+    maps_to: [C-COH-001]
+  - line: 65
+    predicate: N_coh/N_inc=sqrt(theta/E) and is below one for E>theta
+    verdict: qualified_weak_oracle
+    qualification: The identity is duplicate; the source condition checks no inequality. Exact ordering reverses for E/theta<1.
+    maps_to: [C-COH-001]
+  - line: 74
+    predicate: theta is identified with hbar*omega_b
+    verdict: rejected_constructed_tautology
+    qualification: The source defines a new expression and tests its assignment. No accepted state, quantization, Hamiltonian, or population-energy map identifies C-COH-001's free theta.
+    maps_to: []
+  - line: 78
+    predicate: omega_b symbol presence derives an isotope-shifted threshold
+    verdict: rejected_symbol_presence
+    qualification: Symbol dependence is not a material or isotope law; MC3's qualified frequency ratios do not supply the missing population-energy map.
+    maps_to: []
+  - line: 92
+    predicate: loading amplitude lowers the coherent threshold
+    verdict: accepted_conditional_with_weak_source_oracle
+    qualification: The exact elasticity is -1 under C-RG-002 with independent fixed theta; the source samples one point and the ignition label is unsupported.
+    maps_to: [C-COH-001, C-RG-002]
+  - line: 94
+    predicate: loading amplitude lowers the incoherent threshold
+    verdict: accepted_conditional_with_weak_source_oracle
+    qualification: The exact elasticity is -2 under C-RG-002 with independent fixed theta; the source samples one point.
+    maps_to: [C-COH-001, C-RG-002]
+  - line: 97
+    predicate: wavenumber lowers the coherent threshold and is higher drive frequency
+    verdict: qualified
+    qualification: The fixed-theta wavenumber elasticity is -1. No accepted k-omega map licenses the frequency reading.
+    maps_to: [C-COH-001, C-RG-002]
+  - line: 111
+    predicate: inserted E/theta=40 gives N_coh=sqrt(40)<N_inc=40
+    verdict: duplicate_numeric_regression
+    maps_to: [C-COH-001]
+  - line: 116
+    predicate: N=5 at V=1 is below the inserted barrier
+    verdict: accepted_conditional_algebra_only
+    qualification: The inequality is exact for supplied values but proves no no-ignition event.
+    maps_to: [C-COH-001]
+  - line: 119
+    predicate: N=5 at V=0 equals 0.25 eV and is below the inserted barrier
+    verdict: accepted_conditional_algebra_only
+    qualification: The inequality is exact for supplied values but proves no coherence dynamics or event outcome.
+    maps_to: [C-COH-001]
+  - line: 124
+    predicate: N=10 crosses only at the coherent endpoint for inserted values
+    verdict: accepted_conditional_algebra_only
+    qualification: P101 derives the exact V=1/3 boundary for this example; crossing the declared scale is not ignition.
+    maps_to: [C-COH-001]
+  - line: 134
+    predicate: a deliberately substituted N-squared incoherent law disagrees with the declared V=0 law
+    verdict: accepted_wrong_convention_probe
+    qualification: The probe is mutation sensitive but calls its own deliberately true wrong-law boolean false physics without adding a physical oracle.
+    maps_to: [C-COH-001]
+  - line: 138
+    predicate: honest V=0 N=10 remains below the inserted barrier
+    verdict: duplicate_numeric_regression
+    maps_to: [C-COH-001]
+  - line: 142
+    predicate: E=theta gives both continuous endpoint roots one
+    verdict: accepted_duplicate
+    maps_to: [C-COH-001]
+terminal_verdict: qualified

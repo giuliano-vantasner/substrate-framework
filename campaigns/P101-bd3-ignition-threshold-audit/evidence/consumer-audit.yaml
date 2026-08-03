@@ -1,0 +1,52 @@
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+core_executable_consumer:
+  path: engineering/barrier_scaling.py
+  sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+  git_blob: 2650b4ed068f673c33094be06734db1f04d1f466
+  replay: {exit_status: 0, elapsed_wall_seconds: 0.01, maximum_resident_kib: 9852, terminal_tally: 'ALL 16 CHECKS PASS'}
+  verdict: duplicate_threshold_consumer_with_unsupported_hbar_map_and_refuted_BD2_optimum
+engineering_consumers:
+  - path: engineering/nucleation_efficiency_model.py
+    pinned_sha256: bad798b39d850ecf92a97e25bfb0341ef7ae80b036c26a88037efdd618d8d3b8
+    git_blob: 208382dea889a387d64044e783257491bfb5c132
+    compatibility_overlay_sha256: c1838aa188672b4bfa399b106d6dbf5e5a693c07d5b033ee453db7326a0de602
+    replay: {exit_status: 0, elapsed_wall_seconds: 0.69, maximum_resident_kib: 80032, terminal_tally: self_checks_passed}
+    verdict: inserted_scale_heuristic_event_and_disputed_payload_consumer
+  - path: engineering/dbd/commensurate.py
+    sha256: 6f85aafcb330af6619aa0f98fed36212c573c0e9831ee76b7628143992eeff4f
+    git_blob: 434196f47df726af45358aa1aecc6e734dbcfc91
+    verdict: measured_period_and_speed_frequency_map_that_multiplies_by_hbar_but_does_not_derive_population_state_identity
+  - path: engineering/dbd/pipeline.py
+    pinned_sha256: 5354b39d3bc25439a7f6e83c175474358b3104b2f844cc6aa3a2ee2a84439669
+    git_blob: 5455f84dee58b559da7b3052da8b5e3d88b3473a
+    compatibility_overlay_sha256: 3112e17610b78605e25f4d584eea9700ed3b77b45d48140e20c022fba42840d9
+    replay: {exit_status: 0, elapsed_wall_seconds: 0.19, maximum_resident_kib: 30652, terminal_tally: 'ALL 16 CHECKS PASS', default_crosses: false}
+    verdict: supplied_event_bonus_yield_and_power_pipeline_not_accepted_scientific_consumer
+  - path: engineering/dbd/verify.py
+    sha256: 63cc5e0e95d89dfd220f109c3b6b08ef6f23cdadae41fd8989ba34661c7e4a4b
+    git_blob: 48da6563f11a32457af441f215a99ab617858faa
+    replay: {exit_status: 0, elapsed_wall_seconds: 0.65, maximum_resident_kib: 41404, terminal_tally: 'ALL 49 CHECKS PASS'}
+    verdict: regression_for_supplied_noncanonical_DBD_model_not_population_or_event_oracle
+pending_bridge_consumers:
+  - {path: merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py, sha256: 2f590473719f614f4ca641ad9443d6b4271429aba27337b94d5d064cc70c9929, git_blob: 69c5b5bf918daf044562c55b386e944ddff44b34, prior_replay: 'ALL 14 CHECKS PASS', verdict: pending_inertia_unit_not_BD3_dependency}
+  - {path: merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py, sha256: fd1fd9e54990bbac4a60bc669a37f1c15a89ebd2595203aef7d2bddb88b99cf9, git_blob: 6cfb444f3ab0bda8b456ac188f00a7faf904ccb8, prior_replay: 'ALL 13 CHECKS PASS', verdict: pending_scaled_Langevin_unit_reuses_inserted_BD3_values_and_needs_own_audit}
+  - {path: merged-framework/bridges/phase-31/bridge_CM2_coherence_rate_law.py, sha256: c75fee880740765d3ef3e32634bf05360fd9789e46bd579fd07af60d29a79fa2, git_blob: 10c77e6db3aab923d4f4c6d6945768f954d5eba7, prior_replay: 'ALL 21 CHECKS PASS', verdict: pending_distinct_coherence_window_and_rate_composition}
+  - {path: merged-framework/bridges/phase-31/bridge_CM4_discriminating_bar.py, sha256: 984b5a1495c0d17095b127cc79eceb9625592051b0e5ab099bc66683b418c019, git_blob: fe6df257920f43b309fdc002af6ac1108ab1d55c, prior_replay: 'ALL 10 CHECKS PASS', verdict: pending_constant_prefactor_rate_derivative_not_BD3_threshold}
+accepted_framework_consumers:
+  - src/substrate_framework/coherence_gates.py
+  - src/substrate_framework/radial_energy.py
+  - tests/test_coherence_gates.py
+  - tests/test_radial_energy.py
+  - campaigns/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+  - campaigns/P099-bd1-capillary-constitutive-map/verify.py
+compatibility_note: >-
+  The current-NumPy overlay replaces removed integration aliases and lazily
+  guards optional plotting. It changes no BD3 formula. Version compatibility is
+  repaired before consumer adjudication and is not counted as scientific
+  evidence.
+consumer_boundary: >-
+  BD3 maps only the accepted conditional threshold and barrier formulas. No
+  consumer promotes a population Hamiltonian, hbar-frequency state identity,
+  coherence preparation, kinetic event, isotope law, DBD/nuclear channel,
+  deposition map, payload, or power.
+verdict: accepted_paths_pass_noncanonical_consumers_execute_without_broadening_authority

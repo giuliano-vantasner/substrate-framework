@@ -1,0 +1,57 @@
+campaign: P101
+title: BD3 conditional coherence-population threshold composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [BD3]
+base_release: v0.85.0
+release_after_adjudication: v0.85.0
+adjudicated_at: '2026-08-03T14:00:00Z'
+selected_candidates:
+  - {id: B, reason: The general and endpoint threshold algebra is already C-COH-001.}
+  - {id: C, reason: Exact composition with C-RG-002 yields a complete nonpromoted sensitivity ledger.}
+  - {id: E, reason: A separately declared integer ceiling exposes source population semantics.}
+  - {id: F, reason: Rescaling, rank, nullspace, and arbitrary-target families establish non-identifiability.}
+  - {id: G, reason: Algebraic guards survive while event interpretations fail dependency closure.}
+  - {id: H, reason: The complete E/theta regime split blocks universal coherent lowering.}
+  - {id: I, reason: Direct consumers execute but transfer no accepted state or event authority.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: D, decision: rejected_absent_state_and_unit_map}
+claims: []
+reviewed_existing:
+  - {id: C-COH-001, decision: unchanged_general_threshold_and_interpretation_ceiling}
+  - {id: C-RG-001, decision: unchanged_generic_capillary_barrier}
+  - {id: C-RG-002, decision: unchanged_conditional_constitutive_map}
+evidence:
+  source_route: attempts/0001/result.yaml
+  verifier_representation_failures:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+  targeted_scientific_route: attempts/0005/result.yaml
+  integrated_adjudication_gate: attempts/0006/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_threshold_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: memory/vantasner/decisions/BD3-qualified-review.md
+source_disposition:
+  BD3: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P101-bd3-ignition-threshold-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P101-bd3-ignition-threshold-audit/reviews/independent_threshold_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P086-ny3-coherence-nucleation-audit/reviews/independent_coherence_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P099-bd1-capillary-constitutive-map/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+  - .venv/bin/python -m pytest -q tests/test_coherence_gates.py tests/test_radial_energy.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted
