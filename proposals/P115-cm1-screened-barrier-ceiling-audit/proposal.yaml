@@ -1,0 +1,60 @@
+id: P115
+base_release: v0.94.0
+base_commit: f5b08ef102b4dea7f7db9ef51bd9bf7e882d8816
+scientific_base_commit: 6c4d1c6d1e7e84a1a093c0581e9b39bf9307590b
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CM1]
+question: >-
+  Derive and independently verify the exact dimensionless bare and shifted
+  inverse-square-root barrier factors, their enhancement composition,
+  monotonicity, endpoint limits, sharp range, energy-unit covariance,
+  screening-ceiling direction, sensitivities, and stable evaluation; then
+  adjudicate CM1 without confusing a conditional penetrability factor with a
+  cross section, flux, physical rate, yield, reaction channel, material
+  screening realization, coherent-channel comparison, or observation.
+invariants:
+  - Positive collision energy E, positive barrier scale G, and nonnegative shift U carry one common energy unit; only their ratios enter the exponent.
+  - The shifted factor P(E,U,G)=exp(-sqrt(G/(E+U))) is dimensionless, lies strictly between zero and one at finite positive inputs, and is increasing in E and U and decreasing in G.
+  - The enhancement F=P(E,U,G)/P(E,0,G) is exact where E>0, equals one at U=0, exceeds one at U>0, and must be composed with the bare factor before taking the E-to-zero limit.
+  - At fixed U>0, P tends to exp(-sqrt(G/U)) as E tends to zero; this is finite and nonzero, whereas the bare factor tends to zero. Both tend to one as E tends to infinity.
+  - If 0<=U<=U_max is independently justified, monotonicity supplies P(E,U,G)<=P(E,U_max,G); the algebra does not derive U_max or prove the bound applies to a material.
+  - A dimensionless penetrability or enhancement is not a rate or yield. A physical rate needs separately accepted flux, cross section or S factor, normalization, state, and parameter map; a zero prefactor is a decisive countermodel.
+  - CM2 through CM7 are pending forward source narratives and supply no premise. Source cycles create provenance only.
+  - No comparator or selected material value may choose the theorem, bound direction, claim scope, or physical interpretation.
+allowed_imports:
+  - elementary exact exponentials, square roots, derivatives, inequalities, limits, series, and dimensional analysis
+  - positive real energy variables and exact unit-covariance transformations
+  - source-baseline engineering/screening/screening.py as hash-pinned noncanonical candidate provenance only after freeze
+  - CM1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+  - SymPy exact simplification, derivatives, limits, series, and load-bearing mutations
+candidates:
+  - id: A
+    description: Reproduce CM1 literally and classify every symbolic, numeric, guard, dependency, material, and physical predicate.
+  - id: B
+    description: Derive the conditional shifted inverse-square-root barrier theorem from positive energy variables with explicit dimension and range premises.
+  - id: C
+    description: Derive the exact enhancement ratio and stable product identity, including the singular separate-factor and finite composed low-energy limits.
+  - id: D
+    description: Prove the conditional U_max upper-bound direction and test zero-prefactor, arbitrary-prefactor, alternative-shift, and energy-uncertainty countermodels.
+  - id: E
+    description: Independently rederive the identities, derivatives, limits, sensitivities, and scale covariance without importing the new canonical implementation.
+  - id: F
+    description: Audit all source inputs, forward cycles, five direct consumers, nonduplication, and the distinction between penetrability, enhancement, cross section, rate, and yield.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit energy, unit, sign, normalization, and domain conventions
+  - exact composition, derivative signs, range, endpoint limits, and scale covariance
+  - sharp upper-bound direction conditional on an independently justified U_max
+  - sensitivity to exponent sign, square-root power, energy shift, barrier scale, and omitted prefactors
+  - stable low-energy evaluation without multiplying numerical zero by overflow
+  - strict separation of dimensionless barrier algebra from physical rate, yield, material, and channel claims
+  - assumption economy, reusable API fit, nonduplication, and complete predicate and consumer review
+claims_proposed: [C-SCR-001]
+comparators_blinded_until: >-
+  Queue metadata and a prior repository search exposed the displayed bare,
+  enhancement, and shifted-factor formulas plus parts of the symbolic check
+  surface. P115 records that unavoidable exposure and freezes the stronger
+  dimension, bound, limit, prefactor, countermodel, rate-ceiling, dependency,
+  consumer, and nonduplication gates before executing CM1, inspecting its
+  thirteen predicate bodies as a whole, or reading numeric material values.
+status: draft
