@@ -1,0 +1,55 @@
+campaign: P107
+title: E4 BPS bound saturation zero-binding and near-BPS audit
+source_baseline: substrate@6d1f4e0
+source_units: [E4]
+base_release: v0.90.0
+release_after_adjudication: v0.91.0
+adjudicated_at: '2026-08-07T18:00:00Z'
+selected_candidates:
+  - {id: B, reason: Exact two-orientation square completion exposes the normalized bound and equality equation.}
+  - {id: C, reason: Independent AM-GM triangle and target-measure derivation confirms the normalization.}
+  - {id: D, reason: Sector infimum and actual-attainment premises give the exact zero-difference theorem.}
+  - {id: E, reason: Zero-potential and sector-slack counterexamples enforce the existence and attainment ceilings.}
+  - {id: F, reason: Controlled coefficient and remainder algebra preserves the valid near-BPS asymptotic surface.}
+  - {id: G, reason: Exact coupling-convention conversion prevents the later mixed-convention pi-squared error.}
+  - {id: H, reason: Nonduplication finds three reusable theorem surfaces with multiple pending consumers.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims:
+  - {id: C-BPS-001, decision: accepted_symbolic_verified}
+  - {id: C-BPS-002, decision: accepted_symbolic_verified}
+  - {id: C-BPS-003, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-RDIFF-001, decision: unchanged_exact_signed_difference_and_physical_ceiling}
+  - {id: C-RDIFF-002, decision: unchanged_conditional_numeric_coordinate}
+  - {id: C-DIM-002, decision: unchanged_dimensional_selection_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  verifier_representation_failure: attempts/0002/result.yaml
+  focused_exact_gate: attempts/0003/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_bps_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_reviews:
+    - memory/vantasner/decisions/C-BPS-001-review.md
+    - memory/vantasner/decisions/C-BPS-002-review.md
+    - memory/vantasner/decisions/C-BPS-003-review.md
+source_disposition:
+  E4: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P107-e4-bps-zero-binding-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+  - .venv/bin/python -m pytest -q tests/test_bps_energy.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

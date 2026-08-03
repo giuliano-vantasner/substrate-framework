@@ -1,0 +1,24 @@
+campaign: P107
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+  sha256: f1815eefc73e577734992a3147d9ec6cea2b50fad8532e9f436e1afb465dfea7
+frozen_inputs:
+  proposal_snapshot: proposals/P107-e4-bps-zero-binding-audit/evidence/frozen-proposal.yaml
+  proposal_snapshot_sha256: 57f050a8465716693667de333726986e7385b55c71e33b416934d3ecbe7706cd
+implementation:
+  module: src/substrate_framework/bps_energy.py
+  module_sha256: 09e3bb41b98ba21f2909117ab1361020dfc7f12ef2722e9f620a65336bbe7d13
+  tests: tests/test_bps_energy.py
+  tests_sha256: b52db01583cf351891074cd656ac51414bdb13d9dac2536398c9847cb0863edb
+verification:
+  primary: proposals/P107-e4-bps-zero-binding-audit/verify.py
+  primary_sha256: 91d3bcf4be848f3157d1b65fc6e6c0f1c8b1d23207f18816394facd6df1da7f0
+  independent: proposals/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+  independent_sha256: 93477f9601c414ffc1c740684a11339400313ad263d4315e563dab55eff28852
+exact_surface:
+  target_volume: 2*pi^2
+  bound_per_absolute_degree: 2*lambda*mu*pi^2*W in convention B
+  convention_map: lambda_A=pi^2*lambda_B
+  standard_potential_average: 32*sqrt(2)/(15*pi)
+status: promotion_candidate

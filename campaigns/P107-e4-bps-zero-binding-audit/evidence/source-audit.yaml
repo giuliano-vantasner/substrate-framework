@@ -1,0 +1,35 @@
+campaign: P107
+source_unit: E4
+static_surface:
+  imports: [sympy]
+  literal_checks: 5
+  local_check_helper: true
+  assert_statements: 1
+  dynamic_terminal_tally: true
+  numpy_surface: none
+declared_energy:
+  density: lambda^2*pi^4*b0^2 + mu^2*V
+  required_density_normalization: integral b0 d^3x = signed integer B
+  target_volume: 2*pi^2
+  target_average: W=(1/(2*pi^2))*integral_S3 sqrt(V) Omega
+  bound: E >= 2*lambda*mu*pi^2*abs(B)*W
+  local_equality: lambda*pi^2*b0=sign(B)*mu*sqrt(V) almost everywhere
+surviving_surface:
+  - Exact two-branch pointwise square completion.
+  - Conditional oriented degree pairing integral b0*sqrt(V)=B*W under the standard pullback theorem and explicit normalized density.
+  - Exact lower bound and necessary-and-sufficient local equality equation.
+  - Conditional linear sector energy and zero signed difference when the bound is actually attained in every compared positive-degree sector.
+  - Controlled near-BPS signed-difference algebra with explicit coefficient and remainder.
+source_weaknesses:
+  - All source symbols, including b0 and B, are positive, so the negative orientation and absolute-degree conversion are not checked.
+  - The prose calls b0 d^3x the target pullback while the formula needs the pullback divided by 2*pi^2; the executable never audits this normalization.
+  - Substituting the BPS equation into the local square neither proves the degree integral nor existence of a solution.
+  - The source assumes saturation for every B and hard-codes the resulting linear mass before checking zero binding.
+  - A lower bound linear in degree leaves arbitrary nonnegative sector slacks and does not imply a zero difference without attainment.
+  - The L2+L4 guard uses rounded superseded E2 values and cannot make the BPS bound for a different declared action apply to the L2+L4 functional.
+  - The near-BPS ansatz has no remainder, its symbolic derivative can cancel, and it derives no sign or numerical coefficient.
+  - For the explicit standard V=1-cos(chi) BPS compacton, P107 independently derives a logarithmically divergent naive L2 first-order correction, so E4's advertised correction is not controlled in that allowed case.
+  - No accepted physical action, coupling values, degree-to-state map, reaction, empirical comparator, or yield interpretation closes the headline.
+compatibility_verdict: >-
+  E4 imports no NumPy and performs no sampled integration. There is no np.trapz
+  compatibility event and no alias-only replay is needed.

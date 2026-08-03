@@ -1,0 +1,54 @@
+campaign: P107
+claims:
+  C-BPS-001:
+    accepted_dependencies: []
+    declared_inputs:
+      - oriented unit target S3 with integral Omega=2*pi^2
+      - sufficiently regular finite-energy map with normalized pullback density and nonzero signed degree
+      - positive lambda and mu
+      - nonnegative dimensionless target potential with integrable square root
+      - declared sextic-plus-potential energy
+    mathematical_imports:
+      - standard oriented degree and pullback integration theorem
+      - nonnegativity of a real square or equivalent AM-GM and triangle inequalities
+    excluded:
+      - existence or attainment in any degree sector
+      - physical action couplings baryon state nucleus reaction or empirical scale
+  C-BPS-002:
+    accepted_dependencies: [C-BPS-001, C-RDIFF-001]
+    declared_inputs:
+      - degree-sector energy defined as an infimum of the C-BPS-001 functional
+      - actual bound attainment in every compared positive-degree sector
+      - positive base degree A and multiplicity n
+    excluded:
+      - inference of attainment from bound linearity
+      - degree-to-particle or nuclear-state interpretation
+  C-BPS-003:
+    accepted_dependencies: [C-BPS-002, C-RDIFF-001]
+    declared_inputs:
+      - dimensionless epsilon approaching zero
+      - fixed-degree correction coefficients
+      - explicit remainders that are little-o(epsilon) or O(epsilon^2) for the claimed order
+      - conserved positive degree final=n*base
+    excluded:
+      - a derived correction coefficient sign or numerical magnitude
+      - validity of naive L2+L4 perturbation on a nonsmooth BPS compacton
+      - interpolation monotonicity range or a physical yield coefficient
+compatibility_only:
+  C-DIM-002: >-
+    Supports the general ceiling that dimensions do not select coefficients or
+    primitives. P107 independently audits the displayed lambda and mu dimensions
+    and does not require C-DIM-002 as a derivation edge.
+  C-RDIFF-002: >-
+    Supplies a separate conditional L2+L4 numeric coordinate. It is not an
+    input to the BPS bound, attainment theorem, or asymptotic cancellation.
+missing_for_physical_interpretation:
+  - accepted physical BPS-Skyrme action and coupling values
+  - selected potential and proof of regular finite-energy saturation in each physical sector
+  - degree-to-baryon nucleus and observed-state maps
+  - controlled quantum rotational and perturbative correction ledger
+  - reaction channel empirical scale rate branching and deposition model
+closure: >-
+  All three claims close at conditional mathematical ceilings without E2, E3,
+  M1, KI, MK, MR, NY, or empirical inputs. M1 is an unrelated pending
+  Anderson-Higgs mass-matrix unit and is not imported.

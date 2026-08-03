@@ -5696,3 +5696,152 @@ claims:
     accepted_in: v0.90.0
     challenges: []
     supersedes: []
+  - id: C-BPS-001
+    statement: >-
+      Let X be a closed connected oriented three-manifold with volume form
+      dvol, and let the target be the oriented unit round S^3 with volume form
+      Omega normalized by integral_{S^3} Omega=2*pi^2. For a sufficiently
+      regular map U:X->S^3 of nonzero signed degree B, define the normalized
+      pullback density by U*Omega/(2*pi^2)=B0*dvol. Let lambda and mu be
+      positive, let V:S^3->[0,infinity) have integrable square root, and set
+      W=(1/(2*pi^2))*integral_{S^3} sqrt(V)*Omega. Then the declared energy
+      E[U]=integral_X[(lambda*pi^2*B0)^2+mu^2*V(U)]dvol has the exact
+      decomposition
+      E=integral_X(lambda*pi^2*B0-sign(B)*mu*sqrt(V(U)))^2*dvol
+      +2*lambda*mu*pi^2*abs(B)*W and therefore obeys
+      E>=2*lambda*mu*pi^2*abs(B)*W. Equality holds if and only if the displayed
+      square vanishes almost everywhere. This theorem does not establish that
+      an equality configuration exists in any degree sector, select a
+      potential or coupling, identify degree with a physical baryon or
+      nucleus, or derive a mass, reaction, binding, or yield.
+    provenance: campaigns/P107-e4-bps-zero-binding-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P107-e4-bps-zero-binding-audit/verify.py
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0001/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0002/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0004/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0005/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/source-reproduction.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/source-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/check-adjudication.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/dependency-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/consumer-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/candidate-comparison.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/primary-provenance.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-BPS-001-review.md
+      - tests/test_bps_energy.py
+    assumptions:
+      - X and S^3 satisfy the stated compactness orientation and regularity hypotheses, and U is regular enough for the standard degree and pullback integration theorem and for every displayed integral.
+      - B0 is the normalized density whose spatial integral is the signed integer degree; using the unnormalized target pullback changes the formula by 2*pi^2.
+      - V is nonnegative and dimensionless, sqrt(V) is target-integrable, and the two spatial energy terms are integrable.
+      - Lambda and mu are positive and use the convention with sextic density lambda^2*pi^4*B0^2. In the convention lambda_A^2*B0^2, lambda_A=pi^2*lambda and the bound coefficient is 2*lambda_A*mu*W.
+      - If physical coordinates have length dimension, B0 has L^-3, lambda has E^(1/2)*L^(3/2), mu has E^(1/2)*L^(-3/2), and lambda*mu has energy dimension.
+      - The theorem imports the standard oriented degree identity integral_X B0*f(U)dvol=B*(1/(2*pi^2))*integral_{S^3} f*Omega. It does not prove existence or attainment of the equality equation.
+    comparators:
+      - E4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; its formula was exposed before P107, while both orientations, normalization, independent AM-GM route, counterexamples, and convention mutations were frozen before execution
+    accepted_in: v0.91.0
+    challenges: []
+    supersedes: []
+  - id: C-BPS-002
+    statement: >-
+      Under C-BPS-001, define the energy M(B) of a nonzero degree sector as
+      the infimum of the declared energy over a specified nonempty admissible
+      class, and write K=2*lambda*mu*pi^2*W. Then M(B)>=K*abs(B). If an
+      admissible configuration attains the C-BPS-001 equality in a specified
+      sector, M(B)=K*abs(B) in that sector. Hence, for positive integers A and
+      n with attainment in sectors A and n*A,
+      n*M(A)-M(n*A)=0. If sectors 1 and B>0 attain, the declared binding
+      B*M(1)-M(B) is zero. Linearity of the lower bound alone does not imply
+      these conclusions: writing M(B)=K*abs(B)+s_B with unknown nonnegative
+      sector slacks leaves n*M(A)-M(n*A)=n*s_A-s_(n*A), which can have either
+      sign. This is a conditional attainment theorem, not an existence or
+      physical zero-binding claim.
+    provenance: campaigns/P107-e4-bps-zero-binding-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-BPS-001
+      - C-RDIFF-001
+    evidence:
+      - campaigns/P107-e4-bps-zero-binding-audit/verify.py
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0001/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0004/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0005/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/check-adjudication.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/dependency-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/consumer-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/candidate-comparison.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-BPS-002-review.md
+      - tests/test_bps_energy.py
+    assumptions:
+      - All C-BPS-001 premises hold and each degree sector uses an explicitly specified nonempty admissible class for the same declared energy and conventions.
+      - The infimum exists as an extended-real quantity, and every sector asserted to be linear contains an admissible configuration that actually attains the C-BPS-001 equality.
+      - The zero signed difference uses positive A and n and the final degree n*A. The binding statement additionally requires attainment in degree one and degree B.
+      - Sector slacks are independent nonnegative quantities unless a separate theorem relates them; a linear lower bound cannot silently set them to zero.
+      - Map degree remains a mathematical sector label. A baryon, nucleus, particle mass, quantum correction, reaction, and observed binding require separately accepted maps and dynamics.
+    comparators:
+      - E4's hard-coded M(B)=K*B regression; P107 replaces its universal-saturation premise with actual sectorwise attainment and exact slack counterexamples
+    accepted_in: v0.91.0
+    challenges: []
+    supersedes: []
+  - id: C-BPS-003
+    statement: >-
+      Let A and n be positive integers and epsilon a positive dimensionless
+      parameter tending to zero. Suppose the same positive-degree sectors used
+      in C-BPS-002 have controlled expansions at D=A and D=n*A of the form
+      M_epsilon(D)=K*D+epsilon*Delta_D+r_D(epsilon), with finite fixed-degree
+      coefficients Delta_D. Then exactly
+      n*M_epsilon(A)-M_epsilon(n*A)
+      =epsilon*(n*Delta_A-Delta_(n*A))
+      +n*r_A(epsilon)-r_(n*A)(epsilon). If both remainders are o(epsilon),
+      this is epsilon*(n*Delta_A-Delta_(n*A))+o(epsilon); if both are
+      O(epsilon^2), the residual is O(epsilon^2). The first-order coefficient
+      may be positive, zero, or negative. This theorem does not establish that
+      a proposed deformation admits the expansion, derive the corrections or
+      their sign, provide a global interpolation, or make epsilon or a
+      physical binding coefficient numerically small.
+    provenance: campaigns/P107-e4-bps-zero-binding-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-BPS-002
+      - C-RDIFF-001
+    evidence:
+      - campaigns/P107-e4-bps-zero-binding-audit/verify.py
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0001/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0004/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/attempts/0005/result.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/source-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/check-adjudication.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/dependency-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/consumer-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/candidate-comparison.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-BPS-003-review.md
+      - tests/test_bps_energy.py
+    assumptions:
+      - C-BPS-002 supplies the common degree-linear leading coefficient K only in the relevant attained positive-degree sectors.
+      - Epsilon is dimensionless and tends to zero from above while A and n remain fixed; Delta_A and Delta_(n*A) are finite coefficients in the same energy convention.
+      - Each little-o or big-O conclusion requires the separately stated remainder control. Naming an uninterpreted correction or omitting a remainder does not establish that control.
+      - Degree balance n*A is load bearing. A different final degree leaves a nonzero leading BPS contribution.
+      - For the standard V=1-cos(chi) compacton, P107 independently finds a logarithmically divergent naive L2 first-order correction; the general conditional theorem does not validate that application.
+      - No interpolation monotonicity range coupling value physical state reaction empirical coefficient or yield follows from the asymptotic order.
+    comparators:
+      - E4's formal exact-linear epsilon ansatz and claimed O(1) physical coefficient; the algebraic cancellation survives only at the controlled conditional ceiling, while the numerical and physical inference is rejected
+    accepted_in: v0.91.0
+    challenges: []
+    supersedes: []

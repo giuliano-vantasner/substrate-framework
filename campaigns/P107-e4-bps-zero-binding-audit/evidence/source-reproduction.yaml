@@ -1,0 +1,31 @@
+campaign: P107
+source_unit: E4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+  sha256: f1815eefc73e577734992a3147d9ec6cea2b50fad8532e9f436e1afb465dfea7
+  git_blob: 279bfb747a8663577d9f040df4cb6a822503c287
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+environment:
+  interpreter: framework .venv Python
+  symbolic_library: SymPy
+  numpy_imported: false
+  sampled_quadrature: false
+  compatibility_alias_needed: false
+process:
+  exit_code: 0
+  wall_time_seconds: 0.40
+  terminal_tally: ALL 5 CHECKS PASS
+observed:
+  - E4.1 positive-branch square identity passes.
+  - E4.2 positive-branch saturation substitution passes.
+  - E4.3 hard-coded degree-linear mass returns zero binding for 2, 3, and 4.
+  - E4.4 rounded legacy L2+L4 per-degree values are nonconstant and give a positive declared difference.
+  - E4.5 an exact first-order ansatz has no epsilon-independent term for degree two.
+scientific_status: reproduction_evidence_only
+note: >-
+  The clean process exit is unaffected by NumPy API versions. The five checks
+  do not establish target normalization, negative orientation, sectorwise
+  existence or attainment, a controlled perturbative remainder, or any
+  physical coefficient or state interpretation.

@@ -1,0 +1,24 @@
+campaign: P107
+attempt: 0006
+candidate: promotion_materialization
+status: repository_lifecycle_ordering_miss_repaired
+command: >-
+  PYTHONPATH=src .venv/bin/python scripts/validate_repository.py; generate
+  migration queue, docs, and memory; rerun repository validation
+initial_failure: generated claim index is stale; run scripts/render_docs.py
+classification: generated_state_lifecycle
+diagnosis: >-
+  The accepted registry and release had changed before generated docs and
+  memory were rendered. Running the repository validator first therefore
+  reported the intended stale-artifact guard. This is not a claim, verifier,
+  or compatibility failure.
+repair: >-
+  Regenerate migration/source-claims.yaml, docs, and accepted memory, then run
+  the repository validator and generated-state checks on the materialized
+  boundary.
+repaired_result:
+  repository: WORKFLOW VALID 126 claims 126 accepted 0 proposals
+  migration: 218 units 113 pending 0 partial
+  docs_check: pass
+  memory_check: pass
+next_attempt: create the terminal in-progress record and run one integrated workflow gate

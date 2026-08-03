@@ -1,0 +1,23 @@
+campaign: P107
+attempt: 0003
+candidate: B_D_E_F
+status: focused_implementation_pass
+command: .venv/bin/python -m pytest tests/test_bps_energy.py -q
+process:
+  exit_status: 0
+  tests_passed: 13
+  wall_time_seconds: 1.41
+verified_surface:
+  - exact square completion and saturation residual for both orientations
+  - explicit 2*pi^2 target-volume normalization and signed degree pairing
+  - orientation-symmetric absolute-degree lower bound
+  - conditional attained-sector linearity without an existence inference
+  - zero-potential obstruction to saturation at nonzero degree
+  - controlled near-BPS difference with visible degree balance, linear coefficient, and remainder
+  - mutations through unbalanced degree and invalid domain inputs
+verdict: >-
+  The reusable exact API and focused tests pass after repairing only the two
+  recorded oracle representations. Independent AM-GM normalization, source
+  predicate adjudication, downstream convention audit, and claim-level review
+  remain open.
+next_attempt: run the primary mutation-sensitive exact campaign verifier and preserve any first failing obligation before repair

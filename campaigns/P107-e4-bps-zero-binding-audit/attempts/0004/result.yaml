@@ -1,0 +1,23 @@
+campaign: P107
+attempt: 0004
+candidate: B_D_E_F_G
+status: primary_exact_pass
+command: PYTHONPATH=src .venv/bin/python proposals/P107-e4-bps-zero-binding-audit/verify.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 35 CHECKS PASS [P107]
+verified_surface:
+  - hash-pinned source and frozen proposal provenance
+  - five-check source AST and absence of a NumPy compatibility surface
+  - both orientation branches and necessary-and-sufficient local equality equations
+  - explicit target-volume, signed pairing, absolute-degree, dimension, and pi-squared convention normalization
+  - zero-potential obstruction and arbitrary nonnegative sector-slack counterexamples
+  - conditional attained-sector zero difference
+  - controlled near-BPS coefficient and remainder algebra, sign freedom, uncontrolled-remainder counterexample, and degree-balance mutation
+  - exact lambda_A=pi^2*lambda_B conversion and the pi-squared error caused by mixing conventions
+verdict: >-
+  The primary exact route establishes the three proposed surfaces at their
+  premise-explicit ceilings and rejects E4's universal-existence and physical
+  smallness inferences. Independent AM-GM and target-space rederivation remain
+  required before claim review.
+next_attempt: run a fresh independent verifier that imports no P107 BPS package helpers

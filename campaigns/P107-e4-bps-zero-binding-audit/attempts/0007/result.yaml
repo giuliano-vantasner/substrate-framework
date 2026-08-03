@@ -1,0 +1,44 @@
+campaign: P107
+attempt: 0007
+candidate: terminal_promotion_gate
+status: terminal_pass
+objective: >-
+  Run the one integrated repository workflow at the unchanged P107 promotion
+  boundary, including the full test suite, memory and skill validation,
+  generated-state closure, and diff hygiene.
+commands:
+  - scripts/validate.sh
+  - git diff --check
+expected_claims: 126
+expected_queue:
+  total: 218
+  pending: 113
+  partial: 0
+  migrated: 3
+  qualified: 93
+  duplicate_evidence: 8
+  out_of_scope: 1
+scientific_replays_already_passed:
+  primary: ALL 35 CHECKS PASS [P107]
+  independent: ALL 21 CHECKS PASS [P107-INDEPENDENT]
+  focused_tests: 13 passed
+note: >-
+  The integrated gate is complete. Only record-sensitive repository,
+  generated-state, memory, and diff checks are rerun after this finalization.
+process:
+  exit_status: 0
+  accepted_claims: 126
+  migration_total: 218
+  migration_pending: 113
+  memory_files_valid: 463
+  physics_skill_valid: true
+  tests_passed: 991
+  pytest_elapsed_seconds: 88.63
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+diff_checks:
+  working_tree: pass
+  staged: pass
+verdict: >-
+  C-BPS-001 through C-BPS-003, qualified E4 disposition, release v0.91.0,
+  generated docs and memory, package implementation, claim reviews, and the
+  queue transition pass the single integrated promotion gate with no debt.

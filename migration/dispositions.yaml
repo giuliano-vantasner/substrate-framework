@@ -1437,6 +1437,43 @@ units:
       E3 executes the current `np.trapezoid` branch without a compatibility
       abort. P106 composes accepted P105 evidence and performs no new sampled
       integration; version-only alias availability affects neither claim.
+  E4:
+    disposition: qualified
+    accepted_claims:
+      - C-BPS-001
+      - C-BPS-002
+      - C-BPS-003
+    qualification: >-
+      E4's exact square completion, normalized conditional topological bound,
+      a.e. equality equation, attained-sector zero-difference algebra, and
+      controlled near-BPS signed expansion survive through C-BPS-001 through
+      C-BPS-003. P107 adds both orientations, the 2*pi^2 target normalization,
+      dimensions, the lambda_A=pi^2*lambda_B convention map, independent
+      AM-GM derivation, zero-potential and sector-slack counterexamples, and
+      explicit asymptotic remainders. The source does not prove saturation
+      existence in every degree and hard-codes linear mass before testing it.
+      Its rounded L2+L4 guard is noncanonical, and for the standard
+      V=1-cos(chi) compacton the naive L2 first-order correction diverges
+      logarithmically. No physical action, coupling values, baryon or nucleus
+      state map, quantum correction, interpolation, reaction, empirical
+      coefficient, overbinding resolution, or yield is accepted.
+    evidence:
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/source_adjudication.md
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/source-reproduction.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/source-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/check-adjudication.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/dependency-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/consumer-audit.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/evidence/candidate-comparison.yaml
+      - campaigns/P107-e4-bps-zero-binding-audit/verify.py
+      - campaigns/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+      - memory/vantasner/decisions/C-BPS-001-review.md
+      - memory/vantasner/decisions/C-BPS-002-review.md
+      - memory/vantasner/decisions/C-BPS-003-review.md
+    note: >-
+      E4 uses no NumPy or sampled quadrature, so there is no np.trapz
+      compatibility event. Exact P107 work uses symbolic integration and
+      algebra only.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

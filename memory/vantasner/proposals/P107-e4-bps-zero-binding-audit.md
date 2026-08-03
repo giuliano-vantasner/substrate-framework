@@ -2,7 +2,7 @@
 description: Audit E4's BPS bound, saturation, zero binding, and near-BPS interpretation
 author: vantasner
 created: '2026-08-03T16:16:02Z'
-updated: '2026-08-03T16:16:02Z'
+updated: '2026-08-07T18:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - topological-degree
 - migration-E4
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P107 E4 BPS Zero-Binding Audit
 
@@ -224,3 +224,25 @@ not sufficient by itself.
 This campaign cross-references E2 through E5, M1, KI1 through KI5, MK1 through
 MK6, MR1 through MR6, C-DIM-002, C-RDIFF-001, C-RDIFF-002, P105, P106, and the
 framework-migration effort.
+
+## Terminal Adjudication
+
+P107 promotes C-BPS-001 as the exact two-orientation conditional topological
+bound with explicit target normalization and equality equation. It promotes
+C-BPS-002 as the sector-attainment theorem: zero signed binding follows only
+when the compared degree-sector infima actually attain that bound. It promotes
+C-BPS-003 as the controlled near-BPS difference expansion with its coefficient
+and remainder visible.
+
+The primary route passes 35 checks and the independent AM-GM route passes 21.
+The latter rederives the standard-potential compacton and shows its naive L2
+first-order correction diverges logarithmically, so E4's physical-smallness
+application is not controlled. Exact convention audit gives
+`lambda_A=pi^2*lambda_B`; E4's bound is correct in convention B, while later
+mixed use creates one spurious `pi^2`.
+
+E4 is qualified. Its square and conditional algebra survive, but universal
+saturation, an accepted physical action or state map, numerical couplings,
+interpolation, reaction, overbinding resolution, empirical coefficient, and
+yield do not. The P107 debt ledger is empty and the corpus migration continues
+with E5.

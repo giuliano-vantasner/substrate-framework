@@ -1,0 +1,27 @@
+campaign: P107
+attempt: 0005
+candidate: C_D_E_F_G
+status: independent_exact_pass
+command: PYTHONPATH=src .venv/bin/python proposals/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 21 CHECKS PASS [P107-INDEPENDENT]
+independence:
+  package_bps_helpers_imported: false
+  reused_helper: substrate_framework.verification.CheckLedger only
+verified_surface:
+  - unit S3 volume and exact standard-potential square-root average from hyperspherical measure
+  - both-sign pointwise AM-GM gaps and equality magnitude
+  - oriented identity and orientation-reversal pairing normalization
+  - absolute-degree bound from triangle inequality and the declared degree theorem
+  - zero-potential universal-saturation counterexample
+  - explicit standard-potential compacton BPS balance and logarithmically divergent naive L2 first-order correction with finite L4 edge factor
+  - independent sector-slack and conditional-attainment ledgers
+  - fresh controlled near-BPS expansion, cancellation option, and uncontrolled-remainder counterexample
+  - independently solved lambda_A=pi^2*lambda_B convention conversion
+verdict: >-
+  The independent route agrees with the primary bound, attainment ceiling,
+  asymptotic contract, and convention map. It additionally shows that E4's
+  advertised L2+L4 first-order correction is not controlled for the standard
+  V=1-cos(chi) compacton because its L2 contribution diverges.
+next_attempt: complete source, dependency, consumer, nonduplication, and claim-level audits before promotion

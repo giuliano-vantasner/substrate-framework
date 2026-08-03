@@ -1,0 +1,39 @@
+campaign: P107
+selection_basis:
+  - accepted dependency closure and explicit energy density target measure orientation potential and regularity
+  - exact agreement of square-completion and independent AM-GM routes
+  - separation of bound equality attainment and physical interpretation
+  - dimensions signs absolute degree counterexamples and convention mutations
+  - controlled asymptotic remainder and coefficient visibility
+  - nonduplication and downstream convention closure
+candidates:
+  A:
+    decision: reproduction_evidence_only
+    reason: Source process passes but assumes universal saturation and physical near-BPS smallness.
+  B:
+    decision: selected_as_C-BPS-001_primary_route
+    reason: Exact two-orientation square completion closes under explicit density and degree conventions.
+  C:
+    decision: selected_as_independent_derivation
+    reason: Fresh AM-GM triangle and target-measure route reproduces the bound and normalization without package helpers.
+  D:
+    decision: selected_as_C-BPS-002
+    reason: Sector infimum and attainment premises distinguish exact zero difference from a merely linear lower bound.
+  E:
+    decision: selected_as_exact_ceiling
+    reason: Zero potential and arbitrary sector slacks disprove universal saturation and automatic zero binding.
+  F:
+    decision: selected_as_C-BPS-003
+    reason: Explicit coefficient and remainder algebra is distinct from C-RDIFF-001 and is reused by pending near-BPS consumers; the standard compacton rejects E4's naive perturbative application.
+  G:
+    decision: selected_as_convention_and_consumer_ceiling
+    reason: Exact lambda convention conversion preserves E4's bound while exposing the later mixed-convention pi-squared error.
+  H:
+    decision: selected_nonduplication_positive
+    reason: >-
+      No accepted bound, sector-attainment, or controlled asymptotic contract
+      exists. Three small APIs serve multiple pending consumers and do not
+      duplicate physical models, solvers, or campaign prose.
+comparator_use: >-
+  Exposed empirical coefficients and masses select no candidate, bound,
+  convention, coefficient, tolerance, or claim.

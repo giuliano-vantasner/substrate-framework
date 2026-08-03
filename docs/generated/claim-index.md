@@ -12,6 +12,33 @@ On any connected interval with normalized canonical action J>0, differentiable p
 - Compatibility: `native`
 - Dependencies: none
 
+## C-BPS-001
+
+Let X be a closed connected oriented three-manifold with volume form dvol, and let the target be the oriented unit round S^3 with volume form Omega normalized by integral_{S^3} Omega=2*pi^2. For a sufficiently regular map U:X->S^3 of nonzero signed degree B, define the normalized pullback density by U*Omega/(2*pi^2)=B0*dvol. Let lambda and mu be positive, let V:S^3->[0,infinity) have integrable square root, and set W=(1/(2*pi^2))*integral_{S^3} sqrt(V)*Omega. Then the declared energy E[U]=integral_X[(lambda*pi^2*B0)^2+mu^2*V(U)]dvol has the exact decomposition E=integral_X(lambda*pi^2*B0-sign(B)*mu*sqrt(V(U)))^2*dvol +2*lambda*mu*pi^2*abs(B)*W and therefore obeys E>=2*lambda*mu*pi^2*abs(B)*W. Equality holds if and only if the displayed square vanishes almost everywhere. This theorem does not establish that an equality configuration exists in any degree sector, select a potential or coupling, identify degree with a physical baryon or nucleus, or derive a mass, reaction, binding, or yield.
+
+- Accepted in: `v0.91.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
+## C-BPS-002
+
+Under C-BPS-001, define the energy M(B) of a nonzero degree sector as the infimum of the declared energy over a specified nonempty admissible class, and write K=2*lambda*mu*pi^2*W. Then M(B)>=K*abs(B). If an admissible configuration attains the C-BPS-001 equality in a specified sector, M(B)=K*abs(B) in that sector. Hence, for positive integers A and n with attainment in sectors A and n*A, n*M(A)-M(n*A)=0. If sectors 1 and B>0 attain, the declared binding B*M(1)-M(B) is zero. Linearity of the lower bound alone does not imply these conclusions: writing M(B)=K*abs(B)+s_B with unknown nonnegative sector slacks leaves n*M(A)-M(n*A)=n*s_A-s_(n*A), which can have either sign. This is a conditional attainment theorem, not an existence or physical zero-binding claim.
+
+- Accepted in: `v0.91.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-BPS-001, C-RDIFF-001
+
+## C-BPS-003
+
+Let A and n be positive integers and epsilon a positive dimensionless parameter tending to zero. Suppose the same positive-degree sectors used in C-BPS-002 have controlled expansions at D=A and D=n*A of the form M_epsilon(D)=K*D+epsilon*Delta_D+r_D(epsilon), with finite fixed-degree coefficients Delta_D. Then exactly n*M_epsilon(A)-M_epsilon(n*A) =epsilon*(n*Delta_A-Delta_(n*A)) +n*r_A(epsilon)-r_(n*A)(epsilon). If both remainders are o(epsilon), this is epsilon*(n*Delta_A-Delta_(n*A))+o(epsilon); if both are O(epsilon^2), the residual is O(epsilon^2). The first-order coefficient may be positive, zero, or negative. This theorem does not establish that a proposed deformation admits the expansion, derive the corrections or their sign, provide a global interpolation, or make epsilon or a physical binding coefficient numerically small.
+
+- Accepted in: `v0.91.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-BPS-002, C-RDIFF-001
+
 ## C-BRK-001
 
 Let x be a real scalar coordinate, let A be real, and let F, q, and K be positive. For the declared periodic potential V(x)=A*(1-cos(q*x/F)) and scalar quadratic kinetic convention L_kin=K*(partial x)^2/2, x=0 is stationary, the period is 2*pi*F/q, the exact origin curvature and fourth derivative are A*q^2/F^2 and -A*q^4/F^4, and the generalized quadratic mass squared is A*q^2/(K*F^2). Its series through sixth order is A*q^2*x^2/(2*F^2)-A*q^4*x^4/(24*F^4) +A*q^6*x^6/(720*F^6). Separately, the periodic potential h*F^2*(1-cos(x/F)) and quadratic potential h*x^2/2 have the same origin Hessian h, but only the first is periodic and their origin fourth derivatives differ by -h/F^2. Thus local quadratic curvature does not select a global explicit-breaking potential. These are exact declared- coordinate identities. They derive no field ontology, symmetry-breaking source, physical mass, coefficient, absolute scale, or substrate map.

@@ -1,0 +1,50 @@
+campaign: P107
+attempt: 0001
+candidate: A
+status: completed_reproduction_only
+started_at: '2026-08-03T16:20:00Z'
+completed_at: '2026-08-03T16:21:00Z'
+objective: >-
+  Reproduce the hash-pinned E4 process unchanged, capture its five predicates,
+  terminal tally and exit status, and classify what each green check actually
+  establishes before building the independent exact routes.
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+  sha256: f1815eefc73e577734992a3147d9ec6cea2b50fad8532e9f436e1afb465dfea7
+  git_blob: 279bfb747a8663577d9f040df4cb6a822503c287
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py
+compatibility_preflight:
+  numpy_imported: false
+  sampled_quadrature: false
+  np_trapz_present: false
+  alias_only_replay_needed: false
+process:
+  exit_code: 0
+  wall_time_seconds: 0.40
+  terminal_tally: ALL 5 CHECKS PASS
+observed_predicates:
+  E4.1: the positive-orientation pointwise square identity is exact
+  E4.2: substituting the displayed positive-branch equation makes the square vanish
+  E4.3: a hard-coded linear mass lambda returns zero for B=2,3,4 and symbolically constant mass per declared positive B
+  E4.4: three rounded legacy L2+L4 per-degree values are not constant and their declared difference is positive
+  E4.5: an exactly linear epsilon ansatz has no epsilon-independent signed-difference term for B=2
+observed_gaps:
+  - E4.2 does not evaluate the oriented degree integral, the target-volume normalization, the negative-degree branch, or the reverse equality implication.
+  - The prose alternates between normalized baryon density and the unnormalized pullback volume form; the factor 2*pi^2 must be fixed explicitly.
+  - E4.3 assumes the saturated linear sector formula in its lambda and then checks that same formula; it proves neither sector infimum nor existence or attainment for any degree.
+  - E4.4 uses rounded superseded E2 values and is only a nonconstancy regression; it cannot prove why an unrelated model fails a BPS equation or establish physical overbinding.
+  - E4.5 supplies no asymptotic remainder and treats a symbolic derivative expression as nonzero even though admissible corrections may cancel; it establishes only absence of an epsilon^0 term under its exact declared ansatz.
+  - No predicate derives the correction coefficient, its sign, an O(1) scale, a physical state map, a reaction, or an empirical-yield explanation.
+verdict: >-
+  E4 is process-reproducible, but the tally establishes only a local algebraic
+  square identity, tautological linear-mass regression, rounded nonconstancy
+  guard, and formal first-order cancellation. Universal saturation, sector
+  attainment, exact zero binding as a sector theorem, and physical near-BPS
+  smallness remain unverified.
+next_attempt: >-
+  Implement the premise-explicit bound and sector/asymptotic APIs, then run the
+  primary exact verifier with both orientations, an independently normalized
+  AM-GM route, equality and nonattainment counterexamples, and load-bearing
+  coefficient mutations.

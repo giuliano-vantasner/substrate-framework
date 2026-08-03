@@ -65,6 +65,18 @@ from .boundary_correlations import (
     right_half_line_topological_charge_change,
     sinusoidal_boundary_sign_correlation,
 )
+from .bps_energy import (
+    BogomolnyDensityDecomposition,
+    NearBpsDifference,
+    bogomolny_density_decomposition,
+    bps_bound_per_absolute_degree,
+    bps_topological_lower_bound,
+    conditional_attained_bps_sector_energy,
+    degree_weighted_target_pairing,
+    near_bps_mass_difference,
+    normalized_sqrt_potential_average,
+    target_three_sphere_volume,
+)
 from .tt_angular import (
     AxisymmetricSTFReadout,
     TTPolarizationBasis,
@@ -728,6 +740,8 @@ from .variational import (
 )
 
 __all__ = [
+    "BogomolnyDensityDecomposition",
+    "NearBpsDifference",
     "AffineCrossingLedger",
     "AffineUnificationDiagnostics",
     "AxisymmetricSTFReadout",
@@ -827,6 +841,9 @@ __all__ = [
     "asymptotic_masses",
     "averaged_mode_equation_defect",
     "boundary_sign_correlation_density",
+    "bogomolny_density_decomposition",
+    "bps_bound_per_absolute_degree",
+    "bps_topological_lower_bound",
     "breather_action",
     "audit_source_tokens",
     "breather_action_lattice_adjacent_gap",
@@ -873,6 +890,7 @@ __all__ = [
     "combined_winding_parity",
     "conditional_coth_gated_capillary_rate",
     "conditional_anw_mass",
+    "conditional_attained_bps_sector_energy",
     "conditional_axisymmetric_stf_power",
     "conditional_axisymmetric_radiation_coefficients",
     "continuous_population_threshold",
@@ -896,6 +914,7 @@ __all__ = [
     "coupling_squared_from_length_ratio",
     "classify_harmonic_tail_channels",
     "dimensionless_group_count",
+    "degree_weighted_target_pairing",
     "declared_coth_effective_scale",
     "dimensionless_mass_coordinate",
     "dimensionless_monomial_basis",
@@ -1027,6 +1046,7 @@ __all__ = [
     "mixed_sine_gordon_residual",
     "mixed_sine_gordon_scale_choice",
     "newton_dimension_ledger",
+    "near_bps_mass_difference",
     "optical_box_static_1d",
     "optical_collective_acceleration",
     "optical_collective_lagrangian",
@@ -1055,6 +1075,7 @@ __all__ = [
     "pairwise_affine_crossing",
     "odd_harmonics",
     "normalized_gravity_source_coupling",
+    "normalized_sqrt_potential_average",
     "normalized_hyperbolic_sine_gordon_residual",
     "orthogonal_generators",
     "quantized_flux",
@@ -1125,6 +1146,7 @@ __all__ = [
     "solve_vortex_bvp",
     "stationary_phase_field",
     "stationary_u1_charge_density",
+    "target_three_sphere_volume",
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",
     "slow_optical_collective_acceleration",

@@ -1,0 +1,58 @@
+campaign: P107
+source_unit: E4
+inventory_reverse_dependencies:
+  PG3:
+    status: already_qualified
+    verdict: Its accepted radial variation and continuum claims do not depend on E4; particle and excitation interpretations gain no BPS premise.
+  E1:
+    status: already_qualified
+    verdict: Its accepted rational-map sphere geometry is independent of E4; map degree remains distinct from a physical baryon or nucleus.
+  E3:
+    status: already_qualified
+    verdict: C-RDIFF-001/002 may compose with C-BPS-002/003 only under explicit action, attainment, and perturbation premises; no physical bracket or yield follows.
+  KI1:
+    sha256: a1ec5f8e64e56165d2c51ad2389ecb455870572ba4ef9eca292151bde4ddb42b
+    verdict: P107 leaves lambda and mu free declared couplings; a historical repository scan is not a timeless scientific claim and KI1 remains pending.
+  KI2:
+    sha256: 9e16fc6fafa940f43d559ea0f6a9c2730940d1247f36f655375c2f75f6fd1e81
+    verdict: P107 supplies no coupling values. Its conditional scale-ratio symmetry must be adjudicated independently and gains no physical epsilon.
+  KI3:
+    sha256: 10e92457cbd213782e5778f5b739660a6d07ea229c44746e24fe0132844fcbd3
+    verdict: C-BPS-003 gives only a controlled local expansion. It supplies no global continuous interpolant, monotonicity, endpoint at infinity, sharp range, or bounded bracket; P107's compacton counterexample defeats the naive first-order route for the standard potential.
+  TX5:
+    verdict: Its full-field L2+L4 stability computation is a separate pending numerical claim; citing E4 cannot transfer BPS stability or physical state identity.
+  MK1:
+    sha256: 98ff5459ae3c6cb64a9a7632fbaa8613f1f5b1adb68419de25ffa06b1c3a3222
+    verdict: P107 independently confirms only W=32*sqrt(2)/(15*pi) for the supplied V=1-cos(chi). MK1's medium-to-potential and mu identifications remain pending.
+  MK3:
+    verdict: The epsilon ratio remains a declared coordinate until MK1/MK2 and the standard-sector scale are independently accepted; P107 derives no numerical epsilon.
+  MK4:
+    sha256: 9f2e299032aace53c3ac2c2d1d5626372e4bdf1aa3b7b0650f574a9f7b8f7295
+    verdict: P107 independently rederives the compacton balance and L2 edge divergence as counterevidence to E4's perturbative premise. MK4's coupling and model interpretations remain pending.
+  MK5:
+    sha256: a5ecb5d0d2ba96cf8083a9cfb32ddb44c2a4f4841bf776ebbccb91bc12b246f8
+    verdict: A full generalized-model solve cannot import coupling values or physical interpretation from P107; its classical anchor should use C-RDIFF-002 and its convention must be audited separately.
+  MK6:
+    sha256: ef900954d9782bbf2589ff3e33045577ebdce3860d1a3ed7a6a6827e0ae81788
+    verdict: It mixes E4's convention-B bound with a convention-A lambda and creates one spurious pi^2; its zero-parameter mass and empirical claims do not survive that composition.
+  MR2:
+    sha256: 2e62ce2d6cbee805a988046a27a742e622931291e8e013a9aede6ce16e48e990
+    verdict: P107 independently agrees that lambda_A=pi^2*lambda_B and that E4's bound is correct only for convention B. MR2 remains pending as a broader consumer adjudication.
+indirect_consumers:
+  MR3_MR6: >-
+    Their mass-share, generalized-solve, and correction narratives inherit MK
+    premises. P107 grants only the convention map and conditional mathematical
+    bound, not couplings, realized sector energies, or physical masses.
+  phase47_phase48_worktree: >-
+    Uncommitted later source work remains outside the pinned baseline and is not
+    a P107 consumer or authority.
+canonical_consumers:
+  - src/substrate_framework/bps_energy.py
+  - tests/test_bps_energy.py
+  - campaigns/P107-e4-bps-zero-binding-audit/verify.py
+  - campaigns/P107-e4-bps-zero-binding-audit/reviews/independent_bps_review.py
+verdict: >-
+  P107 adds conditional bound, attainment, and asymptotic APIs without changing
+  an existing execution flow. Pending consumers must declare the density and
+  coupling convention and cannot inherit existence, coupling values,
+  interpolation, physical states, or empirical meaning.

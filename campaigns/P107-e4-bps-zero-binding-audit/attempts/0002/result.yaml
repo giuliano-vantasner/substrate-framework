@@ -1,0 +1,32 @@
+campaign: P107
+attempt: 0002
+candidate: B_E_F
+status: verifier_representation_failure
+command: .venv/bin/python -m pytest tests/test_bps_energy.py -q
+process:
+  exit_status: 1
+  tests_passed: 11
+  tests_failed: 2
+failures:
+  - test: test_zero_potential_exposes_nonattainment_for_nonzero_degree
+    mechanism: >-
+      The test declared the local density symbol strictly positive and then
+      asked SymPy to solve the saturation residual for density zero. SymPy
+      correctly returned no solution in that restricted domain. The intended
+      counterexample requires a real density before deriving that saturation
+      forces zero.
+  - test: test_near_bps_ledger_cancels_only_the_balanced_linear_sector_term
+    mechanism: >-
+      The canonical ledger expands the remainder while the assertion used a
+      factored expression. Python structural equality is false although exact
+      symbolic subtraction simplifies to zero.
+classification: verifier_representation
+scientific_surface_preserved: >-
+  The module's square identity, both orientations, target normalization,
+  signed pairing, absolute-degree bound, conditional attained-sector result,
+  degree-balance mutation, input validation, and eleven focused tests passed.
+repair: >-
+  Declare the counterexample density real and compare the remainder and total
+  expansion by exact symbolic simplification. Do not alter the theorem,
+  counterexample, coefficients, or tolerances.
+next_attempt: rerun the unchanged focused scientific surface after the two representation repairs

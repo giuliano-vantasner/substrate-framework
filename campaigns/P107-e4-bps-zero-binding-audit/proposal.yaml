@@ -64,4 +64,4 @@ comparators_blinded_until: >-
   counterexamples, equality-versus-existence gates, remainder requirements,
   and interpretation ceilings before executing E4 or inspecting its predicate
   implementation.
-status: draft
+status: accepted

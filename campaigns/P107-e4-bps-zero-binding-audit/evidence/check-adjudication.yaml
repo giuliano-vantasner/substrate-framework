@@ -1,0 +1,46 @@
+campaign: P107
+source_unit: E4
+checks:
+  E4.1:
+    source_predicate: positive-branch square completion
+    verdict: accepted_and_extended_by_C-BPS-001
+    reason: >-
+      The identity is exact. P107 adds the negative orientation, density and
+      target normalization, dimensions, and load-bearing pi-squared mutations.
+  E4.2:
+    source_predicate: local saturation substitution and asserted topological bound
+    verdict: qualified_as_C-BPS-001
+    reason: >-
+      The bound and a.e. equality equation are exact under the declared degree
+      theorem and normalized density. The source checks neither those
+      hypotheses nor existence of any saturating field.
+  E4.3:
+    source_predicate: universal linear sector mass and exact zero binding
+    verdict: qualified_as_C-BPS-002
+    reason: >-
+      Exact linearity and zero signed difference follow only when degree-sector
+      infima attain the C-BPS-001 bound. The source assumes this for every
+      degree and tests a hard-coded linear formula. Nonnegative sector slacks
+      produce either sign when attainment is absent.
+  E4.4:
+    source_predicate: rounded L2+L4 per-degree values are nonconstant and therefore not BPS
+    verdict: noncanonical_guard_only
+    reason: >-
+      C-RPROF-002 independently supplies corrected nonconstant conditional
+      branch energies, but the L2+L4 action is not governed by the L6+L0 bound.
+      The source's rounded legacy numbers and causal overbinding language add no
+      accepted BPS theorem or physical interpretation.
+  E4.5:
+    source_predicate: exact first-order ansatz implies strictly O(epsilon) physical smallness and an O(1) coefficient
+    verdict: algebra_qualified_as_C-BPS-003_broader_inference_rejected
+    reason: >-
+      With explicit finite coefficients and controlled remainders, the
+      degree-linear term cancels exactly and the signed difference has the
+      stated expansion. Its coefficient may be positive, zero, or negative;
+      an uncontrolled remainder may dominate epsilon. The standard-potential
+      compacton makes the naive L2 correction divergent. No numerical or
+      physical O(1) conclusion follows.
+headline_coverage: >-
+  Every literal predicate is adjudicated. C-BPS-001 through C-BPS-003 preserve
+  the exact conditional content while E4's universal saturation, perturbative
+  control, physical overbinding resolution, and yield story are not promoted.
