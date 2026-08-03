@@ -1,0 +1,67 @@
+campaign: P103
+source_unit: BD5
+literal_checks: 13
+checks:
+  - index: 1
+    source_predicate: all four returned rates are positive
+    verdict: qualified
+    surviving_claim: selected ensembles exceed the five-percent completion threshold; exact inverse MFPT is positive
+    excluded_reading: the check text says all ensembles escaped in-window, but the predicate requires only a positive thresholded statistic
+  - index: 2
+    source_predicate: fitted log-rate slope lies between -1.25 and -0.78
+    verdict: qualified
+    surviving_claim: the fixed-seed slope is -0.84 and the exact moderate-window inverse-MFPT slope is -0.8696759
+    excluded_reading: neither establishes a pure minus-one law or temperature-independent prefactor
+  - index: 3
+    source_predicate: selected returned rates decrease with E_star/Theta
+    verdict: accepted_conditionally
+    surviving_claim: the exact reflected inverse MFPT also decreases across ratios 2,3,4,5
+  - index: 4
+    source_predicate: selected larger A raises the statistic under E_star=C/A^2
+    verdict: accepted_conditionally
+    surviving_claim: this is a conditional C-RG-002 composition with the declared stochastic model
+    excluded_reading: no amplitude law, material, or event is derived
+  - index: 5
+    source_predicate: four selected temperature statistics are nondecreasing
+    verdict: accepted_conditionally
+    surviving_claim: the four exact backward rates also increase with the declared coth scale
+    excluded_reading: four points do not prove an optimum
+  - index: 6
+    source_predicate: low-kT coth scale approaches hbar*omega_b/2
+    verdict: duplicate_accepted_algebra
+    surviving_claim: C-TH-002
+  - index: 7
+    source_predicate: assigned kT_onset/(hbar*omega_b)=0.5 lies in (0.3,0.7)
+    verdict: rejected_as_constructed
+    excluded_reading: operating optimum or steep-knee derivation
+  - index: 8
+    source_predicate: ratio-20 ensemble has below-five-percent completion and returns zero
+    verdict: accepted_only_as_finite_window_classifier
+    excluded_reading: zero physical escape rate; exact inverse MFPT is 2.025363136e-7 for the displayed parameters
+  - index: 9
+    source_predicate: ratio-2 ensemble has completion fraction above one-half
+    verdict: accepted_as_seeded_simulation_evidence
+    excluded_reading: general window adequacy or convergence theorem
+  - index: 10
+    source_predicate: inserted incoherent endpoint is below inserted barrier
+    verdict: duplicate_accepted_algebra
+    surviving_claim: C-COH-001
+    excluded_reading: never ignites
+  - index: 11
+    source_predicate: inserted coherent endpoint is at or above inserted barrier
+    verdict: duplicate_accepted_algebra
+    surviving_claim: C-COH-001
+    excluded_reading: physical ignition
+  - index: 12
+    source_predicate: inserted incoherent endpoint is smaller than coherent endpoint and barrier
+    verdict: duplicate_guard
+    surviving_claim: C-COH-001 endpoint ordering
+    excluded_reading: stochastic guard dynamics
+  - index: 13
+    source_predicate: one dt/ensemble/seed pair differs by less than twenty-five percent
+    verdict: rejected_as_convergence_evidence
+    excluded_reading: isolated timestep convergence, ensemble convergence, uncertainty control, or boundary convergence
+terminal_tally_verdict: >-
+  All thirteen predicates execute, but only the declared discrete-model and
+  conditional algebraic surfaces survive. The tally is not evidence for the
+  source headline's physical rate, optimum, ignition, or convergence claims.

@@ -1,0 +1,22 @@
+campaign: P103
+attempt: 7
+route: repaired_primary_verifier_through_numeric_temperature_specialization
+status: failed_implementation_input_contract
+command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+process:
+  exit_status: 1
+  passed_before_failure: 33
+  terminal_error: 'ValueError: quantum_energy must be exact rather than floating'
+diagnosis: >-
+  The canonical thermal API deliberately rejects floating derivation inputs,
+  while the verifier passed SymPy Float values for the source temperature
+  specialization. The exact source points are rational decimals and
+  omega=1/sqrt(2), so this is a caller contract defect rather than a scientific
+  or numerical failure.
+next_route: >-
+  Construct the four temperature inputs as exact rationals and the frequency
+  as sqrt(2)/2, evaluate the exact coth expressions, then convert only the
+  resulting comparator values to float for numerical MFPT evaluation.
+debt:
+  - complete the corrected primary verifier
+  - independent backward-equation review and remaining campaign records

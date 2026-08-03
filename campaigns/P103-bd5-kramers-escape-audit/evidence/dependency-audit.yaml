@@ -1,0 +1,35 @@
+campaign: P103
+claim: C-FPT-001
+mathematical_imports:
+  - one-dimensional reflected Ito diffusion with constant positive diffusion coefficient
+  - continuous differentiable potential on a compact interval
+  - absorbing stopping time and backward-generator calculus
+  - elementary conditional expectation and moments
+accepted_dependencies: []
+compatibility_anchors:
+  C-RG-001: owns the conditional capillary maximum and barrier shape but no stochastic process
+  C-RG-002: owns the conditional loading-to-barrier composition but no material or rate
+  C-COL-001: distinguishes local conservative instability from stochastic escape and supplies no mobility
+  C-TH-002: owns conditional coth algebra and explicitly denies a physical bath or stochastic-rate derivation
+  C-COH-001: owns population/coherence algebra and explicitly denies population dynamics or ignition
+  C-PRB-001: owns a different supplied absorbing BVP and explicitly derives no stochastic generator
+source_specialization_inputs:
+  potential: declared scaled U(rho)=E_star*(2*rho-rho^2)
+  thermal_scale: declared Theta
+  friction: declared gamma
+  boundaries: declared reflection at 0 and absorption at 1.6
+  stochastic_convention: Ito Euler-Maruyama with absolute overshoot reflection
+  physical_provenance: none accepted
+missing_for_broader_interpretation:
+  - a derived physical coordinate and unit map
+  - friction or mobility from an accepted bath
+  - a fluctuation-dissipation derivation and stochastic calculus convention in physical units
+  - a physical absorbing event and observation map
+  - a justified Kramers or Langer prefactor for a reflecting boundary with nonzero potential slope
+  - a material, DBD, population, ignition, nuclear, or payload coupling
+  - an optimized objective, constraints, and validity domain
+closure: >-
+  C-FPT-001 is dependency-root conditional mathematics. Its BD5 specialization
+  declares every stochastic input and inherits only interpretation ceilings
+  from accepted claims. No hidden source value or cross-sector result enters
+  the theorem.

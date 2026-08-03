@@ -1,0 +1,31 @@
+campaign: P103
+attempt: 10
+route: independent_high_precision_quadrature_and_backward_collocation_review
+status: passed
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 21 CHECKS PASS [C-FPT-001-INDEPENDENT]
+independence:
+  canonical_first_passage_imports: []
+  exact_route: fresh integrating-factor differentiation, linear-potential integration, free-diffusion moments, and censoring algebra
+  numeric_reference: mpmath nested quadrature at 45 decimal digits
+  numeric_cross_method: scipy.integrate.solve_bvp called directly on a 21-point initial mesh
+  tolerance_sequence: [1.0e-4, 1.0e-6, 1.0e-8]
+  ratios: [2, 3, 5, 8]
+  max_final_relative_method_error: 7.7e-11
+  max_final_collocation_residual: 1.0e-8
+surviving_results:
+  - The exact backward equation, boundaries, additive-potential invariance, linear-force formula, and free-diffusion limit are independently rederived.
+  - The free reflected diffusion first-passage law has squared coefficient of variation 2/3 rather than 1, so inverse MFPT is not a universal constant hazard.
+  - Every collocation solve succeeds; errors decrease at both refinements and the final method agreement is far inside the frozen 2e-5 threshold.
+  - The moderate exact log slope is prefactor softened, while the boundary-well asymptotic converges below three-percent relative error by ratio 20.
+  - Absorbing-boundary, censoring, and zero-rate counterexamples break the source's broader interpretation.
+next_route: >-
+  Audit the nearest legacy MFPT implementation, source predicates,
+  dependencies, and consumers, retaining compatible sampled quadrature as
+  corroboration without importing its Langer, material, or event narrative.
+debt:
+  - source and consumer records, claim review, disposition, promotion, and integrated validation

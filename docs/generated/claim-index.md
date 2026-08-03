@@ -183,6 +183,15 @@ Conditional on positive flux Phi uniformly crossing a cross-section A that is fi
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-FPT-001
+
+Let a<b, x in [a,b], Theta>0, gamma>0, and let U be a declared real continuously differentiable potential on [a,b]. Conditional on the one-dimensional overdamped Ito diffusion dX=-(U'(X)/gamma)dt+sqrt(2*Theta/gamma)dW with reflection at a and absorption at b, the mean absorption time tau(x) is the unique solution of Theta*tau''-U'*tau'=-gamma on (a,b), tau'(a)=0, tau(b)=0, and is tau(x)=(gamma/Theta)*integral_x^b exp(U(y)/Theta) integral_a^y exp(-U(z)/Theta) dz dy. It is strictly positive for x<b, vanishes at b, and is invariant under an additive constant in U. For U(x)=F*(x-a), F>0, L=b-a, and a start at a, the exact result is gamma*Theta*(exp(F*L/Theta)-1-F*L/Theta)/F^2, with zero-force limit gamma*L^2/(2*Theta). A finite-horizon mean over completed paths is a conditional completed-only statistic rather than the full MFPT, and a rule returning zero below a completion threshold is an operational classifier rather than a zero physical rate. Inverse MFPT is not in general a constant hazard: free reflected diffusion started at a has squared first-passage coefficient of variation 2/3 rather than the exponential value 1. These exact conditional results derive no physical coordinate, potential, bath, friction, mobility, stochastic convention in physical units, absorbing event, material, population coupling, ignition process, attempt frequency, Kramers or Langer prefactor, or observed rate.
+
+- Accepted in: `v0.87.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-GAU-001
 
 Conditional on C-U1-001's smooth complex scalar, a positive coupling e, and a declared real local-U(1) connection A_mu, define D_mu=partial_mu-i*e*A_mu and transform Psi'=exp(i*e*chi)Psi, A_mu'=A_mu+partial_mu chi for arbitrary smooth real chi. Then D_mu Psi transforms covariantly, a phase-independent potential and (D_mu Psi)^*D^mu Psi are invariant, and in C-U1-001's current convention the kinetic expansion is the bare term plus e*A_mu*j^mu+e^2*A_mu*A^mu*|Psi|^2. The curvature F_mu_nu=partial_mu A_nu-partial_nu A_mu is invariant and [D_mu,D_nu]Psi=-i*e*F_mu_nu*Psi. Separately, conditional on nonzero asymptotic amplitude, integer phase winding N, and angular energy with logarithmic coefficient proportional to (N-e*A_theta*r)^2, finite energy forces flux 2*pi*N/e; its charge-e holonomy is +1. A minus-one holonomy requires a separately declared fractional flux. Local covariance leaves every F^2 coefficient unconstrained and establishes no gauge kinetic action, Maxwell equation, photon, force, physical electric charge, or substrate electromagnetic sector.

@@ -1,0 +1,62 @@
+campaign: P103
+attempt: 1
+route: unchanged_hash_pinned_source_reproduction_and_statistical_headline_audit
+status: source_reproduced_conditional_ensemble_results_and_claim_gaps_identified
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+  sha256: fd1fd9e54990bbac4a60bc669a37f1c15a89ebd2595203aef7d2bddb88b99cf9
+  git_blob: 6cfb444f3ab0bda8b456ac188f00a7faf904ccb8
+  worktree_relative_to_pinned_blob: clean
+command: >-
+  /usr/bin/time -f
+  'ELAPSED_SECONDS=%e MAX_RSS_KB=%M EXIT_STATUS=%x'
+  /home/dan/substrate-framework/.venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+environment:
+  python: framework virtual environment
+  numpy_api: current np.random Generator; no quadrature call and no np.trapz reference
+  stochastic_seed: 20260625 for the shared main sequence; explicit seeds 1 and 2 for the final combined refinement check
+process:
+  exit_status: 0
+  elapsed_seconds: 13.48
+  max_rss_kb: 37128
+  terminal_tally: ALL 13 CHECKS PASS
+  stdout: attempts/0001/stdout.txt
+implemented_model:
+  potential: U(rho)=E_star*(2*rho-rho^2)
+  domain: rho starts at 0; absolute-value reflection at 0; discrete absorption at rho>=1.6
+  sde: d_rho=2*E_star*(rho-1)*dt/gamma+sqrt(2*Theta*dt/gamma)*normal
+  defaults: n_traj=3000, dt=0.004, t_max=400, gamma=1
+  statistic: >-
+    Return zero when fewer than five percent escape; otherwise return the
+    inverse mean recorded time among escaped trajectories only.
+surviving_results:
+  - The script executes a vectorized Euler-Maruyama ensemble for its explicitly declared dimensionless drift, noise, absolute-value reflection, absorption threshold, horizon, and seeds.
+  - At the chosen seed and parameter grid, all four reported completed-only inverse means are positive, decrease with E_star/Theta, and yield a four-point fitted log slope -0.84 inside the prewritten interval.
+  - At the chosen seed, lowering the inserted E_star=C/A^2 value raises the reported completed-only statistic.
+  - The declared coth scale approaches hbar*omega_b/2 at low temperature, and the four selected source statistics are nondecreasing with the selected kT values.
+  - The deep-barrier ensemble has fewer than five percent recorded escapes and is mapped by source convention to zero; the shallow ensemble has more than half recorded escapes.
+  - The inserted coherent and incoherent population formulas lie on opposite sides of the inserted barrier for N=10, theta1=0.05, and E=2.
+failed_headline_routes:
+  - The executable is an overdamped supplied-gamma process and contains no m_R, lambda, omega_R, or physical mobility derivation; it cannot validate BD4's rejected physical inertia or onset narrative.
+  - The returned inverse completed-path mean conditions on escape before t_max. It is not the uncensored inverse MFPT, does not include censored paths, and is not a constant hazard or Kramers rate without additional analysis.
+  - Mapping every ensemble below five-percent completion to exactly zero is an operational classifier. A nondegenerate diffusion on the finite reflected-to-absorbing interval has positive eventual absorption probability and finite positive MFPT under the proposed regularity.
+  - The source calls absolute value reflection and a post-step threshold crossing but supplies no timestep refinement isolating boundary bias or absorption overshoot.
+  - The convergence check changes timestep, ensemble size, and seed simultaneously, uses one pair, provides no uncertainty interval, and accepts a relative difference below twenty-five percent. It isolates neither timestep nor Monte Carlo error.
+  - The four-point Arrhenius regression has no residual or slope uncertainty, uses a moderate ratio window, and assumes a temperature-independent Kramers prefactor even though rho=0 is a reflecting boundary with nonzero potential slope rather than a stationary well minimum.
+  - The temperature section checks monotonicity and the exact low-temperature coth limit, then declares kT_onset=hbar*omega_b/2 and verifies the constructed ratio 0.5. It evaluates no objective derivative or finite optimum.
+  - The population guards are deterministic inserted inequalities independent of the SDE, escape times, coherence dynamics, and event channel. They do not simulate or establish ignition or rejection.
+  - The source calls itself a PDE confrontation but solves paths for a one-coordinate SDE and supplies no Fokker-Planck PDE, backward equation, solver-status gate, analytic control, survival curve, or independent method.
+  - A local PASS helper and terminal tally do not audit dimensions, boundary convergence, censoring, uncertainty, asymptotics, dependencies, or consumers.
+next_route: >-
+  Derive and implement the exact reflected-to-absorbing backward equation and
+  positive integral representation, validate adaptive quadrature against the
+  soluble linear-force limit and an independent refined backward solver, then
+  use that oracle to audit the source estimator, boundary rule, Arrhenius
+  window, temperature claim, population noncoupling, and consumers.
+debt:
+  - implement and test the importable first-passage API
+  - complete exact primary and independent numeric mutation-sensitive verifiers
+  - quantify the source parameter window against the uncensored backward solution
+  - isolate timestep and ensemble uncertainty if Euler-Maruyama evidence is retained
+  - materialize predicate, dependency, candidate, consumer, review, disposition, release, and terminal validation records

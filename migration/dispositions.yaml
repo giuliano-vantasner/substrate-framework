@@ -1214,8 +1214,9 @@ units:
       - memory/vantasner/decisions/C-TH-002-review.md
     note: >-
       P100 promotes only the exact conditional response theorem. The broken
-      DBD consumers use version-specific np.trapz; exact P100 work imports no
-      NumPy or quadrature. BD3-BD5 and later CM consumers remain pending.
+      DBD consumers used version-specific np.trapz before the compatibility
+      repair; exact P100 work imports no NumPy or quadrature. P101-P103 now
+      separately adjudicate BD3-BD5, while later CM consumers remain pending.
   BD3:
     disposition: qualified
     accepted_claims:
@@ -1248,9 +1249,9 @@ units:
     note: >-
       P101 adds no claim, canonical API, test, or release. Direct threshold and
       current-NumPy engineering consumers execute, but their supplied event,
-      isotope, payload, and power maps remain noncanonical. BD4, BD5, CM2, and
-      CM4 remain pending for independent audits; exact P101 work imports no
-      NumPy or quadrature.
+      isotope, payload, and power maps remain noncanonical. BD4 and BD5 are
+      separately qualified by P102 and P103; CM2 and CM4 remain pending. Exact
+      P101 work imports no NumPy or quadrature.
   BD4:
     disposition: qualified
     accepted_claims:
@@ -1284,8 +1285,48 @@ units:
       - memory/vantasner/decisions/C-COL-001-review.md
     note: >-
       P102 promotes only the dependency-closed conditional collective-coordinate
-      theorem. BD5 remains pending for its own stochastic, convergence, and event
-      audit. Exact P102 work imports no NumPy and uses no numerical quadrature.
+      theorem. P103 separately qualifies BD5's stochastic, convergence, and
+      event readings. Exact P102 work imports no NumPy and uses no numerical
+      quadrature.
+  BD5:
+    disposition: qualified
+    accepted_claims:
+      - C-RG-002
+      - C-TH-002
+      - C-COH-001
+      - C-FPT-001
+    qualification: >-
+      BD5's declared dimensionless overdamped Euler-Maruyama process, selected
+      monotonic finite-seed statistics, and conditional compositions with the
+      accepted loading, coth-scale, and population algebras reproduce. P103
+      independently derives the exact reflected-to-absorbing MFPT theorem,
+      additive-potential invariance, soluble controls, censoring distinctions,
+      nonconstant-hazard counterexample, boundary sensitivity, and separately
+      refined quadrature, collocation, timestep, and ensemble evidence. The
+      source estimator averages only completed paths, returns an operational
+      zero below five-percent completion, and changes timestep, ensemble, and
+      seed together in its sole convergence check. Its reflecting endpoint is
+      not a stationary well, the assigned half-ratio is not an optimized
+      objective, and population endpoints never enter the SDE. No accepted
+      bath, mobility, physical coordinate, attempt frequency, Kramers or Langer
+      prefactor, material, ignition process, event, or observation map closes
+      the broader narrative.
+    evidence:
+      - campaigns/P103-bd5-kramers-escape-audit/reviews/source_adjudication.md
+      - campaigns/P103-bd5-kramers-escape-audit/evidence/source-reproduction.yaml
+      - campaigns/P103-bd5-kramers-escape-audit/evidence/source-audit.yaml
+      - campaigns/P103-bd5-kramers-escape-audit/evidence/check-adjudication.yaml
+      - campaigns/P103-bd5-kramers-escape-audit/evidence/dependency-audit.yaml
+      - campaigns/P103-bd5-kramers-escape-audit/evidence/consumer-audit.yaml
+      - campaigns/P103-bd5-kramers-escape-audit/evidence/candidate-comparison.yaml
+      - campaigns/P103-bd5-kramers-escape-audit/verify.py
+      - campaigns/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+      - memory/vantasner/decisions/C-FPT-001-review.md
+    note: >-
+      P103 promotes only the dependency-root conditional first-passage theorem.
+      The source and legacy sampled integration surfaces have no `np.trapz`
+      compatibility abort; the legacy sampled route already uses
+      `np.trapezoid`, while the canonical theorem uses adaptive quadrature.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

@@ -1,0 +1,38 @@
+campaign: P103
+attempt: 12
+route: focused_scientific_and_record_gate
+status: passed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_first_passage.py
+    tests/test_numerics.py tests/test_radial_energy.py tests/test_thermal.py
+    tests/test_coherence_gates.py tests/test_collective_coordinates.py
+    tests/test_fixation_probability.py
+  - parse every P103 YAML record with yaml.safe_load
+  - git diff --check
+process:
+  primary_exit_status: 0
+  primary_tally: ALL 37 CHECKS PASS [C-FPT-001]
+  independent_exit_status: 0
+  independent_tally: ALL 21 CHECKS PASS [C-FPT-001-INDEPENDENT]
+  pytest_exit_status: 0
+  pytest_tally: 115 passed in 9.89s
+  yaml_exit_status: 0
+  yaml_tally: PARSED 20 YAML RECORDS
+  diff_check_exit_status: 0
+preserved_without_duplicate_execution:
+  source_reproduction: attempts/0001/result.yaml; ALL 13 CHECKS PASS
+  legacy_consumer_replay: attempts/0011/result.yaml; rung091 ALL 21 CHECKS PASS and sampled quadrature refinement
+verdict: >-
+  The exact theorem, independent rederivation, numerical implementation,
+  stochastic regression, source classification, dependency closure, consumer
+  audit, and claim review are ready for a staged promotion transaction.
+next_route: >-
+  Materialize C-FPT-001, release v0.87.0, qualified BD5 disposition,
+  adjudication, generated docs and memory, then run one integrated workflow.
+debt:
+  - promotion and integrated validation

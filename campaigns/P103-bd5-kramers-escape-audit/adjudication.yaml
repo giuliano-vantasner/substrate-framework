@@ -1,0 +1,64 @@
+campaign: P103
+title: BD5 reflected first-passage and Kramers-interpretation audit
+source_baseline: substrate@6d1f4e0
+source_units: [BD5]
+base_release: v0.86.0
+release_after_adjudication: v0.87.0
+adjudicated_at: '2026-08-06T12:00:00Z'
+selected_candidates:
+  - {id: B, reason: Integrating-factor calculus derives the exact positive reflected MFPT theorem.}
+  - {id: C, reason: Adaptive quadrature and independent high-precision and collocation routes meet the frozen error gates.}
+  - {id: D, reason: Explicit censoring, timestep, ensemble, and uncertainty studies retain Euler-Maruyama only as regression evidence.}
+  - {id: E, reason: Exact conditioning and free-diffusion counterexamples separate MFPT, completed means, restricted means, and hazards.}
+  - {id: F, reason: Boundary-well asymptotics qualify the source's prefactor and fitted-slope reading.}
+  - {id: G, reason: Boundary location, drift sign, reflection, and noise coefficients are load bearing.}
+  - {id: H, reason: Accepted coth algebra composes monotonically but supplies no optimum.}
+  - {id: I, reason: Population and physical-event narratives lack executable or accepted couplings.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims:
+  - {id: C-FPT-001, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-RG-001, decision: unchanged_conditional_capillary_potential}
+  - {id: C-RG-002, decision: unchanged_conditional_loading_map}
+  - {id: C-COL-001, decision: unchanged_conservative_instability_and_escape_ceiling}
+  - {id: C-TH-002, decision: unchanged_coth_algebra_and_no_bath_ceiling}
+  - {id: C-COH-001, decision: unchanged_population_algebra_and_no_dynamics_ceiling}
+  - {id: C-PRB-001, decision: unchanged_distinct_supplied_bvp}
+evidence:
+  source_route: attempts/0001/result.yaml
+  api_pass: attempts/0002/result.yaml
+  failed_numeric_and_verifier_routes:
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+    - attempts/0008/result.yaml
+  exact_campaign_route: attempts/0009/result.yaml
+  independent_review_route: attempts/0010/result.yaml
+  legacy_consumer_route: attempts/0011/result.yaml
+  focused_gate: attempts/0012/result.yaml
+  integrated_promotion_gate: attempts/0013/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_first_passage_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  BD5: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P103-bd5-kramers-escape-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+  - .venv/bin/python -m pytest -q tests/test_first_passage.py tests/test_numerics.py tests/test_radial_energy.py tests/test_thermal.py tests/test_coherence_gates.py tests/test_collective_coordinates.py tests/test_fixation_probability.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

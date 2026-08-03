@@ -1,0 +1,21 @@
+campaign: P103
+attempt: 6
+route: repaired_primary_verifier_through_coth_scale_derivative
+status: failed_symbolic_representation
+command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+process:
+  exit_status: 1
+  passed_before_failure: 32
+  terminal_error: 'CheckFailure: declared coth scale is strictly increasing and has its exact low-coordinate floor'
+diagnosis: >-
+  SymPy rewrote the positive derivative as
+  q^2/(2*vartheta^2*(cosh(q/vartheta)-1)), while the verifier compared its tree
+  with q^2/(4*vartheta^2*sinh(q/(2*vartheta))^2). Their difference simplifies
+  exactly to zero and the low-coordinate limit is q/2. This is the same
+  representation-sensitive verifier defect seen in attempt 0005.
+next_route: >-
+  Simplify the derivative difference to exact zero and separately require its
+  positive assumption status, then rerun the complete verifier.
+debt:
+  - complete the representation-invariant primary verifier
+  - independent backward-equation review and remaining campaign records

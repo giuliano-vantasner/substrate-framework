@@ -1,0 +1,18 @@
+
+==============================================================================
+RESULT
+==============================================================================
+  A 1-DOF overdamped Langevin escape over the real-variable ring-radius barrier
+  reproduces the Arrhenius/Kramers exponent: ln(rate) ~ -0.84*(E_*/Theta)
+  (slope ~ -1), so the rate scales as exp(-E_*/Theta) -- the lever the scaling
+  law rests on.  Lowering the barrier (more loading, E_* ~ 1/A^2) raises the
+  rate; the temperature sweep shows the gate opening once k*T reaches the
+  zero-point/barrier crossover ~ hbar*omega_b/2 (the operating optimum).  The
+  guard fires: a deep-barrier/cold set does not escape, and an incoherent
+  population (~theta1*N) never reaches the N^2 ignition.  Converged in dt and
+  ensemble.  No absolute scale `a` introduced (scaled units throughout).
+
+ALL 13 CHECKS PASS
+ELAPSED_SECONDS=13.48
+MAX_RSS_KB=37128
+EXIT_STATUS=0

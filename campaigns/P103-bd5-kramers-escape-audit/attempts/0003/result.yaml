@@ -1,0 +1,36 @@
+campaign: P103
+attempt: 3
+route: over_tight_adaptive_collocation_refinement_across_ratios_two_through_eight
+status: failed_numeric_method
+command: >-
+  PYTHONPATH=src .venv/bin/python -c '<solve_bvp_evidence tolerance sweep
+  1e-4,1e-6,1e-8,1e-10 on initial meshes 21,41,81,161 for E/Theta
+  2,3,4,5,8>'
+process:
+  exit_status: 1
+  terminal_error: 'NumericalFailure: BVP solve failed: The maximum number of mesh nodes is exceeded.'
+  failure_location: E_star/Theta=8, initial_nodes=161, tolerance=1e-10, max_nodes=50000
+successful_prefix:
+  ratios: [2, 3, 4, 5]
+  tolerance_sequence: [1.0e-4, 1.0e-6, 1.0e-8, 1.0e-10]
+  maximum_final_relative_error: 9.4e-14
+  maximum_final_collocation_residual: 1.0e-10
+  ratio_eight:
+    tolerances_completed: [1.0e-4, 1.0e-6, 1.0e-8]
+    relative_errors: [1.204e-5, 1.512e-8, 2.996e-12]
+    final_completed_residual: 1.0e-8
+diagnosis: >-
+  The exact integral and collocation solution already agree far inside the
+  frozen 2e-5 method threshold at tolerance 1e-8. Requiring an additional
+  1e-10 residual at the stiffest optional ratio is numerical ceremony, not a
+  scientific obligation, and adaptive node subdivision exhausts the declared
+  cap without changing the established verdict.
+next_route: >-
+  Preserve the failure and use the preregistered adaptive-collocation branch at
+  tolerances 1e-4, 1e-6, and 1e-8, requiring solver success, decreasing method
+  error, final residual below 1.1e-8, and relative agreement below 2e-5. Keep
+  quadrature tolerance refinement through 1e-12 as separately inexpensive
+  evidence rather than inflating the BVP node cap.
+debt:
+  - materialize the repaired independent verifier and mutation audit
+  - keep the failed over-tight route out of accepted numerical requirements

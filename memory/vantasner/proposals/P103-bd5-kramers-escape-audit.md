@@ -2,15 +2,15 @@
 description: Derive reflected first-passage dynamics and audit BD5's stochastic escape claims
 author: vantasner
 created: '2026-08-03T13:42:00Z'
-updated: '2026-08-03T13:42:00Z'
+updated: '2026-08-06T12:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - first-passage
 - migration-BD5
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P103 BD5 Kramers Escape Audit
 
@@ -245,3 +245,23 @@ This campaign cross-references BD1 through BD5, C-RG-001, C-RG-002,
 C-COL-001, C-TH-001, C-TH-002, C-COH-001, C-COH-002, C-PRB-001, P079,
 P086, P094, P099, P100, P102, and the canonical radial, thermal, coherence,
 collective-coordinate, fixation-probability, and numerics modules.
+
+## Terminal Adjudication
+
+P103 promotes C-FPT-001 as an exact dependency-root conditional theorem and
+qualifies BD5. The reflected-to-absorbing MFPT is the unique positive solution
+of the declared backward problem and has the displayed integrating-factor
+integral. Adaptive quadrature, independent high-precision quadrature and
+collocation, soluble limits, mutations, and lower-status stochastic regression
+validate the implementation without turning numerical agreement into an exact
+oracle.
+
+BD5's dimensionless path sampler and selected monotonic results survive, but
+its completed-only statistic, thresholded zero, joint timestep/ensemble/seed
+change, stationary-well prefactor, assigned half-ratio, and uncoupled population
+guards do not establish a general MFPT, constant hazard, convergence, optimum,
+ignition process, material, or event. The canonical route has no sampled NumPy
+quadrature, and the legacy sampled route already uses `np.trapezoid`; no
+version-only `np.trapz` abort is counted as scientific evidence. Claim-level
+debt is empty after promotion replay; the corpus migration continues beyond
+BD5.

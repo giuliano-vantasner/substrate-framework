@@ -1,0 +1,47 @@
+campaign: P103
+source_unit: BD5
+status: qualified
+surviving_subclaims:
+  - The source implements the declared dimensionless overdamped Euler-Maruyama paths with absolute-value reflection and post-step absorption.
+  - Its fixed-seed completed-only statistic is positive and decreases across the four selected E_star/Theta values.
+  - The corresponding exact inverse MFPT has log slope -0.8696759 on the selected moderate window and approaches a unit Arrhenius exponent only asymptotically with a boundary-well prefactor correction.
+  - Under the separately declared E_star=C/A^2 substitution, increasing A lowers the barrier and raises the conditional inverse MFPT on the selected branch.
+  - The declared coth scale has the accepted low-coordinate floor and the four selected conditional response values rise monotonically.
+  - The inserted population endpoints equal theta*N and theta*N^2 and lie on opposite sides of the inserted barrier at the selected numbers.
+qualified_or_rejected_subclaims:
+  - claim: rate means the uncensored inverse mean first-passage time
+    verdict: qualified
+    reason: the code averages only completed paths; this approaches MFPT only when censoring is negligible, which the source does not report for each call
+  - claim: the returned scalar is a constant Kramers hazard
+    verdict: rejected
+    reason: inverse MFPT is not a constant hazard for a general first-passage law; reflected free diffusion supplies an exact nonexponential counterexample
+  - claim: the Kramers prefactor is temperature independent on the source sweep
+    verdict: rejected
+    reason: rho=0 is a reflecting boundary with nonzero potential slope, not a stationary well; the boundary asymptotic carries a sqrt(E/Theta) rate prefactor
+  - claim: deep-barrier rate is physically zero
+    verdict: rejected
+    reason: zero is the source's below-five-percent classifier; the exact bounded-domain inverse MFPT is positive
+  - claim: grid and ensemble are converged
+    verdict: rejected
+    reason: one pair changes timestep, ensemble, and seed together, reports no uncertainty, and accepts twenty-five-percent relative change
+  - claim: kT=hbar*omega_b/2 is an operating optimum
+    verdict: rejected
+    reason: it is assigned and checked to have ratio one-half; no objective, derivative, finite maximum, cost, or domain optimization is evaluated
+  - claim: the source validates BD4 physical inertia or onset
+    verdict: rejected
+    reason: the executable contains gamma but no m_R, lambda, omega_R, or physical mobility derivation
+  - claim: population inequalities establish ignition or rejection dynamics
+    verdict: rejected
+    reason: Theta_pop is absent from escape_rate and no population SDE, coupling, state preparation, or event observable is defined
+  - claim: the script numerically solves a PDE
+    verdict: rejected
+    reason: it samples one-coordinate SDE paths and contains no Fokker-Planck or backward PDE discretization
+  - claim: the simulation establishes a material, DBD, nuclear, or observed event rate
+    verdict: rejected
+    reason: every coefficient and unit is scaled, and no accepted material, channel, or observation map is imported
+noncanonical_legacy_context:
+  exact_sampled_mfpt: pulson-backreaction-bridge/simulations/excess_heat_gating.py
+  algebraic_rate_consumer: pulson-backreaction-bridge/sympy/rungs/rung091_R_gate_medium_escape.py
+  verdict: useful predecessor evidence only; neither file is accepted authority and their broader Langer/material/LENR narratives retain undeclared premises
+terminal_disposition: qualified
+accepted_mapping: [C-RG-002, C-TH-002, C-COH-001, C-FPT-001]

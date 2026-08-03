@@ -1,0 +1,21 @@
+campaign: P103
+attempt: 5
+route: repaired_primary_verifier_through_censoring_decomposition
+status: failed_symbolic_representation
+command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+process:
+  exit_status: 1
+  passed_before_failure: 25
+  terminal_error: 'CheckFailure: population decomposition exposes completed-only censoring bias'
+diagnosis: >-
+  SymPy returned the restricted-mean difference as
+  -(c-m_c)*(p-1), while the verifier compared it structurally with
+  (m_c-c)*(p-1). Their difference simplifies exactly to zero. The failed
+  predicate tested expression-tree form rather than the population identity.
+next_route: >-
+  Compare both population decompositions by simplifying their residuals to
+  exact zero, retaining the separately tested ordering counterexample. Rerun
+  the complete verifier and preserve any later failure separately.
+debt:
+  - complete the representation-invariant primary verifier
+  - independent backward-equation review and remaining campaign records

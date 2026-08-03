@@ -1,0 +1,38 @@
+campaign: P103
+attempt: 11
+route: legacy_mfpt_quadrature_and_rung091_consumer_audit
+status: legacy_numeric_core_reproduced_narrative_authority_rejected
+commands:
+  - .venv/bin/python /home/dan/substrate/pulson-backreaction-bridge/sympy/rungs/rung091_R_gate_medium_escape.py
+  - >-
+    PYTHONPATH=/home/dan/substrate/pulson-backreaction-bridge:src
+    .venv/bin/python -c '<compare mfpt_quadrature_rate on grids 300,600,1200,2400
+    with canonical adaptive quadrature at ratios 2,3,5,8 and r_absorb=2>'
+process:
+  rung091_exit_status: 0
+  rung091_terminal_tally: ALL 21 CHECKS PASS
+  sampled_quadrature_exit_status: 0
+legacy_sources:
+  - {path: pulson-backreaction-bridge/simulations/excess_heat_gating.py, sha256: 33c5e1284120129f44efe649ec6654358ee4200f5a972fe02f13d3eb1d9f6bc0, git_blob: 5c287046395402656858e2b7cf7059aabc16ee50}
+  - {path: pulson-backreaction-bridge/sympy/rungs/rung091_R_gate_medium_escape.py, sha256: 5872457368e81ad07760f17ebebe5b522c2f7a66acce0a1a37802ed3f91d323d, git_blob: e2980b67737bfec9ed7f303619d5ebb4122e0ead}
+sampled_quadrature:
+  method: cumulative and outer np.trapezoid on uniform grids
+  absorbing_boundary: 2.0
+  ratios: [2, 3, 5, 8]
+  relative_error_at_300_points: [4.323e-5, 1.042e-4, 3.215e-4, 8.815e-4]
+  relative_error_at_2400_points: [6.716e-7, 1.619e-6, 4.996e-6, 1.371e-5]
+  observed_behavior: error decreases by about four under each grid doubling, consistent with the declared second-order trapezoidal route
+surviving_results:
+  - The legacy double-integral formula is the same conditional reflected MFPT theorem and its current np.trapezoid implementation converges to the adaptive canonical evaluator.
+  - Rung091 correctly differentiates the capillary barrier and preserves its strict-maximum sign.
+failed_headline_routes:
+  - Calling the sampled n_grid=1200 result exact confuses a second-order discretization with the exact integral theorem.
+  - The legacy parabolic Kramers prefactor treats the constant negative curvature at the reflecting boundary as a well curvature even though U'(0)=2E is nonzero; the boundary-well asymptotic instead has a distinct sqrt(E/Theta) prefactor.
+  - Multiplying the bare curvature factor by R_star makes a dimensionless expression but does not derive the stochastic prefactor, mobility, absorbing boundary, or attempt frequency.
+  - Rung091's omega_core, Theta_eff, physical material, precursor, and zero-free-parameter readings are not accepted framework dependencies and do not follow from its 21 algebraic checks.
+  - The legacy confirmation driver writes figures into the read-only evidence repository and mixes MFPT validation with retention, LENR magnitude, and material narratives; it is audited statically rather than executed as an affected consumer.
+next_route: >-
+  Materialize the claim-level source, check, dependency, consumer, candidate,
+  provenance, review, and impact records, then run the focused scientific gate.
+debt:
+  - terminal records, disposition, promotion, and integrated validation

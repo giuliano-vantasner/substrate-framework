@@ -1,0 +1,21 @@
+campaign: P103
+attempt: 13
+route: integrated_promotion_workflow
+status: integrated_gate_passed
+command: scripts/validate.sh
+process:
+  exit_status: 0
+  workflow_tally: WORKFLOW VALID 117 claims 117 accepted 0 proposals 218 units 117 pending 0 partial
+  memory_tally: All 437 file(s) valid
+  skill_tally: Skill is valid
+  pytest_tally: 942 passed in 80.95s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+promoted_claim: C-FPT-001
+release: v0.87.0
+source_disposition:
+  BD5: qualified
+debt: []
+next_route: >-
+  Seal the scientific transaction, checkpoint the parent effort, and freeze
+  P104 against the next pending E1 source unit without reusing BD5's conditional
+  stochastic model as physical authority.

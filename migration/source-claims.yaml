@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 118
-  qualified: 88
+  pending_adjudication: 117
+  qualified: 89
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -6195,8 +6195,9 @@ units:
   - campaigns/P100-bd2-thermal-rate-audit/verify.py
   - campaigns/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
   - memory/vantasner/decisions/C-TH-002-review.md
-  note: P100 promotes only the exact conditional response theorem. The broken DBD consumers use version-specific
-    np.trapz; exact P100 work imports no NumPy or quadrature. BD3-BD5 and later CM consumers remain pending.
+  note: P100 promotes only the exact conditional response theorem. The broken DBD consumers used version-specific
+    np.trapz before the compatibility repair; exact P100 work imports no NumPy or quadrature. P101-P103
+    now separately adjudicate BD3-BD5, while later CM consumers remain pending.
 - source_unit: BD3
   phase: phase-28
   path: merged-framework/bridges/phase-28/bridge_BD3_ignition_thresholds.py
@@ -6252,8 +6253,8 @@ units:
   - memory/vantasner/decisions/BD3-qualified-review.md
   note: P101 adds no claim, canonical API, test, or release. Direct threshold and current-NumPy engineering
     consumers execute, but their supplied event, isotope, payload, and power maps remain noncanonical.
-    BD4, BD5, CM2, and CM4 remain pending for independent audits; exact P101 work imports no NumPy or
-    quadrature.
+    BD4 and BD5 are separately qualified by P102 and P103; CM2 and CM4 remain pending. Exact P101 work
+    imports no NumPy or quadrature.
 - source_unit: BD4
   phase: phase-28
   path: merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
@@ -6310,8 +6311,8 @@ units:
   - campaigns/P102-bd4-collective-inertia-audit/verify.py
   - campaigns/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
   - memory/vantasner/decisions/C-COL-001-review.md
-  note: P102 promotes only the dependency-closed conditional collective-coordinate theorem. BD5 remains
-    pending for its own stochastic, convergence, and event audit. Exact P102 work imports no NumPy and
+  note: P102 promotes only the dependency-closed conditional collective-coordinate theorem. P103 separately
+    qualifies BD5's stochastic, convergence, and event readings. Exact P102 work imports no NumPy and
     uses no numerical quadrature.
 - source_unit: BD5
   phase: phase-28
@@ -6343,8 +6344,36 @@ units:
   dynamic_check_calls: 0
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RG-002
+  - C-TH-002
+  - C-COH-001
+  - C-FPT-001
+  qualification: BD5's declared dimensionless overdamped Euler-Maruyama process, selected monotonic finite-seed
+    statistics, and conditional compositions with the accepted loading, coth-scale, and population algebras
+    reproduce. P103 independently derives the exact reflected-to-absorbing MFPT theorem, additive-potential
+    invariance, soluble controls, censoring distinctions, nonconstant-hazard counterexample, boundary
+    sensitivity, and separately refined quadrature, collocation, timestep, and ensemble evidence. The
+    source estimator averages only completed paths, returns an operational zero below five-percent completion,
+    and changes timestep, ensemble, and seed together in its sole convergence check. Its reflecting endpoint
+    is not a stationary well, the assigned half-ratio is not an optimized objective, and population endpoints
+    never enter the SDE. No accepted bath, mobility, physical coordinate, attempt frequency, Kramers or
+    Langer prefactor, material, ignition process, event, or observation map closes the broader narrative.
+  evidence:
+  - campaigns/P103-bd5-kramers-escape-audit/reviews/source_adjudication.md
+  - campaigns/P103-bd5-kramers-escape-audit/evidence/source-reproduction.yaml
+  - campaigns/P103-bd5-kramers-escape-audit/evidence/source-audit.yaml
+  - campaigns/P103-bd5-kramers-escape-audit/evidence/check-adjudication.yaml
+  - campaigns/P103-bd5-kramers-escape-audit/evidence/dependency-audit.yaml
+  - campaigns/P103-bd5-kramers-escape-audit/evidence/consumer-audit.yaml
+  - campaigns/P103-bd5-kramers-escape-audit/evidence/candidate-comparison.yaml
+  - campaigns/P103-bd5-kramers-escape-audit/verify.py
+  - campaigns/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+  - memory/vantasner/decisions/C-FPT-001-review.md
+  note: P103 promotes only the dependency-root conditional first-passage theorem. The source and legacy
+    sampled integration surfaces have no `np.trapz` compatibility abort; the legacy sampled route already
+    uses `np.trapezoid`, while the canonical theorem uses adaptive quadrature.
 - source_unit: E1
   phase: phase-29
   path: merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py

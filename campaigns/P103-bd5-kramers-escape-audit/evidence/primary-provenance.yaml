@@ -1,0 +1,74 @@
+campaign: P103
+base_release: v0.86.0
+base_commit: b562048fcf00f82f0cf3fa473bac62faa078bad7
+preregistration_commit: 9e56fc5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+claim_delta: [C-FPT-001]
+primary:
+  command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+  terminal_tally: ALL 37 CHECKS PASS [C-FPT-001]
+  exit_status: 0
+independent:
+  command: >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+  canonical_first_passage_imports: []
+  terminal_tally: ALL 21 CHECKS PASS [C-FPT-001-INDEPENDENT]
+  exit_status: 0
+source_reproduction:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+  tally: ALL 13 CHECKS PASS
+  exit_status: 0
+legacy_replay:
+  rung091: ALL 21 CHECKS PASS
+  sampled_mfpt_grids: [300, 600, 1200, 2400]
+  sampled_mfpt_max_final_relative_error: 1.371e-5
+numeric_methods:
+  canonical_quadrature: scipy.integrate.quad nested adaptive binary64
+  quadrature_tolerances: [1.0e-8, 1.0e-10, 1.0e-12]
+  independent_quadrature: mpmath 45 decimal digits
+  independent_bvp: scipy.integrate.solve_bvp direct collocation
+  bvp_tolerances: [1.0e-4, 1.0e-6, 1.0e-8]
+  bvp_initial_nodes: 21
+  bvp_max_nodes: 20000
+  bvp_max_final_relative_error: 7.7e-11
+  bvp_max_final_residual: 1.0e-8
+  stochastic_timesteps: [0.008, 0.004, 0.002]
+  stochastic_timestep_paths: 12000
+  stochastic_ensemble_sizes: [2000, 4000, 8000]
+  stochastic_horizon: 40
+  stochastic_ratio: 3
+mutations:
+  - backward diffusion coefficient factor
+  - drift sign and coefficient
+  - constant source coefficient
+  - absorbing boundary 1.0 versus 1.6
+  - potential sign
+  - barrier depth
+  - completion threshold and censored-path handling
+counterexamples:
+  - zero and linear force soluble controls
+  - free reflected diffusion with squared coefficient of variation 2/3 rather than exponential value 1
+  - exact positive ratio-20 inverse MFPT despite source thresholded zero
+  - monotonic source temperature family with no finite objective optimum
+  - uncoupled population endpoint algebra
+quadrature_compatibility:
+  canonical_sampled_integration: none
+  mutable_np_trapz_calls: none
+  legacy_sampled_integration: np.trapezoid
+focused_gate:
+  status: passed
+  primary_tally: ALL 37 CHECKS PASS [C-FPT-001]
+  independent_tally: ALL 21 CHECKS PASS [C-FPT-001-INDEPENDENT]
+  pytest_tally: 115 passed
+  parsed_yaml_records: 20
+  source_and_legacy_replays: preserved from attempts 0001 and 0011 without duplicate execution
+integrated_gate:
+  status: passed
+  attempt: attempts/0013/result.yaml
+  workflow_tally: WORKFLOW VALID 117 claims 117 accepted 0 proposals 218 units 117 pending 0 partial
+  memory_tally: All 437 files valid
+  skill_tally: Skill is valid
+  pytest_tally: 942 passed in 80.95s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+status: accepted

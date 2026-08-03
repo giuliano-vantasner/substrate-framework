@@ -1,0 +1,53 @@
+campaign: P103
+source_unit: BD5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+sha256: fd1fd9e54990bbac4a60bc669a37f1c15a89ebd2595203aef7d2bddb88b99cf9
+git_blob: 6cfb444f3ab0bda8b456ac188f00a7faf904ccb8
+worktree_state: clean_relative_to_pinned_blob
+command: >-
+  /usr/bin/time -f 'ELAPSED_SECONDS=%e MAX_RSS_KB=%M EXIT_STATUS=%x'
+  /home/dan/substrate-framework/.venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+exit_status: 0
+elapsed_seconds: 13.48
+maximum_resident_kib: 37128
+terminal_tally: ALL 13 CHECKS PASS
+stdout: attempts/0001/stdout.txt
+numpy_compatibility:
+  imports_numpy: true
+  np_trapz_calls: 0
+  np_trapezoid_calls: 0
+  action: none_required
+source_model:
+  potential: U(rho)=E_star*(2*rho-rho^2)
+  drift: 2*E_star*(rho-1)*dt/gamma
+  noise_standard_deviation: sqrt(2*Theta*dt/gamma)
+  initial_coordinate: 0
+  reflecting_rule: rho_new=abs(rho_new)
+  absorbing_coordinate: 1.6
+  default_ensemble: 3000
+  default_timestep: 0.004
+  default_horizon: 400
+  default_friction: 1
+  estimator: inverse mean event time among paths completed before the horizon
+  low_completion_rule: return zero when completion fraction is below 0.05
+exact_backward_comparator:
+  barrier_energy: 3
+  absorbing_coordinate: 1.6
+  barrier_ratios: [2, 3, 4, 5]
+  inverse_mfpt: [0.6223894195, 0.2578477751, 0.1092332394, 0.04564713995]
+  log_rate_fit_slope: -0.8696759
+  source_reported_seeded_slope: -0.84
+  deep_source_point:
+    barrier_energy: 20
+    thermal_scale: 1
+    exact_mfpt: 4937386.201077601
+    exact_inverse_mfpt: 2.025363136e-7
+    source_output: 0.0 by the below-five-percent classifier
+verdict: >-
+  Reproduced. The source supplies finite-seed resolution-bounded evidence for
+  its explicitly declared dimensionless Euler-Maruyama discretization. The
+  terminal tally does not establish an uncensored MFPT, constant hazard,
+  physical Kramers prefactor, temperature optimum, collective inertia,
+  population dynamics, ignition, DBD event, or material map.

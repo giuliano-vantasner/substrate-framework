@@ -1,0 +1,56 @@
+campaign: P103
+direct_framework_consumers:
+  - path: src/substrate_framework/__init__.py
+    verdict: additive pure exports only
+  - path: tests/test_first_passage.py
+    verdict: fourteen focused exact numeric censoring simulation and domain tests pass
+  - path: proposals/P103-bd5-kramers-escape-audit/verify.py
+    verdict: ALL 37 CHECKS PASS
+  - path: proposals/P103-bd5-kramers-escape-audit/reviews/independent_first_passage_review.py
+    verdict: ALL 21 CHECKS PASS without canonical first-passage imports
+pinned_source_and_narrative_consumers:
+  - path: merged-framework/bridges/phase-28/dossiers/Phase28-BD-dossier.md
+    sha256: 4f653ae1879ddca022f579aa4ab04c62552918b5fd27786bcf04005f8d332548
+    git_blob: 90845b9b6a0c14fb9eccc72fd33645cb49a78d6b
+    execution: narrative only
+    verdict: repeats BD5's Kramers optimum and ignition headlines without repairing censoring or dependencies
+  - path: pulson-backreaction-bridge/simulations/excess_heat_gating.py
+    sha256: 33c5e1284120129f44efe649ec6654358ee4200f5a972fe02f13d3eb1d9f6bc0
+    git_blob: 5c287046395402656858e2b7cf7059aabc16ee50
+    execution: function-only sampled MFPT route compared at four grids and four barrier ratios
+    verdict: >-
+      Its np.trapezoid double integral converges at second order to C-FPT-001
+      and is useful corroboration. Calling n_grid=1200 exact and treating
+      constant negative curvature at a nonstationary reflecting boundary as a
+      well curvature are overstatements.
+  - path: pulson-backreaction-bridge/simulations/run_confirmation_c014.py
+    sha256: a22a62fdf6464750e5e0f9edf719f28b7441f71a55f97dffa76b2c0f7907daa5
+    git_blob: 136cd31a831f20212084c17c94a0c401d8a16377
+    execution: not run because import creates and the driver overwrites figures in the read-only evidence repository
+    verdict: mixes the useful conditional MFPT route with noncanonical retention, LENR magnitude, and material narratives; it is not an affected canonical consumer
+  - path: pulson-backreaction-bridge/simulations/adversarial_check_c014.py
+    sha256: 4c097df435a4e79473e619d2b8bf19d00dfb89949f357f29b26f6a6a83edeeef
+    git_blob: f90be09a22bbd864f5c116706735cdd66535ecf9
+    execution: static audit only; its long simulation is superseded by the exact and independently refined P103 routes
+    verdict: >-
+      It usefully requires near-complete escape before completed-time inference
+      and recognizes finite-window prefactor softening. Its exponential-survival
+      fit and absorbing-wall independence are asymptotic model assumptions, not
+      exact first-passage theorems.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung091_R_gate_medium_escape.py
+    sha256: 5872457368e81ad07760f17ebebe5b522c2f7a66acce0a1a37802ed3f91d323d
+    git_blob: e2980b67737bfec9ed7f303619d5ebb4122e0ead
+    execution: ALL 21 CHECKS PASS
+    verdict: >-
+      Barrier differentiation and dimensions reproduce. Multiplying by R_star
+      closes units but does not derive mobility, attempt frequency, stochastic
+      prefactor, material bath, precursor identity, or event rate.
+compatibility:
+  mutable_np_trapz_consumers: []
+  immutable_np_trapz_abort: none
+  current_numpy_calls: legacy sampled MFPT already uses np.trapezoid
+impact: >-
+  C-FPT-001 adds a new module and symbols. Repository collision search finds no
+  pre-existing canonical consumer or symbol, so existing execution paths are
+  unchanged; legacy files are predecessor evidence rather than imports of the
+  new API.

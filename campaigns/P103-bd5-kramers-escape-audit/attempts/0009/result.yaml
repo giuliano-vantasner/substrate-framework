@@ -1,0 +1,36 @@
+campaign: P103
+attempt: 9
+route: repaired_primary_exact_numeric_stochastic_and_source_verifier
+status: passed
+command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 37 CHECKS PASS [C-FPT-001]
+oracle:
+  exact:
+    - fundamental-theorem derivation of the reflected backward equation and both boundary data
+    - additive-potential invariance, uniqueness, linear-force formula, zero-force limit, dimensions, and censoring decomposition
+  numeric:
+    - adaptive SciPy nested quadrature at tolerances 1e-8, 1e-10, and 1e-12
+    - exact linear controls, absorbing-boundary and drift-sign mutations
+    - quadratic-barrier ratios two through twenty and boundary-well Laplace asymptotic
+  stochastic_regression:
+    - Euler-Maruyama timesteps 0.008, 0.004, and 0.002 at 12000 paths, fixed seed 31003, and horizon 40
+    - independent ensemble sizes 2000, 4000, and 8000 at dt 0.004 with recorded standard errors
+surviving_results:
+  - The exact integral solves the declared reflected-to-absorbing MFPT problem and the adaptive evaluator is tolerance stable.
+  - The source quadratic family has exact inverse-MFPT log slope -0.8696759 over ratios two through five, not a pure unit-slope exponential because the reflecting boundary is not a stationary well and the prefactor changes with the ratio.
+  - The deep-boundary asymptotic error decreases through ratios 8, 12, 16, and 20 and is 2.71 percent at ratio 20.
+  - The source absorbing point and drift sign are load bearing.
+  - Completed-only, restricted, uncensored mean, inverse mean, and thresholded zero remain distinct.
+  - At ratio three and horizon 40, the two finest ensembles are effectively uncensored and statistically compatible with the exact backward MFPT; timestep and ensemble changes were varied separately.
+  - The exact coth scale and selected source response points are monotonic; the source half-ratio is assigned rather than optimized.
+  - The population algebra is accepted but absent from the executable escape function.
+next_route: >-
+  Independently rederive the integral and soluble controls without importing the
+  canonical first-passage module, compare a direct high-precision quadrature
+  with a refined backward collocation solve, and audit nonexponential and
+  censoring counterexamples before source predicate and consumer adjudication.
+debt:
+  - independent review
+  - source check ledger, dependency and consumer audits, claim review, disposition, promotion, and integrated validation

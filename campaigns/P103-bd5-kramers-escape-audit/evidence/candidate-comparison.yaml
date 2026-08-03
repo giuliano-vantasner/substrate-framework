@@ -1,0 +1,44 @@
+campaign: P103
+selection_basis:
+  - accepted dependency closure and nonduplication
+  - exact backward derivation and boundary data
+  - dimensions positivity invariance limits and mutation sensitivity
+  - independent method convergence and explicit censoring semantics
+  - assumption and parameter economy
+  - interpretation and consumer closure before comparator closeness
+candidates:
+  - id: A
+    decision: reproduction_evidence_only
+    reason: the source tally confirms execution but not its rate optimum ignition or convergence headlines
+  - id: B
+    decision: selected
+    reason: exact integrating-factor calculus gives the positive unique reflected MFPT theorem
+  - id: C
+    decision: selected
+    reason: adaptive quadrature and independent high-precision/collocation routes meet frozen error gates
+  - id: D
+    decision: selected_as_regression_evidence
+    reason: explicit timestep and ensemble studies agree statistically with the stronger backward oracle when censoring is negligible
+  - id: E
+    decision: selected
+    reason: exact conditional-mean and free-diffusion counterexamples separate MFPT completed means restricted means and hazards
+  - id: F
+    decision: selected_as_qualified_asymptotic
+    reason: the reflecting boundary has a linear leaving slope and a boundary-well prefactor rather than the source's stationary-well prefactor
+  - id: G
+    decision: selected
+    reason: absorbing position drift sign reflection and noise coefficients are load bearing
+  - id: H
+    decision: selected_as_interpretation_ceiling
+    reason: accepted coth algebra and selected monotonic response do not define a finite optimum
+  - id: I
+    decision: selected_as_interpretation_ceiling
+    reason: population and collective narratives are absent from the executable stochastic function and no event consumer closes them
+claim_decision:
+  C-FPT-001: accepted after integrated promotion gate
+source_decision:
+  BD5: qualified
+nonselection_by_comparator: >-
+  The exact theorem and method choices were frozen before renewed source
+  execution. The source's -0.84 slope is reported only after structural
+  selection and does not set a tolerance or select the claim.

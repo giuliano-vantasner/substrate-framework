@@ -1,0 +1,28 @@
+campaign: P103
+attempt: 2
+route: importable_reflected_first_passage_api_and_focused_tests
+status: passed
+command: .venv/bin/python -m pytest -q tests/test_first_passage.py
+process:
+  exit_status: 0
+  terminal_tally: 14 passed in 1.16s
+artifacts:
+  module: src/substrate_framework/first_passage.py
+  exports: src/substrate_framework/__init__.py
+  tests: tests/test_first_passage.py
+surviving_results:
+  - A pure adaptive evaluator implements the positive reflected-to-absorbing MFPT integral with explicit interval, initial point, thermal scale, friction, and tolerances.
+  - Exact linear-force and zero-force formulas provide soluble controls, including the removable zero-force limit.
+  - The evaluator is invariant under an additive potential constant and records outer and inner quadrature errors.
+  - Censored summaries keep completed-only and restricted means distinct, while the five-percent source classifier is named as a threshold convention.
+  - The seeded Euler-Maruyama API records reflection, absorption, timestep, horizon, ensemble, seed, event times, and censoring without executing on import.
+  - Canonical code contains no np.trapz call; adaptive integration uses scipy.integrate.quad and no sampled trapezoidal alias.
+next_route: >-
+  Independently solve the backward boundary-value problem under tolerance
+  refinement and compare it with the adaptive integral across the source
+  quadratic-barrier family before constructing the mutation-sensitive campaign
+  verifiers.
+debt:
+  - exact primary and independent BVP verifiers
+  - source parameter and censoring quantification
+  - consumers, review, disposition, promotion, and integrated validation

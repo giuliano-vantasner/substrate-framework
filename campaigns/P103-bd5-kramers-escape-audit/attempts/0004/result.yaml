@@ -1,0 +1,27 @@
+campaign: P103
+attempt: 4
+route: first_primary_exact_numeric_and_stochastic_verifier
+status: failed_verifier_threshold
+command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+process:
+  exit_status: 1
+  passed_before_failure: 24
+  terminal_error: 'CheckFailure: drift-sign mutation changes the first-passage observable'
+observed:
+  canonical_drift_mfpt: 3.878257238203373
+  reversed_drift_mfpt: 0.9627779107799436
+  ratio: 0.2482501421762205
+diagnosis: >-
+  The drift-sign mutation changes the MFPT by a factor exceeding four and is
+  plainly load bearing. The verifier instead required the reversed value below
+  an unregistered factor 0.2, confusing an arbitrary effect-size cutoff with
+  mutation sensitivity. This is verifier strictness without claim content, not
+  a failure of the exact route.
+next_route: >-
+  Require the sign mutation to reduce the MFPT by more than a factor three,
+  which directly demonstrates a large load-bearing effect without encoding the
+  already observed decimal as the target. Rerun the complete verifier and
+  preserve any later failure separately.
+debt:
+  - complete the repaired primary verifier
+  - independent backward-equation review and remaining campaign records

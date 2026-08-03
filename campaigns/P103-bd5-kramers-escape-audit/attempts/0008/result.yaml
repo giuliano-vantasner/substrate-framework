@@ -1,0 +1,20 @@
+campaign: P103
+attempt: 8
+route: repaired_primary_verifier_through_population_non_coupling_check
+status: failed_implementation_argument_order
+command: PYTHONPATH=src .venv/bin/python proposals/P103-bd5-kramers-escape-audit/verify.py
+process:
+  exit_status: 1
+  passed_before_failure: 34
+  terminal_error: 'ValueError: per_source_scale must be provably positive'
+diagnosis: >-
+  The verifier called population_activation_scale as (population, coherence,
+  per_source_scale), but the canonical API is (population, per_source_scale,
+  coherence). Passing zero into the positive scale slot correctly triggered the
+  domain guard. The source algebra and no-coupling question were not evaluated.
+next_route: >-
+  Correct the argument order, retaining exact rational scale and endpoint
+  coherence values, then rerun the complete primary verifier.
+debt:
+  - complete the corrected primary verifier
+  - independent backward-equation review and remaining campaign records
