@@ -1,0 +1,55 @@
+campaign: P102
+base_release: v0.85.0
+base_commit: fcede2ea89da17030f99888779e618ec5b4f9617
+preregistration_commit: 0f85641
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+claim_delta: [C-COL-001]
+primary:
+  command: PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/verify.py
+  oracle: SymPy exact field pullback, integration, Euler-Lagrange calculus, characteristic roots, dimensions, coordinate covariance, rank, nullspace, mutations, source AST, hash, registry, and canonical API audit
+  terminal_tally: ALL 46 CHECKS PASS [C-COL-001]
+  exit_status: 0
+independent:
+  command: PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+  oracle: fresh field chain rule, reduced Euler-Lagrange derivation, characteristic roots, capillary differentiation, coordinate transformation, concrete profile integrals, dimensions, scaling, and identifiability
+  canonical_collective_coordinate_imports: []
+  terminal_tally: ALL 17 CHECKS PASS [C-COL-001-INDEPENDENT]
+  exit_status: 0
+focused_tests:
+  command: .venv/bin/python -m pytest -q tests/test_collective_coordinates.py tests/test_dimensional_sine_gordon.py tests/test_radial_energy.py tests/test_variational.py tests/test_explicit_breaking.py
+  tally: 71 passed in 3.97s
+source_reproduction:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+  tally: ALL 14 CHECKS PASS
+formal_replay:
+  command: lake env lean ../merged-framework/bridges/phase-28/lean/Phase28BarrierKernel.lean
+  exit_status: 0
+consumer_replay:
+  engineering_barrier_scaling: ALL 16 CHECKS PASS
+  pending_BD5: ALL 13 CHECKS PASS
+  legacy_rung108: ALL 11 CHECKS PASS
+  legacy_rung144: ALL 4 CHECKS PASS
+mutations:
+  - geometric-integral dimension
+  - Euler-Lagrange connection coefficient
+  - potential force
+  - stationary curvature sign
+  - coordinate Jacobian square
+countermodels:
+  - coordinate-independent profile with zero inertia
+  - non-square-integrable profile with divergent inertia
+  - nonlinear nonstationary coordinate map with a gradient Hessian term
+  - inertia-only versus common-action scaling
+  - one-dimensional barrier-plus-rate parameter orbit
+numeric_or_simulation_claims: none
+quadrature: exact symbolic integration only
+numpy_imports_in_exact_new_work: none
+integrated_gate:
+  command: scripts/validate.sh
+  evidence: attempts/0011/result.yaml
+  exit_status: 0
+  workflow_tally: WORKFLOW VALID 116 claims 116 accepted 0 proposals 218 units 118 pending 0 partial
+  memory_tally: All 433 file(s) valid
+  pytest_tally: 928 passed in 84.80s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+status: integrated_evidence_passed

@@ -1,0 +1,33 @@
+campaign: P102
+attempt: 8
+route: primary_and_independent_exact_collective_coordinate_derivations
+status: exact_campaign_routes_passed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+process:
+  primary_exit_status: 0
+  primary_tally: ALL 46 CHECKS PASS [C-COL-001]
+  independent_exit_status: 0
+  independent_tally: ALL 17 CHECKS PASS [C-COL-001-INDEPENDENT]
+surviving_results:
+  - The exact field chain rule gives M(q)=lambda*integral((partial_q phi)^2 dx) for a declared profile family and domain.
+  - The reduced equation is M*qddot+M_q*qdot^2/2+U_q=0.
+  - At a positive-inertia rest stationary point, U''>0 is stable, U''=0 is neutral, and U''<0 is exponentially unstable.
+  - Metric and stationary Hessian co-transform under smooth coordinate changes, leaving their ratio invariant.
+  - C-RG-001's maximum has instability rate sqrt(2*pi*P/M), not a stable angular frequency.
+  - Profile, cross-sector, normalization, and barrier-plus-rate identifiability ceilings remain explicit.
+mutations:
+  - geometric-integral dimension exponent
+  - Euler-Lagrange connection coefficient and potential force
+  - curvature sign
+  - coordinate Jacobian square
+counterexamples:
+  - zero profile derivative
+  - divergent profile derivative integral
+  - nonstationary nonlinear coordinate map with a gradient Hessian term
+  - inertia-only versus common-action scaling
+next_route: Audit the formalization and every direct narrative or executable consumer, then materialize claim-level promotion evidence.
+debt:
+  - source predicate, formal, consumer, candidate, dependency, impact, and review records
+  - governance, release, generated state, and integrated replay

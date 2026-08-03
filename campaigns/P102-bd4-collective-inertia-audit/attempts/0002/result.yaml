@@ -1,0 +1,25 @@
+campaign: P102
+attempt: 2
+route: initial_canonical_collective_coordinate_module_and_focused_tests
+status: failed_representation_canonicalization
+command: .venv/bin/python -m pytest -q tests/test_collective_coordinates.py
+process:
+  exit_status: 1
+  tally: 1 failed 13 passed in 1.65s
+failure:
+  test: test_gaussian_profile_has_finite_positive_pullback_metric
+  observed: >-
+    SymPy returned -(2*q-2*x)*exp(-(x-q)^2/(2*ell^2))/(2*ell^2) while
+    the test compared structural equality with
+    (x-q)*exp(-(x-q)^2/(2*ell^2))/ell^2.
+  diagnosis: >-
+    The expressions are exactly algebraically equal. This is an output
+    canonicalization and representation-sensitive assertion defect, not a
+    failed profile pullback or source candidate.
+repair: >-
+  Simplify the profile derivative at the canonical API boundary, then rerun the
+  focused tests. Retain algebraic-zero comparisons for identities whose normal
+  form is not part of the public contract.
+debt:
+  - rerun focused collective-coordinate tests after the narrow repair
+  - continue primary, independent, consumer, governance, and integrated gates

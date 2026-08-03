@@ -1,0 +1,29 @@
+campaign: P102
+attempt: 6
+route: campaign_rerun_after_nullspace_and_characteristic_root_repairs
+status: later_oracle_text_and_dummy_symbol_representation_defects
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+process:
+  primary_exit_status: 1
+  primary_passes_before_stop: 43
+  independent_exit_status: 1
+  independent_passes_before_stop: 10
+failures:
+  - route: primary
+    observed: The dependency-ceiling check rejected C-RG-001 because its unrelated line-density symbol is also spelled lambda.
+    diagnosis: A token-absence test cannot distinguish C-RG-001's line-density coordinate from C-MED-003's kinetic coefficient. The exact claim relationship and missing cross-reference are the oracle.
+  - route: independent
+    observed: The full nonlinear Hessian identity simplified to zero, but SymPy represented the first-derivative term through a dummy-variable Subs node, defeating a raw has(Derivative(U(q),q)) query.
+    diagnosis: The graded chain-rule identity is correct. Dummy-variable normalization is an internal representation and must not be the load-bearing test.
+repair: >-
+  Check that the accepted capillary specialization neither depends on C-MED-003
+  nor supplies an inertia/profile, while C-MED-003 supplies no capillary sector.
+  Construct the nonlinear gradient term explicitly and test exact decomposition,
+  nonzero second Jacobian, and nonvanishing term without matching a raw internal
+  derivative tree.
+debt:
+  - rerun both exact campaign routes after the narrow oracle repairs
+  - source predicate and consumer evidence
+  - claim review, governance, release, generated state, and integrated replay

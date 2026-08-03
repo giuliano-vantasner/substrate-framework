@@ -1,0 +1,38 @@
+campaign: P102
+selection_basis:
+  - accepted dependency closure and nonduplication
+  - exact variational derivation, factor normalization, dimensions, sign, and coordinate covariance
+  - profile existence, regularity, and mutation-sensitive counterexamples
+  - normalization and identifiability ceilings
+  - separation of local stationary dynamics from onset, escape, and event interpretations
+  - no selection by source tally, narrative confidence, or later comparator values
+candidates:
+  A:
+    decision: selected_as_reproduction_only
+    reason: The pinned source exits with fourteen checks, but the check-level audit separates exact dimension predicates from unsupported narrative conclusions.
+  B:
+    decision: selected_as_claim_ceiling
+    reason: Dimensions close conditionally but zero and divergent profile families show that dimension closure does not prove an admissible inertia.
+  C:
+    decision: selected_and_promoted
+    reason: Direct field-chain-rule substitution derives the exact kinetic pullback for a declared admissible profile family.
+  D:
+    decision: selected_and_promoted
+    reason: Direct Euler-Lagrange differentiation derives the variable-metric equation and its one-half connection coefficient.
+  E:
+    decision: selected_and_promoted
+    reason: Characteristic roots classify positive, zero, and negative curvature; the accepted capillary maximum is exponentially unstable.
+  F:
+    decision: selected_and_promoted
+    reason: Metric and Hessian co-transform at stationarity, while a nonlinear nonstationary map exposes the extra gradient term.
+  G:
+    decision: selected_as_assumption_and_counterexample_ledger
+    reason: Concrete finite, zero, divergent, and coordinate-rescaled profiles keep existence and normalization premises visible.
+  H:
+    decision: selected_as_normalization_and_identifiability_ceiling
+    reason: Common action scaling cancels, inertia-only scaling does not, and barrier-plus-rate observations retain a constructive null direction.
+  I:
+    decision: selected_as_consumer_and_interpretation_ceiling
+    reason: Formal and executable consumers do not close the missing profile, stable-mode, hbar-onset, stochastic, or event dependencies.
+selected_claims: [C-COL-001]
+source_disposition: qualified

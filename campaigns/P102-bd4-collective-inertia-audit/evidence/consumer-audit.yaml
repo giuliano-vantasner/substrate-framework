@@ -1,0 +1,64 @@
+source_unit: BD4
+executable_consumers:
+  - path: engineering/barrier_scaling.py
+    sha256: 8aff859aeff9bd2d317f3c458faa9e617e3865d3c8e12a6b198c15d92cf85014
+    git_blob: 2650b4ed068f673c33094be06734db1f04d1f466
+    command: /home/dan/substrate-framework/.venv/bin/python engineering/barrier_scaling.py
+    result: ALL 16 CHECKS PASS
+    classification: narrative_only_bd4_dependency
+    audit: BD4 appears only in the docstring; no executable m_R, lambda, kappa_geom, omega_R, or stationary-spectrum path exists.
+  - path: merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+    sha256: fd1fd9e54990bbac4a60bc669a37f1c15a89ebd2595203aef7d2bddb88b99cf9
+    git_blob: 6cfb444f3ab0bda8b456ac188f00a7faf904ccb8
+    disposition: pending_adjudication
+    command: /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+    result: ALL 13 CHECKS PASS
+    classification: narrative_only_bd4_dependency
+    audit: The executable model is overdamped with supplied gamma and contains no m_R, lambda, kappa_geom, or omega_R. Its simulation cannot validate BD4 inertia or onset linkage; P103 must adjudicate its own stochastic and statistical claims.
+noncanonical_independent_consumers:
+  - path: pulson-backreaction-bridge/sympy/rungs/rung108_r2_inertial_onset_ordering_is_costume.py
+    sha256: 25ace908f4767f51bb91343b3ed490f45b8316664c63c78498c38f0d9a6d17c1
+    git_blob: 0c8740374207d47c1d420f881822416a895ac047
+    result: ALL 11 CHECKS PASS
+    audit: Independently classifies the capillary point as a barrier-top growth-rate magnitude and retains free bulk-speed, profile, and core terms.
+  - path: pulson-backreaction-bridge/sympy/rungs/rung144_c023_omega_native_but_Rstar_unstable.py
+    sha256: bae40f1ebd73c2f03d8c829ccb5c01ee9d91e8f139d3d01ef79783c3a21aaa2e
+    git_blob: 152c16efd23b27e3174a60347c1aa78a4e8bf0ca
+    result: ALL 4 CHECKS PASS
+    audit: Independently proves positive inertia leaves negative capillary curvature unstable and distinguishes it from a stable field dispersion.
+narrative_consumers:
+  - path: merged-framework/bridges/phase-28/dossiers/Phase28-BD-dossier.md
+    sha256: 4f653ae1879ddca022f579aa4ab04c62552918b5fd27786bcf04005f8d332548
+    audit: Corrects frequency to a barrier-top growth-rate magnitude in one section, but later calls the unspecified profile integral derived and order one.
+  - path: merged-framework/README.md
+    sha256: 0af39d9fe57c236557931461bea59b848822df8265741ce3a4a506aab07aafe4
+    audit: Overstates the inertia and ceiling retirement as derived.
+  - path: merged-framework/frontier.md
+    sha256: 12a3dbcd32367fbb852cd76cc4bd42c2f85d179b9d179514045d2c16ce89a79f
+    audit: Repeats the source headline without the profile and saddle qualifications.
+  - path: merged-framework/UNIFIED-SYNTHESIS.md
+    sha256: 0578180e84f54e3bdae9c487b5073e4849519712dc0281ee0726972a35bdfea6
+    audit: Calls the mass genuine, the scale a real frequency, and the flip attributable to lambda alone; those statements exceed the executable checks.
+canonical_framework_consumers:
+  - src/substrate_framework/collective_coordinates.py
+  - src/substrate_framework/__init__.py
+  - tests/test_collective_coordinates.py
+  - proposals/P102-bd4-collective-inertia-audit/verify.py
+  - proposals/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+gitnexus:
+  index_refreshed_at_commit: 0f85641
+  target: collective_coordinate_metric
+  upstream_risk: LOW
+  preexisting_impacted_symbols: 0
+  affected_processes: 0
+  staged_detect_changes:
+    changed_symbols: 70
+    changed_files: 38
+    affected_existing_symbols: 0
+    affected_processes: 0
+    risk: LOW
+  note: The API is additive and the final staged graph replay finds no affected existing flow.
+verdict: >-
+  Executable consumers remain operational but do not use or validate the BD4
+  inertia. Later legacy evidence supports P102's sign classification. Source
+  prose conflicts are quarantined as noncanonical evidence and are not silently edited.

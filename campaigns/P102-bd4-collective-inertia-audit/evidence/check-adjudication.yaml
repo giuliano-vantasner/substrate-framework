@@ -1,0 +1,70 @@
+source_unit: BD4
+checks:
+  - line: 80
+    predicate: no displayed pre-Rung-C object equals inertia dimension (1,-2,2)
+    verdict: accepted_conditional
+    qualification: The finite displayed set is checked exactly; this is not a theorem about every framework object or monomial import.
+    maps_to: [C-COL-001]
+  - line: 85
+    predicate: every displayed pre-Rung-C object has zero time exponent
+    verdict: accepted_conditional
+    qualification: Products and powers of only those static dimensions cannot produce a nonzero time exponent.
+    maps_to: [C-COL-001]
+  - line: 90
+    predicate: curvature divided by the required inertia has squared-frequency dimension
+    verdict: accepted_dimension_only
+    qualification: The exponent identity is exact but does not establish existence, stability, or a physical frequency.
+    maps_to: [C-COL-001]
+  - line: 106
+    predicate: c^2=T/lambda fixes lambda dimension (1,-1,2)
+    verdict: accepted_duplicate
+    maps_to: [C-MED-003]
+  - line: 109
+    predicate: the same lambda dimension gives omega_0^2=mu/lambda
+    verdict: accepted_duplicate
+    maps_to: [C-MED-003]
+  - line: 112
+    predicate: lambda has a nonzero time exponent and is the first dynamical medium object
+    verdict: qualified
+    qualification: The nonzero exponent is accepted. First is established only relative to the displayed set, not the entire chronological corpus.
+    maps_to: [C-MED-003]
+  - line: 123
+    predicate: lambda times an inverse-length profile integral has inertia dimension (1,-2,2)
+    verdict: accepted_conditional
+    qualification: P102 derives the pullback under an admissible profile family; the source supplies only the integral's dimension and no profile or convergence proof.
+    maps_to: [C-COL-001]
+  - line: 131
+    predicate: the augmented set now supplies the inertia
+    verdict: qualified_constructed
+    qualification: The source inserts m_R after assuming kappa_geom. Lambda alone does not select the geometric factor, its value, or a cross-sector profile.
+    maps_to: [C-COL-001]
+  - line: 138
+    predicate: sqrt(2*pi*P/m_R) is a genuine frequency
+    verdict: qualified_wrong_stability_label
+    qualification: It has inverse-time dimension, but C-RG-001's curvature is negative and the scale is an unstable exponential rate, not a stable angular frequency.
+    maps_to: [C-RG-001, C-COL-001]
+  - line: 145
+    predicate: the symbolic square-root construction makes barrier curvature a frequency
+    verdict: qualified_identity_only
+    qualification: The squared identity is exact for positive inserted symbols; it does not derive the profile, sign classification, or physical mode.
+    maps_to: [C-COL-001]
+  - line: 152
+    predicate: eliminating P makes barrier amplitude and onset frequency non-independent
+    verdict: rejected_interpretive_overreach
+    qualification: Elimination leaves T, lambda, kappa_geom, and the local rate; a rank-two observation map retains a null direction and no accepted claim identifies this rate with the legacy slow onset mode or hbar times it.
+    maps_to: []
+  - line: 161
+    predicate: the displayed pre-Rung-C set still lacks inertia without lambda
+    verdict: accepted_conditional
+    maps_to: [C-COL-001]
+  - line: 164
+    predicate: the ceiling flips only by adding lambda
+    verdict: rejected_constructed_flip
+    qualification: The augmented set adds both lambda and a newly assumed profile factor and then inserts m_R itself. The source does not establish attribution to lambda alone.
+    maps_to: []
+  - line: 171
+    predicate: symbol absence proves lambda is independently sourced and not back-solved
+    verdict: rejected_weak_oracle
+    qualification: Absence from a hand-built Python set is not provenance, measurement, or a coupling theorem; C-MED-003 also retains a common coefficient ray.
+    maps_to: []
+terminal_verdict: qualified

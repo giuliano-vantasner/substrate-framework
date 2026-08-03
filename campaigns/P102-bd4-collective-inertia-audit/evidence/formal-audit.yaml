@@ -1,0 +1,19 @@
+formalization:
+  path: merged-framework/bridges/phase-28/lean/Phase28BarrierKernel.lean
+  sha256: 917316286d04ef3660b364146effe124aad0858c1066e7f1dc4c9766b5cb3f7b
+  git_blob: 0721e66321757c3f365faa3e5c41b74d2f3685d1
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+command: >-
+  cd /home/dan/substrate/sg-breather-ionization && lake env lean
+  ../merged-framework/bridges/phase-28/lean/Phase28BarrierKernel.lean
+exit_status: 0
+axioms: Mathlib only; source contains no sorry
+theorem_audit:
+  mR_closes: Exact componentwise addition of two declared dimension triples.
+  ceiling_retired: A conjunction of mR_closes, absence of one dimension from a finite list, and nonzero lambda time exponent; it encodes no profile, action, equation of motion, stability, onset, or escape claim.
+  omega_R_is_frequency: An integer exponent difference equal to squared inverse-time dimension; it does not define a square root or classify the curvature sign.
+  BD_L: A conjunction of the dimension identity, finite-list absence, an unrelated scalar gate bound, and the numerical inequality sqrt(40)<40; it proves no physical coupling among them.
+verdict: >-
+  The file compiles and exactly proves its weak encodings. Its theorem names and
+  comments overinterpret those encodings; it supports only dimension and separate
+  algebraic subclaims, not BD4's profile, frequency, onset, or ceiling-retirement headline.

@@ -1,0 +1,27 @@
+campaign: P102
+attempt: 10
+route: staged_governance_and_generated_state_targeted_validation
+status: governance_passed_primary_registry_phrase_mismatch
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P102-bd4-collective-inertia-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+  - .venv/bin/python scripts/render_docs.py --check
+  - .venv/bin/python scripts/render_memory.py --check
+  - git diff --check
+process:
+  repository_exit_status: 0
+  repository_tally: WORKFLOW VALID 116 claims 116 accepted 0 proposals 218 units 118 pending 0 partial
+  primary_exit_status: 1
+  primary_passes_before_stop: 44
+  independent_exit_status: 0
+  independent_tally: ALL 17 CHECKS PASS [C-COL-001-INDEPENDENT]
+  generated_checks_exit_status: 0
+  diff_check_exit_status: 0
+failure:
+  observed: The accepted statement says These results do not supply, while the registry-aware verifier searched for does not supply.
+  diagnosis: The exact interpretation ceiling is present. Only grammatical-number wording in a prose regression predicate differed.
+repair: Match the accepted plural clause without changing the claim or scientific oracle.
+debt:
+  - rerun the primary verifier after the literal repair
+  - run the single integrated promotion gate and final staged impact check

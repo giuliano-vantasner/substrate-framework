@@ -1,0 +1,21 @@
+campaign: P102
+attempt: 7
+route: campaign_rerun_after_dependency_and_chain_rule_repairs
+status: independent_passed_primary_registry_phrase_mismatch
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+process:
+  primary_exit_status: 1
+  primary_passes_before_stop: 43
+  independent_exit_status: 0
+  independent_tally: ALL 17 CHECKS PASS [C-COL-001-INDEPENDENT]
+failure:
+  route: primary
+  observed: The accepted C-RG-002 statement says k-omega dispersion, while the verifier searched for k-omega relation.
+  diagnosis: The claim carries the intended explicit ceiling; only the exact prose token in the registry-aware regression check was stale.
+repair: Match the accepted phrase k-omega dispersion without changing the scientific predicate.
+debt:
+  - rerun the primary verifier after the literal repair
+  - source predicate and consumer evidence
+  - claim review, governance, release, generated state, and integrated replay

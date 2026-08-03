@@ -1,0 +1,39 @@
+source_unit: BD4
+literal_check_calls: 14
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, sympy]
+accepted_framework_imports: []
+local_helpers: [PASS, check, dim]
+declared_equations:
+  continuum_density: L=lambda*u_t^2/2-T*u_x^2/2-mu*(1-cos(u))
+  proposed_inertia: m_R=lambda*kappa_geom with kappa_geom described as integral((partial_R u)^2 dx)
+  capillary_curvature_magnitude: abs(E_second(R_star))=2*pi*P
+  proposed_scale: omega_R=sqrt(2*pi*P/(lambda*kappa_geom))
+  barrier: E_star=pi*T_tension^2/P
+what_the_checks_cover:
+  - exact equality and time exponents of displayed dimension vectors
+  - the accepted C-MED-003 lambda dimension derived from c and omega_0 ratios
+  - dimension addition after assigning an inverse-length geometric factor
+  - an algebraic square-root identity with positive symbols
+  - elimination of the shared symbol P
+  - absence of lambda from a hand-built barrier-object set
+missing_oracles_repaired_by_P102:
+  - an actual differentiable profile family, domain, and field chain rule
+  - finite, nonzero, positive profile-integral evidence and zero/divergent counterprofiles
+  - the variable-metric reduced Euler-Lagrange equation and kinetic half factor
+  - stationary-point curvature-sign classification and characteristic roots
+  - coordinate-reparameterization covariance and nonstationary Hessian chain term
+  - common-action versus inertia-only scaling
+  - barrier-plus-rate rank, nullspace, and constructive non-identifiability
+  - accepted cross-sector dependency and hbar/onset/escape audits
+  - formal theorem encoding and downstream executable-consumer audits
+unsupported_source_interpretations:
+  - lambda alone selects a radius profile or supplies a finite nonzero inertia
+  - C-MED-003 and C-RG-001 are already sectors of one accepted physical action
+  - the capillary maximum has a stable natural frequency
+  - eliminating P identifies the legacy slow mode or an onset energy
+  - the remaining tension, inertia, profile, and normalization inputs form a one-parameter material law
+  - symbol absence proves an independently measured constitutive input
+  - a local instability scale proves stochastic escape, thermal crossover, ignition, or an observed event
+audit_verdict: qualified

@@ -1251,6 +1251,41 @@ units:
       isotope, payload, and power maps remain noncanonical. BD4, BD5, CM2, and
       CM4 remain pending for independent audits; exact P101 work imports no
       NumPy or quadrature.
+  BD4:
+    disposition: qualified
+    accepted_claims:
+      - C-MED-003
+      - C-RG-001
+      - C-COL-001
+    qualification: >-
+      BD4's displayed old-object dimensions, C-MED-003 lambda dimension, and
+      conditional profile-pullback form survive. P102 derives the actual
+      field chain rule, finite positive metric premises, variable-metric
+      Euler-Lagrange equation, stationary sign classification, coordinate
+      covariance, scaling and identifiability ceilings, and zero/divergent
+      profile counterexamples. The source supplies no profile or accepted
+      action coupling the continuum and capillary sectors. C-RG-001's point is
+      a strict maximum, so sqrt(2*pi*P/M) is an unstable exponential rate, not
+      a stable mode. Eliminating P leaves free tension, inertia, profile, and
+      normalization inputs and does not identify the legacy slow mode, hbar
+      onset, stochastic escape, ignition, or observed event. The Lean file
+      proves only weaker dimension and separate algebraic encodings.
+    evidence:
+      - campaigns/P102-bd4-collective-inertia-audit/reviews/source_adjudication.md
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/source-reproduction.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/source-audit.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/check-adjudication.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/dependency-audit.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/formal-audit.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/consumer-audit.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/evidence/candidate-comparison.yaml
+      - campaigns/P102-bd4-collective-inertia-audit/verify.py
+      - campaigns/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+      - memory/vantasner/decisions/C-COL-001-review.md
+    note: >-
+      P102 promotes only the dependency-closed conditional collective-coordinate
+      theorem. BD5 remains pending for its own stochastic, convergence, and event
+      audit. Exact P102 work imports no NumPy and uses no numerical quadrature.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

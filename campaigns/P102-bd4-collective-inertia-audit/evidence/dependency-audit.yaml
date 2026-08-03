@@ -1,0 +1,38 @@
+source_unit: BD4
+accepted_dependency_closure:
+  - claim: C-MED-003
+    role: declared field kinetic density, coefficient dimensions, and common coefficient-scale ceiling
+  - claim: C-RG-001
+    role: declared capillary energy, stationary radius, and strict-maximum curvature sign
+  - claim: C-VAR-001
+    role: common-action multiplier consistency only
+  - claim: C-BRK-001
+    role: independently supplied kinetic-coefficient versus Hessian consistency anchor only
+proposed_claim:
+  id: C-COL-001
+  role: admissible profile pullback, reduced equation, stationary classification, coordinate covariance, and capillary-top specialization
+  dependencies: [C-MED-003, C-RG-001]
+predecessor_resolution:
+  label: M2
+  path: pulson-backreaction-bridge/sympy/rungs/rung098_material_handle.py
+  sha256: 2e5034841668d10684ef23ac4a1fb7e71d6f08e0c66086c951760049cccd7ee1
+  git_blob: f9b797be1e19659142a1ae94e106737f98cd3fe0
+  resolution: >-
+    BD4 means leg M2 of legacy rung098, not the unrelated phase-7 source unit
+    M2. Rung098 already identifies the capillary point as an inverted saddle and
+    names an inertia as missing; it is noncanonical predecessor evidence.
+missing_dependencies:
+  - an accepted differentiable finite-energy field-profile family parameterized by capillary radius
+  - boundary and regularity conditions proving a finite positive profile integral
+  - an accepted action coupling C-MED-003's continuum coefficients to C-RG-001's capillary T and P
+  - a coordinate-normalization and material map fixing the geometric factor and coefficient values
+  - a stable stationary point if a real oscillation frequency is intended
+  - a quantum state, Hamiltonian, and hbar map if an onset energy is intended
+  - a bath, damping or mobility, stochastic equation, escape classifier, and observation window if a rate is intended
+  - a measured material onset or cross-material calibration if a prediction is intended
+closure_method: >-
+  P102 promotes only the exact conditional theorem with the profile, domain,
+  positivity, and stationary-point premises visible. The capillary specialization
+  uses the accepted negative curvature and labels the square-root magnitude an
+  instability rate. It adds no material, quantum, stochastic, or event map.
+verdict: exact_conditional_closure_with_source_headline_rejected

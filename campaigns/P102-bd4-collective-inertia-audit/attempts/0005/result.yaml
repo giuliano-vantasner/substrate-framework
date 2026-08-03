@@ -1,0 +1,31 @@
+campaign: P102
+attempt: 5
+route: first_primary_independent_and_focused_campaign_replay
+status: exact_package_passed_campaign_oracle_representation_defects
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+  - .venv/bin/python -m pytest -q tests/test_collective_coordinates.py tests/test_dimensional_sine_gordon.py tests/test_radial_energy.py tests/test_variational.py tests/test_explicit_breaking.py
+process:
+  primary_exit_status: 1
+  primary_passes_before_stop: 41
+  independent_exit_status: 1
+  independent_passes_before_stop: 3
+  focused_exit_status: 0
+  focused_tally: 71 passed in 3.97s
+failures:
+  - route: primary
+    observed: The exact rank-two matrix returned nullspace basis (1/2,1,1), while the verifier compared a tuple containing the equivalent scaled basis (1,2,2).
+    diagnosis: SymPy chooses a basis normalization and returns a list; exact span and kernel membership, not container type or normalization, are the oracle.
+  - route: independent
+    observed: A characteristic exponent declared real made SymPy correctly return no roots for the positive-curvature oscillator, while the verifier expected complex roots.
+    diagnosis: The stable characteristic equation has no real exponential roots and two imaginary complex roots. The symbol assumption conflicted with the expected representation.
+repair: >-
+  Test rank, nullspace dimension, kernel membership, and proportionality without
+  fixing basis normalization. Use an unconstrained characteristic exponent and
+  verify roots by substitution plus real-versus-imaginary classification rather
+  than relying on ordered solve output.
+debt:
+  - rerun both exact campaign routes after the oracle repair
+  - source predicate and consumer evidence
+  - claim review, governance, release, generated state, and integrated replay

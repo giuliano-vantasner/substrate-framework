@@ -1,0 +1,24 @@
+source_unit: BD4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+size_bytes: 11824
+sha256: 2f590473719f614f4ca641ad9443d6b4271429aba27337b94d5d064cc70c9929
+git_blob: 69c5b5bf918daf044562c55b386e944ddff44b34
+worktree_relative_to_pinned_blob: clean
+command: >-
+  /home/dan/substrate-framework/.venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+exit_status: 0
+terminal_tally: ALL 14 CHECKS PASS
+compatibility_preflight:
+  imports_numpy: false
+  quadrature_alias_used: false
+  compatibility_overlay_relevant: false
+prior_exposure: >-
+  P100 previously executed the source as a pending consumer and exposed its
+  tally. The generated queue and parent memory exposed the main formulas and
+  headline before P102; no formula or output blinding is claimed.
+reproduction_scope: >-
+  The clean exit reproduces the source predicates only. P102 independently
+  audits profile existence, kinetic reduction, curvature sign, coordinate
+  covariance, normalization, identifiability, and interpretation.

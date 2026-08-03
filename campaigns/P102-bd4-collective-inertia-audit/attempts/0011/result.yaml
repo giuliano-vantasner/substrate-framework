@@ -1,0 +1,21 @@
+campaign: P102
+attempt: 11
+route: integrated_promotion_workflow
+status: integrated_gate_passed
+command: scripts/validate.sh
+process:
+  exit_status: 0
+  workflow_tally: WORKFLOW VALID 116 claims 116 accepted 0 proposals 218 units 118 pending 0 partial
+  memory_tally: All 433 file(s) valid
+  skill_tally: Skill is valid
+  pytest_tally: 928 passed in 84.80s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+promoted_claim: C-COL-001
+release: v0.86.0
+source_disposition:
+  BD4: qualified
+debt: []
+next_route: >-
+  Seal the scientific transaction, checkpoint the parent effort, then freeze
+  P103's BD5 stochastic-escape audit without treating its passing ensemble
+  simulation or narrative BD4 dependency as authority.

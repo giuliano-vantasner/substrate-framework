@@ -1,0 +1,44 @@
+campaign: P102
+attempt: 1
+route: unchanged_hash_pinned_source_reproduction_and_headline_audit
+status: source_reproduced_conditional_dimensional_survivors_and_headline_defects_identified
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+  sha256: 2f590473719f614f4ca641ad9443d6b4271429aba27337b94d5d064cc70c9929
+  git_blob: 69c5b5bf918daf044562c55b386e944ddff44b34
+  worktree_relative_to_pinned_blob: clean
+command: >-
+  /home/dan/substrate-framework/.venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+process:
+  exit_status: 0
+  terminal_tally: ALL 14 CHECKS PASS
+surviving_results:
+  - Every listed pre-Rung-C dimension vector has zero time exponent and none equals the required radius-inertia vector (1,-2,2).
+  - The C-MED-003 coefficient lambda has dimension (1,-1,2), consistently derived from both c^2=T/lambda and omega_0^2=mu/lambda.
+  - Conditional on a dimensionless field, length coordinate R, and a finite profile integral with dimension inverse length, lambda times that integral has the required inertia dimension (1,-2,2).
+  - Conditional on a positive finite inertia, the magnitude sqrt(2*pi*P/m_R) has inverse-time dimension.
+  - Eliminating a shared positive symbol P produces an algebraic relation among E_star, the local rate scale, T, lambda, and the profile integral.
+failed_headline_routes:
+  - The source never defines a profile family u(x;R), domain, boundary behavior, or regularity and never evaluates or bounds its integral; dimension closure does not establish a finite nonzero radius inertia.
+  - The check that the augmented set supplies inertia inserts m_R itself into the set after constructing it from an assumed geometric factor. It does not show that lambda alone selects that factor, profile, coordinate normalization, or value.
+  - C-MED-003's lambda belongs to a declared continuum sine-Gordon density, while C-RG-001's T and P belong to a separately declared capillary energy. No accepted claim couples those sectors into one action or identifies the field-profile coordinate with the capillary radius.
+  - C-RG-001 gives U''(R_star)=-2*pi*P at a strict maximum. With positive inertia, sqrt(2*pi*P/m_R) is the magnitude of real exponential characteristic roots, not a stable oscillation frequency.
+  - Inertia and curvature separately change under radius-coordinate reparameterization. Only their stationary ratio is invariant, and the source tests no coordinate covariance.
+  - Eliminating P while retaining T, lambda, and the free geometric factor does not identify the legacy slow onset mode, hbar times that mode, or a one-parameter material law. It creates a conditional multivariate identity.
+  - The source's GATE-0 check merely verifies that the lambda symbol is absent from a hand-built set; it does not derive lambda from independent data or prove a cross-sector constitutive map.
+  - Common scaling of an entire reduced action leaves the curvature-to-inertia ratio fixed, whereas scaling lambda alone changes it. The source does not resolve C-MED-003's common coefficient ray or the capillary-sector normalization.
+  - No kinetic escape equation, bath, damping, quantum state, thermal map, measured onset, or event observable closes the claimed onset/amplitude ceiling retirement.
+  - The local PASS/check helper, literal dimension comparisons, and terminal tally do not test profile existence, the reduced Euler-Lagrange equation, sign classification, covariance, identifiability, or consumers.
+next_route: >-
+  Implement and independently rederive the conditional field pullback,
+  variable-metric Euler-Lagrange equation, stationary sign classification,
+  coordinate transformation, dimension and normalization ledgers, concrete
+  finite and divergent profile probes, mutations, dependency audit, and
+  capillary-top specialization before adjudicating every source predicate and
+  consumer.
+debt:
+  - complete primary and independent mutation-sensitive exact verifiers
+  - implement the importable collective-coordinate API and focused tests if novelty survives
+  - inspect and classify downstream BD-L, BD5, engineering, and documentation consumers
+  - materialize predicate, dependency, candidate, consumer, review, disposition, release, and terminal validation records

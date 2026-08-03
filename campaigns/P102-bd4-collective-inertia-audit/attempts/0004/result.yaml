@@ -1,0 +1,23 @@
+campaign: P102
+attempt: 4
+route: focused_collective_coordinate_api_after_representation_repairs
+status: focused_tests_passed
+command: .venv/bin/python -m pytest -q tests/test_collective_coordinates.py
+process:
+  exit_status: 0
+  tally: 14 passed in 1.54s
+surviving_results:
+  - A declared Gaussian translation profile gives a finite positive exact metric.
+  - Zero and divergent profile families show why dimensions alone do not prove an admissible inertia.
+  - The variable-metric Euler-Lagrange equation contains the exact one-half connection coefficient.
+  - Stationary curvature signs produce stable, neutral, and unstable branches.
+  - The capillary maximum has a real exponential rate and no stable angular frequency.
+  - The stationary curvature-to-inertia ratio is coordinate invariant while the separate factors are not.
+  - Common action scaling cancels from the ratio while inertia-only scaling changes it.
+next_route: >-
+  Run the full primary and independent exact campaign verifiers with source,
+  dependency, mutation, identifiability, and interpretation audits.
+debt:
+  - primary and independent campaign verifiers
+  - source predicate and consumer evidence
+  - claim review, governance, release, generated state, and integrated replay

@@ -2,7 +2,7 @@
 description: Audit BD4's collective-coordinate inertia and barrier-top interpretation
 author: vantasner
 created: '2026-08-03T13:03:42Z'
-updated: '2026-08-03T13:03:42Z'
+updated: '2026-08-05T12:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-BD4
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P102 BD4 Collective Inertia Audit
 
@@ -212,3 +212,20 @@ tally is not completion.
 This campaign cross-references legacy rung098 leg M2, BD4, BD5, BD-L, C-MED-003,
 C-RG-001, C-RG-002, C-VAR-001, C-BRK-001, C-DYN-001, P095, P099, P100, and the
 canonical dimensional-field and radial-energy modules.
+
+## Terminal Adjudication
+
+P102 promotes C-COL-001 as an exact conditional theorem and qualifies BD4. A
+declared admissible field-profile family induces
+`M(q)=lambda*integral((partial_q phi)^2 dx)` and the variable-metric reduced
+equation. At rest stationary points the curvature sign separates stable,
+neutral, and unstable branches, while smooth coordinate changes preserve the
+stationary curvature-to-inertia ratio. The accepted capillary point is a strict
+maximum, so `sqrt(2*pi*P/M)` is its exponential instability rate.
+
+BD4's dimension predicates survive, but it never supplies the profile or cross-
+sector action, and its ceiling-retirement, stable-frequency, and onset readings
+do not. Its Lean consumer proves only weaker dimension and unrelated algebraic
+conjuncts. BD5 and the engineering adapter execute but use BD4 only in prose.
+The claim imports no material, quantum, stochastic, or event map. Claim-level
+debt is empty after promotion replay; the corpus migration continues to BD5.

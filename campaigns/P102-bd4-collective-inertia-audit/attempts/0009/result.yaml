@@ -1,0 +1,26 @@
+campaign: P102
+attempt: 9
+route: formal_and_downstream_consumer_replay
+status: consumers_execute_but_do_not_validate_bd4_headline
+commands:
+  - lake env lean ../merged-framework/bridges/phase-28/lean/Phase28BarrierKernel.lean
+  - /home/dan/substrate-framework/.venv/bin/python engineering/barrier_scaling.py
+  - /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-28/bridge_BD5_kramers_escape_pde.py
+  - /home/dan/substrate-framework/.venv/bin/python pulson-backreaction-bridge/sympy/rungs/rung108_r2_inertial_onset_ordering_is_costume.py
+  - /home/dan/substrate-framework/.venv/bin/python pulson-backreaction-bridge/sympy/rungs/rung144_c023_omega_native_but_Rstar_unstable.py
+process:
+  lean_exit_status: 0
+  engineering_tally: ALL 16 CHECKS PASS
+  bd5_tally: ALL 13 CHECKS PASS
+  rung108_tally: ALL 11 CHECKS PASS
+  rung144_tally: ALL 4 CHECKS PASS
+findings:
+  - The Lean file proves dimension-vector identities, a separate gate bound, and a numerical square-root inequality; its theorem named ceiling_retired contains no profile, field action, equation of motion, curvature sign, onset, or escape predicate.
+  - engineering/barrier_scaling.py mentions BD4 only in its docstring and contains no executable m_R or omega_R path.
+  - BD5 mentions BD4 inertia only in prose; its executable model is overdamped and contains gamma but no m_R, lambda, or omega_R.
+  - Legacy rung108 independently classifies the capillary top as an inverted saddle growth-rate magnitude and leaves profile and material constants free.
+  - Legacy rung144 independently proves that positive inertia cannot flip negative capillary curvature; it distinguishes a stable field dispersion from the barrier-top instability.
+  - Source synthesis documents overstate ceiling retirement, while the Phase-28 dossier itself partly repairs the sign wording but still calls the unspecified geometric integral derived and order one.
+next_route: Promote only the exact conditional collective-coordinate theorem and qualify BD4 with a check-level and consumer-level ledger.
+debt:
+  - governance, release, generated state, claim review, terminal disposition, and integrated replay

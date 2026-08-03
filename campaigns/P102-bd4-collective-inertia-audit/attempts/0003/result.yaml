@@ -1,0 +1,25 @@
+campaign: P102
+attempt: 3
+route: rerun_after_profile_derivative_simplification
+status: failed_test_structural_equality_remained_too_strong
+command: .venv/bin/python -m pytest -q tests/test_collective_coordinates.py
+process:
+  exit_status: 1
+  tally: 1 failed 13 passed in 1.53s
+failure:
+  test: test_gaussian_profile_has_finite_positive_pullback_metric
+  observed: >-
+    Simplification canonicalized the linear factor but SymPy retained
+    exp(-(q-x)^2/(2*ell^2)) rather than the test's
+    exp(-(x-q)^2/(2*ell^2)).
+  diagnosis: >-
+    Squared sign-reversed arguments are exactly equal but SymPy structural
+    equality does not promise one orientation. The API contract is an exact
+    expression, not a particular internal tree for an even square.
+repair: >-
+  Change only this assertion to require that the symbolic difference simplifies
+  to zero. Keep the API simplification because it still reduces avoidable
+  coefficient noise.
+debt:
+  - rerun focused collective-coordinate tests after the assertion repair
+  - continue primary, independent, consumer, governance, and integrated gates

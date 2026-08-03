@@ -1,0 +1,62 @@
+campaign: P102
+title: BD4 collective-coordinate inertia and barrier-top classification audit
+source_baseline: substrate@6d1f4e0
+source_units: [BD4]
+base_release: v0.85.0
+release_after_adjudication: v0.86.0
+adjudicated_at: '2026-08-05T12:00:00Z'
+selected_candidates:
+  - {id: C, reason: Direct field pullback derives the exact conditional kinetic metric.}
+  - {id: D, reason: Euler-Lagrange differentiation derives the variable-metric equation.}
+  - {id: E, reason: Characteristic roots separate stable, neutral, and unstable stationary points.}
+  - {id: F, reason: Smooth reparameterization proves stationary spectral covariance.}
+  - {id: G, reason: Finite, zero, and divergent profiles expose the existence and normalization premises.}
+  - {id: H, reason: Scaling and nullspace analysis expose normalization and identifiability ceilings.}
+  - {id: I, reason: Formal and executable consumers close no broader onset or escape authority.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: B, decision: dimension_only_claim_ceiling}
+claims:
+  - {id: C-COL-001, decision: accepted_symbolic_verified}
+reviewed_existing:
+  - {id: C-MED-003, decision: unchanged_conditional_field_density_and_common_scale_ceiling}
+  - {id: C-RG-001, decision: unchanged_capillary_strict_maximum}
+  - {id: C-RG-002, decision: unchanged_conditional_constitutive_map}
+  - {id: C-VAR-001, decision: unchanged_common_multiplier_principle}
+  - {id: C-BRK-001, decision: unchanged_supplied_kinetic_metric_ceiling}
+evidence:
+  source_route: attempts/0001/result.yaml
+  representation_failures:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+  focused_api_pass: attempts/0004/result.yaml
+  exact_campaign_routes: attempts/0008/result.yaml
+  formal_and_consumer_replay: attempts/0009/result.yaml
+  staged_governance_validation: attempts/0010/result.yaml
+  integrated_promotion_gate: attempts/0011/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_collective_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  formal_audit: evidence/formal-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  BD4: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD4_mR_inertia_ceiling_resolution.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P102-bd4-collective-inertia-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P102-bd4-collective-inertia-audit/reviews/independent_collective_review.py
+  - .venv/bin/python -m pytest -q tests/test_collective_coordinates.py tests/test_dimensional_sine_gordon.py tests/test_radial_energy.py tests/test_variational.py tests/test_explicit_breaking.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted
