@@ -1,0 +1,44 @@
+source_unit: BD2
+accepted_dependency_closure:
+  - claim: C-TH-001
+    role: normalized two-level occupation and symmetric gate only
+  - claim: C-RG-001
+    role: generic positive-drive capillary relative barrier
+  - claim: C-RG-002
+    role: conditional BD1 Frank/core and quadratic-loading barrier specialization
+  - claim: C-COH-001
+    role: dimensionless activated factor and explicit non-rate ceiling
+declared_unaccepted_predecessors:
+  - path: pulson-backreaction-bridge/sympy/rungs/rung056_theta_eff_concrete_dispersion.py
+    sha256: ec52262567b1fb9466bae6b632057f62ceef995e7104a2a4f90c78fe11dc8d34
+    git_blob: 0743ccb0f016d336b06216236a08b688646cf805
+    role: source of the coth effective-scale physical reading and inserted medium examples
+    authority: evidence_only
+  - path: pulson-backreaction-bridge/sympy/rungs/rung096_apparent_activation_curvature.py
+    sha256: fc547a1d551caaf6b0a8f33ab8da67ee20a16c6ee9e1de076d79260037ff36c1
+    git_blob: 95c180e2e290423cdeca21b2f646af3f24172a52
+    role: source of a separately declared crossover and apparent-slope decomposition
+    authority: evidence_only
+  - path: pulson-backreaction-bridge/sympy/rungs/rung097_confront_curvature_data.py
+    sha256: ef649bbeb67f84c05c15326e35bae7580a01979cbf4f3dc9f189c8aba4e0369b
+    git_blob: 0f57480ae04266a6a0ca9cf94da112c4b15d262d
+    role: source of illustrative mode bands and confrontation prose
+    authority: evidence_only
+missing_physical_dependencies:
+  - a state and Hamiltonian or bath model deriving the coth scale for the relevant coordinate
+  - a declared map from q to a measured medium, breather, drive, or barrier-curvature mode
+  - a dimensionful attempt frequency and stochastic or kinetic escape equation
+  - a q(k), nu(k), and control convention for a total drive-frequency derivative
+  - a physical objective, allowed control domain, costs, and validity regime for an operating optimum
+downstream_not_dependencies:
+  - BD3
+  - BD4
+  - BD5
+  - CM2
+  - CM4
+closure_method: >-
+  P100 treats q, vartheta, the coth scale, barrier, prefactor exponent, and
+  attempt frequency as explicit positive premises. It derives only the exact
+  conditional response family, stationary theorem, model-dependence ceiling,
+  and elasticities. No predecessor physical label enters the promoted theorem.
+verdict: closed_on_accepted_exact_claims_and_declared_inputs_only

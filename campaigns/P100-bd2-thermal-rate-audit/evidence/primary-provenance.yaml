@@ -1,0 +1,52 @@
+campaign: P100
+base_release: v0.84.0
+base_commit: c8bef91123bdac3b0cc8a0b7c3ca31d1527f8fe9
+preregistration_commit: 8090136
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+claim: C-TH-002
+primary:
+  command: PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/verify.py
+  oracle: SymPy exact algebra, calculus, limits, mutations, source AST, and hash audit through canonical APIs
+  terminal_tally: ALL 41 CHECKS PASS [C-TH-002]
+  exit_status: 0
+independent:
+  command: >-
+    PYTHONPATH=src .venv/bin/python
+    proposals/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
+  oracle: independent partition, coth-tanh, capillary, stationary, elasticity, sensitivity, and scale-orbit derivations
+  canonical_thermal_imports: []
+  terminal_tally: ALL 21 CHECKS PASS [P100-INDEPENDENT]
+  exit_status: 0
+focused_tests:
+  command: .venv/bin/python -m pytest -q tests/test_thermal.py tests/test_coherence_gates.py tests/test_radial_energy.py
+  tally: 55 passed
+accepted_dependency_replay:
+  P005: P005 ALL 16 CHECKS PASS
+  P006: P006 ALL 28 CHECKS PASS
+  P086_independent: ALL 12 CHECKS PASS [P086-INDEPENDENT]
+  P099: ALL 41 CHECKS PASS [C-RG-002]
+historical_replay_exception:
+  path: campaigns/P086-ny3-coherence-nucleation-audit/verify.py
+  verdict: fails_only_mutable_queue_assertion_that_BD1_remains_pending
+  evidence: attempts/0009/result.yaml
+mutations:
+  - gate factor one half
+  - capillary pi normalization
+  - stationary barrier coefficient four
+countermodels:
+  - constant prefactor with no finite optimum
+  - q(k)=k**4 total-derivative sign reversal
+  - common energy rescaling orbit
+  - arbitrary positive target fitted by the free attempt frequency
+numeric_or_simulation_claims: none
+quadrature: none
+numpy_imports_in_exact_new_work: none
+integrated_gate:
+  command: scripts/validate.sh
+  evidence: attempts/0011/result.yaml
+  exit_status: 0
+  workflow_tally: WORKFLOW VALID: 115 claims, 115 accepted, 0 proposals; MIGRATION QUEUE: 218 units, 120 pending, 0 partial
+  memory_tally: All 426 file(s) valid
+  pytest_tally: 914 passed in 82.22s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+status: integrated_evidence_passed

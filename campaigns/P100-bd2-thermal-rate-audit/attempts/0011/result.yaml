@@ -1,0 +1,23 @@
+campaign: P100
+attempt: 11
+route: integrated_promotion_gate
+status: passed
+command: scripts/validate.sh
+process:
+  exit_status: 0
+  workflow_tally: WORKFLOW VALID: 115 claims, 115 accepted, 0 proposals; MIGRATION QUEUE: 218 units, 120 pending, 0 partial
+  memory_tally: All 426 file(s) valid
+  skill_tally: Skill is valid!
+  pytest_tally: 914 passed in 82.22s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+scope:
+  - accepted registry and release closure
+  - generated documentation and accepted memory agreement
+  - migration queue synchronization
+  - repository tests
+  - durable memory contracts
+  - physics workflow skill validation
+interpretation:
+  - The integrated boundary validates C-TH-002 and the BD2 disposition in release v0.85.0.
+  - The full suite is not repeated for record-only terminal metadata updates.
+debt: []

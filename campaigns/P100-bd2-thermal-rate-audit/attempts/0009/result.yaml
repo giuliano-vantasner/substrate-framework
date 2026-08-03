@@ -1,0 +1,28 @@
+campaign: P100
+attempt: 9
+route: accepted_dependency_replay_before_promotion
+status: current_canonical_dependencies_passed_historical_P086_queue_assertion_failed
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P005-two-level-gate/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P006-radial-energy/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P086-ny3-coherence-nucleation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P099-bd1-capillary-constitutive-map/verify.py
+  - .venv/bin/python -m pytest -q tests/test_thermal.py tests/test_coherence_gates.py tests/test_radial_energy.py
+process:
+  P005: {exit_status: 0, terminal_tally: P005 ALL 16 CHECKS PASS}
+  P006: {exit_status: 0, terminal_tally: P006 ALL 28 CHECKS PASS}
+  P086: {exit_status: 1, passed_before_failure: 33, failed_check: BD1 and BD3 remain pending rather than accepted dependencies}
+  P099: {exit_status: 0, terminal_tally: 'ALL 41 CHECKS PASS [C-RG-002]'}
+  focused_tests: {exit_status: 0, passed: 55}
+diagnosis:
+  - Current canonical thermal, coherence, and radial-energy APIs and focused tests pass.
+  - P005, P006, and P099 replay their accepted exact claims successfully.
+  - P086's immutable historical verifier asserts mutable future queue state: BD1 must remain pending. P099 legitimately qualified BD1, so the historical assertion now fails even though C-COH-001's science is unchanged.
+  - The campaign proposal template already forbids making future work fail by asserting unrelated queue units stay pending; silently rewriting an adjudicated campaign is also forbidden.
+next_route: >-
+  Preserve the P086 historical replay defect, use its independent exact review
+  and the passing current canonical coherence tests as the C-COH-001 replay,
+  and keep BD3 pending until its own audit.
+debt:
+  - run P086 independent exact review as replay-safe dependency evidence
+  - complete promotion records and one integrated gate

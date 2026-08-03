@@ -1,0 +1,40 @@
+campaign: P100
+attempt: 1
+route: unchanged_hash_pinned_source_reproduction_and_headline_audit
+status: source_reproduced_headline_optimum_and_global_scalings_failed
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD2_scaling_law_thermal_optimum.py
+  sha256: 91f2344bd59618b5915d018e1ee7d728b86f59a29e42e1a0a60cd833747f7a65
+  git_blob: 901b16a0c05e81da0867a6c19dbdce37df87d139
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-28/bridge_BD2_scaling_law_thermal_optimum.py
+process:
+  exit_status: 0
+  elapsed_wall_seconds: 0.67
+  maximum_resident_kib: 54088
+  terminal_tally: ALL 16 CHECKS PASS
+surviving_results:
+  - The normalized two-level occupation reproduces C-TH-001's exact symmetric gate.
+  - Conditional on the declared coth scale, its high-temperature ratio tends to one and its low-temperature limit is q/2.
+  - The gate rises from zero toward one half with the positive thermal-energy coordinate.
+  - The bare unnormalized Boltzmann factor does not reproduce the normalized two-level gate.
+failed_headline_routes:
+  - The source never differentiates or optimizes its displayed full rate with Theta_eff substituted; it instead declares y=1 an onset and scans a separate gate-sensitivity function.
+  - The declared y=1 point gives vartheta=q/2, but the frozen exact full-rate stationary theorem requires u=tanh(y)<1/sqrt(5), hence y<atanh(1/sqrt(5)) and vartheta greater than approximately 1.039*q.
+  - The loading and wavenumber signs are sampled at one parameter point. Holding q, vartheta, nu, and other displayed inputs fixed, the source prefactor contributes elasticity minus one while the exponential contributes 2*E/Theta, so the sign reverses at E/Theta=1/2.
+  - The source's k derivative holds omega and the gate fixed while narrating k approximately omega; no total drive-frequency derivative follows without a declared q(k), nu(k), and noise map.
+  - The source calls y*sech(y)^2*tanh(y) maximum temperature sensitivity, but this is proportional to a log-temperature derivative; the ordinary temperature derivative carries an additional y factor.
+  - A curvature-onset convention, gate knee, gate sensitivity maximum, and full-rate maximum are different objectives and cannot be merged into one operating optimum.
+  - The physical medium-noise, macroscopic-pulson, breather-mode, nucleation, and Langer/Kramers labels have no accepted dependency in the source.
+  - The source imports a local PASS/check helper and verifies no dimensions, identifiability class, alternative prefactor, alternative noise law, or actual stochastic dynamics.
+next_route: >-
+  Derive the exact coth-gated conditional response through canonical APIs,
+  prove its unique model-dependent stationary point and exact bounds, classify
+  loading and wavenumber sign regimes, compare alternative prefactors and
+  noise laws, and terminally audit all source predicates and consumers.
+debt:
+  - inspect and classify rung056, rung096, rung097, BD3-BD5, CM2, CM4, and engineering consumers
+  - implement canonical exact API and focused tests
+  - complete primary and independent mutation-sensitive verifiers
+  - materialize source, predicate, dependency, candidate, consumer, review, disposition, and promotion records

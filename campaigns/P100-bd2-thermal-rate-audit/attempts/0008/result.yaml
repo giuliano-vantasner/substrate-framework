@@ -1,0 +1,24 @@
+campaign: P100
+attempt: 8
+route: absolute_interpreter_engineering_consumer_replay
+status: core_consumer_reproduced_dbd_consumers_version_incompatible
+commands:
+  - /home/dan/substrate-framework/.venv/bin/python barrier_scaling.py from /home/dan/substrate/engineering
+  - /home/dan/substrate-framework/.venv/bin/python scaling_law.py from /home/dan/substrate/engineering/dbd
+  - /home/dan/substrate-framework/.venv/bin/python pipeline.py from /home/dan/substrate/engineering/dbd
+process:
+  barrier_scaling: {exit_status: 0, elapsed_wall_seconds: 0.01, maximum_resident_kib: 9968, terminal_tally: ALL 16 CHECKS PASS}
+  dbd_scaling_law: {exit_status: 1, elapsed_wall_seconds: 0.16, maximum_resident_kib: 28888, terminal_error: "AttributeError: module 'numpy' has no attribute 'trapz'"}
+  dbd_pipeline: {exit_status: 1, elapsed_wall_seconds: 0.19, maximum_resident_kib: 29508, terminal_error: "AttributeError: module 'numpy' has no attribute 'trapz'"}
+diagnosis:
+  - The core consumer reproduces the capillary and gate formulas but hard-codes q/2 as an operating optimum; its green tally does not optimize the displayed full rate.
+  - Both DBD consumers reach engineering/dbd/pipeline.py seeding_fraction and fail at its direct np.trapz call under the current NumPy version.
+  - engineering/dbd/l1_plasma.py contains another direct np.trapz call, so the compatibility defect is not isolated to one invocation.
+  - The source checkout is immutable migration evidence; these noncanonical consumer defects do not authorize rewriting it during P100.
+  - The canonical P100 exact path imports no NumPy and uses no quadrature alias.
+next_route: >-
+  Preserve the failed consumers in the impact ledger, promote only the exact
+  version-independent conditional theorem, and leave the DBD physical pipeline
+  pending for its own governed unit audits.
+debt:
+  - materialize terminal source, dependency, consumer, candidate, and claim records

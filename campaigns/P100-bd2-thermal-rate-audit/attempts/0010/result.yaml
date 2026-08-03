@@ -1,0 +1,22 @@
+campaign: P100
+attempt: 10
+route: pre_generation_promotion_validation
+status: expected_generated_claim_index_boundary
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate for the P100 proposal and C-TH-002 review
+  - git diff --check
+process:
+  repository: {exit_status: 1, terminal_error: 'GovernanceError: generated claim index is stale; run scripts/render_docs.py'}
+  proposal_memory: {exit_status: 0, terminal_tally: All 1 file(s) valid}
+  decision_memory: {exit_status: 0, terminal_tally: All 1 file(s) valid}
+  diff_check: {exit_status: 0}
+diagnosis:
+  - The accepted registry, release, disposition, campaign, APIs, tests, and review records have changed while generated documentation still reflects v0.84.0.
+  - The validator reached the canonical generation boundary rather than a scientific, schema, dependency, or memory-contract failure.
+next_route: >-
+  Run scripts/render_docs.py, scripts/render_memory.py, and the canonical source
+  inventory generator, then validate generated agreement without hand editing.
+debt:
+  - synchronize generated docs, accepted memory, and migration queue
+  - run targeted post-generation validation and the single integrated gate

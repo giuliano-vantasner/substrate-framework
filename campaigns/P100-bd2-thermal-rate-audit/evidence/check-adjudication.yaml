@@ -1,0 +1,76 @@
+source_unit: BD2
+checks:
+  - line: 59
+    predicate: normalized two-level occupation gives W=sech(x/2)**2/2
+    verdict: accepted_duplicate
+    maps_to: [C-TH-001]
+  - line: 66
+    predicate: the substituted gate has the same algebraic half-sech-squared shape
+    verdict: qualified
+    qualification: The identity survives; a macroscopic pulson and its amplitude or mode identification do not.
+    maps_to: [C-TH-001]
+  - line: 76
+    predicate: declared coth scale divided by thermal energy tends to one at high temperature
+    verdict: accepted_conditional
+    maps_to: [C-TH-002]
+  - line: 78
+    predicate: declared coth scale tends to q/2 at low temperature
+    verdict: accepted_conditional
+    maps_to: [C-TH-002]
+  - line: 97
+    predicate: response derivative with respect to loading amplitude is globally positive
+    verdict: refuted
+    qualification: The source tests one point; exact log elasticity is 2*E/Theta-1 and reverses at E/Theta=1/2.
+    maps_to: [C-TH-002]
+  - line: 100
+    predicate: response derivative with respect to wavenumber or drive frequency is globally positive
+    verdict: refuted
+    qualification: The fixed-q partial has elasticity 2*E/Theta-1; an undeclared q(k) map can reverse the total derivative.
+    maps_to: [C-TH-002]
+  - line: 105
+    predicate: the exponential has inverse-quadratic loading and wavenumber dependence and is the dominant lever
+    verdict: qualified
+    qualification: The exponent dependence is exact under C-RG-002, but dominance is regime dependent and the prefactor supplies the sign-reversing term.
+    maps_to: [C-RG-002, C-TH-002]
+  - line: 113
+    predicate: gate tends to one half at zero splitting
+    verdict: accepted_duplicate
+    maps_to: [C-TH-001]
+  - line: 115
+    predicate: gate tends to zero at infinite positive splitting
+    verdict: accepted_duplicate
+    maps_to: [C-TH-001]
+  - line: 119
+    predicate: gate decreases in positive y and has supremum one half
+    verdict: accepted_duplicate_with_weak_source_oracle
+    qualification: C-TH-001 proves the full domain; the source checks only two y values and its Landau-Zener label is unsupported.
+    maps_to: [C-TH-001]
+  - line: 128
+    predicate: imposing y=1 gives vartheta=q/2
+    verdict: qualified_convention_only
+    qualification: The equation is an identity after imposing y=1, not a stationary or optimization theorem.
+    maps_to: [C-TH-002]
+  - line: 133
+    predicate: identifying the gate mode with a breather makes vartheta=q_b/2 a derived operating optimum
+    verdict: refuted
+    qualification: No accepted mode identification exists and y=1 is outside the exact full-rate stationary domain u<1/sqrt(5).
+    maps_to: [C-TH-002]
+  - line: 143
+    predicate: a coarse scan places y* of y*sech(y)**2*tanh(y) between one half and three halves
+    verdict: qualified
+    qualification: The scan concerns log-temperature gate sensitivity, not ordinary temperature sensitivity or the displayed full rate.
+    maps_to: [C-TH-002]
+  - line: 146
+    predicate: the scanned sensitivity coordinate gives a temperature of the same order as q
+    verdict: qualified_not_optimum
+    qualification: An order-of-magnitude gate-knee statement does not establish a physical objective or full-rate optimum.
+    maps_to: [C-TH-002]
+  - line: 155
+    predicate: a bare unnormalized Boltzmann factor does not equal the normalized two-level gate
+    verdict: accepted_duplicate
+    maps_to: [C-TH-001]
+  - line: 160
+    predicate: the two gate formulas differ numerically at x=1
+    verdict: duplicate_regression
+    maps_to: [C-TH-001]
+terminal_verdict: qualified

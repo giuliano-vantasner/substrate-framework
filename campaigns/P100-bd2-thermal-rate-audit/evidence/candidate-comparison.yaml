@@ -1,0 +1,38 @@
+campaign: P100
+selection_order:
+  - accepted dependency closure and category separation
+  - exact dimensions and symbol roles
+  - complete stationary and limiting-case proof
+  - prefactor and noise-law robustness
+  - derivative convention and identifiability
+  - canonical reuse and consumer closure
+candidates:
+  A:
+    decision: retained_as_reproduction_evidence
+    reason: The untouched source passes 16 literal checks but does not test its full-rate headline.
+  B:
+    decision: rejected_as_new_claim
+    reason: The normalized gate is already exactly C-TH-001.
+  C:
+    decision: selected_conditionally
+    reason: The declared coth scale and supplied frequency produce an exact dimensionally closed response family without physical overreach.
+  D:
+    decision: selected
+    reason: Capillary elimination gives the exact source prefactor sqrt(E/(pi*Theta)) and exposes its load-bearing effect.
+  E:
+    decision: selected
+    reason: The inverse-square-root prefactor has one exact global maximum whose bound refutes the source operating point.
+  F:
+    decision: selected_as_scope_guard
+    reason: A constant prefactor removes the finite optimum, while general positive powers move it; the optimum is model dependent.
+  G:
+    decision: selected
+    reason: Exact partial elasticities replace sampled global signs and q(k) counterfamilies block an undeclared total derivative.
+  H:
+    decision: selected
+    reason: Common-energy orbits and a free attempt frequency expose scale and magnitude non-identifiability.
+  I:
+    decision: selected
+    reason: All direct consumers are pinned; broken and pending consumers transfer no broader authority.
+selected_claim: C-TH-002
+claim_scope: conditional_coth_gated_response_theorem_not_physical_operating_recommendation

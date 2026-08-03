@@ -1,0 +1,21 @@
+campaign: P100
+attempt: 5
+route: positive_barrier_log_elasticity_verifier_rerun
+status: elasticity_oracle_normal_form_failed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
+process:
+  primary: {exit_status: 1, passed_before_failure: 33, failed_check: barrier response changes monotonicity at E over Theta equals one half}
+  independent: {exit_status: 1, passed_before_failure: 9, failed_check: direct barrier derivative independently proves the half-ratio threshold}
+diagnosis:
+  - Both routes now differentiate an independent positive barrier coordinate and no derivative exception occurs.
+  - The primary check uses chained raw structural equality across separately constructed but algebraically equivalent expressions.
+  - The independent check additionally requires exponential reconstruction of a log normal form, which is redundant to the log-derivative theorem and branch-sensitive.
+  - All stationary, optimum-bound, model-alternative, and source-onset rejection gates continue to pass.
+next_route: >-
+  Compare elasticity expressions through explicit zero residuals and remove
+  the redundant exponential-reconstruction requirement; retain exact positive
+  symbols and the direct log derivative.
+debt:
+  - rerun both complete verifiers after normal-form repair

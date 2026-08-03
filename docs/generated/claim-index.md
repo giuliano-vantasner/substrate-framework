@@ -921,6 +921,15 @@ For every real dimensionless splitting x, the normalized upper-state occupation 
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-TH-002
+
+For positive exact energy quantum q, thermal-energy coordinate vartheta, barrier E, and attempt frequency nu, declare x=q/vartheta, Theta=q*coth(x/2)/2, and import C-TH-001's W=sech(x/2)^2/2. Then the capillary-reduced conditional response R=nu*sqrt(E/(pi*Theta))*exp(-E/Theta)*W has inverse-time dimension; it composes a supplied frequency and is not by itself a stochastic rate law. Theta tends to q/2 as vartheta tends to zero and Theta/vartheta tends to one as vartheta tends to infinity. Put u=tanh(q/(2*vartheta)) in (0,1) and b=E/q>0. Up to a positive temperature-independent factor, R has shape sqrt(u)*(1-u^2)*exp(-2*b*u), whose log derivative 1/(2*u)-2*u/(1-u^2)-2*b is strictly decreasing. It has one strict global interior maximum, determined by 1-5*u^2-4*b*u*(1-u^2)=0, with 0<u_*<1/sqrt(5); hence vartheta_*>q/(2*atanh(1/sqrt(5)))>1.039*q. In particular the separately imposed crossover vartheta=q/2 is not this maximum. More generally the declared prefactor family (E/Theta)^a with a>0 has one maximum below u=sqrt(a/(a+2)), while a=0 is strictly increasing with vartheta toward a finite plateau and has no finite maximum, so the existence and location of an optimum are prefactor dependent. Holding Theta and every other input fixed, the barrier log elasticity for a=1/2 is 1/2-E/Theta; if E is proportional to z^(-m), the response elasticity is m*(E/Theta-1/2). Thus C-RG-002's amplitude and fixed-q wavenumber partials reverse sign at E/Theta=1/2, and no total drive derivative follows without q(k) and nu(k). A common positive rescaling of (E,q,vartheta) preserves the dimensionless shape, and free nu fits any positive response target. These results derive no bath state, medium or breather mode, dispersion, attempt frequency, stochastic escape process, material applicability, DBD event, isotope effect, output power, or physical operating recommendation.
+
+- Accepted in: `v0.85.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-TH-001, C-RG-001, C-RG-002, C-COH-001
+
 ## C-TOP-001
 
 For integer winding under addition, p(w)=(-1)^w is a homomorphism from Z to the multiplicative signs {+1,-1}. Even winding has label +1 and odd winding has label -1. Adding any even winding, including zero, preserves the label; adding odd winding flips it. This is a mathematical winding character only. Without a separately accepted physical representation it determines no exchange statistics, spin, fermion or boson identity, baryon number, internal or electric charge, or existence of a composite.

@@ -1183,6 +1183,39 @@ units:
       P099 promotes only the dependency-closed conditional constitutive
       theorem. B1, E1, and E2 are queue label collisions; BD4 and the remaining
       DBD/CM consumers stay pending. Exact P099 work uses no NumPy or quadrature.
+  BD2:
+    disposition: qualified
+    accepted_claims:
+      - C-TH-001
+      - C-TH-002
+      - C-RG-002
+      - C-COH-001
+    qualification: >-
+      BD2's normalized two-level gate and the two limits of a separately
+      declared coth scale survive. With a supplied attempt frequency and the
+      accepted conditional capillary barrier, P100 derives the exact
+      dimensionful response, its source-prefactor stationary equation, unique
+      global maximum, alternative-prefactor ceiling, and input elasticities.
+      The source's y=1 point is imposed rather than optimized and lies outside
+      the full-rate stationary domain; its global loading and wavenumber signs
+      are one-point tests and reverse at E/Theta=1/2. No accepted bath,
+      breather-mode, k-omega, stochastic, Kramers, objective, material, event,
+      isotope, nuclear, or power premise closes the physical operating claim.
+    evidence:
+      - campaigns/P100-bd2-thermal-rate-audit/reviews/source_adjudication.md
+      - campaigns/P100-bd2-thermal-rate-audit/evidence/source-reproduction.yaml
+      - campaigns/P100-bd2-thermal-rate-audit/evidence/source-audit.yaml
+      - campaigns/P100-bd2-thermal-rate-audit/evidence/check-adjudication.yaml
+      - campaigns/P100-bd2-thermal-rate-audit/evidence/dependency-audit.yaml
+      - campaigns/P100-bd2-thermal-rate-audit/evidence/consumer-audit.yaml
+      - campaigns/P100-bd2-thermal-rate-audit/evidence/candidate-comparison.yaml
+      - campaigns/P100-bd2-thermal-rate-audit/verify.py
+      - campaigns/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
+      - memory/vantasner/decisions/C-TH-002-review.md
+    note: >-
+      P100 promotes only the exact conditional response theorem. The broken
+      DBD consumers use version-specific np.trapz; exact P100 work imports no
+      NumPy or quadrature. BD3-BD5 and later CM consumers remain pending.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

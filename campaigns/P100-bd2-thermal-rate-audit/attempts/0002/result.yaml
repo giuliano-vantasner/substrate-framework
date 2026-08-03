@@ -1,0 +1,19 @@
+campaign: P100
+attempt: 2
+route: exploratory_total_drive_derivative_counterfamily_probe
+status: implementation_command_failed_before_scientific_evaluation
+command: >-
+  .venv/bin/python -c with an inline for-loop intended to compare fixed-q and
+  q(k)=k^n total derivatives
+process:
+  exit_status: 1
+  terminal_error: 'SyntaxError: unexpected character after line continuation character'
+diagnosis:
+  - Literal escaped newlines were passed through the shell into Python source.
+  - No candidate value, derivative sign, or scientific verdict was produced.
+  - The canonical thermal tests remained unchanged and passing.
+next_route: >-
+  Use one semicolon-safe expression or encode the counterfamily directly in
+  the campaign verifier, where each q(k) map and derivative is inspectable.
+debt:
+  - complete the fixed-q versus declared-q(k) derivative counterfamily

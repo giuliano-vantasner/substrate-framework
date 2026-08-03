@@ -1,0 +1,22 @@
+campaign: P100
+attempt: 3
+route: first_primary_and_independent_exact_verifier_run
+status: verifier_representation_failed_after_stationary_theorem
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
+  - .venv/bin/python -m pytest -q tests/test_thermal.py tests/test_coherence_gates.py tests/test_radial_energy.py
+process:
+  primary: {exit_status: 1, passed_before_failure: 28, failed_check: unique stationary point is a global interior maximum}
+  independent: {exit_status: 1, passed_before_failure: 8, failed_check: constant-prefactor comparison has no stationary point}
+  focused_tests: {exit_status: 0, passed: 55}
+diagnosis:
+  - Both exact routes derived the intended residual, strict derivative formula, endpoint bracket, and one-over-sqrt-five bound before failing.
+  - A positive SymPy symbol does not encode the additional declared condition u<1, so `.is_negative` returned indeterminate for rational expressions whose denominator sign depends on that upper-domain premise.
+  - The failure belongs to the verifier representation, not the candidate theorem or canonical implementation.
+next_route: >-
+  Replace global `.is_negative` introspection with exact manifest
+  factorizations whose component signs are stated under the already frozen
+  open-unit domain, while retaining endpoint and unique-root gates.
+debt:
+  - rerun both exact verifiers after the domain-explicit sign repair

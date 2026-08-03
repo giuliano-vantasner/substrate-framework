@@ -1,0 +1,21 @@
+campaign: P100
+attempt: 4
+route: domain_explicit_primary_and_independent_verifier_rerun
+status: stationary_gates_passed_elasticity_representation_failed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
+process:
+  primary: {exit_status: 1, passed_before_failure: 33, terminal_error: 'ValueError: cannot calculate derivative with respect to pi*tau**2/p'}
+  independent: {exit_status: 1, passed_before_failure: 9, failed_check: direct barrier derivative independently proves the half-ratio threshold}
+diagnosis:
+  - The domain-explicit repair succeeded for the unique stationary point, global maximum, exact thermal bound, source-onset rejection, general positive-exponent family, and constant-prefactor countermodel.
+  - The primary route reused the composite capillary expression as a differentiation variable instead of introducing an independent positive barrier coordinate.
+  - The independent route differentiated a square-root response directly and its branch-bearing normal form did not reduce to the expected log elasticity under the current expression construction.
+  - These failures belong to the elasticity verifier representation after the load-bearing stationary theorem had passed.
+next_route: >-
+  Introduce an independent positive barrier symbol in the primary route and
+  compute both elasticities by differentiating the exact log response, which
+  is branch transparent on the declared positive domain.
+debt:
+  - rerun the complete primary and independent verifiers after elasticity repair

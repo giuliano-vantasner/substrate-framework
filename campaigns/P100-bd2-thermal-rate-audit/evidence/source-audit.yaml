@@ -1,0 +1,39 @@
+source_unit: BD2
+literal_check_calls: 16
+dynamic_check_calls: 0
+assert_statements: 0
+imports: [sys, math, sympy]
+accepted_framework_imports: []
+declared_equations:
+  occupation: Pocc=1/(1+exp(x))
+  gate: W=2*Pocc*(1-Pocc)=sech(x/2)**2/2
+  splitting: x=q/vartheta
+  effective_scale: Theta=q*coth(q/(2*vartheta))/2
+  capillary_barrier: E=pi*tau**2/p=2*pi*tau**2/(g*A**2*k**2*l_m)
+  rate: R=nu*tau/sqrt(p*Theta)*exp(-E/Theta)*W
+what_the_checks_cover:
+  - the exact normalized two-level gate and a bare-factor counterexample
+  - two exact limits of the declared coth scale
+  - one sampled loading derivative and one sampled wavenumber derivative at E/Theta=2*pi
+  - gate endpoint limits and two sampled derivative signs
+  - the algebraic solution of the separately imposed convention y=1
+  - a coarse step-0.01 scan of a log-temperature gate-sensitivity function
+missing_oracles_repaired_by_P100:
+  - exact substitution of Theta into the displayed full rate
+  - capillary elimination and rate dimensions
+  - exact full-rate stationary equation, uniqueness, endpoint limits, and global maximum
+  - exact exclusion of the claimed y=1 operating point and lower bound on the actual maximizer
+  - alternative prefactor and noise-law comparison
+  - exact loading and fixed-q wavenumber sign regimes rather than one sampled point
+  - total-derivative counterfamilies for undeclared q(k)
+  - ordinary versus logarithmic temperature-sensitivity separation
+  - common-energy scale orbit and arbitrary-target attempt-frequency construction
+  - mutation sensitivity for the gate normalization, pi factor, and stationary coefficient
+unsupported_source_interpretations:
+  - the declared coth expression is a physical medium noise quantum
+  - the gate mode is an accepted breather or drive mode
+  - a wavenumber is proportional to frequency without a dispersion and unit convention
+  - a gate knee, curvature convention, sensitivity maximum, and full-rate maximum are one operating optimum
+  - the conditional response is a Langer, Kramers, nucleation, or macroscopic rate without dynamics
+  - one response point identifies the attempt frequency, energy scale, mode, material, or BD1 constituents
+audit_verdict: qualified

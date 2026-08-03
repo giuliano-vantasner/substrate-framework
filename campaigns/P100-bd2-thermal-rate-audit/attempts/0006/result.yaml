@@ -1,0 +1,20 @@
+campaign: P100
+attempt: 6
+route: elasticity_repaired_complete_verifier_rerun
+status: self_referential_alias_gate_and_composite_sensitivity_coordinate_failed
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P100-bd2-thermal-rate-audit/reviews/independent_thermal_rate_review.py
+process:
+  primary: {exit_status: 1, passed_before_failure: 40, failed_check: exact campaign path uses no NumPy integration alias}
+  independent: {exit_status: 1, passed_before_failure: 11, terminal_error: 'ValueError: cannot calculate derivative with respect to q/(2*vartheta)'}
+diagnosis:
+  - All primary scientific gates now pass, including elasticities, total-derivative counterfamilies, sensitivity-objective classification, scale invariance, and arbitrary-target attempt-frequency construction.
+  - The primary anti-alias check searches its own source for the forbidden literal and therefore necessarily finds the search literal itself; this is self-referential validation theater.
+  - The independent route reused the composite q/(2*vartheta) as a differentiation coordinate instead of an independent positive y symbol.
+next_route: >-
+  Replace the self-text alias search with AST import audits for the campaign
+  and canonical module, and introduce an independent positive y symbol for the
+  sensitivity chain rule.
+debt:
+  - rerun both complete verifiers after the oracle-hygiene repair

@@ -2,7 +2,7 @@
 description: Derive and audit the BD2 conditional thermal rate family
 author: vantasner
 created: '2026-08-03T11:46:23Z'
-updated: '2026-08-03T11:46:23Z'
+updated: '2026-08-04T22:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - migration-BD2
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P100 BD2 Thermal Rate Audit
 
@@ -222,3 +222,21 @@ source optimum, or missing physical mechanism is not completion.
 This campaign cross-references BD1-BD5, CM2, CM4, C-TH-001, C-RG-001,
 C-RG-002, C-COH-001, P005, P006, P086, P099, and the canonical thermal,
 radial-energy, and coherence-gate modules.
+
+## Terminal Adjudication
+
+P100 accepts C-TH-002 and qualifies BD2. The source reproduces all sixteen
+checks, while the primary canonical route passes 41 checks, the independent
+route passes 21, and 55 focused thermal, coherence, and radial-energy tests
+pass. The promoted result is the exact declared coth-gated conditional
+response, its unique source-prefactor maximum above `1.039*q`, its
+prefactor-dependent optimum ceiling, exact sign regimes, and scale
+non-identifiability.
+
+The source's `q/2` point is a convention rather than the full-rate optimum.
+Its loading and fixed-q wavenumber signs reverse at `E/Theta=1/2`, a declared
+`q(k)` map can reverse the total derivative, and a constant prefactor removes
+the finite maximum. Rungs 056, 096, and 097 supply no accepted bath or mode
+authority. BD3-BD5, CM2, and CM4 remain pending. The DBD pipeline consumers
+fail on version-specific `np.trapz`; canonical P100 code imports no NumPy or
+quadrature. Claim debt is empty and migration continues to BD3.

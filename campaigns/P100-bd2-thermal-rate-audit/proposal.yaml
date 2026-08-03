@@ -66,4 +66,4 @@ comparators_blinded_until: >-
   alternative prefactor/noise families, derivative conventions,
   identifiability tests, dependency ceiling, and consumer gate before opening
   or executing the BD2 body or inspecting additional consumer values.
-status: draft
+status: accepted

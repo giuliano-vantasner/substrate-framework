@@ -1,0 +1,23 @@
+campaign: P100
+attempt: 7
+route: first_pinned_downstream_consumer_replay
+status: bridge_consumers_reproduced_engineering_interpreter_paths_failed
+process:
+  engineering_barrier_scaling: {exit_status: 127, error: source-relative interpreter path not found}
+  engineering_dbd_scaling_law: {exit_status: 127, error: source-relative interpreter path not found}
+  engineering_dbd_pipeline: {exit_status: 127, error: source-relative interpreter path not found}
+  BD3: {exit_status: 0, elapsed_wall_seconds: 0.48, maximum_resident_kib: 52492, terminal_tally: ALL 16 CHECKS PASS}
+  BD4: {exit_status: 0, elapsed_wall_seconds: 0.45, maximum_resident_kib: 52664, terminal_tally: ALL 14 CHECKS PASS}
+  BD5: {exit_status: 0, elapsed_wall_seconds: 13.16, maximum_resident_kib: 37724, terminal_tally: ALL 13 CHECKS PASS}
+  CM2: {exit_status: 0, elapsed_wall_seconds: 0.74, maximum_resident_kib: 67460, terminal_tally: ALL 21 CHECKS PASS}
+  CM4: {exit_status: 0, elapsed_wall_seconds: 0.59, maximum_resident_kib: 65640, terminal_tally: ALL 10 CHECKS PASS}
+diagnosis:
+  - The five pending bridge consumers reproduce their literal checks but remain noncanonical evidence and cannot supply BD2's missing physical noise, kinetic, mode-identification, or objective premises.
+  - BD5 measures only an un-gated scaled Langevin escape factor, then labels the separately inserted q/2 knee an optimum; its simulation does not optimize the BD2 full rate.
+  - The three engineering commands resolved interpreters relative to the source checkout, which intentionally has no local framework virtual environment.
+next_route: >-
+  Rerun engineering consumers from their required working directories with
+  /home/dan/substrate-framework/.venv/bin/python and preserve any actual
+  source-level compatibility or scientific failures.
+debt:
+  - complete barrier_scaling, dbd scaling_law, and dbd pipeline replay
