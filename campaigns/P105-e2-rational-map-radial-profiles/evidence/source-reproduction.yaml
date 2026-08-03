@@ -1,0 +1,29 @@
+campaign: P105
+source_unit: E2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f
+git_blob: 6a2ec5e0cca1255605d3644a5e421ac655734835
+command: >-
+  /usr/bin/time -f 'ELAPSED_SECONDS=%e MAX_RSS_KB=%M EXIT_STATUS=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+exit_status: 0
+elapsed_seconds: 19.28
+maximum_resident_kib: 277940
+terminal_tally: ALL 6 CHECKS PASS
+stdout: ../attempts/0001/stdout.txt
+numpy_compatibility:
+  dispatch: np.trapezoid if available else np.trapz
+  executed_branch: np.trapezoid
+  compatibility_abort: false
+printed_results:
+  angular_integrals: {B1: 0.997, B2: 5.794, B4: 20.625}
+  energy_coefficients: {B1: 1.2314, B2: 2.4154, B4: 4.5452}
+  per_degree: {B1: 1.2314, B2: 1.2077, B4: 1.1363}
+  I_equals_B_per_degree: {B2: 1.0445, B4: 0.9197}
+verdict: >-
+  Reproduced source evidence only. Clean execution and the six-check tally do
+  not validate the biased angular quadrature, omitted solver status, hard
+  finite walls, combined refinement, comparator-selected bands, or physical
+  baryon, nucleus, binding, reaction, and yield interpretations.

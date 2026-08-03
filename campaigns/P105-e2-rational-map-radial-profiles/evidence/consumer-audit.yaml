@@ -1,0 +1,59 @@
+campaign: P105
+source_unit: E2
+direct_and_narrative_consumers:
+  E3:
+    use: forms 3*pi^2*(2*b(2)-b(4)) and calls it a physical D+D yield coefficient
+    replay: pending
+    ceiling: C-RPROF-002 supplies conditional reduced-model numbers only; the mass and reaction maps remain unaccepted
+  E4:
+    use: contrasts selected L2+L4 ordering with a separately declared BPS model
+    replay: pending
+    ceiling: ordering survives conditionally; physical action, saturation family, and near-BPS interpretation require separate adjudication
+  E5:
+    use: identifies the selected degree-four branch with alpha products in empirical fuel reactions
+    replay: pending
+    ceiling: no accepted degree-to-nucleus or reaction map exists
+  KI5:
+    use: treats rational-map energies as variational upper bounds and differences their errors
+    replay: pending
+    ceiling: C-RPROF-002 does not establish the action/ansatz theorem needed for upper-bound status
+  TX1:
+    use: recomputes the B=2 profile and lifts it into an angular-resolved three-dimensional energy density and quadrupole
+    replay: pending
+    ceiling: profile compatibility survives, but the 3D density, quadrupole, physical state, and amplitude interpretation are new premises
+  TX2_TX3:
+    use: rotate TX1's declared quadrupole and form conditional TT readouts
+    replay: pending
+    ceiling: inherit TX1's unaccepted state and source premises
+  TX4:
+    use: uses b(2)/2<b(1) to claim fission stability of a rotating physical torus
+    replay: pending
+    ceiling: selected reduced-branch ordering is not a global fission threshold or dynamical stability proof
+  TX5:
+    use: uses E2 values as validation comparators for a separately implemented full 3D model
+    replay: pending
+    ceiling: comparator agreement cannot promote TX5's functional, relaxation, or stability claims
+  MK5_MR5:
+    use: match generalized-model classical limits to E2's functional and decimals
+    replay: pending
+    ceiling: conditional regression anchor only; sextic/potential terms, couplings, mass maps, and kappa remain separate
+  narratives:
+    paths:
+      - merged-framework/README.md
+      - merged-framework/bridges/README.md
+      - merged-framework/frontier.md
+      - merged-framework/UNIFIED-SYNTHESIS.md
+      - merged-framework/bridges/phase-29/dossiers/Phase29-NYE-dossier.md
+      - merged-framework/bridges/phase-40/dossiers/Phase40-TX-dossier.md
+    replay: noncanonical_prose_only
+    ceiling: chronology and prose confidence create no authority
+canonical_consumers:
+  - src/substrate_framework/rational_map_radial.py
+  - tests/test_rational_map_radial.py
+  - campaigns/P105-e2-rational-map-radial-profiles/verify.py
+  - campaigns/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+verdict: >-
+  P105 is additive and changes no accepted consumer behavior. Later source
+  units must import only the explicit conditional profile/equation/numeric
+  surfaces and independently close every action, state, minimization,
+  reaction, and observation premise.

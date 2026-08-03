@@ -1,0 +1,33 @@
+campaign: P105
+base_release: v0.88.0
+base_checkpoint: d09de1dc36239c407e9be34413638254952065af
+scientific_base_commit: 42337ce
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+  sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f
+  git_blob: 6a2ec5e0cca1255605d3644a5e421ac655734835
+freeze:
+  proposal_sha256: ab05676296c4396dfd60f5b82343a96f9046c9380d6dc381a3fbbdef5187fbd5
+  frozen_manifest_sha256: 1f19fb7aa0bebd1052dab57655af8a2991d1f07bb7974fca26b363ac483824d8
+implementation:
+  package_exports: src/substrate_framework/__init__.py
+  package_exports_sha256: 47c62c70d40228f4352e2a80f74b5bc60b6c3aed6c950f2af35a571b24967f51
+  module: src/substrate_framework/rational_map_radial.py
+  module_sha256: 71c5484d4270a3bbc6f817d83eed661b548abce6f8d55b8e6371c4d5017f5570
+  tests: tests/test_rational_map_radial.py
+  tests_sha256: 78ca106f9f41f5d7f512ecd45b412bd4054a0b28f8e383552d103ea314102332
+  primary_verifier: campaigns/P105-e2-rational-map-radial-profiles/verify.py
+  primary_verifier_sha256: 3003c0b3142f68634d7c2f6c55910935ac87f5d4e21013d39d6e824c0fe4b4a0
+  independent_review: campaigns/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+  independent_review_sha256: 3d02036e5e417c3925039d79339188a1ac4f2e690aeb33ec15e3a1e6c77d66aa
+numeric_environment:
+  precision: IEEE-754 binary64
+  canonical_solver: SciPy DOP853 and Brent
+  independent_solver: SciPy solve_bvp
+  canonical_quadrature: substrate_framework.numerics.trapezoid_integral
+  independent_quadrature: scipy.integrate.simpson
+numpy_compatibility: >-
+  E2 executes its np.trapezoid branch in the current environment without a
+  compatibility abort. New canonical work has no direct version-specific
+  NumPy trapezoidal call and delegates sampled integration to the shared helper.

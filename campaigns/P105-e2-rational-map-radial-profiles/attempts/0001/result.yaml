@@ -1,0 +1,66 @@
+campaign: P105
+attempt: 1
+route: pinned_source_reproduction_and_static_solver_audit
+status: source_reproduced_oracle_not_accepted
+command: >-
+  /usr/bin/time -f 'ELAPSED_SECONDS=%e MAX_RSS_KB=%M EXIT_STATUS=%x'
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+source:
+  path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+  sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f
+  git_blob: 6a2ec5e0cca1255605d3644a5e421ac655734835
+  worktree_state: clean_relative_to_pinned_blob
+process:
+  exit_status: 0
+  elapsed_seconds: 19.28
+  maximum_resident_kib: 277940
+  terminal_tally: ALL 6 CHECKS PASS
+  stdout: attempts/0001/stdout.txt
+numpy_compatibility:
+  source_dispatch: np.trapezoid if available else np.trapz
+  current_branch: np.trapezoid
+  compatibility_abort: false
+source_results:
+  angular_identity_printed: 0.997
+  angular_degree_two_printed: 5.794
+  angular_degree_four_printed: 20.625
+  b1: 1.2314
+  b2: 2.4154
+  b2_per_degree: 1.2077
+  b4: 4.5452
+  b4_per_degree: 1.1363
+  refined_b2_relative_change: 4.30e-5
+  refined_b4_relative_change: 5.89e-6
+  trivial_I_equals_B_b2_per_degree: 1.0445
+  trivial_I_equals_B_b4_per_degree: 0.9197
+source_method:
+  radial_interval: [1.0e-4, 16.0]
+  initial_mesh_points: 3000
+  solve_bvp_tolerance: 1.0e-6
+  solve_bvp_max_nodes: 120000
+  boundary_data: f(1e-4)=pi and f(rmax)=0
+  energy_samples: 20000
+  refinement_changes: [rmax, initial_mesh_points, solve_bvp_tolerance]
+oracle_findings:
+  - The exact generalized density and Euler-Lagrange equation remain candidates for independent derivation.
+  - The source recomputes biased E1 angular inputs instead of importing accepted C-RMAP-001/002 values.
+  - solve_profile returns the SciPy object without checking success or finite residuals; later code consumes sol.sol unconditionally.
+  - Exact vacuum values are imposed at finite inner and outer coordinates rather than asymptotic boundary residuals.
+  - One combined rmax, mesh, and tolerance change does not isolate cutoff, domain, discretization, or solver-tolerance error.
+  - The broad literature-centered bands use comparators as pass conditions.
+  - The selected conditional energy ordering survives execution but does not identify nuclei, prove full-field binding, or close a reaction or yield.
+freeze_exposure_correction: >-
+  The frozen contract honestly recorded only snippets of the last guard but
+  described it as I=B^2. Full post-freeze inspection shows the actual source
+  guard is I=B. The immutable freeze remains unchanged; P105 will evaluate
+  both I=B and I=B^2 as distinct preregistered load-bearing mutations.
+next_route: >-
+  Implement and test the exact generalized functional, endpoint exponents,
+  asymptotic boundary residuals, canonical shooting, independent collocation,
+  corrected accepted angular inputs, and separate refinements.
+debt:
+  - exact generalized variational and endpoint theorem
+  - two independent corrected-input profile routes
+  - residual, cutoff, domain, tolerance, energy-tail, and mutation studies
+  - source-check, dependency, consumer, review, disposition, and promotion closure

@@ -2,7 +2,7 @@
 description: Derive conditional rational-map radial branches and audit E2 profile and binding claims
 author: vantasner
 created: '2026-08-07T13:00:00Z'
-updated: '2026-08-07T13:00:00Z'
+updated: '2026-08-07T15:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - radial-bvp
 - migration-E2
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P105 E2 Rational-Map Radial Profiles
 
@@ -232,3 +232,25 @@ This campaign cross-references E1 through E5, B1, PG3, S2, C-RMAP-001,
 C-RMAP-002, C-MOD-001, C-MOD-002, C-SCL-001, P062, P084, P104, the canonical
 rational-map, radial-mode, and numerics modules, and the framework-migration
 effort.
+
+## Terminal Adjudication
+
+P105 promotes C-RPROF-001 as the exact conditional generalized radial
+functional, equation, energy split, scale identity, and endpoint theorem, and
+C-RPROF-002 as two-method resolution-bounded evidence for the three declared
+stationary branches. Canonical 2401-sample per-degree coefficients are
+`1.2314456867`, `1.2081352135`, and `1.1365144999`; fresh collocation agrees
+within its declared residual and integration bounds.
+
+Attempts 0002 and 0003 preserve the loss of the tiny degree-four origin signal
+when evolving `f` near `pi` and the failure of root tightening to repair it.
+The equivalent vacuum-complement variable closes that representation defect.
+Attempt 0004 corrects a comparison between endpoint-corrected and uncorrected
+finite-domain energies, and 0006 preserves a 1201-versus-2401 sample-count
+record correction. `I=B` and `I=B^2` change energies but preserve the selected
+ordering, so neither validates a physical binding narrative.
+
+E2 is qualified. No physical action, angular or radial global minimum, full
+field, baryon or nucleus map, fission threshold, binding hierarchy, reaction,
+or yield is promoted. Claim debt is empty; the corpus migration continues
+with E3.

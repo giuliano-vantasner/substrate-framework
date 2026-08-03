@@ -1361,9 +1361,47 @@ units:
     note: >-
       E1 executes the current `np.trapezoid` branch without a compatibility
       abort. Canonical P104 cubature uses Gauss-Legendre weights and introduces
-      no version-specific NumPy trapezoidal alias. Sequential E2 adjudication
-      must replace its duplicated endpoint-loss integral before judging radial
-      sensitivity.
+      no version-specific NumPy trapezoidal alias. P105 replaces E2's
+      duplicated endpoint-loss values with accepted angular inputs before
+      judging radial sensitivity.
+  E2:
+    disposition: qualified
+    accepted_claims:
+      - C-RPROF-001
+      - C-RPROF-002
+    qualification: >-
+      E2's displayed generalized radial functional, Euler--Lagrange equation,
+      three corrected stationary branches, and selected conditional
+      per-degree ordering survive. P105 independently derives the exact model
+      surface and endpoint powers, replaces E2's biased duplicated angular
+      inputs with accepted values, uses asymptotic Robin data rather than
+      exact finite-wall vacua, checks solver status and residuals, adds leading
+      endpoint energy estimates, isolates numerical refinements, and agrees
+      with fresh collocation. The source does not check solve_bvp success or
+      residuals, changes domain mesh and tolerance together, and uses exposed
+      literature bands. Its I=B guard changes energy but preserves the
+      ordering, so it cannot validate the source's physical story. No physical
+      action, angular or radial global minimum, full three-dimensional field,
+      baryon or nucleus map, fission threshold, binding hierarchy, reaction,
+      or yield is accepted.
+    evidence:
+      - campaigns/P105-e2-rational-map-radial-profiles/reviews/source_adjudication.md
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/source-reproduction.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/source-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/check-adjudication.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/dependency-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/consumer-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/candidate-comparison.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/verify.py
+      - campaigns/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+      - memory/vantasner/decisions/C-RPROF-001-review.md
+      - memory/vantasner/decisions/C-RPROF-002-review.md
+    note: >-
+      E2 executes the current `np.trapezoid` branch without a compatibility
+      abort. New canonical sampled integration uses only
+      `substrate_framework.numerics.trapezoid_integral`; the independent route
+      uses Simpson integration. Version-only alias availability is not counted
+      as a scientific failure or success.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

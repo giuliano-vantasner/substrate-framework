@@ -1,0 +1,31 @@
+campaign: P105
+attempt: 3
+route: machine_precision_brent_root_tightening
+status: failed_numeric_boundary_oracle
+command: .venv/bin/python -m pytest tests/test_rational_map_radial.py -q
+process:
+  exit_status: 1
+  elapsed_seconds: 8.82
+  tests_passed: 13
+  tests_failed: 1
+mutation_from_attempt_0002:
+  brent_xtol: numpy_float64_epsilon
+  brent_rtol: four_times_numpy_float64_epsilon
+unchanged_failure:
+  degree: 4
+  observed_outer_robin_residual: -3.110417207045132e-05
+  required_absolute_residual: 2.0e-07
+classification: numerical_representation
+diagnosis: >-
+  Tightening Brent termination to the binary64 floor did not change the
+  returned residual. The degree-four outward IVP map has reached a
+  representation/noise floor set upstream of scalar root termination, so more
+  ceremony around the same single-shooting root cannot validate the boundary
+  claim.
+next_route: >-
+  Replace the ill-conditioned full-interval scalar shoot with an asymptotic
+  two-sided or collocation construction that controls both endpoint residuals,
+  while retaining DOP853 as an independent profile/equation cross-check.
+debt:
+  - stable canonical endpoint construction at the original boundary threshold
+  - independent method, refinement, and mutation evidence

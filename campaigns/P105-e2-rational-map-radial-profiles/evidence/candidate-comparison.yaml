@@ -1,0 +1,25 @@
+campaign: P105
+criteria_frozen_before_full_source_execution: true
+candidates:
+  A: {decision: reproduction_evidence_only, reason: source executes but its tally omits solver status and uses biased angular inputs and finite walls}
+  B: {decision: selected, reason: exact independent variation derives the generalized functional equation split and scale identity}
+  C: {decision: selected, reason: endpoint powers supply regular-origin and massless-tail Robin conditions and mutation-sensitive probes}
+  D: {decision: selected_after_representation_repair, reason: DOP853 vacuum-complement shooting preserves the tiny B>1 origin perturbation and passes isolated refinements}
+  E: {decision: selected, reason: fresh solve_bvp collocation and Simpson integration independently agree without importing the canonical radial API}
+  F: {decision: selected, reason: corrected source-biased I=B and I=B^2 cases distinguish input sensitivity from ordering and comparator claims}
+  G: {decision: selected_as_interpretation_ceiling, reason: stationary branches and a scale-direction minimum do not prove local or global minimization}
+  H: {decision: selected_as_consumer_ceiling, reason: downstream action state reaction scale and observation premises remain separately pending}
+selection_basis:
+  - exact dependency closure and B=1 specialization
+  - asymptotic rather than hard-wall boundary structure
+  - independent methods and isolated numerical refinements
+  - mutation sensitivity without comparator-selected concept choice
+  - assumption economy and explicit interpretation ceilings
+rejected_selection_basis:
+  - closeness to exposed literature decimals
+  - source check count or terminal tally
+  - chronology or downstream narrative reuse
+result: >-
+  Candidates B through F produce the promoted exact and numeric surfaces; G
+  and H constrain their interpretation. A remains historical reproduction
+  evidence and cannot promote the source headline.

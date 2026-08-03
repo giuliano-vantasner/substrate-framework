@@ -1,0 +1,74 @@
+campaign: P105
+attempt: 5
+route: repaired_canonical_shooting_and_independent_collocation
+status: focused_scientific_gate_passed
+commands:
+  - command: .venv/bin/python -m pytest tests/test_rational_map_radial.py -q
+    exit_status: 0
+    terminal_tally: 14 passed
+    elapsed_seconds: 7.45
+  - command: PYTHONPATH=src .venv/bin/python proposals/P105-e2-rational-map-radial-profiles/verify.py
+    exit_status: 0
+    terminal_tally: ALL 44 CHECKS PASS [C-RPROF-001/002]
+    elapsed_seconds: 22.79
+  - command: PYTHONPATH=src .venv/bin/python proposals/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+    exit_status: 0
+    terminal_tally: ALL 9 CHECKS PASS [C-RPROF-001/002-INDEPENDENT]
+    elapsed_seconds: 2.81
+canonical_method:
+  solver: DOP853 vacuum-complement amplitude shooting
+  inner_radius: 1.0e-4
+  outer_radius: 24.0
+  sample_points: 2401
+  relative_tolerance: 3.0e-10
+  absolute_tolerance: 3.0e-12
+  maximum_step: 0.05
+  boundary_data:
+    origin: r*f_prime+sigma*(pi-f)=0
+    tail: r*f_prime+p*f=0
+  quadrature: substrate_framework.numerics.trapezoid_integral
+  endpoint_energy_correction: leading_origin_and_tail_estimates
+canonical_results:
+  B1:
+    angular_integral: 1.0
+    origin_amplitude: 2.0075282172077746
+    energy_coefficient: 1.231445654401988
+    per_degree: 1.231445654401988
+    virial_relative_imbalance: 2.0731324904392658e-08
+  B2:
+    angular_integral: 5.80825932025646
+    origin_amplitude: 1.4713908391524857
+    energy_coefficient: 2.4162704279666767
+    per_degree: 1.2081352139833383
+    virial_relative_imbalance: 4.502867670370529e-10
+  B4:
+    angular_integral: 20.6496264884189
+    origin_amplitude: 0.8004726325578998
+    energy_coefficient: 4.546057999585155
+    per_degree: 1.1365144998962888
+    virial_relative_imbalance: 1.1485587212643483e-12
+independent_method:
+  solver: fresh solve_bvp collocation
+  initial_mesh_points: 601
+  inner_radius: 1.0e-4
+  outer_radius: 24.0
+  tolerance: 3.0e-7
+  quadrature: scipy.integrate.simpson_on_adaptive_mesh
+independent_results:
+  B1: {energy_coefficient: 1.2314503696235857, per_degree: 1.2314503696235857, virial_relative_imbalance: 2.8876398992249238e-06}
+  B2: {energy_coefficient: 2.41627038555235, per_degree: 1.208135192776175, virial_relative_imbalance: 8.269181154233632e-08}
+  B4: {energy_coefficient: 4.546057999552492, per_degree: 1.136514499888123, virial_relative_imbalance: 1.3826785703427562e-09}
+interpretation: >-
+  The two methods establish resolution-bounded stationary branches and their
+  conditional energy ordering for three declared (B,I) inputs. They do not
+  establish uniqueness, local or global minimality, a full three-dimensional
+  solution, physical baryon or nuclear identity, binding, reaction, or yield.
+source_guard_correction: >-
+  Both I=B and I=B^2 are solved as distinct mutations. They change the
+  energies materially, but both preserve the selected per-degree ordering; the
+  source's I=B predicate only rejects agreement with exposed literature
+  comparators and cannot validate the ordering or physical narrative.
+debt:
+  - claim-by-claim source and consumer adjudication
+  - governance, release, generated documentation, and durable-memory synchronization
+  - integrated repository validation and impact replay

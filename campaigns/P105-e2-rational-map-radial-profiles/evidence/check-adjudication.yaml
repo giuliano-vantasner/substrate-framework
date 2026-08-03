@@ -1,0 +1,53 @@
+campaign: P105
+source_unit: E2
+literal_checks: 6
+checks:
+  - index: 1
+    source_predicate: B=1 energy lies in 1.22 to 1.25 and the finite-wall endpoint is small
+    verdict: qualified
+    surviving_claim: C-RPROF-002
+    qualification: >-
+      Corrected B=1 shooting reproduces the accepted C-MOD specialization,
+      but one broad comparator band cannot validate the B=2 and B=4 solver.
+  - index: 2
+    source_predicate: B=2 and B=4 meet exact-vacuum finite-wall boundary values
+    verdict: replaced_by_stronger_oracle
+    surviving_claim: C-RPROF-002
+    qualification: >-
+      Two independent corrected-input methods satisfy regular-origin and
+      massless-tail Robin data plus equation residuals. The words deuteron,
+      alpha, bound, and multi-Skyrmion are not established.
+  - index: 3
+    source_predicate: three energy decimals lie within about one percent of literature values
+    verdict: rejected_as_validation_or_selection_oracle
+    surviving_observation: source decimals reproduce their exposed comparison neighborhoods
+    qualification: >-
+      Canonical values use accepted angular inputs, asymptotic boundaries, and
+      endpoint estimates; comparator closeness does not choose the model.
+  - index: 4
+    source_predicate: b(4)/4 is below b(2)/2, which is below b(1)
+    verdict: qualified
+    surviving_claim: C-RPROF-002
+    qualification: >-
+      The ordering holds for three declared stationary branches. It does not
+      prove global minimization, physical nuclear binding, alpha preference,
+      a reaction sign, or a yield.
+  - index: 5
+    source_predicate: simultaneous domain mesh and tolerance changes shift energies below 0.5 percent
+    verdict: replaced_by_stronger_oracle
+    surviving_claim: C-RPROF-002
+    qualification: >-
+      P105 isolates outer-domain, origin-cutoff, sampled-quadrature, IVP
+      tolerance, and maximum-step refinements and adds endpoint estimates.
+  - index: 6
+    source_predicate: I=B energies miss exposed literature decimals by more than five percent
+    verdict: qualified_as_sensitivity_only
+    qualification: >-
+      Accepted I values are load bearing for the numeric energies. The I=B
+      mutation still preserves the source ordering, and I=B^2 is a distinct
+      mutation; comparator miss is not a structural rejection oracle.
+terminal_tally_verdict: >-
+  All six predicates execute, but only the exact conditional model surface and
+  resolution-bounded stationary branch/order content survive after stronger
+  verification. The tally does not establish a physical action, minimizer,
+  baryon or nucleus map, binding hierarchy, reaction, or yield.

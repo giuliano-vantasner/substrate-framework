@@ -1,0 +1,32 @@
+campaign: P105
+attempt: 7
+route: integrated_promotion_gate
+status: integrated_promotion_gate_passed
+commands:
+  - scripts/validate.sh
+  - git diff --check
+expected_surfaces:
+  claims: 121
+  release: v0.89.0
+  source_units: 218
+  pending_units: 115
+  partial_units: 0
+  source_disposition: E2_qualified
+  campaign: P105_accepted
+  focused_primary_tally: 45
+  independent_tally: 9
+  focused_tests: 15
+post_gate_policy: >-
+  Finalize this record after the integrated command returns, then rerun only
+  repository, generation, memory, skill, and diff checks whose inputs include
+  the record. Do not repeat the full pytest suite at an unchanged boundary.
+results:
+  workflow: WORKFLOW VALID 121 claims 121 accepted 0 proposals
+  migration_queue: 218 units 115 pending 0 partial
+  memory: All 449 files valid
+  skill: valid
+  pytest: 968 passed in 89.14s
+  repository: ALL REPOSITORY WORKFLOW CHECKS PASS
+  diff_check: passed
+exit_status: 0
+debt: []

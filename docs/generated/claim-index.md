@@ -750,6 +750,24 @@ Conditional on C-RMAP-001 and on the exact declared rational map R_4(z)=(z^4+2*i
 - Compatibility: `compatible_extension`
 - Dependencies: C-RMAP-001
 
+## C-RPROF-001
+
+Conditional on C-RMAP-001's declared positive integer degree B and positive angular coefficient I, and on the separately declared dimensionless radial functional E=4*pi*integral_0^infinity [r^2*f'^2 +2*B*sin(f)^2*(1+f'^2)+I*sin(f)^4/r^2] dr, exact one-dimensional variation gives (r^2+2*B*sin(f)^2)*f''+2*r*f' +B*sin(2*f)*(f'^2-1)-I*sin(2*f)*sin(f)^2/r^2=0. The density separates as E=E2+E4 with E2=4*pi*integral [r^2*f'^2+2*B*sin(f)^2]dr and E4=4*pi*integral [2*B*sin(f)^2*f'^2+I*sin(f)^4/r^2]dr. Under the scale family f_s(r)=f(exp(s)*r), convergence and endpoint data that remove boundary terms give E(s)=exp(-s)*E2+exp(s)*E4; a stationary member therefore obeys E2=E4 and has positive curvature E2+E4 in this scale direction. Linearized regular-origin and decaying massless-tail powers are sigma=(sqrt(1+8*B)-1)/2 and p=(sqrt(1+8*B)+1)/2, satisfying sigma*(sigma+1)=2*B and p*(p-1)=2*B, with asymptotic residuals r*f'+sigma*(pi-f)=0 and r*f'+p*f=0. At B=1,I=1 the density and equation reduce exactly to C-MOD-001. These are conditional exact reduced-model identities. They do not derive a physical Skyrme action or rational-map ansatz, prove half-line existence or uniqueness, establish local or global minimization, solve a full three-dimensional field, identify degree with a baryon or nucleus, or supply a mass, binding energy, reaction, yield, material, or observation.
+
+- Accepted in: `v0.89.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RMAP-001, C-MOD-001
+
+## C-RPROF-002
+
+Conditional on C-RPROF-001 and on accepted angular inputs (B,I)=(1,1),(2,pi+8/3),(4,20.6496264884189), two independent float64 routes give resolution-bounded evidence for one monotone stationary branch at each input. Vacuum-complement DOP853 amplitude shooting on [10^-4,24] with regular-origin and massless-tail Robin data, rtol=3e-10, atol=3e-12, maximum step 0.05, 2401 samples, shared trapezoidal integration, and explicit leading endpoint-energy estimates gives conventional conditional coefficients E/(12*pi^2) of 1.2314456867, 2.4162704269, and 4.5460579996, hence per-degree values 1.2314456867, 1.2081352135, and 1.1365144999. The relative E2/E4 imbalances are 4.98e-9, 1.50e-11, and 3.42e-13. Independent solve_bvp collocation from a fresh two-power initial construction on the same cutoffs, tolerance 3e-7, adaptive residual below 3e-7, and Simpson integration gives 1.2314503696, 2.4162703856, and 4.5460579996. Isolated sampled-quadrature, origin-cutoff, outer-domain, IVP-tolerance, and maximum-step refinements preserve the values and ordering. Accepted, source-biased, I=B, and I=B^2 angular inputs give materially distinct energies; both simple mutations still preserve the selected ordering, so comparator rejection is not its oracle. This is numeric evidence for three declared stationary branches and their conditional selected ordering only. It proves no half-line existence or uniqueness theorem, local or global minimum, rational-map angular minimum, variational upper bound, full three-dimensional solution, physical baryon, deuteron, alpha particle or nucleus, fission threshold, binding hierarchy, reaction, yield, quantum state, mass scale, material, or observation.
+
+- Accepted in: `v0.89.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RPROF-001, C-RMAP-001, C-RMAP-002
+
 ## C-SCL-001
 
 Let lambda, nu, S, E0, and epsilon0 be positive, with lambda a dimensionless classical Hessian eigenvalue, nu an inverse-time scale, S an action scale, and E0*epsilon0 a background energy. Conditional on a separately declared one-quantum harmonic interpretation, the dimensionless frequency is sqrt(lambda), the energy gap is S*nu*sqrt(lambda), and the gap-to-background ratio is S*nu*sqrt(lambda)/(E0*epsilon0). For every positive rho, replacing nu by rho*nu leaves the dimensionless Hessian problem unchanged while multiplying the gap and ratio by rho; analogous independent variation of S or E0 also changes the physical ratio. Thus a dimensionless squared classical frequency alone does not determine an excitation energy or mass ratio, and lambda itself cannot replace sqrt(lambda) in the harmonic gap. This exact conditional scale ledger supplies no quantization rule, value of S or nu, background normalization, spin, isospin, parity, particle or Roper dictionary, or substrate realization.

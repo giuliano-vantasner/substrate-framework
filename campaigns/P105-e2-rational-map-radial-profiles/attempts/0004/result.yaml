@@ -1,0 +1,33 @@
+campaign: P105
+attempt: 4
+route: vacuum_complement_shooting_with_option_c_regression
+status: failed_comparison_oracle
+command: .venv/bin/python -m pytest tests/test_rational_map_radial.py -q
+process:
+  exit_status: 1
+  elapsed_seconds: 7.68
+  tests_passed: 13
+  tests_failed: 1
+scientific_progress:
+  degree_four_outer_robin_threshold_passed: true
+  all_endpoint_residuals_below_original_threshold: true
+  all_three_virial_thresholds_passed: true
+  corrected_per_degree_ordering_passed: true
+failure:
+  comparison: generalized_B1_energy_against_C_MOD_002
+  generalized_endpoint_corrected_energy_coefficient: 1.231445654401988
+  accepted_finite_domain_uncorrected_energy_coefficient: 1.2313740584718567
+  relative_tolerance: 2.0e-05
+classification: oracle_quantity_mismatch
+diagnosis: >-
+  The generalized evidence adds explicit leading origin and infinite-tail
+  energy estimates, whereas the accepted Option-C comparator reports only its
+  sampled finite-domain integral. Comparing those different quantities at a
+  tight regression tolerance is invalid even though they share the same
+  B=1 profile equation and normalization.
+next_route: >-
+  Compare the generalized sampled-domain energy to the accepted sampled-domain
+  energy, and test the separately reported endpoint estimates on their own.
+debt:
+  - corrected like-for-like B=1 regression oracle
+  - independent collocation, refinement, and mutation evidence

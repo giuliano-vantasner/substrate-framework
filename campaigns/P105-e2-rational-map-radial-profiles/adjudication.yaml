@@ -1,0 +1,54 @@
+campaign: P105
+title: E2 conditional rational-map radial profile audit
+source_baseline: substrate@6d1f4e0
+source_units: [E2]
+base_release: v0.88.0
+release_after_adjudication: v0.89.0
+adjudicated_at: '2026-08-07T15:30:00Z'
+selected_candidates:
+  - {id: B, reason: Exact independent variation derives the generalized functional equation split and scale identity.}
+  - {id: C, reason: Dominant-balance endpoint powers supply asymptotic Robin data and mutation probes.}
+  - {id: D, reason: Vacuum-complement DOP853 shooting passes isolated refinements without losing the B>1 origin signal.}
+  - {id: E, reason: Fresh solve_bvp collocation and Simpson quadrature independently reproduce the branches.}
+  - {id: F, reason: Corrected biased I=B and I=B^2 mutations separate energy sensitivity from ordering and comparator claims.}
+  - {id: G, reason: The review preserves the distinction between a stationary branch scale direction and local or global minimization.}
+  - {id: H, reason: Consumer tracing retains every action state scale reaction and observation premise.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims:
+  - {id: C-RPROF-001, decision: accepted_symbolic_verified}
+  - {id: C-RPROF-002, decision: accepted_numeric_evidence}
+reviewed_existing:
+  - {id: C-RMAP-001, decision: unchanged_exact_angular_dependency_and_interpretation_ceiling}
+  - {id: C-RMAP-002, decision: unchanged_declared_map_numeric_dependency_and_minimization_ceiling}
+  - {id: C-MOD-001, decision: unchanged_exact_B1_compatibility_surface}
+  - {id: C-MOD-002, decision: unchanged_numeric_B1_compatibility_comparator}
+evidence:
+  source_route: attempts/0001/result.yaml
+  failed_boundary_oracle: attempts/0002/result.yaml
+  failed_root_tightening: attempts/0003/result.yaml
+  failed_quantity_comparison: attempts/0004/result.yaml
+  focused_scientific_gate: attempts/0005/result.yaml
+  numeric_provenance_correction: attempts/0006/result.yaml
+  verifier: verify.py
+  independent_review: reviews/independent_radial_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+source_disposition:
+  E2: qualified
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P105-e2-rational-map-radial-profiles/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+  - .venv/bin/python -m pytest -q tests/test_rational_map_radial.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

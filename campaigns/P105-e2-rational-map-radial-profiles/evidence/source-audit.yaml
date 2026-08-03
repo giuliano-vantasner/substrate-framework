@@ -1,0 +1,47 @@
+campaign: P105
+source_unit: E2
+source_sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f
+literal_checks: 6
+findings:
+  angular_inputs:
+    implementation: duplicated midpoint arrays reduced by trapezoids without endpoints
+    verdict: rejected_as_final_input
+    correction: >-
+      C-RMAP-001 supplies I(1)=1 and I(2)=pi+8/3 exactly; C-RMAP-002
+      supplies I(4)=20.6496264884189 as resolution-bounded evidence.
+  radial_functional_and_equation:
+    implementation: displayed generalized density and Euler-Lagrange equation
+    verdict: independently_derived_conditionally_accepted
+    surviving_claim: C-RPROF-001
+  solver:
+    implementation: solve_bvp on [1e-4,rmax] with f(left)=pi and f(right)=0
+    solver_gate: absent
+    residual_gate: absent
+    verdict: noncanonical_reproduction_evidence
+  energy:
+    implementation: 20000-point sampled trapezoidal integral
+    endpoint_corrections: absent
+    verdict: qualified_by_corrected_recomputation
+  refinement:
+    implementation: simultaneous rmax 16 to 22, mesh 3000 to 5000, tolerance 1e-6 to 3e-7
+    verdict: rejected_as_isolated_error_inventory
+  comparators:
+    implementation: source literature decimals appear directly in pass bands
+    verdict: rejected_as_concept_selection_or_accuracy_oracle
+  simple_I_guard:
+    actual_mutation: I_equals_B
+    frozen_exposure_note: the immutable freeze had described the exposed snippet as I_equals_B_squared
+    repaired_audit: both I_equals_B and I_equals_B_squared were separately solved
+    verdict: >-
+      accepted only as angular-input sensitivity. Both mutations materially
+      change energies, but both preserve the selected per-degree ordering, so
+      the guard cannot validate that ordering or its physical interpretation.
+  interpretation:
+    surviving: three stationary branches and conditional energy ordering in one declared reduced model
+    rejected:
+      - global or local minimizing status
+      - a full three-dimensional field solution
+      - identification of degree with a baryon, deuteron, alpha particle, or nucleus
+      - physical binding energy, reaction preference, release, or yield
+      - a variational upper bound without an accepted action and ansatz theorem
+overall: qualified

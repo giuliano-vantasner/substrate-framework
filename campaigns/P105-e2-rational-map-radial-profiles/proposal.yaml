@@ -68,4 +68,4 @@ comparators_blinded_until: >-
   inspected. P105 freezes endpoint analysis, corrected inputs, two independent
   methods, error gates, mutations, and interpretation ceilings before further
   inspection or execution.
-status: active
+status: accepted

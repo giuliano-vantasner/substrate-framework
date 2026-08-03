@@ -1,0 +1,41 @@
+campaign: P105
+attempt: 6
+route: numeric_provenance_sample_count_audit
+status: record_correction_passed
+finding: >-
+  Attempt 0005 labels its canonical result block as 2401 samples, but those
+  recorded decimals were printed by the earlier 1201-sample focused profile
+  command. The primary verifier itself used 2401 samples. The immutable 0005
+  record remains unchanged; this append-only correction supplies the actual
+  2401-sample values used by governance.
+command: >-
+  .venv/bin/python -c 'solve B=1,2,4 with outer_radius=24,
+  sample_points=2401, rtol=3e-10, atol=3e-12, max_step=0.05; print evidence'
+exit_status: 0
+corrected_2401_sample_results:
+  B1:
+    angular_integral: 1.0
+    origin_amplitude: 2.0075282172077746
+    energy_coefficient: 1.2314456867122552
+    per_degree: 1.2314456867122552
+    virial_relative_imbalance: 4.973052253651083e-09
+    outer_boundary_residual: -6.524641937843967e-14
+  B2:
+    angular_integral: 5.80825932025646
+    origin_amplitude: 1.4713908391524857
+    energy_coefficient: 2.4162704269425106
+    per_degree: 1.2081352134712553
+    virial_relative_imbalance: 1.4989817995268378e-11
+    outer_boundary_residual: -1.3964523981613297e-16
+  B4:
+    angular_integral: 20.6496264884189
+    origin_amplitude: 0.8004726325578998
+    energy_coefficient: 4.54605799958882
+    per_degree: 1.136514499897205
+    virial_relative_imbalance: 3.415375919925702e-13
+    outer_boundary_residual: -5.21098355438232e-13
+comparison_to_1201_sample_record:
+  maximum_relative_energy_shift: less_than_3e-8
+  ordering_changed: false
+  interpretation_changed: false
+debt: []

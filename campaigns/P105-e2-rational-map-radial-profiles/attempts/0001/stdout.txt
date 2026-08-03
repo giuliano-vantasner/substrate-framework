@@ -1,0 +1,53 @@
+==============================================================================
+Solving the B=1,2,4 (B,I) rational-map profiles (scipy.solve_bvp) ...
+==============================================================================
+    B=1  I=0.997  f(0)=3.1416  f(rmax)=4.70e-38  b=1.2314  per-baryon b/B=1.2314
+    B=2  I=5.794  f(0)=3.1416  f(rmax)=0.00e+00  b=2.4154  per-baryon b/B=1.2077
+    B=4  I=20.625  f(0)=3.1416  f(rmax)=5.88e-39  b=4.5452  per-baryon b/B=1.1363
+==============================================================================
+CHECK 1 -- the B=1 solve recovers the corpus hedgehog B1=1.232 [DERIVED]
+==============================================================================
+  E2.1 [DERIVED-here] solving the (B=1,I=1) profile reproduces the corpus Option-C hedgehog energy b(1)=E/(12 pi^2) in [1.22,1.25] (Ben's 1.2322, bridge_S2/PG3): the (B,I) BVP solver is anchored to the validated B=1 result before it is trusted for B=2,4  PASS
+==============================================================================
+CHECK 2 -- B=2 and B=4 profiles SOLVE (f(0)=pi, f(rmax)->0) [DERIVED]
+==============================================================================
+    B=2 boundary: f(0)=3.14159, f(rmax)=0.00e+00
+    B=4 boundary: f(0)=3.14159, f(rmax)=5.88e-39
+  E2.2 [DERIVED-here] the B=2 (deuteron, I=5.79) and B=4 (alpha, I=20.63) rational-map profiles SOLVE the (B,I) boundary-value problem with f(0)=pi, f(rmax)->0 -- the FIRST multi-Skyrmion (B>=2) bound profiles in the corpus (no Skyrmion-Skyrmion rung existed)  PASS
+==============================================================================
+CHECK 3 -- per-baryon energies match HMS literature [DERIVED, numeric]
+==============================================================================
+    b(1)=1.2314 (lit 1.232), b(2)/2=1.2077 (lit 1.208), b(4)/4=1.1363 (lit 1.137)
+  E2.3 [DERIVED-here] the per-baryon energies b(B)/B reproduce the HMS rational-map literature: b(1)=1.232, b(2)/2~1.208, b(4)/4~1.137 (each within ~1%). These are an OUTPUT of the solved profiles, not inputs -- the rational-map approximation is reproduced from scratch  PASS
+==============================================================================
+CHECK 4 -- the BINDING HIERARCHY b(4)/4 < b(2)/2 < b(1) (alpha most bound) [DERIVED]
+==============================================================================
+    1.1363 < 1.2077 < 1.2314
+  E2.4 [DERIVED-here] the per-baryon energy DECREASES with baryon number, b(4)/4 < b(2)/2 < b(1): the B=4 (alpha) Skyrmion is the most bound per baryon, the deuteron next, the single nucleon least -- the structural prediction that the nuclear binding-energy difference (the per-event yield, E3) is POSITIVE and that the alpha is the favored end product, matching the empirical B_E/A ordering (He4 7.07 > d 1.11 MeV/A)  PASS
+==============================================================================
+CHECK 5 -- convergence: energies stable under rmax & grid refinement [DERIVED]
+==============================================================================
+    b(2): 2.41541 -> 2.41531 (rel 4.30e-05);  b(4): 4.54518 -> 4.54515 (rel 5.89e-06)
+  E2.5 [DERIVED-here] refining rmax (16->22) and the grid changes b(2),b(4) by < 0.5% -- the multi-Skyrmion energies are converged (numeric_evidence), not artifacts of the domain truncation or mesh  PASS
+==============================================================================
+CHECK 6 -- GUARD: the trivial I=B angular integral is REJECTED [GUARD]
+==============================================================================
+    trivial I=B:  b(2)/2=1.0445 (real 1.208), b(4)/4=0.9197 (real 1.137)
+  E2.6 [GUARD, REJECTION] replacing the COMPUTED angular integrals I(2)=5.79, I(4)=20.63 with the trivial guess I=B gives per-baryon energies that do NOT reproduce the HMS values 1.208/1.137 (off by > 5%) -- so the E1 I-integrals are load-bearing and the binding hierarchy is a property of the real rational maps, not of any I that scales with B  PASS
+==============================================================================
+RESULT
+==============================================================================
+  E2 ESTABLISHED. The B=1,2,4 multi-Skyrmion profiles solve the (B,I) rational-map
+  BVP: b(1)=1.2314 (corpus hedgehog 1.232), b(2)/2=1.2077 (deuteron),
+  b(4)/4=1.1363 (alpha), reproducing the HMS literature. The per-baryon energy
+  DECREASES with B -- b(4)/4 < b(2)/2 < b(1) -- so the alpha is the most bound per
+  baryon and the fusion binding-difference (the yield) is positive. These are the FIRST
+  multi-Skyrmion bound profiles in the corpus. Energies converge under rmax/grid
+  refinement; the trivial I=B guess is rejected (the E1 I-integrals are load-bearing).
+  PROVENANCE: DERIVED here -- the profiles, energies, hierarchy, convergence, the B=1
+  consistency, the guard; IMPORTED -- the (B,I) HMS energy/ODE and the I-integrals;
+  DECLARED -- the single-profile rational-map ansatz (a variational upper bound);
+  DEFERRED -- the absolute MeV (Part-4 scale wall): only dimensionless ratios are claimed.
+
+ALL 6 CHECKS PASS
+ELAPSED_SECONDS=19.28 MAX_RSS_KB=277940 EXIT_STATUS=0

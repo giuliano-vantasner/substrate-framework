@@ -1,0 +1,40 @@
+campaign: P105
+claims:
+  C-RPROF-001:
+    accepted_dependencies: [C-RMAP-001, C-MOD-001]
+    declared_inputs:
+      - the displayed dimensionless generalized radial functional
+      - positive integer degree B and positive angular coefficient I
+      - regular-origin and decaying massless endpoint data
+    mathematical_imports:
+      - one-dimensional Euler-Lagrange calculus
+      - Frobenius or dominant-balance endpoint analysis
+      - logarithmic Derrick scaling
+    closure: >-
+      C-RMAP-001 supplies the conditional angular definitions and exact B=1,2
+      values; C-MOD-001 supplies the exact B=1 compatibility surface. The
+      generalized functional remains an explicit declared premise, not an
+      accepted physical-action consequence.
+  C-RPROF-002:
+    accepted_dependencies: [C-RPROF-001, C-RMAP-001, C-RMAP-002]
+    declared_inputs:
+      B1: {degree: 1, angular_integral: 1}
+      B2: {degree: 2, angular_integral: pi+8/3}
+      B4: {degree: 4, angular_integral: 20.6496264884189}
+    numeric_imports:
+      - DOP853 and Brent amplitude shooting
+      - independent solve_bvp collocation
+      - shared trapezoid compatibility helper and independent Simpson quadrature
+    compatibility_only: [C-MOD-002]
+    closure: three declared resolution-bounded stationary branches only
+missing_for_broader_interpretation:
+  - an accepted physical Skyrme action and derivation of the rational-map ansatz
+  - a proof that any supplied rational map globally minimizes its fixed-degree angular problem
+  - existence, uniqueness, and local or global radial minimization theorems
+  - a full three-dimensional solution and stability/minimality comparison
+  - an accepted state map from rational degree to baryon number, deuteron, alpha particle, or nucleus
+  - physical masses, scales, quantum corrections, binding energies, reactions, yields, and observations
+closure: >-
+  The proposed claims are dependency closed at their explicit conditional
+  ceilings. No pending E3, E4, E5, KI5, TX, MK, MR, physical-state, or reaction
+  result is imported into their derivation or selection.

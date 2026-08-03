@@ -5416,6 +5416,130 @@ claims:
     accepted_in: v0.88.0
     challenges: []
     supersedes: []
+  - id: C-RPROF-001
+    statement: >-
+      Conditional on C-RMAP-001's declared positive integer degree B and
+      positive angular coefficient I, and on the separately declared
+      dimensionless radial functional
+      E=4*pi*integral_0^infinity [r^2*f'^2
+      +2*B*sin(f)^2*(1+f'^2)+I*sin(f)^4/r^2] dr, exact one-dimensional
+      variation gives
+      (r^2+2*B*sin(f)^2)*f''+2*r*f'
+      +B*sin(2*f)*(f'^2-1)-I*sin(2*f)*sin(f)^2/r^2=0. The density separates
+      as E=E2+E4 with E2=4*pi*integral [r^2*f'^2+2*B*sin(f)^2]dr and
+      E4=4*pi*integral [2*B*sin(f)^2*f'^2+I*sin(f)^4/r^2]dr. Under the scale
+      family f_s(r)=f(exp(s)*r), convergence and endpoint data that remove
+      boundary terms give E(s)=exp(-s)*E2+exp(s)*E4; a stationary member
+      therefore obeys E2=E4 and has positive curvature E2+E4 in this scale
+      direction. Linearized regular-origin and decaying massless-tail powers
+      are sigma=(sqrt(1+8*B)-1)/2 and p=(sqrt(1+8*B)+1)/2, satisfying
+      sigma*(sigma+1)=2*B and p*(p-1)=2*B, with asymptotic residuals
+      r*f'+sigma*(pi-f)=0 and r*f'+p*f=0. At B=1,I=1 the density and equation
+      reduce exactly to C-MOD-001. These are conditional exact reduced-model
+      identities. They do not derive a physical Skyrme action or rational-map
+      ansatz, prove half-line existence or uniqueness, establish local or
+      global minimization, solve a full three-dimensional field, identify
+      degree with a baryon or nucleus, or supply a mass, binding energy,
+      reaction, yield, material, or observation.
+    provenance: campaigns/P105-e2-rational-map-radial-profiles/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-RMAP-001
+      - C-MOD-001
+    evidence:
+      - campaigns/P105-e2-rational-map-radial-profiles/verify.py
+      - campaigns/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/source-reproduction.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/source-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/check-adjudication.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/dependency-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/consumer-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/candidate-comparison.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/primary-provenance.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-RPROF-001-review.md
+      - tests/test_rational_map_radial.py
+    assumptions:
+      - C-RMAP-001's sphere normalization and conditional definitions hold, while the displayed radial functional and its dimensionless normalization remain explicit declared premises rather than consequences of an accepted physical action.
+      - B is a positive integer, I is positive, r is positive, and the profile is differentiable and convergent enough for the displayed variation, integrations by parts, and scale substitution.
+      - The endpoint powers follow the linearized or dominant-balance equations. At B=1 nonlinear terms also enter the leading origin coefficient equation but do not change sigma=1.
+      - The Robin expressions encode leading asymptotic behavior at finite numerical cutoffs; they are not exact finite-radius vacuum values.
+      - E2=E4 establishes stationarity only along the displayed scale family. Positive scale curvature alone proves neither a local minimum in the full radial function space nor any full-field stability.
+      - C-MOD-001 is an exact B=1 compatibility surface only. Neither it nor this claim establishes a physical soliton, particle, or state map.
+    comparators:
+      - E2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; its functional and numeric comparators were exposed before P105, so selection rests on exact derivation, accepted inputs, endpoint structure, independent methods, mutations, and frozen ceilings rather than decimal closeness
+    accepted_in: v0.89.0
+    challenges: []
+    supersedes: []
+  - id: C-RPROF-002
+    statement: >-
+      Conditional on C-RPROF-001 and on accepted angular inputs
+      (B,I)=(1,1),(2,pi+8/3),(4,20.6496264884189), two independent float64
+      routes give resolution-bounded evidence for one monotone stationary
+      branch at each input. Vacuum-complement DOP853 amplitude shooting on
+      [10^-4,24] with regular-origin and massless-tail Robin data,
+      rtol=3e-10, atol=3e-12, maximum step 0.05, 2401 samples, shared
+      trapezoidal integration, and explicit leading endpoint-energy estimates
+      gives conventional conditional coefficients E/(12*pi^2) of
+      1.2314456867, 2.4162704269, and 4.5460579996, hence per-degree values
+      1.2314456867, 1.2081352135, and 1.1365144999. The relative E2/E4
+      imbalances are 4.98e-9, 1.50e-11, and 3.42e-13. Independent solve_bvp
+      collocation from a fresh two-power initial construction on the same
+      cutoffs, tolerance 3e-7, adaptive residual below 3e-7, and Simpson
+      integration gives 1.2314503696, 2.4162703856, and 4.5460579996. Isolated
+      sampled-quadrature, origin-cutoff, outer-domain, IVP-tolerance, and
+      maximum-step refinements preserve the values and ordering. Accepted,
+      source-biased, I=B, and I=B^2 angular inputs give materially distinct
+      energies; both simple mutations still preserve the selected ordering,
+      so comparator rejection is not its oracle. This is numeric evidence for
+      three declared stationary branches and their conditional selected
+      ordering only. It proves no half-line existence or uniqueness theorem,
+      local or global minimum, rational-map angular minimum, variational upper
+      bound, full three-dimensional solution, physical baryon, deuteron,
+      alpha particle or nucleus, fission threshold, binding hierarchy,
+      reaction, yield, quantum state, mass scale, material, or observation.
+    provenance: campaigns/P105-e2-rational-map-radial-profiles/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+    dependencies:
+      - C-RPROF-001
+      - C-RMAP-001
+      - C-RMAP-002
+    evidence:
+      - campaigns/P105-e2-rational-map-radial-profiles/verify.py
+      - campaigns/P105-e2-rational-map-radial-profiles/reviews/independent_radial_review.py
+      - campaigns/P105-e2-rational-map-radial-profiles/attempts/0002/result.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/attempts/0003/result.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/attempts/0004/result.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/attempts/0005/result.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/attempts/0006/result.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/source-reproduction.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/source-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/check-adjudication.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/dependency-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/consumer-audit.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/candidate-comparison.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/evidence/primary-provenance.yaml
+      - campaigns/P105-e2-rational-map-radial-profiles/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-RPROF-002-review.md
+      - tests/test_rational_map_radial.py
+    assumptions:
+      - All C-RPROF-001 premises and interpretation ceilings hold. C-RMAP-001 supplies I(1) and I(2), while C-RMAP-002 supplies only resolution-bounded I(4) for its declared map and no angular or radial minimization theorem.
+      - Every reported decimal is resolution-bounded IEEE-754 binary64 evidence at the displayed equations, cutoffs, boundary data, solver settings, sampling, integration, and leading endpoint-estimate conventions.
+      - The canonical route evolves g=pi-f because the B>1 origin perturbation is smaller than ordinary relative error on f near pi; attempts 0002 and 0003 preserve the failed direct-f representation and root-tightening oracle.
+      - Leading origin and tail energy estimates are asymptotic truncation estimates, not exact omitted integrals. Independent collocation uses the same leading convention only for like-for-like comparison.
+      - Monotonic profiles, small residuals, virial balance, method agreement, refinements, and angular-input mutations validate the stationary-branch claim but do not establish existence, uniqueness, or minimization outside the tested numerical surface.
+      - C-MOD-002 is a compatibility comparator at B=1 and is not a derivation input. No literature energy decimal, physical state name, mass, binding, reaction, or yield enters branch selection or pass thresholds.
+    comparators:
+      - E2's hash-pinned biased-angular hard-wall results and cited literature neighborhoods; P105 claims no comparator blinding and rejects decimal closeness as a concept-selection oracle
+    accepted_in: v0.89.0
+    challenges: []
+    supersedes: []
   - id: C-RMAP-002
     statement: >-
       Conditional on C-RMAP-001 and on the exact declared rational map

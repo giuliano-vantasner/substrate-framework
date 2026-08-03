@@ -1,0 +1,32 @@
+campaign: P105
+attempt: 2
+route: first_canonical_shooting_and_test_oracle
+status: failed_numeric_boundary_oracle
+command: .venv/bin/python -m pytest tests/test_rational_map_radial.py -q
+process:
+  exit_status: 1
+  elapsed_seconds: 7.35
+  tests_passed: 13
+  tests_failed: 1
+failure:
+  test: test_corrected_stationary_branches_are_finite_ordered_and_virial_balanced
+  degree: 4
+  angular_integral: 20.6496264884189
+  observed_outer_robin_residual: -3.110417207045132e-05
+  preregistered_test_threshold: 2.0e-07
+classification: numerical_method
+diagnosis: >-
+  The asymptotic shooting root becomes strongly ill-conditioned with outer
+  radius for the degree-four growing mode. Brent termination in amplitude,
+  followed by a fresh IVP integration at the returned amplitude, left a
+  boundary residual larger than the frozen test threshold. Thirteen exact,
+  specialization, mutation, normalization, input-rejection, and compatibility
+  tests passed; the failed boundary predicate is preserved and is not treated
+  as scientific success.
+next_route: >-
+  Quantify residual sensitivity and repair the shooting endpoint calculation
+  with stricter root/integration control or an equivalent sensitivity-aware
+  residual oracle, without relaxing the declared physical threshold.
+debt:
+  - corrected shooting root with a residual that passes the original threshold
+  - independent collocation, refinement, and mutation evidence
