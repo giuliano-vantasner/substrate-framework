@@ -1,0 +1,30 @@
+campaign: P161
+proposed_claim: null
+nearest_claims:
+  C-LIE-003:
+    owns: exact_standard_fundamental_SU3_trace_and_symmetric_tensor_algebra
+    ceiling: no_physical_color_action_dynamics_dimension_or_substrate_mechanism
+  C-NVP-002:
+    owns: finite_representation_Euclidean_2D_scalar_loop_and_local_curvature_coefficient
+    ceiling: no_unique_total_coupling_dimension_lift_propagator_or_physical_QCD_sector
+  C-KRN-001:
+    owns: fixed_input_subcritical_scalar_Riesz_inverse_normalization_and_d3_s1_endpoint
+    ceiling: no_dimension_power_source_force_gauge_or_lift_selection
+  C-KRN-002:
+    owns: force_dictionary_dimension_power_nonidentifiability_and_critical_boundary
+    ceiling: no_geometry_gauge_action_or_dimensional_lift
+  P159:
+    owns: exact_color_metric_inversion_counterfamily_for_the_same_YM2_source_pattern
+    ceiling: record_only_qualification_without_new_API
+novelty_test: >-
+  QCD2's only distinct carrier choice is the already accepted eight-dimensional
+  fundamental SU3 trace metric. Its executable static expression is the same
+  ordinary tensor product already adjudicated in P159. It supplies no distinct
+  premise, inversion, theorem, action, domain, solver, limit, or consumer API.
+  Its physical labels are unsupported interpretations rather than novel
+  mathematical content.
+decision: terminal_qualification_by_accepted_composition_without_new_claim_or_API
+implementation_change: none
+duplicated_constants_or_solvers_added: false
+debt: []
+

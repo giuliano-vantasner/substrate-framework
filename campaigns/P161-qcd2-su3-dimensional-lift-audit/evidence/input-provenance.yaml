@@ -1,0 +1,36 @@
+campaign: P161
+base_release: v0.124.0
+base_commit: 1451670
+proposal_freeze_commit: 5fa06c7
+proposal_sha256: 68bd4a2c1e66ff9e328c34b86dc71b6d011467000b026b9fe901fe89599bc2b4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  source_unit: QCD2
+  path: merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py
+  sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f
+  dossier_path: merged-framework/bridges/phase-8/dossiers/QCD2-dossier.md
+  dossier_sha256: 6db12d5d203e04587ab7b241a838a9a471c7fdb69a143c3f0478637100d7b129
+accepted_inputs:
+  - C-LIE-003 exact standard fundamental SU3 algebra with no physical-color or dynamical reading
+  - C-NVP-002 exact finite-representation conditional Euclidean 2D complex-scalar loop with its no-lift ceiling
+  - C-KRN-001 fixed-input subcritical scalar Riesz inverse and conditional d3 s1 endpoint
+  - C-KRN-002 source-probe force dictionary and dimension-power nonidentifiability
+  - C-NAG-001 exact local non-Abelian covariance and curvature conventions only
+  - exact finite matrix inversion tensor products derivatives and Fourier-symbol algebra
+  - existing pure su3 nonabelian_vacuum_polarization momentum_kernels source_audit and verification APIs
+excluded_inputs:
+  - QCD1s rejected fermion colored-matter local-induction unique-coupling and physical-QCD readings
+  - YM2s rejected kinetic inversion weak-sector force and dimensional-lift conclusions
+  - EM7s rejected endpoint selection fractal geometry physical-force and dimensional-lift conclusions
+  - D3Ss rejected claim that sine-Gordon mass-gap analyticity selects s1 or a Coulomb sector
+  - pending GK1 QCD5 or any retroactive closure annotation
+  - an undeclared action gauge fixing time operator source boundary prescription coupling or physical dimension
+  - source numeric values or successful tally as concept-selection criteria
+comparator_gate: >-
+  P159 and P160 already exposed QCD2, so fresh blinding was impossible. P161
+  froze the competing constructions, typed distinctions, criteria, mutations,
+  compatibility policy, and physical ceilings before renewed targeted
+  inspection. Known source values cannot select the accepted composition.
+compatibility_event: immutable_eager_legacy_default_replayed_alias_only
+debt: []
+

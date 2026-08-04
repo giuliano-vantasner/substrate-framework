@@ -1,0 +1,18 @@
+attempt: 0008
+campaign: P161
+candidate: lightweight_governance_and_memory_preflight
+status: failed
+started_at: '2026-08-10T18:04:00Z'
+finished_at: '2026-08-10T18:05:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate proposal_path decision_path --base /home/dan/substrate-framework
+passed:
+  repository_contract: valid_160_accepted_claims_59_pending_units
+failure:
+  layer: memory_CLI_invocation
+  mechanism: memory_validate_accepts_one_path_per_invocation_not_two_positional_paths
+  scientific_failure: false
+repair: invoke_memory_validate_once_for_each_durable_record
+next_attempt: complete_preflight_then_run_the_single_integrated_terminal_gate
+

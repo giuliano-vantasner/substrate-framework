@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P161
+candidate: B_F_exact_accepted_composition_primary_verifier
+status: failed
+started_at: '2026-08-10T17:32:00Z'
+finished_at: '2026-08-10T17:34:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P161-qcd2-su3-dimensional-lift-audit/verify.py
+passed_before_failure: 30
+failure:
+  layer: verifier_lexical_probe
+  check: source_also_prints_the_contradictory_closure_claim
+  mechanism: >-
+    the probe required a contiguous phrase combining fractional-Laplacian and
+    lifts-the-kinetic-term text that the source separates across clauses
+  scientific_failure: false
+independent_route: ALL_21_CHECKS_PASS
+repair: require_the_exact_printed_closure_sentence_and_exact_lifts_the_kinetic_term_PER_COLOR_fragment
+next_attempt: rerun_primary_without_changing_any_scientific_equation_or_threshold

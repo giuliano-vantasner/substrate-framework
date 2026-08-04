@@ -1,0 +1,23 @@
+campaign: P161
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: QCD2
+nodes:
+  - {source_unit: QCD2, role: adjudicated_root, path: merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py, sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f, checks: 10, assertions: 1}
+  - {source_unit: QCD1, role: qualified_SU3_predecessor, path: merged-framework/bridges/phase-8/bridge_QCD1_su3_kinetic_induction.py, sha256: b70065548c121661c9a6801255aa844a40165e947c054a48617d926955a704ed, checks: 11, assertions: 1}
+  - {source_unit: QCD3, role: qualified_independent_SU3_algebra_provenance, path: merged-framework/bridges/phase-8/bridge_QCD3_asymptotic_freedom.py, sha256: 7d7c9a9bc2f04c933fc62484fec3329c0eb7769bb54ba8cd67701da5110af0ca, checks: 9, assertions: 1}
+  - {source_unit: YM2, role: qualified_SU2_sibling, path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py, sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c, checks: 10, assertions: 1}
+  - {source_unit: YM1, role: qualified_SU2_predecessor, path: merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py, sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6, checks: 9, assertions: 1}
+  - {source_unit: EM7, role: qualified_Riesz_dependency, path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py, sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22, checks: 17, assertions: 1}
+  - {source_unit: D3S, role: qualified_rejected_endpoint_selection_provenance, path: merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py, sha256: a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71, checks: 13, assertions: 1}
+  - {source_unit: EM3, role: qualified_static_analogy, path: merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py, sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9, checks: 11, assertions: 1}
+  - {source_unit: EM5, role: qualified_loop_analogy, path: merged-framework/bridges/phase-3/bridge_EM5_induced_gauge_sector.py, sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0, checks: 11, assertions: 1}
+  - {source_unit: G1, role: qualified_gravity_analogy_only, path: merged-framework/bridges/phase-5/bridge_G1_radiating_dilaton_source.py, sha256: 580783a214736b24e6f36a4c035b2c608f931f4ba8ece202ff7f6d260d46f876, checks: 10, assertions: 1}
+  - {source_unit: G2, role: qualified_gravity_analogy_only, path: merged-framework/bridges/phase-5/bridge_G2_gordon_metric_3plus1.py, sha256: 666df886d7567d87796615753143ace56a4f06fb6e1de4ea53208b1fc6ba0f88, checks: 6, assertions: 1}
+  - {source_unit: QCD5, role: pending_dimension_consumer, path: merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py, sha256: 60a2f5b8dbd76f3b4d6b0a48e4fcd5ed9edbc6a4e1d3869cb4a40bf30c87084c, checks: 7, assertions: 1}
+  - {source_unit: GK1, role: pending_boundary_consumer, path: merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py, sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74, checks: 11, assertions: 1}
+totals: {nodes: 13, predicates: 135, assertions: 13}
+compatibility:
+  native_nodes: [QCD1, QCD3, YM1, EM7, D3S, EM3, EM5, G2, QCD5, GK1]
+  immutable_alias_only_nodes: [QCD2, YM2, G1]
+  alias_definition: numpy_trapz_equals_numpy_trapezoid
+  scientific_effect: none_version_spelling_only

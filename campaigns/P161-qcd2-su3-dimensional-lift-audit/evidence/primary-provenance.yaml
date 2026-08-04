@@ -1,0 +1,37 @@
+campaign: P161
+accepted_base:
+  release: v0.124.0
+  framework_checkpoint: 1451670
+  scientific_commit: 1451670
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_engineering_framework_prose_and_personal_memory_files_outside_the_hash_pinned_QCD2_inputs
+source_unit:
+  id: QCD2
+  path: merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py
+  sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f
+dossier:
+  path: merged-framework/bridges/phase-8/dossiers/QCD2-dossier.md
+  sha256: 6db12d5d203e04587ab7b241a838a9a471c7fdb69a143c3f0478637100d7b129
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/su3.py
+  - src/substrate_framework/nonabelian_vacuum_polarization.py
+  - src/substrate_framework/momentum_kernels.py
+  - campaigns/P136-em7-fractional-force-audit
+  - campaigns/P159-ym2-yang-mills-lift-audit
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - QCD2 SU3 3+1 dimensional lift color Riesz kernel
+  - trace metric quadratic operator inversion gauge propagator
+authority_statement: >-
+  Memory and QCD2 are recall and candidate evidence. The pinned release,
+  accepted C-LIE-003 C-NVP-002 C-KRN-001 and C-KRN-002 claims, canonical exact
+  APIs, predicate-level source audit, independent eight-color inversion
+  derivation, mutation-sensitive verifier, and frozen semantic graph supply
+  authority. No new scientific import or comparator is required for the
+  no-delta composition decision.
+

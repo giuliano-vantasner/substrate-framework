@@ -1,0 +1,22 @@
+campaign: P161
+source_unit: QCD2
+checks:
+  - {id: QCD2.1, status: retained_exact_duplicate, mapping: [C-LIE-003, C-NVP-002], reason: The standard fundamental SU3 half-trace metric is exact and accepted but does not ride to a new spacetime without an independently defined operator.}
+  - {id: QCD2.2, status: retained_as_definition_only, mapping: [C-NVP-002, C-KRN-001], reason: A constant color matrix factors out of the product that G_color defines; differentiating it with respect to unrelated symbols does not derive a dimension-changing map or propagator.}
+  - {id: QCD2.3, status: retained_as_typed_static_composition, mapping: [C-NVP-002, C-KRN-001], reason: Tensoring a supplied trace metric with a supplied scalar Riesz kernel is exact, but the source does not invert a color-weighted kinetic operator or construct a gauge action.}
+  - {id: QCD2.4, status: retained_as_defined_product_value, mapping: [C-NVP-002, C-KRN-001], reason: Half of the supplied d3 s1 scalar kernel is exactly 1/(8*pi*r); this is not the fixed-source inverse of a quadratic kernel whose coefficient is one half and does not derive d or s.}
+  - {id: QCD2.5, status: retained_as_radial_derivative_only, mapping: C-KRN-002, reason: The exponent follows by differentiation but earns no non-Abelian force interpretation without source probe energy sign coupling and representation data.}
+  - {id: QCD2.6, status: retained_as_numeric_regression, mapping: C-KRN-001, reason: SciPy repeats the already exact d3 s1 gamma value and half-factor arithmetic.}
+  - {id: QCD2.7, status: qualified_numeric_regression, mapping: C-KRN-002, reason: Polyfit regresses a hard-coded unnormalized power and its finite-difference derivative without refinement; exact algebra already fixes both slopes.}
+  - {id: QCD2.8, status: qualified_numeric_definition_regression, mapping: C-KRN-001, reason: A one-dimensional s-one-half packet approximately exercises the declared Fourier multiplier but neither the d3 s1 endpoint nor a gauge or spacetime lift.}
+  - {id: QCD2.GUARD1, status: rejected_as_abelian_limit, mapping: null, reason: eps_self is not used in the kernel and the trace factor is manually changed from one half to one; the check swaps carrier normalization instead of taking a limit in one declared convention.}
+  - {id: QCD2.GUARD2, status: retained_as_fixed_dimension_counterexample, mapping: C-KRN-002, reason: At already fixed d3 the supplied s0.9 power differs from s1; the check cannot select d3 or s1 and uses a comparator-built regression.}
+headline_decision: >-
+  Select exact accepted composition with no new claim or API. QCD2 reproduces a
+  standard SU3 trace metric, a declared color-times-static-Riesz product, its
+  radial derivative, and duplicate numeric regressions. It neither inverts the
+  color-weighted kinetic kernel nor constructs a source, action, time operator,
+  gauge fixing, Lorentzian propagator, dimension-selection mechanism, physical
+  force, color sector, or substrate lift. The claimed ceiling remains rejected.
+debt: []
+

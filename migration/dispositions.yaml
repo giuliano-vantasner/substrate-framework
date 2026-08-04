@@ -5306,3 +5306,53 @@ units:
       np.trapz spelling runs through an isolated alias backed by np.trapezoid.
       Mutable P160 and canonical code have zero executable legacy integration
       references.
+  QCD2:
+    disposition: qualified
+    accepted_claims:
+      - C-LIE-003
+      - C-NVP-002
+      - C-KRN-001
+      - C-KRN-002
+    qualification: >-
+      QCD2's standard fundamental SU3 half-trace metric, independently
+      supplied d=3 s=1 scalar Riesz inverse, defined color-times-scalar
+      product, radial derivative, and exact portions of its numeric regressions
+      survive as typed accepted composition. Its dimensional Yang--Mills lift
+      does not. Multiplying an already inverted scalar Green kernel by the
+      trace metric is not the inverse of a trace-weighted quadratic kernel;
+      the latter contains the reciprocal metric and differs by a factor of
+      four in the fundamental example. QCD2 declares no gauge action, action
+      variation, time operator, signature, gauge fixing, causal or boundary
+      prescription, source, kinetic coefficient, dimension-changing map,
+      dimension-selection rule, or nonlinear covariant fractional operator.
+      Its force label lacks a source-probe dictionary, its Abelian guard
+      changes conventions manually, and its one-dimensional s=one-half FFT
+      does not test the claimed endpoint. No physical force, color sector,
+      spacetime propagator, dimensional lift, or substrate mechanism is
+      accepted.
+    evidence:
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/reviews/source_adjudication.md
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/source-reproduction.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/source-audit.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/check-adjudication.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/input-provenance.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/dependency-audit.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/consumer-audit.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/candidate-comparison.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/evidence/primary-provenance.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/verify.py
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/reviews/independent_colored_kernel_review.py
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/reviews/replay_source_graph.py
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/attempts/0005/result.yaml
+      - campaigns/P161-qcd2-su3-dimensional-lift-audit/attempts/0006/result.yaml
+      - memory/vantasner/decisions/QCD2-qualified-review.md
+    note: >-
+      P161 closes thirty-three primary, twenty-one independent, fifty-three
+      focused accepted-API tests, and twenty-five frozen-graph checks replaying
+      135 immutable predicates across thirteen units. Native QCD2's eager
+      legacy NumPy fallback is reproduced through an isolated alias backed
+      only by np.trapezoid and remains version-only evidence; mutable P161
+      scientific calculations use exact algebra and current APIs. No canonical
+      claim, API, consumer, or release changes.

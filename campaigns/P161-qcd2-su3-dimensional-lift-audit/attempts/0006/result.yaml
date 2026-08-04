@@ -1,0 +1,27 @@
+attempt: 0006
+campaign: P161
+candidate: frozen_source_graph_semantic_replay
+status: passed
+started_at: '2026-08-10T17:36:00Z'
+finished_at: '2026-08-10T17:40:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P161-qcd2-su3-dimensional-lift-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  exit_code: 0
+  checks: 25
+  terminal_tally: ALL_25_CHECKS_PASS
+  nodes_replayed: 13
+  source_predicates: 135
+  source_assertions: 13
+  native_nodes: 10
+  alias_only_nodes: [G1, YM2, QCD2]
+semantic_closure:
+  - QCD2_defines_trace_times_Riesz_product_without_operator_inversion
+  - YM2_supplies_only_the_already_qualified_sibling_pattern
+  - QCD1_names_the_lift_but_constructs_no_dimension_map
+  - QCD3_supplies_independent_SU3_algebra_only
+  - QCD5_repeats_one_supplied_exponent_equation_rather_than_overdetermining_dimension
+  - GK1_correctly_preserves_the_missing_kinetic_normalization_boundary
+  - D3S_and_EM7_cannot_authorize_endpoint_or_dimension_selection
+debt:
+  - complete_impact_provenance_disposition_memory_and_terminal_validation
+next_attempt: close_record_only_adjudication_and_run_one_integrated_terminal_gate

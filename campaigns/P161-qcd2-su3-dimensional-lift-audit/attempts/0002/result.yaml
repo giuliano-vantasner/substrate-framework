@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P161
+candidate: A_native_hash_pinned_replay
+status: failed
+started_at: '2026-08-10T17:18:00Z'
+finished_at: '2026-08-10T17:19:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py
+source_sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f
+exit_code: 1
+terminal_tally: absent
+failure:
+  layer: runtime_compatibility
+  location: bridge_QCD2_su3_3plus1_lift.py:148
+  mechanism: nested_getattr_eagerly_resolves_removed_numpy_trapz_despite_native_numpy_trapezoid
+  exception: "AttributeError: module 'numpy' has no attribute 'trapz'"
+  scientific_failure: false
+  scientific_checks_executed: 0
+classification: version_only_numpy_api_abort
+immutable_source_policy: do_not_edit_the_historical_source
+repair: inject_only_np_trapz_equals_np_trapezoid_before_runpy_replay
+next_attempt: alias_only_hash_pinned_replay_with_unchanged_scientific_inputs

@@ -1,0 +1,29 @@
+attempt: 0003
+campaign: P161
+candidate: A_alias_only_hash_pinned_replay
+status: passed
+started_at: '2026-08-10T17:20:00Z'
+finished_at: '2026-08-10T17:21:00Z'
+command: >-
+  .venv/bin/python -c 'import numpy as np, runpy; np.trapz = np.trapezoid;
+  runpy.run_path("/home/dan/substrate/merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py",
+  run_name="__main__")'
+source_sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f
+compatibility_alias:
+  added_name: numpy.trapz
+  target: numpy.trapezoid
+  scientific_inputs_changed: false
+exit_code: 0
+terminal_tally: ALL_10_CHECKS_PASS
+observed:
+  literal_checks: 8
+  dynamic_guards: 2
+  assertions: 1
+  source_native_abort_reproduced_separately: true
+classification: source_regression_evidence_only_pending_predicate_adjudication
+scientific_verdict: not_implied_by_green_tally
+debt:
+  - adjudicate_all_ten_checks_against_accepted_dependency_closure
+  - distinguish_direct_color_metric_from_the_inverse_quadratic_kernel
+  - test_whether_any_declared_dimensional_intertwiner_or_four_dimensional_action_exists
+next_attempt: complete_static_inventory_and_independent_exact_rederivation

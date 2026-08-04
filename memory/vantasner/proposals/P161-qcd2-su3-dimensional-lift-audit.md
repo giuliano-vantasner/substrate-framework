@@ -2,15 +2,15 @@
 description: Audit QCD2 and test whether any distinct SU3 dimensional-lift operator survives
 author: vantasner
 created: '2026-08-10T17:15:00Z'
-updated: '2026-08-10T17:15:00Z'
+updated: '2026-08-10T18:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-QCD2
 - dimensional-lift
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P161 QCD2 SU3 Dimensional-Lift Audit
 
@@ -86,12 +86,12 @@ select a candidate. Prior exposure is documented; no fresh blinding is claimed.
 
 ## Proposed Claim Delta
 
-The initial claim delta is empty because P159 already established the
-reciprocal-metric inversion issue and C-NVP-002 now supplies the SU3
-representation specialization. Candidate C may receive a source-aware proposal
-only if nonduplication and consumer audits find a distinct reusable theorem.
-Candidates D or E require every new premise to be declared and independently
-verified; they cannot be inferred from QCD2's result prose.
+The source-aware claim delta remains empty. Candidate B is selected because
+accepted claims already contain every exact SU3 trace, Riesz, endpoint, and
+derivative surface. Candidate C duplicates the exact colored-kernel inversion
+review in P159; Candidates D and E require actions and operators absent from
+QCD2. No new identifier, API, or release is planned. The source's unsupported
+lift prose does not justify framework expansion.
 
 ## Implementation and Oracle Plan
 
@@ -112,11 +112,13 @@ source--probe dictionary, and claimed dimensional map.
 
 ## Attempts and Continuation
 
-Attempts are append-only and will distinguish source compatibility,
-implementation, representation, numerical, concept, target, and accepted
-foundation failures. A failed direct lift returns first to accepted composition
-or a properly declared operator theorem; it cannot revise QCD1, C-NVP-002, or
-unrelated accepted claims.
+The append-only ledger preserves the prior-exposure-aware freeze, native NumPy
+compatibility abort, successful alias-only replay, a failed lexical probe,
+repaired scientific closure, and complete source-graph replay. Primary and
+fresh independent routes pass 33 and 21 checks; 53 focused accepted-API tests
+pass; and the graph route passes 25 checks over 135 source predicates.
+Candidates A, B, F, and G close the source through exact accepted composition,
+counterfamilies, and governance without a claim or release delta.
 
 ## Debt Ledger
 
@@ -128,12 +130,12 @@ continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| QCD2 predicate strength is unaudited | Reproduce and classify all ten checks and the assertion | open |
-| Accepted composition versus Candidate C novelty is unknown | Audit canonical APIs, P159 evidence, and actual consumers | open |
-| The claimed dimension-changing map is unspecified | Construct it with complete typed data or reject it predicate by predicate | open |
-| Gauge, normalization, and source data are unresolved | Exercise longitudinal, bare, counterterm, metric, and source--probe counterfamilies | open |
-| Compatibility status is known but not campaign-pinned | Record native and alias-only behavior without scientific demotion | open |
-| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
+| QCD2 predicate strength is unaudited | Reproduce and classify all ten checks and the assertion | discharged |
+| Accepted composition versus Candidate C novelty is unknown | Audit canonical APIs, P159 evidence, and actual consumers | discharged |
+| The claimed dimension-changing map is unspecified | Construct it with complete typed data or reject it predicate by predicate | discharged |
+| Gauge, normalization, and source data are unresolved | Exercise longitudinal, bare, counterterm, metric, and source--probe counterfamilies | discharged |
+| Compatibility status is known but not campaign-pinned | Record native and alias-only behavior without scientific demotion | discharged |
+| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | discharged |
 
 ## Review and Promotion Plan
 
@@ -150,13 +152,14 @@ boundary is reached.
 P161 closes only when a positive operator theorem or complete accepted
 composition exists, every QCD2 predicate has an individual verdict, the
 spacetime and physical premises are typed, mutations are load-bearing, all
-consumers replay, governance agrees, and debt is empty. A no-go, source abort,
-static-shape match, or rejected physical interpretation alone cannot complete
-the campaign.
+consumers replay, governance agrees, and debt is empty. The accepted
+composition, individual predicate review, compatibility replay, semantic
+graph, disposition, generated queue, and durable decision now satisfy that
+gate without changing v0.124.0. The integrated repository result is pinned in
+attempt 0009.
 
 ## Cross-References
 
 See QCD2, QCD2-dossier, QCD1, YM2, EM7, GK1, C-LIE-001, C-NVP-002,
 C-KRN-001, C-KRN-002, C-NAG-001, P136, P159, P160, and the parent migration
 effort.
-

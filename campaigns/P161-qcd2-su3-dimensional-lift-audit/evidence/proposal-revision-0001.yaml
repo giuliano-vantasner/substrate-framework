@@ -1,0 +1,32 @@
+revision: 0001
+campaign: P161
+parent_frozen_proposal_sha256: 68bd4a2c1e66ff9e328c34b86dc71b6d011467000b026b9fe901fe89599bc2b4
+trigger: >-
+  Renewed source-aware inspection confirms Candidate B is a complete positive
+  composition and exposes the same color-kernel inversion error as YM2, an
+  undeclared source-force dictionary, and no dimension-changing operator.
+unchanged:
+  - candidates_A_through_G_and_their_predeclared_structural_ordering
+  - exclusion_of_all_previously_exposed_source_values_from_selection
+  - distinction_among_color_metric_static_kernel_quadratic_operator_action_and_propagator
+  - immutable_alias_only_compatibility_policy_and_mutation_requirements
+claim_delta:
+  identifiers: []
+  release_change: none_if_terminal_qualification_and_global_replay_pass
+  implementation_change: none_reuse_existing_pure_APIs
+selected_candidates: [A, B, F, G]
+source_corrections:
+  - treat_trace_times_Riesz_as_a_defined_static_tensor_product_not_a_dimension_lift
+  - invert_the_color_metric_if_it_is_part_of_the_fixed_source_quadratic_kernel
+  - require_source_probe_representation_coupling_and_energy_data_before_a_force_reading
+  - keep_static_spatial_inverse_distinct_from_a_Lorentzian_gauge_propagator
+  - reject_the_manual_trace_normalization_swap_as_an_abelian_limit
+  - reject_EM7_D3S_and_QCD5_dimensional_endpoint_selection_imports
+  - classify_the_numeric_slope_and_FFT_legs_as_duplicate_regressions
+oracle: >-
+  Exact canonical composition plus independent eight-color matrix inversion,
+  representation mutation, source-normalization counterfamilies,
+  static-versus-spacetime operator comparison, native and alias source replay,
+  predicate adjudication, and frozen graph closure.
+status: frozen
+

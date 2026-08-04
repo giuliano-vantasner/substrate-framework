@@ -1,0 +1,23 @@
+campaign: P161
+source_unit: QCD2
+hash_pinned_lexical_or_semantic_consumers:
+  QCD1: contains_a_retroactive_QCD2_ceiling_annotation_but_is_qualified_with_no_lift
+  YM2: names_QCD2_as_the_SU3_sibling_but_is_qualified_with_no_lift
+  QCD5: directly_uses_QCD2_as_one_of_three_repeated_exponent_equations
+  GK1: directly_reads_QCD2_and_correctly_detects_that_static_Riesz_shape_cannot_fix_a_kinetic_coefficient
+accepted_API_consumers:
+  source_change: none
+  canonical_change: none
+  affected_existing_consumers: none
+graph_replay:
+  nodes: 13
+  predicates: 135
+  assertions: 13
+  alias_only: [G1, YM2, QCD2]
+consumer_decision: >-
+  Terminally qualifying QCD2 narrows only unaccepted source prose. Existing
+  accepted QCD1 and YM2 claims already exclude the lift. Pending QCD5 and GK1
+  receive no authority and remain individually queued. No canonical API
+  changes, so package consumers require no migration.
+debt: []
+

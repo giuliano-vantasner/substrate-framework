@@ -1,0 +1,17 @@
+attempt: 0007
+campaign: P161
+candidate: preterminal_governance_materialization
+status: failed
+started_at: '2026-08-10T18:02:00Z'
+finished_at: '2026-08-10T18:03:00Z'
+commands:
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - .venv/bin/python scripts/validate_repository.py
+failure:
+  layer: governance_materialization_order
+  mechanism: QCD2_disposition_referenced_attempt_0007_before_that_terminal_artifact_existed
+  scientific_failure: false
+  generated_queue_written: true
+repair: preserve_this_failure_as_0007_and_move_the_terminal_gate_reference_to_0008
+next_attempt: validate_lightweight_governance_then_run_the_single_integrated_terminal_gate
+
