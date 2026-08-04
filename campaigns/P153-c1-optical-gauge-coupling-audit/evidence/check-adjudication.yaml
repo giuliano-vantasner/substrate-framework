@@ -1,0 +1,48 @@
+source_unit: C1
+checks:
+  C1.01:
+    source_name: optical_metric_and_inverse
+    classification: exact_duplicate
+    maps_to: [C-OG-001]
+    reason: The metric and inverse are accepted exact optical geometry; no coupling follows from inversion.
+  C1.02:
+    source_name: covariant_derivative_plane_wave_shift
+    classification: qualified_exact
+    maps_to: [C-GAU-001, C-OG-005]
+    reason: Restore positive charge e and both connection components; only w+e*A_t and k-e*A_x are invariant.
+  C1.03:
+    source_name: constant_optical_mass_shell
+    classification: qualified_exact
+    maps_to: [C-OG-005]
+    reason: The equation follows from the separately declared charged-scalar action only for the stated constant background.
+  C1.04:
+    source_name: fixed_k_A_eff_correction
+    classification: qualified_gauge_coordinate_identity
+    maps_to: [C-OG-005]
+    reason: The expansion is algebraically exact at fixed canonical k but is not an observable line shift; constant A_x is pure gauge.
+  C1.05:
+    source_name: G_absent_from_declared_dispersion
+    classification: rejected_as_evidence
+    maps_to: []
+    reason: Differentiating with respect to a symbol omitted by construction cannot establish a physical medium or gravity coupling.
+  C1.06:
+    source_name: flat_zero_connection_limit
+    classification: qualified_exact_limit
+    maps_to: [C-OG-005]
+    reason: It is the free massive scalar limit; identifying that scalar with a breather requires separate dynamics.
+  C1.07:
+    source_name: electrogravitic_numeric_ratio
+    classification: rejected_as_stated
+    maps_to: []
+    reason: eps0 is unused, G*E^2/c^4 alone is not the stated SI curvature, and the medium comparator is imposed rather than derived.
+  C1.08:
+    source_name: G_versus_n_symbol_membership
+    classification: tautological_construction_check
+    maps_to: []
+    reason: The two expressions were explicitly constructed to contain those symbols and establish no physical dictionary.
+  C1.09:
+    source_name: group_velocity_in_shifted_momentum
+    classification: qualified_exact
+    maps_to: [C-OG-005]
+    reason: Dependence through k-e*A_x is the declared connection form, not proof of Berry material realization or an Aharonov-Bohm observation.
+all_nine_adjudicated: true

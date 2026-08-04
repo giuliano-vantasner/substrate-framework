@@ -651,6 +651,15 @@ Let a(x)=c0^2*n_x/(2*n^3) be the C-CC-001 zero-velocity optical collective accel
 - Compatibility: `compatible_extension`
 - Dependencies: C-CC-001
 
+## C-OG-005
+
+Conditional on C-OG-001's metric, C-GAU-001's positive-charge convention, and the separately declared action S=-integral sqrt(-g)*(g^{mu nu}(D_mu Psi)^*D_nu Psi+m^2*|Psi|^2) dt dx, the Euler equation is D_mu(sqrt(-g)*g^{mu nu}D_nu Psi)/sqrt(-g)-m^2*Psi=0. For positive constant n, c0, m, and e and constant real (A_t,A_x), a plane wave exp(i*(k*x-w*t)) obeys n*(w+e*A_t)^2-(c0^2/n)*(k-e*A_x)^2=m^2. Under chi=a*t+b*x, w'=w-e*a, k'=k+e*b, A_t'=A_t+a, and A_x'=A_x+b, so the two displayed momentum combinations are invariant. A constant connection on the simply connected line is pure gauge. On a circle of circumference L with Psi(x+L)=exp(i*theta)Psi(x), integer mode q instead has (w+e*A_t)^2=m^2/n+(c0^2/n^2)*((2*pi*q+theta)/L-e*A_x)^2, invariant under q'=q+ell and A_x'=A_x+2*pi*ell/(e*L). For varying n(x), the spatial operator is D_x((c0^2/n)D_x Psi), whose difference from (c0^2/n)D_xD_x Psi is -c0^2*n_x*D_x Psi/n^2. With C-BER-001's B=i*psi_dagger*d psi convention and the same section phase as the U1 matter phase, a separately declared texture phi(x) maps only by e*A_x=-B_phi*partial_x(phi). These identities establish no scalar or breather realization, material action, electromagnetic field, analog-gravity observation, real-gravity coupling, or dynamical spacetime.
+
+- Accepted in: `v0.119.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-OG-001, C-GAU-001, C-BER-001
+
 ## C-OVL-001
 
 For any whole-line L2 mode eta normalized by integral_R |eta|^2 dx=1 and any supplied bounded real multiplication profile Phi with essential range Phi_min<=Phi<=Phi_max, its expectation y=integral_R |eta|^2*Phi dx obeys Phi_min<=y<=Phi_max. For positive p,r,kappa and real A, if eta is proportional to sech(kappa*x)^p and Phi=A*sech(kappa*x)^r under Cartesian dx, then normalization gives the exact matched-width overlap y=A*Gamma(p+r/2)*Gamma(p+1/2) /(Gamma(p)*Gamma(p+r/2+1/2)); the common kappa cancels, but A does not. The p=2,r=1 value is 9*pi*A/32. For C-QBL-003's actual unnormalized even sech^2 and odd sech*tanh modes against A*sech at the same width, the normalized squared-density expectations are respectively 9*pi*A/32 and 3*pi*A/16, their ratio for common A is 2/3, and the weighted even-odd cross expectation vanishes by parity. After L2 normalization y has the mass dimension of Phi. A separately declared product m=y*v has the sum of the supplied profile and scale dimensions; a common v cancels from mass ratios, while independent amplitudes remain, and y->rho*y with v->v/rho leaves m invariant. These exact conditional expectation and parameter results derive no fermion, Yukawa interaction, physical condensate or VEV, generation assignment, hierarchy, mixing, absolute mass, radial-measure formula, Standard-Model map, or substrate mechanism. C-QBL-003's negative and zero Hessian eigenvalues remain non-mass objects but do not uniquely select this overlap functional.

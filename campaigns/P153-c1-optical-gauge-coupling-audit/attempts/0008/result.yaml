@@ -1,0 +1,27 @@
+attempt: 0008
+campaign: P153
+candidate: exact_canonical_primary_independent_and_graph_closure
+status: passed
+started_at: '2026-08-10T05:24:00Z'
+finished_at: '2026-08-10T05:36:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_optical_gauge_scalar.py -q
+  - .venv/bin/python campaigns/P153-c1-optical-gauge-coupling-audit/verify.py
+  - .venv/bin/python campaigns/P153-c1-optical-gauge-coupling-audit/reviews/independent_optical_gauge_review.py
+  - .venv/bin/python campaigns/P153-c1-optical-gauge-coupling-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest tests/test_optical_gauge_scalar.py tests/test_optical_geometry.py tests/test_gauge_u1.py tests/test_berry_holonomy.py -q
+result:
+  focused_new_tests: 10_passed
+  primary_checks: 28_passed
+  independent_checks: 15_passed
+  graph_checks: 27_passed
+  adjacent_focused_tests: 41_passed
+  native_C1: ALL_9_CHECKS_PASS
+  mutable_legacy_integration_references: 0
+  semantic_consumers: 0
+  reverse_token_false_positives: 6
+  selected_claim: C-OG-005
+debt:
+  - promote_individually_reviewed_claim_and_C1_disposition
+  - render_release_docs_and_memory_then_run_one_integrated_gate
+next_attempt: complete_claim_release_disposition_review_and_generated_state

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 68
-  qualified: 138
+  pending_adjudication: 67
+  qualified: 139
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2144,8 +2144,43 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-OG-005
+  - C-OG-001
+  - C-GAU-001
+  - C-BER-001
+  qualification: 'C1''s metric inverse, charge-one minimal-coupling algebra, constant-coefficient mass
+    shell, fixed-canonical-label expansion, free scalar limit, and shifted-momentum derivative survive
+    only as conditional mathematics. C-OG-005 restores positive charge e, both invariant momentum components,
+    an explicit charged-scalar action, the pure-gauge line limit, circle topology and boundary phase for
+    a global effect, and the varying-index divergence term. C-BER-001''s dimensionless local half component
+    cannot be inserted as A_x: the same-phase convention requires the separately declared signed pullback
+    e*A_x=-B_phi*partial_x(phi). G-absence is vacuous as physical evidence; the hard-coded SI comparison
+    leaves eps0 unused and supplies no accepted material action or common normalization; symbol membership
+    is tautological. No breather, physical vector potential, material coupling, electromagnetic field,
+    analog-gravity observation, real-gravity effect, or substrate mechanism is accepted.'
+  evidence:
+  - campaigns/P153-c1-optical-gauge-coupling-audit/reviews/source_adjudication.md
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/source-reproduction.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/source-audit.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/check-adjudication.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/input-provenance.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/dependency-audit.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/consumer-audit.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/candidate-comparison.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/primary-provenance.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/evidence/literature-audit.yaml
+  - campaigns/P153-c1-optical-gauge-coupling-audit/verify.py
+  - campaigns/P153-c1-optical-gauge-coupling-audit/reviews/independent_optical_gauge_review.py
+  - campaigns/P153-c1-optical-gauge-coupling-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-OG-005-review.md
+  - memory/vantasner/decisions/C1-qualified-review.md
+  note: P153 promotes C-OG-005 through twenty-eight primary, fifteen independent, ten focused-test, and
+    twenty-seven frozen-graph checks. Native C1 passes all nine predicates. Six inventory reverse C1 edges
+    are bare-token false positives, not semantic consumers. C1 and all mutable P153 and canonical code
+    have zero executable legacy integration references.
 - source_unit: M1
   phase: phase-7
   path: merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py

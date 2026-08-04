@@ -1,0 +1,33 @@
+campaign: P153
+source_unit: C1
+accepted_base: v0.118.0
+accepted_inputs:
+  - {claim: C-OG-001, use: exact_static_metric_inverse_volume_and_geometry_ceiling}
+  - {claim: C-GAU-001, use: charge_e_covariant_derivative_gauge_law_and_no_dynamics_ceiling}
+  - {claim: C-BER-001, use: Berry_one_form_sign_local_nonuniqueness_holonomy_and_no_coupling_ceiling}
+  - {claim: C-GOR-001, use: effective_geometry_versus_physical_gravity_ceiling_only}
+  - {claim: C-RAD-001, use: declared_action_and_boundary_data_requirement_only}
+mathematical_inputs:
+  - exact complex scalar and independently varied conjugate
+  - exact positive n c0 m and e
+  - real U1 connection components and real coordinates
+  - separately declared charged-scalar action with signature minus_plus
+  - exact constant plane waves for the dispersion clause
+  - simply connected line or a circle with explicit circumference and boundary phase
+  - exact affine gauge parameters and integer large-gauge winding
+  - separately declared texture phi_of_x for every Berry pullback
+source_declared_inputs:
+  - constant optical metric and e_equal_one spatial minimal coupling
+  - dimensionless A_eff symbol later assigned the B1 half value only in a numeric comparator
+  - hard-coded G c eps0 E_lab n A_eff and L_med values
+excluded_from_derivation_or_selection:
+  - preexposed half value fixed-k correction and electrogravitic ratio
+  - pending B1 G1 or G2 source prose beyond accepted claim mappings
+  - any observed material electromagnetic analog-gravity or real-gravity effect
+free_data:
+  - scalar or breather realization and normalization
+  - physical medium action and constitutive dictionary
+  - connection source curvature field equation and detector
+  - topology global section boundary preparation and measurement where not explicitly declared
+claim_delta: C-OG-005
+debt: []

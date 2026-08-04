@@ -1,0 +1,19 @@
+attempt: 0009
+campaign: P153
+candidate: pre_render_promotion_repository_validation
+status: failed
+started_at: '2026-08-10T05:50:00Z'
+finished_at: '2026-08-10T05:51:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+result:
+  failure: generated_claim_index_is_stale
+  governance_YAML_parse: passed
+  memory_contracts: passed
+failure_class: expected_generated_state_ordering
+mechanism: >-
+  The accepted registry and v0.119.0 release were updated before running the
+  canonical documentation renderer, so the generated claim index correctly
+  rejected the pre-render state.
+scientific_effect: none
+next_attempt: render_claim_docs_queue_and_accepted_memory_then_rerun_repository_validation

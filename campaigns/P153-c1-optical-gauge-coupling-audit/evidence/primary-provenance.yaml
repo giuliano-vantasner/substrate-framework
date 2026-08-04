@@ -1,0 +1,37 @@
+campaign: P153
+accepted_base:
+  release: v0.118.0
+  framework_checkpoint: 41a5d33
+  scientific_commit: 41a5d33
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: C1
+  path: merged-framework/bridges/phase-7/bridge_C1_Aeff_optical_metric_coupling.py
+  sha256: 6c0b625cbfd8396104f185e4e3785956f66989a10d9fddf9d553fe433c39f0f5
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/C1-dossier.md
+  sha256: dcaf85bc1855d772a6f4c766a765ec5cfd606444f635fb90fb241bc1f744d5ef
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/optical_geometry.py
+  - src/substrate_framework/gauge_u1.py
+  - src/substrate_framework/berry_holonomy.py
+  - src/substrate_framework/gordon_metric.py
+  - campaigns/P004-optical-dilaton
+  - campaigns/P030-em2-local-u1
+  - campaigns/P141-g1-radiating-dilaton-audit
+  - campaigns/P142-g2-gordon-metric-audit
+  - campaigns/P152-b1-berry-connection-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - C1 optical gauge coupling invariant momentum
+  - charged scalar optical metric pure gauge circle holonomy
+  - Berry pullback sign and boundary phase
+authority_statement: >-
+  Memory and C1 are recall and candidate evidence. The pinned accepted release,
+  accepted claims, explicit action, exact canonical API, individual review, and
+  independent rederivation supply authority.

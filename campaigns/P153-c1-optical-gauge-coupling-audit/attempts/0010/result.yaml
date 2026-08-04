@@ -1,0 +1,28 @@
+attempt: 0010
+campaign: P153
+candidate: integrated_promotion_boundary
+status: passed
+started_at: '2026-08-10T05:55:00Z'
+finished_at: '2026-08-10T05:59:00Z'
+commands:
+  - scripts/validate.sh
+result:
+  repository_workflow: valid
+  accepted_claims: 154
+  accepted_release: v0.119.0
+  migration_queue: {total: 218, pending: 67, partial: 0, qualified: 139}
+  pytest: 1364_passed
+  memory_files: 630_valid
+  physics_skill: valid
+  generated_docs: current
+  generated_memory: current
+  governance_claims_sha256: c4a0ab6cd7e4b6c0e19c11d9460b3eb501a0d44ba0d76c0d382d0276f6b473be
+  current_release_sha256: b8e98c36b466f6948b3e153d86960d7154baa8f49317f60ae6b98faaac83490f
+  pinned_release_sha256: b8e98c36b466f6948b3e153d86960d7154baa8f49317f60ae6b98faaac83490f
+  generated_claim_index_sha256: d1bb0e6a7701d5cce49ea37a36821af7e6499dede9333600a6de3d38e403c792
+  generated_source_queue_sha256: 15d02ddc77e2af57a7e0952e344eed01fc45e1ba3f17da3263bd64a6f894ce1e
+  canonical_module_sha256: 8250b24c323752ff79ba1ff39f40334f70442725e73887b6130673a74f1ae32b
+  focused_tests_sha256: da7dd9ecd5f3de6d91dec89dcb2eb4361ca87816056bdfb0db13d8b6c56e6b64
+  next_source_unit: M1
+debt: []
+next_attempt: freeze_P154_M1_before_opening_its_source_body

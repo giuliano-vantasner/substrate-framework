@@ -414,6 +414,17 @@ from .optical_geometry import (
     slow_geodesic_acceleration_1d,
     slow_geodesic_acceleration_from_potential,
 )
+from .optical_gauge_scalar import (
+    AffineGaugePlaneWave,
+    CircleOpticalGaugeMode,
+    ConstantOpticalGaugeDispersion,
+    affine_gauge_plane_wave,
+    berry_one_form_to_u1_connection,
+    charged_optical_scalar_euler_operator,
+    charged_optical_scalar_lagrangian_density,
+    circle_optical_gauge_mode,
+    constant_optical_gauge_dispersion,
+)
 from .collective_dynamics import (
     optical_collective_acceleration,
     optical_collective_lagrangian,
@@ -1282,6 +1293,15 @@ __all__ = [
     "optical_dilaton_source_operator_1d",
     "optical_metric_1d",
     "optical_ricci_scalar_1d",
+    "AffineGaugePlaneWave",
+    "CircleOpticalGaugeMode",
+    "ConstantOpticalGaugeDispersion",
+    "affine_gauge_plane_wave",
+    "berry_one_form_to_u1_connection",
+    "charged_optical_scalar_euler_operator",
+    "charged_optical_scalar_lagrangian_density",
+    "circle_optical_gauge_mode",
+    "constant_optical_gauge_dispersion",
     "periodic_sine_gordon_energy",
     "periodic_fourier_coefficients",
     "periodic_action_error_bound",

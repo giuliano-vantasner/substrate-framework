@@ -1,0 +1,26 @@
+campaign: P153
+claim: C-OG-005
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-OG-001: Supplies the static optical metric and geometry but no scalar action connection mass shell or topology.
+  C-GAU-001: Supplies local U1 covariance and a no-dynamics ceiling but no optical metric composition or spectrum.
+  C-BER-001: Supplies the local Berry sign and corrected loop holonomy but expressly no spatial pullback or coupling.
+  C-GOR-001: Supplies a separate four-dimensional Gordon effective metric and no charged scalar or material action.
+  C-RAD-001: Requires a declared action and boundary data for dynamics but contains no charged optical theorem.
+distinct_positive_object: >-
+  C-OG-005 uniquely composes a declared charged-scalar action with the accepted
+  optical metric and U1 convention, exposes invariant plane-wave labels,
+  separates removable line connections from circle holonomy spectra, retains
+  the exact varying-index divergence term, and states the sign and texture
+  pullback required for the C-BER-001 convention.
+governed_consumers: [C1]
+decision: distinct_additive_claim
+debt: []

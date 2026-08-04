@@ -1,0 +1,40 @@
+campaign: P153
+criteria_order:
+  - explicit scalar action metric signature volume charge and connection convention
+  - gauge covariance and invariant momentum labels
+  - simply connected line versus circle topology and boundary data
+  - constant versus varying index and connection limits
+  - accepted optical U1 Berry Gordon and dynamics ceilings
+  - mutation sensitivity assumption economy reusable API value and graph closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Native replay classifies all nine predicates but cannot validate C1's physical headline.
+  B:
+    decision: selected_and_promoted_with_C_D_F_as_C-OG-005
+    reason: The declared action yields the exact constant optical mass shell in invariant momenta.
+  C:
+    decision: selected_as_local_gauge_boundary
+    reason: A constant line connection is removed exactly and its fixed-k shift is not observable.
+  D:
+    decision: selected_as_global_extension
+    reason: Circle topology and boundary phase retain a holonomy-dependent spectrum with large-gauge invariance.
+  E:
+    decision: rejected_as_duplicate_only
+    reason: No accepted claim already owns the action dispersion topology and pullback composition.
+  F:
+    decision: selected_as_operator_domain_boundary
+    reason: A varying index requires the covariant divergence term omitted by C1's simple operator.
+  G:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Identical mass shells leave material electromagnetic analog-gravity and real-gravity dictionaries free.
+  H:
+    decision: selected
+    reason: Dependency false-edge compatibility novelty release queue docs and memory closure are mandatory.
+selection_basis: >-
+  B supplies the positive conditional object, C and D separate local gauge from
+  global holonomy, and F prevents invalid extension beyond constant n. G blocks
+  the source's physical overreading. A and H close provenance and governance;
+  no preexposed half value or numeric ratio selected the result.
+foundational_revision_required: false
+debt: []

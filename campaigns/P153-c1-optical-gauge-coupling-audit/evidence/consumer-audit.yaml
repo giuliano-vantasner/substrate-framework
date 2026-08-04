@@ -1,0 +1,27 @@
+campaign: P153
+source_unit: C1
+semantic_consumers: []
+inventory_reverse_token_hits:
+  - {source_unit: P3D1, disposition: qualified, token_role: coarse_resolution_result_variable_C1}
+  - {source_unit: LB4, disposition: qualified, token_role: rung096_local_check_label_C1}
+  - {source_unit: GK3D2, disposition: pending_adjudication, token_role: SymPy_integration_constant_C1}
+  - {source_unit: EL4, disposition: qualified, token_role: solved_RGE_integration_constant_C1}
+  - {source_unit: G2, disposition: qualified, token_role: polynomial_coefficient_C1}
+  - {source_unit: M2, disposition: pending_adjudication, token_role: dsolve_integration_constant_C1}
+replay:
+  frozen_nodes: 7
+  source_predicates: 95
+  source_assertions: 6
+  graph_checks: 27
+  all_hashes_and_token_roles_pass: true
+compatibility_preflight:
+  C1: {legacy_references: 0, current_references: 0}
+  P3D1: {legacy_references: 1, current_references: 1, policy: immutable_alias_only_if_executed}
+  other_reverse_hits: {legacy_references: 0}
+decision: >-
+  The queue's bare-token candidate-dependency heuristic produced six false
+  reverse edges. No source imports bridge C1 or its A_eff dispersion, so their
+  scientific verifiers are not downstream consumers and are not rerun merely
+  for ceremony. Qualified claims remain unchanged and pending units gain no
+  authority.
+debt: []

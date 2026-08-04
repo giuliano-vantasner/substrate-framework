@@ -2,7 +2,7 @@
 description: Derive and audit C1's conditional optical-metric gauge coupling
 author: vantasner
 created: '2026-08-10T05:10:00Z'
-updated: '2026-08-10T05:10:00Z'
+updated: '2026-08-10T05:50:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - optical-gauge-coupling
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P153 C1 Optical Gauge Coupling Audit
 

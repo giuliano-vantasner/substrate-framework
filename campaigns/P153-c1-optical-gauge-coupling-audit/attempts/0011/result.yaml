@@ -1,0 +1,17 @@
+attempt: 0011
+campaign: P153
+candidate: final_scoped_promotion_commit
+status: failed
+started_at: '2026-08-10T05:59:00Z'
+finished_at: '2026-08-10T06:00:00Z'
+commands:
+  - git_add_scoped_P153_promotion_surface
+  - git_diff_cached_name_only
+  - git_diff_cached_check
+result:
+  exit_status: 2
+  trailing_EOF_blank_files: 14
+failure_class: formatting_only
+scientific_effect: none
+integrated_gate_effect: none_the_1364_test_gate_remains_valid
+next_attempt: remove_only_the_reported_EOF_blanks_restage_and_retry_the_same_commit

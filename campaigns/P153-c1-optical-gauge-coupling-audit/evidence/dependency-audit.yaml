@@ -1,0 +1,20 @@
+campaign: P153
+source_unit: C1
+declared_source_dependencies:
+  - {source_unit: B1, disposition: qualified, use: only_C-BER-001_after_sign_and_pullback_correction}
+  - {source_unit: G1, disposition: qualified, use: only_C-RAD-001_declared_action_ceiling}
+  - {source_unit: G2, disposition: qualified, use: only_C-GOR-001_effective_geometry_ceiling}
+accepted_claim_closure:
+  - {claim: C-OG-005, dependencies: [C-OG-001, C-GAU-001, C-BER-001]}
+  - {claim: C-GAU-001, dependencies: [C-U1-001]}
+  - {claim: C-BER-001, dependencies: [C-TOP-001]}
+source_cycle_resolution: >-
+  B1 originally named C1 as a pending consumer and C1 names B1 as a source.
+  The accepted graph is acyclic: C-BER-001 was independently accepted before
+  P153 and C-OG-005 imports only its exact one-form convention and ceiling.
+excluded_imports:
+  - B1 physical vector potential material defect or electromagnetic dictionary
+  - G1 radiating medium realization or source dynamics
+  - G2 material action Einstein sourcing physical gravity or observation
+  - C1 fixed-k line shift and hard-coded SI magnitude comparison
+debt: []

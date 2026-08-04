@@ -1,0 +1,19 @@
+attempt: 0006
+campaign: P153
+candidate: primary_exact_verifier_first_run
+status: failed
+started_at: '2026-08-10T05:30:00Z'
+finished_at: '2026-08-10T05:31:00Z'
+commands:
+  - .venv/bin/python campaigns/P153-c1-optical-gauge-coupling-audit/verify.py
+result:
+  checks_before_failure: 12_passed
+  native_C1: ALL_9_CHECKS_PASS
+  failure_check: constant_optical_mass_shell_uses_both_invariant_momenta
+failure_class: verifier_structural_equality
+mechanism: >-
+  SymPy retained (A_x*e-k)^2 in the canonical result and (k-e*A_x)^2 in the
+  verifier expectation. They are exactly equal after simplification but not
+  structurally identical.
+scientific_effect: none
+next_attempt: compare_the_exact_residual_after_simplification

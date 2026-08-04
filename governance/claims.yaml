@@ -315,6 +315,61 @@ claims:
     accepted_in: v0.101.0
     challenges: []
     supersedes: []
+  - id: C-OG-005
+    statement: >-
+      Conditional on C-OG-001's metric, C-GAU-001's positive-charge
+      convention, and the separately declared action
+      S=-integral sqrt(-g)*(g^{mu nu}(D_mu Psi)^*D_nu Psi+m^2*|Psi|^2)
+      dt dx, the Euler equation is
+      D_mu(sqrt(-g)*g^{mu nu}D_nu Psi)/sqrt(-g)-m^2*Psi=0. For positive
+      constant n, c0, m, and e and constant real (A_t,A_x), a plane wave
+      exp(i*(k*x-w*t)) obeys
+      n*(w+e*A_t)^2-(c0^2/n)*(k-e*A_x)^2=m^2. Under chi=a*t+b*x,
+      w'=w-e*a, k'=k+e*b, A_t'=A_t+a, and A_x'=A_x+b, so the two displayed
+      momentum combinations are invariant. A constant connection on the
+      simply connected line is pure gauge. On a circle of circumference L
+      with Psi(x+L)=exp(i*theta)Psi(x), integer mode q instead has
+      (w+e*A_t)^2=m^2/n+(c0^2/n^2)*((2*pi*q+theta)/L-e*A_x)^2, invariant
+      under q'=q+ell and A_x'=A_x+2*pi*ell/(e*L). For varying n(x), the
+      spatial operator is D_x((c0^2/n)D_x Psi), whose difference from
+      (c0^2/n)D_xD_x Psi is -c0^2*n_x*D_x Psi/n^2. With C-BER-001's
+      B=i*psi_dagger*d psi convention and the same section phase as the U1
+      matter phase, a separately declared texture phi(x) maps only by
+      e*A_x=-B_phi*partial_x(phi). These identities establish no scalar or
+      breather realization, material action, electromagnetic field,
+      analog-gravity observation, real-gravity coupling, or dynamical
+      spacetime.
+    provenance: campaigns/P153-c1-optical-gauge-coupling-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-OG-001
+      - C-GAU-001
+      - C-BER-001
+    evidence:
+      - campaigns/P153-c1-optical-gauge-coupling-audit/verify.py
+      - campaigns/P153-c1-optical-gauge-coupling-audit/attempts/0008/result.yaml
+      - campaigns/P153-c1-optical-gauge-coupling-audit/reviews/independent_optical_gauge_review.py
+      - campaigns/P153-c1-optical-gauge-coupling-audit/reviews/replay_source_graph.py
+      - campaigns/P153-c1-optical-gauge-coupling-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-OG-005-review.md
+      - memory/vantasner/decisions/C1-qualified-review.md
+      - src/substrate_framework/optical_gauge_scalar.py
+      - tests/test_optical_gauge_scalar.py
+    assumptions:
+      - The metric, complex scalar, real connection, coordinates, mass, coupling, and boundary data are exact and use the displayed minus-plus, D=partial-i*e*A, and phase conventions.
+      - The charged-scalar action is an independent model declaration; C-OG-001 and C-GAU-001 do not supply it or identify its field with a sine-Gordon breather.
+      - The plane-wave dispersion uses constant n and connection. The varying-index clause assumes a static sufficiently differentiable positive n(x) and smooth fields and connection.
+      - The line clause uses a simply connected domain with no boundary obstruction. The circle clause additionally declares positive L, a quasi-periodic boundary phase, integer modes, and allowed large gauge transformations.
+      - The Berry clause uses C-BER-001's one-form sign, the same section phase as the U1 matter phase, and a separately declared differentiable texture pullback; C-BER-001 supplies no such physical dictionary.
+      - Physical medium, electromagnetic, analog-gravity, real-gravity, preparation, detector, and observation claims require independent premises and evidence.
+    comparators:
+      - C1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; native execution passes all nine predicates, while its direct dimensionless Berry substitution, fixed-k line shift, G-absence inference, SI magnitude comparison, symbol discriminator, and physical medium or gravity reading are corrected qualified or rejected
+    accepted_in: v0.119.0
+    challenges: []
+    supersedes: []
   - id: C-TH-001
     statement: >-
       For every real dimensionless splitting x, the normalized upper-state

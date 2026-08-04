@@ -1,0 +1,22 @@
+attempt: 0007
+campaign: P153
+candidate: frozen_reverse_source_graph_first_run
+status: failed
+started_at: '2026-08-10T05:30:00Z'
+finished_at: '2026-08-10T05:31:00Z'
+commands:
+  - .venv/bin/python campaigns/P153-c1-optical-gauge-coupling-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  checks_before_failure: 22_passed
+  failure_check: LB4_borrows_only_the_medium_versus_Planck_scaling_narrative
+failure_class: queue_dependency_token_false_positive
+mechanism: >-
+  The inventory's C1 reverse edges are bare-token heuristics. LB4's token is
+  the local label "rung096 C1", while the other six reverse hits use C1 as a
+  resolution object, SymPy integration constant, or polynomial coefficient.
+  None names or semantically consumes bridge C1.
+scientific_effect: >-
+  The downstream replay scope contracts from six presumed semantic consumers
+  to six hash-pinned lexical false positives whose accepted or pending status
+  remains unchanged.
+next_attempt: replace_brittle_narrative_checks_with_exact_token_role_classification
