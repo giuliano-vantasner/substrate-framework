@@ -1,0 +1,28 @@
+campaign: P131
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F]
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - cmp proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P131-t1z2-cross-oracle-sign-audit.md
+  - YAML parse and git diff --check
+expected:
+  base_release: v0.100.0
+  base_commit: fb8160d
+  scientific_base_commit: bf7a84d
+  proposal_sha256: ab10fe25cab238261beceea1304c2faad44b426b31fb03bc3be5def752f167bb
+  source_unit: T1Z2
+  source_sha256: d9c08f9440fb79b9ef445ad77aff113db6c7c7f8943c5838180fb5704fd71bed
+  source_body_inspected: false
+  compatibility_event: none
+result: >-
+  The typed-domain, full-map, representation, physical-ceiling, counterexample,
+  dependency, consumer, and nonduplication contract is byte-frozen before P131
+  source-body inspection. The unchanged v0.100.0 scientific boundary inherits
+  P130's just-completed integrated gate, so this record-only freeze uses targeted
+  YAML memory and whitespace checks rather than rerunning 1118 tests.
+compatibility_event: none
+next_attempt: >-
+  Commit the freeze, then hash, inspect, and reproduce T1Z2 while keeping pending
+  S2 and qualified OM1 outside accepted dependency closure.

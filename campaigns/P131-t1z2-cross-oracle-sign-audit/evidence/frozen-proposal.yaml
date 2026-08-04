@@ -1,0 +1,71 @@
+id: P131
+base_release: v0.100.0
+base_commit: fb8160d
+scientific_base_commit: bf7a84d
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [T1Z2]
+question: >-
+  Reproduce and independently audit T1Z2's claim that an RP2-disclination
+  holonomy, an SU2 central rotation, and kink and antikink charge parity are one
+  common nontrivial C2 character; determine whether any typed cross-domain
+  theorem survives beyond C-TOP-001 and C-CHR-001, and separate point-value
+  equality from representation, topology, exchange-statistics, and physical
+  identity.
+invariants:
+  - >-
+    C-TOP-001 owns the exact integer character (-1)^w and explicitly derives no
+    exchange statistics, spin, fermion or boson identity, baryon number,
+    charge, composite, or physical sector.
+  - >-
+    C-CHR-001 completely classifies finite cyclic and binary-product sign
+    characters. Equal values at selected inputs do not identify functions,
+    domains, generators, quotient maps, representations, operators,
+    topologies, statistics, or mechanisms.
+  - >-
+    OM1 is qualified only through C-TOP-001 and C-CHR-001. Its cross-sector
+    scalar collapse constructed no common typed domain, quotient maps,
+    intertwiners, or accepted physical identification.
+  - >-
+    S2 is pending and supplies no accepted hedgehog, collective quantization,
+    fluctuation spectrum, baryon state, spin-statistics, or representation
+    premise to T1Z2.
+  - >-
+    A common nontrivial character chi:C2->{+1,-1} may be pulled back along
+    separately supplied quotient maps q_i:X_i->C2, but this preserves the
+    distinct X_i and q_i. Object identity requires a common typed domain and
+    full map equality; representation equivalence requires an explicit
+    intertwiner; physical identity requires separately governed dynamics.
+  - >-
+    The generated queue synopsis already exposes the values -1 and +1 and the
+    source's claimed same-object verdict. Those values and that verdict cannot
+    select a domain, quotient, representation, theorem, or scientific gate.
+allowed_imports:
+  - C-TOP-001 integer winding parity character and physical-interpretation ceiling
+  - C-CHR-001 complete cyclic and binary-product sign-character classification and typed-equality ceiling
+  - src/substrate_framework/topological_labels.py exact character APIs
+  - exact finite group arithmetic SymPy identities truth tables quotient maps kernels and commuting diagrams
+  - separately supplied domains maps generator choices orientations representations and intertwiners with explicit provenance
+  - T1Z2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce T1Z2 literally and classify every predicate by executable construction dependency and physical ceiling.}
+  - {id: B, description: Treat all surviving sign arithmetic as direct composition or duplicate evidence for C-TOP-001 and C-CHR-001.}
+  - {id: C, description: Promote a new typed common-pullback theorem only if explicit source domains quotient maps generators and a commuting comparison are supplied and verified.}
+  - {id: D, description: Construct distinct cyclic or binary-product characters and source maps that share the selected minus-one and plus-one evaluations but differ elsewhere.}
+  - {id: E, description: Audit whether a representation intertwiner spin-statistics theorem bundle action or physical identification is actually derived rather than named.}
+  - {id: F, description: Close OM1 and pending-S2 dependencies reverse consumers nonduplication impact source disposition and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit type and provenance for every domain map generator orientation representation and evaluation
+  - full homomorphism or commuting-diagram equality rather than selected point-value agreement
+  - exact order kernel quotient faithfulness and changed-generator behavior
+  - sensitivity to C4 and C2-product counterexamples simply-connected hosts even charges and bosonic or trivial characters
+  - strict separation of parity holonomy central action exchange phase statistics and physical sector identity
+  - parameter economy natural composition with accepted character claims and nonduplication
+claims_proposed: [C-CHR-002]
+comparators_blinded_until: >-
+  There is no empirical comparator. The queue synopsis exposes the source's
+  selected sign outputs and same-object conclusion, so candidates, type
+  requirements, counterexamples, and selection criteria freeze before P131
+  opens or executes the source body. Those exposed outputs may be reproduced
+  but cannot establish function, representation, topology, or physical identity.
+status: draft
