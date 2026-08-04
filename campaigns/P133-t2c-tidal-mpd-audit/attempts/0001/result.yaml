@@ -1,0 +1,31 @@
+campaign: P133
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - cmp proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P133-t2c-tidal-mpd-audit.md
+  - YAML parse and git diff --check
+expected:
+  base_release: v0.100.0
+  base_commit: 10950aa
+  scientific_base_commit: 477c809
+  proposal_sha256: 5e404c5d159f4ada91d3db0ed1547bddb6208729554c10854bfec53f56c5af4e
+  source_unit: T2C
+  source_sha256: 651fd75287dd25b5c34208ea5789df89be50f5050ec139ae2d99f4962440c369
+  source_body_inspected: false
+  compatibility_event: none
+result: >-
+  The optical-metric, Riemann-slot, Fourier-moment, normalization, dimension,
+  finite-width mechanism, point-limit, physical-ceiling, dependency, consumer,
+  mutation, and nonduplication contract is byte-frozen before P133 source-body
+  inspection. Raw YAML quote escaping is explicitly separated from derivative
+  order. The unchanged v0.100.0 scientific boundary inherits P132's completed
+  integrated gate, so this record-only freeze uses targeted YAML, memory, and
+  whitespace checks rather than repeating 1118 runnable tests.
+compatibility_event: none
+next_attempt: >-
+  Commit the freeze, then hash, inspect, and reproduce T2C while keeping
+  qualified FS1/FS2/P3D3/T1B and duplicate-evidence FS4 outside unearned
+  extended-body force closure.

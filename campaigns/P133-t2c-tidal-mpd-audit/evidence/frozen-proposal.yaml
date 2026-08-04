@@ -1,0 +1,103 @@
+id: P133
+base_release: v0.100.0
+base_commit: 10950aa
+scientific_base_commit: 477c809
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [T2C]
+question: >-
+  Reproduce and independently audit T2C's claim that the centered finite-width
+  moment of a sine-Gordon breather couples to the computed curvature of the
+  static 1+1 optical metric as a leading Mathisson-Papapetrou-Dixon
+  post-geodesic acceleration; determine whether a nonduplicate, dimensionally
+  closed extended-body force theorem survives beyond C-OG-001, C-CC-001, and
+  C-SG-009, with every index, sign, normalization, point limit, dependency,
+  and physical interpretation explicit.
+invariants:
+  - >-
+    C-OG-001 fixes coordinates (t,x), signature (-,+), the positive static
+    metric g=diag(-1/n,n/c0^2), and the exact scalar curvature
+    R=c0^2*(n*n_xx-2*n_x^2)/n^3. P133 fixes the Riemann convention
+    R^rho_{sigma mu nu}=partial_mu Gamma^rho_{nu sigma}-partial_nu
+    Gamma^rho_{mu sigma}+Gamma^rho_{mu lambda}Gamma^lambda_{nu sigma}
+    -Gamma^rho_{nu lambda}Gamma^lambda_{mu sigma}; alternate conventions must
+    be converted, not mixed.
+  - >-
+    C-CC-001 owns the conditional point-collective action and exact
+    coordinate-time acceleration. Its zero-velocity limit is
+    c0^2*n_x/(2*n^3). This is a declared one-coordinate effective model, not a
+    full field-derived material trajectory or an extended-body equation.
+  - >-
+    C-SG-009 owns the exact centered unnormalized 1+1 energy-density second
+    moment mu(t)=integral x^2*T00 dx. It explicitly supplies no physical
+    finite-size coupling, 3+1 quadrupole, conserved extended body, or gravity
+    theory. A normalized width would require a separately declared profile
+    w and normalization, for example w=T00/E0 at a fixed phase.
+  - >-
+    For a declared Fourier transform w_tilde(k)=integral exp(-i*k*y)w(y)dy,
+    sufficient integrability and a finite second moment give
+    -w_tilde''(0)=integral y^2*w(y)dy. This is a second derivative. The doubled
+    apostrophes visible in raw single-quoted YAML are serialization escaping,
+    not a fourth derivative and not scientific evidence.
+  - >-
+    With t measured in time, x in length, c0 in length/time, and dimensionless
+    n, R has units 1/time^2 while a normalized second spatial moment has units
+    length^2. Their product has units length^2/time^2, not coordinate
+    acceleration length/time^2. Any surviving force must close dimensions
+    through its actual mass, velocity, derivative, or moment normalization.
+  - >-
+    A standard MPD quadrupole force, geodesic-deviation law, profile-averaged
+    point acceleration, and a phenomenological curvature response are distinct
+    candidate mechanisms with different tensors, curvature derivatives,
+    velocities, normalizations, and point limits. A shared use of the word
+    tidal cannot identify them.
+  - >-
+    Qualified FS1, FS2, P3D3, and T1B and duplicate-evidence FS4 are navigation
+    records only. Their accepted mappings retain explicit ceilings: no
+    physical finite-size force, conserved 3+1 source, gravity action, or
+    material realization is inherited by T2C.
+  - >-
+    The generated queue synopsis exposes T2C's preferred curvature component,
+    force formula, second-moment identification, and affirmative verdict.
+    Those exposed outputs cannot select the mechanism, normalization, index
+    convention, or claim.
+allowed_imports:
+  - C-OG-001 exact static 1+1 optical metric scalar curvature and sign conventions
+  - C-OG-002 and C-OG-003 only within their conditional TF map and source-operator ceilings
+  - C-VAR-001 and C-CC-001 conditional point-collective optical action and acceleration
+  - C-SG-001 C-SG-002 and C-SG-009 exact breather field energy and centered scalar moment
+  - C-MOM-001 C-MOM-002 and C-MOM-003 only for their declared moment algebra and explicit non-gravity ceilings
+  - C-PDE-003 and C-PDE-004 only as the corrected regular l=2 perturbation evidence mapped from P3D3
+  - src/substrate_framework/optical_geometry.py collective_dynamics.py and sine_gordon.py accepted pure APIs
+  - exact SymPy tensor construction Fourier differentiation Taylor expansion dimensional algebra and analytic limits
+  - primary MPD literature after freeze for equation and convention provenance only with every imported premise declared
+  - independently declared high-precision quadrature only as regression evidence if an exact spatial integral does not close
+  - T2C at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce T2C literally and classify all thirteen predicates by construction convention dependency and physical ceiling.}
+  - {id: B, description: Reconstruct the full optical Christoffels Riemann tensor Ricci tensor and scalar under the frozen index and sign convention.}
+  - {id: C, description: Prove the Fourier second-moment identity and map any source profile quantity to normalized or unnormalized C-SG-009 data without conflation.}
+  - {id: D, description: Derive the actual leading finite-width correction by Taylor averaging the accepted point acceleration over a declared centered normalized profile.}
+  - {id: E, description: Derive an MPD or Dixon quadrupole force only if a typed multipole tensor momentum velocity supplementary data curvature derivative and mass normalization close.}
+  - {id: F, description: Treat exact curvature and moment statements as accepted-claim composition or duplicate evidence when no distinct force law closes.}
+  - {id: G, description: Use flat constant-gradient point-limit dimensional sign and profile countermodels to distinguish curvature coupling from kinematic width.}
+  - {id: H, description: Close FS1 FS2 FS4 P3D3 T1B reverse consumers nonduplication impact source disposition and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with every action equation of motion multipole definition normalization and coupling sourced
+  - fixed coordinates Riemann convention index placement signature and coordinate-time versus proper-time distinction
+  - exact dimensional consistency for metric curvature moment force and acceleration quantities
+  - correct Fourier derivative order profile normalization centering translation behavior and point-particle limit
+  - independent agreement among direct tensor construction two-dimensional curvature identities and a fresh component derivation
+  - mechanism-specific derivation separating MPD quadrupole force geodesic deviation Taylor-averaged acceleration and phenomenological response
+  - mutation sensitivity to curvature sign Riemann slot order moment sign missing curvature derivative profile normalization and index factors
+  - correct constant-index linear-index weak-gradient zero-width and translated-profile limits
+  - parameter economy natural framework fit reusable API value physical-scope honesty and nonduplication
+claims_proposed: [C-OG-004]
+comparators_blinded_until: >-
+  There is no empirical comparator. The generated queue exposes T2C's
+  affirmative result and displayed formulas, so candidates, tensor and Fourier
+  conventions, dimensional requirements, point-limit guards, physical ceilings,
+  and selection criteria freeze before P133 opens or executes the source body.
+  The exposed formulas may be reproduced but cannot establish their mechanism
+  or make a nonduplicate force claim pass.
+status: active
