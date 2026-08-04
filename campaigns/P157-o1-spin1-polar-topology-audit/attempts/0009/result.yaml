@@ -1,0 +1,26 @@
+attempt: 0009
+campaign: P157
+candidate: third_parallel_oracle_run
+status: failed
+started_at: '2026-08-10T11:02:00Z'
+finished_at: '2026-08-10T11:06:00Z'
+commands:
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  primary: {status: passed, checks: 28, terminal_tally: ALL_28_CHECKS_PASS}
+  independent: {status: passed, checks: 17, terminal_tally: ALL_17_CHECKS_PASS}
+  source_graph:
+    status: failed
+    passed_before_failure: 27
+    failure: final_physical_ceiling_probe_used_lowercase_hyperfine_manifold_against_uppercase_frozen_text
+failure_class: implementation
+scientific_result: >-
+  Both mathematical oracles pass. The source graph validates all hashes,
+  predicate inventories, compatibility surfaces, real consumers, siblings,
+  and token false positives before a case-sensitive narrative probe fails.
+repair: match_the_exact_frozen_HYPERFINE_MANIFOLD_spelling
+debt:
+  - rerun_source_graph
+  - run_focused_downstream_tests

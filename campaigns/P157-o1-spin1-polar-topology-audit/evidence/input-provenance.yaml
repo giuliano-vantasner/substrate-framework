@@ -1,0 +1,35 @@
+campaign: P157
+claim_delta: []
+derived_inputs:
+  - source_fixed_ray_projector_connection_endpoint_and_corrected_holonomy
+  - genuine_spin_one_director_section_in_real_periodic_and_full_polar_gauges
+  - antipodal_spinor_and_projector_relations
+  - spin_one_and_fundamental_two_pi_center_images
+  - projective_and_full_polar_deck_composition
+  - conditional_fixed_density_spin_one_phase_selection
+  - scalar_U1_integer_versus_half_winding_closure
+declared_model_inputs:
+  - standard_exact_spin_one_matrices_in_the_m_plus_zero_minus_basis
+  - accepted_unitary_Cartesian_to_spin_one_map
+  - normalized_rank_one_sections_on_phi_from_zero_to_two_pi
+  - Berry_convention_A_equals_i_psi_dagger_d_psi_with_endpoint_transition
+  - full_polar_diagonal_identification_d_theta_equivalent_to_minus_d_theta_plus_pi
+accepted_imports:
+  - {claim: C-SPN-001, use: pure_spin_one_invariant_polar_ray_orbit_and_conditional_selection}
+  - {claim: C-DEF-001, use: projective_and_full_polar_topology_and_deck_groups}
+  - {claim: C-BER-001, use: endpoint_corrected_closed_ray_holonomy_and_gauge_covariance}
+  - {claim: C-HOL-001, use: representation_typed_SU2_center_images}
+  - {claim: C-CHR-001, use: equal_value_nonidentity_boundary}
+external_imports:
+  - {source: Ho1998, use: complete_interaction_dependent_spinor_condensate_context_only}
+  - {source: OhmiMachida1998, use: gauge_and_spin_symmetric_condensate_Hamiltonian_context_only}
+  - {source: RuostekoskiAnglin2003, use: complete_trapped_spin_one_defect_model_context_only}
+excluded_comparators:
+  - queue_preexposed_RP2_label
+  - queue_preexposed_one_half_connection
+  - queue_preexposed_pi_integral
+  - queue_preexposed_minus_one_value
+fitted_constants: []
+borrowed_answers: []
+undeclared_parameters: []
+debt: []

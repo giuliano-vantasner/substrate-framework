@@ -1,0 +1,23 @@
+attempt: 0006
+campaign: P157
+candidate: primary_source_aware_verifier_initial_run
+status: failed
+started_at: '2026-08-10T10:50:00Z'
+finished_at: '2026-08-10T10:51:00Z'
+command: .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+failure_class: implementation
+failure: >-
+  The verifier stopped at the pinned source-reproduction hash because two
+  abbreviated hashes from working notes were expanded incorrectly. The
+  committed evidence bytes hash to
+  d9c1b82ba56c3931301bb5e96c0a6068dd8ab9b517dcc23b686b1c610287b648
+  and e03567c1be5b10342d3edeed291d0f8626a722a6126a2540ec7a5322f1c74e33.
+scientific_checks_reached: false
+preserved_evidence:
+  - clean_process_exit_was_not_obtained
+  - first_three_hash_checks_passed
+  - source_reproduction_hash_check_failed
+repair: replace_only_the_two_incorrect_pinned_hash_literals_with_recomputed_sha256_values
+debt:
+  - rerun_primary_verifier
+  - run_independent_rederivation_and_source_graph

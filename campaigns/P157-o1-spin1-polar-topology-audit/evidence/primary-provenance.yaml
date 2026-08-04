@@ -1,0 +1,39 @@
+campaign: P157
+accepted_base:
+  release: v0.122.0
+  framework_checkpoint: 5a19786
+  scientific_commit: 5a19786
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: O1
+  path: merged-framework/bridges/phase-7/bridge_O1_spin1_bec_rp2.py
+  sha256: 270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/O1-dossier.md
+  sha256: 968e5df0e64739cbf61c7a34091269b99f8602d15450118eae2fd241c47f9aea
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/spin1_mean_field.py
+  - src/substrate_framework/angular_defects.py
+  - src/substrate_framework/berry_holonomy.py
+  - src/substrate_framework/nonabelian_holonomy.py
+  - campaigns/P143-me1-spin1-ground-state-audit
+  - campaigns/P144-me2-half-quantum-vortex-audit
+  - campaigns/P152-b1-berry-connection-audit
+  - campaigns/P156-na1-nonabelian-holonomy-audit
+external_primary_sources:
+  - {id: Ho1998, url: 'https://arxiv.org/abs/cond-mat/9803231', use: physical_spinor_condensate_context_not_fixed_ray_Berry_authority}
+  - {id: OhmiMachida1998, url: 'https://doi.org/10.1143/jpsj.67.1822', use: physical_Hamiltonian_and_phase_context_not_O1_endpoint_authority}
+  - {id: RuostekoskiAnglin2003, url: 'https://doi.org/10.1103/PhysRevLett.91.190402', use: full_defect_model_context_not_constant_projector_substitute}
+memory_searches:
+  - O1 spin1 BEC RP2 Berry holonomy
+  - spin one polar manifold full phase director
+authority_statement: >-
+  O1 and memory are candidate evidence only. The accepted release, exact
+  canonical APIs, source hashes and AST, independent rederivation,
+  mutation-sensitive endpoint and representation controls, source graph, and
+  individual terminal review determine the disposition.

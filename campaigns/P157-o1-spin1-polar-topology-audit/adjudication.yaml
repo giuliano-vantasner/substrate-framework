@@ -1,0 +1,63 @@
+campaign: P157
+title: O1 spin-one polar topology and Berry-holonomy audit
+source_baseline: substrate@6d1f4e0
+source_units: [O1]
+base_release: v0.122.0
+release_after_adjudication: v0.122.0
+adjudicated_at: '2026-08-10T11:25:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without treating its tally as headline authority.}
+  - {id: B, reason: Existing accepted claims supply the complete corrected positive closure without a duplicate claim or API.}
+  - {id: D, reason: Exact real periodic fixed-ray and full-polar sections expose the omitted endpoint and the genuine director loop.}
+  - {id: E, reason: Typed quotient and deck composition distinguish RP2 rays from the full phase-retaining polar manifold.}
+  - {id: G, reason: Same-value countermodels preserve representation domain and physical-dictionary boundaries.}
+  - {id: H, reason: Dependency consumer compatibility disposition generated-state and memory review close the transaction.}
+claims: []
+reviewed_existing:
+  - {id: C-SPN-001, decision: unchanged_complete_spin_one_invariant_polar_ray_orbit_and_conditional_selection}
+  - {id: C-DEF-001, decision: unchanged_projective_and_full_polar_topology_distinction}
+  - {id: C-BER-001, decision: unchanged_endpoint_corrected_holonomy_and_fixed_ray_counterexample}
+  - {id: C-HOL-001, decision: unchanged_representation_typed_center_boundary}
+  - {id: C-CHR-001, decision: unchanged_equal_value_nonidentity_boundary}
+unpromoted_claims:
+  - {id: O1_fixed_ray_phase_is_a_half_quantum_director_texture, reason: Its rank-one projector is constant.}
+  - {id: O1_bare_phase_is_closed_ray_holonomy, reason: The omitted endpoint transition changes minus one to plus one.}
+  - {id: O1_spin_one_full_return_requires_four_pi, reason: Spin-one transport returns plus identity at two pi and the minus sign is an inserted U1 phase.}
+  - {id: O1_physical_polar_manifold_is_RP2, reason: RP2 is the phase-quotiented ray orbit while the full polar manifold is the diagonal quotient with integer deck group.}
+  - {id: O1_minus_one_values_are_one_object, reason: No common domain map representation carrier or observable is supplied.}
+  - {id: O1_derives_a_physical_H_BEC_or_substrate_mechanism, reason: No action parameters trap spatial state stability observable or dictionary is supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_spin1_topology_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_oracle_attempt: attempts/0010/result.yaml
+  terminal_gate: attempts/0011/result.yaml
+  source_review: memory/vantasner/decisions/O1-qualified-review.md
+source_disposition:
+  O1: qualified
+accepted_mappings: [C-SPN-001, C-DEF-001, C-BER-001, C-HOL-001, C-CHR-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_without_numeric_quadrature_or_legacy_name
+  immutable_primary: no_numpy_integration_surface
+  immutable_graph_surfaces: B1_S2_CF5_version_only_legacy_access_recorded_without_execution
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest tests/test_spin1_mean_field.py tests/test_berry_holonomy.py tests/test_nonabelian_holonomy.py tests/test_angular_defects.py tests/test_topological_labels.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

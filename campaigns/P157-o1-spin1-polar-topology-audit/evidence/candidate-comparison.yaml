@@ -1,0 +1,40 @@
+campaign: P157
+criteria_order:
+  - exact_spin_one_basis_phase_endpoint_and_representation_conventions
+  - explicit_ray_full_manifold_loop_and_deck_typing
+  - gauge_invariant_holonomy_agreement_and_fixed_ray_counterexample
+  - conditional_ground_state_selection_and_physical_model_ceiling
+  - accepted_framework_fit_assumption_economy_nonduplication_and_graph_closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Native replay retains exact representative controls but its passing tally cannot validate the headline topology or Berry interpretation.
+  B:
+    decision: selected_as_terminal_accepted_composition
+    reason: C-SPN-001 C-DEF-001 C-BER-001 C-HOL-001 and C-CHR-001 already supply the complete corrected positive closure.
+  C:
+    decision: rejected_as_duplicate
+    reason: The accepted spin-one Cartesian map and polar orbit are stronger than O1's representative section and already expose the genuine director loop.
+  D:
+    decision: selected_as_exact_correction_oracle
+    reason: Real periodic and full-polar gauges distinguish a moving director ray from O1's constant-projector phase section.
+  E:
+    decision: selected_as_topology_boundary
+    reason: The RP2 ray orbit has Z2 loops while the phase-retaining polar manifold has integer deck group and a nontrivial generator square.
+  F:
+    decision: rejected_for_missing_premises
+    reason: O1 provides no condensate action interaction parameters trap spatial boundary data stationary state stability calculation or observable.
+  G:
+    decision: selected_as_interpretation_ceiling
+    reason: Equal minus-one values under director fundamental-center and parity dictionaries do not identify their domains or physical mechanisms.
+  H:
+    decision: selected
+    reason: Dependency consumer compatibility queue documentation and durable-memory closure are required for terminal disposition.
+selection_basis: >-
+  Candidate B is the most economical positive closure because every correct
+  general result is already accepted. D and E expose O1's load-bearing
+  endpoint and manifold errors; A, G, and H close source and governance
+  boundaries. Preexposed numerical and symbolic values selected no candidate.
+foundational_revision_required: false
+claim_delta: []
+debt: []

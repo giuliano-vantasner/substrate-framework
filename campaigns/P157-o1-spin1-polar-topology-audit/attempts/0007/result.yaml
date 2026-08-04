@@ -1,0 +1,34 @@
+attempt: 0007
+campaign: P157
+candidate: parallel_primary_independent_and_source_graph_run
+status: failed
+started_at: '2026-08-10T10:52:00Z'
+finished_at: '2026-08-10T10:56:00Z'
+commands:
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  primary:
+    status: failed
+    passed_before_failure: 19
+    failure: antipodal_spinor_used_structural_matrix_equality_before_exact_simplification
+  independent:
+    status: passed
+    checks: 17
+    terminal_tally: ALL_17_CHECKS_PASS
+  source_graph:
+    status: failed
+    passed_before_failure: 21
+    failure: ME1_probe_expected_psi_polar_ref_but_frozen_source_names_it_psi_polar
+failure_class: implementation
+scientific_result: >-
+  The independent derivation validates the endpoint-corrected fixed-ray answer,
+  the genuine director-loop counterexample, the full-polar quotient, and the
+  representation boundary. The two failures are brittle expression/source-name
+  probes, not failed physics conditions.
+repairs:
+  - simplify_the_antipodal_spinor_difference_entrywise
+  - probe_ME1s_actual_psi_polar_Fmats_and_c2_symbols
+debt:
+  - rerun_all_three_oracles

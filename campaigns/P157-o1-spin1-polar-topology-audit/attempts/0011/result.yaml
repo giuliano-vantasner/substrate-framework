@@ -1,0 +1,38 @@
+attempt: 0011
+campaign: P157
+candidate: terminal_qualification_transaction_and_integrated_gate
+status: passed
+started_at: '2026-08-10T11:26:00Z'
+finished_at: '2026-08-10T11:35:00Z'
+precheck_failures:
+  - at: '2026-08-10T11:27:00Z'
+    command: .venv/bin/python scripts/validate_repository.py
+    failure: adjudication_referenced_attempt_0011_before_its_result_file_existed
+    failure_class: record_ordering
+    repair: materialize_this_in_progress_attempt_before_rerunning_record_validation
+commands:
+  - assert_current_release_byte_identical_to_v0_122_0
+  - PYTHONPATH=src .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --check
+  - record_sensitive_generator_repository_memory_and_skill_checks
+results:
+  current_release_identity: passed_byte_identical_to_v0_122_0
+  primary: {status: passed, checks: 28, terminal_tally: ALL_28_CHECKS_PASS}
+  independent: {status: passed, checks: 17, terminal_tally: ALL_17_CHECKS_PASS}
+  source_graph: {status: passed, checks: 27, terminal_tally: ALL_27_CHECKS_PASS}
+  repository_contract: valid_157_accepted_claims_63_pending_units
+  memory_contract: 647_records_passed
+  skill_contract: passed
+  full_tests: 1408_passed
+  full_gate_terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+compatibility:
+  mutable_P157_legacy_references: 0
+  native_O1_numpy_surface: none
+  immutable_B1_S2_CF5: version_only_surfaces_recorded_without_execution
+claim_delta: []
+release_delta: none
+debt: []
+next_attempt: continue_parent_effort_at_the_next_pending_source_unit

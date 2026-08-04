@@ -1,0 +1,33 @@
+attempt: 0008
+campaign: P157
+candidate: corrected_parallel_oracle_run
+status: failed
+started_at: '2026-08-10T10:57:00Z'
+finished_at: '2026-08-10T11:01:00Z'
+commands:
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  primary:
+    status: failed
+    passed_before_failure: 24
+    failure: zero_coupling_expected_three_orbit_names_instead_of_API_all_pure_spin1_rays_label
+  independent:
+    status: passed
+    checks: 17
+    terminal_tally: ALL_17_CHECKS_PASS
+  source_graph:
+    status: failed
+    passed_before_failure: 26
+    failure: S2_probe_expected_literal_S_caret_2_in_S2_instead_of_the_O1_text_that_created_the_label_collision
+failure_class: implementation
+scientific_result: >-
+  Primary verification passed the fixed-ray correction, genuine director loop,
+  full-polar quotient, representation, and loop-group checks. The remaining
+  failures concern an API label and the exact location of a false-positive token.
+repairs:
+  - assert_the_zero_coupling_all_pure_spin1_rays_API_label
+  - show_O1_contains_S_caret_2_while_the_S2_source_contains_no_O1_reference
+debt:
+  - rerun_all_three_oracles

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 64
-  qualified: 142
+  pending_adjudication: 63
+  qualified: 143
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2455,8 +2455,47 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SPN-001
+  - C-DEF-001
+  - C-BER-001
+  - C-HOL-001
+  - C-CHR-001
+  qualification: 'O1''s reference and rotated zero-spin states, reference antipodal flip, local minus-one-half
+    connection, bare minus-one phase, inserted phase endpoint arithmetic, antipodal involution, and chi-independent
+    scalar derivative survive as qualified exact controls. Its declared Berry section is a constant projector:
+    the omitted endpoint transition is minus one, so the corrected fixed-ray holonomy is plus one rather
+    than the claimed minus one. A genuine director half turn has a moving projector and accepted minus-one
+    holonomy in both real and periodic gauges. Spin-one transport returns plus identity at two pi; O1''s
+    minus sign is an inserted U1 phase, not a spinorial carrier sign. RP2 is the phase-quotiented polar
+    ray orbit, while the full polar manifold is (S2 x U1)/Z2 with integer deck group and a nontrivial
+    generator square. No map identifies that deck action with a fundamental SU2 matrix, and equal minus-one
+    values do not identify objects. No physical condensate action, material parameters, trap, spatial
+    ground state, defect solution, observable, H-BEC dictionary, or substrate mechanism is accepted.'
+  evidence:
+  - campaigns/P157-o1-spin1-polar-topology-audit/reviews/source_adjudication.md
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/source-reproduction.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/source-audit.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/check-adjudication.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/input-provenance.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/dependency-audit.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/consumer-audit.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/candidate-comparison.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/primary-provenance.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/evidence/literature-audit.yaml
+  - campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py
+  - campaigns/P157-o1-spin1-polar-topology-audit/attempts/0011/result.yaml
+  - memory/vantasner/decisions/O1-qualified-review.md
+  note: P157 closes 28 primary, 17 independent, 27 frozen-graph, and 80 focused accepted-API checks or
+    tests. Native O1 passes all seven predicates, but the mutation-sensitive endpoint oracle rejects its
+    load-bearing Berry headline. Eight graph nodes classify real consumers, narrative siblings, and token
+    or label false positives. Native O1 and all mutable P157 code have zero executable legacy integration
+    references; immutable B1, S2, and CF5 legacy surfaces remain recorded version-only evidence and are
+    not executed or treated as scientific failures.
 - source_unit: YM1
   phase: phase-7
   path: merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py

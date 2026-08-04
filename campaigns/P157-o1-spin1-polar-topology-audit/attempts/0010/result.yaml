@@ -1,0 +1,35 @@
+attempt: 0010
+campaign: P157
+candidate: exact_oracle_and_focused_consumer_closure
+status: passed
+started_at: '2026-08-10T11:07:00Z'
+finished_at: '2026-08-10T11:13:00Z'
+commands:
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/verify.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/independent_spin1_topology_review.py
+  - .venv/bin/python campaigns/P157-o1-spin1-polar-topology-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest tests/test_spin1_mean_field.py tests/test_berry_holonomy.py tests/test_nonabelian_holonomy.py tests/test_angular_defects.py tests/test_topological_labels.py
+results:
+  primary: {status: passed, checks: 28, terminal_tally: ALL_28_CHECKS_PASS}
+  independent: {status: passed, checks: 17, terminal_tally: ALL_17_CHECKS_PASS}
+  source_graph: {status: passed, checks: 27, terminal_tally: ALL_27_CHECKS_PASS}
+  focused_accepted_APIs: {status: passed, tests: 80}
+sensitivity:
+  - omitted_endpoint_changes_fixed_ray_plus_one_to_bare_minus_one
+  - opposite_phase_gauge_changes_local_connection_but_not_corrected_holonomy
+  - moving_director_changes_the_projector_and_the_corrected_holonomy
+  - periodic_gauge_moves_the_director_loop_sign_from_endpoint_to_integral
+  - fundamental_to_spin_one_carrier_changes_the_two_pi_center_image
+  - full_polar_generator_square_remains_a_nontrivial_integer_phase_vortex
+  - coupling_sign_changes_the_fixed_density_minimizing_orbit
+  - scalar_half_winding_fails_U1_single_valuedness
+  - equal_minus_one_values_leave_distinct_domains_and_dictionaries
+compatibility:
+  mutable_P157_legacy_references: 0
+  native_O1_numpy_surface: none
+  immutable_legacy_surfaces: [B1, S2, CF5]
+  immutable_policy: recorded_without_execution_or_scientific_penalty
+debt:
+  - assemble_terminal_source_review_disposition_and_memory_transaction
+  - run_one_integrated_terminal_gate
+next_attempt: codify_the_no_new_claim_qualification_and_validate_generated_state
