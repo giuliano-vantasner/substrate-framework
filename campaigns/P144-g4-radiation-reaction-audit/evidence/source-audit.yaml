@@ -1,0 +1,70 @@
+source_unit: G4
+source_sha256: 308c8d82aff062fb0f0254498fb2bdb19fe6bdc207036cb0fa73643d3608c799
+ast:
+  check_calls: 10
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: true
+objects_present:
+  - supplied G1 power kappa times Edot squared over eight
+  - scalar quotient F_self equals minus P_rad over v rewritten in closed form
+  - exact sign and coefficient identities conditional on that quotient
+  - prescribed increasing tanh velocity and integration of d gamma E0 over dt
+  - spatial cosine transform of a time-averaged sine-Gordon kernel
+  - assigned internal power independent of an internal oscillation amplitude
+  - four mutations of the inserted formulas
+objects_absent:
+  - complete field plus source action with collective-coordinate dynamics
+  - regularized retarded self-field evaluated on the source
+  - independently derived field momentum flux or force components
+  - Schott or near-field energy reservoir and causal history
+  - generalized force allocation rule across translation and internal modes
+  - evolved damped velocity or internal-mode equation
+  - oscillatory source harmonic before time averaging
+  - solver-success convergence tolerance domain or independent numeric method gates
+  - dimensional map physical coupling initial data or boundary data
+load_bearing_insertions:
+  - assignment: P_rad_equals_kappa_Edot_squared_over_8
+    classification: inherited_rejected_G1_power_not_accepted_C_RAD_001_normalization
+  - assignment: F_self_equals_minus_kappa_gamma6_v_vdot2_E02_over_8
+    classification: algebraic_quotient_minus_P_rad_over_v_not_independent_ALD_route
+  - assignment: prescribed_v_equals_0_6_tanh_0_8t
+    classification: external_kinematics_not_damped_source_evolution
+  - assignment: w_equals_time_average_of_half_Utau2_plus_half_Uxi2
+    classification: static_kernel_after_temporal_harmonics_are_erased
+  - assignment: P_internal_equals_kappa_omega2_wtilde2_over_4
+    classification: internal_power_inserted_without_oscillatory_source_amplitude_or_flux_derivation
+headline_failures:
+  - >-
+    F_self is obtained by solving the single scalar equality F_self*v=-P_rad.
+    Writing the expanded quotient on a second line does not create an
+    independent Dirac, momentum-flux, ALD, or Ford-O'Connell derivation.
+  - >-
+    Accepted C-RAD-001 rejects the inherited G1 coefficient and supplies no
+    accelerated breather, source dynamics, or reaction law. Under its declared
+    A=1/kappa B=c=1 scalar normalization, the same amplitude would radiate
+    kappa*q squared over two, four times G4's inserted power.
+  - >-
+    One scalar power equation cannot determine translational and internal
+    generalized-force components. At zero rate it either is inconsistent for
+    positive power or leaves force unconstrained for zero power.
+  - >-
+    The numeric leg prescribes an accelerating trajectory for which gamma E0
+    increases, integrates the same analytic derivative, and never evolves a
+    radiation-damped source or checks solve_ivp success.
+  - >-
+    Time averaging the kernel removes its nonzero temporal harmonics. Its
+    finite spatial transform is not the Fourier amplitude of the omitted
+    oscillatory source, and the assigned internal power contains no internal
+    amplitude, phase, or rate.
+  - >-
+    Algebraic locality and negative instantaneous work do not by themselves
+    prove a regularized causal equation, absence of runaway solutions, or
+    absence of preacceleration.
+surviving_surface:
+  - scalar quotient minus supplied power over one nonzero rate
+  - exact affine generalized-force family with declared metric minimum
+  - exact declared positive-semidefinite Rayleigh dissipation ledger
+  - numeric spatial-transform regression for the declared time-averaged kernel only
+headline_supported: false

@@ -1,0 +1,39 @@
+campaign: P144
+source_unit: G4
+positive_object: exact_generalized_power_balance_family_and_declared_Rayleigh_dissipation
+accepted_inputs: []
+mathematical_inputs:
+  - exact real generalized rates and force covectors paired so each force-times-rate term has one power dimension
+  - exact nonnegative externally supplied scalar power
+  - exact symmetric positive-definite coordinate metric when a metric-minimum particular force is requested
+  - exact symmetric positive-semidefinite damping matrix for the separate Rayleigh construction
+  - exact external generalized forces for the open-system energy ledger
+conditional_inputs:
+  - {condition: generalized rate vector is nonzero, role: makes the metric-minimum quotient well defined}
+  - {condition: one generalized rate only, role: makes the nonzero-rate balance force unique}
+  - {condition: work-free covector contracts to zero with rates, role: parameterizes every alternate balanced force}
+  - {condition: damping matrix is supplied rather than inferred from scalar power, role: closes the Rayleigh force components}
+source_declared_inputs:
+  - rejected G1 power kappa Edot squared over eight
+  - point-source collective-coordinate accelerated-breather reading
+  - gamma E0 differentiated along a prescribed tanh velocity
+  - time-averaged sine-Gordon kernel treated as an internal harmonic source
+  - assigned internal power kappa omega squared wtilde squared over four
+  - Ford-O'Connell and ALD labels without their source or regulator data
+excluded_from_derivation_or_selection:
+  - G4 source coefficients transform values and selected slow-point comparator
+  - physical kappa equals 8 pi G effective identification
+  - any G1 G2 G3 T2A or T2C rejected physical narrative
+  - radiation reaction self-force internal backreaction or substrate ontology
+zero_rate_domain:
+  positive_power: no_instantaneous_balance_solution
+  zero_power: every_force_is_balance_compatible_and_balance_does_not_select_one
+missing_for_source_headline:
+  - complete field and source action or explicitly declared effective source equation
+  - retarded boundary history and self-field regularization
+  - near-field Schott and external-work reservoirs
+  - oscillatory internal source amplitude phase and evolution
+  - generalized-coordinate metric or allocation law
+  - dimensions initial boundary data physical coefficient and convergence evidence
+claim_delta: C-RR-001
+debt: []

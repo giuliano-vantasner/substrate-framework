@@ -4459,3 +4459,51 @@ units:
       passes all eleven predicates and has no NumPy integration event. G1, G4,
       and NC4 retain immutable alias-only compatibility through np.trapezoid;
       mutable code has no executable legacy integration access.
+  G4:
+    disposition: qualified
+    accepted_claims:
+      - C-RR-001
+      - C-RAD-001
+      - C-SG-002
+      - C-SG-008
+      - C-SG-012
+      - C-OG-004
+    qualification: >-
+      G4's scalar identity F*v=-P and the resulting quotient -P/v survive only
+      conditionally for one nonzero rate. C-RR-001 supplies the complete exact
+      generalized-coordinate theorem: one scalar power fixes an affine force
+      family, a declared coordinate metric selects a minimum-norm particular
+      force, zero rate separates positive-power inconsistency from zero-power
+      underdetermination, and a separately declared positive-semidefinite
+      Rayleigh matrix closes an effective dissipation and external-work ledger.
+      G4 does not derive its inherited G1 power, independent self-field force,
+      regularization, causal source equation, Schott or near-field reservoir,
+      internal-mode source harmonic, force allocation, or physical coupling.
+      Its numeric leg prescribes increasing gamma E0 and regresses the same
+      derivative; its internal power is assigned from a time-averaged kernel
+      with no internal amplitude. No ALD or Ford-O'Connell equation, absence of
+      runaway or preacceleration, physical gravity, material, observation, or
+      substrate mechanism is accepted.
+    evidence:
+      - campaigns/P144-g4-radiation-reaction-audit/reviews/source_adjudication.md
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/source-reproduction.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/source-audit.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/check-adjudication.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/input-provenance.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/dependency-audit.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/consumer-audit.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/candidate-comparison.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/primary-provenance.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/evidence/literature-audit.yaml
+      - campaigns/P144-g4-radiation-reaction-audit/verify.py
+      - campaigns/P144-g4-radiation-reaction-audit/reviews/independent_generalized_balance_review.py
+      - campaigns/P144-g4-radiation-reaction-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-RR-001-review.md
+      - memory/vantasner/decisions/G4-qualified-review.md
+    note: >-
+      P144 promotes C-RR-001 through twenty-nine primary, sixteen independent,
+      seventeen focused-test, and twenty-seven frozen-graph checks. The
+      ten-node graph inventories ninety-nine predicates. Native G4 fails only
+      on removed np.trapz; isolated alias-only replay through np.trapezoid
+      passes all ten source checks, and mutable code has no legacy access.

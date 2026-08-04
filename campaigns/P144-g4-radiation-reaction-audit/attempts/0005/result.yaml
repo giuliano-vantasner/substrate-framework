@@ -1,0 +1,19 @@
+attempt: 0005
+campaign: P144
+candidate: B_D_generalized_balance_and_rayleigh
+status: failed
+started_at: '2026-08-09T17:25:00Z'
+finished_at: '2026-08-09T17:31:00Z'
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_generalized_dissipation.py
+result:
+  passed: 16
+  failed: 1
+failure: >-
+  The external-work test compared SymPy expression trees. The implementation
+  returned u*(F_ext-d*u), algebraically identical to F_ext*u-d*u**2, so the
+  raw equality oracle rejected a correct factored form.
+failure_class: verifier_representation
+scientific_failure: false
+next_attempt: >-
+  Compare the ledger by exact simplified residual, rerun the focused package
+  tests, then construct independent campaign verifiers and mutations.

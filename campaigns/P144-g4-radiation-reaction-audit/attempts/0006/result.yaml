@@ -1,0 +1,32 @@
+attempt: 0006
+campaign: P144
+candidate: B_D_generalized_balance_and_declared_rayleigh
+status: passed
+started_at: '2026-08-09T17:32:00Z'
+finished_at: '2026-08-09T17:48:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P144-g4-radiation-reaction-audit/verify.py --source-file <G4> --dossier-file <G4-dossier>
+  - PYTHONPATH=src .venv/bin/python campaigns/P144-g4-radiation-reaction-audit/reviews/independent_generalized_balance_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P144-g4-radiation-reaction-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_generalized_dissipation.py
+result:
+  primary: ALL_29_CHECKS_PASS
+  independent: ALL_16_CHECKS_PASS
+  source_graph: ALL_27_CHECKS_PASS
+  focused_tests: 17_passed
+  source_graph_nodes: 10
+  source_graph_predicates: 99
+  mutable_legacy_numpy_integration_accesses: 0
+scientific_failure: false
+conclusion: >-
+  A nonnegative supplied power constrains only force dot rate. For a nonzero
+  rate vector and declared positive-definite coordinate metric, the canonical
+  metric-minimum particular force is exact and every other balanced force adds
+  a work-free covector. One rate is unique only away from zero; at zero rate,
+  positive power is inconsistent and zero power leaves force arbitrary. A
+  separately declared positive-semidefinite Rayleigh matrix yields an exact
+  force, power, and external-work ledger. These are conditional generalized-
+  coordinate results and do not derive G4's radiation power or physical self-force.
+next_attempt: >-
+  Complete claim-level evidence, impact and novelty review, then transact the
+  accepted claim, qualified source disposition, release, generated state, and memory.

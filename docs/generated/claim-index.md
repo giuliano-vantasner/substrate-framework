@@ -912,6 +912,15 @@ Conditional on C-RPROF-001 and on accepted angular inputs (B,I)=(1,1),(2,pi+8/3)
 - Compatibility: `compatible_extension`
 - Dependencies: C-RPROF-001, C-RMAP-001, C-RMAP-002
 
+## C-RR-001
+
+Let u be a nonzero finite exact real generalized-rate column, let P be an exact nonnegative supplied power, and let G be a separately declared exact real symmetric positive-definite coordinate metric whose entries include any unit conversions required for the coordinate pairing. Then Q0=-P*G*u/(u^T*G*u) satisfies Q0^T*u=-P and uniquely minimizes Q^T*G^(-1)*Q over every force covector with that work. The complete balanced family is Q=Q0+z for arbitrary exact real z satisfying z^T*u=0. Thus one scalar power does not determine multiple generalized- force components without extra allocation data. In one coordinate with nonzero rate v, the force is uniquely -P/v. At v=0, positive P is inconsistent with instantaneous work balance, while P=0 leaves the force unconstrained. Separately, if an exact real symmetric positive- semidefinite damping matrix D is declared, the Rayleigh function R=u^T*D*u/2 gives Q_d=-D*u, dissipated power P_d=u^T*D*u=2*R>=0, and the open energy ledger E_dot=Q_ext^T*u-P_d. This is an exact conditional generalized-coordinate power-balance and effective-dissipation theorem. It does not derive P, G, D, a field or source action, source dynamics, self-field, regularization, causal response, near-field energy, radiation-reaction coefficient, internal-mode backreaction, physical coupling, observation, material mechanism, or substrate realization.
+
+- Accepted in: `v0.111.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-SCL-001
 
 Let lambda, nu, S, E0, and epsilon0 be positive, with lambda a dimensionless classical Hessian eigenvalue, nu an inverse-time scale, S an action scale, and E0*epsilon0 a background energy. Conditional on a separately declared one-quantum harmonic interpretation, the dimensionless frequency is sqrt(lambda), the energy gap is S*nu*sqrt(lambda), and the gap-to-background ratio is S*nu*sqrt(lambda)/(E0*epsilon0). For every positive rho, replacing nu by rho*nu leaves the dimensionless Hessian problem unchanged while multiplying the gap and ratio by rho; analogous independent variation of S or E0 also changes the physical ratio. Thus a dimensionless squared classical frequency alone does not determine an excitation energy or mass ratio, and lambda itself cannot replace sqrt(lambda) in the harmonic gap. This exact conditional scale ledger supplies no quantization rule, value of S or nu, background normalization, spin, isospin, parity, particle or Roper dictionary, or substrate realization.

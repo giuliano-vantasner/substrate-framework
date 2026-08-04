@@ -1,0 +1,39 @@
+attempt: 0004
+campaign: P144
+candidate: A_scientific_source_audit
+status: failed
+started_at: '2026-08-09T17:11:00Z'
+finished_at: '2026-08-09T17:24:00Z'
+commands:
+  - full line-numbered read of the hash-pinned G4 source and dossier after the frozen boundary
+  - exact data-flow reconstruction of G4.1 through G4.6 and guards G4.G1 through G4.G4
+result:
+  reproduced_predicates: 10
+  independently_derived_self_force_components: 0
+  evolved_source_or_collective_coordinate_equations: 0
+  derived_internal_mode_source_harmonics: 0
+  regularized_retarded_self_field_evaluations: 0
+  complete_energy_reservoir_ledgers: 0
+scientific_failure: true
+failure: >-
+  G4 defines its force by solving F_self*v=-P_rad and then rewrites the same
+  expression as a purported independent ALD or Ford-O'Connell route. It never
+  derives field momentum, a regularized self-field, a source equation, a
+  near-field-energy term, or an allocation rule. Its imported G1 power is
+  already rejected by the accepted C-RAD-001 adjudication. The numerical leg
+  prescribes increasing v(t), integrates d(gamma*E0)/dt, and compares the same
+  analytic identity after numerical differentiation; it does not evolve a
+  damped source. The internal-mode power is assigned from the time-averaged
+  kernel rather than derived from the oscillatory source harmonic, so its
+  hierarchy is unsupported.
+failure_class: candidate_concept_and_target_interpretation
+surviving_surface: >-
+  Conditional on an externally supplied nonnegative power and a declared
+  single translational rate v, F*v=-P fixes F only where v is nonzero. The
+  source's finite-k transform is a reproducible property of its declared
+  time-averaged kernel, but it is not an internal-radiation amplitude.
+next_attempt: >-
+  Select the preregistered generalized-balance and declared-Rayleigh candidates,
+  derive the full force-allocation family including null-work directions and
+  zero-rate domains, and test it independently with coefficient, sign,
+  allocation, and reservoir mutations.

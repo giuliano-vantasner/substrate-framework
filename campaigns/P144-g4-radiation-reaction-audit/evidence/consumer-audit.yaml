@@ -1,0 +1,35 @@
+campaign: P144
+source_unit: G4
+direct_reverse_consumers:
+  - {source_unit: FS4, disposition: duplicate_evidence, accepted_claims: [C-SG-009, C-MOM-002, C-GW-004], effect: unchanged_static_offset_and_conditional_waveform_closure}
+  - {source_unit: G3, disposition: qualified, accepted_claims: [C-STG-001], effect: unchanged_independent_exact_Einstein_scalar_closure}
+  - {source_unit: G5, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: QCD1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: SM1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 10
+  dependency_nodes: [G1, G2, G3, T2A, T2C]
+  reverse_consumers: [FS4, G3, G5, QCD1, SM1]
+  overlapping_dependency_consumer: G3
+  unique_static_predicates_inventoried: 99
+  graph_integrity_checks: 27
+  terminal_tally: ALL_27_CHECKS_PASS_P144-G4-SOURCE-GRAPH
+  evidence: reviews/replay_source_graph.py
+canonical_replay:
+  focused_tests: 17
+  result: passed
+  surfaces: [generalized_dissipation]
+compatibility_preflight:
+  primary_G4: alias_only_np_trapz_to_np_trapezoid
+  inherited_G1: alias_only_np_trapz_to_np_trapezoid
+  inherited_FS4: native_current_branch_with_legacy_fallback_shape
+  mutable_campaign_and_framework: np_trapezoid_or_no_numeric_integration
+  mutable_legacy_accesses: 0
+  scientific_failures_from_compatibility: 0
+disposition_effect: >-
+  C-RR-001 supplies conditional generalized-coordinate balance and declared
+  dissipation only. It does not retroactively validate any consumer's power,
+  self-force, internal mode, gravity, gauge, Standard Model, material, or
+  substrate interpretation. Two adjudicated consumers retain independent
+  closure and three pending consumers gain no authority.
+debt: []

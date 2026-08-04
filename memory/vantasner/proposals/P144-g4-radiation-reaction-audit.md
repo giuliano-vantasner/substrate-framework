@@ -2,7 +2,7 @@
 description: Audit G4's radiation-reaction and internal-mode backreaction claim
 author: vantasner
 created: '2026-08-09T17:00:00Z'
-updated: '2026-08-09T17:00:00Z'
+updated: '2026-08-09T17:55:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - self-force
 - migration-G4
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P144 G4 Radiation-Reaction Audit
 
@@ -125,13 +125,24 @@ generated state.
 
 | Debt | Discharge artifact | Status |
 | --- | --- | --- |
-| G4 executable and literal predicates are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all ten predicates | open |
-| Radiated power may be relabeled as a unique force | Complete generalized-force allocation and rank classification | open |
-| Field self-force may omit action or regularization | Explicit source variation, causal prescription, coincidence treatment, and conservation | open |
-| Internal energy may be double counted or assigned | All reservoirs, external work, near-field term, and allocation rule | open |
-| Numeric evidence may be same-equation regression | Solver status, refinement, independent limit, and mutations | open |
-| Dependencies consumers and novelty are incomplete | G1 G2 G3 T2A T2C, five reverse consumers, graph, cycles, and nonduplication audit | open |
-| Registry disposition release docs queue and memory are unsynchronized | Individual review and one governed terminal transaction | open |
+| G4 executable and literal predicates are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all ten predicates | discharged |
+| Radiated power may be relabeled as a unique force | Complete generalized-force allocation and rank classification | discharged |
+| Field self-force may omit action or regularization | Explicit source variation, causal prescription, coincidence treatment, and conservation | discharged by rejecting the physical route and bounding C-RR-001 to a declared effective theorem |
+| Internal energy may be double counted or assigned | All reservoirs, external work, near-field term, and allocation rule | discharged by the exact external-work ledger and rejection of G4's omitted reservoirs |
+| Numeric evidence may be same-equation regression | Solver status, refinement, independent limit, and mutations | discharged by classifying G4.4 as regression and excluding it from the exact claim |
+| Dependencies consumers and novelty are incomplete | G1 G2 G3 T2A T2C, five reverse consumers, graph, cycles, and nonduplication audit | discharged |
+| Registry disposition release docs queue and memory are unsynchronized | Individual review and one governed terminal transaction | discharged |
+
+## Adjudicated Outcome
+
+P144 promotes C-RR-001's exact conditional generalized-coordinate balance and
+declared Rayleigh dissipation theorem. One supplied power fixes an affine force
+family; a separately declared coordinate metric selects a minimum, one-rate
+uniqueness excludes zero rate, and a declared positive-semidefinite damping
+matrix closes the force, dissipation, and external-work ledger. G4 is qualified:
+its inherited power, quotient-as-independent-self-force, causal and runaway
+claims, prescribed numeric path, internal power, gravity, and substrate readings
+are rejected. Compatibility replay is alias-only and scientifically neutral.
 
 ## Review and Promotion Plan
 

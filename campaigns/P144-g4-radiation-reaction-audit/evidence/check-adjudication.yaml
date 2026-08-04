@@ -1,0 +1,18 @@
+source_unit: G4
+checks:
+  - {id: G4.1, executable_result: pass_after_alias, verdict: conditional_scalar_power_quotient, reason: Solving F*v=-P gives F=-P/v only for nonzero v; no self-field source equation or independent force route is derived.}
+  - {id: G4.2, executable_result: pass_after_alias, verdict: circular_and_on_rejected_power, reason: Both expressions expand the same supplied coefficient and kinematics. Accepted C-RAD-001 rejects G1's coefficient and supplies no reaction law.}
+  - {id: G4.3, executable_result: pass_after_alias, verdict: exact_sign_of_inserted_square_only, reason: Minus a declared nonnegative power has nonpositive work, but this does not prove a causal regularized equation or exclude runaway and preaccelerating dynamics.}
+  - {id: G4.4, executable_result: pass_after_alias, verdict: same_rhs_numeric_regression, reason: solve_ivp integrates d(gamma E0)/dt on a prescribed accelerating path and np.gradient recovers it. Energy increases and no damped source equation is evolved.}
+  - {id: G4.5, executable_result: pass_after_alias, verdict: time_averaged_spatial_kernel_regression_only, reason: The finite-k rolloff is numeric evidence about a declared static kernel. Time averaging erased the temporal harmonic needed for an internal-radiation amplitude.}
+  - {id: G4.6, executable_result: pass_after_alias, verdict: unsupported_assigned_power_hierarchy, reason: P_internal is inserted without an oscillatory source amplitude or flux derivation and then compared at a selected slow orbital point.}
+  - {id: G4.G1, executable_result: pass_after_alias, verdict: mutation_of_inserted_quotient, reason: The preferred formula contains vdot squared and the fabricated one does not; this cannot validate the inherited radiated power or reaction mechanism.}
+  - {id: G4.G2, executable_result: pass_after_alias, verdict: conditional_coefficient_sensitivity, reason: A coefficient mutation fails only the balance equation built with the baseline supplied coefficient; any consistently mutated power-force pair closes equally.}
+  - {id: G4.G3, executable_result: pass_after_alias, verdict: fabricated_counterexample_only, reason: The momentum-square fabrication is nonzero at constant velocity, but rejecting it does not derive the preferred G1 power.}
+  - {id: G4.G4, executable_result: pass_after_alias, verdict: spatial_rolloff_not_internal_backreaction, reason: The point-kernel comparison is nonvacuous numerically but neither candidate is derived as the oscillatory internal source or physical backreaction.}
+summary:
+  exact_conditional_surfaces: [G4.1, G4.3]
+  numeric_regression_only: [G4.4, G4.5]
+  circular_invalid_or_unsupported: [G4.2, G4.6]
+  counterexample_or_mutation_only: [G4.G1, G4.G2, G4.G3, G4.G4]
+  headline_supported: false

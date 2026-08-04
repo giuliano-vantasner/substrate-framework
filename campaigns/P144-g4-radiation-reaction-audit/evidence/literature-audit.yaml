@@ -1,0 +1,38 @@
+campaign: P144
+scope: radiation_reaction_method_labels_and_causal_regularization_ceiling
+sources:
+  - title: Classical theory of radiating electrons
+    authors: [P. A. M. Dirac]
+    year: 1938
+    doi: 10.1098/rspa.1938.0124
+    url: https://royalsocietypublishing.org/doi/10.1098/rspa.1938.0124
+    primary_scope: >-
+      Dirac's original classical-electron analysis supplies the historical
+      retarded and advanced field construction within Maxwell electrodynamics.
+      It does not derive G4's one-plus-one scalar source, coefficient,
+      regularization, algebraic quotient, or internal mode.
+  - title: Radiation reaction in electrodynamics and the elimination of runaway solutions
+    authors: [G. W. Ford, R. F. O'Connell]
+    year: 1991
+    doi: 10.1016/0375-9601(91)90054-C
+    url: https://www.sciencedirect.com/science/article/pii/037596019190054C
+    primary_scope: >-
+      The original Ford-O'Connell construction drops the point-electron
+      assumption, introduces a form factor with a cutoff, and derives an
+      equation from a generalized quantum Langevin model subject to a cutoff
+      bound. It does not license calling an arbitrary local quotient -P/v a
+      Ford-O'Connell reduced equation.
+adjudication:
+  supported:
+    - radiation reaction requires more structure than an instantaneous scalar energy equality
+    - causal and runaway claims depend on a specified field source regulator and equation of motion
+    - Ford-O'Connell's well-behaved result is tied to an extended form factor cutoff and Langevin model
+  unsupported:
+    - G4's kappa over eight power and scalar quotient as an independent Dirac route
+    - absence of preacceleration or runaway from algebraic locality and negative work alone
+    - a time-averaged spatial kernel as the omitted internal temporal source harmonic
+selection_use: >-
+  Literature fixes the method-label ceiling only. C-RR-001's affine balance,
+  metric minimum, Rayleigh ledger, domains, and mutations are independently
+  derived and do not import electromagnetic coefficients or empirical data.
+debt: []

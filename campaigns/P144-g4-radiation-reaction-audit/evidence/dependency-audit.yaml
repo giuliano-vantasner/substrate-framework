@@ -1,0 +1,28 @@
+campaign: P144
+source_unit: G4
+declared_dependencies:
+  - {source_unit: G1, disposition: qualified, accepted_claims: [C-RAD-001, C-SG-001, C-SG-002, C-SG-008, C-SG-012], use: C_RAD_001_rejection_and_source_work_ceiling_only}
+  - {source_unit: G2, disposition: qualified, accepted_claims: [C-GOR-001], use: effective_geometry_ceiling_only}
+  - {source_unit: G3, disposition: qualified, accepted_claims: [C-STG-001], use: canonical_Einstein_scalar_ceiling_only}
+  - {source_unit: T2A, disposition: qualified, accepted_claims: [C-SG-001, C-SG-002, C-SG-008, C-SG-012], use: constant_boost_and_stress_ceiling_only}
+  - {source_unit: T2C, disposition: qualified, accepted_claims: [C-OG-001, C-CC-001, C-SG-009, C-OG-004], use: conditional_centered_profile_average_ceiling_only}
+accepted_dependency_closure:
+  - {claim: C-RR-001, dependencies: []}
+nearby_accepted_ceiling_claims:
+  - {claim: C-RAD-001, exclusion: declared_retarded_scalar_field_flux_and_source_work_without_source_dynamics_or_self_force}
+  - {claim: C-SG-008, exclusion: exact_constant_boost_not_time_dependent_collective_coordinate}
+  - {claim: C-SG-012, exclusion: exact_normalized_stress_without_dilaton_or_reaction_map}
+  - {claim: C-OG-004, exclusion: conditional_centered_profile_average_not_MPD_or_internal_backreaction}
+  - {claim: C-STG-001, exclusion: homogeneous_Einstein_scalar_cosmology_not_local_radiating_breather}
+excluded_imports:
+  - inherited G1 power coefficient and accelerated trace monopole
+  - G2 physical gravity source map
+  - G3 localized scalar tensor source narrative
+  - T2A radiation ceiling and T2C MPD force narrative
+  - G4 internal power and form-factor-to-source map
+circularity: >-
+  G3 declares G4 while G4 imports G3, and FS4 consumes G4 while G4 invokes
+  form-factor narratives inherited through T2C. C-RR-001 imports none of these
+  source units; it closes by exact finite-dimensional algebra, so no cycle
+  grants scientific authority.
+debt: []

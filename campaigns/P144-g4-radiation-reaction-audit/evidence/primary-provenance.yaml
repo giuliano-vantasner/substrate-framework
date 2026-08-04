@@ -1,0 +1,35 @@
+campaign: P144
+source_unit: G4
+base_release: v0.110.0
+base_commit: 5e56737
+scientific_base_commit: d5e840f
+frozen_proposal_commit: d382c84
+claim_delta: C-RR-001
+primary_verifier: campaigns/P144-g4-radiation-reaction-audit/verify.py
+primary_checks: 29
+primary_route:
+  - hash-pinned source dossier frozen contract and compatibility AST
+  - source scalar-quotient dataflow missing self-field accepted-power conflict and increasing prescribed-energy audit
+  - exact generalized-force affine family metric minimum zero-rate domain and coefficient mutations
+  - exact declared Rayleigh force dissipation external-work and wrong-sign rejection
+  - time-averaged-kernel harmonic erasure and absent internal amplitude
+independent_review: campaigns/P144-g4-radiation-reaction-audit/reviews/independent_generalized_balance_review.py
+independent_checks: 16
+independent_route:
+  - fresh Lagrange-multiplier and nullspace derivation without importing generalized_dissipation
+  - fresh completion-of-squares metric minimum and metric mutation
+  - fresh scalar zero-rate Rayleigh external-work and wrong-sign derivations
+  - fresh G4 quotient coefficient and time-average counterexamples
+source_graph: campaigns/P144-g4-radiation-reaction-audit/reviews/replay_source_graph.py
+source_graph_checks: 27
+source_graph_nodes: 10
+source_graph_predicates: 99
+focused_tests: 17
+exact_precision: SymPy exact integers rationals matrices and declared real positive or nonnegative symbols
+numerical_integration: none_in_promoted_claim
+compatibility_event: one_primary_alias_only_two_inherited_classified_shapes
+gitnexus_impact:
+  metric_power_balance: {risk: LOW, direct_callers: 1, affected_processes: 0}
+  rayleigh_dissipation: {risk: LOW, direct_callers: 0, affected_processes: 0}
+  detect_changes: {risk: low, affected_processes: 0, limitation: untracked_new_files_not_mapped_as_changed_symbols}
+debt: []

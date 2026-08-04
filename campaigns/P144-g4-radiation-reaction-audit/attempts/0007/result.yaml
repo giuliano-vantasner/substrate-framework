@@ -1,0 +1,20 @@
+attempt: 0007
+campaign: P144
+candidate: F_integrated_promotion_gate
+status: superseded_before_integrated_gate
+started_at: '2026-08-09T17:49:00Z'
+commands_planned:
+  - targeted P144 primary independent graph and focused package replay
+  - .venv/bin/python scripts/validate_repository.py
+  - scripts/render_docs.py
+  - scripts/render_memory.py
+  - migration queue regeneration from authoritative dispositions
+  - scripts/validate.sh
+  - git diff --check
+result: >-
+  Generated-state orchestration failed in attempt 0008 before the integrated
+  validation command began. No scientific or full-suite verdict was produced.
+scientific_failure: null
+next_attempt: >-
+  Repair generated-state invocation, confirm canonical agreement, then create a
+  fresh in-progress terminal attempt for the integrated gate.

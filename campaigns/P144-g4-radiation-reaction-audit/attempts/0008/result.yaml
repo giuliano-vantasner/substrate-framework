@@ -1,0 +1,22 @@
+attempt: 0008
+campaign: P144
+candidate: F_generated_state_sync
+status: failed
+started_at: '2026-08-09T17:56:00Z'
+finished_at: '2026-08-09T17:57:00Z'
+command: >-
+  scripts/render_docs.py; scripts/render_memory.py; .venv/bin/python
+  scripts/inventory_claims.py <arguments>
+result:
+  docs: ModuleNotFoundError_substrate_framework
+  memory: permission_denied_nonexecutable_script
+  queue: completed
+failure: >-
+  The two renderers were invoked as shell executables. They require the project
+  interpreter, which supplies the package import path and does not depend on
+  executable mode.
+failure_class: orchestration
+scientific_failure: false
+next_attempt: >-
+  Invoke both renderers with .venv/bin/python, regenerate the queue once from
+  authoritative dispositions, and validate generated-state agreement.

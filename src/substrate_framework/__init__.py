@@ -92,6 +92,15 @@ from .branching import (
     two_channel_allocation,
     weighted_channel_allocation,
 )
+from .generalized_dissipation import (
+    MetricPowerBalance,
+    RayleighDissipation,
+    energy_rate_with_external_work,
+    metric_power_balance,
+    power_balance_residual,
+    rayleigh_dissipation,
+    scalar_power_balance_force,
+)
 from .tt_angular import (
     AxisymmetricSTFReadout,
     TTPolarizationBasis,
@@ -908,6 +917,8 @@ __all__ = [
     "TwoLengthDimensionLedger",
     "TwoChannelAllocation",
     "WeightedChannelAllocation",
+    "MetricPowerBalance",
+    "RayleighDissipation",
     "normalized_gaussian_overlap",
     "poschl_teller_ground_ledger",
     "poschl_teller_ground_state",
@@ -1430,6 +1441,11 @@ __all__ = [
     "relative_weighted_odds_enhancement",
     "two_channel_allocation",
     "weighted_channel_allocation",
+    "energy_rate_with_external_work",
+    "metric_power_balance",
+    "power_balance_residual",
+    "rayleigh_dissipation",
+    "scalar_power_balance_force",
     "YukawaRadialHessian",
     "massive_triplet_dipole_extrema",
     "massive_triplet_dipole_interaction",

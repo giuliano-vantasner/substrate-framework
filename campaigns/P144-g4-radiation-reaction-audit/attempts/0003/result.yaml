@@ -1,0 +1,23 @@
+attempt: 0003
+campaign: P144
+candidate: A_compatibility_reproduction
+status: passed_pending_scientific_audit
+started_at: '2026-08-09T17:08:00Z'
+finished_at: '2026-08-09T17:10:00Z'
+command: >-
+  .venv/bin/python -c 'import runpy; import numpy as np;
+  np.trapz=np.trapezoid; runpy.run_path(<G4>,run_name="__main__")'
+result:
+  process_exit: 0
+  terminal_tally: ALL_10_CHECKS_PASS
+  compatibility_alias: np.trapz_equals_np.trapezoid
+  source_modified: false
+scientific_failure: null
+conclusion: >-
+  The isolated current-NumPy compatibility replay reproduces all ten source
+  predicates. This establishes execution provenance only; the uniqueness of
+  the self-force, independence of the power input, internal-mode source,
+  form-factor normalization, hierarchy, and physical ceiling remain unaudited.
+next_attempt: >-
+  Read the now-unblinded source and dossier, classify every predicate, and
+  reconstruct the force, power, form factor, and reservoir data flow exactly.

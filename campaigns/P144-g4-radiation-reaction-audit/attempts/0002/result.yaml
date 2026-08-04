@@ -1,0 +1,26 @@
+attempt: 0002
+campaign: P144
+candidate: A_native_reproduction
+status: compatibility_failure
+started_at: '2026-08-09T17:05:00Z'
+finished_at: '2026-08-09T17:07:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G4_radiation_reaction_self_force.py
+result:
+  process_exit: nonzero
+  predicates_completed_before_abort: 4
+  failure_line: 411
+  direct_legacy_integration_attributes: 1
+  direct_current_integration_attributes: 0
+  eager_legacy_default_fallbacks: 0
+scientific_failure: false
+failure: >-
+  NumPy 2.5.1 removed np.trapz. G4 reaches four passing predicates and then
+  aborts on its first immutable form-factor quadrature call before scientific
+  adjudication can complete.
+diagnosis: immutable_source_numpy_version_compatibility_only
+next_attempt: >-
+  Replay the hash-pinned source unchanged through the isolated runtime alias
+  np.trapz=np.trapezoid, record the terminal tally, then audit the scientific
+  predicates independently of the compatibility event.

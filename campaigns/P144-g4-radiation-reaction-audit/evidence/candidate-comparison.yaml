@@ -1,0 +1,62 @@
+campaign: P144
+selection_frozen_at: d382c84
+criteria:
+  - complete field and source action or explicitly conditional effective balance law
+  - causal history regularization near-field energy and external-work bookkeeping
+  - component or generalized-coordinate closure rather than one scalar equality relabeled as a unique force
+  - explicit translational and internal energy reservoirs allocation rule signs dimensions and singular domains
+  - initial boundary gauge and source data plus solver-success and refinement gates for unresolved numeric work
+  - inertial constant-velocity zero-acceleration turning-point and weak-coupling limits
+  - load-bearing source power allocation sign coefficient and timestep mutations
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+candidates:
+  - id: A
+    decision: rejected_as_headline_route
+    reason: >-
+      Alias-only replay passes all ten predicates, but the force is the scalar
+      quotient of an inherited rejected power. No self-field, momentum flux,
+      source dynamics, regularization, or internal-mode evolution is present.
+  - id: B
+    decision: selected
+    reason: >-
+      Exact finite-dimensional algebra classifies the full affine family of
+      generalized forces with one supplied power and proves the extra metric
+      premise behind a distinguished minimum allocation.
+  - id: C
+    decision: rejected_for_missing_source_model
+    reason: >-
+      G4 supplies neither a complete field-plus-source action nor the causal
+      regularization and data needed for a genuine retarded self-force. Opening
+      a new physical model would exceed the source unit's dependency closure.
+  - id: D
+    decision: selected
+    reason: >-
+      A separately declared positive-semidefinite Rayleigh matrix gives a
+      complete conditional local dissipative model with exact force, power,
+      energy sign, cross-channel null modes, and external work.
+  - id: E
+    decision: selected_as_rejection_guards
+    reason: >-
+      Zero-rate, work-free alternate force, metric mutation, external-work,
+      accepted-scalar normalization, time-average, wrong-sign damping, and
+      coefficient countermodels delimit every promoted statement.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Claim review, novelty, impact, frozen graph, compatibility, release,
+      disposition, generated state, and memory close the transaction.
+proposed_claim:
+  id: C-RR-001
+  decision: promote
+  reason: distinct_dependency_closed_exact_balance_and_declared_dissipation_surface
+physical_G4_headline:
+  decision: rejected
+  reason: >-
+    G4 supplies no accepted radiated power, independent force derivation,
+    regulator, causal source equation, near-field ledger, internal harmonic,
+    allocation law, complete data, or physical coupling.
+comparator_role: >-
+  G4's transform values, selected slow point, source force, and ten passing
+  predicates did not select the theorem, metric, damping matrix, coefficients,
+  mutations, domains, or pass thresholds.
+debt: []

@@ -1,0 +1,38 @@
+campaign: P144
+provisional_claim: C-RR-001
+decision: promote
+direct_search:
+  identifiers_searched: [C-RR-001]
+  concepts_searched: [generalized coordinate power balance, affine force family, work-free force, Rayleigh dissipation matrix, radiation reaction]
+  result: >-
+    No accepted identifier or canonical generalized-force balance and Rayleigh
+    API exists. Existing energy ledgers are tied to particular field equations,
+    and C-BRN-001 normalizes two declared nonnegative rate-valued inputs rather
+    than reconstructing generalized forces from scalar work.
+memory_search:
+  query: generalized coordinate power balance affine force Rayleigh dissipation
+  nearest_prior_records: [P144, P091, P122, G1-qualified-review]
+  result: >-
+    P144 reserves the identifier. P091 governs a specific damped sine-Gordon
+    equation, P122 governs normalized rate shares, and G1 explicitly leaves
+    radiation reaction open.
+gitnexus_query:
+  query: generalized coordinate power balance affine force family Rayleigh dissipation matrix
+  preexisting_relevant_processes: 0
+  nearest_preexisting_definitions: [leading_exponential_kinetic_metric, riesz_radial_force_law, two_channel_allocation]
+  result: >-
+    The refreshed graph returns the new generalized_dissipation definitions as
+    the exact matches. Nearby kinetic metrics, radial forces, and normalized
+    channel shares do not supply this work-constrained affine force theorem.
+nearest_claims:
+  - {claim: C-RAD-001, distinction: exact_field_flux_and_source_work_without_source_dynamics_or_reaction}
+  - {claim: C-BRN-001, distinction: normalized_nonnegative_input_shares_without_generalized_force_or_power_constraint}
+  - {claim: C-SG-013, distinction: specific_forced_damped_sine_Gordon_energy_balance}
+  - {claim: C-OG-004, distinction: conditional_spatial_profile_average_without_dissipation_or_force_allocation}
+novel_surface: >-
+  C-RR-001 is the first importable framework theorem that classifies every
+  generalized force compatible with one supplied scalar power, exposes the
+  zero-rate domain, identifies the extra coordinate metric behind a minimum-
+  norm allocation, and separately closes a declared positive-semidefinite
+  Rayleigh force, dissipation, and external-work ledger.
+debt: []

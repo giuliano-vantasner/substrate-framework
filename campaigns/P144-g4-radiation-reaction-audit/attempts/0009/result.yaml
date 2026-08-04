@@ -1,0 +1,30 @@
+attempt: 0009
+campaign: P144
+candidate: F_integrated_promotion_gate
+status: passed
+started_at: '2026-08-09T17:58:00Z'
+commands_planned:
+  - P144 primary independent and source-graph verifiers
+  - scripts/validate.sh
+  - git diff --check
+finished_at: '2026-08-09T18:02:00Z'
+result:
+  primary: ALL_29_CHECKS_PASS
+  independent: ALL_16_CHECKS_PASS
+  source_graph: ALL_27_CHECKS_PASS
+  repository_workflow: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  pytest: 1256_passed
+  memory: 588_files_valid
+  skill: valid
+  repository: WORKFLOW_VALID_146_claims_146_accepted_0_proposals
+  migration_queue: 218_units_76_pending_0_partial
+  whitespace: passed
+scientific_failure: null
+conclusion: >-
+  C-RR-001, v0.111.0, the qualified G4 disposition, canonical module, tests,
+  campaign evidence, generated documentation, migration queue, and accepted
+  memory pass one integrated promotion boundary with no campaign debt.
+next_attempt: >-
+  Run record-sensitive governance, memory, whitespace, and pre-commit impact
+  checks without repeating full pytest, commit the promotion, checkpoint the
+  parent effort, and continue to the next pending source unit.
