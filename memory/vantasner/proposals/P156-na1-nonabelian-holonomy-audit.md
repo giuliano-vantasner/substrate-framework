@@ -2,7 +2,7 @@
 description: Derive and audit NA1's exact finite non-Abelian holonomy content
 author: vantasner
 created: '2026-08-10T08:45:00Z'
-updated: '2026-08-10T09:05:00Z'
+updated: '2026-08-10T10:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - nonabelian-holonomy
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P156 NA1 Non-Abelian Holonomy Audit
 
@@ -181,3 +181,16 @@ matrix value cannot replace them.
 See NA1, NA1-dossier, B1, O1, W2, W4, W7, C-NAG-001, C-REP-002,
 C-BER-001, C-WIL-001, C-KIN-001, `nonabelian_gauge.py`,
 `berry_holonomy.py`, `wilson_loops.py`, and the parent migration effort.
+
+## Promotion Outcome
+
+P156 is accepted claim by claim in v0.122.0. C-HOL-001 supplies exact finite
+ordered transport, endpoint covariance, reverse-path inversion, commuting
+collapse, closed-loop conjugacy and basepoint behavior, and representation-
+typed SU2 center controls. NA1 is terminally qualified with its physical weak
+Aharonov--Bohm and cross-object identity claims excluded. Primary,
+independent, and source-graph routes pass 24, 14, and 28 checks, and the
+focused-plus-adjacent replay passes 61 tests. The exact integrated workflow
+counts and record-sensitive closure are pinned in attempt 0016. The registry,
+release, disposition, generated docs and memory, compatibility boundary, and
+debt ledger agree.

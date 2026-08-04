@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T08:20:00Z'
+updated: '2026-08-10T10:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.121.0`, containing one hundred fifty-six
+The current accepted frontier is `v0.122.0`, containing one hundred fifty-seven
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -83,6 +83,13 @@ uniqueness, one-mode kinetic normalization, and conditional C-GSM-001
 composition and qualifies M2. It rejects M2's scalar proxy as a full vector
 variation, its gauge-choice language, its OR-branch guard, and its unsupported
 London, Meissner, W, Standard Model, and substrate readings.
+P156 adds C-HOL-001's exact finite-matrix later-left transport, endpoint gauge
+covariance, reverse-path inverse, commuting collapse, closed-loop conjugacy and
+basepoint behavior, and representation-typed SU2 center data and qualifies
+NA1. It retains NA1's exact fundamental commuting controls and local
+noncommuting BCH coefficient while rejecting its hidden noncentral sign
+mismatch, cross-object set equality, and unsupported physical weak
+Aharonov--Bohm, detector, and substrate readings.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -108,7 +115,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 65 pending, 0 partially migrated, 3 migrated, 141 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 64 pending, 0 partially migrated, 3 migrated, 142 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -1630,21 +1637,36 @@ inherited immutable compatibility aliases backed by `np.trapezoid`. The
 single integrated promotion workflow passed all 1,392 tests after validating
 the registry, queue, 640 memory records, and skill contract.
 
+P156 adds C-HOL-001 for exact finite-dimensional non-Abelian parallel
+transport in the accepted `D=partial-i*g*W` convention. Canonical exact matrix
+algebra and a fresh continuous-path derivation establish later-left chronology,
+unitarity, determinant, composition, reverse-path inversion, commuting
+collapse, endpoint-factor covariance, closed-loop conjugacy, cyclic basepoint
+behavior, and fundamental-versus-adjoint center data. NA1 is qualified because
+its constant T3 loop is commuting, its helper has the opposite noncentral
+orientation, and its assigned minus-one values do not supply common source
+objects or maps. No weak carrier, base-space Aharonov--Bohm flux geometry,
+gauge action, detector, observation, or substrate mechanism is promoted.
+Native NA1 has no NumPy surface; mutable P156 uses exact algebra, while the
+frozen source graph records B1's isolated version-only compatibility fallback
+without executing it for this change. Exact integrated gate counts are pinned
+in P156 attempt 0016.
+
 ## Canonicalization
-The registry, `v0.121.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-six accepted claims. P001 through P155 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 65 pending, 0 partial, 3 migrated, 141 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.122.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-seven accepted claims. P001 through P156 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 64 pending, 0 partial, 3 migrated, 142 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 65
-pending, 3 migrated, 141 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is NA1, pinned at SHA-256
-`c36b2eeace179a95b44400ea42b74f6263671fd4b4a8441fc682c480bc9372c8`.
-The queue exposes five static predicates, one assertion, a symbolic oracle,
-and source labels B1, O1, W2, W4, and W7. P156 must freeze constant commuting
-loops, genuine path ordering or noncommuting segmentation, representation and
-gauge or basis behavior of trace and holonomy, topology and path geometry,
-accepted composition, and physical weak-sector ceilings before opening the
-body. A green `exp(2*pi*i*T3)=-I` identity cannot by itself establish
-non-Abelianity or a physical Aharonov--Bohm weak sector.
+The effort remains active. D4 is discharged, but D1 remains open with 64
+pending, 3 migrated, 142 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is O1, pinned at SHA-256
+`270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64`.
+The queue exposes seven static predicates, one assertion, a symbolic oracle,
+and source labels B1, ME1, NA1, and S2. P157 must freeze the spin-one carrier,
+polar-state orbit and stabilizer, projective or phase quotient, base space,
+Berry endpoint convention, topology, representation content, material-model
+premises, and physical BEC or substrate ceilings before opening the body.
+Neither an RP2 label nor a repeated minus-one value may select the topology or
+identify a physical condensate.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

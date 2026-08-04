@@ -1,0 +1,24 @@
+attempt: 0011
+campaign: P156
+candidate: frozen_NA1_dependency_and_consumer_graph
+status: failed
+started_at: '2026-08-10T09:31:00Z'
+finished_at: '2026-08-10T09:34:00Z'
+commands:
+  - .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  node_hashes: 8_passed
+  predicate_inventories: 61_passed
+  assertion_inventories: 8_passed
+  compatibility_isolation: immutable_B1_only_passed
+failure: >-
+  The W2 transitive-provenance assertion expected lowercase "imported there
+  from W2", while the pinned source spells the same phrase "IMPORTED there
+  from W2" and the check failed after the structural graph gates.
+diagnosis:
+  category: lexical_representation
+  scientific_claim_changed: false
+repair: >-
+  Match the exact pinned capitalization without weakening the provenance or
+  any graph edge assertion.
+next_attempt: replay_the_graph_with_the_exact_W2_provenance_phrase

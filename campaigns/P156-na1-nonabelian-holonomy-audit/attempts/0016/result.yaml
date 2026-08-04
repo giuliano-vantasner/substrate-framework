@@ -1,0 +1,26 @@
+attempt: 0016
+campaign: P156
+candidate: corrected_release_identity_and_integrated_promotion_gate
+status: passed
+started_at: '2026-08-10T10:06:00Z'
+finished_at: '2026-08-10T10:11:00Z'
+commands:
+  - assert_current_release_byte_identical_to_v0_122_0
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/independent_holonomy_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --check
+  - record_sensitive_generator_repository_memory_and_skill_checks
+results:
+  current_release_identity: passed
+  primary: 24_passed
+  independent: 14_passed
+  source_graph: 28_passed
+  repository_contract: valid_157_accepted_claims_64_pending_units
+  memory_contract: 645_records_passed
+  skill_contract: passed
+  full_tests: 1408_passed
+  diff_check: passed
+debt: []
+next_attempt: continue_parent_effort_at_O1

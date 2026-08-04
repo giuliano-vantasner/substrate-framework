@@ -1,0 +1,19 @@
+attempt: 0008
+campaign: P156
+candidate: corrected_exact_residual_and_noncommuting_gauge_witness
+status: passed
+started_at: '2026-08-10T09:18:00Z'
+finished_at: '2026-08-10T09:20:00Z'
+commands:
+  - repair_the_two_focused_test_witnesses
+  - .venv/bin/python -m pytest tests/test_nonabelian_holonomy.py -q
+  - .venv/bin/python -m compileall -q src/substrate_framework/nonabelian_holonomy.py tests/test_nonabelian_holonomy.py
+results:
+  focused_tests: 16_passed
+  targeted_compile: passed
+  commuting_oracle: exact_zero_residual
+  closed_gauge_witness: noncommuting_conjugation_with_invariant_class_data
+debt:
+  - build_primary_and_independent_campaign_verifiers
+  - build_source_graph_and_consumer_replay
+next_attempt: construct_the_primary_and_fresh_independent_C-HOL-001_oracles

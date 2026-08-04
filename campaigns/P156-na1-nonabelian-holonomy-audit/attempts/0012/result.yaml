@@ -1,0 +1,21 @@
+attempt: 0012
+campaign: P156
+candidate: exact_W2_provenance_phrase_graph_replay
+status: passed
+started_at: '2026-08-10T09:35:00Z'
+finished_at: '2026-08-10T09:37:00Z'
+commands:
+  - correct_only_the_case_sensitive_W2_phrase
+  - .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  graph_nodes: 8
+  source_predicates: 61
+  assertions: 8
+  graph_checks: 28_passed
+  compatibility: immutable_B1_only_version_surface
+  pending_consumer: O1_gains_no_authority
+  qualified_consumers: [CF3_unchanged, OM1_unchanged]
+debt:
+  - complete_additive_API_impact_analysis
+  - complete_claim_level_review_and_promotion_records
+next_attempt: index_and_audit_the_additive_C-HOL-001_API_impact

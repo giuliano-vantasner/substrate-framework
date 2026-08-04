@@ -1,0 +1,31 @@
+attempt: 0014
+campaign: P156
+candidate: claim_review_preparation_and_scientific_replay
+status: passed
+started_at: '2026-08-10T09:47:00Z'
+finished_at: '2026-08-10T09:51:00Z'
+commands:
+  - git diff --check
+  - parse_all_P156_YAML
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/independent_holonomy_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  diff_check: passed
+  yaml_parse: passed
+  primary: 24_passed
+  independent: 14_passed
+  source_graph: 28_passed
+  mutation_sensitive_failures_required:
+    - wrong_connection_inhomogeneous_sign
+    - omitted_initial_endpoint_factor
+    - swapped_noncommuting_segment_order
+    - commuting_axis_replacement
+    - source_noncentral_orientation
+    - fundamental_to_adjoint_representation
+    - raw_to_normalized_trace
+    - physical_dictionary_identity
+debt:
+  - assemble_individual_claim_reviews_and_promotion_transaction
+  - run_one_integrated_promotion_gate
+next_attempt: assemble_and_validate_the_v0_122_0_promotion_boundary

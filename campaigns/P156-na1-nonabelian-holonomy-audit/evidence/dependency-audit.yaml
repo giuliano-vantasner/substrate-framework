@@ -1,0 +1,23 @@
+campaign: P156
+claim: C-HOL-001
+accepted_direct_dependencies:
+  C-NAG-001: exact_derivative_connection_sign_local_covariance_and_physical_ceiling
+  C-REP-002: exact_Pauli_half_carrier_and_physical_ceiling
+accepted_nonclaim_boundaries:
+  C-BER-001: scalar_closed_ray_holonomy_not_matrix_transport_or_common_object
+  C-WIL-001: declared_expectation_laws_not_parallel_transport
+  C-GAU-001: commuting_Abelian_covariance_and_flux_ceiling
+  C-TOP-001: parity_character_value_without_common_pullback
+  C-CHR-001: finite_character_classification_without_Wilson_or_Berry_domain_identity
+source_edges:
+  W7: actual_local_gauge_and_generator_import_qualified_through_C-NAG-001_and_C-REP-002
+  W2: transitive_generator_import_via_W7_qualified_through_C-REP-002
+  T1Z2: actual_scalar_value_and_character_reference_qualified_through_C-TOP-001_and_C-CHR-001
+  B1: narrative_sibling_only_qualified_through_C-BER-001_and_other_boundaries
+  O1: forward_pending_sibling_with_no_authority
+  W4: token_false_positive_created_by_W_4pi_variable
+later_consumers:
+  CF3: qualified_and_retains_only_independent_center_and_declared_expectation_law_content
+  OM1: qualified_and_explicitly_confirms_NA1_value_equality_lacks_the_common_homomorphism
+closure: acyclic_additive_claim_with_two_accepted_dependencies
+debt: []

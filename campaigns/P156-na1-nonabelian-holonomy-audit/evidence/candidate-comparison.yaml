@@ -1,0 +1,41 @@
+campaign: P156
+criteria_order:
+  - derivative_connection_and_transporter_sign_agreement
+  - explicit_orientation_chronology_endpoints_basepoint_carrier_and_normalization
+  - noncommuting_order_sensitivity_with_commuting_and_constant_controls
+  - unitarity_determinant_composition_inverse_and_conjugacy_data
+  - representation_dependence_and_separation_from_physical_dictionaries
+  - accepted_framework_fit_mutation_sensitivity_and_graph_closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Native replay classifies all five predicates but cannot validate NA1's physical weak Aharonov-Bohm headline or cross-object identity.
+  B:
+    decision: selected_as_general_transport_derivation
+    reason: The C-NAG-001 convention uniquely pairs the path equation with endpoint-factor covariance and closed-loop conjugation.
+  C:
+    decision: selected_as_ordering_and_orientation_completion
+    reason: Exact segmented transport supplies later-left composition, commuting collapse, reversed-path inversion, and genuine noncommuting order sensitivity.
+  D:
+    decision: selected_as_conjugacy_and_representation_completion
+    reason: Closed-loop class data and fundamental-versus-adjoint controls distinguish matrix covariance, trace normalization, and representation behavior.
+  E:
+    decision: selected_as_interpretation_boundary
+    reason: Berry and Aharonov-Bohm comparisons require separately typed base spaces, connections, endpoint data, carriers, and observables.
+  F:
+    decision: rejected_as_duplicate_only
+    reason: No accepted claim or API contains the combined ordered transport, endpoint law, inverse, basepoint, and representation theorem.
+  G:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Identical matrices and center values under distinct dictionaries prove that the physical weak and substrate readings remain independent.
+  H:
+    decision: selected
+    reason: Dependency, consumer, compatibility, release, queue, documentation, and memory closure are required for promotion.
+selection_basis: >-
+  B fixes the convention-sensitive transport law, C supplies the genuinely
+  noncommutative and orientation-sensitive positive object, and D supplies
+  its correct closed-loop scalar data. E and G prevent value equality from
+  becoming domain or physical identity. A and H close source provenance and
+  governance. Queue-preexposed center and trace values selected no candidate.
+foundational_revision_required: false
+debt: []

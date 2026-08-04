@@ -1,0 +1,27 @@
+attempt: 0009
+campaign: P156
+candidate: primary_and_fresh_independent_exact_holonomy_oracles
+status: failed
+started_at: '2026-08-10T09:21:00Z'
+finished_at: '2026-08-10T09:25:00Z'
+commands:
+  - .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/verify.py
+  - .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/independent_holonomy_review.py
+  - .venv/bin/python -m pytest tests/test_nonabelian_holonomy.py tests/test_nonabelian_gauge.py tests/test_berry_holonomy.py tests/test_wilson_loops.py -q
+results:
+  primary: 24_passed
+  adjacent_tests: 61_passed
+  independent: failed_at_first_continuous_gauge_equation
+failure: >-
+  The fresh noncommuting continuous construction did not simplify its
+  transformed path-equation residual to the zero matrix under the stated
+  connection law.
+diagnosis:
+  category: independent_rederivation
+  scientific_claim_changed: false
+  canonical_implementation_changed: false
+repair: >-
+  Inspect the exact residual before editing, distinguish a convention error
+  from insufficient trigonometric normalization, and repair only the fresh
+  route if the frozen sign law remains correct.
+next_attempt: diagnose_and_repair_the_fresh_continuous_transport_derivation

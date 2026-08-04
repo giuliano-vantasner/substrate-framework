@@ -1,0 +1,25 @@
+campaign: P156
+source_unit: NA1
+native_tally: 5_passed
+predicates:
+  NA1.1:
+    verdict: qualified_exact
+    retained: constant_fundamental_T3_center_exponential_and_raw_trace
+    correction: commuting_declared_integrated_connection_not_physical_weak_AB_or_path_ordering
+  NA1.2:
+    verdict: qualified_exact
+    retained: fundamental_center_eigenvalue_determinant_and_order
+    correction: representation_specific_center_data_not_per_unit_physical_flux
+  NA1.3:
+    verdict: accepted_guard
+    retained: fundamental_4pi_identity_and_trace
+    correction: no_physical_loop_or_observable_follows
+  NA1.4:
+    verdict: qualified_exact
+    retained: symbolic_nonidentity_local_BCH_coefficient_and_commuting_control
+    correction: add_endpoint_covariance_path_orientation_basepoint_inverse_and_representation_controls
+  NA1.5:
+    verdict: rejected_as_object_identity
+    retained: four_scalar_values_compare_equal_under_their_separate_definitions_or_assignments
+    correction: no_common_domain_pullback_map_or_physical_weak_sector_is_derived
+headline: qualified_through_C-HOL-001_without_weak_AB_or_shared_object_identity

@@ -1,0 +1,27 @@
+campaign: P156
+source_unit: NA1
+root_source_consumers:
+  O1:
+    status: pending
+    use: one_sibling_sentence_calling_the_Z2_value_the_same
+    decision: gains_no_authority_and_must_be_adjudicated_independently
+  CF3:
+    status: qualified
+    use: SU3_center_analogy_and_declared_area_law_narrative
+    decision: accepted_C-WIL-001_closure_is_independent_of_NA1_physical_reading
+  OM1:
+    status: qualified
+    use: reconstructs_NA1_center_values_and_says_bare_set_equality_is_insufficient
+    decision: accepted_C-TOP-001_and_C-CHR-001_closure_remains_unchanged
+narrative_consumers:
+  - merged-framework/README.md
+  - merged-framework/frontier.md
+  - merged-framework/UNIFIED-SYNTHESIS.md
+authority: none
+canonical_consumers_before_P156: []
+canonical_change: additive_new_module_exports_and_tests_only
+compatibility:
+  root_NA1: no_numpy_surface
+  mutable_P156: no_executable_legacy_integration_access
+  immutable_B1: one_current_and_one_eager_legacy_fallback_access_recorded_version_only
+debt: []

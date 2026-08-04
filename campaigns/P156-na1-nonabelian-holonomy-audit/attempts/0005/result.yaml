@@ -1,0 +1,28 @@
+attempt: 0005
+campaign: P156
+candidate: canonical_exact_ordered_holonomy_implementation
+status: failed
+started_at: '2026-08-10T09:10:00Z'
+finished_at: '2026-08-10T09:13:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_nonabelian_holonomy.py -q
+results:
+  passed: 14
+  failed: 2
+failures:
+  - >-
+    The commuting-collapse test repeated an already exact zero-matrix residual
+    with brittle structural SymPy equality between equivalent exponential forms.
+  - >-
+    The closed-loop gauge witness used U=i*sigma3 on a transporter proportional
+    to sigma3, so conjugation left the matrix unchanged and could not witness
+    the distinction between covariance and scalar invariance.
+diagnosis:
+  category: verifier_representation_and_witness
+  scientific_claim_changed: false
+  implementation_changed: false
+repair: >-
+  Keep the exact collapse residual as the equality oracle and replace the
+  endpoint gauge by a noncommuting Pauli-axis unitary while retaining the
+  trace determinant and characteristic-polynomial invariants.
+next_attempt: corrected_exact_residual_and_noncommuting_gauge_witness

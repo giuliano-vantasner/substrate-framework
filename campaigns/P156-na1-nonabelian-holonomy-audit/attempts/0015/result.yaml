@@ -1,0 +1,31 @@
+attempt: 0015
+campaign: P156
+candidate: integrated_v0_122_0_promotion_precheck
+status: failed
+started_at: '2026-08-10T10:00:00Z'
+finished_at: '2026-08-10T10:05:00Z'
+commands:
+  - .venv/bin/python scripts/render_docs.py --check
+  - .venv/bin/python scripts/render_memory.py --check
+  - memory validate each_changed_P156_and_parent_record --base /home/dan/substrate-framework
+  - .venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py .agents/skills/physics-erdos-loop
+  - parse_P156_governance_migration_and_campaign_YAML
+  - assert_current_release_byte_identical_to_v0_122_0
+  - git diff --check
+results:
+  docs_render_check: passed
+  memory_render_check: passed
+  changed_memory_records: passed
+  skill_contract: passed
+  yaml_parse: passed
+  current_release_identity: failed
+failure: >-
+  The generated v0.122.0 manifest had one extra terminal blank line and was not
+  byte-identical to current.yaml. The claim set and YAML semantics agreed, but
+  the release transaction requires exact canonical identity.
+diagnosis:
+  category: release_record_serialization
+  scientific_claim_changed: false
+  canonical_implementation_changed: false
+repair: remove_only_the_extra_terminal_blank_line_then_repeat_the_precheck
+next_attempt: corrected_release_identity_and_integrated_promotion_gate

@@ -1,0 +1,26 @@
+attempt: 0010
+campaign: P156
+candidate: diagnose_and_repair_fresh_continuous_transport_derivation
+status: passed
+started_at: '2026-08-10T09:26:00Z'
+finished_at: '2026-08-10T09:29:00Z'
+commands:
+  - inspect_the_exact_continuous_gauge_residual
+  - rerun_the_independent_oracle_after_a_convention_preserving_repair
+  - rerun_the_unchanged_primary_and_adjacent_oracles_only_if_the_repair_changes_shared_inputs
+diagnosis: >-
+  The residual evaluates to exact zero after exponential or complex expansion,
+  but plain simplify retained one equivalent trigonometric entry. The frozen
+  connection sign and analytic transporter were correct.
+repair: >-
+  The independent reviewer now expands exact complex trigonometric entries
+  before simplification. No canonical module, claim statement, or primary
+  verifier input changed.
+results:
+  independent: 14_passed
+  retained_unchanged_primary: 24_passed
+  retained_unchanged_adjacent_tests: 61_passed
+debt:
+  - build_source_graph_and_consumer_replay
+  - complete_impact_and_claim_level_review
+next_attempt: construct_the_frozen_NA1_source_and_consumer_graph

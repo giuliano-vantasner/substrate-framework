@@ -1,0 +1,19 @@
+attempt: 0007
+campaign: P156
+candidate: second_append_only_attempt_record_creation
+status: failed
+started_at: '2026-08-10T09:16:00Z'
+finished_at: '2026-08-10T09:17:00Z'
+commands:
+  - apply_patch separate_attempt_0006_and_create_attempt_0007
+failure: >-
+  The second repair repeated the same escaped Add File marker mistake and again
+  appended both intended records to attempt 0005 instead of creating files.
+diagnosis:
+  category: record_editing
+  scientific_claim_changed: false
+  implementation_changed: false
+repair: >-
+  Use unprefixed apply_patch file-operation markers, preserve both failures as
+  separate YAML records, and move the unchanged focused test repair to 0008.
+next_attempt: corrected_exact_residual_and_noncommuting_gauge_witness

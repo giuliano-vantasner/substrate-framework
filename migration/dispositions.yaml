@@ -5043,3 +5043,52 @@ units:
       executable legacy integration references; immutable CF1's three
       np.trapz references remain recorded version-only evidence and are not
       executed for this exact change.
+  NA1:
+    disposition: qualified
+    accepted_claims:
+      - C-HOL-001
+      - C-NAG-001
+      - C-REP-002
+    qualification: >-
+      NA1's Pauli-half fundamental 2*pi and 4*pi center controls, determinant,
+      eigenvalue order, raw traces, symbolic noncommuting matrix-function
+      difference, local i*a^2*T3/2 coefficient, and commuting control survive
+      as exact mathematics. C-HOL-001 supplies the positive object: later-left
+      finite transport paired with C-NAG-001, unitarity, determinant,
+      composition, reverse-path inversion, commuting collapse, endpoint gauge
+      covariance, closed-loop conjugacy and cyclic basepoint behavior, and
+      representation-typed center data. NA1's constant T3 example lies in one
+      commuting subgroup, and its su2_z helper has the opposite orientation
+      away from center angles. Its final set comparison hard-codes two values
+      and supplies no common domain, source object, homomorphism, pullback, or
+      physical dictionary. No physical weak connection, Aharonov-Bohm base
+      loop or flux, matter carrier, gauge action, detector, common
+      Berry/Wilson/parity object, or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P156-na1-nonabelian-holonomy-audit/reviews/source_adjudication.md
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/source-reproduction.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/source-audit.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/check-adjudication.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/input-provenance.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/dependency-audit.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/consumer-audit.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/candidate-comparison.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/primary-provenance.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/evidence/literature-audit.yaml
+      - campaigns/P156-na1-nonabelian-holonomy-audit/verify.py
+      - campaigns/P156-na1-nonabelian-holonomy-audit/reviews/independent_holonomy_review.py
+      - campaigns/P156-na1-nonabelian-holonomy-audit/reviews/replay_source_graph.py
+      - campaigns/P156-na1-nonabelian-holonomy-audit/attempts/0016/result.yaml
+      - memory/vantasner/decisions/C-HOL-001-review.md
+      - memory/vantasner/decisions/NA1-qualified-review.md
+    note: >-
+      P156 promotes C-HOL-001 through twenty-four primary, fourteen
+      independent, sixteen focused-test, and twenty-eight frozen-graph checks;
+      sixty-one focused-plus-adjacent tests pass. Native NA1 passes all five
+      predicates. Eight graph nodes classify actual, narrative, transitive,
+      false-positive, pending, and qualified consumers without granting O1
+      authority or disturbing CF3 and OM1. NA1 and all mutable P156 and
+      canonical code have zero executable legacy integration references;
+      immutable B1's compatibility fallback remains recorded version-only
+      evidence and is not executed for this exact change.

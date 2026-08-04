@@ -1,0 +1,60 @@
+campaign: P156
+title: NA1 exact finite non-Abelian holonomy audit
+source_baseline: substrate@6d1f4e0
+source_units: [NA1]
+base_release: v0.121.0
+accepted_release: v0.122.0
+adjudicated_at: '2026-08-10T10:00:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without making its tally a headline oracle.}
+  - {id: B, reason: The C-NAG-001 convention and path equation supply exact endpoint-factor covariance.}
+  - {id: C, reason: Exact segmented transport supplies chronology composition reversal commuting collapse and noncommuting sensitivity.}
+  - {id: D, reason: Closed-loop conjugacy basepoint trace normalization and representation controls supply the correct invariant data.}
+  - {id: E, reason: Typed Berry and Aharonov-Bohm comparisons expose the missing base-space carrier and observable premises.}
+  - {id: G, reason: Same-matrix countermodels delimit every weak-sector Aharonov-Bohm and substrate interpretation.}
+  - {id: H, reason: Dependency semantic-consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-HOL-001]
+unpromoted_claims:
+  - {id: constant_T3_center_value_demonstrates_nonabelian_path_ordering, reason: It lies in one commuting subgroup and is only a soluble representation-specific control.}
+  - {id: source_su2_z_matches_positive_C_NAG_transport_for_all_angles, reason: Its diagonal orientation is opposite away from the special center values.}
+  - {id: symbolic_noncommuting_difference_is_nonzero_at_every_positive_angle, reason: The exact supported result is nonidentity as a matrix function and its local nonzero quadratic coefficient.}
+  - {id: Wilson_Berry_parity_and_character_minus_one_values_are_one_object, reason: No common domain source object homomorphism or pullback is supplied.}
+  - {id: physical_weak_Aharonov_Bohm_or_substrate_mechanism, reason: No governed base loop flux action carrier coupling detector or observable dictionary is supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_holonomy_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0014/result.yaml
+  source_graph_attempt: attempts/0012/result.yaml
+  impact_attempt: attempts/0013/result.yaml
+  integrated_terminal_gate: attempts/0016/result.yaml
+  claim_review: memory/vantasner/decisions/C-HOL-001-review.md
+  source_review: memory/vantasner/decisions/NA1-qualified-review.md
+source_disposition:
+  NA1: qualified
+accepted_mappings: [C-HOL-001, C-NAG-001, C-REP-002]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_without_numeric_quadrature_or_legacy_name
+  immutable_primary: no_numpy_integration_surface
+  semantic_consumers: immutable_B1_version_only_fallback_surface_recorded_without_execution
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/independent_holonomy_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P156-na1-nonabelian-holonomy-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_nonabelian_holonomy.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

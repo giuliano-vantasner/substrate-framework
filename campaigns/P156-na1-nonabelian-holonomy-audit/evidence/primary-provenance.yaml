@@ -1,0 +1,39 @@
+campaign: P156
+accepted_base:
+  release: v0.121.0
+  framework_checkpoint: b4f2e61
+  scientific_commit: b4f2e61
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: NA1
+  path: merged-framework/bridges/phase-7/bridge_NA1_su2L_wilson_loop.py
+  sha256: c36b2eeace179a95b44400ea42b74f6263671fd4b4a8441fc682c480bc9372c8
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/NA1-dossier.md
+  sha256: d0f7c241d0a06ce85acd3e98c9911023141104778543252d436a2704e229b262
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/nonabelian_gauge.py
+  - src/substrate_framework/representation.py
+  - src/substrate_framework/berry_holonomy.py
+  - src/substrate_framework/wilson_loops.py
+  - campaigns/P131-t1z2-cross-oracle-sign-audit
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P151-w7-su2l-gauging-audit
+  - campaigns/P152-b1-berry-connection-audit
+external_primary_or_authoritative_sources:
+  - {id: Wilson1974, url: 'https://doi.org/10.1103/PhysRevD.10.2445', use: separately_governed_closed_path_and_lattice_gauge_provenance_not_NA1_physical_identity}
+  - {id: WuYang1975, url: 'https://doi.org/10.1103/PhysRevD.12.3845', use: nonintegrable_phase_and_nonabelian_connection_provenance_not_a_weak_carrier_or_observable}
+memory_searches:
+  - Wilson loop holonomy path ordering noncommuting
+  - NA1 SU2L weak Aharonov Bohm
+authority_statement: >-
+  Memory and NA1 are recall and candidate evidence. The pinned accepted
+  release, exact C-NAG-001 convention, independently derived path equation,
+  canonical pure API, exact matrix and ODE oracles, individual review,
+  primary-source ceiling, mutations, and global source-graph closure supply
+  authority.

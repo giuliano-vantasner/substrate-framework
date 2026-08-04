@@ -1,0 +1,35 @@
+campaign: P156
+claim: C-HOL-001
+derived_inputs:
+  - later_left_chronological_product_from_the_declared_path_equation
+  - unitarity_and_determinant_trace_formula
+  - ordered_composition_and_reversed_path_inverse
+  - pairwise_commuting_exponential_collapse
+  - telescoping_endpoint_gauge_covariance
+  - closed_loop_conjugacy_and_cyclic_basepoint_behavior
+  - noncommuting_Pauli_segment_BCH_coefficient
+  - fundamental_and_adjoint_center_images_and_traces
+declared_model_inputs:
+  - nonzero_finite_dimensional_complex_inner_product_carrier
+  - nonempty_chronological_sequence_of_exact_Hermitian_integrated_connections
+  - C_NAG_001_derivative_sign_D_equals_partial_minus_i_g_W
+  - exact_unitary_node_gauges_with_equal_endpoints_only_for_a_declared_closed_path
+  - Pauli_half_fundamental_and_spin_one_adjoint_generators_for_the_SU2_controls
+accepted_imports:
+  - {claim: C-NAG-001, use: derivative_connection_sign_and_local_gauge_transformation_convention}
+  - {claim: C-REP-002, use: Pauli_half_fundamental_carrier_without_physical_weak_identification}
+accepted_nonclaim_boundaries:
+  - {claim: C-BER-001, use: scalar_closed_ray_holonomy_nonidentity_boundary}
+  - {claim: C-WIL-001, use: expectation_law_nonidentity_boundary}
+external_imports:
+  - {source: Wilson1974, use: historical_closed_path_and_lattice_gauge_provenance_only}
+  - {source: WuYang1975, use: nonintegrable_phase_and_nonabelian_connection_provenance_only}
+excluded_comparators:
+  - queue_preexposed_fundamental_2pi_minus_identity
+  - queue_preexposed_fundamental_4pi_identity
+  - queue_preexposed_raw_trace_values
+  - queue_preexposed_weak_Aharonov_Bohm_and_same_value_labels
+fitted_constants: []
+borrowed_answers: []
+undeclared_parameters: []
+debt: []

@@ -90,6 +90,14 @@ from .nonabelian_gauge import (
     su2_projected_connection,
     su2_projected_unitary,
 )
+from .nonabelian_holonomy import (
+    EndpointGaugeHolonomyEvidence,
+    OrderedSegmentHolonomyEvidence,
+    SU2HolonomyEvidence,
+    endpoint_gauge_holonomy_evidence,
+    ordered_segment_holonomy,
+    su2_holonomy_evidence,
+)
 from .su2_doublets import (
     SU2ChiralFactorLedger,
     SU2CommonChargeLedger,
@@ -1554,10 +1562,16 @@ __all__ = [
     "scalar_power_balance_force",
     "PassiveHalfLineScatteringLedger",
     "NonAbelianGaugeLedger",
+    "EndpointGaugeHolonomyEvidence",
+    "OrderedSegmentHolonomyEvidence",
+    "SU2HolonomyEvidence",
+    "endpoint_gauge_holonomy_evidence",
     "passive_half_line_scattering_ledger",
     "local_nonabelian_gauge_ledger",
     "nonabelian_covariant_derivative",
     "nonabelian_field_strength",
+    "ordered_segment_holonomy",
+    "su2_holonomy_evidence",
     "su2_projected_connection",
     "su2_projected_unitary",
     "TwoBodyThresholdLedger",

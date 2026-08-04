@@ -1,0 +1,31 @@
+attempt: 0013
+campaign: P156
+candidate: additive_C-HOL-001_API_impact_analysis
+status: passed
+started_at: '2026-08-10T09:38:00Z'
+completed_at: '2026-08-10T09:46:00Z'
+commands_planned:
+  - gitnexus analyze --index-only --workers 1 --worker-timeout 60 -v
+  - gitnexus impact each_new_holonomy_API --repo substrate-framework --file src/substrate_framework/nonabelian_holonomy.py --kind Function --depth 4 --include-tests
+  - lexical_exact_API_consumer_search
+  - .venv/bin/python -m pytest focused_and_adjacent_accepted_sector_tests -q
+  - .venv/bin/python scripts/validate_repository.py
+  - .venv/bin/python -m compileall -q targeted_P156_and_holonomy_paths
+debt:
+  - claim_level_review_and_promotion_transaction_remain
+result:
+  gitnexus_index: {nodes: 22586, edges: 35598, clusters: 340, flows: 7}
+  detect_changes: {tracked_symbol: __all__, risk: low, affected_processes: 0}
+  ordered_segment_holonomy: {risk: low, impacted_count: 0, modules: 0, processes: 0}
+  endpoint_gauge_holonomy_evidence: {risk: low, impacted_count: 0, modules: 0, processes: 0}
+  su2_holonomy_evidence: {risk: low, impacted_count: 0, modules: 0, processes: 0}
+  exact_lexical_consumers:
+    - src/substrate_framework/nonabelian_holonomy.py
+    - src/substrate_framework/__init__.py
+    - campaigns/P156-na1-nonabelian-holonomy-audit/verify.py
+    - tests/test_nonabelian_holonomy.py
+  focused_and_adjacent_tests: 61_passed_before_impact_query_with_no_later_relevant_edit
+  repository_validator: valid_156_accepted_65_pending
+  targeted_compile: passed
+review: reviews/impact_analysis.md
+next_attempt: assemble_claim_reviews_and_promotion_transaction

@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P156
+candidate: append_only_attempt_record_creation
+status: failed
+started_at: '2026-08-10T09:14:00Z'
+finished_at: '2026-08-10T09:15:00Z'
+commands:
+  - apply_patch finalize_attempt_0005_and_create_attempt_0006
+failure: >-
+  The Add File patch marker was accidentally prefixed as content, so the
+  intended attempt 0006 document was appended literally to attempt 0005 and no
+  separate file was created.
+diagnosis:
+  category: record_editing
+  scientific_claim_changed: false
+  implementation_changed: false
+repair: >-
+  Remove only the malformed appended block from attempt 0005, create this
+  failure record separately, and continue the unchanged test repair.
+next_attempt: create_the_separate_attempt_records_without_escaped_markers
