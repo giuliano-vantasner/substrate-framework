@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-09T11:10:00Z'
+updated: '2026-08-09T12:40:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,14 +23,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.105.0`, containing one hundred forty
-claims. P137 accepts C-SKY-001's exact conditional massive-triplet dipole
-theorem and terminally qualifies S1. P138 then qualifies S2 without changing
-the release: the accepted complete radial Hessian and zero continuum edge type
-its corrected finite-box levels as a wall-quantized continuum ladder, while
-the source's fitted splitting, collective labels, bound-mode, Roper, baryon,
-and meson readings remain unproved. Provisional C-MES-001 is not promoted. The
-null release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.107.0`, containing one hundred forty-two
+claims. P139 adds C-IRR-001's exact arbitrary-label SU(3) representation
+theorem and qualifies S3. P140 adds C-VEC-001's exact ordered SU(2) current and
+conditional leading half-connection reduction and qualifies S4 while
+rejecting its inserted rho operator, target-fed coefficient, and dimensionful
+coupling. The null release remains the recorded start state, not the current
+authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -55,7 +54,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 82 pending, 0 partially migrated, 3 migrated, 124 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 80 pending, 0 partially migrated, 3 migrated, 126 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -227,6 +226,7 @@ Attempts are append-only and individually reproducible.
 | 0158 | P137 exact massive-triplet dipole interaction, orientation, force, dependency, consumer, compatibility, and S1 audit | `campaigns/P137-s1-two-skyrmion-force-audit/attempts/0001` through `0013`, then v0.105.0 promotion | C-SKY-001 accepted and S1 qualified; commit `bb1016e` | S1's eleven predicates, twenty-six primary checks, thirteen fresh Cartesian-Hessian checks, twenty-eight focused tests, and an eleven-node, 157-predicate pinned source-graph replay pass. The accepted declared linear-field theorem derives the self-subtracted cross energy, complete SO(3) extrema, attractive-channel force, and massive and massless limits. S1's numeric force drops `1/R`, its two assigned orientations do not prove a global order, and its refractive profile constructs no two-Skyrmion or nucleon energy. Seven technical verifier, representation, graph-tally, or workflow-ordering failures are preserved. Immutable G1 and B1 use isolated aliases backed by `np.trapezoid`; mutable campaign and framework surfaces use exact algebra or current APIs. The post-edit graph reports LOW risk and zero affected processes. The integrated workflow passes all 1,154 tests with 556 memory files and the physics skill valid. | Freeze S2's meson-spectrum audit before source execution; require the exact action and hedgehog background, topological and boundary sectors, linearized operator and inner product, spectrum and continuum definitions, scale and quantum-number maps, solver and refinement, every predicate, B1/PG1/PG2/PG3 authority, consumers, and nonduplication, and do not turn a declared potential or fitted eigenvalue into a physical meson spectrum, particle identity, mass scale, material sector, or observation |
 | 0159 | P138 exact radial composition, Hessian, continuum, fit, spectral-typing, dependency, consumer, compatibility, and S2 audit | `campaigns/P138-s2-meson-spectrum-audit/attempts/0001` through `0010`, then terminal no-release boundary | S2 qualified through C-MOD-001, C-MOD-002, C-SCL-001, C-SG-002, and C-SK-001; C-MES-001 unpromoted; commit `69321eb` | S2's ten predicates, twenty-seven primary checks, eighteen fresh independent checks, ninety focused tests, and a twenty-node, 171-predicate frozen graph inventory pass. Exact second variation restores the omitted mixed correction; corrected lowest levels fall 0.131132 to 0.061072 to 0.034754 under wall growth and stay above the exact zero continuum edge. The complete inertia functional converges to 6.37234 instead of the truncated 5.8853, while the 293 MeV check bypasses both and round-trips a fitted 5.12 GeV^-1 input. Rotor, lift, and mass-cancellation arithmetic survives only under accepted conditional ceilings. Two verifier-marker failures are preserved. Native S2's three removed NumPy calls abort before science; the unchanged source passes through an isolated alias backed by `np.trapezoid`, while mutable code uses current APIs. GitNexus and direct searches report LOW record-only risk and no duplicate claim. The integrated workflow passes all 1,154 tests with 558 memory files and the physics skill valid. | Freeze S3's SU(3)/WZW representation audit before source execution; require exact Weyl dimensions, Casimirs, weight multiplicities and hypercharge conventions, collective action and WZW coefficient, integer and baryon premises, representation-selection completeness, every predicate, S2/S4/S5/WZ1/WZ4 authority, consumers, and nonduplication, and do not turn supplied group formulas or a hypercharge filter into physical baryons, flavor states, masses, anomaly dynamics, or a substrate mechanism |
 | 0160 | P139 exact SU3 arbitrary-label representation, full weights, bounded filter, collective ceiling, dependency, consumer, compatibility, and S3 audit | `campaigns/P139-s3-su3-baryon-representation-audit/attempts/0001` through `0008`, then v0.106.0 promotion | C-IRR-001 accepted and S3 qualified; commit `9ccd333` | S3's ten predicates, twenty-eight primary checks, sixteen fresh independent Weyl/tableau checks, thirty-one focused tests, and a seventeen-node, 195-predicate frozen graph replay pass. The accepted exact API derives arbitrary-label dimension, Casimir, triality, every Gelfand-Tsetlin state, weight multiplicity, and SU2xU1 row. At Y=1 the octet is the unique minimum, but dimension ten ties the antidecuplet I=1/2 and decuplet I=3/2. The source sextet weights are wrong; its supplied constraint constructs no collective action, k=Nc, baryon, statistics, Hamiltonian, or particle map; and its displayed rotor gives the decuplet gap 3/(2I1), not 3/(2I2). Three verifier or graph-manifest failures are preserved. GitNexus reports LOW additive impact and zero affected processes. S3 has no compatibility event; inherited immutable S2 and WZ3 remain alias-only backed by `np.trapezoid`, while mutable scripts contain zero executable legacy references. The integrated workflow passes all 1,175 tests with 563 memory files and the physics skill valid. | Freeze S4's vector-meson c4 audit before source execution; require the exact vector action and metric conventions, stationary elimination sign and tensor structure, low-momentum expansion domain, KSRF and coupling provenance, quartic normalization and coefficient comparison, LCT premise and loophole typing, every predicate, B1 authority, consumers, and nonduplication, and do not turn a declared rho field, imported KSRF relation, or fitted c4 agreement into a substrate-derived vector meson, unique UV completion, physical Skyrme stabilizer, absolute scale, or observation |
+| 0161 | P140 exact SU2 current quartic, conditional leading half-connection reduction, derivative ceiling, dimensions, dependency, consumer, compatibility, and S4 audit | `campaigns/P140-s4-vector-meson-c4-audit/attempts/0001` through `0010`, then v0.107.0 promotion | C-VEC-001 accepted and S4 qualified; commit `078fa1c` | S4's eleven predicates reproduce natively, but source-aware inspection shows that its rho operator and desired tensor are assigned, B1 and c4 are imported, J1 is solved backward, and e=F_pi/2 is dimensionally invalid. Exact canonical and fresh independent routes derive the general ordered Gram-wedge and Pauli commutator identities, positive half-connection stationarity, Maurer-Cartan curvature, equally normalized e=g matching, and the p4 versus p6/M2 boundary. Thirty-six primary, twenty-five independent, forty-four focused, and thirty-one frozen-graph checks pass; the thirteen-node graph inventories 123 predicates. Four qualified consumers retain independent closures and seven pending consumers gain no authority. B1's immutable eager legacy-name shape remains alias-only compatibility evidence backed by `np.trapezoid`; mutable code has zero executable legacy access. Four verifier/graph representation failures are preserved. GitNexus reports LOW impact and zero affected processes. The integrated workflow passes all 1,195 tests with 568 memory files and the physics skill valid. | Freeze G1's radiating-dilaton audit before source execution; require a complete time-dependent action or field equation, conserved source and flux, boundary conditions, retarded solution, dimensional ledger, radiation versus coordinate-energy separation, static and constant-velocity limits, G2/G3 and T2A authority, reverse consumers, and do not turn a declared wave equation or fitted outgoing amplitude into physical gravity, a universal Larmor law, radiation reaction, absolute power, or a substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1413,23 +1413,36 @@ map, statistics, Hamiltonian, and particle labels are imported. Its displayed
 rotor Hamiltonian also assigns the decuplet-octet gap to I1 rather than I2.
 No physical flavor spectrum or substrate mechanism is promoted.
 
+P140 adds C-VEC-001 for the exact ordered SU(2) current quartic and a
+conditional leading half-connection reduction. General Gram/Pauli and fresh
+independent matrix-variation routes derive the `I1-I2` wedge, the commutator
+normalization, positive half-connection stationarity, Maurer--Cartan
+curvature, equally normalized `e=g` matching, and the explicit p4 versus
+p6/M2 action boundary. S4 is qualified because it assigns its effective rho
+operator and desired tensor, inserts the coefficient ratio, imports B1 and c4,
+solves J1 backward, and equates a dimensionless coupling to F_pi/2. Conditional
+KSRF-style matching retains `a` as a premise and supplies no physical rho,
+pion, Skyrmion, medium, particle-scale, or substrate theorem. The frozen graph
+leaves every later physical consumer pending or independently qualified.
+
 ## Canonicalization
-The registry, `v0.106.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-one accepted claims. P001 through P139 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 81 pending, 0 partial, 3 migrated, 125 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.107.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-two accepted claims. P001 through P140 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 80 pending, 0 partial, 3 migrated, 126 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 81
-pending, 3 migrated, 125 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is S4, pinned at SHA-256
-`49c7b2392bbe23d2824f4f73030ccd30f245e1750e0c7736dc420d3f64d7a780`.
-Its queue headline claims vector-meson saturation closes the Skyrme quartic
-frontier; it cites pending B1, contains eleven literal checks, one assertion,
-and symbolic oracle hints. P140 must freeze competing explicit-vector,
-auxiliary-field, accepted-composition, countermodel, and governance routes;
-pin metric, propagator, current, Lie-trace, derivative, and coefficient
-conventions; and quarantine KSRF and target c4 comparators before opening the
-source. A low-momentum propagator sign or supplied KSRF relation cannot by
-itself derive a vector action, correct on-shell quartic tensor, physical rho
-meson, unique UV completion, absolute coefficient, or substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 80
+pending, 3 migrated, 126 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is G1, pinned at SHA-256
+`580783a214736b24e6f36a4c035b2c608f931f4ba8ece202ff7f6d260d46f876`.
+Its queue headline claims a radiating 1+1 dilaton source and a Larmor analogue;
+it cites pending G2 and G3 plus qualified T2A, contains ten literal checks, one
+assertion, and symbolic and numeric oracle hints. P141 must freeze competing
+retarded-field, conservation/flux, accepted-composition, countermodel, and
+governance routes; pin action, signature, stress tensor, coupling, retarded
+boundary, source trajectory, multipole, energy, flux, and dimension
+conventions; and quarantine any power comparator before opening the source. A
+declared wave equation, nonzero outgoing amplitude, or energy-loss identity
+cannot by itself derive a covariant gravity theory, universal radiation law,
+radiation reaction, absolute power, physical source, or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
