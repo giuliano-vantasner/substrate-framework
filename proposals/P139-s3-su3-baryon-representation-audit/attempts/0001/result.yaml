@@ -1,0 +1,37 @@
+campaign: P139
+attempt: 0001
+status: passed
+candidate: preregistration
+command: >-
+  Run the physics-skill preflight, inspect accepted governance and source
+  modules, search durable memory and repository claims, verify the pinned S3
+  and dossier hashes without opening their bodies, instantiate matching prose
+  and YAML contracts, compare the frozen copies, validate proposal governance,
+  and commit the freeze before source execution.
+expected: >-
+  Establish a reproducible v0.105.0 authority boundary, at least two competing
+  concepts, complete SU(3) representation and collective-action conventions,
+  comparator exposure limits, proposed-claim collision freedom, consumer
+  inventory, compatibility policy, and an executable positive done gate.
+result:
+  exit_status: 0
+  preflight: 7_pass_0_warn
+  base_release: v0.105.0
+  scientific_base_commit: bb1016e
+  source_adjudication_commit: 69321eb
+  parent_base_commit: 46a375e
+  source_sha256: 44d8cd1f3a3b3d0a316d0984db92d5e47e13cac9dcf3d476e2d996bf09f13b9a
+  dossier_sha256: 4467a11ac07ac9ffe97826722f28887a28f729f275ca81bbae9ea237346181b2
+  frozen_manifest_sha256: e2039d4f0cff2b28f9887107af5750141106372f7078b5652752cdcd9a95b1af
+  prose_contract_sha256: 3fa76fb82a99e7188a7aefc582faacc44ec9f4e1aa1c1b8abd11bda9011cbb61
+  manifest_copy: byte_identical
+  claim_identifier_collision: none
+  repository: WORKFLOW_VALID_140_claims_140_accepted_1_proposal
+  migration_queue: 218_units_82_pending_0_partial
+  memory: valid
+  git_diff_check: passed
+classification: freeze_gate
+next_attempt: >-
+  Commit the frozen boundary, then audit executable compatibility, preserve the
+  native S3 result, reproduce all ten predicates, and open the source and
+  dossier only after that commit.

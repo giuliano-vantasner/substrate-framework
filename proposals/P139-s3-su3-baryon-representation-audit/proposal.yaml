@@ -1,0 +1,90 @@
+id: P139
+base_release: v0.105.0
+base_commit: 46a375e
+scientific_base_commit: bb1016e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [S3]
+question: >-
+  Reproduce and independently audit S3's claim that SU(3) Weyl dimensions,
+  quadratic Casimirs, hypercharge weights, and a WZW-derived right-hypercharge
+  constraint select physical octet and decuplet baryon representations, and
+  determine exactly which mathematical representation theorem, collective
+  action, WZW coefficient, topology, integer inputs, state constraints, scale,
+  and physical dictionary are required.
+invariants:
+  - >-
+    C-LIE-001 fixes the explicit fundamental SU(3) generator and trace
+    convention, with C_F=4/3 and C_A=3, but supplies no physical gauge or
+    baryon representation selection.
+  - >-
+    C-LIE-002 fixes the exact center and abstract triality character only. A
+    physical irrep or state assignment requires separate accepted premises.
+  - >-
+    C-WZW-001 and C-WZW-002 fix an exact trace-five cohomology class, primitive
+    S5 period, and mathematical integer coefficient lattice. They explicitly
+    do not identify the level with N_c, baryon number, representation
+    selection, anomaly dynamics, or a physical WZW action.
+  - >-
+    C-TOP-002 fixes the exact SU(3) winding current and hedgehog endpoint charge
+    as mathematical topology. It is not by itself a physical baryon current,
+    WZW response, N_c relation, or representation theorem.
+  - >-
+    C-EFT-001 is a conditional stationary-elimination theorem and WZ4 grants
+    only that accepted surface. It supplies no HLS fields, vector mesons, WZW
+    coefficient, N_c, or baryon interpretation.
+  - >-
+    Qualified S2 grants only C-MOD-001, C-MOD-002, C-SCL-001, C-SG-002, and
+    C-SK-001, with no collective quantization or particle dictionary.
+    Qualified S5 grants only C-VIR-001, C-MED-001, and C-SK-001. Pending S4
+    grants no premise.
+  - >-
+    SU(3) Dynkin labels p and q are nonnegative integers. Dimension, Casimir,
+    center triality, weights, multiplicities, isospin, and hypercharge must use
+    one declared normalization and be derived over the complete irrep rather
+    than a favored finite table.
+  - >-
+    A weight Y=Y_R inside an irrep is a kinematic filter only. Selecting a
+    physical baryon state additionally needs a declared collective Hilbert
+    space, left and right generator actions, spin/isospin constraints,
+    statistics, Hamiltonian, symmetry breaking, and observable dictionary.
+  - >-
+    The generated queue has already exposed the claimed dimension and Casimir
+    formulas, Y_R=N_c*B/3, and octet/decuplet headline. S3's body, exact check
+    literals, finite representation table, numerical or named comparators, and
+    dossier body remain unopened at freeze.
+allowed_imports:
+  - C-LIE-001 and C-LIE-002 with their exact fundamental and abstract-triality ceilings
+  - C-WZW-001 C-WZW-002 and C-TOP-002 with their exact mathematical level winding and physical ceilings
+  - C-EFT-001 only as a conditional stationary-elimination theorem
+  - C-MOD-001 C-MOD-002 C-SCL-001 C-SG-002 C-SK-001 C-VIR-001 and C-MED-001 only under accepted statements
+  - su3.py wzw.py source_audit.py and verification.py pure APIs
+  - exact SU(3) highest-weight Gelfand-Tsetlin Weyl character and finite combinatorial representation theory
+  - a separately declared collective-coordinate action and generator convention only with every coefficient and sign explicit
+  - S3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+  - primary literature after freeze only for representation WZW or collective-action convention cross-checks
+candidates:
+  - {id: A, description: Reproduce S3 literally and classify all ten predicates by equations finite tables imports and physical ceilings.}
+  - {id: B, description: Derive a complete exact SU(3) irrep object from nonnegative Dynkin labels using independent Weyl and Gelfand-Tsetlin routes for dimension Casimir triality weights multiplicities isospin and hypercharge.}
+  - {id: C, description: Build a conditional representation filter for a supplied exact right hypercharge and enumerate all minimal-dimension ties and counterexamples rather than selecting from a favored table.}
+  - {id: D, description: Derive the right-hypercharge constraint from a separately declared SU(3) collective-coordinate Lagrangian with explicit WZW level winding generator and sign conventions while withholding k=N_c and physical baryon labels unless separately established.}
+  - {id: E, description: Close the source through accepted SU(3) WZW winding and conditional surfaces if every supportable predicate is already governed or no collective theorem closes.}
+  - {id: F, description: Close dependencies cycles reverse consumers nonduplication impact compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with representation carrier generator normalization collective action and level inputs explicit
+  - natural fit to C-LIE-001 C-LIE-002 C-WZW-001 C-WZW-002 and C-TOP-002 without importing their excluded physical readings
+  - complete nonnegative Dynkin-label domain exact integer multiplicities and consistent Casimir triality isospin and hypercharge conventions
+  - finite-table completeness minimal-dimension tie handling conjugate-irrep and exotic-representation counterexamples
+  - exact zero-level zero-winding orientation-reversal large-label and fundamental-adjoint limits
+  - sensitivity to p/q interchange hypercharge normalization WZW sign level winding N_c and baryon assignments
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - named baryons fitted masses and finite favored tables excluded from concept selection and pass thresholds
+claims_proposed: [C-IRR-001]
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, complete
+  candidate set, representation conventions, selection criteria, mutation
+  plan, compatibility policy, and done gate are frozen and committed. Queue
+  excerpts have already exposed the claimed formulas and octet/decuplet
+  headline; S3's exact table, check literals, named comparisons, outputs, and
+  dossier body remain unopened until that boundary.
+status: active
