@@ -1,0 +1,53 @@
+id: P160
+base_release: v0.123.0
+base_commit: d5b76e8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [QCD1]
+question: >-
+  Which exact SU3 representation and massive-scalar one-loop statements in
+  QCD1 survive, and do they require a distinct generic non-Abelian
+  vacuum-polarization theorem rather than accepted composition?
+invariants:
+  - C-LIE-001 fixes the standard fundamental SU3 generators trace index Casimirs and structure constants without a physical gauge-sector identification.
+  - C-VAC-001 fixes the complete massive complex-scalar Euclidean two-dimensional loop including bubble and seagull and denies a dimensional or physical lift.
+  - C-NVP-001 fixes the SU2 representation-indexed theorem and full leading curvature completion without a unique coupling or physical weak sector.
+  - C-NAG-001 fixes the non-Abelian connection sign and curvature convention but supplies no action coefficient or matter content.
+  - Equal Dynkin indices across distinct groups do not identify actions fields couplings dimensions or physical sectors.
+allowed_imports:
+  - C-LIE-001
+  - C-RGE-002 as a field-content and loop-weight boundary only
+  - C-VAC-001
+  - C-NVP-001
+  - C-NAG-001
+  - exact finite matrix Lie-algebra trace tensor projector parameter-integral and proper-time algebra
+  - P158 primary-background-field evidence already accepted for C-NVP-001
+candidates:
+  - id: A
+    description: Literal hash-pinned QCD1 predicate replay and individual adjudication.
+  - id: B
+    description: Existing accepted composition of C-LIE-001 and C-VAC-001 with no new claim or API.
+  - id: C
+    description: Generic finite Hermitian Lie-representation complex-scalar QED2 theorem with SU2 and SU3 specializations.
+  - id: D
+    description: SU3-specific wrapper around the accepted scalar-loop theorem.
+  - id: E
+    description: Separately declared physical four-dimensional QCD gauge and quark construction.
+  - id: F
+    description: Statistics representation normalization bare counterterm and field-coordinate counterfamilies.
+  - id: G
+    description: Claim disposition dependency consumer compatibility and generated-state closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact Lie representation validation
+  - declared quantum action statistics dimension regulator and quadratic convention
+  - bubble-seagull Ward derivation before transverse decomposition
+  - full background curvature completion rather than projector-only algebra
+  - parameter and field-normalization honesty correct limits and mutation sensitivity
+  - API generality without duplicate wrappers or claims
+  - consumer compatibility and physical-scope honesty
+claims_proposed: [C-NVP-002]
+comparators_blinded_until: >-
+  proposal freeze commit before renewed QCD1 body or dossier inspection; queue
+  headline and result excerpts were already exposed and their values are
+  excluded from concept selection
+status: draft

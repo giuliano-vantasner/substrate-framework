@@ -1,0 +1,22 @@
+attempt: 0001
+campaign: P160
+candidate: prior_exposure_aware_proposal_freeze
+status: failed
+started_at: '2026-08-10T16:00:00Z'
+finished_at: '2026-08-10T16:04:00Z'
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P160-qcd1-su3-kinetic-induction-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+passed:
+  manifest_snapshot_identity: 2a2913f5249bce276edd71921b8c5706c2702be067b896d0bd8b33e4ecdfba43
+  repository_contract: valid_158_accepted_claims_61_pending_units
+  diff_whitespace: passed
+failure:
+  layer: memory_contract_format
+  mechanism: Proposed_Claim_Delta_began_with_inline_code_instead_of_plain_disclosure_prose
+  scientific_failure: false
+source_body_or_dossier_inspected: false
+repair: add_a_plain_prose_disclosure_sentence_without_changing_the_frozen_manifest
+next_attempt: revalidate_and_commit_the_unchanged_scientific_freeze
