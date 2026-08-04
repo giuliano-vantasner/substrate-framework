@@ -1,0 +1,95 @@
+id: P159
+base_release: v0.123.0
+base_commit: 290b8da
+scientific_base_commit: 290b8da
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [YM2]
+question: >-
+  Reproduce and independently audit YM2's claimed 1+1-to-3+1-dimensional
+  Yang--Mills lift, determine the exact supportable relation among a supplied
+  color trace metric, a static scalar Riesz inverse, a local or nonlocal gauge
+  kinetic operator, and a Lorentzian gauge propagator, and deliver either a
+  distinct importable conditional theorem or a complete accepted composition
+  with a terminal predicate-level source disposition.
+invariants:
+  - >-
+    C-NVP-001 is a conditional massive complex-scalar SU2 one-loop theorem in
+    flat two-dimensional Euclidean space. It explicitly supplies no
+    dimensional lift, unique total coupling, pole, weak sector, or substrate
+    mechanism.
+  - >-
+    C-NAG-001 fixes finite local non-Abelian covariance and curvature
+    conventions but derives no action coefficient, propagator, matter source,
+    dimension, weak identification, or dimensional lift.
+  - >-
+    C-KRN-001 fixes a static scalar Riesz inverse only after spatial dimension
+    d, power s, coefficient A, Fourier convention, radius, and subcritical
+    domain are supplied. Its d=3,s=1 endpoint is conditional and does not
+    select either input.
+  - >-
+    C-KRN-002 separates subcritical, critical, and distributional branches and
+    proves that a force exponent or analytic dimension parameter supplies no
+    geometry, physical dimension, gauge action, or dimensional lift.
+  - >-
+    Multiplication by tr_R(T_a*T_b)=T(R)*delta_ab tensors a spacetime kernel
+    with a color metric. It does not change the kernel's domain, dimension,
+    signature, time dependence, gauge fixing, source, or normalization.
+  - >-
+    A three-spatial-dimensional static Green function is not by itself a
+    3+1-dimensional Lorentzian gauge propagator. A propagator additionally
+    requires an action, time operator, signature, gauge fixing, boundary or
+    causal prescription, and source convention.
+  - >-
+    A quadratic color-diagonal inverse about zero background does not establish
+    the full nonlinear non-Abelian action. Local F-squared completion and any
+    fractional covariant completion require their own gauge-covariant
+    construction and coefficient ledger.
+  - >-
+    YM2 was already opened and executed through an alias-only compatibility
+    replay during P158's downstream graph audit. No fresh comparator blinding
+    is claimed; known literals, outputs, and narrative conclusions are barred
+    from candidate selection and acceptance thresholds.
+allowed_imports:
+  - C-NVP-001 only for its declared Euclidean 2D scalar-loop kernel coefficient and ceilings
+  - C-NAG-001 only for exact SU2 connection curvature trace and covariance conventions
+  - C-KRN-001 and C-KRN-002 only for fixed-input static scalar Riesz kernels and their domain ceilings
+  - C-MAX-001 only for separately sourced ordinary-Laplacian static Green branches
+  - C-REP-002 only for finite Pauli-half carrier algebra without a physical weak identification
+  - src/substrate_framework/nonabelian_vacuum_polarization.py momentum_kernels.py nonabelian_gauge.py and maxwell.py
+  - exact Fourier tensor projector representation and gauge-fixed quadratic-operator algebra with every dimension signature source and boundary premise declared
+  - YM2 and YM2-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after the freeze
+candidates:
+  - {id: A, description: Reproduce YM2 literally through native and alias-only modes and classify all ten predicates and its assertion by actual data flow and claim strength.}
+  - {id: B, description: Close every supportable result as an exact composition of C-NVP-001 color weight and C-KRN-001 or C-KRN-002 fixed-input static scalar kernels with no new claim or API.}
+  - {id: C, description: Derive a typed tensor-product static Green theorem for an independently supplied color metric and scalar Riesz operator only if that composition is not already explicit and reusable.}
+  - {id: D, description: Derive a separately declared local Yang-Mills quadratic operator and gauge-fixed static limit in supplied 3+1 spacetime while preserving coefficient gauge and source freedom.}
+  - {id: E, description: Define a genuinely gauge-covariant nonlocal fractional kinetic operator only if its action domain covariance and nonlinear completion can be stated without retrofitting accepted claims.}
+  - {id: F, description: Construct dimension power normalization time-dependence gauge-fixing and bare-coefficient counterfamilies that preserve source checks while changing the lift interpretation.}
+  - {id: G, description: Close dependency semantic-consumer compatibility nonduplication impact source disposition generated state release and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure without importing YM1's rejected induction or EM7's rejected dimensional lift
+  - explicit operator domain spatial dimension spacetime dimension signature Fourier convention and boundary or causal prescription
+  - exact separation of color metric static scalar Green kernel quadratic gauge operator full nonlinear action and propagator
+  - gauge covariance or a precisely declared gauge-fixed linearization with its residual constraints
+  - source normalization coefficient and field-coordinate freedom with correct dimensions and signs
+  - correct subcritical critical ordinary-Laplacian zero-source Abelian local and static limits
+  - sensitivity to dimension fractional power color representation bare coefficient gauge parameter and time operator
+  - independent derivation using an operator or action route rather than copied source powers or terminal booleans
+  - assumption and parameter economy natural framework fit reusable API value novelty consumer compatibility and physical-scope honesty
+  - every previously exposed source literal result and conclusion excluded from concept selection and thresholds
+claims_proposed: []
+claim_delta: >-
+  No new identifier is reserved at the initial freeze. Candidate B is preferred
+  if accepted claims already contain the exact supportable surface. A distinct
+  conditional operator theorem may be proposed only through a source-aware
+  revision after novelty and dependency audits; rejected dimensional-lift or
+  physical-sector prose will not manufacture a claim.
+comparators_blinded_until: >-
+  Genuine source blinding is unavailable because P158 already inspected and
+  executed YM2 as a downstream consumer. This contract freezes candidates A
+  through G, the operator and dimension distinctions, selection criteria,
+  compatibility handling, mutations, and physical ceilings before renewed
+  targeted source or dossier inspection. Known source constants, powers,
+  tallies, and prose cannot select a candidate or define a threshold.
+status: frozen

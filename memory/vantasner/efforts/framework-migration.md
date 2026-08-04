@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.122.0`, containing one hundred fifty-seven
+The current accepted frontier is `v0.123.0`, containing one hundred fifty-eight
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -115,7 +115,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 64 pending, 0 partially migrated, 3 migrated, 142 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 62 pending, 0 partially migrated, 3 migrated, 144 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -1691,11 +1691,13 @@ bridge unit. The next queue unit is YM2, pinned at SHA-256
 `19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c`.
 The queue exposes ten static predicates, one assertion, symbolic and numeric
 oracles, eleven candidate dependencies, the YM1 trace factor, Riesz kernels,
-and a claimed 3+1-dimensional Yang--Mills lift. P159 must freeze the distinction
+and a claimed 3+1-dimensional Yang--Mills lift. P159 freezes the distinction
 among a color-weighted static scalar Green function, a quantum gauge kinetic
 operator, full Lorentz tensor structure, dimension, normalization, source,
-and physical substrate sector before opening the body. YM1's qualified trace
-control cannot promote its rejected induction or YM2's dimensional lift.
+and physical substrate sector before renewed targeted inspection. P158 already
+opened YM2 for downstream replay, so P159 claims no fresh source blinding and
+excludes those known literals from selection. YM1's qualified trace control
+cannot promote its rejected induction or YM2's dimensional lift.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

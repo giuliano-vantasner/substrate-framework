@@ -1,0 +1,47 @@
+attempt: 0001
+campaign: P159
+candidate: prior_exposure_aware_operator_and_dimension_freeze
+status: passed
+started_at: '2026-08-10T14:42:00Z'
+finished_at: '2026-08-10T14:49:00Z'
+commands:
+  - read_physics_erdos_loop_skill_current_release_relevant_claims_and_canonical_modules
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - inspect_framework_and_source_git_state_and_history
+  - memory_search_YM2_dimensional_lift_and_Riesz_kernel
+  - hash_YM2_and_dossier_without_renewed_body_inspection
+  - instantiate_matching_campaign_and_memory_contracts
+  - compare_proposal_and_frozen_proposal
+  - memory_validate_absolute_P159_proposal_path_with_repository_base
+  - .venv/bin/python scripts/validate_repository.py
+  - git_diff_check
+freeze:
+  proposal_sha256: 5faa25f9cfb4ae07256f507ef707a4ed954062b721b35c55f133a1c0deadb60c
+  frozen_proposal_sha256: 5faa25f9cfb4ae07256f507ef707a4ed954062b721b35c55f133a1c0deadb60c
+  memory_contract_sha256: 71ccdbbd282366d24c4f476c47079cd7f87ac5bf57e6168ff513b785be91650d
+  source_sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c
+  dossier_sha256: 629e1683359087d181ecf3c2b3bd38f6e8bbe1206330746c946b44856d74af56
+preflight:
+  framework_repository: clean_at_290b8da_before_contract_creation
+  framework_release: v0.123.0_with_158_accepted_claims
+  migration_queue: 62_pending_0_partial_3_migrated_144_qualified_8_duplicate_1_out_of_scope
+  source_repository: pinned_commit_with_later_dirty_artifacts_excluded
+  skill_checks: 7_passed_0_warnings
+  repository_contract: valid_158_accepted_claims_62_pending_units
+preexposure:
+  prior_source_body_and_execution: P158_downstream_graph_alias_only_replay
+  fresh_source_blinding_claimed: false
+  renewed_targeted_inspection_after_this_freeze: true
+  known_values_excluded_from_selection: true
+compatibility_preflight: >-
+  Immutable YM2's native compatibility abort must be preserved and its
+  unchanged scientific route replayed through an isolated np.trapz alias
+  backed by np.trapezoid. Mutable P159 code uses exact algebra,
+  trapezoid_integral, or np.trapezoid and never executable np.trapz.
+claim_delta: []
+debt:
+  - commit_the_freeze_before_renewed_targeted_source_and_dossier_inspection
+  - reproduce_native_and_alias_only_YM2_and_adjudicate_all_predicates
+  - determine_whether_existing_claim_composition_is_complete_and_nonduplicative
+  - close_dependency_consumer_impact_disposition_and_generated_state
+next_attempt: commit_the_freeze_then_reproduce_and_audit_YM2
