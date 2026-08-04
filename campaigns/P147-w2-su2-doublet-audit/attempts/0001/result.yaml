@@ -1,0 +1,32 @@
+attempt: 0001
+campaign: P147
+candidate: preregistration_and_blinding_freeze
+status: passed
+started_at: '2026-08-09T21:31:00Z'
+finished_at: '2026-08-09T21:45:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P147-w2-su2-doublet-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P147-w2-su2-doublet-audit/proposal.yaml campaigns/P147-w2-su2-doublet-audit/evidence/frozen-proposal.yaml
+  - git diff --check
+accepted_base:
+  release: v0.113.0
+  framework_commit: f30d7c9
+  scientific_commit: 5b9fa7c
+source:
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  bridge_sha256: 0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16
+  dossier_sha256: bd870f2e85b9d7f4d546c8fdd304fd94fc4b9e196c64cb8b7b16c798559064b4
+freeze:
+  proposal_sha256: 4a0016be9650016d96c6e504ccdc2798889ff95ac54866247aed191e273618b2
+  frozen_proposal_sha256: 4a0016be9650016d96c6e504ccdc2798889ff95ac54866247aed191e273618b2
+  memory_contract_sha256: 223cb4d321e9e8ac34a04832d9acefe7987766b0f13c17354213628f9129f974
+  source_body_opened: false
+  dossier_body_opened: false
+  source_executed: false
+  comparator_values_inspected: false
+registered_candidates: [A, B, C, D, E, F]
+claims_reserved: []
+debt:
+  - reproduce_and_adjudicate_W2_after_the_committed_freeze
+next_attempt: commit_the_freeze_then_run_source_compatibility_and_native_reproduction

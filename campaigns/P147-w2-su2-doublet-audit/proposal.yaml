@@ -1,0 +1,90 @@
+id: P147
+base_release: v0.113.0
+base_commit: f30d7c9
+scientific_base_commit: 5b9fa7c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [W2]
+question: >-
+  Reproduce and independently audit W2's claim that kink and antikink labels
+  form a physical chiral SU(2)_L doublet, and determine exactly which statements
+  are abstract two-dimensional representation identities, supplied label and
+  charge conventions, compatible independent chirality projections, or
+  genuinely require a gauge action and interaction dynamics.
+invariants:
+  - >-
+    C-SPN-002 already proves the normalized finite-dimensional su(2) ladder,
+    commutator, and Casimir on a declared two-state carrier; its N=1
+    specialization supplies no physical constituent, Hamiltonian, current,
+    transition rate, or gauge sector.
+  - >-
+    C-SG-011 gives exact sine-Gordon winding labels plus and minus one and
+    parity exchange, but explicitly supplies no particle identity, selected
+    sector, fermionic state, V-A interaction, or weak force.
+  - >-
+    C-BND-001 qualifies W1: its boundary residual gives parameter-family
+    covariance and trace underdetermination, not charge selection, chiral
+    matter, fermion parity, or weak dynamics. W2 may not import rejected W1
+    readings as premises.
+  - >-
+    C-REP-001 treats representation rows, generator eigenvalues, and charge
+    coefficients as supplied data and makes Abelian normalization freedom
+    explicit; table arithmetic alone establishes no physical representation,
+    chirality, anomaly cancellation, gauge action, or Standard-Model identity.
+  - >-
+    On a declared two-dimensional complex carrier with T_a=sigma_a/2, any
+    unitary basis relabel preserves the abstract algebra. A physical
+    identification of the two basis vectors requires separate state,
+    transformation, and observable provenance.
+  - >-
+    A common Abelian generator commuting with an irreducible SU(2) doublet is
+    proportional to the identity, so Q=T3+cY has eigenvalue separation one in
+    the declared T3 normalization. Labels plus and minus one have separation
+    two and cannot both be that Q without an explicit rescaling or different
+    representation data.
+  - >-
+    Weak chirality is an independent Lorentz-spinor factor. A left projector
+    can multiply SU(2) generators as T_a tensor P_L on a product carrier; a
+    nontrivial rank-one projector on the same irreducible two-state carrier
+    cannot commute with all T_a and cannot be silently called chirality.
+  - >-
+    The generated queue exposes W2's broad headline, thirteen named
+    dependencies, nine static and literal checks, one assertion, symbolic
+    hints, and partial result prose. Source and dossier bodies, exact
+    predicates, matrices, output, and thresholds remain unopened.
+allowed_imports:
+  - C-SPN-002 only for the declared normalized abstract two-state su(2) representation and its explicit physical ceilings
+  - C-SG-011 only for exact sine-Gordon winding and parity exchange, not fermionic or weak labels
+  - C-BND-001 only for W1's qualified boundary parity and underdetermination theorem
+  - C-REP-001 only for supplied charge-table algebra normalization freedom and representation ceilings
+  - C-U1-001 and C-GAU-001 only as independent conditional current and local-connection examples that show which dynamical premises representation algebra lacks
+  - exact finite-dimensional complex linear algebra representation theory tensor products and projectors
+  - W2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce W2 literally and classify every predicate by evaluated matrix label projector charge object and maximum verdict.}
+  - {id: B, description: Treat W2's exact Pauli and ladder statements as the N=1 specialization of accepted C-SPN-002 with no new claim.}
+  - {id: C, description: Derive the two-dimensional irreducible carrier commutant basis-covariance and common-Abelian-charge separation theorem.}
+  - {id: D, description: Separate the SU(2) carrier from an independent chirality factor and compare tensor-product left action with a same-carrier rank-one projector.}
+  - {id: E, description: Inventory the missing gauge connection covariant derivative action current anomaly and interaction data required for a physical SU(2)_L doublet.}
+  - {id: F, description: Close source dependencies reverse consumers compatibility nonduplication disposition generated state and the empty debt ledger.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact carrier basis inner product generator normalization and representation action
+  - separation of abstract algebra supplied labels state identification and physical dynamics
+  - accepted sine-Gordon charge and parity compatibility without importing W1 overclaims
+  - common-Abelian charge consistency and normalization covariance
+  - independent isospin and chirality carrier semantics
+  - correct basis-relabel projector normalization and zero-coupling limits
+  - load-bearing generator sign scale projector factor and charge-label mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+  - source outputs and external comparators excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, bridge and dossier hashes, candidates,
+  carrier and factor conventions, charge-separation criteria, mutation plan,
+  compatibility policy, and done gate are frozen and committed. Queue and
+  parent records already expose the broad headline, dependency names, check
+  counts, assertion count, oracle hint, and partial result prose; those hints
+  do not select a candidate. Source and dossier bodies, exact predicates,
+  matrices, full output, thresholds, and further comparator material remain
+  unopened until that boundary.
+status: draft
