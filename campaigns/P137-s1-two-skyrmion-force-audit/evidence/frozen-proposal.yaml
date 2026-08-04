@@ -1,0 +1,86 @@
+id: P137
+base_release: v0.104.0
+base_commit: 3eef562
+scientific_base_commit: 3b0b7e7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [S1]
+question: >-
+  Reproduce and independently audit S1's claim that two B=1 Skyrmions produce
+  a finite-range orientation-dependent nucleon-nucleon force through a sourced
+  refractive-index profile and/or an asymptotic field interaction, and
+  determine exactly which field action, topological map, two-center ansatz,
+  separation coordinate, orientation variable, source normalization, energy
+  subtraction, force definition, range scale, and physical dictionary are
+  required beyond the accepted one-coordinate and conditional single-profile
+  framework claims.
+invariants:
+  - >-
+    C-CC-001 is the exact equation of a separately declared one-coordinate
+    optical action. The index profile is supplied; the claim is not a full 3D
+    field reduction, a two-body interaction, or a physical force law.
+  - >-
+    C-MED-001 proves that common density/thermal scaling of the accepted
+    constitutive ansatz leaves the local wave speed unchanged. A density-only
+    perturbation cannot be relabeled as a sourced refractive index within that
+    ansatz.
+  - >-
+    C-VIR-001 and C-SK-001 are conditional algebraic statements. They derive no
+    physical Option-C medium, Skyrme action, B=1 field, nucleon, pion mass,
+    interaction energy, binding, or nuclear scale.
+  - >-
+    C-RMAP-001 and C-RPROF-001 supply conditional single-map and single-radial-
+    profile identities only. Their accepted ceilings exclude a physical
+    Skyrme action, full 3D minimizer, baryon or nucleus identification, binding,
+    reaction, material, and observation.
+  - >-
+    Pending B1, G1, and G2 grant no Berry connection, gravity, medium field, or
+    dynamical-source premise. Qualified S5 and T2B grant only their accepted
+    mappings and cannot widen them through S1's chronology.
+  - >-
+    A two-body force requires a declared interaction energy E_int(R,O) after
+    isolated self-energy subtraction, with force F_R=-partial_R E_int at fixed
+    orientation O. Differentiating an assigned profile is not a derivation of
+    its source, normalization, or physical ontology.
+  - >-
+    Attraction, finite range, and a most-attractive orientation are separate
+    claims. Each needs its domain, sign convention, decay law, orientation
+    space, and counterexamples; a sampled curve or selected channel cannot
+    prove global ordering or physical binding.
+  - >-
+    The S1 body, check values, and numerical comparators remain unopened at
+    freeze. Only the generated queue metadata and hash-pinned provenance have
+    been inspected.
+allowed_imports:
+  - C-VAR-001 and C-CC-001 exact declared one-coordinate variational and optical acceleration laws
+  - C-MED-001 density-coscaling no-index theorem
+  - C-VIR-001 and C-SK-001 only as conditional algebraic ceilings
+  - C-RMAP-001 C-RPROF-001 and C-RPROF-002 only as declared single-profile Skyrme-model surfaces with their accepted physical ceilings
+  - collective_dynamics.py constitutive.py skyrme_relations.py rational_map_radial.py numerics.py source_audit.py and verification.py pure APIs
+  - exact SymPy radial differentiation asymptotic series orientation algebra energy subtraction and dimensional checks
+  - independently declared field action kinetic normalization mass scale two-center ansatz separation orientation source profile and boundary data
+  - primary Skyrme interaction literature after freeze only for convention or asymptotic-structure cross-checks
+  - S1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after the freeze
+candidates:
+  - {id: A, description: Reproduce S1 literally and classify all eleven predicates by executable object dependency domain and physical ceiling.}
+  - {id: B, description: Compose a separately supplied radial index profile with C-CC-001 and derive exact sign range scale and source-normalization identifiability without a Skyrmion interpretation.}
+  - {id: C, description: Derive a conditional far-field massive-scalar or pion-dipole two-center interaction with an explicit orientation tensor and asymptotic remainder from a separately declared linearized field action.}
+  - {id: D, description: Construct a full declared Skyrme two-center energy and numerically minimize or evaluate it across separation and relative orientation with self-energy subtraction and refinement.}
+  - {id: E, description: Close S1 through exact composition and terminal qualification if every supportable predicate is already governed or no distinct interaction theorem closes.}
+  - {id: F, description: Close dependencies reverse consumers nonduplication impact compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with action fields topology source normalization self-energy subtraction separation and orientation explicit
+  - natural fit to accepted one-coordinate and conditional Skyrme ceilings without retrofitting a physical ontology
+  - correct dimensions force sign finite-range asymptotics isolated-body limit large-separation limit and zero-source limit
+  - distinction among assigned index response linearized far-field interaction full nonlinear field energy and physical nucleon force
+  - orientation completeness rather than comparison of one favored and one disfavored channel
+  - solver success mesh domain tolerance and independent-method refinement for any numerical field result
+  - sensitivity to source amplitude range mass kinetic normalization separation orientation subtraction and boundary assumptions
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+claims_proposed: [C-SKY-001]
+comparators_blinded_until: >-
+  The proposal manifest, prose contract, source and dossier hashes, candidate
+  set, sign/range/orientation criteria, equations and numerical thresholds are
+  frozen and committed. S1's body, check literals, sampled curves, and cited
+  nuclear comparisons remain unopened until that boundary.
+status: active
