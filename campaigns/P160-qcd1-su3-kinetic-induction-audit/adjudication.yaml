@@ -1,0 +1,66 @@
+campaign: P160
+title: QCD1 SU3 kinetic-induction and generic finite-Lie scalar-loop audit
+source_baseline: substrate@6d1f4e0
+source_units: [QCD1]
+base_release: v0.123.0
+accepted_release: v0.124.0
+adjudicated_at: '2026-08-10T17:07:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without treating its tally as a loop or action oracle.}
+  - {id: B, reason: Accepted claims supply the corrected trace projector and Abelian loop dependency base.}
+  - {id: C, reason: A generic validated finite-representation API closes the distinct conditional non-Abelian scalar theorem without an SU3-only duplicate.}
+  - {id: F, reason: Statistics seagull normalization bare counterterm and field-coordinate counterfamilies delimit the induction reading.}
+  - {id: G, reason: Claim source dependency consumer compatibility release queue documentation and memory audits close the transaction.}
+  - {id: H, reason: Exact d-tensor symmetry anticommutator reconstruction and embedded-SU2 restriction form a distinct SU3 algebra claim.}
+claims: [C-LIE-003, C-NVP-002]
+unpromoted_claims:
+  - {id: QCD1_declared_colored_scalar_or_quark_loop, reason: No_quantum_action_statistics_determinant_regulator_bubble_or_seagull_is_constructed.}
+  - {id: QCD1_massless_scalar_coefficient, reason: The_u_one_minus_u_numerator_is_not_complex_scalar_QED2_and_the_correct_fixed_Q_massless_limit_diverges.}
+  - {id: projector_only_Ward_derivation, reason: Transversality_is_imposed_and_does_not_replace_bubble_seagull_cancellation.}
+  - {id: local_full_Yang_Mills_induction, reason: The_constant_projector_coefficient_is_nonlocal_in_curvature_variables_and_no_background_completion_is_constructed.}
+  - {id: unique_g_eff_squared, reason: Bare_counterterm_and_field_normalization_data_remain_independent.}
+  - {id: fixed_convention_Abelian_limit, reason: The_guard_changes_the_generator_trace_normalization_from_one_half_to_one.}
+  - {id: physical_quark_gluon_QCD_confinement_dimension_lift_and_substrate_mechanism, reason: Required_action_matching_state_dimension_and_observable_inputs_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_su3_scalar_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0009/result.yaml
+  graph_closure_attempt: attempts/0011/result.yaml
+  compatibility_repair_attempt: attempts/0014/result.yaml
+  impact_and_claim_review_attempt: attempts/0015/result.yaml
+  terminal_gate: attempts/0016/result.yaml
+  claim_reviews:
+    - memory/vantasner/decisions/C-LIE-003-review.md
+    - memory/vantasner/decisions/C-NVP-002-review.md
+  source_review: memory/vantasner/decisions/QCD1-qualified-review.md
+source_disposition:
+  QCD1: qualified
+accepted_mappings: [C-LIE-001, C-LIE-003, C-VAC-001, C-NVP-002]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_current_NumPy_APIs
+  immutable_primary: no_NumPy_integration_reference
+  immutable_alias_only: [QCD2]
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/independent_su3_scalar_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_nonabelian_vacuum_polarization.py tests/test_su3.py tests/test_vacuum_polarization.py tests/test_nonabelian_gauge.py tests/test_wzw.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

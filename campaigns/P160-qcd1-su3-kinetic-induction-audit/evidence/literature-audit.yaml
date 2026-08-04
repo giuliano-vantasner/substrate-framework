@@ -1,0 +1,41 @@
+campaign: P160
+scope: exact_SU3_symmetric_algebra_and_conditional_finite_representation_complex_scalar_loop
+reused_primary_audit: campaigns/P158-ym1-yang-mills-induction-audit/evidence/literature-audit.yaml
+sources:
+  - id: Strassler1992
+    citation: Matthew J. Strassler, Field Theory Without Feynman Diagrams One-Loop Effective Actions, Nuclear Physics B 385 (1992) 145-184
+    url: https://arxiv.org/abs/hep-ph/9205205
+    primary: true
+    supports:
+      - Euclidean_complex_scalar_determinant_in_a_nonabelian_background
+      - path_ordered_color_trace_in_a_supplied_finite_representation
+      - combined_one_and_two_gauge_scalar_vertices_and_background_gauge_invariance
+    does_not_support:
+      - QCD1s_undeclared_colored_matter_action_or_statistics
+      - unique_bare_or_renormalized_gauge_coefficient
+      - physical_QCD_substrate_identification_or_dimensional_lift
+  - id: FliegnerHaberlSchmidtSchubert1998
+    citation: D. Fliegner, P. Haberl, M. G. Schmidt, and C. Schubert, The Higher Derivative Expansion of the Effective Action by the String Inspired Method Part II, Annals of Physics 264 (1998) 51-74
+    url: https://arxiv.org/abs/hep-th/9707189
+    primary: true
+    supports:
+      - massive_scalar_operator_minus_D_squared_plus_mass_squared_in_Euclidean_dimension
+      - manifestly_gauge_invariant_nonabelian_inverse_mass_expansion
+      - leading_full_curvature_square_in_the_proper_time_coefficient
+    convention_map: >-
+      The determinant and connection signs are mapped exactly as adjudicated in
+      P158. The accepted Abelian scalar-QED2 kernel independently fixes the
+      coefficient magnitude, while the representation trace supplies the color
+      metric and full-curvature completion.
+    does_not_support:
+      - a_projector_only_Ward_derivation
+      - a_massless_complex_scalar_Schwinger_constant
+      - a_unique_total_action_physical_gluon_or_four_dimensional_sector
+algebra_provenance: >-
+  C-LIE-003 is verified directly from the accepted standard Gell-Mann matrices;
+  it does not require an external physical interpretation or comparison value.
+verdict: >-
+  The already-audited primary literature supports the generic conditional
+  non-Abelian scalar background-field theorem and full curvature completion.
+  It does not support QCD1's undeclared loop, local unique Yang-Mills induction,
+  physical color identification, or dimensional lift.

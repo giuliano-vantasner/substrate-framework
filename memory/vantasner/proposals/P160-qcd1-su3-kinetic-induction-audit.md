@@ -2,15 +2,15 @@
 description: Audit QCD1 and test a generic finite-representation scalar-loop theorem
 author: vantasner
 created: '2026-08-10T16:00:00Z'
-updated: '2026-08-10T16:20:00Z'
+updated: '2026-08-10T17:12:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-QCD1
 - nonabelian-vacuum-polarization
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P160 QCD1 SU3 Kinetic Induction Audit
 
@@ -173,13 +173,13 @@ limits, novelty, consumers, compatibility, governance, and continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| QCD1 predicate strength is unaudited | Reproduce and classify all eleven checks and the assertion | open |
-| Generic versus SU3-specific novelty is unknown | Compare C-LIE-001, C-VAC-001, C-NVP-001, and canonical APIs | open |
-| Action, statistics, and Ward provenance are unknown | Inventory or explicitly declare the determinant, regulator, bubble, and seagull | open |
-| Full non-Abelian completion is unknown | Independently derive or reject the background-curvature term | open |
-| Normalization and coefficient freedom are unresolved | Mutate basis, representation, coupling, bare term, counterterm, and field coordinate | open |
-| Consumers and compatibility are unknown | Replay the frozen semantic graph and executable integration shapes | open |
-| Registry, release, queue, docs, and memory are unresolved | Complete claim-level adjudication and one terminal transaction | open |
+| QCD1 predicate strength is unaudited | Reproduce and classify all eleven checks and the assertion | closed |
+| Generic versus SU3-specific novelty is unknown | Compare C-LIE-001, C-VAC-001, C-NVP-001, and canonical APIs | closed |
+| Action, statistics, and Ward provenance are unknown | Inventory or explicitly declare the determinant, regulator, bubble, and seagull | closed |
+| Full non-Abelian completion is unknown | Independently derive or reject the background-curvature term | closed |
+| Normalization and coefficient freedom are unresolved | Mutate basis, representation, coupling, bare term, counterterm, and field coordinate | closed |
+| Consumers and compatibility are unknown | Replay the frozen semantic graph and executable integration shapes | closed |
+| Registry, release, queue, docs, and memory are unresolved | Complete claim-level adjudication and one terminal transaction | closed |
 
 ## Review and Promotion Plan
 
@@ -199,6 +199,13 @@ quantum and physical premises are typed, load-bearing mutations work, all
 consumers replay, governance agrees, and debt is empty. A green source tally,
 equal trace index, copied loop expression, or rejected QCD interpretation alone
 cannot complete it.
+
+## Adjudication Outcome
+
+P160 accepts C-LIE-003 and C-NVP-002 in v0.124.0 and qualifies QCD1. The
+terminal gate passes 38 primary, 27 independent, and 28 source-graph checks,
+1,427 full-suite tests, 661 memory records, and the skill contract. All campaign
+debt is closed; physical QCD and dimensional-lift claims remain unpromoted.
 
 ## Cross-References
 

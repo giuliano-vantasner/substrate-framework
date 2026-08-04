@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 61
-  qualified: 145
+  pending_adjudication: 60
+  qualified: 146
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2714,8 +2714,54 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LIE-001
+  - C-LIE-003
+  - C-VAC-001
+  - C-NVP-002
+  qualification: QCD1's standard fundamental SU3 trace metric, f tensor, d tensor, commutator and anticommutator
+    reconstruction, nonzero-momentum projector identities, factorization algebra, longitudinal annihilation,
+    and nontransverse counterexample survive in their exact scopes. Its physical local Yang--Mills induction
+    does not. The source declares no quantum action, statistics, determinant, regulator, bubble, seagull,
+    subtraction, counterterm, or field normalization. It imposes transversality, uses a fermion-shaped
+    numerator for a scalar reading, and turns a constant projector coefficient into a nonlocal inverse-momentum
+    curvature kernel without constructing full background curvature. Its Abelian guard changes trace normalization.
+    C-LIE-003 supplies the distinct exact symmetric-tensor theorem. C-NVP-002 supplies the corrected conditional
+    massive complex-scalar finite-Lie-representation theorem while preserving C-NVP-001 as an exact SU2
+    specialization. No unique coupling, physical quark or gluon, QCD sector, dimensional lift, confinement,
+    observation, or substrate mechanism is accepted.
+  evidence:
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/source_adjudication.md
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/source-reproduction.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/source-audit.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/check-adjudication.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/input-provenance.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/dependency-audit.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/consumer-audit.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/candidate-comparison.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/primary-provenance.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/compatibility-audit.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/evidence/literature-audit.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/verify.py
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/independent_su3_scalar_review.py
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/replay_source_graph.py
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/attempts/0009/result.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/attempts/0011/result.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/attempts/0014/result.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/attempts/0015/result.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/attempts/0016/result.yaml
+  - memory/vantasner/decisions/C-LIE-003-review.md
+  - memory/vantasner/decisions/C-NVP-002-review.md
+  - memory/vantasner/decisions/QCD1-qualified-review.md
+  note: P160 promotes C-LIE-003 and C-NVP-002 through thirty-eight primary, twenty-seven independent,
+    seventy-one focused-plus-adjacent tests, and twenty-eight frozen-graph checks replaying 170 immutable
+    predicates. Native QCD1 passes all eleven predicates and has no NumPy integration surface. Sixteen
+    graph nodes run natively; immutable QCD2's version-only np.trapz spelling runs through an isolated
+    alias backed by np.trapezoid. Mutable P160 and canonical code have zero executable legacy integration
+    references.
 - source_unit: QCD2
   phase: phase-8
   path: merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py

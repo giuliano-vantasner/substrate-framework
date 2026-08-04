@@ -1,0 +1,31 @@
+attempt: 0016
+campaign: P160
+candidate: staged_promotion_and_terminal_integrated_gate
+status: passed
+started_at: '2026-08-10T17:07:00Z'
+finished_at: '2026-08-10T17:12:00Z'
+commands:
+  - update_claim_registry_release_manifest_disposition_adjudication_and_effort_memory
+  - regenerate_queue_docs_and_canonical_memory
+  - validate_each_changed_durable_record_and_repository_contract
+  - replay_P160_primary_independent_and_source_graph_oracles_if_record_sensitive
+  - scripts/validate.sh
+  - git diff --check
+results:
+  accepted_release: v0.124.0
+  repository_contract: valid_160_accepted_claims_60_pending_units
+  source_disposition: QCD1_qualified
+  primary: {status: passed, checks: 38, terminal_tally: ALL_38_CHECKS_PASS}
+  independent: {status: passed, checks: 27, terminal_tally: ALL_27_CHECKS_PASS}
+  source_graph: {status: passed, checks: 28, terminal_tally: ALL_28_CHECKS_PASS}
+  memory_contract: 661_records_passed
+  skill_contract: passed
+  full_tests: 1427_passed
+  full_gate_terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  diff_whitespace: passed
+compatibility:
+  mutable_standalone_legacy_accesses: 0
+  current_API: np_trapezoid
+  immutable_QCD2: alias_only_replay_only
+debt: []
+next_attempt: continue_parent_effort_at_QCD2

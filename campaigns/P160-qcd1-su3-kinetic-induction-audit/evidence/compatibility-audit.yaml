@@ -1,0 +1,23 @@
+campaign: P160
+policy: >-
+  Mutable computation uses np.trapezoid or the audited current-name-first lazy
+  compatibility helper. Immutable legacy source is never rewritten and any
+  np.trapz spelling is replayed only through an alias backed by np.trapezoid.
+mutable_scope:
+  paths:
+    - src/substrate_framework
+    - tests/test_nonabelian_vacuum_polarization.py
+    - tests/test_su3.py
+    - campaigns/P160-qcd1-su3-kinetic-induction-audit
+  direct_legacy_accesses: 0
+  eager_legacy_default_fallbacks: 0
+immutable_source_graph:
+  native: [EM5, W7, YM1, QCD1, QCD3, SM1, SM3, SM4, CF3, WM1, WM2, WM5, GK1, WM7, GK3D1, GK3D4]
+  alias_only: [QCD2]
+  alias: numpy.trapz_equals_numpy.trapezoid
+  scientific_effect: none_version_spelling_only
+QCD1:
+  numpy_integration_references: 0
+  replay: native
+verdict: passed
+debt: []

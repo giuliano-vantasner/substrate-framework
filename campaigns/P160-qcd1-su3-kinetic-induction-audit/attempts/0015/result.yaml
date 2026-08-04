@@ -1,0 +1,23 @@
+attempt: 0015
+campaign: P160
+candidate: impact_provenance_and_individual_claim_review
+status: passed
+started_at: '2026-08-10T17:02:00Z'
+finished_at: '2026-08-10T17:06:00Z'
+commands:
+  - gitnexus_analyze_and_four_symbol_impact_queries
+  - gitnexus_detect_changes_against_d5b76e8
+  - exact_lexical_consumer_inventory
+  - materialize_primary_literature_impact_and_three_individual_reviews
+results:
+  graph_index: {nodes: 23253, edges: 36604, clusters: 344, flows: 6}
+  new_generic_function: {risk: LOW, direct_callers: 1, affected_processes: 0}
+  new_symmetric_tensor_evidence: {risk: LOW, direct_callers: 0, affected_processes: 0}
+  preserved_SU2_wrapper: {risk: LOW, direct_callers: 0, affected_processes: 0}
+  shared_generators: {risk: MEDIUM, direct_symbols: 6, depth_four_symbols: 14, affected_processes: 0}
+  change_detection: {files: 36, symbols: 137, risk: LOW, affected_processes: 0}
+  claim_reviews: [C-LIE-003, C-NVP-002]
+  source_review: QCD1_qualified
+debt:
+  - run_generated_promotion_preflight_and_one_terminal_integrated_gate
+next_attempt: stage_registry_release_disposition_generated_state_and_terminal_gate
