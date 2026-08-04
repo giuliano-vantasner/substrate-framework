@@ -1,0 +1,25 @@
+attempt: 0007
+campaign: P164
+candidate: terminal_promotion_and_integrated_replay
+status: passed
+started_at: '2026-08-10T20:15:00Z'
+finished_at: '2026-08-10T20:20:00Z'
+commands:
+  - scripts/validate.sh
+  - git diff --check
+results:
+  workflow: WORKFLOW_VALID_162_claims_162_accepted_0_proposals
+  migration_queue: 218_units_56_pending_0_partial
+  generated_docs: current
+  generated_memory: current
+  memory_contract: all_675_files_valid
+  skill_contract: valid
+  full_pytest: 1454_passed_in_127.99_seconds
+targeted_scientific_replay:
+  provenance: attempts/0006/result.yaml
+  primary: ALL_33_CHECKS_PASS
+  independent: ALL_18_CHECKS_PASS
+  source_graph: ALL_25_CHECKS_PASS
+  targeted_tests: 78_passed
+debt: []
+next_attempt: continue_parent_migration_effort_at_SM3

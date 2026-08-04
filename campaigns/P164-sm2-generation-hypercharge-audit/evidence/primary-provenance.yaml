@@ -1,0 +1,36 @@
+campaign: P164
+accepted_base:
+  release: v0.125.0
+  framework_checkpoint: 326cfa2
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit:
+  id: SM2
+  path: merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py
+  sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM2-dossier.md
+  sha256: 20ba861ddd8d9ccd89ddf9fc8d98e6ed8a824a99aa04d569d9e6756ba5facc08
+scientific_commit: 70e4211
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/charge_traces.py
+  - src/substrate_framework/su2_doublets.py
+  - src/substrate_framework/gauge_scalar_mass.py
+  - src/substrate_framework/product_gauge.py
+  - campaigns/P081-wm1-charge-trace-audit
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P154-m1-anderson-higgs-mass-audit
+  - campaigns/P163-sm1-combined-gauge-group-audit
+memory_searches:
+  - SM2 generation hypercharge charges representation table
+  - multiplet charge trace anomaly conjugation normalization
+authority_statement: >-
+  Memory and SM2 are recall and candidate evidence. Accepted C-REP-001 and
+  C-REP-002, the importable generic ledger, exact mutations, a fresh
+  implementation-independent derivation, individual claim review, LOW-risk
+  impact analysis, and the pinned fourteen-node graph supply authority. The
+  source tally and familiar table labels supply no derivation completeness
+  anomaly physical-matter conservation or Standard Model claim.

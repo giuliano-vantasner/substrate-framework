@@ -1,0 +1,19 @@
+attempt: 0009
+campaign: P164
+candidate: absolute_path_metadata_validation_and_final_diff_gate
+status: passed
+started_at: '2026-08-10T20:21:00Z'
+finished_at: '2026-08-10T20:22:00Z'
+commands:
+  - memory validate /home/dan/substrate-framework/memory/vantasner/efforts/framework-migration.md
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P164-sm2-generation-hypercharge-audit.md
+  - cmp governance/releases/current.yaml governance/releases/v0.126.0.yaml
+  - git diff --check
+results:
+  effort_memory: valid
+  proposal_memory: valid
+  current_release_matches_pinned_manifest: true
+  worktree_diff_check: passed
+scientific_delta_since_attempt_0007: none
+debt: []
+next_attempt: continue_parent_migration_effort_at_SM3

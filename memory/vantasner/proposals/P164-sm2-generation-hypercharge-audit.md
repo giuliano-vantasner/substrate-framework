@@ -2,7 +2,7 @@
 description: Audit SM2 and determine whether its supplied charge table supports a distinct exact multiplet theorem
 author: vantasner
 created: '2026-08-10T19:35:00Z'
-updated: '2026-08-10T20:07:00Z'
+updated: '2026-08-10T20:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - hypercharge
 - representations
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P164 SM2 Generation and Hypercharge Audit
 
@@ -118,13 +118,14 @@ already exposed charge values.
 The append-only ledger preserves the source-body-unopened freeze, the failed
 unguarded whitespace/commit gate, its semantically identical normalized freeze,
 the source-aware checkpoint formatting failure, and native seven-predicate
-replay. Candidate C now passes thirty-three primary checks, eighteen fresh
+replay. Candidate C passes thirty-three primary checks, eighteen fresh
 independent checks, seventy-eight targeted tests, and a fourteen-node source
 graph replay covering 123 lexical predicates, 123 runtime executions, and
 eighteen assertion nodes. Inconsistent and alternative targets, missing and
 added rows, charge conjugation, coefficient mutation, and the source's naive
-Yukawa shorthand delimit the claim. Claim review, impact analysis, governance
-synchronization, and the one terminal integrated gate remain.
+Yukawa shorthand delimit the claim. Claim review and LOW-risk impact analysis
+close; the one integrated promotion gate passes all 1,454 tests with 675
+validated memory records and synchronized v0.126.0 state.
 
 ## Debt Ledger
 
@@ -141,7 +142,7 @@ continuation.
 | Chirality and conjugation conventions are unresolved | Separate physical right-handed fields from left-handed conjugate rows | discharged |
 | Anomaly selection may be circular | Keep pending SM3 outside the dependency closure and test alternative tables | discharged by exclusion from C-REP-003 |
 | Physical generation completeness is unsupported | Derive it from approved premises or exclude it from the accepted mapping | discharged by exclusion from C-REP-003 |
-| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | graph discharged; governance open |
+| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | discharged |
 
 ## Review and Promotion Plan
 
@@ -154,11 +155,11 @@ and one integrated terminal gate only at the terminal disposition boundary.
 
 ## Done Gate
 
-P164 closes only when a positive exact theorem or complete accepted composition
-exists, every predicate has an individual verdict, all table inputs and
-conventions are typed, mutations are load-bearing, consumers replay,
-governance agrees, and debt is empty. Imported observed values, familiar labels,
-or rejected physical interpretation alone cannot complete the campaign.
+P164 closes with C-REP-003 accepted and SM2 qualified in v0.126.0. Every
+predicate has an individual verdict, all table inputs and conventions are
+typed, mutations are load-bearing, consumers replay, governance agrees, and
+debt is empty. Imported observed values, familiar labels, and rejected physical
+interpretations remain outside the accepted claim.
 
 ## Cross-References
 

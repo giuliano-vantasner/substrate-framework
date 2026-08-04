@@ -1,0 +1,20 @@
+attempt: 0008
+campaign: P164
+candidate: targeted_final_memory_record_validation
+status: failed
+started_at: '2026-08-10T20:21:00Z'
+finished_at: '2026-08-10T20:21:00Z'
+command: memory validate memory/vantasner/efforts/framework-migration.md
+passed_before_failure:
+  repository_validation: WORKFLOW_VALID_162_claims_162_accepted_56_pending
+  generated_docs: current
+  generated_accepted_memory: current
+failure:
+  layer: validation_invocation
+  mechanism: >-
+    The memory CLI resolved the repository-relative argument beneath its own
+    configured memory root and searched for a duplicated memory/memory path.
+  scientific_failure: false
+  content_failure: false
+repair: rerun_the_same_target_with_its_absolute_repository_path
+next_attempt: finalize_metadata_with_absolute_memory_paths_and_separate_diff_gate

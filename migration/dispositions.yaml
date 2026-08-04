@@ -5452,3 +5452,49 @@ units:
       All nine graph nodes are native and contain no NumPy integration surface.
       The self-optimized workflow now records lexical sites, runtime executions,
       and assertion nodes separately rather than forcing equality.
+  SM2:
+    disposition: qualified
+    accepted_claims:
+      - C-REP-001
+      - C-REP-002
+      - C-REP-003
+    qualification: >-
+      SM2's exact Q=T3+Y arithmetic, grouped spectra, supplied state count,
+      fixed-target row inversion, charge-conjugation map, and simultaneous
+      Abelian generator coefficient and coupling rescaling survive as
+      C-REP-003 and accepted dependencies. Its physical Standard Model
+      generation and derived-hypercharge headline does not. The source supplies
+      hypercharges, target charges, factor dimensions, labels, chirality
+      readings, and the omission of a neutral singlet. Dimension three does
+      not distinguish triplet from antitriplet; fifteen is not a completeness
+      theorem. The Yukawa sentence is unchecked, diagonality is not a
+      conservation law, and the factor-two charge formula omits coupling and
+      global U1 data. No anomaly selection, action, current, dynamics,
+      observation, physical matter derivation, Standard Model mechanism, or
+      substrate dictionary is accepted.
+    evidence:
+      - campaigns/P164-sm2-generation-hypercharge-audit/reviews/source_adjudication.md
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/source-reproduction.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/source-audit.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/check-adjudication.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/input-provenance.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/dependency-audit.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/consumer-audit.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/candidate-comparison.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/evidence/primary-provenance.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/verify.py
+      - campaigns/P164-sm2-generation-hypercharge-audit/reviews/independent_multiplet_charge_review.py
+      - campaigns/P164-sm2-generation-hypercharge-audit/reviews/replay_source_graph.py
+      - campaigns/P164-sm2-generation-hypercharge-audit/attempts/0006/result.yaml
+      - campaigns/P164-sm2-generation-hypercharge-audit/attempts/0007/result.yaml
+      - memory/vantasner/decisions/C-REP-003-review.md
+      - memory/vantasner/decisions/SM2-qualified-review.md
+    note: >-
+      P164 closes thirty-three primary and eighteen independent exact checks,
+      seventy-eight affected accepted-API tests, and twenty-five graph checks
+      over 123 lexical and 123 runtime source predicates plus eighteen
+      assertions. All fourteen graph nodes are native and contain no legacy
+      NumPy integration reference. The generic API is LOW risk with no affected
+      execution flow.

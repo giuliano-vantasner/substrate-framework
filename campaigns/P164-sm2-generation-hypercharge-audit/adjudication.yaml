@@ -1,0 +1,58 @@
+campaign: P164
+title: SM2 generation hypercharge and exact supplied-multiplet audit
+source_baseline: substrate@6d1f4e0
+source_units: [SM2]
+base_release: v0.125.0
+accepted_release: v0.126.0
+adjudicated_at: '2026-08-10T20:15:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every source predicate without treating the tally as a table derivation.}
+  - {id: C, reason: The package lacked a typed generic supplied-multiplet spectrum inversion conjugation and normalization ledger.}
+  - {id: F, reason: Alternative targets incomplete tables conjugates coefficient mutation and Yukawa signs delimit the headline.}
+  - {id: G, reason: Claim source dependency consumer release generated-state and memory audits close the transaction.}
+claims: [C-REP-003]
+unpromoted_claims:
+  - {id: derived_physical_Standard_Model_generation, reason: Hypercharges_targets_dimensions_labels_and_completeness_are_supplied.}
+  - {id: anomaly_selected_unique_hypercharge_table, reason: SM2_has_no_anomaly_equations_and_pending_SM3_has_no_authority.}
+  - {id: source_Yukawa_neutrality_sentence, reason: The_source_does_not_compute_conjugated_operator_residuals_and_the_naive_up_sum_is_4_over_3.}
+  - {id: diagonality_implies_charge_conservation, reason: No_Hamiltonian_action_current_or_dynamics_is_constructed.}
+  - {id: full_global_hypercharge_equivalence, reason: The_source_omits_inverse_coupling_rescaling_compact_period_and_charge_lattice.}
+  - {id: fifteen_state_generation_completeness, reason: A_neutral_singlet_or_omitted_row_changes_the_count_without_contradicting_the_ledger.}
+  - {id: substrate_Standard_Model_mechanism, reason: No_substrate_dictionary_or_physical_matching_premises_are_supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_multiplet_charge_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0006/result.yaml
+  terminal_gate: attempts/0007/result.yaml
+  post_gate_metadata_attempts: [attempts/0008/result.yaml, attempts/0009/result.yaml]
+  claim_review: memory/vantasner/decisions/C-REP-003-review.md
+  source_review: memory/vantasner/decisions/SM2-qualified-review.md
+source_disposition:
+  SM2: qualified
+accepted_mappings: [C-REP-001, C-REP-002, C-REP-003]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_current_NumPy_APIs
+  immutable_primary: no_NumPy_integration_reference
+  immutable_alias_only: []
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P164-sm2-generation-hypercharge-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P164-sm2-generation-hypercharge-audit/reviews/independent_multiplet_charge_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P164-sm2-generation-hypercharge-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_multiplet_charges.py tests/test_charge_traces.py tests/test_su2_doublets.py tests/test_gauge_scalar_mass.py tests/test_product_gauge.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted
