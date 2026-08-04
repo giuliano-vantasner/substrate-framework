@@ -1,0 +1,23 @@
+campaign: P132
+source_unit: T2A
+predicates:
+  - {index: 1, label: boosted_field_exact_solution, verdict: exact_duplicate, reason: C-SG-001 and C-SG-008 already own the exact scalar boost and field equation.}
+  - {index: 2, label: boosted_field_numeric_samples, verdict: regression_only, reason: Finite samples regress the exact identity and add no verification level.}
+  - {index: 3, label: integrated_momentum, verdict: exact_duplicate_with_numeric_regression, reason: The mpmath values reproduce C-SG-008's exact P=gamma*E0*v.}
+  - {index: 4, label: nonrelativistic_momentum_teeth, verdict: useful_mutation_with_prose_error, reason: The test rejects P=E0*v but the detail output wrongly labels the enhancement gamma squared instead of gamma.}
+  - {index: 5, label: integrated_energy_and_dispersion, verdict: exact_duplicate_with_numeric_regression, reason: C-SG-008 owns E=gamma*E0 and E squared minus P squared equals E0 squared.}
+  - {index: 6, label: nonrelativistic_energy_teeth, verdict: useful_regression_mutation, reason: The finite-speed comparison is correct but does not add a new claim.}
+  - {index: 7, label: off_shell_stress_divergence, verdict: exact_duplicate, reason: C-SG-012 already owns both residual factors with the same mixed-index convention.}
+  - {index: 8, label: finite_difference_conservation, verdict: regression_only, reason: One fixed step and point regress the exact divergence identity without refinement.}
+  - {index: 9, label: fabricated_field_rejection, verdict: useful_sensitivity, reason: The perturbation is off shell and therefore correctly produces nonzero divergence.}
+  - {index: 10, label: structural_perturbation_term, verdict: exact_sensitivity, reason: The nonzero minus-f-double-prime term is exact and supports the already accepted residual oracle.}
+  - {index: 11, label: moving_dilaton_mixed_source, verdict: pointwise_stress_only_source_lift_rejected, reason: The sampled contravariant stress is nonzero but mislabeled covariantly; the standing pointwise premise is false and no target field equation or solution is executed.}
+  - {index: 12, label: averaged_spatial_stress, verdict: rejected, reason: The symbolic check omits the lab-cycle factor and asserts one extra gamma; it never integrates dens_Txx.}
+summary:
+  source_predicates_reproduced: 12
+  exact_or_useful_surfaces_mapped: 10
+  rejected_predicates: 2
+  accepted_claims_reused: [C-SG-001, C-SG-002, C-SG-008, C-SG-012]
+  new_claims_promoted: 0
+  terminal_disposition: qualified
+debt: []

@@ -1,0 +1,18 @@
+campaign: P132
+attempt: 0005
+status: failed
+candidate: B
+command: PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+passed_before_failure: 20
+failure: >-
+  The primary route reached the generic off-shell divergence but compared the
+  returned SymPy matrix directly with an algebraically equivalent residual
+  matrix. Unevaluated term ordering made direct equality false.
+diagnosis: exact_matrix_comparison_failure
+scientific_effect: >-
+  The canonical C-SG-012 implementation is unchanged and its own exact tests
+  already establish the identity. This failed comparison adds no scientific
+  evidence and changes no verdict.
+next_attempt: >-
+  Simplify the entrywise matrix difference and require the zero matrix, matching
+  the successful convention used for the boost Jacobian.

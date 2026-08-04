@@ -1,0 +1,58 @@
+campaign: P132
+title: T2A boosted breather stress tensor source and Lorentz-integration audit
+source_baseline: substrate@6d1f4e0
+source_units: [T2A]
+base_release: v0.100.0
+release_after_adjudication: v0.100.0
+adjudicated_at: '2026-08-09T00:20:00Z'
+selected_candidates:
+  - {id: B, reason: Exact Lorentz Jacobian tensor-index and divergence algebra closes with sensitive mutations.}
+  - {id: C, reason: C-SG-008 and C-SG-012 subsume every reusable correct T2A surface.}
+  - {id: D, reason: Independent Lorentz charge tensor and spacetime-average routes expose the missing gamma factor.}
+  - {id: E, reason: Refined mpmath quadrature provides regression evidence without replacing exact authority.}
+  - {id: G, reason: Zero acceleration and missing target dynamics preserve the radiation gravity material and observation ceiling.}
+  - {id: H, reason: Qualified predecessors pending consumers compatibility nonduplication and governance are closed.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: F, decision: rejected_no_typed_or_solved_dilaton_source_object}
+claims: []
+reviewed_existing:
+  - {id: C-SG-001, decision: unchanged_exact_rest_breather_and_equation}
+  - {id: C-SG-002, decision: unchanged_exact_rest_energy}
+  - {id: C-SG-008, decision: unchanged_exact_boosted_phase_and_charge_vector}
+  - {id: C-SG-012, decision: unchanged_exact_stress_tensor_divergence_and_boundary_ceiling}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  verifier_representation_failures:
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+  numerical_resolution_failure: attempts/0007/result.yaml
+  exact_routes: attempts/0008/result.yaml
+  terminal_gate: attempts/0009/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_lorentz_stress_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/T2A-qualified-review.md
+source_disposition: {T2A: qualified}
+validation_commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-2/bridge_T2A_moving_source.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/reviews/independent_lorentz_stress_review.py
+  - two hash-pinned alias-only reverse-consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

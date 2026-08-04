@@ -2,11 +2,11 @@
 description: Audit T2A's boosted breather stress tensor and physical source boundary
 author: vantasner
 created: '2026-08-08T23:45:00Z'
-updated: '2026-08-08T23:45:00Z'
+updated: '2026-08-09T00:20:00Z'
 tags: [substrate-framework, campaign-proposal, sine-gordon, stress-tensor, migration-T2A]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P132 T2A Boosted Stress Source Audit
 
@@ -125,13 +125,13 @@ physical-scope, dependency, consumer, and nonduplication debt.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| T2A executable surface unaudited | Hash, execute, AST audit, and predicate mapping | open |
-| Boost and tensor conventions | Exact scalar pullback, both index placements, and sign mutations | open |
-| Integrated charges and boundaries | Independent exact derivation plus decay and Jacobian audit | open |
-| Numerical evidence ceiling | Declared refinement or explicit finding that no numeric oracle is needed | open |
-| Dilaton-source claim untyped | Supply varied field equation/coupling or reject the lift | open |
-| Radiation and material language | Separate uniform motion from acceleration and require governed maps | open |
-| Dependencies, consumers, and novelty | Audit GW1/GW4, G1/G4, accepted claims/APIs, and generated state | open |
+| T2A executable surface unaudited | Hash, execute, AST audit, and predicate mapping | closed |
+| Boost and tensor conventions | Exact scalar pullback, both index placements, and sign mutations | closed |
+| Integrated charges and boundaries | Independent exact derivation plus decay and Jacobian audit | closed |
+| Numerical evidence ceiling | Declared refinement or explicit finding that no numeric oracle is needed | closed |
+| Dilaton-source claim untyped | Supply varied field equation/coupling or reject the lift | closed |
+| Radiation and material language | Separate uniform motion from acceleration and require governed maps | closed |
+| Dependencies, consumers, and novelty | Audit GW1/GW4, G1/G4, accepted claims/APIs, and generated state | closed |
 
 ## Review and Promotion Plan
 
@@ -141,7 +141,8 @@ and compatibility records must agree. A new accepted claim requires package code
 tests, registry entry, release, generated docs and memory, and the integrated
 promotion gate. A terminal mapping with unchanged science uses targeted record
 checks at freeze and one integrated adjudication boundary, then only
-record-sensitive checks after final attempt bookkeeping.
+record-sensitive checks after final attempt bookkeeping. P132 completes through
+terminal qualification with no claim, API, or release change.
 
 ## Done Gate
 
@@ -149,6 +150,8 @@ P132 closes only when a positive distinct source theorem exists or the exact
 surviving surface is completely mapped to accepted claims, every predicate and
 physical overread is adjudicated, exact and independent oracles are mutation
 sensitive, consumers replay, generated state agrees, and campaign debt is empty.
+The exact source surface maps to accepted claims, unsupported lifts are rejected,
+and the campaign debt ledger is closed.
 
 ## Cross-References
 

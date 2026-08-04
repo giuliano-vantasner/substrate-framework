@@ -1,0 +1,41 @@
+campaign: P132
+source_unit: T2A
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-2/bridge_T2A_moving_source.py
+sha256: 669803de1403c8ca66e399aa4b7c0e762447e40df7c241fe530a6b4e06dde70a
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-2/bridge_T2A_moving_source.py
+exit_status: 0
+terminal_tally: ALL 12 CHECKS PASS
+runtime_oracles: [SymPy, mpmath]
+compatibility_preflight:
+  np_trapz_calls: 0
+  np_trapezoid_calls: 0
+  alias_injected: false
+  compatibility_event: none
+declared_numeric_protocol:
+  precision_decimal_digits: 30
+  spatial_quadrature: mpmath_quad_split_at_moving_center
+  half_width_decay_units: 60
+  tested_velocities: [0.2, 0.3, 0.5, 0.6, 0.8]
+  tested_times: [0.0, 0.3, 0.5]
+reported_values:
+  rest_energy_at_omega_inverse_sqrt_two: 11.313708
+  standing_integrated_momentum: 0.0
+  momentum_v_0_3: 3.557996720
+  momentum_v_0_6: 8.485281374
+  momentum_v_0_8: 15.084945
+  nonrelativistic_momentum_v_0_8: 9.0509668
+  energy_v_0_8: 18.85618083
+  invariant_energy_momentum_norm_squared: 128.0
+  finite_difference_divergence_energy_abs: 1.478e-12
+  finite_difference_divergence_momentum_abs: 1.971e-12
+  fabricated_field_residual_abs: 0.13364
+  fabricated_field_divergence_abs: 0.42369
+  alleged_mixed_source_sample: 4.76258
+headline_observation: >-
+  The source reproduces its exact field, charge, dispersion, divergence, and
+  pointwise nonzero-stress checks. Its spatial-stress verdict is not numerically
+  evaluated: no call integrates dens_Txx. The detail line labels P/P_NR as
+  gamma squared even though the ratio is gamma.
+scientific_status: reproduction_evidence_only
+debt: []

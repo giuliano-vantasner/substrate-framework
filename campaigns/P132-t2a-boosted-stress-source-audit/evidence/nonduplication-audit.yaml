@@ -1,0 +1,23 @@
+campaign: P132
+source_unit: T2A
+nearby_accepted_surfaces:
+  C-SG-001: exact_rest_breather_and_sine_gordon_equation
+  C-SG-002: exact_rest_energy
+  C-SG-008: exact_boosted_phase_energy_momentum_vector_norms_and_limits
+  C-SG-012: exact_covariant_and_contravariant_stress_off_shell_divergence_and_boundary_conditions
+surviving_source_surface:
+  - exact scalar boost of the rest breather
+  - exact boosted energy momentum and invariant dispersion
+  - exact canonical stress divergence and off-shell rejection guard
+assessment: >-
+  Every reusable correct T2A theorem is already an explicit accepted claim or a
+  direct regression of one. The corrected cycle-average stress relation
+  mean integral T^xx equals v*P is retained as counterevidence to a rejected
+  source predicate; it is not the preregistered typed dilaton-source object, has
+  no accepted consumer, and does not warrant a new package API or claim here.
+reserved_claim: C-SG-020
+promotion_decision: not_promoted
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

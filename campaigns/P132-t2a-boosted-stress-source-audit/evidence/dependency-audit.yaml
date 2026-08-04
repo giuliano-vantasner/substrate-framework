@@ -1,0 +1,23 @@
+campaign: P132
+source_unit: T2A
+declared_candidate_dependencies:
+  GW1:
+    disposition: qualified
+    accepted_surface: [C-MOM-001]
+    authority_ceiling: no_gravity_radiation_TT_waveform_power_or_1plus1_source_lift
+  GW4:
+    disposition: qualified
+    accepted_surface: [C-MOM-001, C-GW-001, C-GW-002, C-GW-003]
+    authority_ceiling: no_breather_embedding_binding_local_source_closure_or_physical_gravity
+runtime_imports: [sympy, mpmath]
+undeclared_source_dependency:
+  unit: local_Note_13_dilaton_arc
+  disposition: noncanonical_source_evidence
+  accepted_surface: []
+  issue: T2A imports M_munu=kappa*T_munu and the static metric ansatz without listing or executing them.
+accepted_dependency_closure: [C-SG-001, C-SG-002, C-SG-006, C-SG-008, C-SG-011, C-SG-012]
+closure_note: >-
+  C-SG-006 is transitive through C-SG-008 and C-SG-011 is transitive through
+  C-SG-012. C-MOM-001 and the conditional C-GW claims define physical ceilings
+  but are not needed to establish T2A's exact 1+1 field and charge surface.
+debt: []

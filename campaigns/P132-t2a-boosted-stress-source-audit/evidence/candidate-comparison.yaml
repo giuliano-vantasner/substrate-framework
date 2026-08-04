@@ -1,0 +1,23 @@
+campaign: P132
+criteria_order:
+  - accepted dependency closure and explicit provenance for every field equation source map coupling normalization and physical interpretation
+  - exact Lorentz covariance with fixed scalar pullback metric tensor-index and integration conventions
+  - exact local residual and divergence factorization plus explicit full-line boundary decay
+  - agreement of analytic tensor transformation charge transformation and an independent rapidity or direct-integration route
+  - sensitivity to velocity-sign boost-sign mixed-index Jacobian boundary and nonrelativistic mutations
+  - correct rest low-velocity and finite-rapidity behavior
+  - strict separation of inertial translation from acceleration radiation gravity coupling material realization and observation
+  - parameter economy natural composition reusable API fit and nonduplication
+candidates:
+  A: {decision: reproduction_evidence_only, reason: Twelve checks run but two headline predicates fail source typing or exact transformation audit.}
+  B: {decision: selected_as_exact_audit_route, reason: Exact Jacobian stress-index and divergence algebra closes with sensitive mutations.}
+  C: {decision: selected_as_existing_claim_mapping, reason: C-SG-008 and C-SG-012 subsume every reusable correct surface.}
+  D: {decision: selected_as_independent_route, reason: Fresh Lorentz matrix charge and spacetime-average derivations agree without primary APIs.}
+  E: {decision: selected_as_regression_only, reason: Refined mpmath quadrature confirms rest energy zero momentum zero mean rest stress and the exact correction.}
+  F: {decision: rejected_missing_positive_object, reason: T2A executes no varied target equation coupling metric dilaton boundary data or solution and its hidden static ansatz conflicts with local rest stress.}
+  G: {decision: selected_as_physical_ceiling, reason: Zero acceleration and absent target dynamics reject radiation gravity material and observation lifts.}
+  H: {decision: selected_as_governance_closure, reason: Qualified predecessors pending consumers compatibility nonduplication and records are explicit.}
+claims_decision: no_new_claim
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

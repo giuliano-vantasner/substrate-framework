@@ -1,0 +1,26 @@
+campaign: P132
+primary_reference:
+  authors: [D. Grumiller, W. Kummer, D. V. Vassilevich]
+  title: Dilaton Gravity in Two Dimensions
+  journal: Physics Reports
+  volume: 369
+  pages: 327-430
+  year: 2002
+  arxiv: hep-th/0204253
+  arxiv_url: https://arxiv.org/abs/hep-th/0204253
+  doi: 10.1016/S0370-1573(02)00267-3
+finding: >-
+  The cited review is genuine authority for a broad class of two-dimensional
+  dilaton-gravity models and their interaction with matter. It does not select
+  T2A's optical metric, identify the dilaton with a substrate refractive index,
+  fix its potential and coupling, or prove that a Lorentz-boosted sine-Gordon
+  breather solves the coupled target equations. Those are separate local model
+  choices and solution obligations.
+local_specialization:
+  note_path: soliton-shadow/cut-and-project-shadow/13-dynamic-analog-einstein-sourcing.md
+  note_sha256: 10ae83e208af25dc95a148bbe954574632ea6db7d69099219d32b18ed11f7278
+  code_path: soliton-shadow/cut-and-project-shadow/sympy/dynamic_analog_C_dilaton.py
+  code_sha256: fc89e917be8cd17b9fe5993a2b59c988c74090ddbda482e31f86295f8cc9ca63
+  status: noncanonical_source_evidence_not_an_accepted_dependency
+claim_import: none
+debt: []

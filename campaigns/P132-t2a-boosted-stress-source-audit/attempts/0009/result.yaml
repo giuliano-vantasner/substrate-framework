@@ -1,0 +1,36 @@
+campaign: P132
+attempt: 0009
+status: verified
+candidate: terminal_record_and_workflow_gate
+commands:
+  - targeted P132 source primary independent dependency consumer and governance replay
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  source_disposition: qualified
+  new_claims: 0
+  release: v0.100.0
+  accepted_claim_count: 135
+  pending_source_units_after: 88
+  debt: []
+result:
+  workflow_exit_status: 0
+  workflow_claims: 135
+  workflow_accepted_claims: 135
+  workflow_open_proposals: 0
+  migration_units: 218
+  migration_pending: 88
+  migration_partial: 0
+  runnable_tests: 1118
+  declared_skips: 8
+  validated_memory_files: 531
+  physics_skill_valid: true
+  git_diff_check: true
+finding: >-
+  The single integrated terminal workflow passes with the accepted release and
+  package unchanged. P132 terminally qualifies T2A, closes every campaign debt,
+  and leaves the parent corpus migration active at T2C.
+next_attempt: >-
+  No further P132 scientific attempt is required. Finalize record-sensitive YAML,
+  memory, generated-queue, and whitespace checks without rerunning the unchanged
+  full suite, then checkpoint the parent effort.

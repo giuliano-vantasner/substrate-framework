@@ -1,0 +1,17 @@
+campaign: P132
+attempt: 0004
+status: failed
+candidate: B
+command: PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+passed_before_failure: 6
+failure: >-
+  The exact Jacobian matrices differed only by the equivalent entries
+  gamma^2*(v^2-1) and -gamma^2*(1-v^2), but direct Matrix equality does not
+  simplify entries before comparison.
+diagnosis: exact_matrix_comparison_failure
+scientific_effect: >-
+  The simplified matrix difference is exactly zero. This is an oracle
+  representation defect, not evidence against Lorentz covariance.
+next_attempt: >-
+  Require every entry of the simplified matrix difference to vanish, preserving
+  the generic Jacobian derivation and all frozen conventions.

@@ -1,0 +1,35 @@
+campaign: P132
+source_unit: T2A
+lines: 582
+static_check_calls: 12
+runtime_checks: 12
+executable_imports: [sympy, mpmath]
+declared_dependencies: [GW1, GW4]
+runtime_dependencies: []
+hidden_prose_imports:
+  - {path: soliton-shadow/cut-and-project-shadow/13-dynamic-analog-einstein-sourcing.md, sha256: 10ae83e208af25dc95a148bbe954574632ea6db7d69099219d32b18ed11f7278, scope: unaccepted_2d_dilaton_action_metric_equation_and_static_ansatz}
+  - {path: soliton-shadow/cut-and-project-shadow/sympy/dynamic_analog_C_dilaton.py, sha256: fc89e917be8cd17b9fe5993a2b59c988c74090ddbda482e31f86295f8cc9ca63, scope: noncanonical_action_and_static_metric_equation_evidence}
+constructed_objects:
+  boosted_field: u_b(gamma*(x-v*t), gamma*(t-v*x); omega)
+  momentum_density: T_contravariant_0x_equals_minus_u_t_u_x
+  energy_density: canonical_T_00
+  spatial_stress: canonical_T_contravariant_xx
+  charge_quadrature: mpmath_quad_on_finite_decay_window
+  conservation_guard: exact_off_shell_residual_factorization_plus_finite_difference_sample
+  alleged_dilaton_source: absolute_value_of_one_T_contravariant_0x_sample
+surviving_surface:
+  - The scalar Lorentz pullback of the exact rest breather remains an exact sine-Gordon solution.
+  - Integrated energy and momentum are gamma*E0 and gamma*E0*v with invariant norm E0 squared.
+  - The canonical contravariant stress divergence factorizes through the sine-Gordon residual.
+  - A fabricated off-shell field has nonzero residual and stress divergence.
+defects:
+  - The reported momentum enhancement over E0*v is gamma, not gamma squared as its detail line states.
+  - The source calls -u_t*u_x both T^0x and T_tx. In signature (+,-), covariant T_tx is +u_t*u_x and raising both indices flips the mixed sign.
+  - A standing breather has zero integrated momentum by parity but nonzero pointwise T_tx at generic spacetime points, contradicting the claimed standing pointwise identity.
+  - The imported static metric ansatz has M_tx=0 and therefore cannot equal the full standing breather's generic nonzero local T_tx without averaging or a different dynamical geometry.
+  - The dilaton predicate contains no executable M_tx, kappa, metric, dilaton, potential, action variation, field equation, units, boundary data, or solution; it only checks abs(T0x_moving)>0.1.
+  - The spatial-stress verdict transforms a density and omits the transformed cycle duration or equal-time integration factor. The correct cycle average is gamma*E0*v^2=v*P, not gamma^2*E0*v^2=gamma*v*P.
+  - The load-bearing spatial-stress claim is never integrated numerically even though dens_Txx exists.
+  - The Phase-12 radiation annotation is post-hoc prose and no GW script or accepted physical radiation map is executed.
+headline_verdict: exact_boost_and_stress_composition_survives_dilaton_novelty_and_spatial_stress_formula_rejected
+debt: []

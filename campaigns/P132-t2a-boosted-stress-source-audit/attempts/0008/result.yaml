@@ -1,0 +1,25 @@
+campaign: P132
+attempt: 0008
+status: verified
+selected_candidates: [B, C, D, E, G, H]
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/reviews/independent_lorentz_stress_review.py
+results:
+  primary_checks: 39
+  independent_checks: 19
+  source_checks: 12
+  pending_consumer_checks_alias_only: 20
+finding: >-
+  The exact boost, charge vector, dispersion, and divergence map to C-SG-008 and
+  C-SG-012. Independent Lorentz and refined mpmath routes show that T2A's mean
+  spatial stress is high by one gamma, its alleged covariant mixed component has
+  the contravariant sign, the standing pointwise-zero premise is false, and no
+  executable dilaton solution exists. No new claim survives.
+compatibility_event: >-
+  T2A has no NumPy call. Pending immutable G1 and G4 replay after aliasing their
+  three executable legacy np.trapz calls to np.trapezoid; this is compatibility
+  evidence only and does not change their scientific status.
+next_attempt: >-
+  Complete claim-level source review, disposition, generated queue and memory
+  synchronization, then run the single integrated terminal gate.

@@ -1,0 +1,29 @@
+campaign: P132
+root_source_unit: T2A
+authority_warning: Green pending-consumer execution grants no accepted radiation dilaton self-force or material premise.
+reverse_consumers:
+  - {source_unit: G1, disposition: pending_adjudication, path: merged-framework/bridges/phase-5/bridge_G1_radiating_dilaton_source.py, sha256: 580783a214736b24e6f36a4c035b2c608f931f4ba8ece202ff7f6d260d46f876, checks: 10}
+  - {source_unit: G4, disposition: pending_adjudication, path: merged-framework/bridges/phase-5/bridge_G4_radiation_reaction_self_force.py, sha256: 308c8d82aff062fb0f0254498fb2bdb19fe6bdc207036cb0fa73643d3608c799, checks: 10}
+replay:
+  scripts: 2
+  checks: 20
+  exit_statuses_all_zero: true
+  mode: immutable_source_alias_only
+compatibility_preflight:
+  G1:
+    executable_np_trapz_calls: 2
+    alias: np.trapz=np.trapezoid
+    scientific_status: version_compatibility_only_not_campaign_failure
+  G4:
+    executable_np_trapz_calls: 1
+    alias: np.trapz=np.trapezoid
+    scientific_status: version_compatibility_only_not_campaign_failure
+  mutable_consumers_with_np_trapz: 0
+interpretation: >-
+  G1 reuses the accepted boosted energy and correctly distinguishes uniform
+  momentum from acceleration in one guard, but its dilaton wave equation,
+  radiated power, and monopole interpretation remain pending. G4 imports G1's
+  pending power and asserts a reduced self-force and internal channel; its green
+  replay creates no authority. Neither consumer relies on T2A's rejected extra-
+  gamma spatial-stress formula as an executable input.
+debt: []

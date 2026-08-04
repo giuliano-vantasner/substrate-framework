@@ -1,0 +1,20 @@
+campaign: P132
+attempt: 0007
+status: failed
+candidate: E
+command: PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/reviews/independent_lorentz_stress_review.py
+passed_before_failure: 15
+failure: >-
+  The 32-sample, eighteen-decay-length periodic quadrature left a dimensionless
+  mean-stress residual of 2.40e-9, above the preregistered 1e-12 acceptance
+  threshold even though it improved by more than four orders of magnitude over
+  the coarse grid.
+diagnosis: numerical_resolution_failure
+scientific_effect: >-
+  The exact spacetime-average derivation had already passed, but the numerical
+  regression had not earned its requested resolution. The threshold is not
+  widened and the failed residual is preserved.
+next_attempt: >-
+  Increase the periodic samples from 32 to 64 and the spatial half-domain from
+  eighteen to twenty-four decay lengths at unchanged 35-digit precision. Require
+  a residual below 1e-15 and continued monotone refinement.

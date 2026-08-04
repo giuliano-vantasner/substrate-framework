@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 89
-  qualified: 117
+  pending_adjudication: 88
+  qualified: 118
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -358,8 +358,39 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-001
+  - C-SG-002
+  - C-SG-008
+  - C-SG-012
+  qualification: 'T2A''s exact scalar boost, energy-momentum vector, invariant dispersion, canonical stress
+    divergence, and off-shell rejection guard are already governed by accepted sine-Gordon claims. Its
+    source detail mislabels the momentum enhancement as gamma squared rather than gamma. It computes contravariant
+    T^0x=-u_t*u_x but calls it covariant T_tx, whose sign is the opposite. The standing breather has zero
+    integrated momentum but nonzero pointwise mixed stress generically, so the hidden static dilaton equation
+    M_tx=0=kappa*T_tx does not match it locally. The alleged dilaton predicate executes no metric, dilaton,
+    coupling, variation, field equation, boundary data, or solution. Its final spatial-stress check omits
+    the transformed cycle factor: the correct mean is gamma*E0*v^2=v*P, not gamma^2*E0*v^2=gamma*v*P,
+    and the source never integrates dens_Txx. Uniform translation supplies no radiation, gravity, material
+    realization, or observation.'
+  evidence:
+  - campaigns/P132-t2a-boosted-stress-source-audit/reviews/source_adjudication.md
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/source-reproduction.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/source-audit.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/check-adjudication.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/input-provenance.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/dependency-audit.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/consumer-audit.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/candidate-comparison.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/evidence/primary-provenance.yaml
+  - campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+  - campaigns/P132-t2a-boosted-stress-source-audit/reviews/independent_lorentz_stress_review.py
+  - memory/vantasner/decisions/T2A-qualified-review.md
+  note: P132 closes 39 primary and 19 independent checks after six preserved verifier or refinement failures.
+    T2A reproduces twelve checks; pending G1 and G4 reproduce twenty checks through alias-only np.trapz-to-np.trapezoid
+    compatibility replays and remain nonauthoritative.
 - source_unit: T2B
   phase: phase-2
   path: merged-framework/bridges/phase-2/bridge_T2B_dynamic_optionC_EP.py

@@ -1,0 +1,23 @@
+campaign: P132
+accepted_inputs:
+  C-SG-001: exact_normalized_rest_breather_and_equation
+  C-SG-002: exact_rest_energy
+  C-SG-006: exact_breather_phase_and_family_conventions_inherited_by_C-SG-008
+  C-SG-008: exact_boosted_phase_energy_momentum_norms_and_domain
+  C-SG-012: canonical_covariant_contravariant_stress_divergence_and_boundary_ceiling
+  C-MOM-001: conditional_localized_conserved_stress_moment_and_nonradiation_ceiling_only
+source_defined_inputs:
+  - omega equals one over square root two for source numerical examples
+  - mpmath decimal precision 30 and sixty-decay-unit finite integration window
+  - mostly-minus metric and c equals one
+  - one point threshold abs(T0x)>0.1 for the alleged mixed source
+  - unaccepted 2D dilaton action metric ansatz potential and coupling from local Note 13
+  - post-hoc statements that Phase 12 closes radiation
+withheld:
+  - the local Note-13 dilaton action and source equation as accepted authority
+  - a time-dependent metric and dilaton solution matched to the boosted breather
+  - any physical gravity coupling material realization or substrate identification
+  - GW1 and GW4 radiation waveform power and physical-source conclusions beyond their accepted qualified surfaces
+  - pending G1 and G4 radiation and self-force conclusions
+comparators: []
+debt: []

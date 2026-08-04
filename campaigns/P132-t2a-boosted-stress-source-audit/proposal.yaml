@@ -83,4 +83,4 @@ comparators_blinded_until: >-
   requirements, counterexamples, mutations, and selection criteria freeze
   before P132 opens or executes the source body. The exposed formulas may be
   reproduced but cannot make a nonduplicate or physical-source claim pass.
-status: draft
+status: accepted

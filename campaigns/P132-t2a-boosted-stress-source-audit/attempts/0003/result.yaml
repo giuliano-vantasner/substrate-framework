@@ -1,0 +1,20 @@
+campaign: P132
+attempt: 0003
+status: failed
+candidate: B
+command: PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+passed_before_failure: 6
+failure: >-
+  The repaired oracle divided SymPy's composite-function wave operator by the
+  Lorentz factor and compared it with a separately substituted expression.
+  Equivalent second derivatives retained different Subs normal forms, so the
+  structural equality predicate returned false.
+diagnosis: symbolic_normal_form_failure
+scientific_effect: >-
+  The output visibly factorizes by gamma^2*(1-v^2); only the comparison of
+  dummy-variable representations failed. No scientific threshold or candidate
+  verdict changes.
+next_attempt: >-
+  Derive the principal second-derivative coefficient matrix directly from the
+  boost Jacobian. This exact matrix identity avoids composite-function Subs
+  ordering while testing the same generic wave-operator covariance.

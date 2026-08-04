@@ -1,0 +1,18 @@
+campaign: P132
+attempt: 0006
+status: failed
+candidate: B
+command: PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+passed_before_failure: 31
+failure: >-
+  SymPy returned negative infinity for the unsquared positive-branch expression
+  E0*v^2/sqrt(1-v^2) as v approached one from below, despite positive E0 and v.
+  This is a directional square-root branch artifact in the oracle.
+diagnosis: symbolic_limit_branch_failure
+scientific_effect: >-
+  The squared expression tends to positive infinity and the reciprocal tends
+  to zero, so the finite-speed domain and singular endpoint conclusion are
+  unchanged. The failed sign representation is preserved rather than accepted.
+next_attempt: >-
+  Test divergence through the nonnegative squared magnitude and reciprocal
+  limit instead of relying on SymPy's unsquared infinity sign.

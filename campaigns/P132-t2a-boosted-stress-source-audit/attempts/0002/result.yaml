@@ -1,0 +1,19 @@
+campaign: P132
+attempt: 0002
+status: failed
+candidate: B
+command: PYTHONPATH=src .venv/bin/python campaigns/P132-t2a-boosted-stress-source-audit/verify.py
+passed_before_failure: 6
+failure: >-
+  The first exact boost oracle attempted to construct a SymPy Derivative with
+  respect to the composite expression gamma*(t-v*x). SymPy correctly rejected
+  that expression as an invalid differentiation variable before the intended
+  chain-rule identity ran.
+diagnosis: representation_failure
+scientific_effect: >-
+  No T2A claim or convention was tested by the failing line. The failure is in
+  verifier construction and does not support or reject any candidate.
+next_attempt: >-
+  Remove the unused invalid derivative construction and test the wave-operator
+  factor through SymPy's automatically generated Subs representation, preserving
+  the frozen boost and all scientific thresholds.
