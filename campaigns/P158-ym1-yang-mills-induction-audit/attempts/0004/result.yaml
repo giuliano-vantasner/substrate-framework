@@ -1,0 +1,25 @@
+attempt: 0004
+campaign: P158
+candidate: formatting_corrected_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T11:51:00Z'
+finished_at: '2026-08-10T11:53:00Z'
+commands:
+  - remove_matching_terminal_blank_lines
+  - cmp_proposal_and_frozen_proposal
+  - recompute_all_freeze_hashes
+  - git_diff_check
+  - .venv/bin/python scripts/validate_repository.py
+freeze:
+  proposal_sha256: 50be0d545a11c3a01f6a1a58f7691449d0d6717e3426090b38f8938f3c54e614
+  frozen_proposal_sha256: 50be0d545a11c3a01f6a1a58f7691449d0d6717e3426090b38f8938f3c54e614
+  memory_contract_sha256: 2df3f4c595061c6676e1b846b15042cec1990dc55e60f53c29ca53dd99114655
+  source_sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6
+  dossier_sha256: 3f58232191a2b58ae507ddbc107fe0f7ed08dc4e1e41927c0ced74ea6760765d
+repository_contract: valid_157_accepted_claims_63_pending_units
+source_opened_or_executed: false
+debt:
+  - commit_the_source_blind_freeze
+  - reproduce_YM1_and_adjudicate_every_predicate
+  - determine_the_C_NVP_001_claim_delta
+next_attempt: commit_then_open_and_reproduce_YM1

@@ -1,0 +1,49 @@
+attempt: 0002
+campaign: P158
+candidate: corrected_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T11:45:00Z'
+finished_at: '2026-08-10T11:48:00Z'
+commands:
+  - repair_plain_prose_first_content_disclosure
+  - cmp_proposal_and_frozen_proposal
+  - memory_validate_P158_proposal
+  - memory_validate_parent_migration_effort
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+freeze:
+  proposal_sha256: 287f356e0ea41a90604551143257eaa4eacfdb239662c9584c1988b224a6bad5
+  frozen_proposal_sha256: 287f356e0ea41a90604551143257eaa4eacfdb239662c9584c1988b224a6bad5
+  memory_contract_sha256: 2df3f4c595061c6676e1b846b15042cec1990dc55e60f53c29ca53dd99114655
+  source_sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6
+  dossier_sha256: 3f58232191a2b58ae507ddbc107fe0f7ed08dc4e1e41927c0ced74ea6760765d
+preflight:
+  framework_repository: clean_at_bf083b8_before_contract_creation
+  framework_release: v0.122.0
+  source_repository: pinned_commit_with_later_dirty_engineering_framework_prose_and_memory_files_excluded
+  skill_checks: 7_passed_0_warnings
+  repository_contract: valid_157_accepted_claims_63_pending_units
+  memory_recall: >-
+    Found C-NAG-001's non-Abelian covariance and no-action ceiling,
+    C-VAC-001's complete Abelian scalar-QED2 loop theorem, and WM2's
+    requirement for independent action regulator representation baseline and
+    matching inputs. No accepted non-Abelian vacuum-polarization claim or
+    C-NVP-001 identifier exists.
+preexposure:
+  source_queue_metadata: >-
+    The queue exposed ten candidate dependencies, nine literal checks, one
+    assertion, a symbolic oracle, a fundamental trace factor one half, a
+    transverse projector, and a claimed generated kinetic term.
+  excluded_from_selection: true
+source_opened_or_executed: false
+compatibility_preflight: >-
+  Mutable and canonical work is frozen to exact algebra,
+  trapezoid_integral, or np.trapezoid and never executable np.trapz. Any
+  immutable spelling-only failure receives an isolated alias backed by
+  np.trapezoid before scientific adjudication and cannot reject a candidate.
+debt:
+  - commit_the_source_blind_freeze
+  - reproduce_YM1_and_adjudicate_every_predicate
+  - determine_whether_C_NVP_001_is_complete_distinct_and_naturally_compatible
+  - close_dependency_consumer_compatibility_and_physical_ceilings
+next_attempt: commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source

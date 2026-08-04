@@ -1,0 +1,16 @@
+attempt: 0003
+campaign: P158
+candidate: freeze_commit_precheck
+status: failed
+started_at: '2026-08-10T11:49:00Z'
+finished_at: '2026-08-10T11:50:00Z'
+command: git diff --check
+failure_class: record_formatting
+failure: >-
+  Both byte-identical manifest files contained one extra terminal blank line,
+  so diff hygiene rejected the freeze before staging or commit.
+source_opened_or_executed: false
+repair: remove_the_same_terminal_blank_line_from_both_manifest_copies
+debt:
+  - recompute_freeze_hashes
+  - rerun_freeze_validation_and_commit

@@ -1,0 +1,31 @@
+attempt: 0001
+campaign: P158
+candidate: initial_comparator_blind_freeze
+status: failed
+started_at: '2026-08-10T11:40:00Z'
+finished_at: '2026-08-10T11:44:00Z'
+commands:
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - read_current_release_C_NAG_001_C_VAC_001_and_canonical_modules
+  - memory search YM1 Yang Mills induction non-Abelian gauge
+  - registry_campaign_package_and_memory_collision_search_for_C_NVP_001
+  - sha256sum_hash_pinned_YM1_and_dossier_without_opening_their_bodies
+  - cmp_proposal_and_frozen_proposal
+  - memory_validate_P158_proposal
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+failure_class: contract_representation
+failure: >-
+  The Proposed Claim Delta section began with inline code rather than a
+  plain-prose first-content disclosure sentence, so memory validation rejected
+  the otherwise matching proposal contract.
+passed_before_failure:
+  skill_preflight: 7_ok_0_warnings
+  proposal_and_frozen_manifest: byte_identical
+  proposal_yaml: parsed
+  repository_contract: valid_157_accepted_claims_63_pending_units
+source_opened_or_executed: false
+repair: add_a_plain_prose_disclosure_sentence_before_the_identifier_detail
+debt:
+  - rerun_memory_and_freeze_validation
+  - commit_the_source_blind_freeze

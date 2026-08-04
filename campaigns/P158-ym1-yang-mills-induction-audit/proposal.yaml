@@ -1,0 +1,92 @@
+id: P158
+base_release: v0.122.0
+base_commit: bf083b8
+scientific_base_commit: bf083b8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [YM1]
+question: >-
+  Reproduce and independently audit YM1's claimed induction of a non-Abelian
+  Yang-Mills kinetic term, determine whether a complete conditional massive
+  scalar non-Abelian vacuum-polarization theorem is both supportable and
+  distinct from C-NAG-001 and C-VAC-001, and keep group trace algebra,
+  transverse two-point kinematics, a local low-momentum term, a declared bare
+  gauge action, and a physical substrate gauge sector separately typed.
+invariants:
+  - >-
+    C-NAG-001 fixes D=partial-i*g*W, the finite connection sign, curvature
+    covariance, commutator, and invariant trace square. It explicitly derives
+    no action coefficient, field equation, Yang-Mills induction, matter
+    content, weak sector, or substrate realization.
+  - >-
+    C-VAC-001 fixes the complete massive complex-scalar QED2 one-loop kernel,
+    bubble-seagull Ward cancellation, low-momentum coefficient, limit order,
+    and physical ceilings for a separately declared Abelian theory. It does
+    not by itself authorize a non-Abelian representation or covariant
+    completion.
+  - >-
+    Generator normalization must be explicit. For Hermitian generators in a
+    declared representation R, tr_R(T_a*T_b)=T(R)*delta_ab; component
+    F_a*F_a and tr_R(F*F) coefficients differ by that trace convention.
+  - >-
+    A transverse projector at nonzero momentum is kinematic. It neither
+    derives the loop numerator and seagull nor fixes the scalar form factor,
+    bare coefficient, local counterterm, gauge-field measure, or pole.
+  - >-
+    A one-loop two-point kernel about zero background determines its quadratic
+    color-diagonal surface. Promoting a full non-Abelian local invariant
+    additionally requires a background-field or heat-kernel derivation and
+    must preserve the cubic and quartic terms inside F.
+  - >-
+    A positive loop contribution is additive to any separately allowed bare
+    and counterterm coefficient. Field normalization, matter representation,
+    scalar mass, coupling, multiplicity, regulator, subtraction, dimension,
+    and matching scale remain declared inputs unless independently derived.
+  - >-
+    Queue metadata preexposes nine literal checks, one assertion, a symbolic
+    oracle, the fundamental Dynkin index one half, a transverse projector, and
+    a claimed generated kinetic term. Those values and labels are excluded
+    from candidate selection; the source and dossier bodies remain unopened
+    until this contract is frozen and committed.
+allowed_imports:
+  - C-NAG-001 only for exact local non-Abelian gauge conventions covariance curvature and invariant trace boundaries
+  - C-REP-002 only for the finite Pauli-half carrier without a physical weak identification
+  - C-VAC-001 only for the fully declared Abelian massive scalar-QED2 kernel Ward derivation and physical ceilings
+  - C-GAU-001 and C-MAX-001 only for Abelian covariance and the free bare kinetic coefficient boundary
+  - exact finite representation theory background-field expansion heat-kernel calculus and Euclidean one-loop algebra
+  - YM1 and YM1-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce YM1 literally and classify every predicate as exact trace or projector algebra loop evidence an imposed premise or unsupported interpretation.}
+  - {id: B, description: Map all correct content to C-NAG-001 C-REP-002 and C-VAC-001 with no new claim if YM1 only multiplies an Abelian answer by a trace factor.}
+  - {id: C, description: Derive a distinct conditional massive complex-scalar non-Abelian vacuum-polarization theorem in Euclidean two dimensions with explicit representation index bubble seagull and low-momentum covariant completion.}
+  - {id: D, description: Derive the separately declared classical Yang-Mills action variation Bianchi identity source consistency and coefficient freedom if that theorem is distinct and source relevant.}
+  - {id: E, description: Retain only group trace normalization and nonzero-momentum projector kinematics if the executable never supplies a quantum determinant or loop derivation.}
+  - {id: F, description: Compare fundamental adjoint and rescaled-generator representations to expose trace normalization and coupling-coordinate sensitivity.}
+  - {id: G, description: Construct bare-plus-loop and field-rescaling counterfamilies that preserve covariance while changing every claimed induced coupling pole or normalization.}
+  - {id: H, description: Require a complete substrate or weak Yang-Mills mechanism to supply quantum matter representation regulator counterterms dimension matching boundary data and observables independently.}
+  - {id: I, description: Close dependency semantic-consumer compatibility nonduplication disposition release documentation and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact agreement with C-NAG-001 connection curvature trace and generator conventions
+  - explicit dimension signature representation scalar statistics multiplicity mass coupling regulator determinant and quadratic-action convention
+  - bubble and seagull Ward cancellation derived before transverse decomposition
+  - distinction among projector coefficient transverse form factor local F-squared coefficient trace density and component density
+  - background-field or heat-kernel support for non-Abelian covariant completion including cubic and quartic curvature terms
+  - correct zero-momentum heavy-mass massless coupling and Abelian limits
+  - additive bare coefficient counterterm field-normalization and representation-index sensitivity
+  - separation of conditional quantum theorem from physical weak substrate photon pole and dimensional-lift interpretations
+  - accepted-framework compatibility assumption economy reusable API value source-aware nonduplication and full graph closure
+  - every queue-preexposed one-half projector and generated-term value excluded from concept selection and thresholds
+claims_proposed: [C-NVP-001]
+claim_delta: >-
+  Reserve C-NVP-001 only for a complete conditional non-Abelian scalar
+  vacuum-polarization theorem that is source-aware distinct from C-VAC-001 and
+  C-NAG-001. If the full derivation or novelty gate fails, the identifier
+  remains unpromoted and YM1 is terminally classified through existing claims.
+comparators_blinded_until: >-
+  This manifest, matching prose contract, YM1 and dossier hashes, candidates A
+  through I, representation, action, loop, regulator, coefficient, limit,
+  physical-ceiling, compatibility, mutation, and done-gate criteria are frozen
+  and committed. Queue-exposed trace, projector, and kinetic-term values cannot
+  select a concept. The source and dossier bodies, exact AST flow, guards,
+  constants, and further comparator material remain unopened until that boundary.
+status: draft

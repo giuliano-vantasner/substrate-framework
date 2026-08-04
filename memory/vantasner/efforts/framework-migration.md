@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T10:00:00Z'
+updated: '2026-08-10T11:40:00Z'
 tags:
 - substrate-framework
 - effort
@@ -1652,21 +1652,34 @@ frozen source graph records B1's isolated version-only compatibility fallback
 without executing it for this change. Exact integrated gate counts are pinned
 in P156 attempt 0016.
 
+P157 terminally qualifies O1 without a new claim or release. Exact canonical
+and fresh routes show that its declared half-phase section has a constant
+projector: local connection and bare phase are minus one half and minus one,
+but endpoint transition minus one makes the corrected holonomy plus one. A
+genuine moving director loop retains the accepted minus-one holonomy in real
+and periodic gauges. Spin-one transport returns plus identity at two pi; the
+source sign is an inserted U1 phase. The RP2 ray orbit and full
+`(S2 x U1)/Z2` polar manifold retain distinct Z2 and integer deck groups.
+All seven predicates receive individual verdicts through unchanged C-SPN-001,
+C-DEF-001, C-BER-001, C-HOL-001, and C-CHR-001. The full gate passes 1,408
+tests, 647 memory records, and the skill contract; exact counts are pinned in
+P157 attempt 0011.
+
 ## Canonicalization
-The registry, `v0.122.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-seven accepted claims. P001 through P156 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 64 pending, 0 partial, 3 migrated, 142 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.122.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-seven accepted claims. P001 through P157 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 63 pending, 0 partial, 3 migrated, 143 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 64
-pending, 3 migrated, 142 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is O1, pinned at SHA-256
-`270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64`.
-The queue exposes seven static predicates, one assertion, a symbolic oracle,
-and source labels B1, ME1, NA1, and S2. P157 must freeze the spin-one carrier,
-polar-state orbit and stabilizer, projective or phase quotient, base space,
-Berry endpoint convention, topology, representation content, material-model
-premises, and physical BEC or substrate ceilings before opening the body.
-Neither an RP2 label nor a repeated minus-one value may select the topology or
-identify a physical condensate.
+The effort remains active. D4 is discharged, but D1 remains open with 63
+pending, 3 migrated, 143 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is YM1, pinned at SHA-256
+`bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6`.
+The queue exposes nine static predicates, one assertion, a symbolic oracle,
+ten candidate dependencies, a fundamental trace factor, a transverse
+projector, and a claimed generated Yang--Mills term. P158 must freeze the
+representation, trace, connection, curvature, quantum action, determinant,
+Ward, regulator, coefficient, counterterm, normalization, dimension, limit,
+and physical substrate ceilings before opening the body. Neither a one-half
+trace nor a transverse projector may select a loop mechanism or kinetic term.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
