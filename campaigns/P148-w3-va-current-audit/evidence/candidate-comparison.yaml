@@ -1,0 +1,36 @@
+campaign: P148
+criteria_order:
+  - exact field type metric orientation raised-lowered index and derivative conventions
+  - distinction among identities conservation laws boundary balances internal charges and interaction vertices
+  - accepted nonlinear sine-Gordon compatibility without deleting the potential
+  - parity covariance versus fixed-theory symmetry state asymmetry and intrinsic violation
+  - current and coupling dimensions plus boundary-flux hypotheses
+  - constant-field massless zero-coupling full-line and half-line limits
+  - mutation sensitivity
+  - assumption economy reusability nonduplication and consumer closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal native and alias-only execution classify every predicate without turning the tally into a headline oracle.
+  B:
+    decision: selected_as_duplicate_accepted_surface
+    reason: The supportable characteristic and topological identities are already governed by C-SG-011 and C-SG-012.
+  C:
+    decision: selected_as_exact_nonduplicating_classification
+    reason: The convention-explicit derivative and epsilon-dual ledger exposes the correct divergences parity and null combinations without a new claim.
+  D:
+    decision: selected_as_boundary_ceiling
+    reason: Boundary field change and vacuum data determine transfer while sign correlation remains independent under C-SG-013 and C-BND-001.
+  E:
+    decision: selected_as_field_and_interaction_ceiling
+    reason: C-U1-001 is a distinct complex field current and W3 supplies no matter field action connection or vertex.
+  F:
+    decision: selected
+    reason: Dependency consumer compatibility source disposition queue and memory closure are mandatory.
+selection_basis: >-
+  Candidates B through E jointly classify W3 without reserving a duplicate
+  claim. Candidate A preserves literal evidence and F closes the framework.
+  No source output, numerical closeness, desired label, or external comparator
+  selected the result.
+foundational_revision_required: false
+debt: []

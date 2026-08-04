@@ -1,0 +1,52 @@
+source_unit: W3
+source_sha256: b49a0bd1075b16b5906719b6ed51454ed04adab5168be7ec98178599313b3f17
+ast:
+  check_calls: 7
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: true
+  direct_legacy_numpy_attributes: 2
+  eager_legacy_default_fallbacks: 0
+objects_present:
+  - declared massless decomposition phi=L(t+x)+R(t-x)
+  - derivative and epsilon-dual component arrays with reversed source spatial sign
+  - symbolic parity substitution exchanging the supplied left and right symbols
+  - a Gaussian normalized to an inserted topological area
+  - imported integer-label arithmetic and distinct complex-field U1 identity
+  - one chosen sine-cosine sign-correlation trace
+objects_absent:
+  - chain-rule-consistent source spatial derivative
+  - divergence evaluation for W3's named vector and axial objects
+  - nonlinear sine-Gordon characteristic source in the headline construction
+  - evolved boundary field vacuum endpoints or a charge-transfer oracle
+  - a Lorentz spinor matter representation gamma matrices or bilinear current
+  - a parity-breaking action selected interaction or coupling derivation
+  - a gauge connection field strength current vertex anomaly computation or dynamics
+load_bearing_insertions:
+  - assignment: phi_x=R_prime-L_prime
+    classification: negative_of_the_direct_chain_rule
+  - assignment: eps_plus_is_left_from_J0_left
+    classification: desired_channel_label_is_separate_from_computed_plus_channel
+  - assignment: Gaussian_area_minus_two_pi
+    classification: desired_winding_is_normalized_in_before_quadrature
+  - assignment: dQ_plus=1_and_dAxial=1
+    classification: compared_integers_are_not_derived_by_the_script
+  - assignment: A0_EM=0_and_J0_EM=V0
+    classification: distinct_complex_Noether_current_is_relabelled_as_real_scalar_derivative
+  - assignment: pureV_dQ_zero=rect_zero
+    classification: sign_correlation_is_relabelled_as_topological_transfer
+headline_failures:
+  - The source's phi_x sign contradicts its declared L(t+x)+R(t-x) decomposition and exchanges the characteristic channels.
+  - The derivative vector has sine-Gordon divergence minus sin(phi), while its epsilon dual is conserved off shell; W3 neither computes these divergences nor derives its stated vector-axial conservation reading.
+  - Parity covariance exchanges the null combinations but does not construct or select a parity-breaking interaction.
+  - The Gaussian and integer comparisons are input-normalized and do not simulate a boundary charge event.
+  - A real scalar derivative is not the independently declared complex-field Noether current of C-U1-001.
+  - One phase-chosen sign correlation is not topological transfer and cannot establish charge discrimination.
+headline_verdict: >-
+  Qualified. Native W3 passes its first three checks and then stops only because
+  its immutable source calls the removed NumPy name. Alias-only replay through
+  np.trapezoid passes all seven predicates. That tally validates supplied
+  algebra, normalized inputs, and relabelled guards, not a physical V-A current,
+  charged vertex, parity violation, charge event, U1 identification, gauge
+  interaction, anomaly, or weak sector.

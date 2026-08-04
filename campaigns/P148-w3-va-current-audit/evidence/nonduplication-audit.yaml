@@ -1,0 +1,21 @@
+campaign: P148
+claim: none
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: not_applicable
+nearest_claims:
+  C-SG-011: Governs both characteristic defects the epsilon-dual topological current its off-shell conservation scalar parity and explicit V-A ceilings.
+  C-SG-012: Fixes signature derivative light-cone stress and conservation conventions.
+  C-SG-013: Separates boundary sign correlation from topological transfer and supplies countermodels.
+  C-BND-001: Governs the underdetermined scalar boundary residual and parity-family classification.
+  C-U1-001: Governs a distinct conditional complex-field Noether current and its real-field zero limit.
+  C-REP-002: Governs W2's carrier-factor and common-charge constraints without identifying winding events.
+distinct_positive_object: none
+decision: qualify_source_without_claim_or_release_change
+reason: Every exact supportable W3 surface is already accepted and importable; a new current ledger would duplicate C-SG-011 and C-SG-012.

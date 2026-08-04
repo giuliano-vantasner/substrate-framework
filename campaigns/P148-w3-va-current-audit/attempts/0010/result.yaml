@@ -1,0 +1,19 @@
+attempt: 0010
+campaign: P148
+candidate: B_C_D_E_source_aware_nonduplication
+status: failed
+started_at: '2026-08-10T00:24:00Z'
+finished_at: '2026-08-10T00:25:00Z'
+commands:
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/verify.py
+result:
+  passed_checks_before_failure: 26
+  failed_check: W3_supplies_no_parity_breaking_action_or_selected_coupling
+failure_class: implementation_oracle
+diagnosis: >-
+  The scientific criterion was sound, but the text fixture required the American
+  spelling "normalized" while the immutable source uses "normalised". The source
+  contains no parity-breaking Lagrangian or selection calculation; its unit
+  coupling is a declaration in prose.
+scientific_effect: none
+next_attempt: correct_the_exact_source_fixture_without_changing_the_physics_criterion

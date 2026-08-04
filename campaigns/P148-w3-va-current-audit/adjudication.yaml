@@ -1,0 +1,62 @@
+campaign: P148
+title: W3 scalar derivative and V-A charged-current audit
+source_baseline: substrate@6d1f4e0
+source_units: [W3]
+base_release: v0.114.0
+release_after_adjudication: v0.114.0
+adjudicated_at: '2026-08-10T00:45:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native and alias-only replay classifies every source predicate without treating the tally as a headline oracle.}
+  - {id: B, reason: The supportable characteristic and topological identities remain governed by C-SG-011 and C-SG-012.}
+  - {id: C, reason: Exact convention-explicit derivative and epsilon-dual algebra supplies the corrected current classification without duplication.}
+  - {id: D, reason: Boundary endpoint and correlation countermodels preserve C-SG-013 and C-BND-001 separation.}
+  - {id: E, reason: Exact field-type and missing-interaction inventories exclude cross-field U1 and weak-current readings.}
+  - {id: F, reason: Dependency consumer compatibility source disposition queue and memory audits close the transaction.}
+claims: []
+reviewed_existing:
+  - {id: C-SG-011, decision: unchanged_characteristic_topological_and_VA_ceiling}
+  - {id: C-SG-012, decision: unchanged_tensor_light_cone_and_conservation_conventions}
+  - {id: C-SG-013, decision: unchanged_correlation_transfer_independence}
+  - {id: C-BND-001, decision: unchanged_boundary_trace_and_parity_family_ceiling}
+  - {id: C-REP-002, decision: unchanged_carrier_and_charge_event_distinction}
+  - {id: C-U1-001, decision: unchanged_distinct_complex_field_current}
+unpromoted_claims:
+  - {id: real_sine_Gordon_derivatives_are_a_physical_V_minus_A_current, reason: The gradient is sine-Gordon sourced and its epsilon dual is topological and off-shell conserved; no matter-current dictionary is derived.}
+  - {id: parity_exchange_is_intrinsic_maximal_violation, reason: Covariance exchanges the null combinations but W3 supplies no parity-breaking action or selected coupling.}
+  - {id: epsilon_plus_boundary_condition_is_a_charged_vertex, reason: One scalar residual constrains one trace and constructs no internal Noether current or interaction.}
+  - {id: normalized_Gaussian_derives_a_charge_event, reason: The desired area and compared integers are supplied before evaluation and no boundary evolution is solved.}
+  - {id: real_scalar_derivative_is_the_complex_U1_current, reason: C-U1-001 belongs to a separately declared complex field and vanishes for a genuinely real field.}
+  - {id: zero_sign_correlation_implies_zero_topological_transfer, reason: Accepted exact countermodels show the observables are independent.}
+  - {id: W3_builds_a_weak_or_gauge_interaction, reason: It has no spinor matter action connection current vertex coupling anomaly calculation or dynamics.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_current_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: memory/vantasner/decisions/W3-qualified-review.md
+source_disposition:
+  W3: qualified
+accepted_mappings: [C-SG-011, C-SG-012, C-SG-013, C-BND-001, C-REP-002, C-U1-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_np.trapezoid
+  immutable_primary: alias_only_np.trapz_to_np.trapezoid_replay
+  inherited_shapes: [G1_alias_only, W1_alias_only, NC4_alias_only]
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P148-w3-va-current-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P148-w3-va-current-audit/reviews/independent_current_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P148-w3-va-current-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

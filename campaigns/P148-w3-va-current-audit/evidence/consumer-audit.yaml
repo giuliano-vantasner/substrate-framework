@@ -1,0 +1,26 @@
+campaign: P148
+source_unit: W3
+reverse_consumers:
+  - {source_unit: W2, disposition: qualified, accepted_claims: [C-REP-002], effect: unchanged_independent_carrier_and_charge_constraint}
+  - {source_unit: W4, disposition: pending_adjudication, effect: may_not_import_W3_as_a_physical_charged_current_or_missing_energy_event}
+  - {source_unit: W5, disposition: pending_adjudication, effect: may_not_import_W3_unit_coupling_or_parity_selection}
+  - {source_unit: W7, disposition: pending_adjudication, effect: must_supply_its_own_matter_connection_action_current_and_coupling}
+  - {source_unit: M1, disposition: pending_adjudication, effect: may_not_import_W3_as_a_gauge_or_mass_sector}
+  - {source_unit: FG3, disposition: qualified, accepted_claims: [C-MIX-001], effect: unchanged_independent_mixing_matrix_surface}
+  - {source_unit: FG4, disposition: qualified, accepted_claims: [C-MIX-002], effect: unchanged_independent_CP_invariant_surface}
+  - {source_unit: NC1, disposition: qualified, accepted_claims: [C-SG-011], effect: unchanged_exact_nonlinear_current_classification}
+  - {source_unit: NC3, disposition: qualified, accepted_claims: [C-SG-013], effect: unchanged_boundary_correlation_surface}
+  - {source_unit: AS6, disposition: qualified, effect: gains_no_W3_current_or_interaction_authority}
+  - {source_unit: WM7, disposition: pending_adjudication, effect: may_not_import_W3_as_field_content_or_induction_authority}
+graph_replay:
+  nodes: 17
+  source_predicates: 184
+  source_assertions: 16
+  verifier_checks: 61
+  compatibility_shapes:
+    G1: {legacy_references: 2, eager_fallbacks: 0}
+    W1: {legacy_references: 2, eager_fallbacks: 0}
+    W3: {legacy_references: 2, eager_fallbacks: 0}
+    NC4: {legacy_references: 1, eager_fallbacks: 0}
+  mutable_legacy_accesses: 0
+debt: []

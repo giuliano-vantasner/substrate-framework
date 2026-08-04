@@ -1,0 +1,30 @@
+campaign: P148
+source_unit: W3
+declared_source_dependencies:
+  - {source_unit: EM1, disposition: qualified, accepted_claims: [C-U1-001], use: distinct_complex_field_current_ceiling_only}
+  - {source_unit: G1, disposition: qualified, accepted_claims: [C-RAD-001], use: none}
+  - {source_unit: G2, disposition: qualified, accepted_claims: [C-GOR-001], use: none}
+  - {source_unit: NC1, disposition: qualified, accepted_claims: [C-SG-011], use: exact_nonlinear_characteristic_and_topological_current_surfaces_only}
+  - {source_unit: NC4, disposition: qualified, accepted_claims: [C-SG-013], use: correlation_transfer_independence_and_numeric_ceiling_only}
+  - {source_unit: W1, disposition: qualified, accepted_claims: [C-BND-001], use: scalar_boundary_residual_and_rejected_selection_readings_only}
+  - {source_unit: W2, disposition: qualified, accepted_claims: [C-REP-002], use: representation_and_charge_event_distinction_only}
+  - {source_unit: W5, disposition: pending_adjudication, use: none}
+accepted_claim_closure:
+  - {claim: C-SG-011, dependencies: [C-SG-001]}
+  - {claim: C-SG-012, dependencies: [C-SG-001, C-SG-002]}
+  - {claim: C-SG-013, dependencies: [C-SG-011]}
+  - {claim: C-BND-001, dependencies: [C-SG-011, C-SG-013]}
+  - {claim: C-REP-002, dependencies: [C-SPN-002]}
+  - {claim: C-U1-001, dependencies: []}
+circularity: >-
+  W2, W5, and NC1 are both declared dependencies and reverse consumers. W5
+  remains pending and supplies no premise. Every retained W3 surface is already
+  accepted independently; source graph edges grant no authority in either
+  direction and no new claim closure is created.
+excluded_imports:
+  - every pending source result and every rejected physical reading of qualified sources
+  - W1 intrinsic parity charge selection and weak interaction
+  - W2 physical doublet charge event and same-carrier chirality
+  - W3's desired channel labels normalized witness and terminal tally
+  - any identification of real scalar derivative topological complex-Noether or weak currents
+debt: []

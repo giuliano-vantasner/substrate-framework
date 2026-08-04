@@ -1,0 +1,38 @@
+source_unit: W3
+checks:
+  W3.1:
+    source_verdict: pass
+    classification: corrected_massless_characteristic_sign_and_duplicate_identity
+    maps_to: [C-SG-011, C-SG-012]
+    reason: Direct chain rule gives phi_x=L_prime-R_prime, not W3's negative; with the accepted sign the plus channel is 2L_prime and the minus channel is 2R_prime.
+  W3.2:
+    source_verdict: pass
+    classification: qualified_parity_covariance_not_intrinsic_violation
+    maps_to: [C-SG-011, C-SG-012]
+    reason: Scalar parity makes the derivative vector polar, its epsilon dual axial, and exchanges the two null combinations; no parity-breaking action or selected coupling follows.
+  W3.3:
+    source_verdict: pass
+    classification: rejected_channel_relabel_and_boundary_vertex_identification
+    maps_to: [C-BND-001, C-SG-011]
+    reason: The source verifies plus equals 2R and minus equals 2L under its reversed sign, then independently assigns the desired plus-is-left label; one boundary residual constrains a trace but builds no internal current or vertex.
+  W3.4:
+    source_verdict: pass
+    classification: qualified_normalized_input_and_rejected_charge_event_conflation
+    maps_to: [C-SG-013, C-REP-002]
+    reason: The Gaussian is normalized to area minus two-pi before integration and no boundary evolution is solved; W2's ladder step one remains distinct from the supplied label transition two.
+  W3.5:
+    source_verdict: pass
+    classification: rejected_cross_field_current_and_assigned_axial_shift
+    maps_to: [C-U1-001, C-SG-011]
+    reason: A genuinely real field has zero complex-Noether current; W3 sets A0_EM to zero and both desired integer shifts by assignment, while its derivative dual is identically conserved and gradient is sine-Gordon sourced.
+  W3.G1:
+    source_verdict: pass
+    classification: rejected_correlation_as_charge_and_parity_as_selection
+    maps_to: [C-SG-013, C-BND-001]
+    reason: Chosen sine-cosine traces give near-zero sign correlation, not Delta Q; exact countermodels show correlation and endpoint transfer are independent, and parity-even laws do not force symmetric states or outcomes.
+  W3.G2:
+    source_verdict: pass
+    classification: local_wrong_sign_guard_only
+    maps_to: [C-SG-011]
+    reason: The guard distinguishes two expressions inside W3's reversed convention but does not repair the chain-rule sign or derive a charged-current interpretation.
+all_seven_adjudicated: true

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 73
-  qualified: 133
+  pending_adjudication: 72
+  qualified: 134
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1758,8 +1758,44 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-SG-011
+  - C-SG-012
+  - C-SG-013
+  - C-BND-001
+  - C-REP-002
+  - C-U1-001
+  qualification: W3's corrected real-scalar derivative identities, epsilon-dual conservation, parity exchange,
+    conditional boundary trace, and field-type distinction survive only under accepted sine-Gordon, boundary,
+    representation, and complex-current ceilings. Direct chain rule gives phi_x=L_prime-R_prime, while
+    W3 assigns the negative and then imports the opposite channel label. The derivative gradient is sine-Gordon
+    sourced and its epsilon dual is topological and off-shell conserved; W3 computes neither divergence
+    and relabels a distinct complex-field U1 identity. Parity covariance exchanges the null combinations
+    but supplies no parity-breaking action or selected coupling. The Gaussian is normalized to the desired
+    winding, integer shifts are assigned, and one chosen sign correlation is relabelled as topological
+    transfer. No evolved boundary event, spinor current, charged vertex, intrinsic parity violation, real-scalar
+    U1 current, anomaly, gauge interaction, weak sector, or substrate mechanism is accepted.
+  evidence:
+  - campaigns/P148-w3-va-current-audit/reviews/source_adjudication.md
+  - campaigns/P148-w3-va-current-audit/evidence/source-reproduction.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/source-audit.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/check-adjudication.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/input-provenance.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/dependency-audit.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/consumer-audit.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/candidate-comparison.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/primary-provenance.yaml
+  - campaigns/P148-w3-va-current-audit/evidence/literature-audit.yaml
+  - campaigns/P148-w3-va-current-audit/verify.py
+  - campaigns/P148-w3-va-current-audit/reviews/independent_current_review.py
+  - campaigns/P148-w3-va-current-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/W3-qualified-review.md
+  note: P148 qualifies W3 through forty-seven primary, twenty-five independent, and sixty-one frozen-graph
+    checks. The seventeen-node graph inventories 184 source predicates and sixteen assertions. Native
+    W3 stops only on removed np.trapz; isolated alias-only replay through np.trapezoid passes all seven
+    source checks, and mutable code has no executable legacy integration access.
 - source_unit: W4
   phase: phase-6
   path: merged-framework/bridges/phase-6/bridge_W4_neutrino_missing_energy.py

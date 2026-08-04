@@ -1,0 +1,33 @@
+campaign: P148
+source_unit: W3
+accepted_base: v0.114.0
+accepted_inputs:
+  - {claim: C-SG-011, use: exact characteristic defects epsilon-dual topological current parity and explicit V-A ceilings only}
+  - {claim: C-SG-012, use: signature raised-lowered derivative light-cone and conservation conventions only}
+  - {claim: C-SG-013, use: boundary correlation and topological-transfer independence only}
+  - {claim: C-BND-001, use: scalar boundary trace underdetermination and parity-family ceilings only}
+  - {claim: C-REP-002, use: W2 representation and charge-event distinction only}
+  - {claim: C-U1-001, use: distinct conditional complex-field Noether current and real-field zero limit only}
+mathematical_inputs:
+  - smooth real scalar phi on 1+1 Minkowski space
+  - signature plus-minus and orientation epsilon-upper-01 equals plus one
+  - ordinary chain rule equality of mixed partials and exact parity pullback
+  - declared normalized sine-Gordon equation phi_tt-phi_xx+sin(phi)=0
+  - optional separately declared massless decomposition L(t+x)+R(t-x)
+external_imports: []
+source_declared_inputs:
+  - reversed spatial derivative R_prime-L_prime
+  - desired left-channel label and unit coupling
+  - Gaussian normalized to area minus two-pi
+  - assigned dQ and axial shift integers
+  - complex-field formal identity and charge-label Lean definitions
+  - sine-cosine traces selected in quadrature
+excluded_from_derivation_or_selection:
+  - source channel names desired guards numerical closeness and terminal tally
+  - physical spinor current weak interaction charge event anomaly and gauge interpretation
+free_data:
+  - boundary source trace and endpoint field change
+  - field type matter representation action connection and coupling
+  - physical state charge map and interaction dynamics
+claim_delta: none
+debt: []

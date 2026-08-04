@@ -1,0 +1,39 @@
+attempt: 0013
+campaign: P148
+candidate: F_framework_closure
+status: passed
+started_at: '2026-08-10T00:46:00Z'
+finished_at: '2026-08-10T00:52:00Z'
+commands:
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/verify.py
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/reviews/independent_current_review.py
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --cached --check
+preflight:
+  repository_structure: passed
+  W3_memory_record: passed
+  generated_docs_current: true
+  generated_memory_current: true
+  queue_counts: {total: 218, pending: 72, qualified: 134}
+  P044_immutable_compatibility_replay: {checks: 28, status: passed}
+expected:
+  claim_delta: none
+  release_change: none
+  source_disposition: qualified
+  debt: []
+result:
+  primary_checks: 47
+  independent_checks: 25
+  graph_checks: 61
+  repository_tests: 1289
+  memory_files: 605
+  repository_workflow: passed
+  skill_validation: passed
+  cached_diff_check: passed
+  queue_counts: {total: 218, pending: 72, qualified: 134}
+  claim_delta: none
+  release_change: none
+  source_disposition: qualified
+debt: []
+next_attempt: commit_the_no_release_W3_adjudication_then_checkpoint_the_parent_effort_at_W4

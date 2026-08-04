@@ -1,0 +1,22 @@
+campaign: P148
+purpose: Determine whether an external source is required for the exact classification or W3 interpretation.
+external_sources_used: []
+reason: >-
+  The W3 classification follows from exact chain rule, 1+1 tensor calculus,
+  mixed-partial equality, scalar parity, accepted sine-Gordon APIs, boundary
+  countermodels, and direct inspection of pinned local formal artifacts. No
+  empirical value or literature-specific normalization enters it.
+source_attributions:
+  - attribution: Coleman_1975_bosonization
+    classification: excluded_unpinned_interpretive_reference
+    effect: It cannot supply W3's missing field dictionary normalization spinor bilinear action connection vertex anomaly or physical validity domain.
+  - attribution: imported_Lean_ChargeDiscrimination
+    classification: audited_local_formal_artifact
+    effect: It unfolds declared integer labels and a sign-conditioned selection, not boundary dynamics or a current vertex.
+  - attribution: imported_Lean_Phase3_U1Current
+    classification: audited_local_formal_artifact
+    effect: It verifies a conditional identity for separately supplied complex-field coefficients, not W3's real scalar derivative objects.
+framework_decision: >-
+  Qualify W3 only through already accepted derivative, boundary,
+  representation, and complex-current distinctions. Promote no physical V-A,
+  weak, gauge, anomaly, charge-selection, or substrate reading.

@@ -1,0 +1,18 @@
+attempt: 0011
+campaign: P148
+candidate: B_C_D_E_source_aware_nonduplication
+status: failed
+started_at: '2026-08-10T00:25:00Z'
+finished_at: '2026-08-10T00:26:00Z'
+commands:
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/verify.py
+result:
+  passed_checks_before_failure: 26
+  failed_check: W3_supplies_no_parity_breaking_action_or_selected_coupling
+failure_class: representation_fixture
+diagnosis: >-
+  The immutable Python source stores the rendered sentence in adjacent string
+  literals with a backslash-n escape. A raw-source probe for the rendered newline
+  therefore cannot match even though both declaration tokens are present.
+scientific_effect: none
+next_attempt: match_the_two_stable_raw_tokens_independently

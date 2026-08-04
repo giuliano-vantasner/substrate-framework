@@ -1,0 +1,31 @@
+attempt: 0012
+campaign: P148
+candidate: B_C_D_E_source_aware_nonduplication
+status: passed
+started_at: '2026-08-10T00:27:00Z'
+finished_at: '2026-08-10T00:42:00Z'
+commands:
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/verify.py
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/reviews/independent_current_review.py
+  - .venv/bin/python campaigns/P148-w3-va-current-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  primary_checks: 47
+  independent_checks: 25
+  graph_checks: 61
+  graph_nodes: 17
+  graph_source_predicates: 184
+  graph_assertions: 16
+  claim_delta: none
+  release_change: none
+scientific_verdict: >-
+  W3's corrected real-scalar derivative, epsilon-dual, characteristic, parity,
+  boundary, and current-type surfaces are already governed by accepted claims.
+  Its physical V-A, charged-current, intrinsic parity-violation, charge-event,
+  complex-U1, anomaly, gauge, and weak-sector readings do not close.
+compatibility_verdict: >-
+  Native W3 stops only at two direct immutable np.trapz accesses; alias-only
+  replay through np.trapezoid passes all seven source predicates. Mutable P148
+  code has no executable legacy integration access.
+debt:
+  - close_individual_records_queue_and_integrated_gate
+next_attempt: stage_the_complete_no_release_adjudication_and_run_one_integrated_gate
