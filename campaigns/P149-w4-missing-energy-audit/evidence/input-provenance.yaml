@@ -1,0 +1,36 @@
+campaign: P149
+source_unit: W4
+accepted_base: v0.114.0
+accepted_inputs:
+  - {claim: C-SG-002, use: normalized rest-breather energy only}
+  - {claim: C-SG-005, use: scalar threshold-deficit partition and non-interaction ceiling only}
+  - {claim: C-SG-008, use: one accepted on-shell boosted-breather vector only}
+  - {claim: C-SG-011, use: winding and topological-current ceilings only}
+  - {claim: C-SG-012, use: signature stress signs and boundary-flux requirement only}
+  - {claim: C-SG-013, use: correlation and charge-transfer independence only}
+  - {claim: C-BND-001, use: missing boundary evolution and trace freedom only}
+mathematical_inputs:
+  - exact positive masses m1 and m2
+  - exact real observed rapidity theta
+  - signature (+,-) and component ordering energy then momentum
+  - declared center-of-mass threshold total vector (m1+m2,0)
+  - observed on-shell vector (m1*cosh(theta),m1*sinh(theta))
+external_imports: []
+source_declared_inputs:
+  - total scalar energy sixteen
+  - one reflected mass-eight kink with supplied gamma and velocity
+  - zero-net-momentum drive
+  - absorbed means inaccessible at positive spatial infinity
+  - W3 physical V-A current and charge-event reading
+excluded_from_derivation_or_selection:
+  - source numeric samples and terminal tally
+  - W3 rejected physical current
+  - charge labels detector semantics and neutrino analogy
+  - unevolved study.py control and finite-interval q_bulk
+free_data:
+  - above-threshold energy and boundary work
+  - residual channel identity and invariant mass
+  - boundary storage radiation and momentum exchange
+  - detector acceptance and event reconstruction
+claim_delta: C-KIN-001
+debt: []

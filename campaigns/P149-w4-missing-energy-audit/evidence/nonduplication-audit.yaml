@@ -1,0 +1,26 @@
+campaign: P149
+claim: C-KIN-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-SG-005: >-
+    Gives one scalar breather-plus-deficit threshold partition but no outgoing
+    four-vector residual or two-body mass-shell equality theorem.
+  C-SG-008: >-
+    Gives the energy-momentum vector for one boosted breather but does not
+    subtract it from a general two-body threshold or classify the residual.
+  P085_local_radiative_kinematics: >-
+    Contains a campaign-local conditional special case and no canonical API or
+    accepted general threshold claim.
+distinct_positive_object: >-
+  C-KIN-001 uniquely supplies a reusable exact two-body threshold ledger, its
+  residual invariant, mass-shell defect, sign, and unique equality condition.
+governed_consumers: [W4, W5, NA1]
+decision: distinct_additive_claim

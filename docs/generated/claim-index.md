@@ -399,6 +399,15 @@ In the standard fundamental SU(3) convention of C-LIE-001 with Y=2*T_8/sqrt(3), 
 - Compatibility: `compatible_extension`
 - Dependencies: C-LIE-001, C-LIE-002
 
+## C-KIN-001
+
+Let m1 and m2 be exact positive masses and theta an exact real rapidity. In 1+1 signature (+,-), take the center-of-mass threshold four-vector P=(m1+m2,0) and one observed on-shell vector p1=(m1*cosh(theta),m1*sinh(theta)). The residual p2=P-p1 closes total four-momentum exactly and has mass-shell defect p2^2-m2^2=2*m1*(m1+m2)*(1-cosh(theta)), which is nonpositive and vanishes if and only if theta=0. At that equality point p1=(m1,0) and p2=(m2,0), so both particles are at rest. Thus a nonzero two-particle recoil requires total energy above threshold; otherwise the residual cannot be a second free particle of mass m2 and requires a separately modeled channel such as boundary storage, work, or radiation. This exact kinematic theorem derives no scattering outcome, state production, detector response, charge selection, current, neutrino, weak interaction, or substrate realization.
+
+- Accepted in: `v0.115.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-KRN-001
 
 For a supplied finite inverse kernel K(k2)=sum_j c_j*k2^s_j with k2 positive and exact positive real exponents, first combine equal exponents and remove coefficients that simplify exactly to zero. If every remaining coefficient is provably nonzero, the smallest remaining exponent s_star controls the infrared and the corresponding power of |k| is 2*s_star. Exact cancellation can expose a higher exponent, while any separately supplied lower fractional term remains leading over analytic integer-power corrections. An undecidable symbolic coefficient supplies only a condition and cannot be treated as nonzero. In the fixed convention G(x)=integral d^d k/(2*pi)^d exp(i*k.x)/[A*(k^2)^s], for r=|x|>0, A nonzero, and 0<s<d/2, the exact kernel away from contact terms is Gamma(d/2-s)*r^(2*s-d)/[A*4^s*pi^(d/2)*Gamma(s)]. The separately supplied specialization d=3,s=1,A=1 is 1/(4*pi*r), but the theorem does not select s, d, A, a source, boundary condition, force law, charge normalization, electromagnetic sector, or substrate realization.

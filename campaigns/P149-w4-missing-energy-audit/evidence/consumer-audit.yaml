@@ -1,0 +1,23 @@
+campaign: P149
+source_unit: W4
+reverse_consumers:
+  - source_unit: W5
+    disposition: pending_adjudication
+    effect: must_not_import_W4_free_hidden_kink_charge_condition_or_neutrino_reading
+  - source_unit: NA1
+    disposition: pending_adjudication
+    effect: must_not_import_W4_as_SU2_gauge_or_Wilson_loop_authority
+graph_replay:
+  nodes: 6
+  source_predicates: 63
+  source_assertions: 6
+  verifier_checks: 25
+  compatibility_shapes:
+    G1: 2
+    W3: 2
+  eager_legacy_fallbacks: 0
+decision: >-
+  Neither pending consumer gains authority. C-KIN-001 is additive and has no
+  existing canonical caller; its focused tests and package export are replayed
+  directly because the graph mapper does not map untracked definitions.
+debt: []

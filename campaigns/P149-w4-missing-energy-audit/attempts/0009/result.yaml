@@ -1,0 +1,25 @@
+attempt: 0009
+campaign: P149
+candidate: integrated_promotion_transaction
+status: passed
+started_at: '2026-08-10T01:56:00Z'
+finished_at: '2026-08-10T01:59:00Z'
+commands:
+  - generate_migration_queue_docs_and_accepted_memory
+  - scripts/validate.sh
+  - git_diff_checks_and_generated_state_comparisons
+scope:
+  claim: C-KIN-001
+  release: v0.115.0
+  source_disposition: W4_qualified
+  expected_queue_after: {total: 218, pending: 71, qualified: 135, migrated: 3, duplicate: 8, out_of_scope: 1}
+result:
+  workflow: {claims: 150, accepted: 150, proposals: 0}
+  migration_queue: {total: 218, pending: 71, qualified: 135, migrated: 3, duplicate: 8, out_of_scope: 1, partial: 0}
+  memory_files: 610_valid
+  skill_validation: passed
+  pytest: 1302_passed
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_status: 0
+debt: []
+next_attempt: parent_migration_checkpoint_then_freeze_W5_without_reusing_W4_rejected_physical_readings

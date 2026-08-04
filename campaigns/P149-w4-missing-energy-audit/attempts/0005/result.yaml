@@ -1,0 +1,17 @@
+attempt: 0005
+campaign: P149
+candidate: canonical_threshold_ledger_first_focused_test
+status: failed
+started_at: '2026-08-10T01:25:00Z'
+finished_at: '2026-08-10T01:27:00Z'
+command: .venv/bin/python -m pytest tests/test_relativistic_thresholds.py -q
+result:
+  passed: 11
+  failed: 2
+  mechanism: >-
+    SymPy intentionally retained cosh(log(2)) and sinh(log(2)) in the
+    canonical vector, while two tests expected their exponential-rewrite
+    rational values without requesting that independent rewrite.
+failure_class: test_representation
+scientific_effect: none_the_symbolic_four_vector_and_defect_remain_exact
+next_attempt: rewrite_only_the_numeric_test_observations_through_exp_before_comparison

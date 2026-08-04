@@ -1,0 +1,38 @@
+source_unit: W4
+source_sha256: afa341c860ba89889d8d0a9fe6cd62948b5303f243e3884abf7d3acf24a7f602
+ast:
+  check_calls: 8
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+  legacy_numpy_integration_references: 0
+objects_present:
+  - accepted breather-plus-threshold-deficit scalar identity
+  - algebraic residual E_pair minus one assigned reflected energy
+  - separately assigned opposite residual momentum
+  - conditional missing-energy Piecewise using a supplied zero charge label
+  - sampled expression values and bounds
+objects_absent:
+  - simultaneous two-body on-shell and four-momentum solution
+  - spatial energy decomposition into reflected absorbed stored and radiated sectors
+  - evolved boundary field and signed stress-energy flux ledger
+  - detector acceptance map or event reconstruction
+  - action-derived current vertex gauge interaction or weak-sector states
+  - neutrino field state dispersion relation or coupling
+load_bearing_failures:
+  - assignment: gamma_abs=2-gamma_refl
+    classification: below_one_for_every_nonzero_observed_recoil
+  - assignment: P_absorbed=-P_reflected
+    classification: not_checked_against_the_assigned_residual_energy_mass_shell
+  - assertion: equality_of_missing_and_gap_identifies_intact_breather
+    classification: scalar_energy_equality_does_not_identify_a_state
+  - guard: zero_DeltaQ_implies_zero_missing_energy
+    classification: conditionally_defined_or_defeated_by_both_absorbed_outcome
+  - guard: negative_fixed_total_residual_means_no_missing_energy
+    classification: incomplete_ledger_or_omitted_drive_work
+headline_verdict: >-
+  Qualified. Native W4 passes all eight literal checks without a compatibility
+  event, but a moving free hidden kink contradicts the exact residual mass
+  shell. The source has no evolved boundary split, detector model, physical
+  current, neutrino state, or weak interaction.

@@ -1,0 +1,28 @@
+attempt: 0008
+campaign: P149
+candidate: focused_primary_independent_graph_and_impact_replay
+status: passed
+started_at: '2026-08-10T01:34:00Z'
+finished_at: '2026-08-10T01:43:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_relativistic_thresholds.py -q
+  - .venv/bin/python campaigns/P149-w4-missing-energy-audit/verify.py
+  - .venv/bin/python campaigns/P149-w4-missing-energy-audit/reviews/independent_threshold_review.py
+  - .venv/bin/python campaigns/P149-w4-missing-energy-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - GitNexus_impact_two_body_threshold_ledger_and_detect_changes
+result:
+  focused_tests: 13_passed
+  primary_checks: 33_passed
+  independent_checks: 15_passed
+  graph_checks: 25_passed
+  graph_inventory: {nodes: 6, source_predicates: 63, source_assertions: 6}
+  impact: {risk: LOW, indexed_upstream_callers: 0, affected_processes: 0}
+  detect_changes_limitation: untracked_new_definitions_and_tests_not_mapped
+compatibility:
+  mutable_legacy_references: 0
+  W4_legacy_references: 0
+  inherited_alias_only_shapes: {G1: 2, W3: 2}
+debt:
+  - materialize_claim_release_disposition_reviews_and_generated_state
+  - run_one_integrated_terminal_gate
+next_attempt: stage_the_complete_promotion_transaction_and_run_the_integrated_gate_once

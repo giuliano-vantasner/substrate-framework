@@ -1,0 +1,43 @@
+source_unit: W4
+checks:
+  W4.1:
+    source_verdict: pass
+    classification: qualified_duplicate_threshold_identity
+    maps_to: [C-SG-002, C-SG-005]
+    reason: The exact scalar partition is accepted; it supplies no outgoing constituent state.
+  W4.2:
+    source_verdict: pass
+    classification: qualified_expression_distinction_rejected_state_identity
+    maps_to: [C-SG-005]
+    reason: The expressions differ generically, but equality of two scalar energies cannot identify an intact breather or event.
+  W4.3:
+    source_verdict: pass
+    classification: rejected_moving_hidden_free_kink
+    maps_to: [C-KIN-001]
+    reason: The scalar subtraction closes, but gamma_abs=2-gamma_refl is below one for every nonzero recoil and the residual fails the mass-eight shell.
+  W4.4:
+    source_verdict: pass
+    classification: rejected_physical_free_kink_interval
+    maps_to: [C-KIN-001]
+    reason: Monotonicity of an algebraic residual does not make its open interval an on-shell two-particle channel.
+  W4.5:
+    source_verdict: pass
+    classification: rejected_neutrino_recoil_interpretation
+    maps_to: [C-KIN-001, C-SG-012, C-BND-001]
+    reason: Opposite momentum is assigned separately; at v=0.6 the residual vector is (6,-6), with invariant mass zero, and boundary momentum exchange is omitted.
+  W4.6:
+    source_verdict: pass
+    classification: qualified_duplicate_numeric_substitution
+    maps_to: [C-SG-002, C-SG-005]
+    reason: The omega-half values reproduce accepted formulas and do not validate an outgoing split.
+  W4.G1:
+    source_verdict: pass
+    classification: rejected_conditional_definition_and_charge_implication
+    maps_to: [C-SG-011, C-SG-013]
+    reason: Zero is written into a Piecewise after assigning DeltaQ=0; the imported both-absorbed outcome has zero reflected charge and an unobserved sector.
+  W4.G2:
+    source_verdict: pass
+    classification: rejected_negative_residual_as_zero_missing_energy
+    maps_to: [C-KIN-001, C-SG-012]
+    reason: For boosted reflected particles the fixed-total residual is negative, signaling omitted drive or ledger terms rather than an exact zero or charge theorem.
+all_eight_adjudicated: true

@@ -1,0 +1,19 @@
+attempt: 0006
+campaign: P149
+candidate: primary_independent_and_graph_first_replay
+status: failed
+started_at: '2026-08-10T01:28:00Z'
+finished_at: '2026-08-10T01:31:00Z'
+command: >-
+  primary verifier then independent verifier then frozen source-graph replay
+result:
+  primary_passed_before_failure: 22
+  failed_check: W4_5_momentum_is_assigned_independently_of_the_energy_mass_shell
+  mechanism: >-
+    The source-text sentinel searched for P_missing=-P_recoil, whereas the
+    source constructs P_absorbed=-P_reflected and then assigns P_missing to
+    P_absorbed. The exact invariant countercheck itself was correct.
+  independent_and_graph: not_run_due_to_short_circuit
+failure_class: verifier_source_sentinel
+scientific_effect: none
+next_attempt: match_the_actual_source_assignment_then_replay_all_three_oracles

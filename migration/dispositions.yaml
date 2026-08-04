@@ -4697,3 +4697,54 @@ units:
       removed np.trapz; isolated alias-only replay through np.trapezoid passes
       all seven source checks, and mutable code has no executable legacy
       integration access.
+  W4:
+    disposition: qualified
+    accepted_claims:
+      - C-KIN-001
+      - C-SG-002
+      - C-SG-005
+      - C-SG-008
+      - C-SG-011
+      - C-SG-012
+      - C-SG-013
+      - C-BND-001
+    qualification: >-
+      W4's exact scalar breather-plus-deficit identity, generic distinction
+      between two residual expressions, and arithmetic substitutions survive
+      only under accepted energy, stress, boundary, and charge ceilings.
+      C-KIN-001 supplies the corrected positive object: subtracting one
+      on-shell particle from a two-body center-of-mass threshold vector leaves
+      a residual on the second target mass shell only at zero recoil, where
+      both particles rest. W4's gamma_abs=2-gamma_refl is below one for every
+      moving observed kink; at v=0.6 its residual (6,-6) has invariant mass
+      zero rather than eight. Its charge-zero guard is a conditional definition
+      with a both-absorbed counterexample, while its boosted both-reflect
+      residual becomes negative and exposes omitted drive or ledger terms. No
+      moving hidden free kink, measured missing fraction, neutrino recoil,
+      charge-conditioned invisibility, physical V-A current, weak interaction,
+      detector event, or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P149-w4-missing-energy-audit/reviews/source_adjudication.md
+      - campaigns/P149-w4-missing-energy-audit/evidence/source-reproduction.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/source-audit.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/check-adjudication.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/input-provenance.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/dependency-audit.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/consumer-audit.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/candidate-comparison.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/primary-provenance.yaml
+      - campaigns/P149-w4-missing-energy-audit/evidence/literature-audit.yaml
+      - campaigns/P149-w4-missing-energy-audit/verify.py
+      - campaigns/P149-w4-missing-energy-audit/reviews/independent_threshold_review.py
+      - campaigns/P149-w4-missing-energy-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-KIN-001-review.md
+      - memory/vantasner/decisions/W4-qualified-review.md
+    note: >-
+      P149 promotes C-KIN-001 through thirty-three primary, fifteen
+      independent, thirteen focused-test, and twenty-five frozen-graph checks.
+      The six-node graph inventories 63 source predicates and six assertions.
+      Native W4 passes all eight predicates without a NumPy integration event;
+      mutable code has no executable legacy integration access, and inherited
+      immutable G1 and W3 shapes remain alias-only version evidence through
+      np.trapezoid.

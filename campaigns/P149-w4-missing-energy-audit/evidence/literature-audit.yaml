@@ -1,0 +1,15 @@
+campaign: P149
+purpose: Determine whether an external source is required for the exact claim or source interpretation.
+external_sources_used: []
+reason: >-
+  C-KIN-001 follows from a declared 1+1 threshold four-vector, the standard
+  exact rapidity parameterization, component subtraction, and cosh(theta)>=1.
+  No empirical value, literature-specific normalization, or external physical
+  interpretation enters the theorem.
+source_attributions:
+  - attribution: neutrino_and_charged_current_analogy
+    classification: unsupported_interpretive_label_excluded
+    effect: >-
+      It cannot supply a state, dispersion relation, detector event, current,
+      interaction, or weak-sector dynamics and remains outside the claim.
+framework_decision: promote_only_the_self_contained_threshold_theorem

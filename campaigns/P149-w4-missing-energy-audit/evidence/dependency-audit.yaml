@@ -1,0 +1,20 @@
+campaign: P149
+source_unit: W4
+declared_source_dependencies:
+  - {source_unit: G1, disposition: qualified, use: no_authority_for_W4_particle_or_charge_reading}
+  - {source_unit: G2, disposition: qualified, use: no_authority_for_W4_particle_or_charge_reading}
+  - {source_unit: W3, disposition: qualified, use: corrected_scalar_current_ceiling_only}
+  - {source_unit: W5, disposition: pending_adjudication, use: no_authority}
+accepted_claim_closure:
+  - {claim: C-KIN-001, dependencies: []}
+circularity: >-
+  W4 declares pending W5 while W5 cites W4. The cycle grants no authority.
+  C-KIN-001 is independently closed by exact special-relativistic algebra and
+  does not depend on any source node or sine-Gordon claim.
+excluded_imports:
+  - G1 physical dilaton source interpretation
+  - G2 physical gravity or material metric interpretation
+  - W3 charged V-A vertex and weak-sector interpretation
+  - W5 pending asymmetry and chiral-coupling claims
+  - any source tally as blanket scientific authority
+debt: []

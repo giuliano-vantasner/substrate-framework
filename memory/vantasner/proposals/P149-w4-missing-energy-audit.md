@@ -2,7 +2,7 @@
 description: Derive and audit the exact energy-momentum and observability content of W4's missing-energy bridge
 author: vantasner
 created: '2026-08-10T01:05:00Z'
-updated: '2026-08-10T01:20:00Z'
+updated: '2026-08-10T01:55:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - energy-momentum
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P149 W4 Missing-Energy Audit
 

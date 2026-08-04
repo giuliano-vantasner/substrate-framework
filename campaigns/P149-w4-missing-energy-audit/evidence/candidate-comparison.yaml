@@ -1,0 +1,35 @@
+campaign: P149
+criteria_order:
+  - exact four-vector state mass shell frame and signature typing
+  - conservation closure with all reservoirs explicit
+  - accepted sine-Gordon compatibility
+  - premise and parameter economy
+  - threshold zero-recoil and above-threshold limits
+  - mutation sensitivity and countermodels
+  - boundary detector charge and particle provenance
+  - reusability consumer closure and nonduplication
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal replay classifies all eight checks but cannot support the headline by itself.
+  B:
+    decision: selected_as_accepted_mapping_only
+    reason: The scalar identity is already C-SG-002 and C-SG-005 and is not duplicated.
+  C:
+    decision: not_selected_for_claim_expansion
+    reason: W4 supplies no evolved boundary traces; accepted C-SG-012 already states the required flux ceiling.
+  D:
+    decision: selected_and_promoted_as_C_KIN_001
+    reason: Exact two-body threshold algebra yields the smallest novel positive theorem and diagnoses W4's failure.
+  E:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Charge-zero and equal-residual models separate visibility from particle identity without inventing a detector theory.
+  F:
+    decision: selected
+    reason: Dependency consumer compatibility novelty release queue and memory closure are mandatory.
+selection_basis: >-
+  Candidate D alone adds a distinct exact reusable object. A and E delimit the
+  source, B prevents duplication, C prevents an unevolved boundary claim, and
+  F closes the transaction. No source value selected the concept.
+foundational_revision_required: false
+debt: []

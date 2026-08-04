@@ -1,0 +1,19 @@
+attempt: 0007
+campaign: P149
+candidate: primary_independent_and_graph_second_replay
+status: failed
+started_at: '2026-08-10T01:32:00Z'
+finished_at: '2026-08-10T01:33:00Z'
+command: >-
+  primary verifier then independent verifier then frozen source-graph replay
+result:
+  primary_passed_before_failure: 24
+  failed_check: W4_G1_conditional_zero_is_written_into_a_Piecewise_definition
+  mechanism: >-
+    The verifier required a constructor spelling DeltaQ_elastic=sp.Integer(0),
+    while the source uses the exactly equivalent literal assignment
+    DeltaQ_elastic=0. The Piecewise construction was found.
+  independent_and_graph: not_run_due_to_short_circuit
+failure_class: verifier_source_sentinel
+scientific_effect: none
+next_attempt: match_the_literal_zero_assignment_without_changing_the_scientific_check
