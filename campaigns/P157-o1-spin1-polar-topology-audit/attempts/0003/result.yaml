@@ -1,0 +1,32 @@
+attempt: 0003
+campaign: P157
+candidate: corrected_cached_diff_freeze_boundary
+status: passed
+started_at: '2026-08-10T10:26:00Z'
+finished_at: '2026-08-10T10:28:00Z'
+commands:
+  - remove_only_the_shared_terminal_blank_line
+  - cmp proposal.yaml evidence/frozen-proposal.yaml
+  - parse_all_P157_freeze_YAML
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P157-o1-spin1-polar-topology-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+  - git diff --cached --check
+freeze:
+  proposal_sha256: 56a1431c8341d548ffc80359d4e0bc0e972e3dd0c896075b9de517a72d444a3c
+  frozen_proposal_sha256: 56a1431c8341d548ffc80359d4e0bc0e972e3dd0c896075b9de517a72d444a3c
+  memory_contract_sha256: 42895d41627695fa64bc73af76f594b839facad62bf6fc959082523050145c59
+  source_sha256: 270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64
+  dossier_sha256: 968e5df0e64739cbf61c7a34091269b99f8602d15450118eae2fd241c47f9aea
+results:
+  proposal_frozen_identity: passed
+  yaml_parse: passed
+  memory_contract: passed
+  repository_contract: valid_157_accepted_claims_64_pending_units
+  unstaged_diff_check: passed
+  cached_diff_check: passed
+  source_opened_or_executed: false
+debt:
+  - commit_the_corrected_source_blind_freeze
+  - reproduce_O1_and_adjudicate_every_predicate
+next_attempt: commit_then_inspect_and_reproduce_the_hash_pinned_source

@@ -1,0 +1,106 @@
+id: P157
+base_release: v0.122.0
+base_commit: 5a19786
+scientific_base_commit: 5a19786
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [O1]
+question: >-
+  Reproduce and independently audit O1's claimed spin-one polar-state,
+  projective-director, and Berry-holonomy construction, determine whether any
+  exact content remains beyond accepted C-SPN-001, C-DEF-001, C-BER-001, and
+  C-HOL-001, and preserve the distinction among the polar ray orbit RP2, the
+  full phase-retaining polar manifold (S2 x U1)/Z2, and a physical spinor-BEC
+  model with its missing action, material parameters, ground-state, defect,
+  and observable premises.
+invariants:
+  - >-
+    C-SPN-001 already fixes the standard pure spin-one carrier, exact invariant,
+    polar zero-spin equality set, projective polar ray orbit RP2, and
+    conditional positive-c2 selection. It derives no material c2, atomic
+    realization, spatial ground state, or full physical order parameter.
+  - >-
+    C-DEF-001 already distinguishes pi1(RP2)=Z2 from the full polar manifold
+    (S2 x U1)/Z2 with deck group Z. The square of its half generator is a
+    nontrivial integer phase vortex, not the identity.
+  - >-
+    C-BER-001 fixes A=i*psi_dagger*d psi and requires the endpoint transition
+    tau in H=tau*exp(i*integral A). A local half connection or a bare minus-one
+    phase is not an invariant without the normalized section, base loop, and
+    endpoint law.
+  - >-
+    C-HOL-001 requires representation-typed center data. A 2*pi SU2 center
+    acts as +I3 in the spin-one adjoint carrier even though it acts as -I2 in
+    the fundamental; any minus one from a projective spin-one lift must be
+    derived from its endpoint or phase quotient rather than a spinorial
+    2*pi sign.
+  - >-
+    Under C-SPN-001's unitary Cartesian convention, an exact real unit director
+    d maps to a normalized polar spinor zeta(d), and zeta(-d)=-zeta(d). The
+    ray quotient therefore identifies antipodes, while retaining a physical
+    U1 condensate phase instead gives the separate diagonal identification
+    (d,theta)~(-d,theta+pi).
+  - >-
+    The SO3 stabilizer of a polar ray must be derived rather than named. Its
+    connected rotations about the director and disconnected pi rotations that
+    reverse the representative distinguish the ray orbit SO3/O2 from an
+    incorrectly free SO3 action.
+  - >-
+    For a nontrivial projective loop, a real lift may have local A=0 and
+    endpoint tau=-1, while a periodic phase gauge may move that sign into the
+    integral. Both must give the same transition-corrected holonomy. A
+    fixed-ray phase control must not be mistaken for the same base loop.
+  - >-
+    The queue preexposes seven literal checks, one assertion, a symbolic
+    oracle, dependencies B1, ME1, NA1, and S2, and excerpts asserting a rotated
+    reference polar state, zero spin, antipodal director phase, local one-half
+    Berry connection, pi integral, and minus-one value. Those values and labels
+    are excluded from concept selection. The source and dossier bodies, exact
+    AST data flow, guards, constants, and narrative consumers remain unopened
+    until this contract is frozen and committed.
+allowed_imports:
+  - C-SPN-001 only for its exact pure-spin-one invariant polar ray orbit conditional fixed-density selection and physical ceilings
+  - C-DEF-001 only for the typed RP2 and full-polar covering topology and physical ceilings
+  - C-BER-001 only for endpoint-corrected closed-ray holonomy and gauge covariance
+  - C-HOL-001 only for representation-typed center and transport boundaries
+  - C-REP-002 only for finite-carrier representation discipline without a physical weak or matter identification
+  - exact finite-dimensional linear algebra SO3 spin-one representation orbit-stabilizer theory covering spaces and Berry one-form calculus
+  - O1 and O1-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce O1 literally and classify every predicate by exact consequence duplicate accepted content gauge-dependent local data and unsupported physical reading.}
+  - {id: B, description: Compose accepted C-SPN-001 C-DEF-001 and C-BER-001 with no new claim if O1 contains only their existing ray topology full-manifold distinction and projective holonomy.}
+  - {id: C, description: Derive an explicit exact spin-one polar director section and its SO3 ray stabilizer and promote only if source-aware nonduplication proves this reusable object is absent.}
+  - {id: D, description: Derive real-lift and periodic-gauge Berry ledgers on the embedded polar section including endpoint transitions and a fixed-ray counterexample.}
+  - {id: E, description: Separate the projective ray orbit RP2 from the phase-retaining polar manifold and classify their distinct loop groups and squared generators.}
+  - {id: F, description: Build a complete physical spinor-BEC model from an independently declared Gross-Pitaevskii action interaction signs trap and spatial boundary data if O1 actually supplies them.}
+  - {id: G, description: Construct identical ray or holonomy values under distinct material carrier and phase dictionaries to bound BEC weak-sector fermionic and substrate interpretation.}
+  - {id: H, description: Close dependency semantic-consumer compatibility nonduplication disposition release queue documentation and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact agreement with the accepted spin-one basis Cartesian map rotation and Berry conventions
+  - explicit normalization global phase director sign quotient stabilizer base loop and endpoint transition
+  - separation of projective ray orbit from the full phase-retaining polar manifold
+  - correct SO3 or SU2 carrier action including integer-spin 2*pi behavior
+  - gauge-invariant holonomy agreement between real and periodic sections
+  - fixed-ray antipodal and full-manifold counterexamples that distinguish local phase from topology
+  - separation of conditional fixed-density spin energy from a physical spatial BEC ground state and defect
+  - load-bearing basis phase endpoint winding representation interaction-sign and quotient mutations
+  - accepted-framework compatibility alternative constructions assumption economy reusable API value and source-aware nonduplication
+  - complete dependency semantic-consumer compatibility release queue documentation and durable-memory closure
+  - every queue-preexposed RP2 one-half pi and minus-one value excluded from concept selection and thresholds
+claims_proposed: []
+claim_delta: >-
+  The default candidate is no new claim because C-SPN-001, C-DEF-001, and
+  C-BER-001 already govern the advertised ray orbit, full-manifold distinction,
+  and projective holonomy. After source-aware reproduction, a committed
+  proposal revision may reserve one exact additive identifier only if an
+  explicit spin-one director section or stabilizer theorem is both distinct
+  and reusable.
+comparators_blinded_until: >-
+  This manifest, matching prose contract, O1 and dossier hashes, candidates A
+  through H, spin-one basis, ray and full-manifold quotient distinctions,
+  stabilizer, endpoint, representation, physical-ceiling, compatibility,
+  mutation, and done-gate criteria are frozen and committed. Queue-exposed
+  RP2, one-half, pi, and minus-one values cannot select a concept. The source
+  and dossier bodies, exact data flow, literal constants, guards, and further
+  comparator material remain unopened until that boundary.
+status: draft

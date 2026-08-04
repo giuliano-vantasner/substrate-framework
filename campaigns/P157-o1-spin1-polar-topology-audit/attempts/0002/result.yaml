@@ -1,0 +1,22 @@
+attempt: 0002
+campaign: P157
+candidate: initial_freeze_commit_boundary
+status: failed
+started_at: '2026-08-10T10:25:00Z'
+finished_at: '2026-08-10T10:25:00Z'
+commands:
+  - git_add_P157_freeze_records
+  - git diff --cached --check
+failure: >-
+  The cached diff exposed one extra terminal blank line in proposal.yaml and
+  its frozen copy. The earlier ordinary diff check could not inspect untracked
+  file contents, so the commit correctly stopped before recording the freeze.
+diagnosis:
+  category: record_serialization_and_validation_surface
+  scientific_claim_changed: false
+  source_opened_or_executed: false
+repair: >-
+  Remove only the shared terminal blank line, recompute all three contract
+  hashes, add a cached-diff check to the corrected freeze evidence, and commit
+  only after proposal and frozen copy remain byte-identical.
+next_attempt: corrected_cached_diff_freeze_boundary

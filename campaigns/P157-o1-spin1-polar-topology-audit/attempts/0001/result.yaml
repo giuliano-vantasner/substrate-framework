@@ -1,0 +1,54 @@
+attempt: 0001
+campaign: P157
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T10:12:00Z'
+finished_at: '2026-08-10T10:24:00Z'
+commands:
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - read_current_release_C_SPN_001_C_DEF_001_C_BER_001_C_HOL_001_and_canonical_modules
+  - memory search O1 spin-1 BEC RP2 polar nematic
+  - memory search real projective plane director half quantum Berry holonomy
+  - registry_campaign_package_and_memory_collision_search_for_spin1_polar_topology
+  - sha256sum hash_pinned_O1_and_dossier_without_opening_their_bodies
+  - inspect_framework_and_source_git_status_and_history
+  - cmp proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P157-o1-spin1-polar-topology-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+freeze:
+  proposal_sha256: 92a2c1447fa0d48b7ea317100949a0468f0f75a61026abb76e39b23840fe371b
+  frozen_proposal_sha256: 92a2c1447fa0d48b7ea317100949a0468f0f75a61026abb76e39b23840fe371b
+  memory_contract_sha256: 42895d41627695fa64bc73af76f594b839facad62bf6fc959082523050145c59
+  source_sha256: 270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64
+  dossier_sha256: 968e5df0e64739cbf61c7a34091269b99f8602d15450118eae2fd241c47f9aea
+preflight:
+  framework_repository: clean_at_5a19786_before_contract_creation
+  framework_release: v0.122.0
+  source_repository: pinned_commit_with_later_dirty_engineering_framework_prose_and_memory_files_excluded
+  skill_checks: 7_passed_0_warnings
+  repository_contract: valid_157_accepted_claims_64_pending_units
+  memory_recall: >-
+    Found accepted C-SPN-001 polar RP2 ray orbit, C-DEF-001 projective and
+    full-polar topology, and C-BER-001 endpoint-corrected projective holonomy.
+    No accepted claim explicitly names the complete polar ray stabilizer.
+preexposure:
+  source_queue_metadata: >-
+    The queue exposed four candidate dependencies, seven literal checks, one
+    assertion, a symbolic oracle, and excerpts naming the reference polar
+    rotation, zero spin, antipodal director phase, local one-half connection,
+    pi integral, and minus-one value.
+  excluded_from_selection: true
+source_opened_or_executed: false
+compatibility_preflight: >-
+  The queue inventory exposes no NumPy compatibility detail. Mutable code is
+  frozen to np.trapezoid or the canonical trapezoid_integral helper and never
+  executable np.trapz. Any immutable spelling-only failure will receive an
+  alias backed by np.trapezoid before scientific adjudication and will not
+  count as candidate rejection.
+debt:
+  - commit_the_source_blind_freeze
+  - reproduce_O1_and_adjudicate_every_predicate
+  - resolve_spin1_section_stabilizer_quotient_endpoint_and_physical_ceilings
+  - complete_source_aware_nonduplication_before_any_claim_or_implementation
+next_attempt: commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source
