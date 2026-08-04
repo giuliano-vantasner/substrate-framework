@@ -1,0 +1,30 @@
+campaign: P147
+source_unit: W2
+declared_source_dependencies:
+  - {source_unit: EM1, disposition: qualified, accepted_claims: [C-U1-001], use: current_requirements_ceiling_only}
+  - {source_unit: EM2, disposition: qualified, accepted_claims: [C-GAU-001], use: local_connection_requirements_ceiling_only}
+  - {source_unit: EM3, disposition: qualified, accepted_claims: [C-MAX-001], use: independent_gauge_dynamics_ceiling_only}
+  - {source_unit: M1, disposition: pending_adjudication, use: none}
+  - {source_unit: M2, disposition: pending_adjudication, use: none}
+  - {source_unit: S3, disposition: qualified, accepted_claims: [C-REP-001], use: supplied_representation_semantics_only}
+  - {source_unit: SM2, disposition: pending_adjudication, use: none}
+  - {source_unit: W1, disposition: qualified, accepted_claims: [C-BND-001], use: rejected_charge_and_chirality_readings_excluded}
+  - {source_unit: W3, disposition: pending_adjudication, use: none}
+  - {source_unit: W7, disposition: pending_adjudication, use: none}
+  - {source_unit: WM1, disposition: qualified, accepted_claims: [C-REP-001], use: table_normalization_ceiling_only}
+  - {source_unit: WM3, disposition: qualified, accepted_claims: [C-RGE-006], use: no_W2_claim_input}
+  - {source_unit: YM1, disposition: pending_adjudication, use: none}
+accepted_claim_closure:
+  - {claim: C-REP-002, dependencies: [C-SPN-002]}
+  - {claim: C-SPN-002, dependencies: []}
+circularity: >-
+  Seven declared dependencies are also reverse consumers and six source
+  dependencies remain pending. None enters C-REP-002. The accepted theorem is
+  independently exact and closes only through C-SPN-002; source graph edges
+  grant no authority in either direction.
+excluded_imports:
+  - every pending source result and every rejected physical reading of qualified sources
+  - W1 charge selection chiral matter fermion parity and weak interaction
+  - W2 labels per-event winding identification same-carrier projection and preloaded guard
+  - any source tally as blanket scientific authority
+debt: []

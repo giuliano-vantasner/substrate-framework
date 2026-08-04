@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P147
+candidate: C_D_canonical_factor_implementation
+status: failed
+started_at: '2026-08-09T22:13:00Z'
+finished_at: '2026-08-09T22:16:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/verify.py
+result:
+  passed_before_failure: 25
+  failure: W2_chirality_projector_is_the_same_matrix_as_twice_T3
+failure_class: implementation
+diagnosis:
+  - SymPy_left_a_mutable_matrix_on_one_side_and_an_unevaluated_scalar_matrix_product_on_the_other
+  - the_audited_exact_identity_is_true_after_canonical_matrix_evaluation
+scientific_effect: none
+preserved_evidence:
+  - all_25_preceding_source_hash_reproduction_algebra_and_charge_checks_passed
+next_attempt: canonicalize_the_matrix_comparison_then_replay_all_independent_paths

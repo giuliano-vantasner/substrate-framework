@@ -1,0 +1,34 @@
+campaign: P147
+source_unit: W2
+accepted_base: v0.113.0
+accepted_inputs:
+  - {claim: C-SPN-002, use: normalized abstract N=1 su2 carrier ladder commutator and physical ceilings only}
+  - {claim: C-SG-011, use: exact sine-Gordon winding labels and scalar parity exchange only}
+  - {claim: C-BND-001, use: W1 boundary parity and underdetermination ceilings only}
+  - {claim: C-REP-001, use: supplied representation and charge normalization semantics only}
+  - {claim: C-U1-001, use: independent example of current data absent from bare representation algebra}
+  - {claim: C-GAU-001, use: independent example of connection and local-covariance data absent from W2}
+mathematical_inputs:
+  - standard inner product on exact complex C2 isospin carrier
+  - Hermitian Pauli-half generators T_a=sigma_a/2
+  - nonzero finite-dimensional complex chirality carrier with Hermitian idempotent P
+  - optional declared unitary factor exchange sending P to identity-minus-P
+  - exact real common Abelian eigenvalue and coefficient
+external_imports: []
+source_declared_inputs:
+  - kink and antikink basis names with Q labels plus and minus one
+  - separately supplied unit winding event
+  - T3=Q/2 coordinate calibration
+  - same-carrier chirality and parity names
+  - imported Lean integer label arithmetic and solution analysis prose
+excluded_from_derivation_or_selection:
+  - physical kink antikink fermion or weak-isospin identity
+  - source per-event value and desired parity guard
+  - unproved gauge field connection current action anomaly interaction and charge-selection narrative
+free_data:
+  - common Abelian eigenvalue and its normalization coefficient
+  - physical state identification and charge-coordinate map
+  - chirality carrier projector and parity exchange
+  - gauge connection couplings action matter content and dynamics
+claim_delta: C-REP-002
+debt: []

@@ -1,0 +1,59 @@
+campaign: P147
+title: W2 SU2 doublet carrier factor and charge audit
+source_baseline: substrate@6d1f4e0
+source_units: [W2]
+base_release: v0.113.0
+accepted_release: v0.114.0
+adjudicated_at: '2026-08-09T23:15:00Z'
+selected_candidates:
+  - {id: A, reason: Literal replay classifies every source predicate without treating the tally as a headline oracle.}
+  - {id: B, reason: Standard Pauli and ladder identities are retained as the accepted C-SPN-002 N-one specialization.}
+  - {id: C, reason: Exact commutant elimination and common-charge spectrum delimit compatible label assignments.}
+  - {id: D, reason: The independent-factor construction supplies the natural Hermitian closing chiral action and correct parity decomposition.}
+  - {id: E, reason: The missing-dynamics inventory prevents representation algebra from being promoted as a gauge interaction.}
+  - {id: F, reason: Dependency consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-REP-002]
+unpromoted_claims:
+  - {id: kink_and_antikink_are_a_physical_weak_doublet, reason: Basis names and winding labels do not construct physical states or a weak representation.}
+  - {id: ladder_is_the_boundary_charge_changing_event, reason: The assigned label transition is two while the compared unit event is inserted independently.}
+  - {id: CP_forces_T3_equals_Q_over_2, reason: Opposite signs leave magnitude and normalization free.}
+  - {id: plus_minus_one_are_one_common_doublet_charge, reason: A common commuting Abelian shift leaves unit eigenvalue separation.}
+  - {id: same_carrier_Ta_PL_is_a_left_SU2_representation, reason: It is non-Hermitian for two generators and fails every commutator.}
+  - {id: left_only_operator_is_parity_odd_and_selects_charge, reason: A factor exchange swaps left and right; W2 preloads the guard and computes no correlation or transfer.}
+  - {id: W2_builds_a_weak_or_gauge_interaction, reason: It supplies no matter field connection action current anomaly analysis coupling or dynamics.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_su2_factor_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0006/result.yaml
+  integrated_terminal_gate: attempts/0007/result.yaml
+  claim_review: memory/vantasner/decisions/C-REP-002-review.md
+  source_review: memory/vantasner/decisions/W2-qualified-review.md
+source_disposition:
+  W2: qualified
+accepted_mappings: [C-REP-002, C-SPN-002, C-REP-001, C-SG-011, C-BND-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_np.trapezoid
+  immutable_primary: native_no_compatibility_event
+  inherited_shapes: [W1_alias_only, W3_alias_only, YM2_eager_fallback_pending]
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/reviews/independent_su2_factor_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_su2_doublets.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

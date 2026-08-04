@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 74
-  qualified: 132
+  pending_adjudication: 73
+  qualified: 133
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1683,8 +1683,46 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-REP-002
+  - C-SPN-002
+  - C-REP-001
+  - C-SG-011
+  - C-BND-001
+  qualification: 'W2''s exact Pauli-half algebra, fundamental ladder, supplied charge rescaling, complementary
+    projector arithmetic, and accurate negative gauge inventory survive only under accepted representation,
+    sine-Gordon, and boundary ceilings. C-REP-002 supplies the corrected positive object: SU2 generators
+    close with a nontrivial chirality projector only when it acts on an independent tensor factor; a declared
+    factor exchange makes the vector sum even and axial difference odd, while one left action is exchanged
+    rather than itself odd. The irreducible carrier commutant is scalar, and one common Abelian shift
+    leaves unit charge separation. W2''s plus-minus-one labels change by two, its per-event unit is inserted
+    separately, CP does not force T3=Q/2, opposite hypercharges are not one common doublet charge, and
+    its same-carrier T_a*P_L matrices fail Hermiticity and every su2 commutator. The parity guard is preloaded
+    and no correlation or field evolution is evaluated. No physical kink or antikink doublet, fermion
+    parity, Lorentz chirality, charge selection, gauge connection, current, interaction, anomaly statement,
+    weak sector, or substrate mechanism is accepted.'
+  evidence:
+  - campaigns/P147-w2-su2-doublet-audit/reviews/source_adjudication.md
+  - campaigns/P147-w2-su2-doublet-audit/evidence/source-reproduction.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/source-audit.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/check-adjudication.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/input-provenance.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/dependency-audit.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/consumer-audit.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/candidate-comparison.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/primary-provenance.yaml
+  - campaigns/P147-w2-su2-doublet-audit/evidence/literature-audit.yaml
+  - campaigns/P147-w2-su2-doublet-audit/verify.py
+  - campaigns/P147-w2-su2-doublet-audit/reviews/independent_su2_factor_review.py
+  - campaigns/P147-w2-su2-doublet-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-REP-002-review.md
+  - memory/vantasner/decisions/W2-qualified-review.md
+  note: P147 promotes C-REP-002 through forty-nine primary, twenty-five independent, fourteen focused-test,
+    and eighty-three frozen-graph checks. The 24-node graph inventories 234 source predicates and 26 assertions.
+    Native W2 passes all nine predicates without a NumPy compatibility event; mutable code has no executable
+    legacy integration access, and inherited immutable shapes remain version-only evidence.
 - source_unit: W3
   phase: phase-6
   path: merged-framework/bridges/phase-6/bridge_W3_VA_charged_current.py

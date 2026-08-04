@@ -1,0 +1,28 @@
+campaign: P147
+claim: C-REP-002
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-SPN-002: >-
+    Governs normalized finite-dimensional su2 ladders, commutators, and Casimir
+    data, but not an independent projector factor, full commutant, common
+    Abelian charge constraint, or vector/axial parity decomposition.
+  C-REP-001: >-
+    Governs exact supplied representation rows and normalization freedom, but
+    does not state the irreducible SU2 carrier-factor theorem.
+  C-LIE-002: >-
+    Solves the SU3 fundamental commutant and center, not the SU2 doublet,
+    chirality-factor, parity, or charge problem.
+distinct_positive_object: >-
+  C-REP-002 uniquely supplies pure exact APIs for the Pauli-half commutant,
+  independent-factor left and right SU2 actions, vector and axial parity,
+  same-carrier counterexample, and common-Abelian charge spectrum.
+governed_consumers: [W2, W3, W5, W7, M1, M2, NA1, YM1, YM2, SM1, SM2, SM3, FG3, FG4, WM1, WM2, GK1, WM7]
+decision: distinct_additive_claim

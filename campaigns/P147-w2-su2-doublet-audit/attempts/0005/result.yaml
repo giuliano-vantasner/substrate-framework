@@ -1,0 +1,20 @@
+attempt: 0005
+campaign: P147
+candidate: C_D_canonical_factor_implementation
+status: failed
+started_at: '2026-08-09T22:17:00Z'
+finished_at: '2026-08-09T22:20:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/verify.py
+result:
+  passed_before_failure: 25
+  failure: W2_chirality_projector_is_the_same_matrix_as_twice_T3
+failure_class: target_statement
+diagnosis:
+  - the_source_identifies_eps_x_diag_1_minus_1_with_the_chirality_sign_operator
+  - eps_x_equals_twice_T3_but_P_L_equals_identity_plus_eps_x_over_two
+  - the_same_carrier_diagnosis_remains_valid_but_the_checked_matrix_was_misstated
+scientific_effect:
+  - correct_the_audit_predicate_to_distinguish_the_sign_operator_from_its_projector
+preserved_evidence:
+  - the_failure_prevented_a_false_exact_identity_from_entering_C_REP_002_evidence
+next_attempt: replay_the_correct_same_carrier_identity_then_all_independent_paths

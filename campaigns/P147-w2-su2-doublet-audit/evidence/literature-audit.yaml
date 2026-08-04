@@ -1,0 +1,26 @@
+campaign: P147
+purpose: Determine whether an external source is required for the exact claim or W2 interpretation.
+external_sources_used: []
+reason: >-
+  C-REP-002 follows from declared finite-dimensional complex inner-product
+  spaces, exact Pauli matrices, tensor products, projector algebra, commutant
+  elimination, and an explicitly declared factor exchange. No empirical value,
+  literature-specific normalization, or Standard-Model parameter enters it.
+source_attributions:
+  - attribution: Pauli_and_standard_Lie_theory
+    classification: directly_rederived_exact_matrix_identities
+    effect: no_external_authority_required
+  - attribution: Glashow_Weinberg_Salam_target_shape
+    classification: excluded_unpinned_interpretive_reference
+    effect: >-
+      It cannot supply W2's missing Lorentz matter content, common hypercharge,
+      gauge connection, action, current, anomaly cancellation, or dynamics.
+  - attribution: imported_Lean_ChargeDiscrimination
+    classification: audited_local_formal_artifact
+    effect: >-
+      Its theorems unfold declared integer labels and a sign-conditioned choice;
+      they do not prove field dynamics, spin statistics, or weak state identity.
+framework_decision: >-
+  Promote only the exact self-contained carrier-factor theorem. Treat every
+  physical chiral, fermionic, charged-current, gauge, or weak-sector reading as
+  unpromoted pending provenance-bearing field and interaction dynamics.

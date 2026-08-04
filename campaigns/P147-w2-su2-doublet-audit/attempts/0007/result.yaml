@@ -1,0 +1,35 @@
+attempt: 0007
+campaign: P147
+candidate: terminal_promotion
+status: passed
+started_at: '2026-08-09T23:16:00Z'
+finished_at: '2026-08-09T23:28:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/reviews/independent_su2_factor_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_su2_doublets.py
+  - scripts/validate.sh
+  - git diff --check
+preflight_event:
+  - >-
+    validate_repository stopped before the integrated gate because this
+    accepted artifact path had not yet been instantiated; the transaction was
+    not represented as passing and no scientific assertion failed.
+result:
+  primary: ALL_49_CHECKS_PASS
+  independent: ALL_25_CHECKS_PASS
+  source_graph: ALL_83_CHECKS_PASS
+  focused_tests: 14_passed
+  repository_tests: 1289_passed
+  workflow: 149_claims_149_accepted_0_proposals
+  migration_queue: 218_units_73_pending_0_partial_133_qualified
+  memory: 603_files_valid
+  skill: valid
+  staged_diff_check: clean
+  debt: []
+debt: []
+next_attempt: >-
+  Run only record-sensitive repository, generated-state, memory, and diff
+  checks after finalizing this append-only result; do not repeat the unchanged
+  scientific or full-suite boundary.

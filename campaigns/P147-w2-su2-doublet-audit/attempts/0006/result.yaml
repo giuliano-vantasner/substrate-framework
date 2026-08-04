@@ -1,0 +1,27 @@
+attempt: 0006
+campaign: P147
+candidate: C_D_canonical_factor_implementation
+status: passed
+started_at: '2026-08-09T22:21:00Z'
+finished_at: '2026-08-09T22:32:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/reviews/independent_su2_factor_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P147-w2-su2-doublet-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_su2_doublets.py
+result:
+  primary: ALL_49_CHECKS_PASS
+  independent: ALL_25_CHECKS_PASS
+  source_graph: ALL_83_CHECKS_PASS
+  focused_tests: 14_passed
+  source_graph_inventory: 24_nodes_234_predicates_26_assertions
+  numpy_compatibility_event_in_W2: false
+  mutable_legacy_integration_accesses: 0
+claim_result:
+  - exact_fundamental_and_independent_factor_theorem_established
+  - same_carrier_W2_product_rejected_by_Hermiticity_commutator_and_commutant_oracles
+  - common_Abelian_charge_cannot_realize_the_declared_plus_minus_one_labels
+  - parity_charge_gauge_and_dynamical_interpretations_remain_unpromoted
+debt:
+  - close_claim_source_consumer_release_queue_and_memory_reviews
+next_attempt: assemble_and_validate_the_claim_level_promotion_transaction

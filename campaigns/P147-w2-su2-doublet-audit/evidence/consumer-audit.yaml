@@ -1,0 +1,31 @@
+campaign: P147
+source_unit: W2
+reverse_consumers:
+  - {source_unit: W3, disposition: pending_adjudication, effect: may_import_only_C_REP_002_not_W2_physical_doublet_or_charge_transition}
+  - {source_unit: W5, disposition: pending_adjudication, effect: may_not_import_W2_parity_guard_as_rectification_dynamics}
+  - {source_unit: W7, disposition: pending_adjudication, effect: must_supply_its_own_connection_action_and_current}
+  - {source_unit: M1, disposition: pending_adjudication, effect: may_not_import_W2_as_a_Higgs_or_mass_sector}
+  - {source_unit: M2, disposition: pending_adjudication, effect: may_not_import_W2_as_a_Proca_or_Meissner_sector}
+  - {source_unit: NA1, disposition: pending_adjudication, effect: must_supply_its_own_connection_and_Wilson_loop_data}
+  - {source_unit: YM1, disposition: pending_adjudication, effect: may_not_import_W2_as_Yang_Mills_induction}
+  - {source_unit: YM2, disposition: pending_adjudication, effect: may_not_import_W2_as_a_3plus1_lift}
+  - {source_unit: SM1, disposition: pending_adjudication, effect: must_supply_full_group_action_and_matter_content}
+  - {source_unit: SM2, disposition: pending_adjudication, effect: must_solve_common_charge_assignments_independently}
+  - {source_unit: SM3, disposition: pending_adjudication, effect: must_supply_chiral_matter_and_anomaly_trace_data}
+  - {source_unit: FG3, disposition: qualified, accepted_claims: [C-MIX-001], effect: unchanged_independent_mixing_matrix_surface}
+  - {source_unit: FG4, disposition: qualified, accepted_claims: [C-MIX-002], effect: unchanged_independent_CP_invariant_surface}
+  - {source_unit: WM1, disposition: qualified, accepted_claims: [C-REP-001], effect: unchanged_supplied_trace_table_surface}
+  - {source_unit: WM2, disposition: duplicate_evidence, effect: gains_no_authority}
+  - {source_unit: GK1, disposition: pending_adjudication, effect: must_supply_its_own_dimensional_and_kinetic_data}
+  - {source_unit: WM7, disposition: pending_adjudication, effect: may_not_import_W2_as_field_content_or_induction_authority}
+graph_replay:
+  nodes: 24
+  source_predicates: 234
+  source_assertions: 26
+  verifier_checks: 83
+  compatibility_shapes:
+    W1: {legacy_references: 2, eager_fallbacks: 0}
+    W3: {legacy_references: 2, eager_fallbacks: 0}
+    YM2: {legacy_references: 1, eager_fallbacks: 1}
+  mutable_legacy_accesses: 0
+debt: []

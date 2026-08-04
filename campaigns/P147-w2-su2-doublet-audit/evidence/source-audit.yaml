@@ -1,0 +1,68 @@
+source_unit: W2
+source_sha256: 0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16
+ast:
+  check_calls: 9
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+  direct_legacy_numpy_attributes: 0
+objects_present:
+  - exact Pauli-half su2 commutators and fundamental ladder matrices
+  - assigned basis names kink and antikink with supplied labels plus and minus one
+  - separately inserted per-event winding magnitude one
+  - declared coordinate calibration T3=Q/2
+  - exact complementary rank-one matrices on the same C2 carrier
+  - same-carrier products T_a*P_L and their tautological right annihilation
+  - a desired P_L-to-P_R substitution called parity
+  - an accurate hard-coded inventory saying no gauge field is built
+objects_absent:
+  - a state construction identifying sine-Gordon sectors with an SU2 carrier
+  - one common commuting Abelian charge realizing labels plus and minus one
+  - an independent Lorentz-spinor or chirality carrier
+  - Hermitian generators closing su2 after the source's same-carrier projection
+  - a unitary parity operator or parity-eigenoperator test
+  - an evaluated boundary correlation or topological transition
+  - a gauge connection covariant derivative action current anomaly calculation or interaction
+load_bearing_insertions:
+  - assignment: kink_and_antikink_as_standard_basis_vectors
+    classification: physical_state_names_do_not_follow_from_the_matrix_representation
+  - assignment: dQ_per_event=1
+    classification: different_inserted_event_from_the_actual_label_transition_of_two
+  - assignment: T3=Q_over_2
+    classification: supplied_charge_coordinate_calibration_not_forced_by_CP_opposition
+  - assignment: eps_x=diag_1_minus_1_on_the_isospin_C2
+    classification: same_carrier_chirality_relabel_not_an_independent_factor
+  - assignment: guard_fires=True_and_G_left_parity=T_a_P_R
+    classification: desired_parity_verdict_and_image_preloaded
+  - assignment: gauge_field_built=False
+    classification: accurate_negative_inventory_not_positive_coupling_evidence
+headline_failures:
+  - >-
+    The standard Pauli representation is exact, but attaching kink, antikink,
+    fermion, weak-isospin, or charged-current names requires separate physical
+    state and interaction provenance.
+  - >-
+    The declared basis-label transition is minus one to plus one and changes Q
+    by two. Comparing the ladder's T3 step one with a separately inserted
+    winding event one does not identify the two operations.
+  - >-
+    CP-opposite labels fix opposite signs only. They do not select magnitude,
+    T3=Q/2, or a physical representation.
+  - >-
+    A common Abelian generator on the irreducible doublet is scalar, so
+    Q=T3+cY has eigenvalue separation one. W2's labels have separation two and
+    its computed opposite hypercharges are not one shared doublet charge.
+  - >-
+    The source reuses the isospin carrier as chirality space. T_a*P_L is
+    non-Hermitian for a=1,2 and fails every cyclic su2 commutator; P_L*P_R=0
+    cannot repair the representation.
+  - >-
+    Exchanging left and right factors makes their sum even and difference odd.
+    One left operator is exchanged with the right operator, not mapped to its
+    negative, and W2 constructs no parity or rectification oracle.
+headline_verdict: >-
+  Qualified. Native execution passes all nine predicates without a NumPy
+  compatibility event. The tally validates exact standard matrices, supplied
+  labels, tautological projectors, and preloaded guards, not W2's physical
+  chiral SU2_L, charge-changing, fermionic, or weak-interaction headline.

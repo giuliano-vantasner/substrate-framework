@@ -1,0 +1,48 @@
+source_unit: W2
+checks:
+  W2.1:
+    source_verdict: pass
+    classification: duplicate_exact_fundamental_su2_algebra
+    maps_to: [C-SPN-002, C-REP-002]
+    reason: Pauli-half matrices close exactly; basis names add no physical content.
+  W2.2:
+    source_verdict: pass
+    classification: duplicate_exact_fundamental_ladder
+    maps_to: [C-SPN-002]
+    reason: The N=1 ladder is accepted, while kink and antikink are supplied basis labels.
+  W2.3:
+    source_verdict: pass
+    classification: rejected_conflation_of_two_distinct_charge_changes
+    maps_to: [C-SPN-002, C-SG-011]
+    reason: The actual assigned-label transition is two, while the compared per-event value one is inserted separately.
+  W2.4:
+    source_verdict: pass
+    classification: qualified_supplied_charge_rescaling
+    maps_to: [C-REP-001, C-REP-002]
+    reason: T3=Q/2 follows only after the plus-minus-one coordinate labels are supplied; CP opposition does not fix the scale.
+  W2.5:
+    source_verdict: pass
+    classification: corrected_incompatible_common_Abelian_charge
+    maps_to: [C-REP-001, C-REP-002]
+    reason: The source correctly finds opposite Y values, but one irreducible doublet requires a common scalar commuting Abelian generator and unit charge separation.
+  W2.6:
+    source_verdict: pass
+    classification: qualified_projector_arithmetic_with_wrong_carrier_semantics
+    maps_to: [C-REP-002]
+    reason: The projectors are complementary, but eps_x equals 2*T3 on the already-used isospin carrier and supplies no independent chirality factor.
+  W2.7:
+    source_verdict: pass
+    classification: rejected_same_carrier_left_representation
+    maps_to: [C-REP-002]
+    reason: T_a*P_L is non-Hermitian for two generators and fails all three commutators; only T_a tensor P_L on an independent factor gives a left SU2 action.
+  W2.8:
+    source_verdict: pass
+    classification: rejected_preloaded_parity_and_rectification_guard
+    maps_to: [C-REP-002, C-BND-001]
+    reason: The source assigns the desired image and Boolean. A true factor exchange swaps left and right, makes vector even and axial odd, and does not make the left operator itself odd or compute charge selection.
+  W2.9:
+    source_verdict: pass
+    classification: qualified_negative_gauge_inventory
+    maps_to: []
+    reason: The absent gauge field is hard-coded accurately, but no connection action current coupling anomaly statement or weak dynamics is established.
+all_nine_adjudicated: true

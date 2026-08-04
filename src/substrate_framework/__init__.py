@@ -78,6 +78,16 @@ from .boundary_correlations import (
     scalar_boundary_trace_family,
     sinusoidal_boundary_sign_correlation,
 )
+from .su2_doublets import (
+    SU2ChiralFactorLedger,
+    SU2CommonChargeLedger,
+    SU2FundamentalLedger,
+    SU2SameCarrierProjectorLedger,
+    su2_chiral_factor_ledger,
+    su2_common_charge_ledger,
+    su2_fundamental_ledger,
+    su2_same_carrier_projector_ledger,
+)
 from .bps_energy import (
     BogomolnyDensityDecomposition,
     NearBpsDifference,
@@ -1006,6 +1016,10 @@ __all__ = [
     "SU3TraceFiveCohomology",
     "SU3WeightMultiplicity",
     "SU2CurrentQuartic",
+    "SU2ChiralFactorLedger",
+    "SU2CommonChargeLedger",
+    "SU2FundamentalLedger",
+    "SU2SameCarrierProjectorLedger",
     "VortexParameters",
     "VortexSolution",
     "activated_barrier_log_elasticity",
@@ -1426,6 +1440,10 @@ __all__ = [
     "su3_irrep_quadratic_casimir",
     "su3_irrep_triality",
     "su3_isospin_multiplets",
+    "su2_chiral_factor_ledger",
+    "su2_common_charge_ledger",
+    "su2_fundamental_ledger",
+    "su2_same_carrier_projector_ledger",
     "su3_real_trace_five_cochain",
     "su3_trace_five_cohomology",
     "su3_trace_power_cochain",

@@ -1,0 +1,35 @@
+campaign: P147
+criteria_order:
+  - exact carrier basis inner product generator normalization and representation action
+  - separation of abstract algebra supplied labels state identity and physical dynamics
+  - accepted sine-Gordon charge and parity compatibility
+  - common-Abelian charge consistency and normalization covariance
+  - independent isospin and chirality carrier semantics
+  - basis relabel projector normalization and zero-coupling limits
+  - mutation sensitivity
+  - assumption economy reusability nonduplication and consumer closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal execution and data-flow classify every predicate but the tally cannot support the headline.
+  B:
+    decision: selected_as_duplicate_accepted_surface
+    reason: Standard Pauli and ladder results are exactly the N=1 specialization of C-SPN-002.
+  C:
+    decision: selected_and_promoted_as_part_of_C_REP_002
+    reason: The full commutant and common-Abelian charge solve give the smallest exact carrier and charge constraint.
+  D:
+    decision: selected_and_promoted_as_part_of_C_REP_002
+    reason: An independent factor is the natural representation-compatible home for a nontrivial chirality projector.
+  E:
+    decision: selected_as_explicit_ceiling
+    reason: Inventorying the absent connection action current and interaction prevents algebra from being relabelled as dynamics.
+  F:
+    decision: selected
+    reason: Dependency consumer compatibility source disposition release queue and memory closure are mandatory.
+selection_basis: >-
+  Candidates C and D jointly supply the distinct positive theorem. Candidate B
+  prevents duplication, A and E delimit W2, and F closes the framework. No
+  source label, output, witness, or comparator selected the concept.
+foundational_revision_required: false
+debt: []
