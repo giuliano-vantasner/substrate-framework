@@ -1,0 +1,70 @@
+revision: 0001
+campaign: P153
+parent_frozen_proposal_sha256: 85e16eafda92241b9c216e2289373ce25fa2ec063f1afc3c0bdb93d55937d79f
+trigger: >-
+  Source-aware exact rederivation finds a distinct conditional charged-scalar
+  theorem beyond C-OG-001, C-GAU-001, and C-BER-001, while showing that C1's
+  fixed-k shift is pure gauge on the line and its direct B1 substitution lacks
+  the required sign, pullback, dimensions, topology, and boundary data.
+unchanged:
+  - source and dossier hashes, accepted-base coordinates, and physical ceilings
+  - candidates A through H and their predeclared ordering
+  - structural selection criteria and exclusion of preexposed comparator values
+  - compatibility policy requiring exact algebra, trapezoid_integral, or np.trapezoid in mutable code
+claim_delta:
+  identifiers: [C-OG-005]
+  dependencies: [C-OG-001, C-GAU-001, C-BER-001]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_exact_charged_optical_scalar_module
+exact_statement: >-
+  Conditional on C-OG-001's metric, C-GAU-001's charge-e connection convention,
+  and the separately declared action
+  S=-integral sqrt(-g)*(g^{mu nu}(D_mu Psi)^*D_nu Psi+m^2*|Psi|^2) dt dx,
+  its Euler equation is
+  [D_mu(sqrt(-g)*g^{mu nu}D_nu Psi)]/sqrt(-g)-m^2*Psi=0.
+  For positive constant n,c0,m,e and constant real (A_t,A_x), a plane wave
+  exp(i*(k*x-w*t)) therefore obeys
+  n*(w+e*A_t)^2-(c0^2/n)*(k-e*A_x)^2=m^2. Under the affine gauge parameter
+  chi=a*t+b*x, w'=w-e*a, k'=k+e*b, A_t'=A_t+a, and A_x'=A_x+b, so
+  w+e*A_t and k-e*A_x are invariant. On the simply connected line every
+  constant connection is removed by chi=-A_t*t-A_x*x and creates no local
+  spectral shift. On a circle of circumference L with boundary condition
+  Psi(x+L)=exp(i*theta)Psi(x), mode q has
+  (w+e*A_t)^2=m^2/n+(c0^2/n^2)*[(2*pi*q+theta)/L-e*A_x]^2;
+  q'=q+ell and A_x'=A_x+2*pi*ell/(e*L) leave it invariant. For varying n(x),
+  the spatial operator is D_x[(c0^2/n)D_x Psi], differing from
+  (c0^2/n)D_xD_x Psi by -c0^2*n_x*D_x Psi/n^2. Finally, with C-BER-001's
+  B=i*psi_dagger*d psi convention and the same section phase as the U1 matter
+  phase, a separately declared texture phi(x) can map to this connection only
+  by e*A_x=-B_phi*partial_x(phi). These identities establish no material
+  action, breather realization, electromagnetic field, analog-gravity
+  observation, real-gravity coupling, or dynamical spacetime.
+source_corrections:
+  - restore_the_positive_charge_e_and_temporal_connection_in_the_invariant_variables
+  - classify_the_fixed_canonical_k_expansion_as_gauge_dependent_on_the_line
+  - require_circle_topology_charge_boundary_phase_and_holonomy_for_a_global_spectral_shift
+  - use_the_covariant_divergence_operator_when_the_index_varies
+  - require_the_Berry_one_form_pullback_and_opposite_same_phase_U1_sign
+  - reject_G_absence_as_evidence_for_a_physical_medium_coupling
+  - reject_the_dimensionally_unclosed_hard_coded_electrogravitic_ratio
+  - reject_symbol_membership_as_a_physical_discriminator
+novelty: >-
+  C-OG-001 owns only the static metric and geometry. C-GAU-001 owns local U1
+  covariance but no optical action, mass shell, pure-gauge line theorem, circle
+  spectrum, or variable-index boundary. C-BER-001 owns a closed projector-path
+  Berry ledger but explicitly supplies no coupling and uses the opposite
+  same-phase one-form transformation. No accepted API composes these structures
+  while preserving invariant momenta and the line-versus-circle distinction.
+oracle: >-
+  Exact SymPy action/operator algebra, plane waves, affine gauge transformations,
+  constant-connection removal, circle large-gauge relabeling, variable-index
+  divergence, and Berry pullback sign, independently rederived without the
+  canonical module and challenged by metric, mass, charge, phase, connection,
+  topology, boundary, derivative, pullback, and physical-dictionary mutations.
+implementation_boundary: >-
+  Add pure exact APIs for the charged optical scalar Lagrangian density,
+  Euler operator, constant-background invariant-momentum ledger, affine gauge
+  labels, circle modes, and Berry one-form pullback. Imports must execute no
+  simulation, use no numerical quadrature, and infer no breather, material,
+  electromagnetic, analog-gravity, or real-gravity realization.
+status: frozen

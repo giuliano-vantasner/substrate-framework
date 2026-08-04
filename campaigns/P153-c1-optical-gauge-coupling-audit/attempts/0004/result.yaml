@@ -1,0 +1,26 @@
+attempt: 0004
+campaign: P153
+candidate: source_aware_exact_classification_and_claim_selection
+status: passed
+started_at: '2026-08-10T05:16:00Z'
+finished_at: '2026-08-10T05:23:00Z'
+commands:
+  - accepted_claim_and_canonical_API_nonduplication_search
+  - exact_SymPy_metric_operator_gauge_line_circle_variable_index_and_Berry_pullback_rederivation
+result:
+  exact_relations: 10_passed
+  selected_candidates: [B, C, D, F, G, H]
+  rejected_candidate: {A: source_physical_classification_does_not_survive}
+  duplicate_only_candidate: {E: false}
+  reserved_claim: C-OG-005
+  dependencies: [C-OG-001, C-GAU-001, C-BER-001]
+  source_checks: {exact_duplicate: 1, qualified_exact: 5, rejected_or_vacuous: 3}
+  key_corrections:
+    - invariant_momenta_replace_fixed_canonical_label_interpretation
+    - constant_connection_is_pure_gauge_on_the_line
+    - global_shift_requires_circle_boundary_and_holonomy_data
+    - variable_index_requires_covariant_divergence
+    - same_phase_Berry_identification_requires_eA_x=-B_phi*phi_x
+    - no_physical_medium_or_gravity_dictionary_is_derived
+  compatibility_event: none
+next_attempt: commit_the_frozen_source_aware_claim_delta_before_canonical_implementation

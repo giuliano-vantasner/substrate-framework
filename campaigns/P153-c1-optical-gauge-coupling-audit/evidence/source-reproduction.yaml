@@ -1,0 +1,34 @@
+source_unit: C1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-7/bridge_C1_Aeff_optical_metric_coupling.py
+source_sha256: 6c0b625cbfd8396104f185e4e3785956f66989a10d9fddf9d553fe433c39f0f5
+dossier_path: /home/dan/substrate/merged-framework/bridges/phase-7/dossiers/C1-dossier.md
+dossier_sha256: dcaf85bc1855d772a6f4c766a765ec5cfd606444f635fb90fb241bc1f744d5ef
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_C1_Aeff_optical_metric_coupling.py
+  exit_status: 0
+  terminal_tally: ALL_9_CHECKS_PASS
+  compatibility_event: none
+static_shape:
+  imports: [sympy]
+  local_functions: [check]
+  check_calls: 9
+  assertions: 1
+  numerical_quadrature: none
+  declared_symbols: [n, c0, m, w, k, A_eff]
+  fixed_numeric_inputs: [G_val, c_val, eps0, E_lab, A_eff_val, n_val, L_med]
+  unused_fixed_inputs: [eps0]
+reproduced_relations:
+  - g_eff=diag(-1/n,n/c0^2) and g_eff_inverse=diag(-n,c0^2/n)
+  - D_t_Psi=-i*w*Psi and D_x_Psi=i*(k-A_eff)*Psi for the declared e=1 A_t=0 convention
+  - n*w^2-(c0^2/n)*(k-A_eff)^2=m^2 under the separately declared constant-coefficient equation
+  - the fixed-canonical-k expansion relative to A_eff=0 is -(2*c0^2/n^2)*k*A_eff+(c0^2/n^2)*A_eff^2
+  - G is absent from the declared symbolic dispersion
+  - n=1 and A_eff=0 give w^2=c0^2*k^2+m^2
+  - the hard-coded ratio evaluates below the source threshold
+  - the source-defined symbolic expressions contain G and n in the asserted locations
+  - d_w/d_k depends on k and A_eff through k-A_eff
+scope_of_reproduction: >-
+  These are exact evaluations of the source's definitions and one hard-coded
+  floating comparison. Reproduction does not validate its Berry-to-spatial
+  connection dictionary, dimensions, gauge observability, medium realization,
+  analog-gravity interpretation, or electrogravitic normalization.

@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P153
+candidate: native_hash_pinned_C1_reproduction
+status: passed
+started_at: '2026-08-10T05:14:00Z'
+finished_at: '2026-08-10T05:16:00Z'
+commands:
+  - sha256sum_C1_source_and_dossier
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_C1_Aeff_optical_metric_coupling.py
+result:
+  source_sha256: 6c0b625cbfd8396104f185e4e3785956f66989a10d9fddf9d553fe433c39f0f5
+  dossier_sha256: dcaf85bc1855d772a6f4c766a765ec5cfd606444f635fb90fb241bc1f744d5ef
+  exit_status: 0
+  source_checks: 9_passed
+  terminal_tally: ALL_9_CHECKS_PASS
+  compatibility_failure: false
+classification: >-
+  Successful native execution establishes that the source predicates evaluate
+  as written. It does not establish that the B1 loop-coordinate representative
+  is a dimensioned spatial connection, that a constant connection on the line
+  is observable, or that the declared wave equation is a realized material or
+  gravitational interaction.
+debt:
+  - classify_each_predicate_against_accepted_dependencies_and_declared_premises
+  - require_a_coordinate_pullback_charge_units_topology_and_boundary_data
+  - independently_derive_and_mutate_the_conditional_operator_and_dispersion
+next_attempt: run_source_aware_nonduplication_and_exact_gauge_covariance_audit

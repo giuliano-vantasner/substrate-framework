@@ -1,0 +1,19 @@
+attempt: 0005
+campaign: P153
+candidate: source_aware_freeze_commit
+status: failed
+started_at: '2026-08-10T05:23:00Z'
+finished_at: '2026-08-10T05:24:00Z'
+commands:
+  - git_add_scoped_P153_source_aware_records
+  - git_diff_cached_check
+result:
+  exit_status: 2
+  formatting_errors: 3
+  affected_files:
+    - evidence/proposal-revision-0001.yaml
+    - evidence/source-audit.yaml
+    - evidence/source-reproduction.yaml
+failure_class: formatting_only
+scientific_effect: none
+next_attempt: remove_the_three_extra_EOF_blank_lines_restage_and_retry_the_same_commit

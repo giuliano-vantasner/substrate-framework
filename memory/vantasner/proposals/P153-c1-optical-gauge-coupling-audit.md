@@ -84,11 +84,31 @@ closed until this contract and matching manifest are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved before source-aware nonduplication. If candidates B
-through D expose a distinct theorem beyond C-OG-001, C-GAU-001, and C-BER-001,
-a recorded proposal revision will reserve one identifier with its exact
-dependency closure. Otherwise C1 will receive a complete qualified mapping
-without manufacturing a duplicate claim.
+Source-aware nonduplication reserves `C-OG-005` through frozen revision 0001.
+It depends on C-OG-001, C-GAU-001, and C-BER-001 and states the exact
+charged-scalar optical action and Euler operator, invariant constant-background
+dispersion, pure-gauge line limit, circle spectrum with boundary phase and
+large-gauge relabeling, variable-index divergence term, and the sign and
+pullback required to map C-BER-001's one-form into the U(1) convention. No
+physical medium, breather, electromagnetic, analog-gravity, or real-gravity
+dictionary is included.
+
+## Source-Aware Classification
+
+The unchanged source passes all nine predicates. C0 duplicates C-OG-001; C1,
+C2, C3, G1, and C4 retain exact conditional algebra only after restoring the
+charge, action, invariant momenta, and gauge/topology qualifications. C3b is
+vacuous because G was never in the declaration. G2 is dimensionally unclosed:
+the declared `eps0` is unused and neither comparator is derived from an
+accepted material action. G2b checks symbols inserted by construction.
+
+On the line the constant connection is removed by
+`chi=-A_t*t-A_x*x`. On a circle, the mode spectrum depends on the declared
+boundary phase and flat-connection holonomy and is invariant under simultaneous
+large-gauge connection and mode relabeling. For varying `n(x)`, C1's simple
+operator misses `-c0^2*n_x*D_x(Psi)/n^2`. With C-BER-001's same section phase,
+the consistent declared pullback is `e*A_x=-B_phi*partial_x(phi)`; the source's
+direct dimensionless positive-half substitution is not that map.
 
 ## Implementation and Oracle Plan
 
