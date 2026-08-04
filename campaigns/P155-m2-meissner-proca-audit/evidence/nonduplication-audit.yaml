@@ -1,0 +1,40 @@
+campaign: P155
+claim: C-PRC-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-GSM-001: >-
+    Supplies a conditional gauge-scalar quadratic coefficient, stabilizer
+    kernel, and generalized kinetic-metric eigenproblem but explicitly no gauge
+    kinetic action, vector Euler equation, dispersion, or screening BVP.
+  C-NAG-001: >-
+    Supplies non-Abelian covariance and curvature but explicitly no action
+    coefficient, equation of motion, mass, or physical weak vector.
+  C-VTX-001: >-
+    Supplies asymptotic inverse lengths for a separately declared radial
+    Abelian-Higgs functional, not a free Proca vector action, its derived
+    divergence constraint, or a half-line transverse uniqueness theorem.
+  C-EFT-001: >-
+    Supplies finite-dimensional algebraic stationary elimination without a
+    kinetic massive-vector PDE or boundary-value problem.
+  C-VAC-001: >-
+    Supplies a conditional Euclidean scalar-QED2 loop polarization and
+    explicitly withholds a complete kernel, analytic continuation, pole, or
+    physical photon; it is not a Proca action theorem.
+distinct_positive_object: >-
+  C-PRC-001 derives the full source-free Proca momentum kernel in a fixed
+  mostly-plus convention, proves that its nonzero-mass divergence constraint
+  follows from the equation, obtains the transverse massive dispersion, and
+  proves the unique decaying tangential half-line solution only after boundary
+  and asymptotic data. It also separates a one-mode kinetic coefficient from
+  its quadratic coefficient and states the exact C-GSM conditional composition.
+governed_consumers: [M2]
+decision: distinct_additive_claim
+debt: []

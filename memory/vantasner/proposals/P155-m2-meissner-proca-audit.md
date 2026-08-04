@@ -2,7 +2,7 @@
 description: Derive and audit M2's conditional source-free Proca screening theorem
 author: vantasner
 created: '2026-08-10T07:00:00Z'
-updated: '2026-08-10T07:00:00Z'
+updated: '2026-08-10T07:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -102,13 +102,48 @@ matching manifest are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved before source-aware nonduplication. Registry,
-campaign, and durable-memory searches show no accepted or proposed
-`C-PRC-*`, `C-PRO-*`, or `C-PROC-*` identifier and no accepted general Proca
-action theorem. If the exact source-aware result is distinct, a frozen
-revision may reserve `C-PRC-001` with C-GSM-001 only where its conditional
-mass-coefficient composition is included. Rejected or provisional identifiers
-will remain reserved in campaign evidence.
+Source-aware nonduplication reserves `C-PRC-001` through frozen revision 0001.
+It depends on C-GSM-001 only for the final conditional lower-doublet
+composition. The claim starts from a separately declared source-free Proca
+action in the frozen mostly-plus convention, derives its full vector Euler
+equation, nonzero-mass divergence constraint, transverse massive wave and
+plane-wave dispersion, and the unique decaying tangential half-line profile.
+For positive one-mode kinetic coefficient `kappa` and quadratic coefficient
+`q`, it uses `m^2=q/kappa`; only with a separately declared canonical free
+action may C-GSM-001's `q=g^2v^2/4` give `m=gv/2` and inverse length
+`2/(gv)`. It establishes no London current, Meissner material response,
+stationary condensate, physical W boson, Standard Model sector, observation,
+or substrate realization.
+
+## Source-Aware Classification
+
+The unchanged source exits zero and prints all seven passes, but its headline
+does not survive. CHECK1 repeats C-GSM-001's conditional coefficient after
+declaring the lower-doublet inputs. CHECK2 varies a scalar Klein-Gordon proxy,
+not the displayed vector action, and incorrectly describes the massive
+divergence constraint as a Lorenz-gauge choice. CHECK3 is the static equation
+only for a compatible transverse component. CHECK4 directly verifies one
+decaying exponential, but its branch predicate uses `has(decaying) OR
+has(growing)`, imposes neither boundary nor decay data, and would pass a
+general solution containing only the growing branch.
+
+CHECK5 does not test a physical Meissner identification. Its declared
+superconductor mass-squared is unused, its two inverse-length checks are
+definitions, and the `e -> g/2` substitution is a relabeling without a London
+current, Maxwell/material action, field dictionary, or observable. CHECK6
+solves a separately asserted on-shell relation rather than deriving it from
+the full vector equation. CHECK7 correctly evaluates the conditional
+`v -> 0+` algebra, but it does not prove a physical unbroken substrate phase;
+at zero mass the Proca divergence constraint is no longer derived.
+
+The original Proca paper supports deriving the divergence constraint from the
+nonzero-mass vector equations. London 1935 supplies material-specific
+electromagnetic equations tied to the Meissner observation, while Anderson
+1963 discusses a solid-state analogy through current response. None supplies
+the source's exact W/substrate identification. Accepted EM5 instead supplies
+a massive scalar-QED2 vacuum-polarization theorem whose fixed-mass low-Q term
+is kinetic and whose fixed-Q massless limit diverges; it is not the source's
+claimed finite Schwinger mass template for this scalar field.
 
 ## Implementation and Oracle Plan
 
@@ -123,10 +158,12 @@ fresh route must reconstruct these objects without importing the canonical
 helper; numerical sampling is only regression coverage and cannot count as an
 independent proof.
 
-Any importable boundary will use pure APIs for the action-convention ledger,
-plane-wave relation, and transverse half-line BVP. Mutations change the mass
-sign, metric sign, mass to zero, field-strength sign pairing, kinetic
-normalization, component orientation, boundary data, and decay condition.
+The importable boundary will use pure APIs
+`mostly_plus_proca_momentum_evidence`,
+`transverse_half_line_proca_evidence`, and
+`normalized_proca_mode_evidence`. Mutations change the mass sign, metric sign,
+mass to zero, field-strength sign pairing, kinetic normalization, component
+orientation, boundary data, and decay condition.
 Countermodels retain the same exponential equation under different physical
 dictionaries. The compatibility preflight is explicit: canonical integration
 uses `trapezoid_integral`, mutable current-environment scripts use

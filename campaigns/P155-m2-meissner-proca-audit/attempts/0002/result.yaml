@@ -1,0 +1,28 @@
+attempt: 0002
+campaign: P155
+candidate: native_hash_pinned_M2_reproduction
+status: passed
+started_at: '2026-08-10T07:06:00Z'
+finished_at: '2026-08-10T07:10:00Z'
+commands:
+  - sha256sum_M2_source_and_dossier
+  - compatibility_scan_for_numpy_and_scipy_surfaces
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_M2_meissner_proca_W_mass.py
+result:
+  source_sha256: 4ae3e5cb06e7c0bce6387ac7b84f555de65f12cce4be42d620405bb2b5c5b59f
+  dossier_sha256: c2b93ee2f68f9f42fde2ad133320fd8d3fc08293850dc63d4469a55cebf8908a
+  exit_status: 0
+  source_checks: 7_passed
+  terminal_tally: ALL_7_CHECKS_PASS
+  compatibility_failure: false
+classification: >-
+  Successful native execution establishes only that the seven implemented
+  predicates evaluate. The source varies a scalar proxy rather than the full
+  vector action, calls Proca transversality a gauge choice, does not impose the
+  boundary and decay data selecting the static branch, and checks an algebraic
+  relabeling rather than a London material or substrate identification.
+debt:
+  - derive_the_full_vector_Euler_equation_and_nonzero_mass_constraint
+  - distinguish_transverse_half_line_BVP_from_an_unconstrained_scalar_profile
+  - separate_C-GSM_coefficient_from_kinetic_pole_material_and_substrate_dictionaries
+next_attempt: freeze_the_distinct_exact_Proca_claim_after_source_aware_nonduplication

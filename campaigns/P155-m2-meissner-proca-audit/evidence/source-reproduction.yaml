@@ -1,0 +1,52 @@
+source_unit: M2
+source_path: /home/dan/substrate/merged-framework/bridges/phase-7/bridge_M2_meissner_proca_W_mass.py
+source_sha256: 4ae3e5cb06e7c0bce6387ac7b84f555de65f12cce4be42d620405bb2b5c5b59f
+dossier_path: /home/dan/substrate/merged-framework/bridges/phase-7/dossiers/M2-dossier.md
+dossier_sha256: c2b93ee2f68f9f42fde2ad133320fd8d3fc08293850dc63d4469a55cebf8908a
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_M2_meissner_proca_W_mass.py
+  exit_status: 0
+  terminal_tally: ALL_7_CHECKS_PASS
+  compatibility_event: none
+static_shape:
+  imports: [sympy]
+  local_functions: [check]
+  check_calls: 7
+  assertions: 1
+  numerical_quadrature: none
+  numpy_surface: none
+  declared_symbols: [g, v, M_W2, M_W, t, x, W]
+  declared_reduced_model: scalar_Klein_Gordon_proxy_for_one_vector_component
+reproduced_relations:
+  - the assigned coefficient M_W2=g^2*v^2/4 and positive root M_W=g*v/2 agree algebraically
+  - the reduced scalar density W_t^2/2-W_x^2/2-M_W2*W^2/2 has Euler expression W_tt-W_xx+M_W2*W
+  - its static scalar equation is W_xx=M_W2*W
+  - W0*exp(-M_W*x) has zero residual and SymPy dsolve returns both exponential branches
+  - the relabeling (e,Phi)=(g/2,v) makes the two separately declared quadratic forms equal
+  - the asserted relation omega^2-k^2=M_W2 solves to omega^2=k^2+M_W2
+  - the conditional limit v->0+ gives M_W->0 and 1/M_W->infinity
+oracle_gaps:
+  - >-
+    CHECK2 never varies the full vector action and therefore never derives
+    partial_mu*F^(mu nu)-m^2*A^nu=0 or its divergence constraint.
+  - >-
+    The source calls the nonzero-mass divergence constraint a Lorenz-gauge
+    choice even though a Proca mass removes that gauge freedom and the
+    constraint follows from the equations of motion.
+  - >-
+    CHECK4 uses an OR between presence of the decaying and growing exponent,
+    so the branch predicate does not require the advertised decaying branch.
+    It also supplies no half-line boundary value or asymptotic decay gate.
+  - >-
+    CHECK5 leaves m_sc2 unused, defines both penetration lengths as reciprocal
+    masses, and tests a parameter relabeling rather than a current-field,
+    material-action, or observable equivalence.
+  - >-
+    CHECK6 starts from the advertised on-shell equation and solves it; it does
+    not independently derive the dispersion from the vector Euler operator.
+scope_of_reproduction: >-
+  The run reproduces exact scalar-proxy and algebraic relations under the
+  source declarations. It does not validate a full Proca variation, a London
+  constitutive law, a Meissner magnetic response, a physical condensate or W
+  field, an EM5 generalization, a Standard Model sector, or a substrate mass
+  mechanism.

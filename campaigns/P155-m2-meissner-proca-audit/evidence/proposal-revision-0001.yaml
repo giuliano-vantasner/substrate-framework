@@ -1,0 +1,71 @@
+revision: 0001
+campaign: P155
+parent_frozen_proposal_sha256: eaf1f33bdc364be4cea2f583c2d408c24aa809289a2a8c06cce870f3f68d165f
+trigger: >-
+  Source-aware reproduction and exact rederivation find a distinct conditional
+  Proca vector and half-line BVP theorem beyond C-GSM-001, C-NAG-001,
+  C-VTX-001, C-EFT-001, and C-VAC-001, while showing that M2 varies only a
+  scalar proxy, mislabels the derived massive constraint as gauge fixing, uses
+  an OR branch guard, and does not test its physical Meissner identification.
+unchanged:
+  - source and dossier hashes accepted-base coordinates and physical ceilings
+  - candidates A through H and their predeclared structural ordering
+  - exclusion of all queue-preexposed mass penetration-length and Meissner formulas from selection
+  - compatibility policy requiring exact algebra trapezoid_integral or np.trapezoid in mutable code
+claim_delta:
+  identifiers: [C-PRC-001]
+  dependencies: [C-GSM-001]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_exact_Proca_module
+exact_statement: >-
+  Let A_mu be a real twice-differentiable vector field on 3+1 Minkowski space
+  with eta=diag(-1,+1,+1,+1), let
+  F_mu_nu=partial_mu*A_nu-partial_nu*A_mu, and separately declare the
+  source-free action density L=-F_mu_nu*F^mu_nu/4-m^2*A_mu*A^mu/2 with exact
+  m>0 and boundary behavior licensing integration by parts. Exact variation
+  gives partial_mu*F^(mu nu)-m^2*A^nu=0. Commuting derivatives and
+  antisymmetry give partial_nu*A^nu=0 as a derived massive constraint, not a
+  gauge choice, and hence (box-m^2)*A^nu=0 for
+  box=-partial_t^2+nabla^2. A plane wave has
+  omega^2=|k|^2+m^2. For a static tangential component A_y(x) on x>=0 with
+  A_y(0)=A0 and limit A_y(x)=0 as x tends to infinity, the unique solution is
+  A0*exp(-m*x); the general unconstrained ODE also has a growing branch, and a
+  longitudinal A_x(x) generally violates the derived divergence constraint.
+  The inverse length is m and the penetration length is 1/m. For a separately
+  declared positive one-mode kinetic coefficient kappa and positive quadratic
+  coefficient q, m^2=q/kappa. Conditional on C-GSM-001's lower-doublet
+  coefficient q=g^2*v^2/4 and an independently declared canonical free kinetic
+  action, m=g*v/2 and the length is 2/(g*v). At m=0 the divergence constraint
+  is not derived and no finite positive penetration length follows. These are
+  exact conditional action and BVP identities. They supply no London current,
+  Maxwell-material response, Meissner magnetic observation, stationary
+  condensate, physical W boson, Standard Model selection, or substrate mass
+  mechanism.
+source_corrections:
+  - vary_the_full_vector_action_instead_of_a_scalar_Klein_Gordon_proxy
+  - derive_the_nonzero_mass_divergence_constraint_instead_of_calling_it_Lorenz_gauge
+  - require_a_transverse_component_half_line_boundary_value_and_decay_condition
+  - replace_the_OR_exponent_presence_guard_with_exact_branch_and_uniqueness_gates
+  - separate_the_quadratic_coefficient_from_the_kinetic_normalization_and_free_mode_dispersion
+  - reject_the_EM5_London_Meissner_W_and_substrate_identifications
+novelty: >-
+  No accepted claim or importable API derives the full Proca momentum kernel,
+  its nonzero-mass constraint, its transverse dispersion, and the unique
+  tangential half-line decay while separating kinetic normalization from the
+  quadratic coefficient. The nearest accepted claims explicitly stop at the
+  scalar mass Gram matrix, curvature, another Abelian-Higgs model, algebraic
+  elimination, or an incomplete Euclidean loop kernel.
+oracle: >-
+  Exact SymPy coordinate variation and independent Fourier-space mixed-index
+  kernel algebra; exact divergence contraction, transverse eigen-equation,
+  plane-wave dispersion, two-root ODE solution, boundary and decay uniqueness,
+  longitudinal counterexample, massless limit, and kinetic normalization;
+  challenged by mass-sign, action-sign, factor, metric, zero-mass,
+  longitudinal-component, growing-branch, missing-boundary, kinetic-scale, and
+  physical-dictionary mutations.
+implementation_boundary: >-
+  Add pure exact APIs mostly_plus_proca_momentum_evidence,
+  transverse_half_line_proca_evidence, and normalized_proca_mode_evidence.
+  Imports execute no simulation or quadrature and infer no material current,
+  condensate, W identity, Standard Model, observable, or substrate dictionary.
+status: frozen

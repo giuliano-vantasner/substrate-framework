@@ -1,0 +1,59 @@
+source_unit: M2
+headline_verdict: qualified_with_corrected_conditional_claim
+accepted_content:
+  - C-GSM-001's conditional lower-doublet quadratic coefficient M2=g^2*v^2/4
+  - the reduced massive scalar component equation under the source's declared mostly-minus convention
+  - the static exponential's exact residual and inverse mass length for a compatible transverse component
+  - the massive plane-wave dispersion after a complete free Proca action and its normalization are declared
+  - the zero-coefficient and divergent-inverse-length limit of the declared g and v parametrization
+corrected_content:
+  - >-
+    The source-free Proca Euler equation must be varied as a vector equation.
+    For nonzero mass its divergence condition is derived from antisymmetry and
+    commuting derivatives, not imposed as a Lorenz-gauge choice.
+  - >-
+    A one-dimensional static decay represents a tangential component such as
+    A_y(x). A longitudinal A_x(x) generally violates the Proca divergence
+    constraint, and the half-line boundary value plus decay at infinity are
+    required to eliminate the growing branch.
+  - >-
+    A general positive kinetic coefficient kappa changes a declared quadratic
+    coefficient q to normalized mass-squared q/kappa. The M1 value gives
+    g^2*v^2/4 only in a separately declared canonical kinetic mode.
+  - >-
+    The m->0 limit removes the algebraic derivation of transversality; it is
+    not merely the same constrained system with an infinite length.
+rejected_content:
+  - >-
+    The scalar proxy in CHECK2 is not a derivation of the full vector Proca
+    equation and cannot establish its constraint or vector degrees of freedom.
+  - >-
+    A shared constant-coefficient exponential equation and reciprocal length
+    do not establish a London constitutive law, Meissner magnetic response,
+    superconducting material, condensate mechanism, or system identity.
+  - >-
+    Accepted EM5 is a conditional massive scalar-QED2 vacuum-polarization
+    theorem and does not supply the source's finite massless scalar Schwinger
+    coefficient, a 3+1D non-Abelian generalization, or an M2 gauge action.
+  - >-
+    Accepted EM6 does not force complex ontology or a stationary condensate,
+    while W2 and W7 supply representation and curvature ceilings rather than
+    physical weak matter, a gauge kinetic action, mass, or W boson.
+  - >-
+    Passing these seven predicates does not close W7's physical mass residual,
+    derive the Standard Model, or establish a substrate Meissner effect.
+predicate_adjudication:
+  - {id: CHECK1, verdict: qualified_exact_import, mapping: C-GSM-001, correction: conditional_quadratic_coefficient_not_a_derived_Proca_action_or_physical_W}
+  - {id: CHECK2, verdict: rejected_as_full_vector_derivation_but_retained_as_scalar_regression, mapping: C-PRC-001, correction: full_vector_variation_and_derived_constraint_required}
+  - {id: CHECK3, verdict: qualified_exact, mapping: C-PRC-001, correction: only_for_a_constraint_compatible_transverse_static_component_not_a_London_or_Meissner_identity}
+  - {id: CHECK4, verdict: qualified_profile_residual_with_failed_branch_guard, mapping: C-PRC-001, correction: boundary_and_decay_data_select_the_decaying_branch_while_the_OR_guard_does_not}
+  - {id: CHECK5, verdict: rejected_as_physical_identification, mapping: C-PRC-001, correction: relabeling_and_inverse_definitions_do_not_supply_a_material_action_current_or_dictionary}
+  - {id: CHECK6, verdict: qualified_exact_given_the_asserted_on_shell_relation, mapping: C-PRC-001, correction: derive_dispersion_from_the_full_vector_operator}
+  - {id: CHECK7, verdict: qualified_exact_limit, mapping: C-PRC-001, correction: zero_mass_removes_the_derived_divergence_constraint_and_does_not_prove_a_physical_phase}
+source_dependencies:
+  C1: qualified_only_through_C-OG-005_C-OG-001_C-GAU-001_C-BER-001_and_supplies_no_M2_mass_or_material_action
+  EM5: qualified_only_through_C-GAU-001_C-VAC-001_and_supplies_no_finite_massless_scalar_Schwinger_mass_or_nonabelian_Proca_sector
+  EM6: qualified_only_through_C-QBL-001_and_does_not_force_complex_ontology_or_a_stationary_condensate
+  M1: qualified_only_through_C-GSM-001_C-NAG-001_C-GAU-001_C-REP-002_and_supplies_only_the_conditional_quadratic_coefficient
+  W2: qualified_only_through_C-REP-002_C-SPN-002_C-REP-001_C-SG-011_C-BND-001_and_supplies_no_physical_weak_doublet_or_massive_vector
+  W7: qualified_only_through_C-NAG-001_C-REP-002_C-SPN-002_C-GAU-001_C-MAX-001_C-SCT-001_and_supplies_no_gauge_action_equation_mass_or_W_boson

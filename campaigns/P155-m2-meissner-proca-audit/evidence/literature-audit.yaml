@@ -1,0 +1,38 @@
+campaign: P155
+scope: source_cited_Proca_London_Anderson_provenance_and_interpretation_ceiling
+sources:
+  - id: Proca1936
+    citation: Alexandre Proca, Sur la theorie ondulatoire des electrons positifs et negatifs, Journal de Physique et le Radium 7 (1936) 347-353
+    url: https://www.neo-classical-physics.info/uploads/3/4/3/6/34363841/proca_-_wave_theory_of_positive_and_negative_electrons.pdf
+    primary: true
+    supports:
+      - a vector Lagrangian built from an antisymmetric derivative tensor and a nonzero mass term
+      - derivation of a vanishing divergence condition in the source-free nonzero-mass case
+      - reduction to massive wave equations after that condition
+    does_not_support:
+      - treating the nonzero-mass divergence condition as residual gauge fixing
+      - a London material response or substrate W identification
+  - id: London1935
+    citation: F. London and H. London, The electromagnetic equations of the supraconductor, Proceedings of the Royal Society A 149 (1935) 71-88
+    url: https://doi.org/10.1098/rspa.1935.0048
+    primary: true
+    supports:
+      - phenomenological electromagnetic equations for a superconducting material
+      - explicit connection of those material equations to the Meissner-Ochsenfeld observation
+    does_not_support:
+      - identifying any field with an electroweak W or the substrate from equation shape alone
+      - deriving the source's g^2*v^2/4 coefficient or a generic Proca action
+  - id: Anderson1963
+    citation: P. W. Anderson, Plasmons Gauge Invariance and Mass, Physical Review 130 (1963) 439-442
+    url: https://doi.org/10.1103/PhysRev.130.439
+    primary: true
+    supports:
+      - plasma and superconducting systems as analogs illustrating how gauge-field spectra can become massive
+      - dependence of that conclusion on a current-response function and medium dynamics
+    does_not_support:
+      - an exact identity between a superconductor and M2's declared substrate or weak sector
+      - replacing a governed gauge-scalar action current response and observable dictionary with coefficient matching
+verdict: >-
+  The primary literature supports the corrected mathematical and material
+  separation. It does not support M2's claim that its algebraic coefficient
+  and scalar exponential make the W mass an exact substrate Meissner effect.
