@@ -6,10 +6,13 @@ import pytest
 import sympy as sp
 
 from substrate_framework.nonabelian_vacuum_polarization import (
+    FiniteLieScalarVacuumPolarization,
     SU2ScalarVacuumPolarization,
+    finite_lie_scalar_qed2_vacuum_polarization,
     su2_scalar_qed2_vacuum_polarization,
 )
 from substrate_framework.source_audit import audit_numpy_trapezoid_compatibility
+from substrate_framework.su3 import fundamental_generators, structure_constant
 
 
 def _fundamental_generators() -> tuple[sp.Matrix, sp.Matrix, sp.Matrix]:
@@ -25,6 +28,30 @@ def _adjoint_generators() -> tuple[sp.Matrix, sp.Matrix, sp.Matrix]:
         sp.Matrix([[0, 0, 0], [0, 0, -sp.I], [0, sp.I, 0]]),
         sp.Matrix([[0, 0, sp.I], [0, 0, 0], [-sp.I, 0, 0]]),
         sp.Matrix([[0, -sp.I, 0], [sp.I, 0, 0], [0, 0, 0]]),
+    )
+
+
+def _su2_structure_constants() -> sp.ImmutableDenseNDimArray:
+    return sp.ImmutableDenseNDimArray(
+        [
+            sp.LeviCivita(a, b, c)
+            for a in range(3)
+            for b in range(3)
+            for c in range(3)
+        ],
+        (3, 3, 3),
+    )
+
+
+def _su3_structure_constants() -> sp.ImmutableDenseNDimArray:
+    return sp.ImmutableDenseNDimArray(
+        [
+            structure_constant(a, b, c)
+            for a in range(8)
+            for b in range(8)
+            for c in range(8)
+        ],
+        (8, 8, 8),
     )
 
 
@@ -74,6 +101,82 @@ def test_adjoint_and_direct_sum_examples_expose_representation_index(
         adjoint.local_component_fmunu_squared_coefficient
         / doubled.local_component_fmunu_squared_coefficient
     ) == 2
+
+
+def test_generic_finite_lie_api_closes_su3_and_direct_sum(
+    symbols: tuple[sp.Symbol, sp.Symbol, sp.Symbol],
+) -> None:
+    q2, mass, coupling = symbols
+    generators = fundamental_generators()
+    constants = _su3_structure_constants()
+    ledger = finite_lie_scalar_qed2_vacuum_polarization(
+        generators, constants, q2, mass, coupling, species_count=2
+    )
+    doubled = finite_lie_scalar_qed2_vacuum_polarization(
+        tuple(sp.diag(generator, generator) for generator in generators),
+        constants,
+        q2,
+        mass,
+        coupling,
+    )
+
+    assert isinstance(ledger, FiniteLieScalarVacuumPolarization)
+    assert ledger.generator_count == 8
+    assert ledger.carrier_dimension == 3
+    assert ledger.trace_metric == sp.eye(8) / 2
+    assert ledger.dynkin_index == sp.Rational(1, 2)
+    assert all(residual == sp.zeros(3) for residual in ledger.commutator_residuals)
+    assert ledger.ward_tadpole_residual == sp.zeros(8)
+    assert ledger.abelian_ledger.massless_projector_limit == sp.oo
+    assert doubled.carrier_dimension == 6
+    assert doubled.dynkin_index == 1
+
+
+def test_generic_api_and_su2_wrapper_are_exactly_compatible(
+    symbols: tuple[sp.Symbol, sp.Symbol, sp.Symbol],
+) -> None:
+    q2, mass, coupling = symbols
+    generic = finite_lie_scalar_qed2_vacuum_polarization(
+        _fundamental_generators(),
+        _su2_structure_constants(),
+        q2,
+        mass,
+        coupling,
+    )
+    specialized = su2_scalar_qed2_vacuum_polarization(
+        _fundamental_generators(), q2, mass, coupling
+    )
+
+    assert generic.trace_metric == specialized.trace_metric
+    assert generic.color_projector_coefficient == (
+        specialized.color_projector_coefficient
+    )
+    assert generic.ward_tadpole_residual == specialized.ward_tadpole_residual
+    assert generic.covariant_completion_residual == (
+        specialized.covariant_completion_residual
+    )
+
+
+def test_generic_api_rejects_wrong_structure_and_nonorthogonal_coordinates(
+    symbols: tuple[sp.Symbol, sp.Symbol, sp.Symbol],
+) -> None:
+    q2, mass, coupling = symbols
+    constants = _su3_structure_constants()
+    wrong_sign = sp.ImmutableDenseNDimArray(
+        [-constants[a, b, c] for a in range(8) for b in range(8) for c in range(8)],
+        (8, 8, 8),
+    )
+    with pytest.raises(ValueError, match="commutators"):
+        finite_lie_scalar_qed2_vacuum_polarization(
+            fundamental_generators(), wrong_sign, q2, mass, coupling
+        )
+
+    scaled = list(fundamental_generators())
+    scaled[0] = 2 * scaled[0]
+    with pytest.raises(ValueError, match="commutators|trace metric"):
+        finite_lie_scalar_qed2_vacuum_polarization(
+            scaled, constants, q2, mass, coupling
+        )
 
 
 def test_component_and_trace_density_coefficients_are_typed_separately(

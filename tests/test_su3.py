@@ -4,6 +4,7 @@ import pytest
 import sympy as sp
 
 from substrate_framework.su3 import (
+    SU3SymmetricTensorEvidence,
     center_conjugation,
     center_element,
     center_elements,
@@ -12,6 +13,8 @@ from substrate_framework.su3 import (
     fundamental_generators,
     invariants,
     structure_constant,
+    symmetric_structure_constant,
+    symmetric_tensor_evidence,
     triality_phase,
 )
 
@@ -33,6 +36,44 @@ def test_structure_constants_and_casimirs_are_exact() -> None:
     assert values.adjoint_casimir == 3
 
 
+def test_symmetric_tensor_and_anticommutator_reconstruction_are_exact() -> None:
+    evidence = symmetric_tensor_evidence()
+
+    assert isinstance(evidence, SU3SymmetricTensorEvidence)
+    assert evidence.fully_symmetric
+    assert all(residual == sp.zeros(3) for residual in evidence.anticommutator_residuals)
+    assert symmetric_structure_constant(0, 0, 7) == 1 / sp.sqrt(3)
+    assert symmetric_structure_constant(7, 7, 7) == -1 / sp.sqrt(3)
+    assert symmetric_structure_constant(0, 3, 5) == sp.Rational(1, 2)
+
+
+def test_symmetric_tensor_restricts_to_standard_su2_but_not_globally() -> None:
+    evidence = symmetric_tensor_evidence()
+
+    assert evidence.embedded_su2_all_zero
+    assert all(
+        evidence.tensor[a, b, c] == 0
+        for a in range(3)
+        for b in range(3)
+        for c in range(3)
+    )
+    assert evidence.outside_nonzero_witness == (0, 0, 7, 1 / sp.sqrt(3))
+
+
+def test_symmetric_tensor_normalization_is_load_bearing() -> None:
+    generators = fundamental_generators()
+    mutated = tuple(2 * generator for generator in generators)
+    d118_mutated = sp.simplify(
+        2
+        * sp.trace(
+            (mutated[0] * mutated[0] + mutated[0] * mutated[0]) * mutated[7]
+        )
+    )
+
+    assert d118_mutated == 8 / sp.sqrt(3)
+    assert d118_mutated != symmetric_structure_constant(0, 0, 7)
+
+
 def test_declared_loop_weights_remain_explicit() -> None:
     flavors, gauge, matter = sp.symbols("n_f c_g c_m", nonnegative=True)
     coefficient = conditional_one_loop_coefficient(flavors, gauge, matter)
@@ -51,6 +92,8 @@ def test_flavor_count_domain(value) -> None:
 def test_generator_index_domain() -> None:
     with pytest.raises(IndexError):
         structure_constant(8, 0, 0)
+    with pytest.raises(IndexError):
+        symmetric_structure_constant(0, 8, 0)
 
 
 def test_full_fundamental_commutant_is_scalar() -> None:

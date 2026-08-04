@@ -1,0 +1,18 @@
+attempt: 0008
+campaign: P160
+candidate: corrected_numerator_control_exact_path_rerun
+status: failed
+started_at: '2026-08-10T16:37:00Z'
+finished_at: '2026-08-10T16:38:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/verify.py
+passed_before_failure: 31
+failure:
+  layer: primary_verifier_lexical_proxy
+  check: QCD1_source_never_constructs_bubble_seagull_or_background_completion
+  mechanism: >-
+    The source's concluding narrative mentions the word seagull while its
+    executable AST constructs no seagull term. A raw substring-absence test
+    therefore confused prose acknowledgement with scientific construction.
+  scientific_failure: false
+repair: inspect_assignments_and_integration_calls_in_the_executable_AST
+next_attempt: rerun_the_primary_oracle_without_repeating_already_green_routes

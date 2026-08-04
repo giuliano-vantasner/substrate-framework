@@ -91,7 +91,9 @@ from .nonabelian_gauge import (
     su2_projected_unitary,
 )
 from .nonabelian_vacuum_polarization import (
+    FiniteLieScalarVacuumPolarization,
     SU2ScalarVacuumPolarization,
+    finite_lie_scalar_qed2_vacuum_polarization,
     su2_scalar_qed2_vacuum_polarization,
 )
 from .nonabelian_holonomy import (
@@ -869,6 +871,7 @@ from .source_audit import (
 )
 from .su3 import (
     SU3Invariants,
+    SU3SymmetricTensorEvidence,
     center_conjugation,
     center_element,
     center_elements,
@@ -877,6 +880,8 @@ from .su3 import (
     fundamental_generators,
     invariants,
     structure_constant,
+    symmetric_structure_constant,
+    symmetric_tensor_evidence,
     triality_phase,
 )
 from .su3_representations import (
@@ -966,6 +971,9 @@ from .variational import (
 )
 
 __all__ = [
+    "FiniteLieScalarVacuumPolarization",
+    "SU2ScalarVacuumPolarization",
+    "SU3SymmetricTensorEvidence",
     "BogomolnyDensityDecomposition",
     "NearBpsDifference",
     "AffineCrossingLedger",
@@ -1511,6 +1519,8 @@ __all__ = [
     "minimal_dimension_hypercharge_matches",
     "solve_euler_lagrange_acceleration",
     "structure_constant",
+    "symmetric_structure_constant",
+    "symmetric_tensor_evidence",
     "standard_three_angle_unitary",
     "support_stabilizer_dimension",
     "triality_phase",
@@ -1576,6 +1586,8 @@ __all__ = [
     "nonabelian_field_strength",
     "ordered_segment_holonomy",
     "su2_holonomy_evidence",
+    "finite_lie_scalar_qed2_vacuum_polarization",
+    "su2_scalar_qed2_vacuum_polarization",
     "su2_projected_connection",
     "su2_projected_unitary",
     "TwoBodyThresholdLedger",

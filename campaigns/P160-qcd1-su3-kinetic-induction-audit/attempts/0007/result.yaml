@@ -1,0 +1,16 @@
+attempt: 0007
+campaign: P160
+candidate: corrected_numerator_control_primary_rerun
+status: failed
+started_at: '2026-08-10T16:36:00Z'
+finished_at: '2026-08-10T16:36:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction/verify.py
+passed_before_failure: 0
+failure:
+  layer: orchestration_path_resolution
+  mechanism: >-
+    The command omitted the campaign directory's -audit suffix, so Python
+    could not open the verifier and no scientific or verification code ran.
+  scientific_failure: false
+repair: resolve_and_use_the_exact_tracked_campaign_path
+next_attempt: rerun_the_primary_oracle_without_repeating_already_green_routes

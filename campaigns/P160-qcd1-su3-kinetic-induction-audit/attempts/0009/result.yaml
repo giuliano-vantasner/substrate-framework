@@ -1,0 +1,24 @@
+attempt: 0009
+campaign: P160
+candidate: generic_finite_lie_scalar_loop_and_su3_symmetric_tensor
+status: passed
+started_at: '2026-08-10T16:39:00Z'
+finished_at: '2026-08-10T16:40:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/independent_su3_scalar_review.py
+  - .venv/bin/python -m pytest -q focused_and_adjacent_SU3_nonabelian_loop_tests
+evidence:
+  primary: {status: passed, checks: 38, terminal_tally: ALL_38_CHECKS_PASS}
+  independent: {status: passed, checks: 27, terminal_tally: ALL_27_CHECKS_PASS}
+  focused_and_adjacent_tests: {status: passed, tests: 71}
+mutation_controls:
+  - anticommutator_identity_term_deletion
+  - generator_normalization_scaling
+  - direct_sum_trace_index
+  - seagull_deletion_and_sign_flip
+  - nonlinear_commutator_deletion
+  - source_scalar_numerator_substitution
+  - source_nonlocal_form_factor_limit
+verdict: implementation_and_claim_specific_oracles_pass
+next_attempt: replay_source_graph_and_review_claims_individually

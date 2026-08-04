@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P160
+candidate: first_generic_API_symmetric_tensor_and_oracle_run
+status: failed
+started_at: '2026-08-10T16:23:00Z'
+finished_at: '2026-08-10T16:32:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/independent_su3_scalar_review.py
+  - .venv/bin/python -m pytest -q focused_and_adjacent_SU3_nonabelian_loop_tests
+passed_before_failure:
+  primary_checks: 24
+  independent: {status: passed, checks: 27, terminal_tally: ALL_27_CHECKS_PASS}
+  focused_and_adjacent_tests: {status: passed, tests: 71}
+failure:
+  layer: primary_verifier_mutation_control
+  check: direct_sum_representation_mutation_doubles_the_trace_index
+  mechanism: >-
+    The fundamental baseline used species_count two while the direct-sum
+    mutation used the default one. Their component-coefficient ratio therefore
+    mixed representation index with species multiplicity and equaled one.
+  scientific_failure: false
+repair: hold_species_count_two_fixed_in_both_representation_branches
+next_attempt: rerun_the_primary_oracle_then_close_any_remaining_oracle_defects

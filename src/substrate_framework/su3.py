@@ -18,6 +18,17 @@ class SU3Invariants:
     adjoint_casimir: sp.Expr
 
 
+@dataclass(frozen=True)
+class SU3SymmetricTensorEvidence:
+    """Exact symmetric tensor and anticommutator data in the standard basis."""
+
+    tensor: sp.ImmutableDenseNDimArray
+    fully_symmetric: bool
+    anticommutator_residuals: tuple[sp.ImmutableMatrix, ...]
+    embedded_su2_all_zero: bool
+    outside_nonzero_witness: tuple[int, int, int, sp.Expr]
+
+
 def fundamental_generators() -> tuple[sp.Matrix, ...]:
     """Return the eight Hermitian generators ``T_a=lambda_a/2``."""
 
@@ -101,12 +112,85 @@ def _structure_constant(
     return sp.simplify(-2 * sp.I * sp.trace(commutator * generators[c]))
 
 
+def _validate_generator_indices(a: int, b: int, c: int) -> None:
+    if any(not isinstance(index, int) or index < 0 or index >= 8 for index in (a, b, c)):
+        raise IndexError("SU(3) generator index must lie in 0..7")
+
+
 def structure_constant(a: int, b: int, c: int) -> sp.Expr:
     """Return ``f_abc`` for ``[T_a,T_b]=i*f_abc*T_c`` (zero-based)."""
 
-    if any(index < 0 or index >= 8 for index in (a, b, c)):
-        raise IndexError("SU(3) generator index must lie in 0..7")
+    _validate_generator_indices(a, b, c)
     return _structure_constant(fundamental_generators(), a, b, c)
+
+
+def symmetric_structure_constant(a: int, b: int, c: int) -> sp.Expr:
+    r"""Return ``d_abc=2*Tr({T_a,T_b}*T_c)`` in the standard basis."""
+
+    _validate_generator_indices(a, b, c)
+    generators = fundamental_generators()
+    anticommutator = generators[a] * generators[b] + generators[b] * generators[a]
+    return sp.simplify(2 * sp.trace(anticommutator * generators[c]))
+
+
+@cache
+def symmetric_tensor_evidence() -> SU3SymmetricTensorEvidence:
+    r"""Derive the full fundamental ``d_abc`` tensor and its exact identities.
+
+    The anticommutator convention is
+    ``{T_a,T_b}=delta_ab*I_3/3+sum_c d_abc*T_c``.  The standard generators
+    ``T_1,T_2,T_3`` form an embedded SU(2) on which every restricted ``d``
+    component vanishes, while components outside that restriction are nonzero.
+    This is representation algebra only and supplies no physical color sector.
+    """
+
+    generators = fundamental_generators()
+    tensor = sp.ImmutableDenseNDimArray(
+        [
+            symmetric_structure_constant(a, b, c)
+            for a in range(8)
+            for b in range(8)
+            for c in range(8)
+        ],
+        (8, 8, 8),
+    )
+    fully_symmetric = all(
+        sp.simplify(tensor[a, b, c] - tensor[b, a, c]) == 0
+        and sp.simplify(tensor[a, b, c] - tensor[a, c, b]) == 0
+        for a in range(8)
+        for b in range(8)
+        for c in range(8)
+    )
+    identity = sp.eye(3)
+    residuals = tuple(
+        sp.ImmutableMatrix(
+            (
+                generators[a] * generators[b]
+                + generators[b] * generators[a]
+                - sp.Rational(1, 3) * (1 if a == b else 0) * identity
+                - sum(
+                    (tensor[a, b, c] * generators[c] for c in range(8)),
+                    sp.zeros(3),
+                )
+            ).applyfunc(sp.simplify)
+        )
+        for a in range(8)
+        for b in range(8)
+    )
+    embedded_zero = all(
+        tensor[a, b, c] == 0
+        for a in range(3)
+        for b in range(3)
+        for c in range(3)
+    )
+    witness = (0, 0, 7, sp.simplify(tensor[0, 0, 7]))
+    return SU3SymmetricTensorEvidence(
+        tensor=tensor,
+        fully_symmetric=fully_symmetric,
+        anticommutator_residuals=residuals,
+        embedded_su2_all_zero=embedded_zero,
+        outside_nonzero_witness=witness,
+    )
 
 
 @cache
