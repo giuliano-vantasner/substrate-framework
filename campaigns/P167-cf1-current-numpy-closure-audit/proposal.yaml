@@ -1,0 +1,57 @@
+id: P167
+base_release: v0.127.0
+base_commit: fcaa685
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CF1]
+question: >-
+  Does a current-NumPy, alias-only replay of hash-pinned CF1 preserve every
+  scientific predicate already accepted through C-VTX-001 and C-VTX-002, and
+  does that accepted composition terminally close CF1 without a duplicate API
+  or an unearned dual-superconductor, QCD, or confinement interpretation?
+invariants:
+  - C-VTX-001 fixes one declared general-g Abelian-Higgs convention and expressly supplies no substrate dual chromoelectric QCD confinement or vortex-existence identity.
+  - C-VTX-002 is resolution-bounded numeric evidence for one explicit parameter domain boundary solver and quadrature family not a continuum theorem or absolute tension.
+  - C-FLX-001 is a separate fixed-area uniform-field theorem and cannot silently identify its slopes with CF1 vortex tension.
+  - The removed np.trapz name is an environment compatibility event and cannot reject or select a scientific candidate.
+  - The immutable predecessor remains unedited and accepted canonical integration remains centralized in trapezoid_integral.
+allowed_imports:
+  - C-DIM-007 as a dimensional ceiling only
+  - C-VTX-001
+  - C-VTX-002
+  - C-FLX-001 as downstream separation evidence only
+  - src/substrate_framework/abelian_higgs_vortex.py
+  - src/substrate_framework/numerics.py
+  - immutable P026 and P027 adjudicated evidence
+  - exact symbolic calculus and status-gated NumPy/SciPy numerical evidence
+  - CF1 and its dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal CF1 replay in an isolated process with any missing np.trapz name aliased only to np.trapezoid and every source predicate individually adjudicated.
+  - id: B
+    description: Accepted composition of C-VTX-001 and C-VTX-002 with no new claim or canonical API.
+  - id: C
+    description: Exact-only C-VTX-001 closure if the source numerical predicates fail scientifically after compatibility repair.
+  - id: D
+    description: A new reusable vortex claim or API only if source audit finds content outside the exact accepted claim closure.
+  - id: E
+    description: Physical dual-superconductor chromoelectric QCD or confinement interpretation of the conditional Abelian model.
+  - id: F
+    description: Composition with C-FLX-001 only when an explicit charge flux area and work-energy map closes the two distinct constructions.
+  - id: G
+    description: Source dependency consumer compatibility queue documentation release and memory closure for the existing qualified disposition.
+uniqueness_evidence: null
+selection_criteria:
+  - exact functional ansatz coupling and flux convention closure
+  - compatibility-neutral source predicate and assertion replay
+  - solver success residual boundary and predeclared numerical evidence scope
+  - independent-evidence provenance mutation sensitivity and known limits
+  - interpretation boundaries assumption and parameter economy
+  - API nonduplication downstream separation and governance closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before renewed CF1 and dossier body audit or current-environment
+  execution; CF1's equations eight-check tally approximate tension original
+  np.trapz abort and P026/P027 verdicts are already exposed in accepted claims,
+  immutable campaigns, durable memory, and the generated queue, so no fresh
+  source or value blinding is claimed
+status: frozen_with_prior_source_exposure
