@@ -1,0 +1,22 @@
+campaign: P137
+attempt: 0003
+status: failed
+candidate: A
+command: >-
+  Parse S1 with ast and emit imports functions check strings assertions NumPy
+  attributes and SymPy calls from a compact read-only extractor.
+expected: >-
+  Produce a deterministic structural inventory without executing S1 again.
+failure:
+  class: implementation
+  mechanism: >-
+    The check-string comprehension dereferenced .value on an ast.Call while
+    filtering nested ast.Call nodes, raising AttributeError before emitting the
+    inventory.
+  scientific_effect: none
+  source_modified: false
+classification: audit_extractor_failure
+compatibility_event: none
+next_attempt: >-
+  Repair the AST predicate to inspect the first argument node explicitly and
+  use the canonical compatibility auditor for executable NumPy-name access.

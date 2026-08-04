@@ -1,0 +1,24 @@
+campaign: P137
+source_unit: S1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-4/bridge_S1_nn_force_two_skyrmion.py
+source_sha256: ebe1ba930be26f17671d8e82779d14fc00e7a8b988a4aada722a32d0d9328ddd
+dossier_path: merged-framework/bridges/phase-4/dossiers/S1-dossier.md
+dossier_sha256: d3536930433f3d02b86f15735a40499ac2e4e1614a27743f88431719d7ba2079
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-4/bridge_S1_nn_force_two_skyrmion.py
+exit_status: 0
+terminal_tally: ALL 11 CHECKS PASS
+imports: [numpy, sympy, scipy.integrate.solve_ivp]
+assert_nodes: 2
+compatibility_preflight:
+  numpy_version: 2.5.1
+  executable_np_trapz: 0
+  executable_np_trapezoid: 0
+  eager_legacy_default_fallbacks: 0
+  event: none
+headline_warning: >-
+  The successful tally is reproduction evidence only. S1's numeric RHS omits
+  one inverse-separation factor, its orientation values are assigned, and no
+  two-center field or isolated-self-energy subtraction is constructed.

@@ -1,0 +1,32 @@
+campaign: P137
+source_unit: S1
+declared_dependencies:
+  - {source_unit: B1, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: G1, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority, compatibility: alias_only}
+  - {source_unit: G2, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: S5, disposition: qualified, accepted_claims: [C-VIR-001, C-MED-001, C-SK-001], use: ceilings_only}
+  - {source_unit: T2B, disposition: qualified, accepted_claims: [C-VAR-001, C-CC-001, C-VIR-001], use: C-CC-001_only}
+accepted_nearby_claims:
+  - {claim: C-CC-001, role: exact declared one-coordinate action and acceleration}
+  - {claim: C-MED-001, role: blocks density-only index sourcing in the accepted co-scaled ansatz}
+  - {claim: C-VIR-001, role: conditional virial-slope algebra only}
+  - {claim: C-SK-001, role: conditional mass relation only}
+  - {claim: C-RMAP-001, role: conditional sphere/map surface with physical ceilings}
+  - {claim: C-RPROF-001, role: conditional single-profile radial functional and massless endpoint powers}
+  - {claim: C-RPROF-002, role: resolution-bounded single-profile branches only}
+new_claim_dependency_closure:
+  claim: C-SKY-001
+  accepted_claim_dependencies: []
+  declared_imports:
+    - static three-component massive linear field energy and source coupling
+    - distributional point-dipole sources and isolated-self-energy subtraction
+    - three-dimensional Yukawa Green function convention
+    - positive stiffness separation and common dipole magnitude
+    - proper relative orientation D in SO(3)
+  excluded_imports:
+    - S1 numeric outputs or orientation literals
+    - physical pion mass or dipole amplitude
+    - nonlinear Skyrme action or two-center field
+    - baryon/nucleon identification quantization binding core and observation
+circularity: none
+debt: []

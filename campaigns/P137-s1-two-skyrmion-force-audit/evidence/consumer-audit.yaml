@@ -1,0 +1,22 @@
+campaign: P137
+source_unit: S1
+direct_reverse_consumers:
+  - {source_unit: PG4, disposition: qualified, runtime_checks: 4, accepted_claims: [C-WID-001, C-GTR-001], effect: unchanged_independent_closure}
+  - {source_unit: PN6, disposition: qualified, runtime_checks: 30, accepted_claims: [C-RES-001], effect: unchanged_independent_closure}
+  - {source_unit: WN6, disposition: pending_adjudication, runtime_checks: 32, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: WM7, disposition: pending_adjudication, runtime_checks: 10, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: WM8, disposition: pending_adjudication, runtime_checks: 10, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 11
+  runtime_predicates: 157
+  harness_checks: 50
+  terminal_tally: ALL 50 CHECKS PASS P137-S1-SOURCE-GRAPH
+compatibility_preflight:
+  alias_only_nodes: [G1, B1]
+  alias_backing: np.trapezoid
+  scientific_failures: 0
+promotion_effect: >-
+  C-SKY-001 is not injected into any historical consumer. PG4 and PN6 retain
+  only their individually reviewed accepted closures; pending consumers remain
+  pending and must re-source the new theorem explicitly if later adjudicated.
+debt: []

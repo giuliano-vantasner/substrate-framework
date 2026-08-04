@@ -1,0 +1,19 @@
+campaign: P137
+claim: C-SKY-001
+direct_search:
+  identifiers_searched: [C-SKY-001, C-SK-002, C-MDI-001, C-DIP-001]
+  concepts_searched: [Yukawa Hessian, massive dipole interaction, two-center self-energy subtraction, SO3 orientation extrema]
+  result: no pre-existing canonical claim or implementation
+gitnexus_query:
+  query: massive triplet dipole Yukawa Hessian interaction energy relative SO(3) orientation
+  processes: 0
+  duplicate_definitions: 0
+nearest_surfaces:
+  - {claim: C-CC-001, distinction: one-coordinate supplied index action with no field source or orientation}
+  - {claim: C-RPROF-001, distinction: one-center radial functional and endpoint powers with no two-center interaction}
+  - {claim: C-RPROF-002, distinction: numeric single-profile stationary branches only}
+  - {module: momentum_kernels.py, distinction: scalar momentum kernels and source-probe radial forces without triplet dipole orientation}
+reserved_identifier_note: >-
+  Rejected provisional C-SK-002 remains reserved. The frozen proposal uniquely
+  reserved C-SKY-001 for a distinct conditional two-center interaction theorem.
+debt: []

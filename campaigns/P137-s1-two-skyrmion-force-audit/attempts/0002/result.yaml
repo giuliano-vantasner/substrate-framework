@@ -1,0 +1,30 @@
+campaign: P137
+attempt: 0002
+status: passed
+candidate: A
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-4/bridge_S1_nn_force_two_skyrmion.py
+expected: >-
+  Reproduce the hash-pinned source natively after the committed freeze, confirm
+  clean process exit and the terminal tally, and expose its executable objects
+  without treating the tally as source authority.
+result:
+  exit_status: 0
+  source_head: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: ebe1ba930be26f17671d8e82779d14fc00e7a8b988a4aada722a32d0d9328ddd
+  terminal_tally: ALL 11 CHECKS PASS
+  source_modified: false
+  native_replay: true
+  compatibility_alias: false
+  immediate_observations:
+    - The source imports NumPy SymPy and scipy.integrate.solve_ivp.
+    - It corrects the dossier potential to -c^2*kappa_Y*exp(-mu*R)/(2R).
+    - Its numerical RHS omits the factor 1/R required by differentiating that potential.
+    - It does not assert solve_ivp success or perform method tolerance domain or timestep refinement.
+    - Its orientation values are assigned/imported and only two selected spin geometries are sampled.
+classification: native_source_reproduction
+compatibility_event: none_on_executable_surface
+next_attempt: >-
+  Parse the AST and map every check to its actual inputs, equations, assertions,
+  imported literals, and numerical sensitivities.

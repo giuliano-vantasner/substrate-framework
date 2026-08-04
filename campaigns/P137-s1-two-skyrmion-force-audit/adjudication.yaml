@@ -1,0 +1,59 @@
+campaign: P137
+title: Conditional massive triplet dipole interaction and S1 audit
+source_baseline: substrate@6d1f4e0
+source_units: [S1]
+base_release: v0.104.0
+adjudicated_at: '2026-08-09T07:00:00Z'
+selected_candidates:
+  - {id: B, reason: The declared Yukawa index profile composes exactly with C-CC-001 but is not a novel two-Skyrmion claim.}
+  - {id: C, reason: The declared massive triplet field closes a finite self-subtracted cross energy global SO3 extrema force and limits.}
+  - {id: E, reason: C-CC-001 C-VIR-001 and C-RPROF-001 map the surviving source predicates without narrative widening.}
+  - {id: F, reason: Dependency consumer compatibility nonduplication impact and generated-state replay close the transaction.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: D, decision: not_selected_missing_accepted_full_nonlinear_action_state_and_scale}
+claims:
+  - id: C-SKY-001
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  independent_rederivation: reviews/independent_massive_dipole_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_independent_attempt: attempts/0008/result.yaml
+  passing_consumer_attempt: attempts/0010/result.yaml
+  focused_scientific_gate: attempts/0011/result.yaml
+  integrated_promotion_gate: attempts/0013/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-SKY-001-review.md
+  source_review: memory/vantasner/decisions/S1-qualified-review.md
+source_disposition:
+  S1: qualified
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_no_numeric_integration
+  immutable_source_alias_only: [G1, B1]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P137-s1-two-skyrmion-force-audit/verify.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S1_nn_force_two_skyrmion.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/dossiers/S1-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P137-s1-two-skyrmion-force-audit/reviews/independent_massive_dipole_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P137-s1-two-skyrmion-force-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_massive_dipoles.py tests/test_source_audit.py tests/test_collective_dynamics.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

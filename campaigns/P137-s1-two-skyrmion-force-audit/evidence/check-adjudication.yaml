@@ -1,0 +1,20 @@
+campaign: P137
+source_unit: S1
+checks:
+  - {id: S1.1, status: retained_as_existing_reproduction, mapping: C-CC-001, reason: Exact variation reproduces the declared one-coordinate optical action only; E0 cancellation does not create a baryon or two-body force.}
+  - {id: S1.2, status: retained_conditionally, mapping: C-CC-001, reason: The negative derivative is exact for the separately supplied positive Yukawa profile; neither profile nor source normalization is derived.}
+  - {id: S1.3, status: qualified_first_order, mapping: C-CC-001, reason: The corrected negative Yukawa well is the first-order potential of the accepted slow optical law; the exact finite-amplitude potential retains n^-2.}
+  - {id: S1.4, status: retained_as_existing_endpoint, mapping: C-RPROF-001, reason: R^-2 is the conditional massless B=1 radial tail; it supplies no physical pion or two-center interaction.}
+  - {id: S1.5, status: rejected_as_derivation, mapping: C-SKY-001, reason: Assigned +/-3 literals and two spin directions do not derive an interaction energy or global orientation result; C-SKY-001 provides the corrected declared-field theorem.}
+  - {id: S1.6, status: rejected_numeric_oracle, mapping: null, reason: The ODE drops 1/R, checks only sign, omits solver success and performs no refinement or independent method.}
+  - {id: S1.7, status: retained_as_existing_reproduction, mapping: C-VIR-001, reason: The two supplied virial-slope equations reproduce the accepted conditional if-and-only-if result and do not derive Option-C physics.}
+  - {id: S1.8, status: retained_conditionally, mapping: C-CC-001, reason: Exponential decay is exact for the declared Yukawa profile and distinct from a Coulomb tail.}
+  - {id: S1.9, status: qualified_formula_regression, mapping: C-CC-001, reason: Two evaluations regress the supplied profile but do not establish a self-energy-subtracted cross term or source equation.}
+  - {id: S1.G1, status: retained_as_input_mutation, mapping: C-CC-001, reason: Reversing the declared profile amplitude reverses the conditional optical acceleration; this does not select a physical source sign.}
+  - {id: S1.G2, status: rejected_as_orientation_oracle, mapping: C-SKY-001, reason: Comparing assigned central literals is not an SO(3) extremization; the corrected theorem derives the full bounds.}
+headline_decision: >-
+  Qualify S1. Its one-coordinate and tail algebra survives only under accepted
+  conditional claims, while C-SKY-001 supplies a distinct exact long-range
+  triplet-dipole cross-energy theorem. Reject the full two-Skyrmion/nucleon
+  force reading, the numeric ODE, and the schematic orientation derivation.
+debt: []

@@ -1,0 +1,27 @@
+campaign: P137
+attempt: 0009
+status: failed
+candidate: F
+command: >-
+  Replay the eleven-node S1 dependency and direct-consumer source graph with
+  pinned hashes exact compatibility inventories native execution except two
+  alias-only historical nodes and pinned terminal tallies.
+expected: >-
+  Reproduce 149 predicates across T2B S1 S5 G1 G2 B1 PG4 PN6 WN6 WM7 and WM8.
+failure:
+  class: provenance_expectation
+  nodes_completed: [T2B, S1, S5, G1, G2, B1, PG4, PN6]
+  predicates_completed: 105
+  compatibility_events: [G1_alias_only, B1_alias_only]
+  mechanism: >-
+    WN6 exited cleanly with ALL 32 CHECKS PASS, but the harness expected the
+    generated inventory's 24 static call sites. WN6 has dynamic check calls,
+    so static call count is not its runtime tally.
+  scientific_effect: none
+classification: dynamic_tally_expectation_failure
+compatibility_event: >-
+  G1 and B1 executed only after isolated aliases backed by np.trapezoid; both
+  passed and neither event is scientific debt.
+next_attempt: >-
+  Execute WN6 WM7 and WM8 directly to measure their dynamic terminal tallies,
+  update only the replay expectations and aggregate, then rerun all nodes.

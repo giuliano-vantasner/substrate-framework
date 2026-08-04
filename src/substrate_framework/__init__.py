@@ -720,6 +720,14 @@ from .skyrme_relations import (
     conditional_topological_mass,
     matched_pion_coupling_ratio,
 )
+from .massive_dipoles import (
+    MassiveTripletDipoleExtrema,
+    MassiveTripletDipoleInteraction,
+    YukawaRadialHessian,
+    massive_triplet_dipole_extrema,
+    massive_triplet_dipole_interaction,
+    yukawa_radial_hessian,
+)
 from .symmetry_breaking import (
     GroupCoordinateKineticEvidence,
     LinearSymmetryHessianEvidence,
@@ -892,6 +900,8 @@ __all__ = [
     "LinearSystemDiagnostics",
     "LinearSymmetryHessianEvidence",
     "MaxwellEulerLagrange",
+    "MassiveTripletDipoleExtrema",
+    "MassiveTripletDipoleInteraction",
     "StaticMaxwellPointSource",
     "BiunitaryDecomposition",
     "RealL2TTReadout",
@@ -1348,6 +1358,10 @@ __all__ = [
     "relative_weighted_odds_enhancement",
     "two_channel_allocation",
     "weighted_channel_allocation",
+    "YukawaRadialHessian",
+    "massive_triplet_dipole_extrema",
+    "massive_triplet_dipole_interaction",
+    "yukawa_radial_hessian",
 ]
 
 __version__ = "0.0.0"

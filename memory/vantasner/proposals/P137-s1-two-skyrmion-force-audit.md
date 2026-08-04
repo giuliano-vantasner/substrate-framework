@@ -2,11 +2,11 @@
 description: Audit S1's two-Skyrmion finite-range orientation-dependent force claim
 author: vantasner
 created: '2026-08-09T06:20:00Z'
-updated: '2026-08-09T06:20:00Z'
+updated: '2026-08-09T07:30:00Z'
 tags: [substrate-framework, campaign-proposal, skyrmion, interaction, migration-S1]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P137 S1 Two-Skyrmion Force Audit
 
@@ -155,15 +155,35 @@ canonicalization.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| S1 executable surface is not freshly audited | Hash, execute, AST/data-flow audit, and map all eleven predicates | open |
-| No accepted two-center interaction energy exists | Derive a distinct input-explicit theorem or prove exact accepted composition | open |
-| Index source may be assigned rather than derived | Inventory the source equation and construct amplitude/range counterfamilies | open |
-| B=1 and nucleon labels may lack an accepted map | Audit action, topology, state, and ontology; retain explicit ceilings | open |
-| Orientation ordering may compare only selected channels | Define the full orientation variable and prove or bound its extrema | open |
-| Force sign and range may be fitted | Derive them from E_int with exact limits and load-bearing mutations | open |
-| Numerical evidence may lack refinement or subtraction control | State solver and errors; refine mesh/domain/tolerance and cross-check a soluble limit or second method | open |
-| Dependencies, consumers, and novelty are incomplete | Audit B1/G1/G2/S5/T2B, accepted nearby claims, reverse consumers, and graph impact | open |
-| Registry, disposition, docs, queue, and memory are unsynchronized | Promote only reviewed distinct claims or close composition, then regenerate governed state | open |
+| S1 executable surface is not freshly audited | Hash, execute, AST/data-flow audit, and map all eleven predicates | closed |
+| No accepted two-center interaction energy exists | Derive a distinct input-explicit theorem or prove exact accepted composition | closed |
+| Index source may be assigned rather than derived | Inventory the source equation and construct amplitude/range counterfamilies | closed |
+| B=1 and nucleon labels may lack an accepted map | Audit action, topology, state, and ontology; retain explicit ceilings | closed |
+| Orientation ordering may compare only selected channels | Define the full orientation variable and prove or bound its extrema | closed |
+| Force sign and range may be fitted | Derive them from E_int with exact limits and load-bearing mutations | closed |
+| Numerical evidence may lack refinement or subtraction control | State solver and errors; refine mesh/domain/tolerance and cross-check a soluble limit or second method | closed |
+| Dependencies, consumers, and novelty are incomplete | Audit B1/G1/G2/S5/T2B, accepted nearby claims, reverse consumers, and graph impact | closed |
+| Registry, disposition, docs, queue, and memory are unsynchronized | Promote only reviewed distinct claims or close composition, then regenerate governed state | closed |
+
+## Adjudication Result
+
+P137 accepts C-SKY-001 in v0.105.0 as an exact conditional interaction theorem
+for a separately declared massive triplet field with two dipole sources. The
+self-subtracted cross energy, complete SO(3) extrema, attractive-channel force,
+massless limit, and exponential large-separation behavior were derived by the
+canonical implementation and a fresh Cartesian-Hessian review. The theorem
+does not construct the nonlinear Skyrme model, B=1 states, nucleons, binding,
+an absolute scale, or a substrate sector.
+
+S1 is terminally qualified through C-CC-001, C-VIR-001, C-RPROF-001, and
+C-SKY-001. Its numerical force omits a load-bearing factor of `1/R`, its
+orientation comparison samples only two assigned channels, and its declared
+index and source profile do not derive a two-Skyrmion energy or nucleon force.
+The primary verifier passes 26 checks, the independent route passes 13, the
+focused package boundary passes 28 tests, and the pinned 11-node source graph
+replays 157 predicates. Immutable G1 and B1 receive isolated aliases backed by
+`np.trapezoid`; every mutable P137 surface uses current APIs or exact algebra.
+All campaign debt is closed.
 
 ## Review and Promotion Plan
 

@@ -1,0 +1,35 @@
+campaign: P137
+attempt: 0004
+status: passed
+candidate: A
+command: >-
+  Repair the read-only AST extractor, enumerate imports functions check
+  conditions assertions NumPy attributes and SymPy calls, then run
+  source_audit.audit_numpy_trapezoid_compatibility on the pinned S1 text.
+expected: >-
+  Produce a deterministic structural inventory and classify compatibility
+  from executable syntax rather than comments or docstrings.
+result:
+  exit_status: 0
+  imports: [numpy, sympy, scipy.integrate.solve_ivp]
+  functions: [check, euler_lagrange, S12, rhs]
+  check_calls: 11
+  assert_nodes: 2
+  numpy_version: 2.5.1
+  numpy_attributes: [abs, all, any, array, asarray, diff, dot, exp, linspace]
+  executable_np_trapz: 0
+  executable_np_trapezoid: 0
+  dynamic_legacy_getattrs: 0
+  eager_legacy_default_fallbacks: 0
+  requires_legacy_alias: false
+  material_findings:
+    - Only check() and the symbolic-solve cardinality are asserted directly.
+    - The supplied Yukawa profile is differentiated exactly in checks S1.2 and S1.3.
+    - The numeric rhs at source line 331 lacks the 1/R factor in the exact derivative at line 163.
+    - Solver success refinement and an independent numerical method are absent.
+    - The orientation check imports tau-dot-tau=-3 and adds it to a schematic tensor expression.
+classification: structural_source_audit
+compatibility_event: none
+next_attempt: >-
+  Compare the surviving declared-profile algebra with accepted C-CC-001 and
+  the conditional Skyrme surfaces before deciding novelty and implementation.

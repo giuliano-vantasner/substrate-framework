@@ -1,0 +1,25 @@
+campaign: P137
+attempt: 0012
+status: failed
+candidate: F
+command: >-
+  Compare current and v0.105.0 release manifests, validate the promoted
+  repository, validate P137 memory records, count the claim/release set and run
+  git diff --check before rendering generated outputs.
+expected: >-
+  Confirm the promotion transaction or identify the first unsynchronized
+  governed consumer.
+failure:
+  class: workflow_ordering
+  mechanism: >-
+    The release manifests are identical, C-SKY-001 is unique, the registry and
+    current release both contain 140 accepted claims, memory validates and git
+    diff is clean. validate_repository stopped because the generated claim
+    index is stale; render_docs.py had not yet been run after registry change.
+  scientific_effect: none
+classification: generated_state_pre_render_failure
+compatibility_event: none
+next_attempt: >-
+  Render docs and accepted memory from governance, regenerate the migration
+  queue, close proposal memory, then run repository validation before the one
+  integrated promotion gate.

@@ -1,0 +1,28 @@
+campaign: P137
+attempt: 0007
+status: failed
+candidate: C
+command: >-
+  Run the fresh Cartesian-Hessian Fourier-source Rodrigues-bound and random-
+  SO3 independent review without importing massive_dipoles.py.
+expected: >-
+  Independently reproduce the exact cross energy global orientation extrema
+  attractive radial force limits and mutations.
+failure:
+  class: representation_or_derivation_pending
+  passed_before_failure: 5
+  mechanism: >-
+    The independent force check failed after the Cartesian Hessian source-sign
+    and both global-bound identities passed. The failing conjunction compares
+    the differentiated minimum with a closed form and separately requires an
+    explicit negative-sign representation; the exact failing subpredicate has
+    not yet been diagnosed.
+  scientific_effect: >-
+    C-SKY-001 is not promotable until the force equality and strict sign are
+    independently restored without relaxing either obligation.
+classification: independent_force_oracle_failure
+compatibility_event: none
+next_attempt: >-
+  Print the fresh differentiated force its factored difference and sign
+  predicates separately, classify the failure, and repair the representation
+  or derivation before rerunning the full independent review.

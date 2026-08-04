@@ -1,0 +1,53 @@
+campaign: P137
+source_unit: S1
+source_sha256: ebe1ba930be26f17671d8e82779d14fc00e7a8b988a4aada722a32d0d9328ddd
+exact_or_supportable_surfaces:
+  - >-
+    Re-variation of the declared one-coordinate optical action reproduces
+    accepted C-CC-001 and the energy-scale cancellation, but supplies no full
+    three-dimensional field reduction or two-body ontology.
+  - >-
+    For the separately declared profile delta_n=kappa*exp(-mR)/R, exact
+    differentiation fixes its negative radial gradient for positive inputs.
+  - >-
+    To first order in the declared profile, the C-CC-001 zero-velocity law has
+    potential -c0^2*kappa*exp(-mR)/(2R). The exact conditional potential is
+    c0^2*(n^-2-1)/4, so the source expression is not exact at finite amplitude.
+  - >-
+    The massless B=1 tail power f~R^-2 is already the conditional endpoint in
+    C-RPROF-001; it does not derive a physical pion or Skyrmion.
+  - >-
+    Exponential decay and sign mutations are exact for the supplied Yukawa
+    profile but cannot derive its source amplitude mass scale or ontology.
+corrected_positive_surface:
+  claim: C-SKY-001
+  summary: >-
+    A declared three-component massive linear field with equal triplet dipole
+    sources has an exact finite cross energy after isolated self-energy
+    subtraction. Its SO(3) orientation extrema and fixed-orientation force are
+    derived globally from the Yukawa Hessian.
+rejected_or_qualified_surfaces:
+  - >-
+    S1 does not construct B=1 fields, a two-center ansatz, a full Skyrme energy,
+    topological charge, quantization, a nucleon state, or a nuclear observable.
+  - >-
+    The source's numeric acceleration is proportional to
+    -exp(-mR)*(m+1/R), whereas differentiating its profile gives an additional
+    factor 1/R. Their ratio is R, but the sign-only check still passes.
+  - >-
+    solve_ivp success is never asserted and no tolerance step method domain or
+    independent-method refinement is performed.
+  - >-
+    The orientation check assigns tau-dot-tau values +/-3, samples two spin
+    geometries and adds schematic terms. It neither derives the source coupling
+    nor optimizes the full relative-orientation space.
+  - >-
+    Adkins-Nappi-Witten 1983 is a static single-nucleon paper and is not the
+    claimed two-Skyrmion Eq. 3.8 derivation.
+  - >-
+    The declared medium profile and the linear triplet dipole field are
+    different models. Their radial and orientation pieces cannot be spliced
+    into one force without a separately derived map.
+source_disposition: qualified
+claim_mapping: [C-CC-001, C-VIR-001, C-RPROF-001, C-SKY-001]
+debt: []

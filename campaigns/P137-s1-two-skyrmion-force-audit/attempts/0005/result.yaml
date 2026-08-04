@@ -1,0 +1,48 @@
+campaign: P137
+attempt: 0005
+status: passed
+candidate: C
+command: >-
+  Compare S1's cited two-Skyrmion attribution and asymptotic interaction scope
+  with the primary ANW 1983 record, Foster-Krusch 2015, and the corrected
+  Harland-Halcrow 2021/2022 dipole-interaction paper, then derive the Yukawa
+  Green-function Hessian and its radial coefficients independently in SymPy.
+expected: >-
+  Determine whether a declared massive triplet dipole cross-energy is a
+  structurally supported and distinct long-range object, without importing a
+  nucleon potential or allowing literature values to select the candidate.
+result:
+  exit_status: 0
+  literature_findings:
+    - >-
+      Adkins Nappi and Witten 1983 concerns static properties of a single
+      quantized Skyrmion and does not support S1's claimed Eq. 3.8
+      two-Skyrmion most-attractive-channel attribution.
+    - >-
+      Foster and Krusch 2015 state that widely separated Skyrmions admit a
+      dipole approximation and that short-range dynamics contains additional
+      effects outside it.
+    - >-
+      Harland and Halcrow v3 explicitly require separate classical-dynamics
+      and quantization approximations, derive the massive-pion dipole model,
+      include an erratum, and restrict its reliability to long range.
+  exact_green: exp(-m*R)/(4*pi*R)
+  transverse_hessian: -exp(-m*R)*(1+m*R)/(4*pi*R^3)
+  longitudinal_hessian: >-
+    exp(-m*R)*(m^2*R^2+2*m*R+2)/(4*pi*R^3)
+  anisotropic_hessian: >-
+    exp(-m*R)*(m^2*R^2+3*m*R+3)/(4*pi*R^3)
+  third_radial_derivative: >-
+    -exp(-m*R)*(m^3*R^3+3*m^2*R^2+6*m*R+6)/(4*pi*R^4)
+  candidate_decision: >-
+    Implement Candidate C as an exact conditional cross-energy for a declared
+    static three-component massive linear field with point-dipole sources and
+    full SO(3) relative orientation. Preserve explicit ceilings against a
+    nonlinear Skyrme solution nucleon potential short-range core binding or
+    quantization claim.
+classification: primary_literature_and_candidate_selection
+compatibility_event: none
+next_attempt: >-
+  Implement the pure symbolic API with global orientation extrema force and
+  limiting cases, then attack it with independent source-energy and Cartesian
+  Hessian derivations plus load-bearing mutations.

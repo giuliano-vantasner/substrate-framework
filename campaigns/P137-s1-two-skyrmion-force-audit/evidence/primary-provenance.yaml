@@ -1,0 +1,25 @@
+campaign: P137
+claim: C-SKY-001
+base_release: v0.104.0
+base_commit: 3eef562
+scientific_base_commit: 3b0b7e7
+frozen_proposal_commit: 144feb4
+canonical_module: src/substrate_framework/massive_dipoles.py
+tests: tests/test_massive_dipoles.py
+primary_verifier: campaigns/P137-s1-two-skyrmion-force-audit/verify.py
+primary_checks: 26
+independent_review: campaigns/P137-s1-two-skyrmion-force-audit/reviews/independent_massive_dipole_review.py
+independent_checks: 13
+independent_route:
+  - direct Cartesian differentiation of the Yukawa Green function
+  - Fourier derivative/source-pairing sign ledger
+  - Rodrigues axis-angle global lower and upper certificates
+  - 4096 deterministic random proper rotations with seed 137
+  - fresh force limits and input mutations without importing massive_dipoles.py
+source_graph_replay: campaigns/P137-s1-two-skyrmion-force-audit/reviews/replay_source_graph.py
+source_graph_checks: 50
+exact_precision: SymPy exact algebra
+numeric_precision: NumPy float64 auxiliary SO3 sampling only
+numerical_integration: false
+compatibility_event: none_in_claim_or_verifiers
+debt: []

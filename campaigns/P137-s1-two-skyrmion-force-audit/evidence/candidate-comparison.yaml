@@ -1,0 +1,47 @@
+campaign: P137
+selection_frozen_at: 144feb4
+criteria:
+  - accepted or explicit dependency closure
+  - declared action sources self-energy subtraction separation and orientation
+  - exact units signs limits range and complete orientation space
+  - independent derivation mutation sensitivity and parameter economy
+  - reusable API value consumer compatibility and nonduplication
+candidates:
+  - id: A
+    decision: reproduction_evidence_only
+    reason: >-
+      All eleven checks execute, but the numeric force is wrong by R and the
+      source never constructs a two-center field or orientation energy.
+  - id: B
+    decision: selected_as_existing_composition
+    reason: >-
+      A supplied positive Yukawa index composed with C-CC-001 gives exact
+      conditional sign and an exact n^-2 slow potential. This is not novel and
+      carries no Skyrmion ontology.
+  - id: C
+    decision: selected_as_C-SKY-001
+    reason: >-
+      The declared massive triplet field closes a finite self-subtracted cross
+      energy, full SO(3) extrema, finite-range force, and massless limit with
+      exact symbolic and independent Cartesian/Fourier derivations.
+  - id: D
+    decision: not_selected
+    reason: >-
+      No accepted physical Skyrme action, two-center boundary-value problem,
+      state map or scale closes a full nonlinear computation. Importing all of
+      them would add assumptions without being needed for the exact long-range
+      positive object and would still not establish a nucleon potential.
+  - id: E
+    decision: selected_for_terminal_mapping
+    reason: >-
+      Existing C-CC-001 C-VIR-001 and C-RPROF-001 cover the surviving source
+      reproductions while explicit rejections prevent narrative widening.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Dependency consumer compatibility nonduplication impact and generated
+      state close independently of the source's tally.
+comparator_role: >-
+  No empirical nuclear comparator or S1 sampled value selected the candidate.
+  Primary literature is a scope cross-check only.
+debt: []

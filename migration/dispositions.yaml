@@ -217,6 +217,54 @@ units:
       P007 replaces duplicate integrations of an analytically identical RHS
       with exact parameter elimination plus local uniqueness; P008 adjudicates
       the later S5 annotation without promoting it.
+  S1:
+    disposition: qualified
+    accepted_claims:
+      - C-CC-001
+      - C-VIR-001
+      - C-RPROF-001
+      - C-SKY-001
+    qualification: >-
+      S1's hash-pinned eleven predicates reproduce. Its declared
+      one-coordinate action, supplied Yukawa-profile sign and exponential
+      decay, conditional virial algebra, and massless B=1 tail power survive
+      only under accepted model ceilings. The corrected Yukawa well is the
+      first-order term of C-CC-001's exact finite-index slow potential. The
+      numeric ODE omits one inverse-separation factor, never checks solver
+      success, and has no refinement. Assigned +/-3 spin/isospin literals and
+      two sampled directions do not derive a two-center interaction or global
+      orientation result; the cited ANW 1983 paper is not that derivation.
+      C-SKY-001 separately supplies an exact self-energy-subtracted cross term
+      and full SO3 extrema for a declared long-range massive triplet dipole
+      field. No nonlinear Skyrme solution, physical pion amplitude, baryon or
+      nucleon quantization, core, binding, nuclear observation, material, or
+      substrate mechanism is established.
+    evidence:
+      - campaigns/P137-s1-two-skyrmion-force-audit/reviews/source_adjudication.md
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/source-reproduction.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/source-audit.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/check-adjudication.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/input-provenance.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/dependency-audit.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/consumer-audit.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/candidate-comparison.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/primary-provenance.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/evidence/literature-audit.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/verify.py
+      - campaigns/P137-s1-two-skyrmion-force-audit/reviews/independent_massive_dipole_review.py
+      - campaigns/P137-s1-two-skyrmion-force-audit/reviews/replay_source_graph.py
+      - campaigns/P137-s1-two-skyrmion-force-audit/attempts/0008/result.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/attempts/0010/result.yaml
+      - campaigns/P137-s1-two-skyrmion-force-audit/attempts/0011/result.yaml
+      - memory/vantasner/decisions/C-SKY-001-review.md
+      - memory/vantasner/decisions/S1-qualified-review.md
+    note: >-
+      P137 promotes the declared long-range massive-triplet theorem through 26
+      primary, 13 independent, and 28 focused-test checks. The eleven-node
+      immutable source graph replays 157 predicates. G1 and B1 receive
+      alias-only compatibility backed by np.trapezoid; mutable code contains no
+      executable legacy quadrature reference.
   S5:
     disposition: qualified
     accepted_claims:

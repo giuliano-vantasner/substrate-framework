@@ -1,0 +1,27 @@
+campaign: P137
+claim: C-SKY-001
+derivation_inputs:
+  field_energy: >-
+    E[phi;J]=K/2 integral[(grad phi_a)^2+m^2 phi_a^2]d^3x-integral J_a phi_a d^3x
+  field_equation: K*(-Delta+m^2)*phi_a=J_a
+  source_A: -P*A_ai*partial_i delta(x-X_A)
+  source_B: -P*B_ai*partial_i delta(x-X_B)
+  relative_orientation: D=A^T*B in SO(3)
+  separation: R=abs(X_B-X_A)>0 and u=(X_B-X_A)/R
+  green_convention: G_m(R)=exp(-mR)/(4*pi*R)
+  subtraction: remove both isolated point-dipole self energies before retaining the finite cross term
+domains:
+  stiffness: K>0
+  mass: m>=0
+  dipole_strength: P>=0
+  force: radial derivative at fixed D
+  finite_range: m>0
+comparators_excluded_from_inputs:
+  - all S1 literals sampled curves and numeric trajectories
+  - physical pion or nucleon masses and nuclear force data
+  - ANW calibration and later literature coefficients
+  - accepted conditional Skyrme profile energies
+units: >-
+  The displayed field/source convention fixes the cross-energy units. A
+  physical unit map for K P m and R is not inferred.
+debt: []

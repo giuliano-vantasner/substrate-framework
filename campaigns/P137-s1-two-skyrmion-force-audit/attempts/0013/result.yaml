@@ -1,0 +1,33 @@
+campaign: P137
+attempt: 0013
+status: passed
+candidate: B+C+E+F
+command: >-
+  Re-run the exact primary and independent P137 verifiers and focused package
+  tests, then run the single integrated promotion gate through
+  scripts/validate.sh after source-graph replay, governance generation, memory
+  synchronization, repository validation, and post-edit impact detection have
+  passed.
+expected: >-
+  Validate C-SKY-001, the terminal S1 disposition, mutable NumPy compatibility
+  policy, registry and release closure, generated queue/docs/memory, all
+  repository tests, memory and skill contracts, and the terminal workflow
+  tally without duplicating the full pytest run contained in the integrated
+  gate.
+result:
+  exit_status: 0
+  primary_checks: 26
+  independent_checks: 13
+  focused_pytest: 28_passed
+  workflow: WORKFLOW_VALID_140_claims_140_accepted_0_proposals
+  migration_queue: 218_units_83_pending_0_partial
+  memory: 556_records_valid
+  skill: valid
+  full_pytest: 1154_passed_in_112.31s
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+classification: final_integrated_promotion_gate
+compatibility_event: immutable_alias_only_for_G1_and_B1
+next_attempt: >-
+  Finalize this record from the unchanged gate output, commit the accepted P137
+  transaction, refresh the post-commit graph, checkpoint the parent migration,
+  and continue with S2.

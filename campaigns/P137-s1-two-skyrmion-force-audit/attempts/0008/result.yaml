@@ -1,0 +1,26 @@
+campaign: P137
+attempt: 0008
+status: passed
+candidate: C
+command: >-
+  Factor the independently differentiated force before its strict sign test,
+  retain exact equality to the closed form, and rerun the full fresh Cartesian
+  Hessian Fourier source Rodrigues and random-SO3 review.
+expected: >-
+  Restore the independent force oracle without weakening equality or sign and
+  complete every independent mutation and limiting-case check.
+result:
+  exit_status: 0
+  checks: 13
+  terminal_tally: ALL 13 CHECKS PASS P137-INDEPENDENT-MASSIVE-DIPOLE
+  failure_classification_from_0007: representation
+  force_difference: 0
+  factored_force_sign: strictly_negative_for_positive_R_m_K_P
+  random_rotations: 4096
+  random_seed: 137
+  source_numeric_force_ratio: R
+classification: independent_symbolic_and_numeric_review
+compatibility_event: none
+next_attempt: >-
+  Complete dependency and reverse-consumer source-graph replay, record
+  predicate-level S1 adjudication, and run the focused package gate.

@@ -1,0 +1,23 @@
+campaign: P137
+attempt: 0006
+status: failed
+candidate: C
+command: >-
+  Atomically add massive_dipoles.py focused tests and package exports with one
+  apply_patch transaction.
+expected: >-
+  Land the pure conditional interaction API and its exact unit tests without
+  touching existing canonical equations.
+failure:
+  class: implementation
+  mechanism: >-
+    The patch's final __all__ context expected WeightedChannelAllocation near
+    the closing bracket, but that symbol occurs earlier in the large export
+    list. apply_patch rejected the whole transaction before changing any file.
+  scientific_effect: none
+  files_changed: []
+classification: atomic_patch_context_failure
+compatibility_event: none
+next_attempt: >-
+  Split module and tests from exports, remove the redundant draft derivative
+  construction, and patch exact import and __all__ anchors independently.
