@@ -2,11 +2,11 @@
 description: Audit YM2's claimed dimensional Yang-Mills lift and its exact operator content
 author: vantasner
 created: '2026-08-10T14:45:00Z'
-updated: '2026-08-10T15:02:00Z'
+updated: '2026-08-10T15:36:00Z'
 tags: [substrate-framework, campaign-proposal, migration-YM2, dimensional-lift]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P159 YM2 Yang-Mills Lift Audit
 
@@ -126,10 +126,15 @@ verifiers pin durable snapshots rather than mutable current state.
 
 ## Attempts and Continuation
 
-The attempt ledger preserves the prior-exposure-aware freeze and the native
-NumPy compatibility abort. An isolated alias-only replay then passes all ten
-source checks. Source-aware audit selects Candidates A, B, F, and G: exact
-accepted composition, counterfamilies, and governance closure.
+The append-only ledger preserves the prior-exposure-aware freeze, native NumPy
+compatibility abort, successful alias-only replay, scientific closure, brittle
+graph-source spelling failure, and repaired full graph replay. Primary and
+fresh independent routes pass 31 and 20 checks; 37 focused accepted-API tests
+pass; and the repaired graph route passes 27 checks over 165 source predicates.
+Candidates A, B, F, and G close the source through exact accepted composition,
+counterfamilies, and governance without a claim or release delta. The single
+integrated gate passes all 1,421 tests with 654 memory records and the physics
+skill valid.
 
 ## Debt Ledger
 
@@ -140,13 +145,13 @@ and generated governance state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| YM2 predicate strength is unaudited | Reproduce and classify all ten checks and the assertion | open |
-| Static kernel and spacetime propagator are conflated | Type every operator, domain, dimension, and boundary datum | open |
-| Color factor may be mistaken for a lift | Mutate representation independently of spacetime data | open |
-| Action and coefficient provenance are unknown | Inventory or declare action, gauge fixing, source, and coefficient freedom | open |
-| Novelty is unknown | Compare all accepted claims and APIs before adding code or a claim | open |
-| Consumers and downstream semantics are unknown | Replay the frozen dependency and consumer graph | open |
-| Registry, queue, docs, and memory are not adjudicated | Complete terminal disposition and generated-state synchronization | open |
+| YM2 predicate strength is unaudited | Reproduce and classify all ten checks and the assertion | discharged |
+| Static kernel and spacetime propagator are conflated | Type every operator, domain, dimension, and boundary datum | discharged |
+| Color factor may be mistaken for a lift | Mutate representation independently of spacetime data | discharged |
+| Action and coefficient provenance are unknown | Inventory or declare action, gauge fixing, source, and coefficient freedom | discharged |
+| Novelty is unknown | Compare all accepted claims and APIs before adding code or a claim | discharged |
+| Consumers and downstream semantics are unknown | Replay the frozen dependency and consumer graph | discharged |
+| Registry, queue, docs, and memory are not adjudicated | Complete terminal disposition and generated-state synchronization | discharged |
 
 ## Review and Promotion Plan
 
@@ -164,7 +169,10 @@ P159 closes only when the exact supportable positive object exists as a
 distinct reviewed claim or complete accepted composition, every YM2 predicate
 has an individual verdict, compatibility is separated from science, all
 downstream consumers replay, governance and memory agree, and the debt ledger
-is empty. A no-go or compatibility diagnosis alone cannot close it.
+is empty. The accepted composition, individual predicate review, compatibility
+replay, semantic graph, disposition, generated queue, and durable decision now
+satisfy that gate without changing v0.123.0. The integrated repository result
+is pinned in attempt 0007.
 
 ## Cross-References
 

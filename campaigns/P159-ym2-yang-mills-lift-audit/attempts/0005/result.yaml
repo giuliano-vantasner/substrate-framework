@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P159
+candidate: first_frozen_source_graph_semantic_replay
+status: failed
+started_at: '2026-08-10T15:11:00Z'
+finished_at: '2026-08-10T15:13:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P159-ym2-yang-mills-lift-audit/reviews/replay_source_graph.py /home/dan/substrate
+passed_before_failure:
+  nodes_replayed: 16
+  source_predicates: 165
+  source_assertions: 16
+  node_hash_shape_exit_tallies: all_passed
+  compatibility_classification: passed
+  semantic_checks: [YM2_direct_product, QCD2_sibling, QCD5_repeated_equation, GK1_boundary]
+failure:
+  layer: verifier_representation
+  mechanism: >-
+    The D3S semantic probe searched for the literal spelling
+    leading_power = 2, while the hash-pinned source spells the same supplied
+    value as leading_power = sp.Integer(2). The source replay and scientific
+    classification did not fail.
+  scientific_failure: false
+repair: match_the_exact_hash_pinned_sp_Integer_2_assignment
+next_attempt: rerun_the_same_graph_with_only_the_source_shape_probe_repaired

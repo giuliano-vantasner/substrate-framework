@@ -1,0 +1,24 @@
+campaign: P159
+source_unit: YM2
+hash_pinned_lexical_or_semantic_consumers:
+  M1: mentions_a_standard_posture_3plus1_lift_but_its_accepted_mass_claim_is_conditioned_on_separately_declared_kinetic_data
+  YM1: contains_retroactive_YM2_ceiling_annotation_but_is_now_qualified_with_no_lift
+  QCD1: names_QCD2_as_the_YM2_EM7_analog_and_propagates_the_same_future_lift_overclaim
+  QCD2: directly_reuses_YM2_and_repeats_the_trace_times_Riesz_propagator_error
+  QCD5: directly_uses_YM2_as_one_of_three_repeated_exponent_equations
+  GK1: directly_reads_YM2_and_correctly_detects_that_static_Riesz_shape_cannot_fix_a_kinetic_coefficient
+accepted_API_consumers:
+  source_change: none
+  canonical_change: none
+  affected_existing_consumers: none
+graph_replay:
+  nodes: 16
+  predicates: 165
+  assertions: 16
+  alias_only: [G1, YM2, QCD2]
+consumer_decision: >-
+  Terminally qualifying YM2 narrows only unaccepted source prose. Existing
+  accepted M1 and YM1 claims already exclude the lift. Pending QCD1 QCD2 QCD5
+  and GK1 receive no authority and remain individually queued. No canonical API
+  changes, so package consumers require no migration.
+debt: []

@@ -1,0 +1,33 @@
+attempt: 0004
+campaign: P159
+candidate: accepted_composition_primary_independent_and_focused_closure
+status: passed
+started_at: '2026-08-10T15:05:00Z'
+finished_at: '2026-08-10T15:10:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P159-ym2-yang-mills-lift-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P159-ym2-yang-mills-lift-audit/reviews/independent_colored_kernel_review.py
+  - .venv/bin/python -m pytest -q tests/test_nonabelian_vacuum_polarization.py tests/test_momentum_kernels.py tests/test_source_audit.py
+results:
+  primary: {status: passed, checks: 31, terminal_tally: ALL_31_CHECKS_PASS}
+  independent: {status: passed, checks: 20, terminal_tally: ALL_20_CHECKS_PASS}
+  focused_accepted_APIs: {status: passed, tests: 37}
+sensitivity:
+  - direct_trace_weighting_fails_matrix_inversion_except_unit_index
+  - fundamental_and_adjoint_index_mutations_scale_the_inverse_oppositely
+  - zero_source_or_probe_removes_exchange_and_force
+  - probe_sign_reverses_force
+  - noninteger_d_s_pair_preserves_inverse_square_and_rejects_endpoint_uniqueness
+  - nonzero_frequency_separates_spacetime_from_static_operator
+  - gauge_parameter_changes_the_missing_longitudinal_sector
+  - bare_coefficient_and_field_rescaling_change_the_propagator
+  - manual_U1_trace_factor_is_not_the_SU2_abelian_subgroup_normalization
+compatibility:
+  native_YM2: version_only_abort
+  alias_only_YM2: ALL_10_CHECKS_PASS
+  mutable_P159_legacy_references: 0
+claim_delta: []
+debt:
+  - complete_frozen_source_graph_and_impact_audits
+  - complete_terminal_disposition_memory_and_validation
+next_attempt: replay_the_full_dependency_and_semantic_consumer_graph

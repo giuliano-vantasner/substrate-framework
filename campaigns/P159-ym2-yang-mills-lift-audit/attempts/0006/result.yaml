@@ -1,0 +1,28 @@
+attempt: 0006
+campaign: P159
+candidate: repaired_frozen_source_graph_semantic_replay
+status: passed
+started_at: '2026-08-10T15:14:00Z'
+finished_at: '2026-08-10T15:16:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P159-ym2-yang-mills-lift-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  exit_code: 0
+  checks: 27
+  terminal_tally: ALL_27_CHECKS_PASS
+  nodes_replayed: 16
+  source_predicates: 165
+  source_assertions: 16
+  native_nodes: 13
+  alias_only_nodes: [G1, YM2, QCD2]
+semantic_closure:
+  - YM2_defines_trace_times_Riesz_product_without_operator_inversion
+  - QCD2_repeats_the_same_SU3_product_and_lift_overclaim
+  - QCD5_repeats_one_supplied_exponent_equation_rather_than_overdetermining_dimension
+  - GK1_correctly_preserves_the_missing_kinetic_normalization_boundary
+  - D3S_and_EM7_cannot_authorize_endpoint_or_dimension_selection
+  - G1_G2_CF2_CF3_M1_and_YM1_gain_no_YM2_lift_authority
+repair_scope: exact_hash_pinned_D3S_source_shape_probe_only
+scientific_result_changed_from_attempt_0005: false
+debt:
+  - complete_impact_provenance_disposition_memory_and_terminal_validation
+next_attempt: close_record_only_adjudication_and_run_one_integrated_terminal_gate

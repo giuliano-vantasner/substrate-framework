@@ -1,0 +1,27 @@
+attempt: 0007
+campaign: P159
+candidate: terminal_record_only_qualification_and_integrated_gate
+status: passed
+started_at: '2026-08-10T15:31:00Z'
+finished_at: '2026-08-10T15:36:00Z'
+commands:
+  - assert_current_release_byte_identical_to_v0_123_0
+  - scripts/validate.sh
+  - git diff --check
+results:
+  current_release_identity: passed_byte_identical_to_v0_123_0
+  repository_contract: valid_158_accepted_claims_61_pending_units
+  generated_queue: current
+  memory_contract: 654_records_passed
+  skill_contract: passed
+  full_tests: 1421_passed
+  full_gate_terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  diff_whitespace: passed
+compatibility:
+  mutable_P159_scientific_legacy_references: 0
+  immutable_YM2_QCD2: eager_alias_only_to_np_trapezoid
+  immutable_G1: alias_only_to_np_trapezoid
+claim_delta: []
+release_delta: none
+debt: []
+next_attempt: continue_parent_effort_at_QCD1
