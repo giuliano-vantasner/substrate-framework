@@ -1,0 +1,49 @@
+source_unit: NA1
+headline_verdict: qualified_with_corrected_conditional_claim
+accepted_content:
+  - the Pauli-half constant T3 center values at integrated angles 2*pi and 4*pi
+  - the fundamental center matrix determinant eigenvalue order and raw-trace data
+  - the later-left product for the declared T1-then-T2 integrated segments
+  - the nonzero symbolic ordered-minus-naive difference and its leading BCH commutator coefficient
+  - the exact collapse for a declared commuting T3 pair
+corrected_content:
+  - >-
+    A Wilson transporter must be paired with the C-NAG-001 derivative sign and
+    transforms by endpoint factors; only a closed based loop transforms by
+    conjugation and supports trace or spectrum class data.
+  - >-
+    The constant T3 example is a commuting soluble limit. Genuine non-Abelian
+    content is supplied only by ordered noncommuting segments, not by -I2.
+  - >-
+    The source's symbolic inequality means the two matrix functions are not
+    identical; the exact local statement is their nonzero a-squared BCH term,
+    not an unqualified pointwise inequality for every positive angle.
+  - >-
+    The center value and trace depend on representation: the 2*pi center acts
+    as -I2 in the fundamental but +I3 in the adjoint.
+rejected_content:
+  - >-
+    A declared integrated T3 connection is not a derived weak-sector flux,
+    physical W connection, or Aharonov-Bohm configuration.
+  - >-
+    Equality of four scalar values does not make their source objects, base
+    spaces, characters, representations, or physical meanings identical.
+  - >-
+    No accepted B1, O1, W2, W4, W7, T1-Z2, CF3, or OM1 content supplies the
+    missing common pullback, weak action, carrier, flux geometry, or observable.
+predicate_adjudication:
+  - {id: NA1.1, verdict: qualified_exact, mapping: C-HOL-001, correction: commuting_fundamental_control_under_a_declared_integrated_connection_not_a_physical_weak_loop}
+  - {id: NA1.2, verdict: qualified_exact_center_algebra, mapping: C-HOL-001, correction: representation_specific_center_data_not_per_unit_physical_flux}
+  - {id: NA1.3, verdict: accepted_exact_guard, mapping: C-HOL-001, correction: fundamental_4pi_control_only}
+  - {id: NA1.4, verdict: qualified_exact_nonidentity_and_local_BCH_guard, mapping: C-HOL-001, correction: add_endpoint_covariance_path_closure_orientation_and_general_transport_controls}
+  - {id: NA1.5, verdict: rejected_as_object_identity_but_retained_as_value_regression, mapping: C-TOP-001, correction: set_equality_without_common_maps_or_domain_identity}
+source_dependencies:
+  B1: qualified_C-BER-001_scalar_Berry_boundary_only_and_narrative_sibling_in_NA1
+  O1: pending_circular_sibling_with_no_authority
+  W2: qualified_C-REP-002_generator_carrier_only_imported_transitively_through_W7
+  W4: token_false_positive_from_W_4pi_variable_with_no_source_dependency
+  W7: qualified_C-NAG-001_and_C-REP-002_local_gauge_and_carrier_authority_only
+  T1Z2: accepted_C-TOP-001_and_C-CHR-001_value_and_character_boundaries_without_common_object_identity
+compatibility:
+  native_numpy_surface: none
+  mutable_policy: exact_algebra_or_np_trapezoid_only

@@ -1,0 +1,72 @@
+revision: 0001
+campaign: P156
+parent_frozen_proposal_sha256: 73dc2c3f3a191dd4819cc896f52b74d09a54f9950fd6b405a92be42771ab5e20
+trigger: >-
+  Source-aware reproduction and nonduplication find a distinct exact ordered
+  finite-matrix transport theorem beyond C-NAG-001, C-REP-002, C-BER-001, and
+  C-WIL-001. They also show that NA1's constant T3 calculation is a commuting
+  control, its noncommuting guard does not derive the endpoint gauge law, and
+  its set equality does not identify four mathematical or physical objects.
+unchanged:
+  - source and dossier hashes accepted-base coordinates and physical ceilings
+  - candidates A through H and their predeclared structural ordering
+  - exclusion of all queue-preexposed center and trace values from selection
+  - compatibility policy requiring exact algebra trapezoid_integral or np.trapezoid in mutable code
+claim_delta:
+  identifiers: [C-HOL-001]
+  dependencies: [C-NAG-001, C-REP-002]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_exact_nonabelian_holonomy_module
+exact_statement: >-
+  Let H be a nonzero finite-dimensional complex inner-product carrier and let
+  B_1,...,B_n be an ordered nonempty sequence of exact Hermitian integrated
+  connection matrices. In the convention inherited from
+  D=partial-i*g*W, define chronological transport by
+  V(B_1,...,B_n)=exp(i*B_n)*...*exp(i*B_1), with later segments on the left.
+  V is unitary and det(V)=exp(i*sum_j trace(B_j)); traceless segments therefore
+  give determinant one. Concatenation is ordered multiplication. The reversed
+  path has chronological segments -B_n,...,-B_1 and transporter
+  V_reverse=V^dagger=V^(-1). Pairwise commuting B_j collapse exactly to
+  exp(i*sum_j B_j). If E_j=exp(i*B_j) and supplied unitary node gauges
+  U_0,...,U_n transform each segment as E_j'=U_j*E_j*U_(j-1)^dagger, then the
+  product transforms as V'=U_n*V*U_0^dagger. For a closed loop with U_n=U_0,
+  the matrix changes by conjugation, so its characteristic polynomial,
+  spectrum, determinant, raw trace, and normalized trace are invariant; the
+  matrix itself is not a scalar invariant. Moving the basepoint cyclically
+  conjugates the product. In the Pauli-half fundamental carrier,
+  exp(2*pi*i*T3)=-I_2 and exp(4*pi*i*T3)=I_2. For the noncommuting ordered
+  pair T1 then T2,
+  exp(i*a*T2)*exp(i*a*T1)-exp(i*a*(T1+T2)) has leading term
+  i*a^2*T3/2 and is not the zero matrix function, while commuting axes collapse.
+  The same 2*pi SU2 center element acts as -I_2 in the fundamental and +I_3 in
+  the adjoint, giving raw traces -2 and +3 and normalized traces -1 and +1.
+  These exact conditional transport identities supply no base-space defect,
+  flux, curvature localization, gauge action, weak matter carrier, physical W
+  sector, Aharonov-Bohm observation, detector response, or substrate map.
+source_corrections:
+  - treat_the_constant_T3_loop_as_a_commuting_control_not_evidence_of_path_ordering
+  - pair_the_transporter_sign_and_endpoint_gauge_law_with_C-NAG-001
+  - state_the_noncommuting_difference_as_a_matrix_function_and_local_BCH_coefficient_not_an_unqualified_all_angle_claim
+  - distinguish_the_transporter_matrix_from_its_conjugacy_class_raw_trace_and_normalized_trace
+  - expose_fundamental_and_adjoint_center_representation_dependence
+  - reject_numeric_minus_one_equality_as_object_identity_or_a_physical_weak_AB_sector
+novelty: >-
+  No accepted claim or importable API defines ordered matrix transport with
+  later-left convention, derives endpoint gauge covariance, proves reverse-
+  path inversion and commuting collapse, and exposes closed-loop conjugacy,
+  basepoint, trace-normalization, and representation behavior. C-NAG-001 stops
+  at local covariance and curvature, C-BER-001 is scalar rank-one Berry data,
+  and C-WIL-001 assumes expectation laws without constructing transport.
+oracle: >-
+  Exact SymPy products and exponentials with an independent segment-ODE and
+  Pauli-product derivation; endpoint-factor telescoping, unitarity, determinant,
+  composition, inverse path, commuting collapse, cyclic basepoint conjugacy,
+  noncommuting BCH coefficient, and fundamental-adjoint center controls;
+  challenged by sign, order, axis, endpoint, closure, trace-normalization, and
+  representation mutations.
+implementation_boundary: >-
+  Add pure exact APIs for ordered segment transport, endpoint gauge covariance,
+  and SU2 center representation evidence. Imports execute no simulation or
+  quadrature and infer no physical base path, gauge action, weak carrier,
+  Aharonov-Bohm observable, detector, or substrate dictionary.
+status: frozen

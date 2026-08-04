@@ -1,0 +1,39 @@
+campaign: P156
+claim: C-HOL-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-NAG-001: >-
+    Supplies the finite local connection transformation curvature covariance
+    and derivative commutator, but no path transporter, endpoint law,
+    composition, reverse path, basepoint, or holonomy conjugacy data.
+  C-REP-002: >-
+    Supplies the Pauli-half carrier and independent projector factor, but no
+    connection transport or physical weak matter identification.
+  C-BER-001: >-
+    Supplies scalar closed-ray Berry holonomy with an endpoint transition for
+    rank-one projectors, not noncommutative matrix transport.
+  C-WIL-001: >-
+    Supplies consequences of declared scalar area and perimeter expectation
+    laws, not the matrix Wilson transporter from which an expectation might be formed.
+  C-GAU-001: >-
+    Supplies Abelian local covariance and conditional scalar flux holonomy,
+    whose commuting phase cannot provide non-Abelian segment ordering.
+  C-TOP-001_and_C-CHR-001: >-
+    Supply parity and finite-character data but explicitly require common
+    pullbacks before values from different domains may be identified.
+distinct_positive_object: >-
+  C-HOL-001 defines exact ordered finite-matrix transport, derives its endpoint
+  gauge covariance in the C-NAG-001 convention, proves unitarity determinant
+  composition reverse-path and commuting properties, and classifies closed-
+  loop conjugacy basepoint trace normalization and representation dependence.
+governed_consumers: [NA1]
+decision: distinct_additive_claim
+debt: []

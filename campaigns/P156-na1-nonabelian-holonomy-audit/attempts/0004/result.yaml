@@ -1,0 +1,37 @@
+attempt: 0004
+campaign: P156
+candidate: source_aware_claim_classification_freeze
+status: passed
+started_at: '2026-08-10T08:54:00Z'
+finished_at: '2026-08-10T09:07:00Z'
+commands:
+  - inspect_hash_pinned_NA1_and_dossier_after_the_committed_comparator_gate
+  - reproduce_NA1_with_clean_exit_and_ALL_5_CHECKS_PASS
+  - search_registry_package_campaign_memory_and_source_consumers_for_ordered_matrix_transport
+  - audit_Wilson_1974_and_WuYang_1975_primary_provenance
+  - parse_all_P156_evidence_YAML
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P156-na1-nonabelian-holonomy-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+freeze:
+  frozen_parent_sha256: 73dc2c3f3a191dd4819cc896f52b74d09a54f9950fd6b405a92be42771ab5e20
+  proposal_revision_sha256: 0f341a4c23fd74e22009e694481d322a3f22524d41249d90ec6c5b6aad815217
+  source_aware_proposal_sha256: bd86c63aada7daa3be42856f4924a474a945ea72fb3ee60f94e2899d70a94951
+  source_sha256: c36b2eeace179a95b44400ea42b74f6263671fd4b4a8441fc682c480bc9372c8
+  dossier_sha256: d0f7c241d0a06ce85acd3e98c9911023141104778543252d436a2704e229b262
+claim_delta:
+  identifier: C-HOL-001
+  dependencies: [C-NAG-001, C-REP-002]
+  decision: distinct_additive_claim_if_all_oracles_pass
+classification:
+  exact_source_content: fundamental_center_controls_and_noncommuting_BCH_nonidentity
+  corrected_source_content: endpoint_covariant_ordered_transport_and_representation_sensitive_conjugacy_data
+  rejected_source_content: numeric_value_identity_physical_weak_AB_and_substrate_readings
+  compatibility_event: none
+  identifier_collision: false
+debt:
+  - implement_the_frozen_exact_transport_APIs_and_focused_tests
+  - independently_rederive_endpoint_covariance_ordering_and_representation_controls
+  - build_the_frozen_source_graph_and_replay_semantic_consumers
+  - complete_claim_level_review_disposition_and_promotion_gate
+next_attempt: implement_C-HOL-001_without_changing_the_frozen_statement

@@ -82,7 +82,7 @@ selection_criteria:
   - accepted-framework compatibility alternative constructions assumption economy reusable API value and source-aware nonduplication
   - complete dependency semantic-consumer compatibility release queue documentation and durable-memory closure
   - preexposed minus-identity plus-identity and trace values excluded from concept selection and thresholds
-claims_proposed: []
+claims_proposed: [C-HOL-001]
 comparators_blinded_until: >-
   This manifest, matching prose contract, NA1 and dossier hashes, candidates A
   through H, transporter sign and ordering conventions, commuting and

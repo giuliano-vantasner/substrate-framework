@@ -1,0 +1,23 @@
+attempt: 0003
+campaign: P156
+candidate: corrected_native_source_reproduction
+status: passed
+started_at: '2026-08-10T08:51:00Z'
+finished_at: '2026-08-10T08:53:00Z'
+commands:
+  - /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-7/bridge_NA1_su2L_wilson_loop.py
+results:
+  source_sha256: c36b2eeace179a95b44400ea42b74f6263671fd4b4a8441fc682c480bc9372c8
+  process_exit: 0
+  terminal_tally: ALL_5_CHECKS_PASS
+  compatibility_event: none
+classification: >-
+  The unchanged source reproduces its five predicates. The constant T3 center
+  exponential and noncommuting BCH difference are exact algebraic evidence;
+  the weak-sector Aharonov-Bohm and shared-object conclusions remain subject
+  to source-aware claim-level adjudication.
+debt:
+  - classify_every_predicate_and_the_headline_claim
+  - complete_source_aware_nonduplication
+  - derive_endpoint_covariance_ordering_orientation_and_representation_controls
+next_attempt: freeze_the_source_aware_claim_classification_before_implementation

@@ -2,7 +2,7 @@
 description: Derive and audit NA1's exact finite non-Abelian holonomy content
 author: vantasner
 created: '2026-08-10T08:45:00Z'
-updated: '2026-08-10T08:45:00Z'
+updated: '2026-08-10T09:05:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -91,11 +91,31 @@ plus-identity, and trace values do not select a theorem.
 
 ## Proposed Claim Delta
 
-No claim identifier is reserved before source-aware nonduplication. A distinct
-claim may be proposed only if the general endpoint-covariant transport and
-ordered-segment theorem is absent from C-NAG-001, C-BER-001, C-WIL-001, the
-registry, package APIs, campaigns, and durable memory. Otherwise NA1 will be
-terminally mapped to accepted claims without a release change.
+Source-aware nonduplication reserves C-HOL-001. No accepted claim or package
+API provides the general later-left ordered product, endpoint gauge covariance,
+reverse-path inverse, commuting collapse, closed-loop conjugacy and basepoint
+behavior, or fundamental-versus-adjoint center comparison. C-HOL-001 depends
+on C-NAG-001 and C-REP-002 only; it does not import a physical weak sector.
+
+## Source-Aware Classification
+
+The unchanged source exits zero and prints all five passes with no NumPy
+compatibility event. NA1.1--3 correctly evaluate the declared fundamental T3
+center controls, but a one-generator connection is commuting and its
+"per-unit-flux" language has no derived flux or weak action. NA1.4 correctly
+shows that the ordered product and exponential of the sum are different matrix
+functions and obtains the leading `i*a^2*T3/2` term. It does not derive the
+transport ODE, endpoint gauge law, closed-path geometry, basepoint behavior,
+reverse path, or representation dependence.
+
+NA1.5 compares values, not objects. It hard-codes two minus-one entries and
+uses set equality without common source or pullback maps. Qualified OM1 later
+states that this bare equality cannot supply the shared homomorphism, while
+accepted C-BER-001 explicitly forbids identifying equal values from different
+Wilson, Berry, representation, or physical domains. Wilson 1974 and Wu--Yang
+1975 support separately governed gauge transport formalisms; neither supplies
+NA1's weak carrier, action, physical base loop, flux, interference observable,
+or substrate dictionary.
 
 ## Implementation and Oracle Plan
 

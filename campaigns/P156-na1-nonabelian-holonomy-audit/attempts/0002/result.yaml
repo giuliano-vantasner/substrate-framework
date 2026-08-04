@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P156
+candidate: native_source_reproduction
+status: failed
+started_at: '2026-08-10T08:50:00Z'
+finished_at: '2026-08-10T08:50:00Z'
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_NA1_su2L_wilson_loop.py
+failure: >-
+  The command changed its working directory to /home/dan/substrate, so the
+  relative framework interpreter path .venv/bin/python did not exist and bash
+  exited 127 before Python or any source predicate ran.
+diagnosis:
+  category: tool_invocation
+  scientific_claim_changed: false
+  source_executed: false
+  compatibility_event: false
+repair: >-
+  Use the absolute interpreter path /home/dan/substrate-framework/.venv/bin/python
+  while preserving the source working directory and unchanged pinned source.
+next_attempt: reproduce_NA1_with_the_absolute_framework_interpreter

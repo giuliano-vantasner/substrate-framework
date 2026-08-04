@@ -1,0 +1,50 @@
+source_unit: NA1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-7/bridge_NA1_su2L_wilson_loop.py
+source_sha256: c36b2eeace179a95b44400ea42b74f6263671fd4b4a8441fc682c480bc9372c8
+dossier_path: /home/dan/substrate/merged-framework/bridges/phase-7/dossiers/NA1-dossier.md
+dossier_sha256: d0f7c241d0a06ce85acd3e98c9911023141104778543252d436a2704e229b262
+native_execution:
+  command: /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-7/bridge_NA1_su2L_wilson_loop.py
+  working_directory: /home/dan/substrate
+  exit_status: 0
+  terminal_tally: ALL_5_CHECKS_PASS
+  compatibility_event: none
+static_shape:
+  imports: [sympy]
+  local_functions: [check, is_zero_mat, eps_abc, su2_z, holonomy, fermionParity, comm]
+  check_calls: 5
+  assertions: 1
+  numerical_quadrature: none
+  numpy_surface: none
+  declared_symbols: [g, phi, a]
+reproduced_relations:
+  - the Pauli-half generators close the exact su2 commutator algebra
+  - the declared constant T3 integrated angle 2*pi exponentiates to -I2 with determinant one and raw trace -2
+  - the declared constant T3 integrated angle 4*pi exponentiates to I2 with raw trace 2
+  - the ordered T1-then-T2 product differs as a symbolic matrix function from the exponential of the sum
+  - the leading ordered-minus-naive coefficient is i*a^2*T3/2 and a commuting T3 pair collapses
+  - four separately constructed or assigned scalar values compare equal to minus one
+oracle_gaps:
+  - >-
+    The source imports rather than derives the parallel-transport equation and
+    never checks the endpoint gauge transformation required by its W7 convention.
+  - >-
+    The constant T3 construction lies in one commuting subgroup; its center
+    value does not establish non-Abelian path ordering or a physical flux.
+  - >-
+    The noncommuting guard proves that two symbolic matrix functions are not
+    identical and checks one BCH coefficient, but it supplies no path geometry,
+    endpoint closure, basepoint, gauge covariance, or representation audit.
+  - >-
+    su2_z(angle) uses the opposite diagonal orientation from exp(i*angle*T3)
+    away from the special 2*pi and 4*pi center values, so equality there cannot
+    validate the general sign convention.
+  - >-
+    NA1.5 hard-codes wilson_eig and chi_F_g as minus one and uses set equality.
+    It provides no common source object or pullback maps between Wilson, Berry,
+    parity, and character domains.
+scope_of_reproduction: >-
+  The run reproduces exact finite fundamental SU2 matrix algebra under declared
+  integrated connections. It does not validate a physical SU2L connection,
+  weak matter carrier, base-space Aharonov-Bohm loop, flux, action, interference
+  observable, common topology map, or substrate realization.

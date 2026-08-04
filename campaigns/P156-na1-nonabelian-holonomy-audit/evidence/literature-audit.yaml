@@ -1,0 +1,29 @@
+campaign: P156
+scope: source_cited_Wilson_WuYang_formalism_and_interpretation_ceiling
+sources:
+  - id: Wilson1974
+    citation: Kenneth G. Wilson, Confinement of quarks, Physical Review D 10 (1974) 2445-2459
+    url: https://doi.org/10.1103/PhysRevD.10.2445
+    primary: true
+    supports:
+      - gauge-invariant lattice gauge variables and closed path structures in Abelian or non-Abelian gauge theory
+      - a separately defined strong-coupling confinement mechanism in a complete lattice model
+    does_not_support:
+      - deriving NA1's continuum weak-sector connection action carrier or Aharonov-Bohm observable
+      - identifying one fundamental SU2 center value with Berry parity or substrate objects
+  - id: WuYang1975
+    citation: Tai Tsun Wu and Chen Ning Yang, Concept of nonintegrable phase factors and global formulation of gauge fields, Physical Review D 12 (1975) 3845-3857
+    url: https://doi.org/10.1103/PhysRevD.12.3845
+    primary: true
+    supports:
+      - nonintegrable phase factors as global electromagnetic data in the Bohm-Aharonov setting
+      - generalization to non-Abelian groups and connections on principal fiber bundles
+    does_not_support:
+      - treating NA1's declared internal-angle parameter as a physical weak Aharonov-Bohm base-space loop
+      - supplying the missing weak matter action source flux detector or substrate dictionary
+verdict: >-
+  The cited primary literature supports a separately declared parallel-
+  transport formalism and its non-Abelian generalization. It does not support
+  NA1's claim that a chosen fundamental center exponential constructs a
+  physical weak Aharonov-Bohm sector or makes unrelated minus-one readings the
+  same object.
