@@ -1,0 +1,26 @@
+campaign: P135
+attempt: 0009
+status: passed
+candidate: B
+command: >-
+  Re-run the primary verifier, independent proper-time review, and focused
+  package tests after replacing stored limit literals with limits derived from
+  the canonical closed form.
+expected: >-
+  Preserve every scientific verdict while making the implementation itself
+  sensitive to changes in the projector coefficient.
+result:
+  exit_status: 0
+  primary_verifier: 50 checks passed
+  independent_review: 29 checks passed
+  focused_tests: 27 passed
+  derived_in_api:
+    - zero-momentum projector limit
+    - low-momentum transverse form factor
+    - fixed-Q massless limit
+    - heavy-mass limit
+classification: exact_candidate_hardened_against_literal_oracle
+compatibility_event: none
+next_attempt: >-
+  Complete claim-level review and the promotion transaction without weakening
+  the source qualification or importing a physical gauge-sector reading.

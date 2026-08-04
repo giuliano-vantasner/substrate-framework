@@ -1,0 +1,49 @@
+campaign: P135
+source_unit: EM5
+source_sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0
+dossier_sha256: b17e07a029012adf50086a4b40fc5ccd0a244f8a5a5492c71d29aaa076494b5a
+exact_surfaces:
+  - the nonzero-Euclidean-momentum transverse projector is idempotent and annihilates longitudinal vectors
+  - a supplied tensor proportional to that projector is transverse by construction
+  - the source's massive parameter expression vanishes when Q is set to zero
+  - a generic nontransverse tensor fails the Ward contraction
+corrected_positive_surface:
+  - >-
+    For a separately declared massive complex scalar, the scalar-QED2 loop has
+    Pi_hat(Q)=N*e^2/pi*(atanh(z)/z-1),
+    z=sqrt(Q)/sqrt(Q+4*m^2), rather than the source expression.
+  - >-
+    Its low-momentum local form factor is N*e^2/(12*pi*m^2), so the
+    coefficients of F_mu_nu*F_mu_nu and F_01^2 are respectively
+    N*e^2/(48*pi*m^2) and N*e^2/(24*pi*m^2).
+  - >-
+    The fixed-positive-Q massless scalar limit is infrared divergent; the
+    finite e^2/pi limit belongs to the source's fermion-shaped numerator.
+rejected_or_qualified_surfaces:
+  - >-
+    The executable uses x*(1-x), the fermionic Schwinger-model numerator,
+    while calling the result a bosonic scalar loop. It contains no scalar
+    determinant, bubble, seagull, loop momentum, or regulator derivation.
+  - >-
+    Constructing Pi_mu_nu=Pi_hat*P_mu_nu makes the Ward result tautological.
+    The scalar loop Ward identity instead requires bubble and seagull
+    cancellation under a shift-invariant regulator.
+  - >-
+    A_mu*P_mu_nu*A_nu=F_01^2/Q. Check 6 states that identity in prose and then
+    drops 1/Q, misclassifying a constant projector kernel as a local Maxwell
+    term. Its e^2 coefficient also has the wrong D=2 mass dimension for a
+    local F-squared coefficient; the massive scalar result keeps e^2/m^2.
+  - >-
+    The pole calculation inserts the denominator Q-Pi_hat even though the
+    source says no bare Maxwell term is present. A propagator pole requires a
+    separately supplied kinetic kernel, sign, continuation, gauge fixing, and
+    normalization; e^2 alone is not invariant under A rescaling.
+  - >-
+    Removing the loop as e tends to zero does not force F=0. With no action for
+    A, a nonflat connection remains allowed. A local Maxwell field in 1+1
+    dimensions has no massless photon polarization, so none of the source's
+    propagating-photon or dispersion claims follows.
+source_disposition: qualified
+claim_mapping: [C-GAU-001, C-VAC-001]
+boundary_claim: C-MAX-001
+debt: []

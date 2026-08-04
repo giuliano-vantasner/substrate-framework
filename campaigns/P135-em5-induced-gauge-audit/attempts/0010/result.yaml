@@ -1,0 +1,16 @@
+campaign: P135
+attempt: 0010
+status: failed
+candidate: E
+command: read memory/vantasner/efforts/corpus-migration.md during review preparation
+expected: load the active parent migration contract
+result:
+  exit_status: 2
+  error: >-
+    The assumed short filename did not exist. The active effort is stored as
+    memory/vantasner/efforts/framework-migration.md and was subsequently read.
+classification: durable_memory_filename_assumption
+compatibility_event: none
+next_attempt: >-
+  Use the indexed framework-migration path and update that existing effort
+  only after the P135 promotion gate closes.

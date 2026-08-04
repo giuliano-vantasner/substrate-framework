@@ -1155,6 +1155,15 @@ Conditional on the independently declared profile Psi=A*sech(eta*x)*exp(-i*omega
 - Compatibility: `compatible_extension`
 - Dependencies: C-U1-001, C-SG-002, C-SG-006, C-SG-008
 
+## C-VAC-001
+
+Conditional on C-GAU-001's local-U1 connection convention, independently declare N positive-integer identical complex scalars in Euclidean two dimensions with mass m>0, charge magnitude e>0, covariant derivative D_mu=partial_mu-i*e*A_mu, quadratic operator -D^2+m^2, one-loop contribution Gamma_loop=Tr log(-D^2+m^2), a translation- and gauge-preserving regulator, and the quadratic convention Gamma_loop^(2)=A_mu*Pi_mu_nu*A_nu/2. Including both the scalar bubble and seagull, their contracted tadpole coefficients are respectively +2*N*e^2 and -2*N*e^2, so the Ward identity follows from their exact cancellation under the regulator's momentum-shift identity rather than from imposing a transverse ansatz. For Euclidean Q=q^2>0, define P_mu_nu=delta_mu_nu-q_mu*q_nu/Q and z=sqrt(Q)/sqrt(Q+4*m^2). Then Pi_mu_nu=P_mu_nu*Pi_hat(Q) =(Q*delta_mu_nu-q_mu*q_nu)*Pi_scalar(Q), where Pi_hat(Q)=N*e^2/pi*(atanh(z)/z-1) and Pi_scalar(Q)=Pi_hat(Q)/Q. Equivalently, Pi_hat=N*e^2*Q/(4*pi) times the integral from zero to one of (1-2*x)^2/[m^2+Q*x*(1-x)] dx. The low-momentum expansion is Pi_hat=N*e^2*Q/(12*pi*m^2)-N*e^2*Q^2/(120*pi*m^4)+O(Q^3), so this loop's leading local Euclidean effective-Lagrangian coefficients are N*e^2/(48*pi*m^2) for F_mu_nu*F_mu_nu and N*e^2/(24*pi*m^2) for F_01^2. At fixed Q>0 the m->0+ scalar limit diverges to positive infinity, whereas the fixed-Q heavy-mass limit and the e->0 loop contribution vanish. The finite e^2/pi massless limit of the fermion-shaped x*(1-x) integrand is not this scalar theorem. The result imports the quantum field, statistics, determinant, mass, charge, multiplicity, regulator, and loop prescription. It neither quantizes C-U1-001's classical field nor identifies physical electric charge, and it supplies no bare Maxwell coefficient, counterterm choice, gauge-field measure, analytic continuation, gauge fixing, propagator pole, propagating photon, preferred dimension, dimensional lift, observation, or substrate gauge-sector mechanism.
+
+- Accepted in: `v0.103.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GAU-001
+
 ## C-VAR-001
 
 For any differentiable one-coordinate Lagrangian L0 and any nonzero multiplier A that is independent of the path coordinate, velocity, and evolution parameter, the Euler-Lagrange operator satisfies EL[A*L0] = A*EL[L0]. The two Euler-Lagrange equations therefore have the same solution set. The result holds for every fixed nonzero uniform factor, not only a factor of degree one in a named energy scale.

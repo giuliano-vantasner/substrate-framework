@@ -1,0 +1,39 @@
+campaign: P135
+attempt: 0004
+status: passed
+candidate: B
+command: >-
+  P135 primary verifier, independent proper-time review, and focused canonical
+  vacuum-polarization/gauge/Maxwell/effective-action tests
+expected: >-
+  Derive a massive-complex-scalar QED2 polarization ledger independently,
+  distinguish it from the fermionic Schwinger coefficient, and make every
+  load-bearing tensor, statistics, seagull, mass, charge, and normalization
+  mutation visible.
+result:
+  exit_status: 0
+  primary_verifier: 50 checks passed
+  independent_review: 29 checks passed
+  focused_tests: 27 passed
+  scalar_projector_coefficient: >-
+    N*e^2/pi*[atanh(z)/z-1], z=sqrt(Q)/sqrt(Q+4*m^2), Q>0, m>0
+  scalar_parameter_kernel: >-
+    N*e^2*Q*(1-2*x)^2/[4*pi*(m^2+Q*x*(1-x))]
+  low_momentum_form_factor: N*e^2/(12*pi*m^2)
+  local_fmunu_squared_coefficient: N*e^2/(48*pi*m^2)
+  scalar_massless_limit_at_fixed_Q: positive_infinity
+  fermion_like_massless_limit_at_fixed_Q: e^2/pi
+  ward_identity: scalar bubble plus seagull cancellation under a shift-invariant regulator
+  independent_route: constant-field proper-time heat kernel reproduces the local F-squared coefficient
+  source_findings:
+    - source inserts the fermionic x*(1-x) numerator while claiming a bosonic scalar loop
+    - source proves transversality only after constructing a transverse projector tensor
+    - source drops 1/Q when replacing A*P*A by F_01^2/Q
+    - source dresses a bare Q propagator while claiming no bare Maxwell term
+    - source e-squared pole is field-normalization dependent without a supplied kinetic coefficient
+    - vanishing loop coefficient does not force F=0
+classification: exact_scalar_qed2_candidate_verified
+compatibility_event: none
+next_attempt: >-
+  Complete external provenance, source-predicate adjudication, dependency,
+  novelty, reverse-consumer, and impact audits before claim-level review.

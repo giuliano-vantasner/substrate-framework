@@ -1,0 +1,22 @@
+campaign: P135
+proposed_claim: C-VAC-001
+registry_search: >-
+  No accepted claim states a scalar-QED vacuum-polarization determinant,
+  bubble-plus-seagull Ward derivation, two-dimensional massive loop form factor,
+  or scalar massless infrared limit.
+nearest_claims:
+  C-GAU-001:
+    overlap: local-U1 connection curvature covariance and projector-compatible gauge algebra
+    missing_from_nearest: quantum action loop determinant bubble seagull regulator polarization kernel and mass limits
+  C-MAX-001:
+    overlap: local F-squared action convention and explicit kinetic-normalization ceiling
+    missing_from_nearest: generated one-loop coefficient nonlocal kernel and scalar mass dependence
+  C-EFT-001:
+    overlap: generic quadratic effective-action bookkeeping
+    missing_from_nearest: field theory loop measure Ward identity regulator tensor reduction and scalar-QED2 formula
+decision: distinct_claim
+implementation_reuse:
+  unchanged: [gauge_u1.py, maxwell.py, effective_actions.py]
+  new: [vacuum_polarization.py]
+  duplicated_constants_or_solvers: false
+debt: []

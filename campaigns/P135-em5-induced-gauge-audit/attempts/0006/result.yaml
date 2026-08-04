@@ -1,0 +1,21 @@
+campaign: P135
+attempt: 0006
+status: failed
+candidate: E
+command: >-
+  Parse the units list in migration/source-claims.yaml and hash the frozen
+  EM5 dependency and reverse-consumer closure.
+expected: >-
+  Read each unit path, disposition, dependency list, static check count, and
+  pinned source hash from the generated queue schema.
+result:
+  exit_status: 1
+  error: >-
+    The repaired parser used source_path, but the generated unit schema calls
+    that field path. No inventory or scientific verdict was emitted.
+classification: generated_queue_field_assumption
+compatibility_event: none
+next_attempt: >-
+  Read the schema field names directly and use path, static_check_calls, and
+  dynamic_check_calls, then independently recompute every source hash and AST
+  check count before freezing the replay graph.

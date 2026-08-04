@@ -137,6 +137,12 @@ from .maxwell import (
     maxwell_euler_lagrange,
     static_maxwell_point_source,
 )
+from .vacuum_polarization import (
+    EuclideanTransverseProjector,
+    ScalarQED2VacuumPolarization,
+    euclidean_transverse_projector,
+    scalar_qed2_vacuum_polarization,
+)
 from .gauge_beta import (
     AbelianGaugeRescalingLedger,
     GaugeCoefficientLedger,

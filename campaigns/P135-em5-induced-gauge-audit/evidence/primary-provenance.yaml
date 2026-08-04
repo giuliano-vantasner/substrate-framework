@@ -1,0 +1,33 @@
+campaign: P135
+claim: C-VAC-001
+derivation_provenance:
+  primary: exact scalar bubble-seagull Ward algebra and real Feynman-parameter reduction
+  independent: exact constant-field proper-time heat kernel and fresh momentum-space derivation
+  external_formula_dependency: >-
+    Standard one-loop scalar-QED determinant and gauge-preserving regularization
+    are approved conditional imports; no external numerical coefficient or
+    substrate interpretation is imported.
+primary_sources:
+  - title: Gauge Invariance and Mass. II
+    author: Julian Schwinger
+    venue: Physical Review 128 2425 (1962)
+    url: https://doi.org/10.1103/PhysRev.128.2425
+    purpose: exact fermionic one-dimensional gauge-model archetype and statistics discriminator
+    limit: does not establish the complex-scalar loop or substrate ontology
+  - title: One Loop Vacuum Polarization in a Locally de Sitter Background
+    authors: T. Prokopec, O. Tornkvist, R. P. Woodard
+    identifier: arXiv:gr-qc/0205130
+    url: https://arxiv.org/abs/gr-qc/0205130
+    purpose: scalar-QED one-loop and gauge-preserving dimensional-regularization convention cross-check
+    limit: curved-background paper used only for field-content and regulator conventions
+  - title: Two-Loop Vacuum Diagrams in Background Field and Heisenberg-Euler Effective Action
+    author: Michael G. Schmidt Krasnansky
+    identifier: arXiv:hep-th/0607230
+    url: https://arxiv.org/abs/hep-th/0607230
+    purpose: scalar-QED constant-background and two-dimensional effective-action convention cross-check
+    limit: no two-loop result enters C-VAC-001
+reason: >-
+  The promoted equations are independently derived in the campaign. Primary
+  literature is used to audit statistics, regulator, and background-field
+  conventions, not to select or hard-code the coefficient.
+debt: []

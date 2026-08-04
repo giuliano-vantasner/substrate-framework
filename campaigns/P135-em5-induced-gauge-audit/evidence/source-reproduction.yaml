@@ -1,0 +1,32 @@
+source_unit: EM5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-3/bridge_EM5_induced_gauge_sector.py
+sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0
+line_count: 445
+command: .venv/bin/python <pinned-source>/merged-framework/bridges/phase-3/bridge_EM5_induced_gauge_sector.py
+exit_status: 0
+terminal_tally: ALL 11 CHECKS PASS
+literal_checks: 11
+assert_statements: 1
+oracle: pure SymPy source-local algebra
+compatibility_preflight:
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  direct_current_attributes: 0
+  dynamic_current_getattrs: 0
+  imported_current_names: 0
+  eager_legacy_default_fallbacks: 0
+  disposition: native execution; no NumPy integration compatibility path exists
+prior_exposure: >-
+  P134 had already executed this body as a reverse consumer. This reproduction
+  is fresh but not blinded and grants no authority.
+headline_outputs:
+  projector: P=delta-q*q/q_squared
+  polarization: Pi_hat=e^2/pi in the source's projector convention
+  dressed_pole: q_squared=e^2/pi
+  effective_action: claimed local F_01_squared coefficient e^2/(4*pi)
+  coupling_relation: e_squared=pi*m_gamma_squared
+  dispersion: omega_squared=k_squared+e_squared/pi
+status: reproduced_not_adjudicated

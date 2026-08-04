@@ -1,0 +1,41 @@
+campaign: P135
+base_release: v0.102.0
+base_commit: 1091175
+scientific_base_commit: f20f7ad
+proposal_freeze_commit: dd3709d
+proposal_sha256: cbbf294212c698c80d090ace72b6123b8003cb359f6f8aafcfbd9c809f771388
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  source_unit: EM5
+  path: merged-framework/bridges/phase-3/bridge_EM5_induced_gauge_sector.py
+  sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0
+  dossier_path: merged-framework/bridges/phase-3/dossiers/EM5-dossier.md
+  dossier_sha256: b17e07a029012adf50086a4b40fc5ccd0a244f8a5a5492c71d29aaa076494b5a
+accepted_inputs:
+  - C-GAU-001 only for the declared local-U1 connection curvature and covariance conventions
+  - C-MAX-001 only as the accepted boundary between a supplied local Maxwell action and a generated loop contribution
+  - C-U1-001 only as a conditional classical current theorem with no quantum or electric identification
+  - gauge_u1.py maxwell.py effective_actions.py source_audit.py and verification.py pure APIs
+  - >-
+    a separately declared Euclidean D=2 quantum complex scalar with positive
+    mass m, charge magnitude e, positive integer multiplicity N, operator
+    -D^2+m^2, and Gamma_loop=Tr log(-D^2+m^2)
+  - >-
+    a shift-invariant gauge-preserving regulator, scalar bubble and seagull,
+    Euclidean momentum Q>0, and Gamma^(2)=A_mu Pi_mu_nu A_nu/2
+  - exact SymPy algebra, rational parameter reduction, limits, series, and constant-field proper time
+excluded_inputs:
+  - identification of the accepted classical complex field as a quantum charged scalar
+  - identification of e with C-U1-001's Noether charge or physical electric charge
+  - pending EM7 or M1 claims, their circular source edges, or source chronology as authority
+  - a bare Maxwell coefficient, propagator, pole prescription, photon, propagating degree of freedom, or 3+1-dimensional lift
+  - the source's finite e^2/pi scalar coefficient, mass pole, induced coupling, dispersion, or closure conclusion
+  - observed charge magnitude, fine-structure constant, substrate ontology, or empirical comparator
+comparator_gate: >-
+  P134 had already opened and executed EM5, so source and coefficient blindness
+  was impossible. P135 froze the complete scalar action, competing candidates,
+  tensor convention, limit-order tests, structural criteria, and physical
+  ceilings before fresh source inspection. No source literal selected the
+  accepted concept.
+compatibility_event: none_in_EM5
+debt: []

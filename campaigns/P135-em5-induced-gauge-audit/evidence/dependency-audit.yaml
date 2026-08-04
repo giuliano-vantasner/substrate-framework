@@ -1,0 +1,43 @@
+campaign: P135
+source_unit: EM5
+declared_source_dependencies:
+  EM1:
+    disposition: qualified
+    accepted_mapping: [C-U1-001, C-U1-002]
+    authority: conditional_classical_complex_scalar_current_only
+  EM2:
+    disposition: qualified
+    accepted_mapping: [C-GAU-001]
+    authority: local_U1_algebra_only_no_dynamics
+  EM3:
+    disposition: qualified
+    accepted_mapping: [C-MAX-001]
+    authority: supplied_Maxwell_action_only
+  EM7:
+    disposition: pending_adjudication
+    authority: none
+  M1:
+    disposition: pending_adjudication
+    authority: none
+source_python_imports: [sympy]
+source_imports_declared_dependencies_executably: false
+accepted_claim_dependencies:
+  C-VAC-001: [C-GAU-001]
+closure:
+  C-GAU-001: accepted_in_v0.26.0
+  current_base: v0.102.0
+circular_source_edges:
+  - EM5 declares M1 and M1 declares EM5
+  - EM5 declares EM7, EM7 declares D3S, and D3S declares EM5
+declared_dependency_replay:
+  nodes: [EM1, EM2, EM3, EM7, M1]
+  checks: 64
+  all_exit_zero_with_terminal_tally: true
+  authority_granted_to_pending_nodes: false
+compatibility: none_in_declared_dependencies
+interpretation: >-
+  C-VAC-001 does not quantize EM1 or borrow EM7/M1. It is conditional on a new,
+  independently declared quantum scalar-QED2 action and retains C-GAU-001's
+  no-ontology and no-dynamics ceilings. C-MAX-001 supplies a comparison boundary
+  for a separately declared bare term but is not needed to derive the loop.
+debt: []

@@ -1,0 +1,25 @@
+campaign: P135
+attempt: 0003
+status: failed
+candidate: B
+command: >-
+  SymPy direct definite integration of the scalar-QED2 Feynman-parameter
+  kernel followed by simplify against the real atanh closed form
+expected: exact zero residual under Q>0, m>0, e>0
+result:
+  exit_status: 1
+  stable_results:
+    low_momentum_form_factor: e^2/(12*pi*m^2)
+    projector_coefficient_series: e^2*Q/(12*pi*m^2)-e^2*Q^2/(120*pi*m^4)+O(Q^3)
+    scalar_massless_limit: positive_infinity
+    fermion_massless_limit: e^2/pi
+  failure: >-
+    SymPy represented the positive-real definite integral as four complex-log
+    branches and did not reduce their branch combination to the equivalent
+    real atanh expression, so the asserted symbolic residual was not zero.
+classification: symbolic_branch_representation
+compatibility_event: none
+next_attempt: >-
+  Substitute y=2*x-1 and z=sqrt(Q)/sqrt(Q+4*m^2), prove the real-domain
+  antiderivative by differentiation on 0<z<1, then evaluate its endpoints and
+  derive the closed form without complex logarithms.

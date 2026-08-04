@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 86
-  qualified: 120
+  pending_adjudication: 85
+  qualified: 121
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -706,8 +706,48 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GAU-001
+  - C-VAC-001
+  qualification: EM5's hash-pinned eleven predicates reproduce, but its constructive gauge-sector headline
+    does not. The nonzero-momentum projector is idempotent and transverse, it annihilates longitudinal
+    vectors, the source's massive expression vanishes when Q is set to zero, and a fabricated identity
+    tensor fails a Ward contraction. Those are kinematic or narrow algebraic facts. The executable instead
+    uses the fermionic Schwinger-model x*(1-x) numerator while calling it a complex- scalar loop; it contains
+    no determinant, bubble, seagull, regulator, or loop-momentum derivation and imposes transversality
+    before checking it. For a separately declared massive scalar-QED2 theory, the corrected projector
+    coefficient is N*e^2/pi*[atanh(z)/z-1], with z=sqrt(Q)/sqrt(Q+4*m^2). Its fixed-Q massless limit is
+    infrared divergent, its low-momentum local F_mu_nu^2 coefficient is N*e^2/(48*pi*m^2), and the Ward
+    identity requires bubble-seagull cancellation. EM5 states A*P*A=F_01^2/Q and then drops /Q when naming
+    a local Maxwell term. Its pole and dispersion import a bare Q kernel despite the no-Maxwell premise;
+    e^2 alone is field-normalization dependent; and vanishing loop weight does not force F=0. No quantization
+    of the accepted classical field, electric charge, photon, propagating degree of freedom, dimensional
+    lift, observation, or substrate gauge sector is established.
+  evidence:
+  - campaigns/P135-em5-induced-gauge-audit/reviews/source_adjudication.md
+  - campaigns/P135-em5-induced-gauge-audit/evidence/source-reproduction.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/source-audit.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/check-adjudication.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/input-provenance.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/dependency-audit.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/consumer-audit.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/candidate-comparison.yaml
+  - campaigns/P135-em5-induced-gauge-audit/evidence/primary-provenance.yaml
+  - campaigns/P135-em5-induced-gauge-audit/verify.py
+  - campaigns/P135-em5-induced-gauge-audit/reviews/independent_scalar_qed2_review.py
+  - campaigns/P135-em5-induced-gauge-audit/reviews/replay_source_graph.py
+  - campaigns/P135-em5-induced-gauge-audit/attempts/0004/result.yaml
+  - campaigns/P135-em5-induced-gauge-audit/attempts/0007/result.yaml
+  - campaigns/P135-em5-induced-gauge-audit/attempts/0009/result.yaml
+  - memory/vantasner/decisions/C-VAC-001-review.md
+  - memory/vantasner/decisions/EM5-qualified-review.md
+  note: P135 promotes the distinct conditional massive scalar-QED2 vacuum-polarization theorem through
+    fifty primary, twenty-nine independent proper-time, and twenty-seven focused-test checks. The nineteen-node
+    immutable dependency/consumer graph replays 219 predicates. YM2 and QCD2 receive alias-only compatibility
+    for eager legacy np.trapz defaults; mutable campaign and framework code uses current integration APIs.
 - source_unit: EM6
   phase: phase-3
   path: merged-framework/bridges/phase-3/bridge_EM6_derived_profile_stability.py

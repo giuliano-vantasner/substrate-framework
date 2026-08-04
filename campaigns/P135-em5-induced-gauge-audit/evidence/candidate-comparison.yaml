@@ -1,0 +1,35 @@
+campaign: P135
+criteria_frozen_before_fresh_source_inspection: true
+source_blindness_available: false
+candidates:
+  A:
+    decision: partly_retained_as_source_evidence
+    reason: >-
+      All eleven predicates reproduce, but only projector identities, the
+      massive zero-Q coefficient limit, and a generic Ward counterexample
+      survive; the headline loop and physical closure do not.
+  B:
+    decision: selected
+    reason: >-
+      The complete declared scalar-QED2 action produces a statistics-correct
+      bubble-plus-seagull kernel, exact Ward cancellation, real-domain closed
+      form, and correct low, massless, and heavy limits.
+  C:
+    decision: retained_as_kinematic_subset
+    reason: >-
+      Projector algebra is exact and reusable but cannot by itself prove a loop,
+      a local action, or a propagating excitation.
+  D:
+    decision: selected_as_scope_boundary
+    reason: >-
+      Mass, multiplicity, local counterterms, a bare kinetic coefficient, field
+      normalization, statistics, and limit order remain explicit rather than
+      being collapsed into a universal e-squared coupling.
+  E:
+    decision: selected
+    reason: >-
+      Claim-level dependency, consumer, compatibility, impact, release, and
+      generated-state closure are required for a review-governed result.
+selected_claim: C-VAC-001
+selection_not_based_on_comparator: true
+debt: []

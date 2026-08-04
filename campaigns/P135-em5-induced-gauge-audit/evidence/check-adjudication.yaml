@@ -1,0 +1,21 @@
+campaign: P135
+source_unit: EM5
+checks:
+  - {id: EM5.1, status: retained_kinematically, mapping: C-GAU-001, reason: The Euclidean projector is exactly idempotent for nonzero momentum but does not establish a physical transverse mode.}
+  - {id: EM5.2, status: retained_only_as_constructed_identity, mapping: C-GAU-001, reason: A tensor defined as Pi_hat times the projector is transverse; this does not derive the scalar loop Ward identity.}
+  - {id: EM5.3, status: rejected_as_stated, mapping: C-VAC-001, reason: The source uses the fermionic x*(1-x) shape; the complex-scalar fixed-Q massless limit is infrared divergent rather than e^2/pi.}
+  - {id: EM5.4, status: retained_with_conditions, mapping: C-VAC-001, reason: The massive scalar projector coefficient tends to zero at Q=0, while its local transverse form factor tends to N*e^2/(12*pi*m^2).}
+  - {id: EM5.5, status: rejected_as_stated, mapping: null, reason: The dressed denominator imports a bare Q kernel despite the stated no-Maxwell premise and inherits the wrong loop coefficient.}
+  - {id: EM5.6, status: rejected_as_stated, mapping: C-VAC-001, reason: The source drops the required 1/Q from A*P*A=F_01^2/Q and gives a dimensionally inconsistent local coefficient.}
+  - {id: EM5.7, status: retained_kinematically, mapping: C-GAU-001, reason: The projector annihilates longitudinal vectors by definition; no physical gauge excitation is established.}
+  - {id: EM5.8, status: rejected_as_stated, mapping: null, reason: The mass relation inherits the unsupported pole and is not invariant without a separately supplied kinetic normalization.}
+  - {id: EM5.9, status: partly_retained, mapping: C-VAC-001, reason: The loop coefficient vanishes with e, but vanishing action does not imply F=0 or close the prior no-dynamics sector.}
+  - {id: EM5.10, status: retained_as_counterexample_only, mapping: C-GAU-001, reason: The fabricated identity tensor fails transversality, but rejecting it does not validate the source loop.}
+  - {id: EM5.11, status: rejected_as_stated, mapping: null, reason: The dispersion inherits the unsupported coefficient and bare propagator; a local 1+1 Maxwell field has no massless photon polarization.}
+headline_decision: >-
+  Accept the conditional massive scalar-QED2 one-loop kernel and its local
+  low-momentum coefficient as a distinct imported quantum theorem. Reject the
+  source's statistics mix, finite massless-scalar coefficient, generated local
+  Maxwell normalization, pole, propagating photon, dispersion, charge
+  identification, and constructive substrate closure.
+debt: []

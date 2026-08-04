@@ -2,11 +2,11 @@
 description: Audit EM5's one-loop induced or emergent gauge-sector claim
 author: vantasner
 created: '2026-08-09T03:30:00Z'
-updated: '2026-08-09T03:30:00Z'
+updated: '2026-08-09T04:20:00Z'
 tags: [substrate-framework, campaign-proposal, scalar-qed, vacuum-polarization, migration-EM5]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P135 EM5 Induced Gauge Audit
 
@@ -123,10 +123,14 @@ future queue state or mutable current release.
 
 ## Attempts and Continuation
 
-Attempt 0001 freezes this contract and records the compromised-blinding fact
-before any fresh EM5 body inspection. Every failed implementation, tensor
-reduction, limit, oracle, or source-replay route will be appended with its
-mechanism and next repair; no failed route can complete the positive object.
+The attempt sequence preserves the successful freeze and native source replay,
+the failed complex-log integration representation, two failed generated-queue
+schema assumptions, a failed template filename assumption, and the parent
+memory filename assumption. The repaired real-domain parameterization passes
+fifty primary checks; a fresh constant-field proper-time route passes
+twenty-nine, focused tests pass twenty-seven, and the nineteen-node source graph
+replays 219 predicates. Attempt 0009 confirms that the canonical API derives
+its limit fields rather than storing expected literals.
 
 ## Debt Ledger
 
@@ -135,34 +139,32 @@ limit, pole, dependency, consumer, novelty, and physical-scope debt.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| EM5 executable surface freshly unaudited | Hash, execute, AST/data-flow audit, and map all eleven predicates | open |
-| Quantum action and loop measure incomplete | State field, statistics, multiplicity, determinant, vertices, and bare gauge term | open |
-| Ward identity may be imposed by ansatz | Derive bubble plus seagull under a declared regulator and mutate a load-bearing term | open |
-| Polarization normalization untyped | Separate `Pi_hat*P` from `Pi_scalar*(q^2 delta-qq)` with dimensions | open |
-| Renormalization and local term unresolved | State subtraction/counterterm freedom and derive any local coefficient | open |
-| Massive/massless and zero-momentum limits unresolved | Derive domains and both limit orders with infrared behavior | open |
-| Pole or mass statement unclosed | Derive it from the full supplied bare-plus-loop kernel and test field rescaling | open |
-| Physical language ungoverned | Separate conditional scalar QED from photon, material, substrate, and observation claims | open |
-| Dependencies, consumers, and novelty unknown | Audit EM1/EM2/EM3/EM7/M1, reverse consumers, accepted APIs, and generated state | open |
+| EM5 executable surface freshly unaudited | Hash, execute, AST/data-flow audit, and map all eleven predicates | closed by source reproduction and predicate adjudication |
+| Quantum action and loop measure incomplete | State field, statistics, multiplicity, determinant, vertices, and bare gauge term | closed conditionally; quantum inputs are explicit and bare gauge input remains excluded |
+| Ward identity may be imposed by ansatz | Derive bubble plus seagull under a declared regulator and mutate a load-bearing term | closed by cancellation and omitted/sign-flipped seagull probes |
+| Polarization normalization untyped | Separate `Pi_hat*P` from `Pi_scalar*(q^2 delta-qq)` with dimensions | closed exactly |
+| Renormalization and local term unresolved | State subtraction/counterterm freedom and derive any local coefficient | closed for the loop contribution; separate counterterms remain outside the claim |
+| Massive/massless and zero-momentum limits unresolved | Derive domains and both limit orders with infrared behavior | closed exactly |
+| Pole or mass statement unclosed | Derive it from the full supplied bare-plus-loop kernel and test field rescaling | closed by rejection; EM5 omits the required bare kernel and normalization |
+| Physical language ungoverned | Separate conditional scalar QED from photon, material, substrate, and observation claims | closed by C-VAC-001 ceiling and EM5 qualification |
+| Dependencies, consumers, and novelty unknown | Audit EM1/EM2/EM3/EM7/M1, reverse consumers, accepted APIs, and generated state | closed by nineteen-node replay and claim-level audits |
 
-## Review and Promotion Plan
+## Review and Promotion Outcome
 
-C-VAC-001 receives an individual review only if the complete conditional loop
-theorem survives both derivations and mutations. Source adjudication separately
-classifies EM5. Reusable logic moves into a pure package module with focused
-tests; literal source orchestration stays in the campaign. Dependency, impact,
-consumer, novelty, generated-state, queue, release, documentation, and memory
-replay close any promotion. A terminal qualification or refutation names its
-reason and durable evidence even if no claim is accepted.
+C-VAC-001 passes individual review as a symbolic-verified compatible extension
+depending on C-GAU-001. Source adjudication separately qualifies EM5 and
+rejects its central emergent-photon narrative. Reusable logic lives in the pure
+vacuum-polarization module with focused tests; literal source orchestration
+remains in P135. The disposition, registry, release, generated documentation,
+and generated memory are synchronized in the promotion transaction.
 
 ## Done Gate
 
-P135 closes only with the positive, convention-complete loop object or an exact
-accepted composition that already supplies every supportable part, plus
-claim-level review, terminal EM5 disposition, sensitive oracle evidence,
-downstream replay, synchronized governance, and an empty campaign ledger. A
-source no-go or unsupported headline is evidence and triggers the next
-candidate; it is not success by itself.
+P135 closes with the positive convention-complete massive scalar-QED2 loop
+object, claim-level review, terminal EM5 qualification, sensitive primary and
+independent exact oracles, downstream replay, synchronized governance, and an
+empty campaign ledger. The rejected source headline is retained as evidence
+and is not presented as the campaign's success.
 
 ## Cross-References
 

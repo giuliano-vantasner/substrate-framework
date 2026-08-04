@@ -1,0 +1,18 @@
+campaign: P135
+attempt: 0005
+status: failed
+candidate: E
+command: parse migration/source-claims.yaml for units whose candidate_dependencies contain EM5
+expected: enumerate direct queue consumers and their current dispositions
+result:
+  exit_status: 1
+  error: >-
+    The parser treated the top-level mapping as an iterable after probing a
+    nonexistent source_claims key; each iterated key was a string, so get was
+    unavailable.
+  lexical_scan_completed: 16 files mention EM5 or bridge_EM5 including the source itself
+classification: generated_queue_schema_assumption
+compatibility_event: none
+next_attempt: >-
+  Read the declared top-level schema and iterate the units list directly, then
+  compare dependency metadata with the broader lexical scan.

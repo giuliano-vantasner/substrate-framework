@@ -1,0 +1,45 @@
+campaign: P135
+root_source_unit: EM5
+authority_warning: >-
+  Replaying a source consumer proves only that its pinned predicates execute.
+  No pending consumer gains an induced gauge sector, non-Abelian lift, mass,
+  dimension selection, or substrate premise from EM5 or C-VAC-001.
+reverse_consumers:
+  - {source_unit: W7, disposition: pending_adjudication, checks: 11}
+  - {source_unit: M1, disposition: pending_adjudication, checks: 9, role: dependency_and_consumer}
+  - {source_unit: M2, disposition: pending_adjudication, checks: 7}
+  - {source_unit: YM1, disposition: pending_adjudication, checks: 9}
+  - {source_unit: YM2, disposition: pending_adjudication, checks: 10, compatibility: alias_only}
+  - {source_unit: QCD1, disposition: pending_adjudication, checks: 11}
+  - {source_unit: QCD2, disposition: pending_adjudication, checks: 10, compatibility: alias_only}
+  - {source_unit: QCD3, disposition: qualified, checks: 9}
+  - {source_unit: D3S, disposition: qualified, checks: 13}
+  - {source_unit: WM2, disposition: duplicate_evidence, checks: 10}
+  - {source_unit: GK1, disposition: pending_adjudication, checks: 11}
+  - {source_unit: GK3D1, disposition: pending_adjudication, checks: 19}
+  - {source_unit: GK3D2, disposition: pending_adjudication, checks: 17}
+  - {source_unit: GK3D4, disposition: pending_adjudication, checks: 11}
+  - {source_unit: HE5, disposition: out_of_scope, checks: 7}
+replay:
+  consumer_scripts: 15
+  consumer_checks: 164
+  declared_dependency_scripts: 5
+  declared_dependency_checks: 64
+  unique_scripts: 19
+  total_checks: 219
+  exit_statuses_all_zero: true
+  terminal_tallies_all_present: true
+python_dependency_audit:
+  executable_imports_of_EM5: 0
+  relationship: lexical provenance and locally duplicated formulas
+compatibility_preflight:
+  YM2: {mode: alias_only, dynamic_np_trapz_references: 1, eager_default_fallbacks: 1}
+  QCD2: {mode: alias_only, dynamic_np_trapz_references: 1, eager_default_fallbacks: 1}
+  all_other_nodes: native
+  mutable_framework_np_trapz_references: 0
+interpretation: >-
+  Qualified QCD3 and D3S and duplicate WM2 keep their existing claim-specific
+  ceilings; HE5 remains out of scope. The other eleven consumers remain
+  pending. Their successful locally duplicated calculations do not repair the
+  statistics, tensor, bare-kernel, or physical-ontology defects in EM5.
+debt: []

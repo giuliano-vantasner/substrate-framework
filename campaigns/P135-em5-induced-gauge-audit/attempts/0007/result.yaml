@@ -1,0 +1,31 @@
+campaign: P135
+attempt: 0007
+status: passed
+candidate: E
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P135-em5-induced-gauge-audit/reviews/replay_source_graph.py
+  --source-root /home/dan/substrate
+expected: >-
+  Hash-pin and reproduce the five declared EM5 dependencies and fifteen direct
+  reverse consumers, counting M1 once because it has both roles; isolate any
+  immutable NumPy compatibility issue from scientific verdicts.
+result:
+  exit_status: 0
+  unique_nodes: 19
+  source_predicates: 219
+  replay_controls: 21 checks passed
+  native_nodes: 17
+  alias_only_nodes: [YM2, QCD2]
+  alias_reason: >-
+    Both immutable source files contain an eagerly evaluated nested fallback
+    that reaches np.trapz under NumPy 2 even though np.trapezoid is present.
+  circular_source_edges:
+    - EM5 declares M1 while M1 declares EM5
+    - EM5 declares EM7, EM7 declares D3S, and D3S declares EM5
+classification: exact_hash_pinned_source_graph_replay
+compatibility_event: immutable_alias_only_for_YM2_and_QCD2
+next_attempt: >-
+  Treat the successful source tallies as reproduction only, preserve the
+  circularity ceiling, and complete individual source-predicate, dependency,
+  consumer, novelty, provenance, and impact reviews.

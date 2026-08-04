@@ -1,0 +1,30 @@
+campaign: P135
+attempt: 0002
+status: passed
+candidate: A
+command: >-
+  audit_numpy_trapezoid_compatibility followed by native execution of
+  substrate@6d1f4e0 EM5
+expected: reproduce the hash-pinned source before scientific promotion
+result:
+  exit_status: 0
+  source_sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0
+  source_lines: 445
+  terminal_tally: ALL 11 CHECKS PASS
+  numpy_compatibility:
+    numpy_aliases: []
+    legacy_references: 0
+    current_references: 0
+    eager_legacy_default_fallbacks: 0
+  exposed_outputs:
+    massless_polarization: e^2/pi
+    claimed_pole: q^2=e^2/pi
+    claimed_effective_coupling: g_eff^2=pi/e^2
+    claimed_dispersion: omega^2=k^2+e^2/pi
+  authority: noncanonical source reproduction only
+classification: native_source_reproduction
+compatibility_event: none
+next_attempt: >-
+  Audit the eleven predicates against the complete scalar-QED bubble plus
+  seagull calculation, tensor normalization, dimensions, regulator, limits,
+  and accepted dependency closure.

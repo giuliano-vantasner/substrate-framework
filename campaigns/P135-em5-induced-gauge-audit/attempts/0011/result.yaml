@@ -1,0 +1,38 @@
+campaign: P135
+attempt: 0011
+status: passed
+candidate: E
+command: >-
+  Run the P135 primary verifier, independent proper-time review, frozen
+  dependency/consumer replay, and the single integrated scripts/validate.sh
+  promotion gate, followed by git diff --check.
+expected: >-
+  Preserve all exact scientific and source-graph tallies; validate the
+  138-claim v0.103.0 registry/release, 218-unit queue with EM5 qualified,
+  generated documentation and memory, full package suite, current skill, and
+  clean diff formatting without a duplicate full pytest invocation.
+result:
+  exit_status: 0
+  primary_verifier: 50 checks passed
+  independent_review: 29 checks passed
+  source_graph_replay: 21 checks passed over 19 nodes and 219 predicates
+  workflow:
+    accepted_claims: 138
+    accepted_release: v0.103.0
+    migration_units: 218
+    pending_units: 85
+    partial_units: 0
+    memory_records: 546
+    tests: 1139 passed in 110.06 seconds
+    skill: valid
+    generated_docs_and_memory: current
+  git_diff_check: passed
+classification: promotion_boundary_passed
+compatibility_event: >-
+  Immutable YM2 and QCD2 use the recorded alias-only replay; mutable P135 and
+  framework code uses np.trapezoid, exact symbolic integration, or no sampled
+  integration.
+next_attempt: >-
+  Commit the accepted claim and qualified source transaction, refresh the graph
+  against that committed revision, and update the active parent effort before
+  freezing EM7.

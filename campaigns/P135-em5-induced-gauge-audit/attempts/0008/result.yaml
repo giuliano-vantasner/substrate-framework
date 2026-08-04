@@ -1,0 +1,16 @@
+campaign: P135
+attempt: 0008
+status: failed
+candidate: E
+command: read memory-templates/claim-review.yaml before drafting claim decisions
+expected: load the current claim-review contract
+result:
+  exit_status: 2
+  error: >-
+    The template is Markdown, not YAML; the requested path did not exist. The
+    directory listing located memory-templates/claim-review.md.
+classification: template_filename_assumption
+compatibility_event: none
+next_attempt: >-
+  Read claim-review.md completely and instantiate its required fields for both
+  C-VAC-001 and the EM5 source disposition.
