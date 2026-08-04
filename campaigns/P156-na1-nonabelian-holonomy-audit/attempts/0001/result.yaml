@@ -1,0 +1,51 @@
+attempt: 0001
+campaign: P156
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T08:39:00Z'
+finished_at: '2026-08-10T08:48:00Z'
+commands:
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - read_current_release_relevant_accepted_claims_and_source_modules
+  - memory search Wilson loop holonomy path ordering noncommuting
+  - memory search NA1 SU2L weak Aharonov Bohm
+  - registry_campaign_package_and_memory_collision_search_for_matrix_holonomy_claims
+  - sha256sum hash_pinned_NA1_and_dossier_without_opening_their_bodies
+  - cmp campaigns/P156-na1-nonabelian-holonomy-audit/proposal.yaml campaigns/P156-na1-nonabelian-holonomy-audit/evidence/frozen-proposal.yaml
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P156-na1-nonabelian-holonomy-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+freeze:
+  proposal_sha256: 73dc2c3f3a191dd4819cc896f52b74d09a54f9950fd6b405a92be42771ab5e20
+  frozen_proposal_sha256: 73dc2c3f3a191dd4819cc896f52b74d09a54f9950fd6b405a92be42771ab5e20
+  memory_contract_sha256: 35dde40b6a39f448198fa6b0a4f8f181fa1d654a638266eb4e6b19de86046450
+  source_sha256: c36b2eeace179a95b44400ea42b74f6263671fd4b4a8441fc682c480bc9372c8
+  dossier_sha256: d0f7c241d0a06ce85acd3e98c9911023141104778543252d436a2704e229b262
+preflight:
+  framework_repository: clean_at_b4f2e61_before_contract_creation
+  framework_release: v0.121.0
+  source_repository: pinned_commit_with_later_dirty_files_excluded
+  skill_checks: 7_passed_0_warnings
+  repository_contract: valid_156_accepted_claims_65_pending_units
+  memory_recall: >-
+    Found accepted non-Abelian gauge and Berry boundaries but no general
+    ordered matrix-transport claim or package API.
+preexposure:
+  source_queue_metadata: >-
+    The queue exposed five candidate dependencies, five literal checks, one
+    assertion, a symbolic oracle, and the fundamental 2*pi minus-identity and
+    4*pi identity values.
+  excluded_from_selection: true
+source_opened_or_executed: false
+compatibility_preflight: >-
+  The queue inventory exposes no NumPy compatibility detail. Mutable code is
+  frozen to np.trapezoid or the canonical trapezoid_integral helper and never
+  executable np.trapz. Any immutable spelling-only failure will receive an
+  alias backed by np.trapezoid before scientific adjudication and will not
+  count as candidate rejection.
+debt:
+  - commit_the_source_blind_freeze
+  - reproduce_NA1_and_adjudicate_every_predicate
+  - resolve_transport_order_endpoint_gauge_conjugacy_representation_and_physical_ceilings
+  - complete_source_aware_nonduplication_before_claim_or_implementation
+next_attempt: commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source

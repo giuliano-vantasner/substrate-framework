@@ -1,0 +1,94 @@
+id: P156
+base_release: v0.121.0
+base_commit: b4f2e61
+scientific_base_commit: b4f2e61
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [NA1]
+question: >-
+  Reproduce and independently audit NA1's claimed SU2 Wilson loop, and
+  determine the most general exact finite-dimensional statement relating the
+  C-NAG-001 connection convention to oriented parallel transport,
+  path-ordered products, closed-loop conjugacy data, commuting and genuinely
+  noncommuting segment controls, orientation reversal, and representation
+  dependence, while keeping any Aharonov-Bohm, weak-sector, particle,
+  detector, or substrate interpretation behind its missing geometric,
+  dynamical, carrier, and observable premises.
+invariants:
+  - >-
+    C-NAG-001 fixes D=partial-i*g*W and the finite connection law
+    W'=U*W*U_dagger-(i/g)*(partial U)*U_dagger. Parallel transport must use
+    dV/ds=i*g*dot(x)^mu*W_mu*V, transform by endpoint factors, and reduce to
+    conjugation only for a closed loop at a fixed basepoint.
+  - >-
+    C-REP-002 supplies the exact Pauli-half fundamental carrier and a separate
+    projector factor, but supplies no physical matter field, weak doublet,
+    path, interaction, anomaly cancellation, or substrate state.
+  - >-
+    C-BER-001 is a rank-one projective Berry holonomy with a scalar endpoint
+    transition. Equal scalar or center values do not identify it with a
+    matrix Wilson transporter, common connection, carrier, or physical loop.
+  - >-
+    C-WIL-001 derives consequences only from separately declared rectangular
+    area and perimeter expectation laws. It neither supplies matrix parallel
+    transport nor derives a gauge action, phase, or confinement mechanism.
+  - >-
+    A constant connection confined to T3 is a commuting one-generator
+    subgroup. exp(2*pi*i*T3)=-I in the fundamental carrier is an exact control
+    but cannot demonstrate path ordering or non-Abelianity.
+  - >-
+    For ordered piecewise-constant integrated Hermitian segments B1 through
+    Bn, the frozen chronological convention is V=exp(i*Bn)*...*exp(i*B1).
+    Pairwise commuting segments collapse to exp(i*sum B), reversed paths give
+    V inverse, and noncommuting Pauli-axis segments must change the matrix when
+    their order is exchanged.
+  - >-
+    A closed transporter matrix is gauge and basepoint covariant, not itself a
+    scalar invariant. Conjugacy class, spectrum, determinant, and trace are
+    the corresponding finite-carrier data; raw and dimension-normalized trace
+    must remain distinct and are representation dependent.
+  - >-
+    The queue preexposes five literal checks, one assertion, the labels B1,
+    O1, W2, W4, and W7, and the fundamental identities
+    exp(2*pi*i*T3)=-I and exp(4*pi*i*T3)=+I. These values are excluded from
+    concept selection. The source and dossier bodies, AST data flow, exact
+    guards, remaining constants, and narrative consumers remain unopened
+    until this contract is frozen and committed.
+allowed_imports:
+  - C-NAG-001 only for its exact connection convention covariance curvature and physical ceilings
+  - C-REP-002 only for its finite carrier generators projector factor and physical ceilings
+  - C-BER-001 only as a scalar closed-ray holonomy and endpoint-transition nonduplication boundary
+  - C-WIL-001 only as an expectation-law naming and physical-confinement nonduplication boundary
+  - C-KIN-001 only as W4's accepted kinematic ceiling with no holonomy or weak-sector authority
+  - exact finite-dimensional linear algebra matrix exponentials ODE uniqueness and SU2 representation theory
+  - NA1 and NA1-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce NA1 literally and classify every predicate by exact consequence commuting control noncommuting sensitivity and unsupported physical reading.}
+  - {id: B, description: Derive general finite path transport and its endpoint gauge covariance from the frozen C-NAG-001 derivative convention.}
+  - {id: C, description: Build exact ordered piecewise-constant transport with commuting collapse reversed-path inversion and noncommuting Pauli-segment order sensitivity.}
+  - {id: D, description: Classify closed-loop conjugacy trace spectrum determinant basepoint and representation behavior including fundamental and adjoint center images.}
+  - {id: E, description: Compare matrix Wilson transport scalar Berry holonomy and Abelian Aharonov-Bohm phase by their base spaces carriers endpoint data and observables.}
+  - {id: F, description: Map NA1 entirely to C-NAG-001 C-REP-002 C-BER-001 and C-WIL-001 if source-aware nonduplication leaves no distinct reusable theorem.}
+  - {id: G, description: Construct identical fundamental center values from distinct commuting connections paths and representations to bound physical and topological interpretation.}
+  - {id: H, description: Close dependency semantic-consumer compatibility nonduplication disposition release generated-state and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact agreement between derivative connection and transporter transformation conventions
+  - explicit path orientation segment order basepoint endpoints carrier coupling and trace normalization
+  - genuine noncommutativity tested by order-sensitive matrices rather than a one-generator center exponential
+  - commuting collapse reverse-path inverse composition unitarity determinant and soluble constant-connection limits
+  - separation of transporter conjugacy data scalar Berry phase topology curvature flux and physical observable dictionaries
+  - fundamental versus adjoint representation sensitivity and distinction between raw and normalized traces
+  - load-bearing sign order axis coupling endpoint gauge and representation mutations
+  - accepted-framework compatibility alternative constructions assumption economy reusable API value and source-aware nonduplication
+  - complete dependency semantic-consumer compatibility release queue documentation and durable-memory closure
+  - preexposed minus-identity plus-identity and trace values excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, NA1 and dossier hashes, candidates A
+  through H, transporter sign and ordering conventions, commuting and
+  noncommuting controls, conjugacy, trace, orientation, representation,
+  physical-ceiling, compatibility, mutation, and done-gate criteria are
+  frozen and committed. Queue-exposed center values cannot select a concept.
+  The source and dossier bodies, exact data flow, literal constants, guards,
+  and further comparator material remain unopened until that boundary.
+status: draft
