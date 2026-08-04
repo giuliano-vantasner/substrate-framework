@@ -1,0 +1,43 @@
+source_unit: M1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py
+source_sha256: 6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f
+dossier_path: /home/dan/substrate/merged-framework/bridges/phase-7/dossiers/M1-dossier.md
+dossier_sha256: cc6e38f748085be857dedf2c724125a2b92a84db791d7b365ea14ff8fd6a7886
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py
+  exit_status: 0
+  terminal_tally: ALL_9_CHECKS_PASS
+  compatibility_event: none
+static_shape:
+  imports: [sympy]
+  local_functions: [check, is_zero_mat]
+  check_calls: 9
+  assertions: 1
+  numerical_quadrature: none
+  numpy_surface: none
+  declared_symbols: [g, g_prime, v, W1, W2, W3, B]
+  declared_representation: Pauli_half_SU2_plus_Y_over_2_equal_identity_over_2
+  declared_vacuum: [0, v_over_sqrt_2]
+reproduced_relations:
+  - Q=T3+Y/2=diag(1,0) annihilates the declared lower-component vacuum
+  - the declared covariant derivative is nonzero on that vacuum for a W1 gauge component
+  - the scalar quadratic form has coefficient g^2*v^2/8 on W1^2 and W2^2
+  - the real-field Hessian neutral matrix is v^2/4 times [[g^2,-g*g_prime],[-g*g_prime,g_prime^2]]
+  - the neutral matrix has determinant zero and eigenvalues zero and v^2*(g^2+g_prime^2)/4
+  - the declared orthonormal neutral eigenvectors use sine g_prime/sqrt(g^2+g_prime^2) and cosine g/sqrt(g^2+g_prime^2)
+  - Q kills the vacuum while T1 T2 and the declared neutral massive combination do not
+  - rho=M_W^2/(M_Z^2*cos(theta)^2) simplifies to one in the declared specialization
+  - the implemented bad matrix with off-diagonal +g*g_prime/2 has nonzero determinant
+  - v=0 makes the full quadratic matrix vanish
+guard_mismatch: >-
+  The header and result prose advertise that changing -g*g_prime to
+  +g*g_prime removes the zero eigenvalue. That statement is false because
+  either sign with the same magnitude has determinant zero. CHECK8 actually
+  changes both sign and magnitude to +g*g_prime/2, so it detects a
+  mis-normalized mixing magnitude rather than the advertised sign alone.
+scope_of_reproduction: >-
+  These are exact evaluations of a declared finite-dimensional scalar kinetic
+  quadratic form. Reproduction does not validate the vacuum as a ground state,
+  the source's EM6 or EM5 imports, a medium condensate, a gauge kinetic action,
+  canonically normalized pole masses, a photon or weak-boson identity,
+  electroweak breaking, rho phenomenology, or substrate unification.

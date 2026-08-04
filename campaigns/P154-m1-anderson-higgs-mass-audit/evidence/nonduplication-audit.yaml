@@ -1,0 +1,42 @@
+campaign: P154
+claim: C-GSM-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-SYM-001: >-
+    Proves scalar-potential Hessian zero directions from exact invariance and
+    stationarity, but does not derive the gauge-field quadratic Gram matrix
+    produced by a scalar covariant kinetic term.
+  C-NAG-001: >-
+    Supplies a non-Abelian covariant derivative and curvature but explicitly
+    supplies no scalar action, vacuum, gauge-boson mass, or kinetic
+    normalization.
+  C-REP-002: >-
+    Supplies the Pauli-half doublet and commuting Abelian-generator structure
+    but no covariant scalar kinetic term, vacuum, mass matrix, or stabilizer
+    spectrum.
+  C-GAU-001: >-
+    Supplies local Abelian covariance but no non-Abelian carrier composition,
+    vacuum Gram matrix, generalized mass eigenproblem, or physical mass.
+  C-VTX-001: >-
+    Supplies declared radial Abelian-Higgs equations and asymptotic lengths for
+    another model, not a finite-carrier gauge-orbit mass theorem or the M1
+    specialization.
+distinct_positive_object: >-
+  C-GSM-001 derives the real gauge-field quadratic matrix as twice the real
+  Gram matrix of coupled vacuum-orbit vectors, proves PSD and exact equality of
+  its kernel with the coupled stabilizer, separates it from a positive gauge
+  kinetic metric and its generalized eigenproblem, and specializes it to the
+  declared Pauli-half SU2 plus commuting U1 lower doublet. It also makes the
+  neutral sign convention basis-covariant and supplies the exact limit and
+  representation countermodels absent from existing APIs.
+governed_consumers: [M1]
+decision: distinct_additive_claim
+debt: []

@@ -1,0 +1,78 @@
+revision: 0001
+campaign: P154
+parent_frozen_proposal_sha256: 95c0ebbbf3b9058183efcc878d8369fe74b389a73df522a58f07ae6067739089
+trigger: >-
+  Source-aware exact rederivation finds a distinct conditional gauge-scalar
+  mass theorem beyond C-SYM-001, C-NAG-001, C-GAU-001, and C-REP-002, while
+  showing that M1's physical condensate imports are unauthorized and its
+  advertised wrong-sign guard actually mutates both sign and magnitude.
+unchanged:
+  - source and dossier hashes accepted-base coordinates and physical ceilings
+  - candidates A through H and their predeclared structural ordering
+  - exclusion of all queue-preexposed doublet mass mixing and rho formulas from selection
+  - compatibility policy requiring exact algebra trapezoid_integral or np.trapezoid in mutable code
+claim_delta:
+  identifiers: [C-GSM-001]
+  dependencies: [C-NAG-001, C-GAU-001, C-REP-002]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_exact_gauge_scalar_mass_module
+exact_statement: >-
+  Let a nonzero finite-dimensional complex inner-product carrier have a
+  nonempty supplied family of exact Hermitian generators T_a, exact real
+  nonzero couplings g_a, and an exact nonzero declared vacuum vector phi0.
+  Conditional on the scalar covariant kinetic term with
+  D_mu*phi0=-i*sum_a(g_a*A_mu^a*T_a)*phi0, write its real gauge-field quadratic
+  part as one half A^T*M2*A. Then
+  M2_ab=g_a*g_b*phi0_dagger*{T_a,T_b}*phi0, equivalently twice the real Gram
+  matrix of u_a=g_a*T_a*phi0. It is real symmetric positive semidefinite and
+  x^T*M2*x=2*norm(sum_a x_a*u_a)^2 for every real coefficient vector x. Thus
+  its kernel is exactly the coupled vacuum stabilizer; with independent
+  generators and nonzero couplings its nullity is the stabilizer dimension in
+  the supplied generator span. If the real gauge fields instead have a
+  separately declared symmetric positive-definite kinetic metric K, their
+  quadratic mass parameters are the generalized eigenvalues of
+  M2*x=lambda*K*x, not the raw eigenvalues of M2 unless K is identity. Under a
+  real invertible field change A=S*A_new, both forms transform by congruence,
+  M2_new=S^T*M2*S and K_new=S^T*K*S, preserving generalized eigenvalues and
+  nullity. For T_i=sigma_i/2, T_4=I/2, couplings (g,g,g,g_prime), and
+  phi0=(0,v/sqrt(2)), the canonical M2 has charged diagonal entries
+  g^2*v^2/4 and neutral block v^2/4 times
+  [[g^2,-g*g_prime],[-g*g_prime,g_prime^2]], rank three, null vector
+  proportional to (g_prime,g), nonzero neutral eigenvalue
+  (g^2+g_prime^2)*v^2/4, and the conditional rho identity one. The congruence
+  B mapped to -B flips the neutral off-diagonal sign while preserving these
+  invariants. These are exact conditional quadratic identities. They do not
+  derive the scalar action or potential, prove phi0 is a ground state or
+  condensate, supply a gauge kinetic action, establish a spectral pole or
+  Higgs particle, identify photon W or Z fields, select the Standard Model,
+  or realize a substrate mass mechanism.
+source_corrections:
+  - treat_the_scalar_kinetic_term_representation_couplings_vacuum_and_K_as_declared_inputs
+  - promote_the_basis_covariant_Gram_and_stabilizer_theorem_not_source_particle_names
+  - replace_raw_M2_eigenvalue_language_by_the_generalized_M2_K_problem
+  - classify_the_negative_neutral_offdiagonal_as_a_fixed_basis_convention
+  - reject_EM6_as_forcing_a_physical_complex_condensate_or_SU2_doublet
+  - reject_massless_photon_W_Z_Higgs_Standard_Model_and_four_force_closure_readings
+novelty: >-
+  C-SYM-001 concerns a scalar potential Hessian and its Goldstone zero
+  directions. C-NAG-001 and C-GAU-001 concern local covariant derivatives and
+  explicitly stop before action or mass. C-REP-002 concerns representation
+  structure only. No accepted claim or importable API derives the gauge-orbit
+  Gram matrix, its coupled stabilizer kernel, the gauge kinetic generalized
+  eigenproblem, congruence covariance, and the exact doublet specialization.
+oracle: >-
+  Exact SymPy quadratic expansion, anticommutator and Gram identities, realified
+  stabilizer kernel, rank, doublet Hessian, neutral eigenvectors, generalized
+  characteristic polynomial, and congruence covariance; independently
+  rederived without the canonical helper and challenged by factor-two,
+  generator-normalization, vacuum-direction, Abelian-normalization, zero-vacuum,
+  zero-coupling, kinetic-metric, sign-only, and alternative-representation
+  mutations.
+implementation_boundary: >-
+  Add pure exact APIs gauge_scalar_mass_evidence,
+  positive_gauge_kinetic_mass_evidence,
+  transform_gauge_quadratic_forms, and
+  su2_u1_lower_doublet_mass_evidence. Imports execute no simulation or
+  quadrature and infer no scalar potential, physical condensate, photon,
+  weak-boson, Standard Model, or substrate dictionary.
+status: frozen

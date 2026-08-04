@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P154
+candidate: source_aware_exact_classification_and_claim_selection
+status: passed
+started_at: '2026-08-10T06:06:00Z'
+finished_at: '2026-08-10T06:14:00Z'
+commands:
+  - accepted_claim_campaign_API_and_memory_nonduplication_search
+  - exact_gauge_orbit_Gram_stabilizer_and_kinetic_metric_rederivation
+  - exact_neutral_B_sign_congruence_counterexample
+result:
+  selected_candidates: [B, C, D, E, G, H]
+  rejected_candidate: {A: source_physical_classification_does_not_survive}
+  duplicate_only_candidate: {F: false}
+  reserved_claim: C-GSM-001
+  dependencies: [C-NAG-001, C-GAU-001, C-REP-002]
+  source_checks: {qualified_exact: 8, rejected_as_described_but_valid_mutation: 1}
+  key_corrections:
+    - scalar_kinetic_action_vacuum_and_gauge_kinetic_metric_are_separate_declarations
+    - mass_matrix_is_twice_the_real_gauge_orbit_Gram_matrix
+    - kernel_is_the_coupled_vacuum_stabilizer
+    - physical_quadratic_masses_require_the_generalized_M2_K_eigenproblem
+    - pure_B_field_sign_flip_preserves_the_zero_mode_and_spectrum
+    - rho_one_is_a_doublet_and_canonical_kinetic_conditional
+    - no_medium_condensate_photon_weak_boson_or_Standard_Model_dictionary_is_derived
+  compatibility_event: none
+next_attempt: commit_the_frozen_source_aware_claim_delta_before_canonical_implementation

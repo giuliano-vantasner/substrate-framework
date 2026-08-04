@@ -2,7 +2,7 @@
 description: Derive and audit M1's conditional gauge-scalar mass matrix
 author: vantasner
 created: '2026-08-10T06:00:00Z'
-updated: '2026-08-10T06:00:00Z'
+updated: '2026-08-10T06:14:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -87,11 +87,30 @@ stay closed until this contract and matching manifest are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved before source-aware nonduplication. A distinct claim
-will be proposed only if the general Gram/stabilizer and kinetic-metric result
-is absent from the accepted registry, adjudicated campaigns, package APIs, and
-durable memory. Any later claim must depend only on accepted representation and
-gauge statements plus explicitly declared scalar and kinetic premises.
+Source-aware nonduplication reserves `C-GSM-001` through frozen revision 0001.
+It depends on C-NAG-001, C-GAU-001, and C-REP-002 and states the exact
+gauge-orbit Gram matrix, its PSD and stabilizer-kernel identities, the positive
+gauge-kinetic generalized eigenproblem, congruence covariance, and the
+conditional Pauli-half lower-doublet specialization. No scalar potential,
+ground-state condensate, spectral pole, Higgs particle, photon, weak-boson,
+Standard Model, or substrate interpretation is included.
+
+## Source-Aware Classification
+
+The unchanged source passes all nine implemented predicates, but its headline
+classification does not survive. CHECK1 through CHECK7 and CHECK9 retain exact
+conditional quadratic algebra after the scalar kinetic term, representation,
+couplings, vacuum, real-field normalization, and canonical gauge kinetic basis
+are declared. Their medium ground state, condensate, photon, W, Z,
+Anderson-Higgs, electroweak, and substrate readings are not derived.
+
+CHECK8 is materially mislabeled. Replacing the neutral off-diagonal
+`-g*g_prime` by `+g*g_prime` leaves the determinant zero and is obtained by the
+field-basis congruence `B -> -B`. The executed mutant is instead
+`+g*g_prime/2`, changing both sign and magnitude, so it validly detects a
+mis-normalized Gram matrix but cannot prove the advertised sign is physical.
+C-QBL-001 does not force a complex condensate or its promotion to an SU2
+doublet, and pending M2 and SM3 grant no authority.
 
 ## Implementation and Oracle Plan
 
@@ -101,6 +120,13 @@ diagonalization. A fresh direct expansion will independently derive the
 quadratic coefficients without importing a new helper. Exact algebra is
 stronger than numerical sampling here, so no numerical rerun counts as an
 independent derivation.
+
+The importable boundary is `gauge_scalar_mass.py`, with pure APIs
+`gauge_scalar_mass_evidence`, `positive_gauge_kinetic_mass_evidence`,
+`transform_gauge_quadratic_forms`, and
+`su2_u1_lower_doublet_mass_evidence`. The generic API realifies the coupled
+vacuum-orbit map so the kernel is computed over real gauge coefficients rather
+than accidentally over complex coefficients.
 
 Mutations alter the factor of two, generator normalization, generator
 Hermiticity, vacuum direction, Abelian normalization and sign, coupling sign,

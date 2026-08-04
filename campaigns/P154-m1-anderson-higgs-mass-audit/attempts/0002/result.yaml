@@ -1,0 +1,28 @@
+attempt: 0002
+campaign: P154
+candidate: native_hash_pinned_M1_reproduction
+status: passed
+started_at: '2026-08-10T06:03:00Z'
+finished_at: '2026-08-10T06:06:00Z'
+commands:
+  - sha256sum_M1_source_and_dossier
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py
+result:
+  source_sha256: 6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f
+  dossier_sha256: cc6e38f748085be857dedf2c724125a2b92a84db791d7b365ea14ff8fd6a7886
+  exit_status: 0
+  source_checks: 9_passed
+  terminal_tally: ALL_9_CHECKS_PASS
+  compatibility_failure: false
+classification: >-
+  Successful native execution establishes that the nine source predicates
+  evaluate as implemented. It does not establish a substrate condensate,
+  scalar vacuum dynamics, canonical gauge kinetic normalization, physical
+  pole masses, a photon or weak-boson dictionary, or the Standard Model. The
+  advertised wrong-sign guard is not the executed mutation: a pure sign flip
+  retains determinant zero, while CHECK8 also halves the off-diagonal.
+debt:
+  - classify_each_predicate_against_accepted_dependencies_and_declared_premises
+  - separate_mass_Gram_algebra_from_scalar_vacuum_and_gauge_kinetic_dynamics
+  - replace_the_wrong_sign_guard_reading_with_basis_covariance_and_independent_factor_mutations
+next_attempt: run_source_aware_nonduplication_and_exact_Gram_stabilizer_classification

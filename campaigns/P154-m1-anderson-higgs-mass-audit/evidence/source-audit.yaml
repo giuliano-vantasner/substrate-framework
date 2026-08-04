@@ -1,0 +1,73 @@
+source_unit: M1
+headline_verdict: qualified_with_corrected_conditional_claim
+accepted_content:
+  - the exact quadratic form produced by the separately declared scalar kinetic term representation couplings and constant vacuum vector
+  - the real-field one-half convention in which the mass matrix is the Hessian of that quadratic form
+  - the charged and neutral matrix entries for the declared Pauli-half doublet Y=1 and lower-component vacuum
+  - the exact neutral kernel massive eigenvector and rho identity when the gauge kinetic metric is canonical
+  - the zero-vacuum limit of the declared quadratic form
+corrected_content:
+  - >-
+    The source matrix is a gauge-orbit Gram matrix. Its null directions are the
+    vacuum stabilizer, while its nonzero quadratic coefficients become
+    physical pole masses only after a compatible gauge kinetic action and
+    canonical normalization are separately supplied.
+  - >-
+    With a positive gauge kinetic metric K, the mass question is the
+    generalized eigenproblem M2*x=lambda*K*x. Raw eigenvalues of M2 are not
+    basis-invariant masses unless K is the identity in that field basis.
+  - >-
+    The negative neutral off-diagonal follows in the source's fixed generator
+    and B-field convention, but B mapped to -B flips that sign by congruence
+    without changing determinant, generalized eigenvalues, or the stabilizer.
+  - >-
+    The source's rho=1 identity is conditional on the doublet representation,
+    lower vacuum, couplings, and canonical kinetic normalization. It is not a
+    universal consequence of a generic complex order parameter.
+rejected_content:
+  - >-
+    C-QBL-001 does not force a physical complex condensate, promote it to an
+    SU2 doublet, select Y=1, or establish a nonzero ground-state vacuum. The
+    source's EM6 inheritance and medium-condensate premise are declarations.
+  - >-
+    C-NAG-001 and C-REP-002 supply exact gauge and representation algebra but
+    explicitly do not supply a scalar action, vacuum dynamics, gauge kinetic
+    coefficient, mass mechanism, weak boson, or substrate realization.
+  - >-
+    A zero eigenvalue of the declared algebraic matrix establishes an
+    unbroken stabilizer direction. Naming it a physical photon and the other
+    directions W or Z requires a separately governed field and observable
+    dictionary.
+  - >-
+    CHECK8 does not test the advertised wrong-sign mutation. A pure sign flip
+    has determinant zero; the executed +g*g_prime/2 mutation also changes the
+    magnitude. The source's claim that only the negative sign yields a zero
+    eigenvalue is false and basis dependent.
+  - >-
+    Passing the declared matrix algebra does not close W7's physical mass
+    residual, prove an Anderson-Higgs mechanism, build electroweak unification,
+    or establish that four physical forces arise from the sine-Gordon root.
+predicate_adjudication:
+  - {id: CHECK1, verdict: qualified_exact, mapping: C-GSM-001, correction: declared_kinetic_term_and_vacuum_not_a_derived_medium_ground_state}
+  - {id: CHECK2, verdict: qualified_exact, mapping: C-GSM-001, correction: quadratic_coefficient_not_physical_pole_mass_without_gauge_kinetic_normalization}
+  - {id: CHECK3, verdict: qualified_exact, mapping: C-GSM-001, correction: negative_offdiagonal_is_fixed_basis_convention_not_a_physical_sign}
+  - {id: CHECK4, verdict: qualified_exact, mapping: C-GSM-001, correction: algebraic_null_and_nonzero_modes_not_photon_and_Z_identifications}
+  - {id: CHECK5, verdict: qualified_exact, mapping: C-GSM-001, correction: canonical_basis_rotation_not_physical_Weinberg_angle_without_kinetic_and_field_dictionary}
+  - {id: CHECK6, verdict: qualified_exact, mapping: C-GSM-001, correction: stabilizer_rank_not_a_physical_Goldstone_or_Anderson_Higgs_count}
+  - {id: CHECK7, verdict: qualified_exact, mapping: C-GSM-001, correction: rho_one_is_representation_and_canonical_kinetic_conditional}
+  - {id: CHECK8, verdict: rejected_as_described_but_valid_magnitude_mutation, mapping: C-GSM-001, correction: pure_sign_flip_preserves_zero_mode_and_is_a_basis_congruence}
+  - {id: CHECK9, verdict: qualified_exact_limit, mapping: C-GSM-001, correction: zero_declared_vacuum_not_evidence_for_a_physical_condensate_phase}
+source_dependencies:
+  EM3: qualified_only_through_C-GAU-001_C-KRN-001_C-MAX-001_and_supplies_no_M1_scalar_vacuum
+  EM5: qualified_only_through_C-GAU-001_C-VAC-001_and_supplies_no_nonabelian_mass_mechanism
+  EM6: qualified_only_through_C-QBL-001_and_does_not_force_condensate_or_SU2_doublet_ontology
+  EM7: qualified_only_through_C-KRN-001_C-MAX-001_C-KRN-002_and_supplies_no_M1_action
+  M2: pending_and_grants_no_authority
+  SM3: pending_and_grants_no_authority
+  W1: qualified_only_through_C-BND-001_C-SG-011_C-SG-013
+  W2: qualified_only_through_C-REP-002_C-SPN-002_C-REP-001_C-SG-011_C-BND-001
+  W3: qualified_only_through_C-SG-011_C-SG-012_C-SG-013_C-BND-001_C-REP-002_C-U1-001
+  W7: qualified_only_through_C-NAG-001_C-REP-002_C-SPN-002_C-GAU-001_C-MAX-001_C-SCT-001
+  WM1: qualified_only_through_C-REP-001_C-GAU-001_C-LIE-001
+  WM2: duplicate_evidence_only_for_C-REP-001_C-LIE-001
+  WM3: qualified_only_through_C-RGE-004
