@@ -1,0 +1,29 @@
+campaign: P140
+source_unit: S4
+base_release: v0.106.0
+base_commit: aa6327b
+scientific_base_commit: 9ccd333
+frozen_proposal_commit: 3c6daa4
+claim_delta: C-VEC-001
+primary_verifier: campaigns/P140-s4-vector-meson-c4-audit/verify.py
+primary_checks: 36
+primary_route:
+  - hash-pinned source dossier frozen contract and compatibility AST
+  - source assignment and check-dataflow audit
+  - exact general Gram wedge and Pauli commutator identities
+  - declared mass stationarity and half-connection curvature
+  - leading Skyrme matching derivative-order and dimension ledgers
+  - KSRF parameter target-fed coefficient and source-formula mutations
+independent_review: campaigns/P140-s4-vector-meson-c4-audit/reviews/independent_hls_current_review.py
+independent_checks: 25
+independent_route:
+  - fresh symbolic current matrices without importing hls_reduction
+  - direct variation and Hessian of all vector components
+  - independent Maurer-Cartan connection-coefficient polynomial
+  - fresh curvature-to-Skyrme coefficient matching
+  - independent dimension and derivative-order ledgers
+exact_precision: SymPy exact integers rationals and positive symbols
+numeric_precision: particle-value result used only as a regression after the exact conditional identity
+numerical_integration: none
+compatibility_event: B1_immutable_alias_only_if_executed_backed_by_np.trapezoid
+debt: []

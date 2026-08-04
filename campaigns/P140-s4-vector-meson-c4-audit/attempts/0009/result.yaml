@@ -1,0 +1,28 @@
+attempt: 0009
+campaign: P140
+candidate: B_C_D_F
+status: passed
+started_at: '2026-08-09T12:20:00Z'
+finished_at: '2026-08-09T12:20:12Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/reviews/independent_hls_current_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/verify.py --source-file <pinned-S4> --dossier-file <pinned-dossier>
+  - .venv/bin/python -m pytest -q tests/test_hls_reduction.py tests/test_effective_actions.py tests/test_symmetry_breaking.py tests/test_skyrme_relations.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  independent: 25_passed
+  primary: 36_passed
+  focused: 44_passed
+  source_graph: 31_passed
+verdict: >-
+  Exact canonical and fresh independent routes derive the general SU(2)
+  current-wedge identity, the half Maurer--Cartan connection, its curvature,
+  the leading Skyrme density with e=g, and the p4 versus p6 derivative-order
+  boundary. The source-aware route rejects S4's inserted operator, target-fed
+  coefficient, and dimensionful e=F_pi/2 result. The frozen thirteen-node
+  graph inventories all 123 source predicates; B1's removed-NumPy-name shape
+  is classified as alias-only compatibility evidence backed by np.trapezoid,
+  not a scientific failure.
+next_attempt: >-
+  Complete claim-level evidence, governance, release, disposition, generated
+  state, and the single integrated promotion gate.

@@ -1,0 +1,53 @@
+source_unit: S4
+source_sha256: 49c7b2392bbe23d2824f4f73030ccd30f245e1750e0c7736dc420d3f64d7a780
+ast:
+  check_calls: 11
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+objects_present:
+  - declared scalar transverse propagator coefficient
+  - four sampled sub-threshold denominator values
+  - one pair of explicit Pauli-current matrices
+  - assigned effective commutator-square expression
+  - assigned I1-I2 and lattice I1+2I2 polynomials
+  - imported KSRF equation
+  - imported B1 and lattice comparator literals
+  - one pole and one polynomial counterexample
+objects_absent:
+  - HLS coset variables or transformation law
+  - rho or hidden-gauge connection field variable
+  - complete kinetic mass and interaction action
+  - variation with respect to a vector field
+  - stationary vector solution or on-shell action substitution
+  - current conservation or longitudinal-projector decoupling premise
+  - controlled derivative-expansion residual or next action order
+  - dimension ledger connecting e F_pi m_rho J1 d and c4
+  - independent B1 J1 F_pi or c4 determination
+load_bearing_assignments:
+  - line: 251
+    assignment: L_eff=-(g^2/(4*m_rho^2))*Tr_comm_sq
+    classification: headline_effective_term_inserted_before_check
+  - line: 282
+    assignment: rho_on_config=skyrme_struct
+    classification: desired_I1_minus_I2_tensor_inserted_before_check
+  - line: 294
+    assignment: beta_over_alpha_rho=-1
+    classification: claimed_ratio_literal
+  - line: 322
+    assignment: one_over_e2=8*g^2/m_rho^2
+    classification: matching_formula_inserted_without_action_or_dimensions
+  - line: 357
+    assignment: c4_target=8/B1_val^2
+    classification: imported_target
+  - line: 377
+    assignment: solve(c4_target=1/(2*J1^2),J1)
+    classification: inverse_target_construction
+  - line: 544
+    assignment: inv_e2_QCD=4/F_pi0^2
+    classification: declared_n_independence
+headline_failure: >-
+  No executable object links the declared propagator to the inserted effective
+  operator. The source therefore cannot distinguish a correct HLS reduction
+  from any other mechanism that assigns the same polynomial.

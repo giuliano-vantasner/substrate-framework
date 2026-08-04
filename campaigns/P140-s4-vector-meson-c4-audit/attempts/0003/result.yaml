@@ -1,0 +1,20 @@
+attempt: 0003
+campaign: P140
+candidate: B_C_D
+status: failed
+started_at: '2026-08-09T12:00:00Z'
+finished_at: '2026-08-09T12:00:04Z'
+command: >-
+  .venv/bin/python -m pytest -q tests/test_hls_reduction.py
+  tests/test_effective_actions.py tests/test_symmetry_breaking.py
+  tests/test_skyrme_relations.py
+result: 43_passed_1_failed
+failure: >-
+  The source-specialization test compared the expanded exact polynomial
+  a^4+2*a^2*b^2+b^4 to the unexpanded exact expression (a^2+b^2)^2 with
+  structural equality. Their simplified difference is zero.
+diagnosis: symbolic_representation_oracle
+scientific_change: none
+next_attempt: >-
+  Compare the exact simplified difference to zero and rerun the unchanged
+  focused theorem and accepted-neighbor suite.

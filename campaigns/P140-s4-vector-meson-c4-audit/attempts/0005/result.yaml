@@ -1,0 +1,22 @@
+attempt: 0005
+campaign: P140
+candidate: independent_and_primary_verification
+status: failed
+started_at: '2026-08-09T12:10:00Z'
+finished_at: '2026-08-09T12:10:05Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/reviews/independent_hls_current_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/verify.py --source-file <pinned-S4> --dossier-file <pinned-dossier>
+results:
+  independent: 25_passed
+  primary: 6_passed_then_failed
+failure: >-
+  The source assignment inventory overwrote the first load-bearing L_eff
+  insertion with S4's later L_eff=expand(L_eff) normalization assignment, so
+  the audit compared the wrong same-name assignment.
+diagnosis: source_audit_representation
+scientific_change: none
+next_attempt: >-
+  Preserve the first assignment for load-bearing data flow, compare SymPy
+  Rational ASTs structurally, and replace two literal dimension booleans with
+  explicit exponent-ledger calculations before rerunning both routes.

@@ -1,0 +1,53 @@
+scope: HLS auxiliary versus kinetic vector and leading Skyrme reduction
+sources:
+  - title: Composite Gauge Bosons and Low Energy Theorems of Hidden Local Symmetries
+    authors: [Masako Bando, Taichiro Kugo, Koichi Yamawaki]
+    year: 1985
+    url: https://academic.oup.com/ptp/article/73/6/1541/1889910
+    primary_scope: >-
+      The paper derives HLS low-energy theorems under the explicit assumption
+      that the hidden gauge bosons develop a kinetic term. The a/universality
+      choice supplies m_rho^2=2*g_rhopipi^2*f_pi^2; it is not a theorem of a
+      propagator sign alone.
+  - title: Proving Rho Meson be a Dynamical Gauge Boson of Hidden Local Symmetry
+    authors: [Koichi Yamawaki]
+    year: 2023
+    url: https://arxiv.org/abs/2310.09487
+    primary_scope: >-
+      Without the kinetic term the HLS field is auxiliary and its mass-sector
+      equation reduces the theory to the nonlinear sigma model. Adding or
+      dynamically generating the kinetic term is the distinct premise that
+      creates vector physics and the leading curvature term.
+  - title: Bootstrapping Pions at Large N
+    authors: [Jan Albert, Leonardo Rastelli]
+    year: 2022
+    url: https://arxiv.org/abs/2203.11950
+    primary_scope: >-
+      Equations 5.23-5.24 substitute the heavy-rho connection into the HLS
+      action. The mass term vanishes at the connection while the rho kinetic
+      term gives Tr([U_dagger*dU,U_dagger*dU]^2)/(32*g^2) at four-derivative
+      order, hence the convention-matched Skyrme parameter is e=g.
+  - title: Stabilization of skyrmions via rho mesons
+    authors: [Yuji Igarashi, Mitsuru Johmura, Akitsugu Kobayashi, Hiroshi Otsu, Shozo Sato]
+    year: 1985
+    url: https://cir.nii.ac.jp/crid/1363670319214426240
+    primary_scope: >-
+      The complete rho model can stabilize a Skyrmion without inserting a
+      higher-derivative Skyrme term, and reduces to the Skyrme model only in a
+      parameter limit. This does not license replacing the complete action by
+      a scalar propagator coefficient.
+adjudication:
+  supported:
+    - a declared HLS kinetic term can yield the Skyrme commutator square in a controlled low-energy or heavy-vector limit
+    - the equally normalized leading matching is e=g
+    - KSRF at a=2 conditionally gives g=m_rho/(sqrt(2)*F_pi)
+  unsupported_in_S4:
+    - e=F_pi/2
+    - 1/e^2=8*g^2/m_rho^2 as a dimensionless ANW coefficient for dimensionless g and ordinary four-dimensional currents
+    - deriving the operator from the sign of q^2-m_rho^2 without a full action and source
+    - deriving c4=8/B1^2 or B1 from HLS or KSRF
+    - deriving an in-medium rho pole or Option-C profile response
+selection_use: >-
+  Literature fixes convention and scope only. The accepted candidate is
+  independently rederived in exact framework code and does not import a
+  phenomenological coefficient or physical rho identification.

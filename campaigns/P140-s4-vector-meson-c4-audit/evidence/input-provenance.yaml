@@ -1,0 +1,32 @@
+campaign: P140
+source_unit: S4
+positive_object: exact_su2_current_and_leading_hls_half_connection_reduction
+accepted_inputs:
+  - {claim: C-EFT-001, role: stationary-elimination and finite-derivative-expansion ceiling}
+  - {claim: C-CHI-001, role: Pauli trace and SU2 current convention}
+mathematical_inputs:
+  - exact real current components x_i^a in L_i=i*x_i^a*sigma_a
+  - ordered index sums and the Euclidean Gram invariants I1 and I2
+  - a separately declared positive quadratic mass coefficient kappa
+  - a separately declared positive dimensionless kinetic coupling g
+  - Maurer-Cartan flatness for the declared current
+  - formal derivative counting L=O(p) and a heavy-vector scale M
+conditional_inputs:
+  - {relation: m_V^2=a*g^2*F^2, role: optional KSRF-style matching, status: declared_not_derived}
+source_declared_inputs:
+  - scalar transverse propagator coefficient and four momentum samples
+  - one Pauli-current pair and assigned commutator-square operator
+  - assigned rho_on_config=I1-I2 and literal beta ratios
+  - imported B1 c4 J1 KSRF ANW and particle values
+excluded_from_derivation_or_selection:
+  - B1 c4 J1 rho and particle comparators
+  - the source's e=F_pi/2 and 1/e^2=8*g^2/m_rho^2 formulas
+  - any physical HLS rho KSRF pion Skyrmion medium or substrate identification
+missing_for_physical_headline:
+  - an accepted HLS coset and vector-field transformation law
+  - a complete accepted kinetic mass and interaction action
+  - a physical-field and observable dictionary
+  - an independently fixed KSRF premise HLS parameter and particle scales
+  - a B1 or c4 derivation in the same convention
+claim_delta: C-VEC-001
+debt: []

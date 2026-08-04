@@ -1,0 +1,20 @@
+attempt: 0008
+campaign: P140
+candidate: F_source_graph
+status: failed
+started_at: '2026-08-09T12:18:00Z'
+finished_at: '2026-08-09T12:18:02Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P140-s4-vector-meson-c4-audit/reviews/replay_source_graph.py
+  /home/dan/substrate
+result: 18_passed_then_failed
+failure: >-
+  The frozen MK2 node used a descriptive filename rather than the exact
+  source-inventory path, so the graph replay stopped at a missing file after
+  checking the first eight nodes.
+diagnosis: source_graph_path_inventory
+scientific_change: none
+next_attempt: >-
+  Replace the MK2 path with the hash-pinned inventory path and rerun the
+  unchanged thirteen-node graph.

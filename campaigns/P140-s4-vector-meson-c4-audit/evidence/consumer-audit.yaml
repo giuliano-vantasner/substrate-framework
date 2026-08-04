@@ -1,0 +1,37 @@
+campaign: P140
+source_unit: S4
+direct_reverse_consumers:
+  - {source_unit: S3, disposition: qualified, accepted_claims: [C-IRR-001, C-LIE-001, C-LIE-002, C-WZW-002, C-TOP-002], effect: unchanged_independent_closure}
+  - {source_unit: WZ1, disposition: qualified, accepted_claims: [C-WZW-001], effect: unchanged_independent_closure}
+  - {source_unit: WZ4, disposition: qualified, accepted_claims: [C-EFT-001], effect: unchanged_independent_closure}
+  - {source_unit: PN6, disposition: qualified, accepted_claims: [C-RES-001], effect: unchanged_independent_closure}
+  - {source_unit: KI1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: KI2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MK2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MR3, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MR4, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MR5, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MR6, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 13
+  dependency_nodes: [B1]
+  reverse_consumers: 11
+  unique_static_predicates_inventoried: 123
+  graph_integrity_checks: 31
+  terminal_tally: ALL_31_CHECKS_PASS_P140-S4-SOURCE-GRAPH
+  evidence: reviews/replay_source_graph.py
+canonical_replay:
+  focused_tests: 44
+  result: passed
+  surfaces: [hls_reduction, effective_actions, symmetry_breaking, skyrme_relations]
+compatibility_preflight:
+  native_primary: [S4]
+  alias_only_if_executed: [B1]
+  alias_backing: np.trapezoid
+  scientific_failures: 0
+disposition_effect: >-
+  C-VEC-001 provides a narrow exact leading-reduction API. It does not
+  retroactively validate any later physical rho, coupling, BPS, soliton,
+  numerical, or substrate claim. Qualified consumers retain independent
+  accepted closures and all seven unreviewed consumers remain pending.
+debt: []

@@ -1,0 +1,35 @@
+campaign: P140
+provisional_claim: C-VEC-001
+decision: promote
+direct_search:
+  identifiers_searched: [C-VEC-001]
+  concepts_searched: [HLS half connection, Maurer-Cartan curvature, SU2 current wedge, e equals g, leading rho reduction]
+  result: >-
+    No accepted identifier or canonical current-wedge/HLS-reduction API exists.
+    C-EFT-001 is a generic supplied-kernel stationary theorem; C-CHI-001 fixes
+    a Pauli coordinate convention; neither constructs the half connection or
+    its curvature density.
+memory_search:
+  query: hidden local symmetry half connection Skyrme e equals g current wedge
+  nearest_prior_records: [P059, P060, P084]
+  result: distinct_leading_connection_surface
+gitnexus_query:
+  query: HLS half connection Maurer Cartan current wedge Skyrme e equals g
+  processes: 0
+  nearest_preexisting_definitions: [effective_actions.py, symmetry_breaking.py, skyrme_relations.py]
+  result: >-
+    Existing definitions cover generic quadratic elimination, coordinate
+    normalization, or supplied mass-formula cancellation, not the exact
+    connection-curvature reduction. The only matching definitions are P140's
+    new module, verifier, independent review, and tests.
+nearest_claims:
+  - {claim: C-EFT-001, distinction: generic finite-dimensional stationary elimination and inverse-series ceiling}
+  - {claim: C-CHI-001, distinction: Pauli-coordinate kinetic normalization without current quartic or HLS connection}
+  - {claim: C-SK-001, distinction: conditional cancellation of two supplied mass formulas}
+  - {claim: C-LIE-001, distinction: fundamental generator invariants without an effective action}
+novel_surface: >-
+  C-VEC-001 is the first importable exact ordered-current quartic theorem and
+  convention-closed leading half-connection curvature reduction in the
+  framework, including its p4/p6 boundary and conditional dimensionless
+  KSRF-style matching.
+debt: []

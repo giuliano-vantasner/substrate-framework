@@ -366,6 +366,52 @@ units:
       checks. The 17-node graph inventories 195 predicates. S3 has no NumPy
       compatibility event; S2 and WZ3 retain prior alias-only paths backed by
       np.trapezoid, and mutable code has no executable legacy quadrature access.
+  S4:
+    disposition: qualified
+    accepted_claims:
+      - C-VEC-001
+      - C-EFT-001
+      - C-CHI-001
+    qualification: >-
+      S4's hash-pinned eleven predicates reproduce natively, but its advertised
+      rho-saturation closure does not. The scalar propagator series, one Pauli
+      commutator, the displayed polynomial specialization, and the distinction
+      between a pole and a local polynomial survive as narrow algebra. The
+      executable assigns its effective operator and rho_on_config tensor,
+      inserts beta/alpha=-1, imports B1 and c4, solves J1 backward from the
+      target, and never constructs or varies an HLS or vector action. Its
+      e=F_pi/2 is dimensionally invalid, and the dossier itself notes the unit
+      mismatch. C-VEC-001 independently derives the general ordered SU2
+      current identity and the conditional leading half-connection reduction:
+      a declared curvature term gives the Skyrme density with e=g at order p4,
+      while full-vector backreaction first changes the action at p6/M^2.
+      Conditional KSRF-style input gives e=g=m_V/(sqrt(a)*F); it does not
+      derive KSRF, a=2, B1, c4, J1, a physical rho or pion, stabilization,
+      medium response, particle values, or a substrate realization.
+    evidence:
+      - campaigns/P140-s4-vector-meson-c4-audit/reviews/source_adjudication.md
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/source-reproduction.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/source-audit.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/check-adjudication.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/input-provenance.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/dependency-audit.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/consumer-audit.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/candidate-comparison.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/primary-provenance.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/evidence/literature-audit.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/verify.py
+      - campaigns/P140-s4-vector-meson-c4-audit/reviews/independent_hls_current_review.py
+      - campaigns/P140-s4-vector-meson-c4-audit/reviews/replay_source_graph.py
+      - campaigns/P140-s4-vector-meson-c4-audit/attempts/0002/result.yaml
+      - campaigns/P140-s4-vector-meson-c4-audit/attempts/0009/result.yaml
+      - memory/vantasner/decisions/C-VEC-001-review.md
+      - memory/vantasner/decisions/S4-qualified-review.md
+    note: >-
+      P140 closes 36 primary, 25 independent, 31 frozen-graph, and 44 focused
+      checks. The 13-node graph inventories 123 predicates. S4 has no NumPy
+      compatibility event; pending B1 retains an immutable alias-only path
+      backed by np.trapezoid, and mutable code has no executable legacy access.
   S5:
     disposition: qualified
     accepted_claims:

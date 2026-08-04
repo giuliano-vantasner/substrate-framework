@@ -1,0 +1,56 @@
+campaign: P140
+selection_frozen_at: 3c6daa4
+criteria:
+  - complete declared action metric source coupling and stationary equation
+  - accepted trace current and operator normalization
+  - exact separation of auxiliary elimination and kinetic-vector expansion
+  - general derivation of I1-I2 rather than assignment of beta over alpha
+  - coefficient dimension and derivative-order ledger
+  - wrong-normalization parameter and rank-one mutations
+  - parameter economy reusable API compatibility and nonduplication
+candidates:
+  - id: A
+    decision: rejected_as_headline_reproduction_only
+    reason: >-
+      All eleven predicates execute, but the source inserts its effective
+      operator and desired tensor, imports its target, solves J1 backward, and
+      produces the dimensionally invalid e=F_pi/2 relation.
+  - id: B
+    decision: selected_for_exact_mass_stationarity
+    reason: >-
+      A declared positive quadratic mass penalty has the unique half-current
+      stationary connection with a positive Hessian and no fitted coefficient.
+  - id: C
+    decision: selected_with_explicit_order_ceiling
+    reason: >-
+      The declared kinetic curvature produces the p4 Skyrme density at the
+      leading connection while its full-field correction remains p3/M2 and
+      first changes the action at p6/M2.
+  - id: D
+    decision: selected
+    reason: >-
+      Exact Gram and independent Pauli-matrix routes derive the full ordered
+      current-wedge identity and its normalization on arbitrary real currents.
+  - id: E
+    decision: selected_for_conditional_dimension_ledger
+    reason: >-
+      The matching keeps a and the common-dimension mass ratio explicit,
+      derives e=g conditionally, and rejects the source's dimensionful result.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Claim review, novelty, impact, frozen graph, compatibility, release,
+      disposition, generated state, and memory close the transaction.
+proposed_claim:
+  id: C-VEC-001
+  decision: promote
+  reason: distinct_dependency_closed_exact_leading_reduction_surface
+physical_rho_claim:
+  decision: unpromoted
+  reason: >-
+    No accepted HLS action, physical field dictionary, KSRF premise, B1 or c4
+    value, particle-scale input, or medium response closes.
+comparator_role: >-
+  B1, c4, J1, ANW values, particle masses, and approximate target agreement
+  did not select the candidate, convention, API, or pass thresholds.
+debt: []

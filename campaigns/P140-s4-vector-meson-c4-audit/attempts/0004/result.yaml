@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P140
+candidate: B_C_D
+status: passed
+started_at: '2026-08-09T12:01:00Z'
+finished_at: '2026-08-09T12:01:04Z'
+command: >-
+  .venv/bin/python -m pytest -q tests/test_hls_reduction.py
+  tests/test_effective_actions.py tests/test_symmetry_breaking.py
+  tests/test_skyrme_relations.py
+result: 44_passed
+verdict: >-
+  The canonical module passes exact general current-wedge and Pauli-trace
+  identities, orthogonal invariance, generator-normalization mutation,
+  leading mass stationarity, half-connection curvature, e=g matching,
+  derivative-order ceiling, KSRF dimension ledger, parameter sensitivity,
+  and invalid-input guards. Accepted neighboring action and convention tests
+  remain unchanged.
+next_attempt: >-
+  Run a fresh independent derivation without importing hls_reduction, then
+  build the source-aware primary verifier and mutate its load-bearing inputs.

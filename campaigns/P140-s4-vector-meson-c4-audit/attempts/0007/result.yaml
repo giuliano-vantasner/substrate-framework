@@ -1,0 +1,20 @@
+attempt: 0007
+campaign: P140
+candidate: primary_source_aware_verifier
+status: failed
+started_at: '2026-08-09T12:14:00Z'
+finished_at: '2026-08-09T12:14:03Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P140-s4-vector-meson-c4-audit/verify.py --source-file
+  <pinned-S4> --dossier-file <pinned-dossier>
+result: 19_passed_then_failed
+failure: >-
+  Two exact curvature matrices retained algebraically cancelling complex
+  products. Raw matrix equality returned false although every element of
+  F+[L,L]/4 simplifies to zero.
+diagnosis: symbolic_matrix_normal_form
+scientific_change: none
+next_attempt: >-
+  Evaluate the elementwise simplified curvature residual against the zero
+  matrix and rerun the unchanged primary route.

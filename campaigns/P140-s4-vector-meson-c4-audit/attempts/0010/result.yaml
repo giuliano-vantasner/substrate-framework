@@ -1,0 +1,30 @@
+campaign: P140
+attempt: 0010
+status: passed
+candidate: F
+command: >-
+  Run scripts/validate.sh and git diff --check once after the accepted claim,
+  release, disposition, generated docs, generated memory, queue, campaign,
+  package, tests, and durable review records are synchronized.
+expected: >-
+  Validate 142 accepted claims with closed release dependencies, current
+  generated state, all memory records, the physics skill, package compilation,
+  the full test suite, whitespace, and the 218-unit queue at 80 pending with no
+  unresolved P140 debt.
+result:
+  exit_status: 0
+  repository: WORKFLOW_VALID_142_claims_142_accepted_0_proposals
+  migration_queue: 218_units_80_pending_0_partial
+  generated_docs: current
+  generated_memory: current
+  memory: 568_files_valid
+  physics_skill: valid
+  package_compile: passed
+  full_pytest: 1195_passed
+  git_diff_check: passed
+  debt: []
+classification: integrated_terminal_gate
+next_attempt: >-
+  Commit the accepted P140 scientific and governance transaction, checkpoint
+  the parent migration effort separately, then freeze and audit the next
+  pending source unit.

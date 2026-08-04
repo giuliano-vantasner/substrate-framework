@@ -1,0 +1,24 @@
+campaign: P140
+source_unit: S4
+declared_dependencies:
+  - {source_unit: B1, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+accepted_dependency_closure:
+  - {claim: C-VEC-001, dependencies: [C-EFT-001, C-CHI-001]}
+  - {claim: C-EFT-001, dependencies: []}
+  - {claim: C-CHI-001, dependencies: [C-SYM-001]}
+  - {claim: C-SYM-001, dependencies: []}
+nearby_accepted_ceiling_claims:
+  - {claim: C-SK-001, dependencies: [], exclusion: conditional_mass_formula_cancellation_only}
+  - {claim: C-LIE-001, dependencies: [], exclusion: fundamental_generator_normalization_without_hls_action}
+excluded_imports:
+  - pending B1 profile value or Berry-connection physics
+  - physical rho pion Skyrmion vector dominance and KSRF identifications
+  - source c4 target J1 fit ANW normalization and particle values
+  - in-medium pole shift or Option-C response
+circularity: >-
+  S4 imports pending B1 to define its target and later consumers import S4's
+  headline. P140 derives C-VEC-001 without B1, c4, J1, a fitted target, or a
+  later consumer. C-EFT-001 and C-CHI-001 were accepted from independently
+  adjudicated campaigns whose claims explicitly exclude HLS field content and
+  physical pion or vector-meson readings.
+debt: []

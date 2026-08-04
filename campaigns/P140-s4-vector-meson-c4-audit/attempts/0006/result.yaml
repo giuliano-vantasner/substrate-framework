@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P140
+candidate: primary_source_aware_verifier
+status: failed
+started_at: '2026-08-09T12:12:00Z'
+finished_at: '2026-08-09T12:12:05Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P140-s4-vector-meson-c4-audit/verify.py --source-file
+  <pinned-S4> --dossier-file <pinned-dossier>
+result: 6_passed_then_failed
+failure: >-
+  The corrected first-assignment inventory worked, but ast.unparse retained
+  parentheses around S4's unary-negated fraction and defeated an exact source-
+  string comparison.
+diagnosis: source_audit_pretty_printing
+scientific_change: none
+next_attempt: >-
+  Inspect the assignment's AST operators and referenced names rather than its
+  formatter-dependent unparsed string, then rerun the unchanged primary route.

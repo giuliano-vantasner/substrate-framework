@@ -1,0 +1,58 @@
+campaign: P140
+title: S4 vector-meson c4 closure audit
+source_baseline: substrate@6d1f4e0
+source_units: [S4]
+base_release: v0.106.0
+accepted_release: v0.107.0
+adjudicated_at: '2026-08-09T12:30:00Z'
+selected_candidates:
+  - {id: B, reason: The exact declared mass penalty selects the half connection with a positive Hessian.}
+  - {id: C, reason: The kinetic-curvature route derives the leading p4 density and retains the p6/M2 action ceiling.}
+  - {id: D, reason: General Gram and independent Pauli routes close the complete ordered current identity.}
+  - {id: E, reason: The dimension ledger retains a as conditional input and rejects the source's dimensionful coupling.}
+  - {id: F, reason: Predicate dependency consumer compatibility novelty impact release queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: A, decision: rejected_as_inserted_target_fed_and_dimensionally_invalid_headline}
+claims:
+  - C-VEC-001
+unpromoted_claims:
+  - {id: physical_rho_saturation_c4_and_medium_closure, reason: No dependency-closed physical HLS action field dictionary KSRF premise B1 c4 or medium theorem remains.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_hls_current_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_scientific_attempt: attempts/0009/result.yaml
+  integrated_terminal_gate: attempts/0010/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-VEC-001-review.md
+  source_review: memory/vantasner/decisions/S4-qualified-review.md
+source_disposition:
+  S4: qualified
+accepted_mappings: [C-VEC-001, C-EFT-001, C-CHI-001]
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_canonical_helper
+  immutable_primary: native
+  inherited_alias_only_if_executed: [B1]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S4_c4_vector_meson_closure.py
+    --dossier-file <substrate@6d1f4e0>/merged-framework/bridges/phase-4/dossiers/S4-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/reviews/independent_hls_current_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P140-s4-vector-meson-c4-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_hls_reduction.py tests/test_effective_actions.py tests/test_symmetry_breaking.py tests/test_skyrme_relations.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

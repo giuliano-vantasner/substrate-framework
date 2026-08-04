@@ -2,7 +2,7 @@
 description: Audit S4's vector-meson Skyrme-quartic closure claim
 author: vantasner
 created: '2026-08-09T11:20:00Z'
-updated: '2026-08-09T11:20:00Z'
+updated: '2026-08-09T12:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - skyrme-quartic
 - migration-S4
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P140 S4 Vector-Meson c4 Audit
 
@@ -153,20 +153,10 @@ positive conditional object by itself.
 
 ## Debt Ledger
 
-The campaign ledger tracks every source predicate and each missing action,
-convention, coefficient, import, compatibility event, dependency, consumer,
-and generated record.
-
-| Debt | Discharge condition | Status |
-| --- | --- | --- |
-| S4 executable and checks are unopened | Hash, compatibility preflight, native or alias replay, AST/data-flow audit, and all eleven predicates | open |
-| The claimed vector action may be incomplete | Inventory every kinetic, mass, interaction, gauge, source, boundary, and sign term | open |
-| Tensor structure may be inserted | Independent full I1-I2 and commutator-square derivations with mutations | open |
-| Propagator sign may be confused with action or energy sign | One convention-closed stationary and static-energy ledger | open |
-| A finite low-momentum series may be called exact | Explicit inverse residual, next-order term, domain, and limit | open |
-| KSRF B1 and c4 may be imported or fitted | Provenance, free-parameter, rescaling, and target-as-input countermodels | open |
-| Dependencies consumers and novelty are incomplete | B1, accepted claims, eleven reverse consumers, cycles, and graph impact audit | open |
-| Registry disposition release docs queue and memory are unsynchronized | Individual review and one terminal governed-state transaction | open |
+The campaign ledger is empty. The source and action inventories, exact tensor
+derivation, convention and derivative-order ledgers, target-as-input audit,
+frozen dependency/consumer graph, compatibility classification, individual
+reviews, and governed-state transaction discharge every preregistered item.
 
 ## Review and Promotion Plan
 
@@ -191,8 +181,18 @@ synchronized governed state, and an empty campaign ledger. A clean eleven-
 check tally, favorable sign, numeric c4 match, imported KSRF relation, or rho
 label does not complete the campaign.
 
+## Resolution
+
+P140 promotes C-VEC-001 in v0.107.0. Exact Gram/Pauli and fresh independent
+routes close the ordered SU(2) current quartic, declared half-connection
+stationarity, Maurer--Cartan curvature, equally normalized `e=g` matching, and
+the p4 versus p6/M2 scope. S4's inserted rho operator, assigned tensor,
+target-fed coefficient, and dimensionful `e=F_pi/2` are corrected or rejected.
+Primary, independent, graph, and focused routes pass 36, 25, 31, and 44
+checks; LOW impact and an empty ledger close the campaign.
+
 ## Cross-References
 
 The governing references are P008, P024, P059, P060, P061, P137, P138, P139,
 B1, S4, WZ4, C-EFT-001, C-CHI-001, C-CHI-002, C-LIE-001, C-SK-001,
-v0.106.0, and the parent migration effort.
+C-VEC-001, v0.106.0, v0.107.0, and the parent migration effort.

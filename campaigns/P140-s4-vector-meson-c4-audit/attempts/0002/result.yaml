@@ -1,0 +1,30 @@
+attempt: 0002
+campaign: P140
+candidate: A
+status: rejected_as_headline_route
+started_at: '2026-08-09T11:30:00Z'
+finished_at: '2026-08-09T11:45:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-4/bridge_S4_c4_vector_meson_closure.py
+process_exit: 0
+terminal_tally: ALL_11_CHECKS_PASS
+compatibility: native_no_numpy_trapezoid_access
+artifacts:
+  - campaigns/P140-s4-vector-meson-c4-audit/evidence/source-reproduction.yaml
+  - campaigns/P140-s4-vector-meson-c4-audit/evidence/source-audit.yaml
+  - campaigns/P140-s4-vector-meson-c4-audit/evidence/check-adjudication.yaml
+verdict: >-
+  The native tally reproduces exact algebra for a declared propagator series,
+  one SU(2) commutator, and polynomial identities, but it never constructs or
+  varies an HLS or rho action. It assigns the desired effective term and
+  I1-I2 structure, imports KSRF and B1, solves backward for J1, and labels a
+  dimensionally inconsistent e=F_pi/2 relation as closure. Candidate A cannot
+  support the headline rho mechanism coefficient or in-medium conclusion.
+diagnosis: scientific_claim_and_oracle
+next_attempt: >-
+  Implement Candidates B through D as a convention-closed SU(2) current,
+  Maurer-Cartan half-connection, and leading HLS kinetic-curvature reduction.
+  Keep the kinetic vector correction explicitly O(p^6/mass^2), derive e=g,
+  and treat KSRF only as the conditional dimensionless relation
+  g=m_rho/(sqrt(a)*F_pi).

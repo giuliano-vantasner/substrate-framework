@@ -1,0 +1,30 @@
+source_unit: S4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-4/bridge_S4_c4_vector_meson_closure.py
+sha256: 49c7b2392bbe23d2824f4f73030ccd30f245e1750e0c7736dc420d3f64d7a780
+dossier_path: merged-framework/bridges/phase-4/dossiers/S4-dossier.md
+dossier_sha256: 1680127b0678d8969f7f08da0463ddab10f34e75554d3a842813275868030ed9
+environment:
+  platform: Linux-6.11.0-21-generic-x86_64-with-glibc2.39
+  python: 3.12.2
+  numpy: 2.5.1
+  sympy: 1.14.0
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-4/bridge_S4_c4_vector_meson_closure.py
+process_exit: 0
+terminal_tally: ALL_11_CHECKS_PASS
+compatibility_preflight:
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  direct_current_attributes: 0
+  dynamic_current_getattrs: 0
+  imported_current_names: 0
+  eager_legacy_default_fallbacks: 0
+  replay: native
+scientific_ceiling: >-
+  Clean execution proves only the predicates actually evaluated. It does not
+  promote the headline or turn imported action KSRF B1 ANW PDG LCT Option-C
+  or particle labels into accepted premises.

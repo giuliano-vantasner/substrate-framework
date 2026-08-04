@@ -1,0 +1,52 @@
+source_unit: S4
+checks:
+  - id: S4.1
+    executable_result: pass
+    verdict: exact_conditional_algebra
+    reason: The Taylor series of the separately declared scalar propagator coefficient is correct through the displayed order.
+  - id: S4.2
+    executable_result: pass
+    verdict: insufficient_for_headline
+    reason: Four samples do not prove an interval theorem and no equation connects the denominator sign to beta over alpha; the inequality itself follows directly from the declared domain.
+  - id: S4.3
+    executable_result: pass
+    verdict: exact_special_case
+    reason: The explicit Pauli pair has the stated anti-Hermitian commutator and trace; the general current identity requires a separate derivation.
+  - id: S4.4
+    executable_result: pass
+    verdict: circular
+    reason: L_eff is assigned in the claimed form and only simplified; no rho action field equation or substitution is constructed.
+  - id: S4.5
+    executable_result: pass
+    verdict: circular
+    reason: rho_on_config is assigned equal to I1-I2 and both beta ratios are literals; no rho route produces them.
+  - id: S4.6
+    executable_result: pass
+    verdict: dimensionally_invalid
+    reason: The inserted matching makes dimensionless e equal to dimensionful F_pi divided by two; the proper HLS low-energy relation is e=g followed conditionally by g=m_rho/(sqrt(a)*F_pi).
+  - id: S4.7
+    executable_result: pass
+    verdict: target_as_input
+    reason: B1 and c4 are imported, J1 is solved backward, and neither KSRF nor the rho variables enter the condition.
+  - id: S4.8
+    executable_result: pass
+    verdict: exact_assigned_polynomial_specialization
+    reason: The displayed diagonal specialization of I1-I2 is correct, but arbitrary rotational invariance and its rho origin are not tested.
+  - id: S4.9
+    executable_result: pass
+    verdict: qualified_kernel_distinction
+    reason: The declared propagator has a pole and the selected polynomial does not; this does not derive the leading local term or independently reproduce the cited LCT domain.
+  - id: S4.10
+    executable_result: pass
+    verdict: counterexample_only
+    reason: Constructed wrong signs and copied comparator separation fail, but rejection guards cannot validate the missing positive action derivation.
+  - id: S4.11
+    executable_result: pass
+    verdict: declared_not_derived
+    reason: The derivative vanishes because the coupling is defined independent of n; no medium action rho pole or profile response is constructed.
+summary:
+  exact_or_qualified_surfaces: [S4.1, S4.3, S4.8, S4.9]
+  circular_or_inserted: [S4.4, S4.5]
+  invalid_or_target_derived: [S4.6, S4.7]
+  insufficient_or_declared: [S4.2, S4.10, S4.11]
+  headline_supported: false

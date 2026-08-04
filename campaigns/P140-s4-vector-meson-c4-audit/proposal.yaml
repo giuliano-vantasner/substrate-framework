@@ -81,4 +81,4 @@ comparators_blinded_until: >-
   target, propagator sign, KSRF step, and conclusion; the source body, exact
   checks, internal formulas, output, and dossier body remain unopened until
   that boundary.
-status: draft
+status: accepted
