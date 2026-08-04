@@ -1,0 +1,16 @@
+source_unit: CF2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+sha256: e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+observed_at: '2026-08-10T23:01:00Z'
+exit_code: 0
+terminal_tally: ALL_15_CHECKS_PASS
+runtime_pass_markers: 15
+numpy_compatibility_alias: none
+scope_note: >-
+  The source executes its field-energy construction but does not consume q in
+  that path. Reproduction is evidence about the immutable artifact, not proof
+  that its endpoint-force and field-energy slopes are identical.

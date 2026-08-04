@@ -1,0 +1,16 @@
+attempt: 0003
+campaign: P168
+candidate: freeze_commit_process_separation
+status: failed_workflow_ordering
+started_at: '2026-08-10T22:57:00Z'
+finished_at: '2026-08-10T22:57:00Z'
+observed: >-
+  git diff --cached --check and git commit both succeeded but were launched in
+  one shell invocation rather than separate process invocations as required by
+  the campaign contract.
+freeze_commit: 8542760
+scientific_result_changed: false
+freeze_content_changed: false
+debt:
+  - verify_the_committed_tree_and_clean_worktree_in_a_fresh_process_before_source_access
+next_attempt: independent_post_commit_freeze_verification

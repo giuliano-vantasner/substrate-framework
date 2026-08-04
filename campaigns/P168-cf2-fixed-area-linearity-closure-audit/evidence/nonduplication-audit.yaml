@@ -1,0 +1,17 @@
+registry_search:
+  exact_fixed_area_theorem: C-FLX-001
+  separate_radial_vortex: [C-VTX-001, C-VTX-002]
+  separate_radial_field: C-MAX-001
+  separate_conditional_loop_law: C-WIL-001
+package_search:
+  exact_API: src/substrate_framework/flux_tube.py
+  accepted_tests: tests/test_flux_tube.py
+distinct_source_content_not_covered: []
+rejected_new_objects:
+  - source_reproduction_is_evidence_not_a_new_claim
+  - Riesz_exponent_arithmetic_is_not_a_new_mechanism
+  - effective_area_inversion_is_reconstruction
+  - CF1_tension_identity_lacks_a_map
+  - physical_QCD_area_law_and_confinement_lack_oracles
+new_claim: null
+new_API: null

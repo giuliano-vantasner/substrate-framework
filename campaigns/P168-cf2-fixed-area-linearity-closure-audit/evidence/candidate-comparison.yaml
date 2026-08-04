@@ -1,0 +1,18 @@
+predeclared_order:
+  - energy_and_endpoint_work_definition_separation
+  - exact_one_half_factor_charge_flux_and_area_power_sensitivity
+  - fixed_area_uniformity_and_variable_geometry_limits
+  - dependency_and_physical_interpretation_closure
+  - assumption_parameter_and_API_economy
+  - source_consumer_compatibility_and_governance_closure
+candidates:
+  A: {decision: selected_as_reproduction_route, reason: native_CF2_passes_all_fifteen_predicates}
+  B: {decision: selected_scientific_closure, reason: C-FLX-001_covers_every_surviving_exact_object}
+  C: {decision: not_selected, reason: endpoint_work_survives_when_kept_separate_with_its_exact_slope}
+  D: {decision: rejected_duplicate, reason: accepted_variable_area_counterexample_closes_the_needed_geometry_boundary}
+  E: {decision: rejected_absent_map, reason: no_accepted_vortex_to_uniform_tube_variable_identification}
+  F: {decision: rejected_absent_oracle, reason: no_QCD_Wilson_area_law_or_confinement_derivation}
+  G: {decision: rejected_as_explanation, reason: exponent_matching_is_arithmetic_not_a_dynamical_dependency}
+  H: {decision: selected_governance_closure, reason: CF2_qualification_needs_current_complete_evidence}
+comparator_selected_candidate: false
+fresh_blinding_claimed: false

@@ -1,0 +1,23 @@
+primary_verifier:
+  path: campaigns/P168-cf2-fixed-area-linearity-closure-audit/verify.py
+  sha256: 8a2261be4b86c450b4ff6109593df3f7e255d243ab56c129a4bae5a4e50aa5b6
+  result: ALL_39_CHECKS_PASS
+independent_exact_review:
+  path: campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/independent_exact_work_energy_review.py
+  sha256: 7bcede4765a316085baff662f9b93bade04339aac4db947a277430b4b217b1d3
+  result: ALL_19_CHECKS_PASS
+source_graph:
+  path: campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/replay_source_graph.py
+  sha256: 2ddafb3db30b52d69dbecc3c43d0bcbb970fcbcfd46317062f2d1059c0e7ca80
+  result: ALL_31_CHECKS_PASS
+independence_statement: >-
+  The independent exact review imports neither the canonical flux-tube module
+  nor the source script. It solves Gauss data and integrates field energy and
+  endpoint work directly, then checks independent geometry limits.
+mutation_surfaces:
+  - field_energy_one_half
+  - Gauss_area_power
+  - charge_flux_equality_condition
+  - fixed_area_geometry
+  - spherical_spreading
+  - supplied_tension_reconstruction

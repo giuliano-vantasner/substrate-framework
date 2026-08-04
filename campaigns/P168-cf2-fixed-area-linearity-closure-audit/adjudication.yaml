@@ -1,0 +1,65 @@
+campaign: P168
+title: CF2 fixed-area field-energy and endpoint-work closure audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF2]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-10T23:20:00Z'
+selected_candidates:
+  - {id: A, reason: Native_hash-pinned_CF2_replays_all_fifteen_predicates.}
+  - {id: B, reason: C-FLX-001_exactly_covers_every_surviving_source_object.}
+  - {id: H, reason: Source_claim_compatibility_consumer_queue_and_memory_closure_updates_the_qualified_record.}
+claims: []
+accepted_composition:
+  - {id: C-FLX-001, decision: unchanged_exact_conditional_model_claim}
+unpromoted_claims:
+  - {id: unconditional_force_energy_identity, reason: Slopes_agree_only_if_q_equals_Phi_over_two.}
+  - {id: CF1_tension_identity, reason: No_accepted_map_from_smooth_vortex_data_to_uniform_fixed_area_variables.}
+  - {id: physical_quark_or_chromoelectric_variables, reason: No_accepted_sector_identification.}
+  - {id: Riesz_dynamical_realization, reason: Source_checks_only_integer_exponent_arithmetic.}
+  - {id: Wilson_area_law, reason: No_loop_expectation_is_derived_or_imported.}
+  - {id: QCD_confinement, reason: No_nonperturbative_or_physical_oracle_is_constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_exact_work_energy_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/CF2-fixed-area-qualified-review.md
+  source_attempt: attempts/0005/result.yaml
+  scientific_attempt: attempts/0006/result.yaml
+  independent_attempt: attempts/0007/result.yaml
+  graph_attempt: attempts/0008/result.yaml
+  terminal_attempt: attempts/0011/result.yaml
+source_disposition:
+  CF2: qualified
+compatibility:
+  installed_numpy: 2.5.1
+  CF2_native: true
+  immutable_alias_only: [CF1, CF5]
+  alias_backend: numpy.trapezoid
+  mutable_legacy_integration_references: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P168-cf2-fixed-area-linearity-closure-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/independent_exact_work_energy_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_flux_tube.py tests/test_abelian_higgs_vortex.py tests/test_maxwell.py tests/test_wilson_loops.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

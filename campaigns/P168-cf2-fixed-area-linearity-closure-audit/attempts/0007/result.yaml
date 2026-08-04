@@ -1,0 +1,23 @@
+attempt: 0007
+campaign: P168
+candidate: independent_exact_work_energy_review
+status: passed
+started_at: '2026-08-10T23:07:00Z'
+finished_at: '2026-08-10T23:09:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P168-cf2-fixed-area-linearity-closure-audit/
+  reviews/independent_exact_work_energy_review.py
+result: ALL_19_CHECKS_PASS
+closure:
+  canonical_flux_tube_imported: false
+  exact_gauss_solution: Phi_over_A
+  exact_energy_slope: Phi_squared_over_two_A
+  exact_endpoint_slope: q_Phi_over_A
+  equality_condition: q_equals_Phi_over_two
+  normalization_mutations_rejected: 3
+  expanding_area_result: logarithmic
+  constant_area_limit: passed
+scientific_verdict_changed: false
+debt:
+  - replay_the_direct_source_graph_and_accepted_consumers
+next_attempt: source_graph_and_consumer_closure

@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T22:46:00Z'
+updated: '2026-08-10T23:20:00Z'
 tags:
 - substrate-framework
 - effort
@@ -338,6 +338,7 @@ Attempts are append-only and individually reproducible.
 | 0186 | P165 exact supplied chiral-anomaly ledger, complete branch variety, dependency, consumer, compatibility, and SM3 audit | `campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0001` through `0016`, then v0.127.0 promotion | C-ANO-001 accepted and SM3 qualified | Exact elimination derives the displayed line plus row-exchanged and zero-doublet-charge vectorlike lines, refuting source uniqueness while preserving the supplied anomaly zeroes. Thirty-one primary, twelve independent, forty-three focused, and twenty-five graph checks pass over 132 lexical and runtime predicates plus fifteen assertions. All source nodes are native. The integrated workflow passes all 1,478 tests. | Freeze SM4's fixed-data one-loop running and common-intersection claims without turning a pairwise near-miss into physical unification. |
 | 0187 | P166 exact fixed-data affine running, common-rank, pairwise-spread, dependency, consumer, compatibility, and SM4 audit | `campaigns/P166-sm4-one-loop-unification-audit/attempts/0001` through `0008`, then terminal no-release boundary | SM4 qualified through C-RGE-002, C-RGE-004, and C-RGE-005 with v0.127.0 unchanged | Exact composition gives coefficient rank two, augmented rank three, three unequal pairwise crossings, and a 3.979055-decade spread while exposing hard-coded boundaries, a bundled MSSM stand-in, an out-of-domain sign sample, and an omitted coincident branch. Thirty-seven primary, twenty-four independent, sixty focused, and thirty-three graph checks pass over five native nodes. Two full 1,478-test executions pass. | Freeze CF1's current-NumPy reproduction and accepted vortex closure without treating removed `np.trapz` as science. |
 | 0188 | P167 current-NumPy source reproduction, exact vortex closure, evidence-reuse, graph, consumer, and CF1 audit | `campaigns/P167-cf1-current-numpy-closure-audit/attempts/0001` through `0010`, then terminal no-release boundary | CF1 remains qualified through C-VTX-001 and C-VTX-002 with v0.127.0 unchanged | Native CF1 passes two predicates and stops only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all eight. Twenty-six primary, sixteen fresh exact, thirty graph, and thirty-nine focused checks or tests pass. The six-node graph replays 51 lexical and runtime predicates plus seven assertions. Hash-identical P026 refinements are reused rather than ceremonially repeated. Two full 1,478-test executions pass; a post-gate targeted replay replaces brittle printed decimals with scientific inequalities. | Freeze CF2's fixed-area field-energy and endpoint-work audit, preserve their factor-of-two distinction, and reject any unproved CF1 or confinement identity. |
+| 0189 | P168 exact fixed-area field-energy, endpoint-work, geometry, dependency, compatibility, graph, consumer, and CF2 audit | `campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0001` through `0011`, then terminal no-release boundary | CF2 remains qualified through C-FLX-001 with v0.127.0 unchanged | Native CF2 passes all fifteen predicates. Thirty-nine primary, nineteen fresh exact, thirty-one graph, and forty-three focused checks or tests separate energy slope `Phi^2/(2A)` from endpoint slope `qPhi/A`, derive equality iff `q=Phi/2`, reject factor, charge, and geometry mutations, and retain logarithmic and spherical counterexamples. The six-node graph replays 66 lexical and runtime predicates plus eight assertions; immutable CF1 and CF5 aliases are backed by `np.trapezoid`. Hash-identical P027 evidence is reused. | Freeze CF3's exact SU3 center algebra and conditional loop-law consequences while keeping the declared area law, physical screening, and confinement interpretations separate. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1800,21 +1801,33 @@ continuum-uniqueness, and v=0-uniqueness readings remain excluded. The terminal
 workflow and separately required full suite each pass all 1,478 tests with 684
 valid memory records.
 
+P168 terminally reaudits CF2 without a new claim, API, or release. Exact
+accepted composition and a fresh independent derivation keep field-energy
+slope `Phi^2/(2A)` separate from endpoint-force slope `qPhi/A`, equate them
+only at `q=Phi/2`, and retain the factor-two, logarithmic expanding-area,
+spherical, and effective-area reconstruction guards. CF1, Riesz, Wilson-loop,
+QCD, confinement, and substrate identities remain excluded. The primary,
+fresh exact, six-node graph, and focused routes pass 39, 19, 31, and 43 checks
+or tests. The graph replays 66 lexical and runtime predicates plus eight
+assertions; compatibility aliases for immutable CF1 and CF5 are backed only by
+`np.trapezoid`. The terminal workflow and explicit full suite each pass all
+1,478 tests with 686 valid memory records.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P167 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P168 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
 The effort remains active. D4 is discharged, but D1 remains open with 54
 pending, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is CF2, pinned at SHA-256
-`e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a`.
-P168 must freeze CF2 before renewed source execution and audit its fixed-area
-Gauss-law, field-energy, endpoint-work, force, and linear-potential statements
-against C-FLX-001 and the separate C-VTX claims. It must keep energy and force
-slopes distinct, test the load-bearing fixed-area premise and factor-of-two
-normalization, and must not turn an ideal uniform tube or reconstructed area
-into a CF1 identity, physical quark potential, area law, QCD confinement, or
-substrate mechanism.
+bridge unit. The next queue unit is CF3, pinned at SHA-256
+`8655579ef3173730c315d60aa821f7085cc131920ae49cb93c60b075d884889d`.
+P169 must freeze CF3 before renewed source execution and audit its complete
+SU3 center and triality algebra separately from the declared Wilson area and
+perimeter laws. It must preserve the conditional large-time extraction in
+C-WIL-001, require the loop law as an explicit premise, test center membership,
+order, representation action, area/perimeter discrimination, and must not turn
+a declared expectation into derived screening, string tension, QCD
+confinement, or substrate dynamics.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

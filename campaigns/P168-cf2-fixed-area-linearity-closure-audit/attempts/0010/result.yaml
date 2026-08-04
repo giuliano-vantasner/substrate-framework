@@ -1,0 +1,24 @@
+attempt: 0010
+campaign: P168
+candidate: repaired_fail_fast_record_preflight
+status: passed
+started_at: '2026-08-10T23:23:00Z'
+finished_at: '2026-08-10T23:24:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - PYTHONPATH=src .venv/bin/python scripts/render_docs.py --check
+  - PYTHONPATH=src .venv/bin/python scripts/render_memory.py --check
+  - memory_validate_each_P168_proposal_decision_and_parent_effort_separately
+  - parse_all_P168_YAML
+  - git diff --check
+results:
+  repository: WORKFLOW_VALID_163_claims_163_accepted_54_pending
+  generated_docs: current
+  generated_memory: current
+  memory_targets: 3_valid
+  P168_yaml: YAML_OK_24
+  diff_check: passed
+  shell_mode: fail_fast
+debt:
+  - run_the_single_terminal_repository_and_explicit_full_suite_boundary
+next_attempt: terminal_qualification_gate

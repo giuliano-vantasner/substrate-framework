@@ -1,0 +1,17 @@
+attempt: 0004
+campaign: P168
+candidate: independent_post_commit_freeze_verification
+status: passed
+started_at: '2026-08-10T22:58:00Z'
+finished_at: '2026-08-10T22:58:00Z'
+commands:
+  - git diff-tree --check --no-commit-id -r 8542760
+  - git status --short
+results:
+  committed_tree_diff_check: passed
+  unrelated_worktree_changes: []
+  expected_untracked_attempt_record: attempts/0003/result.yaml
+freeze_commit: 8542760
+scientific_result_changed: false
+debt: []
+next_attempt: literal_native_source_reproduction

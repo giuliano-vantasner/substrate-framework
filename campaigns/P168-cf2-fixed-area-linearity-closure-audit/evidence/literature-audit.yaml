@@ -1,0 +1,10 @@
+scope: no_new_external_import_required
+reason: >-
+  P168 proposes no new physics claim. Standard uniform-cap Gauss data,
+  E-squared-over-two energy density, and qE endpoint force are already explicit
+  declared assumptions of accepted C-FLX-001 and are rederived conditionally.
+external_source_used_for_selection: false
+physical_interpretation_imported: false
+conclusion: >-
+  Literature cannot supply the missing framework maps among the ideal tube,
+  Abelian-Higgs vortex, QCD variables, Wilson area law, and substrate dynamics.

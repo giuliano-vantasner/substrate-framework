@@ -1,0 +1,25 @@
+attempt: 0005
+campaign: P168
+candidate: literal_native_source_reproduction
+status: passed
+started_at: '2026-08-10T23:00:00Z'
+finished_at: '2026-08-10T23:01:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+source:
+  sha256: e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a
+  imports: [sympy]
+  exit_code: 0
+  terminal_tally: ALL_15_CHECKS_PASS
+  runtime_pass_markers: 15
+compatibility:
+  numpy_integration_surface: none
+  alias_used: false
+scientific_scope: >-
+  Reproduction establishes execution of the immutable predicates only. It
+  does not repair the source narrative's undeclared identification of endpoint
+  slope q*Phi/A with field-energy slope Phi^2/(2*A).
+debt:
+  - adjudicate_every_predicate_and_make_the_coefficient_and_fixed_area_premises_mutation_sensitive
+next_attempt: accepted_composition_primary_verifier

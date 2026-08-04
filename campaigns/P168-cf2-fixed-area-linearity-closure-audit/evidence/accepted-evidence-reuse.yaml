@@ -1,0 +1,14 @@
+accepted_at:
+  release: v0.24.0
+  campaign: P027
+unchanged_since_acceptance:
+  P027_primary_verifier_sha256: 2eb02b262e92b59214f083cf6f38268362ef9572a677f0e75071231dbf852e12
+  P027_independent_review_sha256: 1413ddd12667c4dad93113610dfcf621a9634c310dc2407479a2fc8f8566dc70
+  P027_passing_attempt_sha256: 994e99f891edcf1004dfc6c4fce0278a30afae78020a0b43fe4587ee88c7bb48
+  accepted_tests_sha256: d20a455d8721b55c4cbf733e421c60b8fcdac48948d72ded5a460a495a3189b4
+  canonical_module_sha256: 372c4bebc93231de8bbc99dea1f8494bc2b730e4983a12158d661f48b862d034
+reuse_decision: >-
+  Hash-identical P027 evidence remains authoritative. P168 reproduces the
+  current immutable source, adds a fresh independent derivation, mutations,
+  graph replay, and focused consumers instead of ceremonially rerunning the
+  unchanged P027 scripts.

@@ -1,0 +1,27 @@
+attempt: 0008
+campaign: P168
+candidate: source_graph_and_consumer_closure
+status: passed
+started_at: '2026-08-10T23:10:00Z'
+finished_at: '2026-08-10T23:14:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/replay_source_graph.py
+  - >-
+    .venv/bin/python -m pytest tests/test_flux_tube.py
+    tests/test_abelian_higgs_vortex.py tests/test_maxwell.py
+    tests/test_wilson_loops.py tests/test_source_audit.py -q
+results:
+  source_graph: ALL_31_CHECKS_PASS
+  graph_nodes: 6
+  lexical_checks: 66
+  runtime_checks: 66
+  assertion_nodes: 8
+  legacy_nodes: [CF1, CF5]
+  legacy_references: 4
+  alias_backend: numpy.trapezoid
+  focused_tests: 43_passed
+  accepted_claim_delta: []
+  canonical_code_delta: []
+debt:
+  - materialize_claim_level_adjudication_and_synchronize_CF2_qualification_records
+next_attempt: terminal_qualification_transaction

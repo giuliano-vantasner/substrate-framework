@@ -1,0 +1,18 @@
+nodes:
+  EM3: {relation: declared_radial_comparison, lexical_checks: 11, runtime_checks: 11, assertions: 1, compatibility: native}
+  EM7: {relation: declared_exponent_analogy, lexical_checks: 17, runtime_checks: 17, assertions: 1, compatibility: native}
+  QCD3: {relation: declared_uv_premise, lexical_checks: 9, runtime_checks: 9, assertions: 1, compatibility: native}
+  CF1: {relation: declared_upstream_tube, lexical_checks: 8, runtime_checks: 8, assertions: 2, compatibility: isolated_alias_only}
+  CF2: {relation: root, lexical_checks: 15, runtime_checks: 15, assertions: 1, compatibility: native}
+  CF5: {relation: later_reconciliation_attempt, lexical_checks: 6, runtime_checks: 6, assertions: 2, compatibility: isolated_alias_only}
+totals:
+  nodes: 6
+  lexical_checks: 66
+  runtime_checks: 66
+  assertions: 8
+legacy_integration:
+  nodes: [CF1, CF5]
+  references: 4
+  backend: numpy.trapezoid
+verifier: reviews/replay_source_graph.py
+result: ALL_31_CHECKS_PASS

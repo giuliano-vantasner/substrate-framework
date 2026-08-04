@@ -1,0 +1,30 @@
+attempt: 0006
+campaign: P168
+candidate: accepted_composition_primary_verifier
+status: passed
+started_at: '2026-08-10T23:02:00Z'
+finished_at: '2026-08-10T23:06:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P168-cf2-fixed-area-linearity-closure-audit/verify.py
+result: ALL_39_CHECKS_PASS
+closure:
+  pinned_artifacts: 7
+  source_lexical_predicates: 15
+  source_runtime_predicates: 15
+  source_assertions: 1
+  native_exit: 0
+  numpy_integration_surface: none
+  accepted_composition: [C-FLX-001]
+  new_claim: null
+  coefficient_mutations_rejected: 3
+  charge_flux_mutations_rejected: 2
+  geometry_mutations_rejected: 2
+scientific_verdict: >-
+  Fixed-area field energy and endpoint work are separately linear. Their
+  slopes agree if and only if q=Phi/2; CF2 supplies no such premise and no
+  physical CF1, Riesz, Wilson-loop, QCD, confinement, or substrate map.
+debt:
+  - complete_a_fresh_independent_exact_derivation
+  - replay_the_direct_source_graph_and_accepted_consumers
+next_attempt: independent_exact_work_energy_review

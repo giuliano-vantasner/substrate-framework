@@ -1,0 +1,32 @@
+attempt: 0009
+campaign: P168
+candidate: record_materialization_preflight
+status: failed_workflow_invocation
+started_at: '2026-08-10T23:21:00Z'
+finished_at: '2026-08-10T23:22:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - PYTHONPATH=src .venv/bin/python scripts/render_docs.py --check
+  - PYTHONPATH=src .venv/bin/python scripts/render_memory.py --check
+  - >-
+    memory validate --base /home/dan/substrate-framework
+    memory/vantasner/proposals/P168-cf2-fixed-area-linearity-closure-audit.md
+    memory/vantasner/decisions/CF2-fixed-area-qualified-review.md
+    memory/vantasner/efforts/framework-migration.md
+  - parse_all_P168_YAML
+  - git diff --check
+observed:
+  repository: WORKFLOW_VALID_163_claims_163_accepted_54_pending
+  generated_docs: current
+  generated_memory: current
+  memory_validation: rejected_extra_path_arguments
+  P168_yaml: YAML_OK_23
+  shell_final_exit: 0_because_later_commands_masked_the_failed_memory_invocation
+diagnosis: >-
+  The memory CLI accepts one path per invocation. The shell was not fail-fast,
+  so later successful commands masked the nonzero memory command.
+scientific_result_changed: false
+record_content_changed: false
+debt:
+  - rerun_each_memory_target_and_all_record_gates_with_fail_fast_process_status
+next_attempt: repaired_fail_fast_record_preflight

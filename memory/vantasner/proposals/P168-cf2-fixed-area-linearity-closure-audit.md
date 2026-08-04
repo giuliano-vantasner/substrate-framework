@@ -2,15 +2,15 @@
 description: Reaudit CF2's fixed-area field-energy and endpoint-work closure
 author: vantasner
 created: '2026-08-10T22:50:00Z'
-updated: '2026-08-10T22:54:00Z'
+updated: '2026-08-10T23:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-CF2
 - fixed-flux-tube
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P168 CF2 Fixed-Area Linearity Closure Audit
 
@@ -125,7 +125,17 @@ route, and native compatibility preflight. Every later implementation,
 representation, source, schema, or scientific failure is preserved
 append-only before repair. Attempt 0002 validates repository schema, proposal
 memory, campaign YAML, and diff shape and pins the freeze manifest hash before
-renewed source-body access.
+renewed source-body access. Attempt 0003 preserves a workflow-ordering mistake
+in the freeze commit invocation; attempt 0004 independently verifies the
+committed tree before source access. Attempt 0005 reproduces all fifteen source
+predicates natively. Attempts 0006 and 0007 pass 39 primary and 19 fresh exact
+checks. Attempt 0008 passes 31 graph checks and 43 focused tests over the
+accepted and adjacent consumer surface. Attempt 0009 preserves a record
+preflight whose multi-path memory invocation failed and whose shell status was
+masked by later commands; the repaired route validates each path separately
+under fail-fast execution. Attempt 0010 passes that repair. Attempt 0011 passes
+the terminal repository gate and both prescribed 1,478-test executions with
+v0.127.0 and all 163 accepted claims unchanged.
 
 ## Debt Ledger
 
@@ -135,12 +145,12 @@ record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Fifteen predicates and one assertion lack current individual review | Reproduce, inventory, and adjudicate every node | open |
-| Energy and endpoint work may share an unjustified sigma | Derive both slopes and exact equality condition independently | open |
-| Fixed area may be hidden | Mutate it and retain variable-area and spherical counterexamples | open |
-| Existing evidence may be rerun ceremonially | Hash-audit P027 and replay only changed or current-sensitive gates | open |
-| CF1, Riesz, Wilson, QCD, and confinement identities may be borrowed | Close or reject every narrative dependency explicitly | open |
-| Consumers and governed records may disagree | Replay affected paths and synchronize disposition, queue, memory, and effort | open |
+| Fifteen predicates and one assertion lack current individual review | Reproduce, inventory, and adjudicate every node | discharged by source reproduction and check adjudication |
+| Energy and endpoint work may share an unjustified sigma | Derive both slopes and exact equality condition independently | discharged by 39 primary and 19 independent checks |
+| Fixed area may be hidden | Mutate it and retain variable-area and spherical counterexamples | discharged by coefficient, geometry, logarithmic, and spherical guards |
+| Existing evidence may be rerun ceremonially | Hash-audit P027 and replay only changed or current-sensitive gates | discharged by byte-identical accepted-evidence reuse |
+| CF1, Riesz, Wilson, QCD, and confinement identities may be borrowed | Close or reject every narrative dependency explicitly | discharged by dependency, source, graph, and source adjudication |
+| Consumers and governed records may disagree | Replay affected paths and synchronize disposition, queue, memory, and effort | discharged by 43 focused tests and qualification transaction |
 
 ## Review and Promotion Plan
 
@@ -159,11 +169,14 @@ edits trigger record-sensitive validation rather than another full suite.
 
 ## Done Gate
 
-P168 closes only when both positive linear constructions and their distinction
-pass exact independent oracles, all source predicates and consumers are
-adjudicated, compatibility cannot masquerade as science, physical overreach is
-excluded, governed records agree, and the debt ledger is empty. A native tally
-or rejection of confinement alone is not completion.
+P168 closes through unchanged C-FLX-001 composition. Both positive conditional
+linear constructions and their exact distinction pass 39 primary and 19 fresh
+exact checks. All fifteen source predicates and the assertion have individual
+verdicts; 31 graph checks replay 66 lexical and runtime predicates plus eight
+assertions; and 43 focused tests pass. Compatibility aliases occur only for
+immutable CF1 and CF5 and are backed by `np.trapezoid`. Physical overreach is
+excluded, P027 reuse is hash-justified, v0.127.0 remains unchanged, and the
+campaign debt ledger is empty.
 
 ## Cross-References
 

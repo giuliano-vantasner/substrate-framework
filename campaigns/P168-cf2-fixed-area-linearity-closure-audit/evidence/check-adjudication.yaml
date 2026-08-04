@@ -1,0 +1,55 @@
+source_unit: CF2
+lexical_checks: 15
+runtime_checks: 15
+assertion_nodes: 1
+checks:
+  CF2.i-a:
+    verdict: accepted_through_C-FLX-001
+    qualification: uniform_cap_Gauss_data_give_E_equals_Phi_over_A
+  CF2.i-b:
+    verdict: accepted_through_C-FLX-001
+    qualification: constancy_follows_only_because_area_is_fixed_independently_of_length
+  CF2.ii-a:
+    verdict: accepted_through_C-FLX-001
+    qualification: stored_field_energy_is_Phi_squared_L_over_two_A
+  CF2.ii-b:
+    verdict: partially_accepted_through_C-FLX-001
+    qualification: degree_one_and_unboundedness_are_exact_but_physical_confinement_is_not_established
+  CF2.ii-c:
+    verdict: qualified_through_C-FLX-001
+    qualification: energy_slope_is_constant_but_equals_endpoint_qE_slope_only_if_q_equals_Phi_over_two
+  CF2.iii-a:
+    verdict: accepted_through_C-FLX-001
+    qualification: the_three_field_energy_per_length_forms_agree_in_the_declared_units
+  CF2.iii-b:
+    verdict: partially_accepted_through_C-FLX-001
+    qualification: energy_per_length_and_energy_slope_agree_but_identity_with_CF1_tension_is_rejected
+  CF2.iii-c:
+    verdict: accepted_as_scope_guard
+    qualification: Phi_and_A_remain_free_and_no_absolute_tension_is_imported
+  CF2.iv-a:
+    verdict: accepted_only_as_integer_exponent_arithmetic
+    qualification: arithmetic_does_not_make_EM7_an_executable_dependency_or_dynamical_explanation
+  CF2.iv-b:
+    verdict: accepted_only_as_power_matching
+    qualification: replacing_c1_by_the_energy_slope_is_an_algebraic_identification_not_a_Riesz_mechanism
+  CF2.iv-c:
+    verdict: accepted_only_as_exponent_contrast
+    qualification: one_and_three_dimensional_rows_are_distinct_but_no_physical_dimension_map_is_derived
+  CF2.v-a:
+    verdict: accepted_through_C-FLX-001
+    qualification: separately_declared_spherical_uniformity_gives_inverse_square_spreading
+  CF2.v-b:
+    verdict: partially_accepted_through_C-FLX-001
+    qualification: Coulomb_curvature_and_limit_are_exact_but_deconfinement_language_is_not_promoted
+  CF2.v-c:
+    verdict: partially_accepted_through_C-FLX-001
+    qualification: curvature_discriminates_geometries_but_does_not_derive_a_Wilson_area_law_or_phase
+  CF2.v-d:
+    verdict: partially_accepted_through_C-FLX-001
+    qualification: the_two_limits_are_exact_but_quark_separation_and_physical_phase_claims_are_rejected
+assertions:
+  check_helper:
+    role: local_check_ledger_assertion
+    verdict: execution_mechanism_not_extra_claim
+headline_physical_reading: rejected_absent_dependency_closure_and_nonperturbative_oracle

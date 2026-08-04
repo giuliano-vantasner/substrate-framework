@@ -1,0 +1,25 @@
+source_unit: CF2
+direct_imports: [sympy]
+source_module_imports: []
+scientific_predicates:
+  lexical: 15
+  runtime: 15
+assertions:
+  total: 1
+  check_ledger: 1
+compatibility:
+  legacy_integration_sites: 0
+  current_integration_sites: 0
+  native: true
+convention_findings:
+  - uniform_cap_Gauss_data_and_fixed_area_are_declared_premises
+  - field_energy_density_is_declared_as_E_squared_over_two
+  - endpoint_force_is_declared_as_q_times_E
+  - the_source_never_derives_the_charge_flux_relation_q_equals_Phi_over_two
+semantic_findings:
+  - source_energy_path_contains_no_endpoint_charge_q
+  - source_calls_field_energy_slope_the_same_force_as_qE_without_the_required_equality_premise
+  - same_object_CF1_wording_has_no_executable_or_accepted_cross_model_map
+  - EM3_EM7_QCD3_CF1_and_CF5_are_narrative_neighbors_not_imported_dependencies
+  - physical_quark_QCD_area_law_and_confinement_labels_exceed_the_checked_algebra
+source_edited: false

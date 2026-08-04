@@ -1,0 +1,19 @@
+source_unit: CF2
+uniform_tube:
+  flux: {symbol: Phi, status: declared_positive_input}
+  area: {symbol: A, status: declared_positive_fixed_uniform_cross_section}
+  length: {symbol: L, status: declared_positive_input}
+  endpoint_charge: {symbol: q, status: declared_positive_separate_input}
+  field_energy_density: {value: E_squared_over_two, status: declared_imported_convention}
+  endpoint_force: {value: q_times_E, status: declared_imported_convention}
+geometry_guards:
+  expanding_area: {value: A0_times_one_plus_L_over_L0, status: P027_and_P168_counterexample}
+  spherical_area: {value: four_pi_r_squared, status: separately_declared_radial_comparison}
+narrative_references:
+  CF1: no_accepted_map_from_smooth_vortex_to_uniform_fixed_area
+  CF5: effective_area_reconstruction_not_prediction
+  EM3: separate_radial_spreading_context
+  EM7: exponent_arithmetic_only
+  QCD3: ultraviolet_asymptotic_freedom_does_not_supply_infrared_confinement
+empirical_comparators: []
+absolute_scale_imported: false

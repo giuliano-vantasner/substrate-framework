@@ -1,0 +1,23 @@
+accepted_composition:
+  C-FLX-001:
+    dependencies: []
+    role: exact_conditional_fixed_area_field_energy_and_separate_endpoint_work
+separate_non_dependencies:
+  C-VTX-001: conditional_smooth_radial_vortex_with_no_uniform_area_map
+  C-VTX-002: resolution_bounded_vortex_profile_and_tension_with_no_CF2_identity
+  C-MAX-001: separately_normalized_radial_spreading_comparison
+  C-WIL-001: separately_declared_area_or_perimeter_loop_law_consequences
+source_narrative_edges:
+  CF1: declared_flux_and_area_provider_without_executable_or_accepted_map
+  CF5: later_effective_area_reconciliation_that_reconstructs_supplied_tension
+  EM3: cited_radial_Coulomb_comparison_without_executable_import
+  EM7: cited_Riesz_exponent_row_without_executable_import
+  QCD3: cited_UV_context_without_an_IR_implication
+missing_physical_dependencies:
+  - endpoint_charge_to_flux_relation
+  - smooth_vortex_to_uniform_fixed_area_map
+  - chromoelectric_or_quark_variable_identification
+  - nonperturbative_Wilson_area_law_derivation
+  - QCD_or_substrate_confinement_oracle
+dependency_closure_for_accepted_claim: complete
+dependency_closure_for_physical_headline: absent

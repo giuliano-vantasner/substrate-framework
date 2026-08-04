@@ -1,0 +1,24 @@
+installed_numpy:
+  version: 2.5.1
+  current_function: numpy.trapezoid
+immutable_CF2:
+  numpy_imports: 0
+  legacy_integration_references: 0
+  current_integration_references: 0
+  native_exit: 0
+  alias_used: false
+canonical_flux_tube_module:
+  numpy_imports: 0
+  legacy_integration_references: 0
+  integration_required: false
+direct_source_graph:
+  native_nodes: [EM3, EM7, QCD3, CF2]
+  isolated_alias_only_nodes:
+    CF1: 3
+    CF5: 1
+  alias_backend: numpy.trapezoid
+  mutable_legacy_references: 0
+classification: >-
+  Compatibility events are scientifically neutral. CF2 has no such event;
+  immutable CF1 and CF5 are replayed without source edits behind aliases whose
+  only backend is numpy.trapezoid.

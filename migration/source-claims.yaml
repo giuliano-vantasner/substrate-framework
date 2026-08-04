@@ -3395,8 +3395,34 @@ units:
     identity, physical quark/QCD variables, Riesz dynamics, area law, or confinement.
   evidence:
   - campaigns/P027-fixed-flux-tube-linearity/reviews/source_adjudication.md
-  note: P027 shows that CF2's executable energy path never uses q, adds factor-of-two and variable-area
-    counterexamples, and classifies effective area inversion as reconstruction.
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/source_adjudication.md
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/source-reproduction.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/compatibility-audit.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/source-audit.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/check-adjudication.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/input-provenance.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/dependency-audit.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/consumer-audit.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/candidate-comparison.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/accepted-evidence-reuse.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/primary-provenance.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/evidence/literature-audit.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/verify.py
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/independent_exact_work_energy_review.py
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/reviews/replay_source_graph.py
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0005/result.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0006/result.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0007/result.yaml
+  - campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/CF2-fixed-area-qualified-review.md
+  note: P168 replays all fifteen predicates natively and passes thirty-nine primary, nineteen fresh exact,
+    thirty-one graph, and forty-three focused checks or tests. The six-node graph replays sixty-six lexical
+    and runtime predicates plus eight assertions; immutable CF1 and CF5 compatibility is isolated through
+    numpy.trapezoid. P027 evidence is byte-identical and reused. The executable energy path still never
+    uses q, the two slopes agree only at q=Phi/2, variable area is logarithmic, and effective-area inversion
+    reconstructs supplied tension. No claim, API, or release changes.
 - source_unit: CF3
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
