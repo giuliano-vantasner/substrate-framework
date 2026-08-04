@@ -1,0 +1,18 @@
+campaign: P134
+proposed_claim: C-MAX-001
+nearest_claims:
+  C-GAU-001:
+    overlap: F=dA local covariance and commutator
+    missing_from_nearest: kinetic coefficient action variation sourced equation continuity condition static source family and force
+  C-KRN-001:
+    overlap: general d>2 Riesz kernel and d=3 endpoint
+    missing_from_nearest: Maxwell action current source normalization d=1 d=2 boundary branches and test-charge force
+  C-FLX-001:
+    overlap: separately declared force equals charge times field
+    missing_from_nearest: radial point source Maxwell action Green normalization and dimension family
+decision: distinct_claim
+implementation_reuse:
+  unchanged: [gauge_u1.u1_field_strength, momentum_kernels.riesz_green_kernel]
+  new: [maxwell.maxwell_euler_lagrange, maxwell.static_maxwell_point_source]
+  duplicated_constants_or_solvers: false
+debt: []

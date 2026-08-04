@@ -1,0 +1,23 @@
+campaign: P134
+source_unit: EM3
+source_sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9
+interpreter: /home/dan/substrate-framework/.venv/bin/python
+working_directory: /home/dan/substrate
+exit_status: 0
+checks_passed: 11
+terminal_tally: ALL 11 CHECKS PASS
+numeric_outputs:
+  log_log_slope: -1.000000
+  max_interior_fd_laplacian: 1.997e-05
+  inverse_alpha: 137.0360
+imports: [numpy, sympy, sympy.physics.units]
+claimed_scipy_import_present: false
+numpy_trapezoid_compatibility:
+  direct_legacy_references: 0
+  dynamic_legacy_references: 0
+  current_references: 0
+  compatibility_event: none
+interpretation: >-
+  Clean reproduction establishes only that the eleven predicates execute. The
+  numerical slope and Laplacian regress a formula already fixed exactly, and
+  the alpha result uses embedded imported constants.

@@ -1,0 +1,38 @@
+campaign: P134
+source_unit: EM3
+declared_source_dependencies:
+  EM2:
+    disposition: qualified
+    accepted_mapping: [C-GAU-001]
+    authority: local_U1_algebra_only_no_dynamics
+  G1:
+    disposition: pending_adjudication
+    authority: none
+  G2:
+    disposition: pending_adjudication
+    authority: none
+  G3:
+    disposition: pending_adjudication
+    authority: none
+source_python_imports: [numpy, sympy, sympy.physics.units]
+source_imports_declared_dependencies_executably: false
+accepted_claim_dependencies:
+  C-MAX-001: [C-GAU-001, C-KRN-001]
+closure:
+  C-GAU-001: accepted_in_v0.26.0
+  C-KRN-001: accepted_in_v0.58.0
+  current_base: v0.101.0
+pending_dependency_replay:
+  nodes: [G1, G2, G3]
+  checks: 27
+  all_exit_zero_with_terminal_tally: true
+  authority_granted: false
+compatibility:
+  G1: direct_np_trapz_alias_only
+  G2: none
+  G3: none
+interpretation: >-
+  C-MAX-001 is a compatible extension of accepted local gauge curvature and
+  the accepted conditional Riesz kernel. The kinetic action current source
+  dimension boundary data and force dictionary remain declared premises.
+debt: []

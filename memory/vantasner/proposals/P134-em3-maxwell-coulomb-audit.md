@@ -2,11 +2,11 @@
 description: Audit EM3's imported Maxwell action, Coulomb tail, and two-charge force
 author: vantasner
 created: '2026-08-09T01:30:00Z'
-updated: '2026-08-09T01:30:00Z'
+updated: '2026-08-09T02:40:00Z'
 tags: [substrate-framework, campaign-proposal, maxwell, coulomb, migration-EM3]
 category: proposals
-confidence: working
-status: active
+confidence: established
+status: archived
 ---
 # P134 EM3 Maxwell and Coulomb Audit
 
@@ -87,10 +87,10 @@ comparator; matching `1/(4*pi*r)` cannot select its dimension or ontology.
 
 ## Proposed Claim Delta
 
-Provisional C-MAX-001 may state the exact conditional Maxwell Euler-Lagrange
+P134 promotes C-MAX-001 as the exact conditional Maxwell Euler-Lagrange
 equation, necessary conserved-current condition, and source-normalized static
-point-charge family with its separately conditional test-charge force. It must
-depend on C-GAU-001 and reuse rather than duplicate C-KRN-001. It may not assert
+point-charge family with its separately conditional test-charge force. It
+depends on C-GAU-001 and reuses rather than duplicates C-KRN-001. It does not assert
 that local covariance derives the kinetic coefficient, that the accepted
 complex scalar supplies electric charge, that three dimensions are uniquely
 selected by decay, or that the framework contains a photon, physical
@@ -121,12 +121,13 @@ Every mutable script uses `np.trapezoid` or the canonical
 
 ## Attempts and Continuation
 
-Attempt 0001 freezes the contract before source-body inspection. After that
-commit, attempt 0002 will preserve the exact native reproduction or failure and
-continue through Candidates B through G. A source sign or normalization failure
-narrows the source surface; it does not cancel the positive action and
-general-dimensional derivation. A duplicate endpoint is mapped rather than
-re-promoted.
+Attempt 0001 freezes the contract before source-body inspection; attempt 0002
+records all eleven native source checks. Attempts 0003 through 0005 preserve two
+canonical/test representation failures and one independent sign failure before
+the exact routes pass in attempt 0006. Attempts 0007 and 0008 expose dynamic
+eager NumPy fallback detection and an incomplete compatibility inventory;
+attempt 0009 then replays 227 dependency and consumer predicates. Attempt 0010
+preserves the initial wrong GitNexus subcommand before the LOW-risk result.
 
 ## Debt Ledger
 
@@ -136,32 +137,31 @@ evidence-level closure.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| EM3 executable surface unaudited | Hash, execute, AST audit, and map all eleven predicates | open |
-| Maxwell action and signs unverified | Derive the Euler equation and gauge boundary term in the frozen convention | open |
-| Current compatibility unverified | Derive the continuity condition from antisymmetry and audit the supplied current | open |
-| Static source normalization unclosed | Derive Poisson sign, sphere flux, homogeneous data, and point-source coefficient | open |
-| Dimension and tail claim unclosed | Derive `d>2`, `d=2`, and `d=1` cases and test uniqueness language | open |
-| Two-charge force premise untyped | Separate field equation, source charge, test charge, energy, and force dictionary | open |
-| Physical language ungoverned | Separate conditional U1 dynamics from photon, electromagnetism, gravity, material, and observation | open |
-| Dependencies, consumers, and novelty unknown | Audit EM2/G1/G2/G3, reverse consumers, accepted APIs, and generated state | open |
+| EM3 executable surface unaudited | Hash, execute, AST audit, and map all eleven predicates | closed by native reproduction and predicate adjudication |
+| Maxwell action and signs unverified | Derive the Euler equation and gauge boundary term in the frozen convention | closed by both exact action routes and the A0 sign mutation |
+| Current compatibility unverified | Derive the continuity condition from antisymmetry and audit the supplied current | closed by double-divergence and gauge-source identities |
+| Static source normalization unclosed | Derive Poisson sign, sphere flux, homogeneous data, and point-source coefficient | closed by exact normalized flux and focused tests |
+| Dimension and tail claim unclosed | Derive `d>2`, `d=2`, and `d=1` cases and test uniqueness language | closed by d=1 through d=6 branches and d=4 counterexample |
+| Two-charge force premise untyped | Separate field equation, source charge, test charge, energy, and force dictionary | closed by explicit API inputs and energy-gradient mutations |
+| Physical language ungoverned | Separate conditional U1 dynamics from photon, electromagnetism, gravity, material, and observation | closed by C-MAX-001 and EM3 reviews |
+| Dependencies, consumers, and novelty unknown | Audit EM2/G1/G2/G3, reverse consumers, accepted APIs, and generated state | closed by dependency, 18-node replay, impact, and nonduplication audits |
 
 ## Review and Promotion Plan
 
-C-MAX-001 receives an individual review only if its action-level content is
-distinct from C-GAU-001 and C-KRN-001 and every coefficient and premise closes.
-Source adjudication separately decides EM3's disposition. Accepted reusable
-logic moves to a pure package module with focused tests; proposal scripts call
-it. Impact, dependency, consumer, generated-state, memory, queue, and one
-integrated promotion replay close any promotion.
+C-MAX-001 receives an individual accepted review because its action-level
+content is distinct from C-GAU-001 and C-KRN-001 and every coefficient and
+premise closes. Source adjudication separately qualifies EM3. Reusable logic
+lives in the pure package module with focused tests. Impact, dependency,
+consumer, generated-state, memory, queue, and one integrated promotion replay
+close the transaction.
 
 ## Done Gate
 
-P134 closes only when the positive conditional action/static-force object or
-its exact accepted composition exists, every source predicate is adjudicated,
-the strongest exact and independent oracles are mutation-sensitive, dimensions,
-signs, sources, boundaries, and limits close, consumers replay, generated state
-agrees, and the campaign debt ledger is empty. Rejecting a source overclaim
-alone is not completion.
+P134 closes with C-MAX-001 as the positive conditional action/static-force
+object and EM3 qualified. Every source predicate is adjudicated, the strongest
+exact and independent oracles are mutation-sensitive, dimensions, signs,
+sources, boundaries, and limits close, consumers replay, generated state
+agrees, and the campaign debt ledger is empty.
 
 ## Cross-References
 

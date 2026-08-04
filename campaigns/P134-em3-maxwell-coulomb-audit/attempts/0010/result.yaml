@@ -1,0 +1,14 @@
+campaign: P134
+attempt: 0010
+status: failed
+candidate: G
+command: gitnexus detect --repo substrate-framework
+expected: post_change_graph_impact
+result:
+  exit_status: 1
+  stderr: "error: unknown command 'detect'"
+classification: command_usage
+compatibility_event: none
+next_attempt: >-
+  Inspect the installed GitNexus CLI help, use its actual change-detection
+  subcommand, and preserve the existing pre-edit LOW-risk impact evidence.

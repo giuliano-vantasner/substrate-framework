@@ -1,0 +1,15 @@
+campaign: P134
+claim: C-MAX-001
+derivation_provenance:
+  primary: exact component Euler variation and canonical Riesz reuse
+  independent: fresh action variation radial flux derivation and dimension counterfamily
+  external_formula_dependency: none
+source_citations_not_imported_as_authority:
+  - Jackson and other textbook section labels in the source and dossier
+  - NIST CODATA literals embedded in EM3
+  - merged-theory medium identifications
+reason: >-
+  Every promoted equation is derived from the declared action definitions and
+  accepted C-GAU-001/C-KRN-001 closure. External citations are unnecessary for
+  the exact oracle and cannot supply the substrate physical dictionary.
+debt: []

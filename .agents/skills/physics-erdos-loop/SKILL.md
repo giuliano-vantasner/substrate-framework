@@ -83,7 +83,7 @@ Keep empirical comparators blinded until equations, conventions, criteria, and s
 
 Build the smallest dependency-first claim ladder. Implement reusable equations, constants, units, solvers, and transformations under `src/substrate_framework/`. Keep proposal scripts thin: import canonical functions and evaluate a candidate.
 
-Match implementation to the claim. Use exact symbolic algebra when an exact residual or identity is available, formal proof when the encoded theorem is the real obligation, and SciPy numerical methods when the claim is an IVP, BVP, spectral, optimization, integration, or PDE problem without a usable closed form. Reuse `substrate_framework.numerics` for common IVP, method-of-lines, BVP, refinement evidence, and sampled trapezoidal integration; canonical modules call its `trapezoid_integral` compatibility API, while mutable standalone scripts targeting the current environment call `np.trapezoid`, never removed `np.trapz`. The claim implementation must still own and expose its equation, discretization, boundary data, error norm, and physical acceptance thresholds.
+Match implementation to the claim. Use exact symbolic algebra when an exact residual or identity is available, formal proof when the encoded theorem is the real obligation, and SciPy numerical methods when the claim is an IVP, BVP, spectral, optimization, integration, or PDE problem without a usable closed form. Reuse `substrate_framework.numerics` for common IVP, method-of-lines, BVP, refinement evidence, and sampled trapezoidal integration; canonical modules call its `trapezoid_integral` compatibility API, while mutable standalone scripts targeting the current environment call `np.trapezoid`, never removed `np.trapz`. Preflight executable syntax for direct, imported, and dynamic legacy access. Never use an eager nested fallback such as `getattr(np, "trapezoid", getattr(np, "trapz"))`; use the canonical helper or a two-step `None` fallback. The claim implementation must still own and expose its equation, discretization, boundary data, error norm, and physical acceptance thresholds.
 
 Do not:
 
@@ -102,7 +102,7 @@ Create `attempts/0001/`, `0002/`, and so on. Preserve candidate source, command,
 
 After failure, choose the next action from the diagnosis:
 
-- legacy-library alias only → repair the mutable script (`np.trapz` to `np.trapezoid`) and rerun the same scientific route; for immutable hash-pinned source, preserve the native abort and run an explicit alias-only compatibility replay, without counting the environment abort as a rejected scientific candidate;
+- legacy-library alias only → detect direct `np.trapz`, imported `trapz`, dynamic `getattr(np, "trapz")`, and eager nested-default access; repair the mutable script to `np.trapezoid` or a safe two-step fallback and rerun the same scientific route; for immutable hash-pinned source, preserve the native abort and run an explicit alias-only compatibility replay, without counting the environment abort as a rejected scientific candidate;
 - implementation defect → repair and rerun;
 - unstable numerics → change discretization, solver, precision, or oracle;
 - bad representation → change variables, gauge, basis, coordinates, or formalism;
@@ -152,7 +152,7 @@ Only after the structural choice is frozen should you open the comparator gate a
 Before review:
 
 1. Enumerate direct and indirect consumers of every changed claim and canonical symbol.
-2. Re-run targeted unit, symbolic, numeric, simulation, and formal checks. If a mutable consumer aborts only on removed `np.trapz`, repair it to `np.trapezoid` and rerun before classifying the consumer or campaign; use an alias-only recorded replay for immutable source.
+2. Re-run targeted unit, symbolic, numeric, simulation, and formal checks. If a mutable consumer aborts on direct or dynamic access to removed `np.trapz`—including an eagerly evaluated nested `getattr` default—repair it to `np.trapezoid` or a safe two-step fallback and rerun before classifying the consumer or campaign; use an alias-only recorded replay for immutable source.
 3. Re-check units, conventions, signs, limits, free-symbol sets, imported constants, and parameter counts.
 4. Compare generated outputs and narrative consumers.
 5. Record every new debt and discharge it in the same effort.

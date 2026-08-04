@@ -4,7 +4,10 @@ import hashlib
 
 import pytest
 
-from substrate_framework.source_audit import audit_source_tokens
+from substrate_framework.source_audit import (
+    audit_numpy_trapezoid_compatibility,
+    audit_source_tokens,
+)
 
 
 PATTERNS = {
@@ -81,3 +84,68 @@ def test_invalid_scope_and_groups_are_rejected(tmp_path) -> None:
     audit = audit_source_tokens(tmp_path, PATTERNS)
     with pytest.raises(KeyError, match="unknown token group"):
         audit.paths_for("charge")
+
+
+def test_numpy_compatibility_audit_detects_direct_and_dynamic_legacy_access() -> None:
+    audit = audit_numpy_trapezoid_compatibility(
+        """
+import numpy as np
+direct = np.trapz(values, points)
+dynamic = getattr(np, "trapz")
+current = np.trapezoid(values, points)
+"""
+    )
+
+    assert audit.numpy_aliases == ("np",)
+    assert audit.direct_legacy_attributes == 1
+    assert audit.dynamic_legacy_getattrs == 1
+    assert audit.legacy_references == 2
+    assert audit.current_references == 1
+    assert audit.requires_legacy_alias
+    assert audit.eager_legacy_default_fallbacks == 0
+
+
+def test_numpy_compatibility_audit_catches_eager_getattr_default() -> None:
+    audit = audit_numpy_trapezoid_compatibility(
+        """
+import numpy as numpy_alias
+integration = getattr(
+    numpy_alias,
+    "trapezoid",
+    getattr(numpy_alias, "trapz"),
+)
+"""
+    )
+
+    assert audit.dynamic_current_getattrs == 1
+    assert audit.dynamic_legacy_getattrs == 1
+    assert audit.eager_legacy_default_fallbacks == 1
+    assert audit.requires_legacy_alias
+
+
+def test_numpy_compatibility_audit_accepts_safe_two_step_fallback() -> None:
+    audit = audit_numpy_trapezoid_compatibility(
+        """
+import numpy as np
+integration = getattr(np, "trapezoid", None)
+if integration is None:
+    integration = getattr(np, "trapz", None)
+"""
+    )
+
+    assert audit.current_references == 1
+    assert audit.legacy_references == 1
+    assert audit.eager_legacy_default_fallbacks == 0
+    assert audit.requires_legacy_alias
+
+
+def test_numpy_compatibility_audit_ignores_comments_and_docstrings() -> None:
+    audit = audit_numpy_trapezoid_compatibility(
+        '"""np.trapz and getattr(np, "trapz") are prose."""\n'
+        "# np.trapz(values, points)\n"
+        "from numpy import trapezoid\n"
+    )
+
+    assert audit.legacy_references == 0
+    assert audit.imported_current_names == 1
+    assert not audit.requires_legacy_alias

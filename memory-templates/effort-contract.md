@@ -36,7 +36,7 @@ Work proceeds through these dependency-ordered steps and continues after failed 
 6. [ ] Claim review, promotion, generation, and memory synchronization.
 
 ## Attempts
-Attempts are append-only and individually reproducible. A failed row must name the diagnosed mechanism and next materially different attempt. A missing legacy library alias is environment compatibility, not a failed scientific candidate: repair mutable `np.trapz` calls to `np.trapezoid`, or record an alias-only replay for immutable source, before adjudicating the unchanged route.
+Attempts are append-only and individually reproducible. A failed row must name the diagnosed mechanism and next materially different attempt. A missing legacy library alias is environment compatibility, not a failed scientific candidate: detect direct, imported, and dynamic `np.trapz` access, including eagerly evaluated nested `getattr` defaults; repair mutable code to `np.trapezoid` or a safe two-step fallback, or record an alias-only replay for immutable source, before adjudicating the unchanged route.
 
 When drift or fragmented campaign context may explain the failure, the next
 attempt also names the nearest accepted analogue, the source-verified
@@ -53,7 +53,7 @@ Validation covers the actual objective, verifier sensitivity, limits, convention
 - Targeted scientific command and claim-appropriate oracle (SymPy, Lean, SciPy, or simulation), with both terminal tally and process status zero recorded:
 - Mutation/counterexample command:
 - Numerical solver-status, refinement, conservation/stability, and independent-route command (when applicable):
-- Dependency replay, after repairing mutable `np.trapz` consumers to `np.trapezoid` or recording an alias-only replay for immutable source:
+- Dependency replay, after AST preflight for direct/imported/dynamic legacy trapezoid access and repair of mutable consumers to `np.trapezoid` or a safe two-step fallback, or an alias-only replay for immutable source:
 - Targeted tests during implementation:
 - `scripts/validate.sh` (includes the full pytest suite; run once at the unchanged promotion boundary):
 - `git diff --check`:

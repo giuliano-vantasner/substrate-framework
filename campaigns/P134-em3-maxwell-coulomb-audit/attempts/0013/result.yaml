@@ -1,0 +1,16 @@
+campaign: P134
+attempt: 0013
+status: failed
+candidate: G
+command: >-
+  rg -n --glob '*.py' combined NumPy trapz compatibility regex over framework
+  and pinned source
+expected: enumerate every executable legacy trapezoid spelling
+result:
+  exit_status: 2
+  error: shell quoting ended before the combined regular expression
+classification: audit_command_quoting
+compatibility_event: none
+next_attempt: >-
+  Repeat the read-only audit with separate rg -e expressions so shell quoting
+  cannot alter the searched compatibility surface.

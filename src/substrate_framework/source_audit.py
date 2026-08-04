@@ -7,6 +7,7 @@ scientific dependency.
 
 from __future__ import annotations
 
+import ast
 from dataclasses import dataclass
 import hashlib
 from pathlib import Path, PurePosixPath
@@ -56,6 +57,121 @@ class SourceAudit:
             for match in self.matches
             if required <= set(match.groups)
         )
+
+
+@dataclass(frozen=True)
+class NumpyTrapezoidCompatibility:
+    """AST inventory of current and legacy NumPy trapezoidal-integration names."""
+
+    numpy_aliases: tuple[str, ...]
+    direct_legacy_attributes: int
+    dynamic_legacy_getattrs: int
+    imported_legacy_names: int
+    direct_current_attributes: int
+    dynamic_current_getattrs: int
+    imported_current_names: int
+    eager_legacy_default_fallbacks: int
+
+    @property
+    def legacy_references(self) -> int:
+        """Return all executable references to the removed legacy name."""
+
+        return (
+            self.direct_legacy_attributes
+            + self.dynamic_legacy_getattrs
+            + self.imported_legacy_names
+        )
+
+    @property
+    def current_references(self) -> int:
+        """Return all executable references to the current NumPy name."""
+
+        return (
+            self.direct_current_attributes
+            + self.dynamic_current_getattrs
+            + self.imported_current_names
+        )
+
+    @property
+    def requires_legacy_alias(self) -> bool:
+        """Whether immutable execution needs an explicit legacy-name alias."""
+
+        return self.legacy_references > 0
+
+
+def audit_numpy_trapezoid_compatibility(
+    source: str,
+    *,
+    filename: str = "<unknown>",
+) -> NumpyTrapezoidCompatibility:
+    """Detect direct, imported, and dynamic NumPy integration-name access.
+
+    The AST audit catches both ``np.trapz`` and ``getattr(np, "trapz")``.
+    It also identifies the eager-default bug in
+    ``getattr(np, "trapezoid", getattr(np, "trapz"))``: Python evaluates the
+    default argument before calling the outer ``getattr``, so that expression
+    still aborts under NumPy versions where the legacy name was removed.
+    Comments and docstrings do not count as executable references.
+    """
+
+    tree = ast.parse(source, filename=filename)
+    aliases = {
+        alias.asname or alias.name
+        for node in ast.walk(tree)
+        if isinstance(node, ast.Import)
+        for alias in node.names
+        if alias.name == "numpy"
+    }
+
+    def dynamic_name(node: ast.AST, name: str) -> bool:
+        return (
+            isinstance(node, ast.Call)
+            and isinstance(node.func, ast.Name)
+            and node.func.id == "getattr"
+            and len(node.args) >= 2
+            and isinstance(node.args[0], ast.Name)
+            and node.args[0].id in aliases
+            and isinstance(node.args[1], ast.Constant)
+            and node.args[1].value == name
+        )
+
+    def direct_name(node: ast.AST, name: str) -> bool:
+        return (
+            isinstance(node, ast.Attribute)
+            and isinstance(node.value, ast.Name)
+            and node.value.id in aliases
+            and node.attr == name
+        )
+
+    def imported_name(node: ast.AST, name: str) -> int:
+        if not isinstance(node, ast.ImportFrom) or node.module != "numpy":
+            return 0
+        return sum(alias.name == name for alias in node.names)
+
+    def contains_legacy(node: ast.AST) -> bool:
+        return any(
+            direct_name(descendant, "trapz")
+            or dynamic_name(descendant, "trapz")
+            for descendant in ast.walk(node)
+        )
+
+    nodes = tuple(ast.walk(tree))
+    eager_fallbacks = sum(
+        dynamic_name(node, "trapezoid")
+        and len(node.args) >= 3
+        and contains_legacy(node.args[2])
+        for node in nodes
+    )
+    return NumpyTrapezoidCompatibility(
+        numpy_aliases=tuple(sorted(aliases)),
+        direct_legacy_attributes=sum(direct_name(node, "trapz") for node in nodes),
+        dynamic_legacy_getattrs=sum(dynamic_name(node, "trapz") for node in nodes),
+        imported_legacy_names=sum(imported_name(node, "trapz") for node in nodes),
+        direct_current_attributes=sum(direct_name(node, "trapezoid") for node in nodes),
+        dynamic_current_getattrs=sum(dynamic_name(node, "trapezoid") for node in nodes),
+        imported_current_names=sum(imported_name(node, "trapezoid") for node in nodes),
+        eager_legacy_default_fallbacks=eager_fallbacks,
+    )
 
 
 def _normalized_exclusions(exclusions: tuple[str, ...]) -> tuple[str, ...]:

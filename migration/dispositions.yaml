@@ -3982,3 +3982,48 @@ units:
       through canonical and independent routes. Exact code uses neither NumPy
       trapezoidal alias; sampled trapezoidal work is directed through the
       shared compatibility helper.
+  EM3:
+    disposition: qualified
+    accepted_claims:
+      - C-GAU-001
+      - C-KRN-001
+      - C-MAX-001
+    qualification: >-
+      EM3's hash-pinned eleven predicates reproduce. Its explicitly imported
+      kinetic action has the exact sourced Euler equation and Bianchi identity,
+      and its source-normalized d=3 Coulomb endpoint and conditional test-charge
+      force survive under corrected conventions. The source's A_0=-phi prose
+      gives the opposite action-derived Poisson sign; the check separately
+      defines E=-grad(phi) instead of reducing F. Exact d=4 through d=6
+      counterexamples decay, so decay selects d>2 while inverse-square force
+      alone selects d=3 within the supplied integer family. Zero net charge does
+      not imply zero density or field, and removing the kinetic term yields
+      j=0 without forcing A pure gauge. The numerical leg regresses its
+      hard-coded 1/r formula, and the alpha magnitude embeds CODATA despite the
+      no-data line. The medium map, physical charges, photon, preferred
+      dimension, gravity, material, observation, and substrate sector remain
+      imported or unconstructed.
+    evidence:
+      - campaigns/P134-em3-maxwell-coulomb-audit/reviews/source_adjudication.md
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/source-reproduction.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/source-audit.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/check-adjudication.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/input-provenance.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/dependency-audit.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/consumer-audit.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/candidate-comparison.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/evidence/primary-provenance.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/attempts/0002/result.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/attempts/0006/result.yaml
+      - campaigns/P134-em3-maxwell-coulomb-audit/attempts/0009/result.yaml
+      - memory/vantasner/decisions/C-MAX-001-review.md
+      - memory/vantasner/decisions/EM3-qualified-review.md
+    note: >-
+      P134 promotes the distinct conditional Maxwell action and static
+      point-source theorem with exact primary and independent routes. The
+      18-node immutable source graph replays 227 predicates; direct and dynamic
+      legacy NumPy references in G1, YM2, and QCD2 receive alias-only
+      compatibility replays. A reusable AST audit now detects eager nested
+      getattr defaults, while mutable code uses np.trapezoid or the canonical
+      helper.

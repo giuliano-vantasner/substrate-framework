@@ -1,0 +1,33 @@
+campaign: P134
+attempt: 0002
+status: verified
+candidate: A
+command: >-
+  /home/dan/substrate-framework/.venv/bin/python
+  merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py
+working_directory: /home/dan/substrate
+expected:
+  source_sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9
+  native_exit_status: 0
+  source_checks: 11
+  compatibility_event: none
+result:
+  native_exit_status: 0
+  source_checks_passed: 11
+  source_terminal_tally: ALL 11 CHECKS PASS
+  numeric_log_slope: -1.000000
+  numeric_max_interior_fd_laplacian: 1.997e-05
+  numeric_alpha_inverse: 137.0360
+  numpy_integration_calls: 0
+  compatibility_event: none
+finding: >-
+  The hash-pinned source reproduces all eleven predicates with the framework's
+  absolute interpreter and no compatibility alias. Reproduction establishes
+  only the executed predicates. It does not repair the untested d>=4
+  counterfamily, the A_0 sign mismatch, the net-neutral-versus-zero-density
+  conflation, the no-kinetic-term equation j=0, or the hard-coded CODATA
+  comparator.
+next_attempt: >-
+  Audit every predicate and import, derive Candidates B through F under the
+  frozen convention, and require general-dimension, sign, boundary, source,
+  coefficient, and ontology mutations to change the relevant verdict.

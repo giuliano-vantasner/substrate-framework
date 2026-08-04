@@ -1,0 +1,34 @@
+campaign: P134
+attempt: 0014
+status: passed
+candidate: G
+command: >-
+  rg compatibility inventory plus audit_numpy_trapezoid_compatibility over
+  scripts/ and src/substrate_framework/
+expected: >-
+  Mutable scripts have no executable legacy integration reference; canonical
+  code has no eager fallback and centralizes any NumPy 1.26 fallback behind the
+  current np.trapezoid name.
+result:
+  exit_status: 0
+  scripts:
+    python_files: 5
+    legacy_references: 0
+    current_references: 0
+    eager_legacy_default_fallbacks: 0
+  canonical_package:
+    python_files: 83
+    current_references: 1
+    legacy_references: 1
+    eager_legacy_default_fallbacks: 0
+    legacy_reference_scope: >-
+      The single legacy lookup is the second, lazily evaluated branch in
+      numerics.trapezoid_integral after np.trapezoid is unavailable; scientific
+      modules call that canonical helper rather than np.trapz.
+  remaining_rg_matches: >-
+    Detector/test literals, adjudicated immutable campaign evidence, and the
+    hash-pinned external source corpus; none is mutable framework integration
+    code using np.trapz for a current calculation.
+classification: compatibility_surface_verified
+compatibility_event: none
+next_attempt: none

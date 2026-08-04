@@ -1,0 +1,27 @@
+campaign: P134
+criteria_frozen_before_source: true
+candidates:
+  A:
+    decision: partly_retained_as_source_evidence
+    reason: Eleven checks reproduce but several do not test their stated derivation or omit d>=4 and source counterexamples.
+  B:
+    decision: selected
+    reason: Exact action variation closes with explicit coefficient current boundary and sign conventions.
+  C:
+    decision: selected
+    reason: General source-normalized dimension branches correct the unique-decay claim and reuse C-KRN-001 naturally.
+  D:
+    decision: selected
+    reason: Test-charge energy and force close exactly once their dictionary is an explicit premise.
+  E:
+    decision: rejected_as_complete_solution
+    reason: C-KRN-001 and C-FLX-001 cover endpoint pieces but not the action variation continuity or boundary-sensitive d=1 and d=2 family.
+  F:
+    decision: selected_as_falsification
+    reason: d=4 decay A_0 sign neutral dipole and non-pure zero-action countermodels break the source overclaims.
+  G:
+    decision: selected
+    reason: Dependency consumer compatibility impact and generated-state closure are required for promotion.
+selected_claim: C-MAX-001
+selection_not_based_on_comparator: true
+debt: []

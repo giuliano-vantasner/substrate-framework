@@ -1,0 +1,20 @@
+campaign: P134
+source_unit: EM3
+checks:
+  - {id: EM3.1, status: retained, mapping: C-MAX-001, reason: F=dA is exactly antisymmetric.}
+  - {id: EM3.2, status: retained_with_conditions, mapping: C-MAX-001, reason: The variation is exact for the declared kinetic and source action; kappa and current normalization remain supplied.}
+  - {id: EM3.3, status: retained, mapping: C-MAX-001, reason: The Bianchi identity follows exactly from commuting mixed partials.}
+  - {id: EM3.4, status: rejected_as_stated, mapping: C-MAX-001, reason: Under signature (+---) the claimed Poisson sign follows from A_0=phi not the source's A_0=-phi; its check never substitutes A into F.}
+  - {id: EM3.5, status: retained_with_conditions, mapping: [C-KRN-001, C-MAX-001], reason: The off-source harmonic identity is exact and the source coefficient requires the separately normalized sphere flux.}
+  - {id: EM3.6, status: regression_only, mapping: C-KRN-001, reason: Polyfit and finite differences sample the same hard-coded exact 1/r formula and add no independent evidence.}
+  - {id: EM3.7, status: partly_retained, mapping: C-MAX-001, reason: The d=1 d=2 d=3 forms are correct but d>=4 also decays; only inverse-square force selects d=3 within the declared integer family.}
+  - {id: EM3.8, status: retained_with_conditions, mapping: C-MAX-001, reason: U=q*phi and F=-grad U=qE are exact after the test-charge force dictionary is separately declared.}
+  - {id: EM3.9, status: qualified_definition_and_import, mapping: null, reason: Dimension cancellation and the constitutive substitution are conditional identities; the magnitude is embedded CODATA and the medium map lacks accepted physical authority.}
+  - {id: EM3.10, status: rejected_as_stated, mapping: C-MAX-001, reason: Identically zero source density with whole-space boundary data gives zero field; zero net charge alone permits nonzero dipole and higher-multipole fields.}
+  - {id: EM3.11, status: rejected_as_stated, mapping: C-GAU-001, reason: A=dchi implies F=0 but deleting the kinetic term yields j=0 and leaves A unconstrained; it does not derive A=dchi.}
+headline_decision: >-
+  Accept the conditional imported-action theorem and corrected source-normalized
+  static family. Reject unique decay, the source A_0 sign, neutral-net-charge
+  collapse, pure-gauge EOM claim, physical-sector closure, and comparator-based
+  magnitude language.
+debt: []

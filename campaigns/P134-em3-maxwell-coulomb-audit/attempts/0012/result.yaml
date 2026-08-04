@@ -1,0 +1,25 @@
+campaign: P134
+attempt: 0012
+status: passed
+candidate: G
+command: scripts/validate.sh
+expected: >-
+  One integrated repository gate validates the promoted Maxwell claim, the EM3
+  terminal disposition, the v0.102.0 accepted-state synchronization, and the
+  NumPy trapezoid compatibility workflow without repeating the full suite.
+result:
+  exit_status: 0
+  repository_gate: ALL REPOSITORY WORKFLOW CHECKS PASS
+  full_pytest: 1133 passed in 107.53s
+  git_diff_check: passed
+  accepted_claims: 137
+  migration_pending: 86
+  migration_qualified: 120
+  memory_files_valid: 541
+  primary_verifier: 31 passed
+  independent_review: 24 passed
+  focused_tests: 44 passed
+  source_graph_replay: 18 nodes and 227 predicates passed
+classification: final_integrated_validation
+compatibility_event: none
+next_attempt: none; the P134 adjudication and v0.102.0 transaction are ready to commit

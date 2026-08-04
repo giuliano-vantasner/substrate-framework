@@ -435,6 +435,15 @@ Let Q2 be a Euclidean momentum-squared variable, m2 positive, and C a separately
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-MAX-001
+
+Conditional on C-GAU-001's real connection and field-strength convention, a positive integer spatial dimension d, flat (d+1)-dimensional signature (+,-,...,-), a positive supplied kinetic coefficient kappa, and a smooth supplied contravariant current j^mu, the declared action density L=-kappa*F_mu_nu*F^mu_nu/4-j^mu*A_mu has, under compactly supported variations, the exact Euler equation kappa*partial_mu F^mu_nu=j^nu. The Bianchi identity follows from F=dA; the double divergence vanishes identically, so a solution requires partial_nu j^nu=0, which is also the bulk condition for gauge invariance of the source action after its boundary term is removed. Deleting the kinetic term gives only j^nu=0 and does not force A to be pure gauge. In the static convention A_0=phi, A_i=0, j^0=rho, the equation is -kappa*Delta(phi)=rho and E=-grad(phi). Let S_(d-1)=2*pi^(d/2)/Gamma(d/2), let r>0, and separately supply a point source Q with normalized flux kappa*S_(d-1)*r^(d-1)*E_r=Q. For integer d>2 and phi tending to zero at infinity, phi=Q/[kappa*(d-2)*S_(d-1)*r^(d-2)] and E_r=Q/[kappa*S_(d-1)*r^(d-1)]. For d=2, fixing phi=phi0 at positive r0 gives phi=phi0-Q*log(r/r0)/(2*pi*kappa); for the even d=1 full-line branch with phi(0)=phi0, phi=phi0-Q*r/(2*kappa). These branches are harmonic away from the source and have the same normalized radial flux. The potential decays at infinity for every d>2; within this integer family the radial force is inverse-square only for d=3. If a separate test-charge dictionary declares U=q*phi and F=q*E, then like source and test charges repel and opposite signs attract. This theorem imports the action, kappa, current, dimension, point source, boundary data, and force dictionary. It derives no kinetic coefficient, charged matter, electric ontology, preferred dimension, photon, physical electromagnetic or material sector, gravity coupling, observed force, or substrate mechanism.
+
+- Accepted in: `v0.102.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GAU-001, C-KRN-001
+
 ## C-MED-001
 
 For positive density rho, thermal scale Theta, and reference speed c, the declared co-scaled response laws epsilon=rho*Theta/c^2 and mu_inverse=rho*Theta satisfy epsilon*mu=1/c^2 and give local wave speed sqrt(mu_inverse/epsilon)=c. Density and thermal variations therefore cannot create an index within this ansatz. More generally, the logarithmic sensitivities vanish exactly when the corresponding response exponents match.

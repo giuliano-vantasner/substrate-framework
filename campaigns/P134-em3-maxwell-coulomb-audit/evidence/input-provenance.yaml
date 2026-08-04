@@ -1,0 +1,31 @@
+campaign: P134
+base_release: v0.101.0
+base_commit: ce9fca6
+scientific_base_commit: 1babed5
+proposal_sha256: 2c64b3aa823e771569947cc999218ee3a055ad07a324de37993112b06ce3c2c4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  source_unit: EM3
+  path: merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py
+  sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9
+  dossier_path: merged-framework/bridges/phase-3/dossiers/EM3-dossier.md
+  dossier_sha256: 366a17fa611c23c59fa4beed2e9eeab4d9438b4a85dac5c41fad62f4a62c7250
+accepted_inputs:
+  - C-GAU-001 field-strength sign local-U1 curvature and no-dynamics ceiling
+  - C-KRN-001 exact supplied Riesz kernel and explicit dimension source boundary and force ceilings
+  - C-U1-001 only as a conditional on-shell conserved-current example
+  - C-FLX-001 only as prior conditional charge-times-field algebra
+  - gauge_u1.py momentum_kernels.py source_audit.py and verification.py pure APIs
+  - independently declared positive kinetic coefficient conserved current dimension point source boundary data and test-charge force dictionary
+excluded_inputs:
+  - pending G1 G2 and G3 gravity-sector claims
+  - source or dossier chronology as authority
+  - embedded CODATA values as derivation inputs
+  - medium identifications epsilon0-to-density and inverse-mu0-to-stiffness as accepted physical maps
+  - charged soliton photon observed electromagnetism gravity coupling or substrate ontology
+comparator_gate: >-
+  The queue exposed the named Maxwell Coulomb and inverse-square endpoints before
+  freeze. The source body and its embedded CODATA values were opened only after
+  the proposal hash was committed. No comparator selects C-MAX-001.
+compatibility_event: none_in_EM3
+debt: []

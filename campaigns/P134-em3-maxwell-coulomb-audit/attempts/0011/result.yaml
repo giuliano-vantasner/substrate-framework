@@ -1,0 +1,16 @@
+campaign: P134
+attempt: 0011
+status: failed
+candidate: G
+command: .venv/bin/python scripts/validate_repository.py
+expected: repository_governance_valid
+result:
+  exit_status: 1
+  error: generated claim index is stale; run scripts/render_docs.py
+  targeted_tests_passed: 44
+  release_manifest_cmp: identical
+classification: generated_state_ordering
+compatibility_event: none
+next_attempt: >-
+  Render canonical documentation and accepted-state memory from the registry,
+  then rerun repository validation without changing claim content or criteria.

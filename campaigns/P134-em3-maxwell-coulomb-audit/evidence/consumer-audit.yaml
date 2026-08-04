@@ -1,0 +1,47 @@
+campaign: P134
+root_source_unit: EM3
+authority_warning: >-
+  Replaying a source consumer proves only its pinned predicates execute. Pending
+  consumers gain no accepted gauge matter Yang-Mills gravity dimensional or
+  substrate premise from EM3 or C-MAX-001.
+reverse_consumers:
+  - {source_unit: EM2, disposition: qualified, path: merged-framework/bridges/phase-3/bridge_EM2_gauge_u1_minimal_coupling.py, sha256: 9787ae25521e19d926de0f9addafd16353bebc149cea83f3d9dd4c491fef91d6, checks: 11}
+  - {source_unit: EM5, disposition: pending_adjudication, path: merged-framework/bridges/phase-3/bridge_EM5_induced_gauge_sector.py, sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0, checks: 11}
+  - {source_unit: EM7, disposition: pending_adjudication, path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py, sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22, checks: 17}
+  - {source_unit: S5, disposition: qualified, path: merged-framework/bridges/phase-4/bridge_S5_realizability_magnitude.py, sha256: b92a9db67940169fcd9919f83fda6ae8c56b9b9e40b0d2cbebef5539a5dccde6, checks: 28}
+  - {source_unit: W2, disposition: pending_adjudication, path: merged-framework/bridges/phase-6/bridge_W2_su2L_chiral_doublet.py, sha256: 0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16, checks: 9}
+  - {source_unit: W7, disposition: pending_adjudication, path: merged-framework/bridges/phase-6/bridge_W7_su2L_gauging_charged_current.py, sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3, checks: 11}
+  - {source_unit: M1, disposition: pending_adjudication, path: merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py, sha256: 6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f, checks: 9}
+  - {source_unit: YM1, disposition: pending_adjudication, path: merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py, sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6, checks: 9}
+  - {source_unit: YM2, disposition: pending_adjudication, path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py, sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c, checks: 10}
+  - {source_unit: QCD2, disposition: pending_adjudication, path: merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py, sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f, checks: 10}
+  - {source_unit: CF2, disposition: qualified, path: merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py, sha256: e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a, checks: 15}
+  - {source_unit: D3S, disposition: qualified, path: merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py, sha256: a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71, checks: 13}
+  - {source_unit: GK1, disposition: pending_adjudication, path: merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py, sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74, checks: 11}
+  - {source_unit: GK3D1, disposition: pending_adjudication, path: merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py, sha256: 9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb, checks: 19}
+  - {source_unit: GK3D2, disposition: pending_adjudication, path: merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py, sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886, checks: 17}
+replay:
+  consumer_scripts: 15
+  consumer_checks: 200
+  declared_dependency_scripts: 3
+  declared_dependency_checks: 27
+  total_scripts: 18
+  total_checks: 227
+  exit_statuses_all_zero: true
+  terminal_tallies_all_present: true
+python_dependency_audit:
+  executable_imports_of_EM3: 0
+  relationship: lexical provenance and locally duplicated formulas
+compatibility_preflight:
+  G1: {role: dependency, mode: alias_only, direct_np_trapz_references: 2}
+  YM2: {role: consumer, mode: alias_only, dynamic_np_trapz_references: 1, eager_default_fallbacks: 1}
+  QCD2: {role: consumer, mode: alias_only, dynamic_np_trapz_references: 1, eager_default_fallbacks: 1}
+  all_other_nodes: native
+  mutable_framework_np_trapz_references: 0
+interpretation: >-
+  C-MAX-001 preserves the explicit imported-action ceiling and corrects only
+  general conditional mathematics. It does not validate EM7 fractional force,
+  weak or non-Abelian lifts, induced kinetic terms, gravity, physical charges,
+  material maps, or dimensional selection. Qualified EM2 S5 CF2 and D3S keep
+  their existing adjudication ceilings. Pending consumers remain pending.
+debt: []

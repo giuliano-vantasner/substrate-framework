@@ -1,0 +1,39 @@
+campaign: P134
+attempt: 0006
+status: verified
+candidates: [B, C, D, E, F]
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P134-em3-maxwell-coulomb-audit/verify.py --source-file
+    /home/dan/substrate/merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P134-em3-maxwell-coulomb-audit/reviews/independent_maxwell_review.py
+  - >-
+    .venv/bin/python -m pytest -q tests/test_maxwell.py tests/test_gauge_u1.py
+    tests/test_momentum_kernels.py
+expected:
+  primary_checks: 31
+  independent_checks: 24
+  focused_tests: 24
+  compatibility_event: none
+result:
+  primary_checks_passed: 31
+  independent_checks_passed: 24
+  focused_tests_passed: 24
+  exact_oracle: symbolic_verified
+  compatibility_event: none
+finding: >-
+  A distinct conditional action theorem survives and naturally reuses the
+  accepted Riesz kernel. Exact primary and fresh independent routes derive the
+  sourced equation, Bianchi and continuity identities, source-normalized
+  static branches, and test-charge force. The d=4 through d=6 branches refute
+  unique decay; direct action reduction refutes EM3's A_0=-phi sign; a neutral
+  dipole refutes net-neutral implies zero density; and the source-only action
+  leaves arbitrary connections rather than imposing pure gauge. EM3's numeric
+  leg regresses its hard-coded formula and its alpha check embeds CODATA.
+next_attempt: >-
+  Complete claim-level source, dependency, nonduplication, impact, and consumer
+  reviews. Promote only C-MAX-001's conditional action/static family if every
+  downstream path and generated authority record closes.

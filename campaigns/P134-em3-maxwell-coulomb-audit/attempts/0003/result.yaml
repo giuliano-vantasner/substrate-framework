@@ -1,0 +1,28 @@
+campaign: P134
+attempt: 0003
+status: failed
+candidates: [B, C]
+command: >-
+  .venv/bin/python -m pytest -q tests/test_maxwell.py
+  tests/test_gauge_u1.py tests/test_momentum_kernels.py
+expected:
+  focused_tests_pass: 24
+  exact_static_sign_reduction: true
+  explicit_logarithmic_source_linearity: true
+result:
+  focused_tests_passed: 22
+  focused_tests_failed: 2
+  failures:
+    - >-
+      maxwell_euler_lagrange attempted sp.diff(lagrangian, 0) when the
+      restricted static A_0=phi(x) ansatz made partial_t A_0 identically zero.
+    - >-
+      unconditional sp.simplify rewrote Q*log(r/r0) as log((r/r0)^Q), an
+      equivalent expression under positivity assumptions that hid the
+      load-bearing linear source normalization in the public ledger.
+classification: implementation_and_representation
+compatibility_event: none
+next_attempt: >-
+  Treat an absent derivative variable as a zero Euler contribution and retain
+  the declared Q*log(r/r0) normal form. Rerun the same focused boundary without
+  changing any sign, dimension, normalization, or pass criterion.

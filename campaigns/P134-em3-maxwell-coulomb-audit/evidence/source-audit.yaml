@@ -1,0 +1,41 @@
+campaign: P134
+source_unit: EM3
+source_sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9
+dossier_sha256: 366a17fa611c23c59fa4beed2e9eeab4d9438b4a85dac5c41fad62f4a62c7250
+exact_surfaces:
+  - antisymmetry of F=dA
+  - Euler variation of the explicitly imported kinetic and source action
+  - Bianchi identity
+  - source-normalized d=3 Coulomb endpoint after corrected A_0 convention
+  - d=1 linear and d=2 logarithmic branches with explicit boundary data
+  - conditional two-charge energy and force signs
+rejected_or_qualified_surfaces:
+  - >-
+    The source says A_0=-phi but then checks E=-grad(phi) and Poisson without
+    substituting A into the action-derived F. Direct reduction gives the
+    opposite Laplacian sign for A_0=-phi.
+  - >-
+    The executable tests only d=1,2,3 and says only d=3 decays. The dossier
+    itself lists d>3 power-law decay. Exact d=4 through d=6 counterexamples
+    decay; inverse-square force rather than decay selects d=3.
+  - >-
+    Q_total=0 does not imply rho(x)=0. An opposite-charge pair has zero total
+    charge but nonzero potential and field. Zero field follows only from an
+    identically zero source with sufficient global boundary and regularity data.
+  - >-
+    Removing the kinetic term leaves the source-only Euler residual -j and no
+    equation for A when j=0. Pure gauge is one allowed connection, not a
+    derived consequence; nonzero-curvature connections are equally
+    unconstrained by the zero action.
+  - >-
+    The numeric 1/r leg is regression coverage. The alpha magnitude uses
+    literal CODATA values despite the run header saying no real data were
+    consulted. The medium identifications and physical sector remain imported.
+terminology:
+  metric_diagonal: [1, -1, -1, -1]
+  correct_common_name: mostly_minus_or_positive_time_signature
+  source_name: mostly_plus
+  decision: retain the explicit diagonal and do not rely on the prose name
+source_disposition: qualified
+claim_mapping: [C-GAU-001, C-KRN-001, C-MAX-001]
+debt: []

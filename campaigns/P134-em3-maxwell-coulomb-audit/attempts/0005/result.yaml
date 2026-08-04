@@ -1,0 +1,19 @@
+campaign: P134
+attempt: 0005
+status: failed
+candidate: B
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P134-em3-maxwell-coulomb-audit/reviews/independent_maxwell_review.py
+expected:
+  fresh_action_variation: pass
+  fresh_static_A0_sign: pass
+result:
+  checks_passed_before_failure: 4
+  failure: fresh A0 equals phi reduction gives minus kappa Laplacian minus rho
+classification: independent_verifier_representation
+compatibility_event: none
+next_attempt: >-
+  Inspect the independently constructed F^i0 component and exact reduced
+  residual, correct only its local sign or symbol representation, and retain
+  the frozen action and Poisson criteria unchanged.

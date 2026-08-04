@@ -2,7 +2,7 @@
 description: Repair legacy NumPy trapezoidal calls without misclassifying compatibility aborts as scientific campaign failures
 author: vantasner
 created: '2026-08-03T12:24:00Z'
-updated: '2026-08-08T08:30:00Z'
+updated: '2026-08-09T02:10:00Z'
 tags:
 - substrate-framework
 - effort
@@ -13,7 +13,7 @@ status: archived
 ---
 
 ## Goal and Success Contract
-This effort makes the active DBD consumers execute on the pinned current NumPy API and makes compatibility repair precede scientific adjudication. It is complete only when the clean mutable scripts use `np.trapezoid`, their affected consumers replay, the root contract, physics skill, and applicable task templates encode the same distinction, validation is sensitive to the edited paths, and no debt remains.
+This effort makes active consumers execute on the pinned current NumPy API and makes compatibility repair precede scientific adjudication. It is complete only when clean mutable scripts use `np.trapezoid`, executable preflight detects direct, imported, and dynamic legacy access, their affected consumers replay, the root contract, physics skill, and applicable task templates encode the same distinction, validation is sensitive to the edited paths, and no debt remains.
 
 ## Accepted Baseline
 The framework starts from release v0.85.0 at commit `b34721e`; the external source checkout remains based on `substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64`. P100 attempt 0008 preserves the earlier native DBD abort, while the two targeted external files are clean relative to that source commit and unrelated source-repository changes are excluded.
@@ -45,6 +45,7 @@ Attempts are append-only and distinguish environment compatibility from scientif
 | 0004 | First targeted skill validation | `.venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py` | usage exit 1 | The validator requires the skill-directory positional argument | Rerun with `.agents/skills/physics-erdos-loop` and retain the first invocation as command-usage evidence |
 | 0005 | First terminal-record patch | `apply_patch` on this effort | context verification failure | The patch omitted the still-open workflow-ambiguity row from its expected debt-table context | Re-read the file and apply a context-complete terminal update |
 | 0006 | P119 all-engineering compatibility sweep | `rg -n 'np\.trapz' engineering --glob '*.py'` plus targeted module replays | compatibility completion; one aggregate replay blocked | Nine legacy references remained in eight mutable engineering scripts; the ideal-coherence aggregate imports absent Matplotlib before either changed module | Replace every mutable engineering reference with `np.trapezoid`, then directly run the edited ideal-coherence modules instead of installing an unrelated plotting dependency |
+| 0007 | P134 immutable source-graph replay | `campaigns/P134-em3-maxwell-coulomb-audit/reviews/replay_source_graph.py` | compatibility abort, not scientific failure | YM2 uses `getattr(np, "trapezoid", getattr(np, "trapz"))`; Python eagerly evaluates the missing legacy default even though the current attribute exists, and the first AST preflight detected only direct attributes | Add a reusable AST audit for direct, imported, and dynamic names plus eager defaults; update the shared workflow surfaces and rerun the unchanged source graph with alias-only compatibility |
 
 ## Validation
 Validation targets the repaired runtime paths and consolidated instructions, not the already-passed P100 scientific claim.
@@ -68,11 +69,21 @@ The current-NumPy framework interpreter passes the seeding kernel's 14 checks, L
 
 The workflow repair is consolidated in `AGENTS.md`, the physics skill, and four applicable task templates. The corrected skill validator passes, targeted repository validation reports 115 accepted claims and 120 pending units, both repositories pass `git diff --check`, and the one integrated workflow gate passes all 914 tests with all 427 memory files and the skill valid.
 
+P134 exposes and closes a subtler compatibility form in immutable YM2 and
+QCD2: nested `getattr` defaults are evaluated eagerly.
+`source_audit.audit_numpy_trapezoid_compatibility` now
+detects direct attributes, `from numpy import trapz`, dynamic literal
+`getattr`, and the eager current-name/legacy-default pattern while ignoring
+comments and docstrings. The root contract, physics skill, and the same four
+task templates now require that AST preflight and a safe two-step mutable
+fallback. Immutable sources still receive only an explicit runtime alias, so
+their hashes and scientific predicates remain untouched.
+
 ## Canonicalization
 This process-only effort changes no accepted claim, release, or generated accepted-claim documentation. Framework workflow assets are committed in the framework repository. The twelve external mutable-script edits remain an explicit compatibility overlay so the source checkout stays at pinned baseline `6d1f4e02f87a0bd1dc326cb68af01872d1e88c64`; historical bridge hashes, run artifacts, and native-error records are unchanged. P119 records the later overlay hashes separately from the baseline blobs.
 
 ## Done Gate
-The effort is complete because the mutable consumers use the current API, the repaired scientific routes pass, compatibility provenance is separated from scientific verdicts, workflow assets agree, validation is sensitive, and the debt ledger is empty.
+The effort is complete because mutable consumers use the current API, direct and dynamic legacy access is detected before adjudication, repaired scientific routes pass, compatibility provenance is separated from scientific verdicts, workflow assets agree, validation is sensitive, and the debt ledger is empty.
 
 ## Cross-References
 The prior failure evidence is `campaigns/P100-bd2-thermal-rate-audit/attempts/0008/result.yaml`; the parent migration state is `memory/vantasner/efforts/framework-migration.md`.

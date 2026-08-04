@@ -1,0 +1,32 @@
+campaign: P134
+attempt: 0009
+status: verified
+candidate: G
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P134-em3-maxwell-coulomb-audit/reviews/replay_source_graph.py
+  --source-root /home/dan/substrate
+expected:
+  source_nodes: 18
+  source_predicates: 227
+  native_units: 15
+  alias_only_units: [G1, YM2, QCD2]
+result:
+  source_nodes_with_clean_exit_and_tally: 18
+  source_predicates_passed: 227
+  native_units: 15
+  alias_only_units: [G1, YM2, QCD2]
+  direct_legacy_units: [G1]
+  eager_default_units: [YM2, QCD2]
+  scientific_predicate_failures: 0
+  original_sources_modified: false
+finding: >-
+  Every declared dependency and reverse source consumer reproduces its pinned
+  predicate tally. These executions grant no authority to the pending units.
+  G1's direct legacy calls and YM2/QCD2's eager dynamic fallbacks are isolated
+  version compatibility events; their alias-only replays pass unchanged
+  science. The shared AST audit now detects all three mechanisms.
+next_attempt: >-
+  Complete static dependency and consumer semantics, claim/source reviews,
+  registry and release synchronization, then run targeted replay and one full
+  promotion gate.

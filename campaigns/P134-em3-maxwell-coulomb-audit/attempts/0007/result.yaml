@@ -1,0 +1,28 @@
+campaign: P134
+attempt: 0007
+status: compatibility_blocked
+candidate: G
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P134-em3-maxwell-coulomb-audit/reviews/replay_source_graph.py
+  --source-root /home/dan/substrate
+expected:
+  source_nodes: 18
+  source_predicates: 227
+  compatibility_events_are_not_scientific_failures: true
+result:
+  nodes_reported_pass_before_terminal_abort: 11
+  compatibility_unit: YM2
+  compatibility_mechanism: >-
+    getattr(np, "trapezoid", getattr(np, "trapz")) evaluates the legacy
+    default eagerly under NumPy 2 and raises AttributeError even though
+    np.trapezoid exists.
+  scientific_predicate_failure: false
+  original_source_modified: false
+classification: immutable_source_numpy_version_compatibility
+compatibility_event: dynamic_getattr_np_trapz_not_detected_by_initial_preflight
+next_attempt: >-
+  Expand compatibility preflight to detect direct np.trapz attributes and
+  literal getattr(np,"trapz") access, apply the same alias-only replay to
+  either immutable pattern, codify the eager-default gotcha at the shared
+  AGENTS skill and template surfaces, and rerun all 18 unchanged source nodes.

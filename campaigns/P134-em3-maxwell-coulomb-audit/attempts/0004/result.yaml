@@ -1,0 +1,23 @@
+campaign: P134
+attempt: 0004
+status: failed
+candidate: B
+command: >-
+  .venv/bin/python -m pytest -q tests/test_maxwell.py
+  tests/test_gauge_u1.py tests/test_momentum_kernels.py
+expected:
+  focused_tests_pass: 24
+  source_A0_sign_mutation_rejected: true
+result:
+  focused_tests_passed: 23
+  focused_tests_failed: 1
+  failure: >-
+    The sign-mutation test supplied -phi(x) itself as an independent field
+    coordinate. SymPy correctly refused an Euler derivative with respect to a
+    composite negative expression.
+classification: verifier_representation
+compatibility_event: none
+next_attempt: >-
+  Derive the action once with an independent A_0(t,x), then substitute
+  A_0=phi(x) and A_0=-phi(x) into the derived equation. Keep the frozen source
+  sign criterion unchanged and rerun the same focused boundary.

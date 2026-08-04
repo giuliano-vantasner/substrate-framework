@@ -131,6 +131,12 @@ from .gauge_u1 import (
     u1_field_strength,
     u1_holonomy,
 )
+from .maxwell import (
+    MaxwellEulerLagrange,
+    StaticMaxwellPointSource,
+    maxwell_euler_lagrange,
+    static_maxwell_point_source,
+)
 from .gauge_beta import (
     AbelianGaugeRescalingLedger,
     GaugeCoefficientLedger,
@@ -704,7 +710,13 @@ from .symmetry_breaking import (
     positive_kinetic_mass_evidence,
     radial_quartic_potential,
 )
-from .source_audit import SourceAudit, SourceMatch, audit_source_tokens
+from .source_audit import (
+    NumpyTrapezoidCompatibility,
+    SourceAudit,
+    SourceMatch,
+    audit_numpy_trapezoid_compatibility,
+    audit_source_tokens,
+)
 from .su3 import (
     SU3Invariants,
     center_conjugation,
@@ -859,11 +871,14 @@ __all__ = [
     "IsolatedMomentRates",
     "LinearSystemDiagnostics",
     "LinearSymmetryHessianEvidence",
+    "MaxwellEulerLagrange",
+    "StaticMaxwellPointSource",
     "BiunitaryDecomposition",
     "RealL2TTReadout",
     "RealSymmetricRotation",
     "RephasingCounts",
     "NumericalFailure",
+    "NumpyTrapezoidCompatibility",
     "NewtonDimensionLedger",
     "PeriodicFourierCoefficients",
     "PeriodicSineGordonEvolution",
@@ -901,6 +916,7 @@ __all__ = [
     "bps_topological_lower_bound",
     "breather_action",
     "audit_source_tokens",
+    "audit_numpy_trapezoid_compatibility",
     "breather_action_lattice_adjacent_gap",
     "breather_action_lattice_energy",
     "breather_action_lattice_frequency",
@@ -1073,6 +1089,7 @@ __all__ = [
     "leading_exponential_kinetic_metric",
     "light_cone_derivatives",
     "local_u1_transform",
+    "maxwell_euler_lagrange",
     "localized_sech_bulk_source",
     "lattice_debye_energy",
     "lattice_laplacian_symbol",
@@ -1205,6 +1222,7 @@ __all__ = [
     "solve_vortex_bvp",
     "stationary_phase_field",
     "stationary_u1_charge_density",
+    "static_maxwell_point_source",
     "target_three_sphere_volume",
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",

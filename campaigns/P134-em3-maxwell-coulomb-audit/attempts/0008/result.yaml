@@ -1,0 +1,24 @@
+campaign: P134
+attempt: 0008
+status: failed
+candidate: G
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P134-em3-maxwell-coulomb-audit/reviews/replay_source_graph.py
+  --source-root /home/dan/substrate
+expected:
+  source_nodes: 18
+  source_predicates: 227
+  legacy_units: [G1, YM2]
+result:
+  source_nodes_with_clean_exit_and_tally: 18
+  source_predicates_passed: 227
+  actual_legacy_units: [G1, YM2, QCD2]
+  eager_default_units: [YM2, QCD2]
+  terminal_failure: compatibility inventory expectation was incomplete
+  scientific_predicate_failure: false
+classification: verifier_inventory_representation
+compatibility_event: qcd2_eager_getattr_fallback_discovered
+next_attempt: >-
+  Add QCD2 to the fixed hash-pinned compatibility inventory, update durable
+  memory to record both eager-default consumers, and rerun the unchanged graph.
