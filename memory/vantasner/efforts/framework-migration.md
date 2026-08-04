@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-09T03:20:00Z'
+updated: '2026-08-09T05:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,12 +23,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.102.0`, containing one hundred thirty-seven
-claims. P134 accepts C-MAX-001's conditional Maxwell-action variation and
-source-normalized static point-source family, then terminally qualifies EM3.
-The accepted theorem requires a supplied kinetic coefficient, current, charge,
-dimension, boundary data, and test-charge dictionary; it neither derives an
-electromagnetic sector nor selects three dimensions from decay. EM5 and the
+The current accepted frontier is `v0.103.0`, containing one hundred thirty-eight
+claims. P135 accepts C-VAC-001's conditional massive scalar-QED2 one-loop
+polarization theorem, then terminally qualifies EM5. The accepted theorem
+requires a separately declared quantum complex scalar, mass, charge,
+multiplicity, determinant, regulator, and loop prescription; it neither
+quantizes the accepted classical field nor derives a bare gauge action,
+propagator pole, photon, electric sector, or substrate mechanism. EM7 and the
 remaining queue units remain pending. The null release remains the recorded
 start state, not the current authority.
 
@@ -55,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 86 pending, 0 partially migrated, 3 migrated, 120 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 85 pending, 0 partially migrated, 3 migrated, 121 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -222,6 +223,7 @@ Attempts are append-only and individually reproducible.
 | 0153 | P132 exact Lorentz boost, stress-index, cycle-average, dilaton-source, and T2A audit | `campaigns/P132-t2a-boosted-stress-source-audit/attempts/0001` through `0009`, then terminal no-release boundary | T2A qualified through C-SG-001, C-SG-002, C-SG-008, and C-SG-012 with v0.100.0 unchanged; commit `477c809` | T2A's twelve checks, thirty-nine primary checks, nineteen fresh independent checks, and twenty pending reverse-consumer checks reproduce. The exact boost, charge vector, dispersion, and divergence are accepted surfaces. The source calls contravariant minus-u_t*u_x covariant T_tx, while a standing breather has nonzero pointwise mixed stress despite zero integrated momentum. Its imported static M_tx=0 ansatz therefore does not match the local source. Exact transformed-cycle algebra and 35-digit mpmath refinement show the mean integrated spatial stress is v*P=gamma*E0*v^2, not gamma*v*P; at v=0.8 the source is high by 5/3 and never integrates dens_Txx. Six verifier or resolution failures are preserved. G1 and G4 replay through alias-only np.trapz-to-np.trapezoid compatibility and stay pending. The integrated workflow passes all 1,118 runnable tests with eight declared skips, 531 memory files, and the physics skill valid. | Freeze T2C's tidal-force audit before source execution; require the exact optical-metric and Riemann sign/index conventions, derive rather than name any Mathisson-Papapetrou-Dixon quadrupole force, distinguish the second form-factor moment -w-tilde-double-prime(0) from higher derivatives, close dimensions and point limits, mutate curvature and moment signs, audit all thirteen predicates, FS1/FS2/FS4/P3D3/T1B dependencies, consumers, and nonduplication, and do not turn a finite profile moment plus computed curvature into a physical extended-body force, material trajectory, gravity theory, or observation |
 | 0154 | P133 exact optical-tensor, profile-average, multipole-typing, dimensional, dependency, consumer, and T2C audit | `campaigns/P133-t2c-tidal-mpd-audit/attempts/0001` through `0005`, then v0.101.0 promotion | C-OG-004 accepted and T2C qualified; commit `1babed5` | T2C's thirteen checks, fifty primary checks, twenty-one fresh independent checks, five upstream finite-size assert families, nine focused API tests, and sixteen reverse-consumer checks reproduce. Exact tensor reconstruction retains its optical curvature and Fourier second-moment identity, but a rank-two `J11` cannot stand in for Dixon's rank-four quadrupole and curvature times width squared has velocity-squared units. Reflection and linear-profile countermodels reject the proposed curvature-times-moment force; the independently derived profile average gives variance times the second spatial derivative of the accepted point acceleration divided by two and begins at the third optical-profile derivative in the weak limit. One orchestration and one prose-marker failure are preserved. G4's immutable legacy call replays through an alias-only compatibility path; C-OG-004 and all mutable scripts use the canonical integration policy. The integrated workflow passes all 1,122 runnable tests with eight declared skips, 536 memory files, and the physics skill valid. | Freeze EM3's Maxwell/Coulomb audit before source execution; require the exact action, metric, field-strength, current, charge, Gauss-law, Green-function, dimension, sign, boundary, tail, and two-body-force conventions, derive every radial power and coefficient, mutate charge and orientation signs, audit all eleven predicates, EM2/G1/G2/G3 dependency authority, consumers, and nonduplication, and do not turn a conditional U1 field equation or asymptotic tail into a unique electromagnetic sector, material charge, gravity coupling, observed force, or substrate mechanism |
 | 0155 | P134 exact Maxwell action, static point-source family, sign, dimensional, dependency, consumer, compatibility, and EM3 audit | `campaigns/P134-em3-maxwell-coulomb-audit/attempts/0001` through `0014`, then v0.102.0 promotion | C-MAX-001 accepted and EM3 qualified; commit `f20f7ad` | EM3's eleven predicates, thirty-one primary checks, twenty-four fresh independent checks, forty-four focused tests, and an eighteen-node, 227-predicate pinned source-graph replay pass. Exact variation gives `kappa partial_mu F^mu_nu = j^nu`, the Bianchi identity, and current compatibility. The source-normalized radial family has logarithmic and linear boundary-sensitive branches for d=2 and d=1 and decays for every d greater than two, so decay does not select d=3. The source's `A_0=-phi` sign, neutral-total-charge implication, pure-gauge source-only equation, fitted-tail independence, and physical-sector readings fail explicit countermodels. Three technical audit defects and the stale-generated-state ordering event are preserved. The NumPy self-optimization adds an AST preflight for direct, imported, dynamic, and eager-default legacy access: mutable scripts have zero executable `np.trapz` references, while the canonical helper resolves `np.trapezoid` first and retains only a lazy NumPy-1.26 fallback. The integrated workflow passes all 1,133 tests with 541 memory files and the physics skill valid. | Freeze EM5's induced-gauge audit before fresh source inspection while recording that P134 already exposed and executed it as a reverse consumer; require the exact field content, action, dimension, regularization, renormalization, loop integral, Ward identity, projector domain, massive and massless limit order, effective-action normalization, pole or mass definition, every predicate, EM1/EM2/EM3/EM7/M1 authority, consumers, and nonduplication, and do not turn an assumed charged loop or transverse tensor ansatz into a substrate-derived dynamical gauge sector, universal coupling, physical photon, or observation |
+| 0156 | P135 exact scalar-QED2 polarization, statistics, Ward, tensor, limit, normalization, dependency, consumer, and EM5 audit | `campaigns/P135-em5-induced-gauge-audit/attempts/0001` through `0011`, then v0.103.0 promotion | C-VAC-001 accepted and EM5 qualified; commit `4cea232` | EM5's eleven predicates, fifty primary checks, twenty-nine fresh independent proper-time checks, twenty-seven focused tests, and a nineteen-node, 219-predicate pinned source-graph replay pass. Exact scalar bubble-seagull reduction gives `Pi_hat=N*e^2/pi*(atanh(z)/z-1)`, local F-squared coefficient `N*e^2/(48*pi*m^2)`, a divergent fixed-momentum massless scalar limit, and heavy-mass decoupling. The source instead uses the fermionic numerator, constructs its Ward identity, drops `1/Q` when naming a local Maxwell term, and imports a bare propagator kernel while denying one. Field rescaling, zero-action curvature, statistics, seagull, mass, charge, multiplicity, and next-series-term probes reject the pole, photon, dispersion, and substrate closure. Five representation, queue-schema, template, or memory-path failures are preserved. Immutable YM2 and QCD2 use alias-only legacy compatibility; mutable code uses current or exact APIs. The integrated workflow passes all 1,139 tests with 546 memory files and the physics skill valid. The refreshed graph indexes `4cea232` and rates the new API LOW risk with zero affected processes. | Freeze EM7's fractional-force audit before source execution; require an exact definition of the fractional or effective dimension, radial measure, operator, source normalization, boundary data, potential-versus-force exponent, dimensions, limits, and any transition scale; audit D3S/EM3/QCD5 authority, all seventeen predicates and dynamic checks, consumers, and nonduplication, and do not turn an assigned interpolation exponent, fitted Coulomb tail, or pending dimensional narrative into a derived geometry, unique force law, physical charge, gravity or electromagnetic sector, or observation |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -238,7 +240,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 86 bridge units remain pending, 3 are migrated, 120 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 85 bridge units remain pending, 3 are migrated, 121 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1345,11 +1347,41 @@ codifies `np.trapezoid` as the current API, detects eager nested `getattr`
 fallbacks, and confines any immutable-source compatibility repair to an
 alias-only replay with no scientific effect.
 
+P135 adds C-VAC-001 for the exact conditional one-loop polarization of a
+separately declared massive complex scalar in Euclidean two dimensions. The
+accepted tensor convention distinguishes `Pi_hat*P` from
+`Pi_scalar*(Q*delta-q*q)`, derives the Ward identity from the scalar bubble and
+seagull, and fixes the low-momentum local coefficient and infrared-singular
+massless limit independently through momentum and constant-field proper-time
+routes. EM5 is qualified because it uses the fermionic Schwinger numerator,
+imposes transversality, drops the inverse momentum in its local-action reading,
+and assumes the bare propagator needed for its pole. No accepted classical
+field is quantized and no physical charge, photon, dimension lift, or substrate
+gauge sector is promoted. Immutable YM2 and QCD2 receive only the documented
+compatibility alias; all mutable P135 and canonical work uses exact symbolic
+integration or current APIs.
+
 ## Canonicalization
-The registry, `v0.102.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirty-seven accepted claims. P001 through P134 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 86 pending, 0 partial, 3 migrated, 120 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.103.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirty-eight accepted claims. P001 through P135 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 85 pending, 0 partial, 3 migrated, 121 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 86 pending, 3 migrated, 120 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next queue unit is EM5, pinned at SHA-256 `bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0`. Its queue headline is an induced or emergent gauge sector from one-loop charged-mode polarization; it cites EM1, EM2, EM3, EM7, and M1, contains eleven literal checks, one assertion, and a symbolic oracle hint. P134's reverse-consumer replay already exposed EM5's body, claimed result, and successful native tally, so P135 cannot honestly claim source or comparator blindness. It must freeze its candidate set and structural criteria against the queue metadata and that declared prior exposure before any fresh body inspection. It must require the exact field content, action, dimension, regulator and renormalization prescription, tensor and momentum conventions, loop integrand and coefficient, Ward-identity derivation, projector domain at zero momentum, massive and massless limit order, effective-action normalization, induced pole or mass definition, dependencies, consumers, and all predicates. It cannot infer substrate-generated gauge dynamics, a universal coupling, a physical photon, or observation merely from an assumed charged loop, a transverse ansatz, or a substituted massless coefficient.
+The effort remains active. D4 is discharged, but D1 remains open with 85
+pending, 3 migrated, 121 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is EM7, pinned at SHA-256
+`c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22`.
+Its queue headline is a long-range force law from fractal or fractional
+geometry; it cites D3S, EM3, and QCD5, contains seventeen static check calls,
+four dynamically classified calls, one assertion, and symbolic plus numeric
+oracle hints. P135 already replayed EM7 as a nonauthoritative declared
+dependency, so P136 cannot claim fresh source blindness. It must freeze
+candidate operators, measures, dimensions, source and boundary conventions,
+exponent and transition criteria, physical ceilings, and comparator quarantine
+before renewed inspection. Qualified D3S supplies only C-LOC-001/C-KRN-001's
+conditional localization and kernel surfaces, pending QCD5 supplies no
+authority, and qualified EM3 supplies only C-MAX-001's conditional action and
+static family. An assigned fractional exponent, successful finite sweep, or
+fit to a familiar tail cannot select a unique force law or create a physical
+electromagnetic, gravitational, material, substrate, or observational sector.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
