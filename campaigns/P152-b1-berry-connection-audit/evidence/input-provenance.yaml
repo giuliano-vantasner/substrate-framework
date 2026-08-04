@@ -1,0 +1,31 @@
+campaign: P152
+source_unit: B1
+accepted_base: v0.117.0
+accepted_inputs:
+  - {claim: C-TOP-001, use: exact_integer_parity_character_and_no_physical_identity_ceiling}
+  - {claim: C-CHR-001, use: common_scalar_value_does_not_identify_typed_objects}
+  - {claim: C-SPN-001, use: conditional_RP2_pure_ray_orbit_only}
+  - {claim: C-DEF-001, use: RP2_Z2_versus_full_polar_Z_distinction_only}
+  - {claim: C-GAU-001, use: local_U1_transformation_comparison_only}
+mathematical_inputs:
+  - exact finite-dimensional complex column vectors of dimension at least two
+  - exact normalization and rank-one projectors
+  - one explicitly real path coordinate on zero to two pi
+  - exact endpoint closure by a unit-modulus scalar
+  - Berry convention A=i*psi_dagger*d_phi_psi
+  - exact symbolic integration with no unevaluated Integral
+source_declared_inputs:
+  - moving real director lift and its rank-one projector
+  - fixed-ray phase section from su2_z_phi_ket_up
+  - pending M1 and physical spin-frame identification
+excluded_from_derivation_or_selection:
+  - queue-exposed half connection pi integral and minus-one value
+  - empirical comparator and numerical tolerance
+  - pending M1 C1 NA1 and O1 authority
+  - source claims of physical vector potential core flux dynamics or observation
+free_data:
+  - physical carrier material order parameter and defect existence
+  - curvature core regularization action dynamics coupling and electromagnetic map
+  - preparation measurement and observation
+claim_delta: C-BER-001
+debt: []

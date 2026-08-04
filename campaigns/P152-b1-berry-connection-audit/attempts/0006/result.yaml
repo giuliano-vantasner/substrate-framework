@@ -1,0 +1,29 @@
+attempt: 0006
+campaign: P152
+candidate: canonical_exact_closed_ray_berry_ledger
+status: passed
+started_at: '2026-08-10T04:25:00Z'
+finished_at: '2026-08-10T04:31:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_berry_holonomy.py -q
+result:
+  focused_tests: 18_passed
+  exact_backend: SymPy
+  numeric_quadrature_surface: absent
+  executable_np_trapz_surface: absent
+  exact_surfaces:
+    - normalized_closed_rank_one_projector_path
+    - local_Berry_connection_and_endpoint_transition
+    - bare_integral_phase_and_transition_corrected_holonomy
+    - real_lift_and_periodic_complex_gauge_for_integer_winding
+  mutation_surfaces:
+    - fixed_ray_in_place_of_moving_projector
+    - omitted_endpoint_transition
+    - nonperiodic_and_periodic_phase_changes
+    - path_reversal_and_even_odd_winding
+    - normalization_closure_and_integer_domain
+debt:
+  - run_primary_and_fresh_independent_oracles
+  - adjudicate_all_eight_B1_predicates_and_semantic_consumers
+  - close_dependencies_graph_generated_state_and_integrated_gate
+next_attempt: run_the_frozen_primary_and_fresh_independent_oracles

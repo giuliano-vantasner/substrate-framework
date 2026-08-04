@@ -1,0 +1,41 @@
+campaign: P152
+criteria_order:
+  - explicit base loop normalized lift projector section and endpoint relation
+  - correct Berry sign phase transformation transition and orientation conventions
+  - gauge-invariant closed-loop phase rather than a local representative or bare integral
+  - nontrivial projective loop versus fixed-ray phase and full-polar alternatives
+  - odd even reversal fixed-ray and gauge-change limits
+  - accepted-framework compatibility mutation sensitivity assumption economy and consumer closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal replay classifies all eight predicates but cannot validate B1's headline.
+  B:
+    decision: selected_as_decisive_counterexample
+    reason: The stated fixed-ray section has a pure-gauge half connection and transition-corrected plus-one holonomy.
+  C:
+    decision: selected_and_promoted_with_D_as_C_BER_001
+    reason: The real moving lift has zero local connection and carries odd parity in its endpoint transition.
+  D:
+    decision: selected_and_promoted_with_C_as_C_BER_001
+    reason: A periodic complex gauge has half connection and the identical moving projector and holonomy.
+  E:
+    decision: selected_as_gauge_nonuniqueness_classification
+    reason: Phase changes move exact contributions between local connection and endpoint transition without changing their product.
+  F:
+    decision: selected_as_accepted_mapping_only
+    reason: C-TOP-001 supplies the parity character but lacks section and endpoint data, so the corrected theorem is nonduplicate.
+  G:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Equal holonomy leaves physical medium field curvature dynamics coupling material and observation data free.
+  H:
+    decision: selected
+    reason: Dependency semantic-consumer compatibility novelty release queue docs and memory closure are mandatory.
+selection_basis: >-
+  Candidates C and D give the same nonconstant projector path and invariant,
+  while B proves that B1's preferred fixed-ray concept fails the predeclared
+  projector and endpoint criteria. E states the gauge boundary, F prevents
+  duplication, G prevents physical overreading, and A and H close provenance.
+  No advertised half value or minus-one comparator selected the construction.
+foundational_revision_required: false
+debt: []

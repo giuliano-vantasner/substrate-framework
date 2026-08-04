@@ -1,0 +1,33 @@
+attempt: 0009
+campaign: P152
+candidate: corrected_semantic_consumer_graph_and_replay
+status: passed
+started_at: '2026-08-10T04:38:00Z'
+finished_at: '2026-08-10T04:44:00Z'
+commands:
+  - .venv/bin/python campaigns/P152-b1-berry-connection-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - execute_hash_pinned_C1_NA1_O1_and_OM1_once
+result:
+  graph_checks: 20_passed
+  graph_nodes: 5
+  source_predicates: 34
+  source_assertions: 5
+  semantic_consumer_runtime_checks: 26_passed
+  semantic_consumer_exit_statuses_all_zero: true
+  semantic_consumers: [C1, NA1, O1, OM1]
+  queue_lexical_false_positives: 20
+  compatibility:
+    B1: immutable_eager_legacy_fallback_alias_only
+    C1: no_numpy_integration_reference
+    NA1: no_numpy_integration_reference
+    O1: no_numpy_integration_reference
+    OM1: no_numpy_integration_reference
+interpretation: >-
+  Green consumer execution reproduces each source's local predicates but does
+  not grant authority. C1 declares B1's half connection, O1 repeats a
+  pure-phase fixed ray, NA1 only names B1 as a sibling, and already-qualified
+  OM1 reconstructs B1's bare integral rather than a transition-corrected
+  closed-ray invariant.
+debt:
+  - complete_claim_and_source_reviews_release_queue_generated_state_and_integrated_gate
+next_attempt: assemble_the_claim_level_promotion_transaction

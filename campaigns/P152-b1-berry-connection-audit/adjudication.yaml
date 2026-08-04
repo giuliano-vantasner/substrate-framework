@@ -1,0 +1,61 @@
+campaign: P152
+title: B1 projective-loop Berry connection and holonomy audit
+source_baseline: substrate@6d1f4e0
+source_units: [B1]
+base_release: v0.117.0
+accepted_release: v0.118.0
+adjudicated_at: '2026-08-10T04:55:00Z'
+selected_candidates:
+  - {id: A, reason: Literal alias-only replay classifies every predicate without making its tally a headline oracle.}
+  - {id: B, reason: The fixed-ray route is the decisive counterexample to B1's preferred interpretation.}
+  - {id: C, reason: The real moving lift supplies the endpoint-transition gauge of the positive object.}
+  - {id: D, reason: The periodic complex section supplies the half-connection gauge of the same projector path.}
+  - {id: E, reason: Exact phase changes establish local-connection nonuniqueness and closed-holonomy invariance.}
+  - {id: F, reason: C-TOP-001 prevents duplication while leaving the section and transition theorem distinct.}
+  - {id: G, reason: Same-holonomy countermodels delimit physical vector-potential and medium interpretations.}
+  - {id: H, reason: Dependency consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-BER-001]
+unpromoted_claims:
+  - {id: B1_fixed_ray_is_the_moving_projective_lift, reason: Its rank-one projector is constant and differs from the real-lift projector.}
+  - {id: B1_bare_integral_is_closed_ray_holonomy, reason: The omitted endpoint transition changes the fixed-ray odd result to plus one.}
+  - {id: local_half_connection_is_unique, reason: Exact periodic and nonperiodic phase changes shift the local representative.}
+  - {id: four_minus_one_values_are_one_object, reason: Equal scalars do not supply common typed domains maps or intertwiners.}
+  - {id: integer_guard_validates_the_construction, reason: It is insensitive to both the fixed projector and omitted transition.}
+  - {id: physical_emergent_vector_potential_core_flux_or_dynamics, reason: No field dictionary curvature source action material coupling or observation is constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_berry_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0007/result.yaml
+  consumer_graph_attempt: attempts/0009/result.yaml
+  integrated_terminal_gate: attempts/0010/result.yaml
+  claim_review: memory/vantasner/decisions/C-BER-001-review.md
+  source_review: memory/vantasner/decisions/B1-qualified-review.md
+source_disposition:
+  B1: qualified
+accepted_mappings: [C-BER-001, C-TOP-001, C-CHR-001, C-SPN-001, C-DEF-001, C-GAU-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_no_numeric_quadrature_or_legacy_name
+  immutable_primary: eager_legacy_fallback_alias_only_through_np_trapezoid
+  semantic_consumers: no_numpy_integration_references
+validation_commands:
+  - .venv/bin/python campaigns/P152-b1-berry-connection-audit/verify.py
+  - .venv/bin/python campaigns/P152-b1-berry-connection-audit/reviews/independent_berry_review.py
+  - .venv/bin/python campaigns/P152-b1-berry-connection-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_berry_holonomy.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

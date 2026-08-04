@@ -2,7 +2,7 @@
 description: Derive and audit B1's projective-loop Berry connection and holonomy content
 author: vantasner
 created: '2026-08-10T04:10:00Z'
-updated: '2026-08-10T04:22:00Z'
+updated: '2026-08-10T05:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - berry-holonomy
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P152 B1 Berry Connection Audit
 

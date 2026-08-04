@@ -1,0 +1,24 @@
+campaign: P152
+claim: C-BER-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-TOP-001: Gives integer winding parity but no section projector connection endpoint transition or gauge transformation.
+  C-CHR-001: Distinguishes typed sign characters and scalar equality but supplies no Berry geometry.
+  C-SPN-001: Gives a conditional polar pure-ray RP2 orbit but no loop section or connection.
+  C-DEF-001: Distinguishes projective and full-polar loop groups but supplies no Berry invariant.
+  C-GAU-001: Gives a separately declared local U1 covariance law but no closed projector path or endpoint transition.
+distinct_positive_object: >-
+  C-BER-001 uniquely validates a normalized closed rank-one projector path,
+  combines local A=i<psi|dpsi> with the endpoint transition, proves exact gauge
+  invariance, derives real and periodic gauges of every integer projective
+  winding, and distinguishes a moving projector from a pure-phase fixed ray.
+governed_consumers: [B1, C1, NA1, O1, OM1]
+decision: distinct_additive_claim

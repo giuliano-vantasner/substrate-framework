@@ -1,0 +1,26 @@
+attempt: 0007
+campaign: P152
+candidate: frozen_primary_and_independent_Berry_oracles
+status: passed
+started_at: '2026-08-10T04:32:00Z'
+finished_at: '2026-08-10T04:36:00Z'
+commands:
+  - .venv/bin/python campaigns/P152-b1-berry-connection-audit/verify.py
+  - .venv/bin/python campaigns/P152-b1-berry-connection-audit/reviews/independent_berry_review.py
+result:
+  primary_checks: 27_passed
+  independent_checks: 12_passed
+  exact_backend: SymPy
+  source_native_result: known_numpy_version_event_after_6_checks
+  source_alias_only_result: ALL_8_CHECKS_PASS
+  mutable_legacy_integration_references: 0
+  load_bearing_mutations:
+    - fixed_projector_with_bare_minus_one_has_corrected_plus_one
+    - omitted_endpoint_transition_changes_the_verdict
+    - wrong_connection_sign_breaks_a_nonperiodic_gauge_transformation
+    - periodic_gauge_changes_local_connection_without_changing_holonomy
+    - path_reversal_and_even_winding_limits
+debt:
+  - adjudicate_B1_predicates_and_semantic_consumers
+  - close_graph_dependency_nonduplication_release_queue_docs_memory_and_integrated_gate
+next_attempt: replay_the_hash_pinned_semantic_consumer_graph_and_close_claim_level_review

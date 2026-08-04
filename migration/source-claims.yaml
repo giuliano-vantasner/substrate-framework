@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 69
-  qualified: 137
+  pending_adjudication: 68
+  qualified: 138
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2071,8 +2071,47 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BER-001
+  - C-TOP-001
+  - C-CHR-001
+  - C-SPN-001
+  - C-DEF-001
+  - C-GAU-001
+  qualification: 'B1''s normalized real lift, periodic rank-one projector, antipodal endpoint, zero local
+    real-lift connection, fixed-ray phase algebra, bare half integral, and even-winding limit survive
+    only through corrected topology, character, and Berry ceilings. C-BER-001 supplies the positive object:
+    the moving real lift has A=0 and endpoint transition (-1)^k, while its periodic complex gauge has
+    A=k/2 and transition one; both have the same nonconstant projector and holonomy (-1)^k. B1''s stated
+    su2_z(phi)|up> instead changes only by phase and has a constant projector. Its omitted endpoint transition
+    changes its corrected odd-winding holonomy from minus one to plus one. The numeric predicate regresses
+    only the bare integral and the even-winding guard cannot detect the fixed projector or missing transition.
+    Equal scalar signs do not identify the typed constructions. No unique or physical emergent vector
+    potential, core flux source, dynamics, electromagnetic field, material, fermion, coupling, or observation
+    is accepted.'
+  evidence:
+  - campaigns/P152-b1-berry-connection-audit/reviews/source_adjudication.md
+  - campaigns/P152-b1-berry-connection-audit/evidence/source-reproduction.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/source-audit.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/check-adjudication.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/input-provenance.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/dependency-audit.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/consumer-audit.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/candidate-comparison.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/primary-provenance.yaml
+  - campaigns/P152-b1-berry-connection-audit/evidence/literature-audit.yaml
+  - campaigns/P152-b1-berry-connection-audit/verify.py
+  - campaigns/P152-b1-berry-connection-audit/reviews/independent_berry_review.py
+  - campaigns/P152-b1-berry-connection-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-BER-001-review.md
+  - memory/vantasner/decisions/B1-qualified-review.md
+  note: P152 promotes C-BER-001 through twenty-seven primary, twelve independent, eighteen focused-test,
+    and twenty frozen-graph checks. The five-node semantic graph inventories 34 source predicates and
+    five assertions, and four consumers reproduce 26 source checks without gaining authority. Immutable
+    B1's eager np.trapz fallback is replayed alias-only through np.trapezoid; all mutable campaign and
+    canonical code has zero executable legacy integration references.
 - source_unit: C1
   phase: phase-7
   path: merged-framework/bridges/phase-7/bridge_C1_Aeff_optical_metric_coupling.py

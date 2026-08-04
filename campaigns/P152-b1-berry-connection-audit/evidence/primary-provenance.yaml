@@ -1,0 +1,36 @@
+campaign: P152
+accepted_base:
+  release: v0.117.0
+  framework_checkpoint: c5414f8
+  scientific_commit: ef5851c
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: B1
+  path: merged-framework/bridges/phase-7/bridge_B1_disclination_berry_connection.py
+  sha256: 2de4faa60ecc1f87ca356afd55c2a531a89327c3c46e4296176052113de7b0b6
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/B1-dossier.md
+  sha256: 286e46b79f5faccfd2863deda2fd1e1c1e82e54bf9d66dc4e4283e45494d2066
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/topological_labels.py
+  - src/substrate_framework/angular_defects.py
+  - src/substrate_framework/gauge_u1.py
+  - campaigns/P019-topological-labels
+  - campaigns/P066-om1-cyclic-sign-characters
+  - campaigns/P067-me1-spin1-polar-manifold
+  - campaigns/P068-m1-angular-defect-energy-topology
+  - campaigns/P131-t1z2-cross-oracle-sign-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - B1 Berry connection projective loop endpoint transition
+  - C-BER-001 berry_holonomy transition-corrected holonomy
+  - fixed ray phase moving projector RP2
+authority_statement: >-
+  Memory and B1 are recall and candidate evidence. The pinned release,
+  accepted claims, exact canonical API, and individually reviewed P152 result
+  supply authority.

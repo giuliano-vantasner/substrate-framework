@@ -1,0 +1,31 @@
+campaign: P152
+source_unit: B1
+semantic_consumers:
+  - {source_unit: C1, disposition: pending_adjudication, effect: may_import_only_C_BER_001_after_its_own_review_and_gains_no_physical_vector_potential}
+  - {source_unit: NA1, disposition: pending_adjudication, effect: sibling_reference_only_and_gains_no_cross_sector_identity}
+  - {source_unit: O1, disposition: pending_adjudication, effect: repeats_fixed_ray_phase_error_and_requires_its_own_projector_endpoint_review}
+  - {source_unit: OM1, disposition: qualified, effect: unchanged_C_CHR_001_already_rejects_scalar_collapse_and_B1_bare_phase_is_not_canonical}
+lexical_false_positives:
+  count: 20
+  source_units: [S1, S2, S4, S5, G2, PG3, OD, AS6, NY1, MC4, BD1, E2, CM2, WM4, MK3, MK6, MR1, EL3, EL4, EL6]
+  reason: B1_is_an_unrelated_coefficient_variable_check_label_or_rung_step
+replay:
+  semantic_scripts: 4
+  source_checks: 26
+  exit_statuses_all_zero: true
+  graph_nodes: 5
+  graph_predicates: 34
+  graph_assertions: 5
+  graph_checks: 20
+compatibility_preflight:
+  B1: {legacy_references: 1, current_references: 1, eager_legacy_fallbacks: 1, policy: immutable_alias_only_replay}
+  C1: {legacy_references: 0, eager_legacy_fallbacks: 0}
+  NA1: {legacy_references: 0, eager_legacy_fallbacks: 0}
+  O1: {legacy_references: 0, eager_legacy_fallbacks: 0}
+  OM1: {legacy_references: 0, eager_legacy_fallbacks: 0}
+decision: >-
+  Green source execution is reproduction evidence only. Pending consumers gain
+  no authority, OM1 remains qualified, and no unrelated lexical B1 occurrence
+  enters the scientific dependency graph. GitNexus reports LOW named-symbol
+  risk, one direct canonical helper, one affected module, and zero processes.
+debt: []

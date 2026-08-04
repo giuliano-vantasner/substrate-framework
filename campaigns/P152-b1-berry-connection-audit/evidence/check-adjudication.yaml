@@ -1,0 +1,43 @@
+source_unit: B1
+checks:
+  B1.01:
+    source_name: B0_real_director_connection
+    classification: qualified_zero_local_representative_rejected_trivial_holonomy_reading
+    maps_to: [C-BER-001]
+    reason: The normalized real lift has A=0, while its nonperiodic endpoint transition carries the odd-loop minus-one holonomy.
+  B1.02:
+    source_name: B0b_projector_closure
+    classification: qualified_projector_loop_and_antipodal_endpoint
+    maps_to: [C-BER-001, C-DEF-001]
+    reason: The rank-one projector closes and the real lift changes sign exactly; this is the correct base of the Berry theorem.
+  B1.03:
+    source_name: B1_spinor_half_connection
+    classification: qualified_fixed_ray_algebra_rejected_as_moving_projective_lift
+    maps_to: [C-BER-001]
+    reason: The stated section is normalized and has A=1/2, but its projector is constant and differs from the B0b projector path.
+  B1.04:
+    source_name: B1b_phase_slope
+    classification: qualified_pure_gauge_phase_identity
+    maps_to: [C-BER-001]
+    reason: A=1/2 is exactly minus the phase slope for the fixed ray, which exposes rather than removes its gauge dependence.
+  B1.05:
+    source_name: B2_integral_is_holonomy
+    classification: rejected_closed_ray_holonomy_qualified_bare_integral
+    maps_to: [C-BER-001]
+    reason: The bare phase is minus one, but the omitted endpoint transition is also minus one, so the corrected fixed-ray holonomy is plus one.
+  B1.06:
+    source_name: B3_cross_oracle_one_object
+    classification: rejected_object_identity_qualified_scalar_comparisons
+    maps_to: [C-CHR-001, C-BER-001]
+    reason: The displayed scalars agree, but their typed domains and maps differ, and B1's corrected fixed-ray value no longer agrees.
+  B1.07:
+    source_name: B4_numeric_trapezoid
+    classification: qualified_bare_integral_regression_with_version_only_failure
+    maps_to: [C-BER-001]
+    reason: Alias-only replay reproduces the constant integral. It neither tests the endpoint nor upgrades exact algebra, and mutable code uses no legacy name.
+  B1.08:
+    source_name: integer_strength_guard
+    classification: qualified_even_parity_limit_rejected_as_complete_guard
+    maps_to: [C-TOP-001, C-BER-001]
+    reason: Even winding gives plus one, but the guard is insensitive to B1's constant projector and omitted endpoint transition.
+all_eight_adjudicated: true

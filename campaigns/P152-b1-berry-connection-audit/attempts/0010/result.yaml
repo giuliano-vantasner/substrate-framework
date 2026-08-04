@@ -1,0 +1,41 @@
+attempt: 0010
+campaign: P152
+candidate: integrated_promotion_and_continuation_gate
+status: passed
+started_at: '2026-08-10T04:56:00Z'
+finished_at: '2026-08-10T05:06:00Z'
+commands:
+  - regenerate_migration_queue_docs_and_accepted_memory
+  - validate_proposal_claim_and_source_memory
+  - run_primary_independent_graph_and_focused_exact_oracles
+  - run_staged_GitNexus_change_detection
+  - scripts/validate.sh
+  - git_diff_check
+preflight:
+  focused_tests: 18_passed
+  diff_check: passed
+  initial_repository_validation: failed_missing_this_planned_integrated_attempt_artifact
+  repair: instantiate_attempt_0010_in_progress_before_the_gate_as_required
+  repository_validation_after_generation: 153_claims_153_accepted_68_pending
+  memory_contracts: 4_passed
+  primary_checks: 27_passed
+  independent_checks: 12_passed
+  graph_checks: 20_passed
+  staged_GitNexus:
+    changed_symbols: 78
+    changed_files: 35
+    affected_symbols: 0
+    affected_processes: 0
+    risk: low
+result:
+  workflow_valid: true
+  accepted_claims: 153
+  migration_pending: 68
+  generated_docs_current: true
+  generated_memory_current: true
+  memory_files: 625_passed
+  physics_skill_valid: true
+  repository_tests: 1354_passed
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+debt: []
+next_attempt: freeze_P153_C1_before_source_inspection_and_continue_the_parent_migration

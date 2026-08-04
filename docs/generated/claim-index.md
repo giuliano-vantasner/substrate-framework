@@ -12,6 +12,15 @@ On any connected interval with normalized canonical action J>0, differentiable p
 - Compatibility: `native`
 - Dependencies: none
 
+## C-BER-001
+
+Let k be an integer and phi range from zero to two pi. In a complex carrier of dimension at least two, define the normalized real lift n_k(phi)=(cos(k*phi/2),sin(k*phi/2),0,...). Its rank-one projector is periodic and n_k(2*pi)=(-1)^k*n_k(0). More generally, let psi be an exact normalized section of this closed rank-one projector path with psi(2*pi)=tau*psi(0), where |tau|=1. With convention A=i*psi_dagger*d_phi psi, the closed-ray Berry holonomy is H=tau*exp(i*integral_0^{2*pi} A*dphi). Under a smooth exact phase change psi'=exp(i*chi)*psi, A'=A-d_phi chi and tau'=exp(i*(chi(2*pi)-chi(0)))*tau, so H is invariant. The real lift has A=0 and tau=(-1)^k. Its periodic complex gauge exp(-i*k*phi/2)*n_k has A=k/2 and tau=1. Both give H=(-1)^k. In contrast, exp(-i*k*phi/2) times a fixed ray has a constant projector and H=1 even though its bare integral phase is (-1)^k. Thus the local one-form is not a unique invariant, and these identities derive no physical vector potential, curvature or core source, defect dynamics, electromagnetic field, fermion, material realization, coupling, or observation.
+
+- Accepted in: `v0.118.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-TOP-001
+
 ## C-BND-001
 
 Let phi be a sufficiently smooth real scalar, let u=phi_t(t,b) and v=phi_x(t,b), and let a, beta, and the scalar source J be exact real declared boundary data. Define R_(a,beta,J)=a*u+beta*v-J. Under scalar spatial parity phi_P(t,x)=phi(t,-x) and source pullback J_P(t,x)=J(t,-x), exact chain rule gives R_(a,beta,J_P)[phi_P](t,b)=R_(a,-beta,J)[phi](t,-b). Thus beta and minus beta form a parity-covariant parameter family. At a parity center, a fixed residual is internally invariant for arbitrary traces iff beta=0. The mixed residual is not a parity-odd eigenobject: its a*u-J part is even and beta*v part is odd; it is purely odd only when the even part is absent. Under the simultaneous parity map from a right half-line to a left half-line, the outward-normal derivative and its coefficient are unchanged. Finally one residual equation does not determine both u and v; for beta=0 it leaves v arbitrary, and for beta nonzero it admits the family v=(J-a*u)/beta. It therefore derives neither boundary sign correlation nor topological charge transfer or selection without additional dynamics and vacuum-boundary data. This exact conditional theorem supplies no boundary action, field evolution, charge map, fermion parity, chiral matter, weak interaction, or substrate realization.

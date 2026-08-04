@@ -1,0 +1,21 @@
+campaign: P152
+source_unit: B1
+declared_source_dependencies:
+  - {source_unit: M1, disposition: pending_adjudication, use: no_authority}
+accepted_claim_closure:
+  - {claim: C-BER-001, dependencies: [C-TOP-001]}
+accepted_mappings:
+  - {claim: C-TOP-001, use: integer_parity_character_and_physical_ceiling}
+  - {claim: C-CHR-001, use: typed_value_equality_ceiling_only}
+  - {claim: C-SPN-001, use: conditional_polar_pure_ray_RP2_target_and_physical_ceiling_only}
+  - {claim: C-DEF-001, use: projective_versus_full_polar_loop_group_distinction_only}
+  - {claim: C-GAU-001, use: separate_local_U1_gauge_comparison_only}
+circularity: >-
+  B1 cites pending M1, while M1's source arc may cite the B1 sector. That source
+  cycle grants no authority. C-BER-001 closes through exact normalized-vector
+  calculus and imports only C-TOP-001 for the named integer parity character.
+excluded_imports:
+  - pending M1 mass or medium authority
+  - B1 physical vector-potential core flux and dynamical sourcing readings
+  - O1 C1 NA1 or OM1 pending or qualified physical cross-sector identities
+debt: []

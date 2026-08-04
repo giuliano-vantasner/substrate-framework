@@ -1,0 +1,39 @@
+source_unit: B1
+source_sha256: 2de4faa60ecc1f87ca356afd55c2a531a89327c3c46e4296176052113de7b0b6
+ast:
+  check_calls: 8
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  legacy_numpy_integration_references: 1
+  current_numpy_integration_references: 1
+  eager_legacy_default_fallbacks: 1
+reproduction:
+  native: known_numpy_version_event_after_6_checks
+  alias_only: ALL_8_CHECKS_PASS
+objects_present:
+  - exact normalized real lift n=(cos(phi/2),sin(phi/2))
+  - periodic rank-one projector for the real lift and antipodal lift endpoint
+  - zero local Berry one-form for the real lift
+  - exact fixed-ray phase section exp(-i*phi/2)*(1,0)
+  - exact bare half connection integral and even-winding limit
+  - scalar comparisons to separately typed sign constructions
+objects_absent:
+  - a spinor or complex section whose projector equals the moving real-lift projector
+  - the endpoint transition required to close a nonperiodic section
+  - a gauge-invariant distinction between local one-form and closed-ray holonomy
+  - a unique local connection representative
+  - curvature core source medium dynamics electromagnetic dictionary coupling or observation
+load_bearing_failures:
+  - {issue: fixed_projector, classification: stated_spinor_changes_only_by_phase_and_does_not_lift_the_moving_projector}
+  - {issue: endpoint_transition, classification: omitted_factor_changes_the_stated_fixed_ray_holonomy_from_minus_one_to_plus_one}
+  - {issue: scalar_identity, classification: equal_values_do_not_make_distinct_typed_objects_one_object}
+  - {issue: guard_sensitivity, classification: even_winding_guard_does_not_detect_the_constant_projector_or_omitted_transition}
+  - {issue: compatibility, classification: version_only_eager_legacy_fallback_not_a_scientific_failure}
+headline_verdict: >-
+  Qualified. B1's real projective loop, projector closure, zero local real-lift
+  connection, and bare phase algebra survive. C-BER-001 supplies the corrected
+  moving-projector theorem and endpoint-closed holonomy. B1 does not establish
+  its fixed-ray minus-one as a closed-ray invariant or derive a unique or
+  physical emergent vector potential, core source, dynamics, material, or
+  observation.
