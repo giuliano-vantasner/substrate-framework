@@ -1,0 +1,82 @@
+id: P151
+base_release: v0.116.0
+base_commit: f050336
+scientific_base_commit: c4553ac
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [W7]
+question: >-
+  Reproduce and independently audit W7's claim to gauge an SU(2)_L charged
+  current, and determine exactly which statements are finite-dimensional SU2
+  representation identities, conditional local-connection covariance,
+  curvature and Yang-Mills consequences, projector constructions, or genuinely
+  require matter fields, an action, current sourcing, anomaly control, mass
+  generation, physical weak states, and observations.
+invariants:
+  - >-
+    C-REP-002 places Pauli-half SU2 and a chirality projector on independent
+    tensor factors. It proves representation and parity identities but supplies
+    no matter field, Lorentz chirality, gauge connection, action, current,
+    anomaly, weak sector, or physical state.
+  - >-
+    C-GAU-001 governs a separately declared local U1 connection and complex
+    scalar. It fixes one Abelian sign convention and explicitly leaves kinetic
+    normalization, field dynamics, physical charge, photon, and substrate
+    interpretation open; it is not non-Abelian SU2 authority.
+  - >-
+    C-MAX-001 governs a separately declared Abelian kinetic action and sourced
+    equation. EM2, EM3, and EM5 are qualified and grant no physical SU2L,
+    charged-current, weak-boson, or mass authority.
+  - >-
+    W1 through W5 are qualified through scalar boundary, representation,
+    kinematic, and passive-scattering ceilings. They supply no accepted
+    physical chiral matter, V-A current, gauge interaction, weak charge, or
+    detector event.
+  - >-
+    Pending M1, M2, and YM1 grant no authority. C-RAD-001 and qualified G1
+    govern only a separate scalar point-source action and supply no gauge
+    current or SU2 field.
+  - >-
+    The generated queue exposes W7's headline, eleven declared dependencies,
+    eleven literal checks, one assertion, symbolic hint, and a detailed result
+    excerpt. P150's frozen graph additionally pins W7's hash, predicate count,
+    assertion count, and absence of an immutable NumPy-integration shape. Those
+    preexposed materials cannot select a candidate. No W7 dossier is present,
+    and the source body, exact predicates, data flow, and runtime output remain
+    unopened for P151.
+allowed_imports:
+  - C-REP-002 and C-SPN-002 only for exact Pauli-half algebra independent projector factors and their physical ceilings
+  - C-GAU-001 and C-U1-001 only for the separately declared Abelian local-covariance and matter-current comparison
+  - C-MAX-001 only for the distinction between declared kinetic action curvature identity sourced dynamics and physical interpretation
+  - C-BND-001 C-SG-011 C-SG-012 C-SG-013 C-KIN-001 and C-SCT-001 only through their exact accepted ceilings on W1 through W5
+  - exact finite-dimensional matrix calculus smooth local parameters commuting mixed partials and declared real coupling
+  - W7 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce W7 literally and classify every predicate by its evaluated representation connection curvature action current mass and physical object.}
+  - {id: B, description: Retain only C-REP-002 global SU2 carrier and independent-projector identities with no local gauge field.}
+  - {id: C, description: Derive conditional local SU2 connection covariance curvature commutator and gauge-transformation closure for a declared matter carrier and coupling.}
+  - {id: D, description: Add a separately declared Yang-Mills kinetic action and derive its pure-gauge Euler equation Bianchi identity normalization and source requirements.}
+  - {id: E, description: Audit whether the left-projector gauging is well typed on an independent carrier and whether the right sector is truly a singlet under local transformations.}
+  - {id: F, description: Separate formal gauge covariance from a physical charged current anomaly-free matter content weak boson mass detector observable and substrate mechanism using countermodels.}
+  - {id: G, description: Close source dependencies reverse consumers compatibility nonduplication disposition generated state and the empty debt ledger.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact carrier tensor-factor projector generator and trace normalization
+  - finite versus infinitesimal transformation convention connection sign and coupling placement
+  - covariant derivative curvature commutator and Bianchi identities for arbitrary local parameters
+  - distinction among global representation local covariance gauge-field dynamics matter sourcing and physical interaction
+  - action sign dimensions source conservation gauge fixing degrees of freedom anomaly and mass ceilings
+  - compatibility with accepted U1 Maxwell scalar boundary and SU2 representation claims
+  - load-bearing noncommutativity projector coupling derivative action and current mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+  - queue-exposed formulas outputs and numerical or physical labels excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, W7 hash, candidate set, carrier
+  connection curvature action current mass and physical-interpretation
+  distinctions, selection criteria, mutation plan, compatibility policy, and
+  done gate are frozen and committed. Queue and P150 records already expose the
+  broad headline, dependency names, check and assertion counts, symbolic hint,
+  advertised result formulas, and zero legacy-call count; those materials do
+  not select a candidate. The source body, exact predicates, data flow, runtime
+  output, and further comparator material remain unopened until that boundary.
+status: draft

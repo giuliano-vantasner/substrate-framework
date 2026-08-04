@@ -1,0 +1,26 @@
+attempt: 0001
+campaign: P151
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T03:00:00Z'
+finished_at: '2026-08-10T03:04:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory_search_then_source_verification_at_authoritative_paths
+  - sha256sum_hash_pinned_W7_without_opening_its_body
+  - cmp_proposal_and_frozen_copy
+freeze:
+  proposal_sha256: ffff59b623899eafa418fd165a7e97a1d004457b75a20296ddfe885b05b8fbaa
+  frozen_proposal_sha256: ffff59b623899eafa418fd165a7e97a1d004457b75a20296ddfe885b05b8fbaa
+  memory_contract_sha256: 8f904a5d80fa11b09e6d81307a6ec0987b44c5a7a93fdf2cc920e8379b78265b
+  source_sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3
+source_opened_or_executed_for_P151: false
+source_dossier: absent
+preexposed_evidence: >-
+  Queue metadata and accepted P150 graph evidence expose advertised formulas,
+  AST counts, source hash, and zero legacy integration references. They are
+  excluded from candidate selection and do not authorize the headline.
+debt:
+  - reproduce_W7_and_adjudicate_all_eleven_predicates
+  - resolve_representation_covariance_curvature_action_current_anomaly_mass_and_nonduplication_before_any_claim_or_implementation
+next_attempt: commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source
