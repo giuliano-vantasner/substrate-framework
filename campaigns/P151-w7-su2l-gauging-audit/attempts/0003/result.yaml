@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P151
+candidate: source_aware_C_NAG_001_freeze
+status: passed
+started_at: '2026-08-10T03:13:00Z'
+finished_at: '2026-08-10T03:17:00Z'
+commands:
+  - repository_wide_nonabelian_gauge_nonduplication_search
+  - accepted_C_REP_002_C_GAU_001_and_C_MAX_001_source_review
+  - independent_finite_axis_rotation_product_rule_curvature_and_commutator_derivation
+  - memory_validate_and_git_diff_check
+freeze:
+  parent_proposal_sha256: ffff59b623899eafa418fd165a7e97a1d004457b75a20296ddfe885b05b8fbaa
+  revision_sha256: 75a89e768497a820cf2a26239d694b4a9cc62d18a170522d87e27ced3293590c
+  reproduction_sha256: 431b059cc027c1266057738c182658499dab3f65b5da7fd9770754a8dab04875
+  memory_contract_sha256: 489f67727973601cce001094d8e87eaf572dc0ef0a2313b116e1ed8c40f596b2
+  source_sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3
+  exact_finite_covariance_check: passed
+  exact_curvature_covariance_check: passed
+  exact_commutator_check: passed
+  wrong_inhomogeneous_sign_mutation: failed_as_required
+  identifier_collision: false
+debt:
+  - implement_and_test_the_pure_exact_nonabelian_gauge_ledger
+  - build_primary_and_fresh_independent_mutation_sensitive_oracles
+  - adjudicate_all_eleven_W7_predicates_and_close_dependencies_consumers_and_generated_state
+next_attempt: implement_only_the_frozen_C_NAG_001_surface

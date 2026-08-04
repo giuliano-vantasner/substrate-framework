@@ -2,7 +2,7 @@
 description: Derive and audit W7's conditional SU2 local-gauge and charged-current content
 author: vantasner
 created: '2026-08-10T03:00:00Z'
-updated: '2026-08-10T03:00:00Z'
+updated: '2026-08-10T03:16:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -81,11 +81,17 @@ committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved before source-aware nonduplication. A possible exact
-addition must be a convention-explicit conditional non-Abelian gauge theorem,
-not a physical SU2L or weak-sector assertion. It must use C-REP-002's
-independent carrier, distinguish declared connection and action from derived
-identities, and state current, anomaly, mass, and interpretation ceilings.
+Revision 0001 reserves C-NAG-001 after source-aware nonduplication. On the
+independent C-REP-002 carrier, a smooth projected SU2 transformation and
+`D=partial-i*g*W` require
+`W'=U*W*U_dagger-(i/g)*(partial U)*U_dagger`. This gives exact derivative
+covariance, the curvature
+`F=partial W-partial W-i*g*[W,W]`, its commutator and conjugation laws, and a
+right-singlet block. A separately declared trace density is invariant but does
+not derive its action coefficient or dynamics. Parity exchanges the left and
+right constructions. The claim introduces no physical matter, charged current,
+charge-event equality, anomaly cancellation, mass, coupling match, detector,
+weak boson, or substrate mechanism.
 
 ## Implementation and Oracle Plan
 

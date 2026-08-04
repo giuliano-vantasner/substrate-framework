@@ -1,0 +1,59 @@
+campaign: P151
+source_unit: W7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-6/bridge_W7_su2L_gauging_charged_current.py
+sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3
+dossier: absent
+ast_inventory:
+  check_calls: 11
+  assertions: 1
+  function_definitions: [D, Wslash, Wslash_f, check, eps_abc, is_zero_mat]
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+native_execution:
+  exit_status: 0
+  terminal_tally: ALL_11_CHECKS_PASS
+initial_scientific_flags:
+  - >-
+    W7 declares D=partial-i*g*W and psi'=U*psi but prints
+    W'=U*W*U_dagger+(i/g)*(partial U)*U_dagger. Direct product-rule
+    substitution requires the opposite inhomogeneous sign. CHECK1 evaluates
+    only the homogeneous commutator rotation and imports the derivative shift.
+  - >-
+    W7 multiplies Pauli-half generators and the chirality projector on the same
+    two-dimensional carrier. T1*P_L and T2*P_L are non-Hermitian, and the three
+    projected matrices fail every cyclic SU2 commutator. C-REP-002 requires an
+    independent tensor factor.
+  - >-
+    The exact differential-operator calculation for an unprojected declared
+    SU2 doublet correctly gives F_mu_nu=partial_mu W_nu-partial_nu W_mu-i*g[W_mu,W_nu]
+    and [D_mu,D_nu]=-i*g*F_mu_nu.
+  - >-
+    The charged-field and normalized-ladder regrouping is exact. The matrix
+    elements prove only the fundamental ladder action; they construct no
+    matter field, bilinear current, interaction action, or physical boson.
+  - >-
+    With W7's assigned kink charges minus one and plus one, the ladder changes
+    T3 by one but the labels change Q by two. CHECK6 inserts dQ=one separately
+    and therefore does not establish dT3=dQ or a winding event.
+  - >-
+    CHECK7 tests annihilation of the same-carrier complementary projector but
+    not Hermiticity, SU2 closure, local transformation, matter dynamics, or a
+    current. A correctly typed left action is T_a tensor P_L.
+  - >-
+    CHECK8 expands one component square by powers of g. It does not sum the
+    adjoint or Lorentz indices, declare a metric, vary an action, derive a
+    source equation, or obtain authority from pending YM1.
+  - >-
+    CHECK9 declares g_squared=k*lambda_squared/mu and differentiates it. P150
+    rejected lambda_squared/mu as the derived local passive coefficient, and
+    no action, units, normalization, or matching relation supplies k or g.
+  - >-
+    The vector action is parity-even, while a left action maps to a distinct
+    right action under parity and is not itself parity-odd. CHECK11 calls that
+    exchange odd and imports rejected V-A and charge-selection semantics.
+maximum_source_verdict: reproduction_only_pending_correct_finite_covariance_independent_projector_and_nonduplication_review

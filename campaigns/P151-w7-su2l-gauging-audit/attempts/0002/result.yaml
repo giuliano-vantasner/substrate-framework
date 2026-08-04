@@ -1,0 +1,27 @@
+attempt: 0002
+campaign: P151
+candidate: literal_reproduction_and_convention_carrier_diagnosis
+status: passed
+started_at: '2026-08-10T03:05:00Z'
+finished_at: '2026-08-10T03:12:00Z'
+commands:
+  - .venv/bin/python bridge_W7_su2L_gauging_charged_current.py
+  - shared_AST_compatibility_audit_on_hash_pinned_W7
+  - direct_finite_connection_sign_same_carrier_SU2_and_charge_label_checks
+result:
+  native_exit_status: 0
+  terminal_tally: ALL_11_CHECKS_PASS
+  compatibility: no_numpy_integration_reference
+  correct_finite_law_for_D_minus_i_g_W: W_prime_equals_U_W_U_dagger_minus_i_over_g_partial_U_U_dagger
+  same_carrier_hermitian_generators: 1_of_3
+  same_carrier_cyclic_commutators: 0_of_3
+  assigned_charge_change: 2
+  ladder_T3_change: 1
+failure_class: none
+scientific_effect: >-
+  The source tally is retained as reproduction evidence. Its unprojected
+  curvature commutator is supportable conditionally, but full covariance needs
+  the corrected finite sign, left gauging needs the independent C-REP-002
+  carrier, and no physical charged current, weak interaction, mass, anomaly
+  cancellation, detector event, or g-to-W5 matching is established.
+next_attempt: complete_source_aware_nonduplication_and_freeze_only_the_corrected_conditional_nonabelian_claim
