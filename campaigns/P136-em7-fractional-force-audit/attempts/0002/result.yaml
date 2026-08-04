@@ -1,0 +1,31 @@
+campaign: P136
+attempt: 0002
+status: passed
+candidate: A
+command: >-
+  Execute the hash-pinned EM7 source natively under the current environment and
+  audit its AST check/import/integration-compatibility surface.
+expected: >-
+  Reproduce the historical tally without granting authority, inventory all
+  seventeen checks, and separate environment compatibility from scientific
+  domain and interpretation defects.
+result:
+  exit_status: 0
+  source_tally: ALL 17 CHECKS PASS
+  ast_check_calls: 17
+  assertions: 1
+  executable_imports: [numpy, sympy, scipy.special]
+  source_sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22
+  dossier_sha256: fba9dc6196d080689cc8345f65ef55ca474beb74e7f7feb97c8797daf61dbf67
+  immediate_findings:
+    - the subcritical d=3 normalizations and Coulomb endpoint reproduce exactly
+    - the d=2 logarithm check is only the Boolean equality 2s=d and derives no reference-subtracted kernel or normalization
+    - the d=1 linear and d=1,s=0.75 FFT residual use powers outside 0<s<d/2 without a distributional prescription
+    - the numeric force sweep differentiates unnormalized hard-coded powers and is regression coverage for exact exponents
+    - the D3S annotation conflicts with accepted C-KRN-001's exponent-selection ceiling and P135's corrected scalar loop
+classification: native_source_reproduction_with_domain_and_authority_debt
+compatibility_event: none
+next_attempt: >-
+  Derive the critical reference-subtracted limit and conditional radial-force
+  family in reusable APIs, then audit every EM7 predicate against those exact
+  objects and accepted composition.

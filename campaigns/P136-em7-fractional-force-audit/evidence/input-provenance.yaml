@@ -1,0 +1,32 @@
+campaign: P136
+base_release: v0.103.0
+base_commit: 5176b6d
+scientific_base_commit: 4cea232
+proposal_freeze_commit: 49a9161
+proposal_sha256: c5b0cdebc82ab0990cecc81242674bfdd58ff20ee9cf3b7d6dbb5649a9fc0c5a
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  source_unit: EM7
+  path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py
+  sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22
+  dossier_path: merged-framework/bridges/phase-3/dossiers/EM7-dossier.md
+  dossier_sha256: fba9dc6196d080689cc8345f65ef55ca474beb74e7f7feb97c8797daf61dbf67
+accepted_inputs:
+  - C-KRN-001 exact subcritical Riesz normalization domain derivative and convention
+  - C-MAX-001 ordinary-Laplacian integer-d source-normalized branches and boundary prescriptions
+  - exact SymPy gamma limits Schwinger-parameter integration radial derivatives flux and exponent solves
+  - independently supplied positive d r r0 nonzero inverse-kernel coefficient source strength probe strength and force sign
+  - momentum_kernels.py maxwell.py source_audit.py and verification.py pure APIs
+excluded_inputs:
+  - pending QCD5 or any circular source edge through D3S
+  - the rejected D3S mass-gap selection of s=1
+  - a metric measure Dirichlet form diffusion process or any identification of analytic d with a geometric dimension
+  - a dimensional lift gauge action charged ontology electromagnetic dictionary observed inverse-square law or substrate mechanism
+  - source regression values as a concept-selection criterion
+comparator_gate: >-
+  P134 and P135 had already executed and exposed EM7, so source blindness was
+  impossible. P136 froze the regime split, critical subtraction, competing
+  candidates, inverse-square nonidentifiability, dimension distinctions,
+  structural criteria, and physical ceilings before renewed source inspection.
+compatibility_event: none_in_EM7
+debt: []

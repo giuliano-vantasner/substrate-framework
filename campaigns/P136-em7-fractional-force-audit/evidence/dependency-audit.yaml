@@ -1,0 +1,34 @@
+campaign: P136
+source_unit: EM7
+declared_source_dependencies:
+  D3S:
+    disposition: qualified
+    accepted_mapping: [C-LOC-001, C-KRN-001]
+    authority: exact_declared_kernel_and_subcritical_Riesz_only_no_s_selection
+  EM3:
+    disposition: qualified
+    accepted_mapping: [C-GAU-001, C-KRN-001, C-MAX-001]
+    authority: supplied_Maxwell_action_and_source_normalized_integer_dimension_branches
+  QCD5:
+    disposition: pending_adjudication
+    authority: none
+accepted_claim_dependencies:
+  C-KRN-002: [C-KRN-001, C-MAX-001]
+closure:
+  C-KRN-001: accepted_in_v0.64.0
+  C-MAX-001: accepted_in_v0.102.0
+  current_base: v0.103.0
+circular_source_edges:
+  - EM7 declares D3S and D3S declares EM7
+  - EM7 declares QCD5 and QCD5 declares EM7
+declared_dependency_replay:
+  nodes: [D3S, EM3, QCD5]
+  checks: 31
+  all_exit_zero_with_terminal_tally: true
+  authority_granted_to_pending_or_circular_nodes: false
+interpretation: >-
+  C-KRN-002 is an exact continuation and conditional derivative theorem. It
+  does not borrow D3S's rejected gap-to-s selection or QCD5's pending dimension
+  overdetermination. C-MAX-001 supplies the independently governed d=2 and d=1
+  ordinary-Laplacian comparisons, not a fractional geometric mechanism.
+debt: []

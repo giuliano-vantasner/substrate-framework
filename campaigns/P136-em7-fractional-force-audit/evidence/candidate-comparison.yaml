@@ -1,0 +1,40 @@
+campaign: P136
+criteria_frozen_before_fresh_source_inspection: true
+source_blindness_available: false
+candidates:
+  A:
+    decision: partly_retained_as_source_evidence
+    reason: >-
+      All seventeen predicates reproduce, but only the declared-symbol
+      identities, subcritical formula, endpoint, and fixed-d counterexamples
+      survive their exact domain and interpretation ceilings.
+  B:
+    decision: selected_for_subcritical_surface
+    reason: >-
+      Accepted C-KRN-001 already supplies the exact subcritical kernel. P136
+      reuses it rather than duplicating normalization or silently extending it.
+  C:
+    decision: selected
+    reason: >-
+      Reference subtraction before the critical limit produces a finite exact
+      logarithm, exposes the divergent unsubtracted constant, and agrees with
+      the separately accepted d=2 Maxwell normalization.
+  D:
+    decision: selected
+    reason: >-
+      An explicit source-probe energy and force sign give the exact exponent
+      and show that inverse-square behavior selects d=2s+1, not one endpoint.
+  E:
+    decision: selected_as_scope_boundary
+    reason: >-
+      Analytic continuation in d is kept distinct from integer Euclidean,
+      Hausdorff, spectral, walk, metric-measure, and physical dimensions.
+  F:
+    decision: selected
+    reason: >-
+      Accepted dependencies, circular edges, reverse consumers, compatibility,
+      impact, novelty, source disposition, release, and generated state close
+      the claim without widening any pending source.
+selected_claim: C-KRN-002
+selection_not_based_on_comparator: true
+debt: []

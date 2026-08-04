@@ -381,3 +381,151 @@ def riesz_green_kernel(
         radial_power=sp.simplify(2 * power - dimension),
         radial_derivative=sp.simplify(sp.diff(green, radial)),
     )
+
+
+@dataclass(frozen=True)
+class CriticalRieszLogKernel:
+    r"""Reference-subtracted logarithmic limit at ``s=d/2``.
+
+    The un-subtracted subcritical Riesz kernel has a divergent constant as
+    ``s`` approaches ``d/2``. Subtracting its value at a positive reference
+    radius before taking the limit leaves a finite logarithmic difference.
+    For noninteger ``d`` this is an analytic continuation of the normalization,
+    not a construction of a fractal metric-measure space.
+    """
+
+    spatial_dimension: sp.Expr
+    critical_laplacian_power: sp.Expr
+    radius: sp.Symbol
+    reference_radius: sp.Expr
+    inverse_kernel_coefficient: sp.Expr
+    approach_parameter: sp.Symbol
+    reference_subtracted_subcritical_kernel: sp.Expr
+    raw_critical_limit: sp.Expr
+    logarithmic_normalization: sp.Expr
+    logarithmic_kernel: sp.Expr
+    limit_reconstruction_residual: sp.Expr
+    reference_residual: sp.Expr
+    radial_derivative: sp.Expr
+
+
+def critical_riesz_log_kernel(
+    spatial_dimension: Any,
+    radius: sp.Symbol,
+    reference_radius: Any,
+    inverse_kernel_coefficient: Any = 1,
+) -> CriticalRieszLogKernel:
+    r"""Derive the reference-subtracted ``s -> d/2`` Riesz limit.
+
+    Starting from the same inverse-Fourier convention as
+    :func:`riesz_green_kernel`, this returns
+
+    ``2*log(r0/r)/(A*4**(d/2)*pi**(d/2)*Gamma(d/2))``.
+
+    The subtraction fixes only a reference value; another reference changes
+    the kernel by a constant. A real continuation parameter ``d`` is not by
+    itself a geometric, Hausdorff, spectral, or walk dimension.
+    """
+
+    dimension = _positive(spatial_dimension, "spatial dimension")
+    radial = _symbol(radius, "radius")
+    if radial.is_positive is False:
+        raise ValueError("radius must not be known nonpositive")
+    reference = _positive(reference_radius, "reference radius")
+    coefficient = _nonzero(
+        inverse_kernel_coefficient, "inverse-kernel coefficient"
+    )
+    epsilon = sp.Symbol("epsilon", positive=True)
+    subcritical_power = dimension / 2 - epsilon
+    subcritical_normalization = (
+        sp.gamma(epsilon)
+        / (
+            coefficient
+            * 4**subcritical_power
+            * sp.pi ** (dimension / 2)
+            * sp.gamma(subcritical_power)
+        )
+    )
+    subtracted = sp.simplify(
+        subcritical_normalization
+        * (radial ** (-2 * epsilon) - reference ** (-2 * epsilon))
+    )
+    raw_limit = sp.simplify(sp.limit(subtracted, epsilon, 0, dir="+"))
+    reference_log = sp.log(reference / radial)
+    normalization = sp.simplify(raw_limit / reference_log)
+    logarithmic = sp.simplify(normalization * reference_log)
+    return CriticalRieszLogKernel(
+        spatial_dimension=dimension,
+        critical_laplacian_power=sp.simplify(dimension / 2),
+        radius=radial,
+        reference_radius=reference,
+        inverse_kernel_coefficient=coefficient,
+        approach_parameter=epsilon,
+        reference_subtracted_subcritical_kernel=subtracted,
+        raw_critical_limit=raw_limit,
+        logarithmic_normalization=normalization,
+        logarithmic_kernel=logarithmic,
+        limit_reconstruction_residual=sp.simplify(raw_limit - logarithmic),
+        reference_residual=sp.simplify(logarithmic.subs(radial, reference)),
+        radial_derivative=sp.simplify(sp.diff(logarithmic, radial)),
+    )
+
+
+@dataclass(frozen=True)
+class RieszRadialForceLedger:
+    r"""Conditional source-probe radial derivative of a subcritical kernel."""
+
+    kernel: RieszGreenKernel
+    source_strength: sp.Expr
+    probe_strength: sp.Expr
+    potential: sp.Expr
+    potential_energy: sp.Expr
+    radial_force: sp.Expr
+    force_radial_power: sp.Expr
+    inverse_square_dimension_family: sp.Expr
+    inverse_square_residual: sp.Expr
+
+
+def riesz_radial_force_law(
+    spatial_dimension: Any,
+    laplacian_power: Any,
+    radius: sp.Symbol,
+    source_strength: Any,
+    probe_strength: Any,
+    inverse_kernel_coefficient: Any = 1,
+) -> RieszRadialForceLedger:
+    r"""Return ``U=probe*source*G`` and ``F_r=-dU/dr`` conditionally.
+
+    The subcritical kernel domain remains ``0<s<d/2``. Its radial-force power
+    is ``2*s-d-1``; inverse-square behavior therefore fixes the family
+    ``d=2*s+1``, not either parameter separately. Treating this derivative as
+    a physical force requires the supplied source/probe dictionary and sign
+    convention.
+    """
+
+    kernel = riesz_green_kernel(
+        spatial_dimension,
+        laplacian_power,
+        radius,
+        inverse_kernel_coefficient,
+    )
+    source = sp.sympify(source_strength)
+    probe = sp.sympify(probe_strength)
+    potential = sp.simplify(source * kernel.green_kernel)
+    energy = sp.simplify(probe * potential)
+    force = sp.simplify(-sp.diff(energy, kernel.radius))
+    force_power = sp.simplify(
+        2 * kernel.laplacian_power - kernel.spatial_dimension - 1
+    )
+    inverse_square_dimension = sp.simplify(2 * kernel.laplacian_power + 1)
+    return RieszRadialForceLedger(
+        kernel=kernel,
+        source_strength=source,
+        probe_strength=probe,
+        potential=potential,
+        potential_energy=energy,
+        radial_force=force,
+        force_radial_power=force_power,
+        inverse_square_dimension_family=inverse_square_dimension,
+        inverse_square_residual=sp.simplify(force_power + 2),
+    )

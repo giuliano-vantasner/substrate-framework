@@ -3,9 +3,12 @@ from __future__ import annotations
 import pytest
 import sympy as sp
 
+from substrate_framework.maxwell import static_maxwell_point_source
 from substrate_framework.momentum_kernels import (
+    critical_riesz_log_kernel,
     leading_power_ledger,
     massive_parameter_kernel,
+    riesz_radial_force_law,
     riesz_green_kernel,
     spectral_moment_expansion,
 )
@@ -147,3 +150,134 @@ def test_riesz_kernel_is_sensitive_to_dimension_power_and_normalization() -> Non
         riesz_green_kernel(2, 1, radius)
     with pytest.raises(ValueError, match="Fourier"):
         riesz_green_kernel(3, 1, radius, fourier_convention="unitary")
+
+
+def test_critical_riesz_limit_is_reference_subtracted_before_limiting() -> None:
+    dimension, coefficient = sp.symbols("d A", positive=True)
+    radius, reference = sp.symbols("r r0", positive=True)
+    ledger = critical_riesz_log_kernel(
+        dimension,
+        radius,
+        reference,
+        coefficient,
+    )
+
+    expected_normalization = 2 / (
+        coefficient
+        * 4 ** (dimension / 2)
+        * sp.pi ** (dimension / 2)
+        * sp.gamma(dimension / 2)
+    )
+    assert ledger.limit_reconstruction_residual == 0
+    assert sp.simplify(
+        ledger.logarithmic_normalization - expected_normalization
+    ) == 0
+    assert sp.simplify(
+        ledger.logarithmic_kernel
+        - expected_normalization * sp.log(reference / radius)
+    ) == 0
+    assert ledger.reference_residual == 0
+    assert sp.simplify(
+        ledger.radial_derivative + expected_normalization / radius
+    ) == 0
+
+
+def test_critical_two_dimensional_kernel_matches_maxwell_log_branch() -> None:
+    radius, reference = sp.symbols("r r0", positive=True)
+    coefficient = sp.Symbol("kappa", positive=True)
+    source = sp.Symbol("Q", real=True)
+    critical = critical_riesz_log_kernel(2, radius, reference, coefficient)
+    maxwell = static_maxwell_point_source(
+        2,
+        radius,
+        source,
+        1,
+        coefficient,
+        reference_radius=reference,
+    )
+
+    assert sp.simplify(
+        critical.logarithmic_kernel
+        - sp.log(reference / radius) / (2 * sp.pi * coefficient)
+    ) == 0
+    assert sp.simplify(
+        source * critical.logarithmic_kernel - maxwell.potential
+    ) == 0
+    assert sp.simplify(
+        source * (-critical.radial_derivative)
+        - maxwell.radial_electric_field
+    ) == 0
+
+
+def test_subcritical_radial_force_exposes_inverse_square_family() -> None:
+    radius = sp.Symbol("r", positive=True)
+    source, probe, coefficient = sp.symbols("Q q A", real=True, nonzero=True)
+    power = sp.Rational(3, 4)
+    dimension = sp.Rational(5, 2)
+    ledger = riesz_radial_force_law(
+        dimension,
+        power,
+        radius,
+        source,
+        probe,
+        coefficient,
+    )
+
+    assert ledger.force_radial_power == -2
+    assert ledger.inverse_square_dimension_family == dimension
+    assert ledger.inverse_square_residual == 0
+    assert sp.simplify(
+        ledger.radial_force
+        + sp.diff(ledger.potential_energy, radius)
+    ) == 0
+
+
+def test_coulomb_force_specialization_matches_conditional_maxwell_branch() -> None:
+    radius = sp.Symbol("r", positive=True)
+    source, probe = sp.symbols("Q q", real=True)
+    coefficient = sp.Symbol("kappa", positive=True)
+    fractional = riesz_radial_force_law(
+        3,
+        1,
+        radius,
+        source,
+        probe,
+        coefficient,
+    )
+    maxwell = static_maxwell_point_source(
+        3,
+        radius,
+        source,
+        probe,
+        coefficient,
+    )
+
+    assert sp.simplify(fractional.potential - maxwell.potential) == 0
+    assert sp.simplify(
+        fractional.potential_energy - maxwell.potential_energy
+    ) == 0
+    assert sp.simplify(fractional.radial_force - maxwell.radial_force) == 0
+    assert fractional.inverse_square_dimension_family == 3
+
+
+def test_reference_source_and_probe_inputs_remain_visible() -> None:
+    radius, reference_a, reference_b = sp.symbols(
+        "r r_a r_b", positive=True
+    )
+    critical_a = critical_riesz_log_kernel(2, radius, reference_a)
+    critical_b = critical_riesz_log_kernel(2, radius, reference_b)
+    assert sp.simplify(
+        sp.diff(
+            critical_a.logarithmic_kernel
+            - critical_b.logarithmic_kernel,
+            radius,
+        )
+    ) == 0
+    assert critical_a.logarithmic_kernel != critical_b.logarithmic_kernel
+
+    zero_source = riesz_radial_force_law(3, 1, radius, 0, 1)
+    zero_probe = riesz_radial_force_law(3, 1, radius, 1, 0)
+    assert zero_source.potential == 0
+    assert zero_source.radial_force == 0
+    assert zero_probe.potential != 0
+    assert zero_probe.radial_force == 0

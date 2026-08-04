@@ -1,0 +1,21 @@
+campaign: P136
+claim: C-KRN-002
+derivation_provenance:
+  primary: exact limit of the accepted subcritical Riesz normalization after reference subtraction plus explicit source-probe radial differentiation
+  independent: fresh Schwinger-parameter Gaussian Fourier inversion d=2 radial flux d=1 distributional derivative and exponent solve
+  external_formula_dependency: >-
+    No new external formula is imported. C-KRN-001 supplies the accepted
+    subcritical Riesz normalization; P136 derives the critical limit and force
+    ledger from it. No empirical constant or source comparator enters.
+primary_sources:
+  - title: accepted framework claim C-KRN-001
+    purpose: fixed inverse-Fourier convention and exact subcritical Riesz kernel
+    limit: excludes the critical and supercritical regimes and all geometric or physical selection
+  - title: accepted framework claim C-MAX-001
+    purpose: independent d=2 radial-flux logarithm and d=1 distributional ordinary-Laplacian boundary comparison
+    limit: supplies no fractional operator or dimension-changing mechanism
+reason: >-
+  The promoted equations are exact consequences of accepted claims and fresh
+  independent derivations. The hash-pinned EM7 source is audited comparator
+  evidence and does not supply authority.
+debt: []

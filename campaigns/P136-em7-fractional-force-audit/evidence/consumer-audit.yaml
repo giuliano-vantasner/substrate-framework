@@ -1,0 +1,41 @@
+campaign: P136
+root_source_unit: EM7
+authority_warning: >-
+  Replaying a source consumer proves only that its pinned predicates execute.
+  No pending consumer gains a dimension lift, gauge sector, physical force,
+  endpoint selection, or substrate premise from EM7 or C-KRN-002.
+reverse_consumers:
+  - {source_unit: EM5, disposition: qualified, checks: 11}
+  - {source_unit: M1, disposition: pending_adjudication, checks: 9}
+  - {source_unit: YM1, disposition: pending_adjudication, checks: 9}
+  - {source_unit: YM2, disposition: pending_adjudication, checks: 10, compatibility: alias_only}
+  - {source_unit: QCD1, disposition: pending_adjudication, checks: 11}
+  - {source_unit: QCD2, disposition: pending_adjudication, checks: 10, compatibility: alias_only}
+  - {source_unit: QCD5, disposition: pending_adjudication, checks: 7, role: dependency_and_consumer}
+  - {source_unit: CF2, disposition: qualified, checks: 15}
+  - {source_unit: CF3, disposition: qualified, checks: 6}
+  - {source_unit: D3S, disposition: qualified, checks: 13, role: dependency_and_consumer}
+  - {source_unit: GK1, disposition: pending_adjudication, checks: 11}
+replay:
+  consumer_scripts: 11
+  consumer_checks: 112
+  declared_dependency_scripts: 3
+  declared_dependency_checks: 31
+  unique_scripts_including_root: 13
+  total_checks: 140
+  exit_statuses_all_zero: true
+  terminal_tallies_all_present: true
+python_dependency_audit:
+  executable_imports_of_EM7: 0
+  relationship: lexical_provenance_and_locally_duplicated_formulas
+compatibility_preflight:
+  YM2: {mode: alias_only, dynamic_np_trapz_references: 1, eager_default_fallbacks: 1}
+  QCD2: {mode: alias_only, dynamic_np_trapz_references: 1, eager_default_fallbacks: 1}
+  all_other_nodes: native
+  mutable_framework_np_trapz_references: 0
+interpretation: >-
+  Qualified EM5, CF2, CF3, and D3S retain their prior claim-specific ceilings.
+  CF2's linear fixed-tube theorem and CF3's conditional Wilson-law consequences
+  do not need EM7 authority. The remaining consumers stay pending, and their
+  locally duplicated formulas do not repair EM7's domain or geometry defects.
+debt: []

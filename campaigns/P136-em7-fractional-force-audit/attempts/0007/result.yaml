@@ -1,0 +1,27 @@
+campaign: P136
+attempt: 0007
+status: passed
+candidate: C+D+E
+command: >-
+  Run the repaired independent critical-Riesz review and focused
+  momentum-kernel/Maxwell package tests after the primary verifier passed.
+expected: >-
+  Independently reproduce the subcritical normalization, critical subtraction,
+  d=2 flux, d=1 distributional branch, inverse-square family, and mutations,
+  while preserving the accepted package surface.
+result:
+  exit_status: 0
+  primary_tally_from_same_implementation: ALL 29 CHECKS PASS
+  independent_tally: ALL 15 CHECKS PASS
+  focused_tests: 22 passed
+  exact_findings:
+    - the critical limit is finite only after reference subtraction
+    - the d=2 result is log(r0/r)/(2*pi*A) with unit source flux
+    - the d=1 ordinary branch is distributional and outside the subcritical Riesz integral
+    - inverse-square behavior selects d=2s+1 rather than either parameter alone
+    - a noninteger pair (s,d)=(9/10,14/5) is an exact subcritical inverse-square counterexample
+classification: exact_symbolic_and_independent_verification
+compatibility_event: none
+next_attempt: >-
+  Freeze and replay the accepted dependency closure and hash-pinned source
+  consumer graph before claim-level adjudication.

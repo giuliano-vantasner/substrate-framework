@@ -1,0 +1,22 @@
+campaign: P136
+attempt: 0006
+status: failed
+candidate: C
+command: >-
+  Rerun the primary EM7 verifier, independent critical-Riesz derivation, and
+  focused package tests after replacing the line-wrapped geometry oracle.
+expected: >-
+  Pass both exact derivations and the focused regression surface.
+result:
+  exit_status: 1
+  primary_tally: ALL 29 CHECKS PASS
+  independent_passed_before_failure: 5
+  failure: >-
+    The independent d=2 expression used expanded logarithms while the display
+    oracle required log(r0/r) as one expression tree. Its simplified difference
+    and the independently differentiated unit radial flux are exact.
+classification: independent_symbolic_log_normal_form_oracle
+compatibility_event: none
+next_attempt: >-
+  Compare the exact simplified logarithmic residual, retaining the independent
+  radial-flux normalization and all mutation checks unchanged.

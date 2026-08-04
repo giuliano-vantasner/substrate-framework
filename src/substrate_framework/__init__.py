@@ -137,6 +137,20 @@ from .maxwell import (
     maxwell_euler_lagrange,
     static_maxwell_point_source,
 )
+from .momentum_kernels import (
+    CriticalRieszLogKernel,
+    LeadingPowerLedger,
+    MassiveParameterKernel,
+    RieszGreenKernel,
+    RieszRadialForceLedger,
+    SpectralMomentExpansion,
+    critical_riesz_log_kernel,
+    leading_power_ledger,
+    massive_parameter_kernel,
+    riesz_green_kernel,
+    riesz_radial_force_law,
+    spectral_moment_expansion,
+)
 from .vacuum_polarization import (
     EuclideanTransverseProjector,
     ScalarQED2VacuumPolarization,

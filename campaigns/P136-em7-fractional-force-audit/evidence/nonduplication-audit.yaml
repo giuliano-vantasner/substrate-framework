@@ -1,0 +1,22 @@
+campaign: P136
+proposed_claim: C-KRN-002
+registry_search: >-
+  C-KRN-001 stops at 0<s<d/2 and explicitly excludes the critical slice,
+  reference subtraction, source/probe force dictionary, and parameter
+  selection. C-MAX-001 gives only ordinary-Laplacian integer-d branches.
+nearest_claims:
+  C-KRN-001:
+    overlap: fixed Fourier convention subcritical gamma normalization radial power and Coulomb endpoint
+    missing_from_nearest: critical reference-subtracted limit divergence reference covariance and source-probe inverse-square family
+  C-MAX-001:
+    overlap: d=2 logarithm d=1 linear branch d=3 Coulomb branch and optional test-charge force dictionary
+    missing_from_nearest: fractional operator critical approach analytic-d normalization and d=2s+1 nonidentifiability
+  C-LOC-001:
+    overlap: exact consequences of separately declared kernels
+    missing_from_nearest: Riesz Fourier normalization critical continuation and radial source-probe theorem
+decision: distinct_claim
+implementation_reuse:
+  extended: [momentum_kernels.py]
+  unchanged: [maxwell.py, source_audit.py, verification.py]
+  duplicated_constants_or_solvers: false
+debt: []

@@ -1,0 +1,23 @@
+campaign: P136
+attempt: 0005
+status: failed
+candidate: E
+command: >-
+  Run the primary EM7 claim verifier, independent critical-Riesz review, and
+  focused momentum-kernel/Maxwell tests after the exact log-oracle repair.
+expected: >-
+  Classify all seventeen source predicates and establish the subcritical,
+  critical, force-family, domain, geometry, and mutation-sensitive ceilings.
+result:
+  exit_status: 1
+  passed_before_failure: 26 primary checks
+  failure: >-
+    The geometry-ceiling check searched for one line-wrapped prose phrase as a
+    contiguous string. The executable source contained the meaning but not that
+    byte sequence, so the lexical oracle failed before the independent review.
+classification: source_text_line_wrapping_oracle
+compatibility_event: none
+next_attempt: >-
+  Inspect executable AST identifiers directly and require the declared d/s
+  scalar machinery while confirming that no metric, measure, diffusion,
+  Dirichlet-form, or geometry-construction object is instantiated.

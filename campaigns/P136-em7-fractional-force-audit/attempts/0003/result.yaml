@@ -1,0 +1,20 @@
+campaign: P136
+attempt: 0003
+status: failed
+candidate: C
+command: >-
+  Apply the additive critical-Riesz and radial-force APIs, package exports, and
+  focused tests in one atomic patch.
+expected: >-
+  Add a reference-subtracted critical limit and explicit source-probe force
+  ledger without changing C-KRN-001 behavior.
+result:
+  exit_status: 1
+  error: >-
+    The package-export block ordering did not match the assumed patch anchor,
+    so apply_patch rejected the entire transaction and changed no files.
+classification: implementation_patch_context_assumption
+compatibility_event: none
+next_attempt: >-
+  Inspect the exact export and test import blocks, then apply the module,
+  exports, and tests as separately anchored patches before running any oracle.

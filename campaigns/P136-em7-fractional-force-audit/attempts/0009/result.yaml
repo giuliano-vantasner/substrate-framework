@@ -1,0 +1,26 @@
+campaign: P136
+attempt: 0009
+status: passed
+candidate: B+C+D+E+F
+command: >-
+  Run the single integrated promotion gate through scripts/validate.sh after
+  exact verifiers focused tests source-graph replay governance generation and
+  memory synchronization have passed.
+expected: >-
+  Validate mutable NumPy compatibility policy, campaign evidence, registry and
+  release closure, generated queue/docs/memory, all targeted and repository
+  tests, memory/skill contracts, and a clean diff without duplicating the full
+  pytest run already contained in the integrated gate.
+result:
+  exit_status: 0
+  workflow: WORKFLOW VALID 139 claims 139 accepted 0 proposals
+  migration_queue: 218 units 84 pending 0 partial
+  memory: 551 records valid
+  skill: valid
+  full_pytest: 1144 passed in 111.13s
+  terminal_tally: ALL REPOSITORY WORKFLOW CHECKS PASS
+classification: final_integrated_promotion_gate
+compatibility_event: immutable_alias_only_for_YM2_and_QCD2
+next_attempt: >-
+  Commit the accepted P136 transaction, refresh the post-commit code graph,
+  checkpoint the parent migration, and continue with the next pending unit.

@@ -1,0 +1,51 @@
+campaign: P136
+source_unit: EM7
+source_sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22
+dossier_sha256: fba9dc6196d080689cc8345f65ef55ca474beb74e7f7feb97c8797daf61dbf67
+exact_surfaces:
+  - the Fourier-symbol plane-wave relation and s=1 ordinary-symbol specialization are conditional identities
+  - the subcritical Riesz exponent normalization and radial derivative are exact for r>0 and 0<s<d/2 in the declared convention
+  - the d=3 s=1 endpoint is exactly 1/(4*pi*r)
+  - after declaring source probe and force sign the subcritical force exponent is 2s-d-1
+corrected_positive_surface:
+  - >-
+    With s=d/2-epsilon, subtracting the subcritical kernel at positive r0
+    before epsilon tends to zero gives
+    2*log(r0/r)/[A*4^(d/2)*pi^(d/2)*Gamma(d/2)].
+  - >-
+    The unsubtracted critical kernel diverges. Changing r0 adds only a
+    constant, and at d=2 the result is log(r0/r)/(2*pi*A), matching the
+    accepted source-normalized Maxwell logarithm.
+  - >-
+    If U=q*Q*G and F_r=-dU/dr are separately declared, inverse-square behavior
+    selects the family d=2s+1. The subcritical noninteger pair
+    (s,d)=(9/10,14/5) is an exact counterexample to endpoint uniqueness.
+rejected_or_qualified_surfaces:
+  - >-
+    The source's d=2 logarithm predicate is only 2*1==2; it derives no
+    subtraction, reference, normalization, or flux.
+  - >-
+    The d=1 s=1 ordinary Green function is supercritical relative to the
+    source's Riesz integral. Its linear full-line branch is distributional and
+    requires separate homogeneous or boundary data.
+  - >-
+    The force polyfit differentiates hard-coded unnormalized powers. Its d=1
+    s=1 case is outside the subcritical domain, and real d=2.5 is only an
+    analytic parameter because no metric-measure space is constructed.
+  - >-
+    The FFT Green residual uses supercritical d=1 s=3/4, a smoothed cusp, one
+    periodic box, and a near-origin peak ratio. It does not validate the
+    standard subcritical Riesz distribution.
+  - >-
+    The three s=0.9 guards hold d=3 fixed. They show that one supplied endpoint
+    is not Coulomb but cannot select d=3 or s=1 from the full family.
+  - >-
+    A gamma-function continuation in real d does not construct a measure,
+    metric, Dirichlet form, diffusion generator, Hausdorff dimension, spectral
+    dimension, walk dimension, or physical fractal medium.
+  - >-
+    The D3S annotation and QCD5 dependency are nonauthoritative and circular.
+    Accepted D3S did not derive s=1 from a mass gap, and QCD5 is pending.
+source_disposition: qualified
+claim_mapping: [C-KRN-001, C-MAX-001, C-KRN-002]
+debt: []

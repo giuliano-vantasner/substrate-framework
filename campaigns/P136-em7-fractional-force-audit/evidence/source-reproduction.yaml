@@ -1,0 +1,24 @@
+campaign: P136
+source_unit: EM7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py
+sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22
+dossier_path: merged-framework/bridges/phase-3/dossiers/EM7-dossier.md
+dossier_sha256: fba9dc6196d080689cc8345f65ef55ca474beb74e7f7feb97c8797daf61dbf67
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py
+exit_status: 0
+terminal_tally: ALL 17 CHECKS PASS
+ast:
+  check_calls: 17
+  assertions: 1
+  imports: [numpy, sympy, scipy.special]
+compatibility:
+  direct_np_trapz: 0
+  dynamic_np_trapz: 0
+  imported_trapz: 0
+  eager_legacy_default_fallbacks: 0
+  np_trapezoid: 0
+  replay_mode: native
+authority: noncanonical_reproduction_only

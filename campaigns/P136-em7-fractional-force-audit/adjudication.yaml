@@ -1,0 +1,52 @@
+campaign: P136
+title: Critical Riesz logarithm conditional force family and EM7 audit
+source_baseline: substrate@6d1f4e0
+source_units: [EM7]
+base_release: v0.103.0
+adjudicated_at: '2026-08-09T05:40:00Z'
+selected_candidates:
+  - {id: B, reason: Accepted C-KRN-001 supplies the exact subcritical surface without duplication or domain widening.}
+  - {id: C, reason: Reference subtraction before the critical limit supplies the missing finite logarithm normalization and divergence ceiling.}
+  - {id: D, reason: Explicit source probe energy and force sign expose the complete inverse-square family and endpoint nonidentifiability.}
+  - {id: E, reason: Analytic dimension continuation remains separate from a constructed geometry or physical dimension.}
+  - {id: F, reason: Dependency consumer compatibility impact novelty and generated-state replay close the transaction.}
+competing_candidates:
+  - {id: A, decision: retained_only_for_individually_surviving_predicates}
+claims:
+  - id: C-KRN-002
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+evidence:
+  exact_verifier: verify.py
+  independent_rederivation: reviews/independent_critical_riesz_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_scientific_attempt: attempts/0007/result.yaml
+  passing_consumer_attempt: attempts/0008/result.yaml
+  integrated_promotion_gate: attempts/0009/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-KRN-002-review.md
+  source_review: memory/vantasner/decisions/EM7-qualified-review.md
+source_disposition:
+  EM7: qualified
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_no_numeric_integration
+  immutable_source_alias_only: [YM2, QCD2]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P136-em7-fractional-force-audit/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P136-em7-fractional-force-audit/reviews/independent_critical_riesz_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P136-em7-fractional-force-audit/reviews/replay_source_graph.py --source-root <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_momentum_kernels.py tests/test_maxwell.py
+debt: []
+status: accepted

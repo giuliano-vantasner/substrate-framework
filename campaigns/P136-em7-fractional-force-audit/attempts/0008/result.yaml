@@ -1,0 +1,25 @@
+campaign: P136
+attempt: 0008
+status: passed
+candidate: F
+command: >-
+  Replay the frozen EM7 dependency and direct reverse-consumer graph from the
+  pinned source baseline with compatibility preflight.
+expected: >-
+  Reproduce every hash-pinned source tally, isolate version-only NumPy
+  compatibility, and grant no authority through circular or pending edges.
+result:
+  exit_status: 0
+  replay_nodes: 13
+  replayed_predicates: 140
+  terminal_tallies_present: 13
+  native_nodes: 11
+  alias_only_nodes: [YM2, QCD2]
+  circular_edges:
+    - EM7 declares D3S while D3S declares EM7
+    - EM7 declares QCD5 while QCD5 declares EM7
+classification: complete_hash_pinned_source_graph_replay
+compatibility_event: immutable_alias_only_for_YM2_and_QCD2
+next_attempt: >-
+  Complete claim-by-claim source adjudication, accepted dependency closure,
+  candidate comparison, nonduplication, governance, and the integrated gate.

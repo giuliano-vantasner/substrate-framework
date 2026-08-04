@@ -1,0 +1,28 @@
+campaign: P136
+source_unit: EM7
+checks:
+  - {id: EM7.i-a, status: retained_as_definition_only, mapping: C-KRN-001, reason: Plane-wave multiplication by |k|^(2s) follows from defining the operator by that Fourier symbol; it does not construct a medium or select s.}
+  - {id: EM7.i-b, status: retained_conditionally, mapping: C-KRN-001, reason: Substituting s=1 gives the ordinary |k|^2 symbol, conditional on the declared operator family.}
+  - {id: EM7.ii-a, status: retained_with_domain, mapping: C-KRN-001, reason: The exponent 2s-d is exact for the subcritical Riesz kernel in the fixed convention, not across the critical or supercritical regimes.}
+  - {id: EM7.iii-a, status: retained_with_domain, mapping: C-KRN-001, reason: The two gamma-function spellings are algebraically identical under the accepted subcritical convention.}
+  - {id: EM7.iii-b, status: retained_as_numeric_formula_evaluation, mapping: C-KRN-001, reason: SciPy evaluates selected valid constants but does not independently derive the normalization.}
+  - {id: EM7.iv-a, status: retained_exactly, mapping: C-KRN-001, reason: The valid d=3 s=1 endpoint gives c=1/(4*pi).}
+  - {id: EM7.iv-b, status: retained_as_numeric_regression, mapping: C-KRN-001, reason: The floating-point value agrees with the already exact endpoint and adds no independent authority.}
+  - {id: EM7.iv-c, status: retained_conditionally, mapping: C-KRN-001, reason: The supplied d=3 s=1 kernel equals the accepted Coulomb Green function but does not derive the endpoint or a physical sector.}
+  - {id: EM7.v-a, status: retained_with_force_dictionary, mapping: C-KRN-002, reason: Differentiation gives exponent 2s-d-1 only after source strength probe energy and radial-force sign are declared.}
+  - {id: EM7.v-b, status: qualified_numeric_regression, mapping: C-KRN-002, reason: Polyfit regresses hard-coded unnormalized powers and includes d=1 s=1 outside the subcritical domain plus a noninteger analytic d without a constructed space.}
+  - {id: EM7.vi-a, status: rejected_as_single_riesz_regime, mapping: C-MAX-001, reason: The d=1 ordinary branch is supercritical and requires a separate distributional and boundary prescription; the d=3 endpoint is subcritical.}
+  - {id: EM7.vi-b, status: rejected_as_derivation, mapping: C-KRN-002, reason: The source checks only the Boolean 2*1==2 and supplies no reference subtraction limit or logarithmic normalization.}
+  - {id: EM7.vii-a, status: retained_as_numeric_definition_regression, mapping: C-KRN-001, reason: The FFT applies the declared symbol to a packet and checks an approximation; it cannot validate the physical or geometric interpretation.}
+  - {id: EM7.viii-a, status: rejected_as_riesz_green_validation, mapping: null, reason: The d=1 s=3/4 example is supercritical, smooths the cusp, uses one periodic box, and normalizes to a near-origin peak rather than testing the standard subcritical distributional theorem.}
+  - {id: EM7.ix-a, status: retained_as_fixed_dimension_counterexample, mapping: C-KRN-002, reason: At fixed d=3 the s=0.9 potential is not Coulomb, but this does not exclude other d=2s+1 inverse-square pairs.}
+  - {id: EM7.ix-b, status: retained_as_fixed_dimension_counterexample, mapping: C-KRN-002, reason: The hard-coded slope distinguishes s=0.9 from s=1 only after d=3 has already been fixed.}
+  - {id: EM7.ix-c, status: retained_as_fixed_dimension_counterexample, mapping: C-KRN-002, reason: The symbol differs at fixed d and k but supplies no reason the physical endpoint must use s=1.}
+headline_decision: >-
+  Accept the exact critical reference-subtracted Riesz limit and conditional
+  source-probe force family as C-KRN-002. Qualify EM7: it reproduces valid
+  subcritical algebra and the Coulomb endpoint, but it does not put the d=1,
+  d=2, and d=3 branches inside one convergent regime, construct a fractal
+  geometry, select d or s, lift dimension, produce a gauge field, or establish
+  a physical force or substrate mechanism.
+debt: []

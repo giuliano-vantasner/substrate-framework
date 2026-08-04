@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 85
-  qualified: 121
+  pending_adjudication: 84
+  qualified: 122
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -831,8 +831,47 @@ units:
   dynamic_check_calls: 4
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-KRN-001
+  - C-MAX-001
+  - C-KRN-002
+  qualification: EM7's hash-pinned seventeen predicates reproduce. Its declared Fourier- symbol plane-wave
+    relation, exact subcritical Riesz exponent and normalization, radial derivative, and d=3 s=1 Coulomb
+    endpoint survive under explicit domain and convention ceilings. The d=2 predicate is only the Boolean
+    2s=d and derives no reference subtraction, logarithmic normalization, or flux. The d=1 s=1 branch
+    and d=1 s=3/4 FFT residual lie outside 0<s<d/2 and require separate distributional or boundary prescriptions;
+    the latter also smooths the cusp and uses one periodic box. The numeric force sweep regresses hard-coded
+    unnormalized powers. C-KRN-002 supplies the exact critical reference-subtracted logarithm and an explicit
+    source-probe force ledger. Inverse-square behavior selects d=2s+1, not one endpoint. A gamma-function
+    parameter d does not construct a metric-measure or fractal space. D3S and QCD5 are circular source
+    edges; accepted D3S does not select s=1 and QCD5 remains pending. No dimensional lift, gauge action,
+    charged ontology, physical force, observation, or substrate mechanism is established.
+  evidence:
+  - campaigns/P136-em7-fractional-force-audit/reviews/source_adjudication.md
+  - campaigns/P136-em7-fractional-force-audit/evidence/source-reproduction.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/source-audit.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/check-adjudication.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/input-provenance.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/dependency-audit.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/consumer-audit.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/candidate-comparison.yaml
+  - campaigns/P136-em7-fractional-force-audit/evidence/primary-provenance.yaml
+  - campaigns/P136-em7-fractional-force-audit/verify.py
+  - campaigns/P136-em7-fractional-force-audit/reviews/independent_critical_riesz_review.py
+  - campaigns/P136-em7-fractional-force-audit/reviews/replay_source_graph.py
+  - campaigns/P136-em7-fractional-force-audit/attempts/0005/result.yaml
+  - campaigns/P136-em7-fractional-force-audit/attempts/0006/result.yaml
+  - campaigns/P136-em7-fractional-force-audit/attempts/0007/result.yaml
+  - campaigns/P136-em7-fractional-force-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/C-KRN-002-review.md
+  - memory/vantasner/decisions/EM7-qualified-review.md
+  note: P136 promotes the distinct critical-Riesz and conditional force-family theorem through twenty-nine
+    primary and fifteen independent exact checks, plus twenty-two focused package tests. The thirteen-node
+    immutable graph replays 140 predicates. YM2 and QCD2 receive alias-only compatibility for eager legacy
+    np.trapz defaults; mutable code uses current integration APIs.
 - source_unit: S1
   phase: phase-4
   path: merged-framework/bridges/phase-4/bridge_S1_nn_force_two_skyrmion.py

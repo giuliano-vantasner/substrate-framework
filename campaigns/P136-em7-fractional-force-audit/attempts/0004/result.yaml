@@ -1,0 +1,24 @@
+campaign: P136
+attempt: 0004
+status: failed
+candidate: C
+command: >-
+  Run focused momentum-kernel and Maxwell tests for the new critical and radial
+  force ledgers.
+expected: >-
+  Derive the critical limit, match the d=2 Maxwell logarithm, expose the
+  inverse-square family, and preserve all existing kernel and Maxwell tests.
+result:
+  exit_status: 1
+  passed_before_failure_summary: 21 tests passed and 1 failed
+  failure: >-
+    The d=2 comparison demanded structural equality between
+    (-log(r)+log(r0))/(2*pi*kappa) and log(r0/r)/(2*pi*kappa). SymPy did not
+    canonicalize the positive-symbol logarithm quotient to the same tree even
+    though their simplified difference is zero.
+classification: symbolic_log_normal_form_oracle
+compatibility_event: none
+next_attempt: >-
+  Compare the exact simplified residual rather than expression-tree equality,
+  then rerun the unchanged focused suite without weakening any domain or
+  coefficient assertion.

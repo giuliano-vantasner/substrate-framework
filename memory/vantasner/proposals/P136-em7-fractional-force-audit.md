@@ -2,11 +2,11 @@
 description: Audit EM7's fractional-Laplacian force family and dimensional interpretation
 author: vantasner
 created: '2026-08-09T05:20:00Z'
-updated: '2026-08-09T05:20:00Z'
+updated: '2026-08-09T05:40:00Z'
 tags: [substrate-framework, campaign-proposal, riesz-kernel, fractional-laplacian, migration-EM7]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P136 EM7 Fractional Force Audit
 
@@ -127,11 +127,13 @@ on a future queue state or mutable current release.
 
 ## Attempts and Continuation
 
-Attempt 0001 freezes this contract and records the prior-exposure limitation
-before renewed EM7 inspection. Every failed domain limit, normalization,
-source-replay, independent route, or governance operation will be preserved
-with its mechanism and next materially different repair. Failure of literal
-EM7 triggers Candidates B through F; it cannot complete the positive object.
+The attempt sequence preserves the successful freeze and native seventeen-
+check reproduction; the atomic patch-context failure; the primary and
+independent logarithmic expression-tree oracle failures; the line-wrapped
+source-text oracle failure; and their exact residual-based repairs. The final
+primary route passes twenty-nine checks, the fresh Schwinger/Gaussian route
+passes fifteen, focused tests pass twenty-two, and the thirteen-node source
+graph replays 140 predicates.
 
 ## Debt Ledger
 
@@ -142,33 +144,32 @@ physical scope.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| EM7 executable surface is not freshly audited | Hash, execute, AST/data-flow audit, and map all seventeen predicates | open |
-| One formula may mix three domain regimes | Separate subcritical, critical, and supercritical constructions with exact hypotheses | open |
-| Critical logarithm may be an unsupported limit | Derive the reference-subtracted limit and normalization independently | open |
-| Fractional dimension may be only a relabeled parameter | Inventory the actual space, measure, operator, and dimension definitions or retain a no-geometry ceiling | open |
-| Inverse-square endpoint may be hard-coded | Solve the full `d,s` family and mutate both inputs | open |
-| Source, probe, and force signs are untyped | Declare the energy/force dictionary and test zero and sign limits | open |
-| Dependencies, consumers, and novelty are unknown | Audit D3S/EM3/QCD5, reverse consumers, accepted APIs, and graph impact | open |
-| Registry, release, docs, queue, and memory are unsynchronized | Promote only distinct reviewed claims or close exact composition, then regenerate governed state | open |
+| EM7 executable surface is not freshly audited | Hash, execute, AST/data-flow audit, and map all seventeen predicates | closed by native reproduction and predicate adjudication |
+| One formula may mix three domain regimes | Separate subcritical, critical, and supercritical constructions with exact hypotheses | closed by C-KRN-001/C-KRN-002/C-MAX-001 regime split |
+| Critical logarithm may be an unsupported limit | Derive the reference-subtracted limit and normalization independently | closed by exact primary and Schwinger/Gaussian routes |
+| Fractional dimension may be only a relabeled parameter | Inventory the actual space, measure, operator, and dimension definitions or retain a no-geometry ceiling | closed by analytic-parameter ceiling; EM7 constructs no geometry |
+| Inverse-square endpoint may be hard-coded | Solve the full `d,s` family and mutate both inputs | closed by d=2s+1 and the valid (9/10,14/5) counterexample |
+| Source, probe, and force signs are untyped | Declare the energy/force dictionary and test zero and sign limits | closed by the canonical conditional force ledger and mutations |
+| Dependencies, consumers, and novelty are unknown | Audit D3S/EM3/QCD5, reverse consumers, accepted APIs, and graph impact | closed by thirteen-node replay and claim-level audits |
+| Registry, release, docs, queue, and memory are unsynchronized | Promote only distinct reviewed claims or close exact composition, then regenerate governed state | closed by the v0.104.0 promotion transaction |
 
-## Review and Promotion Plan
+## Review and Promotion Outcome
 
-C-KRN-002 receives an individual review only if the critical theorem is
-distinct, exact, sensitive, and independently derived. Source adjudication
-separately classifies EM7. Reusable logic moves into the existing momentum-
-kernel module with focused tests; literal orchestration stays in P136. A
-terminal qualification or duplicate decision must name every surviving
-accepted mapping and rejected physical clause. Any release, queue, generated
-documentation, and memory transaction is validated once at the changed
-boundary.
+C-KRN-002 passes individual review as a symbolic-verified compatible extension
+depending on C-KRN-001 and C-MAX-001. Source adjudication separately qualifies
+EM7 and rejects its constructive geometric and dimensional-lift headline.
+Reusable logic lives in the existing pure momentum-kernel module with focused
+tests; literal source orchestration remains in P136. The disposition, registry,
+release, generated documentation, queue, and generated memory are synchronized
+in the promotion transaction.
 
 ## Done Gate
 
-P136 closes only with the positive critical/composition object, claim-level
-review if needed, terminal EM7 disposition, sensitive exact evidence,
-dependency and consumer replay, synchronized governance, and an empty campaign
-ledger. A source no-go or unsupported fractal headline is attempt evidence and
-does not by itself finish the campaign.
+P136 closes with the positive critical Riesz and conditional force-family
+object, claim-level review, terminal EM7 qualification, sensitive primary and
+independent exact evidence, dependency and consumer replay, synchronized
+governance, and an empty campaign ledger. The rejected fractal headline is
+retained as evidence and is not presented as the campaign's success.
 
 ## Cross-References
 
