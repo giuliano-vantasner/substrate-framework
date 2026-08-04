@@ -1,0 +1,31 @@
+attempt: 0001
+campaign: P169
+candidate: source_body_unopened_freeze_with_prior_exposure
+status: passed
+started_at: '2026-08-10T23:40:00Z'
+finished_at: '2026-08-10T23:44:00Z'
+base_release: v0.127.0
+base_commit: fb9ac94
+source_unit:
+  id: CF3
+  path: merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+  sha256: 8655579ef3173730c315d60aa821f7085cc131920ae49cb93c60b075d884889d
+dossier:
+  path: merged-framework/bridges/phase-10/dossiers/CF3-dossier.md
+  sha256: bc60b4f1fe46a8a38646839c398ad4c31b203518907ff7853a99fb1f22db3cae
+source_checkout:
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  pinned_paths_clean: true
+  unrelated_worktree_changes_present: true
+actions:
+  - retained_the_loaded_physics_skill_governance_oracle_and_campaign_contract
+  - read_v0_127_0_C-LIE-002_C-WIL-001_and_separate_C-FLX-001_boundary
+  - searched_local_memory_and_identified_P028_as_the_existing_CF3_result
+  - audited_hash_identical_accepted_SU3_Wilson_modules_tests_and_P028_evidence
+  - froze_eight_candidates_and_structural_selection_criteria
+source_body_opened_by_P169_before_freeze: false
+prior_source_exposure: P028_accepted_claims_durable_memory_generated_queue_and_prior_graph_replays
+scientific_result: none_pre_freeze
+debt:
+  - validate_and_commit_the_freeze_before_renewed_source_or_dossier_body_audit
+next_attempt: frozen_manifest_validation_and_commit

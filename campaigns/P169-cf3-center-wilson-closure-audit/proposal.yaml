@@ -1,0 +1,59 @@
+id: P169
+base_release: v0.127.0
+base_commit: fb9ac94
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CF3]
+question: >-
+  Does hash-pinned CF3 close exactly through C-LIE-002 and C-WIL-001
+  while keeping full-center proof, abstract triality, and the conditional
+  consequences of separately declared area and perimeter loop laws distinct
+  from physical representation, screening, string-tension, QCD confinement,
+  and substrate claims?
+invariants:
+  - The complete center follows from the full fundamental commutant intersected with unitary determinant-one matrices, not from exhibiting three central elements.
+  - Area-law and perimeter-law expectations are independent premises and center algebra alone selects neither.
+  - Triality is an abstract center character unless a physical representation map is separately accepted.
+  - C-WIL-001 extracts conditional large-time potentials but derives no Wilson expectation or physical string tension.
+  - A native or version-compatibility execution event cannot select the scientific interpretation.
+allowed_imports:
+  - C-LIE-001
+  - C-LIE-002
+  - C-WIL-001
+  - C-FLX-001 as a separate ideal fixed-area theorem only
+  - src/substrate_framework/su3.py
+  - src/substrate_framework/wilson_loops.py
+  - immutable P028 and P168 adjudicated evidence
+  - exact complex matrix algebra limits differentiation and symbolic mutation
+  - CF3 and its dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal native CF3 replay with all six predicates and its assertion individually adjudicated.
+  - id: B
+    description: Accepted complete-center and abstract-triality composition through C-LIE-002.
+  - id: C
+    description: Accepted premise-explicit area/perimeter large-time consequences through C-WIL-001.
+  - id: D
+    description: Retain center algebra only if the source loop extraction or premise separation fails exact audit.
+  - id: E
+    description: A new general SU(N) center or representation theorem only if accepted scope leaves a reusable exact gap.
+  - id: F
+    description: Physical quark gluon screening Wilson-law selection string tension or QCD confinement.
+  - id: G
+    description: Compose CF3 sigma with CF2 field-energy slope or CF1 vortex tension.
+  - id: H
+    description: Source dependency consumer compatibility queue documentation release and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - complete_center_proof_and_SU3_membership
+  - premise_conclusion_and_center_loop_law_separation
+  - order_triality_exponent_sign_and_area_perimeter_sensitivity
+  - dependency_and_physical_interpretation_closure
+  - assumption_parameter_and_API_economy
+  - source_consumer_compatibility_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before renewed CF3 and dossier body audit or P169 execution;
+  the six-check tally, center and loop formulas, P028 verdict, accepted claims,
+  durable memory, and prior source-graph replays are already exposed, so no
+  fresh source or value blinding is claimed
+status: frozen_with_prior_source_exposure

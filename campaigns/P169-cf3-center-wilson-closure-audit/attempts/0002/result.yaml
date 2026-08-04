@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P169
+candidate: frozen_manifest_validation_and_commit
+status: passed
+started_at: '2026-08-10T23:45:00Z'
+finished_at: '2026-08-10T23:46:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P169-cf3-center-wilson-closure-audit.md
+  - parse_all_campaign_YAML
+  - git diff --check
+results:
+  repository: WORKFLOW_VALID_163_claims_163_accepted_54_pending
+  proposal_memory: valid
+  campaign_yaml: YAML_OK_2
+  diff_check: passed
+freeze_manifest_sha256: 87eaa606b6f17e38f01a6a7bf1667b0751be2aedd9e6ed9570c9a9346c5e4a32
+source_body_opened_by_P169: false
+debt:
+  - commit_the_validated_freeze_before_source_body_audit
+next_attempt: literal_native_source_reproduction
