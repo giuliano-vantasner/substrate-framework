@@ -1,0 +1,27 @@
+campaign: P130
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - cmp campaigns/P130-wm6-two-loop-running-audit/proposal.yaml campaigns/P130-wm6-two-loop-running-audit/evidence/frozen-proposal.yaml
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P130-wm6-two-loop-running-audit.md --base /home/dan/substrate-framework
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  accepted_claims: 134
+  release: v0.99.0
+  source_units: 218
+  pending_units: 91
+  repository_tests: 1106
+  memory_files: 524
+  p130_source_body_reinspected: false
+  prior_output_exposure_recorded: true
+  debt: []
+result: >-
+  The P130 contract and immutable copy are byte-identical at SHA-256
+  7800f2aed53ad54f436b4d77a1f43fd5b735b0d4a18cab90b6e883ebedfeed97.
+  Repository validation reports 134 accepted claims and 91 pending source
+  units; all 524 memory records, the physics skill, and all 1106 tests pass.
+  Prior P129 output exposure is explicit and WM6 was not reinspected for P130.
+compatibility_event: none
+next_attempt: Commit the frozen P130 contract, then reopen and audit WM6.
