@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P162
+candidate: prior_exposure_aware_proposal_freeze
+status: passed
+started_at: '2026-08-10T18:20:00Z'
+finished_at: '2026-08-10T18:25:00Z'
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P162-qcd5-dimensional-overdetermination-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+passed:
+  manifest_snapshot_identity: 58897a865cd86ea174e0f8ec1210fa23aa756e2fd37d7cc8107892760784c539
+  memory_contract: valid
+  repository_contract: valid_160_accepted_claims_59_pending_units
+  diff_whitespace: passed
+prior_exposure:
+  source_body_previously_executed: true
+  selected_source_predicates_previously_exposed: true
+  dossier_intentionally_reopened_before_freeze: false
+  effect: prior_values_are_excluded_from_candidate_selection_and_threshold_setting
+scientific_verdict: not_yet_tested
+debt:
+  - reproduce_and_inventory_the_hash_pinned_source
+  - recover_the_exact_constraint_matrix_rank_and_row_provenance
+  - adjudicate_all_seven_source_predicates_and_consumers
+next_attempt: commit_the_freeze_then_begin_the_targeted_source_and_dossier_audit

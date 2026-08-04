@@ -1,0 +1,52 @@
+id: P162
+base_release: v0.124.0
+base_commit: 68ef8fd
+scientific_base_commit: 1451670
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [QCD5]
+question: >-
+  Which exact shared-exponent and fixed-input dimension statements in QCD5
+  survive, and do three named gauge-sector copies supply independent constraints
+  that overdetermine the spatial dimension rather than repeat one equation?
+invariants:
+  - C-KRN-001 fixes a scalar Riesz inverse only after dimension exponent Fourier convention and nonzero coefficient are supplied.
+  - C-KRN-002 proves that inverse-square behavior selects the family d=2s+1 and does not identify d or s separately.
+  - C-LIN-001 distinguishes row count from rank and treats repeated proportional equations as one constraint direction.
+  - EM7 YM2 QCD1 and QCD2 are qualified with no accepted dimensional-lift or endpoint-selection authority.
+  - Dimension-blind sector amplitudes can preserve an exponent but cannot make repeated copies of that exponent statistically or algebraically independent.
+allowed_imports:
+  - C-KRN-001
+  - C-KRN-002
+  - C-LIN-001
+  - C-LIE-003 and C-NVP-002 for exact SU3 trace data and their physical-scope ceilings only
+  - exact symbolic rank nullspace exponent substitution and finite-dimensional algebra
+  - QCD5 and its dossier as hash-pinned noncanonical evidence only after the freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned QCD5 predicate replay and individual adjudication.
+  - id: B
+    description: Existing accepted composition of C-KRN-002 and C-LIN-001 giving one shared equation d=2s+1 with no new claim or API.
+  - id: C
+    description: A reusable provenance-aware constraint-rank theorem if the existing linear-system ledger cannot express repeated sector equations.
+  - id: D
+    description: Three genuinely sector-specific operator derivations yielding independent dimension constraints with separately sourced rows.
+  - id: E
+    description: A declared geometric or dimension-changing construction that independently fixes d before the force comparator is inspected.
+  - id: F
+    description: Repeated-row sector-label exponent color-factor and nonunit-s counterfamilies.
+  - id: G
+    description: Claim disposition dependency consumer compatibility and generated-state closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and algebraic constraint rank rather than equation count
+  - independently sourced sector equations rather than relabeled copies
+  - dimension and operator-order identifiability without supplied-answer reuse
+  - explicit geometry operator domain action source and boundary data
+  - mutation sensitivity exact limits API economy and downstream compatibility
+claims_proposed: []
+comparators_blinded_until: >-
+  source-aware proposal freeze commit before renewed targeted QCD5 and dossier
+  audit; QCD5 source execution and selected source excerpts were already exposed
+  by P159 and P161 and cannot select a candidate or threshold
+status: draft
+
