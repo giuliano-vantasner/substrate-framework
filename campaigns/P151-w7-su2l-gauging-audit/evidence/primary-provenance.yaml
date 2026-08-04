@@ -1,0 +1,32 @@
+campaign: P151
+accepted_base:
+  release: v0.116.0
+  framework_checkpoint: f050336
+  scientific_commit: c4553ac
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: W7
+  path: merged-framework/bridges/phase-6/bridge_W7_su2L_gauging_charged_current.py
+  sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3
+dossier: absent
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/su2_doublets.py
+  - src/substrate_framework/gauge_covariance.py
+  - src/substrate_framework/maxwell.py
+  - src/substrate_framework/boundary_scattering.py
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P148-w3-va-current-audit
+  - campaigns/P150-w5-chiral-asymmetry-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - W7 SU2L gauging charged current Yang Mills
+  - nonabelian connection sign projected SU2 carrier parity
+authority_statement: >-
+  Memory and W7 are recall and candidate evidence. The pinned accepted release,
+  registry, exact canonical APIs, and individually reviewed P151 result supply
+  authority.

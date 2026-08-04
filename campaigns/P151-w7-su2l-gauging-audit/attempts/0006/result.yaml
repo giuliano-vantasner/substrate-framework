@@ -1,0 +1,25 @@
+attempt: 0006
+campaign: P151
+candidate: frozen_primary_and_independent_nonabelian_oracles
+status: failed
+started_at: '2026-08-10T03:28:00Z'
+finished_at: '2026-08-10T03:31:00Z'
+commands:
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/verify.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/independent_nonabelian_review.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/replay_source_graph.py
+result:
+  primary_checks_before_failure: 15
+  independent_checks: 16_passed
+  graph_checks: 61_passed
+  graph_nodes: 18
+  graph_predicates: 168
+  graph_assertions: 19
+failure_class: verifier_provenance_sentinel
+mechanism: >-
+  The primary oracle searched for the lowercase literal "the d_mu alpha"
+  while the immutable W7 source begins that sentence with uppercase "The".
+  Exact algebraic checks, the independent review, and the dependency graph
+  replay all passed; only this case-sensitive source-provenance sentinel failed.
+scientific_effect: none
+next_attempt: correct_the_sentinel_case_without_weakening_any_mathematical_check

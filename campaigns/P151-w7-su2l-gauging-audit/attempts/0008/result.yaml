@@ -1,0 +1,30 @@
+attempt: 0008
+campaign: P151
+candidate: integrated_promotion_transaction
+status: passed
+started_at: '2026-08-10T03:56:00Z'
+finished_at: '2026-08-10T04:03:00Z'
+commands:
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/verify.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/independent_nonabelian_review.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest tests/test_nonabelian_gauge.py -q
+  - scripts/validate.sh
+  - git diff --check
+scope:
+  claim: C-NAG-001
+  release: v0.117.0
+  source_disposition: W7_qualified
+  expected_queue_after: {total: 218, pending: 69, qualified: 137, migrated: 3, duplicate: 8, out_of_scope: 1}
+result:
+  scientific_oracles: {primary: 31_passed, independent: 16_passed, focused: 19_passed, graph: 61_passed}
+  workflow: {claims: 152, accepted: 152, proposals: 0}
+  migration_queue: {total: 218, pending: 69, qualified: 137, migrated: 3, duplicate: 8, out_of_scope: 1, partial: 0}
+  memory_files: 620_valid
+  skill_validation: passed
+  pytest: 1336_passed
+  staged_impact: {symbols: 84, files: 33, affected: 0, processes: 0, risk: low}
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_status: 0
+debt: []
+next_attempt: commit_promotion_checkpoint_parent_and_freeze_B1

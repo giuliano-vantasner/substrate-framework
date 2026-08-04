@@ -1,0 +1,60 @@
+campaign: P151
+title: W7 SU2L gauging and charged-current audit
+source_baseline: substrate@6d1f4e0
+source_units: [W7]
+base_release: v0.116.0
+accepted_release: v0.117.0
+adjudicated_at: '2026-08-10T03:55:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without making its tally a headline oracle.}
+  - {id: B, reason: C-REP-002 prevents duplication and supplies the global representation boundary.}
+  - {id: C, reason: Correct finite local covariance and curvature supply the distinct reusable theorem.}
+  - {id: E, reason: The independent tensor-factor projector supplies the correctly typed left action.}
+  - {id: F, reason: Zero-current and free-mass countermodels delimit physical weak interpretations.}
+  - {id: G, reason: Dependency consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-NAG-001]
+unpromoted_claims:
+  - {id: W7_plus_sign_finite_connection_law, reason: It breaks covariance for the declared D=partial-i*g*W convention.}
+  - {id: same_carrier_SU2L_gauging, reason: Two generators are non-Hermitian and every cyclic commutator fails.}
+  - {id: physical_charged_current, reason: No matter bilinear or interaction action is constructed.}
+  - {id: Delta_T3_equals_Delta_Q_event, reason: Assigned labels change by two and the unit event is inserted separately.}
+  - {id: Yang_Mills_action_and_dynamics, reason: One component square supplies neither a complete action nor its variation.}
+  - {id: g_squared_equals_k_Z, reason: It is declared and uses W5 piston provenance rejected by P150.}
+  - {id: left_connection_is_parity_odd, reason: Parity maps it to a distinct right connection.}
+  - {id: physical_weak_boson_mass_anomaly_detector_or_substrate_mechanism, reason: None of the required objects is constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_nonabelian_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0007/result.yaml
+  integrated_terminal_gate: attempts/0008/result.yaml
+  claim_review: memory/vantasner/decisions/C-NAG-001-review.md
+  source_review: memory/vantasner/decisions/W7-qualified-review.md
+source_disposition:
+  W7: qualified
+accepted_mappings: [C-NAG-001, C-REP-002, C-SPN-002, C-GAU-001, C-MAX-001, C-SCT-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_no_quadrature
+  immutable_primary: no_numpy_integration_reference
+  inherited_shapes: [G1_alias_only, W1_alias_only, W3_alias_only]
+validation_commands:
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/verify.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/independent_nonabelian_review.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_nonabelian_gauge.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

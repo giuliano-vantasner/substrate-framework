@@ -1,0 +1,39 @@
+campaign: P151
+criteria_order:
+  - exact carrier tensor-factor projector generator and trace normalization
+  - finite versus infinitesimal transformation convention connection sign and coupling placement
+  - covariant derivative curvature commutator and transformation identities
+  - distinction among global representation local covariance gauge dynamics matter sourcing and physical interaction
+  - action sign dimensions source conservation anomaly and mass ceilings
+  - compatibility with accepted U1 Maxwell scalar boundary and SU2 representation claims
+  - load-bearing noncommutativity projector sign charge action current and parity mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal replay classifies all eleven predicates but cannot validate W7's headline tally.
+  B:
+    decision: selected_as_accepted_mapping_only
+    reason: C-REP-002 supplies global Pauli-half and independent-projector algebra but no local connection.
+  C:
+    decision: selected_and_promoted_as_C_NAG_001
+    reason: Correct finite local covariance and curvature are the smallest distinct exact reusable theorem.
+  D:
+    decision: rejected_as_source_dynamics
+    reason: W7 neither declares a complete Yang-Mills action nor varies one; a trace-density identity alone supplies no dynamics.
+  E:
+    decision: selected_as_corrected_carrier
+    reason: The independent tensor-factor construction is Hermitian closes SU2 and makes the complementary block a singlet.
+  F:
+    decision: selected_as_countermodel_and_ceiling
+    reason: The same gauge algebra permits zero current and arbitrary external mass data, so physical weak readings remain free.
+  G:
+    decision: selected
+    reason: Dependency consumer compatibility novelty release queue and memory closure are mandatory.
+selection_basis: >-
+  Candidate C supplies the distinct positive object and E types its projected
+  carrier. A diagnoses the source, B prevents duplication, D rejects absent
+  dynamics, F delimits interpretation, and G closes the transaction. No
+  queue-exposed formula, output, or physical label selected a concept.
+foundational_revision_required: false
+debt: []

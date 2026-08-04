@@ -4797,3 +4797,54 @@ units:
       integration event; mutable code has no executable legacy integration
       access, and inherited immutable G1, W1, and W3 shapes remain alias-only
       version evidence through np.trapezoid.
+  W7:
+    disposition: qualified
+    accepted_claims:
+      - C-NAG-001
+      - C-REP-002
+      - C-SPN-002
+      - C-GAU-001
+      - C-MAX-001
+      - C-SCT-001
+    qualification: >-
+      W7's exact Pauli-half commutator, unprojected conditional curvature,
+      commuting limit, charged-basis regrouping, and narrow mutation guards
+      survive only through accepted representation, Abelian-comparison, and
+      corrected non-Abelian ceilings. C-NAG-001 supplies the positive object:
+      for D=partial-i*g*W the finite connection law has a minus inhomogeneous
+      sign, the curvature transforms by conjugation, and T_a tensor P gives a
+      Hermitian closing projected connection with a right-singlet block. W7's
+      plus-sign law breaks full covariance; CHECK1 tests only the homogeneous
+      rotation. Its same-carrier T_a*P_L matrices fail Hermiticity and SU2
+      closure. Its charge labels change by two while Delta T3 is one, and its
+      event unit is inserted separately. One component square is not a full
+      Yang-Mills action or equation, and g^2=k*Z is declared using W5 provenance
+      rejected by P150. A left action maps to the distinct right action under
+      parity and is not itself odd. No matter field, bilinear current, physical
+      charged interaction, anomaly cancellation, mass, weak boson, detector,
+      or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P151-w7-su2l-gauging-audit/reviews/source_adjudication.md
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/source-reproduction.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/source-audit.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/check-adjudication.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/input-provenance.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/dependency-audit.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/consumer-audit.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/candidate-comparison.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/primary-provenance.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/evidence/literature-audit.yaml
+      - campaigns/P151-w7-su2l-gauging-audit/verify.py
+      - campaigns/P151-w7-su2l-gauging-audit/reviews/independent_nonabelian_review.py
+      - campaigns/P151-w7-su2l-gauging-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-NAG-001-review.md
+      - memory/vantasner/decisions/W7-qualified-review.md
+    note: >-
+      P151 promotes C-NAG-001 through thirty-one primary, sixteen independent,
+      nineteen focused-test, and sixty-one frozen-graph checks. The eighteen-node
+      graph inventories 168 source predicates and nineteen assertions. Native
+      W7 passes all eleven predicates without a NumPy integration event; mutable
+      code has no executable legacy integration access, and inherited immutable
+      G1, W1, and W3 shapes remain alias-only version evidence through
+      np.trapezoid.

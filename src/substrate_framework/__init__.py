@@ -82,6 +82,14 @@ from .boundary_scattering import (
     PassiveHalfLineScatteringLedger,
     passive_half_line_scattering_ledger,
 )
+from .nonabelian_gauge import (
+    NonAbelianGaugeLedger,
+    local_nonabelian_gauge_ledger,
+    nonabelian_covariant_derivative,
+    nonabelian_field_strength,
+    su2_projected_connection,
+    su2_projected_unitary,
+)
 from .su2_doublets import (
     SU2ChiralFactorLedger,
     SU2CommonChargeLedger,
@@ -1493,7 +1501,13 @@ __all__ = [
     "rayleigh_dissipation",
     "scalar_power_balance_force",
     "PassiveHalfLineScatteringLedger",
+    "NonAbelianGaugeLedger",
     "passive_half_line_scattering_ledger",
+    "local_nonabelian_gauge_ledger",
+    "nonabelian_covariant_derivative",
+    "nonabelian_field_strength",
+    "su2_projected_connection",
+    "su2_projected_unitary",
     "TwoBodyThresholdLedger",
     "two_body_threshold_ledger",
     "YukawaRadialHessian",

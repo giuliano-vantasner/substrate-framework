@@ -1,0 +1,24 @@
+campaign: P151
+claim: C-NAG-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-REP-002: Gives the correctly typed projected SU2 representation and parity exchange but no local transformation connection curvature or gauge density.
+  C-GAU-001: Gives local covariance for a separately declared Abelian U1 carrier but no non-Abelian commutator or projected SU2 connection.
+  C-MAX-001: Gives an Abelian action Bianchi identity and sourced equation but no non-Abelian local transformation or projected carrier.
+  C-SPN-002: Gives exact finite spinor and SU2 rotation algebra but no gauge connection.
+distinct_positive_object: >-
+  C-NAG-001 uniquely combines the correct finite connection sign for
+  D=partial-i*g*W, exact derivative and curvature covariance, the covariant
+  commutator, trace-square invariance, an independent-factor projected SU2
+  connection, its right-singlet block, and explicit action and physical
+  ceilings.
+governed_consumers: [W7, M1, M2, NA1, YM1]
+decision: distinct_additive_claim

@@ -1,0 +1,27 @@
+campaign: P151
+source_unit: W7
+declared_source_dependencies:
+  - {source_unit: EM2, disposition: qualified, use: Abelian_covariance_comparison_only}
+  - {source_unit: EM3, disposition: qualified, use: Abelian_action_and_dynamics_comparison_only}
+  - {source_unit: EM5, disposition: qualified, use: no_nonabelian_or_physical_gauge_authority}
+  - {source_unit: G1, disposition: qualified, use: no_gauge_current_or_SU2_authority}
+  - {source_unit: W1, disposition: qualified, use: boundary_parity_ceiling_only}
+  - {source_unit: W2, disposition: qualified, use: C_REP_002_carrier_ceiling_only}
+  - {source_unit: W3, disposition: qualified, use: no_physical_VA_current_authority}
+  - {source_unit: W5, disposition: qualified, use: C_SCT_001_rejects_impedance_coupling_provenance}
+  - {source_unit: M1, disposition: pending_adjudication, use: no_authority}
+  - {source_unit: M2, disposition: pending_adjudication, use: no_authority}
+  - {source_unit: YM1, disposition: pending_adjudication, use: no_authority}
+accepted_claim_closure:
+  - {claim: C-NAG-001, dependencies: [C-REP-002]}
+circularity: >-
+  W2 and W5 cite W7 while W7 cites them, and W7 shares cycles with pending M1,
+  M2, and YM1. These source edges grant no authority. C-NAG-001 closes through
+  exact local matrix calculus and imports only C-REP-002 for the independently
+  typed projected carrier.
+excluded_imports:
+  - EM2 EM3 and EM5 physical electromagnetic or induced-gauge readings
+  - G1 scalar-radiation mechanism
+  - W1 through W5 physical chiral current charge weak or detector readings
+  - pending M1 M2 and YM1 mass or Yang-Mills authority
+debt: []

@@ -2,7 +2,7 @@
 description: Derive and audit W7's conditional SU2 local-gauge and charged-current content
 author: vantasner
 created: '2026-08-10T03:00:00Z'
-updated: '2026-08-10T03:16:00Z'
+updated: '2026-08-10T04:03:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - nonabelian-gauge
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P151 W7 SU2L Gauging Audit
 
@@ -159,3 +159,12 @@ See W7, C-REP-002, C-SPN-002, C-GAU-001, C-U1-001, C-MAX-001, C-BND-001,
 C-SG-011 through C-SG-013, C-KIN-001, C-SCT-001, P030, P147 through P150,
 the canonical representation and gauge modules, and the parent migration
 effort.
+
+## Promotion Result
+
+P151 promoted C-NAG-001 in v0.117.0 and qualified W7 after 31 primary,
+16 independent, 19 focused-test, and 61 frozen-graph checks. The exact finite
+sign and independent projector carrier are corrected; action, current, charge,
+anomaly, mass, coupling, weak, detector, and substrate readings remain outside
+the accepted claim. The integrated gate passed 1,336 tests with 620 valid
+memory files, and the migration queue advanced to 69 pending units.

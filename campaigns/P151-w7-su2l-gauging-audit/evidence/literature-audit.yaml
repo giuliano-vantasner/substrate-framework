@@ -1,0 +1,13 @@
+campaign: P151
+purpose: Determine whether an external source is required for the exact claim or source interpretation.
+external_sources_used: []
+reason: >-
+  C-NAG-001 follows from exact finite matrix multiplication, the product rule,
+  commuting mixed derivatives, Pauli-half algebra, an exact projector, and
+  cyclicity of a separately declared trace. No empirical value or
+  literature-specific normalization enters the theorem.
+source_attributions:
+  - {attribution: W7_finite_connection_law, classification: contradicted_by_direct_product_rule_and_corrected}
+  - {attribution: Yang_Mills_term_induced_by_YM1, classification: pending_source_grants_no_authority_and_excluded}
+  - {attribution: physical_charged_current_weak_boson_and_maximal_parity_violation, classification: unsupported_interpretive_labels_excluded}
+framework_decision: promote_only_the_self_contained_conditional_nonabelian_gauge_theorem

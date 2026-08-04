@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P151
+candidate: first_canonical_nonabelian_gauge_ledger
+status: failed
+started_at: '2026-08-10T03:18:00Z'
+finished_at: '2026-08-10T03:22:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_nonabelian_gauge.py -q
+result:
+  passed_cases: 15
+  setup_errors: 4
+failure_class: symbolic_representation_and_validation_boundary
+mechanism: >-
+  The transformed connection is Hermitian by construction from an exact
+  unitary and Hermitian input, but SymPy does not infer that derivatives of a
+  real-valued undefined function are real when conjugating the derivative.
+  Reapplying public input validation to the internally derived connection
+  therefore rejected a mathematically valid expression before the covariance
+  checks ran.
+scientific_effect: none
+next_attempt: retain_strict_public_Hermiticity_validation_but_compute_the_internally_derived_transformed_curvature_without_revalidating_SymPy_assumptions

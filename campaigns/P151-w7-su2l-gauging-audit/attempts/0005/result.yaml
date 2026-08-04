@@ -1,0 +1,31 @@
+attempt: 0005
+campaign: P151
+candidate: canonical_exact_nonabelian_gauge_ledger
+status: passed
+started_at: '2026-08-10T03:23:00Z'
+finished_at: '2026-08-10T03:27:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_nonabelian_gauge.py -q
+  - package_export_smoke_test_for_nonabelian_gauge_surface
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+result:
+  focused_tests: 19_passed
+  exact_backend: SymPy
+  numpy_integration_surface: absent
+  compatibility_policy: current_mutable_code_needs_no_alias_or_legacy_replay
+  exact_surfaces:
+    - finite_local_connection_and_field_covariance
+    - curvature_commutator_and_conjugation
+    - curvature_trace_square_invariance
+    - independent_factor_projected_SU2_connection_and_right_singlet
+  mutation_surfaces:
+    - inhomogeneous_connection_sign
+    - noncommutative_curvature_term
+    - same_carrier_projector
+    - exact_unitary_and_positive_coupling_domains
+debt:
+  - build_primary_and_fresh_independent_mutation_sensitive_oracles
+  - adjudicate_all_eleven_W7_predicates
+  - close_dependencies_reverse_consumers_generated_state_and_integrated_gate
+next_attempt: build_and_run_the_frozen_primary_oracle

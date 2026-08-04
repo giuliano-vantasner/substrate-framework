@@ -597,6 +597,15 @@ Let rho(r) be any radial density for which J=integral_R3 rho(r)*r^2 d^3x exists,
 - Compatibility: `native`
 - Dependencies: C-MOM-001
 
+## C-NAG-001
+
+Let H_I=C^2 carry the exact Pauli-half generators T_a, let H_C be a nonzero finite-dimensional carrier, and let P be an exact Hermitian projector with P_R=I-P. On H_I tensor H_C define G_a=T_a tensor P. For a smooth local U_I(x) in SU2 define U=U_I tensor P+I tensor P_R. Let g be exact positive, W_mu=W_mu^a G_a, and D_mu=partial_mu-i*g*W_mu. The finite transformation W_mu'=U*W_mu*U_dagger-(i/g)*(partial_mu U)*U_dagger gives D_mu'(U*psi)=U*D_mu psi. The curvature F_mu_nu=partial_mu W_nu-partial_nu W_mu-i*g*[W_mu,W_nu] obeys [D_mu,D_nu]psi=-i*g*F_mu_nu*psi and transforms as F_mu_nu'=U*F_mu_nu*U_dagger. The connection annihilates the P_R sector. With a separately declared invariant metric and cyclic trace, the quadratic trace density is gauge invariant and contains the noncommutative cubic and quartic algebra, but this does not derive an action coefficient or equation of motion. A declared parity exchange maps the left construction to a distinct right construction rather than making the left connection parity odd. These identities derive no physical matter field, charged current, charge-event equality, anomaly cancellation, Yang-Mills induction, weak boson, mass, coupling match, detector, or substrate realization.
+
+- Accepted in: `v0.117.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-REP-002
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.

@@ -1,0 +1,36 @@
+attempt: 0007
+campaign: P151
+candidate: exact_nonabelian_claim_oracles
+status: passed
+started_at: '2026-08-10T03:32:00Z'
+finished_at: '2026-08-10T03:39:00Z'
+commands:
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/verify.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/independent_nonabelian_review.py
+  - .venv/bin/python campaigns/P151-w7-su2l-gauging-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest tests/test_nonabelian_gauge.py -q
+result:
+  primary_checks: 31_passed
+  independent_checks: 16_passed
+  focused_tests: 19_passed
+  graph_checks: 61_passed
+  graph_nodes: 18
+  graph_predicates: 168
+  graph_assertions: 19
+  exact_backend: SymPy
+  mutation_surfaces:
+    - wrong_finite_connection_sign
+    - omitted_noncommutative_curvature_term
+    - same_carrier_projector
+    - right_block_action
+    - assigned_charge_label_difference
+  compatibility:
+    mutable_legacy_references: 0
+    W7_legacy_references: 0
+    inherited_alias_only_shapes: [G1, W1, W3]
+debt:
+  - write_claim_level_evidence_and_source_adjudication
+  - run_fresh_impact_and_nonduplication_audits
+  - promote_registry_release_disposition_generated_state_and_memory
+  - pass_one_integrated_promotion_gate
+next_attempt: close_governance_and_integrated_promotion_boundary

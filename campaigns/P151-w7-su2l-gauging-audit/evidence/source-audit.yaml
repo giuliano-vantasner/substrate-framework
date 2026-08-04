@@ -1,0 +1,44 @@
+source_unit: W7
+source_sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3
+ast:
+  check_calls: 11
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+  legacy_numpy_integration_references: 0
+native_reproduction:
+  exit_status: 0
+  terminal_tally: ALL_11_CHECKS_PASS
+objects_present:
+  - exact Pauli-half and ladder matrix algebra on a two-dimensional carrier
+  - homogeneous infinitesimal connection rotation
+  - exact unprojected covariant-derivative commutator and curvature components
+  - charged-component basis regrouping and fundamental ladder matrix elements
+  - complementary-projector annihilation on the same carrier
+  - one selected curvature-component polynomial in the coupling
+  - declared coupling-to-impedance relation and two narrow rejection guards
+objects_absent:
+  - correct finite connection law tested through the product rule
+  - Hermitian closing projected SU2 generators on an independent chirality factor
+  - complete Lorentz and adjoint kinetic density with declared metric and normalization
+  - varied Yang-Mills action Bianchi review or sourced field equation
+  - matter field bilinear current conserved source or interaction action
+  - anomaly cancellation gauge fixing degree-of-freedom or mass mechanism
+  - physical weak states bosons event-charge map detector or substrate realization
+load_bearing_failures:
+  - {issue: finite_connection_sign, classification: displayed_plus_sign_breaks_covariance_for_D_equals_partial_minus_i_g_W}
+  - {issue: checked_covariance, classification: CHECK1_evaluates_only_homogeneous_rotation_and_imports_derivative_shift}
+  - {issue: projector_carrier, classification: same_carrier_generators_are_non_Hermitian_and_fail_SU2_closure}
+  - {issue: charge_event, classification: assigned_labels_change_by_two_while_Delta_T3_is_one}
+  - {issue: current, classification: ladder_matrix_elements_do_not_construct_a_matter_bilinear_or_vertex_action}
+  - {issue: kinetic_action, classification: one_component_square_is_not_a_complete_action_or_equation}
+  - {issue: coupling_match, classification: g_squared_equals_k_Z_is_declared_and_uses_rejected_W5_provenance}
+  - {issue: parity, classification: parity_exchanges_left_and_right_instead_of_making_left_odd}
+headline_verdict: >-
+  Qualified. W7's unprojected curvature algebra and charged-basis identities
+  survive under exact declared mathematical assumptions. C-NAG-001 corrects
+  the finite sign and carrier. W7 does not establish a Yang-Mills action or
+  dynamics, matter current, charge event, anomaly control, mass, coupling
+  match, physical weak boson, parity-violating interaction, detector, or
+  substrate mechanism.

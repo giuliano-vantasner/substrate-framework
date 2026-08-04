@@ -1,0 +1,38 @@
+campaign: P151
+source_unit: W7
+accepted_base: v0.116.0
+accepted_inputs:
+  - {claim: C-REP-002, use: exact Pauli-half generators independent projector factor right-singlet block and parity exchange}
+  - {claim: C-SPN-002, use: finite SU2 matrix normalization ceiling only}
+  - {claim: C-GAU-001, use: separately declared Abelian local-covariance comparison only}
+  - {claim: C-MAX-001, use: distinction between curvature trace density declared action and sourced dynamics}
+  - {claim: C-BND-001, use: no physical chirality or boundary-to-gauge authority}
+  - {claim: C-SG-011, use: topological-current and physical-state ceiling only}
+  - {claim: C-SG-012, use: scalar stress and physical-action ceiling only}
+  - {claim: C-SG-013, use: event-transfer independence ceiling only}
+  - {claim: C-KIN-001, use: missing-particle and detector ceiling only}
+  - {claim: C-SCT-001, use: rejection of W5 piston coupling provenance only}
+mathematical_inputs:
+  - exact Pauli-half generators on H_I=C2
+  - nonzero finite-dimensional H_C and exact Hermitian projector P with P_R=I-P
+  - smooth exact SU2-valued U_I and its tensor-factor embedding
+  - exact positive coupling g and Hermitian connection matrices
+  - commuting coordinate derivatives and exact symbolic matrix calculus
+  - separately declared cyclic trace and optional invariant metric for the quadratic density statement
+source_declared_inputs:
+  - same-carrier projector multiplication T_a*P_L
+  - plus-sign finite connection transformation
+  - assigned kink and antikink charge labels minus one and plus one
+  - unit event charge inserted separately
+  - named Yang-Mills kinetic term without full action variation
+  - g_squared_equals_k_times_Z with free positive k
+excluded_from_derivation_or_selection:
+  - queue-exposed formulas output and physical weak labels
+  - pending M1 M2 NA1 and YM1 authority
+  - source assertions of current interaction boson mass anomaly or detector meaning
+free_data:
+  - physical matter content Lorentz representation and anomaly cancellation
+  - action coefficient source equation current normalization and gauge fixing
+  - mass mechanism vacuum state coupling match and detector map
+claim_delta: C-NAG-001
+debt: []
