@@ -4944,3 +4944,54 @@ units:
       all nine predicates. Six inventory reverse C1 edges are bare-token false
       positives, not semantic consumers. C1 and all mutable P153 and canonical
       code have zero executable legacy integration references.
+  M1:
+    disposition: qualified
+    accepted_claims:
+      - C-GSM-001
+      - C-NAG-001
+      - C-GAU-001
+      - C-REP-002
+    qualification: >-
+      M1's declared scalar kinetic quadratic form, Pauli-half lower-doublet
+      charged and neutral coefficients, rank-three coupled orbit, stabilizer
+      null direction, canonical-basis neutral diagonalization, conditional
+      rho identity, and zero-vacuum limit survive as exact mathematics.
+      C-GSM-001 states the general positive object: twice the real gauge-orbit
+      Gram matrix, its PSD and real stabilizer-kernel identities, paired
+      congruence covariance, and the generalized M2*x=lambda*K*x problem for a
+      separately declared positive gauge kinetic metric. The negative neutral
+      off-diagonal is basis dependent: B mapped to -B flips it without changing
+      the spectrum. CHECK8 actually mutates the entry to +g*g_prime/2, changing
+      magnitude as well as sign. C-QBL-001 does not force a condensate or SU2
+      promotion, and no accepted dependency supplies the scalar vacuum or
+      gauge kinetic dynamics. No physical ground state, Anderson-Higgs
+      mechanism, Higgs particle, photon, W, Z, Standard Model, electroweak
+      unification, rho phenomenology, or four-force substrate closure is
+      accepted.
+    evidence:
+      - campaigns/P154-m1-anderson-higgs-mass-audit/reviews/source_adjudication.md
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/source-reproduction.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/source-audit.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/check-adjudication.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/input-provenance.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/dependency-audit.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/consumer-audit.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/candidate-comparison.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/primary-provenance.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/evidence/literature-audit.yaml
+      - campaigns/P154-m1-anderson-higgs-mass-audit/verify.py
+      - campaigns/P154-m1-anderson-higgs-mass-audit/reviews/independent_gauge_scalar_mass_review.py
+      - campaigns/P154-m1-anderson-higgs-mass-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-GSM-001-review.md
+      - memory/vantasner/decisions/M1-qualified-review.md
+    note: >-
+      P154 promotes C-GSM-001 through thirty-three primary, fourteen
+      independent, fifteen focused-test, and twenty-six frozen-graph checks;
+      sixty-seven focused-plus-adjacent tests pass. Native M1 passes all nine
+      predicates. Six semantic source references are classified without
+      granting pending units authority or disturbing qualified claims. M1 and
+      all mutable P154 and canonical code have zero executable legacy
+      integration references; immutable CF1's three np.trapz references remain
+      recorded version-only evidence and are not executed for this exact
+      change.

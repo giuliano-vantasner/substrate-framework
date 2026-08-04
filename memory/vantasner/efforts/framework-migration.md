@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T05:59:00Z'
+updated: '2026-08-10T06:55:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.119.0`, containing one hundred fifty-four
+The current accepted frontier is `v0.120.0`, containing one hundred fifty-five
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -71,6 +71,12 @@ retains C1's constant-coefficient algebra while rejecting its fixed-k line
 observable, direct dimensionless half substitution, G-absence inference,
 dimensionally unclosed SI ratio, symbol discriminator, and physical medium or
 gravity readings.
+P154 adds C-GSM-001's exact gauge-orbit Gram matrix, PSD and real stabilizer
+kernel, positive gauge-kinetic generalized eigenproblem, congruence covariance,
+and Pauli-half lower-doublet specialization and qualifies M1. It retains M1's
+declared scalar kinetic quadratic algebra while rejecting its forced-condensate
+import, raw physical mass reading, basis-dependent sign guard, and unsupported
+Higgs, photon, weak-boson, Standard Model, electroweak, and substrate closure.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -96,7 +102,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 67 pending, 0 partially migrated, 3 migrated, 139 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 66 pending, 0 partially migrated, 3 migrated, 140 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -282,6 +288,7 @@ Attempts are append-only and individually reproducible.
 | 0172 | P151 exact finite non-Abelian covariance, curvature, independent projected carrier, physical ceiling, dependency, consumer, compatibility, and W7 audit | `campaigns/P151-w7-su2l-gauging-audit/attempts/0001` through `0008`, then v0.117.0 promotion | C-NAG-001 accepted and W7 qualified; commit `ef5851c` | Native W7 passes all eleven predicates without a NumPy compatibility event, but its displayed plus-sign finite law breaks covariance for `D=partial-i*g*W`, and CHECK1 tests only the homogeneous rotation. Exact canonical and fresh routes derive the correct minus-sign law, curvature conjugation, commutator, cyclic trace-square identity, and independent-factor projected SU2 connection with a complementary singlet. The same-carrier source generators fail Hermiticity and closure; its assigned charges differ by two while Delta T3 is one; one component square is not an action; and `g^2=k*Z` is assigned from rejected W5 provenance. Three technical verifier failures are preserved. Thirty-one primary, sixteen independent, nineteen focused, and sixty-one graph checks pass; the eighteen-node graph inventories 168 predicates and nineteen assertions. GitNexus reports LOW additive impact, zero affected symbols, and zero processes. Mutable code has zero legacy integration access; inherited G1, W1, and W3 shapes remain alias-only through `np.trapezoid`. The integrated workflow passes all 1,336 tests with 620 memory files and the physics skill valid. | Freeze B1 before source inspection; require the exact RP2 base loop, spinor lift, section and gauge choice, Berry-connection sign, closed-loop geometric phase modulo 2*pi, endpoint transition function, half- versus integer-strength domains, relation to accepted holonomy characters, M1 authority, all eight predicates and one assertion, consumers, nonduplication, and alias-only handling of any immutable legacy integration shape, and do not turn a gauge-dependent local connection, chosen lift, phase representative, or numeric quadrature into a unique physical vector potential, electromagnetic field, fermionic state, material mechanism, observation, or substrate realization |
 | 0173 | P152 exact closed-projector Berry invariant, real and periodic gauges, fixed-ray counterexample, compatibility, consumer, and B1 audit | `campaigns/P152-b1-berry-connection-audit/attempts/0001` through `0010`, then v0.118.0 promotion | C-BER-001 accepted and B1 qualified | Immutable B1 reaches all eight checks only under an alias backed by `np.trapezoid`; its native removed-name abort is version-only. Exact source-aware and fresh routes show that B1's stated spinor has a constant projector and corrected holonomy plus one because its omitted endpoint transition cancels the bare minus one. The moving real lift and its periodic complex gauge share a nonconstant projector and both give `(-1)^k`. Twenty-seven primary, twelve independent, eighteen focused, and twenty graph checks pass; four semantic consumers reproduce 26 source checks without gaining authority, and twenty queue edges are lexical false positives. One graph sentinel failure is preserved. GitNexus reports LOW named-symbol impact with one direct helper and no affected process. Mutable code has no executable legacy integration access. The integrated workflow passes all 1,354 tests with 625 memory files and the physics skill valid. | Freeze C1 before source inspection; distinguish a separately declared local connection from C-BER-001's projective-loop Berry data, pin the optical metric and covariant-derivative conventions, test whether the half value is an input, derive the actual dispersion and gauge transformation, audit medium versus spacetime claims and physical coupling, classify all nine predicates and one assertion, and keep B1, G1, and G2 qualifications from becoming authority through a green tally |
 | 0174 | P153 exact charged optical scalar action, gauge, topology, pullback, source, and C1 audit | `campaigns/P153-c1-optical-gauge-coupling-audit/attempts/0001` through `0010`, then v0.119.0 promotion | C-OG-005 accepted and C1 qualified | Native C1 passes all nine predicates, but exact canonical and fresh routes show that its fixed-k correction is gauge dependent on the line, a global shift requires circle boundary data, varying n requires a divergence term, and C-BER-001's convention maps only through `e*A_x=-B_phi*phi_x`. G absence is vacuous, eps0 is unused in the hard-coded SI comparison, and symbol membership supplies no physical dictionary. Twenty-eight primary, fifteen independent, ten focused, and twenty-seven graph checks pass. Six apparent reverse consumers are bare-token false positives. Invocation, formatting, structural-equality, false-dependency, and stale-generated-state failures are preserved. C1 and mutable code have no executable legacy integration access. The single integrated workflow gate passes all 1,364 tests with 630 memory files and the physics skill valid. | Freeze M1 before source inspection; require the exact scalar carrier and representation, gauge action, kinetic term, vacuum manifold and chosen VEV, generator and coupling normalization, mass-matrix derivation, eigenvalues and null space, residual symmetry, dependency authority, every predicate, consumers, nonduplication, and physical ceilings, and do not turn an assigned doublet, VEV, or matrix identity into a derived condensate, weak sector, particle masses, material mechanism, or observation |
+| 0175 | P154 exact gauge-orbit Gram matrix, stabilizer kernel, kinetic metric, congruence, representation, source, consumer, compatibility, and M1 audit | `campaigns/P154-m1-anderson-higgs-mass-audit/attempts/0001` through `0007`, then v0.120.0 promotion | C-GSM-001 accepted and M1 qualified | Native M1 passes all nine predicates, but exact canonical and fresh routes show that its quadratic form is twice the real coupled-orbit Gram matrix and its kernel is the stabilizer only under the stated real-basis premises. A separately positive gauge kinetic metric changes raw eigenvalues to a generalized problem. A pure B sign congruence flips the neutral off-diagonal while preserving the zero mode; source CHECK8 also halves its magnitude. The Pauli-half lower-doublet formulas and rho identity survive conditionally, while a triplet countermodel changes rank and coefficients. C-QBL-001 does not force a condensate or SU2 promotion. Thirty-three primary, fourteen independent, fifteen focused, twenty-six graph, and sixty-seven focused-plus-adjacent checks pass. Two test-oracle normalization failures are preserved. GitNexus reports one direct new-module caller, no affected process, and LOW risk. M1 and mutable code have no executable legacy integration access; immutable CF1's three `np.trapz` references remain version-only evidence and are not rerun. The integrated workflow passes all 1,379 tests with 635 memory files and the physics skill valid. | Freeze M2 before source inspection; require the exact massive-vector action, metric and sign conventions, constraint derivation, Proca versus gauge-fixed equations, static boundary-value problem, decay branch and penetration length, scalar-vacuum and gauge-kinetic premises, M1/C1/EM5/EM6/W2/W7 authority, all seven predicates and one assertion, consumers, nonduplication, and compatibility preflight, and do not turn a declared quadratic coefficient or exponential ODE into a physical Meissner medium, W field, screening observation, or substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1600,20 +1607,20 @@ integration event; mutable code uses exact algebra and inherited immutable
 shapes remain version-only alias evidence backed by `np.trapezoid`.
 
 ## Canonicalization
-The registry, `v0.119.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-four accepted claims. P001 through P153 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 67 pending, 0 partial, 3 migrated, 139 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.120.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-five accepted claims. P001 through P154 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 66 pending, 0 partial, 3 migrated, 140 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 67
-pending, 3 migrated, 139 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is M1, pinned at SHA-256
-`6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f`.
-The queue exposes nine static predicates, one assertion, a symbolic oracle,
-and source labels EM3, EM5, EM6, EM7, M2, SM3, W1, W2, W3, W7, WM1, WM2, and
-WM3. P154 must freeze competing representation, declared Higgs-mechanism,
-matrix-only, residual-symmetry, dependency-only, and no-physical-sector
-interpretations before opening the body. A green mass-matrix tally or assigned
-VEV cannot import pending source authority or derive a physical condensate,
-weak interaction, observed particle mass, material, or substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 66
+pending, 3 migrated, 140 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is M2, pinned at SHA-256
+`4ae3e5cb06e7c0bce6387ac7b84f555de65f12cce4be42d620405bb2b5c5b59f`.
+The queue exposes seven static predicates, one assertion, a symbolic oracle,
+and source labels C1, EM5, EM6, M1, W2, and W7. P155 must freeze competing
+massive-vector action, gauge-fixed equation, constraint-first Proca, static
+boundary-value, accepted-composition, and no-physical-medium interpretations
+before opening the body. A green exponential ODE or the C-GSM-001 charged
+coefficient cannot import a gauge kinetic action, physical condensate,
+Meissner medium, W field, observation, or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

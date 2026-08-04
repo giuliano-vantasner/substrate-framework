@@ -1,0 +1,35 @@
+campaign: P154
+source_unit: M1
+accepted_base: v0.119.0
+accepted_inputs:
+  - {claim: C-NAG-001, use: exact_nonabelian_covariant_derivative_carrier_and_no_mass_ceiling}
+  - {claim: C-GAU-001, use: exact_local_Abelian_covariance_and_no_action_or_physical_charge_ceiling}
+  - {claim: C-REP-002, use: Pauli_half_doublet_commuting_Abelian_generator_and_no_physical_sector_ceiling}
+  - {claim: C-SYM-001, use: nonduplication_boundary_for_scalar_potential_Hessian_zero_modes_only}
+mathematical_inputs:
+  - finite nonzero complex inner-product carrier
+  - nonempty exact Hermitian generator family
+  - exact real couplings with nonzero couplings required for the generator-stabilizer interpretation
+  - exact declared scalar vacuum column
+  - separately declared scalar covariant kinetic quadratic term
+  - real gauge-field coefficient basis and explicit one-half quadratic convention
+  - separately declared symmetric positive-definite gauge kinetic metric
+  - exact real invertible field maps for congruence statements
+source_declared_inputs:
+  - Pauli_half_SU2_generators
+  - commuting_Y_over_2_equal_identity_over_2
+  - positive_g_g_prime_and_v
+  - lower_component_v_over_sqrt_two_vacuum
+  - canonical_gauge_kinetic_basis_implicitly_used_for_raw_eigenvalues
+excluded_from_derivation_or_selection:
+  - queue_preexposed_charged_neutral_mixing_and_rho_formulas
+  - EM6_forced_condensate_ontology_and_EM5_medium_induction_analogy
+  - pending_M2_SM3_and_WM9_source_prose
+  - physical_Higgs_photon_W_Z_Standard_Model_or_substrate_identifications
+free_data:
+  - scalar_potential_stationarity_stability_and_vacuum_preparation
+  - gauge_kinetic_action_normalization_and_interaction_dynamics
+  - carrier_couplings_vacuum_scale_and_representation_outside_the_specialization
+  - physical_field_observable_detector_and_substrate_dictionaries
+claim_delta: C-GSM-001
+debt: []

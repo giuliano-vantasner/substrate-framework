@@ -1,0 +1,26 @@
+attempt: 0005
+campaign: P154
+candidate: initial_primary_and_independent_exact_oracles
+status: failed
+started_at: '2026-08-10T06:21:00Z'
+finished_at: '2026-08-10T06:25:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/reviews/independent_gauge_scalar_mass_review.py
+  - .venv/bin/python -m pytest -q tests/test_gauge_scalar_mass.py tests/test_symmetry_breaking.py tests/test_nonabelian_gauge.py tests/test_su2_doublets.py tests/test_gauge_u1.py
+result:
+  primary: 33_passed
+  focused_and_adjacent_tests: 67_passed
+  independent: failed_on_first_general_Gram_identity
+failure_class: independent_oracle_normalization
+mechanism: >-
+  The fresh review constructed Re(u_a dagger u_b) by averaging the two
+  conjugate inner products, then compared it with the claimed mass matrix
+  2*Re(u_a dagger u_b). The extra division by two reproduced the exact
+  load-bearing factor-two mutation rather than the one-half real-field Hessian
+  convention.
+scientific_effect: >-
+  The primary direct scalar Hessian and canonical API agree, and the focused
+  tests pass. The independent route must nevertheless be repaired and rerun
+  because its normalization is a required separate oracle.
+next_attempt: remove_the_extra_half_from_the_fresh_Gram_matrix_and_rerun_all_three_targeted_paths

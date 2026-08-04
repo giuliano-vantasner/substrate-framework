@@ -1,0 +1,36 @@
+campaign: P154
+accepted_base:
+  release: v0.119.0
+  framework_checkpoint: fb1807f
+  scientific_commit: fb1807f
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: M1
+  path: merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py
+  sha256: 6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/M1-dossier.md
+  sha256: cc6e38f748085be857dedf2c724125a2b92a84db791d7b365ea14ff8fd6a7886
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/nonabelian_gauge.py
+  - src/substrate_framework/su2_doublets.py
+  - src/substrate_framework/gauge_u1.py
+  - src/substrate_framework/quartic_qball.py
+  - src/substrate_framework/symmetry_breaking.py
+  - campaigns/P060-pg1-goldstone-hessian
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P151-w7-su2l-gauging-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - M1 Anderson Higgs mass matrix VEV gauge boson
+  - gauge boson mass Gram matrix vacuum stabilizer generalized kinetic
+authority_statement: >-
+  Memory and M1 are recall and candidate evidence. The pinned accepted release,
+  accepted claims, explicit kinetic premises, exact canonical API, individual
+  review, independent rederivation, and mutation-sensitive graph closure supply
+  authority.

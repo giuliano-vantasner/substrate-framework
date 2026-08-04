@@ -1,0 +1,59 @@
+campaign: P154
+title: M1 conditional gauge-scalar mass-matrix audit
+source_baseline: substrate@6d1f4e0
+source_units: [M1]
+base_release: v0.119.0
+accepted_release: v0.120.0
+adjudicated_at: '2026-08-10T06:45:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without making the tally a headline oracle.}
+  - {id: B, reason: The gauge-orbit Gram matrix supplies the positive representation-independent theorem.}
+  - {id: C, reason: The lower-doublet specialization recovers the source algebra under explicit premises.}
+  - {id: D, reason: Alternative representations normalizations vacua and zero limits delimit universality.}
+  - {id: E, reason: Paired congruence and the positive kinetic metric fix the basis and raw-eigenvalue boundaries.}
+  - {id: G, reason: Same-matrix countermodels delimit every physical condensate particle and substrate interpretation.}
+  - {id: H, reason: Dependency semantic-consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-GSM-001]
+unpromoted_claims:
+  - {id: EM6_forces_a_complex_condensate, reason: C-QBL-001 is a conditional complex-scalar equation and supplies no condensate ontology or SU2 promotion.}
+  - {id: raw_M2_eigenvalues_are_physical_masses, reason: A separately declared positive gauge kinetic metric K changes them to generalized eigenvalues.}
+  - {id: negative_neutral_offdiagonal_is_physical, reason: B mapped to minus B flips the sign by congruence without changing the spectrum.}
+  - {id: CHECK8_tests_a_sign_only_guard, reason: The executed mutant also halves the off-diagonal magnitude.}
+  - {id: algebraic_null_is_a_physical_photon, reason: It is a coupled stabilizer until a governed field and observable dictionary is supplied.}
+  - {id: Anderson_Higgs_Standard_Model_or_substrate_closure, reason: No scalar potential ground-state dynamics gauge kinetic action particle dictionary or evidence is supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_gauge_scalar_mass_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0006/result.yaml
+  integrated_terminal_gate: attempts/0007/result.yaml
+  claim_review: memory/vantasner/decisions/C-GSM-001-review.md
+  source_review: memory/vantasner/decisions/M1-qualified-review.md
+source_disposition:
+  M1: qualified
+accepted_mappings: [C-GSM-001, C-NAG-001, C-GAU-001, C-REP-002]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_no_numeric_quadrature_or_legacy_name
+  immutable_primary: no_numpy_integration_surface
+  semantic_consumers: immutable_CF1_legacy_surface_recorded_without_execution
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/reviews/independent_gauge_scalar_mass_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_gauge_scalar_mass.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

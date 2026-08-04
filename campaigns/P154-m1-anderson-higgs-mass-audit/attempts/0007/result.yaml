@@ -1,0 +1,44 @@
+attempt: 0007
+campaign: P154
+candidate: integrated_promotion_gate
+status: passed
+started_at: '2026-08-10T06:45:00Z'
+finished_at: '2026-08-10T06:55:00Z'
+commands:
+  - scripts/validate.sh
+  - git diff --check
+expected_scope:
+  accepted_release: v0.120.0
+  accepted_claims: 155
+  pending_source_units: 66
+  generated_docs_and_memory: current
+  scientific_paths:
+    - P154_primary_33_checks
+    - P154_independent_14_checks
+    - P154_source_graph_26_checks
+    - 15_focused_tests
+    - 67_focused_plus_adjacent_tests
+  compatibility: no_mutable_executable_legacy_integration_access
+result:
+  exit_status: 0
+  workflow: valid_155_claims_155_accepted_66_pending_0_partial
+  memory: 635_files_valid
+  skill: valid
+  pytest: 1379_passed_in_133_17_seconds
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+generated_state:
+  claim_index_sha256: e8e3e72f6050bca53e975795a33d6b200f6cf17d66acd4a87d7bf2ba22d5ee90
+  migration_queue_sha256: f24d4366ea7fb2fd35fbcb2ac93b971a0354fbae897ba88febecf43b4ec0d632
+  accepted_claim_memory_sha256: 8a9099da464a8c3339c3d1b993dcda3a918b1625bf09065cd2516eb1a1f6a656
+  accepted_release_memory_sha256: bccea29c65f08d345184ce5958730861110ba3c40f2016a1102b8d5ff16b2228
+  current_release_sha256: a5581667798a3d8ccf09195d7e1e7b1bd0b0c39c1086198a6dcc265b647475b0
+  pinned_release_sha256: a5581667798a3d8ccf09195d7e1e7b1bd0b0c39c1086198a6dcc265b647475b0
+promotion:
+  claim: C-GSM-001
+  source_disposition: M1_qualified
+  release: v0.120.0
+  scientific_debt: []
+  compatibility_debt: []
+  consumer_debt: []
+debt: []
+next_attempt: begin_P155_M2_from_the_v0_120_0_accepted_boundary

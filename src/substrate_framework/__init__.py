@@ -172,6 +172,16 @@ from .gauge_u1 import (
     u1_field_strength,
     u1_holonomy,
 )
+from .gauge_scalar_mass import (
+    GaugeQuadraticCongruence,
+    GaugeScalarMassEvidence,
+    PositiveGaugeKineticMassEvidence,
+    SU2U1LowerDoubletMassEvidence,
+    gauge_scalar_mass_evidence,
+    positive_gauge_kinetic_mass_evidence,
+    su2_u1_lower_doublet_mass_evidence,
+    transform_gauge_quadratic_forms,
+)
 from .berry_holonomy import (
     ClosedRayBerryLedger,
     ProjectiveLoopBerryLedger,

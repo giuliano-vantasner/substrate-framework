@@ -1,0 +1,24 @@
+campaign: P154
+source_unit: M1
+inventory_reverse_dependency_hits: []
+semantic_consumers:
+  - {source_unit: M2, disposition: pending_adjudication, role: direct_import_of_the_conditional_g_squared_v_squared_over_four_coefficient, effect: may_use_C-GSM-001_but_not_a_physical_Proca_medium_or_Meissner_dictionary}
+  - {source_unit: SM2, disposition: pending_adjudication, role: M1_hypercharge_convention_and_unbroken_generator_reference, effect: may_use_C-REP-002_and_C-GSM-001_conditionally_but_gains_no_physical_electromagnetic_sector}
+  - {source_unit: CF1, disposition: qualified, accepted_claims: [C-VTX-001, C-VTX-002], role: declared_v_scale_reference, effect: accepted_vortex_model_already_declares_v_and_does_not_depend_on_M1_ontology}
+  - {source_unit: FG3, disposition: qualified, accepted_claims: [C-MIX-001], role: unauthorized_fermion_condensate_template_reference, effect: accepted_complex_matrix_theorem_is_independent_and_imports_no_M1_condensate}
+  - {source_unit: WM1, disposition: qualified, accepted_claims: [C-REP-001, C-GAU-001, C-LIE-001], role: historical_mixing_context, effect: accepted_trace_and_representation_algebra_is_independent_of_M1_mass_matrix}
+  - {source_unit: WM9, disposition: pending_adjudication, role: unauthorized_condensate_promotion_and_scalar_multiplicity_reference, effect: gains_no_authority_for_N_H_or_a_physical_Higgs}
+replay:
+  frozen_nodes: 7
+  source_predicates: 54
+  source_assertions: 8
+  compatibility_surface: {CF1_immutable_legacy_references: 3, all_other_legacy_references: 0}
+decision: >-
+  The generated queue has no reverse M1 edges, but exact source inspection finds
+  six semantic references. None is an accepted scientific consumer of a
+  physical M1 mechanism. M2, SM2, and WM9 remain pending. CF1, FG3, and WM1
+  retain accepted closures that independently declare their model inputs and
+  do not import M1's rejected condensate or particle ontology. Immutable CF1's
+  legacy np.trapz surface is recorded and not executed for this unrelated
+  exact change.
+debt: []

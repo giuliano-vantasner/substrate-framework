@@ -1,0 +1,28 @@
+campaign: P154
+source_unit: M1
+declared_source_dependencies:
+  - {source_unit: EM3, disposition: qualified, use: only_C-GAU-001_C-KRN-001_C-MAX-001_without_scalar_vacuum_or_mass}
+  - {source_unit: EM5, disposition: qualified, use: only_C-GAU-001_C-VAC-001_without_nonabelian_mass_mechanism}
+  - {source_unit: EM6, disposition: qualified, use: only_C-QBL-001_without_forced_condensate_or_SU2_promotion}
+  - {source_unit: EM7, disposition: qualified, use: only_C-KRN-001_C-MAX-001_C-KRN-002_without_M1_action}
+  - {source_unit: M2, disposition: pending_adjudication, use: none_no_authority_and_direction_is_actually_consumer}
+  - {source_unit: SM3, disposition: pending_adjudication, use: none_no_authority}
+  - {source_unit: W1, disposition: qualified, use: only_C-BND-001_C-SG-011_C-SG-013}
+  - {source_unit: W2, disposition: qualified, use: only_C-REP-002_C-SPN-002_C-REP-001_C-SG-011_C-BND-001}
+  - {source_unit: W3, disposition: qualified, use: only_C-SG-011_C-SG-012_C-SG-013_C-BND-001_C-REP-002_C-U1-001}
+  - {source_unit: W7, disposition: qualified, use: only_C-NAG-001_C-REP-002_C-SPN-002_C-GAU-001_C-MAX-001_C-SCT-001}
+  - {source_unit: WM1, disposition: qualified, use: only_C-REP-001_C-GAU-001_C-LIE-001_without_numeric_mixing_authority}
+  - {source_unit: WM2, disposition: duplicate_evidence, use: only_C-REP-001_C-LIE-001_without_common_induction_premise}
+  - {source_unit: WM3, disposition: qualified, use: only_C-RGE-004_without_physical_M1_normalization}
+accepted_claim_closure:
+  - {claim: C-GSM-001, dependencies: [C-NAG-001, C-GAU-001, C-REP-002]}
+  - {claim: C-NAG-001, dependencies: [C-REP-002]}
+  - {claim: C-GAU-001, dependencies: [C-U1-001]}
+  - {claim: C-REP-002, dependencies: [C-SPN-002]}
+excluded_imports:
+  - EM6_forces_a_physical_complex_condensate_or_SU2_doublet
+  - EM5_or_W7_supplies_a_scalar_vacuum_or_gauge_boson_mass_action
+  - pending_M2_or_SM3_as_authority
+  - WM1_WM2_or_WM3_selects_the_M1_kinetic_normalization_or_physical_particle_dictionary
+  - any_source_medium_Higgs_photon_W_Z_Standard_Model_or_four_force_closure
+debt: []

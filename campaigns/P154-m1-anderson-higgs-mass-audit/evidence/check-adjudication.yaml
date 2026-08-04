@@ -1,0 +1,48 @@
+source_unit: M1
+checks:
+  M1.01:
+    source_name: covariant_derivative_and_unbroken_charge
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: The matrix action and Q*phi0=0 are exact for declared inputs; a medium ground state and physical photon do not follow.
+  M1.02:
+    source_name: charged_quadratic_coefficient
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: The coefficient g^2*v^2/4 follows in the one-half real-field convention; a pole mass requires the gauge kinetic form and a physical dictionary.
+  M1.03:
+    source_name: neutral_mass_matrix
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: The Hessian is exact in the fixed source basis, while its negative off-diagonal is not invariant under B mapped to minus B.
+  M1.04:
+    source_name: neutral_eigenvalues
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: The raw canonical matrix has one zero and one nonzero eigenvalue; physical mass parameters require M2*x=lambda*K*x.
+  M1.05:
+    source_name: neutral_eigenvectors_and_mixing
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: The displayed rotation diagonalizes M2 for K identity but does not independently identify photon and Z fields or a measured Weinberg angle.
+  M1.06:
+    source_name: stabilizer_and_broken_direction_count
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: The coupled vacuum-orbit map has rank three and Q lies in its kernel; no physical Goldstone or Anderson-Higgs theorem follows.
+  M1.07:
+    source_name: rho_one
+    classification: qualified_exact
+    maps_to: [C-GSM-001]
+    reason: Rho simplifies to one in the lower-doublet canonical-kinetic specialization and is not universal to alternative representations.
+  M1.08:
+    source_name: wrong_sign_guard
+    classification: rejected_as_described_but_valid_magnitude_mutation
+    maps_to: [C-GSM-001]
+    reason: A pure sign flip preserves determinant zero and is a B-field congruence; the executed plus-g*g_prime/2 mutant also changes magnitude and validly fails the Gram matrix.
+  M1.09:
+    source_name: zero_vacuum_limit
+    classification: qualified_exact_limit
+    maps_to: [C-GSM-001]
+    reason: Substituting v=0 removes the declared quadratic form but does not establish a physical condensate phase or its dynamics.
+all_nine_adjudicated: true

@@ -1,0 +1,37 @@
+attempt: 0006
+campaign: P154
+candidate: exact_Gram_stabilizer_kinetic_and_graph_closure
+status: passed
+started_at: '2026-08-10T06:25:00Z'
+finished_at: '2026-08-10T06:35:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/reviews/independent_gauge_scalar_mass_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P154-m1-anderson-higgs-mass-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_gauge_scalar_mass.py tests/test_symmetry_breaking.py tests/test_nonabelian_gauge.py tests/test_su2_doublets.py tests/test_gauge_u1.py
+result:
+  native_source: 9_passed
+  primary: 33_passed
+  independent: 14_passed
+  focused_tests: 15_passed
+  focused_and_adjacent_tests: 67_passed
+  source_graph: 26_passed
+  compatibility: no_mutable_or_M1_executable_legacy_integration_access
+verified_objects:
+  - exact_anticommutator_equals_twice_real_Gram_matrix
+  - arbitrary_real_coefficient_PSD_identity
+  - realified_coupled_stabilizer_kernel_and_rank
+  - scalar_kinetic_direct_Hessian_and_one_half_real_field_convention
+  - positive_gauge_kinetic_generalized_eigenproblem_and_persistent_null
+  - paired_congruence_covariance_and_B_sign_counterexample
+  - exact_Pauli_half_lower_doublet_specialization_and_conditional_rho_identity
+  - zero_vacuum_zero_coupling_generator_vacuum_hypercharge_and_triplet_mutations
+  - six_semantic_consumer_roles_and_immutable_CF1_compatibility_boundary
+physical_ceiling: >-
+  No scalar potential, stationary ground state, condensate, gauge kinetic
+  action, spectral pole, Higgs particle, photon, W, Z, Standard Model,
+  electroweak unification, or substrate mechanism is established.
+debt:
+  - assemble_claim_registry_release_disposition_generated_docs_and_memory_transaction
+  - run_one_integrated_promotion_gate_and_finalize_record_only_state
+next_attempt: materialize_and_validate_the_v0_120_0_promotion_transaction

@@ -1,0 +1,41 @@
+campaign: P154
+criteria_order:
+  - explicit scalar kinetic term carrier inner product generators couplings vacuum and one-half real-field convention
+  - exact Gram identity positivity and real-coefficient stabilizer kernel
+  - separation of the mass form from the positive gauge kinetic metric and generalized spectrum
+  - representation vacuum normalization basis and zero-input limits
+  - accepted non-Abelian Abelian representation and physical ceilings
+  - mutation sensitivity assumption economy reusable API value and graph closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Native replay classifies all nine predicates but cannot validate M1's physical headline.
+  B:
+    decision: selected_as_general_positive_object
+    reason: The declared scalar kinetic term gives twice the real gauge-orbit Gram matrix with exact PSD and stabilizer-kernel identities.
+  C:
+    decision: selected_as_conditional_specialization
+    reason: The Pauli-half lower doublet yields the source matrix and rho identity only after representation coupling vacuum and canonical kinetic premises are declared.
+  D:
+    decision: selected_as_nonuniversality_boundary
+    reason: Generator normalization vacuum direction zero couplings and a triplet countermodel change signs ranks and coefficients.
+  E:
+    decision: selected_as_basis_and_kinetic_completion
+    reason: Paired congruence and the generalized M2 versus K eigenproblem expose what raw source eigenvalues omit.
+  F:
+    decision: rejected_as_duplicate_only
+    reason: No accepted claim owns the gauge-field Gram matrix stabilizer kernel generalized kinetic problem and doublet composition.
+  G:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Identical quadratic matrices leave condensate Higgs photon weak-boson Standard Model and substrate dictionaries free.
+  H:
+    decision: selected
+    reason: Dependency semantic-consumer compatibility novelty release queue docs and memory closure are mandatory.
+selection_basis: >-
+  B supplies the representation-independent positive theorem, C supplies the
+  source specialization, D prevents universalization, and E makes field-basis
+  and kinetic normalization explicit. G blocks the source's physical
+  overreading. A and H close provenance and governance; no queue-preexposed mass
+  or mixing formula selected the result.
+foundational_revision_required: false
+debt: []

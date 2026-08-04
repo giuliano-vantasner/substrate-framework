@@ -2,7 +2,7 @@
 description: Derive and audit M1's conditional gauge-scalar mass matrix
 author: vantasner
 created: '2026-08-10T06:00:00Z'
-updated: '2026-08-10T06:14:00Z'
+updated: '2026-08-10T06:55:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - gauge-scalar-mass
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P154 M1 Anderson-Higgs Mass Audit
 
@@ -178,6 +178,14 @@ addition. A physical Higgs mechanism, photon, pole mass, rho prediction, or
 Standard Model interpretation additionally requires a governed scalar and
 gauge action, field normalization, vacuum dynamics, observable dictionary,
 and evidence; matrix algebra cannot replace them.
+
+## Promotion Outcome
+
+P154 promotes C-GSM-001 in v0.120.0 and qualifies M1 through the corrected
+conditional scope. The integrated workflow passes all 1,379 tests, validates
+635 memory files and the physics skill, closes generated registry, release,
+documentation, queue, and memory state, and leaves the parent migration active
+at M2 with 66 pending units.
 
 ## Cross-References
 
