@@ -1,0 +1,26 @@
+attempt: 0007
+campaign: P158
+candidate: corrected_hash_primary_replay
+status: failed
+started_at: '2026-08-10T12:57:00Z'
+finished_at: '2026-08-10T13:02:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - .venv/bin/python -m pytest tests/test_nonabelian_vacuum_polarization.py tests/test_vacuum_polarization.py tests/test_nonabelian_gauge.py -q
+  - git_diff_check
+results:
+  focused_tests: 38_passed
+  primary_verifier: first_nine_checks_passed_then_terminal_tally_shape_check_failed
+failure:
+  layer: implementation
+  mechanism: >-
+    YM1 prints a separator line after its exact ALL 9 CHECKS PASS tally. The
+    verifier incorrectly required the tally to be the final nonwhitespace
+    suffix, so it rejected the native formatting despite a clean process and
+    exact visible tally.
+  scientific_failure: false
+preserved_evidence:
+  native_tail:
+    - ALL_9_CHECKS_PASS
+    - trailing_separator_line
+next_attempt: parse_nonempty_native_lines_and_require_exactly_one_exact_tally_line_without_relaxing_exit_or_count_checks

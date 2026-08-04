@@ -1,0 +1,26 @@
+attempt: 0006
+campaign: P158
+candidate: first_canonical_and_dual_oracle_replay
+status: failed
+started_at: '2026-08-10T12:35:00Z'
+finished_at: '2026-08-10T12:56:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_nonabelian_vacuum_polarization.py tests/test_vacuum_polarization.py tests/test_nonabelian_gauge.py -q
+  - sha256sum campaigns/P158-ym1-yang-mills-induction-audit/evidence/frozen-proposal.yaml
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/independent_nonabelian_scalar_review.py
+results:
+  focused_tests: 38_passed
+  independent_rederivation: 20_passed_clean_exit
+  primary_verifier: failed_at_second_check
+failure:
+  layer: implementation
+  mechanism: >-
+    The primary verifier pinned an incorrectly transcribed frozen-proposal
+    hash beginning 7c4c rather than the measured committed artifact hash
+    50be. The scientific implementation and fresh reviewer were not implicated.
+  mutation_or_scientific_failure: false
+preserved_evidence:
+  measured_frozen_proposal_sha256: 50be0d545a11c3a01f6a1a58f7691449d0d6717e3426090b38f8938f3c54e614
+  independent_terminal_tally: P158_INDEPENDENT_ALL_20_CHECKS_PASS
+next_attempt: correct_only_the_pinned_hash_literal_then_rerun_the_affected_primary_verifier_and_focused_tests

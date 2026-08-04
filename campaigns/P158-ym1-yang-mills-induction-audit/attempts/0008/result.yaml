@@ -1,0 +1,21 @@
+attempt: 0008
+campaign: P158
+candidate: exact_native_tally_primary_replay
+status: failed
+started_at: '2026-08-10T13:03:00Z'
+finished_at: '2026-08-10T13:07:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - rg_g_eff_and_counterterm_in_hash_pinned_YM1
+results:
+  primary_verifier: first_28_checks_passed_then_source_literal_shape_check_failed
+failure:
+  layer: implementation
+  mechanism: >-
+    The source uses the identifier g_eff2, while the verifier searched for
+    g_eff_sq. The semantic claim and coefficient were already checked
+    algebraically; this was an overly specific source-spelling probe.
+  scientific_failure: false
+preserved_evidence:
+  exact_source_assignment: g_eff2_equals_2_pi_over_g_squared
+next_attempt: pin_the_actual_identifier_and_keep_the_independent_absence_of_counterterm_check

@@ -1,0 +1,29 @@
+attempt: 0009
+campaign: P158
+candidate: canonical_conditional_nonabelian_scalar_vacuum_polarization
+status: passed
+started_at: '2026-08-10T13:08:00Z'
+finished_at: '2026-08-10T13:18:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_nonabelian_vacuum_polarization.py tests/test_vacuum_polarization.py tests/test_nonabelian_gauge.py -q
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/independent_nonabelian_scalar_review.py
+results:
+  focused_tests: 38_passed
+  primary_verifier: 32_passed_clean_exit
+  independent_rederivation: 20_passed_clean_exit
+verified:
+  - exact_fundamental_adjoint_and_doubled_fundamental_representation_indices
+  - representation_indexed_exact_massive_scalar_QED2_color_kernel
+  - bubble_seagull_Ward_cancellation_before_transverse_decomposition
+  - typed_component_and_trace_density_low_momentum_coefficients
+  - independent_background_field_curvature_completion
+  - zero_momentum_heavy_mass_and_fixed_Q_massless_limits
+  - source_wrong_numerator_projector_only_and_unique_induction_rejections
+  - seagull_sign_real_scalar_representation_rescaling_index_and_bare_counterterm_mutations
+  - mutable_code_has_no_executable_np_trapz_or_eager_legacy_default
+debt:
+  - build_and_replay_the_frozen_source_dependency_and_semantic_consumer_graph
+  - finish_input_nonduplication_candidate_primary_provenance_and_impact_evidence
+  - complete_individual_claim_review_registry_release_disposition_docs_memory_and_terminal_gate
+next_attempt: freeze_and_replay_YM1_semantic_source_graph

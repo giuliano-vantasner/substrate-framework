@@ -90,6 +90,10 @@ from .nonabelian_gauge import (
     su2_projected_connection,
     su2_projected_unitary,
 )
+from .nonabelian_vacuum_polarization import (
+    SU2ScalarVacuumPolarization,
+    su2_scalar_qed2_vacuum_polarization,
+)
 from .nonabelian_holonomy import (
     EndpointGaugeHolonomyEvidence,
     OrderedSegmentHolonomyEvidence,

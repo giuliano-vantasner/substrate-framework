@@ -1,0 +1,21 @@
+attempt: 0010
+campaign: P158
+candidate: optional_targeted_ruff_preflight
+status: failed
+started_at: '2026-08-10T13:19:00Z'
+finished_at: '2026-08-10T13:20:00Z'
+commands:
+  - .venv/bin/ruff_check_targeted_P158_files
+  - .venv/bin/ruff_format_check_targeted_P158_files
+  - git_diff_check
+failure:
+  layer: environment
+  mechanism: .venv/bin/ruff_is_not_installed
+  scientific_failure: false
+  required_gate_failure: false
+preserved_evidence:
+  git_diff_check: passed
+continuation: >-
+  Do not add an ungoverned formatter dependency. Use the repository's required
+  validation gate and inspect any concrete formatting or lint failure it reports.
+next_attempt: commit_the_verified_implementation_milestone_then_build_the_source_graph
