@@ -1,0 +1,12 @@
+campaign: P157
+source_unit: O1
+native_tally: 7_passed
+predicates:
+  O1.1: {verdict: qualified_exact, retained: normalized_zero_spin_reference_and_y_rotation, correction: C_SPN_001_supplies_the_global_orbit_and_conditional_energy_selection}
+  O1.2: {verdict: qualified_exact, retained: reference_pi_flip_global_minus_sign_and_projector_equality, correction: one_witness_does_not_prove_the_complete_director_orbit}
+  O1.3: {verdict: rejected_headline, retained: local_connection_minus_half_and_bare_phase_minus_one, correction: fixed_projector_endpoint_transition_changes_corrected_holonomy_to_plus_one}
+  O1.4: {verdict: rejected_interpretation, retained: inserted_phase_section_endpoint_arithmetic, correction: spin_one_rotation_is_2pi_periodic_and_the_minus_sign_is_an_inserted_U1_phase}
+  O1.5: {verdict: qualified_topology, retained: antipodal_involution_and_separate_SU2_fundamental_control, correction: typed_RP2_and_full_polar_manifolds_with_no_common_deck_matrix_identity}
+  O1.6: {verdict: rejected_as_object_identity, retained: scalar_values_compare_equal_under_separate_definitions, correction: no_common_domain_map_carrier_or_physical_object}
+  O1.7: {verdict: qualified_narrow_guard, retained: chi_independent_scalar_internal_state_has_zero_connection, correction: scalar_U1_loop_classification_is_accepted_separately_and_half_winding_single_valuedness_is_not_checked}
+headline: qualified_through_existing_claims_without_new_claim_or_release

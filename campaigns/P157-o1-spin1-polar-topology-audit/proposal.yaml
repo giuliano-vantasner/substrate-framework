@@ -104,3 +104,9 @@ comparators_blinded_until: >-
   and dossier bodies, exact data flow, literal constants, guards, and further
   comparator material remain unopened until that boundary.
 status: draft
+source_aware_classification:
+  decision: no_new_claim_terminal_qualification_if_all_oracles_pass
+  retained: [O1.1_representative, O1.2_reference_flip, O1.3_local_one_form_only, O1.4_inserted_phase_arithmetic_only, O1.5_antipodal_involution_only, O1.7_fixed_scalar_control_only]
+  rejected: [fixed_ray_as_director_loop, bare_phase_as_closed_holonomy, spin_one_4pi_return, physical_polar_manifold_equals_RP2, unmapped_deck_SU2_identity, common_minus_one_object, physical_H_BEC_or_substrate_arrow]
+  accepted_mappings: [C-SPN-001, C-DEF-001, C-BER-001, C-HOL-001, C-CHR-001]
+  compatibility_event: none

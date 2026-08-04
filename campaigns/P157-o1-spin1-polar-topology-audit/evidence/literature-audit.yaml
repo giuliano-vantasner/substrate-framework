@@ -1,0 +1,40 @@
+campaign: P157
+scope: O1_cited_spinor_BEC_ground_state_and_Alice_ring_context
+sources:
+  - id: Ho1998
+    citation: Tin-Lun Ho, Spinor Bose Condensates in Optical Traps, Physical Review Letters 81 (1998) 742-745
+    url: https://arxiv.org/abs/cond-mat/9803231
+    primary: true
+    supports:
+      - spin_one_condensates_can_have_polar_or_ferromagnetic_ground_states_depending_on_scattering_channels
+      - reference_polar_state_and_a_complete_material_Hamiltonian_context
+    does_not_support:
+      - O1_fixed_ray_phase_as_a_nontrivial_projective_Berry_loop
+      - physical_polar_manifold_equal_to_RP2_after_discarding_condensate_phase
+      - substrate_or_H_BEC_identification
+  - id: OhmiMachida1998
+    citation: Tetsuo Ohmi and Kazushige Machida, Bose-Einstein Condensation with Internal Degrees of Freedom in Alkali Atom Gases, JPSJ 67 (1998) 1822-1825
+    url: https://doi.org/10.1143/jpsj.67.1822
+    primary: true
+    supports:
+      - Hamiltonian_with_gauge_and_spin_rotation_symmetries_for_internal_state_condensates
+      - conditional_ground_states_collective_modes_and_topological_defect_context
+    does_not_support:
+      - deriving_O1_endpoint_omitting_Berry_verdict
+      - identifying_equal_minus_one_values_across_unmapped_domains
+  - id: RuostekoskiAnglin2003
+    citation: J. Ruostekoski and J. R. Anglin, Monopole Core Instability and Alice Rings in Spinor Bose-Einstein Condensates, Physical Review Letters 91 (2003) 190402
+    url: https://doi.org/10.1103/PhysRevLett.91.190402
+    primary: true
+    supports:
+      - half_quantum_Alice_ring_in_a_complete_trapped_spin_one_sodium_condensate_model
+      - interaction_length_scales_core_deformation_and_a_computed_stability_threshold
+    does_not_support:
+      - replacing_the_full_model_with_O1_constant_projector_phase_path
+      - universal_BEC_to_RP2_or_substrate_arrow
+verdict: >-
+  The cited primary work supports separately declared spinor-condensate
+  Hamiltonians, interaction-dependent phase selection, and physical defect
+  models. It does not repair O1's constant-projector path, omitted endpoint
+  transition, projective-versus-full-manifold conflation, or cross-object
+  minus-one identity.

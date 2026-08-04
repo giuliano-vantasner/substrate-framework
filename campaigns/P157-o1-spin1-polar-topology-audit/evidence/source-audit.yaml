@@ -1,0 +1,43 @@
+source_unit: O1
+headline_verdict: qualified_and_duplicate_with_load_bearing_Berry_rejection
+accepted_content:
+  - standard_spin_one_matrices_reference_zero_spin_and_one_rotated_zero_spin_control
+  - reference_antipodal_flip_by_a_pi_rotation_and_identical_rank_one_projector
+  - local_connection_minus_one_half_and_bare_integral_phase_minus_one_for_the_declared_fixed_ray_phase_section
+  - endpoint_signs_of_that_declared_section_at_2pi_and_4pi
+  - antipodal_involution_and_scalar_fixed_internal_state_zero_derivative_controls
+corrected_content:
+  - >-
+    C-SPN-001 supplies the complete polar projective ray orbit RP2 and
+    conditional fixed-density selection; O1 checks only representatives.
+  - >-
+    C-DEF-001 distinguishes the projective ray orbit from the physical
+    phase-retaining polar manifold (S2 x U1)/Z2 and their Z2 versus Z loop groups.
+  - >-
+    C-BER-001 includes the endpoint transition. O1's constant-projector section
+    has tau=-1 and bare phase -1, hence corrected closed-ray holonomy +1.
+  - >-
+    A genuine projective director loop may have corrected holonomy -1, but its
+    real lift changes director and has local connection zero; O1 does not build it.
+  - >-
+    The spin-one representation returns +I3 after 2pi. O1's 2pi minus sign
+    comes from its separately inserted half U1 phase, not the representation.
+rejected_content:
+  - declared_fixed_ray_phase_is_a_half_quantum_director_texture
+  - bare_integral_phase_is_the_gauge_invariant_closed_ray_holonomy
+  - full_return_of_the_spin_one_carrier_requires_4pi
+  - physical_polar_BEC_order_parameter_manifold_is_RP2
+  - RP2_antipodal_deck_map_is_identical_to_fundamental_SU2_minus_I2_without_a_supplied_map
+  - equal_minus_one_values_make_Berry_SU2_parity_and_disclination_objects_one_Z2
+  - O1_derives_a_physical_H_BEC_spin_one_carrier_ground_state_defect_or_substrate_arrow
+predicate_adjudication:
+  - {id: O1.1, verdict: qualified_exact_representative, mapping: C-SPN-001, correction: one_parameter_control_not_global_or_physical_ground_state}
+  - {id: O1.2, verdict: qualified_exact_representative, mapping: C-SPN-001, correction: reference_flip_only_global_projective_orbit_already_accepted}
+  - {id: O1.3, verdict: rejected_as_closed_ray_holonomy, mapping: C-BER-001, correction: constant_projector_tau_minus_one_times_bare_minus_one_gives_plus_one}
+  - {id: O1.4, verdict: rejected_as_spin_one_double_cover, mapping: C-HOL-001, correction: inserted_half_U1_phase_not_spin_one_rotation_and_2pi_spin_one_image_is_plus_I3}
+  - {id: O1.5, verdict: qualified_topology_but_rejected_object_identity, mapping: C-DEF-001, correction: projective_RP2_not_full_polar_manifold_and_no_deck_to_fundamental_SU2_map}
+  - {id: O1.6, verdict: rejected_as_common_object, mapping: C-CHR-001, correction: equal_values_without_common_domain_or_pullback}
+  - {id: O1.7, verdict: qualified_narrow_control, mapping: C-DEF-001, correction: chi_independent_scalar_spin_frame_only_and_actual_guard_does_not_test_single_valuedness}
+compatibility:
+  native_numpy_surface: none
+  mutable_policy: exact_algebra_or_np_trapezoid_only

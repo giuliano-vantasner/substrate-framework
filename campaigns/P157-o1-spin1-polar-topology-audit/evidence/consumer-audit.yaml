@@ -1,0 +1,29 @@
+campaign: P157
+source_unit: O1
+semantic_consumers:
+  ME1:
+    disposition: qualified
+    use: imports_O1_spin_matrices_and_reference_states_and_claims_to_pay_down_polar_selection
+    decision: accepted_C_SPN_001_rederives_the_global_invariant_and_selection_without_O1_authority
+  ME2:
+    disposition: qualified
+    use: cites_O1_director_flip_and_rejected_Berry_minus_one_as_half_quantum_context
+    decision: accepted_C_DEF_001_corrects_full_polar_topology_and_energetics_without_O1_Berry_authority
+narrative_siblings:
+  B1: O1_names_B1_only_as_a_same_value_sibling
+  NA1: O1_and_NA1_name_each_other_only_as_same_value_siblings
+false_positive_queue_edges:
+  T1E: O1_means_oracle_one_in_an_unrelated_triple_oracle
+  CF5: O1_is_the_tokenized_asymptotic_phrase_O_of_one
+  S2: O1_source_sphere_notation_created_the_candidate_label
+narrative_consumers:
+  - merged-framework/README.md
+  - merged-framework/UNIFIED-SYNTHESIS.md
+  - merged-framework/frontier.md
+authority: none
+canonical_consumers: []
+compatibility:
+  O1: no_numpy_surface
+  mutable_P157: no_executable_legacy_integration_access
+  immutable_B1_S2_CF5: version_only_legacy_surfaces_remain_recorded_and_unexecuted
+debt: []

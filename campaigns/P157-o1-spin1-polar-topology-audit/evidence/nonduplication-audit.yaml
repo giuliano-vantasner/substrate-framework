@@ -1,0 +1,24 @@
+campaign: P157
+claim_delta: []
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+exact_existing_closure:
+  C-SPN-001: complete_pure_spin_one_invariant_polar_RP2_ray_orbit_and_conditional_selection
+  C-DEF-001: projective_RP2_and_full_polar_cover_loop_groups_and_half_generator_square
+  C-BER-001: real_and_periodic_projective_sections_endpoint_transition_and_fixed_ray_counterexample
+  C-HOL-001: fundamental_and_adjoint_center_representation_dependence
+  C-CHR-001: equal_values_do_not_identify_functions_or_domains
+source_only_details:
+  - one_y_axis_zero_spin_witness
+  - one_reference_pi_flip_witness
+  - an_incorrect_fixed_ray_Berry_interpretation
+  - separately_assigned_or_constructed_minus_one_values
+distinct_positive_object: none
+decision: terminal_qualification_by_accepted_composition_without_new_claim_or_API
+debt: []

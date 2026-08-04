@@ -1,0 +1,40 @@
+revision: 0001
+campaign: P157
+parent_frozen_proposal_sha256: 56a1431c8341d548ffc80359d4e0bc0e972e3dd0c896075b9de517a72d444a3c
+trigger: >-
+  Source-aware reproduction finds that O1's exact representative spin-one and
+  antipodal controls are already governed, while its claimed half-quantum
+  Berry path has a constant projector and omits the endpoint transition.
+unchanged:
+  - source_and_dossier_hashes_accepted_base_and_physical_ceilings
+  - candidates_A_through_H_and_their_predeclared_structural_ordering
+  - exclusion_of_all_queue_preexposed_RP2_half_pi_and_minus_one_values
+  - compatibility_policy_requiring_exact_algebra_trapezoid_integral_or_np_trapezoid_in_mutable_code
+claim_delta:
+  identifiers: []
+  dependencies: [C-SPN-001, C-DEF-001, C-BER-001, C-HOL-001, C-CHR-001]
+  release_change: none
+  implementation_change: none
+source_corrections:
+  - classify_O1_1_and_O1_2_as_representative_regressions_for_C_SPN_001
+  - apply_C_BER_001_endpoint_transition_to_get_corrected_fixed_ray_holonomy_plus_one
+  - distinguish_inserted_half_U1_phase_from_integer_spin_representation_transport
+  - distinguish_projective_RP2_ray_orbit_from_full_phase_retaining_polar_manifold
+  - reject_unmapped_RP2_deck_fundamental_SU2_and_cross_oracle_value_identities
+  - retain_only_the_narrow_chi_independent_scalar_spin_frame_control
+novelty: >-
+  C-SPN-001 already owns the global spin-one equality orbit, C-DEF-001 owns the
+  typed topology, C-BER-001 owns both projective gauges and the exact fixed-ray
+  counterexample, C-HOL-001 owns representation dependence, and C-CHR-001 owns
+  the equal-value boundary. O1 contributes no distinct correct positive object.
+oracle: >-
+  Exact accepted APIs plus an independent direct spin-one and Berry
+  rederivation; source hashes and AST flow; projector derivative, endpoint
+  transition, corrected holonomy, integer-spin 2pi matrix, director-loop
+  counterexample, quotient typing, scalar-loop closure, and semantic graph;
+  challenged by omitted endpoint, changed phase, nonconstant director,
+  fundamental-versus-adjoint carrier, and equal-value mutations.
+implementation_boundary: >-
+  Add campaign verifiers and governance evidence only. Reuse accepted pure APIs
+  and do not create a duplicate canonical module, claim, or release.
+status: frozen

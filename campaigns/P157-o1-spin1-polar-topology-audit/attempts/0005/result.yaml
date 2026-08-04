@@ -1,0 +1,40 @@
+attempt: 0005
+campaign: P157
+candidate: source_aware_no_new_claim_classification_freeze
+status: passed
+started_at: '2026-08-10T10:34:00Z'
+finished_at: '2026-08-10T10:48:00Z'
+commands:
+  - inspect_hash_pinned_O1_and_dossier_after_the_committed_comparator_gate
+  - reproduce_O1_with_clean_exit_and_ALL_7_CHECKS_PASS
+  - inspect_exact_source_AST_data_flow_and_endpoint_behavior
+  - search_registry_package_campaign_memory_and_source_consumers_for_spin1_polar_topology
+  - audit_Ho_1998_Ohmi_Machida_1998_and_Ruostekoski_Anglin_2003_primary_provenance
+  - parse_all_P157_evidence_YAML
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P157-o1-spin1-polar-topology-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+freeze:
+  frozen_parent_sha256: 56a1431c8341d548ffc80359d4e0bc0e972e3dd0c896075b9de517a72d444a3c
+  proposal_revision_sha256: 4389fabc4a5ca197602f1bd3abab27dcbdb1adcb6c194c6e5b2101265d3c1182
+  source_aware_proposal_sha256: 91c05b4bd8e9d28aa8d44df9ff227500ac87766681a1e3b43e0e1fbfef99e78a
+  memory_contract_sha256: 27d62e5a6c8b522c2f2f83fad359798efbabafe7e2c5f9fe07ae8ae002baa32c
+  source_reproduction_sha256: d9c1b82ba56c3931301bb5e96c0a6068dd8ab9b517dcc23b686b1c610287b648
+  source_audit_sha256: e03567c1be5b10342d3edeed291d0f8626a722a6126a2540ec7a5322f1c74e33
+  source_sha256: 270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64
+  dossier_sha256: 968e5df0e64739cbf61c7a34091269b99f8602d15450118eae2fd241c47f9aea
+claim_delta:
+  identifiers: []
+  accepted_mappings: [C-SPN-001, C-DEF-001, C-BER-001, C-HOL-001, C-CHR-001]
+  decision: no_new_claim_or_canonical_implementation
+classification:
+  exact_source_content: reference_spin_one_zero_spin_antipodal_projector_local_one_form_and_phase_arithmetic
+  corrected_source_content: accepted_global_orbit_typed_manifolds_endpoint_corrected_holonomy_and_representation_behavior
+  rejected_source_content: fixed_ray_half_quantum_spin_one_4pi_common_Z2_physical_BEC_and_substrate_readings
+  compatibility_event: none
+  identifier_collision: not_applicable_empty_delta
+debt:
+  - build_primary_and_fresh_independent_O1_adjudication_oracles
+  - build_the_frozen_source_graph_and_replay_semantic_consumers
+  - complete_source_review_disposition_and_terminal_gate
+next_attempt: implement_campaign_only_verifiers_without_a_duplicate_canonical_API

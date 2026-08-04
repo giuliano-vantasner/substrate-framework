@@ -2,7 +2,7 @@
 description: Audit O1 spin-one polar topology and Berry holonomy against accepted framework claims
 author: vantasner
 created: '2026-08-10T10:20:00Z'
-updated: '2026-08-10T10:20:00Z'
+updated: '2026-08-10T10:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -116,6 +116,32 @@ executable direct, imported, or dynamic `np.trapz` access is forbidden. If
 immutable O1 fails only because of a legacy NumPy spelling, an alias backed by
 `np.trapezoid` may reproduce it and the event is version-only rather than a
 scientific rejection. The expected exact campaign should need no quadrature.
+
+## Source-Aware Classification
+
+The unchanged O1 source exits zero and prints all seven passes with no NumPy
+surface. O1.1 and O1.2 are exact representative regressions for C-SPN-001,
+not global orbit or physical ground-state proofs. O1.3 is load-bearingly wrong:
+`R_z(chi)|m=0>` is constant, so the declared section is only
+`exp(i*chi/2)|0>` with a constant projector. Its local connection is minus one
+half and its bare phase is minus one, but its endpoint transition is also
+minus one. C-BER-001 therefore gives corrected closed-ray holonomy plus one.
+
+O1.4's two-pi minus sign comes from that inserted U1 half phase; the spin-one
+representation itself gives plus identity at two pi. O1.5 retains the
+antipodal involution but conflates projective `RP2` with the full polar
+manifold and assigns a fundamental SU2 matrix to an RP2 deck label without a
+map. O1.6 compares values rather than typed objects. O1.7 is only the narrow
+fact that a deliberately chi-independent one-component internal state has
+zero spin-frame derivative. Ho 1998, Ohmi--Machida 1998, and
+Ruostekoski--Anglin 2003 support complete conditional spinor-condensate models,
+not these missing endpoint and typing steps.
+
+Source-aware nonduplication selects Candidate B with A, D, E, G, and H as
+audit or ceiling machinery. Candidate C is unnecessary because the accepted
+global orbit is stronger than O1's witnesses, and Candidate F's complete
+physical premises are absent. Revision 0001 freezes an empty claim delta and
+no canonical implementation or release change.
 
 ## Attempts and Continuation
 

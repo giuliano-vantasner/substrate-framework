@@ -1,0 +1,57 @@
+source_unit: O1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-7/bridge_O1_spin1_bec_rp2.py
+source_sha256: 270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64
+dossier_path: /home/dan/substrate/merged-framework/bridges/phase-7/dossiers/O1-dossier.md
+dossier_sha256: 968e5df0e64739cbf61c7a34091269b99f8602d15450118eae2fd241c47f9aea
+native_execution:
+  command: /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-7/bridge_O1_spin1_bec_rp2.py
+  working_directory: /home/dan/substrate
+  exit_status: 0
+  terminal_tally: ALL_7_CHECKS_PASS
+  compatibility_event: none
+static_shape:
+  imports: [sympy]
+  local_functions: [check, is_zero_mat, su2_z, deck_central, holonomy, R_spin1]
+  check_calls: 7
+  assertions: 1
+  numerical_quadrature: none
+  numpy_surface: none
+  declared_symbols: [beta, gamma, chi, rho, phase0]
+reproduced_relations:
+  - standard_spin_one_reference_and_one_y_axis_rotation_are_normalized_and_zero_spin
+  - a_pi_x_rotation_maps_the_reference_to_its_negative_with_the_same_projector
+  - declared_psi_chi_has_local_connection_minus_one_half_bare_phase_minus_one_and_constant_projector
+  - declared_phase_lift_returns_minus_at_2pi_and_plus_at_4pi
+  - antipodal_map_has_order_two_and_separately_defined_fundamental_SU2_matrix_is_minus_I2_at_2pi
+  - assigned_or_separately_constructed_minus_one_values_compare_equal
+  - chi_independent_one_component_state_has_zero_spin_frame_derivative
+oracle_gaps:
+  - >-
+    O1.1 and O1.2 test one rotation and one reference flip, not the complete
+    pure spin-one equality orbit or its stabilizer; C-SPN-001 supplies that
+    exact global classification.
+  - >-
+    R_z(chi) fixes the m=0 reference, so psi_chi is only exp(i*chi/2)|0>.
+    Its projector is constant and it is not a director half-turn.
+  - >-
+    O1.3 calls the bare integral phase a holonomy but omits endpoint
+    transition tau=-1. With A=-1/2, the accepted corrected value is
+    tau*exp(i*integral A)=(-1)*(-1)=+1.
+  - >-
+    The 2pi minus sign is inserted by a U1 half phase. The spin-one rotation
+    itself returns +I3 at 2pi, so O1.4 is not an integer-spin double-cover
+    theorem or belt-trick derivation.
+  - >-
+    O1.5 separately defines an RP2 deck label as -I2 and compares it with a
+    fundamental SU2 matrix. It supplies no map from the antipodal S2 deck
+    transformation to that two-dimensional carrier.
+  - >-
+    O1.6 compares scalar values without common domains or pullbacks, and O1.7
+    tests a deliberately chi-independent scalar rather than deriving a
+    complete scalar condensate order-parameter theorem.
+scope_of_reproduction: >-
+  The run reproduces exact finite matrix and phase arithmetic under declared
+  inputs. It does not validate a nonconstant polar director loop, corrected
+  Berry holonomy minus one, physical half-quantum vortex, full condensate
+  manifold RP2, spinorial 4pi return of an integer-spin carrier, common Z2
+  object, atomic BEC ground state, observation, or substrate realization.

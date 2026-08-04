@@ -1,0 +1,15 @@
+campaign: P157
+source_unit: O1
+accepted_mappings:
+  C-SPN-001: exact_pure_spin_one_orbit_and_conditional_phase_selection
+  C-DEF-001: projective_and_full_polar_topology_distinction
+  C-BER-001: endpoint_corrected_closed_ray_holonomy
+  C-HOL-001: representation_typed_SU2_center_boundary
+  C-CHR-001: equal_value_different_domain_boundary
+queue_edges:
+  B1: narrative_sibling_only_and_accepted_C_BER_001_corrects_the_same_endpoint_omission
+  ME1: later_reconciliation_annotation_and_reverse_consumer_qualified_through_C_SPN_001
+  NA1: narrative_sibling_only_and_accepted_C_HOL_001_rejects_value_identity
+  S2: token_false_positive_from_S2_sphere_notation_with_no_source_or_semantic_dependency
+closure: no_new_claim_existing_accepted_DAG_is_acyclic
+debt: []

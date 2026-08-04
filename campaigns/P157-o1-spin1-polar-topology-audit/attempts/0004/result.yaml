@@ -1,0 +1,23 @@
+attempt: 0004
+campaign: P157
+candidate: native_source_reproduction
+status: passed
+started_at: '2026-08-10T10:30:00Z'
+finished_at: '2026-08-10T10:33:00Z'
+commands:
+  - /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-7/bridge_O1_spin1_bec_rp2.py
+results:
+  source_sha256: 270877b5ae3507ba5000643333a06269dce2c6a2ec7dbd9ae86f8e2b6e77ef64
+  process_exit: 0
+  terminal_tally: ALL_7_CHECKS_PASS
+  compatibility_event: none
+classification: >-
+  The unchanged source reproduces seven predicates. Its reference spin-one
+  nematic and antipodal projector controls are exact. Its Berry verdict uses
+  a fixed ray with an inserted half phase and omits the endpoint transition,
+  so novelty and headline validity require source-aware adjudication.
+debt:
+  - classify_every_predicate_and_the_headline_claim
+  - complete_source_aware_nonduplication
+  - correct_the_projector_endpoint_representation_and_full_manifold_typing
+next_attempt: freeze_the_source_aware_no_new_claim_classification
