@@ -1,0 +1,63 @@
+revision: 0001
+campaign: P150
+parent_frozen_proposal_sha256: 4342a1b8dfc1bb842d558d4dbfe363f6f6bd746ee281efd0f779aeef541e6f35
+trigger: >-
+  Native reproduction, right-half-line energy balance, direct piston-variable
+  elimination, and source-aware nonduplication reveal a distinct exact passive
+  boundary-scattering theorem absent from the accepted registry. It preserves
+  W5's rational algebra only under corrected conventions and exposes the
+  physical and identifiability ceilings.
+unchanged:
+  - accepted base source hashes coordinates signature and source ceilings
+  - candidates A through G and their ordering
+  - structural selection criteria and comparator exclusion
+  - compatibility policy requiring np.trapezoid or exact algebra in mutable code
+claim_delta:
+  identifiers: [C-SCT-001]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_passive_half_line_scattering_ledger_module
+exact_statement: >-
+  Let c and zeta be exact positive speeds, z=zeta/c, and let an exact real
+  massless scalar on x>=0 obey phi_tt-c^2*phi_xx=0. For an incoming harmonic
+  amplitude A_i proportional to exp(-i*omega*(t+x/c)), a reflected amplitude
+  A_r proportional to exp(-i*omega*(t-x/c)), and the passive boundary condition
+  phi_t-zeta*phi_x=0, exact substitution gives r=A_r/A_i=(z-1)/(z+1), reflected
+  power R=r^2, and absorbed fraction T=1-R=4*z/(z+1)^2. The half-line bulk
+  energy rate is -c^2*zeta*phi_x(0,t)^2<=0. Under z->1/z, r changes sign while
+  R and T are invariant, so power data alone cannot distinguish reciprocal
+  impedances. If a separate reference channel is declared perfectly reflected,
+  C-BRN-001 gives contrast A=(1-R)/(1+R)=2*z/(z^2+1)=T/(2-T); A is therefore a
+  deterministic transform rather than an independent prediction and is also
+  reciprocal-invariant. The theorem derives no piston action, boundary
+  coefficient from lambda and mu, physical chirality, parity violation,
+  current, charge, detector, weak interaction, or substrate realization.
+source_corrections:
+  - W5_reverses_incoming_and_reflected_directions_on_x_greater_zero
+  - W5_plus_sign_boundary_is_active_while_its_reflection_law_uses_the_passive_minus_sign
+  - imported_piston_equations_eliminate_to_a_time_derivative_boundary_relation_not_local_Z_phi_x
+  - W5_never_computes_stress_flux_or_boundary_energy_before_calling_one_minus_R_absorbed
+  - right_channel_perfect_reflection_is_assigned_not_derived_by_the_scalar_boundary_problem
+  - R_T_and_A_are_one_functional_degree_of_freedom_not_three_independent_predictions
+  - power_ratios_have_z_to_one_over_z_nonidentifiability
+  - symmetric_assigned_channels_give_arithmetic_zero_not_a_weak_parity_theorem
+accepted_mappings: [C-BND-001, C-SG-011, C-SG-012, C-SG-013, C-BRN-001, C-REP-002, C-KIN-001]
+novelty: >-
+  C-BND-001 supplies a general affine residual and underdetermination but no
+  bulk wave solution, reflection amplitude, energy dissipation, or impedance
+  reciprocity. C-BRN-001 normalizes declared channel values but does not derive
+  them from a boundary problem. No accepted claim or canonical API states the
+  passive half-line scattering, energy-rate sign, reciprocal amplitude/power
+  distinction, and reference-contrast dependence together.
+oracle: >-
+  Exact SymPy plane-wave substitution and scalar stress-energy balance,
+  independently rederived by characteristics and time-averaged flux, with
+  domain-normal, boundary-sign, amplitude-square, reciprocal-impedance,
+  reference-channel, action-elimination, and physical-interpretation mutations.
+implementation_boundary: >-
+  Add a pure exact module returning normalized impedance, amplitude reflection,
+  reflected and absorbed power fractions, the boundary energy-rate coefficient,
+  reciprocal-impedance ledger, and the conditional perfectly-reflected-reference
+  contrast through C-BRN-001. It must introduce no piston derivation, nonlinear
+  sine-Gordon event, detector, charge, weak, gauge, or substrate interpretation
+  and must perform no quadrature.
+status: frozen

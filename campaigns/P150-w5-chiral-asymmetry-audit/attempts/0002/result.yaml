@@ -1,0 +1,25 @@
+attempt: 0002
+campaign: P150
+candidate: literal_reproduction_and_boundary_sign_diagnosis
+status: passed
+started_at: '2026-08-10T02:10:00Z'
+finished_at: '2026-08-10T02:20:00Z'
+commands:
+  - .venv/bin/python bridge_W5_chiral_asymmetry_magnitude.py
+  - shared_AST_compatibility_audit_on_hash_pinned_W5
+  - direct_right_half_line_wave_energy_and_action_elimination_rederivation
+result:
+  native_exit_status: 0
+  terminal_tally: ALL_27_CHECKS_PASS
+  compatibility: no_numpy_integration_reference
+  passive_boundary_sign: phi_t_minus_zeta_phi_x_equals_zero
+  source_displayed_sign: phi_t_plus_zeta_phi_x_equals_zero_is_active_on_x_greater_equal_zero
+  imported_action_elimination: phi_t_plus_mu_over_lambda_squared_times_partial_t_phi_x_equals_Vprime_minus_J_over_lambda
+failure_class: none
+scientific_effect: >-
+  The source tally is retained as reproduction evidence. Its rational formulas
+  are supportable only after correcting the domain orientation and passive
+  boundary sign; the cited piston action does not derive the local impedance
+  condition, and the contrast remains conditional on an assigned reference
+  channel.
+next_attempt: freeze_the_source_aware_C_SCT_001_revision_before_implementation

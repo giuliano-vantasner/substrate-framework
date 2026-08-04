@@ -1,0 +1,75 @@
+campaign: P150
+source_unit: W5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-6/bridge_W5_chiral_asymmetry_magnitude.py
+sha256: 5afea85e0e70236ddd076e2da585d6ab5861d52211239642eac1c951f1c6a71a
+dossier_path: merged-framework/bridges/phase-6/dossiers/W5_dossier.md
+dossier_sha256: 761e30e9f93a6d74f7d017af0af89dae39cfa10c38c128bd0ef3c316fd1f6401
+ast_inventory:
+  check_calls: 27
+  assertions: 1
+  function_definitions: [check, dim]
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+native_execution:
+  exit_status: 0
+  terminal_tally: ALL_27_CHECKS_PASS
+  symbolic_outputs:
+    amplitude_reflection: (Z-1)/(Z+1)
+    reflected_fraction: (Z-1)^2/(Z+1)^2
+    complement_fraction: 4*Z/(Z+1)^2
+    assigned_reference_contrast: 2*Z/(Z^2+1)
+imported_solution:
+  path: sg-breather-ionization/solution.md
+  sha256: a5a0ced9a097f07daea67e37b9516755307536e4850dfc975da72ee8eb876f86
+  exact_content: >-
+    The imported text proposes a boundary piston ansatz, two equations, a
+    schematic combined condition with explicitly retained inertial terms, a
+    linear characteristic decomposition, and supplied physical selection
+    labels. Those statements are noncanonical source evidence and are not an
+    accepted weak-sector action or event derivation.
+initial_scientific_flags:
+  - >-
+    On the declared right half-line x>0, a phase exp(i*(k*x-omega*t)) travels
+    toward increasing x and is outgoing from the boundary, while
+    exp(i*(-k*x-omega*t)) travels toward decreasing x and is incoming. W5 names
+    them in the opposite order.
+  - >-
+    For the canonical scalar wave energy on x>0, dE/dt at the boundary is
+    -c^2*phi_t*phi_x. The displayed source-free condition
+    phi_t+zeta*phi_x=0 with zeta>0 gives positive bulk energy injection rather
+    than absorption. The advertised passive reflection law belongs to
+    phi_t-zeta*phi_x=0 with the correctly oriented incoming and reflected waves.
+  - >-
+    Even accepting the imported signs phi_x=-lambda*psi_dot and
+    mu*psi_ddot+V'=lambda*phi_t+J, direct elimination gives
+    phi_t+(mu/lambda^2)*partial_t(phi_x)=(V'-J)/lambda. It does not give the
+    local condition phi_t+(lambda^2/mu)*phi_x=drive. Dropping drive and
+    potential does not remove the inertial derivative.
+  - >-
+    A boundary-only action cannot derive the bulk trace equation without a
+    declared bulk action and domain normal. With the canonical right-half-line
+    bulk sign, variation of the written coupling yields the opposite trace sign
+    from the imported equation.
+  - >-
+    T=1-R is an algebraic complement. It is an absorbed fraction only after the
+    passive boundary energy balance and absence of other reservoirs are shown;
+    W5 evaluates neither stress flux nor boundary energy.
+  - >-
+    A_LR is constructed after independently assigning R_R=1. It is the
+    deterministic transform (1-R)/(1+R), not a third independent prediction.
+    R, T, and A_LR contain one power-ratio degree of freedom.
+  - >-
+    The power observables are invariant under z->1/z, while the amplitude
+    reflection changes sign. Thus the advertised ratios do not identify the
+    free impedance even within the conditional scalar model.
+  - >-
+    Equal assigned channel coefficients give zero normalized contrast by
+    arithmetic. They do not establish scalar-boundary parity as a fixed-theory
+    symmetry, Lorentz chirality, a V-A current, charge selection, a detector
+    observable, a weak interaction, or a substrate mechanism.
+maximum_source_verdict: reproduction_only_pending_passive_boundary_implementation_and_independent_review

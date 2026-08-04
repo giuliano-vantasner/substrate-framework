@@ -87,3 +87,4 @@ comparators_blinded_until: >-
   predicates, data flow, runtime output, and further comparator material remain
   unopened until that boundary.
 status: draft
+revision: 0001

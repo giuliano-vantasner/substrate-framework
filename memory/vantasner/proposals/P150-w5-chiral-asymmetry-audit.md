@@ -2,7 +2,7 @@
 description: Derive and audit W5's conditional boundary-scattering and left-right asymmetry content
 author: vantasner
 created: '2026-08-10T02:06:00Z'
-updated: '2026-08-10T02:06:00Z'
+updated: '2026-08-10T02:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -85,10 +85,16 @@ comparators remain blinded until the manifest and this contract are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved at the initial freeze. C-BRN-001 may already govern
-the normalized contrast while C-BND-001 may delimit the boundary residual. A
-later claim delta requires source-aware nonduplication and a committed revision
-before implementation.
+Revision 0001 reserves C-SCT-001 after source-aware nonduplication. For a
+massless scalar on the right half-line, exact incoming and reflected harmonics
+and the passive condition `phi_t-zeta*phi_x=0` give normalized impedance
+`z=zeta/c`, amplitude reflection `(z-1)/(z+1)`, reflected power `R`, and absorbed
+fraction `1-R`. The bulk energy rate is nonpositive. Reciprocal impedances flip
+the amplitude phase but leave power ratios unchanged. A separately assigned
+perfectly reflected reference channel yields contrast `(1-R)/(1+R)` through
+C-BRN-001; this is a deterministic transform, not an independent prediction.
+The claim introduces no piston derivation, physical chirality, parity
+violation, detector, current, charge, weak interaction, or substrate mechanism.
 
 ## Implementation and Oracle Plan
 
@@ -112,7 +118,15 @@ scientific candidate.
 
 ## Attempts and Continuation
 
-Every source, sign, normalization, domain, action, parity, current, detector,
+Native W5 execution exits cleanly with all 27 literal checks passing and no
+integration compatibility shape. That tally is reproduction evidence only. On
+the declared right half-line the source reverses wave directions, and its plus
+boundary sign injects energy; the advertised passive rational law belongs to
+the minus sign. Direct elimination of the cited piston equations leaves a time
+derivative of `phi_x`, not the asserted local impedance. `T` and the assigned
+reference contrast are transforms of `R`, and all power ratios are invariant
+under reciprocal impedance. Every source, sign, normalization, domain, action,
+parity, current, detector,
 compatibility, dependency, consumer, or verifier failure is append-only with a
 diagnosed mechanism and materially different next attempt. Technical failures
 are repaired; overclaims yield to another preregistered candidate. Neither a

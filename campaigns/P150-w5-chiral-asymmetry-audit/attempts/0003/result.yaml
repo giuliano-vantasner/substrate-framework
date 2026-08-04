@@ -1,0 +1,22 @@
+attempt: 0003
+campaign: P150
+candidate: source_aware_C_SCT_001_freeze
+status: passed
+started_at: '2026-08-10T02:21:00Z'
+finished_at: '2026-08-10T02:24:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate proposal_contract --base repository_root
+  - independent_SymPy_passive_boundary_flux_and_reciprocity_expansion
+  - git diff --check
+freeze:
+  proposal_sha256: ae3ea929a9a9ef77ac1dae6fb7bf857d4a64db2247e48a950027fa256fd6afd0
+  revision_sha256: 0427299aebadd0d65a1eea7e4957388a6c073ce6f89ec86d781fc335c27af03a
+  reproduction_sha256: e4f2de5480d70bea8b2a0de1f616b24edf210315c7f9f0f16e02d5814426e186
+  memory_contract_sha256: eed02b8ed403304ca29ff1bb4708f9b359d9a1aff5290365a1e3110cc449e842
+  exact_scattering_and_reciprocity_check: passed
+debt:
+  - implement_and_test_the_pure_passive_boundary_scattering_ledger
+  - build_primary_and_fresh_independent_mutation_sensitive_oracles
+  - adjudicate_all_twenty_seven_W5_predicates_and_close_dependencies_consumers_and_generated_state
+next_attempt: implement_only_the_frozen_C_SCT_001_surface
