@@ -1,0 +1,41 @@
+attempt: 0001
+campaign: P154
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T05:52:00Z'
+finished_at: '2026-08-10T06:02:00Z'
+commands:
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - memory search M1 Anderson Higgs mass matrix VEV gauge boson
+  - memory grep M1 Anderson Higgs mass matrix
+  - cmp campaigns/P154-m1-anderson-higgs-mass-audit/proposal.yaml campaigns/P154-m1-anderson-higgs-mass-audit/evidence/frozen-proposal.yaml
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P154-m1-anderson-higgs-mass-audit.md --base /home/dan/substrate-framework
+freeze:
+  proposal_sha256: 95c0ebbbf3b9058183efcc878d8369fe74b389a73df522a58f07ae6067739089
+  frozen_proposal_sha256: 95c0ebbbf3b9058183efcc878d8369fe74b389a73df522a58f07ae6067739089
+  memory_contract_sha256: db8494bf25a7df4a7c39a5feea4cbd66088e8faed3736563fbe87d0d044e945d
+  source_sha256: 6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f
+  dossier_sha256: cc6e38f748085be857dedf2c724125a2b92a84db791d7b365ea14ff8fd6a7886
+preflight:
+  framework_repository: clean_at_fb1807f_before_contract_creation
+  framework_release: v0.119.0
+  source_repository: pinned_at_6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  skill_checks: 7_passed_0_warnings
+  repository_contract: valid_154_accepted_claims_67_pending_units
+  memory_recall: no_direct_M1_result_beyond_parent_migration_effort
+preexposure:
+  source_queue_metadata: >-
+    The queue exposed dependencies, nine literal checks, one assertion, and
+    broad doublet, vacuum, mass, neutral-matrix, mixing, and rho formulas.
+  excluded_from_selection: true
+source_opened_or_executed: false
+compatibility_preflight: >-
+  Queue inventory exposes no NumPy surface. The exact campaign nevertheless
+  freezes the repository policy that mutable code uses np.trapezoid or the
+  canonical trapezoid_integral helper and never executable np.trapz.
+debt:
+  - reproduce_M1_and_adjudicate_every_predicate
+  - resolve_mass_Gram_stabilizer_kinetic_metric_and_physical_ceilings
+  - complete_source_aware_nonduplication_before_claim_or_implementation
+next_attempt: commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source

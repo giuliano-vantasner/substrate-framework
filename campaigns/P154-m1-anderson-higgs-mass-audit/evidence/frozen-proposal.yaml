@@ -1,0 +1,80 @@
+id: P154
+base_release: v0.119.0
+base_commit: fb1807f
+scientific_base_commit: fb1807f
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [M1]
+question: >-
+  Reproduce and independently audit M1's claimed SU(2)_L times U(1)
+  gauge-boson mass matrix, and determine the most general exact statement
+  relating a declared scalar kinetic term and vacuum vector to a positive
+  gauge-orbit Gram matrix, its stabilizer kernel, a separately declared gauge
+  kinetic metric, and the conditional doublet specialization without
+  importing a physical Higgs mechanism, pole mass, or Standard Model
+  interpretation that the accepted framework does not supply.
+invariants:
+  - >-
+    C-NAG-001 supplies exact non-Abelian covariance, curvature, and a
+    projected carrier, but no scalar matter action, vacuum, kinetic
+    normalization, gauge-boson mass mechanism, or physical dictionary.
+  - >-
+    C-REP-002 supplies the Pauli-half SU(2) doublet representation and an
+    independently declared Abelian generator normalization, but no action,
+    vacuum expectation value, gauge dynamics, or physical electroweak sector.
+  - >-
+    C-GAU-001 supplies local U(1) covariance only, and C-QBL-001 supplies a
+    conditional quartic complex-scalar equation only. Neither selects an
+    SU(2) doublet, hypercharge, nonzero vacuum, condensate ontology, or
+    gauge-field mass.
+  - >-
+    For a declared scalar kinetic term and Hermitian generators, the
+    gauge-field quadratic form must be derived with the one-half real-vector
+    convention explicit. Its kernel is the vacuum stabilizer; its raw
+    eigenvalues are physical mass squares only in a canonically normalized
+    gauge basis.
+  - >-
+    A general positive gauge kinetic metric K changes the pole-mass question
+    to the generalized eigenproblem M2*x=lambda*K*x. A massless algebraic
+    direction alone does not establish a physical photon or observation.
+  - >-
+    The queue preexposes M1's declared doublet, hypercharge, vacuum, neutral
+    matrix, eigenvalues, mixing relation, and rho identity. Those values are
+    recorded and excluded from candidate selection. The source and dossier
+    bodies, exact AST data flow, conventions, and guard construction remain
+    unopened until this contract is frozen and committed.
+allowed_imports:
+  - C-NAG-001 only for exact non-Abelian carrier covariance curvature and its physical ceiling
+  - C-REP-002 only for the Pauli-half SU(2) representation and independently declared Abelian normalization
+  - C-GAU-001 only for local Abelian covariance and its action and physical ceilings
+  - C-QBL-001 only for its conditional complex-scalar equation and ontology ceiling
+  - C-REP-001 C-U1-001 C-VAC-001 C-MAX-001 and C-LIE-001 only for their accepted statements and ceilings
+  - exact finite-dimensional Hermitian linear algebra scalar kinetic terms stabilizers Gram matrices and generalized eigenproblems
+  - M1 and M1-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce M1 literally and classify each predicate by declaration exact consequence convention-dependent identity physical premise and unsupported interpretation.}
+  - {id: B, description: Derive the general gauge-scalar mass Gram matrix and prove symmetry positivity and equality of its kernel with the vacuum stabilizer.}
+  - {id: C, description: Specialize the general theorem to a declared Pauli-half SU(2) doublet Abelian generator hypercharge coupling and lower-component vacuum.}
+  - {id: D, description: Test alternative representations vacuum directions Abelian normalizations and vanishing couplings to delimit which mass and rho formulas are nonuniversal.}
+  - {id: E, description: Formulate the neutral sector covariantly under gauge-basis changes and solve masses with a separately declared positive gauge kinetic metric.}
+  - {id: F, description: Map M1 entirely to accepted representation gauge and symmetry-breaking claims if source-aware nonduplication leaves no distinct reusable theorem.}
+  - {id: G, description: Construct identical algebraic mass matrices with distinct or absent physical field dictionaries to bound photon Higgs condensate and Standard Model interpretations.}
+  - {id: H, description: Close dependency semantic-consumer compatibility nonduplication disposition release generated-state and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - explicit scalar action carrier inner product generator Hermiticity coupling signs vacuum and one-half quadratic-form convention
+  - basis-covariant symmetry positivity stabilizer kernel and correct zero-vacuum zero-coupling and unbroken-generator limits
+  - separation of the algebraic Gram matrix from the gauge kinetic metric generalized eigenproblem and physical pole interpretation
+  - compatibility with accepted non-Abelian representation Abelian scalar-vacuum and action ceilings
+  - load-bearing factor-two generator normalization vacuum direction hypercharge sign coupling sign and kinetic-metric mutations
+  - alternative representation and basis countermodels assumption and parameter economy reusable API value and nonduplication
+  - complete dependency semantic-consumer compatibility release queue documentation and durable-memory closure
+  - preexposed doublet mass neutral-matrix mixing and rho values excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, M1 and dossier hashes, candidates A
+  through H, representation, action, vacuum, quadratic-form, stabilizer,
+  kinetic-metric, compatibility, mutation, and done-gate criteria are frozen
+  and committed. Queue-exposed formulas cannot select a concept. The source
+  and dossier bodies, exact data flow, literal constants, guard arithmetic,
+  and any further comparator material remain unopened until that boundary.
+status: draft
