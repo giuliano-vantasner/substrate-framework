@@ -1,0 +1,52 @@
+id: P163
+base_release: v0.124.0
+base_commit: 9e491a7
+scientific_base_commit: 1451670
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SM1]
+question: >-
+  Which exact direct-sum Lie-algebra statements in SM1 survive, and does
+  combining named SU3 SU2 and U1 generator families establish the Standard
+  Model gauge group or physical simultaneous gauge sectors rather than a
+  declared block-diagonal algebra?
+invariants:
+  - C-LIE-001 fixes standard fundamental SU3 representation algebra but explicitly supplies no physical color-sector identification.
+  - C-NAG-001 fixes conditional finite non-Abelian connection and curvature algebra but no physical matter current action coefficient coupling match or substrate map.
+  - C-GAU-001 fixes conditional local U1 covariance and curvature but no Maxwell action photon electric-charge map or substrate sector.
+  - A direct-sum Lie algebra has componentwise brackets and vanishing cross brackets; dimension addition is local algebra data and does not determine a global product quotient representation or action.
+  - Qualified G1 through G5 QCD1 W2 and YM1 sources cannot lend their rejected physical headlines to SM1.
+allowed_imports:
+  - C-LIE-001
+  - C-LIE-003 for exact SU3 convention checks only
+  - C-NAG-001
+  - C-GAU-001
+  - exact finite-dimensional Lie bracket block-matrix representation dimension center and commutant algebra
+  - SM1 and its dossier as hash-pinned noncanonical evidence only after the freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned SM1 predicate replay and individual adjudication.
+  - id: B
+    description: Existing accepted algebra composed with the elementary direct-sum construction and no new claim or API.
+  - id: C
+    description: A reusable importable direct-sum gauge-algebra ledger if the package lacks a typed construction needed by actual consumers.
+  - id: D
+    description: The global Standard Model gauge group including quotient kernel faithful matter representations and hypercharge normalization.
+  - id: E
+    description: A physical simultaneous three-sector gauge action with independent couplings matter content currents and dynamics.
+  - id: F
+    description: Dimension label global-quotient representation coupling and cross-bracket counterfamilies.
+  - id: G
+    description: Claim disposition dependency consumer compatibility and generated-state closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact bracket provenance rather than sector names
+  - local Lie algebra versus global group representation and quotient separation
+  - explicit fields couplings actions currents and matter representations for physical readings
+  - assumption and parameter economy mutation sensitivity API novelty and consumer compatibility
+claims_proposed: []
+comparators_blinded_until: >-
+  source-aware proposal freeze commit before renewed targeted SM1 and dossier
+  audit; SM1 execution and source predicates were already exposed by P141
+  through P145 P147 and P160 graph replays and cannot select a candidate or
+  threshold
+status: draft

@@ -1,0 +1,13 @@
+attempt: 0003
+campaign: P163
+candidate: process_memory_validation_invocation
+status: passed
+started_at: '2026-08-10T18:57:00Z'
+finished_at: '2026-08-10T18:58:00Z'
+command: memory validate /home/dan/substrate-framework/memory
+result:
+  records: 666
+  status: all_valid
+debt:
+  - inspect_and_adjudicate_the_hash_pinned_source_and_dossier
+next_attempt: commit_the_freeze_then_reopen_SM1

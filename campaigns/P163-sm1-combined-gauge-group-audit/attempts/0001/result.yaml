@@ -1,0 +1,24 @@
+attempt: 0001
+campaign: P163
+candidate: source_blind_candidate_and_contract_freeze
+status: passed
+started_at: '2026-08-10T18:55:00Z'
+finished_at: '2026-08-10T18:56:00Z'
+command: .venv/bin/python scripts/validate_repository.py
+result:
+  repository_contract: valid_160_accepted_claims_58_pending_units
+  proposal_sha256: b5d363206208eafb93e4ab145fa6a8c14ac0537e9a25fb8c2e1d5b2b5ae45f1b
+  frozen_manifest_sha256: b5d363206208eafb93e4ab145fa6a8c14ac0537e9a25fb8c2e1d5b2b5ae45f1b
+  manifests_identical: true
+source_inventory:
+  source_unit: SM1
+  source_sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2
+  dossier_sha256: e605e5c0ecedd041c733ed08e60a2ad0461fbb72f00c989da4633e0b2fda8c3b
+  static_checks: 6
+  dynamic_checks: 0
+  assertions: 1
+prior_exposure: P141_through_P145_P147_and_P160_graph_replays
+claim_delta: []
+debt:
+  - inspect_and_adjudicate_the_hash_pinned_source_and_dossier
+next_attempt: reopen_SM1_only_after_this_freeze_is_committed

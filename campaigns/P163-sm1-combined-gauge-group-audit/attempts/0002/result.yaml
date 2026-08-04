@@ -1,0 +1,18 @@
+attempt: 0002
+campaign: P163
+candidate: process_memory_validation_invocation
+status: failed
+started_at: '2026-08-10T18:56:00Z'
+finished_at: '2026-08-10T18:57:00Z'
+commands:
+  - memory validate memory
+  - memory validate
+failure:
+  layer: process_invocation
+  mechanisms:
+    - relative_path_was_resolved_under_the_configured_memory_root_and_duplicated
+    - required_PATH_argument_was_then_omitted
+  scientific_failure: false
+  freeze_failure: false
+repair: pass_the_absolute_framework_memory_directory_once
+next_attempt: validate_the_exact_absolute_memory_path
