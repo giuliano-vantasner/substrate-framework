@@ -1,0 +1,30 @@
+attempt: 0007
+campaign: P163
+candidate: C_importable_exact_local_product_algebra
+status: passed
+started_at: '2026-08-10T19:08:00Z'
+finished_at: '2026-08-10T19:12:00Z'
+commands:
+  - .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/verify.py
+  - .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/reviews/independent_product_algebra_review.py
+  - .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  primary: ALL_31_CHECKS_PASS
+  independent: ALL_13_CHECKS_PASS
+  source_graph: ALL_22_CHECKS_PASS
+  source_graph_nodes: 9
+  source_graph_static_predicates: 80
+  source_graph_runtime_predicates: 80
+  source_graph_assertions: 9
+oracle_separation:
+  primary_imports_candidate_module: true
+  independent_imports_candidate_module: false
+  source_graph_replays_immutable_sources: true
+mutations:
+  - zero_U1_weight_is_rejected_and_would_drop_rank_to_11
+  - mixed_tensor_generator_breaks_cross_factor_commutation
+  - half_integer_weight_breaks_the_chosen_compact_U1_period
+  - local_covariant_derivative_without_connection_transformation_fails
+scientific_verdict: exact_local_product_Lie_algebra_claim_supported_with_global_and_dynamical_exclusions
+remaining_debt: []
+next_attempt: claim_level_review_and_downstream_replay

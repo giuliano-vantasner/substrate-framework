@@ -1,0 +1,22 @@
+attempt: 0006
+campaign: P163
+candidate: C_F_primary_and_independent_product_algebra_oracles
+status: failed
+started_at: '2026-08-10T19:05:00Z'
+finished_at: '2026-08-10T19:07:00Z'
+commands:
+  - .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/verify.py
+  - .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/reviews/independent_product_algebra_review.py
+passed_before_failure:
+  primary: 24
+  independent: 12
+concurrent_focused_tests: 45_passed
+failure:
+  layer: verifier_entry_selection
+  mechanism: >-
+    both routes assumed matrix entry zero one was nonzero and load-bearing for
+    every tensor-factor coupling even though different factors occupy different
+    exact matrix entries
+  scientific_failure: false
+repair: compare_full_matrix_coupling_derivatives_with_their_exact_factor_generators
+next_attempt: rerun_both_routes_without_changing_the_theorem_or_threshold

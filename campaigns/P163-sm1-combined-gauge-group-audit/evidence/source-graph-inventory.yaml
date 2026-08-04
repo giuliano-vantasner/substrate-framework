@@ -1,0 +1,18 @@
+campaign: P163
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: SM1
+nodes:
+  - {source_unit: SM1, role: adjudicated_root, path: merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py, sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2, static_checks: 6, runtime_checks: 6, assertions: 1}
+  - {source_unit: EM2, role: qualified_U1_antecedent, path: merged-framework/bridges/phase-3/bridge_EM2_gauge_u1_minimal_coupling.py, sha256: 9787ae25521e19d926de0f9addafd16353bebc149cea83f3d9dd4c491fef91d6, static_checks: 11, runtime_checks: 11, assertions: 1}
+  - {source_unit: W2, role: qualified_SU2_representation_antecedent, path: merged-framework/bridges/phase-6/bridge_W2_su2L_chiral_doublet.py, sha256: 0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16, static_checks: 9, runtime_checks: 9, assertions: 1}
+  - {source_unit: YM1, role: qualified_SU2_loop_antecedent, path: merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py, sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6, static_checks: 9, runtime_checks: 9, assertions: 1}
+  - {source_unit: QCD1, role: qualified_SU3_antecedent, path: merged-framework/bridges/phase-8/bridge_QCD1_su3_kinetic_induction.py, sha256: b70065548c121661c9a6801255aa844a40165e947c054a48617d926955a704ed, static_checks: 11, runtime_checks: 11, assertions: 1}
+  - {source_unit: SM2, role: pending_representation_table_sibling, path: merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py, sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1, static_checks: 7, runtime_checks: 7, assertions: 1}
+  - {source_unit: SM3, role: pending_anomaly_table_sibling, path: merged-framework/bridges/phase-9/bridge_SM3_anomaly_cancellation.py, sha256: 3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529, static_checks: 8, runtime_checks: 8, assertions: 1}
+  - {source_unit: SM4, role: pending_running_sibling, path: merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py, sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac, static_checks: 8, runtime_checks: 8, assertions: 1}
+  - {source_unit: GK1, role: pending_dimensional_boundary_consumer, path: merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py, sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74, static_checks: 11, runtime_checks: 11, assertions: 1}
+totals: {nodes: 9, static_predicates: 80, runtime_predicates: 80, assertions: 9}
+compatibility:
+  native_nodes: [SM1, EM2, W2, YM1, QCD1, SM2, SM3, SM4, GK1]
+  immutable_alias_only_nodes: []
+debt: []

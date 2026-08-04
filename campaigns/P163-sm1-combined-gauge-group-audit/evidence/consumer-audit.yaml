@@ -1,0 +1,26 @@
+campaign: P163
+claim: C-PGA-001
+source_consumers:
+  SM1: adjudicated_root_and_positive_local_algebra_consumer
+  SM2: pending_representation_and_hypercharge_table_sibling_with_no_SM1_import
+  SM3: pending_anomaly_table_sibling_with_no_SM1_import
+  SM4: pending_running_sibling_with_no_SM1_import
+  GK1: pending_dimensional_boundary_that_denies_three_dimensional_kinetic_closure
+qualified_antecedents:
+  EM2: conditional_local_U1_only
+  W2: SU2_representation_only_without_dynamical_bosons_or_coupling
+  YM1: qualified_conditional_two_dimensional_loop_only
+  QCD1: qualified_SU3_algebra_and_conditional_two_dimensional_loop_only
+canonical_consumers:
+  source_change: new_product_gauge_module
+  direct_tests: tests/test_product_gauge.py
+  existing_importers_before_P163: []
+compatibility:
+  breaking_API_changes: none
+  all_graph_nodes_native: true
+consumer_decision: >-
+  C-PGA-001 supplies the exact local algebra SM1 was missing without granting
+  any pending representation anomaly running or dimensional consumer a global
+  group physical matter action coupling or substrate premise. Existing factor
+  APIs remain unchanged.
+debt: []

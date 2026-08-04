@@ -1,0 +1,29 @@
+campaign: P163
+base_release: v0.124.0
+framework_checkpoint: 9e491a7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit:
+  id: SM1
+  path: merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py
+  sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM1-dossier.md
+  sha256: e605e5c0ecedd041c733ed08e60a2ad0461fbb72f00c989da4633e0b2fda8c3b
+accepted_inputs:
+  C-LIE-001: standard_fundamental_SU3_generators_structure_constants_and_no_physical_color_ceiling
+  C-REP-002: standard_fundamental_SU2_generators_and_scalar_commutant_boundary
+  C-NAG-001: conditional_nonAbelian_connection_convention_and_no_physical_sector_ceiling
+  C-GAU-001: conditional_local_U1_covariance_and_no_Maxwell_or_physical_charge_ceiling
+new_declared_inputs:
+  - exact_real_provably_nonzero_Abelian_Lie_algebra_weight
+  - standard_tensor_product_carrier_C3_tensor_C2
+  - separately_supplied_exact_positive_factor_couplings_and_connection_components
+global_inputs_not_imported:
+  - compact_U1_period_and_generator_normalization
+  - global_direct_product_or_finite_central_quotient
+  - faithful_full_matter_representation_and_hypercharge_table
+  - physical_fields_action_currents_bosons_or_substrate_dictionary
+prior_exposure: P141_P142_P143_P144_P145_P147_and_P160_source_graph_replays
+comparator_status: no_empirical_comparator_used
+compatibility_event: native_no_numpy_integration_surface
+debt: []

@@ -124,7 +124,7 @@ Choose the strongest practical oracle using [oracles.md](references/oracles.md).
 
 Do not count a weaker oracle as independent evidence when a stronger result already fixes its input. In particular, after exact algebra removes a parameter from an ODE right-hand side, local uniqueness proves same-initial-data trajectory independence; integrating that identical right-hand side twice is only regression coverage. Use exact sensitivity or initial Taylor coefficients for analytically accessible counterexamples, and reserve simulation for behavior the exact result does not decide.
 
-- confirm process status zero and terminal tally independently; with `CheckLedger`, preserve the formatted tally while returning its status-zero success token rather than a positive count as an OS exit code;
+- confirm process status zero and terminal tally independently; record lexical check-call sites, runtime check executions, and assertion nodes as distinct inventories, without demanding equality when loops or dynamic dispatch multiply executions; with `CheckLedger`, preserve the formatted tally while returning its status-zero success token rather than a positive count as an OS exit code;
 - pin a verifier's own source, claim, and release evidence, but do not freeze unrelated future queue dispositions or require mutable `current` to remain a historical release; historical replay uses durable snapshots when available and otherwise targets canonical modules/tests rather than rewriting an adjudicated campaign;
 - mutate each load-bearing input and require a relevant check to fail;
 - test wrong signs, normalizations, conventions, and counterexamples;

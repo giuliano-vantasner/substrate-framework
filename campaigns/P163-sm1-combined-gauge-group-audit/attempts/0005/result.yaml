@@ -1,0 +1,17 @@
+attempt: 0005
+campaign: P163
+candidate: C_product_gauge_API_targeted_tests
+status: failed
+started_at: '2026-08-10T19:03:00Z'
+finished_at: '2026-08-10T19:04:00Z'
+command: .venv/bin/python -m pytest tests/test_product_gauge.py -q
+passed_before_failure: 10
+failure:
+  layer: test_container_equality
+  test: test_connection_component_is_an_exact_three_term_sum
+  mechanism: >-
+    the test compared an immutable exact matrix with an algebraically identical
+    mutable matrix sum using container equality rather than a zero residual
+  scientific_failure: false
+repair: compare_the_simplified_matrix_difference_with_the_zero_matrix
+next_attempt: rerun_the_targeted_API_tests_without_changing_the_theorem_or_threshold

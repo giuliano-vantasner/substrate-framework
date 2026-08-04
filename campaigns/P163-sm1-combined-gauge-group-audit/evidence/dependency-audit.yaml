@@ -1,0 +1,16 @@
+campaign: P163
+claim: C-PGA-001
+direct_dependencies:
+  C-LIE-001:
+    used_for: standard_exact_SU3_factor
+    compatible: true
+  C-REP-002:
+    used_for: standard_exact_SU2_factor_and_commutant_boundary
+    compatible: true
+reviewed_scope_boundaries:
+  C-NAG-001: connection_convention_only_not_a_dependency_of_the_finite_representation_theorem
+  C-GAU-001: compact_and_local_U1_boundaries_only_not_a_dependency_of_the_local_matrix_theorem
+dependency_closure: complete
+hidden_imports: []
+foundational_revision: none
+debt: []

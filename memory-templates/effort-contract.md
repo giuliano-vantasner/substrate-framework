@@ -50,7 +50,7 @@ Do not use memory prose or a generic external method as substitute authority.
 ## Validation
 Validation covers the actual objective, verifier sensitivity, limits, conventions, dependencies, consumers, and generated state—not merely an exit code or check count.
 
-- Targeted scientific command and claim-appropriate oracle (SymPy, Lean, SciPy, or simulation), with both terminal tally and process status zero recorded:
+- Targeted scientific command and claim-appropriate oracle (SymPy, Lean, SciPy, or simulation), with process status zero, terminal tally, lexical check-call sites, runtime check executions, and assertion nodes recorded as distinct inventories rather than forced-equal counts:
 - Mutation/counterexample command:
 - Numerical solver-status, refinement, conservation/stability, and independent-route command (when applicable):
 - Dependency replay, after AST preflight for direct/imported/dynamic legacy trapezoid access and repair of mutable consumers to `np.trapezoid` or a safe two-step fallback, or an alias-only replay for immutable source:
