@@ -1,0 +1,33 @@
+campaign: P165
+revision: 1
+status: source_aware_frozen
+base_freeze_commit: e0f31b8
+frozen_manifest_sha256: 2ff19c8d29c6d9619eb644118a9bf6d01331b8029ff20535c1faa19c82a86640
+source_sha256: 3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529
+selected_candidates: [A, C, D, G, H]
+claim_delta:
+  proposed: [C-ANO-001]
+  dependencies: [C-REP-001, C-REP-003]
+  external_theory:
+    - four_dimensional_local_chiral_gauge_anomaly_trace_conditions
+    - Witten_fundamental_SU2_doublet_parity
+    - conjugate_SU3_cubic_anomaly_sign
+  challenges: []
+  supersedes: []
+canonical_plan:
+  module: src/substrate_framework/chiral_anomalies.py
+  tests: tests/test_chiral_anomalies.py
+  claim_role: exact_supplied_chiral_anomaly_ledger_and_complete_five_row_local_solution_variety
+source_disposition_plan:
+  SM3: qualified
+unpromoted_headlines:
+  - unique_hypercharge_ratios_from_anomaly_freedom_alone
+  - only_one_common_scaling_freedom
+  - derived_physical_Standard_Model_generation_or_carrier
+  - paid_down_hypercharge_table_import
+  - renormalizability_unitarity_or_general_covariance_from_zero_arithmetic
+  - global_gauge_group_charge_lattice_observed_charge_or_substrate_mechanism
+debt:
+  - implement_and_independently_rederive_C_ANO_001
+  - complete_external_theory_provenance_and_nonduplication_audit
+  - replay_all_source_graph_consumers_with_qualified_uniqueness

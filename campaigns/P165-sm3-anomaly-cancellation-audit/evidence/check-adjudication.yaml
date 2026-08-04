@@ -1,0 +1,42 @@
+campaign: P165
+source_unit: SM3
+checks:
+  SM3.1:
+    implemented: exact_mixed_SU3_squared_U1_coefficient_on_the_supplied_rows
+    verdict: valid_conditional_arithmetic
+    ceiling: anomaly_formula_and_representations_are_imported
+  SM3.2:
+    implemented: exact_mixed_SU2_squared_U1_coefficient_on_the_supplied_rows
+    verdict: valid_conditional_arithmetic
+    ceiling: anomaly_formula_and_representations_are_imported
+  SM3.3:
+    implemented: exact_cubic_U1_coefficient_on_the_supplied_rows
+    verdict: valid_conditional_arithmetic
+    ceiling: zero_at_one_point_does_not_classify_the_solution_variety
+  SM3.4:
+    implemented: exact_mixed_gravity_U1_coefficient_on_the_supplied_rows
+    verdict: valid_conditional_arithmetic
+    ceiling: zero_at_one_point_does_not_classify_the_solution_variety
+  SM3.5:
+    implemented: even_color_weighted_count_of_supplied_fundamental_SU2_doublets
+    verdict: valid_conditional_global_parity
+    ceiling: dimension_filter_is_not_a_generic_higher_representation_classifier
+  SM3.6:
+    implemented: zero_sum_of_supplied_fundamental_and_antifundamental_cubic_signs
+    verdict: valid_conditional_cubic_color_balance
+    ceiling: integer_sign_is_a_supplied_representation_anomaly_coefficient_not_derived_triality
+  SM3.7:
+    implemented: two_coordinate_perturbations_reopen_selected_local_anomalies
+    verdict: guard_valid_uniqueness_inference_rejected
+    ceiling: two_failed_directions_do_not_exclude_other_exact_solution_components
+  SM3.8:
+    implemented: common_Abelian_rescaling_preserves_the_displayed_local_zeroes
+    verdict: homogeneity_valid_one_true_freedom_statement_refuted
+    ceiling: >-
+      the complete ideal also contains a row-exchanged nonzero ray and the
+      q=l=e=0 d=-u vectorlike plane
+terminal_tally_verdict: >-
+  all eight assertions execute, but they establish supplied-point arithmetic,
+  two local mutations, and scaling covariance rather than unique hypercharge
+  ratios or a derived physical generation
+debt: []

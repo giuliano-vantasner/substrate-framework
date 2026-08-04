@@ -1,0 +1,20 @@
+campaign: P165
+source_unit: SM3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-9/bridge_SM3_anomaly_cancellation.py
+sha256: 3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM3-dossier.md
+  sha256: 93e052b2586d6271ad4119340cba5f4cc86763253b55427b5b1e72baed33ea52
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM3_anomaly_cancellation.py
+exit_code: 0
+terminal_tally: ALL_8_CHECKS_PASS
+inventory:
+  lexical_check_sites: 8
+  runtime_check_executions: 8
+  assertion_nodes: 1
+compatibility:
+  mode: native
+  numpy_integration_surface: absent
+classification: source_regression_evidence_only_pending_predicate_adjudication
+debt: []

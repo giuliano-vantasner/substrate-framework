@@ -1,0 +1,41 @@
+attempt: 0003
+campaign: P165
+candidate: A_source_replay_and_exact_branch_counterexample
+status: passed_with_headline_refutation
+started_at: '2026-08-10T20:30:00Z'
+finished_at: '2026-08-10T20:36:00Z'
+commands:
+  - sha256sum_source_and_dossier
+  - full_source_and_dossier_body_audit
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM3_anomaly_cancellation.py
+  - independent_SymPy_elimination_and_factorization
+  - primary_paper_DOI_and_scope_audit
+source_reproduction:
+  exit_code: 0
+  terminal_tally: ALL_8_CHECKS_PASS
+  compatibility: native_no_numpy_surface
+  lexical_check_sites: 8
+  runtime_check_executions: 8
+  assertion_nodes: 1
+exact_local_system:
+  mixed_SU3_squared_U1: 2*q+u+d
+  mixed_SU2_squared_U1: 3*q+l
+  mixed_gravity_U1: 6*q+3*u+3*d+2*l+e
+  cubic_U1: 6*q^3+3*u^3+3*d^3+2*l^3+e^3
+linear_elimination:
+  l: -3*q
+  e: 6*q
+  d: -2*q-u
+reduced_cubic: 18*q*(2*q-u)*(4*q+u)
+complete_components:
+  - q=0_l=0_e=0_d=-u_with_u_free
+  - u=2*q_d=-4*q_l=-3*q_e=6*q
+  - u=-4*q_d=2*q_l=-3*q_e=6*q
+source_displayed_component: u=-4*q_d=2*q_l=-3*q_e=6*q
+scientific_verdict: >-
+  the supplied table and six anomaly zeroes survive conditionally, but two
+  coordinate perturbations cannot prove uniqueness and the claim that common
+  scaling is the only freedom is exactly refuted by two additional components
+selected_candidates: [C, D]
+proposed_claim: C-ANO-001
+next_attempt: implement_generic_ledger_and_complete_branch_classifier

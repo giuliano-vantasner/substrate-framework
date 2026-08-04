@@ -2,7 +2,7 @@
 description: Audit SM3 and derive a complete exact anomaly-coefficient and solution-branch classification
 author: vantasner
 created: '2026-08-10T20:25:00Z'
-updated: '2026-08-10T20:29:00Z'
+updated: '2026-08-10T20:36:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -88,12 +88,13 @@ concept. Prior source exposure is recorded and no fresh blinding is claimed.
 
 ## Proposed Claim Delta
 
-No claim is yet proposed. `C-ANO-001` is collision-free and reserved only as a
-provisional identifier if source-aware nonduplication shows that a generic
-anomaly ledger plus full branch theorem is distinct. Likely dependencies are
-C-REP-001, C-REP-003, and the explicitly imported anomaly criteria; C-LIE-001
-and C-REP-002 may supply only fixed fundamental normalizations. No challenge or
-supersession relationship is registered.
+The source-aware revision proposes collision-free `C-ANO-001`: an exact ledger
+for separately supplied chiral anomaly coefficients plus the complete local
+solution variety of the fixed five-row carrier. Its accepted dependencies are
+C-REP-001 and C-REP-003; local anomaly trace criteria, Witten fundamental-SU2
+parity, and conjugate-SU3 cubic signs remain explicit external theory. It has no
+challenge or supersession relationship. C-LIE-001 and C-REP-002 are background
+normalization evidence, not load-bearing dependencies of the generic API.
 
 ## Implementation and Oracle Plan
 
@@ -107,8 +108,8 @@ will be typed as imported representation criteria rather than consequences of
 the Abelian polynomial system.
 
 Mutations include one-row charge changes, uniform scaling, triplet-to-
-antitriplet sign changes, a neutral singlet, family-count parity, row exchange,
-and the exact vectorlike branch. The source graph will record lexical sites,
+antitriplet sign changes, a neutral singlet, removal of one supplied doublet,
+row exchange, and the exact vectorlike branch. The source graph will record lexical sites,
 runtime executions, and assertions separately. Compatibility preflight will
 audit direct, imported, dynamic, and eager legacy NumPy access; mutable code
 uses exact algebra or current APIs, while immutable version-only access would
@@ -120,7 +121,12 @@ Attempt 0001 freezes the source-body-unopened P165 contract while disclosing
 substantial prior SM3 exposure. Attempt 0002 validates identical prose and YAML,
 the memory contract, repository closure, and the normalized frozen-manifest hash
 `2ff19c8d29c6d9619eb644118a9bf6d01331b8029ff20535c1faa19c82a86640`.
-The next attempt commits the freeze before renewed source and dossier audit.
+The freeze is committed at `e0f31b8`. Attempt 0003 reproduces all eight source
+checks natively, then eliminates the local equations to
+`18*q*(2*q-u)*(4*q+u)`. The displayed ray is only one of three components: a
+row-exchanged ray and the plane `q=l=e=0, d=-u` are also exact. SM3's zero
+arithmetic survives, while its uniqueness and "one true freedom" headlines are
+refuted. Candidates C and D are selected and `C-ANO-001` is proposed.
 Any later schema, oracle, algebra, or compatibility failure will be preserved
 append-only before repair.
 
@@ -133,9 +139,9 @@ consumers, compatibility, governance, and continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| SM3 predicate strength is unaudited | Reproduce and classify all eight checks and the assertion | open |
+| SM3 predicate strength is unaudited | Reproduce and classify all eight checks and the assertion | discharged by attempt 0003 |
 | Anomaly formula authority is unresolved | Source every local and global criterion and separate imports from arithmetic | open |
-| Claimed uniqueness is unproved | Compute and independently verify the complete exact solution branches | open |
+| Claimed uniqueness is unproved | Compute and independently verify the complete exact solution branches | source refuted; canonical and independent verification open |
 | Chirality and conjugate-representation signs are unresolved | Type every row and test conjugation mutations | open |
 | Global SU2 and cubic SU3 statements may be stand-ins | Verify their representation inputs and logical independence | open |
 | Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |

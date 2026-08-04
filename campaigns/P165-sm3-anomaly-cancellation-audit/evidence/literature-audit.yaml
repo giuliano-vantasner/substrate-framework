@@ -1,0 +1,35 @@
+campaign: P165
+purpose: Pin the external quantum-anomaly criteria separately from P165's exact arithmetic.
+external_primary_sources:
+  - id: BouchiatIliopoulosMeyer1972
+    title: An Anomaly Free Version of Weinberg's Model
+    doi: 10.1016/0370-2693(72)90532-1
+    url: https://doi.org/10.1016/0370-2693(72)90532-1
+    use: perturbative_chiral_gauge_anomaly_cancellation_in_the_electroweak_carrier
+  - id: GrossJackiw1972
+    title: Effect of Anomalies on Quasirenormalizable Theories
+    doi: 10.1103/PhysRevD.6.477
+    url: https://doi.org/10.1103/PhysRevD.6.477
+    use: gauge_anomaly_consistency_obligation
+  - id: DelbourgoSalam1972
+    title: The Gravitational Correction to PCAC
+    doi: 10.1016/0370-2693(72)90825-8
+    url: https://doi.org/10.1016/0370-2693(72)90825-8
+    use: mixed_chiral_gravitational_anomaly_provenance
+  - id: Witten1982
+    title: An SU(2) Anomaly
+    doi: 10.1016/0370-2693(82)90728-6
+    url: https://doi.org/10.1016/0370-2693(82)90728-6
+    use: odd_number_of_left_handed_fundamental_SU2_doublets_is_inconsistent
+audit_boundary:
+  imported: anomaly_trace_criteria_and_global_fundamental_doublet_parity
+  derived_by_P165: exact_coefficients_homogeneity_elimination_factorization_and_solution_components
+  supplied: carrier_dimensions_Abelian_charges_Dynkin_indices_and_nonabelian_cubic_coefficients
+  excluded: >-
+    the papers do not make SM3's two perturbations a uniqueness proof, derive
+    the carrier from the substrate, or remove the additional exact branches
+source_access_note: >-
+  DOI metadata and primary-paper records were checked on 2026-08-10; external
+  literature is theory provenance, not a substitute for P165's independent
+  exact solution-completeness oracle.
+debt: []

@@ -1,0 +1,40 @@
+campaign: P165
+source_unit: SM3
+declared_inputs:
+  carrier: one_five_row_left_handed_Weyl_table
+  abelian_charges: [1/6, -2/3, 1/3, -1/2, 1]
+  color_dimensions: [3, 3, 3, 1, 1]
+  isospin_dimensions: [2, 1, 1, 2, 1]
+  color_cubic_sign_proxies: [1, -1, -1, 0, 0]
+  fundamental_dynkin_index: 1/2
+  imported_theory:
+    - four_dimensional_local_chiral_gauge_anomaly_trace_conditions
+    - mixed_U1_gravitational_anomaly_trace_condition
+    - Witten_fundamental_SU2_doublet_parity
+    - conjugate_SU3_cubic_anomaly_sign
+source_dataflow:
+  mixed_SU3_squared_U1: supplied_color_dimension_filter_times_isospin_dimension_times_charge
+  mixed_SU2_squared_U1: supplied_isospin_dimension_filter_times_color_dimension_times_charge
+  cubic_U1: supplied_total_multiplicity_times_charge_cubed
+  mixed_gravity_U1: supplied_total_multiplicity_times_charge
+  global_SU2: supplied_dimension_equals_two_filter_times_color_dimension_modulo_two
+  cubic_SU3: supplied_integer_sign_proxy_times_isospin_dimension
+  perturbation_guard: two_coordinate_directions_only
+  scale_guard: homogeneous_rescaling_of_the_displayed_zero_point
+not_constructed:
+  - derivation_of_the_five_row_carrier_or_its_physical_identity
+  - complete_solution_of_the_four_local_anomaly_equations
+  - proof_that_only_uniform_rescaling_preserves_local_anomaly_freedom
+  - exclusion_of_the_row_exchanged_nonzero_branch
+  - exclusion_of_the_zero_doublet_charge_vectorlike_branch
+  - representation_theoretic_derivation_of_the_supplied_cubic_color_coefficients
+  - higher_SU2_representation_global_anomaly_classifier
+  - Yukawa_operator_scalar_or_mass_constraints
+  - global_gauge_group_charge_lattice_or_U1_period
+  - observed_charge_or_substrate_derivation
+headline_boundary: >-
+  SM3 exactly evaluates six imported anomaly criteria on a supplied carrier and
+  shows that two selected coordinate perturbations fail. It neither solves the
+  anomaly ideal nor uniquely derives the displayed hypercharge ratios, carrier,
+  physical Standard Model generation, or overall normalization.
+debt: []

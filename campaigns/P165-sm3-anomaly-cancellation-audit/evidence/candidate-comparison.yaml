@@ -1,0 +1,36 @@
+campaign: P165
+criteria_order:
+  - accepted_dependency_closure
+  - external_theorem_provenance
+  - complete_solution_set
+  - local_and_global_separation
+  - chirality_and_normalization_consistency
+  - assumption_and_parameter_economy
+  - mutation_sensitivity
+  - API_novelty_and_consumer_reach
+candidates:
+  A:
+    decision: retained_as_source_regression_only
+    reason: eight_green_checks_do_not_solve_the_polynomial_ideal
+  B:
+    decision: retained_as_dependency_base_but_incomplete
+    reason: accepted_charge_ledgers_do_not_type_anomaly_coefficients_or_solution_branches
+  C:
+    decision: selected
+    reason: smallest_reusable_exact_local_and_supplied_global_coefficient_ledger
+  D:
+    decision: selected
+    reason: complete_factorized_five_row_solution_variety_is_required_to_adjudicate_uniqueness
+  E:
+    decision: rejected_for_P165
+    reason: Yukawa_scalar_and_mass_constraints_are_new_unrequested_physical_inputs
+  F:
+    decision: rejected
+    reason: physical_identity_generation_completeness_and_observed_charges_are_supplied
+  G:
+    decision: selected_as_sensitivity_boundary
+    reason: row_swap_vectorlike_plane_scaling_neutral_singlet_and_doublet_removal_delimit_the_claim
+  H:
+    decision: selected_as_governance_closure
+selection_uses_comparator_closeness: false
+debt: []
