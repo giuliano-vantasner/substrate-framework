@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-09T15:25:00Z'
+updated: '2026-08-09T16:50:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,13 +23,12 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.109.0`, containing one hundred forty-four
-claims. P141 adds C-RAD-001's exact canonical scalar point-source retarded
-radiation and static-boundary countermodel and qualifies G1. P142 adds
-C-GOR-001's signature-consistent Gordon effective metric, exact determinants,
-null speed, and transverse-profile Einstein and Bianchi tensors and qualifies
-G2 while rejecting its copied-sign pole, Riemannian witness, and unconstructed
-Einstein-source interpretation.
+The current accepted frontier is `v0.110.0`, containing one hundred forty-five
+claims. P142 adds C-GOR-001's signature-consistent Gordon effective metric and
+qualifies G2. P143 adds C-STG-001's exact canonical Einstein-scalar stress,
+equations, conservation identity, and massless flat-FLRW solution and qualifies
+G3 while rejecting its unused positive coupling, negative one-point fit,
+remaining tensor and scalar residuals, and breather-sourced gravity narrative.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -55,7 +54,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 78 pending, 0 partially migrated, 3 migrated, 128 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 77 pending, 0 partially migrated, 3 migrated, 129 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -230,6 +229,7 @@ Attempts are append-only and individually reproducible.
 | 0161 | P140 exact SU2 current quartic, conditional leading half-connection reduction, derivative ceiling, dimensions, dependency, consumer, compatibility, and S4 audit | `campaigns/P140-s4-vector-meson-c4-audit/attempts/0001` through `0010`, then v0.107.0 promotion | C-VEC-001 accepted and S4 qualified; commit `078fa1c` | S4's eleven predicates reproduce natively, but source-aware inspection shows that its rho operator and desired tensor are assigned, B1 and c4 are imported, J1 is solved backward, and e=F_pi/2 is dimensionally invalid. Exact canonical and fresh independent routes derive the general ordered Gram-wedge and Pauli commutator identities, positive half-connection stationarity, Maurer-Cartan curvature, equally normalized e=g matching, and the p4 versus p6/M2 boundary. Thirty-six primary, twenty-five independent, forty-four focused, and thirty-one frozen-graph checks pass; the thirteen-node graph inventories 123 predicates. Four qualified consumers retain independent closures and seven pending consumers gain no authority. B1's immutable eager legacy-name shape remains alias-only compatibility evidence backed by `np.trapezoid`; mutable code has zero executable legacy access. Four verifier/graph representation failures are preserved. GitNexus reports LOW impact and zero affected processes. The integrated workflow passes all 1,195 tests with 568 memory files and the physics skill valid. | Freeze G1's radiating-dilaton audit before source execution; require a complete time-dependent action or field equation, conserved source and flux, boundary conditions, retarded solution, dimensional ledger, radiation versus coordinate-energy separation, static and constant-velocity limits, G2/G3 and T2A authority, reverse consumers, and do not turn a declared wave equation or fitted outgoing amplitude into physical gravity, a universal Larmor law, radiation reaction, absolute power, or a substrate mechanism |
 | 0162 | P141 exact scalar point-source action, retarded jump, two-side flux, source work, boundary countermodel, dependency, consumer, compatibility, and G1 audit | `campaigns/P141-g1-radiating-dilaton-audit/attempts/0001` through `0010`, then v0.108.0 promotion | C-RAD-001 accepted and G1 qualified; commit `5da6892` | Native G1 reaches two checks and stops only because NumPy 2.5 removed `np.trapz`; isolated alias-only replay backed by `np.trapezoid` passes all ten predicates. Source-aware review then shows that G1 differentiates the retarded source once too many, undercounts its own two equal canonical fluxes by four, boosts a scalar-trace integral with gamma rather than the inverse-gamma slice Jacobian, regresses the ODE right-hand side it supplied, and chooses kappa backward. Exact canonical and fresh independent routes derive the declared scalar equation, distributional jump, outgoing characteristics, total `B^2*q^2/(2*A*c)` power, source-work equality, field-rescaling invariance, and same-equation static zero-flux countermodel. Thirty-seven primary, twenty-nine independent, seventy-five focused, and seventy-three frozen-graph checks pass; the 31-node graph inventories 339 predicates. Fourteen qualified consumers retain independent closures, eleven pending consumers gain no authority, and two remain duplicate evidence. Seven immutable compatibility shapes remain alias-only; mutable scripts contain zero executable legacy access. GitNexus reports LOW impact and zero affected processes. The integrated workflow passes all 1,209 tests with 573 memory files and the physics skill valid. | Freeze G2's Gordon-metric 3+1 audit before source execution; require exact metric signature, inverse, determinant, connection, curvature and Einstein tensors, moving-medium four-velocity and refractive-index domain, Bianchi and stress compatibility, field equations and action, boundary data, coupling dimensions, no-go scope, every predicate, B1/C1/T2C authority, consumers, and nonduplication, and do not turn a nonzero Einstein-tensor component or declared Gordon metric into a solved sourced geometry, physical gravity, unique lift, material realization, or observation |
 | 0163 | P142 exact Gordon metric, determinant, null cone, transverse curvature, Bianchi, source mismatch, dependency, consumer, compatibility, and G2 audit | `campaigns/P142-g2-gordon-metric-audit/attempts/0001` through `0014`, then v0.109.0 promotion | C-GOR-001 accepted and G2 qualified | Native G2 passes all six predicates and has no NumPy compatibility event, but it copies a mostly-minus rank-one sign into mostly-plus signature. Its sqrt-two pole is spurious and its n=2 witness is positive definite. Exact canonical and fresh direct-Christoffel routes derive the corrected inverse pair, determinants, Lorentzian positive-index domain, rest null speed, transverse-profile Einstein tensor, contracted Bianchi identity, constant-index limit, and corrected one-sixth witness. A z-independent one-plus-one source has zero T_tz where the nonflat geometry has nonzero G_tz, so no scalar coupling closes the claimed source. Twenty-nine primary, sixteen independent, fifteen focused, and seventy-four frozen-graph checks pass; the 31-node graph inventories 325 predicates. Fourteen qualified consumers retain independent closures, twelve pending consumers gain no authority, and two remain duplicate evidence. Eight inherited immutable compatibility shapes remain alias-only through `np.trapezoid`; mutable scripts contain zero executable legacy access. GitNexus reports LOW impact and zero affected processes. The integrated workflow passes all 1,224 tests with 578 memory files and the physics skill valid. A post-gate raw grep matched only the compatibility auditor's explanatory docstring; the shared AST audit then confirmed nine mutable in-scope files have zero executable legacy shapes. The final evidence append triggered and then repaired a generated-memory freshness check without rerunning science. | Freeze G3's scalar-tensor audit before source execution; require its complete action and sign conventions, free metric and scalar field equations, stress tensor and conservation, scalar-to-index map, initial and boundary data, hyperbolicity and degrees of freedom, exact and numeric oracle separation, G2/G4 authority and cycle handling, every predicate, consumers, and nonduplication, and do not turn a canonical scalar action or local nonzero stress into a solved breather-sourced spacetime, unique gravity theory, physical coupling, observation, or substrate mechanism |
+| 0164 | P143 exact canonical Einstein-scalar action, stress, conservation, massless flat-FLRW solution, source mismatch, dependency, consumer, compatibility, and G3 audit | `campaigns/P143-g3-scalar-tensor-audit/attempts/0001` through `0008`, then v0.110.0 promotion | C-STG-001 accepted and G3 qualified; commit `d5e840f` | Native G3 passes all eleven predicates and has no NumPy integration event, but its executable code never loads its declared positive kappa. It independently chooses static metric and scalar profiles, fits only G_tt/T_tt at one point, obtains a negative coupling, leaves xx yy zz Einstein residuals nonzero, and puts the scalar off shell. Exact canonical and fresh direct-four-dimensional routes derive the healthy stress, equations, on-shell conservation, massless flat-FLRW solution, all Einstein components, scalar and continuity equations, Ricci and Kretschmann invariants, singular and flat limits, and ghost, exponent, normalization, Delta, and source countermodels. Twenty-nine primary, fifteen independent, fifteen focused, and thirty-five frozen-graph checks pass; the 14-node graph inventories 135 predicates. Six qualified consumers retain independent closure and six pending consumers gain no authority. G1, G4, and NC4 retain immutable alias-only compatibility through `np.trapezoid`; mutable code contains zero executable legacy access. GitNexus reports LOW impact and zero affected processes. The integrated workflow passes all 1,239 tests with 583 memory files and the physics skill valid. | Freeze G4's radiation-reaction audit before source execution; require its action or balance law, retarded self-field and regularization, causal history, acceleration and internal-mode dynamics, energy-momentum conservation, signs, dimensions, boundary and initial data, exact versus numeric oracle separation, G1/G2/G3/T2A/T2C authority, every predicate, consumers, and nonduplication, and do not turn an inserted Larmor power, algebraic energy loss, local damping law, or finite-window regression into a derived self-force, backreaction, physical gravity, observation, or substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -246,7 +246,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 82 bridge units remain pending, 3 are migrated, 124 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 77 bridge units remain pending, 3 are migrated, 129 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1455,24 +1455,35 @@ has zero `T_tz` where the geometry has nonzero `G_tz`. Native G2 has no NumPy
 compatibility event; inherited immutable shapes remain alias-only through
 `np.trapezoid`.
 
+P143 adds C-STG-001 for the exact canonical Einstein-scalar action surface and
+massless flat-FLRW solution. Exact canonical and fresh four-dimensional routes
+close the stress, equations, conservation, all Einstein components, scalar and
+continuity equations, curvature invariants, domain, singularity, and flat limit.
+G3 is qualified because its positive coupling is unused, its one-point fitted
+ratio is negative, its remaining tensor and scalar equations fail, and its
+optical ratio diverges despite zero-coupling prose. The accepted cosmology is
+homogeneous and extensive, not a localized breather source. G3 is native;
+immutable G1, G4, and NC4 retain compatibility-only aliases backed by
+`np.trapezoid`.
+
 ## Canonicalization
-The registry, `v0.109.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-four accepted claims. P001 through P142 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 78 pending, 0 partial, 3 migrated, 128 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.110.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-five accepted claims. P001 through P143 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 77 pending, 0 partial, 3 migrated, 129 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 78
-pending, 3 migrated, 128 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is G3, pinned at SHA-256
-`8d462ce2bfd57bfced9fdedd511e9d2711e0c2454bc0d0441c681288495719ba`.
-Its headline claims a canonical scalar-tensor route with a free 3+1 metric; it
-cites G2 and G4, contains eleven literal checks, one assertion, and symbolic
-and numeric oracle hints. P143 must freeze competing action, exact field-
-equation, source-compatibility, PDE, countermodel, and governance routes; pin
-signature, scalar normalization and index map, stress and Einstein conventions,
-coupling, initial and boundary data, degrees of freedom, hyperbolicity,
-dimensions, dependencies, consumers, and comparator blinding before opening
-the source. A declared canonical action, nonzero stress, or numerical residual
-cannot by itself establish a solved breather-sourced geometry, physical gravity,
-unique lift, material realization, or observation.
+The effort remains active. D4 is discharged, but D1 remains open with 77
+pending, 3 migrated, 129 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is G4, pinned at SHA-256
+`308c8d82aff062fb0f0254498fb2bdb19fe6bdc207036cb0fa73643d3608c799`.
+Its headline claims radiation reaction and internal-mode backreaction, cites
+G1, G2, G3, T2A, and T2C, and contains ten literal checks with symbolic,
+NumPy, SciPy, and numeric machinery. P144 must freeze competing balance-law,
+self-field, effective-equation, countermodel, and governance routes; pin the
+action or balance premise, regularization, causal history, acceleration,
+internal energy, signs, dimensions, initial and boundary data, numeric
+refinement, dependencies, consumers, and comparator blinding before opening
+the source. A declared radiated power, algebraic energy loss, damping sign, or
+passing finite-window regression cannot by itself establish a self-force,
+backreaction, physical gravity, material realization, or observation.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
