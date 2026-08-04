@@ -1,0 +1,31 @@
+attempt: 0003
+campaign: P145
+candidate: A
+status: passed_with_scientific_qualification_required
+started_at: '2026-08-09T18:16:00Z'
+finished_at: '2026-08-09T18:25:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python -c "audit immutable G5 NumPy trapezoid syntax"
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G5_Geff_medium_density.py
+result:
+  source_sha256: 38a28bb452b055e7aa7894e1c31e3fcc98bfc5c6a8cbee2040aa003c62a4071a
+  dossier_sha256: 972605f48b9941c6a8d054c4bd7ca173d7cf6d05d370d92ac59db18d2a61e427
+  process_exit: 0
+  terminal_tally: ALL_15_CHECKS_PASS
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+scientific_diagnosis:
+  - Raw numeric epsilon and mu values are relabeled as mechanical units without carrying their SI dimensions.
+  - L2a and L2b both have permittivity dimension, not mass-density dimension.
+  - L3 has inverse-permeability dimension, not energy-density dimension without a conversion and amplitude.
+  - The source unit guards test wrong alternatives and L4 but never the load-bearing L2 or L3 unit claims.
+  - The linkage guard counts shared symbol names and does not establish independent inputs, measurements, or predictions.
+  - L4 is algebraic substitution after defining kappa with Newton-G dimension and does not validate the imported coupling provenance.
+compatibility_verdict: native_no_numpy_integration_event
+next_attempt: >-
+  Freeze proposal revision 0001 for C-MED-005, then implement and independently
+  verify the preregistered dimension-valid common-conversion theorem.

@@ -73,7 +73,7 @@ selection_criteria:
   - compatibility with accepted medium dimension identifiability and gravity ceilings
   - reusable API value reverse-consumer closure nonduplication and generated-state consistency
   - source rounded values and external constants excluded from concept selection and pass thresholds
-claims_proposed: []
+claims_proposed: [C-MED-005]
 comparators_blinded_until: >-
   This manifest, matching prose contract, source and dossier hashes, candidate
   set, exact SI dimensions, constitutive and coupling conventions, selection
@@ -82,5 +82,8 @@ comparators_blinded_until: >-
   four displayed relations, tally, dependency names, oracle hint, and rounded
   values; those values are excluded from candidate selection and thresholds.
   The source body, check literals, full output, dossier body, and official
-  numerical constants remain unopened until that boundary.
+  numerical constants remain unopened until that boundary. Proposal revision
+  0001 subsequently reserves C-MED-005 from the preregistered Candidate C after
+  source-aware nonduplication; its exact statement and unchanged structural
+  criteria are separately frozen before implementation.
 status: draft

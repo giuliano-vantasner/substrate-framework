@@ -1,0 +1,28 @@
+attempt: 0004
+campaign: P145
+candidate: C
+status: passed
+started_at: '2026-08-09T18:25:00Z'
+finished_at: '2026-08-09T18:32:00Z'
+commands:
+  - rg repository-wide collision and nonduplication search for C-MED-005 and the SI conversion theorem
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P145-g5-medium-density-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  revision_sha256: d34c5a5a626670b6ac2c151805d82564b0fecdcf2a345a51a62d59375464d1b1
+  claim_reserved: C-MED-005
+  identifier_collision: false
+  distinct_surface: SI_dimensioned_conversion_and_common_scale_orbit
+  repository: WORKFLOW_VALID_146_claims_146_accepted_0_proposals
+  migration_queue: 218_units_76_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: true
+dossier_body_opened: true
+comparator_values_inspected: >-
+  Native G5 output and the queue-exposed rounded values are now visible but are
+  excluded from candidate selection, exact statements, thresholds, and tests.
+next_attempt: >-
+  Commit revision 0001, implement C-MED-005 in the canonical constitutive module,
+  and verify it through independent exact SI-dimension and algebra routes.

@@ -2,7 +2,7 @@
 description: Audit G5's medium-density and effective-Newton relation
 author: vantasner
 created: '2026-08-09T18:10:00Z'
-updated: '2026-08-09T18:10:00Z'
+updated: '2026-08-09T18:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -102,18 +102,44 @@ official numerical constant values remain blinded until the proposal, hashes,
 unit columns, coupling conventions, candidate set, criteria, compatibility
 policy, and done gate are committed.
 
+## Proposal Revision
+
+Revision 0001 activates preregistered Candidate C after native reproduction and
+source-aware nonduplication. The source's central defect is not merely C-MED-001's
+already accepted common-response cancellation: it substitutes the actual SI
+vacuum coefficients into an untyped mechanical dictionary, and no accepted API
+currently states the required dimensioned calibration or its rescaling orbit.
+The revision therefore reserves collision-free C-MED-005 before implementation.
+The initial frozen proposal, candidate ordering, SI columns, selection criteria,
+and source-value exclusion remain unchanged.
+
+C-MED-005 will state the exact SI mechanical-conversion theorem. With SI base
+rows M,L,T,I, a multiplicative dictionary
+
+
+`rho=a*epsilon` and `K=b*mu_inverse` requires both `a` and `b` to have dimension
+`(2,0,-4,-2)`. It gives `c_m^2=(b/a)/(epsilon*mu)` and hence the electromagnetic
+speed exactly iff `a=b` for positive factors. The common factor then remains a
+free calibration that rescales density, stiffness, and energy while leaving the
+speed fixed. For dimensionless strain `xi`, `u=K*xi^2/2`; under a common factor,
+`u/c^2=a*epsilon*xi^2/2`, which is not the inertial density `a*epsilon` at unit
+strain. Bare `epsilon/2` is not an SI mass density and bare `1/(2*mu)` is not an
+SI energy density. The theorem derives no material, field amplitude, calibration,
+gravity coupling, observation, or substrate mechanism.
+
 ## Proposed Claim Delta
 
-P145 reserves no claim identifier at freeze. C-MED-001 and C-MED-002 already
-govern conditional response cancellation and the separately declared density
-dictionary; C-DIM-002, C-IDN-001, and C-GRV-001 already govern dimension
-powers, provenance-bearing rank, Newton dimensions, free coefficients, and
-source normalization. Repository registry, campaign, module, and durable-memory
-search found no reason yet to duplicate them. A new identifier may be proposed
-only after source-aware nonduplication finds a distinct exact theorem with an
-importable consumer; that requires an explicit proposal revision and renewed
-freeze before implementation. G5 may map multiple accepted claims while its
-unsupported subclaims receive a terminal qualified disposition.
+P145 provisionally reserves C-MED-005 under revision 0001. Repository registry,
+campaign, module, and durable-memory searches found no prior use of that
+identifier or an accepted theorem carrying the SI conversion-factor dimension,
+two-factor speed ratio, common-scale orbit, and strain-energy ceiling together.
+C-MED-001 and C-MED-002 remain dependencies or neighboring ceilings rather than
+duplicates: their response variables already have declared mechanical dimensions
+and their density map is explicitly a premise. C-DIM-002, C-IDN-001, and
+C-GRV-001 continue to govern dimension powers, provenance-bearing rank, Newton
+dimensions, free coefficients, and source normalization. G5 may map C-MED-005
+and older accepted claims while its unsupported subclaims receive a terminal
+qualified disposition.
 
 The anticipated reverse consumers are W5, QCD1, SM1, OD, AS1, AS2, AS3, AS4,
 and OD3. The first three remain pending; OD, AS1, AS2, and AS3 are qualified;
@@ -203,5 +229,6 @@ campaign.
 ## Cross-References
 
 The governing references are P008, P016, P065, P074, P141 through P144, G1
-through G5, C-MED-001, C-MED-002, C-DIM-002, C-IDN-001, C-GRV-001, C-RAD-001,
-C-GOR-001, C-STG-001, C-RR-001, v0.111.0, and the parent migration effort.
+through G5, C-MED-001, C-MED-002, provisional C-MED-005, C-DIM-002, C-IDN-001,
+C-GRV-001, C-RAD-001, C-GOR-001, C-STG-001, C-RR-001, v0.111.0, and the parent
+migration effort.

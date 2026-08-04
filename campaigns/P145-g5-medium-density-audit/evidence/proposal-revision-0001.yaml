@@ -1,0 +1,36 @@
+revision: 0001
+campaign: P145
+parent_frozen_proposal_sha256: 5ddab6e0f0d7d9eb84473289077e9dacdb4603bdbcea143329450a537ec17504
+trigger: >-
+  Native source reproduction and source-aware nonduplication show that the
+  preregistered Candidate C supplies a distinct exact SI calibration theorem,
+  not merely another instance of C-MED-001 response cancellation.
+unchanged:
+  - accepted base and source hashes
+  - SI M L T I dimension columns
+  - candidates A through G and their ordering
+  - structural selection criteria
+  - source numeric values excluded from selection and thresholds
+claim_reserved:
+  id: C-MED-005
+  dependencies: [C-MED-001]
+  statement: >-
+    In SI base dimensions M L T I, a multiplicative mechanical dictionary
+    rho=a*epsilon and K=b*mu_inverse requires a and b to share dimension
+    M^2*T^-4*I^-2. It gives c_m^2=(b/a)/(epsilon*mu), equal to the
+    electromagnetic wave speed squared exactly when a=b for positive factors.
+    The common factor remains free and rescales density, stiffness, and energy
+    without changing speed. For dimensionless strain xi, u=K*xi^2/2 and, under
+    the common conversion, u/c^2=a*epsilon*xi^2/2; bare epsilon/2 is not SI
+    mass density and bare 1/(2*mu) is not SI energy density. No material,
+    calibration, field amplitude, gravity coupling, or observation is derived.
+novelty: >-
+  C-MED-001 governs abstract co-scaled responses and C-MED-002 explicitly
+  declares its density dictionary. Neither exposes the SI electric-current
+  dimension, required dimensioned calibration, unequal-factor speed ratio,
+  common-scale orbit, or strain-energy typing needed by G5 and its consumers.
+oracle: exact SymPy algebra plus independent integer dimension-vector elimination
+implementation_boundary: >-
+  Extend the canonical constitutive module only after this revision validates
+  and is committed; no source comparator controls the implementation or tests.
+status: frozen
