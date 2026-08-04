@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-09T21:30:00Z'
+updated: '2026-08-09T23:35:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.113.0`, containing one hundred forty-eight
+The current accepted frontier is `v0.114.0`, containing one hundred forty-nine
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -31,6 +31,11 @@ residual parity pullback, even/odd decomposition, outward-normal domain map,
 and one-equation trace family and qualifies W1 while rejecting its hard-coded
 charge selection, inserted witnesses, correlation-as-transfer, fermion-parity,
 weak-sector, and nonlinear-chiral overclaims.
+P147 adds C-REP-002's exact SU2 irreducible-carrier commutant,
+independent-projector-factor action, vector/axial parity, and common-Abelian-
+charge theorem and qualifies W2 while rejecting its conflated charge event,
+same-carrier chirality, preloaded parity guard, and unsupported physical weak-
+doublet and gauge-interaction readings.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -56,7 +61,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 74 pending, 0 partially migrated, 3 migrated, 132 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 73 pending, 0 partially migrated, 3 migrated, 133 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -235,6 +240,7 @@ Attempts are append-only and individually reproducible.
 | 0165 | P144 exact generalized-coordinate balance, affine force family, metric minimum, Rayleigh dissipation, dependency, consumer, compatibility, and G4 audit | `campaigns/P144-g4-radiation-reaction-audit/attempts/0001` through `0009`, then v0.111.0 promotion | C-RR-001 accepted and G4 qualified; commit `e86930c` | For nonzero generalized rate, the exact family `Q=-P*G*u/(u^T*G*u)+z`, `z^T*u=0`, gives every force with prescribed nonnegative dissipated power under a declared symmetric-positive-definite coordinate metric; the displayed representative is the metric-minimum solution. The one-rate quotient requires nonzero velocity, and a declared positive-semidefinite Rayleigh tensor gives `Q=-D*u`, `P_d=u^T*D*u=2R`, and the exact energy balance. Native G4 stops only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all ten predicates. Scientific replay rejects the inherited fourfold radiation coefficient, prescribed accelerating path, increasing mechanical energy, unevolved internal mode, and unsupported self-force, causal, no-runaway, and no-preacceleration readings. Twenty-nine primary, sixteen independent, seventeen focused, and twenty-seven frozen-graph checks pass; the ten-node graph inventories 99 predicates. GitNexus reports LOW additive impact and zero affected processes. The integrated workflow passes all 1,256 tests with 588 memory files and the physics skill valid. | Freeze G5 before source inspection; require exact dimensions and constitutive dictionary, distinguish independent premises from algebraic consequences, inventory `epsilon_0`, `mu_0`, density, wave speed, `G`, and `kappa` provenance and identifiability, blind empirical constants until the equations and criteria are frozen, replay G1/G2/G3/G4 authority, all fifteen predicates and reverse consumers, and do not turn a dimensional identity, defined density, imported electromagnetic constants, or free `kappa` into derived medium gravity, an absolute Newton constant, independent predictions, or a substrate mechanism |
 | 0166 | P145 exact SI constitutive dimensions, conversion iff, free-scale orbit, energy amplitude, rank, gravity-source typing, dependency, consumer, compatibility, and G5 audit | `campaigns/P145-g5-medium-density-audit/attempts/0001` through `0007`, then v0.112.0 promotion | C-MED-005 accepted and G5 qualified; commit `069efce` | Native G5 passes all fifteen predicates without a NumPy integration event, but its bare epsilon0/2 and inverse-mu0/2 labels retain electromagnetic rather than mechanical dimensions. Exact canonical and fresh independent routes derive the common conversion dimension, general two-factor speed ratio, equal-factor iff, arbitrary common calibration orbit, amplitude-aware quadratic energy, rank-two L1-L3 ledger, and source-typed Einstein coupling ceiling. Its repeated-symbol linkage and free-kappa effective-Newton substitution establish no independent prediction, material, gravity, observation, or substrate mechanism. Thirty-six primary, twenty independent, seventeen focused, and thirty-four frozen-graph checks pass; the fourteen-node graph inventories 145 predicates. Nine reverse consumers close, including two lexical G5 gluon false positives. Inherited G1 and G4 retain alias-only compatibility through `np.trapezoid`; mutable code has no legacy access. GitNexus reports LOW additive impact and zero affected processes. The integrated workflow passes all 1,275 tests with 593 memory files and the physics skill valid. | Freeze W1 before source inspection; require exact parity action on the boundary domain, orientation and normal conventions, epsilon sign and source transformation, full nonlinear versus linearized equations, topological-charge and drive-sign provenance, NC1/NC4 authority, all eight predicates, two assertions, consumers, nonduplication, and comparator blinding, and do not turn a parity-covariant parameter exchange or observed numerical selection into intrinsic parity violation, a chiral interaction, weak physics, or a substrate mechanism |
 | 0167 | P146 exact scalar boundary-residual parity pullback, projectors, domain-normal map, trace family, dependency, consumer, compatibility, and W1 audit | `campaigns/P146-w1-parity-boundary-audit/attempts/0001` through `0007`, then v0.113.0 promotion | C-BND-001 accepted and W1 qualified; commit `5b9fa7c` | Native W1 passes its first three checks and stops only on two removed `np.trapz` calls; isolated alias-only replay through `np.trapezoid` passes all eight predicates. Exact canonical and fresh augmented-trace routes derive the beta-to-minus-beta family covariance, fixed-residual invariance iff beta is zero, even temporal-source and odd spatial projectors, right-to-left half-line normal covariance, and the one-row trace family. They also prove that W1 hard-codes its charge map, adds a zero-gradient premise, constructs a chiral witness violating its own epsilon-plus law, and relabels sign correlation as topological transfer. Thirty-nine primary, twenty-three independent, twenty-one focused, and forty-five frozen-graph checks pass; the eleven-node graph inventories 129 predicates and ten assertions. Three qualified consumers retain independent closure and six pending consumers gain no authority. GitNexus reports LOW additive impact and zero affected processes. The integrated workflow passes all 1,275 tests with 598 memory files and the physics skill valid. | Freeze W2 before source inspection; require the exact carrier space and basis, provenance of kink and antikink state labels, action of Pauli generators and projectors, distinction between an abstract SU(2) representation and a gauged physical doublet, charge and hypercharge normalization, chirality definition, current dynamics, anomaly and interaction data, W1/W3/W7/M1/M2/EM/YM/SM authority, all nine predicates, one assertion, consumers, and nonduplication, and do not turn assigned two-state labels or matrix closure into derived weak isospin, a charged-current interaction, physical fermions, a gauge sector, or a substrate mechanism |
+| 0168 | P147 exact SU2 carrier commutant, independent projector factor, vector/axial parity, common-charge, dependency, consumer, compatibility, and W2 audit | `campaigns/P147-w2-su2-doublet-audit/attempts/0001` through `0007`, then v0.114.0 promotion | C-REP-002 accepted and W2 qualified; commit `0d623a5` | Native W2 passes all nine predicates without a NumPy compatibility event. Exact canonical and fresh block-space routes prove Pauli-half closure, the scalar fundamental commutant, Hermitian closing `T_a` tensor left/right projector actions, vector-even and axial-odd factor exchange, and unit separation under any common commuting Abelian shift. W2's assigned labels change by two while its unit event is inserted separately; CP does not select `T3=Q/2`; opposite hypercharges are not one common charge; and its same-carrier `T_a*P_L` matrices are non-Hermitian for two generators and fail all cyclic commutators. The source preloads its parity guard and computes no correlation, field evolution, gauge action, current, anomaly, or interaction. Two verifier target-statement failures are preserved before correction. Forty-nine primary, twenty-five independent, fourteen focused, and eighty-three frozen-graph checks pass; the 24-node graph inventories 234 predicates and 26 assertions. GitNexus reports LOW additive impact and zero affected processes. The integrated workflow passes all 1,289 tests with 603 memory files and the physics skill valid. | Freeze W3 before source inspection; require exact V/A definitions and derivative signs, field and spacetime carrier semantics, parity action, conservation equations and boundary flux, source and current dimensions, coupling and gauge provenance, W1/W2/EM1/G1/G2/NC1/NC4/W5 authority, all seven predicates and one assertion, consumers, nonduplication, and alias-only replay of its immutable two-call `np.trapz` shape, and do not turn a characteristic identity, assigned projector, or boundary correlation into a Lorentz current, charged-current vertex, parity violation, gauge interaction, or substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1509,24 +1515,38 @@ chiral witness, and relabels sign correlation as topological transfer without
 vacuum-boundary data. Its immutable `np.trapz` calls are a version-only event;
 alias-only replay through `np.trapezoid` passes all eight source predicates.
 
+P147 adds C-REP-002 for the standard SU2 irreducible carrier and a separate
+projector factor. The full fundamental commutant is scalar; tensor-factor left
+and right actions are Hermitian and close; a declared factor exchange makes
+their vector sum even and axial difference odd; and a common commuting Abelian
+shift leaves unit charge separation. W2 is qualified because its basis names
+do not establish physical states, its declared labels change by two while its
+unit event is inserted independently, and CP does not select their magnitude.
+Its same-carrier left matrices fail Hermiticity and closure, its parity guard is
+preloaded, and it constructs no field evolution, current, gauge action,
+interaction, anomaly result, or weak sector. Native W2 has no NumPy
+compatibility event, while inherited immutable legacy shapes remain isolated
+version-only evidence under the `np.trapezoid` replay policy.
+
 ## Canonicalization
-The registry, `v0.113.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-eight accepted claims. P001 through P146 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 74 pending, 0 partial, 3 migrated, 132 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.114.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-nine accepted claims. P001 through P147 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 73 pending, 0 partial, 3 migrated, 133 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 74
-pending, 3 migrated, 132 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is W2, pinned at SHA-256
-`0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16`.
-Its headline organizes kink and antikink labels as an SU(2)_L doublet, cites a
-broad W1/W3/W7/M1/M2/EM/YM/SM dependency set, and contains nine literal checks,
-one assertion, and symbolic matrix machinery. P147 must freeze at least two
-competing representation and dynamical-embedding routes; pin the carrier
-space, basis, state and charge provenance, Pauli and projector action,
-hypercharge normalization, chirality semantics, gauge and interaction data,
-comparator blinding, dependency and consumer maps, every predicate, and
-nonduplication before opening the source. Closure of assigned two-by-two
-matrices cannot by itself establish a physical weak doublet, charged-current
-interaction, fermionic states, a gauged sector, or a substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 73
+pending, 3 migrated, 133 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is W3, pinned at SHA-256
+`b49a0bd1075b16b5906719b6ed51454ed04adab5168be7ec98178599313b3f17`.
+Its headline proposes a V-A charged current from a sine-Gordon characteristic
+split, cites EM1, G1, G2, NC1, NC4, W1, W2, and W5, and contains seven literal
+checks, one assertion, symbolic and numeric machinery, and two immutable
+legacy trapezoid calls. P148 must freeze at least two competing current and
+boundary interpretations; pin derivative, metric, index, parity, source,
+current, conservation, flux, dimension, coupling, and gauge conventions;
+predeclare compatibility replay, dependency and consumer maps, every
+predicate, and nonduplication before opening the source. A characteristic
+identity, projector label, or boundary correlation cannot by itself establish
+a Lorentz current, charged-current vertex, parity-violating interaction,
+gauge sector, or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
