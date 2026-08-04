@@ -1,0 +1,79 @@
+id: P128
+base_release: v0.98.0
+base_commit: e620fd3c24a7235d2f1fc18a9cac26a5259cf3e8
+scientific_base_commit: b63e70e66974f49c10ee9e93d365c5ffe1b8acf0
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM4]
+question: >-
+  Reproduce and independently audit WM4's claim that SM4's three-crossing
+  scale spread and WM3's weak-coordinate miss are the same one-loop near-miss;
+  distinguish a common left-null functional or vanishing locus from
+  proportional coordinates, absolute or piecewise projections, percentage
+  normalizations, and numerically identical physical observables.
+invariants:
+  - >-
+    C-RGE-004's exact convention is a_i=A+B*b_i with separately supplied real
+    inverse-coupling coordinates and signed coefficients. Reference scale,
+    logarithm normalization, coefficient sign, and Abelian coordinate changes
+    must be mapped explicitly rather than mixed.
+  - >-
+    For three lines with coefficient rank two, the common-intersection plane in
+    intercept space is span{(1,1,1), (b1,b2,b3)}. Its linear annihilator is
+    one-dimensional, so a nonzero linear incompatibility functional is unique
+    only up to a nonzero scale and sign.
+  - >-
+    Pairwise crossing-coordinate differences are proportional to a signed
+    incompatibility functional only when their coefficient denominators are
+    nonzero. A max-minus-min crossing spread is nonnegative, absolute, and
+    piecewise rather than one globally signed linear functional.
+  - >-
+    WM3's accepted surface is an inverse reconstruction from supplied E, S, n,
+    coefficients, and exact matching. Comparing its solved weak coordinate to
+    a separately supplied weak coordinate is a fixed-data residual, not an
+    ab-initio prediction or an input-free observable.
+  - >-
+    Percentage miss depends on the chosen denominator and weak-coordinate
+    convention. A scale spread depends on logarithm base, reference-coordinate
+    normalization, pair selection, and absolute-value or range convention.
+  - >-
+    A shared zero set can establish equivalent exact-unification diagnostics
+    without making two reported nonzero values equal, dimensionally identical,
+    equally normalized, or physically interchangeable.
+  - >-
+    B1, M1, SM4, and WM6 remain pending and grant no authority. WM2 is duplicate
+    evidence only; WM3 is qualified through C-RGE-004 with explicit physical
+    ceilings. Candidate dependency edges are replay scope, not premises.
+  - >-
+    WM4's body, exact functional, coefficient formulas, input readings, output,
+    approximate comparator values beyond queue-exposed four-decade and ten-
+    percent headlines, and predicate implementations remain unopened at freeze.
+allowed_imports:
+  - C-LIN-001 exact finite-system rank and consistency semantics
+  - C-IDN-001 exact left-null compatibility and reference covariance
+  - C-RGE-004 exact affine crossings common-intersection diagnostics WM3 reconstruction and normalization ceilings
+  - src/substrate_framework/linear_systems.py and src/substrate_framework/renormalization.py
+  - exact SymPy linear algebra rational arithmetic determinants ranks nullspaces and counterexamples
+  - WM4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - {id: A, description: Reproduce WM4 literally and classify every predicate and asserted identity.}
+  - {id: B, description: Derive the three-line unification plane and its one-dimensional linear annihilator.}
+  - {id: C, description: Express all pairwise crossing differences as conditional signed multiples of one incompatibility functional.}
+  - {id: D, description: Classify max-min decade spread as an absolute piecewise projection rather than a signed linear functional.}
+  - {id: E, description: Derive the fixed-data weak-coordinate residual and compare its zero set normalization and input dependence.}
+  - {id: F, description: Audit reference logarithm sign and paired Abelian-coordinate covariance plus wrong-convention mutations.}
+  - {id: G, description: Test equal-coefficient singularities alternative pairings denominator choices and rank-degenerate cases.}
+  - {id: H, description: Separate measured-input regression approximate reporting and percentage conventions from structural selection.}
+  - {id: I, description: Close dependency consumer and nonduplication ledgers against C-RGE-004 and C-IDN-001.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact rank nullspace determinant and conditional denominator closure
+  - explicit sign logarithm reference Abelian and percentage conventions
+  - equality versus proportionality zero-locus equivalence dimensions and input dependence
+  - mutation sensitivity accepted dependency fit parameter economy nonduplication and consumer closure
+claims_proposed: []
+comparators_blinded_until: >-
+  WM4's body, exact equations, input values, output, and predicate details remain
+  unopened until the proposal, immutable copy, memory contract, and freeze gate
+  pass. Queue metadata already exposes the asserted common functional and the
+  approximate ten-percent and four-decade headlines; that exposure is recorded.
+status: draft

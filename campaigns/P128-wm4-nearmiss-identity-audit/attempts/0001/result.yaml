@@ -1,0 +1,19 @@
+campaign: P128
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H, I]
+commands:
+  - cmp campaigns/P128-wm4-nearmiss-identity-audit/proposal.yaml campaigns/P128-wm4-nearmiss-identity-audit/evidence/frozen-proposal.yaml
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P128-wm4-nearmiss-identity-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - scripts/validate.sh
+  - git diff --check
+expected: {accepted_claims: 133, source_units: 218, pending_units: 93, pytest_tests: 1090, memory_files: 518, source_body_opened: false, debt: []}
+result: >-
+  Proposal and frozen copy are byte-identical at SHA-256
+  5a5e02b02d1f929286cfe6a329eb12518260fa42ee70e5fb9c34cc34f8988e01.
+  Repository validation reports 133 accepted claims and 93 pending source
+  units; all 518 memory records, the physics skill, and all 1090 tests pass.
+  WM4 remained unopened throughout the freeze boundary.
+compatibility_event: none
+next_attempt: Commit the frozen P128 contract, then reproduce and inspect WM4.
