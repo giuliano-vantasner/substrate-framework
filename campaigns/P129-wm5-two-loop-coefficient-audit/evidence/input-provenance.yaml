@@ -1,0 +1,37 @@
+campaign: P129
+canonical_object: exact_gauge_only_product_group_coefficient_ledger
+accepted_inputs:
+  C-LIE-001: exact_convention_specific_SU3_invariants_only
+  C-REP-001: supplied_finite_charge_table_and_abelian_coordinate_covariance_only
+  C-RGE-001: generic_one_loop_sign_and_domain_convention_only
+  C-RGE-002: conditional_SU3_one_loop_specialization_only
+  C-RGE-004: affine_coefficient_and_abelian_coordinate_ceilings_only
+external_import:
+  object: one_and_two_loop_gauge_coefficient_weights
+  status: explicit_approved_formula_premise
+  scheme: modified_minimal_subtraction
+  fermions: two_component_Weyl
+  scalars: complex
+  semisimple_scope: finite_product_with_at_most_one_abelian_factor
+supplied_specialization:
+  status: comparator_evidence_not_canonical_field_content
+  generations: 3
+  complex_scalar_multiplets: 1
+  abelian_squared_normalization: 3/5
+  multiplets: [Q_L, u_R_conj, d_R_conj, L_L, e_R_conj, H]
+  invariant_requirement: >-
+    Every factor's Dynkin index including spectator degeneracy and every
+    factor-specific quadratic Casimir are supplied explicitly.
+withheld:
+  - derivation of physical multiplets representations chirality or completeness
+  - anomaly cancellation as a selection theorem
+  - GUT embedding or preferred Abelian normalization
+  - Yukawa contribution multiple-U1 kinetic mixing thresholds and matching
+  - boundary conditions measured inputs unification and perturbative validity range
+  - substrate or medium realization
+comparator_blinding: >-
+  Exact matrix values were opened only after the candidate set, structural
+  criteria, proposal, immutable copy, and freeze gate were complete. The queue
+  had already exposed qualitative agreement, which is recorded but nonselecting.
+compatibility_event: none
+debt: []

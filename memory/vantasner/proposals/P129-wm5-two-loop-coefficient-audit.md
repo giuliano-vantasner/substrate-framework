@@ -2,11 +2,11 @@
 description: Audit whether WM5 conditionally derives a two-loop gauge matrix from a complete supplied representation table
 author: vantasner
 created: '2026-08-08T19:30:00Z'
-updated: '2026-08-08T19:30:00Z'
+updated: '2026-08-08T20:30:00Z'
 tags: [substrate-framework, campaign-proposal, renormalization, migration-WM5]
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P129 WM5 Two-Loop Coefficient Audit
 

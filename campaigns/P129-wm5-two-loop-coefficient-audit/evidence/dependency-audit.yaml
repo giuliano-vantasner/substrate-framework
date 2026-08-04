@@ -1,0 +1,31 @@
+campaign: P129
+base_release: v0.98.0
+accepted_claims_reviewed:
+  C-LIE-001: unchanged_exact_SU3_convention_specific_invariants
+  C-REP-001: unchanged_supplied_table_and_abelian_normalization_ceiling
+  C-RGE-001: unchanged_generic_one_loop_convention
+  C-RGE-002: unchanged_conditional_SU3_specialization
+  C-RGE-004: unchanged_affine_coefficient_and_coordinate_ceiling
+source_candidate_dependencies:
+  QCD1: {disposition: pending_adjudication, authority: none}
+  QCD3: {disposition: qualified, authority: only_through_C_LIE_001_C_RGE_001_C_RGE_002}
+  SM2: {disposition: pending_adjudication, authority: none}
+  SM3: {disposition: pending_adjudication, authority: none}
+  SM4: {disposition: pending_adjudication, authority: none}
+  WM1: {disposition: qualified, authority: only_through_C_REP_001}
+  WM2: {disposition: duplicate_evidence, authority: only_through_existing_claims}
+  WM6: {disposition: pending_adjudication, authority: none}
+findings:
+  - WM5 dynamically executes only WM1, SM2, and SM4; the other named dependencies are prose provenance.
+  - C-REP-001 explicitly withholds physical representation, chirality, completeness, and gauge-action semantics from WM1's table.
+  - Pending SM2 and SM4 values can be reproduced but cannot close an accepted dependency edge.
+  - C-LIE-001 supplies SU3 invariants but no SU2 values, U1 normalization, generation count, or physical field table.
+  - C-RGE-005 therefore begins from separately supplied exact invariants and an explicitly imported perturbative formula.
+new_claim:
+  C-RGE-005:
+    dependencies: [C-LIE-001, C-REP-001, C-RGE-001, C-RGE-002, C-RGE-004]
+    compatibility: compatible_extension
+cycles:
+  - WM5 names WM6 while WM6 executes WM5; this source-level cycle grants neither unit authority.
+  - WM7 and WM10 consume WM5 while remaining pending and cannot validate it by downstream agreement.
+debt: []

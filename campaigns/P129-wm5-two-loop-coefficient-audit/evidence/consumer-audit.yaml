@@ -1,0 +1,37 @@
+campaign: P129
+root_source_unit: WM5
+authority_warning: Clean consumer execution is replay evidence, not claim promotion.
+direct_consumers:
+  - source_unit: WM6
+    disposition_at_replay: pending_adjudication
+    path: merged-framework/bridges/phase-33/bridge_WM6_two_loop_running.py
+    sha256: 6d1ea4245adcf490466974d4a40b24843cd92e883c6e885936fb030cd1b31d57
+    checks: 11
+    relation: two_loop_running_consumer
+  - source_unit: WM7
+    disposition_at_replay: pending_adjudication
+    path: merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py
+    sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+    checks: 10
+    relation: coefficient_to_matter_trace_consumer
+  - source_unit: WM10
+    disposition_at_replay: pending_adjudication
+    path: merged-framework/bridges/phase-39/bridge_WM10_corrected_boundary_two_loop.py
+    sha256: a813f32841a4809f0ca301d8f01cb432d07d43c6bc46433970c1dcf60afe8d29
+    checks: 7
+    relation: corrected_boundary_two_loop_consumer
+replay:
+  scripts: 3
+  checks: 28
+  exit_statuses_all_zero: true
+compatibility_preflight:
+  scripts_scanned: 3
+  np_trapz: 0
+  np_trapezoid: 0
+  trapezoid_integral: 0
+  compatibility_events: 0
+interpretation: >-
+  Consumers read WM5's coefficient table successfully. Their running,
+  induction-boundary, measured-comparator, and closure statements remain
+  pending and are not imported into C-RGE-005.
+debt: []

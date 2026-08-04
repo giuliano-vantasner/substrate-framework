@@ -655,6 +655,49 @@ units:
       preserved verifier-construction failures. Three pinned dependency and
       source scripts reproduce 29 checks. No numerical integration or NumPy
       compatibility event occurs.
+  WM5:
+    disposition: qualified
+    accepted_claims:
+      - C-RGE-005
+    qualification: >-
+      Conditional on separately supplied product-representation Dynkin indices,
+      quadratic Casimirs, positive multiplicities, Weyl and complex-scalar
+      classifications, an at-most-one-U1 factor family, and the explicitly
+      imported modified-minimal-subtraction loop weights, WM5's exact arithmetic
+      gives b=(41/10,-19/6,-7) and gauge-only
+      B=((199/50,27/10,44/5),(9/10,35/6,12),(11/10,9/2,-26)). The canonical
+      C-RGE-005 ledger keeps gauge, fermion, and scalar contributions separate,
+      fixes sign, loop-factor, counting, and matrix-orientation conventions, and
+      proves exact Abelian row-column and inverse-coupling covariance. WM5
+      executes only WM1, pending SM2, and pending SM4; it hard-codes generation
+      count, SU2 and SU3 invariants, U1 normalization, and field-counting
+      conventions, while its QCD1, QCD3, SM3, WM2, and WM6 provenance is prose.
+      The supplied table does not derive physical representations, anomaly
+      selection, completeness, or Standard-Model content. B_expected appears in
+      headline check 4 before the repeated literature table in check 5. The
+      matrix omits the same-order Yukawa term and multiple-U1 kinetic mixing, so
+      FULL is false; local coefficient ratios prove no integrated or all-orders
+      running claim. No preferred normalization, embedding, threshold, matching,
+      unification, observation, or substrate realization is accepted.
+    evidence:
+      - campaigns/P129-wm5-two-loop-coefficient-audit/reviews/source_adjudication.md
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/source-reproduction.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/source-audit.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/check-adjudication.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/input-provenance.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/dependency-audit.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/consumer-audit.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/candidate-comparison.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/evidence/primary-provenance.yaml
+      - campaigns/P129-wm5-two-loop-coefficient-audit/verify.py
+      - campaigns/P129-wm5-two-loop-coefficient-audit/reviews/independent_coefficient_review.py
+      - memory/vantasner/decisions/C-RGE-005-review.md
+    note: >-
+      P129 closes 28 primary and 12 independent exact checks after one preserved
+      independent-moment aggregation failure. WM5 and three direct consumers
+      reproduce 39 checks from pinned hashes. No numerical integration or NumPy
+      compatibility event occurs.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:

@@ -1,0 +1,20 @@
+campaign: P129
+source_unit: WM5
+predicates:
+  - {index: 1, verdict: qualified_exact, reason: The tuple-to-invariant construction is exact only for the supplied singlet/doublet/triplet decoder and does not derive those representations.}
+  - {index: 2, verdict: qualified_exact, reason: The second and fourth Abelian moments are exact properties of the supplied table and normalization; the fourth moment is already covered generically by C-REP-001.}
+  - {index: 3, verdict: qualified_exact, reason: The vector follows from supplied invariants and imported loop weights; comparison to pending SM4 promotes no dependency value.}
+  - {index: 4, verdict: accepted_surface_after_reformulation, reason: Exact arithmetic yields the displayed gauge-only matrix, but B_expected is hard-coded and FULL is false with the Yukawa term absent.}
+  - {index: 5, verdict: comparator_only, reason: The repeated standard matrix checks arithmetic agreement and supplies no derivation or physical table provenance by itself.}
+  - {index: 6, verdict: qualified_cross_check, reason: The closed QCD specialization independently aggregates representations but imports the same perturbative two-loop weights.}
+  - {index: 7, verdict: rejected_as_global_conclusion, reason: Local percent-level gauge coefficients at one scale do not establish the integrated running or an all-orders closure bound.}
+  - {index: 8, verdict: useful_mutation, reason: Removing Q_L color multiplicity changes both loop orders and confirms load-bearing supplied representation data.}
+  - {index: 9, verdict: useful_mutation, reason: Perturbing one supplied Abelian charge changes B11 but does not establish anomaly forcing.}
+  - {index: 10, verdict: useful_mutation, reason: Omitting the complex scalar changes its separately visible one- and two-loop contributions.}
+  - {index: 11, verdict: useful_wrong_convention_probe, reason: Dirac in place of Weyl counting changes b3 and exposes the field-counting convention.}
+summary:
+  source_checks_reproduced: 11
+  accepted_claims: [C-RGE-005]
+  source_disposition: qualified
+  compatibility_event: none
+  debt: []

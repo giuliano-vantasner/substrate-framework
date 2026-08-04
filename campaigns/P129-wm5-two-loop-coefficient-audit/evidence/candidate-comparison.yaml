@@ -1,0 +1,22 @@
+campaign: P129
+selection_frozen_before_source_execution: true
+criteria_order:
+  - exact representation provenance multiplicity and invariant closure
+  - explicit imported loop weights sign powers matrix orientation and field-counting convention
+  - Abelian normalization covariance and non-Abelian representation consistency
+  - mutation sensitivity accepted dependency fit parameter economy nonduplication and consumer closure
+  - comparator values excluded from construction and concept selection
+candidates:
+  A: {decision: reproduction_evidence_only, reason: All eleven source checks run but headline provenance and FULL wording overreach their predicates.}
+  B: {decision: selected_as_new_exact_claim, reason: The generic multiplet ledger is exact reusable convention-complete and independent of labels.}
+  C: {decision: selected_as_specialization_evidence, reason: Fresh SM-like enumeration reproduces the vector and matrix without importing source or canonical code.}
+  D: {decision: selected_as_provenance_ceiling, reason: AST and registry review separates three runtime dependencies from five prose dependencies and supplied data from accepted authority.}
+  E: {decision: selected_as_claim_corollary, reason: Exact Abelian row-column and inverse-coupling covariance prevents normalization overreading.}
+  F: {decision: selected_as_convention_audit, reason: Sign loop-factor Weyl/complex and matrix-orientation mutants are load bearing.}
+  G: {decision: selected_as_scope_ceiling, reason: Primary formulas show the same-order Yukawa term and multiple-U1 caveat omitted by the source.}
+  H: {decision: selected_as_sensitivity_evidence, reason: Color multiplicity generation scalar charge and transpose mutations reject the baseline verdict.}
+  I: {decision: selected_as_governance_closure, reason: Comparator timing nonduplication and three direct consumer replays close the affected surface without promoting consumers.}
+claims_decision: accept_C_RGE_005
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

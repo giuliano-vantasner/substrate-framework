@@ -1,0 +1,24 @@
+campaign: P129
+distinct_new_scientific_theorem: accepted
+nearby_accepted_surfaces:
+  C-LIE-001: SU3_invariant_specialization_without_product_group_loop_sum
+  C-REP-001: finite_charge_moments_without_nonabelian_multiplet_invariants_or_loop_weights
+  C-RGE-001: generic_one_loop_coefficient_convention_without_matter_sum
+  C-RGE-002: SU3_one_loop_specialization_only
+  C-RGE-004: affine_running_reconstruction_and_abelian_coordinate_ceiling_without_two_loop_matrix
+new_surface:
+  - exact one-loop vector from supplied product-representation Dynkin indices
+  - exact two-loop gauge-gauge matrix from supplied Dynkin indices and Casimirs
+  - separately inspectable gauge Weyl-fermion and complex-scalar contributions
+  - fixed sign loop-factor field-counting and row-column conventions
+  - at-most-one-U1 scope and explicit Yukawa kinetic-mixing threshold and physical omissions
+  - exact Abelian row-column scaling and inverse-coupling beta covariance
+package_delta:
+  module: src/substrate_framework/gauge_beta.py
+  tests: tests/test_gauge_beta.py
+  public_APIs:
+    - product_gauge_coefficients
+    - gauge_only_beta
+    - abelian_gauge_rescaling_ledger
+promotion_decision: accept_C_RGE_005
+debt: []

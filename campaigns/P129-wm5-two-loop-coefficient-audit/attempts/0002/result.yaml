@@ -1,0 +1,23 @@
+campaign: P129
+attempt: 0002
+status: in_progress
+candidates: [A, B, C, D, E, F, G, H, I]
+commands:
+  - sha256sum /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM5_two_loop_coefficients.py
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM5_two_loop_coefficients.py
+  - independent source-AST, representation-sum, convention, covariance, mutation, and consumer audits
+expected:
+  source_sha256: 8c3fbfeecb6f98d7d80c47e8f267fe1216dde724b81cc3f73f2a3bb17caf1bbc
+  source_checks: 11
+  scientific_object: exact gauge-only product-group coefficient ledger
+  compatibility_event: none
+result: >-
+  WM5 reproduces its eleven checks at the pinned source hash. Its coefficient
+  arithmetic is being separated from the externally imported perturbative
+  weights, supplied multiplet invariants, comparator table, and omitted
+  Yukawa contribution before any claim is adjudicated.
+compatibility_event: none
+next_attempt: >-
+  Implement the frozen generic ledger, test independent enumeration,
+  convention and normalization covariance, and require load-bearing mutants
+  to fail before comparator and consumer replay.

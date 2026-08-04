@@ -1,0 +1,18 @@
+campaign: P129
+attempt: 0003
+status: failed
+candidate: C
+command: PYTHONPATH=src .venv/bin/python campaigns/P129-wm5-two-loop-coefficient-audit/reviews/independent_coefficient_review.py
+expected: >-
+  Fresh enumeration reproduces the one-loop vector, two-loop gauge matrix, and
+  the per-generation second and fourth GUT-normalized Abelian moments.
+result: >-
+  The independent vector and matrix passed, but its moment-only cross-check
+  divided by three generations without first applying each row's generation
+  multiplicity. The failure belongs to the independent verifier's aggregation,
+  not the canonical API, source reproduction, candidate, or accepted base.
+failure_class: implementation
+compatibility_event: none
+next_attempt: >-
+  Apply the already declared row multiplicities before the per-generation
+  division, then rerun the independent review and retain all downstream checks.

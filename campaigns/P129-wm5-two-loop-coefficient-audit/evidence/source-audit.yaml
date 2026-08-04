@@ -1,0 +1,46 @@
+campaign: P129
+source_unit: WM5
+static_check_calls: 11
+runtime_checks: 11
+executable_dependencies:
+  WM1: [FIELDS, Tr]
+  SM2: [Y_H_PS]
+  SM4: [b1, b2, b3, SIN2_THETA_W, ALPHA_EM_INV, ALPHA_S]
+declared_but_not_executably_imported: [QCD1, QCD3, SM3, WM2, WM6]
+hard_coded_inputs:
+  generations: 3
+  fermion_convention: {kappa: 1/2, meaning: Weyl}
+  scalar_convention: {eta: 1, meaning: complex}
+  gut_abelian_squared_scale: 3/5
+  adjoint_casimirs: {U1: 0, SU2: 2, SU3: 3}
+  fundamental_casimirs: {SU2: 3/4, SU3: 4/3}
+  fundamental_dynkin_indices: {SU2: 1/2, SU3: 1/2}
+  representation_decoder: >-
+    s2 and c2 infer only singlet, doublet, and triplet values from integer
+    dimensions in WM1's supplied tuple table; no representation theorem runs.
+comparator_audit:
+  B_expected: hard_coded_inside_headline_check_4
+  B_LITERATURE: same_hard_coded_table_repeated_inside_check_5
+  construction_reads_comparator_names: false
+  conclusion: >-
+    The arithmetic function does not read either table, but the source's claim
+    that the standard table appears only after the headline is false because
+    B_expected is already load bearing in check 4.
+formula_audit:
+  one_loop_weights: imported_external_premise
+  two_loop_weights: imported_external_premise
+  exact_representation_sum: survives_conditionally
+  matrix_orientation: row_a_is_beta_g_a_column_b_multiplies_g_b_squared
+  sign_convention: beta_has_positive_b_and_B_terms
+  same_order_yukawa_term: omitted
+  multiple_u1_kinetic_mixing: omitted
+headline_limits:
+  - A supplied finite multiplet table is not an anomaly derivation or a physical Standard Model construction.
+  - C-REP-001 explicitly treats WM1 labels and charges as supplied noncanonical evidence.
+  - SM2 and SM4 remain pending; their executable values do not gain accepted authority through WM5.
+  - The gauge-gauge matrix is not the full two-loop gauge beta function when Yukawa terms are omitted.
+  - A local coefficient ratio cannot prove an all-scale impossibility or close WM6's integrated-flow claim.
+  - Exact agreement in GUT-normalized U1 coordinates does not select that coordinate or an embedding.
+headline_verdict: exact_conditional_gauge_only_sum_survives_full_standard_model_and_upgrade_wording_rejected
+compatibility_event: none
+debt: []
