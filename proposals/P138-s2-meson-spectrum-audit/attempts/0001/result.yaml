@@ -1,0 +1,39 @@
+campaign: P138
+attempt: 0001
+status: passed
+candidate: preregistration
+command: >-
+  Run the physics-skill preflight, inspect accepted governance and source
+  modules, search durable memory and repository claims, verify the pinned S2
+  and dossier hashes without opening their bodies, instantiate matching prose
+  and YAML contracts, compare the frozen copies, validate repository
+  governance, and commit the freeze before source execution.
+expected: >-
+  Establish a reproducible v0.105.0 authority boundary, at least two competing
+  concepts, structural selection criteria, comparator quarantine, explicit
+  NumPy compatibility handling, proposed claim collision freedom, consumer
+  inventory, and an executable positive done gate.
+result:
+  exit_status: 0
+  preflight: 7_pass_0_warn
+  base_release: v0.105.0
+  scientific_base_commit: bb1016e
+  parent_base_commit: 7bb60fe
+  source_sha256: 48a9eadf6fbc1e3ebe7fcd6b98c2d60cc10a3f5282404c84e4626910f296eaf7
+  dossier_sha256: 74e77d5130c9f2f96132572bd9720d90b8da0902130dfb0866b4b4035de783ed
+  frozen_manifest_sha256: 8e54ead36c74e87475abebb019f151740999a0216518b296a0af1ebd3546e608
+  prose_contract_sha256: b01121ebba24aa57f32f91e456e94076907c575662f0bb2c8634da3bd96f7dda
+  manifest_copy: byte_identical
+  claim_identifier_collision: none
+  repository: WORKFLOW_VALID_140_claims_140_accepted_1_proposal
+  migration_queue: 218_units_83_pending_0_partial
+  memory: valid
+  git_diff_check: passed
+classification: freeze_gate
+compatibility_event: >-
+  Prior lexical audit exposed three direct legacy integration calls in
+  immutable S2; no compatibility verdict is assigned before the post-freeze
+  native and alias-only replays.
+next_attempt: >-
+  After the freeze commit, audit executable compatibility, preserve the native
+  result, run an alias-only replay if required, and map all ten S2 predicates.

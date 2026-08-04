@@ -1,0 +1,91 @@
+id: P138
+base_release: v0.105.0
+base_commit: 7bb60fe
+scientific_base_commit: bb1016e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [S2]
+question: >-
+  Reproduce and independently audit S2's claim that a hedgehog Skyrmion's
+  fluctuation or breather modes constitute a meson spectrum, and determine the
+  exact action, stationary background, perturbation variables, kinetic inner
+  product, self-adjoint domain, angular channels, continuum and resonance
+  definitions, scale map, and quantization or particle dictionary needed to
+  distinguish a classical soliton-mode spectrum from vacuum meson masses.
+invariants:
+  - >-
+    C-MOD-001 fixes the exact mixed-term-complete self-adjoint radial Hessian,
+    positive declared weight, Green form, Derrick ceiling, and zero continuum
+    edge for one declared massless Option-C radial model. A positive finite-box
+    level is not a bound state.
+  - >-
+    C-MOD-002 supplies qualified float64 evidence for one stationary massless
+    hedgehog branch and its inverse-wall-squared continuum ladder. It supplies
+    no resonance, particle, nucleon, Roper, or meson theorem.
+  - >-
+    C-SCL-001 keeps the inverse-time scale, action scale, background energy,
+    and quantization rule explicit. A squared classical eigenvalue is not an
+    energy and cannot select a physical mass ratio.
+  - >-
+    C-SYM-001 C-CHI-001 C-BRK-001 C-CHI-002 and C-GMR-001 are conditional
+    classical symmetry, coordinate, local-curvature, and parameter ledgers.
+    They derive no physical pion, sigma, meson, chiral action, Skyrmion, or
+    absolute scale.
+  - >-
+    C-RPROF-001 and C-RPROF-002 are declared reduced-profile surfaces with
+    explicit physical ceilings. They do not construct the full three-
+    dimensional fluctuation operator or a particle spectrum.
+  - >-
+    Pending B1 grants no Berry connection, collective quantization, baryon,
+    spin-statistics, or physical-state premise. Qualified PG1 PG2 and PG3 grant
+    only their accepted claim mappings.
+  - >-
+    A fluctuation spectrum requires the second variation of a declared
+    time-dependent action about an actually stationary background, a positive
+    kinetic form, a self-adjoint domain, and a declared channel decomposition.
+    Bound states, box levels, resonances, and continuum thresholds are distinct
+    predicates.
+  - >-
+    Vacuum small-field masses and localized-soliton fluctuation frequencies
+    inhabit different spectral problems. Identifying either with physical
+    mesons additionally requires a state, quantization, normalization, scale,
+    and observable dictionary.
+  - >-
+    The S2 scientific body, check literals, numeric outputs, and comparator
+    values remain unopened at freeze. Queue metadata and a prior lexical audit
+    exposed only that immutable S2 contains three direct legacy NumPy
+    trapezoid calls.
+allowed_imports:
+  - C-MOD-001 C-MOD-002 and C-SCL-001 with their exact accepted ceilings
+  - C-SYM-001 C-CHI-001 C-BRK-001 C-CHI-002 and C-GMR-001 only when their full hypotheses and coordinate conventions match
+  - C-RMAP-001 C-RPROF-001 and C-RPROF-002 only as declared reduced-profile identities and qualified numeric evidence
+  - radial_modes.py rational_map_radial.py symmetry_breaking.py explicit_breaking.py numerics.py source_audit.py and verification.py pure APIs
+  - exact variational Sturm-Liouville representation and dimensional analysis
+  - SciPy sparse generalized spectra BVP or scattering machinery only with declared equations domains boundaries status residuals and refinement
+  - S2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+  - primary literature after freeze only for action convention spectral classification or scope cross-checks
+candidates:
+  - {id: A, description: Reproduce S2 literally and classify all ten predicates by their actual equations data flow dependencies and physical ceilings.}
+  - {id: B, description: Close the radial source surface through C-MOD-001 C-MOD-002 and C-SCL-001 if S2 only repackages the accepted massless Option-C Hessian and finite-box ladder.}
+  - {id: C, description: Derive a full conditional hedgehog small-fluctuation problem from an explicitly declared time-dependent action with channel decomposition kinetic metric self-adjoint boundaries and refined bound continuum or resonance classification.}
+  - {id: D, description: Derive vacuum small-field generalized masses from a declared chiral action and keep them distinct from soliton-localized eigenfrequencies and scattering thresholds.}
+  - {id: E, description: Construct an exact spectral-typing and scale ledger showing which additional maps are necessary and furnishing countermodels where equal selected numbers do not identify spectra or particles.}
+  - {id: F, description: Close dependencies cycles reverse consumers nonduplication impact compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with time-dependent action background stationarity kinetic form domain and channel variables explicit
+  - natural fit to accepted symmetry radial-mode scale and reduced-profile ceilings without retrofitting a particle ontology
+  - self-adjointness dimensional consistency regular origin asymptotic boundary and correct zero-source vacuum and large-domain limits
+  - exact distinction among vacuum masses soliton bound modes finite-box levels resonances and continuum thresholds
+  - solver success mesh domain boundary tolerance and independent-method refinement for every numerical spectral verdict
+  - sensitivity to Hessian mixed terms kinetic weight background stationarity wall placement mass term channel label and scale dictionary
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - comparator values and named particle assignments excluded from concept selection and tolerances
+claims_proposed: [C-MES-001]
+comparators_blinded_until: >-
+  This manifest, the prose contract, source and dossier hashes, candidate set,
+  spectral definitions, scale ledger, mutation plan, compatibility policy, and
+  numerical acceptance criteria are frozen and committed. S2's body, check
+  literals, eigenvalues, fitted masses, and named physical comparisons remain
+  unopened until that boundary.
+status: active
+
