@@ -1,0 +1,23 @@
+attempt: 0002
+campaign: P147
+candidate: A_literal_reproduction_and_C_D_diagnosis
+status: passed
+started_at: '2026-08-09T21:46:00Z'
+finished_at: '2026-08-09T22:05:00Z'
+command: PYTHONPATH=src .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-6/bridge_W2_su2L_chiral_doublet.py
+result:
+  process_exit: 0
+  source_checks: 9
+  source_assertions: 1
+  terminal_tally: ALL_9_CHECKS_PASS
+  numpy_compatibility_event: false
+exact_diagnostics:
+  - same_carrier_T1_PL_and_T2_PL_are_non_Hermitian
+  - same_carrier_Ta_PL_fails_all_three_su2_commutators
+  - tensor_factor_Ta_kron_PL_is_Hermitian_and_closes
+  - fundamental_su2_commutant_is_scalar
+  - declared_charge_label_difference_is_two_not_one
+  - no_gauge_or_Lorentz_spinor_dynamics_are_loaded
+scientific_debt:
+  - freeze_the_distinct_factor_and_common_charge_theorem_before_implementation
+next_attempt: reserve_and_freeze_C_REP_002_after_source_aware_nonduplication

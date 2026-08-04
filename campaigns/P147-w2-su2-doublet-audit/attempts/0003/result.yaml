@@ -1,0 +1,23 @@
+attempt: 0003
+campaign: P147
+candidate: C_D_claim_revision_freeze
+status: passed
+started_at: '2026-08-09T22:06:00Z'
+finished_at: '2026-08-09T22:12:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P147-w2-su2-doublet-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+freeze:
+  current_proposal_sha256: 72dc6db12731e5f29ef8ca545317b4f26efab22fb270c13ccab57cba0dec40fe
+  initial_frozen_proposal_sha256: 4a0016be9650016d96c6e504ccdc2798889ff95ac54866247aed191e273618b2
+  proposal_revision_sha256: 32dd8556161fabd390066e49291d190e65b3b0a987f5dd3cbeb71cf56445cb58
+  source_reproduction_sha256: 76563b91e892f57bc4dc50d6c35d0e0c31bddbc55d7fae47fb3e2f93cd3709b8
+  memory_contract_sha256: ca5ce23bae2c1e3e78cebeb3c54215b024a733ce899592492b96805cae34d640
+claim_reserved: C-REP-002
+dependencies: [C-SPN-002]
+implementation_started: false
+debt:
+  - implement_and_mutation_test_the_frozen_exact_theorem
+  - adjudicate_every_W2_predicate_and_replay_consumers
+next_attempt: implement_C_REP_002_in_a_pure_canonical_module

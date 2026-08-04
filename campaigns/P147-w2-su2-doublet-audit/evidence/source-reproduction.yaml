@@ -1,0 +1,68 @@
+campaign: P147
+source_unit: W2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-6/bridge_W2_su2L_chiral_doublet.py
+sha256: 0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16
+dossier_path: merged-framework/bridges/phase-6/dossiers/W2_dossier.md
+dossier_sha256: bd870f2e85b9d7f4d546c8fdd304fd94fc4b9e196c64cb8b7b16c798559064b4
+ast_inventory:
+  check_calls: 9
+  assertions: 1
+  function_definitions: [check, is_zero_mat, T3_eigval]
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+native_execution:
+  exit_status: 0
+  terminal_tally: ALL_9_CHECKS_PASS
+  compatibility_event: false
+imported_formalization:
+  path: sg-breather-ionization/dynamics_lean/ChargeDiscrimination.lean
+  sha256: c692eb12d9aa81f7547f855fe24ed03f7ba2403ac3fc4710c33c42ff80364056
+  exact_content: >-
+    Defines charges plus and minus one, defines drive selection by an if on the
+    drive sign, defines fermionParity as minus one to the absolute integer
+    charge, and proves the resulting arithmetic by unfolding and norm_num.
+  maximum_verdict: exact_integer_arithmetic_on_declared_labels
+imported_solution:
+  path: sg-breather-ionization/solution.md
+  sha256: a5a0ced9a097f07daea67e37b9516755307536e4850dfc975da72ee8eb876f86
+  accepted_ceiling: C-SG-011_C-SG-013_and_C-BND-001_only
+initial_scientific_flags:
+  - >-
+    CHECK1 and CHECK2 are exact standard Pauli and ladder identities but the
+    names kink and antikink are assignments to basis vectors, not consequences
+    of the matrices.
+  - >-
+    CHECK3 computes the actual declared label difference as two, then compares
+    the T3 step one with a separate hard-coded per-event value one. The ladder
+    map between the two basis labels is not the same event as creating one
+    winding unit.
+  - >-
+    CHECK4 verifies the supplied coordinate relation T3=Q/2. CP-conjugate
+    labels fix only opposite signs and do not select the factor one half or a
+    physical isospin representation.
+  - >-
+    CHECK5 correctly contradicts the dossier's Y=0 sentence: the displayed
+    formula gives Y=+1 and -1. Opposite Y values do not define one irreducible
+    SU2 doublet with a common commuting hypercharge generator.
+  - >-
+    CHECK6 constructs exact complementary rank-one projectors in the same C2
+    space already used for isospin and calls the same diagonal matrix both
+    chirality and parity. It supplies no independent Lorentz-spinor carrier.
+  - >-
+    CHECK7's T_a*P_L matrices are non-Hermitian for a=1,2 and fail all three
+    su2 commutators. Their right annihilation is the tautology P_L*P_R=0, not a
+    representation with a right singlet.
+  - >-
+    CHECK8 initializes its guard true and defines the parity image by the
+    desired P_L-to-P_R substitution. It does not construct a parity operator,
+    test an odd eigenoperator, evolve a boundary field, or evaluate the cited
+    sign correlation.
+  - >-
+    The ceiling check hard-codes gauge_field_built=False. The negative inventory
+    is accurate, but it is not evidence for a physical coupling structure.
+maximum_source_verdict: reproduction_only_pending_exact_claim_revision

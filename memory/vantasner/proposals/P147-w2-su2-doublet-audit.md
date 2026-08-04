@@ -2,7 +2,7 @@
 description: Derive and audit the exact representation content of W2's proposed chiral SU2 doublet
 author: vantasner
 created: '2026-08-09T21:40:00Z'
-updated: '2026-08-09T21:40:00Z'
+updated: '2026-08-09T22:10:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -79,13 +79,13 @@ committed.
 
 ## Proposed Claim Delta
 
-No claim identifier is assigned at freeze. Candidate B may show that all valid
-algebra is already C-SPN-002. Candidates C and D may justify a distinct additive
-representation claim only after source-aware nonduplication proves that the
-commutant, charge-separation, and factor-placement theorem is not already
-accepted. A later proposal revision must freeze the exact statement and
-dependencies before implementation. W2 is the source unit; all rejected and
-qualified subclaims remain durable evidence rather than accepted authority.
+The initial freeze assigns no claim identifier. Source-aware nonduplication then
+shows that Candidate B covers W2's standard Pauli algebra while Candidates C and
+D supply a distinct additive theorem. Revision 0001 reserves C-REP-002 depending
+on C-SPN-002 and freezes its exact tensor-factor closure, vector/axial parity,
+same-carrier commutant, and common-Abelian charge-separation statement before
+implementation. W2 remains the source unit; all rejected and qualified
+subclaims remain durable evidence rather than accepted authority.
 
 ## Implementation and Oracle Plan
 
