@@ -2,15 +2,15 @@
 description: Audit SM1 and test whether named factor algebras establish a physical Standard Model gauge group
 author: vantasner
 created: '2026-08-10T18:55:00Z'
-updated: '2026-08-10T19:02:00Z'
+updated: '2026-08-10T19:18:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-SM1
 - product-gauge-algebra
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P163 SM1 Combined Gauge-Group Audit
 
@@ -121,11 +121,12 @@ into authority.
 ## Attempts and Continuation
 
 The append-only ledger preserves the source-blind freeze, two repaired memory
-CLI invocation errors, and native six-predicate replay. Source-aware inspection
-selects Candidate C because the local tensor-factor theorem is exact and
-missing, while the source's global and physical readings lack their required
-objects. The next attempt implements C-PGA-001 and must fail rather than infer
-rank twelve at zero Abelian weight or infer a compact group from a Lie algebra.
+CLI invocation errors, native six-predicate replay, one immutable-versus-mutable
+matrix comparison repair, and one coupling-derivative entry-selection repair.
+Candidate C then passes 31 primary, 13 independent, and 22 source-graph checks.
+Zero weight, a mixed tensor generator, a non-single-valued compact weight, a
+central-kernel witness, and a missing connection transformation are all
+load-bearing counterexamples.
 
 ## Debt Ledger
 
@@ -136,13 +137,13 @@ consumers, governance, and continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| SM1 predicate strength is unaudited | Reproduce and classify all six checks and the assertion | open |
-| Factor independence and cross brackets are unproved | Recover the exact embedded generators and bracket table | open |
-| Local algebra versus global group is unresolved | Audit centers, quotient kernels, and representation faithfulness | open |
+| SM1 predicate strength is unaudited | Reproduce and classify all six checks and the assertion | discharged |
+| Factor independence and cross brackets are unproved | Recover the exact embedded generators and bracket table | discharged |
+| Local algebra versus global group is unresolved | Audit centers, quotient kernels, and representation faithfulness | discharged |
 | Candidate C novelty is unknown | Audit canonical APIs, accepted claims, prior campaigns, and consumers | discharged |
-| C-PGA-001 is proposed but unimplemented | Add the pure API, exact tests, primary and independent oracles, and claim review | open |
-| Physical sector data are unspecified | Construct fields, couplings, action, currents, and matter representations or reject their source attribution | open |
-| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
+| C-PGA-001 is proposed but unimplemented | Add the pure API, exact tests, primary and independent oracles, and claim review | discharged |
+| Physical sector data are unspecified | Construct fields, couplings, action, currents, and matter representations or reject their source attribution | discharged by explicit exclusion from C-PGA-001 and qualified source disposition |
+| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | discharged |
 
 ## Review and Promotion Plan
 
@@ -155,12 +156,11 @@ and one integrated terminal gate only at the terminal disposition boundary.
 
 ## Done Gate
 
-P163 closes only when a positive exact theorem or complete accepted composition
-exists, every SM1 predicate has an individual verdict, local and global group
-data are separated, representations and physical inputs are typed, mutations
-are load-bearing, all consumers replay, governance agrees, and debt is empty. A
-dimension count, zero cross bracket, or rejected physical interpretation alone
-cannot complete the campaign.
+P163 closes with accepted C-PGA-001, a terminally qualified SM1 disposition,
+individual predicate verdicts, explicit local/global separation, load-bearing
+mutations, replayed consumers, synchronized governance, and an empty debt
+ledger. The accepted object remains a local algebra theorem rather than a
+global or physical Standard Model construction.
 
 ## Cross-References
 

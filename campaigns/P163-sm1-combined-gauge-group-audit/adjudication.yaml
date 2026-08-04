@@ -1,0 +1,56 @@
+campaign: P163
+title: SM1 combined gauge-group and exact local product-algebra audit
+source_baseline: substrate@6d1f4e0
+source_units: [SM1]
+base_release: v0.124.0
+accepted_release: v0.125.0
+adjudicated_at: '2026-08-10T19:18:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every source predicate without treating its tally as a global-group or action oracle.}
+  - {id: C, reason: The package lacked a typed exact tensor-factor construction for the distinct local product Lie-algebra theorem and its global boundary.}
+  - {id: F, reason: Zero-weight mixed-generator compact-period central-kernel and missing-connection-transformation counterfamilies delimit the headline.}
+  - {id: G, reason: Claim source dependency consumer release generated-state and memory audits close the transaction.}
+claims: [C-PGA-001]
+unpromoted_claims:
+  - {id: global_direct_product_SM_gauge_group, reason: Local_Lie_algebra_matrices_do_not_distinguish_a_direct_product_from_a_finite_central_quotient.}
+  - {id: physical_shared_fermion_multiplet, reason: No_physical_matter_representation_or_faithfulness_table_is_constructed.}
+  - {id: compact_hypercharge_normalization, reason: The_source_declares_an_arbitrary_real_symbol_and_substitutes_one_only_for_rank.}
+  - {id: local_product_gauge_covariance, reason: No_coordinate_dependent_group_action_field_derivative_or_connection_transformation_is_checked.}
+  - {id: simultaneous_physical_three_sector_action, reason: No_kinetic_terms_action_currents_field_equations_or_dynamical_bosons_are_constructed.}
+  - {id: substrate_Standard_Model_mechanism, reason: No_substrate_dictionary_or_physical_matching_premises_are_supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_product_algebra_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0007/result.yaml
+  terminal_gate: attempts/0008/result.yaml
+  claim_review: memory/vantasner/decisions/C-PGA-001-review.md
+  source_review: memory/vantasner/decisions/SM1-qualified-review.md
+source_disposition:
+  SM1: qualified
+accepted_mappings: [C-LIE-001, C-REP-002, C-PGA-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_current_NumPy_APIs
+  immutable_primary: no_NumPy_integration_reference
+  immutable_alias_only: []
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/reviews/independent_product_algebra_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P163-sm1-combined-gauge-group-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_product_gauge.py tests/test_su3.py tests/test_su2_doublets.py tests/test_gauge_u1.py tests/test_wzw.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

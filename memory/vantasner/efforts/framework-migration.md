@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T17:12:00Z'
+updated: '2026-08-10T19:28:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.124.0`, containing one hundred sixty
+The current accepted frontier is `v0.125.0`, containing one hundred sixty-one
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -96,6 +96,22 @@ qualifies QCD1. It retains the d-tensor algebra while rejecting QCD1's
 undeclared determinant, wrong scalar numerator, imposed Ward identity,
 nonlocal curvature reading, unique coupling, physical QCD sector, dimensional
 lift, and substrate mechanism.
+P161 leaves v0.124.0 unchanged and qualifies QCD2 through accepted SU3, scalar
+loop, and Riesz-kernel claims while rejecting its inverse-metric error,
+unconstructed gauge action, dimensional lift, physical QCD sector, and
+substrate mechanism. Its immutable eager legacy NumPy spelling is replayed
+only through an alias backed by `np.trapezoid` and is not scientific failure.
+P162 also leaves v0.124.0 unchanged and qualifies QCD5 through accepted SU3,
+kernel, and exact linear-system claims. Its three advertised constraints are
+copies of one row, so neither overdetermination nor a selected dimension
+follows. The source-graph audit now distinguishes lexical check sites, runtime
+executions, and assertions instead of forcing their tallies to agree.
+P163 adds C-PGA-001's exact faithful local SU3-by-SU2-by-U1 tensor-factor Lie
+algebra, scalar joint commutant, declared connection component, and separate
+compact-period gate and qualifies SM1. It rejects inference of a global direct
+product over a central quotient, a physical matter table, gauge action,
+dynamical bosons, observed couplings, Standard Model identity, or substrate
+mechanism from the local matrix algebra.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -314,6 +330,9 @@ Attempts are append-only and individually reproducible.
 | 0179 | P158 exact non-Abelian scalar polarization, Ward cancellation, curvature completion, dependency, consumer, compatibility, and YM1 audit | `campaigns/P158-ym1-yang-mills-induction-audit/attempts/0001` through `0019`, then v0.123.0 promotion | C-NVP-001 accepted and YM1 qualified | Exact parameter-integral and fresh proper-time routes derive the representation-indexed scalar loop, bubble-seagull Ward cancellation, local curvature coefficient, and divergent fixed-momentum massless limit while rejecting YM1's imposed projector and induction overclaims. The integrated gate passes all 1,421 tests with 652 memory records. | Freeze YM2's color metric, Riesz operator, inversion direction, spacetime structure, dimension selection, and kinetic ceiling. |
 | 0180 | P159 exact color-times-Riesz composition, inverse-metric counterexample, dependency, consumer, compatibility, and YM2 audit | `campaigns/P159-ym2-yang-mills-lift-audit/attempts/0001` through `0007`, then terminal no-release boundary | YM2 qualified through C-NVP-001, C-KRN-001, and C-KRN-002 with v0.123.0 unchanged | The trace metric, fixed-input scalar Riesz inverse, defined tensor product, and derivative survive as accepted composition. Inverting a trace-weighted quadratic kernel produces the reciprocal metric and a factor-of-four fundamental counterexample. Thirty-one primary, twenty independent, thirty-seven focused, and twenty-seven graph checks pass over 165 frozen predicates. The immutable eager legacy NumPy fallback is isolated through `np.trapezoid` and never counted as scientific failure. The integrated workflow passes all 1,421 tests with 654 memory records and the physics skill valid. | Freeze QCD1 before source inspection; require exact SU3 representation algebra, scalar-loop action and statistics, bubble-seagull Ward cancellation, background completion, coefficient and field normalization, YM1/QCD3 authority, all eleven predicates and one assertion, consumers, nonduplication, and compatibility preflight, and do not turn an equal Dynkin index or copied loop scaffold into a derived QCD gauge sector, gluon dynamics, confinement, observation, or substrate mechanism. |
 | 0181 | P160 exact SU3 symmetric tensor, generic finite-Lie scalar loop, dependency, consumer, compatibility, and QCD1 audit | `campaigns/P160-qcd1-su3-kinetic-induction-audit/attempts/0001` through `0016`, then v0.124.0 promotion | C-LIE-003 and C-NVP-002 accepted and QCD1 qualified | Exact canonical and fresh routes derive the standard d tensor, all anticommutators, generic representation-indexed scalar kernel, bubble-seagull Ward cancellation, limits, and full leading curvature completion. QCD1's undeclared loop, wrong scalar numerator, nonlocal action step, unique coupling, physical QCD sector, and dimensional lift are rejected. A downstream replay exposed and repaired exact SymPy-integer index compatibility. Thirty-eight primary, twenty-seven independent, seventy-one focused-plus-adjacent, and twenty-eight graph checks pass over 170 frozen predicates. QCD2 alone uses alias-only `np.trapezoid` compatibility. The integrated workflow passes all 1,427 tests with 661 memory records and the physics skill valid. | Freeze QCD2's color-kernel inversion, dimensional operator, action, normalization, and physical-sector claims without inheriting QCD1 or YM2 authority. |
+| 0182 | P161 exact color-kernel composition, reciprocal-metric counterexample, compatibility, consumer, and QCD2 audit | `campaigns/P161-qcd2-su3-dimensional-lift-audit/attempts/0001` through `0009`, then terminal no-release boundary | QCD2 qualified through C-LIE-003, C-NVP-002, C-KRN-001, and C-KRN-002 with v0.124.0 unchanged | Exact canonical and fresh routes retain the typed color-times-scalar Riesz composition but prove that inverting a trace-weighted quadratic kernel uses the reciprocal color metric and differs by four in the standard fundamental example. Thirty-three primary, twenty-one independent, fifty-three focused, and twenty-five graph checks pass over 135 source predicates. Immutable QCD2's eager legacy fallback is alias-only through `np.trapezoid`; mutable P161 has zero legacy access. The integrated workflow passes all 1,427 tests with 663 memory records. | Freeze QCD5's alleged three-sector overdetermination before source inspection; require independent row provenance, rank and nullity, parameter participation, endpoint selection, dimension map, all predicates, consumers, and compatibility. |
+| 0183 | P162 exact duplicate-row rank, affine dimension family, parameter-participation, compatibility, consumer, and QCD5 audit | `campaigns/P162-qcd5-dimensional-overdetermination-audit/attempts/0001` through `0008`, then terminal no-release boundary | QCD5 qualified through C-LIE-003, C-NVP-002, C-KRN-001, C-KRN-002, and C-LIN-001 with v0.124.0 unchanged | Exact canonical and fresh routes show the three equations are identical: fixed s gives rank one with two row dependencies, while free d and s give rank one, nullity one, and d=2s+1. Thirty-two primary, fourteen independent, forty-six focused, and twenty graph checks pass; the graph separates 91 lexical sites from 99 runtime executions. Immutable YM2/QCD2 compatibility stays alias-only through `np.trapezoid`. The integrated workflow passes all 1,427 tests with 665 memory records. | Freeze SM1's local tensor-factor algebra separately from its global group, compact normalization, matter representation, action, and physical-sector claims. |
+| 0184 | P163 exact local product algebra, joint commutant, compact-period boundary, dependency, consumer, compatibility, and SM1 audit | `campaigns/P163-sm1-combined-gauge-group-audit/attempts/0001` through `0008`, then v0.125.0 promotion | C-PGA-001 accepted and SM1 qualified | Exact canonical and fresh routes prove all factor and cross brackets, nonzero-weight rank twelve, scalar joint commutant, and the declared connection sum. Zero weight, a mixed tensor, a half-weight compact-period failure, a central kernel, and missing connection transformation delimit the theorem. Thirty-one primary, thirteen independent, sixty-two affected tests, and twenty-two graph checks pass over 80 lexical and 80 runtime predicates plus nine assertions. GitNexus rates the new API LOW risk with no affected flow; the unchanged SU3 provider's MEDIUM reach is replayed. The integrated workflow passes all 1,438 tests with 670 memory records and the physics skill valid. | Freeze SM2's representation and hypercharge table without importing SM1's rejected physical matter or global-group headlines. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -330,7 +349,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 61 bridge units remain pending, 3 are migrated, 145 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 57 bridge units remain pending, 3 are migrated, 149 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1720,19 +1739,37 @@ The 17-node graph replays 170 immutable predicates; only QCD2 requires an
 alias-only `np.trapezoid` compatibility replay. The integrated gate passes all
 1,427 tests with 661 memory records and the physics skill valid.
 
+P161 terminally qualifies QCD2 after exact reciprocal-metric inversion exposes
+the factor-of-four error in its color-kernel reading. Its 13-node graph replays
+135 predicates, and immutable version-only NumPy access is isolated without
+demoting the unchanged scientific route. P162 terminally qualifies QCD5 after
+exact rank analysis shows that its three sector-labelled rows contain one
+constraint only; the graph's 91 lexical sites execute 99 runtime checks, which
+motivates the shared workflow correction that stores lexical, runtime, and
+assertion inventories separately.
+
+P163 adds the reusable exact product-gauge algebra module and C-PGA-001. The
+primary, fresh independent, affected-test, and source-graph routes pass 31,
+13, 62, and 22 checks or tests. A nontrivial central kernel and compact-period
+mutation prevent promotion of SM1's global and physical readings. The new API
+has LOW upstream risk and no affected execution flow; the unchanged SU3
+provider's broader WZW surface is included in targeted replay. The integrated
+workflow passes all 1,438 tests with 670 memory records and the physics skill
+valid.
+
 ## Canonicalization
-The registry, `v0.124.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty accepted claims. P001 through P160 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 60 pending, 0 partial, 3 migrated, 146 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.125.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-one accepted claims. P001 through P163 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 57 pending, 0 partial, 3 migrated, 149 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 60
-pending, 3 migrated, 146 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is QCD2, pinned at SHA-256
-`64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f`.
-P159 and P160 already establish that its trace-times-Riesz construction cannot
-inherit a gauge inverse, kinetic normalization, dimensional lift, physical QCD
-sector, or substrate mechanism. P161 must freeze QCD2 independently and audit
-all ten predicates without treating its version-only `np.trapz` spelling as
-scientific failure.
+The effort remains active. D4 is discharged, but D1 remains open with 57
+pending, 3 migrated, 149 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is SM2, pinned at SHA-256
+`cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1`.
+P163 establishes only the local tensor-factor algebra. P164 must freeze SM2
+independently and audit its representation and hypercharge table, convention
+map, observed-charge imports, matter and generation premises, all seven source
+predicates, consumers, and physical ceilings without borrowing SM1's rejected
+global-group or shared-fermion authority.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 58
-  qualified: 148
+  pending_adjudication: 57
+  qualified: 149
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3010,8 +3010,43 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LIE-001
+  - C-REP-002
+  - C-PGA-001
+  qualification: SM1's standard tensor-factor SU3 and SU2 embeddings, all factor and cross brackets, nonzero
+    scalar U1 generator, rank-twelve faithful local algebra, scalar joint commutant, and declared linear
+    connection component survive as C-PGA-001. Its Standard Model gauge-group and physical three-sector
+    headlines do not. Zero U1 weight drops the rank to eleven. The local algebra does not select compact
+    hypercharge normalization and cannot distinguish a direct product from a finite central quotient.
+    SM1 constructs no faithful physical matter table, coordinate-dependent gauge transformation, connection
+    law, field derivative, kinetic term, action, current, field equation, dynamical boson, observed coupling
+    match, Standard Model identification, or substrate mechanism.
+  evidence:
+  - campaigns/P163-sm1-combined-gauge-group-audit/reviews/source_adjudication.md
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/source-reproduction.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/source-audit.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/check-adjudication.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/input-provenance.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/dependency-audit.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/consumer-audit.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/candidate-comparison.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/evidence/primary-provenance.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/verify.py
+  - campaigns/P163-sm1-combined-gauge-group-audit/reviews/independent_product_algebra_review.py
+  - campaigns/P163-sm1-combined-gauge-group-audit/reviews/replay_source_graph.py
+  - campaigns/P163-sm1-combined-gauge-group-audit/attempts/0007/result.yaml
+  - campaigns/P163-sm1-combined-gauge-group-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/C-PGA-001-review.md
+  - memory/vantasner/decisions/SM1-qualified-review.md
+  note: P163 closes thirty-one primary and thirteen independent exact checks, sixty-two affected accepted-API
+    tests, and twenty-two graph checks over eighty lexical and eighty runtime source predicates plus nine
+    assertions. All nine graph nodes are native and contain no NumPy integration surface. The self-optimized
+    workflow now records lexical sites, runtime executions, and assertion nodes separately rather than
+    forcing equality.
 - source_unit: SM2
   phase: phase-9
   path: merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py

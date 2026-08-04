@@ -1,0 +1,33 @@
+attempt: 0008
+campaign: P163
+candidate: staged_claim_promotion_and_terminal_integrated_gate
+status: passed
+started_at: '2026-08-10T19:18:00Z'
+finished_at: '2026-08-10T19:28:00Z'
+commands:
+  - update_claim_registry_release_manifest_disposition_adjudication_and_memory
+  - regenerate_queue_docs_and_canonical_memory
+  - replay_targeted_primary_independent_graph_and_accepted_API_consumers
+  - scripts/validate.sh
+  - git diff --check
+results:
+  accepted_release: v0.125.0
+  repository_contract: valid_161_accepted_claims_57_pending_units
+  source_disposition: SM1_qualified
+  generated_documentation: current
+  generated_memory: current
+  durable_memory: {status: passed, records: 670}
+  physics_skill: valid
+  compileall: passed
+  pytest: {status: passed, tests: 1438, seconds: 127.80}
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+scientific_routes:
+  primary: ALL_31_CHECKS_PASS
+  independent: ALL_13_CHECKS_PASS
+  affected_tests: 62_tests_passed
+  source_graph: ALL_22_CHECKS_PASS_over_80_lexical_80_runtime_predicates_and_9_assertions
+compatibility:
+  immutable_SM1: native_no_NumPy_integration_surface
+  mutable_P163_legacy_references: 0
+debt: []
+next_attempt: continue_parent_migration_effort_at_SM2

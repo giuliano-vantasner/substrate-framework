@@ -1,0 +1,35 @@
+campaign: P163
+accepted_base:
+  release: v0.124.0
+  framework_checkpoint: 9e491a7
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit:
+  id: SM1
+  path: merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py
+  sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM1-dossier.md
+  sha256: e605e5c0ecedd041c733ed08e60a2ad0461fbb72f00c989da4633e0b2fda8c3b
+scientific_commit: c359e5c
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/su3.py
+  - src/substrate_framework/su2_doublets.py
+  - src/substrate_framework/nonabelian_gauge.py
+  - src/substrate_framework/gauge_u1.py
+  - campaigns/P024-su3-one-loop-coefficient
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P158-ym1-yang-mills-induction-audit
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit
+memory_searches:
+  - SM1 combined gauge group direct product direct sum
+  - product gauge algebra tensor embedding commutant global quotient
+authority_statement: >-
+  Memory and SM1 are recall and candidate evidence. Accepted C-LIE-001 and
+  C-REP-002, the exact importable construction, mutation-sensitive tests, a
+  fresh implementation-independent matrix derivation, individual claim review,
+  impact analysis, and the pinned nine-node source graph supply authority. The
+  source tally alone supplies no global-group, physical-sector, or action claim.
