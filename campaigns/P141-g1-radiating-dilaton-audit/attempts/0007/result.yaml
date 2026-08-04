@@ -1,0 +1,21 @@
+attempt: 0007
+campaign: P141
+candidate: exact-retarded-point-source-primary-verifier
+status: failed
+started_at: '2026-08-09T13:37:00Z'
+finished_at: '2026-08-09T13:39:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/verify.py
+  --source-file <pinned-G1> --dossier-file <pinned-G1-dossier>
+failure_class: verifier
+result:
+  primary: stopped_after_36_passes
+  failed_check: dilaton_action_does_not_declare_canonical_h_kinetic_density
+root_cause: >-
+  The verifier used a compact Unicode action string not present literally in
+  the dossier's spaced Markdown display. The displayed action is pinned and
+  inspectable, but the predicate's invented rendering was brittle.
+scientific_verdict: unchanged
+next_attempt: >-
+  Isolate the dossier's displayed Action block, require its phi-R-minus-V
+  contents, and require the absence of h time/space kinetic terms there.

@@ -185,6 +185,12 @@ from .hls_reduction import (
     leading_hls_connection_reduction,
     su2_current_quartic,
 )
+from .retarded_wave import (
+    RetardedPointSourceRadiation,
+    StaticPointSourceCountermodel,
+    retarded_point_source_radiation,
+    static_point_source_countermodel,
+)
 from .linear_systems import LinearSystemDiagnostics, diagnose_linear_system
 from .lattice_scalar import (
     PhysicalPhaseChainCoefficients,
@@ -923,6 +929,7 @@ __all__ = [
     "HLSDerivativeOrders",
     "HLSKSRFMatching",
     "HLSLeadingReduction",
+    "RetardedPointSourceRadiation",
     "InducedInverseNewtonLedger",
     "IVPEvidence",
     "IsolatedMomentRates",
@@ -932,6 +939,7 @@ __all__ = [
     "MassiveTripletDipoleExtrema",
     "MassiveTripletDipoleInteraction",
     "StaticMaxwellPointSource",
+    "StaticPointSourceCountermodel",
     "BiunitaryDecomposition",
     "RealL2TTReadout",
     "RealSymmetricRotation",
@@ -1232,6 +1240,7 @@ __all__ = [
     "quartic_qball_inverse_width",
     "quartic_qball_profile",
     "quartic_qball_residual",
+    "retarded_point_source_radiation",
     "project_sine_harmonics",
     "positive_kinetic_mass_evidence",
     "population_activation_scale",
@@ -1290,6 +1299,7 @@ __all__ = [
     "stationary_phase_field",
     "stationary_u1_charge_density",
     "static_maxwell_point_source",
+    "static_point_source_countermodel",
     "target_three_sphere_volume",
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",

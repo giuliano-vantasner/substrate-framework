@@ -1,0 +1,30 @@
+campaign: P141
+source_unit: G1
+base_release: v0.107.0
+base_commit: bdd4328
+scientific_base_commit: 078fa1c
+frozen_proposal_commit: 725022e
+claim_delta: C-RAD-001
+primary_verifier: campaigns/P141-g1-radiating-dilaton-audit/verify.py
+primary_checks: 37
+primary_route:
+  - hash-pinned source dossier frozen contract and compatibility AST
+  - source assignment solver-dataflow and action-block audit
+  - exact canonical scalar action jump retarded characteristic and flux ledger
+  - static same-equation boundary countermodel and field-rescaling mutation
+  - G1 derivative factor-four boost and accelerated-profile counterexamples
+independent_review: campaigns/P141-g1-radiating-dilaton-audit/reviews/independent_retarded_wave_review.py
+independent_checks: 29
+independent_route:
+  - fresh action variation without importing retarded_wave
+  - independent distributional jump characteristic flux and work derivation
+  - fresh static countermodel and field-rescaling ledger
+  - independent G1 normalization boost and acceleration mutations
+source_graph: campaigns/P141-g1-radiating-dilaton-audit/reviews/replay_source_graph.py
+source_graph_checks: 73
+focused_tests: 75
+exact_precision: SymPy exact integers rationals and declared real or positive symbols
+numerical_integration: none_in_positive_object
+source_numeric_role: rejected_one_grid_and_same_rhs_regressions_only
+compatibility_event: immutable_G1_alias_only_np.trapz_to_np.trapezoid
+debt: []

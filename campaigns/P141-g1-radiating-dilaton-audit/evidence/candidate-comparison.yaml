@@ -1,0 +1,61 @@
+campaign: P141
+selection_frozen_at: 725022e
+criteria:
+  - complete action kinetic source and signal-speed signature
+  - exact retarded boundary data distributional jump and outgoing solution
+  - energy density flux source work and two-side normalization from one action
+  - accelerated-profile residual and static constant-source countermodels
+  - parameter economy mutations reusable API compatibility and nonduplication
+candidates:
+  - id: A
+    decision: rejected_as_headline_route
+    reason: >-
+      Alias-only compatibility replay executes all ten checks, but G1 inserts
+      its retarded derivative and flux, differentiates the source once too
+      many, undercounts two-side power by four, mis-boosts the trace integral,
+      and supplies no canonical dilaton-wave action or accelerated solution.
+  - id: B
+    decision: selected
+    reason: >-
+      A single declared scalar action fixes the equation, jump, retarded field,
+      energy, outward flux, source work, field-rescaling ledger, and coefficient
+      mutations exactly without a fitted parameter.
+  - id: C
+    decision: not_selected_for_current_claim
+    reason: >-
+      A smooth-source moment expansion is a broader separate surface and is not
+      needed to close the exact point-source theorem. Promoting it here would
+      add source regularity and remainder assumptions without validating G1's
+      actual extended breather source.
+  - id: D
+    decision: selected_as_rejection_guard
+    reason: >-
+      At an instantaneously stationary translated sine-Gordon kink, nonzero
+      acceleration leaves residual -a*F'. Replacing constant velocity by v(t)
+      therefore does not construct an unsourced on-shell field.
+  - id: E
+    decision: selected_for_work_balance_only
+    reason: >-
+      The local source work equals total outward power exactly for the declared
+      retarded action. No self-force follows without source dynamics and
+      regularization, so radiation reaction remains unpromoted.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Claim review, novelty, impact, frozen graph, compatibility, release,
+      disposition, generated state, and memory close the transaction.
+proposed_claim:
+  id: C-RAD-001
+  decision: promote
+  reason: distinct_dependency_closed_exact_scalar_action_surface
+physical_dilaton_claim:
+  decision: unpromoted
+  reason: >-
+    The displayed phi-R dilaton action does not derive the separately assumed
+    canonical h kinetic energy, physical coupling, accelerated breather source,
+    retarded extended solution, or radiation reaction.
+comparator_role: >-
+  G1's target power, weak-field amplitude, kappa-to-G_eff map, and claimed
+  accelerating profile did not select the action, normalization, candidate,
+  or pass thresholds.
+debt: []

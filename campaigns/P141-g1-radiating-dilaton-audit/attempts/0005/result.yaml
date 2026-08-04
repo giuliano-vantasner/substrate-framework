@@ -1,0 +1,25 @@
+attempt: 0005
+campaign: P141
+candidate: exact-retarded-point-source-primary-verifier
+status: failed
+started_at: '2026-08-09T13:32:00Z'
+finished_at: '2026-08-09T13:34:00Z'
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/verify.py
+    --source-file <pinned-G1> --dossier-file <pinned-G1-dossier>
+  - PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/reviews/independent_retarded_wave_review.py
+failure_class: verifier
+result:
+  primary: stopped_after_6_passes
+  failed_check: dossier_explicitly_treats_trapz_as_environment_choice
+  independent: ALL_29_CHECKS_PASS
+root_cause: >-
+  The verifier searched for the source header's exact unquoted ENV phrase in
+  the dossier, whose version note instead uses Markdown code spans and says
+  old API versus NumPy 2.0+. Both pinned artifacts contain the version-only
+  note, but the predicate conflated their exact wording.
+scientific_verdict: unchanged
+next_attempt: >-
+  Assert the exact source-header wording against source_text and the dossier's
+  Markdown wording against dossier_text, then rerun both targeted verifiers.

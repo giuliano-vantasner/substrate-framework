@@ -1,0 +1,61 @@
+source_unit: G1
+source_sha256: 580783a214736b24e6f36a4c035b2c608f931f4ba8ece202ff7f6d260d46f876
+ast:
+  check_calls: 10
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: true
+objects_present:
+  - imported metric and covariant Hessian helper evaluated on n(t,x)
+  - exact trace of a declared metric-equation left-hand side
+  - one-grid finite-difference breather energy and averaged-stress regression
+  - hard-coded retarded far-field time derivative
+  - hard-coded quadratic flux coefficient
+  - prescribed velocity profile and its exact gamma derivative
+  - solve_ivp integration of the already supplied energy derivative
+  - outgoing free wave and static sinusoidal non-solution examples
+objects_absent:
+  - variation of a complete time-dependent reduced dilaton action
+  - quadratic kinetic action for h derived from the displayed phi R action
+  - Noether energy density flux or source-work derivation
+  - distributional retarded Green-function or point-source jump check
+  - exact extended-source retarded integral or controlled multipole remainder
+  - boosted trace-monopole calculation
+  - accelerated sine-Gordon field residual or source equation
+  - solver-success convergence domain tolerance or independent numeric method gate
+  - source dynamics regularization or radiation-reaction equation
+load_bearing_insertions:
+  - line: 307
+    assignment: Q0_rest=abs(0-E0)
+    classification: rest_trace_value_then_unchecked_gamma_boost_in_prose
+  - line: 338
+    assignment: h_t_inf=-(kappa/2)*Q0dot
+    classification: retarded_response_inserted_without_green_or_jump_derivation
+  - line: 341
+    assignment: P_rad_sym=h_t_inf^2/(2*kappa)
+    classification: inserted_flux_normalization_and_incorrect_two_side_sum
+  - line: 381
+    assignment: P_rad_closed=(kappa/8)*Q0dot_closed^2
+    classification: algebraic_propagation_of_inserted_power
+  - line: 432
+    assignment: dEdt=E0*gamma^3*v*vdot
+    classification: target_rhs_integrated_then_numerically_differentiated
+  - line: 458
+    assignment: kappa_weak=4e-3/E0
+    classification: smallness_target_solved_backward
+headline_failures:
+  - >-
+    For box h=-kappa*J, the 1+1 retarded Green function makes h_t proportional
+    to the instantaneous retarded source monopole J, not its time derivative.
+  - >-
+    With the source's stated canonical scalar flux magnitude h_t^2/kappa per
+    side, two equal outgoing sides sum to 2*h_t^2/kappa, not h_t^2/(2*kappa).
+  - >-
+    The time-averaged stress trace is a Lorentz scalar density whose fixed-lab-
+    time spatial integral contracts as the inverse gamma under the adiabatic
+    boosted-profile premise; it is not the boosted energy gamma*E0.
+  - >-
+    The displayed two-dimensional dilaton action does not supply the separately
+    assumed free canonical scalar energy for h or establish a propagating
+    gravitational degree of freedom.

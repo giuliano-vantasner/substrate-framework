@@ -1,0 +1,59 @@
+campaign: P141
+title: G1 radiating-dilaton source audit
+source_baseline: substrate@6d1f4e0
+source_units: [G1]
+base_release: v0.107.0
+accepted_release: v0.108.0
+adjudicated_at: '2026-08-09T14:10:00Z'
+selected_candidates:
+  - {id: B, reason: The declared scalar action closes the point-source equation retarded jump flux and work ledger exactly.}
+  - {id: D, reason: The accelerated-profile residual supplies a direct rejection guard against v-to-v-of-t substitution.}
+  - {id: E, reason: Source work closes exactly while self-force remains outside the action and unpromoted.}
+  - {id: F, reason: Predicate dependency consumer compatibility novelty impact release queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: A, decision: rejected_for_inserted_and_incorrect_headline}
+  - {id: C, decision: not_selected_as_broader_smooth_source_scope}
+claims:
+  - C-RAD-001
+unpromoted_claims:
+  - {id: physical_accelerating_breather_dilaton_radiation_and_reaction, reason: No derived canonical dilaton-wave action on-shell accelerated source extended retarded solution physical coupling or reaction law remains.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_retarded_wave_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_scientific_attempt: attempts/0008/result.yaml
+  governance_attempt: attempts/0009/result.yaml
+  integrated_terminal_gate: attempts/0010/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-RAD-001-review.md
+  source_review: memory/vantasner/decisions/G1-qualified-review.md
+source_disposition:
+  G1: qualified
+accepted_mappings: [C-RAD-001, C-SG-001, C-SG-002, C-SG-008, C-SG-012]
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_canonical_helper
+  immutable_primary: alias_only_np.trapz_to_np.trapezoid
+  inherited_alias_only_if_executed: [G4, W3, YM2, QCD2, NC4, MC4]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-5/bridge_G1_radiating_dilaton_source.py
+    --dossier-file <substrate@6d1f4e0>/merged-framework/bridges/phase-5/dossiers/G1-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/reviews/independent_retarded_wave_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_retarded_wave.py tests/test_sine_gordon.py tests/test_optical_geometry.py tests/test_source_audit.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

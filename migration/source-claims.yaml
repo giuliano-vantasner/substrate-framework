@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 80
-  qualified: 126
+  pending_adjudication: 79
+  qualified: 127
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1253,8 +1253,45 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RAD-001
+  - C-SG-001
+  - C-SG-002
+  - C-SG-008
+  - C-SG-012
+  qualification: 'G1''s conditional metric-component and wave-operator algebra, normalized rest-breather
+    regression, exact gamma derivative, and free-wave identity survive narrowly. C-RAD-001 replaces its
+    inserted radiation formula with an exact theorem for a separately declared canonical scalar action:
+    the retarded point-source jump, two equal outward fluxes, total source-work balance, field-rescaling
+    ledger, and same-equation static boundary countermodel are explicit. G1 does not derive that action
+    from its displayed phi-R dilaton action. Its trace monopole uses gamma instead of the inverse-gamma
+    scalar-slice Jacobian, its retarded field differentiates the source one time too many, and its stated
+    per-side flux undercounts the total by four. The solve_ivp leg regresses its supplied right-hand side,
+    omits solver-success and refinement gates, and selects kappa backward to hit weak-field smallness.
+    No on-shell accelerated breather, extended retarded source, multipole theorem, physical coupling,
+    dilaton gravity, radiation reaction, observation, or substrate mechanism is accepted.'
+  evidence:
+  - campaigns/P141-g1-radiating-dilaton-audit/reviews/source_adjudication.md
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/source-reproduction.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/source-audit.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/check-adjudication.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/input-provenance.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/dependency-audit.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/consumer-audit.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/candidate-comparison.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/primary-provenance.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/literature-audit.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/verify.py
+  - campaigns/P141-g1-radiating-dilaton-audit/reviews/independent_retarded_wave_review.py
+  - campaigns/P141-g1-radiating-dilaton-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-RAD-001-review.md
+  - memory/vantasner/decisions/G1-qualified-review.md
+  note: P141 promotes C-RAD-001 through thirty-seven primary, twenty-nine independent, seventy-five focused-test,
+    and seventy-three frozen-graph checks. Native G1 stops only on NumPy-version compatibility; isolated
+    np.trapz-to-np.trapezoid replay passes all ten source checks. The scientific headline is rejected
+    independently of that compatibility event, and mutable code has no executable legacy integration access.
 - source_unit: G2
   phase: phase-5
   path: merged-framework/bridges/phase-5/bridge_G2_gordon_metric_3plus1.py

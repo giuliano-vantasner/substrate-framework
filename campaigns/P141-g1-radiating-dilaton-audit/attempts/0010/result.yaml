@@ -1,0 +1,24 @@
+attempt: 0010
+campaign: P141
+candidate: integrated_promotion_gate
+status: passed
+started_at: '2026-08-09T14:20:00Z'
+finished_at: '2026-08-09T14:25:00Z'
+commands:
+  - scripts/validate.sh
+  - git diff --check
+result:
+  repository: WORKFLOW_VALID_143_claims_143_accepted_0_proposals
+  migration_queue: 218_units_79_pending_0_partial
+  memory: 573_files_valid
+  skill: valid
+  pytest: 1209_passed_in_124.03_seconds
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  process_exit: 0
+scope: >-
+  Unchanged C-RAD-001 module tests campaign evidence claim registry v0.108.0
+  G1 disposition regenerated queue docs accepted memory and durable decisions.
+next_attempt: >-
+  On a real failure, preserve the exact failed stage and repair its mechanism
+  without weakening the scientific claim. On success, finalize this record and
+  rerun only record-sensitive validation.

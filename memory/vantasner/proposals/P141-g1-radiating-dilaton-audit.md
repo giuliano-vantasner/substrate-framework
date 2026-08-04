@@ -2,7 +2,7 @@
 description: Audit G1's radiating 1+1 dilaton-source and Larmor-analogue claim
 author: vantasner
 created: '2026-08-09T12:50:00Z'
-updated: '2026-08-09T12:50:00Z'
+updated: '2026-08-09T14:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-G1
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P141 G1 Radiating Dilaton Audit
 
@@ -46,7 +46,7 @@ C-SG-002, C-SG-008, and C-SG-012; its review explicitly withholds a dilaton
 action, time-dependent solution, and radiation claim. Queue and prior consumer
 records expose the headline, tally, dependencies, and immutable legacy-NumPy
 compatibility path. They do not license G1's exact formulas or physical
-interpretation. Twenty-eight reverse source consumers are known before freeze;
+interpretation. Twenty-seven reverse source consumers are known before freeze;
 their chronology supplies impact scope, not authority.
 
 The predecessor worktree remains dirty with excluded Phase 47/48, engineering,
@@ -148,20 +148,29 @@ Candidates B through F and does not close the positive conditional object.
 
 ## Debt Ledger
 
-The campaign ledger tracks every source predicate and every missing action,
-coefficient, boundary condition, source equation, conservation premise,
-compatibility event, dependency, consumer, and generated record.
+The campaign debt ledger is empty. Hash and compatibility replay, action and
+data-flow inventory, independent jump and flux derivations, accelerated-profile
+and static-history countermodels, physical-scope review, the 31-node dependency
+and consumer graph, and the governed-state transaction discharge every frozen
+item without importing G2 or G3 authority.
 
-| Debt | Discharge condition | Status |
-| --- | --- | --- |
-| G1 executable and exact checks are unopened | Hash, compatibility preflight, native or alias replay, AST/data-flow audit, and all ten predicates | open |
-| The time-dependent dilaton action may be missing | Inventory kinetic, source, coupling, metric, boundary, energy, and flux terms | open |
-| The retarded amplitude and power coefficient may be inserted | Independent Green/jump and Noether-flux derivations with normalization mutations | open |
-| The accelerating breather may be off shell | Direct field residual, stress divergence, source-work, and constant-velocity limit | open |
-| Monopole and Larmor language may overreach | Conservation, smooth-source, standing-wave, and alternative-history countermodels | open |
-| Reaction and gravity may be undeclared | Separate field energy loss from source dynamics, regularization, gravity, and physical dictionaries | open |
-| Dependencies consumers and novelty are incomplete | G2 G3 T2A, twenty-eight reverse consumers, cycles, and graph impact audit | open |
-| Registry disposition release docs queue and memory are unsynchronized | Individual review and one terminal governed-state transaction | open |
+## Results
+
+P141 promotes C-RAD-001 in v0.108.0. The exact canonical scalar theorem derives
+the point-source equation, retarded distributional jump, equal outgoing
+one-side fluxes, total source-work balance, field-rescaling invariance, and a
+same-equation static zero-flux countermodel. Primary and fresh independent
+routes pass 37 and 29 checks, 75 focused tests pass, and the 31-node graph pins
+339 predicates and passes 73 checks.
+
+G1 is qualified rather than accepted wholesale. Its two immutable `np.trapz`
+calls are a version-only compatibility event: alias-only replay backed by
+`np.trapezoid` passes all ten source predicates. Scientific inspection then
+rejects its extra source derivative, factor-four two-side flux error,
+gamma-boosted scalar trace, same-RHS ODE regression, target-selected coupling,
+accelerated-breather, dilaton-gravity, multipole, reaction, and substrate
+readings. The one integrated boundary passes all 1,209 tests, validates 573
+memory records, and reports `ALL REPOSITORY WORKFLOW CHECKS PASS`.
 
 ## Review and Promotion Plan
 
@@ -193,4 +202,4 @@ does not complete the campaign.
 
 The governing references are P004, P010, P012, P036, P049, P132, P140, T2A,
 G1, G2, G3, G4, G5, C-OG-001, C-OG-002, C-OG-003, C-SG-008, C-SG-012,
-provisional C-RAD-001, v0.107.0, and the parent migration effort.
+C-RAD-001, v0.107.0, v0.108.0, and the parent migration effort.

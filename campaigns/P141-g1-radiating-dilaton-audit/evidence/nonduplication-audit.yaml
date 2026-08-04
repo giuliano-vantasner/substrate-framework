@@ -1,0 +1,38 @@
+campaign: P141
+provisional_claim: C-RAD-001
+decision: promote
+direct_search:
+  identifiers_searched: [C-RAD-001]
+  concepts_searched: [retarded point source, scalar wave action, two-sided outgoing flux, source work, static boundary countermodel]
+  result: >-
+    No accepted identifier or canonical action-to-retarded-flux API exists.
+    Existing sine-Gordon and optical claims do not derive a retarded scalar
+    Green solution or its energy ledger.
+memory_search:
+  query: retarded point source scalar action flux source work boundary history
+  nearest_prior_records: [P089, C-MAX-001, P134]
+  result: >-
+    P089 concerns driven numerical sine-Gordon evolution. C-MAX-001 and P134
+    derive static Maxwell action and boundary branches, not a time-dependent
+    one-dimensional scalar retarded flux theorem. P141 records are the only
+    direct match.
+gitnexus_query:
+  query: retarded point source scalar wave action outgoing flux source work static boundary countermodel
+  preexisting_processes: 0
+  nearest_preexisting_definitions: [sine_gordon_1d.py, maxwell.py]
+  result: >-
+    The semantic query returns the new P141 objects as the only exact match.
+    Nearby preexisting definitions cover driven sine-Gordon numerics or static
+    Maxwell point sources and do not duplicate the action-to-retarded-power
+    ledger or same-equation static countermodel.
+nearest_claims:
+  - {claim: C-PDE-001, distinction: numerical periodic sine-Gordon evolution without point-source retarded action}
+  - {claim: C-SG-012, distinction: canonical sine-Gordon stress divergence without scalar point-source radiation}
+  - {claim: C-MAX-001, distinction: static Maxwell action and point-source branches without time-dependent scalar outgoing power}
+  - {claim: C-OG-003, distinction: conditional static optical source operator without energy flux}
+novel_surface: >-
+  C-RAD-001 is the first importable exact theorem connecting a fully declared
+  one-dimensional scalar action to its point-source equation, distributional
+  jump, retarded outgoing solution, canonical two-sided flux, source work,
+  field-rescaling invariance, and same-equation static boundary countermodel.
+debt: []

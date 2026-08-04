@@ -1,0 +1,33 @@
+scope: two-dimensional dilaton gravity versus separately declared scalar radiation
+sources:
+  - title: Dilaton Gravity in Two Dimensions
+    authors: [Daniel Grumiller, Wolfgang Kummer, Dmitri Vassilevich]
+    year: 2002
+    url: https://arxiv.org/abs/hep-th/0204253
+    primary_scope: >-
+      This review treats general two-dimensional gravity and its geometric
+      quantization, including matter couplings. It establishes that a specific
+      dilaton action and matter sector must be kept explicit; a trace-shaped
+      wave equation alone does not supply an independently normalized canonical
+      scalar energy flux.
+  - title: Two dimensional Nearly de Sitter gravity
+    authors: [Juan Maldacena, Gustavo Turiaci, Zhenbin Yang]
+    year: 2019
+    url: https://arxiv.org/abs/1904.01911
+    primary_scope: >-
+      The paper explicitly states that the studied two-dimensional JT gravity
+      has no propagating gravitons, while boundary data support a boundary mode.
+      This blocks treating a separately postulated free scalar flux as a generic
+      consequence of two-dimensional dilaton gravity.
+adjudication:
+  supported:
+    - a separately declared canonical scalar action can be varied and solved with explicit retarded boundary data
+    - boundary conditions and matter couplings are load-bearing parts of a two-dimensional model
+  unsupported_in_G1:
+    - deriving a freely propagating canonical h energy from the displayed phi-R-minus-V action
+    - calling the inserted scalar flux a generic dilaton-gravity radiation theorem
+    - inferring physical gravity coupling radiation reaction or substrate realization
+selection_use: >-
+  Literature is used only to constrain the physical label and action scope.
+  C-RAD-001's coefficients and conclusions are independently rederived from
+  its displayed scalar action and do not import a literature normalization.

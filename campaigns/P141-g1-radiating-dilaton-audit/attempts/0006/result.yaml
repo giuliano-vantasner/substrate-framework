@@ -1,0 +1,24 @@
+attempt: 0006
+campaign: P141
+candidate: exact-retarded-point-source-primary-verifier
+status: failed
+started_at: '2026-08-09T13:35:00Z'
+finished_at: '2026-08-09T13:36:00Z'
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/verify.py
+    --source-file <pinned-G1> --dossier-file <pinned-G1-dossier>
+  - PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/reviews/independent_retarded_wave_review.py
+failure_class: verifier
+result:
+  primary: stopped_after_8_passes
+  failed_check: far_field_derivative_is_inserted_rather_than_derived
+  independent: ALL_29_CHECKS_PASS
+root_cause: >-
+  The AST unparses the source assignment as -(kappa / 2) * Q0dot while the
+  verifier expected -kappa / 2 * Q0dot. The expressions are identical, so the
+  exact-string predicate was formatter-sensitive.
+scientific_verdict: unchanged
+next_attempt: >-
+  Inspect the assignment structurally for the unary-negative half-kappa factor,
+  Q0dot name set, and absence of a derivation call, then rerun targeted checks.

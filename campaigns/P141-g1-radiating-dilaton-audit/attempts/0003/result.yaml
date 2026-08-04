@@ -1,0 +1,31 @@
+attempt: 0003
+campaign: P141
+candidate: A_alias_only_reproduction
+status: rejected_as_headline_route
+started_at: '2026-08-09T13:01:00Z'
+finished_at: '2026-08-09T13:01:04Z'
+command: >-
+  .venv/bin/python -c "import numpy as np, runpy;
+  np.trapz=np.trapezoid; runpy.run_path(<pinned-G1>, run_name='__main__')"
+process_exit: 0
+terminal_tally: ALL_10_CHECKS_PASS
+compatibility: immutable_alias_only_backed_by_np.trapezoid
+artifacts:
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/source-reproduction.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/source-audit.yaml
+  - campaigns/P141-g1-radiating-dilaton-audit/evidence/check-adjudication.yaml
+verdict: >-
+  The clean tally reproduces conditional metric and wave-operator algebra,
+  rest-breather energy/virial regression, gamma differentiation, and free-wave
+  identities. It does not derive the retarded response or energy flux. It
+  replaces the trace monopole by boosted energy, differentiates the source
+  monopole once too many, undercounts the two-sided canonical flux by four,
+  regresses an ODE whose right-hand side is the target derivative, and chooses
+  kappa backward to pass weak-field smallness. Candidate A cannot support the
+  headline dilaton radiation power or accelerating-breather mechanism.
+diagnosis: scientific_claim_action_normalization_source_typing_and_oracle
+next_attempt: >-
+  Implement Candidate B from a separately declared scalar action, derive its
+  retarded point-source jump and Noether flux, and construct the same-equation
+  static-boundary countermodel before auditing smooth-source and accelerated-
+  breather ceilings.

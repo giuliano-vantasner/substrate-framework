@@ -750,6 +750,15 @@ Conditional on C-QBL-001 and the declared whole-line scalar energy E[f]=integral
 - Compatibility: `compatible_extension`
 - Dependencies: C-QBL-001
 
+## C-RAD-001
+
+Let A and c be exact positive real quantities, B an exact real source coupling, and q(t) an exact real point-source amplitude, and separately declare the one-dimensional scalar Lagrangian density A*(phi_t^2-c^2*phi_x^2)/2+B*phi*q(t)*delta(x). Its Euler equation is phi_tt-c^2*phi_xx=(B/A)*q(t)*delta(x). Under no-incoming retarded boundary data and a source primitive I with I'=q and vanishing past boundary term, the distributional solution is phi(t,x)=B*I(t-|x|/c)/(2*A*c). Its one-sided derivatives obey the outgoing characteristic relations, and their jump is -B*q/(A*c^2), exactly reproducing the delta source. From the same action, the canonical energy density is A*(phi_t^2+c^2*phi_x^2)/2 and the right-directed flux is -A*c^2*phi_t*phi_x. Each outgoing side carries B^2*q^2/(4*A*c), total outward power is B^2*q^2/(2*A*c), and that total equals the local source-work rate B*q*phi_t(t,0). The field rescaling phi'=s*phi, A'=A/s^2, B'=B/s preserves B^2/A and the power. For constant q, the static field -B*q*abs(x)/(2*A*c^2) obeys the same local equation and jump but has zero flux, so the retarded radiation conclusion requires the stated boundary and history data and does not follow from the sourced equation alone. This is an exact conditional scalar-action theorem. It does not derive a dilaton or gravitational action, propagating graviton, optical metric, sine-Gordon or breather source, accelerated solution, multipole expansion, coupling value, radiation reaction, physical gravity, observation, or substrate realization.
+
+- Accepted in: `v0.108.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-RDIFF-001
 
 Let U and alpha be positive, let A and n be positive integers, and let b(A) and b(n*A) be real dimensionless coefficients. Conditional on the declared masses M(k)=alpha*b(k)*U and binding convention B_E(k)=k*M(1)-M(k), the signed difference satisfies exactly Q=n*M(A)-M(n*A)=B_E(n*A)-n*B_E(A) =alpha*U*(n*b(A)-b(n*A)). Hence kappa=Q/U has inverse b(n*A)=n*b(A)-kappa/alpha, and for positive alpha its sign is the sign of n*b(A)-b(n*A), with zero surface b(n*A)=n*b(A). If independent input intervals are b(A) in [l_A,u_A] and b(n*A) in [l_F,u_F], their sharp rectangular image is alpha*(n*l_A-u_F) <= kappa <= alpha*(n*u_A-l_F). Separate upper bounds on M(A) and M(n*A) do not in general bound their signed difference: their unknown nonnegative slacks enter with opposite signs. This is an exact conditional linear transformation. It derives no mass formula, scale, action, minimum, state identity, binding convention, reaction, yield, material, or observation.

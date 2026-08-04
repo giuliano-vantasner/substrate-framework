@@ -1,0 +1,27 @@
+campaign: P141
+source_unit: G1
+declared_dependencies:
+  - {source_unit: G2, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: G3, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: T2A, disposition: qualified, accepted_claims: [C-SG-001, C-SG-002, C-SG-008, C-SG-012], use: exact_rest_breather_constant_boost_and_stress_ceiling_only}
+accepted_dependency_closure:
+  - {claim: C-RAD-001, dependencies: []}
+nearby_accepted_ceiling_claims:
+  - {claim: C-SG-001, exclusion: normalized_sine_gordon_equation_without_accelerated_source}
+  - {claim: C-SG-002, exclusion: exact_rest_breather_energy_without_dilaton_coupling}
+  - {claim: C-SG-008, exclusion: constant_velocity_Lorentz_kinematics_only}
+  - {claim: C-SG-012, exclusion: normalized_stress_and_on_shell_balance_without_dilaton_action}
+  - {claim: C-OG-001, exclusion: static_optical_geometry_only}
+  - {claim: C-OG-003, exclusion: conditional_static_source_operator_without_retarded_energy}
+excluded_imports:
+  - pending G2 three-plus-one optical metric and G3 Horndeski headline
+  - a propagating dilaton or graviton inferred from a wave-shaped trace equation
+  - kappa=8*pi*G_eff and any physical gravity normalization
+  - accelerated-breather source dynamics and radiation reaction
+circularity: >-
+  G1 cites pending G2 and G3, then later G4 and G5 consume G1's power as if it
+  were authority. C-RAD-001 instead derives a standalone mathematical theorem
+  from a newly and explicitly declared scalar action, with no source-corpus or
+  accepted-claim dependency. T2A is used only to state what does not follow
+  from constant-velocity kinematics.
+debt: []

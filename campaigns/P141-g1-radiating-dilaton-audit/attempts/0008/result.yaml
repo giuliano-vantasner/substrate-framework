@@ -1,0 +1,43 @@
+attempt: 0008
+campaign: P141
+candidate: exact-retarded-point-source-theorem
+status: passed
+started_at: '2026-08-09T13:20:00Z'
+finished_at: '2026-08-09T13:45:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_retarded_wave.py tests/test_sine_gordon.py tests/test_optical_geometry.py tests/test_source_audit.py -q
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/verify.py
+    --source-file <pinned-G1> --dossier-file <pinned-G1-dossier>
+  - PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/reviews/independent_retarded_wave_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P141-g1-radiating-dilaton-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+result:
+  focused_tests: 75_passed
+  primary: ALL_37_CHECKS_PASS
+  independent: ALL_29_CHECKS_PASS
+  source_graph: ALL_73_CHECKS_PASS
+  graph_nodes: 31
+  graph_source_predicates: 339
+positive_object: >-
+  From the separately declared canonical scalar action with exact A B and c,
+  the retarded no-incoming point-source solution has a distributionally correct
+  derivative jump, equal outgoing flux on both sides, and total power
+  B^2*q^2/(2*A*c) equal to the local source-work rate. A static solution of the
+  same local equation has the same jump and zero flux, exposing boundary and
+  history data as load bearing.
+source_headline_verdict: rejected
+source_failures:
+  - G1 differentiates the retarded source monopole one time too many.
+  - G1 undercounts the two equal canonical outgoing fluxes by four.
+  - G1 boosts a scalar-trace spatial integral by gamma instead of the inverse-gamma slice Jacobian.
+  - G1 does not derive a canonical h action from its displayed dilaton action.
+  - G1's accelerated-breather and numeric legs do not supply an on-shell source or independent oracle.
+compatibility: >-
+  Immutable G1's two np.trapz accesses are a version-only event. Alias-only
+  replay backed by np.trapezoid passes all ten source predicates; no mutable
+  code introduced a legacy access and compatibility does not affect the
+  scientific verdict.
+debt: []
+next_attempt: >-
+  Close claim provenance candidates dependencies consumers literature source
+  disposition and governance records, then run the single integrated gate.

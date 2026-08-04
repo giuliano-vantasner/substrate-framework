@@ -1,0 +1,34 @@
+campaign: P141
+source_unit: G1
+positive_object: exact_retarded_point_source_scalar_radiation_and_static_countermodel
+accepted_inputs: []
+mathematical_inputs:
+  - exact positive kinetic coefficient A
+  - exact real source coupling B
+  - exact positive signal speed c
+  - exact real source amplitude q evaluated at retarded time
+  - the declared scalar density A*(phi_t^2-c^2*phi_x^2)/2+B*phi*q(t)*delta(x)
+  - no-incoming retarded boundary data and a source primitive with vanishing past boundary term
+  - the canonical Noether energy density and flux derived from the same action
+conditional_inputs:
+  - {condition: a source history for which the retarded primitive exists, role: selects the retarded solution rather than the static countermodel}
+source_declared_inputs:
+  - the two-dimensional phi-R-minus-V dilaton action and optical metric ansatz
+  - box h=-kappa*rho as a declared weak field equation
+  - the normalized sine-Gordon breather rest energy and one-grid virial regression
+  - assigned h_t at infinity and assigned quadratic flux coefficient
+  - prescribed v(t)=0.6*tanh(0.8*t) and target-selected weak kappa
+excluded_from_derivation_or_selection:
+  - G2 and G3 pending source authority
+  - the source's boosted trace Q0=gamma*E0 identification
+  - the source's h_t proportional to dQ0/dt and kappa*(dQ0/dt)^2/8 formulas
+  - target-selected kappa and same-RHS solve_ivp regression
+  - physical dilaton gravity breather multipole self-force or substrate readings
+missing_for_source_physical_headline:
+  - a canonical propagating h kinetic term derived from the displayed dilaton action
+  - a complete accelerated sine-Gordon source field equation and external work ledger
+  - a retarded solution derived using the actual extended stress source
+  - a physical field and observable dictionary and independently fixed coupling
+  - source dynamics regularization and radiation reaction
+claim_delta: C-RAD-001
+debt: []

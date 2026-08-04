@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P141
+candidate: A_native_reproduction
+status: compatibility_abort
+started_at: '2026-08-09T13:00:00Z'
+finished_at: '2026-08-09T13:00:04Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G1_radiating_dilaton_source.py
+result: 2_passed_then_attribute_error
+failure: >-
+  Immutable G1 reaches its first numerical integration at line 298 and aborts
+  because NumPy 2.5.1 has no np.trapz attribute. AST preflight finds two direct
+  legacy attributes and no dynamic imported eager-fallback or current-name
+  access.
+diagnosis: immutable_numpy_version_compatibility_only
+scientific_failure: false
+next_attempt: >-
+  Replay the unchanged source with an isolated np.trapz alias backed by
+  np.trapezoid, require clean exit and the ten-check terminal tally, then audit
+  the scientific predicates independently.

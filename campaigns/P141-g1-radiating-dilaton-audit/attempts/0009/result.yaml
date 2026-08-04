@@ -1,0 +1,25 @@
+attempt: 0009
+campaign: P141
+candidate: claim_and_governance_transaction
+status: passed
+started_at: '2026-08-09T14:10:00Z'
+finished_at: '2026-08-09T14:20:00Z'
+commands:
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - .venv/bin/python scripts/render_docs.py
+  - .venv/bin/python scripts/render_memory.py
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate <P141 decision records> --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  repository: WORKFLOW_VALID_143_claims_143_accepted_0_proposals
+  migration_queue: 218_units_79_pending_0_partial_127_qualified
+  generated_docs: current
+  generated_memory: current
+  release_manifest: current_equals_v0.108.0
+  decision_memory: 2_records_valid
+  mutable_script_legacy_np_trapz: 0
+  whitespace: passed
+next_attempt: >-
+  After targeted governance and memory checks pass, prepare the terminal
+  integrated attempt and run scripts/validate.sh once at the unchanged boundary.

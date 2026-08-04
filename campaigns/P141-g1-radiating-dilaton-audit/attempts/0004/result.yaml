@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P141
+candidate: exact-retarded-point-source-implementation
+status: failed
+started_at: '2026-08-09T13:20:00Z'
+finished_at: '2026-08-09T13:21:00Z'
+command: apply_patch module tests and package exports atomically
+failure_class: implementation
+result:
+  filesystem_changed: false
+  error: package export insertion anchor did not match current __init__.py ordering
+scientific_verdict: not_run
+preserved_conclusion: >-
+  The exact action-level derivation remains the selected candidate; this was
+  only an atomic patch-context failure and supplies no scientific evidence.
+next_attempt: >-
+  Add the module and tests independently, then patch package exports using
+  exact anchors from the current file before running focused verification.
