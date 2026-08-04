@@ -12,6 +12,15 @@ On any connected interval with normalized canonical action J>0, differentiable p
 - Compatibility: `native`
 - Dependencies: none
 
+## C-BND-001
+
+Let phi be a sufficiently smooth real scalar, let u=phi_t(t,b) and v=phi_x(t,b), and let a, beta, and the scalar source J be exact real declared boundary data. Define R_(a,beta,J)=a*u+beta*v-J. Under scalar spatial parity phi_P(t,x)=phi(t,-x) and source pullback J_P(t,x)=J(t,-x), exact chain rule gives R_(a,beta,J_P)[phi_P](t,b)=R_(a,-beta,J)[phi](t,-b). Thus beta and minus beta form a parity-covariant parameter family. At a parity center, a fixed residual is internally invariant for arbitrary traces iff beta=0. The mixed residual is not a parity-odd eigenobject: its a*u-J part is even and beta*v part is odd; it is purely odd only when the even part is absent. Under the simultaneous parity map from a right half-line to a left half-line, the outward-normal derivative and its coefficient are unchanged. Finally one residual equation does not determine both u and v; for beta=0 it leaves v arbitrary, and for beta nonzero it admits the family v=(J-a*u)/beta. It therefore derives neither boundary sign correlation nor topological charge transfer or selection without additional dynamics and vacuum-boundary data. This exact conditional theorem supplies no boundary action, field evolution, charge map, fermion parity, chiral matter, weak interaction, or substrate realization.
+
+- Accepted in: `v0.113.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-013
+
 ## C-BPS-001
 
 Let X be a closed connected oriented three-manifold with volume form dvol, and let the target be the oriented unit round S^3 with volume form Omega normalized by integral_{S^3} Omega=2*pi^2. For a sufficiently regular map U:X->S^3 of nonzero signed degree B, define the normalized pullback density by U*Omega/(2*pi^2)=B0*dvol. Let lambda and mu be positive, let V:S^3->[0,infinity) have integrable square root, and set W=(1/(2*pi^2))*integral_{S^3} sqrt(V)*Omega. Then the declared energy E[U]=integral_X[(lambda*pi^2*B0)^2+mu^2*V(U)]dvol has the exact decomposition E=integral_X(lambda*pi^2*B0-sign(B)*mu*sqrt(V(U)))^2*dvol +2*lambda*mu*pi^2*abs(B)*W and therefore obeys E>=2*lambda*mu*pi^2*abs(B)*W. Equality holds if and only if the displayed square vanishes almost everywhere. This theorem does not establish that an equality configuration exists in any degree sector, select a potential or coupling, identify degree with a physical baryon or nucleus, or derive a mass, reaction, binding, or yield.

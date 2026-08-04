@@ -1,0 +1,60 @@
+source_unit: W1
+source_sha256: bfac7d7e4ccb0cdabc6bb2703dadb650c0e09ea883ec3ff70f039231d3e62388
+ast:
+  check_calls: 8
+  assert_statements: 2
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: true
+  direct_legacy_numpy_attributes: 2
+objects_present:
+  - exact linear massless characteristic projector arithmetic
+  - fixed-coordinate residual phi_t+epsilon*phi_x-J
+  - hard-coded map Q(+1)=+1 and Q(-1)=-1
+  - vector witness with phi_x inserted as zero
+  - chiral witness with phi_t and phi_x both inserted as the drive
+  - boundary sign-correlation integral relabelled as Delta Q
+  - imported arithmetic fermion-parity map
+objects_absent:
+  - a boundary action or variational derivation of the displayed law
+  - an evolved sine-Gordon boundary-value solution
+  - vacuum-endpoint or boundary-field-change data for topological transfer
+  - a derivation of the epsilon-to-charge map
+  - proof that the mixed residual is a parity-odd eigenobject
+  - an internal parity map on one fixed half-line
+  - a nonlinear chiral decomposition into independent channels
+load_bearing_insertions:
+  - assignment: phi_x_vec=np.zeros_like(tt)
+    classification: extra_zero_gradient_premise_not_implied_by_phi_t_equals_J
+  - assignment: phi_t_chi=J0*cos_and_phi_x_chi=J0*cos
+    classification: constructed_witness_violates_displayed_epsilon_plus_boundary_law
+  - assignment: deltaQ_vector=W_vector
+    classification: correlation_relabelled_as_topological_transfer
+  - function: Q_of_eps
+    classification: desired_charge_map_hard_coded_before_selection_check
+headline_failures:
+  - >-
+    The beta and minus-beta residuals form a parity-covariant family; covariance
+    of two parameter values is not intrinsic parity violation of either fixed
+    theory.
+  - >-
+    A mixed residual a*u+beta*v-J contains an even temporal-source component
+    and an odd spatial component, so beta nonzero does not make the whole
+    residual parity odd.
+  - >-
+    Mapping a right half-line to its left-half-line parity image transforms the
+    outward normal together with the field, leaving the normal coefficient
+    unchanged.
+  - >-
+    One scalar residual constrains one combination of two traces. It cannot
+    force the source's vector or chiral witnesses without an additional law.
+  - >-
+    Boundary sign correlation is not topological charge transfer. The latter
+    requires boundary field change and vacuum-endpoint data.
+  - >-
+    Full sine-Gordon characteristic channels remain sourced by the nonlinear
+    equation; W1.1 is only a linear massless identity.
+headline_verdict: >-
+  Qualified. Alias-only replay reaches all eight source checks, but the
+  compatibility-correct tally validates inserted arithmetic witnesses rather
+  than W1's parity-violation, charge-selection, or weak-interaction headline.

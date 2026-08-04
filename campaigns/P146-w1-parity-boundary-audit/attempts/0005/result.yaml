@@ -1,0 +1,32 @@
+attempt: 0005
+campaign: P146
+candidate: B_C_E_exact_boundary_parity_theorem
+status: passed
+started_at: '2026-08-09T20:07:00Z'
+finished_at: '2026-08-09T20:18:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/reviews/independent_boundary_parity_review.py
+  - .venv/bin/python -m pytest -q tests/test_boundary_correlations.py
+results:
+  primary_checks: 39
+  independent_checks: 23
+  focused_tests: 21
+  process_exit: 0
+positive_object: >-
+  Exact reusable ledgers now derive the scalar boundary residual's parity
+  pullback, even/odd decomposition, fixed-theory defect, domain-and-normal map,
+  and one-equation trace family without importing W1 witness values.
+mutation_evidence:
+  - Removing the spatial-trace parity sign breaks coefficient reflection.
+  - Flipping the trace-family solution sign leaves residual 2*a*u.
+  - Assigning an intrinsic minus sign to the scalar source changes the pullback by 2*J.
+  - Keeping the wrong left-half-line coordinate orientation changes the normal residual by 2*beta*v.
+counterexamples:
+  - A nonzero sign correlation can coexist with zero boundary field change and zero topological transfer.
+  - W1's epsilon-plus chiral witness leaves residual J rather than satisfying its displayed law.
+  - W1's temporal-only vector law leaves the spatial trace arbitrary rather than forcing it to zero.
+remaining_debt:
+  - frozen_dependency_and_reverse_consumer_graph_replay
+  - individual_claim_and_source_review
+next_attempt: close_graph_reviews_and_governance_transaction

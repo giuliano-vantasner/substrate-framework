@@ -1,0 +1,38 @@
+campaign: P146
+criteria_order:
+  - exact field operator point domain normal source and parameter pullback
+  - internal invariance versus family covariance versus state asymmetry
+  - accepted sine-Gordon compatibility
+  - premise and parameter economy
+  - parity-center full-line and half-line limits
+  - mutation sensitivity and countermodels
+  - dynamical provenance for physical boundary laws
+  - reusability consumer closure and nonduplication
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal replay classifies all eight checks but cannot support the headline by itself.
+  B:
+    decision: selected_and_promoted_as_part_of_C_BND_001
+    reason: Exact fixed-coordinate pullback distinguishes a covariant beta pair from one invariant fixed theory.
+  C:
+    decision: selected_and_promoted_as_part_of_C_BND_001
+    reason: The domain-and-normal map resolves the orientation ambiguity without flipping the normal coefficient.
+  D:
+    decision: not_selected_for_claim_expansion
+    reason: W1 provides no boundary action; the promoted theorem honestly treats the residual as declared data and makes no variational-origin claim.
+  E:
+    decision: selected_and_promoted_as_part_of_C_BND_001
+    reason: Exact parity projectors and arbitrary-trace criteria classify mixed, pure, and invariant cases.
+  F:
+    decision: selected_as_countermodel_and_source_audit
+    reason: Data-flow analysis separates inserted witnesses and sign correlation from topological transfer.
+  G:
+    decision: selected
+    reason: Dependency consumer compatibility novelty release queue and memory closure are mandatory.
+selection_basis: >-
+  Candidates B, C, and E jointly provide the smallest exact positive theorem.
+  A and F delimit the source, D prevents an unproved dynamical expansion, and
+  G closes consumers. Source witness values never enter concept selection.
+foundational_revision_required: false
+debt: []

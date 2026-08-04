@@ -1,0 +1,29 @@
+attempt: 0007
+campaign: P146
+candidate: terminal_promotion
+status: passed
+started_at: '2026-08-09T21:16:00Z'
+finished_at: '2026-08-09T21:24:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/reviews/independent_boundary_parity_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_boundary_correlations.py
+  - scripts/validate.sh
+  - git diff --check
+result:
+  primary: ALL_39_CHECKS_PASS
+  independent: ALL_23_CHECKS_PASS
+  source_graph: ALL_45_CHECKS_PASS
+  focused_tests: 21_passed
+  repository_tests: 1275_passed
+  workflow: 148_claims_148_accepted_0_proposals
+  migration_queue: 218_units_74_pending_0_partial
+  memory: 598_files_valid
+  skill: valid
+  diff_check: clean
+  debt: []
+next_attempt: >-
+  Run only record-sensitive repository, generated-state, memory, and diff
+  checks after finalizing this append-only result; do not repeat the unchanged
+  scientific or full-suite boundary.

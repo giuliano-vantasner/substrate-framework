@@ -1,0 +1,18 @@
+campaign: P146
+purpose: Determine whether an external source is required for the exact claim or source interpretation.
+external_sources_used: []
+reason: >-
+  C-BND-001 follows from declared scalar parity, exact chain rule, linear
+  algebra, and explicit domain-normal conventions already governed by accepted
+  framework claims. No empirical comparator or literature-specific constant
+  enters the theorem.
+source_attributions:
+  - attribution: Coleman correspondence narrative
+    classification: excluded_unpinned_interpretive_reference
+    effect: >-
+      It cannot derive W1's boundary charge-selection map, fermion parity, or
+      weak-interaction interpretation and is outside the promoted claim.
+framework_decision: >-
+  Promote only the exact self-contained boundary theorem. Treat every physical
+  chiral, fermionic, or weak-sector reading as unpromoted pending its own
+  provenance-bearing dynamics and claim review.

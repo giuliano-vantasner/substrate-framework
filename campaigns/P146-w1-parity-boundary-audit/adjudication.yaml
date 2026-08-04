@@ -1,0 +1,60 @@
+campaign: P146
+title: W1 scalar boundary parity and charge-selection audit
+source_baseline: substrate@6d1f4e0
+source_units: [W1]
+base_release: v0.112.0
+accepted_release: v0.113.0
+adjudicated_at: '2026-08-09T21:15:00Z'
+selected_candidates:
+  - {id: A, reason: Literal replay classifies every source predicate without making its tally a headline oracle.}
+  - {id: B, reason: Exact fixed-coordinate pullback distinguishes parameter-family covariance from fixed-theory invariance.}
+  - {id: C, reason: The right-to-left domain map resolves outward-normal orientation without an artificial coefficient flip.}
+  - {id: E, reason: Exact parity projectors and trace elimination classify mixed residuals and underdetermination.}
+  - {id: F, reason: Source-data countermodels separate inserted witnesses and sign correlation from topological transfer.}
+  - {id: G, reason: Dependency consumer compatibility novelty release queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: D, decision: not_selected_for_claim_expansion_because_W1_supplies_no_boundary_action}
+claims: [C-BND-001]
+unpromoted_claims:
+  - {id: beta_nonzero_derives_intrinsic_parity_violation, reason: It gives family covariance and one odd component, not fixed-theory invariance or a pure odd residual.}
+  - {id: epsilon_selects_topological_charge, reason: The source hard-codes the charge map and supplies no evolved field or vacuum-boundary derivation.}
+  - {id: boundary_sign_correlation_is_Delta_Q, reason: Correlation and boundary field change are independent accepted observables.}
+  - {id: vector_and_chiral_witnesses_follow_from_the_boundary_law, reason: One witness adds phi_x=0 and the other violates its displayed epsilon-plus residual.}
+  - {id: fermion_parity_and_weak_interaction, reason: Integer arithmetic and labels do not derive fermionic states or dynamics.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_boundary_parity_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0005/result.yaml
+  graph_and_review_attempt: attempts/0006/result.yaml
+  integrated_terminal_gate: attempts/0007/result.yaml
+  claim_review: memory/vantasner/decisions/C-BND-001-review.md
+  source_review: memory/vantasner/decisions/W1-qualified-review.md
+source_disposition:
+  W1: qualified
+accepted_mappings: [C-BND-001, C-SG-011, C-SG-013]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_np.trapezoid
+  immutable_primary: alias_only_np.trapz_to_np.trapezoid_replay
+  inherited_shapes: [NC4_alias_only, W3_alias_only]
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/reviews/independent_boundary_parity_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_boundary_correlations.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

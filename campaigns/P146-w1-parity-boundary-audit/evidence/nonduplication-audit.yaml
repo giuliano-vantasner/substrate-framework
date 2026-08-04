@@ -1,0 +1,26 @@
+campaign: P146
+claim: C-BND-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-SG-011: >-
+    Governs the sine-Gordon characteristic sources, topological current, and
+    scalar parity, but not a general affine boundary residual or trace family.
+  C-SG-013: >-
+    Governs boundary sign correlation, half-line topological charge change,
+    and fixed-coordinate versus outward-normal transformations, but does not
+    state the residual's parity projectors or underdetermination theorem.
+distinct_positive_object: >-
+  C-BND-001 uniquely supplies the exact affine residual ledger, coefficient-
+  family covariance, fixed-parameter invariance criterion, even/odd
+  decomposition, simultaneous domain-normal parity map, and one-row trace
+  family in a reusable canonical API.
+governed_consumers: [W1, W2, W3, W5, W7, M1, NC1, NC2, NC3, WM7]
+decision: distinct_additive_claim

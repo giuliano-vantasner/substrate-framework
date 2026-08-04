@@ -1,0 +1,19 @@
+attempt: 0004
+campaign: P146
+candidate: B_C_E_primary_verifier
+status: failed
+started_at: '2026-08-09T20:05:00Z'
+finished_at: '2026-08-09T20:06:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/verify.py
+passed_before_failure: 7
+failure: native_abort_oracle_rejected_visible_W1_4_section_header
+diagnosis: >-
+  Native W1 prints the W1.4 heading before evaluating its first removed
+  np.trapz call. The verifier incorrectly treated any W1.4 token as evidence
+  that the predicate executed, even though the W1.4 PASS text is absent.
+scientific_effect: none
+repair: >-
+  Require the W1.4 predicate's full PASS prefix to be absent while retaining
+  the native exit-one and exact AttributeError checks; do not change the
+  source, claim, or scientific thresholds.
+next_attempt: rerun_the_same_primary_route_with_predicate_level_native_abort_oracle

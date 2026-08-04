@@ -1,0 +1,35 @@
+campaign: P146
+source_unit: W1
+reverse_consumers:
+  - {source_unit: W2, disposition: pending_adjudication, effect: must_not_import_W1_charge_selection_or_intrinsic_parity_breaking}
+  - {source_unit: W3, disposition: pending_adjudication, effect: must_not_import_W1_charge_selection_or_intrinsic_parity_breaking}
+  - {source_unit: W5, disposition: pending_adjudication, effect: must_not_import_W1_sign_correlation_as_topological_transfer}
+  - {source_unit: W7, disposition: pending_adjudication, effect: must_not_import_W1_boundary_sign_as_gauge_or_weak_authority}
+  - {source_unit: M1, disposition: pending_adjudication, effect: must_not_import_W1_as_chiral_doublet_or_gauge_authority}
+  - {source_unit: WM7, disposition: pending_adjudication, effect: must_not_import_W1_as_field_content_or_induction_authority}
+  - source_unit: NC1
+    disposition: qualified
+    accepted_claims: [C-SG-011]
+    effect: unchanged_independent_exact_closure
+    reason: Its accepted nonlinear characteristic-source theorem does not depend on W1's physical reading.
+  - source_unit: NC2
+    disposition: qualified
+    accepted_claims: [C-SG-011]
+    effect: unchanged_independent_exact_closure
+    reason: Its accepted stress-current result imports no W1 charge-selection mechanism.
+  - source_unit: NC3
+    disposition: qualified
+    accepted_claims: [C-SG-011]
+    effect: unchanged_independent_exact_closure
+    reason: Its accepted rectification ceiling does not use W1's inserted witnesses.
+graph_replay:
+  nodes: 11
+  source_predicates: 129
+  source_assertions: 10
+  verifier_checks: 45
+  compatibility_shapes:
+    W1: 2
+    NC4: 1
+    W3: 2
+  eager_legacy_fallbacks: 0
+debt: []

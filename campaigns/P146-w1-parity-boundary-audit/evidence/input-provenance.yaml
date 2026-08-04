@@ -1,0 +1,33 @@
+campaign: P146
+source_unit: W1
+accepted_base: v0.112.0
+accepted_inputs:
+  - {claim: C-SG-001, use: normalized real sine-Gordon field and equation convention only}
+  - {claim: C-SG-011, use: characteristic-source and scalar topological-current parity ceilings}
+  - {claim: C-SG-013, use: fixed-coordinate correlation outward-normal distinction and charge-transfer independence}
+mathematical_inputs:
+  - sufficiently smooth exact real scalar field
+  - exact real boundary traces u=phi_t and v=phi_x
+  - exact real declared coefficients a and beta and scalar source J
+  - scalar spatial parity phi_P(t,x)=phi(t,-x)
+  - scalar source pullback J_P(t,x)=J(t,-x)
+  - explicit right-half-line and left-half-line outward-normal conventions
+external_imports: []
+source_declared_inputs:
+  - epsilon in plus or minus one
+  - sinusoidal drive J0*cos(Omega*t)
+  - hard-coded charge map and fermion-parity map
+  - NC1 and NC4 source narratives
+excluded_from_derivation_or_selection:
+  - all W1 numeric witness values
+  - hard-coded charge and fermion-parity labels
+  - NC4 tuned phase and finite-time numerical claims
+  - weak-interaction chiral-doublet or physical parity-violation interpretation
+  - Coleman attribution and any unpinned literature narrative
+free_data:
+  - temporal trace when beta is nonzero
+  - coordinate trace when beta is zero
+  - boundary source and coefficients unless a separate action fixes them
+  - field evolution and vacuum endpoints
+claim_delta: C-BND-001
+debt: []

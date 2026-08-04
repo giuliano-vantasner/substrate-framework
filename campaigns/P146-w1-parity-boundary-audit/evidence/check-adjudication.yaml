@@ -1,0 +1,43 @@
+source_unit: W1
+checks:
+  W1.1:
+    source_verdict: pass
+    classification: qualified_linear_massless_characteristic_identity
+    maps_to: [C-SG-011]
+    reason: The projector arithmetic is exact only for the declared linear massless left/right decomposition; nonlinear sine-Gordon channels remain sourced.
+  W1.2:
+    source_verdict: pass
+    classification: qualified_parameter_family_covariance_not_intrinsic_breaking
+    maps_to: [C-BND-001, C-SG-013]
+    reason: Scalar parity maps beta to minus beta at the reflected boundary point; it does not leave a fixed beta-nonzero residual invariant.
+  W1.3:
+    source_verdict: pass
+    classification: rejected_hard_coded_charge_selection
+    maps_to: [C-SG-011]
+    reason: Q_of_eps returns the desired labels directly and no field or vacuum-boundary calculation derives them.
+  W1.4:
+    source_verdict: pass_after_alias_only_compatibility_replay
+    classification: rejected_extra_zero_gradient_premise
+    maps_to: [C-BND-001, C-SG-013]
+    reason: phi_t=J leaves phi_x arbitrary; setting phi_x to zero constructs one witness rather than deriving a vector law or zero transfer.
+  W1.4b:
+    source_verdict: pass_after_alias_only_compatibility_replay
+    classification: rejected_witness_violates_displayed_boundary_law
+    maps_to: [C-BND-001, C-SG-013]
+    reason: For epsilon plus one the inserted phi_t=J and phi_x=J give residual J, and the integral is a sign correlation rather than Delta Q.
+  W1.5:
+    source_verdict: pass
+    classification: qualified_arithmetic_import_without_physical_derivation
+    maps_to: []
+    reason: The check evaluates the explicitly defined integer map only; it derives no fermionic state or interaction.
+  W1.6:
+    source_verdict: pass
+    classification: qualified_arithmetic_import_without_physical_derivation
+    maps_to: []
+    reason: The check composes the hard-coded charge labels with the hard-coded parity map.
+  W1.7:
+    source_verdict: pass
+    classification: rejected_nonzero_coefficient_as_pure_parity_oddness
+    maps_to: [C-BND-001]
+    reason: A nonzero beta supplies a nonzero odd component, but the temporal-source even component remains and no charge-selection mechanism follows.
+all_eight_adjudicated: true

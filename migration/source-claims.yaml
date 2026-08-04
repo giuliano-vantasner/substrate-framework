@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 75
-  qualified: 131
+  pending_adjudication: 74
+  qualified: 132
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1602,8 +1602,42 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BND-001
+  - C-SG-011
+  - C-SG-013
+  qualification: 'W1''s linear massless projector and exact fixed-coordinate coefficient exchange survive
+    only under accepted sine-Gordon and boundary ceilings. C-BND-001 supplies the corrected positive object:
+    scalar parity maps the beta residual to the minus-beta family member, a mixed residual has even and
+    odd components rather than being purely odd, simultaneous domain and normal parity leaves the outward-normal
+    coefficient unchanged, and one boundary residual leaves one trace free. W1 hard-codes its epsilon-to-
+    charge map, inserts the zero-gradient vector witness, constructs an epsilon-plus chiral witness that
+    violates its displayed law, and relabels sign correlation as Delta Q without boundary field change
+    or vacuum-endpoint data. No intrinsic parity violation, topological charge selection, fermion parity,
+    chiral matter, weak interaction, boundary action, nonlinear chiral decomposition, or substrate mechanism
+    is accepted.'
+  evidence:
+  - campaigns/P146-w1-parity-boundary-audit/reviews/source_adjudication.md
+  - campaigns/P146-w1-parity-boundary-audit/evidence/source-reproduction.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/source-audit.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/check-adjudication.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/input-provenance.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/dependency-audit.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/consumer-audit.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/candidate-comparison.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/primary-provenance.yaml
+  - campaigns/P146-w1-parity-boundary-audit/evidence/literature-audit.yaml
+  - campaigns/P146-w1-parity-boundary-audit/verify.py
+  - campaigns/P146-w1-parity-boundary-audit/reviews/independent_boundary_parity_review.py
+  - campaigns/P146-w1-parity-boundary-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-BND-001-review.md
+  - memory/vantasner/decisions/W1-qualified-review.md
+  note: P146 promotes C-BND-001 through thirty-nine primary, twenty-three independent, twenty-one focused-test,
+    and forty-five frozen-graph checks. The eleven-node graph inventories 129 source predicates and ten
+    assertions. Native W1 stops only on removed np.trapz; isolated alias-only replay through np.trapezoid
+    passes all eight source checks, and mutable code has no executable legacy integration access.
 - source_unit: W2
   phase: phase-6
   path: merged-framework/bridges/phase-6/bridge_W2_su2L_chiral_doublet.py

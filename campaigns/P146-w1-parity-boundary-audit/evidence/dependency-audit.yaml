@@ -1,0 +1,26 @@
+campaign: P146
+source_unit: W1
+declared_source_dependencies:
+  - source_unit: NC1
+    disposition: qualified
+    accepted_claims: [C-SG-011]
+    use: exact nonlinear_characteristic_source_ceiling_only
+  - source_unit: NC4
+    disposition: qualified
+    accepted_claims: [C-SG-011, C-SG-013]
+    use: hash_pinned_noncanonical_numeric_evidence_only
+accepted_claim_closure:
+  - {claim: C-BND-001, dependencies: [C-SG-013]}
+  - {claim: C-SG-013, dependencies: [C-SG-011]}
+  - {claim: C-SG-011, dependencies: [C-SG-001]}
+  - {claim: C-SG-001, dependencies: []}
+circularity: >-
+  NC1 cites W1 as motivation while W1 declares NC1 as a dependency. Accepted
+  C-SG-011 was independently adjudicated and supplies only its exact theorem;
+  the source cycle grants no authority. C-BND-001 closes through accepted
+  claims and exact algebra, not through either direction of that citation.
+excluded_imports:
+  - NC1 or NC4 rejected chirality and weak-interaction interpretations
+  - W1 charge labels correlation-as-Delta-Q and fermion-parity narrative
+  - any source tally as blanket scientific authority
+debt: []

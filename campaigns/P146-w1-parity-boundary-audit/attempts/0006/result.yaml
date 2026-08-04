@@ -1,0 +1,24 @@
+attempt: 0006
+campaign: P146
+candidate: G_graph_reviews_and_claim_transaction
+status: passed
+started_at: '2026-08-09T20:19:00Z'
+finished_at: '2026-08-09T20:40:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P146-w1-parity-boundary-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - memory validate /home/dan/substrate-framework/memory/vantasner/decisions/C-BND-001-review.md --base /home/dan/substrate-framework
+  - memory validate /home/dan/substrate-framework/memory/vantasner/decisions/W1-qualified-review.md --base /home/dan/substrate-framework
+results:
+  graph_checks: 45
+  graph_nodes: 11
+  source_predicates: 129
+  source_assertions: 10
+  reverse_consumers: 9
+  claim_review: accepted
+  source_review: qualified
+  gitnexus_risk: low
+  gitnexus_affected_processes: 0
+accepted_closure: [C-BND-001, C-SG-013, C-SG-011, C-SG-001]
+source_disposition: qualified
+campaign_debt: []
+next_attempt: run_one_integrated_promotion_gate_and_synchronize_generated_state

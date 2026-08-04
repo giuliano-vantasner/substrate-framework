@@ -7,9 +7,50 @@ implication relates them without additional boundary dynamics.
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import Any
 
 import sympy as sp
+
+
+@dataclass(frozen=True)
+class ScalarBoundaryParityLedger:
+    """Exact parity decomposition of one scalar boundary residual."""
+
+    temporal_trace: sp.Expr
+    coordinate_trace: sp.Expr
+    temporal_coefficient: sp.Expr
+    coordinate_coefficient: sp.Expr
+    source: sp.Expr
+    residual: sp.Expr
+    parity_even_component: sp.Expr
+    parity_odd_component: sp.Expr
+    parity_image_residual: sp.Expr
+    reflected_coefficient_residual: sp.Expr
+    fixed_parameter_parity_defect: sp.Expr
+
+
+@dataclass(frozen=True)
+class OrientedHalfLineParityLedger:
+    """Parity map from a right half-line to its left-half-line image."""
+
+    temporal_trace: sp.Expr
+    right_coordinate_trace: sp.Expr
+    right_outward_trace: sp.Expr
+    left_parity_coordinate_trace: sp.Expr
+    left_outward_trace: sp.Expr
+    right_residual: sp.Expr
+    left_parity_residual: sp.Expr
+
+
+@dataclass(frozen=True)
+class ScalarBoundaryTraceFamily:
+    """Solution family of one linear residual for two boundary traces."""
+
+    temporal_trace_parameter: sp.Expr
+    coordinate_trace_solution: sp.Expr | None
+    temporal_only_constraint: sp.Expr | None
+    coordinate_trace_free: bool
 
 
 def _real_scalar(value: Any, name: str) -> sp.Expr:
@@ -17,6 +58,131 @@ def _real_scalar(value: Any, name: str) -> sp.Expr:
     if expression.is_number and expression.is_real is not True:
         raise ValueError(f"{name} must be real")
     return expression
+
+
+def _exact_real_scalar(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.has(sp.Float):
+        raise TypeError(f"{name} must be exact")
+    if expression.is_real is False:
+        raise ValueError(f"{name} must be real")
+    return expression
+
+
+def scalar_boundary_parity_ledger(
+    temporal_trace: Any,
+    coordinate_trace: Any,
+    temporal_coefficient: Any,
+    coordinate_coefficient: Any,
+    source: Any,
+) -> ScalarBoundaryParityLedger:
+    """Return the exact scalar-parity ledger for ``a*u + beta*v - J``.
+
+    The supplied traces represent ``u=phi_t(t,b)`` and ``v=phi_x(t,b)``.
+    At the reflected point, scalar spatial parity leaves ``u`` unchanged and
+    changes ``v`` to ``-v``.  A scalar source is pulled back without an
+    intrinsic sign.  The result therefore maps the coefficient family
+    ``beta`` to ``-beta``.  A mixed residual is not itself a parity-odd
+    eigenobject: it contains the even part ``a*u-J`` and odd part ``beta*v``.
+    """
+
+    u = _exact_real_scalar(temporal_trace, "temporal_trace")
+    v = _exact_real_scalar(coordinate_trace, "coordinate_trace")
+    a = _exact_real_scalar(temporal_coefficient, "temporal_coefficient")
+    beta = _exact_real_scalar(coordinate_coefficient, "coordinate_coefficient")
+    current = _exact_real_scalar(source, "source")
+    even = sp.simplify(a * u - current)
+    odd = sp.simplify(beta * v)
+    residual = sp.simplify(even + odd)
+    parity_image = sp.simplify(even - odd)
+    reflected_coefficient = sp.simplify(a * u - beta * v - current)
+    return ScalarBoundaryParityLedger(
+        temporal_trace=u,
+        coordinate_trace=v,
+        temporal_coefficient=a,
+        coordinate_coefficient=beta,
+        source=current,
+        residual=residual,
+        parity_even_component=even,
+        parity_odd_component=odd,
+        parity_image_residual=parity_image,
+        reflected_coefficient_residual=reflected_coefficient,
+        fixed_parameter_parity_defect=sp.simplify(parity_image - residual),
+    )
+
+
+def oriented_half_line_parity_ledger(
+    temporal_trace: Any,
+    right_coordinate_trace: Any,
+    temporal_coefficient: Any,
+    normal_coefficient: Any,
+    source: Any,
+) -> OrientedHalfLineParityLedger:
+    """Return the right-to-left half-line parity map with outward normals.
+
+    For a right half-line ``x>=b``, the left-boundary outward derivative is
+    ``-phi_x``.  Parity maps it to a left half-line ``x<=-b`` whose
+    right-boundary outward derivative is ``+partial_x``; the transformed
+    scalar field has coordinate trace ``-phi_x``.  The two outward-normal
+    traces, and hence the normal coefficient, are unchanged by the combined
+    field-and-domain map.
+    """
+
+    u = _exact_real_scalar(temporal_trace, "temporal_trace")
+    v = _exact_real_scalar(right_coordinate_trace, "right_coordinate_trace")
+    a = _exact_real_scalar(temporal_coefficient, "temporal_coefficient")
+    eta = _exact_real_scalar(normal_coefficient, "normal_coefficient")
+    current = _exact_real_scalar(source, "source")
+    right_outward = sp.simplify(-v)
+    left_coordinate = sp.simplify(-v)
+    left_outward = left_coordinate
+    right_residual = sp.simplify(a * u + eta * right_outward - current)
+    left_residual = sp.simplify(a * u + eta * left_outward - current)
+    return OrientedHalfLineParityLedger(
+        temporal_trace=u,
+        right_coordinate_trace=v,
+        right_outward_trace=right_outward,
+        left_parity_coordinate_trace=left_coordinate,
+        left_outward_trace=left_outward,
+        right_residual=right_residual,
+        left_parity_residual=left_residual,
+    )
+
+
+def scalar_boundary_trace_family(
+    temporal_trace_parameter: Any,
+    temporal_coefficient: Any,
+    coordinate_coefficient: Any,
+    source: Any,
+) -> ScalarBoundaryTraceFamily:
+    """Solve one exact linear boundary residual without hiding its freedom.
+
+    For declared nonzero ``beta``, the relation ``a*u+beta*v=J`` gives
+    ``v=(J-a*u)/beta`` while ``u`` remains a free family parameter.  For
+    ``beta=0``, the coordinate trace is wholly unconstrained and only
+    ``a*u-J=0`` remains.  A symbolic coefficient must be declared zero or
+    nonzero so the branch is auditable.
+    """
+
+    u = _exact_real_scalar(temporal_trace_parameter, "temporal_trace_parameter")
+    a = _exact_real_scalar(temporal_coefficient, "temporal_coefficient")
+    beta = _exact_real_scalar(coordinate_coefficient, "coordinate_coefficient")
+    current = _exact_real_scalar(source, "source")
+    if beta.is_zero is None:
+        raise ValueError("coordinate_coefficient must be declared zero or nonzero")
+    if beta.is_zero:
+        return ScalarBoundaryTraceFamily(
+            temporal_trace_parameter=u,
+            coordinate_trace_solution=None,
+            temporal_only_constraint=sp.simplify(a * u - current),
+            coordinate_trace_free=True,
+        )
+    return ScalarBoundaryTraceFamily(
+        temporal_trace_parameter=u,
+        coordinate_trace_solution=sp.simplify((current - a * u) / beta),
+        temporal_only_constraint=None,
+        coordinate_trace_free=False,
+    )
 
 
 def _positive_frequency(value: Any) -> sp.Expr:
