@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P148
+candidate: A_literal_reproduction
+status: failed
+started_at: '2026-08-09T23:54:00Z'
+finished_at: '2026-08-09T23:56:00Z'
+commands:
+  - AST and NumPy compatibility inventory of immutable W3
+  - native execution of immutable W3
+result:
+  ast_core:
+    check_calls: 7
+    assertions: 1
+    functions: [check, parity]
+    legacy_references: 2
+    eager_fallbacks: 0
+  native_execution:
+    passed_before_abort: [W3.1, W3.2, W3.3]
+    abort: numpy_has_no_attribute_trapz
+  diagnostic_failure: requested_nonexistent_direct_attribute_references_field
+failure_class: diagnostic_interface
+scientific_effect: none
+compatibility_classification: version_only_not_candidate_rejection
+next_attempt: use_the_actual_auditor_fields_and_run_an_alias_only_np.trapezoid_replay

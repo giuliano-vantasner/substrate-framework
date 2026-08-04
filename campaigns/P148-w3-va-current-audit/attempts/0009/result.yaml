@@ -1,0 +1,22 @@
+attempt: 0009
+campaign: P148
+candidate: B_C_D_E_source_aware_nonduplication
+status: passed
+started_at: '2026-08-10T00:21:00Z'
+finished_at: '2026-08-10T00:23:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P148-w3-va-current-audit.md --base /home/dan/substrate-framework
+  - git diff --cached --check
+freeze:
+  proposal_revision_sha256: ebf9bf106101aa754eacce7ae5a3b6ae90af098cf01cac0d85bed4e4eab96e7b
+  current_proposal_sha256: c8baecb7e151448cf4d122b4b3f9d91db540bc6eb38a138a516c87e43c591e1d
+  initial_frozen_proposal_sha256: cb2a40d9879b92ab1f5d9634fcaaefc25e26b8dc3052649f97c5857d564fbd7f
+  source_reproduction_sha256: 226977aec99ae722a8f7adbd6e740d159af2a5496e049e0b4ba9f8f045989ff3
+claim_reserved: null
+release_change: none
+canonical_implementation_change: none
+debt:
+  - implement_sensitive_source_specific_verifiers
+  - adjudicate_all_seven_predicates_and_replay_dependencies_and_consumers
+next_attempt: implement_the_P148_primary_independent_and_frozen_graph_oracles

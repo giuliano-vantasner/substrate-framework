@@ -1,0 +1,64 @@
+revision: 0001
+campaign: P148
+parent_frozen_proposal_sha256: cb2a40d9879b92ab1f5d9634fcaaefc25e26b8dc3052649f97c5857d564fbd7f
+trigger: >-
+  Native and alias-only reproduction, direct tensor rederivation, imported
+  formalization audit, and source-aware nonduplication show that every
+  supportable W3 scalar derivative, characteristic, parity, boundary, winding,
+  and current distinction is already governed by accepted claims and canonical
+  APIs. A new claim would duplicate C-SG-011 through C-SG-013.
+unchanged:
+  - accepted base and source hashes
+  - coordinates t and x signature (+,-) and orientation epsilon^(01)=+1
+  - candidates A through F and their ordering
+  - structural selection criteria and comparator exclusion
+  - immutable alias-only compatibility policy
+claim_delta:
+  identifiers: []
+  release_change: none
+  implementation_change: none
+exact_classification: >-
+  Let phi be a sufficiently smooth exact real scalar, u=phi_t, v=phi_x,
+  D^mu=partial^mu phi=(u,-v), and T^mu=epsilon^(mu nu)partial_nu
+  phi=(v,-u) for signature (+,-) and epsilon^(01)=+1. Then
+  partial_mu D^mu=phi_tt-phi_xx, which is -sin(phi) on normalized
+  sine-Gordon solutions, while partial_mu T^mu=0 off shell. Moreover
+  D-T=(u-v,u-v) and D+T=(u+v,-u-v) are the two null derivative
+  combinations. Scalar spatial parity transforms D as a vector, T as an axial
+  vector, and exchanges the two null combinations with the spatial-component
+  parity sign. This is a covariant exchange, not intrinsic parity violation or
+  selection of one interaction. If phi=L(t+x)+R(t-x) in a separately declared
+  massless decomposition, direct chain rule gives u=L_prime+R_prime and
+  v=L_prime-R_prime, hence u+v=2*L_prime and u-v=2*R_prime. In full normalized
+  sine-Gordon both characteristic transport defects are sourced by -sin(phi).
+  A declared boundary residual u+epsilon*v=J constrains one characteristic
+  trace but does not construct an internal Noether current, Lorentz-spinor
+  charged vertex, parity-breaking action, gauge coupling, charge selection, or
+  dynamics. Half-line topological transfer still requires boundary field
+  change and vacuum data; sign correlation is independent. C-U1-001's complex
+  Noether current is a distinct field object and vanishes for a genuinely real
+  field. C-REP-002 does not identify a unit winding event with W2's supplied
+  plus-minus-one basis-label transition.
+source_corrections:
+  - W3_assigns_phi_x=R_prime-L_prime_despite_phi=L(t+x)+R(t-x)
+  - W3_3_verifies_plus_equals_2R_and_minus_equals_2L_then_imports_the_opposite_channel_label
+  - W3_never_computes_the_divergences_of_its_own_declared_V_and_A_objects
+  - W3_imports_complex_U1_conservation_for_a_distinct_real_scalar_derivative
+  - W3_assigns_the_axial_shift_and_normalizes_the_Gaussian_to_the_desired_winding
+  - W3_treats_parity_exchange_as_intrinsic_violation_without_an_action_or_selected_coupling
+  - W3_relabels_one_chosen_zero_correlation_as_zero_topological_transfer
+accepted_mappings: [C-SG-011, C-SG-012, C-SG-013, C-BND-001, C-REP-002, C-U1-001]
+novelty: >-
+  None. C-SG-011 already exposes the exact characteristic currents, their
+  nonlinear sources, the epsilon-dual topological current, its off-shell
+  conservation, and scalar-parity exchange with explicit V-A ceilings.
+  C-SG-012 fixes the tensor and light-cone conventions. C-SG-013 and C-BND-001
+  govern the boundary observables and underdetermination. C-U1-001 and
+  C-REP-002 exclude W3's cross-field and W2 imports.
+oracle: exact SymPy chain rule tensor divergence parity pullback boundary countermodels and independent component rederivation
+implementation_boundary: >-
+  Add no canonical definition and reserve no claim. Build a source-specific
+  P148 verifier that calls accepted sine_gordon boundary u1 and su2 APIs,
+  independently derives load-bearing tensor signs, mutation-tests the source
+  corrections, and qualifies W3 without a release change.
+status: frozen

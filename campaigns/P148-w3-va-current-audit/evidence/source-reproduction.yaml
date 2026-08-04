@@ -1,0 +1,68 @@
+campaign: P148
+source_unit: W3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-6/bridge_W3_VA_charged_current.py
+sha256: b49a0bd1075b16b5906719b6ed51454ed04adab5168be7ec98178599313b3f17
+dossier_path: merged-framework/bridges/phase-6/dossiers/W3_dossier.md
+dossier_sha256: c9b327bba0fa227083017173cae475728f061e7b82da0f1810dbfb9f74e00b5b
+ast_inventory:
+  check_calls: 7
+  assertions: 1
+  function_definitions: [check, parity]
+  numpy_aliases: [np]
+  direct_legacy_attributes: 2
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+native_execution:
+  exit_status: 1
+  passed_before_abort: [W3.1, W3.2, W3.3]
+  terminal_tally: absent
+  compatibility_event: numpy_has_no_attribute_trapz
+alias_only_replay:
+  binding: numpy.trapz=numpy.trapezoid
+  source_modified: false
+  exit_status: 0
+  terminal_tally: ALL_7_CHECKS_PASS
+  numeric_outputs:
+    winding_integral: approximately_minus_2pi
+    derived_charge: approximately_plus_1
+    symmetric_correlation: approximately_4.443e_minus_4
+imported_formalization:
+  charge_path: sg-breather-ionization/dynamics_lean/ChargeDiscrimination.lean
+  charge_sha256: c692eb12d9aa81f7547f855fe24ed03f7ba2403ac3fc4710c33c42ff80364056
+  u1_path: sg-breather-ionization/dynamics_lean/Phase3EM_U1Current.lean
+  u1_sha256: 0e5483768c84943278955aca66df56b0a945d6d622d5d364fc2aeb2f711270e2
+  exact_content: >-
+    The charge file unfolds supplied integer labels and a sign-conditioned
+    selection. The U1 file proves a polynomial identity after separately
+    supplied complex-field EOM coefficients and its equal-coefficient
+    specialization; neither formalizes W3's real scalar derivative currents,
+    boundary event, parity violation, or gauge interaction.
+imported_solution:
+  path: sg-breather-ionization/solution.md
+  sha256: a5a0ced9a097f07daea67e37b9516755307536e4850dfc975da72ee8eb876f86
+  accepted_ceiling: C-SG-011_C-SG-013_and_C-BND-001_only
+initial_scientific_flags:
+  - >-
+    Direct differentiation of phi_L(t+x)+phi_R(t-x) gives
+    phi_x=phi_L_prime-phi_R_prime. W3 instead assigns the negative, so its
+    source-level characteristic algebra contradicts its imported channel name.
+  - >-
+    W3 defines V=(phi_t,-phi_x) and A=(phi_x,-phi_t). Their actual divergences
+    are Box(phi) and zero respectively. The script never evaluates either and
+    imports the opposite conservation interpretation from a distinct complex
+    field plus a finite potential-shift witness.
+  - >-
+    Parity exchanges the two null derivative combinations. That is covariance
+    and does not show a parity-breaking action or select one coupling.
+  - >-
+    W3 normalizes a Gaussian to area minus two-pi before integration, then
+    compares separately assigned integers. It simulates no boundary evolution
+    and inherits W2's rejected event-versus-label conflation.
+  - >-
+    The pure-vector guard uses chosen quadrature-phase traces to obtain zero
+    correlation and relabels it zero Delta-Q, despite accepted C-SG-013 proving
+    the observables independent.
+maximum_source_verdict: reproduction_only_pending_exact_rederivation_and_nonduplication

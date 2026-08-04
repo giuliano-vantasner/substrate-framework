@@ -89,3 +89,4 @@ comparators_blinded_until: >-
   exact predicates, formulas, samples, output, thresholds, and further
   comparator material remain unopened until that boundary.
 status: draft
+revision: 0001

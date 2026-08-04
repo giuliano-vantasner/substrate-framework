@@ -1,0 +1,12 @@
+attempt: 0008
+campaign: P148
+candidate: B_C_D_E_source_aware_nonduplication
+status: failed
+started_at: '2026-08-10T00:19:00Z'
+finished_at: '2026-08-10T00:20:00Z'
+command: git diff --cached --check
+result: proposal_revision_0001_new_blank_line_at_EOF
+failure_class: formatting
+scientific_effect: none
+self_optimization: subsequent_dynamic_patch_payloads_end_with_exactly_one_newline
+next_attempt: remove_only_the_trailing_blank_line_rehash_and_commit_the_unchanged_revision

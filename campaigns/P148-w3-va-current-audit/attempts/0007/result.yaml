@@ -1,0 +1,27 @@
+attempt: 0007
+campaign: P148
+candidate: B_C_D_E_source_aware_nonduplication
+status: passed
+started_at: '2026-08-10T00:04:00Z'
+finished_at: '2026-08-10T00:18:00Z'
+commands:
+  - exact SymPy derivative current divergence parity and characteristic prototype
+  - repository-wide accepted-claim and canonical-API nonduplication search
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P148-w3-va-current-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+freeze:
+  current_proposal_sha256: c8baecb7e151448cf4d122b4b3f9d91db540bc6eb38a138a516c87e43c591e1d
+  initial_frozen_proposal_sha256: cb2a40d9879b92ab1f5d9634fcaaefc25e26b8dc3052649f97c5857d564fbd7f
+  proposal_revision_sha256: 545e6b988b7c7b55e9893201e6bfc486a86e15028dc47a80ba1b468933f2d9cf
+  source_reproduction_sha256: 226977aec99ae722a8f7adbd6e740d159af2a5496e049e0b4ba9f8f045989ff3
+  memory_contract_sha256: be96debd73d7900c73d9ecf805f6e2621fa3f3ef85271741c787010b9f9df918
+claim_reserved: null
+release_change: none
+canonical_implementation_change: none
+accepted_mappings: [C-SG-011, C-SG-012, C-SG-013, C-BND-001, C-REP-002, C-U1-001]
+nonduplication: all_supportable_W3_surfaces_already_governed
+debt:
+  - implement_sensitive_source_specific_verifiers
+  - adjudicate_all_seven_predicates_and_replay_dependencies_and_consumers
+next_attempt: implement_the_P148_primary_independent_and_frozen_graph_oracles

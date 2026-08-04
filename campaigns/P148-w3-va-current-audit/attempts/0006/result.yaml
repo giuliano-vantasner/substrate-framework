@@ -1,0 +1,39 @@
+attempt: 0006
+campaign: P148
+candidate: A_literal_reproduction
+status: passed
+started_at: '2026-08-09T23:57:00Z'
+finished_at: '2026-08-10T00:03:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python audit_numpy_trapezoid_compatibility on immutable W3
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-6/bridge_W3_VA_charged_current.py
+  - .venv/bin/python alias-only runpy replay with numpy.trapz backed by numpy.trapezoid
+  - AST inventory of check calls and assertions
+result:
+  source_hash: verified
+  dossier_hash: verified
+  compatibility: two_direct_immutable_legacy_accesses
+  native_exit: 1_after_W3_1_through_W3_3
+  native_failure: numpy_has_no_attribute_trapz
+  alias_only_exit: 0
+  alias_only_tally: ALL_7_CHECKS_PASS
+  source_predicates: 7
+  source_assertions: 1
+  source_modification: none
+  maximum_verdict: reproduction_only
+  scientific_debt:
+    - derivative_sign_and_characteristic_channel_are_internally_inconsistent
+    - vector_and_axial_labels_conflict_with_their_actual_divergences
+    - parity_exchange_is_called_intrinsic_maximal_violation
+    - hard_normalized_Gaussian_is_called_a_derived_winding_event
+    - W2_supplied_charge_rescaling_is_imported_as_a_transition_identity
+    - independent_complex_U1_current_is_equated_with_real_scalar_phi_t
+    - axial_shift_is_hard_coded_and_called_an_anomaly
+    - boundary_correlation_is_relabelled_as_zero_charge_transfer
+source_body_opened: true
+dossier_body_opened: true
+comparator_values_inspected: all_source_and_dossier_material
+next_attempt: >-
+  Rederive the exact derivative-current and boundary identities from accepted
+  APIs, classify every source predicate, and perform source-aware
+  nonduplication before reserving any claim or implementation.

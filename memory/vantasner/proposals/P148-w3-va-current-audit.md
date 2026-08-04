@@ -2,7 +2,7 @@
 description: Derive and audit the exact current content of W3's proposed V-A charged-current bridge
 author: vantasner
 created: '2026-08-09T23:40:00Z'
-updated: '2026-08-09T23:40:00Z'
+updated: '2026-08-10T00:15:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -82,12 +82,25 @@ material remain blinded until this contract and matching manifest are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved at the initial freeze. Candidate B may show that all
-supportable W3 surfaces are already accepted. Candidates C or D may justify a
-distinct additive claim only after source-aware nonduplication and an exact
-claim revision are separately frozen before implementation. No physical current
-or gauge statement may be reserved without its matter and interaction
-dependency closure.
+No identifier was reserved at the initial freeze. Source-aware nonduplication
+now selects Candidate B and parts of C through E as an exact classification
+already governed by C-SG-011 through C-SG-013, C-BND-001, C-REP-002, and
+C-U1-001. Revision 0001 freezes a zero-claim, zero-release, zero-module delta.
+The canonical characteristic, topological-current, boundary, U1, and SU2 APIs
+already provide the positive object; P148 adds source-specific verification and
+a qualified W3 disposition without duplicating them.
+
+## Proposal Revision
+
+Revision 0001 records the exact convention-explicit result before verifier
+implementation. For a smooth real scalar, the raised derivative
+`D=(phi_t,-phi_x)` has divergence `Box(phi)`, while the epsilon-dual
+`T=(phi_x,-phi_t)` is exactly off-shell conserved. Their sums and differences
+are the accepted null derivative combinations, and parity exchanges them. For
+`phi=L(t+x)+R(t-x)`, direct chain rule gives
+`phi_x=L_prime-R_prime`, so the plus characteristic is `2L_prime` and the
+minus characteristic is `2R_prime`. This corrects W3's internal sign and
+channel mismatch without creating an internal charged current or interaction.
 
 ## Implementation and Oracle Plan
 
