@@ -1,0 +1,27 @@
+attempt: 0012
+campaign: P142
+candidate: integrated_terminal_gate
+status: passed
+started_at: '2026-08-09T15:28:00Z'
+commands:
+  - primary independent and source-graph verifiers
+  - focused Gordon tests
+  - scripts/validate.sh
+  - git diff --check
+result:
+  primary: ALL_29_CHECKS_PASS
+  independent: ALL_16_CHECKS_PASS
+  source_graph: ALL_74_CHECKS_PASS
+  focused_tests: 15_passed
+  repository: WORKFLOW_VALID_144_claims_144_accepted_0_proposals
+  migration_queue: 218_units_78_pending_0_partial
+  memory: 578_files_valid
+  skill: valid
+  full_pytest: 1224_passed_in_105.10_seconds
+  terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  whitespace: passed
+verdict: >-
+  The exact C-GOR-001 object, G2 qualification, dependency and consumer replay,
+  v0.109.0 release, generated projections, durable memory, package suite, and
+  compatibility policy close together with an empty P142 debt ledger.
+next_attempt: none_P142_complete_continue_parent_queue_at_G3

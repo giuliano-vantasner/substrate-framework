@@ -1,0 +1,35 @@
+campaign: P142
+scope: Gordon_effective_metric_convention_and_physical_ceiling
+sources:
+  - title: A stationary medium in a static electromagnetic field
+    authors: [Iver Brevik, Geir Halnes]
+    year: 2001
+    url: https://arxiv.org/abs/gr-qc/0106045
+    primary_scope: >-
+      The primary paper explicitly adopts eta equals diag plus one minus one
+      minus one minus one and u dot u equals plus one before writing the
+      contravariant Gordon form eta plus n squared minus one times u u. It calls
+      the curved space fictitious or effective for photon propagation. Under a
+      global signature flip, the rank-one coefficient must therefore become
+      one minus n squared when eta is mostly plus and u dot u equals minus one.
+convention_translation:
+  primary_mostly_minus:
+    contravariant: eta_plus_n_squared_minus_one_times_u_u
+    normalization: u_dot_u_equals_plus_one
+  framework_mostly_plus:
+    contravariant: eta_plus_one_minus_n_squared_times_u_u
+    normalization: u_dot_u_equals_minus_one
+    covariant: eta_plus_one_minus_inverse_n_squared_times_u_down_u_down
+adjudication:
+  supported:
+    - the exact Gordon effective metric convention for an isotropic nondispersive medium
+    - interpretation as an effective photon-propagation geometry
+  unsupported_in_G2:
+    - copying the primary plus coefficient while changing the signature and normalization
+    - treating the spurious sqrt-two pole as a physical Gordon domain boundary
+    - inferring an Einstein source or physical gravitational solution from nonzero effective curvature
+selection_use: >-
+  Literature fixes only the convention and analog-geometry ceiling. The inverse,
+  determinants, signature, curvature, Bianchi identity, source counterexample,
+  and coefficients are independently derived by P142.
+debt: []

@@ -1,0 +1,24 @@
+attempt: 0013
+campaign: P142
+candidate: post_gate_compatibility_record_check
+status: representation_failure_then_passed
+started_at: '2026-08-09T15:31:00Z'
+finished_at: '2026-08-09T15:32:00Z'
+failed_command: >-
+  rg -n "np\\.trapz" src scripts tests/test_gordon_metric.py
+  campaigns/P142-g2-gordon-metric-audit --glob '*.py'
+failure: >-
+  Text grep matched source_audit.py's explanatory docstring, which names the
+  legacy spelling as the object its AST classifier detects. No executable
+  integration call was implicated.
+diagnosis: prose_insensitive_compatibility_scan
+repair_command: >-
+  Run audit_numpy_trapezoid_compatibility over mutable scripts, P142 Python,
+  and the focused test, rejecting executable legacy or eager-fallback shapes.
+result: MUTABLE_NUMPY_COMPAT_9_files_0_legacy_shapes
+scientific_failure: false
+verdict: >-
+  Mutable in-scope scripts and campaign code use exact algebra or current
+  integration policy. Documentation may accurately name np.trapz without
+  failing a campaign.
+next_attempt: none_record_sensitive_closure_only

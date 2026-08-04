@@ -1,0 +1,28 @@
+attempt: 0014
+campaign: P142
+candidate: post_gate_generated_record_sync
+status: passed
+started_at: '2026-08-09T15:33:00Z'
+initial_result: >-
+  validate_repository remained valid, but render_memory --check reported the
+  generated C-GOR-001 record stale after attempt 0013 was added to the accepted
+  claim's evidence list.
+diagnosis: canonical_generated_projection_preceded_final_evidence_append
+scientific_failure: false
+commands:
+  - .venv/bin/python scripts/render_docs.py
+  - .venv/bin/python scripts/render_memory.py
+  - record-sensitive repository generated memory release and diff checks
+result:
+  repository: WORKFLOW_VALID_144_claims_144_accepted_0_proposals
+  migration_queue: 218_units_78_pending_0_partial
+  generated_docs: current
+  generated_memory: current
+  parent_effort_memory: valid
+  release_current_identity: passed
+  whitespace: passed
+verdict: >-
+  Final generated state matches the accepted registry and release after the
+  post-gate evidence append; no scientific or integrated validation was
+  repeated.
+next_attempt: none_after_generated_projection_matches_final_registry

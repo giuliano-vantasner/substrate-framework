@@ -1,0 +1,30 @@
+campaign: P142
+source_unit: G2
+base_release: v0.108.0
+base_commit: 69ba175
+scientific_base_commit: 5da6892
+frozen_proposal_commit: f5b7090
+claim_delta: C-GOR-001
+primary_verifier: campaigns/P142-g2-gordon-metric-audit/verify.py
+primary_checks: 29
+primary_route:
+  - hash-pinned source dossier frozen contract and native compatibility AST
+  - source rank-one sign profile and absent-stress dataflow audit
+  - exact mostly-plus Gordon inverse determinant null-speed and signature derivation
+  - exact transverse-profile Einstein tensor limits ratios source mismatch and mutations
+independent_review: campaigns/P142-g2-gordon-metric-audit/reviews/independent_gordon_review.py
+independent_checks: 16
+independent_route:
+  - fresh metric inversion and determinant without importing gordon_metric
+  - direct Christoffel Ricci scalar and Einstein reconstruction
+  - exact contracted Bianchi identity and witness evaluation
+  - copied-sign degeneracy signature mutation and stress-component counterexample
+source_graph: campaigns/P142-g2-gordon-metric-audit/reviews/replay_source_graph.py
+source_graph_checks: 74
+source_graph_nodes: 31
+source_graph_predicates: 325
+focused_tests: 15
+exact_precision: SymPy exact integers rationals and declared real or positive symbols
+numerical_integration: none
+compatibility_event: none_in_G2_eight_inherited_alias_only_graph_shapes
+debt: []

@@ -1,0 +1,61 @@
+campaign: P142
+selection_frozen_at: f5b7090
+criteria:
+  - complete metric signature inverse determinant coordinate and four-velocity conventions
+  - exact index and velocity domain with Lorentzian nondegeneracy and known limits
+  - independently derived connection curvature Einstein and Bianchi objects
+  - typed stress tensor action field equation coupling dimensions and conservation compatibility
+  - constant-index rest-medium weak-contrast wrong-sign and component-ratio countermodels
+  - separation of analog metric kinematics from solved Einstein dynamics and physical gravity
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+candidates:
+  - id: A
+    decision: rejected_as_headline_route
+    reason: >-
+      Native G2 passes six checks, but it copies a mostly-minus rank-one sign
+      into a mostly-plus convention. The claimed pole and five-sixths witness
+      belong to a wrong-sign matrix that is positive definite at n equals two.
+  - id: B
+    decision: selected
+    reason: >-
+      The consistently translated Gordon pair has exact mutual inversion,
+      determinants minus n squared and minus one over n squared, Lorentzian
+      signature for every positive n, and rest null speed one over n.
+  - id: C
+    decision: selected
+    reason: >-
+      A fresh Christoffel-to-Einstein reconstruction matches the boost-derived
+      tensor and closes the contracted Bianchi identity componentwise.
+  - id: D
+    decision: selected_as_rejection_guard
+    reason: >-
+      The source supplies no executable Gordon stress. A z-independent
+      one-plus-one breather has T_tz zero while the nonflat v equals one-half
+      geometry has G_tz nonzero, defeating every scalar coupling.
+  - id: E
+    decision: selected
+    reason: >-
+      Constant index is flat, the source sign creates a spurious degeneracy,
+      and corrected static Gordon remains distinct from the accepted optical
+      family at first weak-index order.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Claim review, novelty, impact, frozen graph, compatibility, release,
+      disposition, generated state, and memory close the transaction.
+proposed_claim:
+  id: C-GOR-001
+  decision: promote
+  reason: distinct_dependency_closed_exact_effective_geometry_surface
+physical_einstein_source_claim:
+  decision: rejected
+  reason: >-
+    Nonzero curvature is not tensor equality. G2 supplies no instantiated
+    source action, conserved stress, componentwise match, coupling derivation,
+    boundary data, or coupled solution; its quoted one-plus-one source also
+    fails the nonzero tz component.
+comparator_role: >-
+  G2's exposed five-sixths value, sqrt-two pole, component ratios, free
+  coupling, and source headline did not select the corrected convention,
+  candidate, formula, or pass thresholds.
+debt: []

@@ -1,0 +1,52 @@
+source_unit: G2
+source_sha256: 666df886d7567d87796615753143ace56a4f06fb6e1de4ea53208b1fc6ba0f88
+ast:
+  check_calls: 6
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+objects_present:
+  - exact inversion of a declared rank-one metric update
+  - exact curvature reconstruction for a fixed z boost and n of x
+  - exact component ratios for that declared matrix
+  - constant-index flatness check
+  - exact replay of the accepted optical-family no-go prescription
+  - weak-index comparison with the fixed optical family
+objects_absent:
+  - signature-consistent translation of the Gordon formula to mostly-plus convention
+  - determinant-signature or null-cone audit
+  - independently declared dielectric action or constitutive equations
+  - instantiated breather field and complete stress tensor
+  - full componentwise Einstein equation
+  - covariant stress conservation or contracted Bianchi matching
+  - coupling derivation dimensions or boundary data
+  - coupled medium matter and geometry solution
+load_bearing_mismatch:
+  primary_convention:
+    signature: mostly_minus
+    normalization: u_dot_u_equals_plus_one
+    contravariant_rank_one_coefficient: n_squared_minus_one
+  source_convention:
+    signature: mostly_plus
+    normalization: u_dot_u_equals_minus_one
+    copied_rank_one_coefficient: n_squared_minus_one
+  required_mostly_plus_coefficient: one_minus_n_squared
+consequences:
+  - source determinant is n_squared_minus_two and degenerates at n equals sqrt two
+  - source n equals two witness has positive-definite signature rather than Lorentzian signature
+  - source five_six curvature is curvature of the wrong-sign Riemannian matrix
+  - correct Gordon determinants are minus_n_squared and minus_one_over_n_squared
+  - correct n equals two profile witness is one_six in the source curvature convention
+  - correct rest weak-index expansion is minus_one_plus_two_epsilon rather than minus_one_minus_two_epsilon
+headline_failures:
+  - Nonzero curvature alone does not exhibit an Einstein source or solve Einstein dynamics.
+  - No breather field is substituted and no componentwise G equals coupling times T test is performed.
+  - >-
+    For the quoted one-plus-one breather with no z dependence T_tz is zero,
+    while the nonflat moving-profile geometry has G_tz nonzero, so no scalar
+    coupling can make the tensors equal.
+  - >-
+    A Gordon metric is an effective photon-propagation geometry of a medium;
+    its curvature does not by itself make the dielectric flow a solution of
+    gravitational field equations.

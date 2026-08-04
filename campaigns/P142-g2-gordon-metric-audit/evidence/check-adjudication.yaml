@@ -1,0 +1,48 @@
+source_unit: G2
+checks:
+  - id: G2.1
+    executable_result: pass
+    verdict: exact_wrong_convention_matrix_algebra
+    reason: >-
+      Normalization and inversion are exact for the declared matrix, but the
+      rank-one sign is inconsistent with the declared mostly-plus convention.
+      The resulting sqrt-two pole diagnoses the mismatch rather than a Gordon
+      medium domain.
+  - id: G2.2
+    executable_result: pass
+    verdict: exact_curvature_of_non_lorentzian_witness
+    reason: >-
+      Christoffel-to-Einstein reconstruction supports 5/6 for the declared
+      wrong-sign matrix. At n=2 that matrix is positive definite, so the value
+      cannot witness Lorentzian Gordon curvature or dynamical sourcing.
+  - id: G2.3
+    executable_result: pass
+    verdict: exact_ratios_with_corrected_conditional_survivor
+    reason: >-
+      The fixed-v component ratios are exact. They happen also to hold for the
+      corrected metric at v=1/2, but their common factor changes and they do
+      not establish equality to any stress tensor.
+  - id: G2.4
+    executable_result: pass
+    verdict: exact_generic_constant_metric_flatness
+    reason: >-
+      A constant-index constant-velocity metric has constant components and is
+      flat. This is a valid limit but is not specific evidence for sourcing.
+  - id: G2.5
+    executable_result: pass
+    verdict: exact_replay_of_existing_optical_no_go
+    reason: >-
+      The fixed optical-family prescription again gives a zero Einstein tensor.
+      This delimits that family but supplies no positive Gordon source match.
+  - id: G2.6
+    executable_result: pass
+    verdict: valid_scope_inequality_with_wrong_coefficients
+    reason: >-
+      Static Gordon and the accepted optical metric are distinct, but the
+      source uses the wrong Gordon expansion. Correct mostly-plus Gordon has
+      g_tt=-1/n^2=-1+2 epsilon plus higher terms, still distinct from -1/n.
+summary:
+  exact_but_wrong_convention: [G2.1, G2.2]
+  conditional_survivors: [G2.3, G2.4, G2.6]
+  existing_no_go_replay: [G2.5]
+  headline_supported: false

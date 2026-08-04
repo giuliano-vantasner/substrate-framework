@@ -1,0 +1,22 @@
+attempt: 0003
+campaign: P142
+candidate: B_exact_gordon_metric
+status: implementation_failure
+started_at: '2026-08-09T14:50:00Z'
+finished_at: '2026-08-09T14:51:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P142-g2-gordon-metric-audit/verify.py --source-file
+  /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G2_gordon_metric_3plus1.py
+  --dossier-file
+  /home/dan/substrate/merged-framework/bridges/phase-5/dossiers/G2-dossier.md
+result: 7_passed_then_prose_literal_guard_failed
+failure: >-
+  The verifier required the exact substring "profiles use n > sqrt2", while
+  the immutable source uses both "profiles use n>sqrt2" and a line-broken
+  comment. The underlying source assignments and spurious pole are unchanged.
+diagnosis: verifier_representation_too_brittle
+scientific_failure: false
+next_attempt: >-
+  Test the n_profile AST assignment and algebraic wrong-sign determinant, while
+  retaining only a non-load-bearing phrase check for the source's pole label.

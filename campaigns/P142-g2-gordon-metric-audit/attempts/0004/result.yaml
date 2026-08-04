@@ -1,0 +1,20 @@
+attempt: 0004
+campaign: P142
+candidate: D_source_compatibility
+status: implementation_failure
+started_at: '2026-08-09T14:52:00Z'
+finished_at: '2026-08-09T14:53:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P142-g2-gordon-metric-audit/verify.py --source-file <pinned-G2>
+  --dossier-file <pinned-G2-dossier>
+result: 8_passed_then_dossier_prose_literal_guard_failed
+failure: >-
+  The verifier expected the phrase "not solved". The dossier instead says
+  "Finding a closed solution is NOT required by the rung" after calling the
+  target a coupled PDE system. The scientific omission is the same.
+diagnosis: verifier_representation_too_brittle
+scientific_failure: false
+next_attempt: >-
+  Match the dossier's exact explicit waiver of a closed coupled solution and
+  continue to the algebraic and independent curvature oracles.

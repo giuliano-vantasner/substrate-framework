@@ -1,0 +1,55 @@
+campaign: P142
+source_unit: G2
+direct_reverse_consumers:
+  - {source_unit: T1E, disposition: qualified, accepted_claims: [C-SG-002, C-SG-004, C-SG-005], effect: unchanged_independent_closure}
+  - {source_unit: EM3, disposition: qualified, accepted_claims: [C-GAU-001, C-KRN-001, C-MAX-001], effect: unchanged_independent_closure}
+  - {source_unit: S1, disposition: qualified, accepted_claims: [C-CC-001, C-VIR-001, C-RPROF-001, C-SKY-001], effect: unchanged_independent_closure}
+  - {source_unit: G1, disposition: qualified, accepted_claims: [C-RAD-001, C-SG-001, C-SG-002, C-SG-008, C-SG-012], effect: unchanged_independent_closure}
+  - {source_unit: G3, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: G4, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: G5, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: W3, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: W4, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: W5, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: C1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: YM2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: QCD1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: QCD2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: SM1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: GW1, disposition: qualified, accepted_claims: [C-MOM-001], effect: unchanged_independent_closure}
+  - {source_unit: NC3, disposition: qualified, accepted_claims: [C-SG-013], effect: unchanged_independent_closure}
+  - {source_unit: NC4, disposition: qualified, accepted_claims: [C-SG-001, C-SG-005, C-SG-011, C-SG-013], effect: unchanged_independent_closure}
+  - {source_unit: WZ4, disposition: qualified, accepted_claims: [C-EFT-001], effect: unchanged_independent_closure}
+  - {source_unit: OD, disposition: qualified, accepted_claims: [C-IDN-001, C-GLS-001], effect: unchanged_independent_closure}
+  - {source_unit: OM1, disposition: qualified, accepted_claims: [C-TOP-001, C-CHR-001], effect: unchanged_independent_closure}
+  - {source_unit: AS1, disposition: qualified, accepted_claims: [C-DIM-001, C-RGE-001, C-RGE-002, C-IDN-001, C-RGE-003], effect: unchanged_independent_closure}
+  - {source_unit: AS3, disposition: qualified, accepted_claims: [C-DIM-001, C-OG-003, C-IDN-001, C-GRV-001], effect: unchanged_independent_closure}
+  - {source_unit: AS4, disposition: duplicate_evidence, accepted_claims: [C-LIN-001, C-IDN-001], effect: unchanged_duplicate_mapping}
+  - {source_unit: AS6, disposition: qualified, accepted_claims: [C-SYM-002, C-SG-001, C-RGE-003, C-DIM-008, C-TOP-002], effect: unchanged_independent_closure}
+  - {source_unit: OD3, disposition: duplicate_evidence, accepted_claims: [C-LIN-001, C-IDN-001], effect: unchanged_duplicate_mapping}
+  - {source_unit: MC4, disposition: qualified, accepted_claims: [C-MED-003, C-SG-017, C-SG-018], effect: unchanged_independent_closure}
+  - {source_unit: SC1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 31
+  dependency_nodes: [B1, C1, T2C]
+  reverse_consumers: 28
+  unique_static_predicates_inventoried: 325
+  graph_integrity_checks: 74
+  terminal_tally: ALL_74_CHECKS_PASS_P142-G2-SOURCE-GRAPH
+  evidence: reviews/replay_source_graph.py
+canonical_replay:
+  focused_tests: 15
+  result: passed
+  surfaces: [gordon_metric]
+compatibility_preflight:
+  alias_only_if_executed: [B1, G1, G4, W3, YM2, QCD2, NC4, MC4]
+  alias_backing: np.trapezoid
+  mutable_legacy_accesses: 0
+  scientific_failures: 0
+disposition_effect: >-
+  C-GOR-001 supplies an exact effective-geometry theorem and does not
+  retroactively validate G2's Einstein source, free coupling, dielectric
+  dynamics, physical gravity, or substrate claims. Fourteen qualified
+  consumers retain independent accepted closures, twelve pending consumers
+  gain no authority, and two duplicate consumers remain duplicate evidence.
+debt: []

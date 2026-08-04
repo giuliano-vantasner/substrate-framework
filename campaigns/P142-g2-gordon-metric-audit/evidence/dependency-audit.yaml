@@ -1,0 +1,24 @@
+campaign: P142
+source_unit: G2
+declared_dependencies:
+  - {source_unit: B1, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: C1, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: T2C, disposition: qualified, accepted_claims: [C-OG-001, C-CC-001, C-OG-004], use: optical_family_scope_only}
+accepted_dependency_closure:
+  - {claim: C-GOR-001, dependencies: []}
+nearby_accepted_ceiling_claims:
+  - {claim: C-OG-001, exclusion: static_one_plus_one_optical_geometry_not_a_moving_medium_Gordon_metric}
+  - {claim: C-CC-001, exclusion: conditional_zero_velocity_optical_acceleration_not_an_Einstein_source}
+  - {claim: C-OG-004, exclusion: conditional_centered_profile_average_not_Gordon_curvature_or_gravity}
+  - {claim: C-RAD-001, exclusion: separate_one_dimensional_scalar_radiation_action_not_a_dielectric_or_Einstein_action}
+excluded_imports:
+  - B1 disclination Berry connection and C1 effective optical coupling
+  - the wrong-sign G2 rank-one coefficient and its sqrt-two pole
+  - an Einstein equation inferred from nonzero curvature
+  - a free effective coupling treated as a source-matching solution
+circularity: >-
+  G2 cites later pending B1 and C1 while C1 and twenty-seven other source units
+  consume G2. C-GOR-001 instead closes from an explicitly approved primary
+  Gordon convention and exact differential geometry, with no accepted-claim or
+  source-corpus dependency. Later consumers receive no retroactive authority.
+debt: []

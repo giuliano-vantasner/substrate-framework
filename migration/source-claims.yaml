@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 79
-  qualified: 127
+  pending_adjudication: 78
+  qualified: 128
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1327,8 +1327,41 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GOR-001
+  qualification: G2's normalized z-boost, exact inversion method, constant-index flatness, fixed half-boost
+    component ratios, and distinction from the accepted static optical family survive after convention
+    correction. The primary Gordon formula it imports uses mostly-minus signature and u dot u equals plus
+    one; G2 copies its plus rank-one coefficient into mostly-plus signature with u dot u equals minus
+    one. The resulting sqrt-two pole is spurious, and its n equals two witness is positive definite rather
+    than Lorentzian. C-GOR-001 supplies the consistent mostly-plus pair, determinants, rest null speed,
+    transverse-profile Einstein tensor, contracted Bianchi identity, and corrected one-sixth witness.
+    G2 does not construct an executable breather stress, action, componentwise Einstein equality, conserved
+    source, coupling derivation, boundary data, or coupled solution. Its quoted z-independent one-plus-one
+    source has T_tz zero where the nonflat geometry has G_tz nonzero. No dielectric dynamics, physical
+    gravity, observation, or substrate mechanism is accepted.
+  evidence:
+  - campaigns/P142-g2-gordon-metric-audit/reviews/source_adjudication.md
+  - campaigns/P142-g2-gordon-metric-audit/evidence/source-reproduction.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/source-audit.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/check-adjudication.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/input-provenance.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/dependency-audit.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/consumer-audit.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/candidate-comparison.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/primary-provenance.yaml
+  - campaigns/P142-g2-gordon-metric-audit/evidence/literature-audit.yaml
+  - campaigns/P142-g2-gordon-metric-audit/verify.py
+  - campaigns/P142-g2-gordon-metric-audit/reviews/independent_gordon_review.py
+  - campaigns/P142-g2-gordon-metric-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-GOR-001-review.md
+  - memory/vantasner/decisions/G2-qualified-review.md
+  note: P142 promotes C-GOR-001 through twenty-nine primary, sixteen independent, fifteen focused-test,
+    and seventy-four frozen-graph checks. Native G2 passes all six predicates and has no NumPy integration
+    compatibility event. Eight inherited immutable graph shapes remain alias-only through np.trapezoid;
+    mutable code has no executable legacy integration access.
 - source_unit: G3
   phase: phase-5
   path: merged-framework/bridges/phase-5/bridge_G3_horndeski_scalar_tensor.py

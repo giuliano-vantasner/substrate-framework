@@ -2,7 +2,7 @@
 description: Audit G2's moving-medium Gordon-metric 3+1 sourcing claim
 author: vantasner
 created: '2026-08-09T14:35:00Z'
-updated: '2026-08-09T14:35:00Z'
+updated: '2026-08-09T15:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-G2
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P142 G2 Gordon-Metric Audit
 
@@ -132,13 +132,13 @@ novelty, and generated state until every item is discharged.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| G2 executable and exact checks are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all six predicates | open |
-| Gordon convention and Lorentzian domain may be hidden | Exact covariant/inverse/determinant/signature/null-cone ledger | open |
-| Curvature component formulas may be special-case regressions | Independent general profile-jet reconstruction and mutations | open |
-| Einstein-source matching may be only structural prose | Typed stress, coupling, Bianchi, conservation, dimensions, and boundary audit | open |
-| The optical no-go may be evaded only by changing ansatz | State the exact scope change and construct constant/rest countermodels | open |
-| Dependencies consumers and novelty are incomplete | B1 C1 T2C, 28 reverse consumers, cycles, graph, and nonduplication audit | open |
-| Registry disposition release docs queue and memory are unsynchronized | Individual review and one governed terminal transaction | open |
+| G2 executable and exact checks are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all six predicates | closed: native six-check replay and predicate audit |
+| Gordon convention and Lorentzian domain may be hidden | Exact covariant/inverse/determinant/signature/null-cone ledger | closed: corrected mostly-plus metric and no-pole domain |
+| Curvature component formulas may be special-case regressions | Independent general profile-jet reconstruction and mutations | closed: direct Christoffel and boost routes agree |
+| Einstein-source matching may be only structural prose | Typed stress, coupling, Bianchi, conservation, dimensions, and boundary audit | closed by rejection: no stress or solution and tz mismatch |
+| The optical no-go may be evaded only by changing ansatz | State the exact scope change and construct constant/rest countermodels | closed: distinct effective family with explicit ceiling |
+| Dependencies consumers and novelty are incomplete | B1 C1 T2C, 28 reverse consumers, cycles, graph, and nonduplication audit | closed: 31-node 325-predicate graph |
+| Registry disposition release docs queue and memory are unsynchronized | Individual review and one governed terminal transaction | closed in v0.109.0 promotion transaction |
 
 ## Review and Promotion Plan
 

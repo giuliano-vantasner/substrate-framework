@@ -1,0 +1,20 @@
+attempt: 0007
+campaign: P142
+candidate: F_frozen_source_graph
+status: compatibility_inventory_failure
+started_at: '2026-08-09T15:09:00Z'
+finished_at: '2026-08-09T15:10:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P142-g2-gordon-metric-audit/reviews/replay_source_graph.py
+  /home/dan/substrate
+result: 65_passed_then_compatibility_inventory_mismatch
+failure: >-
+  All 31 source hashes and the 325-predicate inventory pass, but the compatibility
+  set copied from the prior G1 graph is not exhaustive for G2's distinct
+  dependencies and consumers.
+diagnosis: immutable_graph_compatibility_inventory_incomplete
+scientific_failure: false
+next_attempt: >-
+  Enumerate compatibility shapes with the shared AST audit, add only the exact
+  missing immutable units, and require the full equality plus per-unit checks.

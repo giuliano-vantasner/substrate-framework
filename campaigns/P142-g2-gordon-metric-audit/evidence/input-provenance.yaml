@@ -1,0 +1,33 @@
+campaign: P142
+source_unit: G2
+positive_object: exact_signature_consistent_gordon_effective_metric_and_transverse_profile_curvature
+accepted_inputs: []
+mathematical_inputs:
+  - eta_ab equals diag minus one plus one plus one plus one
+  - an exact normalized timelike medium four-velocity with eta_ab u^a u^b equals minus one
+  - an exact positive refractive index n
+  - the Gordon rank-one metric relation translated consistently from mostly-minus to mostly-plus signature
+  - standard pseudo-Riemannian connection Ricci Einstein and contracted-Bianchi definitions
+conditional_inputs:
+  - {condition: constant z-directed medium velocity with absolute v below one, role: selects the closed transverse-profile tensor formula}
+  - {condition: n depends only on transverse coordinate x and is differentiable twice, role: defines the curvature kernel K}
+source_declared_inputs:
+  - a copied plus-rank-one Gordon formula combined with mostly-plus eta and u dot u equals minus one
+  - fixed velocity one half and profile n equals two plus x
+  - imported curvature helper
+  - pending B1 and C1 and qualified T2C
+  - a referenced but uninstantiated breather stress tensor
+  - free effective Einstein coupling
+excluded_from_derivation_or_selection:
+  - source five-sixths comparator and sqrt-two pole
+  - pending B1 and C1 scientific authority
+  - any target-selected Einstein coupling
+  - physical gravity dielectric dynamics or substrate interpretation
+missing_for_source_physical_headline:
+  - a medium and matter action whose equations produce the declared n and u fields
+  - a complete instantiated stress tensor with the same component ratios and dependence
+  - covariant conservation compatibility for that stress
+  - a componentwise Einstein-equation solution and boundary data
+  - an independently fixed coupling and physical dictionary
+claim_delta: C-GOR-001
+debt: []

@@ -1,0 +1,27 @@
+attempt: 0002
+campaign: P142
+candidate: A_native_reproduction
+status: passed_with_rejected_headline
+started_at: '2026-08-09T14:42:00Z'
+finished_at: '2026-08-09T14:44:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G2_gordon_metric_3plus1.py
+result:
+  process_exit: 0
+  terminal_tally: ALL_6_CHECKS_PASS
+  numpy_compatibility_event: false
+  direct_legacy_integration_attributes: 0
+  direct_current_integration_attributes: 0
+scientific_failure: true
+failure: >-
+  G2 combines the mostly-minus Gordon formula with a mostly-plus Minkowski
+  metric and u.u=-1. Its inverse pole at n=sqrt(2), n=2 witness, 5/6
+  curvature value, and weak-index expansion therefore belong to the wrong-sign
+  matrix rather than to a Lorentzian Gordon metric.
+diagnosis: signature_convention_mismatch_hidden_by_self_consistent_matrix_algebra
+next_attempt: >-
+  Translate the primary Gordon convention covariantly to mostly-plus signature,
+  derive determinant signature inverse null speed and transverse-profile
+  Einstein tensor independently, then test whether any declared breather stress
+  actually satisfies the full Einstein equation.

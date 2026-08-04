@@ -1,0 +1,23 @@
+attempt: 0009
+campaign: P142
+candidate: pre_promotion_targeted_validation
+status: optional_tool_unavailable
+started_at: '2026-08-09T15:14:00Z'
+finished_at: '2026-08-09T15:15:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_gordon_metric.py
+  - primary independent and source-graph verifiers
+  - .venv/bin/python scripts/validate_repository.py
+  - .venv/bin/ruff check <P142 Python files>
+result:
+  focused_tests: 15_passed
+  primary: ALL_29_CHECKS_PASS
+  independent: ALL_16_CHECKS_PASS
+  source_graph: ALL_74_CHECKS_PASS
+  repository: WORKFLOW_VALID_143_claims_143_accepted_0_proposals
+  ruff: executable_absent
+diagnosis: optional_nonrepository_tool_not_installed
+scientific_failure: false
+next_attempt: >-
+  Use the repository's required syntax workflow pytest and diff gates rather
+  than claiming an unavailable optional linter ran; continue with governance.

@@ -1,0 +1,23 @@
+attempt: 0008
+campaign: P142
+candidate: F_frozen_source_graph
+status: passed
+started_at: '2026-08-09T15:11:00Z'
+finished_at: '2026-08-09T15:13:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P142-g2-gordon-metric-audit/reviews/replay_source_graph.py
+  /home/dan/substrate
+result:
+  nodes: 31
+  static_predicates: 325
+  compatibility_shapes: 8
+  terminal_tally: ALL_74_CHECKS_PASS
+  whitespace: passed
+verdict: >-
+  G2, three declared dependencies, and 28 reverse consumers are hash-pinned,
+  with C1 counted once in both roles. Qualified pending and duplicate authority
+  classes and every immutable NumPy compatibility shape close exactly.
+next_attempt: >-
+  Complete individual claim and source reviews, promote the registry release
+  disposition generated documentation and memory, then run one integrated gate.

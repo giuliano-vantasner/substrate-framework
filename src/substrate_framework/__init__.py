@@ -185,6 +185,12 @@ from .hls_reduction import (
     leading_hls_connection_reduction,
     su2_current_quartic,
 )
+from .gordon_metric import (
+    GordonMetric,
+    TransverseProfileEinstein,
+    gordon_metric_mostly_plus,
+    transverse_profile_einstein,
+)
 from .retarded_wave import (
     RetardedPointSourceRadiation,
     StaticPointSourceCountermodel,

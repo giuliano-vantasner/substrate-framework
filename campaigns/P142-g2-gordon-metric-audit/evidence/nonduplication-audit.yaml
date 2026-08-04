@@ -1,0 +1,35 @@
+campaign: P142
+provisional_claim: C-GOR-001
+decision: promote
+direct_search:
+  identifiers_searched: [C-GOR-001]
+  concepts_searched: [Gordon metric, moving dielectric, normalized four velocity, refractive-index effective geometry, transverse-profile Einstein tensor]
+  result: >-
+    No accepted identifier or canonical Gordon API exists. Existing optical
+    claims use a static one-plus-one metric with different index dependence and
+    do not define a moving-medium four-velocity or four-dimensional tensor.
+memory_search:
+  query: Gordon metric refractive index effective geometry Einstein tensor moving dielectric
+  nearest_prior_records: [P142, P004, C-OG-001, C-OG-004]
+  result: >-
+    Only the frozen P142 proposal is an exact match. P004 and accepted optical
+    decisions cover the fixed static optical family and explicitly exclude
+    source dynamics and physical gravity.
+gitnexus_query:
+  query: Gordon metric refractive index normalized four velocity Einstein tensor transverse profile
+  preexisting_processes: 0
+  nearest_preexisting_definitions: [sine_gordon_stress_tensor_covariant, sine_gordon_stress_divergence, optical_geometry.py]
+  result: >-
+    The graph returns the new P142 definitions as the exact matches. Nearby
+    stress and optical definitions do not duplicate a Gordon rank-one metric,
+    its determinant and null cone, or the boosted transverse-profile tensor.
+nearest_claims:
+  - {claim: C-OG-001, distinction: static one-plus-one optical metric without a medium four-velocity}
+  - {claim: C-CC-001, distinction: conditional optical collective acceleration without four-dimensional Einstein curvature}
+  - {claim: C-OG-004, distinction: conditional profile averaging without a Gordon metric or Einstein tensor}
+  - {claim: C-RAD-001, distinction: one-dimensional scalar retarded action without dielectric effective geometry}
+novel_surface: >-
+  C-GOR-001 is the first importable exact theorem for the signature-consistent
+  mostly-plus Gordon metric, its inverse determinants rest null speed, and the
+  Einstein and Bianchi tensors of a uniform z flow with transverse index.
+debt: []

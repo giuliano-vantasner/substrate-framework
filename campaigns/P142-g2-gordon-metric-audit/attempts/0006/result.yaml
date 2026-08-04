@@ -1,0 +1,28 @@
+attempt: 0006
+campaign: P142
+candidate: B_C_D_E_corrected_exact_geometry
+status: passed
+started_at: '2026-08-09T14:56:00Z'
+finished_at: '2026-08-09T15:08:00Z'
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P142-g2-gordon-metric-audit/verify.py
+    --source-file <pinned-G2> --dossier-file <pinned-G2-dossier>
+  - PYTHONPATH=src .venv/bin/python campaigns/P142-g2-gordon-metric-audit/reviews/independent_gordon_review.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_gordon_metric.py
+  - git diff --check
+result:
+  primary: ALL_29_CHECKS_PASS
+  independent: ALL_16_CHECKS_PASS
+  focused_tests: 15_passed
+  whitespace: passed
+verdict: >-
+  The signature-correct mostly-plus Gordon metric, inverse, determinants, null
+  speed, constant-z-flow transverse-profile Einstein tensor, exact Bianchi
+  identity, constant-index limit, wrong-sign mutation, and source witness
+  correction close. G2's physical Einstein-source headline fails because no
+  source tensor is constructed and a z-independent one-plus-one breather has
+  T_tz=0 where the nonflat geometry has G_tz nonzero.
+next_attempt: >-
+  Freeze and replay the complete dependency and reverse-consumer graph, close
+  literature provenance nonduplication impact claim review release and memory.

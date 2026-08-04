@@ -1,0 +1,21 @@
+attempt: 0010
+campaign: P142
+candidate: F_governance_promotion
+status: governance_failure
+started_at: '2026-08-09T15:26:00Z'
+commands:
+  - regenerate migration/source-claims.yaml from source inventory scope and dispositions
+  - .venv/bin/python scripts/render_docs.py
+  - .venv/bin/python scripts/render_memory.py
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate P142 claim source proposal and parent records
+  - compare v0.109.0 with current and run git diff --check
+result: >-
+  Generated queue docs and memory were rebuilt, then validate_repository
+  rejected C-GOR-001 because its predeclared integrated attempt 0011 path did
+  not yet exist.
+diagnosis: accepted_evidence_path_ordering_error
+scientific_failure: false
+next_attempt: >-
+  Create the terminal attempt record in progress before registry validation,
+  include it in the evidence transaction, and rerun record-sensitive checks.

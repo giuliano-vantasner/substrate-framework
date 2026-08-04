@@ -1,0 +1,23 @@
+attempt: 0011
+campaign: P142
+candidate: F_governance_promotion_retry
+status: passed
+started_at: '2026-08-09T15:27:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate P142 claim source proposal and parent records
+  - compare v0.109.0 with current and run git diff --check
+result:
+  repository: WORKFLOW_VALID_144_claims_144_accepted_0_proposals
+  migration_queue: 218_units_78_pending_0_partial
+  release_current_identity: passed
+  claim_review_memory: valid
+  source_review_memory: valid
+  proposal_memory: valid
+  parent_effort_memory: valid
+  whitespace: passed
+verdict: >-
+  C-GOR-001, G2 qualification, v0.109.0, generated docs and accepted memory,
+  queue, proposal memory, and parent continuation state form one closed
+  governance transaction with no dangling evidence path.
+next_attempt: run_single_integrated_terminal_gate
