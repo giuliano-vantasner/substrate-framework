@@ -1,0 +1,50 @@
+campaign: P138
+selection_frozen_at: 0c79dd0
+criteria:
+  - accepted dependency closure with action background kinetic domain and channel explicit
+  - correct bound box resonance continuum and vacuum-mass typing
+  - exact units signs asymptotics wall limits residuals and independent derivation
+  - load-bearing Hessian scale threshold and particle-dictionary mutations
+  - parameter economy reusable API value downstream compatibility and nonduplication
+candidates:
+  - id: A
+    decision: reproduction_evidence_only
+    reason: >-
+      An alias-only replay passes all ten source predicates, but the operator is
+      incomplete, the wall level is not bound, and the physical fit is circular.
+  - id: B
+    decision: selected_as_existing_composition
+    reason: >-
+      C-MOD-001, C-MOD-002, and C-SCL-001 exactly supply the corrected Hessian,
+      continuum classification, refined profile, box ladder, and scale ledger.
+  - id: C
+    decision: not_selected
+    reason: >-
+      S2 supplies no full time-dependent action or complete angular/scattering
+      channel. Declaring a new one would be a different model with added inputs,
+      unnecessary for terminally typing the actual source object.
+  - id: D
+    decision: selected_for_type_boundary_only
+    reason: >-
+      Vacuum generalized masses and localized-soliton fluctuations are distinct
+      operator problems. No S2 data closes a vacuum meson mass theorem.
+  - id: E
+    decision: selected_for_countermodels
+    reason: >-
+      Exact operator, fit, lift, wall, and scale counterfamilies show why equal
+      scalars or positive box levels cannot identify spectra or particles.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Predicate dependency consumer compatibility novelty impact queue and
+      memory closure complete the terminal source transaction.
+provisional_claim:
+  id: C-MES-001
+  decision: unpromoted
+  reason: >-
+    Every verified positive surface is already accepted or conditional source
+    arithmetic. No distinct dependency-closed meson theorem remains.
+comparator_role: >-
+  Named particles, reported eigenvalues, fitted inertia, and observed masses did
+  not select the composition, operators, thresholds, or tolerances.
+debt: []

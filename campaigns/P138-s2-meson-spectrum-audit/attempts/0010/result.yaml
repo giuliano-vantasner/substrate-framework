@@ -1,0 +1,26 @@
+campaign: P138
+attempt: 0010
+status: passed
+candidate: F
+command: scripts/validate.sh
+expected: >-
+  Validate repository authority, generated docs and accepted-memory state,
+  dependency availability, all durable memory, the physics skill, package
+  compilation, and the full test suite once at the terminal S2 adjudication
+  boundary.
+result:
+  exit_status: 0
+  repository: WORKFLOW_VALID_140_claims_140_accepted_0_proposals
+  migration_queue: 218_units_82_pending_0_partial_124_qualified
+  generated_docs: current
+  generated_accepted_memory: current
+  durable_memory: 558_files_valid
+  physics_skill: valid
+  compilation: passed
+  full_tests: 1154_passed
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+classification: integrated_terminal_gate
+next_attempt: >-
+  Run only record-sensitive YAML and diff checks, commit the terminal S2
+  adjudication, checkpoint the parent migration effort separately, and continue
+  with the next pending source unit.

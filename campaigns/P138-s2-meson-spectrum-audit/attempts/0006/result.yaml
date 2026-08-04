@@ -1,0 +1,25 @@
+campaign: P138
+attempt: 0006
+status: failed
+candidates: [B, D, E]
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/verify.py <S2> <dossier>
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/reviews/independent_spectral_typing_review.py <S2> <dossier>
+expected:
+  primary_checks: terminal composition tally
+  independent_checks: terminal fresh derivation tally
+failure:
+  class: verifier_dossier_marker
+  mechanism: >-
+    The repaired primary route passed its first twenty-six checks, then required
+    the S2 dossier to contain the later literature term "quasi-normal". The
+    dossier instead says that the pion mass is not derived in S2 and separately
+    identifies the Roper resonance N*(1440). The set-e command correctly
+    withheld the independent route after this attribution error.
+  scientific_effect: none
+classification: verifier_provenance_failure
+compatibility_event: none
+next_attempt: >-
+  Assert the two exact dossier statements without attributing the independent
+  quasi-normal-mode interpretation to S2, then rerun both otherwise unchanged
+  routes.

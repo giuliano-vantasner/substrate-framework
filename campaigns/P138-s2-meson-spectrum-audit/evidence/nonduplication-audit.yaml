@@ -1,0 +1,30 @@
+campaign: P138
+provisional_claim: C-MES-001
+decision: unpromoted
+direct_search:
+  identifiers_searched: [C-MES-001]
+  concepts_searched: [meson spectrum, hedgehog fluctuation, spectral typing, quasi-normal mode, resonance width]
+  result: >-
+    No accepted C-MES-001 or canonical meson-spectrum theorem exists. The exact
+    S2 radial surface is already C-MOD-001, C-MOD-002, and C-SCL-001; therefore
+    promoting a renamed composition would duplicate authority.
+gitnexus_query:
+  query: meson spectrum hedgehog fluctuation resonance vacuum mass spectral typing
+  processes: 0
+  nearest_definitions:
+    - src/substrate_framework/qball_fluctuations.py
+    - src/substrate_framework/abelian_higgs_vortex.py
+    - src/substrate_framework/radial_modes.py
+    - src/substrate_framework/skyrme_relations.py
+  result: no_duplicate_cross_model_theorem
+nearest_surfaces:
+  - {claim: C-MOD-001, distinction: exact declared massless radial Hessian continuum and physical ceilings; this is the governing S2 surface}
+  - {claim: C-MOD-002, distinction: qualified corrected profile and finite-box continuum ladder; this is the governing numeric surface}
+  - {claim: C-SCL-001, distinction: classical-to-quantum scale ledger without a particle map}
+  - {module: qball_fluctuations.py, distinction: a different declared complex-scalar model with its own exact continuum threshold}
+  - {module: abelian_higgs_vortex.py, distinction: vacuum asymptotic masses for a different declared gauge-Higgs action}
+  - {claim: C-SK-001, distinction: conditional mass-formula equality with no spectrum}
+reserved_identifier_note: >-
+  The freeze reserved C-MES-001 only provisionally. It remains absent from the
+  registry and is not treated as rejected or accepted authority.
+debt: []

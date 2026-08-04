@@ -1,0 +1,43 @@
+campaign: P138
+source_unit: S2
+direct_reverse_consumers:
+  - {source_unit: T1Z2, disposition: qualified, accepted_claims: [C-TOP-001, C-CHR-001], effect: unchanged_independent_closure}
+  - {source_unit: S3, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: O1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: FG2, disposition: qualified, accepted_claims: [C-QBL-001, C-QBL-003], effect: unchanged_independent_closure}
+  - {source_unit: FG4, disposition: qualified, accepted_claims: [C-MIX-001, C-MIX-002], effect: unchanged_independent_closure}
+  - {source_unit: P3D2, disposition: qualified, accepted_claims: [C-MOM-003, C-PDE-002], effect: unchanged_independent_closure}
+  - {source_unit: WZ3, disposition: qualified, accepted_claims: [C-TOP-002], effect: unchanged_independent_closure}
+  - {source_unit: PG1, disposition: qualified, accepted_claims: [C-SYM-001, C-CHI-001], effect: unchanged_independent_closure}
+  - {source_unit: PG2, disposition: qualified, accepted_claims: [C-BRK-001, C-CHI-002, C-GMR-001], effect: unchanged_independent_closure}
+  - {source_unit: PG3, disposition: qualified, accepted_claims: [C-MOD-001, C-MOD-002, C-SCL-001], effect: supplies_accepted_composition_without_cycle}
+  - {source_unit: PG4, disposition: qualified, accepted_claims: [C-WID-001, C-GTR-001], effect: unchanged_independent_closure}
+  - {source_unit: WM2, disposition: duplicate_evidence, accepted_claims: [C-REP-001, C-LIE-001], effect: no_new_authority}
+  - {source_unit: NY1, disposition: duplicate_evidence, accepted_claims: [C-SK-001], effect: no_new_authority}
+  - {source_unit: E1, disposition: qualified, accepted_claims: [C-MOD-001, C-RMAP-001, C-RMAP-002], effect: unchanged_independent_closure}
+  - {source_unit: E2, disposition: qualified, accepted_claims: [C-RPROF-001, C-RPROF-002], effect: unchanged_independent_closure}
+  - {source_unit: PN6, disposition: qualified, accepted_claims: [C-RES-001], effect: unchanged_independent_closure}
+  - {source_unit: WM7, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: WM8, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 20
+  dependency_nodes: [B1, PG1, PG2, PG3]
+  reverse_consumers: 18
+  unique_static_predicates_inventoried: 171
+  graph_integrity_checks: 45
+  terminal_tally: ALL 45 CHECKS PASS P138-S2-SOURCE-GRAPH
+  evidence: reviews/replay_source_graph.py
+canonical_replay:
+  tests: 90
+  result: passed
+  surfaces: [radial_modes, action_scales, skyrme_relations, sine_gordon, source_audit]
+compatibility_preflight:
+  alias_only_if_executed: [S2, B1, P3D2, WZ3, PG3, E1, E2]
+  alias_backing: np.trapezoid
+  scientific_failures: 0
+disposition_effect: >-
+  S2 receives no new accepted claim and no historical consumer inherits a
+  premise. Already qualified consumers retain only their individual accepted
+  closures; pending consumers remain pending and must be adjudicated from their
+  own frozen contracts.
+debt: []

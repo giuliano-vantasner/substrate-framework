@@ -1,0 +1,32 @@
+campaign: P138
+attempt: 0002
+status: compatibility_abort
+candidate: A
+commands:
+  - PYTHONPATH=src .venv/bin/python executable AST compatibility and check inventory
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S2_meson_hedgehog_spectrum.py
+expected: >-
+  Classify current versus legacy sampled-integration access before assigning a
+  scientific verdict, then preserve the immutable native execution result.
+result:
+  exit_status: 1
+  static_check_calls: 10
+  assert_statements: 1
+  direct_legacy_references: 3
+  dynamic_legacy_references: 0
+  imported_legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  progress_before_abort: profile_shooting_completed_before_check_1
+failure:
+  class: version_only_numpy_compatibility
+  mechanism: >-
+    The current NumPy 2.5.1 environment has np.trapezoid and no legacy
+    attribute. Immutable S2 reaches its first direct legacy call in
+    compute_B1 and raises AttributeError before any check can pass.
+  scientific_effect: none
+classification: immutable_native_compatibility_provenance
+next_attempt: >-
+  Preserve S2's source hash, install only an isolated process-local alias whose
+  implementation is np.trapezoid, and rerun the unchanged source to obtain the
+  scientific execution verdict.

@@ -1,0 +1,36 @@
+campaign: P138
+source_unit: S2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-4/bridge_S2_meson_hedgehog_spectrum.py
+source_sha256: 48a9eadf6fbc1e3ebe7fcd6b98c2d60cc10a3f5282404c84e4626910f296eaf7
+dossier_path: merged-framework/bridges/phase-4/dossiers/S2-dossier.md
+dossier_sha256: 74e77d5130c9f2f96132572bd9720d90b8da0902130dfb0866b4b4035de783ed
+native_execution:
+  numpy_version: 2.5.1
+  exit_status: 1
+  progress: profile_shooting_completed_before_check_1
+  event: version_only_numpy_compatibility_abort
+  mechanism: >-
+    Immutable S2 contains three direct calls to the removed NumPy attribute.
+    Its first call raises AttributeError before a scientific predicate runs.
+compatibility_preflight:
+  direct_legacy_attributes: 3
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+alias_only_replay:
+  source_modified: false
+  process_local_alias_implementation: np.trapezoid
+  exit_status: 0
+  terminal_tally: ALL 10 CHECKS PASS
+  shooting_slope: 2.00843228
+  energy_coefficient: 1.23163
+  truncated_inertia_shape_integral: 5.8853
+  source_lowest_box_eigenvalue: 0.09706
+  exact_eom_self_substitution_residual: 6.314e-16
+  finite_difference_eom_residual: 6.574e-06
+  restored_delta_n_mev: 293.0
+headline_warning: >-
+  The successful alias-only tally is reproduction evidence. Compatibility has
+  no scientific effect, and the ten predicates still require individual audit.

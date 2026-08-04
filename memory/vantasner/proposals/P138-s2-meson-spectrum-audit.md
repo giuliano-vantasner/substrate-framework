@@ -2,7 +2,7 @@
 description: Audit S2's hedgehog-fluctuation and meson-spectrum identification
 author: vantasner
 created: '2026-08-09T08:00:00Z'
-updated: '2026-08-09T08:00:00Z'
+updated: '2026-08-09T09:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - fluctuation-spectrum
 - migration-S2
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P138 S2 Hedgehog Fluctuation and Meson-Spectrum Audit
 
@@ -189,15 +189,15 @@ canonicalization.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| S2 executable surface is not freshly audited | Hash, compatibility preflight, native/alias replay, AST/data-flow audit, and map all ten predicates | open |
-| The action and stationary hedgehog may be declared or incomplete | Inventory the full time-dependent action and prove stationarity before linearization | open |
-| The perturbation operator may omit channels or mixed terms | Derive the full claimed quadratic form, weight, Green form, domain, and channel decomposition | open |
-| Box levels may be called bound or resonant modes | Establish continuum edges, normalizability or scattering criterion, and domain refinement | open |
-| Vacuum masses may be conflated with soliton frequencies | Type both spectral problems and construct countermodels or an explicit valid map | open |
-| A squared eigenvalue may be treated as a particle energy | Close inverse-time, action, energy, quantization, and state dictionaries | open |
-| Numerical evidence may lack status, residual, or refinement | Record solver details and run mesh, wall, tolerance, and independent-method checks | open |
-| Dependencies, consumers, and novelty are incomplete | Audit B1/PG1/PG2/PG3, accepted nearby claims, cycles, reverse consumers, and graph impact | open |
-| Registry, disposition, docs, queue, and memory are unsynchronized | Promote only reviewed distinct claims or close composition, then regenerate governed state | open |
+| S2 executable surface is not freshly audited | Hash, compatibility preflight, native/alias replay, AST/data-flow audit, and map all ten predicates | closed |
+| The action and stationary hedgehog may be declared or incomplete | Inventory the full time-dependent action and prove stationarity before linearization | closed |
+| The perturbation operator may omit channels or mixed terms | Derive the full claimed quadratic form, weight, Green form, domain, and channel decomposition | closed |
+| Box levels may be called bound or resonant modes | Establish continuum edges, normalizability or scattering criterion, and domain refinement | closed |
+| Vacuum masses may be conflated with soliton frequencies | Type both spectral problems and construct countermodels or an explicit valid map | closed |
+| A squared eigenvalue may be treated as a particle energy | Close inverse-time, action, energy, quantization, and state dictionaries | closed |
+| Numerical evidence may lack status, residual, or refinement | Record solver details and run mesh, wall, tolerance, and independent-method checks | closed |
+| Dependencies, consumers, and novelty are incomplete | Audit B1/PG1/PG2/PG3, accepted nearby claims, cycles, reverse consumers, and graph impact | closed |
+| Registry, disposition, docs, queue, and memory are unsynchronized | Promote only reviewed distinct claims or close composition, then regenerate governed state | closed |
 
 ## Review and Promotion Plan
 
@@ -209,6 +209,20 @@ literal orchestration remains in the campaign. A terminal qualification names
 every accepted mapping and rejected particle clause with durable evidence.
 Any release, disposition, queue, generated documentation, and accepted-memory
 transaction is validated once at its changed boundary.
+
+## Resolution
+
+P138 closes by exact composition rather than by claim promotion. S2's native
+NumPy 2.5.1 abort is a version-only event; an isolated alias backed by
+`np.trapezoid` reproduces all ten predicates without changing the pinned source.
+The primary 27-check and independent 18-check routes recover the omitted mixed
+Hessian correction and the exact zero continuum edge. Corrected finite-box
+levels collapse as R^-2 and establish no bound mode. The 293 MeV check bypasses
+the solved inertia and round-trips a fitted input. C-MOD-001, C-MOD-002,
+C-SCL-001, C-SG-002, and C-SK-001 govern the surviving surfaces; C-MES-001
+remains unpromoted. The 20-node graph and 90 focused tests close affected
+consumers with no canonical code or release change.
+
 
 ## Done Gate
 

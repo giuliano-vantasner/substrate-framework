@@ -1,0 +1,65 @@
+campaign: P138
+attempt: 0004
+status: passed
+candidates: [A, B, D, E]
+commands:
+  - exact source and dossier equation and data-flow audit against C-MOD-001 C-MOD-002 C-SCL-001 C-SK-001 and the symmetry/breaking claims
+  - PYTHONPATH=src .venv/bin/python three-domain accepted-profile inertia and corrected-spectrum refinement
+  - primary literature audit of ANW 1983 arXiv:1710.00837 arXiv:0804.4786 and arXiv:1811.00562
+expected: >-
+  Select the natural framework route using the frozen structural criteria and
+  determine whether S2 contains a distinct meson or hedgehog-spectrum theorem.
+result:
+  source_inertia_window: r_in_0.3_to_12
+  source_inertia_shape: 5.8853
+  corrected_full_inertia_shape:
+    R12: 6.372322514
+    R18: 6.372339919
+    R24: 6.372341818
+  corrected_lowest_box_levels:
+    R12: 0.131132401
+    R18: 0.061072240
+    R24: 0.034754127
+  exact_continuum_threshold: 0
+  below_continuum: [false, false, false]
+  max_algebraic_residual: 2.908e-09
+diagnosis:
+  - >-
+    S2 uses the local half-Hessian D and omits the exact mixed correction
+    -B'/2 already governed by C-MOD-001. Background stationarity removes the
+    first variation, not this quadratic term.
+  - >-
+    Its positive 0.09706 level is measured between artificial walls 0.3 and
+    12 with the incomplete operator. The corrected ladder collapses toward
+    the exact zero continuum edge and establishes no bound breathing mode.
+  - >-
+    The source inertia window omits both the core and the asymptotic tail. Its
+    comparison of windows ending at 10 and 12 tests only a tail slice and is
+    about 7.6 percent below the refined full shape functional.
+  - >-
+    The 293 MeV check hard-codes Lambda=5.12 GeV^-1 selected from the same
+    Delta-N fit; the profile shape is not used to compute that value. The
+    apparent agreement is a comparator round trip, not a prediction.
+  - >-
+    J(J+1) rotor arithmetic is exact conditional on an imported collective
+    Hamiltonian and assigned J labels, but S2 derives neither that action nor
+    Finkelstein-Rubinstein quantization. A collective rotor is not a linear
+    radial normal mode or a meson spectrum.
+  - >-
+    Primary literature treats radial Roper candidates as resonance or
+    quasi-normal-mode problems with frequencies and widths, and distinguishes
+    low modes from an infinite scattering continuum. S2 computes neither a
+    phase shift pole width nor complete channel spectrum.
+selection:
+  B: selected_exact_accepted_radial_composition
+  D: selected_only_for_vacuum_mass_vs_soliton_spectrum_typing
+  E: selected_for_scale_operator_and_particle_countermodels
+  A: reproduction_evidence_only
+  C: not_selected_missing_full_time_dependent_action_and_channel_operator
+claim_delta: none_expected_C_MES_001_remains_unpromoted_unless_review_finds_distinct_surface
+classification: post_freeze_candidate_selection
+compatibility_event: source_reproduction_uses_immutable_alias_only
+next_attempt: >-
+  Implement primary and independent composition verifiers, audit all ten
+  predicates and dependencies, then close consumers and the terminal S2
+  disposition without duplicating accepted radial machinery.

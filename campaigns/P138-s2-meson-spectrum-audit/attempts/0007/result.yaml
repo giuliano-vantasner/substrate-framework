@@ -1,0 +1,41 @@
+campaign: P138
+attempt: 0007
+status: passed
+candidates: [B, D, E]
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/verify.py <S2> <dossier>
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/reviews/independent_spectral_typing_review.py <S2> <dossier>
+expected: >-
+  Close the exact accepted radial composition, independently classify the
+  spectrum, expose fit and operator counterfamilies, and establish whether any
+  distinct C-MES-001 surface remains.
+result:
+  exit_status: 0
+  primary_checks: 27
+  primary_tally: ALL_27_CHECKS_PASS_P138_S2
+  independent_checks: 18
+  independent_tally: ALL_18_CHECKS_PASS_P138_INDEPENDENT_SPECTRAL_TYPING
+  corrected_full_inertia_shape:
+    R12: 6.372322514
+    R18: 6.372339919
+    R24: 6.372341818
+  source_truncated_inertia_shape: 5.8853
+  corrected_lowest_box_levels:
+    R12: 0.131132401
+    R18: 0.061072240
+    R24: 0.034754127
+  continuum_threshold: 0
+  below_continuum: [false, false, false]
+  primary_max_relative_eigensolve_residual: 2.908e-09
+  source_delta_n_mev: 293.0
+  source_delta_n_profile_dependency: none
+selection:
+  B: accepted_exact_radial_composition
+  D: vacuum_mass_vs_soliton_spectrum_typing_only
+  E: exact_scale_operator_and_particle_countermodels
+  C_MES_001: unpromoted_no_distinct_closed_surface
+classification: verifier_backed_exact_composition
+compatibility_event: none_in_mutable_verifiers
+next_attempt: >-
+  Materialize predicate dependency consumer provenance literature novelty and
+  impact evidence, then run the affected closure and terminal governance gate.

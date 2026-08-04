@@ -1,0 +1,33 @@
+campaign: P138
+attempt: 0009
+status: passed
+candidate: F
+commands:
+  - gitnexus analyze --index-only
+  - GitNexus upstream impact solve_radial_finite_box_spectrum and detect current changes
+  - GitNexus semantic query for meson spectrum hedgehog fluctuation resonance vacuum mass spectral typing
+  - direct repository symbol concept and worktree searches
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate each changed P138 record with the repository base
+expected: >-
+  Establish novelty, exact direct consumers, process risk, governed queue
+  consistency, and durable-memory validity without pretending untracked campaign
+  records are indexed symbol changes.
+result:
+  exit_status: 0
+  gitnexus_index: {nodes: 19324, edges: 30398, clusters: 300, flows: 8}
+  nearest_canonical_symbol: solve_radial_finite_box_spectrum
+  upstream_risk: LOW
+  affected_graph_processes: 0
+  tracked_changed_symbols_reported: 0
+  untracked_campaign_records_confirmed_by_git_status: true
+  semantic_duplicate_processes: 0
+  provisional_C_MES_001: unpromoted
+  repository: WORKFLOW_VALID_140_claims_140_accepted_0_proposals
+  migration_queue: 218_units_82_pending_0_partial_124_qualified
+  changed_memory_records: 2_valid
+classification: novelty_impact_and_targeted_governance_gate
+next_attempt: >-
+  Preserve the terminal gate as in progress, run scripts/validate.sh exactly
+  once for this adjudication boundary, then finalize only the attempt record and
+  record-sensitive checks.

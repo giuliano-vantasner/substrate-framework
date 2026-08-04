@@ -1,0 +1,34 @@
+campaign: P138
+source_unit: S2
+positive_object: exact_accepted_radial_composition_and_spectral_typing
+accepted_inputs:
+  - {claim: C-MOD-001, role: complete radial second variation self-adjoint form Green form and exact zero continuum edge}
+  - {claim: C-MOD-002, role: refined stationary branch and corrected finite-box continuum ladder}
+  - {claim: C-SCL-001, role: classical spectral parameter action time energy and quantization ledger}
+  - {claim: C-SG-002, role: sine-Gordon breather energy only}
+  - {claim: C-SK-001, role: conditional B1-canceling mass equality only}
+source_declared_inputs:
+  - massless Option-C reduced static energy at n=1
+  - mirrored time kinetic coefficient W=r^2+2*sin(f)^2
+  - finite Dirichlet walls and radial l=0 label
+  - collective Hrot=J(J+1)/(2I) and J values one-half and three-halves
+  - Finkelstein-Rubinstein J=I constraint and baryon labels
+  - ANW inertia structure and fitted physical Lambda=5.12 GeV^-1
+  - sine-Gordon-to-hedgehog and pion/meson interpretations
+excluded_from_derivation_or_selection:
+  - source eigenvalue 0.09706 and B1 comparator 1.2322
+  - physical N-Delta splitting 293 MeV and Roper or pion masses
+  - fitted Lambda and F_pi/e numerical values
+  - pending B1 authority and all source chronology
+missing_for_headline:
+  - full time-dependent chiral or Skyrme action with normalization
+  - stationary physical background and complete channel decomposition
+  - half-line self-adjoint or outgoing scattering boundary problem
+  - bound-state norm or resonance pole phase shift and width
+  - absolute time and action scales quantization and state dictionary
+  - vacuum meson small-field operator and a valid map to soliton modes
+units: >-
+  C-MOD eigenvalues are dimensionless squared classical frequencies. S2 does
+  not close the inverse-time, action, background-energy, or particle-mass map.
+claim_delta: none
+debt: []

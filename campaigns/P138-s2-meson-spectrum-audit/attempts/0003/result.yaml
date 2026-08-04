@@ -1,0 +1,28 @@
+campaign: P138
+attempt: 0003
+status: passed
+candidate: A
+command: >-
+  In a fresh process, bind immutable S2's legacy NumPy attribute to
+  np.trapezoid and execute the unchanged hash-pinned source through runpy.
+expected: >-
+  Obtain the scientific source tally without changing the S2 file or treating
+  version compatibility as evidence for or against any physics predicate.
+result:
+  exit_status: 0
+  source_checks: 10
+  terminal_tally: ALL_10_CHECKS_PASS
+  shooting_slope: 2.00843228
+  energy_coefficient: 1.23163
+  truncated_inertia_shape_integral: 5.8853
+  source_lowest_box_eigenvalue: 0.09706
+  exact_eom_self_substitution_residual: 6.314e-16
+  finite_difference_eom_residual: 6.574e-06
+  restored_delta_n_mev: 293.0
+classification: source_reproduction_only_pending_predicate_audit
+compatibility_event: immutable_alias_only_backed_by_np_trapezoid
+next_attempt: >-
+  Derive the complete mixed-term Hessian, classify the wall level against the
+  exact continuum threshold, audit the moment-of-inertia normalization and
+  fit data flow, and map all ten predicates to accepted claims or rejection
+  evidence before selecting a positive route.

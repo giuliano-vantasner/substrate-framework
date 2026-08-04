@@ -1,0 +1,32 @@
+campaign: P138
+attempt: 0008
+status: passed
+candidate: F
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_radial_modes.py tests/test_action_scales.py tests/test_skyrme_relations.py tests/test_sine_gordon.py tests/test_source_audit.py
+expected: >-
+  Pin the complete dependency and reverse-consumer source graph, classify every
+  immutable compatibility shape, and replay the canonical accepted surfaces
+  actually used by the no-claim-delta composition.
+result:
+  exit_status: 0
+  source_graph_nodes: 20
+  frozen_source_predicates_inventoried: 171
+  source_graph_checks: 45
+  source_graph_tally: ALL_45_CHECKS_PASS_P138_S2_SOURCE_GRAPH
+  focused_tests: 90
+  focused_test_tally: 90_passed
+  alias_only_if_executed: [S2, B1, P3D2, WZ3, PG3, E1, E2]
+  mutable_legacy_references_added: 0
+  scientific_failures: 0
+classification: affected_dependency_consumer_closure
+note: >-
+  Historical source predicates are hash and AST inventoried rather than
+  needlessly re-executed because P138 changes no canonical equation or API.
+  The accepted canonical closures that decide S2 are executed through focused
+  tests. Source tallies remain attempt evidence, not authority.
+next_attempt: >-
+  Complete direct and graph nonduplication and impact audits, materialize the
+  terminal source disposition and memory record, then run the single integrated
+  governance boundary.

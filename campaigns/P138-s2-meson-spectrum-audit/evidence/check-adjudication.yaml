@@ -1,0 +1,78 @@
+campaign: P138
+source_unit: S2
+checks:
+  - id: S2.1
+    status: retained_as_existing_numeric_profile
+    mapping: C-MOD-002
+    reason: >-
+      The hash-pinned shot reproduces a conditional massless radial profile and
+      energy coefficient. The boundaries alone do not establish topological
+      degree, a physical Skyrmion, or uniqueness.
+  - id: S2.2
+    status: qualified_truncated_functional
+    mapping: C-MOD-002
+    reason: >-
+      Positivity on r in [0.3,12] is true, but the convergence test compares
+      only two upper cutoffs. The full positive functional converges to 6.37234
+      rather than the reported 5.8853.
+  - id: S2.3
+    status: retained_as_conditional_arithmetic
+    mapping: null
+    reason: >-
+      The 3/(2I) difference follows exactly after importing Hrot and the J
+      labels. Neither the collective action nor Finkelstein-Rubinstein state
+      assignment is derived.
+  - id: S2.4
+    status: rejected_as_prediction
+    mapping: C-SCL-001
+    reason: >-
+      Lambda=5.12 GeV^-1 is hard-coded from the same N-Delta fit, the solved
+      L_shape is absent from the dependency graph, and every positive target
+      can be reproduced by setting Lambda=1500/target.
+  - id: S2.5
+    status: rejected_bound_or_breathing_mode_reading
+    mapping: [C-MOD-001, C-MOD-002]
+    reason: >-
+      The source omits the mixed Hessian correction and uses two artificial
+      walls. Corrected domain refinement yields an inverse-wall-squared ladder
+      above the exact zero continuum edge, not a positive bound mode.
+  - id: S2.6
+    status: partly_valid_numeric_stationarity
+    mapping: C-MOD-002
+    reason: >-
+      The machine-epsilon residual substitutes its defining ODE right-hand
+      side and is tautological. The separately finite-differenced residual is
+      useful conditional evidence and has accepted refinement support.
+  - id: S2.7
+    status: rejected_as_operator_oracle
+    mapping: C-MOD-001
+    reason: >-
+      Subtracting 50 times the generalized mass matrix shifts every eigenvalue
+      by -50 by construction. It does not test the omitted mixed term, domain,
+      continuum threshold, or physical mode interpretation.
+  - id: S2.8
+    status: retained_as_conditional_counterformula
+    mapping: null
+    reason: >-
+      The J-squared and J(J+1) arithmetic differs exactly for assigned labels,
+      but selecting the latter as physics still imports the quantum rotor and
+      state dictionary.
+  - id: S2.9
+    status: qualified_definitional_identity
+    mapping: C-SG-002
+    reason: >-
+      The accepted breather energy is reused, but E0*N^-1/2 and E0/sqrt(N) are
+      the same scalar definition. No operator intertwiner, spectrum map, or
+      dimensional lift follows.
+  - id: S2.10
+    status: retained_as_existing_conditional_mass_match
+    mapping: C-SK-001
+    reason: >-
+      The exact B1 cancellation is C-SK-001. Both mass formulas and the
+      electron-energy value remain imported, and no meson spectrum follows.
+headline_decision: >-
+  Qualify S2. Accepted radial and scale claims positively type its corrected
+  object as a wall-quantized massless continuum calculation. Preserve its
+  conditional arithmetic, but reject the bound breathing mode, Roper, baryon,
+  meson-spectrum, and fitted-splitting prediction readings.
+debt: []

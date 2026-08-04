@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 83
-  qualified: 123
+  pending_adjudication: 82
+  qualified: 124
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -979,8 +979,47 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOD-001
+  - C-MOD-002
+  - C-SCL-001
+  - C-SG-002
+  - C-SK-001
+  qualification: S2's hash-pinned ten predicates reproduce under an isolated immutable compatibility alias
+    backed by np.trapezoid. Its massless radial profile and finite-difference stationarity evidence survive
+    through C-MOD-001 and C-MOD-002. The source omits the mixed Hessian correction, removes the physical
+    origin, fixes an outer wall, and calls a positive box level a bound breathing mode. The corrected
+    levels fall 0.131132, 0.061072, and 0.034754 as walls grow from 12 to 24, remain above the exact zero
+    continuum edge, and form an inverse-wall-squared ladder. Its inertia window gives 5.8853 while the
+    complete functional converges to 6.37234; the reported 293 MeV splitting uses neither and instead
+    hard-codes the same fitted 5.12 GeV^-1 inertia. Rotor arithmetic and the classical guard are conditional
+    on imported collective quantization and assigned labels. The shared lift is a scalar identity, and
+    the final cancellation is already C-SK-001. No full action, channel spectrum, bound state, resonance
+    pole or width, vacuum meson mass, quantization, baryon, Roper, particle, scale, or substrate mechanism
+    is established.
+  evidence:
+  - campaigns/P138-s2-meson-spectrum-audit/reviews/source_adjudication.md
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/source-reproduction.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/source-audit.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/check-adjudication.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/input-provenance.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/dependency-audit.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/consumer-audit.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/candidate-comparison.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/primary-provenance.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/evidence/literature-audit.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/verify.py
+  - campaigns/P138-s2-meson-spectrum-audit/reviews/independent_spectral_typing_review.py
+  - campaigns/P138-s2-meson-spectrum-audit/reviews/replay_source_graph.py
+  - campaigns/P138-s2-meson-spectrum-audit/attempts/0007/result.yaml
+  - campaigns/P138-s2-meson-spectrum-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/S2-qualified-review.md
+  note: P138 closes 27 primary and 18 independent checks, 45 frozen graph checks, and 90 focused tests
+    without promoting provisional C-MES-001. The 20-node graph inventories 171 source predicates; historical
+    scripts are not ceremonially rerun because no canonical code path changes. Mutable code uses np.trapezoid
+    or the canonical helper.
 - source_unit: S3
   phase: phase-4
   path: merged-framework/bridges/phase-4/bridge_S3_su3_wzw_baryon_reps.py

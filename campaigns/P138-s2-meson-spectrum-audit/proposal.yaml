@@ -87,5 +87,5 @@ comparators_blinded_until: >-
   numerical acceptance criteria are frozen and committed. S2's body, check
   literals, eigenvalues, fitted masses, and named physical comparisons remain
   unopened until that boundary.
-status: active
+status: accepted
 

@@ -1,0 +1,33 @@
+campaign: P138
+source_unit: S2
+base_release: v0.105.0
+base_commit: 7bb60fe
+scientific_base_commit: bb1016e
+frozen_proposal_commit: 0c79dd0
+claim_delta: none
+primary_verifier: proposals/P138-s2-meson-spectrum-audit/verify.py
+primary_checks: 27
+primary_route:
+  - hash-pinned source dossier and frozen contract
+  - AST predicate compatibility and data-flow audit
+  - canonical exact second variation and continuum edge
+  - three-wall DOP853 profile and sparse consistent-mass FEM refinement
+  - generalized-eigensolve residuals and inverse-wall-squared classification
+  - rotor fit lift operator and missing-channel countermodels
+independent_review: proposals/P138-s2-meson-spectrum-audit/reviews/independent_spectral_typing_review.py
+independent_checks: 18
+independent_route:
+  - fresh density differentiation without importing radial_modes.py
+  - independent mixed-term integration-by-parts correction
+  - fresh far-field continuum and analytic box-wall limit
+  - fit tail operator and generalized-shift counterfamilies
+  - AST spectral-object and dossier-scope audit
+exact_precision: SymPy exact algebra
+numeric_precision: NumPy float64
+numeric_solver: >-
+  DOP853 shooting with accepted C-MOD-002 tolerances and sparse generalized
+  consistent-mass FEM at R=12,18,24 with 801,1201,1601 samples.
+maximum_relative_eigensolve_residual: 2.908e-09
+numerical_integration: substrate_framework.numerics.trapezoid_integral
+compatibility_event: none_in_mutable_verifiers
+debt: []

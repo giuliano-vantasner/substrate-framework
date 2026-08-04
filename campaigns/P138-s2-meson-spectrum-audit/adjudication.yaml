@@ -1,0 +1,60 @@
+campaign: P138
+title: S2 hedgehog fluctuation and meson-spectrum audit
+source_baseline: substrate@6d1f4e0
+source_units: [S2]
+base_release: v0.105.0
+adjudicated_at: '2026-08-09T09:00:00Z'
+selected_candidates:
+  - {id: B, reason: C-MOD-001 C-MOD-002 and C-SCL-001 exactly close the corrected radial spectral object.}
+  - {id: D, reason: Vacuum generalized masses are typed separately and S2 closes no vacuum meson theorem.}
+  - {id: E, reason: Exact wall fit scale lift and operator counterfamilies prevent scalar agreement from becoming a particle map.}
+  - {id: F, reason: Predicate dependency consumer compatibility novelty impact queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: C, decision: not_selected_missing_full_time_dependent_action_and_channel_problem}
+claims: []
+unpromoted_claims:
+  - {id: C-MES-001, reason: No distinct dependency-closed surface remains beyond accepted radial scale breather-energy and mass-relation claims.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_spectral_typing_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_composition_attempt: attempts/0007/result.yaml
+  passing_consumer_attempt: attempts/0008/result.yaml
+  novelty_impact_attempt: attempts/0009/result.yaml
+  integrated_terminal_gate: attempts/0010/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: memory/vantasner/decisions/S2-qualified-review.md
+source_disposition:
+  S2: qualified
+accepted_mappings: [C-MOD-001, C-MOD-002, C-SCL-001, C-SG-002, C-SK-001]
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_canonical_helper
+  immutable_source_alias_only: [S2]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P138-s2-meson-spectrum-audit/verify.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S2_meson_hedgehog_spectrum.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/dossiers/S2-dossier.md
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P138-s2-meson-spectrum-audit/reviews/independent_spectral_typing_review.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S2_meson_hedgehog_spectrum.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/dossiers/S2-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P138-s2-meson-spectrum-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_radial_modes.py tests/test_action_scales.py tests/test_skyrme_relations.py tests/test_sine_gordon.py tests/test_source_audit.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

@@ -1,0 +1,42 @@
+campaign: P138
+role: primary_spectral_scope_cross_check_not_derivation_input
+sources:
+  - title: Static properties of nucleons in the Skyrme model
+    authors: [Gregory S. Adkins, Chiara R. Nappi, Edward Witten]
+    year: 1983
+    record: https://cds.cern.ch/record/146603/
+    doi: https://doi.org/10.1016/0550-3213(83)90559-X
+    finding: >-
+      The primary record supports a Skyrme-model nucleon and Delta collective
+      treatment as literature context. P138 does not import its fitted inertia
+      as a prediction or treat collective rotation as a radial meson spectrum.
+  - title: Roper resonances and quasi-normal modes of Skyrmions
+    authors: [C. Adam, M. Haberichter, T. Romanczukiewicz, A. Wereszczynski]
+    year: 2018
+    url: https://arxiv.org/abs/1710.00837
+    finding: >-
+      The primary study treats radial Roper candidates as resonances or
+      quasi-normal modes with frequencies and widths dependent on the model,
+      pion mass, and sextic term. This supports requiring a scattering or
+      outgoing-wave oracle rather than labeling a positive wall level bound.
+  - title: Skyrmion vibration modes within the rational map ansatz
+    authors: [Chong-Qing Lin, B. M. A. G. Piette]
+    year: 2008
+    url: https://arxiv.org/abs/0804.4786
+    finding: >-
+      Radial and rational-map modes decouple only within a declared ansatz, and
+      the paper reports limitations relative to full numerical spectra. S2's
+      radial calculation cannot silently stand for every angular channel.
+  - title: Vibrational modes of Skyrmions
+    authors: [Sven Bjarke Gudnason, Chris Halcrow]
+    year: 2018
+    url: https://arxiv.org/abs/1811.00562
+    finding: >-
+      The primary study distinguishes harmonic modes from an infinite continuum
+      of scattering modes. A finite-box discretization therefore needs an
+      explicit continuum and domain analysis before physical mode assignment.
+selection_effect: >-
+  The sources confirm the preregistered spectral distinctions. No literature
+  eigenvalue, mass, width, fitted coefficient, or comparator enters the selected
+  composition, derivation, or pass threshold.
+debt: []

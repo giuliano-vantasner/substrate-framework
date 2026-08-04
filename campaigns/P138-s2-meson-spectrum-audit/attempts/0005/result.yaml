@@ -1,0 +1,25 @@
+campaign: P138
+attempt: 0005
+status: failed
+candidates: [B, D, E]
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/verify.py <S2> <dossier>
+  - PYTHONPATH=src .venv/bin/python proposals/P138-s2-meson-spectrum-audit/reviews/independent_spectral_typing_review.py <S2> <dossier>
+expected:
+  primary_checks: terminal composition tally
+  independent_checks: terminal fresh derivation tally
+failure:
+  class: verifier_source_marker
+  mechanism: >-
+    The primary route passed its first seventeen scientific checks and then
+    searched for the prose substring "Finkelstein-Rubinstein J=I constraint
+    (IMPORTED". S2 writes "Finkelstein-Rubinstein constraint J=I (IMPORTED"
+    in executable-adjacent commentary, so the marker failed despite the
+    intended provenance being present. The set-e command correctly withheld
+    the independent route after the primary failure.
+  scientific_effect: none
+classification: verifier_representation_failure
+compatibility_event: none
+next_attempt: >-
+  Match the exact source word order while retaining the separate rigid-top
+  marker, then rerun both otherwise unchanged routes.

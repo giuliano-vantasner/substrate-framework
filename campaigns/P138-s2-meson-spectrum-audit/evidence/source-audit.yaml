@@ -1,0 +1,62 @@
+campaign: P138
+source_unit: S2
+source_sha256: 48a9eadf6fbc1e3ebe7fcd6b98c2d60cc10a3f5282404c84e4626910f296eaf7
+supportable_surfaces:
+  - >-
+    The declared massless radial energy and ODE are the C-MOD-001 model. The
+    solved branch and independently finite-differenced stationarity evidence
+    are already governed as qualified numeric evidence by C-MOD-002.
+  - >-
+    J(J+1)/(2I) gives an exact 3/(2I) difference between assigned one-half and
+    three-halves labels, while the separately displayed classical J-squared
+    rule gives 1/I. This is conditional arithmetic, not a derivation of the
+    collective Hamiltonian, labels, or Finkelstein-Rubinstein constraint.
+  - >-
+    The C-SG-002 breather energy is reused correctly, and the two displayed
+    N^-1/2 expressions are algebraically identical. That equality supplies no
+    map between a sine-Gordon breather and a hedgehog fluctuation operator.
+  - >-
+    The final symbolic cancellation is exactly C-SK-001's conditional mass
+    matching. Its numerical electron-energy substitution remains imported.
+corrected_composition:
+  claims: [C-MOD-001, C-MOD-002, C-SCL-001]
+  summary: >-
+    C-MOD-001 supplies the complete mixed-term Hessian and exact zero continuum
+    edge; C-MOD-002 supplies the refined profile and inverse-wall-squared box
+    ladder; C-SCL-001 keeps the missing time, action, energy, quantization, and
+    state scales explicit. Together they positively type S2's radial object as
+    a wall-quantized classical continuum calculation, not a bound meson mode.
+rejected_or_qualified_surfaces:
+  - >-
+    S2 assembles only the local half-Hessian D and omits -B'/2, although its own
+    comments display the mixed term. Background stationarity removes the first
+    variation, not that quadratic contribution.
+  - >-
+    Its fixed walls r=0.3 and r=12 remove the physical origin and manufacture a
+    positive discrete level. The corrected levels 0.131132401, 0.061072240, and
+    0.034754127 at walls 12, 18, and 24 collapse toward the exact zero continuum
+    edge and are never below it.
+  - >-
+    The reported inertia integral 5.8853 omits the core and leading massless
+    tail. The complete functional converges to 6.37234; comparing only upper
+    windows ending at 10 and 12 does not test the omitted contributions.
+  - >-
+    The 293 MeV predicate hard-codes Lambda=5.12 GeV^-1 from the same N-Delta
+    fit and never uses the solved inertia functional. It round-trips the target
+    comparator and is not a profile prediction.
+  - >-
+    Substituting the ODE right-hand side into the same residual is exact by
+    construction. The finite-difference residual is the independent numerical
+    evidence and is already strengthened by C-MOD-002 refinement.
+  - >-
+    Replacing C by C-50W shifts every generalized eigenvalue by exactly -50; it
+    proves matrix response to a constructed shift, not that the source Hessian
+    or physical spectral classification is correct.
+  - >-
+    S2 provides no full time-dependent chiral action, complete angular-channel
+    operator, scattering boundary condition, phase shift, pole, resonance
+    width, vacuum mass operator, quantization rule, or particle dictionary.
+source_disposition: qualified
+claim_mapping: [C-MOD-001, C-MOD-002, C-SCL-001, C-SG-002, C-SK-001]
+provisional_claim: {id: C-MES-001, decision: unpromoted_no_distinct_surface}
+debt: []

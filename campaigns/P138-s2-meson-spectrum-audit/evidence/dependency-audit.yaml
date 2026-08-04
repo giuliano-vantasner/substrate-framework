@@ -1,0 +1,26 @@
+campaign: P138
+source_unit: S2
+declared_dependencies:
+  - {source_unit: B1, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority, compatibility: alias_only_if_executed}
+  - {source_unit: PG1, disposition: qualified, accepted_claims: [C-SYM-001, C-CHI-001], use: ceilings_only}
+  - {source_unit: PG2, disposition: qualified, accepted_claims: [C-BRK-001, C-CHI-002, C-GMR-001], use: ceilings_only}
+  - {source_unit: PG3, disposition: qualified, accepted_claims: [C-MOD-001, C-MOD-002, C-SCL-001], use: accepted_radial_composition_only}
+accepted_dependency_closure:
+  - {claim: C-MOD-001, dependencies: []}
+  - {claim: C-MOD-002, dependencies: [C-MOD-001]}
+  - {claim: C-SCL-001, dependencies: [C-DIM-001]}
+  - {claim: C-DIM-001, dependencies: []}
+  - {claim: C-SG-002, dependencies: [C-SG-001]}
+  - {claim: C-SG-001, dependencies: []}
+  - {claim: C-SK-001, dependencies: []}
+excluded_imports:
+  - physical Skyrme action soliton or baryon identity
+  - collective quantization Finkelstein-Rubinstein theorem and state labels
+  - fitted physical inertia particle masses and observed splitting
+  - PG1 or PG2 physical pion readings
+  - PG3 bound-state Roper or gap-ratio readings
+circularity: >-
+  PG1 PG2 and PG3 cite S2 historically, but P138 imports only their individually
+  accepted claims whose adjudications exclude S2 as a derivation premise.
+claim_delta: none
+debt: []
