@@ -1,0 +1,51 @@
+id: P164
+base_release: v0.125.0
+base_commit: 326cfa2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SM2]
+question: >-
+  Which exact charge-spectrum and hypercharge-convention statements in SM2
+  survive, and does reproducing externally supplied electric charges derive a
+  unique physical Standard Model generation or only validate a declared table?
+invariants:
+  - C-REP-001 owns exact finite supplied-table charge arithmetic and Abelian normalization covariance but no physical representation or anomaly derivation.
+  - C-REP-002 fixes Pauli-half doublet weights and the scalar commuting Abelian generator but no physical matter content or charge normalization.
+  - C-GSM-001 fixes a conditional lower-doublet unbroken generator in one normalization but does not derive the scalar vacuum physical electroweak sector or matter table.
+  - C-PGA-001 fixes only the faithful local product Lie algebra and explicitly supplies no hypercharge table physical matter carrier or global group.
+  - Pending SM3 cannot supply anomaly-based selection to SM2 before its own adjudication.
+allowed_imports:
+  - C-REP-001
+  - C-REP-002
+  - C-GSM-001
+  - C-PGA-001
+  - exact finite-dimensional weight spectra tensor multiplicities Abelian rescaling and charge-conjugation algebra
+  - SM2 and its dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned SM2 predicate replay and individual adjudication.
+  - id: B
+    description: Complete accepted composition through C-REP-001 C-REP-002 and C-GSM-001 with no new claim or API.
+  - id: C
+    description: A reusable exact product-multiplet charge-spectrum and convention ledger if existing supplied-state traces do not type the multiplet structure.
+  - id: D
+    description: An anomaly-selected unique generation or hypercharge table imported from pending SM3.
+  - id: E
+    description: A physical one-generation Standard Model matter interpretation selected by observed charges and familiar labels.
+  - id: F
+    description: Abelian-rescaling conjugation incomplete-table and alternative-charge counterfamilies.
+  - id: G
+    description: Claim source dependency consumer compatibility release queue documentation and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit supplied-versus-derived provenance
+  - typed multiplet structure beyond statewise charge arithmetic
+  - convention covariance under Abelian generator coefficient and coupling rescaling
+  - chirality and charge-conjugation consistency without importing anomaly selection
+  - assumption and parameter economy mutation sensitivity API novelty and consumer compatibility
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before renewed SM2 and dossier body audit; SM2's table values
+  and source predicates were already exposed by P081 P129 and P163 consumer
+  work and the generated queue, so no fresh value blinding is claimed
+status: frozen_with_prior_source_exposure
+

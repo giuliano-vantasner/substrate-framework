@@ -1,0 +1,26 @@
+attempt: 0001
+campaign: P164
+candidate: source_body_unopened_freeze_with_prior_exposure
+status: passed
+started_at: '2026-08-10T19:35:00Z'
+finished_at: '2026-08-10T19:38:00Z'
+commands:
+  - instantiate_campaign_proposal_and_matching_frozen_manifest
+  - memory_validate_P164_proposal
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+base_release: v0.125.0
+base_commit: 326cfa2
+source_sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+dossier_sha256: 20ba861ddd8d9ccd89ddf9fc8d98e6ed8a824a99aa04d569d9e6756ba5facc08
+proposal_sha256: 6f50006ddd645a1348ae837be56dbab13236dd2644c75ecc175f51db31d3c029
+frozen_manifest_sha256: 6f50006ddd645a1348ae837be56dbab13236dd2644c75ecc175f51db31d3c029
+prior_exposure:
+  source_values_and_predicates: P081_P129_P163_and_generated_queue
+  fresh_blinding_claimed: false
+source_body_opened_in_P164_before_freeze: false
+debt:
+  - audit_all_source_predicates_and_table_provenance
+  - decide_accepted_composition_versus_distinct_multiplet_API
+  - separate_conventions_conjugation_anomaly_and_physical_identity
+next_attempt: commit_the_freeze_then_open_and_reproduce_the_hash_pinned_source
