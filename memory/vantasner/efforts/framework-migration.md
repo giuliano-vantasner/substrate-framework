@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-08T20:45:00Z'
+updated: '2026-08-08T22:15:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,13 +23,15 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.99.0`, containing one hundred thirty-four
-claims. P129 adds the exact C-RGE-005 gauge-only product-group coefficient
-ledger with supplied-invariant, imported-formula, convention, contribution,
-and Abelian-coordinate boundaries. It terminally qualifies WM5 after rejecting
-its physical-field-content, SM4-upgrade, full-two-loop, comparator-ordering,
-and global-running overreads. WM6 and later units remain pending. The null
-release remains the recorded start state, not the current authority.
+The current accepted frontier is `v0.100.0`, containing one hundred thirty-five
+claims. P130 adds C-RGE-006's status-gated conditional gauge-only boundary-
+running solver, exact zero-matrix containment, independent direct-coupling
+reproduction, numeric refinement, positivity and residual gates, and reference-
+scale covariance. It terminally qualifies WM6 after rejecting its prediction,
+pending-SM4 validation, comparator-use prose, fitted uniform-matrix all-orders
+reading, and physical unification overreads. T1Z2 and the remaining queue units
+remain pending. The null release remains the recorded start state, not the
+current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -54,7 +56,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 91 pending, 0 partially migrated, 3 migrated, 115 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 90 pending, 0 partially migrated, 3 migrated, 116 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -216,6 +218,7 @@ Attempts are append-only and individually reproducible.
 | 0148 | P127 exact finite matcher, AST/import, numeric data-flow, mutation, and physics-fixture audit | `campaigns/P127-gb6-honesty-firewall-audit/attempts/0001` through `0006`, then terminal no-release boundary | GB6 qualified with no accepted-claim mapping and v0.98.0 unchanged; commit `b63e70e` | All twenty-nine source predicates, forty-nine primary checks, thirty-one independent checks, and WN7's fifty-nine checks reproduce. Construction, alias, Unicode, tag-smuggling, prose-collision, bounded-map, numeric/imported-comparator, one-point-derivative, seven-point-lookup, alternate-superlinear, and floor-point probes constrain the result to a pinned finite theorem. Two verifier inventory failures and one YAML representation failure are preserved before repair. GitNexus detects no canonical change; the integrated workflow passes all 1,090 tests with 517 memory files and the physics skill valid. No claim, API, release, numerical integration, or compatibility event is added. | Freeze WM4's near-miss identity audit before source execution; require exact one-loop coefficient conventions, input coordinates, rank and nullspace of linear non-unification functionals, equivalence versus proportionality of the angle and crossing-scale projections, input-choice and normalization dependence, dimensions, all predicates, dependencies, consumers, nonduplication, and comparator blinding, and do not turn a shared vanishing locus or fitted measured inputs into a unique physical unification mechanism, predicted weak angle, crossing scale, new force, or observation |
 | 0149 | P128 exact linear annihilator, conditional crossing, absolute range, weak-residual, convention, and WM4 audit | `campaigns/P128-wm4-nearmiss-identity-audit/attempts/0001` through `0007`, then terminal no-release boundary | WM4 qualified through C-IDN-001 and C-RGE-004 with v0.98.0 unchanged; commit `a83cc63` | All eleven WM4 predicates, forty-four primary checks, thirty-four fresh independent checks, and the twenty-nine-check SM4/WM3/WM4 dependency replay pass. The rank-two linear obstruction and conditional signed projections survive, while all-equal and one-equal slope mutants, a distinct-slope zero reconstruction denominator, a nonlinear same-zero-locus diagnostic, explicit alpha_em dependence, coordinate scaling, and paired Abelian rescaling qualify the stronger prose. WM4 hard-codes coefficients it claims to import and uses math.isclose for bit-for-bit language. Four verifier-construction failures are preserved. GitNexus detects no canonical change; the integrated workflow passes all 1,090 tests with 519 memory files and the physics skill valid. No claim, API, release, numerical integration, or compatibility event is added. | Freeze WM5's two-loop coefficient audit before source execution; require exact field-table provenance, representation multiplicities and Weyl-versus-Dirac conventions, U1 normalization, scalar weights, one- and two-loop sign and matrix conventions, comparison blinding, dependency closure, every predicate, consumers, and nonduplication, and do not turn agreement with a standard table or pending imported state lists into a corpus-derived Standard Model, unique matter content, threshold-corrected running, physical unification, or substrate mechanism |
 | 0150 | P129 exact gauge-only product-group coefficient ledger, primary-formula, source, convention, covariance, mutation, and consumer audit | `campaigns/P129-wm5-two-loop-coefficient-audit/attempts/0001` through `0004`, then v0.99.0 promotion | C-RGE-005 accepted and WM5 qualified; commit `f124ca6` | WM5's eleven checks, twenty-eight primary checks, twelve fresh independent checks, sixteen focused tests, and twenty-eight direct-consumer checks reproduce. The accepted API exactly separates gauge, Weyl, and complex-scalar contributions, fixes the beta sign, loop factors and matrix orientation, permits at most one U1, and proves Abelian row-column plus inverse-coupling covariance. The source hard-codes generation, group, counting, and normalization inputs; imports only WM1, pending SM2, and pending SM4; embeds a comparator in its headline check; and omits the same-order Yukawa term. One independent moment-aggregation failure is preserved before repair. The refreshed graph rates the additive API LOW risk. The integrated workflow passes all 1,106 tests with 523 memory files and the physics skill valid. No numerical integration or compatibility event occurs. | Freeze WM6's two-loop-running audit before source execution; require its exact ODE convention, boundary and input provenance, solver and shooting definitions, tolerance/domain/method refinement, one-loop soluble limit, Yukawa and matching omissions, comparator gate, matrix-scaling inverse-fit semantics, every predicate, dependencies, consumers, and nonduplication, and do not turn a local two-loop truncation or fitted whole-matrix scale into an all-orders impossibility, physical unification, or substrate prediction |
+| 0151 | P130 exact zero-matrix containment, status-gated gauge-only boundary running, direct-coupling rederivation, refinement, mutation, and all-orders audit | `campaigns/P130-wm6-two-loop-running-audit/attempts/0001` through `0003`, then v0.100.0 promotion | C-RGE-006 accepted and WM6 qualified; commit `bf7a84d` | WM6's eleven checks, twenty-three primary checks, twelve fresh direct-coupling checks, twelve focused tests, and thirty-eight dependency and direct-consumer checks reproduce. The accepted API exposes every supplied boundary, constraint, readout, method, tolerance, solver status, residual, and positive-domain gate; exactly contains C-RGE-004 at zero matrix; and agrees across DOP853, Radau, tolerance changes, and inverse/direct variables. WM6 leaves RK45 implicit, hard-codes its output regression, uses the weak comparator in five later checks, and fits a target-dependent whole-matrix scale. Independent tensor and matching-offset countermodels reject its all-orders reading. GitNexus reports LOW additive API impact and zero affected processes. The integrated workflow passes all 1,118 runnable tests with eight declared skips, 527 memory files, and the physics skill valid. No quadrature or compatibility event occurs. | Freeze T1Z2's cross-oracle sign audit before source execution; require exact C2 character domains and generator maps, distinguish RP2 deck action, SU2 central rotation, topological-charge parity, exchange, and statistics, demand a typed common object or explicit intertwiner rather than equal scalar outputs, test simply-connected and even-charge countermodels, audit all predicates, OM1/S2 dependencies, consumers, and nonduplication, and do not turn three evaluations equal to minus one into identity of representations, physical sectors, fermionic statistics, or a substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1278,11 +1281,24 @@ already reads a comparator, and its gauge matrix omits the same-order Yukawa
 term. Three direct consumers reproduce but remain pending. No sampled
 integration or NumPy compatibility event occurs.
 
+P130 adds C-RGE-006 for a supplied three-factor gauge-only boundary-running
+inverse problem. It derives the inverse-coupling coordinate flow from
+C-RGE-005, exactly reconstructs the zero-matrix affine solution, and exposes a
+positive status-gated DOP853 shooting result with explicit residuals,
+tolerances, and scale covariance. Tightened tolerances, Radau, and a fresh
+direct-gauge-coupling route agree. Sign, transpose, boundary, and low-input
+mutations move the result. WM6 is qualified because all low coordinates and
+the equal high boundary are supplied, its omitted Yukawa and matching terms
+remain absent, and its fitted whole-matrix multiplier depends on the chosen
+target and cannot span generic higher-order tensors. No physical prediction,
+unification, all-orders no-go, sampled quadrature, or compatibility event is
+accepted.
+
 ## Canonicalization
-The registry, `v0.99.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirty-four accepted claims. P001 through P129 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 91 pending, 0 partial, 3 migrated, 115 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.100.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred thirty-five accepted claims. P001 through P130 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 90 pending, 0 partial, 3 migrated, 116 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 91 pending, 3 migrated, 115 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next sequential unit is WM6, pinned at SHA-256 `6d1ea4245adcf490466974d4a40b24843cd92e883c6e885936fb030cd1b31d57`. Its queue entry claims that two-loop gauge running from a supplied concurrent boundary shifts a weak coordinate from 0.20757 to 0.21064, leaves an 8.90 percent comparator miss, and that scaling the full matrix by about 8.75 proves pure-Standard-Model gauge running cannot close the gap at any order. It cites SM2, SM4, WM1, WM3, and WM5, contains eleven dynamic checks, one assertion, and a numeric oracle. P130 must freeze the ODE, sign and normalization conventions, input and boundary provenance, shooting residuals, solver status, tolerance and independent-method refinement, the exact one-loop limit, data gate, Yukawa threshold and matching omissions, matrix-scale inverse semantics, every predicate, dependencies, consumers, and nonduplication before source execution. It must not turn a two-loop truncation, a local perturbative estimate, or a fitted uniform matrix multiplier into an all-orders no-go, physical unification, preferred boundary, observed prediction, or substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 90 pending, 3 migrated, 116 qualified, 8 duplicate-evidence, and 1 out-of-scope bridge unit. The next dependency-eligible queue unit is T1Z2, pinned at SHA-256 `d9c08f9440fb79b9ef445ad77aff113db6c7c7f8943c5838180fb5704fd71bed`. Its queue entry claims that an RP2-disclination holonomy, kink and antikink charge parity, and an SU2 central rotation are one common nontrivial C2 character rather than coincident scalar minus-one evaluations. It cites OM1 and S2, contains ten literal check calls, one assertion, and a symbolic oracle. P131 must freeze the exact group domains, character maps, generator identifications, quotient or intertwining data, parity-versus-exchange boundary, simply-connected and even-charge countermodels, every predicate, dependencies, consumers, and nonduplication before source execution. It must not infer equality of representations, topological sectors, exchange statistics, physical fermions, host-medium enforcement, or a substrate mechanism from equality of three scalar evaluations.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
