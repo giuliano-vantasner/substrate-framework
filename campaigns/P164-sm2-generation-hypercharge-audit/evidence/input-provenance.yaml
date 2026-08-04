@@ -1,0 +1,33 @@
+campaign: P164
+base_release: v0.125.0
+framework_checkpoint: 326cfa2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit:
+  id: SM2
+  path: merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py
+  sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM2-dossier.md
+  sha256: 20ba861ddd8d9ccd89ddf9fc8d98e6ed8a824a99aa04d569d9e6756ba5facc08
+accepted_inputs:
+  C-REP-001: exact_supplied_state_charge_traces_and_Abelian_normalization_covariance
+  C-REP-002: standard_Pauli_half_doublet_weights_and_scalar_commuting_Abelian_generator_boundary
+reviewed_non_dependencies:
+  C-GSM-001: conditional_lower_doublet_vacuum_stabilizer_only
+  C-PGA-001: local_product_Lie_algebra_only_without_matter_or_hypercharge_table
+new_declared_inputs:
+  - finite_nonempty_sequence_of_named_multiplets
+  - exact_isospin_weights_and_common_Abelian_coordinate_for_each_row
+  - positive_integer_spectator_multiplicity_that_does_not_type_a_representation
+  - exact_nonzero_electric_coefficient_for_target_inversion
+  - exact_positive_Abelian_generator_rescaling_and_coupling_for_normalization_evidence
+SM2_inputs_not_derived:
+  - five_multiplet_labels_factor_dimensions_and_chiral_interpretations
+  - all_PS_hypercharges_and_Higgs_hypercharge
+  - all_observed_target_electric_charges
+  - omission_of_a_right_handed_neutrino_and_generation_completeness
+  - anomaly_conditions_and_global_U1_period_or_charge_lattice
+prior_exposure: P081_P129_P163_generated_queue_and_P164_freeze_disclosure
+comparator_status: source_targets_were_already_exposed_and_are_typed_as_inputs_not_selection_data
+compatibility_event: all_fourteen_frozen_graph_nodes_native_with_no_NumPy_integration_reference
+debt: []

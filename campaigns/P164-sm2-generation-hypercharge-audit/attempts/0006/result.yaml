@@ -1,0 +1,38 @@
+attempt: 0006
+campaign: P164
+candidate: C_exact_supplied_product_multiplet_charge_ledger
+status: passed
+started_at: '2026-08-10T20:00:00Z'
+finished_at: '2026-08-10T20:07:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P164-sm2-generation-hypercharge-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P164-sm2-generation-hypercharge-audit/reviews/independent_multiplet_charge_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P164-sm2-generation-hypercharge-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_multiplet_charges.py tests/test_charge_traces.py tests/test_su2_doublets.py tests/test_gauge_scalar_mass.py tests/test_product_gauge.py
+results:
+  primary: ALL_33_CHECKS_PASS
+  independent: ALL_18_CHECKS_PASS
+  source_graph: ALL_25_CHECKS_PASS
+  targeted_tests: 78_passed
+  source_graph_nodes: 14
+  source_graph_static_predicates: 123
+  source_graph_runtime_predicates: 123
+  source_graph_assertions: 18
+oracle_separation:
+  primary_imports_candidate_module: true
+  independent_imports_candidate_module: false
+  source_graph_replays_immutable_sources: true
+mutations:
+  - inconsistent_target_separation_rejects_a_common_row_value
+  - alternative_target_spectrum_selects_a_different_exact_row_value
+  - omitted_and_added_singlets_change_the_supplied_state_count
+  - charge_conjugation_negates_weights_row_values_and_spectra_without_changing_dimension
+  - fixed_electric_coefficient_breaks_generator_rescaling_covariance
+  - naive_unconjugated_Yukawa_sum_is_nonzero
+scientific_verdict: >-
+  Exact generic multiplet expansion inversion conjugation and Abelian
+  normalization covariance are supported for separately supplied finite data;
+  derivation uniqueness completeness and physical Standard Model identity are
+  excluded.
+remaining_debt: []
+next_attempt: claim_level_review_impact_analysis_and_terminal_promotion_gate

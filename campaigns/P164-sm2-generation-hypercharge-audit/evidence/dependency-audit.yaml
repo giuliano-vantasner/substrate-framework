@@ -1,0 +1,18 @@
+campaign: P164
+claim: C-REP-003
+direct_dependencies:
+  C-REP-001:
+    used_for: flattened_exact_charge_trace_and_Abelian_normalization_ledgers
+    compatible: true
+  C-REP-002:
+    used_for: accepted_standard_Pauli_half_doublet_specialization_and_commutant_boundary
+    compatible: true
+reviewed_scope_boundaries:
+  C-GSM-001: conditional_Higgs_vacuum_stabilizer_not_a_matter_table_or_conservation_law
+  C-PGA-001: faithful_local_product_algebra_not_a_physical_representation_or_hypercharge_selection
+excluded_pending_sources:
+  SM3: anomaly_equations_table_selection_and_uniqueness_claims_have_no_accepted_authority
+dependency_closure: complete
+hidden_imports: []
+foundational_revision: none
+debt: []

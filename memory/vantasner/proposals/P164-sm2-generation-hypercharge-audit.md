@@ -2,7 +2,7 @@
 description: Audit SM2 and determine whether its supplied charge table supports a distinct exact multiplet theorem
 author: vantasner
 created: '2026-08-10T19:35:00Z'
-updated: '2026-08-10T19:47:00Z'
+updated: '2026-08-10T20:07:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -117,11 +117,14 @@ already exposed charge values.
 
 The append-only ledger preserves the source-body-unopened freeze, the failed
 unguarded whitespace/commit gate, its semantically identical normalized freeze,
-and native seven-predicate replay. Source-aware inspection selects Candidate C:
-existing APIs own flattened trace arithmetic and factor boundaries but not
-typed multiplet spectra, conjugation, or the coupled convention map. The next
-attempt implements C-REP-003 and must reject inconsistent target spectra,
-zero electric coefficient, and untyped physical-completeness claims.
+the source-aware checkpoint formatting failure, and native seven-predicate
+replay. Candidate C now passes thirty-three primary checks, eighteen fresh
+independent checks, seventy-eight targeted tests, and a fourteen-node source
+graph replay covering 123 lexical predicates, 123 runtime executions, and
+eighteen assertion nodes. Inconsistent and alternative targets, missing and
+added rows, charge conjugation, coefficient mutation, and the source's naive
+Yukawa shorthand delimit the claim. Claim review, impact analysis, governance
+synchronization, and the one terminal integrated gate remain.
 
 ## Debt Ledger
 
@@ -135,10 +138,10 @@ continuation.
 | SM2 predicate strength is unaudited | Reproduce and classify all seven checks and the assertion | discharged |
 | Supplied versus derived table entries are unresolved | Trace every charge, hypercharge, representation, and convention value to its source | discharged |
 | Candidate C novelty is unknown | Compare against C-REP-001, C-REP-002, charge traces, gauge beta, and actual consumers | discharged |
-| Chirality and conjugation conventions are unresolved | Separate physical right-handed fields from left-handed conjugate rows | open |
+| Chirality and conjugation conventions are unresolved | Separate physical right-handed fields from left-handed conjugate rows | discharged |
 | Anomaly selection may be circular | Keep pending SM3 outside the dependency closure and test alternative tables | discharged by exclusion from C-REP-003 |
 | Physical generation completeness is unsupported | Derive it from approved premises or exclude it from the accepted mapping | discharged by exclusion from C-REP-003 |
-| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
+| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | graph discharged; governance open |
 
 ## Review and Promotion Plan
 

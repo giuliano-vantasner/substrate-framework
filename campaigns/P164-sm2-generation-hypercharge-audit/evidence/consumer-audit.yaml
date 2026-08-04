@@ -1,0 +1,32 @@
+campaign: P164
+claim: C-REP-003
+source_consumers:
+  SM2: adjudicated_root_and_supplied_table_specialization
+  M1: qualified_convention_antecedent_without_a_matter_table
+  W2: qualified_doublet_antecedent_that_explicitly_defers_shared_hypercharge
+  SM3: pending_anomaly_consumer_with_a_distinct_left_handed_conjugate_table
+  FG2: qualified_family_count_prose_consumer
+  FG3: qualified_flavor_mixing_prose_consumer
+  FG4: qualified_CP_prose_consumer
+  WM1: qualified_consumer_that_retypes_its_supplied_Weyl_table
+  WM5: qualified_dynamic_consumer_of_only_SM2_Y_H_PS
+  WM6: qualified_transitive_running_consumer_through_WM5
+  WM7: pending_dynamic_consumer_of_SM2_Y_H_PS_and_a_declared_scalar_count
+  WM8: pending_scalar_ratio_prose_consumer
+  WM9: pending_scalar_count_provenance_consumer
+  EL2: qualified_consumer_that_redeclares_one_charged_lepton_slot
+canonical_consumers:
+  source_change: new_multiplet_charges_module
+  direct_tests: tests/test_multiplet_charges.py
+  accepted_dependency_tests: [tests/test_charge_traces.py, tests/test_su2_doublets.py]
+  boundary_tests: [tests/test_gauge_scalar_mass.py, tests/test_product_gauge.py]
+  existing_importers_before_P164: []
+compatibility:
+  breaking_API_changes: none
+  all_graph_nodes_native: true
+consumer_decision: >-
+  C-REP-003 adds a generic supplied-data ledger without changing any existing
+  factor trace scalar mass product algebra running flavor or lepton API. The
+  source consumers replay unchanged and receive no uniqueness completeness
+  anomaly physical-matter conservation or substrate authority.
+debt: []
