@@ -2,11 +2,11 @@
 description: Audit T1Z2's cross-oracle minus-one identity and typed character boundary
 author: vantasner
 created: '2026-08-08T22:30:00Z'
-updated: '2026-08-08T22:30:00Z'
+updated: '2026-08-08T23:15:00Z'
 tags: [substrate-framework, campaign-proposal, sign-characters, topology, migration-T1Z2]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P131 T1Z2 Cross-Oracle Sign Audit
 
@@ -107,11 +107,11 @@ consumer debt.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| T1Z2 executable surface unaudited | Hash, execute, AST audit, and predicate mapping | open |
-| S2 is pending | Import no S2 conclusion and record every missing premise | open |
-| Cross-domain identity is untyped | Exhibit full maps/intertwiner or reject the identity | open |
-| Physical statistics language | Require accepted representation theorem or preserve ceiling | open |
-| Consumers and nonduplication | Replay pinned consumers and compare accepted APIs/claims | open |
+| T1Z2 executable surface unaudited | Hash, execute, AST audit, and predicate mapping | closed |
+| S2 is pending | Import no S2 conclusion and record every missing premise | closed |
+| Cross-domain identity is untyped | Exhibit full maps/intertwiner or reject the identity | closed |
+| Physical statistics language | Require accepted representation theorem or preserve ceiling | closed |
+| Consumers and nonduplication | Replay pinned consumers and compare accepted APIs/claims | closed |
 
 ## Review and Promotion Plan
 

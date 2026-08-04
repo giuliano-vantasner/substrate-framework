@@ -1,0 +1,17 @@
+campaign: P131
+source_unit: T1Z2
+nearby_accepted_surfaces:
+  C-TOP-001: exact_integer_parity_character_and_no_physical_statistics_ceiling
+  C-CHR-001: complete_Cn_and_C2_product_sign_character_classification_full_map_equality_and_pullback_ceiling
+surviving_source_surface:
+  - half-strength integer-link exponential equals integer parity
+  - odd charge values are minus one and even values plus one
+  - nontrivial C2 character and trivial alternative have exact selected values
+  - SU2 two-pi doublet matrix is minus identity
+assessment: Every reusable exact sign result is direct composition or duplicate evidence for C-TOP-001 and C-CHR-001. The claimed cross-domain object representation topology and physical identity does not survive.
+reserved_claim: C-CHR-002
+promotion_decision: not_promoted
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

@@ -68,4 +68,4 @@ comparators_blinded_until: >-
   requirements, counterexamples, and selection criteria freeze before P131
   opens or executes the source body. Those exposed outputs may be reproduced
   but cannot establish function, representation, topology, or physical identity.
-status: draft
+status: accepted

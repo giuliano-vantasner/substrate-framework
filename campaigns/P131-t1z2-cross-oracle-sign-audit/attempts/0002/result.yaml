@@ -1,0 +1,24 @@
+campaign: P131
+attempt: 0002
+status: failed
+candidates: [A, B, C, D, E]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P131-t1z2-cross-oracle-sign-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P131-t1z2-cross-oracle-sign-audit/reviews/independent_character_identity_review.py
+expected:
+  primary: terminal exact and semantic-ceiling tally
+  independent: terminal finite-enumeration and typed-counterexample tally
+result: >-
+  Both routes exited before their terminal tallies. The primary executable-
+  dependency check correctly recovered the AST import set but then searched the
+  full source prose for bridge_OM1 and bridge_S2, so a narrative OM1 annotation
+  caused a false failure. The independent route correctly constructed two
+  distinct quotient functions but compared their shared lambda __name__ value,
+  producing a verifier-only false failure.
+failure_layer: verifier_construction
+scientific_effect: none
+compatibility_event: none
+next_attempt: >-
+  Restrict dependency classification to executable AST structure and compare
+  fresh quotient functions by identity plus their full evaluations, then rerun
+  the otherwise unchanged exact routes.

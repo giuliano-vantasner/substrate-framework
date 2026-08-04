@@ -1,0 +1,33 @@
+campaign: P131
+source_unit: T1Z2
+lines: 336
+static_check_calls: 10
+runtime_checks: 10
+executable_imports: [sympy]
+declared_dependencies: [OM1, S2]
+runtime_dependencies: []
+constructed_objects:
+  holonomy: exp(2*pi*i*s*links)
+  fermion_parity: (-1)^abs(Q)
+  source_group_representation: {g: -1, e: 1}
+  character_helpers: [chi_F, chi_B]
+  su2_rotation: diagonal_exp_half_angle
+  deck_route: string_conditioned_minus_or_plus_identity_matrix
+headline_oracle:
+  equality: four_selected_SymPy_scalars_are_equal
+  identity_test: len_set_of_four_values_equals_one
+  missing: [typed_common_domain, source_quotient_maps, generator_identification, full_map_equality, representation_intertwiner, operator_map, physical_state_map]
+defects:
+  - g=-1 identifies the abstract source generator with its codomain sign representation rather than deriving a source-to-C2 map.
+  - chi_F and fermionParity advertise discrete domains but enforce no input type or group relation.
+  - The RP2 deck result is assigned by a host-name branch; every name except the exact string RP2 returns the identity.
+  - The bosonic guard changes s from one-half to one and Q from odd to zero instead of changing a character on fixed source inputs.
+  - The exchange check assigns i/4, whereas the cited Lean theorem gives exp(i/4); i/4 has modulus one-quarter and is not a phase.
+surviving_surface:
+  - The half-strength holonomy restricted to integer links equals the accepted integer parity character.
+  - Kink and antikink source evaluations are both the accepted odd parity value minus one.
+  - The SU2 two-pi rotation matrix is exactly minus the two-dimensional identity.
+  - The even-link and trivial-character arithmetic is exact.
+  - Parity and exchange must be kept distinct, although the source validates the wrong exchange factor.
+headline_verdict: selected_scalar_character_composition_survives_typed_and_physical_identity_rejected
+debt: []

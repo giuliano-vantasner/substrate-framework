@@ -1,0 +1,26 @@
+campaign: P131
+primary_reference:
+  authors: [David Finkelstein, Julio Rubinstein]
+  title: Connection between Spin Statistics and Kinks
+  journal: Journal of Mathematical Physics
+  volume: 9
+  pages: 1762-1779
+  year: 1968
+  doi: 10.1063/1.1664510
+  url: https://doi.org/10.1063/1.1664510
+  primary_record: https://www.osti.gov/biblio/4830115
+finding: >-
+  The primary abstract states a spin-exchange-statistics result for a quantum
+  theory of sufficiently nonlinear fields with conserved kinks, canonical
+  commutation relations, admitted double-valued state functionals, integer-
+  valued intrinsic angular momentum, and continuity assumptions. It does not
+  by itself construct T1Z2's RP2-disclination-to-charge quotient map, SU2
+  representation intertwiner, or physical identification of its two source sectors.
+citation_correction: >-
+  The correct DOI is 10.1063/1.1664510. No external primary formula is imported
+  into a new framework claim because P131 promotes none.
+local_formal_scope:
+  ChargeDiscrimination: exact parity values from a declared definition
+  Bridge: exchange factor at beta squared one is exp(i/4)
+  Phase4Strong_FRSpinStat: explicitly says Lean checks parity arithmetic and imports the physical FR premises
+debt: []

@@ -1,0 +1,18 @@
+campaign: P131
+source_unit: T1Z2
+predicates:
+  - {index: 1, label: Z1_order_two_sign, verdict: exact_duplicate, reason: The represented sign generator has order two; C-CHR-001 already owns the typed C2 classification.}
+  - {index: 2, label: Z2_nontrivial_character_values, verdict: exact_duplicate_with_domain_ceiling, reason: Values at residues zero and one are exact but chi_F enforces no C2 domain; C-CHR-001 supplies the complete character.}
+  - {index: 3, label: half_strength_single_holonomy, verdict: exact_restricted_value_only, reason: exp(i*pi)=-1 survives; RP2 disclination and physical spinor interpretation are premises.}
+  - {index: 4, label: kink_parity, verdict: exact_duplicate_value, reason: The odd integer parity is C-TOP-001; kink identity and physical grading are not derived.}
+  - {index: 5, label: antikink_parity, verdict: exact_duplicate_value, reason: Absolute winding gives the same odd class; antikink state provenance is outside the arithmetic.}
+  - {index: 6, label: cross_oracle_one_object, verdict: rejected, reason: The condition compares four scalars and their set cardinality; it contains no typed source map or intertwiner.}
+  - {index: 7, label: fr_deck_lock_and_host_force, verdict: assigned_matrix_equality_only, reason: The SU2 rotation is exact but deck_central returns matrices from a string branch, so topology medium enforcement and spin-statistics are not derived.}
+  - {index: 8, label: double_holonomy_order_two, verdict: exact_duplicate, reason: Integer-link half holonomy is the accepted parity character and even links return plus one.}
+  - {index: 9, label: bosonic_rejection_guard, verdict: exact_changed_input_comparison_only, reason: It changes disclination strength and charge instead of mutating one character on fixed inputs, so it cannot validate cross-oracle identity.}
+  - {index: 10, label: parity_exchange_boundary, verdict: intended_ceiling_survives_literal_rejected, reason: Parity must remain distinct from exchange, but the source uses i/4 instead of the cited unit factor exp(i/4).}
+summary:
+  source_predicates_reproduced: 10
+  accepted_claims_reused: [C-TOP-001, C-CHR-001]
+  new_claims_promoted: 0
+  terminal_disposition: qualified

@@ -1,0 +1,28 @@
+campaign: P131
+attempt: 0003
+status: verified
+candidates: [A, B, D, E, F]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-1/bridge_T1Z2_same_minus_one.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P131-t1z2-cross-oracle-sign-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P131-t1z2-cross-oracle-sign-audit/reviews/independent_character_identity_review.py
+  - two hash-pinned reverse-consumer commands recorded in evidence/consumer-audit.yaml
+expected:
+  source_checks: 10
+  primary_checks: 30
+  independent_checks: 21
+  consumer_checks: 14
+  promoted_claims: 0
+  compatibility_event: none_on_executed_surface
+result: >-
+  The pinned source reproduces ten checks. Thirty primary and twenty-one fresh
+  independent exact checks retain the restricted integer sign character while
+  rejecting scalar-set object identity, string-defined deck topology, missing
+  intertwiners, and i/4 as the cited unit phase. Qualified OM1 and AS6 reproduce
+  fourteen checks without promoting their cross-sector or physical readings.
+  Pending S2 remains unexecuted and contributes no premise.
+compatibility_event: >-
+  None on T1Z2, OM1, or AS6. Pending immutable S2 contains three legacy np.trapz
+  calls; they are recorded for alias-only replay when S2 is adjudicated and do
+  not count as scientific failure here.
+next_attempt: Assemble the terminal record-only source disposition and governance gate.

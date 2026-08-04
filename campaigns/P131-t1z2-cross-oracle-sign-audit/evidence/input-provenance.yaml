@@ -1,0 +1,20 @@
+campaign: P131
+accepted_inputs:
+  C-TOP-001: exact_integer_winding_parity_and_physical_interpretation_ceiling
+  C-CHR-001: complete_cyclic_and_binary_product_sign_character_classification_and_typed_equality_ceiling
+source_defined_inputs:
+  - half-strength exponential holonomy formula
+  - identification of links and charges with odd C2 residues
+  - RP2 and S2 host labels and their assigned deck matrices
+  - SU2 doublet representation and z-axis rotation
+  - kink antikink and breather physical labels
+  - beta-squared exchange convention and coupling value
+withheld:
+  - S2 hedgehog baryon collective-mode and spin-statistics conclusions
+  - source-to-C2 quotient maps and common generator orientation
+  - representation spaces actions and intertwiners
+  - RP2 deck lift into the selected SU2 representation
+  - a physical medium state dynamics defect realization and measurement map
+  - derivation from the Finkelstein-Rubinstein theorem's field-theory premises
+comparators: []
+debt: []

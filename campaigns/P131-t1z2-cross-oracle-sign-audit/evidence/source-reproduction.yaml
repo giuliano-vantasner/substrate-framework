@@ -1,0 +1,17 @@
+campaign: P131
+source_unit: T1Z2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-1/bridge_T1Z2_same_minus_one.py
+sha256: d9c08f9440fb79b9ef445ad77aff113db6c7c7f8943c5838180fb5704fd71bed
+expected_checks: 10
+observed_checks: 10
+terminal_tally: ALL 10 CHECKS PASS
+exit_status: 0
+imports: [sympy]
+runtime_dependencies: []
+compatibility_preflight:
+  np_trapz: 0
+  np_trapezoid: 0
+  trapezoid_integral: 0
+  compatibility_event: none
+reproduction_verdict: exact_selected_arithmetic_reproduced_without_headline_authority

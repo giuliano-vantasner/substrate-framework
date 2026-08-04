@@ -1,0 +1,18 @@
+campaign: P131
+source_unit: T1Z2
+declared_candidate_dependencies:
+  OM1:
+    disposition: qualified
+    accepted_surface: [C-TOP-001, C-CHR-001]
+    authority_ceiling: no_cross_sector_domain_map_or_physical_identity
+  S2:
+    disposition: pending_adjudication
+    accepted_surface: []
+    authority_ceiling: no_premise_imported
+runtime_imports: []
+cited_local_evidence:
+  - {path: sg-breather-ionization/dynamics_lean/ChargeDiscrimination.lean, sha256: c692eb12d9aa81f7547f855fe24ed03f7ba2403ac3fc4710c33c42ff80364056, scope: parity_arithmetic_only}
+  - {path: sg-breather-ionization/dynamics_lean/Bridge.lean, sha256: 2299d6cbc402d91168a07db526bf966f9fe6d8c8cd6cd3198e56cfa4986db47b, scope: declared_exchange_phase_definitions_and_exact_values}
+  - {path: pulson-backreaction-bridge/sympy/rungs/rung021_spin_statistics_lock.py, sha256: 6094d46bb9119dfc58ed3d7c1a5797c4524e11756068ab298e97b5119e8f7869, scope: noncanonical_source_with_same_string_assigned_deck_route}
+accepted_dependency_closure: [C-TOP-001, C-CHR-001]
+debt: []

@@ -1,0 +1,39 @@
+campaign: P131
+attempt: 0004
+status: verified
+candidates: [B, D, E, F]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-1/bridge_T1Z2_same_minus_one.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P131-t1z2-cross-oracle-sign-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P131-t1z2-cross-oracle-sign-audit/reviews/independent_character_identity_review.py
+  - two hash-pinned reverse-consumer replays in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  accepted_claims: 135
+  release: v0.100.0
+  source_units: 218
+  pending_units: 89
+  qualified_units: 117
+  source_checks: 10
+  primary_checks: 30
+  independent_checks: 21
+  consumer_checks: 14
+  repository_tests: 1118
+  declared_skips: 8
+  memory_files: 529
+  promoted_claims: 0
+  compatibility_event: none_on_executed_surface
+  debt: []
+result: >-
+  The exact routes, predicate review, primary and formal scope, qualified T1Z2
+  disposition, unchanged v0.100.0 release, regenerated queue, and memory records
+  agree. The integrated repository gate reports 135 accepted claims, 89 pending
+  units, 529 valid memory records, a valid physics skill, and all 1118 runnable
+  tests passing with eight declared skips. Git diff whitespace is clean.
+compatibility_event: >-
+  Pending immutable S2's three np.trapz calls are recorded for its future
+  alias-only compatibility replay and are not part of P131's executed surface.
+next_attempt: >-
+  Commit P131, checkpoint the parent migration effort, then freeze the next
+  pending unit from the regenerated queue.

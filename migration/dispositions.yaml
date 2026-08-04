@@ -35,6 +35,51 @@ units:
       P004 promoted the exact 1+1 identity and conditional TF/geodesic map;
       P010 promotes the exact source-operator pullback and terminally audits
       the unproved dynamical interpretations.
+  T1Z2:
+    disposition: qualified
+    accepted_claims:
+      - C-TOP-001
+      - C-CHR-001
+    qualification: >-
+      T1Z2's half-strength exponential restricted to integer links is exactly
+      the accepted integer parity character; odd kink and antikink labels are
+      minus one, even links are plus one, and the SU2 doublet matrix for a
+      two-pi rotation is minus identity. Those surfaces are already governed by
+      C-TOP-001 and C-CHR-001. The headline one-object predicate reduces four
+      expressions to SymPy scalars and checks that their Python set has size
+      one. It supplies no common typed domain, quotient maps, generator
+      orientation, full-map equality, representation action, or intertwiner.
+      C4 and distinct C2-product characters share the selected values while
+      differing in kernel and full truth table. The RP2 deck matrix is assigned
+      by a string-conditioned helper; a renamed host flips the verdict, so
+      topology and medium enforcement are not derived. The bosonic guard
+      changes strength and charge rather than the character on fixed inputs.
+      Its parity-versus-exchange ceiling is appropriate, but it validates i/4
+      while the cited Lean theorem states the unit phase exp(i/4). Pending S2
+      grants no hedgehog, baryon, state, spin-statistics, or physical premise.
+      No common representation, physical fermion, exchange statistic,
+      cross-sector identity, medium mechanism, or substrate realization is
+      accepted.
+    evidence:
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/reviews/source_adjudication.md
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/source-reproduction.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/source-audit.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/check-adjudication.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/input-provenance.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/dependency-audit.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/consumer-audit.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/candidate-comparison.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/evidence/primary-provenance.yaml
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/verify.py
+      - campaigns/P131-t1z2-cross-oracle-sign-audit/reviews/independent_character_identity_review.py
+      - memory/vantasner/decisions/T1Z2-qualified-review.md
+    note: >-
+      P131 closes 30 primary and 21 independent exact checks after two preserved
+      verifier-construction failures. T1Z2 and two qualified reverse consumers
+      reproduce 24 source checks. Executed scripts have no quadrature call;
+      pending immutable S2's three np.trapz calls are recorded for compatibility-
+      only replay during its own adjudication rather than as scientific failure.
   T1D:
     disposition: migrated
     accepted_claims:

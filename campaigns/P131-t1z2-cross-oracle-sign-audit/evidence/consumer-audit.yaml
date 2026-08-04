@@ -1,0 +1,24 @@
+campaign: P131
+root_source_unit: T1Z2
+authority_warning: Green consumer execution grants no accepted cross-sector or physical premise.
+reverse_consumers:
+  - {source_unit: OM1, disposition: qualified, path: merged-framework/bridges/phase-19/bridge_OM1_single_minus_one_identity.py, sha256: c5af6786d4873675ddb552c4a0ae222e4ee3ab7472b74844b28dc4d257358007, checks: 5}
+  - {source_unit: AS6, disposition: qualified, path: merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py, sha256: 2f6c76d8aedde25b343f85cb54b2618cd03c816a29553fa70a523909265dd7f0, checks: 9}
+replay:
+  scripts: 2
+  checks: 14
+  exit_statuses_all_zero: true
+interpretation: >-
+  OM1 repeats the scalar-collapse overread already qualified by P066. AS6 cites
+  the parity/exchange distinction and correctly uses exp(i/4), but its separate
+  self-duality and scale conclusions retain P077's qualification.
+compatibility_preflight:
+  executed_scripts: [T1Z2, OM1, AS6]
+  executed_np_trapz: 0
+  executed_np_trapezoid: 0
+  compatibility_events: 0
+  withheld_pending_S2:
+    legacy_np_trapz_calls: 3
+    policy: immutable_source_alias_only_replay_when_S2_is_adjudicated
+    scientific_status: version_compatibility_only_not_campaign_failure
+debt: []
