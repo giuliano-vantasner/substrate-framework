@@ -28,4 +28,3 @@ oracle: >-
   mutations, native source replay, predicate adjudication, and frozen graph
   closure.
 status: frozen
-

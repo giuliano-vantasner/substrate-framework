@@ -15,4 +15,3 @@ nondependencies:
 dependency_closure: complete_for_no_new_claim_composition
 hidden_imports: []
 debt: []
-

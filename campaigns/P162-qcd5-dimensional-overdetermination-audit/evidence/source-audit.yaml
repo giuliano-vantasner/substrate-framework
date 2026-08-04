@@ -63,4 +63,3 @@ duplication:
   SU3_trace_metric: src/substrate_framework/su3.py
   check_helper: src/substrate_framework/verification.py
 debt: []
-
