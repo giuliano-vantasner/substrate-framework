@@ -1,0 +1,92 @@
+id: P136
+base_release: v0.103.0
+base_commit: 5176b6d
+scientific_base_commit: 4cea232
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [EM7]
+question: >-
+  Reproduce and independently audit EM7's claim that one fractional-Laplacian
+  or Riesz family constructively bridges one-dimensional linear,
+  two-dimensional logarithmic, and three-dimensional Coulomb potentials, and
+  determine exactly which Fourier domain, boundary subtraction, distributional
+  prescription, dimension concept, operator power, source normalization, and
+  force dictionary are required for each branch and for any dimensional or
+  physical selection statement beyond C-KRN-001 and C-MAX-001.
+invariants:
+  - >-
+    C-KRN-001 supplies the exact subcritical Euclidean Riesz kernel only for
+    r>0, nonzero coefficient A, and 0<s<d/2 in a fixed Fourier convention. It
+    explicitly does not select s, d, A, a source, boundary condition, force
+    law, electromagnetic sector, or substrate realization.
+  - >-
+    C-MAX-001 supplies source-normalized ordinary-Laplacian static branches for
+    positive integer spatial dimension, including the d=1 linear, d=2
+    reference-dependent logarithmic, and d>2 power-law cases. It supplies no
+    fractional operator, effective dimension, physical dimension selection, or
+    dimension-changing mechanism.
+  - >-
+    C-LOC-001 supplies exact series and spectral identities for separately
+    declared kernels. It does not derive a Riesz operator, dimension, source,
+    loop, charge, or gauge action. Qualified D3S maps only C-LOC-001 and
+    C-KRN-001; its physical gap-to-Coulomb closure was rejected.
+  - >-
+    A positive real parameter d inside gamma functions is not by itself a
+    metric-measure space, Hausdorff dimension, spectral dimension, diffusion
+    generator, Dirichlet form, or physical fractal medium. Those concepts need
+    independently declared structures and need not agree.
+  - >-
+    The subcritical integral 0<s<d/2, the critical slice 2s=d, and the
+    supercritical region 2s>d are different mathematical regimes. Critical
+    logarithms require a subtraction/reference prescription; supercritical
+    inverse kernels require distributional and boundary or polynomial-quotient
+    data and cannot be imported from the convergent formula silently.
+  - >-
+    Differentiating a supplied potential gives a radial power only after a
+    probe-energy or force dictionary and sign convention are declared. The
+    inverse-square equation 2s-d-1=-2 has the family d=2s+1 and selects d=3
+    only after s=1 is independently supplied.
+  - >-
+    EM3 is qualified through C-GAU-001/C-KRN-001/C-MAX-001; D3S is qualified
+    through C-LOC-001/C-KRN-001; QCD5 remains pending and grants no premise.
+    EM7 is hash-pinned noncanonical evidence.
+  - >-
+    P134 and P135 already executed EM7 in immutable source-graph replays and
+    exposed its successful tally and body. P136 makes no fresh source- or
+    comparator-blinding claim; source literals cannot select the candidates.
+allowed_imports:
+  - C-KRN-001 exact subcritical Riesz normalization derivative and explicit domain ceiling
+  - C-MAX-001 ordinary-Laplacian integer-dimension source normalization boundary branches and force ceiling
+  - C-LOC-001 only for declared-kernel series and not as a dimensional or gauge-sector premise
+  - src/substrate_framework/momentum_kernels.py and maxwell.py accepted pure APIs
+  - exact SymPy gamma limits series radial differentiation exponent solves and distributional ordinary-Laplacian checks
+  - independently declared Fourier convention coefficient source probe reference radius boundary data dimension and operator power
+  - primary fractional-Laplacian literature after freeze only if a convention or domain needs external cross-check
+  - EM7 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after the freeze
+candidates:
+  - {id: A, description: Reproduce EM7 literally and classify all seventeen executed predicates by domain construction dependency and physical ceiling.}
+  - {id: B, description: Resolve every supportable subcritical power and derivative through accepted C-KRN-001 with explicit coefficient source probe and force dictionaries.}
+  - {id: C, description: Derive the reference-subtracted critical limit 2s=d and compare its logarithmic normalization with C-MAX-001 without extending the convergent integral beyond its domain.}
+  - {id: D, description: Treat inverse-square behavior as the conditional family d=2s+1 and test dimension and operator-power nonidentifiability before any endpoint selection.}
+  - {id: E, description: Separate analytic dimension continuation from an actual integer Euclidean space or independently defined fractal metric-measure and spectral geometry.}
+  - {id: F, description: Close D3S EM3 QCD5 authority reverse consumers nonduplication impact source disposition and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with operator measure Fourier normalization source probe boundary and dimension concepts explicit
+  - fixed sign convention for the inverse operator Green kernel potential energy radial field and force
+  - exact separation of subcritical critical and supercritical domains without silent analytic continuation
+  - correct gamma normalization reference subtraction logarithmic limit radial derivative and ordinary-Laplacian endpoints
+  - explicit distinction among integer topological Hausdorff spectral walk and analytic-regularization dimensions
+  - dimensional consistency and correct source-zero probe-zero coefficient-rescaling large-radius near-source critical and endpoint limits
+  - exact inverse-square solution family and sensitivity to both d and s rather than endpoint hard-coding
+  - independent agreement among Schwinger-parameter Fourier radial-flux critical-limit and ordinary-Laplacian routes where applicable
+  - mutation sensitivity to dimension operator power coefficient Fourier normalization source sign probe sign reference and domain assumption
+  - parameter economy natural framework fit reusable API value physical-scope honesty consumer compatibility and nonduplication
+claims_proposed: [C-KRN-002]
+comparators_blinded_until: >-
+  Genuine blinding is unavailable because the generated queue exposes EM7's
+  Riesz formula and Coulomb endpoint and P134/P135 already executed the source.
+  This proposal freezes the domain split, critical subtraction, dimension
+  distinctions, competing candidates, selection criteria, and physical
+  ceilings before renewed source inspection. Familiar 1/r or inverse-square
+  agreement cannot select d, s, a space, or a framework claim.
+status: active

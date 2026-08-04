@@ -1,0 +1,39 @@
+campaign: P136
+attempt: 0001
+status: passed
+candidate: preregistration
+command: >-
+  Validate the P136 manifest and proposal memory, compare the frozen manifest
+  byte-for-byte, verify source HEAD and EM7 hash, and run git diff --check
+  before renewed source-body inspection.
+expected: >-
+  Freeze the competing subcritical, critical, identifiability, dimension, and
+  governance candidates plus their accepted-authority and physical ceilings.
+result:
+  exit_status: 0
+  base_release: v0.103.0
+  base_commit: 5176b6d
+  scientific_base_commit: 4cea232
+  source_head: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22
+  proposal_sha256: c5b0cdebc82ab0990cecc81242674bfdd58ff20ee9cf3b7d6dbb5649a9fc0c5a
+  frozen_proposal_sha256: c5b0cdebc82ab0990cecc81242674bfdd58ff20ee9cf3b7d6dbb5649a9fc0c5a
+  proposal_memory_sha256: 5742948e8bee106a1b99eb7e869f1087eff402ff4e301749720d7a72a52a2ef6
+  source_worktree: >-
+    dirty with excluded Phase47/48, engineering, and memory work; the
+    hash-pinned EM7 path matches the committed source baseline and no source
+    file was modified
+  prior_exposure: >-
+    P134 and P135 already opened and executed EM7 in source-graph replays;
+    P136 makes no fresh source- or comparator-blinding claim
+  repository_gate: WORKFLOW VALID with 138 accepted claims and 85 pending units
+  memory_contract: valid
+  frozen_manifest_cmp: identical
+  git_diff_check: passed
+classification: freeze_gate
+compatibility_event: >-
+  Predeclared AST preflight; mutable code must use np.trapezoid or exact
+  integration, while immutable source may receive only a recorded alias replay.
+next_attempt: >-
+  Commit the freeze boundary, then renew the EM7 source inspection and
+  reproduction without allowing its exposed literals to select candidates.
