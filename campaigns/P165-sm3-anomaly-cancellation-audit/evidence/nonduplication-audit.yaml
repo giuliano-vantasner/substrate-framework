@@ -1,0 +1,32 @@
+campaign: P165
+candidate: C_generic_chiral_anomaly_ledger_plus_D_complete_solution_variety
+existing_surfaces:
+  C-REP-001:
+    owns: exact_supplied_state_traces_homogeneous_Abelian_moments_and_normalization_covariance
+    missing: chiral_anomaly_coefficients_representation_cubic_signs_global_parity_and_solution_classification
+  C-REP-003:
+    owns: supplied_multiplet_grouping_charge_spectra_conjugation_and_no_completeness_boundary
+    missing: anomaly_theory_quadratic_and_cubic_indices_global_parity_and_solution_variety
+  C-REP-002:
+    owns: Pauli_half_doublet_algebra_and_scalar_commutant
+    missing: chiral_matter_table_quantum_anomaly_coefficients_and_global_parity
+  C-LIE-001:
+    owns: standard_SU3_fundamental_generators_TF_CF_CA_and_structure_constants
+    missing: chiral_representation_table_cubic_conjugation_sum_and_Abelian_anomaly_ideal
+  gauge_beta.ProductMultiplet:
+    owns: supplied_quadratic_indices_and_Casimirs_for_perturbative_running
+    missing: signed_cubic_indices_global_SU2_parity_chiral_anomaly_conditions_and_solution_branches
+  wzw:
+    owns: separately_governed_topological_variation_identities
+    missing: four_dimensional_chiral_multiplet_coefficient_ledger_and_five_row_solution_variety
+distinct_positive_object: >-
+  The new exact API types signed chiral rows for Ga times SU2 times U1,
+  evaluates five local coefficients and supplied fundamental-doublet parity,
+  maps charge conjugation, and completely classifies the fixed five-row local
+  anomaly zero set as three affine lines without dividing by q.
+actual_consumers:
+  - SM3_source_adjudication
+  - pending_SM4_WM7_GK3D4_provenance_boundaries
+  - qualified_M1_CF3_FG3_FG4_WM1_WM5_narrative_corrections
+decision: distinct_API_and_claim_warranted
+debt: []

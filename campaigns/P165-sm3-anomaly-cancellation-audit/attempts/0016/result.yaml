@@ -1,0 +1,24 @@
+attempt: 0016
+campaign: P165
+candidate: terminal_promotion_and_repository_gate
+status: passed
+started_at: '2026-08-10T21:26:00Z'
+finished_at: '2026-08-10T21:31:00Z'
+commands:
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+results:
+  repository_workflow: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  integrated_pytest: 1478_passed
+  standalone_pytest: 1478_passed
+  worktree_diff_check: passed
+  accepted_claims: 163
+  pending_source_units: 55
+scientific_evidence_already_frozen:
+  primary_verifier: ALL_31_CHECKS_PASS
+  independent_verifier: ALL_12_CHECKS_PASS
+  source_graph_verifier: P165_SOURCE_GRAPH_ALL_25_CHECKS_PASS
+scientific_delta_since_attempt_0015: none
+debt: []
+next_attempt: continue_parent_migration_effort_at_SM4

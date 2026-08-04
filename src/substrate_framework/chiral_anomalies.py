@@ -17,7 +17,7 @@ import sympy as sp
 
 @dataclass(frozen=True)
 class ChiralGaugeMultiplet:
-    """One left-handed row for ``G_a x G_b x U(1)``.
+    """One left-handed row for ``G_a x SU(2) x U(1)``.
 
     Quadratic indices are unsigned, while ``factor_a_cubic_index`` carries the
     representation/conjugate-representation sign.  The final Boolean is a
@@ -37,7 +37,7 @@ class ChiralGaugeMultiplet:
 
 @dataclass(frozen=True)
 class ChiralAnomalyLedger:
-    """Exact local coefficients and one supplied fundamental-doublet parity."""
+    """Exact ``G_a x SU(2) x U(1)`` coefficients and doublet parity."""
 
     multiplets: tuple[ChiralGaugeMultiplet, ...]
     mixed_factor_a_squared_abelian: sp.Expr
@@ -124,16 +124,20 @@ def _normalize_multiplet(
     if not isinstance(multiplet.factor_b_fundamental_doublet, bool):
         raise ValueError("factor_b_fundamental_doublet must be Boolean")
     prefix = f"multiplets[{index}]"
+    factor_a_dimension = _positive_integer(
+        multiplet.factor_a_dimension,
+        f"{prefix}.factor_a_dimension",
+    )
+    factor_b_dimension = _positive_integer(
+        multiplet.factor_b_dimension,
+        f"{prefix}.factor_b_dimension",
+    )
+    if multiplet.factor_b_fundamental_doublet and factor_b_dimension != 2:
+        raise ValueError("a supplied fundamental SU(2) doublet must have dimension two")
     return ChiralGaugeMultiplet(
         label=multiplet.label,
-        factor_a_dimension=_positive_integer(
-            multiplet.factor_a_dimension,
-            f"{prefix}.factor_a_dimension",
-        ),
-        factor_b_dimension=_positive_integer(
-            multiplet.factor_b_dimension,
-            f"{prefix}.factor_b_dimension",
-        ),
+        factor_a_dimension=factor_a_dimension,
+        factor_b_dimension=factor_b_dimension,
         abelian_charge=_exact_real(
             multiplet.abelian_charge,
             f"{prefix}.abelian_charge",
@@ -172,12 +176,13 @@ def _normalize_multiplets(
 def chiral_anomaly_ledger(
     multiplets: Iterable[ChiralGaugeMultiplet],
 ) -> ChiralAnomalyLedger:
-    """Evaluate supplied ``G_a x G_b x U(1)`` anomaly coefficients exactly.
+    """Evaluate supplied ``G_a x SU(2) x U(1)`` coefficients exactly.
 
     The local tuple is ordered as ``G_a^2 U(1)``, ``G_b^2 U(1)``,
     ``U(1)^3``, ``gravity^2 U(1)``, and ``G_a^3``.  The separate parity field
-    applies only when the supplied Boolean correctly marks fundamental SU(2)
-    doublets of ``G_b``.
+    applies only when the supplied Boolean marks all fundamental SU(2)
+    doublets. Higher-representation SU(2) global anomalies are outside this
+    ledger, and the API does not silently classify them.
     """
 
     table = _normalize_multiplets(multiplets)

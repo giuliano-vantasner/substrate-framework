@@ -1,0 +1,19 @@
+attempt: 0012
+campaign: P165
+candidate: fifteen_node_source_graph_replay
+status: passed
+started_at: '2026-08-10T21:01:00Z'
+finished_at: '2026-08-10T21:03:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/replay_source_graph.py /home/dan/substrate
+exit_code: 0
+terminal_tally: P165_SOURCE_GRAPH_ALL_25_CHECKS_PASS
+inventory:
+  nodes: 15
+  lexical_predicates: 132
+  runtime_predicates: 132
+  assertions: 15
+  native_nodes: 15
+  legacy_NumPy_references: 0
+repair_from: 0011
+debt: []
+next_attempt: close_claim_scope_nonduplication_dependencies_consumers_and_governance

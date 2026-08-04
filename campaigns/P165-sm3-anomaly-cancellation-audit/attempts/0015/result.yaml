@@ -1,0 +1,23 @@
+attempt: 0015
+campaign: P165
+candidate: dependency_nonduplication_consumer_and_impact_closure
+status: passed
+started_at: '2026-08-10T21:09:00Z'
+finished_at: '2026-08-10T21:12:00Z'
+commands:
+  - GitNexus_refresh_and_four_public_symbol_upstream_impacts
+  - GitNexus_detect_changes_compare_a4f780b
+  - materialize_input_dependency_nonduplication_consumer_primary_provenance_and_impact_records
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_su2_doublets.py tests/test_su3.py tests/test_gauge_beta.py -q
+results:
+  GitNexus: {nodes: 24168, edges: 37936, clusters: 358, flows: 6}
+  public_API_risk: LOW
+  direct_internal_callers: 1
+  affected_flows: 0
+  newly_checked_dependency_tests: 43_passed
+  dependency_closure: complete
+  hidden_imports: []
+  distinct_positive_object: true
+debt:
+  - materialize_claim_review_adjudication_registry_release_and_generated_state
+next_attempt: complete_individual_claim_and_source_reviews

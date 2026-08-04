@@ -1,0 +1,41 @@
+campaign: P165
+claim: C-ANO-001
+accepted_inputs:
+  C-REP-001: exact_finite_supplied_table_and_homogeneous_Abelian_moment_covariance
+  C-REP-003: separately_supplied_named_multiplets_charge_conjugation_and_no_completeness_boundary
+  C-REP-002: standard_Pauli_half_SU2_fundamental_normalization
+  C-LIE-001: standard_Gell_Mann_half_SU3_fundamental_normalization
+external_theory_inputs:
+  - four_dimensional_left_handed_chiral_gauge_anomaly_trace_criteria
+  - mixed_U1_gravitational_anomaly_trace_criterion
+  - Witten_odd_fundamental_SU2_doublet_obstruction
+  - conjugate_nonabelian_cubic_anomaly_coefficient_sign
+supplied_to_generic_ledger:
+  - unique_row_labels
+  - positive_integer_Ga_and_SU2_dimensions
+  - exact_real_Abelian_charges
+  - exact_nonnegative_quadratic_indices
+  - exact_signed_Ga_cubic_coefficients
+  - complete_fundamental_SU2_doublet_indicators_for_the_scoped_parity_test
+supplied_to_five_row_specialization:
+  rows: [Q_L, u_R_c, d_R_c, L, e_R_c]
+  dimensions: [[3, 2], [3, 1], [3, 1], [1, 2], [1, 1]]
+  Ga_quadratic_indices: [1/2, 1/2, 1/2, 0, 0]
+  SU2_quadratic_indices: [1/2, 0, 0, 1/2, 0]
+  Ga_cubic_coefficients: [1, -1, -1, 0, 0]
+  fundamental_SU2_doublets: [true, false, false, true, false]
+derived_by_P165:
+  - every_exact_local_coefficient_sum
+  - charge_conjugation_sign_covariance
+  - fixed_carrier_charge_independence_of_SU3_cubic_balance_and_SU2_parity
+  - three_linear_eliminations
+  - reduced_cubic_factorization
+  - complete_union_of_three_affine_solution_lines
+  - exact_membership_and_counterexamples
+not_imported:
+  - the_five_Abelian_charge_values
+  - physical_row_identity_or_carrier_completeness
+  - Yukawa_scalar_or_mass_constraints
+  - global_U1_period_charge_lattice_or_global_gauge_group
+  - observed_charges_renormalizability_unitarity_or_substrate_dictionary
+debt: []

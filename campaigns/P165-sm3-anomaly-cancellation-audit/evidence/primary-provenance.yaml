@@ -1,0 +1,41 @@
+campaign: P165
+accepted_base:
+  release: v0.126.0
+  framework_checkpoint: a4f780b
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit:
+  id: SM3
+  path: merged-framework/bridges/phase-9/bridge_SM3_anomaly_cancellation.py
+  sha256: 3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM3-dossier.md
+  sha256: 93e052b2586d6271ad4119340cba5f4cc86763253b55427b5b1e72baed33ea52
+scientific_commits:
+  freeze: e0f31b8
+  source_audit: 7c58618
+  reusable_implementation: cd163cf
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/charge_traces.py
+  - src/substrate_framework/multiplet_charges.py
+  - src/substrate_framework/su2_doublets.py
+  - src/substrate_framework/su3.py
+  - src/substrate_framework/gauge_beta.py
+  - campaigns/P081-wm1-charge-trace-audit
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit
+  - campaigns/P164-sm2-generation-hypercharge-audit
+external_primary_sources: evidence/literature-audit.yaml
+memory_searches:
+  - SM3 anomaly cancellation unique hypercharges
+  - chiral anomaly Witten doublet parity cubic color
+  - C-ANO anomaly claim collision
+authority_statement: >-
+  Memory and SM3 are recall and candidate evidence. Accepted dependency claims,
+  explicit primary-theory imports, the canonical exact ledger, independent
+  elimination and Groebner basis, mutation-sensitive tests, individual source
+  adjudication, impact analysis, and the pinned graph replay supply authority.
+debt: []

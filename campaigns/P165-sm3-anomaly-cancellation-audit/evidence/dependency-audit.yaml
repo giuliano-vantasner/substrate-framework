@@ -1,0 +1,28 @@
+campaign: P165
+claim: C-ANO-001
+direct_dependencies:
+  C-REP-001:
+    used_for: exact_supplied_table_and_homogeneous_moment_scaling_boundary
+    compatible: true
+  C-REP-003:
+    used_for: supplied_named_multiplet_chirality_conjugation_and_incomplete_table_boundary
+    compatible: true
+  C-REP-002:
+    used_for: fixed_Pauli_half_SU2_fundamental_normalization
+    compatible: true
+  C-LIE-001:
+    used_for: fixed_Gell_Mann_half_SU3_fundamental_normalization
+    compatible: true
+explicit_external_theory:
+  local_anomaly_conditions: Bouchiat_Iliopoulos_Meyer_1972_and_Gross_Jackiw_1972
+  mixed_gravity_condition: Delbourgo_Salam_1972
+  fundamental_SU2_global_parity: Witten_1982
+  provenance: evidence/literature-audit.yaml
+reviewed_scope_boundaries:
+  C-PGA-001: faithful_local_product_algebra_does_not_supply_matter_or_global_group
+  C-RGE-005: gauge_beta_indices_and_loop_coefficients_do_not_supply_chiral_anomaly_or_solution_variety
+  C-WZW-001: topological_variation_identity_is_not_a_four_dimensional_chiral_matter_anomaly_ledger
+dependency_closure: complete
+hidden_imports: []
+foundational_revision: none
+debt: []

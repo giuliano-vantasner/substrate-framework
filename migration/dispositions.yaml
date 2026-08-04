@@ -5498,3 +5498,52 @@ units:
       assertions. All fourteen graph nodes are native and contain no legacy
       NumPy integration reference. The generic API is LOW risk with no affected
       execution flow.
+  SM3:
+    disposition: qualified
+    accepted_claims:
+      - C-ANO-001
+    qualification: >-
+      SM3's exact evaluations of the four charge-dependent local anomaly
+      coefficients, supplied SU3 cubic balance, and supplied fundamental-SU2
+      doublet parity survive through C-ANO-001. Its electron and quark-row
+      perturbations are valid local guards, and common Abelian rescaling does
+      preserve every local zero. The source does not solve the anomaly ideal:
+      on its fixed five-row carrier the complete local zero set is the union of
+      the displayed line, a row-exchanged line, and a zero-q vectorlike line.
+      Thus the displayed hypercharge ratios are not unique up to scale and
+      common scaling is not the only freedom. The carrier, row identities,
+      representations, chirality convention, anomaly criteria, and omission
+      of neutral singlets are supplied. No Yukawa or scalar constraints,
+      physical generation, observed charge selection, global U1 data, global
+      gauge group, coupling normalization, renormalizability, unitarity,
+      general-covariance theorem, running, Standard Model derivation, or
+      substrate mechanism is accepted.
+    evidence:
+      - campaigns/P165-sm3-anomaly-cancellation-audit/reviews/source_adjudication.md
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/source-reproduction.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/source-audit.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/check-adjudication.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/input-provenance.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/dependency-audit.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/consumer-audit.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/candidate-comparison.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/primary-provenance.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/evidence/literature-audit.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/verify.py
+      - campaigns/P165-sm3-anomaly-cancellation-audit/reviews/independent_anomaly_review.py
+      - campaigns/P165-sm3-anomaly-cancellation-audit/reviews/replay_source_graph.py
+      - campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0010/result.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0012/result.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0014/result.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0015/result.yaml
+      - campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0016/result.yaml
+      - memory/vantasner/decisions/C-ANO-001-review.md
+      - memory/vantasner/decisions/SM3-qualified-review.md
+    note: >-
+      P165 closes thirty-one primary, twelve independent, and twenty-five graph
+      checks over 132 lexical and 132 runtime source predicates plus fifteen
+      assertions. All fifteen graph nodes are native with no legacy NumPy
+      integration reference. GitNexus rates the additive API LOW risk with no
+      affected execution flow.

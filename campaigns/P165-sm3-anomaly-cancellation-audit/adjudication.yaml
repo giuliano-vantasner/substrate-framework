@@ -1,0 +1,61 @@
+campaign: P165
+title: SM3 anomaly coefficient and complete five-row solution-variety audit
+source_baseline: substrate@6d1f4e0
+source_units: [SM3]
+base_release: v0.126.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-10T21:18:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies all eight source predicates without promoting the tally to uniqueness.}
+  - {id: C, reason: The framework lacked a typed exact chiral coefficient and supplied fundamental-doublet parity ledger.}
+  - {id: D, reason: Complete elimination exposes every fixed-carrier local solution component.}
+  - {id: G, reason: Row exchange zero-q scaling conjugation doublet and singlet counterfamilies delimit the theorem.}
+  - {id: H, reason: Claim source dependency consumer release generated-state and memory audits close the transaction.}
+claims: [C-ANO-001]
+unpromoted_claims:
+  - {id: unique_hypercharge_ratios_up_to_scale, reason: Exact_elimination_gives_three_affine_lines_not_one.}
+  - {id: common_scaling_is_the_one_true_freedom, reason: Row_exchanged_and_zero_q_vectorlike_components_are_additional_exact_freedoms.}
+  - {id: derived_physical_Standard_Model_generation, reason: Carrier_labels_representations_chirality_and_completeness_are_supplied.}
+  - {id: hypercharge_table_import_paid_down_to_one_constant, reason: Anomalies_do_not_select_between_the_three_local_solution_components.}
+  - {id: renormalizability_unitarity_and_general_covariance, reason: Zero_coefficient_arithmetic_imports_but_does_not_derive_the_external_quantum_consistency_theorems.}
+  - {id: global_group_coupling_running_observation_or_substrate_mechanism, reason: None_is_constructed_or_selected.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_anomaly_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0010/result.yaml
+  graph_attempt: attempts/0012/result.yaml
+  scope_attempt: attempts/0014/result.yaml
+  audit_attempt: attempts/0015/result.yaml
+  terminal_attempt: attempts/0016/result.yaml
+  claim_review: memory/vantasner/decisions/C-ANO-001-review.md
+  source_review: memory/vantasner/decisions/SM3-qualified-review.md
+source_disposition:
+  SM3: qualified
+accepted_mappings: [C-REP-001, C-REP-002, C-REP-003, C-LIE-001, C-ANO-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_current_NumPy_APIs
+  immutable_primary: no_NumPy_integration_reference
+  immutable_alias_only: []
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/independent_anomaly_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

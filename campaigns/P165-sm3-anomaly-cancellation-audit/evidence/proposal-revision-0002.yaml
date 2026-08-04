@@ -1,0 +1,26 @@
+campaign: P165
+revision: 2
+status: implementation_and_dependency_aware_frozen
+prior_revision: evidence/proposal-revision-0001.yaml
+implementation_commit: cd163cf
+selected_candidates: [A, C, D, G, H]
+claim_delta:
+  proposed: [C-ANO-001]
+  dependencies: [C-REP-001, C-REP-002, C-REP-003, C-LIE-001]
+  external_theory:
+    - four_dimensional_local_chiral_gauge_anomaly_trace_conditions
+    - Witten_fundamental_SU2_doublet_parity
+    - conjugate_SU3_cubic_anomaly_sign
+  challenges: []
+  supersedes: []
+scope_correction:
+  generic_product: Ga_times_SU2_times_U1
+  global_parity: complete_only_for_supplied_fundamental_doublet_content
+  higher_SU2_representation_global_anomalies: excluded
+canonical_object:
+  module: src/substrate_framework/chiral_anomalies.py
+  tests: tests/test_chiral_anomalies.py
+  fixed_five_row_components: [displayed_line, row_exchanged_line, vectorlike_line]
+source_disposition: qualified
+debt:
+  - materialize_claim_level_review_adjudication_registry_release_and_generated_state

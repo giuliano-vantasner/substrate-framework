@@ -1,0 +1,18 @@
+attempt: 0013
+campaign: P165
+candidate: generic_second_factor_scope_review
+status: design_scope_correction_required
+started_at: '2026-08-10T21:04:00Z'
+finished_at: '2026-08-10T21:05:00Z'
+finding: >-
+  the canonical docstring named an arbitrary G_b although the ledger omits a
+  second-factor cubic coefficient and intentionally models an SU2 factor with
+  a separately supplied fundamental-doublet parity indicator
+classification: representation_scope_ambiguity_not_algebra_failure
+repair:
+  - state_G_a_times_SU2_times_U1_scope_on_every_public_ledger_surface
+  - require_every_row_marked_as_a_fundamental_doublet_to_have_SU2_dimension_two
+  - retain_the_explicit_exclusion_of_higher_SU2_global_anomaly_classification
+debt:
+  - implement_and_test_the_scope_guard
+next_attempt: rerun_only_the_targeted_anomaly_suite_and_scientific_verifiers

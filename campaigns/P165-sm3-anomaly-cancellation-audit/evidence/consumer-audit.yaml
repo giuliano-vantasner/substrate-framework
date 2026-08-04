@@ -1,0 +1,41 @@
+campaign: P165
+claim: C-ANO-001
+canonical_consumers:
+  source_change: new_chiral_anomalies_module
+  direct_tests: tests/test_chiral_anomalies.py
+  accepted_dependency_tests:
+    - tests/test_charge_traces.py
+    - tests/test_multiplet_charges.py
+    - tests/test_su2_doublets.py
+    - tests/test_su3.py
+  nonduplication_boundary_tests: tests/test_gauge_beta.py
+  existing_production_importers_before_P165: []
+source_consumers:
+  SM3: adjudicated_root_with_valid_supplied_point_zeroes_and_refuted_uniqueness
+  M1: qualified_prose_annotation_that_must_not_treat_the_table_as_anomaly_forced
+  SM2: qualified_supplied_table_whose_accepted_claims_import_no_SM3_authority
+  SM4: pending_running_consumer_with_declared_couplings_and_normalization
+  CF3: qualified_triality_prose_reference_independent_of_hypercharge_selection
+  FG3: qualified_mixing_claim_with_symbolic_A_gen_and_no_accepted_anomaly_claim
+  FG4: qualified_family_prose_reference
+  WM1: qualified_retyped_supplied_table_trace_consumer
+  WM2: duplicate_retyped_trace_consumer_with_no_accepted_SM3_dependency
+  WM5: qualified_dynamic_WM1_table_consumer_with_SM3_only_in_prose
+  WM7: pending_dynamic_WM1_table_consumer
+  GK3D4: pending_trace_ratio_prose_consumer
+  antecedent_only: [QCD1, W2, WM3]
+compatibility:
+  breaking_API_changes: none
+  GitNexus_risk: LOW
+  direct_internal_callers_of_generic_ledger: 1
+  external_callers_of_public_five_row_APIs: 0
+  affected_execution_flows: 0
+  source_graph_nodes: 15
+  source_graph_native_nodes: 15
+consumer_decision: >-
+  C-ANO-001 is additive. Existing accepted claims already treat the relevant
+  tables traces running coefficients and family statements as supplied or
+  conditional, so no accepted scientific theorem breaks. The repeated source
+  phrase anomaly-forced is corrected at the SM3 qualification boundary and
+  grants no authority to pending consumers.
+debt: []

@@ -30,8 +30,20 @@ SOURCE = Path(
     "bridge_SM3_anomaly_cancellation.py"
 )
 FROZEN = CAMPAIGN / "evidence/frozen-proposal.yaml"
+REVISION = CAMPAIGN / "evidence/proposal-revision-0002.yaml"
+REPRODUCTION = CAMPAIGN / "evidence/source-reproduction.yaml"
+SOURCE_AUDIT = CAMPAIGN / "evidence/source-audit.yaml"
+CHECK_ADJUDICATION = CAMPAIGN / "evidence/check-adjudication.yaml"
+INPUT_PROVENANCE = CAMPAIGN / "evidence/input-provenance.yaml"
+LITERATURE_AUDIT = CAMPAIGN / "evidence/literature-audit.yaml"
 SOURCE_SHA256 = "3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529"
 FROZEN_SHA256 = "2ff19c8d29c6d9619eb644118a9bf6d01331b8029ff20535c1faa19c82a86640"
+REVISION_SHA256 = "eaeaea05c8bf73363ca3a9477baeb0a9f3f8f5de4820d686d7462bf51e602d77"
+REPRODUCTION_SHA256 = "9622364e7784bc531bafc7482398ea5f2ee8c3cc6f5f1716ca8daffa6ae10d6b"
+SOURCE_AUDIT_SHA256 = "aec0a34537a32679e163518b53eb6274f15156d098e00eb427c1c9ac45d91f28"
+CHECK_ADJUDICATION_SHA256 = "c1eae121203a88f6f270a2cdcb61244fed9a027397ec45fb78d4a5a437c06134"
+INPUT_PROVENANCE_SHA256 = "616fd2a2bb84e03e0b9eb7db677660fefd71a978079b432dfdc4c36bdd9c3eb1"
+LITERATURE_AUDIT_SHA256 = "2f5934a14ff6f454e476f8faf976ca714514254b52d39940ca128a524baf786a"
 
 
 def _sha256(path: Path) -> str:
@@ -55,6 +67,15 @@ def run() -> int:
 
     checks.check("pinned SM3 source hash", _sha256(SOURCE) == SOURCE_SHA256)
     checks.check("frozen proposal hash", _sha256(FROZEN) == FROZEN_SHA256)
+    checks.check("scope-aware proposal revision hash", _sha256(REVISION) == REVISION_SHA256)
+    checks.check("source reproduction hash", _sha256(REPRODUCTION) == REPRODUCTION_SHA256)
+    checks.check("source audit hash", _sha256(SOURCE_AUDIT) == SOURCE_AUDIT_SHA256)
+    checks.check(
+        "predicate adjudication hash",
+        _sha256(CHECK_ADJUDICATION) == CHECK_ADJUDICATION_SHA256,
+    )
+    checks.check("input provenance hash", _sha256(INPUT_PROVENANCE) == INPUT_PROVENANCE_SHA256)
+    checks.check("literature audit hash", _sha256(LITERATURE_AUDIT) == LITERATURE_AUDIT_SHA256)
     source_checks = [
         node
         for node in ast.walk(tree)

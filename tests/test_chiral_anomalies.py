@@ -211,6 +211,7 @@ def test_wrong_conjugate_cubic_sign_breaks_color_balance() -> None:
         (ChiralGaugeMultiplet("x", 1, 1, 0.5, 0, 0, 0, False),),
         (ChiralGaugeMultiplet("x", 1, 1, 0, -1, 0, 0, False),),
         (ChiralGaugeMultiplet("x", 1, 1, 0, 0, 0, 0, 1),),
+        (ChiralGaugeMultiplet("x", 1, 3, 0, 0, 0, 0, True),),
         (
             ChiralGaugeMultiplet("x", 1, 1, 0, 0, 0, 0, False),
             ChiralGaugeMultiplet("x", 1, 1, 0, 0, 0, 0, False),

@@ -2,7 +2,7 @@
 description: Audit SM3 and derive a complete exact anomaly-coefficient and solution-branch classification
 author: vantasner
 created: '2026-08-10T20:25:00Z'
-updated: '2026-08-10T20:54:00Z'
+updated: '2026-08-10T21:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gauge-anomalies
 - hypercharge
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P165 SM3 Anomaly Cancellation Audit
 
@@ -88,13 +88,12 @@ concept. Prior source exposure is recorded and no fresh blinding is claimed.
 
 ## Proposed Claim Delta
 
-The source-aware revision proposes collision-free `C-ANO-001`: an exact ledger
+The reviewed revision promotes collision-free `C-ANO-001`: an exact ledger
 for separately supplied chiral anomaly coefficients plus the complete local
 solution variety of the fixed five-row carrier. Its accepted dependencies are
-C-REP-001 and C-REP-003; local anomaly trace criteria, Witten fundamental-SU2
-parity, and conjugate-SU3 cubic signs remain explicit external theory. It has no
-challenge or supersession relationship. C-LIE-001 and C-REP-002 are background
-normalization evidence, not load-bearing dependencies of the generic API.
+C-REP-001, C-REP-002, C-REP-003, and C-LIE-001; local anomaly trace criteria,
+Witten fundamental-SU2 parity, and conjugate-SU3 cubic signs remain explicit
+external theory. It has no challenge or supersession relationship.
 
 ## Implementation and Oracle Plan
 
@@ -135,9 +134,16 @@ and bounded images of the three derived lines, passing twelve fresh checks.
 Attempt 0010 implements the generic exact ledger and complete solution variety;
 sixty-one focused tests, twenty-five canonical checks, and twelve independent
 checks pass. Optional Ruff is absent and is recorded in attempt 0009 without
-replacing the repository's required terminal gate.
-Any later schema, oracle, algebra, or compatibility failure will be preserved
-append-only before repair.
+replacing the repository's required terminal gate. Attempt 0011 preserves a
+brittle source-graph predicate failure; attempt 0012 replaces it with semantic
+execution accounting and passes twenty-five checks over all fifteen reachable
+nodes. Attempt 0013 identifies an over-broad global-SU2 API interpretation;
+attempt 0014 narrows the public contract to marked fundamental doublets and
+passes thirty-one canonical checks. Attempt 0015 closes dependency,
+nonduplication, consumer, and impact review with no untyped runtime consumer.
+Attempt 0016 records the terminal repository gate: both required full-suite
+invocations pass all 1,478 tests, the workflow gate is green, and the final
+diff check passes without any scientific delta.
 
 ## Debt Ledger
 
@@ -149,11 +155,11 @@ consumers, compatibility, governance, and continuation.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | SM3 predicate strength is unaudited | Reproduce and classify all eight checks and the assertion | discharged by attempt 0003 |
-| Anomaly formula authority is unresolved | Source every local and global criterion and separate imports from arithmetic | open |
+| Anomaly formula authority is unresolved | Source every local and global criterion and separate imports from arithmetic | discharged by input provenance, dependency audit, and claim review |
 | Claimed uniqueness is unproved | Compute and independently verify the complete exact solution branches | discharged: three affine lines, source uniqueness refuted |
 | Chirality and conjugate-representation signs are unresolved | Type every row and test conjugation mutations | discharged by canonical signed-index ledger and mutations |
 | Global SU2 and cubic SU3 statements may be stand-ins | Verify their representation inputs and logical independence | discharged for supplied fundamental representations; generic higher-representation claims excluded |
-| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
+| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | discharged by attempts 0012 and 0015 plus v0.127.0 promotion records |
 
 ## Review and Promotion Plan
 
@@ -167,11 +173,12 @@ Validation and commit remain separate process invocations.
 
 ## Done Gate
 
-P165 closes only when a positive exact ledger and complete branch theorem or
-accepted composition exists, every predicate has an individual verdict, all
-external inputs are typed, mutations are load-bearing, consumers replay,
-governance agrees, and debt is empty. A supplied zero table, perturbation guard,
-or rejected uniqueness statement alone cannot complete the campaign.
+P165 closes with accepted release v0.127.0 and `C-ANO-001`: the reusable exact
+ledger, the complete three-line local solution variety, thirty-one primary and
+twelve independent checks, twenty-five source-graph checks, claim-level SM3
+qualification, synchronized governance and generated records, and an empty
+debt ledger. A supplied zero table, perturbation guard, or rejected uniqueness
+statement alone did not complete the campaign.
 
 ## Cross-References
 
