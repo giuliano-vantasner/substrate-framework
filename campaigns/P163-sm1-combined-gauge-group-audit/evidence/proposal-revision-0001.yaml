@@ -1,0 +1,37 @@
+revision: 0001
+campaign: P163
+parent_frozen_proposal_sha256: b5d363206208eafb93e4ab145fa6a8c14ac0537e9a25fb8c2e1d5b2b5ae45f1b
+trigger: >-
+  Source-aware inspection confirms a distinct exact tensor-factor direct-sum
+  representation and joint-commutant theorem while exposing undeclared
+  nonzero-weight and global-group boundaries in SM1.
+unchanged:
+  - candidates_A_through_G_and_their_predeclared_structural_ordering
+  - exclusion_of_previously_exposed_dimension_and_tally_values_from_selection
+  - separation_of_local_Lie_algebra_global_group_representation_and_action
+  - compatibility_policy_mutation_requirements_and_one_terminal_global_gate
+added_import:
+  id: C-REP-002
+  reason: accepted_standard_Pauli_half_SU2_factor_and_commutant_boundary
+claim_delta:
+  identifiers: [C-PGA-001]
+  dependencies: {C-PGA-001: [C-LIE-001, C-REP-002]}
+  release_change: new_patch_release_if_individual_review_and_global_replay_pass
+  implementation_change:
+    - add_pure_product_gauge_module_using_canonical_SU3_and_SU2_factor_APIs
+    - add_exact_tests_for_closure_cross_brackets_rank_joint_commutant_and_compact_U1_boundary
+selected_candidates: [A, B, C, F, G]
+source_corrections:
+  - require_a_provably_nonzero_exact_real_Abelian_weight_for_rank_twelve
+  - check_every_SU3_and_SU2_commutator_not_only_representative_pairs
+  - replace_one_bad_generator_as_uniqueness_evidence_with_a_full_joint_commutant_derivation
+  - call_twelve_the_Lie_algebra_generator_count_not_a_gauge_boson_count
+  - classify_the_connection_matrix_as_a_declared_algebra_valued_component_not_a_verified_local_covariant_derivative
+  - expose_compact_U1_full_turn_periodicity_as_an_additional_global_input
+  - deny_global_Standard_Model_group_quotient_matter_hypercharge_action_and_substrate_claims
+oracle: >-
+  Exact canonical factor composition plus fresh independent tensor bracket and
+  commutant derivation, zero-weight mixed-generator compact-period and finite-
+  quotient counterfamilies, source replay, semantic graph, impact analysis,
+  claim-level review, and one terminal global gate.
+status: frozen

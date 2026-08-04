@@ -20,6 +20,7 @@ allowed_imports:
   - C-LIE-003 for exact SU3 convention checks only
   - C-NAG-001
   - C-GAU-001
+  - C-REP-002 for the exact standard Pauli-half SU2 factor and commutant boundary
   - exact finite-dimensional Lie bracket block-matrix representation dimension center and commutant algebra
   - SM1 and its dossier as hash-pinned noncanonical evidence only after the freeze
 candidates:
@@ -43,10 +44,10 @@ selection_criteria:
   - local Lie algebra versus global group representation and quotient separation
   - explicit fields couplings actions currents and matter representations for physical readings
   - assumption and parameter economy mutation sensitivity API novelty and consumer compatibility
-claims_proposed: []
+claims_proposed: [C-PGA-001]
 comparators_blinded_until: >-
   source-aware proposal freeze commit before renewed targeted SM1 and dossier
   audit; SM1 execution and source predicates were already exposed by P141
   through P145 P147 and P160 graph replays and cannot select a candidate or
   threshold
-status: draft
+status: source-aware-frozen

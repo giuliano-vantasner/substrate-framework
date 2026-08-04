@@ -1,0 +1,65 @@
+campaign: P163
+source_unit: SM1
+source_sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2
+ast:
+  check_calls: 6
+  assert_nodes: 1
+  local_check_helper: true
+  local_scientific_helpers: [is_zero_mat, kron, comm, f_proj]
+  imports: [sympy]
+compatibility_ast:
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+constructed_executable_objects:
+  - standard_fundamental_SU3_generators_redeclared_locally
+  - standard_Pauli_half_SU2_generators_redeclared_locally
+  - tensor_factor_embeddings_on_C3_tensor_C2
+  - scalar_real_symbol_U1_generator
+  - selected_SU3_pair_closure_checks
+  - complete_SU2_cyclic_and_cross_factor_commutator_checks
+  - rank_test_after_substituting_U1_weight_one
+  - declared_three_block_connection_component
+  - constant_global_U1_phase_norm_test
+  - one_noncommuting_mixed_generator_counterexample
+absent_executable_objects:
+  - complete_SU3_pair_closure_in_the_source_verdict
+  - proof_of_the_joint_commutant_or_claimed_scalar_U1_uniqueness
+  - nonzero_assumption_on_the_symbolic_U1_weight
+  - compact_U1_period_or_single_valued_representation_test
+  - global_group_center_kernel_or_discrete_quotient
+  - local_coordinate_dependent_product_gauge_transformation
+  - spacetime_covariant_derivative_acting_on_a_field
+  - gauge_action_kinetic_terms_equations_currents_or_dynamical_bosons
+  - physical_left_quark_multiplet_or_hypercharge_assignment
+load_bearing_findings:
+  - >-
+    The tensor-factor SU3 and SU2 images commute and, with a supplied nonzero
+    scalar Abelian generator, give a faithful twelve-dimensional local Lie
+    algebra representation on C6. This is distinct supportable content.
+  - >-
+    SM1 declares Y only real but substitutes Y=1 before its rank calculation.
+    At Y=0 the Abelian generator vanishes and the combined rank is eleven, so
+    nonzero Y is an undeclared load-bearing premise.
+  - >-
+    The source's one mixed-generator guard disproves that example but does not
+    prove the claimed uniqueness of scalar matrices. A full joint-commutant
+    nullspace derivation is required and yields span of I6.
+  - >-
+    An arbitrary real Lie-algebra weight defines a local u1 action, but a
+    compact U1 representation with period two pi additionally requires its
+    full-turn phase to be one in the chosen normalization.
+  - >-
+    Direct products and finite central quotients have the same Lie algebra, so
+    local commutators and dimension cannot establish a global Standard Model
+    group or its faithful matter representation.
+  - >-
+    The combined connection is defined as a sum and the source tests a constant
+    phase norm only. It constructs no local transformation, derivative acting
+    on a field, action, kinetic term, current, or dynamical gauge boson.
+duplication:
+  SU3_factor: src/substrate_framework/su3.py
+  SU2_factor: src/substrate_framework/su2_doublets.py
+  U1_local_covariance: src/substrate_framework/gauge_u1.py
+  product_factor_embedding_and_joint_commutant: absent_from_canonical_API
+debt: []

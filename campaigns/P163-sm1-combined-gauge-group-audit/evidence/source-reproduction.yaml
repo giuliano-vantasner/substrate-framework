@@ -1,0 +1,18 @@
+campaign: P163
+source_unit: SM1
+source_path: merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py
+source_sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py
+exit_code: 0
+terminal_tally: ALL_6_CHECKS_PASS
+ast:
+  static_check_calls: 6
+  dynamic_check_calls: 0
+  assertions: 1
+  matrix_rank_calls: 1
+compatibility:
+  mode: native
+  legacy_numpy_integration_references: 0
+  current_numpy_integration_references: 0
+scientific_reproduction: passed_all_executed_source_predicates
+headline_authority: none_the_tally_does_not_test_global_group_or_physical_gauge_data

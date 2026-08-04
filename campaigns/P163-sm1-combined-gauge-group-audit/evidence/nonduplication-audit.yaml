@@ -1,0 +1,27 @@
+campaign: P163
+candidate: C_importable_direct_sum_ledger
+registry_search_terms:
+  - direct_sum_tensor_factor_joint_commutant
+  - SU3_SU2_U1_product_gauge_algebra
+  - twelve_generator_tensor_product_representation
+canonical_results:
+  C_LIE_001: exact_standard_fundamental_SU3_factor_only
+  C_REP_002: exact_standard_fundamental_SU2_factor_and_same_carrier_commutant_only
+  C_GAU_001: conditional_local_U1_covariance_only
+  C_NAG_001: conditional_SU2_connection_on_a_projected_carrier_only
+  C_NVP_002: generic_single_finite_Lie_representation_loop_not_a_product_factor_constructor
+missing_surface:
+  - typed_SU3_tensor_SU2_factor_embeddings_on_C6
+  - all_factor_and_cross_commutator_residuals
+  - nonzero_Abelian_weight_rank_and_faithfulness_gate
+  - exact_joint_commutant_basis_and_scalar_uniqueness
+  - algebra_valued_three_block_connection_component
+  - compact_U1_full_turn_residual_boundary
+selected: true
+new_claim: C-PGA-001
+new_module: src/substrate_framework/product_gauge.py
+consumer_need:
+  - SM1_positive_local_algebra_migration
+  - future_product_representation_and_gauge_running_audits
+duplicate_wrapper_avoided: factor_APIs_are_imported_instead_of_redeclared
+debt: []

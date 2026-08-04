@@ -1,0 +1,24 @@
+attempt: 0004
+campaign: P163
+candidate: A_native_hash_pinned_replay
+status: passed
+started_at: '2026-08-10T18:59:00Z'
+finished_at: '2026-08-10T19:01:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py
+source_sha256: bb7b70bc2ac0dd703f95ccbbaf843d40e78279f357795b9be74d6eee484749f2
+compatibility:
+  mode: native
+  numpy_integration_surface: absent
+exit_code: 0
+terminal_tally: ALL_6_CHECKS_PASS
+observed:
+  static_checks: 6
+  runtime_checks: 6
+  assertions: 1
+classification: source_regression_evidence_only_pending_predicate_adjudication
+scientific_verdict: not_implied_by_green_tally
+debt:
+  - complete_all_pair_factor_closure_and_joint_commutant_oracles
+  - make_nonzero_U1_weight_load_bearing_instead_of_substituting_one_only_for_rank
+  - separate_local_Lie_algebra_from_global_group_and_physical_gauge_action
+next_attempt: freeze_the_source_aware_claim_delta_then_implement_the_exact_positive_core

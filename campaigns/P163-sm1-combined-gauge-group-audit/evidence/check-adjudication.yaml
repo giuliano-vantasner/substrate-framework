@@ -1,0 +1,17 @@
+campaign: P163
+source_unit: SM1
+checks:
+  - {id: SM1.1, status: retained_but_source_sampling_strengthened, mapping: [C-LIE-001, C-PGA-001], reason: The standard SU3 factor and its tensor embedding are exact but the source checks only two representative generator pairs; the canonical theorem checks all pairs.}
+  - {id: SM1.2, status: retained_exact_factor_embedding, mapping: [C-REP-002, C-PGA-001], reason: The standard Pauli-half factor closes exactly on the tensor carrier and remains mathematical representation algebra only.}
+  - {id: SM1.3, status: retained_as_local_direct_sum, mapping: C-PGA-001, reason: All tensor-factor cross commutators vanish and in-factor commutators are nonzero; this identifies the local direct-sum Lie algebra but not a global group or physical sectors.}
+  - {id: SM1.4, status: split_conditional_rank_from_rejected_boson_reading, mapping: C-PGA-001, reason: Rank twelve holds only for a nonzero Abelian weight and counts algebra generators; the source silently substitutes one and constructs no dynamical gauge bosons.}
+  - {id: SM1.5, status: split_declared_connection_from_rejected_covariance, mapping: C-PGA-001, reason: The algebra-valued matrix is exactly a linear sum of three supplied blocks; turning couplings off is definitional and a constant phase norm does not test local covariance or a derivative acting on a field.}
+  - {id: SM1.6, status: retained_counterexample_but_uniqueness_strengthened, mapping: C-PGA-001, reason: The mixed tensor fails to commute as claimed, but one rejected example does not prove uniqueness; the canonical joint-commutant derivation proves that every common commuting matrix is scalar.}
+headline_decision: >-
+  Promote the exact local tensor-product direct-sum representation as a new
+  typed theorem with an explicit nonzero Abelian weight and full commutant
+  oracle. Qualify SM1's global Standard Model group, left-quark, hypercharge,
+  gauge-boson, generated-kinetic-term, covariant-derivative, physical-force,
+  and substrate readings. Local Lie algebra data do not choose a global group
+  or quotient and do not construct gauge dynamics.
+debt: []

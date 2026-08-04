@@ -1,0 +1,19 @@
+campaign: P163
+criteria_order:
+  - accepted_dependency_closure_and_exact_bracket_provenance
+  - local_versus_global_group_separation
+  - explicit_representation_action_and_coupling_data
+  - physical_action_and_current_completeness
+  - mutation_sensitivity_API_novelty_and_consumer_compatibility
+candidates:
+  A: {decision: selected_for_source_classification, reason: Native replay covers all six predicates but its tally receives no headline authority.}
+  B: {decision: retained_as_dependencies_but_incomplete, reason: Accepted factor claims supply the inputs but no canonical theorem owns their tensor-factor direct-sum representation or joint commutant.}
+  C: {decision: selected, reason: The local direct-sum representation is exact distinct reusable and naturally fits a small pure API with a nonzero-weight gate.}
+  D: {decision: rejected_for_SM1, reason: SM1 contains no compact-U1 periodicity center kernel finite quotient faithful full matter representation or hypercharge normalization.}
+  E: {decision: rejected_for_SM1, reason: SM1 contains no local product transformation action kinetic terms currents field equations dynamics or physical matter map.}
+  F: {decision: selected, reason: Zero-weight compact-period quotient coupling label and mixed-generator mutations separate the local theorem from the headline.}
+  G: {decision: selected, reason: A new accepted claim requires claim-level review release dependency consumer docs memory and queue synchronization.}
+selected_candidates: [A, B, C, F, G]
+claim_delta: [C-PGA-001]
+foundational_revision_required: false
+debt: []

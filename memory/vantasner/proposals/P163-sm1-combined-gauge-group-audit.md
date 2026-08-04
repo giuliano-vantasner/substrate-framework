@@ -2,7 +2,7 @@
 description: Audit SM1 and test whether named factor algebras establish a physical Standard Model gauge group
 author: vantasner
 created: '2026-08-10T18:55:00Z'
-updated: '2026-08-10T18:55:00Z'
+updated: '2026-08-10T19:02:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -52,7 +52,8 @@ local U1 covariance without a Maxwell action, photon, electric-charge map, or
 substrate sector.
 
 Allowed inputs are those accepted claims, C-LIE-003 only for exact SU3
-convention checks, and exact finite-dimensional direct-sum, block-matrix,
+convention checks, C-REP-002 for the standard Pauli-half factor and its
+commutant boundary, and exact finite-dimensional direct-sum, block-matrix,
 dimension, center, commutant, and Lie-bracket algebra. A direct-sum Lie algebra
 has componentwise brackets and zero cross brackets, but its dimension and
 local algebra do not determine a global direct product versus quotient, a
@@ -87,12 +88,14 @@ a concept. Prior source exposure is recorded and no fresh blinding is claimed.
 
 ## Proposed Claim Delta
 
-The initial claim delta is empty because the accepted factor claims and
-elementary direct-sum algebra may already own every supportable result.
-Candidate C may receive a source-aware proposal only if the canonical
-nonduplication and consumer audit finds a missing typed surface. Candidates D
-and E require all global, representation, field, action, and coupling premises
-to be present and independently verified; source labels cannot supply them.
+The source-aware claim delta proposes C-PGA-001 with dependencies C-LIE-001 and
+C-REP-002. The accepted factor claims do not own the distinct tensor-factor
+embeddings, complete cross-bracket table, nonzero Abelian-weight faithfulness
+gate, joint commutant, three-block algebra-valued connection component, or
+compact-U1 full-turn boundary. Candidate C is therefore selected for one small
+pure module and exact tests. Candidates D and E remain rejected because SM1
+contains none of their global, representation, field, action, and physical
+premises.
 
 ## Implementation and Oracle Plan
 
@@ -117,11 +120,12 @@ into authority.
 
 ## Attempts and Continuation
 
-Attempts are append-only and distinguish compatibility, verifier, local
-algebra, global-group, representation, physical-action, candidate, target, and
-foundation failures. A local direct-sum result returns first to accepted
-composition or a genuinely typed global construction; it cannot rewrite the
-factor claims to save a physical headline.
+The append-only ledger preserves the source-blind freeze, two repaired memory
+CLI invocation errors, and native six-predicate replay. Source-aware inspection
+selects Candidate C because the local tensor-factor theorem is exact and
+missing, while the source's global and physical readings lack their required
+objects. The next attempt implements C-PGA-001 and must fail rather than infer
+rank twelve at zero Abelian weight or infer a compact group from a Lie algebra.
 
 ## Debt Ledger
 
@@ -135,7 +139,8 @@ consumers, governance, and continuation.
 | SM1 predicate strength is unaudited | Reproduce and classify all six checks and the assertion | open |
 | Factor independence and cross brackets are unproved | Recover the exact embedded generators and bracket table | open |
 | Local algebra versus global group is unresolved | Audit centers, quotient kernels, and representation faithfulness | open |
-| Candidate C novelty is unknown | Audit canonical APIs, accepted claims, prior campaigns, and consumers | open |
+| Candidate C novelty is unknown | Audit canonical APIs, accepted claims, prior campaigns, and consumers | discharged |
+| C-PGA-001 is proposed but unimplemented | Add the pure API, exact tests, primary and independent oracles, and claim review | open |
 | Physical sector data are unspecified | Construct fields, couplings, action, currents, and matter representations or reject their source attribution | open |
 | Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
 
