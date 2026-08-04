@@ -1,0 +1,26 @@
+accepted_composition:
+  C-VTX-001:
+    dependencies: []
+    role: exact_conditional_model_equations_flux_and_inverse_lengths
+  C-VTX-002:
+    dependencies: [C-VTX-001]
+    role: resolution_bounded_profile_and_tension_evidence
+separate_non_dependencies:
+  C-DIM-007: dimensional_ceiling_only
+  C-FLX-001: separate_uniform_fixed_area_construction
+  C-GSM-001: no_CF1_physical_condensate_map
+  C-PRC-001: no_CF1_dual_screening_identity
+source_narrative_edges:
+  M1: declared_v_template_without_executable_import
+  M2: declared_screening_template_without_executable_import
+  CF2: downstream_linear_tube_claim_explicitly_negative_here
+  CF3: downstream_loop_law_claim_explicitly_negative_here
+  CF4: downstream_dimensional_scale_claim_explicitly_negative_here
+missing_physical_dependencies:
+  - substrate_to_Abelian_Higgs_field_map
+  - QCD_to_dual_U1_map
+  - chromoelectric_flux_identification
+  - monopole_condensate_dynamics
+  - nonperturbative_confinement_or_area_law_oracle
+dependency_closure_for_accepted_claims: complete
+dependency_closure_for_physical_headline: absent

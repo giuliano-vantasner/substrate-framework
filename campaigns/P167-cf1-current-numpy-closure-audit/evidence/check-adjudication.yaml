@@ -1,0 +1,37 @@
+source_unit: CF1
+lexical_checks: 8
+runtime_checks_after_alias: 8
+assertion_nodes: 2
+checks:
+  CF1.1:
+    verdict: accepted_through_C-VTX-001
+    qualification: source_is_g_equals_one_specialization_and_P026_supplies_consistent_general_g_convention
+  CF1.1b:
+    verdict: accepted_as_mutation_evidence_for_C-VTX-001
+    qualification: dropping_polar_friction_breaks_exact_variation
+  CF1.2:
+    verdict: accepted_only_through_C-VTX-002_numeric_evidence
+    qualification: source_mesh_repetition_is_not_independent_and_P026_adds_status_residual_refinements_and_finite_differences
+  CF1.3:
+    verdict: accepted_mathematics_through_C-VTX-001
+    qualification: finite_energy_and_flux_survive_but_chromoelectric_identity_is_rejected
+  CF1.3b:
+    verdict: accepted_as_ungauged_counterexample
+    qualification: logarithmic_divergence_survives_but_dual_superconductor_interpretation_is_not_inferred
+  CF1.4:
+    verdict: accepted_only_through_C-VTX-002_numeric_evidence
+    qualification: finite_positive_dimensionless_tension_and_v_squared_scaling_survive_without_absolute_scale_or_confinement
+  CF1.5:
+    verdict: partially_accepted_through_C-VTX-001_and_C-VTX-002
+    qualification: exact_inverse_lengths_and_numeric_tail_regressions_survive_but_dual_Meissner_chromoelectric_and_M2_identity_do_not
+  CF1.6:
+    verdict: partially_accepted_through_C-VTX-001
+    qualification: vanishing_inverse_lengths_and_the_trivial_zero_profile_survive_but_BVP_from_one_guess_proves_no_uniqueness_or_physical_deconfinement
+assertions:
+  line_110:
+    role: local_check_ledger_assertion
+    verdict: execution_mechanism_not_extra_claim
+  line_219:
+    role: solve_bvp_status_gate
+    verdict: necessary_numeric_status_evidence_not_extra_claim
+headline_physical_reading: rejected_absent_dependency_closure

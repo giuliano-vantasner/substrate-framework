@@ -1,0 +1,21 @@
+attempt: 0010
+campaign: P167
+candidate: version_robust_source_diagnostic_parsing
+status: passed
+started_at: '2026-08-10T22:47:00Z'
+finished_at: '2026-08-10T22:48:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P167-cf1-current-numpy-closure-audit/verify.py
+result: ALL_26_CHECKS_PASS
+change: >-
+  Replaced exact printed source diagnostic decimals with the source-declared
+  tail, scale-ratio, fitted-mass, and zero-profile inequalities so harmless
+  solver-version formatting or roundoff changes cannot fail the campaign.
+scientific_result_changed: false
+canonical_code_changed: false
+claim_or_release_changed: false
+full_suite_repeated: false
+reason_full_suite_not_repeated: campaign_verifier_only_and_targeted_oracle_passed
+debt: []
+next_attempt: null

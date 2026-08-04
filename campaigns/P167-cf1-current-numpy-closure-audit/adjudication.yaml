@@ -1,0 +1,67 @@
+campaign: P167
+title: CF1 current-NumPy compatibility-neutral source and accepted-composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF1]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-10T22:35:00Z'
+selected_candidates:
+  - {id: A, reason: Alias-only immutable replay restores all eight source predicates without changing scientific semantics.}
+  - {id: B, reason: C-VTX-001 and C-VTX-002 exactly cover every surviving source object.}
+  - {id: G, reason: Source claim compatibility consumer queue and memory closure updates the qualified record.}
+claims: []
+accepted_composition:
+  - {id: C-VTX-001, decision: unchanged_exact_conditional_model_claim}
+  - {id: C-VTX-002, decision: unchanged_resolution_bounded_numeric_claim}
+unpromoted_claims:
+  - {id: physical_dual_superconductor, reason: No_accepted_substrate_or_QCD_field_map.}
+  - {id: chromoelectric_flux_identity, reason: The_mathematical_flux_has_no_accepted_physical_sector_identification.}
+  - {id: confinement_mechanism, reason: No_nonperturbative_area_law_or_static_potential_oracle_is_constructed.}
+  - {id: absolute_string_tension, reason: The_source_uses_dimensionless_declared_v_and_no_physical_scale.}
+  - {id: continuum_vortex_existence_or_uniqueness, reason: Truncated_numeric_BVP_evidence_does_not_prove_a_continuum_theorem.}
+  - {id: zero_vacuum_uniqueness_or_deconfinement, reason: One_trivial_solve_and_vanishing_inverse_lengths_prove_neither_uniqueness_nor_physical_phase.}
+  - {id: CF1_C-FLX-001_identity, reason: Charge_flux_area_and_work_energy_map_is_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_exact_closure_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/CF1-current-numpy-qualified-review.md
+  scientific_attempt: attempts/0006/result.yaml
+  independent_attempt: attempts/0007/result.yaml
+  graph_attempt: attempts/0008/result.yaml
+  terminal_attempt: attempts/0009/result.yaml
+  diagnostic_robustness_attempt: attempts/0010/result.yaml
+source_disposition:
+  CF1: qualified
+compatibility:
+  installed_numpy: 2.5.1
+  native_version_abort: attempts/0003/result.yaml
+  immutable_alias_only: [CF1]
+  alias_backend: numpy.trapezoid
+  mutable_legacy_integration_references: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P167-cf1-current-numpy-closure-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P167-cf1-current-numpy-closure-audit/reviews/independent_exact_closure_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P167-cf1-current-numpy-closure-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_abelian_higgs_vortex.py tests/test_numerics.py tests/test_flux_tube.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

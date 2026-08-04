@@ -1,0 +1,23 @@
+attempt: 0008
+campaign: P167
+candidate: source_graph_and_consumer_closure
+status: passed
+started_at: '2026-08-10T22:30:00Z'
+finished_at: '2026-08-10T22:32:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P167-cf1-current-numpy-closure-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_abelian_higgs_vortex.py tests/test_numerics.py tests/test_flux_tube.py tests/test_source_audit.py -q
+results:
+  source_graph: ALL_30_CHECKS_PASS
+  graph_nodes: 6
+  lexical_checks: 51
+  runtime_checks: 51
+  assertion_nodes: 7
+  legacy_nodes: [CF1]
+  legacy_references: 3
+  focused_tests: 39_passed
+  accepted_claim_delta: []
+  canonical_code_delta: []
+debt:
+  - materialize_claim_level_adjudication_and_synchronize_CF1_qualification_records
+next_attempt: terminal_qualification_transaction

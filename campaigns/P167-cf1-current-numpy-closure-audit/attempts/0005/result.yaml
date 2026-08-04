@@ -1,0 +1,20 @@
+attempt: 0005
+campaign: P167
+candidate: first_independent_exact_closure_review
+status: failed_symbolic_substitution_representation
+started_at: '2026-08-10T22:27:00Z'
+finished_at: '2026-08-10T22:27:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P167-cf1-current-numpy-closure-audit/reviews/independent_exact_closure_review.py
+exit_code: 1
+passed_before_failure: 8
+failure: >-
+  Substitution of the evaluated f(r) expression into an equation already
+  containing Derivative(f(r),r) did not propagate through the derivative
+  nodes, so the epsilon coefficient was not the intended linearization.
+classification: symbolic_representation_not_scientific_claim_failure
+scientific_result_changed: false
+debt:
+  - construct_the_perturbed_profile_first_and_differentiate_that_expression_directly
+next_attempt: repaired_independent_exact_closure_review

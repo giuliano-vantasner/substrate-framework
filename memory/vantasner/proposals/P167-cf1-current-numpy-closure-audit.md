@@ -2,7 +2,7 @@
 description: Reproduce CF1 under current NumPy and audit its accepted vortex closure
 author: vantasner
 created: '2026-08-10T22:12:00Z'
-updated: '2026-08-10T22:16:00Z'
+updated: '2026-08-10T22:37:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - abelian-higgs-vortex
 - numpy-compatibility
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P167 CF1 Current-NumPy Closure Audit
 
@@ -98,11 +98,11 @@ but no fresh source or value blinding is claimed.
 
 ## Proposed Claim Delta
 
-No claim is proposed at freeze. Candidate B is the expected closure because
-C-VTX-001 and C-VTX-002 were accepted specifically from CF1 and their APIs
-remain importable. P167 may propose a delta only if a distinct source object
-survives exact scope, dependency, nonduplication, mutation, consumer, and
-independent-review gates. It does not challenge or supersede an accepted claim.
+No claim is required. Candidate B closes the source because C-VTX-001 and
+C-VTX-002 were accepted specifically from CF1, their APIs remain importable,
+and no distinct source object survives scope, dependency, nonduplication,
+mutation, consumer, and independent-review gates. P167 changes, challenges,
+and supersedes no accepted claim and leaves v0.127.0 unchanged.
 
 ## Implementation and Oracle Plan
 
@@ -140,6 +140,18 @@ Every later compatibility, implementation, numerical, schema, or scientific
 failure is preserved append-only before repair with the next viable candidate
 named. Attempt 0002 validates the repository, proposal memory, campaign YAML,
 and diff shape and pins the frozen manifest hash before source-body access.
+Attempt 0003 preserves the native two-pass version abort. Attempt 0004 records
+a brittle registry-prose probe after 23 substantive passes; attempt 0006
+repairs it semantically and passes all 26 primary checks. Attempt 0005 records
+a derivative-substitution representation failure after eight independent
+passes; attempt 0007 constructs the perturbations directly and passes all 16
+fresh exact checks. Attempt 0008 passes 30 six-node graph checks and 39 focused
+tests, closing scientific, compatibility, provenance, and consumer debt.
+Attempt 0009 passes the terminal repository gate and both prescribed
+1,478-test executions with v0.127.0 and all 163 accepted claims unchanged.
+Attempt 0010 then replaces exact printed solver decimals with the source's
+declared numerical inequalities and passes the targeted 26-check verifier,
+preventing harmless solver-version formatting from becoming a campaign abort.
 
 ## Debt Ledger
 
@@ -149,12 +161,12 @@ dependencies, consumers, generated state, and terminal disposition.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Current CF1 execution stops at a removed API name | Preserve native abort and pass alias-only replay backed by `np.trapezoid` | open |
-| Eight source checks and two assertions lack a fresh individual audit | Inventory lexical/runtime/assertion nodes and adjudicate each | open |
-| Existing accepted composition may hide convention or numerical mismatch | Match source inputs and predicates to C-VTX-001/C-VTX-002 and P026 evidence | open |
-| Revalidation may duplicate expensive settled evidence | Hash-audit immutable evidence and rerun only changed or current-environment-sensitive gates | open |
-| Physical dual/QCD/confinement language may exceed dependency closure | Exclude it or provide separately accepted map and oracle | open |
-| Consumers and governed records may disagree | Replay affected APIs and synchronize disposition, queue, memory, and proposal | open |
+| Current CF1 execution stops at a removed API name | Preserve native abort and pass alias-only replay backed by `np.trapezoid` | discharged by attempts 0003/0006 and source reproduction |
+| Eight source checks and two assertions lack a fresh individual audit | Inventory lexical/runtime/assertion nodes and adjudicate each | discharged by check adjudication and alias runtime |
+| Existing accepted composition may hide convention or numerical mismatch | Match source inputs and predicates to C-VTX-001/C-VTX-002 and P026 evidence | discharged by primary, fresh exact, and accepted-evidence reuse audits |
+| Revalidation may duplicate expensive settled evidence | Hash-audit immutable evidence and rerun only changed or current-environment-sensitive gates | discharged by byte-identical P026 evidence and proportional replay |
+| Physical dual/QCD/confinement language may exceed dependency closure | Exclude it or provide separately accepted map and oracle | discharged by dependency, literature, and source adjudication |
+| Consumers and governed records may disagree | Replay affected APIs and synchronize disposition, queue, memory, and proposal | discharged by graph, 39 focused tests, and qualification transaction |
 
 ## Review and Promotion Plan
 
@@ -176,12 +188,14 @@ unless they alter code or claims.
 
 ## Done Gate
 
-P167 closes only when current NumPy reproduces the positive conditional vortex
-object, every CF1 predicate has an individual claim-level verdict, the accepted
-composition or justified delta passes its strongest appropriate oracle,
-version compatibility cannot masquerade as science, all consumers and records
-agree, and the debt ledger is empty. A compatibility repair, native pass tally,
-failed physical interpretation, or preserved no-go alone is not completion.
+P167 closes through unchanged C-VTX-001/C-VTX-002 composition. Current NumPy
+reproduces the immutable source through an isolated alias backed by
+`np.trapezoid`; all eight predicates and both assertions have individual
+verdicts; 26 primary, 16 fresh exact, 30 graph, and 39 focused checks or tests
+pass; the six-node graph separates 51 lexical and runtime predicates from
+seven assertions; and no claim, API, or release change is warranted. Physical
+overreach remains rejected, the terminal gate passes both 1,478-test
+executions, and the debt ledger is empty.
 
 ## Cross-References
 

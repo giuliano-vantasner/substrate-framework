@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P167
+candidate: first_current_source_and_claim_closure_verifier
+status: failed_brittle_registry_prose_probe
+started_at: '2026-08-10T22:24:00Z'
+finished_at: '2026-08-10T22:25:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P167-cf1-current-numpy-closure-audit/verify.py
+exit_code: 1
+passed_before_failure: 23
+failure: >-
+  The absolute-scale ceiling probe required the literal phrase
+  "not an absolute physical string tension" in C-VTX-002.statement, while the
+  registry states "not ... absolute tension" and records the dimensionless
+  demo boundary in both the statement and assumptions.
+classification: verifier_representation_not_scientific_claim_failure
+scientific_result_changed: false
+debt:
+  - replace_the_literal_phrase_probe_with_statement_and_assumption_semantics
+next_attempt: repaired_current_source_and_claim_closure_verifier

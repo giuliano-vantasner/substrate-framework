@@ -1,0 +1,28 @@
+source_unit: CF1
+functional:
+  status: declared_imported_model
+  provenance: Nielsen_Olesen_Abelian_Higgs_vortex_context
+  framework_authority: C-VTX-001_conditional_model_only
+ansatz:
+  source: phi=f_exp_i_n_theta_and_A_theta=a_over_r
+  canonical_correction: A_theta=a_over_g_r_with_gauge_energy_divided_by_g_squared
+  status: declared_convention
+parameters:
+  vacuum_scale: {value: 1, status: declared_dimensionless_demo}
+  winding: {value: 1, status: declared_positive_integer}
+  self_coupling: {value: 2, status: declared_dimensionless_demo}
+  gauge_coupling: {value: 1, status: implicit_source_normalization_explicit_canonical_demo}
+numerical_domain:
+  inner_radius: 1.0e-4
+  outer_radius: 25.0
+  source_initial_meshes: [400, 800]
+  source_solver_tolerance: 1.0e-9
+  source_max_nodes: 400000
+  energy_samples: [4000, 6000]
+  status: declared_numeric_evidence_inputs
+narrative_references:
+  M1_vacuum_scale: nonexecuted_template_not_dependency_authority
+  M2_screening: nonexecuted_template_not_dependency_authority
+  rung19_flux_argument: locally_rederived_not_executably_imported
+empirical_comparators: []
+physical_scale_imported: false

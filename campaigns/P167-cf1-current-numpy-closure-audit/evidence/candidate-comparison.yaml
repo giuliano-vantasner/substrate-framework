@@ -1,0 +1,17 @@
+predeclared_order:
+  - exact_convention_closure
+  - compatibility_neutral_predicate_replay
+  - solver_status_and_residual_scope
+  - independent_evidence_and_mutation_sensitivity
+  - interpretation_boundary_and_parameter_economy
+  - API_nonduplication_downstream_separation_and_governance_closure
+candidates:
+  A: {decision: selected_as_reproduction_route, reason: alias_only_replay_passes_all_eight_without_source_edit}
+  B: {decision: selected_scientific_closure, reason: C-VTX-001_and_C-VTX-002_cover_every_surviving_source_object}
+  C: {decision: not_selected, reason: current_numeric_status_residual_profile_and_tension_evidence_pass}
+  D: {decision: rejected_duplicate, reason: no_distinct_registry_or_API_gap}
+  E: {decision: rejected_conflict, reason: no_substrate_QCD_dual_or_confinement_dependency_or_oracle}
+  F: {decision: rejected_absent_map, reason: C-FLX-001_has_distinct_inputs_and_slope_semantics}
+  G: {decision: selected_governance_closure, reason: qualified_disposition_needs_current_compatibility_evidence}
+comparator_selected_candidate: false
+fresh_blinding_claimed: false

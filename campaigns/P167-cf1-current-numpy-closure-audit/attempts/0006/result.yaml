@@ -1,0 +1,21 @@
+attempt: 0006
+campaign: P167
+candidate: repaired_current_source_and_claim_closure_verifier
+status: passed
+started_at: '2026-08-10T22:26:00Z'
+finished_at: '2026-08-10T22:27:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P167-cf1-current-numpy-closure-audit/verify.py
+result: ALL_26_CHECKS_PASS
+closure:
+  native_exit: 1
+  native_passes_before_version_abort: 2
+  alias_exit: 0
+  alias_runtime_checks: 8
+  canonical_reference_tension_interval: [4.20, 4.23]
+  accepted_composition: [C-VTX-001, C-VTX-002]
+  new_claim: null
+debt:
+  - complete_fresh_independent_exact_review_and_source_graph_replay
+next_attempt: repaired_independent_exact_closure_review

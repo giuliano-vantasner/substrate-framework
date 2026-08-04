@@ -1,0 +1,27 @@
+source_unit: CF1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+sha256: a4ec97923804f1b7c624b7619bc6b6a1cbb62f42d659897799545b257ca33f5d
+installed_numpy: 2.5.1
+native:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+  exit_code: 1
+  passed_before_abort: [CF1.1, CF1.1b]
+  failure: AttributeError_module_numpy_has_no_attribute_trapz_at_line_230
+  classification: version_only
+alias_only:
+  alias: setattr(np, "trapz", np.trapezoid)
+  source_edited: false
+  exit_code: 0
+  terminal_tally: ALL_8_CHECKS_PASS
+  runtime_pass_markers: 8
+  numeric_diagnostics:
+    source_tension_coarse: 4.211567
+    source_tension_fine: 4.211567
+    mesh_difference: 3.82e-13
+    tail_difference: 1.78e-15
+    vacuum_scale_two_ratio: 4.000
+    fitted_vector_mass: 0.9975
+    fitted_scalar_mass: 1.9397
+    zero_vacuum_max_abs_scalar: 0.0
+scientific_verdict_changed_by_alias: false

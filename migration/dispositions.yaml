@@ -2974,10 +2974,37 @@ units:
       confinement, absolute-scale, or v=0-uniqueness claim.
     evidence:
       - campaigns/P026-abelian-higgs-vortex/reviews/source_adjudication.md
+      - campaigns/P167-cf1-current-numpy-closure-audit/reviews/source_adjudication.md
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/source-reproduction.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/compatibility-audit.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/source-audit.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/check-adjudication.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/input-provenance.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/dependency-audit.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/consumer-audit.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/candidate-comparison.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/primary-provenance.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/evidence/literature-audit.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/verify.py
+      - campaigns/P167-cf1-current-numpy-closure-audit/reviews/independent_exact_closure_review.py
+      - campaigns/P167-cf1-current-numpy-closure-audit/reviews/replay_source_graph.py
+      - campaigns/P167-cf1-current-numpy-closure-audit/attempts/0006/result.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/attempts/0007/result.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/attempts/0008/result.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/attempts/0009/result.yaml
+      - campaigns/P167-cf1-current-numpy-closure-audit/attempts/0010/result.yaml
+      - memory/vantasner/decisions/CF1-current-numpy-qualified-review.md
     note: >-
-      The pinned source fails at removed np.trapz before its numerical tally;
-      P026 reconstructs it with one consistent general-g convention, shared
-      solver evidence, full refinements, and independent finite differences.
+      Native CF1 still stops at removed np.trapz after two exact predicates,
+      but P167 classifies that event as version-only and an isolated alias
+      backed only by np.trapezoid passes all eight predicates. Twenty-six
+      primary, sixteen fresh exact, thirty graph checks, and thirty-nine
+      focused tests close the accepted composition. The six-node graph replays
+      fifty-one lexical and runtime predicates plus seven assertions. No claim,
+      API, or release changes.
   CF2:
     disposition: qualified
     accepted_claims:

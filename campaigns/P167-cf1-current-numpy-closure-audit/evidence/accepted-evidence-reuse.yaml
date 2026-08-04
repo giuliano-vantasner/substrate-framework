@@ -1,0 +1,18 @@
+accepted_at:
+  release: v0.23.0
+  commit: a02e56a
+unchanged_since_acceptance:
+  P026_primary_verifier_sha256: b4d06baaeb3a196185f58c526b1b423a191a8d1f3a8c973feea9357d90291ed1
+  P026_independent_review_sha256: eea4cebeb7493383369cfcf38f2e338cf1fe1899a7a7444b1d3244801143f359
+  P026_passing_attempt_sha256: 2e823dca1e0adbccb6866ccea21076aeea603a5cffd733314b7fd581d4b7b1af
+  accepted_tests_sha256: 534af58c5e007de4a526027f2d7f3496526645edc82273794e520d070ab2ce46
+canonical_module_change_since_acceptance:
+  semantic_lines_changed: 0
+  compatibility_lines_changed: 2
+  change: direct_numpy_trapezoid_replaced_by_canonical_trapezoid_integral
+  current_module_sha256: d816938fc091ee4641bec7f193e4b9e083131f6d5193c4870b910ee3d1e93d99
+reuse_decision: >-
+  Hash-identical expensive refinement and independent finite-difference evidence
+  remains accepted. P167 reruns the current source, one status-gated canonical
+  reference solve, exact independent algebra, graph nodes, and focused consumers
+  instead of ceremonially repeating the unchanged refinement matrix.

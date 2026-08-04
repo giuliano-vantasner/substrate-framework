@@ -1,0 +1,25 @@
+attempt: 0003
+campaign: P167
+candidate: literal_native_current_environment_reproduction
+status: failed_version_compatibility
+started_at: '2026-08-10T22:19:00Z'
+finished_at: '2026-08-10T22:20:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py
+source_sha256: a4ec97923804f1b7c624b7619bc6b6a1cbb62f42d659897799545b257ca33f5d
+exit_code: 1
+passed_before_abort:
+  - CF1.1
+  - CF1.1b
+failure:
+  type: AttributeError
+  location: bridge_CF1_dual_superconductor_flux_tube.py:230
+  expression: np.trapz(xs * dens, xs)
+  message: module_numpy_has_no_attribute_trapz
+classification: version_only_not_scientific_candidate_failure
+source_edited: false
+scientific_result_changed: false
+debt:
+  - replay_the_immutable_source_with_a_process_local_legacy_name_alias_backed_only_by_np_trapezoid
+next_attempt: alias_only_current_environment_source_reproduction

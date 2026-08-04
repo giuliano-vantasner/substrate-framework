@@ -1,0 +1,20 @@
+installed_numpy:
+  version: 2.5.1
+  has_legacy_trapz_attribute: false
+  current_function: numpy.trapezoid
+immutable_CF1:
+  legacy_call_sites: 3
+  legacy_lines: [230, 337, 338]
+  current_call_sites: 0
+  native_abort_preserved: attempts/0003/result.yaml
+  alias_replay_preserved: evidence/source-reproduction.yaml
+  runtime_legacy_call_executions_after_alias: 5
+canonical_module:
+  path: src/substrate_framework/abelian_higgs_vortex.py
+  legacy_executable_references: 0
+  integration_API: substrate_framework.numerics.trapezoid_integral
+  current_environment_backend: numpy.trapezoid
+mutable_P167:
+  scientific_quadrature_calls: numpy.trapezoid_or_trapezoid_integral_only
+  legacy_name_use: isolated_alias_assignment_for_immutable_replay_only
+classification: version_compatibility_is_not_scientific_evidence_or_candidate_failure

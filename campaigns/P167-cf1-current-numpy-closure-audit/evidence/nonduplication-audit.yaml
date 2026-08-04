@@ -1,0 +1,16 @@
+registry_search:
+  exact_model: C-VTX-001
+  bounded_numeric_profile: C-VTX-002
+  separate_uniform_tube: C-FLX-001
+package_search:
+  exact_and_numeric_API: src/substrate_framework/abelian_higgs_vortex.py
+  shared_BVP_and_quadrature: src/substrate_framework/numerics.py
+distinct_source_content_not_covered: []
+rejected_new_objects:
+  - alias_replay_is_compatibility_evidence_not_scientific_claim
+  - source_tail_fit_is_regression_against_C-VTX-001_not_new_exact_claim
+  - source_dual_labels_have_no_dependency_closure
+  - source_v_equals_zero_solve_proves_no_uniqueness
+  - C-FLX-001_requires_a_missing_cross_model_map
+new_claim: null
+new_API: null

@@ -1,0 +1,21 @@
+attempt: 0007
+campaign: P167
+candidate: repaired_independent_exact_closure_review
+status: passed
+started_at: '2026-08-10T22:28:00Z'
+finished_at: '2026-08-10T22:29:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P167-cf1-current-numpy-closure-audit/reviews/independent_exact_closure_review.py
+result: ALL_16_CHECKS_PASS
+independence:
+  canonical_vortex_module_imported: false
+  numeric_solver_repeated: false
+  exact_variation_rederived: true
+  exact_flux_rederived: true
+  exact_inverse_lengths_rederived: true
+  exact_vacuum_scale_square_covariance_rederived: true
+  zero_vacuum_uniqueness_not_inferred: true
+debt:
+  - replay_declared_source_graph_and_focused_consumers
+next_attempt: source_graph_and_consumer_closure

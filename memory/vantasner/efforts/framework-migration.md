@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T22:00:00Z'
+updated: '2026-08-10T22:46:00Z'
 tags:
 - substrate-framework
 - effort
@@ -335,6 +335,10 @@ Attempts are append-only and individually reproducible.
 | 0184 | P163 exact local product algebra, joint commutant, compact-period boundary, dependency, consumer, compatibility, and SM1 audit | `campaigns/P163-sm1-combined-gauge-group-audit/attempts/0001` through `0008`, then v0.125.0 promotion | C-PGA-001 accepted and SM1 qualified | Exact canonical and fresh routes prove all factor and cross brackets, nonzero-weight rank twelve, scalar joint commutant, and the declared connection sum. Zero weight, a mixed tensor, a half-weight compact-period failure, a central kernel, and missing connection transformation delimit the theorem. Thirty-one primary, thirteen independent, sixty-two affected tests, and twenty-two graph checks pass over 80 lexical and 80 runtime predicates plus nine assertions. GitNexus rates the new API LOW risk with no affected flow; the unchanged SU3 provider's MEDIUM reach is replayed. The integrated workflow passes all 1,438 tests with 670 memory records and the physics skill valid. | Freeze SM2's representation and hypercharge table without importing SM1's rejected physical matter or global-group headlines. |
 | 0185 | P164 exact supplied-multiplet spectra, fixed-target inversion, conjugation, normalization, dependency, consumer, compatibility, and SM2 audit | `campaigns/P164-sm2-generation-hypercharge-audit/attempts/0001` through `0009`, then v0.126.0 promotion | C-REP-003 accepted and SM2 qualified; scientific commit `70e4211` | Exact canonical and fresh routes derive grouped spectra, supplied state counts, flattened traces, conditional row inversion, charge conjugation, and simultaneous generator coefficient and coupling rescaling. Alternative targets, incomplete tables, equal-dimension conjugates, a fixed coefficient, and the unchecked Yukawa shorthand delimit the theorem. Thirty-three primary, eighteen independent, seventy-eight affected tests, and twenty-five graph checks pass over 123 lexical and 123 runtime predicates plus eighteen assertions. GitNexus rates every new public function LOW risk with no affected flow. All fourteen source nodes are native and have no legacy NumPy integration reference. The integrated workflow passes all 1,454 tests with 675 memory records and the physics skill valid. One post-gate relative memory-path invocation failure is preserved before an absolute-path repair. | Freeze SM3's anomaly-cancellation claims without importing SM2's rejected physical generation or uniqueness headline. |
 
+| 0186 | P165 exact supplied chiral-anomaly ledger, complete branch variety, dependency, consumer, compatibility, and SM3 audit | `campaigns/P165-sm3-anomaly-cancellation-audit/attempts/0001` through `0016`, then v0.127.0 promotion | C-ANO-001 accepted and SM3 qualified | Exact elimination derives the displayed line plus row-exchanged and zero-doublet-charge vectorlike lines, refuting source uniqueness while preserving the supplied anomaly zeroes. Thirty-one primary, twelve independent, forty-three focused, and twenty-five graph checks pass over 132 lexical and runtime predicates plus fifteen assertions. All source nodes are native. The integrated workflow passes all 1,478 tests. | Freeze SM4's fixed-data one-loop running and common-intersection claims without turning a pairwise near-miss into physical unification. |
+| 0187 | P166 exact fixed-data affine running, common-rank, pairwise-spread, dependency, consumer, compatibility, and SM4 audit | `campaigns/P166-sm4-one-loop-unification-audit/attempts/0001` through `0008`, then terminal no-release boundary | SM4 qualified through C-RGE-002, C-RGE-004, and C-RGE-005 with v0.127.0 unchanged | Exact composition gives coefficient rank two, augmented rank three, three unequal pairwise crossings, and a 3.979055-decade spread while exposing hard-coded boundaries, a bundled MSSM stand-in, an out-of-domain sign sample, and an omitted coincident branch. Thirty-seven primary, twenty-four independent, sixty focused, and thirty-three graph checks pass over five native nodes. Two full 1,478-test executions pass. | Freeze CF1's current-NumPy reproduction and accepted vortex closure without treating removed `np.trapz` as science. |
+| 0188 | P167 current-NumPy source reproduction, exact vortex closure, evidence-reuse, graph, consumer, and CF1 audit | `campaigns/P167-cf1-current-numpy-closure-audit/attempts/0001` through `0010`, then terminal no-release boundary | CF1 remains qualified through C-VTX-001 and C-VTX-002 with v0.127.0 unchanged | Native CF1 passes two predicates and stops only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all eight. Twenty-six primary, sixteen fresh exact, thirty graph, and thirty-nine focused checks or tests pass. The six-node graph replays 51 lexical and runtime predicates plus seven assertions. Hash-identical P026 refinements are reused rather than ceremonially repeated. Two full 1,478-test executions pass; a post-gate targeted replay replaces brittle printed decimals with scientific inequalities. | Freeze CF2's fixed-area field-energy and endpoint-work audit, preserve their factor-of-two distinction, and reject any unproved CF1 or confinement identity. |
+
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
 
@@ -350,7 +354,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 57 bridge units remain pending, 3 are migrated, 149 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 54 bridge units remain pending, 3 are migrated, 152 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1785,20 +1789,32 @@ equal-slope branch. The primary, fresh independent, direct-graph, and accepted-
 dependency routes pass 37, 24, 33, and 60 checks or tests over five native
 source nodes with no legacy NumPy integration event.
 
+P167 reaudits the already qualified CF1 under NumPy 2.5.1 without creating a
+duplicate claim or repeating its unchanged refinement matrix. Native source
+execution passes two exact predicates and stops only at removed `np.trapz`;
+an isolated alias backed by `np.trapezoid` passes all eight. Exact accepted
+composition, a fresh independent derivation, six-node source replay, and
+focused consumers pass 26, 16, 30, and 39 checks or tests. C-VTX-001/002 remain
+unchanged, while dual, chromoelectric, QCD, confinement, absolute-scale,
+continuum-uniqueness, and v=0-uniqueness readings remain excluded. The terminal
+workflow and separately required full suite each pass all 1,478 tests with 684
+valid memory records.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P166 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P167 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
 The effort remains active. D4 is discharged, but D1 remains open with 54
 pending, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is CF1, pinned at SHA-256
-`a4ec97923804f1b7c624b7619bc6b6a1cbb62f42d659897799545b257ca33f5d`.
-P167 must freeze CF1 before source execution and audit its proposed dual-
-superconductor flux-tube construction against the accepted Abelian-Higgs,
-fixed-flux, SU3, gauge-sector, and running claims. It must not turn QCD
-asymptotic freedom, a Nielsen--Olesen analogy, or a fitted tension into a
-derived confinement mechanism, physical dual condensate, absolute scale, or
-substrate realization.
+bridge unit. The next queue unit is CF2, pinned at SHA-256
+`e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a`.
+P168 must freeze CF2 before renewed source execution and audit its fixed-area
+Gauss-law, field-energy, endpoint-work, force, and linear-potential statements
+against C-FLX-001 and the separate C-VTX claims. It must keep energy and force
+slopes distinct, test the load-bearing fixed-area premise and factor-of-two
+normalization, and must not turn an ideal uniform tube or reconstructed area
+into a CF1 identity, physical quark potential, area law, QCD confinement, or
+substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

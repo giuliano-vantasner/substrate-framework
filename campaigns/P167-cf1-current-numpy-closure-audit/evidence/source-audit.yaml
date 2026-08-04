@@ -1,0 +1,27 @@
+source_unit: CF1
+direct_imports:
+  - numpy
+  - sympy
+  - scipy.integrate.solve_bvp
+source_module_imports: []
+scientific_predicates:
+  lexical: 8
+  runtime_after_alias: 8
+assertions:
+  total: 2
+  check_ledger: 1
+  solver_status: 1
+compatibility:
+  legacy_integration_sites: 3
+  native_failure: version_only
+  alias_backend: numpy.trapezoid
+convention_findings:
+  - source_functional_and_equations_are_g_equals_one_while_flux_and_mass_prose_are_general_g
+  - C-VTX-001_closes_one_consistent_general_g_convention
+  - source_numeric_profile_is_a_truncated_domain_demo_not_continuum_existence
+semantic_findings:
+  - source_rederives_flux_logic_locally_despite_claimed_rung19_reuse
+  - source_mentions_M1_and_M2_without_executable_imports
+  - dual_chromoelectric_QCD_and_confinement_labels_are_not_supplied_by_equations_or_dependencies
+  - CF2_CF3_CF4_outputs_are_explicitly_negative_for_CF1
+source_edited: false

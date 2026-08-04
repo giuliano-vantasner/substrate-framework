@@ -1,0 +1,24 @@
+accepted_claim_consumers:
+  direct:
+    - C-VTX-002_depends_on_C-VTX-001
+    - src/substrate_framework/abelian_higgs_vortex.py
+    - tests/test_abelian_higgs_vortex.py
+  adjacent:
+    - src/substrate_framework/numerics.py
+    - tests/test_numerics.py
+    - src/substrate_framework/flux_tube.py
+    - tests/test_flux_tube.py
+    - src/substrate_framework/source_audit.py
+    - tests/test_source_audit.py
+narrative_source_graph:
+  nodes: [M1, M2, CF1, CF2, CF3, CF4]
+  executable_CF1_edges: []
+  runtime_predicates: 51
+focused_command: >-
+  .venv/bin/python -m pytest tests/test_abelian_higgs_vortex.py
+  tests/test_numerics.py tests/test_flux_tube.py tests/test_source_audit.py -q
+focused_result: 39_passed
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false
+migration_and_memory_records_change_required: true

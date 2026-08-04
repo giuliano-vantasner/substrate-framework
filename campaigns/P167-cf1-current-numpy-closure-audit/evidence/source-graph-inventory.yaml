@@ -1,0 +1,18 @@
+nodes:
+  M1: {relation: declared_scale_reference, lexical_checks: 9, runtime_checks: 9, assertions: 1, compatibility: native}
+  M2: {relation: declared_screening_template, lexical_checks: 7, runtime_checks: 7, assertions: 1, compatibility: native}
+  CF1: {relation: root, lexical_checks: 8, runtime_checks: 8, assertions: 2, compatibility: isolated_alias_only}
+  CF2: {relation: declared_downstream_tube, lexical_checks: 15, runtime_checks: 15, assertions: 1, compatibility: native}
+  CF3: {relation: declared_downstream_loop, lexical_checks: 6, runtime_checks: 6, assertions: 1, compatibility: native}
+  CF4: {relation: declared_downstream_scale, lexical_checks: 6, runtime_checks: 6, assertions: 1, compatibility: native}
+totals:
+  nodes: 6
+  lexical_checks: 51
+  runtime_checks: 51
+  assertions: 7
+legacy_integration:
+  nodes: [CF1]
+  references: 3
+  backend: numpy.trapezoid
+verifier: reviews/replay_source_graph.py
+result: ALL_30_CHECKS_PASS

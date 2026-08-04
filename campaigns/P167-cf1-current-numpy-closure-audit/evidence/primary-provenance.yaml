@@ -1,0 +1,26 @@
+primary_verifier:
+  path: campaigns/P167-cf1-current-numpy-closure-audit/verify.py
+  sha256: 35fdaf9a826c9ec013114a8499d2e21fc23d0ad4084cca17b7b069a77d8c81b8
+  result: ALL_26_CHECKS_PASS
+independent_exact_review:
+  path: campaigns/P167-cf1-current-numpy-closure-audit/reviews/independent_exact_closure_review.py
+  sha256: a66201fb8eb2e677c801ca606264b871e8c607e90089c7927005313a4083b231
+  result: ALL_16_CHECKS_PASS
+source_graph:
+  path: campaigns/P167-cf1-current-numpy-closure-audit/reviews/replay_source_graph.py
+  sha256: c2f9b7a4727f4ec6b25f6a4940d042cf05674e73557660633edb1723369099a4
+  result: ALL_30_CHECKS_PASS
+post_gate_robustness_attempt: attempts/0010/result.yaml
+independence_statement: >-
+  The independent exact review imports neither the canonical vortex module nor
+  a numeric solver. It derives the functional variation, flux, inverse lengths,
+  scale covariance, and zero-vacuum logical ceiling directly. The pre-existing
+  finite-difference route remains hash-identical immutable accepted evidence.
+mutation_surfaces:
+  - scalar_friction
+  - gauge_sign_and_coupling_power
+  - asymptotic_gauge_boundary
+  - missing_flux_coupling
+  - compatibility_name_availability
+  - zero_vacuum_uniqueness_inference
+  - cross_model_flux_tube_identity
