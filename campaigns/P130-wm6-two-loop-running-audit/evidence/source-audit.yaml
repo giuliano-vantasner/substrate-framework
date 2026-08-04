@@ -1,0 +1,44 @@
+campaign: P130
+source_unit: WM6
+static_check_calls: 11
+runtime_checks: 11
+runtime_dependencies:
+  WM5: [b_derived, B]
+  WM3: [MZ, ALPHA_EM_INV, ALPHA_S, SIN2_MEASURED]
+declared_transitive_dependencies: [SM2, SM4, WM1]
+equation:
+  coordinate: L=log(mu/MZ)
+  state: inverse_alpha
+  rhs: -b/(2*pi)-B*(1/inverse_alpha)/(8*pi^2)
+  shooting_unknowns: [common_boundary_inverse, log_scale_span]
+  high_boundary: all_three_inverse_couplings_equal
+  low_constraints: [inverse_alpha3_equals_inverse_alpha_s, five_thirds_inverse_alpha1_plus_inverse_alpha2_equals_inverse_alpha_em]
+  readout: inverse_alpha2_over_inverse_alpha_em
+numeric_implementation:
+  scipy_version_at_audit: 1.18.0
+  solve_ivp_method_keyword: absent
+  resolved_default_method: RK45
+  root_method: scipy_root_default_hybr
+  ode_status_checked: true
+  root_status_returned: true
+  root_residual_norm_gated_in_headline: false
+  trajectory_positivity_checked: false
+  integration_path_refined: tolerances_only
+  independent_variable_or_method_in_source: false
+oracle_limits:
+  - Check 1 compares rounded literals and is not an exact oracle; the canonical SymPy route supplies the exact affine solution.
+  - Check 3 hard-codes 0.21064 as a regression target after solving rather than testing only equations and residuals.
+  - Check 4 compares with pending SM4's broad crossing window, which is not a solver validation or accepted physical range.
+  - The measured weak comparator is absent from shooting but has thirteen AST loads and affects checks 5, 7, 8, 9, and 11, contradicting the exactly-two-places and no-pass-condition prose.
+  - Check 6 relies on source chronology and a local coefficient-size estimate rather than an independent forward prediction.
+  - Check 7 fits one artificial B-to-kB family to the comparator and does not constrain independent higher-order tensors.
+  - Check 8 validates its attribution list with only residual-above-five and k-above-five booleans; it computes none of the listed effects.
+  - Check 9's numeric-value inequality is not a data-flow proof, although AST inspection confirms the comparator is absent from the residual function.
+  - Check 10 samples six k values and a step ratio; it is regression evidence, not proof of global monotonicity or smoothness.
+surviving_surface:
+  - The inverse-alpha ODE is the correct coordinate transform of C-RGE-005's declared gauge-only beta polynomial.
+  - The two supplied low constraints and one common high-boundary amplitude define a two-unknown conditional inverse problem.
+  - Exact B=0 containment, status-gated refined two-loop output, sign sensitivity, and comparator-free shooting survive.
+headline_verdict: conditional_two_loop_numeric_solution_survives_prediction_and_all_orders_no_go_rejected
+compatibility_event: none
+debt: []

@@ -2,11 +2,11 @@
 description: Audit WM6's conditional gauge-only two-loop boundary-running solve and all-orders overread
 author: vantasner
 created: '2026-08-08T21:00:00Z'
-updated: '2026-08-08T21:00:00Z'
+updated: '2026-08-08T22:00:00Z'
 tags: [substrate-framework, campaign-proposal, renormalization, numeric-running, migration-WM6]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P130 WM6 Two-Loop Running Audit
 
@@ -132,9 +132,9 @@ perturbative-order, dependency, consumer, and generated-state debt.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | Prior comparator and output exposure | Record it and bar values from construction selection and pass gates | frozen |
-| Numeric solver and shooting sensitivity | Status domain refinement independent method and exact limit | open |
-| Full-beta and all-orders wording | Primary-formula and countermodel audit | open |
-| Dependency and consumer closure | Claim-level mapping and pinned replay | open |
+| Numeric solver and shooting sensitivity | Status domain refinement independent method and exact limit | closed |
+| Full-beta and all-orders wording | Primary-formula and countermodel audit | closed |
+| Dependency and consumer closure | Claim-level mapping and pinned replay | closed |
 
 ## Review and Promotion Plan
 

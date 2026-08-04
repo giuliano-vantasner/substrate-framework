@@ -1,0 +1,22 @@
+campaign: P130
+selection_frozen_after_prior_output_exposure_but_before_P130_reinspection: true
+criteria_order:
+  - accepted dependency closure and explicit inverse-problem semantics
+  - ODE convention positivity solver status exact one-loop limit and method independence
+  - tolerance parameter and domain refinement plus mutation sensitivity
+  - omitted-term and perturbative-order honesty parameter economy and scale covariance
+  - comparator values excluded from construction selection and pass thresholds
+candidates:
+  A: {decision: reproduction_evidence_only, reason: Eleven checks run but several are rounded regressions comparator gates prose checks or finite samples.}
+  B: {decision: selected_as_new_numeric_claim, reason: The canonical inverse-alpha solver exposes statuses residuals positivity methods tolerances and every supplied coordinate.}
+  C: {decision: selected_as_independent_numeric_route, reason: Direct-g Radau plus root agrees without importing the running module.}
+  D: {decision: selected_as_exact_containment, reason: The zero-matrix route exactly reproduces C-RGE-004 before any two-loop number is accepted.}
+  E: {decision: selected_as_convergence_evidence, reason: DOP853 tightening Radau and distinct shooting guesses agree beyond reported digits.}
+  F: {decision: selected_as_sensitivity_and_data_flow, reason: Sign transpose boundary and input mutations move the result while the canonical problem has no weak comparator field.}
+  G: {decision: selected_as_inverse_fit_ceiling, reason: Target-dependent k values independent tensor directions and matching offsets refute the all-orders reading.}
+  H: {decision: selected_as_governance_closure, reason: Dependencies consumers impact primary formula and nonduplication constrain the claim to supplied inverse inference.}
+claims_decision: accept_C_RGE_006
+source_disposition: qualified
+comparison_values_used_for_selection: false
+prior_comparison_exposure: explicitly_recorded
+debt: []

@@ -1,0 +1,29 @@
+campaign: P130
+root_source_unit: WM6
+authority_warning: Green source replay is compatibility evidence and promotes no pending consumer claim.
+direct_runtime_dependencies:
+  - {source_unit: WM3, disposition: qualified, path: merged-framework/bridges/phase-23/bridge_WM3_sin2thetaw_rg_running.py, sha256: 2328ae4d6e66e1caa14a39042c362e57258406383f14ecaa5f5f6c468105e298, checks: 10}
+  - {source_unit: WM5, disposition: qualified, path: merged-framework/bridges/phase-33/bridge_WM5_two_loop_coefficients.py, sha256: 8c3fbfeecb6f98d7d80c47e8f267fe1216dde724b81cc3f73f2a3bb17caf1bbc, checks: 11}
+direct_later_consumers:
+  - {source_unit: WM8, disposition: pending_adjudication, path: merged-framework/bridges/phase-39/bridge_WM8_corrected_boundary_running.py, sha256: 741497f63cc39ee96c71e9a999c49ef9e821cf612d8b48b2959d05f9e6940518, checks: 10}
+  - {source_unit: WM10, disposition: pending_adjudication, path: merged-framework/bridges/phase-39/bridge_WM10_corrected_boundary_two_loop.py, sha256: a813f32841a4809f0ca301d8f01cb432d07d43c6bc46433970c1dcf60afe8d29, checks: 7}
+candidate_edges_without_runtime_consumption:
+  - {source_unit: WM4, disposition: qualified, relation: earlier_prose_edge}
+  - {source_unit: WM5, disposition: qualified, relation: earlier_cycle_edge_but_already_runtime_dependency}
+replay:
+  dependency_scripts: 2
+  dependency_checks: 21
+  consumer_scripts: 2
+  consumer_checks: 17
+  exit_statuses_all_zero: true
+compatibility_preflight:
+  scripts_scanned: 4
+  np_trapz: 0
+  np_trapezoid: 0
+  trapezoid_integral: 0
+  compatibility_events: 0
+interpretation: >-
+  WM3 and WM5 reproduce their qualified surfaces. WM8 and WM10 reproduce
+  later boundary compositions but remain pending; no corrected boundary,
+  measured comparison, physical implication, or empty-debt claim migrates here.
+debt: []

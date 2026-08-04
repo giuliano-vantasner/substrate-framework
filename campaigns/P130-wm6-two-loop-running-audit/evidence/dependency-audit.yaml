@@ -1,0 +1,25 @@
+campaign: P130
+base_release: v0.99.0
+accepted_claims_reviewed:
+  C-RGE-004: unchanged_conditional_one_loop_inverse_reconstruction
+  C-RGE-005: unchanged_gauge_only_coefficient_and_omission_ledger
+source_candidate_dependencies:
+  SM2: {disposition: pending_adjudication, runtime_use: transitive_through_WM5, authority: none}
+  SM4: {disposition: pending_adjudication, runtime_use: transitive_through_WM5_and_WM3, authority: none}
+  WM1: {disposition: qualified, runtime_use: transitive_through_WM5, authority: only_C_REP_001_ceiling}
+  WM3: {disposition: qualified, runtime_use: direct_constants_and_convention, authority: only_C_RGE_004}
+  WM5: {disposition: qualified, runtime_use: direct_coefficients, authority: only_C_RGE_005}
+findings:
+  - WM6 dynamically executes only WM5 and WM3; SM2 SM4 and WM1 are transitive source provenance.
+  - C-RGE-004 already classifies the one-loop solve as inverse inference from two supplied low coordinates and exact matching.
+  - C-RGE-005 supplies the gauge-only ODE but explicitly omits the terms needed for a full physical beta function.
+  - A clean WM3 or WM5 replay grants only their individually accepted surfaces, not their source headlines.
+  - C-RGE-006 therefore retains the boundary ratios constraints reference scale and readout as supplied problem data.
+new_claim:
+  C-RGE-006:
+    dependencies: [C-RGE-004, C-RGE-005]
+    compatibility: compatible_extension
+cycles:
+  - WM5 names WM6 in prose while WM6 executes WM5; C-RGE-005 breaks the source cycle at claim level.
+  - Later WM8 and WM10 consume WM6 but remain pending and cannot validate it by agreement.
+debt: []

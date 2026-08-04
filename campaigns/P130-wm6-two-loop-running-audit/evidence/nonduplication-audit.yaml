@@ -1,0 +1,23 @@
+campaign: P130
+distinct_new_scientific_object: accepted_numeric_evidence
+nearby_accepted_surfaces:
+  C-RGE-004: exact_affine_zero_matrix_inverse_solution_only
+  C-RGE-005: exact_beta_coefficients_and_polynomial_without_running_solver_or_boundary
+new_surface:
+  - pure inverse-alpha downward ODE derived from C-RGE-005
+  - status-gated positive three-factor two-constraint shooting solution
+  - explicit DOP853 tolerances residual norm root evidence and sampled trajectory
+  - exact zero-matrix route composed with numeric containment
+  - independent direct-g Radau and root formulation
+  - reference-scale covariance and sign transpose boundary and input sensitivity
+  - explicit inverse-fit versus all-orders tensor ceiling
+package_delta:
+  module: src/substrate_framework/gauge_running.py
+  tests: tests/test_gauge_running.py
+  public_APIs:
+    - inverse_coupling_downward_rhs
+    - direct_coupling_downward_rhs
+    - exact_one_loop_boundary_solution
+    - solve_three_factor_boundary_running
+promotion_decision: accept_C_RGE_006
+debt: []

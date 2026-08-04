@@ -1,0 +1,34 @@
+campaign: P130
+canonical_object: three_factor_gauge_only_boundary_running_inverse_solution
+accepted_inputs:
+  C-RGE-004: exact_zero_matrix_affine_reconstruction_and_inverse_inference_ceiling
+  C-RGE-005: exact_gauge_only_one_and_two_loop_coefficients_convention_and_omissions
+supplied_specialization:
+  one_loop_vector: [41/10, -19/6, -7]
+  two_loop_gauge_matrix:
+    - [199/50, 27/10, 44/5]
+    - [9/10, 35/6, 12]
+    - [11/10, 9/2, -26]
+  reference_scale_GeV: 227969/2500
+  boundary_ratios: [1, 1, 1]
+  low_strong_inverse: 500/59
+  low_electromagnetic_inverse: 1279/10
+  electromagnetic_constraint_weights: [5/3, 1, 0]
+  readout: inverse_alpha2/(1279/10)
+  status: exact_supplied_coordinates_not_framework_derived_observations
+prior_exposure:
+  source_output_exposed_by_P129_replay: true
+  values: [0.20757, 0.21064, 0.23122, 8.90_percent, 8.75]
+  mitigation: structural_criteria_equations_mutations_and_noncomparator_tolerances_frozen_before_P130_reinspection
+withheld:
+  - physical identity and provenance of low-scale inputs
+  - preferred exact-concurrence boundary and simple-group embedding
+  - Yukawa terms multiple-U1 kinetic mixing thresholds matching and scheme conversion
+  - uncertainty covariance and measured-input precision
+  - perturbative validity beyond the checked positive trajectory
+  - all-orders tensors physical unification observed prediction and substrate realization
+comparator:
+  measured_weak_coordinate: 0.23122
+  allowed_role: post_solve_description_and_explicit_inverse_sensitivity_only
+  forbidden_role: construction_selection_residual_boundary_or_scientific_pass_threshold
+debt: []

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 91
-  qualified: 115
+  pending_adjudication: 90
+  qualified: 116
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -8123,8 +8123,39 @@ units:
   dynamic_check_calls: 11
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RGE-006
+  qualification: Conditional on C-RGE-005's gauge-only coefficient ledger, a supplied positive reference
+    scale, an exactly equal three-factor high boundary, and two supplied low inverse-coupling constraints,
+    WM6 has a converged positive shooting solution. C-RGE-006 accepts its inverse-alpha equation, exact
+    zero-matrix containment, status-gated DOP853 result, Radau and fresh direct-coupling agreement, tolerance
+    refinement, reference-scale covariance, and load-bearing sign, transpose, boundary, and input sensitivity.
+    The result is conditional inverse inference, not an ab-initio weak-coordinate prediction. WM6 leaves
+    its source IVP method at SciPy's default, omits trajectory positivity and a headline residual gate,
+    and calls rounded literals exact. The exposed weak comparator affects five later checks despite prose
+    claiming exactly two uses and no pass condition. Scaling B by a fitted k is target dependent, omits
+    independent higher-order tensors and finite matching offsets, and proves no all-orders, threshold,
+    boundary, unification, observation, or substrate no-go. Pending SM4's broad scale window, chronology,
+    coefficient-size estimates, a six-point scan, and an uncomputed effect list validate no additional
+    claim.
+  evidence:
+  - campaigns/P130-wm6-two-loop-running-audit/reviews/source_adjudication.md
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/source-reproduction.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/source-audit.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/check-adjudication.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/input-provenance.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/dependency-audit.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/consumer-audit.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/candidate-comparison.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/evidence/primary-provenance.yaml
+  - campaigns/P130-wm6-two-loop-running-audit/verify.py
+  - campaigns/P130-wm6-two-loop-running-audit/reviews/independent_direct_coupling_review.py
+  - memory/vantasner/decisions/C-RGE-006-review.md
+  note: P130 closes 23 primary and 12 independent numeric checks plus twelve focused package tests. WM3
+    and WM5 reproduce 21 dependency checks; pending WM8 and WM10 reproduce 17 consumer checks without
+    promotion. No numerical quadrature or NumPy compatibility event occurs.
 - source_unit: KI1
   phase: phase-34
   path: merged-framework/bridges/phase-34/bridge_KI1_exhaustive_coupling_search.py

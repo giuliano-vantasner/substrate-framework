@@ -1,0 +1,20 @@
+campaign: P130
+source_unit: WM6
+predicates:
+  - {index: 1, verdict: exact_surface_survives_stronger_oracle, reason: B=0 exactly recovers C-RGE-004, while the source itself compares only rounded literals.}
+  - {index: 2, verdict: numeric_evidence_qualified, reason: Tolerance tightening is useful but source retains one implicit RK45 method, one variable, and no trajectory positivity gate.}
+  - {index: 3, verdict: accepted_conditional_numeric_surface, reason: The gauge-only solve gives 0.2106411 from the supplied problem, while hard-coded 0.21064 is regression only and not a physical prediction.}
+  - {index: 4, verdict: conditional_numeric_only, reason: The high scale follows from supplied MZ and log span; pending SM4's broad window grants no authority.}
+  - {index: 5, verdict: comparator_description_only, reason: The miss is arithmetic after the solve, and comparator-dependent thresholds cannot validate the derived output.}
+  - {index: 6, verdict: rejected_as_independent_prediction, reason: A local coefficient-size estimate and asserted chronology do not independently predict the integrated shift.}
+  - {index: 7, verdict: inverse_fit_only_all_orders_reading_rejected, reason: k=8.7483 solves one comparator-dependent B-to-kB family; higher-order tensors are independent directions.}
+  - {index: 8, verdict: rejected_as_validated_attribution, reason: The predicate calculates no threshold matching Yukawa or boundary contribution.}
+  - {index: 9, verdict: data_gate_survives_via_ast, reason: The comparator is absent from residuals, but the source numeric-inequality check is not a data-flow oracle and comparator values do affect later pass conditions.}
+  - {index: 10, verdict: sampled_regression_only, reason: Six samples show the local source path but do not prove global monotonicity or smoothness.}
+  - {index: 11, verdict: useful_wrong_sign_mutation, reason: The solved conditional output changes materially under B-to-minus-B.}
+summary:
+  source_checks_reproduced: 11
+  accepted_claims: [C-RGE-006]
+  source_disposition: qualified
+  compatibility_event: none
+  debt: []

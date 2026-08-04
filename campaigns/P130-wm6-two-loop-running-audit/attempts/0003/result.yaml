@@ -1,0 +1,38 @@
+campaign: P130
+attempt: 0003
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM6_two_loop_running.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P130-wm6-two-loop-running-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P130-wm6-two-loop-running-audit/reviews/independent_direct_coupling_review.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q tests/test_gauge_running.py
+  - four hash-pinned dependency and direct-consumer replays in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  accepted_claims: 135
+  release: v0.100.0
+  source_units: 218
+  pending_units: 90
+  qualified_units: 116
+  primary_checks: 23
+  independent_checks: 12
+  dependency_checks: 21
+  consumer_checks: 17
+  focused_tests: 12
+  repository_tests: 1118
+  memory_files: 527
+  compatibility_event: none
+  debt: []
+result: >-
+  The source, independent numeric routes, focused tests, claim review,
+  registry, v0.100.0 manifest, qualified WM6 disposition, generated consumers,
+  and migration queue agree. The integrated repository gate reports 135
+  accepted claims, 90 pending units, 527 valid memory records, a valid physics
+  skill, and all 1118 runnable tests passing with eight declared skips. Git diff
+  whitespace is clean.
+compatibility_event: none
+next_attempt: >-
+  Commit P130, checkpoint the parent migration effort, then freeze the next
+  pending source unit from the regenerated queue.

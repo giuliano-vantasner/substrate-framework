@@ -1,0 +1,28 @@
+campaign: P130
+new_external_scientific_imports: []
+inherited_formula:
+  claim: C-RGE-005
+  audit: campaigns/P129-wm5-two-loop-coefficient-audit/evidence/primary-provenance.yaml
+  retained_scope: gauge_only_modified_minimal_subtraction_at_most_one_U1
+  omitted: [two_loop_Yukawa, multiple_U1_kinetic_mixing, thresholds, matching, boundary, field_content]
+higher_order_scope_check:
+  authors: [L. N. Mihaila, J. Salomon, M. Steinhauser]
+  title: Gauge Coupling Beta Functions in the Standard Model to Three Loops
+  arxiv: 1201.5868
+  doi: 10.1103/PhysRevLett.108.151602
+  url: https://arxiv.org/abs/1201.5868
+  finding: >-
+    Higher-loop Standard-Model gauge beta functions contain separately computed
+    coefficient structures and coupling combinations. This supplies no theorem
+    that unknown orders equal one scalar multiple of the two-loop gauge matrix.
+numeric_machinery:
+  scipy_version: 1.18.0
+  local_signature: "solve_ivp(fun, t_span, y0, method='RK45', ...)"
+  canonical_methods: [DOP853, Radau]
+  canonical_shooting: least_squares_on_log_positive_parameters
+  independent_shooting: root_hybr_on_log_positive_parameters
+input_status: >-
+  WM3's decimal MZ, alpha electromagnetic inverse, alpha strong, and measured
+  weak coordinate are source evidence only. C-RGE-006 treats the first three as
+  supplied coordinates and the last only as an external comparator.
+debt: []

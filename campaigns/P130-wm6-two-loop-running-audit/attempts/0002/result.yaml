@@ -1,0 +1,23 @@
+campaign: P130
+attempt: 0002
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - sha256sum /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM6_two_loop_running.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM6_two_loop_running.py
+  - canonical inverse-coupling and independent direct-coupling solves
+expected:
+  source_sha256: 6d1ea4245adcf490466974d4a40b24843cd92e883c6e885936fb030cd1b31d57
+  source_checks: 11
+  positive_object: status_gated_three_factor_gauge_only_boundary_running_solution
+  compatibility_event: none
+result: >-
+  WM6 reproduces eleven checks. Twenty-three canonical/source checks, twelve
+  fresh direct-coupling checks, and twelve focused tests close the exact
+  one-loop limit, DOP853/Radau and inverse/direct formulations, tightened
+  tolerances, positive trajectories, root and residual status, scale covariance,
+  and load-bearing sign, transpose, boundary, and input mutations. The source's
+  default RK45, rounded regressions, comparator-dependent pass conditions, and
+  uniform-matrix all-orders overread remain qualified.
+compatibility_event: none
+next_attempt: Assemble claim-level source dependency consumer and promotion evidence.
