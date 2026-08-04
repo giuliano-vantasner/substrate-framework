@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P141
+candidate: preregistration
+status: passed
+started_at: '2026-08-09T12:50:00Z'
+finished_at: '2026-08-09T12:55:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P141-g1-radiating-dilaton-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  frozen_proposal_sha256: 9e205c57c288ad1f3ed4b67cf84f7f81ee0d0eba37c7d950a23e248087d4a79f
+  repository: WORKFLOW_VALID_142_claims_142_accepted_0_proposals
+  migration_queue: 218_units_80_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_and_prior_consumer_exposure_recorded_in_contract
+verdict: >-
+  The action, retarded-boundary, flux, accelerated-source, candidate,
+  sensitivity, compatibility, and governance contract is frozen before G1
+  execution or source and dossier body inspection.
+next_attempt: >-
+  Commit the freeze boundary, compatibility-preflight immutable G1, reproduce
+  its exact tally through native or alias-only execution, then audit every
+  predicate and action input.

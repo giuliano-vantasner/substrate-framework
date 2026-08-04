@@ -1,0 +1,75 @@
+id: P141
+base_release: v0.107.0
+base_commit: bdd4328
+scientific_base_commit: 078fa1c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [G1]
+question: >-
+  Reproduce and independently audit G1's claim that an accelerating breather
+  sources a time-dependent 1+1 dilaton field with outgoing power proportional
+  to the square of its energy-loss rate, and determine exactly which action,
+  kinetic and source normalizations, retarded boundary data, conservation law,
+  trajectory, multipole, energy, flux, and physical dictionary are required.
+invariants:
+  - >-
+    C-SG-008 supplies exact constant-velocity Lorentz kinematics only. Replacing
+    v by v(t) does not produce an on-shell accelerated breather or its source.
+  - >-
+    C-SG-012 fixes the normalized sine-Gordon stress tensor and local
+    conservation only for an on-shell field; integrated balance additionally
+    requires boundary flux conditions.
+  - >-
+    T2A is qualified through C-SG-001 C-SG-002 C-SG-008 and C-SG-012. It
+    constructs no dilaton action field equation time-dependent solution or
+    physical radiation premise.
+  - >-
+    C-OG-001 through C-OG-003 concern a static declared optical metric and a
+    conditional source-side identity. They supply no time-dependent kinetic
+    action retarded propagator energy flux or physical gravitational coupling.
+  - >-
+    Pending G2 and G3 grant no authority. Later consumers may supply evidence
+    but cannot close G1 before their own claim-level adjudication.
+  - >-
+    A field-equation coefficient and a wave-energy normalization are separate
+    inputs. Outgoing power cannot be inferred from the equation alone.
+  - >-
+    Queue and earlier consumer audits have exposed G1's ten-check tally,
+    symbolic and numeric oracle labels, G2 G3 T2A dependencies, headline
+    Larmor analogy, and immutable legacy-NumPy compatibility path. G1's source
+    body exact formulas check literals output and dossier body remain unopened
+    in P141 before freeze.
+allowed_imports:
+  - C-SG-001 C-SG-002 C-SG-008 and C-SG-012 under their exact normalized constant-velocity and stress-conservation ceilings
+  - C-OG-001 C-OG-002 and C-OG-003 only under their static optical and conditional source-equation ceilings
+  - exact distribution theory d'Alembert retarded Green functions Noether energy balance and finite-dimensional symbolic algebra
+  - a separately declared linear 1+1 scalar wave action only with kinetic source signal-speed boundary and energy conventions explicit
+  - sine_gordon.py optical_geometry.py source_audit.py and verification.py pure APIs
+  - G1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+  - primary literature after freeze only for retarded Green-function radiation or two-dimensional dilaton-gravity convention and scope checks
+candidates:
+  - {id: A, description: Reproduce G1 literally and classify all ten predicates by actual equation action data flow boundary conditions normalization and physical ceiling.}
+  - {id: B, description: Derive the exact retarded field energy density outward flux and total power of a point source in a separately declared normalized 1+1 scalar wave action retaining independent kinetic source and signal-speed coefficients.}
+  - {id: C, description: Extend the linear retarded calculation to a smooth compact source and identify which source moments and conservation conditions suppress or permit its leading outgoing channel.}
+  - {id: D, description: Test an accelerating boosted-breather ansatz directly against the sine-Gordon residual stress divergence and energy balance rather than substituting v(t) into constant-velocity kinematics.}
+  - {id: E, description: Derive the complete field-plus-source work balance and determine whether a local radiation-reaction or self-force follows without extra source dynamics and regularization.}
+  - {id: F, description: Close accepted composition novelty dependencies cycles reverse consumers compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - complete declared action signature kinetic coefficient source coupling and signal speed
+  - exact field equation retarded boundary data distributional jump and outgoing solution
+  - Noether energy density flux source work and total-power normalization from one action
+  - direct residual and stress-divergence audit of any accelerating-breather ansatz
+  - static constant-source constant-velocity zero-coupling and source-sign limits
+  - sensitivity to kinetic source coupling wave-speed field-rescaling and outgoing-versus-standing-wave conventions
+  - separation of mathematical scalar radiation from dilaton gravity physical source reaction and substrate readings
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - any numerical power comparator excluded from concept selection and pass thresholds
+claims_proposed: [C-RAD-001]
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, candidate
+  set, action and flux conventions, selection criteria, mutation plan,
+  compatibility policy, and done gate are frozen and committed. Queue and
+  earlier consumer records have already exposed the broad headline, tally,
+  dependency names, and compatibility event; the exact source formulas check
+  literals output and dossier body remain unopened until that boundary.
+status: draft
