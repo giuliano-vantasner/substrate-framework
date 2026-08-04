@@ -1,0 +1,37 @@
+campaign: P135
+attempt: 0001
+status: passed
+candidate: preregistration
+command: >-
+  validate_repository plus memory validate, frozen-manifest byte comparison,
+  pinned-source HEAD and SHA-256 checks, and git diff --check
+expected: >-
+  Freeze the P135 action, competing candidates, structural criteria, authority
+  ceiling, compromised-blinding record, oracle plan, and debt ledger before any
+  fresh EM5 body inspection.
+result:
+  exit_status: 0
+  base_release: v0.102.0
+  base_commit: 1091175
+  scientific_base_commit: f20f7ad
+  source_head: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0
+  proposal_sha256: cbbf294212c698c80d090ace72b6123b8003cb359f6f8aafcfbd9c809f771388
+  frozen_proposal_sha256: cbbf294212c698c80d090ace72b6123b8003cb359f6f8aafcfbd9c809f771388
+  proposal_memory_sha256: efbde6833dab9381216d57b405c0c3a4b5aa7b948ccb81ade77137b4ef5cde9f
+  source_worktree: >-
+    dirty with excluded Phase47/48 and engineering work; the hash-pinned EM5
+    path matches the committed baseline and no source file was modified
+  prior_exposure: >-
+    P134 already opened and executed EM5 as a reverse consumer, exposing its
+    body, successful eleven-check tally, and claimed result; P135 makes no
+    source- or comparator-blinding claim
+  repository_gate: WORKFLOW VALID with 137 accepted claims and 86 pending units
+  memory_contract: valid
+  frozen_manifest_cmp: identical
+  git_diff_check: passed
+classification: freeze_gate
+compatibility_event: none
+next_attempt: >-
+  Commit the freeze boundary, then freshly inspect and reproduce EM5 without
+  allowing its exposed literals to select among candidates.

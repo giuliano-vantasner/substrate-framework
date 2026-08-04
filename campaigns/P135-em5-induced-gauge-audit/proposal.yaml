@@ -1,0 +1,98 @@
+id: P135
+base_release: v0.102.0
+base_commit: 1091175
+scientific_base_commit: f20f7ad
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [EM5]
+question: >-
+  Reproduce and independently audit EM5's claim that integrating out an
+  assumed charged complex scalar in 1+1 dimensions generates a transverse
+  gauge quadratic action, and determine exactly what field content, quantum
+  action, regulator, renormalization condition, mass and momentum limits, and
+  bare gauge input are required for any local kinetic term, nonlocal kernel,
+  or pole statement beyond C-GAU-001 and C-MAX-001.
+invariants:
+  - >-
+    C-U1-001 supplies only a conditional classical global-U1 current for an
+    independently declared complex scalar. C-GAU-001 supplies only conditional
+    local covariance and curvature and explicitly derives no quantum field,
+    loop measure, gauge kinetic coefficient, photon, force, or physical charge.
+  - >-
+    C-MAX-001 supplies a conditional Maxwell action only after its positive
+    kinetic coefficient, current, dimension, source, and boundary data are
+    declared. It does not establish that a loop generates that action or fix a
+    coupling normalization.
+  - >-
+    A candidate loop calculation must begin from a complete declared quantum
+    scalar-QED action. The Euclidean convention is a complex scalar with
+    operator -D^2+m^2, D_mu=partial_mu-i*e*A_mu, and a separately declared
+    bare gauge quadratic term. Bubble and seagull contributions, the functional
+    determinant sign and multiplicity, and analytic continuation are part of
+    the claim rather than hidden premises.
+  - >-
+    Gauge invariance requires a regulator and renormalization prescription that
+    preserve momentum-shift identities or explicit restoring counterterms. A
+    transverse ansatz cannot prove the Ward identity of the underlying loop.
+  - >-
+    For nonzero Euclidean q squared, the kinematic projector
+    P_mu_nu=delta_mu_nu-q_mu*q_nu/q_squared is idempotent and transverse by
+    definition. It is undefined at q=0. The forms P_mu_nu*Pi_hat(q_squared) and
+    (q_squared*delta_mu_nu-q_mu*q_nu)*Pi_scalar(q_squared) differ by an explicit
+    q_squared and cannot be mixed.
+  - >-
+    A local Maxwell term is the analytic coefficient multiplying
+    q_squared*delta_mu_nu-q_mu*q_nu. A nonzero constant multiplying P_mu_nu is
+    instead a nonlocal F*(1/box)*F kernel and may alter pole structure when
+    combined with a separately supplied bare action; it is not itself a local
+    Maxwell coefficient.
+  - >-
+    The limits q_squared to zero and m to zero need not commute. Endpoint or
+    infrared divergences, local counterterm freedom, field rescaling, species
+    multiplicity, statistics, and charge normalization must remain explicit.
+  - >-
+    EM1 and EM2 are qualified through C-U1-001/C-U1-002 and C-GAU-001; EM3 is
+    qualified through C-MAX-001. EM7 and M1 remain pending and provide no
+    accepted premise. EM5 itself is hash-pinned noncanonical evidence.
+  - >-
+    P134 already executed EM5 as a reverse consumer and exposed its body,
+    successful eleven-check tally, and claimed result. P135 therefore makes no
+    source- or comparator-blinding claim; source literals cannot select among
+    the independently frozen candidates.
+allowed_imports:
+  - C-U1-001 conditional classical complex-scalar current and its explicit ontology ceiling
+  - C-GAU-001 exact local-U1 covariance curvature and explicit no-dynamics ceiling
+  - C-MAX-001 conditional Maxwell action with supplied coefficient dimension current source and boundary data
+  - C-EFT-001 only for generic stationary quadratic elimination algebra and not as a loop derivation
+  - src/substrate_framework/u1_charge.py gauge_u1.py maxwell.py and effective_actions.py accepted pure APIs
+  - exact SymPy tensor contraction Feynman-parameter rational integration series and limit algebra
+  - independently declared Euclidean complex-scalar determinant bubble seagull regulator renormalization and continuation conventions
+  - primary scalar-QED literature after freeze only as an independent convention cross-check and never as substrate authority
+  - EM5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after the freeze
+candidates:
+  - {id: A, description: Reproduce EM5 literally and classify all eleven predicates by construction tensor convention loop input and physical ceiling.}
+  - {id: B, description: Derive an input-explicit one-loop complex-scalar vacuum-polarization ledger including bubble seagull regulator renormalization and massive/massless limits.}
+  - {id: C, description: Retain only projector transversality and effective quadratic-kernel algebra if EM5 assumes rather than derives its polarization coefficient.}
+  - {id: D, description: Treat local counterterm field-rescaling species statistics and limit-order freedom as a conditional family rather than a universal induced coupling or mass.}
+  - {id: E, description: Close EM1 EM2 EM3 EM7 M1 authority reverse consumers nonduplication impact source disposition and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with the complex quantum field action measure statistics charge mass dimension bare gauge term regulator and renormalization condition explicit
+  - fixed Euclidean and Minkowski metrics Fourier signs tensor index placements determinant multiplicity and analytic-continuation convention
+  - derivation of bubble and seagull contributions before imposing transversality or a projector decomposition
+  - exact Ward identity under the declared regulator and an explicit failure when a load-bearing term or shift identity is removed
+  - correct distinction between Pi_hat times the projector and Pi_scalar times the local transverse q-squared tensor
+  - dimensional consistency and correct q-squared zero mass zero heavy-mass weak-coupling zero-species and bare-coefficient limits
+  - explicit noncommuting limit order infrared domain branch cuts thresholds and local counterterm freedom
+  - independent agreement among direct tensor reduction Feynman-parameter algebra functional-determinant expansion and soluble limits
+  - mutation sensitivity to seagull sign loop statistics mass charge multiplicity tensor sign subtraction point and field normalization
+  - parameter economy natural framework fit reusable API value physical-scope honesty consumer compatibility and nonduplication
+claims_proposed: [C-VAC-001]
+comparators_blinded_until: >-
+  Genuine blinding is unavailable because P134's reverse-consumer audit already
+  exposed and executed EM5, including its successful tally and claimed massless
+  coefficient, transverse action, and pole language. This proposal freezes the
+  independent action, candidates, tensor distinctions, limit-order gates,
+  selection criteria, and physical ceilings before any fresh body inspection.
+  The known source values are quarantined from candidate selection and may be
+  compared only after an independent derivation is frozen.
+status: active
