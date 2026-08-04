@@ -2,7 +2,7 @@
 description: Audit SM4 and terminally classify its one-loop fixed-data unification near-miss
 author: vantasner
 created: '2026-08-10T21:33:00Z'
-updated: '2026-08-10T21:36:00Z'
+updated: '2026-08-10T22:01:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gauge-running
 - unification
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P166 SM4 One-Loop Unification Audit
 
@@ -85,12 +85,11 @@ and no fresh blinding is claimed.
 
 ## Proposed Claim Delta
 
-No claim identifier is proposed at freeze. Candidate B is favored only
-structurally because C-RGE-004 was accepted for this consumer and C-RGE-005
-already contains the exact coefficient vector. A later proposal revision may
-add a collision-checked claim only if source and consumer audits reveal a
-positive object not already covered by that composition. P166 challenges or
-supersedes no accepted claim.
+No new claim is required. Candidate B is selected because C-RGE-004 was
+accepted for this consumer, C-RGE-005 already contains the exact coefficient
+vector, and C-RGE-002 contains the SU3 specialization. Source and consumer
+audits find no distinct invariant or API gap. P166 changes, challenges, and
+supersedes no accepted claim and leaves v0.127.0 unchanged.
 
 ## Implementation and Oracle Plan
 
@@ -118,7 +117,16 @@ discloses the extensive prior SM4 exposure. It records the base release,
 source and dossier hashes, eight candidates, structural criteria, accepted
 composition route, and compatibility policy. Any later source, schema,
 implementation, oracle, or compatibility failure will be preserved append-only
-before repair, with the next viable candidate named.
+before repair, with the next viable candidate named. Attempt 0002 validates and
+commits the freeze at `22bd505`. Attempt 0003 preserves a comment-sensitive
+provenance-probe failure while the fresh independent route passes 24 checks.
+Attempt 0004 repairs only that probe with AST evidence and passes all 37 primary
+checks. Attempt 0005 passes 33 direct-graph checks across five native nodes and
+60 accepted dependency tests, closing nonduplication and consumers without a
+canonical change. Attempt 0006 preserves a command-shape-only memory-validation
+failure; attempt 0007 validates the three records separately and closes that
+debt. Attempt 0008 passes the terminal repository gate and both prescribed
+1,478-test executions with the registry and release unchanged.
 
 ## Debt Ledger
 
@@ -129,12 +137,12 @@ consumers, compatibility, individual claim verdicts, and generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| SM4 predicate strength is unaudited | Reproduce and classify all eight checks and the assertion | open |
-| Sign and coefficient provenance are unresolved | Map source flow to C-RGE-004 and C-RGE-005 exactly | open |
-| Common intersection versus spread is unresolved | Compute exact rank, crossings, and spread semantics independently | open |
-| Boundary inputs and comparators are unresolved | Source every input and separate construction from comparison | open |
-| Threshold, normalization, and reference sensitivity are unresolved | Run exact counterfamilies and covariance tests | open |
-| Consumers and generated state are unresolved | Replay dependencies and synchronize the terminal disposition | open |
+| SM4 predicate strength is unaudited | Reproduce and classify all eight checks and the assertion | discharged by source reproduction and check adjudication |
+| Sign and coefficient provenance are unresolved | Map source flow to C-RGE-004 and C-RGE-005 exactly | discharged by exact canonical and fresh routes plus dependency audit |
+| Common intersection versus spread is unresolved | Compute exact rank, crossings, and spread semantics independently | discharged: rank 2 versus augmented rank 3 and three unequal exact crossings |
+| Boundary inputs and comparators are unresolved | Source every input and separate construction from comparison | discharged by input and literature provenance audits |
+| Threshold, normalization, and reference sensitivity are unresolved | Run exact counterfamilies and covariance tests | discharged by offsets reference rescaling and paired U1 mutations |
+| Consumers and generated state are unresolved | Replay dependencies and synchronize the terminal disposition | discharged by the five-node graph and qualified queue transaction |
 
 ## Review and Promotion Plan
 
@@ -149,11 +157,12 @@ after the unchanged integrated gate rather than triggering another full suite.
 
 ## Done Gate
 
-P166 closes only when a positive exact composition or novel importable object
-exists, every source predicate is adjudicated, the common-intersection and
-spread statements have sensitive oracles, all inputs and omissions are typed,
-consumers replay, governance agrees, and debt is empty. An honest near-miss or
-failure to unify is attempt evidence, not the requested completion.
+P166 closes through the exact C-RGE-002/C-RGE-004/C-RGE-005 composition, all
+eight individual source verdicts, 37 primary, 24 independent, and 33 graph
+checks, 60 accepted dependency tests, five native graph nodes, synchronized
+SM4 qualification, unchanged release v0.127.0, and empty debt. The exact
+nonintersection alone did not complete the campaign; its assumptions,
+counterfamilies, consumers, and governance were also closed.
 
 ## Cross-References
 

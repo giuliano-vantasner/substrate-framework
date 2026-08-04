@@ -1,0 +1,65 @@
+campaign: P166
+title: SM4 exact one-loop fixed-data intersection and source-semantic audit
+source_baseline: substrate@6d1f4e0
+source_units: [SM4]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-10T21:57:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay preserves and individually adjudicates all eight source predicates.}
+  - {id: B, reason: C-RGE-004 and C-RGE-005 already contain the exact positive object without a comparator-specific wrapper.}
+  - {id: E, reason: Exact independent offsets expose the load-bearing zero-threshold premise.}
+  - {id: G, reason: Sign slope reference normalization input and coincident-branch mutations delimit the result.}
+  - {id: H, reason: Source dependency consumer queue and memory closure terminally qualify SM4.}
+claims: []
+accepted_composition:
+  - {id: C-RGE-002, decision: unchanged_conditional_SU3_coefficient_specialization}
+  - {id: C-RGE-004, decision: unchanged_exact_affine_intersection_and_crossing_diagnostics}
+  - {id: C-RGE-005, decision: unchanged_conditional_three_factor_coefficient_vector}
+unpromoted_claims:
+  - {id: executable_QCD3_reuse, reason: SM4_imports_no_source_module_and_locally_repeats_the_formula_and_values.}
+  - {id: derived_b1_b2_and_low_scale_inputs, reason: Coefficients_and_all_boundary_literals_are_hard_coded_or_external_inputs.}
+  - {id: physical_three_coupling_unification_test, reason: Exact_nonintersection_is_conditional_on_supplied_coordinates_with_embedding_threshold_matching_scheme_and_uncertainty_absent.}
+  - {id: near_miss_as_invariant_classifier, reason: The_three_decade_threshold_is_declared_and_the_absolute_spread_depends_on_supplied_data_and_coordinate_choices.}
+  - {id: MSSM_resolution_validation, reason: The_cited_scale_inside_the_window_is_an_unrelated_standin_in_the_headline_predicate.}
+  - {id: global_wrong_sign_divergence, reason: The_source_sample_leaves_the_positive_inverse_coupling_domain.}
+  - {id: all_equal_slopes_imply_no_crossing, reason: Equal_intercepts_give_the_omitted_coincident_branch.}
+  - {id: Standard_Model_or_substrate_mechanism, reason: No_physical_sector_embedding_boundary_or_substrate_dynamics_is_constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_running_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/SM4-qualified-review.md
+  scientific_attempt: attempts/0004/result.yaml
+  graph_attempt: attempts/0005/result.yaml
+  record_validation_attempt: attempts/0007/result.yaml
+  terminal_attempt: attempts/0008/result.yaml
+source_disposition:
+  SM4: qualified
+compatibility:
+  native_nodes: [SM4, WM3, WM4, WM5, WM7]
+  immutable_alias_only: []
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/reviews/independent_running_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/reviews/replay_source_graph.py
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_renormalization.py tests/test_gauge_beta.py tests/test_gauge_running.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

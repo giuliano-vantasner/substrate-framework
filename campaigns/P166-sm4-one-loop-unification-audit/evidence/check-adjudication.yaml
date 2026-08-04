@@ -1,0 +1,16 @@
+campaign: P166
+source_unit: SM4
+static_call_sites: 8
+runtime_predicates: 8
+predicates:
+  - {index: 1, label: QCD3_b3_and_AF_sign, verdict: exact_conditional_arithmetic_with_reuse_provenance_rejected, reason: C-RGE-002 gives b0=7 at supplied nf=6 and hence the declared b3=-7 sign map, but SM4 locally restates rather than imports QCD3.}
+  - {index: 2, label: one_loop_vector_and_signs, verdict: exact_conditional_composition, reason: C-RGE-005 accepts the vector for a separately supplied normalized table; SM4 hard-codes b1 and b2 and checks only their signs.}
+  - {index: 3, label: low_scale_inputs, verdict: supplied_numeric_regression_only, reason: The formulas exactize cleanly but all coordinates normalization scheme and missing uncertainties are source inputs rather than derived framework outputs.}
+  - {index: 4, label: monotonic_running, verdict: exact_derivative_sign_with_redundant_sample_sweep, reason: Affine monotonicity follows exactly from -b_i while the 200-point sweep adds only regression coverage.}
+  - {index: 5, label: pairwise_crossing_scales, verdict: exact_under_supplied_decimal_coordinates, reason: C-RGE-004 gives all three exact rational crossing coordinates; the source checks rounded log targets.}
+  - {index: 6, label: noncoincident_near_miss, verdict: exact_nonintersection_with_declared_threshold_and_unrelated_standin, reason: Exact ranks and unequal crossings prove no common point; spread greater than three is a declared near-miss label and mssm_in_window is unrelated load-bearing ceremony.}
+  - {index: 7, label: flipped_b3_guard, verdict: exact_sign_sensitivity_with_domain_qualification, reason: The derivative sign reverses exactly but the chosen L=40 sample makes alpha3_inverse negative so its physical divergence prose exceeds the positive-coupling domain.}
+  - {index: 8, label: equal_slope_guard, verdict: exact_parallel_branch_incomplete, reason: Unequal intercepts and equal slopes are parallel-disjoint; equal intercepts give the distinct coincident branch omitted by the source.}
+accepted_composition: [C-RGE-002, C-RGE-004, C-RGE-005]
+new_claim: null
+source_disposition: qualified

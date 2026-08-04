@@ -1,0 +1,30 @@
+campaign: P166
+source_unit: SM4
+canonical_consumers:
+  - src/substrate_framework/renormalization.py
+  - tests/test_renormalization.py
+  - src/substrate_framework/gauge_beta.py
+  - tests/test_gauge_beta.py
+  - campaigns/P083-wm3-one-loop-running-audit
+  - campaigns/P128-wm4-nearmiss-identity-audit
+direct_source_consumers:
+  WM3: {disposition: qualified, runtime_use: imports_SM4_b1_b2_b3, accepted_ceiling: C-RGE-004}
+  WM4: {disposition: qualified, runtime_use: imports_SM4_low_scale_inputs_but_rehardcodes_beta_vector, accepted_ceiling: [C-IDN-001, C-RGE-004]}
+  WM5: {disposition: qualified, runtime_use: imports_SM4_for_coefficient_comparison, accepted_ceiling: C-RGE-005}
+  WM7: {disposition: pending_adjudication, runtime_use: imports_SM4_b1_b2_b3, authority_gain_from_P166: accepted_claim_mapping_only}
+transitive_or_prose_consumers:
+  WM6: qualified_separately_through_C-RGE-006
+  WM8: pending_and_names_SM4_inputs_transitively
+  WM9: pending_and_names_SM4_coefficients_transitively
+generated_consumers:
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+  - parent migration memory
+unchanged_consumers:
+  - governance/claims.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+replay_plan:
+  source_graph: reviews/replay_source_graph.py
+  accepted_tests: tests/test_renormalization.py tests/test_gauge_beta.py tests/test_gauge_running.py
+debt: []

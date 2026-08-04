@@ -1,0 +1,19 @@
+attempt: 0007
+campaign: P166
+candidate: corrected_record_sensitive_validation
+status: passed
+started_at: '2026-08-10T22:03:00Z'
+finished_at: '2026-08-10T22:04:00Z'
+commands:
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P166-sm4-one-loop-unification-audit.md
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/decisions/SM4-qualified-review.md
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/efforts/framework-migration.md
+  - git diff --check
+results:
+  proposal_memory: valid
+  decision_memory: valid
+  effort_memory: valid
+  diff_check: passed
+scientific_result_changed: false
+debt: []
+next_attempt: terminal_qualification_gate

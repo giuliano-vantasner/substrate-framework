@@ -1,0 +1,21 @@
+attempt: 0003
+campaign: P166
+candidate: accepted_composition_primary_first_run
+status: failed_brittle_source_provenance_probe
+started_at: '2026-08-10T21:46:00Z'
+finished_at: '2026-08-10T21:47:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/reviews/independent_running_review.py
+results:
+  primary_passed_before_failure: 9
+  independent_verifier: ALL_24_CHECKS_PASS
+failure: claimed_QCD3_reuse_is_a_local_restatement_probe
+diagnosis: >-
+  the raw-text suffix contains a comment naming bridge_QCD3 even though the
+  preceding exact AST import inventory already proves that SM4 imports only
+  math numpy and sympy
+scientific_result_changed: false
+debt:
+  - replace_the_comment_sensitive_guard_with_an_AST_backed_no_import_condition
+next_attempt: rerun_only_the_primary_verifier_after_narrow_repair

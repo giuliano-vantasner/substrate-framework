@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 55
-  qualified: 151
+  pending_adjudication: 54
+  qualified: 152
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -3233,8 +3233,45 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RGE-002
+  - C-RGE-004
+  - C-RGE-005
+  qualification: SM4's supplied-data one-loop affine running, derivative signs, three exact pairwise crossings,
+    and exact absence of one common intersection survive through accepted composition. Its supplied decimal
+    coordinates give crossings at log10(mu/GeV) 13.013127, 14.387275, and 16.992183 with a 3.979055-decade
+    spread. The script does not executably reuse QCD3; it locally repeats the SU3 formula and hard-codes
+    b1, b2, all low-scale coordinates, and the 3/5 U1 normalization. The near-miss threshold is declared,
+    its headline check bundles an unrelated MSSM-window boolean, the wrong-sign sweep leaves the positive
+    inverse-coupling domain, and the equal-slope guard omits the coincident branch. Thresholds, matching,
+    schemes, uncertainties, a simple-group embedding, preferred U1 normalization, global perturbative
+    control, observed running, physical Standard Model unification, and a substrate mechanism are not
+    accepted.
+  evidence:
+  - campaigns/P166-sm4-one-loop-unification-audit/reviews/source_adjudication.md
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/source-reproduction.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/source-audit.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/check-adjudication.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/input-provenance.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/dependency-audit.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/consumer-audit.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/candidate-comparison.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/primary-provenance.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/evidence/literature-audit.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/verify.py
+  - campaigns/P166-sm4-one-loop-unification-audit/reviews/independent_running_review.py
+  - campaigns/P166-sm4-one-loop-unification-audit/reviews/replay_source_graph.py
+  - campaigns/P166-sm4-one-loop-unification-audit/attempts/0004/result.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/attempts/0005/result.yaml
+  - campaigns/P166-sm4-one-loop-unification-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/SM4-qualified-review.md
+  note: P166 closes thirty-seven primary, twenty-four independent, and thirty-three graph checks over
+    five native nodes with fifty lexical and fifty runtime predicates plus five assertions. Sixty accepted
+    dependency tests pass. No legacy NumPy integration event, canonical code change, accepted claim, or
+    release change occurs.
 - source_unit: CF1
   phase: phase-10
   path: merged-framework/bridges/phase-10/bridge_CF1_dual_superconductor_flux_tube.py

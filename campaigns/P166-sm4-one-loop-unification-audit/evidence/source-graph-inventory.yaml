@@ -1,0 +1,10 @@
+campaign: P166
+root: SM4
+nodes:
+  - {source_unit: SM4, role: audited_root, path: merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py, sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac, static_checks: 8, runtime_checks: 8, assertions: 1, disposition: pending_P166}
+  - {source_unit: WM3, role: qualified_direct_consumer, path: merged-framework/bridges/phase-23/bridge_WM3_sin2thetaw_rg_running.py, sha256: 2328ae4d6e66e1caa14a39042c362e57258406383f14ecaa5f5f6c468105e298, static_checks: 10, runtime_checks: 10, assertions: 1, disposition: qualified}
+  - {source_unit: WM4, role: qualified_direct_consumer, path: merged-framework/bridges/phase-33/bridge_WM4_nearmiss_identity_map.py, sha256: 443406419edc1021a929a6041dec025f73af6d947cf770eebe9cde25d74cd8c9, static_checks: 11, runtime_checks: 11, assertions: 1, disposition: qualified}
+  - {source_unit: WM5, role: qualified_direct_consumer, path: merged-framework/bridges/phase-33/bridge_WM5_two_loop_coefficients.py, sha256: 8c3fbfeecb6f98d7d80c47e8f267fe1216dde724b81cc3f73f2a3bb17caf1bbc, static_checks: 11, runtime_checks: 11, assertions: 1, disposition: qualified}
+  - {source_unit: WM7, role: pending_direct_consumer, path: merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py, sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361, static_checks: 10, runtime_checks: 10, assertions: 1, disposition: pending_adjudication}
+totals: {nodes: 5, static_checks: 50, runtime_checks: 50, assertions: 5}
+compatibility: {native_nodes: 5, legacy_NumPy_integration_references: 0, alias_nodes: []}

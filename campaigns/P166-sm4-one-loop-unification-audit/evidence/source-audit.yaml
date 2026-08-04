@@ -1,0 +1,45 @@
+campaign: P166
+source_unit: SM4
+convention:
+  source: alpha_i_inverse_mu_equals_alpha_i_inverse_MZ_minus_b_i_log_mu_over_MZ_over_2pi
+  canonical_map: source_intercepts_equal_common_inverse_plus_b_i_times_log_crossing_over_MZ_over_2pi
+  sign_map: canonical_affine_coefficients_equal_source_b_i
+exact_supplied_inputs:
+  MZ: 227969/2500
+  alpha_em_inverse: 2559/20
+  weak_coordinate: 11561/50000
+  alpha_s: 1181/10000
+  inverse_couplings: [295096203/5000000, 29584599/1000000, 10000/1181]
+  beta_coefficients: [41/10, -19/6, -7]
+exact_diagnostics:
+  coefficient_rank: 2
+  augmented_rank: 3
+  common_intersection: false
+  compatibility_residual: -719562920219/128729000000
+  crossing_coordinates_log_over_2pi:
+    U1_SU2: 55189953/13625000
+    U1_SU3: 298508615743/65545500000
+    SU2_SU3: 74818234257/13581500000
+  evaluated_log10_GeV: [13.0131272486722, 14.3872754728285, 16.9921825412292]
+  spread_decades: 3.97905529255705
+surviving_surface:
+  - The supplied exact coefficient and boundary coordinates define three affine inverse-coupling lines with the stated derivative signs.
+  - Every pair has one exact finite crossing and the three crossings are strictly ordered and unequal.
+  - The exact rank test refutes one common affine intersection for the supplied fixed data.
+  - The numerical crossing table and 3.979055-decade spread are regressions of that exact result.
+source_limits:
+  - SM4 imports only math numpy and sympy; its claimed QCD3 reuse is a local restatement of the formula and values rather than executable reuse.
+  - SM4 hard-codes b1 b2 all four low-scale literals and the 3/5 coordinate normalization; it does not construct the supplied representation table governed by C-RGE-005.
+  - The phrase converge toward a high-scale region has no independent mathematical predicate beyond the three selected crossing scales and their envelope.
+  - The source declares spread greater than three decades to be a near miss; that threshold is a classifier not a theorem.
+  - Check 6 also requires a cited MSSM scale to lie in the source crossing window even though that boolean is unrelated to fixed-data nonintersection.
+  - Check 7's finite sweep drives the flipped inverse strong coupling negative and therefore outside the positive physical-coupling domain; only the exact derivative-sign mutation survives generally.
+  - Check 8 proves the parallel-disjoint branch for its unequal intercepts but omits the coincident equal-slope and equal-intercept branch.
+  - Independent threshold or matching offsets can realize an arbitrary common affine point; no threshold spectrum or vanishing theorem is supplied.
+headline_verdict: >-
+  qualified exact accepted composition: SM4's supplied-data one-loop lines have
+  the stated three unequal crossings and do not share one point, but this is a
+  conditional C-RGE-004/C-RGE-005 specialization rather than a new physical
+  Standard-Model unification theorem or substrate mechanism
+compatibility_event: none
+debt: []

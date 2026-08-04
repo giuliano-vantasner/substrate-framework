@@ -1,0 +1,17 @@
+attempt: 0006
+campaign: P166
+candidate: record_sensitive_validation_first_invocation
+status: failed_CLI_usage
+started_at: '2026-08-10T22:02:00Z'
+finished_at: '2026-08-10T22:02:00Z'
+command: >-
+  memory validate --base /home/dan/substrate-framework proposal.md
+  decision.md effort.md
+passed_before_failure:
+  repository: WORKFLOW_VALID_163_claims_163_accepted_54_pending
+failure: memory_validate_accepts_one_PATH_per_invocation
+downstream_diff_check_executed: false
+scientific_result_changed: false
+debt:
+  - validate_each_memory_record_in_a_separate_process_and_then_run_diff_check
+next_attempt: corrected_record_sensitive_validation

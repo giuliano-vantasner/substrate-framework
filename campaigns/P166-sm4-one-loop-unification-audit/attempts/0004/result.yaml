@@ -1,0 +1,33 @@
+attempt: 0004
+campaign: P166
+candidate: accepted_C_RGE_004_C_RGE_005_composition
+status: passed
+started_at: '2026-08-10T21:47:00Z'
+finished_at: '2026-08-10T21:51:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/reviews/independent_running_review.py
+results:
+  primary_verifier: ALL_37_CHECKS_PASS
+  independent_verifier: ALL_24_CHECKS_PASS
+positive_object:
+  accepted_composition: [C-RGE-004, C-RGE-005]
+  new_claim: null
+  new_package_API: null
+  exact_coefficient_rank: 2
+  exact_augmented_rank: 3
+  exact_pairwise_crossings: 3
+  exact_common_intersection: false
+  exact_decade_spread_numeric: 3.97905529255705
+source_qualifications:
+  - claimed_QCD3_reuse_is_a_local_restatement
+  - b1_b2_and_low_scale_coordinates_are_supplied
+  - near_miss_threshold_is_declared
+  - headline_check_bundles_an_unrelated_MSSM_window_boolean
+  - sign_flip_sample_leaves_the_positive_inverse_coupling_domain
+  - equal_slope_guard_omits_the_coincident_branch
+compatibility_event: none
+debt:
+  - materialize_source_dependency_consumer_nonduplication_literature_and_graph_audits
+  - complete_terminal_disposition_and_generated_state
+next_attempt: close_source_and_consumer_graph

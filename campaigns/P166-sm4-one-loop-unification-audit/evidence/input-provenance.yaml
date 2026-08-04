@@ -1,0 +1,42 @@
+campaign: P166
+source_unit: SM4
+inputs:
+  one_loop_affine_law:
+    source_value: alpha_inverse_mu_equals_alpha_inverse_MZ_minus_b_log_ratio_over_2pi
+    authority: exact conditional algebra through C-RGE-004; physical beta law remains an imported premise
+  coefficient_vector:
+    source_value: [41/10, -19/6, -7]
+    authority: C-RGE-005 conditional on its separately supplied normalized representation table and perturbative weights
+  SU3_specialization:
+    source_value: {CA: 3, TF: 1/2, nf: 6, b0: 7, b3: -7}
+    authority: C-LIE-001 and C-RGE-002 conditional specialization; SM4 itself repeats the inputs
+  MZ:
+    source_value_GeV: 91.1876
+    authority: supplied source comparator with no uncertainty or source-data file
+  alpha_em_inverse:
+    source_value: 127.95
+    authority: supplied source comparator with no uncertainty or running-coupling scheme record
+  weak_coordinate:
+    source_value: 0.23122
+    authority: supplied source comparator; PDG documents scheme-dependent weak-angle definitions and SM4 carries no uncertainty
+  alpha_s:
+    source_value: 0.1181
+    authority: supplied source comparator with no uncertainty; not an exact framework constant
+  U1_coordinate_normalization:
+    source_value: 3/5
+    authority: declared coordinate convention; C-RGE-005 proves covariance but selects no preferred embedding
+  MSSM_scale:
+    source_value_GeV: 2e16
+    authority: external citation only and logically unrelated to the SM fixed-data intersection verdict
+omitted_inputs:
+  - threshold and decoupling spectrum from MZ through the claimed high-scale range
+  - matching corrections and independent sector offsets
+  - renormalization scheme conversions and correlated uncertainties
+  - a simple-group embedding and physical equality boundary
+  - a globally fixed U1 charge lattice and preferred normalization
+  - higher-loop Yukawa and other omitted terms
+  - perturbative-domain validation over the whole interval
+  - observed-running likelihood or measurement map
+  - substrate dynamics or parameter derivation
+comparator_blinding: no_fresh_blinding_due_to_disclosed_prior_exposure
+debt: []

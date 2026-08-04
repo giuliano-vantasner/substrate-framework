@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T20:20:00Z'
+updated: '2026-08-10T22:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.126.0`, containing one hundred sixty-two
+The current accepted frontier is `v0.127.0`, containing one hundred sixty-three
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -137,7 +137,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 60 pending, 0 partially migrated, 3 migrated, 146 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 54 pending, 0 partially migrated, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -1766,20 +1766,39 @@ promotion of SM2's derived unique physical-generation reading. Every new API
 has LOW upstream risk and no affected execution flow. The integrated workflow
 passes all 1,454 tests with 675 memory records and the physics skill valid.
 
+P165 adds C-ANO-001's exact supplied chiral anomaly coefficient ledger and
+complete three-line local solution variety for the fixed five-row carrier.
+Exact elimination refutes SM3's claimed uniqueness up to scale with both a
+row-exchanged line and a zero-doublet-charge vectorlike line. The primary,
+fresh independent, source-graph, and dependency routes pass 31, 12, 25, and 43
+checks or tests. SM3 is qualified, the canonical API is additive and LOW risk,
+and v0.127.0 closes with 163 accepted claims and 1,478 tests.
+
+P166 terminally qualifies SM4 without a new claim, API, or release. Exact
+composition of C-RGE-002, C-RGE-004, and C-RGE-005 gives rank-two but
+augmented-rank-three supplied affine data, three unequal crossing scales at
+13.013127, 14.387275, and 16.992183 in log10 GeV, and a 3.979055-decade spread.
+The source locally repeats rather than imports QCD3, hard-codes the remaining
+coefficients and boundary inputs, bundles an unrelated MSSM-window boolean,
+samples its sign guard outside the positive domain, and omits the coincident
+equal-slope branch. The primary, fresh independent, direct-graph, and accepted-
+dependency routes pass 37, 24, 33, and 60 checks or tests over five native
+source nodes with no legacy NumPy integration event.
+
 ## Canonicalization
-The registry, `v0.126.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-two accepted claims. P001 through P164 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 56 pending, 0 partial, 3 migrated, 150 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P166 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 56
-pending, 3 migrated, 150 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is SM3, pinned at SHA-256
-`3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529`.
-P164 establishes only supplied-table charge algebra. P165 must freeze SM3
-independently and audit the local and global anomaly formula imports, its
-left-handed conjugate representation table, the actual solution family and
-claimed uniqueness up to scale, Witten and cubic-color statements, every
-source predicate, consumers, and physical ceilings without borrowing SM2's
-rejected generation completeness or table-selection authority.
+The effort remains active. D4 is discharged, but D1 remains open with 54
+pending, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is CF1, pinned at SHA-256
+`a4ec97923804f1b7c624b7619bc6b6a1cbb62f42d659897799545b257ca33f5d`.
+P167 must freeze CF1 before source execution and audit its proposed dual-
+superconductor flux-tube construction against the accepted Abelian-Higgs,
+fixed-flux, SU3, gauge-sector, and running claims. It must not turn QCD
+asymptotic freedom, a Nielsen--Olesen analogy, or a fitted tension into a
+derived confinement mechanism, physical dual condensate, absolute scale, or
+substrate realization.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

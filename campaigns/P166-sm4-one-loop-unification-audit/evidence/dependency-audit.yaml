@@ -1,0 +1,22 @@
+campaign: P166
+source_unit: SM4
+accepted_claims:
+  C-RGE-002: conditional_SU3_b0_equals_7_at_supplied_nf_6
+  C-RGE-004: exact_affine_rank_pairwise_crossing_reference_and_normalization_diagnostics
+  C-RGE-005: exact_conditional_three_factor_coefficient_vector_and_beta_convention
+  C-RGE-006: separately_scoped_two_loop_inverse_problem_not_used
+source_candidate_dependencies:
+  QCD1: {runtime_use: none, authority_transfer: none}
+  QCD3: {runtime_use: none, source_behavior: formula_and_values_locally_repeated, surviving_authority: C-RGE-002_only}
+  SM3: {runtime_use: none, surviving_authority: none_for_running}
+  WM1: {runtime_use: none, surviving_authority: none_for_physical_boundary}
+  WM2: {runtime_use: none, disposition: duplicate_evidence, surviving_authority: none_for_preferred_normalization}
+closure:
+  dependencies: [C-RGE-002, C-RGE-004, C-RGE-005]
+  explicit_external_imports:
+    - one_loop_perturbative_weights_and_physical_interpretation
+    - low_scale_comparator_coordinates
+  hidden_fitted_constants: []
+  circular_claim_edges: []
+  new_claim_required: false
+debt: []

@@ -1,0 +1,22 @@
+campaign: P166
+selection_frozen_before_renewed_source_audit: true
+prior_exposure_disclosed: true
+criteria_order:
+  - accepted dependency closure and exact sign normalization convention
+  - exact common-intersection rank before any numerical spread summary
+  - supplied-input and empirical-comparator separation
+  - assumption and parameter economy API nonduplication and consumer fit
+  - mutation sensitivity reference and Abelian-coordinate covariance
+  - explicit threshold matching scheme and perturbative-domain boundaries
+candidates:
+  A: {decision: retained_as_source_regression, reason: All eight predicates reproduce but several are approximate incomplete or contain unrelated stand-ins.}
+  B: {decision: selected_as_positive_object, reason: C-RGE-004 and C-RGE-005 exactly contain the affine diagnostics coefficient vector and all required ceilings.}
+  C: {decision: rejected_as_duplicate, reason: A fixed-reference wrapper would only repackage C-RGE-004 with supplied source data and no new invariant API.}
+  D: {decision: rejected_for_dependency_and_exact_rank_failure, reason: The supplied lines have augmented rank three and no accepted embedding thresholds matching or boundary dynamics.}
+  E: {decision: retained_as_counterfamily, reason: Independent offsets realize any common point and prove zero matching corrections are load bearing.}
+  F: {decision: separated_problem, reason: C-RGE-006 has different supplied boundary data numeric solver obligations and same-order omissions.}
+  G: {decision: selected_as_sensitivity_evidence, reason: Sign equal-slope coincident reference normalization input and offset mutations delimit the exact result.}
+  H: {decision: selected_as_terminal_closure, reason: SM4 needs a qualified disposition and synchronized audit records but no claim or release mutation.}
+selected_claims: [C-RGE-002, C-RGE-004, C-RGE-005]
+new_claims: []
+source_disposition: qualified

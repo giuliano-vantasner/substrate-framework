@@ -1,0 +1,22 @@
+campaign: P166
+source_unit: SM4
+base_release: v0.127.0
+base_commit: e551b69
+freeze_commit: 22bd505
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac
+dossier_sha256: 8e081707f631dfbe0b7f0c530971457871a7aa51cef6ffc77296af8e2107d9f2
+frozen_manifest_sha256: cc945c7eedb8bdf10db50f84f7ebc07004b759b8ed6bfe184683b1203bfabc16
+accepted_claims_read: [C-LIN-001, C-RGE-001, C-RGE-002, C-RGE-004, C-RGE-005, C-RGE-006]
+canonical_modules_read:
+  - src/substrate_framework/renormalization.py
+  - src/substrate_framework/gauge_beta.py
+  - src/substrate_framework/gauge_running.py
+primary_oracle: exact_SymPy_data_plus_accepted_affine_API_source_AST_native_execution_and_mutations
+independent_oracle: fresh_exact_matrix_rank_nullspace_crossings_offsets_and_covariance_without_canonical_running_imports
+prior_source_exposure: [P083, P128, P129, P130, P160, P163, generated_queue]
+compatibility_preflight:
+  direct_legacy_refs: 0
+  imported_legacy_refs: 0
+  dynamic_legacy_refs: 0
+  alias_required: false

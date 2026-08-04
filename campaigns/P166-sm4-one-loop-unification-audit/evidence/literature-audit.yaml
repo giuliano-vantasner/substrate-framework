@@ -1,0 +1,54 @@
+campaign: P166
+purpose: verify_SM4_external_context_without_promoting_it_to_framework_authority
+sources:
+  - title: Comparison of grand unified theories with electroweak and strong coupling constants measured at LEP
+    authors: [Ugo Amaldi, Wim de Boer, Hermann Furstenau]
+    year: 1991
+    doi: 10.1016/0370-2693(91)91641-8
+    primary_url: https://cds.cern.ch/record/217892?ln=en
+    finding: >-
+      The primary record and paper describe evolving measured low-energy
+      couplings to test a single unification point, exclude the minimal
+      nonsupersymmetric one-Higgs model at that point, and find a supersymmetric
+      fit near 10^(16.0+-0.3) GeV. This supports external context for a
+      fixed-data test, not SM4's exact literals or a substrate mechanism.
+  - title: Review of Particle Physics 2024 - Electroweak Model and Constraints on New Physics
+    author: Particle Data Group
+    primary_url: https://pdg.lbl.gov/2024/reviews/rpp2024-rev-standard-model.pdf
+    finding: >-
+      The review states that sin^2 theta_W depends on the renormalization
+      prescription and lists distinct on-shell MSbar low-momentum and effective
+      values. SM4's bare 0.23122 literal and no uncertainty are therefore not a
+      self-describing accepted observation.
+  - title: Review of Particle Physics 2024 - Quantum Chromodynamics
+    author: Particle Data Group
+    primary_url: https://pdg.lbl.gov/2024/reviews/rpp2024-rev-qcd.pdf
+    finding: >-
+      The review gives the perturbative QCD running equation and the one-loop
+      coefficient proportional to 11*C_A-4*n_f*T_R, identifies the minus sign
+      with asymptotic freedom, and records scheme dependence beyond leading
+      orders. This corroborates the external formula and its perturbative
+      scope, not a substrate derivation.
+  - title: Hierarchy of Interactions in Unified Gauge Theories
+    authors: [Howard Georgi, Helen Quinn, Steven Weinberg]
+    year: 1974
+    doi: 10.1103/PhysRevLett.33.451
+    primary_url: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.33.451
+    finding: >-
+      The paper develops renormalization effects in a supplied simple unified
+      theory and reports large effects on mixing-angle predictions. It
+      presupposes rather than derives the embedding and does not validate SM4's
+      fixed normalization boundary or substrate interpretation.
+framework_status:
+  external_running_context: supported
+  exact_SM4_decimal_inputs: supplied_noncanonical
+  weak_angle_scheme_and_uncertainty: absent
+  threshold_matching_and_decoupling: absent
+  simple_group_embedding: unavailable
+  physical_unification_boundary: unavailable
+adjudication_implication: >-
+  Primary literature supports using running couplings to test a declared
+  unification model and supports SM4's honest nonintersection context, while
+  also making the embedding, schemes, measured inputs, uncertainties,
+  thresholds, and matching external premises. It cannot promote a physical or
+  substrate unification claim.

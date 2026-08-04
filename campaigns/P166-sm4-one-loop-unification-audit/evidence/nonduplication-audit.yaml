@@ -1,0 +1,16 @@
+campaign: P166
+source_unit: SM4
+accepted_surfaces:
+  C-RGE-002: exact_conditional_SU3_one_loop_specialization
+  C-RGE-004: exact_affine_common_intersection_pairwise_crossings_degeneracies_reference_shift_and_Abelian_coordinate_ceiling
+  C-RGE-005: exact_three_factor_one_loop_vector_for_a_supplied_normalized_table
+SM4_added_surface:
+  - supplied decimal specialization of C-RGE-004
+  - numeric presentation of exact pairwise scales and their max_minus_min spread
+  - source-specific predicate and provenance weaknesses
+distinct_reusable_claim: null
+new_package_API: null
+canonical_code_change: null
+release_change: null
+verdict: terminal_qualified_accepted_composition_without_release
+debt: []

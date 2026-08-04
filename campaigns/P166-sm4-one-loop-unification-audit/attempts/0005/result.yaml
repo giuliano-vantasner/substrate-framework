@@ -1,0 +1,23 @@
+attempt: 0005
+campaign: P166
+candidate: source_graph_dependency_consumer_and_nonduplication_closure
+status: passed
+started_at: '2026-08-10T21:52:00Z'
+finished_at: '2026-08-10T21:56:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P166-sm4-one-loop-unification-audit/reviews/replay_source_graph.py
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_renormalization.py tests/test_gauge_beta.py tests/test_gauge_running.py -q
+results:
+  source_graph_verifier: ALL_33_CHECKS_PASS
+  graph_nodes: 5
+  lexical_checks: 50
+  runtime_checks: 50
+  assertions: 5
+  native_nodes: 5
+  legacy_NumPy_integration_references: 0
+  accepted_dependency_tests: 60_passed
+  distinct_reusable_claim: null
+  canonical_code_change: null
+debt:
+  - materialize_individual_source_review_adjudication_disposition_and_generated_state
+next_attempt: complete_terminal_qualification_transaction

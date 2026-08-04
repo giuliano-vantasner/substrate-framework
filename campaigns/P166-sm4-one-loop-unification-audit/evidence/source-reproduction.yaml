@@ -1,0 +1,22 @@
+campaign: P166
+source_unit: SM4
+source:
+  path: merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py
+  sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM4-dossier.md
+  sha256: 8e081707f631dfbe0b7f0c530971457871a7aa51cef6ffc77296af8e2107d9f2
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py
+exit_code: 0
+terminal_tally: ALL_8_CHECKS_PASS
+static_check_calls: 8
+runtime_checks: 8
+assertions: 1
+imports: [math, numpy, sympy]
+dynamic_source_imports: []
+compatibility:
+  native_execution: true
+  direct_legacy_NumPy_integration_references: 0
+  current_NumPy_integration_references: 0
+  alias_required: false
+scientific_status: reproduced_noncanonical_source_evidence

@@ -1,0 +1,22 @@
+attempt: 0008
+campaign: P166
+candidate: terminal_qualification_gate
+status: passed
+started_at: '2026-08-10T22:05:00Z'
+finished_at: '2026-08-10T22:10:00Z'
+commands:
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+results:
+  repository_workflow: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  workflow_inventory: 163_claims_163_accepted_0_proposals
+  migration_queue: 218_units_54_pending_0_partial
+  bundled_full_suite: 1478_passed
+  explicit_full_suite: 1478_passed
+  diff_check: passed
+  accepted_claim_delta: []
+  accepted_release: v0.127.0
+scientific_result_changed: false
+debt: []
+next_attempt: null
