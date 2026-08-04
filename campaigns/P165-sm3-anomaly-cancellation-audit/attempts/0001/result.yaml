@@ -1,0 +1,28 @@
+attempt: 0001
+campaign: P165
+candidate: source_body_unopened_freeze_with_prior_exposure
+status: passed
+started_at: '2026-08-10T20:25:00Z'
+finished_at: '2026-08-10T20:28:00Z'
+base_release: v0.126.0
+base_commit: a4f780b
+source_unit:
+  id: SM3
+  path: merged-framework/bridges/phase-9/bridge_SM3_anomaly_cancellation.py
+  sha256: 3ace90aa5377050e4dcab5778996079eea92c9cc56a53c276a60a5508f63b529
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM3-dossier.md
+  sha256: 93e052b2586d6271ad4119340cba5f4cc86763253b55427b5b1e72baed33ea52
+actions:
+  - loaded_physics_skill_governance_oracle_and_campaign_contract_instructions
+  - ran_physics_preflight
+  - read_v0_126_0_and_relevant_accepted_claim_and_module_boundaries
+  - searched_repo_local_memory_with_explicit_base
+  - searched_C_ANO_001_registry_campaign_and_memory_collision_surface
+  - froze_eight_candidates_and_structural_selection_criteria
+source_body_opened_by_P165_before_freeze: false
+prior_source_exposure: P081_P129_P147_P154_P160_P163_P164_generated_queue_and_P164_direct_audit
+scientific_result: none_pre_freeze
+debt:
+  - validate_and_commit_the_freeze_before_renewed_source_audit
+next_attempt: frozen_manifest_validation_and_commit

@@ -1,0 +1,23 @@
+attempt: 0002
+campaign: P165
+candidate: frozen_manifest_validation
+status: passed
+started_at: '2026-08-10T20:28:00Z'
+finished_at: '2026-08-10T20:29:00Z'
+commands:
+  - cmp campaigns/P165-sm3-anomaly-cancellation-audit/proposal.yaml campaigns/P165-sm3-anomaly-cancellation-audit/evidence/frozen-proposal.yaml
+  - parse_all_new_YAML_with_PyYAML
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory/vantasner/proposals/P165-sm3-anomaly-cancellation-audit.md
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+results:
+  proposal_matches_frozen_evidence: true
+  frozen_manifest_sha256: 2ff19c8d29c6d9619eb644118a9bf6d01331b8029ff20535c1faa19c82a86640
+  yaml: valid
+  memory_contract: valid
+  repository: WORKFLOW_VALID_162_claims_162_accepted_56_pending
+  diff_check: passed
+source_body_opened_by_P165_before_freeze: false
+prior_source_exposure_disclosed: true
+debt: []
+next_attempt: commit_freeze_then_reproduce_and_audit_SM3

@@ -1,0 +1,55 @@
+id: P165
+base_release: v0.126.0
+base_commit: a4f780b
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SM3]
+question: >-
+  Which local and global anomaly statements in SM3 survive for its separately
+  declared left-handed carrier, and do those equations uniquely select the
+  displayed hypercharge ratios or admit additional exact branches?
+invariants:
+  - C-REP-003 types only a separately supplied multiplet table charge conjugation and normalization covariance; it does not derive chirality anomaly equations or the physical table.
+  - C-REP-001 proves homogeneous Abelian moments rescale covariantly and therefore cannot select an overall U1 normalization.
+  - C-LIE-001 and C-REP-002 provide standard fundamental SU3 and SU2 trace normalizations but no quantum anomaly theorem or physical matter sector.
+  - Local triangle anomalies global SU2 parity and cubic SU3 anomaly are distinct obligations and imported theorems must remain explicit.
+  - A few zero evaluations and one-field perturbations cannot replace a complete algebraic solution classification.
+allowed_imports:
+  - C-REP-001
+  - C-REP-002
+  - C-REP-003
+  - C-LIE-001
+  - standard_four_dimensional_chiral_fermion_local_anomaly_trace_criteria_as_explicit_external_theory
+  - standard_SU2_global_doublet_parity_and_SU3_cubic_conjugation_rules_as_explicit_external_theory
+  - exact_commutative_algebra_factorization_elimination_and_projective_branch_classification
+  - SM3 and its dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned SM3 predicate replay and individual adjudication.
+  - id: B
+    description: Accepted supplied-table composition plus explicit imported anomaly formulas with no new canonical API.
+  - id: C
+    description: A reusable exact chiral-multiplet local and global anomaly coefficient ledger.
+  - id: D
+    description: A complete exact solution classifier for the five-row left-handed carrier including every projective branch.
+  - id: E
+    description: Anomaly plus separately declared Yukawa and scalar constraints that may select a narrower nonzero branch.
+  - id: F
+    description: A unique physical Standard Model generation inferred from familiar labels and anomaly cancellation alone.
+  - id: G
+    description: Vectorlike zero-doublet-charge row-swap normalization neutral-singlet and family-parity counterfamilies.
+  - id: H
+    description: Claim source dependency consumer compatibility release queue documentation and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit external-theorem provenance
+  - complete solution set rather than selected-point perturbation
+  - separation of local polynomial global parity and representation-cubic obligations
+  - chirality conjugation and normalization consistency
+  - assumption and parameter economy mutation sensitivity API novelty and consumer compatibility
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before renewed SM3 and dossier body audit; the source table,
+  anomaly formulas, displayed zeroes, and uniqueness headline were already
+  exposed by P081 P129 P147 P154 P160 P163 P164 and the generated queue, so no
+  fresh value or source blinding is claimed
+status: frozen_with_prior_source_exposure
