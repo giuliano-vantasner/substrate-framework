@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-09T07:30:00Z'
+updated: '2026-08-09T09:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -24,14 +24,13 @@ The effort began from the null release at framework commit `6220237`: at that co
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
 The current accepted frontier is `v0.105.0`, containing one hundred forty
-claims. P137 accepts C-SKY-001's exact conditional massive-triplet dipole cross
-energy, complete SO(3) extrema, attractive-channel force, and massless and
-large-separation limits, then terminally qualifies S1. The theorem declares
-its linear field, kinetic coefficient, mass, source strength, dipole tensors,
-self-energy subtraction, separation, and orientation. It derives no nonlinear
-Skyrme model, B=1 state, nucleon, binding, absolute scale, material sector, or
-substrate mechanism. The null release remains the recorded start state, not
-the current authority.
+claims. P137 accepts C-SKY-001's exact conditional massive-triplet dipole
+theorem and terminally qualifies S1. P138 then qualifies S2 without changing
+the release: the accepted complete radial Hessian and zero continuum edge type
+its corrected finite-box levels as a wall-quantized continuum ladder, while
+the source's fitted splitting, collective labels, bound-mode, Roper, baryon,
+and meson readings remain unproved. Provisional C-MES-001 is not promoted. The
+null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
 The migration preserves chronology as provenance only, immutable adjudicated campaigns, claim-level rather than campaign-level acceptance, four independent status axes, generated canonical documentation, append-only failed attempts, and exact separation of derivation inputs from empirical comparators.
@@ -56,7 +55,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 83 pending, 0 partially migrated, 3 migrated, 123 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 82 pending, 0 partially migrated, 3 migrated, 124 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -226,6 +225,7 @@ Attempts are append-only and individually reproducible.
 | 0156 | P135 exact scalar-QED2 polarization, statistics, Ward, tensor, limit, normalization, dependency, consumer, and EM5 audit | `campaigns/P135-em5-induced-gauge-audit/attempts/0001` through `0011`, then v0.103.0 promotion | C-VAC-001 accepted and EM5 qualified; commit `4cea232` | EM5's eleven predicates, fifty primary checks, twenty-nine fresh independent proper-time checks, twenty-seven focused tests, and a nineteen-node, 219-predicate pinned source-graph replay pass. Exact scalar bubble-seagull reduction gives `Pi_hat=N*e^2/pi*(atanh(z)/z-1)`, local F-squared coefficient `N*e^2/(48*pi*m^2)`, a divergent fixed-momentum massless scalar limit, and heavy-mass decoupling. The source instead uses the fermionic numerator, constructs its Ward identity, drops `1/Q` when naming a local Maxwell term, and imports a bare propagator kernel while denying one. Field rescaling, zero-action curvature, statistics, seagull, mass, charge, multiplicity, and next-series-term probes reject the pole, photon, dispersion, and substrate closure. Five representation, queue-schema, template, or memory-path failures are preserved. Immutable YM2 and QCD2 use alias-only legacy compatibility; mutable code uses current or exact APIs. The integrated workflow passes all 1,139 tests with 546 memory files and the physics skill valid. The refreshed graph indexes `4cea232` and rates the new API LOW risk with zero affected processes. | Freeze EM7's fractional-force audit before source execution; require an exact definition of the fractional or effective dimension, radial measure, operator, source normalization, boundary data, potential-versus-force exponent, dimensions, limits, and any transition scale; audit D3S/EM3/QCD5 authority, all seventeen predicates and dynamic checks, consumers, and nonduplication, and do not turn an assigned interpolation exponent, fitted Coulomb tail, or pending dimensional narrative into a derived geometry, unique force law, physical charge, gravity or electromagnetic sector, or observation |
 | 0157 | P136 exact critical Riesz subtraction, force-family, dimension-semantics, dependency, consumer, compatibility, and EM7 audit | `campaigns/P136-em7-fractional-force-audit/attempts/0001` through `0009`, then v0.104.0 promotion | C-KRN-002 accepted and EM7 qualified; commit `3b0b7e7` | EM7's seventeen predicates, twenty-nine primary checks, fifteen fresh Schwinger/Gaussian checks, twenty-two focused tests, and a thirteen-node, 140-predicate pinned source-graph replay pass. The exact critical limit exists only after reference subtraction and gives `2*log(r0/r)/[A*4^(d/2)*pi^(d/2)*Gamma(d/2)]`; the unsubtracted kernel diverges. The d=2 radial flux agrees with C-MAX-001, while the d=1 ordinary branch needs a separate distributional prescription. An explicit source-probe force dictionary gives exponent `2s-d-1`, and the valid `(s,d)=(9/10,14/5)` inverse-square counterexample rejects endpoint uniqueness. EM7's critical Boolean, supercritical smoothed FFT residual, hard-coded power regressions, analytic-d geometry, D3S annotation, dimensional lift, and physical readings are qualified or rejected. Four implementation or symbolic-representation failures are preserved. Immutable YM2 and QCD2 use alias-only legacy compatibility; mutable code uses current or exact APIs. The integrated workflow passes all 1,144 tests with 551 memory files and the physics skill valid. The refreshed graph indexes `3b0b7e7` and rates both new APIs LOW risk with zero affected processes. | Freeze S1's two-Skyrmion force audit before source execution; require exact field and energy functional, topological sector, collective coordinates, separation and orientation domain, asymptotic interaction, source-profile and drift assumptions, numerical solver and refinement, force sign/range oracle, every predicate, B1/G1/G2/S5/T2B authority, consumers, and nonduplication, and do not turn a declared Yukawa or refractive profile into a derived nucleon force, binding mechanism, nuclear scale, material sector, or observation |
 | 0158 | P137 exact massive-triplet dipole interaction, orientation, force, dependency, consumer, compatibility, and S1 audit | `campaigns/P137-s1-two-skyrmion-force-audit/attempts/0001` through `0013`, then v0.105.0 promotion | C-SKY-001 accepted and S1 qualified; commit `bb1016e` | S1's eleven predicates, twenty-six primary checks, thirteen fresh Cartesian-Hessian checks, twenty-eight focused tests, and an eleven-node, 157-predicate pinned source-graph replay pass. The accepted declared linear-field theorem derives the self-subtracted cross energy, complete SO(3) extrema, attractive-channel force, and massive and massless limits. S1's numeric force drops `1/R`, its two assigned orientations do not prove a global order, and its refractive profile constructs no two-Skyrmion or nucleon energy. Seven technical verifier, representation, graph-tally, or workflow-ordering failures are preserved. Immutable G1 and B1 use isolated aliases backed by `np.trapezoid`; mutable campaign and framework surfaces use exact algebra or current APIs. The post-edit graph reports LOW risk and zero affected processes. The integrated workflow passes all 1,154 tests with 556 memory files and the physics skill valid. | Freeze S2's meson-spectrum audit before source execution; require the exact action and hedgehog background, topological and boundary sectors, linearized operator and inner product, spectrum and continuum definitions, scale and quantum-number maps, solver and refinement, every predicate, B1/PG1/PG2/PG3 authority, consumers, and nonduplication, and do not turn a declared potential or fitted eigenvalue into a physical meson spectrum, particle identity, mass scale, material sector, or observation |
+| 0159 | P138 exact radial composition, Hessian, continuum, fit, spectral-typing, dependency, consumer, compatibility, and S2 audit | `campaigns/P138-s2-meson-spectrum-audit/attempts/0001` through `0010`, then terminal no-release boundary | S2 qualified through C-MOD-001, C-MOD-002, C-SCL-001, C-SG-002, and C-SK-001; C-MES-001 unpromoted; commit `69321eb` | S2's ten predicates, twenty-seven primary checks, eighteen fresh independent checks, ninety focused tests, and a twenty-node, 171-predicate frozen graph inventory pass. Exact second variation restores the omitted mixed correction; corrected lowest levels fall 0.131132 to 0.061072 to 0.034754 under wall growth and stay above the exact zero continuum edge. The complete inertia functional converges to 6.37234 instead of the truncated 5.8853, while the 293 MeV check bypasses both and round-trips a fitted 5.12 GeV^-1 input. Rotor, lift, and mass-cancellation arithmetic survives only under accepted conditional ceilings. Two verifier-marker failures are preserved. Native S2's three removed NumPy calls abort before science; the unchanged source passes through an isolated alias backed by `np.trapezoid`, while mutable code uses current APIs. GitNexus and direct searches report LOW record-only risk and no duplicate claim. The integrated workflow passes all 1,154 tests with 558 memory files and the physics skill valid. | Freeze S3's SU(3)/WZW representation audit before source execution; require exact Weyl dimensions, Casimirs, weight multiplicities and hypercharge conventions, collective action and WZW coefficient, integer and baryon premises, representation-selection completeness, every predicate, S2/S4/S5/WZ1/WZ4 authority, consumers, and nonduplication, and do not turn supplied group formulas or a hypercharge filter into physical baryons, flavor states, masses, anomaly dynamics, or a substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -242,7 +242,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 83 bridge units remain pending, 3 are migrated, 123 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 82 bridge units remain pending, 3 are migrated, 124 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1390,25 +1390,36 @@ replays 157 predicates; immutable G1 and B1 use isolated aliases backed by
 `np.trapezoid`, while mutable campaign and framework code uses current APIs or
 exact algebra.
 
+P138 adds no claim, release, or package API. Exact primary and fresh independent
+routes show that S2 omits the mixed Hessian correction and quantizes a massless
+continuum between artificial walls. Corrected levels collapse with inverse
+wall squared and never fall below the exact zero threshold. The complete
+inertia functional converges to 6.37234, while the source's 293 MeV check
+ignores it and reuses a fitted inertia. Collective labels, the shared scalar
+lift, and the conditional mass cancellation supply no operator intertwiner,
+quantization, particle, baryon, Roper, or meson theorem. Native S2's removed
+NumPy calls are isolated as compatibility provenance and replay through
+`np.trapezoid`; mutable verifiers use the canonical helper.
+
 ## Canonicalization
-The registry, `v0.105.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty accepted claims. P001 through P137 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 83 pending, 0 partial, 3 migrated, 123 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.105.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty accepted claims. P001 through P138 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 82 pending, 0 partial, 3 migrated, 124 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 83
-pending, 3 migrated, 123 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is S2, pinned at SHA-256
-`48a9eadf6fbc1e3ebe7fcd6b98c2d60cc10a3f5282404c84e4626910f296eaf7`.
-Its queue headline identifies mesons with fluctuation or breather modes of a
-hedgehog Skyrmion; it cites B1, PG1, PG2, and PG3, contains ten literal check
-calls, one assertion, and symbolic plus numeric oracle hints. P138 must freeze
-competing fluctuation constructions, the exact action and hedgehog background,
-topological and boundary sectors, linearized operator and inner product,
-spectrum and continuum definitions, scale and quantum-number maps, numerical
-refinement, physical ceilings, and comparator quarantine before source
-execution. Pending dependencies grant no premise by chronology or tally, and a
-declared Schrödinger potential or fitted eigenvalue cannot create a physical
-meson spectrum, particle identification, mass scale, material sector, or
-observation.
+The effort remains active. D4 is discharged, but D1 remains open with 82
+pending, 3 migrated, 124 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is S3, pinned at SHA-256
+`44d8cd1f3a3b3d0a316d0984db92d5e47e13cac9dcf3d476e2d996bf09f13b9a`.
+Its queue headline selects SU(3) collective representations using Weyl
+dimensions, Casimirs, hypercharge weights, and a WZW-derived right-hypercharge
+constraint; it cites S2, S4, S5, WZ1, and WZ4, contains ten literal checks, two
+assertions, and symbolic oracle hints. P139 must freeze competing algebraic,
+representation-theoretic, collective-action, and terminal-composition routes;
+pin weight and normalization conventions; and quarantine named baryon
+comparators before opening the source. Qualified S2/S5/WZ4 grant only their
+accepted mappings, while pending S4/WZ1 grant no premise by chronology or
+tally. Supplied formulas and a filtered finite table cannot by themselves
+derive physical baryons, flavor states, masses, anomaly dynamics, or a
+substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
