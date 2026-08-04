@@ -1,0 +1,16 @@
+campaign: P128
+attempt: 0006
+status: failed
+candidates: [D]
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P128-wm4-nearmiss-identity-audit/reviews/independent_nearmiss_review.py
+expected: The absolute range is unchanged when D changes sign.
+result: >-
+  The slope-only coefficient predicate passed. Structural equality did not
+  normalize Abs(-D) to Abs(D) under an unevaluated multivariate polynomial.
+  The load-bearing property is the exact Abs identity, so the check needs an
+  explicit simplification rather than Python structural equality.
+failure_class: symbolic_abs_normalization
+compatibility_event: none
+next_attempt: Simplify the difference of the two absolute-value expressions.

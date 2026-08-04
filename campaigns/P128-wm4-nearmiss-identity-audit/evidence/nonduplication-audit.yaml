@@ -1,0 +1,15 @@
+campaign: P128
+source_unit: WM4
+prior_surfaces:
+  C-LIN-001: finite exact rank consistency augmented-rank and uniqueness semantics
+  C-IDN-001: left-null compatibility residuals reference covariance and coordinate ceilings
+  C-RGE-004: exact affine pairwise crossings common-intersection diagnostics WM3 reconstruction and Abelian normalization ceiling
+surviving_WM4_surface:
+  - specialization of the accepted left-null theorem to three supplied coefficients
+  - algebraic conversion among conditional signed crossing differences and one fixed-input inverse residual
+  - absolute piecewise interpretation of one source range
+distinct_reusable_claim: null
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

@@ -1,0 +1,28 @@
+campaign: P128
+source_unit: WM4
+surviving_exact_surface:
+  - For coefficient rank two, D is a nonzero normalization of the unique linear left-null compatibility residual for a_i=A+B*b_i.
+  - With all relevant coefficient differences nonzero, each signed pairwise crossing-coordinate difference is a beta-only multiple of D.
+  - At the declared slope triple, max-minus-min crossing spread is absolute D times a positive beta-only factor.
+  - With 5*b1+3*b2-8*b3 nonzero, WM3's reconstructed inverse weak-coordinate residual is 5*D divided by that denominator.
+  - A common affine reference shift preserves D and shifts every finite crossing coordinate together.
+source_oracle_limits:
+  - Determinant zero is not equivalent to finite three-line concurrency when the coefficient design loses rank; all-equal slopes give D=0 for arbitrary parallel disjoint intercepts.
+  - The crossing formulas require their displayed nonzero denominators, and distinct slopes do not guarantee a nonzero WM3 reconstruction denominator.
+  - One equal slope pair preserves rank two, a one-dimensional annihilator, two finite crossings, and a finite WM3 coefficient; only the equal pair's crossing is singular.
+  - A max-minus-min range is nonnegative, absolute, and piecewise; it is not one globally signed linear functional.
+  - The inverse-coordinate multiplier is beta-only, but the angle dictionary contains the supplied alpha_em factor and is not data-free.
+  - A shared real zero locus does not exclude nonlinear diagnostics that are not constant multiples of D.
+  - D scales with inverse-coordinate normalization, while paired Abelian rescaling preserves the electromagnetic combination but changes the coupling-equality condition.
+  - The forced-zero guard uses floating arithmetic, the claimed bit-for-bit identity uses math.isclose, and approximate headline checks are regressions only.
+provenance_findings:
+  - WM4 executes pending SM4 and qualified WM3 but does not pin their bytes itself.
+  - Contrary to its source comment and result prose, WM4 does not read or compare _sm4.b1, _sm4.b2, or _sm4.b3; it hard-codes all three coefficients.
+  - The source's no-new-import statement means no new numeric file, not no imported premise or dependency.
+physical_ceiling:
+  - C-IDN-001 and C-RGE-004 govern the exact finite compatibility and affine-reconstruction content only.
+  - No source dependency derives the U1 and SU2 coefficients, hypercharge embedding, matching thresholds, perturbative domain, physical unification, or substrate realization.
+  - The decade spread and weak-angle percentage are different normalized projections; neither approximate number is a concept-selection criterion.
+headline_verdict: conditional_common_linear_obstruction_exact_same_physical_nearmiss_and_data_free_headlines_rejected
+compatibility_event: none
+debt: []

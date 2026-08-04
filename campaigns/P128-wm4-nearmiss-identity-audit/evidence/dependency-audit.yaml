@@ -1,0 +1,20 @@
+campaign: P128
+source_unit: WM4
+authority_warning: Queue dependencies and successful runtime execution do not transfer accepted authority.
+dependencies:
+  B1: {disposition: pending, runtime_use: none, authority_granted: false}
+  M1: {disposition: pending, runtime_use: none, authority_granted: false}
+  SM4: {disposition: pending, runtime_use: dynamic_execution_and_three_numeric_inputs, authority_granted: false}
+  WM2: {disposition: duplicate_evidence, accepted_claims: [C-REP-001, C-LIE-001], runtime_use: none, surviving_surface: coordinate-normalization ledger only}
+  WM3: {disposition: qualified, accepted_claims: [C-RGE-004], runtime_use: dynamic_execution_and_three_numeric_inputs, surviving_surface: exact conditional affine reconstruction}
+  WM6: {disposition: pending, runtime_use: none, authority_granted: false}
+accepted_closure:
+  C-LIN-001: exact rank and consistency semantics
+  C-IDN-001: exact left-null compatibility and reference covariance
+  C-RGE-004: exact affine crossings reconstruction and normalization ceilings
+runtime_replay:
+  SM4: {checks: 8, exit_status: 0, evidence_only: true}
+  WM3: {checks: 10, exit_status: 0, authority_limited_to_C-RGE-004: true}
+  WM4: {checks: 11, exit_status: 0, evidence_only: true}
+verdict: The accepted dependency closure proves only the conditional finite linear theorem; pending physical premises remain excluded.
+debt: []

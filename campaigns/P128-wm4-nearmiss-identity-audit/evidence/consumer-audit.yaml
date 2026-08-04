@@ -1,0 +1,14 @@
+campaign: P128
+root_source_unit: WM4
+inventory: campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml
+direct_consumers: []
+transitive_consumers: []
+queue_search: No source unit declares WM4 as a dependency.
+replay:
+  dependency_scripts: 3
+  checks: 29
+  exit_statuses_all_zero: true
+  purpose: dependency reproduction rather than downstream authority transfer
+compatibility_preflight: {scripts_scanned: 3, np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0, compatibility_events: 0}
+interpretation: No downstream source consumer or canonical API changes; the transaction is a terminal record-only qualification.
+debt: []

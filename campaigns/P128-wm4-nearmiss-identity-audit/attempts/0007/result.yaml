@@ -1,0 +1,20 @@
+campaign: P128
+attempt: 0007
+status: verified
+candidates: [B, C, D, E, F, G, H, I]
+commands:
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P128-wm4-nearmiss-identity-audit.md --base /home/dan/substrate-framework
+  - memory validate /home/dan/substrate-framework/memory/vantasner/decisions/WM4-qualified-review.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - scripts/render_docs.py
+  - scripts/render_memory.py
+  - scripts/validate.sh
+  - git diff --check
+expected: {accepted_claims: 133, source_units: 218, pending_units: 92, qualified_units: 114, pytest_tests: 1090, memory_files: 519, release: v0.98.0, debt: []}
+result: >-
+  Workflow validation reports 133 accepted claims and 218 source units with 92
+  pending. All 519 memory records and the physics skill validate. The integrated
+  pytest run passes all 1090 tests in 103.20 seconds, generated state is current,
+  v0.98.0 is unchanged, and debt is empty.
+compatibility_event: none
+next_attempt: Commit the terminal P128 scientific transaction and checkpoint the parent migration effort.

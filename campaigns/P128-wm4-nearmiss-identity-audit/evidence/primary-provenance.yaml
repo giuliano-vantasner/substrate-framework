@@ -1,0 +1,10 @@
+campaign: P128
+source: {path: merged-framework/bridges/phase-33/bridge_WM4_nearmiss_identity_map.py, sha256: 443406419edc1021a929a6041dec025f73af6d947cf770eebe9cde25d74cd8c9, git_blob: 8f86ef23261d66dda5a400b498a35204c3e35209}
+dependencies:
+  SM4: {sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac}
+  WM3: {sha256: 2328ae4d6e66e1caa14a39042c362e57258406383f14ecaa5f5f6c468105e298}
+freeze: {path: campaigns/P128-wm4-nearmiss-identity-audit/evidence/frozen-proposal.yaml, sha256: 5a5e02b02d1f929286cfe6a329eb12518260fa42ee70e5fb9c34cc34f8988e01}
+primary: {path: campaigns/P128-wm4-nearmiss-identity-audit/verify.py, sha256: addfbe620093a6f19307b7b11d8e5f111eb1f42b29475a55ec134e982a99b8c8, route: source AST exact determinant canonical affine diagnostics crossing range reconstruction reference and Abelian covariance degeneracies inputs and nonduplication, tally: 44}
+independent: {path: campaigns/P128-wm4-nearmiss-identity-audit/reviews/independent_nearmiss_review.py, sha256: 5f4cea00018d8eac9d006584820a7bf0428f91c00c77746f4c6a9293cc90321f, route: fresh determinant elimination nullspace range residual degeneracy zero-locus and source-provenance audit, tally: 34}
+independence: The independent route imports neither the primary verifier nor the canonical renormalization helpers.
+compatibility_event: none

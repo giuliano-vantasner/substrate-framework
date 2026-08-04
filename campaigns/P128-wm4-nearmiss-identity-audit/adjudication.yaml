@@ -1,0 +1,47 @@
+campaign: P128
+title: WM4 one-loop near-miss linear-functional and projection audit
+source_baseline: substrate@6d1f4e0
+source_units: [WM4]
+base_release: v0.98.0
+release_after_adjudication: v0.98.0
+adjudicated_at: '2026-08-08T19:00:00Z'
+selected_candidates: [B, C, D, E, F, G, H, I]
+competing_candidates: [{id: A, decision: reproduction_evidence_only}]
+claims: []
+reviewed_existing:
+  - {id: C-LIN-001, decision: unchanged_exact_rank_and_consistency_semantics}
+  - {id: C-IDN-001, decision: unchanged_left_null_compatibility_and_reference_covariance}
+  - {id: C-RGE-004, decision: unchanged_affine_crossing_reconstruction_and_normalization_ceilings}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  exact_routes: attempts/0002/result.yaml
+  determinant_sign_failure: attempts/0003/result.yaml
+  symbolic_matrix_failure: attempts/0004/result.yaml
+  substitution_order_failure: attempts/0005/result.yaml
+  symbolic_abs_failure: attempts/0006/result.yaml
+  terminal_gate: attempts/0007/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_nearmiss_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/WM4-qualified-review.md
+source_disposition: {WM4: qualified}
+validation_commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-23/bridge_WM3_sin2thetaw_rg_running.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM4_nearmiss_identity_map.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P128-wm4-nearmiss-identity-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P128-wm4-nearmiss-identity-audit/reviews/independent_nearmiss_review.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

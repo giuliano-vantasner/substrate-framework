@@ -1,0 +1,17 @@
+campaign: P128
+source_unit: WM4
+static_call_sites: 11
+runtime_predicate_count: 11
+predicates:
+  - {index: 1, label: concurrency_determinant, verdict: exact_with_rank_qualification, reason: det=-D and D vanishes on the affine plane, but D=0 does not imply finite concurrency for rank-one equal slopes.}
+  - {index: 2, label: crossing_differences, verdict: exact_with_nonzero_denominators, reason: All three signed identities are exact rational functions; max-min spread is an absolute piecewise projection.}
+  - {index: 3, label: weak_inverse_residual, verdict: exact_with_reconstruction_denominator, reason: Delta a2=c(b)D is exact when 5*b1+3*b2-8*b3 is nonzero; the residual still depends on supplied intercept data.}
+  - {index: 4, label: direct_dictionary, verdict: inverse_coordinate_exact_angle_data_free_claim_rejected, reason: The angle conversion explicitly multiplies by supplied alpha_em and a crossing range needs pair and sign choices.}
+  - {index: 5, label: annihilator_dimension, verdict: exact_for_rank_two_linear_functionals_only, reason: The source slope triple has rank two and nullity one; nonlinear diagnostics can share the zero set without constant proportionality.}
+  - {index: 6, label: SM4_spread_reproduction, verdict: numeric_regression_only, reason: Exact rationalized inputs reproduce about 3.979 decades, but closeness neither selects nor authorizes the coefficients.}
+  - {index: 7, label: WM3_prediction_reproduction, verdict: numeric_regression_only, reason: The two supplied input conventions explain the small numerical difference and C-RGE-004 retains the inverse-inference ceiling.}
+  - {index: 8, label: projection_choice, verdict: exact_multiple_with_approximate_percentage, reason: Alternative linear residuals are multiples of D at rank two, but math.isclose is not bit-for-bit identity and percentages depend on observable and denominator.}
+  - {index: 9, label: forced_zero, verdict: exact_zero_locus_with_overbroad_independence_prose, reason: An exact rational mutation collapses the linear projections, but a common zero locus does not rule out independent-form nonlinear diagnostics.}
+  - {index: 10, label: off_point_identity, verdict: exact_algebraic_identity_only, reason: Off-point substitution rejects point fitting of the inverse residual coefficient but does not remove alpha_em from the angle map.}
+  - {index: 11, label: slope_degeneracy, verdict: selected_pair_singularity_only, reason: b1=b2 kills L12, but rank two, L13, L23, and the WM3 coefficient survive when b3 differs; all-equal slopes are the rank-one case.}
+summary: {source_predicates_reproduced: 11, accepted_new_claims: [], terminal_disposition: qualified}

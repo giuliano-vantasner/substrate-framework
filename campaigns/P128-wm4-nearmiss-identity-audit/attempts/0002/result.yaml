@@ -1,0 +1,23 @@
+campaign: P128
+attempt: 0002
+status: verified
+candidates: [A, B, C, D, E, F, G, H, I]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate-framework/.venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-33/bridge_WM4_nearmiss_identity_map.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P128-wm4-nearmiss-identity-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P128-wm4-nearmiss-identity-audit/reviews/independent_nearmiss_review.py
+expected:
+  source_tally: 11
+  exact_identity: conditional_on_rank_and_nonzero_denominators
+  numeric_headlines: reproduction_evidence_only
+  dependency_closure: accepted_claims_only
+  debt: []
+result: >-
+  WM4 reproduces with all 11 source checks passing; its SM4 and WM3 runtime
+  dependencies separately reproduce 8 and 10 checks. The primary audit closes
+  44 exact checks and the fresh determinant route closes 34 after three
+  preserved verifier-construction failures. The exact rank-two linear theorem
+  survives, while the stronger concurrency, data-free, invariant, shared-zero-
+  locus, and degeneracy prose requires qualification.
+compatibility_event: none
+next_attempt: Adjudicate every source predicate, close dependencies and consumers, and run one integrated gate.

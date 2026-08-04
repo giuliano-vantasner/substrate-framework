@@ -1,0 +1,14 @@
+campaign: P128
+candidates:
+  A: {verdict: retained_as_source_evidence, reason: All eleven predicates reproduce but their prose exceeds their implemented or exact domains.}
+  B: {verdict: selected_with_rank_hypothesis, reason: Rank two gives the one-dimensional linear annihilator already governed by C-IDN-001.}
+  C: {verdict: selected_with_denominator_hypotheses, reason: Three signed crossing differences are exact beta-only multiples of D where defined.}
+  D: {verdict: selected, reason: The actual max-min spread is absolute and piecewise, not a signed linear coordinate.}
+  E: {verdict: selected_with_input_ceiling, reason: The inverse weak residual is proportional to D, while the angle residual also contains supplied alpha_em.}
+  F: {verdict: selected, reason: Reference shifts preserve D but normalization and Abelian-coordinate changes require explicit paired maps.}
+  G: {verdict: selected, reason: Equal-slope and distinct-denominator counterexamples expose the source's missing domain qualifications.}
+  H: {verdict: selected, reason: Approximate spread and percentage values are projection-dependent regressions and did not select the theorem.}
+  I: {verdict: selected, reason: Existing claims subsume the exact surface and no consumer or API warrants duplication.}
+selection: [B, C, D, E, F, G, H, I]
+comparators_used_for_selection: []
+debt: []

@@ -1,0 +1,16 @@
+campaign: P128
+attempt: 0005
+status: failed
+candidates: [D]
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P128-wm4-nearmiss-identity-audit/reviews/independent_nearmiss_review.py
+expected: Extracted range multipliers are positive slope-only constants at the declared slope triple.
+result: >-
+  Twelve independent checks passed. The coefficient extraction substituted the
+  slope triple in the numerator before cancelling a separately held symbolic D,
+  leaving spurious free symbols. The crossing identities themselves had already
+  passed exactly.
+failure_class: symbolic_substitution_order
+compatibility_event: none
+next_attempt: Cancel D symbolically before substituting the slope triple.

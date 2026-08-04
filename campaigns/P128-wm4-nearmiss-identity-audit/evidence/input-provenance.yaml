@@ -1,0 +1,37 @@
+campaign: P128
+source_unit: WM4
+derived:
+  D: exact left-null functional in the declared coordinate convention
+  crossing_relations: exact conditional rational identities
+  weak_inverse_residual: exact conditional solution of WM3's two-equation inverse problem
+reused_or_claimed:
+  beta_coefficients:
+    source_values: [41/10, -19/6, -7]
+    implementation: hard_coded_in_WM4
+    claimed_source: SM4
+    audit: no _sm4 beta attribute is read or compared
+    authority: supplied coefficients only; SM4 remains pending
+  hypercharge_weight:
+    value: 5/3
+    implementation: restated literal
+    authority: coordinate convention only; no embedding is derived
+imported_by_runtime_execution:
+  SM4:
+    values: {alpha_em_inverse: 127.95, sin2_theta_w: 0.23122, alpha_s: 0.1181}
+    status: pending
+    role: supplied numeric inputs and comparator
+  WM3:
+    values: {alpha_em_inverse: 127.9, sin2_comparator: 0.23122, alpha_s: 0.118}
+    status: qualified_through_C-RGE-004
+    role: supplied numeric inputs and comparator
+normalization_ledger:
+  inverse_coordinates: a_i=alpha_i_inverse at the declared reference
+  running_coordinate: L=ln(mu/M_Z) and B=L/(2*pi)
+  crossing_report: max(Lij)-min(Lij), divided by ln(10), in logarithmic decades
+  weak_report: absolute relative miss divided by the supplied measured weak coordinate
+  Abelian_coordinate: fixed GUT-normalized source choice; paired rescaling changes equality while preserving the EM combination
+findings:
+  - D and every inverse-coordinate residual depend on supplied intercept inputs even when their proportionality coefficients are beta-only.
+  - The angle dictionary also depends explicitly on alpha_em.
+  - Approximate 3.979-decade and 10.2-percent reports are comparator regressions, not derivation inputs or selection criteria.
+debt: []

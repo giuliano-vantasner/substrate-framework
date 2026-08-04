@@ -2,11 +2,11 @@
 description: Audit whether WM4's scale spread and weak-coordinate miss share only a normalized linear incompatibility
 author: vantasner
 created: '2026-08-08T18:00:00Z'
-updated: '2026-08-08T18:00:00Z'
+updated: '2026-08-08T19:00:00Z'
 tags: [substrate-framework, campaign-proposal, renormalization, migration-WM4]
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P128 WM4 Near-Miss Identity Audit
 

@@ -610,6 +610,51 @@ units:
       through canonical and independent symbolic routes, distinguishes solved
       from fixed weak coordinates, and uses no numerical quadrature or NumPy
       integration alias.
+  WM4:
+    disposition: qualified
+    accepted_claims:
+      - C-IDN-001
+      - C-RGE-004
+    qualification: >-
+      WM4's source triple has coefficient rank two, so its D functional spans
+      the one-dimensional linear annihilator. Where the displayed coefficient
+      differences are nonzero, all signed crossing differences are beta-only
+      multiples of D; where 5*b1+3*b2-8*b3 is nonzero, WM3's inverse weak-
+      coordinate residual is another beta-only multiple. These exact surfaces
+      are already governed by C-IDN-001 and C-RGE-004. The max-minus-min
+      crossing range is absolute and piecewise, while the angle dictionary
+      explicitly contains supplied alpha_em and its percentage depends on the
+      chosen observable and denominator. Determinant zero is not sufficient
+      for finite concurrency at rank one: all-equal slopes give D=0 even for
+      parallel disjoint lines. One equal pair preserves rank two, two finite
+      crossings, and the WM3 coefficient, while three distinct slopes can
+      still make that reconstruction denominator zero. A nonlinear diagnostic
+      can share D's real zero set without constant proportionality. Reference
+      shifts preserve D, but inverse-coordinate scaling and paired Abelian
+      rescaling expose its normalization ceiling. WM4 hard-codes all three
+      beta coefficients despite claiming to import and assert them from
+      pending SM4, calls math.isclose bit-for-bit, and dynamically executes
+      pending SM4 and qualified WM3. No physical unification, common induction,
+      input-free observable, or substrate realization is accepted.
+    evidence:
+      - campaigns/P128-wm4-nearmiss-identity-audit/reviews/source_adjudication.md
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/source-reproduction.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/source-audit.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/check-adjudication.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/input-provenance.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/dependency-audit.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/consumer-audit.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/candidate-comparison.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/evidence/primary-provenance.yaml
+      - campaigns/P128-wm4-nearmiss-identity-audit/verify.py
+      - campaigns/P128-wm4-nearmiss-identity-audit/reviews/independent_nearmiss_review.py
+      - memory/vantasner/decisions/WM4-qualified-review.md
+    note: >-
+      P128 closes 44 primary and 34 independent exact checks after four
+      preserved verifier-construction failures. Three pinned dependency and
+      source scripts reproduce 29 checks. No numerical integration or NumPy
+      compatibility event occurs.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:
