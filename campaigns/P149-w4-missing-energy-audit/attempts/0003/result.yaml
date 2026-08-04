@@ -1,0 +1,23 @@
+attempt: 0003
+campaign: P149
+candidate: literal_reproduction_and_exact_threshold_diagnosis
+status: passed
+started_at: '2026-08-10T01:10:00Z'
+finished_at: '2026-08-10T01:20:00Z'
+commands:
+  - .venv/bin/python bridge_W4_neutrino_missing_energy.py
+  - shared_AST_compatibility_audit_on_hash_pinned_W4
+  - direct_SymPy_two_body_mass_shell_rederivation
+result:
+  native_exit_status: 0
+  terminal_tally: ALL_8_CHECKS_PASS
+  compatibility: no_legacy_or_current_trapezoid_reference
+  exact_hidden_mass_shell_defect: 2*m1*(m1+m2)*(1-cosh(theta))
+  equality_condition: theta_equals_zero_only
+failure_class: none
+scientific_effect: >-
+  The source tally is retained as reproduction evidence. It cannot establish
+  the headline: W4's moving absorbed free-kink interpretation is inconsistent
+  with its own fixed-threshold four-momentum ledger, while its charge guards
+  are definitions or have counterexamples.
+next_attempt: freeze_the_source_aware_C_KIN_001_revision_before_implementation

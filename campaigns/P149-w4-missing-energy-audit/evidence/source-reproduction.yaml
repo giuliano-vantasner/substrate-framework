@@ -1,0 +1,85 @@
+campaign: P149
+source_unit: W4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-6/bridge_W4_neutrino_missing_energy.py
+sha256: afa341c860ba89889d8d0a9fe6cd62948b5303f243e3884abf7d3acf24a7f602
+dossier_path: merged-framework/bridges/phase-6/dossiers/W4_dossier.md
+dossier_sha256: c72601001ded5c27bd56984609afcffb664e02aacbfca7222e9d583f662f4413
+ast_inventory:
+  check_calls: 8
+  assertions: 1
+  function_definitions: [check]
+  numpy_aliases: [np]
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+native_execution:
+  exit_status: 0
+  terminal_tally: ALL_8_CHECKS_PASS
+  numeric_outputs:
+    omega_half_breather_energy: approximately_13_8564
+    omega_half_threshold_deficit: approximately_2_1436
+    threshold_missing_energy: 8
+    threshold_missing_fraction: 0.5
+    velocity_point_recoil_momentum: approximately_6
+imported_formalization:
+  path: sg-breather-ionization/dynamics_lean/Energy.lean
+  sha256: 33bf30a14fc51b9e2d65a6c4a10fab89b239fd2e5022244dd0ed7a4d18ca8356
+  exact_content: >-
+    The imported file proves the already accepted normalized identities
+    E_b=16*sqrt(1-omega^2), Delta=16-E_b, and E_b+Delta=16. It supplies no
+    outgoing constituent state, on-shell recoil relation, detector model,
+    boundary evolution, neutrino, or charged-current interaction.
+imported_dynamics:
+  path: sg-breather-ionization/dynamics/01_collective_coordinates.md
+  sha256: 1c0822836ac2115d961711c57b260edaa3436d039d7ffc116554f20867f59aa2
+  exact_content: >-
+    The document states single-kink relativistic energy and momentum. W4 does
+    not solve the simultaneous outgoing two-body mass-shell and conservation
+    equations that are required before assigning a second free kink.
+imported_solution:
+  path: sg-breather-ionization/solution.md
+  sha256: a5a0ced9a097f07daea67e37b9516755307536e4850dfc975da72ee8eb876f86
+  counterexample: >-
+    Its enumerated both-absorbed outcome has no reflected topological charge
+    but may retain energy outside the proposed observable sector, directly
+    defeating W4.G1's implication from zero reflected charge to zero missing
+    energy.
+imported_numerics:
+  path: sg-breather-ionization/numerical/study.py
+  sha256: 15891957668461dd8c50a4fdb44e716838d439c6b9b76472425131a3f9d08c9f
+  accepted_ceiling: >-
+    P051 already establishes that q_bulk is a finite-interval endpoint
+    coordinate rather than a proved integer vacuum charge; its F0=0 control
+    does not prove W4's charge-conditioned missing-energy theorem.
+initial_scientific_flags:
+  - >-
+    W4.1 and the omega=0.5 portion of W4.6 reproduce C-SG-002 and C-SG-005.
+    The threshold deficit is an input complement, not an outgoing constituent
+    energy or interaction potential.
+  - >-
+    W4.2 correctly shows two expressions differ generically, but equality of
+    their scalar energies does not identify an intact breather or any state.
+  - >-
+    W4.3 assigns gamma_abs=2-gamma_refl. For any gamma_refl greater than one,
+    gamma_abs is below one and cannot describe a positive-mass free kink.
+  - >-
+    Exact four-momentum closure sharpens that failure: subtracting an on-shell
+    mass-m1 particle of rapidity theta from threshold total (m1+m2,0) leaves
+    mass-shell defect 2*m1*(m1+m2)*(1-cosh(theta)), which vanishes only at
+    theta=0. Thus W4.4's open recoil interval is not a two-free-kink channel.
+  - >-
+    W4.5 assigns opposite momentum independently of its residual energy. At
+    v=0.6 and equal mass eight, the residual is (6,-6), whose invariant mass
+    is zero rather than eight. A fixed boundary may also absorb momentum.
+  - >-
+    W4.G1 is a conditional definition plus an unsupported charge implication;
+    W4's imported both-absorbed outcome is a direct counterexample. Charge and
+    detector visibility do not determine energy.
+  - >-
+    W4.G2 obtains negative residual energy for boosted reflected particles.
+    That signals an incomplete fixed-total ledger or omitted drive work, not
+    proof that missing energy is zero or tied to a charged-current event.
+maximum_source_verdict: reproduction_only_pending_exact_threshold_implementation_and_independent_review

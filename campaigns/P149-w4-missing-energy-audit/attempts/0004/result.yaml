@@ -1,0 +1,22 @@
+attempt: 0004
+campaign: P149
+candidate: source_aware_C_KIN_001_freeze
+status: passed
+started_at: '2026-08-10T01:21:00Z'
+finished_at: '2026-08-10T01:24:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate proposal_contract --base repository_root
+  - independent_SymPy_expansion_of_threshold_residual
+  - git diff --check
+freeze:
+  proposal_sha256: 0fd7354311a3171e11b84922bc0af0c7df9699afbec9f3a42078010ab6d55277
+  revision_sha256: 65bbd11e137f54cb6c6c7cda69fb40dd5730964c9203d9f35b461607dc46c06b
+  reproduction_sha256: 9e7eec5214cbd5d1e96b644d0cf307df2e84bc424057a8e2baa2fdadb8ae3690
+  memory_contract_sha256: a8b35cec29f4bf1effb92123af7160aa5989cb4509db6e09be9e1b78191439a3
+  exact_residual_check: passed
+debt:
+  - implement_and_test_the_pure_threshold_ledger
+  - build_primary_and_fresh_independent_mutation_sensitive_oracles
+  - adjudicate_all_eight_W4_predicates_and_close_dependencies_consumers_and_generated_state
+next_attempt: implement_only_the_frozen_C_KIN_001_surface

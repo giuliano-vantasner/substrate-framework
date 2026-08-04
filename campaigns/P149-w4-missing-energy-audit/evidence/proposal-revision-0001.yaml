@@ -1,0 +1,52 @@
+revision: 0001
+campaign: P149
+parent_frozen_proposal_sha256: 33a12bf08d88a972983b3fe5da82321cf616e918ff3cbc69f6f79801a1324054
+trigger: >-
+  Native reproduction and source-aware exact rederivation reveal a distinct,
+  reusable threshold theorem absent from the accepted registry. It both
+  supplies the positive kinematic object requested by candidate D and exposes
+  the precise mass-shell failure in W4's assigned moving hidden partner.
+unchanged:
+  - accepted base source hashes coordinates signature and source ceilings
+  - candidates A through F and their ordering
+  - structural selection criteria and comparator exclusion
+  - compatibility policy requiring np.trapezoid or exact algebra in mutable code
+claim_delta:
+  identifiers: [C-KIN-001]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_threshold_four_momentum_ledger_module
+exact_statement: >-
+  Let m1,m2>0 and theta be real. In 1+1 signature (+,-), take a center-of-mass
+  threshold total P=(m1+m2,0) and an observed on-shell particle
+  p1=(m1*cosh(theta),m1*sinh(theta)). The residual p2=P-p1 has exact mass-shell
+  defect p2^2-m2^2=2*m1*(m1+m2)*(1-cosh(theta)), which is nonpositive and is
+  zero if and only if theta=0. Hence the residual can be an on-shell particle
+  of mass m2 only at zero recoil, where p1=(m1,0) and p2=(m2,0). A nonzero
+  recoil requires total energy above threshold or a channel that is not the
+  claimed second free particle, such as explicitly modeled boundary storage,
+  work, or radiation.
+source_corrections:
+  - W4_gamma_abs_equals_2_minus_gamma_refl_is_below_one_for_any_nonzero_recoil
+  - W4_energy_and_opposite_momentum_assignments_fail_the_hidden_kink_mass_shell
+  - W4_equal_energy_coincidence_does_not_identify_an_intact_breather
+  - W4_negative_two_reflection_residual_signals_missing_drive_or_ledger_terms
+  - zero_reflected_topological_charge_does_not_imply_zero_detector_inaccessible_energy
+  - a_boundary_or_acceptance_ledger_does_not_by_itself_establish_a_neutrino_or_charged_current
+accepted_mappings: [C-SG-002, C-SG-005, C-SG-008, C-SG-011, C-SG-012, C-SG-013, C-BND-001, C-REP-002]
+novelty: >-
+  The accepted framework contains individual sine-Gordon energy-momentum
+  formulas and campaign-local special-case kinematics, but no canonical
+  general theorem for subtracting one on-shell particle from a two-body
+  threshold vector, no reusable mass-shell-defect API, and no accepted claim
+  with this equality condition. C-SG-005 is only the scalar threshold-deficit
+  identity; C-SG-008 is one boosted breather; neither proves C-KIN-001.
+oracle: >-
+  Exact SymPy four-vector algebra and hyperbolic inequality, independently
+  rederived by component substitution, with equal-mass W4 counterexample,
+  zero-rapidity limit, conservation, sign, mass, and load-bearing mutations.
+implementation_boundary: >-
+  Add a pure relativistic-threshold module returning the declared total,
+  observed, residual, and residual mass-shell defect. It must introduce no
+  sine-Gordon state-production, boundary dynamics, detector, charge, weak,
+  neutrino, or interaction interpretation and must perform no quadrature.
+status: frozen

@@ -2,7 +2,7 @@
 description: Derive and audit the exact energy-momentum and observability content of W4's missing-energy bridge
 author: vantasner
 created: '2026-08-10T01:05:00Z'
-updated: '2026-08-10T01:05:00Z'
+updated: '2026-08-10T01:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -85,11 +85,15 @@ manifest are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved at the initial freeze. Candidate B may be duplicate
-accepted content, while C through E determine whether a distinct general
-energy-momentum or observability theorem exists. Any later claim delta requires
-a source-aware nonduplication audit and a committed proposal revision before
-implementation.
+Revision 0001 reserves C-KIN-001 after source-aware nonduplication. For positive
+masses `m1,m2` and real rapidity `theta`, subtracting the observed on-shell
+vector `(m1 cosh(theta), m1 sinh(theta))` from the center-of-mass threshold
+total `(m1+m2,0)` leaves a residual whose mass-shell defect relative to `m2` is
+exactly `2*m1*(m1+m2)*(1-cosh(theta))`. It vanishes only at zero rapidity, where
+both particles are at rest. Nonzero recoil therefore needs above-threshold
+energy or a separately modeled non-particle channel. The claim introduces no
+boundary dynamics, detector ontology, neutrino, charged current, or
+interaction.
 
 ## Implementation and Oracle Plan
 
@@ -116,7 +120,13 @@ abort does not reject a candidate.
 
 ## Attempts and Continuation
 
-Every failed reproduction, convention, energy, momentum, boundary,
+Native W4 execution exits cleanly with all eight literal checks passing and no
+trapezoid compatibility shape. That tally is reproduction evidence only. The
+source assigns `gamma_abs=2-gamma_refl`, which is below one at every nonzero
+recoil, and its independently assigned opposite momentum produces the exact
+mass-shell defect above. Its charge guards are conditional definitions or have
+counterexamples, including the imported both-absorbed outcome. Every failed
+reproduction, convention, energy, momentum, boundary,
 observability, compatibility, or graph route is append-only with a diagnosed
 mechanism and materially different next attempt. Technical failures are
 repaired and source overclaims yield to the next preregistered candidate.
