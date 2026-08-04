@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T01:00:00Z'
+updated: '2026-08-10T02:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.114.0`, containing one hundred forty-nine
+The current accepted frontier is `v0.115.0`, containing one hundred fifty
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -42,6 +42,11 @@ It corrects W3's spatial-derivative sign, separates the sine-Gordon-sourced
 gradient from the off-shell-conserved epsilon dual, and rejects the unsupported
 V-A vertex, intrinsic parity violation, charge-event, U1, anomaly, gauge, and
 weak-sector readings.
+P149 adds C-KIN-001's exact two-body threshold residual, mass-shell defect,
+and unique zero-recoil equality theorem and qualifies W4. It retains W4's
+accepted scalar energy identities while rejecting its moving hidden free kink,
+neutrino recoil, charge-conditioned invisibility, physical current, weak,
+detector, and substrate readings.
 The null release remains the recorded start state, not the current authority.
 
 ## Constraints and Invariants
@@ -67,7 +72,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 73 pending, 0 partially migrated, 3 migrated, 133 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 71 pending, 0 partially migrated, 3 migrated, 135 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -248,6 +253,7 @@ Attempts are append-only and individually reproducible.
 | 0167 | P146 exact scalar boundary-residual parity pullback, projectors, domain-normal map, trace family, dependency, consumer, compatibility, and W1 audit | `campaigns/P146-w1-parity-boundary-audit/attempts/0001` through `0007`, then v0.113.0 promotion | C-BND-001 accepted and W1 qualified; commit `5b9fa7c` | Native W1 passes its first three checks and stops only on two removed `np.trapz` calls; isolated alias-only replay through `np.trapezoid` passes all eight predicates. Exact canonical and fresh augmented-trace routes derive the beta-to-minus-beta family covariance, fixed-residual invariance iff beta is zero, even temporal-source and odd spatial projectors, right-to-left half-line normal covariance, and the one-row trace family. They also prove that W1 hard-codes its charge map, adds a zero-gradient premise, constructs a chiral witness violating its own epsilon-plus law, and relabels sign correlation as topological transfer. Thirty-nine primary, twenty-three independent, twenty-one focused, and forty-five frozen-graph checks pass; the eleven-node graph inventories 129 predicates and ten assertions. Three qualified consumers retain independent closure and six pending consumers gain no authority. GitNexus reports LOW additive impact and zero affected processes. The integrated workflow passes all 1,275 tests with 598 memory files and the physics skill valid. | Freeze W2 before source inspection; require the exact carrier space and basis, provenance of kink and antikink state labels, action of Pauli generators and projectors, distinction between an abstract SU(2) representation and a gauged physical doublet, charge and hypercharge normalization, chirality definition, current dynamics, anomaly and interaction data, W1/W3/W7/M1/M2/EM/YM/SM authority, all nine predicates, one assertion, consumers, and nonduplication, and do not turn assigned two-state labels or matrix closure into derived weak isospin, a charged-current interaction, physical fermions, a gauge sector, or a substrate mechanism |
 | 0168 | P147 exact SU2 carrier commutant, independent projector factor, vector/axial parity, common-charge, dependency, consumer, compatibility, and W2 audit | `campaigns/P147-w2-su2-doublet-audit/attempts/0001` through `0007`, then v0.114.0 promotion | C-REP-002 accepted and W2 qualified; commit `0d623a5` | Native W2 passes all nine predicates without a NumPy compatibility event. Exact canonical and fresh block-space routes prove Pauli-half closure, the scalar fundamental commutant, Hermitian closing `T_a` tensor left/right projector actions, vector-even and axial-odd factor exchange, and unit separation under any common commuting Abelian shift. W2's assigned labels change by two while its unit event is inserted separately; CP does not select `T3=Q/2`; opposite hypercharges are not one common charge; and its same-carrier `T_a*P_L` matrices are non-Hermitian for two generators and fail all cyclic commutators. The source preloads its parity guard and computes no correlation, field evolution, gauge action, current, anomaly, or interaction. Two verifier target-statement failures are preserved before correction. Forty-nine primary, twenty-five independent, fourteen focused, and eighty-three frozen-graph checks pass; the 24-node graph inventories 234 predicates and 26 assertions. GitNexus reports LOW additive impact and zero affected processes. The integrated workflow passes all 1,289 tests with 603 memory files and the physics skill valid. | Freeze W3 before source inspection; require exact V/A definitions and derivative signs, field and spacetime carrier semantics, parity action, conservation equations and boundary flux, source and current dimensions, coupling and gauge provenance, W1/W2/EM1/G1/G2/NC1/NC4/W5 authority, all seven predicates and one assertion, consumers, nonduplication, and alias-only replay of its immutable two-call `np.trapz` shape, and do not turn a characteristic identity, assigned projector, or boundary correlation into a Lorentz current, charged-current vertex, parity violation, gauge interaction, or substrate mechanism |
 | 0169 | P148 exact scalar derivative, epsilon-dual divergence, parity exchange, boundary-transfer, field-type, dependency, consumer, compatibility, and W3 audit | `campaigns/P148-w3-va-current-audit/attempts/0001` through `0013`, then terminal no-release boundary | W3 qualified through C-SG-011, C-SG-012, C-SG-013, C-BND-001, C-REP-002, and C-U1-001 with v0.114.0 unchanged; commit `feb8191` | Direct chain rule gives `phi_x=L_prime-R_prime`, so W3's reversed sign exchanges its channels before it imports the desired label. The derivative gradient has divergence `Box phi=-sin(phi)` on shell, while its epsilon dual is the off-shell-conserved topological object; W3 computes neither divergence and imports a distinct complex-field U1 identity. Parity exchanges the null combinations but supplies no violating action or selected coupling. The Gaussian is normalized to the desired area, charge and axial integers are assigned, and one chosen zero correlation is relabelled zero transfer. No spinor, connection, current vertex, anomaly, or dynamics exists. Two raw-source fixture failures are preserved before repair. Forty-seven primary, twenty-five fresh independent, and sixty-one frozen-graph checks pass; the 17-node graph inventories 184 predicates and 16 assertions. Native W3 stops only at removed `np.trapz`; alias-only replay through `np.trapezoid` passes all seven predicates, mutable P148 code has zero executable legacy access, and immutable P044 independently replays all 28 checks. The integrated workflow passes all 1,289 tests with 605 memory files and the physics skill valid. | Freeze W4 before source inspection; require exact incoming, reflected, absorbed, and boundary energy-momentum ledgers, signs and frames, full boundary flux and work, constituent and state provenance, charge-event independence, detector observability, G1/G2/W3/W5 authority, all eight predicates and one assertion, consumers, nonduplication, and compatibility preflight, and do not turn an algebraic residual, equal split, unobserved boundary channel, or label into a neutrino, charged-current event, missing-energy particle, or substrate mechanism |
+| 0170 | P149 exact two-body threshold residual, mass-shell equality, observability ceiling, dependency, consumer, compatibility, and W4 audit | `campaigns/P149-w4-missing-energy-audit/attempts/0001` through `0009`, then v0.115.0 promotion | C-KIN-001 accepted and W4 qualified; commit `722af7c` | Native W4 passes all eight predicates without a NumPy integration event, but the tally never checks simultaneous outgoing mass shells. Exact canonical and fresh matrix/exponential-coordinate routes derive residual defect `2*m1*(m1+m2)*(1-cosh(theta))`, which vanishes only at zero recoil. At W4's `v=0.6` point the observed vector is `(10,6)` and the fixed-threshold residual `(6,-6)` has invariant mass zero, not eight; an on-shell equal-mass pair needs total energy twenty. W4's scalar energy identities survive, but equality does not identify a state, its charge-zero Piecewise is conditional and has a both-absorbed counterexample, and its boosted both-reflect residual becomes negative. Two source-sentinel verifier failures and one SymPy representation-test failure are preserved. Thirty-three primary, fifteen independent, thirteen focused, and twenty-five graph checks pass; the six-node graph inventories 63 predicates and six assertions. GitNexus reports LOW additive impact, zero affected symbols, and zero processes. Mutable code has zero legacy integration access; inherited G1 and W3 shapes remain alias-only through `np.trapezoid`. The integrated workflow passes all 1,302 tests with 610 memory files and the physics skill valid. | Freeze W5 before source inspection; require the exact asymmetry definition, numerator and denominator domains, left/right event and detector semantics, probability versus energy-fraction distinction, coupling and handedness provenance, W1-W4/W7/G1/G2/G5/M1/M2/S5 authority, all 27 predicates and one assertion, consumers, nonduplication, and compatibility preflight, and do not turn an assigned energy fraction, selected charge label, finite sample, or algebraic ratio into a physical chiral coupling, parity-violating asymmetry, weak interaction, observation, or substrate mechanism |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -264,7 +270,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 72 bridge units remain pending, 3 are migrated, 134 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 71 bridge units remain pending, 3 are migrated, 135 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1545,24 +1551,34 @@ topological transfer. Alias-only replay through `np.trapezoid` passes all seven
 immutable predicates, while mutable campaign code has no executable legacy
 integration access.
 
+P149 adds C-KIN-001 for the exact residual after subtracting one on-shell
+particle from a two-body center-of-mass threshold vector. Its mass-shell defect
+is nonpositive and vanishes only at zero recoil, where both particles rest.
+W4 is qualified because its moving hidden partner is sub-rest-mass and fails
+the target shell, its independently assigned opposite momentum does not repair
+the ledger, scalar energy equality does not identify a state, and charge does
+not determine detector-inaccessible energy. Native W4 has no NumPy integration
+event; mutable code uses exact algebra and inherited immutable shapes remain
+version-only alias evidence backed by `np.trapezoid`.
+
 ## Canonicalization
-The registry, `v0.114.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred forty-nine accepted claims. P001 through P148 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 72 pending, 0 partial, 3 migrated, 134 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.115.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty accepted claims. P001 through P149 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 71 pending, 0 partial, 3 migrated, 135 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 72
-pending, 3 migrated, 134 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is W4, pinned at SHA-256
-`afa341c860ba89889d8d0a9fe6cd62948b5303f243e3884abf7d3acf24a7f602`.
-Its headline proposes neutrino-like missing energy and absorbed-versus-reflected
-momentum from a boundary event, cites G1, G2, W3, and W5, and contains eight
-literal checks, one assertion, and symbolic and numeric machinery. P149 must
-freeze at least two competing energy-momentum and observability interpretations;
-pin boundary work, flux, sign, frame, constituent, charge, detector, current,
-and interaction conventions; and predeclare compatibility, dependency,
-consumer, predicate, and nonduplication audits before opening the source. An
-algebraic residual, declared equal split, unobserved boundary channel, or charge
-label cannot by itself establish a neutrino, charged-current event,
-missing-energy particle, weak interaction, or substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 71
+pending, 3 migrated, 135 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is W5, pinned at SHA-256
+`5afea85e0e70236ddd076e2da585d6ab5861d52211239642eac1c951f1c6a71a`.
+Its headline proposes a chiral asymmetry magnitude, declares G1, G2, G5, M1,
+M2, S5, W1 through W4, and W7, and contains 27 literal checks, one assertion,
+and symbolic and numeric machinery. P150 must freeze at least two competing
+asymmetry, allocation, and interaction interpretations; pin event, detector,
+normalization, denominator, charge, handedness, coupling, and authority
+conventions; and predeclare compatibility, dependency, consumer, predicate,
+and nonduplication audits before opening the source. An assigned missing-energy
+fraction, charge label, finite sample, or algebraic ratio cannot by itself
+establish physical chirality, parity violation, a weak coupling, observation,
+or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
