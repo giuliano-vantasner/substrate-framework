@@ -1,0 +1,28 @@
+attempt: 0001
+campaign: P146
+candidate: preregistration
+status: passed
+started_at: '2026-08-09T19:35:00Z'
+finished_at: '2026-08-09T19:42:00Z'
+commands:
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P146-w1-parity-boundary-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  frozen_proposal_sha256: fa342cee48763371ae51008dee9096a534a9952556ddde83f734e540874ed212
+  bridge_sha256: bfac7d7e4ccb0cdabc6bb2703dadb650c0e09ea883ec3ff70f039231d3e62388
+  dossier_sha256: b445fb798e2c5fab53f47eca41895ec140ae3a0d812bd14d11eee0b26c3237a1
+  preflight: 7_ok_0_warn
+  repository: WORKFLOW_VALID_147_claims_147_accepted_0_proposals
+  migration_queue: 218_units_75_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_parent_and_accepted_predecessor_exposure_recorded_in_contract
+next_attempt: >-
+  Commit the freeze boundary, preflight immutable W1 for executable NumPy
+  compatibility, reproduce its exact native or alias-only tally, then audit
+  every predicate, assertion, boundary transformation, dependency, and source
+  interpretation.

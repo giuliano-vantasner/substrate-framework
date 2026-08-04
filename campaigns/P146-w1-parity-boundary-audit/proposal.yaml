@@ -1,0 +1,81 @@
+id: P146
+base_release: v0.112.0
+base_commit: 2cf404d
+scientific_base_commit: 069efce
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [W1]
+question: >-
+  Reproduce and independently audit W1's claim that a boundary condition with
+  a signed spatial-derivative coefficient derives parity violation, and
+  determine exactly when the sign is a fixed-coordinate parity transform, an
+  outward-normal orientation convention, a spurionic parameter exchange, an
+  explicitly parity-breaking single theory, or merely state-dependent
+  numerical response.
+invariants:
+  - >-
+    C-SG-001 fixes the normalized real sine-Gordon equation and C-SG-011 proves
+    that scalar spatial parity preserves that equation while exchanging
+    opposite winding sectors. Neither characteristic derivatives nor sector
+    exchange supplies intrinsic parity violation or a weak interaction.
+  - >-
+    C-SG-013 distinguishes a fixed-coordinate derivative from an outward-normal
+    derivative: the first is parity odd, while the second is unchanged when a
+    half-line domain and its normal are transformed together. It supplies no
+    boundary action, parity-breaking dynamics, or epsilon-to-chirality map.
+  - >-
+    Qualified NC4 supplies only a tuned finite-time numerical subcase and
+    accepted exact surfaces. A common phase reverses one claimed sign and a pi
+    shift exchanges epsilon labels, so NC4 cannot be imported as a physical
+    chirality or phase-independent parity-selection premise.
+  - >-
+    For a real scalar phi define the fixed-coordinate residual at x=b by
+    B_(epsilon,J)[phi]=phi_t+epsilon*phi_x-J. With scalar parity
+    phi_P(t,x)=phi(t,-x) and scalar source pullback, exact chain rule gives
+    B_(epsilon,J_P)[phi_P](t,b)=B_(-epsilon,J)[phi](t,-b).
+  - >-
+    On the right half-line x>=b the outward derivative is -phi_x and on the
+    parity-mapped left half-line x<=-b it is +phi_x. A coefficient of the
+    outward derivative is therefore not the same object as a fixed-coordinate
+    coefficient, and parity need not act internally on one fixed half-line.
+  - >-
+    The generated queue exposes W1's broad headline, dependencies NC1 and NC4,
+    eight static and literal checks, two assertions, symbolic and numeric
+    hints, and no dynamic check calls. Source and dossier bodies, literal
+    predicates, output, thresholds, and any further comparators remain unopened.
+allowed_imports:
+  - C-SG-001 only for the normalized real sine-Gordon equation and scalar-field convention
+  - C-SG-011 only for exact characteristic source topological current parity covariance and interpretation ceilings
+  - C-SG-013 only for exact fixed-coordinate and outward-normal parity transformations and boundary-functional ceilings
+  - qualified NC4 only as hash-pinned noncanonical numerical evidence after freeze; its rejected chirality and robustness readings grant no authority
+  - exact chain rule boundary-domain orientation variational calculus and symmetry-group definitions
+  - W1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce W1 literally and classify every predicate by evaluated object boundary domain transformed data sensitivity and maximum verdict.}
+  - {id: B, description: Derive the exact fixed-coordinate boundary-operator parity pullback with general coefficient boundary point and source transformation.}
+  - {id: C, description: Derive the parity map between right and left half-line outward-normal boundary problems and distinguish orientation relabeling from an internal symmetry.}
+  - {id: D, description: Test whether the claimed first-order boundary condition follows from a local real-scalar boundary action or requires extra boundary degrees of freedom or an independently declared nonvariational law.}
+  - {id: E, description: Classify invariant single-theory explicit breaking spurionic family covariance and state or solution asymmetry using exact data transformations and countermodels.}
+  - {id: F, description: Audit W1 and NC4 numerical data flow phase dependence parameter tuning and topological-charge semantics without promoting a regression as a derivation.}
+  - {id: G, description: Close novelty dependencies nine reverse consumers compatibility source disposition generated state and the empty debt ledger.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact parity pullback of the field operator boundary point domain normal source and parameters before physical naming
+  - explicit distinction among internal invariance family covariance explicit breaking and state asymmetry
+  - accepted sine-Gordon topological and boundary-semantic compatibility
+  - assumption and parameter economy with epsilon source phase and boundary data retained
+  - correct zero-coupling parity-center full-line half-line and domain-reflection limits
+  - load-bearing sign orientation source phase and boundary-side mutations
+  - variational or independently declared dynamical provenance for any claimed boundary law
+  - reusable API value nonduplication reverse-consumer closure and generated-state consistency
+  - source outputs and any external comparators excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, bridge and dossier hashes, candidates,
+  exact fixed-coordinate and outward-normal conventions, symmetry classifier,
+  selection criteria, mutation plan, compatibility policy, and done gate are
+  frozen and committed. Queue and parent records already expose the broad
+  headline, dependency names, check counts, assertion count, and oracle hints;
+  those hints do not select a candidate. Source and dossier bodies, literal
+  predicates, full output, thresholds, and further comparator material remain
+  unopened until that boundary.
+status: draft
