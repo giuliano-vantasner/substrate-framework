@@ -1,0 +1,29 @@
+campaign: P160
+base_release: v0.123.0
+base_commit: d5b76e8
+proposal_freeze_commit: 3dd6381
+proposal_sha256: 2a2913f5249bce276edd71921b8c5706c2702be067b896d0bd8b33e4ecdfba43
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  source_unit: QCD1
+  path: merged-framework/bridges/phase-8/bridge_QCD1_su3_kinetic_induction.py
+  sha256: b70065548c121661c9a6801255aa844a40165e947c054a48617d926955a704ed
+  dossier_path: merged-framework/bridges/phase-8/dossiers/QCD1-dossier.md
+  dossier_sha256: 83270b8c52d51b439c05ae3c80a8a1679b537d265bf97854bae1312a3a32bd14
+accepted_inputs:
+  - C-LIE-001 exact standard fundamental SU3 generators trace metric f tensor and Casimirs
+  - C-VAC-001 complete massive complex-scalar Euclidean two-dimensional loop and ceilings
+  - C-NVP-001 SU2 specialization Ward background completion and coefficient-freedom boundary
+  - C-NAG-001 connection curvature and trace convention boundary
+  - P158 accepted primary-background-field provenance without importing YM1 conclusions
+excluded_inputs:
+  - QCD1s_fermion_shaped_integrand_as_scalar_authority
+  - YM1_EM5_QCD1_rejected_massless_pole_or_unique_induction_conclusions
+  - QCD2_or_YM2_dimensional_lift
+  - a_physical_quark_gluon_QCD_confinement_or_substrate_dictionary
+  - any_undeclared_bare_counterterm_gauge_fixing_matching_scale_state_or_observation
+comparator_gate: >-
+  Queue headline and result excerpts were exposed before the freeze. The body
+  and dossier were opened only after commit 3dd6381. Every exposed source value
+  is excluded from concept selection and thresholds.
+debt: []

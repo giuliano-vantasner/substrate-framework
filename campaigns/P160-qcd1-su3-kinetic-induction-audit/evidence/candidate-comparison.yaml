@@ -1,0 +1,23 @@
+campaign: P160
+criteria_order:
+  - accepted_dependency_closure_and_exact_representation_validation
+  - explicit_action_statistics_regulator_and_Ward_derivation
+  - full_background_curvature_completion_and_coefficient_honesty
+  - correct_massive_massless_heavy_and_Abelian_limits
+  - mutation_sensitivity_independent_derivation_API_economy_and_consumer_closure
+candidates:
+  A: {decision: selected_as_source_adjudication_only, reason: Native_replay_passes_all_eleven_predicates_but_the_tally_does_not_test_the_loop_or_local_action_headline.}
+  B: {decision: selected_as_dependency_base_not_complete_delta, reason: Existing_claims_own_the_trace_projector_and_Abelian_loop_but_not_the_SU3_d_tensor_or_generic_finite_Lie_loop_API.}
+  C: {decision: selected_conditionally, reason: One_generic_exact_API_naturally_unifies_SU2_SU3_and_direct_sum_representations_without_group_specific_wrapper_duplication.}
+  D: {decision: rejected_as_duplicate_API, reason: A_fundamental_SU3_only_wrapper_adds_no_structure_beyond_Candidate_C_specialization.}
+  E: {decision: rejected_as_source_delta, reason: QCD1_has_no_complete_quantum_matter_or_gauge_action_dimension_gauge_fixing_renormalization_state_spectrum_or_observable.}
+  F: {decision: selected_as_interpretation_falsifier, reason: Statistics_seagull_basis_normalization_bare_counterterm_and_field_coordinate_mutations_change_the_induction_reading.}
+  G: {decision: selected, reason: Claim_source_dependency_consumer_compatibility_release_queue_docs_and_memory_closure_are_required.}
+  H: {decision: selected_conditionally, reason: The_symmetric_SU3_d_tensor_anticommutator_reconstruction_and_embedded_SU2_restriction_are_exact_distinct_and_missing_from_C_LIE_001.}
+selection_basis: >-
+  Candidates C and H are selected by novelty, exact closure, API economy, and
+  typed scope. No trace value source tally massless coefficient or physical
+  label selected them.
+claim_delta: [C-LIE-003, C-NVP-002]
+foundational_revision_required: false
+debt: []

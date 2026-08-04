@@ -1,0 +1,33 @@
+attempt: 0004
+campaign: P160
+candidate: source_aware_claim_and_implementation_freeze
+status: passed
+started_at: '2026-08-10T16:12:00Z'
+finished_at: '2026-08-10T16:22:00Z'
+commands:
+  - inspect_hash_pinned_QCD1_source_and_dossier
+  - native_QCD1_reproduction
+  - canonical_AST_compatibility_preflight
+  - registry_campaign_memory_and_API_nonduplication_search
+  - validate_all_P160_YAML_and_proposal_memory
+results:
+  native_QCD1: {exit_code: 0, checks: 11, terminal_tally: ALL_11_CHECKS_PASS}
+  compatibility: {legacy_references: 0, current_references: 0, eager_fallbacks: 0}
+  current_proposal_sha256: 2f3b4fd70411581bbd6b864a3fc1f327a9a045de9d2f3fb8b99b72ab6e115515
+  proposal_revision_sha256: c65a96bceebdb9f800e758563ce6d83f6bbcea952553858f2197bc139dbb0ac0
+  source_reproduction_sha256: 6d0f6d61a40dbbce93cdd262d854d412e98227c4e45e26603168fe0d7953a2c6
+  source_audit_sha256: edac8a50e958a7dd786a9e912fabd439231f66d396264b790e0a4dc3c8e56d47
+  check_adjudication_sha256: 405d1942a4375487d8e09fb2fec0eb6adb4c6f712ce18c5d1cbb7ecf14f2b87c
+  selected_candidates: [A, B, C, F, G, H]
+  claim_delta: [C-LIE-003, C-NVP-002]
+scientific_findings:
+  - exact_SU3_d_tensor_surface_is_distinct_from_C_LIE_001
+  - source_massless_integrand_mixes_statistics_and_is_not_the_accepted_scalar_kernel
+  - projector_transversality_is_imposed_not_a_diagrammatic_Ward_derivation
+  - constant_projector_coefficient_is_nonlocal_in_curvature_variables
+  - source_does_not_construct_the_full_nonabelian_background_action
+  - manual_Abelian_trace_normalization_change_is_not_a_fixed_convention_limit
+debt:
+  - implement_and_independently_verify_both_conditional_claims
+  - complete_dependency_consumer_impact_governance_and_terminal_replay
+next_attempt: implement_the_generic_API_and_SU3_symmetric_tensor_in_existing_modules

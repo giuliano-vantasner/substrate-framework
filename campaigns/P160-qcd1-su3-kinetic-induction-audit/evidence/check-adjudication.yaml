@@ -1,0 +1,21 @@
+campaign: P160
+source_unit: QCD1
+checks:
+  - {id: QCD1.1, status: retained_exact_duplicate, mapping: C-LIE-001, reason: The fundamental SU3 trace metric is exact and already accepted; equality with the SU2 index transfers no loop action.}
+  - {id: QCD1.2, status: partly_retained_new_exact_algebra, mapping: [C-LIE-001, C-LIE-003], reason: The f tensor is accepted while the d tensor full anticommutator reconstruction and symmetry are distinct exact SU3 algebra.}
+  - {id: QCD1.3, status: retained_with_scope_correction, mapping: C-LIE-003, reason: The d tensor vanishes on the standard lambda1 lambda2 lambda3 embedding and is nonzero outside; this distinguishes that embedding from the full fundamental algebra but is not a unique characterization of SU3 among all groups.}
+  - {id: QCD1.4, status: retained_exact_duplicate, mapping: C-VAC-001, reason: Nonzero-momentum Euclidean projector idempotence is accepted kinematic algebra.}
+  - {id: QCD1.5, status: retained_only_under_corrected_conditional_loop, mapping: C-NVP-002, reason: The representation trace factors a properly derived scalar loop but QCD1 merely defines the product and supplies the wrong scalar numerator.}
+  - {id: QCD1.6, status: rejected_as_Ward_derivation_retained_as_projector_identity, mapping: C-NVP-002, reason: Contracting an imposed transverse projector is exact but does not derive bubble-seagull cancellation.}
+  - {id: QCD1.7, status: rejected_for_declared_scalar_reading, mapping: [C-VAC-001, C-NVP-002], reason: The u_one_minus_u numerator is fermion-shaped; the accepted massive complex-scalar fixed-Q massless limit diverges and no Dirac action is declared.}
+  - {id: QCD1.8, status: rejected_as_local_Yang_Mills_induction, mapping: C-NVP-002, reason: A constant projector coefficient yields a nonlocal inverse-Q curvature kernel and the source derives no background completion bare term counterterm or unique total coupling.}
+  - {id: QCD1.9, status: retained_as_kinematic_projector_identity, mapping: C-NVP-002, reason: An imposed transverse projector annihilates longitudinal modes but does not prove the loop action or a physical gluon sector.}
+  - {id: QCD1.10, status: rejected_as_fixed_convention_Abelian_limit, mapping: null, reason: The self-interaction switch is unused and the generator trace normalization is manually changed from one half to one.}
+  - {id: QCD1.11, status: retained_as_projector_counterexample, mapping: C-NVP-002, reason: The fabricated longitudinal tensor fails contraction but this does not test the source's absent diagrammatic Ward cancellation.}
+headline_decision: >-
+  Promote only the distinct exact SU3 symmetric-tensor algebra and a separately
+  declared generic massive complex-scalar finite-Lie-representation theorem if
+  their independent and global reviews pass. QCD1 itself supplies neither the
+  correct scalar loop nor a local full Yang-Mills action, unique coupling,
+  physical quark or gluon sector, dimensional lift, or substrate mechanism.
+debt: []

@@ -2,7 +2,7 @@
 description: Audit QCD1 and test a generic finite-representation scalar-loop theorem
 author: vantasner
 created: '2026-08-10T16:00:00Z'
-updated: '2026-08-10T16:00:00Z'
+updated: '2026-08-10T16:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -76,6 +76,7 @@ governance closure.
 | E | Physical four-dimensional QCD sector | Complete quantum gauge and quark action, gauge fixing, renormalization, matching, state | full physical inputs | High assumption cost and absent unless source constructs every premise | Action, statistics, dimension, pole, spectrum, and observable audit |
 | F | Counterfamilies | Accepted invariants only | statistics, representation, normalization, bare term, counterterm, field coordinate | Narrow matrix checks survive while induction and physical readings vary | Load-bearing mutations and same-trace nonidentity examples |
 | G | Governance closure | Accepted authority order | None | Terminal claim-level promotion or exact qualification | Dependency, consumer, impact, queue, release, docs, and memory replay |
+| H | Standard SU3 symmetric tensor theorem | C-LIE-001 generators and trace convention | No free physical parameter | Exact d tensor and anticommutator surface may be distinct | Full symmetry, reconstruction, embedding, and normalization mutations |
 
 ## Selection Criteria and Blinding
 
@@ -93,13 +94,38 @@ inspection; subsequent source values and tallies cannot select a candidate.
 
 ## Proposed Claim Delta
 
-The provisional delta remains unselected until the source-aware comparison.
-`C-NVP-002` is reserved for Candidate C: a generic finite exact
+The source-aware delta selects two conditional additive claims.
+`C-LIE-003` is reserved for Candidate H's standard fundamental SU3 symmetric
+tensor, full anticommutator reconstruction, and embedded standard SU2
+restriction. `C-NVP-002` is reserved for Candidate C's generic finite exact
 Hermitian Lie-representation massive-complex-scalar theorem in Euclidean
 two-space, depending on C-VAC-001 and the accepted connection-curvature
-convention. Its delta is not selected. Candidate B may instead establish that
-QCD1 adds only accepted composition, while Candidate D is rejected if it is a
-group-specific duplicate. No accepted claim is challenged or superseded.
+convention. Candidate D is a duplicate group-specific wrapper. No accepted
+claim is challenged or superseded.
+
+## Source-Aware Classification
+
+Native QCD1 exits cleanly and prints all eleven passing predicates with no
+NumPy compatibility surface. Its trace metric and antisymmetric structure
+constants duplicate C-LIE-001. Its symmetric `d` tensor, full anticommutator
+reconstruction, and vanishing on the standard first-three-generator embedding
+are distinct exact algebra under Candidate H.
+
+The loop headline fails independently of that algebra. QCD1 declares neither a
+scalar nor Dirac action, determinant, regulator, bubble, or seagull. Its
+`u(1-u)` numerator is fermion-shaped but is called scalar-QED; the accepted
+massive complex-scalar fixed-Q massless limit diverges. The source imposes a
+transverse projector rather than deriving the Ward identity. Its constant
+projector coefficient rewrites as a nonlocal inverse-Q curvature kernel, not a
+local Yang--Mills coefficient, and no noncommuting background completion is
+constructed. The manual Abelian guard changes trace normalization while its
+self-interaction switch is unused.
+
+Candidate C survives only as a separately declared massive complex-scalar
+theorem generalized from C-NVP-001, with exact finite representation closure,
+correct bubble--seagull cancellation, massive kernel, low-momentum local term,
+and background completion. Candidates A, B, C, F, G, and H are selected;
+Candidate D is duplicate and Candidate E's physical QCD premises are absent.
 
 ## Implementation and Oracle Plan
 

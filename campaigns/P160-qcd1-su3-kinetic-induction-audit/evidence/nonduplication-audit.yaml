@@ -1,0 +1,16 @@
+campaign: P160
+proposed_claims:
+  C-LIE-003:
+    nearest: C-LIE-001
+    distinct_surface: symmetric_d_tensor_anticommutator_reconstruction_and_standard_SU2_embedding_restriction
+    implementation: extend_existing_su3_module_no_duplicate_generator_table
+  C-NVP-002:
+    nearest: [C-VAC-001, C-NVP-001]
+    distinct_surface: generic_finite_Hermitian_Lie_representation_validation_and_reusable_SU2_SU3_direct_sum_specializations
+    implementation: generalize_existing_nonabelian_vacuum_polarization_module_and_keep_SU2_wrapper_backward_compatible
+reserved_identifier_search:
+  C-LIE-003: no_existing_registry_campaign_memory_source_or_test_use
+  C-NVP-002: no_existing_registry_campaign_memory_source_or_test_use
+decision: conditional_distinct_additive_claims_subject_to_exact_implementation_independent_review_and_impact_replay
+duplicated_constants_or_solvers_planned: false
+debt: []

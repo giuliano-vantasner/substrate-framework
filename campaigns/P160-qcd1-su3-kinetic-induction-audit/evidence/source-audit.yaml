@@ -1,0 +1,63 @@
+campaign: P160
+source_unit: QCD1
+source_sha256: b70065548c121661c9a6801255aa844a40165e947c054a48617d926955a704ed
+ast:
+  check_calls: 11
+  assert_nodes: 1
+  local_check_helper: true
+  local_scientific_helpers: [comm, anti, f_proj, d_proj, perms3, Pi_nonabelian, Pi_bad]
+  imports: [sympy]
+constructed_executable_objects:
+  - standard_fundamental_Gell_Mann_generators_and_trace_metric
+  - antisymmetric_f_and_symmetric_d_trace_projections
+  - exact_commutator_and_anticommutator_reconstruction
+  - embedded_standard_SU2_d_tensor_restriction
+  - nonzero_momentum_Euclidean_projector
+  - defined_trace_times_projector_polarization
+  - fermion_shaped_massless_parameter_integral
+  - symbolic_component_trace_rearrangements
+  - manual_single_generator_Abelian_comparator
+absent_executable_objects:
+  - quantum_matter_action_statistics_or_functional_determinant
+  - scalar_bubble_and_seagull_diagrams_or_their_contracted_cancellation
+  - fermion_loop_trace_or_scalar_loop_numerator
+  - regulator_subtraction_or_momentum_shift_identity
+  - massive_correct_kernel_series_or_fixed_momentum_massless_limit
+  - action_variation_or_background_field_effective_action
+  - noncommuting_background_curvature_completion
+  - bare_gauge_coefficient_counterterm_or_field_normalization
+  - analytic_continuation_gauge_fixing_propagator_or_spectrum
+  - four_dimensional_action_matter_content_or_observable
+load_bearing_findings:
+  - >-
+    The u(1-u) numerator is not the accepted complex-scalar numerator. For the
+    declared scalar reading the fixed-positive-Q massless limit diverges; a
+    finite fermion result would require a separately declared Dirac action and
+    trace derivation absent from QCD1.
+  - >-
+    Transversality is imposed by defining Pi as a scalar times the projector.
+    No bubble-seagull or fermionic diagrammatic Ward identity is derived.
+  - >-
+    A Q-independent coefficient multiplying P equals a coefficient times
+    (Q delta-qq)/Q. Rewriting it as curvature produces a nonlocal inverse-Q
+    kernel, not the local F-squared coefficient claimed in QCD1.8.
+  - >-
+    The source never constructs the noncommuting cubic and quartic curvature
+    completion. Its G symbols enter only a trace-normalization polynomial.
+  - >-
+    The Abelian guard sets an unused self-interaction symbol to zero and changes
+    the generator trace factor from one half to one. It is not a fixed-basis
+    subgroup limit with a coupled generator-coupling normalization map.
+  - >-
+    Equality of the SU2 and SU3 fundamental Dynkin indices does not transfer a
+    field action, statistics, determinant, dimension, or physical sector.
+novel_exact_surface:
+  - standard_SU3_symmetric_d_tensor_from_trace_projection
+  - full_fundamental_anticommutator_reconstruction
+  - vanishing_of_d_on_the_standard_lambda_1_lambda_2_lambda_3_embedding_with_nonzero_off_embedding_witness
+duplication:
+  trace_metric_f_structure_and_Casimirs: C-LIE-001_and_src/substrate_framework/su3.py
+  projector_and_scalar_loop_boundary: C-VAC-001_and_src/substrate_framework/vacuum_polarization.py
+  SU2_nonabelian_scalar_specialization: C-NVP-001_and_src/substrate_framework/nonabelian_vacuum_polarization.py
+  check_helper: src/substrate_framework/verification.py
+debt: []

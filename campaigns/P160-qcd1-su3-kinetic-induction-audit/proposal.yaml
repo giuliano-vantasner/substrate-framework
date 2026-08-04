@@ -36,6 +36,8 @@ candidates:
     description: Statistics representation normalization bare counterterm and field-coordinate counterfamilies.
   - id: G
     description: Claim disposition dependency consumer compatibility and generated-state closure.
+  - id: H
+    description: Exact standard SU3 symmetric d tensor anticommutator reconstruction and embedded SU2 restriction.
 uniqueness_evidence: null
 selection_criteria:
   - accepted dependency closure and exact Lie representation validation
@@ -45,9 +47,9 @@ selection_criteria:
   - parameter and field-normalization honesty correct limits and mutation sensitivity
   - API generality without duplicate wrappers or claims
   - consumer compatibility and physical-scope honesty
-claims_proposed: [C-NVP-002]
+claims_proposed: [C-LIE-003, C-NVP-002]
 comparators_blinded_until: >-
   proposal freeze commit before renewed QCD1 body or dossier inspection; queue
   headline and result excerpts were already exposed and their values are
   excluded from concept selection
-status: draft
+status: source-aware-frozen

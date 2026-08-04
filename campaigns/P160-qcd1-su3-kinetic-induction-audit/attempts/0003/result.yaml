@@ -1,0 +1,17 @@
+attempt: 0003
+campaign: P160
+candidate: first_compatibility_preflight_and_native_reproduction
+status: failed
+started_at: '2026-08-10T16:08:00Z'
+finished_at: '2026-08-10T16:11:00Z'
+commands:
+  - import_nonexistent_audit_numpy_integration_source_then_run_native_QCD1
+results:
+  native_QCD1: {status: passed, exit_code: 0, checks: 11, terminal_tally: ALL_11_CHECKS_PASS}
+failure:
+  layer: verifier_orchestration_import
+  mechanism: source_audit_exports_audit_numpy_trapezoid_compatibility_not_audit_numpy_integration_source
+  scientific_failure: false
+  source_reproduction_failure: false
+repair: call_the_actual_canonical_AST_compatibility_API_by_its_exported_name
+next_attempt: complete_the_AST_preflight_and_freeze_the_source_aware_claim_delta

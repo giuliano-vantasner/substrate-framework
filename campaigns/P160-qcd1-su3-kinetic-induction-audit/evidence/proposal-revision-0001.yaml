@@ -1,0 +1,41 @@
+revision: 0001
+campaign: P160
+parent_frozen_proposal_sha256: 2a2913f5249bce276edd71921b8c5706c2702be067b896d0bd8b33e4ecdfba43
+trigger: >-
+  Source-aware inspection confirms a distinct symmetric SU3 tensor theorem and
+  selects the preregistered generic finite-representation scalar-loop route,
+  while rejecting QCD1's mixed-statistics massless kernel and local-action step.
+unchanged:
+  - candidates_A_through_G_and_their_predeclared_structural_ordering
+  - exclusion_of_queue_exposed_trace_and_transfer_values_from_selection
+  - exact_quantum_action_statistics_Ward_background_and_coefficient_requirements
+  - compatibility_policy_and_mutation_requirements
+added_candidate:
+  id: H
+  description: exact_standard_SU3_symmetric_d_tensor_anticommutator_and_embedded_SU2_restriction
+  reason: source_exposes_a_distinct_supportable_surface_not_owned_by_C_LIE_001
+claim_delta:
+  identifiers: [C-LIE-003, C-NVP-002]
+  dependencies:
+    C-LIE-003: [C-LIE-001]
+    C-NVP-002: [C-VAC-001, C-NAG-001]
+  release_change: new_patch_release_if_individual_review_and_global_replay_pass
+  implementation_change:
+    - extend_existing_su3_module_with_symmetric_tensor_evidence
+    - generalize_existing_nonabelian_vacuum_polarization_module_with_backward_compatible_SU2_wrapper
+selected_candidates: [A, B, C, F, G, H]
+source_corrections:
+  - preserve_f_and_trace_algebra_under_C_LIE_001_and_add_only_the_distinct_d_surface
+  - replace_the_u_one_minus_u_numerator_with_the_accepted_complex_scalar_kernel
+  - derive_bubble_seagull_cancellation_before_transverse_decomposition
+  - distinguish_constant_projector_mass_kernel_from_a_local_curvature_coefficient
+  - complete_the_massive_low_momentum_term_with_the_full_background_curvature
+  - keep_bare_counterterm_and_field_normalization_free
+  - reject_the_manual_trace_factor_swap_as_an_Abelian_limit
+  - reject_QCD2_dimensional_lift_and_physical_QCD_or_substrate_identification
+oracle: >-
+  Exact canonical representation and loop algebra plus fresh independent SU3 d
+  tensor, SU2 SU3 and direct-sum loop derivations, statistics and seagull
+  mutations, series and limits, noncommuting background completion, source
+  replay, semantic graph, impact analysis, and one terminal global gate.
+status: frozen
