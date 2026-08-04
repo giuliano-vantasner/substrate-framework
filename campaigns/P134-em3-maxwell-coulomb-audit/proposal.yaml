@@ -1,0 +1,98 @@
+id: P134
+base_release: v0.101.0
+base_commit: ce9fca6
+scientific_base_commit: 1babed5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [EM3]
+question: >-
+  Reproduce and independently audit EM3's claim that adding an imported
+  Maxwell kinetic term to the accepted conditional local-U1 connection yields
+  a sourced Maxwell equation, a static point-charge tail, and a two-charge
+  force, and determine exactly which action, current, dimension, boundary,
+  normalization, and physical premises are required beyond C-GAU-001 and
+  C-KRN-001.
+invariants:
+  - >-
+    C-GAU-001 fixes D_mu=partial_mu-i*e*A_mu,
+    F_mu_nu=partial_mu*A_nu-partial_nu*A_mu, and the local transformation
+    A_mu'=A_mu+partial_mu*chi. It explicitly supplies no F-squared coefficient,
+    gauge-field equation, photon, force, physical charge, or electromagnetic
+    sector. P134 cannot infer those objects from covariance alone.
+  - >-
+    The independent conditional action uses flat (d+1)-dimensional signature
+    (+,-,...,-), L=-kappa*F_mu_nu*F^mu_nu/4-j^mu*A_mu, kappa positive, and a
+    smooth conserved supplied current. With compactly supported variations,
+    its equation is kappa*partial_mu F^mu_nu=j^nu. Other metric, source, unit,
+    and coupling conventions must be converted rather than mixed.
+  - >-
+    In the static gauge A_0=phi, A_i=0, j^0=rho, the frozen convention gives
+    -kappa*Laplacian(phi)=rho and E=-gradient(phi). A point source, delta
+    normalization, spatial dimension, regularity away from the source, and
+    boundary condition are additional premises; the homogeneous solution and
+    additive constant are not fixed by the differential operator alone.
+  - >-
+    Let S_(d-1)=2*pi^(d/2)/Gamma(d/2). For integer d>2 and the decaying
+    boundary condition, a supplied point charge Q gives
+    phi=Q/[kappa*(d-2)*S_(d-1)*r^(d-2)] and radial
+    E=Q/[kappa*S_(d-1)*r^(d-1)]. Thus decaying power-law tails occur for every
+    d>2; only the inverse-square member of this declared family selects d=3.
+  - >-
+    The d=2 fundamental solution is logarithmic and needs a reference scale;
+    the d=1 solution is linear up to homogeneous data. Neither decays at
+    infinity. These dimension cases must be derived rather than discarded by
+    fitting a three-dimensional comparator.
+  - >-
+    A second supplied test charge q has conditional potential energy U=q*phi
+    and force F=-gradient(U)=q*E. Like charges repel and opposite charges
+    attract in the frozen signs. This is a force dictionary premise, not a
+    consequence of the field equation or accepted complex-scalar current.
+  - >-
+    C-KRN-001 already owns the exact conditional Riesz Green kernel, including
+    d=3, s=1, A=1 giving 1/(4*pi*r), while explicitly selecting no dimension,
+    source, boundary, force, or charge normalization. C-FLX-001 separately
+    owns conditional F=q*E algebra. Duplicate composition cannot be promoted
+    as a new claim.
+  - >-
+    EM2 is qualified through C-GAU-001. G1, G2, and G3 remain pending and
+    provide no accepted premise. The generated queue synopsis exposes EM3's
+    Maxwell, Coulomb, inverse-square, and dimension-selection targets, but its
+    body and result remain unopened at freeze and cannot select a candidate.
+allowed_imports:
+  - C-GAU-001 exact conditional local-U1 connection curvature and explicit no-dynamics ceiling
+  - C-U1-001 conserved-current identity only under its declared complex-field and on-shell premises
+  - C-KRN-001 exact supplied inverse-kernel and Riesz Green-kernel theorem with all dimension source boundary and force ceilings retained
+  - C-FLX-001 only for its separately declared force-equals-charge-times-field and spherical-spreading algebra
+  - src/substrate_framework/gauge_u1.py and momentum_kernels.py accepted pure APIs
+  - exact SymPy variational integration-by-parts tensor contraction radial divergence gamma-function and limit algebra
+  - independently declared flat-spacetime action current point source dimension boundary condition and test-charge force dictionary
+  - primary classical-field references after freeze only for convention provenance if needed and never as substrate authority
+  - EM3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce EM3 literally and classify all eleven predicates by construction convention dependency and physical ceiling.}
+  - {id: B, description: Derive the sourced Maxwell equation and current-continuity condition from the fully declared action under compactly supported variations.}
+  - {id: C, description: Derive the static point-source Green family and radial flux in arbitrary integer spatial dimension including logarithmic and linear boundary cases.}
+  - {id: D, description: Derive the conditional two-charge energy and force with explicit signs source normalization dimensions and force-dictionary premise.}
+  - {id: E, description: Treat the three-dimensional kernel and charge-times-field force as composition of C-KRN-001 and C-FLX-001 whenever no distinct theorem survives.}
+  - {id: F, description: Use kinetic-coefficient dimension source-sign homogeneous-solution and non-three-dimensional countermodels to test uniqueness and physical overreach.}
+  - {id: G, description: Close EM2 G1 G2 G3 dependency authority reverse consumers nonduplication impact source disposition and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure with the kinetic coefficient current source coupling dimension boundary condition and force dictionary explicit
+  - fixed metric signature index placement action sign field-strength sign and covariant-versus-contravariant current convention
+  - exact Euler-Lagrange derivation gauge-variation boundary term and antisymmetry-based current-continuity check
+  - correct delta normalization sphere area radial flux homogeneous solution and d greater than two d equals two and d equals one cases
+  - dimensional consistency of action coefficient potential field source charge energy and force in the declared dimension
+  - independent agreement among action variation Gauss flux direct radial Laplacian and C-KRN-001 Fourier specialization
+  - mutation sensitivity to kinetic coefficient source sign field-strength sign sphere-area factor dimension charge sign and omitted boundary data
+  - correct zero-source zero-test-charge large-radius near-source like-charge opposite-charge and dimension limits
+  - parameter economy natural framework fit reusable API value physical-scope honesty and nonduplication
+claims_proposed: [C-MAX-001]
+comparators_blinded_until: >-
+  There is no empirical comparator. The generated queue exposes EM3's named
+  Maxwell equation, three-dimensional Coulomb target, inverse-square force,
+  and uniqueness question. The action, signs, source normalization, general
+  dimension family, boundary conditions, candidate set, physical ceilings,
+  and selection criteria freeze before P134 opens or executes the source body.
+  Matching 1/(4*pi*r) may reproduce a conditional endpoint but cannot select
+  the dimension, normalization, charge ontology, or framework claim.
+status: active

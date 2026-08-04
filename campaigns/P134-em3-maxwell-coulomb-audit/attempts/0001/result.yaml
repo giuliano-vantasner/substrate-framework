@@ -1,0 +1,32 @@
+campaign: P134
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G]
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - cmp proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P134-em3-maxwell-coulomb-audit.md
+  - YAML parse and git diff --check
+expected:
+  base_release: v0.101.0
+  base_commit: ce9fca6
+  scientific_base_commit: 1babed5
+  proposal_sha256: 2c64b3aa823e771569947cc999218ee3a055ad07a324de37993112b06ce3c2c4
+  source_unit: EM3
+  source_sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9
+  source_body_inspected: false
+  compatibility_event: none
+result: >-
+  The action, metric, field-strength, current, source, Green-function,
+  dimension, boundary, charge, force, physical-ceiling, dependency, consumer,
+  mutation, and nonduplication contract is byte-frozen before EM3 source-body
+  inspection. The general d-dimensional power, logarithmic, and linear cases
+  are registered before the named three-dimensional endpoint can influence
+  selection. The unchanged v0.101.0 boundary inherits P133's completed
+  integrated gate, so this record-only freeze uses targeted YAML, memory, and
+  whitespace checks rather than repeating 1122 runnable tests.
+compatibility_event: none
+next_attempt: >-
+  Commit the freeze, then hash, inspect, and reproduce EM3 while keeping
+  qualified EM2 within C-GAU-001's no-dynamics ceiling and pending G1, G2, and
+  G3 outside accepted dependency closure.
