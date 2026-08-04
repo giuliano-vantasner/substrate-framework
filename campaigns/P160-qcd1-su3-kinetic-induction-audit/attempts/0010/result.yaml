@@ -1,0 +1,24 @@
+attempt: 0010
+campaign: P160
+candidate: first_seventeen_node_source_graph_replay
+status: failed
+started_at: '2026-08-10T16:49:00Z'
+finished_at: '2026-08-10T16:50:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+passed_before_failure: 20
+replay_before_failure:
+  nodes: 17
+  source_predicates: 170
+  assertions: 17
+  source_exits_and_tallies: all_passed
+  compatibility_alias_only: [QCD2]
+failure:
+  layer: source_graph_identifier_probe
+  check: QCD3_supplies_independent_accepted_SU3_algebra_not_QCD1_loop_authority
+  mechanism: >-
+    The verifier looked for C_A_from_f, while the pinned QCD3 source names the
+    independently contracted invariant C_A_from_ff. The intended structural
+    separation remained true.
+  scientific_failure: false
+repair: use_the_exact_pinned_QCD3_identifier
+next_attempt: rerun_the_graph_oracle

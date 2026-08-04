@@ -1,0 +1,17 @@
+attempt: 0011
+campaign: P160
+candidate: corrected_seventeen_node_source_graph_replay
+status: passed
+started_at: '2026-08-10T16:51:00Z'
+finished_at: '2026-08-10T16:52:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+evidence:
+  verifier_checks: 28
+  source_nodes: 17
+  source_predicates: 170
+  assertions: 17
+  source_exits_and_tallies: all_passed
+  immutable_alias_only: [QCD2]
+  alias_target: numpy.trapezoid
+verdict: dependency_and_semantic_consumer_graph_passes_without_promoting_pending_sources
+next_attempt: complete_impact_and_claim_level_reviews

@@ -90,10 +90,18 @@ def test_flavor_count_domain(value) -> None:
 
 
 def test_generator_index_domain() -> None:
+    assert structure_constant(sp.Integer(0), sp.Integer(1), sp.Integer(2)) == 1
+    assert symmetric_structure_constant(
+        sp.Integer(0), sp.Integer(0), sp.Integer(7)
+    ) == 1 / sp.sqrt(3)
     with pytest.raises(IndexError):
         structure_constant(8, 0, 0)
     with pytest.raises(IndexError):
         symmetric_structure_constant(0, 8, 0)
+    with pytest.raises(IndexError):
+        structure_constant(True, 0, 0)
+    with pytest.raises(IndexError):
+        symmetric_structure_constant(0.0, 0, 0)
 
 
 def test_full_fundamental_commutant_is_scalar() -> None:

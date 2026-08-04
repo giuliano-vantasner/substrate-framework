@@ -1,0 +1,26 @@
+attempt: 0013
+campaign: P160
+candidate: accepted_campaign_consumer_replay_after_generic_API_commit
+status: failed
+started_at: '2026-08-10T16:57:00Z'
+finished_at: '2026-08-10T16:58:00Z'
+commands:
+  - P024_SU3_invariant_verifier
+  - P028_SU3_center_verifier
+  - P158_SU2_scalar_verifier
+  - P159_YM2_verifier
+passing_consumers:
+  P028: {checks: 23}
+  P158: {checks: 32}
+  P159: {checks: 31}
+failure:
+  consumer: P024
+  passed_before_failure: 7
+  layer: canonical_SU3_index_domain_compatibility
+  mechanism: >-
+    sp.Matrix invokes its element callback with exact sympy.Integer indices.
+    The new shared validator admitted only built-in int, so the accepted
+    adjoint-Casimir contraction failed before evaluating its exact identity.
+  scientific_failure: false
+repair: admit_builtin_int_and_sympy_Integer_while_still_rejecting_floats_booleans_and_symbols
+next_attempt: add_a_regression_test_then_replay_all_affected_oracles

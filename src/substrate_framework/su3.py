@@ -113,7 +113,13 @@ def _structure_constant(
 
 
 def _validate_generator_indices(a: int, b: int, c: int) -> None:
-    if any(not isinstance(index, int) or index < 0 or index >= 8 for index in (a, b, c)):
+    if any(
+        isinstance(index, bool)
+        or not isinstance(index, (int, sp.Integer))
+        or index < 0
+        or index >= 8
+        for index in (a, b, c)
+    ):
         raise IndexError("SU(3) generator index must lie in 0..7")
 
 

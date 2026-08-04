@@ -1,0 +1,19 @@
+attempt: 0012
+campaign: P160
+candidate: first_fresh_GitNexus_impact_queries
+status: failed
+started_at: '2026-08-10T16:54:00Z'
+finished_at: '2026-08-10T16:55:00Z'
+commands:
+  - gitnexus analyze
+  - gitnexus impact four_P160_symbols --depth 4 --include-tests
+index_result: {status: passed, nodes: 23234, edges: 36589, clusters: 344, flows: 6}
+failure:
+  layer: impact_query_repository_selection
+  mechanism: >-
+    The GitNexus installation contains four indexed repositories, so impact
+    queries require --repo substrate-framework even when the shell working
+    directory is already that repository.
+  scientific_failure: false
+repair: pass_the_explicit_repository_selector_to_each_query
+next_attempt: rerun_all_four_symbol_queries

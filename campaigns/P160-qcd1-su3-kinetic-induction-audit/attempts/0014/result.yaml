@@ -1,0 +1,21 @@
+attempt: 0014
+campaign: P160
+candidate: exact_integer_index_compatibility_repair
+status: passed
+started_at: '2026-08-10T16:59:00Z'
+finished_at: '2026-08-10T17:01:00Z'
+commands:
+  - P024_SU3_invariant_verifier
+  - P160_primary_verifier
+  - P160_independent_verifier
+  - focused_and_adjacent_SU3_nonabelian_loop_tests
+evidence:
+  P024: {status: passed, checks: 27}
+  P160_primary: {status: passed, checks: 38}
+  P160_independent: {status: passed, checks: 27}
+  focused_and_adjacent_tests: {status: passed, tests: 71}
+domain_control:
+  accepted: [built_in_int, sympy_Integer]
+  rejected: [bool, float, symbolic_index, out_of_range_integer]
+verdict: accepted_SU3_consumers_and_P160_claim_oracles_pass_after_compatibility_repair
+next_attempt: finalize_impact_and_claim_level_reviews

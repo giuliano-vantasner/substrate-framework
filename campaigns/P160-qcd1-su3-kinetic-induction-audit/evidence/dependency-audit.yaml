@@ -1,0 +1,21 @@
+campaign: P160
+proposed_claims:
+  C-LIE-003:
+    direct_dependencies:
+      C-LIE-001: standard_fundamental_SU3_generators_ordering_trace_normalization_and_f_tensor_convention
+    excluded: physical_color_identification_gauge_action_loop_or_unique_group_characterization
+  C-NVP-002:
+    direct_dependencies:
+      C-VAC-001: declared_complex_scalar_QED2_determinant_kernel_bubble_seagull_limits_and_local_coefficient
+      C-NAG-001: connection_sign_full_nonabelian_curvature_and_trace_density_convention
+    implementation_compatibility:
+      C-NVP-001: retained_as_exact_backward_compatible_SU2_specialization_not_a_claim_dependency
+    excluded: substrate_matter_physical_QCD_bare_action_counterterm_total_coupling_dimension_lift_and_observation
+source_roles:
+  QCD3: accepted_independent_provenance_for_C_LIE_001_not_QCD1_loop_authority
+  EM5: corrected_source_context_for_C_VAC_001_not_authority
+  W7: corrected_source_context_for_C_NAG_001_not_authority
+  YM1: qualified_source_context_for_C_NVP_001_not_authority
+dependency_closure: complete
+hidden_imports: []
+debt: []

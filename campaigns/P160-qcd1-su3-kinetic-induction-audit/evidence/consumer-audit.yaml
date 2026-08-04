@@ -1,0 +1,37 @@
+campaign: P160
+claims: [C-LIE-003, C-NVP-002]
+canonical_consumers:
+  direct:
+    - src/substrate_framework/__init__.py
+    - tests/test_su3.py
+    - tests/test_nonabelian_vacuum_polarization.py
+    - campaigns/P160-qcd1-su3-kinetic-induction-audit/verify.py
+    - campaigns/P160-qcd1-su3-kinetic-induction-audit/reviews/independent_su3_scalar_review.py
+  backward_compatible:
+    - SU2ScalarVacuumPolarization
+    - su2_scalar_qed2_vacuum_polarization
+source_consumers:
+  QCD2: pending_dimensional_lift_that_repeats_the_trace_times_Riesz_error
+  SM1: pending_product_group_algebra_with_rejected_generated_kinetic_prose
+  SM3: pending_anomaly_source_using_the_already_accepted_trace_index_only
+  SM4: pending_running_source_using_QCD3s_already_accepted_invariants_only
+  CF3: qualified_center_and_area_law_claim_using_only_accepted_SU3_generator_algebra
+  WM1: qualified_trace_ratio_claim_using_the_already_accepted_trace_index_only
+  WM2: duplicate_evidence_postulating_a_common_loop_constant_and_receiving_no_new_authority
+  WM5: qualified_two_loop_claim_using_already_accepted_Casimirs_only
+  GK1: pending_dimensional_boundary_preserving_the_QCD1_two_dimensional_ceiling
+  WM7: pending_field_content_proposal_with_no_authority_from_QCD1s_rejected_loop
+  GK3D1: pending_general_dimension_loop_proposal_requiring_its_own_adjudication
+  GK3D4: pending_three_sector_proposal_requiring_its_own_adjudication
+graph_replay:
+  nodes: 17
+  source_predicates: 170
+  assertions: 17
+  verifier_checks: 28
+  compatibility_alias_only: [QCD2]
+consumer_decision: >-
+  C-LIE-003 adds exact standard-basis d-tensor algebra without altering existing
+  f-tensor or invariant APIs. C-NVP-002 generalizes the canonical conditional
+  scalar theorem while preserving the existing SU2 wrapper. No pending source
+  receives physical gauge-sector, unique-coupling, or dimensional-lift authority.
+debt: []
