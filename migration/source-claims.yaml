@@ -2841,6 +2841,7 @@ units:
   - campaigns/P161-qcd2-su3-dimensional-lift-audit/reviews/replay_source_graph.py
   - campaigns/P161-qcd2-su3-dimensional-lift-audit/attempts/0005/result.yaml
   - campaigns/P161-qcd2-su3-dimensional-lift-audit/attempts/0006/result.yaml
+  - campaigns/P161-qcd2-su3-dimensional-lift-audit/attempts/0009/result.yaml
   - memory/vantasner/decisions/QCD2-qualified-review.md
   note: P161 closes thirty-three primary, twenty-one independent, fifty-three focused accepted-API tests,
     and twenty-five frozen-graph checks replaying 135 immutable predicates across thirteen units. Native
