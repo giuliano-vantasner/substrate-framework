@@ -1,0 +1,26 @@
+attempt: 0001
+campaign: P150
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T02:06:00Z'
+finished_at: '2026-08-10T02:09:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory_search_then_source_verification_at_authoritative_paths
+  - sha256sum_hash_pinned_W5_and_dossier_without_opening_bodies
+  - cmp_proposal_and_frozen_copy
+freeze:
+  proposal_sha256: 4342a1b8dfc1bb842d558d4dbfe363f6f6bd746ee281efd0f779aeef541e6f35
+  frozen_proposal_sha256: 4342a1b8dfc1bb842d558d4dbfe363f6f6bd746ee281efd0f779aeef541e6f35
+  memory_contract_sha256: 68cbb685511b6438332b1e31d44af5af63640bfceeaa65fd4ac4f8a08126427d
+  source_sha256: 5afea85e0e70236ddd076e2da585d6ab5861d52211239642eac1c951f1c6a71a
+  dossier_sha256: 761e30e9f93a6d74f7d017af0af89dae39cfa10c38c128bd0ef3c316fd1f6401
+source_opened_or_executed_for_P150: false
+preexposed_evidence: >-
+  Queue metadata and accepted P149 graph evidence expose advertised formulas,
+  values, AST counts, source hash, and zero legacy integration references. They
+  are excluded from candidate selection and do not authorize the headline.
+debt:
+  - reproduce_W5_and_adjudicate_all_twenty_seven_predicates
+  - resolve_scattering_allocation_action_parity_physics_and_nonduplication_before_any_claim_or_implementation
+next_attempt: validate_and_commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source

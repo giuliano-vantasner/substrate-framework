@@ -1,0 +1,89 @@
+id: P150
+base_release: v0.115.0
+base_commit: ab76862
+scientific_base_commit: 722af7c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [W5]
+question: >-
+  Reproduce and independently audit W5's claim that one boundary impedance
+  supplies linked reflection transmission and left-right chiral asymmetry
+  observables, and determine exactly which statements are conditional linear
+  scattering identities, normalized two-channel contrasts, impedance
+  reparameterizations, boundary-action consequences, or genuinely require
+  parity-nonreciprocal states, physical currents, detector maps, and weak
+  interaction dynamics.
+invariants:
+  - >-
+    C-BND-001 treats a scalar affine boundary residual as declared data, proves
+    its parity-family covariance and trace underdetermination, and supplies no
+    boundary action, selected chiral state, current, charge map, or weak force.
+  - >-
+    C-SG-011 through C-SG-013 fix nonlinear characteristic sources, scalar
+    parity, stress and boundary-flux signs, correlation, and winding transfer.
+    They distinguish these objects from a physical chiral current or intrinsic
+    parity violation.
+  - >-
+    C-BRN-001 gives exact normalization and odds for two declared nonnegative
+    common-dimension inputs. It does not establish physical channels,
+    exhaustiveness, scattering, detector acceptance, states, or interactions.
+  - >-
+    C-REP-002 qualifies W2 and P148 qualifies W3: independent carrier-factor
+    representation algebra and scalar derivative identities do not supply
+    Lorentz chirality, a charged vertex, gauge dynamics, or a weak sector.
+  - >-
+    C-KIN-001 qualifies W4: algebraic residuals and invisibility labels do not
+    create an on-shell missing particle, charge-conditioned energy, detector
+    event, neutrino, or weak interaction.
+  - >-
+    C-RAD-001, C-GOR-001, and C-MED-005 govern only their separately declared
+    scalar-source, effective-metric, and constitutive statements. Qualified G1,
+    G2, G5, and S5 grant no physical chiral-boundary authority; pending M1, M2,
+    and W7 grant none at all.
+  - >-
+    The generated queue exposes W5's headline, eleven declared dependencies,
+    twenty-seven literal checks, one assertion, a symbolic hint, and an
+    unusually detailed result excerpt containing advertised formulas and
+    values. P149's frozen graph additionally pins W5's hash and absence of an
+    immutable NumPy-integration compatibility shape. Those exposed materials
+    cannot select a candidate or threshold. Source and dossier bodies, data
+    flow, exact predicates, and runtime output remain unopened for P150.
+allowed_imports:
+  - C-BND-001 only for the declared affine residual parity family and missing-dynamics ceiling
+  - C-SG-011 C-SG-012 and C-SG-013 only for exact scalar current stress parity boundary and winding ceilings
+  - C-BRN-001 only for normalized allocations odds scale laws and physical-channel ceiling
+  - C-REP-002 and C-U1-001 only for the independent carrier and field-type ceilings
+  - C-KIN-001 only for W4's corrected threshold four-vector and non-particle ceiling
+  - C-RAD-001 C-GOR-001 C-MED-001 C-MED-005 C-VIR-001 and C-SK-001 only through their exact accepted statements
+  - exact 1+1 linear-wave plane-wave substitution and declared real boundary coefficients
+  - W5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce W5 literally and classify every predicate by its evaluated boundary scattering allocation asymmetry and physical object.}
+  - {id: B, description: Derive the general conditional plane-wave reflection and flux ledger from a declared linear bulk equation boundary orientation and real impedance residual.}
+  - {id: C, description: Express any declared left-right contrast through C-BRN-001 normalized shares and identify its domain endpoints scale invariance and identifiability ceiling.}
+  - {id: D, description: Classify impedance reparameterizations reciprocity maps matching points and extrema separately from independent observables or predictions.}
+  - {id: E, description: Audit whether a boundary action variation actually fixes the displayed residual coefficient dimensions signs passivity and energy flux.}
+  - {id: F, description: Separate scalar boundary nonreciprocity from state asymmetry intrinsic parity breaking Lorentz chirality charge selection weak dynamics and detector measurement using countermodels.}
+  - {id: G, description: Close source dependencies reverse consumers compatibility nonduplication disposition generated state and the empty debt ledger.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact field equation domain wave orientation frequency amplitude stress flux and boundary-normal conventions
+  - distinction among amplitude reflection power allocation absorption boundary storage and detector observables
+  - denominator domains passivity unitarity reciprocity common-scale laws and limiting behavior
+  - parity covariance versus fixed-boundary symmetry state asymmetry and intrinsic violation
+  - accepted sine-Gordon boundary representation current and threshold compatibility
+  - source coefficient coupling current charge and detector dimensions plus identifiability
+  - load-bearing normal sign impedance coefficient channel completeness handedness and detector mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+  - queue-exposed formulas outputs numerical samples and external comparators excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, W5 and dossier hashes, candidates,
+  wave boundary flux allocation parity and physical-current distinctions,
+  selection criteria, mutation plan, compatibility policy, and done gate are
+  frozen and committed. Queue and P149 records already expose the broad
+  headline, dependency names, check and assertion counts, symbolic hint,
+  advertised result formulas and values, and zero legacy-call count; those
+  materials do not select a candidate. Source and dossier bodies, exact
+  predicates, data flow, runtime output, and further comparator material remain
+  unopened until that boundary.
+status: draft
