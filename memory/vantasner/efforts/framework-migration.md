@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T11:40:00Z'
+updated: '2026-08-10T14:35:00Z'
 tags:
 - substrate-framework
 - effort
@@ -1665,21 +1665,37 @@ C-DEF-001, C-BER-001, C-HOL-001, and C-CHR-001. The full gate passes 1,408
 tests, 647 memory records, and the skill contract; exact counts are pinned in
 P157 attempt 0011.
 
+P158 adds C-NVP-001 for a conditional massive complex-scalar SU2
+vacuum-polarization theorem in Euclidean two-space. The exact color kernel is
+T(R) times C-VAC-001's scalar kernel; bubble and seagull cancel before
+transverse decomposition; and independent parameter-integral and proper-time
+routes agree on the leading local trace coefficient
+`N_s*g^2/(48*pi*m^2)`. Fundamental, adjoint, direct-sum, seagull, scalar
+prefactor, generator-normalization, bare, counterterm, and field-coordinate
+mutations make the verifier sensitive. YM1 is qualified because it declares
+no quantum action, determinant, regulator, bubble, seagull, or counterterm,
+uses the wrong scalar numerator, imposes transversality, drops the momentum
+factor, and changes normalization in its Abelian guard. Its unique coupling,
+massless pole, physical W sector, dimensional lift, and substrate closure are
+rejected. The eleven-node graph replays 132 immutable predicates; YM2's
+version-only `np.trapz` spelling is isolated behind `np.trapezoid` and does not
+count as scientific failure.
+
 ## Canonicalization
-The registry, `v0.122.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-seven accepted claims. P001 through P157 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 63 pending, 0 partial, 3 migrated, 143 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.123.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred fifty-eight accepted claims. P001 through P158 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 62 pending, 0 partial, 3 migrated, 144 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 63
-pending, 3 migrated, 143 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is YM1, pinned at SHA-256
-`bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6`.
-The queue exposes nine static predicates, one assertion, a symbolic oracle,
-ten candidate dependencies, a fundamental trace factor, a transverse
-projector, and a claimed generated Yang--Mills term. P158 must freeze the
-representation, trace, connection, curvature, quantum action, determinant,
-Ward, regulator, coefficient, counterterm, normalization, dimension, limit,
-and physical substrate ceilings before opening the body. Neither a one-half
-trace nor a transverse projector may select a loop mechanism or kinetic term.
+The effort remains active. D4 is discharged, but D1 remains open with 62
+pending, 3 migrated, 144 qualified, 8 duplicate-evidence, and 1 out-of-scope
+bridge unit. The next queue unit is YM2, pinned at SHA-256
+`19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c`.
+The queue exposes ten static predicates, one assertion, symbolic and numeric
+oracles, eleven candidate dependencies, the YM1 trace factor, Riesz kernels,
+and a claimed 3+1-dimensional Yang--Mills lift. P159 must freeze the distinction
+among a color-weighted static scalar Green function, a quantum gauge kinetic
+operator, full Lorentz tensor structure, dimension, normalization, source,
+and physical substrate sector before opening the body. YM1's qualified trace
+control cannot promote its rejected induction or YM2's dimensional lift.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

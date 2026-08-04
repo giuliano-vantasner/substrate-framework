@@ -2,7 +2,7 @@
 description: Audit YM1 and derive a properly scoped non-Abelian vacuum-polarization theorem if distinct
 author: vantasner
 created: '2026-08-10T11:40:00Z'
-updated: '2026-08-10T12:28:00Z'
+updated: '2026-08-10T14:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - nonabelian-vacuum-polarization
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P158 YM1 Yang-Mills Induction Audit
 

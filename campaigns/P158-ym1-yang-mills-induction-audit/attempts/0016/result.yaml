@@ -1,0 +1,18 @@
+attempt: 0016
+campaign: P158
+candidate: pre_generation_promotion_validation
+status: failed
+started_at: '2026-08-10T14:26:00Z'
+finished_at: '2026-08-10T14:28:00Z'
+commands:
+  - compare_current_and_v0_123_0_release_manifests
+  - parse_governance_disposition_and_adjudication_YAML
+  - .venv/bin/python scripts/validate_repository.py
+failure:
+  layer: generated_state
+  mechanism: >-
+    The registry and release parsed and matched, but the validator correctly
+    rejected the still-v0.122 generated claim index before render_docs ran.
+    No scientific or governance content failed.
+  scientific_failure: false
+next_attempt: run_the_canonical_queue_docs_and_memory_generators_then_repeat_only_the_staged_repository_check

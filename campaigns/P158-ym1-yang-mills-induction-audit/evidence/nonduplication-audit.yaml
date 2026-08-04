@@ -1,0 +1,23 @@
+campaign: P158
+claim_delta: [C-NVP-001]
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+nearest_existing_claims:
+  C-NAG-001: classical_exact_local_nonabelian_covariance_without_action_coefficient_or_quantum_matter
+  C-VAC-001: complete_Abelian_massive_complex_scalar_QED2_loop_without_nonabelian_representation_or_covariant_completion
+  C-REP-002: exact_SU2_carrier_and_chirality_factor_algebra_without_a_loop
+  C-GSM-001: conditional_gauge_scalar_mass_quadratic_form_without_a_gauge_loop_or_kinetic_induction
+distinct_positive_object: >-
+  The representation-indexed non-Abelian two-point kernel, its color Ward
+  cancellation, the typed component-versus-trace local coefficients, and the
+  independent background-field completion to the full leading curvature
+  invariant are not stated or implemented by any accepted claim alone.
+identifier_collision: none
+decision: additive_distinct_conditional_claim
+debt: []

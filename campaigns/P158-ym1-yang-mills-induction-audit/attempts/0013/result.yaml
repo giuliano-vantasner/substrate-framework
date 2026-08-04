@@ -1,0 +1,19 @@
+attempt: 0013
+campaign: P158
+candidate: pinned_EM5_numerator_semantic_graph_replay
+status: failed
+started_at: '2026-08-10T13:37:00Z'
+finished_at: '2026-08-10T13:41:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  source_nodes_clean_exit_and_exact_tally: 11_of_11
+  semantic_graph_checks_before_failure: 19
+failure:
+  layer: implementation
+  mechanism: >-
+    EM5 mentions the word seagull inside explanatory and wrong-answer prose,
+    so a lexical absence test cannot establish absence of a seagull
+    construction. The immutable AST must be tested for load-bearing names.
+  scientific_failure: false
+next_attempt: replace_word_absence_with_AST_loaded_name_absence_for_determinant_bubble_and_seagull_integrals

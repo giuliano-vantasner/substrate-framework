@@ -1,0 +1,35 @@
+campaign: P158
+claim: C-NVP-001
+canonical_consumers:
+  direct:
+    - src/substrate_framework/__init__.py
+    - tests/test_nonabelian_vacuum_polarization.py
+    - campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  preexisting: []
+source_consumers:
+  W2:
+    status: qualified_existing_claim_unchanged
+    effect: retroactive_YM1_generated_term_prose_is_rejected
+  W7:
+    status: qualified_existing_claim_unchanged
+    effect: C_NAG_001_still_supplies_no_action_or_induction_and_retroactive_closure_prose_is_rejected
+  M1:
+    status: qualified_existing_claim_unchanged
+    effect: C_GSM_001_requires_separately_declared_positive_kinetic_normalization_and_does_not_depend_on_YM1
+  M2:
+    status: qualified_existing_claim_unchanged
+    effect: C_PRC_001_requires_a_complete_declared_free_quadratic_action_and_does_not_depend_on_YM1
+  YM2:
+    status: pending_independent_adjudication
+    effect: trace_one_half_control_survives_but_claimed_kinetic_dimensional_lift_and_YM1_headline_do_not
+  GK1:
+    status: pending_independent_adjudication
+    effect: its_1plus1_dimensional_boundary_survives_but_its_propagating_pole_and_complete_scalar_loop_reading_do_not
+analogy_only: [EM3, EM7, W5]
+graph_replay:
+  nodes: 11
+  source_predicates: 132
+  assertions: 11
+  verifier_checks: 21
+  compatibility_alias_only: [YM2]
+debt: []

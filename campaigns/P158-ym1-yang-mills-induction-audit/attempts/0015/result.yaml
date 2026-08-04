@@ -1,0 +1,25 @@
+attempt: 0015
+campaign: P158
+candidate: frozen_semantic_source_graph_and_impact_closure
+status: passed
+started_at: '2026-08-10T13:47:00Z'
+finished_at: '2026-08-10T14:08:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - gitnexus_analyze_index_only_workers_1_worker_timeout_60_verbose
+  - GitNexus_upstream_impact_for_new_function_and_class
+  - GitNexus_detect_changes_compare_source_aware_freeze
+  - read_GitNexus_process_catalog
+  - exact_lexical_new_API_consumer_search
+results:
+  graph_verifier: 21_passed_clean_exit
+  source_nodes: 11
+  source_predicates_replayed: 132
+  source_assertions: 11
+  compatibility_alias_only: YM2_np_trapz_equals_np_trapezoid
+  gitnexus_index: {nodes: 22902, edges: 36080, clusters: 342, flows: 7}
+  impact_risk: low
+  affected_processes: 0
+debt:
+  - complete_individual_claim_review_registry_release_disposition_docs_memory_and_terminal_gate
+next_attempt: stage_the_individually_reviewed_promotion_transaction

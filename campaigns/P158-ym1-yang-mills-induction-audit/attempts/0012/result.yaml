@@ -1,0 +1,19 @@
+attempt: 0012
+campaign: P158
+candidate: stabilized_YM2_semantic_graph_replay
+status: failed
+started_at: '2026-08-10T13:32:00Z'
+finished_at: '2026-08-10T13:36:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  source_nodes_clean_exit_and_exact_tally: 11_of_11
+  semantic_graph_checks_before_failure: 19
+failure:
+  layer: implementation
+  mechanism: >-
+    The EM5 semantic probe used a guessed variable spelling for the source's
+    parameter integrand. Its absence-of-seagull half remained true; the exact
+    numerator spelling must be pinned from the immutable source.
+  scientific_failure: false
+next_attempt: inspect_and_pin_EM5s_actual_integrand_identifier_then_replay_the_same_graph

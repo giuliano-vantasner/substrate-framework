@@ -1,0 +1,42 @@
+campaign: P158
+criteria_order:
+  - exact_connection_generator_and_trace_convention_fit
+  - complete_quantum_action_statistics_regulator_and_Ward_derivation
+  - coefficient_typing_background_completion_and_exact_limits
+  - bare_counterterm_normalization_and_physical_ceiling_honesty
+  - accepted_framework_fit_nonduplication_mutation_sensitivity_and_graph_closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Native replay classifies all nine predicates but its tally does not validate the loop or action headline.
+  B:
+    decision: rejected_as_complete_closure
+    reason: C_NAG_001_and_C_VAC_001_supply_the_inputs_but_neither_contains_the_representation_indexed_nonabelian_completion.
+  C:
+    decision: selected_as_distinct_positive_theorem
+    reason: A_declared_massive_complex_scalar_multiplet_closes_the_kernel_Ward_local_and_background_field_obligations.
+  D:
+    decision: rejected_as_unneeded_delta
+    reason: The_source_does_not_require_a_new_classical_Yang_Mills_variation_claim_and_C_NAG_001_already_owns_the_curvature_boundary.
+  E:
+    decision: selected_as_source_retention_boundary
+    reason: Exact_trace_and_projector_controls_survive_but_cannot_replace_the_quantum_derivation.
+  F:
+    decision: selected_as_representation_sensitivity
+    reason: Fundamental_adjoint_direct_sum_and_rescaling_examples_make_T_of_R_and_normalization_load_bearing.
+  G:
+    decision: selected_as_coefficient_ceiling
+    reason: Bare_plus_counterterm_and_field_rescaling_families_reject_a_unique_induced_coupling_or_pole.
+  H:
+    decision: rejected_as_present_mechanism
+    reason: YM1_supplies_no_complete_weak_or_substrate_quantum_matter_action_matching_or_observable.
+  I:
+    decision: selected
+    reason: Dependency_consumer_compatibility_release_queue_documentation_and_memory_closure_are_required_for_promotion.
+selection_basis: >-
+  C is the smallest positive object satisfying every frozen structural
+  criterion. A and E preserve exact source controls, F and G expose convention
+  and coefficient sensitivity, and I closes governance. Queue-preexposed
+  one-half, projector, and generated-term labels selected no candidate.
+foundational_revision_required: false
+debt: []

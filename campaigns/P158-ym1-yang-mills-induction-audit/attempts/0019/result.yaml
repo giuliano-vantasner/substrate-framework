@@ -1,0 +1,23 @@
+attempt: 0019
+campaign: P158
+candidate: directly_tracked_terminal_repository_gate
+status: passed
+started_at: '2026-08-10T14:37:00Z'
+finished_at: '2026-08-10T14:41:00Z'
+commands:
+  - scripts/validate.sh
+  - git diff --check
+results:
+  repository_contract: valid_158_accepted_claims_62_pending_units
+  memory_contract: 652_records_passed
+  skill_contract: passed
+  full_tests: 1421_passed
+  full_gate_terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  diff_whitespace: passed
+compatibility:
+  mutable_standalone_legacy_accesses: 0
+  current_API: np_trapezoid
+  canonical_helper: current_name_first_with_lazy_NumPy_1_26_fallback
+  immutable_YM2: alias_only_replay_only
+debt: []
+next_attempt: continue_parent_effort_at_YM2

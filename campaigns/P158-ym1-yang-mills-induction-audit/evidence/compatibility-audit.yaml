@@ -1,0 +1,37 @@
+audit: numpy_trapezoid_compatibility
+campaign: P158
+audited_at: '2026-08-10T14:31:00Z'
+declared_numpy_support: 'numpy>=1.26'
+current_api: np.trapezoid
+mutable_policy:
+  canonical_modules: call_substrate_framework_numerics_trapezoid_integral
+  standalone_scripts: call_np_trapezoid
+  executable_legacy_access_allowed: false
+  ast_preflight:
+    direct_np_trapz: 0
+    imported_trapz: 0
+    dynamic_getattr_trapz_outside_compatibility_helper: 0
+    eager_nested_fallback: 0
+canonical_compatibility_helper:
+  path: src/substrate_framework/numerics.py
+  current_name_resolved_first: true
+  legacy_name_resolved_only_after_current_name_is_absent: true
+  reason: NumPy_1_26_is_in_the_declared_support_range_and_does_not_expose_np_trapezoid
+  regression_test: tests/test_numerics.py::test_trapezoid_integral_supports_legacy_numpy_name
+workflow_contracts:
+  - AGENTS.md
+  - .agents/skills/physics-erdos-loop/SKILL.md
+  - memory-templates/campaign-proposal.md
+  - memory-templates/claim-review.md
+  - memory-templates/effort-contract.md
+  - memory-templates/research-arc.md
+immutable_source_policy: >-
+  Preserve hash-pinned source and distinguish a native version-only abort from
+  its explicitly recorded alias-only replay; never count the abort as a
+  scientific candidate failure.
+YM1_surface: no_numpy_integration_reference
+downstream_known_surface:
+  unit: YM2
+  classification: immutable_alias_only_replay_required
+verdict: passed
+debt: []

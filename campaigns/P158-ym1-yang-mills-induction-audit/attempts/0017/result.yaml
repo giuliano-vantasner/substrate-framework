@@ -1,0 +1,30 @@
+attempt: 0017
+campaign: P158
+candidate: generated_promotion_state_and_compatibility_preflight
+status: passed
+started_at: '2026-08-10T14:29:00Z'
+finished_at: '2026-08-10T14:32:00Z'
+commands:
+  - run_canonical_queue_docs_and_memory_generators
+  - compare_current_and_v0_123_0_release_manifests
+  - parse_governance_disposition_and_adjudication_YAML
+  - .venv/bin/python scripts/validate_repository.py
+  - memory_validate_each_changed_durable_record
+  - executable_AST_preflight_for_direct_imported_dynamic_and_eager_legacy_trapezoid_access
+  - git_diff_check
+results:
+  release_identity: passed_byte_identical_to_v0_123_0
+  repository_contract: valid_158_accepted_claims_62_pending_units
+  changed_memory_records: passed
+  mutable_standalone_legacy_accesses: 0
+  eager_nested_fallbacks: 0
+  canonical_helper: current_name_first_with_lazy_NumPy_1_26_fallback
+  diff_whitespace: passed
+compatibility:
+  workflow_and_templates: already_codified_and_verified
+  mutable_scripts: np_trapezoid_or_canonical_helper_only
+  immutable_YM1: no_numpy_integration_surface
+  immutable_YM2: alias_only_replay_preregistered_for_next_campaign
+debt:
+  - run_one_integrated_terminal_gate
+next_attempt: materialize_and_run_the_terminal_promotion_gate

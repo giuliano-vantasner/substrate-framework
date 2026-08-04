@@ -1,0 +1,22 @@
+attempt: 0011
+campaign: P158
+candidate: first_frozen_semantic_source_graph_replay
+status: failed
+started_at: '2026-08-10T13:22:00Z'
+finished_at: '2026-08-10T13:31:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  source_nodes_clean_exit_and_exact_tally: 11_of_11
+  source_predicates_replayed: 132
+  immutable_alias_only_compatibility: YM2_np_trapz_backed_by_np_trapezoid
+  graph_checks_before_failure: 16
+failure:
+  layer: implementation
+  mechanism: >-
+    The YM2 semantic probe searched one prose phrase across a source line wrap.
+    The required trace recomputation and ceiling-overclaim anchors are present,
+    and every source process already passed; only the whitespace-sensitive
+    literal failed.
+  scientific_failure: false
+next_attempt: replace_the_wrapped_phrase_with_stable_independent_YM1_generated_and_ceiling_closed_anchors

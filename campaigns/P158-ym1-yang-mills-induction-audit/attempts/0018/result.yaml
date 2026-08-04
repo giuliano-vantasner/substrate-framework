@@ -1,0 +1,28 @@
+attempt: 0018
+campaign: P158
+candidate: terminal_promotion_transaction_and_async_capture
+status: failed
+started_at: '2026-08-10T14:33:00Z'
+finished_at: '2026-08-10T14:36:00Z'
+commands:
+  - assert_current_release_byte_identical_to_v0_123_0
+  - PYTHONPATH=src .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/independent_nonabelian_scalar_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --check
+results:
+  primary: {status: passed, checks: 32, terminal_tally: ALL_32_CHECKS_PASS}
+  independent: {status: passed, checks: 20, terminal_tally: ALL_20_CHECKS_PASS}
+  source_graph: {status: passed, checks: 21, terminal_tally: ALL_21_CHECKS_PASS}
+  full_gate_process: completed_but_terminal_exit_and_tail_not_captured
+failure:
+  layer: orchestration
+  mechanism: >-
+    The command wrapper treated the still-running session returned by
+    scripts/validate.sh as a failed exit and then lost the original session
+    identifier. Process inspection established that pytest continued and the
+    gate process terminated, but that cannot substitute for its exit status
+    and terminal tally.
+  scientific_failure: false
+next_attempt: rerun_only_scripts_validate_sh_in_a_directly_tracked_session

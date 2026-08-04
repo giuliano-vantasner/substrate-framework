@@ -1,0 +1,35 @@
+campaign: P158
+claim_delta: [C-NVP-001]
+derived_inputs:
+  - exact_SU2_commutator_hermiticity_and_trace_metric_residuals
+  - fundamental_adjoint_and_doubled_fundamental_Dynkin_indices
+  - representation_indexed_exact_massive_scalar_QED2_projector_coefficient_and_form_factor
+  - bubble_seagull_Ward_tadpole_cancellation_in_every_color
+  - zero_momentum_low_momentum_heavy_mass_and_fixed_Q_massless_limits
+  - component_density_and_trace_density_coefficient_conversion
+  - background_field_proper_time_curvature_coefficient_and_completion_residual
+  - noncommuting_constant_connection_counterexample_to_projector_only_completion
+declared_model_inputs:
+  - two_dimensional_Euclidean_flat_background
+  - N_s_positive_integer_identical_massive_complex_scalar_multiplets
+  - exact_finite_Hermitian_SU2_representation_R_with_positive_trace_index
+  - D_mu_equals_partial_mu_minus_i_g_W_mu_a_T_a
+  - positive_exact_mass_coupling_and_nonzero_Euclidean_momentum_squared
+  - translation_and_background_gauge_preserving_regulator_and_shift_rule
+  - Gamma_quadratic_equals_one_half_W_Pi_W_convention
+  - separately_declared_bare_coefficient_counterterm_field_normalization_and_matching_scale
+accepted_imports:
+  - {claim: C-NAG-001, use: nonabelian_connection_curvature_and_trace_invariant_convention}
+  - {claim: C-VAC-001, use: complete_Abelian_complex_scalar_QED2_kernel_Ward_derivation_limits_and_physical_ceilings}
+external_imports:
+  - {source: Strassler1992, use: primary_nonabelian_complex_scalar_background_determinant_and_color_ordering}
+  - {source: FliegnerHaberlSchmidtSchubert1998, use: primary_manifestly_gauge_invariant_massive_scalar_inverse_mass_expansion_and_curvature_square}
+excluded_comparators:
+  - queue_preexposed_fundamental_index_one_half
+  - queue_preexposed_transverse_projector
+  - queue_preexposed_generated_kinetic_term_label
+  - source_massless_g_squared_over_pi_value
+fitted_constants: []
+borrowed_answers: []
+undeclared_parameters: []
+debt: []

@@ -1,0 +1,64 @@
+campaign: P158
+title: YM1 Yang-Mills induction and non-Abelian scalar-loop audit
+source_baseline: substrate@6d1f4e0
+source_units: [YM1]
+base_release: v0.122.0
+accepted_release: v0.123.0
+adjudicated_at: '2026-08-10T14:25:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without treating its tally as a headline oracle.}
+  - {id: C, reason: The declared massive complex-scalar representation supplies the distinct complete conditional theorem.}
+  - {id: E, reason: Trace and projector controls retain their narrow exact scope.}
+  - {id: F, reason: Fundamental adjoint direct-sum and rescaling examples expose representation normalization.}
+  - {id: G, reason: Bare counterterm and field-coordinate counterfamilies delimit unique-induction claims.}
+  - {id: I, reason: Dependency consumer compatibility novelty release queue documentation and memory audits close the transaction.}
+claims: [C-NVP-001]
+unpromoted_claims:
+  - {id: YM1_declared_left_doublet_loop, reason: No_quantum_action_statistics_determinant_regulator_bubble_or_seagull_is_constructed.}
+  - {id: YM1_massless_scalar_coefficient, reason: The_u_one_minus_u_numerator_is_not_complex_scalar_QED2_and_the_correct_fixed_Q_massless_limit_diverges.}
+  - {id: projector_only_Ward_derivation, reason: Transversality_is_imposed_before_the_check_and_does_not_replace_bubble_seagull_cancellation.}
+  - {id: full_Yang_Mills_induction_from_quadratic_projector, reason: The_source_drops_the_momentum_factor_and_has_no_background_field_completion.}
+  - {id: unique_g_eff_squared, reason: Bare_counterterm_and_field_normalization_data_remain_independent.}
+  - {id: fixed_convention_Abelian_limit, reason: The_guard_changes_the_trace_factor_from_one_half_to_one.}
+  - {id: physical_W_pole_weak_sector_dimension_lift_and_substrate_mechanism, reason: Required_matter_matching_state_and_observable_inputs_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_nonabelian_scalar_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0009/result.yaml
+  graph_and_impact_attempt: attempts/0015/result.yaml
+  staged_promotion_attempt: attempts/0017/result.yaml
+  orchestration_capture_failure: attempts/0018/result.yaml
+  terminal_gate: attempts/0019/result.yaml
+  claim_review: memory/vantasner/decisions/C-NVP-001-review.md
+  source_review: memory/vantasner/decisions/YM1-qualified-review.md
+source_disposition:
+  YM1: qualified
+accepted_mappings: [C-NVP-001, C-NAG-001, C-VAC-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_no_quadrature_or_legacy_integration_access
+  immutable_primary: no_numpy_integration_reference
+  inherited_alias_only: [YM2]
+validation_commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/independent_nonabelian_scalar_review.py
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_nonabelian_vacuum_polarization.py tests/test_vacuum_polarization.py tests/test_nonabelian_gauge.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

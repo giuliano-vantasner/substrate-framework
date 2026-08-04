@@ -1,0 +1,23 @@
+campaign: P158
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: EM3, role: analogy_only, path: merged-framework/bridges/phase-3/bridge_EM3_maxwell_coulomb_tail.py, sha256: 1c674bae211322b24a4504ff5aafc04424eb6a4bfe7813f63e5ec4337f783fc9, checks: 11, assertions: 1}
+  - {source_unit: EM5, role: corrected_abelian_dependency, path: merged-framework/bridges/phase-3/bridge_EM5_induced_gauge_sector.py, sha256: bcf2c49e1e98eefea98be0076afd29341ce80fd71a7b141618978139982e4ec0, checks: 11, assertions: 1}
+  - {source_unit: EM7, role: analogy_only, path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py, sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22, checks: 17, assertions: 1}
+  - {source_unit: W2, role: generator_provenance_and_retroactive_overclaim_consumer, path: merged-framework/bridges/phase-6/bridge_W2_su2L_chiral_doublet.py, sha256: 0babbe7b46b058a6e19a25a598a65bc2ae48189ff21a428d09c3ceae3f42ad16, checks: 9, assertions: 1}
+  - {source_unit: W5, role: unrelated_coupling_analogy, path: merged-framework/bridges/phase-6/bridge_W5_chiral_asymmetry_magnitude.py, sha256: 5afea85e0e70236ddd076e2da585d6ab5861d52211239642eac1c951f1c6a71a, checks: 27, assertions: 1}
+  - {source_unit: W7, role: accepted_gauge_dependency_and_retroactive_overclaim_consumer, path: merged-framework/bridges/phase-6/bridge_W7_su2L_gauging_charged_current.py, sha256: 1a1fa278f6b8a0cab74d020fc01db1fa3576f57084d0cd80959867c591bf66c3, checks: 11, assertions: 1}
+  - {source_unit: M1, role: conditional_kinetic_normalization_consumer, path: merged-framework/bridges/phase-7/bridge_M1_anderson_higgs_mass_matrix.py, sha256: 6e4a60d5c895fc6ce045ffebb9f9676710e86c9f553a0428292acbc9f78bc80f, checks: 9, assertions: 1}
+  - {source_unit: M2, role: conditional_Proca_consumer, path: merged-framework/bridges/phase-7/bridge_M2_meissner_proca_W_mass.py, sha256: 4ae3e5cb06e7c0bce6387ac7b84f555de65f12cce4be42d620405bb2b5c5b59f, checks: 7, assertions: 1}
+  - {source_unit: YM1, role: adjudicated_source, path: merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py, sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6, checks: 9, assertions: 1}
+  - {source_unit: YM2, role: pending_direct_overclaim_consumer, path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py, sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c, checks: 10, assertions: 1}
+  - {source_unit: GK1, role: pending_boundary_and_overclaim_consumer, path: merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py, sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74, checks: 11, assertions: 1}
+totals:
+  nodes: 11
+  predicates: 132
+  assertions: 11
+compatibility:
+  native_nodes: [EM3, EM5, EM7, W2, W5, W7, M1, M2, YM1, GK1]
+  immutable_alias_only_nodes: [YM2]
+  alias_definition: numpy.trapz_equals_numpy.trapezoid
+  scientific_effect: none_spelling_only

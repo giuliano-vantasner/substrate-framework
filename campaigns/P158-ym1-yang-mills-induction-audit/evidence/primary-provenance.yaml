@@ -1,0 +1,36 @@
+campaign: P158
+accepted_base:
+  release: v0.122.0
+  framework_checkpoint: bf083b8
+  scientific_commit: bf083b8
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: YM1
+  path: merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py
+  sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/YM1-dossier.md
+  sha256: 3f58232191a2b58ae507ddbc107fe0f7ed08dc4e1e41927c0ced74ea6760765d
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/nonabelian_gauge.py
+  - src/substrate_framework/vacuum_polarization.py
+  - campaigns/P135-em5-induced-gauge-audit
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P151-w7-su2l-gauging-audit
+external_primary_sources:
+  - {id: Strassler1992, url: 'https://arxiv.org/abs/hep-ph/9205205', use: nonabelian_complex_scalar_background_determinant_color_trace_and_gauge_invariant_loop_structure}
+  - {id: FliegnerHaberlSchmidtSchubert1998, url: 'https://arxiv.org/abs/hep-th/9707189', use: manifestly_gauge_invariant_massive_scalar_inverse_mass_expansion_and_leading_curvature_square}
+memory_searches:
+  - YM1 Yang Mills induction nonabelian vacuum polarization
+  - scalar QED2 representation index heat kernel curvature coefficient
+authority_statement: >-
+  Memory and YM1 are recall and candidate evidence. The pinned accepted
+  C-NAG-001 and C-VAC-001 inputs, exact canonical derivation, independent
+  background-field and parameter-integral review, primary literature,
+  mutation-sensitive tests, individual review, and full source-graph replay
+  supply authority.

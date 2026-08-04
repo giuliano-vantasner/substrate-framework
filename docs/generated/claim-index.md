@@ -633,6 +633,15 @@ Let H_I=C^2 carry the exact Pauli-half generators T_a, let H_C be a nonzero fini
 - Compatibility: `compatible_extension`
 - Dependencies: C-REP-002
 
+## C-NVP-001
+
+Let Q>0, m>0, and g>0 be exact, let N_s be a positive integer, and let T_1,T_2,T_3 be same-size finite exact Hermitian matrices satisfying [T_1,T_2]=i*T_3 and cyclic permutations with tr_R(T_a*T_b)=T(R)*delta_ab for exact T(R)>0. Separately declare N_s identical massive complex-scalar multiplets in representation R on flat two-dimensional Euclidean space, with D_mu=partial_mu-i*g*W_mu^a*T_a, operator -D^2+m^2, the complex-scalar one-loop determinant, and a translation- and background-gauge-preserving regulator. In the convention Gamma^(2)=W_mu^a*Pi_mu_nu^ab*W_nu^b/2 and Pi_mu_nu^ab=P_mu_nu*Pi_hat^ab at nonzero momentum, define z=sqrt(Q)/sqrt(Q+4*m^2). Then Pi_hat^ab(Q)=delta_ab*N_s*T(R)*g^2/pi*(atanh(z)/z-1), equivalently the color transverse form factor is Pi_hat^ab/Q. Before transverse decomposition, contraction of the scalar bubble and seagull gives respectively +2*N_s*g^2*T(R)*delta_ab and -2*N_s*g^2*T(R)*delta_ab times the common tadpole and q_nu, so their sum vanishes. The projector coefficient vanishes as Q tends to zero and as m tends to infinity, while at fixed Q>0 it diverges as m tends to zero. Its leading low-momentum local Euclidean density is N_s*g^2*T(R)/(48*pi*m^2)*sum_a F_mu_nu^a*F_mu_nu^a, equivalently N_s*g^2/(48*pi*m^2)*tr_R(F_mu_nu*F_mu_nu). The independent background-field proper-time factors (4*pi)^(-1), 1/12, and integral_0^infinity exp(-m^2*s) ds=1/m^2 give the same trace-density coefficient and hence complete this leading term with the full non-Abelian curvature, including its connection-commutator pieces. This loop term is additive to separately declared bare and counterterm coefficients. These are exact conditional one-loop identities. They supply no unique total gauge coupling, massless Schwinger pole, propagating W sector, scalar-to-kink dictionary, weak matter content, dimensional lift, observation, or substrate gauge mechanism.
+
+- Accepted in: `v0.123.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-NAG-001, C-VAC-001
+
 ## C-OG-001
 
 For every positive twice-differentiable static index n(x) and c0 > 0, the declared 1+1 metric g = diag(-1/n, n/c0^2) has Ricci scalar R = c0^2*(n*n_xx - 2*n_x^2)/n^3 and satisfies Box_g(log(n)) = R. Among twice-differentiable scalar compositions f(n) satisfying Box_g(f(n)) = R for every such profile, exactly f(n) = log(n) + C work.

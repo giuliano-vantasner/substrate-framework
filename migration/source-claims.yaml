@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 63
-  qualified: 143
+  pending_adjudication: 62
+  qualified: 144
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2538,8 +2538,47 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-NVP-001
+  - C-NAG-001
+  - C-VAC-001
+  qualification: YM1's Pauli-half trace metric, nonzero-momentum projector identities, declared integral
+    arithmetic, coefficient rearrangements, longitudinal annihilation, and nontransverse counterexample
+    survive as exact controls. Its Yang--Mills induction headline does not. The source declares no quantum
+    matter action, statistics, determinant, regulator, bubble, seagull, counterterm, or field normalization;
+    it imposes transversality, uses a non-scalar-QED2 numerator, drops the momentum factor, and does not
+    derive the full background completion. Its Abelian guard changes generator normalization. C-NVP-001
+    supplies the corrected conditional massive complex-scalar SU2 theorem, with representation-indexed
+    kernel, bubble--seagull Ward cancellation, typed local coefficients, full leading curvature completion,
+    and divergent fixed-Q massless limit. The loop remains additive to bare and counterterm coefficients.
+    No unique coupling, pole, physical W sector, weak matter dictionary, dimensional lift, observation,
+    or substrate mechanism is accepted.
+  evidence:
+  - campaigns/P158-ym1-yang-mills-induction-audit/reviews/source_adjudication.md
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/source-reproduction.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/source-audit.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/check-adjudication.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/input-provenance.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/dependency-audit.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/consumer-audit.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/candidate-comparison.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/primary-provenance.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/evidence/literature-audit.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/verify.py
+  - campaigns/P158-ym1-yang-mills-induction-audit/reviews/independent_nonabelian_scalar_review.py
+  - campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py
+  - campaigns/P158-ym1-yang-mills-induction-audit/attempts/0009/result.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/attempts/0015/result.yaml
+  - memory/vantasner/decisions/C-NVP-001-review.md
+  - memory/vantasner/decisions/YM1-qualified-review.md
+  note: P158 promotes C-NVP-001 through thirty-two primary, twenty independent, thirty-eight focused-plus-adjacent
+    tests, and twenty-one frozen-graph checks replaying 132 immutable predicates. Native YM1 passes all
+    nine predicates. Ten graph nodes run natively; immutable YM2's single eager legacy NumPy integration
+    surface runs through an isolated alias backed by np.trapezoid and remains compatibility-only. Mutable
+    P158 and canonical code have zero executable legacy integration references.
 - source_unit: YM2
   phase: phase-7
   path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py

@@ -1,0 +1,21 @@
+attempt: 0014
+campaign: P158
+candidate: AST_based_EM5_semantic_graph_replay
+status: failed
+started_at: '2026-08-10T13:42:00Z'
+finished_at: '2026-08-10T13:46:00Z'
+commands:
+  - .venv/bin/python campaigns/P158-ym1-yang-mills-induction-audit/reviews/replay_source_graph.py /home/dan/substrate
+results:
+  source_nodes_clean_exit_and_exact_tally: 11_of_11
+  graph_checks_before_failure: 20
+  EM5_AST_absence_probe: passed
+failure:
+  layer: implementation
+  mechanism: >-
+    The final physical-ceiling probe still combined a wrapped prose phrase
+    with lexical absences. The earlier source audit and AST checks already
+    establish the missing determinant and counterterm; this graph probe needs
+    stable loaded-name and headline anchors only.
+  scientific_failure: false
+next_attempt: replace_the_final_brittle_prose_conjunction_with_stable_headline_and_AST_loaded_name_checks
