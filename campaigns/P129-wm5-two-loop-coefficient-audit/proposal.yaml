@@ -1,0 +1,84 @@
+id: P129
+base_release: v0.98.0
+base_commit: ae73006
+scientific_base_commit: a83cc63
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM5]
+question: >-
+  Reproduce and independently audit WM5's claim to generate the one-loop
+  coefficient vector and two-loop gauge-gauge coefficient matrix from corpus
+  field data; distinguish exact representation sums from imported loop
+  formulas, label-based reconstruction, convention choices, comparator-table
+  agreement, and a full Standard-Model gauge beta function.
+invariants:
+  - >-
+    C-LIE-001 supplies exact convention-specific SU3 invariants only. C-REP-001
+    treats WM1's finite charge table and its labels as supplied noncanonical
+    evidence and explicitly derives no physical representation, chirality,
+    completeness, gauge action, or Standard Model.
+  - >-
+    A product-group coefficient calculation requires a separately supplied
+    multiplet table with every representation dimension, Dynkin index,
+    quadratic Casimir, multiplicity, fermion convention, scalar convention,
+    and Abelian generator normalization. Component charge traces alone do not
+    reconstruct those data uniquely.
+  - >-
+    The one- and two-loop diagram weights are external perturbative premises.
+    Exact arithmetic after importing a general formula does not derive that
+    formula from charge algebra or from the framework's accepted claims.
+  - >-
+    The running convention must fix beta_i, the sign of b_i, powers of 16*pi^2,
+    whether fermions are Weyl or Dirac and scalars real or complex, and the
+    orientation B_ij where row i multiplies g_i^3 and column j multiplies g_j^2.
+  - >-
+    Positive Abelian generator rescaling with its inverse coupling rescaling is
+    a coordinate change. Raw Abelian entries of b and B transform with their
+    row and column normalizations; agreement at one GUT-normalized coordinate
+    does not select that normalization or a physical embedding.
+  - >-
+    A gauge-gauge matrix is not by itself the full two-loop Standard-Model
+    gauge beta function when Yukawa-dependent terms are omitted. Threshold,
+    scheme, matching, boundary, and perturbative-domain premises remain
+    explicit.
+  - >-
+    QCD1, SM2, SM3, SM4, and WM6 remain pending. QCD3 contributes only
+    C-LIE-001/C-RGE-002; WM1 contributes only C-REP-001; WM2 is duplicate
+    evidence. Candidate dependency edges grant no physical field content.
+  - >-
+    WM5's body, representation records, loop formulas, coefficient entries,
+    standard comparison table, output, and predicate implementations remain
+    unopened at freeze. Queue metadata exposes only the headline and declared
+    dependency/check structure.
+allowed_imports:
+  - C-LIE-001 exact convention-specific SU3 invariants
+  - C-REP-001 exact finite charge traces and Abelian normalization covariance
+  - C-RGE-001 and C-RGE-002 conditional one-loop convention and SU3 specialization
+  - C-RGE-004 signed affine coefficient and Abelian-coordinate ceilings
+  - src/substrate_framework/su3.py and src/substrate_framework/charge_traces.py
+  - exact SymPy representation sums rational arithmetic matrices and counterexamples
+  - a primary-source general one- and two-loop gauge-beta formula only as an explicit audited external premise after freeze
+  - WM5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence only after freeze
+candidates:
+  - {id: A, description: Reproduce WM5 literally and classify every predicate and provenance statement.}
+  - {id: B, description: Implement a generic exact product-group multiplet-sum ledger from separately supplied representation invariants.}
+  - {id: C, description: Independently enumerate the declared SM-like multiplets and reconstruct one- and two-loop coefficients without importing WM5 code.}
+  - {id: D, description: Audit whether WM1 and SM2 executable data actually contain the representation and multiplicity information WM5 claims to reuse.}
+  - {id: E, description: Derive Abelian generator/coupling rescaling laws for the one-loop vector and two-loop matrix.}
+  - {id: F, description: Map beta-function sign powers scalar/fermion counting and matrix-orientation conventions with wrong-convention mutants.}
+  - {id: G, description: Separate the gauge-gauge matrix from Yukawa threshold matching scheme and boundary contributions to the full running system.}
+  - {id: H, description: Mutate field multiplicities charges representations and scalar content and require load-bearing coefficient checks to fail.}
+  - {id: I, description: Compare the frozen derivation with a blinded standard table then close dependency consumer and nonduplication ledgers.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact representation provenance multiplicity and invariant closure
+  - explicit imported loop weights sign powers matrix orientation and field-counting convention
+  - Abelian normalization covariance and non-Abelian representation consistency
+  - mutation sensitivity accepted dependency fit parameter economy nonduplication and consumer closure
+  - comparator values excluded from construction and concept selection
+claims_proposed: [C-RGE-005]
+comparators_blinded_until: >-
+  WM5's standard one-loop vector and two-loop matrix entries remain unopened
+  until this proposal, immutable copy, memory contract, and freeze gate pass.
+  Queue prose exposes only that the source claims entrywise agreement; that
+  qualitative exposure is recorded and cannot select a formula or convention.
+status: draft

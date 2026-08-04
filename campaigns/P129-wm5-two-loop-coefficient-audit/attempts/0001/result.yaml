@@ -1,0 +1,18 @@
+campaign: P129
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H, I]
+commands:
+  - cmp campaigns/P129-wm5-two-loop-coefficient-audit/proposal.yaml campaigns/P129-wm5-two-loop-coefficient-audit/evidence/frozen-proposal.yaml
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P129-wm5-two-loop-coefficient-audit.md --base /home/dan/substrate-framework
+  - scripts/validate.sh
+  - git diff --check
+expected: {accepted_claims: 133, source_units: 218, pending_units: 92, pytest_tests: 1090, memory_files: 520, source_body_opened: false, debt: []}
+result: >-
+  Proposal and immutable copy are byte-identical at SHA-256
+  37e3001f76cf327861eb5df092adfbb4c46c73a133c635c6ef26db073cc959a2.
+  Repository validation reports 133 accepted claims and 92 pending source
+  units; all 520 memory records, the physics skill, and all 1090 tests pass.
+  WM5 remained unopened throughout the freeze boundary.
+compatibility_event: none
+next_attempt: Commit the frozen P129 contract, then reproduce and inspect WM5.
