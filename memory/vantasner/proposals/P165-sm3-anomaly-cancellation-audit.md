@@ -2,7 +2,7 @@
 description: Audit SM3 and derive a complete exact anomaly-coefficient and solution-branch classification
 author: vantasner
 created: '2026-08-10T20:25:00Z'
-updated: '2026-08-10T20:36:00Z'
+updated: '2026-08-10T20:54:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -124,9 +124,18 @@ the memory contract, repository closure, and the normalized frozen-manifest hash
 The freeze is committed at `e0f31b8`. Attempt 0003 reproduces all eight source
 checks natively, then eliminates the local equations to
 `18*q*(2*q-u)*(4*q+u)`. The displayed ray is only one of three components: a
-row-exchanged ray and the plane `q=l=e=0, d=-u` are also exact. SM3's zero
-arithmetic survives, while its uniqueness and "one true freedom" headlines are
+row-exchanged ray and the affine line `q=l=e=0, d=-u` are also exact. Attempt
+0004 corrects the earlier "plane" wording while preserving the exact component.
+SM3's zero arithmetic survives, while its uniqueness and "one true freedom" headlines are
 refuted. Candidates C and D are selected and `C-ANO-001` is proposed.
+Attempts 0005 and 0007 preserve two independent-review implementation failures:
+a guessed finite-grid count and unsubstitutable Python literal zeros. Attempt
+0008 repairs both with exact set equality between brute-force grid solutions
+and bounded images of the three derived lines, passing twelve fresh checks.
+Attempt 0010 implements the generic exact ledger and complete solution variety;
+sixty-one focused tests, twenty-five canonical checks, and twelve independent
+checks pass. Optional Ruff is absent and is recorded in attempt 0009 without
+replacing the repository's required terminal gate.
 Any later schema, oracle, algebra, or compatibility failure will be preserved
 append-only before repair.
 
@@ -141,9 +150,9 @@ consumers, compatibility, governance, and continuation.
 | --- | --- | --- |
 | SM3 predicate strength is unaudited | Reproduce and classify all eight checks and the assertion | discharged by attempt 0003 |
 | Anomaly formula authority is unresolved | Source every local and global criterion and separate imports from arithmetic | open |
-| Claimed uniqueness is unproved | Compute and independently verify the complete exact solution branches | source refuted; canonical and independent verification open |
-| Chirality and conjugate-representation signs are unresolved | Type every row and test conjugation mutations | open |
-| Global SU2 and cubic SU3 statements may be stand-ins | Verify their representation inputs and logical independence | open |
+| Claimed uniqueness is unproved | Compute and independently verify the complete exact solution branches | discharged: three affine lines, source uniqueness refuted |
+| Chirality and conjugate-representation signs are unresolved | Type every row and test conjugation mutations | discharged by canonical signed-index ledger and mutations |
+| Global SU2 and cubic SU3 statements may be stand-ins | Verify their representation inputs and logical independence | discharged for supplied fundamental representations; generic higher-representation claims excluded |
 | Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
 
 ## Review and Promotion Plan

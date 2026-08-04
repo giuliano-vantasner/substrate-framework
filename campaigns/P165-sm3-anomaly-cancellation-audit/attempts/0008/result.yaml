@@ -1,0 +1,20 @@
+attempt: 0008
+campaign: P165
+candidate: independent_exact_elimination_and_branch_union
+status: passed
+started_at: '2026-08-10T20:50:00Z'
+finished_at: '2026-08-10T20:51:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/independent_anomaly_review.py
+exit_code: 0
+terminal_tally: P165_INDEPENDENT_ALL_12_CHECKS_PASS
+oracles:
+  - fresh_linear_elimination
+  - fresh_Groebner_basis
+  - factorized_reduced_cubic
+  - all_three_parameterized_lines
+  - exact_bounded_grid_equals_bounded_branch_union
+  - displayed_row_exchanged_and_vectorlike_counterexamples
+  - homogeneity_and_representation_mutations
+repairs_from: [0005, 0007]
+debt: []
+next_attempt: complete_nonduplication_dependency_consumer_and_source_graph_audits

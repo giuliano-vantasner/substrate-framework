@@ -1,0 +1,33 @@
+attempt: 0010
+campaign: P165
+candidate: C_D_generic_ledger_and_complete_three_line_variety
+status: passed
+started_at: '2026-08-10T20:39:00Z'
+finished_at: '2026-08-10T20:54:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python -m pytest tests/test_chiral_anomalies.py tests/test_multiplet_charges.py tests/test_charge_traces.py -q
+  - PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/independent_anomaly_review.py
+results:
+  focused_pytest: 61_passed
+  primary_verifier: ALL_25_CHECKS_PASS
+  independent_verifier: ALL_12_CHECKS_PASS
+positive_object:
+  module: src/substrate_framework/chiral_anomalies.py
+  tests: tests/test_chiral_anomalies.py
+  exact_generic_ledger: true
+  exact_five_row_solution_components: 3
+  source_displayed_component_unique: false
+  source_one_true_freedom_statement: false
+mutation_sensitivity:
+  - electron_charge_removal
+  - common_scaling_degrees
+  - wrong_conjugate_cubic_sign
+  - removed_fundamental_doublet
+  - neutral_singlet
+  - row_exchanged_line
+  - zero_q_vectorlike_line
+debt:
+  - complete_nonduplication_dependency_consumer_and_source_graph_audits
+  - materialize_claim_review_adjudication_and_governance
+next_attempt: audit_semantic_reuse_and_all_downstream_consumers

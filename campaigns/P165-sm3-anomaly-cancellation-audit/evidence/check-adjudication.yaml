@@ -34,7 +34,7 @@ checks:
     verdict: homogeneity_valid_one_true_freedom_statement_refuted
     ceiling: >-
       the complete ideal also contains a row-exchanged nonzero ray and the
-      q=l=e=0 d=-u vectorlike plane
+      q=l=e=0 d=-u vectorlike affine line
 terminal_tally_verdict: >-
   all eight assertions execute, but they establish supplied-point arithmetic,
   two local mutations, and scaling covariance rather than unique hypercharge

@@ -1,0 +1,16 @@
+attempt: 0004
+campaign: P165
+candidate: exact_component_dimension_terminology
+status: corrected_before_implementation
+started_at: '2026-08-10T20:37:00Z'
+finished_at: '2026-08-10T20:38:00Z'
+trigger: >-
+  post-audit dimensional review found that attempt 0003 twice called the
+  q=l=e=0 d=-u component a plane
+unchanged_mathematics:
+  component: q=0_l=0_e=0_d=-u_with_u_free
+  free_parameters: 1
+correction: vectorlike_affine_line_not_plane
+append_only_note: attempt_0003_is_preserved_unchanged_as_attempt_evidence
+debt: []
+next_attempt: implement_the_three_line_solution_variety_without_dividing_by_q

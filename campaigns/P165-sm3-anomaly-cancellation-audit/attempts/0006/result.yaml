@@ -1,0 +1,11 @@
+attempt: 0006
+campaign: P165
+candidate: independent_bounded_exact_branch_union
+status: pending_execution
+started_at: '2026-08-10T20:47:00Z'
+repair: >-
+  replace the guessed solution count with exact set equality between brute-force
+  grid solutions and the bounded images of all three derived parameterizations
+expected_sensitivity: any_unclassified_grid_solution_or_missing_branch_image_fails
+debt:
+  - execute_repaired_independent_oracle

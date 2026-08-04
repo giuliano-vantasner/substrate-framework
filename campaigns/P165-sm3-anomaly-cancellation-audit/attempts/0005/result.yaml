@@ -1,0 +1,18 @@
+attempt: 0005
+campaign: P165
+candidate: independent_bounded_exact_enumeration
+status: failed_verifier_expectation
+started_at: '2026-08-10T20:45:00Z'
+finished_at: '2026-08-10T20:46:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/independent_anomaly_review.py
+passed_before_failure: 4
+failure: >-
+  independent bounded exact enumeration finds no fourth component
+diagnosis: >-
+  the verifier hard-coded a guessed grid solution count of nine; branch
+  parameterizations can enter the five-dimensional coordinate box for more
+  parameter values than that guess, so the count is not an oracle
+scientific_status: unchanged_exact_factorization_and_parameterized_branches_passed
+debt:
+  - derive_the_expected_bounded_set_from_branch_parameterizations
+next_attempt: compare_enumerated_solutions_to_the_exact_union_of_bounded_branch_images

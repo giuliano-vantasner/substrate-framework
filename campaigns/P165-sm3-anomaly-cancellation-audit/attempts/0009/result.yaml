@@ -1,0 +1,17 @@
+attempt: 0009
+campaign: P165
+candidate: optional_targeted_ruff_lint
+status: unavailable_nonrequired_tool
+started_at: '2026-08-10T20:52:00Z'
+finished_at: '2026-08-10T20:53:00Z'
+command: .venv/bin/python -m ruff check P165_changed_Python_files
+exit_code: 1
+failure: No_module_named_ruff
+preceding_results:
+  focused_pytest: 61_passed
+  primary_verifier: ALL_25_CHECKS_PASS
+  independent_verifier: ALL_12_CHECKS_PASS
+classification: environment_tool_availability_not_scientific_failure
+required_gate: scripts/validate.sh_and_pytest_and_git_diff_check_remain_pending_for_promotion
+debt: []
+next_attempt: record_the_green_scientific_implementation_boundary_without_optional_ruff

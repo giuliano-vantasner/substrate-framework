@@ -1,0 +1,14 @@
+attempt: 0007
+campaign: P165
+candidate: independent_bounded_exact_branch_union_execution
+status: failed_implementation
+started_at: '2026-08-10T20:48:00Z'
+finished_at: '2026-08-10T20:49:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P165-sm3-anomaly-cancellation-audit/reviews/independent_anomaly_review.py
+passed_before_failure: 4
+failure: "AttributeError: 'int' object has no attribute 'subs'"
+diagnosis: vectorlike_branch_contains_literal_Python_zero_entries
+scientific_status: unchanged_exact_factorization_and_parameterized_branches_passed
+debt:
+  - sympify_branch_entries_before_parameter_substitution
+next_attempt: normalize_exact_branch_entries_and_rerun
