@@ -1,0 +1,90 @@
+id: P155
+base_release: v0.120.0
+base_commit: 30adbe3
+scientific_base_commit: 30adbe3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [M2]
+question: >-
+  Reproduce and independently audit M2's claimed massive-vector equation and
+  screening profile, and determine the most general exact statement relating
+  a separately declared source-free Proca action to its Euler equation,
+  derived divergence constraint, dispersion relation, and unique decaying
+  transverse half-line boundary-value solution, while keeping the conditional
+  M1 coefficient and any London, Meissner, condensate, weak-boson, material,
+  observable, or substrate interpretation behind their missing action and
+  dictionary premises.
+invariants:
+  - >-
+    C-GSM-001 supplies a conditional gauge-scalar quadratic coefficient and a
+    generalized kinetic-metric eigenproblem, but explicitly supplies no gauge
+    kinetic action, stationary condensate, spectral pole, W field, Standard
+    Model sector, or substrate mass mechanism.
+  - >-
+    C-NAG-001 supplies exact non-Abelian covariance and curvature but no action
+    coefficient, equation of motion, mass, current, weak boson, or physical
+    dictionary. A free Proca action therefore remains a separately declared
+    model even when its curvature notation is compatible.
+  - >-
+    In the frozen mostly-plus convention eta=diag(-1,+1,+1,+1), the declared
+    free action density is -F_mu_nu*F^mu_nu/4-m^2*A_mu*A^mu/2 with m>0.
+    Variation, constraint, wave operator, and dispersion signs must be derived
+    together rather than mixed with a mostly-minus formula.
+  - >-
+    For nonzero mass the divergence condition follows from the source-free
+    Euler equation and commuting derivatives; it is not a residual gauge
+    choice. The massless limit restores a different constraint structure.
+  - >-
+    Exponential screening requires a component and geometry compatible with
+    the divergence constraint plus boundary and decay data. For a tangential
+    component A_y(x) on x>=0, A_y(0)=A0 and A_y(infinity)=0 select the decaying
+    branch; the unconstrained second-order ODE also has a growing branch.
+  - >-
+    C-VTX-001 supplies a conditional Abelian-Higgs radial inverse length under
+    its own action and ansatz, while C-EFT-001 supplies algebraic stationary
+    elimination without a kinetic Proca PDE. Neither is the theorem requested
+    here, and neither supplies an M2 material or substrate dictionary.
+  - >-
+    The queue preexposes M2's M_W^2=g^2*v^2/4, Proca/London equation,
+    exponential profile, lambda_W=2/(g*v), and Meissner analogy. Those values
+    are recorded and excluded from candidate selection. The source and dossier
+    bodies, exact AST data flow, sign conventions, ODE branch handling, and
+    guards remain unopened until this contract is frozen and committed.
+allowed_imports:
+  - C-GSM-001 only for its conditional quadratic coefficient generalized kinetic metric and physical ceilings
+  - C-NAG-001 only for exact curvature notation covariance and its action and physical ceilings
+  - C-GAU-001 only for local Abelian covariance and its action and physical ceilings
+  - C-VTX-001 only for its separately declared Abelian-Higgs radial model inverse lengths and interpretation ceiling
+  - C-EFT-001 only as a nonduplication boundary for algebraic rather than kinetic massive-vector elimination
+  - C-VAC-001 and C-QBL-001 only for their accepted gauge-loop scalar-equation and ontology ceilings
+  - exact finite-dimensional tensor algebra variational calculus commuting partial derivatives Fourier substitution and constant-coefficient half-line ODE theory
+  - M2 and M2-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce M2 literally and classify every predicate by declared model exact consequence convention-dependent identity boundary premise and unsupported physical reading.}
+  - {id: B, description: Derive the free source-free Proca Euler equation divergence constraint massive wave equation and dispersion relation in one explicit mostly-plus convention.}
+  - {id: C, description: Solve the static transverse half-line boundary-value problem and distinguish its unique decaying profile from the unconstrained growing branch and longitudinal counterexample.}
+  - {id: D, description: Compose the generic theorem conditionally with C-GSM-001 under canonical and noncanonical gauge kinetic metrics without importing a W pole or material medium.}
+  - {id: E, description: Compare Proca London and Abelian-Higgs equations at the action current geometry and observable levels to identify which structural analogies survive and which dictionaries do not.}
+  - {id: F, description: Map M2 entirely to accepted mass-matrix vortex and effective-action claims if source-aware nonduplication leaves no distinct reusable theorem.}
+  - {id: G, description: Construct identical exponential component profiles under distinct field and material dictionaries to bound Meissner weak-boson and substrate interpretations.}
+  - {id: H, description: Close dependency semantic-consumer compatibility nonduplication disposition release generated-state and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - explicit metric action field-strength mass and variation conventions with a positive-energy massive dispersion
+  - derivation of the divergence constraint rather than gauge-fixing language and correct nonzero-mass and massless limits
+  - component geometry boundary data growing-branch exclusion and uniqueness of the half-line decaying solution
+  - separation of algebraic mass coefficient gauge kinetic normalization spectral pole material response and observable dictionary
+  - compatibility with accepted gauge-scalar non-Abelian Abelian-Higgs effective-action vacuum-loop and scalar-equation ceilings
+  - load-bearing action-sign metric-sign mass-zero kinetic-normalization component-orientation boundary and decay mutations
+  - alternative dictionaries assumption and parameter economy reusable API value and source-aware nonduplication
+  - complete dependency semantic-consumer compatibility release queue documentation and durable-memory closure
+  - preexposed M_W penetration-length and Meissner values excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, M2 and dossier hashes, candidates A
+  through H, action, metric, constraint, dispersion, geometry, boundary,
+  kinetic-normalization, material-ceiling, compatibility, mutation, and
+  done-gate criteria are frozen and committed. Queue-exposed formulas cannot
+  select a concept. The source and dossier bodies, exact data flow, literal
+  constants, ODE branch handling, guards, and further comparator material
+  remain unopened until that boundary.
+status: draft
