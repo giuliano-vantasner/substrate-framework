@@ -1,0 +1,59 @@
+source_unit: G5
+source_sha256: 38a28bb452b055e7aa7894e1c31e3fcc98bfc5c6a8cbee2040aa003c62a4071a
+ast:
+  check_calls: 15
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+objects_present:
+  - floating regression of the exact SI relation epsilon0*mu0=1/c^2
+  - raw-float identities epsilon0/2=1/(2*mu0*c^2) and epsilon0*c^2/2=1/(2*mu0)
+  - conditional substitution of declared kappa=8*pi*G_eff
+  - SI dimension check for kappa*epsilon0*mu0 after assigning kappa Newton-G dimensions
+  - four wrong-form dimension inequalities
+  - symbol-membership count called a linkage guard
+  - explicit free-kappa derivative and epsilon0*mu0 dimension residual
+objects_absent:
+  - a dimensionally valid map from SI permittivity to mass density
+  - a dimensionally valid map from SI inverse permeability to stiffness or energy density
+  - the common dimensioned calibration required by both mechanical coefficients
+  - a mechanical strain amplitude or electromagnetic field amplitude
+  - a unit check on the source's own L2 and L3 expressions
+  - provenance-bearing independent measurements or a prediction-rank calculation
+  - a source-typed Einstein coupling with restored c and hbar factors
+  - a material action equation of state density measurement or gravitational observation
+load_bearing_insertions:
+  - assignment: rho_a=EPS0/2
+    classification: raw_permittivity_number_relabelled_as_mass_density
+  - assignment: strain_rhs=1/(2*MU0)
+    classification: raw_inverse_permeability_number_relabelled_as_energy_density
+  - assignment: kappa_U=G_unit
+    classification: convention_assigned_before_source_type_is_declared
+  - assignment: shared_parameter_sets
+    classification: symbol_membership_not_independence_or_prediction
+headline_failures:
+  - >-
+    In SI M,L,T,I dimensions epsilon0/2 is still permittivity, not mass
+    density; the source checks only its raw decimal against a copied decimal.
+  - >-
+    Bare 1/(2*mu0) is inverse permeability, not energy density. A mechanical
+    calibration and dimensionless strain, or an electromagnetic field squared,
+    is required.
+  - >-
+    L3 is exactly L1 plus L2 in log space, so the first three displayed outputs
+    have rank two rather than three independent predictions.
+  - >-
+    The linkage guard counts repeated symbol names. It tests neither input
+    independence, row provenance, measurement, nor a parameter-free constraint.
+  - >-
+    L4 is tautological after kappa=8*pi*G_eff and epsilon0*mu0=1/c^2 are supplied;
+    kappa remains arbitrary and its Newton-G dimension is assigned rather than
+    obtained from a typed source equation.
+  - >-
+    Current SI fixes c exactly and relates epsilon0=1/(mu0*c^2), so epsilon0 and
+    mu0 do not constitute two independent empirical medium inputs.
+headline_verdict: >-
+  Qualified. G5 natively passes all fifteen predicates, but its central medium
+  density and energy density are dimensionally invalid, its prediction count is
+  ceremonial, and its gravity formula is a free-coupling conditional identity.

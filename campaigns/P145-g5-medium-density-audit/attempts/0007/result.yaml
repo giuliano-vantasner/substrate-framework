@@ -1,0 +1,29 @@
+attempt: 0007
+campaign: P145
+candidate: terminal_promotion
+status: passed
+started_at: '2026-08-09T19:05:00Z'
+finished_at: '2026-08-09T19:24:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/reviews/independent_medium_conversion_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_constitutive.py
+  - scripts/validate.sh
+  - git diff --check
+result:
+  primary: ALL_36_CHECKS_PASS
+  independent: ALL_20_CHECKS_PASS
+  source_graph: ALL_34_CHECKS_PASS
+  focused_tests: 17_passed
+  repository_tests: 1275_passed
+  workflow: 147_claims_147_accepted_0_proposals
+  migration_queue: 218_units_75_pending_0_partial
+  memory: 593_files_valid
+  skill: valid
+  diff_check: clean
+  debt: []
+next_attempt: >-
+  Run only record-sensitive repository, generated-state, memory, and diff
+  checks after finalizing this append-only result; do not repeat the unchanged
+  scientific or full-suite boundary.

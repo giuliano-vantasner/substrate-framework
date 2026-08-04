@@ -4507,3 +4507,48 @@ units:
       ten-node graph inventories ninety-nine predicates. Native G4 fails only
       on removed np.trapz; isolated alias-only replay through np.trapezoid
       passes all ten source checks, and mutable code has no legacy access.
+  G5:
+    disposition: qualified
+    accepted_claims:
+      - C-MED-001
+      - C-MED-005
+      - C-IDN-001
+      - C-GRV-001
+    qualification: >-
+      G5's exact SI wave-product identity and conditional substitution survive
+      only under explicit unit and provenance ceilings. C-MED-005 supplies the
+      corrected positive object: separate dimensioned factors a and b convert
+      permittivity and inverse permeability into mechanical mass density and
+      stiffness, speed matching requires a=b, and their common scale remains
+      free. A dimensionless strain amplitude is separately required for
+      quadratic energy. Bare epsilon0/2 is not a mass density and bare
+      1/(2*mu0) is not an energy density. G5's L3 row is the product of L1 and
+      L2 rather than a third independent prediction; repeated symbol
+      membership is not a linkage oracle. Its effective-Newton row follows
+      only after supplying a free, source-untyped kappa and the SI wave
+      identity. No material calibration, independent physical prediction,
+      gravity coupling, observation, or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P145-g5-medium-density-audit/reviews/source_adjudication.md
+      - campaigns/P145-g5-medium-density-audit/evidence/source-reproduction.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/source-audit.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/check-adjudication.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/input-provenance.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/dependency-audit.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/consumer-audit.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/candidate-comparison.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/primary-provenance.yaml
+      - campaigns/P145-g5-medium-density-audit/evidence/literature-audit.yaml
+      - campaigns/P145-g5-medium-density-audit/verify.py
+      - campaigns/P145-g5-medium-density-audit/reviews/independent_medium_conversion_review.py
+      - campaigns/P145-g5-medium-density-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-MED-005-review.md
+      - memory/vantasner/decisions/G5-qualified-review.md
+    note: >-
+      P145 promotes C-MED-005 through thirty-six primary, twenty independent,
+      seventeen focused-test, and thirty-four frozen-graph checks. The
+      fourteen-node graph inventories 145 source predicates. Native G5 passes
+      all fifteen predicates and has no NumPy integration compatibility event.
+      Inherited immutable G1 and G4 retain alias-only compatibility through
+      np.trapezoid; mutable code has no executable legacy integration access.

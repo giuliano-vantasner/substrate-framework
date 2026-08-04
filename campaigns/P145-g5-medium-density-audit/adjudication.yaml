@@ -1,0 +1,60 @@
+campaign: P145
+title: G5 SI medium-conversion and effective-Newton audit
+source_baseline: substrate@6d1f4e0
+source_units: [G5]
+base_release: v0.111.0
+accepted_release: v0.112.0
+adjudicated_at: '2026-08-09T19:15:00Z'
+selected_candidates:
+  - {id: B, reason: Exact M L T I dimensions decide the source equalities before numeric comparison.}
+  - {id: C, reason: The general dimensioned conversion derives speed matching and the free common-scale orbit.}
+  - {id: D, reason: Existing C-GRV-001 source typing separates Newton G from energy- and mass-density couplings.}
+  - {id: E, reason: Existing C-IDN-001 rank logic exposes L3 dependence and ceremonial symbol linkage.}
+  - {id: F, reason: Conversion rescaling strain and free-kappa countermodels sensitively delimit the result.}
+  - {id: G, reason: Predicate dependency consumer compatibility novelty release queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: A, decision: rejected_as_headline_support_despite_native_tally}
+claims: [C-MED-005]
+unpromoted_claims:
+  - {id: SI_epsilon0_over_two_is_physical_mass_density, reason: Dimensionally invalid without a conversion factor.}
+  - {id: bare_inverse_mu0_over_two_is_strain_energy_density, reason: Missing mechanical calibration and strain or electromagnetic field amplitude.}
+  - {id: three_independent_medium_predictions, reason: L1 through L3 have rank two and symbol overlap is not independence.}
+  - {id: derived_effective_Newton_coupling, reason: L4 is conditional on free untyped kappa and the exact SI wave identity.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_medium_conversion_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  native_source_and_revision: attempts/0003/result.yaml
+  exact_scientific_attempt: attempts/0005/result.yaml
+  graph_and_review_attempt: attempts/0006/result.yaml
+  integrated_terminal_gate: attempts/0007/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-MED-005-review.md
+  source_review: memory/vantasner/decisions/G5-qualified-review.md
+source_disposition:
+  G5: qualified
+accepted_mappings: [C-MED-001, C-MED-005, C-IDN-001, C-GRV-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_np.trapezoid
+  immutable_primary: native_no_numpy_integration_event
+  inherited_shapes: [G1_alias_only, G4_alias_only]
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/reviews/independent_medium_conversion_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_constitutive.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

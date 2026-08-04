@@ -1,0 +1,25 @@
+source_unit: G5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-5/bridge_G5_Geff_medium_density.py
+source_sha256: 38a28bb452b055e7aa7894e1c31e3fcc98bfc5c6a8cbee2040aa003c62a4071a
+dossier_path: merged-framework/bridges/phase-5/dossiers/G5-dossier.md
+dossier_sha256: 972605f48b9941c6a8d054c4bd7ca173d7cf6d05d370d92ac59db18d2a61e427
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G5_Geff_medium_density.py
+process_exit: 0
+terminal_tally: ALL 15 CHECKS PASS
+static_check_calls: 15
+literal_check_calls: 15
+dynamic_check_calls: 0
+assert_statements: 1
+compatibility:
+  numpy_imported: false
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  verdict: native_no_numpy_integration_event
+maximum_source_verdict: >-
+  Exact symbolic and numeric regression evidence only for the expressions
+  actually evaluated. The clean tally does not establish the medium-density,
+  energy-density, independent-prediction, or physical-gravity interpretations.

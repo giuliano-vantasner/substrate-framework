@@ -1,0 +1,37 @@
+campaign: P145
+criteria_order:
+  - exact SI dimensional homogeneity
+  - explicit premise and source typing
+  - genuine constraint and prediction rank
+  - preservation of free conversions and couplings
+  - correct rescaling and convention limits
+  - mutation sensitivity
+  - assumption economy and framework fit
+  - reusability consumer closure and nonduplication
+candidates:
+  A:
+    decision: rejected_as_headline_support
+    reason: Native G5 passes but its L2 and L3 unit claims and linkage oracle do not evaluate the headline objects.
+  B:
+    decision: selected
+    reason: The exact M,L,T,I ledger directly decides every equality before numeric comparison.
+  C:
+    decision: selected_and_promoted_as_C_MED_005
+    reason: The general dimensioned dictionary preserves wave speed only under equal conversion factors and retains the missing scale.
+  D:
+    decision: selected_as_existing_C_GRV_001_ceiling
+    reason: Source-typed coupling dimensions reject an unqualified natural-to-SI kappa map without duplicating gravity claims.
+  E:
+    decision: selected_as_existing_C_IDN_001_composition
+    reason: Exact log rank proves L3 dependence and distinguishes symbol overlap from prediction.
+  F:
+    decision: selected_as_countermodel_evidence
+    reason: Common rescaling and arbitrary kappa preserve source relations while changing density energy or gravity scale.
+  G:
+    decision: selected
+    reason: Claim dependency consumer compatibility and generated-state closure are mandatory.
+selection_basis: >-
+  Candidates B C D E F and G win on units, premise closure, sensitivity, and
+  parameter honesty before the official or source numerical constants are used.
+foundational_revision_required: false
+debt: []

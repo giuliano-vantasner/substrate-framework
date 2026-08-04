@@ -1,0 +1,24 @@
+campaign: P145
+source_unit: G5
+declared_source_dependencies:
+  - {source_unit: G1, disposition: qualified, accepted_claims: [C-RAD-001, C-SG-001, C-SG-002, C-SG-008, C-SG-012], use: no_material_or_gravity_authority}
+  - {source_unit: G2, disposition: qualified, accepted_claims: [C-GOR-001], use: effective_geometry_ceiling_only}
+  - {source_unit: G3, disposition: qualified, accepted_claims: [C-STG-001], use: natural_unit_coupling_ceiling_only}
+  - {source_unit: G4, disposition: qualified, accepted_claims: [C-RR-001, C-RAD-001, C-SG-002, C-SG-008, C-SG-012, C-OG-004], use: no_medium_or_gravity_authority}
+accepted_claim_closure:
+  - {claim: C-MED-005, dependencies: [C-MED-001]}
+  - {claim: C-MED-001, dependencies: []}
+nearby_accepted_claims_not_in_closure:
+  - {claim: C-MED-002, exclusion: separately_declared_abstract_density_dictionary_not_SI_identification}
+  - {claim: C-DIM-002, exclusion: supporting_ceiling_only}
+  - {claim: C-IDN-001, exclusion: supporting_rank_ceiling_only}
+  - {claim: C-GRV-001, exclusion: supporting_gravity_ceiling_only}
+circularity: >-
+  G3 and G4 cite one another, but C-MED-005 imports neither source unit and
+  closes only through accepted C-MED-001 plus exact SI definitions. No source
+  cycle grants authority.
+excluded_imports:
+  - G5's note-13 kappa identification as accepted physics
+  - G1 through G4 rejected physical gravity material and substrate narratives
+  - source density energy prediction and independence labels
+debt: []

@@ -1,0 +1,80 @@
+source_unit: G5
+checks:
+  L1:
+    source_verdict: pass
+    classification: qualified_exact_SI_identity_not_medium_prediction
+    maps_to: [C-MED-001, C-MED-005]
+    reason: >-
+      epsilon0*mu0=1/c^2 is exact in current SI and the raw values regress it;
+      the mechanical interpretation still requires C-MED-005's calibration.
+  L2a:
+    source_verdict: pass
+    classification: rejected_unit_relabelling
+    maps_to: []
+    reason: epsilon0/2 retains permittivity dimension and is not kg/m^3.
+  L2b:
+    source_verdict: pass
+    classification: qualified_algebra_rejected_density_interpretation
+    maps_to: [C-MED-005]
+    reason: Both sides have permittivity dimension; equality follows from L1 and supplies no density.
+  L3:
+    source_verdict: pass
+    classification: rejected_energy_density_interpretation_and_dependent_output
+    maps_to: [C-MED-005]
+    reason: 1/(2*mu0) lacks the calibration and amplitude and L3=L1*L2.
+  L4_prep:
+    source_verdict: pass
+    classification: rejected_independence_oracle
+    maps_to: [C-IDN-001]
+    reason: Pairwise distinct unit labels neither validate the formulas nor establish independent predictions.
+  L4:
+    source_verdict: pass
+    classification: qualified_conditional_substitution
+    maps_to: [C-GRV-001]
+    reason: The formula is tautological after both kappa=8*pi*G_eff and epsilon0*mu0=1/c^2 are inputs.
+  L4_numeric:
+    source_verdict: pass
+    classification: comparator_regression_only
+    maps_to: []
+    reason: Imported Newton G is divided by exact c^2 and compared with its rounded result.
+  DIM_L4:
+    source_verdict: pass
+    classification: qualified_assigned_convention_dimension
+    maps_to: [C-GRV-001]
+    reason: The dimension closes only because kappa is assigned Newton-G units before any source equation is typed.
+  GUARD1:
+    source_verdict: pass
+    classification: valid_negative_dimension_check
+    maps_to: [C-GRV-001]
+    reason: Mass density is not G/c^2.
+  GUARD2:
+    source_verdict: pass
+    classification: valid_negative_dimension_check
+    maps_to: [C-GRV-001]
+    reason: Inverse permittivity is not G/c^2.
+  GUARD3:
+    source_verdict: pass
+    classification: valid_negative_dimension_check
+    maps_to: [C-GRV-001]
+    reason: The extra c^-2 factor changes the target dimension.
+  GUARD4:
+    source_verdict: pass
+    classification: valid_negative_check_but_load_bearing_positive_form_unchecked
+    maps_to: [C-MED-005]
+    reason: Inverse permeability is not density, but the source never checks that epsilon0/2 is density.
+  GUARD5:
+    source_verdict: pass
+    classification: rejected_symbol_count_as_prediction
+    maps_to: [C-IDN-001]
+    reason: Shared names are not independent rows, measurements, or predictions.
+  RESIDUAL_kappa:
+    source_verdict: pass
+    classification: valid_free_parameter_derivative
+    maps_to: [C-GRV-001]
+    reason: The derivative correctly shows that arbitrary kappa controls the gravity ratio.
+  RESIDUAL_epsilon_mu:
+    source_verdict: pass
+    classification: valid_dimension_ceiling
+    maps_to: [C-MED-001, C-GRV-001]
+    reason: epsilon0*mu0 supplies only c^-2 and cannot provide Newton dimensions.
+all_fifteen_adjudicated: true

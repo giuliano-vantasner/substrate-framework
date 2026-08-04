@@ -1,0 +1,53 @@
+campaign: P145
+source_unit: G5
+reverse_consumers:
+  - source_unit: W5
+    disposition: pending_adjudication
+    effect: unchanged_pending
+    reason: G5 is cited only as a magnitude-template analogy; no G5 equation closes W5.
+  - source_unit: QCD1
+    disposition: pending_adjudication
+    effect: false_positive_dependency_token
+    reason: G5 is the fifth gluon-component symbol in G1 through G8, not the bridge unit.
+  - source_unit: SM1
+    disposition: pending_adjudication
+    effect: false_positive_dependency_token
+    reason: G5 is the fifth gluon-component symbol in G1 through G8, not the bridge unit.
+  - source_unit: OD
+    disposition: qualified
+    accepted_claims: [C-IDN-001, C-GLS-001]
+    effect: unchanged_independent_closure
+    reason: OD already notes L3 dependence and free kappa; its accepted rank ledgers import no G5 physics.
+  - source_unit: AS1
+    disposition: qualified
+    accepted_claims: [C-DIM-001, C-RGE-001, C-RGE-002, C-IDN-001, C-RGE-003]
+    effect: unchanged_independent_closure
+    reason: Its accepted transmutation and two-length statements do not depend on G5.
+  - source_unit: AS2
+    disposition: qualified
+    accepted_claims: [C-DIM-002, C-MED-001, C-MED-002]
+    effect: clarified_by_C_MED_005
+    reason: Its abstract conditional response dictionary remains accepted; C-MED-005 blocks substitution of raw SI epsilon0 without calibration.
+  - source_unit: AS3
+    disposition: qualified
+    accepted_claims: [C-DIM-001, C-OG-003, C-IDN-001, C-GRV-001]
+    effect: unchanged_independent_closure
+    reason: Its G5 equality is already classified as tautological and its accepted gravity ledger is independently closed.
+  - source_unit: AS4
+    disposition: duplicate_evidence
+    accepted_claims: [C-LIN-001, C-IDN-001]
+    effect: unchanged_duplicate
+    reason: Its medium row inherits G5's invalid density map and gains no authority.
+  - source_unit: OD3
+    disposition: duplicate_evidence
+    accepted_claims: [C-LIN-001, C-IDN-001]
+    effect: unchanged_duplicate
+    reason: Its later scale narrative inherits G5 inputs but its accepted mappings are generic linear algebra only.
+graph_replay:
+  nodes: 14
+  predicates: 145
+  checks: 34
+  compatibility_shapes:
+    G1: [2, 0, 0, 0, 0]
+    G4: [1, 0, 0, 0, 0]
+debt: []

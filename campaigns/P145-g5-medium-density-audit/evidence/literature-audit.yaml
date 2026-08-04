@@ -1,0 +1,42 @@
+campaign: P145
+purpose: Verify current SI definitions dimensions constant dependence and comparator provenance.
+sources:
+  - title: The International System of Units SI Brochure 9th edition updated 2026
+    publisher: Bureau International des Poids et Mesures
+    url: https://www.bipm.org/en/publications/si-brochure
+    doi: https://doi.org/10.59161/AUEZ1291
+    use: authoritative SI definitions and derived-unit provenance
+  - title: SI base unit metre
+    publisher: Bureau International des Poids et Mesures
+    url: https://www.bipm.org/en/si-base-units/metre
+    use: c is exactly 299792458 m/s in SI
+  - title: SI Brochure 9th edition English version ampere section
+    publisher: Bureau International des Poids et Mesures
+    url: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507
+    use: >-
+      Since 2019 mu0 is experimentally determined, epsilon0=1/(mu0*c^2), both
+      share the same relative uncertainty, and epsilon0*mu0=1/c^2 remains exact.
+  - title: 2022 CODATA adjustment extensive listing
+    publisher: National Institute of Standards and Technology
+    url: https://physics.nist.gov/cuu/pdf/all.pdf
+    use: >-
+      Post-selection comparator values: c exact, mu0=1.25663706127(20)e-6
+      N/A^2, epsilon0=8.8541878188(14)e-12 F/m, and G=6.67430(15)e-11
+      m^3/(kg*s^2).
+source_comparator_audit:
+  epsilon0_source: 8.8541878128e-12
+  mu0_source: 1.25663706212e-6
+  classification: older_rounded_values_used_only_in_loose_regression
+  effect: >-
+    The source values differ from current CODATA but pass its 1e-8 speed
+    tolerance. This does not affect the exact dimensional rejection or select
+    the accepted concept.
+textbook_attribution_ceiling: >-
+  G5 names Jackson chapter 2 and Landau-Lifshitz section 15 without an exact
+  equation, edition, or unit-preserving calibration. Structural similarity of
+  wave equations does not establish a physical medium dictionary, and no
+  textbook attribution can make epsilon0/2 dimensionally equal to mass density.
+framework_decision: >-
+  Official metrology supports the exact SI columns, c relation, and correlation
+  audit. Numerical constants remain comparator evidence only; no external
+  source establishes G5's material, density, energy, or gravity interpretation.

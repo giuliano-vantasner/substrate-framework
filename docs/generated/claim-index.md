@@ -507,6 +507,15 @@ Conditional on a dimensionless real field theta, a physical length coordinate z,
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-001, C-DIM-002
 
+## C-MED-005
+
+In SI base-dimension order (M,L,T,I), permittivity epsilon has (-1,-3,4,2), inverse permeability mu_inverse has (-1,-1,2,2), mechanical mass density rho has (1,-3,0,0), and stiffness or energy density K has (1,-1,-2,0). Conditional on exact positive quantities and separately declared multiplicative conversions rho=a*epsilon and K=b*mu_inverse, both a and b require dimension (2,0,-4,-2), and c_m^2=K/rho=(b/a)*mu_inverse/epsilon. Hence c_m^2 equals the electromagnetic wave-speed square mu_inverse/epsilon exactly iff a=b. Their common value remains a free calibration: common rescaling changes rho, K, and energy while leaving speed fixed. For separately declared exact dimensionless real strain xi, u=K*xi^2/2 and u/c_m^2=a*epsilon*xi^2/2. Thus bare SI epsilon/2 is not a mass density and bare mu_inverse/2 is not an energy density. This exact conditional constitutive theorem derives no material, calibration, field or strain state, gravity coupling, observation, or substrate realization.
+
+- Accepted in: `v0.112.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-MED-001
+
 ## C-MIX-001
 
 For every finite complex m-by-n matrix M, there are square unitary column bases U and V and a same-shape rectangular diagonal Sigma with nonnegative entries such that U^dagger*M*V=Sigma and M=U*Sigma*V^dagger. The nonzero spectra of M*M^dagger and M^dagger*M are the squared singular values with the shape-required additional zeros. Individual bases are noncanonical: a repeated nonzero singular block permits the same unitary rotation on its paired left and right bases, while left and right null blocks permit independent unitary choices. For two same-size unitary column bases U_a,U_b, R=U_a^dagger*U_b is unitary and identical ordered bases give R=I. If row transforms A_i instead satisfy A_i*M_i*B_i^dagger=Sigma_i and map original coordinates to diagonal coordinates, the corresponding relative transform is A_a*A_b^dagger, not A_a^dagger*A_b. For a real symmetric matrix [[a,b],[b,d]], the proper rotation [[cos(theta),sin(theta)],[-sin(theta),cos(theta)]] with 2*theta=atan2(2*b,d-a) diagonalizes by R^T*M*R; a scalar identity block has arbitrary rotation and the numerical API chooses theta=0. These matrix facts establish no fermion mass matrix, Yukawa texture, flavor or family ontology, CKM identity, Cabibbo prediction, CP-phase count, charged-current or GIM mechanism, anomaly result, or substrate realization.

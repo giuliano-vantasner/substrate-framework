@@ -1,0 +1,33 @@
+campaign: P145
+claim: C-MED-005
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-MED-001: >-
+    Governs abstract co-scaled responses and matched exponents, but carries no
+    SI electric-current dimension, mechanical calibration, or strain energy.
+  C-MED-002: >-
+    Composes a declared primitive-basis response and an explicitly declared
+    density ratio; it does not identify its epsilon with measured SI epsilon0.
+  C-DIM-002: >-
+    Governs a different M,L,T primitive basis and explicitly leaves physical
+    identification and coefficients free.
+  C-IDN-001: >-
+    Supplies the generic exact rank and provenance ledger but not this SI
+    constitutive theorem.
+  C-GRV-001: >-
+    Governs Newton and source-coupling dimensions, not electromagnetic-to-
+    mechanical calibration.
+distinct_positive_object: >-
+  C-MED-005 uniquely states the M,L,T,I conversion dimension, the general
+  two-factor mechanical speed, equal-factor iff, common-scale orbit, and
+  amplitude-aware strain-energy ceiling in one reusable constitutive API.
+governed_consumers: [G5, W5, OD, AS2, AS3, AS4, OD3]
+decision: distinct_additive_claim

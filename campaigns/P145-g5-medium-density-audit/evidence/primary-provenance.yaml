@@ -1,0 +1,41 @@
+campaign: P145
+accepted_base:
+  release: v0.111.0
+  framework_checkpoint: 73ecbba
+  scientific_commit: e86930c
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_and_memory_files
+source_unit:
+  id: G5
+  path: merged-framework/bridges/phase-5/bridge_G5_Geff_medium_density.py
+  sha256: 38a28bb452b055e7aa7894e1c31e3fcc98bfc5c6a8cbee2040aa003c62a4071a
+dossier:
+  path: merged-framework/bridges/phase-5/dossiers/G5-dossier.md
+  sha256: 972605f48b9941c6a8d054c4bd7ca173d7cf6d05d370d92ac59db18d2a61e427
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/constitutive.py
+  - src/substrate_framework/induced_gravity.py
+  - campaigns/P008-constitutive-qualification
+  - campaigns/P016-primitive-unit-reduction
+  - campaigns/P065-od-absolute-scale-identifiability
+  - campaigns/P074-as3-induced-gravity-scaling
+  - campaigns/P141-g1-radiating-dilaton-audit
+  - campaigns/P142-g2-gordon-metric-audit
+  - campaigns/P143-g3-scalar-tensor-audit
+  - campaigns/P144-g4-radiation-reaction-audit
+external_primary_or_authoritative_sources:
+  - https://doi.org/10.59161/AUEZ1291
+  - https://www.bipm.org/en/si-base-units/metre
+  - https://physics.nist.gov/cuu/pdf/all.pdf
+memory_searches:
+  - medium density vacuum permittivity permeability identifiability
+  - G5 G_eff kappa epsilon_0 mu_0
+  - constitutive wave speed stiffness density
+authority_statement: >-
+  Memory hits and G5 are recall and candidate evidence. The accepted release,
+  accepted claim registry, exact canonical modules, BIPM SI definitions, and
+  individually reviewed P145 result supply authority.

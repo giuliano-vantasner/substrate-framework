@@ -1,0 +1,25 @@
+attempt: 0006
+campaign: P145
+candidate: B_C_D_E_F_G
+status: passed
+started_at: '2026-08-09T18:48:00Z'
+finished_at: '2026-08-09T19:05:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P145-g5-medium-density-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - GitNexus pre-change impact and post-edit detect_changes
+  - memory validate P145 claim and source review records
+  - git diff --check
+result:
+  source_graph: ALL_34_CHECKS_PASS
+  graph_nodes: 14
+  graph_predicates: 145
+  reverse_consumers: 9
+  false_positive_dependency_tokens: [QCD1_gluon_G5, SM1_gluon_G5]
+  gitnexus_risk: LOW
+  affected_processes: 0
+  claim_review: accepted_symbolic_verified_compatible_extension_active
+  source_review: G5_qualified
+  debt: []
+next_attempt: >-
+  Materialize C-MED-005, v0.112.0, the qualified G5 disposition, generated docs
+  and memory, then run one integrated repository promotion gate.

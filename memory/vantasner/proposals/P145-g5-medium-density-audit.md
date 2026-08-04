@@ -2,7 +2,7 @@
 description: Audit G5's medium-density and effective-Newton relation
 author: vantasner
 created: '2026-08-09T18:10:00Z'
-updated: '2026-08-09T18:30:00Z'
+updated: '2026-08-09T19:24:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,8 +11,8 @@ tags:
 - identifiability
 - migration-G5
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P145 G5 Medium-Density and Effective-Newton Audit
 
@@ -43,7 +43,8 @@ Both bodies, literal predicates, full output, and further comparator material
 remain unopened before this freeze. The generated queue necessarily exposed
 G5's headline, four displayed relations, rounded values, fifteen static and
 literal checks, one assertion, symbolic-only hints, and dependencies G1, G2,
-G3, and G4. G5 remains pending adjudication. The predecessor worktree's
+G3, and G4. G5 was pending adjudication at freeze and is now qualified by
+P145. The predecessor worktree's
 uncommitted Phase 47/48 and engineering files remain excluded.
 
 ## Invariants, Conventions, and Allowed Imports
@@ -129,9 +130,9 @@ gravity coupling, observation, or substrate mechanism.
 
 ## Proposed Claim Delta
 
-P145 provisionally reserves C-MED-005 under revision 0001. Repository registry,
+P145 reserved and promoted C-MED-005 under revision 0001. Repository registry,
 campaign, module, and durable-memory searches found no prior use of that
-identifier or an accepted theorem carrying the SI conversion-factor dimension,
+identifier before promotion or an accepted theorem carrying the SI conversion-factor dimension,
 two-factor speed ratio, common-scale orbit, and strain-energy ceiling together.
 C-MED-001 and C-MED-002 remain dependencies or neighboring ceilings rather than
 duplicates: their response variables already have declared mechanical dimensions
@@ -193,42 +194,48 @@ record.
 
 | Debt | Discharge artifact | Status |
 | --- | --- | --- |
-| G5 executable and literal predicates are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all fifteen predicates | open |
-| SI electric dimensions may be suppressed | Exact M,L,T,I ledger and dimension-residual mutations | open |
-| Mechanical density or energy may be named without conversion | General dimensioned dictionary, scale orbit, and energy-density typing | open |
-| Kappa conventions may mix natural and SI units | Source-typed coupling ledger with c and hbar restoration | open |
-| Linked consequences may be called independent predictions | Dependency graph, log-rank, left-null, and arbitrary-target audit | open |
-| Existing medium and gravity claims may be duplicated | Registry/module/campaign/memory nonduplication decision | open |
-| Dependencies and reverse consumers are incomplete | G1 G2 G3 G4 plus nine reverse consumers and frozen graph replay | open |
-| Queue disposition docs release and memory may diverge | Individual review or no-new-claim adjudication and one governed terminal transaction | open |
+| G5 executable and literal predicates are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all fifteen predicates | discharged |
+| SI electric dimensions may be suppressed | Exact M,L,T,I ledger and dimension-residual mutations | discharged |
+| Mechanical density or energy may be named without conversion | General dimensioned dictionary, scale orbit, and energy-density typing | discharged |
+| Kappa conventions may mix natural and SI units | Source-typed coupling ledger with c and hbar restoration | discharged |
+| Linked consequences may be called independent predictions | Dependency graph, log-rank, left-null, and arbitrary-target audit | discharged |
+| Existing medium and gravity claims may be duplicated | Registry/module/campaign/memory nonduplication decision | discharged |
+| Dependencies and reverse consumers are incomplete | G1 G2 G3 G4 plus nine reverse consumers and frozen graph replay | discharged |
+| Queue disposition docs release and memory may diverge | Individual review and one governed terminal transaction | discharged |
 
 ## Review and Promotion Plan
 
-Any newly proposed claim receives a fresh independent derivation and individual
-claim review; no identifier is currently reserved. G5 receives a
-predicate-level terminal disposition whether or not a new claim is promoted.
-A mixed unit maps only exact accepted surfaces and names every invalid unit,
-free-parameter, independence, material, gravitational, empirical, and substrate
-clause. A no-new-claim boundary leaves v0.111.0 unchanged. The queue, docs,
-accepted memory, proposal memory, and parent effort change only at their proper
-governance boundaries. A final attempt starts in progress before the single
-integrated repository gate, is finalized afterward, and receives only
-record-sensitive checks.
+C-MED-005 received a fresh independent derivation and individual claim review.
+G5 received its predicate-level qualified disposition. The disposition maps
+only exact accepted surfaces and names every invalid unit, free-parameter,
+independence, material, gravitational, empirical, and substrate clause. Release
+v0.112.0, the queue, docs, accepted memory, proposal memory, and parent effort
+advance only at their proper governance boundaries. Final attempt 0007 began in
+progress before the single integrated repository gate, finalized afterward,
+and receives only record-sensitive checks.
+
+## Adjudicated Outcome
+
+P145 promotes C-MED-005 as a symbolic-verified compatible extension depending
+on C-MED-001 and qualifies G5 through C-MED-001, C-MED-005, C-IDN-001, and
+C-GRV-001. The canonical and independent routes pass 36 and 20 checks, 17
+focused package tests pass, and the fourteen-node graph passes 34 checks over
+145 predicates. The integrated repository boundary passes 1,275 tests with
+147 accepted claims, 593 valid memory records, and 75 pending queue units.
+Native G5 passes all fifteen checks without a NumPy integration event; inherited
+immutable G1 and G4 remain alias-only through `np.trapezoid`.
 
 ## Done Gate
 
-P145 closes only when an exact positive unit-aware constitutive and coupling
-ledger exists through accepted APIs or a distinct reviewed addition, all
-fifteen predicates are sensitively adjudicated, G5 receives a terminal
-disposition, dependencies and nine reverse consumers close, generated state
-agrees, and the campaign ledger is empty. A passing source tally, correct
-wave-speed product, numerically familiar vacuum constants, dimensional
-criticism, free kappa, or no-new-claim decision alone does not complete the
-campaign.
+P145 is closed. The exact unit-aware constitutive ledger exists as an accepted
+reviewed addition; all fifteen source predicates are sensitively adjudicated;
+G5 has a terminal disposition; nine reverse consumers close; generated state
+agrees; and the campaign debt ledger is empty. The source's tally and familiar
+constants remain evidence rather than the basis of the accepted theorem.
 
 ## Cross-References
 
-The governing references are P008, P016, P065, P074, P141 through P144, G1
-through G5, C-MED-001, C-MED-002, provisional C-MED-005, C-DIM-002, C-IDN-001,
-C-GRV-001, C-RAD-001, C-GOR-001, C-STG-001, C-RR-001, v0.111.0, and the parent
+The governing references are P008, P016, P065, P074, P141 through P145, G1
+through G5, C-MED-001, C-MED-002, C-MED-005, C-DIM-002, C-IDN-001,
+C-GRV-001, C-RAD-001, C-GOR-001, C-STG-001, C-RR-001, v0.112.0, and the parent
 migration effort.

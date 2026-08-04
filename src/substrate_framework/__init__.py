@@ -395,12 +395,16 @@ from .collective_coordinates import (
     transform_collective_coordinate,
 )
 from .constitutive import (
+    MechanicalMediumConversion,
+    SIConstitutiveDimensionLedger,
     co_scaled_inverse_permeability,
     co_scaled_permittivity,
     co_scaled_wave_speed,
     lattice_debye_energy,
     lattice_reduced_responses,
     local_wave_speed,
+    mechanical_medium_conversion,
+    si_constitutive_dimension_ledger,
 )
 from .dimensional_analysis import (
     dimensionless_mass_coordinate,
@@ -960,6 +964,7 @@ __all__ = [
     "LinearSymmetryHessianEvidence",
     "MaxwellEulerLagrange",
     "MasslessScalarFlatFLRW",
+    "MechanicalMediumConversion",
     "MassiveTripletDipoleExtrema",
     "MassiveTripletDipoleInteraction",
     "StaticMaxwellPointSource",
@@ -982,6 +987,7 @@ __all__ = [
     "ReflectedEscapeEnsemble",
     "SolverTolerances",
     "ScalarStressLedger",
+    "SIConstitutiveDimensionLedger",
     "SourceAudit",
     "SourceMatch",
     "SymmetricPairLossLedger",
@@ -1219,6 +1225,7 @@ __all__ = [
     "mixed_sine_gordon_linearized_residual",
     "mixed_sine_gordon_log_scale_jacobian",
     "mixed_sine_gordon_physical_coordinates",
+    "mechanical_medium_conversion",
     "mixed_sine_gordon_residual",
     "mixed_sine_gordon_scale_choice",
     "newton_dimension_ledger",
@@ -1354,6 +1361,7 @@ __all__ = [
     "sine_gordon_stress_tensor_contravariant",
     "sine_gordon_stress_tensor_covariant",
     "sine_gordon_stress_trace",
+    "si_constitutive_dimension_ledger",
     "sinusoidal_boundary_sign_correlation",
     "spatial_parity_transform",
     "static_kink_field",

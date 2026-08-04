@@ -1,0 +1,43 @@
+campaign: P145
+source_unit: G5
+accepted_base: v0.111.0
+accepted_inputs:
+  - {claim: C-MED-001, use: conditional response ratio and wave-speed ceiling}
+  - {claim: C-DIM-002, use: dimensions do not select a physical dictionary or coefficient}
+  - {claim: C-IDN-001, use: exact rank and provenance do not establish physical independence}
+  - {claim: C-GRV-001, use: Newton dimensions free coefficient and source-typed coupling ceiling}
+nearby_accepted_ceiling:
+  - {claim: C-MED-002, use: declared abstract density dictionary only, not substitution of SI epsilon0}
+  - {claim: C-STG-001, use: natural-unit Einstein-scalar coupling and no physical kappa selection}
+  - {claim: C-RAD-001, use: no material or Newton normalization}
+  - {claim: C-GOR-001, use: effective propagation geometry only}
+  - {claim: C-RR-001, use: no material or gravitational coupling}
+mathematical_inputs:
+  - SI base-dimension order M L T I
+  - positive exact permittivity inverse permeability and conversion factors
+  - dimensionless exact real strain amplitude
+  - mechanical wave relation c_m^2=K/rho
+  - quadratic elastic energy density u=K*xi^2/2 as a declared constitutive model
+external_imports:
+  - current BIPM SI Brochure for definitions and unit provenance
+  - BIPM exact speed-of-light definition
+  - current NIST 2022 CODATA constants for post-selection regression only
+source_declared_inputs:
+  - epsilon0 and mu0 raw floating values
+  - raw one-half density and unit-strain energy identifications
+  - note-13 kappa=8*pi*G_eff with Newton-G units
+  - G1 G2 G3 and G4 narratives
+excluded_from_derivation_or_selection:
+  - all G5 rounded values and tolerances
+  - physical medium density stiffness strain energy buoyancy or lattice claims
+  - note-13 coupling as accepted authority
+  - any G1 through G4 rejected gravity or substrate statement
+  - observed Newton G as a derivation input
+free_parameters:
+  - inertia conversion a
+  - stiffness conversion b
+  - common conversion when a=b
+  - strain amplitude xi
+  - gravitational kappa and its source normalization
+claim_delta: C-MED-005
+debt: []
