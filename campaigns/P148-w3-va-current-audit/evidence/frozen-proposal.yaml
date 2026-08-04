@@ -1,0 +1,91 @@
+id: P148
+base_release: v0.114.0
+base_commit: 49277be
+scientific_base_commit: 0d623a5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [W3]
+question: >-
+  Reproduce and independently audit W3's claim that a sine-Gordon
+  characteristic decomposition supplies a physical vector-minus-axial charged
+  current, and determine exactly which statements are scalar derivative and
+  parity identities, accepted nonlinear characteristic balances, boundary
+  trace or correlation statements, independently declared internal currents,
+  or genuinely require Lorentz matter, gauge, and interaction dynamics.
+invariants:
+  - >-
+    C-SG-011 already proves that J_plus=phi_t+phi_x and
+    J_minus=phi_t-phi_x have nonlinear transport defects -sin(phi), and that
+    the off-shell topological current is conserved identically. Neither object
+    is an independently conserved weak chiral current or V-A interaction.
+  - >-
+    C-SG-012 fixes signature (+,-), covariant and contravariant stress signs,
+    one-half light-cone derivatives, and sourced null-stress balances. The
+    massless model obtained by deleting the potential is not the small-field
+    limit of normalized sine-Gordon.
+  - >-
+    C-SG-013 separates a fixed-coordinate boundary sign correlation from
+    topological charge transfer. Neither observable implies the other, and
+    parity maps coordinate and outward-normal boundary data differently.
+  - >-
+    C-BND-001 qualifies W1: its scalar boundary residual is a covariant
+    parameter family with one free trace, not a selected chiral state,
+    intrinsic parity violation, charge map, or weak interaction.
+  - >-
+    C-REP-002 qualifies W2: an independent projector factor can carry
+    Hermitian closing SU2 actions, but W2's same-carrier construction, labels,
+    charge-event matching, parity guard, and physical weak-doublet reading are
+    not accepted premises.
+  - >-
+    C-U1-001's Noether current belongs to an independently declared complex
+    field, vanishes for a real field, and requires its own on-shell equation
+    plus boundary flux for charge conservation. It is not the accepted real
+    sine-Gordon field or topological current.
+  - >-
+    C-GAU-001 shows that a gauge interaction requires a declared matter
+    transformation, connection, covariant derivative, and coupling; local
+    covariance alone still supplies no gauge kinetic action or force.
+  - >-
+    The generated queue exposes W3's broad headline, eight named dependencies,
+    seven static and literal checks, one assertion, symbolic and numeric hints,
+    two immutable legacy trapezoid calls, and no result excerpt. Source and
+    dossier bodies, exact predicates, formulas, samples, outputs, and
+    thresholds remain unopened.
+allowed_imports:
+  - C-SG-011 only for exact characteristic defects topological-current parity and explicit weak-sector ceilings
+  - C-SG-012 only for metric light-cone stress and conservation conventions
+  - C-SG-013 only for boundary correlation parity and charge-transfer independence
+  - C-BND-001 only for W1's qualified scalar boundary residual theorem
+  - C-REP-002 only for the independent SU2 carrier-factor theorem and physical ceilings
+  - C-U1-001 only as a distinct conditional complex-field Noether current
+  - C-GAU-001 only as an independent statement of missing connection and local-covariance premises
+  - exact 1+1 tensor calculus differential identities parity pullbacks and declared boundary flux balances
+  - W3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce W3 literally and classify every predicate by its evaluated scalar derivative current parity boundary and numerical object.}
+  - {id: B, description: Treat W3's characteristic combinations as already accepted C-SG-011 and C-SG-012 identities with no new claim.}
+  - {id: C, description: Derive a convention-explicit 1+1 scalar vector and Hodge-dual axial derivative ledger with divergences parity duality and null combinations.}
+  - {id: D, description: Derive the boundary flux and trace-family consequences separately from fixed-coordinate sign correlation and topological transfer.}
+  - {id: E, description: Compare the real-scalar derivative objects with an independently declared complex-field Noether current and a true matter-connection interaction completion.}
+  - {id: F, description: Close source dependencies reverse consumers compatibility nonduplication disposition generated state and the empty debt ledger.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact field type metric orientation raised-lowered index and derivative conventions
+  - distinction among identities conservation laws boundary balances internal charges and interaction vertices
+  - accepted nonlinear sine-Gordon compatibility without deleting or linearizing away the potential
+  - parity covariance versus fixed-theory symmetry state asymmetry and intrinsic violation
+  - source current and coupling dimensions plus boundary-flux hypotheses
+  - correct constant-field massless zero-coupling full-line and half-line limits
+  - load-bearing derivative sign metric orientation parity source and boundary mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+  - source outputs numerical samples and external comparators excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, W3 and dossier hashes, candidates,
+  tensor and parity conventions, source and current distinctions, selection
+  criteria, mutation plan, compatibility policy, and done gate are frozen and
+  committed. Queue and parent records already expose the broad headline,
+  dependency names, check and assertion counts, oracle hints, and legacy-call
+  count; those hints do not select a candidate. Source and dossier bodies,
+  exact predicates, formulas, samples, output, thresholds, and further
+  comparator material remain unopened until that boundary.
+status: draft

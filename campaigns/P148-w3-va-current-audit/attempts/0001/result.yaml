@@ -1,0 +1,18 @@
+attempt: 0001
+campaign: P148
+candidate: initial_comparator_blind_freeze
+status: failed
+started_at: '2026-08-09T23:40:00Z'
+finished_at: '2026-08-09T23:43:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P148-w3-va-current-audit.md --base /home/dan/substrate-framework
+result:
+  repository_workflow: valid
+  memory_contract: failed_candidate_section_plain_prose_disclosure
+failure_class: contract_format
+scientific_effect: none_source_and_dossier_bodies_remain_unopened
+diagnosis:
+  - candidate_preregistration_began_with_a_table_immediately_after_the_heading
+  - the_memory_contract_requires_one_plain_prose_disclosure_line_before_structured_content
+next_attempt: add_the_disclosure_sentence_then_revalidate_the_unchanged_freeze

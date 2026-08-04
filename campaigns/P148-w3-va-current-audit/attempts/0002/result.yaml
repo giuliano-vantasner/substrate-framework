@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P148
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-09T23:44:00Z'
+finished_at: '2026-08-09T23:47:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P148-w3-va-current-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+freeze:
+  proposal_sha256: 52f42e62c18b8c7b7066a9a95d9775c8e3b286a3c1445a3102f4e13281e4e325
+  frozen_proposal_sha256: 52f42e62c18b8c7b7066a9a95d9775c8e3b286a3c1445a3102f4e13281e4e325
+  memory_contract_sha256: 57293379d27c2a049c1781c536bcd8eb5457ac6e121e1b974abf10305616f753
+  source_sha256: b49a0bd1075b16b5906719b6ed51454ed04adab5168be7ec98178599313b3f17
+  dossier_sha256: c9b327bba0fa227083017173cae475728f061e7b82da0f1810dbfb9f74e00b5b
+source_opened_or_executed: false
+debt:
+  - reproduce_W3_native_and_alias_only_then_adjudicate_every_predicate
+  - resolve_nonduplication_before_any_claim_or_implementation
+next_attempt: inspect_and_reproduce_the_hash_pinned_source_under_the_frozen_contract

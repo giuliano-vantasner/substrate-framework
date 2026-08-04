@@ -1,0 +1,13 @@
+attempt: 0003
+campaign: P148
+candidate: initial_comparator_blind_freeze
+status: failed
+started_at: '2026-08-09T23:48:00Z'
+finished_at: '2026-08-09T23:49:00Z'
+command: git diff --cached --check
+result:
+  - campaigns/P148-w3-va-current-audit/proposal.yaml_new_blank_line_at_EOF
+  - campaigns/P148-w3-va-current-audit/evidence/frozen-proposal.yaml_new_blank_line_at_EOF
+failure_class: formatting
+scientific_effect: none_source_and_dossier_bodies_remain_unopened
+next_attempt: remove_only_the_trailing_blank_lines_rehash_and_commit_the_unchanged_freeze
