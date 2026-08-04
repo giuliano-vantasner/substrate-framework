@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P149
+candidate: initial_comparator_blind_freeze
+status: passed
+started_at: '2026-08-10T01:07:00Z'
+finished_at: '2026-08-10T01:09:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P149-w4-missing-energy-audit.md --base /home/dan/substrate-framework
+  - cmp campaigns/P149-w4-missing-energy-audit/proposal.yaml campaigns/P149-w4-missing-energy-audit/evidence/frozen-proposal.yaml
+freeze:
+  proposal_sha256: 33a12bf08d88a972983b3fe5da82321cf616e918ff3cbc69f6f79801a1324054
+  frozen_proposal_sha256: 33a12bf08d88a972983b3fe5da82321cf616e918ff3cbc69f6f79801a1324054
+  memory_contract_sha256: 85c91dfd5e497fd8d3ca41dc02acf3830ec0eee9646476b18a70a70204fbf8f0
+  source_sha256: afa341c860ba89889d8d0a9fe6cd62948b5303f243e3884abf7d3acf24a7f602
+  dossier_sha256: c72601001ded5c27bd56984609afcffb664e02aacbfca7222e9d583f662f4413
+source_opened_or_executed: false
+debt:
+  - reproduce_W4_and_adjudicate_every_predicate
+  - resolve_energy_momentum_observability_nonduplication_before_any_claim_or_implementation
+next_attempt: commit_the_freeze_then_inspect_and_reproduce_the_hash_pinned_source

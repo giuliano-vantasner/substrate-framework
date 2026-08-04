@@ -1,0 +1,12 @@
+attempt: 0001
+campaign: P149
+candidate: initial_comparator_blind_freeze
+status: failed
+started_at: '2026-08-10T01:05:00Z'
+finished_at: '2026-08-10T01:06:00Z'
+command: apply_patch_initial_freeze_files
+result: patch_payload_missing_required_terminal_newline
+failure_class: patch_envelope_format
+scientific_effect: none_source_and_dossier_bodies_remain_unopened
+diagnosis: dynamically_composed_patch_did_not_end_with_the_exact_apply_patch_sentinel_line
+next_attempt: preserve_the_content_and_correct_only_the_patch_envelope

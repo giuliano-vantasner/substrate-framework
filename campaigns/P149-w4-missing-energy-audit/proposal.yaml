@@ -1,0 +1,92 @@
+id: P149
+base_release: v0.114.0
+base_commit: 0245a98
+scientific_base_commit: feb8191
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [W4]
+question: >-
+  Reproduce and independently audit W4's claim that a sine-Gordon boundary
+  outcome supplies neutrino-like missing energy and absorbed-versus-reflected
+  momentum, and derive the exact energy-momentum and observability conditions
+  needed to distinguish an accepted threshold identity, a boundary flux
+  ledger, a conditional two-body partition, a detector-inaccessible channel,
+  and a physical charged-current particle interpretation.
+invariants:
+  - >-
+    C-SG-002 fixes the exact normalized breather energy
+    E_b=16*sqrt(1-omega^2), while C-SG-005 defines the threshold deficit
+    Delta=16-E_b and proves only the exact partition E_b+Delta=16. Delta is not
+    a separately derived interaction energy or constituent share.
+  - >-
+    C-SG-008 fixes exact Lorentz energy-momentum for one accepted boosted
+    breather. It does not provide post-boundary constituent states, velocities,
+    masses, recoil, or a decay/scattering S-matrix.
+  - >-
+    C-SG-012 fixes signature (+,-), the local stress tensor, mixed-component
+    signs, on-shell conservation, and the need for explicit boundary flux
+    hypotheses before integrated energy or momentum statements.
+  - >-
+    C-SG-011 and C-SG-013 fix winding charge and right-half-line charge change
+    from boundary field data, separately from boundary sign correlation,
+    energy transfer, constituent identity, or detector visibility.
+  - >-
+    C-BND-001 proves that one scalar boundary residual leaves one trace free
+    and supplies neither field evolution, boundary work, charge selection, nor
+    a weak interaction.
+  - >-
+    P148 qualifies W3 through accepted scalar identities and explicitly
+    rejects its physical V-A current, charged vertex, charge event, gauge,
+    anomaly, and weak-sector readings. W4 may not import those rejected
+    statements.
+  - >-
+    C-RAD-001 supplies a conditional source-work and outward-flux equality only
+    for its separately declared linear scalar action, retarded data, and source
+    history. C-GOR-001 supplies conditional effective geometry with no material
+    stress or Einstein-source match.
+  - >-
+    The generated queue exposes W4's broad headline, dependencies G1 G2 W3 and
+    W5, eight static and literal checks, one assertion, symbolic and numeric
+    hints, no result excerpt, and a pending disposition. Source and dossier
+    bodies, exact predicates, formulas, samples, outputs, thresholds, and
+    compatibility shape remain unopened.
+allowed_imports:
+  - C-SG-001 and C-SG-002 only for the exact rest breather and normalized energy
+  - C-SG-005 only for the threshold deficit identity and its non-interaction ceiling
+  - C-SG-008 only for one accepted boosted-breather energy-momentum vector
+  - C-SG-011 and C-SG-013 only for exact winding boundary-transfer and correlation distinctions
+  - C-SG-012 only for stress-energy signs local conservation and boundary-flux requirements
+  - C-BND-001 only for the scalar boundary trace-family and missing-dynamics ceiling
+  - C-RAD-001 only as a distinct conditional example of an action-derived source-work ledger
+  - C-GOR-001 only for its effective-geometry theorem and explicit missing-stress ceiling
+  - P148 and C-REP-002 only for rejected W3 current and W2 charge-event imports
+  - exact special-relativistic 1+1 energy-momentum algebra and declared detector acceptance maps
+  - W4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce W4 literally and classify every predicate by its evaluated energy momentum charge boundary and observability object.}
+  - {id: B, description: Treat W4's total sixteen ledger solely as the accepted breather-plus-threshold-deficit identity with no constituent partition.}
+  - {id: C, description: Derive a convention-explicit half-line stress-energy balance in which reflected absorbed and boundary-work terms require actual flux traces and evolution.}
+  - {id: D, description: Derive the general conditional two-body energy-momentum partition and identify the symmetry or on-shell premises required for equal shares or recoil.}
+  - {id: E, description: Separate detector-inaccessible energy from conserved missing four-momentum and from a physical neutral particle or charged-current event using countermodels.}
+  - {id: F, description: Close source dependencies reverse consumers compatibility nonduplication disposition generated state and the empty debt ledger.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact state field stress-tensor index sign frame and boundary-normal conventions
+  - distinction among threshold identities constituent partitions boundary work detector acceptance and particle interpretations
+  - accepted sine-Gordon energy momentum winding and boundary compatibility
+  - conservation closure with all incoming reflected transmitted absorbed stored and driven terms
+  - correct rest zero-drive elastic no-absorption equal-mass threshold and parity limits
+  - source energy momentum charge current coupling and detector dimensions
+  - load-bearing energy split momentum sign boundary work charge and visibility mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+  - source outputs numerical samples and external comparators excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, W4 and dossier hashes, candidates,
+  energy-momentum and boundary conventions, source-current-observability
+  distinctions, selection criteria, mutation plan, compatibility policy, and
+  done gate are frozen and committed. Queue and parent records already expose
+  the broad headline, dependency names, check and assertion counts, and oracle
+  hints; those hints do not select a candidate. Source and dossier bodies,
+  exact predicates, formulas, samples, output, thresholds, compatibility
+  shape, and further comparator material remain unopened until that boundary.
+status: draft
