@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P145
+candidate: preregistration
+status: failed
+started_at: '2026-08-09T18:10:00Z'
+finished_at: '2026-08-09T18:12:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P145-g5-medium-density-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  repository: WORKFLOW_VALID_146_claims_146_accepted_0_proposals
+  migration_queue: 218_units_76_pending_0_partial
+  memory_record: failed_frontmatter_delimiter
+  whitespace: passed
+failure_class: implementation
+mechanism: >-
+  The apply-patch construction accidentally retained one literal leading plus
+  character on the first line of both YAML copies and the memory record. The
+  repository validator did not parse the memory file, while memory validation
+  correctly rejected the missing exact frontmatter delimiter.
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_and_parent_exposure_recorded_in_contract
+next_attempt: >-
+  Remove only the three accidental leading plus characters, rerun the same
+  proposal, memory, and whitespace gates, and record a new freeze attempt.

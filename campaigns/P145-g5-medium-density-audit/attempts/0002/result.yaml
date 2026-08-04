@@ -1,0 +1,23 @@
+attempt: 0002
+campaign: P145
+candidate: preregistration
+status: passed
+started_at: '2026-08-09T18:12:00Z'
+finished_at: '2026-08-09T18:15:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P145-g5-medium-density-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  frozen_proposal_sha256: 5ddab6e0f0d7d9eb84473289077e9dacdb4603bdbcea143329450a537ec17504
+  repository: WORKFLOW_VALID_146_claims_146_accepted_0_proposals
+  migration_queue: 218_units_76_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_and_parent_exposure_recorded_in_contract
+next_attempt: >-
+  Commit the freeze boundary, compatibility-preflight immutable G5, reproduce
+  its exact tally, then audit every predicate, dimension, dependency, and
+  prediction-rank assertion.

@@ -1,0 +1,86 @@
+id: P145
+base_release: v0.111.0
+base_commit: 73ecbba
+scientific_base_commit: e86930c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [G5]
+question: >-
+  Reproduce and independently audit G5's claim that vacuum permittivity,
+  permeability, and a gravitational coupling determine a medium density,
+  strain-energy density, and linked effective-Newton relation, and determine
+  exactly which SI-unit conversions, constitutive premises, coupling
+  conventions, independent inputs, and parameter-free predictions exist.
+invariants:
+  - >-
+    C-MED-001 and C-MED-002 are conditional constitutive compositions. Their
+    response laws and density dictionary are declared premises, do not identify
+    SI vacuum constants with mechanical density, and do not establish a
+    physical medium or absolute scale.
+  - >-
+    C-DIM-002 fixes monomial powers only relative to its declared primitive
+    basis and leaves dimensionless coefficients and physical identifications
+    free. C-IDN-001 distinguishes exact row rank from provenance, independence,
+    and physical prediction.
+  - >-
+    C-GRV-001 requires a source-typed dimensional ledger before relating
+    Newton G to a field-equation coupling. C-STG-001 uses natural units and a
+    canonical energy-stress source; it does not select a physical kappa or
+    authorize an unqualified SI kappa equals eight pi G substitution.
+  - >-
+    C-RAD-001, C-GOR-001, and C-RR-001 supply no material realization or
+    Newton normalization. Qualified G1, G2, G3, and G4 cannot contribute their
+    rejected gravity, medium, source, or backreaction narratives.
+  - >-
+    SI base-dimension order is M L T I. Permittivity has
+    (-1,-3,4,2), permeability (1,1,-2,-2), mass density (1,-3,0,0),
+    stiffness and energy density (1,-1,-2,0), speed (0,1,-1,0),
+    Newton G (-1,3,-2,0), and G over c squared (-1,1,0,0).
+  - >-
+    A mechanical dictionary rho=lambda*epsilon and
+    stiffness=lambda*mu_inverse requires a common dimensioned lambda with
+    dimension (2,0,-4,-2); a bare dimensionless one-half cannot perform that
+    conversion. Likewise mu_inverse alone is not an energy density.
+  - >-
+    The generated queue exposes G5's headline and four displayed relations,
+    fifteen literal checks, one assertion, symbolic-only hints, dependencies
+    G1 G2 G3 G4, and rounded comparison values. Source and dossier bodies,
+    literal predicates, full output, and further comparators remain unopened.
+allowed_imports:
+  - C-MED-001 and C-MED-002 only under their declared constitutive and density-dictionary ceilings
+  - C-DIM-002 and C-IDN-001 only for exact dimension and provenance-bearing identifiability ledgers
+  - C-GRV-001 only for Newton dimensions additive freedom and source-normalization typing
+  - C-RAD-001 C-GOR-001 C-STG-001 and C-RR-001 only for their accepted interpretation ceilings
+  - exact SI dimensional algebra and continuum wave relation stiffness over density
+  - the current BIPM SI Brochure after freeze for SI definitions and unit dimensions
+  - official NIST or BIPM constant values after the structural comparator gate only
+  - G5 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce G5 literally and classify all fifteen predicates by dimensional homogeneity data flow independence and physical interpretation.}
+  - {id: B, description: Derive an exact four-base-dimension SI ledger for epsilon mu density stiffness energy density c G and every candidate coupling convention.}
+  - {id: C, description: Derive the most general common-conversion mechanical dictionary rho=lambda epsilon and stiffness=lambda mu_inverse and test whether its wave-speed cancellation adds anything beyond accepted constitutive claims.}
+  - {id: D, description: Separate kappa_G equals eight pi G as a definition from energy-density and mass-density Einstein source normalizations and audit every c and hbar restoration.}
+  - {id: E, description: Build an exact dependency and log-Jacobian rank ledger that distinguishes inputs definitions algebraic consequences linked measurements and parameter-free predictions while retaining free kappa.}
+  - {id: F, description: Construct dimension-valid alternate conversion and coupling families with identical wave speed but arbitrary density energy scale or Newton ratio.}
+  - {id: G, description: Close accepted composition novelty dependencies reverse consumers compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact SI dimensional homogeneity before numerical agreement or physical naming
+  - explicit separation of constitutive definitions independent inputs algebraic consequences and parameter-free tests
+  - source-typed gravitational coupling convention with every c and hbar factor declared
+  - parameter and assumption economy with conversion scales and kappa freedom retained
+  - correct common-rescaling null directions wave relation and zero or limiting cases
+  - load-bearing unit coefficient exponent convention and provenance mutations
+  - compatibility with accepted medium dimension identifiability and gravity ceilings
+  - reusable API value reverse-consumer closure nonduplication and generated-state consistency
+  - source rounded values and external constants excluded from concept selection and pass thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, candidate
+  set, exact SI dimensions, constitutive and coupling conventions, selection
+  criteria, mutation plan, compatibility policy, and done gate are frozen and
+  committed. Queue and parent records have already exposed the broad headline,
+  four displayed relations, tally, dependency names, oracle hint, and rounded
+  values; those values are excluded from candidate selection and thresholds.
+  The source body, check literals, full output, dossier body, and official
+  numerical constants remain unopened until that boundary.
+status: draft
