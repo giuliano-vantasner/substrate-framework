@@ -1,0 +1,23 @@
+campaign: P162
+proposed_claim: null
+nearest_claims:
+  C-KRN-002:
+    owns: inverse_square_family_d_equals_2s_plus_1_conditionality_and_dimension_power_nonidentifiability
+    ceiling: no_endpoint_geometry_gauge_action_or_dimensional_lift
+  C-LIN-001:
+    owns: exact_rank_consistency_uniqueness_equation_count_and_duplicate_row_semantics
+    ceiling: row_count_does_not_establish_independence_or_truth
+  C-LIE-003:
+    owns: exact_standard_fundamental_SU3_representation_algebra
+    ceiling: no_physical_color_action_dimension_or_substrate_mechanism
+novelty_test: >-
+  QCD5 supplies no new constraint direction. Its three rows are exact duplicates
+  already classified by C-LIN-001, while its exponent family and nonunit-s
+  witness are directly owned by C-KRN-002. The sector labels and amplitudes do
+  not enter the coefficient row. No new theorem, solver, API, or consumer need
+  remains after canonical composition.
+decision: terminal_qualification_by_accepted_composition_without_new_claim_or_API
+implementation_change: none
+duplicated_constants_or_solvers_added: false
+debt: []
+

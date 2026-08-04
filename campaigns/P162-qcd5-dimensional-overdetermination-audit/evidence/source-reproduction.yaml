@@ -1,0 +1,18 @@
+campaign: P162
+source_unit: QCD5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py
+sha256: 60a2f5b8dbd76f3b4d6b0a48e4fcd5ed9edbc6a4e1d3869cb4a40bf30c87084c
+dossier_path: merged-framework/bridges/phase-8/dossiers/QCD5-dossier.md
+dossier_sha256: e5169d4eae1706e9d000cf1c313e22bbcefcf9840ead86642224ab8bc0a8975d
+native:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py
+  exit_code: 0
+  passed_checks: 7
+  terminal_tally: ALL_7_CHECKS_PASS
+compatibility:
+  numpy_integration_surface: absent
+  mode: native
+scientific_reproduction: passed_all_executed_source_predicates
+headline_authority: none_the_tally_does_not_test_constraint_independence
+

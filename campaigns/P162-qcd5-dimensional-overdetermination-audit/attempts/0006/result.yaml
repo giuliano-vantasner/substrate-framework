@@ -1,0 +1,25 @@
+attempt: 0006
+campaign: P162
+candidate: B_F_exact_accepted_composition_and_counterfamilies
+status: passed
+started_at: '2026-08-10T18:34:00Z'
+finished_at: '2026-08-10T18:38:00Z'
+commands:
+  - .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/verify.py
+  - .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/independent_rank_review.py
+  - .venv/bin/python -m pytest tests/test_linear_systems.py tests/test_momentum_kernels.py tests/test_su3.py tests/test_source_audit.py
+results:
+  primary: ALL_32_CHECKS_PASS
+  independent: ALL_14_CHECKS_PASS
+  focused_tests: 46_passed
+scientific_closure:
+  fixed_s_system: {shape: 3x1, coefficient_rank: 1, augmented_rank: 1, row_dependencies: 2, solution: d_equals_3}
+  free_d_s_system: {shape: 3x2, coefficient_rank: 1, augmented_rank: 1, nullity: 1, family: d_equals_2s_plus_1}
+  single_row_result: same_fixed_s_solution_as_three_rows
+  dimension_amplitude_mutation: radial_exponent_unchanged
+  radial_amplitude_mutation: radial_exponent_changed
+  nonunit_endpoint: {s: 3_over_4, d: 5_over_2}
+decision: exact_accepted_composition_complete_without_new_claim_or_API
+debt:
+  - complete_graph_provenance_impact_disposition_memory_and_terminal_validation
+next_attempt: close_the_frozen_semantic_graph

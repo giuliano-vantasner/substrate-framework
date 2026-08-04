@@ -2,15 +2,15 @@
 description: Audit QCD5 and test whether three sector labels independently overdetermine dimension
 author: vantasner
 created: '2026-08-10T18:20:00Z'
-updated: '2026-08-10T18:20:00Z'
+updated: '2026-08-10T18:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-QCD5
 - dimensional-identifiability
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P162 QCD5 Dimensional Overdetermination Audit
 
@@ -85,12 +85,12 @@ and all familiar values are excluded from thresholds.
 
 ## Proposed Claim Delta
 
-The initial claim delta is empty because C-KRN-002 already owns the exact family
-`d=2s+1` and C-LIN-001 already governs repeated-row rank. Candidate C may
-receive a source-aware proposal only if the canonical nonduplication audit finds
-a distinct provenance or consumer need. Candidates D or E require every new
-premise and construction to be declared and independently verified; source
-labels cannot supply them.
+The source-aware claim delta remains empty. Candidate B is selected because
+C-KRN-002 already owns `d=2s+1` and C-LIN-001 already governs exact rank,
+consistency, nullity, equation count, and duplicate rows. Candidate C would
+duplicate `diagnose_linear_system`. Candidates D and E require sector-specific
+operators or geometry absent from QCD5. No new identifier, API, or release is
+planned.
 
 ## Implementation and Oracle Plan
 
@@ -112,11 +112,14 @@ without converting their green tallies into authority.
 
 ## Attempts and Continuation
 
-Attempts are append-only and distinguish compatibility, verifier, rank,
-representation, candidate, target, and foundation failures. A repeated-row
-failure returns first to accepted composition or a genuinely independent
-sector construction; it cannot rewrite C-KRN-002 or qualified source claims to
-save the headline.
+The append-only ledger preserves the prior-exposure-aware freeze, successful
+native replay, one verifier API-field failure, two graph-inventory failures,
+repaired exact closure, and complete source-graph replay. The inventory repairs
+distinguish lexical check sites, runtime executions, and actual assertion
+nodes. Primary and fresh independent routes pass 32 and 14 checks, 46 focused
+accepted-API tests pass, and the graph route passes 20 checks over 91 lexical
+and 99 runtime predicates. Candidates A, B, F, and G close the source through
+exact accepted composition, counterfamilies, and governance.
 
 ## Debt Ledger
 
@@ -127,12 +130,12 @@ continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| QCD5 predicate strength is unaudited | Reproduce and classify all seven checks and the assertion | open |
-| Three-sector independence is unproved | Recover the exact constraint rows and their provenance and rank | open |
-| Dimension and exponent selection are unresolved | Mutate `s` and distinguish a conditional specialization from identification | open |
-| Candidate C novelty is unknown | Audit C-LIN-001, canonical APIs, prior campaigns, and consumers | open |
-| Geometry and sector-specific operators are unspecified | Construct them with complete data or reject their source attribution | open |
-| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
+| QCD5 predicate strength is unaudited | Reproduce and classify all seven checks and the assertion | discharged |
+| Three-sector independence is unproved | Recover the exact constraint rows and their provenance and rank | discharged |
+| Dimension and exponent selection are unresolved | Mutate `s` and distinguish a conditional specialization from identification | discharged |
+| Candidate C novelty is unknown | Audit C-LIN-001, canonical APIs, prior campaigns, and consumers | discharged |
+| Geometry and sector-specific operators are unspecified | Construct them with complete data or reject their source attribution | discharged |
+| Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | discharged |
 
 ## Review and Promotion Plan
 
@@ -148,9 +151,11 @@ and one integrated terminal gate only at the terminal disposition boundary.
 P162 closes only when a positive exact theorem or complete accepted composition
 exists, every QCD5 predicate has an individual verdict, row rank and provenance
 are explicit, dimension and exponent inputs are typed, mutations are
-load-bearing, all consumers replay, governance agrees, and debt is empty. A
-rank deficiency, repeated `d=3`, or rejected interpretation alone cannot
-complete the campaign.
+load-bearing, all consumers replay, governance agrees, and debt is empty. The
+accepted composition, individual predicate review, rank and mutation oracles,
+semantic graph, disposition, generated queue, and durable decision satisfy
+that gate without changing v0.124.0. The integrated result is pinned in attempt
+0008.
 
 ## Cross-References
 

@@ -1,0 +1,26 @@
+campaign: P162
+source_unit: QCD5
+hash_pinned_lexical_or_semantic_consumers:
+  EM7: retroactive_QCD5_hardening_annotation_but_qualified_with_no_endpoint_selection
+  YM2: retroactive_QCD5_annotation_but_qualified_with_no_lift
+  QCD2: retroactive_QCD5_annotation_but_qualified_with_no_lift
+  D3S: claims_to_discharge_s1_conditionality_but_is_qualified_with_no_s1_selection
+  OD: accepted_identifiability_result_has_independent_rank_provenance_and_needs_no_QCD5_authority
+  AS4: duplicate_overdetermination_evidence_with_no_authority_from_QCD5
+  MD1: pending_counting_theorem_consumer_that_must_be_adjudicated_individually
+accepted_API_consumers:
+  source_change: none
+  canonical_change: none
+  affected_existing_consumers: none
+graph_replay:
+  nodes: 8
+  static_predicates: 91
+  runtime_predicates: 99
+  assertions: 7
+  alias_only: [YM2, QCD2]
+consumer_decision: >-
+  Terminally qualifying QCD5 narrows only unaccepted source prose. Qualified
+  antecedents retain their existing ceilings, OD keeps its independent exact
+  rank closure, duplicate AS4 gains no authority, and pending MD1 remains
+  individually queued. No canonical API changes require migration.
+debt: []

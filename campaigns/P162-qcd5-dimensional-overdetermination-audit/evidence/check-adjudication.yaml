@@ -1,0 +1,19 @@
+campaign: P162
+source_unit: QCD5
+checks:
+  - {id: QCD5.0, status: retained_exact_duplicate, mapping: [C-LIE-003, C-NVP-002], reason: The standard fundamental SU3 half-trace metric is exact and accepted but supplies no dimension constraint or physical color sector.}
+  - {id: QCD5.1, status: retained_as_shared_exponent_composition, mapping: [C-KRN-001, C-KRN-002], reason: Constant nonzero amplitudes leave the declared scalar Riesz radial exponent unchanged; this proves sameness of one formula rather than independence of three constraints.}
+  - {id: QCD5.2, status: retained_as_repeated_conditional_specialization, mapping: C-KRN-002, reason: Each copied equation gives d=3 after s=1 and inverse-square behavior are supplied; the three solves have identical rows and provenance.}
+  - {id: QCD5.3, status: rejected_as_independent_overdetermination, mapping: [C-LIN-001, C-KRN-002], reason: Three equations and one unknown is only overdetermined by count; the coefficient rank is one with two row dependencies and one copied equation already gives the same conditional fixed-s solution.}
+  - {id: QCD5.GUARD-a, status: retained_as_fixed_s_family_uniqueness, mapping: C-KRN-002, reason: Within the supplied s1 Riesz family d2 and d4 do not give inverse-square behavior and d3 does; this does not select s1 or a physical dimension.}
+  - {id: QCD5.GUARD-b, status: rejected_as_irrelevant_mutation, mapping: C-KRN-002, reason: Kappa of d changes d-sensitivity of amplitude but not r*d_dr(log G) or the Coulomb force exponent, so the displayed dimension equation remains identical across sectors.}
+  - {id: QCD5.4, status: retained_as_conditionality_witness, mapping: C-KRN-002, reason: s3/4 gives d5/2 and proves d3 is conditional on s1; the hard-coded absence boolean and retroactive D3S derivation claim receive no authority.}
+headline_decision: >-
+  Select exact accepted composition with no new claim or API. QCD5 reproduces
+  the accepted family d=2s+1, a supplied-s specialization, duplicate SU3 trace
+  algebra, and a useful conditionality witness. It does not supply two
+  independent constraint directions, sector-specific operators, a geometric
+  dimension map, accepted s1 selection, physical gauge sectors, or substrate
+  lift. Its claimed independent overdetermination is rejected.
+debt: []
+

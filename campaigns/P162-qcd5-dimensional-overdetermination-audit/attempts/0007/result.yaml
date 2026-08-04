@@ -1,0 +1,27 @@
+attempt: 0007
+campaign: P162
+candidate: B_G_frozen_source_graph_semantic_replay
+status: passed
+started_at: '2026-08-10T18:38:00Z'
+finished_at: '2026-08-10T18:41:00Z'
+command: .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  exit_code: 0
+  checks: 20
+  terminal_tally: ALL_20_CHECKS_PASS
+  nodes_replayed: 8
+  static_source_predicates: 91
+  runtime_source_predicates: 99
+  source_assertions: 7
+  native_nodes: [QCD5, EM7, D3S, OD, AS4, MD1]
+  alias_only_nodes: [YM2, QCD2]
+semantic_closure:
+  - QCD5_builds_three_rows_from_one_exponent_function_and_never_computes_rank
+  - QCD5_guard_b_changes_dimension_sensitivity_but_not_the_radial_exponent
+  - qualified_YM2_QCD2_and_D3S_supply_no_endpoint_or_dimension_selection_authority
+  - OD_and_AS4_demonstrate_actual_explicit_rank_and_nullity_instruments
+  - MD1_imports_d3_into_a_separate_pending_counting_theorem
+compatibility: immutable_YM2_and_QCD2_alias_only_to_np.trapezoid
+debt:
+  - complete_impact_provenance_disposition_memory_and_terminal_validation
+next_attempt: close_record_only_adjudication_and_run_one_integrated_terminal_gate

@@ -1,0 +1,18 @@
+attempt: 0003
+campaign: P162
+candidate: B_exact_accepted_composition_primary_verifier
+status: failed
+started_at: '2026-08-10T18:30:00Z'
+finished_at: '2026-08-10T18:31:00Z'
+command: .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/verify.py
+passed_before_failure: 13
+failure:
+  layer: verifier_API_field_access
+  mechanism: >-
+    the verifier read laplacian_power directly from RieszRadialForceLedger,
+    while the canonical API exposes it through the nested kernel ledger
+  exception: AttributeError_RieszRadialForceLedger_has_no_attribute_laplacian_power
+  scientific_failure: false
+concurrent_independent_route: ALL_14_CHECKS_PASS
+repair: read_kernel_laplacian_power_without_changing_equations_or_thresholds
+next_attempt: rerun_primary_and_preserve_the_independent_result

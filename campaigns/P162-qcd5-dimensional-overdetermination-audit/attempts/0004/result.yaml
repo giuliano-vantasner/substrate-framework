@@ -1,0 +1,20 @@
+attempt: 0004
+campaign: P162
+candidate: B_source_graph_replay
+status: failed
+started_at: '2026-08-10T18:30:00Z'
+finished_at: '2026-08-10T18:31:00Z'
+command: .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/replay_source_graph.py /home/dan/substrate
+passed_before_failure: 8
+failure:
+  layer: verifier_inventory_model
+  source_unit: MD1
+  mechanism: >-
+    the graph replay treated MD1's nineteen lexical check call sites as its
+    runtime terminal tally, but a loop executes one site nine times and the
+    immutable source correctly reports twenty-seven executed checks
+  expected_from_lexical_inventory: 19
+  observed_terminal_tally: ALL_27_CHECKS_PASS
+  scientific_failure: false
+repair: distinguish_static_check_sites_from_runtime_check_executions
+next_attempt: rerun_graph_with_both_inventory_counts_explicit

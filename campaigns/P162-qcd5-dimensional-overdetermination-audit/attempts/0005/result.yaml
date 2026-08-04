@@ -1,0 +1,21 @@
+attempt: 0005
+campaign: P162
+candidate: B_source_graph_replay
+status: failed
+started_at: '2026-08-10T18:32:00Z'
+finished_at: '2026-08-10T18:33:00Z'
+command: .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/replay_source_graph.py /home/dan/substrate
+passed_before_failure: 8
+failure:
+  layer: verifier_inventory_model
+  source_unit: MD1
+  mechanism: >-
+    after separating lexical and runtime check counts, the graph still imposed
+    the common one-assert helper shape on MD1; its immutable helper raises an
+    exception explicitly and therefore has zero Python assert nodes
+  observed_static_checks: 19
+  observed_runtime_checks: 27
+  observed_assertions: 0
+  scientific_failure: false
+repair: pin_assertion_count_per_source_node_instead_of_assuming_one
+next_attempt: rerun_graph_with_exact_MD1_shape

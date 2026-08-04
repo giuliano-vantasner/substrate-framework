@@ -1,0 +1,63 @@
+campaign: P162
+title: QCD5 dimensional-overdetermination audit
+source_baseline: substrate@6d1f4e0
+source_units: [QCD5]
+base_release: v0.124.0
+release_after_adjudication: v0.124.0
+adjudicated_at: '2026-08-10T18:45:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every source predicate without treating the tally as a headline oracle.}
+  - {id: B, reason: C-KRN-002 and C-LIN-001 already supply the complete family and exact repeated-row semantics.}
+  - {id: F, reason: Endpoint row label amplitude inconsistent-rhs and radial-power counterfamilies falsify the independence reading.}
+  - {id: G, reason: Dependency consumer compatibility nonduplication impact disposition queue and memory audits close the transaction.}
+claims: []
+reviewed_existing:
+  - {id: C-LIE-003, decision: unchanged_standard_fundamental_SU3_algebra_without_dimension_authority}
+  - {id: C-NVP-002, decision: unchanged_conditional_Euclidean_2D_loop_without_lift_or_endpoint_authority}
+  - {id: C-KRN-001, decision: unchanged_fixed_input_scalar_Riesz_inverse}
+  - {id: C-KRN-002, decision: unchanged_inverse_square_family_d_equals_2s_plus_1_and_nonidentifiability}
+  - {id: C-LIN-001, decision: unchanged_equation_count_rank_consistency_and_duplicate_row_semantics}
+unpromoted_claims:
+  - {id: three_gauge_sectors_supply_independent_dimension_constraints, reason: All_three_rows_come_from_one_shared_exponent_function_and_have_rank_one_with_two_dependencies.}
+  - {id: d3_is_overdetermined, reason: One_fixed_s_row_already_gives_d3_and_three_copies_add_no_information.}
+  - {id: inverse_square_behavior_selects_d3, reason: It_selects_the_family_d_equals_2s_plus_1_and_s3_over_4_gives_d5_over_2.}
+  - {id: distinct_representation_factors_establish_independence, reason: There_are_only_two_amplitude_values_and_amplitudes_do_not_enter_the_constraint_rows.}
+  - {id: kappa_of_d_breaks_the_Coulomb_constraint, reason: A_nonzero_kappa_of_d_leaves_radial_potential_and_force_exponents_unchanged.}
+  - {id: D3S_discharges_the_endpoint_input, reason: The_retroactive_annotation_conflicts_with_the_accepted_D3S_qualification_and_receives_no_authority.}
+  - {id: substrate_lift_dimension_is_three, reason: No_geometry_dimension_map_physical_sector_or_substrate_mechanism_is_constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_rank_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0006/result.yaml
+  graph_closure_attempt: attempts/0007/result.yaml
+  terminal_gate: attempts/0008/result.yaml
+  source_review: memory/vantasner/decisions/QCD5-qualified-review.md
+source_disposition:
+  QCD5: qualified
+accepted_mappings: [C-LIE-003, C-NVP-002, C-KRN-001, C-KRN-002, C-LIN-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_or_current_numpy_APIs
+  immutable_primary: native_no_numpy_integration_surface
+  inherited_alias_only: [YM2, QCD2]
+validation_commands:
+  - .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/verify.py
+  - .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/independent_rank_review.py
+  - .venv/bin/python campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest tests/test_linear_systems.py tests/test_momentum_kernels.py tests/test_su3.py tests/test_source_audit.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

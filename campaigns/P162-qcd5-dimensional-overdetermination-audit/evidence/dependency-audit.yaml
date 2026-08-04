@@ -1,0 +1,18 @@
+campaign: P162
+source_unit: QCD5
+queue_candidate_dependencies:
+  D3S: qualified_through_C_LOC_001_and_C_KRN_001_but_its_s1_and_dimension_selection_is_rejected
+  EM7: qualified_through_C_KRN_001_C_KRN_002_C_MAX_001_with_endpoint_selection_and_dimensional_lift_rejected
+  YM2: qualified_through_C_NVP_001_C_KRN_001_C_KRN_002_with_dimensional_lift_rejected
+  QCD2: qualified_through_C_LIE_003_C_NVP_002_C_KRN_001_C_KRN_002_with_dimensional_lift_rejected
+accepted_composition:
+  C-KRN-001: fixed_input_scalar_Riesz_kernel_only
+  C-KRN-002: exact_inverse_square_family_conditional_specializations_and_nonidentifiability
+  C-LIN-001: equation_count_rank_consistency_uniqueness_and_duplicate_row_semantics
+nondependencies:
+  C-LIE-003: exact_SU3_trace_example_only
+  C-NVP-002: conditional_Euclidean_2D_loop_ceiling_only
+dependency_closure: complete_for_no_new_claim_composition
+hidden_imports: []
+debt: []
+

@@ -1,0 +1,31 @@
+revision: 0001
+campaign: P162
+parent_frozen_proposal_sha256: 58897a865cd86ea174e0f8ec1210fa23aa756e2fd37d7cc8107892760784c539
+trigger: >-
+  Renewed source-aware inspection confirms Candidate B is a complete positive
+  composition. The simultaneous system contains repeated rank-one rows, and
+  Guard b changes amplitude sensitivity rather than the radial exponent.
+unchanged:
+  - candidates_A_through_G_and_their_predeclared_structural_ordering
+  - exclusion_of_all_previously_exposed_source_values_from_selection
+  - algebraic_rank_and_row_provenance_as_the_independence_oracle
+  - exact_mutation_and_compatibility_requirements
+claim_delta:
+  identifiers: []
+  release_change: none_if_terminal_qualification_and_global_replay_pass
+  implementation_change: none_reuse_existing_pure_APIs
+selected_candidates: [A, B, F, G]
+source_corrections:
+  - treat_the_three_sector_equations_as_repeated_rows_not_independent_constraints
+  - separate_overdetermined_by_count_from_coefficient_rank_consistency_and_uniqueness
+  - preserve_only_the_conditional_s1_implies_d3_specialization
+  - reject_dimension_dependent_amplitude_as_an_irrelevant_radial_exponent_guard
+  - reject_D3S_as_accepted_s1_or_dimension_selection_authority
+  - require_distinct_sector_operators_or_measurements_before_claiming_independent_rows
+oracle: >-
+  Exact canonical Riesz and linear-system composition plus fresh row reduction,
+  nullspace and left-nullspace derivation, row-duplication and nonunit-s
+  mutations, native source replay, predicate adjudication, and frozen graph
+  closure.
+status: frozen
+

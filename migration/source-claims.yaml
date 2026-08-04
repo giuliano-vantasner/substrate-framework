@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 59
-  qualified: 147
+  pending_adjudication: 58
+  qualified: 148
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2929,8 +2929,48 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-LIE-003
+  - C-NVP-002
+  - C-KRN-001
+  - C-KRN-002
+  - C-LIN-001
+  qualification: QCD5's standard fundamental SU3 half-trace metric, shared Riesz potential and force exponents,
+    conditional s=1 to d=3 specialization, fixed-s uniqueness inside the supplied family, and s=3/4 to
+    d=5/2 witness survive as typed accepted composition. Its independent three-sector overdetermination
+    headline does not. All three simultaneous equations are copies of one shared exponent row. At fixed
+    s=1 their 3x1 matrix has coefficient and augmented rank one with two row dependencies; one row already
+    gives the same conditional d=3 solution. With d and s free the 3x2 system also has rank one, nullity
+    one, and family d=2s+1. Three gauge labels and two distinct amplitude values add no row provenance
+    because amplitudes never enter the constraint. The fabricated kappa(d) guard changes dimension sensitivity
+    but not the radial exponent; only a radial-dependent factor changes that equation. No independent
+    endpoint selection, geometry, dimension map, physical gauge-sector construction, overdetermined substrate
+    dimension, or substrate mechanism is accepted.
+  evidence:
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/source_adjudication.md
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/source-reproduction.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/source-audit.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/check-adjudication.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/input-provenance.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/dependency-audit.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/consumer-audit.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/candidate-comparison.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/primary-provenance.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/verify.py
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/independent_rank_review.py
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/reviews/replay_source_graph.py
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/attempts/0006/result.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/attempts/0007/result.yaml
+  - campaigns/P162-qcd5-dimensional-overdetermination-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/QCD5-qualified-review.md
+  note: P162 closes thirty-two primary, fourteen independent, forty-six focused accepted-API tests, and
+    twenty frozen-graph checks. The graph separates ninety-one lexical predicate sites from ninety-nine
+    runtime executions across eight units. Native QCD5 has no NumPy integration surface; immutable YM2
+    and QCD2 receive alias-only compatibility backed by np.trapezoid. Mutable P162 has zero legacy integration
+    references. No canonical claim, API, consumer, or release changes.
 - source_unit: SM1
   phase: phase-9
   path: merged-framework/bridges/phase-9/bridge_SM1_combined_gauge_group.py

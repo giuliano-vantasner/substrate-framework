@@ -1,0 +1,44 @@
+campaign: P162
+accepted_base:
+  release: v0.124.0
+  framework_checkpoint: 68ef8fd
+  scientific_commit: 1451670
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_engineering_framework_prose_and_personal_memory_files_outside_the_hash_pinned_QCD5_inputs
+source_unit:
+  id: QCD5
+  path: merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py
+  sha256: 60a2f5b8dbd76f3b4d6b0a48e4fcd5ed9edbc6a4e1d3869cb4a40bf30c87084c
+dossier:
+  path: merged-framework/bridges/phase-8/dossiers/QCD5-dossier.md
+  sha256: e5169d4eae1706e9d000cf1c313e22bbcefcf9840ead86642224ab8bc0a8975d
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/linear_systems.py
+  - src/substrate_framework/momentum_kernels.py
+  - src/substrate_framework/su3.py
+  - campaigns/P136-em7-fractional-force-audit
+  - campaigns/P159-ym2-yang-mills-lift-audit
+  - campaigns/P161-qcd2-su3-dimensional-lift-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - QCD5 dimension overdetermination repeated sector constraints
+  - equation count rank provenance d equals two s plus one
+authority_statement: >-
+  Memory and QCD5 are recall and candidate evidence. The pinned release,
+  accepted C-KRN-001 C-KRN-002 C-LIN-001 C-LIE-003 and C-NVP-002 claims,
+  canonical exact APIs, predicate-level audit, independent row-space
+  derivation, mutation-sensitive verifier, and frozen semantic graph supply
+  authority. No empirical comparator or new scientific import is required for
+  the no-delta accepted-composition decision.
+evidence_hashes:
+  frozen_proposal: 58897a865cd86ea174e0f8ec1210fa23aa756e2fd37d7cc8107892760784c539
+  source_revision: 91a373be9bfb53567338e45a56720d64b89a288b11299d4a275f5d601fb432ad
+  source_reproduction: f5cc534e8fa00957b8e5062a372eeece50c69510034727385d39cd3da85579c0
+  source_audit: 2e519bf0a3999ad812aba58b5016ba28f93d0a702325a4e5133e8d3bbbd648ed
+  check_adjudication: 18c6c0434a94e5c03359375985f5d0eb0485b9b8b74638050e95c31ad04185a0
+  source_graph_inventory: eaaf5bb77b5ba44add93ae9c54acc9edb9104a84381daed238514cec74a0df33
+  consumer_audit: 44b2cf3d08fcc32921841de2c0d70aaae07045e30deb406a78544aed1bd11807

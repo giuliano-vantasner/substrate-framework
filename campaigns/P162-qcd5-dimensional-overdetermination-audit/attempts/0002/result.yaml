@@ -1,0 +1,23 @@
+attempt: 0002
+campaign: P162
+candidate: A_native_hash_pinned_replay
+status: passed
+started_at: '2026-08-10T18:27:00Z'
+finished_at: '2026-08-10T18:29:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py
+source_sha256: 60a2f5b8dbd76f3b4d6b0a48e4fcd5ed9edbc6a4e1d3869cb4a40bf30c87084c
+compatibility:
+  mode: native
+  numpy_integration_surface: absent
+exit_code: 0
+terminal_tally: ALL_7_CHECKS_PASS
+observed:
+  static_checks: 7
+  assertions: 1
+classification: source_regression_evidence_only_pending_predicate_adjudication
+scientific_verdict: not_implied_by_green_tally
+debt:
+  - compute_the_exact_constraint_matrix_rank_and_nullspace
+  - distinguish_shared_exponent_from_independent_row_provenance
+  - test_whether_kappa_of_d_changes_the_radial_exponent_or_only_amplitude_sensitivity
+next_attempt: complete_static_inventory_and_independent_exact_rederivation

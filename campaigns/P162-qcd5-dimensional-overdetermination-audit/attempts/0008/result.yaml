@@ -1,0 +1,31 @@
+attempt: 0008
+campaign: P162
+candidate: terminal_record_only_qualification_and_integrated_gate
+status: passed
+started_at: '2026-08-10T18:46:00Z'
+finished_at: '2026-08-10T18:50:00Z'
+command: scripts/validate.sh
+prerequisites:
+  primary: ALL_32_CHECKS_PASS
+  independent: ALL_14_CHECKS_PASS
+  focused: 46_tests_passed
+  source_graph: ALL_20_CHECKS_PASS_over_91_static_and_99_runtime_predicates
+source_disposition: {QCD5: qualified}
+accepted_mappings: [C-LIE-003, C-NVP-002, C-KRN-001, C-KRN-002, C-LIN-001]
+claim_delta: []
+release: unchanged_v0.124.0
+results:
+  repository_contract: valid_160_accepted_claims_58_pending_units
+  generated_documentation: current
+  generated_memory: current
+  durable_memory: {status: passed, records: 665}
+  physics_skill: valid
+  compileall: passed
+  pytest: {status: passed, tests: 1427, seconds: 121.94}
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+compatibility:
+  immutable_QCD5: native_no_numpy_integration_surface
+  inherited_YM2_QCD2: alias_only_to_np.trapezoid
+  mutable_P162_legacy_references: 0
+debt: []
+next_attempt: continue_parent_migration_effort_at_the_next_pending_source_unit

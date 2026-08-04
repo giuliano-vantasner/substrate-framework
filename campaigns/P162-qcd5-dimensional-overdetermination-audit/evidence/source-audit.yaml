@@ -1,0 +1,66 @@
+campaign: P162
+source_unit: QCD5
+source_sha256: 60a2f5b8dbd76f3b4d6b0a48e4fcd5ed9edbc6a4e1d3869cb4a40bf30c87084c
+ast:
+  check_calls: 7
+  assert_nodes: 1
+  local_check_helper: true
+  local_scientific_helpers: [c_ds, G_sector, pot_exponent, force_exponent, force_exp_shared, shared_d_given_s]
+  imports: [sympy]
+compatibility_ast:
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+constructed_executable_objects:
+  - exact_standard_fundamental_SU3_half_trace_metric
+  - three_named_constant_amplitudes_with_only_two_distinct_values
+  - one_shared_Riesz_radial_exponent_function
+  - three_repeated_fixed_s_symbolic_solve_calls
+  - equation_count_greater_than_unknown_count_boolean
+  - fixed_s_dimension_sweep
+  - fabricated_dimension_dependent_amplitude_sensitivity
+  - nonunit_s_conditionality_witness
+absent_executable_objects:
+  - coefficient_or_augmented_constraint_matrix
+  - coefficient_rank_augmented_rank_nullspace_or_row_dependency_count
+  - independent_row_provenance_or_sector_specific_measurements
+  - independently_derived_sector_exponent_functions
+  - gauge_actions_quadratic_operators_sources_or_boundary_data
+  - metric_measure_Dirichlet_form_or_dimension_changing_map
+  - accepted_derivation_or_selection_of_s_equals_one
+load_bearing_findings:
+  - >-
+    The three simultaneous equations are identical copies of d=2s+1. At
+    supplied s=1 their one-column coefficient matrix has rank one and two row
+    dependencies. With d and s both free the three-by-two matrix also has rank
+    one and one-dimensional solution freedom.
+  - >-
+    The source sets over_determined from three greater than one and never
+    computes coefficient rank or row provenance. Its distinct_groups witness
+    checks only that the three named amplitudes contain at least two values;
+    SU2 and SU3 both use one half and no amplitude enters the constraint row.
+  - >-
+    A dimension-dependent nonzero amplitude kappa(d) changes d-derivative
+    sensitivity but not the radial log derivative or force exponent. Guard b
+    therefore mutates an irrelevant quantity and does not show that sectors
+    could select different d under the displayed Coulomb equation.
+  - >-
+    The s equals one input is load bearing: s equals three quarters gives d
+    equals five halves. The retroactive D3S annotation cannot override the
+    accepted C-KRN-002 and D3S qualification ceilings.
+  - >-
+    no_sg_derivation_of_s is assigned the literal boolean True. Its statement
+    is consistent with the source inventory but the check does not derive or
+    inspect that absence.
+narrative_conflict: >-
+  QCD5.1 correctly says the sectors share one exponent function, while QCD5.3
+  calls three copies of that function independent constraints. Equation count
+  is described as over-determination even though the source's own owner rule
+  requires at least two independent constraints.
+duplication:
+  Riesz_family_and_nonidentifiability: src/substrate_framework/momentum_kernels.py
+  exact_linear_rank_diagnostics: src/substrate_framework/linear_systems.py
+  SU3_trace_metric: src/substrate_framework/su3.py
+  check_helper: src/substrate_framework/verification.py
+debt: []
+

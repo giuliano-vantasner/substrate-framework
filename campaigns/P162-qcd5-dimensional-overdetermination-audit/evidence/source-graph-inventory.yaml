@@ -1,0 +1,18 @@
+campaign: P162
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: QCD5
+nodes:
+  - {source_unit: QCD5, role: adjudicated_root, path: merged-framework/bridges/phase-8/bridge_QCD5_d3_overdetermination.py, sha256: 60a2f5b8dbd76f3b4d6b0a48e4fcd5ed9edbc6a4e1d3869cb4a40bf30c87084c, checks: 7, assertions: 1}
+  - {source_unit: EM7, role: qualified_Riesz_dependency, path: merged-framework/bridges/phase-3/bridge_EM7_fractal_force_law.py, sha256: c8bf044d846d22eaa652a0f4c11cd5f5e2a51f98e49d0578536fbc4e96f63f22, checks: 17, assertions: 1}
+  - {source_unit: YM2, role: qualified_SU2_lift_analogy, path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py, sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c, checks: 10, assertions: 1}
+  - {source_unit: QCD2, role: qualified_SU3_lift_analogy, path: merged-framework/bridges/phase-8/bridge_QCD2_su3_3plus1_lift.py, sha256: 64f8125a5c0ef194e23569711036ce6ec46f3ffef2b6eb94a7b5c97ed8bb566f, checks: 10, assertions: 1}
+  - {source_unit: D3S, role: qualified_rejected_endpoint_selection_provenance, path: merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py, sha256: a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71, checks: 13, assertions: 1}
+  - {source_unit: OD, role: qualified_independent_rank_consumer, path: merged-framework/bridges/phase-19/bridge_OD_over_determination_test.py, sha256: 300259218ca36063625d42487dc1d8f00def4b5d58ef6ffc0b4dc174852fdeb6, checks: 8, assertions: 1}
+  - {source_unit: AS4, role: duplicate_overdetermination_consumer, path: merged-framework/bridges/phase-21/bridge_AS4_over_determination_v2.py, sha256: cdcfea3ac26c932a3db792c864baa026c761555d3c0e34c7b1bc025ea962745f, checks: 7, assertions: 1}
+  - {source_unit: MD1, role: pending_counting_consumer, path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py, sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba, checks: 19, runtime_checks: 27, assertions: 0}
+totals: {nodes: 8, static_predicates: 91, runtime_predicates: 99, assertions: 7}
+compatibility:
+  native_nodes: [QCD5, EM7, D3S, OD, AS4, MD1]
+  immutable_alias_only_nodes: [YM2, QCD2]
+  alias_definition: numpy_trapz_equals_numpy_trapezoid
+  scientific_effect: none_version_spelling_only
