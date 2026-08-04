@@ -1,0 +1,34 @@
+campaign: P150
+source_unit: W5
+accepted_base: v0.115.0
+accepted_inputs:
+  - {claim: C-BRN-001, use: exact normalized shares and contrast for separately declared nonnegative channels only}
+  - {claim: C-BND-001, use: boundary residual and missing-action ceiling only}
+  - {claim: C-SG-011, use: scalar topological-current and parity ceiling only}
+  - {claim: C-SG-012, use: signature stress tensor and boundary-flux sign only}
+  - {claim: C-SG-013, use: boundary correlation and winding-transfer independence only}
+  - {claim: C-REP-002, use: carrier-factor and physical-field ceiling only}
+  - {claim: C-KIN-001, use: W4 non-particle and detector ceiling only}
+mathematical_inputs:
+  - exact positive wave speed c and boundary speed zeta
+  - right half-line x greater than or equal to zero
+  - massless scalar wave equation phi_tt minus c_squared_phi_xx equals zero
+  - incoming harmonic proportional to exp_minus_i_omega_t_plus_x_over_c
+  - reflected harmonic proportional to exp_minus_i_omega_t_minus_x_over_c
+  - passive residual phi_t minus zeta_phi_x equals zero
+  - canonical scalar energy and no additional steady-state boundary channel for the absorbed complement
+source_declared_inputs:
+  - coefficient Z assigned as lambda_squared_over_mu
+  - plus-sign local boundary condition
+  - reversed wave-role labels
+  - right reference reflection fixed to one
+excluded_from_derivation_or_selection:
+  - queue-exposed formulas values and headline
+  - source physical chiral weak parity and detector labels
+  - pending M1 M2 and W7 authority
+free_data:
+  - boundary action and full bulk-plus-boundary variation
+  - boundary storage drive potential and frequency response
+  - physical channel states current charge interaction and detector acceptance
+claim_delta: C-SCT-001
+debt: []

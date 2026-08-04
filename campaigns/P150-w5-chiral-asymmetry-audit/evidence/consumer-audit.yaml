@@ -1,0 +1,22 @@
+campaign: P150
+source_unit: W5
+reverse_consumers:
+  - {source_unit: W3, disposition: qualified, effect: already_adjudicated_without_W5_physical_authority}
+  - {source_unit: W4, disposition: qualified, effect: already_adjudicated_without_W5_physical_authority}
+  - {source_unit: W7, disposition: pending_adjudication, effect: must_not_import_W5_as_chiral_current_gauge_or_weak_authority}
+  - {source_unit: YM1, disposition: pending_adjudication, effect: must_not_import_W5_as_Yang_Mills_or_physical_parity_authority}
+graph_replay:
+  nodes: 13
+  source_predicates: 154
+  source_assertions: 14
+  verifier_checks: 46
+  compatibility_shapes:
+    G1: 2
+    W1: 2
+    W3: 2
+  eager_legacy_fallbacks: 0
+decision: >-
+  Qualified W3 and W4 remain unchanged. Pending W7 and YM1 gain no authority.
+  C-SCT-001 is additive; GitNexus reports LOW risk, zero callers, zero affected
+  modules, and zero affected processes for the new canonical function.
+debt: []

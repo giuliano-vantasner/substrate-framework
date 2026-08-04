@@ -1,0 +1,22 @@
+campaign: P150
+claim: C-SCT-001
+search_surfaces:
+  - governance/claims.yaml
+  - governance/releases
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory
+identifier_collision: false
+nearest_claims:
+  C-BND-001: Gives affine residual parity covariance and underdetermination but no scattering amplitude power or passivity theorem.
+  C-SG-012: Gives scalar stress and boundary-flux signs but no harmonic impedance ledger.
+  C-BRN-001: Gives general two-channel normalization but no wave equation reflection or reciprocal impedance map.
+  C-MED-005: Gives an accepted constitutive medium relation but no boundary scattering claim.
+distinct_positive_object: >-
+  C-SCT-001 uniquely supplies the exact right-half-line passive harmonic
+  amplitude, reflected and absorbed power fractions, boundary energy sign,
+  reciprocal-impedance degeneracy, and declared-reference allocation map.
+governed_consumers: [W5, W7, YM1]
+decision: distinct_additive_claim

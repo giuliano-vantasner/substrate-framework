@@ -1,0 +1,31 @@
+attempt: 0004
+campaign: P150
+candidate: canonical_passive_half_line_scattering_ledger
+status: passed
+started_at: '2026-08-10T02:25:00Z'
+finished_at: '2026-08-10T02:29:00Z'
+commands:
+  - .venv/bin/python -m pytest tests/test_boundary_scattering.py -q
+  - package_export_smoke_test_for_passive_half_line_scattering_ledger
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+result:
+  focused_tests: 15_passed
+  exact_backend: SymPy
+  numpy_integration_surface: absent
+  compatibility_policy: current_mutable_code_needs_no_alias_or_legacy_replay
+  matched_impedance:
+    amplitude_reflection: 0
+    reflected_power_fraction: 0
+    absorbed_power_fraction: 1
+  mutation_surfaces:
+    - boundary_sign_and_bulk_energy_rate
+    - incoming_and_reflected_wave_orientation
+    - reciprocal_impedance_amplitude_phase
+    - declared_reference_channel_contrast
+    - exact_positive_parameter_domain
+debt:
+  - build_primary_and_fresh_independent_mutation_sensitive_oracles
+  - adjudicate_all_twenty_seven_W5_predicates
+  - close_dependencies_reverse_consumers_generated_state_and_integrated_gate
+next_attempt: build_and_run_the_frozen_primary_oracle

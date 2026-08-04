@@ -1,0 +1,26 @@
+attempt: 0009
+campaign: P150
+candidate: integrated_promotion_transaction
+status: passed
+started_at: '2026-08-10T02:48:00Z'
+finished_at: '2026-08-10T02:53:00Z'
+commands:
+  - generate_migration_queue_docs_and_accepted_memory
+  - scripts/validate.sh
+  - staged_GitNexus_and_git_diff_checks
+scope:
+  claim: C-SCT-001
+  release: v0.116.0
+  source_disposition: W5_qualified
+  expected_queue_after: {total: 218, pending: 70, qualified: 136, migrated: 3, duplicate: 8, out_of_scope: 1}
+result:
+  workflow: {claims: 151, accepted: 151, proposals: 0}
+  migration_queue: {total: 218, pending: 70, qualified: 136, migrated: 3, duplicate: 8, out_of_scope: 1, partial: 0}
+  memory_files: 615_valid
+  skill_validation: passed
+  pytest: 1317_passed
+  staged_impact: {symbols: 65, files: 35, affected: 0, processes: 0, risk: low}
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_status: 0
+debt: []
+next_attempt: stage_replay_commit_promotion_then_checkpoint_parent_and_freeze_W7

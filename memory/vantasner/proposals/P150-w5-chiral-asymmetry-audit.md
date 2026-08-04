@@ -2,7 +2,7 @@
 description: Derive and audit W5's conditional boundary-scattering and left-right asymmetry content
 author: vantasner
 created: '2026-08-10T02:06:00Z'
-updated: '2026-08-10T02:20:00Z'
+updated: '2026-08-10T02:48:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - chiral-asymmetry
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P150 W5 Chiral-Asymmetry Audit
 

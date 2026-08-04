@@ -1,0 +1,29 @@
+campaign: P150
+source_unit: W5
+declared_source_dependencies:
+  - {source_unit: G1, disposition: qualified, use: no_chiral_or_weak_authority}
+  - {source_unit: G2, disposition: qualified, use: no_chiral_or_weak_authority}
+  - {source_unit: G5, disposition: qualified, use: no_impedance_or_weak_authority}
+  - {source_unit: S5, disposition: qualified, use: no_impedance_or_weak_authority}
+  - {source_unit: W1, disposition: qualified, use: scalar_boundary_parity_ceiling_only}
+  - {source_unit: W2, disposition: qualified, use: carrier_representation_ceiling_only}
+  - {source_unit: W3, disposition: qualified, use: scalar_derivative_and_current_ceiling_only}
+  - {source_unit: W4, disposition: qualified, use: threshold_and_missing_particle_ceiling_only}
+  - {source_unit: W7, disposition: pending_adjudication, use: no_authority}
+  - {source_unit: M1, disposition: pending_adjudication, use: no_authority}
+  - {source_unit: M2, disposition: pending_adjudication, use: no_authority}
+accepted_claim_closure:
+  - {claim: C-SCT-001, dependencies: [C-BRN-001]}
+circularity: >-
+  W3 and W4 both cite W5 while W5 cites them, and W7 participates in the same
+  cycle. These source edges grant no authority. C-SCT-001 closes through exact
+  wave algebra and only imports C-BRN-001 for the optional declared-reference
+  contrast.
+excluded_imports:
+  - any physical dilaton gravity medium Skyrme or weak reading from G1 G2 G5 or S5
+  - W1 physical chiral selection
+  - W2 physical SU2L doublet
+  - W3 physical charged current
+  - W4 neutrino or missing-particle reading
+  - pending W7 M1 and M2 gauge or mass claims
+debt: []

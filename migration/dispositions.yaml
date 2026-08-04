@@ -4748,3 +4748,52 @@ units:
       mutable code has no executable legacy integration access, and inherited
       immutable G1 and W3 shapes remain alias-only version evidence through
       np.trapezoid.
+  W5:
+    disposition: qualified
+    accepted_claims:
+      - C-SCT-001
+      - C-BRN-001
+      - C-BND-001
+      - C-SG-011
+      - C-SG-012
+      - C-SG-013
+      - C-REP-002
+      - C-KIN-001
+    qualification: >-
+      W5's rational reflection and complement formulas survive only through
+      C-SCT-001's correctly oriented passive right-half-line problem. W5 calls
+      its outgoing harmonic incoming and uses an energy-injecting plus sign;
+      these two errors invert the amplitude ratio twice and therefore cancel
+      in the displayed formula. Direct elimination of the cited piston
+      equations retains an inertial partial_t(phi_x) term and does not derive
+      the local law. Reciprocal impedances have identical power ratios, and
+      the assigned-reference contrast equals T/(2-T), so it is neither an
+      independent third prediction nor by itself a physical chiral or parity
+      observable. No piston realization, physical chirality, parity violation,
+      V-A or weak interaction, current, charge, detector measurement, weak
+      scale, gauge sector, or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P150-w5-chiral-asymmetry-audit/reviews/source_adjudication.md
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/source-reproduction.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/source-audit.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/check-adjudication.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/input-provenance.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/dependency-audit.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/consumer-audit.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/candidate-comparison.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/primary-provenance.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/evidence/literature-audit.yaml
+      - campaigns/P150-w5-chiral-asymmetry-audit/verify.py
+      - campaigns/P150-w5-chiral-asymmetry-audit/reviews/independent_scattering_review.py
+      - campaigns/P150-w5-chiral-asymmetry-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-SCT-001-review.md
+      - memory/vantasner/decisions/W5-qualified-review.md
+    note: >-
+      P150 promotes C-SCT-001 through thirty-two primary, seventeen
+      independent, fifteen focused-test, and forty-six frozen-graph checks.
+      The thirteen-node graph inventories 154 source predicates and fourteen
+      assertions. Native W5 passes all twenty-seven predicates without a NumPy
+      integration event; mutable code has no executable legacy integration
+      access, and inherited immutable G1, W1, and W3 shapes remain alias-only
+      version evidence through np.trapezoid.

@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P150
+candidate: repaired_primary_and_independent_oracles
+status: failed
+started_at: '2026-08-10T02:34:00Z'
+finished_at: '2026-08-10T02:37:00Z'
+commands:
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/verify.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/independent_scattering_review.py
+result:
+  primary: failed_after_25_passes
+  independent: failed_after_13_passes
+failure_class:
+  primary: test_domain_used_a_nonnegative_reflection_expression_where_the_allocation_API_requires_an_explicitly_positive_total
+  independent: mutation_expectation_was_wrong_swapping_incoming_and_outgoing_with_the_passive_sign_inverts_rather_than_negating_it
+scientific_effect: >-
+  The independent failure sharpened the double-error diagnosis: W5's reversed
+  wave labels and active boundary sign compensate algebraically, reproducing
+  the advertised amplitude while leaving its physical interpretation wrong.
+next_attempt: use_an_explicit_positive_equal_channel_and_test_the_correct_inverse_amplitude_mutation

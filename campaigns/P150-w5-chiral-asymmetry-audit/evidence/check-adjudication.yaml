@@ -1,0 +1,138 @@
+source_unit: W5
+checks:
+  W5.01:
+    source_name: DEF_Z_equals_lambda_squared_over_mu
+    classification: rejected_as_local_boundary_derivation
+    maps_to: [C-SCT-001]
+    reason: The assignment is tautological; eliminating the imported piston equations leaves (mu/lambda^2)*partial_t(phi_x), not a local coefficient times phi_x.
+  W5.02:
+    source_name: DERIV_reflection_amplitude
+    classification: qualified_formula_rejected_source_orientation_and_sign
+    maps_to: [C-SCT-001]
+    reason: The rational amplitude is correct for the corrected passive problem; W5 reverses wave roles and the boundary sign, whose two inversions cancel algebraically.
+  W5.03:
+    source_name: L1a_reflected_power
+    classification: qualified_conditional_scattering_identity
+    maps_to: [C-SCT-001]
+    reason: Squaring the exact real passive amplitude yields the displayed power fraction.
+  W5.04:
+    source_name: L1b_zero_impedance_limit
+    classification: qualified_limiting_identity
+    maps_to: [C-SCT-001]
+    reason: The positive-domain limit is one; zero itself is outside the accepted strictly passive API domain.
+  W5.05:
+    source_name: L1c_matched_impedance
+    classification: qualified_conditional_scattering_identity
+    maps_to: [C-SCT-001]
+    reason: Equal positive wave and boundary speeds give zero amplitude reflection.
+  W5.06:
+    source_name: L1d_stationary_match
+    classification: qualified_rational_function_property
+    maps_to: [C-SCT-001]
+    reason: The reflected-power derivative vanishes at match; no piston resonance follows.
+  W5.07:
+    source_name: L2a_complement_fraction
+    classification: qualified_conditional_energy_balance
+    maps_to: [C-SCT-001]
+    reason: The complement is absorbed only for the passive steady harmonic model with no additional storage or flux channel.
+  W5.08:
+    source_name: L2b_match_complement
+    classification: qualified_conditional_energy_balance
+    maps_to: [C-SCT-001]
+    reason: The conditional complement is one at match; this does not establish a material transmission measurement.
+  W5.09:
+    source_name: L2c_extreme_limits
+    classification: qualified_limiting_identity
+    maps_to: [C-SCT-001]
+    reason: The exact complement tends to zero at both impedance extremes.
+  W5.10:
+    source_name: L3a_left_right_contrast
+    classification: qualified_declared_allocation_rejected_physical_chirality
+    maps_to: [C-BRN-001, C-SCT-001]
+    reason: The formula follows only after assigning a separate unit-reflection reference; it supplies no chiral state or detector map.
+  W5.11:
+    source_name: L3b_zero_contrast_limit
+    classification: qualified_arithmetic_rejected_parity_interpretation
+    maps_to: [C-BRN-001, C-SCT-001]
+    reason: The declared-channel contrast tends to zero, but that arithmetic limit is not a parity-conserving theory.
+  W5.12:
+    source_name: L3c_matched_contrast
+    classification: qualified_arithmetic_rejected_maximal_parity_violation
+    maps_to: [C-BRN-001, C-SCT-001]
+    reason: Unit contrast follows from one assigned zero and one assigned unit channel, not a physical weak measurement.
+  W5.13:
+    source_name: L3d_large_impedance_contrast
+    classification: qualified_limiting_identity
+    maps_to: [C-BRN-001, C-SCT-001]
+    reason: The declared-reference contrast tends to zero algebraically.
+  W5.14:
+    source_name: L_distinct_three_functions
+    classification: rejected_independent_measurables
+    maps_to: [C-SCT-001]
+    reason: T=1-R and A=T/(2-T); distinct formulas are deterministic transforms and not three independent predictions.
+  W5.15:
+    source_name: JOINT_match_values
+    classification: qualified_coincident_identities_rejected_independent_prediction
+    maps_to: [C-SCT-001]
+    reason: Both values occur at match because the contrast is constructed from R.
+  W5.16:
+    source_name: JOINT_common_extrema
+    classification: qualified_rational_function_property
+    maps_to: [C-SCT-001]
+    reason: The extrema coincide, but this supplies neither independent tunability evidence nor a physical parity maximum.
+  W5.17:
+    source_name: GUARD1_wrong_reflection_form
+    classification: qualified_mutation_probe
+    maps_to: [C-SCT-001]
+    reason: The mutation fails the match limit but does not test wave direction, passivity, or the physical headline.
+  W5.18:
+    source_name: GUARD2_wrong_contrast_form
+    classification: qualified_mutation_probe
+    maps_to: [C-SCT-001]
+    reason: The mutation differs at match but presupposes the assigned reference-channel construction.
+  W5.19:
+    source_name: GUARD1_2_nonvacuous
+    classification: qualified_weak_mutation_probe
+    maps_to: [C-SCT-001]
+    reason: Inequality at one diagnostic point detects a formula change but not the claimed physics.
+  W5.20:
+    source_name: GUARD3_equal_channel_contrast
+    classification: qualified_allocation_symmetry_rejected_parity_theorem
+    maps_to: [C-BRN-001]
+    reason: Equal declared inputs give zero normalized difference; no parity action or invariant dynamics is supplied.
+  W5.21:
+    source_name: GUARD4_R_plus_T
+    classification: qualified_complement_rejected_blanket_unitarity
+    maps_to: [C-SCT-001]
+    reason: R+T=1 by definition; physical energy balance additionally requires passivity and exclusion of storage and other channels.
+  W5.22:
+    source_name: GUARD5_shared_parameter_derivatives
+    classification: rejected_independent_linked_predictions
+    maps_to: [C-SCT-001]
+    reason: Dependence on one symbol does not make deterministic transforms independent observables.
+  W5.23:
+    source_name: GUARD5b_common_symbol
+    classification: qualified_parameter_bookkeeping_only
+    maps_to: [C-SCT-001]
+    reason: A shared free symbol is syntactic bookkeeping, not a coupling derivation or falsifiable interaction.
+  W5.24:
+    source_name: GUARD6_normalized_impedance_dimension
+    classification: qualified_declared_dimension_rejected_piston_provenance
+    maps_to: [C-SCT-001]
+    reason: Boundary speed divided by wave speed is dimensionless; W5 does not derive the dimensions of lambda and mu needed for its identification.
+  W5.25:
+    source_name: GUARD6b_dimensionless_ratios
+    classification: qualified_conditional_dimension_statement
+    maps_to: [C-SCT-001]
+    reason: The exact power and declared contrast ratios are dimensionless.
+  W5.26:
+    source_name: RESIDUAL_free_Z
+    classification: qualified_unresolved_parameter
+    maps_to: [C-SCT-001]
+    reason: The scattering family remains parameterized and no numerical boundary speed is derived.
+  W5.27:
+    source_name: RESIDUAL_lambda_mu_nonidentifiability
+    classification: qualified_algebraic_underdetermination_rejected_boundary_law
+    maps_to: [C-SCT-001]
+    reason: One declared ratio cannot determine two parameters, but the imported equations do not establish that ratio as the local passive coefficient.
+all_twenty_seven_adjudicated: true

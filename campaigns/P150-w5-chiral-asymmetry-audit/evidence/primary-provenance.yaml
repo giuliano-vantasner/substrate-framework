@@ -1,0 +1,38 @@
+campaign: P150
+accepted_base:
+  release: v0.115.0
+  framework_checkpoint: ab76862
+  scientific_commit: 722af7c
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_and_memory_files
+source_unit:
+  id: W5
+  path: merged-framework/bridges/phase-6/bridge_W5_chiral_asymmetry_magnitude.py
+  sha256: 5afea85e0e70236ddd076e2da585d6ab5861d52211239642eac1c951f1c6a71a
+dossier:
+  path: merged-framework/bridges/phase-6/dossiers/W5_dossier.md
+  sha256: 761e30e9f93a6d74f7d017af0af89dae39cfa10c38c128bd0ef3c316fd1f6401
+imported_solution:
+  path: sg-breather-ionization/solution.md
+  sha256: a5a0ced9a097f07daea67e37b9516755307536e4850dfc975da72ee8eb876f86
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/boundary_correlations.py
+  - src/substrate_framework/branching.py
+  - src/substrate_framework/sine_gordon.py
+  - campaigns/P122-branching-weights
+  - campaigns/P146-w1-chiral-boundary-audit
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P148-w3-va-current-audit
+  - campaigns/P149-w4-missing-energy-audit
+external_primary_or_authoritative_sources: []
+memory_searches:
+  - W5 boundary impedance chiral asymmetry reflection
+  - passive half-line scalar boundary energy flux reciprocity
+authority_statement: >-
+  Memory and W5 are recall and candidate evidence. The pinned accepted release,
+  registry, exact canonical APIs, and individually reviewed P150 result supply
+  authority.

@@ -1,0 +1,45 @@
+source_unit: W5
+source_sha256: 5afea85e0e70236ddd076e2da585d6ab5861d52211239642eac1c951f1c6a71a
+ast:
+  check_calls: 27
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+  legacy_numpy_integration_references: 0
+native_reproduction:
+  exit_status: 0
+  terminal_tally: ALL_27_CHECKS_PASS
+objects_present:
+  - one symbolic linear boundary residual with supplied positive coefficient
+  - harmonic amplitude algebra and its reflected-power square
+  - a complement called absorbed or transmitted power
+  - a normalized difference using an assigned unit-reflection reference
+  - rational limits derivatives and wrong-form probes
+objects_absent:
+  - correctly labeled incoming and outgoing waves on the declared right half-line
+  - passive energy-flux sign for the displayed boundary residual
+  - bulk-plus-boundary action derivation of the local condition
+  - boundary storage or alternate flux-channel ledger
+  - independent second or third observable
+  - physical chiral states parity action current charge interaction or detector map
+load_bearing_failures:
+  - issue: wave_orientation
+    classification: exp_i_kx_minus_omega_t_is_outgoing_on_x_positive_but_called_incoming
+  - issue: boundary_sign
+    classification: displayed_plus_sign_injects_right_half_line_bulk_energy
+  - issue: double_error_cancellation
+    classification: reversed_wave_roles_and_active_sign_reproduce_the_advertised_amplitude
+  - issue: piston_elimination
+    classification: retains_mu_over_lambda_squared_times_partial_t_phi_x
+  - issue: claimed_independence
+    classification: T_equals_one_minus_R_and_A_equals_T_over_two_minus_T
+  - issue: impedance_identifiability
+    classification: z_and_one_over_z_have_equal_power_ratios
+headline_verdict: >-
+  Qualified. W5's exact rational power surface is retained only through the
+  corrected passive half-line problem and a separately declared reference
+  allocation. Its native tally does not establish the displayed sign,
+  boundary-action derivation, independent observables, physical chirality,
+  parity violation, weak interaction, detector measurement, or substrate
+  mechanism.

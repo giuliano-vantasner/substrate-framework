@@ -1,0 +1,20 @@
+attempt: 0007
+campaign: P150
+candidate: second_primary_and_independent_oracle_replay
+status: failed
+started_at: '2026-08-10T02:38:00Z'
+finished_at: '2026-08-10T02:40:00Z'
+commands:
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/verify.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/independent_scattering_review.py
+result:
+  primary: failed_after_28_passes
+  independent: 17_passed
+failure_class:
+  primary: mutation_expectation_treated_a_boundary_sign_flip_as_a_phase_flip_but_it_inverts_the_amplitude_ratio
+scientific_effect: >-
+  The two independent routes now agree: either reversing wave roles or
+  reversing the boundary sign inverts the reflection ratio. W5 makes both
+  mistakes, so they cancel in its displayed amplitude while its passivity and
+  incoming-wave interpretation remain false.
+next_attempt: encode_the_double_error_cancellation_and_rerun_the_primary_oracle

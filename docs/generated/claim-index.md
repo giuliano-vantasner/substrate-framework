@@ -975,6 +975,15 @@ Let E and G be positive real energies and U a nonnegative real energy in the sam
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-SCT-001
+
+Let c and zeta be exact positive speeds and z=zeta/c. On the right half-line x>=0, let a real massless scalar obey phi_tt-c^2*phi_xx=0, with incoming harmonic proportional to exp(-i*omega*(t+x/c)), reflected harmonic proportional to exp(-i*omega*(t-x/c)), and passive boundary condition phi_t-zeta*phi_x=0. Exact substitution gives amplitude reflection r=(z-1)/(z+1), reflected power R=r^2, and, for a steady harmonic ledger with no other boundary storage or flux channel, absorbed fraction T=1-R=4*z/(z+1)^2. The half-line bulk energy rate contributed by the boundary is -c^2*zeta*phi_x(0,t)^2<=0. Under z->1/z, r changes sign while R and T are invariant, so power data alone do not identify which reciprocal impedance applies. If a separate reference channel is declared perfectly reflected, C-BRN-001 gives contrast A=(1-R)/(1+R)=2*z/(z^2+1)=T/(2-T); A is a deterministic transform, not an independent prediction, and is also reciprocal-invariant. This theorem derives no boundary law from a piston action, lambda or mu coefficient, physical chirality, parity violation, current, charge, detector, weak interaction, or substrate realization.
+
+- Accepted in: `v0.116.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-BRN-001
+
 ## C-SG-001
 
 For every real omega with 0 < omega < 1, eta = sqrt(1-omega^2), and real x,t, the field phi(x,t) = 4 atan(eta sin(omega t)/(omega cosh(eta x))) is spatially localized, periodic with period 2*pi/omega, and satisfies phi_tt - phi_xx + sin(phi) = 0 identically in normalized units.

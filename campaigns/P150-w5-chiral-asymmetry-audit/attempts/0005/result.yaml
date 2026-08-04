@@ -1,0 +1,23 @@
+attempt: 0005
+campaign: P150
+candidate: first_primary_independent_and_source_graph_replay
+status: failed
+started_at: '2026-08-10T02:30:00Z'
+finished_at: '2026-08-10T02:33:00Z'
+commands:
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/verify.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/independent_scattering_review.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/replay_source_graph.py source_root
+result:
+  primary: failed_after_9_passes
+  independent: failed_after_1_pass
+  source_graph: 46_passed
+failure_class:
+  primary: implementation_terminal_tally_parser_ignored_trailing_separator
+  independent: implementation_assumed_list_return_but_sympy_solve_returned_mapping_for_nonzero_symbol
+scientific_effect: none
+preserved_observations:
+  - native_W5_did_print_ALL_27_CHECKS_PASS_before_its_final_separator
+  - independent_boundary_equation_was_linear_and_SymPy_returned_the_expected_solution_as_a_mapping
+  - all_thirteen_hash_pinned_graph_nodes_and_154_predicates_replayed
+next_attempt: repair_only_the_two_oracle_interface_assumptions_and_rerun

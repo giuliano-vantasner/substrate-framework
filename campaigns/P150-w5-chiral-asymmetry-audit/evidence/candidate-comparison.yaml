@@ -1,0 +1,38 @@
+campaign: P150
+criteria_order:
+  - exact field equation domain wave orientation frequency amplitude stress flux and boundary-normal conventions
+  - distinction among amplitude reflection power allocation absorption boundary storage and detector observables
+  - denominator domains passivity unitarity reciprocity common-scale laws and limiting behavior
+  - parity covariance versus fixed-boundary symmetry state asymmetry and intrinsic violation
+  - accepted sine-Gordon boundary representation current and threshold compatibility
+  - source coefficient coupling current charge and detector dimensions plus identifiability
+  - load-bearing normal sign impedance coefficient channel completeness handedness and detector mutations
+  - assumption and parameter economy reusable API value nonduplication and full consumer closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Literal replay classifies all twenty-seven predicates but cannot validate the headline tally.
+  B:
+    decision: selected_and_promoted_as_C_SCT_001
+    reason: Correctly oriented passive half-line scattering is the smallest novel exact reusable theorem.
+  C:
+    decision: selected_as_accepted_mapping_only
+    reason: C-BRN-001 supplies the declared-reference contrast without duplicating normalization theory.
+  D:
+    decision: selected_as_identifiability_ceiling
+    reason: Reciprocal impedances preserve all power ratios while flipping amplitude phase.
+  E:
+    decision: selected_as_source_rejection
+    reason: Direct piston elimination retains an inertial derivative and does not yield the asserted local law.
+  F:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Equal scalar channels and unchanged ledgers with different physical labels defeat parity and weak interpretations.
+  G:
+    decision: selected
+    reason: Dependency consumer compatibility novelty release queue and memory closure are mandatory.
+selection_basis: >-
+  Candidate B alone adds a distinct exact object. A and E diagnose the source,
+  C prevents duplication, D and F delimit identifiability and interpretation,
+  and G closes the transaction. Queue-exposed values selected no concept.
+foundational_revision_required: false
+debt: []

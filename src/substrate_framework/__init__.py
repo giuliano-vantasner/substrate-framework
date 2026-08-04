@@ -78,6 +78,10 @@ from .boundary_correlations import (
     scalar_boundary_trace_family,
     sinusoidal_boundary_sign_correlation,
 )
+from .boundary_scattering import (
+    PassiveHalfLineScatteringLedger,
+    passive_half_line_scattering_ledger,
+)
 from .su2_doublets import (
     SU2ChiralFactorLedger,
     SU2CommonChargeLedger,
@@ -1488,6 +1492,8 @@ __all__ = [
     "power_balance_residual",
     "rayleigh_dissipation",
     "scalar_power_balance_force",
+    "PassiveHalfLineScatteringLedger",
+    "passive_half_line_scattering_ledger",
     "TwoBodyThresholdLedger",
     "two_body_threshold_ledger",
     "YukawaRadialHessian",

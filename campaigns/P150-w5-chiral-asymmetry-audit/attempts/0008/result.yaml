@@ -1,0 +1,30 @@
+attempt: 0008
+campaign: P150
+candidate: exact_source_aware_passive_scattering_classification
+status: passed
+started_at: '2026-08-10T02:41:00Z'
+finished_at: '2026-08-10T02:47:00Z'
+commands:
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/verify.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/independent_scattering_review.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/replay_source_graph.py source_root
+  - .venv/bin/python -m pytest tests/test_boundary_scattering.py -q
+result:
+  primary_checks: 32
+  independent_checks: 17
+  graph_checks: 46
+  focused_tests: 15
+  graph_source_predicates: 154
+  graph_source_assertions: 14
+  native_W5_predicates: 27
+  native_W5_compatibility_event: false
+  exact_claim: C-SCT-001
+decisive_classification: >-
+  Correct passive right-half-line scattering supports W5's rational power
+  formulas after correcting both orientation and boundary sign. W5's two
+  errors cancel in its amplitude algebra. The cited piston equations retain an
+  inertial derivative, reciprocal impedances are power-indistinguishable, and
+  the assigned-reference contrast is a transform rather than an independent
+  chiral or weak observable.
+debt: []
+next_attempt: complete_claim_level_evidence_governance_and_one_integrated_gate

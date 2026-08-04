@@ -1,0 +1,59 @@
+campaign: P150
+title: W5 passive boundary scattering and chiral-asymmetry audit
+source_baseline: substrate@6d1f4e0
+source_units: [W5]
+base_release: v0.115.0
+accepted_release: v0.116.0
+adjudicated_at: '2026-08-10T02:48:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without making its tally a headline oracle.}
+  - {id: B, reason: Correct passive half-line wave algebra supplies the distinct reusable theorem.}
+  - {id: C, reason: C-BRN-001 supplies the conditional declared-reference contrast without duplication.}
+  - {id: D, reason: Reciprocal-impedance analysis supplies the exact power-identifiability ceiling.}
+  - {id: E, reason: Direct piston elimination rejects the asserted local boundary derivation.}
+  - {id: F, reason: Equal-channel and relabeling countermodels delimit parity and weak interpretations.}
+  - {id: G, reason: Dependency consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-SCT-001]
+unpromoted_claims:
+  - {id: source_plus_sign_is_absorptive, reason: It injects canonical bulk energy on the declared right half-line.}
+  - {id: piston_action_derives_Z_equals_lambda_squared_over_mu_local_law, reason: Elimination retains an inertial time derivative of the spatial trace.}
+  - {id: R_T_and_A_are_three_independent_observables, reason: T=1-R and A=T/(2-T).}
+  - {id: power_data_identify_the_impedance, reason: Reciprocal impedances have equal R T and contrast.}
+  - {id: assigned_channel_contrast_is_physical_parity_violation, reason: No states parity action current interaction or detector map is supplied.}
+  - {id: physical_VA_weak_or_substrate_mechanism, reason: Scalar boundary algebra supplies none of these objects.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_scattering_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0008/result.yaml
+  integrated_terminal_gate: attempts/0009/result.yaml
+  claim_review: memory/vantasner/decisions/C-SCT-001-review.md
+  source_review: memory/vantasner/decisions/W5-qualified-review.md
+source_disposition:
+  W5: qualified
+accepted_mappings: [C-SCT-001, C-BRN-001, C-BND-001, C-SG-011, C-SG-012, C-SG-013, C-REP-002, C-KIN-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_no_quadrature
+  immutable_primary: no_numpy_integration_reference
+  inherited_shapes: [G1_alias_only, W1_alias_only, W3_alias_only]
+validation_commands:
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/verify.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/independent_scattering_review.py
+  - .venv/bin/python campaigns/P150-w5-chiral-asymmetry-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_boundary_scattering.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted
