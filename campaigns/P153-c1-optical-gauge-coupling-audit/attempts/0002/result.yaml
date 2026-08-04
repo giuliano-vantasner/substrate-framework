@@ -1,0 +1,37 @@
+attempt: 0002
+campaign: P153
+candidate: preregistered_C1_optical_gauge_coupling_audit
+status: passed
+started_at: '2026-08-10T05:10:00Z'
+finished_at: '2026-08-10T05:13:00Z'
+commands:
+  - compare_proposal_and_frozen_proposal_bytes_and_hashes
+  - parse_both_manifests_with_PyYAML
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P153-c1-optical-gauge-coupling-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+result:
+  accepted_base: v0.118.0
+  source_sha256: 6c0b625cbfd8396104f185e4e3785956f66989a10d9fddf9d553fe433c39f0f5
+  dossier_sha256: dcaf85bc1855d772a6f4c766a765ec5cfd606444f635fb90fb241bc1f744d5ef
+  proposal_sha256: 85e16eafda92241b9c216e2289373ce25fa2ec063f1afc3c0bdb93d55937d79f
+  frozen_proposal_sha256: 85e16eafda92241b9c216e2289373ce25fa2ec063f1afc3c0bdb93d55937d79f
+  memory_contract_sha256: a6850ab470ea0bb10e6e04cf10f047bec3bbec7a8b2e8016faa7103f9ca3bed9
+  candidates: [A, B, C, D, E, F, G, H]
+  unavoidable_preexposure: >-
+    P152 executed C1 as a semantic consumer and exposed its terminal predicates,
+    broad constant-coefficient dispersion, momentum-shift formula, and printed
+    physical interpretation. Those values are recorded in the contract and are
+    excluded from candidate selection.
+  source_body_opened_for_P153: false
+  dossier_body_opened_for_P153: false
+  repository_workflow: valid
+  accepted_claims: 153
+  pending_source_units: 68
+debt:
+  - reproduce_the_hash_pinned_source_natively_after_this_freeze_commit
+  - inspect_and_classify_source_and_dossier_after_freeze
+  - derive_gauge_covariance_local_pure_gauge_and_global_boundary_cases
+  - run_source_aware_nonduplication_and_freeze_any_claim_delta
+  - mutate_review_and_close_all_dependencies_consumers_and_generated_state
+next_attempt: commit_this_freeze_then_open_and_execute_the_hash_pinned_C1_source

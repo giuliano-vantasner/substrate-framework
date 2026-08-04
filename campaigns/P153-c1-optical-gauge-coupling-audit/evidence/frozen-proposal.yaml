@@ -1,0 +1,79 @@
+id: P153
+base_release: v0.118.0
+base_commit: 41a5d33
+scientific_base_commit: 41a5d33
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [C1]
+question: >-
+  Reproduce and independently audit C1's claim that a local half connection
+  couples a breather plane wave to the accepted static optical metric, and
+  determine exactly which statements follow from a separately declared
+  charged-scalar wave equation, which are gauge-coordinate identities, which
+  require global holonomy or boundary data, and which establish a physical
+  medium interaction or gravity effect.
+invariants:
+  - >-
+    C-OG-001 supplies only the exact static 1+1 metric
+    g=diag(-1/n,n/c0^2) and its geometry. It supplies no charged scalar,
+    connection, wave equation, material action, or physical medium.
+  - >-
+    C-GAU-001 uses D_mu=partial_mu-i*e*A_mu and
+    Psi'=exp(i*e*chi)Psi, A_mu'=A_mu+partial_mu chi. A plane-wave label k and
+    a constant A_x are separately gauge-dependent; k-e*A_x is invariant.
+  - >-
+    C-BER-001 distinguishes a local Berry representative from its endpoint-
+    corrected projective-loop holonomy and supplies no physical vector
+    potential, coupling to a new field, or electromagnetic dictionary.
+  - >-
+    C-GOR-001 governs a separate four-dimensional Gordon effective metric and
+    expressly supplies no material action, Einstein source, coupling, or
+    physical gravity. C-RAD-001 similarly requires a declared action and
+    boundary/history data before a source equation acquires dynamics.
+  - >-
+    Qualified B1, G1, and G2 source units grant no premise beyond their mapped
+    accepted claims. Their source labels cannot derive C1's interaction,
+    breather identity, medium realization, or observation.
+  - >-
+    P152 necessarily executed C1 as a semantic consumer and exposed its nine
+    runtime predicates, metric, plane-wave dispersion, momentum-shift formula,
+    and printed physical interpretation. That unavoidable preexposure is
+    recorded and excluded from candidate selection. The remaining source and
+    dossier bodies, exact AST data flow, constants, and guard construction are
+    unopened for P153.
+allowed_imports:
+  - C-OG-001 only for the declared static optical metric and exact inverse
+  - C-GAU-001 only for local U1 covariance connection curvature and physical ceiling
+  - C-BER-001 only for a separately matched projective-loop Berry connection and its nonphysical ceiling
+  - C-GOR-001 only for effective-wave-geometry versus physical-gravity comparison
+  - C-RAD-001 only for the declared-action and boundary-data dynamics ceiling
+  - exact complex scalar plane waves constant-coefficient Lorentzian actions Euler equations and elementary gauge transformations
+  - C1 and C1-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce C1 literally and classify every predicate by declared input exact consequence gauge-coordinate identity physical premise and unsupported interpretation.}
+  - {id: B, description: Compose C-OG-001 and C-GAU-001 with a separately declared charged Klein-Gordon action to derive an exact constant-index optical dispersion in the invariant momentum k-e*A_x.}
+  - {id: C, description: Treat a constant spatial connection on the simply connected line as pure gauge whose apparent k shift is a relabeling rather than an observable spectral displacement.}
+  - {id: D, description: Retain a genuine holonomy-dependent spectral shift only on a circle or nontrivial bundle with explicit boundary conditions and charge representation.}
+  - {id: E, description: Map C1's algebra entirely to accepted metric and local-U1 claims if their exact composition is definition-level and no distinct reusable theorem survives.}
+  - {id: F, description: Compare constant versus varying index and connection to determine where volume-factor derivative curvature and field-strength terms invalidate C1's constant-coefficient operator.}
+  - {id: G, description: Use identical mathematical dispersions with different or absent medium electromagnetic and gravitational dictionaries to delimit physical interpretation.}
+  - {id: H, description: Close dependency semantic-consumer compatibility nonduplication disposition release generated-state and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - explicit scalar action or wave-equation premise metric signature volume density charge connection and gauge convention
+  - gauge covariance of the operator and invariance of the dispersion variables
+  - local pure gauge on the line versus global holonomy and boundary-condition data
+  - constant versus varying metric and connection domains with correct free flat and zero-curvature limits
+  - compatibility with accepted optical Berry U1 Gordon and source-action ceilings
+  - load-bearing mass sign metric inverse charge gauge phase topology boundary and connection-gradient mutations
+  - assumption and parameter economy reusable API value nonduplication and complete semantic-consumer closure
+  - preexposed half value dispersion coefficients and electrogravitic numbers excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, C1 and dossier hashes, candidates A
+  through H, metric, action, charge, gauge, topology, boundary, compatibility,
+  mutation, and done-gate criteria are frozen and committed. P152 already
+  exposed C1's terminal output and broad formulas as required consumer
+  evidence; those values cannot select a concept. The remaining source and
+  dossier bodies, exact data flow, literal constants, guard arithmetic, and
+  any further comparator material remain unopened until that boundary.
+status: draft

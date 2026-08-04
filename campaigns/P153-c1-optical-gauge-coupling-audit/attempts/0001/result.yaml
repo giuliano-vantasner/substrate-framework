@@ -1,0 +1,21 @@
+attempt: 0001
+campaign: P153
+candidate: campaign_preflight_and_memory_recall
+status: failed
+started_at: '2026-08-10T05:08:00Z'
+finished_at: '2026-08-10T05:10:00Z'
+commands:
+  - .venv/bin/python .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - memory_grep_with_unsupported_limit_option
+  - .agents/skills/physics-erdos-loop/scripts/preflight.sh
+  - memory_grep_without_limit_option
+result:
+  corrected_preflight: 7_passed_0_warnings
+  corrected_memory_grep: no_direct_C1_matches
+failure_class: workflow_invocation_syntax
+mechanism: >-
+  The shell preflight was initially passed to Python and raised SyntaxError,
+  and memory grep was initially given a search-only --limit option. Running
+  the executable directly and using the documented grep interface succeeded.
+scientific_effect: none
+next_attempt: freeze_the_matching_P153_contract_and_validate_it_before_source_inspection
