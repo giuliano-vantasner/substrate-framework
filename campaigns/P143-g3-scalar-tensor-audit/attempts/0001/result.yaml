@@ -1,0 +1,26 @@
+attempt: 0001
+campaign: P143
+candidate: preregistration
+status: passed
+started_at: '2026-08-09T15:40:00Z'
+finished_at: '2026-08-09T15:45:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P143-g3-scalar-tensor-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  frozen_proposal_sha256: 1dbc99be96409e7cef4e6b433412286f5db03aed0c2c75b8da38890d0a4dfe98
+  repository: WORKFLOW_VALID_144_claims_144_accepted_0_proposals
+  migration_queue: 218_units_78_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_and_parent_exposure_recorded_in_contract
+verdict: >-
+  The scalar-tensor action, solution, source, countermodel, candidate,
+  sensitivity, compatibility, and governance contract is frozen before G3
+  execution or source and dossier body inspection.
+next_attempt: >-
+  Commit the freeze boundary, compatibility-preflight immutable G3, reproduce
+  its exact tally, then audit every predicate and action or solution premise.

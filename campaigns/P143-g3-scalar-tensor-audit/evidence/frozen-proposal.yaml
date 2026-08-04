@@ -1,0 +1,69 @@
+id: P143
+base_release: v0.109.0
+base_commit: 61ef5d9
+scientific_base_commit: 63443d2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [G3]
+question: >-
+  Reproduce and independently audit G3's claim that a canonical minimally
+  coupled scalar-tensor action with a free three-plus-one metric supplies a
+  nontrivial breather-sourced dynamical route around the fixed optical-family
+  obstruction, and determine exactly which action, sign, stress, conservation,
+  constraint, initial, boundary, coupling, index-map, and solution premises are
+  required.
+invariants:
+  - >-
+    C-GOR-001 is an exact conditional effective-wave geometry and supplies no
+    material action, Einstein source, coupling, or physical gravity. G3 may use
+    it only as an analog-geometry ceiling, not as a sourced spacetime.
+  - >-
+    C-SG-001, C-SG-002, C-SG-008, and C-SG-012 govern normalized one-plus-one
+    sine-Gordon fields, constant boosts, energy, and stress. They do not provide
+    a three-plus-one stress with finite transverse energy or an Einstein-scalar
+    solution.
+  - >-
+    C-RAD-001 shows that action normalization and boundary history are
+    load-bearing for sourced radiation. It grants no gravitational action or
+    scalar-tensor coupling.
+  - >-
+    Pending G4 grants no authority. G2 is qualified and cannot close G3's
+    declared dependency by its rejected source or gravity narrative.
+  - >-
+    The generated queue exposes G3's eleven-check tally, one assertion,
+    symbolic and numeric oracle hints, G2/G4 dependencies, and broad canonical
+    scalar-tensor headline. Its result excerpt is null; source body, check
+    literals, output, dossier body, and numeric comparators remain unopened.
+allowed_imports:
+  - C-GOR-001 only under its exact effective-geometry ceiling
+  - C-SG-001 C-SG-002 C-SG-008 and C-SG-012 only under normalized one-plus-one and constant-boost ceilings
+  - C-RAD-001 only for explicit action boundary and source-work discipline
+  - standard mostly-plus Einstein-Hilbert and canonical real-scalar variational calculus with every coefficient and boundary term declared
+  - exact pseudo-Riemannian tensor calculus contracted Bianchi identities ADM constraint bookkeeping and well-posed initial-data distinctions
+  - G3 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+  - primary literature after freeze only for action convention degree-of-freedom hyperbolicity or known-solution scope
+candidates:
+  - {id: A, description: Reproduce G3 literally and classify all eleven predicates by action variation source data flow constraints boundary data and physical ceiling.}
+  - {id: B, description: Derive the exact mostly-plus Einstein plus canonical scalar Euler equations stress tensor divergence and Bianchi compatibility from one declared action.}
+  - {id: C, description: Construct and independently verify a tractable exact nonvacuum Einstein-scalar solution or prove that the proposed ansatz and data cannot satisfy every component.}
+  - {id: D, description: Treat the embedded one-plus-one breather as a three-plus-one source-compatibility problem including transverse energy conservation constraints and scalar equation.}
+  - {id: E, description: Build vacuum constant-field flat-metric wrong-sign nonconserved-source and missing-boundary countermodels that delimit what the action alone establishes.}
+  - {id: F, description: Close accepted composition novelty dependencies cycles reverse consumers compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - complete action metric curvature scalar potential stress and coupling conventions
+  - exact Euler-Lagrange equations Bianchi identity conservation and constraint closure
+  - explicit initial boundary gauge regularity and transverse-domain data for any claimed solution
+  - degrees of freedom hyperbolicity energy sign dimensions and known limits
+  - finite-energy embedding or explicit per-area and compactification ceiling
+  - wrong-sign vacuum homogeneous and source-mismatch countermodels
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - source outputs and numeric comparators excluded from concept selection and pass thresholds
+claims_proposed: [C-STG-001]
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, candidate
+  set, action and tensor conventions, selection criteria, mutation plan,
+  compatibility policy, and done gate are frozen and committed. Queue and
+  parent records have exposed only the broad headline, tally, dependency names,
+  and oracle hints; the source body, check literals, output, dossier body, and
+  numeric comparators remain unopened until that boundary.
+status: draft
