@@ -1,0 +1,46 @@
+revision: 0001
+campaign: P146
+parent_frozen_proposal_sha256: fa342cee48763371ae51008dee9096a534a9952556ddde83f734e540874ed212
+trigger: >-
+  Native and alias-only reproduction plus source-aware nonduplication show that
+  preregistered Candidates B, C, and E supply a distinct exact boundary-residual
+  parity and underdetermination theorem beyond C-SG-013's correlation theorem.
+unchanged:
+  - accepted base and source hashes
+  - scalar fixed-coordinate and outward-normal conventions
+  - candidates A through G and their ordering
+  - structural selection criteria
+  - source output excluded from selection and exact thresholds
+claim_reserved:
+  id: C-BND-001
+  dependencies: [C-SG-013]
+  statement: >-
+    Let phi be a sufficiently smooth real scalar, let u=phi_t(t,b) and
+    v=phi_x(t,b), and let a, beta, and the scalar source J be exact real
+    declared boundary data. Define R_(a,beta,J)=a*u+beta*v-J. Under scalar
+    spatial parity phi_P(t,x)=phi(t,-x) and source pullback
+    J_P(t,x)=J(t,-x), exact chain rule gives
+    R_(a,beta,J_P)[phi_P](t,b)=R_(a,-beta,J)[phi](t,-b). Thus beta and -beta
+    form a parity-covariant parameter family. At a parity center, a fixed
+    residual is internally invariant for arbitrary traces iff beta=0. The
+    mixed residual is not a parity-odd eigenobject: its a*u-J part is even and
+    beta*v part is odd; it is purely odd only when the even part is absent.
+    Under the simultaneous parity map from a right half-line to a left
+    half-line, the outward-normal derivative and its coefficient are unchanged.
+    Finally one residual equation does not determine both u and v; for
+    beta=0 it leaves v arbitrary, and for beta nonzero it admits the family
+    v=(J-a*u)/beta. It therefore derives neither boundary sign correlation nor
+    topological charge transfer or selection without additional dynamics and
+    vacuum-boundary data.
+novelty: >-
+  C-SG-011 supplies field and topological-current parity, while C-SG-013
+  supplies fixed-coordinate correlation and oriented-normal transformation.
+  Neither exposes the general boundary residual, its even/odd decomposition,
+  the distinction between internal invariance and parameter-family covariance,
+  or the trace underdetermination needed by W1 and nine reverse consumers.
+oracle: exact SymPy chain rule linear algebra and independent trace-space elimination
+implementation_boundary: >-
+  Extend the canonical boundary module only after this revision validates and
+  is committed; no source witness value or imported charge map controls the
+  implementation or tests.
+status: frozen

@@ -68,7 +68,7 @@ selection_criteria:
   - variational or independently declared dynamical provenance for any claimed boundary law
   - reusable API value nonduplication reverse-consumer closure and generated-state consistency
   - source outputs and any external comparators excluded from concept selection and thresholds
-claims_proposed: []
+claims_proposed: [C-BND-001]
 comparators_blinded_until: >-
   This manifest, matching prose contract, bridge and dossier hashes, candidates,
   exact fixed-coordinate and outward-normal conventions, symmetry classifier,
@@ -77,5 +77,8 @@ comparators_blinded_until: >-
   headline, dependency names, check counts, assertion count, and oracle hints;
   those hints do not select a candidate. Source and dossier bodies, literal
   predicates, full output, thresholds, and further comparator material remain
-  unopened until that boundary.
+  unopened until that boundary. Proposal revision 0001 subsequently reserves
+  C-BND-001 from preregistered Candidates B, C, and E after source-aware
+  nonduplication; its exact statement and unchanged structural criteria are
+  separately frozen before implementation.
 status: draft

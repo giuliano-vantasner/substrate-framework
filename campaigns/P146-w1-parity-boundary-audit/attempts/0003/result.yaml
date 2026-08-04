@@ -1,0 +1,31 @@
+attempt: 0003
+campaign: P146
+candidate: B_C_E
+status: passed
+started_at: '2026-08-09T19:49:00Z'
+finished_at: '2026-08-09T19:58:00Z'
+commands:
+  - repository-wide identifier collision and boundary-parity nonduplication search
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P146-w1-parity-boundary-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  revision_sha256: 0f4f3e8b3e5a77dc5e8f50f3686dfbdf8c14e16453a34cde24262124d580270c
+  claim_reserved: C-BND-001
+  identifier_collision: false
+  distinct_surface: boundary_residual_parity_family_normal_map_and_trace_underdetermination
+  direct_dependency: C-SG-013
+  reverse_consumers: 9
+  repository: WORKFLOW_VALID_147_claims_147_accepted_0_proposals
+  migration_queue: 218_units_75_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: true
+dossier_body_opened: true
+comparator_values_inspected: >-
+  W1's alias-only output and constructed witness values are visible but are
+  excluded from the exact claim statement, selection, thresholds, and tests.
+next_attempt: >-
+  Commit revision 0001, run additive-symbol impact preflight, implement
+  C-BND-001 in the canonical boundary module, and verify it through primary
+  and independent exact transformation and trace-space routes.

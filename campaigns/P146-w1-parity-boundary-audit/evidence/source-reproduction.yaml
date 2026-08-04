@@ -1,0 +1,37 @@
+campaign: P146
+source_unit: W1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-6/bridge_W1_parity_odd_chiral_coupling.py
+sha256: bfac7d7e4ccb0cdabc6bb2703dadb650c0e09ea883ec3ff70f039231d3e62388
+dossier_path: merged-framework/bridges/phase-6/dossiers/W1_dossier.md
+dossier_sha256: b445fb798e2c5fab53f47eca41895ec140ae3a0d812bd14d11eee0b26c3237a1
+ast_inventory:
+  check_calls: 8
+  assertions: 2
+  numpy_aliases: [np]
+  direct_legacy_attributes: 2
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+native_execution:
+  exit_status: 1
+  passed_before_abort: [W1.1, W1.2, W1.3]
+  abort_line: 291
+  mechanism: numpy_has_no_attribute_trapz
+  scientific_classification: version_only_compatibility_event
+alias_only_replay:
+  alias: numpy.trapz=numpy.trapezoid
+  source_modified: false
+  exit_status: 0
+  terminal_tally: ALL_8_CHECKS_PASS
+  vector_witness: 0.0
+  chiral_witness: 2.1538461538461537
+maximum_source_verdict: reproduction_only_pending_predicate_audit
+initial_scientific_flags:
+  - The exact fixed-coordinate operator pullback maps epsilon to minus epsilon within a parameter family; it does not by itself classify a fixed half-line theory as intrinsically parity violating.
+  - The source imports and hard-codes Q(+1)=+1 and Q(-1)=-1, so its charge-flip check is composition with the desired map rather than a derivation of charge selection.
+  - The vector witness sets phi_x identically zero even though the displayed boundary law phi_t=J does not imply that additional condition.
+  - The chiral witness separately sets phi_x equal to phi_t rather than solving the field equation with the displayed boundary condition and source.
+  - C-SG-013 proves the sign correlation and half-line topological charge change are independent; the source relabels its witness W as Delta Q without vacuum-endpoint or boundary-field-change evidence.
+  - A nonzero spatial-derivative coefficient produces an operator with even and odd parts and family covariance; it does not imply charge selection or pure parity oddness.

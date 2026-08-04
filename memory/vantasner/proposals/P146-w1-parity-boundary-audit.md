@@ -2,7 +2,7 @@
 description: Audit W1's parity-odd chiral boundary claim
 author: vantasner
 created: '2026-08-09T19:35:00Z'
-updated: '2026-08-09T19:35:00Z'
+updated: '2026-08-09T19:55:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -109,20 +109,43 @@ criteria, compatibility policy, and done gate are committed.
 
 ## Proposed Claim Delta
 
-P146 reserves no claim identifier at freeze. C-SG-011 already governs scalar
-parity, topological current, winding exchange, and the absence of an inferred
-weak mechanism; C-SG-013 already governs fixed-coordinate and oriented-normal
-boundary transformations without defining a boundary condition. Registry,
-campaign, package, and durable-memory searches have not yet established whether
-W1 contains a distinct exact boundary-operator or action-realizability theorem.
-A new identifier requires source-aware nonduplication, a separately recorded
-proposal revision, a renewed freeze before implementation, an importable
-consumer, and individual review. Otherwise P146 will compose accepted APIs and
-terminally adjudicate W1 without manufacturing a duplicate claim.
+P146 provisionally reserves C-BND-001 under revision 0001. C-SG-011 already
+governs scalar parity, topological current, winding exchange, and the absence of
+an inferred weak mechanism; C-SG-013 already governs fixed-coordinate and
+oriented-normal boundary correlations without defining a boundary condition.
+Repository registry, campaign, package, and durable-memory searches found no
+prior use of C-BND-001 and no accepted theorem carrying the general boundary
+residual, even/odd decomposition, internal-invariance versus parameter-family
+classification, oriented-normal coefficient map, and trace underdetermination
+together. C-SG-013 is the direct dependency rather than a duplicate.
 
 The nine anticipated reverse consumers are pending W2, W3, W5, W7, M1, and
 WM7 plus qualified NC1, NC2, and NC3. Circular source references grant no
 authority; each qualified unit retains only its accepted independent closure.
+
+## Proposal Revision
+
+Revision 0001 activates preregistered Candidates B, C, and E after immutable
+source reproduction and source-aware nonduplication. W1 computes a valid
+coefficient sign exchange but calls the entire mixed residual parity odd,
+equates family covariance with intrinsic violation, and infers charge selection
+from separately constructed traces. C-SG-013 already warns about the domain and
+normal but does not provide the boundary-residual classification consumers need.
+The revision therefore reserves collision-free C-BND-001 before implementation.
+The initial proposal, candidate ordering, transformation conventions, selection
+criteria, compatibility policy, and source-value exclusion remain unchanged.
+
+C-BND-001 will state the exact scalar boundary-residual theorem. For
+`R=a*u+beta*v-J`, scalar parity gives the reflected-point residual with
+`beta` replaced by `-beta`. This is covariance of a parameter pair. At a parity
+center, fixed-parameter invariance for arbitrary traces requires `beta=0`; a
+mixed residual contains an even part `a*u-J` and an odd part `beta*v` and is not
+a parity eigenobject. Mapping a right half-line and its outward normal to the
+left leaves the normal coefficient unchanged. One residual equation also leaves
+the two traces underdetermined and therefore supplies neither the sign
+correlation nor the separately defined topological charge transfer. The theorem
+adds no boundary action, state selection, weak interaction, particle map,
+observation, or substrate mechanism.
 
 ## Implementation and Oracle Plan
 
@@ -205,5 +228,5 @@ complete the campaign.
 ## Cross-References
 
 The governing references are P048 through P051, NC1 through NC4, W1,
-C-SG-001, C-SG-011, C-SG-013, the canonical sine-Gordon and boundary modules,
-v0.112.0, and the parent migration effort.
+C-SG-001, C-SG-011, C-SG-013, provisional C-BND-001, the canonical sine-Gordon
+and boundary modules, v0.112.0, and the parent migration effort.

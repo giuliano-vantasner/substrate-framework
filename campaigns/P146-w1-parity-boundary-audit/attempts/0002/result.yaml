@@ -1,0 +1,38 @@
+attempt: 0002
+campaign: P146
+candidate: A
+status: passed
+started_at: '2026-08-09T19:43:00Z'
+finished_at: '2026-08-09T19:48:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python audit_numpy_trapezoid_compatibility on immutable W1
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-6/bridge_W1_parity_odd_chiral_coupling.py
+  - .venv/bin/python alias-only runpy replay with numpy.trapz backed by numpy.trapezoid
+  - AST inventory of check calls and assertions
+result:
+  source_hash: verified
+  dossier_hash: verified
+  compatibility: two_direct_immutable_legacy_accesses
+  native_exit: 1_after_W1_1_through_W1_3
+  native_failure: numpy_has_no_attribute_trapz
+  alias_only_exit: 0
+  alias_only_tally: ALL_8_CHECKS_PASS
+  source_predicates: 8
+  source_assertions: 2
+  source_modification: none
+  maximum_verdict: reproduction_only
+  scientific_debt:
+    - parameter_family_covariance_is_called_intrinsic_parity_violation
+    - imported_charge_map_is_called_derived_selection
+    - vector_phi_x_zero_is_an_extra_condition
+    - chiral_phi_x_equals_phi_t_is_a_constructed_profile_not_a_solution
+    - boundary_sign_correlation_is_relabelled_Delta_Q
+    - nonzero_dx_coefficient_is_equated_with_charge_selection
+source_body_opened: true
+dossier_body_opened: true
+comparator_values_inspected: all_source_and_dossier_material
+next_attempt: >-
+  Derive the exact coordinate and oriented-normal boundary maps, classify
+  symmetry breaking and boundary-law provenance, sensitively adjudicate every
+  source predicate, and perform source-aware nonduplication before reserving
+  any claim identifier.
