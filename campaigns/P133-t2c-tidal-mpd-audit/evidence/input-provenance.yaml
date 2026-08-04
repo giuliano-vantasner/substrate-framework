@@ -1,0 +1,29 @@
+campaign: P133
+accepted_inputs:
+  C-OG-001: exact_static_1plus1_optical_metric_scalar_curvature_and_sign_convention
+  C-OG-002: conditional_TF_map_and_point_geodesic_ceiling_only
+  C-OG-003: exact_source_side_operator_with_no_matter_equation
+  C-VAR-001: fixed_nonzero_action_scale_cancellation
+  C-CC-001: conditional_point_collective_action_exact_acceleration_and_zero_velocity_limit
+  C-SG-001: exact_normalized_rest_breather
+  C-SG-002: exact_rest_energy
+  C-SG-009: exact_centered_Hamiltonian_energy_second_moment_with_no_finite_size_coupling
+  C-MOM-001: conditional_conserved_stress_moments_with_no_gravity_force
+source_defined_inputs:
+  - static optical metric g equals diag(-1/n,n/c0 squared)
+  - phase-three time-averaged coupling kernel w and its Fourier transform
+  - imported decimal kernel values w_tilde(0)=5.6569 second raw moment 13.96 and normalized variance 2.4674
+  - declared identification of the raw rank-two kernel moment with an MPD quadrupole
+  - local index samples n=1.5 n_x=0.1 n_xx=-0.02 and n=1+0.05*x
+  - post-hoc statements that FS1 FS4 and P3D3 close the field-theory ceiling
+new_declared_input:
+  - normalized centered scaled-profile averaging of the accepted slow point acceleration for C-OG-004
+withheld:
+  - a field-derived moving finite-width sine-Gordon collective action in the curved optical background
+  - a rank-four Dixon quadrupole with Riemann symmetries
+  - momentum-to-velocity or mass normalization supplementary worldline data and proper-time conversion
+  - any physical gravity equation material trajectory or substrate identification
+  - qualified predecessor claims outside their accepted registry surfaces
+  - pending G2 and G4 physical sourcing and backreaction conclusions
+comparators: []
+debt: []

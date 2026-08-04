@@ -1,0 +1,39 @@
+campaign: P133
+source_unit: T2C
+lines: 448
+static_check_calls: 13
+runtime_checks: 13
+assert_statements: 1
+executable_imports: [sympy]
+declared_dependencies: [FS1, FS2, FS4, P3D3, T1B]
+runtime_dependencies: []
+hidden_prose_imports:
+  - {path: merged-framework/bridges/phase-2/dossiers/T2C-dossier.md, sha256: 45708ca99880207c5da6dfcfc1bef2e6d6f7f3ec8d5b99055f7ae795dfaacb66, scope: unproved_MPD_specialization_and_build_plan}
+  - {path: soliton-shadow/cut-and-project-shadow/sympy/phase3_finite_size_correction.py, sha256: 19738d784a86b1ce4831d2ee1133154fd58d33b60b28e3c12cf62885a8efd7f4, scope: fixed_profile_kernel_and_numeric_moments}
+  - {path: soliton-shadow/cut-and-project-shadow/11-stochastic-periodic-background.md, sha256: 4d28b7a42f730a2ee476050095cc14d5c4a50592b1b2edd685e7d1514e1b6fcf, scope: noncanonical_form_factor_response_narrative}
+constructed_objects:
+  metric: diag(-1/n,n/c0_squared)
+  geometry: Christoffels_full_Riemann_Ricci_scalar_and_2d_Gaussian_identity
+  kernel_moment: symbolic_wpp0_then_imported_w0_times_decimal_variance
+  alleged_force: R_scalar_times_wpp0_divided_by_2n
+  point_guard: substitute_wpp0_zero
+  wrong_guard: substitute_nonzero_zeroth_moment_into_same_declared_coefficient
+  sign_test: evaluate_the_declared_formula_on_one_local_derivative_jet
+surviving_surface:
+  - The optical Christoffels Riemann components scalar curvature and two-dimensional Gaussian identity are exact and map to C-OG-001.
+  - The frozen Riemann sign and component relation R^1_001=R_scalar/(2n) are exact.
+  - For a declared integrable kernel with finite second moment the Fourier identity -w_tilde_double_prime(0)=integral y^2*w(y)dy is exact.
+  - The phase-three kernel values reproduce numerically and use current np.trapezoid calls.
+defects:
+  - The claimed MPD force is declared after the geometry calculation and no covariant multipole equation is derived or executed.
+  - Papapetrou's Riemann coupling is to an antisymmetric spin tensor. A symmetric rank-two J contracts to zero in those antisymmetric slots, and T2C's R^1_010*J^11 labels do not share index slots.
+  - Dixon's quadrupole force uses a rank-four Riemann-symmetry moment and a curvature derivative, plus momentum or mass and worldline data. T2C supplies none of them.
+  - Curvature has inverse-time-squared units and a normalized width has length-squared units, so their product is velocity squared rather than coordinate acceleration. The raw kernel moment also retains its coupling weight.
+  - The upstream phase-three fixed-profile derivation gives a third-background-derivative correction; T2C gives a second derivative at weak order and therefore does not reproduce its own imported mechanism.
+  - For an even index n=1+beta*x^2/2 and an even centered body at x=0, exact reflection symmetry forces zero averaged acceleration while T2C predicts c0^2*beta*variance/2.
+  - On n=1+epsilon*x, profile averaging starts at order epsilon cubed while T2C starts at order epsilon squared with the opposite sign.
+  - Substitution of zero width proves only that any coefficient times the width vanishes. Infinitely many inequivalent force laws pass the same point guard, nonzero check, and linearity check.
+  - The source sign sample has abs(Delta/a_point)=4.65, but its alleged leading correction check requires only a finite ratio and supplies no small-parameter hierarchy or remainder control.
+  - The post-hoc FS1 FS4 and P3D3 annotation conflicts with their accepted adjudications and cannot close the missing moving-field or MPD derivation backward.
+headline_verdict: optical_geometry_and_kernel_moment_survive_MPD_identification_and_curvature_width_force_rejected
+debt: []

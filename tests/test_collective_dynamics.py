@@ -7,6 +7,7 @@ from substrate_framework.collective_dynamics import (
     optical_collective_acceleration,
     optical_collective_lagrangian,
     slow_optical_collective_acceleration,
+    slow_optical_profile_width_correction,
     virial_scaling_exponents,
 )
 from substrate_framework.optical_geometry import slow_geodesic_acceleration_1d
@@ -42,6 +43,54 @@ def test_slow_limit_matches_accepted_optical_geometry() -> None:
     ) == 0
 
 
+def test_centered_profile_width_correction_is_second_acceleration_derivative() -> None:
+    coordinate = sp.symbols("x", real=True)
+    index = sp.Function("n", positive=True)(coordinate)
+    signal_speed, variance = sp.symbols("c0 sigma2", positive=True)
+    point_acceleration = slow_optical_collective_acceleration(
+        coordinate, index, signal_speed
+    )
+    correction = slow_optical_profile_width_correction(
+        coordinate, index, signal_speed, variance
+    )
+    assert sp.simplify(
+        correction - variance * sp.diff(point_acceleration, coordinate, 2) / 2
+    ) == 0
+
+
+def test_profile_width_correction_has_third_derivative_weak_limit() -> None:
+    coordinate, epsilon = sp.symbols("x epsilon", real=True)
+    signal_speed, variance = sp.symbols("c0 sigma2", positive=True)
+    shape = sp.Function("xi", real=True)(coordinate)
+    correction = slow_optical_profile_width_correction(
+        coordinate,
+        1 + epsilon * shape,
+        signal_speed,
+        variance,
+    )
+    assert sp.simplify(
+        sp.diff(correction, epsilon).subs(epsilon, 0)
+        - signal_speed**2
+        * variance
+        * sp.diff(shape, coordinate, 3)
+        / 4
+    ) == 0
+
+
+def test_profile_width_correction_respects_reflection_center() -> None:
+    coordinate = sp.symbols("x", real=True)
+    signal_speed, variance, curvature = sp.symbols(
+        "c0 sigma2 beta", positive=True
+    )
+    correction = slow_optical_profile_width_correction(
+        coordinate,
+        1 + curvature * coordinate**2 / 2,
+        signal_speed,
+        variance,
+    )
+    assert sp.simplify(correction.subs(coordinate, 0)) == 0
+
+
 def test_conditional_virial_exponents_select_option_c() -> None:
     assert virial_scaling_exponents(0, 1) == (
         sp.Rational(-1, 2),
@@ -75,6 +124,12 @@ def test_conditional_virial_exponents_select_option_c() -> None:
                 sp.symbols("x"), 1, -1
             ),
             "signal_speed",
+        ),
+        (
+            lambda: slow_optical_profile_width_correction(
+                sp.symbols("x"), 1, 1, -1
+            ),
+            "spatial_variance",
         ),
     ],
 )

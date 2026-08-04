@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 88
-  qualified: 118
+  pending_adjudication: 87
+  qualified: 119
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -475,8 +475,43 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-OG-001
+  - C-CC-001
+  - C-OG-004
+  qualification: T2C correctly reconstructs the declared optical Christoffels, Riemann components, scalar
+    curvature, and two-dimensional Gaussian identity. Its Fourier identity -w_tilde_double_prime(0)=integral
+    y^2*w(y)dy is also correct for a separately defined finite-moment kernel. The claimed acceleration
+    R_scalar*moment/(2*n), however, is defined rather than derived. Curvature times a normalized spatial
+    variance has velocity- squared rather than acceleration units; the source's raw kernel moment additionally
+    carries its unremoved weight. The upstream fixed-profile response and the accepted conditional profile-average
+    alternative use a third background derivative at leading weak order. On an even index about the body
+    center, exact reflection symmetry forces zero averaged acceleration while T2C predicts a nonzero value.
+    Papapetrou's Riemann coupling is to antisymmetric spin, and the Dixon quadrupole force uses a rank-four
+    Riemann-symmetry moment contracted with a curvature derivative, plus momentum or mass and worldline
+    data. T2C executes none of these and its R^1_010*J^11 contraction is not index-typed. Its zero-width,
+    nonzero, sign, and linearity checks are necessary construction properties that do not select a force
+    law. FS1, FS2, FS4, P3D3, and T1B do not lift this ceiling or supply a physical gravity, material,
+    or substrate mechanism.
+  evidence:
+  - campaigns/P133-t2c-tidal-mpd-audit/reviews/source_adjudication.md
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/source-reproduction.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/source-audit.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/check-adjudication.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/input-provenance.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/dependency-audit.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/consumer-audit.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/candidate-comparison.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/evidence/primary-provenance.yaml
+  - campaigns/P133-t2c-tidal-mpd-audit/verify.py
+  - campaigns/P133-t2c-tidal-mpd-audit/reviews/independent_tidal_force_review.py
+  - memory/vantasner/decisions/T2C-qualified-review.md
+  note: P133 promotes C-OG-004's exact conditional centered-profile width expansion and qualifies T2C
+    after fifty primary and twenty-one independent exact checks. T2C's thirteen checks and the upstream
+    five-check np.trapezoid replay reproduce. Pending G2 and G4 reproduce sixteen checks; immutable G4's
+    np.trapz call receives an alias-only compatibility replay and grants no scientific authority.
 - source_unit: EM1
   phase: phase-3
   path: merged-framework/bridges/phase-3/bridge_EM1_u1_noether_charge.py

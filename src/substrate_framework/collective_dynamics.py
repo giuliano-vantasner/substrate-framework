@@ -14,6 +14,13 @@ def _positive(value: Any, name: str) -> sp.Expr:
     return expression
 
 
+def _nonnegative(value: Any, name: str) -> sp.Expr:
+    expression = sp.sympify(value)
+    if expression.is_number and expression.is_nonnegative is not True:
+        raise ValueError(f"{name} must be nonnegative")
+    return expression
+
+
 def optical_collective_lagrangian(
     coordinate: sp.Expr,
     parameter: sp.Symbol,
@@ -65,6 +72,28 @@ def slow_optical_collective_acceleration(
     c0 = _positive(signal_speed, "signal_speed")
     return sp.simplify(
         c0**2 * sp.diff(n_value, coordinate) / (2 * n_value**3)
+    )
+
+
+def slow_optical_profile_width_correction(
+    coordinate: sp.Expr,
+    index: Any,
+    signal_speed: Any,
+    spatial_variance: Any,
+) -> sp.Expr:
+    """Return the centered profile-average term ``variance*a''/2``.
+
+    Here ``a`` is :func:`slow_optical_collective_acceleration`.  The result is
+    the second-order term for a declared normalized centered scaled-profile
+    average.  It is not a Mathisson-Papapetrou-Dixon force law.
+    """
+
+    variance = _nonnegative(spatial_variance, "spatial_variance")
+    point_acceleration = slow_optical_collective_acceleration(
+        coordinate, index, signal_speed
+    )
+    return sp.simplify(
+        variance * sp.diff(point_acceleration, coordinate, 2) / 2
     )
 
 

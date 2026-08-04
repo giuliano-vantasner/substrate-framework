@@ -194,6 +194,48 @@ claims:
     accepted_in: v0.10.0
     challenges: []
     supersedes: []
+  - id: C-OG-004
+    statement: >-
+      Let a(x)=c0^2*n_x/(2*n^3) be the C-CC-001 zero-velocity optical
+      collective acceleration for a positive sufficiently differentiable
+      static index n(x). Let p(z) be a declared normalized centered profile
+      with finite second moment mu2, and define the scaled profile-average
+      A(s,X)=integral_R p(z)*a(X+s*z) dz wherever differentiation under the
+      integral is valid. Then A(0,X)=a(X), partial_s A(0,X)=0, and
+      partial_s^2 A(0,X)=mu2*a_xx(X), so
+      A(s,X)=a(X)+(s^2*mu2/2)*a_xx(X)+o(s^2). Equivalently, with spatial
+      variance sigma2=s^2*mu2, the leading width term is
+      sigma2*c0^2*(n_xxx/n^3-9*n_x*n_xx/n^4+12*n_x^3/n^5)/4. For
+      n=1+epsilon*xi, its coefficient linear in epsilon is
+      c0^2*sigma2*xi_xxx/4. Thus it has acceleration units and depends on the
+      third background derivative in the weak-profile limit. For an even
+      index about X=0 and an even centered profile, the exact averaged
+      acceleration at X=0 vanishes. This conditional profile-average theorem
+      is not a Mathisson-Papapetrou-Dixon equation, field-derived deformation
+      law, gravity theory, material trajectory, or substrate realization.
+    provenance: campaigns/P133-t2c-tidal-mpd-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-CC-001
+    evidence:
+      - campaigns/P133-t2c-tidal-mpd-audit/verify.py
+      - campaigns/P133-t2c-tidal-mpd-audit/attempts/0004/result.yaml
+      - campaigns/P133-t2c-tidal-mpd-audit/reviews/independent_tidal_force_review.py
+      - campaigns/P133-t2c-tidal-mpd-audit/reviews/source_adjudication.md
+      - memory/vantasner/decisions/C-OG-004-review.md
+      - tests/test_collective_dynamics.py
+    assumptions:
+      - The static index is positive and differentiable through the displayed order on the averaging neighborhood, and the C-CC-001 coordinate and signal-speed conventions are retained.
+      - The profile is normalized and centered with finite second moment, and regularity and domination permit two derivatives with respect to the scale to pass through the integral; the exact reflection null additionally uses an even profile and index.
+      - Profile averaging is a declared effective prescription. It is not derived from the full sine-Gordon action, a stress-energy multipole expansion, or an MPD worldline equation.
+      - The variance is a nonnegative squared spatial length; restoring dimensions is required before comparing it with any raw unnormalized energy moment.
+    comparators: []
+    accepted_in: v0.101.0
+    challenges: []
+    supersedes: []
   - id: C-TH-001
     statement: >-
       For every real dimensionless splitting x, the normalized upper-state

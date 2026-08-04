@@ -1,0 +1,28 @@
+campaign: P133
+attempt: 0004
+status: verified
+candidates: [B, C, D, F, G, H]
+commands:
+  - .venv/bin/python campaigns/P133-t2c-tidal-mpd-audit/verify.py
+  - .venv/bin/python campaigns/P133-t2c-tidal-mpd-audit/reviews/independent_tidal_force_review.py
+  - .venv/bin/python -m pytest tests/test_collective_dynamics.py -q
+result:
+  primary_exact_checks: 50
+  independent_exact_checks: 21
+  targeted_tests_passed: 9
+  selected_positive_object: C-OG-004
+  source_force_verdict: rejected
+  source_disposition: qualified
+  release_candidate: v0.101.0
+  compatibility_event: none
+interpretation: >-
+  Exact geometry and Fourier-moment facts survive. Two independent routes show
+  that normalized profile averaging produces variance*a_double_prime/2, a
+  third-background-derivative weak correction with acceleration units and an
+  exact reflection-center null. T2C instead uses curvature times a raw rank-two
+  moment, fails these tests, and is not an MPD equation. The correct conditional
+  alternative is reusable and nonduplicate.
+next_attempt: >-
+  Complete claim-level reviews, campaign adjudication, release and generated
+  records, queue and memory synchronization, then run the single integrated
+  promotion gate.

@@ -1,0 +1,43 @@
+campaign: P133
+source_unit: T2C
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-2/bridge_T2C_tidal_MP.py
+sha256: 651fd75287dd25b5c34208ea5789df89be50f5050ec139ae2d99f4962440c369
+command: /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-2/bridge_T2C_tidal_MP.py
+working_directory: /home/dan/substrate
+exit_status: 0
+terminal_tally: ALL 13 CHECKS PASS
+runtime_oracles: [SymPy]
+compatibility_preflight:
+  np_trapz_calls: 0
+  np_trapezoid_calls: 0
+  alias_injected: false
+  compatibility_event: none
+upstream_reproduction:
+  path: soliton-shadow/cut-and-project-shadow/sympy/phase3_finite_size_correction.py
+  sha256: 19738d784a86b1ce4831d2ee1133154fd58d33b60b28e3c12cf62885a8efd7f4
+  command: /home/dan/substrate-framework/.venv/bin/python soliton-shadow/cut-and-project-shadow/sympy/phase3_finite_size_correction.py
+  exit_status: 0
+  terminal_tally: All layer-3 asserts passed
+  assert_families: 5
+  executable_np_trapezoid_calls: 8
+  executable_np_trapz_calls: 0
+reported_values:
+  kernel_mass: 5.65685
+  raw_kernel_second_moment: 13.95773
+  normalized_kernel_variance: 2.46740
+  exact_kernel_mass: 4*sqrt(2)
+  exact_raw_kernel_second_moment: sqrt(2)*pi^2
+  exact_normalized_kernel_variance: pi^2/4
+  source_sign_sample_point_acceleration: 0.0148148148148
+  source_sign_sample_t2c_correction: -0.0689270538236
+  source_sign_sample_abs_correction_to_point_ratio: 4.65257613309
+headline_observation: >-
+  Literal T2C execution proves its optical curvature algebra and properties of
+  the formula it defines. The upstream source reproduces a form-factor filter
+  whose real-space width correction starts with the third background
+  derivative, not T2C's curvature term. T2C's own sign sample has a purported
+  correction more than four times the point acceleration and checks only that
+  the ratio is finite, not that a leading post-geodesic expansion is controlled.
+scientific_status: reproduction_evidence_only
+debt: []

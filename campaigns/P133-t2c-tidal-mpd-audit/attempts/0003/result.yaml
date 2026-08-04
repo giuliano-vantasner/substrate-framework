@@ -1,0 +1,23 @@
+campaign: P133
+attempt: 0003
+status: failed
+candidate: G
+classification: implementation
+command: .venv/bin/python campaigns/P133-t2c-tidal-mpd-audit/reviews/independent_tidal_force_review.py
+expected: >-
+  Complete a fresh exact geometry, Gaussian form-factor, weak-profile,
+  reflection, dimension, and MPD provenance review with a terminal tally.
+observed: >-
+  Twenty scientific checks passed. The final source-label check failed because
+  its exact phrase spanned a source line wrap and therefore was not a stable
+  substring of the decoded file.
+scientific_failure: false
+compatibility_event: none
+cause: >-
+  The source audit relied on one prose substring longer than the hash-pinned
+  source's physical line. This is an implementation representation defect in
+  the verifier, not evidence for or against T2C.
+repair: >-
+  Retain the hash check and replace the wrapped phrase with two shorter
+  within-line provenance markers that jointly distinguish a declared bridge
+  from a derived MPD equation. Rerun the complete independent verifier.

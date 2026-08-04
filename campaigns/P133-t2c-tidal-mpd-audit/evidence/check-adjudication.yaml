@@ -1,0 +1,25 @@
+campaign: P133
+source_unit: T2C
+predicates:
+  - {index: 1, label: riemann_component_R1001, verdict: exact_duplicate, reason: Exact component algebra is implied by C-OG-001 under the frozen Riemann convention.}
+  - {index: 2, label: riemann_last_slot_antisymmetry, verdict: exact_duplicate, reason: Exact tensor symmetry and component sign are independently reproduced.}
+  - {index: 3, label: ricci_scalar, verdict: exact_duplicate, reason: C-OG-001 already owns the same scalar curvature.}
+  - {index: 4, label: two_dimensional_Gaussian_identity, verdict: exact_composition, reason: The component identity is correct but adds no distinct force or geometry claim beyond C-OG-001.}
+  - {index: 5, label: curvature_component_equals_R_over_2n, verdict: algebra_exact_MPD_label_rejected, reason: The equality is geometric; calling it an MPD coefficient is undeclared and index-incomplete.}
+  - {index: 6, label: zero_width_point_limit, verdict: necessary_but_nondiscriminating, reason: Every formula proportional to the moment passes and the check cannot select a mechanism or coefficient.}
+  - {index: 7, label: imported_phase3_moments, verdict: numeric_regression_distinct_object, reason: The current np.trapezoid source reproduces the kernel values, but its raw coupling moment is not C-SG-009's Hamiltonian moment or a Dixon quadrupole.}
+  - {index: 8, label: nonzero_linear_profile_value, verdict: constructed_formula_not_force_evidence, reason: The multiplication is nonzero by definition and disagrees in derivative order epsilon order and sign with profile averaging.}
+  - {index: 9, label: zeroth_moment_wrong_guard, verdict: useful_scope_guard_only, reason: A zeroth moment does not vanish in a fixed-mass point limit, but rejecting it does not validate the chosen curvature coefficient.}
+  - {index: 10, label: second_vs_zeroth_moment_discriminator, verdict: false_dichotomy, reason: Many second-moment couplings pass while only the derived profile-average or a typed MPD equation can select one.}
+  - {index: 11, label: negative_curvature_sample, verdict: exact_geometry_sign, reason: The sampled scalar-curvature sign is correct and independent of the force interpretation.}
+  - {index: 12, label: correction_opposes_point_drift, verdict: defined_formula_sign_only, reason: The sign follows from multiplying the declared coefficient; the symmetric-center and upstream-response countermodels reject its physical reading.}
+  - {index: 13, label: linearity_and_finite_ratio, verdict: construction_and_uncontrolled_hierarchy, reason: Linearity is built in and the source ratio is about 4.65 so finiteness does not establish a leading correction.}
+summary:
+  source_predicates_reproduced: 13
+  exact_geometry_or_kernel_surfaces: 5
+  necessary_scope_guards: 2
+  rejected_or_nondiscriminating_force_predicates: 6
+  accepted_claims_reused: [C-OG-001, C-CC-001]
+  new_claims_promoted: [C-OG-004]
+  terminal_disposition: qualified
+debt: []

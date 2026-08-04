@@ -1,0 +1,41 @@
+campaign: P133
+attempt: 0005
+status: verified
+candidates: [B, C, D, F, G, H]
+commands:
+  - scripts/validate.sh
+  - git diff --check
+expected:
+  release: v0.101.0
+  accepted_claims: 136
+  proposals: 0
+  queue_units: 218
+  queue_pending: 87
+  queue_qualified: 119
+  queue_partial: 0
+  source_disposition: qualified
+  compatibility_policy: np_trapz_version_events_are_not_scientific_failures
+result:
+  workflow_exit_status: 0
+  workflow_claims: 136
+  workflow_accepted_claims: 136
+  workflow_open_proposals: 0
+  migration_units: 218
+  migration_pending: 87
+  migration_partial: 0
+  migration_qualified: 119
+  runnable_tests: 1122
+  declared_skips: 8
+  validated_memory_files: 536
+  physics_skill_valid: true
+  git_diff_check: true
+compatibility_event: none
+finding: >-
+  The single integrated terminal workflow passes with v0.101.0 dependency
+  closed at 136 accepted claims. P133 accepts the conditional optical profile
+  width correction C-OG-004, rejects the source's MPD interpretation, qualifies
+  T2C without treating compatibility as physics, and closes every campaign debt.
+next_attempt: >-
+  No further P133 scientific attempt is required. Finalize record-sensitive
+  YAML, memory, generated-state, and whitespace checks without rerunning the
+  unchanged full suite, then checkpoint the parent effort at the next queue unit.

@@ -315,6 +315,7 @@ from .collective_dynamics import (
     optical_collective_acceleration,
     optical_collective_lagrangian,
     slow_optical_collective_acceleration,
+    slow_optical_profile_width_correction,
     virial_scaling_exponents,
 )
 from .collective_coordinates import (
@@ -1208,6 +1209,7 @@ __all__ = [
     "slow_geodesic_acceleration_1d",
     "slow_geodesic_acceleration_from_potential",
     "slow_optical_collective_acceleration",
+    "slow_optical_profile_width_correction",
     "stationary_collective_linearization",
     "spherical_field",
     "spherical_radial_second_moment_tensor",

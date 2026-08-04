@@ -1,0 +1,26 @@
+campaign: P133
+source_unit: T2C
+nearby_accepted_surfaces:
+  C-OG-001: exact_static_metric_scalar_curvature_and_log_dilaton_identity
+  C-CC-001: exact_conditional_point_collective_acceleration_and_zero_velocity_limit
+  C-SG-009: exact_centered_1plus1_Hamiltonian_energy_moment_without_force_coupling
+  C-MOM-001: conditional_conserved_stress_moments_without_gravity_force
+new_surface:
+  C-OG-004: >-
+    Exact second scale derivative and leading variance term for a declared
+    normalized centered profile average of the C-CC-001 slow acceleration,
+    including the explicit nonlinear index jet, weak-profile third derivative,
+    dimensions, and reflection-center null.
+distinctness: >-
+  No accepted claim owns a finite-width expansion of the optical collective
+  acceleration. C-OG-001 contains curvature but no profile. C-CC-001 is pointlike.
+  C-SG-009 is an unnormalized Hamiltonian scalar moment and explicitly denies a
+  finite-size coupling. C-MOM-001 is 3+1 conserved-stress kinematics and supplies
+  no force. The new pure API has a direct test consumer and rejects T2C's
+  curvature-times-width formula through independent limits.
+reserved_claim: C-OG-004
+promotion_decision: promoted
+new_package_api: slow_optical_profile_width_correction
+release_change: v0.101.0
+source_verdict: terminal_qualified_with_correct_conditional_alternative
+debt: []

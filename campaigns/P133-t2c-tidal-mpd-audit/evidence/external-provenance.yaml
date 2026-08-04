@@ -1,0 +1,55 @@
+campaign: P133
+topic: Mathisson-Papapetrou-Dixon force provenance
+retrieved_at: '2026-08-09T00:45:00Z'
+sources:
+  - author: Achille Papapetrou
+    title: Spinning test-particles in general relativity I
+    publication: Proceedings of the Royal Society of London A 209 248-258
+    year: 1951
+    doi: 10.1098/rspa.1951.0200
+    url: https://doi.org/10.1098/rspa.1951.0200
+    scope: pole-dipole spin-curvature equation with antisymmetric spin tensor
+    relevance: >-
+      This is not a symmetric rank-two mass-quadrupole law. Its curvature
+      coupling is the spin term proportional to Riemann times four-velocity
+      times the antisymmetric spin tensor.
+  - author: W. G. Dixon
+    title: Dynamics of extended bodies in general relativity I Momentum and angular momentum
+    publication: Proceedings of the Royal Society of London A 314 499-527
+    year: 1970
+    doi: 10.1098/rspa.1970.0020
+    url: https://doi.org/10.1098/rspa.1970.0020
+    scope: definitions of total momentum spin and center of mass
+    relevance: >-
+      The article states that the equations of motion are to be derived in
+      subsequent papers. Citing Dixon 1970 does not source T2C's displayed
+      rank-two curvature-times-moment equation.
+  - author: W. G. Dixon
+    title: Dynamics of extended bodies in general relativity III Equations of motion
+    publication: Philosophical Transactions of the Royal Society of London A 277 59-119
+    year: 1974
+    doi: 10.1098/rsta.1974.0046
+    url: https://doi.org/10.1098/rsta.1974.0046
+    scope: covariant multipolar equations of motion for extended bodies
+    relevance: >-
+      This is the subsequent equations-of-motion paper required for a Dixon
+      quadrupole claim, not the 1970 Part I citation used by T2C.
+  - author: Keisuke Ogasawara and others
+    title: Collisional Penrose process of extended test particles near an extremal Kerr black hole
+    publication: European Physical Journal C 83 1068
+    year: 2023
+    doi: 10.1140/epjc/s10052-023-12171-w
+    url: https://doi.org/10.1140/epjc/s10052-023-12171-w
+    scope: primary research applying the pole-dipole-quadrupole MPD system
+    displayed_equation: >-
+      Dp_a/Dtau = -(1/2) R_abcd u^b S^cd
+      -(1/6) nabla_a R_bcde J^bcde
+    tensor_requirements: >-
+      S^cd is antisymmetric. J^bcde is rank four with the algebraic symmetries
+      of the Riemann tensor. Acceleration additionally requires a momentum to
+      velocity or mass relation and a supplementary worldline prescription.
+conclusion: >-
+  T2C's a^x=-R^1_010*J^11 is neither the Papapetrou spin term nor the Dixon
+  quadrupole term. It omits the rank-four quadrupole, curvature derivative,
+  momentum or mass normalization, worldline tangent and supplementary data;
+  its displayed index contraction is not well typed.

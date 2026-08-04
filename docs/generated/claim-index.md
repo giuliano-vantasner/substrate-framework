@@ -561,6 +561,15 @@ Conditional on C-OG-001 and C-OG-002, for every twice-differentiable potential P
 - Compatibility: `compatible_extension`
 - Dependencies: C-OG-001, C-OG-002
 
+## C-OG-004
+
+Let a(x)=c0^2*n_x/(2*n^3) be the C-CC-001 zero-velocity optical collective acceleration for a positive sufficiently differentiable static index n(x). Let p(z) be a declared normalized centered profile with finite second moment mu2, and define the scaled profile-average A(s,X)=integral_R p(z)*a(X+s*z) dz wherever differentiation under the integral is valid. Then A(0,X)=a(X), partial_s A(0,X)=0, and partial_s^2 A(0,X)=mu2*a_xx(X), so A(s,X)=a(X)+(s^2*mu2/2)*a_xx(X)+o(s^2). Equivalently, with spatial variance sigma2=s^2*mu2, the leading width term is sigma2*c0^2*(n_xxx/n^3-9*n_x*n_xx/n^4+12*n_x^3/n^5)/4. For n=1+epsilon*xi, its coefficient linear in epsilon is c0^2*sigma2*xi_xxx/4. Thus it has acceleration units and depends on the third background derivative in the weak-profile limit. For an even index about X=0 and an even centered profile, the exact averaged acceleration at X=0 vanishes. This conditional profile-average theorem is not a Mathisson-Papapetrou-Dixon equation, field-derived deformation law, gravity theory, material trajectory, or substrate realization.
+
+- Accepted in: `v0.101.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-CC-001
+
 ## C-OVL-001
 
 For any whole-line L2 mode eta normalized by integral_R |eta|^2 dx=1 and any supplied bounded real multiplication profile Phi with essential range Phi_min<=Phi<=Phi_max, its expectation y=integral_R |eta|^2*Phi dx obeys Phi_min<=y<=Phi_max. For positive p,r,kappa and real A, if eta is proportional to sech(kappa*x)^p and Phi=A*sech(kappa*x)^r under Cartesian dx, then normalization gives the exact matched-width overlap y=A*Gamma(p+r/2)*Gamma(p+1/2) /(Gamma(p)*Gamma(p+r/2+1/2)); the common kappa cancels, but A does not. The p=2,r=1 value is 9*pi*A/32. For C-QBL-003's actual unnormalized even sech^2 and odd sech*tanh modes against A*sech at the same width, the normalized squared-density expectations are respectively 9*pi*A/32 and 3*pi*A/16, their ratio for common A is 2/3, and the weighted even-odd cross expectation vanishes by parity. After L2 normalization y has the mass dimension of Phi. A separately declared product m=y*v has the sum of the supplied profile and scale dimensions; a common v cancels from mass ratios, while independent amplitudes remain, and y->rho*y with v->v/rho leaves m invariant. These exact conditional expectation and parameter results derive no fermion, Yukawa interaction, physical condensate or VEV, generation assignment, hierarchy, mixing, absolute mass, radial-measure formula, Standard-Model map, or substrate mechanism. C-QBL-003's negative and zero Hessian eigenvalues remain non-mass objects but do not uniquely select this overlap functional.

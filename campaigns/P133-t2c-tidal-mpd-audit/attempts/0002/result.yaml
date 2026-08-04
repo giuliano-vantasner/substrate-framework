@@ -1,0 +1,22 @@
+campaign: P133
+attempt: 0002
+status: failed
+candidate: A
+classification: implementation
+command: .venv/bin/python merged-framework/bridges/phase-2/bridge_T2C_tidal_MP.py
+working_directory: /home/dan/substrate
+expected: >-
+  Execute the hash-pinned T2C source with the framework virtual environment and
+  capture its literal thirteen-check tally.
+observed: >-
+  Bash exited 127 before Python started because .venv/bin/python was resolved
+  relative to the external source repository, which has no local .venv.
+scientific_checks_executed: 0
+compatibility_event: none
+cause: >-
+  Orchestration used a working-directory-relative interpreter path across the
+  two-repository boundary. The T2C source was not at fault and contains neither
+  np.trapz nor np.trapezoid.
+repair: >-
+  Preserve this attempt and rerun the unchanged hash-pinned source using the
+  absolute framework interpreter /home/dan/substrate-framework/.venv/bin/python.

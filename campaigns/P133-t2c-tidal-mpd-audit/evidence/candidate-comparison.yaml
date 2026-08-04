@@ -1,0 +1,24 @@
+campaign: P133
+criteria_order:
+  - accepted dependency closure with every action equation multipole normalization and coupling sourced
+  - fixed coordinate Riemann index signature and time-parameter conventions
+  - exact dimensional consistency
+  - correct Fourier derivative order normalization centering and point limit
+  - independent tensor and profile-average agreement
+  - mechanism-specific derivation separating MPD geodesic deviation profile averaging and response ansatzes
+  - mutation sensitivity and symmetry countermodels
+  - constant linear weak and zero-width limits
+  - parameter economy reusable API fit physical-scope honesty and nonduplication
+candidates:
+  A: {decision: reproduction_evidence_only, reason: All thirteen checks run but none derives the source's named MPD equation.}
+  B: {decision: selected_as_exact_geometry_route, reason: Fresh Christoffel Riemann and scalar constructions agree and map to C-OG-001.}
+  C: {decision: selected_as_kernel_identity_route, reason: The second Fourier derivative and exact phase-three moments are correct once raw and normalized objects stay distinct.}
+  D: {decision: selected_and_promoted_as_C-OG-004, reason: Centered profile averaging of C-CC-001 yields the exact variance times second-acceleration-derivative term with correct units third weak derivative and symmetry null.}
+  E: {decision: rejected_missing_typed_MPD_object, reason: T2C omits rank-four quadrupole curvature derivative mass momentum worldline tangent supplementary data and valid index contraction.}
+  F: {decision: selected_as_nonduplication_mapping, reason: Existing geometry and point dynamics are reused while the distinct finite-width coefficient earns one narrow new claim.}
+  G: {decision: selected_as_decisive_countermodels, reason: Reflection center linear profile units derivative order and point-guard nonuniqueness reject the source force.}
+  H: {decision: selected_as_governance_closure, reason: Qualified predecessors pending consumers compatibility external provenance and generated records are explicit.}
+claims_decision: promote_C-OG-004_only
+source_disposition: qualified
+comparison_values_used_for_selection: false
+debt: []

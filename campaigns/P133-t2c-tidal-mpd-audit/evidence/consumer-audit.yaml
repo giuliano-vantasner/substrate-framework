@@ -1,0 +1,29 @@
+campaign: P133
+root_source_unit: T2C
+authority_warning: Green pending-consumer execution grants no accepted gravity sourcing radiation self-force internal-mode backreaction or material premise.
+reverse_consumers:
+  - {source_unit: G2, disposition: pending_adjudication, path: merged-framework/bridges/phase-5/bridge_G2_gordon_metric_3plus1.py, sha256: 666df886d7567d87796615753143ace56a4f06fb6e1de4ea53208b1fc6ba0f88, checks: 6}
+  - {source_unit: G4, disposition: pending_adjudication, path: merged-framework/bridges/phase-5/bridge_G4_radiation_reaction_self_force.py, sha256: 308c8d82aff062fb0f0254498fb2bdb19fe6bdc207036cb0fa73643d3608c799, checks: 10}
+replay:
+  scripts: 2
+  checks: 16
+  exit_statuses_all_zero: true
+  modes: [native, immutable_source_alias_only]
+compatibility_preflight:
+  G2:
+    executable_np_trapz_calls: 0
+    executable_np_trapezoid_calls: 0
+    compatibility_event: none
+  G4:
+    executable_np_trapz_calls: 1
+    alias: np.trapz=np.trapezoid
+    scientific_status: version_compatibility_only_not_campaign_failure
+  mutable_consumers_with_np_trapz: 0
+interpretation: >-
+  G2 mentions T2C only as reuse provenance for Christoffel-to-curvature
+  machinery and does not execute the rejected force. G4 narrates T2C's
+  second-moment label but its executable form-factor check evaluates w_tilde at
+  a finite wave number and never calls the curvature-width formula. Its gravity,
+  radiation, hierarchy, and backreaction claims remain pending. Neither green
+  replay breaks when T2C is qualified and C-OG-004 is promoted.
+debt: []

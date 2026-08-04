@@ -2,11 +2,11 @@
 description: Audit T2C's optical-curvature finite-width and MPD force claim
 author: vantasner
 created: '2026-08-09T00:30:00Z'
-updated: '2026-08-09T00:30:00Z'
+updated: '2026-08-09T01:20:00Z'
 tags: [substrate-framework, campaign-proposal, optical-geometry, finite-size, migration-T2C]
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P133 T2C Tidal MPD Audit
 
@@ -86,11 +86,11 @@ establish its mechanism.
 
 ## Proposed Claim Delta
 
-P133 provisionally reserves C-OG-004 only for a genuinely distinct typed
-finite-width or MPD force theorem with closed equations, units, normalization,
-and accepted dependencies. Exact Riemann components already implied by
-C-OG-001, the generic Fourier moment identity, or an unsupported coupling name
-do not warrant a claim, package API, or release.
+P133 promotes C-OG-004 as the exact conditional centered-profile width
+expansion of the C-CC-001 slow acceleration. Its coefficient, units,
+third-derivative weak limit, reflection null, API, tests, and dependency closure
+are distinct from C-OG-001 and C-CC-001. Exact Riemann components, the generic
+Fourier moment identity, and T2C's unsupported MPD label remain nonclaims.
 
 ## Implementation and Oracle Plan
 
@@ -117,10 +117,12 @@ call receives an alias-only replay and is classified separately from science.
 
 ## Attempts and Continuation
 
-Attempt 0001 freezes this contract before source-body inspection or execution.
-Every later implementation, representation, convention, concept, dependency,
-or consumer failure is preserved append-only and followed by a materially
-different repair or candidate.
+Attempt 0001 froze the contract before source-body inspection. Attempt 0002
+preserves a cross-repository interpreter-path failure, and attempt 0003
+preserves an independent verifier's wrapped-prose substring failure. Attempt
+0004 records fifty primary, twenty-one independent, and nine targeted test
+passes for the corrected conditional theorem and T2C rejection. Attempt 0005
+records the integrated promotion boundary.
 
 ## Debt Ledger
 
@@ -129,34 +131,33 @@ consumer, and novelty debt until each item has evidence-level closure.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| T2C executable surface unaudited | Hash, execute, AST audit, and map all thirteen predicates | open |
-| Optical tensor conventions | Exact Christoffels, Riemann slots, contraction, sign mutations, and C-OG-001 agreement | open |
-| Fourier moment object untyped | Fix transform sign, derivative order, normalization, centering, units, and point limit | open |
-| Claimed force mechanism unclosed | Derive a typed MPD law or reject the identification | open |
-| Finite-width alternative unaudited | Derive Taylor-averaged point acceleration and compare functional dependence | open |
-| Physical language ungoverned | Separate effective coordinate model, extended body, gravity, material, and observation | open |
-| Dependencies, consumers, and novelty | Audit FS1/FS2/FS4/P3D3/T1B, reverse consumers, accepted APIs, and generated state | open |
+| T2C executable surface unaudited | Hash, execute, AST audit, and map all thirteen predicates | closed |
+| Optical tensor conventions | Exact Christoffels, Riemann slots, contraction, sign mutations, and C-OG-001 agreement | closed |
+| Fourier moment object untyped | Fix transform sign, derivative order, normalization, centering, units, and point limit | closed |
+| Claimed force mechanism unclosed | Derive a typed MPD law or reject the identification | closed |
+| Finite-width alternative unaudited | Derive Taylor-averaged point acceleration and compare functional dependence | closed |
+| Physical language ungoverned | Separate effective coordinate model, extended body, gravity, material, and observation | closed |
+| Dependencies, consumers, and novelty | Audit FS1/FS2/FS4/P3D3/T1B, reverse consumers, accepted APIs, and generated state | closed |
 
 ## Review and Promotion Plan
 
-Primary and independent routes precede source disposition and any claim review.
-Impact, dependency, consumer, nonduplication, candidate, predicate, provenance,
-and compatibility records must agree. A new accepted claim requires package
-code, tests, registry entry, release, generated docs and memory, and the single
-integrated promotion gate. A terminal mapping with unchanged science uses
-targeted checks at freeze and one integrated adjudication boundary, then only
-record-sensitive checks after final attempt bookkeeping.
+Primary and independent routes agree. Claim, source, impact, dependency,
+consumer, nonduplication, candidate, predicate, provenance, and compatibility
+reviews promote C-OG-004 and qualify T2C. Package code, tests, registry,
+v0.101.0, generated docs and memory, and the migration queue are synchronized;
+the single integrated promotion gate and record-sensitive finalization complete
+the transaction.
 
 ## Done Gate
 
-P133 closes only when a positive distinct force theorem exists or the exact
-surviving surface is completely mapped to accepted claims, every predicate and
-mechanism overread is adjudicated, exact and independent oracles are
-mutation-sensitive, dimensions and point limits close, consumers replay,
-generated state agrees, and campaign debt is empty.
+P133 closes with C-OG-004 as the positive distinct conditional finite-width
+theorem and T2C qualified. Every predicate and mechanism overread is
+adjudicated, exact and independent oracles are mutation-sensitive, dimensions,
+symmetry, derivative order and point limits close, consumers replay, generated
+state agrees, and campaign debt is empty.
 
 ## Cross-References
 
 See P004, P007, P010, P040, P041, P043, P046, P133, T2C, FS1, FS2, FS4,
-P3D3, T1B, C-OG-001 through C-OG-003, C-CC-001, C-SG-009, provisional
-C-OG-004, v0.100.0, and the parent framework-migration effort.
+P3D3, T1B, C-OG-001 through C-OG-004, C-CC-001, C-SG-009, v0.101.0,
+and the parent framework-migration effort.

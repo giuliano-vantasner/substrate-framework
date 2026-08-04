@@ -1,0 +1,61 @@
+campaign: P133
+title: T2C optical curvature finite-width and MPD force audit
+source_baseline: substrate@6d1f4e0
+source_units: [T2C]
+base_release: v0.100.0
+release_after_adjudication: v0.101.0
+adjudicated_at: '2026-08-09T01:20:00Z'
+selected_candidates:
+  - {id: B, reason: Exact fresh Christoffel Riemann and scalar routes reproduce the accepted geometry with sign mutations.}
+  - {id: C, reason: The Fourier second-moment identity and exact phase-three kernel relations survive with raw and normalized objects separated.}
+  - {id: D, reason: Centered profile averaging derives a dimensionally closed third-derivative finite-width term and is promoted as C-OG-004.}
+  - {id: F, reason: Existing geometry and point dynamics are reused without duplicating them.}
+  - {id: G, reason: Reflection linear-profile dimension derivative-order and guard-nonuniqueness countermodels reject T2C's force.}
+  - {id: H, reason: Predecessor consumer compatibility provenance and generated-state governance are closed.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: E, decision: rejected_no_typed_MPD_quadrupole_equation_or_acceleration_closure}
+claims:
+  - id: C-OG-004
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+reviewed_existing:
+  - {id: C-OG-001, decision: unchanged_exact_optical_geometry}
+  - {id: C-CC-001, decision: unchanged_point_collective_acceleration}
+  - {id: C-SG-009, decision: unchanged_distinct_Hamiltonian_scalar_moment_and_no_force_ceiling}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  orchestration_failure: attempts/0002/result.yaml
+  independent_verifier_representation_failure: attempts/0003/result.yaml
+  exact_routes: attempts/0004/result.yaml
+  terminal_gate: attempts/0005/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_tidal_force_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  external_provenance: evidence/external-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-OG-004-review.md
+  terminal_review: memory/vantasner/decisions/T2C-qualified-review.md
+source_disposition: {T2C: qualified}
+validation_commands:
+  - /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-2/bridge_T2C_tidal_MP.py from /home/dan/substrate
+  - /home/dan/substrate-framework/.venv/bin/python soliton-shadow/cut-and-project-shadow/sympy/phase3_finite_size_correction.py from /home/dan/substrate
+  - .venv/bin/python campaigns/P133-t2c-tidal-mpd-audit/verify.py
+  - .venv/bin/python campaigns/P133-t2c-tidal-mpd-audit/reviews/independent_tidal_force_review.py
+  - .venv/bin/python -m pytest tests/test_collective_dynamics.py -q
+  - two hash-pinned reverse-consumer commands recorded in evidence/consumer-audit.yaml
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

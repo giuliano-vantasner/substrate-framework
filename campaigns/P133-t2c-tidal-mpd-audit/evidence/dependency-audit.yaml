@@ -1,0 +1,41 @@
+campaign: P133
+source_unit: T2C
+declared_candidate_dependencies:
+  FS1:
+    disposition: qualified
+    accepted_surface: [C-SG-001, C-SG-002, C-SG-009]
+    authority_ceiling: scalar_1plus1_Hamiltonian_moment_only_no_finite_size_force_or_gravity
+  FS2:
+    disposition: qualified
+    accepted_surface: [C-SG-009, C-MOM-001, C-GW-002, C-MOM-002]
+    authority_ceiling: declared_product_density_moment_algebra_no_conserved_physical_source_or_force
+  FS4:
+    disposition: duplicate_evidence
+    accepted_surface: [C-SG-009, C-MOM-002, C-GW-004]
+    authority_ceiling: constant_offset_derivative_identity_only_no_form_factor_tidal_or_backreaction_map
+  P3D3:
+    disposition: qualified
+    accepted_surface: [C-MOM-003, C-PDE-003, C-PDE-004]
+    authority_ceiling: corrected_regular_l2_linearized_evidence_no_T2C_force_gravity_or_profile_recovery
+  T1B:
+    disposition: qualified
+    accepted_surface: [C-OG-001, C-OG-002, C-OG-003]
+    authority_ceiling: exact_1plus1_geometry_and_conditional_operator_no_matter_equation_or_physical_gravity
+runtime_imports: [sympy]
+undeclared_source_dependencies:
+  - unit: phase3_finite_size_correction
+    disposition: noncanonical_source_evidence
+    accepted_surface: []
+    issue: Its kernel moments and fixed-profile response are imported without a governed claim; P133 reproduces and rederives only the needed mathematical surface.
+  - unit: Papapetrou_1951_and_Dixon_1970
+    disposition: bibliographic_import
+    accepted_surface: []
+    issue: The cited papers do not supply T2C's displayed symmetric rank-two curvature-times-moment equation; Dixon's equations-of-motion paper is Part III from 1974.
+accepted_dependency_closure: [C-OG-001, C-VAR-001, C-CC-001]
+new_claim_dependency: {C-OG-004: [C-CC-001]}
+closure_note: >-
+  C-OG-004 requires only the accepted point collective acceleration plus a
+  newly explicit normalized centered profile-average prescription. It imports
+  no source decimal, SG-to-matter identification, MPD law, gravity coupling, or
+  pending consumer. C-OG-001 is transitive through C-CC-001.
+debt: []
