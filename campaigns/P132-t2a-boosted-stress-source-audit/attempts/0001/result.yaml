@@ -1,0 +1,29 @@
+campaign: P132
+attempt: 0001
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - cmp proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P132-t2a-boosted-stress-source-audit.md
+  - YAML parse and git diff --check
+expected:
+  base_release: v0.100.0
+  base_commit: 4be5953
+  scientific_base_commit: 3ee5942
+  proposal_sha256: 3e138cacdb5c7d67ce50b6dc5b4d94b20a5663827143bf2f163157413bf71007
+  source_unit: T2A
+  source_sha256: 669803de1403c8ca66e399aa4b7c0e762447e40df7c241fe530a6b4e06dde70a
+  source_body_inspected: false
+  compatibility_event: none
+result: >-
+  The Lorentz-pullback, tensor-index, local and integrated conservation,
+  quadrature, source-map, physical-ceiling, dependency, consumer, mutation, and
+  nonduplication contract is byte-frozen before P132 source-body inspection.
+  The unchanged v0.100.0 scientific boundary inherits P131's just-completed
+  integrated gate, so this record-only freeze uses targeted YAML, memory, and
+  whitespace checks rather than repeating 1118 runnable tests.
+compatibility_event: none
+next_attempt: >-
+  Commit the freeze, then hash, inspect, and reproduce T2A while keeping
+  qualified GW1/GW4 and pending G1/G4 outside unearned physical source closure.

@@ -1,0 +1,86 @@
+id: P132
+base_release: v0.100.0
+base_commit: 4be5953
+scientific_base_commit: 3ee5942
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [T2A]
+question: >-
+  Reproduce and independently audit T2A's claim that a Lorentz-boosted
+  sine-Gordon breather supplies an exact conserved moving stress-energy source
+  with transformed energy and momentum and a nonzero mixed dilaton source;
+  determine whether any nonduplicate source theorem survives beyond C-SG-008
+  and C-SG-012, and separate uniform translation from acceleration, radiation,
+  a governed gravity coupling, and material realization.
+invariants:
+  - >-
+    C-SG-008 already owns the exact boosted-breather phase and energy-momentum
+    vectors, with (Omega,k)=(gamma*omega,gamma*omega*v),
+    (E,P)=(gamma*E0,gamma*E0*v), their invariant norms, vector
+    proportionality, rest limit, and the domain |v|<1.
+  - >-
+    C-SG-012 already owns the canonical symmetric sine-Gordon stress tensor in
+    signature (+,-), including T_01=phi_t*phi_x but
+    T^01=-phi_t*phi_x, the exact off-shell divergence, on-shell local
+    conservation, and the boundary-flux qualification for integrated charges.
+  - >-
+    A Lorentz boost is fixed as x'=gamma*(x-v*t), t'=gamma*(t-v*x), with
+    gamma=(1-v^2)^(-1/2), and phi_v(t,x)=phi_0(t',x') is a scalar pullback.
+    Velocity sign, tensor index placement, and integration orientation are
+    load-bearing conventions rather than adjustable fit choices.
+  - >-
+    Rest-breather localization and smoothness permit full-line charge
+    integrals at each finite |v|<1. Local conservation is exact on shell;
+    integrated conservation additionally uses vanishing asymptotic flux.
+  - >-
+    GW1 and GW4 are qualified navigation evidence, not accepted physical
+    source dependencies. C-MOM-001 grants conditional conserved-moment
+    identities only, while C-GW-001 through C-GW-003 keep waveform and power
+    premises explicit and derive no 3+1 breather embedding or binding source.
+  - >-
+    Uniform inertial translation has zero acceleration and cannot by itself
+    establish radiation or radiation reaction. A nonzero stress-tensor mixed
+    component is not a dilaton, Einstein, material, or observational source
+    map without a separately varied field equation and declared coupling.
+  - >-
+    The generated queue synopsis already exposes the formulas gamma*E0,
+    gamma*E0*v, E^2-P^2=E0^2, and T2A's preferred source conclusion. Those
+    outputs cannot select a concept, normalization, source map, or claim.
+allowed_imports:
+  - C-SG-001 exact normalized rest-breather field and equation
+  - C-SG-002 exact rest energy E0
+  - C-SG-006 exact phase and action-related breather identities used by C-SG-008
+  - C-SG-008 exact boosted-breather phase and energy-momentum vectors
+  - C-SG-012 canonical stress tensor off-shell divergence and boundary qualifications
+  - C-MOM-001 conditional localized conserved-stress moment theorem with its nonradiation ceiling
+  - C-GW-001 C-GW-002 and C-GW-003 only for their explicit conditional waveform and source ceilings
+  - src/substrate_framework/sine_gordon.py exact breather boost stress and charge APIs
+  - exact Lorentz tensor algebra SymPy identities rapidity parameterization and analytic full-line integrals
+  - independently declared high-precision mpmath quadrature only as regression evidence with domain and precision refinement
+  - T2A at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce T2A literally and classify every predicate by construction convention dependency and physical ceiling.}
+  - {id: B, description: Derive the boosted field derivatives and full covariant and contravariant stress tensors from exact Lorentz covariance.}
+  - {id: C, description: Treat the exact field stress conservation and charge formulas as composition or duplicate evidence for C-SG-008 and C-SG-012.}
+  - {id: D, description: Independently rederive the integrated charges by rapidity covariance or direct analytic full-line integration without source constants.}
+  - {id: E, description: Use declared high-precision quadrature and velocity refinement only as regression coverage for the exact charge transformation.}
+  - {id: F, description: Promote a distinct mixed dilaton-source theorem only if T2A supplies a varied field equation tensor map coupling units and closed dependencies.}
+  - {id: G, description: Use uniform-translation acceleration and source-map countermodels to separate moving stress from radiation gravity material and observation claims.}
+  - {id: H, description: Close GW1 GW4 G1 G4 reverse consumers nonduplication impact source disposition and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and explicit provenance for every field equation source map coupling normalization and physical interpretation
+  - exact Lorentz covariance with fixed scalar pullback metric tensor-index and integration conventions
+  - exact local residual and divergence factorization plus explicit full-line boundary decay
+  - agreement of analytic tensor transformation charge transformation and an independent rapidity or direct-integration route
+  - sensitivity to velocity-sign boost-sign mixed-index Jacobian boundary and nonrelativistic mutations
+  - correct v=0 parity low-velocity and finite-rapidity behavior without treating the divergent |v| to 1 limit as a sampled proof
+  - strict separation of inertial translation from acceleration radiation gravity coupling material realization and observation
+  - parameter economy natural composition with accepted claims reusable API fit and nonduplication
+claims_proposed: [C-SG-020]
+comparators_blinded_until: >-
+  There is no empirical comparator. The queue synopsis exposes T2A's preferred
+  charge formulas and source narrative, so conventions, candidates, source-map
+  requirements, counterexamples, mutations, and selection criteria freeze
+  before P132 opens or executes the source body. The exposed formulas may be
+  reproduced but cannot make a nonduplicate or physical-source claim pass.
+status: draft
