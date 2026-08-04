@@ -372,6 +372,15 @@ Let G_r=G/G_ref, L_r=L/a_ref, C, and b0 be separately supplied positive exact di
 - Compatibility: `compatible_extension`
 - Dependencies: C-GRV-001, C-RGE-003, C-IDN-001
 
+## C-IRR-001
+
+In the standard fundamental SU(3) convention of C-LIE-001 with Y=2*T_8/sqrt(3), let p and q be arbitrary nonnegative integer Dynkin labels and use the U(3) Gelfand-Tsetlin top row (p+q,q,0). The exact Weyl dimension is (p+1)(q+1)(p+q+2)/2, the quadratic Casimir is (p^2+p*q+q^2+3*p+3*q)/3, and the C-LIE-002 center triality is p+2*q modulo three. Every interlacing pattern p+q>=m12>=q>=m22>=0 and m12>=m11>=m22 gives one basis state with I=(m12-m22)/2, I3=m11-(m12+m22)/2, and Y=m12+m22-2*(p+2*q)/3; these patterns are complete, their count equals the Weyl dimension, and aggregation gives the exact weight multiplicities and multiplicity-free SU(2)xU(1) branching rows. Conditional on an exact rational target hypercharge and explicitly supplied finite nonnegative bounds max_p and max_q, enumerating all labels in the rectangular domain returns every irrep containing that hypercharge and preserves all minimum-dimension ties. At target Y=1 the unique global minimum is (1,1) of dimension eight with I=1/2; the next distinct dimension is ten and contains both (0,3) with I=1/2 and (3,0) with I=3/2. This is a mathematical representation and kinematic-filter theorem only. It does not supply a collective-coordinate action, right generator constraint, WZW level or response, N_c, baryon number, statistics, Hamiltonian, symmetry breaking, particle dictionary, mass spectrum, physical octet/decuplet selection, or substrate mechanism.
+
+- Accepted in: `v0.106.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-LIE-001, C-LIE-002
+
 ## C-KRN-001
 
 For a supplied finite inverse kernel K(k2)=sum_j c_j*k2^s_j with k2 positive and exact positive real exponents, first combine equal exponents and remove coefficients that simplify exactly to zero. If every remaining coefficient is provably nonzero, the smallest remaining exponent s_star controls the infrared and the corresponding power of |k| is 2*s_star. Exact cancellation can expose a higher exponent, while any separately supplied lower fractional term remains leading over analytic integer-power corrections. An undecidable symbolic coefficient supplies only a condition and cannot be treated as nonzero. In the fixed convention G(x)=integral d^d k/(2*pi)^d exp(i*k.x)/[A*(k^2)^s], for r=|x|>0, A nonzero, and 0<s<d/2, the exact kernel away from contact terms is Gamma(d/2-s)*r^(2*s-d)/[A*4^s*pi^(d/2)*Gamma(s)]. The separately supplied specialization d=3,s=1,A=1 is 1/(4*pi*r), but the theorem does not select s, d, A, a source, boundary condition, force law, charge normalization, electromagnetic sector, or substrate realization.

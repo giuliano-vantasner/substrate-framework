@@ -1,0 +1,38 @@
+campaign: P139
+source_unit: S3
+direct_reverse_consumers:
+  - {source_unit: W2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: QCD1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: WZ1, disposition: qualified, accepted_claims: [C-WZW-001], effect: unchanged_independent_closure}
+  - {source_unit: WZ2, disposition: qualified, accepted_claims: [C-WZW-002], effect: unchanged_independent_closure}
+  - {source_unit: WZ3, disposition: qualified, accepted_claims: [C-TOP-002], effect: unchanged_independent_closure}
+  - {source_unit: WZ4, disposition: qualified, accepted_claims: [C-EFT-001], effect: unchanged_independent_closure}
+  - {source_unit: AS8, disposition: qualified, accepted_claims: [C-PRB-001, C-U1-002, C-OVL-001, C-DIM-008, C-IDN-002], effect: unchanged_independent_closure}
+  - {source_unit: WM2, disposition: duplicate_evidence, accepted_claims: [C-REP-001, C-LIE-001], effect: no_new_authority}
+  - {source_unit: PN6, disposition: qualified, accepted_claims: [C-RES-001], effect: unchanged_independent_closure}
+  - {source_unit: WM7, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: WM8, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MK1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: MR2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 17
+  dependency_nodes: [S2, S4, S5, WZ1, WZ4]
+  reverse_consumers: 13
+  unique_static_predicates_inventoried: 195
+  graph_integrity_checks: 39
+  terminal_tally: ALL_39_CHECKS_PASS_P139-S3-SOURCE-GRAPH
+  evidence: reviews/replay_source_graph.py
+canonical_replay:
+  focused_tests: 31
+  result: passed
+  surfaces: [su3, su3_representations]
+compatibility_preflight:
+  native_primary: [S3]
+  alias_only_if_executed: [S2, WZ3]
+  alias_backing: np.trapezoid
+  scientific_failures: 0
+disposition_effect: >-
+  C-IRR-001 is a new mathematical API and does not retroactively promote any
+  physical statement in historical consumers. Qualified consumers retain
+  their independent accepted closures; pending consumers remain pending.
+debt: []

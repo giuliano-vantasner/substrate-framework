@@ -1,0 +1,80 @@
+campaign: P139
+attempt: 0003
+status: failed
+candidate: A
+command: >-
+  Read the complete pinned S3 source and dossier after freeze, trace every
+  formula and table through the ten predicates, and cross-check the declared
+  collective-coordinate convention against the primary Guadagnini and Witten
+  papers without importing their desired physical answer as framework truth.
+expected: >-
+  Candidate A survives only if the programmed enumeration is complete, all
+  conventions agree, the collective constraint and spin assignment are
+  derived rather than inserted, every same-rank tie is reported, and the mass
+  formula follows from the displayed Hamiltonian.
+result:
+  exit_status: 0
+  source_body_lines: 431
+  dossier_body_lines: 736
+  primary_cross_checks:
+    - >-
+      Guadagnini 1984 defines the collective configuration space SU(3)/U(1),
+      extends wavefunctions to SU(3), and imposes a right-action phase before
+      identifying the right hypercharge and spin labels.
+    - >-
+      Witten 1983 treats the Wess-Zumino coefficient as an integer physical
+      import; accepted framework claims retain stricter ceilings on k=N_c and
+      the baryon dictionary.
+  failures:
+    - >-
+      Y_PHYSICAL is a seven-entry hand-written dictionary, not an enumeration
+      over nonnegative Dynkin labels; CHECK6 therefore cannot certify its ALL
+      wording or a unique second representation.
+    - >-
+      The executable itself admits both (3,0) and (0,3) at Y=1 and then discards
+      the conjugate tie by prose. The supplied hypercharge filter alone does not
+      distinguish decuplet from antidecuplet.
+    - >-
+      In the stated fundamental convention, the sextet (2,0) has distinct
+      hypercharges {2/3,-1/3,-4/3}, not {4/3,1/3,-2/3}; the dossier alternates
+      incompatible p/q and highest-weight conventions.
+    - >-
+      CHECK4 samples four integer levels and one half-integer rather than
+      proving the quantified iff statement, and k=N_c remains an imported
+      physical identification outside C-WZW-002.
+    - >-
+      CHECK5 evaluates the already supplied Y_R=N_c*B/3 formula; it does not
+      derive the right-action constraint from the collective Lagrangian.
+    - >-
+      The displayed rotor Hamiltonian gives E_10-E_8=3/(2*I1), because both
+      DeltaC2 and Delta[J(J+1)] equal 3. The source's 3/(2*I2) is instead the
+      same-spin antidecuplet-octet gap under that conditional Hamiltonian.
+    - >-
+      The claimed universal SU(2) range from |p-q|/2 to (p+q)/2 is false; the
+      fundamental already restricts as an isodoublet plus an isosinglet. The
+      correct spins come from isospin at the constrained right-hypercharge row,
+      not from the hard-coded FR repair used in CHECK8.
+    - >-
+      The N_c=2 prose alternately selects a triplet, sextet, or antitriplet. A
+      complete standard-convention filter selects the antitriplet as the unique
+      minimum and also admits the sextet; the source dictionary omits that
+      correct sextet weight.
+    - >-
+      The final ceiling check inserts normalized periods 1 and 0 as literals;
+      it does not derive cohomology, the WZW action, k=N_c, or a physical
+      representation map. Those exact mathematical parts already have narrower
+      accepted claims.
+  preserved_truths:
+    - Weyl dimension and quadratic Casimir formulas are correct in the declared normalization.
+    - The octet is the unique minimum-dimension irrep containing Y=1.
+    - The next distinct dimension is 10 but contains a decuplet-antidecuplet tie.
+    - At Y=1 the octet and antidecuplet carry I=1/2 while the decuplet carries I=3/2.
+  scientific_verdict: >-
+    Literal S3 fails its completeness, derivation, mass-splitting, and physical
+    selection claims even though several mathematical subformulas are correct.
+classification: candidate_rejected_incomplete_and_internally_inconsistent
+next_attempt: >-
+  Implement Candidate B as a complete exact Gelfand-Tsetlin irrep API and check
+  it independently with Weyl products and semistandard Young tableaux; then run
+  Candidate C over declared label domains with all conjugate and same-dimension
+  ties visible.

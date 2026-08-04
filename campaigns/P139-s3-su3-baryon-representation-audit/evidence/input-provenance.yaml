@@ -1,0 +1,32 @@
+campaign: P139
+source_unit: S3
+positive_object: exact_su3_irrep_and_finite_domain_hypercharge_filter
+accepted_inputs:
+  - {claim: C-LIE-001, role: fundamental generators trace normalization and Casimir convention}
+  - {claim: C-LIE-002, role: abstract center and triality character convention}
+mathematical_inputs:
+  - nonnegative integer Dynkin labels p and q
+  - U3 Gelfand-Tsetlin top row (p+q,q,0) and exact interlacing
+  - standard isospin embedding with Y=2*T8/sqrt(3)
+  - exact rational target hypercharge and explicit finite max_p max_q bounds
+source_declared_inputs:
+  - SU3 collective coordinate A(t) and embedded unit-charge hedgehog
+  - WZW action with coefficient identified as N_c
+  - right-hypercharge constraint Y_R=N_c*B/3
+  - physical N_c=3 and B=1 assignments
+  - Finkelstein-Rubinstein statistics and spin-isospin identification
+  - collective Hamiltonian and positive inertias I1 and I2
+  - octet decuplet baryon names and observed mass ordering
+excluded_from_derivation_or_selection:
+  - named baryons masses QCD color count and empirical octet/decuplet assignment
+  - k=N_c and mathematical winding equals physical baryon number
+  - pending S4 or any later chronology as authority
+  - source finite weight dictionary and desired representation labels
+missing_for_physical_headline:
+  - accepted SU3 collective action configuration quotient and Hilbert space
+  - normalized WZW velocity-linear coefficient with right-generator convention
+  - accepted k=N_c and winding-to-baryon identifications
+  - statistics spin flavor state and observable dictionaries
+  - complete Hamiltonian symmetry breaking inertias and scale
+claim_delta: C-IRR-001
+debt: []

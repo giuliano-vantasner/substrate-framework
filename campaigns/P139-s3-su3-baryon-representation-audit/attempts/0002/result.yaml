@@ -1,0 +1,48 @@
+campaign: P139
+attempt: 0002
+status: passed
+candidate: A
+command: >-
+  Inspect the hash-pinned S3 executable for compatibility-sensitive APIs, run
+  it unchanged under the framework environment, preserve the terminal tally,
+  and classify the ten predicates without treating their successful execution
+  as validation of the physical headline.
+expected: >-
+  Reproduce the native source or record a narrowly classified compatibility
+  event; distinguish exact formula checks, finite table checks, imported
+  premises, and physical interpretations before inspecting the implementation
+  and dossier bodies.
+result:
+  exit_status: 0
+  terminal_tally: ALL_10_CHECKS_PASS
+  compatibility:
+    numpy_imports: 0
+    legacy_trapezoid_references: 0
+    current_trapezoid_references: 0
+    event: none
+  predicate_classes:
+    exact_formula_or_fixture: [weyl_dimension, quadratic_casimir]
+    hard_coded_weight_fixtures: [selected_hypercharge_sets]
+    finite_integrality_examples: [wzw_phase]
+    imported_constraint_arithmetic: [right_hypercharge]
+    favored_finite_table: [octet_decuplet_selection]
+    conditional_model_formula: [casimir_mass_gap]
+    representation_or_statistics_interpretation: [spin_assignments]
+    guard_fixture: [two_color_representation]
+    governance_or_ceiling_prose: [exact_nonexact_split]
+  observed_values:
+    dimensions: {fundamental: 3, adjoint: 8, sextet: 6, decuplet: 10, fifteen: 15, anti_decuplet: 10, singlet: 1}
+    casimirs: {singlet: 0, fundamental: 4/3, adjoint: 3, decuplet: 6, sextet: 10/3}
+    right_hypercharge_at_Nc3_B1: 1
+    octet_decuplet_casimir_gap: 3
+  scientific_verdict: >-
+    The native tally proves that the ten programmed predicates execute and
+    match their embedded fixtures. It does not establish completeness of the
+    representation search, derive the collective-coordinate constraint, or
+    close the physical baryon dictionary.
+classification: source_reproduction_evidence
+next_attempt: >-
+  Read the complete source and dossier, trace every declared premise and
+  hard-coded representation fixture, then independently derive the full SU(3)
+  weight content and supplied-hypercharge filter before evaluating the physical
+  collective-quantization claim.

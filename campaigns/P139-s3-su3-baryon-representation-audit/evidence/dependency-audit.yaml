@@ -1,0 +1,28 @@
+campaign: P139
+source_unit: S3
+declared_dependencies:
+  - {source_unit: S2, disposition: qualified, accepted_claims: [C-MOD-001, C-MOD-002, C-SCL-001, C-SG-002, C-SK-001], use: no_collective_or_particle_authority}
+  - {source_unit: S4, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+  - {source_unit: S5, disposition: qualified, accepted_claims: [C-VIR-001, C-MED-001, C-SK-001], use: no_representation_authority}
+  - {source_unit: WZ1, disposition: qualified, accepted_claims: [C-WZW-001], use: cohomology_ceiling_only}
+  - {source_unit: WZ4, disposition: qualified, accepted_claims: [C-EFT-001], use: no_hls_or_physical_wzw_authority}
+accepted_dependency_closure:
+  - {claim: C-IRR-001, dependencies: [C-LIE-001, C-LIE-002]}
+  - {claim: C-LIE-002, dependencies: [C-LIE-001]}
+  - {claim: C-LIE-001, dependencies: []}
+nearby_accepted_ceiling_claims:
+  - {claim: C-WZW-001, dependencies: [C-LIE-001], exclusion: no_period_level_Nc_baryon_or_representation_map}
+  - {claim: C-WZW-002, dependencies: [C-WZW-001], exclusion: no_Nc_baryon_or_representation_map}
+  - {claim: C-TOP-002, dependencies: [C-LIE-001], exclusion: mathematical_winding_not_physical_baryon_current}
+  - {claim: C-EFT-001, dependencies: [], exclusion: conditional_stationary_elimination_only}
+excluded_imports:
+  - physical SU3 Skyrme action soliton and baryon identity
+  - collective quotient quantization WZW response and right constraint
+  - k=N_c B=winding and N_c=3 physical maps
+  - Finkelstein-Rubinstein theorem state assignments and observed baryons
+  - inertias mass scales symmetry breaking and fitted spectrum
+circularity: >-
+  WZ1 and WZ4 cite S3 historically, and several reverse consumers repeat its
+  headline. P139 imports only individually accepted mathematical claims whose
+  adjudications explicitly exclude S3's collective and physical readings.
+debt: []

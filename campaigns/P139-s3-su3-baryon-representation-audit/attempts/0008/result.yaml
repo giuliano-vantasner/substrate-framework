@@ -1,0 +1,29 @@
+campaign: P139
+attempt: 0008
+status: passed
+candidate: F
+command: >-
+  Run scripts/validate.sh and git diff --check once after the accepted claim,
+  release, disposition, generated docs, generated memory, queue, campaign,
+  package, tests, and durable review records are synchronized.
+expected: >-
+  Validate 141 accepted claims with closed release dependencies, current
+  generated state, all memory records, the physics skill, package compilation,
+  the full test suite, whitespace, and the 218-unit queue at 81 pending with no
+  unresolved P139 debt.
+result:
+  exit_status: 0
+  repository: WORKFLOW_VALID_141_claims_141_accepted_0_proposals
+  migration_queue: 218_units_81_pending_0_partial
+  generated_docs: current
+  generated_memory: current
+  memory: 563_files_valid
+  physics_skill: valid
+  package_compile: passed
+  full_pytest: 1175_passed
+  git_diff_check: passed
+  debt: []
+classification: integrated_terminal_gate
+next_attempt: >-
+  Commit the accepted P139 scientific and governance transaction, checkpoint
+  the parent migration effort separately, then freeze and audit S4.

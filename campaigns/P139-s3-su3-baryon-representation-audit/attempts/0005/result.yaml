@@ -1,0 +1,47 @@
+campaign: P139
+attempt: 0005
+status: passed
+candidate: B-C
+command: >-
+  Run 31 focused package tests, the 28-check primary source and representation
+  verifier, and the independent 16-check Weyl-product, highest-weight,
+  semistandard-tableau, branching, rotor, and mutation review.
+expected: >-
+  Produce a complete exact SU(3) irrep object for arbitrary nonnegative Dynkin
+  labels; match an independent combinatorial route; preserve multiplicities,
+  conjugation, Casimir normalization, and triality; enumerate all matches in an
+  explicit supplied-hypercharge domain; and make source defects load bearing.
+result:
+  exit_status: 0
+  focused_tests: 31_pass
+  primary_verifier: ALL_28_CHECKS_PASS
+  independent_review: ALL_16_CHECKS_PASS
+  exact_surface:
+    - Weyl dimension for every nonnegative p and q
+    - quadratic Casimir in the accepted fundamental-generator normalization
+    - center triality p+2q modulo three
+    - complete Gelfand-Tsetlin basis states and weight multiplicities
+    - exact SU2 isospin and hypercharge branching rows
+    - finite-domain supplied-hypercharge enumeration with all minimum ties
+  y_one_certificate:
+    minimum: {p: 1, q: 1, dimension: 8, isospins: [1/2]}
+    next_dimension_ties:
+      - {p: 0, q: 3, dimension: 10, isospins: [1/2]}
+      - {p: 3, q: 0, dimension: 10, isospins: [3/2]}
+  source_corrections:
+    sextet_hypercharges: [2/3, -1/3, -4/3]
+    two_thirds_minimum: {p: 0, q: 1, dimension: 3}
+    two_thirds_additional_low_match: {p: 2, q: 0, dimension: 6}
+    decuplet_octet_gap_under_displayed_rotor: 3/(2*I1)
+    antidecuplet_octet_same_spin_gap_under_displayed_rotor: 3/(2*I2)
+  mutations:
+    - weak rather than strict tableau columns changes the dimension
+    - omitting a Gelfand-Tsetlin state breaks the Weyl count
+    - source hypercharge normalization changes the sextet spectrum
+    - hiding the conjugate dimension tie changes the selection verdict
+    - zero level or winding removes a declared collective momentum shift
+    - orientation reversal flips a declared collective momentum shift
+classification: exact_general_representation_and_conditional_filter_verified
+next_attempt: >-
+  Complete novelty, dependency, primary-provenance, claim-level review, reverse
+  consumer, and governance audits before promoting C-IRR-001 or adjudicating S3.

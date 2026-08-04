@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 82
-  qualified: 124
+  pending_adjudication: 81
+  qualified: 125
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -1058,8 +1058,48 @@ units:
   dynamic_check_calls: 0
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-IRR-001
+  - C-LIE-001
+  - C-LIE-002
+  - C-WZW-002
+  - C-TOP-002
+  qualification: 'S3''s hash-pinned ten predicates reproduce natively, and its Weyl dimension and quadratic
+    Casimir formulas survive through the new exact C-IRR-001 arbitrary-label theorem. Complete Gelfand-Tsetlin
+    and independent semistandard-tableau enumeration repairs the source''s hand-written seven-representation
+    dictionary. In the stated fundamental convention the sextet hypercharges are {2/3,-1/3,-4/3}, not
+    the source set. At Y=1 the octet is the unique minimum, but the next dimension is a tie: the antidecuplet
+    carries I=1/2 and the decuplet I=3/2. A weight filter cannot discard the conjugate or identify physical
+    baryons. The source evaluates the imported Y_R=N_c*B/3 formula after setting N_c=3 and B=1; it constructs
+    no collective quotient, WZW velocity term, right generator, canonical quantization, k=N_c or winding-to-baryon
+    map, statistics, Hamiltonian, symmetry breaking, particle dictionary, or scale. Under its displayed
+    rotor Hamiltonian the decuplet-octet gap is 3/(2I1), not 3/(2I2); the latter is the same-spin antidecuplet-octet
+    gap. C-WZW-002 and C-TOP-002 retain only their exact mathematical level and winding surfaces. No physical
+    octet/decuplet spectrum, QCD-color relation, baryon mechanism, mass prediction, or substrate realization
+    is established.'
+  evidence:
+  - campaigns/P139-s3-su3-baryon-representation-audit/reviews/source_adjudication.md
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/source-reproduction.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/source-audit.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/check-adjudication.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/input-provenance.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/dependency-audit.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/consumer-audit.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/candidate-comparison.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/primary-provenance.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/evidence/literature-audit.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/verify.py
+  - campaigns/P139-s3-su3-baryon-representation-audit/reviews/independent_su3_tableau_review.py
+  - campaigns/P139-s3-su3-baryon-representation-audit/reviews/replay_source_graph.py
+  - campaigns/P139-s3-su3-baryon-representation-audit/attempts/0005/result.yaml
+  - campaigns/P139-s3-su3-baryon-representation-audit/attempts/0007/result.yaml
+  - memory/vantasner/decisions/C-IRR-001-review.md
+  - memory/vantasner/decisions/S3-qualified-review.md
+  note: P139 closes 28 primary, 16 independent, 39 frozen-graph, and 31 focused checks. The 17-node graph
+    inventories 195 predicates. S3 has no NumPy compatibility event; S2 and WZ3 retain prior alias-only
+    paths backed by np.trapezoid, and mutable code has no executable legacy quadrature access.
 - source_unit: S4
   phase: phase-4
   path: merged-framework/bridges/phase-4/bridge_S4_c4_vector_meson_closure.py

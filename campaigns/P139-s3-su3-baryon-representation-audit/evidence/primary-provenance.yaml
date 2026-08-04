@@ -1,0 +1,29 @@
+campaign: P139
+source_unit: S3
+base_release: v0.105.0
+base_commit: 46a375e
+scientific_base_commit: bb1016e
+frozen_proposal_commit: 06f9e97
+claim_delta: C-IRR-001
+primary_verifier: campaigns/P139-s3-su3-baryon-representation-audit/verify.py
+primary_checks: 28
+primary_route:
+  - hash-pinned source dossier frozen contract and compatibility AST
+  - accepted fundamental Casimir and center-character composition
+  - exact arbitrary-label Gelfand-Tsetlin enumeration and aggregation
+  - global low-dimension certificate and bounded hypercharge filters
+  - source table convention collective mass and spin counterexamples
+  - state omission normalization orientation level and winding mutations
+independent_review: campaigns/P139-s3-su3-baryon-representation-audit/reviews/independent_su3_tableau_review.py
+independent_checks: 16
+independent_route:
+  - Weyl positive-root product without the canonical dimension helper derivation
+  - highest-weight inverse-Cartan Casimir derivation
+  - semistandard Young tableaux of shape (p+q,q)
+  - independent content weights and SU2 row decomposition
+  - fresh complete-domain filter and displayed-rotor algebra
+exact_precision: SymPy exact integers and rationals
+numeric_precision: none
+numerical_integration: none
+compatibility_event: none_in_S3_or_mutable_verifiers
+debt: []

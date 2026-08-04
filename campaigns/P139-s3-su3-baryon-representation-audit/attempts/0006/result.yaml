@@ -1,0 +1,27 @@
+campaign: P139
+attempt: 0006
+status: failed
+candidate: F
+command: >-
+  Replay the frozen S3 dependency and reverse-consumer graph by source hash,
+  static predicate inventory, authority class, and executable NumPy
+  compatibility shape.
+expected: >-
+  Inventory exactly seventeen nodes and 195 predicates while classifying every
+  immutable legacy quadrature access before any consumer is called broken.
+result:
+  exit_status: 1
+  passed_before_abort: 37
+  hashes: 17_pass
+  predicate_inventories: 17_pass
+  total_predicates: 195_pass
+  failed_check: immutable_compatibility_shapes_are_exhaustively_classified
+  mechanism: >-
+    The expected map included WZ3's one direct legacy reference but omitted
+    S2's already known three direct legacy references. P138 has independently
+    preserved and replayed S2 through an alias backed by np.trapezoid; the
+    omission was in P139's graph manifest, not in either scientific route.
+classification: graph_compatibility_manifest_omission
+next_attempt: >-
+  Add S2's frozen (3,0,0,0,0) compatibility shape alongside WZ3, retain the
+  existing alias-only classification, and rerun the graph replay.

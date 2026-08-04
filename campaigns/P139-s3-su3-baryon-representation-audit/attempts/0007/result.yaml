@@ -1,0 +1,43 @@
+campaign: P139
+attempt: 0007
+status: passed
+candidate: F
+command: >-
+  Replay the corrected frozen source graph, search registry package campaigns
+  and durable memory for duplicates, index the working tree, run GitNexus
+  semantic novelty and upstream impact analysis, inspect process participation,
+  and detect changed-flow risk.
+expected: >-
+  Close dependency, consumer, compatibility, novelty, and impact debt without
+  granting pending source units authority or rerunning unaffected historical
+  scripts as ceremony.
+result:
+  exit_status: 0
+  source_graph: ALL_39_CHECKS_PASS
+  graph_nodes: 17
+  graph_predicates: 195
+  authority_classes: {primary: 1, qualified: 8, pending: 7, duplicate: 1}
+  compatibility:
+    native: [S3]
+    alias_only_if_executed: [S2, WZ3]
+    alias_backing: np.trapezoid
+  nonduplication:
+    identifier_collision: none
+    accepted_general_irrep_surface: none
+    semantic_processes: 0
+    nearest_distinct_modules: [su3.py, gauge_beta.py]
+  gitnexus:
+    nodes: 19489
+    edges: 30670
+    clusters: 306
+    processes: 8
+    target: SU3Irrep
+    direct_dependents: 1
+    affected_processes: 0
+    risk: LOW
+    detected_change_risk: low
+  mutable_legacy_quadrature_references: 0
+classification: dependency_consumer_novelty_and_impact_gate
+next_attempt: >-
+  Complete individual C-IRR-001 review, promote the claim and v0.106.0 release,
+  qualify S3, render governed state, and run the single integrated terminal gate.

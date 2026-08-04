@@ -1,0 +1,26 @@
+campaign: P139
+attempt: 0004
+status: failed
+candidate: B-C
+command: >-
+  Run the primary P139 verifier against the hash-pinned S3 source and dossier
+  after the canonical Gelfand-Tsetlin implementation and independent
+  semistandard-tableau review passed their focused checks.
+expected: >-
+  Validate the exact irrep theorem, complete conditional filter, source
+  predicate audit, collective-action ceilings, counterexamples, and mutations.
+result:
+  exit_status: 1
+  checks_before_abort: 17_pass
+  failed_check: source_and_dossier_disagree_on_the_two_color_guard
+  mechanism: >-
+    The verifier searched for the exact phrase "N_c=2 selects the SEXTET (6)".
+    The dossier's load-bearing contradictory statements instead say that N_c=2
+    "would admit the 3" and that the sextet "would be the lowest ALLOWED"; only
+    a later print fixture uses lowercase "selects sextet". The scientific
+    hypercharge enumeration had already passed and was not implicated.
+  preserved_independent_result: ALL_16_CHECKS_PASS
+classification: verifier_text_locator_failure
+next_attempt: >-
+  Match the actual pinned contradictory phrases without changing the
+  mathematical predicate, then rerun the complete primary verifier.

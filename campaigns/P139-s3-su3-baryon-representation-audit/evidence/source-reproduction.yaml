@@ -1,0 +1,26 @@
+campaign: P139
+source_unit: S3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-4/bridge_S3_su3_wzw_baryon_reps.py
+source_sha256: 44d8cd1f3a3b3d0a316d0984db92d5e47e13cac9dcf3d476e2d996bf09f13b9a
+dossier_path: merged-framework/bridges/phase-4/dossiers/S3-dossier.md
+dossier_sha256: 4467a11ac07ac9ffe97826722f28887a28f729f275ca81bbae9ea237346181b2
+native_execution:
+  exit_status: 0
+  terminal_tally: ALL_10_CHECKS_PASS
+  numpy_imports: 0
+  compatibility_event: none
+  dimensions: {fundamental: 3, antifundamental: 3, sextet: 6, octet: 8, decuplet: 10, antidecuplet: 10, fifteen: 15, singlet: 1}
+  casimirs: {singlet: 0, fundamental: 4/3, sextet: 10/3, octet: 3, decuplet: 6}
+  inserted_right_hypercharge: 1
+  octet_decuplet_casimir_gap: 3
+compatibility_preflight:
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+headline_warning: >-
+  The native tally reproduces finite formula fixtures, a seven-entry weight
+  dictionary, inserted collective premises, and hard-coded state labels. It is
+  source evidence only and does not validate completeness or physical selection.

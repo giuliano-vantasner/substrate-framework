@@ -1,0 +1,63 @@
+campaign: P139
+title: S3 SU(3) WZW baryon-representation audit
+source_baseline: substrate@6d1f4e0
+source_units: [S3]
+base_release: v0.105.0
+accepted_release: v0.106.0
+adjudicated_at: '2026-08-09T11:00:00Z'
+selected_candidates:
+  - {id: B, reason: Complete exact arbitrary-label SU3 representation data closes through Gelfand-Tsetlin and independent tableau routes.}
+  - {id: C, reason: The explicit finite-domain hypercharge filter returns every match and all minimum ties without a physical label.}
+  - {id: E, reason: Existing WZW and topology claims retain only their narrower mathematical surfaces.}
+  - {id: F, reason: Predicate dependency consumer compatibility novelty impact release queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: A, decision: rejected_as_incomplete_and_internally_inconsistent_headline}
+  - {id: D, decision: not_selected_missing_accepted_collective_action_level_color_baryon_statistics_hamiltonian_and_particle_maps}
+claims:
+  - C-IRR-001
+unpromoted_claims:
+  - {id: physical_collective_wzw_baryon_representation_selection, reason: No dependency-closed collective or particle theorem remains.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_su3_tableau_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_representation_attempt: attempts/0005/result.yaml
+  passing_governance_attempt: attempts/0007/result.yaml
+  integrated_terminal_gate: attempts/0008/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-IRR-001-review.md
+  source_review: memory/vantasner/decisions/S3-qualified-review.md
+source_disposition:
+  S3: qualified
+accepted_mappings: [C-IRR-001, C-LIE-001, C-LIE-002, C-WZW-002, C-TOP-002]
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_canonical_helper
+  immutable_primary: native
+  inherited_alias_only_if_executed: [S2, WZ3]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P139-s3-su3-baryon-representation-audit/verify.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S3_su3_wzw_baryon_reps.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/dossiers/S3-dossier.md
+  - >-
+    PYTHONPATH=src .venv/bin/python
+    campaigns/P139-s3-su3-baryon-representation-audit/reviews/independent_su3_tableau_review.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/bridge_S3_su3_wzw_baryon_reps.py
+    <substrate@6d1f4e0>/merged-framework/bridges/phase-4/dossiers/S3-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P139-s3-su3-baryon-representation-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_su3_representations.py tests/test_su3.py tests/test_source_audit.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

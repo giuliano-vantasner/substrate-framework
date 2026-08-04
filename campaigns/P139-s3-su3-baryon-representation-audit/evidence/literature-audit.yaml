@@ -1,0 +1,36 @@
+campaign: P139
+role: primary_collective_convention_and_scope_cross_check_not_selection_input
+sources:
+  - title: Baryons as solitons and mass formulae
+    author: E. Guadagnini
+    year: 1984
+    url: https://osiris.df.unipi.it/~guada/ART/L02.pdf
+    doi: https://doi.org/10.1016/0550-3213(84)90236-6
+    finding: >-
+      The primary paper first declares the SU(3)/U(1) collective configuration,
+      extends wavefunctions to SU(3), derives a right-action phase from the
+      Wess-Zumino term, and only then identifies right hypercharge and spin.
+      This confirms that S3's bare weight filter omits load-bearing action,
+      quotient, generator, and wavefunction premises.
+  - title: Global aspects of current algebra
+    author: Edward Witten
+    year: 1983
+    record: https://collaborate.princeton.edu/en/publications/global-aspects-of-current-algebra/
+    doi: https://doi.org/10.1016/0550-3213(83)90063-9
+    finding: >-
+      The primary record supports an a priori quantization law for the
+      Wess-Zumino action. P139 relies on accepted C-WZW-002 for the exact
+      mathematical coefficient lattice and does not infer k=N_c or baryons.
+  - title: Current algebra baryons and quark confinement
+    author: Edward Witten
+    year: 1983
+    url: https://strings.itp.ac.ru/Student-Seminar-Papers/witten1983.pdf
+    doi: https://doi.org/10.1016/0550-3213(83)90064-0
+    finding: >-
+      The primary paper treats the integer Wess-Zumino coefficient and soliton
+      baryon interpretation within QCD current algebra. Those are physical
+      premises, not consequences of C-LIE or the new representation theorem.
+selection_effect: >-
+  Literature fixed scope and convention checks only. No published octet,
+  decuplet, mass, or particle assignment entered candidate selection or an oracle.
+debt: []

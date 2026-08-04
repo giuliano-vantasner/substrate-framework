@@ -1,0 +1,74 @@
+campaign: P139
+source_unit: S3
+checks:
+  - id: S3.1
+    status: retained_and_generalized
+    mapping: C-IRR-001
+    reason: >-
+      The fixture values are correct. C-IRR-001 derives the Weyl dimension for
+      every nonnegative Dynkin-label pair and independently matches basis counts.
+  - id: S3.2
+    status: retained_and_generalized
+    mapping: [C-IRR-001, C-LIE-001]
+    reason: >-
+      The Casimir values are correct in C-LIE-001's normalization and follow
+      independently from the highest-weight inverse-Cartan inner product.
+  - id: S3.3
+    status: qualified_wrong_sextet_fixture
+    mapping: C-IRR-001
+    reason: >-
+      Octet, decuplet, and triplet Y=1 membership verdicts are correct, as is
+      sextet exclusion at Y=1. The source's sextet spectrum is nevertheless
+      wrong; the complete exact set is {2/3,-1/3,-4/3}.
+  - id: S3.4
+    status: mapped_to_narrower_existing_theorem
+    mapping: C-WZW-002
+    reason: >-
+      The sampled phase values are regression evidence for integer levels, not
+      a proof of the quantified iff or the physical identification k=N_c.
+  - id: S3.5
+    status: retained_as_conditional_arithmetic
+    mapping: null
+    reason: >-
+      Substitution into Y_R=N_c*B/3 gives one at N_c=3 and B=1, but the
+      collective constraint, N_c, baryon number, and their maps are imported.
+  - id: S3.6
+    status: qualified_complete_filter_and_tie
+    mapping: C-IRR-001
+    reason: >-
+      The octet is the unique minimum-dimension Y=1 match. Dimension ten is the
+      next layer but contains both (0,3) and (3,0); the filter alone cannot
+      select the physical decuplet or exclude the antidecuplet.
+  - id: S3.7
+    status: casimir_retained_mass_formula_rejected
+    mapping: C-IRR-001
+    reason: >-
+      Delta C2=3 is exact. Under the displayed rotor Hamiltonian the
+      decuplet-octet spin difference cancels the I2 contribution and gives
+      3/(2I1), while 3/(2I2) is the same-spin antidecuplet-octet gap.
+  - id: S3.8
+    status: right_row_labels_retained_derivation_rejected
+    mapping: C-IRR-001
+    reason: >-
+      Exact Y=1 branching gives I=1/2 for the octet and I=3/2 for the decuplet.
+      The source's universal SU2 range is false and its FR repair is inserted.
+  - id: S3.9
+    status: qualified_mutation
+    mapping: C-IRR-001
+    reason: >-
+      At target Y=2/3 the antitriplet is the unique minimum and the sextet is
+      also admitted. The source dictionary omits the correct sextet weight and
+      the dossier alternates three incompatible claimed winners.
+  - id: S3.10
+    status: mapped_to_narrower_existing_claims
+    mapping: [C-WZW-001, C-WZW-002]
+    reason: >-
+      C-WZW-001 and C-WZW-002 provide exact cohomology and primitive-period
+      surfaces with explicit ceilings. S3's literal periods and later-history
+      prose derive no physical WZW action or representation selection.
+headline_decision: >-
+  Qualify S3. Promote the distinct complete mathematical irrep and bounded
+  hypercharge-filter theorem C-IRR-001. Reject the claim that S3 derives a
+  parameter-free physical octet/decuplet spectrum, WZW-to-N_c relation,
+  collective quantization, decuplet mass formula, or substrate mechanism.
+debt: []

@@ -1,0 +1,31 @@
+campaign: P139
+provisional_claim: C-IRR-001
+decision: promote
+direct_search:
+  identifiers_searched: [C-IRR-001]
+  concepts_searched: [Gelfand-Tsetlin, Weyl dimension, SU3 full weights, weight multiplicity, isospin hypercharge branching, supplied-hypercharge filter]
+  result: >-
+    No accepted identifier or canonical general SU(3) representation API
+    exists outside P139. C-LIE-001 covers explicit fundamental matrices and
+    invariants; C-LIE-002 covers the center and abstract triality only.
+memory_search:
+  query: SU(3) Gelfand Tsetlin weight multiplicity hypercharge representation
+  nearest_prior_records: [P024, P028]
+  result: distinct_general_irrep_surface
+gitnexus_query:
+  query: SU3 representation Dynkin labels Gelfand Tsetlin weight multiplicities hypercharge filter
+  processes: 0
+  nearest_preexisting_definitions: [su3.py, gauge_beta.py]
+  result: >-
+    The only exact matches are P139's new module, verifiers, and tests. Existing
+    su3.py and gauge_beta.py expose fundamental invariants or supplied tables,
+    not general irreps or complete weights.
+nearest_claims:
+  - {claim: C-LIE-001, distinction: explicit fundamental and adjoint matrix invariants only}
+  - {claim: C-LIE-002, distinction: commutant center and abstract triality only}
+  - {claim: C-REP-001, distinction: exact arithmetic on separately supplied finite representation tables}
+  - {claim: C-WZW-002, distinction: integer sphere-filling coefficient with no representation selection}
+novel_surface: >-
+  C-IRR-001 is the first importable arbitrary-Dynkin-label basis, multiplicity,
+  branching, and explicit-domain hypercharge-filter theorem in the framework.
+debt: []

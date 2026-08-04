@@ -2,7 +2,7 @@
 description: Audit S3's SU(3) WZW collective representation-selection claim
 author: vantasner
 created: '2026-08-09T10:00:00Z'
-updated: '2026-08-09T10:00:00Z'
+updated: '2026-08-09T11:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - wzw
 - migration-S3
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P139 S3 SU(3) WZW Baryon-Representation Audit
 
@@ -185,14 +185,14 @@ maps, dependencies, consumers, novelty, and canonicalization.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| S3 executable and check surfaces are unopened | Hash, compatibility preflight, native or alias replay, AST/data-flow audit, and all ten predicates | open |
-| General irrep formulas and multiplicities may be incomplete | Independent Weyl and Gelfand-Tsetlin derivations across exact domains and mutations | open |
-| Hypercharge filtering may omit ties or conjugates | Complete declared-domain enumeration, minimality certificate, and omitted-table counterexamples | open |
-| The right-hypercharge constraint may be assumed | Derive it from an explicit collective action or retain it as a declared conditional input | open |
-| Mathematical WZW level may be identified with N_c or baryon number | Audit level, winding, orientation, topology, and every physical bridge separately | open |
-| A weight filter may be called a physical state selection | Inventory Hilbert, generator, spin, statistics, Hamiltonian, breaking, and observable premises | open |
-| Dependencies, consumers, and novelty are incomplete | Audit S2/S4/S5/WZ1/WZ4, accepted nearby claims, cycles, reverse consumers, and graph impact | open |
-| Registry, release, disposition, docs, queue, and memory are unsynchronized | Promote only reviewed distinct claims or close composition, then regenerate governed state | open |
+| S3 executable and check surfaces are unopened | Hash, compatibility preflight, native or alias replay, AST/data-flow audit, and all ten predicates | closed |
+| General irrep formulas and multiplicities may be incomplete | Independent Weyl and Gelfand-Tsetlin derivations across exact domains and mutations | closed |
+| Hypercharge filtering may omit ties or conjugates | Complete declared-domain enumeration, minimality certificate, and omitted-table counterexamples | closed |
+| The right-hypercharge constraint may be assumed | Derive it from an explicit collective action or retain it as a declared conditional input | closed |
+| Mathematical WZW level may be identified with N_c or baryon number | Audit level, winding, orientation, topology, and every physical bridge separately | closed |
+| A weight filter may be called a physical state selection | Inventory Hilbert, generator, spin, statistics, Hamiltonian, breaking, and observable premises | closed |
+| Dependencies, consumers, and novelty are incomplete | Audit S2/S4/S5/WZ1/WZ4, accepted nearby claims, cycles, reverse consumers, and graph impact | closed |
+| Registry, release, disposition, docs, queue, and memory are unsynchronized | Promote only reviewed distinct claims or close composition, then regenerate governed state | closed |
 
 ## Review and Promotion Plan
 
@@ -204,6 +204,18 @@ adjudication regardless. A terminal qualification names every accepted mapping
 and rejected physical clause with durable evidence. Release, disposition,
 queue, docs, accepted memory, and parent-effort state update once at their real
 changed boundaries.
+
+## Resolution
+
+P139 promotes C-IRR-001 in v0.106.0. Exact Gelfand--Tsetlin and independent
+semistandard-tableau routes close arbitrary-label dimensions, Casimirs,
+triality, complete weights, and SU(2)xU(1) rows. The bounded hypercharge filter
+shows a unique minimum octet at Y=1 and a dimension-ten
+antidecuplet/decuplet tie. S3's sextet convention, completeness claim,
+collective and WZW imports, decuplet mass formula, and physical baryon reading
+are corrected or rejected. Primary, independent, graph, and focused routes
+pass 28, 16, 39, and 31 checks; LOW impact and an empty ledger close the
+campaign.
 
 ## Done Gate
 
@@ -217,4 +229,4 @@ WZW slogan, rejected baryon label, or no-go does not finish the campaign.
 
 See P024, P028, P056, P057, P058, P059, P138, S2, S3, S4, S5, WZ1, WZ2,
 WZ3, WZ4, C-LIE-001, C-LIE-002, C-WZW-001, C-WZW-002, C-TOP-002,
-C-EFT-001, v0.105.0, and the parent migration effort.
+C-EFT-001, v0.105.0, v0.106.0, and the parent migration effort.

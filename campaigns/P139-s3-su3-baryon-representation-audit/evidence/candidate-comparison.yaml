@@ -1,0 +1,55 @@
+campaign: P139
+selection_frozen_at: 06f9e97
+criteria:
+  - accepted dependency closure and explicit generator normalization
+  - complete nonnegative Dynkin-label domain and exact multiplicities
+  - finite-domain completeness with all equal-dimension and conjugate ties
+  - fundamental adjoint conjugation and center-character limits
+  - action coefficient level winding orientation and state-map sensitivity
+  - parameter economy reusable API value compatibility and nonduplication
+candidates:
+  - id: A
+    decision: rejected_as_headline_reproduction_only
+    reason: >-
+      All ten predicates execute, but the finite dictionary is incomplete, the
+      sextet convention is wrong, collective premises are inserted, the mass
+      formula contradicts the displayed Hamiltonian, and physical ties are hidden.
+  - id: B
+    decision: selected
+    reason: >-
+      Exact Weyl, highest-weight, Gelfand-Tsetlin, and independent tableau routes
+      close the complete mathematical irrep object with sensitive mutations.
+  - id: C
+    decision: selected_conditionally
+    reason: >-
+      The API requires exact rational hypercharge and explicit finite label
+      bounds, returns every match and all minimum ties, and asserts no physics.
+  - id: D
+    decision: not_selected_missing_accepted_physical_inputs
+    reason: >-
+      A declared velocity-linear term gives a sign- and normalization-sensitive
+      momentum shift, but S3 does not construct it and accepted WZW/topology
+      claims do not identify its level with N_c or winding with baryon number.
+  - id: E
+    decision: selected_for_narrow_existing_mappings
+    reason: >-
+      C-WZW-002 and C-TOP-002 retain the exact mathematical level and winding
+      surfaces while excluding S3's physical identifications.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Claim-level review, frozen graph, novelty, impact, compatibility, release,
+      disposition, generated state, and memory close the transaction.
+proposed_claim:
+  id: C-IRR-001
+  decision: promote
+  reason: distinct_dependency_closed_exact_general_representation_surface
+physical_collective_claim:
+  decision: unpromoted
+  reason: >-
+    No accepted collective action, k=N_c, baryon map, statistics, Hamiltonian,
+    state dictionary, or observed-particle map closes.
+comparator_role: >-
+  Named baryons, source tables, masses, and the desired octet/decuplet outcome
+  did not select the convention, algorithm, candidate, or pass thresholds.
+debt: []
