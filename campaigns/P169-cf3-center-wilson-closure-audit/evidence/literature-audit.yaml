@@ -1,0 +1,13 @@
+scope: no_new_external_import_admitted
+source_citation_status: >-
+  CF3 cites historical Wilson-loop context, but P169 does not use that citation
+  as framework authority or candidate-selection evidence.
+framework_basis: >-
+  C-WIL-001 is deliberately conditional on separately declared expectation
+  functions and an extraction rule. Its exact consequences are derived locally.
+external_source_used_for_selection: false
+physical_interpretation_imported: false
+conclusion: >-
+  An external historical criterion cannot supply this framework's missing
+  gauge measure, physical sector map, law-selection mechanism, tension, or
+  nonperturbative confinement oracle.

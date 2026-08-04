@@ -1,0 +1,24 @@
+primary_verifier:
+  path: campaigns/P169-cf3-center-wilson-closure-audit/verify.py
+  sha256: 3497d8b07e11be5011796c197a3f0448b1b267e835c3b9aae776c1f660a034ec
+  result: ALL_44_CHECKS_PASS
+independent_exact_review:
+  path: campaigns/P169-cf3-center-wilson-closure-audit/reviews/independent_exact_center_loop_review.py
+  sha256: 0015f2feae3e87eede6eaa35dfc61de95caa0daa67eef61449df77a65428c588
+  result: ALL_25_CHECKS_PASS
+source_graph:
+  path: campaigns/P169-cf3-center-wilson-closure-audit/reviews/replay_source_graph.py
+  sha256: 59632bcef7f2c8762e82d92e85ffb45af6024b842c0839aaba959ce01c64edfe
+  result: ALL_40_CHECKS_PASS
+independence_statement: >-
+  The independent exact review imports neither canonical module nor the source
+  script. It solves a generating-set commutant and determinant roots directly,
+  constructs the abstract actions, and evaluates both logarithmic limits.
+mutation_surfaces:
+  - center_matrix_dimension
+  - determinant_phase
+  - exact_group_order
+  - fundamental_and_adjoint_characters
+  - area_exponent_sign
+  - separation_and_duration_powers
+  - same_center_perimeter_countermodel

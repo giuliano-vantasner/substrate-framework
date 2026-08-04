@@ -1,0 +1,16 @@
+accepted_at:
+  release: v0.25.0
+  campaign: P028
+unchanged_since_acceptance:
+  P028_primary_verifier_sha256: d6d3434da47816d12a9747b2630b448caa66f00429e73128f867407d3251c85b
+  P028_independent_review_sha256: 1d30dfb5682951c37807b0990b22384c84e8ea057d8c6e510cad33de435cc4f1
+  P028_passing_attempt_sha256: c65dc64a0911268930464798b7feeb99eafe003cde2aaf166d35a0ec6eb1f770
+  accepted_SU3_tests_sha256: eeb1edaf734737c60867d8a7bffe9a6e0bcdd596b820bf7bc0cb3157d8168eae
+  accepted_Wilson_tests_sha256: 6789abd327e16013d206c9679cf1cafb411b371029bb62685d9ef924a69248a1
+  canonical_SU3_module_sha256: fb2b2b595875ae61202788418ba4d7f6da5372e97e799e43919ad6d97bc4f169
+  canonical_Wilson_module_sha256: 11d23ce301a9dac97079c5128bef285a6f79791cdbb2190e36ffbc3ef9d7f484
+reuse_decision: >-
+  Hash-identical P028 evidence remains authoritative. P169 reproduces the
+  current immutable source, adds a fresh independent derivation, mutations,
+  graph replay, and focused consumers instead of ceremonially rerunning the
+  unchanged P028 scripts.

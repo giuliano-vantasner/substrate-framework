@@ -1,0 +1,30 @@
+attempt: 0004
+campaign: P169
+candidate: accepted_composition_primary_verifier
+status: passed
+started_at: '2026-08-10T23:49:00Z'
+finished_at: '2026-08-10T23:52:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P169-cf3-center-wilson-closure-audit/verify.py
+result: ALL_44_CHECKS_PASS
+closure:
+  pinned_artifacts: 9
+  source_lexical_predicates: 6
+  source_runtime_predicates: 6
+  source_assertions: 1
+  native_exit: 0
+  numpy_integration_surface: none
+  accepted_composition: [C-LIE-002, C-WIL-001]
+  new_claim: null
+  center_mutations_rejected: 3
+  representation_mutations_rejected: 2
+  loop_mutations_rejected: 3
+scientific_verdict: >-
+  The full center and abstract character theorem closes through C-LIE-002.
+  Area and perimeter large-time results close only conditionally through
+  C-WIL-001; center algebra selects neither and supplies no physical map.
+debt:
+  - complete_a_fresh_independent_center_and_loop_derivation
+  - replay_the_direct_source_graph_and_accepted_consumers
+next_attempt: independent_exact_center_and_loop_review

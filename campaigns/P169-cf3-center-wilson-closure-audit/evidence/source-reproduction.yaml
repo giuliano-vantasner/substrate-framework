@@ -1,0 +1,16 @@
+source_unit: CF3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+sha256: 8655579ef3173730c315d60aa821f7085cc131920ae49cb93c60b075d884889d
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+observed_at: '2026-08-10T23:48:00Z'
+exit_code: 0
+terminal_tally: ALL_6_CHECKS_PASS
+runtime_pass_markers: 6
+numpy_compatibility_alias: none
+scope_note: >-
+  The source exhibits three valid central SU3 elements and evaluates two
+  declared loop ansatzes. Reproduction alone proves neither center completeness
+  nor dynamical selection of an expectation law or physical phase.

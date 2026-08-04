@@ -3060,10 +3060,38 @@ units:
       string tension, screening dynamics, gauge phase, or confinement mechanism.
     evidence:
       - campaigns/P028-su3-center-wilson/reviews/source_adjudication.md
+      - campaigns/P169-cf3-center-wilson-closure-audit/reviews/source_adjudication.md
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/source-reproduction.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/compatibility-audit.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/source-audit.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/check-adjudication.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/input-provenance.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/dependency-audit.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/consumer-audit.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/candidate-comparison.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/primary-provenance.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/evidence/literature-audit.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/verify.py
+      - campaigns/P169-cf3-center-wilson-closure-audit/reviews/independent_exact_center_loop_review.py
+      - campaigns/P169-cf3-center-wilson-closure-audit/reviews/replay_source_graph.py
+      - campaigns/P169-cf3-center-wilson-closure-audit/attempts/0003/result.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/attempts/0004/result.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/attempts/0005/result.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/attempts/0006/result.yaml
+      - campaigns/P169-cf3-center-wilson-closure-audit/attempts/0007/result.yaml
+      - memory/vantasner/decisions/CF3-center-wilson-qualified-review.md
     note: >-
-      P028 solves the full fundamental commutant, makes center membership and
-      order mutation-sensitive, and supplies a same-center perimeter-law
-      countermodel to CF3's physical interpretation.
+      P169 replays all six predicates natively and passes forty-four primary,
+      twenty-five fresh exact, forty graph, and fifty-four focused checks or
+      tests. The eight-node graph replays seventy-six lexical and runtime
+      predicates plus nine assertions; immutable CF1 compatibility is isolated
+      through numpy.trapezoid. P028 evidence is byte-identical and reused. The
+      full commutant proves center completeness, while the same center coexists
+      with declared area and perimeter countermodels. No physical law selection,
+      screening, tension, confinement, claim, API, or release change follows.
   CF5:
     disposition: duplicate_evidence
     accepted_claims:

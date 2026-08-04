@@ -1,0 +1,68 @@
+campaign: P169
+title: CF3 complete center and conditional Wilson-loop closure audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF3]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T00:08:00Z'
+selected_candidates:
+  - {id: A, reason: Native_hash-pinned_CF3_replays_all_six_predicates.}
+  - {id: B, reason: C-LIE-002_closes_the_complete_center_and_abstract_character_content.}
+  - {id: C, reason: C-WIL-001_closes_both_premise_explicit_large_time_consequences.}
+  - {id: H, reason: Source_claim_compatibility_consumer_queue_and_memory_closure_updates_the_qualified_record.}
+claims: []
+accepted_composition:
+  - {id: C-LIE-002, decision: unchanged_exact_representation_claim}
+  - {id: C-WIL-001, decision: unchanged_exact_conditional_loop_claim}
+unpromoted_claims:
+  - {id: physical_quark_and_gluon_assignment, reason: No_accepted_representation_to_physical_sector_map.}
+  - {id: gluon_screening_theorem, reason: Abstract_character_addition_is_not_a_state_space_or_dynamical_screening_oracle.}
+  - {id: Wilson_area_law_derivation, reason: The_expectation_is_an_explicit_declared_premise.}
+  - {id: center_selects_loop_law, reason: The_same_center_coexists_with_area_and_perimeter_countermodels.}
+  - {id: physical_string_tension, reason: Sigma_is_a_free_positive_input_with_no_cross_model_map.}
+  - {id: QCD_confinement, reason: No_gauge_measure_phase_selection_or_nonperturbative_oracle_is_constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_exact_center_loop_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/CF3-center-wilson-qualified-review.md
+  source_attempt: attempts/0003/result.yaml
+  scientific_attempt: attempts/0004/result.yaml
+  independent_attempt: attempts/0005/result.yaml
+  failed_graph_attempt: attempts/0006/result.yaml
+  graph_attempt: attempts/0007/result.yaml
+  terminal_attempt: attempts/0008/result.yaml
+source_disposition:
+  CF3: qualified
+compatibility:
+  installed_numpy: 2.5.1
+  CF3_native: true
+  immutable_alias_only: [CF1]
+  alias_backend: numpy.trapezoid
+  mutable_legacy_integration_references: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P169-cf3-center-wilson-closure-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P169-cf3-center-wilson-closure-audit/reviews/independent_exact_center_loop_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P169-cf3-center-wilson-closure-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_su3.py tests/test_wilson_loops.py tests/test_nonabelian_holonomy.py tests/test_flux_tube.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

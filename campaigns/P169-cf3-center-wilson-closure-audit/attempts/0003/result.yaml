@@ -1,0 +1,26 @@
+attempt: 0003
+campaign: P169
+candidate: literal_native_source_reproduction
+status: passed
+started_at: '2026-08-10T23:47:00Z'
+finished_at: '2026-08-10T23:48:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF3_wilson_area_law.py
+source:
+  sha256: 8655579ef3173730c315d60aa821f7085cc131920ae49cb93c60b075d884889d
+  imports: [sympy]
+  exit_code: 0
+  terminal_tally: ALL_6_CHECKS_PASS
+  runtime_pass_markers: 6
+compatibility:
+  numpy_integration_surface: none
+  alias_used: false
+scientific_scope: >-
+  Reproduction establishes execution of the immutable predicates only. It
+  neither proves that the three exhibited scalar matrices exhaust the center
+  nor promotes declared loop expectations into dynamical or physical laws.
+debt:
+  - prove_center_completeness_and_adjudicate_every_predicate
+  - make_center_membership_triality_and_loop_premises_mutation_sensitive
+next_attempt: accepted_composition_primary_verifier

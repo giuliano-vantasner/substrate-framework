@@ -1,0 +1,26 @@
+source_unit: CF3
+direct_imports: [sympy]
+source_module_imports: []
+scientific_predicates:
+  lexical: 6
+  runtime: 6
+assertions:
+  total: 1
+  check_ledger: 1
+compatibility:
+  legacy_integration_sites: 0
+  current_integration_sites: 0
+  native: true
+convention_findings:
+  - Gell_Mann_generators_are_copied_in_the_T_equals_lambda_over_two_convention
+  - center_completeness_requires_the_full_complex_commutant_not_only_exhibited_scalars
+  - triality_is_an_abstract_center_character_without_a_physical_representation_map
+  - area_and_perimeter_expectations_are_declared_positive_parameter_ansatzes
+semantic_findings:
+  - CF3_1_exhibits_valid_center_elements_but_does_not_solve_the_full_commutant
+  - CF3_2_center_actions_survive_but_quark_gluon_and_screening_labels_are_not_derived
+  - CF3_3_and_CF3_5_compute_conditional_limits_but_do_not_derive_or_select_loop_laws
+  - CF3_4_checks_N_equals_two_and_three_only_and_proves_no_general_SU_N_or_phase_theorem
+  - a_scalar_with_bad_determinant_is_central_as_a_matrix_but_not_an_SU3_element_or_SU3_center_member
+  - narrative_neighbors_are_not_executable_imports_or_accepted_physical_maps
+source_edited: false

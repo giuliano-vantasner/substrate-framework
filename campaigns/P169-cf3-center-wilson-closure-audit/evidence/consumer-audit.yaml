@@ -1,0 +1,28 @@
+accepted_claim_consumers:
+  direct:
+    - src/substrate_framework/su3.py
+    - tests/test_su3.py
+    - src/substrate_framework/wilson_loops.py
+    - tests/test_wilson_loops.py
+  adjacent:
+    - src/substrate_framework/nonabelian_holonomy.py
+    - tests/test_nonabelian_holonomy.py
+    - src/substrate_framework/flux_tube.py
+    - tests/test_flux_tube.py
+    - src/substrate_framework/source_audit.py
+    - tests/test_source_audit.py
+narrative_source_graph:
+  nodes: [EM7, NA1, QCD1, SM3, CF1, CF2, CF3, CF4]
+  executable_CF3_edges: []
+  lexical_predicates: 76
+  runtime_predicates: 76
+  assertions: 9
+focused_command: >-
+  .venv/bin/python -m pytest tests/test_su3.py tests/test_wilson_loops.py
+  tests/test_nonabelian_holonomy.py tests/test_flux_tube.py
+  tests/test_source_audit.py -q
+focused_result: 54_passed
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false
+migration_and_memory_records_change_required: true

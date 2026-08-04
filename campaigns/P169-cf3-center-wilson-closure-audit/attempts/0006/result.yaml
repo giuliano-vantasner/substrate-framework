@@ -1,0 +1,23 @@
+attempt: 0006
+campaign: P169
+candidate: initial_source_graph_replay
+status: failed_verifier_construction
+started_at: '2026-08-10T23:56:00Z'
+finished_at: '2026-08-10T23:57:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P169-cf3-center-wilson-closure-audit/reviews/replay_source_graph.py
+observed:
+  checks_passed_before_failure: 39
+  source_nodes_replayed: 8
+  lexical_checks: 76
+  runtime_checks: 76
+  assertions: 9
+  legacy_alias_nodes: [CF1]
+failure: final_review_phrase_probe_used_lowercase_the_against_capitalized_The
+diagnosis: brittle_case_sensitive_prose_probe_after_complete_graph_execution
+scientific_result_changed: false
+source_result_changed: false
+debt:
+  - replace_the_literal_case_probe_with_case_normalized_semantic_boundary_tokens
+next_attempt: repaired_source_graph_and_consumer_closure

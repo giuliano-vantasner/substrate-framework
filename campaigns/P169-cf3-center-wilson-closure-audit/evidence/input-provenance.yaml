@@ -1,0 +1,19 @@
+source_unit: CF3
+center:
+  representation: {value: standard_fundamental_SU3, authority: C-LIE-001}
+  generators: {value: T_a_equals_lambda_a_over_two, authority: C-LIE-001}
+  matrix_group: {value: complex_unitary_three_by_three_determinant_one, status: declared_SU3_definition}
+  center_phase: {value: primitive_cube_root_omega, status: derived_from_membership_constraint}
+triality:
+  fundamental_character: {value: omega, status: exact_abstract_representation_action}
+  adjoint_conjugation_character: {value: one, status: exact_abstract_representation_action}
+loop_inputs:
+  separation: {symbol: R, status: declared_positive}
+  euclidean_time: {symbol: T, status: declared_positive_limit_variable}
+  area_coefficient: {symbol: sigma, status: declared_positive_free_input}
+  perimeter_coefficient: {symbol: rho, status: declared_positive_free_input}
+  area_expectation: {value: exp_minus_sigma_R_T, status: independent_declared_premise}
+  perimeter_expectation: {value: exp_minus_two_rho_R_plus_T, status: independent_declared_premise}
+  extraction: {value: minus_large_T_log_W_over_T, status: declared_rule}
+empirical_comparators: []
+physical_scale_imported: false

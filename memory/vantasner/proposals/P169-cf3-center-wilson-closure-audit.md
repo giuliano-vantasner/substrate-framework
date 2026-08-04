@@ -2,15 +2,15 @@
 description: Reaudit CF3's complete SU3 center and conditional Wilson-loop closure
 author: vantasner
 created: '2026-08-10T23:40:00Z'
-updated: '2026-08-10T23:44:00Z'
+updated: '2026-08-11T00:08:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-CF3
 - wilson-loop
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P169 CF3 Center and Wilson Closure Audit
 
@@ -126,7 +126,13 @@ discloses P028 and later-replay exposure. It records the base release and
 commit, source and dossier hashes, eight candidates, structural criteria,
 accepted-composition routes, and compatibility preflight. Every later
 implementation, representation, source, schema, or scientific failure is
-preserved append-only before repair.
+preserved append-only before repair. Attempt 0002 validates and commits the
+freeze. Attempt 0003 reproduces all six source predicates natively. Attempts
+0004 and 0005 pass 44 primary and 25 fresh exact checks. Attempt 0006 preserves
+a case-sensitive review-prose probe failure after 39 graph checks; attempt 0007
+repairs the probe and passes all 40 graph checks plus 54 focused tests. Attempt
+0008 passes the terminal repository gate and both prescribed 1,478-test
+executions with v0.127.0 and all 163 accepted claims unchanged.
 
 ## Debt Ledger
 
@@ -136,13 +142,13 @@ event, consumer, and governed record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Six predicates and one assertion lack current individual review | Reproduce, inventory, and adjudicate every node | open |
-| Exhibited center elements may not prove completeness | Solve the full commutant and impose SU3 membership independently | open |
-| Center algebra may be used to select an area law | Preserve a same-center perimeter-law countermodel | open |
-| Area or perimeter expectations may be smuggled in as outputs | Trace every loop law as an explicit premise and mutate its exponent | open |
-| Existing evidence may be rerun ceremonially | Hash-audit P028 and replay only changed or current-sensitive gates | open |
-| Physical sectors, tension, screening, and confinement may be borrowed | Close or reject every narrative dependency explicitly | open |
-| Consumers and governed records may disagree | Replay affected paths and synchronize disposition, queue, memory, and effort | open |
+| Six predicates and one assertion lack current individual review | Reproduce, inventory, and adjudicate every node | discharged by source reproduction and check adjudication |
+| Exhibited center elements may not prove completeness | Solve the full commutant and impose SU3 membership independently | discharged by canonical and fresh rank-nullity and determinant proofs |
+| Center algebra may be used to select an area law | Preserve a same-center perimeter-law countermodel | discharged by both conditional loop routes |
+| Area or perimeter expectations may be smuggled in as outputs | Trace every loop law as an explicit premise and mutate its exponent | discharged by provenance, source, and exponent audits |
+| Existing evidence may be rerun ceremonially | Hash-audit P028 and replay only changed or current-sensitive gates | discharged by byte-identical accepted-evidence reuse |
+| Physical sectors, tension, screening, and confinement may be borrowed | Close or reject every narrative dependency explicitly | discharged by dependency, graph, and source adjudication |
+| Consumers and governed records may disagree | Replay affected paths and synchronize disposition, queue, memory, and effort | discharged by 54 focused tests and qualification transaction |
 
 ## Review and Promotion Plan
 
@@ -163,12 +169,14 @@ suite.
 
 ## Done Gate
 
-P169 closes only when the complete positive center theorem and both conditional
-loop consequences pass exact independent oracles, every source predicate and
-consumer is adjudicated, compatibility cannot masquerade as science, physical
-overreach is excluded, governed records agree, and the debt ledger is empty.
-An `ALL 6 CHECKS PASS` tail or rejection of confinement alone is not
-completion.
+P169 closes through unchanged C-LIE-002/C-WIL-001 composition. The complete
+center theorem and both conditional loop consequences pass 44 primary and 25
+fresh exact checks. All six predicates and the assertion have individual
+verdicts; 40 graph checks replay 76 lexical and runtime predicates plus nine
+assertions; and 54 focused tests pass. Compatibility aliases occur only for
+immutable CF1 and are backed by `np.trapezoid`. Physical overreach is excluded,
+P028 reuse is hash-justified, v0.127.0 remains unchanged, and the campaign debt
+ledger is empty.
 
 ## Cross-References
 

@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P169
+candidate: independent_exact_center_and_loop_review
+status: passed
+started_at: '2026-08-10T23:53:00Z'
+finished_at: '2026-08-10T23:55:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python campaigns/P169-cf3-center-wilson-closure-audit/
+  reviews/independent_exact_center_loop_review.py
+result: ALL_25_CHECKS_PASS
+closure:
+  canonical_SU3_imported: false
+  canonical_Wilson_imported: false
+  commutant_rank: 8
+  commutant_nullity: 1
+  center_order: 3
+  center_mutations_rejected: 4
+  area_result: sigma_R
+  perimeter_result: two_rho
+  exponent_mutations_rejected: 3
+scientific_verdict_changed: false
+debt:
+  - replay_the_direct_source_graph_and_accepted_consumers
+next_attempt: source_graph_and_consumer_closure

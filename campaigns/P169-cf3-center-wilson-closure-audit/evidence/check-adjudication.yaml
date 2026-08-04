@@ -1,0 +1,28 @@
+source_unit: CF3
+lexical_checks: 6
+runtime_checks: 6
+assertion_nodes: 1
+checks:
+  CF3.1:
+    verdict: qualified_through_C-LIE-002
+    qualification: exhibited_elements_are_valid_but_P028_full_commutant_and_membership_proof_supplies_completeness
+  CF3.2:
+    verdict: partially_accepted_through_C-LIE-002
+    qualification: abstract_fundamental_and_adjoint_center_actions_survive_but_quark_gluon_and_screening_claims_require_a_physical_map
+  CF3.3:
+    verdict: conditionally_accepted_through_C-WIL-001
+    qualification: declared_area_ansatz_gives_sigma_R_but_the_law_tension_and_confinement_phase_are_not_derived
+  CF3.4:
+    verdict: accepted_only_as_N_two_and_three_center_arithmetic
+    qualification: no_general_SU_N_theorem_or_confinement_order_parameter_selection_is_proved
+  CF3.5:
+    verdict: conditionally_accepted_through_C-WIL-001_as_countermodel
+    qualification: declared_perimeter_ansatz_gives_two_rho_but_screening_and_deconfinement_labels_are_not_promoted
+  CF3.6:
+    verdict: accepted_through_C-LIE-002_with_wording_correction
+    qualification: bad_determinant_scalars_commute_as_matrices_but_are_not_SU3_elements_and_therefore_not_members_of_the_SU3_center
+assertions:
+  check_helper:
+    role: local_check_ledger_assertion
+    verdict: execution_mechanism_not_extra_claim
+headline_physical_reading: rejected_absent_dependency_closure_and_nonperturbative_oracle

@@ -1,0 +1,18 @@
+registry_search:
+  complete_center_and_abstract_triality: C-LIE-002
+  conditional_loop_consequences: C-WIL-001
+  separate_uniform_tube: C-FLX-001
+package_search:
+  center_API: src/substrate_framework/su3.py
+  loop_API: src/substrate_framework/wilson_loops.py
+  accepted_tests: [tests/test_su3.py, tests/test_wilson_loops.py]
+distinct_source_content_not_covered: []
+rejected_new_objects:
+  - source_reproduction_is_evidence_not_a_new_claim
+  - exhibited_center_elements_need_existing_C-LIE-002_completeness
+  - two_checked_ranks_do_not_form_a_new_general_SU_N_theorem
+  - loop_ansatzes_are_premises_not_new_dynamical_claims
+  - CF1_CF2_or_CF4_sigma_identity_lacks_a_map
+  - physical_screening_QCD_and_confinement_lack_oracles
+new_claim: null
+new_API: null

@@ -1,0 +1,18 @@
+predeclared_order:
+  - complete_center_proof_and_SU3_membership
+  - premise_conclusion_and_center_loop_law_separation
+  - order_triality_exponent_sign_and_area_perimeter_sensitivity
+  - dependency_and_physical_interpretation_closure
+  - assumption_parameter_and_API_economy
+  - source_consumer_compatibility_and_governance_closure
+candidates:
+  A: {decision: selected_as_reproduction_route, reason: native_CF3_passes_all_six_predicates}
+  B: {decision: selected_center_closure, reason: C-LIE-002_supplies_the_missing_full_commutant_proof}
+  C: {decision: selected_loop_closure, reason: C-WIL-001_covers_both_premise_explicit_large_time_results}
+  D: {decision: not_selected, reason: both_loop_results_survive_when_kept_strictly_conditional}
+  E: {decision: rejected_scope_expansion, reason: source_checks_only_N_two_and_three_and_no_general_theorem_gap_is_needed}
+  F: {decision: rejected_absent_oracle, reason: no_physical_sector_measure_law_selection_or_confinement_derivation}
+  G: {decision: rejected_absent_map, reason: CF1_CF2_and_CF4_supply_no_identity_for_CF3s_free_sigma}
+  H: {decision: selected_governance_closure, reason: CF3_qualification_needs_current_complete_evidence}
+comparator_selected_candidate: false
+fresh_blinding_claimed: false

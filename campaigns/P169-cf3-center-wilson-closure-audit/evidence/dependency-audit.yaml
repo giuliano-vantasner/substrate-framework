@@ -1,0 +1,28 @@
+accepted_composition:
+  C-LIE-002:
+    dependencies: [C-LIE-001]
+    role: complete_exact_fundamental_SU3_center_and_abstract_triality
+  C-WIL-001:
+    dependencies: []
+    role: premise_explicit_rectangular_area_and_perimeter_large_time_consequences
+separate_non_dependencies:
+  C-FLX-001: separate_uniform_fixed_area_energy_and_endpoint_work_theorem
+  C-VTX-001: separate_conditional_smooth_vortex_theorem
+  C-VTX-002: separate_resolution_bounded_vortex_evidence
+  C-KRN-001: no_CF3_Riesz_operator_or_dimension_map
+source_narrative_edges:
+  QCD1: copied_generator_context_replaced_by_accepted_C-LIE-001_authority
+  SM3: triality_label_context_without_an_accepted_physical_field_map
+  NA1: SU2_center_analogy_without_a_general_phase_theorem
+  EM7: exponent_analogy_without_an_executable_operator_dependency
+  CF1: sibling_vortex_narrative_without_a_loop_law_derivation
+  CF2: sibling_linear_energy_narrative_without_a_sigma_identity
+  CF4: sibling_scale_narrative_without_a_loop_law_or_tension_derivation
+missing_physical_dependencies:
+  - accepted_quark_and_gluon_representation_assignment
+  - gauge_measure_or_path_integral_deriving_the_loop_expectation
+  - dynamical_area_versus_perimeter_law_selection
+  - physical_string_tension_identification
+  - nonperturbative_QCD_or_substrate_confinement_oracle
+dependency_closure_for_accepted_claims: complete
+dependency_closure_for_physical_headline: absent

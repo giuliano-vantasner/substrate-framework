@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-10T23:20:00Z'
+updated: '2026-08-11T00:08:00Z'
 tags:
 - substrate-framework
 - effort
@@ -339,6 +339,7 @@ Attempts are append-only and individually reproducible.
 | 0187 | P166 exact fixed-data affine running, common-rank, pairwise-spread, dependency, consumer, compatibility, and SM4 audit | `campaigns/P166-sm4-one-loop-unification-audit/attempts/0001` through `0008`, then terminal no-release boundary | SM4 qualified through C-RGE-002, C-RGE-004, and C-RGE-005 with v0.127.0 unchanged | Exact composition gives coefficient rank two, augmented rank three, three unequal pairwise crossings, and a 3.979055-decade spread while exposing hard-coded boundaries, a bundled MSSM stand-in, an out-of-domain sign sample, and an omitted coincident branch. Thirty-seven primary, twenty-four independent, sixty focused, and thirty-three graph checks pass over five native nodes. Two full 1,478-test executions pass. | Freeze CF1's current-NumPy reproduction and accepted vortex closure without treating removed `np.trapz` as science. |
 | 0188 | P167 current-NumPy source reproduction, exact vortex closure, evidence-reuse, graph, consumer, and CF1 audit | `campaigns/P167-cf1-current-numpy-closure-audit/attempts/0001` through `0010`, then terminal no-release boundary | CF1 remains qualified through C-VTX-001 and C-VTX-002 with v0.127.0 unchanged | Native CF1 passes two predicates and stops only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all eight. Twenty-six primary, sixteen fresh exact, thirty graph, and thirty-nine focused checks or tests pass. The six-node graph replays 51 lexical and runtime predicates plus seven assertions. Hash-identical P026 refinements are reused rather than ceremonially repeated. Two full 1,478-test executions pass; a post-gate targeted replay replaces brittle printed decimals with scientific inequalities. | Freeze CF2's fixed-area field-energy and endpoint-work audit, preserve their factor-of-two distinction, and reject any unproved CF1 or confinement identity. |
 | 0189 | P168 exact fixed-area field-energy, endpoint-work, geometry, dependency, compatibility, graph, consumer, and CF2 audit | `campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0001` through `0011`, then terminal no-release boundary | CF2 remains qualified through C-FLX-001 with v0.127.0 unchanged | Native CF2 passes all fifteen predicates. Thirty-nine primary, nineteen fresh exact, thirty-one graph, and forty-three focused checks or tests separate energy slope `Phi^2/(2A)` from endpoint slope `qPhi/A`, derive equality iff `q=Phi/2`, reject factor, charge, and geometry mutations, and retain logarithmic and spherical counterexamples. The six-node graph replays 66 lexical and runtime predicates plus eight assertions; immutable CF1 and CF5 aliases are backed by `np.trapezoid`. Hash-identical P027 evidence is reused. | Freeze CF3's exact SU3 center algebra and conditional loop-law consequences while keeping the declared area law, physical screening, and confinement interpretations separate. |
+| 0190 | P169 exact complete-center, abstract-triality, conditional loop-law, dependency, compatibility, graph, consumer, and CF3 audit | `campaigns/P169-cf3-center-wilson-closure-audit/attempts/0001` through `0008`, then terminal no-release boundary | CF3 remains qualified through C-LIE-002 and C-WIL-001 with v0.127.0 unchanged | Native CF3 passes all six predicates. Forty-four primary, twenty-five fresh exact, forty graph, and fifty-four focused checks or tests prove full-center completeness, abstract representation actions, conditional area/perimeter limits, and same-center law nonselection. The eight-node graph replays 76 lexical and runtime predicates plus nine assertions; immutable CF1 uses an alias backed by `np.trapezoid`. Hash-identical P028 evidence is reused, and one case-sensitive review-probe failure is preserved. | Freeze CF5's vortex-to-ideal-tube consistency and current-NumPy reproduction, treating its removed `np.trapz` spelling as compatibility rather than science and testing whether effective-area inversion predicts anything. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1813,21 +1814,33 @@ assertions; compatibility aliases for immutable CF1 and CF5 are backed only by
 `np.trapezoid`. The terminal workflow and explicit full suite each pass all
 1,478 tests with 686 valid memory records.
 
+P169 terminally reaudits CF3 without a new claim, API, or release. The exact
+accepted composition and fresh independent derivation prove the full scalar
+commutant center, abstract fundamental and adjoint characters, and the
+conditional area and perimeter large-time results while showing that the same
+center selects neither law. Physical quark/gluon, screening, tension, QCD,
+confinement, and substrate readings remain excluded. The primary, fresh exact,
+eight-node graph, and focused routes pass 44, 25, 40, and 54 checks or tests.
+The graph replays 76 lexical and runtime predicates plus nine assertions;
+immutable CF1 compatibility is isolated behind `np.trapezoid`. The terminal
+workflow and explicit full suite each pass all 1,478 tests with 688 valid
+memory records.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P168 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P169 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
 The effort remains active. D4 is discharged, but D1 remains open with 54
 pending, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is CF3, pinned at SHA-256
-`8655579ef3173730c315d60aa821f7085cc131920ae49cb93c60b075d884889d`.
-P169 must freeze CF3 before renewed source execution and audit its complete
-SU3 center and triality algebra separately from the declared Wilson area and
-perimeter laws. It must preserve the conditional large-time extraction in
-C-WIL-001, require the loop law as an explicit premise, test center membership,
-order, representation action, area/perimeter discrimination, and must not turn
-a declared expectation into derived screening, string tension, QCD
-confinement, or substrate dynamics.
+bridge unit. The next queue unit is CF5, pinned at SHA-256
+`0a449f8b95bc0a83fb0316992fb0d1776a6157e1445029623b4608246dc256f7`.
+P170 must freeze CF5 before renewed source execution and audit its claimed
+vortex-to-ideal-tube tension consistency against C-VTX-001, C-VTX-002, and
+C-FLX-001. It must preserve any native removed-`np.trapz` abort as version-only,
+replay the immutable source through an alias backed by `np.trapezoid`, test
+effective-area inversion and scale-window non-discrimination, and must not turn
+a reconstructed area or order-one ratio into a physical map, predicted string
+tension, QCD confinement, or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
