@@ -1,0 +1,72 @@
+id: P144
+base_release: v0.110.0
+base_commit: 5e56737
+scientific_base_commit: d5e840f
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [G4]
+question: >-
+  Reproduce and independently audit G4's claim that its radiated-power input
+  determines a radiation-reaction self-force and internal-mode backreaction,
+  and determine exactly which action, regularization, causal history, balance,
+  source dynamics, allocation, sign, dimension, initial, boundary, and numeric
+  premises are required.
+invariants:
+  - >-
+    C-RAD-001 governs a separately declared one-dimensional scalar field with a
+    prescribed point-source amplitude. It derives retarded flux and source work
+    but explicitly supplies no source dynamics, self-force, energy loss, or
+    radiation-reaction equation.
+  - >-
+    C-SG-002, C-SG-008, and C-SG-012 govern the normalized breather rest energy,
+    constant-boost kinematics, and one-plus-one stress. Time-dependent velocity
+    or internal frequency is an additional adiabatic or collective-coordinate
+    premise, not a substitution into those exact constant-parameter theorems.
+  - >-
+    C-GOR-001 is an effective-wave metric with no material action or Einstein
+    source. C-STG-001 is a homogeneous canonical Einstein-scalar cosmology and
+    not a localized breather or radiation-reaction model.
+  - >-
+    C-OG-004 is a conditional centered profile average, not a self-force or MPD
+    law. T2A and T2C are qualified and cannot close G4 through rejected gravity,
+    source, or finite-size narratives.
+  - >-
+    The generated queue exposes G4's ten-check tally, one assertion, symbolic
+    and numeric hints, dependencies G1 G2 G3 T2A T2C, and broad self-force and
+    internal-mode headline. Its result excerpt is null; source body, check
+    literals, output, dossier body, and numeric comparators remain unopened.
+allowed_imports:
+  - C-RAD-001 only for its exact field flux source-work and boundary-history ledger
+  - C-SG-002 C-SG-008 and C-SG-012 only under their normalized rest-energy constant-boost and stress ceilings
+  - C-GOR-001 only as an effective-geometry ceiling
+  - C-STG-001 only as a canonical Einstein-scalar action and homogeneous-solution ceiling
+  - C-OG-004 only as a declared profile-average theorem
+  - exact finite-dimensional generalized-coordinate energy balance and Rayleigh dissipation calculus with all reservoirs and coefficients declared
+  - standard retarded self-field and radiation-reaction literature after freeze only for regularization causality near-field energy or effective-equation scope
+  - G4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce G4 literally and classify all ten predicates by data flow balance law source dynamics regularization causal history and physical ceiling.}
+  - {id: B, description: Derive the exact generalized energy-balance identity for translational and internal coordinates and classify the full force-allocation family rather than selecting one from one scalar balance equation.}
+  - {id: C, description: Derive a self-force from one explicitly declared field-plus-source action using a stated retarded prescription and coincidence regularization or show which missing source degrees of freedom prevent it.}
+  - {id: D, description: Construct a complete conditional local dissipative effective model from a declared Rayleigh function and verify energy monotonicity existence limits and coefficient sensitivity without calling it fundamental.}
+  - {id: E, description: Build zero-velocity turning-point near-field-energy alternate-allocation external-work and same-radiated-power countermodels that delimit instantaneous balance claims.}
+  - {id: F, description: Close accepted composition novelty dependencies cycles reverse consumers compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - complete field and source action or explicitly conditional effective balance law
+  - causal history regularization near-field energy and external-work bookkeeping
+  - component or generalized-coordinate closure rather than one scalar equality relabeled as a unique force
+  - explicit translational and internal energy reservoirs allocation rule signs dimensions and singular domains
+  - initial boundary gauge and source data plus solver-success and refinement gates for unresolved numeric work
+  - inertial constant-velocity zero-acceleration turning-point and weak-coupling limits
+  - load-bearing source power allocation sign coefficient and timestep mutations
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - source outputs and numeric comparators excluded from concept selection and pass thresholds
+claims_proposed: [C-RR-001]
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, candidate
+  set, balance and force conventions, selection criteria, mutation plan,
+  compatibility policy, and done gate are frozen and committed. Queue and
+  parent records have exposed only the broad headline, tally, dependency names,
+  and oracle hints; the source body, check literals, output, dossier body, and
+  numeric comparators remain unopened until that boundary.
+status: draft

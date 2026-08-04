@@ -1,0 +1,22 @@
+attempt: 0001
+campaign: P144
+candidate: preregistration
+status: passed
+started_at: '2026-08-09T17:00:00Z'
+finished_at: '2026-08-09T17:04:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P144-g4-radiation-reaction-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  frozen_proposal_sha256: 718af2ae0f1fce5b54df312c446e9e4df92a278eafaddaa4c98d47f4a65c25c2
+  repository: WORKFLOW_VALID_145_claims_145_accepted_0_proposals
+  migration_queue: 218_units_77_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_and_parent_exposure_recorded_in_contract
+next_attempt: >-
+  Commit the freeze boundary, compatibility-preflight immutable G4, reproduce
+  its exact tally, then audit every predicate and force or balance premise.
