@@ -1,0 +1,84 @@
+id: P140
+base_release: v0.106.0
+base_commit: aa6327b
+scientific_base_commit: 9ccd333
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [S4]
+question: >-
+  Reproduce and independently audit S4's claim that integrating out a declared
+  rho vector generates the Skyrme quartic tensor I1-I2 with a uniquely fixed
+  sign and coefficient c4=8/B1^2, and determine exactly which action, metric,
+  current normalization, low-momentum expansion, KSRF relation, B1 value,
+  field dictionary, and physical interpretation are required.
+invariants:
+  - >-
+    C-EFT-001 proves exact stationary elimination only after a complete
+    symmetric invertible kernel and source are declared. It fixes no vector
+    field, HLS action, mass, coupling, KSRF relation, operator basis, or
+    coefficient.
+  - >-
+    C-CHI-001 and C-CHI-002 fix conditional Pauli trace and chiral-coordinate
+    conventions only. They do not derive a physical pion, rho field, HLS
+    connection, Skyrme action, or coupling normalization.
+  - >-
+    C-SK-001 keeps B1 as a positive premise and proves only a conditional
+    cancellation between two supplied mass formulas. Pending B1 grants no
+    profile value, c4 value, or physical scale.
+  - >-
+    C-LIE-001 fixes the accepted fundamental trace normalization but supplies
+    no physical vector-meson representation or chiral effective action.
+  - >-
+    A propagator sign, a stationary-elimination sign, an induced local
+    operator sign, and positivity of a static energy are distinct obligations
+    and must use one explicit metric and action convention.
+  - >-
+    The Euclidean current identity sum_{mu,nu}|x_mu cross x_nu|^2=I1-I2 is
+    algebraic. Calling its source a rho meson or its coefficient the physical
+    Skyrme stabilizer requires separate action and dictionary premises.
+  - >-
+    A kinetic massive vector produces a derivative expansion, whereas a
+    purely algebraic auxiliary field produces an exact Schur complement.
+    Finite low-momentum truncations retain a nonzero remainder.
+  - >-
+    The generated queue has exposed the claimed beta/alpha=-1, c4=8/B1^2,
+    approximate comparator 5.27, propagator sign, KSRF pinning, and headline
+    rho-saturation conclusion. S4's body, exact check literals, internal
+    normalizations, output, and dossier body remain unopened at freeze.
+allowed_imports:
+  - C-EFT-001 under its exact conditional finite-dimensional ceiling
+  - C-CHI-001 and C-CHI-002 only for their displayed Pauli and chiral-coordinate conventions
+  - C-LIE-001 only for its exact generator and trace convention
+  - C-SK-001 only as conditional algebra with B1 still a free positive premise
+  - exact finite-dimensional variational calculus Euclidean Gram identities Lie brackets and formal inverse expansions
+  - a separately declared massive-vector or HLS action only with all signs fields couplings and normalizations explicit
+  - effective_actions.py source_audit.py and verification.py pure APIs
+  - S4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+  - primary literature after freeze only for HLS KSRF or Skyrme convention and scope cross-checks
+candidates:
+  - {id: A, description: Reproduce S4 literally and classify every predicate by actual equations data flow imports and physical ceilings.}
+  - {id: B, description: Derive the complete exact stationary reduction of a declared vector or antisymmetric auxiliary multiplet coupled to an SU2 current wedge including its sign coefficient and I1-I2 tensor identity.}
+  - {id: C, description: Start from a declared kinetic massive vector action and derive the leading local term plus an explicit controlled inverse-mass remainder rather than identifying a finite propagator expansion with an exact action.}
+  - {id: D, description: Derive the SU2 commutator-square and cross-product tensor structure independently in the accepted Pauli trace convention and test all Lorentz Euclidean and static-energy sign conversions.}
+  - {id: E, description: Treat KSRF B1 rho identity and coefficient matching as an identifiability ledger and test field coupling and generator rescalings plus target-as-input countermodels.}
+  - {id: F, description: Close accepted composition novelty dependencies cycles reverse consumers compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - complete declared action metric signature source coupling stationary equation and on-shell substitution
+  - accepted trace generator current and operator normalization with no mixed conventions
+  - exact distinction between auxiliary elimination kinetic-vector derivative expansion and propagator sign
+  - derivation of the full I1-I2 or commutator-square tensor rather than insertion of beta/alpha=-1
+  - exact coefficient ledger retaining every mass coupling field normalization and derivative-order remainder
+  - positivity or stability checked only in the appropriate static-energy convention with all signs converted
+  - zero-coupling infinite-mass low-momentum wrong-sign and field-rescaling mutations
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - B1 approximate c4 rho mass KSRF and phenomenological matches excluded from concept selection and pass thresholds
+claims_proposed: [C-VEC-001]
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, candidate
+  set, current and trace conventions, selection criteria, mutation plan,
+  compatibility policy, and done gate are frozen and committed. Queue excerpts
+  have already exposed S4's claimed tensor ratio, coefficient, approximate
+  target, propagator sign, KSRF step, and conclusion; the source body, exact
+  checks, internal formulas, output, and dossier body remain unopened until
+  that boundary.
+status: draft
