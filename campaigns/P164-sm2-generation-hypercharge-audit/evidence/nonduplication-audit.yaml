@@ -1,0 +1,34 @@
+campaign: P164
+candidate: C_generic_product_multiplet_charge_ledger
+existing_surfaces:
+  C-REP-001:
+    owns: supplied_state_charge_traces_and_Abelian_normalization_covariance
+    missing: multiplet_grouping_weight_expansion_component_spectra_and_conjugation
+  C-REP-002:
+    owns: standard_Pauli_half_doublet_weights_and_scalar_commuting_Abelian_generator
+    missing: finite_product_multiplet_table_and_convention_ledger
+  C-GSM-001:
+    owns: conditional_lower_doublet_vacuum_stabilizer_and_charge_operator
+    missing: matter_multiplet_spectra_and_table_provenance
+  C-PGA-001:
+    owns: faithful_local_product_Lie_algebra
+    missing: hypercharge_table_and_matter_carriers
+  gauge_beta.ProductMultiplet:
+    owns: supplied_Dynkin_indices_and_Casimirs_for_loop_sums
+    missing: derivation_from_factor_dimensions_weights_and_Abelian_charge
+  charge_traces.WeightedChargeState:
+    owns: flattened_state_arithmetic
+    missing: typed_origin_multiplet_and_charge_conjugation
+distinct_positive_object: >-
+  A generic exact multiplet ledger can expand supplied isospin weights with
+  spectator multiplicity, derive grouped and flattened charge spectra, compose
+  C-REP-001 traces, invert a consistent target spectrum for its common Abelian
+  value, map generator coefficient and coupling normalization together, and
+  produce charge-conjugate rows without asserting physical completeness.
+actual_consumers:
+  - SM2_source_adjudication
+  - pending_SM3_anomaly_table_convention_boundary
+  - pending_SM4_running_table_provenance
+  - gauge_beta_test_table_deduplication_after_acceptance
+decision: distinct_API_and_claim_are_warranted_if_exact_oracles_and_consumers_close
+debt: []

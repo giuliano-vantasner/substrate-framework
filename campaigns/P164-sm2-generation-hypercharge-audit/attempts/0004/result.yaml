@@ -1,0 +1,24 @@
+attempt: 0004
+campaign: P164
+candidate: A_native_hash_pinned_replay_and_source_aware_selection
+status: passed
+started_at: '2026-08-10T19:42:00Z'
+finished_at: '2026-08-10T19:47:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py
+source_sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+compatibility:
+  mode: native
+  numpy_integration_surface: absent
+exit_code: 0
+terminal_tally: ALL_7_CHECKS_PASS
+observed:
+  lexical_check_sites: 7
+  runtime_check_executions: 7
+  assertion_nodes: 1
+scientific_verdict: >-
+  exact supplied-table arithmetic and the charge-coordinate map survive, while
+  the table derivation anomaly uniqueness conservation physical generation and
+  full gauge-equivalence readings do not follow
+selected_candidate: C
+proposed_claim: C-REP-003
+next_attempt: implement_the_generic_exact_multiplet_ledger_and_two_independent_oracles

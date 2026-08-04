@@ -1,0 +1,20 @@
+campaign: P164
+source_unit: SM2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py
+sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM2-dossier.md
+  sha256: 20ba861ddd8d9ccd89ddf9fc8d98e6ed8a824a99aa04d569d9e6756ba5facc08
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py
+exit_code: 0
+terminal_tally: ALL_7_CHECKS_PASS
+inventory:
+  lexical_check_sites: 7
+  runtime_check_executions: 7
+  assertion_nodes: 1
+compatibility:
+  mode: native
+  numpy_integration_surface: absent
+classification: source_regression_evidence_only_pending_predicate_adjudication
+debt: []

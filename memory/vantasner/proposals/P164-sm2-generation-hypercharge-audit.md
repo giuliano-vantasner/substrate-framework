@@ -2,7 +2,7 @@
 description: Audit SM2 and determine whether its supplied charge table supports a distinct exact multiplet theorem
 author: vantasner
 created: '2026-08-10T19:35:00Z'
-updated: '2026-08-10T19:35:00Z'
+updated: '2026-08-10T19:47:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -87,10 +87,13 @@ exposure is recorded and no fresh blinding is claimed.
 
 ## Proposed Claim Delta
 
-No claim identifier is assigned before the renewed source and nonduplication
-audit. C-REP-003 is currently unused and may be proposed only if Candidate C
-proves distinct from C-REP-001's supplied-state theorem and has a real consumer.
-Otherwise Candidate B must close SM2 without a redundant claim or wrapper.
+C-REP-003 is now proposed with dependencies C-REP-001 and C-REP-002. It will
+type supplied product multiplets, expand their isospin weights with spectator
+multiplicity, derive grouped and flattened charge spectra, compose the accepted
+finite-state trace ledger, invert consistent target spectra for one common
+Abelian value, map generator coefficient and coupling normalization together,
+and construct charge-conjugate rows. It will not call the supplied five-row
+specialization a derived or complete physical generation.
 
 ## Implementation and Oracle Plan
 
@@ -112,11 +115,13 @@ already exposed charge values.
 
 ## Attempts and Continuation
 
-The append-only ledger starts with a source-body-unopened freeze under honest
-prior exposure. If accepted composition is incomplete, the next attempt tests a
-generic multiplet ledger. If that is redundant, it is rejected and the
-campaign returns to Candidate B rather than creating a claim for familiar
-numbers alone.
+The append-only ledger preserves the source-body-unopened freeze, the failed
+unguarded whitespace/commit gate, its semantically identical normalized freeze,
+and native seven-predicate replay. Source-aware inspection selects Candidate C:
+existing APIs own flattened trace arithmetic and factor boundaries but not
+typed multiplet spectra, conjugation, or the coupled convention map. The next
+attempt implements C-REP-003 and must reject inconsistent target spectra,
+zero electric coefficient, and untyped physical-completeness claims.
 
 ## Debt Ledger
 
@@ -127,12 +132,12 @@ continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| SM2 predicate strength is unaudited | Reproduce and classify all seven checks and the assertion | open |
-| Supplied versus derived table entries are unresolved | Trace every charge, hypercharge, representation, and convention value to its source | open |
-| Candidate C novelty is unknown | Compare against C-REP-001, C-REP-002, charge traces, gauge beta, and actual consumers | open |
+| SM2 predicate strength is unaudited | Reproduce and classify all seven checks and the assertion | discharged |
+| Supplied versus derived table entries are unresolved | Trace every charge, hypercharge, representation, and convention value to its source | discharged |
+| Candidate C novelty is unknown | Compare against C-REP-001, C-REP-002, charge traces, gauge beta, and actual consumers | discharged |
 | Chirality and conjugation conventions are unresolved | Separate physical right-handed fields from left-handed conjugate rows | open |
-| Anomaly selection may be circular | Keep pending SM3 outside the dependency closure and test alternative tables | open |
-| Physical generation completeness is unsupported | Derive it from approved premises or exclude it from the accepted mapping | open |
+| Anomaly selection may be circular | Keep pending SM3 outside the dependency closure and test alternative tables | discharged by exclusion from C-REP-003 |
+| Physical generation completeness is unsupported | Derive it from approved premises or exclude it from the accepted mapping | discharged by exclusion from C-REP-003 |
 | Consumers and generated state are unresolved | Replay the semantic graph and complete terminal governance synchronization | open |
 
 ## Review and Promotion Plan

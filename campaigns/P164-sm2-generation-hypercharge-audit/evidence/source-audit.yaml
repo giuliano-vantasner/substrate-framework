@@ -1,0 +1,47 @@
+campaign: P164
+source_unit: SM2
+hard_coded_inputs:
+  isospin_weights: [1/2, -1/2, 0]
+  ps_hypercharges:
+    Q_L: 1/6
+    u_R: 2/3
+    d_R: -1/3
+    L: -1/2
+    e_R: -1
+    Higgs: 1/2
+  m1_hypercharge:
+    Higgs: 1
+  target_electric_charges: {up: 2/3, down: -1/3, neutrino: 0, electron: -1}
+  factor_dimensions:
+    Q_L: [3, 2]
+    u_R: [3, 1]
+    d_R: [3, 1]
+    L: [1, 2]
+    e_R: [1, 1]
+  declared_generation_count: 1
+source_dataflow:
+  Q_PS: T3_plus_Y
+  Q_M1: T3_plus_Y_M1_over_2
+  charge_checks: compare_arithmetic_from_hard_coded_hypercharges_to_hard_coded_targets
+  representation_check: compare_hard_coded_dimensions_and_charge_vectors_and_sum_to_15
+  matrix_check: diagonalize_already_diagonal_T3_plus_scalar_identity
+  convention_check: substitute_Y_M1_equals_2_times_Y_PS_in_the_charge_formula_only
+  guard: compare_one_fabricated_row_against_the_hard_coded_up_target
+not_constructed:
+  - derivation_of_representation_or_hypercharge_table
+  - anomaly_equations_or_uniqueness
+  - distinction_between_color_triplet_and_antitriplet
+  - physical_right_handed_versus_left_conjugate_table
+  - Yukawa_operator_with_conjugations_and_Higgs_or_conjugate_Higgs
+  - gauge_coupling_rescaling_under_hypercharge_normalization_change
+  - compact_U1_period_or_charge_lattice
+  - Hamiltonian_or_action_commuting_with_the_charge_operator
+  - generation_completeness_or_right_handed_neutrino_decision
+  - local_gauge_transformation_action_current_or_dynamics
+  - observed_input_provenance_or_substrate_dictionary
+headline_boundary: >-
+  SM2 derives exact charge arithmetic and a coordinate map from a fully supplied
+  five-row table. It does not derive the table, anomaly selection, physical
+  generation completeness, full gauge-convention equivalence, charge
+  conservation, or a Standard Model matter sector.
+debt: []

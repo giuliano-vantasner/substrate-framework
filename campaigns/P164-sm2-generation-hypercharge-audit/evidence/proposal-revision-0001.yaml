@@ -1,0 +1,29 @@
+campaign: P164
+revision: 1
+status: source_aware_frozen
+base_freeze_commit: 7a12258
+frozen_manifest_sha256: e36796fdf7372b0057b94b96e761632f91275d41a3e876d4cad32a2c48f3405d
+source_sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+selected_candidates: [A, C, F, G]
+claim_delta:
+  proposed: [C-REP-003]
+  dependencies: [C-REP-001, C-REP-002]
+  challenges: []
+  supersedes: []
+canonical_plan:
+  module: src/substrate_framework/multiplet_charges.py
+  tests: tests/test_multiplet_charges.py
+  claim_role: exact_supplied_product_multiplet_charge_spectrum_and_normalization_ledger
+source_disposition_plan:
+  SM2: qualified
+unpromoted_headlines:
+  - derived_physical_Standard_Model_generation
+  - anomaly_selected_unique_hypercharge_table
+  - unchecked_Yukawa_neutrality_sentence
+  - diagonality_implies_charge_conservation
+  - full_gauge_equivalence_without_coupling_and_global_normalization
+  - generation_completeness_and_no_right_handed_neutrino
+  - observed_charge_prediction_or_substrate_mechanism
+debt:
+  - implement_and_independently_rederive_C_REP_003
+  - replay_factor_table_anomaly_and_running_consumers_without_granting_pending_authority

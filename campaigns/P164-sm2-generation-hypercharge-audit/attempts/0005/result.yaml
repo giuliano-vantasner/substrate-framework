@@ -1,0 +1,17 @@
+attempt: 0005
+campaign: P164
+candidate: source_aware_checkpoint_gate
+status: failed
+started_at: '2026-08-10T19:48:00Z'
+finished_at: '2026-08-10T19:49:00Z'
+command: git diff --cached --check
+passed_before_failure:
+  yaml_parse: true
+  memory_contract: true
+failure:
+  layer: evidence_formatting
+  mechanism: six_new_YAML_records_had_trailing_blank_lines
+  scientific_failure: false
+  claim_delta_changed: false
+repair: remove_only_the_six_trailing_blank_lines_then_rerun_the_staged_gate
+next_attempt: source_aware_checkpoint_after_clean_staged_whitespace_gate

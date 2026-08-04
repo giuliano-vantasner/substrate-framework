@@ -1,0 +1,46 @@
+campaign: P164
+source_unit: SM2
+checks:
+  SM2.1:
+    implemented: exact_Q_equals_T3_plus_Y_arithmetic_for_supplied_quark_doublet
+    verdict: valid_conditional_arithmetic
+    ceiling: target_charges_and_Y_are_both_inputs
+  SM2.2:
+    implemented: exact_Q_equals_T3_plus_Y_arithmetic_for_supplied_lepton_doublet
+    verdict: valid_conditional_arithmetic
+    ceiling: target_charges_and_Y_are_both_inputs
+  SM2.3:
+    implemented: exact_singlet_Q_equals_Y_comparison_to_supplied_partner_targets
+    verdict: arithmetic_valid_interpretation_qualified
+    ceiling: >-
+      equality of supplied charges is checked, but Yukawa neutrality is not;
+      the physical operators require barred or conjugated fields and H versus
+      H_tilde with convention-specific signs
+  SM2.4:
+    implemented: supplied_factor_dimensions_charge_vectors_and_total_count
+    verdict: valid_supplied_table_ledger
+    ceiling: >-
+      the table is imported, dimension three does not distinguish triplet from
+      antitriplet, fifteen assumes no right-handed neutrino, and no completeness
+      theorem is present
+  SM2.5:
+    implemented: two_already_diagonal_charge_matrices
+    verdict: exact_spectrum_valid_interpretation_qualified
+    ceiling: >-
+      diagonality supplies eigenvalues but not conservation, an unbroken
+      dynamical symmetry, photon identity, or physical matter assignment
+  SM2.6:
+    implemented: charge_coordinate_identity_under_Y_M1_equals_2_Y_PS
+    verdict: exact_coordinate_map_valid_full_physics_equivalence_qualified
+    ceiling: >-
+      full gauge normalization also maps the Abelian coupling inversely and
+      requires separately typed global period and charge lattice
+  SM2.7:
+    implemented: one_wrong_quark_doublet_Y_counterexample
+    verdict: valid_local_inversion_guard
+    ceiling: >-
+      fixed T3 and a supplied target charge uniquely solve Y inside Q=T3+Y;
+      the guard does not select the target charge, representation, whole table,
+      anomaly freedom, or physical Standard Model
+terminal_tally_verdict: all_seven_assertions_execute_but_do_not_establish_the_source_headline
+debt: []

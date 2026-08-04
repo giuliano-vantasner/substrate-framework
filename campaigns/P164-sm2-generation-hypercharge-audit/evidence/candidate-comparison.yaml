@@ -1,0 +1,32 @@
+campaign: P164
+criteria_order:
+  - accepted_dependency_closure
+  - supplied_versus_derived_provenance
+  - typed_multiplet_structure
+  - convention_and_conjugation_covariance
+  - assumption_and_parameter_economy
+  - mutation_sensitivity
+  - API_novelty_and_consumer_reach
+candidates:
+  A:
+    decision: retained_as_source_regression_only
+    reason: seven_green_checks_do_not_derive_the_table_or_physical_headline
+  B:
+    decision: retained_as_dependency_base_but_incomplete
+    reason: accepted_claims_cover_flattened_arithmetic_and_factor_boundaries_but_not_typed_multiplet_spectra_or_conjugation
+  C:
+    decision: selected
+    reason: smallest_distinct_positive_object_with_exact_generic_reuse
+  D:
+    decision: rejected_for_P164
+    reason: pending_SM3_cannot_be_imported_and_anomaly_freedom_does_not_by_itself_fix_all_physical_assumptions
+  E:
+    decision: rejected
+    reason: observed_charges_labels_generation_completeness_and_physical_identity_are_inputs
+  F:
+    decision: selected_as_sensitivity_boundary
+    reason: rescaling_conjugation_missing_row_and_alternative_target_families_are_load_bearing
+  G:
+    decision: selected_as_governance_closure
+selection_uses_comparator_closeness: false
+debt: []
