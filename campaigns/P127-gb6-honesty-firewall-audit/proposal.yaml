@@ -70,4 +70,4 @@ comparators_blinded_until: >-
   GB6's body, exact matcher details, and runtime output remain unopened until the
   proposal, immutable copy, memory contract, and freeze gate pass. Queue and
   durable replay metadata already expose the advertised categories and tally.
-status: draft
+status: accepted

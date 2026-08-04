@@ -1,0 +1,21 @@
+campaign: P127
+attempt: 0002
+status: failed
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate-framework/.venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+expected:
+  source_sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a
+  source_checks: 29
+  claims_proposed: 0
+  compatibility_event: none
+result: >-
+  The hash-pinned source reproduced at 29 checks. The primary verifier then
+  failed after 19 passes because its no-implementation-import assertion also
+  searched GB6's required filename scope literals. Filename presence is not an
+  import edge; the AST import inventory itself was correct.
+compatibility_event: none
+failure_class: verifier_implementation
+next_attempt: Restrict the assertion to Import and ImportFrom edges, then rerun both routes.

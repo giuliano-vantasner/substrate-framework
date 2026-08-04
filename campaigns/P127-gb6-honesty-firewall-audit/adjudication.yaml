@@ -1,0 +1,55 @@
+campaign: P127
+title: GB6 finite firewall predicate AST import data-flow and physics-fixture audit
+source_baseline: substrate@6d1f4e0
+source_units: [GB6]
+base_release: v0.98.0
+release_after_adjudication: v0.98.0
+adjudicated_at: '2026-08-08T17:15:00Z'
+selected_candidates:
+  - {id: B, reason: Exact pinned scope matcher and exemption fidelity close the positive finite theorem.}
+  - {id: C, reason: AST identifiers imports and numeric check dependencies strengthen syntax and data-flow accounting.}
+  - {id: D, reason: Construction Unicode tag prose and equivalent-formula mutants close sensitivity and specificity ceilings.}
+  - {id: E, reason: Clamp and empirical countermodels reject uncapped and closed-data-gate overreads.}
+  - {id: F, reason: One-point seven-point exact-polynomial and floor counterexamples bound all four physics fixtures.}
+  - {id: G, reason: Individual dependency authority and WN7 replay close the actual graph without premise inheritance.}
+  - {id: H, reason: P120 and existing accepted mathematics subsume every reusable surface.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+reviewed_existing:
+  - {id: C-SCR-001, decision: unchanged_conditional_screening_algebra_and_nonrate_ceiling}
+  - {id: C-BRN-001, decision: unchanged_allocation_derivative_and_nonphysical_channel_ceiling}
+  - {id: C-SPN-002, decision: unchanged_spin_ladder_and_nonrate_ceiling}
+  - {id: C-COH-001, decision: unchanged_directional_coherence_and_normalization_ceiling}
+  - {id: C-RES-001, decision: unchanged_resolvent_and_nondynamics_ceiling}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  verifier_scope_failure: attempts/0002/result.yaml
+  verifier_inventory_failure: attempts/0003/result.yaml
+  exact_routes: attempts/0004/result.yaml
+  terminal_gate: attempts/0005/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_firewall_review.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  terminal_review: memory/vantasner/decisions/GB6-qualified-review.md
+source_disposition:
+  GB6: qualified
+validation_commands:
+  - PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate-framework/.venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate-framework/.venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

@@ -1,0 +1,21 @@
+campaign: P127
+source_unit: GB6
+authority_warning: Candidate source dependencies and green replay do not transfer accepted physical authority.
+dependencies:
+  CM1: {disposition: qualified, accepted_claims: [C-SCR-001], surviving_surface: exact conditional screened factor algebra, excluded_surface: physical screening shift rate magnitude material mechanism}
+  CM6: {disposition: qualified, accepted_claims: [], surviving_surface: finite scanner method and explicit semantic ceiling, excluded_surface: mechanism data gate uncapped magnitude and scientific validation}
+  GB1: {disposition: qualified, accepted_claims: [C-BRN-001], surviving_surface: exact nonnegative two-channel allocation and weighted specialization, excluded_surface: physical channels rates branching material yield}
+  GB2: {disposition: qualified, accepted_claims: [], surviving_surface: quotient remainder arithmetic, excluded_surface: constituent energies spectrum process and rate}
+  GB3: {disposition: qualified, accepted_claims: [], governed_surfaces: [C-SPN-002, C-COH-001], excluded_surface: wavelength-gate sufficiency physical rate and channel asymmetry}
+  GB4: {disposition: qualified, accepted_claims: [], governed_surface: C-BRN-001, excluded_surface: unrestricted coupled-weight monotonicity physical suppression and branching}
+  GB5: {disposition: qualified, accepted_claims: [], surviving_surface: declared peak identity only, excluded_surface: spectral measure physical peak and observation}
+  PN2: {disposition: qualified, accepted_claims: [], surviving_surface: quotient arithmetic, excluded_surface: physical subdivision equal quanta spectrum and rate}
+  PN3: {disposition: qualified, accepted_claims: [C-SPN-002], surviving_surface: complete symmetric-spin ladder coefficient, excluded_surface: physical rate without interaction state and environment premises}
+  PN4: {disposition: qualified, accepted_claims: [C-RES-001], surviving_surface: finite paired resolvent algebra, excluded_surface: dynamics probability material channel and yield}
+cycles:
+  - [CM6, GB6, WN7]
+  - [GB1, GB4, GB6]
+cycle_grants_authority: false
+accepted_firewall_claims: []
+verdict: Existing exact claims govern their own narrow mathematics; no dependency establishes GB6's semantic or physical firewall headline.
+debt: []

@@ -1,0 +1,13 @@
+campaign: P127
+candidates:
+  A: {verdict: retained_as_source_evidence, reason: Native GB6 reproduces twenty-nine predicates but its green tally grants no semantic authority.}
+  B: {verdict: selected, reason: Exact pinned scope tokens exemption and empty matcher results define the strongest positive theorem.}
+  C: {verdict: selected, reason: Fresh AST imports identifiers and numeric check dependencies provide stronger but still syntactic evidence.}
+  D: {verdict: selected, reason: Construction Unicode tag clamp empirical and prose mutants bound sensitivity and specificity.}
+  E: {verdict: selected, reason: Bounded alternatives and data-flow counterexamples reject uncapped and closed-gate overreads.}
+  F: {verdict: selected, reason: One-point seven-point exact-polynomial and floor-point counterexamples bound all four local fixtures.}
+  G: {verdict: selected, reason: Individual dependency authority and WN7 replay close the actual graph without premise inheritance.}
+  H: {verdict: selected, reason: P120 and existing claims subsume reusable surfaces so no claim API or release survives.}
+selection: [B, C, D, E, F, G, H]
+comparators_used_for_selection: []
+debt: []

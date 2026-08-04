@@ -1,0 +1,18 @@
+campaign: P127
+attempt: 0005
+status: failed
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected: {accepted_claims: 133, source_units: 218, pending_units: 93, pytest_tests: 1090, memory_files: 517, debt: []}
+result: >-
+  Terminal preflight stopped before verifier execution or queue generation.
+  PyYAML rejected the flow-style barrier exemption scalar because its bracketed
+  marker was not quoted as a whole value.
+compatibility_event: none
+failure_class: evidence_representation
+next_attempt: Quote the exemption value, rerun targeted routes, then run the integrated gate once.

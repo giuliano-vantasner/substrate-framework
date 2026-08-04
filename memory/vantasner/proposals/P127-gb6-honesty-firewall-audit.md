@@ -2,11 +2,11 @@
 description: Audit GB6's finite honesty firewall against AST, import, data-flow, and physics-object semantics
 author: vantasner
 created: '2026-08-08T16:15:00Z'
-updated: '2026-08-08T16:15:00Z'
+updated: '2026-08-08T17:15:00Z'
 tags: [substrate-framework, campaign-proposal, honesty-firewall, migration-GB6]
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P127 GB6 Honesty Firewall Audit
 
@@ -120,6 +120,15 @@ integrated workflow closes the boundary; later record edits get targeted checks.
 P127 closes only when the exact matcher, semantic ceilings, every predicate and
 fake, dependencies, consumer, nonduplication, synchronized queue, integrated
 workflow, and empty debt agree. A pass tally is not completion.
+
+## Outcome
+
+All twenty-nine source predicates, forty-nine primary checks, thirty-one fresh
+independent checks, and WN7's fifty-nine checks reproduce. The surviving result
+is finite pinned-byte evidence only. Construction, Unicode, tag, clamp,
+data-flow, one-point, off-band, alternate-superlinear, and floor-point probes
+reject the semantic and physical headline. GB6 is terminally qualified with no
+claim, API, release, numerical integration, or compatibility event.
 
 ## Cross-References
 

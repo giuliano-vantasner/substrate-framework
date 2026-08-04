@@ -1,0 +1,35 @@
+campaign: P127
+source_unit: GB6
+static_call_sites: 16
+runtime_predicate_count: 29
+predicates:
+  - {index: 1, label: GB1_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Holds on pinned bytes under four substrings and a line-wide exemption; it is not a mechanism audit.}
+  - {index: 2, label: GB2_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Construction aliases imports and equivalent formulas remain outside the matcher.}
+  - {index: 3, label: GB3_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Executable AST identifiers also exclude the four names but semantic completeness does not follow.}
+  - {index: 4, label: GB4_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: The result holds only for the declared spelling normalization tag and file bytes.}
+  - {index: 5, label: GB5_barrier_substring_absence, verdict: exact_finite_lexical_only, reason: Comments can collide while construction and imported helpers evade.}
+  - {index: 6, label: GB1_phase30_number_absence, verdict: exact_three_string_result_not_import_closure, reason: Numeric substrings are not Python imports or transitive dependencies.}
+  - {index: 7, label: GB2_phase30_number_absence, verdict: exact_three_string_result_not_import_closure, reason: Other constants including a 24 MeV conversion reach checks.}
+  - {index: 8, label: GB3_phase30_number_absence, verdict: exact_three_string_result_not_import_closure, reason: Wavelength coherence and energy magnitudes enter predicates under other spellings.}
+  - {index: 9, label: GB4_phase30_number_absence, verdict: exact_three_string_result_not_import_closure, reason: The scan says nothing about imported helpers configuration or fitted free parameters.}
+  - {index: 10, label: GB5_phase30_number_absence, verdict: exact_three_string_result_not_import_closure, reason: The literal set is not a dependency graph or premise inventory.}
+  - {index: 11, label: GB1_empirical_name_absence, verdict: exact_three_name_result_not_dataflow, reason: Numeric and imported comparators evade while comments can collide.}
+  - {index: 12, label: GB2_empirical_name_absence, verdict: exact_three_name_result_not_dataflow, reason: No taint or pass-condition dependency analysis is performed.}
+  - {index: 13, label: GB3_empirical_name_absence, verdict: exact_three_name_result_not_dataflow, reason: Named physical magnitudes feed checks despite absence of the selected names.}
+  - {index: 14, label: GB4_empirical_name_absence, verdict: exact_three_name_result_not_dataflow, reason: Free symbolic inputs can still be chosen from observations.}
+  - {index: 15, label: GB5_empirical_name_absence, verdict: exact_three_name_result_not_dataflow, reason: Empirical tuples themselves enter type checks and no full data-flow closure follows.}
+  - {index: 16, label: GB4_two_spelling_clamp_absence, verdict: exact_matcher_result_uncapped_inference_rejected, reason: Clip condition helper table and bounded nonlinear maps evade while capacity text collides.}
+  - {index: 17, label: GB5_two_spelling_clamp_absence, verdict: exact_matcher_result_uncapped_inference_rejected, reason: Missing selected spellings neither proves an unbounded quantity nor validates a magnitude.}
+  - {index: 18, label: true_branching_sampled_derivative, verdict: local_sample_with_separate_exact_support, reason: The declared formula is globally decreasing through C-BRN-001 but this helper tests one point and accepts a function that rises elsewhere.}
+  - {index: 19, label: symmetric_N_fake_rejection, verdict: exact_selected_fixture_only, reason: The N-independent fixture fails at the sample; other globally wrong candidates can pass.}
+  - {index: 20, label: floor_count_seven_point_pass, verdict: finite_sample_regression, reason: The exact floor passes seven points but a lookup correct only at those points also passes.}
+  - {index: 21, label: constant_count_rejection, verdict: exact_selected_fixture_only, reason: One constant function fails without proving the guard characterizes quotient behavior off band.}
+  - {index: 22, label: linear_rate_identity, verdict: exact_reembedded_identity, reason: The expression is locally assigned to hbar squared times N rather than imported from GB3.}
+  - {index: 23, label: N_squared_fake_rejection, verdict: exact_selected_polynomial_fixture, reason: The conjunct explicitly requires the candidate to equal N squared and does not test other superlinear laws.}
+  - {index: 24, label: single_emitter_floor, verdict: exact_point_identity_only, reason: Substitution gives one but infinitely many distinct global expressions share that point.}
+  - {index: 25, label: barrier_self_test, verdict: exact_selected_literal_nonvacuity, reason: One untagged U_e spelling is detected; completeness does not follow.}
+  - {index: 26, label: nuclear_number_self_test, verdict: exact_selected_literal_nonvacuity, reason: One listed number is detected and Python imports remain outside the oracle.}
+  - {index: 27, label: empirical_name_self_test, verdict: exact_selected_literal_nonvacuity, reason: One chosen identifier is detected but numeric and imported targets evade.}
+  - {index: 28, label: uppercase_tag_exemption, verdict: exact_behavior_with_smuggling_risk, reason: The marker exempts the whole line regardless of comment or citation context.}
+  - {index: 29, label: reported_literal_identity, verdict: exact_internal_regression, reason: Rechecks the first match label and adds no independent semantic oracle.}
+summary: {source_predicates_reproduced: 29, scientific_or_semantic_claims_promoted: 0, terminal_disposition: qualified}

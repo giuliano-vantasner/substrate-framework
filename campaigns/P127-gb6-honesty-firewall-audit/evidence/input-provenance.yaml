@@ -1,0 +1,30 @@
+campaign: P127
+source_unit: GB6
+source_scope:
+  root: /home/dan/substrate/merged-framework/bridges/phase-32
+  decoding: source uses platform-default text decoding; campaign pins UTF-8-decodable bytes
+  source_hash_policy: source has none; campaign independently pins GB1-GB6 SHA-256 values
+  files: [GB1, GB2, GB3, GB4, GB5]
+finite_detectors:
+  barrier: {tokens: [u_e, gamow, screening_enhancement, gamow_energy_kev], normalization: lowercase, exemption: "exact uppercase line-wide [IMPORT]"}
+  phase30_numbers: {tokens: ['0.0362', '90.35', '0.999757'], meaning: selected string absence only}
+  empirical_names: {tokens: [excess_heat_watts, cop_measured, transmutation_yield], meaning: selected identifier-substring absence only}
+  clamp: {files: [GB4, GB5], forms: ['min(...cap-or-ceil...)', uppercase_CEILING], comment_handling: split_at_first_hash_character}
+ast_import_inventory:
+  GB1_GB5_union: [math, sympy, sys]
+  repository_local_modules: []
+  qualification: Direct AST imports are closed for pinned files; configuration dynamic loads and semantic equivalents are not.
+numeric_check_dependencies:
+  GB2: [24.0, 1000000.0]
+  GB3: [1239.84, 3000000.0, 100.0, 10000.0]
+  GB5: [1.0, 2.0, 23.0, 27.0]
+  interpretation: Selected empirical-name absence is not absence of numeric magnitudes from pass-condition dependency closure.
+physics_fixture_inputs:
+  derivative_sample: {w: 2, N: 3, rho: 1/4, scope: one point}
+  count_total_eV: 24000000.0
+  count_band_eV: [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0]
+  N_squared_sample: {N: 4, candidate_identity: hbar_squared_times_N_squared}
+  floor_sample: {N: 1, relation: w_equals_w1}
+comparators_used_for_selection: []
+numerical_integration: {required: false, np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0, compatibility_event: none}
+debt: []

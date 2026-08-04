@@ -1,0 +1,19 @@
+campaign: P127
+attempt: 0003
+status: failed
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+expected:
+  primary_ast_import_oracle: actual_import_edges_only
+  claims_proposed: 0
+  compatibility_event: none
+result: >-
+  The import-edge repair passed. The primary verifier then failed after 20
+  passes because its top-level function inventory omitted GB6's local check
+  helper. The source contains no GB implementation call; the expected inventory
+  was incomplete.
+compatibility_event: none
+failure_class: verifier_implementation
+next_attempt: Add the local check helper to the expected function inventory and rerun.

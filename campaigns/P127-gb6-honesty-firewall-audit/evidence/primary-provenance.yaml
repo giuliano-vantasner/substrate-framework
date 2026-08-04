@@ -1,0 +1,7 @@
+campaign: P127
+source: {path: merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py, sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a, git_blob: 15046e8ecb8682d0cb3001f41217f675923ead0e}
+freeze: {path: campaigns/P127-gb6-honesty-firewall-audit/evidence/frozen-proposal.yaml, sha256: 28ca23f3f2184f5dc5e68859c4006a85b0f7f765689f4c81c864775ecd5f35c4}
+primary: {path: campaigns/P127-gb6-honesty-firewall-audit/verify.py, sha256: 64c244049777e3d7f8bb00576d8310e176d05ccda66e670d4dd03d637aa2dcd6, route: exact matcher AST import numeric dependency mutation physics fixtures prior authority consumer and nonduplication, tally: 49}
+independent: {path: campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py, sha256: 003e2d5bb9ccad5ca4af1e379784179266db1d7f0c3bc5243879beead21433a9, route: fresh regex AST condition references bounded countermodels and independent symbolic fixture audit, tally: 31}
+independence: The independent route imports neither the primary verifier nor a shared scanner implementation.
+compatibility_event: none

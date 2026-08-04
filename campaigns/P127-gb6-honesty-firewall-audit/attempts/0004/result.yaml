@@ -1,0 +1,18 @@
+campaign: P127
+attempt: 0004
+status: verified
+candidates: [A, B, C, D, E, F, G, H]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+expected:
+  primary_function_inventory: [check, read_src, scan_violations, suppression_strengthens, passes_kinematic_count]
+  claims_proposed: 0
+  compatibility_event: none
+result: >-
+  The source reproduces 29 checks, the primary route passes 49 checks, the
+  independent route passes 31 checks, and the sole direct consumer WN7 passes
+  59 checks. Exact finite results and every semantic ceiling agree; no claim,
+  API, release, numerical integration, or compatibility event survives.
+compatibility_event: none
+next_attempt: Synchronize the terminal disposition and run one integrated gate.

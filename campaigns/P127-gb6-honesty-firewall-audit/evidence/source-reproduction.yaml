@@ -1,0 +1,20 @@
+campaign: P127
+source_unit: GB6
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+sha256: edcfc0fafad48dbfc88ebf97613d45c1b6cf7e85b95548ae4006b373a2cfc49a
+git_blob: 15046e8ecb8682d0cb3001f41217f675923ead0e
+bytes: 12771
+command: PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate-framework/.venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-32/bridge_GB6_honesty_firewall_guard.py
+exit_code: 0
+terminal_tally: ALL 29 CHECKS PASS
+static_check_calls: 16
+literal_check_calls: 12
+dynamic_check_calls: 4
+runtime_predicates: 29
+compatibility_preflight: {np_trapz: 0, np_trapezoid: 0, trapezoid_integral: 0, event: none}
+interpretation: >-
+  Native reproduction validates the twenty-nine executed predicates only. It
+  does not turn a finite substring scan, two-spelling clamp detector, selected
+  numeric strings, or four local fixtures into import-graph, data-flow,
+  semantic-completeness, unboundedness, or physical-mechanism proof.

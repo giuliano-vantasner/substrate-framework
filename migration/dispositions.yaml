@@ -2312,6 +2312,51 @@ units:
       scientific route. Three consumer hashes retain P123's 101-check replay.
       No claim, API, release, sampled integration, or NumPy compatibility event
       is added.
+  GB6:
+    disposition: qualified
+    accepted_claims: []
+    qualification: >-
+      GB6's twenty-nine predicates reproduce. Its positive result is limited
+      to four barrier substrings, three Phase-30 number strings, three empirical
+      identifier substrings, two clamp spellings, four selected local physics
+      fixtures, and five self-tests on five pinned files under an exact
+      case-sensitive line-wide exemption. Construction, aliases, getattr,
+      Unicode-equivalent names, equivalent formulas, imported helpers,
+      configuration, and dynamic loads evade the substring lists, while
+      comments, docstrings, negation, and benign identifiers collide. The
+      three numbers are not an import graph: GB1-GB5 import sys, math, and
+      sympy. The three empirical names are not data-flow closure: GB2, GB3,
+      and GB5 numeric magnitudes reach checks, and numeric or imported
+      comparators evade. Conditional, clip, helper, table, and nonlinear
+      bounded maps evade the clamp detector. GB6 reads default-decoded unhashed
+      files, excludes itself, imports no GB implementation, and duplicates the
+      physics fixtures locally. A nonmonotone expression passes its one-point
+      derivative helper, a seven-entry lookup passes its count guard, a cubic
+      law lies outside its exact N-squared predicate, and infinitely many
+      expressions share its single floor point. C-BRN-001, C-SPN-002, and
+      C-COH-001 retain their narrow mathematical ceilings. No semantic
+      completeness, zero-import theorem, closed empirical gate, uncapped
+      magnitude, physical channel, rate, spectrum, mechanism, enhancement,
+      yield, heat, observation, or data independence is accepted.
+    evidence:
+      - campaigns/P127-gb6-honesty-firewall-audit/reviews/source_adjudication.md
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/source-reproduction.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/source-audit.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/check-adjudication.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/input-provenance.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/dependency-audit.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/consumer-audit.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/candidate-comparison.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/evidence/primary-provenance.yaml
+      - campaigns/P127-gb6-honesty-firewall-audit/verify.py
+      - campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+      - memory/vantasner/decisions/GB6-qualified-review.md
+    note: >-
+      P127 closes 49 primary and 31 independent checks after two preserved
+      verifier-inventory failures. WN7, the sole direct consumer, reproduces 59
+      checks. P120 subsumes the reusable scanner ceiling, so no claim, API,
+      release, numerical integration, or NumPy compatibility event is added.
   MR1:
     disposition: duplicate_evidence
     accepted_claims:

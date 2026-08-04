@@ -1,0 +1,18 @@
+campaign: P127
+attempt: 0006
+status: verified
+candidates: [B, C, D, E, F, G, H]
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P127-gb6-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - scripts/validate.sh
+  - git diff --check
+expected: {accepted_claims: 133, source_units: 218, pending_units: 93, pytest_tests: 1090, memory_files: 517, debt: []}
+result: >-
+  Primary 49 and independent 31 checks pass on pinned evidence. Repository
+  validation reports 133 accepted claims, 218 source units, and 93 pending;
+  all 517 memory records, the physics skill, and all 1090 tests pass. The debt
+  ledger is empty and no compatibility event occurred.
+compatibility_event: none
+next_attempt: Commit the P127 terminal qualification and checkpoint the parent migration effort.
