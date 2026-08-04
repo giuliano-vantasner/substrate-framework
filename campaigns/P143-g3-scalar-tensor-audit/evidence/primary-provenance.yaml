@@ -1,0 +1,30 @@
+campaign: P143
+source_unit: G3
+base_release: v0.109.0
+base_commit: 61ef5d9
+scientific_base_commit: 63443d2
+frozen_proposal_commit: 3a4602f
+claim_delta: C-STG-001
+primary_verifier: campaigns/P143-g3-scalar-tensor-audit/verify.py
+primary_checks: 29
+primary_route:
+  - hash-pinned source dossier frozen contract and native compatibility AST
+  - source kappa dataflow independent-profile one-point-fit and headline audit
+  - exact source coupling tensor residual scalar residual optical-ratio and Delta counterexamples
+  - package canonical stress exact massless FLRW equations curvature limits and mutations
+independent_review: campaigns/P143-g3-scalar-tensor-audit/reviews/independent_einstein_scalar_review.py
+independent_checks: 15
+independent_route:
+  - fresh four-dimensional Christoffel Riemann Ricci scalar and Einstein reconstruction without importing einstein_scalar
+  - exact contracted Bianchi identity and direct scalar stress
+  - componentwise Einstein scalar continuity trace Ricci and Kretschmann closure
+  - wrong exponent ghost extensive-energy and G3 source-witness countermodels
+source_graph: campaigns/P143-g3-scalar-tensor-audit/reviews/replay_source_graph.py
+source_graph_checks: 35
+source_graph_nodes: 14
+source_graph_predicates: 135
+focused_tests: 15
+exact_precision: SymPy exact integers rationals exponentials and declared real or positive symbols
+numerical_integration: none
+compatibility_event: none_in_G3_three_inherited_alias_only_graph_shapes
+debt: []

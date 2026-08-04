@@ -2,7 +2,7 @@
 description: Audit G3's canonical scalar-tensor breather-sourcing claim
 author: vantasner
 created: '2026-08-09T15:40:00Z'
-updated: '2026-08-09T15:40:00Z'
+updated: '2026-08-09T16:50:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -11,7 +11,7 @@ tags:
 - migration-G3
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P143 G3 Scalar-Tensor Audit
 
@@ -128,13 +128,13 @@ consumers, novelty, and generated state until every item is discharged.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| G3 executable and exact checks are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all eleven predicates | open |
-| Action variation and signs may be asserted | Exact boundary-aware metric and scalar Euler equations with mutations | open |
-| Nonzero stress may substitute for a solution | Every Einstein and scalar component, constraints, conservation, and complete data | open |
-| One-plus-one breather embedding may be infinite or inconsistent | Explicit transverse prescription, finite-energy ceiling, and source compatibility | open |
-| Numeric evidence may be target-regression or under-specified | Solver status, refinement, independent limit, mutations, and comparator audit | open |
-| Dependencies consumers and novelty are incomplete | G2 G4, twelve reverse consumers, cycles, graph, and nonduplication audit | open |
-| Registry disposition release docs queue and memory are unsynchronized | Individual review and one governed terminal transaction | open |
+| G3 executable and exact checks are unopened | Hash, compatibility preflight, replay, AST/data-flow audit, and all eleven predicates | discharged |
+| Action variation and signs may be asserted | Exact boundary-aware metric and scalar Euler equations with mutations | discharged |
+| Nonzero stress may substitute for a solution | Every Einstein and scalar component, constraints, conservation, and complete data | discharged |
+| One-plus-one breather embedding may be infinite or inconsistent | Explicit transverse prescription, finite-energy ceiling, and source compatibility | discharged |
+| Numeric evidence may be target-regression or under-specified | Solver status, refinement, independent limit, mutations, and comparator audit | discharged |
+| Dependencies consumers and novelty are incomplete | G2 G4, twelve reverse consumers, cycles, graph, and nonduplication audit | discharged |
+| Registry disposition release docs queue and memory are unsynchronized | Individual review and one governed terminal transaction | discharged |
 
 ## Review and Promotion Plan
 

@@ -1,0 +1,24 @@
+campaign: P143
+source_unit: G3
+declared_dependencies:
+  - {source_unit: G2, disposition: qualified, accepted_claims: [C-GOR-001], use: effective_geometry_ceiling_only_not_in_claim_closure}
+  - {source_unit: G4, disposition: pending_adjudication, accepted_claims: [], use: rejected_no_authority}
+accepted_dependency_closure:
+  - {claim: C-STG-001, dependencies: []}
+nearby_accepted_ceiling_claims:
+  - {claim: C-GOR-001, exclusion: effective_Gordon_wave_geometry_not_an_Einstein_scalar_action_or_solution}
+  - {claim: C-SG-001, exclusion: normalized_one_plus_one_equation_not_a_four_dimensional_gravitational_source}
+  - {claim: C-SG-002, exclusion: constant_boosted_breather_not_a_finite_transverse_Einstein_scalar_solution}
+  - {claim: C-SG-008, exclusion: one_plus_one_energy_not_a_three_plus_one_source_energy}
+  - {claim: C-SG-012, exclusion: one_plus_one_stress_not_a_complete_four_dimensional_stress_embedding}
+  - {claim: C-RAD-001, exclusion: separate_one_dimensional_retarded_scalar_action_not_Einstein_gravity}
+excluded_imports:
+  - G3's fitted negative one-point ratio
+  - G2's rejected physical source and gravity narrative
+  - pending G4 radiation reaction
+  - note-13 and note-15 coupling or dilaton identifications as accepted authority
+circularity: >-
+  G3 declares G4 while G4 directly consumes G3. C-STG-001 closes instead from
+  an explicitly declared standard action and fresh exact tensor calculus. It
+  imports neither source unit, so the G3-G4 cycle grants no authority.
+debt: []

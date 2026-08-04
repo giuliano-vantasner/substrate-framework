@@ -4416,3 +4416,46 @@ units:
       passes all six predicates and has no NumPy integration compatibility
       event. Eight inherited immutable graph shapes remain alias-only through
       np.trapezoid; mutable code has no executable legacy integration access.
+  G3:
+    disposition: qualified
+    accepted_claims:
+      - C-STG-001
+    qualification: >-
+      G3's exact canonical scalar stress and trace, static scalar Euler
+      equation, on-shell conservation factorization, joint constant-field
+      zero-potential vacuum, and wrong-sign kinetic guard survive under explicit
+      premises. C-STG-001 supplies the complete positive object through a
+      separately declared mostly-plus Einstein-Hilbert plus canonical massless
+      scalar action and exact nonvacuum flat-FLRW solution. G3 itself declares a
+      positive kappa but never loads it, chooses its static metric and scalar
+      profiles independently, fits only G_tt/T_tt at x=1, obtains an exact
+      negative ratio, leaves xx yy zz Einstein residuals nonzero, and puts the
+      scalar off shell. Its optical ratio diverges rather than tending to the
+      zero coupling named by its prose, and its imported nonminimal Delta is
+      neither a canonical stress match nor a vacuum classifier. No finite
+      transverse breather embedding, localized coupled solution, physical
+      coupling, gravity, observation, material mechanism, or substrate
+      realization is accepted.
+    evidence:
+      - campaigns/P143-g3-scalar-tensor-audit/reviews/source_adjudication.md
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/source-reproduction.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/source-audit.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/check-adjudication.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/input-provenance.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/dependency-audit.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/consumer-audit.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/candidate-comparison.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/primary-provenance.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/evidence/literature-audit.yaml
+      - campaigns/P143-g3-scalar-tensor-audit/verify.py
+      - campaigns/P143-g3-scalar-tensor-audit/reviews/independent_einstein_scalar_review.py
+      - campaigns/P143-g3-scalar-tensor-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/C-STG-001-review.md
+      - memory/vantasner/decisions/G3-qualified-review.md
+    note: >-
+      P143 promotes C-STG-001 through twenty-nine primary, fifteen independent,
+      fifteen focused-test, and thirty-five frozen-graph checks. Native G3
+      passes all eleven predicates and has no NumPy integration event. G1, G4,
+      and NC4 retain immutable alias-only compatibility through np.trapezoid;
+      mutable code has no executable legacy integration access.

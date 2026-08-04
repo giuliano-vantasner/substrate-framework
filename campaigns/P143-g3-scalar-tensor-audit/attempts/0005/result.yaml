@@ -1,0 +1,28 @@
+attempt: 0005
+campaign: P143
+candidate: B_C_E_exact_action_solution_and_countermodels
+status: passed
+started_at: '2026-08-09T16:13:00Z'
+finished_at: '2026-08-09T16:20:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P143-g3-scalar-tensor-audit/verify.py --source-file <G3>
+  --dossier-file <G3-dossier> && PYTHONPATH=src .venv/bin/python
+  campaigns/P143-g3-scalar-tensor-audit/reviews/independent_einstein_scalar_review.py
+result:
+  primary_checks: 29
+  independent_checks: 15
+  focused_tests: 15
+  exact_nonvacuum_solution: massless_scalar_flat_flrw_on_t_greater_than_zero
+  source_headline: rejected
+scientific_failure: false
+conclusion: >-
+  The declared canonical Einstein scalar action fixes the healthy stress and
+  admits an exact nonvacuum flat-FLRW solution that closes every Einstein and
+  scalar equation. G3's independently chosen static metric and scalar bump do
+  not form such a solution: their fitted coupling is negative, other tensor
+  components fail, and the scalar is off shell. No refractive, breather,
+  localized-source, physical-coupling, or substrate identification follows.
+next_attempt: >-
+  Freeze and replay G3's complete dependency and reverse-consumer graph, then
+  close claim novelty, provenance, governance, release, and generated state.

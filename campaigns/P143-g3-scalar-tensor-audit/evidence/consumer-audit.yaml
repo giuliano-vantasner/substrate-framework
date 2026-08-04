@@ -1,0 +1,41 @@
+campaign: P143
+source_unit: G3
+direct_reverse_consumers:
+  - {source_unit: T1E, disposition: qualified, accepted_claims: [C-SG-002, C-SG-004, C-SG-005], effect: unchanged_independent_closure}
+  - {source_unit: NC4, disposition: qualified, accepted_claims: [C-SG-001, C-SG-005, C-SG-011, C-SG-013], effect: unchanged_independent_closure}
+  - {source_unit: WZ4, disposition: qualified, accepted_claims: [C-EFT-001], effect: unchanged_independent_closure}
+  - {source_unit: OD, disposition: qualified, accepted_claims: [C-IDN-001, C-GLS-001], effect: unchanged_independent_closure}
+  - {source_unit: EM3, disposition: qualified, accepted_claims: [C-GAU-001, C-KRN-001, C-MAX-001], effect: unchanged_independent_closure}
+  - {source_unit: G1, disposition: qualified, accepted_claims: [C-RAD-001, C-SG-001, C-SG-002, C-SG-008, C-SG-012], effect: unchanged_independent_closure}
+  - {source_unit: G4, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: G5, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: QCD1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: SM1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: SC1, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+  - {source_unit: SC2, disposition: pending_adjudication, accepted_claims: [], effect: no_authority_granted}
+source_graph:
+  nodes: 14
+  dependency_nodes: [G2, G4]
+  reverse_consumers: 12
+  overlapping_dependency_consumer: G4
+  unique_static_predicates_inventoried: 135
+  graph_integrity_checks: 35
+  terminal_tally: ALL_35_CHECKS_PASS_P143-G3-SOURCE-GRAPH
+  evidence: reviews/replay_source_graph.py
+canonical_replay:
+  focused_tests: 15
+  result: passed
+  surfaces: [einstein_scalar]
+compatibility_preflight:
+  primary_G3: native_no_integration_event
+  alias_only_if_executed: [G1, G4, NC4]
+  alias_backing: np.trapezoid
+  mutable_legacy_accesses: 0
+  scientific_failures: 0
+disposition_effect: >-
+  C-STG-001 supplies a standard exact Einstein scalar theorem and cosmological
+  solution. It does not retroactively validate any consumer's breather,
+  refractive, radiation-reaction, gauge, gravity, Standard Model, or substrate
+  interpretation. Six qualified consumers retain independent accepted closure
+  and six pending consumers, including G4, gain no authority.
+debt: []

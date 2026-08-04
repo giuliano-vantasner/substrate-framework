@@ -1,0 +1,33 @@
+attempt: 0007
+campaign: P143
+candidate: F_integrated_promotion_gate
+status: passed
+started_at: '2026-08-09T16:45:00Z'
+finished_at: '2026-08-09T16:50:00Z'
+commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P143-g3-scalar-tensor-audit/verify.py
+    --source-file /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G3_horndeski_scalar_tensor.py
+    --dossier-file /home/dan/substrate/merged-framework/bridges/phase-5/dossiers/G3-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P143-g3-scalar-tensor-audit/reviews/independent_einstein_scalar_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P143-g3-scalar-tensor-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --check
+result:
+  primary_checks: 29
+  independent_checks: 15
+  focused_tests: 15
+  source_graph_checks: 35
+  source_graph_nodes: 14
+  source_graph_predicates: 135
+  repository_tests: 1239
+  memory_files: 583
+  repository: WORKFLOW_VALID_145_claims_145_accepted_0_proposals
+  migration_queue: 218_units_77_pending_0_partial
+  physics_skill: valid
+  whitespace: passed
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+scientific_failure: false
+next_attempt: >-
+  Synchronize this finalized attempt, proposal status, adjudication evidence,
+  and parent effort, then run record-sensitive checks only before committing.

@@ -1,0 +1,22 @@
+attempt: 0004
+campaign: P143
+candidate: C_independent_exact_solution_review
+status: technical_failure
+started_at: '2026-08-09T16:10:00Z'
+finished_at: '2026-08-09T16:12:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P143-g3-scalar-tensor-audit/reviews/independent_einstein_scalar_review.py
+result:
+  checks_passed_before_failure: 12
+  failed_check: ghost_mutation_fails_the_direct_Einstein_equation
+scientific_failure: false
+failure: >-
+  The independently reconstructed Einstein scalar solution and curvature passed,
+  but the time coordinate had only a real assumption. SymPy therefore could not
+  prove the mutated ghost density strictly negative even though its exact value
+  was minus one over three kappa time squared.
+diagnosis: verifier_domain_assumption_did_not_encode_the_declared_positive_time_domain
+next_attempt: >-
+  Declare the independent review time coordinate positive, preserving the stated
+  t greater than zero solution domain, and rerun the same unweakened sign guard.

@@ -1,0 +1,24 @@
+attempt: 0003
+campaign: P143
+candidate: D_source_compatibility
+status: source_witness_rejected
+started_at: '2026-08-09T15:51:00Z'
+finished_at: '2026-08-09T15:53:00Z'
+command: exact_SymPy_component_reconstruction_at_G3_free_metric_witness_x_equals_one
+result:
+  inferred_kappa: negative
+  tt_residual: zero_by_construction
+  xx_residual: 2_over_1_plus_5e
+  yy_residual: minus_1_over_5e
+  zz_residual: minus_1_over_5e
+  massless_scalar_residual: nonzero
+scientific_failure: true
+failure: >-
+  The source's inferred G_tt/T_tt coupling has the wrong sign relative to its
+  declared positive kappa. Even allowing that sign, the xx yy and zz Einstein
+  residuals are nonzero and the declared V=0 scalar profile is off shell.
+diagnosis: pointwise_single_component_fit_is_not_an_Einstein_scalar_solution
+next_attempt: >-
+  Derive a dependency-free exact massless homogeneous flat-FLRW solution that
+  closes both Einstein equations, the scalar equation, continuity, curvature,
+  limits, and kinetic-sign mutations from the declared canonical action.

@@ -191,6 +191,12 @@ from .gordon_metric import (
     gordon_metric_mostly_plus,
     transverse_profile_einstein,
 )
+from .einstein_scalar import (
+    MasslessScalarFlatFLRW,
+    ScalarStressLedger,
+    massless_scalar_flat_flrw,
+    minimally_coupled_scalar_stress,
+)
 from .retarded_wave import (
     RetardedPointSourceRadiation,
     StaticPointSourceCountermodel,
@@ -942,6 +948,7 @@ __all__ = [
     "LinearSystemDiagnostics",
     "LinearSymmetryHessianEvidence",
     "MaxwellEulerLagrange",
+    "MasslessScalarFlatFLRW",
     "MassiveTripletDipoleExtrema",
     "MassiveTripletDipoleInteraction",
     "StaticMaxwellPointSource",
@@ -963,6 +970,7 @@ __all__ = [
     "RefinementEvidence",
     "ReflectedEscapeEnsemble",
     "SolverTolerances",
+    "ScalarStressLedger",
     "SourceAudit",
     "SourceMatch",
     "SymmetricPairLossLedger",
@@ -1234,6 +1242,8 @@ __all__ = [
     "normalized_gravity_source_coupling",
     "normalized_sqrt_potential_average",
     "normalized_hyperbolic_sine_gordon_residual",
+    "massless_scalar_flat_flrw",
+    "minimally_coupled_scalar_stress",
     "orthogonal_generators",
     "quantized_flux",
     "quadratic_capillary_identifiability_ledger",

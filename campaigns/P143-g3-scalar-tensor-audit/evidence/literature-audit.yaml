@@ -1,0 +1,37 @@
+campaign: P143
+scope: canonical_scalar_tensor_classification_and_massless_FLRW_ceiling
+sources:
+  - title: Second-order scalar-tensor field equations in a four-dimensional space
+    authors: [Gregory Walter Horndeski]
+    year: 1974
+    doi: 10.1007/BF01807638
+    url: https://link.springer.com/article/10.1007/BF01807638
+    primary_scope: >-
+      The original paper constructs the general four-dimensional scalar-metric
+      Lagrangian class with second-order Euler-Lagrange tensors. It supports the
+      historical classification ceiling, not G3's scalar-to-index map, fitted
+      coupling, source witness, or this campaign's exact normalization.
+  - title: Stable Big Bang Formation in Near-FLRW Solutions to the Einstein-Scalar Field and Einstein-Stiff Fluid Systems
+    authors: [Igor Rodnianski, Jared Speck]
+    year: 2014
+    arxiv: '1407.6298'
+    url: https://arxiv.org/abs/1407.6298
+    primary_scope: >-
+      The primary analysis identifies the spatially flat FLRW Einstein-massless-
+      scalar background with an irrotational stiff fluid and curvature blow-up
+      at the Big Bang. It corroborates the solution class and singular ceiling;
+      P143 independently derives every coefficient and invariant it promotes.
+adjudication:
+  supported:
+    - canonical scalar gravity belongs to the second-order scalar-tensor landscape
+    - homogeneous massless scalar FLRW is a stiff-fluid nonvacuum background with a Big Bang singularity
+  unsupported:
+    - phi equals log refractive index in four dimensions
+    - a localized sine-Gordon breather sources the accepted cosmological solution
+    - G3's one-point fitted coupling or free static metric witness
+    - physical gravity observation material mechanism or substrate ontology
+selection_use: >-
+  Literature fixes classification and known-solution scope only. P143's action
+  coefficients, stress, exact solution, residuals, curvature, mutations, and
+  source rejection are independently derived and do not use empirical matching.
+debt: []

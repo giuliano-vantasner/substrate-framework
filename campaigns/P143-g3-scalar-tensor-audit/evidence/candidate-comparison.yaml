@@ -1,0 +1,62 @@
+campaign: P143
+selection_frozen_at: 3a4602f
+criteria:
+  - complete action metric curvature scalar potential stress and coupling conventions
+  - exact Euler-Lagrange equations Bianchi identity conservation and constraint closure
+  - explicit initial boundary gauge regularity and transverse-domain data for any claimed solution
+  - degrees of freedom hyperbolicity energy sign dimensions and known limits
+  - finite-energy embedding or explicit per-area and compactification ceiling
+  - wrong-sign vacuum homogeneous and source-mismatch countermodels
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+candidates:
+  - id: A
+    decision: rejected_as_headline_route
+    reason: >-
+      Native G3 passes eleven predicates, but it never loads its positive kappa,
+      selects metric and scalar profiles independently, and fits only G_tt/T_tt
+      at one point. The ratio is negative, other Einstein components fail, and
+      the scalar is off shell.
+  - id: B
+    decision: selected
+    reason: >-
+      One declared mostly-plus Einstein-Hilbert plus canonical scalar action
+      fixes the healthy stress, trace, scalar equation, and on-shell
+      conservation without importing any pending corpus unit.
+  - id: C
+    decision: selected
+    reason: >-
+      The massless homogeneous flat-FLRW branch supplies a complete exact
+      positive object: every Einstein component, scalar equation, continuity
+      relation, trace, curvature invariant, domain, and singular limit closes.
+  - id: D
+    decision: selected_as_rejection_guard
+    reason: >-
+      The source's localized one-dimensional index map is neither its static
+      coupled solution nor the homogeneous cosmology. Noncompact transverse
+      embedding is extensive and no finite-energy breather source follows.
+  - id: E
+    decision: selected
+    reason: >-
+      Constant-field zero-potential vacuum, wrong kinetic sign, wrong expansion
+      exponent, wrong scalar normalization, the source component mismatch, and
+      zero-Delta nonvacuum examples delimit the accepted surface.
+  - id: F
+    decision: selected_for_governance
+    reason: >-
+      Claim review, novelty, impact, frozen graph, compatibility, release,
+      disposition, generated state, and memory close the transaction.
+proposed_claim:
+  id: C-STG-001
+  decision: promote
+  reason: distinct_dependency_closed_exact_action_and_solution_surface
+breather_sourced_gravity_claim:
+  decision: rejected
+  reason: >-
+    G3 supplies no positive componentwise coupling, on-shell localized scalar,
+    solved metric, constraints, data, potential, finite transverse embedding,
+    physical dictionary, or complete breather-sourced geometry.
+comparator_role: >-
+  G3's fitted ratio, nonzero stress, optical Delta, and eleven passing predicates
+  did not select the action convention, exact solution, coefficients, domain,
+  mutations, or pass thresholds.
+debt: []

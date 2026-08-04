@@ -1,0 +1,60 @@
+campaign: P143
+title: G3 canonical scalar-tensor source audit
+source_baseline: substrate@6d1f4e0
+source_units: [G3]
+base_release: v0.109.0
+accepted_release: v0.110.0
+adjudicated_at: '2026-08-09T16:40:00Z'
+selected_candidates:
+  - {id: B, reason: One declared action closes stress equations sign and conservation without a pending dependency.}
+  - {id: C, reason: Exact massless flat-FLRW closes every Einstein and scalar equation with explicit curvature and domain.}
+  - {id: D, reason: Source reconstruction and extensive-energy analysis decisively reject the localized breather reading.}
+  - {id: E, reason: Ghost exponent normalization singularity source-residual and Delta countermodels delimit the exact surface.}
+  - {id: F, reason: Predicate dependency consumer compatibility novelty impact release queue and memory audits close the transaction.}
+competing_candidates:
+  - {id: A, decision: rejected_for_no_coupled_solution_and_unsupported_headline}
+claims:
+  - C-STG-001
+unpromoted_claims:
+  - {id: breather_sourced_scalar_tensor_gravity, reason: No positive componentwise coupling on-shell localized scalar solved metric constraints data potential finite transverse embedding or physical dictionary exists.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_einstein_scalar_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  passing_scientific_attempt: attempts/0005/result.yaml
+  graph_attempt: attempts/0006/result.yaml
+  integrated_terminal_gate: attempts/0007/result.yaml
+  generated_record_sync: attempts/0008/result.yaml
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  claim_review: memory/vantasner/decisions/C-STG-001-review.md
+  source_review: memory/vantasner/decisions/G3-qualified-review.md
+source_disposition:
+  G3: qualified
+accepted_mappings: [C-STG-001]
+compatibility:
+  mutable_campaign_and_framework: np.trapezoid_or_exact_symbolic_algebra
+  immutable_primary: native_no_integration_event
+  inherited_alias_only_if_executed: [G1, G4, NC4]
+validation_commands:
+  - >-
+    PYTHONPATH=src .venv/bin/python campaigns/P143-g3-scalar-tensor-audit/verify.py
+    --source-file <substrate@6d1f4e0>/merged-framework/bridges/phase-5/bridge_G3_horndeski_scalar_tensor.py
+    --dossier-file <substrate@6d1f4e0>/merged-framework/bridges/phase-5/dossiers/G3-dossier.md
+  - PYTHONPATH=src .venv/bin/python campaigns/P143-g3-scalar-tensor-audit/reviews/independent_einstein_scalar_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P143-g3-scalar-tensor-audit/reviews/replay_source_graph.py <substrate@6d1f4e0>
+  - .venv/bin/python -m pytest -q tests/test_einstein_scalar.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

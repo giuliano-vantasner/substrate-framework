@@ -1,0 +1,19 @@
+source_unit: G3
+checks:
+  - {id: G3.1, executable_result: pass, verdict: exact_conditional_canonical_stress, reason: The standard scalar stress and trace follow under the declared action convention, but the Einstein-Hilbert variation is not executed.}
+  - {id: G3.2, executable_result: pass, verdict: exact_static_scalar_variation, reason: The static scalar Euler equation on a declared diagonal metric is exact and narrower than a coupled solution.}
+  - {id: G3.3, executable_result: pass, verdict: exact_static_divergence_identity, reason: The x-dependent stress divergence factors through the scalar residual exactly.}
+  - {id: G3.4, executable_result: pass, verdict: exact_conditional_on_shell_conservation, reason: Substituting the scalar equation gives conservation and a mismatched potential does not; the source witness itself is never put on shell.}
+  - {id: G3.5, executable_result: pass, verdict: nonzero_stress_only, reason: Nonzero anisotropic stress is necessary but does not construct curvature or solve any Einstein component.}
+  - {id: G3.6, executable_result: pass, verdict: exact_existing_optical_residual_replay, reason: The imported nonminimal optical-dilaton residual is reproduced but is not a source specification for the canonical scalar equations.}
+  - {id: G3.7_G3.A, executable_result: pass, verdict: joint_parameter_and_field_limit, reason: Constant n leaves minus g times V; vacuum follows only after separately setting the positive alpha parameter to zero.}
+  - {id: G3.B, executable_result: pass, verdict: exact_wrong_sign_countermodel, reason: Negative kinetic coefficient gives negative gradient energy under the declared mostly-plus convention.}
+  - {id: G3.C, executable_result: pass, verdict: algebraic_model_specific_counterexample, reason: An added constant omega n-prime-squared term cannot cancel a freely varying n-double-prime coefficient, but this does not select the canonical solution.}
+  - {id: G3.D, executable_result: pass, verdict: invalid_single_component_fit, reason: The fitted free-metric ratio is negative, other Einstein components fail, the scalar is off shell, and the optical ratio is shown to diverge rather than vanish.}
+  - {id: G3.E, executable_result: pass, verdict: generic_nonidentity_only, reason: Two alternate ansaetze give generic nonzero residuals but do not establish uniqueness or the claimed source map.}
+summary:
+  exact_conditional_surfaces: [G3.1, G3.2, G3.3, G3.4, G3.B]
+  existing_or_model_specific_replays: [G3.6, G3.C, G3.E]
+  necessary_not_sufficient: [G3.5, G3.7_G3.A]
+  invalid_headline_witness: [G3.D]
+  headline_supported: false

@@ -1,0 +1,49 @@
+source_unit: G3
+source_sha256: 8d462ce2bfd57bfced9fdedd511e9d2711e0c2454bc0d0441c681288495719ba
+ast:
+  check_calls: 11
+  assert_statements: 1
+  dynamic_check_calls: 0
+  terminal_tally_literal: true
+  numpy_compatibility_event: false
+objects_present:
+  - symbolic canonical scalar stress formula and trace
+  - static diagonal-metric scalar Euler equation
+  - static stress-divergence factorization and on-shell substitution
+  - nonzero gradient stress and one-grid positivity regression
+  - imported optical-family residual reconstruction
+  - constant-profile and wrong-kinetic-sign guards
+  - algebraic constant-omega non-cancellation check
+  - one-point free-metric G_tt over T_tt ratio
+objects_absent:
+  - variation of the Einstein-Hilbert term including its boundary premise
+  - any executable use of the declared positive kappa in an Einstein equation
+  - componentwise G_mu_nu equals kappa T_mu_nu for one metric and scalar
+  - scalar equation evaluated on the free-metric witness
+  - Hamiltonian or momentum constraints and gauge data
+  - initial or boundary conditions and a solved metric
+  - finite transverse embedding of the one-plus-one breather
+  - unique potential or derived phi equals ln n map
+  - solver-status refinement convergence or independent numerical method
+load_bearing_insertions:
+  - assignment: phi_equals_log_n
+    classification: declared_map_not_derived_from_the_four_dimensional_action
+  - assignment: independent_g_conc_and_n_bump_profiles
+    classification: profiles_selected_without_solving_coupled_equations
+  - assignment: kappa_eff_free_val_equals_Gtt_over_Ttt_at_x1
+    classification: one_component_point_fit_with_wrong_positive_coupling_sign
+headline_failures:
+  - The declared positive kappa is never loaded by executable source code.
+  - >-
+    At the source witness the inferred tt ratio is negative; after fitting it,
+    exact xx yy and zz residuals remain nonzero.
+  - The V equals zero scalar residual is nonzero on the chosen free metric and index profile.
+  - >-
+    The optical calculation finds a divergent small-amplitude ratio, not the
+    zero effective coupling named by its check title and result prose.
+  - >-
+    Delta from a different nonminimal optical-dilaton equation is not equated
+    componentwise to the canonical scalar stress or Einstein tensor.
+  - >-
+    Delta equals zero is not equivalent to vacuum; n equals exp(x) has a
+    nonzero gradient and Delta equals zero at x equals two.

@@ -1,0 +1,37 @@
+campaign: P143
+provisional_claim: C-STG-001
+decision: promote
+direct_search:
+  identifiers_searched: [C-STG-001]
+  concepts_searched: [canonical Einstein scalar action, minimally coupled scalar stress, massless scalar flat FLRW solution, stiff scalar cosmology]
+  result: >-
+    No accepted identifier or canonical Einstein-scalar API exists. Accepted
+    sine-Gordon stress is one-plus-one and accepted gravity-adjacent modules
+    cover conditional effective geometries, induced scaling, or a separate
+    retarded scalar action rather than a coupled four-dimensional solution.
+memory_search:
+  query: canonical Einstein scalar stress massless flat FLRW solution
+  nearest_prior_records: [P143, T2A-qualified-review, P049]
+  result: >-
+    P143 is the only exact match and reserves the identifier. T2A and P049
+    concern normalized one-plus-one sine-Gordon stress and explicitly do not
+    provide an Einstein-scalar solution.
+gitnexus_query:
+  query: canonical Einstein scalar stress exact massless flat FLRW solution
+  preexisting_relevant_processes: 0
+  nearest_preexisting_definitions: [sine_gordon_stress_tensor_covariant, sine_gordon_stress_divergence, gordon_metric.py, retarded_wave.py]
+  result: >-
+    The refreshed graph returns the new P143 definitions as the exact matches.
+    Nearby stress and gravity terms differ in dimension, action, or physical
+    role and do not duplicate the coupled exact solution.
+nearest_claims:
+  - {claim: C-SG-012, distinction: normalized_one_plus_one_sine_Gordon_stress_only}
+  - {claim: C-GOR-001, distinction: four_dimensional_effective_wave_metric_without_matter_action_or_Einstein_solution}
+  - {claim: C-RAD-001, distinction: one_dimensional_retarded_scalar_action_without_dynamical_metric}
+  - {claim: C-GRV-001, distinction: induced_Newton_scaling_ledger_without_an_Einstein_scalar_solution}
+novel_surface: >-
+  C-STG-001 is the first importable framework theorem joining the declared
+  canonical four-dimensional scalar stress to a complete nonvacuum exact
+  Einstein solution with all independent equations, curvature invariants,
+  domain, branch, and physical ceiling explicit.
+debt: []

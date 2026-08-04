@@ -1,0 +1,42 @@
+campaign: P143
+source_unit: G3
+positive_object: exact_canonical_Einstein_scalar_action_and_massless_flat_FLRW_solution
+accepted_inputs: []
+mathematical_inputs:
+  - mostly-plus Lorentzian signature and standard pseudo-Riemannian curvature definitions
+  - exact positive gravitational coupling kappa in natural units
+  - Einstein-Hilbert action with compact metric variations or the corresponding gravitational boundary term
+  - canonical real scalar kinetic term minus one half g inverse contracted gradient squared
+  - exact scalar potential V and its derivative
+  - contracted Bianchi identity and scalar Euler-Lagrange calculus
+conditional_inputs:
+  - {condition: V equals zero, role: selects the massless exact solution}
+  - {condition: spatially flat homogeneous isotropic metric on time greater than zero, role: selects the FLRW ansatz}
+  - {condition: positive a0 and t0 with real phi0 and branch plus or minus one, role: supplies reference data}
+source_declared_inputs:
+  - phi equals log n without a four-dimensional derivation
+  - independently chosen static metric and index bump profiles
+  - symbolic positive kappa that executable source never loads
+  - potential left unpinned outside a separate joint alpha-to-zero limit
+  - G2 and pending G4 narratives
+excluded_from_derivation_or_selection:
+  - G3 one-point fitted coupling and source numeric comparator
+  - any G2 physical-gravity or Einstein-source reading
+  - pending G4 scientific authority
+  - any breather refractive-index or substrate identification
+  - target-selected kappa potential metric or source profile
+solution_scope:
+  metric: ds_squared_equals_minus_dt_squared_plus_a_squared_times_flat_spatial_line_element
+  domain: time_greater_than_zero
+  scale_factor: a0_times_time_over_t0_to_one_third
+  scalar: phi0_plus_or_minus_sqrt_two_over_three_kappa_times_log_time_over_t0
+  boundary_ceiling: curvature_singular_at_time_zero
+  spatial_ceiling: homogeneous_and_extensive_on_noncompact_R3
+missing_for_source_headline:
+  - a derived map from a localized one-plus-one breather to a finite three-plus-one source
+  - a componentwise solution of the source's static Einstein scalar equations
+  - positive coupling, potential, constraints, gauge, initial data, and boundary data for that witness
+  - finite transverse energy or a declared compactification and matching conditions
+  - a physical gravitational, material, observational, or substrate dictionary
+claim_delta: C-STG-001
+debt: []

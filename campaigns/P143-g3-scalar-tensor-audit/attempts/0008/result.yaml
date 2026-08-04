@@ -1,0 +1,26 @@
+attempt: 0008
+campaign: P143
+candidate: F_record_sensitive_sync
+status: passed
+started_at: '2026-08-09T16:51:00Z'
+finished_at: '2026-08-09T16:54:00Z'
+commands:
+  - .venv/bin/python scripts/render_docs.py --check
+  - .venv/bin/python scripts/render_memory.py --check
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate targeted P143 and parent effort records
+  - audit mutable P143 and canonical Python files for executable legacy NumPy integration access
+  - git diff --check
+result:
+  generated_docs: current
+  generated_memory: current
+  repository: WORKFLOW_VALID_145_claims_145_accepted_0_proposals
+  migration_queue: 218_units_77_pending_0_partial
+  targeted_memory_records: 4_valid
+  mutable_python_files_audited: 5
+  executable_legacy_integration_shapes: 0
+  whitespace: passed
+scientific_failure: false
+next_attempt: >-
+  Commit the accepted P143 transaction and checkpoint the still-active parent
+  migration effort before freezing P144 for G4.

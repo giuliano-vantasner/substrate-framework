@@ -1,0 +1,27 @@
+attempt: 0006
+campaign: P143
+candidate: F_frozen_source_graph
+status: passed
+started_at: '2026-08-09T16:21:00Z'
+finished_at: '2026-08-09T16:25:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P143-g3-scalar-tensor-audit/reviews/replay_source_graph.py
+  /home/dan/substrate
+result:
+  graph_nodes: 14
+  static_source_predicates: 135
+  graph_checks: 35
+  terminal_tally: ALL_35_CHECKS_PASS_P143-G3-SOURCE-GRAPH
+  compatibility_nodes: [G1, G4, NC4]
+  compatibility_policy: alias_only_backed_by_np_trapezoid
+scientific_failure: false
+conclusion: >-
+  G3, its two declared dependencies, and all twelve direct reverse consumers
+  are hash and predicate pinned with G4 counted once in both roles. Six
+  qualified consumers retain independent accepted closure; five pending
+  consumers and pending G4 gain no authority. G3 is native. Immutable G1, G4,
+  and NC4 retain classified legacy integration shapes for alias-only replay.
+next_attempt: >-
+  Complete claim-level source, candidate, novelty, provenance, literature,
+  impact, dependency, and consumer evidence before registry promotion.

@@ -1,0 +1,26 @@
+attempt: 0002
+campaign: P143
+candidate: A_native_reproduction
+status: passed_with_rejected_headline
+started_at: '2026-08-09T15:46:00Z'
+finished_at: '2026-08-09T15:50:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-5/bridge_G3_horndeski_scalar_tensor.py
+result:
+  process_exit: 0
+  terminal_tally: ALL_11_CHECKS_PASS
+  numpy_compatibility_event: false
+  direct_legacy_integration_attributes: 0
+  direct_current_integration_attributes: 0
+scientific_failure: true
+failure: >-
+  G3 derives canonical scalar stress and its on-shell divergence but never
+  evaluates the coupled Einstein-scalar equations. Its free-metric witness
+  chooses metric and scalar profiles independently, infers a coupling from one
+  tt component at x=1, and checks only that its magnitude is nonzero.
+diagnosis: nonzero_stress_and_one_component_ratio_substituted_for_a_coupled_solution
+next_attempt: >-
+  Evaluate the declared witness against the positive coupling, remaining
+  Einstein components, and scalar equation, then construct a complete exact
+  nonvacuum Einstein-scalar solution from the same canonical action.
