@@ -1,0 +1,39 @@
+attempt: 0001
+campaign: P170
+candidate: source_body_unopened_freeze_with_prior_exposure
+status: passed
+started_at: '2026-08-11T00:20:00Z'
+finished_at: '2026-08-11T00:24:00Z'
+base_release: v0.127.0
+base_commit: af30141
+source_unit:
+  id: CF5
+  path: merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py
+  sha256: 0a449f8b95bc0a83fb0316992fb0d1776a6157e1445029623b4608246dc256f7
+dossier:
+  path: merged-framework/bridges/phase-10/dossiers/CF5-dossier.md
+  sha256: bd499ab50a04c45d3a80167a5a20b75067b8eecff5bfe11d992270e94ba95305
+source_checkout:
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  pinned_paths_clean: true
+  unrelated_worktree_changes_present: true
+actions:
+  - retained_the_loaded_physics_skill_governance_oracle_and_campaign_contract
+  - read_v0_127_0_C-VTX-001_C-VTX-002_C-FLX-001_and_current_canonical_modules
+  - searched_local_memory_and_identified_P029_as_the_existing_CF5_result
+  - audited_hash_pinned_P029_evidence_and_P167_P168_compatibility_precedent
+  - froze_eight_candidates_and_structural_selection_criteria
+  - validated_repository_memory_yaml_and_worktree_diff_before_source_access
+source_body_opened_by_P170_before_freeze: false
+prior_source_exposure: P029_accepted_claims_durable_memory_generated_queue_and_P168_alias_graph_replay
+freeze_manifest:
+  proposal_sha256: 65b63d1cd3c686a84746859b0e4ebc99400aecbdb52a32e4f7228fddd7452a96
+  validation:
+    repository: WORKFLOW_VALID_163_claims_54_pending
+    memory: passed
+    yaml_parse: passed
+    git_diff_check: passed
+scientific_result: none_pre_freeze
+debt:
+  - commit_the_validated_freeze_before_renewed_source_or_dossier_body_audit
+next_attempt: post_freeze_source_and_dossier_reproduction
