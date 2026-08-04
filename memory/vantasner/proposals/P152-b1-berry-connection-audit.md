@@ -2,7 +2,7 @@
 description: Derive and audit B1's projective-loop Berry connection and holonomy content
 author: vantasner
 created: '2026-08-10T04:10:00Z'
-updated: '2026-08-10T04:10:00Z'
+updated: '2026-08-10T04:22:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -84,11 +84,20 @@ content remain blinded until this contract and manifest are committed.
 
 ## Proposed Claim Delta
 
-No identifier is reserved before source-aware nonduplication. If candidates C
-through E expose a distinct exact theorem absent from C-TOP-001, C-CHR-001,
-C-SPN-001, C-DEF-001, and C-GAU-001, a recorded proposal revision will reserve
-one identifier and state its precise dependency closure. Otherwise B1 will be
-qualified through existing claims without manufacturing a duplicate.
+Source-aware exact rederivation found a distinct theorem and revision 0001 now
+reserves C-BER-001 with dependency C-TOP-001. For integer `k`, the real lift
+`n_k=(cos(k*phi/2),sin(k*phi/2))` has a periodic rank-one projector, local
+connection zero, and endpoint transition `(-1)^k`. Its periodic complex gauge
+`exp(-i*k*phi/2)n_k` has local connection `k/2` and transition one. With
+`A=i<psi|dpsi>`, the closed-ray invariant is the endpoint transition times
+`exp(i*integral A)`, so both sections give `(-1)^k`.
+
+B1's stated `su2_z(phi)|up>` instead changes only by phase and has a constant
+projector. Its bare integral phase is minus one for odd winding, but its
+nonperiodic endpoint transition is also minus one, so its corrected holonomy
+is plus one. The claim revision therefore preserves the genuine projective
+construction while rejecting the source's fixed-ray identification and any
+unique or physical vector-potential reading.
 
 ## Implementation and Oracle Plan
 

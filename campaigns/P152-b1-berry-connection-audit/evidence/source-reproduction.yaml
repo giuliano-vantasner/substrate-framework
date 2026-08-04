@@ -1,0 +1,64 @@
+campaign: P152
+source_unit: B1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-7/bridge_B1_disclination_berry_connection.py
+sha256: 2de4faa60ecc1f87ca356afd55c2a531a89327c3c46e4296176052113de7b0b6
+dossier_path: merged-framework/bridges/phase-7/dossiers/B1-dossier.md
+dossier_sha256: 286e46b79f5faccfd2863deda2fd1e1c1e82e54bf9d66dc4e4283e45494d2066
+ast_inventory:
+  check_calls: 8
+  assertions: 1
+  function_definitions: [check, holonomy, su2_z, chi_F]
+  numpy_aliases: [np]
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 1
+  imported_legacy_names: 0
+  current_references: 1
+  eager_legacy_default_fallbacks: 1
+native_execution:
+  exit_status: 1
+  checks_before_abort: 6
+  terminal_tally_reached: false
+  failure_line: 225
+  failure_class: immutable_numpy_version_compatibility
+  mechanism: >-
+    getattr(np,"trapz") is evaluated eagerly as the default argument of the
+    outer getattr even though np.trapezoid exists.
+alias_only_replay:
+  alias: np.trapz=np.trapezoid
+  source_edit: false
+  exit_status: 0
+  terminal_tally: ALL_8_CHECKS_PASS
+  maximum_verdict: source_reproduction_only
+predicate_audit:
+  B0: >-
+    Correct for the real normalized lift: its local Berry one-form vanishes.
+    This does not mean that the closed projective loop has trivial holonomy.
+  B0b: >-
+    Correct: the rank-one projector closes while the real lift changes sign.
+  B1: >-
+    Algebraically correct only for the stated fixed-ray phase section; that
+    section's projector is constant and is not the moving projector of B0b.
+  B1b: >-
+    Algebraically correct and explicitly pure gauge for the fixed-ray section.
+  B2: >-
+    The bare integral phase is minus one, but calling it the closed-ray
+    holonomy omits the nonperiodic endpoint transition; the corrected value is
+    plus one for the stated section.
+  B3: >-
+    The scalar equality is correct but the objects are typed and distinct;
+    B1's fixed-ray corrected holonomy is not the advertised minus-one object.
+  B4: >-
+    Numerically reproduces the constant bare integral after the compatibility
+    alias. It does not test the endpoint transition or moving projector.
+  GUARD: >-
+    The integer bare phase is plus one, but the guard is insensitive to the
+    central defect because the fixed-ray corrected holonomy is plus one for
+    both half and integer strengths.
+initial_scientific_flags:
+  - fixed_ray_phase_is_not_a_lift_of_the_moving_projective_director
+  - nonperiodic_endpoint_transition_is_omitted_from_the_holonomy
+  - local_connection_is_gauge_dependent_and_not_a_unique_vector_potential
+  - equal_minus_one_values_do_not_identify_typed_objects
+  - no_medium_field_core_dynamics_electromagnetic_coupling_or_observation_is_derived
+maximum_source_verdict: qualified_after_exact_projective_loop_replacement_and_consumer_audit

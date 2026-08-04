@@ -1,0 +1,67 @@
+revision: 0001
+campaign: P152
+parent_frozen_proposal_sha256: 26de0d87e687a7334616d0f06e8fd30697535c9b8a02444daf26f0ca1235a4a1
+trigger: >-
+  Source-aware exact rederivation shows that B1's stated spinor is a pure-phase
+  fixed ray whose transition-corrected holonomy is plus one, while the real
+  moving projective lift and a periodic complex gauge yield the distinct,
+  gauge-invariant minus-one theorem absent from the accepted registry.
+unchanged:
+  - source and dossier hashes, accepted-base coordinates, and physical ceilings
+  - candidates A through H and their predeclared ordering
+  - structural selection criteria and comparator exclusion
+  - compatibility policy requiring exact algebra, trapezoid_integral, or np.trapezoid in mutable code
+claim_delta:
+  identifiers: [C-BER-001]
+  dependencies: [C-TOP-001]
+  release_change: add_one_exact_accepted_claim_if_all_oracles_pass
+  implementation_change: add_one_pure_exact_closed_projector_path_holonomy_module
+exact_statement: >-
+  Let k be an integer and phi range from zero to two pi. In a complex carrier
+  of dimension at least two define the normalized real lift
+  n_k(phi)=(cos(k*phi/2),sin(k*phi/2),0,...). Its rank-one projector is
+  periodic and n_k(2*pi)=(-1)^k n_k(0). For a normalized section psi of this
+  closed projector path with psi(2*pi)=tau*psi(0), |tau|=1, use the convention
+  A=i*psi_dagger*d_phi psi and define the closed-ray holonomy
+  H=tau*exp(i*integral_0^{2*pi} A dphi). Under every smooth phase change
+  psi'=exp(i*chi)psi, A'=A-d_phi chi and
+  tau'=exp(i*(chi(2*pi)-chi(0)))*tau, so H is invariant. For the real lift,
+  A=0 and tau=(-1)^k. For the periodic section
+  psi=exp(-i*k*phi/2)n_k, A=k/2 and tau=1. Both give H=(-1)^k. By contrast,
+  exp(-i*k*phi/2) times a fixed ray has a constant projector and H=1, even
+  though its bare integral phase is (-1)^k. The theorem derives no unique
+  local vector potential, curvature or core source, dynamics, electromagnetic
+  field, fermion, material realization, coupling, or observation.
+source_corrections:
+  - B1s_su2_z_phi_ket_up_is_a_constant_projector_not_the_moving_director_projector
+  - B2_omits_the_endpoint_transition_required_by_its_nonperiodic_section
+  - the_transition_corrected_B1_fixed_ray_holonomy_is_plus_one
+  - the_real_projective_lift_has_zero_local_connection_and_minus_one_endpoint_transition
+  - a_periodic_complex_gauge_of_the_moving_lift_has_half_connection_and_minus_one_holonomy
+  - B3_scalar_equality_does_not_make_distinct_typed_objects_one_object
+  - B4_checks_only_the_bare_constant_integral_and_has_a_version_only_legacy_fallback_failure
+  - the_integer_guard_does_not_detect_the_fixed_projector_or_omitted_transition
+  - local_A_is_gauge_dependent_and_no_physical_emergent_vector_potential_is_derived
+accepted_mappings: [C-TOP-001, C-CHR-001, C-SPN-001, C-DEF-001, C-GAU-001]
+novelty: >-
+  C-TOP-001 supplies the integer parity character but no normalized section,
+  projector path, Berry convention, endpoint transition, or gauge-covariance
+  theorem. C-SPN-001 and C-DEF-001 supply the conditional RP2 target and loop
+  class but no connection. C-GAU-001 supplies a separately declared local U1
+  gauge law but no projective-loop section or transition-corrected holonomy.
+  No accepted canonical API distinguishes the moving projective path from a
+  fixed-ray phase while deriving the two gauge representatives exactly.
+oracle: >-
+  Exact SymPy normalized sections, projectors, endpoint phases, connection
+  integrals, and phase transformations, independently rederived from the real
+  lift and periodic section, with winding parity, reversal, fixed-ray,
+  normalization, endpoint, gauge-sign, and omitted-transition mutations.
+implementation_boundary: >-
+  Add a pure exact module that validates a normalized finite-dimensional
+  section of a closed rank-one projector path and returns its local
+  connection, endpoint transition, bare integral phase, and corrected
+  holonomy, plus the explicit integer-winding projective-loop construction.
+  It must perform no numeric quadrature, name no physical vector potential,
+  and introduce no defect dynamics, field strength, core, electromagnetic
+  dictionary, fermion, material, coupling, or observation.
+status: frozen

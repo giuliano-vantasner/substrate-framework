@@ -1,0 +1,21 @@
+attempt: 0003
+campaign: P152
+candidate: immutable_alias_only_B1_reproduction
+status: passed
+started_at: '2026-08-10T04:14:00Z'
+finished_at: '2026-08-10T04:15:00Z'
+commands:
+  - .venv/bin/python -c explicit_np.trapz_equals_np.trapezoid_then_runpy_B1
+result:
+  exit_status: 0
+  source_checks: 8_passed
+  terminal_tally: ALL_8_CHECKS_PASS
+  source_sha256_unchanged: 2de4faa60ecc1f87ca356afd55c2a531a89327c3c46e4296176052113de7b0b6
+  compatibility_only_mutation: numpy_module_alias
+  scientific_source_edit: false
+  maximum_verdict: reproduction_only_pending_gauge_and_transition_audit
+debt:
+  - test_the_source_spinor_projector_and_endpoint_corrected_holonomy
+  - compare_genuine_projective_lift_and_periodic_gauge_candidates
+  - classify_all_eight_predicates_and_the_dossier_headline
+next_attempt: perform_exact_source_aware_projector_connection_transition_rederivation

@@ -1,0 +1,49 @@
+attempt: 0004
+campaign: P152
+candidate: source_aware_projector_transition_rederivation
+status: passed
+started_at: '2026-08-10T04:16:00Z'
+finished_at: '2026-08-10T04:22:00Z'
+commands:
+  - inspect_hash_pinned_B1_source_and_dossier_after_freeze
+  - exact_sympy_compare_fixed_ray_real_projective_lift_and_periodic_complex_section
+result:
+  fixed_ray:
+    section: exp(-i*phi/2)*(1,0)
+    projector_varies: false
+    berry_connection: 1/2
+    endpoint_transition: -1
+    bare_integral_phase: -1
+    transition_corrected_holonomy: 1
+  real_projective_lift:
+    section: (cos(phi/2),sin(phi/2))
+    projector_varies: true
+    berry_connection: 0
+    endpoint_transition: -1
+    bare_integral_phase: 1
+    transition_corrected_holonomy: -1
+  periodic_projective_section:
+    section: exp(-i*phi/2)*(cos(phi/2),sin(phi/2))
+    projector_varies: true
+    berry_connection: 1/2
+    endpoint_transition: 1
+    bare_integral_phase: -1
+    transition_corrected_holonomy: -1
+  gauge_invariant_formula: endpoint_transition_times_exp_i_integral_A
+  source_headline_supported: false
+  corrected_positive_object_exists: true
+diagnosis:
+  - >-
+    B1's psi=su2_z(phi)|up> changes only by phase, so its rank-one projector is
+    constant and it does not lift the moving projective director used in B0b.
+  - >-
+    With A=i<psi|dpsi>, a nonperiodic section requires its endpoint transition.
+    That factor cancels B1's bare minus-one integral phase and gives plus one.
+  - >-
+    The moving real lift and its periodic complex gauge are two sections of the
+    same closed projector path and both give minus one after transition closure.
+  - >-
+    Equal scalar values from distinct sign characters, SU2 matrix entries, and
+    Berry holonomies remain typed comparisons rather than one object.
+scientific_effect: source_B1_requires_qualification_but_a_distinct_corrected_exact_theorem_is_available
+next_attempt: freeze_C_BER_001_before_implementing_any_canonical_API

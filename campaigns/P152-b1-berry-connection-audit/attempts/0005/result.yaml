@@ -1,0 +1,20 @@
+attempt: 0005
+campaign: P152
+candidate: source_aware_claim_revision_freeze
+status: passed
+started_at: '2026-08-10T04:22:00Z'
+finished_at: '2026-08-10T04:24:00Z'
+commands:
+  - parse_all_new_campaign_YAML
+  - memory_validate_P152_proposal
+  - git_diff_check
+result:
+  reserved_claim: C-BER-001
+  dependency: C-TOP-001
+  parent_frozen_proposal_sha256: 26de0d87e687a7334616d0f06e8fd30697535c9b8a02444daf26f0ca1235a4a1
+  proposal_revision_sha256: 6e795a9a8551082928d989c626fad6a3714536ee11dc79de2bef11d7ca3c7962
+  source_reproduction_sha256: a554831edcef1c4258e1872f79fa3f065a22604f63b762428ed6ad0f28467fb0
+  proposal_memory_sha256: 0305630091dd45431a948f065f9749f9ceacdf4bb47841c5766f7af787e94d07
+  implementation_started_before_freeze: false
+  mutable_quadrature_policy: exact_or_np_trapezoid_only
+next_attempt: implement_the_frozen_exact_closed_projector_path_API_and_focused_mutations

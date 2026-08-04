@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P152
+candidate: native_hash_pinned_B1_reproduction
+status: failed
+started_at: '2026-08-10T04:13:00Z'
+finished_at: '2026-08-10T04:14:00Z'
+commands:
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_B1_disclination_berry_connection.py
+result:
+  exit_status: 1
+  source_checks_before_abort: 6_passed
+  terminal_tally_reached: false
+  failure_line: 225
+failure_class: immutable_numpy_version_compatibility
+mechanism: >-
+  B1 evaluates getattr(np,"trapz") as the default argument of its outer
+  getattr(np,"trapezoid",...). NumPy evaluates that default eagerly, so the
+  removed legacy name raises even though np.trapezoid exists.
+scientific_effect: none_yet
+compatibility_policy: preserve_source_and_replay_with_an_explicit_np.trapz_alias_backed_by_np.trapezoid
+next_attempt: run_the_unchanged_hash_pinned_source_with_only_that_alias_then_audit_the_science_independently
