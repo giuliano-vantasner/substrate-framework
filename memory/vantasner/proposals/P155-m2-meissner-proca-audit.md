@@ -2,7 +2,7 @@
 description: Derive and audit M2's conditional source-free Proca screening theorem
 author: vantasner
 created: '2026-08-10T07:00:00Z'
-updated: '2026-08-10T07:25:00Z'
+updated: '2026-08-10T08:30:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - proca-screening
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P155 M2 Meissner-Proca Audit
 
@@ -216,6 +216,17 @@ Meissner medium, London current, W pole, condensate, weak sector, or substrate
 mechanism additionally requires a governed gauge-scalar or material action,
 stationary state, field normalization, current and observable dictionary, and
 evidence; equation shape cannot replace them.
+
+## Promotion Outcome
+
+P155 is accepted claim by claim in v0.121.0. C-PRC-001 supplies the exact
+source-free Proca, transverse half-line, and kinetic-normalization theorem;
+M2 is terminally qualified with its physical overreadings excluded. Primary,
+independent, and corrected graph routes passed 26, 16, and 33 checks, the
+focused-plus-adjacent replay passed 89 tests, and the single integrated
+workflow validated 156 accepted claims, 65 pending units, 640 memory records,
+the skill contract, and 1,392 tests. The registry, release, disposition,
+generated docs and memory, compatibility boundary, and debt ledger agree.
 
 ## Cross-References
 

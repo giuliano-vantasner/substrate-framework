@@ -1,0 +1,26 @@
+attempt: 0012
+campaign: P155
+candidate: corrected_graph_invocation_and_integrated_promotion_gate
+status: passed
+started_at: '2026-08-10T08:25:00Z'
+finished_at: '2026-08-10T08:32:00Z'
+commands:
+  - .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - scripts/validate.sh
+  - git diff --check
+  - .venv/bin/python scripts/render_memory.py
+  - .venv/bin/python scripts/validate_repository.py
+  - .venv/bin/python scripts/render_docs.py --check
+  - .venv/bin/python scripts/render_memory.py --check
+  - memory validate each_changed_P155_and_parent_record --base /home/dan/substrate-framework
+  - .venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py .agents/skills/physics-erdos-loop
+results:
+  corrected_source_graph: 33_passed
+  repository_contract: valid_156_accepted_claims_65_pending_units
+  memory_contract: 640_records_passed
+  skill_contract: passed
+  full_tests: 1392_passed
+  diff_check: passed
+  final_record_sensitive_replay: passed
+debt: []
+next_attempt: continue_parent_effort_at_NA1

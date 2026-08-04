@@ -1,0 +1,61 @@
+campaign: P155
+title: M2 conditional source-free Proca and half-line screening audit
+source_baseline: substrate@6d1f4e0
+source_units: [M2]
+base_release: v0.120.0
+accepted_release: v0.121.0
+adjudicated_at: '2026-08-10T08:20:00Z'
+selected_candidates:
+  - {id: A, reason: Literal native replay classifies every predicate without making the tally a headline oracle.}
+  - {id: B, reason: Full vector action variation and the mixed-index kernel supply the exact positive theorem.}
+  - {id: C, reason: Tangential geometry boundary data and asymptotic decay supply the missing BVP uniqueness.}
+  - {id: D, reason: Positive kinetic normalization composes C-GSM-001 only under an independently declared free action.}
+  - {id: E, reason: London and Abelian-Higgs comparisons expose the material current action geometry and observable premises.}
+  - {id: G, reason: Same-equation countermodels delimit every Meissner weak-boson and substrate interpretation.}
+  - {id: H, reason: Dependency semantic-consumer compatibility novelty release queue and memory audits close the transaction.}
+claims: [C-PRC-001]
+unpromoted_claims:
+  - {id: scalar_proxy_derives_the_full_Proca_equation, reason: It omits the vector constraint term and admits a longitudinal on-shell scalar mode rejected by the full kernel.}
+  - {id: Lorenz_condition_is_a_Proca_gauge_choice, reason: For nonzero Proca mass the divergence condition follows algebraically from the Euler equation.}
+  - {id: source_CHECK4_selects_the_decaying_branch, reason: Its OR predicate accepts a growing-only solution and no boundary or decay data are tested.}
+  - {id: exact_London_or_Meissner_identification, reason: CHECK5 leaves its material mass-squared unused and checks definitions plus a parameter relabeling without current action or observable data.}
+  - {id: EM5_to_M2_nonabelian_generalization, reason: Accepted C-VAC-001 is a different massive scalar-QED2 loop theorem and supplies no M2 Proca sector.}
+  - {id: physical_W_Standard_Model_or_substrate_mass_mechanism, reason: No governed gauge-scalar action stationary condensate field dictionary material response or observation is supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_proca_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  exact_scientific_attempt: attempts/0004/result.yaml
+  source_graph_attempt: attempts/0008/result.yaml
+  impact_attempt: attempts/0010/result.yaml
+  integrated_terminal_gate: attempts/0012/result.yaml
+  claim_review: memory/vantasner/decisions/C-PRC-001-review.md
+  source_review: memory/vantasner/decisions/M2-qualified-review.md
+source_disposition:
+  M2: qualified
+accepted_mappings: [C-PRC-001, C-GSM-001]
+compatibility:
+  mutable_campaign_and_framework: exact_symbolic_algebra_no_numeric_quadrature_or_legacy_name
+  immutable_primary: no_numpy_integration_surface
+  semantic_consumers: immutable_CF1_legacy_surface_recorded_without_execution
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/independent_proca_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py /home/dan/substrate
+  - .venv/bin/python -m pytest -q tests/test_proca.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

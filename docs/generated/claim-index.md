@@ -795,6 +795,15 @@ For a separately supplied real initial frequency x in [0,1] and real dimensionle
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-PRC-001
+
+Let A^mu be a real twice-differentiable vector field on 3+1 Minkowski space with eta=diag(-1,+1,+1,+1), define F_mu_nu=partial_mu*A_nu-partial_nu*A_mu, and separately declare the source-free density L=-F_mu_nu*F^mu_nu/4-m^2*A_mu*A^mu/2 with exact m>0 and boundary behavior licensing integration by parts. Exact variation gives partial_mu*F^(mu nu)-m^2*A^nu=0. Commuting derivatives and antisymmetry then derive partial_nu*A^nu=0 as a massive constraint rather than a gauge choice, and hence (box-m^2)*A^nu=0 for box=-partial_t^2+nabla^2. A plane wave proportional to exp(-i*omega*t+i*k dot x) has omega^2=|k|^2+m^2. For a static tangential component A_y(x) on x>=0 with A_y(0)=A0 and A_y tending to zero as x tends to infinity, the unique solution is A0*exp(-m*x); the general ODE also has a growing branch, and a longitudinal A_x(x) generally violates the derived divergence constraint. The inverse length is m and the penetration length is 1/m. More generally, a separately declared positive one-mode kinetic coefficient kappa and positive quadratic coefficient q give m^2=q/kappa. Conditional on C-GSM-001's lower-doublet coefficient q=g^2*v^2/4, exact positive g and v, and an independently declared canonical free kinetic action, m=g*v/2 and the length is 2/(g*v). At m=0 the divergence constraint is not derived and no finite positive penetration length follows. These are exact conditional action and boundary-value identities. They supply no London current, Maxwell-material response, Meissner magnetic observation, stationary condensate, physical W boson, Standard Model selection, or substrate mass mechanism.
+
+- Accepted in: `v0.121.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GSM-001
+
 ## C-QBL-001
 
 Conditional on the dimensionless 1+1 stationary-profile equation f_xx=(1/2-omega^2-f^2/12)f, C-U1-001's stationary phase Psi=f*exp(-i*omega*t), and 0<omega<1/sqrt(2), let kappa=sqrt(1/2-omega^2). Then for every real center x0 the positive localized profile f=sqrt(24)*kappa*sech(kappa*(x-x0)) solves the equation exactly. Within a nonzero ansatz A*sech(k*(x-x0)), the independent sech powers force k^2=1/2-omega^2 and A^2=24*k^2. Its accepted U1 charge is Q=96*omega*sqrt(1/2-omega^2): Q tends to zero at both open endpoints, increases on (0,1/2), reaches its unique maximum 24 at omega=1/2, and decreases on (1/2,1/sqrt(2)). These derivative signs alone establish no VK, spectral, orbital, or nonlinear stability, forced complex ontology, electric charge, particle identity, or substrate realization.

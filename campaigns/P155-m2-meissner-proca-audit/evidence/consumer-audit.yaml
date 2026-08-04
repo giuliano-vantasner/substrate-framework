@@ -1,0 +1,22 @@
+campaign: P155
+source_unit: M2
+inventory_reverse_dependency_hits: []
+semantic_consumers:
+  - {source_unit: W2, disposition: qualified, accepted_claims: [C-REP-002, C-SPN-002, C-REP-001, C-SG-011, C-BND-001], role: forward_narrative_claim_that_M1_M2_build_WZ_masses, effect: accepted_representation_closure_is_independent_and_imports_no_M2_physics}
+  - {source_unit: W5, disposition: qualified, accepted_claims: [C-SCT-001, C-BRN-001, C-BND-001, C-SG-011, C-SG-012, C-SG-013, C-REP-002, C-KIN-001], role: narrative_supersession_reference, effect: accepted_boundary_scattering_closure_is_independent_of_M2}
+  - {source_unit: W7, disposition: qualified, accepted_claims: [C-NAG-001, C-REP-002, C-SPN-002, C-GAU-001, C-MAX-001, C-SCT-001], role: forward_mass_residual_reference, effect: accepted_covariance_and_curvature_closure_still_supplies_no_M2_action_or_mass}
+  - {source_unit: YM1, disposition: pending_adjudication, role: claim_that_an_induced_kinetic_term_completes_M1_M2, effect: gains_no_authority_and_may_not_supply_C-PRC-001_action_provenance}
+  - {source_unit: CF1, disposition: qualified, accepted_claims: [C-VTX-001, C-VTX-002], role: declared_Abelian_Higgs_dual_Meissner_analogy, effect: accepted_vortex_action_and_BVP_are_independently_declared_and_do_not_import_M2_W_or_substrate_identity}
+replay:
+  frozen_nodes: 10
+  source_predicates: 111
+  source_assertions: 12
+  compatibility_surface: {CF1_immutable_legacy_references: 3, all_other_legacy_references: 0}
+decision: >-
+  The generated queue has no reverse M2 edges, but exact source inspection
+  finds five semantic narrative consumers. None is an accepted scientific
+  consumer of an M2 substrate mechanism. W2, W5, W7, and CF1 retain independent
+  qualified closures; YM1 remains pending. Immutable CF1's three np.trapz
+  references remain recorded version-only evidence and are not executed for
+  this exact campaign.
+debt: []

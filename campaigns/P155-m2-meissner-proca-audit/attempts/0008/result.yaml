@@ -1,0 +1,26 @@
+attempt: 0008
+campaign: P155
+candidate: token_and_line_wrap_aware_frozen_graph_replay
+status: passed
+started_at: '2026-08-10T07:52:00Z'
+finished_at: '2026-08-10T07:55:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  graph_checks: 33_passed
+  nodes: 10
+  source_predicates: 111
+  source_assertions: 12
+  pending_nonroot_nodes: [YM1]
+  inventory_false_dependencies: [C1_from_dsolve_C1, W2_from_M_W2]
+  compatibility: {CF1_immutable_legacy_references: 3, all_other_legacy_references: 0}
+classification: >-
+  M1 contributes only C-GSM-001's conditional coefficient. EM5, EM6, W7,
+  pending YM1, and narrative W2/W5 references cannot supply the missing M2
+  action or physical dictionary. CF1's accepted Abelian-Higgs closure declares
+  its own action and remains independent. The C1 and W2 candidate edges are
+  token-level inventory false positives.
+debt:
+  - run_additive_impact_and_adjacent_accepted_consumer_checks
+  - close_claim_release_disposition_generated_documentation_and_memory_state
+next_attempt: complete_impact_provenance_candidate_and_claim_level_review_evidence

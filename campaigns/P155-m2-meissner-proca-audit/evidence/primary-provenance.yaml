@@ -1,0 +1,43 @@
+campaign: P155
+accepted_base:
+  release: v0.120.0
+  framework_checkpoint: 30adbe3
+  scientific_commit: 30adbe3
+source_baseline:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_exclusions: uncommitted_Phase47_Phase48_engineering_framework_prose_and_memory_files
+source_unit:
+  id: M2
+  path: merged-framework/bridges/phase-7/bridge_M2_meissner_proca_W_mass.py
+  sha256: 4ae3e5cb06e7c0bce6387ac7b84f555de65f12cce4be42d620405bb2b5c5b59f
+dossier:
+  path: merged-framework/bridges/phase-7/dossiers/M2-dossier.md
+  sha256: c2b93ee2f68f9f42fde2ad133320fd8d3fc08293850dc63d4469a55cebf8908a
+accepted_sources_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml
+  - src/substrate_framework/gauge_scalar_mass.py
+  - src/substrate_framework/nonabelian_gauge.py
+  - src/substrate_framework/gauge_u1.py
+  - src/substrate_framework/abelian_higgs_vortex.py
+  - src/substrate_framework/vacuum_polarization.py
+  - src/substrate_framework/quartic_qball.py
+  - campaigns/P026-abelian-higgs-vortex
+  - campaigns/P059-wz4-hls-vector-elimination
+  - campaigns/P135-em5-induced-gauge-audit
+  - campaigns/P147-w2-su2-doublet-audit
+  - campaigns/P151-w7-su2l-gauging-audit
+  - campaigns/P154-m1-anderson-higgs-mass-audit
+external_primary_or_authoritative_sources:
+  - {id: Proca1936, url: https://www.neo-classical-physics.info/uploads/3/4/3/6/34363841/proca_-_wave_theory_of_positive_and_negative_electrons.pdf, use: original_vector_action_nonzero_mass_constraint_and_wave_equation_provenance}
+  - {id: London1935, url: https://doi.org/10.1098/rspa.1935.0048, use: material_specific_electromagnetic_and_Meissner_context_not_system_identity}
+  - {id: Anderson1963, url: https://doi.org/10.1103/PhysRev.130.439, use: plasma_and_superconductor_analogy_with_current_response_not_M2_identity}
+memory_searches:
+  - M2 Meissner Proca W mass penetration length
+  - Proca vector divergence constraint half-line screening
+authority_statement: >-
+  Memory and M2 are recall and candidate evidence. The pinned accepted release,
+  exact separately declared action, canonical API, full coordinate variation,
+  independent Fourier derivation, individual review, primary-source ceiling,
+  mutation-sensitive BVP, and global graph closure supply authority.

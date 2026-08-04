@@ -1,0 +1,30 @@
+attempt: 0003
+campaign: P155
+candidate: first_exact_Proca_implementation_and_independent_rederivation
+status: failed
+started_at: '2026-08-10T07:26:00Z'
+finished_at: '2026-08-10T07:34:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/independent_proca_review.py
+  - .venv/bin/python -m pytest tests/test_proca.py tests/test_gauge_scalar_mass.py -q
+result:
+  primary: 26_passed
+  focused_and_adjacent_tests: 28_passed
+  independent: stopped_after_8_passes
+failure: >-
+  The independent growing-branch check compared
+  limit(A0*exp(m*x),x,infinity) directly with positive infinity while A0 was
+  declared real and nonzero rather than positive. SymPy correctly retains the
+  sign-dependent infinity, so the Boolean oracle rejected negative-amplitude
+  growing profiles even though their absolute magnitude diverges.
+diagnosis:
+  category: verifier_interface
+  scientific_claim_changed: false
+  canonical_API_changed: false
+  source_classification_changed: false
+repair: >-
+  Test the absolute magnitude of the growing branch, which is the claimed
+  failure of the decay boundary condition and is sign independent. Preserve
+  the signed amplitude elsewhere so the BVP theorem remains general.
+next_attempt: rerun_the_fresh_coordinate_and_Fourier_derivation_with_an_absolute_growth_oracle

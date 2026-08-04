@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 66
-  qualified: 140
+  pending_adjudication: 65
+  qualified: 141
 phase_counts:
   phase-1: 6
   phase-2: 3
@@ -2305,8 +2305,44 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-PRC-001
+  - C-GSM-001
+  qualification: 'M2''s conditional lower-doublet coefficient, reduced transverse static equation, decaying
+    exponential residual, massive dispersion, and zero-coefficient limit survive under corrected action,
+    geometry, boundary, and kinetic-normalization premises. C-PRC-001 supplies the positive object: the
+    full source-free Proca vector equation in one mostly-plus convention, its derived nonzero-mass divergence
+    constraint, transverse massive dispersion, unique tangential half-line decay, and q/kappa one-mode
+    normalization. M2 instead varies a scalar proxy, calls the massive constraint a gauge choice, uses
+    an OR guard that accepts a growing-only solution, assumes its on-shell relation, and leaves its superconductor
+    mass-squared unused. C-QBL-001 does not force a condensate and C-VAC-001 is a different scalar-QED2
+    loop theorem. No London current, Meissner magnetic response, stationary condensate, physical W boson,
+    Standard Model, or substrate mass mechanism is accepted.'
+  evidence:
+  - campaigns/P155-m2-meissner-proca-audit/reviews/source_adjudication.md
+  - campaigns/P155-m2-meissner-proca-audit/evidence/source-reproduction.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/source-audit.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/check-adjudication.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/input-provenance.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/dependency-audit.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/consumer-audit.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/candidate-comparison.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/primary-provenance.yaml
+  - campaigns/P155-m2-meissner-proca-audit/evidence/literature-audit.yaml
+  - campaigns/P155-m2-meissner-proca-audit/verify.py
+  - campaigns/P155-m2-meissner-proca-audit/reviews/independent_proca_review.py
+  - campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py
+  - campaigns/P155-m2-meissner-proca-audit/attempts/0012/result.yaml
+  - memory/vantasner/decisions/C-PRC-001-review.md
+  - memory/vantasner/decisions/M2-qualified-review.md
+  note: P155 promotes C-PRC-001 through twenty-six primary, sixteen independent, thirteen focused-test,
+    and thirty-three frozen-graph checks; eighty-nine focused-plus-adjacent tests pass. Native M2 passes
+    all seven predicates. Five semantic source references and two token-level false dependencies are classified
+    without granting pending YM1 authority or disturbing qualified claims. M2 and all mutable P155 and
+    canonical code have zero executable legacy integration references; immutable CF1's three np.trapz
+    references remain recorded version-only evidence and are not executed for this exact change.
 - source_unit: NA1
   phase: phase-7
   path: merged-framework/bridges/phase-7/bridge_NA1_su2L_wilson_loop.py

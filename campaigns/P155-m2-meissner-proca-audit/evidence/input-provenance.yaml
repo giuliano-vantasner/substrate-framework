@@ -1,0 +1,31 @@
+campaign: P155
+claim: C-PRC-001
+derived_inputs:
+  - full_vector_Euler_equation_from_the_declared_action
+  - nonzero_mass_divergence_constraint_from_antisymmetry_and_commuting_derivatives
+  - transverse_massive_plane_wave_dispersion
+  - two_static_characteristic_roots
+  - unique_decaying_half_line_profile_from_boundary_and_asymptotic_data
+  - longitudinal_component_counterexample
+  - one_mode_mass_squared_q_over_kappa
+declared_model_inputs:
+  - mostly_plus_Minkowski_metric
+  - source_free_real_Proca_vector_action
+  - exact_positive_mass_or_positive_kinetic_and_quadratic_coefficients
+  - twice_differentiable_fields_and_boundary_behavior_licensing_integration_by_parts
+  - tangential_A_y_of_x_geometry_on_the_positive_half_line
+  - boundary_value_A_y_of_zero_equals_A0_and_decay_at_positive_infinity
+accepted_imports:
+  - {claim: C-GSM-001, use: conditional_lower_doublet_quadratic_coefficient_and_kinetic_normalization_ceiling}
+external_imports:
+  - {source: Proca1936, use: historical_primary_provenance_checked_against_exact_rederivation}
+  - {source: London1935, use: physical_material_ceiling_only}
+  - {source: Anderson1963, use: analogy_and_response_ceiling_only}
+excluded_comparators:
+  - queue_preexposed_M_W_squared_g_squared_v_squared_over_four
+  - queue_preexposed_lambda_W_two_over_gv
+  - queue_preexposed_Meissner_and_substrate_labels
+fitted_constants: []
+borrowed_answers: []
+undeclared_parameters: []
+debt: []

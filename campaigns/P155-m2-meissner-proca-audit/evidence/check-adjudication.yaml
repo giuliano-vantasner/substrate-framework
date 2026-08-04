@@ -1,0 +1,25 @@
+campaign: P155
+source_unit: M2
+source_native_tally: 7_passed
+source_checks:
+  CHECK1: {verdict: qualified_exact_import, mapping: C-GSM-001, oracle: accepted_general_mass_Gram_theorem_and_exact_lower_doublet_specialization}
+  CHECK2: {verdict: rejected_as_full_vector_derivation_but_retained_as_scalar_regression, mapping: C-PRC-001, oracle: full_four_component_coordinate_variation_and_independent_mixed_index_Fourier_kernel}
+  CHECK3: {verdict: qualified_exact_transverse_component_only, mapping: C-PRC-001, oracle: vector_constraint_compatible_tangential_static_reduction}
+  CHECK4: {verdict: qualified_profile_residual_with_failed_branch_guard, mapping: C-PRC-001, oracle: both_characteristic_roots_boundary_decay_uniqueness_and_growing_counterexample}
+  CHECK5: {verdict: rejected_as_physical_identification, mapping: C-PRC-001, oracle: unused_m_sc2_AST_audit_and_same_equation_distinct_dictionary_countermodels}
+  CHECK6: {verdict: qualified_exact_given_asserted_on_shell_relation, mapping: C-PRC-001, oracle: dispersion_derived_from_full_vector_kernel_instead_of_assumed}
+  CHECK7: {verdict: qualified_exact_limit, mapping: C-PRC-001, oracle: zero_mass_contraction_loses_the_transversality_implication}
+framework_oracles:
+  primary: 26_passed
+  independent: 16_passed
+  focused_and_adjacent_tests: 89_passed
+  source_graph: 33_passed
+mutation_coverage:
+  - scalar_proxy_accepts_a_longitudinal_mode_rejected_by_the_full_vector_kernel
+  - growing_only_branch_passes_the_source_OR_guard_but_fails_decay
+  - wrong_mass_sign_removes_the_positive_rest_gap
+  - mass_zero_removes_the_algebraic_constraint
+  - noncanonical_kinetic_coefficient_changes_mass_and_length
+  - doubled_quadratic_coefficient_changes_inverse_length_by_sqrt_two
+  - physical_dictionary_labels_remain_free
+debt: []

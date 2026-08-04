@@ -1,0 +1,23 @@
+attempt: 0006
+campaign: P155
+candidate: corrected_phrase_frozen_graph_replay
+status: failed
+started_at: '2026-08-10T07:46:00Z'
+finished_at: '2026-08-10T07:48:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  graph_checks_before_stop: 27_passed
+failure: >-
+  The revised W2 test still used raw substring absence. M2 contains the mass
+  variable M_W2 throughout, so the substring is present even though the source
+  unit label W2 is not a semantic dependency in the body.
+diagnosis:
+  category: representation_and_inventory_oracle
+  scientific_claim_changed: false
+  graph_inventory_changed: false
+  dependency_classification_changed: false
+repair: >-
+  Use a regex word-boundary search for the standalone W2 source-unit token.
+  Keep M_W2 as explicit evidence for how the inventory false positive arose.
+next_attempt: rerun_the_graph_with_token_aware_W2_classification

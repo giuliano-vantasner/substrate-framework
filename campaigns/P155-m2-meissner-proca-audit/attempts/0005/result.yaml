@@ -1,0 +1,26 @@
+attempt: 0005
+campaign: P155
+candidate: frozen_dependency_and_semantic_consumer_graph
+status: failed
+started_at: '2026-08-10T07:42:00Z'
+finished_at: '2026-08-10T07:45:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  graph_checks_before_stop: 27_passed
+  nodes: 10
+  source_predicates: 111
+  source_assertions: 12
+failure: >-
+  The W2 semantic check used a paraphrased string for its forward M1/M2 mass
+  narrative. The source body does omit W2 exactly as expected, but the positive
+  consumer-side phrase did not match byte-for-byte.
+diagnosis:
+  category: verifier_interface
+  scientific_claim_changed: false
+  graph_inventory_changed: false
+  dependency_classification_changed: false
+repair: >-
+  Pin the actual W2 wording around its Phase-7 M1 and M2 forward reference and
+  retain the exact absence check on the M2 body.
+next_attempt: rerun_the_same_hash_pinned_graph_with_exact_semantic_phrases

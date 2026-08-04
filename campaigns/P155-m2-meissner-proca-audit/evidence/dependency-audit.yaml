@@ -1,0 +1,23 @@
+campaign: P155
+source_unit: M2
+declared_source_dependencies:
+  - {source_unit: C1, disposition: qualified, use: none_inventory_false_positive_from_SymPy_C1_integration_constant}
+  - {source_unit: EM5, disposition: qualified, use: only_C-GAU-001_C-VAC-001_as_a_correction_ceiling_without_finite_massless_scalar_Schwinger_mass_or_nonabelian_Proca_action}
+  - {source_unit: EM6, disposition: qualified, use: only_C-QBL-001_without_forced_complex_ontology_or_stationary_condensate}
+  - {source_unit: M1, disposition: qualified, use: only_C-GSM-001_for_the_conditional_quadratic_coefficient_and_generalized_kinetic_normalization}
+  - {source_unit: W2, disposition: qualified, use: none_inventory_false_positive_and_no_actual_M2_body_reference}
+  - {source_unit: W7, disposition: qualified, use: only_C-NAG-001_C-REP-002_C-SPN-002_C-GAU-001_C-MAX-001_C-SCT-001_without_gauge_action_mass_or_W_boson}
+accepted_claim_closure:
+  - {claim: C-PRC-001, dependencies: [C-GSM-001]}
+  - {claim: C-GSM-001, dependencies: [C-NAG-001, C-GAU-001, C-REP-002]}
+  - {claim: C-NAG-001, dependencies: [C-REP-002]}
+  - {claim: C-GAU-001, dependencies: [C-U1-001]}
+  - {claim: C-REP-002, dependencies: [C-SPN-002]}
+excluded_imports:
+  - C1_optical_medium_as_an_M2_dependency
+  - EM5_finite_massless_scalar_Schwinger_mass_or_three_plus_one_nonabelian_generalization
+  - EM6_forces_a_physical_complex_condensate
+  - M1_supplies_a_gauge_kinetic_action_pole_or_physical_W
+  - W2_or_W7_supplies_physical_weak_matter_a_Yang_Mills_action_or_mass
+  - Proca_London_Anderson_sources_identify_the_declared_field_with_the_substrate
+debt: []

@@ -1,0 +1,28 @@
+attempt: 0004
+campaign: P155
+candidate: repaired_exact_Proca_implementation_and_independent_rederivation
+status: passed
+started_at: '2026-08-10T07:35:00Z'
+finished_at: '2026-08-10T07:41:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/independent_proca_review.py
+  - .venv/bin/python -m pytest tests/test_proca.py tests/test_gauge_scalar_mass.py -q
+result:
+  primary: 26_passed
+  independent: 16_passed
+  focused_and_adjacent_tests: 28_passed
+  exact_action_variation: full_four_component_coordinate_variation_matches_the_vector_Proca_equation
+  exact_constraint: double_divergence_derives_partial_mu_A_mu_zero_only_for_nonzero_mass
+  exact_BVP: tangential_half_line_boundary_and_decay_data_select_one_exponential_branch_uniquely
+  kinetic_normalization: mass_squared_equals_quadratic_coefficient_over_positive_kinetic_coefficient
+  compatibility: zero_executable_legacy_integration_access_in_mutable_P155_and_canonical_code
+classification: >-
+  C-PRC-001 survives as a distinct exact conditional action and BVP theorem.
+  The scalar-proxy, Lorenz-gauge, branch, material, W-boson, and substrate
+  readings in M2 remain corrected or rejected.
+debt:
+  - replay_hash_pinned_dependency_and_semantic_consumer_graph
+  - run_additive_impact_and_adjacent_accepted_consumer_checks
+  - close_claim_release_disposition_generated_documentation_and_memory_state
+next_attempt: freeze_and_replay_the_source_dependency_and_semantic_consumer_graph

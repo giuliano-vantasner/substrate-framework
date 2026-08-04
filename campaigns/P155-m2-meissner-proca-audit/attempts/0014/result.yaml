@@ -1,0 +1,19 @@
+attempt: 0014
+campaign: P155
+candidate: corrected_terminal_gate_provenance_and_record_replay
+status: passed
+started_at: '2026-08-10T08:35:00Z'
+finished_at: '2026-08-10T08:38:00Z'
+commands:
+  - correct_adjudication_claim_and_disposition_evidence_to_attempt_0012
+  - regenerate_queue_docs_and_accepted_memory
+  - replay_repository_generation_changed_memory_skill_and_diff_checks
+results:
+  terminal_gate_pointer: attempts/0012/result.yaml
+  repository_contract: valid_156_accepted_claims_65_pending_units
+  generated_docs_and_memory: current
+  changed_memory_contracts: 4_passed
+  skill_contract: passed
+  diff_check: passed
+debt: []
+next_attempt: continue_parent_effort_at_NA1

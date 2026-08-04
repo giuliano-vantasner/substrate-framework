@@ -1,0 +1,35 @@
+attempt: 0010
+campaign: P155
+candidate: explicit_repository_impact_and_adjacent_claim_replay
+status: passed
+started_at: '2026-08-10T08:00:00Z'
+finished_at: '2026-08-10T08:06:00Z'
+commands:
+  - gitnexus detect-changes --scope all --repo substrate-framework
+  - gitnexus impact each_new_Proca_API --repo substrate-framework --file src/substrate_framework/proca.py --kind Function --depth 4 --include-tests
+  - lexical_exact_API_consumer_search
+  - .venv/bin/python -m pytest eight_Proca_and_adjacent_accepted_sector_test_files -q
+  - .venv/bin/python scripts/validate_repository.py
+  - .venv/bin/python -m compileall -q targeted_P155_and_Proca_paths
+result:
+  GitNexus:
+    risk: LOW
+    impacted_preexisting_symbols: 0
+    affected_processes: 0
+    detected_modified_symbol: src/substrate_framework/__init__.py::__all__
+    limitation: untracked_new_files_are_not_reported_by_detect_changes
+  lexical_consumers:
+    - src/substrate_framework/__init__.py
+    - campaigns/P155-m2-meissner-proca-audit/verify.py
+    - tests/test_proca.py
+  adjacent_tests: 89_passed
+  repository_contract: valid_155_accepted_claims_66_pending_units
+  targeted_compile: passed
+classification: >-
+  The change is additive with no pre-existing API consumers or execution
+  process. Exact lexical consumers and adjacent accepted-sector tests
+  corroborate the graph verdict and close the untracked-file detection gap.
+debt:
+  - complete_claim_level_review_and_adjudication
+  - close_release_disposition_generated_documentation_and_memory_state
+next_attempt: construct_the_individually_reviewed_claim_and_terminal_M2_disposition

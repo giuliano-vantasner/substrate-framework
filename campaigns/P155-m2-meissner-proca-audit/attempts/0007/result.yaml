@@ -1,0 +1,23 @@
+attempt: 0007
+campaign: P155
+candidate: token_aware_frozen_graph_replay
+status: failed
+started_at: '2026-08-10T07:49:00Z'
+finished_at: '2026-08-10T07:51:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P155-m2-meissner-proca-audit/reviews/replay_source_graph.py /home/dan/substrate
+result:
+  graph_checks_before_stop: 33_passed
+failure: >-
+  The YM1 semantic check matched a sentence with normalized spaces, while the
+  immutable source wraps the phrase between no-longer-lean and imported-
+  kinetic-term across a newline.
+diagnosis:
+  category: verifier_interface
+  scientific_claim_changed: false
+  graph_inventory_changed: false
+  consumer_classification_changed: false
+repair: >-
+  Match the stable opening and closing clauses independently so formatting does
+  not become the scientific oracle.
+next_attempt: rerun_the_same_graph_with_line_wrap_insensitive_YM1_clauses

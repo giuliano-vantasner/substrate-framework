@@ -1,0 +1,23 @@
+attempt: 0009
+campaign: P155
+candidate: additive_GitNexus_impact_analysis
+status: failed
+started_at: '2026-08-10T07:56:00Z'
+finished_at: '2026-08-10T07:59:00Z'
+commands:
+  - gitnexus analyze --index-only --workers 1 --worker-timeout 60 -v
+  - gitnexus detect-changes --scope all
+  - gitnexus impact each_new_Proca_API --file src/substrate_framework/proca.py --kind Function --depth 4 --include-tests
+result:
+  indexing: passed_22320_nodes_35241_edges_334_clusters_7_flows
+failure: >-
+  The detect-changes and impact commands refused to choose among four globally
+  indexed repositories because the repo label was omitted.
+diagnosis:
+  category: tool_invocation
+  scientific_claim_changed: false
+  code_changed: false
+repair: >-
+  Rerun every query with --repo substrate-framework. The fresh index itself is
+  valid and need not be rebuilt.
+next_attempt: query_the_explicit_substrate_framework_graph

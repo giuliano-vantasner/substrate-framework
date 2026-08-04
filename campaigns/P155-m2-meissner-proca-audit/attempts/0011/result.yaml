@@ -1,0 +1,29 @@
+attempt: 0011
+campaign: P155
+candidate: integrated_promotion_and_parent_continuation_gate
+status: failed
+started_at: '2026-08-10T08:07:00Z'
+finished_at: '2026-08-10T08:24:00Z'
+commands_planned:
+  - generate_queue_docs_and_accepted_memory
+  - run_primary_independent_graph_and_targeted_tests
+  - scripts/validate.sh
+  - git diff --check
+  - record_only_repository_generation_memory_and_skill_checks_after_finalizing_this_attempt
+results:
+  primary: 26_passed
+  independent: 16_passed
+  focused_tests: 13_passed
+  changed_memory_contracts: 4_passed
+failure: >-
+  The source-graph replay command omitted its required source_root positional
+  argument and exited 2 from argparse before executing any graph assertion.
+diagnosis:
+  category: tool_invocation
+  scientific_claim_changed: false
+  code_changed: false
+  integrated_gate_started: false
+repair: >-
+  Supply the pinned /home/dan/substrate source root, rerun the graph replay,
+  and start the unchanged single integrated promotion gate only after it passes.
+next_attempt: corrected_graph_invocation_then_integrated_promotion_gate

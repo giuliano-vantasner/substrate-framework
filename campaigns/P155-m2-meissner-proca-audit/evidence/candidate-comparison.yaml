@@ -1,0 +1,40 @@
+campaign: P155
+criteria_order:
+  - explicit metric action field-strength mass and variation conventions
+  - derived nonzero-mass constraint positive dispersion and massless limit
+  - component geometry boundary decay branch selection and uniqueness
+  - kinetic normalization and separation from physical dictionaries
+  - accepted-framework compatibility mutation sensitivity and graph closure
+candidates:
+  A:
+    decision: selected_as_source_adjudication_only
+    reason: Native replay classifies all seven predicates but cannot validate M2's full-vector or physical headline.
+  B:
+    decision: selected_as_general_positive_object
+    reason: Full action variation and mixed-index Fourier algebra derive the exact Proca equation constraint and dispersion.
+  C:
+    decision: selected_as_BVP_completion
+    reason: Tangential geometry plus boundary and decay data uniquely select the decaying branch and reject the longitudinal copy.
+  D:
+    decision: selected_as_conditional_composition
+    reason: Positive kinetic normalization gives q over kappa and only a canonical free action composes C-GSM-001 into the source formulas.
+  E:
+    decision: selected_as_interpretation_boundary
+    reason: London and Abelian-Higgs models require their own material action current geometry and observable dictionaries.
+  F:
+    decision: rejected_as_duplicate_only
+    reason: No accepted claim owns the full vector constraint dispersion and transverse half-line uniqueness theorem.
+  G:
+    decision: selected_as_countermodel_and_ceiling
+    reason: Identical exponential equations leave material weak-boson and substrate dictionaries free.
+  H:
+    decision: selected
+    reason: Dependency consumer compatibility novelty release queue documentation and memory closure are mandatory.
+selection_basis: >-
+  B supplies the exact vector theorem, C supplies the missing geometry and BVP
+  data, and D separates the quadratic coefficient from its kinetic
+  normalization. E and G prevent the shared equation shape from becoming a
+  system identity. A and H close provenance and governance; no queue-preexposed
+  mass or penetration formula selected the theorem.
+foundational_revision_required: false
+debt: []

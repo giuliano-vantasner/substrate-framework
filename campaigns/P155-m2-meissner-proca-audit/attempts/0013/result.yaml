@@ -1,0 +1,22 @@
+attempt: 0013
+campaign: P155
+candidate: final_promotion_diff_audit
+status: failed
+started_at: '2026-08-10T08:33:00Z'
+finished_at: '2026-08-10T08:34:00Z'
+commands:
+  - inspect_registry_release_disposition_module_adjudication_and_artifact_surface
+failure: >-
+  The accepted adjudication's integrated_terminal_gate field still pointed to
+  failed invocation attempt 0011 instead of the unchanged passing integrated
+  workflow recorded by attempt 0012. The accepted claim and disposition
+  evidence lists also omitted attempt 0012.
+diagnosis:
+  category: record_provenance
+  scientific_claim_changed: false
+  code_changed: false
+  full_gate_changed: false
+repair: >-
+  Point the adjudication and authoritative evidence inventories at attempt
+  0012, regenerate only record consumers, and replay record-sensitive checks.
+next_attempt: corrected_terminal_gate_provenance_and_record_replay
