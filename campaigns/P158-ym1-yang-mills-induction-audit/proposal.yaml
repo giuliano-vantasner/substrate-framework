@@ -78,10 +78,12 @@ selection_criteria:
   - every queue-preexposed one-half projector and generated-term value excluded from concept selection and thresholds
 claims_proposed: [C-NVP-001]
 claim_delta: >-
-  Reserve C-NVP-001 only for a complete conditional non-Abelian scalar
-  vacuum-polarization theorem that is source-aware distinct from C-VAC-001 and
-  C-NAG-001. If the full derivation or novelty gate fails, the identifier
-  remains unpromoted and YM1 is terminally classified through existing claims.
+  Source-aware review selects C-NVP-001 for a complete conditional massive
+  complex-scalar non-Abelian vacuum-polarization theorem in Euclidean two
+  dimensions. It includes the representation-indexed exact two-point kernel,
+  bubble--seagull Ward cancellation, and independently supported covariant
+  low-momentum curvature term, while rejecting YM1's massless pole, unique
+  induced coupling, physical W sector, dimensional lift, and substrate claims.
 comparators_blinded_until: >-
   This manifest, matching prose contract, YM1 and dossier hashes, candidates A
   through I, representation, action, loop, regulator, coefficient, limit,
@@ -89,4 +91,4 @@ comparators_blinded_until: >-
   and committed. Queue-exposed trace, projector, and kinetic-term values cannot
   select a concept. The source and dossier bodies, exact AST flow, guards,
   constants, and further comparator material remain unopened until that boundary.
-status: draft
+status: source-aware-frozen

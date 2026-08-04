@@ -1,0 +1,55 @@
+source_unit: YM1
+source_path: /home/dan/substrate/merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py
+source_sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6
+dossier_path: /home/dan/substrate/merged-framework/bridges/phase-7/dossiers/YM1-dossier.md
+dossier_sha256: 3f58232191a2b58ae507ddbc107fe0f7ed08dc4e1e41927c0ced74ea6760765d
+native_execution:
+  command: /home/dan/substrate-framework/.venv/bin/python merged-framework/bridges/phase-7/bridge_YM1_yang_mills_induction.py
+  working_directory: /home/dan/substrate
+  exit_status: 0
+  terminal_tally: ALL_9_CHECKS_PASS
+  compatibility_event: none
+static_shape:
+  imports: [sympy]
+  local_functions: [check, Pi_nonabelian]
+  check_calls: 9
+  assertions: 1
+  numerical_quadrature: none
+  numpy_surface: none
+  declared_symbols: [q0, q1, g, e, Pi_q2, u, q2s, m_mass]
+reproduced_relations:
+  - pauli_half_generators_have_trace_metric_one_half_delta
+  - an_imposed_nonzero_momentum_transverse_projector_is_idempotent
+  - a_defined_color_kernel_factorizes_as_trace_metric_times_an_imposed_abelian_kernel
+  - that_imposed_projector_makes_the_defined_color_kernel_transverse
+  - the_declared_u_one_minus_u_massless_parameter_integrand_integrates_to_one
+  - declared_coefficient_rearrangements_compare_equal_after_defining_g_eff_squared
+  - the_imposed_projector_annihilates_declared_longitudinal_modes
+  - a_renormalized_rank_one_charge_factor_reproduces_the_declared_EM5_values
+  - an_explicit_nontransverse_counterexample_has_nonzero_momentum_contraction
+oracle_gaps:
+  - >-
+    YM1 never declares a quantum field action, statistics, determinant,
+    regulator, loop momentum, bubble, seagull, subtraction, or counterterm.
+    Trace factorization is defined before it is checked.
+  - >-
+    The Ward identity follows from imposing the transverse projector. It does
+    not derive the scalar loop numerator or the bubble--seagull cancellation.
+  - >-
+    The parameter numerator u*(1-u) is not the accepted complex-scalar QED2
+    numerator (1-2*u)^2. Its fixed-nonzero-momentum massless limit is therefore
+    not the scalar theorem governed by C-VAC-001.
+  - >-
+    A quadratic projector term omits the momentum factor relating A*P*A to
+    F-squared and cannot establish the cubic and quartic pieces of a full
+    non-Abelian curvature invariant.
+  - >-
+    The alleged Abelian limit replaces tr(T_a*T_a)=one_half by a separately
+    normalized charge factor one, so it is not a fixed-convention subgroup
+    limit and cannot validate the imported EM5 pole.
+scope_of_reproduction: >-
+  The run reproduces exact finite matrix, projector, integral, and coefficient
+  arithmetic under declared definitions. It does not reproduce a scalar or
+  fermion loop, a complete non-Abelian effective action, an induced unique
+  Yang--Mills coupling, a propagating W sector, a dimensional lift, or a
+  substrate realization.

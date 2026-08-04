@@ -1,0 +1,49 @@
+source_unit: YM1
+headline_verdict: qualified_with_headline_rejection_and_distinct_conditional_replacement
+accepted_content:
+  - exact_pauli_half_trace_metric_one_half_delta
+  - exact_nonzero_momentum_projector_idempotency_transversality_and_longitudinal_annihilation
+  - exact_arithmetic_of_the_declared_parameter_integral_and_coefficient_definitions
+  - exact_nontransverse_counterexample
+corrected_content:
+  - >-
+    A declared massive complex-scalar SU2 multiplet has a color-diagonal
+    two-point kernel equal to T(R) times the accepted scalar-QED2 kernel, not
+    YM1's u*(1-u) massless scaffold.
+  - >-
+    Bubble and seagull contractions cancel before transverse decomposition;
+    the representation trace multiplies both terms.
+  - >-
+    The low-momentum component-density coefficient is
+    N_s*g^2*T(R)/(48*pi*m^2), while the coefficient multiplying
+    tr_R(F_mu_nu*F_mu_nu) is N_s*g^2/(48*pi*m^2).
+  - >-
+    The full local non-Abelian completion follows from the independently
+    derived background-field inverse-mass expansion, not from the quadratic
+    projector alone.
+  - >-
+    The fixed-nonzero-momentum massless limit diverges for this scalar model;
+    the zero-momentum and heavy-mass limits vanish in the stated order.
+rejected_content:
+  - YM1_derives_the_claimed_charged_left_doublet_one_loop_determinant
+  - u_one_minus_u_is_the_massive_complex_scalar_QED2_numerator
+  - projector_transversality_alone_is_a_Ward_derivation
+  - the_quadratic_projector_term_proves_full_nonabelian_covariant_completion
+  - g_eff_squared_equals_two_pi_over_g_squared_is_a_unique_induced_gauge_coupling
+  - the_rank_one_charge_reassignment_is_a_fixed_normalization_abelian_limit
+  - the_source_generates_a_massless_Schwinger_pole_or_physical_W_propagator
+  - W2_W7_substrate_matter_statistics_regulator_and_matching_are_supplied
+  - the_3plus1_dimensional_weak_or_substrate_Yang_Mills_sector_is_closed
+predicate_adjudication:
+  - {id: YM1.1, verdict: accepted_exact_algebra, mapping: C-NVP-001, correction: fundamental_example_of_explicit_T_of_R_not_a_physical_doublet_derivation}
+  - {id: YM1.2, verdict: accepted_exact_kinematics, mapping: C-NVP-001, correction: nonzero_momentum_projector_only}
+  - {id: YM1.3, verdict: qualified_definitional, mapping: C-NVP-001, correction: factorization_must_follow_a_declared_scalar_determinant_and_representation_trace}
+  - {id: YM1.4, verdict: rejected_as_Ward_derivation, mapping: C-NVP-001, correction: bubble_seagull_cancellation_precedes_transverse_form}
+  - {id: YM1.5, verdict: rejected_for_complex_scalar, mapping: C-VAC-001, correction: wrong_numerator_and_scalar_fixed_Q_massless_limit_diverges}
+  - {id: YM1.6, verdict: rejected_headline, mapping: C-NVP-001, correction: missing_Q_factor_full_covariant_completion_bare_term_counterterm_and_normalization}
+  - {id: YM1.7, verdict: accepted_exact_kinematics, mapping: C-NVP-001, correction: consequence_of_imposed_projector_not_independent_loop_evidence}
+  - {id: YM1.8, verdict: rejected_as_fixed_convention_limit, mapping: C-VAC-001, correction: generator_normalization_changes_from_one_half_to_one_and_imported_pole_is_not_scalar}
+  - {id: YM1.9, verdict: accepted_weak_counterexample, mapping: C-NVP-001, correction: rejects_one_fabrication_but_does_not_validate_the_headline}
+compatibility:
+  native_numpy_surface: none
+  mutable_policy: exact_algebra_trapezoid_integral_or_np_trapezoid_only

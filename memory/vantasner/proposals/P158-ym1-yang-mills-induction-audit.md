@@ -2,7 +2,7 @@
 description: Audit YM1 and derive a properly scoped non-Abelian vacuum-polarization theorem if distinct
 author: vantasner
 created: '2026-08-10T11:40:00Z'
-updated: '2026-08-10T11:40:00Z'
+updated: '2026-08-10T12:28:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -103,6 +103,40 @@ representation, regulator, bare coefficient, counterterm, normalization,
 dimension, and physical ceilings. If completeness or novelty fails, the
 identifier remains unpromoted and the campaign closes YM1 through existing
 accepted claims.
+
+## Source-Aware Classification
+
+The hash-pinned source exits cleanly with all nine checks passing, but the
+headline oracle fails. YM1 computes the Pauli-half trace metric correctly and
+checks exact projector algebra. It then defines color factorization, imposes a
+transverse projector before checking the Ward identity, and imports the
+`u(1-u)` massless EM5 scaffold without a quantum field action, determinant,
+bubble, seagull, regulator, or counterterm. That numerator is not the accepted
+massive complex-scalar QED2 numerator, and its claimed massless finite pole
+conflicts with C-VAC-001's fixed-positive-momentum divergence. The quadratic
+projector expression also lacks the momentum factor and background-field
+derivation required for a full non-Abelian curvature invariant. Its Abelian
+guard changes the generator normalization from one half to one.
+
+Candidate C nevertheless survives as a distinct conditional theorem. For
+`N_s` massive complex-scalar multiplets in a declared SU(2) representation
+`R`, Euclidean two dimensions, `D=partial-i*g*W^a*T_a`, and
+`tr_R(T_a*T_b)=T(R)*delta_ab`, the exact color kernel is `T(R)` times the
+accepted scalar-QED2 kernel. Bubble and seagull contractions cancel before
+transverse decomposition. The low-momentum coefficient is
+`N_s*g^2*T(R)/(48*pi*m^2)` for the component density `F^a F^a`, equivalently
+`N_s*g^2/(48*pi*m^2)` for `tr_R(F F)`. A separately checked background-field
+inverse-mass expansion supplies the cubic and quartic non-Abelian completion.
+The loop term remains additive to any bare and counterterm coefficient and
+supplies no pole, weak sector, dimensional lift, or substrate identification.
+
+Strassler's primary scalar-loop background-field construction supplies the
+non-Abelian representation trace and combined gauge vertices; Fliegner,
+Haberl, Schmidt, and Schubert independently supply the manifestly
+gauge-invariant massive-scalar inverse-mass expansion. Their conventions are
+mapped to C-NAG-001 and the coefficient magnitude is anchored by the accepted
+Abelian limit. Revision 0001 freezes this source-aware delta before canonical
+implementation.
 
 ## Implementation and Oracle Plan
 

@@ -1,0 +1,43 @@
+attempt: 0005
+campaign: P158
+candidate: source_aware_conditional_nonabelian_scalar_loop_freeze
+status: passed
+started_at: '2026-08-10T11:48:00Z'
+finished_at: '2026-08-10T12:32:00Z'
+commands:
+  - inspect_hash_pinned_YM1_and_dossier_after_the_committed_comparator_gate
+  - reproduce_YM1_with_clean_exit_and_ALL_9_CHECKS_PASS
+  - inspect_exact_source_AST_data_flow_integrand_and_coefficient_definitions
+  - audit_Strassler_1992_and_Fliegner_Haberl_Schmidt_Schubert_1998_primary_sources
+  - compare_C_NAG_001_C_VAC_001_and_focused_canonical_APIs_for_novelty
+  - parse_all_P158_YAML
+  - memory_validate_absolute_P158_proposal_path_with_repository_base
+  - .venv/bin/python scripts/validate_repository.py
+  - git_diff_check
+freeze:
+  frozen_parent_sha256: 50be0d545a11c3a01f6a1a58f7691449d0d6717e3426090b38f8938f3c54e614
+  proposal_revision_sha256: 4b82802d14ef94c283ac6f80b95786c8ff8f09884d086f34cb8ffc3c643481de
+  source_aware_proposal_sha256: 901a13cecbcba8207b2d5de1929c5d2e65391105ce08eb50ac4fd0be8c4066fd
+  memory_contract_sha256: dee6feae1987ccbcdb6d89b97d5078bd96ac61615c11c7ee18f21aefd689a78e
+  source_reproduction_sha256: 835f487fe15a551fbf3d565bd254d901f06db833f052d30cf0d5f1850c9c2965
+  source_audit_sha256: cf3d75ce5553f768ad6d1982aa35db8104c379b6d41ab86c6b23ef53aca36fa1
+  check_adjudication_sha256: d358ac29dc0139423cd043275fe1b6cb375a71bf08bde464ac32fef7287c9986
+  literature_audit_sha256: 1c62c9a05e03720000d12f0c94f23e4481f4c113959afc06d9bf9a04768565df
+  source_sha256: bb8046bcf3a57d23bd50f9ac5ca6953cab8ffaaa2a2f852074495b48b6e83cf6
+  dossier_sha256: 3f58232191a2b58ae507ddbc107fe0f7ed08dc4e1e41927c0ced74ea6760765d
+claim_delta:
+  identifiers: [C-NVP-001]
+  dependencies: [C-NAG-001, C-VAC-001]
+  decision: implement_and_individually_review_conditional_theorem
+classification:
+  exact_source_content: pauli_trace_projector_integral_and_counterexample_arithmetic
+  corrected_source_content: declared_complex_scalar_kernel_Ward_derivation_representation_index_and_covariant_local_completion
+  rejected_source_content: massless_scalar_pole_unique_induced_coupling_physical_W_sector_dimension_lift_and_substrate_closure
+  compatibility_event: none
+  identifier_collision: none
+debt:
+  - implement_pure_canonical_module_and_focused_tests
+  - build_primary_and_fresh_independent_verifiers_with_load_bearing_mutations
+  - build_frozen_source_graph_and_replay_semantic_consumers
+  - complete_individual_claim_review_release_disposition_generated_state_and_terminal_gate
+next_attempt: implement_the_frozen_conditional_API_without_importing_it_into_the_fresh_reviewer

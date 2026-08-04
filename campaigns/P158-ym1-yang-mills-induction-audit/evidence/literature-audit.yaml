@@ -1,0 +1,41 @@
+campaign: P158
+scope: conditional_massive_complex_scalar_nonabelian_background_effective_action
+sources:
+  - id: Strassler1992
+    citation: Matthew J. Strassler, Field Theory Without Feynman Diagrams One-Loop Effective Actions, Nuclear Physics B 385 (1992) 145-184
+    url: https://arxiv.org/abs/hep-ph/9205205
+    primary: true
+    supports:
+      - euclidean_complex_scalar_determinant_in_a_background_gauge_field
+      - nonabelian_generalization_as_a_path_ordered_Wilson_loop_with_trace_in_representation_R
+      - scalar_loop_N_point_background_gauge_vertices_with_color_trace_factorization
+      - combined_one_gauge_and_two_gauge_scalar_vertices_in_the_standard_diagrammatic_description
+      - off_shell_background_gauge_invariance_of_the_effective_action
+    does_not_support:
+      - YM1_substrate_doublet_statistics_or_action
+      - a_unique_bare_gauge_coefficient_or_physical_W_sector
+      - the_specific_2D_closed_form_without_an_independent_calculation
+  - id: FliegnerHaberlSchmidtSchubert1998
+    citation: D. Fliegner, P. Haberl, M. G. Schmidt, and C. Schubert, The Higher Derivative Expansion of the Effective Action by the String Inspired Method Part II, Annals of Physics 264 (1998) 51-74
+    url: https://arxiv.org/abs/hep-th/9707189
+    primary: true
+    supports:
+      - massive_scalar_operator_minus_D_squared_plus_m_squared_plus_V_in_d_dimensional_Euclidean_space
+      - manifestly_gauge_invariant_nonabelian_inverse_mass_expansion
+      - leading_pure_gauge_curvature_squared_term_in_the_second_proper_time_coefficient
+      - independent_comparison_of_coefficients_with_other_gauge_invariant_algorithms
+    convention_map: >-
+      Their D=partial+i*g*A and effective-action sign package writes the
+      antisymmetric contraction as F_kl*F_lk. Mapping D and determinant signs
+      to C-NAG-001 and C-VAC-001 converts the leading invariant to the positive
+      Euclidean tr_R(F_mu_nu*F_mu_nu) coefficient used by C-NVP-001. The
+      magnitude is independently fixed by the accepted Abelian limit.
+    does_not_support:
+      - promoting_a_quadratic_projector_without_the_background_determinant
+      - a_massless_Schwinger_pole_for_a_complex_scalar
+      - a_substrate_or_3plus1_dimensional_identification
+verdict: >-
+  Primary literature supports a complete conditional non-Abelian scalar
+  background-field theorem and its local covariant curvature completion. It
+  does not support YM1's undeclared substrate matter loop, fermion-shaped
+  massless kernel, unique induced coupling, physical pole, or dimensional lift.

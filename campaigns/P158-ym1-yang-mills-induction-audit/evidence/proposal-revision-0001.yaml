@@ -1,0 +1,56 @@
+revision: 0001
+campaign: P158
+parent_frozen_proposal_sha256: 50be0d545a11c3a01f6a1a58f7691449d0d6717e3426090b38f8938f3c54e614
+trigger: >-
+  Source-aware reproduction rejects YM1's headline induction but confirms that
+  Candidate C is a distinct positive theorem once the quantum matter action,
+  complex-scalar statistics, representation, regulator, and Euclidean 2D scope
+  are declared and the non-Abelian completion is independently derived.
+unchanged:
+  - source_and_dossier_hashes_accepted_base_and_physical_ceilings
+  - candidates_A_through_I_and_their_predeclared_structural_ordering
+  - exclusion_of_all_queue_preexposed_trace_projector_and_generated_term_values
+  - compatibility_policy_requiring_exact_algebra_trapezoid_integral_or_np_trapezoid_in_mutable_code
+claim_delta:
+  identifiers: [C-NVP-001]
+  dependencies: [C-NAG-001, C-VAC-001]
+  release_change: new_patch_release_if_individual_review_and_global_replay_pass
+  implementation_change: new_pure_nonabelian_vacuum_polarization_module_and_focused_tests
+conditional_theorem:
+  field_content: N_s_positive_integer_massive_complex_scalar_multiplets_in_SU2_representation_R
+  dimension_signature: two_dimensional_Euclidean
+  covariant_derivative: D_mu_equals_partial_mu_minus_i_g_W_mu_a_T_a
+  generator_metric: tr_R_T_a_T_b_equals_T_R_delta_ab
+  regulator: translation_and_background_gauge_preserving
+  quadratic_kernel: >-
+    Pi_hat_ab(Q)=delta_ab*N_s*T(R)*g^2/pi*(atanh(z)/z-1),
+    z=sqrt(Q)/sqrt(Q+4*m^2), multiplying the transverse projector.
+  local_component_density_coefficient: N_s*g^2*T(R)/(48*pi*m^2)
+  local_trace_density_coefficient: N_s*g^2/(48*pi*m^2)
+  completion: background_field_inverse_mass_expansion_of_the_same_declared_determinant
+  limits: zero_momentum_and_heavy_mass_vanish_fixed_positive_Q_massless_diverges
+  ceiling: loop_term_is_additive_to_bare_and_counterterm_and_supplies_no_pole_weak_sector_dimension_lift_or_substrate_map
+source_corrections:
+  - replace_YM1_u_one_minus_u_numerator_with_the_accepted_complex_scalar_kernel
+  - derive_bubble_seagull_Ward_cancellation_before_transverse_decomposition
+  - type_component_and_trace_density_coefficients_separately
+  - derive_full_local_nonabelian_completion_from_the_background_determinant
+  - preserve_fixed_generator_normalization_in_the_abelian_limit
+  - reject_unique_induced_coupling_pole_propagator_and_substrate_claims
+novelty: >-
+  C-VAC-001 owns only the Abelian complex-scalar determinant and C-NAG-001 owns
+  only classical non-Abelian covariance. Neither claim states or implements the
+  representation-indexed non-Abelian two-point kernel or proves that its local
+  limit completes to the full trace curvature invariant.
+oracle: >-
+  Exact canonical composition plus independent representation traces,
+  bubble--seagull contraction, scalar parameter integral, series, proper-time
+  curvature coefficient, Abelian and representation examples, limits,
+  counterfamilies, source replay, and semantic graph. Mutations remove or flip
+  the seagull, substitute YM1's numerator, omit T(R), rescale generators,
+  identify component with trace density, or drop the bare term.
+implementation_boundary: >-
+  Add a pure module and focused tests for the conditional theorem. Campaign
+  verifiers must independently rederive load-bearing coefficients and must not
+  import the new module in the fresh-review path.
+status: frozen

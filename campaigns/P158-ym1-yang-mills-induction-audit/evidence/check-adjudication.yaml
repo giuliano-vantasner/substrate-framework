@@ -1,0 +1,14 @@
+campaign: P158
+source_unit: YM1
+native_tally: 9_passed
+predicates:
+  YM1.1: {verdict: accepted_exact_algebra, retained: pauli_half_trace_metric, correction: conditional_representation_example_only}
+  YM1.2: {verdict: accepted_exact_kinematics, retained: projector_idempotency, correction: nonzero_momentum_and_no_loop_authority}
+  YM1.3: {verdict: qualified_definitional, retained: expected_color_factorization_shape, correction: source_defines_the_equality_it_checks}
+  YM1.4: {verdict: rejected_as_Ward_derivation, retained: imposed_tensor_is_transverse, correction: derive_bubble_seagull_cancellation_first}
+  YM1.5: {verdict: rejected_for_stated_scalar_import, retained: declared_integrand_integrates_to_one, correction: accepted_scalar_numerator_is_one_minus_two_u_squared_and_fixed_Q_limit_diverges}
+  YM1.6: {verdict: rejected_headline, retained: coefficient_rearrangement, correction: missing_momentum_factor_covariant_completion_and_additive_bare_data}
+  YM1.7: {verdict: accepted_exact_kinematics, retained: longitudinal_annihilation, correction: consequence_of_imposed_projector}
+  YM1.8: {verdict: rejected_as_abelian_limit, retained: separately_normalized_rank_one_arithmetic, correction: normalization_changes_and_false_scalar_pole_is_imported}
+  YM1.9: {verdict: accepted_weak_guard, retained: one_nontransverse_tensor_fails, correction: mutation_does_not_validate_loop_or_action}
+headline: source_qualified_but_claimed_Yang_Mills_induction_rejected
