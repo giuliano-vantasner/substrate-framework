@@ -1,0 +1,69 @@
+campaign: P159
+source_unit: YM2
+source_sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c
+ast:
+  check_calls: 10
+  assert_nodes: 1
+  local_check_helper: true
+  local_scientific_helpers: [c_ds, riesz_G, G_color, percolor_slopes]
+  imports: [numpy, sympy, scipy.special.gamma]
+compatibility_ast:
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 1
+  imported_legacy_names: 0
+  direct_current_attributes: 0
+  dynamic_current_getattrs: 1
+  imported_current_names: 0
+  eager_legacy_default_fallbacks: 1
+constructed_executable_objects:
+  - exact_Pauli_half_trace_metric
+  - declared_scalar_Riesz_normalization_and_radial_kernel
+  - defined_product_of_trace_metric_and_scalar_kernel
+  - radial_derivative_of_that_defined_product
+  - fixed_parameter_numeric_gamma_and_log_log_regressions
+  - one_dimensional_fractional_FFT_packet_regression
+  - manually_renormalized_U1_comparator
+absent_executable_objects:
+  - quantum_matter_action_or_determinant
+  - local_or_nonlocal_gauge_action
+  - action_variation_or_quadratic_Hessian
+  - inversion_of_the_color_weighted_quadratic_kernel
+  - time_coordinate_or_time_derivative
+  - spacetime_signature_or_Lorentz_index_tensor
+  - gauge_fixing_parameter_constraint_or_ghost_sector
+  - source_current_probe_representation_or_source_energy
+  - boundary_retarded_advanced_Feynman_or_Euclidean_prescription
+  - derivation_or_selection_of_spatial_dimension_d
+  - derivation_or_selection_of_fractional_power_s
+  - metric_measure_Dirichlet_form_or_spectral_geometry
+  - full_nonlinear_nonabelian_completion_of_a_fractional_operator
+load_bearing_findings:
+  - >-
+    G_color is defined as TrTT times an already inverted scalar Green kernel.
+    If TrTT multiplies the quadratic inverse kernel, fixed-source inversion
+    instead produces the inverse trace metric; no source convention is given
+    that could justify the displayed multiplication.
+  - >-
+    The so-called abelian limit sets an unused eps_self symbol to zero and
+    manually changes the trace factor from one half to one. It is a convention
+    replacement, not a limit of the displayed SU2 carrier.
+  - >-
+    The force checks differentiate a Green kernel without declaring source and
+    probe strengths or a potential-energy dictionary.
+  - >-
+    The FFT check is one-dimensional with s=one-half and tests a localized
+    packet approximately; it does not test the claimed three-spatial-dimensional
+    s=one gauge sector.
+  - >-
+    The body declares d=3 and s=1 at the comparator endpoint. It contains no
+    map from the accepted Euclidean 2D loop theorem to that domain.
+narrative_conflict: >-
+  The source repeatedly says the YM1 ceiling is closed, while its own module
+  docstring also states that the 3+1D kinetic-term ceiling is not closed and
+  that YM2 supplies only the static force-law shape. The executable resolves
+  only the latter narrow shape arithmetic.
+duplication:
+  Riesz_kernel: src/substrate_framework/momentum_kernels.py
+  trace_metric_and_loop: src/substrate_framework/nonabelian_vacuum_polarization.py
+  check_helper: src/substrate_framework/verification.py
+debt: []

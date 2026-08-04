@@ -1,0 +1,25 @@
+campaign: P159
+proposed_claim: null
+nearest_claims:
+  C-NVP-001:
+    owns: representation_indexed_Euclidean_2D_scalar_loop_and_local_curvature_coefficient
+    ceiling: no_dimension_lift_propagator_or_physical_sector
+  C-KRN-001:
+    owns: fixed_input_subcritical_scalar_Riesz_inverse_normalization_and_d3_s1_endpoint
+    ceiling: no_dimension_power_source_force_gauge_or_lift_selection
+  C-KRN-002:
+    owns: force_dictionary_dimension_power_nonidentifiability_and_critical_boundary
+    ceiling: no_geometry_gauge_action_or_dimensional_lift
+  C-NAG-001:
+    owns: local_nonabelian_connection_curvature_covariance_and_trace_square
+    ceiling: no_action_coefficient_propagator_dimension_or_physical_sector
+novelty_test: >-
+  YM2's only new executable expression is the ordinary tensor product of the
+  already accepted fundamental trace metric with the already accepted scalar
+  Riesz kernel. It supplies no distinct premise, inversion, theorem, action,
+  domain, solver, limit, or consumer API. Its physical labels are unsupported
+  interpretations rather than novel mathematical content.
+decision: terminal_qualification_by_accepted_composition_without_new_claim_or_API
+implementation_change: none
+duplicated_constants_or_solvers_added: false
+debt: []

@@ -2,7 +2,7 @@
 description: Audit YM2's claimed dimensional Yang-Mills lift and its exact operator content
 author: vantasner
 created: '2026-08-10T14:45:00Z'
-updated: '2026-08-10T14:45:00Z'
+updated: '2026-08-10T15:02:00Z'
 tags: [substrate-framework, campaign-proposal, migration-YM2, dimensional-lift]
 category: proposals
 confidence: exploratory
@@ -95,11 +95,12 @@ select a concept, define a threshold, or establish a dimensional lift.
 
 ## Proposed Claim Delta
 
-The initial delta is empty. Candidate B is preferred if accepted claims
-already contain the exact supportable surface. A new identifier may be
-reserved only in a source-aware revision after a distinct, complete operator
-theorem passes novelty and dependency review; unsupported lift prose cannot
-justify framework expansion.
+The source-aware delta remains empty. Candidate B is selected because accepted
+claims already contain every exact trace, Riesz, endpoint, and derivative
+surface. Candidate C is duplicate composition; Candidates D and E require
+actions and operators absent from YM2. No new identifier, API, or release is
+planned. The source's unsupported lift prose does not justify framework
+expansion.
 
 ## Implementation and Oracle Plan
 
@@ -125,10 +126,10 @@ verifiers pin durable snapshots rather than mutable current state.
 
 ## Attempts and Continuation
 
-The attempt ledger begins with this prior-exposure-aware freeze. Every failure
-will identify whether its mechanism is compatibility, implementation,
-representation, candidate concept, target statement, or accepted foundation,
-then name the next materially different route.
+The attempt ledger preserves the prior-exposure-aware freeze and the native
+NumPy compatibility abort. An isolated alias-only replay then passes all ten
+source checks. Source-aware audit selects Candidates A, B, F, and G: exact
+accepted composition, counterfamilies, and governance closure.
 
 ## Debt Ledger
 

@@ -1,0 +1,26 @@
+campaign: P159
+source_unit: YM2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py
+sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c
+dossier_path: merged-framework/bridges/phase-7/dossiers/YM2-dossier.md
+dossier_sha256: 629e1683359087d181ecf3c2b3bd38f6e8bbe1206330746c946b44856d74af56
+native:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py
+  exit_code: 1
+  terminal_tally: null
+  failure_line: 146
+  failure: eager_getattr_default_accesses_removed_numpy_trapz_before_current_np_trapezoid_can_be_selected
+  scientific_verdict: none_compatibility_only
+alias_only:
+  command: >-
+    .venv/bin/python -c import_runpy_import_numpy_assign_np_trapz_to_np_trapezoid_then_run_the_hash_pinned_path
+  source_mutated: false
+  only_environment_change: np_trapz_alias_points_to_np_trapezoid
+  exit_code: 0
+  passed_checks: 10
+  terminal_tally: ALL_10_CHECKS_PASS
+  stdout_contains_result_prose_after_tally: false
+compatibility_classification: version_only
+scientific_reproduction: passed_all_executed_source_predicates
+headline_authority: none_the_tally_does_not_test_the_dimensional_lift

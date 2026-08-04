@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P159
+candidate: native_hash_pinned_YM2_reproduction
+status: failed
+started_at: '2026-08-10T14:51:00Z'
+finished_at: '2026-08-10T14:52:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py
+result:
+  exit_code: 1
+  reached_scientific_tally: false
+failure:
+  layer: environment_compatibility
+  mechanism: >-
+    Line 146 evaluates getattr(np, "trapz") eagerly as the default argument to
+    getattr(np, "trapezoid", ...). NumPy in the current environment has the
+    current trapezoid API and no legacy trapz attribute, so execution aborts
+    before any scientific verdict.
+  scientific_failure: false
+source_mutated: false
+candidate_rejected: false
+next_attempt: inject_only_np_trapz_equals_np_trapezoid_then_run_the_unchanged_hash_pinned_body

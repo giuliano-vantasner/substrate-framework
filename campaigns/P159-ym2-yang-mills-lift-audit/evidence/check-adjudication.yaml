@@ -1,0 +1,21 @@
+campaign: P159
+source_unit: YM2
+checks:
+  - {id: YM2.1, status: retained_exact_duplicate, mapping: [C-NVP-001, C-REP-002], reason: The Pauli-half fundamental trace metric is exact but already accepted and does not ride to a new spacetime without an independently defined operator.}
+  - {id: YM2.2, status: retained_as_definition_only, mapping: [C-NVP-001, C-KRN-001], reason: A constant color matrix factors out of the product that G_color defines; differentiating it with respect to unrelated symbols does not derive a dimension-changing map or propagator.}
+  - {id: YM2.3, status: retained_as_typed_static_composition, mapping: [C-NVP-001, C-KRN-001], reason: Tensoring a supplied trace metric with a supplied scalar Riesz kernel is exact, but the source does not invert a color-weighted kinetic operator or construct a gauge action.}
+  - {id: YM2.4, status: retained_as_defined_product_value, mapping: [C-NVP-001, C-KRN-001], reason: Half of the supplied d=3 s=1 scalar kernel is exactly 1/(8*pi*r); this is not the fixed-source inverse of a quadratic kernel whose coefficient is one half and does not derive d or s.}
+  - {id: YM2.5, status: retained_as_radial_derivative_only, mapping: C-KRN-002, reason: The exponent follows by differentiation but earns no non-Abelian force interpretation without source probe energy sign and representation data.}
+  - {id: YM2.6, status: retained_as_numeric_regression, mapping: C-KRN-001, reason: SciPy repeats the already exact d=3 s=1 gamma value and half-factor arithmetic.}
+  - {id: YM2.7, status: qualified_numeric_regression, mapping: C-KRN-002, reason: Polyfit regresses a hard-coded unnormalized power and its finite-difference derivative without refinement; exact algebra already fixes both slopes.}
+  - {id: YM2.8, status: qualified_numeric_definition_regression, mapping: C-KRN-001, reason: A one-dimensional s=one-half packet approximately exercises the declared Fourier multiplier but neither the d=3 s=1 endpoint nor a gauge or spacetime lift.}
+  - {id: YM2.GUARD1, status: rejected_as_abelian_limit, mapping: null, reason: eps_self is not used in the kernel and the trace factor is manually changed from one half to one; the check swaps carrier normalization instead of taking a limit in one declared convention.}
+  - {id: YM2.GUARD2, status: retained_as_fixed_dimension_counterexample, mapping: C-KRN-002, reason: At already fixed d=3 the supplied s=0.9 power differs from s=1; the check cannot select d=3 or s=1 and uses a comparator-built regression.}
+headline_decision: >-
+  Select exact accepted composition with no new claim or API. YM2 reproduces a
+  trace metric, a declared color-times-static-Riesz product, its radial
+  derivative, and duplicate numeric regressions. It neither inverts the
+  color-weighted kinetic kernel nor constructs a source, action, time operator,
+  gauge fixing, Lorentzian propagator, dimension-selection mechanism, physical
+  force, weak sector, or substrate lift. The claimed ceiling remains rejected.
+debt: []

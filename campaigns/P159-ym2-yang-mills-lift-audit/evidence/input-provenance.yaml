@@ -1,0 +1,34 @@
+campaign: P159
+base_release: v0.123.0
+base_commit: 290b8da
+proposal_freeze_commit: a862320
+proposal_sha256: 5faa25f9cfb4ae07256f507ef707a4ed954062b721b35c55f133a1c0deadb60c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  source_unit: YM2
+  path: merged-framework/bridges/phase-7/bridge_YM2_yang_mills_3plus1_lift.py
+  sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c
+  dossier_path: merged-framework/bridges/phase-7/dossiers/YM2-dossier.md
+  dossier_sha256: 629e1683359087d181ecf3c2b3bd38f6e8bbe1206330746c946b44856d74af56
+accepted_inputs:
+  - C-NVP-001 exact representation trace and conditional Euclidean 2D scalar-loop theorem with its no-lift ceiling
+  - C-NAG-001 exact local non-Abelian covariance and curvature conventions only
+  - C-KRN-001 fixed-input subcritical scalar Riesz inverse and d=3 s=1 conditional endpoint
+  - C-KRN-002 critical and force-dictionary boundaries plus dimension-power nonidentifiability
+  - C-MAX-001 separately sourced ordinary static Green branches
+  - exact finite matrix inversion tensor products derivatives and Fourier-symbol algebra
+  - existing pure nonabelian_vacuum_polarization momentum_kernels nonabelian_gauge maxwell source_audit and verification APIs
+excluded_inputs:
+  - YM1's rejected kinetic induction pole weak-sector and dimensional-lift conclusions
+  - EM7's rejected endpoint selection fractal geometry physical-force and dimensional-lift conclusions
+  - D3S's rejected claim that sine-Gordon mass-gap analyticity selects s=1 or a Coulomb sector
+  - pending GK1 QCD2 QCD5 or any retroactive closure annotation
+  - an undeclared action gauge fixing time operator source boundary prescription representation coupling or physical dimension
+  - source numeric values or successful tally as concept-selection criteria
+comparator_gate: >-
+  P158 already exposed YM2, so fresh blinding was impossible. P159 froze the
+  competing operator constructions, typed distinctions, criteria, mutations,
+  compatibility policy, and physical ceilings before renewed targeted
+  inspection. Known source values cannot select the accepted composition.
+compatibility_event: immutable_eager_legacy_default_replayed_alias_only
+debt: []

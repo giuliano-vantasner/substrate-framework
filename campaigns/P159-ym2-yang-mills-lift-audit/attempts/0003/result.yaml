@@ -1,0 +1,45 @@
+attempt: 0003
+campaign: P159
+candidate: source_aware_accepted_composition_freeze
+status: passed
+started_at: '2026-08-10T14:53:00Z'
+finished_at: '2026-08-10T15:04:00Z'
+commands:
+  - inspect_hash_pinned_YM2_and_dossier_after_the_committed_freeze
+  - preserve_native_compatibility_abort
+  - replay_unchanged_YM2_with_np_trapz_alias_backed_by_np_trapezoid
+  - inspect_source_AST_definitions_data_flow_checks_and_absent_operator_inputs
+  - compare_C_NVP_001_C_NAG_001_C_KRN_001_C_KRN_002_and_existing_APIs_for_novelty
+  - freeze_predicate_adjudication_input_provenance_candidate_comparison_and_nonduplication
+  - memory_validate_absolute_P159_proposal_path_with_repository_base
+  - .venv/bin/python scripts/validate_repository.py
+  - git_diff_check
+freeze:
+  initial_frozen_proposal_sha256: 5faa25f9cfb4ae07256f507ef707a4ed954062b721b35c55f133a1c0deadb60c
+  source_aware_proposal_sha256: 80e9f194155093062cb28e7bcd6a40c16137945b34b0250c98f523c9756c9060
+  proposal_revision_sha256: da156bed216e4fb1a5a27524b5f5e4807382b26a0805244a5d6536d03bbece8d
+  source_reproduction_sha256: 9a8e6762394632f3b10cdad8158d1a406162634d9156da57e6306a39dc09b84f
+  source_audit_sha256: d0526f4b40b45a60bd73d64ac9d197df4309d6ea6ebe2844168c3e1e239f6795
+  check_adjudication_sha256: 96f5801aef4fb974c8429250cceb5f544e9475ddf9d5e167c1bbb33fd610d4a6
+  source_sha256: 19c8708ea9b81eff719362ee713dd3d933b5422788759ae6e8933c705863b11c
+  dossier_sha256: 629e1683359087d181ecf3c2b3bd38f6e8bbe1206330746c946b44856d74af56
+source_reproduction:
+  native: version_only_abort_before_scientific_tally
+  alias_only: clean_exit_ALL_10_CHECKS_PASS
+selection:
+  selected: [A, B, F, G]
+  rejected_as_duplicate: [C]
+  rejected_as_absent_source_delta: [D, E]
+claim_delta: []
+implementation_delta: []
+classification:
+  exact_source_content: trace_metric_defined_color_times_Riesz_product_endpoint_arithmetic_and_radial_derivative
+  qualified_source_content: numeric_slope_and_one_dimensional_FFT_regressions
+  rejected_source_content: propagator_normalization_abelian_limit_force_dimensional_lift_full_gauge_sector_and_substrate_closure
+  compatibility_event: eager_legacy_default_alias_only
+debt:
+  - build_primary_and_fresh_independent_exact_composition_oracles
+  - prove_the_color_kernel_inversion_and_representation_mutations
+  - build_frozen_dependency_and_consumer_graph
+  - complete_terminal_source_review_disposition_memory_and_validation
+next_attempt: commit_the_source_aware_freeze_then_implement_the_campaign_oracles_without_a_new_canonical_API
