@@ -1,0 +1,21 @@
+attempt: 0002
+campaign: P168
+candidate: frozen_manifest_validation_and_commit
+status: passed
+started_at: '2026-08-10T22:55:00Z'
+finished_at: '2026-08-10T22:56:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework memory/vantasner/proposals/P168-cf2-fixed-area-linearity-closure-audit.md
+  - parse_all_campaign_YAML
+  - git diff --check
+results:
+  repository: WORKFLOW_VALID_163_claims_163_accepted_54_pending
+  proposal_memory: valid
+  campaign_yaml: YAML_OK_2
+  diff_check: passed
+freeze_manifest_sha256: 528cefd8a42ada14e0eddc96f113fa30c35791c86f31a6c7308b9e9415f4be5c
+source_body_opened_by_P168: false
+debt:
+  - commit_the_validated_freeze_before_source_body_audit
+next_attempt: literal_native_source_reproduction

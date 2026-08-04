@@ -1,0 +1,31 @@
+attempt: 0001
+campaign: P168
+candidate: source_body_unopened_freeze_with_prior_exposure
+status: passed
+started_at: '2026-08-10T22:50:00Z'
+finished_at: '2026-08-10T22:54:00Z'
+base_release: v0.127.0
+base_commit: 61a85bd
+source_unit:
+  id: CF2
+  path: merged-framework/bridges/phase-10/bridge_CF2_linear_potential.py
+  sha256: e9651b9d4db9f23bb54d013a419c2f050725063347e63f253a968781598bfe6a
+dossier:
+  path: merged-framework/bridges/phase-10/dossiers/CF2-dossier.md
+  sha256: b88a66e7b4bba4a886ea87d5a88ff6dcaac20ec99b1e9c556198b4c7dc2e79e1
+source_checkout:
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  pinned_paths_clean: true
+  unrelated_worktree_changes_present: true
+actions:
+  - retained_the_loaded_physics_skill_governance_oracle_and_campaign_contract
+  - read_v0_127_0_C-FLX-001_and_separate_vortex_Maxwell_and_Wilson_boundaries
+  - searched_local_memory_and_identified_P027_as_the_existing_CF2_result
+  - froze_eight_candidates_and_structural_selection_criteria
+  - recorded_P167s_prior_native_CF2_replay_and_zero_legacy_integration_surface
+source_body_opened_by_P168_before_freeze: false
+prior_source_exposure: P027_P167_accepted_claims_durable_memory_generated_queue_and_prior_direct_replay
+scientific_result: none_pre_freeze
+debt:
+  - validate_and_commit_the_freeze_before_renewed_source_or_dossier_body_audit
+next_attempt: frozen_manifest_validation_and_commit

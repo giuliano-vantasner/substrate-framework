@@ -1,0 +1,57 @@
+id: P168
+base_release: v0.127.0
+base_commit: 61a85bd
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [CF2]
+question: >-
+  Does hash-pinned CF2's fixed-area uniform-flux construction close exactly
+  through C-FLX-001 while keeping stored field energy, endpoint work, and
+  their slopes distinct and excluding unproved CF1, Riesz, Wilson-loop, QCD,
+  confinement, and substrate identities?
+invariants:
+  - C-FLX-001 separates energy slope Phi squared over two A from endpoint force slope q Phi over A and equates them only when q equals Phi over two.
+  - Fixed area and uniformity are load-bearing premises rather than consequences of CF1 or Gauss data alone.
+  - C-VTX-001 and C-VTX-002 provide a separate conditional radial vortex and no map to CF2's ideal tube variables.
+  - C-WIL-001 derives a linear potential only from a separately declared area-law loop expectation and does not derive that law.
+  - A native or version-compatibility execution event cannot select the physical interpretation.
+allowed_imports:
+  - C-FLX-001
+  - C-VTX-001 and C-VTX-002 as separate-context evidence only
+  - C-MAX-001 as a separately normalized radial spreading counterexample only
+  - C-WIL-001 as a downstream conditional-loop comparison only
+  - src/substrate_framework/flux_tube.py
+  - immutable P027 and P167 adjudicated evidence
+  - exact symbolic integration differentiation and dimensional algebra
+  - CF2 and its dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal native CF2 replay with all fifteen predicates and its assertion individually adjudicated.
+  - id: B
+    description: Accepted composition through C-FLX-001 with no new claim or canonical API.
+  - id: C
+    description: Retain only fixed-area field-energy linearity if endpoint-work semantics fail coefficient or provenance audit.
+  - id: D
+    description: A new variable-area or geometry-family theorem only if accepted scope leaves a reusable exact gap.
+  - id: E
+    description: Compose CF2's ideal area and slope with C-VTX-001 or C-VTX-002 tension and flux.
+  - id: F
+    description: Physical quark linear potential QCD area law or confinement mechanism.
+  - id: G
+    description: Riesz or fractional-dimension explanation of the source line.
+  - id: H
+    description: Source dependency consumer compatibility queue documentation release and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - energy_and_endpoint_work_definition_separation
+  - exact_one_half_factor_charge_flux_and_area_power_sensitivity
+  - fixed_area_uniformity_and_variable_geometry_limits
+  - dependency_and_physical_interpretation_closure
+  - assumption_parameter_and_API_economy
+  - source_consumer_compatibility_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before renewed CF2 and dossier body audit or P168 execution;
+  the fifteen-check tally, fixed-area formulas, factor-of-two mismatch, P027
+  verdict, and P167 native replay are already exposed by accepted records, so
+  no fresh source or value blinding is claimed
+status: frozen_with_prior_source_exposure
