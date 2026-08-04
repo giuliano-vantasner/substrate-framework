@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P161
+candidate: prior_exposure_aware_proposal_freeze
+status: passed
+started_at: '2026-08-10T17:10:00Z'
+finished_at: '2026-08-10T17:16:00Z'
+commands:
+  - sha256sum proposal.yaml evidence/frozen-proposal.yaml
+  - memory validate memory/vantasner/proposals/P161-qcd2-su3-dimensional-lift-audit.md --base /home/dan/substrate-framework
+  - .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+passed:
+  manifest_snapshot_identity: 68bd4a2c1e66ff9e328c34b86dc71b6d011467000b026b9fe901fe89599bc2b4
+  memory_contract: valid
+  repository_contract: valid_160_accepted_claims_60_pending_units
+  diff_whitespace: passed
+prior_exposure:
+  source_body_previously_exposed: true
+  source_previously_executed_alias_only: true
+  dossier_excerpts_previously_exposed: true
+  effect: prior_values_are_excluded_from_candidate_selection_and_threshold_setting
+scientific_verdict: not_yet_tested
+debt:
+  - reproduce_the_hash_pinned_source_natively_and_with_the_narrow_numpy_alias
+  - inventory_and_adjudicate_every_source_predicate
+  - test_operator_color_metric_dimension_and_source_probe_mutations
+next_attempt: commit_the_freeze_then_begin_the_targeted_source_and_dossier_audit

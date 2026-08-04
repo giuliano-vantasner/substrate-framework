@@ -1,0 +1,53 @@
+id: P161
+base_release: v0.124.0
+base_commit: 1451670
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [QCD2]
+question: >-
+  Which exact color-metric and fixed-input Riesz statements in QCD2 survive,
+  and does any distinct operator theorem connect the accepted two-dimensional
+  SU3 scalar loop to a four-dimensional gauge action?
+invariants:
+  - C-LIE-001 fixes the standard fundamental SU3 trace metric and structure constants without a physical color identification.
+  - C-NVP-002 fixes only a declared massive complex-scalar finite-representation loop in flat Euclidean two-space and denies dimensional lift or a unique total coupling.
+  - C-KRN-001 fixes a scalar Riesz inverse only after dimension exponent Fourier convention and nonzero coefficient are supplied.
+  - C-KRN-002 fixes the source-probe force dictionary and proves that power behavior alone does not identify both dimension and operator order.
+  - P159 establishes that inversion of a trace-weighted quadratic kernel uses the reciprocal color metric rather than the direct trace factor.
+allowed_imports:
+  - C-LIE-001
+  - C-NVP-002
+  - C-KRN-001
+  - C-KRN-002
+  - C-NAG-001 as a connection and curvature convention boundary only
+  - P159 exact color-metric inversion evidence without importing YM2 source conclusions
+  - exact finite-dimensional matrix inversion tensor-product Fourier and dimensional algebra
+candidates:
+  - id: A
+    description: Literal hash-pinned native and alias-only QCD2 predicate replay and individual adjudication.
+  - id: B
+    description: Existing accepted composition of C-LIE-001 C-NVP-002 C-KRN-001 and C-KRN-002 with no new claim or API.
+  - id: C
+    description: A reusable exact theorem for a positive color metric tensor a scalar quadratic kernel and its reciprocal-metric inverse.
+  - id: D
+    description: A declared dimension-changing operator or intertwiner from the two-dimensional loop action to a four-dimensional gauge action.
+  - id: E
+    description: A separately declared genuine four-dimensional SU3 background-field matter loop with regulator subtraction and matching data.
+  - id: F
+    description: Metric inversion dimension exponent normalization gauge longitudinal bare counterterm and source-probe counterfamilies.
+  - id: G
+    description: Claim disposition dependency consumer compatibility and generated-state closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and correct quadratic-kernel inversion
+  - explicit spacetime action operator domain signature gauge and boundary data
+  - dimension and operator-order identifiability without supplied-answer reuse
+  - normalization bare counterterm source-probe and field-coordinate honesty
+  - correct limits mutation sensitivity independent derivation and API economy
+  - downstream consumer compatibility and physical-scope honesty
+claims_proposed: []
+comparators_blinded_until: >-
+  source-aware proposal freeze commit before renewed targeted QCD2 and dossier
+  audit; QCD2 source execution and source or dossier excerpts were already
+  exposed by P159 and P160 and cannot select a candidate or threshold
+status: draft
+
