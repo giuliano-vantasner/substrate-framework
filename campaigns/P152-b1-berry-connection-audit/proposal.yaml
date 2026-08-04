@@ -1,0 +1,78 @@
+id: P152
+base_release: v0.117.0
+base_commit: c5414f8
+scientific_base_commit: ef5851c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [B1]
+question: >-
+  Reproduce and independently audit B1's claim that an RP2 disclination has a
+  concrete Berry connection with half-unit local value and minus-one holonomy,
+  and determine exactly which statements belong to the projective base loop,
+  a chosen lift or section, a gauge-dependent local one-form, its endpoint
+  transition, a gauge-invariant Wilson phase, or a physical medium field.
+invariants:
+  - >-
+    C-TOP-001 and C-CHR-001 govern integer and finite sign characters. Equal
+    minus-one values do not identify source spaces, quotient maps,
+    representations, connections, or physical objects.
+  - >-
+    C-SPN-001 identifies the polar pure-spin-one ray orbit as RP2 but supplies
+    no spatial texture, line bundle, Berry connection, defect existence,
+    material, or observation.
+  - >-
+    C-DEF-001 distinguishes pi1(RP2)=Z2 from the full polar manifold's integer
+    deck group and supplies only conditional angular energy ledgers. It does
+    not choose a spinor lift, section, connection, or holonomy convention.
+  - >-
+    C-GAU-001 governs a separately declared local U1 connection. It proves
+    covariance and an integer-flux ceiling but supplies no B1 Berry bundle,
+    fractional flux, electromagnetic field, or gauge dynamics.
+  - >-
+    Pending M1 grants no authority. B1 is lexically listed by twenty-four
+    reverse units, but many use B1 as an unrelated coefficient name; every
+    semantic consumer must be classified rather than inferred from the token.
+  - >-
+    The generated queue exposes B1's headline, pending M1 dependency, eight
+    literal checks, one assertion, symbolic and numeric hints, and detailed
+    advertised results. Accepted P140 graph evidence additionally pins B1's
+    hash and its eager dynamic legacy-name compatibility shape. Those exposed
+    materials cannot select a candidate. The B1 source and dossier bodies,
+    exact predicates, data flow, and runtime output remain unopened for P152.
+allowed_imports:
+  - C-TOP-001 and C-CHR-001 only for exact sign-character algebra and its typed-domain ceiling
+  - C-SPN-001 only for the conditional projective polar ray orbit and physical ceiling
+  - C-DEF-001 only for the RP2 and full-polar fundamental-group distinction
+  - C-GAU-001 only for local U1 gauge-transformation and holonomy comparison
+  - exact normalized finite-dimensional complex vectors projectors smooth circle paths and elementary bundle transition data
+  - B1 and B1-dossier at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+candidates:
+  - {id: A, description: Reproduce B1 literally and classify every predicate by the base loop lift section local connection transition function holonomy and physical object it evaluates.}
+  - {id: B, description: Treat a one-component or fixed-ray spinor phase as a pure-gauge lift whose local half connection is cancelled by its nonperiodic endpoint transition.}
+  - {id: C, description: Construct a genuine nontrivial RP2 loop through a real normalized lift with zero local connection and a minus-one endpoint transition.}
+  - {id: D, description: Gauge-transform the projective lift to a periodic complex section with constant half connection and the same transition-corrected minus-one holonomy.}
+  - {id: E, description: Classify flat U1 connections on a circle by their holonomy while proving that the local representative A_eff is nonunique under periodic gauge transformations.}
+  - {id: F, description: Retain only the accepted Z2 sign character and projective loop class if B1 adds no distinct connection or bundle theorem.}
+  - {id: G, description: Separate mathematical holonomy from electromagnetic vector potential fermionic state material disclination medium dynamics and observation using same-holonomy countermodels.}
+  - {id: H, description: Close dependency lexical-consumer compatibility nonduplication disposition release generated-state and durable-memory governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - explicit base loop covering or spinor carrier normalized state projector section and endpoint relation
+  - correct Berry one-form sign gauge transformation transition-function and path-orientation conventions
+  - gauge-invariant closed-loop phase modulo two pi rather than a local representative or bare open-path integral
+  - nontrivial RP2 loop versus fixed-ray pure phase and full polar integer-deck alternatives
+  - half-strength integer-strength reversal and contractible-loop limits
+  - compatibility with accepted sign-character projective-orbit defect and U1 ceilings
+  - load-bearing normalization gauge endpoint path strength and representation mutations
+  - assumption and parameter economy reusable API value nonduplication and full semantic-consumer closure
+  - queue-exposed half value pi integral minus-one result and numeric output excluded from concept selection and thresholds
+claims_proposed: []
+comparators_blinded_until: >-
+  This manifest, matching prose contract, B1 and dossier hashes, candidates A
+  through H, loop/lift/section/gauge/transition conventions, selection
+  criteria, mutation plan, compatibility policy, and done gate are frozen and
+  committed. Queue and accepted graph records already expose the broad
+  headline, dependency, check and assertion counts, advertised half-connection
+  result, and compatibility shape; those materials do not select a candidate.
+  The source and dossier bodies, exact predicates, data flow, runtime output,
+  and further comparator material remain unopened until that boundary.
+status: draft
