@@ -1,0 +1,56 @@
+id: P166
+base_release: v0.127.0
+base_commit: e551b69
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SM4]
+question: >-
+  Which exact one-loop running and pairwise-crossing statements in SM4 survive
+  for its supplied coefficients and reference data, and does the source test a
+  common three-factor intersection or only quantify a conditional near-miss?
+invariants:
+  - C-RGE-004 already classifies exact signed-affine inverse-coupling intersections pairwise crossings rank degeneracies reference shifts and Abelian-coordinate covariance.
+  - C-RGE-005 supplies the exact one-loop vector (41/10,-19/6,-7) only for a separately supplied normalized representation table and imported perturbative weights.
+  - C-RGE-006 is a separate supplied-boundary gauge-only two-loop inverse problem and does not upgrade SM4's one-loop fixed-data test.
+  - Fixed low-scale coordinates pairwise crossings and a four-decade spread must remain distinct from one common intersection and from a physical unification mechanism.
+  - Threshold matching scheme uncertainty global-group normalization boundary provenance observation and substrate dynamics remain explicit omissions.
+allowed_imports:
+  - C-LIN-001
+  - C-RGE-001
+  - C-RGE-004
+  - C-RGE-005
+  - C-RGE-006 as separately scoped comparison evidence only
+  - exact_real_and_symbolic_affine_algebra
+  - status_gated_floating_regression_for_supplied_decimal_coordinates
+  - SM4 and its dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned SM4 execution with every source predicate individually adjudicated.
+  - id: B
+    description: Accepted composition of C-RGE-004 exact affine diagnostics and C-RGE-005's conditional one-loop coefficient vector.
+  - id: C
+    description: A new reusable fixed-reference one-loop running and pairwise-spread ledger if accepted composition leaves a genuine API gap.
+  - id: D
+    description: Physical three-coupling unification inferred from convergence into a broad high-scale window.
+  - id: E
+    description: Explicit threshold and matching offsets that can repair or move the pairwise intersections.
+  - id: F
+    description: Two-loop gauge-only running and uncertainty analysis using the separately scoped C-RGE-006 machinery.
+  - id: G
+    description: Sign normalization input and reference-scale counterfamilies delimiting the fixed-data conclusion.
+  - id: H
+    description: Claim source dependency consumer compatibility queue documentation release and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted dependency closure and exact sign normalization convention
+  - exact common-intersection rank before any numerical spread summary
+  - supplied-input and empirical-comparator separation
+  - assumption and parameter economy API nonduplication and consumer fit
+  - mutation sensitivity reference and Abelian-coordinate covariance
+  - explicit threshold matching scheme and perturbative-domain boundaries
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before renewed SM4 and dossier body audit; SM4's coefficients,
+  boundary inputs, pairwise-crossing near-miss, eight-check tally, and broad
+  scale window were already exposed by P083 P128 P129 P130 P160 P163 and the
+  generated queue, so no fresh source or value blinding is claimed
+status: frozen_with_prior_source_exposure

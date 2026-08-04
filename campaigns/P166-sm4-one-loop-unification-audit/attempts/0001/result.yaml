@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P166
+candidate: source_body_unopened_freeze_with_prior_exposure
+status: passed
+started_at: '2026-08-10T21:33:00Z'
+finished_at: '2026-08-10T21:36:00Z'
+base_release: v0.127.0
+base_commit: e551b69
+source_unit:
+  id: SM4
+  path: merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py
+  sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac
+dossier:
+  path: merged-framework/bridges/phase-9/dossiers/SM4-dossier.md
+  sha256: 8e081707f631dfbe0b7f0c530971457871a7aa51cef6ffc77296af8e2107d9f2
+actions:
+  - retained_the_loaded_physics_skill_governance_oracle_and_campaign_contract
+  - read_v0_127_0_and_relevant_accepted_claim_and_module_boundaries
+  - searched_repo_local_memory_and_claim_identifier_collision_surfaces
+  - froze_eight_candidates_and_structural_selection_criteria
+  - recorded_current_and_legacy_NumPy_compatibility_policy
+source_body_opened_by_P166_before_freeze: false
+prior_source_exposure: P083_P128_P129_P130_P160_P163_generated_queue_and_prior_direct_replays
+scientific_result: none_pre_freeze
+debt:
+  - validate_and_commit_the_freeze_before_renewed_source_audit
+next_attempt: frozen_manifest_validation_and_commit

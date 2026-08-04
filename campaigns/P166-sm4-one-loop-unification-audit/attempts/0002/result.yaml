@@ -1,0 +1,23 @@
+attempt: 0002
+campaign: P166
+candidate: frozen_manifest_validation
+status: passed
+started_at: '2026-08-10T21:36:00Z'
+finished_at: '2026-08-10T21:37:00Z'
+commands:
+  - cmp campaigns/P166-sm4-one-loop-unification-audit/proposal.yaml campaigns/P166-sm4-one-loop-unification-audit/evidence/frozen-proposal.yaml
+  - parse_all_new_YAML_with_PyYAML
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory/vantasner/proposals/P166-sm4-one-loop-unification-audit.md
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - git diff --check
+results:
+  proposal_matches_frozen_evidence: true
+  frozen_manifest_sha256: cc945c7eedb8bdf10db50f84f7ebc07004b759b8ed6bfe184683b1203bfabc16
+  yaml: valid
+  memory_contract: valid
+  repository: WORKFLOW_VALID_163_claims_163_accepted_55_pending
+  diff_check: passed
+source_body_opened_by_P166_before_freeze: false
+prior_source_exposure_disclosed: true
+debt: []
+next_attempt: commit_freeze_then_reproduce_and_audit_SM4
