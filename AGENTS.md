@@ -174,6 +174,8 @@ git diff --check
 
 `scripts/validate.sh` runs the complete pytest suite. Do not run that suite a second time at the same unchanged boundary; use targeted tests while developing, then one full workflow validation before commit or promotion.
 
+Run validation and commit as separate process invocations. An unguarded multi-command shell can continue after a failed validator and let a later successful commit mask the failure; never treat the combined process's final status as proof that every earlier gate passed.
+
 The bootstrap installs `memory` with `pipx`; agents call it directly without activating `.venv`. Also run every targeted scientific verifier and downstream consumer named by the claim delta. Before promotion, ensure generated files are current, the registry validates, the release claim set is closed, and the working-tree diff contains no unrelated or host-specific artifacts.
 
 Materialize every evidence path before adding it to an accepted registry or disposition. When a final attempt record summarizes the promotion gate, create it explicitly as in progress before registry validation, finalize it after the gate, and rerun only record-sensitive repository and generation checks; do not repeat the unchanged full suite.

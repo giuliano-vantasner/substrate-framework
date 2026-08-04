@@ -1,0 +1,23 @@
+attempt: 0002
+campaign: P164
+candidate: freeze_commit_gate
+status: failed
+started_at: '2026-08-10T19:38:00Z'
+finished_at: '2026-08-10T19:39:00Z'
+commands:
+  - git diff --cached --check
+  - git commit -m Freeze_SM2_hypercharge_audit
+observed:
+  whitespace_check: failed_on_two_new_blank_lines_at_EOF
+  commit: succeeded_because_the_unguarded_shell_continued
+failure:
+  layer: workflow_command_sequencing
+  scientific_failure: false
+  freeze_semantics_changed: false
+  source_body_opened: false
+repair: >-
+  preserve the committed original hash as provenance, remove only the two EOF
+  blank lines, record the normalized hashes in a new attempt, and require
+  validation and commit to run as separate invocations throughout the shared
+  workflow contracts
+next_attempt: normalize_the_freeze_and_validate_before_a_separate_commit_call

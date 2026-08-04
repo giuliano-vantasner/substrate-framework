@@ -48,4 +48,3 @@ comparators_blinded_until: >-
   and source predicates were already exposed by P081 P129 and P163 consumer
   work and the generated queue, so no fresh value blinding is claimed
 status: frozen_with_prior_source_exposure
-

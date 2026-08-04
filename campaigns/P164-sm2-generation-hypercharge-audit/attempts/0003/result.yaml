@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P164
+candidate: normalized_semantically_identical_freeze
+status: passed
+started_at: '2026-08-10T19:39:00Z'
+finished_at: '2026-08-10T19:41:00Z'
+commands:
+  - remove_only_trailing_blank_lines_from_proposal_and_frozen_manifest
+  - git diff --check
+  - validate_physics_skill_and_P164_memory_contract
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+original_freeze:
+  commit: ce7429e
+  proposal_sha256: 6f50006ddd645a1348ae837be56dbab13236dd2644c75ecc175f51db31d3c029
+normalized_freeze:
+  proposal_sha256: e36796fdf7372b0057b94b96e761632f91275d41a3e876d4cad32a2c48f3405d
+  frozen_manifest_sha256: e36796fdf7372b0057b94b96e761632f91275d41a3e876d4cad32a2c48f3405d
+semantic_change: false
+source_body_opened: false
+self_optimization:
+  surfaces: [AGENTS.md, physics_erdos_loop_skill, campaign_proposal_template, effort_contract_template]
+  rule: validation_and_commit_are_separate_invocations
+debt:
+  - audit_all_source_predicates_and_table_provenance
+  - decide_accepted_composition_versus_distinct_multiplet_API
+  - separate_conventions_conjugation_anomaly_and_physical_identity
+next_attempt: commit_normalization_after_the_already_green_gate_then_open_the_source

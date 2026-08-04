@@ -175,7 +175,7 @@ For accepted claims:
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.
-6. Run targeted scientific checks, `scripts/validate.sh` (which includes the full test suite), and `git diff --check`; do not repeat the unchanged full suite separately.
+6. Run targeted scientific checks, `scripts/validate.sh` (which includes the full test suite), and `git diff --check`; do not repeat the unchanged full suite separately. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
 
 ## Phase 10 — done gate
 

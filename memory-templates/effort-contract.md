@@ -56,7 +56,7 @@ Validation covers the actual objective, verifier sensitivity, limits, convention
 - Dependency replay, after AST preflight for direct/imported/dynamic legacy trapezoid access and repair of mutable consumers to `np.trapezoid` or a safe two-step fallback, or an alias-only replay for immutable source:
 - Targeted tests during implementation:
 - `scripts/validate.sh` (includes the full pytest suite; run once at the unchanged promotion boundary):
-- `git diff --check`:
+- `git diff --check` (run separately from commit so a later command cannot mask failure):
 
 ## Debt Ledger
 Every new assumption, import, parameter, residual, broken consumer, or narrative inconsistency is recorded and discharged. This table must be empty at close.
