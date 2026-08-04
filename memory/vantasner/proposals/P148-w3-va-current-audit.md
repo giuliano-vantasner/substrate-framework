@@ -2,7 +2,7 @@
 description: Derive and audit the exact current content of W3's proposed V-A charged-current bridge
 author: vantasner
 created: '2026-08-09T23:40:00Z'
-updated: '2026-08-10T00:15:00Z'
+updated: '2026-08-10T01:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - current
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P148 W3 V-A Current Audit
 
@@ -138,8 +138,9 @@ The ledger tracks field and carrier types, metric and orientation, raised and
 lowered indices, current normalization and dimensions, equation and conservation
 status, boundary flux, parity semantics, source and coupling provenance,
 compatibility shapes, dependency cycles, broken consumers, and generated
-state. The campaign remains active until each item is resolved or excluded from
-the terminal disposition.
+state. The terminal disposition resolves or excludes every listed item. The
+campaign is archived with no new claim, no release change, and no remaining
+debt.
 
 ## Review and Promotion Plan
 
@@ -153,13 +154,18 @@ boundary.
 
 ## Done Gate
 
-P148 closes only when a positive current-classification object exists through
+P148 closed when a positive current-classification object existed through
 accepted APIs or a separately reviewed exact addition, all seven predicates are
 adjudicated, the native compatibility event and alias-only replay are preserved,
 dependencies and reverse consumers close, generated state agrees, and the debt
 ledger is empty. A physical charged-current or V-A interaction additionally
 requires independently sourced matter, transformation, connection, action,
 coupling, current, and dynamics; scalar derivative names cannot substitute.
+
+The accepted route uses the already governed exact objects and qualifies W3.
+Primary, fresh independent, and frozen-graph checks pass 47, 25, and 61 gates;
+the integrated repository workflow passes all 1,289 tests. See adjudication
+commit `feb8191` and the archived W3 decision record.
 
 ## Cross-References
 
