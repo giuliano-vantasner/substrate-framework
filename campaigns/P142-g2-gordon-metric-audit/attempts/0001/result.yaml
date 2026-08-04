@@ -1,0 +1,26 @@
+attempt: 0001
+campaign: P142
+candidate: preregistration
+status: passed
+started_at: '2026-08-09T14:35:00Z'
+finished_at: '2026-08-09T14:40:00Z'
+commands:
+  - .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory/vantasner/proposals/P142-g2-gordon-metric-audit.md --base /home/dan/substrate-framework
+  - git diff --check
+result:
+  frozen_proposal_sha256: 5e5ca74264b01858bb0bb44e7b149029559595ef1eae51aa1fa2d9d77ffdd71f
+  repository: WORKFLOW_VALID_143_claims_143_accepted_0_proposals
+  migration_queue: 218_units_79_pending_0_partial
+  memory_record: valid
+  whitespace: passed
+source_body_opened: false
+dossier_body_opened: false
+comparator_values_inspected: only_queue_and_parent_exposure_recorded_in_contract
+verdict: >-
+  The Gordon convention, domain, exact geometry, source-compatibility,
+  countermodel, candidate, sensitivity, compatibility, and governance contract
+  is frozen before G2 execution or source and dossier body inspection.
+next_attempt: >-
+  Commit the freeze boundary, compatibility-preflight immutable G2, reproduce
+  its exact tally, then audit every predicate and action or source premise.

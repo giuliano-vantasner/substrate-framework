@@ -1,0 +1,67 @@
+id: P142
+base_release: v0.108.0
+base_commit: 69ba175
+scientific_base_commit: 5da6892
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [G2]
+question: >-
+  Reproduce and independently audit G2's claim that a moving-medium Gordon
+  metric supplies a nontrivial three-plus-one dynamical sourcing route around
+  the fixed optical-metric no-go, and determine exactly which metric,
+  four-velocity, index domain, curvature, action, stress, Bianchi, coupling,
+  boundary, and solution premises are required.
+invariants:
+  - >-
+    C-OG-001 through C-OG-004 govern static one-dimensional optical geometry
+    and conditional profile averaging only. They provide no three-plus-one
+    Gordon metric, Einstein equation, matter action, or physical gravity.
+  - >-
+    Qualified T2C supplies exact optical tensor algebra and C-OG-004 under its
+    stated ceiling; its MPD force, material trajectory, and gravity readings
+    are rejected.
+  - >-
+    Pending B1 and C1 grant no authority. Later consumers and G3 chronology
+    may supply navigation evidence but cannot close G2.
+  - >-
+    A nonzero Einstein tensor and fixed component ratios are geometric data,
+    not a sourced solution. Einstein equality also requires a compatible
+    conserved stress tensor, coupling, matter equations, and boundary data.
+  - >-
+    The generated queue and parent checkpoint have exposed G2's six-check
+    tally, symbolic oracle, dependencies, broad Gordon-metric headline, the
+    n=2 profile comparator value 5/6, and claimed component ratios. G2's source
+    body, exact check literals, output, and dossier body remain unopened in
+    P142 before freeze.
+allowed_imports:
+  - C-OG-001 C-CC-001 and C-OG-004 only under their exact static and conditional one-dimensional ceilings
+  - exact pseudo-Riemannian tensor calculus Lorentzian signature tests matrix identities and contracted Bianchi identities
+  - a separately declared Gordon metric only with covariant versus contravariant convention four-velocity normalization index domain and signature explicit
+  - optical_geometry.py source_audit.py and verification.py pure APIs
+  - G2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64 as hash-pinned noncanonical evidence after freeze
+  - primary literature after freeze only for Gordon metric convention causal domain or analog-gravity scope checks
+candidates:
+  - {id: A, description: Reproduce G2 literally and classify all six predicates by actual metric curvature source data flow and physical ceiling.}
+  - {id: B, description: Derive the exact covariant and inverse Gordon metric determinant signature and null-cone relations for a normalized moving medium while retaining the refractive index and velocity domain.}
+  - {id: C, description: Independently reconstruct the connection curvature Einstein tensor and contracted Bianchi identity for the source profile without importing G2's component formulas.}
+  - {id: D, description: Treat Einstein-source matching as an overdetermined compatibility problem and test whether any declared stress tensor shares the geometric component ratios conservation law and dependence on n.}
+  - {id: E, description: Compare the moving-medium ansatz with the fixed optical-family no-go and construct flat constant-index diagonal-metric and source-mismatch countermodels that delimit what is genuinely new.}
+  - {id: F, description: Close accepted composition novelty dependencies cycles reverse consumers compatibility source disposition release and generated-state governance.}
+uniqueness_evidence: null
+selection_criteria:
+  - complete metric signature inverse determinant coordinate and four-velocity conventions
+  - exact index and velocity domain with Lorentzian nondegeneracy and known limits
+  - independently derived connection curvature Einstein and Bianchi objects
+  - typed stress tensor action field equation coupling dimensions and conservation compatibility
+  - constant-index rest-medium weak-contrast wrong-sign and component-ratio countermodels
+  - separation of analog metric kinematics from solved Einstein dynamics and physical gravity
+  - parameter and import economy reusable API value downstream compatibility and nonduplication
+  - exposed 5/6 and component-ratio comparators excluded from concept selection and pass thresholds
+claims_proposed: [C-GOR-001]
+comparators_blinded_until: >-
+  This manifest, matching prose contract, source and dossier hashes, candidate
+  set, metric and tensor conventions, selection criteria, mutation plan,
+  compatibility policy, and done gate are frozen and committed. Queue and
+  parent records have already exposed the broad headline, tally, dependency
+  names, n=2 value 5/6, and component ratios; the source body, exact check
+  literals, output, and dossier body remain unopened until that boundary.
+status: draft
