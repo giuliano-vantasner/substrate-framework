@@ -1,0 +1,24 @@
+attempt: 0003
+campaign: P185
+candidate: corrected_formula_and_convention_freeze
+status: passed
+started_at: '2026-08-11T11:44:00Z'
+finished_at: '2026-08-11T11:47:00Z'
+inputs:
+  source_audit_commit: 669557a
+  external_primary_comparator: arXiv_2403.07127v2
+frozen:
+  - spacelike_general_D_master_with_independent_spinor_trace
+  - integrand_derived_Ward_trace_identity_and_shift_invariant_regulator_premise
+  - fermionic_D2_massless_endpoint_at_nonzero_spacelike_momentum
+  - fixed_trace_D4_minus_2epsilon_Laurent_and_MSbar_counterterm_family
+  - exact_below_threshold_subtracted_series_and_radius
+  - tensor_form_factor_projector_coefficient_and_action_scope_boundaries
+rejected:
+  - floor_D_over_2_as_analytic_dimensional_regularization_data
+  - regulator_free_language
+  - loop_slope_as_total_kinetic_normalization
+  - real_timelike_formula_above_threshold_without_i0
+claim_or_threshold_changed: false
+verdict: corrected_positive_route_is_frozen_before_canonical_implementation
+next_attempt: implement_importable_exact_APIs_and_focused_tests

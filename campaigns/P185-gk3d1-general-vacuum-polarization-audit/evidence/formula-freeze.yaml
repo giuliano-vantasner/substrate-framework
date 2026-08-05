@@ -1,0 +1,58 @@
+campaign: P185
+revision: 0002
+frozen_at: '2026-08-11T11:47:00Z'
+tensor_convention: Pi_mn_equals_q2_g_mn_minus_q_m_q_n_times_Pi2
+spacelike_variable: Q_equals_minus_q2_strictly_positive
+conditional_master:
+  integration_dimension: d
+  spinor_trace: n_gamma_declared_independently_of_d
+  charge_mass_dimension: one_minus_d_over_two
+  delta: M2_plus_x_times_one_minus_x_times_Q
+  form_factor: minus_2_n_gamma_e2_over_4pi_to_d_over_2_times_Gamma_2_minus_d_over_2_times_integral_x_one_minus_x_delta_to_d_over_2_minus_2
+  projector_coefficient: minus_Q_times_Pi2_at_minus_Q
+  form_factor_mass_dimension: 0
+  projector_coefficient_mass_dimension: 2
+ward_route:
+  propagators: [A_equals_S_p, B_equals_S_p_plus_q]
+  inverse_identity: qslash_equals_B_inverse_minus_A_inverse
+  exact_trace_identity: trace_qslash_B_G_A_equals_trace_G_A_minus_trace_G_B
+  integrated_cancellation_requires: shift_invariant_regulator_and_common_routing
+d2_endpoint:
+  integration_dimension: 2
+  spinor_trace: 2
+  mass_squared: 0
+  domain: Q_greater_than_0
+  form_factor: minus_e2_over_pi_Q
+  projector_coefficient: e2_over_pi
+  statistics: one_complex_Dirac_fermion
+  excluded_comparator: C-VAC-001_massless_complex_scalar
+d4_regulated_endpoint:
+  integration_dimension: 4_minus_2epsilon
+  fixed_spinor_trace: 4
+  scale_factor: mu2_to_epsilon
+  zero_momentum_bare: minus_e2_over_12pi2_times_Gamma_epsilon_times_4pi_mu2_over_M2_to_epsilon
+  Laurent_residue: minus_e2_over_12pi2
+  msbar_finite: e2_over_12pi2_times_log_M2_over_mu2_plus_c_fin
+  log_M2_slope: e2_over_12pi2
+  arbitrary_finite_local_counterterm: c_fin
+subtracted_timelike_below_threshold:
+  ratio: w_equals_q2_over_M2
+  domain: 0_less_than_or_equal_to_w_less_than_4
+  exact_integral: e2_over_2pi2_times_integral_x_one_minus_x_log_one_minus_w_x_one_minus_x
+  series_inside_common_prefactor: minus_w_over_30_minus_w2_over_280_minus_w3_over_1890
+  convergence_radius: 4
+  above_threshold_requires: minus_i0_boundary_value
+external_primary_comparator:
+  citation: Laporta_and_Jentschura_PhysRevD_109_096020_2024
+  arxiv: 2403.07127v2
+  doi: 10.1103/PhysRevD.109.096020
+  source_archive_sha256: b6ac81b08f28d146ef7a6c772c0481257238e22912c2a68b0ef23517093d7823
+  main_tex_sha256: d971d9be302b2703245f6b97c1153f7999eadbcabbda9e50919336b511480a9f
+  role: nonauthoritative_normalization_threshold_and_subtraction_comparator
+forbidden_inferences:
+  - one_analytic_floor_based_spinor_trace_continuation
+  - regulator_free_D4_pole
+  - selected_finite_counterterm_or_total_kinetic_coefficient
+  - physical_charged_matter_or_gauge_group
+  - scalar_and_Dirac_statistics_equivalence
+  - real_above_threshold_kernel_without_i0
