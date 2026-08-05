@@ -2205,25 +2205,38 @@ leaving WN7, MD5, and MD6 pending. No node has a legacy NumPy quadrature
 surface. The single integrated boundary validates 790 memory records and all
 1,710 tests with a clean terminal status.
 
+P194 promotes C-OSC-002 in v0.144.0 and qualifies WN6 through C-SG-019,
+C-OSC-001, C-CMB-003, and C-OSC-002. The exact positive object is the global
+cosine quadratic-gap certificate, explicit tolerance-dependent sufficient
+domain, harmonic cycle mean square, and peak/RMS conversion. It replaces the
+source's hard `pi` rule and separates classical peak, classical RMS, and Fock
+coordinate intensity. WN6's material-amplitude reading, PN2-band physical
+verdict, period-count winding label, accepted multi-mode state, separately
+identifiable mode count, unique missing bridge, and channel rescue conclusion
+are rejected. The primary and independent routes pass 45 and 25 exact checks,
+19 focused tests pass, and the nineteen-node graph covers 691 native
+predicates plus 47 governed checks while leaving WN7 and MD1 through MD6
+pending. No node has a legacy NumPy quadrature surface. The single integrated
+boundary validates 795 memory files and passes all 1,717 tests with a clean
+terminal status.
+
 ## Canonicalization
-The registry, `v0.143.0` manifest, current release, generated claim
-index, and generated framework memory agree on one hundred eighty-three
-accepted claims. P001 through P193 are frozen under `campaigns/`; proposal,
+The registry, `v0.144.0` manifest, current release, generated claim
+index, and generated framework memory agree on one hundred eighty-four
+accepted claims. P001 through P194 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 31 pending, 0 partial, 3
-migrated, 174 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 30 pending, 0 partial, 3
+migrated, 175 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 31
-pending, 3 migrated, 174 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P193 closes WN5 without accepting a unique integer
-minimum, omitted endpoint, unrestricted regime independence, physical
-suppression magnitude, measured-turnover prediction, or duplicate claim/API.
-The next queue unit is WN6. Its intensity interpretation, growth-limb
-threshold, single-vacuum validity argument, PN2 scale verdict, and advertised
-missing material bridge require separate adjudication without importing WN7
-or any MD unit as authority.
+The effort remains active. D4 is discharged, but D1 remains open with 30
+pending, 3 migrated, 175 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P194 closes WN6 without accepting a material phase
+amplitude, hard small-oscillation cutoff, topological winding, multi-mode state,
+unique mode-count bridge, or physical channel verdict. The next queue unit is
+WN7. Its firewall scans must be separated from the scientific truth of the
+scanned WN cluster, with no pending MD unit imported as authority.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

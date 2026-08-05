@@ -1,0 +1,80 @@
+campaign: P194
+title: WN6 exact cosine approximation and harmonic amplitude audit
+source_baseline: substrate@6d1f4e0
+source_units: [WN6]
+base_release: v0.143.0
+accepted_release: v0.144.0
+adjudicated_at: '2026-08-11T20:00:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_reproduction_is_source_evidence_only.}
+  - {id: C, reason: Exact_peak_RMS_and_Fock_coordinate_conventions_are_distinct_and_reusable.}
+  - {id: D, reason: Global_nonnegative_integral_certificates_replace_the_hard_pi_cutoff.}
+  - {id: E, reason: Limb_inequalities_survive_only_under_explicit_positive_amplitude_and_intensity_maps.}
+  - {id: F, reason: Convention_and_multi_mode_countermodels_enforce_the_physical_ceiling.}
+  - {id: G, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: B, decision: insufficient_because_C_SG_019_leaves_remainder_control_open_and_C_OSC_001_has_no_classical_peak_RMS_map}
+claims:
+  - {id: C-OSC-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-SG-019, decision: unchanged_exact_entire_cosine_coefficient_and_finite_remainder_ceiling}
+  - {id: C-OSC-001, decision: unchanged_separate_q0_squared_Fock_intensity_and_factorial_one_mass}
+  - {id: C-CMB-003, decision: unchanged_mathematical_factorial_one_shape_and_tail_bounds}
+unpromoted_claims:
+  - {id: cosine_period_derives_a_material_RMS_amplitude, reason: Period_fixes_a_coordinate_scale_but_no_state_or_averaging_measure.}
+  - {id: A_squared_is_both_harmonic_peak_squared_and_mean_square, reason: A_harmonic_peak_has_mean_square_A_squared_over_two.}
+  - {id: pi_is_the_cosine_expansion_or_small_oscillation_validity_boundary, reason: The_series_is_entire_and_the_barrier_top_quadratic_error_exceeds_59_percent.}
+  - {id: PN2_band_is_an_accepted_physical_scale, reason: Its_rounded_energy_inputs_are_external_and_unaccepted.}
+  - {id: full_period_coordinate_counts_are_topological_windings, reason: No_spatial_boundary_or_topological_map_is_supplied.}
+  - {id: multi_mode_sum_is_derived_from_an_accepted_state, reason: The_source_defines_the_sum_without_a_multimode_state_or_normalization.}
+  - {id: M_is_separately_identifiable_and_cannot_be_absorbed, reason: M_times_A_squared_equals_sqrt_M_times_A_all_squared.}
+  - {id: M_or_DOS_is_the_unique_missing_bridge, reason: States_couplings_interactions_complete_channels_and_rates_also_remain_missing.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_phase_scale_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-OSC-002-claim-review.md
+  source_disposition_review: reviews/WN6-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {WN6: qualified}
+accepted_mappings: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.144.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0006/result.yaml
+  memory_files: 795
+  tests_passed: 1717
+  pytest_seconds: 183.60
+  wall_seconds: 197.22
+  maximum_resident_kib: 215128
+  exit_status: 0
+debt: []
+status: accepted

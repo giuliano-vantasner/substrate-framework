@@ -7122,3 +7122,69 @@ units:
       WN5 and all graph nodes have no legacy NumPy quadrature surface, so no
       version event affects a scientific verdict. WN7, MD5, and MD6 remain
       pending.
+  WN6:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-019
+      - C-OSC-001
+      - C-CMB-003
+      - C-OSC-002
+    qualification: >-
+      C-SG-019 retains the exact entire normalized cosine expansion,
+      C-OSC-001 retains the separately declared one-mode Fock intensity
+      S=q_0^2 and factorial-one mass, and C-CMB-003 retains its mathematical
+      shape and tail bounds. C-OSC-002 supplies the distinct global
+      0<=x^2/2-(1-cos(x))<=x^4/24 certificate, the sufficient domain
+      |x|<=sqrt(12*epsilon) for a declared relative-to-quadratic tolerance,
+      and the harmonic peak/RMS conversion. WN6's cosine period and vacua,
+      conditional positive-amplitude limb inequality, logarithmic mass upper
+      bounds, and equal-mode threshold algebra survive with all inputs typed.
+      The period does not derive a material RMS amplitude; a harmonic peak
+      has mean square A^2/2, while C-OSC-001's q_0 is independent. PN1's
+      entire expansion has no hard pi validity cutoff, and the barrier-top
+      quadratic error exceeds 59 percent. PN2's physical band is external,
+      period counts are not topological windings, the multi-mode sum is
+      defined rather than derived, and M*A^2 can be absorbed into an effective
+      amplitude so M is not separately identifiable. A mode count or DOS is
+      not the unique missing premise. No accepted state, multimode dynamics,
+      material amplitude, exhaustive channel, probability, rate, reaction,
+      or substrate prediction follows.
+    evidence:
+      - campaigns/P194-wn6-scale-verdict-audit/reviews/source_adjudication.md
+      - campaigns/P194-wn6-scale-verdict-audit/reviews/C-OSC-002-claim-review.md
+      - campaigns/P194-wn6-scale-verdict-audit/reviews/WN6-disposition-review.md
+      - campaigns/P194-wn6-scale-verdict-audit/reviews/impact_analysis.md
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/source-reproduction.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/compatibility-audit.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/source-audit.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/check-adjudication.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/formula-freeze.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/input-provenance.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/dependency-audit.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/consumer-audit.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/candidate-comparison.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/implementation-audit.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/primary-provenance.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/evidence/independent-provenance.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/verify.py
+      - campaigns/P194-wn6-scale-verdict-audit/reviews/independent_phase_scale_review.py
+      - campaigns/P194-wn6-scale-verdict-audit/reviews/replay_source_graph.py
+      - campaigns/P194-wn6-scale-verdict-audit/attempts/0002/result.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/attempts/0003/result.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/attempts/0004/result.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/attempts/0005/result.yaml
+      - campaigns/P194-wn6-scale-verdict-audit/attempts/0006/result.yaml
+      - memory/vantasner/decisions/C-OSC-002-review.md
+      - memory/vantasner/decisions/WN6-qualified-review.md
+    note: >-
+      P194 closes 45 primary and 25 independent exact checks, 19 focused
+      tests, and a nineteen-node 691-predicate covered source graph before
+      the integrated boundary. The graph passes 47 governed checks using
+      byte-identical records without counting duplicate native execution.
+      WN6 and all graph nodes have no legacy NumPy quadrature surface, so no
+      version event affects a scientific verdict. The single integrated
+      boundary validates 795 memory files and passes all 1,717 tests. WN7 and
+      MD1 through MD6 remain pending.

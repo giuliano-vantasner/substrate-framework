@@ -10,8 +10,8 @@ tags:
 - phase-amplitude
 - approximation-domain
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P194 WN6 Scale Verdict Audit
 
@@ -190,6 +190,16 @@ C-SG-019, C-OSC-001, C-CMB-003, and C-OSC-002. WN7 and MD1 through MD6 remain
 pending. The next attempt is the promotion, release, disposition, generated
 records, memory archive, and one integrated gate.
 
+Attempt 0006 enters the governed promotion transaction. C-OSC-002 is accepted
+in v0.144.0, WN6 is qualified through its four exact mappings, P194 is frozen
+under `campaigns/`, and the registry, release, disposition, generated queue,
+documentation, and accepted memory are synchronized before one integrated
+gate. That boundary validates 795 memory files and passes all 1,717 tests in
+183.60 seconds; total wall time is 197.22 seconds with 215,128 KiB maximum
+resident memory and exit zero. The release, registry, and queue hashes are
+recorded without rerunning the unchanged full suite. P194's debt ledger is
+empty.
+
 ## Debt Ledger
 
 The P194 ledger tracks source predicates, amplitude and intensity conventions,
@@ -207,7 +217,7 @@ dependencies, consumers, and governed state.
 | A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | discharged |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | discharged |
-| Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
+| Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | discharged |
 
 ## Review and Promotion Plan
 

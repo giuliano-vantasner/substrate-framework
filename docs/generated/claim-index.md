@@ -795,6 +795,15 @@ Let H_F be a one-mode bosonic Fock Hilbert space with orthonormal basis |n> for 
 - Compatibility: `compatible_extension`
 - Dependencies: C-SG-019
 
+## C-OSC-002
+
+Let x be real, V(x)=1-cos(x), Q(x)=x^2/2, and E(x)=Q(x)-V(x). Then 0<=E(x)<=x^4/24 for every real x. For x!=0 the error relative to the quadratic approximation obeys 0<=E(x)/Q(x)<=x^2/12, so for every declared epsilon>0 the symmetric domain |x|<=sqrt(12*epsilon) is sufficient to guarantee E(x)/Q(x)<=epsilon. At the cosine barrier x=pi this relative error is exactly 1-4/pi^2>0.59, so the barrier is not a universal small-oscillation accuracy boundary. Separately, let P and delta be real, let omega be real and nonzero, and define phi(t)=P*cos(omega*t+delta). Its mean square over any full period T=2*pi/|omega| is P^2/2 and its RMS amplitude is |P|/sqrt(2). Hence if A_RMS>=0 denotes RMS amplitude then the mean square is A_RMS^2 and the harmonic peak is sqrt(2)*A_RMS, whereas if A_peak>=0 denotes peak amplitude then the mean square is A_peak^2/2. These conventions are distinct from C-OSC-001's separately declared one-mode Fock-coordinate intensity S=q_0^2 unless an explicit map is supplied. These exact approximation and cycle-average identities derive no material amplitude, quantum state, multimode composition, density of states, topological winding, transition probability, rate, reaction, or substrate realization.
+
+- Accepted in: `v0.144.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-SG-019, C-OSC-001
+
 ## C-OVL-001
 
 For any whole-line L2 mode eta normalized by integral_R |eta|^2 dx=1 and any supplied bounded real multiplication profile Phi with essential range Phi_min<=Phi<=Phi_max, its expectation y=integral_R |eta|^2*Phi dx obeys Phi_min<=y<=Phi_max. For positive p,r,kappa and real A, if eta is proportional to sech(kappa*x)^p and Phi=A*sech(kappa*x)^r under Cartesian dx, then normalization gives the exact matched-width overlap y=A*Gamma(p+r/2)*Gamma(p+1/2) /(Gamma(p)*Gamma(p+r/2+1/2)); the common kappa cancels, but A does not. The p=2,r=1 value is 9*pi*A/32. For C-QBL-003's actual unnormalized even sech^2 and odd sech*tanh modes against A*sech at the same width, the normalized squared-density expectations are respectively 9*pi*A/32 and 3*pi*A/16, their ratio for common A is 2/3, and the weighted even-odd cross expectation vanishes by parity. After L2 normalization y has the mass dimension of Phi. A separately declared product m=y*v has the sum of the supplied profile and scale dimensions; a common v cancels from mass ratios, while independent amplitudes remain, and y->rho*y with v->v/rho leaves m invariant. These exact conditional expectation and parameter results derive no fermion, Yukawa interaction, physical condensate or VEV, generation assignment, hierarchy, mixing, absolute mass, radial-measure formula, Standard-Model map, or substrate mechanism. C-QBL-003's negative and zero Hessian eigenvalues remain non-mass objects but do not uniquely select this overlap functional.
