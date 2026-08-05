@@ -1,0 +1,57 @@
+campaign: P192
+root_source_unit: WN4
+reused_execution_evidence:
+  campaign: P191
+  inventory: campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/source-graph-inventory.yaml
+  inventory_sha256: 878596e0e445e93af4cea7e5d12df8dbf5dcfc77e88dc8b73df6be6cb0d020a4
+  replay_script_sha256: d781fd010cab8cf356bc66ee4eddbd8c6bcb2d4bafd41aa72fe2120b12483fcb
+  attempt_sha256: 781a7add133853217694abb416c99a961391855f5cc2f3f2d278871e2712dbda
+  nodes: 16
+  runtime_checks: 637
+new_execution_evidence:
+  source_unit: PN2
+  relation: direct_source_dependency_without_accepted_mapping
+  path: merged-framework/bridges/phase-30/bridge_PN2_subdivision_count.py
+  sha256: 66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a
+  native_tally: 25
+  wall_seconds: 0.45
+  max_rss_kib: 52196
+nodes:
+  - {source_unit: GB4, relation: source_dependency, native_tally: 23, path: merged-framework/bridges/phase-32/bridge_GB4_branching_ratio.py, sha256: 497ed6deda4a0f11562baeaef0ec7bc21cc20b38d3d11c69ed07728ed33faeb0}
+  - {source_unit: PN1, relation: transitive_source_dependency, native_tally: 32, path: merged-framework/bridges/phase-30/bridge_PN1_multiphonon_vertex.py, sha256: f2fcd58c97b9e9aa0b92e0ece9d92ff6c7ddaddec1b385b10a68a156ac3df985}
+  - {source_unit: PN2, relation: newly_executed_source_dependency, native_tally: 25, path: merged-framework/bridges/phase-30/bridge_PN2_subdivision_count.py, sha256: 66eaa13faaba5bc3ff22d3515e04136b48a1f5a885f7ebfdc980931063c07b3a}
+  - {source_unit: PN3, relation: transitive_source_dependency_contrast, native_tally: 14, path: merged-framework/bridges/phase-30/bridge_PN3_dicke_collective_scaling.py, sha256: da472079f418368926e27d22567cdf3ad8f32c836146ed8107ae2874f377b58b}
+  - {source_unit: WN1, relation: transitive_source_dependency, native_tally: 44, path: merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py, sha256: 3764b29955c3bd51c10278159e08a52ff616a7041510e56917b091f1a802cdde}
+  - {source_unit: WN2, relation: accepted_forward_cycle_and_direct_reverse_consumer, native_tally: 70, path: merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py, sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c}
+  - {source_unit: WN3, relation: qualified_source_dependency, native_tally: 48, path: merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py, sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88}
+  - {source_unit: WN4, relation: root, native_tally: 43, path: merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py, sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2}
+  - {source_unit: WN5, relation: direct_reverse_consumer, native_tally: 41, path: merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py, sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc}
+  - {source_unit: WN6, relation: direct_reverse_consumer, native_tally: 32, path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py, sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10}
+  - {source_unit: WN7, relation: direct_reverse_consumer, native_tally: 59, path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py, sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50}
+  - {source_unit: MD3, relation: direct_reverse_consumer, native_tally: 41, path: merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py, sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128}
+  - {source_unit: MD1, relation: depth_two_consumer, native_tally: 27, path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py, sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba}
+  - {source_unit: MD2, relation: depth_two_consumer, native_tally: 26, path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py, sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0}
+  - {source_unit: MD4, relation: depth_two_consumer, native_tally: 34, path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py, sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144}
+  - {source_unit: MD5, relation: depth_two_consumer, native_tally: 63, path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py, sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb}
+  - {source_unit: MD6, relation: depth_two_consumer, native_tally: 40, path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py, sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf}
+expected_coverage:
+  unique_nodes: 17
+  reused_native_checks: 637
+  freshly_executed_native_checks: 25
+  total_native_checks_covered: 662
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONPATH=src .venv/bin/python proposals/P192-wn4-derived-weight-crossover-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_43_CHECKS_PASS
+  reused_nodes: 16
+  freshly_executed_nodes: 1
+  covered_native_checks: 662
+  freshly_executed_native_checks: 25
+  duplicate_native_executions: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+authority_state_before_P192_promotion:
+  qualified_source_dependencies: [GB4, PN2, WN3]
+  pending_root: WN4
+  pending_reverse_consumers: [WN5, WN6, WN7, MD1, MD2, MD3, MD4, MD5, MD6]

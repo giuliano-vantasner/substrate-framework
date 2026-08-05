@@ -1,0 +1,53 @@
+campaign: P192
+root_source_unit: WN4
+canonical_consumers:
+  package_root:
+    path: src/substrate_framework/__init__.py
+    status: additive_exports_pass
+  focused_tests:
+    path: tests/test_factorial_one_distribution.py
+    status: 37_focused_tests_pass_with_existing_bosonic_tests
+  accepted_dependency_replay:
+    path: campaigns/P191-wn3-bosonic-multiplicity-audit/verify.py
+    status: ALL_101_CHECKS_PASS_unchanged
+direct_source_consumers:
+  WN2:
+    disposition: qualified_unchanged
+    accepted_reuse: none_from_forward_cycle
+    rejected_reuse: WN4_family_cannot_supply_universal_physical_admissibility
+  WN5:
+    disposition: pending
+    accepted_reuse_candidate: positive_factorial_one_mass_and_exact_tail_only
+    ceiling: branching_fraction_channel_population_and_new_prediction_require_individual_adjudication
+  WN6:
+    disposition: pending
+    accepted_reuse_candidate: exact_shape_tail_and_S_minus_n_plus_one_step_residual
+    ceiling: physical_scale_verdict_PN2_band_and_missing_bridge_claims_are_not_derived
+  WN7:
+    disposition: pending
+    accepted_reuse_candidate: lexical_compatibility_and_mathematical_guard_evidence_only
+    ceiling: scanner_and_finite_guard_do_not_adjudicate_cluster_physics
+  MD3:
+    disposition: pending
+    accepted_reuse_candidate: normalized_factorial_one_distribution_as_mathematics
+    ceiling: vertex_operator_coherent_state_bound_removal_and_medium_realization_require_individual_review
+depth_two_consumers:
+  MD1:
+    disposition: pending
+    ceiling: mode_count_DOS_and_physical_frequency_map_require_individual_review
+  MD2:
+    disposition: pending
+    ceiling: phase_variance_and_medium_parameter_map_require_individual_review
+  MD4:
+    disposition: pending
+    ceiling: crossover_rescue_and_asymptotic_peak_claims_depend_on_pending_MD_inputs
+  MD5:
+    disposition: pending
+    ceiling: branching_isotope_and_same_curve_predictions_depend_on_pending_MD_inputs
+  MD6:
+    disposition: pending
+    ceiling: scanner_and_debt_tally_do_not_adjudicate_scanned_physics
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+pending_reverse_consumers_preserved: 9
+scientific_threshold_changed: false

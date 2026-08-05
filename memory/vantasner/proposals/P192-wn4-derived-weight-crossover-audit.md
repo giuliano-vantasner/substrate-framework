@@ -229,6 +229,18 @@ physical countermodels without candidate or accepted scientific APIs. The
 exact theorem and its mathematical-only ceiling survive unchanged. Individual
 claim review and the complete WN4 source graph remain open.
 
+Attempt 0011 passes individual claim, source, dependency, consumer, and graph
+review. C-CMB-003 is recommended as a symbolic-verified, accepted-contingent,
+compatible extension of C-OSC-001. WN4 is mixed and therefore maps only its
+exact mathematical content to C-OSC-001 and C-CMB-003; its integer single-mode,
+off-by-one residual, PN2-band, physical-regime, interpolation, process, and
+medium readings remain rejected. The replay hash-checks seventeen nodes and
+covers 662 native predicates, reusing P191's byte-identical sixteen-node record
+while freshly executing PN2's 25 checks. All 43 graph predicates pass, no
+legacy integration alias is needed, and nine reverse consumers remain pending.
+The next attempt is the governed v0.143.0 promotion transaction and one
+integrated repository gate.
+
 ## Debt Ledger
 
 The P192 ledger tracks source predicates, accepted overlap, sample space,
@@ -238,13 +250,13 @@ consumers, and governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | WN4 was exposed before P192 | Record exposure and claim no fresh blinding | discharged |
-| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | open |
-| C-OSC-001 overlap may be duplicated | Complete theorem and API nonduplication review | open |
-| Strict log-concavity may be conflated with unique mode | Derive the integer-tie-complete mode theorem | open |
-| Tail statements may hide their quantifiers | Prove exact thresholds, induction domain, and scaled limits | open |
-| Poisson mathematics may be called a physical process | Separate normalized mass identities from process premises | open |
-| Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | open |
-| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
+| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | discharged |
+| C-OSC-001 overlap may be duplicated | Complete theorem and API nonduplication review | discharged |
+| Strict log-concavity may be conflated with unique mode | Derive the integer-tie-complete mode theorem | discharged |
+| Tail statements may hide their quantifiers | Prove exact thresholds, induction domain, and scaled limits | discharged |
+| Poisson mathematics may be called a physical process | Separate normalized mass identities from process premises | discharged |
+| Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | discharged |
+| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | discharged |
 | Governed records may disagree | Synchronize claim, source, release, docs, memory, and debt | open |
 
 ## Review and Promotion Plan

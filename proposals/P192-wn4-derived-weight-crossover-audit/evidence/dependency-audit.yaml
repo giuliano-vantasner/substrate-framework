@@ -1,0 +1,39 @@
+campaign: P192
+claim_candidate: C-CMB-003
+direct_claim_dependencies:
+  - C-OSC-001
+transitive_claim_closure:
+  - C-SG-019
+dependency_roles:
+  C-OSC-001: owns_the_all_nonnegative_factorial_one_mass_normalization_adjacent_ratio_and_tie_complete_modes
+  C-SG-019: transitive_origin_of_the_conditional_low_sector_family_only_no_new_physical_premise
+excluded_claims:
+  C-CMB-001: distinct_inverse_square_factorial_family
+  C-CMB-002: distinct_positive_odd_Bessel_normalized_family
+  C-BRN-001: may_consume_a_supplied_weight_but_does_not_derive_this_distribution
+source_dependencies:
+  GB4:
+    disposition: qualified
+    accepted_claims: [C-BRN-001]
+    use: regime_name_and_branching_consumer_context_only
+  PN2:
+    disposition: qualified
+    accepted_claims: []
+    use: source_comparator_band_only_no_claim_premise
+  WN3:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001, C-OSC-001]
+    use: source_provenance_for_the_factorial_one_family
+forbidden_forward_imports:
+  - WN5
+  - WN6
+  - WN7
+  - MD1
+  - MD2
+  - MD3
+  - MD4
+  - MD5
+  - MD6
+dependency_cycle_introduced: false
+hidden_parameters: []
+closure_verdict: closed_if_C_CMB_003_is_accepted_with_only_C_OSC_001

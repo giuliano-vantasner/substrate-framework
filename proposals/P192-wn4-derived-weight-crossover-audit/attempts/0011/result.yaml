@@ -1,0 +1,38 @@
+attempt: 0011
+campaign: P192
+candidate: individual_claim_source_and_consumer_review
+status: passed_review_pending_governance_transaction
+started_at: '2026-08-11T18:55:00Z'
+finished_at: '2026-08-11T19:06:00Z'
+claim_review:
+  claim: C-CMB-003
+  verification: symbolic_verified
+  review: accepted_contingent_on_promotion_transaction
+  compatibility: compatible_extension
+  epistemic: active
+  dependency: C-OSC-001
+source_review:
+  source_unit: WN4
+  disposition: qualified
+  accepted_mappings: [C-OSC-001, C-CMB-003]
+  rejected_edges:
+    - strict_log_concavity_implies_one_mode_at_integer_S
+    - adjacent_step_residual_is_S_minus_n
+    - PN2_band_checks_evaluate_the_weight
+    - mathematical_limbs_derive_phase_space_or_energy_gap_dynamics
+    - undefined_power_law_interpolates_the_turnover
+    - normalized_mass_derives_a_physical_Poisson_process_or_medium_mean
+source_graph:
+  nodes: 17
+  native_checks_covered: 662
+  freshly_executed_nodes: 1
+  freshly_executed_native_checks: 25
+  replay_result: ALL_43_CHECKS_PASS
+  pending_reverse_consumers_preserved: 9
+  compatibility_version_failures: 0
+scientific_verification:
+  focused_tests: 37_passed
+  primary: ALL_115_CHECKS_PASS
+  independent: ALL_47_CHECKS_PASS
+scientific_threshold_changed: false
+next_attempt: edit_registry_and_disposition_generate_v0_143_0_docs_and_memory_then_run_integrated_gate

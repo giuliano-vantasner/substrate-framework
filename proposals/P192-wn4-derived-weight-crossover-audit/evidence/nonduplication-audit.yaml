@@ -1,0 +1,40 @@
+campaign: P192
+claim_candidate: C-CMB-003
+search_surfaces:
+  - governance/claims.yaml
+  - src/substrate_framework
+  - tests
+  - campaigns
+  - proposals
+  - memory/vantasner/decisions
+  - memory/vantasner/proposals
+identifier_collisions:
+  C-CMB-003: none
+  C-OSC-002: none
+  C-PRB-002: none
+nearest_claims:
+  C-OSC-001:
+    overlap:
+      - all_nonnegative_factorial_one_mass_and_total
+      - adjacent_ratio
+      - tie_complete_modes
+    distinct_missing_surface:
+      - strict_log_concavity_quotient
+      - probability_generating_function
+      - all_falling_factorial_moments
+      - exact_geometric_point_and_upper_tail_bounds
+      - explicit_every_fixed_power_decay_certificate
+  C-CMB-001:
+    distinction: inverse_square_factorial_sequence_not_S_power_n_over_factorial_n
+  C-CMB-002:
+    distinction: positive_odd_inverse_square_factorial_Bessel_mass_not_all_nonnegative_Poisson_mass
+  C-PRB-001:
+    distinction: continuous_fixation_BVP_not_a_discrete_factorial_one_distribution
+API_reuse:
+  - factorial_one_mass
+  - factorial_one_total_mass
+  - normalized_factorial_one_mass
+  - factorial_one_modes
+new_surface_is_cohesive: true
+duplicate_claim_risk: low_after_C_OSC_001_dependency_and_overlap_exclusion
+verdict: distinct_reusable_exact_claim
