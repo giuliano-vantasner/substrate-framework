@@ -1,0 +1,76 @@
+campaign: P186
+revision: 0002
+frozen_at: '2026-08-11T12:24:00Z'
+quantum_input:
+  matter: one_or_more_free_complex_charged_scalars
+  covariant_derivative: D_mu_equals_partial_mu_minus_i_e_A_mu_in_a_fixed_generator_basis
+  determinant: Gamma_scalar_equals_Tr_log_minus_D_squared_plus_M2
+  quadratic_convention: Gamma_two_equals_one_half_A_mu_Pi_mu_nu_A_nu
+  regulator: dimensional_regularization_with_d_equals_4_minus_2epsilon_and_scale_mu2_to_epsilon
+  required_diagrams: [oriented_scalar_bubble, scalar_seagull]
+tensor_convention: Pi_mn_equals_q2_g_mn_minus_q_m_q_n_times_Pi2
+spacelike_variable: Q_equals_minus_q2_strictly_positive
+ward_route:
+  propagator_denominators: [D_p_equals_p_squared_plus_M2, D_pq_equals_p_plus_q_squared_plus_M2]
+  contraction_identity: q_dot_2p_plus_q_equals_D_pq_minus_D_p
+  shifted_bubble_contraction: plus_2_q_nu_times_integral_one_over_D_p
+  seagull_contraction: minus_2_q_nu_times_integral_one_over_D_p
+  integrated_cancellation_requires: one_common_shift_invariant_gauge_preserving_regulator
+conditional_scalar_master:
+  integration_dimension: d
+  charge_mass_dimension: two_minus_d_over_two
+  delta: M2_plus_x_times_one_minus_x_times_Q
+  form_factor: minus_N_e2_over_4pi_to_d_over_2_times_Gamma_2_minus_d_over_2_times_integral_one_minus_2x_squared_delta_to_d_over_2_minus_2
+  form_factor_mass_dimension: 0
+  statistics: complex_scalar_with_bubble_and_seagull
+d4_regulated_endpoint:
+  integration_dimension: 4_minus_2epsilon
+  scale_factor: mu2_to_epsilon
+  parameter_weight_integral: one_third
+  zero_momentum_bare: minus_N_e2_over_48pi2_times_Gamma_epsilon_times_4pi_mu2_over_M2_to_epsilon
+  Laurent_residue: minus_N_e2_over_48pi2
+  msbar_finite: N_e2_over_48pi2_times_log_M2_over_mu2_plus_c_fin
+  log_M2_slope: N_e2_over_48pi2
+  log_m_slope: N_e2_over_24pi2
+  log_mu_slope: minus_N_e2_over_24pi2
+  arbitrary_finite_local_counterterm: c_fin
+connection_field_translation:
+  connection: B_equals_e_A
+  field_strength: F_B_equals_e_F_A_for_Abelian_fixed_basis
+  kinetic_action: minus_Z_B_over_4_times_F_B_squared
+  relation: Pi2_A_equals_e_squared_times_Z_B
+  scalar_weight: W_s_equals_sum_of_multiplicity_times_invariant_charge_or_trace_weight
+  Dirac_weight: W_f_equals_sum_of_multiplicity_times_invariant_charge_or_trace_weight
+  one_loop_coefficient: b_equals_one_third_W_s_plus_four_thirds_W_f
+  flow: mu_times_dZ_B_dmu_equals_minus_b_over_8pi2
+affine_boundary_family:
+  reference_scale: mu_ref_positive
+  running_scale: mu_positive
+  reference_value: Z_ref_real_and_independently_supplied
+  solution: Z_mu_equals_Z_ref_plus_b_over_8pi2_times_log_mu_ref_over_mu
+  same_slope_counterfamily: any_two_distinct_Z_ref_values
+  reference_change: mu_ref_prime_equals_kappa_mu_ref_and_Z_ref_prime_equals_Z_ref_minus_b_over_8pi2_log_kappa
+  zero_matching_specialization: Z_ref_equals_zero_is_a_separately_declared_compositeness_or_matching_condition
+  zero_matching_positivity: for_b_positive_Z_positive_if_and_only_if_mu_ref_over_mu_greater_than_one
+  general_positivity: depends_on_Z_ref_and_cannot_be_reduced_to_scale_order_alone
+upstream_boundary_adjudication:
+  rung25_defines_Z_or_matching_scale: false
+  rung25_pure_gauge_witness_implies_Z_ref_zero: false
+  C_MAX_001_no_kinetic_equation: current_equals_zero_not_A_pure_gauge
+  allowed_conclusion: zero_matching_can_be_evaluated_conditionally_but_not_derived_from_rung25
+external_primary_comparators:
+  - arxiv: hep-ph/9806451
+    role: explicit_scalar_QED_action_bubble_seagull_transversality_and_beta_e_equals_e_cubed_over_48pi2
+    source_archive_sha256: b209ad55e1289067944525810d6414464a0bd96bfbe646b5c7ab8ac595d5330e
+    main_tex_sha256: 2fc12d4f3ed43e94f7b2ecb3e87f6e01b19c4484dd6d84820acd382e2d2bec3d
+  - arxiv: 1611.00446v2
+    role: dimensionally_regulated_ordinary_scalar_bubble_plus_seagull_subgraphs_and_commutative_beta_comparator
+    source_archive_sha256: fc8c8024829cb4f9eef61c5331e11fb95cb046e5f74665d7382d265e51a07741
+    main_tex_sha256: c43f3935e78450b0a865ac354913217a12636c6e42344378a90284a3dc04d5b6
+forbidden_inferences:
+  - regulator_free_scalar_D4_pole
+  - rung25_as_a_derived_matching_condition
+  - selected_Z_ref_finite_counterterm_or_total_coupling
+  - physical_complex_scalar_Dirac_spectrum_or_gauge_group
+  - automatic_positivity_without_the_boundary_value
+  - future_GK3D3_scale_identification_as_current_authority

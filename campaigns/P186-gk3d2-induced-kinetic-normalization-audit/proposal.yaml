@@ -61,4 +61,4 @@ comparators_blinded_until: >-
   claimed removal of the additive constant by rung25, seventeen static checks,
   and one assertion, so no fresh source-result blinding is claimed
 status: draft
-revision: 0001
+revision: 0002

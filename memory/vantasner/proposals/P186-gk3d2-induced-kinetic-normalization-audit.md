@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T12:20:00Z'
+updated: '2026-08-11T12:24:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -184,6 +184,51 @@ and 6b respectively rely on a keyword, solve an imposed zero equation, repeat
 that substitution, sample rather than prove an equivalence, import the scale
 ordering while dropping the free boundary, and subtract a formula from itself.
 They do not validate the advertised total normalization.
+
+## Corrected Formula Freeze
+
+P186 fixes the source tensor convention
+`Pi_mn=(q^2*g_mn-q_m*q_n)*Pi2(q^2)` and spacelike `Q=-q^2>0`. For one or
+more separately declared free complex charged scalars, determinant
+`Tr log(-D^2+M^2)`, common gauge-preserving dimensional regulator, and both
+the oriented bubble and seagull, the Ward contraction uses
+`q.(2p+q)=D_(p+q)-D_p`. After the common momentum shift, the bubble contributes
+`+2*q_nu*integral(1/D_p)` and the seagull contributes its negative. This earns
+transversality from the loop rather than from a projector ansatz.
+
+With `Delta=M2+x*(1-x)*Q`, integration dimension `d`, multiplicity `N`, and
+charge magnitude `e`, the frozen scalar form factor is
+`-N*e^2*Gamma(2-d/2)/(4*pi)^(d/2)` times the integral from zero to one of
+`(1-2*x)^2*Delta^(d/2-2)`. At `d=4-2*epsilon`, with scale factor
+`mu2^epsilon`, its zero-momentum bare value is
+`-N*e^2/(48*pi^2)*Gamma(epsilon)*(4*pi*mu2/M2)^epsilon`. The Laurent residue
+is `-N*e^2/(48*pi^2)`. Adding the MS-bar pole counterterm and arbitrary finite
+local `c_fin` gives
+`N*e^2/(48*pi^2)*log(M2/mu2)+c_fin`. Thus the scalar beta coefficient is one
+quarter of the Dirac coefficient in the same convention.
+
+For the connection field `B=e*A`, declare
+`-Z_B*F(B)^2/4`; then `Pi2_A=e^2*Z_B`. With separately supplied invariant
+complex-scalar and Dirac weights `W_s,W_f`, the matter coefficient is
+`b=W_s/3+4*W_f/3` and
+`mu*dZ_B/dmu=-b/(8*pi^2)`. The full exact family is
+`Z_B(mu)=Z_ref+b*log(mu_ref/mu)/(8*pi^2)`, where `Z_ref` is an independent
+renormalized matching coordinate. A change
+`mu_ref'=kappa*mu_ref` preserves the same function only with
+`Z_ref'=Z_ref-b*log(kappa)/(8*pi^2)`.
+
+Setting `Z_ref=0` is a separately declared compositeness or zero-matching
+condition. Only on that branch, with positive `b`, is positivity equivalent to
+`mu_ref>mu`. The general branch depends on `Z_ref`; two unequal reference
+values have the same one-loop slope. Rung25 supplies neither branch selection
+nor a matching coordinate.
+
+Two nonauthoritative primary comparators are pinned. The scalar-QED
+renormalization paper arXiv:hep-ph/9806451 declares the action, bubble and
+seagull, transverse sum, and beta `e^3/(48*pi^2)`. ArXiv:1611.00446v2 writes
+the ordinary scalar bubble and seagull subgraphs in dimensional regularization
+and reproduces the same commutative coefficient; its additional
+noncommutative sector is not imported.
 
 ## Attempts and Continuation
 

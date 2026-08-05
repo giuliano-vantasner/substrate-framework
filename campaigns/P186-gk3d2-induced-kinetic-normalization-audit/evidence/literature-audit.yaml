@@ -1,0 +1,41 @@
+campaign: P186
+role: nonauthoritative_independent_primary_comparators
+sources:
+  - authors: [F_del_Aguila, A_Culatti, R_Munoz_Tapia, M_Perez_Victoria]
+    title: Techniques_for_one_loop_calculations_in_constrained_differential_renormalization
+    journal: Nuclear_Physics_B_537_561_585_1999
+    doi: 10.1016/S0550-3213(98)00645-2
+    arxiv: hep-ph/9806451
+    url: https://arxiv.org/abs/hep-ph/9806451
+    source_archive_sha256: b209ad55e1289067944525810d6414464a0bd96bfbe646b5c7ab8ac595d5330e
+    main_tex_sha256: 2fc12d4f3ed43e94f7b2ecb3e87f6e01b19c4484dd6d84820acd382e2d2bec3d
+    audited_statements:
+      - declares_the_Euclidean_complex_scalar_QED_action
+      - includes_separate_bubble_and_seagull_vacuum_polarization_graphs
+      - obtains_a_transverse_renormalized_sum
+      - reports_beta_e_equals_e_cubed_over_48pi_squared_for_one_complex_scalar
+  - authors: [M_Ghasemkhani, R_Bufalo, V_Rahmanpour, E_Nouri]
+    title: One_loop_beta_function_of_noncommutative_scalar_QED4
+    journal: Physical_Review_D_95_085018_2017
+    doi: 10.1103/PhysRevD.95.085018
+    arxiv: 1611.00446v2
+    url: https://arxiv.org/abs/1611.00446
+    source_archive_sha256: fc8c8024829cb4f9eef61c5331e11fb95cb046e5f74665d7382d265e51a07741
+    main_tex_sha256: c43f3935e78450b0a865ac354913217a12636c6e42344378a90284a3dc04d5b6
+    audited_statements:
+      - writes_the_ordinary_scalar_bubble_and_seagull_subgraphs_in_dimensional_regularization
+      - combines_them_into_a_transverse_divergent_tensor
+      - uses_epsilon_equals_4_minus_d_so_translation_to_d_equals_4_minus_2epsilon_halves_the_displayed_pole_coordinate
+      - states_the_commutative_complex_scalar_beta_e_equals_e_cubed_over_48pi_squared
+P186_translation:
+  scalar_to_Dirac_beta_ratio: one_quarter
+  scalar_Pi2_residue_in_d_equals_4_minus_2epsilon_source_tensor_convention: minus_e2_over_48pi2
+  scalar_connection_inverse_coupling_slope: minus_one_over_24pi2_per_unit_weight
+  one_loop_matter_coefficient: one_third_per_complex_scalar_weight
+not_imported:
+  - comparator_bare_Maxwell_action_as_a_framework_premise
+  - noncommutative_gauge_self_interactions_or_beta_function
+  - physical_scalar_or_photon_identification
+  - a_matching_condition_or_finite_counterterm
+  - empirical_constants
+verdict: supports_the_scalar_bubble_seagull_weight_and_beta_translation_without_fixing_the_framework_boundary_or_total_normalization

@@ -1,0 +1,30 @@
+attempt: 0003
+campaign: P186
+candidate: corrected_formula_and_convention_freeze
+status: passed
+started_at: '2026-08-11T12:21:00Z'
+finished_at: '2026-08-11T12:24:00Z'
+inputs:
+  source_audit_commit: 4a0127a
+  external_primary_comparators: [arXiv_hep_ph_9806451, arXiv_1611_00446v2]
+exact_scratch:
+  scalar_parameter_weight: one_third
+  Dirac_parameter_weight: four_thirds
+  ratio: 4
+  scalar_Laurent_residue: minus_e2_over_48pi2
+  affine_flow_residual: 0
+frozen:
+  - complete_scalar_bubble_seagull_Ward_route
+  - d4_minus_2epsilon_scalar_master_Laurent_residue_and_MSbar_finite_family
+  - explicit_A_to_connection_B_field_and_kinetic_normalization_translation
+  - scalar_and_Dirac_matter_weights_in_one_affine_flow_convention
+  - general_reference_value_family_and_reference_change_covariance
+  - explicitly_declared_zero_matching_specialization_and_positivity_domain
+rejected:
+  - regulator_free_language
+  - rung25_as_a_matching_condition
+  - loop_slope_as_total_kinetic_normalization
+  - automatic_no_ghost_without_Z_ref
+claim_or_threshold_changed: false
+verdict: corrected_positive_route_is_frozen_before_canonical_implementation
+next_attempt: implement_importable_exact_APIs_and_focused_tests
