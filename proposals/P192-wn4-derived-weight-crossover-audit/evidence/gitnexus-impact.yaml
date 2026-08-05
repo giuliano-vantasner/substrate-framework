@@ -1,0 +1,47 @@
+campaign: P192
+analyzed_at_commit: c27ab6b
+index:
+  repository: substrate-framework
+  indexed_commit: 908f5c0a73557f1b3bf7b0df0ab68f7dbd489451
+  commits_behind: 7
+targets:
+  factorial_one_modes:
+    risk: LOW
+    direct_callers: 0
+    affected_processes: 0
+  normalized_factorial_one_mass:
+    risk: LOW
+    direct_callers: 0
+    affected_processes: 0
+  bosonic_fock_file:
+    risk: LOW
+    direct_importers: [src/substrate_framework/__init__.py]
+    depth_two_reported: 25
+    affected_processes: 0
+manual_override:
+  direct_existing_consumers:
+    - src/substrate_framework/__init__.py
+    - tests/test_bosonic_fock.py
+    - campaigns/P191-wn3-bosonic-multiplicity-audit/verify.py
+  governance_and_durable_consumers:
+    - governance/claims.yaml
+    - campaigns/P191-wn3-bosonic-multiplicity-audit/adjudication.yaml
+    - memory/framework/claims/C-OSC-001.md
+  graph_limitations:
+    - stale_by_seven_commits
+    - symbol_queries_omit_known_tests_and_campaign_verifier
+    - package_root_fanout_overstates_unrelated_depth_two_imports
+change_shape: additive_helpers_and_immutable_certificate_with_no_existing_signature_or_value_change
+risk: LOW_code_MEDIUM_semantic_due_to_new_claim_and_reverse_consumers
+required_replay:
+  - tests/test_bosonic_fock.py
+  - tests/test_factorial_one_distribution.py
+  - campaigns/P191-wn3-bosonic-multiplicity-audit/verify.py
+  - P192_primary_independent_and_source_graph_verifiers
+  - governance_generated_docs_and_memory_at_promotion
+post_change_detection:
+  changed_files_seen: 2
+  changed_symbols_seen: 0
+  affected_processes: []
+  risk: LOW
+  limitation: untracked_test_and_evidence_files_and_new_symbols_are_absent_from_the_stale_index

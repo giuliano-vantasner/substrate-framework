@@ -1,0 +1,40 @@
+campaign: P192
+claim_candidate: C-CMB-003
+module: src/substrate_framework/bosonic_fock.py
+module_sha256_after_implementation: b23367bb722f09b99ccb79c40323b83165017d5936daf1b0b34a1674b1c1bb03
+test_module: tests/test_factorial_one_distribution.py
+test_sha256_after_implementation: d9da07c393cc9acf251005ffeb4f2945ae105e6704520de5845430c1f50d5593
+formula_freeze_sha256: 6e486347ee07823b76057c36d0401df5bae1317fc362d684ffeb92ebfdc3caf9
+change_shape: additive
+existing_signatures_changed: []
+existing_return_values_changed: []
+new_dataclasses:
+  - FactorialOnePolynomialTailCertificate
+new_functions:
+  - factorial_one_log_concavity_ratio
+  - factorial_one_probability_generating_function
+  - factorial_one_falling_factorial_moment
+  - factorial_one_geometric_point_bound
+  - factorial_one_geometric_tail_bound
+  - factorial_one_polynomial_tail_certificate
+package_root_exports_added: 7
+reuse:
+  - normalized_factorial_one_mass
+  - factorial_one_modes
+  - existing_exact_domain_validators
+focused_validation:
+  tests_passed: 37
+  pytest_seconds: 2.41
+  P191_primary_checks_passed: 101
+  package_exports_checked: 7
+mutation_surfaces:
+  - factorial_power
+  - integer_mode_tie
+  - PGF_sign_and_normalization
+  - falling_factorial_derivative_order
+  - geometric_threshold_start
+  - polynomial_power_and_contraction
+numpy_imports_added: 0
+legacy_quadrature_references_added: 0
+fitted_parameters_added: []
+physical_process_claim_added: false

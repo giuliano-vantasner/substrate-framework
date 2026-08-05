@@ -1,0 +1,28 @@
+attempt: 0005
+campaign: P192
+candidate: additive_exact_factorial_one_APIs_and_focused_tests
+status: passed
+started_at: '2026-08-11T18:34:00Z'
+finished_at: '2026-08-11T18:43:00Z'
+implementation:
+  module: src/substrate_framework/bosonic_fock.py
+  existing_signatures_changed: 0
+  dataclasses_added: 1
+  functions_added: 6
+  package_root_exports_added: 7
+focused_tests:
+  command: PYTHONPATH=src_.venv/bin/python_-m_pytest_tests/test_bosonic_fock.py_tests/test_factorial_one_distribution.py_-q
+  passed: 37
+  seconds: 2.41
+dependency_replay:
+  command: PYTHONPATH=src_.venv/bin/python_campaigns/P191-wn3-bosonic-multiplicity-audit/verify.py
+  checks_passed: 101
+compatibility:
+  numpy_imports_added: 0
+  legacy_quadrature_references_added: 0
+  version_only_scientific_failures: 0
+impact:
+  prechange: LOW
+  postchange: LOW_with_stale_index_limitations
+scientific_threshold_changed: false
+next_attempt: build_primary_mutation_sensitive_verifier_and_fresh_independent_rederivation

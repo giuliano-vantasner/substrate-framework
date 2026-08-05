@@ -183,6 +183,17 @@ accepted claim alone. A remains source evidence, F supplies physical ceilings,
 and G remains the open governance route. No comparator value selects the
 surface and no threshold changes.
 
+Attempt 0005 extends the existing pure `bosonic_fock.py` surface without
+changing any signature or return value. One immutable polynomial-tail
+certificate and six exact functions reuse the accepted normalized mass, mode,
+and domain machinery; seven package-root names are added. Thirty-seven focused
+tests pass, including factorial-power, integer-tie, PGF-sign, derivative-order,
+geometric-threshold, power, and contraction probes. P191's unchanged primary
+verifier still passes all 101 checks. GitNexus reports low additive risk and no
+affected process, while its seven-commit-stale index misses known test and
+campaign consumers that the direct inventory retains for replay. No NumPy
+surface, fitted parameter, or physical-process claim is added.
+
 ## Debt Ledger
 
 The P192 ledger tracks source predicates, accepted overlap, sample space,

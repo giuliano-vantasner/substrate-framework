@@ -321,3 +321,173 @@ def factorial_one_modes(
     if squared == (mode + 1) * (mode + 2):
         return (mode, mode + 2)
     return (mode,)
+
+
+def factorial_one_log_concavity_ratio(order: Any) -> sp.Rational:
+    r"""Return ``w(n)**2/(w(n-1)*w(n+1))=(n+1)/n`` for ``n>=1``.
+
+    The ratio is strictly greater than one and independent of the positive
+    intensity.  Strict discrete log-concavity implies that the modes are
+    consecutive, but it does not exclude the adjacent tie already returned by
+    :func:`factorial_one_modes` when the intensity is an integer.
+    """
+
+    n = _positive_integer(order, name="order")
+    return sp.Rational(n + 1, n)
+
+
+def factorial_one_probability_generating_function(
+    *,
+    intensity: Any,
+    variable: Any,
+) -> sp.Expr:
+    r"""Return the exact PGF ``exp(S*(t-1))`` of the all-order mass.
+
+    This is the generating function of the normalized mathematical mass on
+    the nonnegative integers.  It does not assert a physical Poisson process,
+    event count, rate, time interval, or medium realization.
+    """
+
+    S = _exact_positive(intensity, name="intensity")
+    t = _exact_real(variable, name="variable")
+    return sp.exp(S * (t - 1))
+
+
+def factorial_one_falling_factorial_moment(
+    moment_order: Any,
+    *,
+    intensity: Any,
+) -> sp.Expr:
+    r"""Return the exact all-order falling-factorial moment ``E[(N)_r]``.
+
+    For every nonnegative integer ``r`` this mathematical moment is ``S**r``.
+    In particular the mean and variance are both ``S`` after converting the
+    first two falling-factorial moments to raw moments.
+    """
+
+    r = _nonnegative_integer(moment_order, name="moment_order")
+    S = _exact_positive(intensity, name="intensity")
+    return sp.factor(S**r)
+
+
+def _geometric_tail_inputs(
+    *,
+    intensity: Any,
+    alpha: Any,
+    starting_order: Any,
+) -> tuple[sp.Expr, sp.Expr, int]:
+    S = _exact_positive(intensity, name="intensity")
+    exponent = _exact_positive(alpha, name="alpha")
+    start = _nonnegative_integer(starting_order, name="starting_order")
+    threshold_residual = sp.simplify(start + 1 - S * sp.exp(exponent))
+    if threshold_residual.is_nonnegative is not True:
+        raise ValueError(
+            "starting_order + 1 must be at least intensity*exp(alpha) exactly"
+        )
+    return S, exponent, start
+
+
+def factorial_one_geometric_point_bound(
+    steps: Any,
+    *,
+    intensity: Any,
+    alpha: Any,
+    starting_order: Any,
+) -> sp.Expr:
+    r"""Bound ``p(N+k)`` by ``p(N)*exp(-alpha*k)`` after the threshold.
+
+    The exact premises are ``S>0``, ``alpha>0``, ``N,k>=0`` integral, and
+    ``N+1>=S*exp(alpha)``.  Every later adjacent ratio is then at most
+    ``exp(-alpha)``.  The result concerns the normalized all-nonnegative
+    mathematical mass only.
+    """
+
+    k = _nonnegative_integer(steps, name="steps")
+    S, exponent, start = _geometric_tail_inputs(
+        intensity=intensity,
+        alpha=alpha,
+        starting_order=starting_order,
+    )
+    initial = normalized_factorial_one_mass(
+        start,
+        intensity=S,
+        support="all_nonnegative",
+    )
+    return sp.factor(initial * sp.exp(-exponent * k))
+
+
+def factorial_one_geometric_tail_bound(
+    *,
+    intensity: Any,
+    alpha: Any,
+    starting_order: Any,
+) -> sp.Expr:
+    r"""Bound the mass strictly above ``N`` by ``p(N)/(exp(alpha)-1)``.
+
+    This sums the geometric point bounds for steps one through infinity under
+    the same exact threshold premises as
+    :func:`factorial_one_geometric_point_bound`.
+    """
+
+    S, exponent, start = _geometric_tail_inputs(
+        intensity=intensity,
+        alpha=alpha,
+        starting_order=starting_order,
+    )
+    initial = normalized_factorial_one_mass(
+        start,
+        intensity=S,
+        support="all_nonnegative",
+    )
+    return sp.factor(initial / (sp.exp(exponent) - 1))
+
+
+@dataclass(frozen=True)
+class FactorialOnePolynomialTailCertificate:
+    """An explicit eventual contraction for ``n**r*p_S(n)``.
+
+    The certificate uses ``(1+1/n)**r<=2**r`` for ``n>=1``.  It is a
+    conservative exact threshold, not a fitted asymptotic estimate.
+    """
+
+    intensity: sp.Rational
+    power: int
+    contraction: sp.Rational
+    starting_order: int
+    threshold: sp.Rational
+    ratio_bound: sp.Rational
+    scaled_mass_tends_to_zero: bool
+    physical_power_law_interpretation_is_separate_premise: bool
+
+
+def factorial_one_polynomial_tail_certificate(
+    power: Any,
+    *,
+    intensity: Any,
+    contraction: Any = sp.Rational(1, 2),
+) -> FactorialOnePolynomialTailCertificate:
+    r"""Certify geometric decay of ``n**r*p_S(n)`` beyond an exact index.
+
+    For positive rational ``S``, nonnegative integer ``r``, and rational
+    ``q`` in ``(0,1)``, choosing ``N+1>=S*2**r/q`` makes the consecutive
+    scaled-mass ratio at most ``q`` for every ``n>=N``.  Therefore
+    ``n**r*p_S(n)`` tends to zero for every fixed ``r``.
+    """
+
+    r = _nonnegative_integer(power, name="power")
+    S = _exact_positive_rational(intensity, name="intensity")
+    q = _exact_positive_rational(contraction, name="contraction")
+    if q >= 1:
+        raise ValueError("contraction must be strictly less than one")
+    threshold = sp.Rational(S * 2**r / q)
+    start = max(1, int(sp.ceiling(threshold)) - 1)
+    return FactorialOnePolynomialTailCertificate(
+        intensity=S,
+        power=r,
+        contraction=q,
+        starting_order=start,
+        threshold=threshold,
+        ratio_bound=q,
+        scaled_mass_tends_to_zero=True,
+        physical_power_law_interpretation_is_separate_premise=True,
+    )
