@@ -1,0 +1,30 @@
+attempt: 0005
+campaign: P179
+candidate: D_corrected_finite_wall_numeric_branch
+status: passed_spot_check_before_axis_refinement
+started_at: '2026-08-11T07:05:00Z'
+finished_at: '2026-08-11T07:06:00Z'
+commands:
+  - baseline_collocation_alpha_0p03_A_3_epsilon_0p001_R_40_mesh_200_tol_1e_8
+  - reference_collocation_mesh_400_tol_1e_10_plus_DOP853_root_shooting
+baseline:
+  frequency: 0.8908398277642952
+  outer_mass: 0.2909607142425158
+  central_lapse_exponent: -0.18242692152268938
+  adaptive_nodes: 698
+  iterations: 8
+  max_collocation_rms_residual: 9.950856869251665e-09
+  boundary_residual_max_abs: 8.673617379884035e-19
+  off_grid_relative_ode_residual: 2.409120205661058e-09
+  minimum_radial_metric_function: 0.8790138719167356
+independent_spot_check:
+  root_function_evaluations: 6
+  frequency_difference: -8.43769498715119e-15
+  central_lapse_difference: 1.1962653090336062e-14
+  outer_mass_difference: 6.578071420904053e-14
+  wall_residuals: [6.78863499e-11, -3.27567834e-14]
+  minimum_radial_metric_function: 0.8790187218255857
+scope: >-
+  This is a spot check used to confirm that the preregistered methods are
+  executable. It does not replace the frozen axis-isolated refinement matrix.
+next_attempt: freeze_physics_and_residual_thresholds_then_execute_every_declared_axis

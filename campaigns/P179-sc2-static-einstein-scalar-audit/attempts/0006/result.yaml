@@ -1,0 +1,31 @@
+attempt: 0006
+campaign: P179
+candidate: C_D_primary_exact_and_numeric_verifier
+status: passed
+started_at: '2026-08-11T07:06:00Z'
+finished_at: '2026-08-11T07:07:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P179-sc2-static-einstein-scalar-audit/verify.py
+process: {exit_code: 0, elapsed_seconds: 25.30, checks: 34, terminal_tally: ALL_34_CHECKS_PASS}
+matrix:
+  total_axis_levels: 12
+  solver_gate_failures: 0
+  refinement_gate_failures: 0
+  largest_normalized_state_difference: 1.8344020767839617e-08
+  largest_absolute_frequency_difference: 3.137171633582625e-10
+  largest_absolute_outer_mass_difference: 4.711951273606019e-09
+independent_shooting:
+  root_function_evaluations: 6
+  frequency: 0.890839827775783
+  outer_mass: 0.290960714264588
+  central_lapse_exponent: -0.182426921486477
+  maximum_wall_residual: 6.788634994219117e-11
+  minimum_radial_metric_function: 0.879018721825586
+mutations:
+  zero_coupling_on_finite_gravity_profile: rejected
+  wrong_central_amplitude: rejected
+compatibility:
+  source_legacy_references: 0
+  scientific_candidate_failures_from_version_events: 0
+next_attempt: fresh_geometry_stress_projection_origin_and_shooting_rederivation_without_proposed_imports

@@ -1,0 +1,33 @@
+campaign: P179
+accepted_imports:
+  - {claim: C-STG-001, use: canonical_mostly_plus_action_stress_Einstein_equation_scalar_equation_and_dimensions}
+  - {claim: C-PDE-005, use: exact_single_harmonic_Jacobi_Anger_projection_and_evanescent_tail_semantics}
+  - {claim: C-PDE-009, use: exact_phase_average_versus_pointwise_equation_separation}
+  - {claim: C-PDE-012, use: regular_radial_and_finite_wall_semantics_for_the_numeric_claim}
+noncanonical_evidence:
+  - {source_unit: SC2, sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425}
+derived:
+  - phi_equals_F_times_u_and_V_equals_mu_squared_F_squared_times_one_minus_cos_u
+  - x_equals_mu_r_tau_equals_mu_t_m_equals_mu_Mgeo_alpha_equals_kappa_F_squared
+  - phase_averaged_orthonormal_rho_p_r_p_t
+  - areal_mass_lapse_and_fundamental_scalar_equations
+  - exact_conservation_factorization_and_regular_origin_series
+  - discarded_scalar_third_and_stress_second_harmonics
+  - corrected_finite_wall_branch_and_all_numeric_diagnostics
+declared_numeric_data:
+  central_amplitude: 3.0
+  dimensionless_coupling: 0.03
+  origin_cutoffs: [0.002, 0.001, 0.0005]
+  outer_radii: [30.0, 40.0, 60.0]
+  initial_meshes: [200, 400, 800]
+  tolerances: [1.0e-6, 1.0e-8, 1.0e-10]
+  maximum_nodes: 100000
+not_imported:
+  - SC2_full_PDE_or_Horndeski_headline
+  - source_reported_digits_as_pass_thresholds
+  - physical_kappa_F_mu_or_absolute_scale
+  - Gordon_metric_or_SC1_closure_authority
+  - empirical_observational_material_or_substrate_dictionary
+fitted_parameters:
+  - dimensionless_subgap_frequency_as_BVP_eigenparameter
+undeclared_imports: []

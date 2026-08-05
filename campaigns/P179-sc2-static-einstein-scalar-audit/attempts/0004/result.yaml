@@ -1,0 +1,17 @@
+attempt: 0004
+campaign: P179
+candidate: C_exact_scaled_phase_averaged_reduction
+status: passed
+started_at: '2026-08-11T07:04:00Z'
+finished_at: '2026-08-11T07:05:00Z'
+command: >-
+  .venv/bin/python -m pytest -q
+  tests/test_spherical_einstein_scalar.py tests/test_einstein_scalar.py
+process: {exit_code: 0, passed: 26, failed: 0}
+verified:
+  - physical_nondimensionalization_and_mass_dimensions
+  - exact_phase_averaged_stress_mass_lapse_and_scalar_equations
+  - exact_conservation_factorization_with_two_load_bearing_mutations
+  - discarded_scalar_third_harmonic_and_pointwise_stress_second_harmonic
+  - regular_origin_flat_and_vacuum_limits
+next_attempt: corrected_finite_wall_numeric_branch_with_retained_diagnostics

@@ -1,0 +1,26 @@
+campaign: P179
+claims:
+  C-STG-002:
+    accepted_dependencies:
+      - {claim: C-STG-001, closure: accepted_in_v0.110.0}
+      - {claim: C-PDE-005, closure: accepted_in_v0.46.0}
+      - {claim: C-PDE-009, closure: accepted_in_v0.48.0}
+  C-PDE-013:
+    accepted_dependencies:
+      - {claim: C-STG-002, closure: same_promotion_transaction}
+      - {claim: C-PDE-012, closure: accepted_in_v0.129.0}
+source_mappings:
+  - {source_unit: G3, disposition: qualified, accepted_claims: [C-STG-001], use: accepted_mapping_only}
+  - {source_unit: QB1, disposition: qualified, accepted_claims: [C-PDE-005, C-PDE-006], use: C-PDE-005_mapping_and_C-PDE-006_comparator_only}
+  - {source_unit: QB3, disposition: qualified, accepted_claims: [C-PDE-009, C-GW-007], use: C-PDE-009_mapping_only}
+  - {source_unit: BX1, disposition: qualified, accepted_claims: [C-PDE-003, C-PDE-005, C-PDE-009, C-PDE-012], use: C-PDE-012_mapping_only}
+  - {source_unit: SC1, disposition: qualified, accepted_claims: [C-GOR-001, C-STG-001, C-GOR-002], use: narrative_context_only}
+  - {source_unit: SC2, disposition: pending_or_qualified, use: hash_pinned_noncanonical_evidence}
+false_positive_inventory_dependencies:
+  - {token: E1, meaning: local_SC2_equation_label_not_phase_29_source_unit}
+  - {token: E2, meaning: local_SC2_equation_label_not_phase_29_source_unit}
+  - {token: E3, meaning: local_SC2_equation_label_not_phase_29_source_unit}
+  - {token: CF1, meaning: narrative_mention_without_executable_or_derivational_import}
+cycles: []
+undeclared_imports: []
+closure_passes: true

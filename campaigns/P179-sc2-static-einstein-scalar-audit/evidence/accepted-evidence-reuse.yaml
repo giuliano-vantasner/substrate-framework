@@ -1,0 +1,20 @@
+campaign: P179
+policy: hash_reuse_unchanged_accepted_evidence_and_replay_only_affected_paths
+reused:
+  - {claim: C-STG-001, campaign: P143, reason: action_stress_sign_and_dimensions_unchanged}
+  - {claim: C-PDE-005, campaign: P052, reason: harmonic_projection_and_tail_semantics_unchanged}
+  - {claim: C-PDE-009, campaign: P054, reason: phase_average_defect_semantics_unchanged}
+  - {claim: C-PDE-012, campaign: P177, reason: radial_wall_semantics_unchanged}
+  - {claim: C-GOR-002, campaign: P178, reason: disjoint_Gordon_geometry_remains_unchanged}
+replayed:
+  - new_exact_and_numeric_unit_tests
+  - P179_primary_verifier
+  - P179_independent_rederivation
+  - TX1_pending_reverse_consumer_once
+not_repeated:
+  - unchanged_historical_full_campaign_verifiers
+  - native_SC2_after_its_primary_hash_pinned_reproduction_and_verifier_replay
+efficiency_reason: >-
+  Repeating already accepted unchanged campaigns would add tally ceremony but
+  no sensitivity to the P179 claim delta. Hash closure and affected tests are
+  the stronger and cheaper oracle.

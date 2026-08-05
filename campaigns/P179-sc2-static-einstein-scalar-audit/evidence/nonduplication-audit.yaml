@@ -1,0 +1,24 @@
+campaign: P179
+provisional_claims: [C-STG-002, C-PDE-013]
+decision: promote_both_individually
+identifier_search:
+  searched: [C-STG-002, C-PDE-013]
+  surfaces: [governance_registry, campaigns, proposals, package, tests, durable_memory]
+  collisions: []
+nearest_claims:
+  - {claim: C-STG-001, distinction: canonical_action_stress_and_FLRW_solution_without_scaled_phase_averaged_static_spherical_reduction}
+  - {claim: C-PDE-005, distinction: flat_radial_harmonic_projection_without_gravitational_mass_lapse_constraints_or_stress}
+  - {claim: C-PDE-006, distinction: amplitude_2p5_multiharmonic_flat_finite_box_family_without_gravity}
+  - {claim: C-PDE-009, distinction: phase_average_defect_theorem_for_a_linearized_l2_equation_without_Einstein_scalar_reduction}
+  - {claim: C-PDE-012, distinction: general_radial_operator_and_wall_semantics_without_this_nonlinear_gravitating_branch}
+  - {claim: C-GOR-002, distinction: transverse_Gordon_local_vacuum_compatibility_not_spherical_areal_geometry}
+novel_exact_surface: >-
+  C-STG-002 is the first scaled canonical phase-averaged single-harmonic
+  Einstein-sine-Gordon reduction with exact constraints, origin laws,
+  conservation factorization, and explicit pointwise truncation defects.
+novel_numeric_surface: >-
+  C-PDE-013 is the first accepted finite-gravity finite-wall solution of that
+  reduction with mesh, tolerance, origin, wall, off-grid residual, horizon,
+  independent-shooting, and mutation evidence.
+generic_numerics_repackaged_as_physics: false
+debt: []

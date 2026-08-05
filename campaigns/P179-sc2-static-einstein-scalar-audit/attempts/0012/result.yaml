@@ -1,0 +1,22 @@
+attempt: 0012
+campaign: P179
+candidate: staged_diff_and_gitnexus_impact_audit
+status: passed
+started_at: '2026-08-11T07:16:00Z'
+finished_at: '2026-08-11T07:17:00Z'
+commands:
+  - git_diff_cached_check
+  - gitnexus_detect_changes_scope_staged
+gitnexus:
+  changed_files: 55
+  changed_symbols: 212
+  affected_symbols: 0
+  affected_processes: 0
+  risk: LOW
+manual_scope:
+  additive_exact_and_numeric_modules: true
+  additive_tests_and_exports: true
+  campaign_governance_release_docs_and_memory_synchronized: true
+  existing_canonical_signatures_changed: false
+  host_generated_gitnexus_files_included: false
+next_attempt: commit_the_validated_acceptance_transaction

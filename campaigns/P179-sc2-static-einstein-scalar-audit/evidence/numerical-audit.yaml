@@ -1,0 +1,48 @@
+campaign: P179
+claim: C-STG-002
+model: phase_averaged_single_harmonic_static_spherical_finite_wall_reduction
+branch: {central_amplitude: 3.0, dimensionless_coupling: 0.03}
+precision: IEEE_float64
+baseline: {origin_epsilon: 0.001, outer_radius: 40.0, initial_mesh_points: 400, tolerance: 1.0e-8, max_nodes: 100000}
+solver: scipy_integrate_solve_bvp_adaptive_collocation
+boundary:
+  origin: second_order_scalar_and_lapse_plus_cubic_mass_series
+  wall: approximate_evanescent_Robin_tail
+  gauge: exterior_Schwarzschild_lapse_match
+error_norms:
+  off_grid_ode: max_component_absolute_spline_derivative_minus_rhs_divided_by_one_plus_pointwise_max_rhs
+  solution_comparison: max_component_absolute_difference_divided_by_one_plus_reference_component_maximum
+levels:
+  mesh:
+    - {value: 200, omega: 0.890839827764295, mass: 0.290960714242516, phi0: -0.182426921522689, nodes: 698, collocation: 9.95086e-09, boundary: 8.67362e-19, off_grid: 2.40912e-09, min_f: 0.879013871916736}
+    - {value: 400, omega: 0.890839827773626, mass: 0.290960714250467, phi0: -0.182426921494688, nodes: 963, collocation: 9.97706e-09, boundary: 8.67362e-19, off_grid: 1.85704e-09, min_f: 0.879013438560012}
+    - {value: 800, omega: 0.890839827774982, mass: 0.290960714252594, phi0: -0.182426921498101, nodes: 1344, collocation: 9.92123e-09, boundary: 8.67362e-19, off_grid: 2.37389e-09, min_f: 0.879013436323817}
+  tolerance:
+    - {value: 1.0e-6, omega: 0.890839827462074, mass: 0.290960709552571, phi0: -0.182426933390014, nodes: 437, collocation: 7.97699e-07, boundary: 3.28286e-15, off_grid: 2.30277e-06, min_f: 0.879016786025009}
+    - {value: 1.0e-8, omega: 0.890839827773626, mass: 0.290960714250467, phi0: -0.182426921494688, nodes: 963, collocation: 9.97706e-09, boundary: 8.67362e-19, off_grid: 1.85704e-09, min_f: 0.879013438560012}
+    - {value: 1.0e-10, omega: 0.890839827775792, mass: 0.290960714264522, phi0: -0.182426921486489, nodes: 3408, collocation: 9.99802e-11, boundary: 0.0, off_grid: 7.01282e-11, min_f: 0.879013430362296}
+  origin:
+    - {value: 0.002, omega: 0.890839827773674, mass: 0.290960714250599, phi0: -0.182426921494499, nodes: 955, collocation: 9.98515e-09, boundary: 2.1684e-19, off_grid: 8.70214e-09, min_f: 0.879013475737700}
+    - {value: 0.001, omega: 0.890839827773626, mass: 0.290960714250467, phi0: -0.182426921494688, nodes: 963, collocation: 9.97706e-09, boundary: 8.67362e-19, off_grid: 1.85704e-09, min_f: 0.879013438560012}
+    - {value: 0.0005, omega: 0.890839827772058, mass: 0.290960714249294, phi0: -0.182426921493878, nodes: 1077, collocation: 9.97305e-09, boundary: 1.0842e-19, off_grid: 2.60893e-09, min_f: 0.879013426362569}
+  wall:
+    - {value: 30.0, omega: 0.890839827775976, mass: 0.290960714240403, phi0: -0.182426921498533, nodes: 942, collocation: 9.97367e-09, boundary: 1.73472e-18, off_grid: 2.37301e-09, min_f: 0.879013893260446}
+    - {value: 40.0, omega: 0.890839827773626, mass: 0.290960714250467, phi0: -0.182426921494688, nodes: 963, collocation: 9.97706e-09, boundary: 8.67362e-19, off_grid: 1.85704e-09, min_f: 0.879013438560012}
+    - {value: 60.0, omega: 0.890839827774306, mass: 0.290960714249865, phi0: -0.182426921499134, nodes: 1050, collocation: 9.96498e-09, boundary: 3.25261e-19, off_grid: 2.37300e-09, min_f: 0.879013749939432}
+maximum_axis_differences:
+  normalized_state: 1.8344020767839617e-08
+  frequency: 3.137171633582625e-10
+  outer_mass: 4.711951273606019e-09
+independent_method:
+  solver: scipy_integrate_DOP853_plus_scipy_optimize_root
+  root_function_evaluations: 6
+  frequency: 0.890839827775783
+  central_lapse_exponent: -0.182426921486477
+  outer_mass: 0.290960714264588
+  wall_residuals: [6.788634994219117e-11, -3.275678339687005e-14]
+  minimum_f: 0.879018721825586
+verdict: >-
+  The declared finite-wall phase-averaged branch passes every frozen solver,
+  residual, mesh, tolerance, origin, wall, horizon, independent-method, and
+  mutation gate. This is simulation evidence for the reduced boundary-value
+  problem only; it is not a pointwise full-PDE or infinite-domain theorem.

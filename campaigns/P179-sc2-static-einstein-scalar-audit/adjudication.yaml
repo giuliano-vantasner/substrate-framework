@@ -1,0 +1,78 @@
+campaign: P179
+title: SC2 static phase-averaged Einstein-scalar audit
+source_baseline: substrate@6d1f4e0
+source_units: [SC2]
+base_release: v0.130.0
+accepted_release: v0.131.0
+adjudicated_at: '2026-08-11T07:12:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_is_retained_as_source_evidence_only.}
+  - {id: C, reason: Exact_scaled_phase_averaged_reduction_earns_C_STG_002.}
+  - {id: D, reason: Corrected_finite_wall_branch_earns_qualified_C_PDE_013.}
+  - {id: G, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: B, decision: rejected_as_incomplete_because_accepted_inputs_do_not_state_the_new_reduction_or_branch}
+  - {id: E, decision: deferred_as_a_distinct_full_oscillaton_problem}
+  - {id: F, decision: rejected_because_no_nonminimal_Horndeski_action_is_present_or_required}
+claims:
+  - {id: C-STG-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-PDE-013, decision: accepted, verification: numeric_evidence, review: accepted, compatibility: compatible_extension, epistemic: qualified}
+accepted_composition:
+  - {id: C-STG-001, decision: unchanged_canonical_action_stress_and_dimensions}
+  - {id: C-PDE-005, decision: unchanged_harmonic_projection_and_tail_semantics}
+  - {id: C-PDE-009, decision: unchanged_phase_average_defect_semantics}
+  - {id: C-PDE-012, decision: unchanged_radial_finite_wall_semantics}
+unpromoted_claims:
+  - {id: SC2_full_coupled_pointwise_system, reason: Static_phase_averaging_leaves_nonzero_scalar_and_stress_harmonics.}
+  - {id: SC2_independent_theta_theta_check, reason: Averaged_conservation_factorizes_through_the_imposed_projected_scalar_equation.}
+  - {id: nonminimal_Horndeski_solution, reason: No_nonminimal_action_or_field_equation_is_supplied.}
+  - {id: exact_half_line_breather_or_full_oscillaton, reason: The_accepted_object_has_one_scalar_harmonic_a_static_metric_and_a_finite_wall.}
+  - {id: global_monotonicity_or_unique_branch, reason: Finite_samples_and_one_branch_do_not_establish_global_or_unique_structure.}
+  - {id: physical_gravity_observation_material_or_substrate_realization, reason: No_physical_scale_dictionary_or_observable_is_supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_einstein_scalar_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  exact_claim_review: reviews/C-STG-002-claim-review.md
+  numeric_claim_review: reviews/C-PDE-013-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  numeric_thresholds: evidence/numeric-thresholds.yaml
+  numerical_audit: evidence/numerical-audit.yaml
+  primary_attempt: attempts/0006/result.yaml
+  independent_failure: attempts/0007/result.yaml
+  independent_attempt: attempts/0008/result.yaml
+  reverse_consumer_attempt: attempts/0009/result.yaml
+  graph_attempt: attempts/0010/result.yaml
+  terminal_attempt: attempts/0011/result.yaml
+  staged_diff_attempt: attempts/0012/result.yaml
+source_disposition: {SC2: qualified}
+accepted_mappings: [C-STG-001, C-PDE-005, C-PDE-009, C-PDE-012, C-STG-002, C-PDE-013]
+compatibility:
+  mutable_current_name: numpy.trapezoid
+  immutable_legacy_nodes: [QB3, TX1]
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.131.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P179-sc2-static-einstein-scalar-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P179-sc2-static-einstein-scalar-audit/reviews/independent_einstein_scalar_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P179-sc2-static-einstein-scalar-audit/reviews/replay_source_graph.py
+  - pytest tests/test_spherical_einstein_scalar.py tests/test_spherical_einstein_scalar_bvp.py tests/test_einstein_scalar.py tests/test_numerics.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

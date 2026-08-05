@@ -1,0 +1,34 @@
+campaign: P179
+revision: 0002
+frozen_at: '2026-08-11T07:06:00Z'
+exposure: >-
+  The native source values and one corrected baseline plus independent spot
+  check are exposed. These thresholds therefore make no comparator blinding
+  claim; they are fixed before the complete axis-isolated refinement matrix.
+matrix_design: axis_isolated_about_epsilon_0p001_R_40_mesh_400_tol_1e_8
+physics_gates:
+  frequency_open_interval: [0.0, 1.0]
+  minimum_radial_metric_function_strictly_above: 0.1
+  outer_tail_squared_strictly_above: 0.0
+solver_gates:
+  max_collocation_rms_residual_factor_times_requested_tolerance: 1.05
+  maximum_boundary_residual: 1.0e-8
+  maximum_off_grid_relative_ode_residual: max_1e-8_or_5_times_requested_tolerance
+axis_stability_gates:
+  maximum_normalized_state_difference: 2.0e-6
+  maximum_absolute_frequency_difference: 2.0e-7
+  maximum_absolute_outer_mass_difference: 2.0e-7
+independent_shooting_gates:
+  maximum_absolute_frequency_difference: 1.0e-8
+  maximum_absolute_central_lapse_difference: 1.0e-8
+  maximum_absolute_outer_mass_difference: 1.0e-8
+  maximum_wall_residual: 1.0e-8
+mutation_gates:
+  minimum_wrong_coupling_relative_ode_residual: 1.0e-3
+  minimum_wrong_central_amplitude_boundary_residual: 0.1
+rationale: >-
+  Solver residual gates scale from requested tolerances. The horizon and tail
+  gates encode domain validity. Refinement thresholds are far above the
+  baseline floating-point agreement but far below changes in the physical
+  branch. Mutation thresholds require order-separated failures rather than a
+  changed terminal tally alone. No source-reported digit sets a gate.

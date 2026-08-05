@@ -1,0 +1,17 @@
+campaign: P179
+artifacts:
+  - {path: src/substrate_framework/spherical_einstein_scalar.py, sha256: 24f7af6f65c33150fff362ac7c6857dffe1a534f4ac9e998eba4fa4c15e4472d, role: canonical_exact_API}
+  - {path: src/substrate_framework/spherical_einstein_scalar_bvp.py, sha256: 13d42e2f4f5cbe6376f4da36c74c7bf2fd6911ddd2d490d790d42dd810b4535b, role: canonical_numeric_API}
+  - {path: campaigns/P179-sc2-static-einstein-scalar-audit/verify.py, sha256: 45fa444bea04f46c317a04e72046d1e52e4f2c2cc31e03afae167bb0cd9e1246, role: primary_verifier}
+  - {path: campaigns/P179-sc2-static-einstein-scalar-audit/reviews/independent_einstein_scalar_review.py, sha256: 91608c31e1256e0f45bf80f42875512df1777287deecd5793765898c005066ef, role: independent_rederivation}
+  - {path: campaigns/P179-sc2-static-einstein-scalar-audit/reviews/replay_source_graph.py, sha256: 5b7ed6ea84ee208f42bd374c3040ff78c97d588bb320bbe9cf716966b68ebcb7, role: source_graph_replay}
+  - {path: campaigns/P179-sc2-static-einstein-scalar-audit/evidence/numeric-thresholds.yaml, sha256: cdd74fe585b9624a88f8f2e1c3eb8b21952d2247fe320b22b0e6d95555b525e7, role: frozen_numeric_gates}
+  - {path: campaigns/P179-sc2-static-einstein-scalar-audit/evidence/numerical-audit.yaml, sha256: 7db22ea91b770d2a6369fbc7380840db10f285303303ae6df1a014a33347fa2a, role: numeric_results}
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-36/bridge_SC2_horndeski_selfconsistent_solve.py
+  sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425
+base_release:
+  path: governance/releases/v0.130.0.yaml
+  sha256: a13516d2a4de2d8d75b65ef5980c01e5feab408e123279954b4b12bf7dbf2ffb
+working_tree_artifacts_authoritative: false
+promotion_requires_committed_campaign: true

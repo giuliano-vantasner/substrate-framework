@@ -1,0 +1,42 @@
+campaign: P179
+additive_symbols:
+  - sine_gordon_gravity_scaling
+  - static_spherical_sine_gordon_reduction
+  - regular_origin_sine_gordon_data
+  - static_spherical_scalar_rhs
+  - finite_wall_boundary_residual
+  - solve_static_spherical_scalar_bvp
+  - shoot_static_spherical_scalar_bvp
+  - compare_static_spherical_scalar_solutions
+changed_existing_canonical_symbols: []
+direct_consumers:
+  - tests/test_spherical_einstein_scalar.py
+  - tests/test_spherical_einstein_scalar_bvp.py
+  - campaigns/P179-sc2-static-einstein-scalar-audit/verify.py
+package_export_consumer: src/substrate_framework/__init__.py
+source_reverse_consumers:
+  - source_unit: TX1
+    disposition: pending_adjudication
+    accepted_claims: []
+    result: native_nine_check_replay_passes_without_importing_SC2_authority
+unchanged_accepted_consumers:
+  - C-STG-001
+  - C-PDE-005
+  - C-PDE-006
+  - C-PDE-009
+  - C-PDE-012
+  - C-GOR-002
+generated_consumers:
+  - docs/generated/claims.md
+  - docs/generated/releases.md
+  - docs/generated/source-claims.md
+  - memory/vantasner/claims/C-STG-002.md
+  - memory/vantasner/claims/C-PDE-013.md
+  - memory/vantasner/releases/v0.131.0.md
+gitnexus:
+  index_refreshed_at_head: ae5449e
+  target: static_spherical_sine_gordon_reduction
+  risk: LOW
+  direct_upstream_callers: 0
+  affected_processes: 0
+blanket_promotion: false

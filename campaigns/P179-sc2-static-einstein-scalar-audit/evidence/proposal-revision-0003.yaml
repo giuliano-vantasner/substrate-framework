@@ -1,0 +1,24 @@
+campaign: P179
+revision: 0003
+created_at: '2026-08-11T07:10:00Z'
+trigger: >-
+  Claim-level status review found that the exact reduction and the finite-wall
+  numerical branch have different strongest oracles and epistemic ceilings.
+claim_split:
+  - id: C-STG-002
+    object: exact_scaled_phase_averaged_static_spherical_Einstein_sine_Gordon_reduction_and_pointwise_defect
+    verification_ceiling: symbolic_verified
+    epistemic_target: active
+  - id: C-PDE-013
+    object: declared_amplitude_three_alpha_0p03_finite_wall_branch
+    verification_ceiling: numeric_evidence
+    epistemic_target: qualified
+reason: >-
+  Combining both objects would either downgrade the exact theorem or inflate
+  the numerical BVP. Candidate C and Candidate D were independently frozen,
+  selected, implemented, and verified, so they receive individual review.
+identifier_search: {identifiers: [C-STG-002, C-PDE-013], collisions: []}
+comparators_blinded: false
+new_scientific_inputs: []
+new_fitted_parameters: []
+next_attempt: claim_by_claim_review_dependency_consumer_and_source_adjudication

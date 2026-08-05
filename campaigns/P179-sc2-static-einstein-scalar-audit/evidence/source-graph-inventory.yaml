@@ -1,0 +1,26 @@
+campaign: P179
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: G3, role: qualified_action_dependency, sha256: 8d462ce2bfd57bfced9fdedd511e9d2711e0c2454bc0d0441c681288495719ba, checks: 11, assertions: 1, accepted_claims: [C-STG-001]}
+  - {source_unit: QB1, role: qualified_projection_dependency, sha256: 1f387c140ca80be0e457efd17146267bdecab1cbdbcdd10dd34287bc5de2dc7a, checks: 6, assertions: 1, accepted_claims: [C-PDE-005, C-PDE-006]}
+  - {source_unit: QB3, role: qualified_averaging_dependency, sha256: e9626f2e4829084635386eea271d0abdd39c81dfcd6899765d2f4bffac83e0c8, checks: 4, assertions: 1, accepted_claims: [C-PDE-009, C-GW-007]}
+  - {source_unit: BX1, role: qualified_wall_semantics_dependency, sha256: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3, checks: 8, assertions: 1, accepted_claims: [C-PDE-003, C-PDE-005, C-PDE-009, C-PDE-012]}
+  - {source_unit: SC1, role: qualified_narrative_predecessor, sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0, checks: 5, assertions: 1, accepted_claims: [C-GOR-001, C-STG-001, C-GOR-002]}
+  - {source_unit: SC2, role: adjudicated_root, sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425, checks: 7, assertions: 4, accepted_claims_after_promotion: [C-STG-001, C-PDE-005, C-PDE-009, C-PDE-012, C-STG-002, C-PDE-013]}
+  - {source_unit: TX1, role: pending_direct_reverse_consumer, sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff, checks: 9, assertions: 2, accepted_claims: []}
+totals: {nodes: 7, lexical_predicates: 50, assertion_nodes: 11}
+execution_policy:
+  hash_reused_accepted_nodes: [G3, QB1, QB3, BX1, SC1]
+  recorded_native_nodes: [SC2, TX1]
+  repeated_native_nodes: []
+  immutable_legacy_name_nodes: [QB3, TX1]
+  native_version_stops: []
+  scientific_candidate_failures_from_version_events: 0
+false_positive_candidate_dependencies:
+  E1: local_equation_label
+  E2: local_equation_label
+  E3: local_equation_label
+  CF1: narrative_mention
+authority:
+  accepted_dependency_mappings_are_individual: true
+  reverse_consumer_execution_creates_authority: false

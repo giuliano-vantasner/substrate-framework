@@ -1,0 +1,23 @@
+campaign: P179
+policy: version_only_numpy_integration_events_do_not_reject_scientific_candidates
+mutable_surfaces:
+  - path: campaigns/P179-sc2-static-einstein-scalar-audit/verify.py
+    integration: numpy.trapezoid
+  - path: campaigns/P179-sc2-static-einstein-scalar-audit/reviews/independent_einstein_scalar_review.py
+    integration: numpy.trapezoid
+  - path: src/substrate_framework/spherical_einstein_scalar.py
+    integration: none
+  - path: src/substrate_framework/spherical_einstein_scalar_bvp.py
+    integration: none
+immutable_surfaces:
+  - {unit: SC2, legacy_references: 0, current_references: 0, native_exit: 0}
+  - {unit: QB3, legacy_references: 1, current_references: 1, native_version_stop_in_accepted_audit: false}
+  - {unit: TX1, legacy_references: 1, current_references: 1, native_exit: 0}
+eager_legacy_default_fallbacks: 0
+alias_only_replays_required: []
+scientific_candidate_failures_from_version_events: 0
+verdict: >-
+  Mutable P179 quadrature uses numpy.trapezoid. SC2 has no integration-name
+  surface. Immutable QB3 and TX1 retain version-specific source provenance;
+  neither stopped in its recorded native environment, and no scientific
+  verdict is lowered because of the legacy spelling.

@@ -62,7 +62,7 @@ selection_criteria:
   - solver_status_residual_refinement_independent_method_and_mutation_sensitivity
   - novelty_beyond_C_STG_001_and_C_PDE_005_006_009_012
   - dependency_consumer_physical_scope_and_governance_closure
-claims_proposed: [C-STG-002]
+claims_proposed: [C-STG-002, C-PDE-013]
 comparators_blinded_until: >-
   freeze commit before opening SC2's body for a new campaign audit; the
   generated queue already exposes the static areal gauge, single-harmonic
@@ -72,4 +72,5 @@ comparators_blinded_until: >-
   runtime-output blinding is claimed; exact source literals, numerical inputs,
   arrays, solver statuses, thresholds, and intermediate derivation remain
   unopened in P179
-status: active
+status: claim_split_revision_0003
+revision: 0003

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 46
-  qualified: 159
+  pending_adjudication: 45
+  qualified: 160
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -10315,8 +10315,59 @@ units:
   dynamic_check_calls: 0
   assert_statements: 4
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-STG-001
+  - C-PDE-005
+  - C-PDE-009
+  - C-PDE-012
+  - C-STG-002
+  - C-PDE-013
+  qualification: 'SC2''s static areal equations survive only as the dimensionally completed phase-averaged
+    single-harmonic canonical Einstein-sine-Gordon reduction C-STG-002. The exact averaged stress, mass
+    and lapse constraints, projected scalar equation, conservation factorization, regular-origin laws,
+    flat and vacuum limits, and discarded harmonic defects are accepted through that corrected object.
+    C-PDE-013 separately owns one amplitude-three, alpha=0.03 finite-wall numerical branch with complete
+    solver, residual, mesh, tolerance, origin, wall, horizon, independent-shooting, and mutation evidence.
+    SC2.3 is not an independent full-system check: its conservation residual factorizes through the same
+    projected scalar equation. The source''s static averaged metric is not a pointwise time-dependent
+    Einstein-scalar solution, its minimal canonical action is not a nonminimal Horndeski theory, and its
+    finite wall is not spatial infinity. Global monotonicity, uniqueness, an exact breather or oscillaton,
+    selected physical coupling or scale, Gordon closure, observation, material gravity, and substrate
+    realization remain unaccepted. TX1 stays pending and inherits no blanket authority.'
+  evidence:
+  - campaigns/P179-sc2-static-einstein-scalar-audit/reviews/source_adjudication.md
+  - campaigns/P179-sc2-static-einstein-scalar-audit/reviews/C-STG-002-claim-review.md
+  - campaigns/P179-sc2-static-einstein-scalar-audit/reviews/C-PDE-013-claim-review.md
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/source-reproduction.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/compatibility-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/source-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/check-adjudication.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/input-provenance.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/dependency-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/consumer-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/candidate-comparison.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/accepted-evidence-reuse.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/primary-provenance.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/literature-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/numeric-thresholds.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/evidence/numerical-audit.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/verify.py
+  - campaigns/P179-sc2-static-einstein-scalar-audit/reviews/independent_einstein_scalar_review.py
+  - campaigns/P179-sc2-static-einstein-scalar-audit/reviews/replay_source_graph.py
+  - campaigns/P179-sc2-static-einstein-scalar-audit/attempts/0006/result.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/attempts/0008/result.yaml
+  - campaigns/P179-sc2-static-einstein-scalar-audit/attempts/0010/result.yaml
+  - memory/vantasner/decisions/C-STG-002-review.md
+  - memory/vantasner/decisions/C-PDE-013-review.md
+  - memory/vantasner/decisions/SC2-qualified-review.md
+  note: P179 closes thirty-four primary, nine independent, and twenty-nine graph checks plus forty-five
+    focused tests before the integrated boundary. The corrected branch passes twelve refinement levels
+    and an independent shooting method. Mutable quadrature uses numpy.trapezoid; immutable QB3 and TX1
+    legacy spellings cause no version stop and no scientific failure. GitNexus rates the additive exact
+    API LOW risk with no affected process.
 - source_unit: WN1
   phase: phase-37
   path: merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py

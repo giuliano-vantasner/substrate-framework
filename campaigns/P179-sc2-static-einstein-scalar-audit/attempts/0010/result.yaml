@@ -1,0 +1,22 @@
+attempt: 0010
+campaign: P179
+candidate: source_dependency_reverse_consumer_graph
+status: passed
+started_at: '2026-08-11T07:10:00Z'
+finished_at: '2026-08-11T07:11:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P179-sc2-static-einstein-scalar-audit/reviews/replay_source_graph.py
+process: {exit_code: 0, elapsed_seconds: 2.4, checks: 29, terminal_tally: ALL_29_CHECKS_PASS}
+inventory: {nodes: 7, lexical_predicates: 50, assertion_nodes: 11}
+execution:
+  hash_reused_accepted_nodes: [G3, QB1, QB3, BX1, SC1]
+  recorded_native_nodes: [SC2, TX1]
+  repeated_native_nodes: []
+compatibility:
+  immutable_legacy_nodes: [QB3, TX1]
+  scientific_candidate_failures_from_version_events: 0
+authority:
+  SC2_transition_safe: true
+  TX1_remains_pending: true
+next_attempt: individual_exact_and_numeric_claim_review

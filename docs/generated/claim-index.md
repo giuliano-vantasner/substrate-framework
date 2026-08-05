@@ -858,6 +858,15 @@ Let ell be a nonnegative integer and let a sufficiently differentiable real radi
 - Compatibility: `native`
 - Dependencies: C-PDE-003, C-PDE-005, C-PDE-009
 
+## C-PDE-013
+
+On the exact C-STG-002 reduced model, declare central amplitude A=3, dimensionless coupling alpha=0.03, IEEE float64, origin cutoff epsilon=0.001, finite wall R=40, and frequency constrained to 0<Omega<1. Use the C-STG-002 second-order scalar and lapse and cubic mass origin series, the finite-wall approximate evanescent Robin condition a_x(R)+[k_R+1/R]*a(R)=0 with k_R^2=[1-Omega^2/f(R)]/f(R)>0, and the exterior Schwarzschild gauge match Phi(R)=log(f(R))/2. SciPy adaptive collocation with 400 initial points, tolerance 1e-10, and at most 100000 nodes converges to Omega=0.890839827775792, m(R)=0.290960714264522, and extrapolated central Phi_0=-0.182426921486489. It uses 3408 adaptive nodes, has maximum collocation RMS residual 9.99802e-11, zero boundary residual at reported precision, maximum off-grid relative first-order ODE residual 7.01282e-11, and minimum full-domain f=0.879013430362296. Axis-isolated initial-mesh 200/400/800, tolerance 1e-6/1e-8/1e-10, origin-cutoff 0.002/0.001/0.0005, and wall 30/40/60 studies all pass the frozen solver, residual, evanescent-tail, and horizon gates. Across each axis against its finest or largest reference, the maximum normalized state, frequency, and outer-mass differences are respectively 1.8344020768e-8, 3.1371716336e-10, and 4.7119512736e-9, below the frozen 2e-6, 2e-7, and 2e-7 gates. An independently written DOP853 plus two-variable root-shooting method with wall continuation gives Omega=0.890839827776100, m(R)=0.290960714264587, Phi_0=-0.182426921486121, and minimum f=0.879018721894243. Zero-coupling, wrong-central-amplitude, and wrong-J_1-sign mutations fail their preregistered gates. This is numeric evidence for one declared finite-wall solution of the phase-averaged reduced BVP. The amplitude and alpha are free branch coordinates, the wall is not spatial infinity, and the result establishes no uniqueness, exact half-line state, pointwise time-dependent Einstein-scalar solution, full oscillaton, nonminimal Horndeski theory, physical scale, observation, material gravity, or substrate mechanism.
+
+- Accepted in: `v0.131.0`
+- Verification: `numeric_evidence`
+- Compatibility: `compatible_extension`
+- Dependencies: C-STG-002, C-PDE-012
+
 ## C-PGA-001
 
 On C^3 tensor C^2, let T_a be the eight standard fundamental SU3 generators of C-LIE-001 and let t_i=sigma_i/2 be the three standard Pauli-half SU2 generators of C-REP-002. For an exact explicitly real nonzero supplied scalar y, define C_a=T_a tensor I_2, L_i=I_3 tensor t_i, and Y=y*I_6. Then every C_a and L_i is Hermitian, each factor obeys its accepted Lie bracket, all 35 cross-factor commutators among C_a, L_i, and Y vanish, and the twelve matrices are linearly independent. They therefore give a faithful finite-dimensional representation of the local Lie algebra su3 direct-sum su2 direct-sum u1. The full joint commutant of the C_a and L_i in Mat_6(C) is exactly the scalar span of I_6, so every Hermitian Abelian generator commuting with both non-Abelian factors has the form y*I_6. For separately supplied exact positive factor couplings and exact connection components, the algebra-valued connection component is their unique displayed linear sum in this fixed basis. If a compact U1 parameter is separately assigned period 2*pi, its full-turn action is exp(2*pi*i*y)*I_6 and descent to that compact parameterization additionally requires exp(2*pi*i*y)=1. These exact local matrix facts do not select a global direct product rather than a finite central quotient, a compact hypercharge normalization, physical matter representations, fields, a gauge transformation law, kinetic terms, an action, currents, couplings matched to observation, gauge bosons, a Standard Model identification, or a substrate mechanism.
@@ -1325,6 +1334,15 @@ Let g_ab be an exact four-dimensional Lorentzian metric with mostly-plus signatu
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none
+
+## C-STG-002
+
+Let the canonical C-STG-001 scalar be phi=F*u with exact positive field scale F, exact positive mass scale mu, and potential V(phi)=mu^2*F^2*(1-cos(u)); let kappa be exact and positive. Define x=mu*r, tau=mu*t, m=mu*M_geo, and alpha=kappa*F^2. On a domain with x>0, N=exp(Phi)>0, and f=1-2m/x>0, use the dimensionless static areal metric ds^2=-N(x)^2*d tau^2+dx^2/f(x)+x^2*d Omega_2^2 and the real single-harmonic ansatz u=a(x)*cos(Omega*tau), with exact positive frequency Omega. Exact phase averaging gives rho=Omega^2*a^2/(4*N^2)+f*a_x^2/4+1-J_0(a), p_r=f*a_x^2/4+Omega^2*a^2/(4*N^2)-(1-J_0(a)), and p_t=Omega^2*a^2/(4*N^2)-f*a_x^2/4-(1-J_0(a)). The reduced Einstein and fundamental-projected scalar equations are m_x=alpha*x^2*rho/2, Phi_x=[m+alpha*x^3*p_r/2]/[x*(x-2m)], and a_xx+[Phi_x+f_x/(2f)+2/x]*a_x+ [Omega^2*a/N^2-2*J_1(a)]/f=0. Identically, (p_r)_x+(rho+p_r)*Phi_x+2*(p_r-p_t)/x equals f*a_x/2 times the displayed scalar residual; this is an induced averaged conservation identity, not an independent pointwise equation. At a regular origin with a(0)=A and Phi(0)=Phi_0, let rho_0 and p_r0 be the displayed stress with a_x=0. Then a_xx(0)=[2J_1(A)-Omega^2*A*exp(-2Phi_0)]/3, m=alpha*rho_0*x^3/6+O(x^5), and Phi_xx(0)=alpha*(rho_0/6+p_r0/2). The flat alpha=0, m=Phi=0 limit is exactly the C-PDE-005 single-harmonic radial equation, and A=0 is the vacuum limit. The first discarded scalar harmonic in the same residual convention is 2J_3(a) cos(3Omega*tau), with coefficient a^3/24+O(a^5), while the pointwise energy density generally retains the cos(2Omega*tau) coefficient -Omega^2*a^2/(4N^2)+f*a_x^2/4+2J_2(a). Therefore this exact object is a scaled phase-averaged single-harmonic reduction and is not generally a pointwise solution of the full time-dependent Einstein-scalar PDE. It establishes no solution existence or uniqueness, exact half-line breather, full oscillaton, nonminimal Horndeski or Gordon dynamics, selected physical kappa, F, or mu, observation, material model, gravity realization, or substrate mechanism.
+
+- Accepted in: `v0.131.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-STG-001, C-PDE-005, C-PDE-009
 
 ## C-SYM-001
 

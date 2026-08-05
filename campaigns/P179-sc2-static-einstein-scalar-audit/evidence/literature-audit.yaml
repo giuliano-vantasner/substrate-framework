@@ -1,0 +1,17 @@
+campaign: P179
+external_literature_imported: false
+reason: >-
+  The promoted statements follow from accepted framework claims, standard
+  differential geometry, exact Bessel/Fourier identities, and declared SciPy
+  solvers. No external paper, measured constant, or literature-specific
+  normalization is load bearing.
+source_label_audit:
+  label: Horndeski
+  accepted_as_dynamics: false
+  reason: SC2 supplies only the minimal canonical Einstein_scalar action_and_reduction
+scope_terms_rejected:
+  - full_pointwise_Einstein_scalar_PDE_solution
+  - nonminimal_Horndeski_solution
+  - exact_infinite_domain_breather
+  - physical_gravity_or_observational_realization
+  - substrate_mechanism

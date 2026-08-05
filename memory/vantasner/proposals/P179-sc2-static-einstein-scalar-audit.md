@@ -2,7 +2,7 @@
 description: Audit SC2 and construct an exact phase-averaged spherical Einstein-sine-Gordon reduction
 author: vantasner
 created: '2026-08-11T06:58:00Z'
-updated: '2026-08-11T06:58:00Z'
+updated: '2026-08-11T07:12:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - einstein-scalar
 - harmonic-balance
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P179 SC2 Static Einstein-Scalar Audit
 
@@ -132,6 +132,32 @@ their tests, generated docs, releases, and memory. SC1's accepted mapping is
 unchanged and cannot become dependent on SC2 retroactively. TX1 remains
 pending until separately adjudicated. No `supersedes` relationship is proposed.
 
+## Source-Aware Revision
+
+Revision 0001 selects Candidates C, D, and G after native SC2 reproduction.
+The source's E1, E2, and E3 form a viable static phase-averaged reduced model,
+but SC2.3 is the averaged conservation identity induced by E3 and cannot
+establish the pointwise full PDE. Candidate C must expose this exact scope and
+the missing physical-to-dimensionless scale ledger. Candidate D is authorized
+only for the declared amplitude-three, `alpha=0.03` branch with origin cutoffs
+0.002/0.001/0.0005, walls 30/40/60, initial meshes 200/400/800, tolerances
+1e-6/1e-8/1e-10, adaptive-collocation status and residuals, full-domain
+horizon margin, origin-series data, and an independent DOP853 shooting route.
+Source values remain comparators and do not set pass thresholds.
+
+Revision 0002 freezes the complete numeric pass criteria after one executable
+baseline and independent-method spot check but before the axis-isolated
+refinement matrix. Collocation residuals must remain within 1.05 times the
+requested tolerance, boundary residuals below `1e-8`, off-grid relative ODE
+residuals below the larger of `1e-8` and five times tolerance, and the full
+domain must retain `f>0.1` and an evanescent wall tail. Mesh, tolerance,
+origin, and wall axes must each agree with their reference within `2e-6` in
+the declared normalized state norm, `2e-7` in frequency, and `2e-7` in outer
+mass. Independent shooting has `1e-8` frequency, central-lapse, mass, and wall
+residual gates. Wrong coupling and wrong central-amplitude mutations must fail
+by at least `1e-3` and `0.1`, respectively. The exposed source digits do not
+set any threshold.
+
 ## Implementation and Oracle Plan
 
 The source audit will inventory every definition, import, literal, check,
@@ -185,16 +211,16 @@ and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| SC2's exact implementation and predicate reach are unaudited in P179 | Pin every definition, check, assertion, import, solver, value and result sentence | open |
-| The source may erase the scalar mass and field scales | Derive the `phi=F*u`, `x=mu*r`, `alpha=kappa*F^2` ledger and trace every source parameter | open |
-| Displayed mass, lapse, or scalar equations may have wrong order, sign, factor, or component | Reconstruct the exact tensor, stress, projected equation and constraints independently | open |
-| A phase-averaged system may be called the full PDE | Derive and expose the pointwise and unretained-harmonic defects | open |
-| Native solver completion may omit status, residual, refinement, or horizon checks | Inventory the oracle and build a fully declared sensitive route if selected | open |
-| Finite-wall zeros or stable core values may be mistaken for localization | Apply accepted channel, wall, threshold and endpoint semantics | open |
-| C-STG-002 may duplicate accepted scalar or harmonic claims | Compare exact statements, APIs, assumptions, evidence and consumers | open |
-| SC1 or TX1 may inherit blanket authority | Replay the complete dependency and reverse-consumer graph | open |
-| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, claim and release state | open |
+| SC2's exact implementation and predicate reach are unaudited in P179 | Pin every definition, check, assertion, import, solver, value and result sentence | closed |
+| The source may erase the scalar mass and field scales | Derive the `phi=F*u`, `x=mu*r`, `alpha=kappa*F^2` ledger and trace every source parameter | closed |
+| Displayed mass, lapse, or scalar equations may have wrong order, sign, factor, or component | Reconstruct the exact tensor, stress, projected equation and constraints independently | closed |
+| A phase-averaged system may be called the full PDE | Derive and expose the pointwise and unretained-harmonic defects | closed |
+| Native solver completion may omit status, residual, refinement, or horizon checks | Inventory the oracle and build a fully declared sensitive route if selected | closed |
+| Finite-wall zeros or stable core values may be mistaken for localization | Apply accepted channel, wall, threshold and endpoint semantics | closed |
+| C-STG-002 may duplicate accepted scalar or harmonic claims | Compare exact statements, APIs, assumptions, evidence and consumers | closed |
+| SC1 or TX1 may inherit blanket authority | Replay the complete dependency and reverse-consumer graph | closed |
+| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | closed |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, claim and release state | closed |
 
 ## Review and Promotion Plan
 
@@ -221,6 +247,11 @@ full-versus-averaged scope is explicit, dependencies and consumers replay,
 compatibility and nonduplication are classified, governed records agree, and
 the debt ledger is empty. A source error, solver failure, no localized state,
 or full-PDE obstruction alone keeps the campaign active.
+
+P179 met this gate in release v0.131.0 by accepting exact C-STG-002 and
+separately qualified numeric C-PDE-013. SC2 is qualified predicate by
+predicate, TX1 remains pending, all ten debts are closed, and no full-PDE,
+Horndeski, exact-half-line, physical-scale, or substrate reading is promoted.
 
 ## Cross-References
 

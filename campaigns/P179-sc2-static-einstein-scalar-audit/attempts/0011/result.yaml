@@ -1,0 +1,16 @@
+attempt: 0011
+campaign: P179
+candidate: integrated_promotion_boundary
+status: passed
+started_at: '2026-08-11T07:13:00Z'
+finished_at: '2026-08-11T07:16:00Z'
+command: scripts/validate.sh
+process: {exit_code: 0, elapsed_seconds: 145.63, terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS}
+governance: {claims: 168, accepted: 168, proposals: 0}
+migration_queue: {units: 218, pending: 45, partial: 0}
+memory: {valid_records: 722}
+skill: valid
+tests: {passed: 1533, failed: 0}
+full_pytest_repeated_separately: false
+reason: scripts_validate_already_executes_the_complete_suite
+next_attempt: staged_diff_and_change_impact_audit_before_commit

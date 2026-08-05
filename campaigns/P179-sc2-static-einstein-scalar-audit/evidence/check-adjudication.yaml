@@ -1,0 +1,65 @@
+source_unit: SC2
+checks:
+  - id: SC2.1
+    executable_result: pass
+    final_verdict: accepted_through_corrected_reduced_flat_limit
+    accepted_claims: [C-STG-002, C-PDE-013]
+    reason: >-
+      The two numerical methods target the same single-harmonic flat equation
+      and agree at declared amplitude three. This is useful method comparison,
+      not an accepted QB1 input or evidence for the full Einstein-scalar PDE.
+  - id: SC2.2
+    executable_result: pass
+    final_verdict: qualified_to_one_corrected_finite_coupling_branch
+    accepted_claims: [C-PDE-013]
+    reason: >-
+      The static metric responds to the free dimensionless coupling in the
+      solved reduced BVP. Seven monotone samples do not prove global
+      monotonicity or determine a physical coupling or scale.
+  - id: SC2.3
+    executable_result: pass
+    final_verdict: exact_averaged_identity_accepted_full_PDE_headline_rejected
+    accepted_claims: [C-STG-002]
+    reason: >-
+      The averaged conservation residual factorizes as f*a_prime/2 times the
+      projected scalar equation. It closes the averaged angular Einstein
+      equation when the two constraints hold, but it is not an independent
+      pointwise full-system check and does not test unretained harmonics.
+  - id: SC2.4
+    executable_result: pass
+    final_verdict: source_evidence_incomplete_corrected_refinement_accepted
+    accepted_claims: [C-PDE-013]
+    reason: >-
+      Output stability under initial-mesh changes survives, but final adaptive
+      node counts, solver residual estimates, off-grid residuals, and tolerance
+      refinement are absent.
+  - id: SC2.5
+    executable_result: pass
+    final_verdict: corrected_finite_wall_stability_accepted_with_wall_ceiling
+    accepted_claims: [C-PDE-013]
+    reason: >-
+      The Robin branch is stable for the sampled walls. This supports a
+      localized reduced-model core but not a pointwise periodic solution,
+      exact half-line state, or finite-energy higher-harmonic breather.
+  - id: SC2.GA
+    executable_result: pass
+    final_verdict: corrected_full_domain_horizon_and_outer_guard_accepted
+    accepted_claims: [C-PDE-013]
+    reason: >-
+      Mass saturation and the outer Schwarzschild gauge match survive. The
+      claimed no-horizon verdict requires the minimum of f over the entire
+      domain, not only 2*M(R)/R.
+  - id: SC2.GB
+    executable_result: pass
+    final_verdict: reduced_scalar_mutation_evidence_accepted_independence_headline_rejected
+    accepted_claims: [C-STG-002, C-PDE-013]
+    reason: >-
+      The fabricated profile breaks reduced conservation strongly, confirming
+      sensitivity to the projected scalar equation. It does not make the
+      conservation calculation independent of the solved ODE.
+summary:
+  accepted_as_written: []
+  accepted_through_corrected_claims: [C-STG-002, C-PDE-013]
+  exact_rederivation_completed: [E1, E2, E3, averaged_stress, conservation_factorization, pointwise_defect]
+  numeric_reverification_completed: [flat_limit, finite_coupling_branch, mesh, wall, tolerance, origin, residual, horizon, independent_shooting]
+  blanket_full_PDE_or_Horndeski_headline_supported: false

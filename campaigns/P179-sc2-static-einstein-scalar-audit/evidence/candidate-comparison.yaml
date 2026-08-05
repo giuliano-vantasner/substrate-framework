@@ -1,0 +1,21 @@
+campaign: P179
+criteria_order:
+  - accepted_action_signature_stress_and_dimension_compatibility
+  - exact_variational_constraint_and_projected_scalar_closure
+  - averaged_reduced_model_versus_pointwise_full_PDE_separation
+  - regular_origin_horizon_outer_data_and_tail_semantics
+  - assumption_scale_parameter_and_boundary_economy
+  - solver_residual_refinement_independent_method_and_mutation_sensitivity
+  - novelty_dependency_consumer_and_governance_closure
+decisions:
+  A: {decision: retained_as_hash_pinned_source_evidence, reason: Native_execution_is_clean_but_several_headlines_exceed_the_predicates.}
+  B: {decision: rejected_as_incomplete_composition, reason: Accepted_inputs_do_not_state_the_scaled_averaged_spherical_reduction_or_branch.}
+  C: {decision: selected_as_C_STG_002, reason: Exact_native_reusable_reduction_with_explicit_full_PDE_defect.}
+  D: {decision: selected_as_C_PDE_013, reason: Corrected_finite_wall_branch_passes_every_frozen_numeric_and_independent_gate.}
+  E: {decision: deferred_distinct_larger_problem, reason: Full_oscillaton_metric_harmonics_are_not_needed_to_accept_the_explicitly_averaged_object.}
+  F: {decision: rejected_as_unsupported_label_repair, reason: No_nonminimal_Horndeski_action_is_present_or_required.}
+  G: {decision: selected, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+comparator_selected_candidate: false
+new_free_parameters: 2
+free_parameters: [central_amplitude, dimensionless_coupling]
+physical_parameter_values_selected: false

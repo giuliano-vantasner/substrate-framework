@@ -1,0 +1,26 @@
+attempt: 0003
+campaign: P179
+candidate: C_exact_scaled_phase_averaged_reduction
+status: failed_test_oracle_repaired
+started_at: '2026-08-11T07:03:00Z'
+finished_at: '2026-08-11T07:04:00Z'
+command: .venv/bin/python -m pytest -q tests/test_spherical_einstein_scalar.py
+process:
+  exit_code: 1
+  passed: 9
+  failed: 2
+failure_class: test_representation
+failures:
+  - >-
+    SymPy cannot construct an Order term after substituting an applied
+    undefined function as the series variable; expand the Bessel expression
+    in an independent exact symbol instead.
+  - >-
+    Direct structural equality did not recognize the simplified origin
+    coefficient and its factored equivalent; compare their exact simplified
+    difference.
+scientific_equation_failure: false
+implementation_changed: false
+preserved_evidence:
+  - nine exact tests passed including the stress constraints conservation factorization mutations and flat vacuum limits
+next_attempt: repair_only_the_two_test_oracles_and_replay_the_exact_suite

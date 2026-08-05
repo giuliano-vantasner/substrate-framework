@@ -1,0 +1,36 @@
+source_unit: SC2
+source_sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425
+constructed_executable_objects:
+  - heuristic_flat_single_harmonic_shooting_classifier_at_declared_amplitude_three
+  - phase_averaged_single_harmonic_stress_on_a_static_areal_metric
+  - four_state_parameterized_solve_bvp_system_for_a_a_prime_M_Phi_and_omega
+  - exact_symbolic_mixed_tt_rr_and_theta_theta_Einstein_components
+  - analytic_averaged_anisotropic_conservation_residual_using_the_projected_scalar_rhs
+  - seven_point_dimensionless_coupling_scan
+  - four_initial_mesh_and_five_outer_wall_replays
+  - fabricated_Gaussian_scalar_profile_mutation
+objects_absent:
+  - explicit_physical_to_dimensionless_phi_F_u_and_mu_scale_ledger
+  - pointwise_time_dependent_Einstein_tensor_minus_scalar_stress_residual
+  - unretained_third_and_higher_scalar_harmonic_residual
+  - phase_averaged_reduced_action_variation
+  - final_adaptive_mesh_node_and_collocation_residual_inventory
+  - off_collocation_ODE_and_boundary_residuals
+  - origin_cutoff_and_solver_tolerance_refinement
+  - independent_finite_coupling_shooting_or_alternate_method
+  - minimum_interior_horizon_margin
+  - full_time_periodic_metric_harmonics_or_3plus1_evolution
+load_bearing_findings:
+  - E1 and E2 are the standard first-order mixed tt and rr areal-gauge Einstein constraints for the displayed averaged rho and p_r.
+  - E3 is the fundamental cosine projection of the scalar equation on the static metric and reduces to the accepted C-PDE-005 single-harmonic form in the flat limit.
+  - The source stress is exactly phase averaged, so its conservation identity follows from the same projected scalar ODE; this is reduced-system closure rather than an independent full-PDE oracle.
+  - The static Einstein tensor cannot match the generally time-dependent pointwise scalar stress; the source expressly omits oscillating metric harmonics but still overstates SC2.3 as the full coupled system.
+  - The source calls the minimal canonical scalar route Horndeski without introducing any nonminimal Horndeski coupling or action beyond C-STG-001.
+  - Mesh labels are initial solve_bvp meshes; adaptive final nodes and solver residual estimates are not compared.
+  - The finite-wall Robin branch and box stability are useful numeric evidence for the reduced model but do not establish an infinite-domain exact breather or the full periodic PDE.
+  - Guard A checks outer compactness only; a horizon-free claim requires positive f over the complete numerical domain.
+  - Guard B is a meaningful scalar-equation mutation but not an independent theta-theta derivation because the conservation residual factorizes by the projected scalar residual.
+compatibility: >-
+  SC2 contains no direct imported or dynamic NumPy trapezoidal integration
+  reference and runs natively. Version compatibility creates no scientific
+  failure; mutable P179 code must use numpy.trapezoid or trapezoid_integral.
