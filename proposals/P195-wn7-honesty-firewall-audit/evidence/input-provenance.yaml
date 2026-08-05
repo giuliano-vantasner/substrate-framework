@@ -1,0 +1,21 @@
+revision: 0001
+campaign: P195
+base_release: v0.144.0
+base_commit: 3f5e6c6
+release_sha256: b995916d6e708d29f0f493562741d7ba35bc202ce2784f4aaed7d1dfd5232a0a
+registry_sha256: 0093510e7268724551166623ac9590c33af1d3e28ff32a8a78c78e5bce34e998
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+source_sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50
+source_bytes: 18121
+source_lines: 333
+source_history: [7222eed]
+source_worktree_dirty_outside_pinned_file: true
+authority_inputs: [C-SCR-001, C-BRN-001, C-RES-001, C-SG-019, C-CMB-001, C-CMB-002, C-OSC-001, C-CMB-003, C-OSC-002]
+source_dependencies: [CM1, GB4, GB6, PN4, WN1, WN2, WN3, WN4, WN5, WN6]
+reverse_source_consumers: []
+fresh_blinding_claimed: false
+prior_runtime_tally_exposed: 59
+provisional_identifier: null
+
