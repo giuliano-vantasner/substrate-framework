@@ -1,0 +1,10 @@
+campaign: P208
+route: independent_direct_potential_overlap_and_Poschl_rederivation
+files:
+  proposals/P208-gc1-overlap-binding-lock-audit/reviews/independent_curvature_review.py: f64dcf402dde4229d5dd3faea4e51c1c0536cf69e548d3421b6f7b3e1a87c03e
+checks: 9
+oracle: direct_SymPy_differentiation_integration_eigenfunction_and_moment_identity
+independence: >-
+  This route does not import the new curvature ledger or the normalized
+  overlap and Poschl ledger APIs. It rebuilds the potential derivatives,
+  normalized integrals, shallow-well eigenfunction, and moment counterexample.

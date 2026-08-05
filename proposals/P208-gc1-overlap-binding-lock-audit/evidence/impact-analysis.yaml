@@ -1,0 +1,27 @@
+campaign: P208
+claim: C-QBL-005
+change_kind: additive_public_API_and_claim
+canonical_symbol_changes:
+  added:
+    - QuarticBindingCouplingLedger
+    - quartic_curvature_deficit
+    - quartic_binding_coupling_ledger
+  modified: []
+  removed: []
+direct_consumers:
+  - tests/test_qball_fluctuations.py
+  - proposals/P208-gc1-overlap-binding-lock-audit/verify.py
+indirect_consumers:
+  - migration/source-claims.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claims.md
+  - docs/generated/releases.md
+  - memory/framework/claims/C-QBL-005.md
+  - memory/framework/releases/v0.151.0.md
+source_reverse_consumers: [GC2, GC3, GC4, GC5, GC6]
+formal_consumers: []
+compatibility_surface: none
+risk: >-
+  Additive symbols do not change existing API behavior. The material risk is
+  narrative overreach: future consumers must inherit the local conditional
+  identity and explicit counterexamples, not GC1's rejected universal no-go.

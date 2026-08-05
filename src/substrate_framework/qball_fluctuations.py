@@ -21,12 +21,85 @@ from .quartic_qball import (
 )
 
 
+@dataclass(frozen=True)
+class QuarticBindingCouplingLedger:
+    """Exact local relation for one declared linear coupling multiplier.
+
+    The coupling scale and the identification of the multiplier with the
+    quartic field are model inputs.  The ledger does not turn a local
+    curvature identity into a spectral, localization, or hierarchy theorem.
+    """
+
+    field_value: sp.Expr
+    frequency: sp.Expr
+    coupling_scale: sp.Expr
+    effective_potential: sp.Expr
+    vacuum_curvature: sp.Expr
+    field_curvature: sp.Expr
+    curvature_deficit: sp.Expr
+    local_coupling: sp.Expr
+    lock_coefficient: sp.Expr
+    lock_residual: sp.Expr
+
+
 def quartic_qball_effective_potential(field_value: Any, omega: Any) -> sp.Expr:
     """Return ``kappa**2*f**2/2-f**4/48`` for the declared stationary energy."""
 
     field = sp.sympify(field_value)
     kappa = quartic_qball_inverse_width(omega)
     return sp.simplify(kappa**2 * field**2 / 2 - field**4 / 48)
+
+
+def quartic_curvature_deficit(field_value: Any, omega: Any) -> sp.Expr:
+    """Return ``V''(0)-V''(f)=f**2/4`` for the declared quartic potential."""
+
+    field = sp.sympify(field_value)
+    dummy = sp.Dummy("field", real=True)
+    potential = quartic_qball_effective_potential(dummy, omega)
+    curvature = sp.diff(potential, dummy, 2)
+    return sp.simplify(curvature.subs(dummy, 0) - curvature.subs(dummy, field))
+
+
+def quartic_binding_coupling_ledger(
+    field_value: Any,
+    omega: Any,
+    coupling_scale: Any = 1,
+) -> QuarticBindingCouplingLedger:
+    """Return the conditional lock for ``c=lambda*f`` with nonzero real lambda.
+
+    The exact result is ``D=c**2/(4*lambda**2)``.  Changing the coupling map
+    or the quartic potential changes this relation; neither is inferred from
+    the other by this API.
+    """
+
+    field = sp.sympify(field_value)
+    frequency = sp.sympify(omega)
+    scale = sp.sympify(coupling_scale)
+    if scale.is_number and (
+        scale.is_real is not True or scale.is_zero is not False
+    ):
+        raise ValueError("coupling_scale must be real and nonzero")
+    dummy = sp.Dummy("field", real=True)
+    potential = quartic_qball_effective_potential(dummy, frequency)
+    curvature = sp.diff(potential, dummy, 2)
+    vacuum_curvature = sp.simplify(curvature.subs(dummy, 0))
+    field_curvature = sp.simplify(curvature.subs(dummy, field))
+    deficit = sp.simplify(vacuum_curvature - field_curvature)
+    coupling = sp.simplify(scale * field)
+    coefficient = sp.simplify(1 / (4 * scale**2))
+    residual = sp.simplify(deficit - coefficient * coupling**2)
+    return QuarticBindingCouplingLedger(
+        field_value=field,
+        frequency=frequency,
+        coupling_scale=scale,
+        effective_potential=sp.simplify(potential.subs(dummy, field)),
+        vacuum_curvature=vacuum_curvature,
+        field_curvature=field_curvature,
+        curvature_deficit=deficit,
+        local_coupling=coupling,
+        lock_coefficient=coefficient,
+        lock_residual=residual,
+    )
 
 
 def quartic_fluctuation_potential(

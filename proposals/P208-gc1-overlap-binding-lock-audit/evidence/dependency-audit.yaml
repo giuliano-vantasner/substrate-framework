@@ -1,0 +1,23 @@
+campaign: P208
+source_unit: GC1
+terminal_dependencies:
+  EM6: [C-QBL-001]
+  FG2: [C-QBL-001, C-QBL-003]
+  MH1: [C-QBL-003, C-OVL-001]
+  MH2: [C-OVL-001, C-OVL-002]
+  O1: [C-SPN-001, C-DEF-001, C-BER-001, C-HOL-001, C-CHR-001]
+  WM7: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+  WM9: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, C-RGE-005]
+  WM10: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+nonauthoritative_cycle_dependencies: [GC3, GC4, GC5]
+admitted_composition: [C-QBL-001, C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002]
+rejected_inheritance:
+  - EM6 supplies the quartic profile but no stability window or physical condensate.
+  - FG2 supplies a complete two-level scalar Hessian spectrum that is explicitly not a generation tower.
+  - MH1 supplies a normalized multiplier expectation but no Yukawa interaction generation or physical mass.
+  - MH2 supplies separately translated isospectral wells with free centers depth width and spacing.
+  - O1 supplies no scalar flavor or hierarchy authority relevant to the conditional identity.
+  - WM7 WM9 and WM10 supply no derived scalar count generation count or physical boundary selection.
+  - GC3 GC4 and GC5 remain pending cycle nodes and cannot establish GC1 premises.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

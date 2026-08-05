@@ -1,0 +1,15 @@
+campaign: P208
+claim: C-QBL-005
+nearest_claims:
+  C-QBL-001: Owns the exact quartic sech profile and charge calculus but no declared scalar Hessian or coupling composition.
+  C-QBL-003: Owns the exact quartic Hessian potential and complete two-level spectrum but no local multiplier lock or overlap scaling consequence.
+  C-OVL-001: Owns normalized expectations and the two quartic-mode overlaps for a supplied profile but does not relate the multiplier to potential curvature.
+  C-OVL-002: Owns translated overlaps and exact translated Poschl wells but not the one-field quartic curvature composition.
+  C-QBL-002: Owns the distinct exact-sine implicit branch and only approaches the quartic model at small amplitude.
+novel_object: >-
+  The accepted registry does not type the exact composition between quartic
+  curvature deficit and a separately normalized linear local multiplier, nor
+  state its exact coupling/potential sensitivity and shallow-well
+  non-implications.
+reserved_identifiers_checked: [C-QBL-005, C-OVL-004, C-RGE-008]
+result: promote_C_QBL_005_without_reusing_reserved_C_OVL_004

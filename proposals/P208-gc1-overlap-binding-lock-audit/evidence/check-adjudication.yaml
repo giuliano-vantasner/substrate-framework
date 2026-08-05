@@ -1,0 +1,40 @@
+campaign: P208
+source_unit: GC1
+checks:
+  - id: GC1.1
+    decision: retained_exact_with_scope_correction
+    mapping: [C-QBL-003, C-QBL-005]
+    reason: The quartic curvature deficit is exact for arbitrary field substitution in the fixed declared quartic potential; it is not a theorem for arbitrary potentials or profiles solving arbitrary models.
+  - id: GC1.2
+    decision: retained_conditional_declaration
+    mapping: [C-OVL-001, C-QBL-005]
+    reason: Dividing the declared overlap integrand by its density recovers the separately supplied multiplier f0; this does not derive a Yukawa interaction and the integrated y_n is not the pointwise c(x).
+  - id: GC1.3
+    decision: identity_retained_universal_no_go_rejected
+    mapping: [C-QBL-005]
+    reason: D=c^2/4 is exact at lambda=1, but shallow one-dimensional wells can remain bound and alternative coupling maps or potentials break universality.
+  - id: GC1.4
+    decision: retained_for_exact_quartic_profile_only
+    mapping: [C-QBL-001, C-QBL-003, C-QBL-005]
+    reason: Exact sign analysis gives one minimum for the declared quartic sech well; five positive samples are not the proof and the result is not an arbitrary-profile theorem.
+  - id: GC1.5
+    decision: finite_values_qualified_relocation_diagnostic_rejected
+    mapping: [C-QBL-002]
+    reason: The exact-sine finite computation is reproducible, but rms_about_origin over mean_absolute_coordinate is universally at least one and cannot distinguish relocation; spread<10 is a declared cutoff.
+  - id: GC1.5b
+    decision: sampled_evidence_qualified_universal_statement_rejected
+    mapping: [C-QBL-002]
+    reason: Eight omega samples under one finite-box method do not prove an all-frequency lower bound, and the exact-sine curvature deficit is not the quartic lock.
+  - id: GC1.6
+    decision: retained_as_conditional_two_profile_countermodel
+    mapping: [C-OVL-002, C-QBL-005]
+    reason: Independent binding and multiplier profiles algebraically permit remote attenuation with fixed binding, but coexistence stability and a multisoliton identity are unproved.
+  - id: GC1.7
+    decision: retained_exact_countermodel
+    mapping: [C-QBL-005]
+    reason: Two independent fields generically violate the source-normalized lock, demonstrating that the coupling declaration is load bearing.
+  - id: GC1.8
+    decision: qualified_source_anti_fit_inventory
+    mapping: []
+    reason: No measured constant is imported by the pinned source, but the selected global-name set alone is not a general reachability oracle and grants no physics authority.
+terminal_tally_role: execution_evidence_only

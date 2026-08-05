@@ -1,0 +1,10 @@
+campaign: P208
+route: primary_exact_composition_and_source_adjudication
+files:
+  proposals/P208-gc1-overlap-binding-lock-audit/verify.py: 2a9c37e9a6ca2eaf76f729daca0525e5626e5b97c8b5f4bbe7013718271db29a
+  src/substrate_framework/qball_fluctuations.py: 5cd790c6364b26475fe577b7657e60c398c92ad5e266c6770006ca0fc4f52d77
+  src/substrate_framework/normalized_overlaps.py: 83bcc31038f5502780da42d91bbb109f7a84b53d578a4fdccda96ff63cfbe226
+  src/substrate_framework/translated_localization.py: 5a8bd4dbb77552c942c2b98afce67ff0f54431ccdc161e6408ebf7f2b6e985ec
+  src/substrate_framework/source_audit.py: ee24c7a236dc6b8f70bba3d6cefb42f9b4ca5b206f1643de09438cf61a648cf7
+checks: 23
+oracle: exact_SymPy_identity_AST_inventory_and_accepted_API_composition

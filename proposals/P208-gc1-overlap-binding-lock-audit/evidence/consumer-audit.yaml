@@ -1,0 +1,16 @@
+campaign: P208
+source_unit: GC1
+direct_reverse_consumers: [GC2, GC3, GC4, GC5, GC6]
+consumer_status_at_freeze:
+  GC2: pending_adjudication
+  GC3: pending_adjudication
+  GC4: pending_adjudication
+  GC5: pending_adjudication
+  GC6: pending_adjudication
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  The five reverse consumers grant no backward authority. Future disposition
+  changes do not alter this frozen fact; each consumer may inherit only the
+  accepted conditional identity and its explicit non-implications.

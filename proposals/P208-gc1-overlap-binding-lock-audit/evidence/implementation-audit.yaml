@@ -1,0 +1,26 @@
+campaign: P208
+claim: C-QBL-005
+canonical_changes:
+  - src/substrate_framework/qball_fluctuations.py
+new_public_api:
+  - QuarticBindingCouplingLedger
+  - quartic_curvature_deficit
+  - quartic_binding_coupling_ledger
+reused_apis:
+  - quartic_qball_effective_potential
+  - quartic_qball_profile
+  - quartic_fluctuation_potential
+  - quartic_fluctuation_bound_eigenvalues
+  - quartic_bound_mode_overlap_ledger
+  - poschl_teller_ground_ledger
+  - audit_numpy_trapezoid_compatibility
+  - CheckLedger
+focused_tests:
+  - tests/test_qball_fluctuations.py
+  - tests/test_normalized_overlaps.py
+  - tests/test_translated_localization.py
+architecture_result: >-
+  Reusable potential coupling and normalization algebra lives in one pure
+  package API. Campaign code imports it and retains source-specific
+  adjudication only. Imports execute no simulation and print no tally.
+quadrature_result: no_integration_alias_surface

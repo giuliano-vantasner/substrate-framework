@@ -1,0 +1,30 @@
+campaign: P208
+selected:
+  - id: A
+    reason: Exact differentiation independently proves the fixed-quartic curvature deficit.
+  - id: B
+    reason: Exact elimination proves the lock only after the linear local coupling and its normalization are declared.
+  - id: C
+    reason: Potential curvature and coupling map remain independent model data in the general composition.
+  - id: D
+    reason: Nonlinear independent and rescaled couplings plus a sextic potential deformation are decisive exact countermodels to universality.
+  - id: F
+    reason: A separately translated fixed-depth well remains isospectral and cannot be identified with an attenuated core tail.
+  - id: G
+    reason: C-QBL-005 is novel as the typed local composition and its exact non-implications beyond the accepted component claims.
+  - id: H
+    reason: GC1 receives an individual terminal corrected qualification with cycle edges excluded.
+not_selected:
+  - id: E
+    decision: rejected
+    reason: >-
+      GC1 supplies neither an exhaustive operator theorem for its exact-sine
+      sweep nor a valid shallow-well no-go. Exact Poschl and quartic scaling
+      counterexamples refute the claimed light-versus-bound contradiction.
+selection_basis:
+  - exact_identity_and_mutation_sensitivity
+  - declaration_provenance_and_parameter_economy
+  - accepted_dependency_and_novelty_closure
+  - exact_spectral_counterexamples
+  - physical_ceiling_and_graph_closure
+comparator_used_for_selection: false

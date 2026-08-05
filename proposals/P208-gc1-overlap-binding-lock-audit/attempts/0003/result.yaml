@@ -1,0 +1,26 @@
+attempt: 0003
+campaign: P208
+timestamp_utc: '2026-08-05T22:34:56Z'
+kind: exact_implementation_counterexample_and_claim_review
+base_commit: 1d73407b6d33127df376e2c0c3de90bcf78b5e7b
+selected_candidates: [A, B, C, D, F, G, H]
+rejected_candidates:
+  E: no_exhaustive_spectral_no_go_and_exact_counterexamples_refute_light_bound_contradiction
+implementation:
+  module: src/substrate_framework/qball_fluctuations.py
+  symbols: [QuarticBindingCouplingLedger, quartic_curvature_deficit, quartic_binding_coupling_ledger]
+primary_checks: 23
+independent_checks: 9
+source_graph_checks: 36
+focused_tests: 63
+scientific_version_failures: 0
+diagnosed_transient_verifier_repairs:
+  - moved_an_original_second_variation_assertion_back_to_its_test_after_initial_patch_placement
+  - replaced_undecidable_SymPy_sign_metadata_with_exact_Poschl_index_and_eigenvalue_identities
+  - rewrote_independent_sech_integrals_to_cosh_forms_that_SymPy_evaluates_exactly
+  - compared_variance_factorizations_by_exact_residual_instead_of_expression_tree_equality
+scientific_verdict: >-
+  Provisional C-QBL-005 survives exact primary and independent verification.
+  GC1's universal hierarchy no-go fails exact type model moment and shallow-well
+  audits, while the conditional local identity and one-center quartic result survive.
+continuation: validate_implementation_commit_then_promote_claim_release_disposition_docs_and_memory_once

@@ -4,6 +4,8 @@ import pytest
 import sympy as sp
 
 from substrate_framework.qball_fluctuations import (
+    quartic_binding_coupling_ledger,
+    quartic_curvature_deficit,
     quartic_fluctuation_bound_eigenvalues,
     quartic_fluctuation_bound_modes,
     quartic_fluctuation_continuum_threshold,
@@ -34,6 +36,57 @@ def test_second_variation_derives_poschl_teller_potential() -> None:
         sp.diff(energy_potential, field, 2).subs(field, profile)
         - quartic_fluctuation_potential(coordinate, frequency)
     ) == 0
+
+
+def test_quartic_curvature_deficit_is_derived_before_profile_substitution() -> None:
+    field, frequency = sp.symbols("f omega", real=True)
+    assert quartic_curvature_deficit(field, frequency) == field**2 / 4
+
+
+def test_linear_coupling_lock_retains_its_supplied_normalization() -> None:
+    field, frequency = sp.symbols("f omega", real=True)
+    scale = sp.symbols("lambda", nonzero=True, real=True)
+    ledger = quartic_binding_coupling_ledger(field, frequency, scale)
+    assert ledger.vacuum_curvature == sp.Rational(1, 2) - frequency**2
+    assert ledger.field_curvature == (
+        sp.Rational(1, 2) - frequency**2 - field**2 / 4
+    )
+    assert ledger.curvature_deficit == field**2 / 4
+    assert ledger.local_coupling == scale * field
+    assert ledger.lock_coefficient == 1 / (4 * scale**2)
+    assert ledger.lock_residual == 0
+
+
+def test_profile_substitution_gives_the_exact_quartic_well_depth() -> None:
+    coordinate, frequency = sp.symbols("x omega", real=True)
+    kappa = quartic_qball_inverse_width(frequency)
+    profile = quartic_qball_profile(coordinate, frequency)
+    assert sp.simplify(
+        quartic_curvature_deficit(profile, frequency)
+        - 6 * kappa**2 * sp.sech(kappa * coordinate) ** 2
+    ) == 0
+
+
+def test_lock_is_sensitive_to_coupling_and_potential_mutations() -> None:
+    field, frequency, epsilon = sp.symbols("f omega epsilon", real=True)
+    baseline = quartic_binding_coupling_ledger(field, frequency)
+    nonlinear_coupling_residual = sp.simplify(
+        baseline.curvature_deficit - field**4 / 4
+    )
+    deformed_potential = baseline.effective_potential + epsilon * field**6
+    deformed_deficit = sp.simplify(
+        sp.diff(deformed_potential, field, 2).subs(field, 0)
+        - sp.diff(deformed_potential, field, 2)
+    )
+    assert nonlinear_coupling_residual != 0
+    assert deformed_deficit == field**2 / 4 - 30 * epsilon * field**4
+    assert sp.simplify(deformed_deficit - baseline.curvature_deficit) != 0
+
+
+@pytest.mark.parametrize("scale", [0, sp.I])
+def test_binding_coupling_ledger_rejects_invalid_numeric_scale(scale) -> None:
+    with pytest.raises(ValueError, match="real and nonzero"):
+        quartic_binding_coupling_ledger(1, sp.Rational(1, 2), scale)
 
 
 def test_exact_bound_modes_and_eigenvalues() -> None:
