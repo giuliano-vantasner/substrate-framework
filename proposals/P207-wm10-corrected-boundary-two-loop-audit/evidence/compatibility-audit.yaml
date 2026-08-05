@@ -1,0 +1,15 @@
+campaign: P207
+installed_numpy: 2.5.1
+source_unit: WM10
+source_legacy_np_trapz_references: 0
+source_current_np_trapezoid_references: 0
+source_eager_legacy_default_fallbacks: 0
+graph_nodes_scanned: 14
+graph_legacy_references: {}
+mutable_campaign_legacy_references: 0
+aliases_injected_during_science: []
+version_only_scientific_failures: 0
+policy_result: >-
+  WM10 and its scoped graph have no quadrature compatibility surface. Mutable
+  P207 code contains no np.trapz or eager legacy fallback. Any future immutable
+  version-name event remains compatibility evidence, not scientific failure.

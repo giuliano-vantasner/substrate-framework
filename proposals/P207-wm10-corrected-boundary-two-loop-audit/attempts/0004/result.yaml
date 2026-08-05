@@ -1,0 +1,11 @@
+attempt: 0004
+campaign: P207
+timestamp_utc: '2026-08-05T23:12:00Z'
+kind: primary_verifier_expected_value_repair
+command: PYTHONPATH=src_.venv/bin/python_proposals/P207-wm10-corrected-boundary-two-loop-audit/verify.py
+exit_status: 1
+failure: hand_transcribed_cross_term_differed_from_the_four_fresh_corner_values_by_1.37e-11
+scientific_candidate_affected: false
+diagnosis: expected_decimal_was_formed_from_an_earlier_rounded_corner_not_the_current_canonical_outputs
+repair: pin_the_difference_of_the_four_fresh_canonical_corner_values_without_changing_the_sign_or_nonadditivity_gate
+continuation: rerun_the_unchanged_primary_scientific_route

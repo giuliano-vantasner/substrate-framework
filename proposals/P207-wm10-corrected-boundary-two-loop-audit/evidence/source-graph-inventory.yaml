@@ -1,0 +1,29 @@
+campaign: P207
+root: WM10
+direct_dependencies: [WM2, WM3, WM5, WM6, WM7, WM8, WM9]
+direct_reverse_consumers: [GC1, GC2, GC3, GC4, GC5, GC6]
+nodes:
+  WM2: {static_check_calls: 10, assert_nodes: 1}
+  WM3: {static_check_calls: 10, assert_nodes: 1}
+  WM5: {static_check_calls: 11, assert_nodes: 1}
+  WM6: {static_check_calls: 11, assert_nodes: 1}
+  WM7: {static_check_calls: 10, assert_nodes: 1}
+  WM8: {static_check_calls: 10, assert_nodes: 1}
+  WM9: {static_check_calls: 8, assert_nodes: 1}
+  WM10: {static_check_calls: 7, assert_nodes: 1}
+  GC1: {static_check_calls: 9, assert_nodes: 2}
+  GC2: {static_check_calls: 8, assert_nodes: 2}
+  GC3: {static_check_calls: 9, assert_nodes: 1}
+  GC4: {static_check_calls: 8, assert_nodes: 1}
+  GC5: {static_check_calls: 8, assert_nodes: 1}
+  GC6: {static_check_calls: 6, assert_nodes: 1}
+totals: {nodes: 14, static_check_calls: 125, assert_nodes: 16}
+expected_coverage:
+  fresh_native_executions: 1
+  graph_replay_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  version_only_scientific_failures: 0
+authority_ceiling: >-
+  Hash AST status mapping and compatibility replay closes source governance
+  only. The seven terminal dependencies grant their accepted ceilings, and the
+  six pending GC consumers remain separately reviewable.

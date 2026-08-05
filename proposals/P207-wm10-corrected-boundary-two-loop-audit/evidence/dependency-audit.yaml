@@ -1,0 +1,15 @@
+campaign: P207
+source_unit: WM10
+declared_dependencies: [WM2, WM3, WM5, WM6, WM7, WM8, WM9]
+dependency_status: all_terminal
+admitted_composition: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+rejected_inheritance:
+  - WM2 supplies duplicate trace evidence and no common physical induction action.
+  - WM3 and C-RGE-004 supply conditional inverse inference from low coordinates.
+  - WM5 and C-RGE-005 supply a gauge-only coefficient ledger with field content and omissions explicit.
+  - WM6 and C-RGE-006 already own the arbitrary-boundary solver and physical ceilings.
+  - WM7 supplies table boundary ratios without physical scalar or generation count.
+  - WM8 supplies the exact one-loop boundary specialization and no scalar-count selection.
+  - WM9 supplies shared-amplitude overlap composition and explicitly no derived N_H or N_gen.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

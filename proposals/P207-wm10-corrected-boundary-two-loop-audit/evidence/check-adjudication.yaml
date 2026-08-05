@@ -1,0 +1,16 @@
+campaign: P207
+source_unit: WM10
+checks:
+  - {id: WM10.1, source_runtime: pass, status: retained_exact_containment_rejected_independent_physics_validation, mapping: [C-RGE-004, C-RGE-006], reason: The canonical zero-matrix route reproduces WM8 exactly; it is a containment limit of the same accepted problem.}
+  - {id: WM10.2, source_runtime: pass, status: retained_numeric_containment_rejected_new_generalization, mapping: [C-RGE-005, C-RGE-006], reason: The equal-boundary full-matrix route reproduces C-RGE-006, whose API already accepts arbitrary boundary ratios.}
+  - {id: WM10.3, source_runtime: pass, status: retained_conditional_combined_solution_rejected_prediction_and_forced_physics, mapping: [C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003], reason: The value and nonzero cross term reproduce, but boundary content low coordinates normalization and matching remain supplied and same-order terms are omitted.}
+  - {id: WM10.4, source_runtime: pass, status: retained_single_method_refinement_upgraded_by_independent_methods, mapping: [C-RGE-006], reason: Source RK45 tightening is stable but not method-independent; canonical DOP853 tightening Radau and direct-g routes provide the stronger evidence.}
+  - {id: WM10.5, source_runtime: pass, status: retained_comparator_dataflow_absence_rejected_executed_perturbation, mapping: [C-RGE-004, C-RGE-006], reason: AST confirms comparator absence from residuals, but the named repeat uses identical arguments and perturbs nothing.}
+  - {id: WM10.6, source_runtime: pass, status: retained_sign_sensitivity_rejected_group_theory_forcing, mapping: [C-REP-003, C-RGE-005, C-RGE-006], reason: Sign mutants move the conditional readout, but accepted claims supply field content and comparator miss does not prove physical signs or multiplicity.}
+  - {id: WM10.7, source_runtime: pass, status: retained_sampled_monotonic_evidence_rejected_continuum_and_license_claim, mapping: [C-RGE-006], reason: The nine source points and a fresh 25-point grid are increasing, but finite samples do not prove the whole continuous square or license a physical composition.}
+  - {id: WM10.doc.5, source_runtime: absent, status: rejected_exhaustive_residual_attribution, mapping: [C-RGE-005, C-RGE-006], reason: The prose-only result names uncomputed omissions and cannot show they exhaust or quantitatively explain the residual.}
+summary:
+  retained_exact_or_numeric_composition: 3
+  retained_guard_or_refinement_only: 4
+  rejected_unexecuted_interpretation: 1
+  blanket_headline_accepted: false

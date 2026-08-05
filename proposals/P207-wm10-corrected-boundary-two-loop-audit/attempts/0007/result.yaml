@@ -1,0 +1,10 @@
+attempt: 0007
+campaign: P207
+timestamp_utc: '2026-08-05T23:20:00Z'
+kind: primary_exact_numeric_and_authority_audit
+command: PYTHONPATH=src_.venv/bin/python_proposals/P207-wm10-corrected-boundary-two-loop-audit/verify.py
+checks: 38
+exit_status: 0
+preserved_repairs: [0003_IVPEvidence_status_surface, 0004_cross_term_decimal, 0005_registry_scope]
+verdict: combined_conditional_solution_retained_prediction_and_exhaustive_attribution_rejected
+continuation: independent_direct_coordinate_rederivation_and_graph_replay

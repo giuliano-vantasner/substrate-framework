@@ -1,0 +1,22 @@
+campaign: P207
+source_unit: WM10
+static_check_calls: 7
+literal_check_calls: 1
+dynamic_check_calls: 6
+assert_nodes: 1
+checks:
+  - {id: WM10.1, object: corrected_boundary_zero_matrix_rounded_containment}
+  - {id: WM10.2, object: equal_boundary_full_matrix_rounded_containment}
+  - {id: WM10.3, object: combined_conditional_readout_comparator_gain_and_nonadditivity}
+  - {id: WM10.4, object: default_RK45_tolerance_tightening_only}
+  - {id: WM10.5, object: comparator_name_absence_plus_identical_repeat_solve}
+  - {id: WM10.6, object: matrix_and_boundary_sign_mutations_ranked_by_comparator_miss}
+  - {id: WM10.7, object: nine_point_sampled_axis_monotonicity_with_unused_success_flags}
+unexecuted_docstring_result:
+  source_number: 5
+  object: attribution_of_entire_residual_to_named_omissions
+  executable_check: absent
+authority_ceiling: >-
+  The predicates establish conditional numeric arithmetic and a sampled
+  surface. They do not prove physical field content, a continuum monotonicity
+  theorem, exhaustive residual attribution, or an ab-initio prediction.

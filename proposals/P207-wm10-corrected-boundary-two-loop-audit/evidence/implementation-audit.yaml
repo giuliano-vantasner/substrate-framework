@@ -1,0 +1,19 @@
+campaign: P207
+canonical_modules_changed: []
+canonical_tests_changed: []
+campaign_verifiers:
+  - verify.py
+  - reviews/independent_direct_boundary_review.py
+  - reviews/replay_source_graph.py
+reused_modules:
+  - src/substrate_framework/gauge_running.py
+  - src/substrate_framework/gauge_beta.py
+  - src/substrate_framework/numerics.py
+  - src/substrate_framework/verification.py
+  - src/substrate_framework/source_audit.py
+decision: >-
+  No reusable implementation is added because C-RGE-006's existing public API
+  already accepts arbitrary positive boundary ratios and provides exact and
+  status-gated numerical routes.
+mutable_np_trapz_references: 0
+mutable_np_trapezoid_policy: satisfied

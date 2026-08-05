@@ -1,0 +1,16 @@
+campaign: P207
+criteria_frozen_before_source_body: true
+candidates:
+  A: {decision: selected, reason: C_RGE_006_already_owns_the_arbitrary_positive_boundary_gauge_only_two_loop_inverse_problem.}
+  B: {decision: rejected, reason: The_accepted_claim_and_API_already_quantify_over_the_combined_boundary_object.}
+  C: {decision: selected, reason: Exact_zero_matrix_containment_reproduces_WM8.}
+  D: {decision: selected, reason: Equal_boundary_nonzero_matrix_containment_reproduces_C_RGE_006.}
+  E: {decision: selected, reason: Canonical_and_direct_coordinate_routes_reproduce_the_combined_conditional_solution_with_status_gates.}
+  F: {decision: selected, reason: Four_corner_difference_exposes_nonlinear_interaction_and_omission_scope.}
+  G: {decision: selected, reason: Existing_gauge_running_API_owns_the_complete_corrected_object.}
+  H: {decision: selected, reason: Individual_WM10_qualification_and_pending_GC_replay_close_governance.}
+selection_not_used:
+  - proximity_to_the_measured_weak_angle
+  - source_ALL_7_CHECKS_PASS_or_prediction_wording
+  - claims_of_framework_forcing_from_pending_or_qualified_consumers
+reserved_unpromoted_claims: [C-RGE-008]

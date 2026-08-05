@@ -1,0 +1,8 @@
+campaign: P207
+artifact: reviews/independent_direct_boundary_review.py
+sha256: 3d28012a422c5ecd6c4ed84e7618371df1d3822c6e610d312569b9d2ad1ef4e3
+oracle: raw_direct_coupling_Radau_and_DOP853_shooting_plus_AST
+imports_preferred_beta_or_running_API: false
+checks: 15
+exit_status: 0
+independence_ceiling: Numeric_direct_coordinate_evidence_for_the_supplied_problem_only.

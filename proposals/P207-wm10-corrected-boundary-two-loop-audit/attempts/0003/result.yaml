@@ -1,0 +1,11 @@
+attempt: 0003
+campaign: P207
+timestamp_utc: '2026-08-05T23:10:00Z'
+kind: primary_verifier_construction
+command: PYTHONPATH=src_.venv/bin/python_proposals/P207-wm10-corrected-boundary-two-loop-audit/verify.py
+exit_status: 1
+failure: IVPEvidence_has_no_success_attribute
+scientific_candidate_affected: false
+diagnosis: shared_solve_ivp_evidence_returns_only_after_status_success_and_exposes_function_evaluations_not_a_success_field
+repair: test_positive_function_evaluation_count_alongside_existing_residual_and_positivity_gates
+continuation: rerun_the_unchanged_primary_scientific_route

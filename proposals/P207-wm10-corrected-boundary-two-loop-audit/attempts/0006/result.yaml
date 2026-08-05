@@ -1,0 +1,16 @@
+attempt: 0006
+campaign: P207
+timestamp_utc: '2026-08-05T23:18:00Z'
+kind: compatibility_preflight_and_native_reproduction
+freeze_commit: ebccbe9
+source_body_inspected_after_freeze: true
+source_native_executions: 1
+source_exit_status: 0
+source_runtime_checks: 7
+source_terminal_tally: ALL_7_CHECKS_PASS
+elapsed_wall_seconds: 1.25
+max_rss_kib: 113948
+compatibility_surface: none
+scientific_version_failures: 0
+verdict: reproduced_source_behavior_without_granting_prediction_authority
+continuation: canonical_status_gated_and_direct_coordinate_audits

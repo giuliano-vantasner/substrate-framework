@@ -1,0 +1,10 @@
+attempt: 0008
+campaign: P207
+timestamp_utc: '2026-08-05T23:21:00Z'
+kind: independent_direct_coupling_review
+command: PYTHONPATH=src_.venv/bin/python_proposals/P207-wm10-corrected-boundary-two-loop-audit/reviews/independent_direct_boundary_review.py
+checks: 15
+exit_status: 0
+imports_preferred_science_API: false
+verdict: direct_coordinate_routes_reproduce_combined_conditional_solution_and_cross_term
+continuation: terminal_dependency_and_reverse_consumer_replay

@@ -1,0 +1,12 @@
+campaign: P207
+artifact: verify.py
+sha256: ab576f0d05138f34dbdd37b9fc7f9be990686b0de97f43f767432d822e3ae897
+oracle: canonical_exact_and_status_gated_numeric_APIs_plus_AST_registry_and_mutation_audit
+canonical_dependencies:
+  src/substrate_framework/gauge_running.py: 418c4962fc4013d40a535643bf24cb20b731d8f99695b6616951fc6c91ec7be3
+  src/substrate_framework/gauge_beta.py: ce06dd6a878be95cdfda5dec2d637281a035b71f7986cc8bfe35ca4283b8f63a
+  src/substrate_framework/numerics.py: a6271efbb5c5694cf05cfdd5a67b126ad4ebe8eaf432ba90c715c306a125afe1
+  src/substrate_framework/verification.py: 278ea2593a0cacc5a72cbf4e6e7e6e5ad138206ac2da9134bed4ce12a00327cb
+checks: 38
+exit_status: 0
+independence_ceiling: Uses_the_accepted_running_and_beta_APIs_so_direct_g_rederivation_is_separate.

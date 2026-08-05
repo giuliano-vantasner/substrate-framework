@@ -1,0 +1,10 @@
+campaign: P207
+objects:
+  arbitrary_boundary_gauge_only_two_loop_inverse_solve: {owner: C-RGE-006, new_claim_needed: false, new_API_needed: false}
+  exact_zero_matrix_containment: {owner: C-RGE-006, new_claim_needed: false}
+  supplied_field_beta_ledger: {owner: C-RGE-005, new_claim_needed: false}
+  supplied_boundary_trace_family: {owner: [C-REP-001, C-REP-003, C-VAC-003], new_claim_needed: false}
+  four_corner_interaction_ledger: {role: campaign_evidence, new_claim_needed: false, reason: Numeric_specialization_of_the_existing_solver.}
+reserved_claims:
+  C-RGE-008: unpromoted_duplicate_of_C_RGE_006_arbitrary_boundary_quantifiers
+result: accepted_composition_no_canonical_surface

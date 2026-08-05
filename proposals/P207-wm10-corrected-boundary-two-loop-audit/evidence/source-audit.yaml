@@ -1,0 +1,33 @@
+campaign: P207
+source_unit: WM10
+source_sha256: a813f32841a4809f0ca301d8f01cb432d07d43c6bc46433970c1dcf60afe8d29
+canonical_four_corner_ledger:
+  equal_boundary_zero_matrix: {readout: 0.2075735012801248, scale_GeV: 6.697908707466e14}
+  equal_boundary_full_matrix: {readout: 0.2106411357493541, scale_GeV: 4.130150169615e14}
+  corrected_boundary_zero_matrix: {readout: 0.2162218011069736, scale_GeV: 2.596270638789e14}
+  corrected_boundary_full_matrix: {readout: 0.2192066478076030, scale_GeV: 1.618331584571e14}
+  interaction_cross_term: -0.0000827877685999
+  interaction_verdict: nonzero_negative_subadditive_on_the_declared_readout
+provenance_corrections:
+  - C-RGE-006 already quantifies over arbitrary supplied positive boundary ratios and owns the combined numerical solve.
+  - The corrected boundary and one-scalar beta ledger remain supplied field-table data; WM9 grants no scalar or generation count.
+  - The two low coordinates reference scale normalization and zero matching offsets remain supplied inverse-inference inputs.
+  - The source uses solve_ivp's default RK45 only; canonical DOP853 tolerance refinement and Radau close the stronger method gate.
+  - The source returns a root success boolean but does not check constraint magnitude; canonical residual gates remain below 1e-8.
+  - The source grid stores but never uses each solver success flag.
+  - The source's comparator guard repeats the same solve and does not perturb the comparator, although AST confirms comparator absence from residuals.
+  - Nine sampled points do not prove monotonicity or smoothness on the entire continuous unit square.
+  - The claimed exhaustive residual attribution has no executable predicate and omitted effects are not computed.
+  - Same-order Yukawa terms thresholds matching scheme conversion uncertainties and higher-order tensors prevent an exhaustive physical residual account.
+countermodels_and_mutations:
+  - Sign-flipping or transposing the two-loop matrix changes the conditional readout.
+  - Reversing or changing the supplied boundary correction changes the readout.
+  - Changing either supplied low target changes the solved readout.
+  - A finite matching offset changes the readout without changing b or B.
+  - Comparator mutation changes only post-solve miss arithmetic.
+  - The nonzero four-corner cross term rejects literal additivity without proving physical independence.
+headline_verdict_candidate: >-
+  WM10 is reproducible numeric accepted composition under C-RGE-006. The
+  combined gauge-only result is a conditional inverse solution, not a new
+  theorem, forced physical correction, full two-loop prediction, or exhaustive
+  residual explanation.

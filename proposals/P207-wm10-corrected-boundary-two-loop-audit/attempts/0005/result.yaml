@@ -1,0 +1,11 @@
+attempt: 0005
+campaign: P207
+timestamp_utc: '2026-08-05T23:14:00Z'
+kind: primary_registry_scope_repair
+command: PYTHONPATH=src_.venv/bin/python_proposals/P207-wm10-corrected-boundary-two-loop-audit/verify.py
+exit_status: 1
+failure: verifier_looked_for_scheme_conversion_in_C_RGE_005_instead_of_C_RGE_006
+scientific_candidate_affected: false
+diagnosis: C_RGE_005_states_Yukawa_threshold_and_matching_omissions_while_C_RGE_006_carries_the_scheme_conversion_ceiling
+repair: test_each_accepted_claim_at_its_actual_statement_scope
+continuation: rerun_the_unchanged_primary_scientific_route

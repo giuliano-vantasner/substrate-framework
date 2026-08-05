@@ -1,0 +1,15 @@
+attempt: 0009
+campaign: P207
+timestamp_utc: '2026-08-05T23:22:00Z'
+kind: terminal_source_graph_replay
+command: PYTHONPATH=src_.venv/bin/python_proposals/P207-wm10-corrected-boundary-two-loop-audit/reviews/replay_source_graph.py
+checks: 38
+exit_status: 0
+nodes: 14
+static_predicates: 125
+assert_nodes: 16
+native_graph_executions: 0
+pending_reverse_consumers: [GC1, GC2, GC3, GC4, GC5, GC6]
+scientific_version_failures: 0
+verdict: dependency_closure_terminal_reverse_consumers_nonauthoritative
+continuation: complete_individual_adjudication_and_narrow_terminal_gate
