@@ -1,0 +1,35 @@
+attempt: 0001
+campaign: P184
+candidate: preregistration_and_authority_freeze
+status: passed_with_recall_cli_note
+started_at: '2026-08-11T10:39:00Z'
+finished_at: '2026-08-11T10:42:00Z'
+base_release: v0.135.0
+base_commit: 60c557621114ffca258357b6a2f540153dd69f62
+release_sha256: 001e589256cf33518612e5f24e8714bed14b1ff59cf78343448e90f29c949ecf
+source:
+  unit: TX5
+  path: /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX5_full_field_stability.py
+  sha256: ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a
+  git_blob: 4a2355274a314cbd97c51e7ec658d591b14f3b01
+  history_commit: 7222eed
+  size_bytes: 30201
+  target_path_clean: true
+freeze:
+  candidates: [A, B, C, D, E, F]
+  claims_proposed: [C-SKY-002, C-PDE-014]
+  identifier_collisions: 0
+  source_body_opened: false
+  fresh_result_blinding_claimed: false
+  numpy_policy: mutable_numpy_trapezoid_or_trapezoid_integral_and_immutable_alias_only
+validation:
+  preflight_ok: 7
+  repository_validator_exit_code: 0
+  memory_record_validator_exit_code: 0
+  git_diff_check_exit_code: 0
+recall_cli_note:
+  command: memory_grep_TX5_with_unsupported_limit_option
+  status: failed_invocation_after_successful_memory_search
+  scientific_effect: none
+  repair: use_memory_grep_without_limit
+next_attempt: commit_the_freeze_then_reproduce_and_audit_TX5

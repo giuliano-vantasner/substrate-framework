@@ -1,0 +1,74 @@
+id: P184
+base_release: v0.135.0
+base_commit: 60c557621114ffca258357b6a2f540153dd69f62
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [TX5]
+question: >-
+  Does hash-pinned TX5 establish that a specified degree-two SU(2) field is a
+  strict local minimum of the full three-dimensional static Skyrme energy, or
+  only finite-box discrete functional, kinetic-metric, selected-direction,
+  Derrick, and topology diagnostics, once the field/action conventions,
+  constrained tangent space, stationary residual, complete Hessian spectrum,
+  symmetry quotient, boundary and topology sectors, mesh/domain/step
+  refinement, independent method, and physical scope are audited?
+invariants:
+  - C-RMAP-001/002, C-RPROF-001/002, C-RMOM-001/002, and C-RMAP-003 are conditional reduced-ansatz results; none supplies a stationary full three-dimensional field or full-field Hessian.
+  - C-GW-009/010 prescribe moment kinematics only, while C-FLO-001 and C-ROT-001 are finite-matrix and abstract free-rotor theorems; TX5 inherits no rotating Skyrme solution, collective inertia, selected Omega, or dynamic stability from them.
+  - A finite-box lattice field, energy, baryon estimator, or positive kinetic metric is not a continuum existence, topology, stationarity, local-minimum, or nonlinear stability theorem without its own convergence and constraint closure.
+  - Random smooth directions, even many positive samples, cannot establish positivity in every direction; a finite discrete strict-minimum claim requires the complete constrained Hessian or a coercive bound after exact symmetry and constraint modes are handled.
+  - Positive curvature along Derrick scaling or one targeted m=2 direction does not classify the full tangent space.
+  - A positive kinetic mass operator is distinct from positivity of the static energy Hessian and from Floquet or nonlinear dynamic stability.
+  - Baryon-number closeness and agreement with reduced energies validate conventions only after mesh, domain, interpolation, boundary, and normalization refinements; they do not select the candidate or prove minimization.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-RMAP-001
+  - C-RMAP-002
+  - C-RPROF-001
+  - C-RPROF-002
+  - C-RMOM-001
+  - C-RMOM-002
+  - C-RMAP-003
+  - C-PDE-009
+  - C-FLO-001
+  - C-ROT-001
+  - C-GW-009
+  - C-GW-010
+  - exact SU(2), Pauli-matrix, tangent-space, constrained-Hessian, Derrick-scaling, finite-difference, and finite-dimensional spectral identities with conventions explicit
+  - NumPy and SciPy sparse/numeric methods with binary precision solver status tolerances and refinements recorded
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - TX5 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Reproduce TX5 exactly and audit every field definition, lattice functional, baryon estimator, perturbation generator, predicate, assertion, and conclusion against the object actually computed.
+  - id: B
+    description: Extract and validate a narrow exact or converged finite-lattice SU(2) static-functional and positive kinetic-tangent theorem without inferring an energy minimum.
+  - id: C
+    description: Establish a finite-box constrained discrete local-minimum result by a stationary residual and complete lowest-Hessian spectral audit with symmetry quotient, mesh/domain/step refinement, and independent Hessian-vector construction.
+  - id: D
+    description: Establish a continuum or full-field coercive local-minimum theorem from the exact second variation and boundary/topology constraints, independently of random-direction sampling.
+  - id: E
+    description: Retain only exact Derrick, baryon-convention, targeted-direction, or accepted reduced-ansatz composition results if the complete full-field candidates fail, while still producing a distinct positive importable object where one exists.
+  - id: F
+    description: Close claim, source, dependency, consumer, disposition, queue, release, documentation, memory, and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - exact_field_action_energy_topology_and_constraint_conventions
+  - actual_stationarity_before_second_variation
+  - complete_constrained_tangent_space_not_random_or_targeted_samples
+  - symmetry_zero_modes_and_boundary_topology_sector_handling
+  - mesh_domain_perturbation_step_and_solver_refinement
+  - independent_Hessian_or_coercive_method_and_mutation_sensitivity
+  - distinction_between_kinetic_metric_static_energy_and_dynamic_stability
+  - assumption_parameter_and_import_economy
+  - novelty_beyond_accepted_reduced_rational_map_and_rotor_claims
+  - dependency_consumer_and_governance_closure
+claims_proposed: [C-SKY-002, C-PDE-014]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line TX5 body audit; the generated queue
+  and prior consumer audits already expose the strict-full-3D-minimum headline,
+  reduced-energy and baryon validation, exact mass-operator positivity,
+  Derrick scaling, random smooth directions, a targeted m=2 direction, eight
+  static checks, two assertions, and the source's positive conclusion, so no
+  fresh source-result blinding is claimed
+status: draft
+revision: 0001
