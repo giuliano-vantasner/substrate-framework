@@ -1,0 +1,36 @@
+attempt: 0005
+campaign: P194
+candidate: dependency_consumer_impact_claim_and_source_graph_review
+status: passed_review_pending_promotion_transaction
+started_at: '2026-08-05T16:49:00Z'
+finished_at: '2026-08-05T17:04:00Z'
+claim_decision:
+  provisional_claim: C-OSC-002
+  promotion: true
+  dependencies: [C-SG-019, C-OSC-001]
+source_review:
+  source_unit: WN6
+  disposition: qualified
+  accepted_mappings: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+  rejected_or_qualified_edges:
+    - RMS_or_material_amplitude_from_cosine_period
+    - PN2_band_as_accepted_physical_scale
+    - pi_barrier_as_small_oscillation_or_expansion_validity_boundary
+    - period_counts_as_topological_windings
+    - multi_mode_sum_as_accepted_state_derivation
+    - M_as_separately_identifiable_or_unique_missing_bridge
+    - mathematical_mass_bound_as_physical_channel_verdict
+verification:
+  primary: ALL_45_CHECKS_PASS
+  independent: ALL_25_CHECKS_PASS
+  focused_tests: 19_passed
+source_graph:
+  nodes: 19
+  native_checks_covered: 691
+  replay_result: ALL_47_CHECKS_PASS
+  pending_reverse_consumers_preserved: 7
+  compatibility_version_failures: 0
+canonical_code_changed: true
+accepted_release_change: required
+scientific_threshold_changed: true
+next_attempt: promote_C_OSC_002_qualify_WN6_generate_release_queue_docs_memory_archive_then_run_one_integrated_gate

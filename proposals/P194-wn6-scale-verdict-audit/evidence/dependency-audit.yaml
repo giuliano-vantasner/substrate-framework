@@ -1,0 +1,49 @@
+campaign: P194
+source_unit: WN6
+promoted_claim: C-OSC-002
+direct_claim_dependencies:
+  C-SG-019: owns_the_exact_normalized_entire_cosine_potential_and_finite_remainder_debt
+  C-OSC-001: owns_q0_squared_only_under_the_separately_declared_one_mode_Fock_coordinate
+transitive_claim_closure:
+  - C-SG-012
+  - C-SG-001
+excluded_claims:
+  C-CMB-003: factorial_one_shape_is_source_context_but_not_needed_for_the_new_remainder_or_RMS_theorem
+  C-CMB-001: factorial_suppression_bounds_do_not_enter_the_new_theorem
+  PN2: qualified_source_with_no_accepted_physical_scale_claim
+source_dependencies:
+  PN1:
+    disposition: qualified
+    accepted_claims: [C-SG-019]
+    use: exact_classical_cosine_context_only
+  PN2:
+    disposition: qualified
+    accepted_claims: []
+    use: noncanonical_external_band_context_only
+  S1:
+    disposition: qualified
+    accepted_claims: [C-CC-001, C-VIR-001, C-RPROF-001, C-SKY-001]
+    use: none_name_collision_in_generated_candidate_dependency
+  WN1:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001]
+    use: source_context_for_factorial_suppression_only
+  WN2:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001, C-CMB-002, C-BRN-001]
+    use: source_context_for_rejected_weight_candidate_only
+  WN3:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001, C-OSC-001]
+    use: source_context_for_q0_squared_one_mode_convention_only
+  WN4:
+    disposition: qualified
+    accepted_claims: [C-OSC-001, C-CMB-003]
+    use: source_context_for_conditional_limb_only
+forbidden_forward_imports: [WN7, MD1, MD2, MD3, MD4, MD5, MD6]
+new_declared_parameters:
+  - epsilon_positive_relative_to_quadratic_tolerance
+hidden_parameters: []
+dependency_cycle_introduced: false
+closure_verdict: closed_exact_theorem_with_explicit_tolerance_and_convention_domains
+

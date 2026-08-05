@@ -1,0 +1,54 @@
+campaign: P194
+repository: substrate-framework
+indexed_commit: 1a58aa0
+framework_head_at_query: 1a58aa0
+commits_behind: 0
+index_refresh:
+  command: gitnexus analyze .
+  nodes: 29751
+  edges: 46151
+  clusters: 402
+  flows: 1
+queries:
+  cosine_quadratic_gap:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+  cosine_quadratic_gap_bound:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+  harmonic_cycle_mean_square:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+  harmonic_rms_from_peak:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+  sufficient_cosine_quadratic_domain:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+detect_changes:
+  base_ref: 5c018f6
+  files: 22
+  symbols: 40
+  affected_processes: 0
+  risk: low
+limitations:
+  - new_leaf_functions_have_no_preexisting_callers_by_construction
+  - graph_zeroes_do_not_override_direct_pytest_campaign_export_or_source_consumer_inventory
+manual_consumers_retained:
+  - src/substrate_framework/__init__.py
+  - tests/test_cosine_vertices.py
+  - proposals/P194-wn6-scale-verdict-audit/verify.py
+  - WN7
+  - MD1
+  - MD2
+  - MD3
+  - MD4
+  - MD5
+  - MD6
+verdict: LOW_additive_API_with_manual_consumer_and_source_replay_required
+

@@ -1,0 +1,52 @@
+campaign: P194
+root_source_unit: WN6
+reused_execution_evidence:
+  P193_graph:
+    inventory: campaigns/P193-wn5-branching-prediction-audit/evidence/source-graph-inventory.yaml
+    inventory_sha256: 6932265e39311a2f2284aca6e5d8a40a7369860a452e91d8b6b88633d62f734e
+    replay_script_sha256: be0ee3d29c9891d22ac00635625e85b8856842ed6634db9d959c9bd05e6356b0
+    attempt_sha256: 730b857bb05b77b5b977f9b6a164d81eda4746d47a41f39f007d663f0e762efe
+    used_nodes_excluding_WN6: 17
+    native_checks: 648
+  P137_S1:
+    reproduction: campaigns/P137-s1-two-skyrmion-force-audit/evidence/source-reproduction.yaml
+    reproduction_sha256: 1fc5e40a7dace5bed98856980e0bc11d10de978407e52339dcba5b9c2ab4a622
+    source_unit: S1
+    native_checks: 11
+  P194_WN6:
+    reproduction: proposals/P194-wn6-scale-verdict-audit/evidence/source-reproduction.yaml
+    reproduction_sha256: 42f0a42b57da16032317b9b43c16cc5564f127eae37119499c3def1007ccd5e6
+    source_unit: WN6
+    native_checks: 32
+additional_node:
+  source_unit: S1
+  relation: generated_candidate_dependency_name_collision
+  native_tally: 11
+  path: merged-framework/bridges/phase-4/bridge_S1_nn_force_two_skyrmion.py
+  sha256: ebe1ba930be26f17671d8e82779d14fc00e7a8b988a4aada722a32d0d9328ddd
+root_node:
+  source_unit: WN6
+  native_tally: 32
+  path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py
+  sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+expected_coverage:
+  unique_nodes: 19
+  P193_reused_native_checks_excluding_root: 648
+  P137_reused_native_checks: 11
+  P194_root_native_checks: 32
+  total_native_checks_covered: 691
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONPATH=src .venv/bin/python proposals/P194-wn6-scale-verdict-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_47_CHECKS_PASS
+  unique_nodes: 19
+  total_native_checks_covered: 691
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+authority_state_before_P194_promotion:
+  qualified_source_dependencies: [PN1, PN2, S1, WN1, WN2, WN3, WN4]
+  pending_root: WN6
+  pending_reverse_consumers: [WN7, MD1, MD2, MD3, MD4, MD5, MD6]

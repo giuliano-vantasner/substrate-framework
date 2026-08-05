@@ -1,0 +1,53 @@
+campaign: P194
+source_unit: WN6
+claim: C-OSC-002
+canonical_consumers:
+  cosine_module:
+    path: src/substrate_framework/cosine_vertices.py
+    status: additive_five_function_API
+  package_exports:
+    path: src/substrate_framework/__init__.py
+    status: additive_exports
+  package_tests:
+    paths: [tests/test_cosine_vertices.py]
+    status: 19_passed
+  primary_verifier:
+    path: proposals/P194-wn6-scale-verdict-audit/verify.py
+    status: 45_checks_passed
+direct_source_consumers:
+  WN7:
+    disposition: pending
+    accepted_reuse_candidate: source_text_firewall_evidence_only
+    ceiling: scanner_tallies_do_not_adjudicate_WN6_or_phase_scale_physics
+  MD1:
+    disposition: pending
+    accepted_reuse_candidate: WN6s_missing_mode_count_statement_as_a_question_only
+    ceiling: DOS_mode_count_and_material_granularity_require_individual_review
+  MD2:
+    disposition: pending
+    accepted_reuse_candidate: C_OSC_002_convention_separation_and_remainder_ceiling
+    ceiling: quantum_mode_sum_beta_coupling_cutoff_and_material_variance_require_individual_review
+  MD3:
+    disposition: pending
+    accepted_reuse_candidate: rejection_of_WN6s_hard_pi_approximation_boundary
+    ceiling: vertex_operator_Fock_displacement_and_physical_weight_require_individual_review
+  MD4:
+    disposition: pending
+    accepted_reuse_candidate: convention_typed_conditional_n_less_than_S_limb_only
+    ceiling: rescue_scale_and_material_parameter_claims_require_individual_review
+  MD5:
+    disposition: pending
+    accepted_reuse_candidate: WN6_log_bound_as_conditional_source_evidence_only
+    ceiling: isotope_handshake_same_curve_and_physical_prediction_require_individual_review
+  MD6:
+    disposition: pending
+    accepted_reuse_candidate: source_ledger_and_guard_evidence_only
+    ceiling: debt_tally_does_not_adjudicate_WN6_or_MD_claims
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+pending_reverse_consumers_preserved: 7
+canonical_signatures_changed: []
+canonical_existing_values_changed: []
+scientific_threshold_changed: true
+threshold_change: hard_pi_cutoff_replaced_by_sqrt_12epsilon_sufficient_domain
+

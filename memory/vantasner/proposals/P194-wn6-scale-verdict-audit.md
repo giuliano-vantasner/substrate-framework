@@ -178,6 +178,18 @@ quadrature, tolerance fit, hidden constant, import side effect, or NumPy
 compatibility surface. C-OSC-002 is recommended for claim-level review, while
 dependency, consumer, impact, and source-graph review remain open.
 
+Attempt 0005 completes claim, dependency, consumer, impact, nonduplication,
+disposition, and source-graph review. C-OSC-002 is recommended as a distinct
+symbolic-verified extension depending on C-SG-019 and C-OSC-001. GitNexus is
+fresh at `1a58aa0` and reports LOW additive reach; manual inventory retains the
+package export, focused tests, verifiers, and seven pending source consumers.
+The nineteen-node graph covers 691 native predicates and passes 47 governed
+checks using byte-pinned P193, P137, and P194 records with no duplicate native
+execution or compatibility alias. WN6 is recommended `qualified` through
+C-SG-019, C-OSC-001, C-CMB-003, and C-OSC-002. WN7 and MD1 through MD6 remain
+pending. The next attempt is the promotion, release, disposition, generated
+records, memory archive, and one integrated gate.
+
 ## Debt Ledger
 
 The P194 ledger tracks source predicates, amplitude and intensity conventions,
@@ -192,9 +204,9 @@ dependencies, consumers, and governed state.
 | A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | discharged |
 | PN2 physical band may be imported without authority | Trace units, state provenance, and accepted ceiling | discharged |
 | Conditional threshold algebra may omit a sign domain | Derive exact equivalences and counterdomains | discharged |
-| A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | in progress |
+| A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | discharged |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
-| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
+| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | discharged |
 | Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
 
 ## Review and Promotion Plan

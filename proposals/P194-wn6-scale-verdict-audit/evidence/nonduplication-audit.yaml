@@ -1,0 +1,47 @@
+campaign: P194
+provisional_claim: C-OSC-002
+decision: promote
+registry_and_campaign_search:
+  C-OSC-002: no_prior_reservation_or_accepted_claim
+  C-SG-020: reserved_by_P132_and_not_reused
+accepted_neighbors:
+  C-SG-019:
+    owns:
+      - exact_entire_mixed_cosine_coefficients
+      - finite_Taylor_polynomial_construction
+      - explicit_statement_that_approximation_requires_separate_remainder_control
+    missing:
+      - global_quadratic_gap_bound
+      - tolerance_dependent_domain
+      - harmonic_peak_RMS_conversion
+  C-OSC-001:
+    owns:
+      - one_mode_Fock_coordinate_q0
+      - S_equals_q0_squared_under_that_declared_coordinate
+      - factorial_one_mass_modes_and_normalization
+    missing:
+      - classical_harmonic_cycle_average
+      - peak_to_RMS_map
+      - cosine_approximation_error
+  C-SG-001_and_C-SG-012:
+    owns: normalized_sine_Gordon_equation_potential_and_stress_conventions
+    missing: explicit_quadratic_remainder_and_amplitude_statistics
+novel_content:
+  - global_0_le_Q_minus_V_le_x_fourth_over_24_certificate
+  - relative_to_quadratic_x_squared_over_12_bound
+  - explicit_sqrt_12epsilon_sufficient_domain
+  - exact_barrier_top_relative_error
+  - harmonic_peak_squared_over_two_cycle_mean
+  - peak_RMS_and_Fock_coordinate_convention_separation
+new_parameters:
+  - caller_selected_positive_error_tolerance
+new_solver: false
+new_sample_space: full_harmonic_cycle_for_the_amplitude_subclaim
+new_canonical_symbol_required: true
+wrapper_only: false
+verdict: >-
+  C-OSC-002 discharges an explicit C-SG-019 remainder debt and adds a distinct
+  exact harmonic amplitude convention. It does not duplicate the accepted
+  one-mode Fock intensity and has a reusable parameter-free exact API apart
+  from the caller's explicit approximation tolerance.
+
