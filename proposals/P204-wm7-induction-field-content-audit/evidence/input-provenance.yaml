@@ -1,0 +1,32 @@
+campaign: P204
+framework_base_commit: 37271c02f6f1b0b954139a30edd2539653c03e05
+base_release: v0.150.0
+base_release_sha256: 18dffeef5efd516018c918f65b45173c81ac0e1ba99fdd8a96274cc1df5c72db
+claims_registry_sha256: 3abf624a5991d70020feffee801ddfa73f692ec2e6d00cf6bca1dbb4bc6ff93a
+accepted_claim_count: 190
+migration_counts: {pending: 21, partial: 0, qualified: 184}
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: WM7
+source_path: merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py
+source_sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+source_git_blob: abbe84bdbb5a22089eaaa86dcfc19b9c7c2c4c04
+source_blob_commit: 7222eed
+source_bytes: 24261
+source_history_commits: 1
+canonical_sources:
+  src/substrate_framework/gauge_beta.py: ce06dd6a878be95cdfda5dec2d637281a035b71f7986cc8bfe35ca4283b8f63a
+  src/substrate_framework/charge_traces.py: 28a82112c74d7f6217c93f026e43aa9ae559114c828cd41fd63efaedbb9870a1
+  src/substrate_framework/multiplet_charges.py: 324233dd5e80e5c64e3386c28b6049bfdede1426fb473ffe1d4d82dadf0d2163
+  src/substrate_framework/renormalization.py: 410118347fc5f7e020551370ea40bbb2f2e91920d35fc57476558057b7c39251
+source_cycle:
+  component: [WM7, WM8]
+  excluded_pending_import: WM8
+  direct_reverse_consumers: [GC1, GC2, GC3, GC4, GC5, GC6, WM10, WM8, WM9]
+source_exposure_before_freeze:
+  queue_headline: true
+  queue_question_excerpt: true
+  queue_result_excerpt: true
+  exposed_values: [two_thirds, one_third, forty_one_over_ten, twenty_five_over_six, four, ratio_123_125_120]
+  source_body: false
+  native_execution: false
+  native_output_beyond_queue: false

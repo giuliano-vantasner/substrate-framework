@@ -1,0 +1,57 @@
+campaign: P204
+source_unit: WM7
+base_release: v0.150.0
+supplied_three_generation_table:
+  factor_order: [U1_GUT_coordinate, SU2, SU3]
+  gauge_contribution: [0, minus_twenty_two_over_three, minus_eleven]
+  weyl_contribution: [4, 4, 4]
+  one_complex_scalar_doublet_contribution: [one_tenth, one_sixth, 0]
+  provenance: C_RGE_005_supplied_table_not_derived_field_content
+scalar_count_family:
+  symbol: N_H_nonnegative_integer_when_interpreted_as_a_count
+  matter_weight_vector:
+    - 4_plus_N_H_over_10
+    - 4_plus_N_H_over_6
+    - 4
+  equality_of_all_three_components: iff_N_H_equals_zero
+  N_H_one_vector: [forty_one_over_ten, twenty_five_over_six, 4]
+  integer_ratio_at_N_H_one: [123, 125, 120]
+weight_reconstruction:
+  general_equations: >-
+    b_i_plus_eleven_over_three_times_C_A_i_equals
+    c_F_times_sum_Weyl_S2_i_plus_c_S_times_sum_scalar_S2_i
+  source_candidate_solution: {c_F: two_thirds, c_S: one_third}
+  classification_if_b_was_constructed_with_same_weights: inverse_reconstruction
+  independence_requires: coefficient_data_not_computed_from_the_same_weighted_table
+conditional_common_boundary:
+  general_affine_family: a_i_equals_z_i_plus_C_i_times_S_i
+  common_zero_boundary_specialization: z_i_zero_and_all_C_i_equal_C
+  inverse_coupling_ratio: g_i_squared_over_g_j_squared_equals_S_j_over_S_i
+  concurrence_condition_for_nonzero_common_C: all_S_i_equal
+  N_H_one_GUT_ratio_g1_squared_over_g2_squared: one_hundred_twenty_five_over_one_hundred_twenty_three
+  canonical_hypercharge_ratio_gY_squared_over_g2_squared: twenty_five_over_forty_one
+  conditional_trace_coordinate: twenty_five_over_sixty_six
+  physical_interpretation: not_implied
+mutations:
+  - remove_the_complex_scalar_doublet
+  - add_a_second_complex_scalar_doublet
+  - change_the_number_of_supplied_Weyl_generations
+  - change_scalar_statistics_or_hypercharge_normalization
+  - make_one_affine_boundary_nonzero
+  - make_factor_coefficients_or_threshold_logs_independent
+  - rescale_the_Abelian_generator_and_coupling_covariantly
+  - import_WM8_as_if_the_source_cycle_were_authority
+exact_obligations:
+  - reconstruct_gauge_fermion_and_scalar_contributions_from_accepted_API_inputs
+  - solve_the_two_weight_linear_system_and_classify_its_provenance
+  - prove_the_scalar_count_concurrence_iff
+  - retain_common_boundary_as_a_separate_premise
+  - distinguish_trace_coordinate_from_physical_weak_angle
+  - test_novelty_and_all_reverse_consumers
+physical_ceiling:
+  - no_derived_SM_generation_or_Higgs_count
+  - no_common_medium_determinant_regulator_or_matching_action
+  - no_preferred_Abelian_normalization
+  - no_physical_coupling_or_weak_angle_boundary
+  - no_observation_running_conclusion_or_substrate_mechanism
+scientific_version_failures: 0

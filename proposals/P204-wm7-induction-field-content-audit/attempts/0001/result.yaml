@@ -1,0 +1,16 @@
+attempt: 0001
+campaign: P204
+timestamp_utc: '2026-08-05T21:08:07Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: 37271c02f6f1b0b954139a30edd2539653c03e05
+base_release: v0.150.0
+source_unit: WM7
+candidates: [A, B, C, D, E, F, G]
+source_cycle: [WM7, WM8]
+pending_cycle_imports_allowed: []
+source_body_inspected: false
+native_source_executed: false
+fresh_value_blinding_claimed: false
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction
