@@ -1,0 +1,39 @@
+attempt: 0001
+campaign: P172
+candidate: frozen_contract_and_authority_recall
+status: passed_with_preserved_memory_CLI_invocation_error
+started_at: '2026-08-11T02:00:00Z'
+finished_at: '2026-08-11T02:04:00Z'
+base:
+  release: v0.127.0
+  framework_commit: 49276b4
+  accepted_claims: 163
+  source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-34/bridge_KI2_epsilon_underdetermination.py
+  sha256: 9e16fc6fafa940f43d559ea0f6a9c2730940d1247f36f655375c2f75f6fd1e81
+  path_clean_at_baseline: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+dossier:
+  path: merged-framework/bridges/phase-34/dossiers/Phase34-KI-dossier.md
+  sha256: e01fbee40d81ebae1fc6f9452c321e2914cb185cdf257ae226d849ea6392702b
+authority:
+  accepted: [C-BPS-001, C-BPS-002, C-BPS-003, C-RDIFF-001, C-RDIFF-002, C-SK-001, C-VEC-001, C-EFT-001, C-CHI-001]
+  refuted: [KI1]
+  pending: [KI2, KI3, KI4, MK1, MK2, MK3]
+memory_search:
+  failed_command: memory_search_with_unsupported_root_option
+  failure_class: tooling_invocation_not_scientific_or_memory_absence
+  corrected_option: --base
+  corrected_result: no_prior_KI2_adjudication_found
+prior_result_exposure:
+  - generated KI2 question result dependency and six-check metadata
+  - claimed simultaneous lambda-mu scaling and epsilon sweep
+  - P171 source-graph clean local execution
+  - P171 warning that refuted KI1 cannot be inherited
+freeze:
+  candidates: 9
+  proposed_claims: []
+  source_body_opened_in_P172: false
+  dossier_body_opened_in_P172: false
+next_attempt: commit_the_freeze_then_audit_KI2_predicates_and_fixed_theory_scaling

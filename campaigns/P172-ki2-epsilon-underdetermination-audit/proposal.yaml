@@ -1,0 +1,68 @@
+id: P172
+base_release: v0.127.0
+base_commit: 49276b4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [KI2]
+question: >-
+  Does hash-pinned KI2 establish an exact, framework-native
+  underdetermination theorem for its dimensionless near-BPS epsilon after
+  refuted KI1 is removed, and which part is a parameter-family statement
+  rather than a symmetry of one fixed accepted BPS theory?
+invariants:
+  - C-BPS-001 is a family indexed by positive lambda and mu; for fixed values its energy density and bound explicitly depend on them.
+  - A transformation between allowed parameter choices is not automatically a symmetry leaving one fixed theory or every accepted observable invariant.
+  - Natural-unit dimensions and dimensionless monomial bases do not select parameter values or establish physical identifiability.
+  - Any epsilon definition must declare its normalization, standard-sector scale, positivity domain, and relation to C-BPS-003's abstract expansion coordinate.
+  - Refuted KI1 cannot support any premise; pending KI3 KI4 and MK1 through MK3 cannot supply authority.
+  - No physical baryon nucleus yield coefficient empirical fit or substrate realization may enter.
+  - Mutable integration code uses numpy.trapezoid or the canonical helper; immutable legacy-name stops are version-only evidence.
+allowed_imports:
+  - C-BPS-001
+  - C-BPS-002
+  - C-BPS-003
+  - C-RDIFF-001
+  - C-RDIFF-002
+  - C-SK-001
+  - C-VEC-001
+  - C-EFT-001
+  - C-CHI-001
+  - src/substrate_framework/bps_energy.py
+  - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/adjudication.yaml
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - E3 E4 S4 NY1 and NY2 only through their accepted mappings and reviewed ceilings
+  - KI1 KI3 KI4 MK1 MK2 and MK3 as noncanonical counterevidence only
+  - KI2 and the shared Phase34 dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned KI2 reproduction with exact AST predicate assertion import and compatibility inventories.
+  - id: B
+    description: Exact natural-unit dimension solve and dimensionless monomial basis for the declared parameters.
+  - id: C
+    description: Valid underdetermination across a family of allowed positive lambda and mu theories with no accepted value-selection relation.
+  - id: D
+    description: A true symmetry of one fixed accepted BPS theory leaving its energy functional bound and all accepted consumers invariant while epsilon changes.
+  - id: E
+    description: A source argument invalidated because refuted KI1 is a load-bearing premise.
+  - id: F
+    description: Pending MK1 and MK2 relations break the free family and select MK3 epsilon.
+  - id: G
+    description: Duplicate scientific ceiling already carried by C-BPS-001 through C-BPS-003.
+  - id: H
+    description: A reusable exact parameter-orbit API and new claim if a distinct theorem and consumers survive nonduplication.
+  - id: I
+    description: Claim-level source dependency consumer disposition queue memory and release closure.
+uniqueness_evidence: null
+selection_criteria:
+  - exact_fixed_theory_versus_parameter_family_typing
+  - dimension_and_normalization_closure
+  - accepted_dependency_fit_without_KI1
+  - invariant_observable_and_counterexample_sensitivity
+  - assumption_parameter_and_API_economy
+  - consumer_nonduplication_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening KI2 or the shared dossier body in P172; the
+  generated result excerpt, claimed scaling flow, dependencies, local tally,
+  and P171 graph execution are already exposed, so no fresh result blinding is
+  claimed
+status: frozen_with_prior_result_exposure
