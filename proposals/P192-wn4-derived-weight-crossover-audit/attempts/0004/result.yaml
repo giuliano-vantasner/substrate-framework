@@ -1,0 +1,25 @@
+attempt: 0004
+campaign: P192
+candidate: tie_complete_shape_tail_and_distribution_formula_freeze
+status: passed
+started_at: '2026-08-11T18:27:00Z'
+finished_at: '2026-08-11T18:34:00Z'
+selected_candidates: [C, D, E]
+source_evidence_candidate: A
+countermodel_candidate: F
+governance_candidate: G
+rejected_candidate:
+  id: B
+  reason: accepted_composition_lacks_the_new_shape_tail_and_moment_theorems
+claim_candidate: C-CMB-003
+dependency: C-OSC-001
+frozen_results:
+  - strict_log_concavity_ratio_n_plus_one_over_n
+  - noninteger_unique_mode_and_positive_integer_adjacent_tie
+  - exact_Poisson_PGF_and_all_falling_factorial_moments
+  - exact_iterated_geometric_point_and_upper_tail_bounds
+  - every_fixed_power_scaled_mass_tends_to_zero
+  - physical_process_regime_medium_and_PN2_ceilings
+implementation_target: src/substrate_framework/bosonic_fock.py
+scientific_threshold_changed: false
+next_attempt: implement_minimal_reusing_existing_mass_and_mode_APIs_with_focused_mutation_sensitive_tests

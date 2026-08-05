@@ -172,6 +172,17 @@ and medium-mean readings lack physical premises. The next attempt freezes the
 tie-complete shape, quantified tail, and generating-function theorem before
 implementation.
 
+Attempt 0004 freezes the distinct theorem before implementation. Candidates C,
+D, and E form one coherent surface: the interior log-concavity quotient is
+`(n+1)/n`; noninteger S has unique mode `floor(S)` while positive integer S has
+the adjacent pair `S-1,S`; the normalized all-nonnegative family has PGF
+`exp(S*(t-1))` and falling-factorial moments `S^r`; and an exact ratio threshold
+gives iterated geometric point and upper-tail bounds plus decay faster than
+every fixed inverse power. Candidate B cannot supply those results from the
+accepted claim alone. A remains source evidence, F supplies physical ceilings,
+and G remains the open governance route. No comparator value selects the
+surface and no threshold changes.
+
 ## Debt Ledger
 
 The P192 ledger tracks source predicates, accepted overlap, sample space,

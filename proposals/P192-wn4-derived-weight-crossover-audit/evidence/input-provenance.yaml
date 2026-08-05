@@ -1,0 +1,35 @@
+campaign: P192
+claim_candidate: C-CMB-003
+inputs:
+  - name: factorial_one_mass_and_sample_spaces
+    source: C-OSC-001
+    status: accepted
+    use: dependency_definition_normalization_adjacent_ratio_and_tie_complete_modes
+  - name: real_exponential_series
+    source: standard_exact_mathematics
+    status: approved_import
+    use: pgf_normalization_and_geometric_threshold
+  - name: finite_sum_and_derivative_algebra
+    source: standard_exact_mathematics
+    status: approved_import
+    use: falling_factorial_moments
+  - name: WN4_source_values_and_predicates
+    source: substrate@6d1f4e0_WN4_sha256_2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2
+    status: comparator_and_source_evidence_only
+    use: claim_by_claim_adjudication_not_derivation_authority
+excluded_inputs:
+  - PN2_kinematic_band_as_physical_subdivision_count
+  - GB4_regime_labels_as_derived_dynamics
+  - WN5_through_WN7
+  - MD1_through_MD6
+  - Huang_Rhys_or_energy_gap_literature
+  - empirical_medium_parameter
+  - fitted_or_backsolved_intensity
+parameter_inventory:
+  S: exact_positive_dimensionless_supplied_mathematical_intensity
+  t: exact_real_generating_variable
+  n: exact_nonnegative_integer_order
+  r: one_fixed_exact_nonnegative_integer_moment_or_power
+  alpha: exact_positive_real_tail_contraction_exponent
+  q: exact_rational_contraction_in_open_unit_interval
+hidden_fitted_parameters: []

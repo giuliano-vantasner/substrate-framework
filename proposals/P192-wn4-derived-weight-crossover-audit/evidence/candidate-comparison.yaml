@@ -1,0 +1,34 @@
+campaign: P192
+criteria_order:
+  - accepted_domain_and_sample_space_compatibility
+  - novelty_beyond_C_OSC_001_and_C_CMB_001
+  - exact_integer_tie_and_endpoint_behavior
+  - assumption_and_parameter_economy
+  - normalization_and_dimensional_completeness
+  - tail_quantifier_correctness
+  - physical_typing_and_downstream_compatibility
+candidates:
+  A:
+    decision: retained_as_source_evidence
+    reason: Native_reproduction_and_predicate_adjudication_are_required_but_do_not_supply_framework_authority.
+  B:
+    decision: insufficient
+    reason: C_OSC_001_owns_ratios_totals_and_modes_but_not_strict_log_concavity_quantified_tail_domination_or_generating_and_factorial_moment_identities.
+  C:
+    decision: selected
+    reason: The_exact_log_concavity_quotient_and_two_mode_integer_branch_correct_the_source_and_are_structurally_native.
+  D:
+    decision: selected
+    reason: The_exact_ratio_yields_a_quantified_iterated_geometric_bound_and_every_fixed_power_decay_without_physical_regime_labels.
+  E:
+    decision: selected
+    reason: The_normalized_all_nonnegative_family_has_an_exact_PGF_and_factorial_moments_with_no_new_parameter.
+  F:
+    decision: retained_as_ceiling_evidence
+    reason: Alternate_parameter_provenance_and_zero_process_premises_block_medium_rate_and_regime_readings.
+  G:
+    decision: open_until_governed_closure
+    reason: Terminal_status_requires_individual_claim_source_consumer_and_release_replay.
+selected_surface: one_coherent_factorial_one_shape_tail_and_distribution_claim
+comparator_values_used_for_selection: false
+scientific_threshold_changed: false

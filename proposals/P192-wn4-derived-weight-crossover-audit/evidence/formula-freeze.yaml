@@ -1,0 +1,54 @@
+campaign: P192
+claim_candidate: C-CMB-003
+base_release: v0.142.0
+dependency: C-OSC-001
+domain:
+  intensity: exact_positive_dimensionless_real_S
+  order: nonnegative_integer_n
+  sample_space: all_nonnegative_integers_with_counting_measure
+definitions:
+  unnormalized_mass: w_S(n)=S^n/n!
+  normalized_mass: p_S(n)=exp(-S)*S^n/n!
+  probability_generating_function: G_S(t)=sum_n_p_S(n)*t^n
+exact_shape:
+  adjacent_ratio: w_S(n+1)/w_S(n)=S/(n+1)
+  interior_log_concavity_ratio: w_S(n)^2/(w_S(n-1)*w_S(n+1))=(n+1)/n_for_n_at_least_1
+  strict_log_concavity: true
+  noninteger_mode_set: [floor(S)]
+  positive_integer_mode_set: [S-1, S]
+  unique_mode_at_positive_integer_S: false
+generating_and_moments:
+  pgf: G_S(t)=exp(S*(t-1))
+  falling_factorial_moment: E[(N)_r]=S^r_for_every_nonnegative_integer_r
+  mean: S
+  second_falling_factorial_moment: S^2
+  second_raw_moment: S^2+S
+  variance: S
+geometric_tail:
+  premises:
+    - alpha_is_exact_positive_real
+    - N_is_nonnegative_integer
+    - N+1_is_at_least_S*exp(alpha)
+  pointwise_bound: p_S(N+k)<=p_S(N)*exp(-alpha*k)_for_every_nonnegative_integer_k
+  strict_upper_tail_bound: sum_from_n_N_plus_1_to_infinity_p_S(n)<=p_S(N)/(exp(alpha)-1)
+  equality_scope: k_zero_only_in_the_generic_bound_unless_later_ratios_saturate
+polynomial_tail:
+  premises:
+    - r_is_one_fixed_nonnegative_integer
+    - q_is_exact_rational_in_open_unit_interval
+    - N+1_is_at_least_S*2^r/q
+  scaled_ratio: ((n+1)^r*p_S(n+1))/(n^r*p_S(n))=S*(n+1)^(r-1)/n^r_for_n_at_least_1
+  conservative_bound: scaled_ratio_at_most_S*2^r/(n+1)
+  consequence: n^r*p_S(n)_tends_to_zero
+physical_ceiling:
+  - mathematical_Poisson_mass_does_not_derive_a_Poisson_process
+  - S_is_not_a_medium_mean_without_a_physical_random_variable_and_occurrence_law
+  - mathematical_growth_and_suppression_limbs_do_not_select_phase_space_or_energy_gap_dynamics
+  - the_exact_step_residual_is_S-(n+1)_not_S-n
+  - no_PN2_band_value_or_physical_channel_is_imported
+selected_candidates: [C, D, E]
+source_evidence_candidate: A
+insufficient_candidate: B
+countermodel_candidate: F
+governance_candidate: G
+scientific_threshold_changed: false
