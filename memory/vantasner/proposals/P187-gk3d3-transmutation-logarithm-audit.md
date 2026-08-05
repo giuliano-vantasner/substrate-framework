@@ -267,6 +267,16 @@ nodes; and directly exercises the general conversion, affine boundary,
 consistent cancellation, zero branch, nullspace, orientation, zero-matter,
 power-zero, log-nonuniqueness, domain, scope, and compatibility gates.
 
+Attempts 0008 through 0010 preserve three independent-verifier representation
+repairs: differentiating with respect to a composite energy, comparing exact
+factored and unfactored slopes as raw trees, and differentiating with respect
+to a composite logarithm. None changed the formula or threshold. Attempt 0011
+passes 20 raw-SymPy checks without importing the new canonical module or the
+scale-transmutation and vacuum-polarization parent APIs. It independently
+rebuilds the conversions, affine derivative, one-loop cancellation, general
+and zero branches, rank nullspace, soliton-factor and orientation mutations,
+zero-matter limit, and function counterfamilies.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length

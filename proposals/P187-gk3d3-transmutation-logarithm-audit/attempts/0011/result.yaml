@@ -1,0 +1,36 @@
+attempt: 0011
+campaign: P187
+candidate: independent_raw_SymPy_rederivation
+status: passed
+started_at: '2026-08-11T13:38:00Z'
+finished_at: '2026-08-11T13:40:00Z'
+command: PYTHONPATH=src .venv/bin/python proposals/P187-gk3d3-transmutation-logarithm-audit/reviews/independent_scale_kinetic_review.py
+process:
+  exit_code: 0
+  lexical_check_sites: 20
+  runtime_check_executions: 20
+  assertion_nodes: 0
+  terminal_tally: ALL_20_CHECKS_PASS_P187_INDEPENDENT_C_VAC_004
+independence:
+  forbidden_imports:
+    - substrate_framework.kinetic_scale_matching
+    - substrate_framework.scale_transmutation
+    - substrate_framework.vacuum_polarization
+  forbidden_import_count: 0
+  construction: raw_SymPy_inverse_length_affine_one_loop_and_rank_algebra
+verified:
+  - arbitrary_conversion_ratio_and_affine_boundary
+  - exact_scale_derivative
+  - fixed_length_conversion_mutations
+  - common_rescaling_and_boundary_counterfamilies
+  - unequal_paired_conversion_cancellation
+  - general_and_zero_matching_families
+  - paired_reparameterization
+  - unpaired_soliton_coefficient_and_orientation_mutations
+  - absolute_scale_nullspace
+  - zero_matter_limit
+  - p_zero_and_log_uniqueness_counterfamilies
+compatibility:
+  numpy_surface: none
+scientific_threshold_changed: false
+next_attempt: adjudicate_source_and_claim_then_replay_direct_and_transitive_consumers

@@ -1,0 +1,15 @@
+attempt: 0010
+campaign: P187
+candidate: independent_exact_slope_residual
+status: failed
+started_at: '2026-08-11T13:37:00Z'
+finished_at: '2026-08-11T13:38:00Z'
+command: PYTHONPATH=src .venv/bin/python proposals/P187-gk3d3-transmutation-logarithm-audit/reviews/independent_scale_kinetic_review.py
+process:
+  exit_code: 1
+  checks_passed_before_failure: 5
+diagnosed_layer: verifier_representation
+mechanism: boundary_counterexample_tried_to_differentiate_with_respect_to_a_composite_logarithm_expression
+scientific_formula_changed: false
+threshold_changed: false
+next_attempt: compare_the_boundary_mutation_derivatives_with_respect_to_an_independent_length_coordinate
