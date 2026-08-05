@@ -1,0 +1,36 @@
+attempt: 0002
+campaign: P193
+candidate: native_source_reproduction_and_predicate_audit
+status: passed_source_mixed_headline_overstated
+started_at: '2026-08-11T19:15:00Z'
+finished_at: '2026-08-11T19:18:00Z'
+source:
+  sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+  terminal_tally: ALL_41_CHECKS_PASS
+  wall_seconds: 0.46
+  max_rss_kib: 53548
+  exit_status: 0
+inventory:
+  static_check_calls: 22
+  literal_check_calls: 15
+  dynamic_check_calls: 7
+  assertions: 0
+compatibility:
+  numpy_import: false
+  legacy_references: 0
+  alias_used: false
+  version_only_scientific_failures: 0
+diagnosis: target_and_oracle_scope
+retained:
+  - exact_positive_weight_membership
+  - fixed_order_population_partial_derivative
+  - exact_relative_odds_composition
+  - inverse_factorial_one_shape_with_complete_ties
+rejected_or_qualified:
+  - finite_grid_as_universal_turnover_proof
+  - single_integer_minimum
+  - omitted_order_zero_endpoint
+  - unrestricted_GB4_headline_rehabilitation
+  - mathematical_shape_as_physical_discriminating_prediction
+scientific_threshold_changed: false
+next_attempt: freeze_exact_composition_and_structurally_test_novelty_before_any_API_change

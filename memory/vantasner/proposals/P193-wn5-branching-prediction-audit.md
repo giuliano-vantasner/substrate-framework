@@ -135,6 +135,20 @@ oracle hierarchy, compatibility rule, and debt before renewed WN5 execution or
 complete inspection. Failures remain append-only and trigger a materially
 different repair or candidate.
 
+Attempt 0002 reproduces hash-pinned WN5 natively with all 41 runtime checks,
+exit zero, 0.46 seconds wall time, and 53,548 KiB maximum resident memory. The
+AST has 22 check-call sites, 15 literal names, seven dynamic sites, no
+assertions, and no NumPy compatibility surface. The exact positive-weight
+membership, fixed-order population partial derivative, relative-odds
+composition, and inverse factorial-one shape survive. The headline is broader
+than its oracle: finite positivity and monotonicity grids do not prove the
+quantifiers, the grid omits order zero, first-argmin hides the integer-S tie,
+and a fixed-weight partial derivative is not a population-dependent total
+path. A mathematical turnover distinguishes three declared weight forms only
+under fixed N, rho, channels, and order meaning; it is not yet a physical
+prediction. The next attempt freezes the exact composition and decides novelty
+before any API change.
+
 ## Debt Ledger
 
 The P193 ledger tracks source predicates, accepted overlap, order and
@@ -144,12 +158,12 @@ dependencies, consumers, and governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | WN5 was exposed before P193 | Record exposure and claim no fresh blinding | discharged |
-| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | open |
+| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | discharged |
 | Accepted branching and factorial claims may already own the result | Complete claim, API, and theorem nonduplication review | open |
 | Fixed-order and population-dependent paths may be conflated | Derive partial, total, and integer-step conditions | open |
 | Enhancement may hide baseline or population inputs | Type and retain every input and equality threshold | open |
 | Mathematical fractions may be called physical predictions | Supply countermodels and premise inventory | open |
-| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | open |
+| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
 | Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
 

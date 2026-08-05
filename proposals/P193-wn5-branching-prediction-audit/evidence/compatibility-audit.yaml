@@ -1,0 +1,16 @@
+campaign: P193
+source_unit: WN5
+source_sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+imports: [sys, sympy]
+numpy_aliases: []
+direct_legacy_attributes: 0
+dynamic_legacy_getattrs: 0
+imported_legacy_names: 0
+direct_current_attributes: 0
+dynamic_current_getattrs: 0
+imported_current_names: 0
+eager_legacy_default_fallbacks: 0
+requires_legacy_alias: false
+execution_mode: native_current_environment
+version_only_stops: []
+scientific_failures_from_version_events: 0

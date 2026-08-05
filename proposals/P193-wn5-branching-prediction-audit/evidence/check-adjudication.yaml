@@ -1,0 +1,32 @@
+campaign: P193
+source_unit: WN5
+runtime_checks: 41
+groups:
+  WN5_1_membership:
+    verdict: exact_formula_survives_but_source_execution_is_finite_regression
+    accepted_authority: C-OSC-001
+  WN5_2_population_derivative:
+    verdict: survives_only_as_fixed_order_fixed_weight_C_BRN_001_partial_derivative
+    accepted_authority: C-BRN-001
+  WN5_3_relative_odds:
+    verdict: exact_accepted_composition_with_all_inputs_retained
+    accepted_authority: [C-BRN-001, C-OSC-001]
+  WN5_4_no_narrowing:
+    verdict: qualified_to_C_BRN_001s_declared_domain
+    rejected_extension: unrestricted_GB4_regime_independence
+  WN5_5_turnover:
+    verdict: exact_inverse_shape_composition_survives_with_endpoint_and_integer_tie_corrections
+    accepted_authority: [C-BRN-001, C-OSC-001]
+    rejected_extension: physical_discriminating_prediction
+  WN5_6_guards:
+    verdict: implementation_regression_only
+    reason: preserves_general_w_tests_one_selected_expression_and_the_symmetric_N_fake_reuses_GB4_algebra
+accepted_composition:
+  branch_fraction: rho/(N*S^n/n!+rho)
+  adjacent_difference_sign: sign_of_n_plus_1_minus_S
+  all_nonnegative_minima:
+    noninteger_S: [floor_S]
+    positive_integer_S: [S_minus_1, S]
+  relative_odds_enhancement: N*S^(n-1)/n!
+  enhancement_adjacent_ratio: S/(n+1)
+scientific_threshold_changed: false

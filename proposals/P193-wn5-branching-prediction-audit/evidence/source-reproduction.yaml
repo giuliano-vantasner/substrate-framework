@@ -1,0 +1,15 @@
+campaign: P193
+source_unit: WN5
+path: /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py
+sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+execution: native
+terminal_tally: ALL_41_CHECKS_PASS
+wall_seconds: 0.46
+max_rss_kib: 53548
+exit_status: 0
+static_check_calls: 22
+literal_check_calls: 15
+dynamic_check_calls: 7
+assert_statements: 0
+runtime_checks: 41
+compatibility_alias_used: false
