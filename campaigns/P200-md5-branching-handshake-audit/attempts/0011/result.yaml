@@ -1,0 +1,13 @@
+attempt: 0011
+campaign: P200
+candidate: explicit_path_promotion_commit
+status: failed
+failure_class: git_staging_invocation
+command: git_add_minus_A_with_both_pre_move_and_post_move_P200_paths
+exit_status: 128
+error: pathspec_proposals_P200_did_not_match_after_git_mv
+files_staged: false
+authority_state_changed: false
+scientific_verdict_changed: false
+repair: Stage_the_already_reviewed_complete_worktree_with_repository_wide_git_add_minus_A.
+next_attempt: complete_promotion_commit

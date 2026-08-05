@@ -1,0 +1,37 @@
+attempt: 0010
+campaign: P200
+candidate: single_integrated_promotion_gate
+status: passed
+target_release: v0.149.0
+claim: C-BRN-002
+source_disposition: {MD5: qualified}
+accepted_mappings: [C-BRN-001, C-CMB-003, C-BRN-002]
+generated_state:
+  claims: 189
+  accepted_claims: 189
+  proposals: 0
+  memory_files: 822
+  migration_units: 218
+  migration_pending: 24
+  migration_partial: 0
+  migration_qualified: 181
+targeted_boundary:
+  primary_checks: 19
+  independent_checks: 12
+  graph_checks: 19
+  focused_tests: 21
+  exit_statuses_all_zero: true
+integrated_gate:
+  command: scripts/validate.sh
+  status: passed
+  tests_passed: 1810
+  pytest_seconds: 167.99
+  wall_seconds: 181.00
+  peak_rss_kib: 218320
+  exit_status: 0
+release_sha256: fbb97885d564d6dc57c8b5bdf37cd619484a4f361545ea4ae198917de6b2ed05
+registry_sha256: 75f15bce1236c976d66f1348b104856b3bfb562ce1c3c0b1113c0b47ab8cbf22
+source_claims_sha256: 911c2cf8ef03a9f63ba3d8dbc1215c8d972ef614b680c5db7fd4b020cd0af353
+compatibility_event: none
+scientific_threshold_changed: true
+debt: []

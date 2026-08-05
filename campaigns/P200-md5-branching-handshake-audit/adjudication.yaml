@@ -1,0 +1,69 @@
+campaign: P200
+title: MD5 population-dependent allocation and isotope-handshake audit
+source_baseline: substrate@6d1f4e0
+source_units: [MD5]
+base_release: v0.148.0
+accepted_release: v0.149.0
+adjudicated_at: '2026-08-05T19:25:00Z'
+selected_candidates:
+  - {id: B, reason: The exact w_plus_N_w_prime criterion supplies the total derivative trichotomy and a positive-weight counterexample missing from C-BRN-001.}
+retained_candidates:
+  - {id: A, reason: Constant positive weight remains the accepted C-BRN-001 specialization composed where needed with C-CMB-003.}
+competing_candidates:
+  - {id: C, decision: rejected_because_expectation_interchange_adds_unneeded_measure_integrability_and_differentiation_premises}
+  - {id: D, decision: rejected_because_no_accepted_two_host_parameter_state_channel_or_rate_map_closes_the_isotope_handshake}
+  - {id: E, decision: rejected_because_the_total_derivative_criterion_is_distinct_from_the_accepted_constant_weight_partial_derivative}
+  - {id: F, decision: rejected_because_no_independent_foundational_inconsistency_requires_branching_revision}
+claims:
+  - {id: C-BRN-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-BRN-001, decision: unchanged_constant_weight_allocation_and_physical_ceilings}
+  - {id: C-CMB-003, decision: unchanged_static_factorial_one_mass_modes_moments_and_tails}
+unpromoted_claims:
+  - {id: positive_weight_alone_forces_population_monotonicity, reason: Positive_w_equals_N_to_minus_two_makes_the_comparison_fraction_increase.}
+  - {id: source_formula_omission_derives_material_N_independence, reason: Free_symbol_absence_inside_a_selected_formula_does_not_supply_the_material_parameter_map.}
+  - {id: unique_floor_S_mode_or_branching_minimum, reason: Positive_integer_S_has_the_adjacent_mode_tie_S_minus_one_and_S.}
+  - {id: exact_H_D_sqrt_two_isotope_handshake, reason: Accepted_claims_supply_no_equal_two_host_curvature_phase_scale_state_preparation_interaction_or_rate_map.}
+  - {id: physical_branching_reaction_or_rate, reason: Positive_mathematical_membership_does_not_establish_rate_inputs_or_an_exhaustive_channel_set.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_weight_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-BRN-002-claim-review.md
+  source_disposition_review: reviews/MD5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  consumer_reproduction: evidence/consumer-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {MD5: qualified}
+accepted_mappings: [C-BRN-001, C-CMB-003, C-BRN-002]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.149.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+debt: []
+status: accepted

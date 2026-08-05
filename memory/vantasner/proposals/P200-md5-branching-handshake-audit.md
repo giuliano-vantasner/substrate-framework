@@ -2,7 +2,7 @@
 description: Separate structural weighted-allocation monotonicity from MD5 material isotope claims
 author: vantasner
 created: '2026-08-05T19:08:00Z'
-updated: '2026-08-05T19:22:00Z'
+updated: '2026-08-05T19:30:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -10,8 +10,8 @@ tags:
 - branching
 - isotope-handshake
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P200 MD5 Branching Handshake Audit
 
@@ -102,6 +102,12 @@ integrated gate at the unchanged scientific boundary.
 
 ## Done Gate
 
-P200 closes only when the positive structural theorem exists or is proven an
-accepted duplicate, MD5 has a terminal claim-level disposition, all consumers
-replay, generated authority agrees, and no unresolved debt remains.
+P200 promotes C-BRN-002 in v0.149.0 and qualifies MD5 through C-BRN-001,
+C-CMB-003, and C-BRN-002. The primary, independent, graph, and focused routes
+pass 19, 12, 19, and 21 checks respectively. Ten byte-pinned records cover 354
+native predicates without duplicate execution, MD6 remains pending, generated
+authority agrees, no NumPy compatibility event affects the verdict, and the
+campaign debt ledger is empty. Attempt 0010 records the single integrated
+promotion gate: all 1,810 tests pass in 167.99 seconds and all 822 memory files
+validate; the process exits zero after 181.00 wall seconds at 218,320 KiB peak
+RSS.

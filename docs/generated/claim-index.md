@@ -84,6 +84,15 @@ Let A and B be exact nonnegative real quantities in one common dimension with A+
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-BRN-002
+
+Let N>0 be a continuous population parameter, let rho>0 be a declared dimensionless ratio of two common-dimension positive rate normalizations, and let w(N)>0 be a differentiable dimensionless weight. For the comparison fraction B_c(N)=rho/(N*w(N)+rho), the exact total derivative is B_c'(N)=-rho*(w(N)+N*w'(N))/(N*w(N)+rho)^2. Consequently B_c is locally decreasing, stationary, or increasing exactly as w+N*w' is positive, zero, or negative. A constant positive weight recovers C-BRN-001's strictly decreasing specialization. Positive weight alone is insufficient: w=N^(-1/2), w=N^(-1), and w=N^(-2) realize the three respective verdicts. The theorem concerns a declared differentiable continuation. For integer-only counts, discrete monotonicity instead follows from adjacent values of N*w(N); no derivative is silently imported. The weight law, common rate dimensions, exhaustive channel set, and physical meaning of the inputs remain separate premises. No material population law, state preparation, interaction, isotope map, reaction, branching observable, rate, yield, heat, or substrate realization follows.
+
+- Accepted in: `v0.149.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-BRN-001
+
 ## C-CC-001
 
 Conditional on the timelike one-coordinate action L = -(E0/sqrt(n(q)))*sqrt(1-n(q)^2*qdot^2/c0^2), with positive n, c0, and E0, the exact coordinate-time acceleration is qddot = (c0^2-3*n^2*qdot^2)*n_q/(2*n^3). Its zero-velocity limit is c0^2*n_q/(2*n^3), matching C-OG-001, and its locally unique same-data IVP is independent of E0. The mixed-scale counterexample with E0 also inside the kinetic square root retains E0 and, for n=1+alpha*q at q=qdot=0, has initial acceleration E0*c0^2*alpha/2.

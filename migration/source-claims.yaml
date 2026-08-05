@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 25
-  qualified: 180
+  pending_adjudication: 24
+  qualified: 181
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11326,8 +11326,60 @@ units:
   dynamic_check_calls: 8
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BRN-001
+  - C-CMB-003
+  - C-BRN-002
+  qualification: 'C-BRN-001 retains the exact normalized two-channel allocation and its constant-positive-weight
+    population partial derivative. C-CMB-003 retains the normalized static factorial-one mass, complete
+    modes, moments, and tails. C-BRN-002 adds the exact total derivative for a separately declared positive
+    differentiable weight w(N): the comparison fraction decreases, is stationary, or increases exactly
+    as w+N*w'' is positive, zero, or negative. Positive weight alone is insufficient, and integer-only
+    counts require adjacent ordering of N*w(N) rather than an undeclared derivative. MD5''s 63 predicates
+    reproduce, but the source holds its weight fixed and does not test the general case. Omitting N from
+    a selected expression does not derive a material population law. Positive integer S has adjacent modes
+    S-1 and S. Accepted claims supply no exact two-host curvature, inertia, phase-scale, preparation,
+    interaction, final-state, exhaustive-channel, or rate map, so the H/D sqrt-two handshake and physical
+    branching narrative are not accepted. PN2 supplies no accepted band or occupation premise. No material
+    isotope reaction, branching fraction, rate, yield, heat, or substrate conclusion follows.'
+  evidence:
+  - campaigns/P200-md5-branching-handshake-audit/reviews/source_adjudication.md
+  - campaigns/P200-md5-branching-handshake-audit/reviews/C-BRN-002-claim-review.md
+  - campaigns/P200-md5-branching-handshake-audit/reviews/MD5-disposition-review.md
+  - campaigns/P200-md5-branching-handshake-audit/reviews/impact_analysis.md
+  - campaigns/P200-md5-branching-handshake-audit/evidence/source-reproduction.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/consumer-reproduction.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/compatibility-audit.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/source-audit.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/check-adjudication.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/formula-freeze.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/input-provenance.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/dependency-audit.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/consumer-audit.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/candidate-comparison.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/implementation-audit.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/gitnexus-impact.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/primary-provenance.yaml
+  - campaigns/P200-md5-branching-handshake-audit/evidence/independent-provenance.yaml
+  - campaigns/P200-md5-branching-handshake-audit/verify.py
+  - campaigns/P200-md5-branching-handshake-audit/reviews/independent_weight_review.py
+  - campaigns/P200-md5-branching-handshake-audit/reviews/replay_source_graph.py
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0001/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0002/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0003/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0004/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0005/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0006/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0007/result.yaml
+  - campaigns/P200-md5-branching-handshake-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/C-BRN-002-review.md
+  - memory/vantasner/decisions/MD5-qualified-review.md
+  note: P200 closes 19 primary, 12 independent, and 19 source-graph checks. Ten byte-pinned native records
+    cover 354 predicates without duplicate native execution; MD6 remains pending. MD5 and its graph have
+    no NumPy quadrature surface, so no version event affects a scientific verdict.
 - source_unit: MD6
   phase: phase-38
   path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py

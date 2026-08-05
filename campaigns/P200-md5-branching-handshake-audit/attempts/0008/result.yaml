@@ -1,0 +1,16 @@
+attempt: 0008
+campaign: P200
+candidate: frozen_review_boundary_and_complete_promotion_manifest
+status: passed
+claim: C-BRN-002
+recommended_axes:
+  verification: symbolic_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+source_disposition: {MD5: qualified}
+accepted_mappings: [C-BRN-001, C-CMB-003, C-BRN-002]
+review_boundary_commit: 86578ec
+version_only_scientific_failures: 0
+debt: []
+next_attempt: generated_state_and_post_promotion_exact_targeted_replay

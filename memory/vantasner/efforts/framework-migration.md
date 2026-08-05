@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T19:38:00Z'
+updated: '2026-08-05T19:30:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.143.0`, containing one hundred eighty-three
+The current accepted frontier is `v0.149.0`, containing one hundred eighty-nine
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2220,23 +2220,77 @@ pending. No node has a legacy NumPy quadrature surface. The single integrated
 boundary validates 795 memory files and passes all 1,717 tests with a clean
 terminal status.
 
+P195 leaves v0.144.0 unchanged and qualifies WN7 as a finite scanner ledger,
+not a scientific truth oracle. Thirty-two primary, 21 independent, nine
+focused, and 18 graph checks preserve its exact syntax results while exposing
+construction, alias, Unicode, comment, tag, assignment, data-flow, and
+equivalent-formula evasions. Eleven pinned records cover 429 native predicates
+without duplicate execution. No compatibility event changes the verdict; the
+integrated boundary validates 797 memory files and all 1,717 tests.
+
+P196 promotes C-DOS-001 in v0.145.0 and qualifies MD1 through the exact
+general-dimensional isotropic continuum density and integrated ball count,
+independent branch factor, and target-matched cutoff. Continuum count is not
+exact finite rank, dimension does not determine branch count, and a target-
+matched cutoff is not microscopic granularity. Forty primary, 28 independent,
+17 focused, and 16 graph checks pass; the integrated boundary validates 802
+memory files and all 1,734 tests.
+
+P197 promotes C-QFL-001 in v0.146.0 and qualifies MD2 through an explicitly
+quantized inverse-frequency vacuum moment and fixed-set sum/mean identity. It
+does not lift the accepted medium to three dimensions, derive a microscopic
+cutoff or material parameters, or make a fixed-set identity invariant under
+changing the admitted set. Forty primary, 27 independent, 40 focused, and 20
+graph checks pass; the integrated boundary validates 807 memory files and all
+1,757 tests.
+
+P198 promotes C-VOP-001 in v0.147.0 and qualifies MD3 through the exact
+coherent-state vector, eigenvalue, overlap, displacement, and number-
+measurement law. A finite truncated commutator is not globally central,
+positive integer intensity has tied modes, and occupation support supplies no
+material preparation, interaction, transition, branching, or rate. Forty-
+eight primary, 25 independent, 59 focused, and 20 graph checks pass; the
+integrated boundary validates 812 memory files and all 1,779 tests.
+
+P199 promotes C-MKV-001 in v0.148.0 and qualifies MD4 through an independently
+declared immigration-death process with exact generator, boundary, stationary
+mass, drift, PGF, mean, transition kernel, and a same-stationary-law
+nonuniqueness witness. Static mass ratios are not time derivatives, positive
+local drift does not imply monotone paths, and a point mass does not open or
+rescue a physical channel. Fifty-four primary, 37 independent, 53 focused,
+and 21 graph checks pass; the integrated boundary validates 817 memory files
+and all 1,804 tests.
+
+P200 promotes C-BRN-002 in v0.149.0 and qualifies MD5 through C-BRN-001,
+C-CMB-003, and the exact population-dependent-weight total derivative. The
+comparison fraction decreases, is stationary, or increases according as
+`w+N*w'` is positive, zero, or negative; positive weight alone is not enough.
+Formula symbol absence does not derive a material population law, positive
+integer intensity has adjacent modes, and accepted claims supply no complete
+H/D host, state, interaction, channel, or rate map. Nineteen primary, 12
+independent, 21 focused, and 19 graph checks pass. Ten pinned records cover 354
+native predicates without duplicate execution and no NumPy compatibility
+event changes the verdict. The integrated boundary validates 822 memory files
+and passes all 1,810 tests in 167.99 seconds with exit zero.
+
 ## Canonicalization
-The registry, `v0.144.0` manifest, current release, generated claim
-index, and generated framework memory agree on one hundred eighty-four
-accepted claims. P001 through P194 are frozen under `campaigns/`; proposal,
+The registry, `v0.149.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred eighty-nine accepted claims.
+P001 through P200 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 30 pending, 0 partial, 3
-migrated, 175 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 24 pending, 0 partial, 3
+migrated, 181 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 30
-pending, 3 migrated, 175 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P194 closes WN6 without accepting a material phase
-amplitude, hard small-oscillation cutoff, topological winding, multi-mode state,
-unique mode-count bridge, or physical channel verdict. The next queue unit is
-WN7. Its firewall scans must be separated from the scientific truth of the
-scanned WN cluster, with no pending MD unit imported as authority.
+The effort remains active. D4 is discharged, but D1 remains open with 24
+pending, 3 migrated, 181 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P200 closes MD5 without accepting its material
+population law, unique integer mode, PN2 band, H/D handshake, physical
+branching, reaction, or rate. The next dependency-ready queue unit is MD6. Its
+scanner and debt-ledger predicates must be separated from scientific truth and
+cannot declare debt discharged merely because selected names or assignments
+are absent.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
