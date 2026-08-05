@@ -1,0 +1,61 @@
+id: P193
+base_release: v0.143.0
+base_commit: e734dd8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WN5]
+question: >-
+  Does WN5 add a distinct exact order-resolved branching theorem beyond the
+  accepted C-BRN-001 allocation and C-OSC-001/C-CMB-003 factorial-one family,
+  or is its advertised new prediction only a conditional substitution with
+  free population and channel baselines?
+invariants:
+  - C-BRN-001 owns the exact two-channel allocation weighted specialization relative odds free-baseline fit and physical ceiling.
+  - C-OSC-001 owns the factorial-one masses ratios supports normalization and complete modes.
+  - C-CMB-003 owns strict log-concavity generating moments and quantified tails for the normalized all-nonnegative family.
+  - A positive mathematical weight does not derive a physical rate exhaustive channel set population law or prediction.
+  - Order and population dependence must be typed separately; a fixed-order partial derivative is not a total derivative along n(N).
+  - WN6 WN7 and MD1 through MD6 remain separately governed.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable legacy-name stops are compatibility evidence only.
+allowed_imports:
+  - C-BRN-001
+  - C-OSC-001
+  - C-CMB-003
+  - C-SG-019 as transitive provenance only
+  - exact factorial and inequality algebra
+  - src/substrate_framework/branching.py
+  - src/substrate_framework/bosonic_fock.py
+  - hash-pinned GB1 GB4 WN3 WN4 and reverse-consumer sources as noncanonical evidence only after freeze
+candidates:
+  - id: A
+    description: Reproduce and adjudicate every WN5 predicate and conclusion edge.
+  - id: B
+    description: Classify WN5 as accepted composition only because existing public APIs already realize every exact warranted formula.
+  - id: C
+    description: Promote a distinct exact order-resolved factorial-one branching allocation if it has a coherent nonduplicative API and theorem surface.
+  - id: D
+    description: Derive exact relative-odds threshold and order-ratio conditions for enhancement suppression and ties.
+  - id: E
+    description: Separate fixed-order population monotonicity from paths where order or weight depends on population.
+  - id: F
+    description: Use free baselines populations channel sets and zero-interaction countermodels to delimit physical prediction claims.
+  - id: G
+    description: Close source dependency consumer disposition compatibility memory and debt governance without blanket downstream promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - novelty beyond accepted composition and APIs
+  - exact domain sample-space and common-dimension typing
+  - fixed-order versus total-path differentiation
+  - parameter and baseline economy
+  - integer ties endpoints and limiting behavior
+  - mutation-sensitive threshold and ratio logic
+  - physical premise completeness
+  - downstream and governance compatibility
+claims_proposed:
+  - C-BRN-002
+comparators_blinded_until: >-
+  No fresh blinding is possible because the generated queue and P192 graph
+  exposed WN5's membership derivative enhancement and no-narrowing headline;
+  candidates criteria mutations and physical ceilings freeze before renewed
+  WN5 execution or complete source-body inspection.
+status: active
+revision: 0001

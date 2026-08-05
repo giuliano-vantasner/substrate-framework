@@ -1,0 +1,16 @@
+attempt: 0001
+campaign: P193
+candidate: preregistered_branching_composition_and_novelty_audit
+status: passed_freeze
+started_at: '2026-08-11T19:13:00Z'
+finished_at: '2026-08-11T19:14:00Z'
+base_release: v0.143.0
+base_commit: e734dd8
+source_sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+registry_sha256: 6c4480c078ac23b903a69806af788cc95d9046419ab21dc507ecd9ef346520ac
+exposure: prior_generated_queue_and_P192_graph
+candidates: [A, B, C, D, E, F, G]
+provisional_claim: C-BRN-002
+scientific_threshold_changed: false
+next_attempt: validate_freeze_then_reproduce_and_audit_hash_pinned_WN5

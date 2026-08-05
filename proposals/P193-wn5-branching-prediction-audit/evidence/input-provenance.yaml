@@ -1,0 +1,17 @@
+campaign: P193
+base_release: v0.143.0
+base_commit: e734dd8
+release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+registry_sha256: 6c4480c078ac23b903a69806af788cc95d9046419ab21dc507ecd9ef346520ac
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py
+source_sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+source_bytes: 14043
+source_history: [7222eed]
+source_worktree_dirty_outside_pinned_file: true
+authority_inputs: [C-BRN-001, C-OSC-001, C-CMB-003]
+source_dependencies: [GB1, GB4, WN3, WN4]
+forward_authority_forbidden: [WN6, WN7, MD1, MD2, MD3, MD4, MD5, MD6]
+fresh_blinding_claimed: false
+provisional_identifier_search_collision: false
