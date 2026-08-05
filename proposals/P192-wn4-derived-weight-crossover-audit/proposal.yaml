@@ -1,0 +1,49 @@
+id: P192
+base_release: v0.142.0
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+question: >-
+  Does WN4 add a distinct exact factorial-one shape, tail, or normalized
+  distribution theorem beyond C-OSC-001, and which advertised crossover and
+  physical-regime conclusions survive claim-level review?
+invariants:
+  - C-OSC-001 owns the exact factorial-one totals, adjacent ratios, modes, and sample-space separation.
+  - Integer intensity may produce two adjacent modes even under strict log-concavity.
+  - A supplied mathematical mass and crossover do not derive a physical rate, process, energy-gap law, or medium scale.
+  - WN5 through WN7 and MD1 through MD6 remain separately governed.
+allowed_imports:
+  - C-OSC-001
+  - C-CMB-001
+  - C-CMB-002
+  - C-SG-019
+  - C-BRN-001
+candidates:
+  - id: A
+    description: Hash-pinned native reproduction and predicate-level WN4 adjudication.
+  - id: B
+    description: Accepted-composition-only classification with no new claim.
+  - id: C
+    description: Exact factorial-one strict log-concavity and integer-tie-corrected shape theorem.
+  - id: D
+    description: Exact eventual geometric and fixed-power tail domination theorem.
+  - id: E
+    description: Exact normalized all-nonnegative Poisson-family generating and moment theorem.
+  - id: F
+    description: Regime-label and physical-crossover countermodels with supplied intensity.
+  - id: G
+    description: Governed claim, source, consumer, release, documentation, memory, and debt closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted-domain and sample-space compatibility
+  - novelty beyond C-OSC-001 and C-CMB-001
+  - exact integer-tie and endpoint behavior
+  - assumption and parameter economy
+  - normalization and dimensional completeness
+  - tail quantifier correctness
+  - physical typing and downstream compatibility
+claims_proposed:
+  - C-CMB-003
+comparators_blinded_until: >-
+  No fresh blinding is possible because migration inventory and P191 reverse
+  replay exposed WN4's advertised result; criteria, candidates, tie probes,
+  mutations, and ceilings freeze before new source execution or full-body inspection.
+status: active

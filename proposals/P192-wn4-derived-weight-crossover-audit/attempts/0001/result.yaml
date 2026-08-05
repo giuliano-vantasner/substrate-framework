@@ -1,0 +1,37 @@
+attempt: 0001
+campaign: P192
+candidate: preregistered_WN4_shape_tail_and_distribution_audit
+status: passed
+started_at: '2026-08-11T18:12:00Z'
+finished_at: '2026-08-11T18:18:00Z'
+base_release: v0.142.0
+base_commit: 9df59fb
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: WN4
+source_path: merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py
+source_sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2
+source_size_bytes: 16774
+source_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+release_sha256: f8ff33a61925f9e537f5a296aa7e674238399a22fc59e7eec7ec8520f4e3a852
+registry_sha256: 9c07989275885a4deb0f28ffe2d83649a3cef4a794353293f6980d37d9404d22
+source_exposure: >-
+  WN4's generated inventory excerpt and P191 reverse-consumer replay already
+  exposed its advertised ratio, crossover, log-concavity, unique-mode, and
+  regime-recovery conclusions. No fresh comparator blinding is claimed.
+frozen_candidates: [A, B, C, D, E, F, G]
+provisional_claim: C-CMB-003
+compatibility_rule: >-
+  Mutable code uses np.trapezoid or trapezoid_integral. Immutable legacy access
+  receives alias-only replay backed by np.trapezoid and cannot reject a
+  scientific candidate merely because of a version event.
+next_attempt: >-
+  Inspect and reproduce the hash-pinned WN4 body; inventory lexical calls,
+  runtime executions, assertions, imports, formulas, sample spaces, physical
+  conclusions, consumers, and every NumPy compatibility surface.
+debt:
+  - source_predicate_and_dataflow_audit
+  - exact_shape_tail_and_distribution_selection
+  - implementation_and_mutation_sensitive_verification
+  - independent_rederivation
+  - claim_source_and_consumer_review
+  - governed_promotion_or_terminal_disposition

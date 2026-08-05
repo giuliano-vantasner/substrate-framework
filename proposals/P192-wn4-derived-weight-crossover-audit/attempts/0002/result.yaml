@@ -1,0 +1,17 @@
+attempt: 0002
+campaign: P192
+candidate: proposal_manifest_freeze_status
+status: failed
+started_at: '2026-08-11T18:18:00Z'
+finished_at: '2026-08-11T18:19:00Z'
+failure_class: representation
+command: PYTHONPATH=src_.venv/bin/python_scripts/validate_repository.py
+failure: >-
+  The proposal manifest used status frozen, but the governed manifest schema
+  accepts draft, active, in_review, accepted, rejected, or rework only.
+scientific_effect: none
+repair: >-
+  Use status active for the frozen preregistered campaign. The source-exposure,
+  comparator-blinding point, candidates, criteria, claim reservation, oracles,
+  mutations, thresholds, and physical ceilings remain byte-for-byte unchanged.
+next_attempt: rerun_the_unchanged_freeze_preflight_before_source_body_inspection
