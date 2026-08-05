@@ -1,0 +1,38 @@
+campaign: P205
+source_unit: WM8
+source_sha256: 741497f63cc39ee96c71e9a999c49ef9e821cf612d8b48b2959d05f9e6940518
+exact_source_path:
+  family: boundary_only_scalar_count_with_fixed_N_H_one_beta_coefficients
+  design_determinant: (7*N_H+268)/3
+  boundary_amplitude: 1639681/(590*(7*N_H+268))
+  scaled_log_span: -2*(1250*N_H-186383)/(295*(7*N_H+268))
+  readout: 19*(91299*N_H+1325644)/(452766*(7*N_H+268))
+  derivative: 144291928/(226383*(7*N_H+268)^2)
+  nonnegative_domain: positive_and_nonsingular
+coherent_field_content_path:
+  beta_vector: [4+N_H/10, -10/3+N_H/6, -7]
+  design_determinant: 11*(N_H+24)/3
+  readout: (236383*N_H+2211064)/(452766*(N_H+24))
+  derivative: 1731064/(226383*(N_H+24)^2)
+  agreement_with_source_path: only_at_N_H_one
+  N_H_three_readout: 0.238878442809
+  source_N_H_three_readout: 0.232261554419
+provenance_corrections:
+  - C-RGE-006 already owns the arbitrary-boundary exact two-constraint solution and readout.
+  - The two low coordinates and reference scale are supplied inverse-inference inputs under C-RGE-004 and C-RGE-006.
+  - WM7 supplies table arithmetic but no physical scalar count common action or matching boundary.
+  - The source changes N_H only in the boundary vector while b remains the one-scalar running vector.
+  - The measured comparator is absent from solve_boundary but the source's perturbed variable simply repeats the identical call.
+  - Threshold matching Yukawa scheme and uncertainty effects prevent unique attribution of the residual to scalar multiplicity.
+countermodels_and_mutations:
+  - Change either supplied low target and the exact readout changes.
+  - Change one boundary ratio or scalar count and the exact readout changes.
+  - Change the beta ledger coherently with scalar count and every counterfactual except N_H=1 changes.
+  - A rank-two constraint matrix can still give a singular two-column boundary design.
+  - Independent additive matching offsets change the readout while satisfying the two low constraints.
+  - Comparator mutation changes only the reported miss and not the solve.
+headline_verdict_candidate: >-
+  WM8 is exact accepted composition and conditional inverse inference. Its
+  one-scalar readout is reproducible, but no new theorem, ab-initio physical
+  prediction, derived scalar count, uniquely localized residual, or substrate
+  mechanism follows.

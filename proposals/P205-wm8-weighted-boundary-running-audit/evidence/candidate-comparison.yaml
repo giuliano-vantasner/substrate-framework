@@ -1,0 +1,18 @@
+campaign: P205
+criteria_frozen_in_attempt: 0001_after_full_exposure
+comparator_selected_candidate: false
+candidates:
+  A: {verdict: selected_accepted_specialization, reason: C-RGE-006's exact arbitrary-boundary API reproduces WM8 without a new semantic surface.}
+  B: {verdict: rejected_as_duplicate, reason: The general weighted-boundary design positivity readout and ceilings are already C-RGE-006.}
+  C: {verdict: selected_inverse_inference_typing, reason: Two supplied low constraints solve amplitude and scale and leave one conditional readout.}
+  D: {verdict: selected_comparator_ceiling, reason: The measured coordinate is absent from the solve but numerical improvement creates no physical authority.}
+  E: {verdict: selected_corrected_scalar_count_ledger, reason: Boundary-only and coherent count paths are exact and coincide only at N_H=1; neither selects multiplicity.}
+  F: {verdict: selected_no_new_surface, reason: gauge_running already implements and tests the general object.}
+  G: {verdict: selected_governance_closure, reason: WM8 can close individually without backward WM7 authority or pending consumer inheritance.}
+selection:
+  claim: none
+  reserved_unpromoted_identifier: C-RGE-008
+  canonical_API_change: none
+  release_change: none
+  provisional_source_disposition: qualified
+  accepted_composition: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]

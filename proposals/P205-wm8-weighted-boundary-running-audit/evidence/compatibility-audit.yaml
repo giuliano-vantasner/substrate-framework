@@ -1,0 +1,17 @@
+campaign: P205
+auditor: substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+environment: {numpy: 2.5.1, current_trapezoid_available: true, legacy_trapz_available: false}
+immutable_nodes:
+  S2: {legacy_references: 3, classification: immutable_alias_only_required_if_reexecuted}
+  all_other_12_nodes: {legacy_references: 0}
+runtime_import_closure: [WM8, WM7, WM3]
+runtime_import_closure_legacy_references: 0
+mutable_P205:
+  legacy_references: 0
+  policy: use_numpy_trapezoid_or_shared_trapezoid_integral
+aliases_injected_during_P205_science: 0
+scientific_failures_from_version_events: 0
+verdict: >-
+  WM8 its runtime imports and mutable P205 have no quadrature surface. S2's
+  immutable legacy syntax is compatibility evidence only and cannot affect a
+  scientific candidate or source disposition.

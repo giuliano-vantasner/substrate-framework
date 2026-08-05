@@ -1,0 +1,18 @@
+campaign: P205
+source_unit: WM8
+checks:
+  - {id: WM8.1, source_runtime: pass, status: retained_exact_conditional_regression, mapping: [C-RGE-004, C-RGE-006], reason: The equal-boundary limit reproduces WM3 because it uses the same supplied low rows and fixed one-scalar beta vector; it is not independent physics validation.}
+  - {id: WM8.2, source_runtime: pass, status: retained_exact_inverse_solution, mapping: [C-RGE-006], reason: The rational amplitude and span are an exact specialization of C-RGE-006's already accepted design.}
+  - {id: WM8.3, source_runtime: pass, status: retained_conditional_readout_rejected_physical_prediction, mapping: [C-REP-001, C-RGE-004, C-RGE-006], reason: The readout and comparator arithmetic reproduce, but low inputs boundary normalization matching and observation scheme remain supplied.}
+  - {id: WM8.4, source_runtime: pass, status: retained_conditional_scale_rejected_consistency_claim, mapping: [C-RGE-006], reason: The scale follows from the supplied reference and exact span; lying between M_Z and Planck scale proves neither perturbativity matching nor physical consistency.}
+  - {id: WM8.5, source_runtime: pass, status: retained_boundary_only_sign_sensitivity, mapping: [C-RGE-005, C-RGE-006], reason: The sign follows for the supplied scalar boundary contribution with fixed running coefficients, not from a derived physical field-content mechanism.}
+  - {id: WM8.6, source_runtime: pass, status: retained_boundary_only_monotonicity, mapping: [C-RGE-006], reason: The exact source family is monotone, but a coherent N_H variation must also change b and defines a different family.}
+  - {id: WM8.7, source_runtime: pass, status: retained_mutation_evidence_only, mapping: [C-RGE-006], reason: A sign-flipped boundary changes the conditional output and comparator miss; this does not select the physical boundary.}
+  - {id: WM8.8, source_runtime: pass, status: retained_dataflow_conclusion_rejected_executed_mutation, mapping: [C-RGE-004, C-RGE-006], reason: AST dataflow confirms comparator absence, but perturbed repeats solve_boundary with identical arguments and varies nothing.}
+  - {id: WM8.9, source_runtime: pass, status: retained_adverse_boundary_only_value_rejected_residual_attribution, mapping: [C-MIX-002, C-REP-003, C-RGE-005, C-RGE-006], reason: The near-hit holds only while N_H changes in S and fixed one-scalar b remains; coherent running gives 0.238878, and omitted effects prevent unique attribution.}
+  - {id: WM8.10, source_runtime: pass, status: retained_float_regression_not_independent_exactness, mapping: [C-RGE-006], reason: Float substitution checks the exact solution numerically but is not independent evidence once the rational equations fix the output.}
+summary:
+  retained_exact_conditional: 5
+  retained_sensitivity_or_regression_only: 3
+  rejected_load_bearing_interpretation: 2
+  blanket_headline_accepted: false

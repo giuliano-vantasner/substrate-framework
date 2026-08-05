@@ -1,0 +1,16 @@
+attempt: 0004
+campaign: P205
+timestamp_utc: '2026-08-05T22:06:00Z'
+kind: verifier_exception_and_self_introspection_repair
+exit_statuses: [1, 1]
+primary_passed_before_failure: 30
+primary_failure: canonical_singular_design_raises_ValueError_not_NonInvertibleMatrixError
+independent_passed_before_failure: 17
+independent_failure: explanatory_predicate_string_matched_its_own_forbidden_substring
+classification: implementation_oracle_construction_failure
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair:
+  - catch_the_canonical_public_ValueError_contract
+  - inspect_import_and_attribute_AST_nodes_instead_of_searching_source_prose
+continuation: rerun_only_the_two_symbolic_routes

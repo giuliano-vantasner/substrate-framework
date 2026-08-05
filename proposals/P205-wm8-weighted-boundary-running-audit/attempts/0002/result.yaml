@@ -1,0 +1,22 @@
+attempt: 0002
+campaign: P205
+timestamp_utc: '2026-08-05T22:02:00Z'
+kind: primary_and_independent_verifier_construction
+commands:
+  - PYTHONPATH=src .venv/bin/python proposals/P205-wm8-weighted-boundary-running-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python proposals/P205-wm8-weighted-boundary-running-audit/reviews/independent_weighted_boundary_review.py
+exit_statuses: [1, 1]
+primary_passed_before_failure: 10
+primary_failed_predicate: canonical_exact_API_reproduces_WM8_corrected_rational_solve
+independent_passed_before_failure: 0
+independent_failed_predicate: fresh_design_determinant_is_seven_N_plus_268_over_three
+classification: implementation_representation_failure
+causes:
+  - rounded_SymPy_floats_were_compared_by_structural_equality
+  - factored_and_expanded_exact_determinants_were_compared_by_structural_equality
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair:
+  - compare_reported_decimal_values_with_explicit_absolute_tolerance
+  - simplify_exact_determinant_residuals_to_zero
+continuation: rerun_only_the_two_symbolic_routes

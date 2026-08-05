@@ -1,0 +1,12 @@
+campaign: P205
+route: primary_accepted_API_and_exact_symbolic_composition
+script: verify.py
+sha256: a4744a2e982773982453c5b3882185b89a14170b6a9f412b57925b5566c60f3e
+checks: 37
+exit_status: 0
+source_pin: 741497f63cc39ee96c71e9a999c49ef9e821cf612d8b48b2959d05f9e6940518
+release_pin: 18dffeef5efd516018c918f65b45173c81ac0e1ba99fdd8a96274cc1df5c72db
+formula_freeze_pin: 341f2d5e21f08d0f8efaf20e423fc8e62368fbc3430ea7fc5abfc5fe807d7baa
+oracle: canonical_exact_one_loop_boundary_solution_plus_SymPy_mutations_and_AST_dataflow
+preserved_failed_attempts: [attempts/0002/result.yaml, attempts/0003/result.yaml, attempts/0004/result.yaml]
+compatibility: no_quadrature_surface

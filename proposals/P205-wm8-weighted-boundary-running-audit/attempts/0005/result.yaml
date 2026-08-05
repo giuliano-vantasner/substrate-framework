@@ -1,0 +1,23 @@
+attempt: 0005
+campaign: P205
+timestamp_utc: '2026-08-05T22:14:00Z'
+kind: source_audit_and_candidate_selection
+source_native_exit_status: 0
+source_runtime_checks: 10
+primary_checks: 37
+primary_exit_status: 0
+independent_checks: 19
+independent_exit_status: 0
+graph_checks: 38
+graph_exit_status: 0
+preserved_protocol_failure: 0001
+preserved_technical_failures: [0002, 0003, 0004]
+selected_candidates: [A, C, D, E, F, G]
+rejected_candidates: [B]
+provisional_claim_delta: []
+reserved_unpromoted_identifier: C-RGE-008
+provisional_source_disposition: qualified
+accepted_mapping: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+scientific_version_failures: 0
+verdict: exact_accepted_composition_ready_for_record_promotion
+continuation: commit_source_audit_then_update_disposition_generate_consumers_and_run_narrow_promotion_gate

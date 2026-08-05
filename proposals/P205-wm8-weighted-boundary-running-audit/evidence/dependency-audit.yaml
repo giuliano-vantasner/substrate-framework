@@ -1,0 +1,14 @@
+campaign: P205
+source_unit: WM8
+declared_dependencies: [S1, S2, S3, SM2, SM4, WM2, WM3, WM6, WM7]
+dependency_status: all_terminal
+admitted_composition: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+rejected_inheritance:
+  - S1 S2 and S3 grant no gauge running boundary scalar multiplicity or physical weak observable.
+  - SM2 and C-REP-003 supply finite rows but no physically complete scalar count.
+  - WM2 is duplicate trace evidence and supplies no universal induction action.
+  - WM3 and C-RGE-004 supply conditional exact inverse inference with supplied low coordinates.
+  - WM6 and C-RGE-006 already own the arbitrary-boundary exact API and retain all physical ceilings.
+  - WM7 grants supplied boundary-table composition only and its former reverse edge grants no backward authority.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

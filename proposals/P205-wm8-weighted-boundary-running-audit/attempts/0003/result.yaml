@@ -1,0 +1,15 @@
+attempt: 0003
+campaign: P205
+timestamp_utc: '2026-08-05T22:04:00Z'
+kind: symbolic_verifier_normal_form_repair
+exit_statuses: [1, 1]
+primary_passed_before_failure: 13
+primary_failed_predicate: boundary_only_design_determinant_stays_nonsingular
+independent_passed_before_failure: 2
+independent_failed_predicate: fresh_scaled_span_is_exact
+classification: implementation_representation_failure
+cause: additional_factored_and_expanded_SymPy_forms_used_structural_equality
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair: normalize_all_remaining_load_bearing_symbolic_formula_residuals_with_simplify
+continuation: rerun_only_the_two_symbolic_routes

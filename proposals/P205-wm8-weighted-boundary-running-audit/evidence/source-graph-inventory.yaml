@@ -1,0 +1,28 @@
+campaign: P205
+root: WM8
+direct_dependencies: [S1, S2, S3, SM2, SM4, WM2, WM3, WM6, WM7]
+direct_reverse_consumers: [GC6, WM10, WM7, WM9]
+nodes:
+  S1: {static_check_calls: 11, assert_nodes: 2}
+  S2: {static_check_calls: 10, assert_nodes: 1}
+  S3: {static_check_calls: 10, assert_nodes: 2}
+  SM2: {static_check_calls: 7, assert_nodes: 1}
+  SM4: {static_check_calls: 8, assert_nodes: 1}
+  WM2: {static_check_calls: 10, assert_nodes: 1}
+  WM3: {static_check_calls: 10, assert_nodes: 1}
+  WM6: {static_check_calls: 11, assert_nodes: 1}
+  WM7: {static_check_calls: 10, assert_nodes: 1}
+  WM8: {static_check_calls: 10, assert_nodes: 1}
+  WM9: {static_check_calls: 8, assert_nodes: 1}
+  WM10: {static_check_calls: 7, assert_nodes: 1}
+  GC6: {static_check_calls: 6, assert_nodes: 1}
+totals: {nodes: 13, static_check_calls: 118, assert_nodes: 15}
+expected_coverage:
+  fresh_native_executions: 1
+  graph_replay_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  version_only_scientific_failures: 0
+authority_ceiling: >-
+  Hash AST status mapping and compatibility replay closes source governance
+  only. WM7's earlier cycle edge grants no backward authority, and pending WM9
+  WM10 and GC6 remain separately reviewable consumers.

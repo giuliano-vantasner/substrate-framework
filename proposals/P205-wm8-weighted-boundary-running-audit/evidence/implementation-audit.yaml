@@ -1,0 +1,16 @@
+campaign: P205
+canonical_module_change: none
+test_module_change: none
+claims_registry_change: none
+release_manifest_change: none
+generated_docs_direct_edit: none
+existing_canonical_surface:
+  module: src/substrate_framework/gauge_running.py
+  API: exact_one_loop_boundary_solution
+  claim: C-RGE-006
+  tests: tests/test_gauge_running.py
+campaign_verifiers:
+  primary: verify.py
+  independent: reviews/independent_weighted_boundary_review.py
+  graph: reviews/replay_source_graph.py
+compatibility_policy: {mutable_legacy_trapz_references: 0, immutable_alias_only_nodes: [S2], version_only_scientific_failures: 0}

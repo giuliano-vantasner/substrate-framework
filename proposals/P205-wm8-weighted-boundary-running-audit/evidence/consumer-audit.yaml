@@ -1,0 +1,12 @@
+campaign: P205
+source_unit: WM8
+direct_reverse_consumers: [GC6, WM10, WM7, WM9]
+pending_forward_consumers: [GC6, WM10, WM9]
+qualified_reverse_edge: WM7
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  WM7's accepted campaign explicitly excluded pending WM8, so its reverse edge
+  grants no backward authority. WM9 WM10 and GC6 remain pending. Qualification
+  changes only WM8's governed record and generated summaries.

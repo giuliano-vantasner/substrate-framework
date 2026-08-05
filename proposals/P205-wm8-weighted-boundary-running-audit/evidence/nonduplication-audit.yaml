@@ -1,0 +1,17 @@
+campaign: P205
+reserved_identifier: C-RGE-008
+candidate_object: exact_weighted_boundary_two_constraint_one_loop_inverse_solution
+existing_owner: C-RGE-006
+existing_API: substrate_framework.gauge_running.exact_one_loop_boundary_solution
+existing_tests: tests/test_gauge_running.py
+owned_semantics:
+  - arbitrary positive three-factor boundary ratios
+  - exact two-column design and nonsingularity
+  - unique amplitude and scaled log span
+  - positive trajectory and residual gates
+  - arbitrary linear readout and reference-scale covariance
+  - conditional inverse-solution physical ceilings
+novel_consumer: none
+novel_canonical_API: none
+novel_claim_semantics: none
+decision: no_new_claim_or_package_surface

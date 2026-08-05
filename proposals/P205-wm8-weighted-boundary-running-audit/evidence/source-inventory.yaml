@@ -1,0 +1,22 @@
+campaign: P205
+source_unit: WM8
+source_sha256: 741497f63cc39ee96c71e9a999c49ef9e821cf612d8b48b2959d05f9e6940518
+imports: [contextlib, importlib.util, io, math, os, sympy]
+runtime_loaded_sources: [WM7, WM3]
+defined_functions: [check, _load, solve_boundary]
+runtime_checks: 10
+assert_nodes: 1
+numpy_compatibility_surface: none
+supplied_inputs:
+  low_coordinates: [alpha_em_inverse_from_WM3, alpha_s_from_WM3]
+  reference_scale: M_Z_from_WM3
+  measured_comparator: SIN2_MEASURED_from_WM3
+  boundary_ratios: WM7_induced_S_for_selected_N_H
+  one_loop_coefficients: fixed_WM7_N_H_one_b_vector
+absent_load_bearing_objects:
+  - physical input provenance uncertainty and observation scheme
+  - scalar-count-dependent beta coefficients in counterfactuals
+  - thresholds finite matching and scheme conversion
+  - Yukawa terms and multiple-Abelian kinetic mixing
+  - physical field-content completeness or scalar-count derivation
+  - perturbative-domain and uncertainty propagation

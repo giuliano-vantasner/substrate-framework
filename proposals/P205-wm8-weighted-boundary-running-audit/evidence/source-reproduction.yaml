@@ -1,0 +1,33 @@
+campaign: P205
+source_unit: WM8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-39/bridge_WM8_corrected_boundary_running.py
+sha256: 741497f63cc39ee96c71e9a999c49ef9e821cf612d8b48b2959d05f9e6940518
+git_blob: 6d38187d2721aa1136910e2d57cff5d6b0b78c7e
+git_blob_commit: 7222eed
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-39/bridge_WM8_corrected_boundary_running.py
+exit_status: 0
+runtime_checks: 10
+lexical_check_calls: 10
+literal_check_calls: 1
+dynamic_check_calls: 9
+assert_nodes: 1
+terminal_tally: ALL_10_CHECKS_PASS
+elapsed_wall_seconds: 1.14
+max_rss_kib: 67112
+printed_values:
+  N_H_zero_readout: 0.207574
+  N_H_one_readout: 0.216222
+  N_H_three_boundary_only_readout: 0.232262
+  N_H_one_boundary_amplitude: 10.105892
+  N_H_one_scaled_log_span: 4.564142
+  N_H_one_scale_GeV: 2.60e14
+compatibility: {imports_numpy: false, quadrature_surface: none, alias_replay_required: false, version_only_scientific_failures: 0}
+scope: >-
+  Native execution reproduces WM8's predicates and output only. It does not
+  establish physical provenance for the two low coordinates or boundary
+  ratios, coherently vary the beta ledger with scalar count, add thresholds or
+  matching, select multiplicity, or turn a conditional readout into an
+  ab-initio physical prediction.

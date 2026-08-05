@@ -1,0 +1,10 @@
+campaign: P205
+route: independent_raw_SymPy_design_inversion
+script: reviews/independent_weighted_boundary_review.py
+sha256: ebdd01698d42f223e539eacbf85c1dd6eff178a3358545ebe2da37d50ff237f5
+checks: 19
+exit_status: 0
+imports_preferred_claim_APIs: false
+oracle: fresh_design_inverse_fixed_and_coherent_scalar_families_offsets_and_AST
+preserved_failed_attempts: [attempts/0002/result.yaml, attempts/0003/result.yaml, attempts/0004/result.yaml]
+compatibility: no_numpy_import
