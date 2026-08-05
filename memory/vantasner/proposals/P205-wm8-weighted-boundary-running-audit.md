@@ -2,7 +2,7 @@
 description: Audit WM8 weighted-boundary one-loop inverse running and comparator claims
 author: vantasner
 created: '2026-08-05T21:48:00Z'
-updated: '2026-08-05T21:48:00Z'
+updated: '2026-08-05T22:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gauge-running
 - inverse-inference
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P205 WM8 Weighted-Boundary Running Audit
 
@@ -103,15 +103,15 @@ consumer, compatibility event, and generated record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Source was exposed before freeze | Preserve breach and prohibit comparator selection | open |
-| General theorem may duplicate C-RGE-006 | Run exact API and nonduplication audits | open |
-| Two observed inputs may be called a prediction | Type inverse inference and physical input ceilings | open |
-| N_H=1 may be called framework-derived | Apply WM7 and C-REP-003 supplied-count ceilings | open |
-| Comparator guard may be syntactic theater | Trace actual solve dataflow and mutate comparator | open |
-| Residual may be attributed uniquely to scalar count | Construct omitted-term and boundary countermodels | open |
-| Positivity and singular designs may be hidden | Derive determinant and test domain failures | open |
-| WM9 WM10 and GC6 may grant authority | Replay direct reverse consumers without imports | open |
-| Compatibility may masquerade as science | Audit every graph node and mutable script | open |
+| Source was exposed before freeze | Preserve breach and prohibit comparator selection | discharged by attempt 0001 and structural selection |
+| General theorem may duplicate C-RGE-006 | Run exact API and nonduplication audits | discharged; C-RGE-008 unpromoted |
+| Two observed inputs may be called a prediction | Type inverse inference and physical input ceilings | discharged by C-RGE-004 and C-RGE-006 review |
+| N_H=1 may be called framework-derived | Apply WM7 and C-REP-003 supplied-count ceilings | discharged as supplied multiplicity |
+| Comparator guard may be syntactic theater | Trace actual solve dataflow and mutate comparator | discharged; absence retained and fake perturbation identified |
+| Residual may be attributed uniquely to scalar count | Construct omitted-term and boundary countermodels | discharged by coherent-beta and matching-offset paths |
+| Positivity and singular designs may be hidden | Derive determinant and test domain failures | discharged by exact determinants positivity and singular rejection |
+| WM9 WM10 and GC6 may grant authority | Replay direct reverse consumers without imports | discharged by 13-node graph replay |
+| Compatibility may masquerade as science | Audit every graph node and mutable script | discharged with zero scientific version failures |
 
 ## Review and Promotion Plan
 
@@ -126,3 +126,16 @@ P205 closes only when the exact inverse solution, scalar-count family,
 comparator dataflow, positivity, nonduplication, dependency and reverse graph,
 compatibility, source disposition, generated state, and durable memory agree
 with an empty ledger.
+
+## Final Adjudication
+
+P205 selects C-RGE-006 specialization, conditional inverse-inference typing,
+comparator-only interpretation, the corrected scalar-count ledger, no new API,
+and terminal graph governance. WM8 is qualified through C-MIX-002, C-REP-001,
+C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, and C-VAC-003. C-RGE-008 remains
+unpromoted.
+
+The primary, independent, and terminal graph routes pass 37, 19, and 39 checks,
+and twelve focused existing API tests pass. The disclosed pre-freeze exposure
+and three verifier-construction failures remain attempt evidence. No event is a
+scientific NumPy-version failure. The release remains v0.150.0.

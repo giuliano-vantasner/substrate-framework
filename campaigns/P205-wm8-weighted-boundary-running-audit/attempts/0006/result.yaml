@@ -1,0 +1,31 @@
+attempt: 0006
+campaign: P205
+timestamp_utc: '2026-08-05T22:22:00Z'
+kind: terminal_record_promotion_gate
+status: passed
+source_disposition: qualified
+accepted_mapping: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+claim_delta: []
+release_change: null
+primary_checks: 37
+independent_checks: 19
+terminal_graph_checks: 39
+focused_tests: 12
+full_pytest_repeated: false
+last_full_release_gate: {campaign: P202, tests_passed: 1815, pytest_seconds: 172.62}
+compatibility: {mutable_legacy_references: 0, immutable_alias_only_nodes: [S2], version_only_scientific_failures: 0}
+workflow_validation:
+  repository: {claims: 190, accepted: 190, proposals: 0, units: 218, pending: 19, partial: 0}
+  generated_claim_index: current
+  generated_accepted_memory: current
+  memory_files_validated: 835
+  physics_skill: valid
+  yaml_parse: pass
+  git_diff_check: pass
+reason_no_full_pytest: >-
+  P205 changes no accepted claim release canonical package module package API
+  or test. Exact scientific and graph verifiers plus the twelve focused
+  existing API tests and record-sensitive validators cover the changed surface.
+debt: []
+verdict: terminal_accepted_composition_no_release
+continuation: commit_P205_then_open_P206_WM9_scalar_multiplicity_audit

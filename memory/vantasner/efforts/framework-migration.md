@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-05T21:35:00Z'
+updated: '2026-08-05T22:20:00Z'
 tags:
 - substrate-framework
 - effort
@@ -2326,28 +2326,39 @@ Thirty-eight primary, 21 independent, and 67 terminal graph checks pass. The
 C-RGE-007 stays unpromoted. WM7 and mutable P204 have no quadrature surface;
 immutable S2, W1, and W3 legacy-name events remain compatibility evidence only.
 
+P205 leaves v0.150.0 unchanged and qualifies WM8 through C-MIX-002,
+C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, and C-VAC-003.
+C-RGE-006's canonical exact weighted-boundary solver reproduces the selected
+one-scalar readout. WM8's advertised three-scalar near-hit changes only its
+boundary while retaining one-scalar beta coefficients; a coherent count change
+gives 0.238878 instead of 0.232262. The paths agree only at one scalar, and
+neither comparator proximity nor generic phase counting selects multiplicity.
+Thirty-seven primary, 19 independent, 39 terminal graph, and twelve focused
+API checks pass after one disclosed pre-freeze exposure and three preserved
+verifier repairs. C-RGE-008 remains unpromoted. WM8 and mutable P205 have no
+quadrature surface; immutable S2's legacy syntax remains compatibility-only.
+
 ## Canonicalization
 The registry, `v0.150.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety accepted claims.
-P001 through P204 are frozen under `campaigns/`; proposal,
+P001 through P205 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 20 pending, 0 partial, 3
-migrated, 185 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P204 changes no accepted scientific surface, so its narrow record gate
+memory. The regenerated migration queue agrees on 19 pending, 0 partial, 3
+migrated, 186 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P205 changes no accepted scientific surface, so its narrow record gate
 follows the last full P202 release boundary rather than repeating all 1,815
 unchanged package tests.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 20
-pending, 3 migrated, 185 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 19
+pending, 3 migrated, 186 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7 side of its source SCC is terminal without granting authority to WM8.
-The next campaign audits WM8 against accepted WM7 while retaining every
-factorwise boundary, running, normalization, and physical-observable ceiling.
-The remaining condensation order is WM9, WM10, GC1 through GC6 on one branch and
+The WM7-WM8 source cycle is fully terminal without backward authority. The next
+campaign audits WM9's scalar-multiplicity construction against the corrected
+WM7 and WM8 ceilings. The remaining condensation order is WM9, WM10, GC1 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

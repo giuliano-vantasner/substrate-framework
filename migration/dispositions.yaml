@@ -1124,6 +1124,64 @@ units:
       have no quadrature surface. Immutable S2, W1, and W3 legacy-name events
       remain alias-only compatibility evidence and create zero scientific
       failures.
+  WM8:
+    disposition: qualified
+    accepted_claims:
+      - C-MIX-002
+      - C-REP-001
+      - C-REP-003
+      - C-RGE-004
+      - C-RGE-005
+      - C-RGE-006
+      - C-VAC-003
+    qualification: >-
+      WM8 is an exact specialization of C-RGE-006's weighted-boundary
+      two-constraint inverse problem. Its supplied N_H=1 boundary, fixed
+      one-scalar beta ledger, two low coordinates, and reference scale give the
+      exact conditional readout 0.216221801107, positive amplitude and span,
+      and zero constraint residuals. This is inverse inference, not an
+      ab-initio physical prediction. The source's scalar-count counterfactual
+      changes only the boundary vector while holding the N_H=1 beta coefficients
+      fixed. That boundary-only family gives 0.232261554419 at N_H=3. A coherent
+      field-content counterfactual also changes b and gives 0.238878442809;
+      the two paths coincide only at N_H=1. Neither numerical proximity selects
+      multiplicity, which C-REP-003 and C-MIX-002 do not derive. AST dataflow
+      confirms that the measured comparator is absent from the solve, but the
+      source's named perturbed result repeats identical arguments and varies
+      nothing. Independent matching offsets and supplied-target mutations
+      change the readout. Thresholds, finite matching, Yukawa terms, scheme
+      conversion, uncertainties, perturbative-domain evidence, physical input
+      provenance, unification, observation, and substrate realization remain
+      unclosed. C-RGE-008 stays reserved and unpromoted.
+    evidence:
+      - campaigns/P205-wm8-weighted-boundary-running-audit/reviews/source_adjudication.md
+      - campaigns/P205-wm8-weighted-boundary-running-audit/reviews/accepted_composition_review.md
+      - campaigns/P205-wm8-weighted-boundary-running-audit/reviews/impact_analysis.md
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/source-reproduction.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/compatibility-audit.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/source-audit.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/check-adjudication.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/formula-freeze.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/input-provenance.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/dependency-audit.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/consumer-audit.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/candidate-comparison.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/implementation-audit.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/primary-provenance.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/evidence/independent-provenance.yaml
+      - campaigns/P205-wm8-weighted-boundary-running-audit/verify.py
+      - campaigns/P205-wm8-weighted-boundary-running-audit/reviews/independent_weighted_boundary_review.py
+      - campaigns/P205-wm8-weighted-boundary-running-audit/reviews/replay_source_graph.py
+      - memory/vantasner/decisions/WM8-qualified-review.md
+    note: >-
+      P205 closes 37 primary, 19 independent, and 39 terminal source-graph
+      checks plus twelve focused existing API tests after one disclosed
+      pre-freeze exposure and three preserved verifier-construction repairs.
+      The 13-node graph pins 118 predicates and 15 assertions. WM8 its runtime
+      imports and mutable P205 have no quadrature surface; immutable S2's legacy
+      syntax is alias-only evidence and creates zero scientific failures.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:

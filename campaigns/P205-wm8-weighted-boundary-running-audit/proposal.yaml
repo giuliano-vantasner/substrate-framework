@@ -48,10 +48,19 @@ selection_criteria:
   - Abelian coordinate covariance and physical interpretation discipline
   - parameter economy without erasing supplied coordinates
   - dependency and reverse-consumer closure
-claims_proposed: [C-RGE-008]
+claims_proposed: []
+reserved_unpromoted_claims: [C-RGE-008]
 comparators_blinded_until: >-
   No comparator blinding is claimed. A P205 preflight error opened the full
   WM8 source body and exposed every reported value before the contract freeze.
   Structural selection criteria and accepted-API nonduplication therefore
   control selection; numerical closeness is forbidden as a selector.
-status: active
+comparators_used_for_selection:
+  - hash-pinned WM8 native output and complete exposed dataflow
+  - C-RGE-006 general exact boundary-running API and claim
+  - raw fixed-beta and coherent-beta scalar-count families
+  - C-RGE-004 supplied-low-coordinate inverse-inference ceiling
+  - C-RGE-005 omitted-term and field-content ceiling
+  - C-REP-001 Abelian normalization covariance
+status: accepted
+revision: 0002
