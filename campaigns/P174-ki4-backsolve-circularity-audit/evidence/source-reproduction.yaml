@@ -1,0 +1,13 @@
+source_unit: KI4
+path: merged-framework/bridges/phase-34/bridge_KI4_backsolve_circularity.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 138f204c2bf7e7278a1a4aadad4bed1680e11b6b6de7189a02640a81652f00cd
+path_state: clean_at_governed_predecessor_worktree
+history: {commits: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]}
+native_result: {exit_code: 0, runtime_checks: 5, terminal_tally: ALL_5_CHECKS_PASS}
+lexical_inventory: {check_calls: 5, labels: [KI4.1, KI4.2, KI4.3, KI4.4, KI4.5], assertions: 1, imports: [sympy]}
+interpretation: >-
+  Local execution preserves the source predicates. It does not repair missing
+  inverse domains, observed-target conditioning, the inserted graph edge, or
+  comparator and hard-coded-boolean oracle defects.
+attempt: attempts/0002/result.yaml

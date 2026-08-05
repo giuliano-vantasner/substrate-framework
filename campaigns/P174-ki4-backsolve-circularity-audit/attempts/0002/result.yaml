@@ -1,0 +1,35 @@
+attempt: 0002
+campaign: P174
+candidate: literal_KI4_native_reproduction
+status: passed_with_headline_oracle_gaps
+started_at: '2026-08-11T03:36:00Z'
+finished_at: '2026-08-11T03:37:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/
+  bridge_KI4_backsolve_circularity.py
+result:
+  exit_code: 0
+  runtime_checks: 5
+  terminal_tally: ALL_5_CHECKS_PASS
+observed:
+  inverse_pairs_tested: 3
+  symbolic_target_domain: y_positive_without_y_less_than_K
+  information_samples: 11
+  posterior_construction: assigned_equal_to_prior_after_samples_pass
+  closing_graph_edge: kappa_predicted_to_kappa_emp
+  comparator: 0.929
+  comparator_enters_pass_condition: true
+  classical_anchor: 8.456302593250168
+  hard_coded_verdict_boolean: backsolve_is_a_derivation_false
+compatibility: no_numpy_import_or_quadrature
+diagnosis: >-
+  All local predicates execute. The inverse identities are exact only on each
+  map's inverse domain and do not quantify over an unknown map. KI4.2 assigns
+  posterior equal to prior after eleven samples rather than deriving an
+  observed-target posterior. KI4.3 inserts a result-to-input edge that is not a
+  computational dependency, KI4.4 uses the comparator in its thresholded pass
+  condition, and KI4.5 checks a hard-coded false verdict.
+next_attempt: >-
+  construct exact inverse-domain, conditioning, computational-graph,
+  comparator-dataflow, and independent-observable oracles

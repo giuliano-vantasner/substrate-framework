@@ -1,0 +1,8 @@
+primary_verifier: {path: campaigns/P174-ki4-backsolve-circularity-audit/verify.py, sha256: ee8cb40952c035707cd1147f78fe3742853af9b0b4cdc779ec60cfec3b6978bb, result: ALL_37_CHECKS_PASS}
+independent_rederivation: {path: campaigns/P174-ki4-backsolve-circularity-audit/reviews/independent_rederivation.py, sha256: 79a9d91d1201fe71499f80a7f0f338e8a729b9a2df6594ef34187bbd09c31257, result: ALL_15_CHECKS_PASS}
+source_graph: {path: campaigns/P174-ki4-backsolve-circularity-audit/reviews/replay_source_graph.py, sha256: 2752a032fd18aa4460cf1314003e91ff5da54bc6f05e816a519a3cbd1646d2fa, result: ALL_32_CHECKS_PASS}
+formal_artifact: {sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5, result: hash_reused_prior_clean_exit}
+independence_statement: >-
+  The independent review imports neither KI4 nor the primary verifier and uses
+  no empirical comparator.
+mutation_surfaces: [out_of_range_target, noninjective_map, constant_map, invalid_graph_edge, held_out_observation, comparator]

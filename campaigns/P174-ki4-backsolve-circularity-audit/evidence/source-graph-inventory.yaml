@@ -1,0 +1,12 @@
+nodes:
+  E3: {relation: qualified_comparator_context, checks: 5, assertions: 1, execution: reused_P173}
+  KI2: {relation: qualified_parameter_context, checks: 6, assertions: 1, execution: reused_P173}
+  KI3: {relation: qualified_inverse_examples, checks: 5, assertions: 1, execution: reused_P173}
+  KI4: {relation: audited_root, checks: 5, assertions: 1, execution: reused_P174_native}
+  MK3: {relation: pending_reverse_consumer, checks: 6, assertions: 1, execution: fresh_clean}
+  MK5: {relation: pending_reverse_consumer, checks: 8, assertions: 1, execution: reused_P173}
+  MR5: {relation: pending_reverse_consumer, checks: 6, assertions: 1, execution: fresh_clean}
+totals: {nodes: 7, predicate_sites: 41, assertions: 7}
+compatibility: {current_first_lazy_fallback: [E3], injected_aliases: []}
+verifier: reviews/replay_source_graph.py
+result: ALL_32_CHECKS_PASS

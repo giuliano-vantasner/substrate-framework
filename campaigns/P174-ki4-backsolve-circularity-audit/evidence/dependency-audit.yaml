@@ -1,0 +1,13 @@
+accepted_dependencies:
+  C-IDN-002: {role: inverse_reconstruction_semantics, status: accepted_active}
+  C-XOV-001: {role: conditional_inverse_domain_and_identifiability, status: accepted_active}
+reviewed_ceiling:
+  C-RDIFF-002: conditional_coordinate_not_physical_prediction_or_bound
+qualified_dependencies:
+  KI2: no_fixed_theory_or_physical_epsilon
+  KI3: examples_only_without_universal_bracket
+formalization:
+  exact_scope: one_Pade_inverse_and_prior_intersected_reachable_output_set
+  omitted: [observed_target_parameter_posterior, information_measure, dependency_graph, held_out_prediction]
+selected_composition: [C-IDN-002, C-XOV-001]
+dependency_closure_for_source_headline: false

@@ -1,0 +1,17 @@
+source_unit: KI4
+source_sha256: 138f204c2bf7e7278a1a4aadad4bed1680e11b6b6de7189a02640a81652f00cd
+definitions:
+  target_domain: y_positive_without_y_less_than_K
+  inverse_pairs: [Pade, exponential, tanh]
+  prior: open_zero_to_stale_kappa_cl
+  posterior: prior_if_eleven_samples_positive_else_none
+  honest_graph: hand_written
+  backsolved_graph: hand_written_with_kappa_predicted_to_kappa_emp_edge
+  comparator: 0.929
+  comparator_threshold: disagreement_greater_than_5
+  derivation_verdict: hard_coded_false
+predicate_structure: {checks: 5, assertions: 1, information_samples: 11}
+headline_oracle_gap: >-
+  The source confuses output support across hypothetical targets with a
+  parameter posterior conditioned on one observation and creates a graph cycle
+  by inserting an output-to-observed-input edge.

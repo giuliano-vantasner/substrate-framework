@@ -1,0 +1,14 @@
+source_unit: KI4
+accepted_inputs:
+  C-IDN-002: same_row_inverse_reconstruction_not_independent_test
+  C-XOV-001: conditional_monotone_range_and_inverse
+  C-RDIFF-002: conditional_coordinate_not_physical_prediction
+qualified_inputs:
+  KI2: parameter_family_result_without_physical_epsilon_identification
+  KI3: explicit_inverse_examples_without_framework_wide_bracket
+noncanonical_inputs:
+  source_kappa_cl: 8.456302593250168
+  comparator: 0.929
+empirical_dataflow:
+  comparator_enters: [disagreement, KI4_4_pass_condition]
+scope: exact_inverse_conditioning_graph_and_comparator_audit

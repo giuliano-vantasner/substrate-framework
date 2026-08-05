@@ -1,0 +1,37 @@
+source_unit: KI4
+lexical_checks: 5
+runtime_checks: 5
+assertion_nodes: 1
+checks:
+  KI4.1:
+    verdict: qualified_exact_inverse_reconstruction
+    qualification: >-
+      The three compositions are exact for targets in each map's open range.
+      Positive y alone is insufficient, and examples do not quantify over an
+      unknown physical interpolation.
+  KI4.2:
+    verdict: output_support_identity_valid_information_claim_rejected
+    qualification: >-
+      A free Pade parameter can realize every output in its range. After one
+      exact observed target, however, the fixed injective map identifies one
+      epsilon. The source assigns posterior equal to prior after eleven samples
+      and imports KI3's rejected universal bracket.
+  KI4.3:
+    verdict: dependency_cycle_refuted
+    qualification: >-
+      Ordinary calibration y->epsilon_hat->y_hat with a residual node is a DAG.
+      KI4 creates a cycle only by adding y_hat->observed_y, which is not a
+      computational dependency in reconstruction or fitting.
+  KI4.4:
+    verdict: comparator_based_contrast_rejected_as_provenance_proof
+    qualification: >-
+      The stale 8.4563 coordinate and 0.929 comparator feed disagreement>5.
+      Disagreement does not prove derivation rather than fitting, and accepted
+      C-RDIFF-002 is a conditional coordinate rather than a physical prediction.
+  KI4.5:
+    verdict: partial_structural_guard_with_hard_coded_verdict
+    qualification: >-
+      The inverse identities and hand-written graphs need no numeric comparator,
+      but KI4.4 does and deleting its block removes that result. The final
+      derivation verdict is assigned False rather than derived.
+headline: qualified_same_datum_inverse_reconstruction_with_information_and_cycle_overclaims_rejected

@@ -1,0 +1,15 @@
+registry_search:
+  same_row_inverse_reconstruction: C-IDN-002
+  conditional_monotone_inverse: C-XOV-001
+package_search:
+  inverse_range_API: src/substrate_framework/crossovers.py
+  inverse_reconstruction_example_API: src/substrate_framework/gravity_scale_confrontation.py
+distinct_valid_source_content: [three_exact_example_inverse_compositions]
+reasons_not_to_promote:
+  - accepted_claims_already_own_inverse_reconstruction_and_conditional_inverse_semantics
+  - no_accepted_physical_interpolation_or_epsilon_map_exists
+  - information_and_cycle_headlines_are_not_supported
+  - no_accepted_consumer_needs_a_generic_backsolve_API
+new_claim: null
+new_API: null
+disposition: qualified

@@ -1,0 +1,20 @@
+attempt: 0010
+campaign: P174
+candidate: schema_aware_post_gate_record_validation
+status: passed
+started_at: '2026-08-11T04:00:00Z'
+finished_at: '2026-08-11T04:01:00Z'
+commands:
+  - parse_four_changed_governance_and_campaign_YAML_records
+  - memory_validate_each_changed_effort_proposal_and_decision_record
+  - inspect_primary_unit_count_and_disposition_counts
+  - git diff --check
+result:
+  YAML_files_parsed: 4
+  changed_memory_records_valid: 3
+  migration_queue: {total: 218, pending: 50, partial: 0, migrated: 3, qualified: 155, duplicate_evidence: 8, refuted: 1, out_of_scope: 1}
+  diff_check: passed_before_append_only_probe_records
+interpretation: >-
+  One-path memory invocations and the queue's declared units schema repair the
+  narrow validation commands without repeating either full repository suite.
+next_campaign: P175_KI5_variational_bound_audit

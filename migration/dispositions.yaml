@@ -3292,6 +3292,64 @@ units:
       and encodes one Pade representative only. Accepted claims and v0.127.0
       remain unchanged. Twenty-four focused tests and both full 1,478-test
       executions pass with 696 valid memory records.
+  KI4:
+    disposition: qualified
+    accepted_claims:
+      - C-IDN-002
+      - C-XOV-001
+    qualification: >-
+      KI4's three same-datum inverse compositions are exact for targets inside
+      each declared map's range and survive as inverse-reconstruction evidence.
+      They do not prove zero parameter information, a directed computational
+      cycle, or categorical invalidity of calibration. For a fixed injective
+      map one observed target selects one epsilon; the source instead assigns a
+      pre-observation output-support union to its posterior after eleven
+      samples. Its cycle requires an invalid reconstructed-output to observed-
+      input edge. Positive y lacks the necessary y<K domain, noninjective maps
+      have multiple inverses, and constant maps can exclude targets. Comparator
+      0.929 enters KI4.4's thresholded pass condition, the classical coordinate
+      is stale, and KI4.5 hard-codes its derivation verdict. C-IDN-002 already
+      classifies same-row zero residual as inverse reconstruction rather than an
+      independent test; C-XOV-001 owns conditional inverse semantics. No
+      physical epsilon, prediction, information theorem, claim, API, or release
+      is accepted.
+    evidence:
+      - campaigns/P174-ki4-backsolve-circularity-audit/reviews/source_adjudication.md
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/source-reproduction.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/compatibility-audit.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/source-audit.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/check-adjudication.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/input-provenance.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/dependency-audit.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/consumer-audit.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/candidate-comparison.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/primary-provenance.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/evidence/literature-audit.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/verify.py
+      - campaigns/P174-ki4-backsolve-circularity-audit/reviews/independent_rederivation.py
+      - campaigns/P174-ki4-backsolve-circularity-audit/reviews/replay_source_graph.py
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0002/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0003/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0004/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0005/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0006/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0007/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0008/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0009/result.yaml
+      - campaigns/P174-ki4-backsolve-circularity-audit/attempts/0010/result.yaml
+      - memory/vantasner/decisions/KI4-qualified-review.md
+    note: >-
+      P174 closes thirty-seven primary, fifteen fresh independent, and
+      thirty-two typed graph checks. The graph inventories forty-one predicate
+      sites and seven assertions across seven nodes, reuses five hash-identical
+      executions, and freshly replays MK3 and MR5. E3 alone has a current-first
+      NumPy fallback; no alias or version-only stop occurs. The formal result is
+      reused at its one-Pade scope. Forty-seven focused tests and both full
+      1,478-test executions pass with 698 valid memory records. Accepted claims
+      and v0.127.0 remain unchanged.
   EM2:
     disposition: qualified
     accepted_claims:

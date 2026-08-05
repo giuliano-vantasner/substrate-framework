@@ -1,0 +1,10 @@
+accepted_evidence:
+  C-IDN-002: {module_sha256: 0b6018a5195759a2d4dbd3fc9775f86f3449ebf182855261a640759e6f70317c}
+  C-XOV-001: {module_sha256: 0522233fecbcae6b76cb41373fe904d8558da2cd8ab9f13f35fe41b0a5189493}
+  P173: {adjudication_sha256: 8832c2e5af974d8ef1d2d3bf58a742ef1559c7cc133af31e1341389f269c894b}
+formal_evidence:
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  result: reused_P172_clean_execution_and_P173_scope_audit
+reuse_decision: >-
+  P174 builds new conditioning and graph counterexamples while reusing
+  hash-identical accepted derivations and source executions.

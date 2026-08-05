@@ -1,0 +1,77 @@
+campaign: P174
+title: KI4 inverse-reconstruction circularity and conditioning audit
+source_baseline: substrate@6d1f4e0
+source_units: [KI4]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T03:50:00Z'
+selected_candidates:
+  - {id: A, reason: Five_local_predicates_replay_as_execution_evidence_only.}
+  - {id: B, reason: Three_inverse_compositions_are_exact_on_their_declared_open_ranges.}
+  - {id: C, reason: Same_datum_zero_residual_is_inverse_reconstruction_under_C_IDN_002.}
+  - {id: E, reason: The_union_over_hypothetical_outputs_is_valid_only_as_pre_observation_output_support.}
+  - {id: F, reason: Noninjective_and_constant_maps_show_inverse_premises_are_load_bearing.}
+  - {id: G, reason: Calibration_can_predict_a_distinct_held_out_observable.}
+  - {id: H, reason: C_IDN_002_and_C_XOV_001_cover_the_valid_content.}
+  - {id: J, reason: Lean_is_valid_at_one_Pade_output_support_scope_only.}
+  - {id: K, reason: Governance_closure_requires_no_new_claim_API_or_release.}
+rejected_candidates:
+  - {id: D, reason: A_fixed_injective_map_and_exact_target_reduce_the_epsilon_set_to_a_singleton.}
+  - {id: I, reason: Comparator_0_929_enters_KI4_4s_thresholded_pass_condition.}
+claims: []
+accepted_composition:
+  - {id: C-IDN-002, decision: unchanged_same_row_inverse_reconstruction_not_independent_test}
+  - {id: C-XOV-001, decision: unchanged_conditional_monotone_inverse_and_range_owner}
+unpromoted_claims:
+  - {id: arbitrary_positive_target_inverse, reason: The_inverse_domain_requires_zero_less_than_y_less_than_K.}
+  - {id: zero_information_about_epsilon, reason: One_observed_target_identifies_one_epsilon_for_a_fixed_injective_map.}
+  - {id: posterior_equals_prior, reason: The_source_computes_pre_observation_output_support_not_an_observed_target_parameter_posterior.}
+  - {id: dependency_cycle, reason: The_cycle_requires_an_invalid_reconstruction_to_observed_input_edge.}
+  - {id: disagreement_proves_derivation, reason: Numerical_disagreement_does_not_establish_provenance.}
+  - {id: comparator_inert_full_bridge, reason: KI4_4_depends_on_0_929_and_changes_under_mutation.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_rederivation.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  native_attempt: attempts/0002/result.yaml
+  primary_attempt: attempts/0003/result.yaml
+  independent_attempt: attempts/0004/result.yaml
+  graph_attempt: attempts/0005/result.yaml
+  formal_reuse_attempt: attempts/0006/result.yaml
+  focused_attempt: attempts/0007/result.yaml
+  terminal_attempt: attempts/0008/result.yaml
+  post_gate_probe_attempt: attempts/0009/result.yaml
+  record_validation_attempt: attempts/0010/result.yaml
+source_disposition: {KI4: qualified}
+accepted_mappings: [C-IDN-002, C-XOV-001]
+compatibility:
+  installed_numpy: 2.5.1
+  KI4_native: true
+  source_graph_current_first_lazy_fallback: [E3]
+  injected_aliases: []
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P174-ki4-backsolve-circularity-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P174-ki4-backsolve-circularity-audit/reviews/independent_rederivation.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P174-ki4-backsolve-circularity-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_crossovers.py tests/test_gravity_scale_confrontation.py tests/test_linear_systems.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

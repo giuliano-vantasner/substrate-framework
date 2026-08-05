@@ -1,0 +1,12 @@
+accepted_consumers:
+  modules: [src/substrate_framework/crossovers.py, src/substrate_framework/gravity_scale_confrontation.py]
+  tests: [tests/test_crossovers.py, tests/test_gravity_scale_confrontation.py, tests/test_linear_systems.py, tests/test_source_audit.py]
+  effect_of_KI4_qualification: none
+pending_consumers:
+  MK3: consumes_KI4_circularity_label
+  MK5: consumes_KI4_circularity_label
+  MR5: consumes_KI4_circularity_label
+formal_consumer: one_Pade_scope_unchanged
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false

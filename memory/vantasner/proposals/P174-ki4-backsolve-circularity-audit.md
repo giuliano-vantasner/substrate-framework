@@ -2,15 +2,15 @@
 description: Audit KI4's inverse-reconstruction circularity and zero-information claims
 author: vantasner
 created: '2026-08-11T03:32:00Z'
-updated: '2026-08-11T03:35:00Z'
+updated: '2026-08-11T04:01:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-KI4
 - inverse-reconstruction
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P174 KI4 Backsolve Circularity Audit
 
@@ -124,6 +124,24 @@ Attempt 0001 freezes release, commits, hashes, prior exposure, allowed imports,
 eleven candidates, selection criteria, claim delta, and oracle before P174
 opens the KI4 body or shared dossier body.
 
+Attempts 0002-0010 preserve native reproduction, passing 37-check primary,
+15-check independent, proportional 32-check graph, and 47-test focused routes,
+reuse the unchanged formal execution at its exact scope, and close both full
+1,478-test executions with 698 valid memory records. Attempt 0009 preserves a
+post-gate narrow-command shape failure; 0010 repairs it without repeating the
+full suites.
+
+## Outcome
+
+KI4 is qualified through C-IDN-002 and C-XOV-001. Same-datum inverse
+reconstruction is exact on the proper map range and is not independent model
+validation. The source's zero-information statement confuses hypothetical
+output support with a target-conditioned epsilon posterior; for a fixed
+injective map the observed target selects one epsilon. Its directed cycle is
+created by an invalid output-to-observed-input edge, 0.929 enters KI4.4's pass
+condition, and KI4.5 hard-codes its central verdict. No new claim, API, or
+release survives.
+
 ## Debt Ledger
 
 The P174 ledger tracks inverse premises, conditioning, comparator use, formal
@@ -131,14 +149,14 @@ scope, consumer propagation, and governed record agreement.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| KI4's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | open |
-| Identity and circularity language may have different scope | Separate exact algebra from methodological interpretation | open |
-| The zero-information claim may confuse output unions with observed-target conditioning | Compute both set constructions explicitly | open |
-| A global inverse may be absent | Supply noninjective, partial, and unknown-map countermodels | open |
-| Comparator input may masquerade as validation | Trace and mutate every path from 0.929 | open |
-| Lean prose may exceed its theorem | Inspect exact definitions, sets, quantifiers, and prior execution | open |
-| Reverse consumers may inherit KI3/KI4 overclaims | Type and replay affected pending nodes without promotion | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | open |
+| KI4's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | closed |
+| Identity and circularity language may have different scope | Separate exact algebra from methodological interpretation | closed |
+| The zero-information claim may confuse output unions with observed-target conditioning | Compute both set constructions explicitly | closed |
+| A global inverse may be absent | Supply noninjective, partial, and unknown-map countermodels | closed |
+| Comparator input may masquerade as validation | Trace and mutate every path from 0.929 | closed |
+| Lean prose may exceed its theorem | Inspect exact definitions, sets, quantifiers, and prior execution | closed |
+| Reverse consumers may inherit KI3/KI4 overclaims | Type and replay affected pending nodes without promotion | closed |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | closed at adjudication |
 
 ## Review and Promotion Plan
 

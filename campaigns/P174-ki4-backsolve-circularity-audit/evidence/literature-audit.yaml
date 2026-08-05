@@ -1,0 +1,6 @@
+scope: inverse_reconstruction_conditioning_and_dependency_semantics
+external_source_used_for_selection: false
+reason: >-
+  Exact algebra, set conditioning, graph direction, and accepted provenance
+  decide the audit without external physics or fitted data.
+conclusion: no_external_literature_required
