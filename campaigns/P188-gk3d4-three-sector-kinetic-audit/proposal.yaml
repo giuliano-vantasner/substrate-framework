@@ -65,7 +65,8 @@ selection_criteria:
   - parameter_assumption_import_and_dependency_economy
   - independent_rederivation_and_load_bearing_mutation_sensitivity
   - novelty_source_consumer_and_governance_closure
-claims_proposed: [C-VAC-005]
+claims_proposed: []
+reserved_unpromoted_claims: [C-VAC-005]
 comparators_blinded_until: >-
   freeze commit before a new line-by-line GK3D4 body audit; the generated queue
   already exposes equal fundamental SU(2) and SU(3) trace indices, an Abelian
@@ -73,5 +74,5 @@ comparators_blinded_until: >-
   D-dependent loop machinery, a three-sector kinetic conclusion, an upgraded
   3/8 relation, eleven static checks, and one assertion, so no fresh source-
   result blinding is claimed
-status: draft
-revision: 0001
+status: accepted
+revision: 0002

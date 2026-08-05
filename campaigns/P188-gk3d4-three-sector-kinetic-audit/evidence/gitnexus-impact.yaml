@@ -20,6 +20,11 @@ primary_verifier_impact:
   affected_processes: 0
   risk: LOW
 canonical_symbols_modified: []
+terminal_uncommitted_transaction:
+  changed_symbols: 0
+  changed_files: 3
+  affected_processes: 0
+  risk: LOW
 source_governance_risk: MEDIUM
 source_risk_reason: GK3D6_directly_repeats_GK3D4s_universal_ratio_and_three_eighths_headline
 generated_host_artifacts_removed:

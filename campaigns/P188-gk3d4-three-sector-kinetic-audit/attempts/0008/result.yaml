@@ -1,0 +1,33 @@
+attempt: 0008
+campaign: P188
+candidate: terminal_qualified_disposition_transaction
+status: passed_pending_integrated_gate
+started_at: '2026-08-11T14:44:00Z'
+finished_at: '2026-08-11T14:48:00Z'
+transaction:
+  source_disposition: qualified
+  accepted_mappings: 10
+  new_claims: 0
+  new_APIs: 0
+  new_tests: 0
+  release_change: none
+  reserved_unpromoted_identifier: C-VAC-005
+  campaign_moved_to_immutable_ledger: true
+  decision_memory_materialized: true
+  generated_queue_regenerated: true
+  queue_pending_units: 36
+targeted_replay:
+  primary_checks: 28
+  independent_checks: 21
+  source_graph_checks: 17
+  focused_tests: 131
+  all_exit_statuses: 0
+precommit_impact:
+  changed_symbols: 0
+  changed_files: 3
+  affected_processes: 0
+  risk: LOW
+compatibility:
+  version_only_scientific_failures: 0
+scientific_threshold_changed: false
+next_attempt: regenerate_queue_run_targeted_replays_and_execute_one_integrated_terminal_gate

@@ -1,0 +1,75 @@
+campaign: P188
+title: GK3D4 three-sector kinetic accepted-composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK3D4]
+base_release: v0.139.0
+accepted_release: v0.139.0
+adjudicated_at: '2026-08-11T14:48:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_and_predicate_dataflow_are_source_evidence_only.}
+  - {id: B, reason: Factorwise_accepted_affine_families_retain_independent_boundaries_and_logs.}
+  - {id: C, reason: The_actual_product_carrier_has_spectator_degenerate_trace_blocks_and_zero_cross_blocks.}
+  - {id: D, reason: Representation_statistics_boundary_and_log_mutations_expose_the_missing_premises.}
+  - {id: E, reason: Three_eighths_is_a_conditional_trace_coordinate_with_Abelian_normalization_covariance.}
+  - {id: F, reason: Existing_accepted_claims_own_the_complete_corrected_object_without_a_new_API.}
+  - {id: G, reason: Source_claim_consumer_queue_memory_compatibility_and_debt_close_without_blanket_promotion.}
+claims: []
+accepted_composition:
+  - {id: C-LIE-001, decision: unchanged_standard_fundamental_SU3_trace_metric_only}
+  - {id: C-REP-002, decision: unchanged_standard_Pauli_half_SU2_carrier_only}
+  - {id: C-PGA-001, decision: unchanged_embedded_product_generators_and_cross_factor_algebra}
+  - {id: C-DIM-009, decision: unchanged_dimension_and_normalization_bookkeeping_without_D4_lift}
+  - {id: C-VAC-002, decision: unchanged_conditional_D4_Dirac_loop_with_declared_action_and_regulator}
+  - {id: C-VAC-003, decision: unchanged_factor_weight_and_complete_affine_kinetic_family}
+  - {id: C-VAC-004, decision: unchanged_scale_matching_with_boundary_and_physical_label_ceilings}
+  - {id: C-REP-001, decision: unchanged_trace_coordinate_coupling_iff_and_Abelian_covariance}
+  - {id: C-RGE-005, decision: unchanged_spectator_degenerate_factor_indices_and_supplied_multiplets}
+  - {id: C-ANO-001, decision: unchanged_three_branch_anomaly_zero_set_and_normalization_ceiling}
+unpromoted_claims:
+  - {id: C-VAC-005, reason: Reserved_identifier_adds_no_distinct_API_consumer_or_claim_semantics.}
+  - {id: one_common_D4_loop_constructs_three_physical_sectors, reason: The_source_hardcodes_labels_weights_and_a_common_denominator_without_the_required_product_matter_action.}
+  - {id: equal_fundamental_indices_force_equal_product_sector_weights, reason: Spectator_dimensions_change_the_full_carrier_trace_metrics.}
+  - {id: all_factor_boundaries_logs_and_thresholds_are_universal, reason: Accepted_affine_families_retain_these_factorwise_coordinates.}
+  - {id: anomaly_freedom_selects_the_five_thirds_Abelian_normalization, reason: C_ANO_001_has_three_branches_and_overall_normalization_is_free.}
+  - {id: three_eighths_is_a_physical_D4_weak_angle_prediction, reason: C_REP_001_requires_a_separately_common_inverse_trace_law_and_the_coordinate_rescales.}
+  - {id: physical_gauge_spectrum_couplings_observation_or_substrate_closure, reason: No_accepted_dependency_supplies_these_identifications.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_product_kinetic_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  accepted_composition_review: reviews/accepted_composition_review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+source_disposition: {GK3D4: qualified}
+accepted_mappings: [C-LIE-001, C-REP-002, C-PGA-001, C-DIM-009, C-VAC-002, C-VAC-003, C-VAC-004, C-REP-001, C-RGE-005, C-ANO-001]
+compatibility:
+  installed_numpy: 2.5.1
+  no_legacy_surface: [GK3D4, GK3D6, EL2, HE5, mutable_P188]
+  immutable_GK3D5: current_first_lazy_fallback_selected_current_branch
+  aliases_injected: []
+  version_only_scientific_failures: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P188-gk3d4-three-sector-kinetic-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/independent_product_kinetic_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest affected_tests
+  - scripts/validate.sh
+  - git diff --check
+integrated_gate: pending_terminal_execution
+debt: []
+status: accepted_composition_no_release

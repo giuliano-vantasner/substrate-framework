@@ -3668,6 +3668,76 @@ units:
       compatibility evidence and cannot reject a scientific candidate. The
       eight-node source graph preserves the free-boundary and physical-label
       ceilings for every forward consumer.
+  GK3D4:
+    disposition: qualified
+    accepted_claims:
+      - C-LIE-001
+      - C-REP-002
+      - C-PGA-001
+      - C-DIM-009
+      - C-VAC-002
+      - C-VAC-003
+      - C-VAC-004
+      - C-REP-001
+      - C-RGE-005
+      - C-ANO-001
+    qualification: >-
+      GK3D4's Pauli-half and Gell-Mann-half fundamental trace metrics and the
+      rational trace factor are exact convention-specific algebra. On the
+      accepted C^3 tensor C^2 product carrier, however, spectator dimensions
+      give color metric I_8, isospin metric (3/2)I_3, Abelian entry 6*y^2, and
+      zero cross blocks; equal raw fundamental indices do not give equal full-
+      carrier weights. The source supplies no product matter action,
+      determinant, statistics ledger, regulator, counterterm, thresholds, or
+      factor matching. For factorwise families
+      Z_a=z_a+b_a*L_a/(8*pi^2), the claimed inverse-weight ratio has residual
+      b_i*z_j-b_j*z_i+b_i*b_j*(L_j-L_i)/(8*pi^2), so it requires separately
+      zero boundaries and a common logarithm. The supplied fifteen-state table
+      has exact trace coordinate 3/8, but equality with a coupling angle also
+      requires the common inverse-trace premise of C-REP-001; paired Abelian
+      rescaling changes the coordinate, and C-ANO-001 has three charge branches
+      rather than a uniquely anomaly-selected normalization. No physical
+      U1/SU2/SU3 sectors, spectrum, total couplings, preferred Abelian
+      normalization, weak angle, observation, or substrate mechanism is
+      accepted. C-VAC-005 remains reserved and unpromoted because the corrected
+      object is an exact composition of existing accepted claims. GK3D5 and
+      GK3D6 remain separately pending, with GK3D6 inheriting only the explicit
+      conditional ratio specialization.
+    evidence:
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/source_adjudication.md
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/accepted_composition_review.md
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/impact_analysis.md
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/source-reproduction.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/compatibility-audit.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/source-audit.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/check-adjudication.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/formula-freeze.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/dependency-audit.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/consumer-audit.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/candidate-comparison.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/implementation-audit.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/primary-provenance.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/independent-provenance.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/verify.py
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/independent_product_kinetic_review.py
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/reviews/replay_source_graph.py
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/attempts/0002/result.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/attempts/0003/result.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/attempts/0004/result.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/attempts/0005/result.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/attempts/0006/result.yaml
+      - campaigns/P188-gk3d4-three-sector-kinetic-audit/attempts/0007/result.yaml
+      - memory/vantasner/decisions/GK3D4-qualified-review.md
+    note: >-
+      P188 closes twenty-eight primary and twenty-one independent exact checks
+      plus 131 focused accepted-API tests. The five-node source closure runs
+      natively with 52 total checks. GK3D4, GK3D6, EL2, HE5, and mutable P188
+      code have no legacy trapezoidal surface; immutable GK3D5 selects its
+      current-first lazy fallback under NumPy 2.5.1. No version-only event
+      affects a scientific verdict.
   BX1:
     disposition: qualified
     accepted_claims:
