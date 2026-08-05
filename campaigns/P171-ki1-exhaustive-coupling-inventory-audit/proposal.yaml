@@ -1,0 +1,66 @@
+id: P171
+base_release: v0.127.0
+base_commit: 516a10b
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [KI1]
+question: >-
+  Does hash-pinned KI1 establish a complete, mutation-sensitive,
+  baseline-scoped inventory showing that generalized-Skyrme lambda, mu,
+  epsilon, and the cited alternative sextic couplings receive no numeric
+  assignment in the pinned tracked corpus, and what—if anything—does that add
+  beyond the accepted BPS claims' explicit free-parameter ceilings?
+invariants:
+  - A negative search result is scoped to a pinned file universe, commit, inclusion policy, patterns, and assignment semantics.
+  - Symbol absence or lack of numeric assignment cannot prove physical non-identifiability, uniqueness, or that no external determination exists.
+  - Generic lambda, mu, and epsilon tokens outside the generalized-Skyrme context are false positives rather than coupling evidence.
+  - C-BPS-001 through C-BPS-003 select no coupling values, potential, physical action, yield coefficient, or substrate realization.
+  - Pending KI2 and other Phase-34 units are noncanonical evidence and cannot grant KI1 authority.
+  - Mutable integration code uses numpy.trapezoid or the canonical helper; an immutable legacy-name abort is version-only evidence.
+allowed_imports:
+  - C-BPS-001
+  - C-BPS-002
+  - C-BPS-003
+  - C-RMAP-001
+  - C-RMAP-002
+  - C-RPROF-001
+  - C-RPROF-002
+  - C-VEC-001
+  - C-EFT-001
+  - C-CHI-001
+  - src/substrate_framework/bps_energy.py
+  - pinned source inventory and tracked-tree metadata at substrate@6d1f4e0
+  - git ls-files and exact AST regex and dataflow audits over an explicitly declared temporary corpus
+  - hash-pinned E1 E2 E4 S4 WZ4 adjudications and consumers
+  - KI1 and the shared Phase34 dossier as hash-pinned noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned KI1 reproduction with an exact lexical/runtime/assertion and compatibility inventory.
+  - id: B
+    description: A valid pinned-baseline negative inventory of model-specific numeric assignments with mutation-sensitive injected witnesses.
+  - id: C
+    description: A weaker incomplete search whose patterns or file universe miss plausible numeric-assignment forms.
+  - id: D
+    description: Duplicate governance evidence for C-BPS-001 through C-BPS-003's already explicit free-coupling and near-BPS ceilings.
+  - id: E
+    description: A distinct alternative omega-mediated sextic-coupling inventory if its symbols and normalization are independently scoped.
+  - id: F
+    description: A scientific theorem that the couplings or epsilon are physically non-identifiable or absent from every possible source.
+  - id: G
+    description: A reusable importable tracked-corpus assignment auditor if a real API gap and consumer survive nonduplication review.
+  - id: H
+    description: Claim-level source dependency consumer disposition queue documentation release and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - pinned_universe_completeness_and_reproducibility
+  - model_context_and_assignment_semantics
+  - injected_witness_and_pattern_mutation_sensitivity
+  - accepted_claim_dependency_and_scope_fit
+  - assumption_parameter_and_API_economy
+  - consumer_nonduplication_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening KI1 or the shared Phase34 dossier body or
+  executing the source; generated inventory excerpts, P107 consumer notes,
+  the claimed absence result, and dependency labels are already exposed, so
+  no fresh result blinding is claimed
+status: frozen_with_prior_result_exposure
