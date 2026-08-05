@@ -1,0 +1,37 @@
+campaign: P193
+repository: substrate-framework
+indexed_commit: 908f5c0a73557f1b3bf7b0df0ab68f7dbd489451
+framework_head_at_query: 394288a
+commits_behind: 15
+canonical_change_planned: false
+queries:
+  weighted_channel_allocation:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+  relative_weighted_odds_enhancement:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+  factorial_one_mass:
+    risk: LOW
+    indexed_upstream_count: 1
+    direct: [normalized_factorial_one_mass]
+    affected_processes: 0
+  factorial_one_modes:
+    risk: LOW
+    indexed_upstream_count: 0
+    affected_processes: 0
+limitations:
+  - index_predates_P191_P192_and_P193_campaign_consumers
+  - zero_indexed_callers_does_not_override_known_package_tests_or_direct_source_consumers
+  - no_change_means_the_query_is_reach_inventory_not_breakage_prediction
+manual_consumers_retained:
+  - tests/test_branching.py
+  - tests/test_bosonic_fock.py
+  - tests/test_factorial_one_distribution.py
+  - proposals/P193-wn5-branching-prediction-audit/verify.py
+  - WN7
+  - MD5
+  - MD6
+verdict: LOW_no_canonical_change_with_manual_consumer_replay_required

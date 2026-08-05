@@ -1,0 +1,34 @@
+campaign: P193
+source_unit: WN5
+promoted_claims: []
+accepted_composition:
+  direct_claims: [C-BRN-001, C-OSC-001]
+  transitive_claim_closure: [C-SG-019]
+dependency_roles:
+  C-BRN-001: owns_two_channel_allocation_fixed_weight_population_partial_relative_odds_and_free_baseline_fit
+  C-OSC-001: owns_factorial_one_mass_adjacent_ratio_support_and_complete_modes
+  C-SG-019: transitive_origin_of_C_OSC_001s_conditional_low_sector_family_only
+excluded_claims:
+  C-CMB-003: corroborates_shape_but_adds_no_needed_WN5_premise
+  C-BRN-002: reserved_unpromoted_as_duplicate
+source_dependencies:
+  GB1:
+    disposition: qualified
+    accepted_claims: [C-BRN-001]
+    use: original_source_context_for_weighted_channel_definitions
+  GB4:
+    disposition: qualified
+    accepted_claims: [C-BRN-001]
+    use: source_context_for_fixed_weight_population_partial_and_relative_odds
+  WN3:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001, C-OSC-001]
+    use: source_provenance_for_factorial_one_weight_only
+  WN4:
+    disposition: qualified
+    accepted_claims: [C-OSC-001, C-CMB-003]
+    use: source_provenance_for_shape_only_without_physical_regimes
+forbidden_forward_imports: [WN6, WN7, MD1, MD2, MD3, MD4, MD5, MD6]
+dependency_cycle_introduced: false
+hidden_parameters: []
+closure_verdict: closed_accepted_composition_with_no_new_claim

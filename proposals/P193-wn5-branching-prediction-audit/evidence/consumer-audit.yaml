@@ -1,0 +1,32 @@
+campaign: P193
+source_unit: WN5
+canonical_consumers:
+  branching_module:
+    path: src/substrate_framework/branching.py
+    status: unchanged
+  factorial_one_module:
+    path: src/substrate_framework/bosonic_fock.py
+    status: unchanged
+  package_tests:
+    paths: [tests/test_branching.py, tests/test_bosonic_fock.py, tests/test_factorial_one_distribution.py]
+    status: 52_passed
+direct_source_consumers:
+  WN7:
+    disposition: pending
+    accepted_reuse_candidate: lexical_and_guard_evidence_only
+    ceiling: scanner_results_do_not_adjudicate_scanned_branching_or_prediction_physics
+  MD5:
+    disposition: pending
+    accepted_reuse_candidate: exact_conditional_branch_fraction_and_factorial_one_shape_only
+    ceiling: isotope_handshake_same_curve_material_and_prediction_claims_require_individual_review
+depth_two_consumers:
+  MD6:
+    disposition: pending
+    accepted_reuse_candidate: source_ledger_and_guard_evidence_only
+    ceiling: debt_tally_does_not_adjudicate_WN5_or_MD5_physics
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+pending_reverse_consumers_preserved: 3
+canonical_signatures_changed: []
+canonical_values_changed: []
+scientific_threshold_changed: false

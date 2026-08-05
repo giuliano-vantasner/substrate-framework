@@ -1,0 +1,35 @@
+attempt: 0006
+campaign: P193
+candidate: dependency_consumer_impact_and_terminal_source_review
+status: passed_review_pending_disposition_transaction
+started_at: '2026-08-11T19:28:00Z'
+finished_at: '2026-08-11T19:33:00Z'
+claim_decision:
+  provisional_claim: C-BRN-002
+  promotion: false
+  reason: complete_warranted_object_is_direct_C_BRN_001_and_C_OSC_001_composition
+source_review:
+  source_unit: WN5
+  disposition: qualified
+  accepted_mappings: [C-BRN-001, C-OSC-001]
+  rejected_or_qualified_edges:
+    - unique_integer_minimum
+    - omitted_order_zero_endpoint
+    - unrestricted_GB4_regime_independence
+    - fixed_weight_partial_as_population_dependent_total_path
+    - rho_free_relative_odds_as_physical_suppression
+    - mathematical_turnover_as_measured_physical_prediction
+verification:
+  primary: ALL_58_CHECKS_PASS
+  independent: ALL_27_CHECKS_PASS
+  focused_tests: 52_passed
+source_graph:
+  nodes: 18
+  native_checks_covered: 680
+  replay_result: ALL_46_CHECKS_PASS
+  pending_reverse_consumers_preserved: 3
+  compatibility_version_failures: 0
+canonical_code_changed: false
+accepted_release_change: false
+scientific_threshold_changed: false
+next_attempt: qualify_WN5_generate_queue_and_memory_archive_P193_then_run_one_integrated_gate

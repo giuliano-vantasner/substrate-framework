@@ -1,0 +1,69 @@
+campaign: P193
+root_source_unit: WN5
+reused_execution_evidence:
+  P192_graph:
+    inventory: campaigns/P192-wn4-derived-weight-crossover-audit/evidence/source-graph-inventory.yaml
+    inventory_sha256: 08711e413630374492d59eec8a71093d4eb3d84a052bcff731db6ab976a55255
+    replay_script_sha256: f78ab11835d9754dbcc0f752198291bf4f528578d9273d26b359b359502452e9
+    attempt_sha256: af40f2a7f13e395a9cb360df475e5eef3e283ed111b5403011660a0990c207d1
+    used_nodes_excluding_WN5: 16
+    native_checks: 621
+  P122_GB1:
+    reproduction: campaigns/P122-gb1-channel-branching-audit/evidence/source-reproduction.yaml
+    reproduction_sha256: d9fff939489f21fb54a4bdfd2013becd20bc8295b45cc8a06acc6f48ed959e32
+    source_unit: GB1
+    native_checks: 18
+  P193_WN5:
+    reproduction: proposals/P193-wn5-branching-prediction-audit/evidence/source-reproduction.yaml
+    reproduction_sha256: 0a9cf3bd10974ef0aecea97040608d602294a3e064947a2076e947fea2f00dae
+    source_unit: WN5
+    native_checks: 41
+additional_node:
+  source_unit: GB1
+  relation: direct_source_dependency
+  native_tally: 18
+  path: merged-framework/bridges/phase-32/bridge_GB1_channel_definitions.py
+  sha256: ace0515d7ea362ef45a55db22308aecffdad9a003d03f2b1209c0a11874b489b
+reused_P192_nodes:
+  - GB4
+  - PN1
+  - PN2
+  - PN3
+  - WN1
+  - WN2
+  - WN3
+  - WN4
+  - WN6
+  - WN7
+  - MD1
+  - MD2
+  - MD3
+  - MD4
+  - MD5
+  - MD6
+root_node:
+  source_unit: WN5
+  native_tally: 41
+  path: merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py
+  sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+expected_coverage:
+  unique_nodes: 18
+  P192_reused_native_checks_excluding_root: 621
+  P122_reused_native_checks: 18
+  P193_root_native_checks: 41
+  total_native_checks_covered: 680
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONPATH=src .venv/bin/python proposals/P193-wn5-branching-prediction-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_46_CHECKS_PASS
+  unique_nodes: 18
+  total_native_checks_covered: 680
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+authority_state_before_P193_disposition:
+  qualified_source_dependencies: [GB1, GB4, WN3, WN4]
+  pending_root: WN5
+  pending_reverse_consumers: [WN7, MD5, MD6]

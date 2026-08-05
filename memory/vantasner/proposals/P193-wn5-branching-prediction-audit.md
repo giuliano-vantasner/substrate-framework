@@ -180,6 +180,17 @@ express the complete warranted composition; a new wrapper would add no
 invariant, parameter, sample space, or algorithm. Dependency, consumer,
 impact, and source-graph review remain open.
 
+Attempt 0006 passes dependency, consumer, impact, nonduplication, disposition,
+and source-graph review. The eighteen-node graph covers 680 native predicates
+and passes 46 governed checks using byte-pinned P192 and P122 records plus
+P193's direct WN5 reproduction; no duplicate execution record is counted and
+no node needs a compatibility alias. GitNexus reports LOW reach but is fifteen
+commits stale, so the direct inventory retains tests and source consumers.
+C-BRN-002 remains reserved and unpromoted. WN5 is recommended `qualified`
+through C-BRN-001 and C-OSC-001, while WN7, MD5, and MD6 remain pending. The
+next attempt is the terminal disposition, queue, memory, archive, and one
+integrated gate with v0.143.0 unchanged.
+
 ## Debt Ledger
 
 The P193 ledger tracks source predicates, accepted overlap, order and
@@ -193,9 +204,9 @@ dependencies, consumers, and governed state.
 | Accepted branching and factorial claims may already own the result | Complete claim, API, and theorem nonduplication review | discharged |
 | Fixed-order and population-dependent paths may be conflated | Derive partial, total, and integer-step conditions | discharged |
 | Enhancement may hide baseline or population inputs | Type and retain every input and equality threshold | discharged |
-| Mathematical fractions may be called physical predictions | Supply countermodels and premise inventory | open |
+| Mathematical fractions may be called physical predictions | Supply countermodels and premise inventory | discharged |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
-| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
+| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | discharged |
 | Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
 
 ## Review and Promotion Plan
