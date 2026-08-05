@@ -1,0 +1,55 @@
+id: P198
+base_release: v0.146.0
+base_commit: 1fa3711
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MD3]
+question: >-
+  Which exact state and occupation identities follow from a fully declared
+  vertex operator, and does any such identity remove WN6's distinction between
+  a bounded classical phase excursion, the vacuum set of a cosine potential,
+  and the unbounded occupation support of a separately quantized oscillator?
+invariants:
+  - C-SG-019 is an exact classical local-coordinate cosine expansion and supplies no quantum vertex operator state or material realization.
+  - C-OSC-001 supplies the one-mode Fock ladder and conditional factorial-one algebra but no displacement preparation interaction or physical rate.
+  - C-CMB-003 supplies a normalized factorial-one mathematical mass and its moments and tails but no physical Poisson process.
+  - C-OSC-002 keeps classical peak RMS potential-vacuum and Fock-coordinate conventions distinct unless an explicit map is supplied.
+  - C-SPN-002 is a finite symmetric two-state ladder and is not a bosonic displacement or compact-phase representation.
+  - A compact-phase multiplication vertex and a Weyl displacement are distinct operators on distinct declared Hilbert spaces.
+  - Unbounded occupation-number support does not imply an unbounded classical configuration excursion or create additional minima of a potential.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral never removed numpy.trapz.
+allowed_imports:
+  - C-OSC-001 exact one-mode Fock algebra on its algebraic finite-support domain
+  - C-CMB-003 exact normalized factorial-one mass moments modes and tail bounds
+  - C-SG-019 and C-OSC-002 as classical cosine and convention ceilings only
+  - C-SPN-002 as a distinct finite collective-ladder comparison only
+  - a separately declared complex displacement amplitude and normalized Fock vacuum
+  - a separately declared compact phase Hilbert space Fourier basis and integer multiplication charge
+  - hash-pinned MD3 as noncanonical source evidence after the exposure record and freeze gate
+candidates:
+  - id: A
+    description: Promote an exact one-mode Weyl-displacement theorem deriving the normalized coherent state its factorial-one occupation law vacuum overlap eigenvalue and moment identities from a declared complex amplitude.
+  - id: B
+    description: Promote an exact compact-phase multiplication-vertex theorem showing unitary Fourier-label translation and pointwise probability preservation without changing the potential vacuum set.
+  - id: C
+    description: Treat normal-ordered or pure-creation exponentials as a separate operator-ordering family and promote only identities whose normalization and domain are explicitly declared.
+  - id: D
+    description: Make no new claim if every surviving identity is already exactly covered by C-OSC-001 and C-CMB-003 or is merely a renamed substitution.
+  - id: E
+    description: Open a foundational quantized-medium revision only if an inconsistency in accepted claims exists independently of MD3 and survives at least two repair alternatives.
+uniqueness_evidence: null
+selection_criteria:
+  - exact operator Hilbert-space domain state normalization and parameter typing
+  - natural compatibility with C-OSC-001 without importing a finite SU2 ladder or classical phase convention into Fock space
+  - independent BCH or coefficient rederivation and exact unitarity or norm checks
+  - explicit distinction among Fock occupation support compact Fourier support and classical potential vacua
+  - sensitivity to the Gaussian half factor operator ordering conjugation and sample-space mutations
+  - novelty beyond C-OSC-001 C-CMB-003 and elementary unit-modulus multiplication
+  - predictive reach without material occupation channel probability rate or substrate overreach
+claims_proposed: [C-VOP-001]
+comparators_blinded_until: >-
+  Fresh source-body or result blinding is impossible because MD3 was already
+  executed and classified as a pending reverse consumer in the P191 and P192
+  source graphs. P198 freezes operator families, imports, criteria, mutations,
+  and physical ceilings before any renewed P198 execution, detailed predicate
+  audit, implementation, or inspection of comparison values.
+status: active

@@ -1,0 +1,40 @@
+campaign: P198
+claim_candidate: C-VOP-001
+frozen_before_P198_source_execution: true
+operator_families:
+  weyl_displacement:
+    hilbert_space: C_OSC_001_one_mode_Fock_space
+    input: separately_declared_complex_alpha
+    definition: D(alpha)=exp(alpha*a_dagger-conjugate(alpha)*a)
+    state: ket_alpha=D(alpha)*ket_0
+    expected_normal_form: D(alpha)=exp(-abs(alpha)^2/2)*exp(alpha*a_dagger)*exp(-conjugate(alpha)*a)
+    expected_coefficients: bracket_n_alpha=exp(-S/2)*alpha^n/sqrt(n_factorial)
+    intensity: S=abs(alpha)^2
+    expected_mass: p_n=exp(-S)*S^n/n_factorial
+    expected_vacuum_overlap: bracket_0_alpha=exp(-S/2)
+    expected_eigenvalue: a*ket_alpha=alpha*ket_alpha
+  compact_phase_multiplier:
+    hilbert_space: L2_circle_with_normalized_Haar_measure
+    basis: e_n(phi)=exp(i*n*phi)_for_integer_n
+    input: separately_declared_integer_charge_m
+    definition: M_m*psi(phi)=exp(i*m*phi)*psi(phi)
+    expected_action: M_m*e_n=e_(n+m)
+    expected_norm: norm(M_m*psi)=norm(psi)
+    expected_density: abs(M_m*psi(phi))^2=abs(psi(phi))^2
+  ordered_exponential:
+    warning: exp(alpha*a_dagger)_normalization_and_colon_ordering_are_not_synonyms_for_D_alpha
+mutations:
+  - remove_the_Gaussian_half_factor_from_coherent_coefficients
+  - replace_alpha_conjugate_by_alpha_in_the_Weyl_generator
+  - reverse_or_erase_operator_ordering_in_the_BCH_factorization
+  - treat_positive_integer_S_as_a_unique_factorial_one_mode
+  - equate_nonzero_occupation_support_with_new_classical_potential_minima
+  - replace_integer_compact_charge_by_an_undeclared_nonperiodic_real_charge
+  - call_a_normalized_mathematical_mass_a_transition_rate
+nonclaims:
+  - no_quantization_or_state_preparation_of_the_accepted_classical_medium
+  - no_equality_between_classical_peak_RMS_Fock_coordinate_and_displacement_intensity
+  - no_new_cosine_vacua_or_removal_of_a_classical_phase_bound
+  - no_physical_Poisson_process_density_of_states_channel_probability_or_rate
+  - no_material_nuclear_or_substrate_realization
+  - no_foundational_revision_without_independent_inconsistency_evidence

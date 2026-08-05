@@ -1,0 +1,35 @@
+campaign: P198
+base_release:
+  id: v0.146.0
+  path: governance/releases/v0.146.0.yaml
+  sha256: ac66e5ae6e46e878c6392892fb534a5fb7115dd6a2e50d59e2e4a429d8b82581
+registry:
+  path: governance/claims.yaml
+  sha256: bd730087a86508e9c362afa16158acc359d2e009d58ef5ab4ec395f995b6d9ea
+framework_commit: 1fa3711
+source_repository:
+  path: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  working_tree_dirty_outside_source_unit: true
+  source_unit_clean: true
+source:
+  source_unit: MD3
+  path: merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py
+  sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128
+  bytes: 10782
+  git_history: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]
+prior_exposure:
+  source_body_seen_before_freeze: true
+  P198_execution_before_freeze: false
+  prior_source_graph_executions: [P191, P192]
+  recorded_native_tally: 41
+  fresh_blinding_claimed: false
+memory_search:
+  queries:
+    - MD3 vertex operator vacuum bound
+    - vertex operator removes single vacuum bound
+  authoritative_result_found: false
+  unrelated_personal_results_imported: false
+authority_inputs: [C-OSC-001, C-CMB-003]
+comparison_ceiling_inputs: [C-SG-019, C-OSC-002, C-SPN-002]
+pending_or_unaccepted_inputs_forbidden: [MD3, MD4, MD5, MD6, PN2_physical_band, WN6_material_amplitude]
