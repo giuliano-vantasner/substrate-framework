@@ -8922,3 +8922,91 @@ claims:
     accepted_in: v0.132.0
     challenges: []
     supersedes: []
+  - id: C-GW-009
+    statement: >-
+      Let q and Omega be real, let s be a declared nonzero quadrupole
+      convention scale, and let the normalized body-frame STF moment be
+      I_body=diag(q,q,-2*q), with Q_s=s*I_body. Every proper orthogonal
+      conjugation R*Q_s*R^T has characteristic polynomial
+      (lambda-s*q)^2*(lambda+2*s*q), so it remains axisymmetric about the
+      rotated eigenvector even when three Cartesian diagonal entries are
+      pairwise distinct. Rotation by Omega*t about the body symmetry axis
+      leaves Q_s constant. For the right-handed perpendicular x-axis
+      rotation of an initial z symmetry axis, the nonzero components are
+      Q_xx=s*q, Q_yy=s*q*(-1/2+3*cos(2*Omega*t)/2),
+      Q_zz=s*q*(-1/2-3*cos(2*Omega*t)/2), and
+      Q_yz=Q_zy=3*s*q*sin(2*Omega*t)/2. Thus the tensor is DC plus a pure
+      twice-frequency harmonic. Its second- and third-derivative Frobenius
+      norms are 72*s^2*q^2*Omega^4 and 288*s^2*q^2*Omega^6. When q*Omega is
+      nonzero, the third derivative has three distinct eigenvalues
+      0 and plus/minus 12*s*q*Omega^3 even though the full moment retains its
+      repeated eigenvalue. Under exactly the conditional C-GW-001/002/008
+      premises, the same field has convention-independent total power
+      288*G*q^2*Omega^6/5 and, along the rotation axis with the declared
+      y-z transverse frame, conventional readouts
+      h_plus=-12*G*q*Omega^2*cos(2*Omega*t)/r_obs and
+      h_cross=-12*G*q*Omega^2*sin(2*Omega*t)/r_obs. For a symmetry axis at
+      fixed tilt beta from a z rotation axis, the exact tensor contains an
+      Omega harmonic proportional to sin(beta)*cos(beta) and a 2*Omega
+      harmonic proportional to sin(beta)^2; its third-derivative norm is
+      18*s^2*q^2*Omega^6*sin(beta)^2*(cos(beta)^2+16*sin(beta)^2), monotone
+      in sin(beta)^2 and maximal at perpendicular tilt. These are exact
+      prescribed moment kinematics and conditional TT identities. They
+      establish no full-field rotating or tumbling solution, local conserved
+      source stress, collective-coordinate action or inertia, dynamically
+      selected Omega or axis, stability, gravitational action or coupling,
+      physical retarded waveform or flux, absolute scale, detector signal,
+      observation, or substrate realization.
+    provenance: campaigns/P181-tx2-rigid-axis-rotation-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-MOM-001
+      - C-GW-001
+      - C-GW-002
+      - C-GW-008
+    evidence:
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/independent_commutator_review.py
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/replay_source_graph.py
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/C-GW-009-claim-review.md
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/source_adjudication.md
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0003/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0004/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0005/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0006/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0007/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0008/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0009/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0010/result.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/source-reproduction.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/source-audit.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/check-adjudication.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/input-provenance.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/dependency-audit.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/consumer-audit.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/candidate-comparison.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/compatibility-audit.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/primary-provenance.yaml
+      - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/impact_analysis.md
+      - memory/vantasner/decisions/C-GW-009-review.md
+      - memory/vantasner/decisions/TX2-qualified-review.md
+      - src/substrate_framework/rigid_quadrupole_rotation.py
+      - tests/test_rigid_quadrupole_rotation.py
+    assumptions:
+      - Tensor components, rotations, contractions, eigenvalues, and transverse frames use real Cartesian Euclidean three-space with the right-handed Rodrigues convention displayed in the claim.
+      - q is the repeated transverse eigenvalue of normalized I_STF; s is explicit and nonzero, with s=1 normalized and s=3 the triple Q convention. Calling s=1 input Q without rescaling is a convention error.
+      - The nonzero derivative and three-eigenvalue derivative statements require q*Omega nonzero. The aligned and q=0 or Omega=0 limits are exact nulls.
+      - G, r_obs, the TT waveform form, and the flux functional remain separately declared conditional premises from C-GW-001/002/008; r_obs and s are nonzero where division occurs.
+      - Omega, the rotation axis, the initial symmetry axis, and the tilt are prescribed kinematic inputs. Static rotational invariance does not establish that their time-dependent path solves a field equation.
+      - Applying the theorem to TX2 may import C-RMOM-001's exact conditional static tensor and C-RMOM-002's qualified dimensionless magnitude, but neither supplies physical scale, inertia, rotating dynamics, or stability.
+    comparators:
+      - TX2 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64, whose seven checks execute but whose prose sign, factor-three name, diagonal-based triaxiality, coincidence set, generic-tilt spectrum, and dynamical interpretation are corrected by P181
+      - C-GW-003's declared circular point-pair kinematics and C-GW-008's declared real-m2 quadrature comparison, neither of which derives this full rotated-axisymmetric moment or its generic-tilt invariant classification
+    accepted_in: v0.133.0
+    challenges: []
+    supersedes: []

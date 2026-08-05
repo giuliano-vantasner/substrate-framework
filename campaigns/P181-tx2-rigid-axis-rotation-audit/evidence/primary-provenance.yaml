@@ -1,0 +1,14 @@
+claim: C-GW-009
+source_hash: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7
+base_release: v0.132.0
+primary_verifier: campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+primary_checks: 24
+independent_rederivation: campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/independent_commutator_review.py
+independent_checks: 10
+independence: matrix_exponential_dyadic_commutator_direct_TT_contraction_without_importing_the_new_rotation_module
+focused_tests: 89
+source_graph_checks: 10
+failed_representation_attempts: [0003, 0004, 0006, 0007]
+failed_schema_attempts: [0009]
+mutable_numpy_legacy_access: false
+maximum_verdict: symbolic_verified

@@ -1,0 +1,16 @@
+claim: C-GW-009
+direct_consumers:
+  - {consumer: src/substrate_framework/__init__.py, result: new_exports_only}
+  - {consumer: tests/test_rigid_quadrupole_rotation.py, result: exact_API_and_mutation_coverage_passes}
+  - {consumer: TX2, result: qualifies_rotation_harmonic_and_conditional_content_while_refuting_full_tensor_triaxiality}
+  - {consumer: TX3, result: remains_pending_and_must_audit_observer_frames_temporal_rank_Omega_dependence_and_physical_scope_independently}
+  - {consumer: governance_release_docs_and_memory, result: synchronized_only_on_promotion}
+indirect_consumers:
+  - {consumer: C-GW-001_002_008, result: unchanged_dependencies_not_retroactive_consumers}
+  - {consumer: C-RMOM-001_002, result: unchanged_static_application_inputs}
+focused_tests: 89_passed
+primary_verifier: ALL_24_CHECKS_PASS
+independent_verifier: ALL_10_CHECKS_PASS
+source_graph: ALL_10_CHECKS_PASS
+broken_consumers: []
+new_debt: []

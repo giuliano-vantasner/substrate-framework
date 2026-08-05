@@ -67,6 +67,14 @@ from .conditional_triaxial_radiation import (
     conditional_scaled_stf_waveform,
     real_m2_triple_stf_tensor,
 )
+from .rigid_quadrupole_rotation import (
+    RigidAxisymmetricSTFRotation,
+    axisymmetric_stf_from_transverse_eigenvalue,
+    rigid_axisymmetric_stf_rotation,
+    rodrigues_rotation_matrix,
+    symmetric_tensor_characteristic_polynomial,
+    tilted_axisymmetric_stf_rotation_about_z,
+)
 from .boundary_correlations import (
     OrientedHalfLineParityLedger,
     ScalarBoundaryParityLedger,
@@ -1056,6 +1064,7 @@ __all__ = [
     "transverse_half_line_proca_evidence",
     "ConditionalAxisymmetricRadiationCoefficients",
     "ConditionalScaledSTFWaveform",
+    "RigidAxisymmetricSTFRotation",
     "GovernanceError",
     "GravitySourceNormalizationLedger",
     "GroundCouplingLedger",
@@ -1505,6 +1514,11 @@ __all__ = [
     "symmetric_spin_ladder_coefficient",
     "symmetric_spin_rung",
     "symmetric_trace_free",
+    "axisymmetric_stf_from_transverse_eigenvalue",
+    "rigid_axisymmetric_stf_rotation",
+    "rodrigues_rotation_matrix",
+    "symmetric_tensor_characteristic_polynomial",
+    "tilted_axisymmetric_stf_rotation_about_z",
     "summarize_censored_first_passage",
     "sine_gordon_residual",
     "sine_gordon_chiral_sources",

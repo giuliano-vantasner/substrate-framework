@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P181
+candidate: B_C_primary_and_independent_exact_oracles
+status: failed_primary_representation_independent_passed
+started_at: '2026-08-11T08:06:00Z'
+finished_at: '2026-08-11T08:07:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/independent_commutator_review.py
+primary:
+  passes_before_failure: 21
+  failure: tilt_norm_monotonicity_used_structural_Add_equality
+independent:
+  status: passed
+  terminal: ALL_10_CHECKS_PASS_P181_INDEPENDENT_C_GW_009
+diagnosis: SymPy_represents_the_same_linear_polynomial_as_30x_plus_1_and_1_plus_30x
+repair: simplify_the_exact_derivative_difference_to_zero
+next_attempt: rerun_primary_without_repeating_the_independent_route

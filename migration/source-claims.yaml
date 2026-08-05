@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 44
-  qualified: 161
+  pending_adjudication: 43
+  qualified: 162
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11069,8 +11069,8 @@ units:
     degree-four map has only a resolution- bounded rank-two null here; exact cubic symmetry, a minimal-map
     theorem, and a unique carrier are unaccepted. A conditional rational-map branch is not a full three-dimensional
     solution, physical baryon or nucleus, local conserved stress, selected absolute scale, rotating state,
-    gravitational source, waveform, radiation channel, observation, or substrate realization. TX2 and
-    TX3 remain pending and inherit no blanket authority.
+    gravitational source, waveform, radiation channel, observation, or substrate realization. TX2 is separately
+    qualified by P181 through C-GW-009, while TX3 remains pending and inherits no blanket authority.
   evidence:
   - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/source_adjudication.md
   - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/C-RMOM-001-claim-review.md
@@ -11099,7 +11099,8 @@ units:
     the integrated boundary. The exact B2 sign is comparator-free, and two corrected profile routes agree
     within 2.865e-7 relative. Native TX1 already took its numpy.trapezoid branch; its isolated legacy
     spelling causes no version stop and no scientific failure. GitNexus finds no affected execution process
-    for the additive module and exports.
+    for the additive module and exports. The integrated promotion boundary validates 729 memory records
+    and passes all 1,541 repository tests with a clean terminal status.
 - source_unit: TX2
   phase: phase-40
   path: merged-framework/bridges/phase-40/bridge_TX2_rotating_triaxial_quadrupole.py
@@ -11139,8 +11140,63 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MOM-001
+  - C-GW-001
+  - C-GW-002
+  - C-GW-008
+  - C-RMOM-001
+  - C-RMOM-002
+  - C-GW-009
+  qualification: 'TX2''s prescribed orthogonal-conjugation path survives through exact C-GW-009. Aligned
+    rotation leaves the axisymmetric STF moment constant; exactly perpendicular rotation gives the corrected
+    component tensor, DC plus pure twice-frequency content, exact derivative norms, and a nonzero third
+    derivative when q times Omega is nonzero. Under the separately declared C-GW-001/002/008 premises
+    it has convention-safe conditional power and a circular rotation-axis readout. Generic tilt instead
+    contains both Omega and twice-Omega channels with an exact norm maximal at perpendicular tilt. The
+    full moment is never genuinely triaxial: orthogonal conjugation preserves its repeated eigenvalue
+    and rotating symmetry axis, even when three Cartesian diagonal entries are distinct. Only its nonzero
+    perpendicular derivative tensor has three principal values. TX2''s prose has the opposite yz sign
+    from its code, states the wrong coordinate-diagonal coincidence set, drops eigenvalue multiplicity,
+    and carries TX1''s normalized I_STF under the triple Q name. Static rotational degeneracy does not
+    supply a full time-dependent field solution, local conserved stress, collective inertia, selected
+    Omega or axis, stability, physical scale, gravitational action or coupling, retarded waveform or flux,
+    radiation mechanism, detector signal, observation, or substrate realization. Its exact B4 and all-
+    multipole nonradiation readings are also unaccepted. TX3 remains pending and inherits no blanket authority.'
+  evidence:
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/source_adjudication.md
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/C-GW-009-claim-review.md
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/source-reproduction.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/compatibility-audit.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/source-audit.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/check-adjudication.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/input-provenance.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/dependency-audit.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/consumer-audit.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/candidate-comparison.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/evidence/primary-provenance.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/independent_commutator_review.py
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/replay_source_graph.py
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0003/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0004/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0005/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0006/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0007/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0008/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0009/result.yaml
+  - campaigns/P181-tx2-rigid-axis-rotation-audit/attempts/0010/result.yaml
+  - memory/vantasner/decisions/C-GW-009-review.md
+  - memory/vantasner/decisions/TX2-qualified-review.md
+  note: P181 closes twenty-four primary, ten independent, and ten source-graph checks plus eighty-nine
+    focused tests before the integrated boundary. TX2, TX3, and the canonical rotation module have no
+    legacy NumPy integration access, so no compatibility event affects a scientific verdict. GitNexus
+    rates the imported shared symbols LOW risk with no affected execution process; staged impact is recorded
+    separately. The integrated promotion boundary validates 734 memory records and passes all 1,554 repository
+    tests with a clean terminal status.
 - source_unit: TX3
   phase: phase-40
   path: merged-framework/bridges/phase-40/bridge_TX3_two_polarizations_omega_free.py

@@ -1,0 +1,14 @@
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: GW2, role: conditional_power_dependency, path: merged-framework/bridges/phase-12/bridge_GW2_quadrupole_power.py, sha256: b41bf49ed7c13e22defc4c70003dad400ffcebcb6c04e852883e2e331badc1d7, disposition: qualified}
+  - {source_unit: GW3, role: TT_basis_dependency, path: merged-framework/bridges/phase-12/bridge_GW3_TT_projector_two_polarizations.py, sha256: 3b941debf6933729b693b928579d4a7f1d73d906911c2fcedb9316ad08038326, disposition: qualified}
+  - {source_unit: GW4, role: rotating_kinematic_comparator, path: merged-framework/bridges/phase-12/bridge_GW4_breather_quadrupole_waveform.py, sha256: 0e2637aa188c77a2b976b87e8efffc104eb64c25b759b739d0467d01790c4a15, disposition: qualified}
+  - {source_unit: P3D4, role: fixed_axis_axisymmetric_comparator, path: merged-framework/bridges/phase-14/bridge_P3D4_selfconsistent_power_waveform.py, sha256: 055c001288217998406b73026bf9f1402e044c5b4b26aa1929241a31402b827f, disposition: qualified}
+  - {source_unit: QB3, role: triaxial_shape_and_rank_comparator, path: merged-framework/bridges/phase-16/bridge_QB3_triaxial_nonaxisymmetric.py, sha256: e9626f2e4829084635386eea271d0abdd39c81dfcd6899765d2f4bffac83e0c8, disposition: qualified}
+  - {source_unit: QB4, role: conditional_scaled_TT_dependency, path: merged-framework/bridges/phase-16/bridge_QB4_two_polarization_waveform.py, sha256: 4523ad68636413bf628cd353e496c61b25af3c7f30bdf3e1e061930054fb9291, disposition: qualified}
+  - {source_unit: TX1, role: corrected_static_tensor_dependency, path: merged-framework/bridges/phase-40/bridge_TX1_b2_intrinsic_quadrupole.py, sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff, disposition: qualified}
+  - {source_unit: TX2, role: qualified_unit_under_audit, path: merged-framework/bridges/phase-40/bridge_TX2_rotating_triaxial_quadrupole.py, sha256: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7, disposition: qualified}
+  - {source_unit: TX3, role: pending_direct_consumer, path: merged-framework/bridges/phase-40/bridge_TX3_two_polarizations_omega_free.py, sha256: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837, disposition: pending_adjudication}
+canonical_claims: [C-MOM-001, C-GW-001, C-GW-002, C-GW-003, C-GW-005, C-GW-007, C-GW-008, C-RMOM-001, C-RMOM-002]
+canonical_modules: [conserved_moments.py, tt_angular.py, triaxial_l2.py, conditional_triaxial_radiation.py, rational_map_moments.py, rigid_quadrupole_rotation.py]
+consumer_ceiling: TX3_inherits_no_blanket_authority_and_requires_its_own_predicate_review

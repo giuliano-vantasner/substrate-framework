@@ -1,0 +1,72 @@
+campaign: P181
+title: TX2 rigid-axis STF rotation and conditional TT audit
+source_baseline: substrate@6d1f4e0
+source_units: [TX2]
+base_release: v0.132.0
+accepted_release: v0.133.0
+adjudicated_at: '2026-08-11T08:18:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_is_retained_as_source_evidence_only.}
+  - {id: B, reason: Exact_SO3_conjugation_and_tilt_kinematics_earn_C_GW_009.}
+  - {id: C, reason: Accepted_scale_safe_TT_algebra_supplies_only_conditional_readout_and_power.}
+  - {id: F, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: D, decision: rejected_because_coordinate_diagonals_are_not_principal_values_and_the_full_tensor_retains_a_repeated_eigenvalue}
+  - {id: E, decision: deferred_as_a_distinct_full_field_rotation_selected_Omega_stability_and_gravity_problem}
+claims:
+  - {id: C-GW-009, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-MOM-001, decision: unchanged_STF_and_triple_Q_conventions}
+  - {id: C-GW-001, decision: unchanged_conditional_waveform_and_power_premises}
+  - {id: C-GW-002, decision: unchanged_TT_basis_and_readout_normalization}
+  - {id: C-GW-008, decision: unchanged_scaled_STF_convention_and_rank_algebra}
+  - {id: C-RMOM-001, decision: unchanged_exact_conditional_static_B2_tensor_application}
+  - {id: C-RMOM-002, decision: unchanged_qualified_dimensionless_magnitude_application}
+unpromoted_claims:
+  - {id: TX2_full_tensor_genuine_triaxiality, reason: Orthogonal_conjugation_preserves_the_repeated_eigenvalue.}
+  - {id: TX2_printed_yz_sign_and_coincidence_set, reason: Prose_disagrees_with_implementation_and_exact_component_algebra.}
+  - {id: TX2_Q_label, reason: Source_carries_TX1_normalized_I_STF_under_the_triple_Q_name.}
+  - {id: exact_time_dependent_Skyrmion_solution, reason: Static_symmetry_degeneracy_does_not_supply_a_full_field_motion_or_residual.}
+  - {id: generic_pure_2Omega, reason: Generic_nonzero_tilt_contains_both_Omega_and_2Omega.}
+  - {id: selected_Omega_stability_or_no_free_parameter, reason: Omega_and_orientation_are_declared_kinematic_inputs.}
+  - {id: exact_B4_null_or_all_multipole_nonradiation, reason: B4_rank_two_null_is_numeric_and_a_quadrupole_null_does_not_exclude_other_channels.}
+  - {id: physical_gravity_waveform_radiation_observation_or_substrate, reason: Only_conditional_TT_algebra_is_imported.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_commutator_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-GW-009-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  focused_attempt: attempts/0005/result.yaml
+  exact_attempt: attempts/0008/result.yaml
+  graph_attempt: attempts/0010/result.yaml
+  integrated_attempt: attempts/0012/result.yaml
+source_disposition: {TX2: qualified}
+accepted_mappings: [C-MOM-001, C-GW-001, C-GW-002, C-GW-008, C-RMOM-001, C-RMOM-002, C-GW-009]
+compatibility:
+  source_numpy_surface: none
+  mutable_current_name: numpy.trapezoid_or_shared_trapezoid_integral
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.133.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/independent_commutator_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/replay_source_graph.py
+  - pytest tests/test_rigid_quadrupole_rotation.py tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py tests/test_triaxial_l2.py tests/test_axisymmetric_radiation.py tests/test_conserved_moments.py tests/test_rational_map_moments.py tests/test_circular_pair.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

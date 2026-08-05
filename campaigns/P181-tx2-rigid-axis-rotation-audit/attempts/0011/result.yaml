@@ -1,0 +1,24 @@
+attempt: 0011
+campaign: P181
+candidate: claim_review_dependency_consumer_and_promotion_preflight
+status: passed
+started_at: '2026-08-11T08:19:00Z'
+finished_at: '2026-08-11T08:21:00Z'
+results:
+  repository: WORKFLOW_VALID_171_claims_171_accepted_0_proposals
+  migration_queue: 218_units_43_pending_0_partial
+  primary: ALL_24_CHECKS_PASS
+  independent: ALL_10_CHECKS_PASS
+  source_graph: ALL_10_CHECKS_PASS
+  focused_tests: 89_passed
+  new_memory_records: valid
+  memory_files: 734
+  generated_docs: current
+  generated_memory: current
+  compile: passed
+  diff_check: passed
+claim_decision:
+  C-GW-009: {verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+source_decision: {TX2: qualified}
+debt: []
+next_attempt: run_one_integrated_repository_gate_then_finalize_record_without_repeating_the_full_suite

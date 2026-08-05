@@ -67,5 +67,5 @@ comparators_blinded_until: >-
   aligned and perpendicular rotations, component formulas, claimed generic
   triaxiality, pure two-Omega line, seven-check tally, and one assertion, so no
   fresh source-result or runtime-output blinding is claimed
-status: frozen_with_prior_result_exposure
-revision: 0001
+status: accepted
+revision: 0002

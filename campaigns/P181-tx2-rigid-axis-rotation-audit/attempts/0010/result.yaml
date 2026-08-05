@@ -1,0 +1,17 @@
+attempt: 0010
+campaign: P181
+candidate: F_dependency_and_consumer_replay_repaired
+status: passed
+started_at: '2026-08-11T08:14:00Z'
+finished_at: '2026-08-11T08:15:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/replay_source_graph.py
+terminal: ALL_10_CHECKS_PASS_P181_TX2_SOURCE_GRAPH
+focused_replay: 89_passed
+graph:
+  nodes: [GW2, GW3, GW4, P3D4, QB3, QB4, TX1, TX2, TX3]
+  accepted_dependencies_preserved: true
+  TX3_pending_without_blanket_authority: true
+  mutable_legacy_numpy_integration_access: false
+debt:
+  - claim_review_disposition_release_docs_memory_impact_and_integrated_validation_open
+next_attempt: complete_individual_claim_review_and_promotion_transaction

@@ -1,0 +1,18 @@
+attempt: 0009
+campaign: P181
+candidate: F_dependency_and_consumer_replay
+status: failed_queue_schema_handling
+started_at: '2026-08-11T08:12:00Z'
+finished_at: '2026-08-11T08:13:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest -q tests/test_rigid_quadrupole_rotation.py tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py tests/test_triaxial_l2.py tests/test_axisymmetric_radiation.py tests/test_conserved_moments.py tests/test_rational_map_moments.py tests/test_circular_pair.py
+source_graph:
+  failure: TypeError_string_indices_must_be_integers
+  stage: generated_queue_loading_before_first_check
+  diagnosis: migration_source_claims_is_a_mapping_whose_unit_list_is_under_units
+focused_replay:
+  status: passed
+  result: 89_passed
+repair: read_the_generated_units_key_without_changing_any_graph_expectation
+next_attempt: rerun_only_the_source_graph_replay

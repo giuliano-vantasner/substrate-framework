@@ -1,0 +1,31 @@
+attempt: 0005
+campaign: P181
+candidate: B_C_exact_package_and_focused_regression
+status: passed
+started_at: '2026-08-11T08:04:00Z'
+finished_at: '2026-08-11T08:05:00Z'
+command: >-
+  .venv/bin/python -m pytest -q
+  tests/test_rigid_quadrupole_rotation.py
+  tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py
+  tests/test_rational_map_moments.py
+result: 52_passed
+exact_results:
+  full_tensor_characteristic_polynomial: (lambda_minus_sq)^2_times_(lambda_plus_2sq)
+  full_tensor_classification: axisymmetric_at_every_time
+  perpendicular_content: DC_plus_pure_2Omega
+  perpendicular_second_derivative_norm_squared: 72_s2_q2_Omega4
+  perpendicular_third_derivative_norm_squared: 288_s2_q2_Omega6
+  perpendicular_third_derivative_eigenvalues: [0, minus_12sqOmega3, plus_12sqOmega3]
+  convention_safe_conditional_power: 288_G_q2_Omega6_over_5
+  rotation_axis_conditional_readout: circular_equal_amplitude_quadrature
+  generic_tilt_content: Omega_plus_2Omega
+  generic_tilt_third_norm_squared: 18_s2_q2_Omega6_sin2beta_times_cos2beta_plus_16sin2beta
+mutations:
+  zero_q_breaks_nonzero_derivative: true
+  zero_Omega_breaks_nonzero_derivative: true
+  distinct_eigenvalue_body_breaks_axisymmetric_characteristic_polynomial: true
+debt:
+  - primary_source_aware_verifier_and_independent_commutator_rederivation_open
+  - claim_review_dependencies_consumers_disposition_release_docs_memory_and_validation_open
+next_attempt: run_primary_and_independent_exact_oracles

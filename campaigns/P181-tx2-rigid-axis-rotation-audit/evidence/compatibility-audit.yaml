@@ -1,0 +1,13 @@
+source_unit: TX2
+imports: [sympy]
+numpy_imports: 0
+direct_numpy_trapezoid_references: 0
+direct_numpy_trapz_references: 0
+imported_legacy_trapz_references: 0
+dynamic_legacy_references: 0
+eager_legacy_default_fallbacks: 0
+execution_mode: native
+version_only_stops: 0
+scientific_candidate_failures_from_version_events: 0
+mutable_policy: numpy.trapezoid_or_substrate_framework.numerics.trapezoid_integral
+finding: TX2_has_no_NumPy_or_quadrature_compatibility_surface

@@ -1,0 +1,16 @@
+claim: C-GW-009
+accepted_dependencies:
+  - {id: C-MOM-001, use: normalized_I_STF_and_triple_Q_conventions_plus_kinematic_scope}
+  - {id: C-GW-001, use: conditional_scaled_TT_waveform_and_total_power_premises}
+  - {id: C-GW-002, use: exact_TT_projector_basis_and_conventional_readout_normalization}
+  - {id: C-GW-008, use: convention_safe_scaled_STF_waveform_power_and_temporal_rank_composition}
+application_inputs:
+  - {id: C-RMOM-001, use: exact_conditional_B2_axisymmetric_normalized_tensor_form_and_sign}
+  - {id: C-RMOM-002, use: qualified_dimensionless_stationary_branch_magnitude_only}
+undeclared_imports: []
+fitted_constants: []
+new_parameters:
+  - {name: Omega, status: declared_kinematic_angular_speed_not_dynamically_selected}
+  - {name: rotation_axis_and_tilt, status: declared_orientation_data}
+closure: passed
+scope_ceiling: no_full_field_conservation_stability_selected_Omega_gravity_physical_wave_or_observation

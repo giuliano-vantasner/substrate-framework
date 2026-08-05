@@ -1,0 +1,29 @@
+attempt: 0002
+campaign: P181
+candidate: A_hash_pinned_source_body_and_verifier_audit
+status: passed_with_scientific_qualifications
+started_at: '2026-08-11T07:56:00Z'
+finished_at: '2026-08-11T07:59:00Z'
+source_reproduction: evidence/source-reproduction.yaml
+source_audit: evidence/source-audit.yaml
+check_adjudication: evidence/check-adjudication.yaml
+compatibility_audit: evidence/compatibility-audit.yaml
+findings:
+  exact_source_hash_and_prior_native_execution_reused: true
+  runtime_checks: 7
+  assertion_nodes: 1
+  version_only_failure: false
+  implemented_off_diagonal_sign_disagrees_with_prose: true
+  source_tensor_name_misses_accepted_factor_three: true
+  generic_coordinate_diagonals_are_not_principal_values: true
+  full_rotated_tensor_has_repeated_eigenvalue: true
+  generic_tilt_has_Omega_and_2Omega_channels: true
+  perpendicular_limit_is_pure_2Omega: true
+  arbitrary_rigid_rotation_is_not_an_accepted_exact_field_motion: true
+selected_next_candidates: [B, C, F]
+rejected_candidate: D
+debt:
+  - corrected_exact_rotation_derivative_norm_tilt_spectrum_and_conditional_TT_theorem_not_yet_implemented
+  - independent_dyadic_and_commutator_rederivation_not_yet_run
+  - dependencies_consumers_claim_review_disposition_release_docs_memory_and_validation_open
+next_attempt: implement_and_test_C_GW_009_with_exact_mutation_sensitive_oracles

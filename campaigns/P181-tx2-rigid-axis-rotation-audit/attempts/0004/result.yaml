@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P181
+candidate: B_C_second_exact_representation_oracle
+status: failed_representation
+started_at: '2026-08-11T08:02:00Z'
+finished_at: '2026-08-11T08:03:00Z'
+command: >-
+  .venv/bin/python -m pytest -q
+  tests/test_rigid_quadrupole_rotation.py
+  tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py
+  tests/test_rational_map_moments.py
+result: 2_failed_50_passed
+failed_obligations:
+  - trace_used_raw_SymPy_expression_instead_of_simplified_residual
+  - derivative_polynomial_zero_remained_as_two_opposite_factored_terms
+diagnosis: exact_zero_residuals_need_algebraic_expansion_after_trigonometric_reduction
+repair: simplify_the_trace_and_expand_then_simplify_the_polynomial_difference
+next_attempt: rerun_unchanged_exact_targets

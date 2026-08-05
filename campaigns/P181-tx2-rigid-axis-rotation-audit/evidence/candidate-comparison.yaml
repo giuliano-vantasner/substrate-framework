@@ -1,0 +1,22 @@
+campaign: P181
+criteria_frozen_before_source_body_audit: true
+selected:
+  - {id: A, role: exact_hash_source_and_verifier_evidence_only}
+  - {id: B, role: accepted_exact_rigid_axisymmetric_rotation_kinematics}
+  - {id: C, role: accepted_exact_conditional_TT_readout_and_power_composition}
+  - {id: F, role: governed_claim_source_consumer_and_release_closure}
+rejected:
+  - id: D
+    reason: orthogonal_conjugation_preserves_the_repeated_eigenvalue_so_coordinate_diagonals_cannot_establish_triaxiality
+deferred:
+  - id: E
+    reason: a_full_rotating_or_tumbling_field_selected_Omega_stability_and_gravity_require_new_dynamical_inputs_outside_TX2
+selection_basis:
+  - exact_SO3_invariants_and_eigenvalue_multiplicity
+  - accepted_STF_and_conditional_TT_conventions
+  - exact_aligned_perpendicular_and_tilt_limits
+  - assumption_and_parameter_economy
+  - independent_dyadic_commutator_rederivation
+  - mutation_sensitivity
+  - source_dynamics_and_physical_scope_separation
+numeric_comparator_used_for_selection: false

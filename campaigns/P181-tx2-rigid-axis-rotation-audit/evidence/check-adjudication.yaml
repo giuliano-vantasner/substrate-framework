@@ -1,0 +1,24 @@
+source_unit: TX2
+checks:
+  TX2.1:
+    predicate: survives_exactly
+    prose: qualified_STF_is_kinematic_and_not_an_established_physical_spin2_source
+  TX2.2:
+    predicate: survives_exactly_for_the_quadrupole_tensor
+    prose: qualified_to_constant_quadrupole_and_conditional_quadrupole_null_only
+  TX2.3:
+    predicate: rejects_only_one_sample_coordinate_coincidence
+    prose: refuted_full_tensor_keeps_a_repeated_eigenvalue_and_is_not_triaxial
+  TX2.4:
+    predicate: under_sensitive_to_pure_frequency_and_omits_qOmega_nonzero_condition
+    prose: qualified_perpendicular_tensor_is_DC_plus_pure_2Omega_but_physical_radiation_is_unaccepted
+  TX2.5:
+    predicate: keys_match_but_multiplicity_is_not_tested
+    prose: qualified_constant_moment_eigenvalues_do_not_prove_an_exact_rotating_field_solution
+  TX2.G-A:
+    predicate: exact_q_zero_quadrupole_null
+    prose: qualified_B1_is_exact_B4_is_numeric_and_no_quadrupole_is_not_no_radiation
+  TX2.G-B:
+    predicate: endpoint_null_and_survival_only
+    prose: qualified_generic_tilt_has_both_Omega_and_2Omega_and_the_source_does_not_test_monotonic_norm
+headline_oracle: insensitive_to_eigenvalue_multiplicity_coordinate_basis_generic_tilt_spectrum_convention_and_physical_scope

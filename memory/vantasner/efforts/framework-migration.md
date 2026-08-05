@@ -1986,20 +1986,38 @@ scientific failure. GitNexus finds no affected execution flow for the additive
 module and exports. The integrated promotion boundary validates 729 memory
 records and passes all 1,541 repository tests with a clean terminal status.
 
+P181 adds C-GW-009's exact prescribed rigid rotation of an axisymmetric STF
+moment. Orthogonal conjugation preserves the full tensor's repeated eigenvalue
+and rotating symmetry axis, so TX2's coordinate-diagonal triaxiality claim is
+refuted while its aligned null, corrected perpendicular components, pure
+twice-frequency special limit, derivative norms and principal values,
+generic-tilt mixed harmonics, and convention-safe conditional TT readout and
+power survive. TX2 is qualified through the corrected theorem and its static
+dependencies. Its printed off-diagonal sign, coincidence set, factor-three
+tensor name, exact-field-motion, generic-pure-line, selected-Omega, stability,
+exact-B4, physical-gravity, waveform, radiation, scale, state, observation,
+and substrate readings remain unaccepted. Primary, independent, and nine-node
+graph routes pass 24, 10, and 10 checks, and 89 focused tests pass. TX2, TX3,
+and the new canonical module have no legacy NumPy integration surface, so no
+version-only event affects the scientific verdict. GitNexus rates the reused
+shared APIs LOW risk with no affected execution process. The integrated
+promotion boundary validates 734 memory records and passes all 1,554
+repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.132.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy accepted claims. P001 through P180 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 44 pending, 0 partial, 3 migrated, 161 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.133.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-one accepted claims. P001 through P181 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 43 pending, 0 partial, 3 migrated, 162 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 44
-pending, 3 migrated, 161 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is TX2, pinned at SHA-256
-`7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7`.
-P181 must freeze TX2 before source-body audit and determine which exact tensor-
-rotation identities compose with C-RMOM-001/002 and accepted STF conventions,
-while separating a declared rigid rotation and free angular speed from a
-dynamically solved rotating field, stability theorem, gravitational coupling,
-waveform, or radiation mechanism. A clean seven-check source execution cannot
-create that missing authority.
+The effort remains active. D4 is discharged, but D1 remains open with 43
+pending, 3 migrated, 162 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is TX3, pinned at SHA-256
+`ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837`.
+P182 must freeze TX3 before its own source-body audit and compare every
+observer-frame polarization, temporal-rank, phase, and Omega-independence
+statement with C-GW-002/008/009. It must preserve the distinction between an
+exact conditional TT readout of a prescribed tensor path and a dynamically
+solved conserved source, physical gravity, detector waveform, or radiation
+mechanism. TX3 inherits no blanket authority from TX2's qualification.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

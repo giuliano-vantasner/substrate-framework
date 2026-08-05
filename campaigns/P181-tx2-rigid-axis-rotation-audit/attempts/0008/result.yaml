@@ -1,0 +1,26 @@
+attempt: 0008
+campaign: P181
+candidate: B_C_primary_independent_and_mutation_closure
+status: passed
+started_at: '2026-08-11T08:10:00Z'
+finished_at: '2026-08-11T08:11:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/reviews/independent_commutator_review.py
+primary:
+  terminal: ALL_24_CHECKS_PASS_P181_TX2_C_GW_009
+  oracle: exact_SymPy_matrix_trigonometric_and_conditional_TT_algebra
+independent:
+  terminal: ALL_10_CHECKS_PASS_P181_INDEPENDENT_C_GW_009
+  oracle: independent_dyadic_matrix_exponential_commutator_and_direct_transverse_plane_algebra
+focused_regression: 52_passed
+sensitivity:
+  zero_q: breaks_nonzero_derivative
+  zero_Omega: breaks_nonzero_derivative
+  wrong_quadrupole_scale: factor_nine_conditional_power_error
+  genuinely_triaxial_body: changes_repeated_eigenvalue_polynomial
+  generic_tilt: exposes_Omega_channel_absent_from_perpendicular_limit
+debt:
+  - dependency_consumer_and_nonduplication_replay_open
+  - claim_review_disposition_release_docs_memory_impact_and_integrated_validation_open
+next_attempt: replay_dependency_graph_then_review_C_GW_009_claim_by_claim

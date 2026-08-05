@@ -2,7 +2,7 @@
 description: Audit TX2 and construct an exact rigid-axis STF rotation theorem
 author: vantasner
 created: '2026-08-11T07:53:00Z'
-updated: '2026-08-11T07:53:00Z'
+updated: '2026-08-11T08:18:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - rigid-rotation
 - quadrupole
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P181 TX2 Rigid-Axis Rotation Audit
 
@@ -149,14 +149,14 @@ and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| TX2's exact implementation, predicates, assertion, values, and dataflow are unaudited in P181 | Pin every definition, input, check, assertion, result sentence, and source dependency | open |
-| Pairwise coordinate diagonals may be confused with eigenvalues | Derive the characteristic polynomial, eigenvectors, multiplicities, and coordinate counterexample | open |
-| Aligned, perpendicular, and generic rotation claims are unverified | Derive exact tensor and derivative formulas plus zero and wrong-axis mutations | open |
-| Convention-safe TT readouts, temporal rank, and power are open | Compose with C-GW-001/002/008 and independently rederive all factors | open |
-| Declared `Omega` and rigid rotation may be called solved dynamics | Separate kinematic path, full-field equations, conservation, stability, scale, and coupling | open |
-| C-GW-009 may duplicate accepted claims | Compare exact statements, APIs, assumptions, evidence, and consumers | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open |
-| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, and docs | open |
+| TX2's exact implementation, predicates, assertion, values, and dataflow are unaudited in P181 | Pin every definition, input, check, assertion, result sentence, and source dependency | closed |
+| Pairwise coordinate diagonals may be confused with eigenvalues | Derive the characteristic polynomial, eigenvectors, multiplicities, and coordinate counterexample | closed |
+| Aligned, perpendicular, and generic rotation claims are unverified | Derive exact tensor and derivative formulas plus zero and wrong-axis mutations | closed |
+| Convention-safe TT readouts, temporal rank, and power are open | Compose with C-GW-001/002/008 and independently rederive all factors | closed |
+| Declared `Omega` and rigid rotation may be called solved dynamics | Separate kinematic path, full-field equations, conservation, stability, scale, and coupling | closed |
+| C-GW-009 may duplicate accepted claims | Compare exact statements, APIs, assumptions, evidence, and consumers | closed |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | closed |
+| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, and docs | closed |
 
 ## Review and Promotion Plan
 
@@ -183,6 +183,12 @@ eigenvalue and temporal-rank meanings are exact, kinematics and dynamics are
 separate, dependencies and consumers replay, governed records agree, and the
 debt ledger is empty. Refuting the word triaxial, reproducing seven checks, or
 observing a clean harmonic alone keeps the campaign active.
+
+P181 met this gate in release v0.133.0 by accepting exact C-GW-009 and
+qualifying TX2 predicate by predicate. The full tensor remains axisymmetric;
+the corrected positive theorem owns its prescribed rotation, derivative, tilt,
+and conditional TT algebra. All eight debts are closed, and TX3 remains a
+separate pending consumer.
 
 ## Cross-References
 

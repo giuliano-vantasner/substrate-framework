@@ -1,0 +1,16 @@
+campaign: P181
+base_release: v0.132.0
+base_commit: b88b2576fe0490be21895b87f5b3be77cf5bbd7f
+source_unit: TX2
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_sha256: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7
+derived_inputs:
+  q: normalized_I_STF_repeated_transverse_eigenvalue_from_C_RMOM_001
+  s: explicit_nonzero_quadrupole_convention_scale
+  Omega: declared_real_kinematic_angular_speed
+  axes_and_tilt: declared_Cartesian_orientation_data
+  G_distance_waveform_flux: conditional_premises_inherited_from_C_GW_001_002_008
+numeric_inputs_used_to_select_or_derive_claim: []
+application_only_numeric_input: C_RMOM_002_dimensionless_stationary_branch_magnitude
+hidden_fitted_constants: []
+undeclared_premises: []

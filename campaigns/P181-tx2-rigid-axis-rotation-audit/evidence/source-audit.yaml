@@ -1,0 +1,49 @@
+source_unit: TX2
+body_lines: 264
+imports: [sympy]
+definitions:
+  symbols: {t: real, Omega: real, q: real}
+  body_tensor: diag(q_q_minus_2q)
+  perpendicular_rotation: Rx_Q_body_Rx_transpose
+  aligned_rotation: Rz_Q_body_Rz_transpose
+  general_tilt: Rz_Rtilt_Q_body_Rtilt_transpose_Rz_transpose
+convention_audit:
+  source_label: Q
+  inherited_TX1_object: normalized_I_STF
+  source_q_over_M: 0.169425832
+  source_axial_ratio: -0.338851663
+  accepted_normalized_axial_ratio: -0.338851662271835
+  accepted_triple_Q_axial_ratio: -1.016554986815505
+  finding: source_retains_TX1_factor_three_tensor_name_error
+component_audit:
+  implemented_Rx_yz: plus_3q_sin_Omega_t_cos_Omega_t
+  prose_Rx_yz: minus_3q_sin_Omega_t_cos_Omega_t
+  finding: headline_and_result_prose_have_the_wrong_off_diagonal_sign_for_the_implemented_Rx
+eigenstructure_audit:
+  exact_characteristic_polynomial: (lambda_minus_q)^2_times_(lambda_plus_2q)
+  full_tensor_classification: axisymmetric_for_every_time
+  source_triaxiality_test: three_coordinate_diagonal_entries_at_one_sample
+  defect: diagonal_entries_are_not_eigenvalues_when_Q_yz_is_nonzero
+  eigenvalue_check_defect: eigenvals_keys_discards_the_repeated_q_multiplicity
+  stated_diagonal_coincidence_values: [one_third, two_thirds, one]
+  corrected_sine_squared_values: [zero, one_half, one]
+frequency_audit:
+  perpendicular: DC_plus_pure_2Omega
+  generic_nonzero_tilt: Omega_plus_2Omega
+  aligned: constant
+  source_half_period_test: necessary_but_not_sufficient_for_pure_2Omega
+  source_general_tilt_test: endpoints_only_and_does_not_inventory_the_Omega_channel
+scope_audit:
+  exact_zero_mode: static_orientation_degeneracy_does_not_make_arbitrary_time_dependent_rotation_an_exact_field_solution
+  declared_Omega: not_selected_by_any_accepted_equation
+  no_radiation_language: exceeds_conditional_quadrupole_algebra_and_cannot_exclude_other_multipoles
+  solved_B2_language: exceeds_the_conditional_reduced_ansatz_branch_of_C_RMOM_001_002
+  exact_B4_null: not_accepted_by_P180_only_resolution_bounded_rank_two_null
+  perpendicular_axis: special_pure_2Omega_limit_not_a_generic_tilt
+surviving_exact_content:
+  - orthogonal_conjugation_preserves_symmetry_trace_and_eigenvalues
+  - aligned_rotation_leaves_the_axisymmetric_tensor_constant
+  - perpendicular_rotation_has_exact_DC_plus_2Omega_components
+  - perpendicular_third_derivative_is_nonzero_when_q_times_Omega_is_nonzero
+  - zero_q_gives_the_exact_quadrupole_null
+  - total_derivative_norm_is_continuous_and_maximal_at_perpendicular_tilt_after_independent_derivation

@@ -1,0 +1,13 @@
+attempt: 0007
+campaign: P181
+candidate: B_C_primary_scope_probe
+status: failed_verifier_scope_probe
+started_at: '2026-08-11T08:08:00Z'
+finished_at: '2026-08-11T08:09:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P181-tx2-rigid-axis-rotation-audit/verify.py
+primary:
+  passes_before_failure: 23
+  failure: function_docstring_used_premise_language_without_the_literal_word_conditional
+diagnosis: scope_is_owned_by_the_two_module_level_contracts_not_one_function_docstring_spelling
+repair: check_the_rigid_rotation_kinematic_ceiling_and_conditional_radiation_module_ceiling_directly
+next_attempt: rerun_primary_with_the_same_24_scientific_obligations
