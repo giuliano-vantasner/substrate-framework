@@ -1,0 +1,64 @@
+attempt: 0001
+campaign: P182
+candidate: frozen_authority_recall_and_competing_concepts
+status: passed
+started_at: '2026-08-11T08:28:00Z'
+finished_at: '2026-08-11T08:33:00Z'
+base:
+  release: v0.133.0
+  release_sha256: b54f12b9dad95df4a225f980df6f74f58458ac174e312f5276c7bd1fe4ad1c8e
+  framework_commit: d0299cdfc80664e66cb9c23f0ec21278ad841cdd
+  accepted_claims: 171
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  unit: TX3
+  path: merged-framework/bridges/phase-40/bridge_TX3_two_polarizations_omega_free.py
+  sha256: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837
+  target_path_clean: true
+  source_repository_has_unrelated_later_changes: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+recall:
+  memory_queries: [TX3, Omega_independence, omega_free, incommensurate_phases]
+  accepted_authority: [C-MOM-001, C-GW-001, C-GW-002, C-GW-003, C-GW-005, C-GW-007, C-GW-008, C-GW-009, C-RMOM-001, C-RMOM-002]
+  nearest_canonical_modules: [tt_angular.py, triaxial_l2.py, conditional_triaxial_radiation.py, rigid_quadrupole_rotation.py]
+  candidate_source_dependencies: [BX1, E2, GW2, GW3, QB1, QB3, QB4, TX1, TX2, TX4, TX5]
+exposure_before_freeze:
+  queue_headline_question_result_and_equation_synopsis: exposed
+  prior_source_graph_execution_tally: exposed
+  fresh_source_result_or_runtime_output_blinding_claimed: false
+  exact_source_line_dataflow_predicates_and_assertion_newly_audited: false
+candidates: [A, B, C, D, E, F]
+provisional_identifier_search: [C-GW-010, P182]
+identifier_collisions: []
+claim_delta: [C-GW-010]
+prechange_impact:
+  rigid_axisymmetric_stf_rotation: LOW_1_direct_0_processes
+  conditional_scaled_stf_waveform: LOW_0_reported_processes_partial_graph_result
+  tt_polarization_basis: LOW_0_reported_processes_partial_graph_result
+  temporal_coefficient_rank: LOW_0_reported_processes_partial_graph_result
+  graph_execution_flows: [Run_to_Check, Main_to_Check]
+  policy: add_a_separate_pure_API_and_replay_direct_import_and_test_consumers
+staged_freeze_detection:
+  changed_symbols: 0
+  changed_files: 3
+  risk: LOW
+  affected_processes: []
+compatibility_policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_replay_backed_by_numpy.trapezoid
+  version_only_stop_is_scientific_failure: false
+freeze_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  repository: WORKFLOW_VALID_171_claims_171_accepted_0_proposals
+  migration_queue: 218_units_43_pending_0_partial
+  diff_check: passed
+debt:
+  - exact_TX3_implementation_projector_frame_predicates_assertion_values_and_dataflow_unaudited_in_P182
+  - generic_observer_coefficient_matrix_temporal_rank_and_ellipse_classification_require_exact_derivation
+  - transverse_frame_covariance_direction_azimuth_and_time_origin_require_explicit_separation
+  - fixed_phase_ratio_scale_cancellation_and_physical_time_Omega_dependence_require_exact_scope
+  - source_tensor_convention_conditional_waveform_and_physical_interpretation_require_adjudication
+  - nonduplication_dependencies_consumers_compatibility_and_source_disposition_open
+next_attempt: validate_and_commit_freeze_then_open_the_hash_pinned_TX3_body

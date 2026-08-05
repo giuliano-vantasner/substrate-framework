@@ -1,0 +1,74 @@
+id: P182
+base_release: v0.133.0
+base_commit: d0299cdfc80664e66cb9c23f0ec21278ad841cdd
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [TX3]
+question: >-
+  Does hash-pinned TX3 establish an exact, convention-safe generic-observer
+  polarization-ellipse theorem for the prescribed perpendicular rigid rotation
+  accepted in C-GW-009, with frame-invariant temporal-rank and limiting-view
+  classifications and a precisely scoped phase-parameterized cancellation of
+  the common Omega scale, without treating two nonzero instantaneous
+  coordinates as two modes or importing solved source dynamics, gravity,
+  radiation, detector observables, or an Omega-independent physical waveform?
+invariants:
+  - C-GW-001 and C-GW-002 fix conditional TT projection, normalized and conventional readout conventions, and basis covariance but supply no gravitational action, source equation, detector model, or physical polarization observable.
+  - C-GW-007 fixes temporal source rank as the rank of DC-removed coefficient traces; two nonzero coordinates at one time do not imply rank two, and transverse-frame rotation preserves rank.
+  - C-GW-008 fixes the convention-safe conditional real-m2 waveform and rank theorem; equal quadrature is circular only in the declared natural-axis view and does not grant a generic physical wave interpretation.
+  - C-GW-009 fixes the prescribed perpendicular rotation tensor, its pure twice-Omega harmonic, exact derivatives, rotation-axis conditional circular readout, and kinematic and physical-scope ceilings.
+  - C-MOM-001 and C-RMOM-001 fix normalized I_STF versus triple Q=3*I_STF; TX3 may not silently use the source's factor-three-misnamed tensor.
+  - Polarization coordinates depend on the oriented transverse frame, while temporal rank, ellipse degeneracy, and singular values under orthogonal frame changes are invariant.
+  - A ratio h_cross/h_plus can have phase zeros and poles; cancellation of a common q*Omega^2 scale at fixed dimensionless phase is not independence of the physical-time waveform from Omega.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-MOM-001
+  - C-GW-001
+  - C-GW-002
+  - C-GW-003
+  - C-GW-005
+  - C-GW-007
+  - C-GW-008
+  - C-GW-009
+  - C-RMOM-001
+  - C-RMOM-002
+  - src/substrate_framework/tt_angular.py
+  - src/substrate_framework/triaxial_l2.py
+  - src/substrate_framework/conditional_triaxial_radiation.py
+  - src/substrate_framework/rigid_quadrupole_rotation.py
+  - standard exact SO(3), TT-projection, harmonic-coefficient, rank, determinant, singular-value, ellipse, and trigonometric identities with direction, frame, phase, sign, and quadrupole convention declared
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - TX3 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned TX3 reproduction with complete projector frame amplitude phase ratio predicate assertion dependency and compatibility audit.
+  - id: B
+    description: Derive an exact symmetry-reduced generic-observer TT coefficient matrix for C-GW-009's perpendicular prescribed rotation and classify circular elliptical linear and null limits by rank determinant and ellipse invariants.
+  - id: C
+    description: Treat TX3 as a composition or duplicate of C-GW-002/007/008/009 if no distinct generic-observer theorem or API remains after exact nonduplication audit.
+  - id: D
+    description: Promote the literal two-nonzero-coordinate incommensurate-phase and instantaneous-ratio readings as two populated modes and Omega-free physics.
+  - id: E
+    description: Extend to a dynamically selected rotating conserved full-field source detector waveform gravity and radiation mechanism rather than a prescribed tensor path.
+  - id: F
+    description: Close claim source dependency consumer disposition queue release documentation memory and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_STF_TT_and_readout_convention_compatibility
+  - temporal_rank_and_ellipse_invariants_over_instantaneous_coordinate_nonzeros
+  - exact_generic_direction_and_circular_linear_null_limiting_views
+  - transverse_frame_covariance_and_azimuth_time_origin_separation
+  - fixed_phase_scale_cancellation_distinguished_from_physical_time_Omega_dependence
+  - assumption_parameter_and_physical_premise_economy
+  - symbolic_independent_rederivation_and_mutation_sensitivity
+  - novelty_beyond_C_GW_002_007_008_009
+  - dependency_consumer_and_governance_closure
+claims_proposed: [C-GW-010]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line TX3 body audit; the generated queue
+  and earlier reverse-consumer replay already exposed the generic (1,1,1)
+  sightline, rotation-axis circular and perpendicular linear claims,
+  two-coordinate and incommensurate-phase language, fixed-phase ratio claim,
+  seven-check tally, and one assertion, so no fresh source-result or runtime-
+  output blinding is claimed
+status: draft
+revision: 0001
