@@ -1,0 +1,30 @@
+campaign: P186
+claims: [C-VAC-003]
+direct_consumers:
+  - GK3D2_source_disposition
+  - src/substrate_framework/vacuum_polarization.py
+  - tests/test_scalar_qed4_kinetic.py
+  - campaigns/P186-gk3d2-induced-kinetic-normalization-audit
+  - governance/claims.yaml
+  - governance/releases/v0.138.0.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-VAC-003.md
+  - memory/framework/releases/v0.138.0.md
+  - memory/vantasner/decisions/C-VAC-003-review.md
+  - memory/vantasner/decisions/GK3D2-qualified-review.md
+  - memory/vantasner/efforts/framework-migration.md
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+narrative_reverse_consumers:
+  GK3D1: accepted_C_VAC_002_remains_independent_and_its_forward_normalization_prose_gains_no_blanket_authority
+  GK3D3: may_reuse_the_affine_flow_and_an_explicit_zero_matching_specialization_but_must_not_infer_Z_ref_zero_or_a_total_coupling_from_scale_identification
+  GK3D4: may_reuse_conditional_one_third_and_four_thirds_weights_but_sector_normalizations_and_ratios_require_explicit_common_or_independent_matching_coordinates
+  GK3D6: exact_ratio_and_scheme_independence_do_not_follow_when_sector_matching_offsets_are_unselected
+  GK3D5: a_future_physical_excitation_cannot_retroactively_select_P186s_conditional_quantum_field_or_boundary
+  EL2: existing_qualified_claims_are_not_reopened_or_extended
+  HE5: remains_out_of_scope_and_gains_no_authority
+accepted_claims_retroactively_changed: []
+graph_risk: MEDIUM
+affected_execution_flows: 0
+debt: []

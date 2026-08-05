@@ -1,0 +1,28 @@
+campaign: P186
+criteria_frozen_before_source_body_audit: true
+selected:
+  - {id: A, role: exact_hash_source_native_predicate_and_boundary_dataflow_audit_evidence_only}
+  - {id: B, role: accepted_conditional_complex_scalar_D4_bubble_seagull_and_Laurent_route}
+  - {id: C, role: accepted_affine_inverse_kinetic_flow_with_independent_reference_value}
+  - {id: D, role: retained_exact_scalar_and_Dirac_weights_for_separately_supplied_invariants}
+  - {id: E, role: retained_free_explicit_zero_and_measured_matching_as_distinct_boundary_models}
+  - {id: F, role: governed_claim_source_consumer_release_documentation_memory_and_debt_closure}
+rejected_or_corrected:
+  - {object: source_scalar_slope_from_a_reduced_numerator_helper, reason: no_scalar_action_bubble_seagull_regulator_scale_Laurent_pole_or_counterterm_is_present}
+  - {object: source_identification_of_rung25_as_Z_of_Lambda_equals_zero, reason: rung25_constructs_pure_gauge_witnesses_and_defines_no_kinetic_coefficient_matter_threshold_or_matching_surface}
+  - {object: source_removal_of_the_additive_constant, reason: the_affine_flow_retains_an_independent_reference_value_until_a_matching_condition_is_separately_declared}
+  - {object: source_scale_order_as_general_positivity_criterion, reason: positivity_depends_on_the_reference_value_off_the_explicit_zero_matching_branch}
+  - {object: source_one_remaining_dimensionless_number, reason: Z_ref_matter_weights_and_scale_mapping_remain_independent_inputs}
+  - {object: physical_complex_boson_Dirac_group_or_substrate_identification, reason: no_accepted_dependency_supplies_the_spectrum_representation_or_matching}
+selection_basis:
+  - explicit_action_statistics_bubble_and_seagull
+  - integrand_derived_Ward_cancellation
+  - exact_D4_regulator_pole_subtraction_and_log_slopes
+  - one_tensor_connection_and_scale_convention_for_scalar_and_Dirac
+  - universal_slope_separated_from_local_and_matching_coordinates
+  - conditional_zero_matching_separated_from_the_general_affine_family
+  - independent_rederivation_and_load_bearing_mutations
+  - dependency_consumer_and_governance_closure
+numeric_comparator_used_for_selection: false
+foundational_revision_required: false
+verdict: one_distinct_positive_conditional_theorem_and_no_rung25_selected_physical_total_normalization

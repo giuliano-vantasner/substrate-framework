@@ -1,0 +1,72 @@
+source_unit: GK3D2
+checks:
+  GK3D2_0:
+    verdict: qualified_symbolic_free_parameter_guard
+    retained: displayed_symbols_are_unfitted
+    rejected: [derived_matter_spectrum, derived_group, derived_matching_scale]
+  GK3D2_1a:
+    verdict: exact_Gamma_recurrence_inside_a_declared_regulator
+    retained: finite_mass_derivative_factor
+    rejected: regulator_free_scalar_derivation
+  GK3D2_1b:
+    verdict: accepted_only_through_C_VAC_002_Dirac_scope
+    retained: Dirac_mass_log_slope_in_the_frozen_convention
+  GK3D2_1c:
+    verdict: corrected_and_strengthened_by_C_VAC_003
+    retained: complex_scalar_mass_log_slope_e_squared_over_24pi_squared
+    rejected: complete_derivation_from_the_sources_reduced_numerator_helper
+  GK3D2_1d:
+    verdict: exact_cross_statistics_ratio_after_two_complete_derivations
+    retained: Dirac_to_complex_scalar_ratio_four
+  GK3D2_2a_2b:
+    verdict: accepted_conditionally_through_C_VAC_003
+    retained: [four_thirds_Dirac_weight, one_third_complex_scalar_weight]
+    rejected: [selected_representation, physical_matter_multiplicity, substrate_excitation]
+  GK3D2_2c:
+    verdict: conditional_positivity_only
+    retained: positive_coefficient_for_a_separately_supplied_positive_invariant_weight
+    rejected: existence_of_such_physical_matter
+  GK3D2_3a:
+    verdict: validation_theater_and_boundary_overreach
+    retained: rung25_file_exists_and_contains_pure_gauge_examples
+    rejected: file_keyword_implies_Z_of_Lambda_equals_zero
+  GK3D2_3b:
+    verdict: exact_only_on_a_separately_imposed_zero_matching_branch
+    retained: affine_solution_after_explicit_Z_ref_equals_zero
+    rejected: rung25_derives_that_branch
+  GK3D2_3c:
+    verdict: shared_input_consistency_not_independent_validation
+    retained: differentiating_the_affine_solution_recovers_its_input_slope
+    rejected: two_independent_routes
+  GK3D2_4a:
+    verdict: solves_an_imposed_boundary
+    retained: Z_at_reference_zero_has_unique_Z_ref_zero
+    rejected: provenance_or_physical_selection_of_that_boundary
+  GK3D2_4b:
+    verdict: duplicate_substitution
+    retained: zero_boundary_specialization
+    rejected: narrative_inversion_as_a_derivation
+  GK3D2_5a:
+    verdict: finite_samples_replaced_by_exact_conditional_sign_statement
+    retained: positive_b_and_zero_matching_give_positive_Z_exactly_for_reference_above_running_scale
+    rejected: two_samples_prove_global_iff_or_general_positivity
+  GK3D2_5b:
+    verdict: qualified_conditional_wrong_sign_branch
+    retained: zero_matching_b_positive_and_reference_below_scale_give_negative_Z
+    rejected: general_ghost_claim_without_Z_ref
+  GK3D2_6a:
+    verdict: exact_log_ratio_invariance_for_the_running_piece
+    retained: common_scale_rescaling_preserves_log_reference_over_scale
+    rejected: total_normalization_has_only_one_input
+  GK3D2_6b:
+    verdict: validation_theater
+    retained: none
+    rejected: subtracting_the_displayed_formula_from_itself_proves_unique_normalization
+advertised_unchecked_or_overreaching_claims:
+  rung25_is_a_matching_boundary: rejected
+  additive_constant_removed: rejected
+  total_induced_normalization_derived: rejected
+  scalar_loop_regulator_free: rejected
+  scale_order_alone_controls_general_positivity: rejected
+  physical_matter_group_dimension_and_substrate: rejected
+overall: qualify_GK3D2_through_C_VAC_003_scalar_loop_affine_family_and_explicit_zero_matching_only

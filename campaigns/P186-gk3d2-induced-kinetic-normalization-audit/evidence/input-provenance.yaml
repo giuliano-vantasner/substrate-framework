@@ -1,0 +1,42 @@
+campaign: P186
+accepted_base: v0.137.0
+conditional_model_inputs:
+  quantum_field: one_or_more_free_complex_charged_scalars_declared_separately_from_accepted_classical_matter
+  action: scalar_QED_determinant_Tr_log_minus_D_squared_plus_M2
+  loop_order: one
+  statistics: complex_scalar
+  tensor_convention: Pi_mn_equals_q2_g_mn_minus_q_m_q_n_times_Pi2
+  regulator: one_common_shift_invariant_gauge_preserving_dimensional_regulator
+  required_graphs: [oriented_scalar_bubble, scalar_seagull]
+  integration_dimension: d_with_D4_endpoint_d_equals_4_minus_2epsilon
+  D4_scale: mu2_to_epsilon
+  subtraction: MSbar_pole_subtraction_plus_arbitrary_finite_local_counterterm
+  connection_translation: B_equals_e_A_and_minus_Z_B_F_B_squared_over_four
+  matter_weights: separately_supplied_nonnegative_exact_scalar_and_Dirac_invariant_weights
+  flow_boundary: separately_supplied_positive_reference_scale_and_real_Z_ref
+accepted_dependencies: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001]
+comparators_not_dependencies: [C-VAC-001, C-RGE-004, C-RGE-005]
+source_evidence: GK3D2_at_substrate_6d1f4e0_SHA256_856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886
+upstream_evidence: rung25_SHA256_a69197cd1925560af122f268edb71738ecc896df3a61f557ef9daf26d4bbd2fa
+external_primary_comparators:
+  - {citation: arXiv_hep-ph_9806451, role: scalar_QED_action_bubble_seagull_transversality_and_beta_coefficient}
+  - {citation: arXiv_1611.00446v2, role: dimensionally_regulated_ordinary_scalar_bubble_seagull_and_commutative_beta_comparator}
+derived_in_P186:
+  - exact_integrand_level_scalar_bubble_seagull_Ward_cancellation
+  - exact_general_d_scalar_parameter_master
+  - exact_D4_zero_momentum_Laurent_MSbar_family_and_log_slopes
+  - exact_scalar_to_Dirac_factor_four_in_one_tensor_convention
+  - exact_connection_field_weights_one_third_and_four_thirds
+  - exact_affine_kinetic_flow_with_independent_reference_value
+  - exact_reference_coordinate_covariance_and_zero_matching_specialization
+empirical_inputs: []
+fitted_parameters: []
+unresolved_physical_inputs:
+  - existence_identity_and_multiplicity_of_physical_charged_matter
+  - physical_gauge_group_representation_and_generator_normalization
+  - bare_kinetic_coefficient_and_finite_matching_offset
+  - reference_scale_and_matching_condition
+  - total_kinetic_normalization_and_observed_coupling
+  - preferred_dimension_and_substrate_realization
+hidden_imports: []
+debt: []

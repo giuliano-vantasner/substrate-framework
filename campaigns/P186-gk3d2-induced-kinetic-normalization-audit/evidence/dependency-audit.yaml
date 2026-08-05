@@ -1,0 +1,36 @@
+campaign: P186
+claims:
+  C-VAC-003:
+    direct_dependencies: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001]
+    dependency_roles:
+      C-GAU-001: connection_curvature_and_local_kinetic_coefficient_nonselection
+      C-DIM-009: mass_dimension_tensor_and_connection_normalization_bookkeeping
+      C-VAC-002: independently_derived_Dirac_D4_comparator_and_factor_four_endpoint
+      C-MAX-001: deleting_the_kinetic_term_gives_current_zero_not_A_pure_gauge_or_a_matching_value
+    declared_mathematics:
+      - scalar_covariant_derivative_vertices_and_seagull
+      - Feynman_parameterization_and_shift_invariant_momentum_routing
+      - dimensionally_regulated_Gaussian_integral_and_Gamma_function
+      - exact_Laurent_limits_and_MSbar_definition
+      - exact_affine_first_order_flow_integration
+application_comparators_not_needed_for_the_theorem: [C-VAC-001, C-RGE-004, C-RGE-005]
+closure:
+  accepted: true
+  undeclared_constants: []
+  empirical_inputs: []
+  fitted_parameters: []
+  physical_charged_matter: none
+  physical_group_or_representation: none
+  selected_reference_value: none
+  selected_matching_scale: none
+  total_gauge_coupling: none
+  substrate_identification: none
+conventions:
+  source_tensor: q_squared_g_minus_q_outer_q_times_Pi2
+  spacelike_variable: Q_equals_minus_q_squared_positive
+  scalar_statistics: complex_with_bubble_and_seagull
+  D4_continuation: fixed_scalar_content_at_d_equals_4_minus_2epsilon
+  connection_field: B_equals_e_A
+  kinetic_action: minus_Z_B_F_B_squared_over_four
+  flow: mu_dZ_B_dmu_equals_minus_b_over_8pi_squared
+debt: []

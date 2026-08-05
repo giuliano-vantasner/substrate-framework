@@ -1,0 +1,28 @@
+campaign: P186
+registry_campaign_memory_collision_search:
+  exact_identifier_collisions: false
+  provisional_identifier_collisions: false
+comparisons:
+  C-VAC-001:
+    overlap: complex_scalar_bubble_seagull_Ward_and_projector_typing
+    distinction: massive_D2_finite_kernel_not_D4_Laurent_subtraction_or_affine_kinetic_boundary
+  C-VAC-002:
+    overlap: general_d_parameter_master_D4_Laurent_MSbar_and_log_slope_conventions
+    distinction: free_Dirac_statistics_and_spinor_trace_not_complex_scalar_bubble_plus_seagull
+  C-RGE-004:
+    overlap: exact_affine_coordinates_reference_shifts_and_independent_offsets
+    distinction: generic_supplied_linear_system_not_a_derived_scalar_loop_coefficient_or_connection_field_flow
+  C-RGE-005:
+    overlap: one_third_complex_scalar_and_two_thirds_Weyl_imported_beta_weights
+    distinction: imports_generic_weights_but_does_not_derive_the_scalar_bubble_seagull_residue_or_a_total_kinetic_boundary_family
+  C-MAX-001:
+    overlap: kinetic_coefficient_and_no_kinetic_variational_equation
+    distinction: classical_supplied_action_not_a_quantum_loop_or_matching_theorem
+novel_objects:
+  - exact_complex_scalar_D4_bubble_seagull_Laurent_MSbar_and_slope_ledger
+  - exact_cross_statistics_factor_four_against_C_VAC_002
+  - exact_connection_field_composition_of_derived_scalar_and_Dirac_weights
+  - exact_affine_total_with_explicit_local_finite_and_reference_coordinates
+  - explicit_countermodels_to_rung25_as_zero_matching_and_scale_only_positivity
+new_physical_premises: []
+verdict: distinct_compatible_conditional_scalar_D4_and_boundary_theorem_without_a_selected_physical_sector_or_total_normalization
