@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T12:24:00Z'
+updated: '2026-08-11T12:31:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -240,6 +240,15 @@ and running boundaries but no governed GK3D2 result. Every later failed
 implementation, representation, regulator, boundary, candidate, or verifier
 route remains append-only with a materially different continuation.
 
+Attempt 0004 extracts pure scalar Ward, general-dimensional master, D4
+Laurent/MS-bar, and affine kinetic-boundary APIs into the package. Eighty
+focused tests pass across the new scalar surface and the accepted Dirac,
+generic beta, and affine-running ledgers. The wrong-seagull, finite-boundary,
+scale-ordering, and hidden-float mutations change or reject the relevant
+verdict, while a paired reference-coordinate change preserves the same
+running function. This discharges implementation debt but not independent
+rederivation, source-graph replay, or governed promotion.
+
 ## Debt Ledger
 
 The P186 ledger tracks source reachability, scalar quantum premises,
@@ -250,11 +259,11 @@ governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | GK3D2 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source audit and attempt 0002 |
-| The scalar coefficient may be copied from a numerator integral without a seagull or regulator | Derive it in a complete gauge-preserving scalar-QED convention | open |
-| Dirac and scalar beta conventions may be mixed | Derive both weights in one declared kinetic and scale convention | open |
-| A differential slope may be presented as a total normalization | Integrate the affine family and retain its independent reference value | open |
-| The earlier no-matter result may be mislabeled a matching boundary | Compare theories, premises, and operator bases and require a separately declared matching condition | open |
-| Bare and finite counterterm coordinates may be erased | Expose both and show load-bearing mutations with the same loop slope | open |
+| The scalar coefficient may be copied from a numerator integral without a seagull or regulator | Derive it in a complete gauge-preserving scalar-QED convention | discharged by the canonical Ward, master, and D4 APIs and focused tests; primary and independent campaign replay remain |
+| Dirac and scalar beta conventions may be mixed | Derive both weights in one declared kinetic and scale convention | discharged by exact factor-four and generic-ledger cross-checks; campaign replay remains |
+| A differential slope may be presented as a total normalization | Integrate the affine family and retain its independent reference value | discharged by the affine API and same-slope unequal-boundary mutation; campaign replay remains |
+| The earlier no-matter result may be mislabeled a matching boundary | Compare theories, premises, and operator bases and require a separately declared matching condition | discharged at implementation level by conditional zero-matching and general-boundary counterexamples; claim review remains |
+| Bare and finite counterterm coordinates may be erased | Expose both and show load-bearing mutations with the same loop slope | discharged by finite-counterterm and boundary-coordinate APIs; campaign replay remains |
 | Group and matter weights may be called physical sectors | Preserve conditional multiplicities, charge squares, traces, and generator/coupling rescaling | open |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D2 has no NumPy surface |
 | Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |

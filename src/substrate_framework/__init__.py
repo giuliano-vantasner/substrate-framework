@@ -257,9 +257,17 @@ from .momentum_kernels import (
 )
 from .vacuum_polarization import (
     EuclideanTransverseProjector,
+    MatterInducedKineticEvidence,
+    ScalarQED4ZeroMomentumRenormalization,
     ScalarQED2VacuumPolarization,
+    ScalarVacuumPolarizationMaster,
+    ScalarWardIntegrandEvidence,
     euclidean_transverse_projector,
+    matter_induced_kinetic_evidence,
     scalar_qed2_vacuum_polarization,
+    scalar_qed4_zero_momentum_renormalization,
+    scalar_vacuum_polarization_master,
+    scalar_ward_integrand_evidence,
 )
 from .gauge_beta import (
     AbelianGaugeRescalingLedger,
