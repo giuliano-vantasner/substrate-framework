@@ -162,6 +162,24 @@ instead depends on `w+N*w'`. Candidates B, D, E, and F are selected; A remains
 source evidence, C is rejected as duplicate, and G remains open. C-BRN-002 is
 reserved but unpromoted, and no canonical API change is warranted.
 
+Attempt 0004 preserves a primary-verifier representation stop after 31 passing
+checks. The squared-factorial mutation tried to substitute a composite
+`w_n*S/(n+1)` expression as though it were an atomic symbol, so SymPy left the
+baseline unchanged and the sensitivity oracle correctly failed. The repair
+recomputes the wrong branch difference directly with adjacent ratio
+`S/(n+1)^2`. No formula, threshold, candidate, or verdict changes.
+
+Attempt 0005 passes both serious boundaries: 58 primary mutation-sensitive
+checks and 27 independent raw-SymPy checks. The independent route imports no
+candidate or accepted scientific API and reconstructs the branch fractions,
+adjacent difference, endpoint and integer-tie minima, enhancement thresholds,
+population-path derivative, named-family contrasts, and physical
+countermodels. Fifty-two existing branching and Fock tests pass in 2.62
+seconds. No canonical code changes because the accepted public APIs already
+express the complete warranted composition; a new wrapper would add no
+invariant, parameter, sample space, or algorithm. Dependency, consumer,
+impact, and source-graph review remain open.
+
 ## Debt Ledger
 
 The P193 ledger tracks source predicates, accepted overlap, order and

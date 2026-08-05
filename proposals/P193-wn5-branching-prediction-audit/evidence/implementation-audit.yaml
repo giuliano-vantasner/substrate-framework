@@ -1,0 +1,24 @@
+campaign: P193
+decision: no_canonical_code_change
+reason: accepted_public_APIs_already_express_the_complete_warranted_composition
+existing_surfaces:
+  branching:
+    path: src/substrate_framework/branching.py
+    APIs: [weighted_channel_allocation, relative_weighted_odds_enhancement]
+  factorial_one:
+    path: src/substrate_framework/bosonic_fock.py
+    APIs: [factorial_one_mass, factorial_one_modes]
+candidate_wrapper_rejected: factorial_one_weighted_channel_allocation
+wrapper_cost:
+  new_invariant: false
+  new_parameter: false
+  new_sample_space: false
+  new_algorithm: false
+  duplicated_assumptions: [positive_weight, positive_population, positive_baselines, all_nonnegative_support]
+focused_replay:
+  command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_branching.py tests/test_bosonic_fock.py tests/test_factorial_one_distribution.py
+  tests_passed: 52
+  seconds: 2.62
+canonical_signatures_changed: []
+canonical_values_changed: []
+scientific_threshold_changed: false

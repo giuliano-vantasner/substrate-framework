@@ -1,0 +1,23 @@
+campaign: P193
+verifier: reviews/independent_branching_composition_review.py
+sha256: d2df0b9521f9517ea9d20322a5f75ba53b770640901c5d8b1d38a6a682c8d063
+imports:
+  - __future__.annotations
+  - hashlib
+  - pathlib.Path
+  - sympy
+  - substrate_framework.verification.CheckLedger
+imports_candidate_scientific_API: false
+imports_accepted_scientific_API: false
+pins:
+  source_sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+  release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+  formula_freeze_sha256: cacdf392e3956657e0b65d24cf236f39041d00b2a6a5e8ce0502edb8df6c7511
+terminal_tally: ALL_27_CHECKS_PASS
+fresh_constructions:
+  - raw_factorial_one_weights_and_branch_fractions
+  - raw_adjacent_difference_and_squared_factorial_mutation
+  - brute_exact_endpoint_and_tie_complete_minima
+  - raw_relative_odds_ratios_and_population_thresholds
+  - raw_total_path_derivative_and_named_family_signs
+  - raw_zero_interaction_and_spectral_countermodels

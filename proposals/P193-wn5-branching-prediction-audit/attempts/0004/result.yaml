@@ -1,0 +1,14 @@
+attempt: 0004
+campaign: P193
+candidate: primary_exact_composition_verifier
+status: failed_representation_repaired
+started_at: '2026-08-11T19:22:00Z'
+finished_at: '2026-08-11T19:23:00Z'
+passed_before_failure: 31
+failure: squared_factorial_mutation_was_applied_by_substituting_a_non_atomic_composite_expression
+diagnosis: verifier_representation
+repair: recompute_the_mutated_branch_difference_directly_from_the_squared_factorial_adjacent_ratio
+formula_changed: false
+threshold_changed: false
+verdict_changed: false
+next_attempt: rerun_primary_then_independent_from_the_frozen_formula

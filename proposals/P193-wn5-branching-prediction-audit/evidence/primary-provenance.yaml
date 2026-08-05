@@ -1,0 +1,17 @@
+campaign: P193
+verifier: verify.py
+sha256: 53335e8a3ff15b21a4ebabf67747ceab580c787560f0e623b61d3ea046dd449c
+imports_accepted_scientific_APIs: true
+imports_candidate_scientific_API: false
+pins:
+  source_sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc
+  release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+  formula_freeze_sha256: cacdf392e3956657e0b65d24cf236f39041d00b2a6a5e8ce0502edb8df6c7511
+terminal_tally: ALL_58_CHECKS_PASS
+oracle_scope:
+  - accepted_API_composition
+  - exact_adjacent_branch_fraction_difference
+  - endpoint_and_integer_tie_complete_minima
+  - exact_relative_odds_thresholds
+  - fixed_partial_and_population_path_separation
+  - load_bearing_mutations_named_family_contrast_and_physical_countermodels

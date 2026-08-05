@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P193
+candidate: primary_and_independent_exact_composition_verification
+status: passed
+started_at: '2026-08-11T19:24:00Z'
+finished_at: '2026-08-11T19:27:00Z'
+primary:
+  terminal_tally: ALL_58_CHECKS_PASS
+  imports_accepted_scientific_APIs: true
+  imports_candidate_scientific_API: false
+  mutation_sensitive: true
+independent:
+  terminal_tally: ALL_27_CHECKS_PASS
+  imports_candidate_scientific_API: false
+  imports_accepted_scientific_API: false
+focused_tests:
+  tests_passed: 52
+  seconds: 2.62
+implementation: no_canonical_code_change
+provisional_claim: C-BRN-002
+claim_promotion: false
+compatibility_version_failures: 0
+scientific_threshold_changed: false
+next_attempt: complete_dependency_consumer_impact_and_source_graph_review_then_terminally_dispose_WN5
