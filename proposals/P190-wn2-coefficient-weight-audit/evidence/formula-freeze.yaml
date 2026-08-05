@@ -1,0 +1,78 @@
+campaign: P190
+claim: C-CMB-002
+status: frozen_before_implementation
+domains:
+  order: positive_integer
+  activity: exact_positive_dimensionless_real
+  enclosure_activity: exact_positive_rational
+  cutoff: positive_odd_integer_with_tail_ratio_below_one
+sample_space:
+  ambient: positive_integers
+  measure: counting_measure
+  support: positive_odd_integers
+  physical_probability_interpretation: separate_premise
+definitions:
+  unnormalized_mass: m_z(n)=indicator_odd(n)*z^(2*n)/(factorial(n)^2)
+  total_mass: M(z)=sum_over_positive_odd_n(z^(2*n)/(factorial(n)^2))
+  normalized_mass: p_z(n)=m_z(n)/M(z)
+exact_normalization:
+  modified_Bessel_series: I_0(2*z)=sum_over_n_at_least_zero(z^(2*n)/(factorial(n)^2))
+  Bessel_series: J_0(2*z)=sum_over_n_at_least_zero((-1)^n*z^(2*n)/(factorial(n)^2))
+  parity_filter: M(z)=(I_0(2*z)-J_0(2*z))/2
+  positivity: M(z)>0_for_z>0
+  normalized_sum: sum_over_positive_integers(p_z(n))=1
+tail_enclosure:
+  cutoff: M_is_positive_and_odd
+  partial_mass: L_M(z)=sum_over_odd_n_at_most_M(z^(2*n)/(factorial(n)^2))
+  first_omitted: f_M(z)=z^(2*(M+2))/(factorial(M+2)^2)
+  ratio_ceiling: r_M(z)=z^4/((M+3)^2*(M+4)^2)
+  premise: r_M(z)<1
+  conclusion: L_M(z)<M(z)<=L_M(z)+f_M(z)/(1-r_M(z))
+  normalized_tail_ceiling: sum_over_odd_n_greater_than_M(p_z(n))<=f_M(z)/((1-r_M(z))*L_M(z))
+unit_activity_specialization:
+  cutoff: 9
+  partial_mass: 135348874561/131681894400
+  first_omitted_order: 11
+  first_omitted_mass: 1/1593350922240000
+  tail_ratio_ceiling: 1/24336
+  total_mass_upper: 9963487458886859459/9693548673177600000
+  order_one_probability_lower: 9693548673177600000/9963487458886859459
+  through_order_three_probability_lower: 9962813914099200000/9963487458886859459
+  order_one_exceeds_972_per_mille_margin: 2259715784893151463/2490871864721714864750
+  through_three_exceeds_9999_per_ten_thousand_margin: 3228039582292269459/99634874588868594590000
+  mode: 1
+  mode_reason: consecutive_odd_ratio_1/((n+1)^2*(n+2)^2)_is_below_one
+normalization_mutation:
+  activity: 4
+  order_three_over_order_one_mass_ratio: 64/9
+  order_five_over_order_three_mass_ratio: 16/25
+  mode: 3
+  implication: unit_activity_mode_is_not_normalization_invariant
+conditional_allocation:
+  odd_order: positive_mass_may_be_supplied_to_C_BRN_001_weighted_specialization_with_separate_rate_and_population_premises
+  even_order: zero_mass_uses_C_BRN_001_general_two_channel_endpoint_not_the_positive_weight_specialization
+  physical_channel_or_rate: not_derived
+countermodels:
+  - a_normalized_mathematical_distribution_may_legitimately_have_mode_one
+  - changing_declared_activity_from_one_to_four_moves_the_mode_without_changing_factorial_or_parity_structure
+  - multiplying_by_a_separately_supplied_order_dependent_rate_factor_can_change_the_rate_profile
+  - a_zero_parity_endpoint_is_valid_in_the_general_allocation_when_the_comparison_rate_is_positive
+physical_ceiling:
+  - normalization_declares_a_mathematical_mass_function_not_an_occurrence_law
+  - coefficient_mass_does_not_supply_states_interaction_phase_space_or_spectral_density
+  - activity_coordinate_normalization_and_common_dimension_must_be_declared
+  - PN2_supplies_no_accepted_physical_band_or_order_exclusion
+  - WN3_and_WN4_are_not_premises
+mutation_obligations:
+  - odd_versus_even_parity_filter
+  - Bessel_difference_versus_sum
+  - Bessel_argument_two_times_activity
+  - factorial_square
+  - activity_power_two_times_order
+  - tail_first_omitted_order
+  - tail_ratio_denominator_squares
+  - normalization_denominator
+  - cutoff_parity_and_ratio_domain
+  - unit_activity_concentration_thresholds
+  - activity_four_mode_shift
+  - positive_weight_versus_zero_endpoint_API

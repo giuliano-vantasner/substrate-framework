@@ -2,7 +2,7 @@
 description: Audit WN2 and derive an exact parity-thinned factorial mass and conditional allocation ledger
 author: vantasner
 created: '2026-08-11T15:58:00Z'
-updated: '2026-08-11T16:10:00Z'
+updated: '2026-08-11T16:17:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -157,6 +157,17 @@ be silently identified with a deterministic floor count. Thirty-seven direct
 factorial-grid checks also underencode the stated universal induction. The
 next attempt therefore freezes an exact infinite odd-mass oracle and explicit
 countermodels rather than treating the source tally as its headline proof.
+
+Attempt 0003 freezes the distinct candidate as the dimensionless family
+`m_z(n)=1_odd(n) z^(2n)/(n!)^2` on the positive integers with counting measure.
+Parity-filtering the defining power series gives the exact total
+`(I_0(2z)-J_0(2z))/2`. A rational geometric enclosure at `z=1`, cutoff nine,
+proves the source's 97.2% and 99.99% lower bounds with positive exact margins
+and without trusting decimals. The activity is load-bearing: `z=1` has mode
+one, while `z=4` has mode three because the adjacent odd mass ratios are
+`64/9` and `16/25`. Thus concentration is a theorem of a declared
+normalization, not a universal admissibility test. Implementation and an
+independent raw-series route remain open.
 
 ## Debt Ledger
 

@@ -1,0 +1,32 @@
+attempt: 0003
+campaign: P190
+candidate: exact_odd_mass_formula_and_oracle_freeze
+status: passed_formula_and_countermodel_freeze
+started_at: '2026-08-11T16:11:00Z'
+finished_at: '2026-08-11T16:17:00Z'
+exact_derivation:
+  parity_filter: (I_0(2*z)-J_0(2*z))/2
+  sympy_unit_mass: 1.0278472615974157996926884930807923637303433102834
+  unit_order_one_probability: 0.97290719872703914112557284637887886082925126517574
+  unit_through_three_probability: 0.99993239869167911726794986988940327363006380031951
+  decimals_role: regression_only
+rational_oracle:
+  cutoff: 9
+  lower_total: 135348874561/131681894400
+  upper_total: 9963487458886859459/9693548673177600000
+  upper_minus_lower: 169/269265240921600000
+  source_order_one_threshold_margin_positive: 2259715784893151463/2490871864721714864750
+  source_through_three_threshold_margin_positive: 3228039582292269459/99634874588868594590000
+countermodel_oracle:
+  activity_one_mode: 1
+  activity_four_mode: 3
+  activity_four_order_three_over_one: 64/9
+  activity_four_order_five_over_three: 16/25
+frozen_obligations:
+  - primary_API_reuses_C_CMB_001_and_retains_activity_sample_space_and_physical_ceiling
+  - independent_route_derives_series_and_tail_without_new_API
+  - every_load_bearing_formula_has_a_rejected_mutation
+  - conditional_C_BRN_001_composition_distinguishes_positive_weight_and_zero_endpoint
+  - no_PN2_WN3_or_WN4_premise
+scientific_threshold_changed: false
+next_attempt: implement_exact_API_primary_verifier_independent_rederivation_and_focused_tests

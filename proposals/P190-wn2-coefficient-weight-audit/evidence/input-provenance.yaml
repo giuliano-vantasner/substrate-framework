@@ -1,0 +1,36 @@
+campaign: P190
+claim: C-CMB-002
+accepted_inputs:
+  C_SG_019:
+    contribution: exact_zero_background_odd_coefficient_and_activity_power
+    ceiling: no_quantum_weight_rate_or_probability
+  C_CMB_001:
+    contribution: positive_inverse_square_factorial_sequence_recurrence_and_tail_suppression
+    ceiling: no_normalization_across_orders_or_physical_weight_law
+  C_BRN_001:
+    contribution: exact_two_channel_normalization_and_positive_weight_specialization
+    ceiling: caller_supplies_common_dimension_rates_weight_population_and_channel_exhaustiveness
+mathematical_imports:
+  - positive_integer_factorials
+  - Bessel_and_modified_Bessel_power_series
+  - parity_filtering
+  - monotone_geometric_tail_comparison
+  - exact_rational_inequalities
+declared_inputs:
+  activity:
+    type: exact_positive_dimensionless_real
+    source: caller
+    physical_meaning: none_derived
+  order_sample_space:
+    value: positive_integers_with_counting_measure_and_odd_support
+    source: theorem_definition
+  rate_baselines_population_and_channel_labels:
+    source: caller_if_conditional_C_BRN_001_composition_is_requested
+excluded_inputs:
+  - PN2_physical_band
+  - PN2_physical_subdivision_mode
+  - WN3_or_WN4_weight_family
+  - fitted_activity
+  - empirical_comparator
+  - hidden_final_state_factor
+unit_activity_comparator_status: exposed_before_implementation_and_not_used_for_candidate_selection
