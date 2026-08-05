@@ -1,0 +1,15 @@
+attempt: 0001
+campaign: P208
+timestamp_utc: '2026-08-05T22:18:31Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: 4113a4733a309269c5483ec2084e77487b5b18a2
+base_release: v0.150.0
+source_unit: GC1
+candidates: [A, B, C, D, E, F, G, H]
+claims_proposed: [C-QBL-005]
+source_body_inspected: false
+native_source_executed: false
+exposed_queue_formulas: [D_equals_f_squared_over_4, c_equals_f, D_equals_c_squared_over_4]
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction

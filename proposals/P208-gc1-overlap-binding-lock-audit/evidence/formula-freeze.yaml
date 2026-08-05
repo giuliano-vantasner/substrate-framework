@@ -1,0 +1,53 @@
+revision: 0001
+campaign: P208
+source_unit: GC1
+declared_quartic_model:
+  field: f
+  parameter: kappa_positive
+  potential: V_of_f_equals_kappa_squared_f_squared_over_2_minus_f_fourth_over_48
+  vacuum_curvature: V_double_prime_at_zero
+  curvature_deficit: D_of_f_equals_V_double_prime_at_zero_minus_V_double_prime_at_f
+candidate_local_couplings:
+  source_linear_declaration: c_of_f_equals_f
+  normalized_linear_family: c_of_f_equals_lambda_times_f_with_nonzero_lambda
+  nonlinear_family: c_of_f_equals_f_to_power_p
+  independent_multiplier: c_independent_of_f
+exact_obligations:
+  - differentiate_the_declared_potential_twice_without_substituting_a_profile
+  - prove_D_of_f_equals_f_squared_over_4
+  - under_c_equals_f_only_prove_D_equals_c_squared_over_4
+  - under_c_equals_lambda_f_prove_D_equals_c_squared_over_4_lambda_squared
+  - show_a_generic_power_or_independent_coupling_does_not_imply_the_source_lock
+  - show_an_epsilon_f_six_potential_deformation_changes_D_by_a_quartic_term
+  - substitute_the_accepted_sech_profile_only_after_the_arbitrary_field_identity
+  - distinguish_translation_of_one_whole_well_from_attenuation_of_one_core_profile
+profile_regression:
+  accepted_profile: f0_of_x_equals_sqrt_24_kappa_sech_kappa_x
+  expected_deficit: D_of_x_equals_6_kappa_squared_sech_squared_kappa_x
+  interpretation: regression_substitution_not_independent_evidence
+tail_obligations:
+  - if_c_is_asymptotic_to_A_exp_minus_kappa_r_then_D_is_asymptotic_to_A_squared_over_4_exp_minus_2_kappa_r_under_c_equals_f
+  - no_tail_statement_implies_absence_of_a_bound_state_without_a_complete_operator_problem
+  - a_separately_translated_fixed_depth_well_is_not_the_attenuated_tail_of_the_core_profile
+possible_numeric_obligation: >-
+  None is preregistered from the queue excerpt alone. If source inspection
+  reveals an actual spectral threshold or finite-well claim, freeze its
+  equation domain boundary data discretization solver tolerances refinement
+  error norm and independent route in a proposal revision before evaluating it.
+mutations:
+  - change_the_linear_coupling_normalization_lambda
+  - replace_the_coupling_by_f_squared
+  - make_the_coupling_an_independent_multiplier
+  - add_epsilon_f_six_to_the_potential
+  - change_the_quartic_coefficient
+  - translate_the_entire_well_without_changing_its_depth
+  - compare_a_separately_planted_well_to_the_core_tail_at_the_same_center
+  - change_or_remove_any_operator_domain_or_boundary_condition_used_by_a_no_go
+physical_ceiling:
+  - no_stability_or_quantum_state
+  - no_physical_condensate_vev_or_Yukawa_identity
+  - no_generation_count_mass_hierarchy_or_mixing_matrix
+  - no_universal_overlap_binding_no_go
+  - no_radial_tower_or_multisoliton_selection
+  - no_weak_angle_Standard_Model_or_substrate_realization
+scientific_version_failures: 0

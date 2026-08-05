@@ -1,0 +1,37 @@
+campaign: P208
+framework_base_commit: 4113a4733a309269c5483ec2084e77487b5b18a2
+base_release: v0.150.0
+base_release_sha256: 18dffeef5efd516018c918f65b45173c81ac0e1ba99fdd8a96274cc1df5c72db
+claims_registry_sha256: 3abf624a5991d70020feffee801ddfa73f692ec2e6d00cf6bca1dbb4bc6ff93a
+accepted_claim_count: 190
+migration_counts: {pending: 17, partial: 0, qualified: 188}
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: GC1
+source_path: merged-framework/bridges/phase-42/bridge_GC1_overlap_binding_lock.py
+source_sha256: 3c9610d349b7fa0e47a4f122ea5ab84da3a03f6cd83686c3aa6f161bfccf4ebe
+source_git_blob: 9e5a942ff7b7d1be8899e158864263dbcddffcd8
+source_blob_commit: 7222eed
+source_bytes: 33438
+source_history_commits: 1
+canonical_sources:
+  src/substrate_framework/qball_fluctuations.py: fcf9746f907f159d29090817e5a621182fd86eca2f16fc21e6533248b450a463
+  src/substrate_framework/quartic_qball.py: 4a592bc8888e2c059d6930983f4fe7b3581618dd88b4a5d505c927647d5178ff
+  src/substrate_framework/normalized_overlaps.py: 83bcc31038f5502780da42d91bbb109f7a84b53d578a4fdccda96ff63cfbe226
+  src/substrate_framework/translated_localization.py: 5a8bd4dbb77552c942c2b98afce67ff0f54431ccdc161e6408ebf7f2b6e985ec
+terminal_direct_dependencies:
+  EM6: [C-QBL-001]
+  FG2: [C-QBL-001, C-QBL-003]
+  MH1: [C-QBL-003, C-OVL-001]
+  MH2: [C-OVL-001, C-OVL-002]
+  O1: [C-SPN-001, C-DEF-001, C-BER-001, C-HOL-001, C-CHR-001]
+  WM10: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+  WM7: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+  WM9: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, C-RGE-005]
+pending_cycle_dependencies: [GC3, GC4, GC5]
+direct_reverse_consumers: [GC2, GC3, GC4, GC5, GC6]
+source_exposure_before_freeze:
+  queue_headline_and_result_excerpt: true
+  exposed_formulas: [D_equals_f_squared_over_4, c_equals_f, D_equals_c_squared_over_4]
+  source_body: false
+  native_execution: false
+  detailed_predicates_domains_tolerances_and_mutations: false

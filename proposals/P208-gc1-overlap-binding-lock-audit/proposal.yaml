@@ -1,0 +1,64 @@
+id: P208
+base_release: v0.150.0
+base_commit: 4113a47
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GC1]
+question: >-
+  For the accepted dimensionless quartic profile sector, what exact relation
+  exists between the curvature deficit and a separately declared local
+  coupling multiplier, and does GC1 establish a universal obstruction to
+  localized hierarchies or only a conditional identity for one potential and
+  one coupling declaration?
+invariants:
+  - C-QBL-001 and C-QBL-003 own a conditional dimensionless quartic profile, declared energy, and fluctuation operator but no stability generation flavor or physical mass interpretation.
+  - C-OVL-001 owns normalized overlaps with a supplied profile amplitude and no Yukawa condensate generation hierarchy mixing or physical map.
+  - C-OVL-002 owns translated overlap tails and separately declared translated Poschl-Teller wells; translations are isospectral and their centers depths and spacing are supplied.
+  - The quartic curvature identity must be derived from the potential rather than inferred from the sech profile or copied from GC1.
+  - A local coupling map is an independent model declaration unless an accepted framework claim derives it from the potential.
+  - Pending GC3 GC4 and GC5 are nonauthoritative cycle edges and cannot support GC1.
+  - Numerical proximity to any exposed hierarchy or scale cannot select a concept.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events are never scientific failures.
+allowed_imports:
+  - C-QBL-001 and C-QBL-003 only for the declared quartic potential profile fluctuation operator and explicit physical ceilings
+  - C-OVL-001 and C-OVL-002 only for exact normalized overlap and translated-localization statements at their accepted ceilings
+  - terminal EM6 FG2 MH1 MH2 O1 WM7 WM9 and WM10 mappings at v0.150.0 without rejected physical interpretations
+  - SymPy for exact derivatives elimination substitutions and countermodels
+  - NumPy and SciPy only if the opened source asserts a genuine spectral or finite-well obligation not already decided exactly
+  - hash-pinned GC1 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Derive the exact quartic curvature-deficit identity D(f)=V''(0)-V''(f)=f^2/4 independently of any profile shape.
+  - id: B
+    description: Derive D=c^2/4 only after separately declaring the linear local coupling multiplier c(f)=f.
+  - id: C
+    description: Retain the general composition D(f)=V''(0)-V''(f) with the coupling map c(f) independent and therefore no universal elimination law.
+  - id: D
+    description: Use alternative coupling maps or potential deformations as countermodels to a universal overlap-binding lock.
+  - id: E
+    description: Accept a localized-mode or hierarchy obstruction only if GC1 supplies the required operator domain spectrum boundary data and exhaustive model quantifiers.
+  - id: F
+    description: Preserve C-OVL-002's separately translated isospectral wells as a countermodel to identifying an attenuated core multiplier with every binding well.
+  - id: G
+    description: Promote provisional C-QBL-005 and a reusable API only if the exact conditional composition is novel beyond C-QBL-001 C-QBL-003 C-OVL-001 and C-OVL-002.
+  - id: H
+    description: Give GC1 an individual terminal disposition and replay GC2 through GC6 without reverse authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact derivation from the declared potential and coupling map
+  - dependency closure and novelty beyond accepted QBL and OVL claims
+  - separation of model declarations from consequences
+  - sensitivity to coupling normalization power independence and potential deformation
+  - operator domain spectrum boundary and localization completeness for any no-go
+  - dimensional sign symmetry tail and translation consistency
+  - physical-ceiling preservation and comparator exclusion
+  - dependency and reverse-consumer closure
+claims_proposed: [C-QBL-005]
+comparators_blinded_until: >-
+  The generated queue exposes GC1's nine static check sites, two assertions,
+  the identities D=f^2/4 and c=f, and the claimed tail relation. Detailed
+  source equations predicates domains numeric parameters tolerances mutations
+  and native output remain unopened until this contract formula freeze
+  provenance memory validation and clean freeze commit exist. Exposed formulas
+  are hypotheses for independent derivation and cannot select a candidate.
+comparators_used_for_selection: []
+status: draft
