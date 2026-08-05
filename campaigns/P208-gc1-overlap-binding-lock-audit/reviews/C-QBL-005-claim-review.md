@@ -110,6 +110,6 @@ no-go, stability window, multisoliton identity, or generation narrative.
 
 Promotion requires the accepted registry entry, v0.151.0 closed release,
 generated documentation and framework memory, GC1 corrected qualification,
-the 23-check primary route, nine-check independent route, 36-check graph
+the 23-check primary route, nine-check independent route, 38-check graph
 replay, focused tests, one integrated release boundary, and an empty debt
 ledger. A terminal source tally by itself is not a promotion oracle.

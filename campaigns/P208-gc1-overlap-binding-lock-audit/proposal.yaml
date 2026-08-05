@@ -60,9 +60,13 @@ comparators_blinded_until: >-
   and native output remain unopened until this contract formula freeze
   provenance memory validation and clean freeze commit exist. Exposed formulas
   are hypotheses for independent derivation and cannot select a candidate.
-comparators_used_for_selection: []
-status: draft
-revision: 0002
+comparators_used_for_selection:
+  - hash-pinned GC1 native output opened after freeze commit 7c39da3
+  - accepted quartic potential spectrum and overlap APIs
+  - direct independent potential overlap and Poschl rederivation
+  - exact coupling potential model and moment counterexamples
+status: accepted
+revision: 0003
 post_source_numeric_audit:
   model: exact_sine_qball_not_the_quartic_profile
   background_equation: f_xx_equals_sin_f_over_2_minus_omega_squared_f

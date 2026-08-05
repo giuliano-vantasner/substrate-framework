@@ -2363,27 +2363,41 @@ repeat, finite-sample continuum overread, and prose-only residual attribution
 are corrected. C-RGE-008 remains unpromoted, and no quadrature compatibility
 event changes the verdict.
 
+P208 promotes C-QBL-005 in v0.151.0 and qualifies GC1 through C-QBL-001,
+C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, and C-QBL-005. The exact retained
+object is local and conditional: `D=f^2/4=c^2/(4*lambda^2)` for the fixed
+quartic potential and separately declared `c=lambda*f`. The source conflates
+that pointwise multiplier with the integrated overlap, measures a different
+exact-sine deficit numerically, uses a universal RMS/mean-absolute inequality
+as a relocation diagnostic, and extrapolates eight samples and selected
+thresholds to every frequency. Exact Pöschl and quartic scaling counterexamples
+reject the claimed light-versus-bound contradiction. Twenty-three primary,
+nine independent, and the final terminal graph checks plus 63 focused tests
+pass. The 14-node graph pins 107 predicates and 20 assertions with no
+quadrature compatibility surface or scientific version failure. The integrated
+boundary validates 844 memory files and passes all 1,821 tests in 175.56 pytest
+seconds and 188.86 seconds total wall time with exit zero.
+
 ## Canonicalization
-The registry, `v0.150.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred ninety accepted claims.
-P001 through P207 are frozen under `campaigns/`; proposal,
+The registry, `v0.151.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred ninety-one accepted claims.
+P001 through P208 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 17 pending, 0 partial, 3
-migrated, 188 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P207 changes no accepted scientific surface, so its narrow record gate
-follows the last full P202 release boundary rather than repeating all 1,815
-unchanged package tests.
+memory. The regenerated migration queue agrees on 16 pending, 0 partial, 3
+migrated, 189 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P208 changes the accepted scientific surface and therefore runs one full
+integrated release boundary after targeted exact and graph checks.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 17
-pending, 3 migrated, 188 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 16
+pending, 3 migrated, 189 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle is fully terminal without backward authority. The next
-campaign audits GC1 against the corrected overlap, binding, and running
-ceilings. The remaining condensation order is GC1 through GC6 on one branch and
+The WM7-WM10 source cycle and GC1 are terminal without backward authority. The
+next campaign audits GC2 against the corrected local-identity, translated-well,
+and multisoliton ceilings. The remaining condensation order is GC2 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

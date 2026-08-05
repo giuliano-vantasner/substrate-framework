@@ -1,0 +1,26 @@
+attempt: 0004
+campaign: P208
+timestamp_utc: '2026-08-05T22:38:24Z'
+kind: promotion_boundary_in_progress
+implementation_commit: b0e7e5ef653e733c9cc7899d07553598342cf1a0
+claim: C-QBL-005
+release: v0.151.0
+source_disposition: {GC1: qualified}
+pre_gate_results:
+  primary_checks: 23
+  independent_checks: 9
+  source_graph_checks_before_promotion: 36
+  focused_tests: 63
+  version_only_scientific_failures: 0
+integrated_gate:
+  command: /usr/bin/time_-v_scripts_validate_sh
+  workflow_claims: 191
+  migration_pending: 16
+  memory_files_validated: 844
+  tests_passed: 1821
+  pytest_seconds: 175.56
+  wall_seconds: 188.86
+  maximum_resident_kib: 218484
+  exit_status: 0
+status: passed
+continuation: rerun_record_sensitive_repository_generation_memory_and_diff_checks_then_commit

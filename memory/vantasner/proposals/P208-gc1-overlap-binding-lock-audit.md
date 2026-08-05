@@ -2,7 +2,7 @@
 description: Audit GC1's conditional overlap-binding identity and claimed hierarchy obstruction
 author: vantasner
 created: '2026-08-05T22:18:31Z'
-updated: '2026-08-05T22:23:48Z'
+updated: '2026-08-05T22:47:49Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - quartic-qball
 - overlap-binding
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P208 GC1 Overlap-Binding Lock Audit
 
@@ -117,14 +117,14 @@ physical interpretation, cycle edge, reverse consumer, and compatibility event.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Detailed source predicates remain blinded | Reproduce once after committed freeze | open |
-| C-QBL-005 may duplicate accepted QBL/OVL content | Complete claim and API nonduplication review | open |
-| The coupling map may be presented as derived | Type its provenance and exact alternatives | open |
-| A local tail identity may be inflated into a spectral no-go | Audit operator domain and countermodels | open |
-| C-OVL-002 wells may be conflated with one core tail | Replay translated fixed-depth operator | open |
-| Pending cycle dependencies may grant authority | Replay GC3 through GC5 without imports | open |
-| Reverse consumers may be silently broken | Replay GC2 through GC6 after the claim decision | open |
-| Compatibility may masquerade as science | Audit all executable access shapes | open |
+| Detailed source predicates remain blinded | Reproduce once after committed freeze | discharged after freeze commit `7c39da3` |
+| C-QBL-005 may duplicate accepted QBL/OVL content | Complete claim and API nonduplication review | discharged; typed composition is novel |
+| The coupling map may be presented as derived | Type its provenance and exact alternatives | discharged; lambda and map are declared |
+| A local tail identity may be inflated into a spectral no-go | Audit operator domain and countermodels | discharged; universal no-go rejected |
+| C-OVL-002 wells may be conflated with one core tail | Replay translated fixed-depth operator | discharged; separate isospectral declarations |
+| Pending cycle dependencies may grant authority | Replay GC3 through GC5 without imports | discharged; no backward authority |
+| Reverse consumers may be silently broken | Replay GC2 through GC6 after the claim decision | discharged by frozen graph |
+| Compatibility may masquerade as science | Audit all executable access shapes | discharged; zero surface and failures |
 
 ## Review and Promotion Plan
 
@@ -141,3 +141,15 @@ P208 closes only when the conditional identity, model-provenance ledger,
 universality countermodels, operator scope, authority, novelty, graph,
 compatibility, disposition, generated state, and durable memory agree with an
 empty campaign debt ledger. A no-go headline alone cannot close the campaign.
+
+P208 promotes C-QBL-005 in v0.151.0 and qualifies GC1 through C-QBL-001,
+C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, and C-QBL-005. The local identity
+survives with its declared coupling normalization; the pointwise/integrated
+type error, quartic/exact-sine model mix, universal moment predicate,
+all-frequency sweep overread, shallow-well no-go, and physical hierarchy and
+multisoliton readings are corrected or rejected. The primary, independent,
+and final graph routes and focused tests close with zero scientific version
+failures. The integrated gate is recorded in the immutable campaign attempt.
+It validates 844 memory files and passes all 1,821 tests in 175.56 pytest
+seconds; attempt 0004 records 188.86 seconds total wall time, 218,484 KiB peak
+RSS, exit zero, and an empty debt ledger.

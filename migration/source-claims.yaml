@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 17
-  qualified: 188
+  pending_adjudication: 16
+  qualified: 189
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -12906,8 +12906,62 @@ units:
   dynamic_check_calls: 3
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-QBL-001
+  - C-QBL-002
+  - C-QBL-003
+  - C-OVL-001
+  - C-OVL-002
+  - C-QBL-005
+  qualification: GC1's fixed-quartic local curvature deficit D(f)=f^2/4 and the conditional linear-multiplier
+    relation D=c^2/(4*lambda^2) survive with the multiplier and normalization explicitly supplied. The
+    exact quartic sech fluctuation well has one global minimum at its center, and independent binding
+    and multiplier fields break the relation. The source headline incorrectly writes the pointwise relation
+    as D=y_n^2/4 even though y_n is an integrated normalized expectation. Its numerical section solves
+    the distinct exact-sine model, whose curvature deficit is (1-cos(f))/2 rather than f^2/4 beyond leading
+    small amplitude. Its RMS about origin divided by mean absolute coordinate is universally at least
+    one and cannot diagnose relocation. Eight frequencies, one grid refinement, and source-selected 0.1
+    and 10 thresholds do not prove an all-frequency hierarchy obstruction. Exact positive-depth Poschl-Teller
+    wells remain bound however shallow, and the exact quartic bound levels coexist with overlaps tending
+    to zero as kappa tends to zero, so light and bound are not mathematically contradictory. The fixed
+    overlap ratio is still 2/3 and supplies no hierarchy. The two-profile unlock is a conditional countermodel,
+    not a proved stable multisoliton or an identification of MH2's separately planted wells. No stability,
+    Yukawa interaction, physical generation, mass hierarchy, mixing, multisoliton count, Standard-Model,
+    observation, or substrate conclusion is accepted.
+  evidence:
+  - campaigns/P208-gc1-overlap-binding-lock-audit/reviews/source_adjudication.md
+  - campaigns/P208-gc1-overlap-binding-lock-audit/reviews/C-QBL-005-claim-review.md
+  - campaigns/P208-gc1-overlap-binding-lock-audit/reviews/GC1-disposition-review.md
+  - campaigns/P208-gc1-overlap-binding-lock-audit/reviews/impact_analysis.md
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/source-reproduction.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/compatibility-audit.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/source-audit.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/check-adjudication.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/formula-freeze.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/input-provenance.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/dependency-audit.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/consumer-audit.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/candidate-comparison.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/implementation-audit.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/impact-analysis.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/primary-provenance.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/evidence/independent-provenance.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/verify.py
+  - campaigns/P208-gc1-overlap-binding-lock-audit/reviews/independent_curvature_review.py
+  - campaigns/P208-gc1-overlap-binding-lock-audit/reviews/replay_source_graph.py
+  - campaigns/P208-gc1-overlap-binding-lock-audit/attempts/0001/result.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/attempts/0002/result.yaml
+  - campaigns/P208-gc1-overlap-binding-lock-audit/attempts/0003/result.yaml
+  - memory/vantasner/decisions/C-QBL-005-review.md
+  - memory/vantasner/decisions/GC1-qualified-review.md
+  note: P208 closes 23 primary, 9 independent, and 38 terminal source-graph checks plus 63 focused accepted-API
+    tests. The graph pins 14 nodes with 107 static predicates and 20 assertions. GC1, its graph, and mutable
+    P208 have no quadrature compatibility surface and create zero scientific version failures. The integrated
+    boundary validates 844 memory files and passes all 1,821 tests in 175.56 pytest seconds and 188.86
+    seconds total wall time with exit zero.
 - source_unit: GC2
   phase: phase-42
   path: merged-framework/bridges/phase-42/bridge_GC2_corpus_already_multisoliton.py

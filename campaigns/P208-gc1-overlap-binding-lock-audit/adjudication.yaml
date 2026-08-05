@@ -1,0 +1,86 @@
+campaign: P208
+title: GC1 conditional quartic binding-coupling audit
+source_baseline: substrate@6d1f4e0
+source_units: [GC1]
+base_release: v0.150.0
+accepted_release: v0.151.0
+implementation_commit: b0e7e5ef653e733c9cc7899d07553598342cf1a0
+adjudicated_at: '2026-08-05T22:38:24Z'
+selected_candidates:
+  - {id: A, reason: Exact_differentiation_proves_the_fixed_quartic_curvature_deficit.}
+  - {id: B, reason: Exact_elimination_proves_the_relation_only_after_the_linear_multiplier_and_normalization_are_declared.}
+  - {id: C, reason: Potential_curvature_and_coupling_map_remain_independent_general_model_data.}
+  - {id: D, reason: Coupling_and_potential_mutations_are_decisive_exact_countermodels_to_universality.}
+  - {id: F, reason: Separately_translated_fixed_depth_wells_are_isospectral_and_not_an_attenuated_core_tail.}
+  - {id: G, reason: C_QBL_005_is_novel_as_the_typed_local_composition_and_its_exact_nonimplications.}
+  - {id: H, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: E, decision: rejected_because_no_exhaustive_spectral_no_go_exists_and_exact_counterexamples_refute_light_bound_contradiction}
+claims:
+  - {id: C-QBL-005, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-QBL-001, decision: unchanged_quartic_profile_and_no_stability_ceiling}
+  - {id: C-QBL-002, decision: unchanged_distinct_exact_sine_branch_and_no_stability_ceiling}
+  - {id: C-QBL-003, decision: unchanged_complete_two_level_scalar_Hessian_and_nongeneration_ceiling}
+  - {id: C-OVL-001, decision: unchanged_normalized_expectation_and_no_Yukawa_ceiling}
+  - {id: C-OVL-002, decision: unchanged_translated_isospectral_wells_and_free_center_ceiling}
+unpromoted_claims:
+  - {id: D_equals_integrated_y_squared_over_4, reason: The_exact_relation_uses_the_pointwise_multiplier_c_not_the_integrated_overlap_y.}
+  - {id: universal_one_condensate_hierarchy_no_go, reason: Coupling_and_potential_countermodels_plus_shallow_bound_wells_defeat_the_required_quantifiers.}
+  - {id: exact_sine_numeric_sweep_measures_quartic_lock, reason: Exact_sine_deficit_differs_beyond_leading_small_amplitude.}
+  - {id: rms_over_mean_absolute_is_relocation_diagnostic, reason: It_is_the_universal_nonnegative_variance_inequality.}
+  - {id: all_frequency_power_law_overlap_bound, reason: Eight_samples_and_source_selected_thresholds_are_not_a_theorem.}
+  - {id: stability_generation_Yukawa_hierarchy_multisoliton_or_substrate, reason: Required_actions_interactions_states_maps_and_oracles_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_curvature_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-QBL-005-claim-review.md
+  source_disposition_review: reviews/GC1-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+source_disposition: {GC1: qualified}
+accepted_mappings: [C-QBL-001, C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, C-QBL-005]
+compatibility:
+  immutable_source_surface: none
+  mutable_campaign_surface: none
+  canonical_surface: exact_symbolic_no_quadrature
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.151.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_curvature_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_QBL_OVL_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  tests_passed: 1821
+  pytest_seconds: 175.56
+  memory_files_validated: 844
+  wall_seconds: 188.86
+  maximum_resident_kib: 218484
+  exit_status: 0
+debt: []
+status: accepted
