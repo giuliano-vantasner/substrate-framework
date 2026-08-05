@@ -1,0 +1,35 @@
+attempt: 0001
+campaign: P177
+candidate: pre_source_authority_recall_and_candidate_freeze
+status: passed
+started_at: '2026-08-11T05:16:00Z'
+finished_at: '2026-08-11T05:20:00Z'
+base_release: v0.128.0
+base_commit: 7a3c85c2c125aa2fcfd21c86be420e64b5ac469d
+accepted_claim_count: 164
+source:
+  source_unit: BX1
+  path: merged-framework/bridges/phase-36/bridge_BX1_l2_mode_box_artifact.py
+  sha256: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3
+  source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path_worktree_status: clean
+  history_commits: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]
+  separate_dossier_or_formalization_found: false
+prior_exposure:
+  generated_queue_result_excerpt: true
+  P054_accepted_memory_and_numerical_audit: true
+  fresh_result_blinding_claimed: false
+memory_recall:
+  - P054 proposal and C-PDE-009/C-GW-007 reviews
+  - P054 time-averaged spectral precursor attempt 0003
+  - parent framework migration effort
+reserved_identifier_audit:
+  C-PDE-010: reserved_by_P054_and_unavailable
+  new_identifier_assigned: false
+candidates_frozen: [A, B, C, D, E, F, G, H]
+compatibility_policy: >-
+  Preflight direct, imported, and dynamic legacy NumPy integration access.
+  Repair mutable code to numpy.trapezoid or a safe two-step fallback; preserve
+  immutable native provenance and use only an explicit alias backed by
+  numpy.trapezoid. Version-only events do not reject a scientific candidate.
+next_attempt: validate_and_commit_freeze_then_open_hash_pinned_BX1_body

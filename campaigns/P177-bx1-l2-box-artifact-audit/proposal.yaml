@@ -1,0 +1,72 @@
+id: P177
+base_release: v0.128.0
+base_commit: 7a3c85c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [BX1]
+question: >-
+  Does hash-pinned BX1 correctly classify QB3's time-averaged l=2 radial
+  object as a finite-Dirichlet-box state rather than a localized half-line
+  mode, and what positive reusable spectral theorem or classifier can be
+  incorporated without inferring a full Floquet, nonlinear, gravitational,
+  or substrate object?
+invariants:
+  - C-PDE-003 fixes the exact l=2 linearized radial equation and regular origin order.
+  - C-PDE-009 fixes m-degeneracy and proves that phase averaging defines a different equation unless the pointwise defect vanishes or a separate Floquet construction closes it.
+  - C-PDE-005 fixes the unit far-field mass threshold and distinguishes evanescent from radiative radial channels.
+  - C-PDE-006 is one resolution-bounded finite-box harmonic-balance family point with free central amplitude and wall-sensitive radiative tails.
+  - A transformed half-line spectrum, a finite-wall spectrum, and the full periodic-coefficient perturbation problem are distinct objects with separately typed domains and boundary data.
+  - A finite positive Dirichlet eigenvalue above the half-line continuum edge is not a localized bound state, but that no-go alone is not P177's positive deliverable.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name events are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-PDE-003
+  - C-PDE-004
+  - C-PDE-005
+  - C-PDE-006
+  - C-PDE-009
+  - C-GW-001
+  - C-GW-002
+  - C-GW-007
+  - C-GW-008
+  - C-MOD-001
+  - C-MOD-002
+  - src/substrate_framework/radial_sine_gordon.py
+  - src/substrate_framework/radial_harmonic_balance.py
+  - src/substrate_framework/triaxial_l2.py
+  - campaigns/P052-qb1-radial-harmonic-balance/adjudication.yaml
+  - campaigns/P054-qb3-triaxial-l2-polarizations/adjudication.yaml
+  - campaigns/P054-qb3-triaxial-l2-polarizations/evidence/numerical-audit.yaml as prior scoped evidence only
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - BX1 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned BX1 reproduction with complete predicate, solver, node-count, boundary, dataflow, and compatibility audit.
+  - id: B
+    description: Accepted C-PDE-009 plus P054's prior scoped spectral evidence already covers all valid BX1 content, making BX1 qualified or duplicate evidence with no new API.
+  - id: C
+    description: Exact Liouville transformation, regular-origin domain, radial norm equivalence, asymptotic continuum edge, and vacuum spherical-Bessel finite-box calibration theorem.
+  - id: D
+    description: Reusable resolution- and wall-refined finite-box spectral classifier for the accepted time-averaged C-PDE-006 background, with node ordering and independent Sturm or finite-element cross-check.
+  - id: E
+    description: Full time-periodic Floquet problem about the accepted harmonic background, separated from the averaged operator and promoted only if monodromy, refinement, and boundary gates close.
+  - id: F
+    description: Accepted regular finite-time C-PDE-004 l=2 evolution as the positive dynamical object when no periodic localized mode is established.
+  - id: G
+    description: Generic finite-wall artifact diagnostics based on threshold position, node count, wall scaling, compact-region norm retention, and soluble free limits.
+  - id: H
+    description: Claim source dependency consumer compatibility release queue documentation and memory closure.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_operator_domain_and_boundary_compatibility
+  - separation_of_averaged_finite_box_half_line_and_Floquet_objects
+  - exact_regular_origin_norm_threshold_and_node_typing
+  - solver_status_residual_mesh_wall_tolerance_and_independent_method_quality
+  - assumption_and_parameter_economy
+  - positive_reusable_API_novelty_mutation_sensitivity_and_consumer_reach
+  - physical_scope_honesty_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening BX1's body; the generated queue exposes BX1's
+  box-artifact result and selected numerical synopsis, while P054 memory and
+  accepted evidence already expose an above-threshold wall-following averaged
+  state, so no fresh result or numerical comparator blinding is claimed
+status: frozen_with_prior_result_exposure
