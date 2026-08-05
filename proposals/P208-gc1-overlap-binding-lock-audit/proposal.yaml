@@ -62,3 +62,23 @@ comparators_blinded_until: >-
   are hypotheses for independent derivation and cannot select a candidate.
 comparators_used_for_selection: []
 status: draft
+revision: 0002
+post_source_numeric_audit:
+  model: exact_sine_qball_not_the_quartic_profile
+  background_equation: f_xx_equals_sin_f_over_2_minus_omega_squared_f
+  fluctuation_operator: minus_d2_plus_cos_f0_over_2_minus_omega_squared
+  continuum_threshold: one_half_minus_omega_squared
+  finite_domain: symmetric_Dirichlet_box_with_half_extent_28_or_30_over_kappa
+  spatial_grid: uniform_second_difference_with_4000_or_8000_positive_half_points
+  background_solver: DOP853_rtol_1e_minus_11_atol_1e_minus_13
+  eigensolver: scipy_eigh_tridiagonal_below_threshold_minus_1e_minus_4
+  source_sweep: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65]
+  source_thresholds:
+    overlap_spread: less_than_10
+    minimum_y_times_ell_times_kappa: greater_than_0.1
+    rms_about_origin_over_mean_absolute_coordinate: greater_than_or_equal_to_1
+  source_scope_limit: >-
+    This finite exact-sine sweep cannot prove a quartic arbitrary-profile or
+    all-frequency theorem. The rms ratio is a universal second-moment
+    inequality rather than a relocation diagnostic, and the positive lower
+    threshold is source-selected rather than analytically derived.

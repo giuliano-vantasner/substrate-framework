@@ -2,7 +2,7 @@
 description: Audit GC1's conditional overlap-binding identity and claimed hierarchy obstruction
 author: vantasner
 created: '2026-08-05T22:18:31Z'
-updated: '2026-08-05T22:18:31Z'
+updated: '2026-08-05T22:23:48Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -102,7 +102,13 @@ version-only events are alias evidence and never scientific failures.
 
 Attempt 0001 freezes authority, candidates, equations, coupling families,
 mutations, physical ceilings, graph scope, and disclosed formulas before
-source access. Failures remain append-only and change method or candidate.
+source access. Attempt 0002 records the native nine-check reproduction and
+freezes the opened source's exact-sine operator, finite domain, discretization,
+solver, sweep, and thresholds before independent adjudication. The numeric
+model is not the quartic symbolic model. Its rms-about-origin ratio is subject
+to the universal RMS/mean-absolute inequality, and eight frequency samples
+cannot establish an all-frequency statement. Failures remain append-only and
+change method or candidate.
 
 ## Debt Ledger
 

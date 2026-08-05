@@ -1,4 +1,4 @@
-revision: 0001
+revision: 0002
 campaign: P208
 source_unit: GC1
 declared_quartic_model:
@@ -30,10 +30,23 @@ tail_obligations:
   - no_tail_statement_implies_absence_of_a_bound_state_without_a_complete_operator_problem
   - a_separately_translated_fixed_depth_well_is_not_the_attenuated_tail_of_the_core_profile
 possible_numeric_obligation: >-
-  None is preregistered from the queue excerpt alone. If source inspection
-  reveals an actual spectral threshold or finite-well claim, freeze its
-  equation domain boundary data discretization solver tolerances refinement
-  error norm and independent route in a proposal revision before evaluating it.
+  Source inspection revealed a finite exact-sine fluctuation calculation,
+  distinct from the quartic symbolic model. Its source equation is
+  f_xx=sin(f)/2-omega^2*f on a symmetric Dirichlet box, with the fluctuation
+  operator -d2+cos(f0)/2-omega^2 and threshold kappa^2. The source uses a
+  uniform second difference, DOP853 background integration at rtol 1e-11 and
+  atol 1e-13, and eigh_tridiagonal. The source's one-point N refinement may be
+  reproduced as finite evidence, but the exact Jensen inequality, exact
+  Pöschl shallow-well countermodel, and exact quartic scaling family are the
+  decisive oracles for the claimed universal no-go.
+post_source_obligations:
+  - prove_rms_about_origin_is_at_least_mean_absolute_coordinate_for_every_normalized_density
+  - mutate_a_density_by_translation_and_show_the_source_ratio_still_cannot_drop_below_one
+  - use_C_OVL_002_to_show_every_positive_Poschl_depth_has_a_negative_ground_eigenvalue
+  - keep_exact_sine_numeric_evidence_separate_from_the_quartic_identity
+  - show_the_quartic_bound_levels_remain_below_threshold_for_every_positive_kappa_while_the_declared_profile_overlaps_scale_to_zero_with_kappa
+  - classify_the_fixed_eight_frequency_sweep_as_sampled_evidence_not_an_all_frequency_theorem
+  - reject_the_source_selected_0.1_and_10_thresholds_as_unproved_universal_constants
 mutations:
   - change_the_linear_coupling_normalization_lambda
   - replace_the_coupling_by_f_squared

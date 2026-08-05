@@ -1,0 +1,44 @@
+attempt: 0002
+campaign: P208
+timestamp_utc: '2026-08-05T22:23:48Z'
+kind: native_reproduction_source_inspection_and_post_source_freeze
+base_commit: 7c39da33147c63904ad9b60bf1f4ae383431a1c9
+source_unit: GC1
+source_sha256: 3c9610d349b7fa0e47a4f122ea5ab84da3a03f6cd83686c3aa6f161bfccf4ebe
+native_exit_status: 0
+native_runtime_checks: 9
+lexical_check_calls: 9
+literal_check_calls: 6
+dynamic_check_calls: 3
+assert_nodes: 2
+terminal_tally: ALL_9_CHECKS_PASS
+elapsed_wall_seconds: 2.40
+maximum_resident_kib: 117020
+compatibility:
+  numpy_aliases: [np]
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  eager_legacy_default_fallbacks: 0
+  current_trapezoid_references: 0
+  alias_replay_required: false
+  scientific_version_failures: 0
+source_findings:
+  exact_content:
+    - quartic_curvature_deficit_D_equals_f_squared_over_4
+    - conditional_linear_coupling_identity_D_equals_c_squared_over_4
+    - quartic_sech_fluctuation_well_has_one_center
+    - independent_binding_and_coupling_fields_break_the_identity
+  finite_content:
+    - exact_sine_spectrum_and_overlap_values_at_eight_frequencies
+    - one_frequency_grid_refinement
+  diagnosed_overclaims:
+    - local_identity_is_not_a_universal_no_bound_state_theorem
+    - exact_sine_numeric_model_is_not_the_quartic_symbolic_model
+    - rms_about_origin_over_mean_absolute_coordinate_is_universally_at_least_one
+    - eight_frequency_samples_do_not_prove_any_frequency
+    - source_thresholds_0.1_and_10_are_not_derived
+    - C_QBL_001_and_C_QBL_002_supply_no_stability_window
+    - second_object_coexistence_and_MH2_identity_are_separately_declared
+verdict: source_reproduced_post_source_obligations_frozen_before_independent_adjudication
+continuation: commit_revision_then_derive_exact_countermodels_and_implement_provisional_C_QBL_005
