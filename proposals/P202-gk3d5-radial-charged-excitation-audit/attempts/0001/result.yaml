@@ -1,0 +1,19 @@
+attempt: 0001
+campaign: P202
+route: authority_memory_candidate_formula_numeric_and_compatibility_freeze
+status: passed
+base_release: v0.149.0
+base_commit: 72968f3
+source_sha256: 201d4fd2594a73c7b59dbe81e0e66f1d3d43a52605a26174c70bd072626992e2
+claims_proposed: [C-QBL-004]
+candidates_registered: [A, B, C, D, E, F, G, H]
+comparators_inspected: []
+source_body_inspected: false
+native_execution_performed: false
+scientific_version_failures: 0
+debt:
+  - reproduce_and_adjudicate_every_GK3D5_predicate
+  - select_the_exact_or_numeric_positive_object_by_frozen_criteria
+  - implement_distinct_reusable_logic_only_if_it_survives_nonduplication
+  - complete_independent_refinement_mutation_dependency_consumer_and_claim_reviews
+next_attempt: validate_and_commit_the_freeze_before_source_execution_or_body_inspection

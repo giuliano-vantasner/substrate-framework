@@ -1,0 +1,53 @@
+campaign: P202
+source_unit: GK3D5
+framework:
+  base_commit: 72968f3
+  release: v0.149.0
+  release_sha256: fbb97885d564d6dc57c8b5bdf37cd619484a4f361545ea4ae198917de6b2ed05
+  registry_sha256: 75f15bce1236c976d66f1348b104856b3bfb562ce1c3c0b1113c0b47ab8cbf22
+source:
+  baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path: merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py
+  sha256: 201d4fd2594a73c7b59dbe81e0e66f1d3d43a52605a26174c70bd072626992e2
+  git_blob: be0de7bae6e847b65e57c8793f31f4c2ace14de4
+  bytes: 25839
+  lines: 500
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+queue_state:
+  disposition: pending_adjudication
+  accepted_claims: []
+  static_check_calls: 13
+  literal_check_calls: 7
+  dynamic_check_calls: 6
+  assertions: 2
+  declared_dependencies: [EM1, EM2, EM6, GK3D1, GK3D3, GK3D4]
+dependency_authority:
+  EM1: {disposition: qualified, accepted_claims: [C-U1-001, C-U1-002]}
+  EM2: {disposition: qualified, accepted_claims: [C-GAU-001]}
+  EM6: {disposition: qualified, accepted_claims: [C-QBL-001]}
+  GK3D1: {disposition: qualified, accepted_claims: [C-GAU-001, C-DIM-009, C-VAC-002]}
+  GK3D3: {disposition: qualified, accepted_claims: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]}
+  GK3D4: {disposition: qualified, accepted_claims: [C-LIE-001, C-REP-002, C-PGA-001, C-DIM-009, C-VAC-002, C-VAC-003, C-VAC-004, C-REP-001, C-RGE-005, C-ANO-001]}
+additional_relevant_accepted_surfaces:
+  C-QBL-002: exact_one_dimensional_full_sine_stationary_profile_only
+  C-QBL-003: one_dimensional_quartic_unconstrained_scalar_Hessian_only
+  C-PDE-001: separately_declared_real_three_dimensional_radial_sine_Gordon_IVP_only
+reverse_consumers:
+  GK3D6: {disposition: pending_adjudication, authority_use: forbidden_until_individual_review}
+  EL2: {disposition: qualified, accepted_claims: [C-TOP-001, C-U1-001], authority_use: accepted_mapping_does_not_include_GK3D5}
+canonical_modules:
+  quartic_qball: {path: src/substrate_framework/quartic_qball.py, sha256: 4a592bc8888e2c059d6930983f4fe7b3581618dd88b4a5d505c927647d5178ff}
+  exact_sine_qball: {path: src/substrate_framework/exact_sine_qball.py, sha256: 775c68a8815e8c19cb68c653f25d0c15adb7eaa66d91ca0a271c4ba5c69c08d5}
+  radial_sine_gordon: {path: src/substrate_framework/radial_sine_gordon.py, sha256: 0c30e316d730f482951221a7cddc4e42c5080fbfc6847f232f8f1aa77c3509ed}
+blinding:
+  exposed_before_freeze:
+    - queue_headline_and_question_excerpt
+    - radial_equation_and_claimed_full_potential_provenance
+    - thirteen_static_check_sites_and_two_assertions
+  not_inspected_before_freeze:
+    - native_runtime_tally
+    - central_amplitude_charge_energy_mass_and_tail_values
+    - numerical_grid_domain_solver_and_tolerance_details
+    - sample_comparators_and_pass_thresholds
+scientific_version_failures: 0

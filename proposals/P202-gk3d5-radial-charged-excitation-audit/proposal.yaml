@@ -1,0 +1,63 @@
+id: P202
+base_release: v0.149.0
+base_commit: 72968f3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK3D5]
+question: >-
+  Does the smooth conditional 3+1 complex-scalar action with
+  U(|Psi|^2)=1-cos(sqrt(|Psi|^2)) possess a verified finite-energy stationary
+  radial charged branch, and if so what exact equation boundary charge energy
+  existence and numerical statements survive without identifying that
+  classical branch as a quantum loop field or physical substrate excitation?
+invariants:
+  - The accepted real sine-Gordon field and independently declared complex U1 field remain distinct conditional models.
+  - C-QBL-001 and C-QBL-002 are one-dimensional stationary profile theorems and do not lift a solution or stability result to three dimensions.
+  - C-PDE-001 supplies only a separately declared real radial sine-Gordon IVP geometry and finite-time oscillon evidence.
+  - C-VAC-002 C-VAC-003 and C-VAC-004 independently declare their loop matter and explicitly derive no physical charged excitation.
+  - A classical localized U1 configuration is not by itself a quantized particle species asymptotic state determinant loop field or physical electric charge.
+  - Exact action variation smoothness origin regularity finite energy charge and tail behavior precede numerical branch selection.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and an immutable legacy-name stop is compatibility evidence only.
+allowed_imports:
+  - C-U1-001 and C-GAU-001 only as conditional current and local-connection algebra
+  - C-QBL-001 C-QBL-002 and C-QBL-003 only within their one-dimensional declared-profile and nonstability ceilings
+  - C-PDE-001 only for regular three-dimensional radial geometry numerical controls and nonparticle ceiling
+  - C-DIM-009 C-VAC-002 C-VAC-003 and C-VAC-004 only within their explicit dimensional and independently-declared-loop-matter ceilings
+  - SymPy exact variation series local limits and integral identities
+  - SciPy solve_bvp DOP853 root finding quadrature and refinement evidence through shared numerics where applicable
+  - hash-pinned GK3D5 and declared dependencies as noncanonical evidence only after the freeze gate
+candidates:
+  - id: A
+    description: Derive the exact conditional 3+1 complex-scalar action equation radial ansatz boundary charge energy tail and virial identities without asserting existence.
+  - id: B
+    description: Construct a nodeless finite-energy radial branch by independent collocation and shooting with mesh domain tolerance and observable refinement.
+  - id: C
+    description: Prove branch existence or a bounded existence interval analytically by effective-potential overshoot undershoot and radial-friction arguments.
+  - id: D
+    description: Treat GK3D5 as accepted composition of one-dimensional Q-ball and real radial sine-Gordon claims if and only if an exact lift theorem exists.
+  - id: E
+    description: Select no new claim or API if no distinct refined three-dimensional branch survives or existing accepted objects already own it.
+  - id: F
+    description: Promote a genuine charged quantum loop excitation only if quantization state normalization determinant coupling and loop insertion follow from accepted premises.
+  - id: G
+    description: Open a foundational revision only if the accepted complex-scalar radial or vacuum-polarization claims are independently inconsistent.
+  - id: H
+    description: Give GK3D5 an individual terminal disposition and replay GK3D6 EL2 and generated consumers without granting forward or backward authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact action and normalization closure
+  - smoothness at zero radial origin regularity and finite energy and charge
+  - solver success residual convergence mesh domain tolerance and method agreement
+  - Pohozaev tail small-amplitude and one-dimensional limiting consistency
+  - assumption and parameter economy
+  - novelty beyond C-QBL-001 through C-QBL-003 and C-PDE-001
+  - physical and quantum interpretation ceiling
+  - dependency and consumer closure
+claims_proposed: [C-QBL-004]
+comparators_blinded_until: >-
+  The generated queue exposes GK3D5's equation headline, 13 static check-call
+  sites, two assertions, and claimed derivation categories. No native runtime
+  tally, central amplitude, charge, energy, mass, refinement value, or sample
+  comparator has been inspected. Those values remain blinded until this
+  manifest, the formula and numerical freeze, the memory contract, and the
+  repository preflight are committed.
+status: active

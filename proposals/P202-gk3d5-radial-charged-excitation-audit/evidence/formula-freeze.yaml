@@ -1,0 +1,59 @@
+campaign: P202
+source_unit: GK3D5
+base_release: v0.149.0
+candidate_field_model:
+  spacetime: 3_plus_1_flat_signature_plus_minus_minus_minus
+  field: independently_declared_smooth_complex_scalar_Psi
+  density: rho_equals_Psi_conjugate_times_Psi
+  potential: U_of_rho_equals_1_minus_cos_sqrt_rho
+  action_density: partial_Psi_conjugate_dot_partial_Psi_minus_U_of_rho
+  euler_lagrange: box_Psi_plus_dU_drho_times_Psi_equals_zero
+smooth_origin_limit:
+  U_series: rho_over_2_minus_rho_squared_over_24_plus_rho_cubed_over_720_plus_higher_orders
+  dU_drho_at_zero: one_half
+stationary_radial_ansatz:
+  ansatz: Psi_of_t_r_equals_f_of_r_times_exp_minus_i_omega_t
+  profile_equation: f_double_prime_plus_2_f_prime_over_r_equals_sin_f_over_2_minus_omega_squared_f
+  origin_data: f_prime_at_zero_equals_zero
+  infinity_data: f_tends_to_zero
+  localized_frequency_domain: zero_less_omega_less_one_over_sqrt_two
+  tail_rate: kappa_equals_sqrt_one_half_minus_omega_squared
+  expected_tail: f_asymptotic_to_C_exp_minus_kappa_r_over_r
+exact_obligations:
+  - derive_action_variation_and_radial_equation_without_copying_the_source_result
+  - prove_potential_and_equation_are_smooth_at_rho_and_f_zero
+  - derive_origin_series_coefficient_from_the_radial_equation
+  - derive_C_U1_001_charge_and_energy_normalizations_for_the_declared_action
+  - derive_finite_energy_charge_and_exponential_tail_conditions
+  - derive_the_three_dimensional_Pohozaev_identity_for_the_stationary_functional
+  - distinguish_classical_localized_configuration_from_quantum_loop_field
+numeric_probe:
+  frequency: one_half
+  methods:
+    primary: scipy_solve_bvp_collocation_with_status_gate_and_continuation_or_nontrivial_seed
+    independent: DOP853_origin_series_shooting_with_bracketed_central_amplitude
+  outer_radii: [20, 30, 40]
+  representative_mesh_points: [1001, 2001, 4001]
+  collocation_tolerances: [1.0e-6, 1.0e-8]
+  shooting_tolerances: {rtol: 1.0e-10, atol: 1.0e-12}
+  residual_norm: max_absolute_profile_equation_residual_away_from_origin_plus_exact_origin_limit
+  observable_integrals: [charge, energy, gradient_term, effective_potential_term]
+predeclared_numeric_gates:
+  - every_solver_reports_success_before_outputs_are_used
+  - boundary_and_origin_residuals_are_below_1.0e-8_on_the_finest_route
+  - fine_to_finer_core_profile_relative_max_error_is_below_1.0e-3_and_smaller_than_coarse_to_fine
+  - radius_30_to_40_charge_and_energy_relative_changes_are_below_1.0e-3
+  - collocation_and_shooting_central_amplitude_charge_and_energy_agree_within_2.0e-3_relative
+  - Pohozaev_residual_over_sum_of_absolute_terms_is_below_1.0e-4
+  - fitted_tail_rate_agrees_with_kappa_within_five_percent_on_a_declared_non_roundoff_window
+mutations:
+  - remove_the_radial_2_over_r_term
+  - replace_sin_f_over_2_by_sin_f
+  - erase_the_frequency_term
+  - use_the_one_dimensional_exact_profile_as_a_three_dimensional_solution
+  - accept_the_trivial_zero_BVP_branch
+  - truncate_the_domain_before_tail_convergence
+  - identify_charge_slope_or_localization_with_quantum_stability
+  - identify_a_classical_soliton_with_the_free_loop_field_of_C_VAC_002_or_C_VAC_003
+comparators_used_for_selection: []
+scientific_version_failures: 0
