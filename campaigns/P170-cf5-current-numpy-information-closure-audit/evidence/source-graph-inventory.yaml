@@ -1,0 +1,12 @@
+nodes:
+  CF1: {relation: vortex_inputs_and_repeated_BVP, lexical_checks: 8, runtime_checks: 8, assertions: 2, compatibility: isolated_alias_only}
+  CF2: {relation: fixed_area_tube_equation, lexical_checks: 15, runtime_checks: 15, assertions: 1, compatibility: native}
+  CF4: {relation: dossier_scale_deferral_context, lexical_checks: 6, runtime_checks: 6, assertions: 1, compatibility: native}
+  CF5: {relation: root, lexical_checks: 6, runtime_checks: 6, assertions: 2, compatibility: isolated_alias_only}
+totals: {nodes: 4, lexical_checks: 35, runtime_checks: 35, assertions: 6}
+legacy_integration:
+  nodes: [CF1, CF5]
+  references: 4
+  backend: numpy.trapezoid
+verifier: reviews/replay_source_graph.py
+result: ALL_24_CHECKS_PASS

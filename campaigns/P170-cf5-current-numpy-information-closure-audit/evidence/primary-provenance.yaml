@@ -1,0 +1,24 @@
+primary_verifier:
+  path: campaigns/P170-cf5-current-numpy-information-closure-audit/verify.py
+  sha256: 5c0d292181261c9ccbd8626b65d2ea28b15228448649544fb130cfe18ce60ac3
+  result: ALL_41_CHECKS_PASS
+independent_exact_review:
+  path: campaigns/P170-cf5-current-numpy-information-closure-audit/reviews/independent_exact_information_review.py
+  sha256: 5d7b93ded4da1d32948f6924a8d8b8ba17d406983106d73d5e9380e7b0898c5e
+  result: ALL_20_CHECKS_PASS
+source_graph:
+  path: campaigns/P170-cf5-current-numpy-information-closure-audit/reviews/replay_source_graph.py
+  sha256: 57160a7a6a1dd0004bc0e2471db983d7e1ca257c849a7fc92397f84ddfb6868f
+  result: ALL_24_CHECKS_PASS
+independence_statement: >-
+  The fresh exact review imports neither canonical physics module, source
+  script, nor numeric solver. It solves the inversion, window map, competing
+  length conventions, and profile-moment requirement directly.
+mutation_surfaces:
+  - inversion_area_coefficient
+  - tube_slope_coefficient
+  - supplied_positive_tension
+  - ratio_window
+  - vector_versus_scalar_length
+  - free_core_area_factor
+  - independent_profile_moments

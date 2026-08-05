@@ -1,0 +1,24 @@
+installed_numpy:
+  version: 2.5.1
+  current_function: numpy.trapezoid
+  legacy_attribute_present: false
+immutable_CF5:
+  numpy_aliases: [np]
+  legacy_integration_references: 1
+  current_integration_references: 0
+  eager_legacy_fallbacks: 0
+  native_event: pre_predicate_AttributeError
+  scientific_candidate_failure: false
+  isolated_alias_result: ALL_6_CHECKS_PASS
+canonical_modules:
+  integration_route: substrate_framework.numerics.trapezoid_integral
+  preferred_backend: numpy.trapezoid
+  current_BVP_result: reproduced
+direct_source_graph:
+  native_nodes: [CF2, CF4]
+  isolated_alias_only_nodes: {CF1: 3, CF5: 1}
+  alias_backend: numpy.trapezoid
+mutable_legacy_references: 0
+classification: >-
+  The missing name is version provenance only. No source equation, input,
+  tolerance, mesh, or scientific verdict changes in the alias replay.

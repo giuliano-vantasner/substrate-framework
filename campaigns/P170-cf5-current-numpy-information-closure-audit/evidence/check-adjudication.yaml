@@ -1,0 +1,27 @@
+source_unit: CF5
+lexical_checks: 6
+runtime_checks: 6
+assertion_nodes: 2
+checks:
+  CF5.1:
+    verdict: duplicate_numeric_evidence_for_C-VTX-002
+    qualification: source_two_mesh_replay_is_weaker_than_the_accepted_domain_tolerance_guess_and_independent_method_matrix
+  CF5.2:
+    verdict: duplicate_exact_input_from_C-VTX-001
+    qualification: flux_quantization_is_conditional_vortex_algebra_not_a_physical_chromoelectric_map
+  CF5.3:
+    verdict: duplicate_reconstruction_from_C-FLX-001
+    qualification: positivity_holds_but_A_eff_is_defined_from_the_supplied_tension_and_is_not_profile_geometry
+  CF5.4:
+    verdict: rejected_as_independent_scale_match
+    qualification: the_ratio_is_a_reversible_tension_transform_with_free_length_and_area_conventions_and_a_factor_one_thousand_window
+  CF5.5:
+    verdict: duplicate_exact_roundtrip_from_C-FLX-001
+    qualification: back_substitution_is_an_identity_for_every_positive_tension_and_predicts_neither_area_nor_tension
+  CF5.6:
+    verdict: partially_valid_guard_without_physical_discrimination
+    qualification: nonpositive_tension_fails_area_positivity_but_positive_selection_uses_only_the_nonsharp_window
+assertions:
+  check_helper: {role: local_check_ledger_assertion, verdict: execution_mechanism_not_extra_claim}
+  solver_status: {role: required_numeric_status_gate, verdict: valid_but_not_refinement_or_information_evidence}
+headline_physical_reading: rejected_absent_geometry_map_and_nonperturbative_oracle

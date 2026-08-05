@@ -1,0 +1,25 @@
+accepted_claim_consumers:
+  direct:
+    - src/substrate_framework/abelian_higgs_vortex.py
+    - tests/test_abelian_higgs_vortex.py
+    - src/substrate_framework/flux_tube.py
+    - tests/test_flux_tube.py
+  compatibility:
+    - src/substrate_framework/numerics.py
+    - tests/test_numerics.py
+    - src/substrate_framework/source_audit.py
+    - tests/test_source_audit.py
+narrative_source_graph:
+  nodes: [CF1, CF2, CF4, CF5]
+  executable_CF5_edges: []
+  lexical_predicates: 35
+  runtime_predicates: 35
+  assertions: 6
+focused_command: >-
+  .venv/bin/python -m pytest tests/test_abelian_higgs_vortex.py
+  tests/test_flux_tube.py tests/test_numerics.py tests/test_source_audit.py -q
+focused_result: 39_passed
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false
+migration_and_memory_records_change_required: true

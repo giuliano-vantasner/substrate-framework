@@ -1,0 +1,27 @@
+attempt: 0008
+campaign: P170
+candidate: record_preflight_validation
+status: failed_validation_invocation
+started_at: '2026-08-11T00:49:00Z'
+finished_at: '2026-08-11T00:50:00Z'
+command: >-
+  memory validate --base /home/dan/substrate-framework
+  memory/vantasner/proposals/P170-cf5-current-numpy-information-closure-audit.md
+  memory/vantasner/decisions/CF5-current-numpy-duplicate-review.md
+  memory/vantasner/efforts/framework-migration.md
+failure: memory_validate_accepts_exactly_one_PATH_argument
+diagnosis: validation_CLI_invocation_shape_only
+scientific_result_changed: false
+record_result_changed: false
+repair:
+  command_shape: one_memory_validate_invocation_per_changed_record
+  results:
+    proposal_memory: passed
+    decision_memory: passed
+    effort_memory: passed
+    campaign_yaml: 22_files_valid
+    repository: WORKFLOW_VALID_163_claims_54_pending
+    git_diff_check: passed
+debt:
+  - run_the_single_terminal_repository_gate_and_separate_full_suite
+next_attempt: terminal_duplicate_closure_gate

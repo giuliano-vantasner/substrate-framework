@@ -1,0 +1,73 @@
+campaign: P170
+title: CF5 current-NumPy information and duplicate closure audit
+source_baseline: substrate@6d1f4e0
+source_units: [CF5]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T00:48:00Z'
+selected_candidates:
+  - {id: A, reason: Native_version_stop_is_preserved_and_alias_replay_executes_all_six_predicates.}
+  - {id: B, reason: C-VTX-001_C-VTX-002_and_C-FLX-001_cover_every_supported_object.}
+  - {id: E, reason: Current_BVP_regression_is_valid_duplicate_evidence_but_weaker_than_P026.}
+  - {id: H, reason: Source_compatibility_information_consumer_queue_and_memory_records_are_closed.}
+claims: []
+accepted_composition:
+  - {id: C-VTX-001, decision: unchanged_conditional_exact_vortex_claim}
+  - {id: C-VTX-002, decision: unchanged_resolution_bounded_numeric_claim}
+  - {id: C-FLX-001, decision: unchanged_exact_fixed_area_and_reconstruction_claim}
+unpromoted_claims:
+  - {id: independent_effective_geometry, reason: A_eff_is_defined_from_the_supplied_tension_and_has_no_profile_observable.}
+  - {id: penetration_area_scale_match, reason: The_ratio_is_reversible_convention_dependent_and_uses_a_factor_one_thousand_window.}
+  - {id: predicted_string_tension, reason: Every_positive_supplied_tension_constructs_an_exact_roundtrip_area.}
+  - {id: physical_vortex_tube_identity, reason: No_accepted_smooth_to_uniform_field_or_geometry_map_exists.}
+  - {id: QCD_confinement, reason: No_gauge_measure_phase_selection_or_nonperturbative_oracle_is_constructed.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_exact_information_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/CF5-current-numpy-duplicate-review.md
+  native_attempt: attempts/0002/result.yaml
+  compatibility_attempt: attempts/0003/result.yaml
+  primary_attempt: attempts/0004/result.yaml
+  independent_attempt: attempts/0005/result.yaml
+  failed_graph_attempt: attempts/0006/result.yaml
+  graph_attempt: attempts/0007/result.yaml
+  failed_record_preflight_attempt: attempts/0008/result.yaml
+  terminal_attempt: attempts/0009/result.yaml
+source_disposition:
+  CF5: duplicate_evidence
+duplicates:
+  CF5: [C-VTX-001, C-VTX-002, C-FLX-001]
+compatibility:
+  installed_numpy: 2.5.1
+  CF5_native_event: pre_predicate_removed_np_trapz
+  scientific_candidate_failure: false
+  immutable_alias_only: [CF1, CF5]
+  alias_backend: numpy.trapezoid
+  mutable_legacy_integration_references: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P170-cf5-current-numpy-information-closure-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P170-cf5-current-numpy-information-closure-audit/reviews/independent_exact_information_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P170-cf5-current-numpy-information-closure-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_abelian_higgs_vortex.py tests/test_flux_tube.py tests/test_numerics.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_duplicate_no_release

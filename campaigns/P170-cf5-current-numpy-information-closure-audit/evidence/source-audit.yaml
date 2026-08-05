@@ -1,0 +1,25 @@
+source_unit: CF5
+direct_imports: [numpy, sympy, scipy.integrate.solve_bvp]
+source_module_imports: []
+scientific_predicates: {lexical: 6, runtime: 6}
+assertions:
+  total: 2
+  check_ledger: 1
+  solver_success: 1
+compatibility:
+  legacy_integration_sites: 1
+  current_integration_sites: 0
+  native: false_on_installed_numpy_only
+convention_findings:
+  - A_eff_is_defined_by_inverting_the_fixed_area_energy_slope
+  - lambda_pen_uses_only_the_vector_inverse_length_while_the_scalar_inverse_length_differs
+  - the_core_area_has_an_unfixed_geometric_factor_and_no_profile_moment_definition
+  - the_ratio_window_maps_to_a_factor_one_thousand_tension_interval
+semantic_findings:
+  - CF5_1_repeats_weaker_BVP_evidence_already_accepted_in_C-VTX-002
+  - CF5_2_repeats_C-VTX-001_flux_quantization
+  - CF5_3_and_CF5_5_are_the_C-FLX-001_reconstruction_and_roundtrip
+  - CF5_4_has_no_independent_geometry_and_accepts_0.1x_10x_and_40x_tensions
+  - CF5_6_rejects_nonpositive_area_but_its_positive_tension_selection_relies_only_on_the_broad_window
+  - dual_chromoelectric_QCD_and_confinement_labels_have_no_accepted_map
+source_edited: false

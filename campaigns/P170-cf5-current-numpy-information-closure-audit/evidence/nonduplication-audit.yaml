@@ -1,0 +1,17 @@
+registry_search:
+  conditional_vortex_equations_flux_and_lengths: C-VTX-001
+  demo_vortex_branch_and_tension: C-VTX-002
+  fixed_area_slope_and_effective_area_reconstruction: C-FLX-001
+package_search:
+  vortex_API: src/substrate_framework/abelian_higgs_vortex.py
+  tube_API: src/substrate_framework/flux_tube.py
+  accepted_tests: [tests/test_abelian_higgs_vortex.py, tests/test_flux_tube.py]
+distinct_source_content_not_covered: []
+rejected_new_objects:
+  - source_reproduction_is_evidence_not_a_new_claim
+  - repeated_BVP_evidence_is_weaker_than_C-VTX-002s_accepted_matrix
+  - inverted_A_eff_is_already_explicitly_nonpredictive_in_C-FLX-001
+  - the_ratio_has_no_independent_profile_observable_or_sharp_criterion
+  - physical_dual_chromoelectric_QCD_and_confinement_maps_are_absent
+new_claim: null
+new_API: null

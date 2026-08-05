@@ -1,0 +1,36 @@
+attempt: 0003
+campaign: P170
+candidate: isolated_current_numpy_compatibility_replay
+status: passed
+started_at: '2026-08-11T00:28:00Z'
+finished_at: '2026-08-11T00:30:00Z'
+command: >-
+  .venv/bin/python -c "import runpy; import numpy as np;
+  np.trapz = np.trapezoid;
+  runpy.run_path('/home/dan/substrate/merged-framework/bridges/phase-10/bridge_CF5_flux_tube_tension_consistency.py',
+  run_name='__main__')"
+source:
+  sha256: 0a449f8b95bc0a83fb0316992fb0d1776a6157e1445029623b4608246dc256f7
+  exit_code: 0
+  runtime_pass_markers: 6
+  terminal_tally: ALL_6_CHECKS_PASS
+compatibility:
+  immutable_source_modified: false
+  alias_name: numpy.trapz
+  alias_backend: numpy.trapezoid
+  scientific_equations_modified: false
+observations:
+  sigma_400: 4.211567
+  sigma_800: 4.211567
+  mesh_difference: 3.82e-13
+  effective_area: 4.686904
+  penetration_area_ratio: 4.686904
+scientific_scope: >-
+  The compatibility replay establishes only that all six immutable predicates
+  execute under the current integration implementation. It does not make the
+  inverted area independent geometry, make the exact back-substitution
+  predictive, or validate the predeclared three-decade ratio window.
+debt:
+  - audit_the_six_predicates_for_information_gain_and_mutation_sensitivity
+  - compare_the_result_with_the_accepted_vortex_and_fixed_area_tube_claims
+next_attempt: primary_information_and_compatibility_verifier

@@ -1,0 +1,26 @@
+attempt: 0006
+campaign: P170
+candidate: initial_source_graph_replay
+status: failed_verifier_construction
+started_at: '2026-08-11T00:39:00Z'
+finished_at: '2026-08-11T00:41:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P170-cf5-current-numpy-information-closure-audit/reviews/replay_source_graph.py
+observed:
+  checks_passed_before_failure: 20
+  source_nodes_replayed: 4
+  lexical_checks: 35
+  runtime_checks: 35
+  assertions: 6
+  legacy_alias_nodes: [CF1, CF5]
+failure: graph_probe_expected_CF4_to_be_named_in_the_CF5_script_body
+diagnosis: >-
+  CF4 is a dossier-only scale-deferral connectivity edge. The executable CF5
+  source names CF1 and CF2, while the dossier separately names CF4. The graph
+  node is valid but the first probe conflated these two evidence surfaces.
+scientific_result_changed: false
+source_result_changed: false
+debt:
+  - split_executable_CF1_CF2_edges_from_the_dossier_CF4_context_edge
+next_attempt: repaired_source_graph_and_consumer_closure

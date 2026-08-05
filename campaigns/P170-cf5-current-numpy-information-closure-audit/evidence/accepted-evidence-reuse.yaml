@@ -1,0 +1,18 @@
+accepted_vortex_evidence:
+  campaign: P026
+  primary_verifier_sha256: b4d06baaeb3a196185f58c526b1b423a191a8d1f3a8c973feea9357d90291ed1
+  independent_review_sha256: eea4cebeb7493383369cfcf38f2e338cf1fe1899a7a7444b1d3244801143f359
+  terminal_attempt_sha256: 2e823dca1e0adbccb6866ccea21076aeea603a5cffd733314b7fd581d4b7b1af
+accepted_CF5_information_evidence:
+  campaign: P029
+  primary_verifier_sha256: c67d82355a523b598fa78b363154f0c27801f5452f26093b464a7b97d0398e80
+  independent_review_sha256: 0b14766fff63bccf50df9ea71a47963fed282faa883fbccfcc1c7c0e21f787cf
+current_canonical_artifacts:
+  vortex_module_sha256: d816938fc091ee4641bec7f193e4b9e083131f6d5193c4870b910ee3d1e93d99
+  tube_module_sha256: 372c4bebc93231de8bbc99dea1f8494bc2b730e4983a12158d661f48b862d034
+  vortex_tests_sha256: 534af58c5e007de4a526027f2d7f3496526645edc82273794e520d070ab2ce46
+  tube_tests_sha256: d20a455d8721b55c4cbf733e421c60b8fcdac48948d72ded5a460a495a3189b4
+reuse_decision: >-
+  Hash-identical P026/P029 evidence remains authoritative. P170 runs one
+  current canonical BVP, fresh exact information checks, source/graph replay,
+  and focused consumers instead of repeating the unchanged refinement matrix.

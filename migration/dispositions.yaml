@@ -3108,10 +3108,24 @@ units:
       round trip holds for every positive supplied tension and adds no geometry.
     evidence:
       - campaigns/P029-cf5-tension-consistency-audit/reviews/source_adjudication.md
+      - campaigns/P170-cf5-current-numpy-information-closure-audit/reviews/source_adjudication.md
+      - campaigns/P170-cf5-current-numpy-information-closure-audit/evidence/source-reproduction.yaml
+      - campaigns/P170-cf5-current-numpy-information-closure-audit/evidence/compatibility-audit.yaml
+      - campaigns/P170-cf5-current-numpy-information-closure-audit/evidence/check-adjudication.yaml
+      - campaigns/P170-cf5-current-numpy-information-closure-audit/evidence/dependency-audit.yaml
+      - campaigns/P170-cf5-current-numpy-information-closure-audit/evidence/nonduplication-audit.yaml
     note: >-
-      The pinned source fails before its first check at removed np.trapz. P029
-      proves the duplication and comparison-window weakness without rerunning
-      accepted BVP evidence.
+      P170 preserves the native pre-predicate removed-np.trapz stop as a
+      version-only event and replays all six checks through an isolated alias
+      backed by numpy.trapezoid. Forty-one primary, twenty fresh exact,
+      twenty-four graph, and thirty-nine focused checks or tests pass. The
+      four-node graph replays thirty-five lexical and runtime predicates plus
+      six assertions; only immutable CF1 and CF5 require aliases. Exact and
+      independent routes show that A_eff and its penetration ratio are
+      reversible supplied-tension transforms, the declared window accepts a
+      factor one thousand in tension, and no profile geometry enters. P026 and
+      P029 evidence is hash-identical and reused. No claim, API, or release
+      changes.
   EM2:
     disposition: qualified
     accepted_claims:

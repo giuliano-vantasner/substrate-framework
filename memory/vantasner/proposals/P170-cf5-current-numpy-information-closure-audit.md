@@ -2,15 +2,15 @@
 description: Reaudit CF5's current-NumPy reproduction and information closure
 author: vantasner
 created: '2026-08-11T00:20:00Z'
-updated: '2026-08-11T00:24:00Z'
+updated: '2026-08-11T00:48:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-CF5
 - numpy-compatibility
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P170 CF5 Current-NumPy Information Closure Audit
 
@@ -120,11 +120,15 @@ checks, runtime checks, and assertions remain separate inventories.
 ## Attempts and Continuation
 
 Attempt 0001 freezes the contract before P170 opens CF5 or its dossier and
-discloses P029/P168 exposure. It records base release and commit, source and
-dossier hashes, eight candidates, structural criteria, accepted duplicate
-route, evidence-reuse gate, and the compatibility-neutral replay policy. Every
-later compatibility, solver, implementation, schema, or scientific failure is
-preserved append-only before repair.
+discloses P029/P168 exposure. Attempt 0002 preserves the native pre-predicate
+version stop, and attempt 0003 passes all six predicates through the isolated
+`np.trapezoid` alias. Attempts 0004 and 0005 pass 41 primary and 20 fresh exact
+checks. Attempt 0006 preserves a graph-probe construction error that conflated
+the executable and dossier edge surfaces; attempt 0007 repairs it and passes
+24 graph checks plus 39 focused tests. Attempt 0008 preserves a multi-path
+memory-CLI invocation error before separate record checks pass. The terminal
+attempt passes the single repository workflow gate and the separately
+prescribed full suite with v0.127.0 and all 163 claims unchanged.
 
 ## Debt Ledger
 
@@ -134,13 +138,13 @@ and the governed duplicate record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Current native execution is known to stop at a removed API name | Preserve the abort and pass an alias-only replay backed by `np.trapezoid` | open |
-| Six predicates and assertions lack current individual review | Inventory lexical/runtime/assertion nodes and adjudicate each | open |
-| Effective area may merely invert supplied tension | Eliminate the round trip and mutate inputs and coefficients | open |
-| Penetration-area ratio may be non-discriminating | Map its window, mutate tension, and expose free geometry conventions | open |
-| Existing numeric evidence may be rerun ceremonially | Hash-audit P026/P029 and replay only current-sensitive gates | open |
-| Physical cross-model identity may be borrowed | Close or reject every field, geometry, scale, QCD, and confinement dependency | open |
-| Consumers and governed records may disagree | Replay affected paths and synchronize duplicate disposition, queue, memory, and effort | open |
+| Current native execution is known to stop at a removed API name | Preserve the abort and pass an alias-only replay backed by `np.trapezoid` | discharged by attempts 0002 and 0003 |
+| Six predicates and assertions lack current individual review | Inventory lexical/runtime/assertion nodes and adjudicate each | discharged by source and check adjudication |
+| Effective area may merely invert supplied tension | Eliminate the round trip and mutate inputs and coefficients | discharged by primary and fresh exact routes |
+| Penetration-area ratio may be non-discriminating | Map its window, mutate tension, and expose free geometry conventions | discharged by the factor-1000 interval and geometry audit |
+| Existing numeric evidence may be rerun ceremonially | Hash-audit P026/P029 and replay only current-sensitive gates | discharged by byte-identical reuse and one canonical solve |
+| Physical cross-model identity may be borrowed | Close or reject every field, geometry, scale, QCD, and confinement dependency | discharged by dependency and source adjudication |
+| Consumers and governed records may disagree | Replay affected paths and synchronize duplicate disposition, queue, memory, and effort | discharged by 39 focused tests and the duplicate transaction |
 
 ## Review and Promotion Plan
 
@@ -161,12 +165,14 @@ suite.
 
 ## Done Gate
 
-P170 closes only when the immutable source is scientifically reproduced under
-current NumPy, every output is classified as accepted replay, reconstruction,
-or genuinely distinct information, all predicates and consumers are reviewed,
-physical overreach is excluded, governed records agree, and the debt ledger is
-empty. A native compatibility abort or an honest duplicate label alone is not
-completion.
+P170 closes as terminal duplicate evidence through unchanged C-VTX-001,
+C-VTX-002, and C-FLX-001. The alias replay executes all six predicates; 41
+primary and 20 fresh exact checks show that the area and ratio are reversible
+transforms without profile geometry; 24 graph checks replay 35 predicates and
+six assertions; and 39 focused tests pass. Compatibility aliases occur only
+for immutable CF1 and CF5 and are backed by `np.trapezoid`. Physical overreach
+is excluded, P026/P029 reuse is hash-justified, v0.127.0 remains unchanged, and
+the campaign debt ledger is empty.
 
 ## Cross-References
 

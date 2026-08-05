@@ -1,0 +1,17 @@
+source_unit: CF5
+vortex:
+  equations: {authority: C-VTX-001, source_status: locally_repeated}
+  flux: {value: 2*pi*n/g, authority: C-VTX-001}
+  vector_inverse_length: {value: g*v, authority: C-VTX-001}
+  scalar_inverse_length: {value: v*sqrt(2*lambda), authority: C-VTX-001}
+  demo_tension: {value: approximately_4.21160, authority: C-VTX-002, status: resolution_bounded}
+tube:
+  fixed_area_slope: {value: Phi_squared_over_2A, authority: C-FLX-001}
+  effective_area: {value: Phi_squared_over_2sigma, status: reconstructed_from_supplied_tension}
+comparison:
+  length_choice: {value: inverse_vector_mass, status: selected_convention}
+  core_area_factor: {value: one, status: implicit_declared_convention}
+  accepted_ratio_window: {value: [0.1, 100], status: declared_not_derived}
+  independent_profile_observable: absent
+empirical_comparators: []
+physical_scale_imported: false

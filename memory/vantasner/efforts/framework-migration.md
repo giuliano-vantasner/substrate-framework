@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T00:08:00Z'
+updated: '2026-08-11T00:48:00Z'
 tags:
 - substrate-framework
 - effort
@@ -340,6 +340,7 @@ Attempts are append-only and individually reproducible.
 | 0188 | P167 current-NumPy source reproduction, exact vortex closure, evidence-reuse, graph, consumer, and CF1 audit | `campaigns/P167-cf1-current-numpy-closure-audit/attempts/0001` through `0010`, then terminal no-release boundary | CF1 remains qualified through C-VTX-001 and C-VTX-002 with v0.127.0 unchanged | Native CF1 passes two predicates and stops only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all eight. Twenty-six primary, sixteen fresh exact, thirty graph, and thirty-nine focused checks or tests pass. The six-node graph replays 51 lexical and runtime predicates plus seven assertions. Hash-identical P026 refinements are reused rather than ceremonially repeated. Two full 1,478-test executions pass; a post-gate targeted replay replaces brittle printed decimals with scientific inequalities. | Freeze CF2's fixed-area field-energy and endpoint-work audit, preserve their factor-of-two distinction, and reject any unproved CF1 or confinement identity. |
 | 0189 | P168 exact fixed-area field-energy, endpoint-work, geometry, dependency, compatibility, graph, consumer, and CF2 audit | `campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0001` through `0011`, then terminal no-release boundary | CF2 remains qualified through C-FLX-001 with v0.127.0 unchanged | Native CF2 passes all fifteen predicates. Thirty-nine primary, nineteen fresh exact, thirty-one graph, and forty-three focused checks or tests separate energy slope `Phi^2/(2A)` from endpoint slope `qPhi/A`, derive equality iff `q=Phi/2`, reject factor, charge, and geometry mutations, and retain logarithmic and spherical counterexamples. The six-node graph replays 66 lexical and runtime predicates plus eight assertions; immutable CF1 and CF5 aliases are backed by `np.trapezoid`. Hash-identical P027 evidence is reused. | Freeze CF3's exact SU3 center algebra and conditional loop-law consequences while keeping the declared area law, physical screening, and confinement interpretations separate. |
 | 0190 | P169 exact complete-center, abstract-triality, conditional loop-law, dependency, compatibility, graph, consumer, and CF3 audit | `campaigns/P169-cf3-center-wilson-closure-audit/attempts/0001` through `0008`, then terminal no-release boundary | CF3 remains qualified through C-LIE-002 and C-WIL-001 with v0.127.0 unchanged | Native CF3 passes all six predicates. Forty-four primary, twenty-five fresh exact, forty graph, and fifty-four focused checks or tests prove full-center completeness, abstract representation actions, conditional area/perimeter limits, and same-center law nonselection. The eight-node graph replays 76 lexical and runtime predicates plus nine assertions; immutable CF1 uses an alias backed by `np.trapezoid`. Hash-identical P028 evidence is reused, and one case-sensitive review-probe failure is preserved. | Freeze CF5's vortex-to-ideal-tube consistency and current-NumPy reproduction, treating its removed `np.trapz` spelling as compatibility rather than science and testing whether effective-area inversion predicts anything. |
+| 0191 | P170 current-NumPy reproduction, exact information, geometry, evidence-reuse, graph, consumer, and CF5 audit | `campaigns/P170-cf5-current-numpy-information-closure-audit/attempts/0001` through `0009`, then terminal no-release boundary | CF5 remains duplicate evidence for C-VTX-001, C-VTX-002, and C-FLX-001 with v0.127.0 unchanged | Native CF5 stops before its first predicate only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all six. Forty-one primary, twenty fresh exact, twenty-four graph, and thirty-nine focused checks or tests show that `A_eff` and its penetration ratio reversibly transform a supplied tension without independent profile geometry. The declared window accepts a factor 1000 in tension. The four-node graph replays 35 lexical and runtime predicates plus six assertions; immutable CF1 and CF5 alone need aliases. Hash-identical P026/P029 evidence is reused, and one graph-edge probe failure is preserved. | Freeze KI1 before source inspection; require a hash-complete search universe, tracked-file and generated/untracked boundaries, symbol-context disambiguation, numeric-assignment and alternative-coupling patterns, mutation-sensitive injected witnesses, E1/E2/E4/KI2/S4/WZ4 authority, all five predicates and one assertion, consumers, and nonduplication, and do not turn corpus absence into a physical uniqueness theorem, fitted coupling, derived yield coefficient, or substrate mechanism. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1826,21 +1827,34 @@ immutable CF1 compatibility is isolated behind `np.trapezoid`. The terminal
 workflow and explicit full suite each pass all 1,478 tests with 688 valid
 memory records.
 
+P170 terminally reaudits CF5 without a new claim, API, or release. Native
+execution stops before CF5.1 solely at removed `np.trapz`; an isolated alias
+backed by `np.trapezoid` executes all six predicates. Exact canonical and fresh
+routes show that `A_eff=Phi^2/(2*sigma)` and its penetration-area ratio are
+reversible transforms of the supplied tension, contain no independent profile
+observable, and use a window spanning a factor 1000 in tension. The primary,
+fresh exact, four-node graph, and focused routes pass 41, 20, 24, and 39 checks
+or tests. The graph replays 35 lexical and runtime predicates plus six
+assertions; immutable CF1 and CF5 use aliases backed only by `np.trapezoid`.
+Hash-identical P026/P029 evidence is reused rather than ceremonially repeated.
+The terminal workflow and explicit full suite each pass all 1,478 tests with
+690 valid memory records.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P169 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P170 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
 
 ## Done Gate
 The effort remains active. D4 is discharged, but D1 remains open with 54
 pending, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is CF5, pinned at SHA-256
-`0a449f8b95bc0a83fb0316992fb0d1776a6157e1445029623b4608246dc256f7`.
-P170 must freeze CF5 before renewed source execution and audit its claimed
-vortex-to-ideal-tube tension consistency against C-VTX-001, C-VTX-002, and
-C-FLX-001. It must preserve any native removed-`np.trapz` abort as version-only,
-replay the immutable source through an alias backed by `np.trapezoid`, test
-effective-area inversion and scale-window non-discrimination, and must not turn
-a reconstructed area or order-one ratio into a physical map, predicted string
-tension, QCD confinement, or substrate mechanism.
+bridge unit. The next queue unit is KI1, pinned at SHA-256
+`a1ec5f8e64e56165d2c51ad2389ecb455870572ba4ef9eca292151bde4ddb42b`.
+P171 must freeze KI1 before source execution and audit its claimed exhaustive
+absence of assigned generalized-Skyrme couplings. It must pin the exact search
+universe and tracked-file boundary, distinguish symbol mentions from numeric
+assignments and contextual false positives, inject load-bearing witnesses that
+the search must find, replay E1/E2/E4/KI2/S4/WZ4 authority and consumers, and
+must not turn corpus absence into a physical uniqueness theorem, fitted
+coupling, derived near-BPS yield, or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

@@ -1,0 +1,12 @@
+scope: no_new_external_import_admitted
+source_citation_status: >-
+  CF5 uses predecessor CF1/CF2 narrative and model labels, but P170 admits no
+  citation or label as accepted framework authority.
+framework_basis: >-
+  C-VTX-001/002 and C-FLX-001 deliberately retain conditional model scopes and
+  explicitly deny the cross-model physical identity claimed by CF5.
+external_source_used_for_selection: false
+physical_interpretation_imported: false
+conclusion: >-
+  External terminology cannot supply the missing profile geometry, model map,
+  physical field identification, gauge measure, or confinement oracle.

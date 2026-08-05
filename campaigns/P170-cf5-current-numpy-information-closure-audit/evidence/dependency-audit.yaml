@@ -1,0 +1,20 @@
+accepted_composition:
+  C-VTX-001: {dependencies: [], role: conditional_vortex_equations_flux_and_inverse_lengths}
+  C-VTX-002: {dependencies: [C-VTX-001], role: resolution_bounded_demo_branch_and_tension}
+  C-FLX-001: {dependencies: [], role: fixed_area_tube_slope_and_effective_area_reconstruction_ceiling}
+source_narrative_edges:
+  CF1: repeated_vortex_equations_and_numeric_branch
+  CF2: repeated_fixed_area_slope
+  CF4: dossier_only_scale_deferral_context
+  O1: lexical_false_positive_from_order_one_not_a_dependency
+missing_geometry_dependencies:
+  - independently_defined_profile_area_or_radius_moment
+  - justified_mapping_from_smooth_vortex_energy_to_uniform_tube_cross_section
+  - preregistered_discriminating_scale_criterion
+missing_physical_dependencies:
+  - accepted_dual_or_chromoelectric_field_identification
+  - physical_charge_and_flux_normalization
+  - QCD_gauge_measure_or_confinement_phase_oracle
+  - absolute_scale_or_substrate_map
+dependency_closure_for_duplicate_composition: complete
+dependency_closure_for_physical_headline: absent
