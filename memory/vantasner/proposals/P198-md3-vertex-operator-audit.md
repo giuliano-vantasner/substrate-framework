@@ -2,7 +2,7 @@
 description: Separate coherent occupation support from compact phase vertices and classical cosine vacua
 author: vantasner
 created: '2026-08-11T22:10:00Z'
-updated: '2026-08-11T22:24:00Z'
+updated: '2026-08-11T22:28:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -126,6 +126,11 @@ normalization, square-root factorial, complex conjugation, the finite edge,
 integer mode ties, and the occupation-versus-vacuum distinction are all
 mutation sensitive.
 
+Attempt 0005 closes the ten-node source graph: 372 native checks are covered by
+byte-pinned records without duplicate execution, and 20 graph checks pass. The
+individual C-VOP-001 and MD3 reviews agree on a compatible exact theorem and a
+qualified source disposition while MD4 through MD6 remain pending.
+
 ## Debt Ledger
 
 The ledger tracks every conflation that could turn an exact state identity
@@ -139,7 +144,7 @@ into an unsupported physical claim.
 | Factorial-one mass may be called a physical probability or rate | Require preparation and observable semantics; retain the mathematical ceiling | discharged by declared number measurement and material-process exclusion |
 | Occupation support may be confused with classical vacua | Give explicit countermodels and support taxonomy | discharged by compact multiplier and periodicity independence checks |
 | Claim may duplicate C-OSC-001 or C-CMB-003 | Complete claim-level nonduplication review | discharged by state-amplitude recurrence overlap and Born-semantics audit |
-| Downstream consumers may inherit MD3 wholesale | Replay exact graph and preserve individual dispositions | open |
+| Downstream consumers may inherit MD3 wholesale | Replay exact graph and preserve individual dispositions | discharged by 20-check graph and pending MD4-MD6 |
 
 ## Review and Promotion Plan
 

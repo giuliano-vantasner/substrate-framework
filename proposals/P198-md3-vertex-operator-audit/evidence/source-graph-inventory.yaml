@@ -1,0 +1,30 @@
+campaign: P198
+root_source_unit: MD3
+scope: six_direct_dependencies_root_and_three_direct_reverse_consumers
+nodes:
+  - {source_unit: PN1, relation: direct_dependency, native_tally: 32}
+  - {source_unit: PN2, relation: direct_dependency, native_tally: 25}
+  - {source_unit: PN3, relation: direct_dependency, native_tally: 14}
+  - {source_unit: WN3, relation: direct_dependency, native_tally: 48}
+  - {source_unit: WN4, relation: direct_dependency, native_tally: 43}
+  - {source_unit: WN6, relation: direct_dependency, native_tally: 32}
+  - {source_unit: MD3, relation: root, native_tally: 41}
+  - {source_unit: MD4, relation: direct_reverse_consumer, native_tally: 34}
+  - {source_unit: MD5, relation: direct_reverse_consumer, native_tally: 63}
+  - {source_unit: MD6, relation: direct_reverse_consumer, native_tally: 40}
+expected_coverage:
+  unique_nodes: 10
+  native_checks: 372
+  dependency_and_root_records_reused: 7
+  reverse_consumer_records_reused: 3
+  fresh_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P198-md3-vertex-operator-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_20_CHECKS_PASS
+authority_state_before_P198_promotion:
+  qualified_direct_dependencies: [PN1, PN2, PN3, WN3, WN4, WN6]
+  pending_root: MD3
+  pending_reverse_consumers: [MD4, MD5, MD6]

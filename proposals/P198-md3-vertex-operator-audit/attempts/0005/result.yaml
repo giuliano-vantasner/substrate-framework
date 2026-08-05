@@ -1,0 +1,29 @@
+attempt: 0005
+campaign: P198
+candidate: ten_node_graph_claim_review_and_source_disposition_review
+status: passed
+started_at: '2026-08-11T22:24:00Z'
+finished_at: '2026-08-11T22:28:00Z'
+source_graph:
+  nodes: 10
+  native_checks_covered: 372
+  fresh_native_executions: 0
+  replay_checks: 20
+  exit_status: 0
+  compatibility_aliases: 0
+reviews:
+  claim: reviews/C-VOP-001-claim-review.md
+  source_disposition: reviews/MD3-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  decisions_agree: true
+recommended_claim_axes:
+  verification: symbolic_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+recommended_MD3_disposition: qualified
+recommended_MD3_mapping: [C-OSC-001, C-CMB-003, C-VOP-001]
+pending_reverse_consumers_preserved: [MD4, MD5, MD6]
+version_only_scientific_failures: 0
+debt: []
+next_attempt: freeze_review_boundary_and_stage_claim_level_promotion
