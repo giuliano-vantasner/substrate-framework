@@ -2,7 +2,7 @@
 description: Audit GK3D4 and derive a provenance-complete product-sector kinetic normalization ledger
 author: vantasner
 created: '2026-08-11T14:05:00Z'
-updated: '2026-08-11T14:35:00Z'
+updated: '2026-08-11T14:43:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -233,8 +233,28 @@ pass with clean exits. The test set covers product generators, spectator-
 degenerate beta weights, finite charge traces, scalar and Dirac D4 loops,
 scale matching, anomaly branches, gauge dimensions, and non-Abelian trace
 metrics. No canonical code or test changes are warranted. The remaining work
-is source-consumer graph replay, claim-level review of the no-new-claim
-decision, terminal GK3D4 governance, and parent-effort synchronization.
+is terminal GK3D4 governance and parent-effort synchronization.
+
+Attempt 0007 pins and runs the exact five-node reverse closure. GK3D4,
+GK3D5, GK3D6, EL2, and HE5 exit with 11, 13, 10, 11, and 7 checks. GK3D5 is a
+direct narrative consumer but does not reuse the three-sector ratios; GK3D6
+directly repeats the universal ratio and three-eighths conclusions. EL2 and
+HE5 are transitive only. NumPy 2.5.1 provides the current trapezoidal API and
+not the legacy name; immutable GK3D5's current-first lazy fallback selects the
+current branch natively, while the other four sources and all mutable P188
+scripts have no legacy surface. No alias or version-only scientific failure
+occurs.
+
+The individual review leaves C-LIE-001, C-REP-002, C-PGA-001, C-DIM-009,
+C-VAC-002, C-VAC-003, C-VAC-004, C-REP-001, C-RGE-005, and C-ANO-001
+unchanged. Together they own all exact surviving algebra and every necessary
+scope ceiling. GK3D4 is therefore qualified through that composition; its
+physical common construction and weak-angle upgrade are rejected. Refreshed
+GitNexus evidence reports 38 changed P188 symbols, no affected execution flow,
+LOW implementation risk, and MEDIUM source-governance risk because GK3D6
+propagates the overclaim. Tool-generated host integration artifacts were
+removed. The editable disposition, generated queue, terminal campaign,
+decision memory, final graph replay, and integrated gate remain.
 
 ## Debt Ledger
 

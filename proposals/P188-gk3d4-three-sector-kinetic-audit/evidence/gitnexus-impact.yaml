@@ -1,0 +1,28 @@
+campaign: P188
+index:
+  refreshed_at_commit: f92cd16bca209d43bbbf89b52742cbe758405faa
+  nodes: 28865
+  edges: 44791
+  clusters: 394
+  processes: 2
+comparison:
+  base_ref: 4f4a775
+  head_ref: f92cd16
+  changed_symbols: 38
+  changed_files: 26
+  affected_processes: 0
+  risk: LOW
+primary_verifier_impact:
+  target: proposals/P188-gk3d4-three-sector-kinetic-audit/verify.py:main
+  direct_dependents: 1
+  direct_dependent: proposals/P188-gk3d4-three-sector-kinetic-audit/verify.py
+  confidence: 0.85
+  affected_processes: 0
+  risk: LOW
+canonical_symbols_modified: []
+source_governance_risk: MEDIUM
+source_risk_reason: GK3D6_directly_repeats_GK3D4s_universal_ratio_and_three_eighths_headline
+generated_host_artifacts_removed:
+  - appended_generic_AGENTS_block
+  - CLAUDE.md
+  - .claude/skills/gitnexus

@@ -21,8 +21,8 @@ candidates:
     verdict: selected_no_new_claim
     reason: The corrected product-sector object is fully expressed by accepted APIs and has no distinct uncovered consumer semantics.
   G:
-    verdict: pending_governance_closure
-    reason: Source graph disposition queue and durable records remain to be synchronized.
+    verdict: selected_governance_closure
+    reason: The exact five-node reverse closure and individual ten-claim review support qualification without a new claim API test or release.
 selection:
   claim: none
   reserved_unpromoted_identifier: C-VAC-005
