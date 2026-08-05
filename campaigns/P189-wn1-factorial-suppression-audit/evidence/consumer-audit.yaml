@@ -1,0 +1,62 @@
+campaign: P189
+root_source_unit: WN1
+direct_consumers:
+  WN2:
+    native_tally: 70
+    accepted_reuse: exact_cosine_parity_and_inverse_square_factorial_candidate_properties
+    ceiling: >-
+      Its discontinuity, suppression, and concentration results are conditional
+      refutations of identifying the coefficient square with a supplied weight.
+      PN2 supplies no accepted physical band or forbidden channel, so the wider
+      kinematic and branching narrative remains pending.
+  WN3:
+    native_tally: 48
+    accepted_reuse: general_coordinate_rescaling_and_factorial_square_baseline
+    ceiling: >-
+      The raw finite oscillator multiplicity is exact algebra, but multiplying
+      it by a classical Taylor coefficient does not supply a complete matrix
+      element or Golden-rule rate. Its S^n/n! physical weight remains pending.
+  WN6:
+    native_tally: 32
+    accepted_reuse: conditional_factorial_and_one_factorial_suppression_bounds
+    ceiling: >-
+      Its PN2-band and single-vacuum physical verdict depends on pending WN3/WN4
+      weights, a physical mode count, and a quantum interaction not supplied by
+      C-SG-019 or C-CMB-001.
+  WN7:
+    native_tally: 59
+    accepted_reuse: lexical_and_finite_guard_regression_only
+    ceiling: >-
+      Passing an AST firewall does not promote the scanned WN2-WN6 scientific
+      conclusions; its superpolynomial guard is subsumed by C-CMB-001.
+transitive_consumers:
+  WN4:
+    native_tally: 43
+    ceiling: exact_sequence_algebra_is_conditional_on_unaccepted_WN3_physical_weight
+  WN5:
+    native_tally: 41
+    ceiling: conditional_branching_composition_does_not_derive_the_weight_or_a_material_prediction
+  MD1:
+    native_tally: 27
+    ceiling: mode_count_and_DOS_claims_require_individual_future_adjudication
+  MD2:
+    native_tally: 26
+    ceiling: phase_variance_integral_and_medium_parameter_map_require_individual_future_adjudication
+  MD3:
+    native_tally: 41
+    ceiling: oscillator_displacement_algebra_does_not_follow_from_C_CMB_001_and_requires_its_own_claim_review
+  MD4:
+    native_tally: 34
+    ceiling: physical_growth_threshold_and_rescue_require_MD1_MD2_MD3_acceptance
+  MD5:
+    native_tally: 63
+    ceiling: branching_and_isotope_predictions_require_the_pending_MD_chain
+  MD6:
+    native_tally: 40
+    ceiling: scanner_and_local_debt_tally_do_not_adjudicate_the_scanned_physics
+governance_result:
+  WN1_mapping_candidate: [C-SG-019, C-CMB-001]
+  consumer_dispositions_changed: []
+  downstream_claims_promoted: []
+  pending_consumers_preserved: 12
+  scientific_threshold_changed: false

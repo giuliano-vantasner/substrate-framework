@@ -6831,3 +6831,57 @@ units:
       pending units, staged impact is LOW with no affected execution flow, and
       the integrated boundary validates 751 memory records and passes all
       1,593 repository tests.
+  WN1:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-019
+      - C-CMB-001
+    qualification: >-
+      C-SG-019 retains WN1's unit-background one-high cosine coefficient and
+      parity as a specialization of the general normalization- and
+      background-dependent classical theorem. C-CMB-001 retains the exact
+      positive inverse-square factorial sequence, recurrence, strict
+      exponential ceiling, every-fixed-power geometric tail, exact rational
+      and integer decade ceilings, and exact-positive versus machine-zero
+      representation boundary. WN1's finite series grid, sixty-digit mpmath
+      comparisons, and one-order three-power helper do not themselves prove
+      its universal headlines. Its unit square is not normalization invariant,
+      PN2 supplies no accepted physical subdivision band, and a classical
+      coefficient square is not a matrix element or rate without normalized
+      states, interaction, on-shell measure, spectral density, and validity
+      premises. No physical branching weight, channel, material mechanism, or
+      WN2-WN7 and MD1-MD6 conclusion is accepted.
+    evidence:
+      - campaigns/P189-wn1-factorial-suppression-audit/reviews/source_adjudication.md
+      - campaigns/P189-wn1-factorial-suppression-audit/reviews/C-CMB-001-claim-review.md
+      - campaigns/P189-wn1-factorial-suppression-audit/reviews/impact_analysis.md
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/source-reproduction.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/compatibility-audit.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/source-audit.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/check-adjudication.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/formula-freeze.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/input-provenance.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/dependency-audit.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/consumer-audit.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/candidate-comparison.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/implementation-audit.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/primary-provenance.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/evidence/independent-provenance.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/verify.py
+      - campaigns/P189-wn1-factorial-suppression-audit/reviews/independent_factorial_review.py
+      - campaigns/P189-wn1-factorial-suppression-audit/reviews/replay_source_graph.py
+      - campaigns/P189-wn1-factorial-suppression-audit/attempts/0002/result.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/attempts/0003/result.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/attempts/0004/result.yaml
+      - campaigns/P189-wn1-factorial-suppression-audit/attempts/0005/result.yaml
+      - memory/vantasner/decisions/C-CMB-001-review.md
+      - memory/vantasner/decisions/WN1-qualified-review.md
+    note: >-
+      P189 closes 67 primary and 27 independent exact checks, 76 focused tests,
+      and a thirteen-node 568-check native source replay before the integrated
+      boundary. WN1, every reverse consumer, and all mutable P189 code have no
+      legacy NumPy quadrature surface, so no version event affects a scientific
+      verdict. Twelve reverse consumers remain individually pending.

@@ -1,0 +1,21 @@
+attempt: 0005
+campaign: P189
+candidate: claim_source_release_and_consumer_promotion_transaction
+status: in_progress
+started_at: '2026-08-11T15:33:00Z'
+positive_object: exact_factorial_suppression_API_and_C_CMB_001
+prepromotion_evidence:
+  primary: ALL_67_CHECKS_PASS_C_CMB_001
+  independent: ALL_27_CHECKS_PASS_C_CMB_001_INDEPENDENT
+  focused_tests: 76_passed
+  native_source_graph: 13_nodes_568_checks_passed
+  compatibility_version_failures: 0
+planned_release: v0.140.0
+planned_source_disposition: WN1_qualified_through_C_SG_019_and_C_CMB_001
+pending_consumers_preserved: 12
+integrated_gate: pending
+record_sensitive_replay: pending
+debt:
+  - registry_release_disposition_generation_and_memory_sync
+  - source_graph_final_state_replay
+  - one_terminal_integrated_gate

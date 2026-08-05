@@ -1,0 +1,68 @@
+campaign: P189
+title: WN1 exact factorial suppression and physical-typing audit
+source_baseline: substrate@6d1f4e0
+source_units: [WN1]
+base_release: v0.139.0
+accepted_release: v0.140.0
+adjudicated_at: '2026-08-11T15:45:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_reproduction_is_source_evidence_only.}
+  - {id: C, reason: The_distinct_exact_sequence_bound_and_representation_surface_is_importable_and_reusable.}
+  - {id: D, reason: Rational_series_and_integer_blocks_prove_the_decade_ceilings_without_decimal_trust.}
+  - {id: F, reason: Normalization_background_and_null_rate_countermodels_fix_the_physical_scope.}
+  - {id: G, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: B, decision: insufficient_because_C_SG_019_does_not_own_the_distinct_inverse_square_tail_and_decade_theorem}
+  - {id: E, decision: numeric_regression_only}
+claims:
+  - {id: C-CMB-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-SG-019, decision: unchanged_general_cosine_coefficient_normalization_background_and_physical_ceiling}
+unpromoted_claims:
+  - {id: coefficient_square_is_a_Golden_rule_rate, reason: States_interaction_normalization_on_shell_measure_spectral_density_and_validity_are_missing.}
+  - {id: PN2_decades_are_a_physical_subdivision_band, reason: PN2_is_qualified_bookkeeping_without_a_physical_process_or_channel.}
+  - {id: machine_zero_is_scientific_vanishing, reason: The_exact_positive_rational_is_representation_independent.}
+  - {id: WN2_through_WN7_or_MD1_through_MD6_physical_conclusions, reason: Every_reverse_consumer_remains_separately_pending.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_factorial_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-CMB-001-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {WN1: qualified}
+accepted_mappings: [C-SG-019, C-CMB-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.140.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0005/result.yaml
+  status: pending_record
+debt: []
+status: accepted

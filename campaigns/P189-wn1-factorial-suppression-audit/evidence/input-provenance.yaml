@@ -1,0 +1,27 @@
+campaign: P189
+claim: C-CMB-001
+derived_inputs:
+  inverse_square_factorial_sequence: exact_positive_integer_factorial_definition
+  recurrence: direct_factorial_quotient
+  exponential_bound: positive_exponential_series_term_and_positive_reciprocal_order
+  rational_e_ceiling: finite_series_through_order_three_plus_geometric_tail
+  twentieth_power_margin: exact_integer_arithmetic
+  superpolynomial_tail: exact_consecutive_ratio_and_integer_ceiling
+  cosine_square: accepted_C_SG_019_coefficient_composition
+supplied_conditional_inputs:
+  - exact_positive_integer_order
+  - exact_nonnegative_integer_fixed_power
+  - exact_positive_integer_decade
+  - exact_real_amplitude_and_coordinate_scales
+exposed_nonselecting_values:
+  - WN1_selected_orders_and_decimal_floors
+  - WN1_PN2_decades_7_9_11
+  - WN1_float_zero_order_171
+  - WN1_sixty_digit_mpmath_regressions
+excluded_imports:
+  - physical_PN2_subdivision_band
+  - quantum_state_or_interaction
+  - Golden_rule_rate_or_spectral_density
+  - empirical_or_material_comparator
+blinding: none_due_to_recorded_precontract_source_exposure
+selection_basis: structural_exactness_normalization_parameter_economy_and_scope
