@@ -1,0 +1,14 @@
+attempt: 0001
+campaign: P203
+timestamp_utc: '2026-08-05T20:45:37Z'
+kind: preregistration_and_authority_freeze
+base_commit: 88a3414487f5d2c341b751bbafe2ad5c50a5ee7f
+base_release: v0.150.0
+source_unit: GK3D6
+candidates: [A, B, C, D, E, F, G, H]
+source_body_inspected: false
+native_source_executed: false
+comparators_opened: false
+scientific_version_failures: 0
+verdict: ready_for_repository_preflight_and_freeze_commit
+continuation: commit_freeze_then_reproduce_and_audit_hash_pinned_source

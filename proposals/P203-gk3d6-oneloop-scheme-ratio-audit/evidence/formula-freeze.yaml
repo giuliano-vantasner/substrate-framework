@@ -1,0 +1,53 @@
+campaign: P203
+source_unit: GK3D6
+base_release: v0.150.0
+factorwise_affine_family:
+  K: eight_pi_squared
+  X_i: L_i_minus_log_c_i
+  Z_i: z_i_plus_b_i_times_X_i_over_K
+  inverse_coordinate: g_i_squared_equals_one_over_Z_i_when_Z_i_nonzero
+two_factor_common_scale_specialization:
+  common_X: L_minus_log_c
+  ratio_R_ij: g_i_squared_over_g_j_squared_equals_Z_j_over_Z_i
+  exact_formula: z_j_plus_b_j_X_over_K_divided_by_z_i_plus_b_i_X_over_K
+  scheme_derivative_with_s_equals_log_c: >-
+    dR_ij_ds_equals_b_i_z_j_minus_b_j_z_i_over_K_Z_i_squared
+  scheme_independence_condition: b_i_times_z_j_minus_b_j_times_z_i_equals_zero
+  zero_matching_corollary: z_i_equals_z_j_equals_zero_implies_R_ij_equals_b_j_over_b_i
+  proportional_nonzero_boundary_corollary: z_i_over_b_i_equals_z_j_over_b_j_also_cancels_when_denominators_are_nonzero
+absolute_coordinate:
+  zero_matching_Z_i: b_i_times_L_minus_log_c_over_K
+  zero_matching_g_i_squared: K_over_b_i_times_L_minus_log_c
+  c_cancels_absolute_value: false
+  relative_kinetic_shift_from_c_one: minus_log_c_over_L
+  relative_inverse_coordinate_shift: log_c_over_L_minus_log_c
+  smallness_condition: absolute_log_c_much_less_than_absolute_L_with_nonzero_denominator
+factorwise_mutations:
+  - unequal_L_i_or_c_i_prevent_common_X_cancellation
+  - independent_z_i_change_ratios_unless_boundaries_are_proportional_to_b_i
+  - changing_one_conversion_at_fixed_lengths_changes_its_L_i
+  - reversing_one_scale_orientation_changes_its_logarithm
+physical_ceiling:
+  - C_QBL_004_dimensionless_energy_and_tail_rate_do_not_derive_m_equals_hbar_c_over_c_xi
+  - c_is_a_positive_conversion_or_matching_input_until_a_physical_map_derives_it
+  - exact_ratio_cancellation_does_not_make_b_i_or_the_common_boundary_physical
+  - a_trace_coordinate_is_not_a_physical_coupling_angle_without_C_REP_001_common_inverse_trace_premise
+  - no_quantum_particle_determinant_loop_or_substrate_identity_is_imported
+exact_obligations:
+  - derive_the_general_ratio_and_scheme_derivative_before_source_inspection
+  - prove_necessity_and_sufficiency_of_the_proportional_boundary_condition_on_the_declared_nonzero_domain
+  - recover_the_zero_matching_common_log_corollary
+  - show_absolute_coordinates_retain_c
+  - mutate_each_boundary_log_conversion_and_orientation
+  - audit_novelty_against_kinetic_scale_matching_and_vacuum_polarization_APIs
+  - separate_formal_one_loop_ratio_from_physical_couplings_and_accuracy
+mutations:
+  - set_only_one_matching_boundary_nonzero
+  - give_factors_distinct_common_scale_logs
+  - change_c_for_only_one_factor
+  - change_one_inverse_energy_conversion_at_fixed_lengths
+  - identify_C_QBL_004_energy_or_kappa_with_a_particle_mass_conversion
+  - treat_exact_ratio_cancellation_as_absolute_scheme_independence
+  - treat_three_eighths_trace_arithmetic_as_an_observed_weak_angle
+comparators_used_for_selection: []
+scientific_version_failures: 0

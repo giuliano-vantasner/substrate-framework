@@ -1,0 +1,31 @@
+campaign: P203
+framework_base_commit: 88a3414487f5d2c341b751bbafe2ad5c50a5ee7f
+base_release: v0.150.0
+base_release_sha256: 18dffeef5efd516018c918f65b45173c81ac0e1ba99fdd8a96274cc1df5c72db
+claims_registry_sha256: 3abf624a5991d70020feffee801ddfa73f692ec2e6d00cf6bca1dbb4bc6ff93a
+accepted_claim_count: 190
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: GK3D6
+source_path: merged-framework/bridges/phase-41/bridge_GK3D6_oneloop_accuracy_and_exact_ratios.py
+source_sha256: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036
+source_blob_commit: 7222eed
+source_bytes: 16004
+source_history_commits: 1
+canonical_sources:
+  src/substrate_framework/kinetic_scale_matching.py: 63a9cb4e633336f9faeb3cebdb7310e93ee85e1fc190f7f969aea0d212d8ec3d
+  src/substrate_framework/vacuum_polarization.py: 23c479fdcaa5c76fb9b67eac5af8849d9307e5d1edc2f4ea3d83b541c49988c2
+  src/substrate_framework/radial_qball.py: ba41ec4f5ba26e1db7607c59438520c0def109dffaad3b3b60a4404b63fc80c9
+dependency_units:
+  AS1: [C-DIM-001, C-RGE-001, C-RGE-002, C-IDN-001, C-RGE-003]
+  AS7: [C-IDN-002, C-GRV-001, C-RGE-003, C-IDN-001, C-DIM-008, C-SYM-002]
+  GK3D2: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001, C-VAC-003]
+  GK3D3: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]
+  GK3D4: [C-LIE-001, C-REP-002, C-PGA-001, C-DIM-009, C-VAC-002, C-VAC-003, C-VAC-004, C-REP-001, C-RGE-005, C-ANO-001]
+  GK3D5: [C-U1-001, C-QBL-004]
+source_exposure_before_freeze:
+  queue_headline: true
+  queue_question_excerpt: true
+  queue_result_excerpt: true
+  source_body: false
+  native_execution: false
+  native_output: false

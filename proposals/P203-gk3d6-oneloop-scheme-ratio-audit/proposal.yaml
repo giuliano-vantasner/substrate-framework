@@ -1,0 +1,64 @@
+id: P203
+base_release: v0.150.0
+base_commit: 88a3414
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK3D6]
+question: >-
+  Which exact common-scheme-factor and coupling-ratio statements follow from
+  the accepted affine one-loop kinetic families, and does GK3D6 derive its
+  O(1) charged-excitation conversion, absolute one-loop accuracy, physical
+  coupling ratios, or weak-angle reading from C-QBL-004 and the accepted
+  product-sector claims rather than declaring them?
+invariants:
+  - C-VAC-003 and C-VAC-004 retain independent affine matching boundaries conversion factors and factorwise scale data.
+  - C-QBL-004 supplies a dimensionless classical radial branch at omega one-half but no physical mass conversion particle pole or determinant-field identity.
+  - A common scale logarithm or common scheme factor across gauge factors is a premise unless an accepted common matter and matching construction derives it.
+  - Exact cancellation in a ratio does not remove an input from each absolute kinetic coefficient or coupling.
+  - C-REP-001 makes a trace coordinate equal a coupling coordinate only under a separately supplied common inverse-trace law and retains Abelian normalization covariance.
+  - C-RGE-005 imports perturbative weights and supplied factor tables but no thresholds matching boundary data or observed running.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable legacy-name events are compatibility evidence only.
+allowed_imports:
+  - C-RGE-003 and C-VAC-004 for exact inverse-length scale maps with conversion and boundary ceilings
+  - C-VAC-003 for complete affine factorwise kinetic families and supplied invariant weights
+  - C-QBL-004 only for its dimensionless classical branch and explicit no-particle no-physical-scale ceiling
+  - C-REP-001 C-RGE-005 and C-ANO-001 only for their conditional table trace beta-weight and normalization ceilings
+  - hash-pinned AS1 AS7 GK3D2 GK3D3 GK3D4 and GK3D5 mappings at v0.150.0
+  - SymPy for exact ratio differentiation factorization and limiting identities
+  - hash-pinned GK3D6 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Treat the common-log zero-matching ratio cancellation as exact accepted composition of C-VAC-003 C-VAC-004 and C-REP-001 with no new claim.
+  - id: B
+    description: Promote a distinct general multi-factor affine theorem if proportional-boundary necessity scheme sensitivity and factorwise-log mutations are not already owned by accepted APIs.
+  - id: C
+    description: Derive the O(1) conversion c and physical excitation mass from C-QBL-004 only if its dimensionless branch supplies a governed physical scale and particle map.
+  - id: D
+    description: Promote universal physical coupling ratios or a weak-angle prediction only if common matter logs boundaries normalization and physical gauge-sector maps all close.
+  - id: E
+    description: Select no new claim or API if the complete corrected scheme ledger is accepted composition and the remaining headlines are unsupported.
+  - id: F
+    description: Promote a genuine quantum loop excitation only if quantization propagator determinant insertion and physical coupling follow from accepted premises.
+  - id: G
+    description: Open a foundational revision only if an accepted affine-family inconsistency exists without assuming GK3D6.
+  - id: H
+    description: Give GK3D6 an individual terminal disposition and replay EL2 HE5 and all generated consumers without backward authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact affine ratio and derivative closure
+  - boundary log conversion and normalization provenance
+  - necessity as well as sufficiency of cancellation conditions
+  - parameter economy without deleting independent coordinates
+  - novelty beyond C-VAC-003 C-VAC-004 and C-REP-001
+  - perturbative-domain and limiting consistency
+  - classical quantum and physical interpretation discipline
+  - dependency and consumer closure
+claims_proposed: [C-VAC-006]
+comparators_blinded_until: >-
+  The generated queue exposes GK3D6's common-c headline, ten static check-call
+  sites, one assertion, and a truncated result excerpt containing a claimed
+  common additive log shift and ratio cancellation. No source body, native
+  tally, printed ratio, numerical hierarchy, weak-angle value, or detailed
+  predicate has been inspected. Those values remain blinded until this
+  proposal, formula freeze, provenance record, memory contract, and clean
+  repository preflight are committed.
+status: active
