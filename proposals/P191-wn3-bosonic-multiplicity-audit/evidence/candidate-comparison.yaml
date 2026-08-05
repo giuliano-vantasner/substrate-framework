@@ -1,0 +1,40 @@
+campaign: P191
+selection_basis: preregistered_structural_criteria_not_exposed_source_samples
+candidates:
+  A:
+    verdict: retained_as_source_evidence_only
+    reason: all_48_checks_execute_but_finite_rate_density_and_parity_headlines_are_not_blanket_proved
+  B:
+    verdict: insufficient_alone
+    reason: accepted_claims_do_not_own_the_infinite_bosonic_CCR_truncation_defect_or_factorial_one_surfaces
+  C:
+    verdict: selected
+    reason: distinct_exact_algebraic_domain_ladder_and_finite_defect_with_assumption_economy
+  D:
+    verdict: selected_conditional_composition
+    reason: full_Q_power_derivation_retains_C_SG_019_scales_and_parity_and_explicitly_excludes_a_complete_transition
+  E:
+    verdict: selected_sample_space_ledger
+    reason: exp_S_exp_S_minus_one_and_sinh_S_separate_the_three_conflated_domains_exactly
+  F:
+    verdict: selected_mode_oracle
+    reason: exact_ratios_preserve_integer_ties_and_distinguish_positive_from_positive_odd_modes
+  G:
+    verdict: retained_countermodels
+    reason: even_zero_single_state_zero_coupling_and_zero_spectral_density_break_the_overstated_physical_reading
+  H:
+    verdict: pending_governed_closure
+    reason: claim_source_consumer_release_documentation_memory_and_debt_must_close_together
+selected_claim: C-OSC-001
+selection_criteria_results:
+  exact_domain_basis_and_operator_normalization: passed
+  finite_trace_obstruction_and_top_state_defect: passed
+  C_SG_019_background_activity_coordinate_scale_and_parity: passed
+  nonconflation_with_C_SPN_002: passed
+  sample_space_measure_and_normalizer_provenance: passed
+  interaction_matrix_element_and_rate_typing: passed_low_sector_only
+  vacuum_top_even_small_and_large_limits: passed
+  exact_modes_ties_and_countermodels: passed
+  assumption_parameter_and_API_economy: passed
+  independent_rederivation_and_consumer_reach: passed_pending_governance_transaction
+comparator_values_used_to_select: false

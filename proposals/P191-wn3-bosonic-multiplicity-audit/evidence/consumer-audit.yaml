@@ -1,0 +1,54 @@
+campaign: P191
+root_source_unit: WN3
+direct_consumers:
+  WN2:
+    disposition: qualified_unchanged
+    accepted_reuse: none_from_forward_cycle
+    rejected_reuse: pending_WN3_WN4_family_cannot_validate_the_WN2_guard
+  WN4:
+    disposition: pending
+    accepted_reuse_candidate: declared_all_nonnegative_factorial_one_mass_normalizer_and_ratio_only
+    ceiling: Poisson_process_mean_variance_and_physical_S_reading_require_individual_adjudication
+  WN5:
+    disposition: pending
+    accepted_reuse_candidate: positive_factorial_one_values_may_be_supplied_to_C_BRN_001
+    ceiling: branching_channel_population_and_prediction_are_not_derived
+  WN6:
+    disposition: pending
+    accepted_reuse_candidate: one_factorial_algebraic_suppression_only
+    ceiling: density_of_states_spectral_map_and_band_scale_verdict_are_not_derived
+  WN7:
+    disposition: pending
+    accepted_reuse_candidate: lexical_and_native_replay_only
+    ceiling: repeated_WN2_WN3_admissibility_guard_remains_rejected
+  MD3:
+    disposition: pending
+    accepted_reuse_candidate: bare_Fock_ladder_and_all_nonnegative_mass_comparison_only
+    ceiling: vertex_operator_coherent_state_probability_and_medium_realization_require_individual_review
+depth_two_consumers:
+  MD1:
+    disposition: pending
+    ceiling: mode_count_DOS_and_physical_frequency_map_require_individual_review
+  MD2:
+    disposition: pending
+    ceiling: phase_variance_integral_and_medium_parameter_map_require_individual_review
+  MD4:
+    disposition: pending
+    ceiling: growth_threshold_and_rescue_depend_on_the_pending_MD_chain
+  MD5:
+    disposition: pending
+    ceiling: branching_and_isotope_predictions_depend_on_the_pending_MD_chain
+  MD6:
+    disposition: pending
+    ceiling: scanner_and_local_debt_tally_do_not_adjudicate_scanned_physics
+governance_result:
+  WN3_mapping_candidate: [C-SG-019, C-CMB-001, C-OSC-001]
+  consumer_dispositions_changed: []
+  downstream_claims_promoted: []
+  pending_reverse_consumers_preserved: 10
+  scientific_threshold_changed: false
+replay_result:
+  source_nodes_passed: 16
+  native_checks_passed: 637
+  verifier_checks_passed: 56
+  compatibility_version_failures: 0

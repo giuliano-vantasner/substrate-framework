@@ -1,0 +1,32 @@
+attempt: 0010
+campaign: P191
+candidate: individual_claim_source_and_consumer_review
+status: passed_review_pending_governance_transaction
+started_at: '2026-08-11T17:45:00Z'
+finished_at: '2026-08-11T17:53:00Z'
+claim_review:
+  claim: C-OSC-001
+  verification: symbolic_verified
+  review: accepted_contingent_on_promotion_transaction
+  compatibility: compatible_extension
+  epistemic: active
+  dependency: C-SG-019
+source_review:
+  source_unit: WN3
+  disposition: qualified
+  accepted_mappings: [C-SG-019, C-CMB-001, C-OSC-001]
+  rejected_edges:
+    - finite_interior_matrix_as_global_CCR
+    - factorial_norm_as_density_of_distinct_final_states
+    - low_sector_square_as_Fermi_Golden_Rule_rate
+    - bosonic_factor_reopens_even_cosine_orders
+    - all_positive_family_is_the_positive_odd_composition
+    - WN2_guard_as_universal_admissibility
+source_graph:
+  nodes: 16
+  native_checks: 637
+  replay_result: ALL_56_CHECKS_PASS
+  pending_reverse_consumers_preserved: 10
+  compatibility_version_failures: 0
+scientific_threshold_changed: false
+next_attempt: edit_registry_and_disposition_generate_v0_142_0_docs_and_memory_then_run_integrated_gate

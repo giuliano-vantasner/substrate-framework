@@ -2,7 +2,7 @@
 description: Audit WN3 and derive an exact bosonic Fock ladder and parity-complete composition ledger
 author: vantasner
 created: '2026-08-11T16:52:00Z'
-updated: '2026-08-11T17:44:00Z'
+updated: '2026-08-11T17:53:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -236,6 +236,14 @@ high-sector matrix element or equate a low-sector coefficient element with a
 complete transition. Individual review and the sixteen-node source replay
 remain the next gates.
 
+Attempt 0010 completes individual claim, source, dependency, candidate, impact,
+and consumer review. The sixteen-node graph executes 637 native checks, and
+the replay oracle passes 56 checks with no compatibility alias or version
+failure. Review recommends symbolic acceptance of C-OSC-001 with dependency
+C-SG-019 and qualification of WN3 through C-SG-019, C-CMB-001, and
+C-OSC-001. Ten reverse consumers remain pending. The registry, disposition,
+release, generated records, and integrated gate are still open.
+
 ## Debt Ledger
 
 The P191 ledger tracks source predicates, Fock domain, truncation, parity,
@@ -251,8 +259,8 @@ compatibility, dependencies, consumers, and governed state.
 | Bosonic multiplication may silently drop cosine parity | Preserve zero even orders through the full composition | discharged |
 | All-order and odd-order masses may be conflated | Declare each sample space, total mass, and normalizer | discharged |
 | Squared coefficients may be called rates | Supply full rate premises or retain mathematical-only scope | discharged |
-| WN4 may be imported through a forward cycle | Exclude it until individually accepted | open |
-| C-OSC-001 may duplicate or sprawl accepted mathematics | Complete claim and API nonduplication and cohesion review | open |
+| WN4 may be imported through a forward cycle | Exclude it until individually accepted | discharged |
+| C-OSC-001 may duplicate or sprawl accepted mathematics | Complete claim and API nonduplication and cohesion review | discharged |
 | Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | discharged |
 | Governed records may disagree | Replay and synchronize every affected path with empty debt | open |
 

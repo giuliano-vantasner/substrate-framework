@@ -1,0 +1,40 @@
+campaign: P191
+base_release: v0.141.0
+claim: C-OSC-001
+direct_dependency:
+  C_SG_019:
+    use: exact_zero_background_H_linear_cosine_coefficient_parity_activity_and_coordinate_scales
+    status: accepted_in_v0.141.0
+transitive_closure:
+  C_SG_012:
+    via: C-SG-019
+    use: accepted_parent_cosine_structure
+related_not_dependencies:
+  C_SPN_002:
+    use: finite_collective_spin_contrast
+    reason: a_finite_SU2_ladder_is_not_an_infinite_bosonic_CCR_representation
+  C_CMB_001:
+    use: source_context_for_inverse_square_factorial_suppression
+    reason: the_Fock_and_factorial_one_theorem_is_rederived_directly_from_C_SG_019_and_ladder_algebra
+  C_CMB_002:
+    use: sample_space_discipline_and_WN2_cycle_context
+    reason: inverse_square_Bessel_mass_is_not_a_premise_of_factorial_one_mass
+source_dependencies:
+  GB4: {disposition: qualified, accepted_mappings: [C-BRN-001], use_in_claim: none}
+  PN1: {disposition: qualified, accepted_mappings: [C-SG-019], use_in_claim: classical_coefficient_only}
+  PN3: {disposition: qualified, accepted_mappings: [C-SPN-002], use_in_claim: contrast_only}
+  WN1: {disposition: qualified, accepted_mappings: [C-SG-019, C-CMB-001], use_in_claim: coefficient_context_only}
+  WN2: {disposition: qualified, accepted_mappings: [C-SG-019, C-CMB-001, C-CMB-002, C-BRN-001], use_in_claim: no_guard_or_physical_premise}
+approved_mathematical_imports:
+  - orthonormal_countable_basis_and_algebraic_finite_support_domain
+  - exact_finite_matrix_algebra_and_trace_cyclicity
+  - integer_induction_and_factorial_identities
+  - exponential_and_hyperbolic_power_series
+  - parity_filters_and_exact_rational_ordering
+excluded_pending_inputs:
+  - WN4_Poisson_physical_reading
+  - WN5_branching_prediction
+  - WN6_density_of_states_bridge
+  - MD3_vertex_operator_realization
+dependency_closure_for_exact_mathematical_claim: closed
+dependency_closure_for_physical_transition_rate_or_subdivision_process: incomplete_and_not_claimed
