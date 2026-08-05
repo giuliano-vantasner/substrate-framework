@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T14:04:00Z'
+updated: '2026-08-11T14:53:00Z'
 tags:
 - substrate-framework
 - effort
@@ -2109,27 +2109,44 @@ source review contains the MEDIUM narrative risk. The single integrated
 promotion boundary validates 766 memory records and passes all 1,633
 repository tests with a clean terminal status.
 
+P188 leaves v0.139.0 unchanged and qualifies GK3D4 through an exact accepted
+composition. The source's raw Pauli-half and Gell-Mann-half trace metrics are
+correct, but the accepted `C^3 tensor C^2` carrier has spectator-degenerate
+color metric `I_8`, isospin metric `(3/2)I_3`, Abelian entry `6 y^2`, and zero
+cross blocks. Independent factor families retain boundaries and logarithms;
+the source ratio is only their zero-boundary/common-log specialization. The
+supplied `3/8` trace coordinate becomes a coupling coordinate only under the
+separately common inverse-trace law, changes under paired Abelian rescaling,
+and is not uniquely anomaly-selected. C-VAC-005 remains reserved and
+unpromoted because existing accepted claims own the complete corrected object.
+The primary, independent, and five-node graph routes pass 28, 21, and 17
+checks, and 131 focused tests pass. All mutable P188 code and four of five
+source nodes have no legacy trapezoidal surface; immutable GK3D5 selects its
+current-first lazy branch under NumPy 2.5.1. GitNexus reports LOW implementation
+risk and no affected flow, while GK3D6's direct narrative propagation remains
+MEDIUM governance risk for its future individual audit. The integrated
+disposition boundary validates 768 memory records and passes all 1,633 tests
+with a clean terminal status.
+
 ## Canonicalization
 The registry, `v0.139.0` manifest, current release, generated claim
 index, and generated framework memory agree on one hundred seventy-nine
-accepted claims. P001 through P187 are frozen under `campaigns/`; proposal,
+accepted claims. P001 through P188 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 37 pending, 0 partial, 3
-migrated, 168 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 36 pending, 0 partial, 3
+migrated, 169 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 37
-pending, 3 migrated, 168 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P187 closes GK3D3 without accepting physical scale
-labels, a selected matching boundary, or a physical gauge coupling. The next
-queue unit is GK3D4, pinned at SHA-256
-`046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35`.
-Its claim that one construction supplies all three four-dimensional gauge
-sectors must be audited without treating generator trace normalization as a
-dynamical induction mechanism, inheriting unaccepted physical readings from
-EM5, YM1, QCD1, or GK3D1-3, or upgrading a conditional trace ratio into a
-physical weak-angle prediction.
+The effort remains active. D4 is discharged, but D1 remains open with 36
+pending, 3 migrated, 169 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P188 closes GK3D4 without accepting a common physical
+three-sector loop construction, erased factor boundaries, selected Abelian
+normalization, or physical weak angle. The next queue unit is WN1, pinned at
+SHA-256 `3764b29955c3bd51c10278159e08a52ff616a7041510e56917b091f1a802cdde`.
+Its factorial vertex coefficient, exact magnitude bounds, PN2 subdivision band,
+rate-weight interpretation, finite exact-rational probes, arbitrary-precision
+exponents, and float-underflow demonstration require separate adjudication.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

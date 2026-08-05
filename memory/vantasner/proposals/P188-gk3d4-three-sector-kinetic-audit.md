@@ -2,7 +2,7 @@
 description: Audit GK3D4 and derive a provenance-complete product-sector kinetic normalization ledger
 author: vantasner
 created: '2026-08-11T14:05:00Z'
-updated: '2026-08-11T14:43:00Z'
+updated: '2026-08-11T14:53:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - product-gauge
 - kinetic-normalization
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P188 GK3D4 Three-Sector Kinetic Audit
 
@@ -256,6 +256,24 @@ propagates the overclaim. Tool-generated host integration artifacts were
 removed. The editable disposition, generated queue, terminal campaign,
 decision memory, final graph replay, and integrated gate remain.
 
+Attempts 0008 and 0009 close those records without a scientific mutation.
+GK3D4 is qualified through the ten-claim accepted composition, the generated
+queue falls from 37 to 36 pending units, P188 moves to the immutable campaign
+ledger, and v0.139.0 remains current with 179 claims. The final terminal replay
+passes 28 primary, 21 independent, 17 source-graph, and 131 focused checks.
+The one integrated repository gate validates all 768 memory records and passes
+all 1,633 tests in 163.15 seconds, with exit zero after 175.71 wall seconds.
+
+## Outcome
+
+The positive deliverable is the exact product-carrier and affine provenance
+ledger: full trace blocks include spectator degeneracies, cross blocks vanish
+on the supplied standard carrier, and the universal ratio is precisely the
+zero-boundary/common-log specialization of independent factor families. The
+three-eighths table coordinate remains conditional on a common inverse-trace
+law and covariant under Abelian reparameterization. Existing accepted claims
+own every reusable part, so no duplicate claim or API is created.
+
 ## Debt Ledger
 
 The P188 ledger tracks source reachability, generator conventions, product
@@ -273,7 +291,7 @@ consumers, and governed state.
 | A trace ratio may be called a physical coupling angle | Reproduce the C-REP-001 iff and mutate the common coefficient and Abelian normalization | discharged by the exact common-law, independent-coefficient, and rho=2 countermodels in attempt 0003 |
 | C-VAC-005 may duplicate accepted semantics | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | discharged by the 28-check primary, 21-check independent, and nonduplication audits; identifier reserved without promotion |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D4 imports only SymPy and has no NumPy surface |
-| Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | open |
+| Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | discharged by attempts 0008 and 0009, the 17-check graph, regenerated queue, archived records, and integrated gate |
 
 ## Review and Promotion Plan
 

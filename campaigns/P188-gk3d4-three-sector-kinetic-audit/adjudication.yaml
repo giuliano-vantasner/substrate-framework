@@ -70,6 +70,13 @@ validation_commands:
   - .venv/bin/python -m pytest affected_tests
   - scripts/validate.sh
   - git diff --check
-integrated_gate: pending_terminal_execution
+integrated_gate:
+  attempt: attempts/0009/result.yaml
+  memory_files: 768
+  tests_passed: 1633
+  pytest_seconds: 163.15
+  wall_seconds: 175.71
+  max_rss_kib: 214716
+  exit_status: 0
 debt: []
 status: accepted_composition_no_release

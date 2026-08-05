@@ -2,7 +2,7 @@
 description: Qualify GK3D4 through accepted product-carrier trace, affine-kinetic, trace-coupling, and anomaly ceilings
 author: vantasner-review
 created: '2026-08-11T14:48:00Z'
-updated: '2026-08-11T14:48:00Z'
+updated: '2026-08-11T14:53:00Z'
 tags:
 - substrate-framework
 - source-review
@@ -10,8 +10,8 @@ tags:
 - product-gauge
 - kinetic-normalization
 category: decisions
-confidence: working
-status: active
+confidence: established
+status: archived
 ---
 # GK3D4 Qualified Review
 
@@ -73,4 +73,5 @@ P188 changes campaign, GK3D4 disposition, generated queue, proposal and
 decision memory, and the parent effort only. C-VAC-005 stays reserved and
 unpromoted. No canonical API, test, accepted claim, generated documentation,
 release, physical three-sector construction, weak angle, or substrate
-mechanism is accepted. GK3D5 and GK3D6 remain pending.
+mechanism is accepted. The integrated gate validates all 768 memory records and
+passes all 1,633 tests. GK3D5 and GK3D6 remain pending.
