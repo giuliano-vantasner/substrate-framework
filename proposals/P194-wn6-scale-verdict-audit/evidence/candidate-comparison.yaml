@@ -1,0 +1,43 @@
+campaign: P194
+ordered_criteria:
+  - compatibility_with_accepted_phase_and_Fock_conventions
+  - novelty_beyond_C_SG_019_and_C_OSC_001
+  - explicit_amplitude_sign_RMS_and_coordinate_normalization
+  - exact_domain_and_approximation_error_typing
+  - assumption_and_parameter_economy
+  - limiting_cases_period_shifts_and_mutation_sensitivity
+  - physical_premise_and_unit_provenance_completeness
+  - downstream_and_governance_compatibility
+candidates:
+  A:
+    verdict: retained_as_source_evidence
+    reason: native_execution_reproduces_but_does_not_validate_the_headline_implications
+  B:
+    verdict: rejected
+    reason: accepted_claims_leave_both_remainder_control_and_classical_peak_RMS_conversion_open
+  C:
+    verdict: selected
+    reason: exact_phase_amplitude_convention_is_distinct_reusable_and_parameter_free
+  D:
+    verdict: selected
+    reason: global_remainder_certificate_replaces_an_unquantified_hard_cutoff
+  E:
+    verdict: selected_conditionally
+    reason: limb_threshold_survives_only_after_positive_sign_and_intensity_map_are_declared
+  F:
+    verdict: selected_as_scope_boundary
+    reason: peak_RMS_Fock_and_multi_mode_countermodels_break_the_source_identifications
+  G:
+    verdict: open
+    reason: dependency_consumer_disposition_and_integrated_replay_remain
+claim_decision: promote_C_OSC_002_after_claim_level_review
+source_disposition_recommendation: qualified
+accepted_mapping_if_reviewed: [C-SG-019, C-OSC-001, C-OSC-002, C-CMB-003]
+rejected_source_extensions:
+  - physical_material_amplitude
+  - PN2_band_as_accepted_input
+  - hard_single_vacuum_small_oscillation_domain
+  - period_counts_as_topological_windings
+  - multi_mode_state_or_unique_missing_bridge
+  - physical_channel_probability_or_rate_verdict
+

@@ -1,0 +1,36 @@
+campaign: P194
+claim: C-OSC-002
+canonical_module: src/substrate_framework/cosine_vertices.py
+exports: src/substrate_framework/__init__.py
+tests: tests/test_cosine_vertices.py
+API_change: additive
+functions:
+  cosine_quadratic_gap:
+    input: exact_real_coordinate
+    output: x^2/2-(1-cos(x))
+  cosine_quadratic_gap_bound:
+    input: exact_real_coordinate
+    output: x^4/24
+  harmonic_cycle_mean_square:
+    input: real_peak_amplitude
+    output: P^2/2
+  harmonic_rms_from_peak:
+    input: real_peak_amplitude
+    output: abs(P)/sqrt(2)
+  sufficient_cosine_quadratic_domain:
+    input: positive_relative_to_quadratic_tolerance
+    output: sqrt(12*epsilon)
+properties:
+  pure_imports: true
+  simulations_on_import: false
+  prints_on_import: false
+  exact_expressions_only: true
+  hidden_fitted_constants: false
+  direct_numpy_legacy_access: false
+  direct_numpy_current_access: false
+nonduplication:
+  C_SG_019_gap: finite_Taylor_remainder_was_explicitly_uncontrolled
+  C_OSC_001_gap: q0_squared_has_no_classical_peak_or_RMS_map
+  wrapper_only: false
+focused_tests: 19
+

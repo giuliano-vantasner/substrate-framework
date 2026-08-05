@@ -1,0 +1,15 @@
+campaign: P194
+claim: C-OSC-002
+independent: proposals/P194-wn6-scale-verdict-audit/reviews/independent_phase_scale_review.py
+runtime_checks: 25
+imports_candidate_scientific_API: false
+oracle: raw_SymPy_nonnegative_integral_reconstruction_cycle_average_and_countermodels
+independent_routes:
+  - twice_integrated_2sin_squared_kernel_for_gap_nonnegativity
+  - four_times_integrated_2sin_squared_kernel_for_upper_bound
+  - direct_full_period_cosine_squared_integration
+  - distinct_equal_product_mode_amplitude_pairs
+  - signed_amplitude_and_peak_RMS_counterexamples
+source_sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+formula_freeze_sha256: b0a94810b20487c37209f6ec621edf154c882a8caaeaf0b8b3ab7283beb29cc6
+

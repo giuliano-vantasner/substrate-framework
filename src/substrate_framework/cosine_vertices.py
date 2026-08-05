@@ -168,3 +168,63 @@ def cosine_mixed_taylor_polynomial(
                 * low_expression**low_power
             )
     return sp.expand(polynomial)
+
+
+def cosine_quadratic_gap(argument: Any) -> sp.Expr:
+    """Return the exact gap between the quadratic and cosine potentials.
+
+    For a real coordinate ``x`` this is
+    ``x**2/2 - (1-cos(x))``.  It is globally nonnegative and no larger than
+    :func:`cosine_quadratic_gap_bound`.  The function returns the exact
+    expression; it does not silently choose an approximation domain.
+    """
+
+    coordinate = sp.sympify(argument)
+    return sp.simplify(coordinate**2 / 2 - (1 - sp.cos(coordinate)))
+
+
+def cosine_quadratic_gap_bound(argument: Any) -> sp.Expr:
+    """Return the global fourth-order upper bound for the quadratic gap.
+
+    For every real ``x``,
+    ``0 <= cosine_quadratic_gap(x) <= x**4/24``.
+    """
+
+    coordinate = sp.sympify(argument)
+    return coordinate**4 / sp.factorial(4)
+
+
+def harmonic_cycle_mean_square(peak_amplitude: Any) -> sp.Expr:
+    """Return the full-cycle mean square for a harmonic phase.
+
+    If ``phi(t)=P*cos(omega*t+delta)`` with nonzero real ``omega`` and real
+    peak amplitude ``P``, then the mean of ``phi(t)**2`` over one complete
+    period is ``P**2/2``.  Calling ``P`` an RMS amplitude would therefore
+    change the convention by a factor of ``sqrt(2)``.
+    """
+
+    peak = sp.sympify(peak_amplitude)
+    return sp.simplify(peak**2 / 2)
+
+
+def harmonic_rms_from_peak(peak_amplitude: Any) -> sp.Expr:
+    """Return the nonnegative RMS amplitude of a real harmonic phase."""
+
+    peak = sp.sympify(peak_amplitude)
+    return sp.Abs(peak) / sp.sqrt(2)
+
+
+def sufficient_cosine_quadratic_domain(relative_tolerance: Any) -> sp.Expr:
+    """Return a sufficient symmetric domain radius for a relative error.
+
+    The relative error is measured against the quadratic potential.  For
+    ``x != 0`` it is at most ``x**2/12``; therefore a positive tolerance
+    ``epsilon`` is guaranteed on ``|x| <= sqrt(12*epsilon)``.  A concrete
+    nonpositive tolerance is rejected.  Symbolic callers retain the explicit
+    obligation that their tolerance be positive.
+    """
+
+    tolerance = sp.sympify(relative_tolerance)
+    if tolerance.is_number and tolerance.is_positive is not True:
+        raise ValueError("relative_tolerance must be positive")
+    return sp.sqrt(12 * tolerance)

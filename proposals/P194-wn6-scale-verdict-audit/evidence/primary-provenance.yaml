@@ -1,0 +1,19 @@
+campaign: P194
+claim: C-OSC-002
+proposal_snapshot: proposals/P194-wn6-scale-verdict-audit/evidence/formula-freeze.yaml
+proposal_snapshot_sha256: b0a94810b20487c37209f6ec621edf154c882a8caaeaf0b8b3ab7283beb29cc6
+source_sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+release_snapshot: governance/releases/v0.143.0.yaml
+release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+primary: proposals/P194-wn6-scale-verdict-audit/verify.py
+runtime_checks: 45
+oracle: exact_SymPy_algebra_integral_certificates_and_mutation_sensitivity
+canonical_APIs:
+  - src/substrate_framework/cosine_vertices.py::cosine_quadratic_gap
+  - src/substrate_framework/cosine_vertices.py::cosine_quadratic_gap_bound
+  - src/substrate_framework/cosine_vertices.py::harmonic_cycle_mean_square
+  - src/substrate_framework/cosine_vertices.py::harmonic_rms_from_peak
+  - src/substrate_framework/cosine_vertices.py::sufficient_cosine_quadratic_domain
+numeric_or_simulation_evidence: false
+compatibility_alias_used: false
+

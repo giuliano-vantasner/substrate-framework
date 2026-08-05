@@ -1,0 +1,35 @@
+attempt: 0004
+campaign: P194
+candidate: exact_API_primary_and_independent_verification
+status: passed_serious_boundaries
+started_at: '2026-08-05T16:39:00Z'
+finished_at: '2026-08-05T16:48:00Z'
+primary:
+  command: PYTHONPATH=src .venv/bin/python proposals/P194-wn6-scale-verdict-audit/verify.py
+  checks: 45
+  exit_status: 0
+independent:
+  command: PYTHONPATH=src .venv/bin/python proposals/P194-wn6-scale-verdict-audit/reviews/independent_phase_scale_review.py
+  checks: 25
+  imports_candidate_scientific_API: false
+  exit_status: 0
+focused_tests:
+  command: .venv/bin/python -m pytest tests/test_cosine_vertices.py -q
+  passed: 19
+  wall_seconds: 3.15
+  exit_status: 0
+mutations_rejected:
+  - wrong_tolerance_radius_factors
+  - weakened_fourth_order_denominators
+  - missing_harmonic_mean_square_factor
+  - signed_amplitude_iff
+  - peak_as_RMS_threshold
+countermodels:
+  - barrier_top_has_more_than_59_percent_relative_to_quadratic_error
+  - equal_S_multi_from_distinct_M_A_pairs
+  - fixed_M_with_both_suppressed_and_growth_amplitudes
+  - q0_and_classical_RMS_are_independent_symbols
+scientific_threshold_changed: true
+reason: exact_tolerance_domain_replaces_hard_pi_cutoff
+next_attempt: complete_nonduplication_dependency_consumer_impact_and_source_graph_review
+

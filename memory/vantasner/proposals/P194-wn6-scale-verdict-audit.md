@@ -167,6 +167,17 @@ map gives the source threshold `A_RMS>sqrt(n)`, while a peak map gives
 Fock-coordinate convention. This content is absent from C-SG-019 and
 C-OSC-001, so Candidate B is rejected and the importable API is warranted.
 
+Attempt 0004 passes both serious exact boundaries. The primary verifier closes
+45 mutation-sensitive checks through the canonical APIs and nonnegative
+integral certificates. The independent verifier closes 25 raw-SymPy checks
+without importing candidate scientific APIs, reconstructing both bounds,
+cycle averaging, distinct amplitude conventions, and nonidentifiability
+countermodels. Nineteen focused package tests pass in 3.15 seconds. The API is
+an additive five-function extension of `cosine_vertices.py`; it has no numeric
+quadrature, tolerance fit, hidden constant, import side effect, or NumPy
+compatibility surface. C-OSC-002 is recommended for claim-level review, while
+dependency, consumer, impact, and source-graph review remain open.
+
 ## Debt Ledger
 
 The P194 ledger tracks source predicates, amplitude and intensity conventions,
@@ -178,10 +189,10 @@ dependencies, consumers, and governed state.
 | WN6 was exposed before P194 | Record exposure and claim no fresh blinding | discharged |
 | Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | discharged |
 | Classical peak, RMS, variance, and Fock intensity may be conflated | Derive and type every map and counterexample | discharged |
-| A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | in progress |
+| A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | discharged |
 | PN2 physical band may be imported without authority | Trace units, state provenance, and accepted ceiling | discharged |
 | Conditional threshold algebra may omit a sign domain | Derive exact equivalences and counterdomains | discharged |
-| A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | open |
+| A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | in progress |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
 | Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |

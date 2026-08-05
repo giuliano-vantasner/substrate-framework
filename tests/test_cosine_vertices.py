@@ -7,6 +7,11 @@ from substrate_framework.cosine_vertices import (
     cosine_mixed_coefficient,
     cosine_mixed_derivative,
     cosine_mixed_taylor_polynomial,
+    cosine_quadratic_gap,
+    cosine_quadratic_gap_bound,
+    harmonic_cycle_mean_square,
+    harmonic_rms_from_peak,
+    sufficient_cosine_quadratic_domain,
     vacuum_cosine_mixed_coefficient,
     vacuum_one_high_coefficient,
 )
@@ -116,3 +121,59 @@ def test_factorial_suppression_is_explicit_for_nonzero_one_high_terms() -> None:
     magnitudes = [abs(vacuum_one_high_coefficient(n)) for n in (1, 3, 5, 7)]
     assert magnitudes == [1, sp.Rational(1, 6), sp.Rational(1, 120), sp.Rational(1, 5040)]
     assert all(left > right for left, right in zip(magnitudes, magnitudes[1:]))
+
+
+def test_cosine_quadratic_gap_and_global_bound_are_exact() -> None:
+    field = sp.symbols("phi", real=True)
+    gap = cosine_quadratic_gap(field)
+    assert gap == field**2 / 2 + sp.cos(field) - 1
+    assert cosine_quadratic_gap_bound(field) == field**4 / 24
+
+    radius, integration_variable = sp.symbols("r s", nonnegative=True)
+    lower_certificate = sp.integrate(
+        (radius - integration_variable) * (1 - sp.cos(integration_variable)),
+        (integration_variable, 0, radius),
+    )
+    upper_certificate = sp.integrate(
+        (radius - integration_variable) ** 3
+        * (1 - sp.cos(integration_variable))
+        / 6,
+        (integration_variable, 0, radius),
+    )
+    assert sp.simplify(lower_certificate - cosine_quadratic_gap(radius)) == 0
+    assert sp.simplify(
+        upper_certificate
+        - (cosine_quadratic_gap_bound(radius) - cosine_quadratic_gap(radius))
+    ) == 0
+
+
+def test_relative_gap_bound_and_tolerance_domain_keep_factors() -> None:
+    tolerance = sp.symbols("epsilon", positive=True)
+    radius = sufficient_cosine_quadratic_domain(tolerance)
+    assert radius == 2 * sp.sqrt(3) * sp.sqrt(tolerance)
+    assert sp.simplify(radius**2 / 12 - tolerance) == 0
+    assert sp.simplify(
+        cosine_quadratic_gap(sp.pi) / (sp.pi**2 / 2)
+        - (1 - 4 / sp.pi**2)
+    ) == 0
+
+
+@pytest.mark.parametrize("bad_tolerance", [0, -1, sp.Rational(-1, 10)])
+def test_sufficient_domain_rejects_nonpositive_concrete_tolerance(
+    bad_tolerance: sp.Expr,
+) -> None:
+    with pytest.raises(ValueError):
+        sufficient_cosine_quadratic_domain(bad_tolerance)
+
+
+def test_harmonic_peak_and_rms_conventions_are_distinct() -> None:
+    peak = sp.symbols("P", real=True)
+    assert harmonic_cycle_mean_square(peak) == peak**2 / 2
+    assert harmonic_rms_from_peak(peak) == sp.sqrt(2) * sp.Abs(peak) / 2
+    assert harmonic_cycle_mean_square(sp.pi) == sp.pi**2 / 2
+
+
+def test_harmonic_cycle_mean_square_matches_direct_period_average() -> None:
+    peak, phase = sp.symbols("P u", real=True)
+    direct = sp.integrate((peak * sp.cos(phase)) ** 2, (phase, 0, 2 * sp.pi))
+    assert sp.simplify(direct / (2 * sp.pi) - harmonic_cycle_mean_square(peak)) == 0

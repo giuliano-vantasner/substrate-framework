@@ -49,9 +49,14 @@ from .coherence_gates import (
     population_activation_scale,
 )
 from .cosine_vertices import (
+    cosine_quadratic_gap,
+    cosine_quadratic_gap_bound,
     cosine_mixed_coefficient,
     cosine_mixed_derivative,
     cosine_mixed_taylor_polynomial,
+    harmonic_cycle_mean_square,
+    harmonic_rms_from_peak,
+    sufficient_cosine_quadratic_domain,
     vacuum_cosine_mixed_coefficient,
     vacuum_one_high_coefficient,
 )
