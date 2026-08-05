@@ -3480,6 +3480,63 @@ units:
       passes all 1,490 tests with 705 valid memory records; one prior workflow
       invocation is preserved as transport-inconclusive because its detached
       session lost the final exit code.
+  BX1:
+    disposition: qualified
+    accepted_claims:
+      - C-PDE-003
+      - C-PDE-005
+      - C-PDE-009
+      - C-PDE-012
+    qualification: >-
+      BX1's finite-wall diagnosis and pure-vacuum counterexample survive.
+      C-PDE-012 owns the exact three-dimensional central-radial Liouville and
+      norm transport, regular-origin power, spherical-Bessel Dirichlet-ball
+      calibration, conditional threshold form bound, and forced-zero endpoint
+      non-discrimination. The source-defined R=80 branch is above threshold
+      and multi-node, and its lowest averaged l=2 wall level follows the vacuum
+      inverse-square ladder. But fixed-guess branch wandering is not a theorem
+      about every continuously tracked level; robust node counts differ from
+      the prose; finite sampling does not prove global W nonnegativity; and
+      the l=0 control is only a time-averaged eigenpair. No full Floquet or
+      nonlinear mode, all-channel nonexistence, only-genuine-mode result,
+      gravitational source, physical radiation, absolute scale, particle
+      identity, corpus-wide mechanism closure, or substrate realization is
+      accepted. SC2 and TX1 through TX3 remain pending and inherit no blanket
+      authority from this qualification.
+    evidence:
+      - campaigns/P177-bx1-l2-box-artifact-audit/reviews/source_adjudication.md
+      - campaigns/P177-bx1-l2-box-artifact-audit/reviews/C-PDE-012-claim-review.md
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/source-reproduction.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/compatibility-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/source-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/check-adjudication.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/input-provenance.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/dependency-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/consumer-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/candidate-comparison.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/primary-provenance.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/literature-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/evidence/numerical-audit.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+      - campaigns/P177-bx1-l2-box-artifact-audit/reviews/independent_radial_spectral_review.py
+      - campaigns/P177-bx1-l2-box-artifact-audit/reviews/replay_source_graph.py
+      - campaigns/P177-bx1-l2-box-artifact-audit/attempts/0012/result.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/attempts/0015/result.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/attempts/0016/result.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/attempts/0017/result.yaml
+      - campaigns/P177-bx1-l2-box-artifact-audit/attempts/0018/result.yaml
+      - memory/vantasner/decisions/C-PDE-012-review.md
+      - memory/vantasner/decisions/BX1-qualified-review.md
+    note: >-
+      P177 closes thirty-nine primary, twenty-two independent, and twenty-four
+      graph checks plus 103 focused tests. The ten-node graph executes seventy-
+      two source predicates and fifteen assertions. P3D2, QB3, QB4, and TX1
+      use isolated immutable aliases backed by `np.trapezoid`; there are no
+      version-only stops or scientific failures. GitNexus rates the additive
+      API LOW risk with no affected process.
   EM2:
     disposition: qualified
     accepted_claims:

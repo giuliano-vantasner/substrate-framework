@@ -54,12 +54,7 @@ candidates:
     description: Generic finite-wall artifact diagnostics based on threshold position, node count, wall scaling, compact-region norm retention, and soluble free limits.
   - id: H
     description: Claim source dependency consumer compatibility release queue documentation and memory closure.
-uniqueness_evidence: >-
-  Source-aware registry, package, campaign, memory, and GitNexus searches find
-  the constituent l=2 transform and model-specific finite-box ceilings, but no
-  canonical exact central-field theorem combining domain and norm transport,
-  spherical-Bessel wall calibration, the conditional threshold form bound,
-  and hard-zero predicate non-discrimination.
+uniqueness_evidence: null
 selection_criteria:
   - accepted_operator_domain_and_boundary_compatibility
   - separation_of_averaged_finite_box_half_line_and_Floquet_objects
@@ -68,10 +63,10 @@ selection_criteria:
   - assumption_and_parameter_economy
   - positive_reusable_API_novelty_mutation_sensitivity_and_consumer_reach
   - physical_scope_honesty_and_governance_closure
-claims_proposed: [C-PDE-012]
+claims_proposed: []
 comparators_blinded_until: >-
   freeze commit before opening BX1's body; the generated queue exposes BX1's
   box-artifact result and selected numerical synopsis, while P054 memory and
   accepted evidence already expose an above-threshold wall-following averaged
   state, so no fresh result or numerical comparator blinding is claimed
-status: source_aware_revision_0001
+status: frozen_with_prior_result_exposure

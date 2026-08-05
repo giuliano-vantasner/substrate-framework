@@ -1,0 +1,25 @@
+attempt: 0018
+campaign: P177
+candidate: H_staged_impact_and_consumer_analysis
+status: passed
+started_at: '2026-08-11T05:57:00Z'
+finished_at: '2026-08-11T05:58:00Z'
+methods:
+  - GitNexus_upstream_impact_on_nearest_existing_FEM_symbol
+  - GitNexus_staged_detect_changes
+  - direct_canonical_and_hash_pinned_source_consumer_inventory
+gitnexus:
+  risk: LOW
+  staged_files: 40
+  changed_indexed_symbols: 0
+  affected_processes: 0
+  nearest_symbol_direct_callers: 0
+interpretation: >-
+  The new module is additive and absent from the pre-change index; zero changed
+  indexed symbols is not used as proof of no impact. Focused import tests,
+  source inspection, and explicit consumers close that limitation.
+consumer_scope:
+  canonical_new: [tests/test_radial_spectral_classification.py, campaigns/P177-bx1-l2-box-artifact-audit/verify.py]
+  pending_source: [SC2, TX1, TX2, TX3]
+  existing_canonical_symbols_modified: []
+next_attempt: materialize_claim_release_disposition_docs_and_memory

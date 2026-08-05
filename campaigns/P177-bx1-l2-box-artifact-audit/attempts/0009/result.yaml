@@ -1,0 +1,18 @@
+attempt: 0009
+campaign: P177
+candidate: C_primary_verifier_after_symbolic_comparison_repair
+status: failed_test_oracle_wall_offset
+started_at: '2026-08-11T05:37:00Z'
+finished_at: '2026-08-11T05:38:00Z'
+command: .venv/bin/python campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+result:
+  checks_passed_before_stop: 32
+  exit_code: 1
+  failing_check: P054 independently calibrated the same vacuum box level
+failure: >-
+  The verifier compared the R40 eigenvalue to E_R20/4. Inverse-square wall
+  scaling applies to the gap E-mu_squared, not to the threshold offset itself.
+classification: test_oracle_wall_offset
+scientific_candidate_rejected: false
+repair: compare_E_R40_to_one_plus_E_R20_minus_one_over_four
+next_attempt: rerun_primary_claim_verifier

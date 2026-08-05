@@ -1,0 +1,36 @@
+attempt: 0016
+campaign: P177
+candidate: H_hash_pinned_source_graph_replay
+status: passed
+started_at: '2026-08-11T05:51:00Z'
+finished_at: '2026-08-11T05:54:00Z'
+command: >-
+  .venv/bin/python
+  campaigns/P177-bx1-l2-box-artifact-audit/reviews/replay_source_graph.py
+  /home/dan/substrate
+process:
+  exit_code: 0
+  terminal_tally: ALL 24 CHECKS PASS [P177-BX1-SOURCE-GRAPH]
+graph:
+  nodes: 10
+  runtime_predicates: 72
+  assertions: 15
+  dependency_nodes: [GW3, P3D2, QB1, QB3, QB4]
+  adjudicated_root: BX1
+  reverse_consumers: [SC2, TX1, TX2, TX3]
+compatibility:
+  native_nodes: [GW3, QB1, BX1, SC2, TX2, TX3]
+  immutable_alias_only_nodes: [P3D2, QB3, QB4, TX1]
+  alias_target: numpy.trapezoid
+  version_only_stops: 0
+  scientific_candidate_failures_from_version_events: 0
+authority:
+  dependencies_retain_accepted_qualified_mappings: true
+  reverse_consumers_remain_pending_without_accepted_mappings: true
+  successful_source_execution_creates_authority: false
+consumer_finding: >-
+  The pending SC2 and TX1-TX3 sources execute, but their BX1-derived route-
+  closure and no-bound-state prose remains unaccepted. Existing conditional
+  TT, STF, finite-box background, averaged-defect, and waveform claims remain
+  unchanged.
+next_attempt: claim_level_review_dependency_consumer_and_impact_closure

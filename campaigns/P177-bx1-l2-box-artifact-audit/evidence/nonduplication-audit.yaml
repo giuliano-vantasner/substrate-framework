@@ -1,0 +1,41 @@
+campaign: P177
+proposed_claims:
+  C-PDE-012:
+    nearest:
+      - C-PDE-003
+      - C-PDE-004
+      - C-PDE-005
+      - C-PDE-009
+      - C-MOD-001
+      - C-MOD-002
+    distinct_surface: >-
+      one exact three-dimensional central-field theorem combining Liouville
+      and radial-norm transport, regular-origin power, spherical-Bessel
+      Dirichlet-ball calibration, the conditional threshold quadratic-form
+      bound, and hard-zero endpoint-predicate non-discrimination
+    implementation: >-
+      new pure exact classification and calibration APIs with no duplicated
+      eigensolver, time evolution, harmonic balance, or local check helper
+reserved_identifier_search:
+  C-PDE-010: reserved_by_P054_and_unavailable
+  C-PDE-011: accepted_existing_claim
+  C-PDE-012: no_existing_registry_campaign_memory_source_or_test_use_before_revision_0001
+API_search:
+  nearest_canonical_symbols:
+    - src/substrate_framework/sine_gordon_l_modes.py transformed v=r*psi evolution
+    - src/substrate_framework/radial_modes.py solve_radial_finite_box_spectrum
+    - src/substrate_framework/radial_modes.py is_below_continuum
+  missing_before_revision:
+    - exact_generic_central_radial_domain_and_norm_ledger
+    - exact_spherical_Bessel_Dirichlet_ball_level_calibration
+    - exact_conditional_threshold_form_certificate
+    - explicit_hard_zero_endpoint_predicate_counterexample
+retained_reuse:
+  - C-PDE-003_exact_l2_transformation_and_origin_order
+  - C-PDE-005_unit_sine_Gordon_far_threshold
+  - C-PDE-009_averaged_operator_and_Floquet_separation
+  - radial_modes_existing_generalized_FEM_and_robust_node_counter
+  - P054_attempt_0003_as_prior_scoped_numeric_evidence_only
+decision: distinct_additive_exact_claim_subject_to_independent_review_and_global_replay
+duplicated_constants_or_solvers: false
+debt: []

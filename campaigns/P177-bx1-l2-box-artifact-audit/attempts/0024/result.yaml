@@ -1,0 +1,16 @@
+attempt: 0024
+campaign: P177
+candidate: staged_diff_hygiene_recheck
+status: passed
+started_at: '2026-08-11T06:14:00Z'
+finished_at: '2026-08-11T06:14:00Z'
+commands:
+  - git diff --cached --check
+  - parse_repaired_release_and_attempt_YAML
+results:
+  staged_diff_check: passed
+  repaired_yaml: valid
+scientific_changes_since_terminal_gate: []
+full_suite_repeated: false
+debt: []
+next_attempt: commit_promotion_transaction

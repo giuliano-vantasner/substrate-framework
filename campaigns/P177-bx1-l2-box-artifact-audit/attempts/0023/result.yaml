@@ -1,0 +1,12 @@
+attempt: 0023
+campaign: P177
+candidate: staged_diff_hygiene
+status: failed
+started_at: '2026-08-11T06:13:00Z'
+finished_at: '2026-08-11T06:13:00Z'
+command: git diff --cached --check
+failure: governance/releases/v0.129.0.yaml had a new blank line at EOF
+classification: record_formatting
+scientific_candidate_rejected: false
+repair: remove_only_the_extra_terminal_blank_line_and_restage
+next_attempt: staged_diff_hygiene_recheck

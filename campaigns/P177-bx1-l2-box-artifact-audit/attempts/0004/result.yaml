@@ -1,0 +1,42 @@
+attempt: 0004
+campaign: P177
+candidate: B_C_G_source_aware_nonduplication_and_exact_claim_selection
+status: passed
+started_at: '2026-08-11T05:25:00Z'
+finished_at: '2026-08-11T05:28:00Z'
+methods:
+  - accepted_registry_and_release_recall
+  - direct_package_campaign_test_and_memory_search
+  - refreshed_GitNexus_query_and_symbol_context_cross_checked_against_source
+  - exact_identifier_collision_search
+findings:
+  existing_reusable_solver: src/substrate_framework/radial_modes.py:solve_radial_finite_box_spectrum
+  existing_robust_node_counter: src/substrate_framework/radial_modes.py:_mode_node_count
+  prior_source_specific_numeric_audit: campaigns/P054-qb3-triaxial-l2-polarizations/attempts/0003
+  existing_exact_pieces: [C-PDE-003, C-PDE-005, C-PDE-009, C-MOD-001]
+  missing_composite_surface_before_P177:
+    - generic_3D_central_radial_domain_and_norm_transport
+    - exact_spherical_Bessel_Dirichlet_ball_calibration
+    - conditional_threshold_quadratic_form_certificate
+    - hard_zero_endpoint_predicate_non_discrimination
+  reserved_identifiers:
+    C-PDE-010: P054
+    C-PDE-011: accepted
+    C-PDE-012: available
+selection:
+  claim: C-PDE-012
+  selected_candidates: [A, B, C, F, G, H]
+  rejected_duplicate: D_second_finite_box_eigensolver
+  deferred_distinct_problem: E_full_Floquet_analysis
+mutation_plan:
+  - wrong_Liouville_power_restores_a_first_derivative_and_must_fail
+  - wrong_centrifugal_factor_breaks_the_spherical_Bessel_residual_and_must_fail
+  - changing_wall_radius_must_change_the_vacuum_gap_by_inverse_square
+  - a_negative_well_must_invalidate_the_nonnegative_threshold_premise_and_can_create_a_subthreshold_control
+  - hard_zeroing_must_make_the_endpoint_predicate_pass_for_a_nonzero_vacuum_standing_wave
+diagnosis: >-
+  A new eigensolver would be validation-shaped duplication. The smallest
+  coherent positive delta is an exact classification theorem and pure API
+  layered over accepted l2 and threshold claims, with the existing FEM reused
+  only for a soluble-limit numerical check.
+next_attempt: implement_and_test_exact_C_PDE_012_module

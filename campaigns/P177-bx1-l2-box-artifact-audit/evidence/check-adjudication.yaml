@@ -1,0 +1,18 @@
+campaign: P177
+source_unit: BX1
+checks:
+  - {id: BX1.1, status: retained_as_solver_branch_diagnostic_only, mapping: [C-PDE-005, C-PDE-012], reason: The_R80_branch_is_above_threshold_and_multi_node_and_the_fixed_guess_scan_wanders_but_does_not_prove_every_continuously_tracked_level_lacks_a_limit.}
+  - {id: BX1.2, status: retained_as_finite_wall_numeric_evidence, mapping: C-PDE-012, reason: The_lowest_source_defined_l2_ball_level_tracks_the_independently_derived_vacuum_spherical_Bessel_level_above_threshold.}
+  - {id: BX1.3, status: retained_numeric_resolution_control, mapping: C-PDE-012, reason: Fixed_wall_grid_refinement_separates_discretization_error_from_wall_dependence.}
+  - {id: BX1.4, status: retained_source_specific_wall_filling_evidence, mapping: C-PDE-012, reason: A_fixed_r_peak_over_R_is_the_soluble_vacuum_shape_behavior_and_not_half_line_localization.}
+  - {id: BX1.5, status: partly_retained_conditional_theorem_only, mapping: C-PDE-012, reason: W_nonnegative_implies_the_Rayleigh_lower_bound_but_8000_samples_on_a_finite_window_do_not_prove_the_global_premise.}
+  - {id: BX1.GA, status: retained_as_time_averaged_instrument_control, mapping: C-PDE-009, reason: The_subthreshold_l0_level_shows_the_discretization_can_see_a_well_but_is_not_a_full_periodic_genuine_internal_mode.}
+  - {id: BX1.GB, status: retained_exact_predicate_counterexample, mapping: C-PDE-012, reason: A_pure_vacuum_standing_wave_passes_after_the_endpoint_and_tail_are_imposed_as_zero_so_the_predicate_is_non_discriminating.}
+  - {id: BX1.GC, status: retained_source_specific_contrast, mapping: C-PDE-012, reason: The_averaged_l0_and_l2_wall_shifts_are_numerically_separated_without_upgrading_either_to_a_Floquet_object.}
+headline_decision: >-
+  Qualify BX1 through C-PDE-003, C-PDE-005, C-PDE-009, and new C-PDE-012.
+  Retain the finite-wall classification and hard-zero counterexample. Reject
+  exact global nonexistence from sampling, every-branch nonconvergence, a
+  genuine full-periodic l0 mode, only-genuine-mode wording, and corpus-wide
+  physical mechanism closure.
+debt: []

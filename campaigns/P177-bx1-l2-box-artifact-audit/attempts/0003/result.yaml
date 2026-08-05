@@ -1,0 +1,58 @@
+attempt: 0003
+campaign: P177
+candidate: A_instrumented_solver_and_node_predicate_audit
+status: passed_with_narrative_and_predicate_mismatches
+started_at: '2026-08-11T05:23:00Z'
+finished_at: '2026-08-11T05:24:00Z'
+method: >-
+  Execute the immutable hash-pinned source under wrappers around SciPy
+  solve_ivp and solve_bvp, preserving native semantics while retaining every
+  returned solver object for status, residual, mesh, and node-count audit.
+process:
+  native_terminal_tally: ALL 8 CHECKS PASS
+  bvp_calls: 9
+  bvp_successes: 9
+  ivp_calls: 572
+  ivp_successes: 572
+  maximum_ivp_nfev: 7946
+bvp_evidence:
+  requested_tolerance: 1.0e-6
+  maximum_reported_rms_residual: 9.656810793987801e-7
+  maximum_boundary_residual: 1.0733709772303827e-28
+  mesh_node_range: [768, 2097]
+  fitted_parameters:
+    R40: 1.1006142680826485
+    R60: 1.0634503557849002
+    R80: 1.0876814945744024
+    R100: 1.0911414631043048
+    R120: 1.0934741136078705
+    R160: 1.112918931252764
+    R240: 1.1340217593725623
+    R320: 1.0851464923517335
+    vacuum_R80: 1.1601897039201539
+node_predicate_mutation:
+  relative_zero_thresholds: [0.0, 1.0e-12, 1.0e-10, 1.0e-8, 1.0e-6, 1.0e-4]
+  naive_counts_R40_to_R320: [5, 5, 9, 13, 15, 24, 40, 41]
+  robust_counts_at_1e-8_R40_to_R320: [4, 5, 9, 12, 15, 23, 39, 41]
+  interpretation: >-
+    The endpoint-growth and high-overtone conclusions survive, but several
+    exact counts depend on whether numerical or boundary-scale zeros are
+    removed. No tested predicate establishes linear growth; the source only
+    requires that the final count exceed the first by at least twenty.
+surviving_evidence:
+  - All captured solver calls report success, so the observed branch variability is not a solver-status failure.
+  - Every captured BVP satisfies the source's residual tolerance and boundary conditions.
+  - The R=80 source branch remains a multi-node above-threshold finite-box object under every tested zero threshold.
+  - The pure-vacuum branch succeeds and remains accepted by the source's hard-zero localization predicate.
+failed_or_overstated_text:
+  - The checked label says the node count grows linearly, but no linearity predicate is evaluated.
+  - The checked label and result prose say the scan grows from five to forty-two nodes, while this pinned run reports forty-one at R=320.
+  - The l=0 guard prose says the amplitude-family endpoint is 0.4015, while the pinned run prints 0.459073 at A=5.
+  - Branch-to-branch nonmonotonicity from a fixed initial guess demonstrates branch-selection instability, not a theorem that every continuously tracked eigenbranch lacks a limit.
+diagnosis: >-
+  Solver health is stronger than attempt 0002 could establish, but the source
+  tally remains insensitive to false exact prose and to the stronger linear
+  growth interpretation. Retain the valid above-threshold multi-node and
+  vacuous-localization evidence while replacing narrative-shaped predicates
+  with typed reusable classification criteria.
+next_attempt: exact_theorem_novelty_and_identifier_collision_audit

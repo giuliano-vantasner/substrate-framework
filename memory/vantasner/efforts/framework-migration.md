@@ -1924,21 +1924,34 @@ failure. The controlled integrated workflow passes all 1,490 tests with 705
 valid memory records; one unchanged prior invocation remains explicitly
 transport-inconclusive.
 
+P177 adds C-PDE-012's exact three-dimensional central-radial Liouville and
+norm transport, regular-origin power, spherical-Bessel Dirichlet-ball
+calibration, conditional threshold quadratic-form bound, and forced-zero
+endpoint non-discrimination. BX1 is qualified through the new theorem and
+accepted l2, threshold, and averaged-defect claims. Its fixed-guess branch
+wandering, sampled global positivity, linear-node, genuine full-periodic l0,
+only-mode, nonlinear, physical-radiation, gravity, and substrate readings
+remain unaccepted. Primary, independent, and ten-node graph routes pass 39,
+22, and 24 checks over 72 source predicate sites and 15 assertions; 103 focused
+tests pass. BX1 runs natively, while immutable P3D2, QB3, QB4, and TX1 use
+isolated aliases backed by `np.trapezoid`, so compatibility creates no
+scientific failure. GitNexus rates the additive API LOW risk with no affected
+process. The integrated promotion workflow validates 710 memory records and
+passes all 1,500 repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.128.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-four accepted claims. P001 through P176 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 48 pending, 0 partial, 3 migrated, 157 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.129.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-five accepted claims. P001 through P177 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 47 pending, 0 partial, 3 migrated, 158 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 48
-pending, 3 migrated, 157 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is BX1, pinned at SHA-256
-`a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3`.
-P177 must freeze BX1 before source execution and audit the claimed l=2 box
-artifact with explicit fluctuation operator, radial transformation, origin and
-outer boundary conditions, continuum threshold, node counting, solver status,
-domain and mesh refinement, spectral cross-check, dependency authority, and
-reverse consumers. It must not celebrate a box artifact or absence of a bound
-state as the requested positive framework result, and it must classify any
-legacy NumPy spelling as compatibility evidence rather than physics.
+The effort remains active. D4 is discharged, but D1 remains open with 47
+pending, 3 migrated, 158 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is SC1, pinned at SHA-256
+`70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0`.
+P178 must freeze SC1 before source execution and audit its claimed
+overdetermined Gordon sourcing-channel closure against accepted gravity,
+stress-energy, dependency, and consumer ceilings. It must not import BX1's
+rejected only-mode or corpus-wide mechanism prose, and any immutable NumPy
+spelling remains compatibility evidence rather than physics.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

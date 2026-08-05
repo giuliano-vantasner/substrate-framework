@@ -1,0 +1,36 @@
+campaign: P177
+primary_verifier:
+  path: campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+  sha256: 1971c517db4609cceaaeb6be6ab9661971176ba7af9532c3403fee73104ec414
+  result: ALL_39_CHECKS_PASS
+independent_rederivation:
+  path: campaigns/P177-bx1-l2-box-artifact-audit/reviews/independent_radial_spectral_review.py
+  sha256: a89441e1c5bfba012fd61e458a58b06c8470c7d00122dc5d72f936cd1406008e
+  result: ALL_22_CHECKS_PASS
+source_graph:
+  path: campaigns/P177-bx1-l2-box-artifact-audit/reviews/replay_source_graph.py
+  sha256: 164ad0246c2df6933798980a4919fa5906fb5240650473098e2f4581c4c9132e
+  result: ALL_24_CHECKS_PASS
+canonical_module:
+  path: src/substrate_framework/radial_spectral_classification.py
+  sha256: 0927a319e33dee47ab3941f5d10eb05548f427b3d278968b26663f19dedf687a
+package_tests:
+  path: tests/test_radial_spectral_classification.py
+  sha256: 35d3a5b32656f0bf416fa12a2020db04e4e14c632ef9c079d2eddc684a7550d0
+  focused_result: 103_TESTS_PASS
+frozen_inputs:
+  source: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3
+  proposal: a7ad333c3f04907d9e27721d39e17eb592b2167b62c7582cd025cd9b310bfa4b
+  proposal_revision: 9c16e8c1c5b232b65eb8dab27c70f3b16a6ac3bcae2e6fac61a452765a174cfc
+independence_statement: >-
+  The independent review imports neither BX1, the primary verifier, nor the
+  proposed module. It separately derives the central radial transform,
+  closed-form j2 ODE and root, tridiagonal wall levels, exact trial forms, and
+  endpoint inequalities without a comparison value selecting the theorem.
+mutation_surfaces:
+  - Liouville_power
+  - centrifugal_coefficient
+  - wall_gap_power
+  - threshold_excess_potential
+  - forced_endpoint_provenance
+debt: []

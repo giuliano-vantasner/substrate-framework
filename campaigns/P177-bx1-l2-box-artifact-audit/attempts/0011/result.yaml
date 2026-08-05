@@ -1,0 +1,19 @@
+attempt: 0011
+campaign: P177
+candidate: C_primary_verifier_after_C_PDE_005_oracle_repair
+status: failed_registry_wording_oracle
+started_at: '2026-08-11T05:41:00Z'
+finished_at: '2026-08-11T05:42:00Z'
+command: .venv/bin/python campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+result:
+  checks_passed_before_stop: 36
+  exit_code: 1
+  failing_check: accepted phase averaging remains distinct from the full perturbation equation
+failure: >-
+  The verifier searched for a paraphrased phrase rather than C-PDE-009's
+  accepted clauses defines a different equation, pointwise defect vanishes,
+  and separate Floquet argument.
+classification: registry_wording_oracle
+scientific_candidate_rejected: false
+repair: assert_the_load_bearing_accepted_clauses
+next_attempt: rerun_primary_claim_verifier

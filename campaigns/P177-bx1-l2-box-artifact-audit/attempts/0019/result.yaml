@@ -1,0 +1,21 @@
+attempt: 0019
+campaign: P177
+candidate: generated_record_and_repository_validation
+status: failed_invocation_path
+started_at: '2026-08-11T06:03:00Z'
+finished_at: '2026-08-11T06:04:00Z'
+command: >-
+  validate_repository, generated docs and memory checks, then
+  memory validate memory
+surviving_results:
+  repository_validation: WORKFLOW_VALID_165_claims_165_accepted_0_proposals
+  migration_queue: 218_units_47_pending_0_partial
+  generated_docs_check: passed
+  generated_memory_check: passed
+failure: >-
+  The installed memory CLI resolved the relative argument memory against
+  /home/dan/agent-memory/memory and reported a nonexistent nested path.
+classification: invocation_path
+scientific_candidate_rejected: false
+repair: rerun_only_interrupted_record_checks_with_absolute_repository_memory_path
+next_attempt: absolute_memory_validation_and_governed_count_audit

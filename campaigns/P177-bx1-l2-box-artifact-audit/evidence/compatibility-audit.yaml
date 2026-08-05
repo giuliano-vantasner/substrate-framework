@@ -1,0 +1,22 @@
+campaign: P177
+policy:
+  mutable_integration: numpy.trapezoid_or_trapezoid_integral
+  immutable_legacy_event: version_only_not_scientific_failure
+  alias: explicit_legacy_name_bound_to_numpy.trapezoid_only
+BX1:
+  direct_np_trapz: false
+  direct_np_trapezoid: false
+  imported_legacy_trapz: false
+  dynamic_legacy_access: false
+  native_execution: passed
+source_graph:
+  native_nodes: [GW3, QB1, BX1, SC2, TX2, TX3]
+  immutable_alias_only_nodes: [P3D2, QB3, QB4, TX1]
+  alias_target: numpy.trapezoid
+  version_only_stops: 0
+mutable_P177:
+  legacy_np_trapz_calls: 0
+  numerical_integration_needed: false
+  bracketed_root_and_eigensolvers_are_not_quadrature: true
+scientific_candidate_failures_from_compatibility: 0
+debt: []

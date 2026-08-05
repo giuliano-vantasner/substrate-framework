@@ -1,0 +1,32 @@
+attempt: 0012
+campaign: P177
+candidate: C_primary_claim_verifier_after_oracle_repairs
+status: passed
+started_at: '2026-08-11T05:43:00Z'
+finished_at: '2026-08-11T05:44:00Z'
+command: .venv/bin/python campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+process:
+  exit_code: 0
+  terminal_tally: ALL 39 CHECKS PASS [P177-BX1-C-PDE-012]
+  source_runtime_checks: 8
+  primary_checks: 39
+evidence:
+  - pinned_source_freeze_revision_and_prior_numeric_audit_hashes
+  - native_source_clean_exit_and_terminal_tally
+  - exact_Liouville_norm_origin_and_threshold_forms
+  - independent_bracketed_j2_zero_and_exact_vacuum_ball_solution
+  - existing_canonical_FEM_soluble_limit_refinement
+  - hard_zero_endpoint_counterexample_and_unforced_mutation
+  - accepted_background_P054_wall_threshold_norm_and_residual_evidence
+  - source_sampling_post_fit_prose_and_scope_audit
+  - accepted_dependency_and_identifier_collision_checks
+mutations_rejected:
+  - Liouville_powers_zero_and_two
+  - centrifugal_coefficients_five_and_seven
+  - wall_gap_powers_one_and_three
+  - negative_excess_potential
+  - unforced_nondecayed_endpoint
+compatibility:
+  mutable_legacy_np_trapz: false
+  version_only_stop: false
+next_attempt: independent_rederivation_without_new_module

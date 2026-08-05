@@ -1,0 +1,24 @@
+campaign: P177
+criteria_order:
+  - accepted_operator_domain_and_boundary_compatibility
+  - separation_of_averaged_finite_box_half_line_and_Floquet_objects
+  - exact_regular_origin_norm_threshold_and_node_typing
+  - solver_status_residual_mesh_wall_tolerance_and_independent_method_quality
+  - assumption_and_parameter_economy
+  - positive_reusable_API_novelty_mutation_sensitivity_and_consumer_reach
+  - physical_scope_honesty_and_governance_closure
+candidates:
+  A: {decision: selected_as_source_adjudication_only, reason: Native_and_instrumented_replays_close_execution_health_but_not_the_overstated_headline.}
+  B: {decision: selected_as_dependency_and_nonduplication_base, reason: C_PDE_009_and_P054_already_own_the_averaged_defect_and_prior_scoped_numeric_result.}
+  C: {decision: selected_for_C_PDE_012, reason: The_exact_domain_norm_vacuum_wall_and_threshold_theorem_is_distinct_reusable_and_native_to_the_accepted_l2_equation.}
+  D: {decision: rejected_as_duplicate_implementation, reason: radial_modes_already_supplies_a_generic_checked_FEM_box_solver_and_P054_already_ran_the_source_specific_numeric_scan.}
+  E: {decision: deferred_as_separate_object, reason: A_full_Floquet_problem_requires_new_periodic_background_monodromy_and_refinement_work_and_is_not_implied_by_BX1.}
+  F: {decision: selected_as_existing_positive_dynamical_ceiling, reason: C_PDE_004_remains_the_accepted_regular_finite_time_l2_object_without_a_mode_existence_upgrade.}
+  G: {decision: selected_with_exact_scope, reason: Vacuum_wall_scaling_threshold_position_and_hard_zero_counterexample_supply_reusable_discriminators_without_claiming_that_one_numeric_metric_proves_localization.}
+  H: {decision: selected, reason: Claim_source_dependency_consumer_compatibility_release_queue_documentation_and_memory_closure_are_required.}
+selection_basis: >-
+  C and the exact part of G win on domain correctness, parameter economy,
+  soluble limits, mutation sensitivity, and reuse. Numerical closeness to the
+  source value and the source tally do not select the claim.
+claim_delta: [C-PDE-012]
+debt: []

@@ -1,0 +1,21 @@
+attempt: 0013
+campaign: P177
+candidate: independent_closed_form_j2_rederivation
+status: failed_independent_representation
+started_at: '2026-08-11T05:45:00Z'
+finished_at: '2026-08-11T05:46:00Z'
+command: >-
+  .venv/bin/python
+  campaigns/P177-bx1-l2-box-artifact-audit/reviews/independent_radial_spectral_review.py
+result:
+  checks_passed_before_stop: 7
+  exit_code: 1
+  failing_check: fresh j2 ball profile solves the radial operator
+failure: >-
+  The independent review inserted the bracketed binary64 root into the
+  symbolic profile before simplifying the radial ODE, leaving a roundoff-
+  shaped residual instead of an exact zero.
+classification: independent_representation
+scientific_candidate_rejected: false
+repair: prove_with_symbolic_z_then_substitute_numeric_root_only_for_boundary_checks
+next_attempt: rerun_independent_rederivation

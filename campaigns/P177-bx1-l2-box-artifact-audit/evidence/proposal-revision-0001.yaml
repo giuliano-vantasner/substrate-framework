@@ -1,0 +1,56 @@
+revision: 0001
+campaign: P177
+parent_frozen_proposal_sha256: a7ad333c3f04907d9e27721d39e17eb592b2167b62c7582cd025cd9b310bfa4b
+trigger: >-
+  Source-aware inspection reproduced the finite-wall evidence but exposed
+  unchecked interpretation gaps. Registry, package, campaign, memory, and
+  GitNexus searches also found that the generic FEM solver and several
+  model-specific ceilings already exist, while the preregistered exact
+  central-field calibration and hard-zero discriminator theorem do not.
+unchanged:
+  - candidates_A_through_H_and_predeclared_selection_criteria
+  - explicit_prior_result_exposure_and_no_fresh_comparator_blinding_claim
+  - separation_of_time_averaged_finite_box_half_line_and_Floquet_objects
+  - requirement_for_a_positive_reusable_object_beyond_a_source_no_go
+claim_delta:
+  identifiers: [C-PDE-012]
+  dependencies: {C-PDE-012: [C-PDE-003, C-PDE-005, C-PDE-009]}
+  release_change: new_patch_release_if_individual_review_and_global_replay_pass
+  implementation_change:
+    - add_exact_central_radial_spectral_classification_module
+    - reuse_existing_generic_finite_box_solver_instead_of_adding_an_eigensolver
+    - add_symbolic_numeric_independent_and_mutation_sensitive_tests
+claim_outline:
+  - For real three-dimensional central radial modes, chi=r*g exactly removes the first derivative and preserves the radial L2 norm.
+  - Regular g=O(r^ell) maps to chi=O(r^(ell+1)) for nonnegative integer ell.
+  - For constant vacuum potential mu_squared on a regular Dirichlet ball, g is spherical Bessel j_ell and E=mu_squared+(z_ell_n/R)^2 for a positive zero z_ell_n.
+  - The vacuum finite-wall gap therefore scales exactly as R^-2 and its normalized radial shape scales with r/R; neither behavior is half-line localization.
+  - If W_ell=ell*(ell+1)/r^2+V-mu_squared is nonnegative almost everywhere and the boundary form vanishes, the quadratic form gives E>=mu_squared; this implication is exact but a sampled W grid is not proof of its premise.
+  - An endpoint-decay predicate evaluated after the endpoint or outer tail is overwritten by zero is non-discriminating whenever the interior amplitude clears its floor.
+  - For BX1 the theorem types only the supplied time-averaged finite-wall operator and cannot infer a Floquet, nonlinear, gravitational, or substrate mode.
+source_corrections:
+  - retain_successful_above_threshold_finite_wall_reproduction
+  - retain_vacuum_counterexample_to_the_hard_zero_localization_predicate
+  - retain_sampled_W_nonnegativity_only_as_numeric_evidence
+  - reject_sampled_nonnegativity_as_an_exact_global_premise
+  - reject_branch_wandering_as_a_theorem_about_every_continuously_tracked_level
+  - reject_time_averaged_l0_eigenpair_as_a_full_periodic_internal_mode
+  - reject_only_genuine_mode_and_corpus_wide_mechanism_wording
+collision_search:
+  command: >-
+    registry/package/campaign/memory/GitNexus search for C-PDE-012,
+    Liouville, spherical-Bessel box levels, radial norm transport,
+    threshold Rayleigh bounds, hard-zero localization predicates, and
+    finite-box classifiers
+  result: identifier_and_composite_exact_claim_surface_absent_before_revision
+selected_candidates: [A, B, C, F, G, H]
+rejected_or_deferred_candidates:
+  D: existing_generic_FEM_solver_and_P054_numeric_audit_make_a_second_solver_duplicate
+  E: full_Floquet_problem_is_distinct_and_unresolved_but_not_required_to_close_the_exact_finite_wall_classifier
+oracle: >-
+  Exact SymPy rederivation, an independent spherical-Bessel differential
+  equation and bracketed-root route, finite-difference and existing-FEM
+  soluble-limit checks, wall and mesh refinement, hard-zero and potential-well
+  mutations, source instrumentation, claim-level review, hash-pinned graph
+  replay, and one terminal global gate.
+status: frozen

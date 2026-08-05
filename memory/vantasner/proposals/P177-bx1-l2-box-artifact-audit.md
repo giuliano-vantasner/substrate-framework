@@ -2,7 +2,7 @@
 description: Audit BX1 and construct a reusable l2 finite-box spectral classification
 author: vantasner
 created: '2026-08-11T05:16:00Z'
-updated: '2026-08-11T05:20:00Z'
+updated: '2026-08-11T06:02:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - l2-spectrum
 - finite-box
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P177 BX1 l2 Box-Artifact Audit
 
@@ -115,6 +115,23 @@ authority from a later source synopsis. Existing C-PDE-004/005/006/009 APIs and
 claims must remain unchanged unless a separately reviewed additive theorem is
 actually needed.
 
+## Source-Aware Revision and Adjudication
+
+After source inspection, proposal revision 0001 assigns C-PDE-012 to Candidate
+C plus the exact part of Candidate G. The new theorem combines the central-
+radial Liouville and norm transport, regular-origin power, spherical-Bessel
+Dirichlet-ball calibration, conditional threshold form bound, and forced-zero
+endpoint non-discrimination. Candidate D is rejected as duplicate
+implementation because the framework already has a generic FEM and P054 owns
+the scoped accepted-background numeric audit. Candidate E remains a separate
+unresolved Floquet problem.
+
+P177 accepts C-PDE-012 in v0.129.0 and qualifies BX1 through C-PDE-003,
+C-PDE-005, C-PDE-009, and C-PDE-012. The source's sampled global premise,
+every-branch and linear-node claims, genuine full-periodic l0 mode, only-mode,
+nonlinear, physical-radiation, gravity, and substrate conclusions remain
+unaccepted.
+
 ## Implementation and Oracle Plan
 
 The primary source audit will inventory every BX1 definition, import, literal,
@@ -156,6 +173,14 @@ initial claim delta, oracle choices, and compatibility policy before opening
 BX1's body. Any failed source, solver, representation, or candidate route will
 be preserved append-only with a materially different next attempt.
 
+Attempts 0002 through 0018 preserve native and instrumented reproduction,
+source-aware selection, two focused implementation/oracle failures, four
+primary verifier-construction failures, two independent-route failures, the
+successful 39-check primary and 22-check independent routes, the 24-check
+ten-node graph, 103 focused tests, and LOW staged impact. Representation,
+arithmetic, wording, and resolution failures were repaired without widening
+the scientific claim.
+
 ## Debt Ledger
 
 The P177 ledger tracks exact source reachability, prior-evidence duplication,
@@ -165,16 +190,16 @@ compatibility, and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| BX1's exact implementation and predicate reach are unknown | Pin every definition, check, assertion, import, solver, and runtime result | open |
-| P054 may already own every valid conclusion | Compare exact claims, APIs, assumptions, numbers, and evidence scope | open |
-| Radial field and transformed operator conventions may be mixed | Derive the transform, norm, domain, boundary form, and inverse map exactly | open |
-| Background values may come from a pending or fitted source | Trace every background array and parameter to accepted or evidence-only provenance | open |
-| Node count and eigen-index may be solver-guess artifacts | Define zero counting and independently order the finite-wall spectrum | open |
-| Finite-wall numerics may be mistaken for a half-line theorem | Refine mesh, wall, tolerance, residual, compact norm, and soluble controls | open |
-| Averaged evidence may be mistaken for full dynamics | Apply the C-PDE-009 defect or build a separately frozen Floquet route | open |
-| Reverse consumers may inherit a blanket no-go or physical claim | Inventory and replay the complete affected graph | open |
-| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, and any claim/release state | open |
+| BX1's exact implementation and predicate reach are unknown | Pin every definition, check, assertion, import, solver, and runtime result | discharged |
+| P054 may already own every valid conclusion | Compare exact claims, APIs, assumptions, numbers, and evidence scope | discharged |
+| Radial field and transformed operator conventions may be mixed | Derive the transform, norm, domain, boundary form, and inverse map exactly | discharged |
+| Background values may come from a pending or fitted source | Trace every background array and parameter to accepted or evidence-only provenance | discharged |
+| Node count and eigen-index may be solver-guess artifacts | Define zero counting and independently order the finite-wall spectrum | discharged |
+| Finite-wall numerics may be mistaken for a half-line theorem | Refine mesh, wall, tolerance, residual, compact norm, and soluble controls | discharged |
+| Averaged evidence may be mistaken for full dynamics | Apply the C-PDE-009 defect or build a separately frozen Floquet route | discharged |
+| Reverse consumers may inherit a blanket no-go or physical claim | Inventory and replay the complete affected graph | discharged |
+| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | discharged |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, and any claim/release state | discharged |
 
 ## Review and Promotion Plan
 
@@ -200,6 +225,10 @@ audit, exact operator typing, numerical and boundary evidence, averaged/Floquet
 scope, dependency consumers, compatibility, nonduplication, and governed
 records agree with an empty campaign debt ledger. A box artifact, no bound
 state, or failed Floquet route alone keeps the campaign active.
+
+The done gate is discharged. C-PDE-012 supplies the positive reusable object;
+the source, exact, numeric, mutation, dependency, consumer, compatibility,
+claim, release, queue, docs, and memory records agree with no P177 debt.
 
 ## Cross-References
 

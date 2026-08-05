@@ -1,0 +1,41 @@
+campaign: P177
+source_unit: BX1
+source_sha256: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3
+ast:
+  lines: 609
+  check_calls: 8
+  assert_nodes: 1
+  local_check_helper: true
+  imports: [numpy, scipy.integrate, scipy.special, scipy.interpolate, scipy.linalg]
+  direct_np_trapz: false
+  direct_np_trapezoid: false
+constructed_executable_objects:
+  - single_harmonic_shooting_profile_with_manual_tail_truncation
+  - eight_fixed_guess_QB3_style_BVP_branches
+  - symmetric_tridiagonal_finite_Dirichlet_box_spectrum
+  - sampled_effective_potential_over_amplitudes_one_through_five
+  - time_averaged_l0_control_box_spectrum
+  - pure_vacuum_hard_zero_localization_counterexample
+absent_executable_objects:
+  - accepted_N9_C_PDE_006_background_dependency_closure
+  - exact_global_nonnegativity_proof_for_the_sampled_effective_potential
+  - continuously_tracked_fixed_index_BVP_branch
+  - half_line_spectral_or_resonance_solver
+  - full_time_periodic_Floquet_operator_or_monodromy
+  - nonlinear_localized_l2_solution
+  - conserved_gravitational_source_or_substrate_dictionary
+load_bearing_findings:
+  - All nine captured BVP calls and all 572 captured IVP calls succeed; the finite-wall behavior is not a hidden solver-status failure.
+  - The fixed initial guess returns different multi-node branches as the wall changes, so branch wandering does not establish failure of every continuously tracked eigenbranch.
+  - Robust zero filtering changes several exact node counts by one; the endpoint-growth and R80 high-overtone observations survive, but claimed linear growth is not tested.
+  - Empty-box tolerances are explicitly chosen after inspecting the measured data and therefore are descriptive rather than preregistered oracles.
+  - The Rayleigh implication is exact only conditional on W>=0 almost everywhere; 8000 sampled values over a finite interval cannot prove that premise.
+  - The source hard-codes the first j2 zero while P177 must independently rederive it.
+  - The l0 control is an eigenpair of a source-defined time-averaged operator and cannot be called a genuine full periodic internal mode under C-PDE-009.
+  - The pure-vacuum standing wave passing the post-hard-zero localization predicate is a valid exact counterexample to that predicate's discriminating power.
+  - The result prose extends beyond all angular channels and beyond the averaged operator to the only genuine mode and a corpus-wide mechanism claim.
+compatibility: >-
+  No legacy NumPy quadrature access occurs. Any future version-only source
+  compatibility event would be isolated from scientific candidate status;
+  all mutable P177 integration must use numpy.trapezoid or trapezoid_integral.
+debt: []

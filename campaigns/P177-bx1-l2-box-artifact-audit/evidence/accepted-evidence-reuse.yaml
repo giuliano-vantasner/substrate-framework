@@ -1,0 +1,28 @@
+campaign: P177
+reuse:
+  - claim: C-PDE-003
+    role: exact_l2_equation_transform_and_regular_origin_order
+    changed: false
+  - claim: C-PDE-005
+    role: unit_far_field_threshold_and_finite_wall_radiative_channel_ceiling
+    changed: false
+  - claim: C-PDE-009
+    role: exact_phase_average_defect_and_Floquet_separation
+    changed: false
+  - claim: C-PDE-004
+    role: existing_positive_regular_finite_time_l2_object
+    changed: false
+  - artifact: campaigns/P054-qb3-triaxial-l2-polarizations/evidence/numerical-audit.yaml
+    sha256: 392d26bd1735d53d0ca7b8d1af2ffc8970c3d26cf4eb07e52323ebc80038ac7b
+    role: accepted_background_time_averaged_finite_wall_numeric_evidence_only
+    rerun: false
+    reason: unchanged_hash_pinned_evidence_with_matching_operator_scope
+  - module: src/substrate_framework/radial_modes.py
+    role: existing_generic_FEM_soluble_limit_check
+    changed: false
+excluded_reuse:
+  - P054_attempt_0003_as_an_accepted_claim_itself
+  - BX1_single_harmonic_profile_as_C_PDE_006_dependency_closure
+  - C_MOD_001_or_C_MOD_002_as_sine_Gordon_premises
+  - source_hard_coded_j2_zero
+debt: []

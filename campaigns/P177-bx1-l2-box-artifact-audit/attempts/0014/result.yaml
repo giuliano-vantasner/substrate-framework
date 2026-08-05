@@ -1,0 +1,27 @@
+attempt: 0014
+campaign: P177
+candidate: independent_rederivation_after_symbolic_z_repair
+status: failed_numeric_resolution_oracle
+started_at: '2026-08-11T05:47:00Z'
+finished_at: '2026-08-11T05:48:00Z'
+command: >-
+  .venv/bin/python
+  campaigns/P177-bx1-l2-box-artifact-audit/reviews/independent_radial_spectral_review.py
+result:
+  checks_passed_before_stop: 11
+  exit_code: 1
+  failing_check: independent tridiagonal route refines to the soluble R20 level
+observations:
+  intervals_1000_error: 8.336536438946496e-8
+  intervals_2000_error: 2.085725658851345e-8
+  error_ratio: 3.9979
+failure: >-
+  The 2000-interval error retained the expected second-order reduction but did
+  not meet the prewritten 4e-9 absolute bound.
+classification: numeric_resolution_oracle
+scientific_candidate_rejected: false
+repair: >-
+  Add the next mesh halving to 4000 intervals. Require a coarse-to-fine error
+  ratio above 3.9 and an independently observed fine absolute error below
+  6e-9; do not widen the 2000-interval bound post hoc.
+next_attempt: rerun_independent_rederivation_with_next_mesh_halving

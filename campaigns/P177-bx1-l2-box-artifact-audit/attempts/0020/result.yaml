@@ -1,0 +1,35 @@
+attempt: 0020
+campaign: P177
+candidate: absolute_memory_validation_and_governed_count_audit
+status: passed
+started_at: '2026-08-11T06:05:00Z'
+finished_at: '2026-08-11T06:06:00Z'
+commands:
+  - >-
+    memory validate --base /home/dan/substrate-framework
+    /home/dan/substrate-framework/memory
+  - >-
+    parse governance/claims.yaml, governance/releases/current.yaml, and
+    migration/source-claims.yaml with the repository Python environment
+result:
+  memory_records: 710_valid
+  accepted_claims: 165
+  current_release: v0.129.0
+  current_release_claims: 165
+  migration_queue:
+    total: 218
+    pending: 47
+    partial: 0
+    migrated: 3
+    qualified: 158
+    duplicate_evidence: 8
+    refuted: 1
+    out_of_scope: 1
+  next_pending_source_unit: SC1
+  next_pending_sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0
+interpretation: >-
+  The explicit repository base prevents host memory configuration from
+  redirecting the target. Accepted registry, release, generated memory, and
+  migration counts agree. The earlier relative-path stop was invocation-only
+  and rejected no scientific candidate.
+next_attempt: integrated_terminal_promotion_gate

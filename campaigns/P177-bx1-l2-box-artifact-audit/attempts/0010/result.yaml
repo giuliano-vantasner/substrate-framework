@@ -1,0 +1,19 @@
+attempt: 0010
+campaign: P177
+candidate: C_primary_verifier_after_wall_offset_repair
+status: failed_registry_wording_oracle
+started_at: '2026-08-11T05:39:00Z'
+finished_at: '2026-08-11T05:40:00Z'
+command: .venv/bin/python campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+result:
+  checks_passed_before_stop: 35
+  exit_code: 1
+  failing_check: accepted l2 transform and unit far threshold are the only imported physics
+failure: >-
+  The verifier searched C-PDE-005 for the shorthand phrase unit mass edge.
+  The accepted statement instead exposes the load-bearing equation
+  ((n*omega)^2-1) and the exact phrase n*omega=1 is threshold.
+classification: registry_wording_oracle
+scientific_candidate_rejected: false
+repair: assert_the_accepted_equation_and_threshold_condition
+next_attempt: rerun_primary_claim_verifier

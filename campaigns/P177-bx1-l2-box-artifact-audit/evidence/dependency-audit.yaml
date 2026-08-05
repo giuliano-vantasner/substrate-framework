@@ -1,0 +1,19 @@
+campaign: P177
+proposed_claims:
+  C-PDE-012:
+    direct_dependencies:
+      C-PDE-003: exact_three_dimensional_l2_radial_equation_and_chi_equals_r_psi_surface
+      C-PDE-005: unit_sine_Gordon_far_field_threshold_and_finite_wall_channel_typing
+      C-PDE-009: exact_separation_of_time_averaged_and_full_periodic_perturbation_equations
+    excluded:
+      - accepted_background_numeric_values_as_exact_theorem_inputs
+      - a_global_W_nonnegativity_premise_for_BX1s_sampled_profile
+      - Floquet_monodromy_nonlinear_mode_gravity_or_substrate_data
+transitive_closure:
+  C-PDE-003: [C-PDE-001]
+  C-PDE-005: [C-PDE-001]
+  C-PDE-009: [C-PDE-003, C-PDE-001]
+  C-PDE-001: [C-SG-001]
+hidden_imports: []
+dependency_closure: complete
+debt: []

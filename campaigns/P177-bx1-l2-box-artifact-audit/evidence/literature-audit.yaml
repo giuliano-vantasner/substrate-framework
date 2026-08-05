@@ -1,0 +1,15 @@
+campaign: P177
+external_literature_used: false
+reason: >-
+  C-PDE-012 is proved directly from the accepted radial equation, exact SymPy
+  differentiation, the closed-form spherical j2 ODE, independent root
+  bracketing, exact trial-form integration, and soluble finite-wall numerics.
+  No external empirical or bibliographic premise selects or supports the claim.
+framework_authority:
+  - governance/claims.yaml C-PDE-003 C-PDE-005 C-PDE-009
+  - campaigns/P054-qb3-triaxial-l2-polarizations/evidence/numerical-audit.yaml
+  - hash_pinned_BX1_source_as_noncanonical_evidence
+ceiling: >-
+  Standard mathematical familiarity does not create authority beyond the
+  displayed derivations, domain assumptions, and accepted framework inputs.
+debt: []

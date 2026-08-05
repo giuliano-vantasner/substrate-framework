@@ -1,0 +1,25 @@
+attempt: 0006
+campaign: P177
+candidate: C_symbolic_first_Bessel_repair_and_numeric_oracle
+status: failed_test_oracle_arithmetic
+started_at: '2026-08-11T05:31:00Z'
+finished_at: '2026-08-11T05:32:00Z'
+command: .venv/bin/python -m pytest -q tests/test_radial_spectral_classification.py
+result:
+  passed: 9
+  failed: 1
+  failing_test: test_bracketed_l2_zero_rederives_boundary_and_level
+surviving_repair: >-
+  The exact dummy-wavenumber derivation now closes and the float-calibrated
+  Bessel evidence constructs successfully.
+failure: >-
+  The test expected 1.02076091306015 for one plus
+  (5.76345919689455/40)^2, but direct arithmetic gives
+  1.0207609136964177. The expected decimal was transcribed incorrectly.
+classification: test_oracle_arithmetic
+scientific_candidate_rejected: false
+repair: >-
+  Replace only the incorrect expected decimal with the independently
+  recomputed value while retaining the 2e-13 absolute bound. Do not inflate
+  the tolerance or reuse the source's hard-coded zero.
+next_attempt: rerun_focused_exact_and_numeric_mutation_suite

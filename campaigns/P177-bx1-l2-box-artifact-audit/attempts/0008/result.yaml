@@ -1,0 +1,19 @@
+attempt: 0008
+campaign: P177
+candidate: C_first_primary_claim_verifier
+status: failed_verifier_representation
+started_at: '2026-08-11T05:35:00Z'
+finished_at: '2026-08-11T05:36:00Z'
+command: .venv/bin/python campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+result:
+  checks_passed_before_stop: 8
+  exit_code: 1
+  failing_check: chi equals r times g closes the exact l2 transformed operator
+failure: >-
+  The check compared two algebraically equal SymPy expressions with structural
+  Python equality. The module's separately checked scaled residual difference
+  was zero, but the expanded and factored transformed residual trees differed.
+classification: verifier_representation
+scientific_candidate_rejected: false
+repair: compare_the_simplified_exact_difference_to_zero
+next_attempt: rerun_primary_claim_verifier

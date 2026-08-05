@@ -1,0 +1,28 @@
+campaign: P177
+claims: [C-PDE-012]
+canonical_consumers:
+  direct:
+    - tests/test_radial_spectral_classification.py
+    - campaigns/P177-bx1-l2-box-artifact-audit/verify.py
+  independent_nonconsumer:
+    - campaigns/P177-bx1-l2-box-artifact-audit/reviews/independent_radial_spectral_review.py
+  existing_before_campaign: []
+unchanged_nearest_canonical_symbols:
+  - src/substrate_framework/radial_modes.py:solve_radial_finite_box_spectrum
+  - src/substrate_framework/sine_gordon_l_modes.py
+source_consumers:
+  SC2: pending_and_receives_no_route_closure_authority
+  TX1: pending_and_cannot_import_only_genuine_mode_or_global_no_bound_state
+  TX2: pending_and_cannot_import_QB3_failed_to_build_as_a_complete_Floquet_or_nonlinear_theorem
+  TX3: pending_and_cannot_import_physical_radiation_or_unique_replacement_mechanism
+graph_replay:
+  nodes: 10
+  runtime_predicates: 72
+  assertions: 15
+  verifier_checks: 24
+  immutable_alias_only: [P3D2, QB3, QB4, TX1]
+consumer_decision: >-
+  C-PDE-012 is additive and changes no existing API. It supplies exact radial
+  and wall-classification tools; pending source consumers keep their own
+  unresolved background, dynamics, gravity, and physical-map obligations.
+debt: []

@@ -1,0 +1,21 @@
+attempt: 0022
+campaign: P177
+candidate: record_sensitive_closure
+status: passed
+started_at: '2026-08-11T06:11:00Z'
+finished_at: '2026-08-11T06:12:00Z'
+scope:
+  - governance_and_queue_consistency
+  - generated_docs_and_memory_currency
+  - changed_effort_memory
+  - campaign_YAML_and_diff_hygiene
+full_suite_repeated: false
+results:
+  repository: WORKFLOW_VALID_165_claims_165_accepted_0_proposals
+  queue: 218_units_47_pending_0_partial
+  generated_docs: current
+  generated_memory: current
+  changed_effort_memory: valid
+  campaign_yaml: 39_records_valid_before_this_closure_record
+  git_diff_check: passed
+next_attempt: staged_diff_review_and_commit

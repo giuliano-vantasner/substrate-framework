@@ -1,0 +1,31 @@
+campaign: P177
+source_unit: BX1
+source_sha256: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3
+native:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-36/bridge_BX1_l2_mode_box_artifact.py
+  exit_code: 0
+  elapsed_seconds: 15.43
+  runtime_checks: 8
+  terminal_tally: ALL 8 CHECKS PASS
+  version_only_stop: false
+instrumented:
+  bvp_calls: 9
+  bvp_successes: 9
+  ivp_calls: 572
+  ivp_successes: 572
+  maximum_bvp_rms_residual: 9.656810793987801e-7
+  maximum_bvp_boundary_residual: 1.0733709772303827e-28
+  robust_node_counts_R40_to_R320: [4, 5, 9, 12, 15, 23, 39, 41]
+  naive_node_counts_R40_to_R320: [5, 5, 9, 13, 15, 24, 40, 41]
+retained:
+  - successful_above_threshold_multi_node_R80_branch
+  - resolution_stable_finite_wall_lowest_level_for_source_defined_potential
+  - vacuum_counterexample_to_post_hard_zero_localization_predicate
+  - sampled_nonnegative_effective_potential_as_numeric_evidence_only
+rejected_upgrades:
+  - exact_global_nonnegative_potential_from_finite_sampling
+  - every_branch_nonconvergence_from_fixed_guess_branch_wandering
+  - linear_node_growth_from_endpoint_difference_only
+  - full_periodic_internal_l0_mode_from_time_averaged_spectrum
+  - only_genuine_internal_mode_or_corpus_wide_mechanism_claim
+attempts: [attempts/0002/result.yaml, attempts/0003/result.yaml]

@@ -1,0 +1,23 @@
+attempt: 0005
+campaign: P177
+candidate: C_first_exact_module_and_focused_test_run
+status: failed_implementation_representation
+started_at: '2026-08-11T05:29:00Z'
+finished_at: '2026-08-11T05:30:00Z'
+command: .venv/bin/python -m pytest -q tests/test_radial_spectral_classification.py
+result:
+  passed: 9
+  failed: 1
+  failing_test: test_bracketed_l2_zero_rederives_boundary_and_level
+failure: >-
+  vacuum_dirichlet_ball_evidence formed and simplified the Bessel differential
+  residual only after substituting float radius and root values. SymPy retained
+  a nonzero roundoff-shaped expression, so the internal exact-zero assertion
+  failed even though the symbolic theorem and numerical root were valid.
+classification: implementation_representation
+scientific_candidate_rejected: false
+repair: >-
+  Derive and assert the Bessel differential identity with an exact dummy
+  wavenumber, then substitute the caller's symbolic or numerical wavenumber
+  into the already-verified profile and zero residual.
+next_attempt: rerun_focused_exact_and_numeric_mutation_suite

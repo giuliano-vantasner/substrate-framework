@@ -1,0 +1,34 @@
+attempt: 0007
+campaign: P177
+candidate: C_exact_module_focused_tests_after_repairs
+status: passed
+started_at: '2026-08-11T05:33:00Z'
+finished_at: '2026-08-11T05:34:00Z'
+commands:
+  - .venv/bin/python -m pytest -q tests/test_radial_spectral_classification.py
+  - .venv/bin/python -m compileall -q src/substrate_framework/radial_spectral_classification.py
+  - git diff --check
+result:
+  tests: 10_passed
+  compileall: passed
+  diff_check: passed
+verified_surfaces:
+  - exact_l2_Liouville_reduction
+  - exact_radial_norm_density_identity
+  - regular_origin_power_transport
+  - exact_spherical_Bessel_vacuum_ball_residual
+  - exact_inverse_wall_square_level_scaling
+  - independent_bracketed_first_l2_zero_and_boundary_residual
+  - conditional_threshold_quadratic_form
+  - forced_zero_endpoint_non_discrimination
+  - input_domain_guards
+mutations_that_fail_the_load_bearing_predicate:
+  - chi_over_r_squared_instead_of_chi_over_r
+  - wrong_centrifugal_coefficient
+  - negative_excess_potential
+  - unforced_nondecayed_endpoint
+  - no_sign_change_Bessel_bracket
+compatibility:
+  mutable_legacy_np_trapz: false
+  version_only_stop: false
+next_attempt: primary_claim_level_verifier_and_source_specific_calibration

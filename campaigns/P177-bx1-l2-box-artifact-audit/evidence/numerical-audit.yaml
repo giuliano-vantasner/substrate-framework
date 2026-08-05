@@ -1,0 +1,28 @@
+campaign: P177
+claim: C-PDE-012
+exact_calibration:
+  first_positive_spherical_j2_zero: 5.76345919689455
+  bracket: [5.0, 6.5]
+  absolute_root_residual_bound: 2.0e-16
+  vacuum_R40_level_at_threshold_one: 1.0207609136964177
+existing_FEM_control:
+  wall: 20.0
+  points: [251, 501]
+  exact_level: 1.083043654785671
+  levels: [1.083047927253996, 1.0830447228584363]
+  error_reduction: greater_than_3_8
+  fine_relative_error: less_than_1_1e_minus_6
+independent_tridiagonal:
+  wall: 20.0
+  intervals: [2000, 4000]
+  fine_absolute_error: 5.230173627523982e-9
+  error_ratio: 3.988
+prior_accepted_background_reuse:
+  artifact_sha256: 392d26bd1735d53d0ca7b8d1af2ffc8970c3d26cf4eb07e52323ebc80038ac7b
+  wall_40_level: 1.0207036932904188
+  continuum_threshold: 1.0
+  outer_quarter_transformed_norm_fraction: 0.24890863413194234
+  wall_30_to_40_shift: 0.015870128113030013
+  algebraic_residual: 1.1461320359198145e-10
+scope: resolution_bounded_finite_wall_and_soluble_limit_evidence_only
+debt: []
