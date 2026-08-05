@@ -46,6 +46,8 @@ evidence:
   nonduplication_audit: evidence/nonduplication-audit.yaml
   candidate_comparison: evidence/candidate-comparison.yaml
   primary_provenance: evidence/primary-provenance.yaml
+  integrated_attempt: attempts/0014/result.yaml
+  closure_attempt: attempts/0015/result.yaml
 source_disposition: {GK3D2: qualified}
 accepted_mappings: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001, C-VAC-003]
 compatibility:

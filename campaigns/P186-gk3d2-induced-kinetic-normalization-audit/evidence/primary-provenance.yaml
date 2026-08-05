@@ -32,4 +32,11 @@ mutations:
   - reversed_scale_order_on_the_explicit_zero_matching_branch
   - paired_and_unpaired_reference_coordinate_changes
 oracle_ceiling: symbolic_verified_for_C_VAC_003
-integrated: pending_single_promotion_boundary
+integrated:
+  workflow_claims: 178
+  memory_files: 761
+  repository_tests: 1619
+  elapsed_seconds: 171.65
+  maximum_resident_kibibytes: 214024
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_code: 0

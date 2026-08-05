@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T13:00:00Z'
+updated: '2026-08-11T13:05:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - vacuum-polarization
 - kinetic-normalization
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P186 GK3D2 Induced Kinetic Normalization Audit
 
@@ -278,6 +278,12 @@ but schema-invalid frontmatter enums. Attempt 0013 repairs only those record
 coordinates and validates all 761 memory files. No equation, threshold, claim
 scope, or scientific verdict changed.
 
+Attempt 0014 is the single integrated promotion boundary. It validates 178
+accepted claims, 38 pending migration units, all 761 memory files, generated
+documentation and accepted memory, the physics skill, compilation, and 1,619
+repository tests. The gate exits cleanly in 171.65 seconds. P186 is therefore
+archived with C-VAC-003 active, GK3D2 qualified, and every debt below closed.
+
 ## Debt Ledger
 
 The P186 ledger tracks source reachability, scalar quantum premises,
@@ -288,14 +294,14 @@ governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | GK3D2 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source audit and attempt 0002 |
-| The scalar coefficient may be copied from a numerator integral without a seagull or regulator | Derive it in a complete gauge-preserving scalar-QED convention | discharged by the canonical Ward, master, and D4 APIs and focused tests; primary and independent campaign replay remain |
-| Dirac and scalar beta conventions may be mixed | Derive both weights in one declared kinetic and scale convention | discharged by exact factor-four and generic-ledger cross-checks; campaign replay remains |
-| A differential slope may be presented as a total normalization | Integrate the affine family and retain its independent reference value | discharged by the affine API and same-slope unequal-boundary mutation; campaign replay remains |
-| The earlier no-matter result may be mislabeled a matching boundary | Compare theories, premises, and operator bases and require a separately declared matching condition | discharged at implementation level by conditional zero-matching and general-boundary counterexamples; claim review remains |
-| Bare and finite counterterm coordinates may be erased | Expose both and show load-bearing mutations with the same loop slope | discharged by finite-counterterm and boundary-coordinate APIs; campaign replay remains |
+| The scalar coefficient may be copied from a numerator integral without a seagull or regulator | Derive it in a complete gauge-preserving scalar-QED convention | discharged by canonical, primary, and independent bubble-seagull and D4 derivations |
+| Dirac and scalar beta conventions may be mixed | Derive both weights in one declared kinetic and scale convention | discharged by exact factor-four, generic-ledger, and independent cross-checks |
+| A differential slope may be presented as a total normalization | Integrate the affine family and retain its independent reference value | discharged by canonical and independent affine families and same-slope unequal-boundary mutations |
+| The earlier no-matter result may be mislabeled a matching boundary | Compare theories, premises, and operator bases and require a separately declared matching condition | discharged by C-MAX-001 comparison, source adjudication, and conditional zero-matching countermodels |
+| Bare and finite counterterm coordinates may be erased | Expose both and show load-bearing mutations with the same loop slope | discharged by finite-counterterm, boundary, and reference-coordinate mutations |
 | Group and matter weights may be called physical sectors | Preserve conditional multiplicities, charge squares, traces, and generator/coupling rescaling | discharged by conditional exact-weight APIs, claim scope, and consumer audit |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D2 has no NumPy surface |
-| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | staged and graph-replayed; durable-memory and one integrated promotion gate remain |
+| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | discharged by the 20-check graph replay, v0.138.0 records, and integrated gate |
 
 ## Review and Promotion Plan
 

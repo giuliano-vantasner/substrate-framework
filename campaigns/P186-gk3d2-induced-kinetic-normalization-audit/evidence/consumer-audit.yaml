@@ -27,4 +27,8 @@ narrative_reverse_consumers:
 accepted_claims_retroactively_changed: []
 graph_risk: MEDIUM
 affected_execution_flows: 0
+focused_tests: {passed: 80, elapsed_seconds: 9.38}
+generated_consumers: current_for_v0.138.0
+staged_impact: {risk: LOW, changed_symbols: 188, changed_files: 31, affected_execution_flows: 0}
+integrated: {repository_tests: 1619, memory_files: 761, workflow_claims: 178, exit_code: 0}
 debt: []

@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T12:00:00Z'
+updated: '2026-08-11T13:05:00Z'
 tags:
 - substrate-framework
 - effort
@@ -2088,21 +2088,23 @@ uses the current trapezoidal API first with a lazy compatibility fallback, so a
 future version-only event cannot reject a scientific candidate. GitNexus rates
 the additive implementation LOW risk; the MEDIUM narrative consumer risk is
 contained by keeping GK3D3 through GK3D6 pending with the free-boundary ceiling.
+The integrated promotion boundary validates 761 memory records and passes all
+1,619 repository tests with a clean terminal status.
 
 ## Canonicalization
-The staged registry, `v0.138.0` manifest, current release, generated claim
+The registry, `v0.138.0` manifest, current release, generated claim
 index, and generated framework memory agree on one hundred seventy-eight
 accepted claims. P001 through P186 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
 memory. The regenerated migration queue agrees on 38 pending, 0 partial, 3
 migrated, 167 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. The single integrated promotion boundary remains to be run.
+unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
 The effort remains active. D4 is discharged, but D1 remains open with 38
 pending, 3 migrated, 167 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. P186 closes GK3D2 without accepting a selected total
-gauge normalization. After the integrated v0.138.0 gate, the next queue unit is
+gauge normalization. The next queue unit is
 GK3D3, pinned at SHA-256
 `1c3f81d15ace3ec2c6326c89659596f5b9ff84ac23ef7f0143a53ad92b23b211`.
 Its scale identification, zero-boundary dependence, total coupling, physical
