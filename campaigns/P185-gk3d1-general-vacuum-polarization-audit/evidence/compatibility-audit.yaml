@@ -1,0 +1,21 @@
+campaign: P185
+policy:
+  mutable_integration: numpy.trapezoid_or_trapezoid_integral
+  immutable_legacy_event: version_only_not_scientific_failure
+  alias: explicit_legacy_name_bound_to_numpy.trapezoid_only
+GK3D1:
+  imports: [sympy]
+  direct_np_trapz: false
+  direct_np_trapezoid: false
+  imported_legacy_trapz: false
+  dynamic_legacy_access: false
+  eager_legacy_default_fallback: false
+  numerical_integration: none
+  native_execution: passed
+mutable_P185:
+  numerical_integration: exact_SymPy_algebra_and_mpmath_adaptive_quadrature
+  numpy_imports: 0
+  legacy_np_trapz_calls: 0
+  canonical_np_trapezoid_calls: 0
+scientific_candidate_failures_from_compatibility: 0
+debt: []

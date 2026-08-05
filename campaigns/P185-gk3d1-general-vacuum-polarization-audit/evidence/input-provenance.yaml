@@ -1,0 +1,40 @@
+campaign: P185
+accepted_base: v0.136.0
+conditional_model_inputs:
+  quantum_field: one_free_complex_charged_Dirac_field
+  action: declared_free_Dirac_action_with_a_declared_connection_vertex
+  loop_order: one
+  statistics: fermionic_closed_loop
+  tensor_convention: Pi_mn_equals_q2_g_mn_minus_q_m_q_n_times_Pi2
+  regulator: shift_invariant_gauge_preserving_dimensional_regulator_or_explicit_restoring_counterterm
+  quadratic_effective_action_convention: declared_not_derived
+  integration_dimension: exact_positive_parameter_d
+  spinor_trace: independently_declared_positive_integer_n_gamma
+  charge_mass_dimension: two_minus_d_over_two_for_the_physical_dimension_family
+  D4_continuation: d_equals_4_minus_2epsilon_with_fixed_n_gamma_equals_4_and_mu2_to_epsilon
+  renormalization: declared_MSbar_pole_subtraction_plus_arbitrary_finite_local_counterterm
+  real_timelike_domain: zero_less_equal_q2_over_M2_less_than_4
+accepted_dependencies: [C-GAU-001, C-DIM-009]
+comparators_not_dependencies: [C-MAX-001, C-VAC-001, C-NVP-001, C-NVP-002]
+source_evidence: GK3D1_at_substrate_6d1f4e0_SHA256_9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb
+external_primary_comparator:
+  citation: Laporta_and_Jentschura_PhysRevD_109_096020_2024
+  role: nonauthoritative_tensor_threshold_regulator_subtraction_and_low_momentum_normalization_check
+derived_in_P185:
+  - exact_integrand_level_Ward_trace_difference
+  - exact_spacelike_general_d_parameter_master_with_independent_spinor_trace
+  - exact_massless_D2_Dirac_endpoint
+  - exact_fixed_trace_D4_zero_momentum_Laurent_MSbar_and_log_slope_family
+  - exact_below_threshold_subtracted_series_and_radius
+  - exact_generator_coupling_convention_invariant_weight
+empirical_inputs: []
+fitted_parameters: []
+unresolved_physical_inputs:
+  - existence_and_identity_of_a_physical_charged_Dirac_excitation
+  - bare_Maxwell_coefficient
+  - finite_counterterm_or_matching_condition
+  - total_kinetic_normalization
+  - physical_gauge_group_representation_and_coupling
+  - preferred_dimension_and_dimensional_lift
+hidden_imports: []
+debt: []

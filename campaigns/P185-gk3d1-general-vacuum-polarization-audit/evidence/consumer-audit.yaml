@@ -1,0 +1,31 @@
+campaign: P185
+claims: [C-VAC-002]
+direct_consumers:
+  - GK3D1_source_disposition
+  - src/substrate_framework/dirac_vacuum_polarization.py
+  - tests/test_dirac_vacuum_polarization.py
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit
+  - governance/claims.yaml
+  - next_release_manifest_and_current_pointer
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-VAC-002.md
+  - next_generated_release_memory
+  - memory/vantasner/decisions/C-VAC-002-review.md
+  - memory/vantasner/decisions/GK3D1-qualified-review.md
+  - memory/vantasner/efforts/framework-migration.md
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+narrative_reverse_consumers:
+  GK3D2: may_reuse_only_the_conditional_Dirac_residue_and_slope_and_must_independently_audit_its_scalar_loop_counterterm_boundary_and_total_normalization
+  GK3D3: may_reuse_only_the_conditional_Dirac_log_slope_and_must_not_treat_a_scale_identification_as_a_derived_matching_condition
+  GK3D4: may_reuse_only_the_convention_invariant_group_weight_and_must_independently_derive_matter_representations_couplings_and_each_sector
+  GK3D5: cannot_retroactively_convert_the_conditional_Dirac_input_into_accepted_physical_matter
+  GK3D6: inherits_no_exact_ratio_or_one_loop_accuracy_claim_through_GK3D1
+  EL2: existing_qualified_claims_are_not_reopened_or_extended
+  HE5: remains_out_of_scope_and_gains_no_authority
+accepted_claims_retroactively_changed: []
+graph_risk: LOW
+affected_execution_flows: 0
+generated_consumers: pending_release_generation
+debt:
+  - finalize_release_and_generated_consumer_counts

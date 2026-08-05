@@ -1,0 +1,28 @@
+campaign: P185
+role: nonauthoritative_independent_primary_comparator
+source:
+  authors: [S_Laporta, U_D_Jentschura]
+  title: Dimensional_Regularization_and_Two_Loop_Vacuum_Polarization_Operator_Master_Integrals_Analytic_Results_and_Energy_Shifts
+  journal: Physical_Review_D_109_096020_2024
+  doi: 10.1103/PhysRevD.109.096020
+  arxiv: 2403.07127v2
+  url: https://arxiv.org/abs/2403.07127
+  source_archive_sha256: b6ac81b08f28d146ef7a6c772c0481257238e22912c2a68b0ef23517093d7823
+  main_tex_sha256: d971d9be302b2703245f6b97c1153f7999eadbcabbda9e50919336b511480a9f
+audited_statements:
+  - integration_dimension_is_explicitly_D_equals_4_minus_2epsilon
+  - tensor_convention_is_q_m_q_n_minus_q_squared_g_m_n_times_Pi
+  - pair_production_threshold_is_q_squared_equals_4_m_squared
+  - propagators_and_dispersion_relation_retain_i_epsilon
+  - one_loop_renormalization_subtracts_the_zero_momentum_value
+  - opposite_tensor_convention_low_momentum_form_factor_is_positive_e2_q2_over_60_pi2_m2
+P185_translation:
+  source_tensor_has_the_opposite_sign: true
+  P185_subtracted_linear_coefficient: minus_e2_q2_over_60_pi2_m2
+  agreement: exact_after_tensor_convention_translation
+not_imported:
+  - physical_electron_identification
+  - on_shell_subtraction_as_the_frameworks_required_scheme
+  - higher_loop_results
+  - empirical_constants_or_energy_shifts
+verdict: supports_regulator_threshold_subtraction_and_normalization_audit_without_creating_framework_authority

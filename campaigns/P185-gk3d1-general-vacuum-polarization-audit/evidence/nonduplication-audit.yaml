@@ -1,0 +1,24 @@
+campaign: P185
+registry_campaign_memory_collision_search:
+  exact_identifier_collisions: false
+  provisional_identifier_collisions: false
+comparisons:
+  C-VAC-001:
+    overlap: one_loop_vacuum_polarization_Ward_and_projector_typing
+    distinction: massive_complex_scalar_D2_bubble_plus_seagull_not_charged_Dirac_general_d_or_D4_renormalization
+  C-DIM-009:
+    overlap: dimensions_form_factor_projector_coefficient_and_group_convention_weight
+    distinction: dimensional_bookkeeping_only_without_a_loop_numerator_Gamma_master_regulator_subtraction_or_slope
+  C-MAX-001:
+    overlap: Maxwell_tensor_and_kinetic_coefficient_context
+    distinction: imported_classical_action_and_equations_not_a_quantum_loop_or_counterterm_family
+  C-NVP-001_and_C-NVP-002:
+    overlap: representation_trace_factors_multiplying_vacuum_polarization
+    distinction: complex_scalar_D2_conditional_theorems_not_Dirac_general_d_or_fixed_trace_D4
+novel_objects:
+  - exact_free_Dirac_integrand_Ward_trace_difference_with_explicit_shift_invariance_premise
+  - exact_general_d_Dirac_parameter_master_with_spinor_trace_independent_of_analytic_d
+  - exact_fixed_trace_D4_Laurent_MSbar_finite_counterterm_and_log_slope_ledger
+  - exact_real_below_threshold_subtracted_D4_series_with_radius_four
+new_physical_premises: []
+verdict: distinct_compatible_conditional_Dirac_loop_theorem_without_a_physical_gauge_sector_or_total_normalization

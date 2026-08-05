@@ -1,0 +1,22 @@
+attempt: 0006
+campaign: P185
+candidate: claim_record_dimensional_consistency_audit
+status: passed_after_record_repair
+started_at: '2026-08-11T11:51:00Z'
+finished_at: '2026-08-11T11:52:00Z'
+finding:
+  location:
+    - evidence/formula-freeze.yaml
+    - evidence/input-provenance.yaml
+  incorrect_metadata: charge_mass_dimension_was_written_as_one_minus_d_over_two
+  correct_identity: charge_mass_dimension_equals_open_paren_4_minus_d_close_paren_over_2_equals_two_minus_d_over_two
+  unaffected_objects:
+    - proposal_prose_used_charge_squared_dimension_4_minus_d
+    - canonical_module_used_charge_squared_dimension_4_minus_d
+    - primary_and_focused_tests_used_charge_squared_dimension_4_minus_d
+    - every_D2_and_D4_formula_and_numeric_value
+repair:
+  formula_freeze_revision: 0003
+  claim_or_threshold_changed: false
+verdict: metadata_typo_repaired_before_promotion_and_pinned_verifier_replay_required
+next_attempt: rerun_primary_and_independent_verifiers_then_continue_claim_review

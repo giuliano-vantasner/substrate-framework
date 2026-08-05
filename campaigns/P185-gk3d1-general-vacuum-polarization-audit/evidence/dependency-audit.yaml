@@ -1,0 +1,31 @@
+campaign: P185
+claims:
+  C-VAC-002:
+    direct_dependencies: [C-GAU-001, C-DIM-009]
+    declared_mathematics:
+      - finite_matrix_inverse_and_trace_cyclicity
+      - free_inverse_propagator_difference
+      - Feynman_parameterization
+      - dimensional_Gaussian_integral_and_Gamma_function
+      - exact_Laurent_limits_and_MSbar_definition
+      - exact_Beta_integrals_and_real_power_series
+application_comparators_not_needed_for_the_theorem: [C-MAX-001, C-VAC-001, C-NVP-001, C-NVP-002]
+closure:
+  accepted: true
+  undeclared_constants: []
+  empirical_inputs: []
+  fitted_parameters: []
+  physical_charged_matter: none
+  bare_kinetic_coefficient: none
+  finite_matching_condition: none
+  total_gauge_coupling: none
+  physical_group_or_representation: none
+  substrate_identification: none
+conventions:
+  Minkowski_signature: plus_minus_minus_minus_at_the_D4_endpoint
+  source_tensor: q_squared_g_minus_q_outer_q_times_Pi2
+  spacelike_variable: Q_equals_minus_q_squared_positive
+  projector_coefficient: q_squared_times_Pi2
+  D4_threshold: q_squared_equals_4_M2
+  above_threshold_boundary_value: requires_minus_i0
+debt: []

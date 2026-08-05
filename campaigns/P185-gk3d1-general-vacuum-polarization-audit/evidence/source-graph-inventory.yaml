@@ -1,0 +1,15 @@
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: GK3D1, depth: 0, role: qualified_unit_under_audit, path: merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py, sha256: 9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb}
+  - {source_unit: GK3D2, depth: 1, role: direct_normalization_and_scalar_slope_reverse_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py, sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886}
+  - {source_unit: GK3D3, depth: 1, role: direct_transmutation_and_log_matching_reverse_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D3_transmutation_closes_the_log.py, sha256: 1c3f81d15ace3ec2c6326c89659596f5b9ff84ac23ef7f0143a53ad92b23b211}
+  - {source_unit: GK3D4, depth: 1, role: direct_three_group_sector_reverse_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D4_three_sectors_one_construction.py, sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35}
+  - {source_unit: GK3D5, depth: 1, role: direct_charged_excitation_reverse_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py, sha256: 201d4fd2594a73c7b59dbe81e0e66f1d3d43a52605a26174c70bd072626992e2}
+  - {source_unit: GK3D6, depth: 2, role: indirect_one_loop_accuracy_and_ratio_reverse_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D6_oneloop_accuracy_and_exact_ratios.py, sha256: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036}
+  - {source_unit: EL2, depth: 2, role: indirect_already_qualified_lepton_representation_reverse_consumer, path: merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py, sha256: db90b921e0b3d6966597a39817ad48219cd94fa27ff8aa2a1de4a64c3ccf6965}
+  - {source_unit: HE5, depth: 3, role: indirect_out_of_scope_dependency_parser_reverse_consumer, path: merged-framework/bridges/phase-45/bridge_HE5_consumer_dependency_parse.py, sha256: 70a8402413e3bdde15a9d9b93fb4fc282f277b28a5943da9fad4a8cc6c561b81}
+direct_reverse_consumers: [GK3D2, GK3D3, GK3D4, GK3D5]
+transitive_reverse_consumers: [GK3D6, EL2, HE5]
+canonical_claims: [C-GAU-001, C-DIM-009, C-VAC-002]
+canonical_modules: [gauge_dimensions.py, dirac_vacuum_polarization.py]
+consumer_ceiling: downstream_units_inherit_only_the_conditional_master_residue_slope_series_and_convention_weight_not_matter_matching_total_normalization_group_or_dimensional_lift

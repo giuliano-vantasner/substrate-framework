@@ -1,0 +1,74 @@
+source_unit: GK3D1
+checks:
+  GK3D1_0:
+    verdict: qualified_symbolic_free_parameter_guard
+    retained: displayed_source_symbols_are_unfitted
+    rejected: [no_new_import, derived_Dirac_action, derived_regulator]
+  GK3D1_1a:
+    verdict: exact_Minkowski_quadratic_form
+    retained: q_squared_equals_q0_squared_minus_three_spatial_squares
+  GK3D1_1b:
+    verdict: tautological_tensor_identity_replaced_by_integrand_Ward_derivation
+    retained: declared_transverse_tensor_contracts_to_zero
+    rejected: loop_Ward_identity_from_the_source_predicate
+  GK3D1_1c:
+    verdict: exact_nonnull_mixed_projector_identity
+    retained: idempotence_and_rank_three_offshell_q_orthogonal_space
+    rejected: physical_three_polarization_interpretation
+  GK3D1_1d:
+    verdict: qualified_ansatz_mutation
+    retained: longitudinal_lambda_mutation_breaks_the_declared_tensor_contraction
+    rejected: mutation_of_the_loop_numerator_or_regulator
+  GK3D1_1e:
+    verdict: qualified_component_count
+    retained: antisymmetric_two_tensor_in_D4_has_six_independent_components
+    rejected: induced_physical_Maxwell_action
+  GK3D1_2a_2b:
+    verdict: accepted_only_through_C_VAC_002_conditional_Dirac_endpoint
+    retained: q_squared_times_Pi2_equals_e_squared_over_pi_for_d2_n_gamma2_massless_and_nonzero_spacelike_Q
+    rejected: [scalar_EM5_continuity, substrate_excitation, zero_momentum_projector_evaluation]
+  GK3D1_2c:
+    verdict: qualified_integer_Clifford_endpoint_count
+    retained: [n_gamma_equals_2_at_D2, n_gamma_equals_4_at_D4]
+    rejected: one_analytic_t_D_function_of_continued_D
+  GK3D1_3a:
+    verdict: exact_Gamma_recurrence_inside_a_declared_regulator
+    retained: finite_mass_derivative_factor
+    rejected: no_regulator_at_all
+  GK3D1_3b_3c:
+    verdict: accepted_only_through_C_VAC_002_fixed_trace_D4_scope
+    retained: [d_Pi2_over_d_log_M2_equals_e2_over_12pi2, d_Pi2_over_d_log_m_equals_e2_over_6pi2]
+    rejected: [selected_finite_constant, total_kinetic_coefficient, physical_running_coupling]
+  GK3D1_3d:
+    verdict: insensitive_narrative_predicate
+    retained: displayed_slope_is_mass_independent
+    rejected: complete_logarithmic_kernel_or_discharge_of_GK1
+  GK3D1_4a_4b:
+    verdict: duplicate_of_C_DIM_009
+    retained: pure_coupling_dimensions_at_D2_and_D4
+    rejected: derived_by_the_loop_master_or_preferred_dimension
+  GK3D1_4c:
+    verdict: qualified_endpoint_exponents
+    retained: Delta_power_is_minus_one_at_D2_and_zero_at_D4
+    rejected: one_nothing_switched_analytic_spinor_master
+  GK3D1_5a:
+    verdict: corrected_and_strengthened_by_C_VAC_002
+    retained: exact_coefficients_minus_one_over_30_minus_one_over_280_minus_one_over_1890_and_radius_four
+    rejected: source_predicate_as_sufficient_because_it_checks_only_zero_constant_and_nonzero_linear_term
+  GK3D1_5b:
+    verdict: validation_theater
+    retained: none
+    rejected: coefficient_is_a_number_and_constant_is_zero_as_an_error_bound
+  GK3D1_5c:
+    verdict: unrelated_predicate
+    retained: none
+    rejected: action_mapping_locality_sign_operator_uniqueness_or_physical_Maxwell_term
+advertised_unchecked_or_overreaching_claims:
+  regulator_free_general_D_master: rejected
+  no_new_import: rejected
+  one_analytic_t_D_continuation: rejected
+  EM5_scalar_and_Dirac_same_object: rejected
+  physical_three_transverse_polarizations: rejected
+  induced_total_3plus1D_Maxwell_normalization: rejected
+  physical_group_sector_and_dimensional_lift: rejected
+overall: qualify_GK3D1_through_C_VAC_002_and_scoped_exact_tensor_dimension_and_integer_trace_evidence

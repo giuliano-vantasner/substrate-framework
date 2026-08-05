@@ -1,12 +1,12 @@
 campaign: P185
-revision: 0002
-frozen_at: '2026-08-11T11:47:00Z'
+revision: 0003
+frozen_at: '2026-08-11T11:52:00Z'
 tensor_convention: Pi_mn_equals_q2_g_mn_minus_q_m_q_n_times_Pi2
 spacelike_variable: Q_equals_minus_q2_strictly_positive
 conditional_master:
   integration_dimension: d
   spinor_trace: n_gamma_declared_independently_of_d
-  charge_mass_dimension: one_minus_d_over_two
+  charge_mass_dimension: two_minus_d_over_two
   delta: M2_plus_x_times_one_minus_x_times_Q
   form_factor: minus_2_n_gamma_e2_over_4pi_to_d_over_2_times_Gamma_2_minus_d_over_2_times_integral_x_one_minus_x_delta_to_d_over_2_minus_2
   projector_coefficient: minus_Q_times_Pi2_at_minus_Q
