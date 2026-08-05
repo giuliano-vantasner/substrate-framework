@@ -1,0 +1,35 @@
+campaign: P180
+additive_symbols:
+  - rational_map_local_energy_density
+  - degree_one_rational_map_angular_stf_moments
+  - degree_two_axial_rational_map_angular_stf_moments
+  - factorized_rational_map_energy_moments
+  - degree_two_profile_intrinsic_moments
+changed_existing_canonical_symbols: []
+direct_consumers:
+  - tests/test_rational_map_moments.py
+  - campaigns/P180-tx1-intrinsic-quadrupole-audit/verify.py
+package_export_consumer: src/substrate_framework/__init__.py
+source_reverse_consumers:
+  - {source_unit: TX2, disposition: pending_adjudication, result: may_import_only_corrected_static_tensor_conventions_after_its_own_audit}
+  - {source_unit: TX3, disposition: pending_adjudication, result: inherits_no_rotation_TT_or_physical_radiation_authority}
+unchanged_accepted_consumers:
+  - C-RMAP-001
+  - C-RMAP-002
+  - C-RPROF-001
+  - C-RPROF-002
+  - C-MOM-001
+  - C-MOM-003
+  - C-GW-001
+  - C-GW-002
+focused_replay:
+  tests: [test_rational_map_moments.py, test_rational_map_radial.py, test_conserved_moments.py, test_tt_angular.py]
+  result: 54_passed
+generated_consumers:
+  - docs/generated/claims.md
+  - docs/generated/releases.md
+  - docs/generated/source-claims.md
+  - memory/vantasner/claims/C-RMOM-001.md
+  - memory/vantasner/claims/C-RMOM-002.md
+  - memory/vantasner/releases/v0.132.0.md
+blanket_promotion: false

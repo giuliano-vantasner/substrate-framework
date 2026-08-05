@@ -6223,3 +6223,67 @@ units:
       GitNexus rates the additive exact API LOW risk with no affected process.
       The integrated promotion boundary validates 722 memory records and
       passes all 1,533 repository tests with a clean terminal status.
+  TX1:
+    disposition: qualified
+    accepted_claims:
+      - C-RMAP-001
+      - C-RPROF-001
+      - C-RPROF-002
+      - C-MOM-001
+      - C-MOM-003
+      - C-RMOM-001
+      - C-RMOM-002
+    qualification: >-
+      TX1's displayed local rational-map density survives as the explicitly
+      conditional object of C-RMOM-001 because its exact sphere average
+      reproduces C-RPROF-001. C-RMOM-001 owns the exact B=1 null and B=2
+      axial factorization and oblate sign. C-RMOM-002 separately owns one
+      corrected degree-two stationary-branch magnitude with isolated outer,
+      inner, sample, tolerance, and step refinements plus fresh collocation,
+      Simpson, and tensor-cubature routes. TX1 calls normalized I_STF by the
+      accepted name Q and therefore misses a factor three. Its J-squared
+      monopole-tail term is wrong by R-squared, its endpoint tails are leading
+      estimates rather than exact nonlinear integrals, its finite inner data
+      and wall/mesh axes are weaker than stated, and its guards do not validate
+      every headline. The declared degree-four map has only a resolution-
+      bounded rank-two null here; exact cubic symmetry, a minimal-map theorem,
+      and a unique carrier are unaccepted. A conditional rational-map branch
+      is not a full three-dimensional solution, physical baryon or nucleus,
+      local conserved stress, selected absolute scale, rotating state,
+      gravitational source, waveform, radiation channel, observation, or
+      substrate realization. TX2 and TX3 remain pending and inherit no
+      blanket authority.
+    evidence:
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/source_adjudication.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/C-RMOM-001-claim-review.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/C-RMOM-002-claim-review.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/source-reproduction.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/compatibility-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/source-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/check-adjudication.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/input-provenance.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/dependency-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/consumer-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/candidate-comparison.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/primary-provenance.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/numerical-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/verify.py
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/independent_moment_review.py
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0004/result.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0005/result.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0006/result.yaml
+      - memory/vantasner/decisions/C-RMOM-001-review.md
+      - memory/vantasner/decisions/C-RMOM-002-review.md
+      - memory/vantasner/decisions/TX1-qualified-review.md
+    note: >-
+      P180 closes twenty-one primary and nine independent checks plus
+      fifty-four focused tests before the integrated boundary. The exact B2
+      sign is comparator-free, and two corrected profile routes agree within
+      2.865e-7 relative. Native TX1 already took its numpy.trapezoid branch;
+      its isolated legacy spelling causes no version stop and no scientific
+      failure. GitNexus finds no affected execution process for the additive
+      module and exports. The integrated promotion boundary validates 729
+      memory records and passes all 1,541 repository tests with a clean
+      terminal status.

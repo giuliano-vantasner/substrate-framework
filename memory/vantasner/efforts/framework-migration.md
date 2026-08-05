@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T07:12:00Z'
+updated: '2026-08-11T07:43:00Z'
 tags:
 - substrate-framework
 - effort
@@ -364,7 +364,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 46 bridge units remain pending, 3 are migrated, 159 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 44 bridge units remain pending, 3 are migrated, 161 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1971,20 +1971,35 @@ failure. GitNexus rates the additive API LOW risk with no affected process.
 The integrated promotion boundary validates 722 memory records and passes all
 1,533 repository tests with a clean terminal status.
 
+P180 adds C-RMOM-001's exact conditional rational-map local-density closure
+and angular/radial STF factorization, including the exact B1 null and B2 axial
+form and oblate sign. It separately adds qualified C-RMOM-002 for one corrected
+degree-two stationary-branch magnitude after outer, inner, sampling,
+tolerance, and step refinements plus fresh collocation, Simpson, and tensor-
+cubature routes. TX1 is qualified through the corrected objects; its missing
+factor-three Q convention, R-squared tail error, exact-cubic, unique-carrier,
+full-field, physical-state, absolute-scale, rotation, gravity, waveform, and
+radiation readings remain unaccepted. Primary, independent, and eleven-node
+graph routes pass 21, 9, and 19 checks, and 54 focused tests pass. TX1 runs
+natively through `numpy.trapezoid`; its isolated legacy spelling causes no
+scientific failure. GitNexus finds no affected execution flow for the additive
+module and exports. The integrated promotion boundary validates 729 memory
+records and passes all 1,541 repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.131.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-eight accepted claims. P001 through P179 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 45 pending, 0 partial, 3 migrated, 160 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.132.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy accepted claims. P001 through P180 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 44 pending, 0 partial, 3 migrated, 161 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 45
-pending, 3 migrated, 160 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is TX1, pinned at SHA-256
-`30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff`.
-P180 must freeze TX1 before source-body audit and determine whether its B=2
-intrinsic quadrupole claims compose with accepted rational-map, profile,
-moment, wall, and radiation ceilings without inheriting SC2's rejected
-full-PDE prose or treating its clean nine-check execution as authority. TX1's
-immutable direct `np.trapz` spelling is already classified as version-only
-compatibility provenance and cannot count as a scientific candidate failure.
+The effort remains active. D4 is discharged, but D1 remains open with 44
+pending, 3 migrated, 161 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is TX2, pinned at SHA-256
+`7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7`.
+P181 must freeze TX2 before source-body audit and determine which exact tensor-
+rotation identities compose with C-RMOM-001/002 and accepted STF conventions,
+while separating a declared rigid rotation and free angular speed from a
+dynamically solved rotating field, stability theorem, gravitational coupling,
+waveform, or radiation mechanism. A clean seven-check source execution cannot
+create that missing authority.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

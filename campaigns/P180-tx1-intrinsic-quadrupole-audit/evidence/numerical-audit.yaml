@@ -1,0 +1,59 @@
+campaign: P180
+claim: C-RMOM-002
+precision: IEEE-754_binary64
+input: {degree: 2, angular_integral: pi+8/3}
+canonical:
+  solver: DOP853_vacuum_complement_amplitude_shooting
+  inner_radius: 1.0e-4
+  outer_radius: 24.0
+  sample_points: 2401
+  relative_tolerance: 3.0e-10
+  absolute_tolerance: 3.0e-12
+  maximum_step: 0.05
+  radial_quadrature: substrate_framework.numerics.trapezoid_integral
+  endpoint_policy: leading_regular_origin_and_massless_power_tail_estimates
+  monopole: 286.171598879686
+  normalized_I_STF: [48.4848609876855, 48.4848609876855, -96.969721975371]
+  normalized_I_STF_zz_over_M: -0.338851662271835
+  triple_Q_zz_over_M: -1.016554986815505
+independent:
+  solver: fresh_solve_bvp_collocation
+  initial_mesh: geometric_plus_linear_601_points
+  tolerance: 3.0e-7
+  boundary_tolerance: 3.0e-8
+  maximum_nodes: 50000
+  radial_quadrature: scipy.integrate.simpson_on_adaptive_mesh
+  monopole: 286.171593977632
+  normalized_I_STF_zz: -96.969692534392
+  normalized_I_STF_zz_over_M: -0.338851565198
+  relative_difference_from_canonical: 2.8648e-7
+axes:
+  outer_radius:
+    inputs: [16, 24, 32, 48]
+    values: [-0.338851654586526, -0.338851662271835, -0.338851662629240, -0.338851662566943]
+    finest_pair_relative_difference: 1.8385e-10
+  inner_radius:
+    inputs: [2.0e-4, 1.0e-4, 5.0e-5]
+    values: [-0.338851662271754, -0.338851662271835, -0.338851662271843]
+    finest_pair_relative_difference: 2.2280e-14
+  sample_points:
+    inputs: [1201, 2401, 4801]
+    values: [-0.338851661967312, -0.338851662271835, -0.338851662319972]
+    finest_pair_relative_difference: 1.4206e-10
+  relative_tolerance:
+    inputs: [1.0e-8, 3.0e-10, 1.0e-11]
+    values: [-0.338851662271141, -0.338851662271835, -0.338851662271987]
+    finest_pair_relative_difference: 4.4789e-13
+  maximum_step:
+    inputs: [0.1, 0.05, 0.025]
+    values: [-0.338851662271647, -0.338851662271835, -0.338851662271997]
+    finest_pair_relative_difference: 4.7852e-13
+angular_independence:
+  B2_tensor_cubature_orders: [24x48, 48x96, 96x192]
+  maximum_errors: [4.7606e-13, 8.5265e-14, 5.6844e-14]
+  B4_declared_map_STF_norms: [1.4095e-9, 3.1974e-14, 4.7962e-14]
+  B4_verdict: resolution_bounded_null_not_exact_symmetry_theorem
+source_comparator:
+  normalized_I_STF_zz_over_M_literal: -0.33885166
+  used_to_select_method_or_threshold: false
+scope: conditional_stationary_rational_map_branch_in_declared_coordinate_units

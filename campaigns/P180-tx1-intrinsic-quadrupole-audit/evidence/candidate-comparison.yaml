@@ -1,0 +1,21 @@
+campaign: P180
+criteria_order:
+  - accepted_sphere_profile_and_STF_convention_compatibility
+  - explicit_local_density_and_radial_functional_closure
+  - exact_symmetry_factorization_sign_trace_and_axis_limits
+  - assumption_scale_parameter_and_state_map_economy
+  - exact_nulls_separated_from_resolution_bounded_nonzero_values
+  - quadrature_solver_refinement_independent_route_and_mutation_sensitivity
+  - novelty_and_physical_scope_honesty
+  - dependency_consumer_and_governance_closure
+decisions:
+  A: {decision: retained_as_hash_pinned_source_evidence, reason: Native_nine_check_execution_is_clean_but_multiple_headlines_exceed_the_predicates.}
+  B: {decision: rejected_as_incomplete_composition, reason: Accepted_inputs_do_not_state_the_local_density_or_its_B2_STF_factorization.}
+  C: {decision: selected_as_C_RMOM_001, reason: Exact_local_to_radial_closure_and_general_angular_radial_factorization_fit_natively.}
+  D: {decision: selected_with_scope, reason: B1_null_and_B2_form_and_sign_are_exact_while_B4_remains_numeric_only.}
+  E: {decision: selected_as_C_RMOM_002, reason: Corrected_branch_passes_five_refinement_axes_and_fresh_collocation_Simpson_cross_check.}
+  F: {decision: deferred_as_distinct_larger_problem, reason: Full_3D_stress_rotation_and_radiation_require_new_actions_and_dynamics.}
+  G: {decision: selected, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+comparator_selected_candidate: false
+new_fitted_parameters: 0
+physical_parameter_values_selected: false

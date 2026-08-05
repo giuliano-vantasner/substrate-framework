@@ -2,7 +2,7 @@
 description: Audit TX1 and construct a conditional rational-map intrinsic STF moment
 author: vantasner
 created: '2026-08-11T07:18:00Z'
-updated: '2026-08-11T07:21:00Z'
+updated: '2026-08-11T07:43:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - rational-map
 - intrinsic-quadrupole
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P180 TX1 Intrinsic Quadrupole Audit
 
@@ -207,15 +207,15 @@ dependencies, consumers, compatibility, and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| TX1's exact implementation, density, predicates, assertions, and dataflow are unaudited in P180 | Pin every definition, input, quadrature, check, assertion, and result sentence | open |
-| The source may not integrate to C-RPROF-001's functional | Derive the local-to-radial reduction term by term | open |
-| Symmetry may establish form but not nonzero amplitude or sign | Independently derive all angular STF coefficients and sign conditions | open |
-| The numeric value may use biased angular/profile inputs or weak quadrature | Freeze and run corrected independent radial and angular refinement if selected | open |
-| An ansatz moment may be called a solved physical Skyrmion quadrupole | Separate reduced ansatz, stationary branch, full field, stress, units, and state-map claims | open |
-| A static tensor may be used as a radiation mechanism | Require explicit time dependence and accepted coupling in separate TX2/TX3 audits | open |
-| C-RMOM-001/002 may duplicate accepted moment or rational-map claims | Compare exact statements, APIs, assumptions, evidence, and consumers | open |
-| Legacy NumPy access may masquerade as science | Reuse native evidence or alias-replay immutable compatibility failures without candidate rejection | open |
-| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, and docs | open |
+| TX1's exact implementation, density, predicates, assertions, and dataflow are unaudited in P180 | Pin every definition, input, quadrature, check, assertion, and result sentence | closed |
+| The source may not integrate to C-RPROF-001's functional | Derive the local-to-radial reduction term by term | closed |
+| Symmetry may establish form but not nonzero amplitude or sign | Independently derive all angular STF coefficients and sign conditions | closed |
+| The numeric value may use biased angular/profile inputs or weak quadrature | Freeze and run corrected independent radial and angular refinement if selected | closed |
+| An ansatz moment may be called a solved physical Skyrmion quadrupole | Separate reduced ansatz, stationary branch, full field, stress, units, and state-map claims | closed |
+| A static tensor may be used as a radiation mechanism | Require explicit time dependence and accepted coupling in separate TX2/TX3 audits | closed |
+| C-RMOM-001/002 may duplicate accepted moment or rational-map claims | Compare exact statements, APIs, assumptions, evidence, and consumers | closed |
+| Legacy NumPy access may masquerade as science | Reuse native evidence or alias-replay immutable compatibility failures without candidate rejection | closed |
+| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, and docs | closed |
 
 ## Review and Promotion Plan
 
@@ -243,6 +243,12 @@ claims remain separate, full-field and radiation ceilings are explicit,
 dependencies and consumers replay, governed records agree, and the debt
 ledger is empty. A source error, numeric null, biased input, compatibility
 event, or physical-prose rejection alone keeps the campaign active.
+
+P180 met this gate in release v0.132.0 by accepting exact C-RMOM-001 and
+separately qualified numeric C-RMOM-002. TX1 is qualified predicate by
+predicate, TX2 and TX3 remain pending, all nine debts are closed, and no exact
+B4 symmetry, unique carrier, full-field, physical-state, absolute-scale,
+rotation, gravity, waveform, or radiation reading is promoted.
 
 ## Cross-References
 

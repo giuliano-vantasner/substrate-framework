@@ -1,0 +1,20 @@
+campaign: P180
+derivation_inputs:
+  - {input: round_sphere_and_conformal_Jacobian, authority: C-RMAP-001}
+  - {input: axial_R_equals_z_squared_and_I_equals_pi_plus_8_over_3, authority: C-RMAP-001}
+  - {input: conditional_reduced_radial_functional_and_endpoint_powers, authority: C-RPROF-001}
+  - {input: corrected_degree_two_stationary_branch, authority: C-RPROF-002}
+  - {input: normalized_I_STF_and_triple_Q_conventions, authority: C-MOM-001}
+  - {input: spherical_STF_null_consistency, authority: C-MOM-003}
+new_declared_premise:
+  local_density: f_prime^2+2*sin(f)^2*(1+f_prime^2)*J/r^2+sin(f)^4*J^2/r^4
+  closure: exact_sphere_average_reproduces_C_RPROF_001
+  status: conditional_reduced_model_extension
+comparators:
+  - {value: source_minus_0_33885166, role: exposed_after_structural_contract, derivation_input: false}
+  - {value: source_B4_near_zero, role: numeric_regression_only, derivation_input: false}
+free_parameters:
+  mathematical: [declared_profile_function]
+  numeric_branch: [accepted_degree_two_stationary_branch]
+  fitted_to_TX1_output: []
+physical_scale_or_state_map: none

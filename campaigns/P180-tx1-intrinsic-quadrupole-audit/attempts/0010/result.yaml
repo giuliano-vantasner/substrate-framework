@@ -1,0 +1,18 @@
+attempt: 0010
+campaign: P180
+candidate: final_staged_impact_boundary
+status: passed
+started_at: '2026-08-11T07:51:00Z'
+finished_at: '2026-08-11T07:52:00Z'
+commands:
+  - node .gitnexus/run.cjs analyze
+  - gitnexus.detect_changes(scope=staged)
+results:
+  index: 27071_nodes_41907_edges_377_clusters_2_flows
+  changed_symbols: 152
+  changed_files: 42
+  risk: LOW
+  affected_execution_processes: 0
+  host_specific_generated_files_retained: 0
+debt: []
+next_attempt: commit_the_validated_acceptance_transaction

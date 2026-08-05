@@ -8786,3 +8786,139 @@ claims:
     accepted_in: v0.131.0
     challenges: []
     supersedes: []
+  - id: C-RMOM-001
+    statement: >-
+      On the oriented unit sphere and conformal-Jacobian convention of
+      C-RMAP-001, declare the conditional angular-resolved density
+      epsilon=f_prime^2+2*sin(f)^2*(1+f_prime^2)*J/r^2
+      +sin(f)^4*J^2/r^4 for an exact real radial profile f. If the declared
+      map has normalized sphere averages <J>=B and <J^2>=I, exact sphere
+      integration of r^2*epsilon gives precisely C-RPROF-001's radial density
+      r^2*f_prime^2+2*B*sin(f)^2*(1+f_prime^2)
+      +I*sin(f)^4/r^2. Its normalized second STF moment factorizes as
+      I_STF=H1*A1+H2*A2, where
+      H1=integral_0^infinity 2*r^2*sin(f)^2*(1+f_prime^2) dr,
+      H2=integral_0^infinity sin(f)^4 dr, and
+      Ak=integral_S2 J^k*(n*n^T-delta/3) dOmega. The isotropic radial term
+      contributes no STF part. For R(z)=z, J=1 and A1=A2=0 exactly. For the
+      axial map R(z)=z^2, writing u=cos(theta) gives
+      J=4*(1-u^2)/(1+u^2)^2, <J>=2, and <J^2>=pi+8/3. Both angular tensors are
+      diagonal with A_xx=A_yy=-A_zz/2 and exact axial coefficients
+      A1_zz=8*pi*(3*pi-10)/3<0 and
+      A2_zz=8*pi*(3*pi-16)/9<0. Hence every nontrivial integrable declared
+      profile with positive H1 or H2 has
+      I_STF=diag(q,q,-2*q) with q>0. In the C-MOM-001 convention the source
+      quadrupole is Q=3*I_STF. These are exact conditional reduced-ansatz
+      moment identities. I_STF/M has radial-coordinate-squared units and is
+      not a scale-free physical observable. The result establishes no full
+      three-dimensional field solution, local conserved physical stress,
+      stationary-profile existence or minimum, physical baryon or nucleus,
+      absolute scale, rotation, gravity, waveform, radiation, observation,
+      or substrate realization.
+    provenance: campaigns/P180-tx1-intrinsic-quadrupole-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-RMAP-001
+      - C-RPROF-001
+      - C-MOM-001
+    evidence:
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/verify.py
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/independent_moment_review.py
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/C-RMOM-001-claim-review.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/source_adjudication.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0004/result.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0005/result.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0006/result.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/source-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/check-adjudication.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/input-provenance.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/dependency-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/candidate-comparison.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/primary-provenance.yaml
+      - memory/vantasner/decisions/C-RMOM-001-review.md
+      - memory/vantasner/decisions/TX1-qualified-review.md
+      - src/substrate_framework/rational_map_moments.py
+      - tests/test_rational_map_moments.py
+    assumptions:
+      - The domain and target sphere, orientation, stereographic coordinate, conformal Jacobian, normalized sphere average, and axial map conventions are exactly those of C-RMAP-001.
+      - The angular-resolved density is a separately declared conditional local density whose exact sphere average matches C-RPROF-001; neither accepted predecessor claim derives it from a physical Skyrme action or full field.
+      - The radial profile is exact, real, differentiable, and integrable enough for the displayed monopole and second-moment integrals. The strict sign requires H1 or H2 to be positive, as for every nonvacuum real profile not identically at a sine vacuum.
+      - Cartesian moments use the normalized I_STF and triple Q conventions of C-MOM-001. Calling the normalized tensor Q without the factor three is a convention error.
+      - A static nonzero STF tensor has zero positive-order time derivatives and supplies no radiation verdict without separately accepted dynamics and coupling.
+      - Map degree, a conditional radial branch, a full three-dimensional solution, a physical baryon or nucleus, and an observed source are distinct objects.
+    comparators:
+      - TX1 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; its nine native checks pass, while P180 derives the exact local-density closure and B2 angular coefficients independently and corrects its tensor normalization, tail formula, solver semantics, B4 scope, and physical prose
+    accepted_in: v0.132.0
+    challenges: []
+    supersedes: []
+  - id: C-RMOM-002
+    statement: >-
+      Conditional on C-RMOM-001 and the corrected C-RPROF-002 degree-two
+      stationary branch with (B,I)=(2,pi+8/3), IEEE-754 binary64 DOP853
+      vacuum-complement amplitude shooting on [10^-4,24], 2401 samples,
+      rtol=3e-10, atol=3e-12, maximum step 0.05, canonical trapezoidal
+      integration, and explicit leading origin and massless-tail estimates
+      gives monopole M=286.171598879686 and normalized tensor
+      I_STF=diag(48.4848609876855,48.4848609876855,-96.969721975371).
+      Therefore I_STF_zz/M=-0.338851662271835 in declared dimensionless
+      radial-coordinate-squared units, while the C-MOM-001 triple convention
+      gives Q_zz/M=-1.016554986815505. Independent solve_bvp collocation from
+      a two-power initial profile with tolerance 3e-7, boundary tolerance
+      3e-8, at most 50000 nodes, and Simpson integration gives
+      M=286.171593977632 and I_STF_zz/M=-0.338851565198, a relative method
+      difference 2.865e-7. Isolated outer-radius 16/24/32/48, origin-cutoff
+      2e-4/1e-4/5e-5, sample-count 1201/2401/4801, IVP-rtol
+      1e-8/3e-10/1e-11, and maximum-step 0.1/0.05/0.025 studies pass solver,
+      endpoint, finite-data, monotonicity, trace, convention, and frozen
+      convergence gates. Independent tensor Gauss-Legendre cubature at
+      24x48 through 96x192 converges to C-RMOM-001's exact B2 angular tensors.
+      This is resolution-bounded evidence for one conditional stationary
+      reduced-ansatz branch. It proves no half-line existence, uniqueness,
+      local or global minimum, full three-dimensional field solution, local
+      conserved stress, physical state or mass, absolute length, rotation,
+      stability, gravitational coupling, waveform, radiation, observation,
+      or substrate realization.
+    provenance: campaigns/P180-tx1-intrinsic-quadrupole-audit/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: qualified
+    dependencies:
+      - C-RMOM-001
+      - C-RPROF-002
+    evidence:
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/verify.py
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/independent_moment_review.py
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/C-RMOM-002-claim-review.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/source_adjudication.md
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/attempts/0006/result.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/numerical-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/input-provenance.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/check-adjudication.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/dependency-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/consumer-audit.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/candidate-comparison.yaml
+      - campaigns/P180-tx1-intrinsic-quadrupole-audit/evidence/primary-provenance.yaml
+      - memory/vantasner/decisions/C-RMOM-002-review.md
+      - memory/vantasner/decisions/TX1-qualified-review.md
+      - src/substrate_framework/rational_map_moments.py
+      - src/substrate_framework/rational_map_radial.py
+      - tests/test_rational_map_moments.py
+      - tests/test_rational_map_radial.py
+    assumptions:
+      - Every exact density, sphere, moment, convention, and interpretation ceiling is inherited from C-RMOM-001, while the radial equation and accepted branch inputs inherit C-RPROF-002.
+      - Every decimal is resolution-bounded binary64 evidence at the displayed solver, domain, cutoff, samples, tolerances, step, quadrature, and leading endpoint-estimate conventions.
+      - Solver outputs are consumed only after finite-data, endpoint-residual, monotonicity, trace, tensor-convention, energy-closure, refinement, independent-method, and mutation gates pass.
+      - Origin and tail additions use leading endpoint powers and are estimates rather than exact omitted nonlinear integrals; isolated cutoff and wall studies bound their practical effect on the stated ratio.
+      - The ratio has units of the declared dimensionless radial coordinate squared. A physical value requires an accepted length-scale and state map, neither of which is supplied.
+      - The source literal is a post-freeze comparator and does not set a method, parameter, or tolerance. No full-field solution, physical state name, gravitational normalization, rotation frequency, or observation enters the calculation.
+    comparators:
+      - TX1's exposed I_STF_zz/M literal -0.33885166 and its coupled wall/mesh study; P180 uses it only after exact factorization and independent numeric thresholds were frozen
+      - C-RPROF-002's energy-only branch evidence, which supplies the accepted profile but no intrinsic rank-two moment or physical interpretation
+    accepted_in: v0.132.0
+    challenges: []
+    supersedes: []

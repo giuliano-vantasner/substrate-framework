@@ -1,0 +1,13 @@
+campaign: P180
+source:
+  current_numpy_references: 1
+  legacy_numpy_references: 1
+  eager_legacy_default_fallbacks: 0
+  native_execution_exit: 0
+  executed_branch: numpy.trapezoid
+mutable_campaign_and_package:
+  legacy_numpy_references: 0
+  direct_numpy_trapezoid_references: 0
+  canonical_quadrature: substrate_framework.numerics.trapezoid_integral
+version_only_stops: []
+scientific_candidate_failures_from_version_events: 0

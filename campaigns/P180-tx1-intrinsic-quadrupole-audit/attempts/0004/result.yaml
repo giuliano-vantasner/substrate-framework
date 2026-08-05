@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P180
+candidate: initial_exact_factorization_and_targeted_replay
+status: failed_attempt
+started_at: '2026-08-11T07:31:00Z'
+finished_at: '2026-08-11T07:32:00Z'
+command: >-
+  .venv/bin/python -m pytest tests/test_rational_map_moments.py
+  tests/test_rational_map_radial.py tests/test_conserved_moments.py
+  tests/test_tt_angular.py -q
+result: 3_failed_51_passed
+failure_class: representation
+failures:
+  - Sequential SymPy substitution of J-squared and J interpreted the positive symbol through sqrt(I) instead of applying an angular-moment linear functional.
+  - Two mathematically zero trace and axial-form differences remained structurally unsimplified in test equality checks.
+scientific_candidate_failure: false
+diagnosis: >-
+  The exact independently integrated B=2 coefficients had the intended values
+  and signs. The verifier encoded the sphere-average map and exact-equality
+  checks weakly; no canonical formula or numerical branch failed.
+next_attempt: extract_polynomial_coefficients_for_the_angular_average_and_simplify_exact_matrix_differences

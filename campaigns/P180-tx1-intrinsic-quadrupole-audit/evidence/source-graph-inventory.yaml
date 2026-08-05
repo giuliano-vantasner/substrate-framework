@@ -1,0 +1,18 @@
+campaign: P180
+nodes:
+  - {source_unit: GW3, role: convention_context, sha256: 3b941debf6933729b693b928579d4a7f1d73d906911c2fcedb9316ad08038326, disposition: qualified}
+  - {source_unit: P3D2, role: spherical_null_context, sha256: 72802a3bb3ed46be3bf7b96e035028b0ded352ae02e587cb14b9db902b2125cb, disposition: qualified}
+  - {source_unit: QB1, role: narrative_context, sha256: 1f387c140ca80be0e457efd17146267bdecab1cbdbcdd10dd34287bc5de2dc7a, disposition: qualified}
+  - {source_unit: QB3, role: rejected_mechanism_context, sha256: e9626f2e4829084635386eea271d0abdd39c81dfcd6899765d2f4bffac83e0c8, disposition: qualified}
+  - {source_unit: E1, role: accepted_angular_mapping, sha256: 1afa9ba8ade88912e7361bbbd6f59a9fce5cc114c75ddf604a6439bc066ae2d1, disposition: qualified}
+  - {source_unit: E2, role: accepted_profile_mapping, sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f, disposition: qualified}
+  - {source_unit: BX1, role: failed_mechanism_context, sha256: a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3, disposition: qualified}
+  - {source_unit: SC2, role: narrative_Robin_context, sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425, disposition: qualified}
+  - {source_unit: TX1, role: adjudicated_target, sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff, disposition: pending_or_qualified}
+  - {source_unit: TX2, role: pending_direct_consumer, sha256: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7, disposition: pending_adjudication}
+  - {source_unit: TX3, role: pending_indirect_consumer, sha256: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837, disposition: pending_adjudication}
+hash_reuse:
+  upstream: accepted_evidence_unchanged
+  TX1_native_execution: campaigns/P179-sc2-static-einstein-scalar-audit/attempts/0009/result.yaml
+  TX2_TX3_native_execution: campaigns/P177-bx1-l2-box-artifact-audit/attempts/0016/result.yaml
+fresh_scientific_routes: [P180_primary, P180_independent]

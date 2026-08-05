@@ -1,0 +1,42 @@
+attempt: 0006
+campaign: P180
+candidate: exact_factorization_corrected_numeric_branch_and_independent_routes
+status: focused_scientific_gate_passed
+started_at: '2026-08-11T07:34:00Z'
+finished_at: '2026-08-11T07:36:00Z'
+commands:
+  - command: >-
+      .venv/bin/python -m pytest tests/test_rational_map_moments.py
+      tests/test_rational_map_radial.py tests/test_conserved_moments.py
+      tests/test_tt_angular.py -q
+    exit_status: 0
+    terminal_tally: 54_passed
+  - command: PYTHONPATH=src .venv/bin/python campaigns/P180-tx1-intrinsic-quadrupole-audit/verify.py
+    exit_status: 0
+    terminal_tally: ALL_21_CHECKS_PASS
+    elapsed_seconds: 18.1
+  - command: PYTHONPATH=src .venv/bin/python campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/independent_moment_review.py
+    exit_status: 0
+    terminal_tally: ALL_9_CHECKS_PASS
+    elapsed_seconds: 2.1
+exact_results:
+  degree_one: conformal_jacobian_one_and_both_angular_STF_tensors_zero
+  degree_two_jacobian: 4*(1-u^2)/(1+u^2)^2
+  normalized_mean: 2
+  normalized_squared_mean: pi+8/3
+  linear_angular_STF_zz: 8*pi*(3*pi-10)/3
+  quadratic_angular_STF_zz: 8*pi*(3*pi-16)/9
+  sign: both_axial_coefficients_negative
+numeric_baseline:
+  monopole: 286.171598879686
+  normalized_I_STF_zz: -96.969721975371
+  normalized_I_STF_zz_over_M: -0.338851662271835
+  triple_Q_zz_over_M: -1.016554986815505
+independent_collocation:
+  monopole: 286.171593977632
+  normalized_I_STF_zz: -96.969692534392
+  normalized_I_STF_zz_over_M: -0.338851565198
+  relative_method_difference: 2.865e-7
+refinement_axes: [outer_radius, inner_radius, sample_count, IVP_tolerance, maximum_step]
+scientific_candidate_failures: 0
+next_attempt: complete_claim_source_dependency_consumer_and_governance_review

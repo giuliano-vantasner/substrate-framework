@@ -1,0 +1,22 @@
+attempt: 0005
+campaign: P180
+candidate: repaired_exact_factorization_and_targeted_replay
+status: failed_attempt
+started_at: '2026-08-11T07:32:00Z'
+finished_at: '2026-08-11T07:33:00Z'
+command: >-
+  .venv/bin/python -m pytest tests/test_rational_map_moments.py
+  tests/test_rational_map_radial.py tests/test_conserved_moments.py
+  tests/test_tt_angular.py -q
+result: 1_failed_53_passed
+failure_class: representation
+failure: >-
+  The remaining triple-versus-normalized matrix equality compared distinct
+  but algebraically equivalent SymPy expression trees without simplifying the
+  matrix difference.
+scientific_candidate_failure: false
+diagnosis: >-
+  All scalar coefficients, signs, traces, axial relations, numeric branch
+  checks, and 46 pre-existing replay tests passed. The remaining test requires
+  the same explicit exact simplification used for the other matrix gates.
+next_attempt: simplify_the_triple_minus_three_times_normalized_matrix_before_equality

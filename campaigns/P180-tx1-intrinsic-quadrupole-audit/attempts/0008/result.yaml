@@ -1,0 +1,16 @@
+attempt: 0008
+campaign: P180
+candidate: pre_generation_repository_validation
+status: expected_generation_gate
+started_at: '2026-08-11T07:45:00Z'
+finished_at: '2026-08-11T07:45:00Z'
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+exit_status: 1
+failure_class: generated_consumer
+observed: generated_claim_index_is_stale
+scientific_candidate_failure: false
+diagnosis: >-
+  The registry and v0.132.0 release were intentionally written before running
+  the canonical docs and memory generators. No schema, dependency, claim, or
+  evidence-path error was reported before the stale-generated-view gate.
+next_attempt: run_render_docs_and_render_memory_then_repeat_repository_validation

@@ -1,0 +1,15 @@
+campaign: P180
+source_baseline: substrate@6d1f4e0
+framework_base: {release: v0.131.0, commit: a7d4fa7}
+freeze_commits: [d41226a, 1bd45a8]
+primary_verifier: campaigns/P180-tx1-intrinsic-quadrupole-audit/verify.py
+independent_review: campaigns/P180-tx1-intrinsic-quadrupole-audit/reviews/independent_moment_review.py
+canonical_module: src/substrate_framework/rational_map_moments.py
+canonical_tests: tests/test_rational_map_moments.py
+exact_oracle: SymPy_direct_sphere_integration_and_independent_stereographic_reduction
+canonical_numeric_solver: C_RPROF_002_DOP853_vacuum_complement_shooting
+independent_numeric_solver: fresh_solve_bvp_collocation
+canonical_quadrature: substrate_framework.numerics.trapezoid_integral
+independent_quadrature: scipy.integrate.simpson_and_tensor_Gauss_Legendre
+compatibility: mutable_code_has_no_legacy_numpy_integration_name
+authority: accepted_only_after_claim_level_promotion

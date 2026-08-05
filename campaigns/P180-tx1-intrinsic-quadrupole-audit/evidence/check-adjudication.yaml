@@ -1,0 +1,17 @@
+source_unit: TX1
+checks:
+  - {id: TX1.1, executable_result: pass, final_verdict: accepted_through_exact_local_density_closure_C_RMOM_001, source_wording_accepted_as_written: false}
+  - {id: TX1.2, executable_result: pass, final_verdict: exact_conditional_B1_null_accepted_radiation_prose_rejected, accepted_claims: [C-RMOM-001]}
+  - {id: TX1.3, executable_result: pass, final_verdict: corrected_conditional_B2_branch_accepted_full_solution_wording_rejected, accepted_claims: [C-RMOM-001, C-RMOM-002]}
+  - {id: TX1.4, executable_result: pass, final_verdict: exact_conditional_oblate_sign_accepted_physical_torus_prose_unaccepted, accepted_claims: [C-RMOM-001]}
+  - {id: TX1.5, executable_result: pass, final_verdict: resolution_bounded_declared_B4_map_null_only_unique_minimal_carrier_rejected, accepted_claims: []}
+  - {id: TX1.4b, executable_result: pass, final_verdict: exact_tail_exponent_duplicates_C_RPROF_001_tail_exactness_rejected, accepted_claims: [C-RPROF-001]}
+  - {id: TX1.6, executable_result: pass, final_verdict: source_stability_evidence_qualified_corrected_five_axis_refinement_accepted, accepted_claims: [C-RMOM-002]}
+  - {id: TX1.G_A, executable_result: pass, final_verdict: partial_Nc_operator_guard_same_energy_phrase_rejected, accepted_claims: []}
+  - {id: TX1.G_B, executable_result: pass, final_verdict: weak_finite_difference_regression_replaced_by_two_status_checked_solvers, accepted_claims: [C-RMOM-002]}
+summary:
+  accepted_as_written: []
+  accepted_through_corrected_claims: [C-RMOM-001, C-RMOM-002]
+  exact_rederivation_completed: [local_density_closure, B1_null, B2_Jacobian_means_STF_form_sign_and_convention, tail_scaling_error]
+  numeric_reverification_completed: [corrected_B2_branch, outer, inner, samples, tolerance, maximum_step, independent_collocation, independent_angular_cubature]
+  blanket_solved_physical_Skyrmion_unique_carrier_or_radiation_headline_supported: false

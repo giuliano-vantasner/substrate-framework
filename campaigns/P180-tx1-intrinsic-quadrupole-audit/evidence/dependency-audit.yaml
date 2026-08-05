@@ -1,0 +1,26 @@
+campaign: P180
+claims:
+  C-RMOM-001:
+    accepted_dependencies:
+      - {claim: C-RMAP-001, closure: accepted_in_v0.88.0}
+      - {claim: C-RPROF-001, closure: accepted_in_v0.89.0}
+      - {claim: C-MOM-001, closure: accepted_in_v0.32.0}
+  C-RMOM-002:
+    accepted_dependencies:
+      - {claim: C-RMOM-001, closure: same_promotion_transaction}
+      - {claim: C-RPROF-002, closure: accepted_in_v0.89.0}
+source_mappings:
+  - {source_unit: E1, disposition: qualified, accepted_claims: [C-RMAP-001, C-RMAP-002], use: accepted_mapping_only}
+  - {source_unit: E2, disposition: qualified, accepted_claims: [C-RPROF-001, C-RPROF-002], use: accepted_mapping_only}
+  - {source_unit: GW3, disposition: qualified, accepted_claims: [C-GW-001, C-GW-002], use: convention_context_only}
+  - {source_unit: P3D2, disposition: qualified, accepted_claims: [C-MOM-003, C-PDE-002], use: C_MOM_003_consistency_only}
+  - {source_unit: BX1, disposition: qualified, accepted_claims: [C-PDE-012], use: failed_mechanism_context_only}
+  - {source_unit: QB1, disposition: qualified, use: narrative_context_only}
+  - {source_unit: QB3, disposition: qualified, use: rejected_mechanism_context_only}
+  - {source_unit: SC2, disposition: qualified, use: narrative_Robin_context_only}
+  - {source_unit: TX1, disposition: pending_or_qualified, use: hash_pinned_noncanonical_evidence}
+  - {source_unit: TX2, disposition: pending_adjudication, use: pending_reverse_consumer_only}
+  - {source_unit: TX3, disposition: pending_adjudication, use: pending_reverse_consumer_only}
+cycles: []
+undeclared_imports: []
+closure_passes: true

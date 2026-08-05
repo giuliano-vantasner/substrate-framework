@@ -751,6 +751,16 @@ from .rational_map_radial import (
     regular_origin_boundary_residual,
     solve_rational_map_radial_profile,
 )
+from .rational_map_moments import (
+    FactorizedRationalMapEnergyMoments,
+    RationalMapAngularSTFMoments,
+    RationalMapProfileMomentEvidence,
+    degree_one_rational_map_angular_stf_moments,
+    degree_two_axial_rational_map_angular_stf_moments,
+    degree_two_profile_intrinsic_moments,
+    factorized_rational_map_energy_moments,
+    rational_map_local_energy_density,
+)
 from .charge_traces import (
     AbelianNormalizationLedger,
     ChargeCouplingAngleLedger,
