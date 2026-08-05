@@ -1,0 +1,30 @@
+attempt: 0010
+campaign: P186
+candidate: staged_graph_impact_analysis
+status: passed_with_index_limitation_recorded
+started_at: '2026-08-11T12:48:00Z'
+finished_at: '2026-08-11T12:51:00Z'
+commands:
+  - node_.gitnexus_run_cjs_analyze
+  - four_new_function_upstream_impact_queries
+  - four_new_result_dataclass_upstream_impact_queries
+  - read_substrate_framework_processes
+  - detect_changes_compare_e7b2888
+index: {nodes: 28489, edges: 43791, clusters: 393, execution_flows: 2}
+function_index_limitation: new_factory_functions_not_materialized_as_Function_nodes_and_returned_UNKNOWN
+dataclass_impact:
+  risk: LOW
+  direct_file_importers_each: 2
+  affected_processes: 0
+transaction_impact:
+  risk: LOW
+  changed_symbols: 188
+  changed_files: 31
+  affected_execution_flows: 0
+source_narrative_graph_risk: MEDIUM
+host_artifacts:
+  generated: [AGENTS_gitnexus_block, CLAUDE.md, .claude_skills]
+  disposition: removed_before_framework_staging
+claim_or_threshold_changed: false
+verdict: additive_APIs_have_low_code_blast_radius_with_medium_governance_consumer_risk_explicit
+next_attempt: governed_claim_disposition_release_and_source_graph_replay
