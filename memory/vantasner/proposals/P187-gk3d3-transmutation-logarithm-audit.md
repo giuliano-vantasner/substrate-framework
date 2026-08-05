@@ -258,6 +258,15 @@ paired-conversion, affine-boundary, common-rescaling, orientation, zero-matter,
 and hidden-float mutations all exercise load-bearing paths, and the new module
 has no NumPy integration surface.
 
+Attempt 0006 preserves a source-audit predicate failure caused by a phrase
+split across adjacent Python string literals. Attempt 0007 uses a contiguous
+headline phrase and passes all 31 primary exact checks. The verifier pins the
+source, v0.138.0, and formula freeze; separates 26 lexical check sites, one
+mutation-sensitive dispatcher, 31 runtime executions, and zero assertion
+nodes; and directly exercises the general conversion, affine boundary,
+consistent cancellation, zero branch, nullspace, orientation, zero-matter,
+power-zero, log-nonuniqueness, domain, scope, and compatibility gates.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length

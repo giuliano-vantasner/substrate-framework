@@ -1,0 +1,16 @@
+attempt: 0006
+campaign: P187
+candidate: primary_verifier_first_run
+status: failed
+started_at: '2026-08-11T13:31:00Z'
+finished_at: '2026-08-11T13:32:00Z'
+command: PYTHONPATH=src .venv/bin/python proposals/P187-gk3d3-transmutation-logarithm-audit/verify.py
+process:
+  exit_code: 1
+  checks_passed_before_failure: 5
+failed_check: source_exposes_its_load_bearing_overclaims
+diagnosed_layer: verifier_representation
+mechanism: raw_source_phrase_spanned_adjacent_Python_string_literals_and_was_not_contiguous_in_file_text
+scientific_formula_changed: false
+threshold_changed: false
+next_attempt: use_the_contiguous_headline_phrase_then_rerun_the_unchanged_scientific_checks

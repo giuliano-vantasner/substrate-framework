@@ -1,0 +1,25 @@
+claim: C-VAC-004
+verifier: proposals/P187-gk3d3-transmutation-logarithm-audit/verify.py
+oracle: exact_SymPy_algebra_plus_AST_and_hash_provenance
+imports_claim_API: true
+imports_shared_verification: true
+lexical_check_sites: 26
+mutation_sensitive_sites: 1
+runtime_check_executions: 31
+assertion_nodes: 0
+terminal_tally: ALL_31_CHECKS_PASS_P187_GK3D3_C_VAC_004
+load_bearing_mutations:
+  - omit_conversion_ratio_from_generic_log
+  - reverse_conversion_ratio
+  - reverse_length_energy_orientation
+  - change_conversion_at_fixed_lengths
+  - change_Z_ref_at_fixed_scale_data
+  - change_both_paired_conversions
+  - common_rescale_both_lengths
+  - remove_all_matter_weights
+  - replace_log_with_power_zero
+  - claim_log_uniqueness_against_log_squared_and_reciprocal_log
+compatibility:
+  source_AST: passed_no_numpy_surface
+  canonical_module_AST: passed_no_numpy_surface
+claim_level_result: primary_exact_evidence

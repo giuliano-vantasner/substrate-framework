@@ -1,0 +1,33 @@
+attempt: 0007
+campaign: P187
+candidate: primary_exact_claim_verifier
+status: passed
+started_at: '2026-08-11T13:32:00Z'
+finished_at: '2026-08-11T13:34:00Z'
+command: PYTHONPATH=src .venv/bin/python proposals/P187-gk3d3-transmutation-logarithm-audit/verify.py
+process:
+  exit_code: 0
+  lexical_check_sites: 26
+  mutation_sensitive_sites: 1
+  runtime_check_executions: 31
+  assertion_nodes: 0
+  terminal_tally: ALL_31_CHECKS_PASS_P187_GK3D3_C_VAC_004
+verified:
+  - hash_pinned_source_release_and_formula_freeze
+  - source_predicate_and_compatibility_inventory
+  - generic_inverse_length_energy_and_affine_composition
+  - conversion_ratio_mutation_sensitivity
+  - common_rescaling_and_affine_boundary_counterfamilies
+  - consistent_one_loop_unequal_conversion_cancellation
+  - general_Z_ref_and_explicit_zero_matching_branch
+  - conditional_positive_inverse_kinetic_coordinate
+  - paired_conversion_and_wrong_orientation_mutations
+  - one_ratio_absolute_scale_nullspace
+  - zero_matter_noninvertibility
+  - p_zero_and_log_uniqueness_counterexamples
+  - exact_domain_and_module_scope_guards
+compatibility:
+  immutable_source_legacy_references: 0
+  canonical_module_legacy_references: 0
+scientific_threshold_changed: false
+next_attempt: independently_rederive_the_claim_without_importing_the_new_canonical_module_or_parent_claim_APIs
