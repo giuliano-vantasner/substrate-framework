@@ -1,0 +1,35 @@
+source_unit: GK3D2
+path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py
+sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+git_blob: 7eb49a516a9cd5ea24bcfadfd0dde2bf5e0462b0
+history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+size_bytes: 22026
+compatibility_preflight:
+  ast_parse: passed
+  direct_np_trapz: false
+  imported_trapz: false
+  dynamic_trapz: false
+  eager_legacy_default_fallback: false
+  alias_replay_required: false
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py
+  exit_code: 0
+  elapsed_seconds: 0.60
+  maximum_resident_kibibytes: 54768
+  lexical_check_calls: 17
+  literal_check_calls: 15
+  dynamic_check_calls: 2
+  runtime_check_executions: 17
+  assertion_nodes: 1
+  terminal_tally: ALL_17_CHECKS_PASS
+source_objects:
+  imports: [os, sympy]
+  helpers: [check, log_slope]
+  explicit_scalar_action_or_determinant: false
+  explicit_bubble_and_seagull: false
+  explicit_regulator_scale_or_Laurent_series: false
+  external_rung25_file_read: true
+  affine_flow_and_imposed_zero_boundary: true
+scientific_verdict: exact_scoped_slope_and_affine_algebra_survive_but_the_scalar_loop_derivation_boundary_identification_and_total_normalization_require_correction
+version_only_failure: false

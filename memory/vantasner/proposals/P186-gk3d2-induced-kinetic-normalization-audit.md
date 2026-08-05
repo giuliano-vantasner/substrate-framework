@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T12:13:00Z'
+updated: '2026-08-11T12:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -158,6 +158,33 @@ canonical helper before scientific adjudication. Immutable source receives a
 recorded alias-only replay when required, and that environment event never
 rejects a candidate.
 
+## Source Audit Result
+
+The hash-pinned source passes all seventeen runtime checks without a NumPy
+compatibility event. Its affine ODE algebra is exact once a reference value is
+supplied, and its scalar-to-Dirac factor-four slope and rational matter weights
+remain positive candidates pending a complete scalar loop derivation.
+
+The load-bearing boundary inference fails at its cited source. Rung25 defines
+no `Z`, cutoff, bare coefficient, counterterm, charged-matter threshold, or
+matching surface. Its L3b predicate first sets `A=d chi` and then verifies
+`d^2 chi=0`; this is a pure-gauge witness, not an Euler-Lagrange proof that
+every connection is pure gauge. The accepted C-MAX-001 theorem is stronger and
+opposite to GK3D2's use: deleting the kinetic term yields only the current
+constraint and does not force `A` to be pure gauge. Introducing charged matter
+and a new local loop operator also changes the theory and operator basis, so a
+no-matter absence statement cannot silently become `Z(Lambda)=0` after the
+matter is integrated out.
+
+The source's scalar helper differentiates a reduced parameter integrand but
+contains no declared scalar determinant, bubble, seagull, regulator dimension,
+subtraction scale, Laurent pole, or counterterm. The finite slope may survive,
+but P186 must derive it in a complete convention. Checks 3a, 4a, 4b, 5a, 5b,
+and 6b respectively rely on a keyword, solve an imposed zero equation, repeat
+that substitution, sample rather than prove an equivalence, import the scale
+ordering while dropping the free boundary, and subtract a formula from itself.
+They do not validate the advertised total normalization.
+
 ## Attempts and Continuation
 
 Attempt 0001 freezes v0.137.0, framework commit `e7b2888`, the GK3D2 hash and
@@ -177,14 +204,14 @@ governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| GK3D2 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | open |
+| GK3D2 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source audit and attempt 0002 |
 | The scalar coefficient may be copied from a numerator integral without a seagull or regulator | Derive it in a complete gauge-preserving scalar-QED convention | open |
 | Dirac and scalar beta conventions may be mixed | Derive both weights in one declared kinetic and scale convention | open |
 | A differential slope may be presented as a total normalization | Integrate the affine family and retain its independent reference value | open |
 | The earlier no-matter result may be mislabeled a matching boundary | Compare theories, premises, and operator bases and require a separately declared matching condition | open |
 | Bare and finite counterterm coordinates may be erased | Expose both and show load-bearing mutations with the same loop slope | open |
 | Group and matter weights may be called physical sectors | Preserve conditional multiplicities, charge squares, traces, and generator/coupling rescaling | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open pending source AST preflight |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D2 has no NumPy surface |
 | Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
 
 ## Review and Promotion Plan

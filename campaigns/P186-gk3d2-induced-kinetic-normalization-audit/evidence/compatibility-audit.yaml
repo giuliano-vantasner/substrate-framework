@@ -1,0 +1,16 @@
+source_unit: GK3D2
+source_sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886
+ast_inventory:
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  direct_current_attributes: 0
+  dynamic_current_getattrs: 0
+  imported_current_names: 0
+  eager_legacy_default_fallbacks: 0
+alias_replay_required: false
+native_execution_allowed: true
+version_only_stop: false
+scientific_candidate_rejected_for_compatibility: false
+policy: mutable_code_uses_numpy_trapezoid_or_trapezoid_integral_and_immutable_legacy_stops_receive_alias_only_replay

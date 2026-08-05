@@ -1,0 +1,31 @@
+attempt: 0002
+campaign: P186
+candidate: native_reproduction_and_source_audit
+status: passed_with_qualified_source
+started_at: '2026-08-11T12:17:00Z'
+finished_at: '2026-08-11T12:20:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py
+process:
+  exit_code: 0
+  elapsed_seconds: 0.60
+  maximum_resident_kibibytes: 54768
+  checks_passed: 17
+  terminal_tally: ALL_17_CHECKS_PASS
+compatibility:
+  numpy_surface: none
+  version_only_failure: false
+retained:
+  - candidate_scalar_and_Dirac_log_slope_ratio_four_pending_complete_scalar_loop_derivation
+  - candidate_matter_weights_four_thirds_and_one_third_in_a_declared_convention
+  - exact_affine_flow_solution_once_an_independent_boundary_value_is_supplied
+  - exact_zero_matching_specialization_and_ratio_scaling_identity
+rejected_or_rework:
+  - rung25_as_a_derived_Z_Lambda_equals_zero_matching_condition
+  - file_keyword_check_as_boundary_provenance
+  - regulator_free_scalar_loop_language_and_missing_bubble_seagull_derivation
+  - same_slope_and_flow_substitution_as_independent_routes
+  - sampled_if_and_only_if_positivity_and_automatic_no_ghost_headline
+  - no_new_import_no_free_parameter_and_total_calculable_normalization_headline
+claim_or_threshold_changed: false
+verdict: source_is_evidence_for_C_VAC_003_but_cannot_be_promoted_literally
+next_attempt: freeze_corrected_scalar_loop_and_affine_boundary_formulas_then_derive_primary_and_independent_routes
