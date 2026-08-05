@@ -192,6 +192,38 @@ source's perturbativity check inserts `b0=7` and `beta^2=0.245` despite calling
 them derived free inputs, samples two matter weights, and does not establish a
 general loop-validity domain.
 
+## Corrected Formula Freeze
+
+Let `ell0`, `ell1`, `K0`, and `K1` be independently supplied positive exact
+quantities and define `E0=K0/ell0` and `E1=K1/ell1`. The exact relative
+coordinates are `R_ell=ell1/ell0`, `R_K=K1/K0`, and
+`E0/E1=R_ell/R_K`, so the affine kinetic logarithm is
+`L=log(R_ell/R_K)`. Unequal conversion factors remain load-bearing when the
+lengths are held fixed.
+
+With `b=W_s/3+4*W_f/3`, C-VAC-003 composes exactly as
+`Z(E1)=Z_ref+b*L/(8*pi^2)`. C-RGE-003's consistently paired one-loop branch
+has `E1=E0*exp(-X)`, `X=8*pi^2/(b0*g^2)`,
+`ell0=K0/E0`, and `ell1=K1/E1`. Therefore
+`R_ell=R_K*exp(X)` and `L=X`: the two conversion factors cancel even when
+they are unequal because each belongs to the length it defines. This earns
+`Z(E1)=Z_ref+b/(b0*g^2)`, not the source's zero-boundary expression.
+
+Only after separately imposing `Z_ref=0`, and only for positive `b`, `b0`, and
+`g^2`, does the positive zero-branch inverse coordinate exist as
+`g_kin^2=b0*g^2/b`. It is a conditional inverse kinetic coordinate, not a
+selected physical gauge coupling. The scale maps, one-loop inputs, matter and
+group weights, field convention, matching boundary, and physical labels all
+remain premises.
+
+A common positive rescaling of both lengths preserves the ratio, logarithm,
+and kinetic coefficient but shifts both absolute energies, so it proves only
+relative-scale invariance. Changing a conversion at fixed lengths changes the
+answer; changing a conversion together with its paired inverse-energy length
+at fixed energy does not. Changing `Z_ref` changes the total without changing
+the logarithm or slope. These distinctions are the load-bearing mutation
+tests for the canonical implementation.
+
 ## Attempts and Continuation
 
 Attempt 0001 freezes v0.138.0, framework commit `ba1cbaf`, the GK3D3 hash and
@@ -209,6 +241,13 @@ logarithm, zero-branch, and rescaling algebra while rejecting the source's
 physical scale derivation, erased affine boundary, uniqueness argument,
 parameter-free headline, and sampled perturbativity conclusion. The next route
 generalizes the conversions and composes the accepted claims directly.
+
+Attempt 0003 freezes the corrected generic scale map, affine composition,
+consistent one-loop conversion cancellation, explicit zero branch, covariance
+tests, and non-uniqueness counterfamilies. Registry and implementation search
+finds no prior claim or API composing C-RGE-003 with C-VAC-003, so C-VAC-004
+remains provisionally distinct pending primary, independent, and consumer
+review.
 
 ## Debt Ledger
 

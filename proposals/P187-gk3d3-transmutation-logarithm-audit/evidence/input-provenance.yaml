@@ -1,0 +1,31 @@
+claim: C-VAC-004
+accepted_imports:
+  C-RGE-003:
+    supplies: [formal_positive_one_loop_energy_relation, paired_inverse_energy_lengths, independent_positive_conversion_factors, scale_orientation]
+    does_not_supply: [physical_length_labels, selected_b0, selected_g_squared, reference_energy, absolute_scale, perturbative_control]
+  C-VAC-003:
+    supplies: [matter_weight_coefficient, affine_kinetic_family, independent_Z_ref, explicit_zero_matching_specialization]
+    does_not_supply: [matching_scale_identification, physical_matter, gauge_group, selected_weights, total_coupling]
+  C-IDN-002:
+    supplies: [rank_two_nullspace_ceiling, backsubstitution_as_inverse_reconstruction]
+    does_not_supply: [coupling_selection, coefficient_selection, physical_scale_labels]
+conditional_inputs:
+  - positive_exact_lengths_ell0_and_ell1
+  - positive_exact_conversions_K0_and_K1
+  - exact_real_local_and_finite_matching_coordinates
+  - nonnegative_exact_scalar_and_Dirac_invariant_weights
+  - for_the_consistent_one_loop_branch_positive_exact_E0_g_squared_and_b0
+  - for_the_inverse_zero_branch_positive_total_matter_coefficient_and_explicit_Z_ref_zero
+source_only_noncanonical_inputs:
+  - a_as_substrate_UV_granularity
+  - xi_as_medium_soliton_Compton_length
+  - common_conversion_hbar_times_c0
+  - unit_soliton_mass_coefficient
+  - AS7_b0_equals_7_and_beta_squared_approximately_0_245
+  - rung25_as_Z_ref_equals_zero
+  - physical_gauge_coupling_interpretation
+forbidden_hidden_inputs:
+  - measured_coupling_or_fitted_target
+  - absolute_scale_or_length_unit
+  - undeclared_threshold_or_matching_offset
+  - downstream_claim_used_as_upstream_authority

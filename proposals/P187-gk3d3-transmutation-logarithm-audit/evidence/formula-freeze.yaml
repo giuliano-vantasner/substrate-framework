@@ -1,0 +1,52 @@
+claim: C-VAC-004
+domains:
+  reference_length: ell0_positive_exact
+  evaluation_length: ell1_positive_exact
+  reference_conversion: K0_positive_exact
+  evaluation_conversion: K1_positive_exact
+  reference_energy: E0_equals_K0_over_ell0
+  evaluation_energy: E1_equals_K1_over_ell1
+  scalar_weight: W_s_nonnegative_exact
+  dirac_weight: W_f_nonnegative_exact
+  reference_value: Z_ref_real_exact
+generic_scale_map:
+  length_ratio: R_ell_equals_ell1_over_ell0
+  evaluation_to_reference_conversion_ratio: R_K_equals_K1_over_K0
+  reference_to_evaluation_energy_ratio: E0_over_E1_equals_R_ell_over_R_K
+  scale_logarithm: L_equals_log_R_ell_over_R_K
+  warning: holding_lengths_fixed_while_changing_either_conversion_changes_L
+affine_composition:
+  matter_coefficient: b_equals_W_s_over_3_plus_4_W_f_over_3
+  kinetic_coefficient: Z_E1_equals_Z_ref_plus_b_times_L_over_8pi2
+  general_inverse_coordinate: not_selected_and_not_named_a_physical_coupling_without_positive_Z_and_a_declared_field_convention
+consistent_one_loop_specialization:
+  exponent: X_equals_8pi2_over_b0_g2
+  energy_relation: E1_equals_E0_times_exp_minus_X
+  paired_lengths: ell0_equals_K0_over_E0_and_ell1_equals_K1_over_E1
+  paired_length_ratio: R_ell_equals_R_K_times_exp_X
+  conversion_cancellation: L_equals_log_R_ell_over_R_K_equals_X
+  general_kinetic: Z_E1_equals_Z_ref_plus_b_over_b0_g2
+zero_matching_branch:
+  premise: Z_ref_equals_zero_is_separately_declared
+  positive_domain: b_positive_b0_positive_g2_positive
+  kinetic_coefficient: Z0_equals_b_over_b0_g2
+  inverse_kinetic_coordinate: g_kin_squared_equals_b0_g2_over_b
+  interpretation_ceiling: no_physical_gauge_coupling_without_matter_group_field_matching_and_scale_identifications
+covariances_and_countermodels:
+  common_length_rescaling: ell0_to_rho_ell0_and_ell1_to_rho_ell1_preserves_R_ell_L_and_Z_while_shifting_both_absolute_energies_by_one_over_rho
+  fixed_length_conversion_mutation: K0_or_K1_mutation_changes_L
+  paired_conversion_reparameterization: changing_Ki_and_elli_together_at_fixed_Ei_preserves_L
+  affine_boundary_mutation: Z_ref_to_Z_ref_plus_delta_changes_Z_without_changing_any_slope_or_scale_ratio
+  wrong_orientation: exchanging_ell0_and_ell1_without_the_paired_energy_and_conversion_exchange_changes_the_logarithm
+  zero_matter_limit: b_equals_zero_leaves_Z_equals_Z_ref_and_makes_the_zero_branch_noninvertible
+non_uniqueness_counterfamilies:
+  source_claim: only_the_logarithm_composed_with_exp_X_can_be_rational_in_X
+  counterexamples: [one, log_y_squared, one_over_log_y, arbitrary_rational_function_of_log_y]
+  dimensional_power_zero: y_to_the_zero_equals_one_not_log_y
+excluded:
+  - physical_identification_of_either_length_or_energy
+  - equality_of_conversion_factors
+  - unit_soliton_or_Compton_coefficient
+  - selected_b0_g2_matter_weight_Z_ref_or_absolute_scale
+  - perturbative_validity_from_one_sample_inequality
+  - parameter_free_observed_or_substrate_gauge_coupling

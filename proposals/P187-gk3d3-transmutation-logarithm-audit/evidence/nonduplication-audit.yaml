@@ -1,0 +1,26 @@
+claim: C-VAC-004
+identifier_search:
+  registry_matches: 0
+  campaign_matches_before_P187: 0
+  package_API_matches: 0
+  test_matches: 0
+  durable_decision_matches: 0
+nearest_claims:
+  C-RGE-003:
+    overlap: exact_one_loop_energy_and_inverse_energy_length_ratios
+    distinction: contains_no_matter_induced_kinetic_family_affine_boundary_or_zero_matching_inverse
+  C-VAC-003:
+    overlap: exact_matter_coefficient_and_affine_kinetic_family
+    distinction: contains_no_length_energy_conversion_ledger_or_one_loop_transmutation_composition
+  C-IDN-002:
+    overlap: scale_and_coupling_identifiability_ceiling
+    distinction: studies_a_gravity_length_rank_system_not_the_affine_kinetic_composition
+  C-DIM-009:
+    overlap: D4_dimensionless_kinetic_bookkeeping_and_log_nonselection
+    distinction: derives_no_loop_scale_map_or_affine_composition
+novel_positive_object:
+  - generic_exact_scale_log_with_independent_length_energy_conversions
+  - exact_composition_with_the_affine_matter_kinetic_family
+  - cancellation_of_unequal_conversion_factors_when_lengths_and_energies_are_consistently_paired_under_C_RGE_003
+  - explicit_separation_of_general_Z_ref_and_the_positive_zero_matching_inverse_coordinate
+decision: provisionally_distinct_pending_primary_independent_and_consumer_review
