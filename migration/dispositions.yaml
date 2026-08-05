@@ -7297,3 +7297,68 @@ units:
       event affects a scientific verdict. The single integrated boundary is
       recorded in attempt 0007: it validates 802 memory files and passes all
       1,734 tests in 172.52 seconds with exit zero.
+  MD2:
+    disposition: qualified
+    accepted_claims:
+      - C-DOS-001
+      - C-QFL-001
+    qualification: >-
+      C-DOS-001 retains the independently declared continuum measure,
+      dispersion, branch factor, and supplied cutoff types. C-QFL-001 adds the
+      exact scalar one-oscillator ground-state variance and d3 inverse-
+      frequency continuum moment only after canonical action normalization,
+      product ground state, stiffness, dimension, scalar branches, and UV
+      cutoff are supplied. Its J(X) form, gapless and cutoff limits, and
+      fixed-set total-equals-count-times-mean identity are exact. The accepted
+      C-MED-003 and C-SG-018 medium remains classical and one-dimensional; it
+      is neither lifted nor quantized. AS6 and AS7 supply no accepted beta
+      value or granularity, and MD1 supplies no microscopic cutoff. Replacing
+      beta by its definition is reparameterization, not an independent route
+      or overdetermination. The fixed-set identity does not make total
+      variance invariant under changing the admitted mode set: zero and
+      positive extensions change count and total differently. The algebraic
+      rewrite n<S therefore derives no physical growth, state, participation,
+      material, channel, probability, rate, or substrate conclusion.
+    evidence:
+      - campaigns/P197-md2-phase-variance-audit/reviews/source_adjudication.md
+      - campaigns/P197-md2-phase-variance-audit/reviews/C-QFL-001-claim-review.md
+      - campaigns/P197-md2-phase-variance-audit/reviews/MD2-disposition-review.md
+      - campaigns/P197-md2-phase-variance-audit/reviews/impact_analysis.md
+      - campaigns/P197-md2-phase-variance-audit/evidence/source-reproduction.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/consumer-reproduction.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/compatibility-audit.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/source-audit.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/check-adjudication.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/formula-freeze.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/input-provenance.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/dependency-audit.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/consumer-audit.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/candidate-comparison.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/implementation-audit.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P197-md2-phase-variance-audit/evidence/primary-provenance.yaml
+      - campaigns/P197-md2-phase-variance-audit/verify.py
+      - campaigns/P197-md2-phase-variance-audit/reviews/independent_mode_variance_review.py
+      - campaigns/P197-md2-phase-variance-audit/reviews/replay_source_graph.py
+      - campaigns/P197-md2-phase-variance-audit/attempts/0003/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0004/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0005/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0006/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0007/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0008/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0009/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0010/result.yaml
+      - campaigns/P197-md2-phase-variance-audit/attempts/0011/result.yaml
+      - memory/vantasner/decisions/C-QFL-001-review.md
+      - memory/vantasner/decisions/MD2-qualified-review.md
+    note: >-
+      P197 closes 40 primary, 27 independent, and 20 source-graph checks after
+      preserving one freeze-order and three verifier-representation failures.
+      Ten byte-pinned native records cover 282 predicates without duplicate
+      native execution; MD4, MD5, and MD6 remain pending reverse consumers.
+      MD2 and its graph have no NumPy quadrature compatibility surface, so no
+      version event affects a scientific verdict. The single integrated
+      boundary is recorded in attempt 0011: it validates 807 memory files and
+      passes all 1,757 tests in 189.45 seconds with exit zero.

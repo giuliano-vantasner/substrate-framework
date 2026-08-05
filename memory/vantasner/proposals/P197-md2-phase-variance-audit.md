@@ -2,7 +2,7 @@
 description: Derive a conditional scalar vacuum mode-sum while separating fixed-set factorization from mode-set dependence
 author: vantasner
 created: '2026-08-11T21:20:00Z'
-updated: '2026-08-11T21:50:00Z'
+updated: '2026-08-11T22:01:24Z'
 tags:
 - substrate-framework
 - research-arc
@@ -10,8 +10,8 @@ tags:
 - phase-variance
 - mode-sum
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P197 MD2 Phase Variance Audit
 
@@ -119,6 +119,13 @@ and 40 focused checks after explicit repairs. Attempt 0009 closes the ten-node,
 282-check source graph without duplicate native execution and completes the
 individual claim and MD2 reviews.
 
+Attempt 0010 preserves the post-move verifier-provenance failure caused by
+pinning the mutable `current.yaml` release alias. The repaired verifiers pin
+the immutable v0.145.0 base. Attempt 0011 then closes the exact post-promotion
+replay and the one integrated promotion boundary: 1,757 tests pass in 189.45
+seconds, the workflow validates 807 memory files, and the process exits zero
+after 203.97 wall seconds at 215,712 KiB peak RSS.
+
 ## Debt Ledger
 
 The ledger tracks every premise or mismatch that could turn a conditional
@@ -150,4 +157,5 @@ P197 closes only when the positive theorem and importable API exist, premises
 and dependency closure are explicit, competing concepts are adjudicated,
 strong oracles and mutations pass, every affected consumer replays, claim and
 source reviews agree, generated records synchronize, and the debt ledger is
-empty.
+empty. C-QFL-001 is accepted in v0.146.0, MD2 is qualified, every listed debt
+is discharged, canonical records agree, and attempt 0011 satisfies this gate.

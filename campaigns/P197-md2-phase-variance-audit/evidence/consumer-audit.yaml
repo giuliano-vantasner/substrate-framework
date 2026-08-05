@@ -5,7 +5,7 @@ canonical_consumers:
   module: src/substrate_framework/quantum_mode_variance.py
   exports: src/substrate_framework/__init__.py
   tests: {path: tests/test_quantum_mode_variance.py, passed: 23}
-  primary: {path: proposals/P197-md2-phase-variance-audit/verify.py, checks: 40}
+  primary: {path: campaigns/P197-md2-phase-variance-audit/verify.py, checks: 40}
 direct_source_consumers:
   MD4:
     disposition: pending

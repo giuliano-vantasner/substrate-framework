@@ -1,0 +1,40 @@
+attempt: 0011
+campaign: P197
+candidate: repaired_post_promotion_exact_replay_and_integrated_gate
+status: passed
+started_at: '2026-08-11T21:58:00Z'
+finished_at: '2026-08-11T22:01:24Z'
+target_release: v0.146.0
+claim: C-QFL-001
+source_disposition: {MD2: qualified}
+accepted_mappings: [C-DOS-001, C-QFL-001]
+generated_state:
+  claims: 186
+  accepted_claims: 186
+  proposals: 0
+  memory_files: 807
+  migration_units: 218
+  migration_pending: 27
+  migration_partial: 0
+  migration_qualified: 178
+targeted_boundary:
+  native_checks: 26
+  primary_checks: 40
+  independent_checks: 27
+  graph_checks: 20
+  focused_tests: 40
+  exit_statuses_all_zero: true
+integrated_gate:
+  command: scripts/validate.sh
+  status: passed
+  tests_passed: 1757
+  pytest_seconds: 189.45
+  wall_seconds: 203.97
+  peak_rss_kib: 215712
+  exit_status: 0
+release_sha256: ac66e5ae6e46e878c6392892fb534a5fb7115dd6a2e50d59e2e4a429d8b82581
+registry_sha256: bd730087a86508e9c362afa16158acc359d2e009d58ef5ab4ec395f995b6d9ea
+source_claims_sha256: 4eb5f94af9396adcfa89d676f77b0a5600daeae9e88f8ebd949e00a47485e20b
+compatibility_event: none
+scientific_threshold_changed: true
+debt: []

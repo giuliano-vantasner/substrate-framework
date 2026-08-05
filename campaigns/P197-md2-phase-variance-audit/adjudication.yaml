@@ -1,0 +1,73 @@
+campaign: P197
+title: MD2 exact conditional scalar ground-state phase-variance audit
+source_baseline: substrate@6d1f4e0
+source_units: [MD2]
+base_release: v0.145.0
+accepted_release: v0.146.0
+adjudicated_at: '2026-08-11T21:55:00Z'
+selected_candidates:
+  - {id: A, reason: The d3 inverse-frequency continuum moment is exact and distinct when action normalization quantization state branch and cutoff are explicit.}
+  - {id: C, reason: Fixed-set factorization plus set-change counterexamples is necessary to prevent MD2's arithmetic identity from being overread.}
+competing_candidates:
+  - {id: B, decision: retained_as_a_distinct_future_finite_periodic_problem_requiring_box_wavevectors_components_normalization_and_boundaries}
+  - {id: D, decision: rejected_because_C_DOS_001_has_no_ground_state_or_inverse_frequency_moment}
+  - {id: E, decision: rejected_because_no_independent_foundational_inconsistency_requires_a_d3_quantized_medium_lift}
+claims:
+  - {id: C-QFL-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-DOS-001, decision: unchanged_declared_continuum_measure_dispersion_branch_and_supplied_cutoff_ceiling}
+unpromoted_claims:
+  - {id: accepted_classical_medium_is_d3_and_quantized, reason: C_MED_003_and_C_SG_018_are_classical_and_one_dimensional.}
+  - {id: AS6_AS7_supply_beta_and_granularity, reason: Their_accepted_mappings_supply_no_such_value_or_physical_identification.}
+  - {id: MD1_cutoff_is_microscopic, reason: C_DOS_001_inverts_a_supplied_target_and_derives_no_Brillouin_zone.}
+  - {id: two_equivalent_parameterizations_are_overdetermination, reason: Substitution_of_a_definition_is_one_route.}
+  - {id: fixed_set_factorization_proves_mode_set_invariance, reason: Zero_and_positive_extensions_change_count_and_total_differently.}
+  - {id: n_less_than_S_is_an_accepted_growth_condition, reason: No_state_dynamics_participation_channel_or_rate_is_supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_mode_variance_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-QFL-001-claim-review.md
+  source_disposition_review: reviews/MD2-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  consumer_reproduction: evidence/consumer-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+source_disposition: {MD2: qualified}
+accepted_mappings: [C-DOS-001, C-QFL-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.146.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0011/result.yaml
+  tests_passed: 1757
+  pytest_seconds: 189.45
+  wall_seconds: 203.97
+  peak_rss_kib: 215712
+  exit_status: 0
+debt: []
+status: accepted

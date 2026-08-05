@@ -1,0 +1,22 @@
+attempt: 0010
+campaign: P197
+candidate: first_post_promotion_exact_replay
+status: failed_verifier_provenance_design
+started_at: '2026-08-11T21:56:00Z'
+finished_at: '2026-08-11T21:57:00Z'
+result:
+  focused_tests: 40
+  focused_tests_exit_status: 0
+  graph_checks: 20
+  graph_exit_status: 0
+  primary_checks_passed_before_stop: 1
+  independent_checks_passed_before_stop: 1
+failure_class: verifier_mutable_authority_pin
+mechanism: >-
+  Both exact routes compared the v0.145.0 base-release hash against mutable
+  governance/releases/current.yaml. Staging the valid v0.146.0 promotion
+  changed current by design and made the historical base check fail.
+scientific_candidate_rejected: false
+repair: Pin governance/releases/v0.145.0.yaml directly in both immutable campaign verifiers.
+next_attempt: repaired_post_promotion_exact_replay_and_integrated_gate
+debt: []

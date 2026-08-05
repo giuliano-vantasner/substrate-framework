@@ -14,7 +14,7 @@ from substrate_framework.verification import CheckLedger
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE_ROOT = Path("/home/dan/substrate")
-PROPOSAL = Path(__file__).resolve().parents[1]
+CAMPAIGN = Path(__file__).resolve().parents[1]
 NODES = {
     "AS6": ("merged-framework/bridges/phase-22/bridge_AS6_beta_self_dual_pin.py", "2f6c76d8aedde25b343f85cb54b2618cd03c816a29553fa70a523909265dd7f0", 9),
     "AS7": ("merged-framework/bridges/phase-22/bridge_AS7_gravity_confrontation_planck_granularity.py", "710635ddf323b8995dc4a1481aeb8232938d6db14c37bd95a537b26d17df3e0f", 6),
@@ -34,7 +34,7 @@ RECORDS = {
     "MC2": ("campaigns/P096-mc2-dispersion-tail-classification/evidence/source-reproduction.yaml", "7b8b5147c13c3e2aafae2bffa5a682c766800bb556deb60ca815e8f713c2fee9"),
     "MD1": ("campaigns/P196-md1-mode-counting-audit/evidence/source-reproduction.yaml", "cf0b41000bbfebb983b3b27ee4b13070944d6631d50d02e3a8e766ffa2d32236"),
     "WN6": ("campaigns/P194-wn6-scale-verdict-audit/evidence/source-reproduction.yaml", "42f0a42b57da16032317b9b43c16cc5564f127eae37119499c3def1007ccd5e6"),
-    "MD2": ("proposals/P197-md2-phase-variance-audit/evidence/source-reproduction.yaml", "310ab82e29a206b6be00c666382de9f11d7eb0c27928a734f06124c2cb5b4929"),
+    "MD2": ("campaigns/P197-md2-phase-variance-audit/evidence/source-reproduction.yaml", "310ab82e29a206b6be00c666382de9f11d7eb0c27928a734f06124c2cb5b4929"),
 }
 P196_CONSUMERS = ROOT / "campaigns/P196-md1-mode-counting-audit/evidence/consumer-reproduction.yaml"
 P196_CONSUMERS_SHA256 = "6d6373ef1513c6f2891450bbef96311b7566ae35cc02e5837064f9366de41335"
@@ -136,13 +136,13 @@ def main() -> int:
         and all(units[unit]["disposition"] == "pending_adjudication" for unit in DIRECT_CONSUMERS),
     )
     checks.check(
-        "MD2 remains pending before claim promotion",
-        units["MD2"]["disposition"] == "pending_adjudication"
-        and units["MD2"]["accepted_claims"] == [],
+        "MD2 is qualified through the exact accepted mapping",
+        units["MD2"]["disposition"] == "qualified"
+        and units["MD2"]["accepted_claims"] == ["C-DOS-001", "C-QFL-001"],
     )
     checks.check(
         "reused consumer records are not counted as fresh executions",
-        load(PROPOSAL / "evidence/consumer-reproduction.yaml")["total"]
+        load(CAMPAIGN / "evidence/consumer-reproduction.yaml")["total"]
         == {
             "scripts": 3,
             "native_checks_covered": 137,

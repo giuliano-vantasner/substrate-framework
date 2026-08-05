@@ -53,11 +53,11 @@ def main() -> int:
     checks.check("MD2 source hash remains pinned", digest(SOURCE) == SOURCE_SHA256)
     checks.check(
         "base release remains pinned",
-        digest(ROOT / "governance/releases/current.yaml") == RELEASE_SHA256,
+        digest(ROOT / "governance/releases/v0.145.0.yaml") == RELEASE_SHA256,
     )
     checks.check(
         "formula freeze remains pinned",
-        digest(ROOT / "proposals/P197-md2-phase-variance-audit/evidence/formula-freeze.yaml")
+        digest(ROOT / "campaigns/P197-md2-phase-variance-audit/evidence/formula-freeze.yaml")
         == FREEZE_SHA256,
     )
 

@@ -22,9 +22,10 @@ expected_coverage:
   compatibility_aliases: 0
   version_only_scientific_failures: 0
 actual_replay:
-  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P197-md2-phase-variance-audit/reviews/replay_source_graph.py
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P197-md2-phase-variance-audit/reviews/replay_source_graph.py
   terminal_tally: ALL_20_CHECKS_PASS
-authority_state_before_P197_promotion:
+authority_state_after_P197_promotion:
   qualified_direct_dependencies: [AS6, AS7, MC1, MC2, MD1, WN6]
-  pending_root: MD2
+  qualified_root: MD2
+  accepted_root_mapping: [C-DOS-001, C-QFL-001]
   pending_reverse_consumers: [MD4, MD5, MD6]

@@ -6,7 +6,7 @@ base_release:
   id: v0.145.0
   sha256: 0b549525847c57f4e246a2bd56331389ce6a8352468823b126b7f16e27b3a329
 formula_freeze:
-  path: proposals/P197-md2-phase-variance-audit/evidence/formula-freeze.yaml
+  path: campaigns/P197-md2-phase-variance-audit/evidence/formula-freeze.yaml
   sha256: 412bc390cf5268549240c1d708d79463a58fe96f037bd76795f0ba96100f416d
 canonical_implementation:
   path: src/substrate_framework/quantum_mode_variance.py
@@ -15,13 +15,13 @@ tests:
   path: tests/test_quantum_mode_variance.py
   sha256: 84f4adbd882c5bd3cd8a84862a73388bea59e3c62e14fbf42244e11248bd50ba
 primary:
-  path: proposals/P197-md2-phase-variance-audit/verify.py
-  sha256: a6582ea81da71b51fdadfc8dfd77589d1dcec3b1fd6038e62f19e4714d1700b6
+  path: campaigns/P197-md2-phase-variance-audit/verify.py
+  sha256: 445236338538065b84e63a409aa073733e650c47cf1fa1003475478e979a45ce
   route: canonical_API_DOS_composition_exact_integrals_limits_dimensions_mutations_and_set_growth_counterexamples
   tally: 40
 independent:
-  path: proposals/P197-md2-phase-variance-audit/reviews/independent_mode_variance_review.py
-  sha256: 2209610b33ebd52f251b3839f3b24e0cb35fb5c6d75a75b58ed6ad18574d47b4
+  path: campaigns/P197-md2-phase-variance-audit/reviews/independent_mode_variance_review.py
+  sha256: 69a810a42a134ab79e27a3625b2b1cc15629eb255ba1c0d038b421c1ed039780
   route: normalized_Gaussian_ground_state_raw_radial_integration_limits_mutations_and_finite_tuple_counterexamples
   tally: 27
 independence: >-
