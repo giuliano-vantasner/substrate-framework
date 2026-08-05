@@ -1,0 +1,40 @@
+attempt: 0002
+campaign: P189
+candidate: native_source_reproduction_and_predicate_audit
+status: passed_source_reproduction_headline_not_yet_verified
+started_at: '2026-08-11T15:00:00Z'
+finished_at: '2026-08-11T15:03:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py
+process:
+  exit_status: 0
+  wall_seconds: 0.35
+  user_seconds: 0.31
+  system_seconds: 0.03
+  max_rss_kib: 50760
+  static_check_calls: 20
+  literal_check_calls: 14
+  dynamic_check_calls: 6
+  runtime_check_executions: 44
+  assertion_nodes: 0
+  terminal_tally: ALL_44_CHECKS_PASS
+compatibility:
+  numpy_imports: 0
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_injected: 0
+  version_only_scientific_failures: 0
+retained:
+  - unit_normalized_C_SG_019_coefficient_and_parity
+  - exact_finite_inverse_square_factorial_table
+  - exact_finite_rational_decimal_floors
+  - exact_positivity_despite_float_representation_zero
+requires_stronger_oracle:
+  - universal_exponential_bound_is_regressed_on_a_finite_grid
+  - decade_thresholds_use_unenclosed_mpmath_values
+  - superpolynomial_predicate_checks_one_order_and_three_powers_only
+rejected_physical_inference:
+  - squared_classical_coefficient_is_a_Golden_rule_rate_weight
+  - PN2_band_is_a_governed_physical_subdivision
+scientific_threshold_changed: false
+next_attempt: freeze_exact_universal_rational_and_integer_proofs_then_test_C_CMB_001_novelty

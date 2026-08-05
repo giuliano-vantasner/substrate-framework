@@ -2,7 +2,7 @@
 description: Audit WN1 and derive a normalization-complete exact factorial-suppression ledger
 author: vantasner
 created: '2026-08-11T14:58:00Z'
-updated: '2026-08-11T14:58:00Z'
+updated: '2026-08-11T15:03:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -190,6 +190,24 @@ and debt before any P189 implementation or source execution. Subsequent failed
 proof, representation, source, novelty, or verifier routes remain append-only
 and must name the layer and materially different continuation.
 
+Attempt 0002 passes native reproduction in 0.35 seconds with 44 runtime checks
+from twenty static call sites, fourteen literal labels, six dynamic labels, and
+zero assertions. WN1 imports only sys, SymPy, and mpmath and has no NumPy
+compatibility surface. The unit-background coefficient grid, selected inverse-
+square factorial values, exact finite decimal floors, and exact positivity at
+the float-zero order survive.
+
+The source tally does not encode three headline quantifiers. Eight exact
+partial sums are regression evidence for the exponential-series argument, not
+a universal proof. Four moderate-order and three decade comparisons use
+sixty-digit mpmath values without an interval enclosure. The function named
+`decays_superpolynomially` checks only order 21 against powers two, four, and
+eight. P189 will replace those finite predicates with an analytic positive-
+series proof, an exact rational/integer decade proof, and a geometric tail
+proof for every fixed nonnegative power. The Golden-rule weight and physical
+PN2-band readings remain rejected unless their missing state, interaction, and
+spectral premises are supplied.
+
 ## Debt Ledger
 
 The P189 ledger tracks source reachability, coefficient normalization,
@@ -200,7 +218,7 @@ governed-state agreement.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | Source body was exposed before the P189 contract | Record exposure and make no blinding claim | disclosed in base provenance and comparator freeze |
-| WN1 predicates, imports, runtime, and conclusion edges are unaudited | Pin and adjudicate every executable and narrative edge | open |
+| WN1 predicates, imports, runtime, and conclusion edges are unaudited | Pin and adjudicate every executable and narrative edge | discharged by attempt 0002 and the source, reproduction, compatibility, and check audits |
 | Unit normalization may erase amplitude and coordinate scales | Derive the general C-SG-019 magnitude ledger and mutate every scale | open |
 | A finite exponential grid may masquerade as a universal proof | Supply an analytic positive-series proof and sensitive direction countercheck | open |
 | Arbitrary-precision digits may masquerade as a rigorous bound | Derive exact rational and integer exponent bounds or give explicit enclosures | open |

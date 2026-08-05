@@ -1,0 +1,33 @@
+campaign: P189
+source_unit: WN1
+source_hash_matches_queue: true
+native_exit_status: 0
+source_constructions:
+  exact:
+    - unit_background_one_high_cosine_coefficient_on_finite_grid
+    - parity_support_on_selected_orders
+    - inverse_square_factorial_values_on_selected_orders
+    - exact_rational_log10_floor_for_selected_values
+    - exact_positive_rational_at_order_171
+  finite_or_numeric:
+    - exponential_series_inequality_checked_on_eight_orders
+    - exponential_upper_bound_checked_by_mpmath_on_four_orders
+    - decade_exponents_evaluated_at_sixty_decimal_digits_without_interval_enclosure
+    - monotonicity_checked_on_three_exposed_decade_inputs
+    - superpolynomial_label_checked_only_at_order_21_for_powers_2_4_8
+normalization_audit:
+  source_background: 0
+  source_amplitude: 1
+  source_high_scale: 1
+  source_low_scale: 1
+  accepted_general_square: A_squared_times_a_H_squared_times_a_L_to_2n_over_factorial_n_squared_for_odd_n
+  even_order_square: 0
+physical_typing_missing:
+  - quantum_states_and_normalization
+  - interaction_Hamiltonian_and_complete_matrix_element
+  - on_shell_final_state_measure_or_spectral_density
+  - energy_momentum_channel_and_resonance
+  - Golden_rule_validity_and_linewidth
+  - physical_PN2_mode_and_subdivision_process
+  - material_or_nuclear_realization
+headline_verdict: mixed_exact_and_underencoded_source_requiring_exact_universal_rederivation_and_physical_qualification

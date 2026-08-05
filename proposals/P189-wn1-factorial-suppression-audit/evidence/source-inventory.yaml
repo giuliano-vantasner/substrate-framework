@@ -1,0 +1,22 @@
+campaign: P189
+source_unit: WN1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py
+sha256: 3764b29955c3bd51c10278159e08a52ff616a7041510e56917b091f1a802cdde
+blob: c154cf916571b8e7e07c0ac19771123165fc5f6e
+size_bytes: 13511
+history:
+  commit_count: 1
+  sole_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+target_path_clean: true
+syntax:
+  ast_parse: passed
+  imports: [sys, sympy_as_sp, mpmath_as_mp]
+  functions: [check, cross_coeff, closed_form, c_sq_exact, exact_log10_floor, bound_exponent, decays_superpolynomially]
+  static_check_calls: 20
+  literal_check_calls: 14
+  dynamic_check_calls: 6
+  assertion_nodes: 0
+  runtime_check_executions: 44
+prior_exposure: disclosed_in_proposal

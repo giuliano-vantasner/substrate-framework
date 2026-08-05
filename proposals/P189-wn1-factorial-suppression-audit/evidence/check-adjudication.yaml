@@ -1,0 +1,56 @@
+campaign: P189
+source_unit: WN1
+runtime_checks: 44
+families:
+  - id: WN1.1-coefficient-grid
+    runtime_instances: 9
+    status: retained_exact_duplicate
+    mapping: [C-SG-019]
+    reason: Unit-background finite differentiation reproduces the accepted all-order coefficient specialization.
+  - id: WN1.1-parity
+    runtime_instances: 2
+    status: retained_exact_duplicate
+    mapping: [C-SG-019]
+    reason: Selected even and odd orders agree with the accepted zero-background parity theorem.
+  - id: WN1.2-inverse-square-table
+    runtime_instances: 7
+    status: retained_exact_conditional
+    provisional_mapping: C-CMB-001
+    reason: Exact unit-normalized values are correct; the general C-SG-019 square retains amplitude and coordinate scales.
+  - id: WN1.2-selected-decimal-floors
+    runtime_instances: 3
+    status: retained_exact_finite
+    provisional_mapping: C-CMB-001
+    reason: Monotonic selected floors and exact n=3 and n=51 comparisons are finite exact evidence, not the universal bound.
+  - id: WN1.3-series-grid
+    runtime_instances: 8
+    status: finite_regression_not_universal_proof
+    provisional_mapping: C-CMB-001
+    reason: Eight exact partial-sum comparisons do not quantify over every positive integer; the analytic positive-series term argument must be encoded separately.
+  - id: WN1.3-positive-tail-samples
+    runtime_instances: 1
+    status: retained_finite_regression
+    reason: Six positive terms support but do not encode positivity of the complete omitted tail.
+  - id: WN1.3-mpmath-bound-grid
+    runtime_instances: 4
+    status: numeric_regression_only
+    reason: Sixty-digit comparisons have no interval enclosure and cannot establish an exact strict inequality.
+  - id: WN1.4-decade-exponents
+    runtime_instances: 5
+    status: numeric_regression_pending_exact_rederivation
+    provisional_mapping: C-CMB-001
+    reason: Three thresholds, monotonicity, and finiteness are evaluated numerically on exposed inputs; exact rational and integer block proofs are required.
+  - id: WN1.5-float-zero
+    runtime_instances: 3
+    status: retained_representation_evidence
+    reason: Python float conversion or squaring reaches a represented zero while the exact rational stays positive; this is not scientific vanishing.
+  - id: WN1.6-superpolynomial
+    runtime_instances: 2
+    status: source_predicate_underencoded
+    provisional_mapping: C-CMB-001
+    reason: One order and powers two four and eight do not prove the every-fixed-power asymptotic theorem; a universal ratio-tail proof is required.
+summary:
+  exact_or_exact_finite_runtime_checks: 21
+  finite_or_numeric_runtime_checks: 21
+  underencoded_runtime_checks: 2
+  blanket_headline_accepted: false

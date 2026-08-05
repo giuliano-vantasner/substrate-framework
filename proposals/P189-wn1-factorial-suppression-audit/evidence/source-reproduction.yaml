@@ -1,0 +1,23 @@
+campaign: P189
+source_unit: WN1
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py
+exit_status: 0
+runtime_check_executions: 44
+terminal_tally: ALL_44_CHECKS_PASS
+wall_seconds: 0.35
+max_rss_kib: 50760
+selected_outputs:
+  exact_log10_floors:
+    1: 0
+    3: -2
+    5: -5
+    7: -8
+    15: -25
+    31: -68
+    51: -133
+  mpmath_bound_exponents:
+    10000000: '-1.3131411e8'
+    1000000000: '-1.7131411e10'
+    100000000000: '-2.1131411e12'
+  float_zero_order: 171
+runtime_scope: source_reproduction_and_finite_predicate_evidence_not_blanket_headline_validation
