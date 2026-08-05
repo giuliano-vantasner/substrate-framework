@@ -1,0 +1,17 @@
+attempt: 0002
+campaign: P196
+candidate: corrected_contract_shape
+status: failed_contract_representation
+started_at: '2026-08-11T20:43:00Z'
+base_release: v0.144.0
+base_commit: 2aa2795
+source_sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+repair:
+  - encode_claims_proposed_as_a_string_list
+  - add_plain_prose_before_the_debt_table
+scientific_threshold_changed: false
+failure_class: evidence_representation
+result: >-
+  The first two contract shapes passed, then memory validation stopped because
+  Candidate Set began directly with a table rather than required plain prose.
+next_attempt: add_only_the_candidate_introductory_prose_then_rerun_the_freeze_gate

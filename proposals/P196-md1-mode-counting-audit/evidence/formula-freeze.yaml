@@ -1,0 +1,30 @@
+campaign: P196
+claim_candidate: C-DOS-001
+domains:
+  spatial_dimension_d: positive_integer_supplied
+  branch_degeneracy_b: positive_integer_supplied_independently_of_d
+  volume_V: positive_exact
+  signal_speed_c: positive_exact
+  gap_omega_0: nonnegative_exact
+  radial_wavenumber_k: nonnegative_exact
+  frequency_omega: omega_at_least_omega_0
+  cutoff_K: positive_exact
+declared_measure: V_times_d_dimensional_momentum_volume_divided_by_2pi_to_d
+frozen_formulas:
+  sphere_surface: S_d_minus_1_equals_2_pi_to_d_over_2_over_Gamma_d_over_2
+  dispersion: omega_of_k_equals_sqrt_omega_0_squared_plus_c_squared_k_squared
+  per_branch_DOS: V_S_d_minus_1_omega_times_omega_squared_minus_omega_0_squared_to_d_minus_2_over_2_divided_by_2pi_to_d_c_to_d
+  integrated_per_branch_count: V_S_d_minus_1_K_to_d_divided_by_d_2pi_to_d
+  b_branch_count: b_times_integrated_per_branch_count
+  target_matched_cutoff: target_d_2pi_to_d_divided_by_b_V_S_d_minus_1_all_to_one_over_d
+specialization_d3:
+  per_branch_DOS: V_omega_sqrt_omega_squared_minus_omega_0_squared_divided_by_2pi_squared_c_cubed
+  per_branch_count: V_K_cubed_divided_by_6pi_squared
+  if_target_is_b_V_over_a_cubed: K_equals_6pi_squared_to_one_third_divided_by_a
+explicit_nonclaims:
+  - spatial_dimension_d_does_not_equal_or_derive_branch_degeneracy_b
+  - continuum_ball_volume_is_not_an_exact_finite_lattice_point_count
+  - target_matching_does_not_derive_a_microscopic_Brillouin_zone
+  - V_over_a_to_d_is_not_an_exact_cell_count_without_cell_and_divisibility_premises
+  - no_material_spectrum_coupling_state_occupation_rate_or_observable_is_derived
+

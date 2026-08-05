@@ -1,0 +1,22 @@
+revision: 0001
+campaign: P196
+base_release: v0.144.0
+base_commit: 2aa2795
+release_sha256: b995916d6e708d29f0f493562741d7ba35bc202ce2784f4aaed7d1dfd5232a0a
+registry_sha256: 0093510e7268724551166623ac9590c33af1d3e28ff32a8a78c78e5bce34e998
+source_queue_sha256: 0ab66c4f3df1ced9564bbbf9022ebf5d42d0dc7837308f892b7b325398954971
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py
+source_sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+source_bytes: 8728
+source_lines: 172
+source_history: [7222eed]
+source_worktree_dirty_outside_pinned_file: true
+authority_inputs: [C-MED-003, C-SG-018, C-KRN-001, C-OSC-002]
+source_dependencies: [D3S, MC1, MC2, QCD5, WN6]
+dependency_dispositions_all_qualified: true
+fresh_blinding_claimed: false
+prior_runtime_tally_exposed: 27
+provisional_identifier: C-DOS-001
+

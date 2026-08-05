@@ -1,0 +1,53 @@
+id: P196
+base_release: v0.144.0
+base_commit: 2aa2795
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MD1]
+question: >-
+  Which part of MD1 is an exact conditional continuum density-of-states
+  theorem, and which part incorrectly identifies spatial dimension with branch
+  degeneracy or a Debye phase-space integral with an exact finite dynamical-
+  matrix rank and derived material cutoff?
+invariants:
+  - C-MED-003 and C-SG-018 govern a one-spatial-coordinate scalar continuum model and do not supply a three-dimensional medium or finite box.
+  - A separately declared positive integer spatial dimension and isotropic radial dispersion do not determine the number of field components or polarization branches.
+  - Continuum phase-space volume under V/(2*pi)^d is a declared thermodynamic counting convention, not an exact finite lattice-point count.
+  - An exact cell count requires a declared cell complex volume per cell integer divisibility degrees of freedom per cell and boundary convention.
+  - A Debye cutoff obtained by matching a continuum integral to a supplied target count is conditional and does not derive a microscopic Brillouin zone.
+  - D3S and QCD5 supply no accepted lift of the C-MED-003 scalar medium to three dimensions.
+  - WN6 rejects mode count as the unique missing physical bridge and grants no MD1 premise.
+  - Mutable integration uses exact SymPy here; any later sampled integration uses numpy.trapezoid or trapezoid_integral never removed numpy.trapz.
+allowed_imports:
+  - C-MED-003 and C-SG-018 exact scalar dispersion within their accepted one-dimensional domain
+  - C-KRN-001 general declared-d radial measure technique without importing its Coulomb interpretation
+  - exact sphere surface and ball-volume identities derived with SymPy
+  - separately declared positive V c omega_0 cutoff K integer d and integer branch degeneracy b
+  - hash-pinned MD1 as noncanonical source evidence after freeze
+candidates:
+  - id: A
+    description: Promote the exact per-branch isotropic continuum DOS and integrated phase-space count for separately declared integer dimension d.
+  - id: B
+    description: Promote an exact finite periodic hypercubic lattice rank and lattice-point count with explicit sites components and boundary data.
+  - id: C
+    description: Retain MD1's d=3 three-branch Debye specialization only as a conditional corollary with branch degeneracy and target cell count separately declared.
+  - id: D
+    description: Reject all new mathematics as duplicate of C-SG-018 or C-KRN-001 if no distinct density-of-states object survives nonduplication review.
+  - id: E
+    description: Open a foundational dimensional lift only if accepted claims independently require a three-dimensional scalar medium before using MD1.
+uniqueness_evidence: null
+selection_criteria:
+  - exact distinction among spatial dimension branch degeneracy site count and finite rank
+  - natural fit to accepted scalar dispersion without an undeclared dimensional lift
+  - explicit phase-space and boundary assumptions
+  - exact dimensions signs threshold behavior and gapless limit
+  - mutation sensitivity to sphere normalization branch factor cutoff and gap
+  - discrete-versus-continuum limiting honesty
+  - novelty beyond C-SG-018 C-KRN-001 and lattice_scalar
+  - downstream usefulness without physical material overreach
+claims_proposed: [C-DOS-001]
+comparators_blinded_until: >-
+  Fresh source-output blinding is impossible because prior WN graph replays
+  exposed MD1's 27-check tally and the generated queue exposes its formulas.
+  General-d formulas domains candidate distinctions mutations and selection
+  criteria are frozen before renewed source execution or detailed check audit.
+status: active
