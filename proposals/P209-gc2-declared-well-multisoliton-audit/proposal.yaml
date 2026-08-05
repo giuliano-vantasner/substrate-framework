@@ -62,6 +62,32 @@ comparators_blinded_until: >-
   exact predicates, constants, tolerances, finite grids, source texts, count
   logic, and native output remain unopened until this contract, formula freeze,
   provenance record, memory validation, and clean freeze commit exist.
-comparators_used_for_selection: []
+comparators_used_for_selection:
+  - hash-pinned GC2 native output opened after freeze commit b97b48c
+  - hash-pinned MH2 FG2 FG4 and WM9 source literals and statements
+  - accepted C-OVL-002 C-QBL-003 C-QBL-005 C-OVL-001 and C-MIX-002 ceilings
+  - independent exact translated-density moments and source-list mutations
 status: active
-revision: 0001
+revision: 0002
+post_source_numeric_audit:
+  operator: minus_d2_minus_12_sech_squared_of_x_minus_R_over_0_7
+  domain: asymmetric_Dirichlet_box_minus_6_to_32
+  grids: [8000, 16000]
+  spatial_operator: uniform_three_point_second_difference
+  eigensolver: scipy_eigh_tridiagonal_lowest_index
+  source_density_normalization: rectangle_sum_times_spacing
+  source_named_centroid: expectation_of_absolute_x_not_expectation_of_x
+  source_width: standard_deviation_about_expectation_of_x
+  relocation_threshold: width_over_expectation_absolute_x_less_than_0_5
+  convergence_predicate: max_change_of_expectation_absolute_x_less_than_1e_minus_3
+  omitted_numeric_gates:
+    - width_convergence
+    - ratio_convergence
+    - domain_refinement
+    - eigen_residual
+  decisive_replacement: exact_whole_line_Poschl_ground_state_translation_and_moments
+post_source_authority_audit:
+  exact_sine_three_level_count: rejected_FG2_source_result_not_an_accepted_dependency
+  quartic_complete_spectrum: C-QBL-003_exactly_two_Hessian_levels_negative_and_zero
+  WM9_mode_powers: literal_tuple_1_2_3_and_not_three_eigenmodes
+  count_three_status: supplied_not_derived

@@ -1,4 +1,4 @@
-revision: 0001
+revision: 0002
 campaign: P209
 source_unit: GC2
 declared_operator_family:
@@ -33,6 +33,16 @@ source_forensics_after_freeze:
   - distinguish_source_text_search_from_execution_evidence
   - compare_every_GC2_predicate_to_the_hash_pinned_MH2_source_and_accepted_MH2_disposition
   - record_source_solver_equation_domain_boundary_data_mesh_tolerance_error_metric_and_success_gate_if_numeric_spectra_are_run
+opened_source_corrections:
+  - N_GEN_is_the_literal_6_so_the_executed_MH2_family_is_not_a_three_member_family
+  - the_variable_named_cent_is_E_absolute_x_and_not_the_density_centroid_E_x
+  - the_source_width_is_centered_about_E_x_but_only_E_absolute_x_is_refined
+  - the_source_threshold_width_over_E_absolute_x_less_than_0_5_is_declared
+  - source_multi_soliton_prose_does_not_supply_a_field_equation_or_solution
+  - the_hardcoded_exact_sine_count_three_is_noncanonical_rejected_FG2_evidence
+  - removing_the_zero_mode_from_the_quartic_spectrum_leaves_one_negative_Hessian_level_not_one_particle
+  - FG2_and_FG4_each_disclaim_a_count_derivation_but_do_not_form_a_computational_cycle
+  - globals_name_intersection_does_not_scan_values_source_strings_or_selection_history
 mutations:
   - translate_every_well_by_a_common_offset
   - change_one_center_without_changing_depth_or_width

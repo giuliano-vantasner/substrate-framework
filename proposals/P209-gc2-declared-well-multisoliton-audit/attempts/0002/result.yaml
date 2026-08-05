@@ -1,0 +1,28 @@
+attempt: 0002
+campaign: P209
+timestamp_utc: '2026-08-05T23:02:00Z'
+kind: hash_pinned_native_source_reproduction_and_opened_model_freeze
+freeze_commit: b97b48c
+source_unit: GC2
+source_sha256: 07611b1eb63450e7e82ab696eafe8566a6931a9acae9ccfbebe1823765ac4a65
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-42/bridge_GC2_corpus_already_multisoliton.py
+exit_status: 0
+runtime_checks: 8
+terminal_tally: ALL_8_CHECKS_PASS
+elapsed_wall_seconds: 1.37
+max_rss_kib: 93896
+compatibility_preflight: zero_quadrature_surface
+scientific_version_failures: 0
+opened_corrections:
+  - source_MH2_builds_six_not_three_external_well_members
+  - source_cent_variable_is_mean_absolute_coordinate_not_centroid
+  - source_convergence_predicate_checks_only_mean_absolute_coordinate
+  - external_well_family_and_multisoliton_field_solution_are_distinct_types
+  - exact_sine_three_level_premise_was_already_rejected_for_wall_and_box_failure
+  - a_negative_Hessian_level_is_not_an_internal_particle_state
+  - count_provenance_is_absence_of_derivation_not_a_literal_dependency_cycle
+  - global_name_intersection_is_not_a_complete_comparator_reachability_oracle
+verdict: source_reproduced_but_headline_and_several_predicates_require_exact_claim_typed_correction
+continuation: implement_primary_and_independent_exact_oracles_then_adjudicate_all_eight_checks_and_replay_consumers

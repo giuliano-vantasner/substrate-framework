@@ -2,7 +2,7 @@
 description: Audit GC2's declared translated wells and multisoliton interpretation
 author: vantasner
 created: '2026-08-05T22:56:00Z'
-updated: '2026-08-05T22:56:00Z'
+updated: '2026-08-05T23:02:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -112,8 +112,15 @@ scientific failures.
 
 Attempt 0001 freezes authority, eight candidates, exact translation and moment
 obligations, core-tail typing, count mutations, physical ceilings, graph scope,
-and compatibility policy before source access. Failures remain append-only and
-change the method, representation, or candidate rather than the objective.
+and compatibility policy before source access. Attempt 0002 reproduces all
+eight native checks after commit `b97b48c` and opens the source model. It finds
+that MH2 executes six external wells, the quantity called a centroid is
+`E|x|`, only that quantity is refined, and no domain study is performed. The
+source also subtracts a zero mode from FG2's already-rejected exact-sine count
+and calls the remainder internal states. Exact whole-line translation and the
+accepted quartic spectrum replace those weak predicates. Failures remain
+append-only and change the method, representation, or candidate rather than
+the objective.
 
 ## Debt Ledger
 

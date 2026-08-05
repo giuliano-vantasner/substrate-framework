@@ -1,0 +1,42 @@
+campaign: P209
+source_unit: GC2
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-42/bridge_GC2_corpus_already_multisoliton.py
+sha256: 07611b1eb63450e7e82ab696eafe8566a6931a9acae9ccfbebe1823765ac4a65
+git_blob: cda47b11d0aeec1e2f660d8a3689ab7e89f41e1e
+git_blob_commit: 7222eed
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-42/bridge_GC2_corpus_already_multisoliton.py
+exit_status: 0
+runtime_checks: 8
+lexical_check_calls: 8
+literal_check_calls: 1
+dynamic_check_calls: 7
+assert_nodes: 2
+terminal_tally: ALL_8_CHECKS_PASS
+elapsed_wall_seconds: 1.37
+max_rss_kib: 93896
+printed_values:
+  well_depth: 12.0
+  well_width: 0.7
+  spacing: 4.0
+  declared_rung_count: 6
+  frequency: 0.45
+  inverse_width: 0.54544
+  remote_centers: [0.0, 4.0, 8.0, 12.0, 16.0, 20.0]
+  core_depths: [1.785e+00, 8.865e-02, 1.157e-03, 1.474e-05, 1.877e-07, 2.391e-09]
+  top_shortfall_ratio: 5.020e+09
+  source_named_centers: [0.3125, 4.0, 8.0, 12.0, 16.0, 20.0]
+  source_centered_widths: [0.4005, 0.4005, 0.4005, 0.4005, 0.4005, 0.4005]
+  source_width_over_mean_absolute_coordinate: [0.10013, 0.05007, 0.03338, 0.02503, 0.02003]
+  core_width_over_mean_absolute_coordinate: 1.2818
+  quartic_net_nonzero_count: 1
+  source_exact_sine_net_nonzero_count: 2
+compatibility: {imports_numpy: true, quadrature_surface: none, alias_replay_required: false, version_only_scientific_failures: 0}
+scope: >-
+  Native execution reproduces all eight predicates and printed values. It does
+  not turn source prose into a soliton field, make E|x| a centroid, validate the
+  source's width or ratio convergence, repair FG2's rejected exact-sine third
+  level, make a negative Hessian mode a particle, derive the count three, or
+  prove that absence of selected global names excludes all comparator influence.
