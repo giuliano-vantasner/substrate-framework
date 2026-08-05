@@ -1,0 +1,33 @@
+attempt: 0006
+campaign: P204
+timestamp_utc: '2026-08-05T21:38:00Z'
+kind: terminal_record_promotion_gate
+source_disposition: qualified
+accepted_mapping: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+claim_delta: []
+release_change: null
+primary_checks: 38
+independent_checks: 21
+terminal_graph_checks: 67
+workflow_validation:
+  repository: {claims: 190, accepted: 190, proposals: 0, units: 218, pending: 20, partial: 0}
+  generated_claim_index: current
+  generated_accepted_memory: current
+  memory_files_validated: 833
+  physics_skill: valid
+  yaml_parse: pass
+  git_diff_check: pass
+full_pytest_repeated: false
+last_full_release_gate: {campaign: P202, tests_passed: 1815, pytest_seconds: 172.62}
+reason_no_full_pytest: >-
+  P204 changes no accepted claim, release, canonical package module, package
+  API, or test. Exact scientific and graph verifiers plus record-sensitive
+  validators exercise the complete changed surface; repeating unchanged tests
+  would be validation ceremony.
+compatibility:
+  mutable_legacy_references: 0
+  immutable_alias_only_nodes: [S2, W1, W3]
+  version_only_scientific_failures: 0
+debt: []
+verdict: terminal_accepted_composition_no_release
+continuation: commit_P204_then_open_P205_WM8_boundary_running_audit

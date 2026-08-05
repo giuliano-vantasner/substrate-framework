@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 21
-  qualified: 184
+  pending_adjudication: 20
+  qualified: 185
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11549,8 +11549,52 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MIX-002
+  - C-REP-001
+  - C-REP-003
+  - C-ANO-001
+  - C-RGE-005
+  - C-VAC-003
+  qualification: WM7's exact surviving object is supplied-table composition. For the C-RGE-005 three-generation
+    table and N_H supplied complex doublets, the matter vector is (4+N_H/10,4+N_H/6,4), concurrent exactly
+    at N_H=0. N_H=1 gives (41/10,25/6,4), integer ratio 123:125:120, and spread 25/24. The rank-two solve
+    recovers c_F=2/3 and c_S=1/3, but SM4's coefficients were built with those same imported weights;
+    the third row is a consistency relation, not independent provenance. C-REP-003 supplies the finite
+    rows and scalar entry, while C-MIX-002 supplies only a generic phase count, so neither one scalar
+    nor three physical generations is derived. Fixed coupling ratios require zero affine boundaries and
+    one common coefficient. The coordinate 25/66 additionally requires the common inverse-trace law and
+    chosen Abelian normalization; it is not a physical weak-angle prediction. A negative gauge beta contribution
+    does not force a negative total affine kinetic coordinate. No common determinant action, regulator,
+    counterterm, threshold, matching law, physical field completeness, observed running, or substrate
+    mechanism is accepted. C-RGE-007 remains reserved and unpromoted.
+  evidence:
+  - campaigns/P204-wm7-induction-field-content-audit/reviews/source_adjudication.md
+  - campaigns/P204-wm7-induction-field-content-audit/reviews/accepted_composition_review.md
+  - campaigns/P204-wm7-induction-field-content-audit/reviews/impact_analysis.md
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/source-reproduction.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/compatibility-audit.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/source-audit.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/check-adjudication.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/formula-freeze.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/input-provenance.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/dependency-audit.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/consumer-audit.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/candidate-comparison.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/implementation-audit.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/primary-provenance.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/evidence/independent-provenance.yaml
+  - campaigns/P204-wm7-induction-field-content-audit/verify.py
+  - campaigns/P204-wm7-induction-field-content-audit/reviews/independent_mixed_trace_review.py
+  - campaigns/P204-wm7-induction-field-content-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/WM7-qualified-review.md
+  note: P204 closes 38 primary, 21 independent, and 67 terminal source-graph checks. The graph pins 26
+    nodes with 228 static predicates and 31 assertions while excluding pending WM8 authority. WM7 and
+    mutable P204 have no quadrature surface. Immutable S2, W1, and W3 legacy-name events remain alias-only
+    compatibility evidence and create zero scientific failures.
 - source_unit: WM8
   phase: phase-39
   path: merged-framework/bridges/phase-39/bridge_WM8_corrected_boundary_running.py

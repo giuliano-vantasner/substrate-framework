@@ -2,7 +2,7 @@
 description: Audit WM7 mixed-statistics induction traces and field-content provenance
 author: vantasner
 created: '2026-08-05T21:08:07Z'
-updated: '2026-08-05T21:08:07Z'
+updated: '2026-08-05T21:35:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gauge-beta
 - induction-traces
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P204 WM7 Induction Field-Content Audit
 
@@ -108,15 +108,15 @@ consumer, and generated record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Detailed source predicates and dataflow remain unopened | Reproduce once after the committed freeze | open |
-| Imported beta weights may be called corpus-derived | Trace every weight and coefficient to its accepted provenance | open |
-| Back-substitution may be called independent over-determination | Audit rank and construction ancestry | open |
-| SM2 may be overread as a derived physical scalar count | Mutate count and apply C-REP-003's supplied-table ceiling | open |
-| Common induction may erase affine boundaries and thresholds | Restore factorwise coefficients boundaries and scale data | open |
-| Trace ratios may be called physical couplings or weak angle | Apply C-REP-001 iff and Abelian covariance countermodels | open |
-| C-RGE-007 may duplicate accepted semantics | Complete claim API test and consumer nonduplication audit | open |
-| WM8 cycle and later consumers may grant authority | Replay SCC and exact reverse graph without imports | open |
-| Compatibility may masquerade as science | Audit all current and legacy quadrature access shapes | open |
+| Detailed source predicates and dataflow remain unopened | Reproduce once after the committed freeze | discharged by one hash-pinned ten-check native reproduction |
+| Imported beta weights may be called corpus-derived | Trace every weight and coefficient to its accepted provenance | discharged by C-RGE-005 ancestry and inverse-reconstruction audit |
+| Back-substitution may be called independent over-determination | Audit rank and construction ancestry | discharged by rank-two and left-null checks plus target mutation |
+| SM2 may be overread as a derived physical scalar count | Mutate count and apply C-REP-003's supplied-table ceiling | discharged by the exact N_H family and supplied-table review |
+| Common induction may erase affine boundaries and thresholds | Restore factorwise coefficients boundaries and scale data | discharged by independent affine-boundary and coefficient countermodels |
+| Trace ratios may be called physical couplings or weak angle | Apply C-REP-001 iff and Abelian covariance countermodels | discharged by independent-coupling and normalization mutations |
+| C-RGE-007 may duplicate accepted semantics | Complete claim API test and consumer nonduplication audit | discharged; identifier reserved and unpromoted |
+| WM8 cycle and later consumers may grant authority | Replay SCC and exact reverse graph without imports | discharged by the 26-node terminal graph replay |
+| Compatibility may masquerade as science | Audit all current and legacy quadrature access shapes | discharged with zero scientific version failures |
 
 ## Review and Promotion Plan
 
@@ -134,3 +134,16 @@ inverse-provenance decision, scalar-count and normalization sensitivities,
 novelty decision, cyclic dependency and reverse consumers, compatibility,
 source disposition, generated state, and durable memory agree. A passing
 source tally or failed physical headline alone is not completion.
+
+## Final Adjudication
+
+P204 selects accepted composition, inverse-reconstruction typing, the exact
+scalar-count sensitivity ledger, no new API, and terminal SCC governance.
+WM7 is qualified through C-MIX-002, C-REP-001, C-REP-003, C-ANO-001,
+C-RGE-005, and C-VAC-003. C-RGE-007 remains unpromoted. The source's physical
+count, common-action, weak-angle, and self-induction claims do not close.
+
+The primary, independent, and terminal graph routes pass 38, 21, and 67 checks.
+Three stale validator invocations are preserved as tooling-interface attempts;
+none is a scientific or NumPy-version failure. The release remains v0.150.0,
+and the only durable delta is WM7's synchronized terminal record.

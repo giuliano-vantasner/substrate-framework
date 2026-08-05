@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-05T20:01:00Z'
+updated: '2026-08-05T21:35:00Z'
 tags:
 - substrate-framework
 - effort
@@ -2315,29 +2315,39 @@ reserved and unpromoted because the corrected object is accepted composition.
 GK3D6 and mutable P203 have no quadrature surface, while immutable GK3D5's lazy
 legacy branch remains compatibility-only evidence.
 
+P204 leaves v0.150.0 unchanged and qualifies WM7 through C-MIX-002,
+C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, and C-VAC-003. The exact supplied
+`N_H` family is `(4+N_H/10,4+N_H/6,4)`, concurrent iff `N_H=0`; one supplied
+doublet gives `(41/10,25/6,4)`. The source's weight solve reconstructs inputs
+already used to build its coefficient target, and its coupling ratios require
+zero affine boundaries, a common coefficient, and a chosen normalization.
+Thirty-eight primary, 21 independent, and 67 terminal graph checks pass. The
+26-node replay excludes pending WM8 and all reverse consumers as authority.
+C-RGE-007 stays unpromoted. WM7 and mutable P204 have no quadrature surface;
+immutable S2, W1, and W3 legacy-name events remain compatibility evidence only.
+
 ## Canonicalization
 The registry, `v0.150.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety accepted claims.
-P001 through P203 are frozen under `campaigns/`; proposal,
+P001 through P204 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 21 pending, 0 partial, 3
-migrated, 184 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P203 changes no accepted scientific surface, so its narrow record gate
+memory. The regenerated migration queue agrees on 20 pending, 0 partial, 3
+migrated, 185 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P204 changes no accepted scientific surface, so its narrow record gate
 follows the last full P202 release boundary rather than repeating all 1,815
 unchanged package tests.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 21
-pending, 3 migrated, 184 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 20
+pending, 3 migrated, 185 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-No singleton pending unit is acyclically dependency-ready. The pending graph
-has two source SCC roots: `[WM7, WM8]` and `[MK1, MK2]`. Source cycles grant no
-authority, so the next campaign begins with lower-phase WM7 while excluding
-pending WM8 as an import and auditing both cycle directions explicitly. The
-remaining condensation order is WM9, WM10, GC1 through GC6 on one branch and
+The WM7 side of its source SCC is terminal without granting authority to WM8.
+The next campaign audits WM8 against accepted WM7 while retaining every
+factorwise boundary, running, normalization, and physical-observable ceiling.
+The remaining condensation order is WM9, WM10, GC1 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

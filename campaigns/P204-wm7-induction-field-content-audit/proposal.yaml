@@ -50,7 +50,8 @@ selection_criteria:
   - novelty beyond C-RGE-005 C-REP-001 and C-VAC-003
   - load-bearing scalar-count and independent-sector mutations
   - dependency cycle and reverse-consumer closure
-claims_proposed: [C-RGE-007]
+claims_proposed: []
+reserved_unpromoted_claims: [C-RGE-007]
 comparators_blinded_until: >-
   The generated queue already exposes the claimed reconstructed weights
   c_F=2/3 and c_S=1/3, the completed 41/10 25/6 4 contribution vector, the
@@ -59,4 +60,12 @@ comparators_blinded_until: >-
   predicates, any additional numbers, and dataflow remain unopened until this
   proposal, formula freeze, provenance record, memory contract, repository
   validation, and clean freeze commit exist.
-status: active
+comparators_used_for_selection:
+  - hash-pinned WM7 native output and predicate dataflow
+  - C-RGE-005's supplied product-group contribution table
+  - C-REP-001's conditional trace coordinate and Abelian covariance
+  - C-REP-003's supplied finite multiplet-table ceiling
+  - C-MIX-002's generic phase-count ceiling
+  - C-VAC-003's complete affine factorwise kinetic family
+status: accepted
+revision: 0002

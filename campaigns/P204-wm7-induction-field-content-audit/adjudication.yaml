@@ -1,0 +1,93 @@
+campaign: P204
+title: WM7 mixed-statistics induction field-content accepted-composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [WM7]
+base_release: v0.150.0
+accepted_release: v0.150.0
+audit_commit: c034dc6
+adjudicated_at: '2026-08-05T21:35:00Z'
+selected_candidates:
+  - {id: A, reason: Accepted_C_RGE_005_composition_retains_the_exact_supplied_table_vector.}
+  - {id: C, reason: Rank_and_ancestry_classify_the_weight_solve_as_inverse_reconstruction.}
+  - {id: D, reason: The_exact_scalar_count_and_boundary_mutation_ledger_retains_every_premise.}
+  - {id: F, reason: Existing_claims_own_the_corrected_object_without_a_duplicate_API.}
+  - {id: G, reason: Individual_WM7_governance_closes_without_pending_WM8_authority.}
+competing_candidates:
+  - {id: B, decision: rejected_because_no_common_action_regulator_matching_law_or_novel_semantics_exists}
+  - {id: E, decision: rejected_because_field_completeness_matching_normalization_and_physical_couplings_remain_unclosed}
+claims: []
+accepted_composition:
+  - {id: C-MIX-002, decision: unchanged_generic_irreducible_phase_count_and_no_physical_generation_map}
+  - {id: C-REP-001, decision: unchanged_conditional_trace_coordinate_and_Abelian_covariance}
+  - {id: C-REP-003, decision: unchanged_supplied_finite_multiplet_table_and_completeness_ceiling}
+  - {id: C-ANO-001, decision: unchanged_supplied_charge_constraint_solution_family}
+  - {id: C-RGE-005, decision: unchanged_supplied_product_group_one_loop_contribution_ledger}
+  - {id: C-VAC-003, decision: unchanged_complete_affine_factorwise_kinetic_family}
+unpromoted_claims:
+  - {id: C-RGE-007, reason: The_exact_N_H_family_and_ratios_are_accepted_composition_while_a_distinct_common_induction_action_is_absent.}
+  - {id: independently_derived_loop_weights, reason: The_target_coefficients_were_constructed_with_the_same_imported_weights_and_the_solve_is_inverse_reconstruction.}
+  - {id: framework_forced_three_generations_and_one_scalar, reason: Accepted_claims_supply_tables_and_generic_phase_counting_but_no_physical_multiplicity_derivation.}
+  - {id: universal_common_induction_coefficient, reason: Determinant_regulator_counterterm_matching_and_factorwise_boundary_closure_are_absent.}
+  - {id: physical_coupling_ratios_or_weak_angle_boundary, reason: Common_inverse_trace_matching_and_preferred_Abelian_normalization_are_separate_premises.}
+  - {id: gauge_field_cannot_self_induce, reason: A_negative_beta_contribution_does_not_force_a_negative_total_affine_kinetic_coordinate.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_mixed_trace_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  accepted_composition_review: reviews/accepted_composition_review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+source_disposition: {WM7: qualified}
+accepted_mappings: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+compatibility:
+  installed_numpy: 2.5.1
+  no_quadrature_surface: [WM7, mutable_P204]
+  immutable_alias_only_nodes: [S2, W1, W3]
+  aliases_injected_during_science: []
+  version_only_scientific_failures: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_mixed_trace_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - PYTHONPATH=src_python_validate_repository
+  - PYTHONPATH=src_python_render_docs_check
+  - PYTHONPATH=src_python_render_memory_check
+  - memory_validate
+  - physics_skill_validate
+  - yaml_parse
+  - git_diff_check
+narrow_gate:
+  attempt: attempts/0006/result.yaml
+  primary_checks: 38
+  independent_checks: 21
+  terminal_graph_checks: 67
+  memory_files_validated: 833
+  repository_claims: 190
+  migration_units: 218
+  pending_units: 20
+  exit_status: 0
+last_full_release_gate: {campaign: P202, tests_passed: 1815, pytest_seconds: 172.62}
+debt: []
+status: accepted_composition_no_release
