@@ -2286,26 +2286,59 @@ and no NumPy compatibility event changes the verdict. The integrated boundary
 validates 824 memory files and passes all 1,810 tests in 168.97 seconds with
 exit zero.
 
+P202 promotes C-QBL-004 in v0.150.0 and qualifies GK3D5 through C-U1-001 and
+the exact smooth conditional complex-scalar radial identities plus convergent
+numeric evidence at the separately selected `omega=1/2` branch. Collocation,
+direct origin shooting, and an independent `h=r*f` representation agree under
+domain and tolerance refinement. The existence verdict remains qualified
+numeric evidence at one frequency: no global interval, uniqueness, stability,
+particle pole, determinant-field identity, quantization, physical electric
+charge, absolute scale, or substrate excitation is accepted. Thirty primary,
+16 independent, 28 graph, and five focused checks pass. Immutable GK3D5's
+current-first lazy quadrature fallback selects `numpy.trapezoid` under NumPy
+2.5.1, so its legacy branch is compatibility evidence rather than a scientific
+failure. The integrated boundary validates 829 memory files and all 1,815 tests
+in 172.62 seconds with exit zero.
+
+P203 leaves v0.150.0 unchanged and qualifies GK3D6 through C-RGE-003,
+C-IDN-002, C-VAC-003, C-VAC-004, C-REP-001, and C-QBL-004. For the general
+common-scale affine family, the exact ratio derivative is
+`(b_i*z_j-b_j*z_i)/(8*pi^2*Z_i^2)`, so scale-factor cancellation requires
+proportional boundaries; zero matching is one conditional corollary. Separate
+factor logs, conversions, orientations, or boundaries break the ratio. The
+source computes a normalization shift rather than the asserted coupling shift,
+hardcodes the alleged AS7 routes, and supplies no two-loop remainder or
+particle map. Three-eighths remains a normalization-covariant conditional
+trace coordinate. Thirty-five primary, 17 independent, and 25 terminal graph checks
+pass after two preserved verifier-construction repairs. C-VAC-006 stays
+reserved and unpromoted because the corrected object is accepted composition.
+GK3D6 and mutable P203 have no quadrature surface, while immutable GK3D5's lazy
+legacy branch remains compatibility-only evidence.
+
 ## Canonicalization
-The registry, `v0.149.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred eighty-nine accepted claims.
-P001 through P201 are frozen under `campaigns/`; proposal,
+The registry, `v0.150.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred ninety accepted claims.
+P001 through P203 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 23 pending, 0 partial, 3
-migrated, 182 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. The integrated promotion boundary passes cleanly.
+memory. The regenerated migration queue agrees on 21 pending, 0 partial, 3
+migrated, 184 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P203 changes no accepted scientific surface, so its narrow record gate
+follows the last full P202 release boundary rather than repeating all 1,815
+unchanged package tests.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 23
-pending, 3 migrated, 182 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P201 closes MD6 without accepting semantic parameter
-independence, closed data flow, inert tagged constants, derived material mode
-counts, rho irrelevance, a unique integer mode, or an empty scientific ledger.
-The next dependency-ready queue unit is GK3D5. Its claimed 3+1D charged
-excitation must be audited without turning EM6's one-dimensional profile,
-declared radial lift, finite numerical shooting, or upstream kinetic
-composition into an accepted quantum field, charged state, loop matter,
-physical mass, or substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 21
+pending, 3 migrated, 184 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
+quantum determinant particle, universal matching, independent physical scale,
+absolute coupling accuracy, physical weak angle, or substrate mechanism.
+
+No singleton pending unit is acyclically dependency-ready. The pending graph
+has two source SCC roots: `[WM7, WM8]` and `[MK1, MK2]`. Source cycles grant no
+authority, so the next campaign begins with lower-phase WM7 while excluding
+pending WM8 as an import and auditing both cycle directions explicitly. The
+remaining condensation order is WM9, WM10, GC1 through GC6 on one branch and
+MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

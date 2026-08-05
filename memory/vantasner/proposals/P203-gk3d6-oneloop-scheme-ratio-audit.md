@@ -2,7 +2,7 @@
 description: Audit GK3D6 common scheme factors and exact coupling-ratio claims
 author: vantasner
 created: '2026-08-05T20:45:37Z'
-updated: '2026-08-05T20:45:37Z'
+updated: '2026-08-05T21:08:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - kinetic-matching
 - scheme-ratios
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P203 GK3D6 One-Loop Scheme Ratio Audit
 
@@ -94,15 +94,15 @@ physical map, compatibility event, consumer, and generated record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Source values and detailed predicates remain blinded | Reproduce only after the committed freeze | open |
-| Common c may cancel only on a hidden boundary branch | Derive necessary and sufficient affine cancellation conditions | open |
-| Same-medium language may hide factorwise log and conversion premises | Mutate each scale log and inverse-energy conversion independently | open |
-| C-QBL-004 may be overread as a physical mass | Audit dimensionless energy tail and particle ceilings | open |
-| Exact ratios may be called absolute scheme independence | Show c remains in each Z and inverse coordinate | open |
-| C-VAC-006 may duplicate accepted composition | Complete claim API test and consumer nonduplication audit | open |
-| Physical coupling or weak-angle readings may be imported | Audit table normalization common inverse-trace law thresholds and observed maps | open |
-| Reverse consumers may grant cyclic authority | Replay exact direct and transitive consumers | open |
-| Compatibility may masquerade as science | Preflight mutable and immutable integration-name surfaces | open |
+| Source values and detailed predicates remain blinded | Reproduce only after the committed freeze | discharged by the hash-pinned native reproduction and predicate audit |
+| Common c may cancel only on a hidden boundary branch | Derive necessary and sufficient affine cancellation conditions | discharged by the exact proportional-boundary derivative and zero-branch corollary |
+| Same-medium language may hide factorwise log and conversion premises | Mutate each scale log and inverse-energy conversion independently | discharged by boundary log scale-factor conversion and orientation mutations |
+| C-QBL-004 may be overread as a physical mass | Audit dimensionless energy tail and particle ceilings | discharged by the explicit nonparticle nondeterminant C-QBL-004 review |
+| Exact ratios may be called absolute scheme independence | Show c remains in each Z and inverse coordinate | discharged by distinct normalization and inverse-coordinate shifts plus the zero-denominator probe |
+| C-VAC-006 may duplicate accepted composition | Complete claim API test and consumer nonduplication audit | discharged; P188 and accepted APIs own the complete object and C-VAC-006 remains unpromoted |
+| Physical coupling or weak-angle readings may be imported | Audit table normalization common inverse-trace law thresholds and observed maps | discharged by independent-coupling and Abelian-normalization counterexamples |
+| Reverse consumers may grant cyclic authority | Replay exact direct and transitive consumers | discharged by the exact empty reverse set and 25-check terminal graph replay |
+| Compatibility may masquerade as science | Preflight mutable and immutable integration-name surfaces | discharged with zero GK3D6 surface and alias-only immutable GK3D5 evidence |
 
 ## Review and Promotion Plan
 
@@ -117,3 +117,24 @@ P203 closes only when the exact scheme-factor object, novelty decision,
 physical ceilings, source disposition, consumers, compatibility, generated
 state, and debt ledger agree. Ratio cancellation on a single hidden branch or
 rejection of the particle narrative alone is not completion.
+
+## Outcome
+
+P203 derives the exact general common-scale ratio derivative and its necessary
+and sufficient proportional-boundary condition, independently rederives every
+load-bearing identity, and mutates factor boundaries, logs, scale factors,
+conversions, orientation, denominator domain, and coupling coordinates. The
+primary and independent routes pass 35 and 17 checks; the seven-node authority
+graph passes 25 terminal checks without duplicate native execution.
+
+GK3D6 is qualified through C-RGE-003, C-IDN-002, C-VAC-003, C-VAC-004,
+C-REP-001, and C-QBL-004. C-VAC-006 remains reserved and unpromoted because
+the positive corrected object is accepted composition already exercised by
+P188. The source's particle mass, universal matching, independent AS7 route,
+absolute two-percent accuracy, physical coupling ratios, three-eighths weak
+angle, two-loop compensation, and substrate readings remain unaccepted.
+
+The campaign changes no accepted claim, release, canonical API, or package
+test. GK3D6 and mutable P203 have no quadrature surface. Immutable GK3D5's lazy
+current-first fallback selects `numpy.trapezoid`; no version event becomes a
+scientific failure. The debt ledger is empty.

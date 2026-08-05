@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 22
-  qualified: 183
+  pending_adjudication: 21
+  qualified: 184
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -12626,8 +12626,53 @@ units:
   dynamic_check_calls: 1
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-RGE-003
+  - C-IDN-002
+  - C-VAC-003
+  - C-VAC-004
+  - C-REP-001
+  - C-QBL-004
+  qualification: GK3D6's exact surviving object is the conditional common-log affine ratio. For Z_i=z_i+b_i*(L-log(c))/(8*pi^2)
+    and nonzero coordinates, d[(1/Z_i)/(1/Z_j)]/dlog(c) equals (b_i*z_j-b_j*z_i)/(8*pi^2*Z_i^2); exact
+    cancellation therefore requires proportional boundaries, with zero matching as one separately imposed
+    corollary. Independent factor logs, conversions, orientations, or nonproportional boundaries break
+    the ratio. The source computes the relative normalization shift -log(c)/L but labels it an overall
+    coupling shift; the inverse-coordinate shift is log(c)/(L-log(c)), and smallness requires a bounded
+    shift, large log, nonzero domain, and justified perturbative remainder. Its b0=7, beta^2=0.245, and
+    xi/a=1e20 are hardcoded; C-IDN-002 already proves AS7's alleged second route is inverse reconstruction
+    by construction. C-QBL-004 supplies no particle pole, determinant-field identity, physical mass conversion,
+    or absolute scale. Three-eighths remains C-REP-001's normalization-covariant conditional trace coordinate.
+    No universal matching, two-loop scheme compensation, absolute physical accuracy, physical coupling
+    ratio, weak-angle prediction, observed value, or substrate mechanism is accepted. C-VAC-006 remains
+    reserved and unpromoted because existing accepted claims own the corrected object.
+  evidence:
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/source_adjudication.md
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/accepted_composition_review.md
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/impact_analysis.md
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/source-reproduction.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/compatibility-audit.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/source-audit.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/check-adjudication.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/formula-freeze.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/input-provenance.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/dependency-audit.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/consumer-audit.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/candidate-comparison.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/implementation-audit.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/primary-provenance.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/evidence/independent-provenance.yaml
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/verify.py
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/independent_affine_scheme_review.py
+  - campaigns/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/GK3D6-qualified-review.md
+  note: P203 closes 35 primary, 17 independent, and 25 terminal source-graph checks after two preserved
+    verifier-construction failures. GK3D6 has no reverse source consumer and no quadrature surface. Immutable
+    GK3D5's current-first lazy fallback selects numpy.trapezoid under NumPy 2.5.1; that legacy-name branch
+    is compatibility provenance only and creates zero scientific failures.
 - source_unit: GC1
   phase: phase-42
   path: merged-framework/bridges/phase-42/bridge_GC1_overlap_binding_lock.py

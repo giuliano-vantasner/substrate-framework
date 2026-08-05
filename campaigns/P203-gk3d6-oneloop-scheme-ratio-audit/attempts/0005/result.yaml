@@ -1,0 +1,36 @@
+attempt: 0005
+campaign: P203
+timestamp_utc: '2026-08-05T21:04:23Z'
+kind: terminal_record_promotion_gate
+source_disposition: qualified
+accepted_mapping: [C-RGE-003, C-IDN-002, C-VAC-003, C-VAC-004, C-REP-001, C-QBL-004]
+claim_delta: []
+release_change: null
+primary_checks: 35
+independent_checks: 17
+terminal_graph_checks: 25
+workflow_validation:
+  repository: {claims: 190, accepted: 190, proposals: 0, units: 218, pending: 21, partial: 0}
+  generated_claim_index: current
+  generated_accepted_memory: current
+  memory_files_validated: 831
+  physics_skill: valid
+  yaml_parse: pass
+  git_diff_check: pass
+full_pytest_repeated: false
+last_full_release_gate:
+  campaign: P202
+  tests_passed: 1815
+  pytest_seconds: 172.62
+reason_no_full_pytest: >-
+  P203 changes no accepted claim, release, canonical package module, package
+  API, or test. Its exact scientific and graph verifiers plus record-sensitive
+  validators exercise the full changed surface; repeating all unchanged tests
+  would be validation ceremony.
+compatibility:
+  mutable_legacy_references: 0
+  immutable_alias_only_nodes: [GK3D5]
+  version_only_scientific_failures: 0
+debt: []
+verdict: terminal_accepted_composition_no_release
+continuation: commit_P203_then_open_P204_WM7_cycle_audit

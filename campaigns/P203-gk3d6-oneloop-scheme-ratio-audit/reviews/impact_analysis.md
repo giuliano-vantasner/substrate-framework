@@ -24,17 +24,17 @@ consumers.
 
 ## Generated and durable consumers
 
-The affected generated surfaces are `migration/source-claims.yaml`, the
-generated source-claims documentation, the generated dependency graph, and the
-framework migration memory summary. They must be regenerated from the editable
-disposition and memory records. Files under `docs/generated/` are never edited
+The affected generated surface is `migration/source-claims.yaml`; the framework
+migration effort is durable authored memory. The queue must be regenerated from
+the editable disposition. The accepted claim index is unaffected because the
+registry does not change, and files under `docs/generated/` are never edited
 directly.
 
 ## Validation scope
 
 Because the accepted registry, release manifest, canonical package, and tests
 do not change, P203 requires the 35-check primary verifier, 17-check independent
-rederivation, 24-check graph replay, record-sensitive validation, documentation
+rederivation, 25-check terminal graph replay, record-sensitive validation, documentation
 freshness, YAML parsing, memory validation, and `git diff --check`. Repeating the
 full scientific pytest suite would add ceremony without exercising a changed
 scientific surface; the last release-changing P202 boundary already passed all

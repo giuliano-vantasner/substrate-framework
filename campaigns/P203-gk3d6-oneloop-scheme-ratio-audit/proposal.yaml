@@ -52,7 +52,8 @@ selection_criteria:
   - perturbative-domain and limiting consistency
   - classical quantum and physical interpretation discipline
   - dependency and consumer closure
-claims_proposed: [C-VAC-006]
+claims_proposed: []
+reserved_unpromoted_claims: [C-VAC-006]
 comparators_blinded_until: >-
   The generated queue exposes GK3D6's common-c headline, ten static check-call
   sites, one assertion, and a truncated result excerpt containing a claimed
@@ -61,4 +62,12 @@ comparators_blinded_until: >-
   predicate has been inspected. Those values remain blinded until this
   proposal, formula freeze, provenance record, memory contract, and clean
   repository preflight are committed.
-status: active
+comparators_used_for_selection:
+  - hash-pinned GK3D6 native output and predicate dataflow
+  - C-VAC-003 and C-VAC-004 accepted affine and scale-matching APIs
+  - P188's exact factorwise ratio residual
+  - C-IDN-002's AS7 inverse-reconstruction theorem
+  - C-REP-001's trace-coordinate iff and normalization covariance
+  - C-QBL-004's explicit classical nonparticle ceiling
+status: accepted
+revision: 0002

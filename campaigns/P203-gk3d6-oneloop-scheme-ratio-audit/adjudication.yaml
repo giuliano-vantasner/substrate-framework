@@ -1,0 +1,98 @@
+campaign: P203
+title: GK3D6 one-loop affine scheme-ratio accepted-composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK3D6]
+base_release: v0.150.0
+accepted_release: v0.150.0
+audit_commit: a2a2f0b
+adjudicated_at: '2026-08-05T21:04:23Z'
+selected_candidates:
+  - {id: A, reason: Accepted_affine_zero_matching_composition_retains_the_exact_common_log_ratio.}
+  - {id: E, reason: Existing_claims_own_the_complete_corrected_object_without_a_duplicate_API.}
+  - {id: H, reason: Individual_source_queue_memory_compatibility_and_debt_records_close_without_cyclic_authority.}
+competing_candidates:
+  - {id: B, decision: rejected_as_a_direct_corollary_already_exercised_by_P188_without_a_new_consumer}
+  - {id: C, decision: rejected_because_C_QBL_004_supplies_no_particle_mass_conversion_or_absolute_scale}
+  - {id: D, decision: rejected_because_boundaries_logs_normalization_and_physical_sector_maps_remain_unclosed}
+  - {id: F, decision: rejected_because_quantization_propagator_and_determinant_identity_are_absent}
+  - {id: G, decision: rejected_because_no_accepted_foundational_inconsistency_exists}
+claims: []
+accepted_composition:
+  - {id: C-RGE-003, decision: unchanged_formal_one_loop_scale_map_with_supplied_inputs}
+  - {id: C-IDN-002, decision: unchanged_AS7_null_direction_and_inverse_reconstruction_ceiling}
+  - {id: C-VAC-003, decision: unchanged_complete_affine_factorwise_kinetic_family}
+  - {id: C-VAC-004, decision: unchanged_conversion_sensitive_scale_match_and_zero_branch}
+  - {id: C-REP-001, decision: unchanged_conditional_trace_coordinate_and_Abelian_covariance}
+  - {id: C-QBL-004, decision: unchanged_dimensionless_classical_radial_branch_and_nonparticle_ceiling}
+unpromoted_claims:
+  - {id: C-VAC-006, reason: The_general_derivative_is_a_short_accepted_composition_and_P188_already_owns_the_factorwise_residual.}
+  - {id: universal_common_factor_logs_and_zero_boundaries, reason: Independent_affine_and_conversion_coordinates_remain_load_bearing.}
+  - {id: GK3D5_particle_mass_equals_hbar_c0_over_c_xi, reason: C_QBL_004_supplies_no_particle_pole_determinant_map_or_absolute_scale.}
+  - {id: AS7_two_route_hierarchy_confirmation, reason: C_IDN_002_proves_the_substitution_is_inverse_reconstruction_by_construction.}
+  - {id: absolute_two_percent_one_loop_coupling_accuracy, reason: The_source_computes_a_Z_shift_and_has_no_remainder_domain_or_two_loop_oracle.}
+  - {id: physical_coupling_ratios_or_three_eighths_weak_angle, reason: Common_inverse_trace_normalization_matching_and_physical_sector_maps_are_not_derived.}
+  - {id: scheme_factor_is_not_an_independent_input, reason: No_scheme_transformation_or_two_loop_compensation_is_constructed.}
+  - {id: physical_observation_or_substrate_mechanism, reason: No_accepted_dependency_supplies_these_identifications.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_affine_scheme_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  accepted_composition_review: reviews/accepted_composition_review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+source_disposition: {GK3D6: qualified}
+accepted_mappings: [C-RGE-003, C-IDN-002, C-VAC-003, C-VAC-004, C-REP-001, C-QBL-004]
+compatibility:
+  installed_numpy: 2.5.1
+  no_quadrature_surface: [GK3D6, mutable_P203]
+  immutable_GK3D5: current_first_lazy_fallback_selected_numpy_trapezoid
+  aliases_injected: []
+  version_only_scientific_failures: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_affine_scheme_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - PYTHONPATH=src_python_validate_repository
+  - PYTHONPATH=src_python_render_docs_check
+  - PYTHONPATH=src_python_render_memory_check
+  - memory_validate
+  - physics_skill_validate
+  - yaml_parse
+  - git_diff_check
+narrow_gate:
+  attempt: attempts/0005/result.yaml
+  primary_checks: 35
+  independent_checks: 17
+  terminal_graph_checks: 25
+  memory_files_validated: 831
+  repository_claims: 190
+  migration_units: 218
+  pending_units: 21
+  exit_status: 0
+last_full_release_gate:
+  campaign: P202
+  tests_passed: 1815
+  pytest_seconds: 172.62
+debt: []
+status: accepted_composition_no_release
