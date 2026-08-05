@@ -1,0 +1,74 @@
+source_unit: TX1
+source_sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff
+lines:
+  headline_and_physical_interpretation: 1-68
+  numpy_compatibility_dispatch: 70-73
+  local_check_helper: 75-82
+  standalone_maps: 85-117
+  sphere_rule_and_conformal_jacobian: 120-136
+  profile_solver: 139-173
+  local_density_and_moment_implementation: 176-235
+  top_level_solves_and_results: 238-256
+  predicates: 258-458
+  terminal_claims_and_tally: 460-470
+local_density:
+  formula: eps=f_prime^2+2*sin(f)^2*(1+f_prime^2)*Nc/r^2+sin(f)^4*Nc^2/r^4
+  radial_reduction: >-
+    Multiplication by r^2 and exact sphere integration with integral Nc=4*pi*B
+    and integral Nc^2=4*pi*I reproduces C-RPROF-001's declared radial
+    integrand term by term.
+  epistemic_scope: conditional_declared_rational_map_local_density
+moment_convention:
+  implemented_kernel: x_i*x_j-delta_ij*r^2/3
+  implemented_tensor: normalized_I_STF
+  accepted_Q_convention: Q=3*I_STF
+  source_label_verdict: normalization_conflict
+tail_audit:
+  exponent: exact_duplicate_of_C_RPROF_001_with_negative_power_notation
+  nonlinear_status: leading_linearized_estimate_not_exact_tail
+  monopole_c0_term: correct_for_pure_power_tail
+  monopole_c1_term: omits_the_higher_order_f_squared_f_prime_squared_piece
+  monopole_c2_source: fR^4*R/(-4*p+1)
+  monopole_c2_correct: fR^4/(R*(-4*p+1))
+  quadrupole_c0_term: correct_for_pure_power_tail
+  quadrupole_c1_term: omits_the_higher_order_f_squared_f_prime_squared_piece
+  quadrupole_c2_term: correct_for_pure_power_tail
+profile_audit:
+  solver: scipy.integrate.solve_bvp
+  status_checked: true
+  finite_outputs_checked: false
+  inner_data: f(1e-4)=pi_hard_value
+  accepted_inner_semantics: regular_origin_Robin_asymptotics
+  outer_data: leading_massless_tail_Robin
+  default_tolerance: 1.0e-6
+  max_nodes: 200000
+  reported_residual_metric: finite_difference_relative_fpp_guard_only
+  solver_reported_rms_residual_used: false
+refinement_audit:
+  walls: [12, 16, 24, 32, 40, 60]
+  initial_mesh_points: [2500, 3000, 4000, 5000, 6000, 8000]
+  wall_axis_holds_initial_mesh_fixed: false
+  moment_radial_points: [2000, 4000, 8000]
+  angular_polar_points: [40, 80, 160]
+  angular_azimuthal_points: [32, 64, 128]
+  profile_tolerance_axis: absent
+  origin_cutoff_axis: absent
+  independent_profile_method: absent
+  independent_quadrature_method: absent
+predicates:
+  TX1.1: {executable: angular_degree_and_loose_I_neighborhood_checks, verdict: partially_supported_but_exact_radial_closure_not_executably_checked}
+  TX1.2: {executable: B1_Jacobian_and_numeric_STF_null, verdict: exact_conditional_null_survives_but_radiation_prose_does_not}
+  TX1.3: {executable: nonzero_normalized_I_STF_ratio_axial_diagonal_and_offdiagonal_bounds, verdict: numeric_signal_survives_only_for_a_conditional_stationary_ansatz_branch}
+  TX1.4: {executable: sign_of_normalized_I_STF_diagonal, verdict: exact_conditional_sign_is_independently_derivable_but_physical_torus_prose_is_not}
+  TX1.5: {executable: B4_numeric_near_zero_only, verdict: insufficient_for_exact_cubic_null_unique_minimal_map_or_unique_carrier}
+  TX1.4b: {executable: exact_linearized_tail_indicial_root, verdict: duplicates_C_RPROF_001_and_does_not_make_the_finite_tail_exact}
+  TX1.6: {executable: wall_plus_initial_mesh_sequence_and_fixed_profile_moment_grid_sequence, verdict: useful_stability_evidence_but_not_the_claimed_independent_axis_refinement}
+  TX1.G_A: {executable: Nc_only_angular_mean_mutation, verdict: partial_operator_guard_with_false_same_energy_phrase}
+  TX1.G_B: {executable: finite_difference_fpp_relative_residual_below_5e_3, verdict: weak_regression_not_an_independent_solution_or_mutation_gate}
+interpretation_ceilings:
+  - no_full_three_dimensional_solution
+  - no_global_or_local_minimum_or_uniqueness
+  - no_physical_baryon_nucleus_mass_or_absolute_scale
+  - no_accepted_local_conserved_stress_tensor
+  - no_gravitational_coupling_TT_waveform_or_radiation
+  - no_TX2_or_TX3_authority

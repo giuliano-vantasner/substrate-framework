@@ -70,5 +70,5 @@ comparators_blinded_until: >-
   B=2 moment ratio, refinement axes, exact endpoint exponent, nine-check
   success, two assertions, and mixed legacy/current NumPy integration names,
   so no fresh source-result or runtime-output blinding is claimed
-status: frozen
-revision: 0001
+status: source_aware_numeric_contract_frozen
+revision: 0002

@@ -150,6 +150,46 @@ map, radial-profile, numerical, and verification APIs. Imports execute no
 solver. Dependency and reverse-consumer replay begins from the queue's TX1
 edges and must keep TX2/TX3 pending until their own campaigns.
 
+## Source-Aware Revision
+
+Revision 0002 selects Candidates C, D, E, and G after the line-by-line TX1
+audit. The source's displayed local density does integrate exactly to
+C-RPROF-001's radial functional, and the B=2 sign is analytically tractable.
+The source nevertheless computes normalized `I_STF` while calling it `Q`, has
+a factor-of-`R^2` error in the `N_c^2` monopole-tail term, treats leading
+linearized tail estimates as exact, uses a hard finite-cutoff origin value,
+couples wall and initial-mesh changes, and has no independent solver or
+quadrature. Its B=4 near-zero does not prove exact cubic equivariance or a
+minimal-map theorem.
+
+Candidate E is authorized for `(B,I)=(2,pi+8/3)` only. The canonical route
+uses the accepted vacuum-complement DOP853 shooting API with inner radius
+`1e-4`, outer radius `24`, 2401 points, `rtol=3e-10`, `atol=3e-12`, and maximum
+step `0.05`; sampled radial integration uses `trapezoid_integral` and explicit
+leading origin and tail estimates. Isolated axes use outer radii 16, 24, 32,
+and 48; inner radii `2e-4`, `1e-4`, and `5e-5`; sample counts 1201, 2401, and
+4801; relative tolerances `1e-8`, `3e-10`, and `1e-11`; and maximum steps
+0.1, 0.05, and 0.025. Solver success, finite data, both endpoint residuals,
+and monotonicity are gates before moments are consumed.
+
+The independent route is a fresh `solve_bvp` collocation from a two-power
+analytic guess on a geometric-plus-linear mesh, tolerance `3e-7`, boundary
+tolerance `3e-8`, at most 50,000 nodes, and Simpson radial integration. Direct
+tensor Gauss-Legendre by periodic-azimuthal sphere rules at 24x48, 48x96, and
+96x192 must reproduce the exact B=2 angular tensors; this is a regression and
+independence check, not the exact oracle. The canonical and independent
+normalized `I_STF_zz/M0` values must agree within `2e-6` relative, every
+single-axis finest pair within `3e-6`, and the value must stay below `-0.1`.
+Exact B=1 and isotropic nulls stay separate from numerical near-zero tests.
+
+Mutating the normalized tensor into triple `Q` must change the reported ratio
+by exactly three; sphericalizing both `N_c` and `N_c^2` must give an exact
+null; flipping the axial kernel sign must violate the sign verdict; omitting
+the `N_c^2` density term must change the component while retaining trace; and
+the source's erroneous monopole tail must be detected dimensionally and by
+outer-radius scaling. The exposed `-0.33885166` source literal is a comparator
+only and sets no threshold.
+
 ## Attempts and Continuation
 
 Attempt 0001 freezes v0.131.0, framework commit `a7d4fa7`, the TX1 hash and

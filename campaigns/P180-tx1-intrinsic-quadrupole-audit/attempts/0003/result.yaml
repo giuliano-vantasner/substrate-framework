@@ -1,0 +1,28 @@
+attempt: 0003
+campaign: P180
+candidate: literal_TX1_body_predicate_and_dataflow_audit
+status: audited_without_authority
+started_at: '2026-08-11T07:23:00Z'
+finished_at: '2026-08-11T07:28:00Z'
+source_sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff
+inventory:
+  imports: [numpy, scipy.integrate.solve_bvp, sympy]
+  top_level_functions: 12
+  lexical_check_calls: 9
+  runtime_check_executions_from_P179: 9
+  assertion_nodes: 2
+  solver_status_assertions: 1
+  direct_current_numpy_integrator_references: 1
+  direct_legacy_numpy_integrator_references: 1
+  eager_legacy_default_fallbacks: 0
+findings:
+  - The displayed local density integrates term by term to C-RPROF-001's declared reduced radial functional when its conformal Jacobian averages are B and I.
+  - The tensor kernel is normalized I_STF, not accepted Q=3*I_STF; every printed tensor and ratio therefore needs a convention correction.
+  - For R=z^2 both angular STF coefficients multiplying the positive radial terms are exactly negative, so the axial sign can be proved without source decimals.
+  - The monopole Nc-squared tail term is dimensionally wrong by a factor R_out squared; all tail additions are leading linearized estimates rather than exact nonlinear tails.
+  - The finite inner boundary sets f(inner)=pi instead of the regular-origin Robin law and the box sequence changes the initial BVP mesh with the wall, so the advertised axes are not independent as stated.
+  - The B4 near-zero check is numerical and neither establishes exact cubic equivariance nor a fixed-degree minimizing map; the unique solved carrier prose is unsupported.
+  - The spherical guard tests only the Nc angular tensor, not the full Nc plus Nc-squared density, and its same-total-energy phrase is false without preserving the second angular moment.
+  - Native execution already succeeded under P179; the isolated safe fallback's legacy spelling is compatibility provenance and causes no scientific candidate failure.
+scientific_candidate_failure: false
+next_attempt: freeze_the_source_aware_numeric_contract_then_implement_and_verify_the_exact_factorization
