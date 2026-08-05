@@ -1,0 +1,37 @@
+campaign: P185
+claims: [C-VAC-002]
+base_release: v0.136.0
+source_sha256: 9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb
+primary:
+  path: campaigns/P185-gk3d1-general-vacuum-polarization-audit/verify.py
+  terminal_tally: ALL_27_CHECKS_PASS_P185_GK3D1_C_VAC_002
+  checks: 27
+  elapsed_seconds: 3.34
+  maximum_resident_kibibytes: 148888
+  exit_code: 0
+independent:
+  path: campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/independent_dirac_polarization_review.py
+  terminal_tally: ALL_23_CHECKS_PASS_P185_INDEPENDENT_C_VAC_002
+  checks: 23
+  elapsed_seconds: 2.41
+  maximum_resident_kibibytes: 148268
+  exit_code: 0
+source_native: {checks: 19, assertions: 1, elapsed_seconds: 1.19, maximum_resident_kibibytes: 55648, exit_code: 0}
+source_graph: {checks: 19, elapsed_seconds: 2.48, maximum_resident_kibibytes: 154184, exit_code: 0}
+focused: {tests: 48, elapsed_seconds: 6.46, exit_code: 0}
+staged_impact: {risk: LOW, changed_symbols: 183, changed_files: 31, affected_execution_flows: 0}
+mutations:
+  - wrong_Ward_difference_sign
+  - doubled_spinor_trace
+  - shifted_finite_local_counterterm
+  - crossed_pair_threshold_without_i0
+  - unpaired_generator_rescaling
+oracle_ceiling: symbolic_verified_for_C_VAC_002
+integrated:
+  workflow_claims: 177
+  memory_files: 756
+  repository_tests: 1603
+  elapsed_seconds: 170.24
+  maximum_resident_kibibytes: 214192
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_code: 0

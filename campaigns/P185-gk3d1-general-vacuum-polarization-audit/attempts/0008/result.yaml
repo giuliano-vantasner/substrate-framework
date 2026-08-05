@@ -1,0 +1,19 @@
+attempt: 0008
+campaign: P185
+candidate: canonical_generated_queue_docs_and_memory
+status: passed
+started_at: '2026-08-11T11:56:00Z'
+finished_at: '2026-08-11T11:57:00Z'
+commands:
+  - .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+  - .venv/bin/python scripts/render_docs.py
+  - .venv/bin/python scripts/render_memory.py
+generated_state:
+  source_units: 218
+  pending_adjudication: 39
+  qualified: 166
+  accepted_claims: 177
+  current_release: v0.137.0
+claim_or_threshold_changed: false
+verdict: authoritative_inputs_and_generated_consumers_agree
+next_attempt: focused_affected_test_replay

@@ -2,7 +2,7 @@
 description: Audit GK3D1 and derive a convention-complete general-dimensional Dirac vacuum-polarization theorem
 author: vantasner
 created: '2026-08-11T11:36:00Z'
-updated: '2026-08-11T11:47:00Z'
+updated: '2026-08-11T12:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - vacuum-polarization
 - dimensional-regularization
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P185 GK3D1 General-Dimensional Vacuum-Polarization Audit
 
@@ -219,14 +219,14 @@ dependencies, consumers, and governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | GK3D1 implementation, predicates, assertion, values, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source audit at `669557a` |
-| The source may impose transversality instead of deriving the Ward identity | Contract the regulated numerator and justify every momentum shift or restoring counterterm | open |
-| `t_D=2^floor(D/2)` may be mixed with analytic dimensional continuation | Declare the spinor trace scheme independently and test integer and continued limits | open |
-| Scalar and Dirac loop conventions may be mixed | Derive statistics, determinant, numerator, seagull content, and normalization independently | open |
-| Minkowski and Euclidean branches may be conflated | State metric, Wick map, `i0`, threshold, and real-domain restrictions explicitly | open |
-| The D=4 pole may be presented as a finite induced coefficient | Separate regulator pole, counterterm, scheme, matching condition, scale derivative, and total coefficient | open |
-| Group traces may be treated as physical sectors | Test convention-preserving generator/coupling rescaling and retain conditional representation scope | open |
+| The source may impose transversality instead of deriving the Ward identity | Contract the regulated numerator and justify every momentum shift or restoring counterterm | closed by the inverse-propagator trace difference and explicit shift-invariance premise |
+| `t_D=2^floor(D/2)` may be mixed with analytic dimensional continuation | Declare the spinor trace scheme independently and test integer and continued limits | closed by independent `n_gamma`; D4 holds four components fixed |
+| Scalar and Dirac loop conventions may be mixed | Derive statistics, determinant, numerator, seagull content, and normalization independently | closed by distinct C-VAC-002 and explicit C-VAC-001 nondependency |
+| Minkowski and Euclidean branches may be conflated | State metric, Wick map, `i0`, threshold, and real-domain restrictions explicitly | closed by spacelike Q and real sub-threshold versus complex boundary-value domains |
+| The D=4 pole may be presented as a finite induced coefficient | Separate regulator pole, counterterm, scheme, matching condition, scale derivative, and total coefficient | closed with the Laurent/MS-bar/c_fin ledger and total coefficient unselected |
+| Group traces may be treated as physical sectors | Test convention-preserving generator/coupling rescaling and retain conditional representation scope | closed by the invariant `g^2*tr(T*T)` weight and physical-group exclusion |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D1 has no NumPy integration surface |
-| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
+| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | closed by the nineteen-check source graph and v0.137.0 generated-state replay |
 
 ## Review and Promotion Plan
 
@@ -240,12 +240,13 @@ records come only from their authoritative inputs. Targeted routes precede one
 
 ## Done Gate
 
-P185 closes only when a distinct importable charged-Dirac loop object exists,
-the Ward identity and specializations use the strongest matching oracle, every
-renormalization and total-normalization freedom is explicit, competing routes
-are adjudicated, dependencies and future consumers replay, governed state
-agrees, and debt is empty. A nineteen-check source tally, transverse matrix,
-Gamma-function formula, D=2 agreement, or D=4 logarithm alone keeps P185 active.
+P185 closes because C-VAC-002 is a distinct importable charged-Dirac loop
+object, the Ward identity and specializations pass exact primary and independent
+oracles, every renormalization and total-normalization freedom is explicit,
+all six candidates and every source predicate are adjudicated, the direct and
+transitive consumers replay, governed v0.137.0 state agrees, and debt is empty.
+The source's nineteen-check tally, transverse matrix, Gamma-function formula,
+D=2 agreement, and D=4 logarithm are retained only inside that reviewed scope.
 
 ## Cross-References
 

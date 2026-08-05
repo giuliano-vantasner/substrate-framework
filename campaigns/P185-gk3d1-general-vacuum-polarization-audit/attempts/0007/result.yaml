@@ -1,0 +1,12 @@
+attempt: 0007
+campaign: P185
+candidate: generated_queue_with_guessed_inventory_path
+status: failed_technical
+started_at: '2026-08-11T11:56:00Z'
+finished_at: '2026-08-11T11:56:00Z'
+command: .venv/bin/python scripts/inventory_claims.py --source-root /home/dan/substrate --source-inventory migration/source-inventory.yaml --scope migration/scope.yaml --dispositions migration/dispositions.yaml --output migration/source-claims.yaml
+failure: FileNotFoundError_for_obsolete_migration_source_inventory_yaml
+scientific_candidate_or_threshold_changed: false
+output_written: false
+verdict: preserve_as_generator_path_failure_not_scientific_evidence
+next_attempt: use_the_canonical_P001_hash_pinned_source_inventory

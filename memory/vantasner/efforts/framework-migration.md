@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T11:34:00Z'
+updated: '2026-08-11T12:00:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.136.0`, containing one hundred seventy-six
+The current accepted frontier is `v0.137.0`, containing one hundred seventy-seven
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2055,19 +2055,35 @@ surface. GitNexus rates the additive transaction LOW with no affected flow.
 The integrated promotion boundary validates 751 memory records and passes all
 1,593 repository tests with a clean terminal status.
 
+P185 adds C-VAC-002's exact conditional charged-Dirac one-loop polarization
+theorem. It derives the Ward contraction as a shifted inverse-propagator trace
+difference, separates analytic integration dimension from integer spinor
+trace, and gives the exact spacelike master, fermionic D=2 endpoint, fixed-
+trace regulated D=4 Laurent and MS-bar finite-counterterm family, and real
+below-threshold subtraction series with radius four. GK3D1 is qualified only
+through this scope. Its imposed transverse tensor, floor-based analytic trace,
+regulator-free wording, scalar continuity, total-normalization, physical
+polarization, group, dimensional-lift, and substrate readings remain
+unaccepted. The primary and independent routes pass 27 and 23 checks, the
+source graph passes 19, and 48 focused tests pass. A charge-dimension metadata
+typo and two brittle lexical verifier guards were repaired before promotion;
+none changed an equation or threshold. GK3D1 and mutable P185 have no NumPy
+trapezoidal surface. GitNexus rates the 183-symbol, 31-file transaction LOW
+with no affected execution flow.
+
 ## Canonicalization
-The registry, `v0.136.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-six accepted claims. P001 through P184 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 40 pending, 0 partial, 3 migrated, 165 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.137.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-seven accepted claims. P001 through P185 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 39 pending, 0 partial, 3 migrated, 166 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 40
-pending, 3 migrated, 165 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is GK3D1, pinned at SHA-256
-`9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb`.
-P184 closes TX5 without accepting its headline. The next action is to freeze
-GK3D1 against v0.136.0 and audit its general-dimensional one-loop vacuum-
-polarization master, regulator and renormalization conventions, tensor and
-dimension dependence, source dependencies, mutations, and physical scope
-before accepting any induced four-dimensional gauge conclusion.
+The effort remains active. D4 is discharged, but D1 remains open with 39
+pending, 3 migrated, 166 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is GK3D2, pinned at SHA-256
+`856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886`.
+P185 closes GK3D1 without accepting a total induced gauge normalization. The
+next action is to freeze GK3D2 against v0.137.0 and audit its scalar/Dirac loop
+weights, beta coefficients, boundary-condition argument, counterterm and
+matching freedom, dependencies, mutations, and physical scope before accepting
+any normalized four-dimensional gauge coupling.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

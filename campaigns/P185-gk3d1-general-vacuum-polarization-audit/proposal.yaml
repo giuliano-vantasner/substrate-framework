@@ -68,5 +68,5 @@ comparators_blinded_until: >-
   master, transverse tensor, t_D equals 2 to the floor D over 2, D-dependent
   Gamma and Delta powers, claimed D=2 and D=4 relation, nineteen static checks,
   and one assertion, so no fresh source-result blinding is claimed
-status: draft
+status: accepted
 revision: 0003

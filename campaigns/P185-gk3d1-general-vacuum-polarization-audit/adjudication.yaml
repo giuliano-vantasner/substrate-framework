@@ -1,0 +1,79 @@
+campaign: P185
+title: GK3D1 general-dimensional charged-Dirac vacuum-polarization audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK3D1]
+base_release: v0.136.0
+accepted_release: v0.137.0
+adjudicated_at: '2026-08-11T11:56:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_and_predicate_inventory_are_retained_as_source_evidence_only.}
+  - {id: B, reason: The_explicit_trace_scheme_general_d_master_and_integrand_Ward_route_earn_C_VAC_002.}
+  - {id: C, reason: The_D2_endpoint_is_accepted_only_as_a_charged_Dirac_specialization_distinct_from_the_scalar_claim.}
+  - {id: D, reason: The_fixed_trace_D4_Laurent_MSbar_counterterm_and_below_threshold_series_are_exact_with_scope_explicit.}
+  - {id: E, reason: The_group_weight_survives_only_as_convention_invariant_composition_without_a_physical_group.}
+  - {id: F, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+claims:
+  - {id: C-VAC-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-GAU-001, decision: unchanged_connection_and_curvature_convention_only}
+  - {id: C-DIM-009, decision: unchanged_dimension_and_normalization_bookkeeping_only}
+  - {id: C-VAC-001, decision: unchanged_complex_scalar_D2_theorem_and_explicit_nondependency}
+  - {id: C-MAX-001, decision: unchanged_imported_classical_kinetic_coefficient_and_equations}
+unpromoted_claims:
+  - {id: regulator_free_general_D_master, reason: Continuing_the_integration_dimension_and_exposing_Gamma_epsilon_is_dimensional_or_analytic_regularization.}
+  - {id: one_analytic_t_D_equals_2_to_floor_D_over_2, reason: Integer_Clifford_dimension_is_not_an_analytic_function_of_the_continued_regulator_dimension.}
+  - {id: source_tensor_contraction_derives_loop_Ward_identity, reason: The_source_defines_the_transverse_tensor_before_contracting_it_and_does_not_derive_the_loop_integrand_difference.}
+  - {id: EM5_scalar_and_Dirac_are_the_same_object, reason: C_VAC_001_has_complex_scalar_statistics_a_seagull_and_a_divergent_fixed_momentum_massless_limit.}
+  - {id: induced_total_Maxwell_normalization, reason: The_bare_coefficient_and_finite_local_counterterm_or_matching_condition_remain_additive_and_unselected.}
+  - {id: real_timelike_kernel_above_threshold, reason: The_branch_at_q_squared_equals_4_M2_requires_an_i0_boundary_value_and_complex_logarithm.}
+  - {id: physical_three_polarizations_group_dimension_or_substrate, reason: No_accepted_dependency_or_GK3D1_oracle_supplies_these_objects.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_dirac_polarization_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VAC-002-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  literature_audit: evidence/literature-audit.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  native_attempt: attempts/0002/result.yaml
+  formula_attempt: attempts/0003/result.yaml
+  primary_attempt: attempts/0004/result.yaml
+  independent_attempt: attempts/0005/result.yaml
+  record_repair_attempt: attempts/0006/result.yaml
+  failed_queue_path_attempt: attempts/0007/result.yaml
+  generated_state_attempt: attempts/0008/result.yaml
+  focused_attempt: attempts/0009/result.yaml
+  graph_attempt: attempts/0010/result.yaml
+  impact_attempt: attempts/0011/result.yaml
+  memory_attempt: attempts/0012/result.yaml
+  integrated_attempt: attempts/0013/result.yaml
+  closure_attempt: attempts/0014/result.yaml
+source_disposition: {GK3D1: qualified}
+accepted_mappings: [C-GAU-001, C-DIM-009, C-VAC-002]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_current_name: numpy.trapezoid_or_shared_trapezoid_integral
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.137.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P185-gk3d1-general-vacuum-polarization-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/independent_dirac_polarization_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/replay_source_graph.py
+  - pytest_affected_tests
+  - scripts/validate.sh
+  - git_diff_check
+debt: []
+status: accepted

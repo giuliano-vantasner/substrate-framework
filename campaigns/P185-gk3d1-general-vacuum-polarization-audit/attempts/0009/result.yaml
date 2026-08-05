@@ -1,0 +1,16 @@
+attempt: 0009
+campaign: P185
+candidate: focused_affected_claim_dependency_and_governance_tests
+status: passed
+started_at: '2026-08-11T11:58:00Z'
+finished_at: '2026-08-11T11:58:00Z'
+command: .venv/bin/python -m pytest -q tests/test_dirac_vacuum_polarization.py tests/test_gauge_dimensions.py tests/test_vacuum_polarization.py tests/test_source_audit.py tests/test_governance.py tests/test_source_inventory.py
+process:
+  exit_code: 0
+  elapsed_seconds: 6.46
+  maximum_resident_kibibytes: 161536
+  tests_passed: 48
+  terminal_tally: 48_PASSED
+claim_or_threshold_changed: false
+verdict: focused_affected_replay_passed
+next_attempt: source_graph_release_and_consumer_replay

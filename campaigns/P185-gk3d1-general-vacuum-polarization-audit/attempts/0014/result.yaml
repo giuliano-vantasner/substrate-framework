@@ -1,0 +1,30 @@
+attempt: 0014
+campaign: P185
+candidate: record_only_post_gate_closure
+status: passed
+started_at: '2026-08-11T12:11:00Z'
+finished_at: '2026-08-11T12:12:00Z'
+commands:
+  - render_docs_from_registry_and_check
+  - render_memory_from_registry_and_check
+  - PYTHONPATH_src_python_scripts_validate_repository_py
+  - memory_validate_framework_migration_effort
+  - memory_validate_P185_archived_proposal
+  - memory_validate_two_P185_decisions
+  - git_diff_check
+results:
+  workflow_claims: 177
+  accepted_claims: 177
+  migration_units: 218
+  pending_units: 39
+  partial_units: 0
+  memory_records_checked: 4
+  generated_docs_current: true
+  generated_memory_current: true
+  git_diff_check_exit_code: 0
+  all_exit_codes: 0
+full_test_suite_repeated: false
+reason: only_observed_integrated_counts_provenance_links_and_durable_record_state_changed_after_the_full_gate
+claim_or_threshold_changed: false
+verdict: P185_record_debt_closed_without_duplicate_full_validation
+next_attempt: commit_P185_and_freeze_the_next_pending_unit_GK3D2

@@ -6,10 +6,11 @@ direct_consumers:
   - tests/test_dirac_vacuum_polarization.py
   - campaigns/P185-gk3d1-general-vacuum-polarization-audit
   - governance/claims.yaml
-  - next_release_manifest_and_current_pointer
+  - governance/releases/v0.137.0.yaml
+  - governance/releases/current.yaml
   - docs/generated/claim-index.md
   - memory/framework/claims/C-VAC-002.md
-  - next_generated_release_memory
+  - memory/framework/releases/v0.137.0.md
   - memory/vantasner/decisions/C-VAC-002-review.md
   - memory/vantasner/decisions/GK3D1-qualified-review.md
   - memory/vantasner/efforts/framework-migration.md
@@ -26,6 +27,8 @@ narrative_reverse_consumers:
 accepted_claims_retroactively_changed: []
 graph_risk: LOW
 affected_execution_flows: 0
-generated_consumers: pending_release_generation
-debt:
-  - finalize_release_and_generated_consumer_counts
+focused_tests: {passed: 48, elapsed_seconds: 6.46}
+generated_consumers: current_for_v0.137.0
+staged_impact: {risk: LOW, changed_symbols: 183, changed_files: 31, affected_execution_flows: 0}
+integrated: {repository_tests: 1603, memory_files: 756, workflow_claims: 177, exit_code: 0}
+debt: []

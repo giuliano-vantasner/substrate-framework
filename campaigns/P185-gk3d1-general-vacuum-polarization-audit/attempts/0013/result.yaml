@@ -1,0 +1,33 @@
+attempt: 0013
+campaign: P185
+candidate: integrated_promotion_boundary
+status: passed_after_generated_memory_repair
+started_at: '2026-08-11T12:05:00Z'
+finished_at: '2026-08-11T12:10:00Z'
+command: scripts/validate.sh
+first_run:
+  exit_code: 1
+  elapsed_seconds: 9.00
+  maximum_resident_kibibytes: 190628
+  stop: generated_C_VAC_002_memory_stale_after_primary_provenance_path_materialized
+  repair: regenerate_accepted_memory_from_the_claim_registry
+process:
+  exit_code: 0
+  elapsed_seconds: 170.24
+  maximum_resident_kibibytes: 214192
+workflow:
+  claims: 177
+  accepted_claims: 177
+  proposals_in_registry: 0
+  migration_units: 218
+  pending_units: 39
+  partial_units: 0
+  memory_files_valid: 756
+  repository_tests_passed: 1603
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+claim_or_threshold_changed: false
+verdict: v0_137_0_promotion_boundary_passed
+next_attempt: record_only_closure_diff_and_commit

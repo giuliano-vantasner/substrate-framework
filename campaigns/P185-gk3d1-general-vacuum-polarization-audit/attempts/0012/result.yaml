@@ -1,0 +1,19 @@
+attempt: 0012
+campaign: P185
+candidate: durable_memory_validation
+status: passed_after_record_repair
+started_at: '2026-08-11T12:02:00Z'
+finished_at: '2026-08-11T12:04:00Z'
+command: memory validate /home/dan/substrate-framework/memory
+process:
+  exit_code: 0
+  elapsed_seconds: 1.85
+  maximum_resident_kibibytes: 36592
+  memory_files_valid: 756
+first_run:
+  status: failed_record_format
+  error: GK3D1_qualified_review_section_began_with_inline_code_instead_of_plain_prose
+  repair: prefix_the_expression_with_a_plain_prose_subject
+scientific_claim_or_threshold_changed: false
+verdict: all_durable_memory_records_valid
+next_attempt: integrated_promotion_boundary

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 40
-  qualified: 165
+  pending_adjudication: 39
+  qualified: 166
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11538,8 +11538,57 @@ units:
   dynamic_check_calls: 3
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-GAU-001
+  - C-DIM-009
+  - C-VAC-002
+  qualification: C-VAC-002 retains GK3D1's exact conditional charged-Dirac loop object after correcting
+    its conventions. With a separately declared free charged-Dirac action, fermion determinant, one-loop
+    convention, and shift-invariant gauge-preserving regulator, the loop Ward contraction is derived as
+    an inverse-propagator shifted trace difference. The spacelike general-d Feynman-parameter master has
+    an independently declared integer spinor trace rather than 2 to floor(d/2) analytically continued.
+    Its d=2, n_gamma=2 massless endpoint at nonzero Q gives the source-convention projector coefficient
+    e squared over pi and is not the scalar theorem C-VAC-001. Holding n_gamma=4 at d=4-2 epsilon gives
+    the exact pole, MS-bar family, and mass-log slope; an arbitrary finite local counterterm, bare kinetic
+    coefficient, and total matched normalization remain free. The finite timelike subtraction below q
+    squared equals 4 M squared has exact series coefficients and radius four; above threshold requires
+    an i0 boundary value. Generator traces enter only through a coupling- convention-invariant weight.
+    GK3D1's imposed transverse tensor does not derive the loop Ward identity, its dimensional continuation
+    is not regulator-free, and it supplies no physical charged matter, scalar- fermion identity, preferred
+    dimension, on-shell polarization count, gauge group, total coupling, dimensional lift, observation,
+    or substrate mechanism. GK3D2 through GK3D6 remain separately pending and inherit no blanket matching
+    or physical-sector authority.
+  evidence:
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/source_adjudication.md
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/C-VAC-002-claim-review.md
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/source-reproduction.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/compatibility-audit.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/source-audit.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/check-adjudication.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/formula-freeze.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/literature-audit.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/input-provenance.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/dependency-audit.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/consumer-audit.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/candidate-comparison.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/primary-provenance.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/verify.py
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/independent_dirac_polarization_review.py
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/replay_source_graph.py
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/attempts/0002/result.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/attempts/0003/result.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/attempts/0004/result.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/attempts/0005/result.yaml
+  - campaigns/P185-gk3d1-general-vacuum-polarization-audit/attempts/0006/result.yaml
+  - memory/vantasner/decisions/C-VAC-002-review.md
+  - memory/vantasner/decisions/GK3D1-qualified-review.md
+  note: P185 closes twenty-seven primary and twenty-three independent checks. GK3D1 and mutable P185 code
+    contain no NumPy trapezoidal access, so no version event affects a scientific verdict. Direct reverse
+    consumers GK3D2 through GK3D5 and transitive GK3D6, EL2, and HE5 are replayed with the conditional
+    consumer ceiling explicit.
 - source_unit: GK3D2
   phase: phase-41
   path: merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py
