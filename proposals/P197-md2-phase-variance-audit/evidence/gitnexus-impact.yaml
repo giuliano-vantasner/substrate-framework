@@ -1,0 +1,29 @@
+campaign: P197
+indexed_repository: substrate-framework
+indexed_commit: 1a58aa09a29c2cc0fd32567dabc6695347aa33b5
+framework_head_at_audit: c1f0355
+index_commits_behind: 15
+query: continuum_density_of_states_mode_count_scalar_vacuum_variance_harmonic_oscillator
+query_processes: 0
+nearby_definitions:
+  - src/substrate_framework/radial_spectral_classification.py
+  - src/substrate_framework/radial_harmonic_observables.py
+  - src/substrate_framework/bosonic_fock.py
+impact_target: isotropic_continuum_dos_on_band
+impact_result: target_not_found_because_mode_counting_postdates_index
+graph_risk: unknown_due_to_stale_index
+manual_authoritative_impact:
+  existing_symbol_changed: false
+  existing_signature_changed: false
+  existing_value_changed: false
+  new_leaf_module: src/substrate_framework/quantum_mode_variance.py
+  new_package_exports: planned
+  direct_existing_canonical_dependency: src/substrate_framework/mode_counting.py
+  current_mode_counting_consumers:
+    - src/substrate_framework/__init__.py
+    - tests/test_mode_counting.py
+    - campaigns/P196-md1-mode-counting-audit/verify.py
+  pending_source_consumers: [MD4, MD5, MD6]
+  generated_consumers: [docs/generated/claim-index.md, memory/framework]
+risk: low_for_additive_API_but_requires_targeted_tests_and_three_source_consumer_replays
+debt: []

@@ -1,0 +1,28 @@
+attempt: 0005
+campaign: P197
+candidate: first_exact_verifier_execution
+status: failed_verifier_representation
+started_at: '2026-08-11T21:36:00Z'
+finished_at: '2026-08-11T21:37:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P197-md2-phase-variance-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P197-md2-phase-variance-audit/reviews/independent_mode_variance_review.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_quantum_mode_variance.py tests/test_mode_counting.py
+result:
+  focused_tests_passed: 40
+  focused_tests_exit_status: 0
+  primary_stopped_after_checks: 13
+  independent_stopped_after_checks: 11
+failure_class: verifier_representation
+mechanism: >-
+  Both exact routes first proved the derivative identity but then queried
+  SymPy positivity on an unsimplified derivative expression. SymPy returned
+  unknown even though the derivative simplifies exactly to the manifestly
+  positive X^2/sqrt(1+X^2) for positive X.
+scientific_candidate_rejected: false
+repair: >-
+  Test equality to the manifestly positive expression and certify the upper
+  envelope with the product identity
+  (1-X/sqrt(1+X^2))*(1+X/sqrt(1+X^2))=1/(1+X^2).
+next_attempt: repaired_primary_and_independent_exact_routes
+debt: []

@@ -1,0 +1,19 @@
+campaign: P197
+criteria_frozen_before_P197_source_execution: true
+selected:
+  A:
+    reason: The exact d3 inverse-frequency continuum moment is distinct from DOS and fits only when action normalization quantization state branch and cutoff are explicit.
+  C:
+    reason: The fixed-set factorization and set-growth counterexamples are required to prevent MD2's main arithmetic identity from being overread.
+retained_separately:
+  B:
+    reason: An exact finite periodic oscillator sum is valid but requires wavevectors box normalization components and boundaries absent from MD2 and is not needed for the continuum theorem.
+rejected:
+  D:
+    reason: C-DOS-001 supplies no vacuum state or inverse-frequency moment so the positive theorem is not duplicate.
+  E:
+    reason: No accepted inconsistency independently requires lifting the classical one-dimensional medium to a foundational d3 quantized medium.
+parameter_economy: hbar_c_kappa_omega0_cutoff_branches_all_explicit_and_load_bearing
+comparator_used_for_selection: false
+claim_candidate: C-QFL-001
+canonical_module: src/substrate_framework/quantum_mode_variance.py

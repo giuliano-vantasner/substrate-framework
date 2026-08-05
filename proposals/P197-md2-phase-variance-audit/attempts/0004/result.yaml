@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P197
+candidate: dependency_nonduplication_and_candidate_selection
+status: passed_selection_boundary
+started_at: '2026-08-11T21:28:00Z'
+finished_at: '2026-08-11T21:32:00Z'
+selected_candidates: [A, C]
+retained_separate_candidate: B
+rejected_candidates: [D, E]
+claim_candidate: C-QFL-001
+dependencies: [C-DOS-001]
+gitnexus:
+  indexed_commit: 1a58aa09a29c2cc0fd32567dabc6695347aa33b5
+  commits_behind: 15
+  target_not_found_due_to_staleness: true
+manual_impact_completed: true
+nonduplication_verdict: distinct_exact_conditional_inverse_frequency_moment
+scientific_candidate_rejected: false
+debt:
+  - implement_and_mutate_every_load_bearing_normalization
+next_attempt: importable_API_tests_primary_and_independent_exact_routes

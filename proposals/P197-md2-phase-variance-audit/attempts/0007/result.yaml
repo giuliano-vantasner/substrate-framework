@@ -1,0 +1,20 @@
+attempt: 0007
+campaign: P197
+candidate: exact_routes_after_encoding_repairs
+status: failed_verifier_representation
+started_at: '2026-08-11T21:40:00Z'
+finished_at: '2026-08-11T21:41:00Z'
+result:
+  primary_checks: 40
+  primary_exit_status: 0
+  independent_checks_passed_before_stop: 26
+failure_class: verifier_self_reference
+mechanism: >-
+  The final independence guard searched the review file's raw text for the
+  forbidden canonical module name, but the same module name necessarily
+  appeared inside the guard's own string literal. The guard therefore rejected
+  an independent file that had no such import.
+scientific_candidate_rejected: false
+repair: Parse the review AST and inspect Import and ImportFrom modules only.
+next_attempt: final_primary_independent_and_focused_boundary
+debt: []

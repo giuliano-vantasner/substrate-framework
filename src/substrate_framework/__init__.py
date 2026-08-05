@@ -301,6 +301,13 @@ from .mode_counting import (
     isotropic_gapped_angular_frequency,
     unit_sphere_surface,
 )
+from .quantum_mode_variance import (
+    ModeVarianceLedger,
+    gapped_vacuum_kernel,
+    mode_variance_ledger,
+    scalar_continuum_vacuum_variance_3d,
+    scalar_mode_ground_state_variance,
+)
 from .vacuum_polarization import (
     EuclideanTransverseProjector,
     MatterInducedKineticEvidence,
@@ -1464,6 +1471,11 @@ __all__ = [
     "isotropic_continuum_target_cutoff",
     "isotropic_gapped_angular_frequency",
     "unit_sphere_surface",
+    "ModeVarianceLedger",
+    "gapped_vacuum_kernel",
+    "mode_variance_ledger",
+    "scalar_continuum_vacuum_variance_3d",
+    "scalar_mode_ground_state_variance",
     "mixed_coefficient_from_absorption_rate",
     "mixed_sine_gordon_dimension_matrix",
     "mixed_sine_gordon_dimensionless_coupling",

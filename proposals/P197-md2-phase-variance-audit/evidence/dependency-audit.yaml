@@ -1,0 +1,38 @@
+campaign: P197
+source_unit: MD2
+direct_source_dependencies:
+  AS6:
+    disposition: qualified
+    accepted_claims: [C-SYM-002, C-SG-001, C-RGE-003, C-DIM-008, C-TOP-002]
+    admissible_reuse: none_required
+    rejected_import: physical_self_dual_beta_value_or_quantum_coupling_normalization
+  AS7:
+    disposition: qualified
+    accepted_claims: [C-IDN-002, C-GRV-001, C-RGE-003, C-IDN-001, C-DIM-008, C-SYM-002]
+    admissible_reuse: none_required
+    rejected_import: Planck_granularity_hadronic_scale_or_derived_cutoff
+  MC1:
+    disposition: qualified
+    accepted_claims: [C-MED-003, C-SG-001, C-SG-002, C-SG-003, C-SG-017]
+    admissible_reuse: one_dimensional_classical_comparison_ceiling_only
+    rejected_import: d3_action_or_quantization
+  MC2:
+    disposition: qualified
+    accepted_claims: [C-MED-003, C-SG-017, C-SG-018]
+    admissible_reuse: one_dimensional_gapped_dispersion_comparison_only
+    rejected_import: d3_mode_measure_vacuum_or_cutoff
+  MD1:
+    disposition: qualified
+    accepted_claims: [C-MED-003, C-SG-018, C-DOS-001]
+    admissible_reuse: C-DOS-001_declared_d_continuum_measure_and_dispersion
+    rejected_import: derived_d3_medium_branch_count_cells_microscopic_cutoff_or_participation
+  WN6:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+    admissible_reuse: distinct_peak_RMS_and_Fock_coordinate_ceiling_only
+    rejected_import: growth_state_multimode_sum_material_amplitude_channel_or_rate
+accepted_claim_dependencies_proposed: [C-DOS-001]
+comparison_claims_not_dependencies: [C-MED-003, C-SG-018, C-DIM-008, C-SYM-002, C-IDN-002, C-OSC-002]
+pending_claim_dependencies: []
+hidden_imports: []
+verdict: dependency_closed_conditional_extension_possible

@@ -1,0 +1,26 @@
+attempt: 0008
+campaign: P197
+candidate: final_primary_independent_and_focused_boundary
+status: passed_exact_boundary
+started_at: '2026-08-11T21:41:00Z'
+finished_at: '2026-08-11T21:45:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P197-md2-phase-variance-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P197-md2-phase-variance-audit/reviews/independent_mode_variance_review.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_quantum_mode_variance.py tests/test_mode_counting.py
+result:
+  primary_checks: 40
+  primary_exit_status: 0
+  independent_checks: 27
+  independent_exit_status: 0
+  focused_tests: 40
+  focused_tests_exit_status: 0
+  package_tests_new: 23
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+verifier_failures_preserved: [0005, 0006, 0007]
+scientific_candidate_rejected: false
+claim_candidate: C-QFL-001
+debt:
+  - replay_three_reverse_consumers_and_complete_claim_level_review
+next_attempt: dependency_and_consumer_graph_replay

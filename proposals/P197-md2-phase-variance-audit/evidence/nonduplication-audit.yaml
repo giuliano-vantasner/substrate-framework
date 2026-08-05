@@ -1,0 +1,21 @@
+campaign: P197
+source_unit: MD2
+claim_candidate: C-QFL-001
+prior_surfaces:
+  C-DOS-001: continuum_frequency_density_integrated_count_and_target_cutoff_but_explicitly_no_state_occupation_or_coupling
+  C-SG-018: one_dimensional_classical_gapped_dispersion_with_DOS_cutoff_and_finite_box_excluded
+  C-OSC-002: classical_full_cycle_peak_RMS_identity_not_quantum_ground_state_or_mode_sum
+  C-MED-003: one_dimensional_classical_action_and_common_coefficient_scale_not_d3_quantization
+  C-COH-002: declared_Brownian_phase_variance_not_a_vacuum_spectral_moment
+  constitutive_lattice_debye_energy: declared_dimensional_Debye_scale_not_a_mode_variance_integral
+  radial_harmonic_observables: classical_finite_harmonic_energy_variance_not_ground_state_coordinate_variance
+distinct_positive_surface:
+  - exact_scalar_harmonic_ground_state_coordinate_variance_under_explicit_normalization
+  - exact_d3_inverse_frequency_continuum_moment_with_J_X_closed_form
+  - exact_zero_gap_and_small_and_large_cutoff_limits
+  - independent_branch_multiplicity_and_cutoff_sensitivity
+  - typed_fixed_set_total_mean_identity_with_set_growth_counterexamples
+new_claim: C-QFL-001
+new_package_api: src/substrate_framework/quantum_mode_variance.py
+verdict: distinct_exact_conditional_theorem
+debt: []

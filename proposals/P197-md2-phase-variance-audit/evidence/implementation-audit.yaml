@@ -1,0 +1,20 @@
+campaign: P197
+claim_candidate: C-QFL-001
+canonical_module: src/substrate_framework/quantum_mode_variance.py
+package_exports: src/substrate_framework/__init__.py
+tests: tests/test_quantum_mode_variance.py
+public_API:
+  scalar_mode_ground_state_variance: exact_declared_one_oscillator_ground_state_coordinate_variance
+  gapped_vacuum_kernel: exact_J_X_inverse_frequency_kernel
+  scalar_continuum_vacuum_variance_3d: exact_positive_gap_and_gapless_scalar_continuum_moment_with_independent_branches
+  ModeVarianceLedger: immutable_fixed_finite_mode_set_total_and_mean
+  mode_variance_ledger: exact_fixed_set_factorization_constructor
+import_side_effects: none
+existing_signatures_changed: []
+existing_values_changed: []
+focused_tests:
+  quantum_mode_variance: {passed: 23, exit_status: 0}
+  mode_counting_regression: {passed: 17, exit_status: 0}
+package_exports_checked: true
+mutable_legacy_numpy_references: 0
+debt: []
