@@ -1,0 +1,19 @@
+attempt: 0002
+campaign: P173
+candidate: materialize_freeze_contract
+status: failed_patch_boundary
+started_at: '2026-08-11T03:04:00Z'
+finished_at: '2026-08-11T03:05:00Z'
+command: apply_patch_combined_proposal_attempt_and_memory_files
+observed:
+  defect: attempt_and_memory_Add_File_directives_inserted_as_proposal_content
+  source_opened_after_campaign_start: false
+diagnosis: >-
+  Two patch directives were prefixed as hunk content, so proposal.yaml embedded
+  the intended attempt and memory documents. The complete freeze text existed
+  before source inspection but the file boundaries were invalid. This is a
+  record-construction failure, not scientific evidence.
+repair: >-
+  Recreate proposal.yaml and add attempt 0001, this failure record, and proposal
+  memory through separate patch operations before freezing the commit.
+next_attempt: validate_and_commit_the_split_freeze_artifacts

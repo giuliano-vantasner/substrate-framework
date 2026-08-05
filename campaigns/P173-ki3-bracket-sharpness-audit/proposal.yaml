@@ -1,0 +1,71 @@
+id: P173
+base_release: v0.127.0
+base_commit: 1b5f462
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [KI3]
+question: >-
+  Does hash-pinned KI3 prove that an exact open or closed kappa bracket is the
+  complete attainable set under accepted framework authority, and which result
+  belongs to one illustrative interpolant, every continuous endpoint-compatible
+  function, or a separately assumed monotone bounded map?
+invariants:
+  - C-BPS-003 is a local controlled epsilon-to-zero expansion and supplies no global interpolation range inverse or large-epsilon limit.
+  - C-RDIFF-002 is a resolution-bounded conditional coordinate near 8.4824 and explicitly is not a variational bound physical coefficient or BPS interpolation endpoint.
+  - P172 qualifies KI2 only as local-ratio freedom across a family of distinct positive lambda-mu theories; no fixed-theory symmetry or physical epsilon is accepted.
+  - Continuity plus two endpoint limits can force inclusion of intermediate values but cannot exclude overshoot undershoot or repeated preimages.
+  - Exact range equality requires an independently established codomain bound monotonicity or equivalent global control; declaring the codomain is an assumption not a derivation.
+  - Open endpoints limits and attained finite endpoints remain distinct.
+  - Comparator values cannot define select rank or validate an interpolant or bracket.
+  - Mutable integration uses numpy.trapezoid or the canonical helper; immutable legacy-name stops are version-only evidence.
+allowed_imports:
+  - C-BPS-001
+  - C-BPS-002
+  - C-BPS-003
+  - C-RDIFF-001
+  - C-RDIFF-002
+  - C-RPROF-002
+  - C-XOV-001
+  - src/substrate_framework/bps_energy.py
+  - src/substrate_framework/crossovers.py
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/adjudication.yaml
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - E2 E3 and E4 only through accepted mappings and reviewed ceilings
+  - KI2 only through its governed qualified disposition
+  - KI3 KI4 and relevant MK units as hash-pinned noncanonical evidence only after this freeze
+  - the Phase34 dossier and Lean capstone as hash-pinned supporting evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned KI3 reproduction with exact predicate assertion import comparator and compatibility inventories.
+  - id: B
+    description: A conditional intermediate-value inclusion theorem for any real continuous map with the two stated limits.
+  - id: C
+    description: Exact open-bracket range for a separately bounded continuous map whose codomain is already contained in the bracket.
+  - id: D
+    description: A universal exact attainable bracket inferred from endpoint limits and continuity alone.
+  - id: E
+    description: Accepted C-XOV-001 monotone-range composition if strict monotonicity actual range and endpoint premises are independently supplied.
+  - id: F
+    description: One or more explicit interpolants as existence witnesses and inverse-ambiguity examples rather than universal framework predictions.
+  - id: G
+    description: Accepted E3 E4 and KI2 composition supplying both endpoints and one common physical interpolation.
+  - id: H
+    description: A comparator-blind interpolation family and guard that retain every candidate without proximity selection.
+  - id: I
+    description: Lean evidence whose exact theorem quantifiers definitions and omitted premises match the claimed bracket.
+  - id: J
+    description: Claim API consumer disposition queue memory and release closure with no promotion if accepted generic theorems already cover the valid content.
+uniqueness_evidence: null
+selection_criteria:
+  - endpoint_dependency_and_common_function_closure
+  - range_inclusion_versus_equality_and_open_endpoint_typing
+  - universal_quantifier_and_counterexample_sensitivity
+  - accepted_monotonicity_bound_and_interpolation_provenance
+  - comparator_blinding_and_assumption_economy
+  - consumer_nonduplication_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening KI3 or the shared dossier body in P173; generated
+  inventory, P172 graph replay, prior dossier excerpts, memory, and KI4 narrative
+  already expose the claimed result, illustrative interpolation role, and the
+  empirical 0.929 value, so no fresh result or comparator blinding is claimed
+status: frozen_with_prior_result_exposure
