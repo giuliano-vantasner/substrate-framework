@@ -1,0 +1,19 @@
+attempt: 0001
+campaign: P209
+timestamp_utc: '2026-08-05T22:56:00Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: 1fdc26ebeb03a0af52607bdcdcc5364eaae61843
+base_release: v0.151.0
+source_unit: GC2
+candidates: [A, B, C, D, E, F, G, H]
+claims_proposed: []
+source_body_inspected: false
+native_source_executed: false
+exposed_queue_claims:
+  - fixed_well_literals_and_linear_centers
+  - attenuated_quartic_core_depth
+  - relocated_modes
+  - source_provenance_of_count_three
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction

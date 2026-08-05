@@ -1,0 +1,67 @@
+id: P209
+base_release: v0.151.0
+base_commit: 1fdc26e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GC2]
+question: >-
+  What exact localization and core-tail statements follow for the separately
+  supplied translated Pöschl--Teller wells already qualified through MH2, and
+  does GC2 derive a dynamical multisoliton with three selected constituents or
+  only inspect a declared finite family of translated isospectral operators?
+invariants:
+  - C-OVL-002 owns separately declared translated Pöschl--Teller Hamiltonians whose centers depths widths and spacing are inputs; translation changes no eigenvalue and supplies no common multi-rung spectrum generation count or multisoliton solution.
+  - C-QBL-005 owns the conditional quartic core curvature deficit 6*kappa^2*sech(kappa*(x-x0))^2 and explicitly derives no multisoliton solution or generation hierarchy.
+  - C-OVL-001 owns normalized overlaps against a supplied profile and no Yukawa generation identity.
+  - A family of Hamiltonians indexed by supplied centers is not one Hamiltonian with several bound levels and is not a simultaneous nonlinear field solution.
+  - The number of entries in a declared center or rung list is an input unless an accepted variational topological stability or selection theorem fixes it.
+  - Localization must use a centered width or an equivalent translation-covariant diagnostic rather than the universal rms-about-origin versus mean-absolute inequality rejected in GC1.
+  - Pending GC3 GC4 and GC5 are nonauthoritative cycle edges and cannot support GC2.
+  - Numerical proximity to a hierarchy count or scale cannot select a construction.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events are never scientific failures.
+allowed_imports:
+  - C-OVL-001 and C-OVL-002 only for normalized overlap translated-well spectrum tail and supplied-parameter statements at their accepted ceilings
+  - C-QBL-001 C-QBL-003 and C-QBL-005 only for the conditional quartic core profile fluctuation operator curvature deficit and explicit physical ceilings
+  - C-MIX-001 and C-MIX-002 only for abstract matrix phase counting with no observed generation-count premise
+  - terminal EM6 FG2 FG4 GC1 MH1 MH2 WM7 WM9 and WM10 mappings at v0.151.0 without rejected physical interpretations
+  - SymPy for exact translation moments core-tail ratios list-cardinality mutations and model separation
+  - NumPy and SciPy only to reproduce source numerics or regress an opened finite-well obligation whose right-hand side is not already exact
+  - hash-pinned GC2 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Classify GC2's wells as a finite family of independently supplied translated isospectral Hamiltonians already owned by C-OVL-002.
+  - id: B
+    description: Accept a genuine multisoliton only if one common nonlinear field problem derives simultaneous separated centers profiles interactions boundary data and a stable solution.
+  - id: C
+    description: Derive exact localization from the translated ground-state density center and centered variance while keeping both independent of the supplied translation.
+  - id: D
+    description: Compare the independently fixed external well depth with C-QBL-005's quartic core deficit evaluated at the same supplied center without identifying the two models.
+  - id: E
+    description: Treat the count three as source list cardinality or an external rung range unless an accepted count-selection theorem survives list-length mutation.
+  - id: F
+    description: Distinguish several operators several levels of one operator and several coexisting field objects through operator-domain and provenance typing.
+  - id: G
+    description: Select no new claim or API if C-OVL-002 and C-QBL-005 own the strongest corrected exact content.
+  - id: H
+    description: Give GC2 an individual terminal disposition and replay GC4 GC5 and GC6 without reverse authority.
+uniqueness_evidence: null
+selection_criteria:
+  - source provenance and literal-versus-derived parameter typing
+  - exact unitary translation and isospectrality
+  - one-operator family-of-operators and field-solution separation
+  - centered-moment localization and translation covariance
+  - fixed external well versus attenuated quartic-core model separation
+  - list-cardinality sensitivity and absence of hidden count selection
+  - novelty beyond C-OVL-002 and C-QBL-005
+  - physical-ceiling comparator and dependency closure
+claims_proposed: []
+reserved_unpromoted_claims: [C-OVL-004]
+comparators_blinded_until: >-
+  The generated queue exposes GC2's multisoliton headline, eight static check
+  sites, two assertions, and truncated claims about fixed well literals,
+  quartic core attenuation, relocation, and the number three. The source body,
+  exact predicates, constants, tolerances, finite grids, source texts, count
+  logic, and native output remain unopened until this contract, formula freeze,
+  provenance record, memory validation, and clean freeze commit exist.
+comparators_used_for_selection: []
+status: active
+revision: 0001
