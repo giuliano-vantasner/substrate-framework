@@ -25,7 +25,9 @@ declared_inputs:
     physical_meaning: none_derived
   classical_to_creation_operator_map:
     source: caller_for_conditional_composition
-    convention: low_coordinate_creation_component_has_unit_coefficient_and_low_scale_remains_explicit
+    convention: >-
+      Q=low_scale*(a+a_dagger); in bra_n_Q^n_ket_zero only the all-creation
+      word reaches level n, while a high-sector state element remains separate
   coefficient_scales_and_factorial_one_intensity:
     source: caller
     physical_meaning: none_derived

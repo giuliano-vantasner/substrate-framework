@@ -2,7 +2,7 @@
 description: Audit WN3 and derive an exact bosonic Fock ladder and parity-complete composition ledger
 author: vantasner
 created: '2026-08-11T16:52:00Z'
-updated: '2026-08-11T17:34:00Z'
+updated: '2026-08-11T17:44:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -217,6 +217,24 @@ candidate or accepted scientific API. GitNexus reports low code risk and only
 the intended new caller edges, while its missing test and governance semantics
 remain explicitly overridden by direct inventories. Exact claim review and
 the complete WN3 consumer replay remain open.
+
+Attempt 0008 pauses review readiness because the field-to-mode convention is
+underdeclared even though the formula is correct. The repaired statement
+declares `Q=low_scale*(a+a_dagger)` and verifies directly that
+`<n|Q^n|0>=low_scale^n*sqrt(n!)`: in exactly `n` ladder actions, only the
+all-creation word can reach level `n` from the vacuum. The API is explicitly a
+low-sector element of the formal H-linear coefficient; a high-sector operator
+and state element remain missing from any complete transition amplitude. The
+formula-freeze revision changes no coefficient, parity, factorial,
+normalizer, mode, mutation threshold, or physical verdict.
+
+Attempt 0009 passes the repaired review-readiness boundary with 101 primary
+checks, 57 independent raw checks, and 94 focused tests. Both routes now
+construct the full coordinate power rather than assuming its selected term.
+The exact values are unchanged, but the claim surface no longer hides a
+high-sector matrix element or equate a low-sector coefficient element with a
+complete transition. Individual review and the sixteen-node source replay
+remain the next gates.
 
 ## Debt Ledger
 

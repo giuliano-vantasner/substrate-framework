@@ -3,9 +3,10 @@
 The infinite ladder identities are stated on the algebraic finite-support
 span of an orthonormal occupation basis.  Finite matrices are explicitly
 truncations and carry a top-state commutator defect.  The conditional cosine
-helpers require a declared field-to-mode convention and return algebraic
-matrix-element data only; no density of states, transition probability, or
-physical rate follows from this module.
+helpers require the declared low-coordinate convention
+``Q=q_0*(a+a_dagger)``.  They return the low-sector matrix element of the
+H-linear coefficient, not a complete high-to-low transition amplitude; no
+density of states, transition probability, or physical rate follows.
 """
 
 from __future__ import annotations
@@ -187,12 +188,14 @@ def bosonic_cosine_matrix_element(
 ) -> sp.Expr:
     r"""Conditionally compose a vacuum cosine coefficient with ``sqrt(n!)``.
 
-    The caller declares that the normalized one-mode creation component of
-    the low coordinate has unit operator coefficient, with every remaining
-    coordinate normalization explicit in ``low_scale``.  At zero background
-    this returns zero for even ``n`` and
+    The caller declares ``Q=low_scale*(a+a_dagger)`` on the normalized
+    one-mode basis.  In ``<n|Q**n|0>`` only the all-creation word can reach
+    level ``n``, giving ``low_scale**n*sqrt(n!)``.  The H-linear factor remains
+    a formal classical coefficient: a high-sector operator and state element
+    are separately required for a complete transition amplitude.  At zero
+    background this returns zero for even ``n`` and
     ``amplitude*(-1)**((n-1)/2)*high_scale*low_scale**n/sqrt(n!)`` for odd
-    ``n``.  It is an algebraic matrix element, not a rate.
+    ``n``.  It is a conditional low-sector algebraic element, not a rate.
     """
 
     n = _nonnegative_integer(low_order, name="low_order")

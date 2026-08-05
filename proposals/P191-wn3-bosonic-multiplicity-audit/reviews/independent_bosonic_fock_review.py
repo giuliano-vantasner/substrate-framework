@@ -72,7 +72,7 @@ def main() -> int:
         )
 
     dimension = 16
-    _, creation = _raw_ladder(dimension)
+    annihilation, creation = _raw_ladder(dimension)
     vacuum = sp.zeros(dimension, 1)
     vacuum[0] = 1
     state = vacuum
@@ -84,6 +84,16 @@ def main() -> int:
             state == expected and (state.T * state)[0] == math.factorial(order),
         )
         state = creation * state
+
+    coordinate = annihilation + creation
+    for order in range(13):
+        target = sp.zeros(1, dimension)
+        target[0, order] = 1
+        checks.check(
+            f"raw full coordinate power reaches level {order} only through all creation",
+            sp.simplify((target * coordinate**order * vacuum)[0])
+            == sp.sqrt(math.factorial(order)),
+        )
 
     high, low = sp.symbols("H L", real=True)
     amplitude, high_scale, low_scale = sp.symbols("U h ell", real=True, nonzero=True)

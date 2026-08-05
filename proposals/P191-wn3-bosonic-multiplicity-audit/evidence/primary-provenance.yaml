@@ -1,8 +1,8 @@
 campaign: P191
 claim: C-OSC-001
 verifier: proposals/P191-wn3-bosonic-multiplicity-audit/verify.py
-verifier_sha256: 10306283d21c1521d6dd059e49c6084674a77d205996f057c945304370417430
-result: ALL_91_CHECKS_PASS
+verifier_sha256: 7301c8eaf86727929522a257a769f53b0f39668e1f1fc0bd693626c687bbd01f
+result: ALL_101_CHECKS_PASS
 imports_candidate_API: true
 imports_accepted_APIs:
   - substrate_framework.cosine_vertices
@@ -11,10 +11,11 @@ imports_accepted_APIs:
 pins:
   source_sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88
   release_sha256: d871dcd50df14cf7acf3d8def8a4d9e7b1f59e99ab6b6ba57ee060dd686e89cb
-  formula_freeze_sha256: b44d9d827e57b6e89ae43c3f6d7282243434d882de9827cab977f87558699698
+  formula_freeze_sha256: 8e743fe13581c2b454c1d1509cd2ff098afde9d55c98088ad9c53c2d39d3dd88
 oracle:
   - exact_infinite_rung_actions_and_factorial_induction
   - exact_finite_commutator_defect_and_trace_obstruction
+  - exact_full_coordinate_power_vacuum_to_n_element
   - accepted_cosine_coefficient_composition_with_even_zero_retained
   - exact_factorial_one_normalizers_for_three_sample_spaces
   - adjacent_and_adjacent_odd_mode_ratios_with_ties

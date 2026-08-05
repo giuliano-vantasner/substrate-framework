@@ -1,0 +1,19 @@
+attempt: 0009
+campaign: P191
+candidate: explicit_full_coordinate_power_and_low_sector_typing_repair
+status: passed_review_readiness_pending_claim_and_consumer_review
+started_at: '2026-08-11T17:39:00Z'
+finished_at: '2026-08-11T17:44:00Z'
+formula_freeze_revision: 0002
+result:
+  focused_tests: 94_passed
+  primary: ALL_101_CHECKS_PASS
+  independent: ALL_57_CHECKS_PASS
+  formula_values_changed: false
+  scientific_threshold_changed: false
+semantic_closure:
+  low_coordinate: Q_equals_low_scale_times_a_plus_a_dagger
+  exact_element: bra_n_Q_power_n_ket_zero_equals_low_scale_power_n_sqrt_factorial_n
+  complete_high_to_low_transition_claimed: false
+  missing_high_sector_element_explicit: true
+next_attempt: conduct_individual_claim_review_and_replay_the_16_node_637_check_source_graph

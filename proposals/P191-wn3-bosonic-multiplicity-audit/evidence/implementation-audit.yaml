@@ -16,7 +16,7 @@ architecture:
     - factorial_one_modes
   existing_public_signatures_changed: []
   import_side_effects_added: false
-  module_sha256: 574ac738c75548a90a866178a0452239af24fc700627e99a666eaa7a2f48293c
+  module_sha256: 6699d470965f28957737ba05ba05209f161756f0f32935dd566758c3e182ce87
 exactness:
   rung_and_factorial_data: SymPy_exact
   finite_matrices_and_defect: SymPy_exact_immutable
@@ -31,18 +31,19 @@ typing_ceiling:
   - finite_matrices_are_named_truncations_with_the_top_defect_exposed
   - factorial_norm_is_not_a_count_of_distinct_single_mode_final_states
   - conditional_cosine_composition_retains_all_coordinate_scales_and_parity
+  - conditional_element_is_low_sector_only_and_requires_a_separate_high_sector_element
   - factorial_one_sample_spaces_and_normalizers_are_explicit
   - no_API_returns_a_physical_probability_density_of_states_or_rate
 tests:
   canonical: tests/test_bosonic_fock.py
-  canonical_sha256: 02bbf1aca160ba9c1c46eefcf30dd61a847bf574918d2a6440831949b23db585
+  canonical_sha256: c3243ce6d1d483cd24282c0320ad3a13fbcebaa0339105e19bf48c7cfc28ba80
   focused_files:
     - tests/test_bosonic_fock.py
     - tests/test_cosine_vertices.py
     - tests/test_factorial_suppression.py
     - tests/test_odd_factorial_mass.py
     - tests/test_symmetric_spin.py
-  focused_result: 93_passed
+  focused_result: 94_passed
 public_exports: 10
 compatibility:
   numpy_imports: 0

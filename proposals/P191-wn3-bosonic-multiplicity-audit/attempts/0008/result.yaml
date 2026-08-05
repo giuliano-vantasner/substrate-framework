@@ -1,0 +1,20 @@
+attempt: 0008
+campaign: P191
+candidate: pre_review_coordinate_operator_semantic_audit
+status: failed_review_readiness_mapping_underdeclared
+started_at: '2026-08-11T17:35:00Z'
+finished_at: '2026-08-11T17:38:00Z'
+finding: >-
+  The frozen low-coordinate convention named only its creation component.
+  That is sufficient for repeated creation but underdeclares why the full
+  coordinate power has the same vacuum-to-n element, and the public function
+  name could be mistaken for a complete high-to-low transition element.
+layer: representation_and_typing
+repair:
+  - declare_Q_equals_low_scale_times_a_plus_a_dagger
+  - verify_bra_n_Q_power_n_ket_zero_equals_low_scale_power_n_sqrt_factorial_n
+  - state_that_only_the_all_creation_word_reaches_level_n
+  - state_that_the_H_linear_factor_is_formal_and_a_high_sector_element_is_missing
+formula_value_changed: false
+scientific_threshold_changed: false
+next_attempt: rerun_focused_primary_and_independent_oracles_with_full_coordinate_power

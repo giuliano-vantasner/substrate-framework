@@ -1,6 +1,11 @@
 campaign: P191
 claim: C-OSC-001
 status: frozen_before_implementation
+revision: 0002
+revision_reason: >-
+  Pre-review typing made the complete low-coordinate operator convention
+  explicit; no coefficient, factorial, parity, normalizer, or mode formula
+  changed.
 domains:
   infinite_basis_index: nonnegative_integer
   algebraic_domain: finite_linear_combinations_of_orthonormal_basis_vectors
@@ -32,8 +37,10 @@ conditional_cosine_composition:
   classical_coefficient: >-
     c_n=potential_scale*(-1)^((n-1)/2)*high_scale*low_scale^n/n!
     for positive odd n and zero for even n at zero background
-  declared_field_to_mode_map: low_coordinate_creation_component_has_unit_operator_coefficient_with_low_scale_explicit
-  algebraic_matrix_element: M_n=c_n*sqrt(n!)
+  declared_field_to_mode_map: Q=low_scale*(a+a_dagger)_on_the_normalized_one_mode_Fock_basis
+  low_coordinate_power_element: bra_n_Q_power_n_ket_zero=low_scale_power_n*sqrt_factorial_n
+  selection_reason: only_the_all_creation_word_in_Q_power_n_can_reach_ket_n_from_vacuum_in_exactly_n_actions
+  algebraic_H_linear_low_sector_element: M_n=c_n*sqrt(n!)
   closed_form: >-
     M_n=potential_scale*(-1)^((n-1)/2)*high_scale*low_scale^n/sqrt(n!)
     for positive odd n and zero for even n
@@ -42,6 +49,7 @@ conditional_cosine_composition:
     for positive odd n and zero for even n
   parity_reopened: false
   physical_rate: not_derived
+  missing_high_sector_element: separately_required_for_a_complete_transition_amplitude
 factorial_one_mass:
   unnormalized: m_S(n)=S^n/n!_on_the_declared_support_and_zero_off_support
   intensity: exact_positive_dimensionless_S

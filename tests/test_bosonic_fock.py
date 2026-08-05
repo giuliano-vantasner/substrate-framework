@@ -77,6 +77,19 @@ def test_explicit_repeated_creation_vectors_have_factorial_norm() -> None:
         state = creation * state
 
 
+def test_full_coordinate_power_vacuum_to_n_element_forces_all_creation() -> None:
+    dimension = 20
+    annihilation, creation = _raw_truncated_ladder(dimension)
+    coordinate = annihilation + creation
+    vacuum = sp.zeros(dimension, 1)
+    vacuum[0] = 1
+    for order in range(11):
+        target = sp.zeros(1, dimension)
+        target[0, order] = 1
+        element = sp.simplify((target * coordinate**order * vacuum)[0])
+        assert element == sp.sqrt(sp.factorial(order))
+
+
 def test_conditional_cosine_composition_retains_parity_and_scales() -> None:
     amplitude, high_scale, low_scale = sp.symbols(
         "U h ell",

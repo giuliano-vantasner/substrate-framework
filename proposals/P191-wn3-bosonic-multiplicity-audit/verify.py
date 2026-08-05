@@ -32,7 +32,7 @@ SOURCE = Path(
 )
 SOURCE_SHA256 = "8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88"
 RELEASE_SHA256 = "d871dcd50df14cf7acf3d8def8a4d9e7b1f59e99ab6b6ba57ee060dd686e89cb"
-FORMULA_FREEZE_SHA256 = "b44d9d827e57b6e89ae43c3f6d7282243434d882de9827cab977f87558699698"
+FORMULA_FREEZE_SHA256 = "8e743fe13581c2b454c1d1509cd2ff098afde9d55c98088ad9c53c2d39d3dd88"
 
 
 def _digest(path: Path) -> str:
@@ -169,6 +169,18 @@ def main() -> int:
             -truncated.identity + 12 * truncated.top_projector,
         ),
     )
+
+    coordinate = truncated.annihilation + truncated.creation
+    vacuum = sp.zeros(12, 1)
+    vacuum[0] = 1
+    for order in range(10):
+        target = sp.zeros(1, 12)
+        target[0, order] = 1
+        checks.check(
+            f"full coordinate power reaches level {order} with sqrt factorial",
+            sp.simplify((target * coordinate**order * vacuum)[0])
+            == sp.sqrt(sp.factorial(order)),
+        )
 
     amplitude, high_scale, low_scale = sp.symbols("U h ell", real=True, nonzero=True)
     for order in range(10):
@@ -338,7 +350,9 @@ def main() -> int:
         in " ".join(bosonic_fock_rung.__doc__.split())
         and "not a rate" in " ".join(bosonic_cosine_matrix_element.__doc__.split())
         and "not a physical occurrence law or rate"
-        in " ".join(factorial_one_mass.__doc__.split()),
+        in " ".join(factorial_one_mass.__doc__.split())
+        and "high-sector operator and state element"
+        in " ".join(bosonic_cosine_matrix_element.__doc__.split()),
     )
 
     return checks.finish()
