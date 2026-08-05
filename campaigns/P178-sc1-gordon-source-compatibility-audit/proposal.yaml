@@ -1,0 +1,63 @@
+id: P178
+base_release: v0.129.0
+base_commit: 36a9e39
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SC1]
+question: >-
+  Does hash-pinned SC1 correctly close the Gordon sourcing channel it tests,
+  and what exact reusable compatibility-locus theorem can determine whether
+  the accepted transverse Gordon Einstein tensor and a declared scalar stress
+  obey one componentwise Einstein coupling without importing an unsolved
+  breather embedding, physical gravity, or substrate mechanism?
+invariants:
+  - C-GOR-001 fixes the mostly-plus Gordon metric and the complete transverse-profile Einstein tensor; it supplies no material stress, coupling, field equation, boundary-value solution, or physical gravity.
+  - C-STG-001 fixes the four-dimensional canonical scalar stress, Einstein-scalar equations, on-shell conservation identity, and one homogeneous FLRW solution; it supplies no scalar-to-index or breather-to-Gordon map.
+  - C-SG-012 fixes normalized one-plus-one sine-Gordon stress and its conservation ceiling; it is not a finite-energy three-plus-one source without a separately declared transverse embedding.
+  - C-LIN-001 owns finite exact linear-system consistency, rank, and nullity; generic row counting or proportionality is not a new P178 claim.
+  - A nonzero Einstein tensor and a nonzero stress tensor do not establish G_ab=kappa*T_ab; every independent component, zero support, conservation equation, coupling sign and dimension, matter equation, and boundary datum remains load-bearing.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; an immutable legacy-name stop is version-only compatibility evidence and never a rejected scientific candidate.
+allowed_imports:
+  - C-GOR-001
+  - C-STG-001
+  - C-SG-012
+  - C-LIN-001
+  - C-GRV-001 only for coupling-dimension and free-normalization ceilings
+  - src/substrate_framework/gordon_metric.py
+  - src/substrate_framework/einstein_scalar.py
+  - src/substrate_framework/sine_gordon.py under its normalized one-plus-one ceiling
+  - exact real and symbolic tensor algebra with declared metric signature component order domains and nonzero conditions
+  - pinned inventory source history and Git metadata at substrate@6d1f4e0
+  - SC1 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned SC1 reproduction with complete predicate, assertion, dataflow, convention, source, and compatibility audit.
+  - id: B
+    description: Accepted C-GOR-001, C-STG-001, C-SG-012, and C-LIN-001 already own every valid SC1 result, so SC1 adds only qualified or duplicate evidence and no new API.
+  - id: C
+    description: A generic exact symmetric-tensor proportionality certificate handles zero support, inconsistent component pairs, and unique or free scalar couplings but is promoted only if it adds more than C-LIN-001.
+  - id: D
+    description: Derive the exact compatibility locus for the C-GOR-001 transverse Einstein tensor and a declared canonical four-dimensional scalar stress on that metric, including coupling, scalar equation, and conservation conditions.
+  - id: E
+    description: Test the source's normalized one-plus-one sine-Gordon stress embedding with explicit transverse support and construct rest, flat-index, zero-curvature, wrong-sign, and off-shell countermodels.
+  - id: F
+    description: Seek a constructive compatible anisotropic or effective matter source only from a separately declared action and conserved stress, without defining T_ab=G_ab/kappa as a derivation.
+  - id: G
+    description: Close claim, source, dependency, consumer, compatibility, disposition, release, documentation, memory, and debt governance.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_metric_stress_signature_component_and_index_compatibility
+  - exact_all_component_zero_support_coupling_and_conservation_closure
+  - declared_matter_action_scalar_equation_domain_and_boundary_data
+  - distinction_between_one_plus_one_per_area_and_four_dimensional_localized_sources
+  - coupling_sign_dimension_parameter_and_import_economy
+  - flat_rest_constant_index_on_shell_and_wrong_convention_limits
+  - reusable_API_novelty_beyond_C_LIN_001_mutation_sensitivity_and_consumer_reach
+  - physical_scope_honesty_and_governance_closure
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening SC1's body; the generated queue already exposes
+  SC1's advertised rank-one Gordon ray, selected component ratios, stress
+  mismatch conclusion, five-check tally, and part of its result synopsis, so
+  no fresh conclusion blinding is claimed; exact check literals, intermediate
+  expressions, runtime output, and source-body implementation remain unopened
+status: frozen_with_queue_result_exposure

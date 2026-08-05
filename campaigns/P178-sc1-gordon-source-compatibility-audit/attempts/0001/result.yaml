@@ -1,0 +1,49 @@
+attempt: 0001
+campaign: P178
+candidate: frozen_authority_recall_and_competing_concepts
+status: passed
+started_at: '2026-08-11T06:15:00Z'
+finished_at: '2026-08-11T06:18:00Z'
+base:
+  release: v0.129.0
+  framework_commit: 36a9e39
+  accepted_claims: 165
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  unit: SC1
+  path: merged-framework/bridges/phase-36/bridge_SC1_gordon_coupled_overdetermined.py
+  sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0
+  target_path_clean: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+  source_body_opened_before_freeze: false
+recall:
+  memory_queries: [SC1_Gordon_sourcing, componentwise_source_compatibility]
+  accepted_authority: [C-GOR-001, C-STG-001, C-SG-012, C-LIN-001, C-GRV-001]
+  nearest_canonical_modules: [gordon_metric.py, einstein_scalar.py, sine_gordon.py]
+  generic_rank_novelty_ceiling: C-LIN-001
+exposure_before_freeze:
+  queue_headline: exposed
+  queue_question_and_result_excerpts: exposed
+  advertised_component_ratios: exposed
+  source_body_check_literals_and_runtime_output: unopened
+candidates: [A, B, C, D, E, F, G]
+provisional_identifier_search: [C-GOR-002, C-LIN-002]
+identifier_collisions: []
+claim_delta: []
+compatibility_policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_replay_backed_by_numpy.trapezoid
+  version_only_stop_is_scientific_failure: false
+freeze_validation:
+  repository: WORKFLOW_VALID_165_claims_165_accepted_0_proposals
+  migration_queue: 218_units_47_pending_0_partial
+  proposal_memory: valid
+  freeze_yaml: valid
+  diff_check: passed
+debt:
+  - exact_SC1_implementation_predicates_and_runtime_unknown
+  - source_stress_embedding_and_component_conventions_unknown
+  - compatibility_locus_novelty_beyond_accepted_claims_unknown
+  - dependencies_consumers_and_source_disposition_open
+next_attempt: commit_freeze_then_open_and_reproduce_hash_pinned_SC1
