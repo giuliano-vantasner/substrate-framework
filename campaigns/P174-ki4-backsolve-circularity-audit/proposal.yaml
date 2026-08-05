@@ -1,0 +1,73 @@
+id: P174
+base_release: v0.127.0
+base_commit: 5034940
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [KI4]
+question: >-
+  Does hash-pinned KI4 prove a quantifier-correct circularity or zero-information
+  theorem, and which conclusions concern inverse reconstruction of the same
+  datum, conditional parameter identification, a family of hypothetical data,
+  or genuine prediction of an independent observable?
+invariants:
+  - For a declared bijection f and y in its range, f(f_inverse(y))=y is an inverse identity and the same-datum residual is zero by construction.
+  - Back-solving is not inherently invalid parameter estimation; it becomes independent validation only through held-out data, a distinct observable, or an overidentifying constraint not used in the solve.
+  - Conditional on a fixed injective map and exact observed y, the inverse can identify one parameter, so the post-observation parameter set need not equal the prior set.
+  - Taking a union over every hypothetical y answers a different question from conditioning on the one observed y.
+  - P173 qualifies KI3's four example maps and rejects its framework-wide exact bracket, common physical interpolation, and closed-endpoint headline.
+  - C-XOV-001 owns exact conditional monotone inverse classification and says free scales or normalizations make a selected crossing nonidentifying.
+  - C-IDN-002 classifies substitution into the same supplied row as inverse reconstruction rather than an independent overdetermination test.
+  - No accepted claim identifies KI2's local ratio or any KI3 witness as the physical C-BPS-003 epsilon-to-kappa map.
+  - Comparator input cannot select validate or become a prediction of the same quantity.
+  - Mutable integration uses numpy.trapezoid or the canonical helper; immutable legacy-name stops are version-only evidence.
+allowed_imports:
+  - C-IDN-001
+  - C-IDN-002
+  - C-XOV-001
+  - C-BPS-003
+  - C-RDIFF-002
+  - src/substrate_framework/linear_systems.py
+  - src/substrate_framework/gravity_scale_confrontation.py
+  - src/substrate_framework/crossovers.py
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/adjudication.yaml
+  - campaigns/P173-ki3-bracket-sharpness-audit/adjudication.yaml
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - KI4 and relevant reverse consumers as hash-pinned noncanonical evidence only after this freeze
+  - the Phase34 dossier and Lean capstone as hash-pinned supporting evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned KI4 reproduction with exact predicate assertion import comparator and compatibility inventories.
+  - id: B
+    description: Exact inverse-composition identity for each separately declared injective interpolation and an in-range target.
+  - id: C
+    description: Same-datum zero residual classified as inverse reconstruction rather than an independent model prediction or validation.
+  - id: D
+    description: Zero information about epsilon after observing an exact target through a fixed known injective map.
+  - id: E
+    description: Equality between the prior kappa bracket and a union over all hypothetical target-conditioned reconstructions.
+  - id: F
+    description: Countermodels using noninjective partial or unknown maps where a global inverse is absent multivalued or shape dependent.
+  - id: G
+    description: Legitimate calibration followed by a prediction for a held-out observable or overidentifying row not used in the fit.
+  - id: H
+    description: Accepted C-IDN-001 C-IDN-002 and C-XOV-001 composition without importing KI3's rejected universal bracket.
+  - id: I
+    description: Comparator firewall that treats 0.929 only as the supplied same-datum target and never as validation.
+  - id: J
+    description: Lean evidence whose exact sets quantifiers map definition and conditioning semantics match the intended information claim.
+  - id: K
+    description: Claim API consumer disposition queue memory and release closure with no promotion if accepted inverse-reconstruction claims already cover the valid content.
+uniqueness_evidence: null
+selection_criteria:
+  - conditioning_and_quantifier_accuracy
+  - inverse_domain_injectivity_and_map_provenance
+  - same_datum_reconstruction_versus_independent_prediction
+  - parameter_information_versus_output_family_union
+  - comparator_firewall_and_assumption_economy
+  - accepted_dependency_fit_consumer_reach_and_nonduplication
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening KI4 or the shared dossier body in P174; generated
+  inventory, P173 graph replay, memory, and prior dossier excerpts already
+  expose the identity, zero-information headline, illustrative maps, and 0.929
+  target, so no fresh result or comparator blinding is claimed
+status: frozen_with_prior_result_exposure
