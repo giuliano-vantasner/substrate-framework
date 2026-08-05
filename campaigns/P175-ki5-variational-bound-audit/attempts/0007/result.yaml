@@ -1,0 +1,24 @@
+attempt: 0007
+campaign: P175
+candidate: exact_primary_error_premise_and_comparator_audit
+status: passed
+started_at: '2026-08-11T04:14:00Z'
+finished_at: '2026-08-11T04:15:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P175-ki5-variational-bound-audit/verify.py
+result:
+  exit_code: 0
+  terminal_tally: ALL_39_CHECKS_PASS
+  native_source_tally_inside_verifier: ALL_5_CHECKS_PASS
+selected_findings:
+  - exact_general_error_is_alpha_times_n_delta_initial_minus_delta_final
+  - separate_nonnegative_slacks_realize_both_signs
+  - coupled_slack_relations_recover_conditional_one_sided_bounds
+  - component_error_control_gives_two_sided_convergence_without_monotonicity
+  - exact_unsampled_counterfamily_refutes_finite_probe_minimization_inference
+  - accepted_stationary_branches_supply_no_variational_bound
+  - source_comparator_mutation_flips_KI5_4
+  - Lean_proves_only_abstract_sign_witnesses
+preserved_failures: [0004, 0005, 0006]
+next_attempt: run_a_source_independent_exact_rederivation

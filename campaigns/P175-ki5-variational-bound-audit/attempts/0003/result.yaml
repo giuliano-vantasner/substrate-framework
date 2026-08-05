@@ -1,0 +1,19 @@
+attempt: 0003
+campaign: P175
+candidate: guessed_source_graph_path_probe
+status: failed
+started_at: '2026-08-11T04:08:00Z'
+finished_at: '2026-08-11T04:08:00Z'
+commands:
+  - hash_and_AST_inventory_with_guessed_phase_28_E1_path
+  - hash_and_AST_inventory_with_guessed_MR5_filename
+failure:
+  class: implementation_path_resolution
+  missing_guesses:
+    - merged-framework/bridges/phase-28/bridge_E1_rational_map_angular_integral.py
+    - merged-framework/bridges/phase-44/bridge_MR5_full_static_solve_and_kappa.py
+repair:
+  E1: merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py
+  MR5: merged-framework/bridges/phase-44/bridge_MR5_solve_at_derived_e.py
+scientific_effect: none
+next_attempt: resolve_every_graph_path_from_migration_source_claims_before_replay

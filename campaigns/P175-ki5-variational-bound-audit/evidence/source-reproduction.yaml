@@ -1,0 +1,14 @@
+source_unit: KI5
+source:
+  path: merged-framework/bridges/phase-34/bridge_KI5_kappa_is_not_a_variational_bound.py
+  sha256: 5db475be67e6668f9064096055b0452bb2a762c435132ae324896cce3f9863fe
+dossier: {path: merged-framework/bridges/phase-34/dossiers/Phase34-KI-dossier.md, sha256: e01fbee40d81ebae1fc6f9452c321e2914cb185cdf257ae226d849ea6392702b}
+formalization: {path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean, sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5}
+path_state: clean_at_governed_predecessor_worktree
+history: {commits: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]}
+native_command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/bridge_KI5_kappa_is_not_a_variational_bound.py
+native_result: {exit_code: 0, checks: 5, terminal_tally: ALL_5_CHECKS_PASS, runtime_seconds: 2.69}
+observed_values: {b2: 2.4154, b4: 4.5452, kappa: 8.4574, degraded_b2_kappa: 9.1004, degraded_b4_kappa: 7.8468}
+classification: reproducible_source_evidence_not_blanket_scientific_authority

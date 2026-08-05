@@ -1,0 +1,38 @@
+source_unit: KI5
+lexical_checks: 5
+runtime_checks: 5
+assertion_nodes: 1
+checks:
+  KI5.1:
+    verdict: qualified_exact_duplicate_of_C_RDIFF_001
+    qualification: >-
+      The error identity and both signs are exact conditional on separately
+      declared upper-bound slacks. KI5 does not establish those upper-bound
+      premises for the accepted stationary branches.
+  KI5.2:
+    verdict: finite_numeric_regression_with_minimization_overclaim
+    qualification: >-
+      All eight selected rescalings have higher source-functional energy. A
+      finite sample cannot prove that the BVP branch minimizes even its width
+      family, and the source consumes solve_bvp output without checking success.
+  KI5.3:
+    verdict: qualified_opposite_direction_examples
+    qualification: >-
+      The two selected degradations move the signed coordinate in opposite
+      directions, consistent with the exact slack algebra. They refute a
+      universal monotone one-sided quality rule but do not make componentwise
+      improvement or controlled convergence ill-posed.
+  KI5.4:
+    verdict: comparator_direction_example_with_physical_overclaim_rejected
+    qualification: >-
+      The source B4 degradation moves its stale coordinate toward 0.929, but
+      the comparator enters both pass predicates. This cannot prove that
+      proximity is evidence of nothing under every error model or that a
+      physical order-of-magnitude overbinding result stands.
+  KI5.5:
+    verdict: partial_core_firewall_with_hard_coded_bound_verdict
+    qualification: >-
+      Checks 1 through 3 do not read 0.929, while KI5.4 does. The final bound
+      verdict is assigned False rather than derived and the full bridge is not
+      comparator inert.
+headline: qualified_exact_signed_slack_theorem_with_variational_profile_and_physical_overclaims_rejected

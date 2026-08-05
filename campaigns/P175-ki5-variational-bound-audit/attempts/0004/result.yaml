@@ -1,0 +1,20 @@
+attempt: 0004
+campaign: P175
+candidate: first_primary_exact_oracle
+status: failed
+started_at: '2026-08-11T04:11:00Z'
+finished_at: '2026-08-11T04:12:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P175-ki5-variational-bound-audit/verify.py
+result:
+  passed_before_failure: 23
+  failure: KI5.2_finite_rescaling_inventory_prose_match
+failure_class: verifier_representation
+diagnosis: >-
+  The source wraps "the solved profile minimises" across a preceding comment
+  line, so the verifier's contiguous prose literal was absent. The loop
+  structure and exact counterfamily checks had passed; no scientific predicate
+  or threshold failed.
+repair: inspect_the_AST_loop_iterables_and_match_only_the_load_bearing_claim_fragment
+next_attempt: rerun_the_complete_primary_oracle_after_representation_repair

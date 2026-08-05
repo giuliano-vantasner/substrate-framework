@@ -2,15 +2,15 @@
 description: Audit KI5's difference-of-variational-upper-bounds and profile-quality claims
 author: vantasner
 created: '2026-08-11T04:02:00Z'
-updated: '2026-08-11T04:02:00Z'
+updated: '2026-08-11T04:31:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-KI5
 - variational-bound
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P175 KI5 Variational-Bound Audit
 
@@ -128,6 +128,24 @@ Attempt 0001 freezes release, commits, hashes, prior exposure, allowed imports,
 eleven candidates, selection criteria, claim delta, and oracle before P175
 opens the KI5 body or shared dossier body.
 
+Attempts 0002-0013 preserve native reproduction, two graph-path failures,
+three primary-verifier representation failures, passing 39-check primary and
+16-check independent routes, a 31-check typed graph, and reuse of the unchanged
+formal execution at its exact abstract sign-witness scope. Thirty-four focused
+accepted-consumer tests and both full 1,478-test executions pass with 700 valid
+memory records.
+
+## Outcome
+
+KI5 is qualified through C-RDIFF-001, C-RDIFF-002, and C-RPROF-002. Its exact
+signed-slack identity and both error signs survive; coupled slacks recover
+conditional one-sided bounds, and componentwise error control can converge
+without monotonicity. The source does not prove that its stationary BVP branches
+are variational minimizers or bound a full model, and finite width probes do not
+close that gap. Its source coordinate is stale, comparator 0.929 controls KI5.4,
+and physical overbinding and universal profile-quality readings are unaccepted.
+No new claim, API, or release survives.
+
 ## Debt Ledger
 
 The P175 ledger tracks variational premises, signed error algebra, one-sided
@@ -136,15 +154,15 @@ consumer propagation, compatibility, and governed-record agreement.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| KI5's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | open |
-| The upper-bound premise may exceed accepted profile evidence | Trace target functional, trial family, infimum, and accepted scope | open |
-| Separate upper bounds may be subtracted incorrectly | Derive the exact slack identity and both sign counterexamples | open |
-| Conditional one-sided or convergence statements may be omitted | State minimal extra premises and exact consequences | open |
-| Finite width mutations may masquerade as a universal profile theorem | Inventory samples and build an unsampled counterfamily | open |
-| Comparator proximity may masquerade as profile quality | Trace and mutate every path from 0.929 | open |
-| Lean prose may exceed its theorem | Inspect exact definitions, hypotheses, and conclusion | open |
-| Reverse consumers may inherit the overclaim | Type and replay affected pending nodes without promotion | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | open |
+| KI5's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | closed |
+| The upper-bound premise may exceed accepted profile evidence | Trace target functional, trial family, infimum, and accepted scope | closed |
+| Separate upper bounds may be subtracted incorrectly | Derive the exact slack identity and both sign counterexamples | closed |
+| Conditional one-sided or convergence statements may be omitted | State minimal extra premises and exact consequences | closed |
+| Finite width mutations may masquerade as a universal profile theorem | Inventory samples and build an unsampled counterfamily | closed |
+| Comparator proximity may masquerade as profile quality | Trace and mutate every path from 0.929 | closed |
+| Lean prose may exceed its theorem | Inspect exact definitions, hypotheses, and conclusion | closed |
+| Reverse consumers may inherit the overclaim | Type and replay affected pending nodes without promotion | closed |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | closed at adjudication |
 
 ## Review and Promotion Plan
 

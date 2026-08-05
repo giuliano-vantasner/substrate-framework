@@ -1,0 +1,14 @@
+installed_numpy: {version: 2.5.1, preferred_function: numpy.trapezoid}
+immutable_KI5:
+  dispatch: numpy.trapezoid_if_present_else_numpy.trapz
+  current_references: 1
+  legacy_references: 1
+  eager_legacy_fallbacks: 0
+  executed_branch: numpy.trapezoid
+  compatibility_abort: false
+source_graph:
+  nodes: [E1, E2, E3, KI5, MK5, MR5]
+  current_first_lazy_fallbacks: [E1, E2, E3, KI5]
+  injected_aliases: []
+mutable_campaign_code: {legacy_integration_references: 0, numerical_quadrature_used: false}
+classification: no_version_only_stop_or_scientific_candidate_failure

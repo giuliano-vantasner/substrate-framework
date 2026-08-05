@@ -1,0 +1,28 @@
+attempt: 0002
+campaign: P175
+candidate: native_hash_pinned_KI5_reproduction
+status: passed_with_oracle_gaps
+started_at: '2026-08-11T04:06:00Z'
+finished_at: '2026-08-11T04:07:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/bridge_KI5_kappa_is_not_a_variational_bound.py
+result:
+  exit_code: 0
+  terminal_tally: ALL_5_CHECKS_PASS
+  runtime_seconds: 2.69
+  source_values: {b2: 2.4154, b4: 4.5452, kappa: 8.4574}
+  width_rescalings: 8
+compatibility:
+  installed_numpy: 2.5.1
+  current_branch: numpy.trapezoid
+  legacy_branch_evaluated: false
+  version_only_stop: false
+oracle_gaps:
+  - Eight positive width-rescaling differences do not prove that the BVP branch minimizes the functional.
+  - The solve_bvp success flag and residual are not checked before sol.sol is consumed.
+  - Source Dirichlet boundaries and angular inputs differ from accepted C-RPROF-002 evidence.
+  - KI5.4 reads comparator 0.929 in both moves_toward_emp and still_far pass predicates.
+  - KI5.5 assigns eight_four_six_is_a_bound false instead of deriving that verdict.
+  - Numerical convergence inside one ansatz does not bound ansatz error to a full model.
+next_attempt: preserve_the_failed_guessed_graph_paths_then_build_exact_primary_and_independent_oracles

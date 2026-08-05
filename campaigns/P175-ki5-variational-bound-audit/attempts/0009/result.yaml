@@ -1,0 +1,16 @@
+attempt: 0009
+campaign: P175
+candidate: relative_graph_compatibility_path_probe
+status: failed
+started_at: '2026-08-11T04:16:00Z'
+finished_at: '2026-08-11T04:16:00Z'
+command: compatibility_inventory_from_phase_29_base_with_relative_MK5_and_MR5_paths
+failure:
+  class: implementation_path_resolution
+  detail: ../../phase_43_and_phase_44_overshot_the_bridges_directory
+partial_result:
+  current_first_lazy_fallback: [E1, E2, E3, KI5]
+  eager_legacy_fallbacks: 0
+repair: use_absolute_paths_resolved_from_migration_source_claims
+scientific_effect: none
+next_attempt: run_the_hash_pinned_graph_inventory_with_absolute_resolved_paths

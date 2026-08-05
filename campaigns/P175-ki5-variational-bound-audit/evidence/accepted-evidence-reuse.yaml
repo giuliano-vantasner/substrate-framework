@@ -1,0 +1,12 @@
+accepted_claim_evidence:
+  C-RDIFF-001: {module_sha256: ad9f82d978eb95e2c33321ea400de82facd69b7d7fed6260bc56becaae8c1b3c}
+  C-RDIFF-002: {P106_adjudication_sha256: b3cbb2510b98f5520ab547ba8fa7da7ca6ec7bc8574dbfefee3bd953698b5b7c}
+  C-RPROF-002: {P105_adjudication_sha256: 4bf1c967953b78711d1e43b6b809f62dadb8cc424f88292d7635051871e6ceb3}
+formal_evidence:
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  prior_execution: campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0009/result.yaml
+  result: hash_reused_clean_execution_with_fresh_P175_scope_audit
+source_executions:
+  reused: [E1_P104, E2_P105, E3_P106, MK5_P174, MR5_P174]
+  fresh: [KI5_P175]
+reuse_decision: unchanged_expensive_numeric_and_formal_evidence_is_not_repeated_ceremonially

@@ -1,0 +1,17 @@
+accepted_inputs:
+  C_RDIFF_001: exact_signed_difference_and_separate_upper_bound_slack_ceiling
+  C_RDIFF_002: corrected_conditional_coordinate_8_482417318795285
+  C_RPROF_002: resolution_bounded_stationary_branches_without_minimization_or_variational_bound
+source_inputs:
+  normalization_3_pi_squared: separately_declared_conditional_factor
+  angular_integrals: duplicated_biased_E1_route
+  profiles: duplicated_hard_wall_E2_route
+  source_coordinate_8_4574: stale_relative_to_C_RDIFF_002
+  comparator_0_929: enters_KI5_4_pass_condition_only
+undeclared_or_unproved:
+  - full_three_dimensional_target_functional_and_sector_infimum
+  - admissible_trial_to_true_state_mapping_inside_the_accepted_framework
+  - global_or_local_minimization_of_the_source_BVP_branch
+  - ansatz_error_bound_from_numerical_discretization_convergence
+  - physical_state_binding_reaction_or_empirical_map
+verdict: exact_algebra_has_closed_inputs_but_source_variational_and_physical_premises_do_not

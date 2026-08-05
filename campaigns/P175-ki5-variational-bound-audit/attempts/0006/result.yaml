@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P175
+candidate: third_primary_exact_oracle
+status: failed
+started_at: '2026-08-11T04:13:00Z'
+finished_at: '2026-08-11T04:14:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P175-ki5-variational-bound-audit/verify.py
+result:
+  passed_before_failure: 36
+  failure: source_ansatz_error_narrative_word_order
+failure_class: verifier_representation
+diagnosis: >-
+  KI5 says "ansatz error at the few-percent level" rather than the verifier's
+  reversed word order. Its assertion that E2 convergence bounds ansatz error is
+  present, and accepted C-RPROF-002 explicitly denies a variational upper bound
+  and full three-dimensional solution.
+repair: match_the_exact_source_assertion_and_the_exact_accepted_ceiling
+next_attempt: rerun_the_complete_primary_oracle_after_final_representation_repair

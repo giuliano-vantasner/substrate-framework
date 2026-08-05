@@ -1,0 +1,20 @@
+attempt: 0005
+campaign: P175
+candidate: second_primary_exact_oracle
+status: failed
+started_at: '2026-08-11T04:12:00Z'
+finished_at: '2026-08-11T04:13:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P175-ki5-variational-bound-audit/verify.py
+result:
+  passed_before_failure: 27
+  failure: C_RPROF_002_assumption_wording_match
+failure_class: verifier_representation
+diagnosis: >-
+  The accepted statement says "local or global minimum" and the assumptions
+  say no minimization "outside the tested numerical surface". The verifier
+  searched for the absent phrase "global minimization". The authoritative
+  stationary-branch and no-variational-bound text itself was present.
+repair: match_the_exact_accepted_statement_and_assumption_ceiling
+next_attempt: rerun_the_complete_primary_oracle_after_second_representation_repair

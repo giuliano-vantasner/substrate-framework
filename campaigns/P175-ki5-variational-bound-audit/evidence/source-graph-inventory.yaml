@@ -1,0 +1,11 @@
+nodes:
+  E1: {relation: qualified_angular_input, checks: 6, assertions: 1, execution: reused_P104}
+  E2: {relation: qualified_stationary_profile_input, checks: 6, assertions: 1, execution: reused_P105}
+  E3: {relation: qualified_signed_difference_input, checks: 5, assertions: 1, execution: reused_P106}
+  KI5: {relation: audited_root, checks: 5, assertions: 1, execution: fresh_clean}
+  MK5: {relation: pending_direct_reverse_consumer, checks: 8, assertions: 1, execution: reused_P174}
+  MR5: {relation: pending_indirect_reverse_consumer, checks: 6, assertions: 1, execution: reused_P174}
+totals: {nodes: 6, predicate_sites: 36, assertions: 6}
+compatibility: {current_first_lazy_fallbacks: [E1, E2, E3, KI5], injected_aliases: []}
+verifier: reviews/replay_source_graph.py
+result: ALL_31_CHECKS_PASS

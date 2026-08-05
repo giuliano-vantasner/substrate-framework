@@ -1,0 +1,14 @@
+predeclared_order: [exact_signed_slack_algebra_and_quantifier_scope, explicit_variational_trial_space_and_minimum_premises, one_sided_bound_or_convergence_assumption_cost, mutation_coverage_versus_universal_profile_claim, comparator_firewall_and_dimensional_consistency, accepted_dependency_fit_consumer_reach_and_nonduplication]
+candidates:
+  A: {decision: execution_evidence_only}
+  B: {decision: selected_exact_and_owned_by_C_RDIFF_001}
+  C: {decision: selected_exact_and_owned_by_C_RDIFF_001}
+  D: {decision: selected_as_conditional_slack_corollary}
+  E: {decision: selected_as_componentwise_error_corollary}
+  F: {decision: selected_missing_premise_diagnosis}
+  G: {decision: selected_finite_probe_ceiling_with_exact_counterfamily}
+  H: {decision: selected_nonpromotion_composition}
+  I: {decision: source_comparator_firewall_failed_for_KI5_4}
+  J: {decision: selected_at_abstract_sign_witness_scope}
+  K: {decision: selected_governance_closure}
+comparator_selected_candidate: false

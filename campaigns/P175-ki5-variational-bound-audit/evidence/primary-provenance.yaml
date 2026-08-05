@@ -1,0 +1,8 @@
+primary_verifier: {path: campaigns/P175-ki5-variational-bound-audit/verify.py, sha256: 9c3a80bd3254eb793c9756aa6ef0a9702771b449a9fc1a6f1abce7da3c2f9183, result: ALL_39_CHECKS_PASS}
+independent_rederivation: {path: campaigns/P175-ki5-variational-bound-audit/reviews/independent_rederivation.py, sha256: ad5572cb06be6f75eb9a1149f74e82541748193139ce0515e938b4493ed729db, result: ALL_16_CHECKS_PASS}
+source_graph: {path: campaigns/P175-ki5-variational-bound-audit/reviews/replay_source_graph.py, sha256: a6dc5a733744b36d6018d18de107fcc873cc48edf546623db27082dbe17720e7, result: ALL_31_CHECKS_PASS}
+formal_artifact: {sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5, result: hash_reused_prior_clean_exit}
+independence_statement: >-
+  The independent review imports neither KI5 nor the primary verifier or
+  canonical energy-difference API and uses no empirical comparator.
+mutation_surfaces: [final_sign, independent_slack_signs, correlated_slack_relation, alternating_convergence, unsampled_profile_width, comparator, hard_coded_verdict]

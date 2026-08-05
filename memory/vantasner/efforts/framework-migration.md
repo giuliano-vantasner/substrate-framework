@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T04:01:00Z'
+updated: '2026-08-11T04:31:00Z'
 tags:
 - substrate-framework
 - effort
@@ -345,6 +345,7 @@ Attempts are append-only and individually reproducible.
 | 0193 | P172 exact dimension-kernel, fixed-theory counterexample, parameter-family, formal-scope, graph, consumer, and KI2 audit | `campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0001` through `0016`, then terminal no-release boundary | KI2 qualified through C-BPS-001 and C-SK-001 with v0.127.0 unchanged | Native KI2 executes all six predicates, but its invariant list omits the accepted BPS density, square, residual, and bound. Exact primary and fresh independent routes show those objects scale under every nontrivial declared flow, while the locally defined ratio still realizes every positive target across the accepted positive parameter family. The ratio has an arbitrary dimensionless normalization, C-BPS-003 does not identify it, and a product relation can pin it. Forty-five primary, twenty-one independent, and fifty-nine graph checks pass over 81 source predicates and ten assertions. The Lean capstone exits cleanly but proves only local ratio scaling and F-over-e invariance. Refuted KI1 and pending MK relations supply no authority. Twenty-seven focused consumers and two full 1,478-test executions pass with 694 valid memory records. | Freeze KI3 before source inspection; audit its endpoint premises, continuity and range logic, open-versus-closed bracket, quantification over one interpolant versus every admissible interpolant, dependence on KI2's qualified family reading, comparator firewall, all five predicates and one assertion, formal encoding, reverse KI4/MK consumers, and do not turn an illustrative interpolation or endpoint limit into exact physical attainability, a rigorous energy bound, selected epsilon, yield coefficient, or substrate mechanism. |
 | 0194 | P173 exact endpoint-compatible counterexamples, representative ranges, inverse ambiguity, comparator mutation, formal-scope, graph, consumer, and KI3 audit | `campaigns/P173-ki3-bracket-sharpness-audit/attempts/0001` through `0016`, then terminal no-release boundary | KI3 qualified through C-XOV-001 with v0.127.0 unchanged | Native KI3 executes all five predicates, and its four selected functions have exact open ranges and distinct comparator-free half-level inverses. A continuous endpoint-compatible rational map passes the source derivative sample yet reaches 3/2 and has two positive preimages for 6/5; reversing its bump undershoots below zero. Thus endpoint limits imply interior inclusion, not exact range, outside exclusion, or uniqueness. The source assumes the excluding codomain, writes a closed bracket on a positive domain, uses stale 8.4563 input, and feeds comparator 0.929 into a thresholded verdict. Thirty-seven primary, seventeen independent, forty-seven graph, and twenty-four focused checks or tests pass over 52 source predicates and eleven assertions. The unchanged Lean execution is hash-reused and proves one Pade map only. Both full 1,478-test executions pass with 696 valid memory records. No NumPy compatibility stop occurs. | Freeze KI4 before source inspection; distinguish an algebraic inverse identity for a declared map from empirical calibration, posterior information gain, model prediction, and physical epsilon identification; audit dependence on KI3's rejected whole-bracket premise and all five predicates, formal scope, comparator use, reverse consumers, and governance closure. |
 | 0195 | P174 exact inverse-domain, observed-target conditioning, graph-direction, held-out prediction, comparator mutation, formal-scope, consumer, and KI4 audit | `campaigns/P174-ki4-backsolve-circularity-audit/attempts/0001` through `0010`, then terminal no-release boundary | KI4 qualified through C-IDN-002 and C-XOV-001 with v0.127.0 unchanged | Three exact inverse compositions survive on their proper open ranges as same-datum reconstruction. For a fixed injective map, one observed target selects one epsilon, so KI4's output-support union is not a zero-information parameter posterior. Ordinary calibration is acyclic; KI4 inserts an output-to-observed-input edge to manufacture a cycle. A held-out observable remains falsifiable. Comparator 0.929 enters KI4.4's pass threshold and KI4.5 hard-codes its verdict. Thirty-seven primary, fifteen independent, thirty-two graph, and forty-seven focused checks or tests pass over 41 predicate sites and seven assertions. Five unchanged graph executions and the Lean result are hash-reused; only MK3 and MR5 replay afresh. Both full 1,478-test executions pass with 698 valid memory records; one post-gate command-shape failure is preserved before a schema-aware narrow repair. | Freeze KI5 before source inspection; audit the exact signed-difference error algebra, variational premises, one-sided bounds, stale coordinates, comparator firewall, all five predicates, formal theorem, dependencies, reverse consumers, and do not turn selected width mutations or proximity to 0.929 into a rigorous kappa bound, profile-quality metric, physical binding result, or substrate mechanism. |
+| 0196 | P175 exact signed-slack, variational-premise, conditional-bound, convergence, finite-profile-probe, comparator, formal-scope, graph, consumer, and KI5 audit | `campaigns/P175-ki5-variational-bound-audit/attempts/0001` through `0013`, then terminal no-release boundary | KI5 qualified through C-RDIFF-001, C-RDIFF-002, and C-RPROF-002 with v0.127.0 unchanged | The exact signed upper-estimate error realizes both signs, while coupled slacks give conditional one-sided bounds and component error control gives potentially nonmonotone convergence. Eight selected width probes and an unchecked hard-wall BVP do not prove minimization or a full-model variational bound. Source 8.4574 is stale against accepted 8.4824173, comparator 0.929 controls KI5.4, and physical overbinding and universal profile-quality claims remain unaccepted. Thirty-nine primary, sixteen independent, thirty-one graph, and thirty-four focused checks or tests pass over 36 predicate sites and six assertions. Five graph executions and the Lean result are hash-reused; only KI5 executes afresh. Both full 1,478-test executions pass with 700 valid memory records. Two guessed-path failures and three verifier-representation failures are preserved before repair. | Freeze GK1 before source inspection; audit its cross-sector dimensional comparison, trace normalizations and representation factors, 1+1 versus 3+1 operator dimensions, abelian limits, all predicates and formal scope, dependencies and reverse consumers, and do not turn shared loop algebra into a generated physical gauge kinetic term or substrate mechanism. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1892,18 +1893,32 @@ derivation verdict. Primary, independent, and proportional graph routes pass
 also pass with 698 valid memory records. Unchanged formal and graph evidence is
 reused.
 
+P175 qualifies KI5 through C-RDIFF-001, C-RDIFF-002, and C-RPROF-002 without
+a new claim, API, or release. Exact signed-slack algebra shows separate upper
+estimates give no one-sided difference bound; explicit slack relations recover
+conditional bounds, and componentwise error control can converge from both
+sides. KI5's eight width probes do not prove minimization, its source BVP lacks
+a success gate, and accepted branches prove no variational upper bound or full
+model. The source uses stale 8.4574, comparator 0.929 controls KI5.4, and its
+physical overbinding and universal profile-quality readings remain unaccepted.
+Primary, independent, and six-node graph routes pass 39, 16, and 31 checks; the
+unchanged Lean theorem is reused at abstract sign-witness scope. Thirty-four
+focused tests and both full 1,478-test executions pass with 700 valid memory
+records. No NumPy version-only stop occurs.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P174 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 50 pending, 0 partial, 3 migrated, 155 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P175 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 49 pending, 0 partial, 3 migrated, 156 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 50
-pending, 3 migrated, 155 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is KI5, pinned at SHA-256
-`5db475be67e6668f9064096055b0452bb2a762c435132ae324896cce3f9863fe`.
-P175 must freeze KI5 before source execution and audit whether a signed
-difference of variational upper bounds inherits any one-sided bound, which
-error combinations are feasible, whether selected profile-width mutations
-test the general statement, and whether comparator proximity enters selection.
+The effort remains active. D4 is discharged, but D1 remains open with 49
+pending, 3 migrated, 156 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is GK1, pinned at SHA-256
+`c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74`.
+P176 must freeze GK1 before source execution and audit whether matching
+dimensionless trace factors can transfer a 1+1-dimensional vacuum-polarization
+construction into a 3+1-dimensional gauge kinetic operator, which measure and
+coupling imports are missing, and whether abelian limits test the claimed
+dimensional promotion.
 It must use accepted C-RDIFF authority, inspect the formal error theorem,
 replay reverse consumers, and exclude any physical binding, optimized profile,
 yield, or substrate interpretation.

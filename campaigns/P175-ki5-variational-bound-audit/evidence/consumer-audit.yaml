@@ -1,0 +1,18 @@
+source_unit: KI5
+direct_reverse_consumers:
+  MK5:
+    edge: explicitly_cites_KI5_no_variational_bound_and_stale_8_46
+    effect: remains_pending_and_gains_no_generalized_model_or_physical_authority
+indirect_reverse_consumers:
+  MR5:
+    edge: imports_MK5_and_E3_stale_anchor
+    effect: remains_pending_and_must_use_C_RDIFF_002_if_the_classical_coordinate_is_needed
+formal_consumer:
+  Phase34KIKernel:
+    effect: exact_sign_witnesses_remain_valid_at_abstract_scope_only
+canonical_consumers:
+  - src/substrate_framework/energy_differences.py
+  - tests/test_energy_differences.py
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false

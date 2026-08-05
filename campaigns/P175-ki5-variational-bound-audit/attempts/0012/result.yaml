@@ -1,0 +1,17 @@
+attempt: 0012
+campaign: P175
+candidate: focused_record_and_accepted_consumer_replay
+status: passed
+started_at: '2026-08-11T04:24:00Z'
+finished_at: '2026-08-11T04:25:00Z'
+commands:
+  - parse_P175_and_migration_YAML
+  - validate_changed_proposal_decision_and_effort_memory
+  - .venv/bin/python -m pytest tests/test_energy_differences.py tests/test_rational_map_radial.py tests/test_source_audit.py -q
+result:
+  YAML_files_parsed: 28
+  memory_records_valid: 3
+  focused_tests: 34
+  focused_runtime_seconds: 7.62
+  migration_queue: {total: 218, pending: 49, qualified: 156, migrated: 3, duplicate_evidence: 8, refuted: 1, out_of_scope: 1}
+next_attempt: run_the_single_terminal_repository_gate

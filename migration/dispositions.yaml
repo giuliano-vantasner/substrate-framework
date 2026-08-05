@@ -3350,6 +3350,68 @@ units:
       reused at its one-Pade scope. Forty-seven focused tests and both full
       1,478-test executions pass with 698 valid memory records. Accepted claims
       and v0.127.0 remain unchanged.
+  KI5:
+    disposition: qualified
+    accepted_claims:
+      - C-RDIFF-001
+      - C-RDIFF-002
+      - C-RPROF-002
+    qualification: >-
+      KI5's exact error identity survives conditionally: if separate energy
+      estimates have nonnegative slacks, their signed-difference error is the
+      multiplicity-weighted initial slack minus the final slack and can have
+      either sign. Explicit coupled slack relations recover conditional
+      one-sided bounds, while controlled component errors can converge without
+      monotonicity of the difference. C-RDIFF-001 already owns this theorem,
+      C-RDIFF-002 owns the corrected conditional coordinate 8.482417318795285,
+      and C-RPROF-002 owns the stationary-profile ceiling. KI5's eight selected
+      rescalings do not prove minimization; its solve_bvp result is consumed
+      without a success gate, its hard-wall source values give stale 8.4574,
+      and accepted profile evidence proves no variational upper bound or full
+      three-dimensional solution. Comparator 0.929 enters both KI5.4 pass
+      predicates, the physical overbinding and universal profile-quality
+      conclusions do not follow, and KI5.5 hard-codes its bound verdict. No new
+      claim, API, physical point estimate, binding result, or release is accepted.
+    evidence:
+      - campaigns/P175-ki5-variational-bound-audit/reviews/source_adjudication.md
+      - campaigns/P175-ki5-variational-bound-audit/evidence/source-reproduction.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/compatibility-audit.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/source-audit.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/check-adjudication.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/input-provenance.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/dependency-audit.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/consumer-audit.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/candidate-comparison.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/primary-provenance.yaml
+      - campaigns/P175-ki5-variational-bound-audit/evidence/literature-audit.yaml
+      - campaigns/P175-ki5-variational-bound-audit/verify.py
+      - campaigns/P175-ki5-variational-bound-audit/reviews/independent_rederivation.py
+      - campaigns/P175-ki5-variational-bound-audit/reviews/replay_source_graph.py
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0002/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0003/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0004/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0005/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0006/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0007/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0008/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0009/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0010/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0011/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0012/result.yaml
+      - campaigns/P175-ki5-variational-bound-audit/attempts/0013/result.yaml
+      - memory/vantasner/decisions/KI5-qualified-review.md
+    note: >-
+      P175 closes thirty-nine primary, sixteen independent, and thirty-one
+      typed graph checks. The graph inventories thirty-six predicate sites and
+      six assertions across six nodes, reuses five hash-identical executions,
+      and freshly executes KI5. E1, E2, E3, and KI5 use current-first lazy
+      NumPy fallbacks; no injected alias or version-only stop occurs. The
+      unchanged formal result is reused at its abstract sign-witness scope.
+      Thirty-four focused accepted-consumer tests and both full 1,478-test
+      executions pass with 700 valid memory records.
   EM2:
     disposition: qualified
     accepted_claims:

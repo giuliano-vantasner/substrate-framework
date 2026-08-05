@@ -1,0 +1,80 @@
+campaign: P175
+title: KI5 signed upper-bound difference variational-premise and profile-quality audit
+source_baseline: substrate@6d1f4e0
+source_units: [KI5]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T04:22:00Z'
+selected_candidates:
+  - {id: B, reason: Exact_general_signed_slack_algebra_survives.}
+  - {id: C, reason: Independent_nonnegative_slacks_realize_both_error_signs.}
+  - {id: D, reason: Explicit_coupled_slack_relations_recover_conditional_one_sided_bounds.}
+  - {id: E, reason: Componentwise_error_control_gives_nonmonotone_convergence.}
+  - {id: F, reason: Accepted_stationary_branches_do_not_supply_the_source_variational_premise.}
+  - {id: G, reason: Exact_unsampled_counterfamily_delimits_finite_profile_probes.}
+  - {id: H, reason: Accepted_claim_composition_covers_the_valid_content.}
+  - {id: I, reason: Comparator_mutation_exposes_KI5_4s_noninert_pass_condition.}
+  - {id: J, reason: Lean_is_valid_at_abstract_sign_witness_scope_only.}
+  - {id: K, reason: Governance_closure_requires_no_new_claim_API_or_release.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+claims: []
+accepted_composition:
+  - {id: C-RDIFF-001, decision: unchanged_exact_signed_slack_and_no_one_sided_bound_owner}
+  - {id: C-RDIFF-002, decision: unchanged_corrected_conditional_coordinate_and_nonphysical_ceiling}
+  - {id: C-RPROF-002, decision: unchanged_stationary_profile_and_no_variational_bound_ceiling}
+unpromoted_claims:
+  - {id: solved_profiles_are_proven_minimizers, reason: Eight_width_samples_and_an_unchecked_BVP_do_not_prove_minimization.}
+  - {id: accepted_profiles_are_full_model_variational_bounds, reason: The_accepted_claim_explicitly_denies_this_scope.}
+  - {id: improving_profiles_is_not_well_posed, reason: Controlled_component_errors_can_converge_even_when_the_difference_is_not_monotone.}
+  - {id: comparator_proximity_is_evidence_of_nothing_universally, reason: One_counterexample_refutes_a_monotone_rule_but_does_not_define_every_error_model.}
+  - {id: physical_ninefold_overbinding_stands, reason: No_accepted_physical_state_binding_or_ansatz_error_bound_closes_that_inference.}
+  - {id: full_bridge_comparator_inert, reason: Comparator_0_929_enters_both_KI5_4_pass_predicates.}
+  - {id: source_coordinate_is_current, reason: Source_8_4574_is_stale_against_C_RDIFF_002_8_482417318795285.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_rederivation.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  native_attempt: attempts/0002/result.yaml
+  graph_path_failure: attempts/0003/result.yaml
+  primary_failures: [attempts/0004/result.yaml, attempts/0005/result.yaml, attempts/0006/result.yaml]
+  primary_attempt: attempts/0007/result.yaml
+  independent_attempt: attempts/0008/result.yaml
+  compatibility_path_failure: attempts/0009/result.yaml
+  graph_attempt: attempts/0010/result.yaml
+  formal_reuse_attempt: attempts/0011/result.yaml
+  focused_attempt: attempts/0012/result.yaml
+  terminal_attempt: attempts/0013/result.yaml
+source_disposition: {KI5: qualified}
+accepted_mappings: [C-RDIFF-001, C-RDIFF-002, C-RPROF-002]
+compatibility:
+  installed_numpy: 2.5.1
+  KI5_native: true
+  source_graph_current_first_lazy_fallbacks: [E1, E2, E3, KI5]
+  injected_aliases: []
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P175-ki5-variational-bound-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P175-ki5-variational-bound-audit/reviews/independent_rederivation.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P175-ki5-variational-bound-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_energy_differences.py tests/test_rational_map_radial.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

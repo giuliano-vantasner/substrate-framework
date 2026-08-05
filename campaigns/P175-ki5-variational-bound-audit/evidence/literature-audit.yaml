@@ -1,0 +1,15 @@
+source_named_reference:
+  title: Rational Maps, Monopoles and Skyrmions
+  authors: [Conor_J_Houghton, Nicholas_S_Manton, Paul_M_Sutcliffe]
+  primary_url: https://arxiv.org/abs/hep-th/9705151
+  journal: Nuclear_Physics_B_510_1998_507_537
+primary_source_findings:
+  - The paper introduces the rational-map ansatz as an ansatz for Skyrme fields and describes its outputs as good approximations.
+  - It states that the ansatz energy can be minimized with respect to the rational map and radial profile.
+  - It separately notes that stationary Skyrme fields may be minima or saddle points and describes sector minima as believed rather than generally proved.
+scope_decision: >-
+  The paper corroborates the conditional trial-family interpretation. It does
+  not prove that KI5's unchecked finite-wall BVP is a global minimizer, that
+  eight width samples bound ansatz error, or that the accepted framework has a
+  physical state or binding map. No claim promotion relies on this unapproved
+  contextual import.

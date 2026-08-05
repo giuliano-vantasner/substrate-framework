@@ -1,0 +1,18 @@
+attempt: 0008
+campaign: P175
+candidate: source_independent_exact_rederivation
+status: passed
+started_at: '2026-08-11T04:15:00Z'
+finished_at: '2026-08-11T04:16:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P175-ki5-variational-bound-audit/reviews/independent_rederivation.py
+result:
+  exit_code: 0
+  terminal_tally: ALL_16_CHECKS_PASS
+independence: >-
+  The reviewer imports neither KI5 nor the primary verifier or canonical
+  energy-difference API. It uses fresh Fraction arithmetic, fresh error
+  witnesses, a fresh convergence sequence, and a fresh exact finite-probe
+  counterfamily against pinned accepted authority.
+next_attempt: inventory_the_typed_dependency_and_reverse_consumer_graph

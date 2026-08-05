@@ -1,0 +1,15 @@
+accepted_dependencies:
+  C-RDIFF-001: owns_exact_slack_algebra_and_no_one_sided_bound
+  C-RDIFF-002: owns_corrected_conditional_numeric_coordinate_and_nonphysical_ceiling
+  C-RPROF-001: owns_conditional_reduced_functional_and_stationarity_identities
+  C-RPROF-002: owns_resolution_bounded_stationary_branches_only
+source_candidate_dependencies:
+  E1: qualified_through_C_RMAP_001_and_C_RMAP_002
+  E2: qualified_through_C_RPROF_001_and_C_RPROF_002
+  E3: qualified_through_C_RDIFF_001_and_C_RDIFF_002
+formalization:
+  artifact: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  exact_scope: abstract_positive_and_negative_witnesses_for_two_delta_2_minus_delta_4
+  omitted_load_bearing_objects: [energy_functional, trial_space, infimum, solver, convergence, comparator, physical_map]
+selected_composition: [C-RDIFF-001, C-RDIFF-002, C-RPROF-002]
+claim_delta: []

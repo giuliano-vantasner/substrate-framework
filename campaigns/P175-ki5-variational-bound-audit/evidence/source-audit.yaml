@@ -1,0 +1,20 @@
+source_unit: KI5
+lexical_checks: 5
+runtime_checks: 5
+assertion_nodes: 1
+imports: [numpy, sympy, scipy.integrate.solve_bvp]
+local_definitions: [check, I_integral, R4, R4p, energy_functional, solve_profile, rescaled_energy]
+solver:
+  method: scipy.solve_bvp
+  domain: [1.0e-4, 16.0]
+  initial_mesh: 3000
+  tolerance: 1.0e-6
+  boundary_data: fixed_Dirichlet_pi_and_zero
+  status_checked: false
+profile_probes: {degrees: [2, 4], scales: [0.90, 0.95, 1.05, 1.10], total: 8}
+comparator:
+  value: 0.929
+  feeds_pass_conditions: [moves_toward_emp, still_far]
+hard_coded_verdicts: [eight_four_six_is_a_bound_false]
+duplicated_machinery: [E1_angular_integral, E2_radial_BVP_and_energy, E3_signed_coordinate]
+headline_ceiling: exact_error_algebra_survives_but_minimization_ansatz_error_and_physical_claims_do_not
