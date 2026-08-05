@@ -1,0 +1,57 @@
+id: P205
+base_release: v0.150.0
+base_commit: e3f3fa8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM8]
+question: >-
+  Which exact two-constraint one-loop inverse solution and scalar-count
+  sensitivity follow from WM7's accepted supplied boundary ratios, and does
+  WM8 provide a new prediction or instead specialize C-RGE-006 using supplied
+  low coordinates, boundary content, normalization, and an after-the-fact
+  comparator?
+invariants:
+  - C-RGE-006 already owns the exact arbitrary-positive-boundary design with columns C*S and C*b its nonsingularity positivity gates readout and conditional inverse-inference ceiling.
+  - C-RGE-004 treats the low electromagnetic and strong coordinates as supplied exact readings and derives no physical input provenance observation scheme or threshold matching.
+  - C-RGE-005 imports the one-loop weights field table normalization and omitted Yukawa threshold and matching terms.
+  - WM7 is qualified supplied-table composition and derives neither physical scalar multiplicity nor one universal induction action.
+  - C-REP-001 retains Abelian normalization covariance and separates trace from physical coupling coordinates.
+  - Numerical closeness to the exposed measured comparator cannot select a boundary field content or claim.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events are never scientific failures.
+allowed_imports:
+  - C-RGE-004 C-RGE-005 and C-RGE-006 for exact affine one-loop inverse running and supplied product-sector coefficients
+  - C-MIX-002 C-REP-001 C-REP-003 and C-VAC-003 only at their phase-count table normalization and affine-boundary ceilings
+  - terminal WM7 mapping at v0.150.0 as supplied-table composition
+  - SymPy for exact design determinants solutions readouts derivatives and mutations
+  - hash-pinned WM8 as noncanonical source evidence with full pre-freeze exposure disclosed
+candidates:
+  - id: A
+    description: Treat WM8 as an exact specialization of C-RGE-006 with WM7's supplied boundary ratios and no new claim.
+  - id: B
+    description: Promote a distinct weighted-boundary inverse-running theorem only if C-RGE-006 does not already own the general design positivity and readout object.
+  - id: C
+    description: Classify the two-low-coordinate solve as conditional inverse inference and derive the exact remaining readout and scale sensitivity.
+  - id: D
+    description: Separate the comparator-only improvement statement from physical prediction input provenance uncertainty matching and scheme requirements.
+  - id: E
+    description: Audit the N_H family and adverse N_H=3 counterfactual without selecting scalar multiplicity by numerical proximity.
+  - id: F
+    description: Select no new API if the accepted gauge_running implementation already exercises arbitrary boundary ratios.
+  - id: G
+    description: Give WM8 an individual terminal disposition and replay WM9 WM10 and GC6 without granting reverse authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact design rank solution and backsubstitution
+  - input boundary normalization and scale provenance
+  - positivity perturbative-domain and matching completeness
+  - novelty beyond C-RGE-004 and C-RGE-006
+  - scalar-count and comparator dataflow sensitivity
+  - Abelian coordinate covariance and physical interpretation discipline
+  - parameter economy without erasing supplied coordinates
+  - dependency and reverse-consumer closure
+claims_proposed: [C-RGE-008]
+comparators_blinded_until: >-
+  No comparator blinding is claimed. A P205 preflight error opened the full
+  WM8 source body and exposed every reported value before the contract freeze.
+  Structural selection criteria and accepted-API nonduplication therefore
+  control selection; numerical closeness is forbidden as a selector.
+status: active

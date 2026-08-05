@@ -1,0 +1,54 @@
+campaign: P205
+source_unit: WM8
+base_release: v0.150.0
+accepted_general_object:
+  low_family: a_low_equals_A_times_S_plus_q_times_b
+  constraints: C_times_a_low_equals_d
+  design: columns_C_times_S_and_C_times_b
+  unique_solution: design_inverse_times_d_when_determinant_nonzero
+  readout: w_dot_a_low_over_N
+  positivity: A_positive_q_positive_and_entire_affine_trajectory_positive
+source_specialization:
+  factor_order: [U1_GUT_coordinate, SU2, SU3]
+  boundary_ratios_at_N_H: [4_plus_N_H_over_10, 4_plus_N_H_over_6, 4]
+  one_loop_coefficients: [forty_one_over_ten, minus_nineteen_over_six, minus_seven]
+  constraint_rows: [[0, 0, 1], [five_thirds, 1, 0]]
+  targets: [five_hundred_over_fifty_nine, twelve_hundred_seventy_nine_over_ten]
+  readout_weights: [0, 1, 0]
+  readout_normalization: twelve_hundred_seventy_nine_over_ten
+  reference_scale: two_hundred_twenty_seven_thousand_nine_hundred_sixty_nine_over_twenty_five_hundred
+  selected_scalar_count: 1
+  counterfactual_scalar_count: 3
+source_reported_values_exposed_before_freeze:
+  N_H_zero_readout: 0.207574
+  N_H_one_readout: 0.216222
+  N_H_three_readout: 0.232262
+  measured_comparator: 0.23122
+  N_H_one_boundary_amplitude: 10.105892
+  N_H_one_scaled_log_span: 4.564142
+  N_H_one_scale_GeV: 2.60e14
+mutations:
+  - set_N_H_to_zero_one_two_and_three
+  - mutate_each_low_constraint_target
+  - mutate_one_boundary_ratio_independently
+  - mutate_one_one_loop_coefficient
+  - make_the_two_column_design_singular
+  - rescale_the_Abelian_coordinate_covariantly
+  - perturb_the_comparator_without_touching_the_solve
+  - add_independent_matching_offsets
+  - compare_zero_matrix_one_loop_with_nonzero_matrix_two_loop_without_calling_them_the_same_claim
+exact_obligations:
+  - reproduce_WM8_through_exact_one_loop_boundary_solution
+  - derive_design_determinant_and_positive_solution_domain
+  - derive_readout_as_an_exact_rational_function_of_N_H
+  - test_monotonicity_only_on_its_declared_valid_domain
+  - prove_comparator_absence_from_the_solve_dataflow
+  - retain_all_matching_threshold_scheme_and_physical_input_ceilings
+physical_ceiling:
+  - no_ab_initio_prediction_or_observation_without_input_provenance
+  - no_derived_scalar_multiplicity_or_complete_field_content
+  - no_threshold_matching_Yukawa_uncertainty_or_scheme_conversion
+  - no_preferred_Abelian_normalization_or_unification_boundary
+  - no_inference_that_the_residual_is_concentrated_in_scalar_multiplicity
+  - no_substrate_mechanism
+scientific_version_failures: 0

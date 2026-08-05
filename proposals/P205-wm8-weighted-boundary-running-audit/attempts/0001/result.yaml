@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P205
+timestamp_utc: '2026-08-05T21:48:00Z'
+kind: protocol_breach_disclosure_and_late_freeze
+base_commit: e3f3fa83a40782d90f6e7ffea6e5da3df747c27f
+base_release: v0.150.0
+source_unit: WM8
+candidates: [A, B, C, D, E, F, G]
+protocol_failure:
+  source_body_opened_before_contract_freeze: true
+  comparator_values_exposed: true
+  cause: P205_preflight_batched_source_inspection_with_authority_and_queue_reads
+  scientific_candidate_rejected: false
+  scientific_version_failure: false
+repair:
+  - disclose_no_blinding
+  - freeze_structural_criteria_after_exposure
+  - prohibit_numerical_closeness_as_a_selector
+  - require_accepted_API_nonduplication_and_mutation_oracles
+tooling_failure:
+  command: memory grep WM8 --base memory --scope own --no-cache
+  cause: grep_subcommand_no_longer_accepts_no_cache
+  repaired_command: memory grep WM8 --base memory
+native_source_executed: false
+scientific_version_failures: 0
+verdict: late_freeze_required_before_native_execution_or_verifier_construction
+continuation: validate_and_commit_the_disclosed_contract_then_reproduce_source_once
