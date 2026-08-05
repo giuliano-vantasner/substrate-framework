@@ -1,0 +1,10 @@
+campaign: P204
+route: independent_raw_sympy_rederivation
+script: reviews/independent_mixed_trace_review.py
+sha256: c5bd28f7f11ab5f75a19b308055df604309d53a91f92e2fd8951d64af3a2e977
+checks: 21
+exit_status: 0
+imports_preferred_claim_APIs: false
+oracle: fresh_raw_SymPy_trace_sums_rank_consistency_ratios_and_counterexamples
+preserved_failed_attempt: null
+compatibility: no_numpy_import

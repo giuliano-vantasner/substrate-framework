@@ -1,0 +1,12 @@
+attempt: 0005
+campaign: P204
+timestamp_utc: '2026-08-05T21:29:00Z'
+kind: memory_validator_path_resolution
+command: memory validate memory --base memory
+exit_status: 1
+classification: tooling_interface_path_failure
+cause: positional_path_is_resolved_under_base_and_produced_memory_slash_memory
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair: validate_dot_relative_to_base_memory
+continuation: rerun_only_memory_validation

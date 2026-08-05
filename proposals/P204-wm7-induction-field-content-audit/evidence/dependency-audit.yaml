@@ -1,0 +1,15 @@
+campaign: P204
+source_unit: WM7
+declared_dependencies: [FG4, QCD1, QCD3, S1, S2, S3, SM2, SM3, SM4, W1, W2, W3, WM1, WM2, WM3, WM5, WM8]
+terminal_dependencies: [FG4, QCD1, QCD3, S1, S2, S3, SM2, SM3, SM4, W1, W2, W3, WM1, WM2, WM3, WM5]
+excluded_pending_dependency: WM8
+source_scc: [WM7, WM8]
+admitted_composition: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+rejected_inheritance:
+  - FG4 grants a generic phase-count formula but no physical generation count or matter realization.
+  - SM2 SM3 WM1 and C-REP-003 grant supplied rows constraints and traces but no complete physical field content.
+  - SM4 WM3 and WM5 grant perturbative running tables but no independent induction determinant or boundary law.
+  - WM2 is duplicate conditional trace evidence and supplies no universal common coefficient mechanism.
+  - Pending WM8 grants no authority in either direction of the source cycle.
+closure: accepted_registry_dependencies_are_present_and_pending_cycle_is_excluded
+backward_authority: none

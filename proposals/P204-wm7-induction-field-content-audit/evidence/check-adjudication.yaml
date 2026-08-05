@@ -1,0 +1,18 @@
+campaign: P204
+source_unit: WM7
+checks:
+  - {id: WM7.1, source_runtime: pass, status: retained_inverse_reconstruction_rejected_independent_derivation, mapping: [C-RGE-005], reason: The colour row identifies c_F only because the imported b_3 was constructed with that same perturbative weight.}
+  - {id: WM7.2, source_runtime: pass, status: retained_consistency_rejected_overdetermined_provenance, mapping: [C-RGE-005], reason: The U1 and SU2 rows satisfy the single left-null relation but are not independent of the target construction.}
+  - {id: WM7.3, source_runtime: pass, status: retained_exact_supplied_table_arithmetic, mapping: [C-RGE-005, C-REP-003, C-ANO-001], reason: The contribution vector is exact for supplied rows weights and counts; no physical field-content completeness is derived.}
+  - {id: WM7.4, source_runtime: pass, status: retained_conditional_common_zero_boundary_ratio, mapping: [C-RGE-005, C-VAC-003], reason: The ratio follows after one common coefficient and zero affine boundaries are imposed; accepted factorwise data remain independent.}
+  - {id: WM7.5, source_runtime: pass, status: retained_supplied_zero_scalar_limit, mapping: [C-RGE-005, C-REP-001], reason: N_H=0 gives equality and the conditional three-eighths coordinate exactly, but it is a selected table limit.}
+  - {id: WM7.6, source_runtime: pass, status: retained_conditional_coordinate_rejected_physical_boundary, mapping: [C-RGE-005, C-REP-001, C-VAC-003], reason: Twenty-five over sixty-six is exact only under the common inverse-trace law chosen normalization count and matching specialization.}
+  - {id: WM7.7, source_runtime: pass, status: rejected_gauge_self_induction_no_go, mapping: [C-RGE-005, C-VAC-003], reason: A negative beta contribution is not a negative total affine kinetic coordinate; positive boundary counterexamples exist.}
+  - {id: WM7.8, source_runtime: pass, status: retained_sensitivity_rejected_count_derivation, mapping: [C-MIX-002, C-REP-003], reason: The predicate asserts hardcoded counts; generic phase counting and a supplied scalar row do not derive physical multiplicities.}
+  - {id: WM7.9, source_runtime: pass, status: retained_supplied_hypercharge_sensitivity, mapping: [C-REP-003, C-RGE-005], reason: Mutating the supplied scalar hypercharge moves its Abelian contribution exactly.}
+  - {id: WM7.10, source_runtime: pass, status: retained_table_consistency_rejected_new_provenance, mapping: [C-RGE-005], reason: Changing the scalar weight breaks coefficients previously built with one-third; this does not independently derive that weight.}
+summary:
+  retained_exact_conditional_or_supplied: 6
+  retained_consistency_or_sensitivity_only: 2
+  rejected_load_bearing_interpretation: 2
+  blanket_headline_accepted: false

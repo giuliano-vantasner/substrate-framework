@@ -1,0 +1,18 @@
+campaign: P204
+canonical_module_change: none
+test_module_change: none
+claims_registry_change: none
+release_manifest_change: none
+generated_docs_direct_edit: none
+campaign_verifiers:
+  primary: verify.py
+  independent: reviews/independent_mixed_trace_review.py
+  graph: reviews/replay_source_graph.py
+reusable_surface_decision: >-
+  Existing gauge_beta, charge_traces, multiplet_charges, renormalization, and
+  verification APIs express every accepted obligation. P204 adds immutable
+  audit records only; duplicating the N_H arithmetic in the package is unwarranted.
+compatibility_policy:
+  mutable_legacy_trapz_references: 0
+  immutable_alias_only_nodes: [S2, W1, W3]
+  version_only_scientific_failures: 0

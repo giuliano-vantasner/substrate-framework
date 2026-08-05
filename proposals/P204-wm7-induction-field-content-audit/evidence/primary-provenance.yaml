@@ -1,0 +1,12 @@
+campaign: P204
+route: primary_accepted_API_and_exact_symbolic_composition
+script: verify.py
+sha256: 8f2424809a44a327609d0ff13ff1ac5b72b32641287db7ef053ed755980a5cdf
+checks: 38
+exit_status: 0
+source_pin: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+release_pin: 18dffeef5efd516018c918f65b45173c81ac0e1ba99fdd8a96274cc1df5c72db
+formula_freeze_pin: f6c489112f37c5aff696a2ea4b8a0a9720f79eccbd426ca598078bbec6f8a9e0
+oracle: SymPy_exact_algebra_plus_accepted_framework_APIs
+sensitivity: [scalar_count, coefficient_ancestry, left_null_consistency, identifiability, affine_boundaries, factor_coefficients, Abelian_coordinate, total_kinetic_offset]
+compatibility: no_quadrature_surface

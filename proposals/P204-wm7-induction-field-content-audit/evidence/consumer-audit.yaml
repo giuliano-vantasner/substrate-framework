@@ -1,0 +1,13 @@
+campaign: P204
+source_unit: WM7
+direct_reverse_consumers: [GC1, GC2, GC3, GC4, GC5, GC6, WM10, WM8, WM9]
+qualified_transitive_consumers_reached_through_pending_cycle: [EL2, HE5]
+consumer_status: all_direct_reverse_consumers_pending
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  Reverse edges and the WM7-WM8 SCC are replayed as governance evidence only.
+  Qualification changes WM7's record and generated summaries; it grants no
+  authority to pending WM8-WM10 or GC1-GC6 and does not rewrite already
+  governed EL2 or HE5 through a pending path.

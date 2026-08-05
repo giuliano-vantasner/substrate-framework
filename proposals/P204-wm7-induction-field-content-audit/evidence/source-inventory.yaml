@@ -1,0 +1,23 @@
+campaign: P204
+source_unit: WM7
+source_sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+imports: [contextlib, importlib.util, io, os, sympy]
+runtime_loaded_sources: [WM1, SM2, SM4]
+defined_functions: [check, _load, sum_T2, sum_T3col, sum_TY, induced_S]
+runtime_checks: 10
+assert_nodes: 1
+numpy_compatibility_surface: none
+literal_or_declared_inputs:
+  N_GEN: 3
+  N_H: 1
+  GUT_squared_coordinate_factor: three_fifths
+  adjoint_Casimirs: [0, 2, 3]
+  fundamental_Dynkin_index: one_half
+  scalar_row: [H, 1, 2, Y_H]
+absent_load_bearing_objects:
+  - determinant regulator counterterm or common matter action
+  - independent provenance for coefficients versus reconstructed loop weights
+  - derivation of a physical generation or scalar count
+  - factorwise affine matching boundaries thresholds or finite terms
+  - preferred Abelian normalization or physical coupling map
+  - measured weak-angle observable or running comparison oracle

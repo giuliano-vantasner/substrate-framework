@@ -1,0 +1,16 @@
+campaign: P204
+reserved_identifier: C-RGE-007
+candidate_object: mixed_statistics_common_induction_trace_and_boundary_ratio
+existing_owners:
+  - C-RGE-005 owns the exact supplied gauge Weyl and complex-scalar one-loop contribution ledger and Abelian covariance.
+  - C-REP-001 owns the conditional trace-to-coupling coordinate equality and normalization covariance.
+  - C-REP-003 owns the supplied finite multiplet table and its physical-completeness ceiling.
+  - C-VAC-003 owns the complete affine factorwise kinetic family and independent matching boundaries.
+novel_consumer: none
+novel_canonical_API: none
+novel_claim_semantics: none
+decision: no_new_claim_or_package_surface
+reason: >-
+  The N_H vector, inverse solve, and conditional ratio are short exact
+  compositions of accepted APIs. A distinct claim would either duplicate that
+  algebra or require the absent common action and matching mechanism.

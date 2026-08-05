@@ -1,0 +1,12 @@
+attempt: 0004
+campaign: P204
+timestamp_utc: '2026-08-05T21:28:00Z'
+kind: memory_validator_invocation
+command: memory validate memory --base memory --no-cache
+exit_status: 2
+classification: tooling_interface_invocation_failure
+cause: memory_validate_does_not_accept_no_cache
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair: inspect_local_help_and_use_only_supported_arguments
+continuation: rerun_only_memory_validation

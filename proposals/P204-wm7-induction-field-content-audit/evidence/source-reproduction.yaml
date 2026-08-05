@@ -1,0 +1,37 @@
+campaign: P204
+source_unit: WM7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py
+sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+git_blob: abbe84bdbb5a22089eaaa86dcfc19b9c7c2c4c04
+git_blob_commit: 7222eed
+command: >-
+  /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py
+exit_status: 0
+runtime_checks: 10
+lexical_check_calls: 10
+literal_check_calls: 9
+dynamic_check_calls: 1
+assert_nodes: 1
+terminal_tally: ALL_10_CHECKS_PASS
+elapsed_wall_seconds: 0.53
+max_rss_kib: 66180
+printed_values:
+  reconstructed_weights: [two_thirds, one_third]
+  supplied_table_matter_vector: [forty_one_over_ten, twenty_five_over_six, 4]
+  integer_ratio: [123, 125, 120]
+  spread: twenty_five_over_twenty_four
+  fermion_only_coordinate: three_eighths
+  one_scalar_conditional_coordinate: twenty_five_over_sixty_six
+  three_scalar_counterfactual_coordinate: twenty_seven_over_seventy
+compatibility:
+  imports_numpy: false
+  quadrature_surface: none
+  alias_replay_required: false
+  version_only_scientific_failures: 0
+scope: >-
+  Native execution reproduces WM7's own predicates only. It does not make the
+  source coefficient table independent of its imported loop weights, derive a
+  physical scalar or generation count, construct a common induction action,
+  erase affine boundaries, or identify a trace coordinate with a weak angle.

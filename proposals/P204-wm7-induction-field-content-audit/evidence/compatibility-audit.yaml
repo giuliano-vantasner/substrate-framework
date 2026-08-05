@@ -1,0 +1,18 @@
+campaign: P204
+auditor: substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+environment: {numpy: 2.5.1, current_trapezoid_available: true, legacy_trapz_available: false}
+immutable_nodes:
+  S2: {legacy_references: 3, classification: immutable_alias_only_required_if_reexecuted}
+  W1: {legacy_references: 2, classification: immutable_alias_only_required_if_reexecuted}
+  W3: {legacy_references: 2, classification: immutable_alias_only_required_if_reexecuted}
+  all_other_23_nodes: {legacy_references: 0}
+mutable_P204:
+  legacy_references: 0
+  policy: use_numpy_trapezoid_or_shared_trapezoid_integral
+aliases_injected_during_P204_science: 0
+version_only_stops: []
+scientific_failures_from_version_events: 0
+verdict: >-
+  WM7 and all P204 verifiers have no quadrature surface. Three immutable
+  ancestors retain legacy-name syntax; those events are compatibility evidence
+  only and cannot fail a candidate or alter a scientific verdict.

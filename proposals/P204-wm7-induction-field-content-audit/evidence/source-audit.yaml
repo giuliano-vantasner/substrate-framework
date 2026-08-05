@@ -1,0 +1,39 @@
+campaign: P204
+source_unit: WM7
+source_sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+exact_reproducible_content:
+  - The supplied three-generation C-RGE-005 table separates gauge Weyl and one-complex-scalar contributions as (0,-22/3,-11), (4,4,4), and (1/10,1/6,0).
+  - With N_H complex doublets the matter vector is (4+N_H/10,4+N_H/6,4), concurrent exactly when N_H=0.
+  - N_H=1 gives (41/10,25/6,4), integer ratio 123:125:120, and spread 25/24.
+  - The coefficient design has rank two and one consistency relation; it recovers c_F=2/3 and c_S=1/3.
+  - Under zero boundaries and one common nonzero coefficient, inverse couplings stand in the reversed matter-weight ratio.
+  - The chosen hypercharge coordinate gives 25/66 conditionally and changes under an Abelian coordinate rescaling.
+provenance_corrections:
+  - SM4's coefficient vector was computed using the same imported 2/3 and 1/3 weights; solving them backward is inverse reconstruction, not independent loop derivation.
+  - C-RGE-005 treats the representations multiplicities invariants and perturbative weights as supplied.
+  - C-REP-003 treats the finite multiplet table hypercharges dimensions targets and labels as supplied and derives no physical scalar count.
+  - C-MIX-002 counts one generic irreducible phase at N=3 but does not derive three physical generations or a value of N.
+  - C-VAC-003 retains independent affine matching coordinates and physical interpretation ceilings.
+structural_predicate_weaknesses:
+  WM7.1: inverse_reconstruction_from_a_coefficient_built_with_the_same_fermion_weight
+  WM7.2: consistency_relation_mislabeled_as_independent_provenance
+  WM7.3: exact_supplied_table_composition_not_a_derived_field_content_or_action
+  WM7.4: common_zero_boundary_coefficient_declared_not_derived
+  WM7.5: exact_supplied_N_H_zero_specialization_only
+  WM7.6: conditional_normalization_covariant_trace_coordinate_not_physical_weak_angle
+  WM7.7: negative_beta_contribution_does_not_prove_negative_total_affine_kinetic_coordinate_or_no_self_induction
+  WM7.8: hardcoded_count_and_inequality_guard_do_not_derive_counts
+  WM7.9: exact_sensitivity_to_a_supplied_scalar_hypercharge
+  WM7.10: self_consistency_with_the_same_imported_beta_table_not_new_loop_provenance
+countermodels_and_mutations:
+  - An independent coefficient mutation violates the design's left-null consistency relation.
+  - Removing the scalar destroys scalar-weight identifiability.
+  - Nonzero or unequal affine boundaries break the advertised common ratio.
+  - Independent factor coefficients or logs break the advertised common ratio.
+  - Equal independently supplied couplings refute automatic identification with the trace coordinate.
+  - Positive affine offsets make every total kinetic coordinate positive despite negative non-Abelian beta contributions.
+headline_verdict_candidate: >-
+  WM7's exact table arithmetic is retained as accepted composition. Its weight
+  derivation, framework-forced counts, common induction mechanism, physical
+  coupling ratios, weak-angle boundary, and gauge self-induction no-go are not
+  derived. No new claim or canonical API is warranted.
