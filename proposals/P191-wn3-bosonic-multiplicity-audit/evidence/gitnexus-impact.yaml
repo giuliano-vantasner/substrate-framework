@@ -1,0 +1,35 @@
+campaign: P191
+index_before:
+  commit: f611736
+  status: stale
+index_formula_freeze:
+  commit: 908f5c0
+  mode: index_only
+index_working_tree:
+  nodes: 29345
+  edges: 45517
+  clusters: 400
+  flows: 1
+preimplementation_target:
+  symbol: bosonic_fock
+  lookup: not_found_as_expected_for_new_surface
+neighbor_impacts_before:
+  vacuum_one_high_coefficient: {upstream_count: 1, risk: LOW}
+  symmetric_spin_rung: {upstream_count: 1, risk: LOW}
+postimplementation_impacts:
+  bosonic_fock_rung: {upstream_count: 0, risk: LOW}
+  bosonic_cosine_matrix_element: {upstream_count: 1, risk: LOW}
+  factorial_one_mass: {upstream_count: 1, risk: LOW}
+  vacuum_one_high_coefficient: {upstream_count: 3, risk: LOW}
+affected_processes: 0
+limitations:
+  - public_package_exports_are_not_reported_as_call_edges
+  - focused_tests_and_verifier_semantics_are_not_reported_as_impacts
+  - governance_source_consumers_are_not_code_import_edges
+  - graph_risk_is_not_scientific_or_claim_review
+repository_audit_overrides:
+  direct_new_consumers:
+    - tests/test_bosonic_fock.py
+    - proposals/P191-wn3-bosonic-multiplicity-audit/verify.py
+  independent_reviewer_intentionally_imports_no_scientific_API: true
+tool_side_effects_created: []

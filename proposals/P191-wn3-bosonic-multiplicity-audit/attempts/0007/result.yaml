@@ -1,0 +1,27 @@
+attempt: 0007
+campaign: P191
+candidate: additive_exact_bosonic_Fock_API_and_dual_oracle
+status: passed_implementation_pending_review_and_consumer_replay
+started_at: '2026-08-11T17:26:00Z'
+finished_at: '2026-08-11T17:34:00Z'
+claim: C-OSC-001
+implementation:
+  module: src/substrate_framework/bosonic_fock.py
+  dataclasses: [BosonicFockRung, TruncatedBosonicFockLadder]
+  public_functions: 8
+  package_root_exports: 10
+  existing_public_signatures_changed: 0
+verification:
+  focused_tests: 93_passed
+  primary: ALL_91_CHECKS_PASS
+  independent: ALL_44_CHECKS_PASS
+  compatibility_version_failures: 0
+  scientific_threshold_changed: false
+failed_routes_preserved: [0004, 0005, 0006]
+selection:
+  selected: [C, D, E, F]
+  source_evidence: A
+  countermodel_evidence: G
+  governance_pending: H
+  rejected_as_complete: B
+next_attempt: replay_WN3_dependency_and_reverse_consumer_graph_then_conduct_individual_claim_review

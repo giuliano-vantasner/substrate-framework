@@ -1,0 +1,25 @@
+attempt: 0004
+campaign: P191
+candidate: first_additive_API_and_focused_test_run
+status: failed_verifier_representation_not_science
+started_at: '2026-08-11T17:12:00Z'
+finished_at: '2026-08-11T17:17:00Z'
+command: >-
+  .venv/bin/python -m pytest tests/test_bosonic_fock.py
+  tests/test_cosine_vertices.py tests/test_factorial_suppression.py
+  tests/test_odd_factorial_mass.py tests/test_symmetric_spin.py -q
+result:
+  passed: 91
+  failed: 2
+failures:
+  - predicate: immutable_matrix_attribute_probe
+    diagnosis: SymPy_ImmutableDenseMatrix_has_no_is_Immutable_attribute
+    layer: verifier_implementation
+    repair: use_an_explicit_ImmutableDenseMatrix_instance_check
+  - predicate: raw_positive_exponential_series_structural_equality
+    diagnosis: SymPy_returns_S_times_exp_S_over_S_minus_one_over_S_before_simplification
+    layer: verifier_representation
+    repair: simplify_the_independently_summed_expression_before_exact_comparison
+scientific_formula_changed: false
+scientific_threshold_changed: false
+next_attempt: rerun_focused_suite_after_exact_predicate_repair_then_build_adverse_verifiers

@@ -1,0 +1,22 @@
+attempt: 0006
+campaign: P191
+candidate: repaired_primary_documentation_verifier_rerun
+status: failed_second_documentation_line_break_not_science
+started_at: '2026-08-11T17:23:00Z'
+finished_at: '2026-08-11T17:25:00Z'
+command: PYTHONPATH=src .venv/bin/python proposals/P191-wn3-bosonic-multiplicity-audit/verify.py
+result:
+  checks_passed_before_stop: 90
+  terminal_tally_reached: false
+failure:
+  predicate: single_mode_occupation_and_physical_ceilings_are_explicit
+  clauses:
+    single_mode_distinct_state_ceiling: passed_after_normalization
+    algebraic_element_not_rate: passed
+    mathematical_mass_not_occurrence_or_rate: failed_due_to_source_line_break
+  layer: verifier_representation
+  repair: normalize_whitespace_for_every_docstring_clause_not_only_the_first
+scientific_formula_changed: false
+scientific_threshold_changed: false
+mutation_threshold_changed: false
+next_attempt: require_primary_terminal_tally_and_independent_raw_terminal_tally

@@ -1,0 +1,50 @@
+campaign: P191
+claim: C-OSC-001
+canonical_module: src/substrate_framework/bosonic_fock.py
+architecture:
+  change_type: additive_new_module
+  imported_accepted_API: substrate_framework.cosine_vertices.vacuum_one_high_coefficient
+  public_dataclasses: [BosonicFockRung, TruncatedBosonicFockLadder]
+  public_functions:
+    - bosonic_fock_rung
+    - truncated_bosonic_fock_ladder
+    - bosonic_cosine_matrix_element
+    - bosonic_cosine_matrix_element_square
+    - factorial_one_mass
+    - factorial_one_total_mass
+    - normalized_factorial_one_mass
+    - factorial_one_modes
+  existing_public_signatures_changed: []
+  import_side_effects_added: false
+  module_sha256: 574ac738c75548a90a866178a0452239af24fc700627e99a666eaa7a2f48293c
+exactness:
+  rung_and_factorial_data: SymPy_exact
+  finite_matrices_and_defect: SymPy_exact_immutable
+  cosine_composition: SymPy_exact_real
+  mass_and_normalizers: SymPy_exact
+  modes: exact_positive_rational_ordering
+  floating_inputs_for_load_bearing_intensity_and_scales: rejected
+  quadrature_used: false
+  empirical_parameters_added: false
+typing_ceiling:
+  - infinite_Fock_space_is_a_declared_mathematical_basis_and_algebraic_domain
+  - finite_matrices_are_named_truncations_with_the_top_defect_exposed
+  - factorial_norm_is_not_a_count_of_distinct_single_mode_final_states
+  - conditional_cosine_composition_retains_all_coordinate_scales_and_parity
+  - factorial_one_sample_spaces_and_normalizers_are_explicit
+  - no_API_returns_a_physical_probability_density_of_states_or_rate
+tests:
+  canonical: tests/test_bosonic_fock.py
+  canonical_sha256: 02bbf1aca160ba9c1c46eefcf30dd61a847bf574918d2a6440831949b23db585
+  focused_files:
+    - tests/test_bosonic_fock.py
+    - tests/test_cosine_vertices.py
+    - tests/test_factorial_suppression.py
+    - tests/test_odd_factorial_mass.py
+    - tests/test_symmetric_spin.py
+  focused_result: 93_passed
+public_exports: 10
+compatibility:
+  numpy_imports: 0
+  legacy_trapezoid_references: 0
+  current_trapezoid_references: 0

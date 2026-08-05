@@ -1,0 +1,23 @@
+campaign: P191
+claim: C-OSC-001
+reviewer: proposals/P191-wn3-bosonic-multiplicity-audit/reviews/independent_bosonic_fock_review.py
+reviewer_sha256: 953e17c6ec0af558348a42df351a7493a597b51638579337963f594c09d6d5fd
+result: ALL_44_CHECKS_PASS
+scientific_imports:
+  candidate_module: false
+  cosine_vertices: false
+  factorial_suppression: false
+  symmetric_spin: false
+  shared_primary_helpers: false
+shared_non_scientific_infrastructure:
+  - substrate_framework.verification.CheckLedger
+independent_route:
+  - raw_finite_ladder_matrices_and_trace
+  - raw_repeated_creation_vectors_and_norms
+  - raw_mixed_cosine_differentiation
+  - raw_exponential_and_odd_hyperbolic_series
+  - brute_force_exact_rational_modes
+  - raw_adjacent_mass_ratios
+  - zero_coupling_and_zero_spectral_density_countermodels
+  - one_basis_vector_per_single_mode_occupation_count
+independence_limit: standard_SymPy_semantics_and_shared_Python_runtime

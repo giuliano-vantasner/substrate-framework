@@ -2,7 +2,7 @@
 description: Audit WN3 and derive an exact bosonic Fock ladder and parity-complete composition ledger
 author: vantasner
 created: '2026-08-11T16:52:00Z'
-updated: '2026-08-11T17:11:00Z'
+updated: '2026-08-11T17:34:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -182,6 +182,42 @@ surface; A and G remain source and countermodel evidence, H remains the open
 governance route, and accepted-composition-only candidate B cannot deliver the
 new Fock object.
 
+Attempt 0004 adds the standalone exact module, package exports, and canonical
+tests, then stops with two failures after ninety-one passes. Both failures are
+test representation defects: SymPy's immutable dense matrix exposes no
+`is_Immutable` flag, and its independently summed positive exponential tail
+is algebraically but not structurally equal to `exp(S)-1` before
+simplification. The repair uses an explicit immutable-class predicate and
+exact symbolic simplification. No formula, domain, mutation, or threshold is
+changed; the repaired focused run and serious verifiers remain open.
+
+The repaired focused run passes all ninety-three tests. Attempt 0005 then
+passes ninety primary exact and adverse-mutation checks before stopping at the
+last documentation ceiling. The required sentence is present, but a source
+line break defeats a raw contiguous substring probe. Normalizing whitespace
+repairs the oracle without changing any scientific formula, mutation, domain,
+or threshold. A clean primary terminal tally and the independent raw route
+remain required.
+
+Attempt 0006 repeats the same compound documentation gate and identifies a
+second wrapped public sentence that the first repair did not normalize. The
+single-mode and algebraic-element clauses now pass; only the mathematical-mass
+ceiling is split across a source newline. The complete repair normalizes all
+three docstrings. This repeated stop changes no scientific or mutation
+predicate and still requires a terminal primary tally rather than being
+waived.
+
+Attempt 0007 passes the repaired boundary: ninety-one primary exact and
+mutation-sensitive checks, forty-four independent raw-SymPy checks, and all
+ninety-three focused tests. The additive module exposes two dataclasses and
+eight pure functions through ten package-root exports, changes no existing
+signature, imports no NumPy, and adds no fitted parameter. The primary route
+pins WN3, v0.141.0, and the formula freeze; the independent route imports no
+candidate or accepted scientific API. GitNexus reports low code risk and only
+the intended new caller edges, while its missing test and governance semantics
+remain explicitly overridden by direct inventories. Exact claim review and
+the complete WN3 consumer replay remain open.
+
 ## Debt Ledger
 
 The P191 ledger tracks source predicates, Fock domain, truncation, parity,
@@ -192,14 +228,14 @@ compatibility, dependencies, consumers, and governed state.
 | --- | --- | --- |
 | WN3 was exposed before P191 | Record exposure and claim no fresh blinding | discharged |
 | Source predicates and conclusions are not P191-adjudicated | Pin and classify every executable and narrative edge | discharged |
-| Finite matrices may masquerade as exact CCR | Prove the trace obstruction and explicit top-state defect | open |
-| The bosonic Fock domain and inner product may be hidden | Declare basis, algebraic domain, operator actions, and norm | open |
-| Bosonic multiplication may silently drop cosine parity | Preserve zero even orders through the full composition | open |
-| All-order and odd-order masses may be conflated | Declare each sample space, total mass, and normalizer | open |
-| Squared coefficients may be called rates | Supply full rate premises or retain mathematical-only scope | open |
+| Finite matrices may masquerade as exact CCR | Prove the trace obstruction and explicit top-state defect | discharged |
+| The bosonic Fock domain and inner product may be hidden | Declare basis, algebraic domain, operator actions, and norm | discharged |
+| Bosonic multiplication may silently drop cosine parity | Preserve zero even orders through the full composition | discharged |
+| All-order and odd-order masses may be conflated | Declare each sample space, total mass, and normalizer | discharged |
+| Squared coefficients may be called rates | Supply full rate premises or retain mathematical-only scope | discharged |
 | WN4 may be imported through a forward cycle | Exclude it until individually accepted | open |
 | C-OSC-001 may duplicate or sprawl accepted mathematics | Complete claim and API nonduplication and cohesion review | open |
-| Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | open |
+| Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | discharged |
 | Governed records may disagree | Replay and synchronize every affected path with empty debt | open |
 
 ## Review and Promotion Plan
