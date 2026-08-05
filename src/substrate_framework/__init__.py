@@ -901,6 +901,10 @@ from .skyrme_relations import (
     conditional_topological_mass,
     matched_pion_coupling_ratio,
 )
+from .skyrme_o4 import (
+    O4SkyrmePointwiseEvidence,
+    o4_skyrme_pointwise_evidence,
+)
 from .massive_dipoles import (
     MassiveTripletDipoleExtrema,
     MassiveTripletDipoleInteraction,
@@ -1688,6 +1692,8 @@ __all__ = [
     "finite_matrix_power_evidence",
     "degree_two_rational_map_hessian",
     "degree_two_rational_map_quadratic_form",
+    "O4SkyrmePointwiseEvidence",
+    "o4_skyrme_pointwise_evidence",
 ]
 
 __version__ = "0.0.0"
