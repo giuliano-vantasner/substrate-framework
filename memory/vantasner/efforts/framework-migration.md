@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T13:05:00Z'
+updated: '2026-08-11T14:04:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.137.0`, containing one hundred seventy-seven
+The current accepted frontier is `v0.139.0`, containing one hundred seventy-nine
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -364,7 +364,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 44 bridge units remain pending, 3 are migrated, 161 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 37 bridge units remain pending, 3 are migrated, 168 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -2091,25 +2091,45 @@ contained by keeping GK3D3 through GK3D6 pending with the free-boundary ceiling.
 The integrated promotion boundary validates 761 memory records and passes all
 1,619 repository tests with a clean terminal status.
 
+P187 adds C-VAC-004's exact conditional scale-matched affine kinetic
+composition. For independent inverse-length conversions it retains
+`log((ell1/ell0)/(K1/K0))`; on C-RGE-003's consistently paired one-loop branch
+the unequal conversions cancel and the complete family remains
+`Z=Z_ref+b/(b0*g^2)`. Only the separately declared zero-matching branch with
+positive matter coefficient has inverse kinetic coordinate `b0*g^2/b`.
+GK3D3 is qualified through these objects. Its physical scale labels, unit
+soliton factor, erased boundary, parameter-free coupling, power-zero and
+logarithm-uniqueness claims, sampled perturbativity, QCD, observation, and
+substrate readings remain unaccepted. The primary and independent routes pass
+31 and 20 checks, the eight-node source graph passes 21, and 51 focused tests
+pass. GK3D3 and canonical P187 code have no NumPy surface; immutable GK3D5's
+current-first lazy fallback is compatibility evidence only. GitNexus rates the
+implementation transaction LOW with no affected indexed flow, while explicit
+source review contains the MEDIUM narrative risk. The single integrated
+promotion boundary validates 766 memory records and passes all 1,633
+repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.138.0` manifest, current release, generated claim
-index, and generated framework memory agree on one hundred seventy-eight
-accepted claims. P001 through P186 are frozen under `campaigns/`; proposal,
+The registry, `v0.139.0` manifest, current release, generated claim
+index, and generated framework memory agree on one hundred seventy-nine
+accepted claims. P001 through P187 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 38 pending, 0 partial, 3
-migrated, 167 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 37 pending, 0 partial, 3
+migrated, 168 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 38
-pending, 3 migrated, 167 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P186 closes GK3D2 without accepting a selected total
-gauge normalization. The next queue unit is
-GK3D3, pinned at SHA-256
-`1c3f81d15ace3ec2c6326c89659596f5b9ff84ac23ef7f0143a53ad92b23b211`.
-Its scale identification, zero-boundary dependence, total coupling, physical
-matter, group, consumer ratios, and substrate scope must be independently
-audited against the affine reference-value ceiling.
+The effort remains active. D4 is discharged, but D1 remains open with 37
+pending, 3 migrated, 168 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P187 closes GK3D3 without accepting physical scale
+labels, a selected matching boundary, or a physical gauge coupling. The next
+queue unit is GK3D4, pinned at SHA-256
+`046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35`.
+Its claim that one construction supplies all three four-dimensional gauge
+sectors must be audited without treating generator trace normalization as a
+dynamical induction mechanism, inheriting unaccepted physical readings from
+EM5, YM1, QCD1, or GK3D1-3, or upgrading a conditional trace ratio into a
+physical weak-angle prediction.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

@@ -1,0 +1,22 @@
+attempt: 0014
+campaign: P187
+candidate: integrated_promotion_boundary
+status: passed
+started_at: '2026-08-11T13:59:00Z'
+finished_at: '2026-08-11T14:02:00Z'
+command: scripts/validate.sh
+result:
+  repository_workflow: passed
+  claims: 179
+  accepted_claims: 179
+  proposals: 0
+  migration_units: 218
+  pending_adjudication: 37
+  memory_files: 766
+  tests_passed: 1633
+  pytest_elapsed_seconds: 163.31
+  elapsed_wall_seconds: 175.70
+  max_rss_kib: 214888
+  exit_status: 0
+scientific_threshold_changed: false
+next_attempt: none_campaign_complete_continue_parent_with_GK3D4

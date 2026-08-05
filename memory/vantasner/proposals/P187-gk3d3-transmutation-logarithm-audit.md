@@ -2,7 +2,7 @@
 description: Audit GK3D3 and derive a provenance-complete scale-matched kinetic ledger
 author: vantasner
 created: '2026-08-11T13:08:00Z'
-updated: '2026-08-11T13:58:00Z'
+updated: '2026-08-11T14:04:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -294,6 +294,13 @@ pass. The graph replay verifies all dependency paths, release closure, source
 hashes, forward narrative ceilings, and the current-first lazy compatibility
 fallback in immutable GK3D5 without recording a version event as science.
 
+Attempt 0014 is the single integrated promotion boundary. It validates the
+179-claim registry, 37-unit pending queue, all 766 memory records, workflow
+skill, and all 1,633 repository tests in 175.70 wall-clock seconds with a clean
+exit and 214,888 KiB peak RSS. No equation, tolerance, predicate, or scientific
+threshold changed during closure, and the unchanged full suite is not rerun
+for these record-only edits.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length
@@ -330,7 +337,9 @@ P187 closes only when the scale-matched affine kinetic object is importable and
 mutation-sensitive, every scale and boundary premise is explicit, candidates
 and source predicates are adjudicated, downstream consumers replay, accepted
 state is synchronized, and the debt ledger is empty. Any failed route queues
-the next materially different attempt.
+the next materially different attempt. This gate is satisfied by attempts 0013
+and 0014: C-VAC-004 is accepted in v0.139.0, GK3D3 is qualified, every debt row
+is discharged, and the parent migration continues with GK3D4.
 
 ## Cross-References
 

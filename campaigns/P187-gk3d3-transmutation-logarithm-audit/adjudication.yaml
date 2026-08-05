@@ -65,5 +65,10 @@ validation_commands:
   - pytest_affected_tests
   - scripts_validate_sh
   - git_diff_check
+integrated_gate:
+  attempt: attempts/0014/result.yaml
+  memory_files: 766
+  tests_passed: 1633
+  exit_status: 0
 debt: []
 status: accepted
