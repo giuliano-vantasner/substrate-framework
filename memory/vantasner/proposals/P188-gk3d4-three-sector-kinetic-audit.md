@@ -2,7 +2,7 @@
 description: Audit GK3D4 and derive a provenance-complete product-sector kinetic normalization ledger
 author: vantasner
 created: '2026-08-11T14:05:00Z'
-updated: '2026-08-11T14:19:00Z'
+updated: '2026-08-11T14:27:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -188,6 +188,28 @@ tally therefore reproduces the source but does not validate its universal or
 physical headline. The next route derives the actual product-carrier weights
 and factorwise affine counterfamily through accepted APIs.
 
+Attempt 0003 passes 28 primary exact checks. On C-PGA-001's actual
+`C^3 tensor C^2` carrier, tensor traces give the color block `I_8`, isospin
+block `(3/2)I_3`, Abelian entry `6*y^2`, and zero cross blocks. The separate
+raw fundamental indices are both one-half, so their equality does not survive
+the spectator factors required by one common product carrier. C-RGE-005's
+supplied-multiplet ledger independently reproduces the Dirac four-thirds
+weights and rejects raw-index, statistics, and representation mutations.
+
+Applying C-VAC-003 factorwise gives
+`Z_a=z_a+b_a*L_a/(8*pi^2)`. The exact residual for the source inverse-weight
+ratio is
+`b_i*z_j-b_j*z_i+b_i*b_j*(L_j-L_i)/(8*pi^2)`, so zero boundaries and one
+common logarithm are sufficient special premises, not derived consequences.
+C-VAC-004 retains the same independent reference values after scale matching.
+C-REP-001 reproduces 3/8 for its supplied table only under a common inverse-
+trace coefficient; independent coefficients give one-half in the verifier's
+counterexample, and positive Abelian rescaling moves the coordinate from 3/8
+to 3/23 at scale two while preserving the covariant law. C-ANO-001 exposes
+three anomaly-free charge branches rather than an anomaly-selected source
+assignment. An independent raw derivation and final nonduplication decision
+remain open.
+
 ## Debt Ledger
 
 The P188 ledger tracks source reachability, generator conventions, product
@@ -199,10 +221,10 @@ consumers, and governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | GK3D4 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source reproduction, source audit, check adjudication, and attempt 0002 |
-| Equal fundamental traces may be mistaken for equal physical sector weights | Derive the actual product-representation trace metric including spectators and matter multiplicities | open |
-| One Abelian D4 loop may be copied to non-Abelian sectors without an accepted determinant and background-field premise | Type every action, representation, loop, regulator, and group factor or reject the transfer | open |
-| Factor-specific tree, counterterm, and matching data may be erased | Preserve one affine boundary and scale ledger per independent factor | open |
-| A trace ratio may be called a physical coupling angle | Reproduce the C-REP-001 iff and mutate the common coefficient and Abelian normalization | open |
+| Equal fundamental traces may be mistaken for equal physical sector weights | Derive the actual product-representation trace metric including spectators and matter multiplicities | discharged by the full-carrier trace blocks and C-RGE-005 mutations in attempt 0003 |
+| One Abelian D4 loop may be copied to non-Abelian sectors without an accepted determinant and background-field premise | Type every action, representation, loop, regulator, and group factor or reject the transfer | discharged by dependency audit and the conditional C-VAC-002/003 plus C-PGA-001/C-RGE-005 composition |
+| Factor-specific tree, counterterm, and matching data may be erased | Preserve one affine boundary and scale ledger per independent factor | discharged by the exact factorwise affine family and ratio residual in attempt 0003 |
+| A trace ratio may be called a physical coupling angle | Reproduce the C-REP-001 iff and mutate the common coefficient and Abelian normalization | discharged by the exact common-law, independent-coefficient, and rho=2 countermodels in attempt 0003 |
 | C-VAC-005 may duplicate accepted semantics | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | open |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D4 imports only SymPy and has no NumPy surface |
 | Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | open |

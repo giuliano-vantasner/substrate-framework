@@ -1,0 +1,27 @@
+campaign: P188
+verifier: verify.py
+sha256: d4e01e358ca37fedae04437f115a718b8ce07bcb938dd84cc9d37d98ed2aeb36
+command: PYTHONPATH=src .venv/bin/python proposals/P188-gk3d4-three-sector-kinetic-audit/verify.py
+oracle: exact_SymPy_algebra_over_accepted_canonical_APIs
+exit_status: 0
+runtime_checks: 28
+lexical_check_calls: 23
+assert_nodes: 0
+terminal_tally: ALL_28_CHECKS_PASS_P188_GK3D4_ACCEPTED_COMPOSITION
+canonical_imports:
+  - product_gauge
+  - gauge_beta
+  - vacuum_polarization
+  - kinetic_scale_matching
+  - charge_traces
+  - chiral_anomalies
+  - source_audit
+  - verification
+load_bearing_mutations:
+  - raw_fundamental_indices_used_without_spectator_dimensions
+  - scalar_statistics_substituted_for_two_Weyl_components
+  - color_representation_removed
+  - independent_affine_boundary_added
+  - independent_couplings_break_the_trace_angle
+  - Abelian_generator_coordinate_rescaled
+scientific_threshold_changed: false

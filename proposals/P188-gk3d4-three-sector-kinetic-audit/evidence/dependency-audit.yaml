@@ -1,0 +1,59 @@
+campaign: P188
+base_release: v0.139.0
+source_dependencies:
+  EM5:
+    disposition: qualified
+    accepted_mappings: [C-GAU-001, C-VAC-001]
+    ceiling: no_D4_lift_total_normalization_or_physical_electromagnetic_sector
+  YM1:
+    disposition: qualified
+    accepted_mappings: [C-NVP-001, C-NAG-001, C-VAC-001]
+    ceiling: D2_complex_scalar_loop_only_no_physical_Yang_Mills_sector_or_D4_lift
+  QCD1:
+    disposition: qualified
+    accepted_mappings: [C-LIE-001, C-LIE-003, C-VAC-001, C-NVP-002]
+    ceiling: D2_complex_scalar_loop_only_no_physical_QCD_sector_or_D4_lift
+  GK1:
+    disposition: qualified
+    accepted_mappings: [C-DIM-009, C-REP-002, C-LIE-001, C-VAC-001, C-NVP-001, C-NVP-002, C-KRN-001, C-KRN-002]
+    ceiling: dimensions_and_trace_conventions_only_no_universal_loop_or_sector_payment
+  GK3D1:
+    disposition: qualified
+    accepted_mappings: [C-GAU-001, C-DIM-009, C-VAC-002]
+    ceiling: conditional_D4_Dirac_loop_no_group_matter_boundary_or_total_normalization
+  GK3D2:
+    disposition: qualified
+    accepted_mappings: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001, C-VAC-003]
+    ceiling: affine_family_with_Z_ref_no_selected_zero_boundary_or_physical_coupling
+  GK3D3:
+    disposition: qualified
+    accepted_mappings: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]
+    ceiling: conditional_scale_matching_with_Z_ref_no_physical_scale_or_coupling
+  WM1:
+    disposition: qualified
+    accepted_mappings: [C-REP-001, C-GAU-001, C-LIE-001]
+    ceiling: supplied_table_trace_ratio_and_conditional_coupling_iff_only
+  WM2:
+    disposition: duplicate_evidence
+    accepted_mappings: [C-REP-001, C-LIE-001]
+    ceiling: common_inverse_trace_coefficient_is_a_separately_supplied_premise
+  SM3:
+    disposition: qualified
+    accepted_mappings: [C-ANO-001]
+    ceiling: anomaly_zero_set_has_multiple_branches_and_does_not_select_Abelian_normalization
+accepted_direct_composition:
+  - C-PGA-001
+  - C-DIM-009
+  - C-VAC-002
+  - C-VAC-003
+  - C-VAC-004
+  - C-REP-001
+  - C-RGE-005
+unaccepted_imports_in_source_headline:
+  - one_common_D4_matter_determinant_and_representation_for_all_three_factors
+  - universal_statistics_mass_threshold_regulator_and_matching_logarithm
+  - zero_affine_boundary_for_every_factor
+  - anomaly_selected_complete_generation_and_Abelian_normalization
+  - physical_gauge_couplings_weak_angle_and_substrate_identification
+dependency_closure_for_corrected_composition: complete
+dependency_closure_for_source_headline: incomplete

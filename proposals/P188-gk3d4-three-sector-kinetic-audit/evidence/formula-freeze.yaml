@@ -1,0 +1,49 @@
+campaign: P188
+candidate: accepted_product_carrier_and_factorwise_affine_composition
+conventions:
+  product_carrier: C3_tensor_C2
+  color_generators: T_a_tensor_I2
+  isospin_generators: I3_tensor_sigma_i_over_2
+  abelian_generator: y_I6
+  connection_kinetic_density: minus_Z_a_F_a_squared_over_4
+  one_loop_matter_weights: b_a_equals_W_s_a_over_3_plus_4_W_f_a_over_3
+exact_product_trace_metric:
+  color_block: identity_8
+  isospin_block: three_halves_identity_3
+  abelian_block: six_y_squared
+  cross_blocks: zero
+  explanation: >-
+    Tensor-product trace factorization supplies spectator dimensions. The raw
+    fundamental indices one-half therefore become one for SU3 on C3 tensor C2
+    and three-halves for SU2 on the same carrier; equal raw indices do not
+    imply equal full matter weights.
+factorwise_affine_family:
+  definition: Z_a_equals_z_a_plus_b_a_L_a_over_8pi_squared
+  logarithm: L_a_equals_log_mu_ref_a_over_mu_a
+  positive_inverse_coordinate: g_a_squared_equals_one_over_Z_a_when_Z_a_positive
+  coupling_ratio: g_i_squared_over_g_j_squared_equals_Z_j_over_Z_i
+  inverse_weight_ratio_condition: >-
+    Z_j*b_i-Z_i*b_j = b_i*z_j-b_j*z_i
+    +b_i*b_j*(L_j-L_i)/(8*pi^2) = 0
+  zero_common_log_specialization: >-
+    z_i=z_j=0 and L_i=L_j imply
+    g_i^2/g_j^2=b_j/b_i
+  general_scope: independent_boundaries_logs_thresholds_and_weights_remain
+scale_matched_specialization:
+  definition: Z_a_equals_z_a_plus_b_a_over_b0_a_g0_a_squared
+  source_branch: >-
+    only z_a=0 and one common b0*g0^2 coordinate for every factor yields
+    Z_a proportional to b_a and the source inverse-weight ratios
+  accepted_basis: [C-VAC-003, C-VAC-004]
+weak_angle:
+  exact_general_coordinate: sin2_equals_Z_2_over_Z_Y_plus_Z_2
+  trace_coordinate: T_2_over_T_Y_plus_T_2
+  equality_condition: Z_2*T_Y_equals_Z_Y*T_2
+  common_inverse_trace_specialization: Z_a_equals_C_T_a
+  supplied_generation_values: {T_2: 2, T_Y: 10/3, trace_coordinate: 3/8}
+  accepted_basis: C-REP-001
+scope_ceiling:
+  - no matter carrier field statistics mass threshold or charge table is inferred from the local factor labels
+  - no common affine boundary logarithm transmutation coordinate or regulator is inferred across factors
+  - no physical gauge coupling weak angle unification scale observation or substrate mechanism is selected
+  - the reserved C-VAC-005 is not promoted if these expressions are complete accepted composition

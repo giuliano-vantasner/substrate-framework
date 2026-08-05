@@ -1,0 +1,24 @@
+attempt: 0003
+campaign: P188
+candidate: accepted_product_carrier_and_factorwise_affine_composition
+status: passed_pending_independent_rederivation
+started_at: '2026-08-11T14:20:00Z'
+finished_at: '2026-08-11T14:27:00Z'
+verification:
+  oracle: exact_SymPy
+  exit_status: 0
+  runtime_checks: 28
+results:
+  raw_fundamental_indices: {SU2: 1/2, SU3: 1/2}
+  full_C3_tensor_C2_indices: {SU3: 1, SU2: 3/2, U1: 6*y^2}
+  cross_factor_trace_blocks: zero
+  factorwise_affine_family: Z_a=z_a+b_a*L_a/(8*pi^2)
+  inverse_weight_ratio_residual: b_i*z_j-b_j*z_i+b_i*b_j*(L_j-L_i)/(8*pi^2)
+  source_ratio_specialization: zero_boundaries_and_common_logarithm
+  trace_angle: 3/8_for_the_supplied_fifteen_state_table
+  coupling_angle_condition: separately_common_inverse_trace_coefficient
+  anomaly_solution_branches: 3
+compatibility:
+  version_only_scientific_failures: 0
+scientific_threshold_changed: false
+next_attempt: independently_rederive_tensor_trace_affine_ratio_and_normalization_results_without_P188_or_new_helpers

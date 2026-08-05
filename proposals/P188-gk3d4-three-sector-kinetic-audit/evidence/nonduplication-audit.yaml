@@ -1,0 +1,29 @@
+campaign: P188
+reserved_claim: C-VAC-005
+status: pending_exact_verification
+nearest_claims:
+  C-PGA-001:
+    owns: exact_standard_product_carrier_generators_cross_commutators_and_local_factor_connection
+    composition_use: its_existing_embedded_matrices_supply_the_countermodel_trace_blocks
+  C-DIM-009:
+    owns: generator_trace_and_coupling_normalization_covariance_and_no_dimensional_lift_ceiling
+  C-VAC-002:
+    owns: conditional_D4_Dirac_loop_and_convention_invariant_group_weight
+  C-VAC-003:
+    owns: arbitrary_invariant_scalar_and_Dirac_weights_and_complete_affine_kinetic_boundary_family
+  C-VAC-004:
+    owns: scale_matched_affine_composition_with_reference_value_and_physical_scale_ceiling
+  C-REP-001:
+    owns: exact_trace_angle_coupling_angle_iff_common_inverse_trace_law_and_Abelian_covariance
+  C-RGE-005:
+    owns: exact_factorwise_Weyl_and_complex_scalar_weights_from_supplied_spectator_degenerate_Dynkin_indices
+candidate_C_added_surface:
+  - tensor_trace_evaluation_of_C_PGA_001s_existing_standard_carrier
+  - factorwise_application_of_C_VAC_003_and_C_VAC_004
+  - source_specific_boundary_and_spectator_countermodels
+distinct_reusable_claim: null_pending_verification
+new_package_API: null_pending_verification
+decision_rule: >-
+  Reserve C-VAC-005 but do not promote it if the primary and independent routes
+  show that the full corrected object is a direct exact composition of the
+  listed accepted APIs and adds no independent consumer semantics.
