@@ -2,7 +2,7 @@
 description: Audit WN7's finite honesty firewall without turning source scans into scientific authority
 author: vantasner
 created: '2026-08-11T20:06:00Z'
-updated: '2026-08-11T20:11:00Z'
+updated: '2026-08-11T20:32:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - honesty-firewall
 - source-audit
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P195 WN7 Honesty Firewall Audit
 
@@ -133,6 +133,25 @@ arbitrary-expression, and P194 convention counterexamples expose their
 ceilings. The next attempt implements mutation-sensitive primary and fresh
 independent audits before deciding nonduplication and disposition.
 
+Attempt 0003 preserves a verifier implementation failure: the independent
+route correctly stopped after one check because its v0.144.0 digest constant
+was mistyped. No scientific predicate ran under an unpinned base. Attempt 0004
+corrects only that pin and closes 32 primary, 21 independent, and nine focused
+checks. Exact finite results survive while adversarial constructions reject
+the semantic headlines.
+
+Attempt 0005 closes the direct source graph. Eleven byte-pinned terminal
+records cover 429 native predicates without fresh or duplicate execution; 18
+graph checks pin all ten qualified dependencies, their individual accepted
+mappings, zero compatibility aliases, and WN7's zero reverse consumers.
+P120, P127, and `audit_source_tokens` subsume every reusable surface, so no
+claim, package API, release, or scientific threshold changes.
+
+Attempt 0006 synchronizes the terminal qualified disposition, immutable
+campaign, generated queue, archived proposal memory, and decision memory. The
+single integrated gate validates 797 memory files and passes all 1,717 tests
+in 173.36 seconds with exit zero. The debt ledger is empty.
+
 ## Debt Ledger
 
 The P195 ledger tracks every source predicate, path, matcher, tag, assignment,
@@ -143,13 +162,13 @@ nonduplication decision, disposition, generated record, and continuation.
 | --- | --- | --- |
 | WN7 output was exposed before P195 | Record exposure and claim no fresh output blinding | discharged |
 | Exact source predicates are unadjudicated | Reproduce and classify every runtime and narrative edge | discharged |
-| Finite tokens may be overread semantically | Test construction, aliases, Unicode, comments, tags, and equivalent semantics | in progress |
-| Assignment and clamp scans may miss data flow | Compare AST, imports, helpers, tables, configuration, and pass conditions | in progress |
-| Local physics fakes may not test accepted objects | Supply object-relevant mutations and counterexamples | in progress |
-| Existing audit machinery may own the full result | Complete claim, API, and theorem nonduplication review | open |
-| Scanner dependencies may grant hidden authority | Type all ten source edges against accepted claims | open |
+| Finite tokens may be overread semantically | Test construction, aliases, Unicode, comments, tags, and equivalent semantics | discharged |
+| Assignment and clamp scans may miss data flow | Compare AST, imports, helpers, tables, configuration, and pass conditions | discharged |
+| Local physics fakes may not test accepted objects | Supply object-relevant mutations and counterexamples | discharged |
+| Existing audit machinery may own the full result | Complete claim, API, and theorem nonduplication review | discharged |
+| Scanner dependencies may grant hidden authority | Type all ten source edges against accepted claims | discharged |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
-| Governed records may disagree | Synchronize disposition, queue, memory, and campaign archive | open |
+| Governed records may disagree | Synchronize disposition, queue, memory, and campaign archive | discharged |
 
 ## Review and Promotion Plan
 
@@ -164,4 +183,5 @@ closes the terminal transaction; later record-only edits get narrow checks.
 
 P195 closes only when the positive exact ledger, semantic ceilings, source
 decision, compatibility, generated records, one terminal gate, and empty debt
-all agree. A passing scanner tally is evidence, not completion.
+all agree. Those conditions are met. A passing scanner tally remains evidence,
+not blanket scientific authority.

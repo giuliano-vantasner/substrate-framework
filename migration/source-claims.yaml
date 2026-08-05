@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 30
-  qualified: 175
+  pending_adjudication: 29
+  qualified: 176
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -10855,13 +10855,15 @@ units:
   - campaigns/P194-wn6-scale-verdict-audit/attempts/0003/result.yaml
   - campaigns/P194-wn6-scale-verdict-audit/attempts/0004/result.yaml
   - campaigns/P194-wn6-scale-verdict-audit/attempts/0005/result.yaml
+  - campaigns/P194-wn6-scale-verdict-audit/attempts/0006/result.yaml
   - memory/vantasner/decisions/C-OSC-002-review.md
   - memory/vantasner/decisions/WN6-qualified-review.md
   note: P194 closes 45 primary and 25 independent exact checks, 19 focused tests, and a nineteen-node
     691-predicate covered source graph before the integrated boundary. The graph passes 47 governed checks
     using byte-identical records without counting duplicate native execution. WN6 and all graph nodes
-    have no legacy NumPy quadrature surface, so no version event affects a scientific verdict. WN7 and
-    MD1 through MD6 remain pending.
+    have no legacy NumPy quadrature surface, so no version event affects a scientific verdict. The single
+    integrated boundary validates 795 memory files and passes all 1,717 tests. WN7 and MD1 through MD6
+    remain pending.
 - source_unit: WN7
   phase: phase-37
   path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
@@ -10898,8 +10900,48 @@ units:
   dynamic_check_calls: 6
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
+  disposition: qualified
   accepted_claims: []
+  qualification: WN7's 59 native predicates survive only as exact finite evidence on six hash-pinned WN
+    files under its declared substrings, whole-line uppercase IMPORT exemption, two clamp spellings, selected
+    assignment regex, and local fixtures. Three decimals do not prove import closure; three empirical
+    names do not prove data independence; selected unit substrings do not prove parameter provenance;
+    and current comment-only tags do not make the exemption safe for executable lines. Construction, aliases,
+    comments, strings, equivalent caps, annotations, and indirect values expose evasion and collision
+    behavior. Inverse-ninth-power, off-grid-zero, late-growth, zero-weight, and free-amplitude counterexamples
+    reject the superpolynomial, global-admissibility, global-crossover, general-weight, and physical-growth
+    overreads. The individual accepted WN claims remain authoritative; WN7 adds no scientific claim, reusable
+    API, or release.
+  evidence:
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/source_adjudication.md
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/WN7-disposition-review.md
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/impact_analysis.md
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/source-reproduction.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/compatibility-audit.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/source-audit.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/check-adjudication.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/input-provenance.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/dependency-audit.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/consumer-audit.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/implementation-audit.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/candidate-comparison.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/evidence/primary-provenance.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/verify.py
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
+  - campaigns/P195-wn7-honesty-firewall-audit/attempts/0002/result.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/attempts/0003/result.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/attempts/0004/result.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/attempts/0005/result.yaml
+  - campaigns/P195-wn7-honesty-firewall-audit/attempts/0006/result.yaml
+  - memory/vantasner/decisions/WN7-qualified-review.md
+  note: P195 closes 32 primary, 21 independent, and 18 graph checks after one preserved verifier-provenance
+    failure. Eleven byte-pinned native records cover 429 predicates without duplicate re-execution. No
+    graph node needs a legacy NumPy compatibility alias, WN7 has no reverse source consumer, and no version
+    event affects a scientific verdict. The single integrated boundary validates 797 memory files and
+    passes all 1,717 tests.
 - source_unit: MD1
   phase: phase-38
   path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py

@@ -3,8 +3,8 @@ source_unit: WN7
 canonical_modules_changed: []
 canonical_tests_changed: []
 campaign_only_files:
-  - proposals/P195-wn7-honesty-firewall-audit/verify.py
-  - proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - campaigns/P195-wn7-honesty-firewall-audit/verify.py
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
 existing_reusable_surfaces:
   - src/substrate_framework/source_audit.py
   - src/substrate_framework/verification.py
@@ -18,4 +18,3 @@ new_package_api: null
 new_scientific_claim: null
 release_change: null
 debt: []
-

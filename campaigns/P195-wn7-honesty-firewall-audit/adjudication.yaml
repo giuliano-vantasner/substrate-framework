@@ -1,0 +1,66 @@
+campaign: P195
+title: WN7 finite honesty-firewall predicate and semantic-ceiling audit
+source_baseline: substrate@6d1f4e0
+source_units: [WN7]
+base_release: v0.144.0
+release_after_adjudication: v0.144.0
+adjudicated_at: '2026-08-11T20:32:00Z'
+selected_candidates:
+  - {id: B, reason: Exact pinned paths bytes tokens exemption and empty matcher results close the positive finite statement.}
+  - {id: D, reason: Construction tag comment string clamp and assignment mutations close sensitivity and specificity ceilings.}
+  - {id: E, reason: Polynomial off-grid late-growth zero-weight and amplitude counterexamples bound all local physics labels.}
+  - {id: F, reason: All ten dependencies retain only their individual accepted mappings and transfer no firewall authority.}
+  - {id: G, reason: WN7-specific predicate adjudication warrants terminal qualification without a scientific claim.}
+  - {id: H, reason: The leaf graph queue memory campaign and debt surfaces close without canonical migration.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: C, decision: rejected_as_weaker_duplicate_of_P120_P127_and_source_audit}
+claims: []
+reviewed_existing:
+  - {id: C-SCR-001, decision: unchanged_conditional_screening_algebra_and_physical_ceiling}
+  - {id: C-BRN-001, decision: unchanged_exact_allocation_and_nonphysical_channel_ceiling}
+  - {id: C-RES-001, decision: unchanged_resolvent_and_nondynamics_ceiling}
+  - {id: C-SG-019, decision: unchanged_entire_cosine_coefficient_theorem}
+  - {id: C-CMB-001, decision: unchanged_inverse_factorial_suppression_theorem}
+  - {id: C-CMB-002, decision: unchanged_normalized_positive_odd_mass_theorem}
+  - {id: C-CMB-003, decision: unchanged_factorial_one_mass_and_tail_theorem}
+  - {id: C-OSC-001, decision: unchanged_one_mode_Fock_coordinate_theorem}
+  - {id: C-OSC-002, decision: unchanged_cosine_remainder_and_harmonic_convention_theorem}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  source_predicate_audit: attempts/0002/result.yaml
+  verifier_pin_failure: attempts/0003/result.yaml
+  exact_routes: attempts/0004/result.yaml
+  graph_review: attempts/0005/result.yaml
+  terminal_gate: attempts/0006/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_firewall_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  disposition_review: reviews/WN7-disposition-review.md
+  terminal_review: memory/vantasner/decisions/WN7-qualified-review.md
+source_disposition:
+  WN7: qualified
+validation_commands:
+  - PYTHONDONTWRITEBYTECODE=1 /home/dan/substrate-framework/.venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P195-wn7-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_source_audit.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

@@ -90,7 +90,7 @@ NODES = {
         "path": "merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py",
         "sha256": "88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50",
         "tally": 59,
-        "record": "proposals/P195-wn7-honesty-firewall-audit/evidence/source-reproduction.yaml",
+        "record": "campaigns/P195-wn7-honesty-firewall-audit/evidence/source-reproduction.yaml",
         "record_sha256": "79b075e0708346e6d8372c2da367efbd73cf36e0582be44d896a575ff3265428",
     },
 }
@@ -182,12 +182,12 @@ def main() -> int:
         and units["WN7"]["accepted_claims"] == [],
     )
     checks.check(
-        "WN7 remains pending until terminal governance synchronization",
-        units["WN7"]["disposition"] == "pending_adjudication",
+        "WN7 is terminally qualified without an accepted claim mapping",
+        units["WN7"]["disposition"] == "qualified"
+        and units["WN7"]["accepted_claims"] == [],
     )
     return checks.finish()
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -9,9 +9,9 @@ canonical_consumers:
   package_tests: []
   accepted_claims: []
 campaign_consumers:
-  - proposals/P195-wn7-honesty-firewall-audit/verify.py
-  - proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
-  - proposals/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
+  - campaigns/P195-wn7-honesty-firewall-audit/verify.py
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - campaigns/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
 replay:
   source_records_reused: 11
   native_checks_covered: 429
@@ -31,4 +31,3 @@ interpretation: >-
   no downstream source, canonical signature, accepted value, or scientific
   threshold.
 debt: []
-

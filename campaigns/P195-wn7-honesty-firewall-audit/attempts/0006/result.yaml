@@ -1,0 +1,39 @@
+attempt: 0006
+campaign: P195
+candidate: governance_synchronization_and_integrated_gate
+status: passed
+started_at: '2026-08-11T20:32:00Z'
+finished_at: '2026-08-11T20:36:00Z'
+source_disposition: {WN7: qualified}
+accepted_mappings: []
+release_after: v0.144.0
+generated_state:
+  claims: 184
+  accepted_claims: 184
+  proposals: 0
+  memory_files: 797
+  migration_units: 218
+  migration_pending: 29
+  migration_partial: 0
+  migration_qualified: 176
+targeted_boundary:
+  native_checks: 59
+  primary_checks: 32
+  independent_checks: 21
+  graph_checks: 18
+  focused_tests: 9
+  exit_statuses_all_zero: true
+integrated_gate:
+  command: scripts/validate.sh
+  tests_passed: 1717
+  pytest_seconds: 173.36
+  wall_seconds: 187.24
+  maximum_resident_kib: 215756
+  exit_status: 0
+  terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+release_sha256: b995916d6e708d29f0f493562741d7ba35bc202ce2784f4aaed7d1dfd5232a0a
+registry_sha256: 0093510e7268724551166623ac9590c33af1d3e28ff32a8a78c78e5bce34e998
+source_claims_sha256: 0ab66c4f3df1ced9564bbbf9022ebf5d42d0dc7837308f892b7b325398954971
+compatibility_event: none
+scientific_threshold_changed: false
+debt: []
