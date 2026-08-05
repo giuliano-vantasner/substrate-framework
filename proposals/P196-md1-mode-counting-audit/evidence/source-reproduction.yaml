@@ -1,0 +1,16 @@
+campaign: P196
+source_unit: MD1
+path: /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py
+sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+execution: native
+terminal_tally: ALL_27_CHECKS_PASS
+wall_seconds: 0.68
+max_rss_kib: 54860
+exit_status: 0
+static_check_calls: 19
+literal_check_calls: 17
+dynamic_check_calls: 2
+assert_statements: 0
+runtime_checks: 27
+compatibility_alias_used: false
+

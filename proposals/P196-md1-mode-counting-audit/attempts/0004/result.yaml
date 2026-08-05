@@ -1,0 +1,34 @@
+attempt: 0004
+campaign: P196
+candidate: native_reproduction_and_claim_edge_audit
+status: passed_source_conditional_math_headline_overstated
+started_at: '2026-08-11T20:46:00Z'
+finished_at: '2026-08-11T20:50:00Z'
+source:
+  sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba
+  terminal_tally: ALL_27_CHECKS_PASS
+  wall_seconds: 0.68
+  max_rss_kib: 54860
+  exit_status: 0
+inventory:
+  static_check_calls: 19
+  literal_check_calls: 17
+  dynamic_check_calls: 2
+  assertions: 0
+compatibility:
+  legacy_references: 0
+  alias_used: false
+  version_only_scientific_failures: 0
+retained:
+  - conditional_per_branch_d3_continuum_DOS
+  - exact_continuum_ball_count_and_gap_independence
+  - target_matched_cutoff_algebra
+rejected_or_qualified:
+  - accepted_framework_derives_a_d3_scalar_medium
+  - d_equals_three_derives_three_mechanical_branches
+  - continuum_ball_volume_is_exact_finite_dynamical_matrix_rank
+  - V_over_a_cubed_is_a_derived_integer_cell_count
+  - target_matched_Debye_cutoff_is_a_microscopic_Brillouin_zone
+  - total_mode_count_resolves_participation_couplings_spectrum_or_rate
+scientific_threshold_changed: true
+next_attempt: implement_general_d_typed_continuum_mode_counting_API_tests_and_two_exact_verification_routes

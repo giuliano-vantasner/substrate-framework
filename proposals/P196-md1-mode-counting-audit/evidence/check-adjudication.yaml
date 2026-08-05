@@ -1,0 +1,33 @@
+campaign: P196
+source_unit: MD1
+runtime_checks: 27
+groups:
+  dispersion_inverse_and_gap:
+    checks: 5
+    verdict: exact_conditional_algebra_with_open_band_domain
+  DOS_formula_dimension_guards_and_gapless_limit:
+    checks: 4
+    verdict: exact_per_branch_continuum_phase_space_formula
+    rejected_extension: accepted_d3_scalar_medium_or_branch_count
+  positive_samples:
+    checks: 5
+    verdict: finite_sign_regressions_only
+  counting_definition_phase_volume_and_cutoff:
+    checks: 3
+    verdict: exact_continuum_sum_rule_conditional_on_target_measure_and_branch
+    rejected_extension: exact_finite_rank_derived_cells_or_microscopic_cutoff
+  integrated_count_gap_independence_and_WN6:
+    checks: 5
+    verdict: exact_continuum_integral_and_gap_independence
+    rejected_extension: participating_mode_count_coupling_closure_or_WN6_physical_refutation
+  free_symbols:
+    checks: 5
+    verdict: exact_symbol_inventory_only
+    rejected_extension: derivation_of_their_relations_or_physical_provenance
+scientific_claim_candidate: C-DOS-001
+scientific_threshold_changed: true
+threshold_change: >-
+  C-SG-018 explicitly leaves density of states separate; P196 proposes the
+  exact conditional continuum DOS while adding stricter branch, measure,
+  discrete-rank, cutoff, and participation ceilings than MD1.
+

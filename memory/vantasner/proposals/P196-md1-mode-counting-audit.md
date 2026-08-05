@@ -100,6 +100,17 @@ candidates, ordered criteria, C-DOS-001's provisional formulas and explicit
 nonclaims, allowed imports, compatibility rule, and debt before renewed source
 execution or detailed predicate audit.
 
+Freeze attempts 0001 and 0002 preserve memory-contract representation failures
+before scientific execution; attempt 0003 corrects the schema and passes.
+Attempt 0004 reproduces all 27 native MD1 checks with exit zero, 0.68 seconds
+wall time, 54,860 KiB maximum resident memory, 19 static check sites, and no
+NumPy compatibility surface. The per-branch continuum DOS, phase-space count,
+gap independence, and target-matching algebra survive. The source does not
+derive a d=3 scalar lift, three branches, exact finite rank, integer cell count,
+microscopic cutoff, or participating-mode closure. Candidate A with the typed
+Candidate C corollary advances to implementation; Candidate E is rejected
+because no accepted foundational inconsistency exists.
+
 ## Debt Ledger
 
 Every new assumption or unresolved distinction remains here until a concrete
@@ -108,11 +119,11 @@ artifact discharges it.
 | Debt | Discharge | Status |
 | --- | --- | --- |
 | MD1 output and formula were previously exposed | Record exposure and claim no fresh blinding | discharged |
-| Spatial dimension may be conflated with branches | Type `d` and `b` independently and mutate them | open |
-| Continuum count may be called exact finite rank | Supply finite lattice-point counterexamples and explicit ceiling | open |
-| `V/a^d` may be treated as derived cells | Audit cell topology divisibility and degrees of freedom | open |
-| Debye cutoff may be called microscopic | Distinguish target matching from a Brillouin zone | open |
-| General-d scalar lift may import pending structure | Keep dimension and isotropy as explicit claim inputs | open |
+| Spatial dimension may be conflated with branches | Type `d` and `b` independently and mutate them | in progress |
+| Continuum count may be called exact finite rank | Supply finite lattice-point counterexamples and explicit ceiling | in progress |
+| `V/a^d` may be treated as derived cells | Audit cell topology divisibility and degrees of freedom | in progress |
+| Debye cutoff may be called microscopic | Distinguish target matching from a Brillouin zone | in progress |
+| General-d scalar lift may import pending structure | Keep dimension and isotropy as explicit claim inputs | discharged by explicit declaration |
 | Candidate may duplicate existing claims | Complete claim and API nonduplication audit | open |
 | Consumers and governed records may diverge | Replay graph and synchronize queue release docs and memory | open |
 
