@@ -1,0 +1,10 @@
+attempt: 0002
+campaign: P200
+candidate: immutable_source_reproduction_and_predicate_adjudication
+status: passed_with_headline_gaps
+terminal_tally: ALL_63_CHECKS_PASS
+exit_status: 0
+compatibility_event: none
+scientific_version_failure: false
+surviving_result: accepted_constant_weight_and_static_factorial_one_composition
+next_attempt: population_dependent_weight_implementation_and_independent_verification

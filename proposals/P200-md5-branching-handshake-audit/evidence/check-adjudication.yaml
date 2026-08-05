@@ -1,0 +1,24 @@
+campaign: P200
+source_unit: MD5
+static_sites: 33
+runtime_checks: 63
+all_runtime_conditions_true: true
+headline_coverage_complete: false
+surviving_predicates:
+  - constant_positive_weight_preserves_C_BRN_001_population_monotonicity
+  - all_nonnegative_factorial_one_masses_are_positive_for_supplied_positive_S
+  - comparison_fraction_decreases_as_a_separately_varied_positive_weight_increases
+  - static_factorial_one_modes_are_independent_of_rho_and_population
+  - conditional_algebraic_frequency_and_doubled_mass_ratios
+headline_gaps:
+  - source_formula_symbol_absence_does_not_derive_N_or_isotope_independence
+  - positive_integer_S_has_two_adjacent_modes_not_unique_floor_S
+  - PN2_floor_count_does_not_imply_exact_omega_equals_Omega_over_S
+  - PN2_has_no_accepted_occupied_band
+  - accepted_MC3_does_not_supply_an_exact_sqrt_two_material_isotope_map
+  - static_positive_mass_is_not_a_physical_branching_rate_or_exhaustive_channel
+verifier_sensitivity:
+  erase_N_weight_derivative: source_constant_weight_check_cannot_detect
+  positive_but_fast_decreasing_weight: reverses_source_monotonicity_headline
+  unique_integer_mode: complete_mode_oracle_fails
+  isotope_independence_by_symbol_absence: explicit_host_dependent_S_countermodel_fails

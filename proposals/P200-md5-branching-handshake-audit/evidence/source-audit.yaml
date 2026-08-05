@@ -1,0 +1,30 @@
+campaign: P200
+source_unit: MD5
+native_execution: {checks: 63, exit_status: 0}
+exact_surviving_core:
+  - C_BRN_001_constant_positive_weight_allocation_and_derivative
+  - C_CMB_003_positive_static_factorial_one_mass_and_complete_modes
+  - comparison_fraction_is_strictly_decreasing_in_a_separately_varied_positive_weight
+  - conditional_rearrangements_after_all_symbols_and_equalities_are_supplied
+source_oracle_gaps:
+  N_independence:
+    gap: differentiating_a_selected_expression_that_omits_N_does_not_derive_its_material_map
+    repair: type_constant_weight_as_a_separate_premise_and_derive_the_general_w_plus_Nw_prime_criterion
+  mode:
+    gap: positive_integer_S_has_modes_S_minus_1_and_S
+    repair: preserve_the_complete_C_CMB_003_mode_tuple_and_both_allocation_minima
+  spectral_location:
+    gap: PN2_is_floor_Omega_over_omega_with_remainder_not_exact_continuous_equality
+    repair: retain_only_conditional_interval_arithmetic_after_exact_inputs
+  isotope:
+    gap: symbol_absence_and_doubled_mass_substitution_do_not_prove_electronic_K_a_equal_host_curvature_phase_scale_or_state_preparation
+    repair: require_independent_two_host_parameter_state_and_rate_maps
+  branching:
+    gap: mathematical_positive_weight_membership_does_not_establish_physical_rate_inputs_or_exhaustive_channels
+    repair: retain_C_BRN_001_physical_ceiling
+unaccepted_headlines:
+  - unique_branching_minimum_inside_an_accepted_physical_band
+  - rho_free_and_N_free_material_spectral_prediction
+  - exact_H_D_sqrt_two_handshake_on_one_material_curve
+  - derived_physical_branching_channel_or_rate
+scientific_version_failures: 0

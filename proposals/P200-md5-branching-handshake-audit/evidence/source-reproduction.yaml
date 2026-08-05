@@ -1,0 +1,22 @@
+campaign: P200
+source_unit: MD5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py
+sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py
+exit_status: 0
+wall_seconds: 0.28
+static_check_calls: 33
+literal_check_calls: 25
+dynamic_check_calls: 8
+runtime_checks: 63
+terminal_tally: ALL_63_CHECKS_PASS
+imports: [sys, sympy]
+numpy_surface: none
+sampled_quadrature: none
+compatibility_event: none
+status: reproduced_as_noncanonical_source_evidence
+ceiling: >-
+  Execution establishes represented algebra and samples only. It does not
+  supply the missing material S isotope state occupied band exhaustive channel
+  or rate premises and it omits the positive-integer adjacent mode tie.

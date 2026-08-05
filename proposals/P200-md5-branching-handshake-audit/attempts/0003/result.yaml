@@ -1,0 +1,17 @@
+attempt: 0003
+campaign: P200
+candidate: source_audit_and_general_weight_candidate_selection
+status: passed
+selected_candidates: [B]
+retained_compositions: [A]
+rejected_candidates: [C, D, E, F]
+selected_claim_candidate: C-BRN-002
+accepted_dependency_closure: [C-BRN-001]
+source_corrections:
+  - positive_weight_alone_does_not_control_population_monotonicity
+  - positive_integer_factorial_one_mass_has_two_adjacent_modes
+  - floor_count_does_not_supply_exact_spectral_equality
+  - symbol_absence_does_not_derive_isotope_independence
+  - mathematical_membership_does_not_supply_physical_branching
+debt: [implement_and_independently_verify_C_BRN_002]
+next_attempt: canonical_implementation_primary_independent_and_focused_verification

@@ -1,0 +1,10 @@
+campaign: P200
+source_unit: MD5
+source_numpy_import: false
+legacy_numpy_trapz_references: 0
+current_numpy_trapezoid_references: 0
+eager_legacy_default_fallbacks: 0
+alias_required: false
+mutable_campaign_numpy_import: false
+compatibility_event: none
+scientific_failure_from_version_event: false

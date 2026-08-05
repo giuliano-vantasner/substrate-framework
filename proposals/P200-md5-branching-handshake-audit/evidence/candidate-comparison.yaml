@@ -1,0 +1,12 @@
+campaign: P200
+criteria_frozen_before_source_execution: true
+candidates:
+  A: {decision: retained_as_accepted_composition, reason: Constant_positive_weight_monotonicity_is_already_C_BRN_001_and_factorial_one_positivity_is_C_CMB_003.}
+  B: {decision: selected, reason: The_exact_w_plus_Nw_prime_criterion_is_distinct_mutation_sensitive_and_directly_closes_the_source_constant_weight_assumption.}
+  C: {decision: rejected_for_current_claim, reason: Expectation_interchange_adds_measure_and_integrability_premises_not_needed_for_MD5.}
+  D: {decision: rejected, reason: Accepted_dependencies_supply_no_two_host_material_state_parameter_or_rate_map.}
+  E: {decision: rejected, reason: Candidate_B_adds_a_distinct_general_local_monotonicity_surface_beyond_C_BRN_001.}
+  F: {decision: rejected, reason: No_independent_accepted_inconsistency_requires_foundational_revision.}
+selected_claim_candidate: C-BRN-002
+selected_dependency_closure: [C-BRN-001]
+static_composition_context: [C-CMB-003]
