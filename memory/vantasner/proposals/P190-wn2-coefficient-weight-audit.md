@@ -2,7 +2,7 @@
 description: Audit WN2 and derive an exact parity-thinned factorial mass and conditional allocation ledger
 author: vantasner
 created: '2026-08-11T15:58:00Z'
-updated: '2026-08-11T16:38:00Z'
+updated: '2026-08-11T16:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -188,6 +188,13 @@ Candidates D through G survive as oracle, conditional composition,
 countermodel, and typing evidence. GitNexus reports low code risk but misses
 untracked additions and semantic source edges, so twelve WN2-centered source
 consumers still require explicit replay before review or promotion.
+
+The semantic closure now replays twelve pinned sources and 524 native checks
+with no legacy NumPy surface. Individual claim review accepts C-CMB-002 as a
+symbolic compatible extension, and source review qualifies WN2 through
+C-SG-019, C-CMB-001, C-CMB-002, and C-BRN-001. WN3 and WN7 repeat the rejected
+guard and WN6 repeats the overbroad verdict, so all eleven consumers remain
+pending. The release and generated-governance transaction remains open.
 
 ## Debt Ledger
 

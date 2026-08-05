@@ -1,0 +1,49 @@
+campaign: P190
+root_source_unit: WN2
+explicit_dependants:
+  WN3:
+    native_tally: 48
+    accepted_reuse: activity_normalization_is_load_bearing
+    rejected_reuse: WN2_mode_and_all_integer_positivity_admissibility_guard
+    ceiling: bosonic_ladder_algebra_does_not_supply_a_complete_interaction_rate_or_physical_weight
+  WN6:
+    native_tally: 32
+    accepted_reuse: exact_factorial_suppression_and_activity_dependent_mass_ratios
+    rejected_reuse: WN2_universal_physical_verdict
+    ceiling: PN2_band_single_vacuum_mode_and_multi_mode_material_count_remain_unaccepted
+  WN7:
+    native_tally: 59
+    accepted_reuse: lexical_and_native_tally_regression_only
+    rejected_reuse: repeated_WN2_WN3_admissibility_guard
+    ceiling: scanner_success_does_not_adjudicate_scanned_physics
+semantic_closure:
+  WN4:
+    native_tally: 43
+    ceiling: proposed_Poisson_family_requires_individual_weight_and_physical_rate_review
+  WN5:
+    native_tally: 41
+    ceiling: conditional_branching_does_not_derive_the_weight_or_material_prediction
+  MD1:
+    native_tally: 27
+    ceiling: mode_count_and_DOS_claims_require_individual_adjudication
+  MD2:
+    native_tally: 26
+    ceiling: phase_variance_and_medium_parameter_map_require_individual_adjudication
+  MD3:
+    native_tally: 41
+    ceiling: vertex_operator_and_oscillator_displacement_require_individual_adjudication
+  MD4:
+    native_tally: 34
+    ceiling: physical_growth_threshold_depends_on_the_pending_MD_chain
+  MD5:
+    native_tally: 63
+    ceiling: branching_and_isotope_predictions_depend_on_the_pending_MD_chain
+  MD6:
+    native_tally: 40
+    ceiling: scanner_and_local_debt_tally_do_not_adjudicate_scanned_physics
+governance_result:
+  WN2_mapping_candidate: [C-SG-019, C-CMB-001, C-CMB-002, C-BRN-001]
+  consumer_dispositions_changed: []
+  downstream_claims_promoted: []
+  pending_consumers_preserved: 11
+  scientific_threshold_changed: false

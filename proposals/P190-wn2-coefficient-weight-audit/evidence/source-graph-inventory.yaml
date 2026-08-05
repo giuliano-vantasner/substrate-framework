@@ -1,0 +1,31 @@
+campaign: P190
+root_source_unit: WN2
+nodes:
+  - {source_unit: WN2, relation: root, native_tally: 70, path: merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py, sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c}
+  - {source_unit: WN3, relation: explicit_dependant, native_tally: 48, path: merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py, sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88}
+  - {source_unit: WN6, relation: explicit_dependant, native_tally: 32, path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py, sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10}
+  - {source_unit: WN7, relation: explicit_dependant, native_tally: 59, path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py, sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50}
+  - {source_unit: WN4, relation: semantic_closure, native_tally: 43, path: merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py, sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2}
+  - {source_unit: WN5, relation: semantic_closure, native_tally: 41, path: merged-framework/bridges/phase-37/bridge_WN5_gb4_preserved_and_new_prediction.py, sha256: 5618ba007e041512a7d207026dc6369c8277312acba4c250219a1629585a7fbc}
+  - {source_unit: MD1, relation: semantic_closure, native_tally: 27, path: merged-framework/bridges/phase-38/bridge_MD1_mode_count_is_a_counting_theorem.py, sha256: e7408667dbb6644e4c88a0a1523b6eb5f9058c628b5650ff0bf72cfa3238e5ba}
+  - {source_unit: MD2, relation: semantic_closure, native_tally: 26, path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py, sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0}
+  - {source_unit: MD3, relation: semantic_closure, native_tally: 41, path: merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py, sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128}
+  - {source_unit: MD4, relation: semantic_closure, native_tally: 34, path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py, sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144}
+  - {source_unit: MD5, relation: semantic_closure, native_tally: 63, path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py, sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb}
+  - {source_unit: MD6, relation: semantic_closure, native_tally: 40, path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py, sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf}
+native_replay:
+  nodes_passed: 12
+  runtime_checks_passed: 524
+  exit_failures: 0
+  replay_command: PYTHONPATH=src_.venv/bin/python_campaigns_P189_replay_source_graph
+  replay_note: the_prior_superset_oracle_replayed_WN1_plus_this_exact_twelve_node_closure
+compatibility_preflight:
+  nodes_with_legacy_surface: []
+  nodes_requiring_alias: []
+  version_only_scientific_failures: 0
+semantic_result:
+  exact_C_CMB_002_reuse: WN2_normalized_mathematical_mass_and_concentration_only
+  invalid_guard_propagation: [WN3, WN7]
+  overstated_verdict_propagation: [WN6]
+  downstream_claims_promoted: []
+  separately_pending_consumers_preserved: 11

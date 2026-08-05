@@ -1,0 +1,69 @@
+campaign: P190
+title: WN2 exact odd factorial mass and coefficient-weight audit
+source_baseline: substrate@6d1f4e0
+source_units: [WN2]
+base_release: v0.140.0
+accepted_release: v0.141.0
+adjudicated_at: '2026-08-11T16:45:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_reproduction_is_source_evidence_only.}
+  - {id: C, reason: The_distinct_activity_dependent_normalized_mass_and_tail_surface_is_exact_importable_and_reusable.}
+  - {id: D, reason: The_Bessel_identity_and_rational_tail_replace_coarse_and_decimal_oracles.}
+  - {id: E, reason: Conditional_branching_composition_preserves_positive_weight_and_zero_endpoint_domains.}
+  - {id: F, reason: Activity_and_mode_one_countermodels_reject_the_invented_universal_admissibility_rule.}
+  - {id: G, reason: Exact_floor_arithmetic_is_separated_from_unaccepted_PN2_physics.}
+  - {id: H, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: B, decision: insufficient_because_accepted_composition_does_not_own_the_exact_infinite_normalization_or_activity_dependent_mode}
+claims:
+  - {id: C-CMB-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-SG-019, decision: unchanged_zero_background_cosine_parity_and_normalization}
+  - {id: C-CMB-001, decision: unchanged_inverse_square_factorial_sequence_and_bounds}
+  - {id: C-BRN-001, decision: unchanged_conditional_allocation_domains}
+unpromoted_claims:
+  - {id: parity_zero_is_universally_physically_absurd, reason: No_accepted_dynamical_continuity_or_channel_premise.}
+  - {id: every_weight_must_be_positive_at_every_ambient_integer, reason: C_BRN_001_distinguishes_the_positive_specialization_from_general_zero_endpoints.}
+  - {id: a_mode_at_one_is_universally_inadmissible, reason: Mode_one_is_valid_for_normalized_mathematical_distributions_and_changes_with_activity.}
+  - {id: normalized_global_order_mass_contradicts_a_fixed_floor_count, reason: The_source_silently_mixes_sample_spaces_and_PN2_is_not_accepted_physics.}
+  - {id: WN3_through_WN7_or_MD1_through_MD6_physical_conclusions, reason: Every_semantic_consumer_remains_separately_pending.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_odd_mass_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-CMB-002-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {WN2: qualified}
+accepted_mappings: [C-SG-019, C-CMB-001, C-CMB-002, C-BRN-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.141.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+debt: []
+status: accepted
