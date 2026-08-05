@@ -1,0 +1,20 @@
+revision: 0001
+campaign: P201
+base_release: v0.149.0
+base_commit: f0eb4213f59e0160c92d5c1a783a1319cc3c353b
+release_sha256: fbb97885d564d6dc57c8b5bdf37cd619484a4f361545ea4ae198917de6b2ed05
+registry_sha256: 75f15bce1236c976d66f1348b104856b3bfb562ce1c3c0b1113c0b47ab8cbf22
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py
+source_sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf
+source_bytes: 12014
+source_lines: 230
+source_history: [7222eed]
+source_worktree_dirty_outside_pinned_file: true
+authority_inputs: [C-SG-018, C-DOS-001, C-QFL-001, C-OSC-001, C-CMB-003, C-VOP-001, C-MKV-001, C-BRN-001, C-BRN-002, C-SG-019, C-OSC-002]
+source_dependencies: [MD1, MD2, MD3, MD4, MD5, WN6]
+reverse_source_consumers: []
+fresh_blinding_claimed: false
+prior_runtime_tally_exposed: 40
+provisional_identifier: null

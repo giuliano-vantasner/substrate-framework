@@ -1,0 +1,27 @@
+campaign: P201
+revision: 0001
+claim_candidate: null
+frozen_before_source_body_inspection: true
+positive_object: exact_finite_MD6_predicate_and_dependency_closed_debt_adjudication_ledger
+predicate_families:
+  - named_scalar_numeric_assignment_inventory
+  - tagged_numeric_constant_location_and_use_inventory
+  - selected_empirical_literal_inventory
+  - declared_import_and_dependency_inventory
+  - source_authored_debt_status_inventory
+  - local_self_test_and_nonvacuity_inventory
+semantic_falsifiers:
+  - indirect_alias_attribute_subscript_configuration_or_imported_assignment
+  - numeric_value_entering_through_expression_call_default_table_or_closure
+  - empirical_comparator_entering_without_selected_literal
+  - tagged_constant_remaining_load_bearing_through_data_flow
+  - absent_import_name_with_transitive_or_dynamic_dependency
+  - debt_marked_paid_while_an_accepted_claim_retains_the_missing_premise
+  - green_scanner_tally_blanket_promoting_dependency_physics
+authority_rule: source_authored_debt_labels_are_evidence_not_claim_authority
+compatibility_rule: >-
+  Mutable code uses numpy.trapezoid or trapezoid_integral. Immutable direct,
+  imported, dynamic, or eagerly evaluated legacy access receives an alias-only
+  replay and does not change a scientific verdict.
+candidate_order: [B, C, D, E, G, A, F]
+comparison_values_used_for_selection: []

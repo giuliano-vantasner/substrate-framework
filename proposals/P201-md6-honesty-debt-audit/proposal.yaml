@@ -1,0 +1,55 @@
+id: P201
+base_release: v0.149.0
+base_commit: f0eb421
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MD6]
+question: >-
+  Which exact finite AST, lexical, tag, import, and debt predicates does MD6
+  establish on the pinned MD1-MD5 bytes, and does any dependency-closed
+  semantic debt result survive beyond the source's self-declared ledger?
+invariants:
+  - A finite scanner proves only its declared proposition on pinned paths bytes decoding syntax token rules tags and scope.
+  - Absence of selected assignments strings or imports does not establish parameter independence closed data flow non-load-bearing constants or scientific debt discharge.
+  - MD1 through MD5 and WN6 are individually qualified and only their accepted claim mappings carry authority.
+  - A source-authored debt status is evidence to audit not authority over the claims or missing physical premises it names.
+  - C-DOS-001 C-QFL-001 C-VOP-001 C-MKV-001 C-BRN-002 and the static branching oscillator and mass claims retain all explicit physical ceilings.
+  - P120 and P195 already own reusable finite scanner methods and semantic evasion ceilings; duplication is not a new claim or API.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and an immutable legacy-name stop is compatibility evidence only.
+allowed_imports:
+  - P120 CM6 and P195 WN7 finite-scanner methods mutation classes and semantic ceilings
+  - src/substrate_framework/source_audit.py lexical hashing and NumPy compatibility APIs
+  - Python AST tokenize Unicode normalization import-graph and exact source-location analysis
+  - accepted MD1 through MD5 and WN6 claims only within their registry statements assumptions and mappings
+  - hash-pinned MD6 and MD1 through MD5 sources as noncanonical evidence only after the freeze gate
+candidates:
+  - id: A
+    description: Reproduce and classify every MD6 predicate self-test and conclusion edge.
+  - id: B
+    description: Retain an exact hash-pinned finite AST lexical tag import and debt-status ledger with explicit scope semantics.
+  - id: C
+    description: Recompute every claimed debt discharge from accepted registry authority and source provenance rather than trusting MD6 labels.
+  - id: D
+    description: Extract a distinct reusable assignment import or data-flow audit only if P120 P195 and source_audit cannot express it coherently.
+  - id: E
+    description: Select no new claim or API if the surviving scanner surface is campaign-local or accepted-source-audit composition.
+  - id: F
+    description: Open a foundational revision only if the accepted registry is independently inconsistent and at least two repairs are required.
+  - id: G
+    description: Decide qualified versus duplicate-evidence disposition and close queue memory campaign compatibility and debt governance.
+uniqueness_evidence: null
+selection_criteria:
+  - pinned scope bytes decoding AST and matcher fidelity
+  - semantic debt closure against accepted authority rather than source labels
+  - import and pass-condition data-flow coverage
+  - evasion sensitivity false-positive control and tag nonauthority
+  - novelty beyond P120 P195 and source_audit
+  - dependency closure assumption economy and physical ceiling preservation
+  - terminal source and governance fit
+claims_proposed: []
+comparators_blinded_until: >-
+  No fresh output blinding is possible because P196 and later source graphs
+  exposed MD6's 40-check tally and the generated queue exposes its scanner and
+  debt categories. P201 freezes candidates, authority rules, semantic
+  falsifiers, scope, and compatibility handling before renewed execution or
+  complete source-body inspection.
+status: active

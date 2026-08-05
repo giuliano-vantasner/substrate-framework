@@ -1,0 +1,27 @@
+attempt: 0001
+campaign: P201
+candidate: contract_candidate_provenance_and_predicate_freeze
+status: passed
+base_release: v0.149.0
+base_commit: f0eb421
+source_unit: MD6
+source_body_opened_for_P201: false
+fresh_blinding_claimed: false
+prior_runtime_tally_exposed: 40
+frozen_candidates: [A, B, C, D, E, F, G]
+claims_proposed: []
+validation:
+  repository: {claims: 189, accepted_claims: 189, proposals: 1, pending_units: 24, partial_units: 0}
+  memory: {files: 823, status: valid}
+  skill_preflight: {ok: 7, warn: 0}
+  diff_check: pass
+compatibility_policy_frozen: true
+scientific_version_failures: 0
+debt:
+  - finite_assignment_scan_semantic_ceiling
+  - tag_data_flow_non_load_bearing_ceiling
+  - literal_absence_data_independence_ceiling
+  - source_authored_debt_self_certification
+  - scanner_nonduplication
+  - dependency_and_graph_closure
+next_attempt: commit_freeze_then_reproduce_and_audit_MD6
