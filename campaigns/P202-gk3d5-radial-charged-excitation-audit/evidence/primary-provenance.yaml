@@ -1,0 +1,7 @@
+campaign: P202
+command: PYTHONDONTWRITEBYTECODE=1_PYTHONPATH=src_python_verify.py
+terminal_tally: ALL_30_CHECKS_PASS
+exit_status: 0
+oracle: exact_SymPy_plus_adaptive_collocation_and_DOP853_shooting
+module_sha256: ba41ec4f5ba26e1db7607c59438520c0def109dffaad3b3b60a4404b63fc80c9
+scientific_version_failures: 0

@@ -1,0 +1,8 @@
+campaign: P202
+command: PYTHONDONTWRITEBYTECODE=1_PYTHONPATH=src_python_reviews_independent_transformed_review.py
+terminal_tally: ALL_16_CHECKS_PASS
+exit_status: 0
+oracle: direct_SymPy_plus_h_equals_r_f_DOP853_and_Brent_shooting
+imports_claim_module: false
+quadrature: numpy.trapezoid
+scientific_version_failures: 0

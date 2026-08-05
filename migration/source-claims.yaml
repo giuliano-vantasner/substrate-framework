@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 23
-  qualified: 182
+  pending_adjudication: 22
+  qualified: 183
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -12545,8 +12545,51 @@ units:
   dynamic_check_calls: 6
   assert_statements: 2
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-U1-001
+  - C-QBL-004
+  qualification: 'C-QBL-004 retains GK3D5''s exact smooth conditional complex-scalar action, radial stationary
+    equation, regular origin, Noether charge, energy, localization domain, exponential tail, and three-dimensional
+    Pohozaev identity. At the separately selected branch coordinate omega=1/2, adaptive collocation over
+    outer radii 20, 30, and 40, direct origin-series shooting, and an independent h=r*f shooting representation
+    provide convergent numerical evidence for a nontrivial nodeless monotone finite-energy branch. The
+    whole existence verdict remains numeric and qualified: no analytic global frequency interval, uniqueness,
+    linear or nonlinear stability, or Vakhitov-Kolokolov theorem is accepted. The profile''s inverse tail
+    length is not a particle rest mass or propagator pole. C-VAC-002 and C-VAC-003 independently declare
+    their determinant matter and provide no map identifying it with this classical branch. No quantization,
+    asymptotic particle, determinant insertion, physical electric charge, absolute scale, observation,
+    or substrate excitation is accepted. GK3D6 remains pending, and already-qualified EL2 retains only
+    its prior accepted mapping without backward authority.'
+  evidence:
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/reviews/source_adjudication.md
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/reviews/C-QBL-004-claim-review.md
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/reviews/GK3D5-disposition-review.md
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/reviews/impact_analysis.md
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/source-reproduction.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/compatibility-audit.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/source-audit.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/check-adjudication.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/formula-freeze.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/input-provenance.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/dependency-audit.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/consumer-audit.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/candidate-comparison.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/numerical-construction.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/implementation-audit.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/primary-provenance.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/evidence/independent-provenance.yaml
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/verify.py
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/reviews/independent_transformed_review.py
+  - campaigns/P202-gk3d5-radial-charged-excitation-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/C-QBL-004-review.md
+  - memory/vantasner/decisions/GK3D5-qualified-review.md
+  note: P202 closes 30 primary, 16 independent, and 28 source-graph checks plus five focused tests. Immutable
+    GK3D5's lazy current-first fallback selects numpy.trapezoid in the current environment; its legacy-name
+    branch is compatibility provenance only. Mutable code uses numpy.trapezoid or the shared trapezoid_integral
+    helper. Zero scientific failures are assigned to version events.
 - source_unit: GK3D6
   phase: phase-41
   path: merged-framework/bridges/phase-41/bridge_GK3D6_oneloop_accuracy_and_exact_ratios.py

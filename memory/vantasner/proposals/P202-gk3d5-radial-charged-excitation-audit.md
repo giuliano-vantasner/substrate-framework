@@ -2,7 +2,7 @@
 description: Derive and audit GK3D5's conditional three-dimensional radial charged branch
 author: vantasner
 created: '2026-08-05T20:06:00Z'
-updated: '2026-08-05T20:06:00Z'
+updated: '2026-08-05T20:41:45Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - radial-qball
 - charged-excitation
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P202 GK3D5 Radial Charged Excitation Audit
 
@@ -135,6 +135,14 @@ fixed, tests positivity rather than monotonicity, and identifies a tail inverse
 length with a quantum loop mass. Those overreads are rejected before an
 independent branch construction.
 
+Attempts 0003 and 0005 select A, B, and H, add the canonical radial API, and
+close 30 primary, 16 transformed-independent, 28 corrected graph, and five
+focused checks or tests. Collocation over radii 20, 30, and 40 and independent
+shooting converge to central amplitude `6.1066779651`; the fine observable,
+Pohozaev, and tail gates exceed the frozen margins. Attempt 0004 preserves a
+graph aggregate bookkeeping error—116 static sites were initially summed as
+126—then corrects only that arithmetic without changing any per-file result.
+
 ## Debt Ledger
 
 The P202 ledger tracks every action premise, normalization, boundary,
@@ -143,15 +151,15 @@ interpretation, consumer, generated record, and continuation.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Native tally and samples are still blinded | Reproduce only after the committed freeze | open |
-| The potential-to-equation normalization may be wrong | Independently vary the declared complex action | open |
-| A BVP solver may converge to the zero solution or a box artifact | Enforce nontriviality and method mesh domain tolerance refinement | open |
-| A numerical branch may lack global consistency | Check charge energy tail origin residual and Pohozaev identity | open |
-| One-dimensional and real-radial claims may be silently lifted | Test the proposed compositions against their exact equations and ceilings | open |
-| Classical charge may be overread as quantum loop matter | Audit quantization state determinant coupling and loop premises | open |
-| C-QBL-004 may duplicate an accepted object | Complete claim API theorem and consumer nonduplication review | open |
-| Reverse consumers may grant authority cyclically | Replay GK3D6 and EL2 with individual accepted mappings | open |
-| Compatibility may masquerade as science | Preflight every mutable and immutable integration-name surface | open |
+| Native tally and samples are still blinded | Reproduce only after the committed freeze | discharged by attempt 0002 |
+| The potential-to-equation normalization may be wrong | Independently vary the declared complex action | discharged by exact action variation and independent current derivation |
+| A BVP solver may converge to the zero solution or a box artifact | Enforce nontriviality and method mesh domain tolerance refinement | discharged by zero-branch rejection and radii 20, 30, and 40 |
+| A numerical branch may lack global consistency | Check charge energy tail origin residual and Pohozaev identity | discharged by attempts 0003 and 0005 |
+| One-dimensional and real-radial claims may be silently lifted | Test the proposed compositions against their exact equations and ceilings | discharged; both proposed lifts leave distinct residuals or field models |
+| Classical charge may be overread as quantum loop matter | Audit quantization state determinant coupling and loop premises | discharged by the claim and source reviews with those readings unpromoted |
+| C-QBL-004 may duplicate an accepted object | Complete claim API theorem and consumer nonduplication review | discharged; the smooth complex 3D stationary branch is distinct |
+| Reverse consumers may grant authority cyclically | Replay GK3D6 and EL2 with individual accepted mappings | discharged by the 28-check graph replay |
+| Compatibility may masquerade as science | Preflight every mutable and immutable integration-name surface | discharged with zero scientific version failures |
 
 ## Review and Promotion Plan
 
@@ -165,8 +173,12 @@ integrated gate, and an empty P202 ledger.
 
 ## Done Gate
 
-P202 closes only when the exact conditional object, existence verdict,
-mutation-sensitive strongest oracle, independent route, dependencies,
-consumers, compatibility, claim review, source disposition, generated state,
-and debt ledger agree. A converged shooting trace or a rejection of the
-quantum headline alone is not completion.
+P202 promotes qualified C-QBL-004 in v0.150.0 and qualifies GK3D5 through
+C-U1-001 and C-QBL-004. The exact conditional object and resolution-bounded
+existence verdict agree across the primary, transformed-independent, graph,
+and focused routes. GK3D6 remains pending, EL2 is unchanged, every physical
+and quantum overread remains unpromoted, mutable integration uses the current
+NumPy name or shared helper, generated authority is synchronized, and the P202
+debt ledger is empty. Attempt 0006 records the single integrated promotion
+gate: all 1,815 tests pass in 172.62 seconds, all 829 memory files validate,
+and the process exits zero after 185.55 wall seconds at 217,480 KiB peak RSS.

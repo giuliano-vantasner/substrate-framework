@@ -1,0 +1,20 @@
+campaign: P202
+root: GK3D5
+direct_reverse_consumers:
+  GK3D6:
+    disposition: pending_adjudication
+    accepted_claims: []
+    verdict: remains_individually_pending
+  EL2:
+    disposition: qualified
+    accepted_claims: [C-TOP-001, C-U1-001]
+    verdict: prior_mapping_unchanged_no_backward_authority
+generated_consumers:
+  - governance_claim_registry
+  - v0.150.0_release
+  - generated_claim_index
+  - generated_claim_memory
+  - generated_release_memory
+  - regenerated_source_claim_queue
+debt_created: []
+verdict: closed

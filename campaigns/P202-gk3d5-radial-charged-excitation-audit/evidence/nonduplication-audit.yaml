@@ -1,0 +1,14 @@
+campaign: P202
+claim: C-QBL-004
+nearest_claims:
+  C-QBL-001: one_dimensional_declared_quartic_profile_equation_and_no_stability
+  C-QBL-002: one_dimensional_full_sine_implicit_profile_branch
+  C-QBL-003: one_dimensional_quartic_scalar_Hessian_only
+  C-PDE-001: real_three_dimensional_radial_IVP_and_finite_time_oscillon_evidence
+distinct_surface:
+  - smooth_complex_3_plus_1_action
+  - exact_stationary_radial_equation_origin_current_energy_tail_and_Pohozaev_identity
+  - refined_nodeless_radial_branch_at_omega_one_half
+duplicate: false
+reserved_identifier_collision: false
+verdict: distinct_compatible_extension

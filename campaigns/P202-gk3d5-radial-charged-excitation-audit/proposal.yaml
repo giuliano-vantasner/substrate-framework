@@ -60,4 +60,4 @@ comparators_blinded_until: >-
   comparator has been inspected. Those values remain blinded until this
   manifest, the formula and numerical freeze, the memory contract, and the
   repository preflight are committed.
-status: active
+status: accepted

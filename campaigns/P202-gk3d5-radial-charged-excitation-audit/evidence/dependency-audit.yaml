@@ -1,0 +1,14 @@
+campaign: P202
+claim: C-QBL-004
+accepted_dependency: C-U1-001
+declared_action_is_new_conditional_input: true
+context_only_not_dependencies: [C-QBL-001, C-QBL-002, C-QBL-003, C-PDE-001, C-VAC-002, C-VAC-003, C-VAC-004]
+closure:
+  current_convention: C-U1-001
+  potential_action_equation_origin_tail_energy_virial: C-QBL-004_declared_model_and_derivation
+  numerical_branch: C-QBL-004_resolution_bounded_evidence
+hidden_imports: []
+fitted_constants: []
+branch_coordinates: [omega]
+physical_parameter_imports: []
+verdict: closed

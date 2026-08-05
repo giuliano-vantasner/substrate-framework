@@ -1,0 +1,12 @@
+attempt: 0005
+campaign: P202
+timestamp_utc: '2026-08-05T20:30:00Z'
+kind: prepromotion_oracle_bundle
+results:
+  primary: {terminal_tally: ALL_30_CHECKS_PASS, exit_status: 0}
+  independent: {terminal_tally: ALL_16_CHECKS_PASS, exit_status: 0}
+  source_graph: {terminal_tally: ALL_28_CHECKS_PASS, exit_status: 0}
+  focused_tests: {tests: 5, passed: 5, exit_status: 0}
+scientific_version_failures: 0
+verdict: promotion_review_ready
+continuation: claim_registry_release_migration_generated_state_and_integrated_gate

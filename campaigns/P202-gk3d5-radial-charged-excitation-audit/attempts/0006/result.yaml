@@ -1,0 +1,29 @@
+attempt: 0006
+campaign: P202
+timestamp_utc: '2026-08-05T20:41:45Z'
+kind: integrated_promotion_gate
+command: /usr/bin/time_-v_scripts/validate.sh
+exit_status: 0
+workflow:
+  claims: 190
+  accepted_claims: 190
+  active_proposals: 0
+  migration_units: 218
+  pending_units: 22
+  partial_units: 0
+memory:
+  files_validated: 829
+  all_valid: true
+skill_validation: valid
+tests:
+  passed: 1815
+  failed: 0
+  pytest_seconds: 172.62
+process:
+  wall_seconds: 185.55
+  maximum_resident_kib: 217480
+generated_docs_current: true
+generated_memory_current: true
+scientific_version_failures: 0
+terminal_line: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+verdict: promotion_gate_passed

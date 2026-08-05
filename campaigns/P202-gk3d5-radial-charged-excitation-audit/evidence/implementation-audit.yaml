@@ -1,0 +1,15 @@
+campaign: P202
+implementation_commit: 44e763b
+module: src/substrate_framework/radial_qball.py
+tests: tests/test_radial_qball.py
+shared_numeric_APIs:
+  - solve_bvp_evidence
+  - solve_ivp_evidence
+  - trapezoid_integral
+pure_import: true
+simulation_on_import: false
+printed_tallies_on_import: false
+mutable_np_trapz_references: 0
+mutable_np_trapezoid_policy: shared_helper_or_current_name
+focused_result: 5_passed
+verdict: canonical_and_reusable

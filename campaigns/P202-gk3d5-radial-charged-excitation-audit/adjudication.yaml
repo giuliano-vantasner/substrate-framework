@@ -1,0 +1,92 @@
+campaign: P202
+title: GK3D5 radial charged branch audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK3D5]
+base_release: v0.149.0
+accepted_release: v0.150.0
+implementation_commit: 44e763b2f3efea7869d8f5182519f82b5a6f0b2f
+adjudicated_at: '2026-08-05T20:34:00Z'
+selected_candidates:
+  - {id: A, reason: The_declared_smooth_complex_action_closes_equation_origin_current_energy_tail_and_Pohozaev_exactly.}
+  - {id: B, reason: Collocation_direct_shooting_and_independent_h_equals_r_f_shooting_pass_every_frozen_numeric_gate.}
+  - {id: H, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: C, decision: not_selected_because_no_global_analytic_existence_interval_was_proved}
+  - {id: D, decision: rejected_because_no_accepted_one_to_three_dimensional_lift_exists}
+  - {id: E, decision: rejected_because_a_distinct_three_dimensional_branch_survives}
+  - {id: F, decision: rejected_because_classical_localization_supplies_no_quantization_determinant_or_particle_identity}
+  - {id: G, decision: rejected_because_no_independent_foundational_inconsistency_exists}
+claims:
+  - {id: C-QBL-004, decision: accepted, verification: numeric_evidence, review: accepted, compatibility: compatible_extension, epistemic: qualified}
+accepted_composition:
+  - {id: C-U1-001, decision: unchanged_Noether_current_convention}
+context_only:
+  - C-QBL-001
+  - C-QBL-002
+  - C-QBL-003
+  - C-PDE-001
+  - C-VAC-002
+  - C-VAC-003
+  - C-VAC-004
+unpromoted_claims:
+  - {id: analytic_existence_for_all_zero_less_omega_less_one_over_sqrt_two, reason: Numeric_branch_evidence_at_one_frequency_is_not_a_global_overshoot_undershoot_theorem.}
+  - {id: radial_Q_ball_linear_or_nonlinear_stability, reason: No_spectrum_VK_theorem_or_time_evolution_stability_oracle_was_closed.}
+  - {id: classical_tail_rate_is_particle_rest_mass, reason: The_tail_inverse_length_is_not_a_propagator_pole_or_total_configuration_energy.}
+  - {id: GK3D5_branch_is_the_C_VAC_002_or_C_VAC_003_loop_field, reason: Accepted_loop_claims_independently_declare_their_free_matter_and_no_identification_map_exists.}
+  - {id: physical_electric_charge_quantum_particle_or_substrate_excitation, reason: Quantization_state_normalization_determinant_coupling_and_physical_maps_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_transformed_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-QBL-004-claim-review.md
+  source_disposition_review: reviews/GK3D5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  numerical_construction: evidence/numerical-construction.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+source_disposition: {GK3D5: qualified}
+accepted_mappings: [C-U1-001, C-QBL-004]
+compatibility:
+  immutable_source_surface: lazy_current_first_fallback_to_legacy_name
+  mutable_campaign_surface: numpy.trapezoid
+  canonical_surface: substrate_framework.numerics.trapezoid_integral
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.150.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_transformed_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_tests_test_radial_qball.py
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  tests_passed: 1815
+  pytest_seconds: 172.62
+  memory_files_validated: 829
+  wall_seconds: 185.55
+  maximum_resident_kib: 217480
+  exit_status: 0
+debt: []
+status: accepted
