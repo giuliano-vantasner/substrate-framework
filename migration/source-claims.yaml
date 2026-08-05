@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 26
-  qualified: 179
+  pending_adjudication: 25
+  qualified: 180
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11238,8 +11238,59 @@ units:
   dynamic_check_calls: 6
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-CMB-003
+  - C-MKV-001
+  qualification: C-CMB-003 retains the normalized static factorial-one mass, adjacent ratio, modes, moments,
+    and tails. C-MKV-001 adds an independently declared immigration-death chain on the nonnegative integers
+    with positive inverse-time rate, zero boundary death rate, exact generator, reversible stationary
+    mass, local drift, PGF, mean, and transition kernel. A distinct positive reversible generator has
+    the same stationary mass, proving that the static law does not select unique dynamics. MD4's 34 predicates
+    reproduce, but its adjacent mass ratio is not a time derivative and positive local drift does not
+    imply monotone sample paths. Its asymptotic threshold algebra is conditional on material parameter
+    maps not supplied by accepted claims. A crossover point mass and hard- coded WN6 comparator do not
+    establish an open or rescued channel, branching fraction, or rate; one discrimination check is literally
+    unconditional. PN2 supplies no accepted band or occupation premise. No material state preparation,
+    granularity map, participation law, physical growth, channel, branching, isotope, reaction, rate,
+    or substrate conclusion follows.
+  evidence:
+  - campaigns/P199-md4-growth-threshold-audit/reviews/source_adjudication.md
+  - campaigns/P199-md4-growth-threshold-audit/reviews/C-MKV-001-claim-review.md
+  - campaigns/P199-md4-growth-threshold-audit/reviews/MD4-disposition-review.md
+  - campaigns/P199-md4-growth-threshold-audit/reviews/impact_analysis.md
+  - campaigns/P199-md4-growth-threshold-audit/evidence/source-reproduction.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/consumer-reproduction.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/compatibility-audit.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/source-audit.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/check-adjudication.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/formula-freeze.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/input-provenance.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/dependency-audit.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/consumer-audit.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/candidate-comparison.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/implementation-audit.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/gitnexus-impact.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/primary-provenance.yaml
+  - campaigns/P199-md4-growth-threshold-audit/evidence/independent-provenance.yaml
+  - campaigns/P199-md4-growth-threshold-audit/verify.py
+  - campaigns/P199-md4-growth-threshold-audit/reviews/independent_birth_death_review.py
+  - campaigns/P199-md4-growth-threshold-audit/reviews/replay_source_graph.py
+  - campaigns/P199-md4-growth-threshold-audit/attempts/0003/result.yaml
+  - campaigns/P199-md4-growth-threshold-audit/attempts/0004/result.yaml
+  - campaigns/P199-md4-growth-threshold-audit/attempts/0005/result.yaml
+  - campaigns/P199-md4-growth-threshold-audit/attempts/0006/result.yaml
+  - campaigns/P199-md4-growth-threshold-audit/attempts/0007/result.yaml
+  - campaigns/P199-md4-growth-threshold-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/C-MKV-001-review.md
+  - memory/vantasner/decisions/MD4-qualified-review.md
+  note: P199 closes 54 primary, 37 independent, and 21 source-graph checks. Eleven byte-pinned native
+    records cover 347 predicates without duplicate native execution; MD5 and MD6 remain pending reverse
+    consumers. MD4 and its graph have no NumPy quadrature surface, so no version event affects a scientific
+    verdict. The single integrated boundary validates 817 memory files and passes all 1,804 tests in 178.70
+    seconds with exit zero.
 - source_unit: MD5
   phase: phase-38
   path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py

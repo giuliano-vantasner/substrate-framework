@@ -1,0 +1,37 @@
+attempt: 0008
+campaign: P199
+candidate: single_integrated_promotion_gate
+status: passed
+target_release: v0.148.0
+claim: C-MKV-001
+source_disposition: {MD4: qualified}
+accepted_mappings: [C-CMB-003, C-MKV-001]
+generated_state:
+  claims: 188
+  accepted_claims: 188
+  proposals: 0
+  memory_files: 817
+  migration_units: 218
+  migration_pending: 25
+  migration_partial: 0
+  migration_qualified: 180
+targeted_boundary:
+  primary_checks: 54
+  independent_checks: 37
+  graph_checks: 21
+  focused_tests: 53
+  exit_statuses_all_zero: true
+integrated_gate:
+  command: scripts/validate.sh
+  status: passed
+  tests_passed: 1804
+  pytest_seconds: 178.70
+  wall_seconds: 192.93
+  peak_rss_kib: 217660
+  exit_status: 0
+release_sha256: a3bc09fb69e92518d347adbb68aa234181e2f97dd0ccf593fc9f52e3d0b1f700
+registry_sha256: 09b04485e2c5f94160adba65afe8ab12d896a0215ca50614a9a77304818ee39e
+source_claims_sha256: 158e33089b1c0cc71251386b324c3da7da229a8ca349269d004abfcca0c57439
+compatibility_event: none
+scientific_threshold_changed: true
+debt: []

@@ -1,0 +1,74 @@
+campaign: P199
+title: MD4 exact immigration-death growth-drift audit
+source_baseline: substrate@6d1f4e0
+source_units: [MD4]
+base_release: v0.147.0
+accepted_release: v0.148.0
+adjudicated_at: '2026-08-05T19:00:00Z'
+selected_candidates:
+  - {id: A, reason: The immigration-death chain supplies an explicit positive generator boundary time scale stationary law PGF mean and transition kernel.}
+  - {id: C, reason: The alternative reversible generator proves that the static factorial-one law does not select unique dynamics.}
+competing_candidates:
+  - {id: B, decision: retained_as_a_pure_birth_transient_competitor_without_a_finite_stationary_target}
+  - {id: D, decision: retained_as_the_selected_process_mean_corollary_not_an_independent_claim}
+  - {id: E, decision: rejected_because_the_time_dependent_process_is_distinct_from_C_CMB_003}
+  - {id: F, decision: rejected_because_no_independent_foundational_inconsistency_requires_medium_revision}
+claims:
+  - {id: C-MKV-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-CMB-003, decision: unchanged_static_normalized_factorial_one_mass_modes_moments_and_tails}
+unpromoted_claims:
+  - {id: static_adjacent_mass_ratio_is_a_time_derivative, reason: Two_distinct_generators_share_the_ratio_and_have_different_drifts_and_transients.}
+  - {id: positive_local_drift_implies_monotone_sample_path_growth, reason: Death_jumps_remain_positive_at_every_positive_state.}
+  - {id: MD4_derives_a_material_growth_threshold, reason: Accepted_claims_supply_no_beta_a_granularity_displacement_or_rate_map.}
+  - {id: the_crossover_point_mass_rescues_or_opens_a_channel, reason: A_static_point_mass_is_not_an_event_probability_branching_fraction_or_rate.}
+  - {id: PN2_band_or_MD5_isotope_conclusions, reason: PN2_has_no_accepted_mapping_and_MD5_remains_pending.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_birth_death_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-MKV-001-claim-review.md
+  source_disposition_review: reviews/MD4-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  consumer_reproduction: evidence/consumer-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {MD4: qualified}
+accepted_mappings: [C-CMB-003, C-MKV-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.148.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0008/result.yaml
+  tests_passed: 1804
+  pytest_seconds: 178.70
+  wall_seconds: 192.93
+  peak_rss_kib: 217660
+  exit_status: 0
+debt: []
+status: accepted

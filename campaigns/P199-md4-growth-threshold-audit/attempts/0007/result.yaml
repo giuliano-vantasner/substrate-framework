@@ -1,0 +1,34 @@
+attempt: 0007
+campaign: P199
+candidate: post_promotion_exact_targeted_replay
+status: passed
+target_release: v0.148.0
+claim: C-MKV-001
+source_disposition: {MD4: qualified}
+accepted_mappings: [C-CMB-003, C-MKV-001]
+generated_state:
+  claims: 188
+  accepted_claims: 188
+  proposals: 0
+  memory_files: 817
+  migration_units: 218
+  migration_pending: 25
+  migration_partial: 0
+  migration_qualified: 180
+targeted_boundary:
+  primary_checks: 54
+  independent_checks: 37
+  graph_checks: 21
+  focused_tests: 53
+  exit_statuses_all_zero: true
+verifier_sha256:
+  primary: 5ab8da0c52641d09948720cdc60d5d2c0d043f45ceb75930fbbeed78bdd1d680
+  independent: 232929cf8c58a47fdf8285176c5c316a69c7dc37f3dfd15a1c87e59de96bfa8e
+  graph: 685e713834abb18006b395454b99e794a8efa00709c39598d19f37dcb1a84a0f
+release_sha256: a3bc09fb69e92518d347adbb68aa234181e2f97dd0ccf593fc9f52e3d0b1f700
+registry_sha256: 09b04485e2c5f94160adba65afe8ab12d896a0215ca50614a9a77304818ee39e
+source_claims_sha256: c17a0af9419ee9b64edf389ca87d254b4111d1ad0852eba40f278234262ef555
+compatibility_event: none
+version_only_scientific_failures: 0
+debt: []
+next_attempt: single_integrated_promotion_gate

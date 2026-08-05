@@ -1,0 +1,16 @@
+attempt: 0006
+campaign: P199
+candidate: frozen_review_boundary_and_complete_promotion_manifest
+status: passed
+claim: C-MKV-001
+recommended_axes:
+  verification: symbolic_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+source_disposition: {MD4: qualified}
+accepted_mappings: [C-CMB-003, C-MKV-001]
+referenced_attempt_records_created_before_validation: [0006, 0007, 0008]
+version_only_scientific_failures: 0
+debt: []
+next_attempt: generated_state_and_targeted_replay

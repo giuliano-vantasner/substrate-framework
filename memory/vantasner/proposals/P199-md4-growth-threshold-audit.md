@@ -2,7 +2,7 @@
 description: Replace static weight-ratio growth language with an explicitly generated threshold process
 author: vantasner
 created: '2026-08-11T22:50:00Z'
-updated: '2026-08-11T22:50:00Z'
+updated: '2026-08-05T19:03:19Z'
 tags:
 - substrate-framework
 - research-arc
@@ -10,8 +10,8 @@ tags:
 - birth-death
 - growth-threshold
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P199 MD4 Growth Threshold Audit
 
@@ -103,10 +103,21 @@ checks, runtime checks, dependencies, and reverse consumers separately.
 
 ## Attempts and Continuation
 
-Attempts are append-only. Attempt 0001 is the durable contract, manifest,
-provenance, and formula freeze. A failure must identify implementation,
-representation, process choice, target, or foundation and continue without
-lowering the bar.
+Attempts are append-only. Attempt 0001 freezes the durable contract, manifest,
+provenance, and formulas. Attempt 0002 reproduces all 34 source predicates and
+records the unconditional headline check, hard-coded comparator, missing
+material map, and static-ratio ceiling. Attempt 0003 selects the explicit
+immigration-death process and constructive nonuniqueness witness while
+retaining pure birth and the deterministic mean as competitors.
+
+Attempt 0004 closes 54 primary and 37 independent checks plus 53 focused
+tests. Attempt 0005 closes the eleven-node graph: 347 native predicates are
+covered without duplicate execution and 21 graph checks pass. Attempt 0006
+freezes the individual claim and source reviews before promotion. Attempt 0007
+closes the generated post-move targeted boundary. Attempt 0008 closes the
+single integrated promotion gate: 1,804 tests pass in 178.70 seconds, all 817
+memory records validate, and the process exits zero after 192.93 wall seconds
+at 217,660 KiB peak RSS.
 
 ## Debt Ledger
 
@@ -115,13 +126,13 @@ into unsupported growth or rescue.
 
 | Debt | Discharge | Status |
 | --- | --- | --- |
-| Prior execution prevents fresh blinding | Preserve P196 exposure and freeze before renewed P199 work | open pending validated attempt 0001 |
-| Static ratio may be called a time derivative | Supply an explicit generator and counterexample processes | open |
-| Detailed balance may be treated as unique dynamics | Exhibit distinct rates with the same stationary mass | open |
-| Local positive drift may be called monotone growth | Separate conditional drift, ensemble mean, and sample paths | open |
-| Rate scale and S may be imported from pending prose | Type both independently and audit every accepted mapping | open |
-| Claim may duplicate C-CMB-003 | Complete state-and-generator nonduplication review | open |
-| Downstream consumers may inherit MD4 wholesale | Replay exact graph and preserve individual dispositions | open |
+| Prior execution prevents fresh blinding | Preserve P196 exposure and freeze before renewed P199 work | discharged by attempt 0001 |
+| Static ratio may be called a time derivative | Supply an explicit generator and counterexample processes | discharged by primary and independent generator checks |
+| Detailed balance may be treated as unique dynamics | Exhibit distinct rates with the same stationary mass | discharged by the alternative reversible generator |
+| Local positive drift may be called monotone growth | Separate conditional drift, ensemble mean, and sample paths | discharged by positive death-jump counterexample |
+| Rate scale and S may be imported from pending prose | Type both independently and audit every accepted mapping | discharged by C-CMB-003-only dependency closure |
+| Claim may duplicate C-CMB-003 | Complete state-and-generator nonduplication review | discharged by the time-process novelty audit |
+| Downstream consumers may inherit MD4 wholesale | Replay exact graph and preserve individual dispositions | discharged by 21-check graph with MD5 and MD6 pending |
 
 ## Review and Promotion Plan
 
@@ -137,3 +148,5 @@ P199 closes only when a positive importable mechanism exists, premises and
 dependency closure are explicit, competing concepts are adjudicated, strong
 oracles and mutations pass, every affected consumer replays, claim and source
 reviews agree, generated records synchronize, and the debt ledger is empty.
+C-MKV-001 is accepted in v0.148.0, MD4 is qualified, all listed debt is
+discharged, canonical records agree, and attempt 0008 satisfies this gate.
