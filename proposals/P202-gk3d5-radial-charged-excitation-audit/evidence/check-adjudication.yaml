@@ -1,0 +1,21 @@
+campaign: P202
+source_unit: GK3D5
+runtime_predicates: 13
+checks:
+  - {label: GK3D5.1a, verdict: exact_conditional_identity, ceiling: declared_action_not_accepted_medium_derivation}
+  - {label: GK3D5.1b, verdict: exact_cubic_series, ceiling: C_QBL_001_equation_is_declared_and_one_dimensional}
+  - {label: GK3D5.2a, verdict: exact_positive_static_scaling_algebra, ceiling: declared_three_dimensional_action_only}
+  - {label: GK3D5.2b, verdict: exact_if_negative_coefficient_scaling_algebra, ceiling: abstract_negative_symbol_not_actual_branch_or_fixed_charge_functional}
+  - {label: GK3D5.3a, verdict: exact_linear_tail_rate, ceiling: inverse_tail_length_not_rest_or_loop_mass}
+  - {label: GK3D5.3b, verdict: exact_tail_sign_and_selected_frequency_membership, ceiling: no_VK_or_quantum_stability}
+  - {label: GK3D5.4a, verdict: finite_double_precision_shooting_evidence, ceiling: no_solver_status_domain_refinement_or_infinite_domain_theorem}
+  - {label: GK3D5.4b, verdict: positive_finite_truncated_integrals, ceiling: no_full_tail_convergence_or_quantum_coupling}
+  - {label: GK3D5.5a, verdict: fitted_tail_agrees_with_exact_kappa, ceiling: kappa_not_loop_mass}
+  - {label: GK3D5.5b, verdict: positivity_on_finite_interval, ceiling: condition_does_not_check_monotonicity_or_ground_state}
+  - {label: GK3D5.6a, verdict: same_method_fixed_domain_tolerance_regression, ceiling: no_domain_mesh_or_independent_method_refinement}
+  - {label: GK3D5.6b, verdict: coarse_run_moves_selected_core_observables, ceiling: does_not_repair_shared_method_and_domain_gaps}
+  - {label: GK3D5.6c, verdict: no_absolute_or_empirical_value_inserted, ceiling: omega_is_selected_and_quantum_mass_identification_is_unchecked}
+accepted_by_native_execution: 13
+accepted_as_exact_or_numeric_source_evidence: 13
+accepted_with_source_headline_interpretation: 0
+scientific_version_failures: 0

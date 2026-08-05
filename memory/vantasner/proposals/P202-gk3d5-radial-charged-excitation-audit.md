@@ -124,6 +124,17 @@ initial debt before source execution or body inspection. Later attempts stay
 append-only and change method, representation, candidate, or target when a
 route fails without weakening the positive objective.
 
+Attempt 0002 reproduces all 13 native predicates in 13.28 seconds with exit
+zero. The immutable source safely selects `np.trapezoid` in the current
+environment; its unevaluated short-circuit fallback is compatibility evidence
+only. Exact potential, series, scaling, and tail identities survive, as does a
+finite fixed-domain shooting trace. The accepted registry supplies neither
+EM6 stability nor a complex P3D lift. The source never checks solver success,
+truncates observables at numerical turnaround, holds the domain and method
+fixed, tests positivity rather than monotonicity, and identifies a tail inverse
+length with a quantum loop mass. Those overreads are rejected before an
+independent branch construction.
+
 ## Debt Ledger
 
 The P202 ledger tracks every action premise, normalization, boundary,

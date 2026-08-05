@@ -1,0 +1,77 @@
+campaign: P202
+source_unit: GK3D5
+exact_surviving_source_surface:
+  - dU_drho_times_f_equals_sin_f_over_two_for_the_declared_U
+  - small_amplitude_cubic_series_matches_the_declared_C_QBL_001_equation
+  - positive_static_gradient_and_potential_scaling_has_no_stationary_positive_scale
+  - an_abstract_negative_effective_potential_coefficient_allows_a_scaling_root
+  - localized_tail_requires_omega_squared_below_one_half_and_has_kappa_squared_one_half_minus_omega_squared
+  - fixed_omega_0p6_shooting_produces_a_long_nontrivial_positive_numerical_separatrix_before_roundoff_turnaround
+  - truncated_positive_energy_charge_and_tail_fit_are_finite_and_reproduce_under_tolerance_step_and_quadrature_refinement
+authority_gaps:
+  potential_provenance: >-
+    C-QBL-001 and C-QBL-002 explicitly declare their one-dimensional profile
+    equations rather than derive this 3+1 action from accepted medium physics.
+  radial_lift: >-
+    P3D1 and C-PDE-001 concern a separately declared real radial sine-Gordon
+    IVP and do not lift a complex stationary field or its solution.
+  stability: >-
+    C-QBL-001 states that the charge slope establishes no VK spectral orbital
+    or nonlinear stability theorem. The source's interval is therefore not an
+    accepted stability window.
+  loop_matter: >-
+    C-VAC-002 and C-VAC-003 independently declare free quantum loop fields.
+    No accepted claim maps a classical Q-ball to either determinant.
+oracle_gaps:
+  assert_helper: >-
+    Every check condition is enforced inside Python assert and disappears
+    under optimized execution; the normal recorded command is assert-enabled,
+    but the helper is not a reusable verifier oracle.
+  derrick_evasion: >-
+    The check supplies an abstract negative E_pot symbol and proves the
+    resulting algebra. It does not integrate the actual branch or derive the
+    fixed-charge scaling functional.
+  shooting:
+    - solve_ivp_success_is_never_checked
+    - finite_radius_classification_can_call_a_small_nonzero_endpoint_an_overshoot_without_a_zero_crossing
+    - seventy_bisections_exceed_double_precision_information
+    - exponentially_growing_roundoff_mode_is_expected_and_then_truncated
+    - no_infinite_domain_existence_theorem_follows_from_the_finite_bracket
+  observables:
+    - energy_and_charge_are_truncated_at_the_first_tail_turnaround
+    - no_domain_refinement_is_run
+    - no_independent_BVP_or_discretization_is_compared
+    - finiteness_of_a_truncated_array_integral_is_not_infinite_domain_finiteness
+  nodeless_monotone:
+    condition: positivity_only_on_1e_minus_6_through_20
+    missing: [derivative_sign, full_reliable_interval, infinite_tail]
+  refinement:
+    held_fixed: [outer_radius_40, shooting_formalism, event_classifier, double_precision_central_amplitude]
+    varied: [max_step, solver_tolerances, quadrature_points]
+    ceiling: tolerance_regression_not_mesh_domain_or_method_convergence
+  fit_trap:
+    gap: omega_0p6_is_a_selected_family_coordinate_not_a_derived_operating_point
+    surviving_statement: no_absolute_scale_or_empirical_target_is_inserted
+physical_corrections:
+  energy_and_charge: >-
+    For the independently declared action their source integrands have the
+    correct conditional normalization, but they are dimensionless classical
+    observables until an absolute conversion is supplied.
+  kappa: >-
+    sqrt(one_half-minus-omega_squared) is the bound-profile inverse tail length.
+    It is neither the Q-ball rest energy nor the independently declared free
+    propagator mass in C-VAC-002 or C-VAC-003.
+  quantum_status: >-
+    A classical localized charged solution does not supply quantization,
+    asymptotic one-particle states, statistics, determinant sign, loop vertex,
+    form factor, or a controlled point-particle derivative expansion.
+unaccepted_headlines:
+  - EM6_derived_the_full_action_or_a_VK_stability_window
+  - P3D_proved_the_complex_stationary_dimension_lift
+  - the_source_finite_shooting_bracket_is_an_existence_theorem
+  - source_refinement_establishes_infinite_domain_observables
+  - positivity_to_radius_20_proves_monotone_ground_state
+  - kappa_is_the_loop_particle_mass_or_GK3D3_IR_matching_mass
+  - a_classical_Q_ball_is_the_quantum_field_integrated_out_by_GK3D1_through_GK3D4
+  - no_new_ontology_import_or_free_parameter
+scientific_version_failures: 0

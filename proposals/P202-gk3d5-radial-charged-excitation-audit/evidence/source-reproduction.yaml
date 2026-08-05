@@ -1,0 +1,32 @@
+campaign: P202
+source_unit: GK3D5
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py
+sha256: 201d4fd2594a73c7b59dbe81e0e66f1d3d43a52605a26174c70bd072626992e2
+git_blob: be0de7bae6e847b65e57c8793f31f4c2ace14de4
+bytes: 25839
+lines: 500
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 /usr/bin/time -v .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py
+exit_status: 0
+wall_seconds: 13.28
+max_rss_kib: 119828
+static_check_call_sites: 13
+literal_check_call_sites: 7
+dynamic_check_call_sites: 6
+assert_statements: 2
+runtime_predicates: 13
+terminal_tally: ALL 13 CHECKS PASS
+source_samples:
+  omega: 0.6
+  analytic_kappa: 0.374166
+  primary: {central_amplitude: 4.788916014, energy: 1827.39448, charge: 2574.56070, fitted_kappa: 0.373983}
+  refined: {central_amplitude: 4.788916014, energy: 1827.39448, charge: 2574.56070, fitted_kappa: 0.373983}
+  coarse: {central_amplitude: 4.788918548, energy: 1827.39531, charge: 2574.56197, fitted_kappa: 0.373983}
+interpretation: >-
+  Native execution establishes thirteen source predicates under the exact
+  fixed-domain shooting truncation and normal assert-enabled interpreter. It
+  does not establish an infinite-domain branch, fixed-charge stability,
+  quantum particle or loop-field identity, physical mass, or accepted
+  substrate provenance.

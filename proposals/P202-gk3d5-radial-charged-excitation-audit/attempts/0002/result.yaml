@@ -1,0 +1,34 @@
+attempt: 0002
+campaign: P202
+route: compatibility_preflight_native_reproduction_and_predicate_adjudication
+status: passed
+native:
+  checks: 13
+  assertions: 2
+  exit_status: 0
+  wall_seconds: 13.28
+  max_rss_kib: 119828
+compatibility:
+  current_references: 1
+  legacy_references: 1
+  eager_legacy_default_fallbacks: 0
+  alias_used_current_environment: false
+  scientific_version_failures: 0
+retained:
+  - conditional_potential_derivative_and_cubic_series
+  - static_and_abstract_negative_scaling_algebra
+  - exact_tail_rate_and_gap_domain
+  - finite_fixed_domain_shooting_and_truncated_observable_evidence
+rejected_overreads:
+  - accepted_medium_action_and_dimension_lift
+  - VK_or_nonlinear_stability
+  - infinite_domain_existence_and_observable_convergence
+  - monotonic_ground_state_from_positivity_only
+  - inverse_tail_length_as_quantum_loop_mass
+  - classical_soliton_as_free_determinant_field
+debt:
+  - derive_the_complete_action_charge_energy_fixed_omega_and_fixed_charge_scaling_ledgers
+  - construct_a_nontrivial_branch_with_independent_methods_and_domain_mesh_tolerance_refinement
+  - decide_C_QBL_004_scope_from_the_strongest_surviving_oracle
+  - replay_dependencies_and_reverse_consumers
+next_attempt: implement_and_compare_candidates_A_B_and_C_without_using_source_sample_values_as_targets

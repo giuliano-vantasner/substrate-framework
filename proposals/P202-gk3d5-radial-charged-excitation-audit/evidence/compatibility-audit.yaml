@@ -1,0 +1,27 @@
+campaign: P202
+source_unit: GK3D5
+numpy_version_policy: immutable_source_alias_only_when_required
+source_surface:
+  numpy_aliases: [np]
+  direct_legacy_attributes: 1
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  direct_current_attributes: 0
+  dynamic_current_getattrs: 1
+  imported_current_names: 0
+  eager_legacy_default_fallbacks: 0
+  expression: getattr_np_trapezoid_None_or_np_trapz
+  semantics: safe_short_circuit_current_first_fallback
+native_environment:
+  current_name_available: true
+  legacy_branch_evaluated: false
+  alias_used: false
+  exit_status: 0
+mutable_policy:
+  required_API: numpy.trapezoid_or_trapezoid_integral
+  planned_new_legacy_references: 0
+scientific_version_failures: 0
+interpretation: >-
+  The immutable source contains one reachable-on-old-NumPy legacy fallback but
+  short-circuits safely to numpy.trapezoid in the current environment. It is a
+  compatibility surface, not evidence for or against the charged branch.
