@@ -1,0 +1,32 @@
+campaign: P189
+index:
+  refreshed_at_commit: 3218ab4
+  nodes: 28939
+  edges: 44853
+  clusters: 394
+  processes: 2
+preimplementation_impact:
+  target: vacuum_one_high_coefficient
+  file: src/substrate_framework/cosine_vertices.py
+  direct_dependents: 0
+  affected_processes: 0
+  risk: LOW
+  caveat: graph_omits_known_pytest_consumers_so_text_and_test_replay_remain_required
+root_export_probe:
+  target: src/substrate_framework/__init__.py
+  result: target_not_found
+precommit_detect_changes:
+  scope: all
+  changed_symbols: 1
+  changed_files: 1
+  affected_processes: 0
+  risk: LOW
+  tracked_symbol: src/substrate_framework/__init__.py:__all__
+  limitation: untracked_new_module_tests_and_verifiers_are_not_reported_by_the_graph_diff
+manual_direct_consumers:
+  - tests/test_factorial_suppression.py
+  - proposals/P189-wn1-factorial-suppression-audit/verify.py
+manual_existing_dependency_consumers:
+  - tests/test_cosine_vertices.py
+  - campaigns/P109-pn1-cosine-mixed-vertex-audit/verify.py
+decision: low_runtime_blast_radius_but_full_scientific_consumer_replay_still_required

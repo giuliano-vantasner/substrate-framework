@@ -1,0 +1,45 @@
+campaign: P189
+claim: C-CMB-001
+canonical_module: src/substrate_framework/factorial_suppression.py
+canonical_module_sha256: 7ae041ec7a106b1204402f10d944dc1f7334c2971bc8780bd69f60fe16e20ec7
+canonical_dependency: src/substrate_framework/cosine_vertices.py
+new_API:
+  dataclasses:
+    - FactorialSuppressionEvidence
+    - SuperpolynomialTailEvidence
+    - FactorialDecadeBound
+  functions:
+    - exact_rational_log10_floor
+    - cosine_one_high_coefficient_square
+    - factorial_suppression_evidence
+    - factorial_superpolynomial_tail
+    - factorial_decade_bound
+public_exports: 8
+pure_import: true
+import_side_effects: none
+exact_arithmetic:
+  coefficient_and_sequence: SymPy_exact
+  decimal_floor: integer_comparisons_only
+  decade_bound: rational_and_integer_comparisons_only
+  superpolynomial_tail: integer_ceiling_and_exact_ratio
+numeric_precision_parameter: none
+physical_scope_flags:
+  - coefficient_square_is_not_a_rate
+  - exposed_order_is_not_a_physical_subdivision_premise
+tests:
+  canonical: tests/test_factorial_suppression.py
+  canonical_sha256: 53200dd0ead484095626081641614c26d6189073d270129aef012ef071503240
+  focused_paths:
+    - tests/test_factorial_suppression.py
+    - tests/test_cosine_vertices.py
+    - tests/test_symmetric_spin.py
+    - tests/test_branching.py
+    - tests/test_source_audit.py
+  focused_passed: 76
+  public_import_smoke: 8_exports_passed
+validation_theater_removed:
+  - hard_coded_proof_verdict_booleans_removed_from_dataclasses
+  - independent_per_power_tallies_collapsed_into_one_construction_check
+  - universal_claims_use_analytic_ratio_and_series_arguments_not_finite_grids
+scientific_threshold_changed: false
+legacy_numpy_surface_in_mutable_P189: none

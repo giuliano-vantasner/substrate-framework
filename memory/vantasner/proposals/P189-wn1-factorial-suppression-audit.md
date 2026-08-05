@@ -2,7 +2,7 @@
 description: Audit WN1 and derive a normalization-complete exact factorial-suppression ledger
 author: vantasner
 created: '2026-08-11T14:58:00Z'
-updated: '2026-08-11T15:06:00Z'
+updated: '2026-08-11T15:32:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -227,6 +227,33 @@ nine, and eleven. C-CMB-001 is provisionally distinct from C-SG-019 and has
 four direct plus twelve transitive source consumers; implementation and
 independent verification remain open.
 
+Attempt 0004 implements the distinct surface in the pure
+`factorial_suppression.py` module and exports eight public names. The API
+composes the accepted general cosine coefficient rather than copying it, uses
+exact rational or integer comparisons for decimal floors and decade bounds,
+and exposes a constructive half-tail certificate for arbitrary fixed
+nonnegative powers. Seventy-six focused tests and all eight public imports
+pass.
+
+The 67-check primary oracle and a raw 27-check independent rederivation pass.
+They derive the rational exponential tail, twentieth-power integer margin,
+recurrence, universal reciprocal direction, general normalization, background
+sensitivity, exact decade exponents, geometric limit, and zero-interaction and
+zero-spectral-density countermodels. The independent route imports neither the
+new module nor `cosine_vertices.py`. The first primary run stopped only because
+two structurally equal SymPy ratio forms were compared by raw equality; the
+repair uses `combsimp` and changes no scientific statement.
+
+This pass also removed validation theater discovered during implementation:
+three hard-coded proof-verdict booleans were deleted from the data objects, a
+nonempty symbolic inequality probe was replaced by the explicit positive
+reciprocal-gap identity, and twenty-five repeated per-power review tallies were
+collapsed into one constructive check. Compatibility audit finds no NumPy
+surface in WN1 or the mutable implementation and verifiers. GitNexus reports
+low process risk but does not see the untracked new files or known pytest
+consumers, so its limitation is recorded and cannot substitute for source and
+test replay.
+
 ## Debt Ledger
 
 The P189 ledger tracks source reachability, coefficient normalization,
@@ -238,13 +265,13 @@ governed-state agreement.
 | --- | --- | --- |
 | Source body was exposed before the P189 contract | Record exposure and make no blinding claim | disclosed in base provenance and comparator freeze |
 | WN1 predicates, imports, runtime, and conclusion edges are unaudited | Pin and adjudicate every executable and narrative edge | discharged by attempt 0002 and the source, reproduction, compatibility, and check audits |
-| Unit normalization may erase amplitude and coordinate scales | Derive the general C-SG-019 magnitude ledger and mutate every scale | open |
-| A finite exponential grid may masquerade as a universal proof | Supply an analytic positive-series proof and sensitive direction countercheck | open |
-| Arbitrary-precision digits may masquerade as a rigorous bound | Derive exact rational and integer exponent bounds or give explicit enclosures | open |
-| Squared classical coefficient may be called a Golden-rule rate | Type every state, interaction, normalization, spectral, and validity premise or reject the reading | open |
-| PN2 decade inputs may be called a physical subdivision prediction | Preserve PN2's qualified bookkeeping ceiling and treat band values as supplied examples only | open |
-| C-CMB-001 may duplicate C-SG-019 or elementary math | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or alias-replay immutable legacy access without candidate rejection | open |
+| Unit normalization may erase amplitude and coordinate scales | Derive the general C-SG-019 magnitude ledger and mutate every scale | discharged by exact API, background and scale mutations, and both oracles |
+| A finite exponential grid may masquerade as a universal proof | Supply an analytic positive-series proof and sensitive direction countercheck | discharged by the positive-series and reciprocal-gap proof with mutations |
+| Arbitrary-precision digits may masquerade as a rigorous bound | Derive exact rational and integer exponent bounds or give explicit enclosures | discharged by 49/18, 11/4, and the integer twentieth-power proof |
+| Squared classical coefficient may be called a Golden-rule rate | Type every state, interaction, normalization, spectral, and validity premise or reject the reading | discharged mathematically by two null countermodels; consumer narratives remain to replay |
+| PN2 decade inputs may be called a physical subdivision prediction | Preserve PN2's qualified bookkeeping ceiling and treat band values as supplied examples only | discharged in the API and primary oracle; consumer narratives remain to replay |
+| C-CMB-001 may duplicate C-SG-019 or elementary math | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | API and theorem distinct; consumer verification remains open |
+| Legacy NumPy access may masquerade as science | Repair mutable code or alias-replay immutable legacy access without candidate rejection | discharged for WN1 and all P189 mutable code; consumer preflight remains open |
 | Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | open |
 
 ## Review and Promotion Plan

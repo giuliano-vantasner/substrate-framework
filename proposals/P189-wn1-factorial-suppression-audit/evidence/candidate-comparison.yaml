@@ -9,8 +9,8 @@ candidates:
     verdict: retained_nonduplication_baseline
     reason: C-SG-019 owns the coefficient and factorial limit but not the universal squared recurrence tail or exact decade theorem.
   C:
-    verdict: provisionally_selected
-    reason: The frozen exact factorial surface is distinct and has four direct plus twelve transitive source consumers.
+    verdict: selected_exact_API_and_claim_candidate
+    reason: The frozen exact factorial surface is implemented and passes primary, independent, mutation, and focused-test oracles; consumer replay remains.
   D:
     verdict: selected_exact_oracle
     reason: Rational e bounds and integer power blocks prove the exposed decade thresholds without decimal trust.
@@ -25,5 +25,5 @@ candidates:
     reason: Claim implementation consumers source disposition release documentation memory and debt remain open.
 selection:
   provisional_claim: C-CMB-001
-  canonical_API_change: pending_impact_analysis_and_exact_verification
+  canonical_API_change: implemented_and_exactly_verified
   release_change: pending_claim_review

@@ -1,0 +1,39 @@
+attempt: 0004
+campaign: P189
+candidate: exact_factorial_suppression_API_and_two_oracle_verification
+status: passed_pending_consumer_replay_and_claim_review
+started_at: '2026-08-11T15:07:00Z'
+finished_at: '2026-08-11T15:32:00Z'
+implementation:
+  module: src/substrate_framework/factorial_suppression.py
+  tests: tests/test_factorial_suppression.py
+  public_exports: 8
+verification:
+  primary: ALL_67_CHECKS_PASS_C_CMB_001
+  independent: ALL_27_CHECKS_PASS_C_CMB_001_INDEPENDENT
+  focused_tests: 76_passed
+  public_import_smoke: passed
+  diff_check: passed
+initial_verifier_stop:
+  layer: representation
+  symptom: structurally_equal_symbolic_ratio_forms_compared_with_raw_equality
+  repair: compare_the_ratio_with_combsimp
+  scientific_effect: none
+self_optimization:
+  - removed_three_hard_coded_boolean_verdict_fields_from_the_evidence_API
+  - collapsed_twenty_five_repetitive_independent_tail_tallies_into_one_constructive_check
+  - replaced_a_nonempty_symbolic_inequality_probe_with_an_explicit_positive_reciprocal_gap_identity
+compatibility:
+  source_legacy_surface: none
+  mutable_legacy_surface: none
+  version_only_scientific_failures: 0
+impact:
+  graph_risk: LOW
+  graph_limitations_recorded: true
+scientific_threshold_changed: false
+remaining_debt:
+  - source_reverse_consumer_replay
+  - claim_level_review
+  - source_disposition_and_queue
+  - registry_release_generated_docs_and_memory_sync
+  - one_terminal_integrated_gate

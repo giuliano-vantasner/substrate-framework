@@ -1,6 +1,6 @@
 campaign: P189
 reserved_claim: C-CMB-001
-status: provisionally_distinct_pending_exact_and_consumer_verification
+status: exact_API_distinct_pending_consumer_verification
 nearest_claims:
   C-SG-019:
     owns: exact_mixed_cosine_coefficient_parity_factorials_coordinate_scales_limit_to_zero_and_physical_ceiling
@@ -32,3 +32,10 @@ promotion_rule: >-
   Promote C-CMB-001 only if the pure API, primary and independent universal
   proofs, mutation sensitivity, direct-consumer semantics, and full dependency
   replay all pass. Otherwise reserve the identifier without promotion.
+implementation_result:
+  module: src/substrate_framework/factorial_suppression.py
+  reuses_C_SG_019_API: true
+  duplicates_existing_factorial_API: false
+  primary_exact_verification: passed
+  independent_raw_rederivation: passed
+  focused_tests: 76_passed

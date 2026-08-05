@@ -1,0 +1,30 @@
+campaign: P189
+claim: C-CMB-001
+verifier: verify.py
+sha256: 29b51428102623395b0b725ca6f3225ed2e3b9cb9ee9bee2623bcf659c2d195e
+command: PYTHONPATH=src .venv/bin/python proposals/P189-wn1-factorial-suppression-audit/verify.py
+oracle: exact_SymPy_rational_integer_series_sequence_and_composed_cosine_algebra
+exit_status: 0
+runtime_checks: 67
+lexical_ledger_calls: 36
+assert_nodes: 0
+terminal_tally: ALL_67_CHECKS_PASS_C_CMB_001
+load_bearing_mutations:
+  - coefficient_versus_derivative_factorial
+  - amplitude_power
+  - low_coordinate_power
+  - coefficient_scale
+  - expansion_background
+  - recurrence_denominator_and_power
+  - rational_exponential_ceiling
+  - inverse_square_bound_direction
+  - decade_block_length_and_exponent
+  - superpolynomial_tail_start
+countermodels:
+  - zero_interaction_with_nonzero_classical_coefficient
+  - zero_spectral_density_with_nonzero_classical_coefficient
+representation_probe: exact_positive_q_171_versus_machine_zero
+compatibility:
+  immutable_source_version_only_failures: 0
+  mutable_legacy_references: 0
+scientific_threshold_changed: false
