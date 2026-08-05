@@ -1,0 +1,31 @@
+source_unit: TX4
+path: /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py
+sha256: c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+git_blob: a8dd0757f4712cd15ddc6c4a0454b3e8aaf0779c
+history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+size_bytes: 24802
+compatibility_preflight:
+  ast_parse: passed
+  direct_np_trapz: false
+  imported_trapz: false
+  dynamic_trapz: false
+  alias_replay_required: false
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py
+  exit_code: 0
+  elapsed_seconds: 28.35
+  lexical_check_calls: 8
+  runtime_check_executions: 8
+  assertion_nodes: 1
+  terminal_tally: ALL_8_CHECKS_PASS
+reported_values:
+  chain_rule_finite_difference_residual: 3.29e-11
+  transverse_rotor_multipliers: [1]
+  intermediate_axis_max_multiplier_modulus: 37.62
+  major_axis_max_multiplier_modulus: 1.0
+  rational_map_I_at_z2: 5.808259
+  rational_map_large_Hessian_eigenvalues_at_h_0p005: [3.14191, 8.47528, 8.47528, 43.3256, 43.3256]
+  source_energy_per_degree: {degree_1: 1.2317, degree_2: 1.208}
+scientific_verdict: pending_claim_level_audit
+version_only_failure: false

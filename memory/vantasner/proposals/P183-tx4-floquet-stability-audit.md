@@ -2,7 +2,7 @@
 description: Audit TX4 and separate exact co-rotating algebra from genuine stability
 author: vantasner
 created: '2026-08-11T09:20:00Z'
-updated: '2026-08-11T09:24:00Z'
+updated: '2026-08-11T09:36:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -110,11 +110,18 @@ P183 provisionally reserves C-FLO-001 for a finite-dimensional co-rotating
 linear-system theorem with exact monodromy and explicit spectral/Jordan
 conditions. It separately reserves C-ROT-001 only if TX4 contains a distinct
 complete collective-rotor perturbation theorem not already covered by
-C-ACT-001, C-COL-001, or C-SYM-001. Repository-wide registry, campaign,
-migration, source, test, and durable-memory searches found no collision for
-either identifier or P183. Neither identifier denotes a Skyrmion, a full-field
-operator, nonlinear stability, a dynamically selected `Omega`, gravity,
-radiation, observation, or substrate realization.
+C-ACT-001, C-COL-001, or C-SYM-001. After the body audit exposed a distinct
+version of preregistered candidate D, revision 0002 reserves C-RMAP-003 for
+resolution-bounded evidence about the Hessian of C-RMAP-001's angular
+functional at `R=z^2` in an explicit degree-two coefficient chart, including
+stationarity, the symmetry tangent subspace, and positivity only on its tested
+complement. The revision precedes every new P183 Hessian calculation and does
+not change the frozen candidate or selection criteria. Repository-wide
+registry, campaign, migration, source, test, and durable-memory searches found
+no pre-existing collision for C-FLO-001, C-ROT-001, C-RMAP-003, or P183. None
+of these identifiers denotes a Skyrmion, a full-field operator, nonlinear
+field stability, a dynamically selected `Omega`, gravity, radiation,
+observation, or substrate realization.
 
 Direct consumers include TX4, pending TX5, the accepted collective,
 symmetry-Hessian, rational-map, moment, and prescribed-rotation ceilings,
@@ -142,12 +149,26 @@ real eigenvalue, a unit multiplier with a size-two Jordan block, an incomplete
 coordinate Hessian, a nonstationary background, a missing kinetic metric, and
 a positive restricted block embedded in an unstable larger operator.
 
-Any numerical Hessian or spectrum must name floating precision, exact
-objective/operator, coordinates, domain, boundary data, constraints, mesh or
-step sequence, eigensolver, tolerances, stopping status, scale-relative error
-norm, symmetry-null classification, and independent route. Resolution and
-coordinate transformations must preserve the scoped verdict, and load-bearing
-mutations must break it. A full-field PDE claim additionally requires the
+The C-RMAP-003 route differentiates the displayed chart objective independently
+of TX4's integrated-value finite differences, uses at least three tensor
+Gauss--Legendre/uniform-azimuth grids, checks the exact base value
+`pi+8/3`, requires a scale-relative stationary-gradient residual below
+`1e-9`, five independent symmetry tangents aligned with the five smallest
+curvature directions, and a smallest complementary eigenvalue above `2.5`.
+Grid and independent-route drift must be below `1e-5` relative for the positive
+eigenvalues. Congruent nonsingular coordinate changes must preserve the five-
+zero/five-positive inertia, while a nonstationary coefficient shift and a
+negative quadratic mutation must break the corresponding verdict. These
+thresholds are structural gap and floating-error gates, not exact-zero or
+full-field claims.
+
+Any numerical Hessian or spectrum must otherwise name floating precision,
+exact objective/operator, coordinates, domain, boundary data, constraints,
+mesh or step sequence, eigensolver, tolerances, stopping status,
+scale-relative error norm, symmetry-null classification, and independent
+route. Resolution and coordinate transformations must preserve the scoped
+verdict, and load-bearing mutations must break it. A full-field PDE claim
+additionally requires the
 actual rotating solution residual, spatial and temporal refinement,
 conservation or controlled drift, spectral completeness or a justified bound,
 and an independent discretization or energy method. A finite exact result may
@@ -162,8 +183,11 @@ syntax needs it, without changing its pinned hash or scientific route.
 Attempt 0001 freezes v0.134.0, framework commit `2466d44`, the TX4 hash and
 history, exposed synopsis, six candidates, two provisional identifiers,
 selection criteria, oracle hierarchy, compatibility policy, and open debt.
-Every failed representation, implementation, spectral route, source
-predicate, or validation attempt will remain append-only with a materially
+Attempt 0002 reproduces all eight source checks and records the claim-level
+failures. Revision attempt 0003 adds only C-RMAP-003, the identifier now needed
+for already-preregistered candidate D, and freezes its numeric ceilings before
+new computation. Every failed representation, implementation, spectral route,
+source predicate, or validation attempt remains append-only with a materially
 different next action.
 
 ## Debt Ledger

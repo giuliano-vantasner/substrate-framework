@@ -1,0 +1,66 @@
+source_unit: TX4
+hash_verified: true
+imports: [numpy, sympy]
+local_helpers: [check, sphere_grid, I_moduli, hessian, vec]
+compatibility:
+  numpy_integration_surface: none
+  legacy_trapz_access: false
+  scientific_failure_from_version_event: false
+checks:
+  TX4_1:
+    computed: exact_coordinate_chain_rule_plus_one_finite_difference_sample
+    survives: exact_chain_rule_with_declared_rotation_sign
+    not_established: [rotational_covariance_of_a_field_equation, rotating_solution, linearized_operator, operator_domain, static_spectrum, monodromy, multiplier_stability]
+  TX4_2:
+    computed: exact_nilpotent_body_angular_velocity_linearization_for_a_declared_axisymmetric_free_rotor
+    survives: all_monodromy_eigenvalues_equal_one
+    correction: nonzero_nilpotent_J_has_a_size_two_Jordan_block_and_exp_tJ_is_unbounded
+    not_established: [linear_stability, Skyrme_collective_action, Skyrmion_rotor_inertia]
+  TX4_3:
+    computed: exact_energy_and_angular_momentum_norm_invariants_of_the_declared_free_axisymmetric_rotor
+    survives: transverse_radius_and_symmetry_axis_component_magnitudes_are_constant_when_A_differs_from_C
+    correction: a_perturbation_with_nonzero_w3_drifts_order_one_around_the_transverse_circle_so_one_fixed_equilibrium_is_not_Lyapunov_stable
+    possible_scope: stability_of_the_entire_transverse_equilibrium_circle_as_a_set_in_body_angular_velocity_space
+  TX4_4:
+    computed: exact_relation_between_ordinary_axisymmetric_density_inertia_and_normalized_STF_second_moment
+    survives: C_minus_A_equals_minus_three_halves_I_STF_zz_for_that_declared_density
+    insensitive: source_does_not_substitute_or_check_the_TX1_value_or_sign
+    not_established: equality_of_ordinary_density_inertia_with_a_Skyrme_collective_rotational_metric
+  TX4_G_A:
+    computed: fixed_float64_triaxial_free_rotor_examples
+    survives: intermediate_axis_exponential_guard_and_major_axis_unit_modulus_regression
+    scope: verifier_sensitivity_for_the_declared_rigid_rotor_only
+  TX4_5:
+    computed: one_400_by_400_Gauss_midpoint_sphere_grid_and_three_finite_difference_steps_in_one_coefficient_chart
+    survives: resolution_bounded_indication_of_five_small_h2_scaling_modes_and_five_positive_modes
+    missing: [angular_grid_refinement, independent_integration, stationarity_gradient, exact_kernel, kinetic_metric, coordinate_covariance, rigorous_positive_complement_bound]
+    correction: h2_scaling_numeric_eigenvalues_are_not_exact_zero_proof
+  TX4_6:
+    computed: five_listed_tangent_residuals_below_one_percent_of_Hessian_scale
+    survives: numeric_alignment_of_listed_directions_with_the_small_curvature_subspace
+    missing: [independence_check, exact_group_action_derivation, stabilizer_proof, span_equality_with_the_numeric_kernel, exclusion_of_additional_nulls]
+    correction: small_residuals_do_not_prove_the_kernel_is_exact_or_entirely_symmetry
+  TX4_7:
+    computed: inequality_between_two_hard_coded_E2_comparator_decimals
+    accepted_replacement: C_RPROF_002_has_corrected_refined_ordering_1p2081352135_less_than_1p2314456867
+    not_established: [physical_baryon_identity, fission_threshold, decay_barrier, impossibility_of_fission, quadrupole_or_radiation_consequence]
+dataflow_failures:
+  - dynamic_stability_headline_is_unconditional_printed_prose_not_a_checked_composite_predicate
+  - check_1_chain_rule_does_not_construct_the_claimed_field_equation_solution_or_linearized_operator
+  - check_2_does_not_test_Jordan_semisimplicity_or_bounded_powers
+  - check_3_does_not_test_distance_to_one_fixed_equilibrium
+  - check_4_declares_Qzz_and_M2_but_uses_neither_and_never_ingests_TX1
+  - check_5_has_no_sphere_grid_refinement_or_stationarity_gate
+  - check_6_does_not_test_tangent_independence_or_kernel_span
+  - check_7_is_a_literal_comparator_inequality
+dependency_corrections:
+  E1: maps_to_C_RMAP_001_but_supplies_no_degree_two_minimum_theorem
+  E2: maps_to_C_RPROF_001_and_C_RPROF_002_with_numeric_branch_ordering_and_explicit_no_fission_ceiling
+  M2: false_token_dependency_from_an_unused_local_symbol_named_M2
+  QB3: accepted_C_PDE_009_explicitly_requires_a_separate_Floquet_solution
+  TX1: C_RMOM_001_and_002_supply_only_conditional_moments_and_no_collective_inertia_or_physical_state
+  TX2: C_GW_009_supplies_only_prescribed_rotation_and_no_stability
+  TX3: C_GW_010_supplies_only_conditional_TT_ellipse_algebra_and_no_stability
+  TX5: pending_and_cannot_validate_TX4
+headline_verdict: unsupported
+positive_routes: [finite_co_rotating_matrix_theorem, corrected_axisymmetric_rotor_equilibrium_manifold_theorem, strengthened_degree_two_rational_map_Hessian_audit]

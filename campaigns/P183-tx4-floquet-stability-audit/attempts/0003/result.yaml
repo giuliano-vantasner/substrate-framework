@@ -1,0 +1,50 @@
+attempt: 0003
+campaign: P183
+candidate: D_shape_Hessian_claim_revision
+status: passed
+started_at: '2026-08-11T09:33:00Z'
+finished_at: '2026-08-11T09:36:00Z'
+trigger: >-
+  The frozen candidate D became a distinct viable ansatz-local claim only after
+  the TX4 body exposed its coefficient chart and five-plus-five spectral gap.
+proposal_revision:
+  from: 0001
+  to: 0002
+  candidate_set_changed: false
+  selection_criteria_changed: false
+  added_provisional_claim: C-RMAP-003
+identifier_search:
+  registry_campaign_memory_migration_source_tests: no_preexisting_collision
+claim_ceiling:
+  verification: numeric_evidence
+  configuration_space: explicit_local_degree_two_rational_map_coefficient_chart
+  object: C_RMAP_001_angular_functional_Hessian_at_R_equals_z_squared
+  excludes: [exact_kernel, global_minimum, full_field_stability, physical_Skyrmion, fission, radiation]
+predeclared_gates:
+  base_value: exact_pi_plus_eight_thirds
+  stationary_gradient_relative_max: 1.0e-9
+  smallest_complementary_eigenvalue_minimum: 2.5
+  positive_eigenvalue_grid_and_independent_relative_drift_maximum: 1.0e-5
+  symmetry_tangent_rank: 5
+  expected_curvature_inertia: five_zero_five_positive_resolution_bounded
+  coordinate_congruence_inertia_preserved: true
+  nonstationary_and_negative_curvature_mutations_must_fail: true
+blinding:
+  source_eigenvalues_were_exposed_before_original_freeze: true
+  new_computation_started_before_revision: false
+  comparator_selects_candidate: false
+revision_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  repository: WORKFLOW_VALID_172_claims_172_accepted_0_proposals
+  migration_queue: 218_units_42_pending_0_partial
+  diff_check: passed
+staged_detection:
+  changed_symbols: 0
+  changed_files: 6
+  affected_count: 0
+  affected_processes: []
+  risk_level: low
+debt:
+  - implement_three_claim_routes_and_independent_oracles
+next_attempt: commit_revision_then_build_exact_finite_Floquet_and_rotor_APIs

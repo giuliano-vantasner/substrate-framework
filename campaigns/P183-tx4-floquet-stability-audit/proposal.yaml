@@ -67,7 +67,7 @@ selection_criteria:
   - exact_or_refined_independent_oracle_and_mutation_sensitivity
   - novelty_beyond_C_COL_001_C_SYM_001_and_accepted_rational_map_claims
   - dependency_consumer_and_governance_closure
-claims_proposed: [C-FLO-001, C-ROT-001]
+claims_proposed: [C-FLO-001, C-ROT-001, C-RMAP-003]
 comparators_blinded_until: >-
   freeze commit before a new line-by-line TX4 body audit; the generated queue
   and prior consumer audits already exposed the dynamic-stability headline,
@@ -76,4 +76,4 @@ comparators_blinded_until: >-
   static checks, and one assertion, so no fresh source-result blinding is
   claimed
 status: draft
-revision: 0001
+revision: 0002

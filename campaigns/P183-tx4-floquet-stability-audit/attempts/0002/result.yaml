@@ -1,0 +1,43 @@
+attempt: 0002
+campaign: P183
+candidate: A_literal_TX4_reproduction_and_source_audit
+status: passed_with_claim_failures
+started_at: '2026-08-11T09:27:00Z'
+finished_at: '2026-08-11T09:32:00Z'
+commands:
+  - AST_and_legacy_numpy_preflight
+  - .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py
+process:
+  exit_code: 0
+  elapsed_seconds: 28.35
+  lexical_check_calls: 8
+  runtime_check_executions: 8
+  assertion_nodes: 1
+  terminal_tally: ALL_8_CHECKS_PASS
+compatibility:
+  legacy_numpy_integration_access: false
+  alias_replay_required: false
+  version_only_failure: false
+surviving_core:
+  - exact_rotating_coordinate_chain_rule
+  - exact_declared_axisymmetric_free_rotor_equations_invariants_and_nilpotent_linearization
+  - exact_ordinary_density_inertia_to_normalized_STF_relation
+  - intermediate_axis_guard_for_a_declared_triaxial_free_rotor
+  - preliminary_degree_two_rational_map_Hessian_numeric_signal
+  - corrected_C_RPROF_002_reduced_branch_energy_ordering
+failed_or_insensitive_headlines:
+  - time_independent_reduction_is_not_a_computed_spectrum_or_stability_verdict
+  - unit_multipliers_with_a_nontrivial_Jordan_block_do_not_imply_bounded_linear_evolution
+  - invariant_boundedness_does_not_make_one_transverse_equilibrium_Lyapunov_stable
+  - density_second_moment_is_not_a_derived_Skyrme_collective_rotational_inertia
+  - one_grid_finite_difference_Hessian_does_not_prove_an_exact_kernel_or_strict_minimum
+  - five_small_tangent_residuals_do_not_prove_kernel_span_or_exclude_extra_nulls
+  - energy_ordering_does_not_prove_a_physical_configuration_cannot_fission
+  - printed_dynamic_stability_conclusion_is_not_reachable_from_one_composite_oracle
+classification: source_concept_and_verifier_scope_failure_not_environment_failure
+debt:
+  - derive_and_mutate_finite_co_rotating_matrix_theorem
+  - derive_fixed_equilibrium_instability_and_equilibrium_circle_set_stability_for_the_axisymmetric_rotor
+  - decide_and_freeze_a_distinct_rational_map_Hessian_claim_before_new_computation
+  - independent_review_dependencies_consumers_disposition_and_governance
+next_attempt: revise_the_preregistered_shape_candidate_identifier_then_build_exact_finite_Floquet_and_rotor_APIs
