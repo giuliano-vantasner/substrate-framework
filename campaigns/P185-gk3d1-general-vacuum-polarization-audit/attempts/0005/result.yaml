@@ -1,0 +1,30 @@
+attempt: 0005
+campaign: P185
+candidate: independent_exact_and_high_precision_C_VAC_002_rederivation
+status: passed
+started_at: '2026-08-11T11:50:00Z'
+finished_at: '2026-08-11T11:50:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P185-gk3d1-general-vacuum-polarization-audit/reviews/independent_dirac_polarization_review.py
+process:
+  exit_code: 0
+  elapsed_seconds: 2.41
+  maximum_resident_kibibytes: 148268
+  checks_passed: 23
+  terminal_tally: ALL_23_CHECKS_PASS_P185_INDEPENDENT_C_VAC_002
+independence:
+  imports_canonical_dirac_polarization_module: false
+  generic_matrix_Ward_identity: reconstructed
+  D2_endpoint: reconstructed_from_master_prefactor_and_parameter_integral
+  D4_Laurent_and_MSbar_family: reconstructed_from_Gamma_limit
+  series_coefficients: reconstructed_from_six_exact_beta_integrals
+  numeric_oracle: 80_digit_adaptive_quadrature_at_three_below_threshold_points
+sensitivity:
+  - wrong_inverse_propagator_sign_breaks_the_Ward_difference
+  - spinor_trace_mutation_changes_the_D2_normalization
+  - finite_counterterm_remains_visible
+  - threshold_crossing_changes_the_midpoint_logarithm_argument_sign
+  - unpaired_generator_trace_rescaling_changes_the_loop_weight
+oracle_ceiling: symbolic_verified_with_independent_high_precision_regression_evidence
+claim_or_threshold_changed: false
+verdict: independent_route_passed
+next_attempt: claim_level_review_source_graph_replay_and_governance_closure

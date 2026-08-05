@@ -1,0 +1,30 @@
+attempt: 0004
+campaign: P185
+candidate: primary_exact_C_VAC_002_and_GK3D1_adjudication
+status: passed_after_verifier_repairs
+started_at: '2026-08-11T11:48:00Z'
+finished_at: '2026-08-11T11:50:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P185-gk3d1-general-vacuum-polarization-audit/verify.py
+process:
+  exit_code: 0
+  elapsed_seconds: 3.34
+  maximum_resident_kibibytes: 148888
+  checks_passed: 27
+  terminal_tally: ALL_27_CHECKS_PASS_P185_GK3D1_C_VAC_002
+technical_repairs_before_pass:
+  - replace_brittle_source_tensor_literal_with_the_exact_hash_pinned_source_assignment
+  - replace_brittle_D_name_with_the_sources_Dval_helper_parameter
+scientific_claim_or_threshold_changed: false
+coverage:
+  - source_release_formula_and_compatibility_hash_pins
+  - source_predicate_ansatz_and_integer_trace_audit
+  - integrand_level_Ward_identity_and_wrong_sign_mutation
+  - exact_general_D_master_dimension_and_spinor_trace_separation
+  - exact_fermionic_D2_endpoint_and_trace_mutation
+  - exact_fixed_trace_D4_Laurent_MSbar_family_and_log_slopes
+  - finite_counterterm_mutation_and_total_normalization_nonselection
+  - exact_below_threshold_series_radius_and_domain_mutations
+  - representation_convention_invariance_and_scope_exclusions
+oracle_ceiling: symbolic_verified
+verdict: primary_route_passed
+next_attempt: independent_rederivation_without_the_canonical_claim_module
