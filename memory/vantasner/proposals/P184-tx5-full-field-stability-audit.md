@@ -2,7 +2,7 @@
 description: Audit TX5 and derive a complete constrained full-field or narrow lattice stability object
 author: vantasner
 created: '2026-08-11T10:40:00Z'
-updated: '2026-08-11T10:40:00Z'
+updated: '2026-08-11T11:02:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -103,8 +103,17 @@ criteria before the source body and numerical outputs are opened.
 
 ## Proposed Claim Delta
 
-P184 provisionally reserves C-SKY-002 for a distinct exact or converged SU(2)
-static-functional/kinetic-tangent result and C-PDE-014 for a complete
+P184 provisionally reserves C-SKY-002 for the following distinct exact
+pointwise theorem. For declared spatial gradients `g_i` in real four-space,
+the static quadratic-plus-quartic density is the sum of `sum_i |g_i|^2` and
+the Gram-minor squares
+`sum_(i<j) (|g_i|^2 |g_j|^2-(g_i.g_j)^2)`. For
+`M=2*((1+sum_i|g_i|^2)*I-sum_i g_i g_i^T)`, the exact identity
+`w^T(M-2I)w=2*sum_i sum_(a<b)(w_a*g_i,b-w_b*g_i,a)^2` proves `M>=2I`.
+The full-space Derrick family separately gives `E(alpha)=alpha*E2+E4/alpha`.
+These identities are positive static-functional and kinetic-tangent objects,
+not stationarity, a local minimum, a rotating solution, or dynamics.
+C-PDE-014 remains reserved for a complete
 resolution-bounded constrained finite-box stationarity and Hessian result if
 earned. Repository-wide registry, campaign, source, test, and durable-memory
 searches find neither identifier. Rejected identifiers remain reserved. Both
@@ -145,7 +154,14 @@ history, exposed synopsis, two provisional identifiers, six candidates,
 selection criteria, oracle hierarchy, compatibility policy, and debt before
 opening the source body. The memory recall invocation also preserves one
 non-scientific CLI mistake: `memory grep` has no `--limit` option; the earlier
-successful `memory search` remains the recall evidence. Every later failed
+successful `memory search` remains the recall evidence. Attempt 0002 reproduces
+all eight source checks in 626 seconds but records the nonstationary fine field.
+Attempt 0003 finds a stronger-than-expected negative-curvature downhill
+direction on a small diagnostic grid. Attempt 0004 repeats the exact source
+construction at its declared `N=91`, 600-step configuration: the stable first
+directional derivative is `-0.03864699`, one more flow step lowers energy, and
+the same direction has positive symmetric curve curvature `0.26968021`. This
+directly refutes the claim that stationarity is unnecessary. Every later failed
 implementation, representation, numerical, candidate, or verifier route is
 append-only and names a materially different continuation.
 
@@ -158,9 +174,9 @@ and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| TX5's exact implementation, values, predicates, assertions, and dataflow are unopened | Pin and audit every definition, input, equation, result, and headline dependency | open |
-| The lattice field may not be stationary for its own discrete energy | Compute a constraint-aware full residual before interpreting second differences | open |
-| Random directions may be mistaken for a complete Hessian test | Classify the complete finite constrained spectrum or prove a coercive bound | open |
+| TX5's exact implementation, values, predicates, assertions, and dataflow are unopened | Pin and audit every definition, input, equation, result, and headline dependency | closed |
+| The lattice field may not be stationary for its own discrete energy | Compute a constraint-aware full residual before interpreting second differences | closed_refuted_by_direct_descent |
+| Random directions may be mistaken for a complete Hessian test | Classify the complete finite constrained spectrum or prove a coercive bound | open_and_source_headline_unaccepted |
 | Continuum, finite-box, and lattice claims may be conflated | State the exact object and pass mesh, box, stencil, and boundary refinements | open |
 | Symmetry, constraint, boundary, and topology directions may be mixed | Derive the tangent space and quotient, then test independent span and mutations | open |
 | Positive kinetic metric may be overread as energy or dynamic stability | Separate kinetic, static Hessian, Floquet, and nonlinear predicates claim by claim | open |

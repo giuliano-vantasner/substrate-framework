@@ -71,4 +71,4 @@ comparators_blinded_until: >-
   static checks, two assertions, and the source's positive conclusion, so no
   fresh source-result blinding is claimed
 status: draft
-revision: 0001
+revision: 0002

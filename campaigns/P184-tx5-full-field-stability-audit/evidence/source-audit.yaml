@@ -1,0 +1,61 @@
+source_unit: TX5
+hash_verified: true
+imports: [time, numpy, scipy.integrate.solve_bvp]
+local_helpers: [check, log, tail_p, profile, sphere_I, grads, strain, energy_density, Etot, baryon, egrad, project, clamp_bdy, evolve, gradnorm, make_scaled, E_parts, E_flipped, curvature, smooth_dir, make_field, quadrupole]
+compatibility:
+  numpy_integration_surface: none
+  legacy_trapz_access: false
+  scientific_failure_from_version_event: false
+global_failures:
+  - TX4_did_not_establish_a_rotating_Skyrme_relative_equilibrium_or_collective_inertia
+  - a_positive_pointwise_mass_matrix_does_not_remove_co_rotating_gyroscopic_terms_or_supply_the_missing_background_solution
+  - the_fine_relaxed_field_has_reported_constraint_projected_gradient_norm_5p2513_and_no_stationarity_gate
+  - random_positive_samples_do_not_prove_every_direction_or_a_strict_local_minimum
+  - the_source_computes_no_complete_discrete_Hessian_eigenvalue_or_continuum_coercive_bound
+  - static_energy_curvature_is_not_linear_dynamic_stability_without_the_actual_linearized_equations_constraints_and_relative_equilibrium
+  - at_N91_after_the_same_600_steps_the_source_projected_direction_has_negative_first_derivative_minus_0p03864699_and_one_more_flow_step_lowers_the_reported_energy_even_though_its_symmetric_curve_curvature_is_positive
+discrete_consistency_failures:
+  - egrad_is_the_adjoint_for_the_full_periodic_forward_difference_sum_but_Etot_slices_out_a_pad_three_box_so_it_is_not_the_exact_gradient_of_the_reported_energy
+  - evolve_clamps_pad_two_while_Etot_baryon_and_gradnorm_use_pad_three
+  - baryon_takes_an_absolute_value_and_therefore_discards_orientation_sign
+  - fixed_600_step_relaxations_at_different_dx_have_different_accumulated_flow_times_because_dtau_scales_with_dx_squared
+  - fixed_60_step_random_smoothing_at_different_dx_has_a_different_physical_smoothing_length
+checks:
+  TX5_1:
+    computed: two_grid_forward_difference_energy_and_absolute_baryon_comparison_for_rational_map_B1_and_B2_fields
+    survives: conditional_3D_static_density_has_the_expected_rough_reduced_energy_and_topology_normalization
+    missing: [third_grid_or_observed_order, isolated_box_refinement, stencil_comparison, signed_baryon, accepted_corrected_comparators, independent_3D_route]
+    insensitive: relative_energy_tolerance_is_six_percent_and_absolute_baryon_tolerances_are_0p15_and_0p25
+  TX5_2:
+    computed: random_matrix_regression_for_an_exact_declared_pointwise_mass_matrix_bound
+    survives: exact_Cauchy_Schwarz_SOS_bound_M_greater_equal_2I_for_the_declared_matrix
+    rejected_consequence: positive_mass_alone_does_not_make_Hess_static_E_the_rotating_dynamic_operator
+    missing: [derived_full_action, rotating_solution, augmented_energy, gyroscopic_terms, constraints, boundary_data]
+  TX5_3:
+    computed: seven_scale_samples_at_two_grids_for_fresh_rational_map_fields
+    survives: sampled_Derrick_scale_family_has_an_interior_energy_low_near_alpha_one
+    missing: [stationary_derivative, curvature_error, scale_refinement, box_refinement, arbitrary_full_field_direction]
+  TX5_4:
+    computed: symmetric_normalized_curve_second_differences_for_six_seeded_smoothed_directions_at_one_nonstationary_relaxed_field
+    survives: six_declared_curve_curvatures_are_positive_and_step_consistent
+    rejected: [every_direction, full_Hessian, strict_local_minimum, linear_dynamic_stability]
+    missing: [stationarity, direction_rank, complete_spectrum, symmetry_quotient, direction_normalization_ledger, mesh_box_smoothing_and_solver_refinement]
+  TX5_5:
+    computed: positive_curve_curvature_for_one_declared_two_component_polynomial_direction
+    survives: that_one_direction_is_uphill_at_the_declared_nonstationary_lattice_field
+    rejected: [unique_m2_irrep_identification, body_triaxiality_classification, axisymmetry_enforcement, rotor_applicability, full_field_stability]
+  TX5_6:
+    computed: one_positive_soft_coordinate_translation_second_difference
+    survives: translation_proxy_is_softer_than_the_six_max_normalized_random_directions_at_the_fine_grid
+    missing: [translation_residual_refinement, exact_discrete_symmetry, complete_zero_mode_span, comparable_norm_metric]
+    rejected: source_prose_says_the_residue_shrinks_with_dx_but_never_computes_it_at_the_second_resolution
+  TX5_G:
+    computed: sign_correct_second_difference_along_a_separate_true_scaling_family_for_true_and_quartic_sign_flipped_energies
+    survives: Derrick_scaling_guard_detects_the_intentionally_unstable_sign_flip
+    limitation: does_not_mutate_the_random_or_targeted_Hessian_space_or_establish_completeness
+  TX5_7:
+    computed: coarse_and_fine_sign_comparison_for_three_seed_numbers_and_one_targeted_direction_plus_quadrupole_ratio
+    survives: those_reported_signs_and_the_oblate_quadrupole_are_qualitatively_unchanged
+    missing: [same_interpolated_continuum_directions, same_flow_time, same_smoothing_scale, gradient_residual, third_grid, box_axis, convergence_order, error_extrapolation]
+headline_verdict: unsupported_and_directly_blocked_by_nonstationarity_and_incomplete_tangent_sampling
+positive_routes: [exact_declared_static_energy_and_mass_SOS_theorem, corrected_finite_lattice_functional_and_gradient, direct_descent_counterexample, complete_constrained_Hessian_only_if_computationally_closed]

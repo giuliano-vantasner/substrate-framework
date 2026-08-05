@@ -1,0 +1,38 @@
+source_unit: TX5
+path: /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX5_full_field_stability.py
+sha256: ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+git_blob: 4a2355274a314cbd97c51e7ec658d591b14f3b01
+history_commit: 7222eed
+size_bytes: 30201
+compatibility_preflight:
+  ast_parse: passed
+  direct_np_trapz: false
+  imported_trapz: false
+  dynamic_trapz: false
+  eager_legacy_default_fallback: false
+  alias_replay_required: false
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX5_full_field_stability.py
+  exit_code: 0
+  elapsed_seconds: 626.39
+  maximum_resident_kibibytes: 1096248
+  lexical_check_calls: 8
+  runtime_check_executions: 8
+  assertion_nodes: 2
+  terminal_tally: ALL_8_CHECKS_PASS
+load_bearing_runtime_values:
+  fine_grid_relaxed_gradient_norm: 5.2513
+  fine_grid_energy_drop_during_relaxation: 0.04203
+  fine_grid_absolute_baryon_change_during_relaxation: -0.0094
+  random_directions_tested: 6
+  targeted_directions_tested: 1
+  complete_Hessian_eigenvalues_computed: 0
+direct_counterexample:
+  configuration: TX5_declared_N91_L6_600_step_field
+  gradient_norm: 3.36630136
+  stable_negative_directional_derivative: -0.0386469905
+  positive_symmetric_curve_second_difference: 0.2696802142
+  one_more_flow_step_lowers_energy: true
+scientific_verdict: strict_local_minimum_and_linear_dynamic_stability_headline_unsupported_and_refuted_at_the_declared_coarse_configuration
+version_only_failure: false

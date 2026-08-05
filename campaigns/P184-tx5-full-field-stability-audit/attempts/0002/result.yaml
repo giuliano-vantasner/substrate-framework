@@ -1,0 +1,40 @@
+attempt: 0002
+campaign: P184
+candidate: A_literal_TX5_reproduction
+status: passed_execution_failed_headline_oracle
+started_at: '2026-08-11T10:43:00Z'
+finished_at: '2026-08-11T10:54:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-40/bridge_TX5_full_field_stability.py
+process:
+  exit_code: 0
+  elapsed_seconds: 626.39
+  maximum_resident_kibibytes: 1096248
+  lexical_check_calls: 8
+  runtime_checks_passed: 8
+  assertion_nodes: 2
+  terminal_tally: ALL_8_CHECKS_PASS
+compatibility:
+  legacy_numpy_references: 0
+  current_numpy_trapezoid_references: 0
+  version_only_event: false
+reported:
+  fine_grid: {N: 121, L: 6.0, dx: 0.1}
+  base_energy: 2.40014
+  base_baryon_absolute: 1.9719
+  base_gradient_norm: 37.5620
+  relaxed_energy: 2.35811
+  relaxed_baryon_absolute: 1.9625
+  relaxed_gradient_norm: 5.2513
+  relaxed_qzz_over_M0: -0.31055
+  random_curvature_range: [5.9831, 8.4630]
+  targeted_m2_curvature: 4.6387
+  translation_curvature: 0.0450
+  coarse_grid: {N: 91, dx: 0.13333333333333333, qzz_over_M0: -0.30277, targeted_m2_curvature: 4.4140}
+headline_failure:
+  - the_relaxed_field_has_no_stationarity_acceptance_gate_and_prints_a_nonzero_gradient_norm
+  - six_random_directions_and_one_targeted_direction_do_not_classify_the_full_tangent_space
+  - positive_mass_does_not_create_a_rotating_relative_equilibrium_or_remove_gyroscopic_terms
+  - positive_second_differences_at_a_noncritical_field_do_not_establish_a_local_minimum
+  - the_two_resolution_runs_change_relaxation_time_and_random_direction_smoothing_scale
+verdict: source_tally_is_execution_evidence_only_and_the_strict_full_field_minimum_is_unsupported
+next_attempt: exhibit_a_direct_descent_direction_at_a_source_generated_relaxed_field

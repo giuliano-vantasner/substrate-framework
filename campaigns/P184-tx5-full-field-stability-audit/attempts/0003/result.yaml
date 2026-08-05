@@ -1,0 +1,23 @@
+attempt: 0003
+campaign: P184
+candidate: first_direct_stationarity_counterexample
+status: failed_expected_shape_with_stronger_counterexample
+started_at: '2026-08-11T10:56:00Z'
+finished_at: '2026-08-11T10:57:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P184-tx5-full-field-stability-audit/attempts/0003/diagnose_stationarity.py
+process:
+  exit_code: 1
+  elapsed_seconds: 3.81
+  maximum_resident_kibibytes: 182236
+  checks_passed_before_failure: 3
+configuration: {N: 41, L: 6.0, relaxation_steps: 100}
+measured:
+  source_gradient_norm: 11.4208664
+  direct_slope_at_eps_0p001: -0.156773672
+  direct_slope_at_eps_0p0005: -0.156773899
+  curve_second_at_eps_0p001: -0.212845878
+  curve_second_at_eps_0p0005: -0.212848601
+failure: preregistered_diagnostic_expected_positive_curve_curvature_to_coexist_with_descent_but_the_unsampled_downhill_direction_also_has_negative_curvature
+diagnosis: stronger_scientific_counterexample_to_TX5_random_direction_positivity_not_an_implementation_failure
+claim_or_threshold_changed: false
+next_attempt: test_stable_negative_descent_at_TX5s_declared_N91_resolution_after_600_steps_without_requiring_a_curvature_sign
