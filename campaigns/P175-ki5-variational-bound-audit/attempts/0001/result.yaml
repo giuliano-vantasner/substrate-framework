@@ -1,0 +1,42 @@
+attempt: 0001
+campaign: P175
+candidate: preregistered_KI5_variational_bound_contract
+status: passed
+started_at: '2026-08-11T04:02:00Z'
+finished_at: '2026-08-11T04:05:00Z'
+base:
+  release: v0.127.0
+  framework_commit: 184e1b6
+  accepted_claims: 163
+  source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-34/bridge_KI5_kappa_is_not_a_variational_bound.py
+  sha256: 5db475be67e6668f9064096055b0452bb2a762c435132ae324896cce3f9863fe
+  path_state: clean
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+dossier:
+  path: merged-framework/bridges/phase-34/dossiers/Phase34-KI-dossier.md
+  sha256: e01fbee40d81ebae1fc6f9452c321e2914cb185cdf257ae226d849ea6392702b
+  path_state: clean
+formalization:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  path_state: clean
+authority_findings:
+  - C-RDIFF-001 already proves the exact signed-slack ledger and that separate upper bounds provide neither a universal upper nor lower bound on their difference.
+  - C-RDIFF-002 owns the corrected conditional coordinate and expressly rejects a variational-bound or physical interpretation.
+  - C-RPROF-002 supplies resolution-bounded stationary branches only and expressly proves no local or global minimum or variational upper bound.
+  - A conditional one-sided or convergence theorem requires explicit coupled slack or component-error premises beyond separate upper bounds.
+prior_exposure: >-
+  Generated inventory, accepted P105/P106 records, earlier graph execution,
+  durable memory, and the parent effort exposed KI5's headline, stale 8.4563
+  coordinate, profile-mutation theme, and comparator 0.929 before this freeze.
+  No fresh blinding is claimed.
+candidates_registered: [A, B, C, D, E, F, G, H, I, J, K]
+claims_proposed: []
+freeze_validation:
+  repository_workflow: {accepted_claims: 163, pending_source_units: 50}
+  proposal_yaml_records_parsed: 2
+  proposal_memory_valid: true
+  diff_check: passed
+next_attempt: open_and_inventory_the_hash_pinned_KI5_source_and_dossier

@@ -1,0 +1,71 @@
+id: P175
+base_release: v0.127.0
+base_commit: 184e1b6
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [KI5]
+question: >-
+  Does hash-pinned KI5 establish a correct theorem about differences of
+  variational upper bounds, which one-sided or convergence statements follow
+  only with additional slack relations, and can its selected profile probes or
+  comparator proximity validate the physical kappa interpretation?
+invariants:
+  - A signed difference of separately bounded quantities is governed by the exact signed slack combination, not by subtracting the two bounds.
+  - Independent nonnegative upper-bound slacks give neither a universal upper nor lower bound on the signed difference.
+  - A one-sided difference bound requires an explicit relation between the two slacks; convergence requires separately controlled component errors.
+  - C-RPROF-002 supplies resolution-bounded stationary branches and explicitly proves no local or global minimum or variational upper bound.
+  - C-RDIFF-002 is a conditional reduced-model coordinate with corrected value 8.482417318795285, not a physical bound, mass, binding result, or empirical prediction.
+  - Selected profile-width mutations cannot establish a universal theorem over the full admissible trial space.
+  - Numerical proximity to comparator 0.929 cannot select a profile family, error model, or physical interpretation.
+  - Mutable integration uses numpy.trapezoid or the canonical helper; immutable legacy-name stops are version-only evidence.
+allowed_imports:
+  - C-RDIFF-001
+  - C-RDIFF-002
+  - C-RPROF-001
+  - C-RPROF-002
+  - C-RMAP-001
+  - C-RMAP-002
+  - C-DIM-002
+  - src/substrate_framework/energy_differences.py
+  - campaigns/P105-e2-rational-map-radial-profiles/adjudication.yaml
+  - campaigns/P106-e3-conditional-energy-difference-audit/adjudication.yaml
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - KI5 and relevant dependency or reverse-consumer nodes as hash-pinned noncanonical evidence only after this freeze
+  - the Phase34 dossier and Lean capstone as hash-pinned supporting evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned KI5 reproduction with complete predicate assertion import comparator and compatibility inventories.
+  - id: B
+    description: Exact slack identity q_hat-q=n*delta_initial-delta_final for two separately declared upper bounds.
+  - id: C
+    description: Independent nonnegative slacks imply no universal one-sided bound for their signed difference.
+  - id: D
+    description: Additional coupled slack inequalities yield conditional upper lower or two-sided difference bounds.
+  - id: E
+    description: Separately convergent component approximations imply convergence of the signed difference without monotone one-sided convergence.
+  - id: F
+    description: KI5 lacks the premises needed to call the accepted stationary branches variational upper bounds for a physical full model.
+  - id: G
+    description: Finite selected width or profile perturbations provide local regression evidence only and do not quantify the admissible trial space.
+  - id: H
+    description: Accepted C-RDIFF-001 C-RDIFF-002 and C-RPROF-002 composition covers all valid content without a new claim or API.
+  - id: I
+    description: Comparator firewall rejects profile quality or physical trust inferred from closeness to 0.929.
+  - id: J
+    description: Lean evidence is accepted only if its exact premises and conclusion match the claimed upper-bound difference theorem.
+  - id: K
+    description: Claim consumer disposition queue memory and release closure with no promotion if accepted claims already own the result.
+uniqueness_evidence: null
+selection_criteria:
+  - exact_signed_slack_algebra_and_quantifier_scope
+  - explicit_variational_trial_space_and_minimum_premises
+  - one_sided_bound_or_convergence_assumption_cost
+  - mutation_coverage_versus_universal_profile_claim
+  - comparator_firewall_and_dimensional_consistency
+  - accepted_dependency_fit_consumer_reach_and_nonduplication
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening KI5 or the shared dossier body in P175; generated
+  inventory, accepted P105/P106 records, prior graph work, durable memory, and
+  the parent effort already expose the upper-bound headline, stale coordinate,
+  and 0.929 comparator, so no fresh result or comparator blinding is claimed
+status: frozen_with_prior_result_exposure
