@@ -1,0 +1,81 @@
+id: P176
+base_release: v0.127.0
+base_commit: 0290489
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK1]
+question: >-
+  Does hash-pinned GK1 establish, with convention-correct dimensions and
+  representation normalizations, that the EM5, YM1, and QCD1 source
+  constructions share only a two-dimensional scalar-loop kernel, and what
+  additional premises would be required to obtain any four-dimensional gauge
+  kinetic action or substrate mechanism?
+invariants:
+  - C-VAC-001 is a conditional massive-complex-scalar loop theorem in Euclidean two dimensions and expressly supplies no preferred dimension or dimensional lift.
+  - C-NVP-001 and C-NVP-002 multiply the accepted two-dimensional Abelian loop kernel by an exact representation trace metric and expressly supply no four-dimensional lift or unique total coupling.
+  - C-GAU-001 supplies local U1 covariance while leaving every gauge-kinetic coefficient unconstrained.
+  - C-NAG-001 supplies exact non-Abelian covariance and curvature algebra while leaving every action, kinetic coefficient, dimension, and physical sector unconstructed.
+  - C-MAX-001 begins from a separately declared dimension, positive kinetic coefficient, action, current, and boundary data; it does not derive those inputs.
+  - Generator traces and Dynkin indices are dimensionless only inside an explicitly fixed generator and coupling convention; they cannot by themselves change spacetime dimension or construct an operator map.
+  - Canonically normalized gauge fields and connection-normalized fields have different dimension ledgers, so coefficients must never be compared without the accompanying field and coupling convention.
+  - Mutable integration uses numpy.trapezoid or the canonical helper; immutable legacy-name stops are version-only evidence and never scientific candidate failures.
+allowed_imports:
+  - C-GAU-001
+  - C-MAX-001
+  - C-VAC-001
+  - C-LIE-001
+  - C-LIE-003
+  - C-REP-002
+  - C-NAG-001
+  - C-NVP-001
+  - C-NVP-002
+  - src/substrate_framework/gauge_u1.py
+  - src/substrate_framework/maxwell.py
+  - src/substrate_framework/vacuum_polarization.py
+  - src/substrate_framework/nonabelian_gauge.py
+  - src/substrate_framework/nonabelian_vacuum_polarization.py
+  - campaigns/P134-em3-maxwell-coulomb-audit/adjudication.yaml
+  - campaigns/P135-em5-induced-gauge-audit/adjudication.yaml
+  - campaigns/P158-ym1-yang-mills-induction-audit/adjudication.yaml
+  - campaigns/P159-ym2-yang-mills-lift-audit/adjudication.yaml
+  - campaigns/P160-qcd1-su3-kinetic-induction-audit/adjudication.yaml
+  - campaigns/P161-qcd2-su3-dimensional-lift-audit/adjudication.yaml
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - GK1 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned GK1 reproduction with complete predicate assertion import and compatibility inventories.
+  - id: B
+    description: Accepted C-VAC-001 C-NVP-001 and C-NVP-002 already give one generic two-dimensional scalar-loop construction specialized only by representation trace data.
+  - id: C
+    description: Exact canonical-field dimension counting distinguishes the two-dimensional e-squared-over-m-squared coefficient from a four-dimensional logarithmic matching coefficient.
+  - id: D
+    description: Exact connection-field dimension counting moves coupling powers into the kinetic coefficient and prevents comparisons across untyped field normalizations.
+  - id: E
+    description: Dimensionless representation factors change component multiplicity and normalization but cannot supply a spacetime operator dimensional lift.
+  - id: F
+    description: A four-dimensional kinetic term requires a separately declared four-dimensional action or determinant matching problem including field normalization regulator subtraction and counterterms.
+  - id: G
+    description: Abelian-limit checks are valid only when generator and coupling normalizations are transported rather than manually replaced.
+  - id: H
+    description: Local covariance curvature and projector algebra do not select a kinetic coefficient propagating spectrum physical gauge group or substrate realization.
+  - id: I
+    description: Existing accepted claims cover all valid GK1 content without a new claim API or release.
+  - id: J
+    description: A distinct convention-translation theorem survives only if it is reusable not already accepted and closes all field coupling and action dimensions exactly.
+  - id: K
+    description: Dependency consumer disposition queue memory and release closure with claim-by-claim review.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_invariant_and_exact_source_scope_compatibility
+  - convention_typed_field_coupling_operator_and_measure_dimensions
+  - action_and_quantum_matching_premise_completeness
+  - representation_normalization_and_abelian_limit_consistency
+  - assumption_and_parameter_economy
+  - exact_limits_mutation_sensitivity_consumer_reach_and_nonduplication
+claims_proposed: []
+comparators_blinded_until: >-
+  freeze commit before opening the GK1 bridge body; the generated inventory,
+  accepted EM5/YM1/QCD1 and YM2/QCD2 adjudications, durable memory, and parent
+  effort already expose the shared-two-dimensional-kernel headline and
+  dimensional-lift ceiling, so no fresh result blinding is claimed
+status: frozen_with_prior_result_exposure

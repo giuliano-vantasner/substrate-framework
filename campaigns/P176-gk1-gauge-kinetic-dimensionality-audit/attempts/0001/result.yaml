@@ -1,0 +1,34 @@
+attempt: 0001
+campaign: P176
+candidate: preregistered_GK1_dimensionality_contract
+status: passed
+started_at: '2026-08-11T04:33:00Z'
+finished_at: '2026-08-11T04:36:00Z'
+base:
+  release: v0.127.0
+  framework_commit: 0290489
+  accepted_claims: 163
+  source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  path: merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py
+  sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74
+  path_state: clean
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+authority_findings:
+  - C-VAC-001 C-NVP-001 and C-NVP-002 already type the surviving loop construction as Euclidean two-dimensional and explicitly withhold dimensional lift and a unique total kinetic coefficient.
+  - C-GAU-001 and C-NAG-001 establish covariance and curvature algebra but no kinetic action or coefficient.
+  - C-MAX-001 requires dimension action kinetic coefficient current and boundary data as separately declared inputs.
+  - C-NVP-001 and C-NVP-002 already separate component-density from trace-density coefficients and keep representation normalization explicit.
+  - P159 and P161 reject scalar-kernel multiplication as a dimensional lift and expose normalization-sensitive false Abelian limits.
+prior_exposure: >-
+  Generated inventory, accepted EM5/YM1/QCD1 and YM2/QCD2 records, durable
+  memory, and the parent effort exposed GK1's shared-two-dimensional-kernel
+  headline before this freeze. No fresh result blinding is claimed.
+candidates_registered: [A, B, C, D, E, F, G, H, I, J, K]
+claims_proposed: []
+freeze_validation:
+  repository_workflow: {accepted_claims: 163, pending_source_units: 49}
+  proposal_yaml_records_parsed: 2
+  proposal_memory_valid: true
+  diff_check: passed
+next_attempt: open_and_inventory_the_hash_pinned_GK1_source
