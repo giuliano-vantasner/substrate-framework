@@ -1,0 +1,24 @@
+attempt: 0011
+campaign: P184
+candidate: staged_graph_impact_analysis
+status: passed
+started_at: '2026-08-11T11:26:00Z'
+finished_at: '2026-08-11T11:27:00Z'
+commands:
+  - node .gitnexus/run.cjs analyze
+  - gitnexus_impact_o4_skyrme_pointwise_evidence_upstream
+  - gitnexus_read_substrate_framework_processes
+  - gitnexus_detect_changes_compare_60c5576
+index:
+  nodes: 27930
+  edges: 43098
+  clusters: 391
+  execution_flows: 2
+direct_API_impact: {risk: LOW, direct_callers: 0, affected_processes: 0, affected_modules: 0}
+transaction_impact: {risk: LOW, changed_symbols: 91, changed_files: 35, affected_execution_flows: 0}
+host_artifacts:
+  generated: [AGENTS_gitnexus_block, CLAUDE.md, .claude_skills]
+  disposition: removed_before_framework_commit
+claim_or_threshold_changed: false
+verdict: additive_change_has_no_indexed_execution_flow_blast_radius
+next_attempt: integrated_promotion_boundary

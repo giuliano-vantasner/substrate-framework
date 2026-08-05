@@ -6499,3 +6499,77 @@ units:
       legacy NumPy trapezoidal access, so no version event affects a scientific
       verdict. The integrated boundary validates 746 memory records and passes
       all 1,583 repository tests; staged impact is LOW with no affected flow.
+  TX5:
+    disposition: qualified
+    accepted_claims:
+      - C-RMAP-001
+      - C-RMAP-002
+      - C-RPROF-001
+      - C-RPROF-002
+      - C-RMOM-001
+      - C-RMOM-002
+      - C-GW-009
+      - C-GW-010
+      - C-FLO-001
+      - C-ROT-001
+      - C-RMAP-003
+      - C-SKY-002
+    qualification: >-
+      C-SKY-002 retains TX5's exact positive object, conditional on its
+      declared formulas: the O(4) quartic static density is a complete
+      Gram-minor square sum, the displayed kinetic mass operator obeys the
+      sharp pointwise bound M>=2*I by a second complete square certificate,
+      and the exact Derrick scale identity separates stationarity from
+      positive scaling curvature. These identities supply no action
+      provenance, stationary field, static Hessian positivity, rotating
+      solution, gyroscopic terms, or dynamics. At TX5's own declared N=91,
+      L=6, 600-step configuration, a source-constructed direction has stable
+      negative first derivative and one additional flow step lowers the
+      reported energy even though the same symmetric curve curvature is
+      positive. The strict local-minimum premise is therefore false for that
+      object. Six random directions and one targeted direction do not replace
+      a complete constrained Hessian; C-PDE-014 is rejected and unaccepted.
+      TX5's periodic gradient, pad-three energy, and pad-two clamp also fail to
+      define one exact discrete variational problem, while its two resolutions
+      use different physical relaxation and smoothing scales. TX5.1 remains a
+      loose energy and absolute-baryon convention check, TX5.4-5 retain only
+      their selected positive curve curvatures, TX5.6 retains one-grid relative
+      softness, the guard retains only Derrick-sign sensitivity, and TX5.7
+      retains only a qualitative selected-direction sign regression. The
+      every-direction, strict-full-field-minimum, rotating-solution,
+      static-to-dynamic-operator, linear-stability, fission, physical, gravity,
+      radiation, observation, and substrate readings remain unaccepted.
+    evidence:
+      - campaigns/P184-tx5-full-field-stability-audit/reviews/source_adjudication.md
+      - campaigns/P184-tx5-full-field-stability-audit/reviews/C-SKY-002-claim-review.md
+      - campaigns/P184-tx5-full-field-stability-audit/reviews/C-PDE-014-claim-review.md
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/source-reproduction.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/source-audit.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/compatibility-audit.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/check-adjudication.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/input-provenance.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/dependency-audit.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/consumer-audit.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/candidate-comparison.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/evidence/primary-provenance.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/verify.py
+      - campaigns/P184-tx5-full-field-stability-audit/reviews/independent_skyrme_o4_review.py
+      - campaigns/P184-tx5-full-field-stability-audit/reviews/replay_source_graph.py
+      - campaigns/P184-tx5-full-field-stability-audit/attempts/0004/diagnose_declared_resolution_descent.py
+      - campaigns/P184-tx5-full-field-stability-audit/attempts/0004/result.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/attempts/0005/result.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/attempts/0007/result.yaml
+      - campaigns/P184-tx5-full-field-stability-audit/attempts/0008/result.yaml
+      - memory/vantasner/decisions/C-SKY-002-review.md
+      - memory/vantasner/decisions/TX5-qualified-review.md
+    note: >-
+      P184 closes nineteen primary and ten independent exact checks plus the
+      hash-pinned native reproduction and declared-resolution descent
+      counterexample before the integrated boundary. TX5 and mutable P184 code
+      have no legacy NumPy trapezoidal access, so no version event affects a
+      scientific verdict. The fourteen-check source graph closes with 40
+      pending units, staged impact is LOW with no affected execution flow, and
+      the integrated boundary validates 751 memory records and passes all
+      1,593 repository tests.

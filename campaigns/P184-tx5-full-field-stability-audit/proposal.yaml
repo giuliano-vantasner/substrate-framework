@@ -70,5 +70,5 @@ comparators_blinded_until: >-
   Derrick scaling, random smooth directions, a targeted m=2 direction, eight
   static checks, two assertions, and the source's positive conclusion, so no
   fresh source-result blinding is claimed
-status: draft
-revision: 0002
+status: accepted
+revision: 0003

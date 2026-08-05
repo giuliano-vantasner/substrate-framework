@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T10:28:00Z'
+updated: '2026-08-11T11:34:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.135.0`, containing one hundred seventy-five
+The current accepted frontier is `v0.136.0`, containing one hundred seventy-six
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2039,19 +2039,35 @@ scientific verdict. The thirteen-check source graph closes TX4 while keeping
 TX5 separately pending. The integrated promotion boundary validates 746 memory
 records and passes all 1,583 repository tests with a clean terminal status.
 
+P184 adds C-SKY-002's exact conditional O(4) pointwise theorem: the quartic
+static density is a complete sum of eighteen Gram-minor squares, and the
+declared kinetic mass quadratic-form gap above `2*I` is twice another eighteen-
+square sum with a sharp bound. The existing Derrick API gives the exact scale
+family while keeping stationarity separate from positive curvature. TX5 is
+qualified through this theorem and scoped historical numeric evidence. At the
+source's declared `N=91`, 600-step field, a stable negative first derivative
+and lower one-step energy coexist with positive symmetric curve curvature, so
+its strict full-field minimum is refuted. Six random and one targeted direction
+do not supply a complete Hessian, and C-PDE-014 is individually rejected. The
+primary, independent, and source-graph routes pass 19, 10, and 14 checks; 38
+focused tests pass. TX5 and mutable P184 have no legacy NumPy trapezoidal
+surface. GitNexus rates the additive transaction LOW with no affected flow.
+The integrated promotion boundary validates 751 memory records and passes all
+1,593 repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.135.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-five accepted claims. P001 through P183 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 41 pending, 0 partial, 3 migrated, 164 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.136.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-six accepted claims. P001 through P184 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 40 pending, 0 partial, 3 migrated, 165 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 41
-pending, 3 migrated, 164 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is TX5, pinned at SHA-256
-`ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a`.
-P183 closes TX4 without accepting its headline. The next action is to freeze
-TX5 against v0.135.0 and audit its claimed full-field evolution, numerical
-scheme, boundary and initial data, convergence, conservation, constraint and
-gauge handling, mutations, dependence on TX4's rejected prose, and physical
-scope before accepting any stability result.
+The effort remains active. D4 is discharged, but D1 remains open with 40
+pending, 3 migrated, 165 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is GK3D1, pinned at SHA-256
+`9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb`.
+P184 closes TX5 without accepting its headline. The next action is to freeze
+GK3D1 against v0.136.0 and audit its general-dimensional one-loop vacuum-
+polarization master, regulator and renormalization conventions, tensor and
+dimension dependence, source dependencies, mutations, and physical scope
+before accepting any induced four-dimensional gauge conclusion.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

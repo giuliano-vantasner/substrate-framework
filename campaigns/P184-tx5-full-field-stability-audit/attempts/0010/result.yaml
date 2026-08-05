@@ -1,0 +1,25 @@
+attempt: 0010
+campaign: P184
+candidate: governed_source_graph_replay
+status: passed
+started_at: '2026-08-11T11:25:00Z'
+finished_at: '2026-08-11T11:25:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P184-tx5-full-field-stability-audit/reviews/replay_source_graph.py
+process:
+  exit_code: 0
+  elapsed_seconds: 2.43
+  maximum_resident_kibibytes: 154024
+  checks_passed: 14
+  terminal_tally: ALL_14_CHECKS_PASS_P184_TX5_SOURCE_GRAPH
+queue:
+  total_units: 218
+  pending_adjudication: 40
+  qualified: 165
+  migrated: 3
+  duplicate_evidence: 8
+  refuted: 1
+  out_of_scope: 1
+coverage: [seven_hash_pinned_source_nodes, accepted_dependency_closure, E4_false_token_dependency, no_later_TX5_consumer, compatibility, canonical_claim_and_module_materialization]
+claim_or_threshold_changed: false
+verdict: source_dependency_and_consumer_graph_closed
+next_attempt: staged_graph_impact_and_integrated_promotion_boundary

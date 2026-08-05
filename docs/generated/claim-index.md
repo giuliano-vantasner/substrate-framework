@@ -1371,6 +1371,15 @@ Declare a static three-component real linear field phi_a on R^3 with source-coup
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-SKY-002
+
+Let G be an exact real 3-by-4 matrix with rows g_i, let D=G*G^T, and declare the pointwise quadratic and quartic static densities e2=tr(D) and e4=((tr(D))^2-tr(D^2))/2. Then e2 is the sum of the twelve squared gradient components and e4 is exactly the sum over i<j and a<b of (g_i,a*g_j,b-g_i,b*g_j,a)^2, so e2+e4 is nonnegative. Separately, declare the exact real symmetric four-component kinetic mass operator M=2*((1+tr(D))*I_4-G^T*G). For every exact real tangent w, w^T*(M-2*I_4)*w is exactly twice the sum over i and a<b of (w_a*g_i,b-w_b*g_i,a)^2. Hence M>=2*I_4, and the coefficient two is sharp because gradients and tangent parallel to one component saturate it. For positive integrated two- and four-derivative energies, the declared full-space scale family phi_alpha(x)=phi(x/alpha) has E(alpha)=alpha*E2+E4/alpha, slope E2-E4 and curvature 2*E4 at alpha=1; positive scale curvature does not supply the separate stationarity equation E2=E4. These are exact conditional pointwise and scaling identities. They do not derive a physical Skyrme action or normalization, a unit-vector constraint consequence, topology or boundary conditions, a stationary finite or continuum field, static Hessian positivity, a strict local minimum, a rotating relative equilibrium, gyroscopic terms, linear or nonlinear stability, fission, gravity, radiation, observation, or substrate realization.
+
+- Accepted in: `v0.136.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-SPN-001
 
 Let Psi be a nonzero complex pure spin-1 spinor in the ordered m=(+1,0,-1) basis with the standard Hermitian spin-one matrices. Define n=Psi^dagger*Psi, f_a=Psi^dagger*F_a*Psi, and the singlet amplitude A=Psi_0^2-2*Psi_+*Psi_-. Then the exact invariant is |f|^2+|A|^2=n^2, and the attainable interval is 0<=|f|^2<=n^2. Under the unitary complex-Cartesian convention Psi_+=-(d_x-i*d_y)/sqrt(2), Psi_0=d_z, and Psi_-=(d_x+i*d_y)/sqrt(2), writing d=u+i*v gives f=2*u cross v and A=d dot d. Hence |f|^2=0 exactly when u and v are parallel; modulo global phase and spatial SO(3), these rays form the polar orbit RP^2. The upper endpoint |f|^2=n^2 holds exactly when u and v are orthogonal with equal norm; modulo global phase and SO(3), these rays form the coherent ferromagnetic orbit S^2 with SO(2) stabilizer. Conditional on the supplied fixed-density pure-state functional E_spin=(c2/2)*|f|^2, positive c2 selects precisely the polar projective orbit, negative c2 selects precisely the ferromagnetic projective orbit, and c2=0 leaves every pure spin-1 ray degenerate. The polar-minus-ferromagnetic endpoint energy is -c2*n^2/2. This theorem derives no material sign or magnitude of c2, atomic realization, spatial condensate ground state, full physical order-parameter manifold, defect energetics, finite-temperature phase, mixed-state classification, or substrate mechanism.

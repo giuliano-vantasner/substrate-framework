@@ -1,0 +1,22 @@
+attempt: 0012
+campaign: P184
+candidate: durable_memory_validation
+status: passed_with_two_cli_invocation_notes
+started_at: '2026-08-11T11:28:00Z'
+finished_at: '2026-08-11T11:29:00Z'
+successful_command: memory validate /home/dan/substrate-framework/memory
+process:
+  exit_code: 0
+  memory_files_valid: 751
+invocation_notes:
+  - command: memory_validate_with_unsupported_root_option
+    status: failed_invocation
+    scientific_effect: none
+    repair: inspect_help_and_use_the_required_PATH_argument
+  - command: memory_validate_relative_memory_path_under_external_auto_detected_base
+    status: failed_path_resolution
+    scientific_effect: none
+    repair: supply_the_absolute_framework_memory_path
+claim_or_threshold_changed: false
+verdict: all_durable_memory_records_valid
+next_attempt: integrated_promotion_boundary

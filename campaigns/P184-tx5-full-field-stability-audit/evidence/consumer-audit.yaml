@@ -1,0 +1,26 @@
+campaign: P184
+claims: [C-SKY-002]
+direct_consumers:
+  - TX5_source_disposition
+  - src/substrate_framework/skyrme_o4.py
+  - src/substrate_framework/__init__.py
+  - tests/test_skyrme_o4.py
+  - campaigns/P184-tx5-full-field-stability-audit
+  - governance/claims.yaml
+  - governance/releases/v0.136.0.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-SKY-002.md
+  - memory/framework/releases/v0.136.0.md
+  - memory/vantasner/decisions/C-SKY-002-review.md
+  - memory/vantasner/decisions/TX5-qualified-review.md
+  - memory/vantasner/efforts/framework-migration.md
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+narrative_reverse_consumers: {}
+accepted_claims_retroactively_changed: []
+focused_tests: 38_passed
+staged_impact: {risk: LOW, changed_symbols: 91, changed_files: 35, affected_execution_flows: 0, comparison_base: 60c5576}
+generated_consumers: current_for_v0.136.0
+integrated_tests: 1593_passed
+debt: []

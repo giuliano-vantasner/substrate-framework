@@ -1,0 +1,44 @@
+campaign: P184
+claims: [C-SKY-002]
+rejected_proposals: [C-PDE-014]
+base_release: v0.135.0
+source_sha256: ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a
+primary:
+  path: campaigns/P184-tx5-full-field-stability-audit/verify.py
+  terminal_tally: ALL_19_CHECKS_PASS_P184_TX5_C_SKY_002
+  elapsed_seconds: 1.55
+  exit_code: 0
+independent:
+  path: campaigns/P184-tx5-full-field-stability-audit/reviews/independent_skyrme_o4_review.py
+  terminal_tally: ALL_10_CHECKS_PASS_P184_INDEPENDENT_C_SKY_002
+  elapsed_seconds: 1.50
+  exit_code: 0
+source_native:
+  checks: 8
+  elapsed_seconds: 626.39
+  maximum_resident_kibibytes: 1096248
+  exit_code: 0
+direct_counterexample:
+  path: campaigns/P184-tx5-full-field-stability-audit/attempts/0004/diagnose_declared_resolution_descent.py
+  configuration: {N: 91, L: 6.0, relaxation_steps: 600}
+  checks: 5
+  elapsed_seconds: 145.72
+  exit_code: 0
+focused: {tests: 38, elapsed_seconds: 17.67, exit_code: 0}
+source_graph: {checks: 14, elapsed_seconds: 2.43, exit_code: 0}
+staged_impact: {risk: LOW, changed_symbols: 91, changed_files: 35, affected_execution_flows: 0}
+mutations:
+  - quartic_sign_flip_on_orthogonal_gradients
+  - deleted_mass_identity_term_at_zero_gradient
+  - sharp_parallel_gradient_and_tangent_equality_witness
+  - positive_Derrick_curvature_without_stationarity
+  - positive_symmetric_curve_curvature_with_negative_first_derivative
+oracle_ceiling: symbolic_verified_for_C_SKY_002
+integrated:
+  workflow_claims: 176
+  memory_files: 751
+  repository_tests: 1593
+  elapsed_seconds: 166.38
+  maximum_resident_kibibytes: 213180
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_code: 0

@@ -15,6 +15,10 @@ quartic energy component rather than importing source unit E4.
 
 The direct TX5 counterexample is campaign evidence rather than canonical API
 behavior. No later source unit in the generated queue gains accepted
-full-field or dynamical authority from TX5. Staged graph analysis and focused
-test counts are recorded after the complete transaction; they supplement but
-do not replace source, dependency, consumer, and generated-state replay.
+full-field or dynamical authority from TX5. The refreshed graph has 27,930
+nodes, 43,098 edges, 391 clusters, and two execution flows. Direct upstream
+impact for `o4_skyrme_pointwise_evidence` is LOW with no caller or affected
+flow. Transaction comparison against `60c5576` detects 91 changed symbols in
+35 files, rates the change LOW, and finds zero affected execution flows. These
+summaries supplement but do not replace the 38 focused tests and explicit
+source, dependency, consumer, and generated-state replay.

@@ -2,7 +2,7 @@
 description: Audit TX5 and derive a complete constrained full-field or narrow lattice stability object
 author: vantasner
 created: '2026-08-11T10:40:00Z'
-updated: '2026-08-11T11:02:00Z'
+updated: '2026-08-11T11:24:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - full-field
 - stability
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P184 TX5 Full-Field Stability Audit
 
@@ -165,6 +165,17 @@ directly refutes the claim that stationarity is unnecessary. Every later failed
 implementation, representation, numerical, candidate, or verifier route is
 append-only and names a materially different continuation.
 
+Attempt 0005 implements the exact conditional O(4) static-density and kinetic-
+mass square certificates as the pure `skyrme_o4` API with ten mutation-sensitive
+tests. Attempt 0006 preserves one technical verifier failure caused by checking
+the function rather than module scope docstring; attempt 0007 repairs that
+inspection without weakening the claim and passes nineteen primary checks.
+Attempt 0008 independently rederives all eighteen quartic and eighteen mass-gap
+minors without importing the canonical module. Attempt 0009 passes thirty-eight
+focused API, Derrick, source-audit, and governance tests. The source graph then
+closes fourteen checks, including the false E4 token dependency and absence of
+later TX5 consumers. C-SKY-002 is accepted; C-PDE-014 is individually rejected.
+
 ## Debt Ledger
 
 The P184 ledger tracks source reachability, field and action definitions,
@@ -176,13 +187,13 @@ and governed state.
 | --- | --- | --- |
 | TX5's exact implementation, values, predicates, assertions, and dataflow are unopened | Pin and audit every definition, input, equation, result, and headline dependency | closed |
 | The lattice field may not be stationary for its own discrete energy | Compute a constraint-aware full residual before interpreting second differences | closed_refuted_by_direct_descent |
-| Random directions may be mistaken for a complete Hessian test | Classify the complete finite constrained spectrum or prove a coercive bound | open_and_source_headline_unaccepted |
-| Continuum, finite-box, and lattice claims may be conflated | State the exact object and pass mesh, box, stencil, and boundary refinements | open |
-| Symmetry, constraint, boundary, and topology directions may be mixed | Derive the tangent space and quotient, then test independent span and mutations | open |
-| Positive kinetic metric may be overread as energy or dynamic stability | Separate kinetic, static Hessian, Floquet, and nonlinear predicates claim by claim | open |
-| Reduced energies and baryon values may be circular comparators | Re-derive conventions and keep post-freeze values out of selection and thresholds | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open |
-| Dependencies, consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
+| Random directions may be mistaken for a complete Hessian test | Classify the complete finite constrained spectrum or prove a coercive bound | closed_unaccepted_and_C_PDE_014_rejected |
+| Continuum, finite-box, and lattice claims may be conflated | State the exact object and pass mesh, box, stencil, and boundary refinements | closed_by_exact_pointwise_scope_and_no_continuum_claim |
+| Symmetry, constraint, boundary, and topology directions may be mixed | Derive the tangent space and quotient, then test independent span and mutations | closed_unaccepted_outside_C_SKY_002 |
+| Positive kinetic metric may be overread as energy or dynamic stability | Separate kinetic, static Hessian, Floquet, and nonlinear predicates claim by claim | closed_by_C_SKY_002_scope_and_TX5_refutation |
+| Reduced energies and baryon values may be circular comparators | Re-derive conventions and keep post-freeze values out of selection and thresholds | closed_as_post_freeze_source_evidence_only |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | closed_no_TX5_or_mutable_P184_legacy_access |
+| Dependencies, consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | closed |
 
 ## Review and Promotion Plan
 
@@ -198,12 +209,13 @@ separate invocations.
 
 ## Done Gate
 
-P184 closes only when a positive importable object exists, the full-field
-minimum language matches a complete oracle or is explicitly unaccepted, every
-source predicate has an individual verdict, dependencies and downstream
-consumers replay, governance and generated state agree, and debt is empty. A
-native pass tally, baryon closeness, positive mass matrix, Derrick direction,
-random positive curvatures, or one targeted direction alone keeps P184 active.
+P184 closes because C-SKY-002 is a positive importable exact object, the
+full-field minimum is explicitly refuted at the source's declared coarse
+configuration, every source predicate and both proposed claims have individual
+verdicts, and dependencies, consumers, release, queue, generated docs, and
+memory replay with empty debt. The native tally, baryon closeness, positive
+mass matrix, Derrick direction, random curvatures, and targeted direction are
+not used as a blanket stability verdict.
 
 ## Cross-References
 
