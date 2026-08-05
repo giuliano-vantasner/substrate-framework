@@ -1,0 +1,20 @@
+attempt: 0024
+campaign: P183
+candidate: second_post_gate_record_validation
+status: passed
+started_at: '2026-08-11T10:37:00Z'
+finished_at: '2026-08-11T10:38:00Z'
+commands:
+  - inventory_claims_regeneration
+  - validate_repository
+  - render_docs_check
+  - render_memory_check
+  - memory_validate_absolute_path_with_pipefail
+  - git_diff_check
+results:
+  workflow_claims: 175
+  accepted_claims: 175
+  pending_units: 41
+  memory_files: 746
+  whitespace_errors: 0
+verdict: record_only_post_gate_edits_are_synchronized_without_repeating_the_full_suite

@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T07:43:00Z'
+updated: '2026-08-11T10:28:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.131.0`, containing one hundred sixty-eight
+The current accepted frontier is `v0.135.0`, containing one hundred seventy-five
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2023,23 +2023,35 @@ minute-scale eager simplification to seconds without weakening the oracle.
 The integrated promotion boundary validates 739 memory records and passes all
 1,565 repository tests with a clean terminal status.
 
+P183 adds C-FLO-001's exact finite co-rotating transformation, periodic
+monodromy, and complete Jordan-sensitive power-boundedness criterion;
+C-ROT-001's exact correction that a fixed transverse equilibrium of the free
+oblate top is unstable while the whole equilibrium circle is stable as a set;
+and C-RMAP-003's exact degree-two angular-functional stationarity, Hessian,
+five-dimensional symmetry kernel, and positive complement. TX4 is qualified
+through these narrow objects. Its nonzero nilpotent matrix directly refutes
+its unit-multiplier stability inference, and its full-field Skyrmion,
+collective-inertia, selected-Omega, fission, gravity, radiation, observation,
+and TX5 readings remain unaccepted. The primary and two independent routes
+pass 29, 14, and 9 checks; 111 affected tests pass. TX4 and the new modules
+have no legacy NumPy trapezoidal access, so no compatibility event changes a
+scientific verdict. The thirteen-check source graph closes TX4 while keeping
+TX5 separately pending. The integrated promotion boundary validates 746 memory
+records and passes all 1,583 repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.134.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-two accepted claims. P001 through P182 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 42 pending, 0 partial, 3 migrated, 163 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.135.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-five accepted claims. P001 through P183 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 41 pending, 0 partial, 3 migrated, 164 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 42
-pending, 3 migrated, 163 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is TX4, pinned at SHA-256
-`c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f`.
-P183 has frozen TX4 before its own source-body audit. Its six candidates
-separate literal reproduction, finite co-rotating algebra, a collective rotor,
-a restricted rational-map Hessian, genuine full-field stability, and governed
-closure. The audit must require the action, rotating solution, operator domain,
-constraints and gauge modes, boundary data, conserved structure, multiplier
-and Jordan classification, spectral completeness, refinement, and load-bearing
-mutations before any stability claim. TX4 inherits no self-consistent field,
-selected-`Omega`, stability, gravity, or radiation authority from TX1 through
-TX3. The next executable action is the committed-freeze body and runtime audit.
+The effort remains active. D4 is discharged, but D1 remains open with 41
+pending, 3 migrated, 164 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is TX5, pinned at SHA-256
+`ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a`.
+P183 closes TX4 without accepting its headline. The next action is to freeze
+TX5 against v0.135.0 and audit its claimed full-field evolution, numerical
+scheme, boundary and initial data, convergence, conservation, constraint and
+gauge handling, mutations, dependence on TX4's rejected prose, and physical
+scope before accepting any stability result.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

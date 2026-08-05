@@ -1,0 +1,28 @@
+campaign: P183
+claims:
+  C-FLO-001:
+    direct_dependencies: []
+    declared_mathematics: [finite_constant_matrix_ODE, matrix_exponential, eigenvalue_and_Jordan_form]
+  C-ROT-001:
+    direct_dependencies: [C-FLO-001]
+    declared_model: free_axisymmetric_Euler_top_in_body_angular_velocity_space
+  C-RMAP-003:
+    direct_dependencies: [C-RMAP-001, C-SYM-001]
+    declared_model: degree_two_rational_map_angular_functional_in_one_explicit_coefficient_chart
+application_dependencies_not_needed_for_the_theorems: [C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002, C-GW-009, C-GW-010]
+false_token_dependency: M2
+closure:
+  accepted: true
+  undeclared_constants: []
+  empirical_inputs: []
+  fitted_parameters: []
+  selected_Omega: none
+  Skyrme_collective_inertia: none
+  field_operator_or_full_field_solution: none
+  gravity_radiation_or_detector_model: none
+conventions:
+  rotating_frame: x_equals_exp_tK_times_y
+  rotor_state: body_angular_velocity_with_Euclidean_set_distance
+  density_moment: ordinary_second_moment_and_normalized_STF_not_collective_metric
+  rational_map_chart: ten_real_coefficients_of_z2_plus_a1z_plus_a0_over_b2z2_plus_b1z_plus_b0
+debt: []

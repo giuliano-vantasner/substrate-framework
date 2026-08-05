@@ -1,0 +1,31 @@
+campaign: P183
+claims: [C-FLO-001, C-ROT-001, C-RMAP-003]
+direct_consumers:
+  - TX4_source_disposition
+  - src/substrate_framework/rotating_stability.py
+  - src/substrate_framework/rational_map_stability.py
+  - src/substrate_framework/__init__.py
+  - tests/test_rotating_stability.py
+  - tests/test_rational_map_stability.py
+  - campaigns/P183-tx4-floquet-stability-audit
+  - governance/claims.yaml
+  - governance/releases/v0.135.0.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-FLO-001.md
+  - memory/framework/claims/C-ROT-001.md
+  - memory/framework/claims/C-RMAP-003.md
+  - memory/framework/releases/v0.135.0.md
+  - memory/vantasner/decisions/P183-claim-reviews.md
+  - memory/vantasner/decisions/TX4-qualified-review.md
+  - memory/vantasner/efforts/framework-migration.md
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+narrative_reverse_consumers:
+  TX5: pending_and_inherits_no_full_field_stability_selected_Omega_fission_gravity_or_radiation_authority
+accepted_claims_retroactively_changed: []
+focused_tests: 111_passed
+staged_impact: {risk: LOW, changed_symbols: 232, changed_files: 54, affected_execution_flows: 0}
+generated_consumers: current_for_v0.135.0
+integrated_tests: 1583_passed
+debt: []

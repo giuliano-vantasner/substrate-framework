@@ -1,0 +1,22 @@
+attempt: 0014
+campaign: P183
+candidate: third_independent_exact_shape_coordinate_derivation
+status: failed_implementation
+started_at: '2026-08-11T10:12:00Z'
+finished_at: '2026-08-11T10:14:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rational_map_hessian_review.py
+process:
+  exit_code: 1
+  elapsed_seconds: 60.15
+  maximum_resident_kibibytes: 161984
+progress:
+  basis_rank_check: passed
+  base_integral_check: passed
+  exact_coordinate_gradients_completed: 10
+  exact_hessian_rows_completed: 10
+  scientific_checks_passed_before_failure: 6
+failure: mutation_harness_tried_to_assign_into_an_immutable_SymPy_matrix
+diagnosis: implementation_failure_after_the_independent_exact_derivation_and_scientific_checks_had_passed
+repair: make_an_explicit_mutable_copy_for_the_negative_curvature_mutation_only
+claim_or_threshold_changed: false
+next_attempt: rerun_the_same_frozen_independent_shape_review

@@ -6428,3 +6428,74 @@ units:
       event affects a scientific verdict. The integrated promotion boundary
       validates 739 memory records and passes all 1,565 repository tests with
       a clean terminal status; staged impact is recorded separately.
+  TX4:
+    disposition: qualified
+    accepted_claims:
+      - C-PDE-009
+      - C-RMAP-001
+      - C-RMAP-002
+      - C-RPROF-001
+      - C-RPROF-002
+      - C-RMOM-001
+      - C-RMOM-002
+      - C-GW-009
+      - C-GW-010
+      - C-FLO-001
+      - C-ROT-001
+      - C-RMAP-003
+    qualification: >-
+      TX4's coordinate chain rule survives through C-FLO-001 as an exact
+      finite-dimensional co-rotating theorem, with the complete separate
+      requirement that monodromy eigenvalues lie in the closed unit disk and
+      unit-circle eigenvalues be semisimple. TX4's own nonzero nilpotent rotor
+      matrix has a defective unit multiplier and unbounded powers, so its
+      no-exponential-growth stability inference is false. C-ROT-001 retains
+      the declared oblate free-top equations and invariants but proves that
+      each fixed transverse equilibrium is not Lyapunov stable; only the
+      entire transverse equilibrium circle is stable as a set in body
+      angular-velocity space. TX4's ordinary density-inertia identity is exact
+      but is not a Skyrme collective rotational metric and does not ingest
+      TX1's value. C-RMAP-003 independently derives exact stationarity and all
+      55 Hessian entries for the degree-two angular functional at R=z^2: its
+      five-dimensional kernel is exactly the displayed symmetry tangent span
+      and its complementary curvature is positive. This chart-local second
+      variation has no collective kinetic metric and supplies no full-field or
+      dynamical stability. TX4's reduced energy literals duplicate corrected
+      C-RPROF-002 and prove no fission theorem. The unconditional rotating-B2
+      dynamic-stability headline, full-field operator and spectrum, selected
+      Omega, physical state, fission, gravity, radiation, observation, and
+      substrate readings remain unaccepted. TX5 is separately pending and
+      inherits no blanket authority.
+    evidence:
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/source_adjudication.md
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/C-FLO-001-claim-review.md
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/C-ROT-001-claim-review.md
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/C-RMAP-003-claim-review.md
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/source-reproduction.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/compatibility-audit.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/source-audit.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/check-adjudication.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/input-provenance.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/dependency-audit.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/consumer-audit.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/candidate-comparison.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/evidence/primary-provenance.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/verify.py
+      - campaigns/P183-tx4-floquet-stability-audit/attempts/0006/derive_exact_shape_hessian.py
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rotating_stability_review.py
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rational_map_hessian_review.py
+      - campaigns/P183-tx4-floquet-stability-audit/reviews/replay_source_graph.py
+      - campaigns/P183-tx4-floquet-stability-audit/attempts/0011/result.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/attempts/0015/result.yaml
+      - campaigns/P183-tx4-floquet-stability-audit/attempts/0017/result.yaml
+      - memory/vantasner/decisions/P183-claim-reviews.md
+      - memory/vantasner/decisions/TX4-qualified-review.md
+    note: >-
+      P183 closes twenty-nine primary, fourteen independent rotating, nine
+      independent exact-shape, thirteen source-graph, and one hundred eleven
+      focused checks before the integrated boundary. TX4 and the new canonical modules have no
+      legacy NumPy trapezoidal access, so no version event affects a scientific
+      verdict. The integrated boundary validates 746 memory records and passes
+      all 1,583 repository tests; staged impact is LOW with no affected flow.

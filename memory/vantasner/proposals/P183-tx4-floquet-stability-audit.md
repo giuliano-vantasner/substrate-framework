@@ -2,7 +2,7 @@
 description: Audit TX4 and separate exact co-rotating algebra from genuine stability
 author: vantasner
 created: '2026-08-11T09:20:00Z'
-updated: '2026-08-11T09:42:00Z'
+updated: '2026-08-11T10:36:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - floquet
 - stability
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P183 TX4 Floquet-Stability Audit
 
@@ -213,15 +213,15 @@ state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| TX4's exact implementation, values, predicates, assertion, and dataflow are unaudited in P183 | Pin every definition, input, equation, check, assertion, result sentence, and dependency | open |
-| The rotating configuration may be prescribed rather than solved | Derive the action/EOM and prove the exact rotating background residual before any perturbation claim | open |
-| A co-rotating identity may be mislabeled an exactly solved spectrum | Derive the transformed generator and separately determine spectrum, multiplier modulus, Jordan structure, and evolution bounds | open |
-| A secular term may be relabeled a harmless zero mode | Identify eigenvectors versus generalized eigenvectors, the symmetry quotient, conserved norm, and boundedness criterion | open |
-| Collective-rotor stability may be incomplete or duplicate accepted algebra | Reconstruct the complete reduced action and compare exact scope with C-ACT-001/C-COL-001/C-SYM-001 | open |
-| Rational-map Hessian positivity may be coordinate, finite-difference, or restricted-space evidence | Establish stationarity, complete coordinates, kinetic metric, symmetry kernel, refined eigenpairs, and ansatz-local scope | open |
-| Full-field stability may be inferred from restricted sectors | Supply the field operator/domain/constraints/boundaries and complete full-space oracle, or preserve the claim as unaccepted | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open |
-| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, docs, and debt | open |
+| TX4's exact implementation, values, predicates, assertion, and dataflow are unaudited in P183 | Pin every definition, input, equation, check, assertion, result sentence, and dependency | closed |
+| The rotating configuration may be prescribed rather than solved | Derive the action/EOM and prove the exact rotating background residual before any perturbation claim | closed_unaccepted_full_field_scope |
+| A co-rotating identity may be mislabeled an exactly solved spectrum | Derive the transformed generator and separately determine spectrum, multiplier modulus, Jordan structure, and evolution bounds | closed_by_C_FLO_001 |
+| A secular term may be relabeled a harmless zero mode | Identify eigenvectors versus generalized eigenvectors, the symmetry quotient, conserved norm, and boundedness criterion | closed_refuted_by_Jordan_and_exact_trajectory |
+| Collective-rotor stability may be incomplete or duplicate accepted algebra | Reconstruct the complete reduced action and compare exact scope with C-ACT-001/C-COL-001/C-SYM-001 | closed_by_C_ROT_001_scope |
+| Rational-map Hessian positivity may be coordinate, finite-difference, or restricted-space evidence | Establish stationarity, complete coordinates, kinetic metric, symmetry kernel, refined eigenpairs, and ansatz-local scope | closed_by_C_RMAP_003_with_no_kinetic_claim |
+| Full-field stability may be inferred from restricted sectors | Supply the field operator/domain/constraints/boundaries and complete full-space oracle, or preserve the claim as unaccepted | closed_unaccepted_and_TX5_pending |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | closed_no_TX4_or_P183_legacy_access |
+| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, docs, and debt | closed |
 
 ## Review and Promotion Plan
 
@@ -242,13 +242,15 @@ Validation and commit remain separate invocations.
 
 ## Done Gate
 
-P183 closes only when a positive exact finite co-rotating and/or distinct rotor
+P183 closed when a positive exact finite co-rotating and distinct rotor
 theorem or exact accepted-composition disposition exists, every source
 predicate is adjudicated, every spectral and stability word matches its actual
 configuration space and oracle, dependencies and consumers replay, governed
 records agree, and the debt ledger is empty. A time-independent matrix, eight
 passing checks, a nonnegative restricted Hessian, or a labeled zero mode alone
-keeps the campaign active.
+would have kept the campaign active. C-FLO-001, C-ROT-001, and C-RMAP-003 now
+close the positive scope; TX4's headline remains unaccepted, and TX5 is a new
+separately governed campaign rather than P183 debt.
 
 ## Cross-References
 

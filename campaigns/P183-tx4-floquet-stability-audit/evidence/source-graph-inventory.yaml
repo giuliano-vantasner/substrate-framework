@@ -1,0 +1,15 @@
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: M2, role: false_token_dependency_control, path: merged-framework/bridges/phase-7/bridge_M2_meissner_proca_W_mass.py, sha256: 4ae3e5cb06e7c0bce6387ac7b84f555de65f12cce4be42d620405bb2b5c5b59f, disposition: qualified}
+  - {source_unit: QB3, role: explicit_Floquet_requirement_dependency, path: merged-framework/bridges/phase-16/bridge_QB3_triaxial_nonaxisymmetric.py, sha256: e9626f2e4829084635386eea271d0abdd39c81dfcd6899765d2f4bffac83e0c8, disposition: qualified}
+  - {source_unit: E1, role: rational_map_functional_dependency, path: merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py, sha256: 1afa9ba8ade88912e7361bbbd6f59a9fce5cc114c75ddf604a6439bc066ae2d1, disposition: qualified}
+  - {source_unit: E2, role: corrected_radial_branch_dependency, path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py, sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f, disposition: qualified}
+  - {source_unit: TX1, role: conditional_static_moment_dependency, path: merged-framework/bridges/phase-40/bridge_TX1_b2_intrinsic_quadrupole.py, sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff, disposition: qualified}
+  - {source_unit: TX2, role: prescribed_rotation_dependency, path: merged-framework/bridges/phase-40/bridge_TX2_rotating_triaxial_quadrupole.py, sha256: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7, disposition: qualified}
+  - {source_unit: TX3, role: conditional_polarization_dependency, path: merged-framework/bridges/phase-40/bridge_TX3_two_polarizations_omega_free.py, sha256: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837, disposition: qualified}
+  - {source_unit: TX4, role: qualified_unit_under_audit, path: merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py, sha256: c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f, disposition: qualified}
+  - {source_unit: TX5, role: pending_full_field_consumer, path: merged-framework/bridges/phase-40/bridge_TX5_full_field_stability.py, sha256: ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a, disposition: pending_adjudication}
+canonical_claims: [C-PDE-009, C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002, C-GW-009, C-GW-010, C-FLO-001, C-ROT-001, C-RMAP-003]
+canonical_modules: [rational_maps.py, rational_map_radial.py, rational_map_moments.py, rigid_quadrupole_rotation.py, rotating_quadrupole_polarization.py, rotating_stability.py, rational_map_stability.py]
+false_dependency: M2_is_only_an_unused_local_symbol_in_TX4
+consumer_ceiling: TX5_consumes_TX4_but_inherits_no_full_field_stability_selected_Omega_fission_gravity_or_radiation_authority

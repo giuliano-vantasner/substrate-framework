@@ -1,0 +1,44 @@
+attempt: 0006
+campaign: P183
+candidate: D_exact_integrand_shape_Hessian
+status: passed
+started_at: '2026-08-11T09:43:00Z'
+finished_at: '2026-08-11T09:50:00Z'
+command: /usr/bin/time .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/attempts/0006/derive_exact_shape_hessian.py
+method:
+  coordinates: ten_real_coefficients_of_R_equals_z2_plus_a1z_plus_a0_over_b2z2_plus_b1z_plus_b0
+  differentiation: exact_directional_SymPy_derivatives_of_the_actual_pointwise_integrand
+  azimuth: exact_Laurent_residue_zero_mode
+  radial_variable: x_equals_abs_z_squared
+  sphere_integration: exact_rational_integrals_on_x_from_zero_to_infinity
+  inserted_matrix_entries: false
+  inserted_eigenvalues: false
+process:
+  exit_code: 0
+  elapsed_seconds: 97.15
+  maximum_resident_kibibytes: 71768
+exact_results:
+  base_functional: pi_plus_8_over_3
+  gradient: ten_exact_zeros
+  Hessian_rank: 5
+  Hessian_nullity: 5
+  eigenvalues:
+    zero: 5
+    pi: 1
+    pi_plus_16_over_3: 2
+    seven_pi_plus_64_over_3: 2
+  unevaluated_integrals: 0
+  unresolved_square_roots: 0
+  full_symmetric_entries_derived: 55
+comparison:
+  attempt_0004_numeric_spectrum_matches: true
+  TX4_source_positive_spectrum_matches_to_finite_difference_error: true
+  TX4_source_exact_zero_language_now_has_an_independent_exact_route: true
+ceiling:
+  scope: local_degree_two_rational_map_coefficient_chart
+  establishes: exact_stationary_positive_semidefinite_second_variation_with_five_dimensional_kernel
+  does_not_establish: [kinetic_metric, full_field_Hessian, dynamical_stability, physical_Skyrmion, fission, gravity, radiation]
+debt:
+  - independent_symmetry_orbit_kernel_rederivation
+  - canonical_APIs_primary_verifier_consumer_replay_and_governance
+next_attempt: implement_and_test_C_FLO_001_C_ROT_001_and_C_RMAP_003_APIs

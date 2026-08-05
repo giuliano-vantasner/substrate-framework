@@ -80,6 +80,16 @@ from .rotating_quadrupole_polarization import (
     conditional_perpendicular_rotation_polarization,
     perpendicular_axisymmetric_stf_second_derivative,
 )
+from .rotating_stability import (
+    AxisymmetricDensityInertiaRelation,
+    AxisymmetricTransverseRotorEvidence,
+    CoRotatingLinearSystemEvidence,
+    FiniteMatrixPowerEvidence,
+    axisymmetric_density_inertia_relation,
+    axisymmetric_transverse_rotor_evidence,
+    co_rotating_linear_system_evidence,
+    finite_matrix_power_evidence,
+)
 from .boundary_correlations import (
     OrientedHalfLineParityLedger,
     ScalarBoundaryParityLedger,
@@ -774,6 +784,11 @@ from .rational_map_moments import (
     factorized_rational_map_energy_moments,
     rational_map_local_energy_density,
 )
+from .rational_map_stability import (
+    DegreeTwoRationalMapHessian,
+    degree_two_rational_map_hessian,
+    degree_two_rational_map_quadratic_form,
+)
 from .charge_traces import (
     AbelianNormalizationLedger,
     ChargeCouplingAngleLedger,
@@ -1071,6 +1086,11 @@ __all__ = [
     "ConditionalScaledSTFWaveform",
     "RigidAxisymmetricSTFRotation",
     "PerpendicularRotationTTPolarization",
+    "AxisymmetricDensityInertiaRelation",
+    "AxisymmetricTransverseRotorEvidence",
+    "CoRotatingLinearSystemEvidence",
+    "FiniteMatrixPowerEvidence",
+    "DegreeTwoRationalMapHessian",
     "GovernanceError",
     "GravitySourceNormalizationLedger",
     "GroundCouplingLedger",
@@ -1662,6 +1682,12 @@ __all__ = [
     "massive_triplet_dipole_extrema",
     "massive_triplet_dipole_interaction",
     "yukawa_radial_hessian",
+    "axisymmetric_density_inertia_relation",
+    "axisymmetric_transverse_rotor_evidence",
+    "co_rotating_linear_system_evidence",
+    "finite_matrix_power_evidence",
+    "degree_two_rational_map_hessian",
+    "degree_two_rational_map_quadratic_form",
 ]
 
 __version__ = "0.0.0"

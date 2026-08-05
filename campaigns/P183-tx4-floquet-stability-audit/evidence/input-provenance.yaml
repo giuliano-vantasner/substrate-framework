@@ -1,0 +1,22 @@
+campaign: P183
+accepted_base: v0.134.0
+inputs:
+  finite_rotating_frame: declared_exact_constant_square_B_K_and_positive_period
+  finite_power_boundedness: standard_exact_Jordan_form_theorem_with_all_hypotheses_explicit
+  free_rotor: declared_exact_positive_A_C_Omega_with_C_greater_than_A
+  density_inertia: declared_ordinary_axisymmetric_second_moments_not_collective_metric
+  rational_map_angular_functional: C-RMAP-001
+  symmetry_stationarity_boundary: C-SYM-001
+  reduced_radial_and_moment_scope_only: [C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002]
+  prescribed_rotation_and_TT_scope_only: [C-GW-009, C-GW-010]
+  source_evidence: TX4_at_substrate_6d1f4e0_SHA256_c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f
+derived_in_P183:
+  - exact_finite_co_rotating_fundamental_matrix_monodromy_and_power_criterion
+  - exact_oblate_rotor_fixed_point_instability_and_equilibrium_set_stability
+  - exact_degree_two_rational_map_stationarity_Hessian_spectrum_and_kernel
+empirical_inputs: []
+fitted_parameters: []
+numeric_comparators:
+  - TX4_fixed_grid_positive_Hessian_modes_used_post_freeze_only
+hidden_imports: []
+debt: []

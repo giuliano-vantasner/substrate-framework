@@ -1,0 +1,42 @@
+source_unit: TX4
+checks:
+  TX4.1:
+    verdict: qualified
+    retained: exact_coordinate_chain_rule_and_C_FLO_001_finite_matrix_reduction
+    rejected: [field_covariance, rotating_field_solution, full_operator, spectrum, stability]
+  TX4.2:
+    verdict: refuted_conclusion_with_retained_matrix
+    retained: exact_nonzero_nilpotent_rotor_J_and_unit_multipliers
+    rejected: [semisimple_zero_mode, bounded_linear_powers, fixed_equilibrium_stability]
+  TX4.3:
+    verdict: corrected
+    retained: exact_free_rotor_invariants_and_C_ROT_001_equilibrium_circle_set_stability
+    rejected: [one_fixed_equilibrium_Lyapunov_stability, Skyrmion_stability]
+  TX4.4:
+    verdict: qualified_identity
+    retained: ordinary_axisymmetric_density_inertia_relation
+    rejected: [TX1_value_ingestion, Skyrme_collective_inertia_identification]
+  TX4.G-A:
+    verdict: qualified_rigid_rotor_guard
+    retained: intermediate_axis_growth_and_major_axis_unit_modulus_examples
+    rejected: [field_operator_sensitivity, full_field_stability]
+  TX4.5:
+    verdict: numeric_discovery_replaced_by_exact_claim
+    retained: source_positive_modes_as_resolution_bounded_comparator
+    accepted_replacement: C-RMAP-003
+    rejected: [exact_zeros_from_h2_scaling_alone, kinetic_metric, full_field_stability]
+  TX4.6:
+    verdict: numeric_alignment_replaced_by_exact_claim
+    retained: approximate_alignment_with_listed_tangents
+    accepted_replacement: C-RMAP-003_exact_independence_and_kernel_span
+    rejected: [kernel_equality_from_small_residuals_alone, dynamical_zero_modes]
+  TX4.7:
+    verdict: duplicate_literal_comparison
+    retained: C-RPROF-002_corrected_degree_two_lower_than_degree_one_energy_per_degree
+    rejected: [fission_threshold, fission_impossibility, dynamic_barrier, quadrupole_persistence]
+advertised_unchecked_claims:
+  dynamically_stable_B2_Skyrmion: unsupported
+  Floquet_stable_in_every_channel: unsupported
+  energy_momentum_Lyapunov_stability: unsupported
+  TX5_full_field_closure: separately_pending
+overall: qualify_through_C_FLO_001_C_ROT_001_C_RMAP_003_and_reject_the_headline

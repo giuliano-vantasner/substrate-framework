@@ -1,0 +1,14 @@
+attempt: 0018
+campaign: P183
+candidate: affected_module_replay
+status: passed
+started_at: '2026-08-11T10:18:00Z'
+finished_at: '2026-08-11T10:19:00Z'
+command: .venv/bin/python -m pytest tests/test_rotating_stability.py tests/test_rational_map_stability.py tests/test_rational_maps.py tests/test_rational_map_radial.py tests/test_rational_map_moments.py tests/test_rigid_quadrupole_rotation.py tests/test_rotating_quadrupole_polarization.py tests/test_symmetry_breaking.py tests/test_collective_coordinates.py tests/test_source_audit.py
+process:
+  exit_code: 0
+  elapsed_seconds: 17.37
+  maximum_resident_kibibytes: 162832
+  tests_collected: 111
+  tests_passed: 111
+verdict: affected_canonical_dependency_and_compatibility_paths_pass

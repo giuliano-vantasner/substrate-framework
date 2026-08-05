@@ -75,5 +75,5 @@ comparators_blinded_until: >-
   rotor stability language, restricted rational-map Hessian reading, eight
   static checks, and one assertion, so no fresh source-result blinding is
   claimed
-status: draft
-revision: 0003
+status: accepted
+revision: 0004

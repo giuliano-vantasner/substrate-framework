@@ -1,0 +1,17 @@
+attempt: 0017
+campaign: P183
+candidate: second_primary_exact_verifier
+status: passed
+started_at: '2026-08-11T10:17:00Z'
+finished_at: '2026-08-11T10:18:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/verify.py
+process:
+  exit_code: 0
+  elapsed_seconds: 1.73
+  maximum_resident_kibibytes: 147460
+  checks_passed: 29
+  terminal_tally: ALL_29_CHECKS_PASS_P183_TX4_C_FLO_001_C_ROT_001_C_RMAP_003
+mutations: [unit_multiplier_Jordan_block, positive_exponent, wrong_STF_normalization, negative_shape_curvature, nonstationary_shape_gradient]
+exact_oracle: unchanged
+scientific_claim_changed: false
+verdict: three_narrow_positive_objects_pass_with_TX4_headline_refuted

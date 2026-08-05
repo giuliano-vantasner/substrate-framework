@@ -1,0 +1,82 @@
+campaign: P183
+title: TX4 finite Floquet, free-rotor, and rational-map Hessian audit
+source_baseline: substrate@6d1f4e0
+source_units: [TX4]
+base_release: v0.134.0
+accepted_release: v0.135.0
+adjudicated_at: '2026-08-11T10:25:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_is_retained_as_source_evidence_only.}
+  - {id: B, reason: Exact_finite_co_rotating_reduction_and_complete_matrix_power_criterion_earn_C_FLO_001.}
+  - {id: C, reason: Exact_free_oblate_rotor_trajectory_corrects_fixed_equilibrium_stability_and_earns_C_ROT_001.}
+  - {id: D, reason: Two_exact_integrand_routes_establish_the_restricted_degree_two_angular_Hessian_and_earn_C_RMAP_003.}
+  - {id: F, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: E, decision: deferred_because_no_full_field_action_rotating_solution_operator_domain_constraint_slice_boundary_data_spectrum_refinement_or_independent_field_method_exists}
+claims:
+  - {id: C-FLO-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-ROT-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-RMAP-003, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-PDE-009, decision: unchanged_requires_a_separate_periodic_solution_and_Floquet_problem}
+  - {id: C-RMAP-001, decision: unchanged_angular_functional_and_axial_map_conventions}
+  - {id: C-SYM-001, decision: unchanged_stationarity_symmetry_and_Hessian_obligations}
+  - {id: C-RPROF-002, decision: unchanged_corrected_reduced_radial_branch_and_energy_ordering_with_no_fission_theorem}
+  - {id: C-RMOM-001, decision: unchanged_conditional_static_moment_not_collective_inertia}
+  - {id: C-RMOM-002, decision: unchanged_resolution_bounded_reduced_branch_magnitude}
+  - {id: C-GW-009, decision: unchanged_prescribed_rotation_with_no_dynamics_or_stability}
+  - {id: C-GW-010, decision: unchanged_conditional_TT_algebra_with_no_dynamics_or_stability}
+unpromoted_claims:
+  - {id: rotating_B2_Skyrmion_dynamic_stability, reason: No_full_field_action_solution_operator_domain_spectrum_or_coercive_nonlinear_oracle_exists.}
+  - {id: unit_multipliers_imply_stability, reason: TX4s_nonzero_nilpotent_J_has_a_defective_unit_multiplier_and_unbounded_powers.}
+  - {id: fixed_transverse_rotor_equilibrium_is_Lyapunov_stable, reason: An_exact_arbitrarily_near_axial_perturbation_reaches_order_one_distance.}
+  - {id: ordinary_density_inertia_equals_Skyrme_collective_inertia, reason: TX4_neither_derives_a_collective_metric_nor_uses_TX1s_value.}
+  - {id: restricted_rational_map_Hessian_implies_full_field_stability, reason: The_exact_result_is_only_a_fixed_degree_coefficient_chart_without_a_kinetic_metric_or_full_field_operator.}
+  - {id: fission_is_impossible, reason: A_literal_reduced_energy_ordering_is_not_a_fission_threshold_barrier_or_dynamics.}
+  - {id: selected_Omega_gravity_radiation_or_observation, reason: No_accepted_dependency_supplies_these_objects.}
+  - {id: TX5_closure, reason: TX5_is_separately_pending_and_cannot_validate_TX4_retroactively.}
+evidence:
+  primary_verifier: verify.py
+  independent_rotating_rederivation: reviews/independent_rotating_stability_review.py
+  exact_shape_derivation: attempts/0006/derive_exact_shape_hessian.py
+  independent_shape_rederivation: reviews/independent_rational_map_hessian_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_reviews: [reviews/C-FLO-001-claim-review.md, reviews/C-ROT-001-claim-review.md, reviews/C-RMAP-003-claim-review.md]
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  primary_attempt: attempts/0017/result.yaml
+  independent_rotating_attempt: attempts/0011/result.yaml
+  independent_shape_attempt: attempts/0015/result.yaml
+  focused_attempt: attempts/0018/result.yaml
+  graph_attempt: attempts/0020/result.yaml
+  impact_attempt: attempts/0021/result.yaml
+  integrated_attempt: attempts/0022/result.yaml
+source_disposition: {TX4: qualified}
+accepted_mappings: [C-PDE-009, C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002, C-GW-009, C-GW-010, C-FLO-001, C-ROT-001, C-RMAP-003]
+compatibility:
+  source_numpy_surface: no_trapezoidal_access
+  mutable_current_name: numpy.trapezoid_or_shared_trapezoid_integral
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.135.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rotating_stability_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rational_map_hessian_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/reviews/replay_source_graph.py
+  - pytest_affected_111_tests
+  - scripts/validate.sh
+  - git_diff_check
+debt: []
+status: accepted

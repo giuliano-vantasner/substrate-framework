@@ -1,0 +1,19 @@
+attempt: 0016
+campaign: P183
+candidate: first_primary_exact_verifier
+status: failed_evidence_representation
+started_at: '2026-08-11T10:16:00Z'
+finished_at: '2026-08-11T10:17:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/verify.py
+process:
+  exit_code: 1
+  elapsed_seconds: 1.76
+  checks_passed_before_failure: 26
+failure: copied_source_positive_mode_comparator_bound_was_tighter_than_the_actual_fixed_grid_discrepancy
+measured_absolute_discrepancies: [0.0003173464, 0.0003540131, 0.0003540131, 0.0011180915, 0.0011180915]
+diagnosis: source_comparator_precision_was_misrepresented_not_an_exact_or_canonical_claim_failure
+repair: use_a_0.002_absolute_resolution_bound_only_for_the_source_finite_difference_comparison
+exact_oracle: unchanged
+scientific_claim_changed: false
+promotion_threshold_changed: false
+next_attempt: rerun_primary_verifier

@@ -1,0 +1,18 @@
+attempt: 0019
+campaign: P183
+candidate: first_source_graph_replay
+status: failed_fixture
+started_at: '2026-08-11T10:29:00Z'
+finished_at: '2026-08-11T10:30:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/reviews/replay_source_graph.py
+process:
+  exit_code: 1
+  elapsed_seconds: 2.43
+  maximum_resident_kibibytes: 153892
+  checks_passed_before_failure: 12
+failure: historical_overclaim_sentinel_used_lowercase_paraphrases_instead_of_the_exact_frozen_uppercase_source_text
+diagnosis: audit_fixture_failure_after_all_hash_dependency_queue_compatibility_and_consumer_checks_passed
+repair: match_the_exact_SECULAR_TERM_IS_A_ZERO_MODE_and_IT_CANNOT_FISSION_literals
+scientific_claim_changed: false
+mapping_changed: false
+next_attempt: rerun_source_graph_replay

@@ -1,0 +1,41 @@
+campaign: P183
+claims: [C-FLO-001, C-ROT-001, C-RMAP-003]
+base_release: v0.134.0
+source_sha256: c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f
+primary:
+  path: campaigns/P183-tx4-floquet-stability-audit/verify.py
+  terminal_tally: ALL_29_CHECKS_PASS_P183_TX4_C_FLO_001_C_ROT_001_C_RMAP_003
+  elapsed_seconds: 1.73
+  exit_code: 0
+independent_rotating:
+  path: campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rotating_stability_review.py
+  terminal_tally: ALL_14_CHECKS_PASS_P183_INDEPENDENT_ROTATING
+  exit_code: 0
+independent_shape:
+  path: campaigns/P183-tx4-floquet-stability-audit/reviews/independent_rational_map_hessian_review.py
+  terminal_tally: ALL_9_CHECKS_PASS_P183_INDEPENDENT_C_RMAP_003
+  elapsed_seconds: 60.09
+  exit_code: 0
+exact_shape_derivation:
+  path: campaigns/P183-tx4-floquet-stability-audit/attempts/0006/derive_exact_shape_hessian.py
+  exact_gradients: 10
+  exact_symmetric_Hessian_entries: 55
+  unevaluated_integrals: 0
+  elapsed_seconds: 97.15
+  exit_code: 0
+focused: {tests: 111, elapsed_seconds: 17.37, exit_code: 0}
+mutations:
+  - unit_modulus_nonsemisimple_Jordan_block
+  - positive_real_Floquet_exponent
+  - wrong_rotor_inertia_sign
+  - wrong_STF_inertia_normalization
+  - negative_rational_map_curvature
+  - nonstationary_rational_map_gradient
+  - dropped_symmetry_tangent
+oracle_ceiling: symbolic_verified
+integrated:
+  workflow_claims: 175
+  memory_files: 746
+  repository_tests: 1583
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  exit_code: 0

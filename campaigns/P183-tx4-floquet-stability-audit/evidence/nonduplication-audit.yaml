@@ -1,0 +1,29 @@
+campaign: P183
+registry_campaign_memory_collision_search:
+  exact_identifier_collisions: false
+  provisional_identifier_collisions: false
+comparisons:
+  C-PDE-009:
+    overlap: requires_a_separate_Floquet_problem_for_periodic_backgrounds
+    distinction: no_finite_rotating_frame_monodromy_or_matrix_power_theorem
+  C-COL-001:
+    overlap: exact_declared_reduced_coordinate_stability_obligations
+    distinction: no_free_axisymmetric_top_equilibrium_manifold_or_Jordan_classification
+  C-SYM-001:
+    overlap: stationarity_symmetry_tangents_and_Hessian_zero_mode_requirements
+    distinction: no_degree_two_rational_map_exact_integral_Hessian_or_positive_spectrum
+  C-RMAP-001:
+    overlap: same_angular_functional_and_axial_degree_two_value
+    distinction: no_stationarity_full_chart_Hessian_kernel_or_local_second_variation_classification
+  C-RPROF-002:
+    overlap: degree_two_reduced_radial_branch_and_energy_ordering
+    distinction: no_angular_shape_Hessian_rotor_or_Floquet_theorem
+  C-GW-009_and_C-GW-010:
+    overlap: prescribed_rotating_axisymmetric_moment_kinematics
+    distinction: explicitly_no_rotating_dynamics_inertia_or_stability
+novel_objects:
+  - exact_periodic_finite_co_rotating_monodromy_with_complete_power_boundedness_criterion
+  - exact_free_oblate_rotor_fixed_equilibrium_instability_and_equilibrium_circle_set_stability
+  - exact_degree_two_rational_map_chart_Hessian_spectrum_and_symmetry_kernel
+new_physical_premises: []
+verdict: three_distinct_compatible_extensions_without_full_field_promotion

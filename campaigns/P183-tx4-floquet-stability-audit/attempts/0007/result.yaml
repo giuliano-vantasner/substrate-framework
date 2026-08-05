@@ -1,0 +1,25 @@
+attempt: 0007
+campaign: P183
+candidate: first_canonical_Floquet_rotor_and_shape_implementation
+status: failed_implementation_and_representation
+started_at: '2026-08-11T09:51:00Z'
+finished_at: '2026-08-11T09:54:00Z'
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_rotating_stability.py tests/test_rational_map_stability.py
+process:
+  exit_code: 1
+  passed: 13
+  failed: 5
+failures:
+  - exp_of_positive_symbol_unit_disk_sign_was_undecidable_under_the_initial_generic_offset_branch
+  - perturbation_symbol_test_accidentally_included_model_parameters
+  - algebraically_equal_eigenvalues_had_distinct_structural_Counter_keys
+  - positive_eigenvalue_tuple_used_symbolic_not_numeric_order
+  - SymPy_left_a_congruent_positive_semidefinite_matrix_property_undecided
+scientific_diagnosis_changed: false
+repairs:
+  - classify_exact_exponential_moduli_by_the_sign_of_their_exponent
+  - select_perturbation_symbols_by_name
+  - compare_exact_eigenvalues_by_simplified_difference_and_store_physical_order
+  - verify_coordinate_congruence_through_an_exact_sum_of_positive_squares
+thresholds_changed: false
+next_attempt: rerun_the_same_focused_exact_tests

@@ -255,6 +255,15 @@ Let V, J_even, and J_odd be real n-entry columns and let K be a nonempty real sy
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-FLO-001
+
+Let B and K be exact constant complex square matrices of equal finite dimension, let Q(t)=exp(t*K), and consider the declared laboratory linear system x_dot=Q(t)*B*Q(t)^(-1)*x. Under x=Q(t)*y, exact chain rule gives y_dot=(B-K)*y and the laboratory fundamental matrix Phi(t)=Q(t)*exp(t*(B-K)). If T is exact and positive with Q(T)=I, the laboratory and transformed monodromies both equal exp(T*(B-K)). For any exact finite monodromy M, its integer powers are bounded exactly when every eigenvalue lies in the closed unit disk and every eigenvalue on the unit circle is semisimple, equivalently its algebraic and geometric multiplicities agree there. Thus a time-independent transformed generator or unit-modulus multipliers alone does not prove stability: a nontrivial boundary Jordan block gives secularly unbounded powers. This is an exact conditional finite-dimensional linear theorem. It supplies no field action, periodic field solution, unbounded-operator domain, constraint or gauge slice, boundary data, complete field spectrum, nonlinear estimate, energy-momentum coercivity, physical source, observation, or substrate realization.
+
+- Accepted in: `v0.135.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-FLX-001
 
 Conditional on positive flux Phi uniformly crossing a cross-section A that is fixed independently of positive length L, Gauss data give the constant field E=Phi/A. With declared field-energy density E^2/2, stored field energy is U(L)=Phi^2*L/(2A), linear with energy slope sigma_energy=Phi^2/(2A). Separately, for positive endpoint charge q and declared force F=qE, endpoint work is V(L)=q*Phi*L/A, linear with force slope sigma_force=q*Phi/A. The slopes agree if and only if q=Phi/2; for q=Phi the endpoint slope is twice the energy slope. Fixed area is load-bearing: A(L)=A0*(1+L/L0) gives logarithmic field energy, while spherical spreading gives an inverse-square field and curved Coulomb potential. Matching a supplied tension by A_eff=Phi^2/(2*sigma) defines an effective area and does not predict it. This theorem establishes no physical charge, flux tube, vortex-tension identity, QCD, area law, or confinement.
@@ -1092,6 +1101,15 @@ Conditional on C-RMAP-001 and on the exact declared rational map R_4(z)=(z^4+2*i
 - Compatibility: `compatible_extension`
 - Dependencies: C-RMAP-001
 
+## C-RMAP-003
+
+For the oriented-sphere angular functional I[R] and conventions of C-RMAP-001, use the local degree-two chart R=(z^2+a1*z+a0)/(b2*z^2+b1*z+b0) about R=z^2 with real coordinate order (Re(a1),Im(a1),Re(a0),Im(a0),Re(b2),Im(b2),Re(b1),Im(b1), Re(b0-1),Im(b0-1)). Exact differentiation under the full-sphere integral gives I[z^2]=pi+8/3 and zero gradient. The exact real symmetric Hessian has rank five, nullity five, and eigenvalues zero five times, pi once, pi+16/3 twice, and 7*pi+64/3 twice. Its kernel is exactly the span of the five independently derived infinitesimal domain-Mobius, target-Mobius, and phase directions displayed by the canonical API; the displayed complementary five-dimensional quadratic form is positive definite. Hence R=z^2 has an exact positive second variation modulo those symmetry directions inside this coefficient chart. This is a chart-local fixed-degree rational-map angular theorem. It establishes no collective kinetic metric, radial or full-field Hessian, global minimum, full three-dimensional solution, dynamical or Floquet stability, physical Skyrmion, fission barrier, gravity, radiation, observation, or substrate realization.
+
+- Accepted in: `v0.135.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RMAP-001, C-SYM-001
+
 ## C-RMOM-001
 
 On the oriented unit sphere and conformal-Jacobian convention of C-RMAP-001, declare the conditional angular-resolved density epsilon=f_prime^2+2*sin(f)^2*(1+f_prime^2)*J/r^2 +sin(f)^4*J^2/r^4 for an exact real radial profile f. If the declared map has normalized sphere averages <J>=B and <J^2>=I, exact sphere integration of r^2*epsilon gives precisely C-RPROF-001's radial density r^2*f_prime^2+2*B*sin(f)^2*(1+f_prime^2) +I*sin(f)^4/r^2. Its normalized second STF moment factorizes as I_STF=H1*A1+H2*A2, where H1=integral_0^infinity 2*r^2*sin(f)^2*(1+f_prime^2) dr, H2=integral_0^infinity sin(f)^4 dr, and Ak=integral_S2 J^k*(n*n^T-delta/3) dOmega. The isotropic radial term contributes no STF part. For R(z)=z, J=1 and A1=A2=0 exactly. For the axial map R(z)=z^2, writing u=cos(theta) gives J=4*(1-u^2)/(1+u^2)^2, <J>=2, and <J^2>=pi+8/3. Both angular tensors are diagonal with A_xx=A_yy=-A_zz/2 and exact axial coefficients A1_zz=8*pi*(3*pi-10)/3<0 and A2_zz=8*pi*(3*pi-16)/9<0. Hence every nontrivial integrable declared profile with positive H1 or H2 has I_STF=diag(q,q,-2*q) with q>0. In the C-MOM-001 convention the source quadrupole is Q=3*I_STF. These are exact conditional reduced-ansatz moment identities. I_STF/M has radial-coordinate-squared units and is not a scale-free physical observable. The result establishes no full three-dimensional field solution, local conserved physical stress, stationary-profile existence or minimum, physical baryon or nucleus, absolute scale, rotation, gravity, waveform, radiation, observation, or substrate realization.
@@ -1109,6 +1127,15 @@ Conditional on C-RMOM-001 and the corrected C-RPROF-002 degree-two stationary br
 - Verification: `numeric_evidence`
 - Compatibility: `compatible_extension`
 - Dependencies: C-RMOM-001, C-RPROF-002
+
+## C-ROT-001
+
+Declare a free axisymmetric Euler top in body angular-velocity space with principal inertias diag(A,A,C), exact C>A>0, and exact Omega>0. The circle E_Omega={(Omega*cos(phi),Omega*sin(phi),0): phi real} consists of equilibria. At the member (Omega,0,0), the exact linearization is nonzero rank-one nilpotent, its fundamental matrix is I+t*J, and every period monodromy eigenvalue is one but nonsemisimple. The exact nearby family (r*cos(phi+(C-A)*epsilon*t/A), r*sin(phi+(C-A)*epsilon*t/A),epsilon) solves Euler's equations. With r=Omega and arbitrarily small positive epsilon it reaches squared distance 2*Omega^2+epsilon^2 from the fixed member, so that member is not Lyapunov stable. By contrast, squared Euclidean distance to the entire circle is (r-Omega)^2+epsilon^2 and is constant, so E_Omega is stable as a set in this declared state space. Separately, for an ordinary axisymmetric density with radial second moment R2 and axial moment Z, I_zz-I_xx=-(3/2)*(I_STF)_zz exactly. This ordinary inertia identity does not identify a field theory's collective rotational metric. The theorem establishes no orientation-space stability, forced or dissipative rotor, Skyrme action or inertia, rotating field solution, full-field stability, selected Omega, physical state, fission, gravity, radiation, observation, or substrate realization.
+
+- Accepted in: `v0.135.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-FLO-001
 
 ## C-RPROF-001
 

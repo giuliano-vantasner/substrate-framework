@@ -1,0 +1,20 @@
+attempt: 0021
+campaign: P183
+candidate: staged_graph_impact
+status: passed
+started_at: '2026-08-11T10:31:00Z'
+finished_at: '2026-08-11T10:33:00Z'
+commands:
+  - node_.gitnexus_run_cjs_analyze
+  - mcp_gitnexus_detect_changes_repo_substrate_framework_scope_staged
+index:
+  nodes: 27781
+  edges: 42878
+  clusters: 387
+  execution_flows: 2
+staged_impact:
+  changed_files: 54
+  changed_symbols: 232
+  affected_processes: 0
+  risk: LOW
+verdict: additive_claim_API_and_governance_transaction_has_no_affected_indexed_execution_flow

@@ -1,0 +1,22 @@
+campaign: P183
+criteria_frozen_before_source_body_audit: true
+selected:
+  - {id: A, role: exact_hash_source_and_verifier_evidence_only}
+  - {id: B, role: accepted_exact_finite_co_rotating_and_matrix_power_theorem}
+  - {id: C, role: accepted_corrected_free_rotor_equilibrium_set_theorem}
+  - {id: D, role: accepted_exact_restricted_rational_map_second_variation}
+  - {id: F, role: governed_claim_source_consumer_and_release_closure}
+deferred:
+  - id: E
+    reason: no_specified_full_field_action_rotating_solution_operator_domain_constraint_slice_boundary_data_complete_spectrum_refinement_or_independent_field_method_exists
+selection_basis:
+  - exact_equations_state_spaces_and_domains
+  - Jordan_semisimplicity_and_bounded_power_criterion
+  - nonlinear_exact_rotor_counterexample_and_equilibrium_set_distance
+  - exact_rational_map_stationarity_full_Hessian_and_symmetry_kernel
+  - assumption_and_parameter_economy
+  - independent_rederivation_and_mutation_sensitivity
+  - collective_and_chart_scope_not_overread_as_full_field
+  - dependency_consumer_and_governance_closure
+numeric_comparator_used_for_selection: false
+verdict: three_distinct_narrow_compatible_positive_objects_and_no_full_field_candidate
