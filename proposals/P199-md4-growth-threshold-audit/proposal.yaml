@@ -1,0 +1,56 @@
+id: P199
+base_release: v0.147.0
+base_commit: 6fbdfca
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MD4]
+question: >-
+  What exact positive stochastic or deterministic mechanism can make n<S a
+  genuine growth-drift threshold, and which parts of MD4 incorrectly infer
+  temporal growth rescue or material dynamics from a static factorial-one
+  weight ratio, continuum mode count, variance, or coherent number law?
+invariants:
+  - C-CMB-003 supplies a static normalized factorial-one mass ratio modes moments and tails but explicitly no physical Poisson process rate or time interval.
+  - C-VOP-001 supplies a number-measurement Born distribution for a declared coherent state but no preparation dynamics transition channel or material event rate.
+  - C-DOS-001 supplies a continuum count and C-QFL-001 a conditional vacuum variance; neither supplies occupation dynamics or a participating-mode process.
+  - C-MED-003 C-MED-004 C-LAT-001 C-LAT-002 C-SG-017 and C-SG-018 supply no occupation-state Markov generator or rate scale.
+  - PN2 has no accepted mapping and its external energy band cannot select an occupation or transition mechanism.
+  - A static adjacent mass ratio is not a time derivative and detailed balance fixes rate ratios rather than absolute rates or a unique generator.
+  - Any temporal model must declare state space boundary rates initial law time units and a positive rate scale independently.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral never removed numpy.trapz.
+allowed_imports:
+  - C-CMB-003 exact normalized factorial-one mass ratio modes moments and tails
+  - C-OSC-001 number basis and C-VOP-001 number-measurement law as state-space and static-distribution context only
+  - a separately declared continuous-time Markov chain on nonnegative integers with explicit birth and death rates
+  - a separately declared positive dimensionless target mean S and positive inverse-time rate r
+  - C-DOS-001 C-QFL-001 and accepted medium or lattice claims as nondynamical comparison ceilings only
+  - hash-pinned MD4 as noncanonical source evidence after the exposure record and freeze gate
+candidates:
+  - id: A
+    description: Promote an exact immigration-death chain with rates lambda_n=r*S and mu_n=r*n, stationary factorial-one law, local drift r*(S-n), exact PGF, and mean relaxation.
+  - id: B
+    description: Promote a pure-birth process whose transient law from zero is Poisson with mean r*t but which has no stationary finite growth threshold or rescue.
+  - id: C
+    description: Promote the detailed-balance rate-ratio theorem and explicit alternative nonexplosive chains sharing the same factorial-one stationary mass to prove that the static law does not select unique dynamics.
+  - id: D
+    description: Promote only the deterministic mean equation dm/dt=r*(S-m) without claiming an integer-state stochastic process or sample-path monotonicity.
+  - id: E
+    description: Make no new claim if every surviving statement is already C-CMB-003 arithmetic and no explicit dynamics earns a distinct framework role.
+  - id: F
+    description: Open a foundational medium-dynamics revision only if accepted claims independently require an occupation process and survive at least two repair alternatives.
+uniqueness_evidence: null
+selection_criteria:
+  - explicit state space boundary generator initial law and time units
+  - natural fit without turning C_CMB_003 or C_VOP_001 into an undeclared process
+  - exact normalization positivity detailed balance PGF moments and limiting behavior
+  - sensitivity to the rate scale boundary death rate n_plus_one indexing and stationary normalization
+  - honest distinction among local conditional drift ensemble mean sample paths and static mass ratios
+  - explicit demonstration of dynamical nonuniqueness when only the stationary mass is supplied
+  - novelty and downstream utility without material growth branching isotope reaction or substrate overreach
+claims_proposed: [C-MKV-001]
+comparators_blinded_until: >-
+  Fresh source-body or result blinding is impossible because MD4 was already
+  executed as a pending reverse consumer in P196 and reused in P197 and P198.
+  P199 freezes the process candidates, imports, criteria, mutations, and
+  physical ceilings before any renewed P199 execution, detailed predicate
+  audit, implementation, or comparison-value inspection.
+status: active

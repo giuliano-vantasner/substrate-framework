@@ -1,0 +1,41 @@
+campaign: P199
+claim_candidate: C-MKV-001
+frozen_before_P199_source_execution: true
+declared_inputs:
+  state_space: nonnegative_integers
+  S: positive_dimensionless_stationary_mean
+  r: positive_inverse_time_rate
+  initial_law: separately_declared_probability_mass_with_required_moments
+immigration_death_candidate:
+  birth_rate: lambda_n=r*S_for_every_n_nonnegative
+  death_rate: mu_n=r*n_with_mu_0_zero
+  generator: Lf(n)=r*S*(f(n+1)-f(n))+r*n*(f(n-1)-f(n))
+  master_equation: dp_n_dt=r*S*p_(n-1)+r*(n+1)*p_(n+1)-r*(S+n)*p_n_with_p_minus_1_zero
+  stationary_mass: pi_n=exp(-S)*S^n/n_factorial
+  detailed_balance: pi_n*r*S=pi_(n+1)*r*(n+1)
+  local_drift: L_identity(n)=r*(S-n)
+  mean_solution: E_N_t=S+(E_N_0-S)*exp(-r*t)
+  PGF_solution: G(z,t)=G0(1+(z-1)*exp(-r*t))*exp(S*(z-1)*(1-exp(-r*t)))
+  deterministic_initial_decomposition: Binomial(n0,exp(-r*t))+Poisson(S*(1-exp(-r*t)))
+detailed_balance_nonuniqueness:
+  ratio_only: lambda_n/mu_(n+1)=S/(n+1)
+  alternative_rates: lambda_n=r*S/(n+1)_and_mu_(n+1)=r
+  ceiling: same_stationary_mass_does_not_fix_rate_scale_generator_transients_or_sample_paths
+pure_birth_candidate:
+  rates: lambda_n=r_and_mu_n=0
+  from_zero_law: Poisson_with_mean_r*t
+  ceiling: no_finite_stationary_factorial_one_mass_or_restoring_threshold
+mutations:
+  - remove_boundary_condition_mu_0_zero
+  - replace_death_rate_r*n_by_constant_r
+  - replace_detailed_balance_n_plus_one_by_n
+  - erase_positive_rate_scale_r
+  - call_static_mass_ratio_a_time_derivative
+  - call_positive_local_drift_monotone_sample_path_growth
+  - derive_S_or_r_from_PN2_MD1_MD2_or_MD3_without_a_map
+nonclaims:
+  - no_unique_dynamics_from_C_CMB_003_or_C_VOP_001
+  - no_material_state_preparation_or_rate_scale
+  - no_mode_participation_growth_rescue_branching_isotope_or_reaction
+  - no_sample_path_monotonicity_from_local_drift
+  - no_foundational_revision_without_independent_inconsistency_evidence

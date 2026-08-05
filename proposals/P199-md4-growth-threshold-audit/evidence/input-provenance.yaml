@@ -1,0 +1,35 @@
+campaign: P199
+base_release:
+  id: v0.147.0
+  path: governance/releases/v0.147.0.yaml
+  sha256: c13247bf582c463bf62f966b48250f4cc1a1e747a7c812f3fbe95b82eee20e2b
+registry:
+  path: governance/claims.yaml
+  sha256: 6b9261e08aab88aa4b0e191a761929a7e3e1d6ed0b28ba8fc8d0ad1ef2a020cb
+framework_commit: 6fbdfca
+source_repository:
+  path: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  working_tree_dirty_outside_source_unit: true
+  source_unit_clean: true
+source:
+  source_unit: MD4
+  path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py
+  sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144
+  bytes: 12404
+  git_history: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]
+prior_exposure:
+  source_body_seen_before_freeze: true
+  P199_execution_before_freeze: false
+  prior_native_execution_record: campaigns/P196-md1-mode-counting-audit/evidence/consumer-reproduction.yaml
+  prior_reuse_campaigns: [P197, P198]
+  recorded_native_tally: 34
+  fresh_blinding_claimed: false
+memory_search:
+  query: MD4 growth threshold rescue
+  authoritative_result_found: false
+  unrelated_personal_results_imported: false
+authority_inputs: [C-CMB-003]
+state_context_inputs: [C-OSC-001, C-VOP-001]
+comparison_ceiling_inputs: [C-DOS-001, C-QFL-001, C-MED-003, C-MED-004, C-LAT-001, C-LAT-002, C-SG-017, C-SG-018]
+pending_or_unaccepted_inputs_forbidden: [MD4, MD5, MD6, PN2_physical_band, AS7_granularity, material_growth_rate]
