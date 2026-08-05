@@ -1,0 +1,44 @@
+attempt: 0003
+campaign: P192
+candidate: native_source_reproduction_and_predicate_audit
+status: passed_source_reproduction_headline_overstated
+started_at: '2026-08-11T18:19:00Z'
+finished_at: '2026-08-11T18:27:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py
+process:
+  exit_status: 0
+  wall_seconds: 0.74
+  max_rss_kib: 54988
+  static_check_calls: 27
+  literal_check_calls: 22
+  dynamic_check_calls: 5
+  runtime_check_executions: 43
+  assertion_nodes: 0
+  terminal_tally: ALL_43_CHECKS_PASS
+compatibility:
+  numpy_imports: 0
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_injected: 0
+  version_only_scientific_failures: 0
+retained:
+  - exact_ratio_and_crossover_with_n_plus_one
+  - exact_integer_plateau_and_strict_log_concavity_quotient
+  - exact_eventual_per_step_geometric_ratio_bound
+  - exact_all_nonnegative_normalization_mean_and_variance
+requires_stronger_oracle:
+  - complete_integer_and_noninteger_mode_set
+  - quantified_iterated_geometric_and_fixed_power_tail_theorems
+  - exact_generating_function_and_factorial_moments
+  - countermodels_to_physical_process_regime_and_medium_parameter_labels
+rejected_headline_edges:
+  - strict_log_concavity_implies_a_single_mode_at_integer_S
+  - floor_S_is_the_only_mode_for_positive_integer_S
+  - the_PN2_residual_is_the_sign_of_S_minus_n_rather_than_S_minus_n_plus_one
+  - mathematical_limbs_derive_phase_space_and_energy_gap_physics
+  - an_undefined_power_law_interpolates_across_the_turnover
+  - Poisson_mass_algebra_derives_a_medium_mean_subdivision_order
+  - one_finite_grid_guard_selects_the_physical_weight_family
+scientific_threshold_changed: false
+next_attempt: freeze_tie_complete_shape_tail_and_normalized_distribution_formulae

@@ -1,0 +1,16 @@
+campaign: P192
+source_unit: WN4
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN4_derived_weight_and_crossover.py
+exit_status: 0
+runtime_check_executions: 43
+terminal_tally: ALL_43_CHECKS_PASS
+wall_seconds: 0.74
+max_rss_kib: 54988
+selected_inputs:
+  crossover_samples: [[25, 3], [25, 10], [25, 23], [25, 30], [25, 100], [4, 7]]
+  integer_mode_samples: [4, 9, 25, 40]
+  log_concavity_grid: 1_through_39
+  tail_alpha_samples: [1/2, 1, 3]
+  pn2_band_endpoints: [10000000, 100000000000]
+  rejection_guard_upper: 80
+runtime_scope: exact_symbolic_and_finite_source_evidence_not_blanket_unique_mode_regime_or_physical_process_derivation

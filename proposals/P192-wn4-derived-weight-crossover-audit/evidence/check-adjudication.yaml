@@ -1,0 +1,44 @@
+campaign: P192
+source_unit: WN4
+runtime_checks: 43
+families:
+  - id: WN4.1-ratio-law
+    runtime_instances: 2
+    status: retained_exact_duplicate
+    mapping: [C-OSC-001]
+    reason: C_OSC_001_already_owns_the_exact_adjacent_ratio_and_parameter_typing.
+  - id: WN4.2-crossover-and-mode
+    runtime_instances: 17
+    status: mixed_exact_samples_and_false_unique_mode_interpretation
+    mapping: [C-OSC-001]
+    provisional_mapping: C-CMB-003
+    reason: The_ratio_conditions_and_integer_plateau_are_exact_but_every_tested_integer_S_has_two_adjacent_modes_and_the_tolerant_argmax_predicate_does_not_test_the_advertised_unique_floor_mode.
+  - id: WN4.3-strict-log-concavity
+    runtime_instances: 3
+    status: retained_exact_quotient_requires_tie_complete_conclusion
+    provisional_mapping: C-CMB-003
+    reason: The_quotient_is_exact_and_strictly_above_one_but_strict_discrete_log_concavity_allows_two_adjacent_equal_maxima.
+  - id: WN4.4-regime-recovery
+    runtime_instances: 8
+    status: retained_exact_tail_ratio_with_regime_labels_rejected
+    provisional_mapping: C-CMB-003
+    reason: The_eventual_per_step_geometric_bound_is_exact_while_phase_space_energy_gap_and_power_law_interpolation_are_undefined_physical_or_narrative_identifications.
+  - id: WN4.5-normalization-and-moments
+    runtime_instances: 4
+    status: retained_exact_mathematics_with_physical_process_ceiling
+    mapping: [C-OSC-001]
+    provisional_mapping: C-CMB-003
+    reason: Normalization_mean_and_variance_are_exact_on_the_declared_mathematical_sample_space_but_do_not_derive_a_medium_process_or_parameter_value.
+  - id: WN4.6-PN2-residual
+    runtime_instances: 4
+    status: one_sampled_ratio_equivalence_and_three_rejected_underencoded_edges
+    reason: The_step_condition_is_S_greater_than_n_plus_one_while_the_headline_uses_S_minus_n_and_the_band_checks_never_evaluate_the_weight_or_ratio.
+  - id: WN4.7-interior-mode-guard
+    runtime_instances: 5
+    status: finite_regression_not_universal_model_selection
+    reason: One_finite_grid_at_S_25_distinguishes_three_selected_monotone_examples_but_cannot_select_physical_regimes_or_prove_every_competitor_lacks_a_crossover.
+summary:
+  blanket_headline_accepted: false
+  native_tally_is_scientific_authority: false
+  compatibility_failures: 0
+  exact_positive_candidate_required: true

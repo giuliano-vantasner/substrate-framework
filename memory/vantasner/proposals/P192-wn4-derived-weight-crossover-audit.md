@@ -159,6 +159,19 @@ candidates, selection criteria, provisional claim, exact oracles, mutations,
 thresholds, and physical ceilings remain unchanged; repository preflight still
 must pass before the source body opens.
 
+Attempt 0003 reproduces the hash-pinned source with exit zero and all forty-
+three runtime checks. Static inventory finds twenty-seven check call sites,
+twenty-two literal names, five dynamically named sites, no assertions, and no
+NumPy compatibility surface. The exact adjacent ratio, integer plateau,
+log-concavity quotient, eventual per-step geometric bound, normalization,
+mean, and variance survive. The headline does not: every sampled integer S has
+two adjacent modes, its tolerant first-argmax predicate never tests uniqueness,
+the actual step residual is `S-(n+1)` rather than `S-n`, and the PN2 band checks
+do not evaluate the weight. Phase-space, energy-gap, power-law, Poisson-process,
+and medium-mean readings lack physical premises. The next attempt freezes the
+tie-complete shape, quantified tail, and generating-function theorem before
+implementation.
+
 ## Debt Ledger
 
 The P192 ledger tracks source predicates, accepted overlap, sample space,

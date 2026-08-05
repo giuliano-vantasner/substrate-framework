@@ -1,0 +1,73 @@
+campaign: P192
+source_unit: WN4
+source_hash_matches_queue: true
+native_exit_status: 0
+source_constructions:
+  exact_or_exact_conditional:
+    - adjacent_ratio_S_over_n_plus_one
+    - equality_at_positive_integer_intensity
+    - strict_log_concavity_quotient_n_plus_one_over_n
+    - eventual_per_step_geometric_ratio_bound
+    - all_nonnegative_exponential_normalization
+    - normalized_mathematical_mean_and_variance_S
+  finite_or_underencoded:
+    - crossover_samples_without_complete_symbolic_order_proof
+    - tolerant_first_argmax_mode_samples_at_integer_intensities
+    - log_concavity_positivity_sampled_only_through_39
+    - tail_threshold_samples_after_the_exact_boundary_identity
+    - finite_interval_interior_mode_guard_at_one_intensity
+shape_audit:
+  exact_ratio: S_over_n_plus_one
+  strict_log_concavity_ratio: n_plus_one_over_n
+  noninteger_positive_S_modes: [floor_S]
+  positive_integer_S_modes: [S_minus_one, S]
+  source_unique_mode_claim_at_integer_S: false
+  source_argmax_behavior: returns_first_of_two_equal_modes
+  source_mode_predicate: absolute_difference_from_S_at_most_one
+  source_mode_predicate_tests_unique_floor_mode: false
+tail_audit:
+  exact_statement: ratio_at_step_n_is_at_most_exp_minus_alpha_when_n_plus_one_at_least_S_exp_alpha
+  iterated_consequence: later_mass_is_bounded_by_starting_mass_times_exp_minus_alpha_times_step_count
+  global_unit_prefactor_energy_gap_law: not_established
+  power_law_interpolation_claim: not_defined_or_checked
+distribution_audit:
+  declared_sample_space: all_nonnegative_integers_with_counting_measure
+  normalized_mass: exp_minus_S_times_S_power_n_over_factorial_n
+  mathematical_family: Poisson_with_parameter_S
+  exact_mean: S
+  exact_variance: S
+  physical_process_derived: false
+  medium_mean_subdivision_order_derived: false
+residual_audit:
+  exact_growth_step_condition: S_greater_than_n_plus_one
+  source_headline_scalar: S_minus_n
+  off_by_one_present: true
+  pn2_band_checks_use_weight_or_ratio: false
+  pn2_band_checks_are_tautological_integer_comparisons: true
+typing_audit:
+  supplied_parameter: S
+  accepted_C_OSC_001_coordinate: q0_squared
+  source_label: A_squared
+  physical_identification_between_labels: not_derived
+  missing_for_physical_process_or_rate:
+    - physical_random_variable_and_event_definition
+    - process_or_interaction_dynamics
+    - time_or_energy_interval
+    - normalized_state_and_final_state_measure
+    - spectral_density_or_channel_exhaustiveness
+    - medium_parameter_provenance
+logical_audit:
+  exact_survivors:
+    - accepted_C_OSC_001_ratio_normalization_and_mode_family
+    - candidate_strict_log_concavity_with_tie_complete_modes
+    - candidate_eventual_geometric_and_fixed_power_tail_theorem
+    - candidate_normalized_generating_and_moment_theorem
+  unsupported_edges:
+    - strict_log_concavity_implies_one_discrete_mode
+    - floor_S_is_the_only_mode_at_positive_integer_S
+    - phase_space_and_energy_gap_laws_are_physically_recovered
+    - power_law_family_interpolates_across_the_turnover
+    - S_is_a_derived_medium_mean_subdivision_order
+    - pn2_limb_is_decided_by_sign_of_S_minus_n
+    - finite_grid_guard_proves_universal_candidate_rejection
+headline_verdict: mixed_exact_shape_tail_and_distribution_candidate_with_false_integer_unique_mode_off_by_one_residual_and_unsupported_physical_regime_readings
