@@ -1,0 +1,24 @@
+attempt: 0007
+campaign: P172
+candidate: corrected_independent_dimension_lattice_and_fixed_theory_rederivation
+status: passed
+started_at: '2026-08-11T02:15:00Z'
+finished_at: '2026-08-11T02:17:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/independent_rederivation.py
+result:
+  exit_code: 0
+  independent_checks: 21
+  terminal_tally: P172_INDEPENDENT_KI2_REDERIVATION_ALL_21_CHECKS_PASS
+independence:
+  imports_KI2: false
+  imports_primary_verifier: false
+  authoritative_input: hash_pinned_accepted_claim_registry
+conclusion: >-
+  Exact dimension and parameter-family freedom survive independently, while
+  positive fixed-theory coefficient equality forces the identity flow. The
+  local ratio has arbitrary normalization, a product relation can select it,
+  and C-BPS-003 does not identify it. The surviving ceiling is already implicit
+  in C-BPS-001's arbitrary positive inputs.
+next_attempt: replay_and_type_the_complete_direct_and_reverse_source_graph

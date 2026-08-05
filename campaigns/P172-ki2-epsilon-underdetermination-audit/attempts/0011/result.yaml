@@ -1,0 +1,15 @@
+attempt: 0011
+campaign: P172
+candidate: combined_patch_boundary_repair
+status: failed_patch_boundary_repeated
+started_at: '2026-08-11T02:27:00Z'
+finished_at: '2026-08-11T02:27:00Z'
+command: apply_patch_combined_update_and_add_file
+observed:
+  defect: Add_File_directive_remained_literal_primary_provenance_content
+  missing_file: evidence/literature-audit.yaml
+diagnosis: >-
+  Moving the directive inside an update hunk still represents it as ordinary
+  content. The repair must be split into independent patch operations. This is
+  a repeated record-construction failure, not scientific evidence.
+next_attempt: delete_the_literal_tail_then_create_the_new_file_in_a_separate_patch

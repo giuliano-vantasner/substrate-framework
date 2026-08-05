@@ -1,0 +1,79 @@
+campaign: P172
+title: KI2 epsilon parameter-family and fixed-theory audit
+source_baseline: substrate@6d1f4e0
+source_units: [KI2]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T02:35:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_KI2_replays_all_six_local_predicates_as_execution_evidence_only.}
+  - {id: B, reason: Exact_dimensions_and_the_three_dimensional_kernel_survive_conditionally.}
+  - {id: C, reason: Every_positive_local_ratio_is_realized_across_the_accepted_positive_parameter_family.}
+  - {id: E, reason: Refuted_KI1_is_load_bearing_for_the_rejected_every_quantity_premise.}
+  - {id: G, reason: C-BPS-001_and_C-SK-001_already_bound_the_surviving_scientific_content.}
+  - {id: I, reason: Predicate_dependency_consumer_formal_compatibility_queue_and_memory_records_are_closed.}
+rejected_candidates:
+  - {id: D, reason: Every_nontrivial_declared_flow_changes_the_accepted_fixed_BPS_energy_or_bound.}
+  - {id: F, reason: Pending_MK_relations_are_counterevidence_not_authority.}
+  - {id: H, reason: No_distinct_claim_or_consumer_justifies_a_parameter_orbit_API.}
+claims: []
+accepted_composition:
+  - {id: C-BPS-001, decision: unchanged_positive_parameter_family_and_fixed_theory_energy_ceiling}
+  - {id: C-SK-001, decision: unchanged_conditional_standard_scale_relation}
+reviewed_ceiling:
+  - {id: C-BPS-003, decision: unchanged_abstract_epsilon_without_KI2_ratio_identification}
+unpromoted_claims:
+  - {id: fixed_theory_epsilon_changing_symmetry, reason: BPS_density_square_residual_and_bound_change_under_the_flow.}
+  - {id: every_present_or_future_quantity_is_invariant, reason: The_source_tests_only_six_lambda_mu_free_expressions_and_future_content_cannot_be_quantified_by_a_finite_registry.}
+  - {id: independent_BPS_energy_scale_from_dimensions_alone, reason: Equal_dimensions_allow_a_product_relation_and_do_not_prove_physical_independence.}
+  - {id: identification_with_C-BPS-003_epsilon, reason: No_map_or_normalization_is_derived.}
+  - {id: importing_both_couplings_is_the_unique_weakest_closure, reason: A_product_relation_already_pins_the_local_ratio.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_rederivation.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/KI2-qualified-review.md
+  native_attempt: attempts/0003/result.yaml
+  primary_attempt: attempts/0005/result.yaml
+  failed_independent_attempt: attempts/0006/result.yaml
+  independent_attempt: attempts/0007/result.yaml
+  graph_attempt: attempts/0008/result.yaml
+  formal_attempt: attempts/0009/result.yaml
+  focused_attempt: attempts/0015/result.yaml
+  terminal_attempt: attempts/0016/result.yaml
+source_disposition:
+  KI2: qualified
+accepted_mappings: [C-BPS-001, C-SK-001]
+compatibility:
+  installed_numpy: 2.5.1
+  KI2_native: true
+  source_graph_current_first_lazy_fallback: [E3]
+  injected_aliases: []
+  mutable_legacy_integration_references: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P172-ki2-epsilon-underdetermination-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/independent_rederivation.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/replay_source_graph.py
+  - lake env lean ../merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  - .venv/bin/python -m pytest tests/test_bps_energy.py tests/test_skyrme_relations.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

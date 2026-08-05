@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P172
+candidate: independent_dimension_lattice_and_fixed_theory_rederivation
+status: failed_implementation_symbol
+started_at: '2026-08-11T02:14:00Z'
+finished_at: '2026-08-11T02:14:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/independent_rederivation.py
+observed:
+  checks_passed_before_failure: 15
+  stop: AttributeError_module_sympy_has_no_attribute_simpl
+diagnosis: >-
+  Two local calls abbreviated SymPy's simplify function as simpl. The exact
+  dimension, kernel, normalization, dependency, and positive-scaling checks had
+  already passed. This is a P172 implementation typo, not scientific evidence
+  and not a NumPy or version-compatibility failure.
+next_attempt: replace_both_local_typos_with_sympy_simplify_and_rerun

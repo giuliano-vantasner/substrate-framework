@@ -1,0 +1,19 @@
+predeclared_order:
+  - exact_fixed_theory_versus_parameter_family_typing
+  - dimension_and_normalization_closure
+  - accepted_dependency_fit_without_KI1
+  - invariant_observable_and_counterexample_sensitivity
+  - assumption_parameter_and_API_economy
+  - consumer_nonduplication_and_governance_closure
+candidates:
+  A: {decision: selected_as_execution_evidence_only, reason: all_six_local_predicates_replay_but_the_headline_oracle_is_incomplete}
+  B: {decision: selected_conditional_exact_algebra, reason: dimension_rank_kernel_basis_and_mutations_close}
+  C: {decision: selected_qualified_ceiling, reason: every_positive_local_ratio_is_realized_across_C-BPS-001_parameter_choices}
+  D: {decision: rejected_false, reason: accepted_BPS_density_residual_and_bound_change_under_every_nontrivial_declared_flow}
+  E: {decision: selected_as_dependency_diagnosis, reason: refuted_KI1_is_load_bearing_for_the_every_quantity_claim}
+  F: {decision: rejected_as_authority, reason: MK1_MK2_and_MK3_are_pending_counterrelations_only}
+  G: {decision: selected_as_nonpromotion_ceiling, reason: C-BPS-001_and_C-SK-001_already_cover_the_surviving_family_and_scale_objects}
+  H: {decision: not_selected, reason: no_distinct_claim_or_consumer_justifies_a_parameter_orbit_API}
+  I: {decision: selected_governance_closure, reason: qualification_requires_predicate_consumer_queue_memory_and_effort_synchronization}
+comparator_selected_candidate: false
+fresh_blinding_claimed: false

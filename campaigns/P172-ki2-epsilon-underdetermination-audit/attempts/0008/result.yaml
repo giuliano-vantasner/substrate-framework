@@ -1,0 +1,33 @@
+attempt: 0008
+campaign: P172
+candidate: pinned_typed_source_graph
+status: passed
+started_at: '2026-08-11T02:18:00Z'
+finished_at: '2026-08-11T02:20:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/replay_source_graph.py
+result:
+  exit_code: 0
+  graph_checks: 59
+  terminal_tally: P172_KI2_SOURCE_GRAPH_ALL_59_CHECKS_PASS
+graph:
+  executable_nodes: 12
+  lexical_predicates: 81
+  assertions: 10
+  clean_local_tallies: 11
+  expected_governed_refutations: [KI1]
+authority_typing:
+  accepted_or_accepted_mapped_upstream: [E3, E4, S4, NY1, NY2]
+  refuted_premise: [KI1]
+  pending_root_and_consumers: [KI2, KI3, KI4, MK1, MK2, MK3]
+  excluded_untracked_post_baseline: [BM11]
+compatibility:
+  E3: current_first_numpy_trapezoid_with_lazy_legacy_fallback
+  injected_aliases: []
+  eager_legacy_fallbacks: 0
+formal_encoding: >-
+  The pinned Lean file proves the local ratio scaling and invariance of a
+  derivedScale defined solely as F/e. It encodes no BPS energy density or bound,
+  so it cannot prove the source's stronger fixed-theory headline.
+next_attempt: execute_and_audit_the_pinned_Lean_encoding

@@ -1,0 +1,30 @@
+primary_verifier:
+  path: campaigns/P172-ki2-epsilon-underdetermination-audit/verify.py
+  sha256: 55e713f8ca5793b5cacd3b556286060b52be69559c595064663d96f619e3bd9b
+  result: ALL_45_CHECKS_PASS
+independent_rederivation:
+  path: campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/independent_rederivation.py
+  sha256: 632223b965ccdcd04b93ae5cb6d9c4cb9d9dd4d69ab31f41d394d1bae5975b98
+  result: ALL_21_CHECKS_PASS
+source_graph:
+  path: campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/replay_source_graph.py
+  sha256: a96ff58214a0b64eca4fbd58f94154aed5b482363257cb0dcf336ce7a3a640db
+  result: ALL_59_CHECKS_PASS
+formal_artifact:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  result: clean_exit
+independence_statement: >-
+  The independent review imports neither KI2 nor the primary verifier. It reads
+  only the pinned accepted registry and reconstructs dimensions, the kernel,
+  fixed-theory coefficients, normalization counterfamily, and family
+  surjectivity from fresh symbolic expressions.
+mutation_surfaces:
+  - Lagrangian_density_dimension
+  - derivative_dimension
+  - baryon_current_dimension
+  - potential_dimension
+  - lambda_scaling_power
+  - mu_scaling_power
+  - arbitrary_ratio_normalization
+  - dimensionally_allowed_product_relation

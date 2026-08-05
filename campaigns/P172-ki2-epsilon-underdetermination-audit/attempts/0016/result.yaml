@@ -1,0 +1,39 @@
+attempt: 0016
+campaign: P172
+candidate: terminal_qualified_no_release_boundary
+status: passed
+started_at: '2026-08-11T02:51:00Z'
+finished_at: '2026-08-11T02:56:00Z'
+commands:
+  - scripts/validate.sh
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest
+  - git diff --check
+integrated_result:
+  workflow: valid
+  accepted_claims: 163
+  proposals_in_registry: 0
+  migration_units: 218
+  pending_units: 52
+  qualified_units: 153
+  memory_files_valid: 694
+  skill_valid: true
+  tests_passed: 1478
+  runtime_seconds: 130.31
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+explicit_full_suite:
+  tests_collected: 1478
+  tests_passed: 1478
+  runtime_seconds: 130.17
+record_only_post_gate:
+  - add_this_terminal_attempt
+  - synchronize_terminal_counts_in_adjudication_disposition_memory_and_effort
+  - regenerate_the_source_queue_note
+  - rerun_only_narrow_YAML_memory_queue_and_diff_checks
+release:
+  before: v0.127.0
+  after: v0.127.0
+accepted_claim_count:
+  before: 163
+  after: 163
+debt: []
+next_campaign: P173_KI3_bracket_sharpness_audit

@@ -1,0 +1,30 @@
+source_unit: KI2
+source_sha256: 9e16fc6fafa940f43d559ea0f6a9c2730940d1247f36f655375c2f75f6fd1e81
+imports: [sympy]
+definitions:
+  parameters: [F_pi, e, lambda, mu]
+  declared_domain: all_positive
+  local_ratio: (F_pi/e)/(lambda*mu)
+  flow: [F_pi, e, t*lambda, t*mu]
+  flow_domain: t_positive
+  dimension_row: [1, 0, -1, 2]
+  displayed_kernel_basis: [e, lambda_times_F_pi, mu_over_F_pi_squared]
+predicate_structure:
+  checks: 6
+  assertions: 1
+  helper_fail_fast: true
+  derived_quantity_dictionary_entries: 6
+  BPS_energy_entries: 0
+  BPS_bound_entries: 0
+dependency_statements:
+  load_bearing: [KI1]
+  narrative: [E3, E4, S4, NY1, NY2, KI3, KI4]
+  external_standard: Adam_Sanchez_Guillen_Wereszczynski_2010_BPS_Skyrme_structure
+silent_identification:
+  C_BPS_003_epsilon_map: absent
+  normalization_coefficient: absent
+  fixed_theory_or_family_type: conflated
+headline_oracle_gap: >-
+  The source tests invariance only on expressions deliberately independent of
+  lambda and mu. It omits the accepted energy density, square, saturation
+  residual, and bound that define the BPS theory whose couplings it transforms.

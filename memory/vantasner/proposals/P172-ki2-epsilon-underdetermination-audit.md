@@ -2,15 +2,15 @@
 description: Audit KI2's structural epsilon underdetermination argument
 author: vantasner
 created: '2026-08-11T02:00:00Z'
-updated: '2026-08-11T02:04:00Z'
+updated: '2026-08-11T02:40:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-KI2
 - parameter-underdetermination
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P172 KI2 Epsilon Underdetermination Audit
 
@@ -135,6 +135,18 @@ authority classes, nine candidates, selection criteria, and the distinction
 between a fixed theory and an allowed parameter family. It also preserves and
 corrects the pre-freeze memory CLI option error.
 
+Attempts 0002 through 0004 preserve the memory-template preflight failure,
+native six-check reproduction, and one command-option error. Attempt 0005
+closes 45 primary checks. Attempt 0006 preserves an independent-review function
+typo; attempt 0007 closes 21 fresh checks. Attempt 0008 closes 59 typed graph
+checks over 81 predicates and ten assertions, and attempt 0009 records a clean
+Lean exit with the exact weak theorem encoding. Attempts 0010 through 0012
+preserve two record-patch boundary failures and one patch-context failure before
+the governed records were synchronized. Attempts 0013 and 0014 preserve an
+effort-context and memory-base invocation failure. Attempt 0015 closes 27
+focused consumers, and attempt 0016 records two clean 1,478-test executions
+with 694 valid memory files.
+
 ## Debt Ledger
 
 The P172 ledger tracks the exact source objects, transformation semantics,
@@ -142,13 +154,13 @@ dimension/value separation, authority boundaries, and downstream records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| KI2's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | open |
-| The claimed flow may change the accepted BPS theory | Transform density, residual, bound, and canonical consumers exactly | open |
-| Dimensionless monomials may be mistaken for values | Derive rank and basis independently and supply value countermodels | open |
-| KI2 may inherit refuted KI1 | Remove KI1 and classify every remaining premise | open |
-| Pending MK relations may be treated as authority | Audit status and reverse-consumer effects separately | open |
-| C-BPS-003 epsilon may be silently identified with KI2's ratio | Audit definitions, normalization, and composition requirements | open |
-| Consumers and governed records may disagree | Replay graph and synchronize disposition, queue, memory, and effort | open |
+| KI2's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | closed: six predicates, one assertion, SymPy only, native tally exact |
+| The claimed flow may change the accepted BPS theory | Transform density, residual, bound, and canonical consumers exactly | closed: density, square, and bound scale by t squared; residual scales by t |
+| Dimensionless monomials may be mistaken for values | Derive rank and basis independently and supply value countermodels | closed: exact kernel plus normalization and product-relation counterfamilies |
+| KI2 may inherit refuted KI1 | Remove KI1 and classify every remaining premise | closed: family statement survives; every-quantity premise does not |
+| Pending MK relations may be treated as authority | Audit status and reverse-consumer effects separately | closed: MK1-MK3 remain pending counterevidence |
+| C-BPS-003 epsilon may be silently identified with KI2's ratio | Audit definitions, normalization, and composition requirements | closed: no source or registry map exists |
+| Consumers and governed records may disagree | Replay graph and synchronize disposition, queue, memory, and effort | closed: qualified transaction synchronized |
 
 ## Review and Promotion Plan
 
@@ -162,12 +174,11 @@ without a genuinely new closed theorem.
 
 ## Done Gate
 
-P172 closes only when the dimension system, epsilon definition, scaling maps,
-fixed-theory and parameter-family readings, every predicate and assertion,
-accepted dependencies, pending reverse consumers, compatibility, graph,
-nonduplication, and governed records agree with an empty debt ledger. A clean
-six-check tally, a dimensional ratio, or an honest free-parameter statement
-alone is not completion.
+P172 closes with every listed debt discharged. KI2 is qualified through the
+unchanged C-BPS-001 parameter family and C-SK-001 conditional scale. Its
+fixed-theory symmetry, all-future impossibility, physical epsilon, and silent
+C-BPS-003 identification are rejected. No claim, API, release, or generated
+accepted documentation changes.
 
 ## Cross-References
 

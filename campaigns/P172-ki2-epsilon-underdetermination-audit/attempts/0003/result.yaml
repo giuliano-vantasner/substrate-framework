@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P172
+candidate: literal_KI2_native_reproduction
+status: passed
+started_at: '2026-08-11T02:07:00Z'
+finished_at: '2026-08-11T02:08:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/
+  bridge_KI2_epsilon_underdetermination.py
+result:
+  exit_code: 0
+  runtime_checks: 6
+  terminal_tally: ALL_6_CHECKS_PASS
+observed:
+  dimensions: {F_pi: 1, e: 0, lambda: -1, mu: 2}
+  dimension_nullity: 3
+  epsilon_flow: epsilon_over_t_squared
+  listed_invariants: 6_standard_sector_expressions
+  BPS_energy_or_bound_in_list: false
+  sharpness_guard_admits_lambda_mu_product_moves: true
+compatibility: no_numpy_import_or_quadrature
+diagnosis: >-
+  The local predicates execute, but the source's invariant list omits its own
+  load-bearing BPS energy, saturation residual, and bound. Complete predicate
+  execution is therefore not validation of the headline fixed-theory symmetry.
+next_attempt: apply_the_flow_to_accepted_BPS_objects_and_mutate_the_dimension_argument

@@ -1,0 +1,49 @@
+source_unit: KI2
+lexical_checks: 6
+runtime_checks: 6
+assertion_nodes: 1
+checks:
+  KI2.1:
+    verdict: valid_conditional_exact_dimension_solve
+    qualification: >-
+      The unique tuple [F_pi,e,lambda,mu]=[1,0,-1,2] follows from the declared
+      four term dimensions. It is conditional on that generalized-Skyrme
+      Lagrangian and natural-unit convention and selects no value.
+  KI2.2:
+    verdict: partially_valid_dimensions_with_rejected_independence_inference
+    qualification: >-
+      Both products have energy dimension and the local ratio depends on lambda
+      and mu. Equal dimensions do not prove independent scales; a relation
+      lambda*mu=c*F_pi/e is dimensionally allowed. The normalization and map to
+      C-BPS-003 epsilon are absent.
+  KI2.3:
+    verdict: refuted_as_fixed_theory_and_complete_invariance_theorem
+    qualification: >-
+      The six listed standard-sector expressions are invariant and the local
+      ratio scales by t^-2, but the accepted BPS density and square scale by
+      t^2, its residual by t, and its bound by t^2. The flow connects distinct
+      allowed theories and cannot prove anything about every future quantity.
+  KI2.4:
+    verdict: valid_exact_local_dimension_kernel_identity
+    qualification: >-
+      The three displayed exponent vectors form a basis of the dimension
+      kernel and reproduce the locally defined ratio. This is dimension and
+      definition algebra, not value selection or physical identifiability.
+  KI2.5:
+    verdict: qualified_parameter_family_freedom
+    qualification: >-
+      Holding F_pi and e fixed leaves the local ratio free across C-BPS-001's
+      positive lambda-mu family. This statement compares different theories;
+      it is not a symmetry or a theorem about all future standard-sector work.
+  KI2.6:
+    verdict: valid_numeric_substitution_guard_with_rejected_uniqueness_claim
+    qualification: >-
+      Supplying all four values makes the local definition numeric and moves
+      lambda*mu under the source flow. A single product relation already pins
+      the ratio, so importing lambda and mu individually is not the unique or
+      weakest possible closure.
+assertions:
+  check_helper:
+    role: fail_fast_execution_mechanism
+    verdict: execution_mechanism_not_extra_claim
+headline: qualified_family_freedom_with_fixed_theory_symmetry_refuted

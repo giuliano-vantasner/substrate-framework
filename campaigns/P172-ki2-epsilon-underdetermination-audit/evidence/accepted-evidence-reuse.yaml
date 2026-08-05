@@ -1,0 +1,16 @@
+accepted_BPS_evidence:
+  campaign: P107
+  primary_verifier_sha256: 91d3bcf4be848f3157d1b65fc6e6c0f1c8b1d23207f18816394facd6df1da7f0
+  independent_review_sha256: 93477f9601c414ffc1c740684a11339400313ad263d4315e563dab55eff28852
+  terminal_attempt_sha256: e56f20867b0a31f8183211ff1f4094c133a002e35cd2a1af3621c74e256a0921
+  canonical_module_sha256: 09e3bb41b98ba21f2909117ab1361020dfc7f12ef2722e9f620a65336bbe7d13
+  accepted_tests_sha256: b52db01583cf351891074cd656ac51414bdb13d9dac2536398c9847cb0863edb
+accepted_standard_scale_evidence:
+  campaign: P008
+  primary_verifier_sha256: 40988d571095efcb52c27b04b4295a1d2fa3efa7d1833c3b40cedbd8a7117aa6
+  independent_review_sha256: 1a24b406bf836be497d7fe585b66723b5548a3ee9e951eb6d9c641f9e75a91d4
+  accepted_tests_sha256: 16f718195b50b230a172626c382abdae9c54a17999e0e2ded23909a6b2c6294c
+reuse_decision: >-
+  P172 hash-audits unchanged accepted evidence, uses the canonical BPS API in
+  its new exact oracle, and replays focused consumers. Repeating the unchanged
+  P008 and P107 derivation matrices would not test KI2's transformation claim.

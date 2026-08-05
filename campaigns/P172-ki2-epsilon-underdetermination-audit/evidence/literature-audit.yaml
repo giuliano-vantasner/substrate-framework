@@ -1,0 +1,10 @@
+scope: accepted_local_BPS_and_parameter_family_authority
+source_citation_observed: Adam_Sanchez_Guillen_Wereszczynski_Phys_Lett_B691_2010_105
+external_source_used_for_selection: false
+physical_interpretation_imported: false
+reason: >-
+  C-BPS-001 is the higher local authority for the exact energy density, square,
+  positivity assumptions, and bound used by P172. The selected qualified result
+  imports no fitted coupling, nuclear datum, or literature-specific convention;
+  external literature cannot repair KI2's omission of its accepted BPS objects.
+conclusion: no_external_literature_required_for_this_record_only_qualification

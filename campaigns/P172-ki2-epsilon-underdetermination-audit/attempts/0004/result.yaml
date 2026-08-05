@@ -1,0 +1,14 @@
+attempt: 0004
+campaign: P172
+candidate: accepted_claim_lookup
+status: failed_tool_invocation
+started_at: '2026-08-11T02:09:00Z'
+finished_at: '2026-08-11T02:09:00Z'
+command: >-
+  rg -n "- id: C-SK-001|- id: C-DIM-002|- id: C-RDIFF-001|- id: C-RDIFF-002"
+  governance/claims.yaml
+observed: rg_interpreted_the_leading_hyphen_as_an_option
+diagnosis: >-
+  The search pattern requires rg's option terminator. This is a mechanical
+  command construction error, not missing authority or scientific evidence.
+next_attempt: rerun_with_rg_option_terminator

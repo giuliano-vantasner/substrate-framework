@@ -1,0 +1,14 @@
+attempt: 0012
+campaign: P172
+candidate: archive_proposal_memory_and_close_debt
+status: failed_patch_context
+started_at: '2026-08-11T02:41:00Z'
+finished_at: '2026-08-11T02:41:00Z'
+command: apply_patch_proposal_memory_archive
+observed:
+  mismatch: expected_corrected_but_file_contains_corrects
+  files_changed: 0
+diagnosis: >-
+  A grammatical mismatch in the patch context prevented the atomic memory
+  update. This is a record-editing failure, not scientific evidence.
+next_attempt: apply_smaller_exact_hunks_against_the_current_memory_bytes

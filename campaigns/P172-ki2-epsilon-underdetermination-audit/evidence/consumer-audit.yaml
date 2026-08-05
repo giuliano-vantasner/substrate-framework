@@ -1,0 +1,30 @@
+accepted_consumers:
+  canonical_module: src/substrate_framework/bps_energy.py
+  focused_tests: [tests/test_bps_energy.py, tests/test_skyrme_relations.py, tests/test_source_audit.py]
+  accepted_claims: [C-BPS-001, C-SK-001]
+  effect_of_KI2_qualification: none
+pending_consumers:
+  KI3:
+    edge: assumes_every_positive_local_epsilon_is_admissible
+    effect: family_surjectivity_may_be_used_only_with_the_local_definition_not_as_fixed_theory_symmetry
+  KI4:
+    edge: assumes_KI2_proves_every_epsilon_is_framework_admissible
+    effect: must_be_reaudited_against_KI3_and_the_qualified_family_reading
+  MK1:
+    edge: challenges_free_mu_family_with_a_candidate_relation
+    effect: counterevidence_only_until_individual_adjudication
+  MK2:
+    edge: challenges_free_lambda_family_with_a_candidate_relation
+    effect: counterevidence_only_until_individual_adjudication
+  MK3:
+    edge: substitutes_pending_MK_relations_into_KI2_local_ratio
+    effect: no_epsilon_value_has_authority
+formal_consumer:
+  Phase34KIKernel:
+    effect: exact_encoding_remains_green_but_does_not_prove_the_refuted_headline
+excluded_post_baseline:
+  BM11: untracked_in_predecessor_and_absent_at_governed_commit
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false
+migration_memory_and_effort_records_change_required: true

@@ -1,0 +1,25 @@
+source_unit: KI2
+symbolic_inputs:
+  F_pi: positive_standard_sector_parameter
+  e: positive_dimensionless_standard_sector_parameter
+  lambda: positive_BPS_family_parameter
+  mu: positive_BPS_family_parameter
+  t: positive_flow_coordinate
+  epsilon_target: positive_oracle_target
+accepted_inputs:
+  C-BPS-001: positive_lambda_mu_energy_family_density_square_and_bound
+  C-SK-001: conditional_F_pi_over_e_scale_relation_only
+  C-BPS-003: abstract_positive_expansion_coordinate_used_as_nonidentification_ceiling
+noncanonical_inputs:
+  KI1: refuted_and_not_used_as_premise
+  MK1: pending_counterrelation_only
+  MK2: pending_counterrelation_only
+  MK3: pending_counterrelation_only
+numeric_values:
+  F_pi_93_and_e_5: arbitrary_sensitivity_witnesses_not_derivation_inputs
+empirical_comparators: []
+external_fitted_parameters: []
+normalization:
+  source_ratio_coefficient: undeclared
+  independent_counterfamily: c_epsilon_times_source_ratio
+scope: exact_dimension_definition_fixed_theory_and_parameter_family_audit

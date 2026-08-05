@@ -1,0 +1,21 @@
+installed_numpy:
+  version: 2.5.1
+  preferred_function: numpy.trapezoid
+immutable_KI2:
+  numpy_imported: false
+  legacy_integration_references: 0
+  current_integration_references: 0
+  eager_legacy_fallbacks: 0
+source_graph:
+  nodes: [E3, E4, S4, NY1, NY2, KI1, KI2, KI3, KI4, MK1, MK2, MK3]
+  current_first_lazy_fallback: [E3]
+  injected_aliases: []
+  eager_legacy_fallbacks: 0
+mutable_campaign_code:
+  legacy_integration_references: 0
+  numerical_quadrature_used: false
+classification: no_version_only_stop
+policy: >-
+  E3 selects numpy.trapezoid first and mentions np.trapz only in a lazy fallback.
+  No P172 result depends on a removed NumPy spelling, and no compatibility event
+  is classified as scientific evidence.

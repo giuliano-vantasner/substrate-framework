@@ -1,0 +1,33 @@
+accepted_dependencies:
+  C-BPS-001:
+    role: positive_lambda_mu_energy_family_and_fixed_theory_oracle
+    status: accepted_active
+    closure: complete
+  C-SK-001:
+    role: conditional_standard_scale_relation
+    status: accepted_active
+    closure: complete_with_declared_premises
+  C-BPS-003:
+    role: abstract_near_BPS_epsilon_nonidentification_ceiling
+    status: accepted_active
+    closure: complete
+rejected_dependency:
+  KI1:
+    source_role: claimed_no_corpus_quantity_depends_on_lambda_or_mu
+    governed_status: refuted
+    effect: cannot_support_KI2_3
+pending_counterrelations:
+  MK1: proposed_mu_relation_no_authority
+  MK2: proposed_lambda_relation_no_authority
+  MK3: proposed_ratio_value_no_authority
+formalization:
+  artifact: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  exact_scope: local_ratio_scaling_and_F_over_e_invariance
+  omitted_load_bearing_object: accepted_BPS_energy_and_bound
+selected_composition:
+  exact_family_freedom: C-BPS-001_with_local_ratio_definition
+  conditional_standard_scale: C-SK-001
+  fixed_theory_symmetry: rejected
+  C-BPS-003_identification: rejected
+dependency_closure_for_selected_qualified_ceiling: complete
+dependency_closure_for_source_headline: false

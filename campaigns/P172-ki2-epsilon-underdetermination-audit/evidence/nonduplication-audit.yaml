@@ -1,0 +1,21 @@
+registry_search:
+  accepted_positive_lambda_mu_family: C-BPS-001
+  accepted_fixed_theory_energy_and_bound: C-BPS-001
+  accepted_conditional_standard_scale: C-SK-001
+  accepted_abstract_near_BPS_coordinate: C-BPS-003
+package_search:
+  BPS_energy_API: src/substrate_framework/bps_energy.py
+  general_parameter_orbit_API: null
+distinct_valid_source_content:
+  - conditional_natural_unit_dimension_tuple
+  - dimension_kernel_basis
+  - local_ratio_surjectivity_across_the_positive_parameter_family
+reasons_not_to_promote:
+  - the_family_freedom_is_already_implicit_in_C-BPS-001_arbitrary_positive_inputs
+  - the_ratio_is_a_local_definition_with_an_arbitrary_normalization
+  - C-BPS-003_does_not_identify_its_epsilon_with_the_ratio
+  - no_accepted_consumer_needs_a_generic_parameter_orbit_API
+  - the_source_fixed_theory_symmetry_is_false
+new_claim: null
+new_API: null
+disposition: qualified_not_duplicate_because_the_source_headline_requires_explicit_rejection

@@ -1,0 +1,15 @@
+attempt: 0013
+campaign: P172
+candidate: synchronize_parent_effort
+status: failed_patch_context
+started_at: '2026-08-11T02:46:00Z'
+finished_at: '2026-08-11T02:46:00Z'
+command: apply_patch_framework_migration_combined_hunks
+observed:
+  mismatch: broad_P171_paragraph_anchor_not_found
+  files_changed: 0
+diagnosis: >-
+  The atomic parent-effort update used an imprecise prose anchor. Counts, table,
+  narrative, and done-gate edits must be applied as smaller exact hunks. This
+  is a record-editing failure, not scientific evidence.
+next_attempt: split_the_parent_effort_update_into_exact_hunks

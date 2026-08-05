@@ -1,0 +1,17 @@
+attempt: 0014
+campaign: P172
+candidate: narrow_memory_record_validation
+status: failed_environment_base_resolution
+started_at: '2026-08-11T02:48:00Z'
+finished_at: '2026-08-11T02:48:00Z'
+command: >-
+  memory validate memory/vantasner/{proposal,decision,effort}.md
+observed:
+  attempted_base: /home/dan/agent-memory/memory
+  malformed_resolved_prefix: /home/dan/agent-memory/memory/memory/vantasner
+  files_read: 0
+diagnosis: >-
+  The CLI auto-detected the personal memory store instead of the repository
+  store and prefixed already repository-relative paths. This is an invocation
+  environment failure, not invalid memory content.
+next_attempt: pass_repository_memory_as_base_and_paths_relative_to_that_base

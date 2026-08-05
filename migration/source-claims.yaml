@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 53
-  qualified: 152
+  pending_adjudication: 52
+  qualified: 153
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -9704,8 +9704,53 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BPS-001
+  - C-SK-001
+  qualification: 'KI2''s conditional natural-unit dimension tuple, three-dimensional exponent-kernel basis,
+    exact identity for its locally defined ratio, and freedom of that ratio across C-BPS-001''s positive
+    lambda-mu parameter family survive. The source flow is not a symmetry of one fixed accepted BPS theory:
+    its density and Bogomolny square scale by t squared, its saturation residual by t, and its bound by
+    t squared. Equal dimensions do not prove independent physical scales, an arbitrary dimensionless ratio
+    normalization remains, and a product relation can pin the ratio without importing lambda and mu individually.
+    Refuted KI1 supplies no premise; pending KI3, KI4, and MK1 through MK3 supply no authority. C-BPS-003
+    keeps epsilon abstract and is not identified with KI2''s ratio. No physical epsilon value, all-future
+    impossibility theorem, new claim, API, or release is accepted.'
+  evidence:
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/source_adjudication.md
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/source-reproduction.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/compatibility-audit.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/source-audit.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/check-adjudication.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/input-provenance.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/dependency-audit.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/consumer-audit.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/candidate-comparison.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/accepted-evidence-reuse.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/primary-provenance.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/evidence/literature-audit.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/verify.py
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/independent_rederivation.py
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/reviews/replay_source_graph.py
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0003/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0005/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0006/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0007/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0008/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0009/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0015/result.yaml
+  - campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0016/result.yaml
+  - memory/vantasner/decisions/KI2-qualified-review.md
+  note: P172 closes forty-five primary, twenty-one fresh independent, and fifty-nine typed source-graph
+    checks. The graph replays eighty-one predicates plus ten assertions across twelve nodes; KI1 alone
+    fails at its expected governed refutation. The pinned Lean artifact exits cleanly but encodes only
+    local ratio scaling and F-over-e invariance. E3 uses current-first numpy.trapezoid with a lazy legacy
+    fallback; no injected alias or version-only stop occurs. Twenty-seven focused consumers pass; the
+    integrated workflow and explicit full suite each pass all 1,478 tests with 694 valid memory files.
+    Accepted claims and v0.127.0 remain unchanged.
 - source_unit: KI3
   phase: phase-34
   path: merged-framework/bridges/phase-34/bridge_KI3_bracket_is_sharp.py

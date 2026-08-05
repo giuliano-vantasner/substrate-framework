@@ -1,0 +1,24 @@
+nodes:
+  E3: {relation: accepted_standard_sector_context, lexical_checks: 5, assertions: 1, replay: clean}
+  E4: {relation: accepted_BPS_energy_context, lexical_checks: 5, assertions: 1, replay: clean}
+  S4: {relation: accepted_standard_scale_context, lexical_checks: 11, assertions: 1, replay: clean}
+  NY1: {relation: accepted_standard_scale_context, lexical_checks: 9, assertions: 0, replay: clean}
+  NY2: {relation: accepted_standard_scale_consumer_context, lexical_checks: 10, assertions: 0, replay: clean}
+  KI1: {relation: refuted_load_bearing_premise, lexical_checks: 5, assertions: 1, replay: expected_failure_at_KI1_2}
+  KI2: {relation: qualified_root, lexical_checks: 6, assertions: 1, replay: clean_local_tally}
+  KI3: {relation: pending_reverse_consumer, lexical_checks: 5, assertions: 1, replay: clean}
+  KI4: {relation: pending_reverse_consumer, lexical_checks: 5, assertions: 1, replay: clean}
+  MK1: {relation: pending_counterrelation, lexical_checks: 7, assertions: 1, replay: clean}
+  MK2: {relation: pending_counterrelation, lexical_checks: 7, assertions: 1, replay: clean}
+  MK3: {relation: pending_counterrelation, lexical_checks: 6, assertions: 1, replay: clean}
+totals: {nodes: 12, lexical_checks: 81, assertions: 10, clean_nodes: 11, expected_refuted_nodes: 1}
+numpy_integration:
+  current_first_lazy_fallback_nodes: [E3]
+  injected_aliases: []
+  eager_legacy_fallbacks: 0
+formalization:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  result: clean_exit_exact_weak_encoding
+verifier: reviews/replay_source_graph.py
+result: ALL_59_CHECKS_PASS

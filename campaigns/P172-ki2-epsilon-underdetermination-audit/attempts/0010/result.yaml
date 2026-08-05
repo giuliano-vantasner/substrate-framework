@@ -1,0 +1,17 @@
+attempt: 0010
+campaign: P172
+candidate: materialize_evidence_records
+status: failed_patch_boundary
+started_at: '2026-08-11T02:25:00Z'
+finished_at: '2026-08-11T02:26:00Z'
+command: apply_patch_P172_evidence_bundle
+observed:
+  created_evidence_files: 12
+  missing_file: evidence/literature-audit.yaml
+  defect: Add_File_directive_inserted_as_literal_primary_provenance_content
+diagnosis: >-
+  One patch directive was accidentally prefixed as added file content. The
+  scientific records before that boundary are intact, but primary provenance
+  is invalid YAML and the literature record does not yet exist. This is a
+  campaign record-construction error, not scientific or compatibility evidence.
+next_attempt: remove_the_literal_directive_and_create_literature_audit_separately

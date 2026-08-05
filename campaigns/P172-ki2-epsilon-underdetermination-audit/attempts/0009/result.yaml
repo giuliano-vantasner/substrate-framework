@@ -1,0 +1,29 @@
+attempt: 0009
+campaign: P172
+candidate: pinned_Lean_capstone_encoding
+status: passed_qualified_scope
+started_at: '2026-08-11T02:21:00Z'
+finished_at: '2026-08-11T02:24:00Z'
+command: >-
+  cd /home/dan/substrate/sg-breather-ionization && lake env lean
+  ../merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+result:
+  exit_code: 0
+  stdout: empty
+  stderr: empty
+  source_sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+theorem_scope:
+  proves:
+    - the locally defined ratio scales by one over t squared
+    - a nontrivial positive flow changes the local ratio
+    - derivedScale defined as F divided by e is invariant
+  does_not_encode:
+    - the accepted BPS energy density
+    - the BPS saturation residual
+    - the BPS bound
+    - every framework derived quantity
+diagnosis: >-
+  The formal artifact is valid evidence for its exact algebraic encoding. Its
+  successful exit does not validate KI2's stronger fixed-theory interpretation,
+  because that premise is absent from the theorem statement and definitions.
+next_attempt: materialize_claim_level_adjudication_and_nonduplication
