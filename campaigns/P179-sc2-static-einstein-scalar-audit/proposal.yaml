@@ -1,0 +1,75 @@
+id: P179
+base_release: v0.130.0
+base_commit: 2d9a6f1e20b8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [SC2]
+question: >-
+  Does hash-pinned SC2 correctly derive and solve a self-consistent static
+  areal-gauge Einstein/canonical-sine-Gordon harmonic-balance boundary-value
+  problem, and what exact dimensionally explicit phase-averaged reduction and
+  verifier-backed solution object can be accepted without identifying an
+  averaged truncation with the full Einstein-scalar PDE, Horndeski dynamics,
+  a Gordon metric, physical gravity, or a substrate mechanism?
+invariants:
+  - C-STG-001 fixes the mostly-plus Einstein-Hilbert plus healthy canonical real-scalar action, stress sign, field equations, on-shell conservation identity, and dimensions; it supplies no static localized scalar solution or sine-Gordon identification.
+  - C-PDE-005 fixes the exact odd-harmonic radial sine-Gordon projections and radiative-tail ceiling; a sub-threshold fundamental does not localize higher channels.
+  - C-PDE-006 is numeric evidence for one declared flat-space finite-wall finite-harmonic branch with a free central amplitude and wall-sensitive radiative tails; it is not a gravitational solution or infinite-domain breather.
+  - C-PDE-009 fixes that phase averaging defines a different equation from the full periodic-coefficient problem unless the pointwise defect vanishes or a separate Floquet construction closes it.
+  - C-PDE-012 fixes regular radial operator, finite-wall, threshold, and forced-endpoint semantics; sampled or wall-forced decay cannot establish half-line localization.
+  - C-GOR-002 fixes the local vacuum-only compatibility locus for the accepted transverse Gordon ansatz; an areal-gauge spherical metric is a distinct candidate and inherits no Gordon closure.
+  - Minimal canonical Einstein-scalar theory is not a nonminimal Horndeski construction merely because a source label uses Horndeski.
+  - A static metric coupled to a periodic real scalar through phase-averaged equations is a reduced model, not a pointwise solution of the full time-dependent Einstein equations.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-STG-001
+  - C-GOR-001
+  - C-GOR-002
+  - C-PDE-001
+  - C-PDE-003
+  - C-PDE-005
+  - C-PDE-006
+  - C-PDE-009
+  - C-PDE-012
+  - src/substrate_framework/einstein_scalar.py
+  - src/substrate_framework/radial_harmonic_balance.py
+  - src/substrate_framework/radial_spectral_classification.py for boundary and finite-wall typing only
+  - standard exact differential geometry and Bessel/Fourier identities with every sign normalization scale and domain declared
+  - SciPy solve_bvp or an independently justified shooting method only after a source-aware numerical contract freezes equations domain data precision mesh tolerances residual norms and refinement
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - SC2 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned SC2 reproduction with complete predicate assertion solver dataflow convention boundary and NumPy compatibility audit.
+  - id: B
+    description: Accepted C-STG-001 C-PDE-005 C-PDE-006 C-PDE-009 C-PDE-012 and C-GOR-002 already own every valid SC2 statement so SC2 adds only qualified or duplicate evidence.
+  - id: C
+    description: Derive an exact scale-explicit phase-averaged single-harmonic Einstein-sine-Gordon reduction in static spherical areal gauge from the canonical action including mass lapse scalar equations origin laws constraints and averaging defect.
+  - id: D
+    description: Construct one corrected finite-wall solution of Candidate C with declared central amplitude dimensionless coupling gauge boundary data solver status residuals mesh wall tolerance refinement and an independent numerical route.
+  - id: E
+    description: Replace the static averaged metric by a genuine time-periodic oscillaton expansion with metric harmonics and solve the full coupled periodic problem.
+  - id: F
+    description: Introduce a genuinely nonminimal Horndeski action only through a separate explicit action and field equations rather than importing the source label as dynamics.
+  - id: G
+    description: Close claim source dependency consumer disposition queue release documentation memory and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_action_signature_stress_and_dimension_compatibility
+  - exact_variational_constraint_and_projected_scalar_closure
+  - averaged_reduced_model_versus_pointwise_full_PDE_separation
+  - regular_origin_horizon_avoidance_outer_data_and_tail_semantics
+  - assumption_scale_parameter_and_boundary_economy
+  - solver_status_residual_refinement_independent_method_and_mutation_sensitivity
+  - novelty_beyond_C_STG_001_and_C_PDE_005_006_009_012
+  - dependency_consumer_physical_scope_and_governance_closure
+claims_proposed: [C-STG-002]
+comparators_blinded_until: >-
+  freeze commit before opening SC2's body for a new campaign audit; the
+  generated queue already exposes the static areal gauge, single-harmonic
+  ansatz, phase-averaged stress, Bessel projections, advertised equation
+  structure, and done headline, while P178 already executed SC2 and checked
+  its seven-check tally and two result phrases, so no fresh conclusion or
+  runtime-output blinding is claimed; exact source literals, numerical inputs,
+  arrays, solver statuses, thresholds, and intermediate derivation remain
+  unopened in P179
+status: active

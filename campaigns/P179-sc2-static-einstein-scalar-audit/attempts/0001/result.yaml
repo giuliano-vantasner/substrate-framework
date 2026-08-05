@@ -1,0 +1,54 @@
+attempt: 0001
+campaign: P179
+candidate: frozen_authority_recall_and_competing_concepts
+status: passed
+started_at: '2026-08-11T06:57:00Z'
+finished_at: '2026-08-11T07:01:00Z'
+base:
+  release: v0.130.0
+  release_sha256: a13516d2a4de2d8d75b65ef5980c01e5feab408e123279954b4b12bf7dbf2ffb
+  framework_commit: 2d9a6f1e20b8
+  accepted_claims: 166
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  unit: SC2
+  path: merged-framework/bridges/phase-36/bridge_SC2_horndeski_selfconsistent_solve.py
+  sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425
+  target_path_clean: true
+  source_repository_has_unrelated_later_changes: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+recall:
+  memory_queries: [SC2_Horndeski_self_consistent_Gordon, exact_SC2_mentions]
+  accepted_authority: [C-STG-001, C-GOR-001, C-GOR-002, C-PDE-001, C-PDE-003, C-PDE-005, C-PDE-006, C-PDE-009, C-PDE-012]
+  nearest_canonical_modules: [einstein_scalar.py, radial_harmonic_balance.py, radial_spectral_classification.py]
+  source_dependencies_with_accepted_mappings: [G3, QB1, QB3, BX1, SC1]
+  pending_reverse_consumer: TX1
+exposure_before_freeze:
+  queue_headline_question_result_and_equation_synopsis: exposed
+  P178_native_execution_terminal_tally_and_selected_phrases: exposed
+  fresh_conclusion_or_runtime_output_blinding_claimed: false
+  exact_source_literals_values_arrays_status_thresholds_and_intermediate_implementation_newly_audited: false
+candidates: [A, B, C, D, E, F, G]
+provisional_identifier_search: [C-STG-002, C-PDE-013]
+identifier_collisions: []
+claim_delta: [C-STG-002]
+numeric_candidate_frozen_for_execution: false
+numeric_requirement: source_aware_revision_before_corrected_BVP_execution
+compatibility_policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_replay_backed_by_numpy.trapezoid
+  version_only_stop_is_scientific_failure: false
+freeze_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  repository: WORKFLOW_VALID_166_claims_166_accepted_0_proposals
+  migration_queue: 218_units_46_pending_0_partial
+  diff_check: passed
+debt:
+  - exact_SC2_implementation_predicates_values_solver_and_runtime_unaudited_in_P179
+  - physical_to_dimensionless_scalar_scale_ledger_unresolved
+  - mass_lapse_scalar_equation_and_phase_average_closure_unverified
+  - numeric_status_residual_refinement_boundary_and_horizon_semantics_unknown
+  - nonduplication_dependencies_consumers_and_source_disposition_open
+next_attempt: commit_freeze_then_open_audit_and_reproduce_hash_pinned_SC2
