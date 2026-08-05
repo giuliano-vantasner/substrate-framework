@@ -2,7 +2,7 @@
 description: Audit WN1 and derive a normalization-complete exact factorial-suppression ledger
 author: vantasner
 created: '2026-08-11T14:58:00Z'
-updated: '2026-08-11T15:32:00Z'
+updated: '2026-08-11T15:52:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - factorial-suppression
 - cosine-vertices
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P189 WN1 Factorial-Suppression Audit
 
@@ -224,7 +224,7 @@ power into blocks of twenty yields
 `q_n<10^-((20d-9)n/10)`, exactly reproducing the conservative exponents
 -131,000,000, -17,100,000,000, and -2,110,000,000,000 for decades seven,
 nine, and eleven. C-CMB-001 is provisionally distinct from C-SG-019 and has
-four direct plus twelve transitive source consumers; implementation and
+four direct plus eight transitive source consumers; implementation and
 independent verification remain open.
 
 Attempt 0004 implements the distinct surface in the pure
@@ -254,6 +254,19 @@ low process risk but does not see the untracked new files or known pytest
 consumers, so its limitation is recorded and cannot substitute for source and
 test replay.
 
+Attempt 0005 promotes C-CMB-001 individually in v0.140.0 and qualifies WN1
+through C-SG-019 plus the new theorem. All thirteen hash-pinned source nodes
+replay 568 native checks, while the final governed graph adds 47 checks that
+prove every one of the twelve consumers remains pending and unpromoted. The
+queue closes at 35 pending and 170 qualified units, and generated documentation
+and accepted memory agree with the 180-claim registry.
+
+The single integrated boundary validates 773 memory records and passes all
+1,659 repository tests in 178.29 wall-clock seconds with exit zero and 214,836
+KiB peak RSS. The unchanged full suite is not rerun after this record-only
+closure. No equation, predicate, tolerance, compatibility decision, or
+scientific threshold changes during promotion.
+
 ## Debt Ledger
 
 The P189 ledger tracks source reachability, coefficient normalization,
@@ -268,11 +281,11 @@ governed-state agreement.
 | Unit normalization may erase amplitude and coordinate scales | Derive the general C-SG-019 magnitude ledger and mutate every scale | discharged by exact API, background and scale mutations, and both oracles |
 | A finite exponential grid may masquerade as a universal proof | Supply an analytic positive-series proof and sensitive direction countercheck | discharged by the positive-series and reciprocal-gap proof with mutations |
 | Arbitrary-precision digits may masquerade as a rigorous bound | Derive exact rational and integer exponent bounds or give explicit enclosures | discharged by 49/18, 11/4, and the integer twentieth-power proof |
-| Squared classical coefficient may be called a Golden-rule rate | Type every state, interaction, normalization, spectral, and validity premise or reject the reading | discharged mathematically by two null countermodels; consumer narratives remain to replay |
-| PN2 decade inputs may be called a physical subdivision prediction | Preserve PN2's qualified bookkeeping ceiling and treat band values as supplied examples only | discharged in the API and primary oracle; consumer narratives remain to replay |
-| C-CMB-001 may duplicate C-SG-019 or elementary math | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | API and theorem distinct; consumer verification remains open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or alias-replay immutable legacy access without candidate rejection | discharged for WN1 and all P189 mutable code; consumer preflight remains open |
-| Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | open |
+| Squared classical coefficient may be called a Golden-rule rate | Type every state, interaction, normalization, spectral, and validity premise or reject the reading | discharged by two null countermodels and explicit ceilings across all twelve consumers |
+| PN2 decade inputs may be called a physical subdivision prediction | Preserve PN2's qualified bookkeeping ceiling and treat band values as supplied examples only | discharged by the API, claim review, and consumer graph |
+| C-CMB-001 may duplicate C-SG-019 or elementary math | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | discharged by individual claim review, exact API, and twelve-consumer ceiling replay |
+| Legacy NumPy access may masquerade as science | Repair mutable code or alias-replay immutable legacy access without candidate rejection | discharged across WN1, all twelve consumers, and mutable P189 code with zero version events |
+| Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | discharged by the 47-check governed graph and v0.140.0 transaction |
 
 ## Review and Promotion Plan
 
@@ -299,6 +312,10 @@ rate and subdivision premise has a verdict, competing candidates and
 mutations are adjudicated, consumers replay, governed state is synchronized,
 and the debt ledger is empty. A failed physical interpretation is attempt
 evidence and cannot substitute for the positive exact object.
+
+This gate is satisfied by attempts 0004 and 0005. C-CMB-001 is accepted in
+v0.140.0, WN1 is qualified, all debt rows are discharged, and the parent
+migration continues with WN2.
 
 ## Cross-References
 

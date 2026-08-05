@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T14:53:00Z'
+updated: '2026-08-11T15:52:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.139.0`, containing one hundred seventy-nine
+The current accepted frontier is `v0.140.0`, containing one hundred eighty
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2128,25 +2128,40 @@ MEDIUM governance risk for its future individual audit. The integrated
 disposition boundary validates 768 memory records and passes all 1,633 tests
 with a clean terminal status.
 
+P189 adds C-CMB-001's exact inverse-square factorial theorem. The positive
+sequence has recurrence `q_(n+1)/q_n=1/(n+1)^2`, a strict exponential ceiling,
+an every-fixed-power geometric tail, and exact rational/integer decade bounds.
+Its C-SG-019 application retains amplitude, coordinate scales, background,
+parity, and the coefficient-versus-derivative convention. WN1 is qualified
+through these objects; its finite grids and sixty-digit values do not prove
+universal quantifiers, and its Golden-rule rate and physical PN2-band readings
+remain unaccepted. The primary and independent routes pass 67 and 27 checks,
+76 focused tests pass, and the thirteen-node source closure replays 568 native
+checks plus 47 governed checks while leaving twelve consumers pending. No node
+or mutable P189 file has a legacy NumPy quadrature surface. GitNexus reports
+LOW implementation risk but omits untracked and known pytest consumers, so
+manual replay supplies the missing coverage. The integrated boundary validates
+773 memory records and all 1,659 tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.139.0` manifest, current release, generated claim
-index, and generated framework memory agree on one hundred seventy-nine
-accepted claims. P001 through P188 are frozen under `campaigns/`; proposal,
+The registry, `v0.140.0` manifest, current release, generated claim
+index, and generated framework memory agree on one hundred eighty
+accepted claims. P001 through P189 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 36 pending, 0 partial, 3
-migrated, 169 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 35 pending, 0 partial, 3
+migrated, 170 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 36
-pending, 3 migrated, 169 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P188 closes GK3D4 without accepting a common physical
-three-sector loop construction, erased factor boundaries, selected Abelian
-normalization, or physical weak angle. The next queue unit is WN1, pinned at
-SHA-256 `3764b29955c3bd51c10278159e08a52ff616a7041510e56917b091f1a802cdde`.
-Its factorial vertex coefficient, exact magnitude bounds, PN2 subdivision band,
-rate-weight interpretation, finite exact-rational probes, arbitrary-precision
-exponents, and float-underflow demonstration require separate adjudication.
+The effort remains active. D4 is discharged, but D1 remains open with 35
+pending, 3 migrated, 170 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P189 closes WN1 without accepting a physical PN2
+band, coefficient-square rate, branching weight, material process, or any
+blanket downstream conclusion. The next queue unit is WN2, pinned at SHA-256
+`dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c`.
+Its parity discontinuity, factorial suppression, low-order concentration,
+admissibility guard, PN2 kinematic reading, and dependence on forward WN3/WN4
+weight narratives require separate adjudication.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

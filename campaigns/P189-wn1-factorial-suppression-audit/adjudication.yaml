@@ -63,6 +63,10 @@ validation_commands:
   - git_diff_check
 integrated_gate:
   attempt: attempts/0005/result.yaml
-  status: pending_record
+  memory_files: 773
+  tests_passed: 1659
+  wall_seconds: 178.29
+  maximum_resident_kib: 214836
+  exit_status: 0
 debt: []
 status: accepted

@@ -21,9 +21,9 @@ candidates:
     verdict: selected_scope_control
     reason: Normalization and zero-interaction or zero-spectral-density mutations prevent a coefficient square from becoming a physical rate.
   G:
-    verdict: pending_governance_closure
-    reason: Claim implementation consumers source disposition release documentation memory and debt remain open.
+    verdict: selected_governance_closure
+    reason: Claim implementation consumers source disposition release documentation memory and debt close together in v0.140.0.
 selection:
   provisional_claim: C-CMB-001
   canonical_API_change: implemented_and_exactly_verified
-  release_change: pending_claim_review
+  release_change: v0.140.0_accepted
