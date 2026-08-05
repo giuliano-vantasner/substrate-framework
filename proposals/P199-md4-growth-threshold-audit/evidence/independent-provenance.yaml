@@ -1,0 +1,20 @@
+campaign: P199
+claim_candidate: C-MKV-001
+verifier: reviews/independent_birth_death_review.py
+sha256: 232929cf8c58a47fdf8285176c5c316a69c7dc37f3dfd15a1c87e59de96bfa8e
+command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P199-md4-growth-threshold-audit/reviews/independent_birth_death_review.py
+exit_status: 0
+checks: 37
+terminal_tally: ALL_37_CHECKS_PASS_P199_MD4_INDEPENDENT
+independence:
+  imports_claim_module: false
+  imports_public_package_API: false
+  imports_shared_verification_ledger_only: true
+oracle:
+  - raw_stationary_series_and_edge_currents
+  - raw_PGF_forward_equation_and_moments
+  - raw_binomial_Poisson_transition_convolution
+  - two_distinct_generators_with_the_same_edge_ratio
+  - wrong_index_boundary_outflow_rate_scale_and_sample_path_mutations
+  - structurally_distinct_pure_birth_competitor
+scientific_version_failures: 0

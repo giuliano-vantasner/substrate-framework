@@ -1,0 +1,27 @@
+attempt: 0004
+campaign: P199
+candidate: exact_immigration_death_implementation_primary_independent_and_focused_verification
+status: passed
+implementation:
+  module: src/substrate_framework/birth_death.py
+  package_exports: 10
+  new_test_executions: 25
+verification:
+  primary_checks: 54
+  independent_checks: 37
+  focused_tests: 53
+  exit_statuses_all_zero: true
+mutations:
+  nonzero_boundary_death: rejected_by_uncompensated_outflow
+  wrong_n_plus_one_index: rejected_by_nonzero_stationary_current
+  constant_death_generator: distinguished_from_selected_process
+  erased_rate_scale: rejected_by_time_units_and_distinct_transients
+  static_ratio_as_time_derivative: rejected_by_two_generators_with_same_ratio
+  positive_drift_as_monotone_path: rejected_by_positive_death_jump_rate
+compatibility:
+  mutable_numpy_surface: none
+  version_only_scientific_failures: 0
+scientific_threshold_changed: true
+debt:
+  - complete_source_graph_and_individual_claim_and_source_reviews
+next_attempt: source_graph_replay_claim_review_and_MD4_disposition_review

@@ -1,0 +1,18 @@
+campaign: P199
+claim_candidate: C-MKV-001
+verifier: verify.py
+sha256: 5ab8da0c52641d09948720cdc60d5d2c0d043f45ceb75930fbbeed78bdd1d680
+command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P199-md4-growth-threshold-audit/verify.py
+exit_status: 0
+checks: 54
+terminal_tally: ALL_54_CHECKS_PASS_P199_MD4_PRIMARY
+oracle:
+  - source_hash_release_hash_formula_freeze_and_module_hash
+  - source_AST_predicate_and_compatibility_inventory
+  - exact_rates_boundary_generator_and_stationary_normalization
+  - edgewise_detailed_balance_and_index_mutations
+  - PGF_forward_equation_initial_normalization_and_stationary_limits
+  - deterministic_initial_transition_coefficients
+  - alternative_reversible_generator_with_the_same_stationary_mass
+  - rate_scale_and_sample_path_interpretation_counterexamples
+scientific_version_failures: 0
