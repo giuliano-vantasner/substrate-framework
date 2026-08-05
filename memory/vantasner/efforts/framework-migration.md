@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-05T19:30:00Z'
+updated: '2026-08-05T20:01:00Z'
 tags:
 - substrate-framework
 - effort
@@ -138,7 +138,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 31 pending, 0 partially migrated, 3 migrated, 174 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 23 pending, 0 partially migrated, 3 migrated, 182 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -364,7 +364,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 31 bridge units remain pending, 3 are migrated, 174 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 23 bridge units remain pending, 3 are migrated, 182 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -2273,24 +2273,39 @@ native predicates without duplicate execution and no NumPy compatibility
 event changes the verdict. The integrated boundary validates 822 memory files
 and passes all 1,810 tests in 167.99 seconds with exit zero.
 
+P201 leaves v0.149.0 unchanged and qualifies MD6 as an exact finite source
+ledger rather than a semantic firewall or scientific debt oracle. Forty-six
+primary, 17 independent, nine focused, and 14 graph checks preserve its
+pinned-byte assignment, lexical, and conditional algebraic results while
+showing ordinary Python value-path evasions, lexical collisions, both tagged
+MD4 constants flowing into checks, retained DOS and parameter premises, rho
+dependence, the `w+Nw'` total-derivative criterion, and the integer mode tie.
+The empty-ledger condition is literal `True`. Seven pinned records cover 263
+native predicates without duplicate execution, MD6 has no reverse consumer,
+and no NumPy compatibility event changes the verdict. The integrated boundary
+validates 824 memory files and passes all 1,810 tests in 168.97 seconds with
+exit zero.
+
 ## Canonicalization
 The registry, `v0.149.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred eighty-nine accepted claims.
-P001 through P200 are frozen under `campaigns/`; proposal,
+P001 through P201 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 24 pending, 0 partial, 3
-migrated, 181 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 23 pending, 0 partial, 3
+migrated, 182 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. The integrated promotion boundary passes cleanly.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 24
-pending, 3 migrated, 181 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. P200 closes MD5 without accepting its material
-population law, unique integer mode, PN2 band, H/D handshake, physical
-branching, reaction, or rate. The next dependency-ready queue unit is MD6. Its
-scanner and debt-ledger predicates must be separated from scientific truth and
-cannot declare debt discharged merely because selected names or assignments
-are absent.
+The effort remains active. D4 is discharged, but D1 remains open with 23
+pending, 3 migrated, 182 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P201 closes MD6 without accepting semantic parameter
+independence, closed data flow, inert tagged constants, derived material mode
+counts, rho irrelevance, a unique integer mode, or an empty scientific ledger.
+The next dependency-ready queue unit is GK3D5. Its claimed 3+1D charged
+excitation must be audited without turning EM6's one-dimensional profile,
+declared radial lift, finite numerical shooting, or upstream kinetic
+composition into an accepted quantum field, charged state, loop matter,
+physical mass, or substrate mechanism.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

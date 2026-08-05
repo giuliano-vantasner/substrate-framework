@@ -1,0 +1,40 @@
+attempt: 0009
+campaign: P201
+route: terminal_governance_sync_and_single_integrated_gate
+status: passed
+started_at: '2026-08-05T19:55:00Z'
+finished_at: '2026-08-05T20:01:00Z'
+source_disposition: {MD6: qualified}
+accepted_mappings: []
+release_after: v0.149.0
+generated_state:
+  claims: 189
+  accepted_claims: 189
+  proposals: 0
+  memory_files: 824
+  migration_units: 218
+  migration_pending: 23
+  migration_partial: 0
+  migration_qualified: 182
+targeted_boundary:
+  native_checks: 40
+  primary_checks: 46
+  independent_checks: 17
+  graph_checks: 14
+  focused_tests: 9
+  exit_statuses_all_zero: true
+integrated_gate:
+  command: scripts/validate.sh
+  status: passed
+  tests_passed: 1810
+  pytest_seconds: 168.97
+  wall_seconds: 181.66
+  peak_rss_kib: 218408
+  exit_status: 0
+  terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+release_sha256: fbb97885d564d6dc57c8b5bdf37cd619484a4f361545ea4ae198917de6b2ed05
+registry_sha256: 75f15bce1236c976d66f1348b104856b3bfb562ce1c3c0b1113c0b47ab8cbf22
+source_claims_sha256: ec0ad8168003f92f4938cbc4216ac2e0c43debded635310b663a9face7062487
+scientific_threshold_changed: false
+compatibility_event: none
+debt: []

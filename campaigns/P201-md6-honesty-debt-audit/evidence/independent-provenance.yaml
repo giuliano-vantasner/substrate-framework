@@ -2,7 +2,7 @@ campaign: P201
 source_unit: MD6
 verifier: reviews/independent_debt_review.py
 sha256: 2ef5dcfa3936d90c95c2558c107bc8d7ec66d2c0e9348c627927b6401a092d30
-command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python proposals/P201-md6-honesty-debt-audit/reviews/independent_debt_review.py
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python campaigns/P201-md6-honesty-debt-audit/reviews/independent_debt_review.py
 exit_status: 0
 checks: 17
 terminal_tally: ALL_17_CHECKS_PASS_P201_MD6_INDEPENDENT

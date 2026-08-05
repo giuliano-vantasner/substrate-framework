@@ -2,7 +2,7 @@
 description: Adjudicate MD6 finite scanner predicates and semantic debt closure
 author: vantasner
 created: '2026-08-05T19:35:00Z'
-updated: '2026-08-05T19:52:00Z'
+updated: '2026-08-05T20:01:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - honesty-firewall
 - debt-ledger
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P201 MD6 Honesty and Debt Audit
 
@@ -83,7 +83,7 @@ and debt labels. A fresh independent route will reimplement the relevant
 classification without importing campaign helpers. Construction, aliases,
 attributes, subscripts, configuration, imported values, tables, closures,
 dynamic imports, tag/data-flow, and equivalent empirical inputs will mutate
-headline assumptions. The exact six-node dependency graph and compatibility
+headline assumptions. The exact seven-node dependency graph and compatibility
 surfaces will replay without duplicate native execution. Existing importable
 audit APIs will be reused unless a distinct consumer-backed surface survives.
 
@@ -126,21 +126,25 @@ Attempt 0008 passes the narrow review-boundary validation after explicitly
 setting the repository memory base. Two earlier CLI invocations selected the
 configured external memory root; that command-level miss is preserved as
 non-scientific attempt evidence and does not inflate the scientific tally.
+Attempt 0009 synchronizes the terminal qualified disposition, immutable
+campaign, regenerated queue, archived proposal memory, and decision memory.
+The single integrated boundary validates 824 memory files and passes all 1,810
+tests in 168.97 seconds with exit zero. The P201 debt ledger is empty.
 
 ## Debt Ledger
 
-The initial ledger stays open until concrete evidence discharges each row.
+Every initial debt has a concrete discharge artifact.
 
 | Debt | Discharge | Status |
 | --- | --- | --- |
-| Prior MD6 execution prevents fresh blinding | Preserve exposure and freeze before renewed execution | open |
-| Finite assignment scan may be overread as parameter independence | Test indirect and imported value paths | open |
-| Tags may be overread as non-load-bearing proof | Trace uses and mutate tagged values | open |
-| Literal absence may be overread as data independence | Supply equivalent imported and numeric comparator paths | open |
-| Source-authored debt labels may self-certify | Recompute every item from accepted claims and evidence | open |
-| Existing scanner machinery may own the result | Complete claim API and theorem nonduplication review | open |
-| Dependency mappings may grant blanket authority | Replay exact graph and type every accepted mapping | open |
-| Compatibility may masquerade as science | Preflight all legacy NumPy access forms | open |
+| Prior MD6 execution prevents fresh blinding | Preserve exposure and freeze before renewed execution | discharged |
+| Finite assignment scan may be overread as parameter independence | Test indirect and imported value paths | discharged |
+| Tags may be overread as non-load-bearing proof | Trace uses and mutate tagged values | discharged |
+| Literal absence may be overread as data independence | Supply equivalent imported and numeric comparator paths | discharged |
+| Source-authored debt labels may self-certify | Recompute every item from accepted claims and evidence | discharged |
+| Existing scanner machinery may own the result | Complete claim API and theorem nonduplication review | discharged |
+| Dependency mappings may grant blanket authority | Replay exact graph and type every accepted mapping | discharged |
+| Compatibility may masquerade as science | Preflight all legacy NumPy access forms | discharged |
 
 ## Review and Promotion Plan
 
@@ -156,3 +160,4 @@ P201 closes only when the exact finite ledger and semantic debt adjudication
 exist, every dependency and compatibility surface replays, MD6 has a terminal
 disposition, canonical records agree, one integrated gate passes, and no debt
 remains. A green source tally or a list of scanner evasions is not completion.
+Those conditions are met for P201.

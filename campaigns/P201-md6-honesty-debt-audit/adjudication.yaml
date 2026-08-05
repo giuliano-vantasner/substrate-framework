@@ -1,0 +1,80 @@
+campaign: P201
+title: MD6 finite honesty-firewall and scientific-debt adjudication
+source_baseline: substrate@6d1f4e0
+source_units: [MD6]
+base_release: v0.149.0
+release_after_adjudication: v0.149.0
+adjudicated_at: '2026-08-05T19:55:00Z'
+selected_candidates:
+  - {id: B, reason: Exact pinned paths bytes AST and lexical matchers close the positive finite statement.}
+  - {id: C, reason: Accepted-authority recomputation types every retained conditional identity and rejected debt overread.}
+  - {id: E, reason: P120 P195 and source_audit own every reusable scanner method so no duplicate API or claim is added.}
+  - {id: G, reason: The finite ledger and leaf graph justify terminal qualification with no accepted mapping.}
+competing_candidates:
+  - {id: A, decision: reproduction_evidence_only}
+  - {id: D, decision: rejected_as_duplicate_campaign_local_scanner_surface_without_a_distinct_consumer}
+  - {id: F, decision: rejected_because_no_accepted_foundational_inconsistency_exists_independently_of_MD6}
+claims: []
+reviewed_existing:
+  - {id: C-SG-019, decision: unchanged_exact_cosine_coefficient_theorem_and_physical_ceiling}
+  - {id: C-OSC-001, decision: unchanged_one_mode_Fock_coordinate_theorem_and_state_ceiling}
+  - {id: C-CMB-003, decision: unchanged_factorial_one_mass_modes_moments_and_tails}
+  - {id: C-OSC-002, decision: unchanged_cosine_remainder_and_harmonic_convention}
+  - {id: C-MED-003, decision: unchanged_conditional_medium_dispersion_and_material_ceiling}
+  - {id: C-SG-018, decision: unchanged_conditional_continuum_density_and_dimensional_ceiling}
+  - {id: C-DOS-001, decision: unchanged_supplied_dimension_branch_volume_cutoff_and_target_ceiling}
+  - {id: C-QFL-001, decision: unchanged_quantized_vacuum_moment_and_fixed_set_ceiling}
+  - {id: C-VOP-001, decision: unchanged_coherent_state_and_nonmaterial_transition_ceiling}
+  - {id: C-MKV-001, decision: unchanged_separately_declared_birth_death_process_ceiling}
+  - {id: C-BRN-001, decision: unchanged_constant_weight_allocation_partial_derivative_and_physical_ceiling}
+  - {id: C-BRN-002, decision: unchanged_population_dependent_total_derivative_and_physical_weight_ceiling}
+evidence:
+  freeze_gate: attempts/0001/result.yaml
+  source_predicate_audit: attempts/0002/result.yaml
+  candidate_selection: attempts/0003/result.yaml
+  first_sign_representation_failure: attempts/0004/result.yaml
+  second_sign_representation_failure: attempts/0005/result.yaml
+  exact_routes: attempts/0006/result.yaml
+  graph_review: attempts/0007/result.yaml
+  review_boundary: attempts/0008/result.yaml
+  terminal_gate: attempts/0009/result.yaml
+  primary_verifier: verify.py
+  independent_review: reviews/independent_debt_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  disposition_review: reviews/MD6-disposition-review.md
+  terminal_review: memory/vantasner/decisions/MD6-qualified-review.md
+source_disposition:
+  MD6: qualified
+accepted_mappings: []
+compatibility:
+  graph_scripts_scanned: 7
+  legacy_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_used: 0
+  version_only_scientific_failures: 0
+release_change: none
+validation_commands:
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python campaigns/P201-md6-honesty-debt-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python campaigns/P201-md6-honesty-debt-audit/reviews/independent_debt_review.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python campaigns/P201-md6-honesty-debt-audit/reviews/replay_source_graph.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest tests/test_source_audit.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

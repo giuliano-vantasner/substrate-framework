@@ -21,12 +21,12 @@ expected_coverage:
   compatibility_aliases: 0
   version_only_scientific_failures: 0
 actual_replay:
-  command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python proposals/P201-md6-honesty-debt-audit/reviews/replay_source_graph.py
+  command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python campaigns/P201-md6-honesty-debt-audit/reviews/replay_source_graph.py
   verifier_sha256: 81c9124e171502892c5ad2c53e827839cac3049f17cf6cfb08cd235339383cfd
   terminal_tally: ALL_14_CHECKS_PASS_P201_MD6_SOURCE_GRAPH
   exit_status: 0
-authority_state_before_P201_promotion:
+authority_state_after_P201_terminal_sync:
   qualified_direct_dependencies: [WN6, MD1, MD2, MD3, MD4, MD5]
-  pending_root: MD6
+  qualified_root_without_claim_mapping: MD6
   reverse_source_consumers: []
   accepted_MD6_claims: []
