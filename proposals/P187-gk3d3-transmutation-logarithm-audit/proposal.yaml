@@ -1,0 +1,68 @@
+id: P187
+base_release: v0.138.0
+base_commit: ba1cbaf3dfcdd34d36fc22c1c6105c27cbac2d36
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK3D3]
+question: >-
+  Does hash-pinned GK3D3 derive the scale identifications needed to compose
+  the accepted one-loop two-length hierarchy with the accepted affine matter-
+  induced kinetic family, or does it relabel supplied lengths as a cutoff and
+  a particle Compton scale, assume matched conversion factors and zero kinetic
+  boundary data, and then present a conditional reconstruction as a unique
+  physical gauge coupling?
+invariants:
+  - C-RGE-003 leaves both physical length labels, both inverse-energy conversion factors, the beta coefficient, coupling squared, reference scale, absolute scale, and perturbative interpretation supplied.
+  - C-IDN-002 proves that the accepted gravity-and-length system has rank two with a one-dimensional nullspace; backsubstitution into its defining row is inverse reconstruction rather than an independent closure test.
+  - C-DIM-007 permits sigma=k*Lambda^2 only after one scale and a free dimensionless k are supplied; it does not establish a physical tension or mass relation.
+  - C-DIM-009 supplies convention and dimension bookkeeping only and selects no loop, logarithm, scale identification, matching condition, or total coupling.
+  - C-VAC-003 supplies the exact affine family Z(mu)=Z_ref+b*log(mu_ref/mu)/(8*pi^2) and keeps Z_ref, both scales, matter weights, group data, and every physical interpretation independent.
+  - A physical UV-cutoff map mu_ref=K_uv/a and charged-excitation map mu=K_ir/xi are separately declared model data; sharing hbar*c or any soliton coefficient is not inferred from the existence of two lengths.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-RGE-001
+  - C-RGE-003
+  - C-IDN-002
+  - C-DIM-007
+  - C-DIM-009
+  - C-GAU-001
+  - C-MAX-001
+  - C-VAC-002
+  - C-VAC-003
+  - exact positive scale, inverse-length conversion, logarithm, affine-flow, and rank-identifiability algebra
+  - separately declared positive length-to-energy conversions and matching-scale identifications as conditional inputs, never derived physical labels
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - GK3D3 and its hash-pinned dependencies and reverse consumers as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Reproduce GK3D3 exactly and audit every imported formula, physical label, scale map, cancellation, predicate, assertion, and headline conclusion edge.
+  - id: B
+    description: Compose two arbitrary positive lengths with independently supplied inverse-length energy conversions and retain their conversion-factor ratio in the kinetic logarithm.
+  - id: C
+    description: Compose C-RGE-003's consistently paired one-loop energies and lengths with C-VAC-003 so conversion factors cancel algebraically while the reference value and supplied flow coordinates remain explicit.
+  - id: D
+    description: Compare free affine matching, explicitly imposed zero matching, and measured matching before defining any effective coupling or positivity domain.
+  - id: E
+    description: Test the source physical identification against unequal conversions, an independent soliton mass coefficient, reversed length labels, common rescaling, and independent absolute scales.
+  - id: F
+    description: Close claim, source, dependency, consumer, disposition, queue, release, documentation, memory, and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_scale_orientation_and_physical_label_provenance
+  - exact_length_energy_conversion_and_dimension_consistency
+  - affine_reference_value_retained_until_matching_is_declared
+  - one_loop_inputs_distinguished_from_predicted_outputs
+  - common_rescaling_and_conversion_reparameterization_covariance
+  - correct_equal_scale_zero_weight_zero_matching_and_wrong_orientation_limits
+  - parameter_assumption_import_and_dependency_economy
+  - independent_rederivation_and_load_bearing_mutation_sensitivity
+  - novelty_beyond_C_RGE_003_C_IDN_002_and_C_VAC_003
+  - source_consumer_and_governance_closure
+claims_proposed: [C-VAC-004]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line GK3D3 body audit; the generated queue
+  already exposes the claimed identifications Lambda_UV=hbar*c0/a and
+  m=hbar*c0/xi, the cancellation to log(xi/a), substitution of the AS1 one-
+  loop exponent, the zero-boundary total coupling, fourteen static checks, and
+  one assertion, so no fresh source-result blinding is claimed
+status: draft
+revision: 0001

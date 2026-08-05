@@ -1,0 +1,31 @@
+attempt: 0001
+campaign: P187
+candidate: preregistration_and_authority_freeze
+status: passed
+started_at: '2026-08-11T13:08:00Z'
+finished_at: '2026-08-11T13:11:00Z'
+base_release: v0.138.0
+base_commit: ba1cbaf3dfcdd34d36fc22c1c6105c27cbac2d36
+release_sha256: 55916c2f626ebcd2afdb6461de485d35c850e22fbf439c78d9cbccea08004591
+source:
+  unit: GK3D3
+  path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D3_transmutation_closes_the_log.py
+  sha256: 1c3f81d15ace3ec2c6326c89659596f5b9ff84ac23ef7f0143a53ad92b23b211
+  git_blob: d4efb0d8d96d4368272902683c54df6bf3af7b80
+  history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+  size_bytes: 21995
+  target_path_clean: true
+freeze:
+  candidates: [A, B, C, D, E, F]
+  claims_proposed: [C-VAC-004]
+  identifier_collisions: 0
+  source_body_opened: false
+  fresh_result_blinding_claimed: false
+  numpy_policy: mutable_numpy_trapezoid_or_trapezoid_integral_and_immutable_alias_only
+validation:
+  repository_validator_exit_code: 0
+  memory_record_validator_exit_code: 0
+  memory_files_valid: 762
+  yaml_parse_exit_code: 0
+  git_diff_check_exit_code: 0
+next_attempt: commit_the_freeze_then_reproduce_and_audit_GK3D3
