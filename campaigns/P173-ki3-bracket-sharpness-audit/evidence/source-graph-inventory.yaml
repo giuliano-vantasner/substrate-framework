@@ -1,0 +1,21 @@
+nodes:
+  E3: {relation: qualified_classical_coordinate_context, lexical_checks: 5, assertions: 1, replay: clean}
+  E4: {relation: qualified_local_BPS_context, lexical_checks: 5, assertions: 1, replay: clean}
+  KI2: {relation: qualified_parameter_family_premise, lexical_checks: 6, assertions: 1, replay: clean}
+  KI3: {relation: qualified_root_under_audit, lexical_checks: 5, assertions: 1, replay: clean_local_tally}
+  KI4: {relation: pending_direct_reverse_consumer, lexical_checks: 5, assertions: 1, replay: clean}
+  MK4: {relation: pending_interpolation_challenge, lexical_checks: 6, assertions: 1, replay: clean}
+  MK5: {relation: pending_bracket_challenge, lexical_checks: 8, assertions: 1, replay: clean}
+  MK6: {relation: pending_indirect_consumer, lexical_checks: 6, assertions: 1, replay: clean}
+  MR6: {relation: pending_indirect_ledger_consumer, lexical_checks: 6, assertions: 3, replay: clean}
+totals: {nodes: 9, lexical_checks: 52, assertions: 11, clean_nodes: 9}
+numpy_integration:
+  current_first_lazy_fallback_nodes: [E3]
+  injected_aliases: []
+  eager_legacy_fallbacks: 0
+formalization:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  result: reused_clean_exit_for_unchanged_bytes
+verifier: reviews/replay_source_graph.py
+result: ALL_47_CHECKS_PASS

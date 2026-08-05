@@ -1,0 +1,10 @@
+scope: accepted_range_BPS_and_conditional_classical_coordinate_authority
+external_source_used_for_selection: false
+physical_interpretation_imported: false
+reason: >-
+  The dispute is logical and provenance-sensitive: whether declared endpoint
+  limits imply global exclusion, whether the accepted registry supplies those
+  endpoints for one physical map, and whether a comparator enters an oracle.
+  Exact counterexamples and accepted claim text decide it without new external
+  physics or fitted data.
+conclusion: no_external_literature_required_for_this_record_only_qualification

@@ -1,0 +1,30 @@
+source_unit: KI3
+source_sha256: 10e92457cbd213782e5778f5b739660a6d07ea229c44746e24fe0132844fcbd3
+imports: [sympy]
+definitions:
+  domain: epsilon_positive
+  symbolic_scale: kappa_cl_positive
+  interpolants: [Pade, exponential, tanh, algebraic]
+  source_classical_coordinate: 8.456302593250168
+  accepted_classical_coordinate: 8.482417318795285
+  comparator: 0.929
+predicate_structure:
+  checks: 5
+  assertions: 1
+  helper_fail_fast: true
+  derivative_points_per_interpolant: 1
+  interior_levels_per_interpolant: 1
+  exterior_levels_per_interpolant: 2
+  comparator_threshold: spread_greater_than_1_05
+silent_assumptions:
+  declared_codomain: open_zero_to_kappa_cl
+  strict_monotonicity_for_arbitrary_interpolants: not_derived
+  common_E3_E4_function: not_derived
+  KI2_fixed_theory_admissibility: not_accepted
+  C_BPS_003_epsilon_identification: absent
+  closed_endpoint_attainment: absent
+headline_oracle_gap: >-
+  The source assumes the excluding codomain and tests only four hand-selected
+  functions. A continuous endpoint-compatible rational counterexample passes
+  its derivative sample while overshooting, undershooting under a sign mutation,
+  and producing repeated positive preimages.

@@ -1,0 +1,24 @@
+attempt: 0009
+campaign: P173
+candidate: independent_authority_and_range_rederivation
+status: passed
+started_at: '2026-08-11T03:13:00Z'
+finished_at: '2026-08-11T03:14:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P173-ki3-bracket-sharpness-audit/reviews/independent_rederivation.py
+result:
+  exit_code: 0
+  terminal_tally: ALL_17_CHECKS_PASS
+independence:
+  imports_source_script: false
+  imports_primary_verifier: false
+  uses_empirical_comparator: false
+findings:
+  exact_monotone_representative_range: conditional_and_valid
+  endpoint_only_outside_exclusion: false
+  endpoint_only_unique_inverse: false
+  comparator_free_inverse_ambiguity: true
+  accepted_generic_owner: C-XOV-001
+  common_physical_interpolation_in_accepted_authority: absent
+next_attempt: replay_the_pinned_direct_dependency_and_reverse_consumer_graph

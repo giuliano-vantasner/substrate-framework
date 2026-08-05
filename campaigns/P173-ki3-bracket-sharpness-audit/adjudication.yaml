@@ -1,0 +1,79 @@
+campaign: P173
+title: KI3 bracket sharpness and interpolation-premise audit
+source_baseline: substrate@6d1f4e0
+source_units: [KI3]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T03:20:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_KI3_replays_all_five_local_predicates_as_execution_evidence_only.}
+  - {id: B, reason: Continuity_and_endpoint_limits_support_open_interval_inclusion_only.}
+  - {id: C, reason: Exact_range_equality_is_valid_only_when_the_excluding_codomain_or_equivalent_global_bound_is_separately_assumed.}
+  - {id: E, reason: C-XOV-001_already_owns_the_strict_monotone_conditional_range_theorem.}
+  - {id: F, reason: Four_explicit_monotone_witnesses_have_exact_open_ranges_and_distinct_comparator_free_inverses.}
+  - {id: H, reason: A_symbolic_half_level_replaces_the_empirical_comparator_in_the_inverse_ambiguity_witness.}
+  - {id: I, reason: Lean_is_valid_only_for_the_one_explicit_Pade_definition_it_encodes.}
+  - {id: J, reason: Predicate_consumer_formal_compatibility_queue_memory_and_release_closure_are_complete.}
+rejected_candidates:
+  - {id: D, reason: Exact_endpoint_compatible_counterexamples_overshoot_undershoot_and_have_repeated_preimages.}
+  - {id: G, reason: Governed_E3_E4_and_KI2_results_do_not_supply_one_common_physical_interpolation_or_ceiling.}
+claims: []
+accepted_composition:
+  - {id: C-XOV-001, decision: unchanged_conditional_strict_monotone_range_and_inverse_owner}
+reviewed_ceilings:
+  - {id: C-BPS-003, decision: unchanged_local_expansion_with_no_global_interpolation}
+  - {id: C-RDIFF-002, decision: unchanged_conditional_coordinate_not_a_variational_or_BPS_bound}
+  - {id: KI2, decision: qualified_parameter_family_result_without_fixed_theory_or_epsilon_identification}
+unpromoted_claims:
+  - {id: framework_wide_exact_bracket, reason: Endpoint_limits_and_continuity_do_not_exclude_overshoot_or_undershoot.}
+  - {id: closed_attainable_bracket, reason: On_the_positive_domain_the_four_examples_approach_but_do_not_attain_zero_or_kappa_cl.}
+  - {id: common_E3_E4_interpolation, reason: Accepted_authority_supplies_no_common_global_function_or_large_epsilon_BPS_map.}
+  - {id: physical_inverse_ambiguity, reason: Exact_shape_ambiguity_is_generic_but_no_witness_is_identified_as_the_physical_map.}
+  - {id: comparator_inert_KI3_4, reason: KAPPA_EMP_feeds_the_spread_threshold_and_a_level_mutation_flips_the_verdict.}
+  - {id: new_interpolant_API, reason: C_XOV_001_already_owns_the_valid_conditional_structure_and_no_accepted_consumer_needs_a_family_API.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_rederivation.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  native_attempt: attempts/0003/result.yaml
+  primary_attempt: attempts/0007/result.yaml
+  independent_attempt: attempts/0009/result.yaml
+  graph_attempt: attempts/0010/result.yaml
+  formal_reuse_attempt: attempts/0011/result.yaml
+  focused_attempt: attempts/0015/result.yaml
+  terminal_attempt: attempts/0016/result.yaml
+source_disposition:
+  KI3: qualified
+accepted_mappings: [C-XOV-001]
+compatibility:
+  installed_numpy: 2.5.1
+  KI3_native: true
+  source_graph_current_first_lazy_fallback: [E3]
+  injected_aliases: []
+  mutable_legacy_integration_references: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P173-ki3-bracket-sharpness-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P173-ki3-bracket-sharpness-audit/reviews/independent_rederivation.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P173-ki3-bracket-sharpness-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_crossovers.py tests/test_source_audit.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: accepted_composition_no_release

@@ -1,0 +1,15 @@
+attempt: 0013
+campaign: P173
+candidate: positional_memory_path_validation
+status: failed_external_default_base_resolution
+started_at: '2026-08-11T03:21:00Z'
+finished_at: '2026-08-11T03:22:00Z'
+command: memory validate memory
+result:
+  exit_code: 1
+  resolved_path: /home/dan/agent-memory/memory/memory
+failure: relative_path_was_resolved_under_the_configured_external_memory_base
+diagnosis: >-
+  The CLI requires an absolute repository memory path in this environment.
+  This is a tooling-path failure, not a schema or scientific failure.
+next_attempt: validate_the_absolute_repository_memory_path

@@ -1,0 +1,19 @@
+attempt: 0008
+campaign: P173
+candidate: independent_authority_and_range_rederivation_first_execution
+status: failed_unsimplified_positivity_query
+started_at: '2026-08-11T03:12:00Z'
+finished_at: '2026-08-11T03:13:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P173-ki3-bracket-sharpness-audit/reviews/independent_rederivation.py
+result:
+  exit_code: 1
+  checks_passed_before_failure: 5
+failure: >-
+  SymPy did not infer positivity for the unsimplified expression one minus
+  epsilon over one plus epsilon.
+diagnosis: >-
+  The exact expression simplifies to one over one plus epsilon. The failure is
+  a verifier normalization defect, not evidence against boundedness.
+next_attempt: simplify_the_positive_residual_before_querying_its_assumptions

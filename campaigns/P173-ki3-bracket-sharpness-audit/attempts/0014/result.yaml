@@ -1,0 +1,18 @@
+attempt: 0014
+campaign: P173
+candidate: absolute_and_targeted_memory_record_validation
+status: passed
+started_at: '2026-08-11T03:22:00Z'
+finished_at: '2026-08-11T03:24:00Z'
+commands:
+  - memory validate /home/dan/substrate-framework/memory
+  - memory validate_each_changed_P173_proposal_decision_and_parent_effort
+result:
+  full_memory_files_valid: 696
+  changed_records_valid: 3
+  warnings_after_repair: 0
+interpretation: >-
+  The absolute path avoids the configured external memory base. A prose line
+  was added before the decision's four-axis list, then the changed record was
+  revalidated cleanly.
+next_attempt: parse_all_campaign_and_migration_YAML_and_replay_focused_consumers

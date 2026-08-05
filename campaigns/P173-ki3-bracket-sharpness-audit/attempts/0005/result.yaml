@@ -1,0 +1,19 @@
+attempt: 0005
+campaign: P173
+candidate: primary_exact_KI3_audit_repaired_inverse_domain
+status: failed_expression_shape_comparison
+started_at: '2026-08-11T03:09:00Z'
+finished_at: '2026-08-11T03:10:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P173-ki3-bracket-sharpness-audit/verify.py
+result:
+  exit_code: 1
+  checks_passed_before_failure: 22
+failure: >-
+  The counterexample derivative check compared two equivalent SymPy expression
+  trees structurally rather than comparing their simplified difference.
+diagnosis: >-
+  The positive-at-one-half and negative-at-two probes remain exact. This is a
+  verifier expression-normalization defect, not scientific evidence.
+next_attempt: compare_the_counterexample_derivative_by_exact_zero_residual

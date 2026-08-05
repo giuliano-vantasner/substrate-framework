@@ -3234,6 +3234,64 @@ units:
       alias or version-only stop occurs. Twenty-seven focused consumers pass;
       the integrated workflow and explicit full suite each pass all 1,478 tests
       with 694 valid memory files. Accepted claims and v0.127.0 remain unchanged.
+  KI3:
+    disposition: qualified
+    accepted_claims:
+      - C-XOV-001
+    qualification: >-
+      KI3's four explicit Pade, exponential, tanh, and algebraic functions are
+      exact strictly increasing witnesses with open range (0,kappa_cl), and a
+      comparator-free half-level gives four distinct exact inverse parameters.
+      They do not establish the framework's physical interpolation or a
+      universal exact bracket. Continuity and endpoint limits permit
+      overshoot, undershoot, and repeated preimages; the source assumes the
+      excluding codomain and samples only one derivative point. Its positive
+      domain does not attain the closed endpoints. C-BPS-003 supplies no global
+      interpolation or nonzero first-order coefficient, C-RDIFF-002 is not a
+      variational or BPS ceiling, and qualified KI2 does not identify a fixed-
+      theory physical epsilon. The source uses stale 8.4563 input and its 0.929
+      comparator feeds a thresholded pass condition. C-XOV-001 already owns
+      the valid conditional monotone range theorem. No new claim, API, physical
+      bracket, selected interpolation, epsilon, yield, or release is accepted.
+    evidence:
+      - campaigns/P173-ki3-bracket-sharpness-audit/reviews/source_adjudication.md
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/source-reproduction.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/compatibility-audit.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/source-audit.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/check-adjudication.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/input-provenance.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/dependency-audit.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/consumer-audit.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/candidate-comparison.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/primary-provenance.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/evidence/literature-audit.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/verify.py
+      - campaigns/P173-ki3-bracket-sharpness-audit/reviews/independent_rederivation.py
+      - campaigns/P173-ki3-bracket-sharpness-audit/reviews/replay_source_graph.py
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0003/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0004/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0005/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0006/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0007/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0008/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0009/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0010/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0011/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0015/result.yaml
+      - campaigns/P173-ki3-bracket-sharpness-audit/attempts/0016/result.yaml
+      - memory/vantasner/decisions/KI3-qualified-review.md
+    note: >-
+      P173 closes thirty-seven primary, seventeen fresh independent, and
+      forty-seven typed source-graph checks. The graph replays fifty-two
+      predicates plus eleven assertions across nine clean nodes. E3 uses a
+      current-first numpy.trapezoid fallback; no injected alias or version-only
+      stop occurs. The unchanged formal artifact reuses P172's clean execution
+      and encodes one Pade representative only. Accepted claims and v0.127.0
+      remain unchanged. Twenty-four focused tests and both full 1,478-test
+      executions pass with 696 valid memory records.
   EM2:
     disposition: qualified
     accepted_claims:

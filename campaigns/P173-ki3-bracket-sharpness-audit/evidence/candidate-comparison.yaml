@@ -1,0 +1,20 @@
+predeclared_order:
+  - endpoint_dependency_and_common_function_closure
+  - range_inclusion_versus_equality_and_open_endpoint_typing
+  - universal_quantifier_and_counterexample_sensitivity
+  - accepted_monotonicity_bound_and_interpolation_provenance
+  - comparator_blinding_and_assumption_economy
+  - consumer_nonduplication_and_governance_closure
+candidates:
+  A: {decision: selected_as_execution_evidence_only, reason: five_local_predicates_replay_but_do_not_validate_the_headline}
+  B: {decision: selected_as_generic_conditional_math, reason: endpoint_continuity_forces_interior_inclusion_only}
+  C: {decision: selected_only_when_the_codomain_bound_is_separately_assumed, reason: exclusion_is_then_a_premise}
+  D: {decision: rejected_by_exact_counterexamples, reason: endpoint_limits_allow_overshoot_undershoot_and_repeated_preimages}
+  E: {decision: selected_as_accepted_nonpromotion_ceiling, reason: C-XOV-001_owns_the_strict_monotone_range_theorem}
+  F: {decision: selected_as_noncanonical_witness_evidence, reason: four_functions_have_exact_open_ranges_and_distinct_inverses}
+  G: {decision: rejected_for_missing_dependency_closure, reason: E3_E4_and_KI2_do_not_supply_one_accepted_common_interpolation}
+  H: {decision: selected_after_removing_comparator_need, reason: symbolic_half_level_exhibits_inverse_ambiguity}
+  I: {decision: selected_at_weak_exact_scope, reason: Lean_proves_one_Pade_map_not_the_universal_quantifier}
+  J: {decision: selected_governance_closure, reason: qualification_needs_no_new_claim_API_or_release}
+comparator_selected_candidate: false
+fresh_blinding_claimed: false

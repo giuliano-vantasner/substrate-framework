@@ -1,0 +1,28 @@
+accepted_consumers:
+  canonical_module: src/substrate_framework/crossovers.py
+  focused_tests: [tests/test_crossovers.py, tests/test_source_audit.py]
+  accepted_claims: [C-XOV-001]
+  effect_of_KI3_qualification: none
+pending_consumers:
+  KI4:
+    edge: assumes_KI3_whole_open_bracket_prior_and_reuses_its_interpolants
+    effect: must_be_reaudited_without_framework_wide_bracket_authority
+  MK4:
+    edge: challenges_KI3_interpolation_through_a_compacton_perturbation_claim
+    effect: counterevidence_only_until_individual_adjudication
+  MK5:
+    edge: claims_to_refute_KI3_bracket_with_a_full_model_solve
+    effect: no_supersession_or_repair_before_individual_adjudication
+  MK6:
+    edge: propagates_the_claimed_interpolation_resolution
+    effect: indirect_pending_narrative_only
+  MR6:
+    edge: records_MK5_as_already_refuting_KI3
+    effect: chronology_does_not_create_authority
+formal_consumer:
+  Phase34KIKernel:
+    effect: exact_Pade_theorem_remains_valid_but_does_not_prove_the_universal_headline
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false
+migration_memory_and_effort_records_change_required: true

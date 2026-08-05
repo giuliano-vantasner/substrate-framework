@@ -1,0 +1,39 @@
+attempt: 0007
+campaign: P173
+candidate: exact_premise_range_and_oracle_audit
+status: passed
+started_at: '2026-08-11T03:11:00Z'
+finished_at: '2026-08-11T03:12:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P173-ki3-bracket-sharpness-audit/verify.py
+result:
+  exit_code: 0
+  terminal_tally: ALL_37_CHECKS_PASS
+findings:
+  selected_representatives:
+    exact_open_range: true
+    strictly_increasing: true
+    comparator_free_distinct_inverses: true
+  universal_continuous_endpoint_class:
+    includes_open_interval_by_IVT: true
+    excludes_outside_values: false
+    unique_preimage: false
+  counterexample:
+    expression: epsilon_times_epsilon_plus_five_over_epsilon_plus_one_squared
+    endpoints: [0, 1]
+    overshoot_at_epsilon_one: three_halves
+    repeated_target: six_fifths
+    repeated_positive_roots: [(13-sqrt(145))/2, (13+sqrt(145))/2]
+  source_oracle:
+    derivative_sample_globally_sensitive: false
+    empirical_comparator_in_pass_condition: true
+    closed_endpoint_typing_correct: false
+  authority:
+    E4_global_interpolation: absent
+    E3_variational_or_BPS_ceiling: denied
+    KI2_fixed_theory_admissibility: unpromoted
+    monotone_range_theorem: already_C-XOV-001
+  formal_scope: one_explicit_Pade_map_only
+compatibility: no_numpy_import_or_quadrature
+next_attempt: independent_rederivation_without_importing_source_or_primary_verifier

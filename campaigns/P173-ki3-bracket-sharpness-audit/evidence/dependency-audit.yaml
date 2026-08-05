@@ -1,0 +1,40 @@
+accepted_dependencies:
+  C-BPS-002:
+    role: conditional_zero_difference_endpoint_context
+    status: accepted_active
+    ceiling: no_universal_sector_attainment_or_interpolation
+  C-BPS-003:
+    role: local_epsilon_to_zero_expansion_context
+    status: accepted_active
+    ceiling: no_global_interpolation_sign_or_nonzero_linear_coefficient
+  C-RDIFF-002:
+    role: corrected_standard_sector_coordinate
+    status: accepted_qualified_numeric_evidence
+    ceiling: not_a_variational_bound_or_BPS_limit
+  C-XOV-001:
+    role: conditional_strict_monotone_range_and_inverse_owner
+    status: accepted_active
+    closure: complete_under_explicit_global_premises
+qualified_dependency:
+  KI2:
+    role: local_ratio_family_freedom
+    governed_status: qualified
+    ceiling: not_a_fixed_theory_symmetry_or_C_BPS_003_identification
+pending_challenges:
+  MK4: proposed_perturbative_obstruction_no_authority
+  MK5: proposed_full_model_bracket_refutation_no_authority
+formalization:
+  artifact: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  exact_scope: surjectivity_and_inverse_for_one_defined_Pade_map
+  omitted_load_bearing_objects:
+    - arbitrary_interpolation_function_quantifier
+    - endpoint_provenance
+    - global_no_overshoot_control
+    - physical_epsilon_identification
+selected_composition:
+  explicit_monotone_examples: exact_noncanonical_witnesses
+  generic_range_theorem: C-XOV-001
+  framework_wide_sharp_bracket: rejected
+  physical_interpolant: unestablished
+dependency_closure_for_selected_qualified_ceiling: complete
+dependency_closure_for_source_headline: false

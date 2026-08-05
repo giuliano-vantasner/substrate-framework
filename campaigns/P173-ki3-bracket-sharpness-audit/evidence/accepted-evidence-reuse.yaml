@@ -1,0 +1,21 @@
+accepted_monotone_range_evidence:
+  campaign: P117
+  claim: C-XOV-001
+  canonical_module_sha256: 0522233fecbcae6b76cb41373fe904d8558da2cd8ab9f13f35fe41b0a5189493
+  accepted_tests_sha256: 1768b63100fc5d69ce0676eb624d35d3e97eece41e1474788f90a3c48ce8d05e
+accepted_BPS_evidence:
+  campaign: P107
+  adjudication_sha256: 06947b443bb6fb41fec59a199aab6051f5804a1c89bdcd00c3d5814a57fa7cd2
+  check_adjudication_sha256: 0ae7a054976dba93d07b8e397f0e7461406ddab0123ebc3bbc405847eadff0d8
+accepted_KI2_evidence:
+  campaign: P172
+  adjudication_sha256: a15b42bd20a9dda1b498ce6b230fdded0c2ef5690ba2b7dbf718fc71dc13b746
+formal_evidence:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  prior_clean_execution: campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0009/result.yaml
+  prior_attempt_sha256: 446eb4d44487896e1f67a5b5019e824bfcb5e816c117c49161a4e52628cf62ee
+reuse_decision: >-
+  P173 hash-audits unchanged accepted evidence, calls the canonical C-XOV-001
+  range classifier, and builds new exact KI3-specific counterexamples. It does
+  not rerun unchanged P107/P117 matrices or recompile unchanged Lean bytes.

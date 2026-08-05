@@ -1,0 +1,26 @@
+primary_verifier:
+  path: campaigns/P173-ki3-bracket-sharpness-audit/verify.py
+  sha256: 50e6575304bc2ebc5947343607c9ff1059df4b12a76672668381e3746d252a7a
+  result: ALL_37_CHECKS_PASS
+independent_rederivation:
+  path: campaigns/P173-ki3-bracket-sharpness-audit/reviews/independent_rederivation.py
+  sha256: 85c0fa778b8cb5e3032c542753ed81f03a08871d39b43f89be5f022ab0953f7a
+  result: ALL_17_CHECKS_PASS
+source_graph:
+  path: campaigns/P173-ki3-bracket-sharpness-audit/reviews/replay_source_graph.py
+  sha256: 1b85c354a24c9822856d6f3cc61f366193d2b4d82fb8bdb42111ad609adecda5
+  result: ALL_47_CHECKS_PASS
+formal_artifact:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  result: hash_reused_prior_clean_exit
+independence_statement: >-
+  The independent review imports neither KI3 nor the primary verifier. It reads
+  only pinned accepted authority and reconstructs monotone witnesses,
+  endpoint-compatible counterexamples, and inverse ambiguity from fresh exact
+  expressions without an empirical comparator.
+mutation_surfaces:
+  - comparator_level_driving_the_source_spread_threshold
+  - endpoint_compatible_positive_bump_amplitude
+  - derivative_location_beyond_the_source_sample
+  - open_versus_closed_endpoint_domain

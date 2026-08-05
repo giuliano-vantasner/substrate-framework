@@ -1,0 +1,29 @@
+source_unit: KI3
+symbolic_inputs:
+  epsilon: positive_source_coordinate
+  kappa_cl: positive_symbolic_scale
+accepted_inputs:
+  C-BPS-002: conditional_zero_signed_difference_under_sector_attainment
+  C-BPS-003: controlled_local_expansion_and_no_global_interpolation_ceiling
+  C-RDIFF-002: conditional_resolution_bounded_coordinate_not_a_bound
+  C-XOV-001: conditional_monotone_range_and_inverse_theorem
+qualified_inputs:
+  KI2: positive_local_ratio_freedom_across_distinct_parameter_family_theories
+noncanonical_inputs:
+  E3_source_decimals: stale_relative_to_C-RDIFF-002
+  E4_strict_linear_physical_binding: rejected_by_P107
+  KI4: pending_reverse_consumer_only
+  MK4: pending_challenge_only
+  MK5: pending_challenge_only
+numeric_values:
+  source_b2: 2.4154
+  source_b4: 4.5452
+  source_kappa_cl: 8.456302593250168
+  accepted_kappa_coordinate: 8.482417318795285
+empirical_comparators:
+  kappa_emp:
+    value: 0.929
+    source_role: illustrative_backsolve_level
+    actual_oracle_role: feeds_spread_greater_than_1_05_pass_condition
+external_fitted_parameters: []
+scope: exact_function_range_premise_and_comparator_dependency_audit

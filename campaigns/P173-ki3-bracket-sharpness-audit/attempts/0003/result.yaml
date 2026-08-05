@@ -1,0 +1,37 @@
+attempt: 0003
+campaign: P173
+candidate: literal_KI3_native_reproduction
+status: passed_with_headline_oracle_gap
+started_at: '2026-08-11T03:06:00Z'
+finished_at: '2026-08-11T03:07:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/
+  bridge_KI3_bracket_is_sharp.py
+result:
+  exit_code: 0
+  runtime_checks: 5
+  terminal_tally: ALL_5_CHECKS_PASS
+observed:
+  explicit_interpolants: 4
+  source_domain: epsilon_positive
+  endpoint_values: approached_only
+  monotonicity_probe: derivative_at_epsilon_one_half_only
+  inside_targets_tested: [kappa_over_3]
+  outside_targets_tested: [three_kappa_over_2, minus_kappa_over_2]
+  comparator: 0.929
+  classical_anchor: 8.456302593250168
+  comparator_enters_pass_condition: true
+compatibility: no_numpy_import_or_quadrature
+diagnosis: >-
+  The five local predicates execute, but they establish properties of four
+  selected representatives only. Sampling each derivative once, solving one
+  interior target, and rejecting two exterior targets cannot prove a universal
+  exact bracket. On the positive source domain the representatives approach
+  rather than attain both endpoints, so their ranges are open, while the
+  headline writes a closed bracket. The locally recomputed classical anchor is
+  also stale relative to accepted C-RDIFF-002, and the comparator changes a
+  thresholded source verdict rather than remaining inert.
+next_attempt: >-
+  construct exact representative proofs, endpoint-compatible counterexamples,
+  comparator mutations, and accepted-premise inventories

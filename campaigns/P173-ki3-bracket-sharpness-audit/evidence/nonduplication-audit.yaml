@@ -1,0 +1,21 @@
+registry_search:
+  accepted_strict_monotone_exact_range_theorem: C-XOV-001
+  accepted_BPS_zero_difference: C-BPS-002
+  accepted_near_BPS_local_expansion: C-BPS-003
+  accepted_classical_coordinate: C-RDIFF-002
+package_search:
+  monotone_range_API: src/substrate_framework/crossovers.py
+  physical_BPS_to_classical_interpolation_API: null
+distinct_valid_source_content:
+  - four_explicit_monotone_open_range_witnesses
+  - comparator_free_inverse_shape_ambiguity
+reasons_not_to_promote:
+  - C-XOV-001_already_owns_the_conditional_monotone_range_and_inverse_structure
+  - the_four_functions_are_unselected_nonphysical_examples
+  - accepted_authority_supplies_no_common_BPS_to_classical_interpolation
+  - the_source_uses_a_stale_classical_coordinate
+  - no_accepted_consumer_needs_an_interpolant_family_API
+  - the_framework_wide_sharp_bracket_is_not_a_consequence_of_the_premises
+new_claim: null
+new_API: null
+disposition: qualified_not_duplicate_because_the_universal_headline_requires_explicit_rejection

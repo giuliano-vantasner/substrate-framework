@@ -1,0 +1,27 @@
+attempt: 0010
+campaign: P173
+candidate: pinned_dependency_and_reverse_consumer_graph
+status: passed
+started_at: '2026-08-11T03:14:00Z'
+finished_at: '2026-08-11T03:16:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P173-ki3-bracket-sharpness-audit/reviews/replay_source_graph.py
+result:
+  exit_code: 0
+  terminal_tally: ALL_47_CHECKS_PASS
+graph:
+  nodes: [E3, E4, KI2, KI3, KI4, MK4, MK5, MK6, MR6]
+  predicates: 52
+  assertions: 11
+  qualified_dependencies: [E3, E4, KI2]
+  pending_reverse_consumers: [KI4, MK4, MK5, MK6, MR6]
+compatibility:
+  E3_current_first_lazy_fallback: true
+  injected_aliases: []
+  version_only_stops: []
+interpretation: >-
+  Successful local tallies establish execution only. KI4 consumes KI3's whole
+  open-bracket premise; MK4 and MK5 challenge it; MK6 and MR6 propagate later
+  narrative. None of the pending nodes supplies accepted authority for KI3.
+next_attempt: reuse_the_unchanged_hash_pinned_formal_execution_at_its_exact_scope

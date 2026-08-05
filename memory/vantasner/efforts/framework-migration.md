@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T02:45:00Z'
+updated: '2026-08-11T03:22:00Z'
 tags:
 - substrate-framework
 - effort
@@ -343,6 +343,7 @@ Attempts are append-only and individually reproducible.
 | 0191 | P170 current-NumPy reproduction, exact information, geometry, evidence-reuse, graph, consumer, and CF5 audit | `campaigns/P170-cf5-current-numpy-information-closure-audit/attempts/0001` through `0009`, then terminal no-release boundary | CF5 remains duplicate evidence for C-VTX-001, C-VTX-002, and C-FLX-001 with v0.127.0 unchanged | Native CF5 stops before its first predicate only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all six. Forty-one primary, twenty fresh exact, twenty-four graph, and thirty-nine focused checks or tests show that `A_eff` and its penetration ratio reversibly transform a supplied tension without independent profile geometry. The declared window accepts a factor 1000 in tension. The four-node graph replays 35 lexical and runtime predicates plus six assertions; immutable CF1 and CF5 alone need aliases. Hash-identical P026/P029 evidence is reused, and one graph-edge probe failure is preserved. | Freeze KI1 before source inspection; require a hash-complete search universe, tracked-file and generated/untracked boundaries, symbol-context disambiguation, numeric-assignment and alternative-coupling patterns, mutation-sensitive injected witnesses, E1/E2/E4/KI2/S4/WZ4 authority, all five predicates and one assertion, consumers, and nonduplication, and do not turn corpus absence into a physical uniqueness theorem, fitted coupling, derived yield coefficient, or substrate mechanism. |
 | 0192 | P171 pinned-tree reproduction, semantic assignment, mutation, graph, consumer, and KI1 audit | `campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0001` through `0019`, then terminal no-release boundary | KI1 refuted with C-BPS-001 through C-BPS-003 and v0.127.0 unchanged | KI1 passes only its broad control and aborts at KI1.2 over 1628 files at the governed baseline and 1601 at its sole source-history commit; the dossier's 1502-file tally is unreproduced. KI1.2 has ten executable strays, latent KI1.3 has three executable overlaps, and KI1.4's omega regex finds MK2. The scanner reads mutable worktree bytes, excludes all of Phase 34, misses nine plausible assignment forms, admits file-context false positives, and fails to exercise bare `eps`. Forty-seven primary, twenty independent semantic, thirty-four graph checks, and thirteen focused tests pass. Six graph neighbors replay cleanly; KI1 alone fails exactly at KI1.2. No node has a NumPy integration-name surface. Pending MK files refute absence without selecting accepted values. | Freeze KI2 before source inspection; require exact parameter dimensions and conventions, distinguish a family of theories from a symmetry of fixed accepted claims, test how the proposed scaling changes the C-BPS-001 energy and bound, audit the epsilon definition and free-scale orbit without relying on refuted KI1, type all six predicates and one assertion, replay E3/E4/KI1/KI3/KI4/NY1/NY2/S4 plus MK1-MK3 reverse consumers, and do not turn a parameter redefinition, pending candidate derivation, or repository absence into physical underdetermination, a selected epsilon, yield coefficient, or substrate mechanism. |
 | 0193 | P172 exact dimension-kernel, fixed-theory counterexample, parameter-family, formal-scope, graph, consumer, and KI2 audit | `campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0001` through `0016`, then terminal no-release boundary | KI2 qualified through C-BPS-001 and C-SK-001 with v0.127.0 unchanged | Native KI2 executes all six predicates, but its invariant list omits the accepted BPS density, square, residual, and bound. Exact primary and fresh independent routes show those objects scale under every nontrivial declared flow, while the locally defined ratio still realizes every positive target across the accepted positive parameter family. The ratio has an arbitrary dimensionless normalization, C-BPS-003 does not identify it, and a product relation can pin it. Forty-five primary, twenty-one independent, and fifty-nine graph checks pass over 81 source predicates and ten assertions. The Lean capstone exits cleanly but proves only local ratio scaling and F-over-e invariance. Refuted KI1 and pending MK relations supply no authority. Twenty-seven focused consumers and two full 1,478-test executions pass with 694 valid memory records. | Freeze KI3 before source inspection; audit its endpoint premises, continuity and range logic, open-versus-closed bracket, quantification over one interpolant versus every admissible interpolant, dependence on KI2's qualified family reading, comparator firewall, all five predicates and one assertion, formal encoding, reverse KI4/MK consumers, and do not turn an illustrative interpolation or endpoint limit into exact physical attainability, a rigorous energy bound, selected epsilon, yield coefficient, or substrate mechanism. |
+| 0194 | P173 exact endpoint-compatible counterexamples, representative ranges, inverse ambiguity, comparator mutation, formal-scope, graph, consumer, and KI3 audit | `campaigns/P173-ki3-bracket-sharpness-audit/attempts/0001` through `0016`, then terminal no-release boundary | KI3 qualified through C-XOV-001 with v0.127.0 unchanged | Native KI3 executes all five predicates, and its four selected functions have exact open ranges and distinct comparator-free half-level inverses. A continuous endpoint-compatible rational map passes the source derivative sample yet reaches 3/2 and has two positive preimages for 6/5; reversing its bump undershoots below zero. Thus endpoint limits imply interior inclusion, not exact range, outside exclusion, or uniqueness. The source assumes the excluding codomain, writes a closed bracket on a positive domain, uses stale 8.4563 input, and feeds comparator 0.929 into a thresholded verdict. Thirty-seven primary, seventeen independent, forty-seven graph, and twenty-four focused checks or tests pass over 52 source predicates and eleven assertions. The unchanged Lean execution is hash-reused and proves one Pade map only. Both full 1,478-test executions pass with 696 valid memory records. No NumPy compatibility stop occurs. | Freeze KI4 before source inspection; distinguish an algebraic inverse identity for a declared map from empirical calibration, posterior information gain, model prediction, and physical epsilon identification; audit dependence on KI3's rejected whole-bracket premise and all five predicates, formal scope, comparator use, reverse consumers, and governance closure. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1866,21 +1867,33 @@ refuted, KI3/KI4/MK1-MK3 remain pending, and no NumPy compatibility stop occurs.
 Twenty-seven focused consumers and both 1,478-test terminal executions pass with
 694 valid memory records.
 
+P173 qualifies KI3 through C-XOV-001 without a new claim, API, or release. Its
+four chosen formulas are exact strictly increasing examples with open range and
+distinct comparator-free inverses. Continuity and endpoint limits do not prove
+the universal bracket: exact bump counterfunctions overshoot, undershoot, and
+repeat preimages while preserving both limits. The source assumes its excluding
+codomain, types a closed bracket on a positive domain, recomputes stale 8.4563,
+and lets comparator 0.929 control a spread threshold. Primary, fresh independent,
+and nine-node graph routes pass 37, 17, and 47 checks. The unchanged Lean result
+is reused at its exact one-Pade scope. KI4 and later MK/MR consumers remain
+pending. Twenty-four focused tests and both full 1,478-test executions pass with
+696 valid memory records, and no NumPy compatibility stop occurs.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P172 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 52 pending, 0 partial, 3 migrated, 153 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P173 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 51 pending, 0 partial, 3 migrated, 154 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 52
-pending, 3 migrated, 153 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is KI3, pinned at SHA-256
-`10e92457cbd213782e5778f5b739660a6d07ea229c44746e24fe0132844fcbd3`.
-P173 must freeze KI3 before source execution and audit whether its endpoint and
-continuity premises prove an exact attainable bracket for one declared
-interpolant, every admissible interpolation, or neither. It must inherit only
-KI2's qualified parameter-family statement, audit open versus closed endpoints,
-formal theorem strength, comparator separation, reverse consumers, and exclude
-any physical yield, fitted epsilon, rigorous variational ceiling, or substrate
-reading.
+The effort remains active. D4 is discharged, but D1 remains open with 51
+pending, 3 migrated, 154 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is KI4, pinned at SHA-256
+`138f204c2bf7e7278a1a4aadad4bed1680e11b6b6de7189a02640a81652f00cd`.
+P174 must freeze KI4 before source execution and audit whether its back-solve is
+only an exact inverse identity for one declared map or establishes empirical
+circularity, zero information gain, and physical nonidentifiability. It must
+inherit KI3's representative examples without its rejected universal bracket,
+separate comparator input from prediction, inspect the formal theorem's exact
+set and quantifiers, replay reverse consumers, and exclude any fitted epsilon,
+yield coefficient, physical validation, or substrate reading.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

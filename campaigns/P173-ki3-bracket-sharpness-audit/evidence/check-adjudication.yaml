@@ -1,0 +1,44 @@
+source_unit: KI3
+lexical_checks: 5
+runtime_checks: 5
+assertion_nodes: 1
+checks:
+  KI3.1:
+    verdict: qualified_as_explicit_witnesses_with_endpoint_provenance_rejected
+    qualification: >-
+      The four displayed formulas exactly approach zero and kappa_cl and have a
+      nonzero linear term. C-BPS-003 does not require a nonzero first-order
+      coefficient or supply a global interpolation, while C-RDIFF-002 is not a
+      large-epsilon endpoint or bound. The formulas are examples only.
+  KI3.2:
+    verdict: valid_for_four_representatives_universal_inference_rejected
+    qualification: >-
+      Exact differentiation and inversion prove each selected representative is
+      strictly increasing with open range. Testing the derivative at epsilon=1/2
+      and solving only kappa_cl/3 cannot establish this for every continuous map.
+  KI3.3:
+    verdict: universal_exact_bracket_refuted_from_declared_premises
+    qualification: >-
+      Continuity and endpoint limits force interior inclusion by IVT but do not
+      exclude overshoot, undershoot, or repeated preimages. Declaring codomain
+      (0,kappa_cl) assumes exclusion. On epsilon>0 the examples themselves do
+      not attain either endpoint, so their exact range is not the closed bracket.
+  KI3.4:
+    verdict: qualified_comparator_free_inverse_ambiguity
+    qualification: >-
+      Four exact monotone witnesses give distinct inverses already at symbolic
+      level one-half, so endpoint data do not select an inverse. The source's
+      empirical ratio is unnecessary, its spread threshold changes under a
+      comparator mutation, and no accepted claim identifies the local epsilon
+      or any one interpolant with a physical framework map.
+  KI3.5:
+    verdict: partial_guard_with_false_comparator_inertness_claim
+    qualification: >-
+      The classical expression, endpoint limits, and retention of four examples
+      are comparator-independent. KI3.4's pass condition is not: KAPPA_EMP feeds
+      ratio, backsolved, spread, and spread>1.05, and a small level flips it.
+assertions:
+  check_helper:
+    role: fail_fast_execution_mechanism
+    verdict: execution_mechanism_not_extra_claim
+headline: qualified_explicit_open_range_examples_with_universal_sharp_bracket_rejected

@@ -1,0 +1,31 @@
+attempt: 0011
+campaign: P173
+candidate: unchanged_hash_pinned_formal_evidence_reuse
+status: passed_qualified_scope_without_reexecution
+started_at: '2026-08-11T03:16:00Z'
+finished_at: '2026-08-11T03:17:00Z'
+evidence:
+  formal_path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  formal_sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+  prior_execution: campaigns/P172-ki2-epsilon-underdetermination-audit/attempts/0009/result.yaml
+  prior_execution_sha256: 446eb4d44487896e1f67a5b5019e824bfcb5e816c117c49161a4e52628cf62ee
+  prior_result: clean_exit
+reuse_reason: >-
+  P172 compiled these exact Lean bytes cleanly during the immediately preceding
+  campaign. P173 hash-pins and inspects the same theorem. Recompiling unchanged
+  bytes would add ceremony rather than test a new formal obligation.
+theorem_scope:
+  proves:
+    - one locally defined Pade map attains every y in the open interval
+    - the corresponding exact inverse substitutes back to y
+  does_not_encode:
+    - an arbitrary continuous interpolation function
+    - accepted E3 or E4 endpoint provenance
+    - a codomain or no-overshoot theorem for every endpoint-compatible map
+    - closed endpoint attainment
+    - a physical identification between KI2 epsilon and C-BPS-003 epsilon
+diagnosis: >-
+  The formal artifact is valid for its exact representative definition. It is
+  not a proof of KI3's universal bracket claim because that quantifier and its
+  load-bearing global premises are absent from the statement.
+next_attempt: materialize_claim_level_source_and_consumer_adjudication

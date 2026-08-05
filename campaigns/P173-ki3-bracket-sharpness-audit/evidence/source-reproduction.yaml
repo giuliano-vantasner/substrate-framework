@@ -1,0 +1,30 @@
+source_unit: KI3
+path: merged-framework/bridges/phase-34/bridge_KI3_bracket_is_sharp.py
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+sha256: 10e92457cbd213782e5778f5b739660a6d07ea229c44746e24fe0132844fcbd3
+dossier:
+  path: merged-framework/bridges/phase-34/dossiers/Phase34-KI-dossier.md
+  sha256: e01fbee40d81ebae1fc6f9452c321e2914cb185cdf257ae226d849ea6392702b
+formalization:
+  path: merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+  sha256: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+path_state: clean_at_governed_predecessor_worktree
+history:
+  commits: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]
+native_command: >-
+  PYTHONDONTWRITEBYTECODE=1 .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/bridge_KI3_bracket_is_sharp.py
+native_result:
+  exit_code: 0
+  runtime_checks: 5
+  terminal_tally: ALL_5_CHECKS_PASS
+lexical_inventory:
+  check_calls: 5
+  labels: [KI3.1, KI3.2, KI3.3, KI3.4, KI3.5]
+  assertions: 1
+  imports: [sympy]
+interpretation: >-
+  Native success proves only that five local predicates execute. Four selected
+  functions have exact open ranges, but the source checks one derivative point,
+  one interior level, and two exterior levels before making a universal claim.
+attempt: attempts/0003/result.yaml

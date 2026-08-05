@@ -1,0 +1,19 @@
+attempt: 0012
+campaign: P173
+candidate: queue_regeneration_and_memory_record_validation
+status: partial_pass_then_failed_cli_option
+started_at: '2026-08-11T03:20:00Z'
+finished_at: '2026-08-11T03:21:00Z'
+commands:
+  - .venv/bin/python_scripts_inventory_claims_with_pinned_inputs
+  - memory_validate_--root_memory
+result:
+  queue_regeneration: passed
+  queue_counts: {total: 218, pending: 51, migrated: 3, qualified: 154, duplicate_evidence: 8, refuted: 1, out_of_scope: 1}
+  KI3: {disposition: qualified, accepted_claims: [C-XOV-001]}
+  memory_validation_exit_code: 2
+failure: memory_validate_accepts_a_positional_path_not_the_--root_option
+diagnosis: >-
+  This is a CLI invocation error after successful queue regeneration, not a
+  memory-schema failure or scientific evidence.
+next_attempt: invoke_memory_validate_with_the_positional_memory_path

@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P173
+candidate: primary_exact_KI3_audit_first_execution
+status: failed_symbolic_domain_simplification
+started_at: '2026-08-11T03:08:00Z'
+finished_at: '2026-08-11T03:09:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P173-ki3-bracket-sharpness-audit/verify.py
+result:
+  exit_code: 1
+  checks_passed_before_failure: 16
+failure: >-
+  SymPy did not reduce every generic inverse substitution to zero from the
+  declaration r>0 alone, because the inverse formulas also require r<1 and
+  branch-sensitive simplification.
+diagnosis: >-
+  This is a verifier representation defect, not evidence against the inverse
+  formulas or any scientific candidate. The missing upper-domain premise must
+  be made explicit or checked through exact interior witnesses.
+next_attempt: encode_the_open_unit_interval_premise_without_branch_unsafe_simplification

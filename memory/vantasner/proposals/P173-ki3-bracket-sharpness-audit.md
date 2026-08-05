@@ -2,15 +2,15 @@
 description: Audit KI3's exact-bracket and interpolation sharpness claim
 author: vantasner
 created: '2026-08-11T03:00:00Z'
-updated: '2026-08-11T03:05:00Z'
+updated: '2026-08-11T03:20:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-KI3
 - interpolation-range
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P173 KI3 Bracket Sharpness Audit
 
@@ -128,6 +128,32 @@ inclusion-versus-equality distinction before P173 opens KI3 or the shared
 dossier body. Attempt 0002 preserves and repairs the initial file-boundary
 materialization failure without changing the frozen scientific contract.
 
+Attempts 0003-0011 preserve native reproduction, three primary-verifier
+representation or fixture failures and their repairs, one independent
+positivity-normalization failure and repair, passing exact and independent
+oracles, the nine-node source graph, and proportional reuse of the unchanged
+Lean execution. The terminal scientific tallies are 37 primary, 17 independent,
+and 47 graph checks.
+
+## Outcome
+
+KI3 is qualified with accepted mapping C-XOV-001 and no new claim, API, or
+release. Each of its four displayed functions is a valid strictly increasing
+witness with exact open range `(0,kappa_cl)`. At normalized level one-half their
+four exact inverses are distinct without using the empirical comparator.
+
+The universal sharp-bracket headline is rejected. The exact continuous map
+`epsilon(epsilon+5)/(epsilon+1)^2` has the same zero and one endpoint limits,
+passes KI3's derivative sample at one-half, reaches three-halves at one, and
+has two positive preimages for six-fifths. Reversing its bump gives a negative
+value while preserving the endpoint limits. KI3 also assumes codomain
+`(0,kappa_cl)`, uses a stale 8.4563 coordinate rather than accepted 8.4824, and
+feeds comparator 0.929 into a thresholded pass condition.
+
+The unchanged Lean theorem remains valid only for its one explicitly defined
+Pade map. KI4, MK4, MK5, MK6, and MR6 remain pending consumers or challenges
+and receive no authority from their local tallies.
+
 ## Debt Ledger
 
 The P173 ledger tracks endpoint authority, function quantifiers, range logic,
@@ -135,14 +161,14 @@ formal strength, comparator separation, consumers, and governed records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| KI3's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | open |
-| The BPS and classical endpoints may lack a common accepted interpolation | Audit C-BPS and C-RDIFF premises and construct or reject the composition | open |
-| Continuity may prove inclusion but not exact range | Supply overshoot, undershoot, and repeated-preimage counterfunctions | open |
-| Source interpolants may be witnesses rather than universal models | Derive each range and keep quantifiers explicit | open |
-| Lean prose may exceed its theorem | Inspect definitions, theorem statements, axioms, and execution | open |
-| Comparator proximity may select a function | Remove comparator inputs and require invariant derivation outputs | open |
-| Pending reverse consumers may inherit overclaims | Type KI4 and MK edges without promotion | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | open |
+| KI3's exact definitions and predicate reachability are unknown | Pin every definition, check, assertion, import, and runtime result | closed in attempts 0003 and 0007 |
+| The BPS and classical endpoints may lack a common accepted interpolation | Audit C-BPS and C-RDIFF premises and construct or reject the composition | closed: composition rejected |
+| Continuity may prove inclusion but not exact range | Supply overshoot, undershoot, and repeated-preimage counterfunctions | closed in exact and independent oracles |
+| Source interpolants may be witnesses rather than universal models | Derive each range and keep quantifiers explicit | closed: exact open-range witnesses only |
+| Lean prose may exceed its theorem | Inspect definitions, theorem statements, axioms, and execution | closed: one-Pade theorem only |
+| Comparator proximity may select a function | Remove comparator inputs and require invariant derivation outputs | closed: half-level witness replaces comparator |
+| Pending reverse consumers may inherit overclaims | Type KI4 and MK edges without promotion | closed in nine-node graph |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | closed at adjudication |
 
 ## Review and Promotion Plan
 
