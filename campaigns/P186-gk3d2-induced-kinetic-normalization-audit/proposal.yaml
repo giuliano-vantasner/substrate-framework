@@ -1,0 +1,64 @@
+id: P186
+base_release: v0.137.0
+base_commit: e7b2888c8ae526ee92b5da878f92b0ebe9aa660c
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK3D2]
+question: >-
+  Does hash-pinned GK3D2 derive a convention-complete complex-scalar
+  four-dimensional one-loop polarization coefficient and a total induced gauge
+  kinetic normalization, or does it reuse a Dirac/scalar coefficient without a
+  bubble-seagull derivation, identify an earlier no-matter/no-kinetic
+  constraint with a renormalization boundary condition, and thereby erase the
+  bare-plus-counterterm integration constant?
+invariants:
+  - C-GAU-001 leaves every F-squared coefficient unconstrained and derives no gauge dynamics or physical sector.
+  - C-MAX-001 starts from a supplied positive kinetic coefficient; deleting that term yields only j equals zero and does not force A to be pure gauge.
+  - C-VAC-001 is a massive complex-scalar Euclidean D2 bubble-plus-seagull theorem and supplies no D4 continuation, counterterm, or total normalization.
+  - C-VAC-002 supplies a conditional charged-Dirac D4 residue and logarithmic slope while explicitly leaving the finite counterterm, bare term, and total coefficient free.
+  - C-DIM-009 fixes dimensions and convention transformations but selects no loop, logarithm, matching condition, or coefficient.
+  - C-RGE-001 requires an independently supplied reference coupling; a differential flow does not erase its boundary coordinate.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-GAU-001
+  - C-MAX-001
+  - C-VAC-001
+  - C-VAC-002
+  - C-DIM-009
+  - C-RGE-001
+  - a separately declared free charged-complex-scalar D4 action, determinant, seagull, loop order, regulator, subtraction scheme, and quadratic-effective-action convention as conditional inputs
+  - exact Feynman parameterization, dimensionally regulated Gaussian integrals, Gamma-function identities, Laurent series, and affine first-order flow integration
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - GK3D2 and its hash-pinned dependencies and reverse consumers as noncanonical evidence after this freeze
+candidates:
+  - id: A
+    description: Reproduce GK3D2 exactly and audit every coefficient, dependency, boundary statement, predicate, assertion, and conclusion edge.
+  - id: B
+    description: Derive the conditional D4 complex-scalar bubble-plus-seagull vacuum-polarization residue and logarithmic slope in an explicit regulator and tensor convention.
+  - id: C
+    description: Derive the affine inverse-kinetic flow with its independent reference value and distinguish a declared zero-matching boundary from an absent-operator premise in a different field-content theory.
+  - id: D
+    description: Compose scalar and Dirac matter weights only through declared statistics, multiplicities, charges, and generator conventions without selecting a physical group or matter spectrum.
+  - id: E
+    description: Compare independent bare-plus-counterterm matching, explicitly imposed compositeness or zero matching, and measured matching as distinct boundary candidates before selecting any total coefficient.
+  - id: F
+    description: Close claim, source, future consumers, release, generated records, memory, and debt together without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - declared_action_statistics_regulator_and_quadratic_convention
+  - bubble_seagull_Ward_closure_and_exact_scalar_normalization
+  - loop_slope_separated_from_affine_boundary_and_total_coefficient
+  - source_no_go_scope_kept_distinct_from_post_matter_matching
+  - sign_scale_tensor_and_field_normalization_consistency
+  - statistics_multiplicity_charge_and_generator_weight_typing
+  - correct_zero_charge_heavy_mass_reference_scale_and_matching_limits
+  - independent_rederivation_mutation_sensitivity_and_known_limits
+  - assumption_parameter_import_and_dependency_economy
+  - source_consumer_and_governance_closure
+claims_proposed: [C-VAC-003]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line GK3D2 body audit; the generated queue
+  already exposes the scalar-to-Dirac factor-four slope, matter beta weights,
+  claimed removal of the additive constant by rung25, seventeen static checks,
+  and one assertion, so no fresh source-result blinding is claimed
+status: draft
+revision: 0001

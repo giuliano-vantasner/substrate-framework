@@ -1,0 +1,30 @@
+attempt: 0001
+campaign: P186
+candidate: preregistration_and_authority_freeze
+status: passed
+started_at: '2026-08-11T12:13:00Z'
+finished_at: '2026-08-11T12:16:00Z'
+base_release: v0.137.0
+base_commit: e7b2888c8ae526ee92b5da878f92b0ebe9aa660c
+release_sha256: 874abae995ffc0ad883255bee7f754383b0aa183cf88aa44fa77ce9712b9a55e
+source:
+  unit: GK3D2
+  path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py
+  sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886
+  git_blob: 7eb49a516a9cd5ea24bcfadfd0dde2bf5e0462b0
+  history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+  size_bytes: 22026
+  target_path_clean: true
+freeze:
+  candidates: [A, B, C, D, E, F]
+  claims_proposed: [C-VAC-003]
+  identifier_collisions: 0
+  source_body_opened: false
+  fresh_result_blinding_claimed: false
+  numpy_policy: mutable_numpy_trapezoid_or_trapezoid_integral_and_immutable_alias_only
+validation:
+  repository_validator_exit_code: 0
+  memory_record_validator_exit_code: 0
+  yaml_parse_exit_code: 0
+  git_diff_check_exit_code: 0
+next_attempt: commit_the_freeze_then_reproduce_and_audit_GK3D2
