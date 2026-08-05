@@ -1515,6 +1515,15 @@ Conditional on C-GAU-001's connection convention, C-DIM-009's mass- dimension an
 - Compatibility: `compatible_extension`
 - Dependencies: C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001
 
+## C-VAC-004
+
+Conditional on C-RGE-003's positive formal one-loop energy and paired inverse-energy length map and C-VAC-003's exact affine matter-induced connection-field kinetic family, separately supply positive exact lengths ell0 and ell1, positive exact conversions K0 and K1, exact real local and finite matching coordinates with sum Z_ref, and nonnegative exact invariant complex-scalar and Dirac weights W_s and W_f. Define E0=K0/ell0, E1=K1/ell1, R_ell=ell1/ell0, R_K=K1/K0, and b=W_s/3+4*W_f/3. Then E0/E1=R_ell/R_K, the exact scale logarithm is L=log(R_ell/R_K), and the complete affine composition is Z(E1)=Z_ref+b*L/(8*pi^2). A common positive rescaling of ell0 and ell1 leaves R_ell, L, and Z unchanged while shifting both absolute energies; at fixed lengths, changing either conversion changes L. On C-RGE-003's consistently paired specialization E1=E0*exp(-X), X=8*pi^2/(b0*g^2), ell0=K0/E0, and ell1=K1/E1, one has R_ell=R_K*exp(X), so L=X without requiring K0=K1 and Z(E1)=Z_ref+b/(b0*g^2). Only under the separately declared zero-matching specialization Z_ref=0 and a provably positive b does the positive inverse kinetic coordinate equal b0*g^2/b. Holding physical lengths fixed while changing a conversion, inserting an unpaired positive soliton or threshold factor, reversing an unpaired orientation, or changing Z_ref changes the relevant logarithm or total. The composition imports the logarithm from the accepted one-loop kinetic theorem; dimensional power zero is a constant rather than a logarithm, and dimensions do not select a unique form factor. This theorem does not identify either length or energy with a lattice, granularity, soliton, Compton scale, QCD, confinement, hadron, cutoff, observation, or substrate object; select b0, g^2, a conversion, matter content, group, matching boundary, absolute scale, or perturbative domain; or turn the inverse kinetic coordinate into a physical gauge coupling.
+
+- Accepted in: `v0.139.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-RGE-003, C-VAC-003
+
 ## C-VAR-001
 
 For any differentiable one-coordinate Lagrangian L0 and any nonzero multiplier A that is independent of the path coordinate, velocity, and evolution parameter, the Euler-Lagrange operator satisfies EL[A*L0] = A*EL[L0]. The two Euler-Lagrange equations therefore have the same solution set. The result holds for every fixed nonzero uniform factor, not only a factor of degree one in a named energy scale.

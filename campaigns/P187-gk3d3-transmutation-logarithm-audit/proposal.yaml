@@ -64,5 +64,5 @@ comparators_blinded_until: >-
   m=hbar*c0/xi, the cancellation to log(xi/a), substitution of the AS1 one-
   loop exponent, the zero-boundary total coupling, fourteen static checks, and
   one assertion, so no fresh source-result blinding is claimed
-status: draft
-revision: 0001
+status: accepted
+revision: 0002

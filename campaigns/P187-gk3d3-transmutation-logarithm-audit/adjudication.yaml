@@ -1,0 +1,69 @@
+campaign: P187
+title: GK3D3 transmutation logarithm audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK3D3]
+base_release: v0.138.0
+accepted_release: v0.139.0
+adjudicated_at: '2026-08-11T13:50:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_and_predicate_dataflow_are_source_evidence_only.}
+  - {id: B, reason: The_generic_inverse_length_energy_map_retains_independent_conversion_factors.}
+  - {id: C, reason: Consistently_paired_one_loop_lengths_cancel_unequal_conversions_and_compose_with_the_affine_family.}
+  - {id: D, reason: General_free_explicit_zero_and_measured_matching_models_remain_distinct.}
+  - {id: E, reason: Physical_label_soliton_factor_orientation_and_rescaling_countermodels_fix_the_scope.}
+  - {id: F, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+claims:
+  - {id: C-VAC-004, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-RGE-003, decision: unchanged_formal_one_loop_energy_length_map_independent_conversions_and_relative_scale_nullspace}
+  - {id: C-VAC-003, decision: unchanged_matter_coefficient_affine_boundary_and_explicit_zero_matching_specialization}
+  - {id: C-IDN-002, decision: unchanged_rank_and_inverse_reconstruction_ceiling_for_AS7}
+  - {id: C-DIM-009, decision: unchanged_dimension_bookkeeping_and_logarithm_nonselection}
+unpromoted_claims:
+  - {id: granularity_and_soliton_lengths_force_UV_and_IR_matching_scales, reason: The_physical_labels_and_conversion_maps_are_separate_model_inputs.}
+  - {id: common_hbar_c_and_unit_soliton_factor_are_derived, reason: Independent_or_unpaired_conversion_coefficients_are_permitted_and_load_bearing.}
+  - {id: additive_kinetic_boundary_removed, reason: C_VAC_003_retains_Z_ref_until_a_matching_condition_is_separately_declared.}
+  - {id: beta_squared_b0_and_matter_weight_are_parameter_free_predictions, reason: They_are_supplied_conditional_coordinates_or_invariant_weights.}
+  - {id: dimensional_power_zero_forces_a_logarithm, reason: Power_zero_is_constant_and_dimensions_do_not_select_a_loop_form_factor.}
+  - {id: only_the_logarithm_maps_transmutation_to_a_rational_result, reason: Powers_reciprocals_and_rational_functions_of_log_are_exact_counterfamilies.}
+  - {id: sample_inequality_proves_one_loop_self_consistency, reason: Hardcoded_unaccepted_coordinates_and_two_weights_do_not_establish_the_symbolic_or_full_validity_domain.}
+  - {id: physical_gauge_coupling_QCD_scale_matter_or_substrate_closure, reason: No_accepted_dependency_or_oracle_supplies_these_identifications.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_scale_kinetic_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VAC-004-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {GK3D3: qualified}
+accepted_mappings: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_current_name: numpy.trapezoid_or_shared_trapezoid_integral
+  immutable_GK3D5: current_first_lazy_fallback_with_no_eager_default
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.139.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+debt: []
+status: accepted

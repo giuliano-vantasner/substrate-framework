@@ -2,7 +2,7 @@
 description: Audit GK3D3 and derive a provenance-complete scale-matched kinetic ledger
 author: vantasner
 created: '2026-08-11T13:08:00Z'
-updated: '2026-08-11T13:08:00Z'
+updated: '2026-08-11T13:58:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - dimensional-transmutation
 - kinetic-matching
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P187 GK3D3 Transmutation Logarithm Audit
 
@@ -285,6 +285,15 @@ predecessors; GK3D4, GK3D5, and GK3D6 are forward consumers; EL2 and HE5 are
 transitive. Claim-level review recommends C-VAC-004 at its exact conditional
 scope and GK3D3 qualification. Temporary GitNexus host artifacts were removed.
 
+Attempt 0013 materializes the accepted C-VAC-004 review and qualified GK3D3
+disposition, freezes v0.139.0 at 179 accepted claims, regenerates the queue at
+37 pending and 168 qualified units, and synchronizes generated documentation
+and accepted-state memory. The primary, independent, and eight-node source-
+graph routes pass 31, 20, and 21 checks; 51 focused parent-and-consumer tests
+pass. The graph replay verifies all dependency paths, release closure, source
+hashes, forward narrative ceilings, and the current-first lazy compatibility
+fallback in immutable GK3D5 without recording a version event as science.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length
@@ -301,7 +310,7 @@ governed state.
 | The affine `Z_ref` may be erased by inheritance from GK3D2 | Compose the general family first and test unequal-boundary counterexamples | discharged by the canonical general family and affine-boundary tests |
 | A conditional inverse kinetic coefficient may be called a physical coupling | State positivity, convention, matter, group, matching, and identification premises | discharged by claim scope, source adjudication, and claim review |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D3 has no NumPy surface |
-| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
+| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | discharged by attempt 0013 and the 21-check source-graph replay |
 
 ## Review and Promotion Plan
 

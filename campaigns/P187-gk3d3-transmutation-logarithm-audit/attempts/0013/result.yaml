@@ -1,0 +1,41 @@
+attempt: 0013
+campaign: P187
+candidate: governed_source_graph_and_release_closure
+status: passed_pending_integrated_gate
+started_at: '2026-08-11T13:50:00Z'
+finished_at: '2026-08-11T13:58:00Z'
+governance:
+  claim: C-VAC-004
+  claim_count: 179
+  accepted_release: v0.139.0
+  source_unit: GK3D3
+  source_disposition: qualified
+  accepted_mappings: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]
+migration_queue:
+  total: 218
+  pending_adjudication: 37
+  migrated: 3
+  qualified: 168
+  duplicate_evidence: 8
+  refuted: 1
+  out_of_scope: 1
+verification:
+  primary_checks: 31
+  independent_checks: 20
+  source_graph_checks: 21
+  focused_tests: 51
+  repository_workflow_claims: 179
+  repository_workflow_proposals: 0
+  memory_files: 766
+precommit_impact:
+  changed_symbols: 3
+  changed_files: 6
+  affected_processes: 0
+  risk: LOW
+compatibility:
+  version_only_scientific_failures: 0
+  source_numpy_surface: none
+  canonical_numpy_surface: none
+  immutable_GK3D5_surface: current_first_lazy_fallback
+scientific_threshold_changed: false
+next_attempt: run_the_single_integrated_promotion_boundary_then_close_records_without_repeating_it

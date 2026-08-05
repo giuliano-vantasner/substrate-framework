@@ -3604,6 +3604,70 @@ units:
       quadrature surface, so no version event affects its scientific verdict.
       Direct reverse consumers GK3D1, GK3D3, GK3D4, and GK3D6 and transitive
       GK3D5, EL2, and HE5 are replayed with the affine-boundary ceiling explicit.
+  GK3D3:
+    disposition: qualified
+    accepted_claims:
+      - C-RGE-003
+      - C-IDN-002
+      - C-DIM-009
+      - C-VAC-003
+      - C-VAC-004
+    qualification: >-
+      C-VAC-004 retains GK3D3's exact conditional inverse-length energy ratio,
+      log-exp reduction, consistent conversion cancellation, explicitly
+      imposed zero-matching formula, and common length-rescaling identity. For
+      independent positive conversions, the generic log is
+      log((ell1/ell0)/(K1/K0)); on C-RGE-003's consistently paired one-loop
+      branch the conversion factors cancel without requiring equality and the
+      complete kinetic family is Z=Z_ref+b/(b0*g^2). Only a separately declared
+      zero-matching branch with positive b has inverse kinetic coordinate
+      b0*g^2/b. C-RGE-003 does not identify either scale with substrate
+      granularity or a soliton Compton length, and C-VAC-003 does not remove
+      Z_ref. Equal hbar*c conversions, a unit soliton coefficient, the physical
+      matching map, b0, g^2, matter weight, and boundary remain inputs.
+      Dimensional power zero is a constant, dimensions do not select a
+      logarithm, exact rational functions of log refute the uniqueness claim,
+      and the source's hardcoded comparator values do not establish general
+      perturbative control. No physical gauge coupling, matter spectrum,
+      group, QCD scale, absolute scale, observation, or substrate mechanism is
+      accepted. GK3D1 and GK3D2 gain no retroactive authority; GK3D4 through
+      GK3D6 remain separately governed forward consumers.
+    evidence:
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/reviews/source_adjudication.md
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/reviews/C-VAC-004-claim-review.md
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/reviews/impact_analysis.md
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/source-reproduction.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/compatibility-audit.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/source-audit.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/check-adjudication.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/formula-freeze.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/input-provenance.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/dependency-audit.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/consumer-audit.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/candidate-comparison.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/implementation-audit.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/primary-provenance.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/evidence/independent-provenance.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/verify.py
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/reviews/independent_scale_kinetic_review.py
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/reviews/replay_source_graph.py
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/attempts/0002/result.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/attempts/0003/result.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/attempts/0005/result.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/attempts/0007/result.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/attempts/0011/result.yaml
+      - campaigns/P187-gk3d3-transmutation-logarithm-audit/attempts/0012/result.yaml
+      - memory/vantasner/decisions/C-VAC-004-review.md
+      - memory/vantasner/decisions/GK3D3-qualified-review.md
+    note: >-
+      P187 closes thirty-one primary and twenty independent exact checks plus
+      fifty-one focused tests. GK3D3 and canonical P187 code have no NumPy
+      quadrature surface. GK3D5's current-first lazy legacy fallback is
+      compatibility evidence and cannot reject a scientific candidate. The
+      eight-node source graph preserves the free-boundary and physical-label
+      ceilings for every forward consumer.
   BX1:
     disposition: qualified
     accepted_claims:
