@@ -1,0 +1,16 @@
+campaign: P197
+source_unit: MD2
+path: /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py
+sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+execution: native_after_validated_freeze
+terminal_tally: ALL_26_CHECKS_PASS
+wall_seconds: 2.23
+max_rss_kib: 59316
+exit_status: 0
+static_check_calls: 23
+literal_check_calls: 22
+dynamic_check_calls: 1
+assert_statements: 0
+runtime_checks: 26
+compatibility_alias_used: false
+prior_P196_execution_not_counted_again_in_graph_coverage: true

@@ -1,0 +1,35 @@
+campaign: P197
+source_unit: MD2
+runtime_checks: 26
+groups:
+  dimensions:
+    checks: 2
+    verdict: exact_only_for_the_newly_declared_d3_action_and_combination
+    rejected_extension: accepted_AS6_AS7_quantum_coupling_or_d3_medium
+  per_mode_and_exact_integral:
+    checks: 5
+    verdict: exact_conditional_ground_state_and_continuum_algebra
+    rejected_extension: derived_quantization_state_stiffness_or_cutoff
+  asymptote_and_samples:
+    checks: 7
+    verdict: exact_closed_form_and_leading_limit_plus_finite_regression_samples
+    rejected_extension: parameter_free_scale_or_global_sample_based_error_theorem
+  reparameterization:
+    checks: 3
+    verdict: exact_substitution_identity
+    rejected_extension: independent_overdetermination_or_derived_granularity
+  fixed_set_factorization:
+    checks: 7
+    verdict: exact_fixed_set_sum_mean_identity_and_frequency_dependence
+    rejected_extension: invariance_under_mode_set_change_or_differentiable_mode_count
+  terminal_rewrite:
+    checks: 2
+    verdict: algebraic_rewrite_only
+    rejected_extension: accepted_growth_condition_probability_channel_rate_or_material_prediction
+scientific_claim_candidate: C-QFL-001
+scientific_threshold_changed: true
+threshold_change: >-
+  C-DOS-001 explicitly excludes state and occupation. P197 proposes a distinct
+  inverse-frequency scalar vacuum moment only after quantization, state,
+  stiffness, dimension, branch, and cutoff are supplied, and adds a stronger
+  set-change ceiling than MD2.

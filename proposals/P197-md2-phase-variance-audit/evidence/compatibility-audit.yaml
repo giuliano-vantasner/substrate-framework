@@ -1,0 +1,14 @@
+campaign: P197
+source_unit: MD2
+source_numpy_aliases: []
+source_direct_legacy_attributes: 0
+source_dynamic_legacy_getattrs: 0
+source_imported_legacy_names: 0
+source_direct_current_attributes: 0
+source_dynamic_current_getattrs: 0
+source_imported_current_names: 0
+source_eager_legacy_default_fallbacks: 0
+compatibility_alias_required: false
+version_only_scientific_failures: 0
+mutable_policy: numpy_trapezoid_or_shared_trapezoid_integral_only
+verdict: no_numpy_quadrature_surface

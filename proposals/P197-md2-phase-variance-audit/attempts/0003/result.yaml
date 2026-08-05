@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P197
+candidate: source_compatibility_reproduction_and_predicate_adjudication
+status: passed_source_boundary
+started_at: '2026-08-11T21:24:00Z'
+finished_at: '2026-08-11T21:28:00Z'
+commands:
+  - PYTHONPATH=src_AST_compatibility_and_check_inventory
+  - /usr/bin/time .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py
+result:
+  source_checks: 26
+  source_exit_status: 0
+  wall_seconds: 2.23
+  maximum_resident_kib: 59316
+  static_check_calls: 23
+  literal_check_calls: 22
+  dynamic_check_calls: 1
+  assert_statements: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+formula_freeze_sha256: 412bc390cf5268549240c1d708d79463a58fe96f037bd76795f0ba96100f416d
+source_verdict: mixed_exact_conditional_algebra_and_rejected_physical_overreads
+scientific_candidate_rejected: false
+debt:
+  - conditional_quantization_state_stiffness_dimension_and_cutoff_must_remain_explicit
+  - fixed_set_identity_must_not_be_called_mode_set_invariance
+next_attempt: dependency_nonduplication_and_candidate_selection
