@@ -1,0 +1,44 @@
+campaign: P199
+claim_candidate: C-MKV-001
+module:
+  path: src/substrate_framework/birth_death.py
+  sha256: 25dc73269f3a5f5b9349cf2b61b46832e248138eeb1c514c7749beea352f1c6d
+  imports_execute_simulation: false
+  numpy_import: false
+  legacy_numpy_trapz_references: 0
+  current_numpy_trapezoid_references: 0
+APIs:
+  - ImmigrationDeathLedger
+  - immigration_death_rates
+  - immigration_death_generator_action
+  - immigration_death_local_drift
+  - immigration_death_stationary_mass
+  - immigration_death_mean
+  - immigration_death_probability_generating_function
+  - immigration_death_transition_probability
+  - reversible_factorial_one_rates
+  - immigration_death_ledger
+architecture:
+  new_leaf_module: true
+  existing_signatures_changed: []
+  existing_values_changed: []
+  canonical_dependency: src/substrate_framework/bosonic_fock.py
+  package_exports_added: 10
+tests:
+  path: tests/test_birth_death.py
+  sha256: 9210b885b0e9c7578c9cbeb154dad1e4141d7fd8978ca3c75e288bd8d8fd7a3d
+  new_test_executions: 25
+  existing_dependency_test_executions: 28
+  total_focused_test_executions: 53
+  terminal_tally: 53_passed
+adverse_tests:
+  - nonzero_boundary_death_rate_is_rejected_by_the_rate_definition
+  - constant_death_rate_differs_from_the_selected_generator
+  - n_plus_one_detailed_balance_index_is_exact
+  - rate_scale_changes_transients_not_stationary_mass
+  - alternative_generator_has_same_mass_but_different_rates
+  - positive_local_drift_retains_positive_death_jumps
+  - static_mass_ratio_differs_from_local_time_drift
+  - floating_model_inputs_and_times_are_rejected
+debt:
+  - primary_and_independent_campaign_verification

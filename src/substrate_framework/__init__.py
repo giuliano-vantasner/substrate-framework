@@ -88,6 +88,18 @@ from .coherent_states import (
     coherent_state_number_probability,
     coherent_state_overlap,
 )
+from .birth_death import (
+    ImmigrationDeathLedger,
+    immigration_death_generator_action,
+    immigration_death_ledger,
+    immigration_death_local_drift,
+    immigration_death_mean,
+    immigration_death_probability_generating_function,
+    immigration_death_rates,
+    immigration_death_stationary_mass,
+    immigration_death_transition_probability,
+    reversible_factorial_one_rates,
+)
 from .factorial_suppression import (
     FactorialDecadeBound,
     FactorialSuppressionEvidence,
