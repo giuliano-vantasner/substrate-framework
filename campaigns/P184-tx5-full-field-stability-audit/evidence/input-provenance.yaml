@@ -1,0 +1,22 @@
+campaign: P184
+accepted_base: v0.135.0
+inputs:
+  pointwise_gradients: declared_exact_real_three_by_four_matrix_G
+  tangent: declared_exact_real_four_vector_w
+  strain: D_equals_G_times_G_transpose
+  static_density: declared_e2_plus_e4_with_e2_equals_trace_D_and_e4_equals_half_trace_D_squared_minus_trace_D_squared_matrix
+  kinetic_mass: declared_M_equals_2_times_open_paren_1_plus_trace_D_close_paren_I_minus_2_times_G_transpose_G
+  Derrick_family: existing_exact_radial_modes_API_reparameterized_by_alpha_equals_exp_minus_s
+  source_evidence: TX5_at_substrate_6d1f4e0_SHA256_ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a
+derived_in_P184:
+  - exact_quartic_Gram_minor_square_certificate
+  - exact_mass_gap_tangent_gradient_minor_square_certificate
+  - exact_sharp_coefficient_two_mass_lower_bound
+  - direct_declared_resolution_nonstationarity_and_descent_counterexample
+empirical_inputs: []
+fitted_parameters: []
+numeric_comparators:
+  - TX5_native_values_retained_only_as_hash_pinned_source_evidence
+  - N91_direct_descent_is_a_counterexample_to_the_source_configuration_not_an_input_to_C_SKY_002
+hidden_imports: []
+debt: []

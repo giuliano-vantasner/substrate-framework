@@ -1,0 +1,20 @@
+campaign: P184
+criteria_frozen_before_source_body_audit: true
+selected:
+  - {id: A, role: exact_hash_source_native_and_direct_counterexample_evidence_only}
+  - {id: B, role: accepted_exact_conditional_O4_static_and_kinetic_square_theorem}
+  - {id: E, role: retained_exact_Derrick_identity_and_scoped_numeric_evidence_without_minimum_inference}
+  - {id: F, role: governed_claim_source_consumer_and_release_closure}
+rejected_or_deferred:
+  - {id: C, reason: source_field_is_nonstationary_for_its_reported_energy_and_no_complete_constrained_discrete_Hessian_exists}
+  - {id: D, reason: no_exact_stationary_continuum_field_second_variation_boundary_topology_quotient_or_coercive_bound_exists}
+selection_basis:
+  - exact_declared_formulas_and_real_domains
+  - complete_square_certificates_not_random_sampling
+  - source_configuration_direct_descent_counterexample
+  - distinction_between_kinetic_metric_static_Hessian_and_dynamics
+  - assumption_and_parameter_economy
+  - independent_rederivation_and_load_bearing_mutations
+  - dependency_consumer_and_governance_closure
+numeric_comparator_used_for_selection: false
+verdict: one_distinct_narrow_compatible_positive_object_and_no_local_minimum_or_dynamic_stability_candidate

@@ -1,0 +1,26 @@
+campaign: P184
+registry_campaign_memory_collision_search:
+  exact_identifier_collisions: false
+  provisional_identifier_collisions: false
+comparisons:
+  C-SKY-001:
+    overlap: thematic_Skyrme_label_only
+    distinction: source_coupled_linear_triplet_dipole_interaction_not_O4_pointwise_static_or_kinetic_positivity
+  C-SYM-001:
+    overlap: positive_kinetic_metric_does_not_create_Hessian_zeros_and_stationarity_is_required
+    distinction: no_O4_Gram_minor_or_sharp_mass_bound_identity
+  C-RMAP-001_and_C-RMAP-003:
+    overlap: conditional_Skyrme_rational_map_static_objects
+    distinction: fixed_degree_angular_functional_and_chart_Hessian_not_arbitrary_pointwise_O4_gradients_or_kinetic_mass
+  C-RPROF-001_and_C-RPROF-002:
+    overlap: reduced_classical_Skyrme_radial_energy
+    distinction: one_dimensional_ansatz_branches_not_pointwise_full_coordinate_algebra
+  C-FLO-001_and_C-ROT-001:
+    overlap: stability_scope_and_positive_metric_context
+    distinction: finite_matrix_and_free_rotor_theorems_not_static_O4_density_or_mass_certificates
+novel_objects:
+  - exact_quartic_static_density_as_eighteen_spatial_component_minor_squares
+  - exact_mass_gap_as_eighteen_gradient_tangent_minor_squares
+  - exact_sharp_M_greater_equal_2I_bound_for_the_declared_O4_operator
+new_physical_premises: []
+verdict: distinct_compatible_conditional_pointwise_theorem_without_full_field_promotion

@@ -1,0 +1,13 @@
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: E1, role: rational_map_initial_data_dependency, path: merged-framework/bridges/phase-29/bridge_E1_rational_map_integrals.py, sha256: 1afa9ba8ade88912e7361bbbd6f59a9fce5cc114c75ddf604a6439bc066ae2d1, disposition: qualified}
+  - {source_unit: E2, role: reduced_profile_and_energy_comparator_dependency, path: merged-framework/bridges/phase-29/bridge_E2_multi_skyrmion_solutions.py, sha256: fdde30878eaf1f8dff7fce9c2d9d4234d1d6e14566be6d2ee56dd1926481c46f, disposition: qualified}
+  - {source_unit: E4, role: false_local_energy_component_token_control, path: merged-framework/bridges/phase-29/bridge_E4_bps_zero_binding_resolution.py, sha256: f1815eefc73e577734992a3147d9ec6cea2b50fad8532e9f436e1afb465dfea7, disposition: qualified}
+  - {source_unit: TX1, role: tail_boundary_dependency_and_static_moment_scope, path: merged-framework/bridges/phase-40/bridge_TX1_b2_intrinsic_quadrupole.py, sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff, disposition: qualified}
+  - {source_unit: TX2, role: triaxial_radiation_narrative_reference, path: merged-framework/bridges/phase-40/bridge_TX2_rotating_triaxial_quadrupole.py, sha256: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7, disposition: qualified}
+  - {source_unit: TX4, role: claimed_rotating_stability_predecessor, path: merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py, sha256: c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f, disposition: qualified}
+  - {source_unit: TX5, role: qualified_unit_under_audit, path: merged-framework/bridges/phase-40/bridge_TX5_full_field_stability.py, sha256: ea12c1fee0dab254c4d8cdc984ee694622199e7cb5380674d689cf1fe6f0e31a, disposition: qualified}
+canonical_claims: [C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002, C-GW-009, C-GW-010, C-FLO-001, C-ROT-001, C-RMAP-003, C-SKY-002]
+canonical_modules: [rational_maps.py, rational_map_radial.py, rational_map_moments.py, rigid_quadrupole_rotation.py, rotating_quadrupole_polarization.py, rotating_stability.py, rational_map_stability.py, skyrme_o4.py]
+false_dependency: E4_is_a_local_quartic_energy_component_label_not_an_import_of_source_E4
+consumer_ceiling: no_later_source_unit_in_the_generated_queue_depends_on_TX5_for_accepted_authority

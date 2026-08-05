@@ -1,0 +1,25 @@
+campaign: P184
+claims:
+  C-SKY-002:
+    direct_dependencies: []
+    declared_mathematics: [real_finite_matrices, Gram_minor_identity, Euclidean_square_nonnegativity, exact_differentiation]
+application_dependencies_not_needed_for_the_theorem: [C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002, C-RMAP-003, C-FLO-001, C-ROT-001, C-GW-009, C-GW-010]
+false_token_dependency: E4_is_TX5s_local_quartic_energy_label_not_source_unit_E4
+closure:
+  accepted: true
+  undeclared_constants: []
+  empirical_inputs: []
+  fitted_parameters: []
+  stationary_field: none
+  complete_Hessian: none
+  rotating_solution: none
+  Skyrme_action_provenance: none
+  topology_or_boundary_theorem: none
+  gravity_radiation_or_detector_model: none
+conventions:
+  spatial_gradient_rows: three_vectors_in_real_four_component_field_space
+  strain: G_times_G_transpose
+  quartic_density: half_of_trace_D_squared_minus_trace_of_D_squared
+  mass_operator: 2_times_open_paren_1_plus_trace_D_close_paren_I_minus_2_times_G_transpose_G
+  Derrick_scale: phi_alpha_of_x_equals_phi_of_x_over_alpha
+debt: []

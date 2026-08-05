@@ -1,0 +1,42 @@
+source_unit: TX5
+checks:
+  TX5.1:
+    verdict: qualified_numeric_convention_check
+    retained: two_grid_forward_difference_energy_and_absolute_baryon_comparison
+    rejected: [continuum_functional_validation, signed_topology, full_field_minimum, dynamic_stability]
+  TX5.2:
+    verdict: exact_identity_replaced_by_C_SKY_002
+    retained: declared_pointwise_mass_operator_has_the_exact_sharp_bound_M_greater_equal_2I
+    rejected: [action_provenance, removal_of_gyroscopic_terms, rotating_solution, static_Hessian_positivity, dynamic_stability]
+  TX5.3:
+    verdict: qualified_Derrick_family
+    retained: exact_E_alpha_equals_alpha_E2_plus_E4_over_alpha_identity_and_sampled_positive_scaling_curvature
+    rejected: [stationarity, arbitrary_direction_minimum, full_Hessian, full_field_stability]
+  TX5.4:
+    verdict: refuted_headline_with_retained_selected_curvatures
+    retained: six_seeded_symmetric_curve_second_differences_are_positive_at_the_reported_nonstationary_field
+    rejected: [every_direction, strict_local_minimum, complete_Hessian, linear_dynamic_stability]
+  TX5.5:
+    verdict: qualified_one_direction
+    retained: one_declared_polynomial_direction_has_positive_symmetric_curve_curvature
+    rejected: [unique_m2_classification, all_triaxial_directions, axisymmetric_rotor_applicability, full_field_stability]
+  TX5.6:
+    verdict: qualified_one_grid_softness_comparison
+    retained: one_translation_proxy_is_softer_than_the_six_reported_random_directions
+    rejected: [exact_discrete_zero_mode, shrinking_residual, complete_symmetry_kernel]
+  TX5.G:
+    verdict: qualified_Derrick_sign_guard
+    retained: sign_flipped_quartic_scaling_family_has_negative_curvature
+    rejected: [mutation_of_random_tangent_sampling, completeness, stationarity]
+  TX5.7:
+    verdict: qualified_two_grid_sign_regression
+    retained: three_random_and_one_targeted_curvature_signs_plus_quadrupole_ratio_are_qualitatively_unchanged
+    rejected: [convergence_order, same_flow_time, same_smoothing_scale, complete_spectrum, continuum_limit]
+advertised_unchecked_claims:
+  strict_local_minimum_in_full_3D_field_space: refuted_at_declared_N91_configuration_by_stable_negative_first_derivative_and_lower_one_step_energy
+  every_direction_is_uphill: unsupported_by_six_random_and_one_targeted_sample
+  positive_mass_makes_static_Hessian_the_dynamic_operator: unsupported_without_rotating_solution_augmented_energy_gyroscopic_terms_and_constraints
+  linear_dynamic_stability: unsupported
+  translation_residual_shrinks_with_dx: untested
+  refinement_requirement_met: unsupported_by_two_incommensurate_flow_and_smoothing_scales
+overall: qualify_TX5_through_C_SKY_002_and_scoped_numeric_evidence_while_refuting_the_full_field_minimum_and_dynamic_stability_headline

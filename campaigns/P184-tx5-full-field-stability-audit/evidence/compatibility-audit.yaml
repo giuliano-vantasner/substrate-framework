@@ -1,0 +1,20 @@
+campaign: P184
+policy:
+  mutable_integration: numpy.trapezoid_or_trapezoid_integral
+  immutable_legacy_event: version_only_not_scientific_failure
+  alias: explicit_legacy_name_bound_to_numpy.trapezoid_only
+TX5:
+  imports: [time, numpy, scipy.integrate.solve_bvp]
+  direct_np_trapz: false
+  direct_np_trapezoid: false
+  imported_legacy_trapz: false
+  dynamic_legacy_access: false
+  eager_legacy_default_fallback: false
+  numerical_integration: direct_lattice_sums_and_no_trapezoidal_API
+  native_execution: passed
+mutable_P184:
+  numerical_integration: exact_SymPy_algebra_and_existing_exact_Derrick_API
+  legacy_np_trapz_calls: 0
+  canonical_np_trapezoid_calls: 0
+scientific_candidate_failures_from_compatibility: 0
+debt: []
