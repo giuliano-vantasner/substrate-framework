@@ -1,0 +1,75 @@
+source_unit: GK3D1
+hash_verified: true
+global_failures:
+  - the_source_defines_a_transverse_tensor_and_then_checks_its_Ward_contraction_instead_of_deriving_transversality_from_the_fermion_loop_numerator_and_regulator
+  - the_source_calls_the_Gamma_function_master_regulator_free_even_though_continuation_away_from_D4_is_dimensional_or_analytic_regularization
+  - t_D_equals_2_to_floor_D_over_2_is_defined_only_for_integer_D_and_is_not_an_analytic_spinor_trace_convention_for_the_continued_regulator_dimension
+  - no_quantum_Dirac_action_determinant_loop_sign_regulator_quadratic_effective_action_convention_or_counterterm_is_derived_from_accepted_framework_claims
+  - the_new_charged_Dirac_excitation_is_an_explicit_conditional_import_despite_the_source_headline_NO_NEW_IMPORT
+  - a_loop_pole_or_finite_slope_does_not_select_the_bare_plus_counterterm_kinetic_normalization_or_remove_a_matching_condition
+  - future_GK3D2_or_GK3D3_prose_cannot_retroactively_supply_current_authority
+convention_failures:
+  - Pi2_is_dimensionless_in_the_displayed_tensor_while_q_squared_times_Pi2_is_the_dimension_two_projector_coefficient_so_the_sources_constant_Pi_language_mixes_two_scalar_functions
+  - the_timelike_positive_q_squared_Delta_equals_m_squared_minus_x_one_minus_x_q_squared_formula_omits_the_i0_prescription_and_threshold_branch
+  - the_sign_and_factor_mapping_between_one_half_A_K_A_and_minus_one_quarter_Z_F_squared_is_not_derived_so_Z_equals_minus_Pi2_is_convention_unclosed
+  - rank_three_off_shell_q_orthogonal_vector_space_is_called_the_physical_transverse_subspace_even_though_physical_on_shell_photon_polarizations_require_a_gauge_quotient
+checks:
+  GK3D1_0:
+    survives: all_named_source_symbols_are_symbolic
+    limitation: does_not_detect_the_imported_quantum_Dirac_model_master_or_regulator
+  GK3D1_1a:
+    survives: exact_four_component_Minkowski_quadratic_form
+  GK3D1_1b:
+    verdict: tautological_tensor_identity
+    rejected: loop_Ward_derivation
+  GK3D1_1c:
+    survives: exact_nonnull_mixed_projector_idempotence
+    rejected: physical_three_polarization_interpretation
+  GK3D1_1d:
+    survives: lambda_mutation_breaks_the_declared_transverse_ansatz
+    limitation: does_not_mutate_or_derive_the_loop_numerator
+  GK3D1_1e:
+    survives: antisymmetric_tensor_component_counts_six_and_one
+    limitation: count_does_not_prove_the_loop_generates_every_component_or_a_Maxwell_action
+  GK3D1_2a_2b:
+    survives: conditional_integer_D2_massless_specialization_of_the_displayed_fermion_master_gives_q_squared_Pi2_equals_e_squared_over_pi
+    rejected: accepted_EM5_scalar_continuity_or_substrate_excitation
+    missing: [Euclidean_or_i0_domain, order_of_limits, declared_Dirac_action_and_trace_convention]
+  GK3D1_2c:
+    survives: minimal_complex_Clifford_dimensions_are_two_at_D2_and_four_at_D4
+    rejected: one_analytic_t_D_function_of_continued_D
+  GK3D1_3a:
+    survives: exact_Gamma_recurrence_and_finite_D4_limit_of_the_mass_derivative_factor
+    rejected: no_regulator_at_all
+  GK3D1_3b_3c:
+    survives: conditional_fixed_trace_D4_zero_momentum_mass_log_derivatives_e_squared_over_12pi_squared_and_e_squared_over_6pi_squared
+    missing: [regulator_scale, subtraction_scheme, finite_counterterm, total_kinetic_coefficient]
+  GK3D1_3d:
+    verdict: insensitive_narrative_check
+    predicate: slope_is_mass_independent_and_contains_e
+    rejected: proof_of_a_complete_logarithmic_kernel_or_discharge_of_GK1
+  GK3D1_4a_4b:
+    verdict: duplicate_of_C_DIM_009_narrow_pure_coupling_dimension_result
+    rejected: derived_by_the_master_or_unique_general_form_factor
+  GK3D1_4c:
+    verdict: endpoint_exponent_check_only
+    predicate: D4_exponent_zero_and_D2_exponent_minus_one
+    rejected: one_analytic_master_with_nothing_switched
+  GK3D1_5a:
+    survives: declared_log_integrand_series_has_zero_constant_and_nonzero_first_coefficient
+    insensitive: predicate_does_not_require_the_reported_minus_one_over_30_coefficient_or_loop_prefactor
+  GK3D1_5b:
+    verdict: validation_theater
+    predicate: coefficient_is_a_number_and_constant_is_zero
+    rejected: controlled_error_bound_or_convergence_domain
+  GK3D1_5c:
+    verdict: unrelated_predicate
+    predicate: predeclared_transverse_tensor_and_component_count_only
+    rejected: action_mapping_sign_factor_operator_uniqueness_and_locality
+headline_verdict: qualify_only_after_a_corrected_conditional_Dirac_master_Ward_and_renormalization_ledger
+positive_routes:
+  - explicit_spinor_trace_parameter_separate_from_continued_dimension
+  - shift_invariant_regulator_Ward_identity_from_inverse_propagator_difference
+  - exact_D2_fermion_specialization_with_scalar_statistics_excluded
+  - exact_D4_minus_2epsilon_Laurent_MSbar_and_finite_counterterm_family
+  - exact_subtracted_low_momentum_series_with_coefficient_and_radius_or_threshold_scope

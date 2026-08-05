@@ -1,0 +1,31 @@
+source_unit: GK3D1
+path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py
+sha256: 9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+git_blob: 89b66812f03245fb644715f02a7d6dd4b236aa66
+history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+size_bytes: 25636
+compatibility_preflight:
+  ast_parse: passed
+  direct_np_trapz: false
+  imported_trapz: false
+  dynamic_trapz: false
+  eager_legacy_default_fallback: false
+  alias_replay_required: false
+native_execution:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py
+  exit_code: 0
+  elapsed_seconds: 1.19
+  maximum_resident_kibibytes: 55648
+  lexical_check_calls: 19
+  runtime_check_executions: 19
+  assertion_nodes: 1
+  terminal_tally: ALL_19_CHECKS_PASS
+source_objects:
+  imports: [sympy]
+  helpers: [check, t_clifford, Pi2_master]
+  integer_master_dimensions_implemented: true
+  symbolic_continued_master_function_implemented: false
+  regulator_or_subtraction_object_implemented: false
+scientific_verdict: exact_scoped_algebra_survives_but_general_D_Ward_renormalization_and_induced_physical_headline_require_correction
+version_only_failure: false

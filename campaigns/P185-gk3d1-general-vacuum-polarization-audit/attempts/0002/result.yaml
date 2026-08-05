@@ -1,0 +1,31 @@
+attempt: 0002
+campaign: P185
+candidate: native_reproduction_and_source_audit
+status: passed_with_qualified_source
+started_at: '2026-08-11T11:40:00Z'
+finished_at: '2026-08-11T11:43:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py
+process:
+  exit_code: 0
+  elapsed_seconds: 1.19
+  maximum_resident_kibibytes: 55648
+  checks_passed: 19
+  terminal_tally: ALL_19_CHECKS_PASS
+compatibility:
+  numpy_surface: none
+  version_only_failure: false
+retained:
+  - exact_declared_Minkowski_tensor_and_projector_algebra
+  - conditional_D2_massless_endpoint_of_the_displayed_fermion_master
+  - exact_Gamma_derivative_identity_and_fixed_trace_D4_zero_momentum_log_slope
+  - exact_subtracted_log_integrand_low_momentum_series_route
+rejected_or_rework:
+  - imposed_transverse_ansatz_as_loop_Ward_derivation
+  - floor_D_over_2_as_analytic_spinor_trace_continuation
+  - regulator_free_D4_language
+  - no_new_import_and_no_free_normalization_headline
+  - insensitive_locality_checks_and_unclosed_action_sign
+  - physical_gauge_sector_dimensional_lift_or_total_kinetic_normalization
+claim_or_threshold_changed: false
+verdict: source_is_evidence_for_C_VAC_002_but_cannot_be_promoted_literally
+next_attempt: freeze_corrected_exact_formula_and_derive_primary_and_independent_routes
