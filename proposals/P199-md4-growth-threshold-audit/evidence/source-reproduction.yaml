@@ -1,0 +1,23 @@
+campaign: P199
+source_unit: MD4
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py
+sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144
+bytes: 12404
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py
+exit_status: 0
+wall_seconds: 0.32
+static_check_calls: 23
+literal_check_calls: 17
+dynamic_check_calls: 6
+runtime_checks: 34
+terminal_tally: ALL_34_CHECKS_PASS
+imports: [sys, sympy, mpmath]
+numpy_surface: none
+sampled_quadrature: none
+compatibility_event: none
+status: reproduced_as_noncanonical_source_evidence
+ceiling: >-
+  Successful execution establishes only the represented algebra and samples.
+  One condition is literally True, the WN6 value is a hard-coded comparator,
+  and the static adjacent-mass ratio is not a temporal or material oracle.

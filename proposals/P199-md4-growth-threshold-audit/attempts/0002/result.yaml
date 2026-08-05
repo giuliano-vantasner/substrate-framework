@@ -1,0 +1,19 @@
+attempt: 0002
+campaign: P199
+candidate: immutable_source_reproduction_and_predicate_adjudication
+status: passed_with_headline_gaps
+source_unit: MD4
+source_sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py
+exit_status: 0
+terminal_tally: ALL_34_CHECKS_PASS
+compatibility_event: none
+scientific_version_failure: false
+surviving_result: conditional_algebra_and_static_factorial_one_arithmetic_only
+headline_gaps:
+  - no_time_generator_or_rate_scale
+  - no_accepted_medium_map_for_S_beta_a_or_ell_over_a
+  - no_event_channel_branching_or_rate_oracle
+  - one_unconditional_True_predicate
+  - hard_coded_WN6_comparator
+next_attempt: select_and_implement_exact_positive_process_with_nonuniqueness_witness

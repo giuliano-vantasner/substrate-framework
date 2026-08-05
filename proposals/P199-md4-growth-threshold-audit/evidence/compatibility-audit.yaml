@@ -1,0 +1,15 @@
+campaign: P199
+source_unit: MD4
+source_numpy_import: false
+legacy_numpy_trapz_references: 0
+current_numpy_trapezoid_references: 0
+eager_legacy_default_fallbacks: 0
+alias_required: false
+mutable_campaign_numpy_import: false
+mutable_campaign_legacy_references: 0
+mutable_campaign_current_references: 0
+compatibility_event: none
+scientific_failure_from_version_event: false
+policy: >-
+  Mutable numeric code uses numpy.trapezoid or the shared helper. Immutable
+  source receives an alias-only replay only when required. MD4 needs neither.

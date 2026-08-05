@@ -1,0 +1,39 @@
+campaign: P199
+source_unit: MD4
+static_sites: 23
+runtime_checks: 34
+all_runtime_conditions_true: true
+headline_coverage_complete: false
+groups:
+  conditional_threshold_algebra:
+    runtime_checks: 9
+    verdict: exact_only_given_the_unaccepted_MD2_asymptote_and_parameter_maps
+  square_root_scaling:
+    runtime_checks: 3
+    verdict: exact_corollary_of_the_same_conditional_formula_not_a_medium_prediction
+  log_space_guard:
+    runtime_checks: 3
+    verdict: valid_numeric_implementation_check
+  crossover_point_masses:
+    runtime_checks: 6
+    verdict: valid_samples_of_the_static_C_CMB_003_mass_with_no_event_or_channel_interpretation
+  WN6_rescue_comparison:
+    runtime_checks: 2
+    verdict: hard_coded_comparator_and_point_mass_comparison_do_not_establish_rescue
+  ratio_limbs:
+    runtime_checks: 3
+    verdict: two_static_ratio_samples_plus_one_unconditional_True_predicate
+  scale_invariance_and_free_symbols:
+    runtime_checks: 5
+    verdict: syntactic_properties_do_not_supply_the_missing_material_map
+  vacuum_sector_illustrations:
+    runtime_checks: 3
+    verdict: positivity_only_and_no_authority_for_the_medium_parameter
+verifier_sensitivity:
+  unconditional_discrimination_check: passes_every_mutation_and_is_validation_theater
+  n_plus_one_index: wrong_index_breaks_detailed_balance_and_integer_mode_tie
+  boundary_death_rate: nonzero_mu_0_leaves_the_declared_state_space
+  rate_scale: removing_r_erases_time_units_and_transient_control
+  constant_death_mutation: breaks_the_immigration_death_stationary_law
+  static_ratio_as_derivative: alternative_reversible_generator_is_a_counterexample
+  positive_drift_as_monotonicity: positive_death_rate_is_a_counterexample

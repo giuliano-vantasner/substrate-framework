@@ -1,0 +1,39 @@
+campaign: P199
+source_unit: MD4
+native_execution: {checks: 34, exit_status: 0}
+exact_surviving_core:
+  - the_declared_asymptotic_formula_is_algebraically_equivalent_to_the_two_displayed_threshold_forms
+  - the_conditional_threshold_scales_as_the_square_root_of_n
+  - loggamma_evaluation_reproduces_small_exact_factorial_one_masses
+  - at_S_equals_n_the_normalized_factorial_one_point_mass_has_the_standard_peak_asymptote
+  - the_exact_adjacent_static_mass_ratio_is_S_over_n_plus_one
+  - simultaneous_rescaling_of_two_declared_lengths_preserves_their_ratio
+source_oracle_gaps:
+  dynamics:
+    source_check: static_mass_rises_when_S_over_n_plus_one_exceeds_one
+    gap: a_ratio_across_state_labels_is_not_a_time_derivative_or_generator
+    repair: declare_and_verify_a_positive_immigration_death_process_and a_distinct_reversible_countermodel
+  threshold:
+    source_check: n_less_than_the_declared_asymptotic_S_is_rearranged
+    gap: accepted_claims_do_not_supply_beta_a_ell_over_a_or_the_asymptotic_material_map
+    repair: retain_only_conditional_algebra_and_do_not_promote_a_medium_prediction
+  rescue:
+    source_check: one_static_point_mass_is_much_larger_than_a_hard_coded_WN6_comparator
+    gap: point_mass_size_is_not_an_open_channel_total_probability_branching_fraction_or_rate
+    repair: keep_C_CMB_003_interpretation_ceiling_and_require_a_separate_event_model
+  discrimination:
+    source_check: one_above_and_one_below_ratio_sample_are_followed_by_check_True
+    gap: the_headline_predicate_is_unconditional_and_mutation_insensitive
+    repair: test_exact_detailed_balance_boundary_rate_scale_and_countermodel_mutations
+  granularity_map:
+    source_check: free_symbols_and_ratio_invariance
+    gap: leaving_symbols_free_does_not_derive_their_identification_with_medium_parameters
+    repair: require_an_independently_accepted_parameter_and_constitutive_map
+unaccepted_headlines:
+  - MD4_derives_a_growth_threshold_for_the_accepted_medium
+  - MD4_rescues_opens_or_predicts_a_physical_channel
+  - C_CMB_003_or_C_VOP_001_supplies_a_time_process
+  - MD1_MD2_or_MD3_supplies_an_accepted_granularity_displacement_or_rate_map
+  - PN2_supplies_an_accepted_occupation_or_participating_band
+  - a_positive_local_drift_would_imply_monotone_sample_path_growth
+scientific_version_failures: 0
