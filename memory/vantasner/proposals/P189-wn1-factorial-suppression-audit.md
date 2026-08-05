@@ -2,7 +2,7 @@
 description: Audit WN1 and derive a normalization-complete exact factorial-suppression ledger
 author: vantasner
 created: '2026-08-11T14:58:00Z'
-updated: '2026-08-11T15:03:00Z'
+updated: '2026-08-11T15:06:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -207,6 +207,25 @@ series proof, an exact rational/integer decade proof, and a geometric tail
 proof for every fixed nonnegative power. The Golden-rule weight and physical
 PN2-band readings remain rejected unless their missing state, interaction, and
 spectral premises are supplied.
+
+Attempt 0003 freezes the distinct exact candidate before implementation.
+For `q_n=1/(n!)^2`, the recurrence is
+`q_(n+1)/q_n=1/(n+1)^2` and positivity of the exponential series gives the
+strict universal bound `q_n<(e/n)^(2n)`. For every fixed nonnegative integer
+`p`, the ratio of `n^p q_n` at consecutive orders is at most
+`2^p/(n+1)^2`; beyond an exact integer threshold it is at most one-half, which
+proves superpolynomial decay by a geometric tail rather than selected samples.
+
+The exposed decimal thresholds also admit an exact route. The exponential
+series through order three plus a geometric tail gives
+`e<49/18<11/4`, and the integer inequality `(11/4)^20<10^9` has positive
+numerator margin 426,761,632,843,439,990,799. For `n=10^d`, grouping the
+power into blocks of twenty yields
+`q_n<10^-((20d-9)n/10)`, exactly reproducing the conservative exponents
+-131,000,000, -17,100,000,000, and -2,110,000,000,000 for decades seven,
+nine, and eleven. C-CMB-001 is provisionally distinct from C-SG-019 and has
+four direct plus twelve transitive source consumers; implementation and
+independent verification remain open.
 
 ## Debt Ledger
 

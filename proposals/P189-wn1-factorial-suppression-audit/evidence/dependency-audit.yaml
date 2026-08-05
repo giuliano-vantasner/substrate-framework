@@ -1,0 +1,32 @@
+campaign: P189
+base_release: v0.139.0
+accepted_dependencies:
+  C-SG-019:
+    use: exact_general_one_high_cosine_coefficient_parity_factorial_normalization_and_quantum_ceiling
+    preserved_free_coordinates: [A, a_H, a_L, phi_0]
+  C-SPN-002:
+    use: squared_algebraic_coefficient_is_not_a_rate_and_Golden_rule_premises_remain_missing
+    claim_dependency: false_ceiling_only
+  C-BRN-001:
+    use: a_subdivision_weight_is_supplied_and_does_not_derive_a_physical_rate_or_branching_law
+    claim_dependency: false_ceiling_only
+source_dependencies:
+  PN1:
+    disposition: qualified
+    accepted_mappings: [C-SG-019]
+    ceiling: exact_classical_coefficient_only
+  PN2:
+    disposition: qualified
+    accepted_mappings: []
+    ceiling: quotient_remainder_bookkeeping_only_no_physical_subdivision_band
+  PN3:
+    disposition: qualified
+    accepted_mappings: [C-SPN-002]
+    ceiling: normalized_symmetric_spin_algebra_only_no_rate
+approved_mathematical_imports:
+  - positive_exponential_power_series
+  - exact_integer_factorial_and_power_arithmetic
+  - finite_geometric_series_and_tail_bound
+  - elementary_sequence_ratio_and_geometric_convergence
+dependency_closure_for_C_CMB_001: complete_pending_verification
+dependency_closure_for_WN1_physical_rate_headline: incomplete

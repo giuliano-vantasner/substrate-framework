@@ -1,0 +1,29 @@
+campaign: P189
+criteria_frozen_in_attempt: 0001
+result_values_selected_candidate: false
+candidates:
+  A:
+    verdict: retained_source_reproduction_only
+    reason: Forty-four runtime checks reproduce mixed exact finite and numeric predicates without encoding every headline quantifier.
+  B:
+    verdict: retained_nonduplication_baseline
+    reason: C-SG-019 owns the coefficient and factorial limit but not the universal squared recurrence tail or exact decade theorem.
+  C:
+    verdict: provisionally_selected
+    reason: The frozen exact factorial surface is distinct and has four direct plus twelve transitive source consumers.
+  D:
+    verdict: selected_exact_oracle
+    reason: Rational e bounds and integer power blocks prove the exposed decade thresholds without decimal trust.
+  E:
+    verdict: retained_numeric_regression_only
+    reason: High precision values may regress exact bounds but are not the proof of a strict inequality.
+  F:
+    verdict: selected_scope_control
+    reason: Normalization and zero-interaction or zero-spectral-density mutations prevent a coefficient square from becoming a physical rate.
+  G:
+    verdict: pending_governance_closure
+    reason: Claim implementation consumers source disposition release documentation memory and debt remain open.
+selection:
+  provisional_claim: C-CMB-001
+  canonical_API_change: pending_impact_analysis_and_exact_verification
+  release_change: pending_claim_review

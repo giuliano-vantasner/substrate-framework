@@ -1,0 +1,25 @@
+attempt: 0003
+campaign: P189
+candidate: exact_factorial_suppression_formula_freeze
+status: frozen_pending_implementation_and_verification
+started_at: '2026-08-11T15:03:00Z'
+finished_at: '2026-08-11T15:06:00Z'
+selected_candidates: [C, D, F, G]
+retained_competitors:
+  A: source_reproduction_only
+  B: nonduplication_baseline
+  E: numeric_regression_only
+reserved_claim: C-CMB-001
+frozen_objects:
+  - normalized_inverse_square_factorial_sequence
+  - general_C_SG_019_one_high_coefficient_square
+  - strict_exponential_upper_bound
+  - every_fixed_power_geometric_tail
+  - exact_decimal_decade_exponent_ceiling
+  - exact_positivity_representation_ceiling
+exact_constants:
+  e_series_upper_bound: 49/18
+  convenient_e_upper_bound: 11/4
+  fixed_power_comparison: (11/4)^20_less_than_10^9
+scientific_threshold_changed: false
+next_attempt: impact_analysis_then_pure_package_API_and_exact_tests

@@ -1,0 +1,70 @@
+campaign: P189
+claim: C-CMB-001
+status: frozen_before_implementation
+domains:
+  order: positive_integer
+  power: nonnegative_integer
+  decade: positive_integer
+  cosine_coordinates: exact_real
+definitions:
+  q_n: 1/(factorial(n)^2)
+  cosine_square_odd_n: A^2*a_H^2*a_L^(2*n)/(factorial(n)^2)
+  cosine_square_even_n: 0
+exact_sequence:
+  positivity: q_n>0
+  initial: q_1=1
+  recurrence: q_(n+1)/q_n=1/(n+1)^2
+  monotonicity: strictly_decreasing
+exponential_bound:
+  premise: exp(n)_series_contains_the_strictly_subordinate_positive_term_n^n/factorial(n)
+  factorial: factorial(n)>(n/e)^n
+  inverse_square: q_n<(e/n)^(2*n)
+e_rational_bound:
+  finite_sum_k_0_to_3: 8/3
+  tail_k_ge_4_strictly_less_than: 1/18
+  conclusion: e<49/18<11/4
+  integer_power_check:
+    left: 11^20
+    right: 10^9*4^20
+    left_value: 672749994932560009201
+    right_value: 1099511627776000000000
+    positive_margin: 426761632843439990799
+superpolynomial_tail:
+  a_n: n^p*q_n
+  exact_ratio: ((n+1)/n)^p/(n+1)^2
+  ratio_upper_bound_for_n_ge_1: 2^p/(n+1)^2
+  start: ceil(sqrt(2^(p+1)))-1
+  geometric_ratio_from_start: at_most_1/2
+  conclusion: limit_n_to_infinity_n^p*q_n=0_for_every_fixed_nonnegative_integer_p
+decade_bound:
+  order: n=10^d
+  grouping: 2*n=20*(n/10)
+  exponent_ceiling: B_d=((20*d-9)*n)/10
+  conclusion: q_n<10^(-B_d)
+  exact_specializations:
+    7: {order: 10000000, exponent_ceiling: -131000000}
+    9: {order: 1000000000, exponent_ceiling: -17100000000}
+    11: {order: 100000000000, exponent_ceiling: -2110000000000}
+representation_ceiling:
+  exact_q_n_is_positive_for_every_positive_integer: true
+  machine_zero_or_overflow_changes_exact_value: false
+physical_ceiling:
+  - coefficient_square_is_not_by_itself_a_matrix_element_rate_probability_or_weight_law
+  - PN2_supplies_no_accepted_physical_subdivision_band
+  - interaction_states_normalization_on_shell_measure_spectral_density_and_validity_remain_required
+numeric_regression_only:
+  - source_mpmath_decimal_exponents
+  - source_float_zero_order
+  - moderate_order_mpmath_bound_comparisons
+mutation_obligations:
+  - parity
+  - background
+  - amplitude_and_coordinate_scales
+  - factorial_power
+  - recurrence_denominator
+  - exponential_bound_direction
+  - e_rational_bound
+  - integer_power_margin
+  - superpolynomial_tail_start
+  - decade_block_length_and_exponent
+  - exact_positive_versus_machine_zero

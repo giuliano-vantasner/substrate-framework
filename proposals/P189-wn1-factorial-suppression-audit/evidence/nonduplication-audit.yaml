@@ -1,0 +1,34 @@
+campaign: P189
+reserved_claim: C-CMB-001
+status: provisionally_distinct_pending_exact_and_consumer_verification
+nearest_claims:
+  C-SG-019:
+    owns: exact_mixed_cosine_coefficient_parity_factorials_coordinate_scales_limit_to_zero_and_physical_ceiling
+    does_not_own:
+      - inverse_square_recurrence
+      - universal_exponential_upper_bound
+      - every_fixed_power_geometric_tail
+      - exact_decimal_decade_exponent_ceiling
+      - exact_positive_versus_machine_zero_ledger
+  C-SPN-002:
+    owns: normalized_symmetric_spin_ladder_and_explicit_no_rate_ceiling
+    does_not_own: factorial_sequence_or_decimal_bounds
+  C-BRN-001:
+    owns: conditional_two_channel_normalization_with_supplied_weight
+    does_not_own: any_factorial_weight_derivation
+package_search:
+  existing_factorial_suppression_module: false
+  existing_exact_decimal_factorial_bound_API: false
+  cosine_vertices_API_reused: true
+source_consumer_reach:
+  direct: [WN2, WN3, WN6, WN7]
+  transitive: [MD1, MD2, MD3, MD4, MD5, MD6, WN4, WN5]
+distinct_reusable_surface:
+  - exact_normalized_inverse_square_factorial_ledger
+  - exact_general_cosine_coefficient_square_composition
+  - exact_rational_and_integer_decade_bound
+  - exact_superpolynomial_tail_certificate
+promotion_rule: >-
+  Promote C-CMB-001 only if the pure API, primary and independent universal
+  proofs, mutation sensitivity, direct-consumer semantics, and full dependency
+  replay all pass. Otherwise reserve the identifier without promotion.
