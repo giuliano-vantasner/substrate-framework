@@ -1,0 +1,32 @@
+attempt: 0007
+campaign: P193
+candidate: governance_disposition_and_integrated_gate
+status: passed
+started_at: '2026-08-11T19:34:00Z'
+finished_at: '2026-08-11T19:38:00Z'
+accepted_release: v0.143.0_unchanged
+source_disposition: {WN5: qualified}
+accepted_mappings: [C-BRN-001, C-OSC-001]
+claim_promoted: false
+provisional_claim_reserved: C-BRN-002
+generated_state:
+  claims: 183
+  accepted_claims: 183
+  proposals: 0
+  memory_files: 790
+  migration_units: 218
+  migration_pending: 31
+  migration_partial: 0
+  migration_qualified: 174
+integrated_gate:
+  command: scripts/validate.sh
+  tests_passed: 1710
+  pytest_seconds: 176.02
+  wall_seconds: 189.74
+  maximum_resident_kib: 214744
+  exit_status: 0
+  terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+registry_sha256: 6c4480c078ac23b903a69806af788cc95d9046419ab21dc507ecd9ef346520ac
+source_claims_sha256: 5abc2ab23ed108d9828936786588a1ebdba0e732489ecf35d0dd2748ce657714
+debt: []

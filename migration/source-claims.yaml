@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 32
-  qualified: 173
+  pending_adjudication: 31
+  qualified: 174
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -10726,8 +10726,55 @@ units:
   dynamic_check_calls: 7
   assert_statements: 0
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BRN-001
+  - C-OSC-001
+  qualification: C-BRN-001 retains the exact weighted two-channel allocation, fixed-weight population
+    partial derivative, relative odds, and free- baseline fit. C-OSC-001 retains the all-nonnegative factorial-one
+    mass, adjacent ratio, support, and complete modes. Their exact composition is B_gamma(n)=rho/(N*S^n/n!+rho);
+    its adjacent difference has the sign of n+1-S. Thus noninteger S has one minimum at floor(S), positive
+    integer S has the adjacent tied minima S-1 and S, and 0<S<1 has its minimum at order zero. The source's
+    finite first-argmin grid hides the integer tie and omits order zero. Its population derivative holds
+    weight and order fixed; along a population-dependent path the sign instead depends on w+N*w'. The
+    rho-free relative-odds identity retains supplied N and S and is not a physical suppression magnitude.
+    WN5 does not rehabilitate GB4's rejected unrestricted headline and does not predict a measured turnover
+    without accepted states, exhaustive channels, rates, interactions, spectral data, order observability,
+    cross-order controls, and parameter provenance. C-BRN-002 remains reserved and unpromoted because
+    no distinct claim or API is warranted.
+  evidence:
+  - campaigns/P193-wn5-branching-prediction-audit/reviews/source_adjudication.md
+  - campaigns/P193-wn5-branching-prediction-audit/reviews/WN5-disposition-review.md
+  - campaigns/P193-wn5-branching-prediction-audit/reviews/impact_analysis.md
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/source-reproduction.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/compatibility-audit.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/source-audit.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/check-adjudication.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/formula-freeze.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/input-provenance.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/dependency-audit.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/consumer-audit.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/candidate-comparison.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/implementation-audit.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/gitnexus-impact.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/primary-provenance.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/evidence/independent-provenance.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/verify.py
+  - campaigns/P193-wn5-branching-prediction-audit/reviews/independent_branching_composition_review.py
+  - campaigns/P193-wn5-branching-prediction-audit/reviews/replay_source_graph.py
+  - campaigns/P193-wn5-branching-prediction-audit/attempts/0002/result.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/attempts/0003/result.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/attempts/0004/result.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/attempts/0005/result.yaml
+  - campaigns/P193-wn5-branching-prediction-audit/attempts/0006/result.yaml
+  - memory/vantasner/decisions/WN5-qualified-review.md
+  note: P193 closes 58 primary and 27 independent exact checks, 52 focused tests, and an eighteen-node
+    680-predicate covered source graph before the integrated boundary. The graph passes 46 governed checks
+    using byte-identical records without counting duplicate native execution. WN5 and all graph nodes
+    have no legacy NumPy quadrature surface, so no version event affects a scientific verdict. WN7, MD5,
+    and MD6 remain pending.
 - source_unit: WN6
   phase: phase-37
   path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py

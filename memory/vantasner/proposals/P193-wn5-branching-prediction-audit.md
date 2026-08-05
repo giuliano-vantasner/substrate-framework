@@ -2,7 +2,7 @@
 description: Audit WN5 and derive the exact warranted factorial-one branching composition without inventing a prediction
 author: vantasner
 created: '2026-08-11T19:13:00Z'
-updated: '2026-08-11T19:14:00Z'
+updated: '2026-08-11T19:38:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - branching
 - factorial-one
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P193 WN5 Branching Prediction Audit
 
@@ -191,6 +191,15 @@ through C-BRN-001 and C-OSC-001, while WN7, MD5, and MD6 remain pending. The
 next attempt is the terminal disposition, queue, memory, archive, and one
 integrated gate with v0.143.0 unchanged.
 
+Attempt 0007 completes the governed disposition with v0.143.0 unchanged. WN5
+is qualified through C-BRN-001 and C-OSC-001, C-BRN-002 remains reserved and
+unpromoted, P193 is frozen in `campaigns/`, and the disposition, regenerated
+queue, decision memory, effort memory, and campaign records agree. The queue
+contains 31 pending and 174 qualified units. The single integrated gate
+validates 790 memory files and passes all 1,710 tests in 176.02 seconds; total
+wall time is 189.74 seconds with 214,744 KiB maximum resident memory and exit
+zero. WN7, MD5, and MD6 remain pending, and the P193 debt ledger is empty.
+
 ## Debt Ledger
 
 The P193 ledger tracks source predicates, accepted overlap, order and
@@ -207,7 +216,7 @@ dependencies, consumers, and governed state.
 | Mathematical fractions may be called physical predictions | Supply countermodels and premise inventory | discharged |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | discharged |
-| Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
+| Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | discharged |
 
 ## Review and Promotion Plan
 
@@ -220,10 +229,11 @@ boundary; post-gate record closure gets narrow validation.
 
 ## Done Gate
 
-P193 closes only when the exact warranted branching composition exists in its
-proper scope, novelty is decided structurally, every source edge and consumer
-is adjudicated, governed state agrees, and the debt ledger is empty. A physical
-no-go or a green substitution check alone cannot complete the campaign.
+P193 is closed. The exact warranted branching composition exists in its proper
+scope, novelty is decided structurally, every source edge and consumer is
+adjudicated, governed state agrees, and the debt ledger is empty. The physical
+ceiling and native green tally remain supporting evidence rather than
+substitutes for the accepted composition.
 
 ## Cross-References
 

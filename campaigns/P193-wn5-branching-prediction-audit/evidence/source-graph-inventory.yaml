@@ -14,7 +14,7 @@ reused_execution_evidence:
     source_unit: GB1
     native_checks: 18
   P193_WN5:
-    reproduction: proposals/P193-wn5-branching-prediction-audit/evidence/source-reproduction.yaml
+    reproduction: campaigns/P193-wn5-branching-prediction-audit/evidence/source-reproduction.yaml
     reproduction_sha256: 0a9cf3bd10974ef0aecea97040608d602294a3e064947a2076e947fea2f00dae
     source_unit: WN5
     native_checks: 41
@@ -56,7 +56,7 @@ expected_coverage:
   compatibility_aliases: 0
   version_only_scientific_failures: 0
 actual_replay:
-  command: PYTHONPATH=src .venv/bin/python proposals/P193-wn5-branching-prediction-audit/reviews/replay_source_graph.py
+  command: PYTHONPATH=src .venv/bin/python campaigns/P193-wn5-branching-prediction-audit/reviews/replay_source_graph.py
   terminal_tally: ALL_46_CHECKS_PASS
   unique_nodes: 18
   total_native_checks_covered: 680

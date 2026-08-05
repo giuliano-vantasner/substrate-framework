@@ -1,0 +1,77 @@
+campaign: P193
+title: WN5 exact factorial-one branching composition and prediction audit
+source_baseline: substrate@6d1f4e0
+source_units: [WN5]
+base_release: v0.143.0
+accepted_release: v0.143.0
+adjudicated_at: '2026-08-11T19:34:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_reproduction_is_source_evidence_only.}
+  - {id: B, reason: Existing_accepted_APIs_and_claims_express_the_complete_warranted_composition.}
+  - {id: D, reason: Exact_relative_odds_thresholds_retain_all_population_and_intensity_inputs.}
+  - {id: E, reason: Fixed_order_partial_and_population_dependent_path_conditions_are_distinct.}
+  - {id: F, reason: Missing_rate_channel_interaction_order_and_parameter_premises_block_prediction_semantics.}
+  - {id: G, reason: Source_consumer_disposition_queue_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: C, decision: rejected_as_duplicate_of_C_BRN_001_and_C_OSC_001_with_no_new_invariant_or_API_need}
+claims: []
+reserved_unpromoted_claims:
+  - {id: C-BRN-002, reason: The_complete_warranted_object_is_direct_accepted_composition.}
+accepted_composition:
+  - {id: C-BRN-001, decision: unchanged_weighted_allocation_fixed_weight_population_partial_relative_odds_and_free_baseline_fit}
+  - {id: C-OSC-001, decision: unchanged_factorial_one_weight_adjacent_ratio_support_and_complete_modes}
+unpromoted_source_edges:
+  - {id: unique_integer_minimum, reason: Positive_integer_S_has_the_adjacent_tied_minima_S_minus_1_and_S.}
+  - {id: positive_order_grid_covers_all_nonnegative_domain, reason: Order_zero_is_omitted_and_is_the_minimum_for_zero_less_than_S_less_than_one.}
+  - {id: fixed_weight_partial_is_a_population_dependent_total_path, reason: The_total_sign_depends_on_w_plus_N_times_w_prime.}
+  - {id: WN5_rehabilitates_unrestricted_GB4_regime_independence, reason: Only_C_BRN_001s_declared_fixed_weight_domain_survives.}
+  - {id: relative_odds_is_physical_suppression, reason: It_retains_supplied_N_and_S_and_no_physical_rate_premises.}
+  - {id: mathematical_turnover_is_a_measured_prediction, reason: States_exhaustive_channels_rates_order_protocol_and_parameter_provenance_are_missing.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_branching_composition_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  disposition_review: reviews/WN5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {WN5: qualified}
+accepted_mappings: [C-BRN-001, C-OSC-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: none_v0.143.0_unchanged
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0007/result.yaml
+  memory_files: 790
+  tests_passed: 1710
+  pytest_seconds: 176.02
+  wall_seconds: 189.74
+  maximum_resident_kib: 214744
+  exit_status: 0
+debt: []
+status: accepted

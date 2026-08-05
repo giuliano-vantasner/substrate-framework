@@ -30,7 +30,7 @@ manual_consumers_retained:
   - tests/test_branching.py
   - tests/test_bosonic_fock.py
   - tests/test_factorial_one_distribution.py
-  - proposals/P193-wn5-branching-prediction-audit/verify.py
+  - campaigns/P193-wn5-branching-prediction-audit/verify.py
   - WN7
   - MD5
   - MD6
