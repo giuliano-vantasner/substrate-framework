@@ -1,0 +1,70 @@
+id: P190
+base_release: v0.140.0
+base_commit: 9a751300c6e4ea4ef70a9ca9a9beb65540d3945b
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WN2]
+question: >-
+  Does hash-pinned WN2 add a distinct reusable exact theorem about the
+  parity-thinned inverse-square factorial sequence, its normalized mass, and
+  conditional two-channel allocation, or does it only compose C-SG-019,
+  C-CMB-001, and C-BRN-001 while its physical inadmissibility and PN2-band
+  conclusions remain unsupported?
+invariants:
+  - C-SG-019 owns the exact background- and normalization-dependent classical cosine coefficient and does not supply a quantum weight or rate.
+  - C-CMB-001 owns the positive q_n=1/(n!)^2 sequence, recurrence, universal bounds, representation ceiling, and odd-order cosine application.
+  - C-BRN-001 normalizes separately supplied common-dimension rate inputs and requires a positive dimensionless weight in its weighted specialization; it derives neither the weight nor a physical channel.
+  - PN2 is qualified quotient bookkeeping only and supplies no accepted physical subdivision band, channel, or exclusion of n=1.
+  - A zero coefficient at a parity-forbidden order, a low-order mode, or a superpolynomial tail does not by itself make a mathematical sequence physically inadmissible.
+  - Normalizing a sequence across orders declares a sample space and measure; it does not derive occurrence probabilities or rates.
+  - WN3 and WN4 are pending forward-cycle units and cannot be imported as accepted premises.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-SG-012
+  - C-SG-019
+  - C-CMB-001
+  - C-BRN-001
+  - exact positive-integer factorial series, parity filters, convergent series, Bessel generating identities, rational inequalities, floor arithmetic, and monotonicity
+  - separately supplied exact integer order, population, common-dimension rate baselines, dimensionless coefficient weight, and sample space
+  - src/substrate_framework/factorial_suppression.py
+  - src/substrate_framework/branching.py
+  - pinned P109, P110, P122, P125, and P189 adjudications at the framework base commit
+  - WN2 and its hash-pinned dependency and reverse-consumer units as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Reproduce WN2 exactly and audit every parity, floor, suppression, concentration, admissibility, import, assertion, and headline conclusion edge.
+  - id: B
+    description: Qualify WN2 through accepted composition only if C-SG-019, C-CMB-001, and C-BRN-001 own every reusable exact consequence.
+  - id: C
+    description: Promote a distinct exact normalized odd inverse-square-factorial mass and tail theorem only if its infinite-series and consumer semantics are not already governed.
+  - id: D
+    description: Replace WN2's coarse finite tail bounds with exact special-function normalization and independently certified rational enclosures before judging concentration claims.
+  - id: E
+    description: Derive the conditional C-BRN-001 allocation and odds consequences for supplied nonzero orders while preserving parity-zero endpoints through the general two-channel API.
+  - id: F
+    description: Challenge WN2's universal inadmissibility rule with alternative declared sample spaces, rate factors, and low-order-mode counterexamples that leave its exact coefficient algebra unchanged.
+  - id: G
+    description: Separate exact floor-and-parity discontinuity from PN2's unaccepted physical band and channel-exclusion reading.
+  - id: H
+    description: Close claim, API, source, dependency, consumer, disposition, queue, release, documentation, memory, compatibility, and debt governance without blanket downstream promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - exact_infinite_normalization_and_tail_control
+  - compatibility_with_C_SG_019_background_parity_and_scales
+  - compatibility_with_C_CMB_001_sequence_scope_and_nonduplication
+  - C_BRN_001_endpoint_domain_and_rate_typing
+  - sample_space_measure_and_normalization_provenance
+  - PN2_and_forward_cycle_authority_ceiling
+  - correct_n_equals_one_even_order_large_order_and_rescaling_limits
+  - counterexample_sensitive_admissibility_criteria
+  - assumption_parameter_and_API_economy
+  - independent_rederivation_consumer_reach_and_governance_closure
+claims_proposed: [C-CMB-002]
+comparators_blinded_until: >-
+  No fresh blinding is claimed. WN2's body, formulas, native tally, and result
+  prose were necessarily exposed during P189's preregistered reverse-consumer
+  replay, and prior C-BRN-001 memory already identified WN2 as a pending
+  consumer. Structural criteria are frozen before P190 source execution,
+  implementation, infinite-series evaluation, candidate selection, or new
+  predicate adjudication.
+status: draft
+revision: 0001

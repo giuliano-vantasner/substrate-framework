@@ -1,0 +1,36 @@
+attempt: 0001
+campaign: P190
+candidate: preregistered_WN2_exact_mass_and_weight_audit
+status: passed
+started_at: '2026-08-11T15:58:00Z'
+finished_at: '2026-08-11T16:03:00Z'
+base_release: v0.140.0
+base_commit: 9a751300c6e4ea4ef70a9ca9a9beb65540d3945b
+source:
+  unit: WN2
+  path: merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py
+  sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c
+  blob: 6c320c91a5df4856a487eaa302767c1180c437cb
+  size_bytes: 16862
+  sole_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+prior_exposure: fully_disclosed_from_P189_consumer_replay
+reserved_claim: C-CMB-002
+candidates: [A, B, C, D, E, F, G, H]
+frozen:
+  provisional_claim: C-CMB-002
+  candidate_count: 8
+  selection_criteria_count: 10
+  accepted_dependency_ceilings: [C-SG-019, C-CMB-001, C-BRN-001]
+  excluded_pending_premises: [WN3, WN4]
+  oracle_order: [exact_rational_and_integer, symbolic_special_function, enclosed_numeric_regression]
+  compatibility_policy: current_mutable_API_or_shared_helper_and_alias_only_immutable_replay
+validation:
+  repository: passed
+  workflow_claims: 180
+  proposals: 1
+  migration_pending: 35
+  memory: passed
+  yaml_parse: passed
+  diff_check: passed
+scientific_threshold_changed: false
+next_attempt: pin_source_predicates_then_derive_exact_infinite_normalization
