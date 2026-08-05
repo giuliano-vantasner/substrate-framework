@@ -1,0 +1,30 @@
+attempt: 0006
+campaign: P201
+route: primary_independent_and_focused_regression
+status: passed
+verification:
+  primary_checks: 46
+  independent_checks: 17
+  focused_source_audit_tests: 9
+  exit_statuses_all_zero: true
+mutations:
+  assignment_syntax_evasions: rejected_semantic_completeness
+  constructed_and_numeric_comparators: rejected_literal_completeness
+  tag_to_check_data_flow: demonstrated
+  unconditional_empty_ledger: detected_and_mutation_sensitive
+  population_dependent_weight_slope: load_bearing
+scientific_results:
+  retained:
+    - exact_finite_scanner_results_on_pinned_bytes
+    - conditional_d3_one_branch_DOS_integral
+    - conditional_M_cancellation
+    - fixed_weight_partial_derivative
+  rejected:
+    - semantic_parameter_or_data_independence
+    - tagged_values_are_non_load_bearing
+    - physical_M_g_or_rho_debt_discharge
+    - unique_floor_mode
+    - empty_scientific_debt_ledger
+compatibility: {mutable_numpy_surface: none, version_only_scientific_failures: 0}
+debt: [complete_source_graph_and_individual_source_reviews]
+next_attempt: source_graph_replay_and_MD6_terminal_disposition_review

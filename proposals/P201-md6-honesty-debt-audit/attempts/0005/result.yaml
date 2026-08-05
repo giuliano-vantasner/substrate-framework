@@ -1,0 +1,18 @@
+attempt: 0005
+campaign: P201
+route: independent_raw_symbolic_review_second_sign_oracle
+status: failed
+failure_class: representation
+failed_check: fixed_branching_response_still_depends_monotonically_on_rho
+observation: >-
+  A second SymPy is_positive property query failed inside the complete route
+  after the inverse-square derivative identity had been repaired.
+scientific_consequence: none
+preserved_result: >-
+  Direct differentiation gives N*w/(N*w+rho)^2, which is positive for the
+  declared positive N, w, and rho and proves that the response magnitude
+  retains rho dependence.
+repair: >-
+  Replace the property query with an exact comparison to
+  N*w/(N*w+rho)^2.
+next_attempt: rerun_the_complete_independent_route_without_fragile_sign_properties

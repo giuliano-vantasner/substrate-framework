@@ -1,0 +1,22 @@
+attempt: 0007
+campaign: P201
+route: seven_node_graph_and_individual_MD6_reviews
+status: passed
+source_graph:
+  nodes: 7
+  native_checks_covered: 263
+  fresh_native_executions: 0
+  replay_checks: 14
+  exit_status: 0
+  compatibility_aliases: 0
+reviews:
+  source_disposition: reviews/MD6-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact: reviews/impact_analysis.md
+  decisions_agree: true
+recommended_MD6_disposition: qualified
+recommended_MD6_mapping: []
+release_delta: none
+version_only_scientific_failures: 0
+debt: []
+next_attempt: freeze_review_boundary_and_stage_terminal_governance_sync

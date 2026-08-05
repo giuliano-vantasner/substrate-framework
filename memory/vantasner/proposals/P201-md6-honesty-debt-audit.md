@@ -2,7 +2,7 @@
 description: Adjudicate MD6 finite scanner predicates and semantic debt closure
 author: vantasner
 created: '2026-08-05T19:35:00Z'
-updated: '2026-08-05T19:35:00Z'
+updated: '2026-08-05T19:52:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -103,6 +103,29 @@ literal matchers, undeclared dimensional lift, integer mode tie, fixed-weight
 derivative, and retained rho dependence. Attempt 0003 selects the finite ledger
 and accepted-authority recomputation, rejects a duplicate API and foundation
 revision, and predicts terminal qualification with no accepted claim mapping.
+Attempt 0004 preserves a representation-only failure in the independent
+inverse-square-weight sign oracle: a context-sensitive `is_positive` query
+rejected a derivative that simplifies exactly to `rho/(N*rho+1)^2`. The
+repair uses that exact positive-form identity without changing the scientific
+counterexample or tolerance.
+Attempt 0005 preserves the same representation failure for the rho derivative
+property query. Its repair verifies the exact identity
+`dB/drho = N*w/(N*w+rho)^2`, so the retained rho dependence is checked without
+an assumption-engine verdict or numerical sampling.
+Attempt 0006 passes the 46-check primary route, 17-check independent route,
+and nine focused `source_audit` regressions. The result retains MD6's exact
+finite pinned-byte statements and conditional algebra, rejects every semantic
+headline that exceeds them, and confirms that P120, P195, and the existing
+audit APIs already own the reusable method surface.
+Attempt 0007 passes the 14-check seven-node graph replay over 263 prior native
+predicates without duplicate execution or compatibility aliases. The
+individual source, adjudication, and impact reviews agree on terminal
+qualification with no accepted mapping, canonical API, reverse consumer, or
+release delta.
+Attempt 0008 passes the narrow review-boundary validation after explicitly
+setting the repository memory base. Two earlier CLI invocations selected the
+configured external memory root; that command-level miss is preserved as
+non-scientific attempt evidence and does not inflate the scientific tally.
 
 ## Debt Ledger
 

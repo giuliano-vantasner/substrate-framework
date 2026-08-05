@@ -1,0 +1,34 @@
+campaign: P201
+source_unit: MD6
+prior_surfaces:
+  P120:
+    owns:
+      - finite_scanner_exactness_on_pinned_bytes
+      - AST_executable_vs_prose_separation
+      - evasion_collision_and_semantic_ceiling_methods
+    disposition: immutable_campaign_evidence_without_new_scientific_claim_or_API
+  P195:
+    owns:
+      - WN_specific_barrier_tag_import_and_fixture_adjudication
+      - finite_matcher_counterexamples_and_semantic_ceiling
+    disposition: terminal_qualified_no_release
+  source_audit:
+    owns:
+      - deterministic_hashed_lexical_navigation
+      - typed_NumPy_trapezoid_compatibility_inventory
+    explicit_ceiling: lexical_occurrence_does_not_establish_semantic_or_scientific_dependency
+MD6_distinct_campaign_surface:
+  - exact_MD6_predicate_and_loop_execution_ledger
+  - exact_MD1_through_MD5_assignment_and_literal_matcher_reproduction
+  - actual_MD4_tag_to_check_data_flow_witness
+  - accepted_authority_recomputation_of_M_g_rho_mode_and_band_debts
+  - literal_true_empty_ledger_and_three_clause_residual_adjudication
+assessment: >-
+  These are source-unit-specific audit records. They do not justify a reusable
+  scanner theorem, scientific claim, or package API beyond the accepted and
+  already reusable surfaces.
+new_claim: null
+new_package_API: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []

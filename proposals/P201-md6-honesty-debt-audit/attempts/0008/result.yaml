@@ -1,0 +1,22 @@
+attempt: 0008
+campaign: P201
+route: review_boundary_narrow_validation
+status: passed
+initial_invocation_failures:
+  - command: memory validate memory/vantasner/proposals/P201-md6-honesty-debt-audit.md
+    cause: memory_CLI_prepended_its_configured_external_base_to_a_repository_relative_path
+  - command: memory validate vantasner/proposals/P201-md6-honesty-debt-audit.md
+    cause: auto_detected_external_memory_base_instead_of_repository_memory_root
+repair:
+  command: memory validate --base memory vantasner/proposals/P201-md6-honesty-debt-audit.md
+  result: all_1_files_valid
+validation:
+  repository: {claims: 189, accepted: 189, proposals: 1, pending_units: 24, partial_units: 0}
+  memory_files: 1
+  diff_check: passed
+scientific_consequence: none
+interpretation: >-
+  The failures were explicit CLI base-selection errors. They neither exercised
+  nor changed a scientific oracle and are not counted as evidence.
+debt: []
+next_attempt: commit_review_boundary_and_stage_terminal_governance_sync

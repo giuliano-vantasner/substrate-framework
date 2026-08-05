@@ -1,0 +1,32 @@
+campaign: P201
+root_source_unit: MD6
+scope: six_direct_dependencies_plus_root
+execution_policy: >-
+  Reuse hash-pinned terminal native records because every node has already
+  executed at its own scientific boundary. Do not rerun unchanged scripts to
+  manufacture a fresh tally.
+nodes:
+  - {source_unit: WN6, relation: direct_dependency, native_tally: 32, record: campaigns/P194-wn6-scale-verdict-audit/evidence/source-reproduction.yaml}
+  - {source_unit: MD1, relation: scanned_direct_dependency, native_tally: 27, record: campaigns/P196-md1-mode-counting-audit/evidence/source-reproduction.yaml}
+  - {source_unit: MD2, relation: scanned_direct_dependency, native_tally: 26, record: campaigns/P197-md2-phase-variance-audit/evidence/source-reproduction.yaml}
+  - {source_unit: MD3, relation: scanned_direct_dependency, native_tally: 41, record: campaigns/P198-md3-vertex-operator-audit/evidence/source-reproduction.yaml}
+  - {source_unit: MD4, relation: scanned_direct_dependency, native_tally: 34, record: campaigns/P199-md4-growth-threshold-audit/evidence/source-reproduction.yaml}
+  - {source_unit: MD5, relation: scanned_direct_dependency, native_tally: 63, record: campaigns/P200-md5-branching-handshake-audit/evidence/source-reproduction.yaml}
+  - {source_unit: MD6, relation: root, native_tally: 40, record: campaigns/P201-md6-honesty-debt-audit/evidence/source-reproduction.yaml}
+expected_coverage:
+  unique_nodes: 7
+  reused_native_checks: 263
+  freshly_executed_native_checks: 0
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python proposals/P201-md6-honesty-debt-audit/reviews/replay_source_graph.py
+  verifier_sha256: 81c9124e171502892c5ad2c53e827839cac3049f17cf6cfb08cd235339383cfd
+  terminal_tally: ALL_14_CHECKS_PASS_P201_MD6_SOURCE_GRAPH
+  exit_status: 0
+authority_state_before_P201_promotion:
+  qualified_direct_dependencies: [WN6, MD1, MD2, MD3, MD4, MD5]
+  pending_root: MD6
+  reverse_source_consumers: []
+  accepted_MD6_claims: []

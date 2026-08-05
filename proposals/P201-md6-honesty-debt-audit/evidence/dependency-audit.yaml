@@ -1,0 +1,46 @@
+campaign: P201
+source_unit: MD6
+authority_warning: >-
+  Candidate dependency edges, byte scans, green replays, and source-authored
+  debt labels transfer no accepted scientific authority into MD6.
+direct_dependencies:
+  WN6:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+    surviving_surface: exact_static_cosine_factorial_one_and_declared_threshold_algebra
+    excluded_surface: material_amplitude_multimode_state_unique_bridge_or_rate
+  MD1:
+    disposition: qualified
+    accepted_claims: [C-MED-003, C-SG-018, C-DOS-001]
+    surviving_surface: conditional_continuum_DOS_and_mode_count_with_explicit_supplied_inputs
+    excluded_surface: derived_dimension_branch_count_cell_volume_cutoff_or_material_count
+  MD2:
+    disposition: qualified
+    accepted_claims: [C-DOS-001, C-QFL-001]
+    surviving_surface: conditional_static_variance_and_DOS_algebra
+    excluded_surface: physical_population_granularity_or_material_coupling
+  MD3:
+    disposition: qualified
+    accepted_claims: [C-OSC-001, C-CMB-003, C-VOP-001]
+    surviving_surface: exact_static_oscillator_factorial_one_and_vertex_operator_algebra
+    excluded_surface: material_state_preparation_transition_rate_or_multimode_dynamics
+  MD4:
+    disposition: qualified
+    accepted_claims: [C-CMB-003, C-MKV-001]
+    surviving_surface: exact_factorial_one_mass_and_separately_declared_birth_death_kinetics
+    excluded_surface: physical_rescue_channel_or_tag_non_load_bearing_status
+  MD5:
+    disposition: qualified
+    accepted_claims: [C-BRN-001, C-CMB-003, C-BRN-002]
+    surviving_surface: exact_allocation_factorial_one_context_and_population_weight_derivative_criterion
+    excluded_surface: physical_weight_law_channel_exhaustiveness_isotope_material_mechanism_or_rate
+accepted_MD6_claims: []
+hidden_imports: []
+new_parameters: []
+dependency_cycle_introduced: false
+closure_verdict: >-
+  All six direct predecessors are terminal and individually mapped. Their
+  accepted surfaces reproduce MD6's conditional algebraic fragments but do
+  not supply semantic scanner completeness or discharge its M, g, rho, mode,
+  band, material, state, channel, or rate debts.
+debt: []

@@ -1,0 +1,16 @@
+campaign: P201
+source_unit: MD6
+verifier: verify.py
+sha256: 11fbc5bcb6c9ee1283ef65902fbc59f11a36e0c6b9774ccae8847550301168e2
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python proposals/P201-md6-honesty-debt-audit/verify.py
+exit_status: 0
+checks: 46
+terminal_tally: ALL_46_CHECKS_PASS_P201_MD6_PRIMARY
+oracle_surface:
+  - pinned_source_release_freeze_module_and_dependency_bytes
+  - exact_MD6_AST_site_and_runtime_inventory
+  - exact_finite_scanner_reproduction
+  - assignment_literal_tag_scope_and_data_flow_mutations
+  - unconditional_ledger_and_incomplete_residual_detection
+  - conditional_DOS_M_branching_and_integer_mode_rederivations
+scientific_version_failures: 0

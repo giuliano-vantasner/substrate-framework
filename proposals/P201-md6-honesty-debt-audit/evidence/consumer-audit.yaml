@@ -1,0 +1,33 @@
+campaign: P201
+root_source_unit: MD6
+inventory: migration/source-claims.yaml
+direct_source_consumers: []
+transitive_source_consumers: []
+canonical_consumers:
+  package_modules: []
+  package_exports: []
+  package_tests: []
+  accepted_claims: []
+campaign_consumers:
+  - campaigns/P201-md6-honesty-debt-audit/verify.py
+  - campaigns/P201-md6-honesty-debt-audit/reviews/independent_debt_review.py
+  - campaigns/P201-md6-honesty-debt-audit/reviews/replay_source_graph.py
+replay:
+  source_records_reused: 7
+  native_checks_covered: 263
+  freshly_executed_native_scripts: 0
+  duplicate_native_execution_records_counted: 0
+  graph_checks: 14
+compatibility_preflight:
+  scripts_scanned: 7
+  legacy_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_used: 0
+  version_only_scientific_failures: 0
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+interpretation: >-
+  MD6 is a leaf in the source queue. Terminal qualification changes no
+  downstream source, canonical signature, accepted value, scientific
+  threshold, or release.
+debt: []

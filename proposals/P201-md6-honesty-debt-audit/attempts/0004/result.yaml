@@ -1,0 +1,18 @@
+attempt: 0004
+campaign: P201
+route: independent_raw_symbolic_review_initial_sign_oracle
+status: failed
+failure_class: representation
+failed_check: positive_inverse_square_weight_reverses_the_source_fixed_weight_sign
+observation: >-
+  SymPy's is_positive property returned a false verdict inside the complete
+  independent route even though isolated simplification produced
+  rho/(N*rho+1)^2 and identified it as positive.
+scientific_consequence: none
+preserved_result: >-
+  The exact derivative is rho/(N*rho+1)^2 for positive N and rho, so the
+  counterexample to the fixed-weight sign remains valid.
+repair: >-
+  Compare the derivative to its exact manifestly positive form instead of
+  trusting a context-sensitive property query.
+next_attempt: rerun_the_complete_independent_route_with_the_exact_identity_oracle
