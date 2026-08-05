@@ -119,6 +119,20 @@ oracles, compatibility rule, and debt before renewed WN7 execution or complete
 inspection. Failures remain append-only and trigger a materially different
 repair or candidate.
 
+Attempt 0002 reproduces hash-pinned WN7 natively with all 59 runtime checks,
+exit zero, 0.44 seconds wall time, and 52,780 KiB maximum resident memory. The
+AST has 29 check-call sites, 23 literal names, six dynamic sites, no assertions,
+and no NumPy compatibility surface. The exact finite substring, selected
+assignment, current tagged-line, local fixture, and self-test results survive
+on six pinned files. The headline does not: three decimal strings are not an
+import graph, three empirical names are not data flow, two clamp spellings are
+not uncapped semantics, and one regex is not parameter provenance. The
+`[IMPORT]` marker exempts an entire executable line. The five physics guards
+are finite or tautological regressions; inverse ninth-power, off-grid,
+arbitrary-expression, and P194 convention counterexamples expose their
+ceilings. The next attempt implements mutation-sensitive primary and fresh
+independent audits before deciding nonduplication and disposition.
+
 ## Debt Ledger
 
 The P195 ledger tracks every source predicate, path, matcher, tag, assignment,
@@ -128,13 +142,13 @@ nonduplication decision, disposition, generated record, and continuation.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | WN7 output was exposed before P195 | Record exposure and claim no fresh output blinding | discharged |
-| Exact source predicates are unadjudicated | Reproduce and classify every runtime and narrative edge | open |
-| Finite tokens may be overread semantically | Test construction, aliases, Unicode, comments, tags, and equivalent semantics | open |
-| Assignment and clamp scans may miss data flow | Compare AST, imports, helpers, tables, configuration, and pass conditions | open |
-| Local physics fakes may not test accepted objects | Supply object-relevant mutations and counterexamples | open |
+| Exact source predicates are unadjudicated | Reproduce and classify every runtime and narrative edge | discharged |
+| Finite tokens may be overread semantically | Test construction, aliases, Unicode, comments, tags, and equivalent semantics | in progress |
+| Assignment and clamp scans may miss data flow | Compare AST, imports, helpers, tables, configuration, and pass conditions | in progress |
+| Local physics fakes may not test accepted objects | Supply object-relevant mutations and counterexamples | in progress |
 | Existing audit machinery may own the full result | Complete claim, API, and theorem nonduplication review | open |
 | Scanner dependencies may grant hidden authority | Type all ten source edges against accepted claims | open |
-| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | open |
+| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Governed records may disagree | Synchronize disposition, queue, memory, and campaign archive | open |
 
 ## Review and Promotion Plan

@@ -1,0 +1,17 @@
+campaign: P195
+source_unit: WN7
+path: /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50
+execution: native
+terminal_tally: ALL_59_CHECKS_PASS
+wall_seconds: 0.44
+max_rss_kib: 52780
+exit_status: 0
+static_check_calls: 29
+literal_check_calls: 23
+dynamic_check_calls: 6
+assert_statements: 0
+runtime_checks: 59
+target_files: 6
+compatibility_alias_used: false
+

@@ -1,0 +1,30 @@
+campaign: P195
+source_unit: WN7
+runtime_checks: 59
+groups:
+  a_barrier_scan:
+    verdict: exact_finite_substring_absence_on_pinned_bytes_only
+  b_import_scan:
+    verdict: exact_three_decimal_substring_absence_only
+    rejected_extension: zero_new_imports_or_dependency_closure
+  c_empirical_scan:
+    verdict: exact_three_identifier_substring_absence_only
+    rejected_extension: closed_data_gate_or_data_independence
+  d_clamp_scan:
+    verdict: exact_two_pattern_absence_under_naive_comment_split_only
+    rejected_extension: uncapped_or_neutral_magnitude_semantics
+  e_named_scalar_scan:
+    verdict: exact_selected_assignment_and_unit_substring_absence_only
+    rejected_extension: no_valuation_parameter_provenance_or_physical_input
+  f_tagged_lines:
+    verdict: current_pinned_tagged_occurrences_are_comment_or_docstring_lines
+    rejected_extension: arbitrary_tag_safety_or_no_external_formula_influence
+  g_physics_guards:
+    verdict: local_finite_regressions_only
+    rejected_extension: superpolynomial_admissibility_crossover_generality_or_physical_growth_theorems
+  h_self_tests:
+    verdict: exact_fixture_nonvacuity_only
+    rejected_extension: semantic_completeness
+scientific_claim_promoted: false
+scientific_threshold_changed: false
+
