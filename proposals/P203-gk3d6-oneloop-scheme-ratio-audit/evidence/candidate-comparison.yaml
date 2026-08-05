@@ -1,0 +1,35 @@
+campaign: P203
+criteria_frozen_in_attempt: 0001
+comparator_selected_candidate: false
+candidates:
+  A:
+    verdict: selected_accepted_composition
+    reason: C-VAC-003 C-VAC-004 and C-REP-001 already own the exact common-log zero-matching specialization with all ceilings explicit.
+  B:
+    verdict: rejected_as_duplicate
+    reason: The proportional-boundary derivative and factorwise residual are direct corollaries already exercised by P188 and have no uncovered API consumer.
+  C:
+    verdict: rejected_missing_particle_map
+    reason: C-QBL-004 is a dimensionless classical branch and supplies no pole mass conversion determinant field or absolute scale.
+  D:
+    verdict: rejected_missing_physical_premises
+    reason: Independent factor boundaries logs normalization matter and physical sector maps remain unclosed; three-eighths is a conditional coordinate.
+  E:
+    verdict: selected_no_new_surface
+    reason: Accepted composition supplies the positive corrected object while preventing duplicate claim and API growth.
+  F:
+    verdict: rejected_missing_quantization
+    reason: No quantization propagator determinant insertion asymptotic particle or physical coupling is present.
+  G:
+    verdict: rejected_no_foundational_inconsistency
+    reason: The accepted affine family is internally consistent and exposes the source's hidden specializations without revision.
+  H:
+    verdict: selected_governance_closure
+    reason: The exact six-node dependency closure and empty reverse set allow individual GK3D6 qualification without cyclic authority.
+selection:
+  claim: none
+  reserved_unpromoted_identifier: C-VAC-006
+  canonical_API_change: none
+  release_change: none
+  provisional_source_disposition: qualified
+  accepted_composition: [C-RGE-003, C-IDN-002, C-VAC-003, C-VAC-004, C-REP-001, C-QBL-004]

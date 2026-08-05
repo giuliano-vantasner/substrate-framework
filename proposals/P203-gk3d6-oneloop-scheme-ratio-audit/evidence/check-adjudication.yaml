@@ -1,0 +1,58 @@
+campaign: P203
+source_unit: GK3D6
+checks:
+  - id: GK3D6.1a
+    source_runtime: pass
+    status: retained_conditional_formula_rejected_particle_map
+    mapping: [C-VAC-003, C-VAC-004, C-QBL-004]
+    reason: The displayed common shift is exact after declaring one common zero-boundary family, but C-QBL-004 supplies no particle mass conversion and independent factor data remain accepted coordinates.
+  - id: GK3D6.1b
+    source_runtime: pass
+    status: retained_rescaling_identity_only
+    mapping: [C-RGE-003, C-VAC-004]
+    reason: Common length rescaling cancels in the declared ratio, but the predicate assumes rather than derives that c is dimensionless and does not establish physical two-scale closure.
+  - id: GK3D6.2a
+    source_runtime: pass
+    status: retained_conditional_zero_matching_specialization
+    mapping: [C-VAC-003, C-VAC-004]
+    reason: Exact cancellation holds for the constructed common zero-boundary family; general affine boundaries cancel iff they are proportional to the weights, and factorwise logs remain load-bearing.
+  - id: GK3D6.2b
+    source_runtime: pass
+    status: retained_conditional_symbolic_specialization
+    mapping: [C-VAC-003, C-VAC-004]
+    reason: b0 beta2 and c disappear only after the common factor has been inserted in both zero-boundary coordinates; this does not derive field content physical couplings or matching universality.
+  - id: GK3D6.2c
+    source_runtime: pass
+    status: retained_trace_arithmetic_rejected_physical_prediction
+    mapping: [C-REP-001]
+    reason: Three-eighths follows after inserting the five-thirds trace ratio and common inverse-trace law; C-REP-001 keeps that law separate and the coordinate Abelian-normalization covariant.
+  - id: GK3D6.3a
+    source_runtime: pass
+    status: retained_corrected_normalization_shift
+    mapping: [C-RGE-003, C-VAC-004]
+    reason: The predicate derives delta Z/Z_at_c_equals_1=-log(c)/L. It does not derive an overall coupling shift, whose inverse-coordinate relative change is log(c)/(L-log(c)), or a perturbative error bound.
+  - id: GK3D6.3b
+    source_runtime: pass
+    status: rejected_independence_and_physical_provenance
+    mapping: [C-RGE-003, C-IDN-002]
+    reason: The script hardcodes 7, 0.245, and 1e20. C-IDN-002 already proves AS7's two-route equality is inverse reconstruction by construction and accepts none of the physical labels or values.
+  - id: GK3D6.3c
+    source_runtime: pass
+    status: retained_supplied_numeric_illustration_only
+    mapping: [C-RGE-003, C-IDN-002, C-VAC-004]
+    reason: One over the supplied L is about two percent, but a factor-of-e choice, bounded log(c), nonzero domain, omitted higher orders, and physical accuracy interpretation are not derived.
+  - id: GK3D6.4a
+    source_runtime: pass
+    status: retained_no_assignment_dataflow_guard_only
+    mapping: [C-VAC-004]
+    reason: c remains an unassigned SymPy symbol in this script, which proves no fit was performed here; it does not derive c or turn an independent conversion or matching coordinate into a nonparameter.
+  - id: GK3D6.4b
+    source_runtime: pass
+    status: rejected_two_loop_and_physical_classification
+    mapping: [C-VAC-003, C-VAC-004, C-REP-001]
+    reason: The predicate repeats the already checked zero-branch identities. It executes no two-loop coefficient, scheme transformation, remainder bound, particle map, physical coupling, or observation oracle.
+summary:
+  retained_exact_conditional_or_corrected: 6
+  retained_numeric_or_dataflow_evidence_only: 2
+  rejected_load_bearing_interpretation: 2
+  blanket_headline_accepted: false

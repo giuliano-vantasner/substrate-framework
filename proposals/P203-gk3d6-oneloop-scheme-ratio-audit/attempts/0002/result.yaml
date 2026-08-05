@@ -1,0 +1,18 @@
+attempt: 0002
+campaign: P203
+timestamp_utc: '2026-08-05T20:54:00Z'
+kind: independent_verifier_construction
+command: PYTHONPATH=src .venv/bin/python proposals/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/independent_affine_scheme_review.py
+exit_status: 1
+passed_before_failure: 7
+failed_predicate: fresh_factor_log_mutation_breaks_the_source_ratio
+classification: implementation_representation_failure
+cause: >-
+  The exact residual was mathematically equal to b_i*b_j/(8*pi^2), but the
+  predicate used Python structural equality after substitution rather than
+  simplifying the expression. The primary derivation and source claim were
+  not implicated.
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair: simplify_the_mutated_residual_before_exact_comparison
+continuation: rerun_only_the_independent_route_then_complete_source_and_claim_audits

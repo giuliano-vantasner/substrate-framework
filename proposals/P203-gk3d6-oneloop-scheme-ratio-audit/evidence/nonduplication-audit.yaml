@@ -1,0 +1,17 @@
+campaign: P203
+reserved_identifier: C-VAC-006
+candidate_object: general_common_scheme_factor_ratio_and_sensitivity_ledger
+existing_owners:
+  - C-VAC-003 owns each complete affine kinetic family with its independent reference value.
+  - C-VAC-004 owns conversion-sensitive scale matching and the explicit zero-matching inverse-coordinate branch.
+  - C-REP-001 owns the conditional trace-to-coupling ratio and Abelian normalization covariance.
+  - P188 already derives the exact two-factor boundary and factorwise-log ratio residual under accepted composition.
+novel_consumer: none
+novel_canonical_API: none
+novel_claim_semantics: none
+decision: no_new_claim_or_package_surface
+reason: >-
+  The proportional-boundary derivative is a short exact corollary of the
+  accepted affine family and P188's already governed residual. No pending or
+  accepted consumer requires a distinct multi-factor API, so promotion would
+  duplicate rather than extend the framework.

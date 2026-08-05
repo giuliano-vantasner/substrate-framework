@@ -1,0 +1,22 @@
+attempt: 0004
+campaign: P203
+timestamp_utc: '2026-08-05T21:02:00Z'
+kind: source_audit_and_candidate_selection
+source_native_exit_status: 0
+source_runtime_checks: 10
+primary_checks: 35
+primary_exit_status: 0
+independent_checks: 17
+independent_exit_status: 0
+graph_checks: 24
+graph_exit_status: 0
+preserved_technical_failures: [0002, 0003]
+selected_candidates: [A, E, H]
+rejected_candidates: [B, C, D, F, G]
+provisional_claim_delta: []
+reserved_unpromoted_identifier: C-VAC-006
+provisional_source_disposition: qualified
+accepted_mapping: [C-RGE-003, C-IDN-002, C-VAC-003, C-VAC-004, C-REP-001, C-QBL-004]
+scientific_version_failures: 0
+verdict: exact_accepted_composition_ready_for_record_promotion
+continuation: commit_source_audit_then_update_disposition_generate_consumers_and_run_narrow_promotion_gate

@@ -1,0 +1,10 @@
+campaign: P203
+route: independent_raw_sympy_rederivation
+script: reviews/independent_affine_scheme_review.py
+sha256: cdb0623fa37eb1e406f84c3c44899959cf358d48360f9a7cb3e3967bffd29814
+checks: 17
+exit_status: 0
+imports_preferred_claim_APIs: false
+oracle: fresh_raw_SymPy_quotient_derivative_factorization_and_counterexamples
+preserved_failed_attempt: attempts/0002/result.yaml
+compatibility: no_numpy_import

@@ -1,0 +1,19 @@
+campaign: P203
+source_unit: GK3D6
+declared_dependencies: [AS1, AS7, GK3D2, GK3D3, GK3D4, GK3D5]
+dependency_status: all_qualified
+accepted_mappings:
+  AS1: [C-DIM-001, C-RGE-001, C-RGE-002, C-IDN-001, C-RGE-003]
+  AS7: [C-IDN-002, C-GRV-001, C-RGE-003, C-IDN-001, C-DIM-008, C-SYM-002]
+  GK3D2: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001, C-VAC-003]
+  GK3D3: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]
+  GK3D4: [C-LIE-001, C-REP-002, C-PGA-001, C-DIM-009, C-VAC-002, C-VAC-003, C-VAC-004, C-REP-001, C-RGE-005, C-ANO-001]
+  GK3D5: [C-U1-001, C-QBL-004]
+admitted_composition: [C-RGE-003, C-IDN-002, C-VAC-003, C-VAC-004, C-REP-001, C-QBL-004]
+rejected_inheritance:
+  - AS1 and AS7 grant no physical scale labels supplied coefficient values or independent overdetermination.
+  - GK3D2 and GK3D3 grant no zero boundary physical coupling substrate matter or unique conversion.
+  - GK3D4 grants no universal factor logs matching boundaries physical sectors or weak angle.
+  - GK3D5 grants no particle pole determinant-field identity physical mass or quantum excitation.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

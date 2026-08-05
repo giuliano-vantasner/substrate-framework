@@ -1,0 +1,15 @@
+campaign: P203
+source_unit: GK3D6
+direct_reverse_consumers: []
+transitive_reverse_consumers: []
+generated_consumers:
+  - migration/source-claims.yaml
+  - docs/generated/source-claims.md
+  - docs/generated/claim-dependency-graph.md
+  - memory/vantasner/efforts/framework-migration.md
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  The generated candidate-dependency graph has no source unit that names
+  GK3D6. Qualification therefore changes only GK3D6's governed disposition and
+  generated summaries; it cannot grant authority backward to its dependencies.

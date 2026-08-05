@@ -1,0 +1,19 @@
+campaign: P203
+canonical_module_change: none
+test_module_change: none
+claims_registry_change: none
+release_manifest_change: none
+generated_docs_direct_edit: none
+campaign_verifiers:
+  primary: verify.py
+  independent: reviews/independent_affine_scheme_review.py
+  graph: reviews/replay_source_graph.py
+reusable_surface_decision: >-
+  Existing kinetic_scale_matching, vacuum_polarization, charge_traces, and
+  radial_qball APIs express every accepted obligation. P203 adds only immutable
+  campaign verification and governance records; no duplicate package API or
+  regression test is warranted.
+compatibility_policy:
+  mutable_legacy_trapz_references: 0
+  immutable_alias_only_events: 1
+  version_only_scientific_failures: 0

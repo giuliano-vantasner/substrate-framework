@@ -1,0 +1,18 @@
+campaign: P203
+route: primary_accepted_API_and_exact_symbolic_composition
+script: verify.py
+sha256: 6a0e2efb3ba56c55d51173ea21bcd8c0ae8731f7793b312cec4b3e15f4c9865f
+checks: 35
+exit_status: 0
+source_pin: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036
+release_pin: 18dffeef5efd516018c918f65b45173c81ac0e1ba99fdd8a96274cc1df5c72db
+formula_freeze_pin: ef2a13c08f4804feac7006f20628d59aede0e4b9a13cf99b9e89f7ca76cc0af0
+oracle: SymPy_exact_algebra_plus_accepted_framework_APIs
+sensitivity:
+  - independent affine boundary mutations
+  - factorwise logarithm and scheme-factor mutations
+  - inverse-energy conversion mutation
+  - normalization-versus-inverse-coordinate shift distinction
+  - zero-denominator domain probe
+  - independent coupling-coordinate counterexample
+compatibility: no_quadrature_surface

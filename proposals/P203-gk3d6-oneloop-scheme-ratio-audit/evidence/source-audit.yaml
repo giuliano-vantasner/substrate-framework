@@ -1,0 +1,47 @@
+campaign: P203
+source_unit: GK3D6
+source_sha256: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036
+derived_locally:
+  - common rescaling leaves log(xi/(c*a)) unchanged when c is declared dimensionless
+  - inverse-coordinate ratios cancel for the source-defined common zero-boundary family
+  - three-eighths arithmetic after inserting the five-thirds trace ratio
+  - the zero-boundary normalization shift relative to c=1 is minus log(c)/L
+  - two hardcoded floating routes are numerically close
+declared_or_hardcoded:
+  - c is a positive O(1) pure number
+  - m equals hbar*c0/(c*xi) for the GK3D5 classical branch
+  - every factor uses the same logarithm and the same c
+  - every affine kinetic boundary is zero
+  - b0 equals seven beta squared equals 0.245 and xi/a equals 1e20
+  - the trace ratio equals five-thirds and defines physical couplings
+  - the residual is a standard scheme choice compensated at two loops
+structural_predicate_weaknesses:
+  GK3D6.1a: self_definition_of_common_zero_boundary_family_and_undeclared_particle_map
+  GK3D6.1b: rescaling_identity_cannot_derive_dimensionless_or_physical_scale_status
+  GK3D6.2a: exact_cancellation_only_inside_the_constructed_common_zero_branch
+  GK3D6.2b: free_symbol_absence_after_common_factor_was_inserted
+  GK3D6.2c: inserted_trace_ratio_and_common_inverse_trace_law
+  GK3D6.3a: computes_relative_Z_shift_but_labels_it_an_overall_coupling_shift
+  GK3D6.3b: hardcoded_approximate_AS7_inputs_and_nonindependent_backsubstitution
+  GK3D6.3c: factor_of_e_illustration_without_remainder_or_domain_bound
+  GK3D6.4a: unassigned_symbol_proves_only_no_value_was_selected_in_this_script
+  GK3D6.4b: repeats_prior_predicates_without_two_loop_or_scheme_oracle
+exact_corrections:
+  - For Z_i=z_i+b_i*(L-log(c))/(8*pi^2), g_i^2/g_j^2=Z_j/Z_i.
+  - Its derivative with respect to log(c) is (b_i*z_j-b_j*z_i)/(8*pi^2*Z_i^2).
+  - Common-scale cancellation holds exactly iff b_i*z_j=b_j*z_i on the nonzero domain; zero matching is one corollary.
+  - Distinct factor logs add b_i*b_j*(X_j-X_i)/(8*pi^2) to the ratio residual.
+  - The relative normalization shift is -log(c)/L, while the inverse-coordinate shift is log(c)/(L-log(c)).
+  - Smallness requires a separately bounded fixed log(c), large L, a nonzero denominator, and a justified perturbative interpretation.
+accepted_ceiling:
+  - C-VAC-003 and C-VAC-004 own the affine family, conversions, boundary dependence, and explicit zero specialization.
+  - C-RGE-003 owns only the formal positive one-loop length map with supplied coefficients and conversions.
+  - C-IDN-002 establishes that AS7's alleged second route is inverse reconstruction by construction and supplies no physical values.
+  - C-REP-001 owns three-eighths only as a normalization-covariant conditional trace coordinate.
+  - C-QBL-004 owns a dimensionless classical radial branch with no mass pole determinant field or substrate identity.
+headline_verdict_candidate: >-
+  The exact zero-matching common-log ratio is retained as accepted conditional
+  composition. The physical mass map, universal factor premises, independent
+  hierarchy confirmation, absolute accuracy, physical coupling ratios,
+  weak-angle prediction, two-loop classification, and substrate interpretation
+  are not derived.

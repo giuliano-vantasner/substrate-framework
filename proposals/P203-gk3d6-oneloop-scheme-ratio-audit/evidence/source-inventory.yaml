@@ -1,0 +1,22 @@
+campaign: P203
+source_unit: GK3D6
+source_sha256: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036
+imports: [math, sympy]
+defined_functions: [check]
+runtime_checks: 10
+assert_nodes: 1
+numpy_compatibility_surface: none
+literal_inputs:
+  b0: 7
+  beta_squared: 0.245
+  hierarchy_ratio: 1e20
+  weak_trace_ratio: five_thirds
+constructed_symbols: [c, beta2, b0, b_i, b_j, a, xi]
+absent_load_bearing_objects:
+  - independent factorwise affine boundaries
+  - factorwise threshold and conversion ledgers
+  - common matter action and determinant map
+  - physical particle pole or mass normalization
+  - two-loop coefficient scheme transformation or compensation
+  - perturbative remainder bound
+  - physical gauge-sector and observation map

@@ -1,0 +1,31 @@
+campaign: P203
+auditor: substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+environment:
+  numpy: 2.5.1
+  current_trapezoid_available: true
+  legacy_trapz_available: false
+nodes:
+  AS1: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  AS7: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  GK3D2: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  GK3D3: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  GK3D4: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  GK3D5:
+    numpy_aliases: [np]
+    legacy_references: 1
+    current_references: 1
+    dynamic_current_getattrs: 1
+    eager_legacy_default_fallbacks: 0
+    classification: immutable_current_first_lazy_fallback
+    selected_branch: numpy_trapezoid
+  GK3D6: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+mutable_P203:
+  legacy_references: 0
+  policy: use_numpy_trapezoid_or_shared_trapezoid_integral
+aliases_injected: 0
+version_only_stops: []
+scientific_failures_from_version_events: 0
+verdict: >-
+  GK3D6 and both P203 scientific verifiers have no quadrature surface. GK3D5's
+  immutable lazy compatibility branch selects numpy.trapezoid and is evidence
+  only; no NumPy-name event affects a scientific candidate or source verdict.

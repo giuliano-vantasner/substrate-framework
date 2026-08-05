@@ -1,0 +1,17 @@
+attempt: 0003
+campaign: P203
+timestamp_utc: '2026-08-05T20:58:00Z'
+kind: source_graph_provenance_construction
+command: PYTHONPATH=src .venv/bin/python proposals/P203-gk3d6-oneloop-scheme-ratio-audit/reviews/replay_source_graph.py
+exit_status: 1
+passed_before_failure: 0
+failed_predicate: AS1_source_remains_path_and_hash_pinned
+classification: implementation_provenance_failure
+cause: >-
+  The graph verifier used a guessed historical phase and filename for AS1
+  rather than the exact path already recorded in migration/source-claims.yaml.
+  The source hash, claim mapping, and scientific audit were not implicated.
+scientific_candidate_rejected: false
+scientific_version_failure: false
+repair: replace_AS1_AS7_and_GK3D2_guesses_with_queue_verified_exact_paths
+continuation: rerun_only_the_hash_AST_and_authority_graph

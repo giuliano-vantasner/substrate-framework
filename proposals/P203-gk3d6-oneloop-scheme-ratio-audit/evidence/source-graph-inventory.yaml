@@ -1,0 +1,22 @@
+campaign: P203
+root: GK3D6
+dependencies: [AS1, AS7, GK3D2, GK3D3, GK3D4, GK3D5]
+direct_reverse_consumers: []
+nodes:
+  AS1: {static_check_calls: 10, assert_nodes: 1}
+  AS7: {static_check_calls: 6, assert_nodes: 1}
+  GK3D2: {static_check_calls: 17, assert_nodes: 1}
+  GK3D3: {static_check_calls: 14, assert_nodes: 1}
+  GK3D4: {static_check_calls: 11, assert_nodes: 1}
+  GK3D5: {static_check_calls: 13, assert_nodes: 2}
+  GK3D6: {static_check_calls: 10, assert_nodes: 1}
+totals: {nodes: 7, static_check_calls: 81, assert_nodes: 8}
+expected_coverage:
+  fresh_native_executions: 1
+  graph_replay_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  version_only_scientific_failures: 0
+authority_ceiling: >-
+  Hash, AST, disposition, claim, and compatibility replay checks graph closure
+  only. Dependency execution and GK3D6's one native reproduction do not grant
+  backward authority or promote a source headline.
