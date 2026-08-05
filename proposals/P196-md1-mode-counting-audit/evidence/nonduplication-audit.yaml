@@ -1,0 +1,20 @@
+campaign: P196
+source_unit: MD1
+claim_candidate: C-DOS-001
+prior_surfaces:
+  C-SG-018: one-dimensional scalar gapped dispersion velocities and tail classification with DOS finite-box and cutoff explicitly excluded
+  C-KRN-001: declared-d inverse-power Fourier kernel and Riesz normalization rather than shell state density or frequency Jacobian
+  C-LAT-001: exact one-dimensional lattice symbol and Brillouin convention rather than continuum d-ball counting
+  source_audit: lexical navigation only
+distinct_positive_surface:
+  - independent spatial dimension and branch degeneracy types
+  - exact general-d isotropic frequency DOS under a declared continuum measure
+  - exact integrated radial-ball count and fixed-cutoff gap independence
+  - exact positive target-count inversion for a conditional cutoff
+  - open-band threshold behavior including the d1 integrable divergence
+  - explicit continuum-versus-finite-rank and participation ceilings
+new_claim: C-DOS-001
+new_package_api: src/substrate_framework/mode_counting.py
+verdict: distinct_exact_conditional_theorem
+debt: []
+

@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P196
+candidate: general_d_continuum_DOS_and_typed_d3_corollary
+status: passed_serious_boundary
+started_at: '2026-08-11T20:51:00Z'
+finished_at: '2026-08-11T20:57:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P196-md1-mode-counting-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P196-md1-mode-counting-audit/reviews/independent_mode_counting_review.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest tests/test_mode_counting.py
+  - git diff --check
+result:
+  primary: {checks: 40, exit_status: 0}
+  independent: {checks: 28, exit_status: 0}
+  focused_tests: {passed: 17, exit_status: 0}
+  diff_check: {exit_status: 0}
+selected_candidates: [A, C]
+rejected_candidates: [D, E]
+retained_distinct_future_object: B
+claim: C-DOS-001
+compatibility_event: none
+scientific_threshold_changed: true
+next_attempt: close_claim_review_dependency_consumer_source_graph_and_promotion_governance
+

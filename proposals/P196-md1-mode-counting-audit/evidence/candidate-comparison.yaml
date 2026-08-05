@@ -1,0 +1,23 @@
+campaign: P196
+candidates:
+  A:
+    verdict: selected
+    reason: The general-d per-branch continuum DOS and integrated ball count are exact novel and naturally typed under explicit measure inputs.
+  B:
+    verdict: retained_as_counterexample_and_future_distinct_object
+    reason: Exact finite lattice rank needs sites components constraints topology and boundaries absent from MD1 and the accepted dependency closure.
+  C:
+    verdict: selected_as_conditional_corollary
+    reason: MD1's d3 formula and cutoff survive only after branch degeneracy and target count are supplied independently.
+  D:
+    verdict: rejected
+    reason: C-SG-018 explicitly excludes density of states and C-KRN-001 governs a different inverse-kernel object so C-DOS-001 is not duplicate.
+  E:
+    verdict: rejected
+    reason: No accepted-foundation inconsistency independently requires a three-dimensional scalar-medium lift.
+selection: [A, C]
+comparators_used_for_selection: []
+claim_selected: C-DOS-001
+canonical_module: src/substrate_framework/mode_counting.py
+debt: []
+

@@ -111,6 +111,15 @@ microscopic cutoff, or participating-mode closure. Candidate A with the typed
 Candidate C corollary advances to implementation; Candidate E is rejected
 because no accepted foundational inconsistency exists.
 
+Attempt 0005 implements five pure exact APIs in `mode_counting.py` and closes
+17 focused tests, 40 primary checks, and 28 independent raw-SymPy checks. The
+routes derive d=1 through d=5 shell normalizations, integrate d=1 through d=4,
+test threshold and gapless limits, mutate sphere and Fourier factors, invert
+the supplied target, and supply finite-periodic, component-rank, and coupling-
+support counterexamples. Candidate A and conditional corollary C are selected;
+B remains a distinct future discrete theorem, D fails nonduplication, and E
+has no foundation trigger.
+
 ## Debt Ledger
 
 Every new assumption or unresolved distinction remains here until a concrete
@@ -119,12 +128,12 @@ artifact discharges it.
 | Debt | Discharge | Status |
 | --- | --- | --- |
 | MD1 output and formula were previously exposed | Record exposure and claim no fresh blinding | discharged |
-| Spatial dimension may be conflated with branches | Type `d` and `b` independently and mutate them | in progress |
-| Continuum count may be called exact finite rank | Supply finite lattice-point counterexamples and explicit ceiling | in progress |
-| `V/a^d` may be treated as derived cells | Audit cell topology divisibility and degrees of freedom | in progress |
-| Debye cutoff may be called microscopic | Distinguish target matching from a Brillouin zone | in progress |
+| Spatial dimension may be conflated with branches | Type `d` and `b` independently and mutate them | discharged by API and mutation suite |
+| Continuum count may be called exact finite rank | Supply finite lattice-point counterexamples and explicit ceiling | discharged by periodic-box counterexamples |
+| `V/a^d` may be treated as derived cells | Audit cell topology divisibility and degrees of freedom | discharged as an explicit supplied target only |
+| Debye cutoff may be called microscopic | Distinguish target matching from a Brillouin zone | discharged by target-cutoff API ceiling |
 | General-d scalar lift may import pending structure | Keep dimension and isotropy as explicit claim inputs | discharged by explicit declaration |
-| Candidate may duplicate existing claims | Complete claim and API nonduplication audit | open |
+| Candidate may duplicate existing claims | Complete claim and API nonduplication audit | discharged |
 | Consumers and governed records may diverge | Replay graph and synchronize queue release docs and memory | open |
 
 ## Done Gate
