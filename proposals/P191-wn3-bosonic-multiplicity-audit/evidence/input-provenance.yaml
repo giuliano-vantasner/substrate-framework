@@ -1,0 +1,39 @@
+campaign: P191
+claim: C-OSC-001
+accepted_inputs:
+  C_SG_019:
+    contribution: exact_zero_background_one_high_cosine_coefficient_activity_power_parity_and_coordinate_scales
+    ceiling: no_quantization_matrix_element_rate_or_probability
+  C_CMB_001:
+    contribution: inverse_square_factorial_sequence_and_classical_coefficient_suppression
+    ceiling: no_bosonic_ladder_or_factorial_one_composition
+  C_CMB_002:
+    contribution: explicit_positive_odd_sample_space_and_activity_dependent_normalization_discipline
+    ceiling: inverse_square_factorial_mass_only
+  C_SPN_002:
+    contribution: authority_boundary_for_a_distinct_finite_collective_spin_ladder
+    ceiling: no_bosonic_CCR_or_infinite_occupation_space
+mathematical_imports:
+  - orthonormal_countable_basis_and_algebraic_finite_support_span
+  - exact_square_root_ladder_actions_and_integer_induction
+  - finite_matrix_multiplication_and_trace_cyclicity
+  - factorial_exponential_and_hyperbolic_power_series
+  - parity_filtering_and_exact_rational_ordering
+declared_inputs:
+  one_mode_Fock_basis_and_CCR:
+    source: theorem_definition
+    physical_meaning: none_derived
+  classical_to_creation_operator_map:
+    source: caller_for_conditional_composition
+    convention: low_coordinate_creation_component_has_unit_coefficient_and_low_scale_remains_explicit
+  coefficient_scales_and_factorial_one_intensity:
+    source: caller
+    physical_meaning: none_derived
+excluded_inputs:
+  - PN3_as_a_bosonic_representation
+  - WN2_admissibility_guard
+  - WN4_weight_or_crossover_claim
+  - physical_density_of_states
+  - Fermi_Golden_Rule_rate
+  - fitted_activity_or_empirical_comparator
+source_samples_status: exposed_before_implementation_and_not_used_for_candidate_selection

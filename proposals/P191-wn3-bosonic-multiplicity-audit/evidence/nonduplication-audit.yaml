@@ -1,0 +1,44 @@
+campaign: P191
+reserved_claim: C-OSC-001
+status: distinct_exact_API_pending_implementation_and_consumer_replay
+nearest_claims:
+  C_SG_019:
+    owns: exact_classical_cosine_coefficient_background_parity_activity_and_coordinate_scales
+    does_not_own:
+      - bosonic_Fock_basis_or_CCR
+      - repeated_creation_norm
+      - matrix_element_composition_or_factorial_one_mass
+  C_SPN_002:
+    owns: finite_permutation_symmetric_two_state_SU2_ladder
+    does_not_own:
+      - infinite_bosonic_occupation_basis
+      - canonical_commutator
+      - finite_truncation_CCR_defect
+  C_CMB_001:
+    owns: inverse_square_factorial_sequence_and_suppression_bounds
+    does_not_own:
+      - factorial_ladder_norm
+      - factorial_one_mass
+  C_CMB_002:
+    owns: positive_odd_inverse_square_factorial_normalization
+    does_not_own:
+      - exponential_or_hyperbolic_factorial_one_normalizers
+      - factorial_one_mode_theorems
+package_search:
+  existing_bosonic_Fock_API: false
+  existing_CCR_truncation_defect_API: false
+  existing_factorial_one_sample_space_API: false
+  existing_C_OSC_identifier: false
+distinct_reusable_surface:
+  - infinite_algebraic_one_mode_Fock_ladder
+  - exact_finite_truncation_defect_and_trace_obstruction
+  - parity_preserving_conditional_cosine_matrix_element
+  - explicit_factorial_one_mass_sample_spaces_normalizers_and_modes
+source_consumer_reach:
+  primary: [WN3]
+  explicit_narrative_dependants: [WN4, WN6, WN7, MD3]
+  transitive_candidates: [WN5, MD1, MD2, MD4, MD5, MD6]
+promotion_rule: >-
+  Promote only if exact primary and independent routes, adverse mutations,
+  focused tests, WN3 adjudication, semantic consumer replay, and individual
+  review pass without importing WN4 or physical rate premises.

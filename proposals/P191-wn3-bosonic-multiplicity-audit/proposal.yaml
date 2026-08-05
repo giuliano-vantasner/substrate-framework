@@ -28,7 +28,7 @@ allowed_imports:
   - exact algebraic finite-support one-mode Fock basis definitions
   - finite-dimensional matrix algebra, trace cyclicity, factorial identities, convergent exponential and hyperbolic series, parity filters, integer inequalities, and monotonicity
   - separately supplied dimensionless activity, oscillator basis, interaction coefficient, sample space, and common-dimension normalization data
-  - src/substrate_framework/cosine_coefficients.py
+  - src/substrate_framework/cosine_vertices.py
   - src/substrate_framework/factorial_suppression.py
   - src/substrate_framework/symmetric_spin.py
   - pinned P110, P122, P189, and P190 adjudications at the framework base commit

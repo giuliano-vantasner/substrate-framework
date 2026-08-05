@@ -1,0 +1,128 @@
+campaign: P191
+claim: C-OSC-001
+status: frozen_before_implementation
+domains:
+  infinite_basis_index: nonnegative_integer
+  algebraic_domain: finite_linear_combinations_of_orthonormal_basis_vectors
+  truncation_dimension: positive_integer
+  cosine_low_order: nonnegative_integer
+  factorial_one_intensity: exact_positive_rational_for_mode_API_and_exact_positive_real_for_mass_API
+  declared_coefficient_scales: exact_real
+infinite_Fock_ladder:
+  basis: ket_n_for_n_in_nonnegative_integers_with_inner_product_delta_mn
+  annihilation:
+    vacuum: a_ket_0_equals_zero
+    positive_level: a_ket_n_equals_sqrt_n_ket_n_minus_one
+  creation: adag_ket_n_equals_sqrt_n_plus_one_ket_n_plus_one
+  number_action: adag_a_ket_n_equals_n_ket_n
+  reverse_action: a_adag_ket_n_equals_n_plus_one_ket_n
+  commutator: bracket_a_adag_ket_n_equals_ket_n
+  repeated_creation: adag_power_n_ket_0_equals_sqrt_factorial_n_ket_n
+  repeated_creation_norm_squared: factorial_n
+  normalized_occupation_state: adag_power_n_ket_0_divided_by_sqrt_factorial_n
+finite_truncation:
+  basis: ket_0_through_ket_D_minus_one
+  top_creation: zero
+  commutator: identity_D_minus_D_times_ket_D_minus_one_bra_D_minus_one
+  diagonal: one_repeated_D_minus_one_times_then_negative_D_minus_one
+  trace: zero
+  trace_obstruction: trace_of_any_finite_commutator_is_zero_while_trace_identity_D_is_D
+  interior_block: identity_on_levels_zero_through_D_minus_two
+conditional_cosine_composition:
+  classical_coefficient: >-
+    c_n=potential_scale*(-1)^((n-1)/2)*high_scale*low_scale^n/n!
+    for positive odd n and zero for even n at zero background
+  declared_field_to_mode_map: low_coordinate_creation_component_has_unit_operator_coefficient_with_low_scale_explicit
+  algebraic_matrix_element: M_n=c_n*sqrt(n!)
+  closed_form: >-
+    M_n=potential_scale*(-1)^((n-1)/2)*high_scale*low_scale^n/sqrt(n!)
+    for positive odd n and zero for even n
+  real_square: >-
+    M_n^2=potential_scale^2*high_scale^2*low_scale^(2*n)/n!
+    for positive odd n and zero for even n
+  parity_reopened: false
+  physical_rate: not_derived
+factorial_one_mass:
+  unnormalized: m_S(n)=S^n/n!_on_the_declared_support_and_zero_off_support
+  intensity: exact_positive_dimensionless_S
+  supports:
+    all_nonnegative:
+      ambient: nonnegative_integers
+      support: nonnegative_integers
+      total: exp(S)
+      normalized: exp(-S)*S^n/n!
+    positive:
+      ambient: nonnegative_integers
+      support: positive_integers
+      total: exp(S)-1
+      normalized: S^n/(n!*(exp(S)-1))
+    positive_odd:
+      ambient: nonnegative_integers
+      support: positive_odd_integers
+      total: sinh(S)
+      normalized: S^n/(n!*sinh(S))
+  physical_probability_interpretation: separate_premise
+mode_theorems:
+  consecutive_all_or_positive_ratio: m_S(n+1)/m_S(n)=S/(n+1)
+  all_nonnegative:
+    noninteger_S: unique_mode_floor_S
+    positive_integer_S: tied_modes_S_minus_one_and_S
+  positive:
+    S_less_than_two: unique_mode_one
+    S_equals_two: tied_modes_one_and_two
+    noninteger_S_above_two: unique_mode_floor_S
+    integer_S_above_two: tied_modes_S_minus_one_and_S
+  positive_odd:
+    consecutive_odd_ratio: m_S(n+2)/m_S(n)=S^2/((n+1)*(n+2))
+    unique_mode_condition: >-
+      odd_m_is_unique_when_(m-1)*m<S^2<(m+1)*(m+2), with the absent
+      lower neighbor ignored at m=1
+    tie_condition: >-
+      odd_m_and_m_plus_2_tie_when_S^2=(m+1)*(m+2)
+source_specializations:
+  source_composition: positive_odd
+  source_guard: positive
+  source_peak_grid: positive
+  source_switch_between_them_is_a_process_change: true
+  source_integer_activity_peak_ties_hidden_by_first_argmax: true
+countermodels:
+  - every_even_cosine_coefficient_remains_zero_after_multiplication_by_sqrt_factorial_n
+  - one_single_mode_Fock_basis_contains_one_normalized_state_at_each_occupation_not_factorial_n_distinct_states
+  - zero_interaction_coupling_preserves_the_ladder_and_factorial_mass_shape_but_nulls_any_transition_rate
+  - zero_or_order_dependent_spectral_density_preserves_the_algebraic_square_but_changes_or_nulls_the_rate
+  - alternate_initial_state_or_multiple_modes_changes_matrix_elements_and_final_state_counting
+  - coordinated_field_and_canonical_normalization_changes_can_compensate_a_classical_coordinate_rescaling
+physical_ceiling:
+  - the_Fock_basis_and_CCR_are_declared_mathematical_structure_not_derived_substrate_quanta
+  - factorial_norm_is_a_ladder_normalization_or_contraction_factor_not_a_density_of_states_by_itself
+  - a_physical_rate_requires_a_free_Hamiltonian_interaction_time_or_energy_rule_final_state_measure_units_and_parameter_provenance
+  - normalized_factorial_one_mass_is_a_mathematical_distribution_only_after_its_sample_space_is_declared
+  - C_SPN_002_finite_collective_spin_and_C_OSC_001_infinite_bosonic_ladders_remain_distinct
+  - WN4_is_not_an_input
+mutation_obligations:
+  - square_root_level_ladder_coefficients_and_adjoint_orientation
+  - vacuum_and_top_state_actions
+  - commutator_sign_identity_and_finite_defect_coefficient_D
+  - repeated_creation_factorial_norm
+  - cosine_odd_support_and_even_zero
+  - one_factorial_not_factorial_square
+  - all_nonnegative_positive_and_positive_odd_normalizers
+  - exp_minus_one_and_sinh_signs
+  - adjacent_and_adjacent_odd_mode_ratios
+  - integer_tie_handling
+  - interaction_and_spectral_rate_countermodels
+implementation_plan:
+  canonical_module: src/substrate_framework/bosonic_fock.py
+  public_dataclasses: [BosonicFockRung, TruncatedBosonicFockLadder]
+  public_functions:
+    - bosonic_fock_rung
+    - truncated_bosonic_fock_ladder
+    - bosonic_cosine_matrix_element
+    - bosonic_cosine_matrix_element_square
+    - factorial_one_mass
+    - factorial_one_total_mass
+    - normalized_factorial_one_mass
+    - factorial_one_modes
+  canonical_tests: tests/test_bosonic_fock.py
+  primary_verifier: proposals/P191-wn3-bosonic-multiplicity-audit/verify.py
+  independent_reviewer: proposals/P191-wn3-bosonic-multiplicity-audit/reviews/independent_bosonic_fock_review.py

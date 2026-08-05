@@ -1,0 +1,27 @@
+attempt: 0003
+campaign: P191
+candidate: exact_Fock_domain_truncation_and_factorial_one_formula_freeze
+status: passed_formula_freeze
+started_at: '2026-08-11T17:05:00Z'
+finished_at: '2026-08-11T17:11:00Z'
+claim: C-OSC-001
+selected_candidates: [C, D, E, F]
+retained_evidence_candidates: [A, G]
+pending_governance_candidate: H
+rejected_as_complete: B
+frozen_objects:
+  infinite_Fock_domain: algebraic_finite_support_span_of_orthonormal_nonnegative_occupation_basis
+  annihilation_action: a_ket_n_equals_sqrt_n_ket_n_minus_one_with_vacuum_zero
+  creation_action: adag_ket_n_equals_sqrt_n_plus_one_ket_n_plus_one
+  commutator: identity_on_the_algebraic_domain
+  repeated_creation: adag_power_n_ket_zero_equals_sqrt_factorial_n_ket_n
+  finite_defect: commutator_D_equals_identity_D_minus_D_times_top_projector
+  conditional_composition_support: positive_odd_orders
+  factorial_one_normalizers:
+    all_nonnegative: exp_S
+    positive: exp_S_minus_one
+    positive_odd: sinh_S
+exact_oracle: symbolic_operator_action_integer_induction_matrix_identity_series_and_ratio_inequalities
+physical_ceiling: algebraic_norm_and_mass_only_no_density_of_states_probability_or_rate
+scientific_threshold_changed: false
+next_attempt: implement_additive_bosonic_Fock_and_factorial_one_APIs_with_adverse_tests

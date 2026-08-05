@@ -2,7 +2,7 @@
 description: Audit WN3 and derive an exact bosonic Fock ladder and parity-complete composition ledger
 author: vantasner
 created: '2026-08-11T16:52:00Z'
-updated: '2026-08-11T17:04:00Z'
+updated: '2026-08-11T17:11:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -168,6 +168,20 @@ all-positive-order family and calls even orders reopened. The next attempt
 therefore freezes the infinite algebraic domain, exact truncation defect,
 parity-complete sample spaces, and countermodel obligations.
 
+Attempt 0003 freezes the distinct candidate before implementation. On the
+algebraic finite-support span of an orthonormal occupation basis, the exact
+ladder has `[a,a_dagger]=I` and
+`(a_dagger)^n|0>=sqrt(n!)|n>`. Its D-level matrix truncation instead has the
+exact defect `I-D|D-1><D-1|`, consistent with the finite trace obstruction.
+Conditional composition with C-SG-019 retains positive-odd support and gives
+the algebraic square proportional to `S^n/n!`; its normalized total is
+`sinh(S)`. The distinct all-nonnegative and positive-integer families have
+totals `exp(S)` and `exp(S)-1`. Exact adjacent-order ratios freeze all mode
+and tie predicates. Candidates C through F are selected as one coherent claim
+surface; A and G remain source and countermodel evidence, H remains the open
+governance route, and accepted-composition-only candidate B cannot deliver the
+new Fock object.
+
 ## Debt Ledger
 
 The P191 ledger tracks source predicates, Fock domain, truncation, parity,
@@ -209,6 +223,6 @@ obstruction alone cannot complete the campaign.
 ## Cross-References
 
 See C-SG-019, C-SPN-002, C-CMB-001, C-CMB-002, P110, P122, P189, P190, GB4,
-PN1, PN3, WN1 through WN4, `cosine_coefficients.py`,
+PN1, PN3, WN1 through WN4, `cosine_vertices.py`,
 `factorial_suppression.py`, `symmetric_spin.py`, and the framework-migration
 effort.
