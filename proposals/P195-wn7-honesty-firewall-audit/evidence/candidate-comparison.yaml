@@ -1,0 +1,33 @@
+campaign: P195
+candidates:
+  A:
+    verdict: retained_as_source_evidence
+    reason: Native WN7 reproduces 59 checks but the green tally grants no semantic or scientific authority.
+  B:
+    verdict: selected
+    reason: Exact pinned paths bytes tokens exemption and empty matcher results define the strongest positive statement.
+  C:
+    verdict: rejected_as_duplicate_and_weaker
+    reason: P120 P127 and audit_source_tokens already own the reusable audit surface; WN7 contributes no coherent import or data-flow analyzer.
+  D:
+    verdict: selected
+    reason: Construction tag comment string clamp assignment collision and evasion mutations expose the matcher boundary.
+  E:
+    verdict: selected
+    reason: Polynomial off-grid zero late-growth zero-weight and free-amplitude counterexamples bound every local physics label.
+  F:
+    verdict: selected
+    reason: All ten candidate dependencies remain restricted to their individual qualified claims and transfer no authority through scanning.
+  G:
+    verdict: selected
+    reason: WN7-specific predicate adjudication is terminal qualification evidence rather than a duplicate scientific claim.
+  H:
+    verdict: selected
+    reason: No reverse source consumer or canonical surface requires migration; queue memory and campaign governance still require closure.
+selection: [B, D, E, F, G, H]
+comparators_used_for_selection: []
+claims_proposed: []
+canonical_implementation: null
+release_change: null
+debt: []
+

@@ -1,0 +1,31 @@
+attempt: 0004
+campaign: P195
+candidate: exact_finite_theorem_and_semantic_ceiling
+status: passed_serious_boundary
+started_at: '2026-08-11T20:21:00Z'
+finished_at: '2026-08-11T20:25:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P195-wn7-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest tests/test_source_audit.py
+  - git diff --check
+result:
+  primary: {checks: 32, exit_status: 0}
+  independent: {checks: 21, exit_status: 0}
+  focused_tests: {passed: 9, exit_status: 0}
+  diff_check: {exit_status: 0}
+retained:
+  - exact_zero_hit_results_for_the_declared_matchers_on_six_hash_pinned_files
+  - current_tagged_line_token_classification
+  - fixture_nonvacuity_on_the_declared_samples
+rejected:
+  - finite_substrings_as_import_or_data_flow_or_provenance_proof
+  - finite_clamp_spellings_as_uncapped_semantics
+  - selected_assignment_regex_as_parameter_provenance
+  - local_samples_as_superpolynomial_admissibility_global_crossover_or_physical_growth_theorems
+implementation_change: none
+new_claim: null
+compatibility_event: none
+scientific_threshold_changed: false
+next_attempt: close_dependency_nonduplication_consumer_and_terminal_governance_reviews
+

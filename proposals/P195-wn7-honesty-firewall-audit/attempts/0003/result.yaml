@@ -1,0 +1,21 @@
+attempt: 0003
+campaign: P195
+candidate: independent_release_pin_and_adversarial_audit
+status: failed
+started_at: '2026-08-11T20:19:00Z'
+finished_at: '2026-08-11T20:20:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P195-wn7-honesty-firewall-audit/verify.py
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+result:
+  primary: {checks: 32, exit_status: 0}
+  independent: {checks_before_failure: 1, exit_status: 1}
+failure_class: verifier_implementation
+diagnosis: >-
+  The independent route contained a mistyped v0.144.0 SHA-256 constant and
+  correctly stopped at its release provenance check. No scientific predicate
+  ran under an unpinned base and no source conclusion changed.
+compatibility_event: none
+scientific_threshold_changed: false
+next_attempt: correct_only_the_release_digest_then_rerun_both_exact_routes
+

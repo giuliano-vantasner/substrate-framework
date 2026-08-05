@@ -1,0 +1,21 @@
+campaign: P195
+source_unit: WN7
+canonical_modules_changed: []
+canonical_tests_changed: []
+campaign_only_files:
+  - proposals/P195-wn7-honesty-firewall-audit/verify.py
+  - proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+existing_reusable_surfaces:
+  - src/substrate_framework/source_audit.py
+  - src/substrate_framework/verification.py
+assessment: >-
+  WN7's matchers are campaign-specific finite byte predicates. P120 and P127
+  already establish the reusable finite-scanner method and its semantic ceiling,
+  while audit_source_tokens already supplies deterministic hashed lexical
+  navigation. Extracting WN7's unsafe whole-line exemption or incomplete
+  pseudo-import and clamp matchers would create a weaker duplicate API.
+new_package_api: null
+new_scientific_claim: null
+release_change: null
+debt: []
+

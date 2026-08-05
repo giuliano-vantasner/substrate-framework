@@ -1,0 +1,23 @@
+campaign: P195
+source:
+  path: merged-framework/bridges/phase-37/bridge_WN7_honesty_firewall_guard.py
+  sha256: 88844689bf682ca5ff524378f4e5e46a25bcab54b1a3a6e59afe69b990694d50
+  git_history: [7222eed]
+base_release:
+  id: v0.144.0
+  sha256: b995916d6e708d29f0f493562741d7ba35bc202ce2784f4aaed7d1dfd5232a0a
+primary:
+  path: proposals/P195-wn7-honesty-firewall-audit/verify.py
+  sha256: a0160f114d82ee669ea0c883cc9ed4a7da6b7bfef4ac263cf7d22ba90d3f7995
+  route: hash_pins_exact_matcher_reproduction_AST_import_inventory_mutations_and_symbolic_counterexamples
+  tally: 32
+independent:
+  path: proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  sha256: 7abbe3218961f35b20192b092aa9fb36735e6dc061989c3a0a825bb3911be70b
+  route: fresh_casefold_tokenize_AST_regex_and_raw_symbolic_counterexamples
+  tally: 21
+independence: >-
+  The independent route imports neither the primary verifier nor WN7's scanner
+  functions. Shared infrastructure is limited to the result-tally primitive.
+compatibility_event: none
+

@@ -1,0 +1,18 @@
+campaign: P195
+source_unit: WN7
+prior_surfaces:
+  P120: finite scanner exactness AST separation evasion collision and semantic ceiling
+  P127: GB6 predicate mutations import inventory data-flow limits and prior WN7 reproduction
+  source_audit: deterministic hashed lexical navigation that explicitly disclaims semantic and scientific dependency proof
+distinct_audit_surface:
+  - WN7-specific predicate-by-predicate reproduction and adjudication
+  - WN1-through-WN6 current tag and import inventory on pinned bytes
+  - five WN7-local physics-fixture counterexamples
+assessment: >-
+  The work terminally qualifies WN7 as a source unit without creating a new
+  reusable theorem, scientific claim, package API, or release delta.
+new_claim: null
+new_package_api: null
+release_change: null
+verdict: terminal_qualified_no_release
+debt: []
