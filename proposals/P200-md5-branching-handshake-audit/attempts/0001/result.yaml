@@ -1,0 +1,31 @@
+attempt: 0001
+campaign: P200
+candidate: durable_contract_manifest_and_formula_freeze
+status: passed_freeze_boundary
+base_release: v0.148.0
+base_commit: d5a8125
+source_unit: MD5
+source_sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb
+prior_exposure_preserved: true
+fresh_blinding_claimed: false
+scientific_candidate_selected: false
+compatibility_policy:
+  mutable_quadrature: numpy_trapezoid_or_shared_helper
+  immutable_legacy: alias_only_if_required
+  version_event_is_scientific_failure: false
+result:
+  workflow_claims: 188
+  workflow_accepted: 188
+  active_proposals: 1
+  migration_units: 218
+  migration_pending: 25
+  repository_validation_exit_status: 0
+  memory_validation_exit_status: 0
+  yaml_validation_exit_status: 0
+  diff_check_exit_status: 0
+pins:
+  proposal_sha256: aa918f61294c0e3131144fad9f4938ad9c82fa0f6bcd9cb8785d650169cc2940
+  formula_freeze_sha256: c017630b21c121613e533efde39b941ffa325d8f53bba99c3e271eb668e464b9
+  memory_contract_sha256: 6681e68e150cfb39ddba1e0fe1d13ea1a9eaf0aa1f1dac0edcaca3f1eb0daaf0
+debt: []
+next_attempt: source_compatibility_reproduction_and_predicate_adjudication

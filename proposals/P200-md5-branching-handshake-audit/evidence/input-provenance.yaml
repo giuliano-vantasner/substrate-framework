@@ -1,0 +1,28 @@
+campaign: P200
+source_unit: MD5
+base_release: v0.148.0
+base_commit: d5a8125
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-38/bridge_MD5_phase32_preserved_and_isotope_handshake.py
+source_sha256: bcc45611ce87312a11cdc35d2bdc4c1a92b2e9fdb44c427f7676701f69326ecb
+prior_exposure: P191_graph_and_P197_through_P199_reverse_consumer_records
+accepted_authority:
+  GB4: [C-BRN-001]
+  WN5: [C-BRN-001, C-OSC-001]
+  WN6: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+  MD2: [C-DOS-001, C-QFL-001]
+  MD3: [C-OSC-001, C-CMB-003, C-VOP-001]
+  MD4: [C-CMB-003, C-MKV-001]
+  MC3: [C-LAT-001, C-LAT-002, C-MED-003, C-SG-017, C-SG-018, C-MED-004]
+  PN2: []
+permitted_claim_dependencies: [C-BRN-001, C-CMB-003]
+process_context_only: [C-MKV-001]
+forbidden_imports:
+  - external_PN2_energy_band_or_occupation
+  - material_S_or_isotope_parameter_map
+  - exhaustive_physical_channel_set
+  - interaction_matrix_element_final_state_branching_fraction_or_rate
+compatibility_policy:
+  mutable_quadrature: numpy_trapezoid_or_shared_helper
+  immutable_legacy: alias_only_if_required
+  version_event_is_scientific_failure: false

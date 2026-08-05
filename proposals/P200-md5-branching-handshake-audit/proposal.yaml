@@ -1,0 +1,53 @@
+id: P200
+base_release: v0.148.0
+base_commit: d5a8125
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MD5]
+question: >-
+  What exact structural condition preserves the comparison-channel monotonicity
+  when a positive allocation weight may depend on population, which MD5
+  statements are already C-BRN-001 and C-CMB-003 corollaries, and does any
+  accepted dependency supply the source's isotope or material handshake?
+invariants:
+  - C-BRN-001 normalizes separately declared common-dimension rate inputs and derives no physical channel set or rate law.
+  - C-CMB-003 supplies a static normalized factorial-one mass and no material event weight or time process.
+  - C-MKV-001 supplies a separately declared time process but no material S rate preparation isotope map or branching observable.
+  - Positive static membership does not derive an exhaustive channel interpretation or an isotope prediction.
+  - A population-dependent weight changes the derivative through w_plus_N_times_w_prime and cannot be treated as constant without an explicit independence premise.
+  - PN2 has no accepted mapping and supplies no occupation energy band transition or final state.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral never removed numpy.trapz.
+allowed_imports:
+  - C-BRN-001 exact two-channel allocation for separately declared common-dimension rates
+  - C-CMB-003 exact positive all-nonnegative factorial-one mass for separately declared S and n
+  - C-MKV-001 only as a separately declared process ceiling not as a material or branching map
+  - accepted MC3 MD2 MD3 WN6 claims as material state and parameter ceilings only
+  - a separately declared positive differentiable population-dependent weight and positive rate ratio
+  - hash-pinned MD5 as noncanonical source evidence after the exposure record and freeze gate
+candidates:
+  - id: A
+    description: Retain the exact constant-positive-weight C-BRN-001 monotonic allocation as an already accepted corollary with factorial-one membership supplied by C-CMB-003.
+  - id: B
+    description: Promote the exact population-dependent-weight criterion showing that the comparison fraction decreases exactly when w(N)+N*w_prime(N) is positive.
+  - id: C
+    description: Promote an expectation-level monotonicity theorem for a positive random weight independent of population if integrability and differentiation premises close naturally.
+  - id: D
+    description: Promote MD5's isotope handshake only if accepted claims independently supply two host parameter maps state preparation common channels and rate observables.
+  - id: E
+    description: Make no new claim if the surviving MD5 content is entirely C-BRN-001 and C-CMB-003 arithmetic and Candidate B adds no useful distinct surface.
+  - id: F
+    description: Open a foundational branching revision only if accepted claims independently conflict and at least two repairs are required.
+uniqueness_evidence: null
+selection_criteria:
+  - exact declared rate dimensions channel normalization population domain and weight regularity
+  - natural fit without turning a mathematical mass into a physical branch or event law
+  - exact derivative sign necessity sufficiency boundary and limiting behavior
+  - sensitivity to N dependence weight sign exhaustive-channel and common-dimension premises
+  - novelty beyond C-BRN-001 and C-CMB-003
+  - useful consumer reach without isotope material reaction or substrate overreach
+claims_proposed: [C-BRN-002]
+comparators_blinded_until: >-
+  MD5's native result was exposed in earlier byte-pinned source graphs. P200
+  claims no fresh blinding and freezes candidates, exact derivative criteria,
+  imports, mutations, and physical ceilings before renewed P200 execution,
+  detailed predicate audit, or inspection of its isotope comparison values.
+status: active

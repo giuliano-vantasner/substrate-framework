@@ -1,0 +1,36 @@
+campaign: P200
+claim_candidate: C-BRN-002
+frozen_before_P200_source_execution: true
+declared_inputs:
+  N: positive_real_population_coordinate
+  rho: positive_common_dimension_rate_ratio
+  w_of_N: positive_differentiable_dimensionless_weight
+comparison_fraction:
+  B(N): rho/(N*w(N)+rho)
+  derivative: -rho*(w(N)+N*w_prime(N))/(N*w(N)+rho)^2
+  strict_decrease_criterion: w(N)+N*w_prime(N)>0
+  stationary_point_criterion: w(N)+N*w_prime(N)=0
+  increase_criterion: w(N)+N*w_prime(N)<0
+constant_weight_corollary:
+  derivative: -rho*w/(N*w+rho)^2
+  accepted_owner: C-BRN-001
+factorial_one_substitution:
+  w: exp(-S)*S^n/n_factorial
+  premise: S_positive_and_n_nonnegative_integer_independent_of_N
+  consequence: positive_constant_weight_corollary_only
+  accepted_owner: C-CMB-003_composed_with_C-BRN-001
+counterexamples:
+  decreasing_but_preserved: w(N)=1/sqrt(N)_gives_w_plus_Nw_prime=1/(2sqrt(N))
+  stationary: w(N)=1/N_gives_w_plus_Nw_prime=0
+  reversed: w(N)=1/N^2_gives_w_plus_Nw_prime=-1/N^2
+mutations:
+  - erase_N_times_w_prime
+  - assume_positive_w_implies_decrease
+  - insert_factorial_one_mass_as_physical_rate
+  - infer_isotope_ordering_without_two_parameter_maps
+  - infer_exhaustive_channels_from_two_normalized_inputs
+nonclaims:
+  - no_material_S_or_weight
+  - no_isotope_ordering_or_same_curve_prediction
+  - no_state_preparation_transition_channel_branching_reaction_or_rate
+  - no_foundational_revision
