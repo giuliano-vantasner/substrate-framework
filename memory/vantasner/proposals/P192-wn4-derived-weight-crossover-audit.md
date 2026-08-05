@@ -2,7 +2,7 @@
 description: Audit WN4 and derive a tie-correct exact factorial-one shape, tail, and distribution ledger
 author: vantasner
 created: '2026-08-11T18:12:00Z'
-updated: '2026-08-11T18:18:00Z'
+updated: '2026-08-11T19:11:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - factorial-one-shape
 - poisson-family
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P192 WN4 Derived Weight and Crossover Audit
 
@@ -241,6 +241,17 @@ legacy integration alias is needed, and nine reverse consumers remain pending.
 The next attempt is the governed v0.143.0 promotion transaction and one
 integrated repository gate.
 
+Attempt 0012 completes the governed promotion. C-CMB-003 is accepted in
+v0.143.0, WN4 is qualified through C-OSC-001 and C-CMB-003, P192 is frozen in
+`campaigns/`, and the registry, pinned and current release manifests, generated
+claim index, generated accepted memory, source queue, decision memory, and
+campaign records agree. The queue contains 32 pending and 173 qualified units.
+The single integrated gate validates 788 memory files and passes all 1,710
+tests in 175.85 seconds; total wall time is 189.48 seconds with 215,476 KiB
+maximum resident memory and exit zero. The exact theorem remains
+mathematical-only, all nine reverse consumers remain pending, and the P192
+debt ledger is empty.
+
 ## Debt Ledger
 
 The P192 ledger tracks source predicates, accepted overlap, sample space,
@@ -257,7 +268,7 @@ consumers, and governed state.
 | Poisson mathematics may be called a physical process | Separate normalized mass identities from process premises | discharged |
 | Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | discharged |
-| Governed records may disagree | Synchronize claim, source, release, docs, memory, and debt | open |
+| Governed records may disagree | Synchronize claim, source, release, docs, memory, and debt | discharged |
 
 ## Review and Promotion Plan
 
@@ -273,11 +284,11 @@ narrow validation rather than a ceremonial second full suite.
 
 ## Done Gate
 
-P192 closes only when the positive tie-correct shape, tail, and distribution
-ledger exists in its warranted scope, candidates and mutations are
-adjudicated, dependencies and consumers replay, governed state agrees, and the
-debt ledger is empty. A corrected unique-mode statement or physical no-go alone
-cannot complete the campaign.
+P192 is closed. The positive tie-correct shape, tail, and distribution ledger
+exists in its warranted scope; candidates and mutations are adjudicated;
+dependencies and consumers replay; governed state agrees; and the debt ledger
+is empty. The corrected unique-mode statement and physical ceilings remain
+supporting adjudication rather than substitutes for the accepted object.
 
 ## Cross-References
 

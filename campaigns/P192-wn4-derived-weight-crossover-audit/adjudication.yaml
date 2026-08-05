@@ -1,0 +1,76 @@
+campaign: P192
+title: WN4 exact factorial-one shape generating moment and tail audit
+source_baseline: substrate@6d1f4e0
+source_units: [WN4]
+base_release: v0.142.0
+accepted_release: v0.143.0
+adjudicated_at: '2026-08-11T19:07:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_reproduction_is_source_evidence_only.}
+  - {id: C, reason: Exact_log_concavity_survives_with_the_complete_positive_integer_mode_tie.}
+  - {id: D, reason: Exact_ratio_thresholds_give_geometric_majorants_and_every_fixed_power_decay.}
+  - {id: E, reason: The_normalized_all_nonnegative_family_has_an_exact_PGF_and_falling_factorial_moments.}
+  - {id: F, reason: Missing_interaction_process_spectral_and_medium_premises_enforce_the_mathematical_only_ceiling.}
+  - {id: G, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: B, decision: insufficient_because_C_OSC_001_does_not_own_log_concavity_the_PGF_factorial_moments_or_quantified_tails}
+claims:
+  - {id: C-CMB-003, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-OSC-001, decision: unchanged_all_nonnegative_factorial_one_mass_ratio_normalization_and_tie_complete_modes}
+unpromoted_claims:
+  - {id: strict_log_concavity_implies_a_unique_integer_mode, reason: Positive_integer_S_has_the_adjacent_tied_modes_S_minus_1_and_S.}
+  - {id: adjacent_step_residual_is_S_minus_n, reason: The_exact_residual_has_the_off_by_one_form_S_minus_n_plus_1.}
+  - {id: PN2_bands_validate_the_weight, reason: The_source_band_predicates_do_not_evaluate_the_factorial_one_mass.}
+  - {id: mass_limbs_select_phase_space_or_energy_gap_dynamics, reason: No_physical_interaction_or_spectral_premise_is_present.}
+  - {id: a_power_law_interpolates_the_turnover, reason: The_source_defines_no_power_law_family_or_matching_rule.}
+  - {id: normalized_mass_derives_a_Poisson_process_or_medium_mean, reason: A_mathematical_mass_does_not_supply_occurrence_dynamics_time_rate_or_medium_provenance.}
+  - {id: WN5_through_WN7_or_MD1_through_MD6_conclusions, reason: All_nine_reverse_consumers_remain_separately_pending.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_factorial_one_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-CMB-003-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {WN4: qualified}
+accepted_mappings: [C-OSC-001, C-CMB-003]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.143.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0012/result.yaml
+  memory_files: 788
+  tests_passed: 1710
+  pytest_seconds: 175.85
+  wall_seconds: 189.48
+  maximum_resident_kib: 215476
+  exit_status: 0
+debt: []
+status: accepted

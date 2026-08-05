@@ -42,7 +42,7 @@ expected_coverage:
   compatibility_aliases: 0
   version_only_scientific_failures: 0
 actual_replay:
-  command: PYTHONPATH=src .venv/bin/python proposals/P192-wn4-derived-weight-crossover-audit/reviews/replay_source_graph.py
+  command: PYTHONPATH=src .venv/bin/python campaigns/P192-wn4-derived-weight-crossover-audit/reviews/replay_source_graph.py
   terminal_tally: ALL_43_CHECKS_PASS
   reused_nodes: 16
   freshly_executed_nodes: 1

@@ -7004,3 +7004,62 @@ units:
       all mutable P191 code have no legacy NumPy quadrature surface, so no
       version event affects a scientific verdict. Ten reverse consumers remain
       individually pending.
+  WN4:
+    disposition: qualified
+    accepted_claims:
+      - C-OSC-001
+      - C-CMB-003
+    qualification: >-
+      C-OSC-001 retains the normalized all-nonnegative factorial-one mass,
+      exact adjacent ratio, normalization, and complete mode set. C-CMB-003
+      retains strict interior log-concavity without deleting the positive-
+      integer adjacent tie, the exact probability-generating function and
+      falling-factorial moments, quantified geometric point and upper-tail
+      majorants, and decay faster than every fixed inverse power. WN4's claim
+      of a unique integer mode is false, and its exact adjacent-step residual
+      is S-(n+1), not S-n. Its PN2 band predicates do not evaluate the weight.
+      The mathematical growth and suppression limbs do not derive phase-space
+      or energy-gap dynamics, no power-law interpolation is defined, and a
+      normalized Poisson mass does not derive a physical Poisson process,
+      subdivision law, medium mean, rate, material mechanism, or downstream
+      prediction.
+    evidence:
+      - campaigns/P192-wn4-derived-weight-crossover-audit/reviews/source_adjudication.md
+      - campaigns/P192-wn4-derived-weight-crossover-audit/reviews/C-CMB-003-claim-review.md
+      - campaigns/P192-wn4-derived-weight-crossover-audit/reviews/impact_analysis.md
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/source-reproduction.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/compatibility-audit.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/source-audit.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/check-adjudication.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/formula-freeze.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/input-provenance.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/dependency-audit.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/consumer-audit.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/candidate-comparison.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/implementation-audit.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/primary-provenance.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/evidence/independent-provenance.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/verify.py
+      - campaigns/P192-wn4-derived-weight-crossover-audit/reviews/independent_factorial_one_review.py
+      - campaigns/P192-wn4-derived-weight-crossover-audit/reviews/replay_source_graph.py
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0003/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0004/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0005/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0006/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0007/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0008/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0009/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0010/result.yaml
+      - campaigns/P192-wn4-derived-weight-crossover-audit/attempts/0011/result.yaml
+      - memory/vantasner/decisions/C-CMB-003-review.md
+      - memory/vantasner/decisions/WN4-qualified-review.md
+    note: >-
+      P192 closes 115 primary and 47 independent exact checks, 37 focused
+      tests, and a seventeen-node 662-check covered source graph before the
+      integrated boundary. Sixteen byte-identical executions are reused from
+      P191 and newly relevant PN2 freshly passes 25 checks. WN4 and all mutable
+      P192 code have no legacy NumPy quadrature surface, so no version event
+      affects a scientific verdict. Nine reverse consumers remain pending.
