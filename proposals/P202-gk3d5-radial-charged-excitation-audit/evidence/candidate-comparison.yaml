@@ -1,0 +1,39 @@
+campaign: P202
+criteria_order:
+  - exact_action_and_normalization_closure
+  - smoothness_origin_regular_finite_energy_and_charge
+  - solver_status_residual_mesh_domain_tolerance_and_method_agreement
+  - Pohozaev_tail_small_amplitude_and_dimensional_consistency
+  - assumption_and_parameter_economy
+  - novelty_beyond_accepted_one_dimensional_and_real_radial_objects
+  - quantum_and_physical_interpretation_ceiling
+  - dependency_and_consumer_closure
+decisions:
+  A:
+    decision: selected_as_exact_part_of_C_QBL_004
+    reason: The_declared_smooth_complex_action_closes_equation_origin_current_energy_tail_and_virial_exactly.
+  B:
+    decision: selected_as_numeric_part_of_C_QBL_004
+    reason: Independent_collocation_direct_shooting_and_transformed_shooting_pass_every_frozen_gate.
+  C:
+    decision: not_selected_distinct_upgrade
+    reason: No_complete_overshoot_undershoot_theorem_or_frequency_interval_was_proved_and_numeric_evidence_is_not_exact_existence.
+  D:
+    decision: rejected_invalid_composition
+    reason: C_QBL_002_is_one_dimensional_and_C_PDE_001_is_a_real_IVP_with_no_complex_stationary_lift.
+  E:
+    decision: rejected_fallback_unneeded
+    reason: The_three_dimensional_branch_is_distinct_and_survives_independent_refinement.
+  F:
+    decision: rejected_unsupported_quantum_overread
+    reason: Classical_localization_and_Noether_charge_do_not_supply_quantization_determinant_coupling_or_physical_electric_charge.
+  G:
+    decision: rejected_foundation_revision_unnecessary
+    reason: The_branch_is_a_compatible_conditional_extension_and_exposes_no_independent_accepted_inconsistency.
+  H:
+    decision: selected_required_governance_closure
+    reason: GK3D5_requires_an_individual_terminal_mapping_and_consumer_replay_without_cyclic_authority.
+comparator_selected_candidate: false
+new_free_parameters: 1
+free_parameters: [frequency_as_branch_coordinate]
+physical_parameter_values_selected: false

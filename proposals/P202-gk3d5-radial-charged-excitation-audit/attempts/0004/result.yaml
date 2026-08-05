@@ -1,0 +1,15 @@
+attempt: 0004
+campaign: P202
+timestamp_utc: '2026-08-05T20:27:00Z'
+kind: source_graph_replay
+command: PYTHONDONTWRITEBYTECODE=1_PYTHONPATH=src_python_reviews_replay_source_graph.py
+exit_status: 1
+passed_before_stop: 19
+failure: aggregate_static_check_count_was_written_as_126_instead_of_116
+diagnosis: verifier_bookkeeping_arithmetic
+scientific_candidate_affected: false
+per_file_inventories_affected: false
+repair: >-
+  Preserve all nine independently checked per-file inventories and change only
+  their aggregate from 126 to the actual arithmetic sum 116.
+continuation: rerun_the_same_graph_oracle_then_add_stage_aware_authority_checks

@@ -1,0 +1,97 @@
+campaign: P202
+probe_frequency: 0.5
+analytic_tail_rate: 0.5
+origin_epsilon: 1.0e-6
+primary_method:
+  solver: scipy_solve_bvp_adaptive_collocation
+  equation: f_double_prime_plus_2_f_prime_over_r_equals_sin_f_over_2_minus_omega_squared_f
+  left_boundary: regular_origin_second_order_series
+  right_boundary: f_at_R_equals_zero
+  nontriviality_floor: 1.0e-3
+  quadrature: substrate_framework.numerics.trapezoid_integral
+  quadrature_points: 20001
+levels:
+  - outer_radius: 20.0
+    initial_mesh_points: 1001
+    tolerance: 1.0e-6
+    adaptive_nodes: 1001
+    iterations: 1
+    max_collocation_rms_residual: 9.511196473097294e-8
+    max_boundary_residual: 4.848040719213271e-16
+    off_grid_ode_residual_max_abs: 2.2958770440340004e-8
+    central_amplitude: 6.106678917563718
+    energy: 2990.2493232063034
+    noether_charge: 4721.017903733141
+    normalized_pohozaev_residual: 1.4335152748015463e-6
+    fitted_tail_rate_on_8_to_16: 0.5012462313699662
+  - outer_radius: 30.0
+    initial_mesh_points: 2001
+    tolerance: 1.0e-8
+    adaptive_nodes: 2220
+    iterations: 2
+    max_collocation_rms_residual: 8.260026185690307e-9
+    max_boundary_residual: 1.5659075059384521e-32
+    off_grid_ode_residual_max_abs: 8.673276873615021e-9
+    central_amplitude: 6.10667796513825
+    energy: 2990.2501000871143
+    noether_charge: 4721.019723340721
+    normalized_pohozaev_residual: 8.115924808043336e-11
+    fitted_tail_rate_on_8_to_16: 0.4999492746958618
+  - outer_radius: 40.0
+    initial_mesh_points: 4001
+    tolerance: 1.0e-8
+    adaptive_nodes: 4174
+    iterations: 2
+    max_collocation_rms_residual: 9.888634937006383e-9
+    max_boundary_residual: 1.0587911840678754e-22
+    off_grid_ode_residual_max_abs: 2.570079544149395e-9
+    central_amplitude: 6.106677965122759
+    energy: 2990.250100204682
+    noether_charge: 4721.019723587223
+    normalized_pohozaev_residual: 4.7504594201939086e-12
+    fitted_tail_rate_on_8_to_16: 0.4999492161354548
+pairwise_refinement:
+  radius_20_to_30:
+    core_Linf_on_0_to_10: 2.184735737369159e-6
+    relative_energy_change: 2.598046266748769e-7
+    relative_charge_change: 3.8542681167429874e-7
+  radius_30_to_40:
+    core_Linf_on_0_to_10: 1.6875345565381394e-10
+    relative_energy_change: 3.931699612886348e-11
+    relative_charge_change: 5.2213755172286783e-11
+independent_method:
+  solver: scipy_DOP853_origin_series_shooting
+  outer_boundary: f_prime_plus_kappa_plus_one_over_R_times_f_equals_zero
+  outer_radius: 20.0
+  central_bracket: [6.1, 6.125]
+  rtol: 1.0e-10
+  atol: 1.0e-12
+  max_step: 0.03
+  sample_points: 12001
+  central_amplitude: 6.106677965138643
+  robin_residual: 8.468213109902312e-13
+  energy: 2990.24996066329
+  noether_charge: 4721.019590699082
+  normalized_pohozaev_residual: 7.386687286027657e-8
+  relative_energy_difference_from_R20_collocation: 2.1317854055740052e-7
+  relative_charge_difference_from_R20_collocation: 3.573309772571692e-7
+transformed_independent_method:
+  representation: h_equals_r_times_f
+  equation: h_double_prime_equals_r_times_sin_h_over_r_over_2_minus_omega_squared_h
+  outer_boundary: h_prime_plus_kappa_h_equals_zero
+  solver: direct_scipy_DOP853_and_brentq
+  central_amplitude: 6.1066779651386405
+  robin_residual: 2.070972126427817e-11
+  energy: 2990.2499606633287
+  noether_charge: 4721.019590699193
+mutation_probes:
+  baseline_robin_residual: 8.468213109902312e-13
+  remove_radial_geometry_residual_at_baseline_center: 2.3986923127236723
+  replace_half_sine_coefficient_by_0.49_residual_at_baseline_center: -1.086435899298249
+verdict: numeric_evidence_for_a_nodeless_finite_energy_infinite_domain_branch_limit
+ceilings:
+  - no_global_analytic_existence_interval
+  - no_linear_or_nonlinear_stability
+  - no_quantization_or_asymptotic_particle_state
+  - no_identification_with_C_VAC_002_or_C_VAC_003_loop_fields
+  - no_physical_electric_charge_or_substrate_realization

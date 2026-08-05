@@ -1,0 +1,42 @@
+campaign: P202
+timestamp_utc: '2026-08-05T20:22:48Z'
+index_commit: 3392f096047b139ae6d46f9c604a40acd712cbeb
+change_kind: additive_module_and_tests
+new_surface: src/substrate_framework/radial_qball.py
+shared_APIs:
+  solve_bvp_evidence:
+    action: imported_unchanged
+    upstream_risk: LOW
+    direct_callers: 3
+    affected_processes: 0
+  trapezoid_integral:
+    action: imported_unchanged
+    upstream_risk: HIGH_due_to_existing_use
+    direct_callers: 18
+    transitive_symbols: 27
+    affected_processes: 0
+process_inventory:
+  total: 1
+  names: [Run_to_Check]
+  affected: []
+direct_framework_consumers_to_add:
+  - tests/test_radial_qball.py
+  - P202_primary_verifier
+  - P202_independent_transformed_review
+governance_consumers_to_replay:
+  - governance/claims.yaml
+  - governance/releases/current.yaml
+  - migration/source-claims.yaml
+  - migration/corpus-index.yaml
+  - migration/dependency-graph.yaml
+  - generated_documentation
+  - canonical_claim_release_memory
+  - GK3D6_and_EL2_reverse_consumer_audit
+tool_side_effect_cleanup: >-
+  GitNexus analyze appended a generic block to tracked AGENTS.md and emitted
+  CLAUDE.md plus .claude skill copies. Those generated host artifacts were
+  removed exactly; the refreshed ignored code index was retained.
+risk: LOW
+rationale: >-
+  The new module is additive. It does not modify either shared numeric helper,
+  and no existing execution flow imports the new symbols.

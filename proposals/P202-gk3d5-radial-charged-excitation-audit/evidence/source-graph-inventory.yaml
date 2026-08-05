@@ -1,0 +1,31 @@
+campaign: P202
+root_source_unit: GK3D5
+scope: six_direct_dependencies_root_and_two_direct_reverse_consumers
+nodes:
+  - {source_unit: EM1, relation: direct_dependency, static_check_calls: 16, assertions: 1}
+  - {source_unit: EM2, relation: direct_dependency, static_check_calls: 11, assertions: 1}
+  - {source_unit: EM6, relation: direct_dependency, static_check_calls: 11, assertions: 2}
+  - {source_unit: GK3D1, relation: direct_dependency, static_check_calls: 19, assertions: 1}
+  - {source_unit: GK3D3, relation: direct_dependency, static_check_calls: 14, assertions: 1}
+  - {source_unit: GK3D4, relation: direct_dependency, static_check_calls: 11, assertions: 1}
+  - {source_unit: GK3D5, relation: root, static_check_calls: 13, assertions: 2}
+  - {source_unit: GK3D6, relation: direct_reverse_consumer, static_check_calls: 10, assertions: 1}
+  - {source_unit: EL2, relation: direct_reverse_consumer, static_check_calls: 11, assertions: 3}
+expected_coverage:
+  unique_nodes: 9
+  static_check_calls: 116
+  assertion_nodes: 13
+  fresh_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  immutable_legacy_compatibility_nodes: [GK3D5]
+  version_only_scientific_failures: 0
+authority_before_P202_promotion:
+  qualified_direct_dependencies: [EM1, EM2, EM6, GK3D1, GK3D3, GK3D4]
+  pending_root: GK3D5
+  pending_reverse_consumers: [GK3D6]
+  already_qualified_reverse_consumers: [EL2]
+  EL2_mapping_excludes_GK3D5_claims: [C-TOP-001, C-U1-001]
+replay_rule: >-
+  Reuse the pinned dependency authority and source hashes. Do not rerun nine
+  native scripts merely to count their existing predicates. GK3D5's lazy
+  current-first integration fallback is compatibility evidence only.

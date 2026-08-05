@@ -1,0 +1,29 @@
+attempt: 0003
+campaign: P202
+timestamp_utc: '2026-08-05T20:22:48Z'
+kind: independent_candidate_construction
+base_commit: 3392f096047b139ae6d46f9c604a40acd712cbeb
+candidate_routes: [A, B, C, D, E, F, G, H]
+methods:
+  primary: scipy_solve_bvp_on_regular_origin_epsilon_with_outer_Dirichlet_condition
+  independent: DOP853_origin_series_shooting_with_outer_Robin_condition
+  transformed_cross_check: h_equals_r_times_f_DOP853_shooting_without_explicit_2_over_r_term
+frequency: 0.5
+outer_radii: [20.0, 30.0, 40.0]
+initial_mesh_points: [1001, 2001, 4001]
+collocation_tolerances: [1.0e-6, 1.0e-8, 1.0e-8]
+result: positive_branch_survives_all_predeclared_numeric_gates
+selected: [A, B, H]
+not_selected:
+  C: numerical_evidence_does_not_upgrade_to_a_global_analytic_existence_theorem
+  D: no_accepted_one_to_three_dimensional_lift_exists
+  E: a_distinct_nontrivial_three_dimensional_branch_survives
+  F: no_quantization_determinant_or_physical_electric_charge_map_is_derived
+  G: no_independent_foundational_inconsistency_is_present
+scientific_version_failures: 0
+compatibility_note: >-
+  All mutable quadrature uses numpy.trapezoid in scratch evidence or the
+  unchanged substrate_framework.numerics.trapezoid_integral helper in the
+  canonical implementation. No candidate verdict depends on the immutable
+  source's unevaluated legacy-name fallback.
+continuation: build_mutation_sensitive_primary_and_transformed_independent_verifiers
