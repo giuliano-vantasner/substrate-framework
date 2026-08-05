@@ -1,0 +1,29 @@
+campaign: P206
+source_unit: WM9
+source_sha256: d0d94417f5abd572e2e306c1f33dc264d42cfef94e4281dbc258ea9fa83ffd4d
+retained_exact_object:
+  supplied_mode_powers: [1, 2, 3]
+  supplied_profile: A_times_sech_of_kappa_x
+  normalized_overlap_family: y_p_equals_A_times_I_p
+  pairwise_distinct_coefficients: true
+  shared_amplitude_symbol: true
+provenance_corrections:
+  - C-OVL-001 already owns the exact normalized overlap factorization and explicitly supplies A.
+  - C-QBL-001 explicitly derives no stability or forced complex ontology, contrary to WM9's EM6 reading.
+  - C-QBL-003 has two negative-or-zero scalar Hessian modes and explicitly derives no particle generations or flavor tower.
+  - WM9's p=(1,2,3) mode tuple is a source literal; its length is not derived by the overlap calculation.
+  - C-MIX-002's N=3 phase count has no accepted quark generation or observed-family map.
+  - C-GSM-001 takes the scalar vacuum and kinetic term as supplied and derives no condensate ontology or physical Higgs particle.
+  - C-REP-003 and C-RGE-005 type representation rows and scalar multiplicities as separately supplied field-table data.
+  - WM9 equates len(amplitude_symbols) with n_condensates and then with N_H without an action representation or field-species theorem.
+countermodels_and_mutations:
+  - Three separately labeled fields can share the same amplitude and profile, retaining three species with one free amplitude symbol.
+  - Three independent amplitudes constrained equal collapse to one free symbol without deleting field labels.
+  - One field with three independent mode couplings exposes four symbols without multiplying field species.
+  - An inert field can contribute no overlap symbol while still remaining a field species in a supplied ledger.
+  - A symmetric parameter slice changes symbol cardinality while the declared field content is fixed.
+  - Declaring A_1 A_2 A_3 and counting them proves only the declaration used to build the counterfactual.
+headline_verdict_candidate: >-
+  WM9 is exact accepted overlap composition with useful counterfactual syntax,
+  but shared-symbol cardinality is not field multiplicity. N_H=1, N_gen=3,
+  the exclusion of N_H/N_gen=1, and the empty-debt claim are not derived.

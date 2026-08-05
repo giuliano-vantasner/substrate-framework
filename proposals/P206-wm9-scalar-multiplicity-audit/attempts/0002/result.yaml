@@ -1,0 +1,16 @@
+attempt: 0002
+campaign: P206
+timestamp_utc: '2026-08-05T22:33:00Z'
+kind: compatibility_preflight_and_native_reproduction
+freeze_commit: fe5c9aa
+source_body_inspected_after_freeze: true
+source_native_executions: 1
+source_exit_status: 0
+source_runtime_checks: 8
+source_terminal_tally: ALL_8_CHECKS_PASS
+elapsed_wall_seconds: 26.96
+max_rss_kib: 111344
+compatibility_surface: none
+scientific_version_failures: 0
+verdict: reproduced_source_behavior_without_granting_headline_authority
+continuation: audit_free_symbol_count_against_field_species_countermodels

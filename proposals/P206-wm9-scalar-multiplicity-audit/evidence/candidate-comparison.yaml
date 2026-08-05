@@ -1,0 +1,15 @@
+campaign: P206
+criteria_frozen_before_source_body: true
+candidates:
+  A: {decision: selected, reason: C_OVL_001_exactly_owns_shared_amplitude_overlap_factorization.}
+  B: {decision: rejected, reason: No_accepted_action_field_expansion_or_representation_map_identifies_one_background_parameter_with_one_scalar_species.}
+  C: {decision: selected, reason: Free_symbol_cardinality_is_construction_and_parameterization_dependent.}
+  D: {decision: selected, reason: Equal_amplitude_multiple_fields_independent_mode_couplings_and_inert_fields_are_decisive_countermodels.}
+  E: {decision: rejected, reason: Accepted_claims_derive_neither_physical_N_H_one_nor_observed_N_gen_three.}
+  F: {decision: selected, reason: C_OVL_001_and_supplied_table_claims_own_the_complete_corrected_object_without_a_new_API.}
+  G: {decision: selected, reason: Individual_qualification_and_pending_consumer_replay_close_WM9_governance.}
+selection_not_used:
+  - proximity_of_WM8_counterfactual_to_measured_weak_angle
+  - source_prose_confidence_or_ALL_8_CHECKS_PASS
+  - chronology_or_reverse_consumer_assertions
+reserved_unpromoted_claims: [C-OVL-004, C-RGE-008]

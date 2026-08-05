@@ -1,0 +1,10 @@
+attempt: 0003
+campaign: P206
+timestamp_utc: '2026-08-05T22:38:00Z'
+kind: primary_exact_and_authority_audit
+command: PYTHONPATH=src_.venv/bin/python_proposals/P206-wm9-scalar-multiplicity-audit/verify.py
+checks: 25
+exit_status: 0
+countermodels: [equal_amplitude_multiple_fields, equality_constrained_amplitudes, one_field_multiple_couplings, inert_field, symmetric_parameter_slice]
+verdict: shared_overlap_factorization_retained_multiplicity_headline_rejected
+continuation: independent_raw_rederivation_and_graph_replay

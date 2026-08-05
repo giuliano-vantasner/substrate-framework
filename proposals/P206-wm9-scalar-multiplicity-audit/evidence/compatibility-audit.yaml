@@ -1,0 +1,17 @@
+campaign: P206
+installed_numpy: 2.5.1
+source_unit: WM9
+source_imports_numpy: false
+source_legacy_np_trapz_references: 0
+source_current_np_trapezoid_references: 0
+source_eager_legacy_default_fallbacks: 0
+graph_nodes_scanned: 16
+graph_legacy_references: {}
+mutable_campaign_legacy_references: 0
+aliases_injected_during_science: []
+version_only_scientific_failures: 0
+policy_result: >-
+  WM9 and its scoped graph have no quadrature compatibility surface. Mutable
+  P206 code contains neither np.trapz nor an eager legacy fallback. Any future
+  immutable version-name event remains compatibility evidence rather than a
+  scientific campaign failure.

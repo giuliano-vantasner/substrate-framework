@@ -1,0 +1,15 @@
+campaign: P206
+source_unit: WM9
+declared_dependencies: [EM6, FG2, FG4, M1, MH1, SM2, SM4, WM3, WM7, WM8]
+dependency_status: all_terminal
+admitted_composition: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, C-RGE-005]
+rejected_inheritance:
+  - EM6 and C-QBL-001 supply a conditional profile but no stability-forced complex ontology.
+  - FG2 and C-QBL-003 supply a two-level negative-or-zero scalar Hessian and no generations.
+  - FG4 and C-MIX-002 supply an abstract phase count and no observed family map.
+  - M1 and C-GSM-001 take the vacuum and scalar kinetic term as supplied and derive no condensate-to-Higgs identity.
+  - MH1 and C-OVL-001 supply normalized overlaps and no Yukawa generation or physical condensate map.
+  - SM2 C-REP-003 SM4 and C-RGE-005 retain field rows and multiplicities as supplied.
+  - WM3 WM7 and WM8 grant conditional inverse arithmetic and supplied tables, not scalar-count authority.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

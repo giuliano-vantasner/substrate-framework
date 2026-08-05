@@ -1,0 +1,10 @@
+attempt: 0004
+campaign: P206
+timestamp_utc: '2026-08-05T22:39:00Z'
+kind: independent_raw_sympy_countermodel_review
+command: PYTHONPATH=src_.venv/bin/python_proposals/P206-wm9-scalar-multiplicity-audit/reviews/independent_multiplicity_review.py
+checks: 16
+exit_status: 0
+imports_preferred_science_API: false
+verdict: free_symbol_cardinality_is_not_invariant_field_species_count
+continuation: terminal_dependency_and_reverse_consumer_replay

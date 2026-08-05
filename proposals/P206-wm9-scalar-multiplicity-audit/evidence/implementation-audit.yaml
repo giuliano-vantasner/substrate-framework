@@ -1,0 +1,17 @@
+campaign: P206
+canonical_modules_changed: []
+canonical_tests_changed: []
+campaign_verifiers:
+  - verify.py
+  - reviews/independent_multiplicity_review.py
+  - reviews/replay_source_graph.py
+reused_modules:
+  - src/substrate_framework/normalized_overlaps.py
+  - src/substrate_framework/verification.py
+  - src/substrate_framework/source_audit.py
+decision: >-
+  No reusable implementation is added because C-OVL-001's existing API owns
+  the exact positive object and the rejected multiplicity inference has no
+  invariant canonical API to encode.
+mutable_np_trapz_references: 0
+mutable_np_trapezoid_policy: satisfied

@@ -1,0 +1,11 @@
+campaign: P206
+artifact: verify.py
+sha256: c1d5f38d5036031c20cd9c38efbc31bfe2e1340f94e60ab24277c84fc3109eb4
+oracle: SymPy_exact_algebra_plus_AST_registry_and_canonical_API_audit
+canonical_dependencies:
+  src/substrate_framework/normalized_overlaps.py: 83bcc31038f5502780da42d91bbb109f7a84b53d578a4fdccda96ff63cfbe226
+  src/substrate_framework/verification.py: 278ea2593a0cacc5a72cbf4e6e7e6e5ad138206ac2da9134bed4ce12a00327cb
+  src/substrate_framework/source_audit.py: ee24c7a236dc6b8f70bba3d6cefb42f9b4ca5b206f1643de09438cf61a648cf7
+checks: 25
+exit_status: 0
+independence_ceiling: Uses_the_accepted_overlap_API_so_raw_countermodels_are_separately_rederived.

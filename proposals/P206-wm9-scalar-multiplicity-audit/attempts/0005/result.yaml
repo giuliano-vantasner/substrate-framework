@@ -1,0 +1,15 @@
+attempt: 0005
+campaign: P206
+timestamp_utc: '2026-08-05T22:41:00Z'
+kind: terminal_source_graph_replay
+command: PYTHONPATH=src_.venv/bin/python_proposals/P206-wm9-scalar-multiplicity-audit/reviews/replay_source_graph.py
+checks: 42
+exit_status: 0
+nodes: 16
+static_predicates: 129
+assert_nodes: 21
+native_graph_executions: 0
+pending_reverse_consumers: [WM10, GC1, GC2, GC5, GC6]
+scientific_version_failures: 0
+verdict: dependency_closure_terminal_reverse_consumers_nonauthoritative
+continuation: complete_individual_adjudication_and_narrow_terminal_gate

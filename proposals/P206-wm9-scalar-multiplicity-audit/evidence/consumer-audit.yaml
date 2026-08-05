@@ -1,0 +1,11 @@
+campaign: P206
+source_unit: WM9
+direct_reverse_consumers: [WM10, GC1, GC2, GC5, GC6]
+pending_forward_consumers: [WM10, GC1, GC2, GC5, GC6]
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  All five direct consumers remain pending and grant no backward authority.
+  WM9 qualification changes only its governed migration record and generated
+  summaries; each consumer must adjudicate the corrected overlap-only ceiling.

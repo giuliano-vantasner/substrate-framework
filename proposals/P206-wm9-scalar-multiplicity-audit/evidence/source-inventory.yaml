@@ -1,0 +1,22 @@
+campaign: P206
+source_unit: WM9
+static_check_calls: 8
+literal_check_calls: 2
+dynamic_check_calls: 6
+assert_nodes: 1
+checks:
+  - {id: WM9.1, object: shared_free_amplitude_symbol_across_three_overlaps}
+  - {id: WM9.2, object: distinct_overlap_coefficients_after_dividing_by_A}
+  - {id: WM9.3, object: headline_symbol_count_to_scalar_and_literal_mode_count_to_generation_ratio}
+  - {id: WM9.4, object: manually_declared_three_symbol_alternative}
+  - {id: WM9.5, object: manually_declared_separate_soliton_counterfactual}
+  - {id: WM9.6, object: comparator_name_absence_from_loaded_modules}
+  - {id: WM9.7, object: supplied_WM7_one_doublet_trace_arithmetic}
+  - {id: WM9.8, object: supplied_WM7_ratio_and_narrative_debt_closure}
+load_graph:
+  dynamic_modules: [MH1, WM7]
+  measured_module_names_not_loaded: [WM3, WM8]
+  physical_action_or_field_species_parser: absent
+authority_ceiling: >-
+  The predicates inventory source syntax, symbolic overlap composition, and
+  supplied WM7 constants. They do not test an invariant scalar-species count.

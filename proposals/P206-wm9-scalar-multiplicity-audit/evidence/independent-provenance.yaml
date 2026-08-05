@@ -1,0 +1,8 @@
+campaign: P206
+artifact: reviews/independent_multiplicity_review.py
+sha256: 656bce7d78c51e34398c657e2f6b54956d5b2a3205de008e3c2a7a7759e0678f
+oracle: raw_SymPy_parameterization_countermodels_plus_AST
+imports_preferred_overlap_beta_or_representation_API: false
+checks: 16
+exit_status: 0
+independence_ceiling: Abstract_countermodels_refute_symbol_rank_ontology_but_do_not_construct_a_physical_scalar_action.

@@ -1,0 +1,10 @@
+campaign: P206
+objects:
+  exact_normalized_shared_amplitude_overlap: {owner: C-OVL-001, new_claim_needed: false, new_API_needed: false}
+  scalar_field_multiplicity: {owner: none, derivation_present: false, reason: Countermodels_show_symbol_rank_is_not_species_count.}
+  generation_count: {owner: none, derivation_present: false, reason: C_MIX_002_explicitly_rejects_an_observed_family_map.}
+  supplied_scalar_trace_multiplicity: {owner: [C-REP-003, C-RGE-005], new_claim_needed: false}
+reserved_claims:
+  C-OVL-004: unpromoted_no_invariant_field_species_theorem
+  C-RGE-008: unpromoted_no_new_running_object
+result: accepted_composition_no_canonical_surface

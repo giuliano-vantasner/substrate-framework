@@ -1,0 +1,16 @@
+campaign: P206
+source_unit: WM9
+checks:
+  - {id: WM9.1, source_runtime: pass, status: retained_shared_parameter_factorization_rejected_condensate_count, mapping: [C-OVL-001], reason: The canonical overlap API reproduces y_p=A*I_p but A is supplied and free-symbol cardinality does not count field species or condensates.}
+  - {id: WM9.2, source_runtime: pass, status: retained_distinct_supplied_overlap_coefficients_rejected_generation_ontology, mapping: [C-QBL-003, C-OVL-001], reason: The p=1,2,3 coefficients are distinct, but the tuple is supplied and neither accepted claim maps these profiles to physical generations.}
+  - {id: WM9.3, source_runtime: pass, status: rejected_headline_multiplicity_derivation, mapping: [C-QBL-001, C-MIX-002, C-REP-003, C-RGE-005], reason: EM6 does not establish stability-forced complex ontology, N_gen is the length of a literal tuple, and accepted scalar multiplicity is supplied field-table data.}
+  - {id: WM9.4, source_runtime: pass, status: rejected_structural_exclusion_as_constructed_symbol_count, mapping: [C-OVL-001, C-REP-003], reason: The alternative declares three independent symbols before counting them; equal-amplitude multiple fields and inert fields are counterexamples to the asserted necessity.}
+  - {id: WM9.5, source_runtime: pass, status: retained_counterfactual_syntax_rejected_load_bearing_physical_test, mapping: [C-QBL-001, C-OVL-001], reason: Three manually independent amplitudes differ from one source symbol, but this tests the chosen parameterization rather than an accepted field action or species ledger.}
+  - {id: WM9.6, source_runtime: pass, status: retained_comparator_absence_rejected_ontology_conclusion, mapping: [C-OVL-001], reason: Measured constants are absent from the executed checks, but comparator independence cannot supply the missing physical map.}
+  - {id: WM9.7, source_runtime: pass, status: retained_supplied_trace_arithmetic_rejected_promotion_multiplicity, mapping: [C-GSM-001, C-REP-001, C-REP-003, C-RGE-005], reason: WM7's one supplied doublet contributes two states and 1/6 to the trace; C-GSM-001 does not derive that doublet from a condensate.}
+  - {id: WM9.8, source_runtime: pass, status: rejected_debt_closure, mapping: [C-MIX-002, C-REP-003, C-RGE-005], reason: Scalar and generation counts, physical field dictionaries, matching, and omitted running effects remain supplied or absent, so Phase 39 debt is not empty.}
+summary:
+  retained_exact_composition: 2
+  retained_guard_or_counterfactual_only: 3
+  rejected_load_bearing_interpretation: 3
+  blanket_headline_accepted: false
