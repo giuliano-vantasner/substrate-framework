@@ -1,0 +1,54 @@
+campaign: P199
+selection_frozen_before_renewed_source_execution: true
+fresh_blinding_claimed: false
+criteria:
+  - explicit_state_space_boundary_generator_initial_law_and_time_units
+  - natural_fit_without_retyping_a_static_mass_as_a_process
+  - exact_normalization_detailed_balance_PGF_moments_and_limits
+  - mutation_sensitive_rate_boundary_and_index_checks
+  - distinction_among_local_drift_mean_sample_paths_and_static_ratios
+  - constructive_dynamical_nonuniqueness
+  - no_material_channel_or_rescue_overreach
+candidates:
+  A:
+    decision: selected
+    reason: >-
+      The immigration-death chain is a positive nonexplosive process with an
+      explicit nonnegative boundary, inverse-time scale, exact stationary law,
+      local restoring drift, PGF, mean, and deterministic-initial transition
+      kernel. It adds a genuine temporal object without pretending C-CMB-003
+      selected it.
+  B:
+    decision: retained_as_competing_process_not_promoted
+    reason: >-
+      The pure-birth chain from zero has a transient Poisson law with mean r*t
+      but no finite stationary law or restoring threshold. It demonstrates
+      that Poisson-shaped masses occur in structurally different dynamics.
+  C:
+    decision: selected_as_nonuniqueness_theorem
+    reason: >-
+      Detailed balance fixes only lambda_n/mu_(n+1)=S/(n+1). The explicit
+      bounded-rate alternative lambda_n=r*S/(n+1), mu_n=r shares the same
+      stationary mass but has different holding times, drift, and transients.
+  D:
+    decision: retained_as_mean_corollary_not_independent_claim
+    reason: >-
+      dm/dt=r*(S-m) is exact for candidate A, but alone it discards the integer
+      state space, fluctuation law, jump boundary, and sample-path semantics.
+  E:
+    decision: rejected
+    reason: >-
+      Candidate A supplies a distinct useful time-dependent theorem beyond the
+      accepted static factorial-one mass, provided its inputs and physical
+      ceiling are explicit.
+  F:
+    decision: rejected
+    reason: >-
+      No accepted inconsistency independently requires a foundational medium
+      revision, and the exact stochastic extension is naturally compatible.
+selected_claim_candidate: C-MKV-001
+selected_components: [A, C]
+retained_competitors: [B, D]
+selected_dependency_closure: [C-CMB-003]
+state_context_only: [C-OSC-001, C-VOP-001]
+comparison_ceilings: [C-DOS-001, C-QFL-001, C-MED-003, C-MED-004, C-LAT-001, C-LAT-002, C-SG-017, C-SG-018]

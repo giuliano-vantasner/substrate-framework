@@ -1,0 +1,29 @@
+attempt: 0003
+campaign: P199
+candidate: source_audit_and_process_candidate_selection
+status: passed_with_qualified_source_headline
+source_execution:
+  terminal_tally: ALL_34_CHECKS_PASS
+  exit_status: 0
+  wall_seconds: 0.32
+compatibility:
+  legacy_numpy_references: 0
+  current_numpy_references: 0
+  alias_used: false
+  version_only_scientific_failures: 0
+selected_candidates: [A, C]
+retained_competitors: [B, D]
+rejected_candidates: [E, F]
+selected_claim_candidate: C-MKV-001
+accepted_dependency_closure: [C-CMB-003]
+source_corrections:
+  - a_static_adjacent_mass_ratio_is_not_a_time_derivative
+  - positive_local_drift_is_not_monotone_sample_path_growth
+  - the_static_mass_does_not_select_a_unique_generator_or_rate_scale
+  - the_accepted_framework_does_not_supply_MD4s_material_S_or_granularity_map
+  - one_point_mass_does_not_establish_a_rescued_or_open_physical_channel
+  - the_unconditional_True_check_does_not_validate_discrimination
+scientific_threshold_changed: true
+debt:
+  - independently_verify_the_exact_process_and_its_nonuniqueness_witness
+next_attempt: canonical_implementation_primary_independent_and_focused_verification
