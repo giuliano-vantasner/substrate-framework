@@ -6943,3 +6943,64 @@ units:
       no legacy NumPy quadrature surface, so no version event affects a
       scientific verdict. Eleven semantic consumers remain individually
       pending.
+  WN3:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-019
+      - C-CMB-001
+      - C-OSC-001
+    qualification: >-
+      C-SG-019 retains the exact zero-background activity, coordinate-scale,
+      and parity-sensitive H-linear cosine coefficient. C-CMB-001 retains the
+      inverse-square-factorial coefficient context. C-OSC-001 retains the
+      exact algebraic one-mode Fock ladder, factorial vacuum norm, full
+      low-coordinate power element, finite top-state commutator defect, and
+      explicitly distinct factorial-one mass sample spaces and modes. The
+      finite interior block is not a global finite CCR. The factorial norm is
+      not a density of distinct final states, and the conditional low-sector
+      coefficient square is not a complete transition amplitude or
+      Fermi-Golden-Rule rate. Multiplication by the bosonic norm does not
+      reopen even cosine orders; WN3's all-positive guard changes the sample
+      space and WN2's admissibility criterion remains rejected. No physical
+      density of states, Poisson process, subdivision channel, medium map,
+      material mechanism, or downstream conclusion is accepted.
+    evidence:
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/reviews/source_adjudication.md
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/reviews/C-OSC-001-claim-review.md
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/reviews/impact_analysis.md
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/source-reproduction.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/compatibility-audit.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/source-audit.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/check-adjudication.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/formula-freeze.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/input-provenance.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/dependency-audit.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/consumer-audit.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/candidate-comparison.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/implementation-audit.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/primary-provenance.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/independent-provenance.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/verify.py
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/reviews/independent_bosonic_fock_review.py
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/reviews/replay_source_graph.py
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0002/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0003/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0004/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0005/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0006/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0007/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0008/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0009/result.yaml
+      - campaigns/P191-wn3-bosonic-multiplicity-audit/attempts/0010/result.yaml
+      - memory/vantasner/decisions/C-OSC-001-review.md
+      - memory/vantasner/decisions/WN3-qualified-review.md
+    note: >-
+      P191 closes 101 primary and 57 independent exact checks, 94 focused
+      tests, and a sixteen-node 637-check native source replay before the
+      integrated boundary. WN3, every dependency and reverse consumer, and
+      all mutable P191 code have no legacy NumPy quadrature surface, so no
+      version event affects a scientific verdict. Ten reverse consumers remain
+      individually pending.

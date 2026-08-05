@@ -2,7 +2,7 @@
 description: Audit WN3 and derive an exact bosonic Fock ladder and parity-complete composition ledger
 author: vantasner
 created: '2026-08-11T16:52:00Z'
-updated: '2026-08-11T17:53:00Z'
+updated: '2026-08-11T18:10:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - bosonic-fock-ladder
 - factorial-multiplicity
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P191 WN3 Bosonic Multiplicity Audit
 
@@ -244,6 +244,18 @@ C-SG-019 and qualification of WN3 through C-SG-019, C-CMB-001, and
 C-OSC-001. Ten reverse consumers remain pending. The registry, disposition,
 release, generated records, and integrated gate are still open.
 
+Attempt 0011 promotes the individually reviewed theorem as C-OSC-001 in
+v0.142.0 and qualifies WN3 through C-SG-019, C-CMB-001, and C-OSC-001. The
+registry, exact release pair, generated documentation, accepted-memory
+projection, disposition source, migration queue, immutable campaign, and
+durable decisions agree on 182 accepted claims and 33 pending source units.
+The single integrated boundary validates all 783 memory records and passes all
+1,701 tests in 189.38 seconds, with 203.74 seconds wall time, maximum resident
+set 214,800 KiB, and exit zero. The previously passed 101 primary, 57
+independent, 94 focused, and 637-native-plus-56-governed source-graph evidence
+was unchanged and therefore was not ceremonially rerun after record-only
+closure.
+
 ## Debt Ledger
 
 The P191 ledger tracks source predicates, Fock domain, truncation, parity,
@@ -262,7 +274,7 @@ compatibility, dependencies, consumers, and governed state.
 | WN4 may be imported through a forward cycle | Exclude it until individually accepted | discharged |
 | C-OSC-001 may duplicate or sprawl accepted mathematics | Complete claim and API nonduplication and cohesion review | discharged |
 | Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | discharged |
-| Governed records may disagree | Replay and synchronize every affected path with empty debt | open |
+| Governed records may disagree | Replay and synchronize every affected path with empty debt | discharged |
 
 ## Review and Promotion Plan
 
@@ -276,11 +288,12 @@ migration queue and documentation are generated rather than hand-edited.
 
 ## Done Gate
 
-P191 closes only when the positive bosonic ladder and conditional-composition
-ledger exists, all domains and physical ceilings are explicit, candidates and
-mutations are adjudicated, dependencies and consumers replay, governed state
-agrees, and the debt ledger is empty. A no-rate result or finite-truncation
-obstruction alone cannot complete the campaign.
+P191 is closed. The positive bosonic ladder and conditional-composition ledger
+exists as C-OSC-001; all domains and physical ceilings are explicit;
+candidates and mutations are adjudicated; dependencies and consumers replay;
+governed state agrees; and the debt ledger is empty. The no-rate result and
+finite-truncation obstruction remain ceilings inside the completed positive
+theorem rather than substitutes for it.
 
 ## Cross-References
 
