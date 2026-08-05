@@ -1,0 +1,18 @@
+attempt: 0002
+campaign: P180
+candidate: freeze_validation_memory_cli_interface
+status: failed_attempt
+started_at: '2026-08-11T07:21:00Z'
+finished_at: '2026-08-11T07:22:00Z'
+command: memory validate --base "$PWD/memory"
+failure_class: implementation
+observed: >-
+  memory 0.2.0 rejected the invocation because validate requires a positional
+  PATH and the command supplied only a base option.
+scientific_candidate_failure: false
+diagnosis: >-
+  The operator mistakenly put the memory directory in --base and omitted the
+  positional target. AGENTS.md and the physics skill already encode the safe
+  command; the campaign template did not repeat it. No memory file was
+  adjudicated by the failed command.
+next_attempt: run_memory_validate_with_the_repository_memory_path_as_a_positional_argument

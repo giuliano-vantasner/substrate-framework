@@ -1,6 +1,6 @@
 # Campaign Proposal Template
 
-Instantiate before a campaign computes or inspects comparator values. Store the prose contract in memory and create a matching `proposals/<id>/proposal.yaml` manifest. Run `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py` and preserve any schema failure before opening the source body or comparator values; a prose contract alone is not the freeze gate.
+Instantiate before a campaign computes or inspects comparator values. Store the prose contract in memory and create a matching `proposals/<id>/proposal.yaml` manifest. Run `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py`, validate repository-local memory with `memory validate --base "$PWD" "$PWD/memory"`, and preserve any schema or memory failure before opening the source body or comparator values; a prose contract alone is not the freeze gate. The memory path is a required positional target; `--base` alone does not select it.
 
 Begin every section with a plain-prose sentence. Inline code, a table, or a
 list does not satisfy the memory index's first-content disclosure contract.

@@ -1,0 +1,54 @@
+attempt: 0001
+campaign: P180
+candidate: frozen_authority_recall_and_competing_concepts
+status: passed
+started_at: '2026-08-11T07:18:00Z'
+finished_at: '2026-08-11T07:21:00Z'
+base:
+  release: v0.131.0
+  release_sha256: f3b8587555ca99523213519a2296849978437491566b587bafa554b24d23acf1
+  framework_commit: a7d4fa7
+  accepted_claims: 168
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  unit: TX1
+  path: merged-framework/bridges/phase-40/bridge_TX1_b2_intrinsic_quadrupole.py
+  sha256: 30161731af4e3ffda219adbdc7af9db66f6829fbbd3736a3198ed19a644ac8ff
+  target_path_clean: true
+  source_repository_has_unrelated_later_changes: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+recall:
+  memory_queries: [TX1_intrinsic_quadrupole_rational_map_B2, exact_TX1_mentions]
+  accepted_authority: [C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-MOM-001, C-MOM-003, C-GW-001, C-GW-002]
+  nearest_canonical_modules: [rational_maps.py, rational_map_radial.py, conserved_moments.py]
+  candidate_source_dependencies: [BX1, E1, E2, GW3, P3D2, QB1, QB3, SC2, TX2, TX3]
+exposure_before_freeze:
+  queue_headline_question_result_and_equation_synopsis: exposed
+  P179_native_execution_full_terminal_output_and_tally: exposed
+  fresh_source_result_or_runtime_output_blinding_claimed: false
+  exact_source_line_dataflow_and_local_density_derivation_newly_audited: false
+candidates: [A, B, C, D, E, F, G]
+provisional_identifier_search: [C-RMOM-001, C-RMOM-002]
+identifier_collisions: []
+claim_delta: [C-RMOM-001, C-RMOM-002]
+numeric_candidate_frozen_for_execution: false
+numeric_requirement: source_aware_revision_before_new_corrected_quadrature_or_profile_execution
+compatibility_policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_replay_backed_by_numpy.trapezoid
+  version_only_stop_is_scientific_failure: false
+freeze_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  repository: WORKFLOW_VALID_168_claims_168_accepted_0_proposals
+  migration_queue: 218_units_45_pending_0_partial
+  diff_check: passed
+debt:
+  - exact_TX1_implementation_density_predicates_assertions_values_and_dataflow_unaudited_in_P180
+  - local_three_dimensional_density_to_accepted_radial_functional_closure_unverified
+  - angular_STF_factorization_symmetry_sign_and_normalization_unverified
+  - numeric_profile_quadrature_refinement_and_independent_route_contract_not_yet_source_aware
+  - full_field_static_radiation_and_physical_state_scope_requires_adjudication
+  - nonduplication_dependencies_consumers_and_source_disposition_open
+next_attempt: commit_freeze_then_open_the_hash_pinned_TX1_body

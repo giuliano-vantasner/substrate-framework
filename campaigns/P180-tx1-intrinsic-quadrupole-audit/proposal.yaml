@@ -1,0 +1,74 @@
+id: P180
+base_release: v0.131.0
+base_commit: a7d4fa7
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [TX1]
+question: >-
+  Does hash-pinned TX1 establish an exact or resolution-bounded intrinsic
+  rank-two energy moment for the declared B=2 rational-map ansatz, and what
+  importable angular/radial factorization and stationary-branch evidence can
+  be accepted without calling the ansatz a solved full three-dimensional
+  Skyrmion, identifying map degree with a physical nucleus, importing a
+  gravitational coupling, or treating a static moment as radiation?
+invariants:
+  - C-RMAP-001 fixes the oriented round-sphere normalization, conformal Jacobian, exact axial R=z^B family, and I_2=pi+8/3, but supplies no physical action, minimizing map, radial profile, baryon, nucleus, or mass.
+  - C-RMAP-002 gives resolution-bounded integrals for one declared degree-four map but proves neither its full cubic symmetry nor a fixed-degree minimum.
+  - C-RPROF-001 fixes only a separately declared reduced radial functional and its exact stationary equation, split, scale identity, and endpoint powers; it does not supply an accepted local three-dimensional density or full-field solution.
+  - C-RPROF-002 gives two-method numeric evidence for three conditional stationary radial branches and their coefficients only; it proves no existence, uniqueness, minimum, full three-dimensional solution, physical mass, or state map.
+  - C-MOM-001 fixes normalized I_STF and triple Q=3*I_STF conventions for integrable Cartesian source moments and distinguishes moment kinematics from gravitational dynamics.
+  - C-MOM-003 fixes the exact spherical STF null and one P2 deformation guard; axial symmetry alone constrains tensor form but does not prove a nonzero amplitude or its sign.
+  - C-GW-001 and C-GW-002 provide conditional TT algebra only; a static intrinsic moment has zero positive-order time derivatives and supplies no radiation or physical polarization mechanism.
+  - Any local rational-map energy density used here must be declared explicitly, integrate to C-RPROF-001's radial functional, and remain a conditional reduced-model premise rather than a derived physical stress tensor.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-RMAP-001
+  - C-RMAP-002
+  - C-RPROF-001
+  - C-RPROF-002
+  - C-MOM-001
+  - C-MOM-003
+  - C-GW-001
+  - C-GW-002
+  - src/substrate_framework/rational_maps.py
+  - src/substrate_framework/rational_map_radial.py
+  - src/substrate_framework/conserved_moments.py
+  - standard round-sphere integration, STF tensor algebra, rational-map ansatz identities, and finite-group symmetry arguments with every normalization and premise declared
+  - SciPy quadrature or profile solvers only for unresolved numeric values under frozen precision, domain, boundary, refinement, and independent-method contracts
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - TX1 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned TX1 reproduction with complete density moment quadrature predicate assertion dependency and NumPy compatibility audit.
+  - id: B
+    description: Accepted C-RMAP-001/002 C-RPROF-001/002 and C-MOM-001/003 already own every valid TX1 statement so TX1 adds only duplicate or qualified evidence.
+  - id: C
+    description: Derive a conditional exact factorization of the Cartesian STF second moment of an explicitly declared rational-map local energy density into radial integrals and angular STF tensors.
+  - id: D
+    description: Specialize Candidate C to R=z and R=z^2 and the declared degree-four map, proving exact symmetry-forced nulls where possible and the B=2 tensor form and sign without using source decimals.
+  - id: E
+    description: Combine Candidate C with C-RPROF-002's corrected B=2 stationary branch and independently refined angular and radial quadrature to obtain one resolution-bounded dimensionless moment ratio.
+  - id: F
+    description: Supply a full three-dimensional Skyrme stress tensor solution or a time-dependent rotating solution and radiation channel rather than treating the rational-map ansatz or a static tensor as either object.
+  - id: G
+    description: Close claim source dependency consumer disposition queue release documentation memory and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_sphere_profile_and_STF_convention_compatibility
+  - explicit_local_density_and_radial_functional_closure
+  - exact_symmetry_factorization_sign_trace_and_axis_limits
+  - assumption_scale_parameter_and_state_map_economy
+  - exact_nulls_separated_from_resolution_bounded_nonzero_values
+  - quadrature_solver_refinement_independent_route_and_mutation_sensitivity
+  - novelty_beyond_C_RMAP_001_002_C_RPROF_001_002_and_C_MOM_001_003
+  - static_moment_full_field_radiation_and_physical_scope_separation
+  - dependency_consumer_and_governance_closure
+claims_proposed: [C-RMOM-001, C-RMOM-002]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line TX1 body audit; the generated queue
+  and P179 reverse-consumer replay already exposed TX1's claimed B=1 and B=4
+  nulls, B=2 diagonal sign pattern, printed B=1/2/4 angular averages, masses,
+  B=2 moment ratio, refinement axes, exact endpoint exponent, nine-check
+  success, two assertions, and mixed legacy/current NumPy integration names,
+  so no fresh source-result or runtime-output blinding is claimed
+status: frozen
+revision: 0001
