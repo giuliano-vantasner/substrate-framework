@@ -1,0 +1,34 @@
+campaign: P196
+query_time_index:
+  repository: substrate-framework
+  indexed_commit: 1a58aa09a29c2cc0fd32567dabc6695347aa33b5
+  commits_behind_HEAD: 9
+prechange_reused_symbol:
+  symbol: dimensional_sine_gordon_linear_spectrum
+  file: src/substrate_framework/dimensional_sine_gordon.py
+  indexed_upstream_risk: LOW
+  indexed_direct_consumers: 0
+  interpretation: >-
+    P196 does not change this accepted API. The stale index's zero-consumer
+    result is not used as exhaustive evidence; manual search finds its tests
+    and accepted claim consumers.
+unstaged_detection:
+  indexed_changed_symbols: [substrate_framework.__all__]
+  indexed_affected_processes: []
+  risk: low
+  limitation: untracked_new_module_and_test_are_not_symbols_in_the_stale_index
+manual_impact:
+  changed_existing_signatures: []
+  changed_existing_values: []
+  new_leaf_module: src/substrate_framework/mode_counting.py
+  new_exports:
+    - unit_sphere_surface
+    - isotropic_gapped_angular_frequency
+    - isotropic_continuum_dos_on_band
+    - isotropic_continuum_mode_count
+    - isotropic_continuum_target_cutoff
+  new_tests: tests/test_mode_counting.py
+  direct_existing_consumers: []
+  pending_source_consumers: [MD1, MD2, MD3, MD4, MD5, MD6]
+assessment: additive_low_risk_with_manual_consumer_replay_required
+

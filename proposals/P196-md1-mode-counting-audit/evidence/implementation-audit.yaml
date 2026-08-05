@@ -1,0 +1,23 @@
+campaign: P196
+claim_candidate: C-DOS-001
+canonical_module: src/substrate_framework/mode_counting.py
+package_export: src/substrate_framework/__init__.py
+tests: tests/test_mode_counting.py
+new_functions:
+  unit_sphere_surface: exact_positive_integer_dimension_sphere_surface
+  isotropic_gapped_angular_frequency: exact_declared_radial_dispersion
+  isotropic_continuum_dos_on_band: exact_open_band_DOS_with_independent_branch_factor
+  isotropic_continuum_mode_count: exact_declared_continuum_ball_measure
+  isotropic_continuum_target_cutoff: exact_positive_inversion_for_a_supplied_target
+existing_APIs_changed: []
+existing_values_changed: []
+numerics_required: false
+quadrature_surface: exact_symbolic_only
+numpy_compatibility_event: none
+focused_tests: {passed: 17, exit_status: 0}
+explicit_ceilings:
+  - no_exact_finite_lattice_point_count
+  - no_branch_count_from_spatial_dimension
+  - no_microscopic_cutoff_from_target_matching
+  - no_cell_topology_or_integer_divisibility
+  - no_participating_mode_coupling_occupation_rate_or_material_spectrum

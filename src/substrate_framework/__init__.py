@@ -294,6 +294,13 @@ from .momentum_kernels import (
     riesz_radial_force_law,
     spectral_moment_expansion,
 )
+from .mode_counting import (
+    isotropic_continuum_dos_on_band,
+    isotropic_continuum_mode_count,
+    isotropic_continuum_target_cutoff,
+    isotropic_gapped_angular_frequency,
+    unit_sphere_surface,
+)
 from .vacuum_polarization import (
     EuclideanTransverseProjector,
     MatterInducedKineticEvidence,
@@ -1452,6 +1459,11 @@ __all__ = [
     "monomial_loading_dimension_ledger",
     "monomial_exponents",
     "moving_breather_samples",
+    "isotropic_continuum_dos_on_band",
+    "isotropic_continuum_mode_count",
+    "isotropic_continuum_target_cutoff",
+    "isotropic_gapped_angular_frequency",
+    "unit_sphere_surface",
     "mixed_coefficient_from_absorption_rate",
     "mixed_sine_gordon_dimension_matrix",
     "mixed_sine_gordon_dimensionless_coupling",
