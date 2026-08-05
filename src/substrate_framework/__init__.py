@@ -210,9 +210,11 @@ from .bps_energy import (
     target_three_sphere_volume,
 )
 from .branching import (
+    PopulationDependentWeightLedger,
     TwoChannelAllocation,
     WeightedChannelAllocation,
     channel_odds,
+    population_dependent_weight_ledger,
     relative_weighted_odds_enhancement,
     two_channel_allocation,
     weighted_channel_allocation,

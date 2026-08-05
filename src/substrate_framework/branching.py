@@ -9,7 +9,7 @@ because the inputs are named rates.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Literal
 
 import sympy as sp
 
@@ -69,6 +69,25 @@ class WeightedChannelAllocation:
     baseline_ratio: sp.Expr
     weighted_fraction: sp.Expr
     comparison_fraction: sp.Expr
+
+
+WeightedComparisonMonotonicity = Literal["decreasing", "stationary", "increasing"]
+
+
+@dataclass(frozen=True)
+class PopulationDependentWeightLedger:
+    """Exact local derivative data for a population-dependent weight."""
+
+    population: sp.Expr
+    comparison_ratio: sp.Expr
+    weight: sp.Expr
+    weight_derivative: sp.Expr
+    comparison_fraction: sp.Expr
+    derivative_control: sp.Expr
+    comparison_fraction_derivative: sp.Expr
+    monotonicity: WeightedComparisonMonotonicity
+    physical_weight_law_is_separate_premise: bool
+    exhaustive_channel_interpretation_is_separate_premise: bool
 
 
 def two_channel_allocation(
@@ -159,3 +178,52 @@ def relative_weighted_odds_enhancement(
     count = _positive_integer(population, name="population")
     baseline = _exact_positive(baseline_weight, name="baseline_weight")
     return sp.simplify(current * count / baseline)
+
+
+def population_dependent_weight_ledger(
+    population: Any,
+    comparison_ratio: Any,
+    weight: Any,
+    weight_derivative: Any,
+) -> PopulationDependentWeightLedger:
+    r"""Return the exact local population derivative for ``w=w(N)``.
+
+    For ``B_c(N)=rho/(N*w(N)+rho)``, the chain rule gives
+
+    ``B_c'(N)=-rho*(w(N)+N*w'(N))/(N*w(N)+rho)**2``.
+
+    Thus a positive weight alone does not determine monotonicity. The
+    comparison fraction decreases, is stationary, or increases according as
+    ``w+N*w'`` is positive, zero, or negative. The caller separately supplies
+    the local weight and derivative and remains responsible for deriving a
+    physical weight law, common rate dimensions, and exhaustive channels.
+    """
+
+    count = _exact_positive(population, name="population")
+    rho = _exact_positive(comparison_ratio, name="comparison_ratio")
+    current_weight = _exact_positive(weight, name="weight")
+    slope = _exact_real(weight_derivative, name="weight_derivative")
+    control = sp.simplify(current_weight + count * slope)
+    if control.is_positive is True:
+        monotonicity: WeightedComparisonMonotonicity = "decreasing"
+    elif control.is_zero is True:
+        monotonicity = "stationary"
+    elif control.is_negative is True:
+        monotonicity = "increasing"
+    else:
+        raise ValueError("w + N*w' must have an explicitly decidable sign")
+    denominator = sp.simplify(count * current_weight + rho)
+    return PopulationDependentWeightLedger(
+        population=count,
+        comparison_ratio=rho,
+        weight=current_weight,
+        weight_derivative=slope,
+        comparison_fraction=sp.simplify(rho / denominator),
+        derivative_control=control,
+        comparison_fraction_derivative=sp.simplify(
+            -rho * control / denominator**2
+        ),
+        monotonicity=monotonicity,
+        physical_weight_law_is_separate_premise=True,
+        exhaustive_channel_interpretation_is_separate_premise=True,
+    )

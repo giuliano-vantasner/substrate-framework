@@ -1,0 +1,28 @@
+campaign: P200
+claim_candidate: C-BRN-002
+module:
+  path: src/substrate_framework/branching.py
+  sha256: 4bd14de47c233548b8d4e8d35d734bf8293652a7e5cd5ddfbd5208993edfaa2d
+  imports_execute_simulation: false
+  numpy_import: false
+  legacy_numpy_trapz_references: 0
+APIs_added:
+  - PopulationDependentWeightLedger
+  - population_dependent_weight_ledger
+architecture:
+  existing_signatures_changed: []
+  existing_values_changed: []
+  canonical_dependency: existing_C_BRN_001_branching_module
+  package_exports_added: 2
+tests:
+  path: tests/test_branching.py
+  sha256: cdc340ef15b8294000bdbb077156101fa68ad0d9dd3ede21331453aa17f978fc
+  total_test_executions: 21
+  terminal_tally: 21_passed
+adverse_tests:
+  - positive_inverse_square_weight_reverses_population_monotonicity
+  - inverse_weight_makes_the_fraction_stationary
+  - undecidable_control_sign_is_rejected
+  - constant_weight_recovers_C_BRN_001
+  - physical_weight_and_exhaustive_channel_ceilings_are_explicit
+debt: [primary_and_independent_campaign_verification]

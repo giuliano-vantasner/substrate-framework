@@ -3,7 +3,9 @@ import sympy as sp
 
 import substrate_framework as framework
 from substrate_framework.branching import (
+    PopulationDependentWeightLedger,
     channel_odds,
+    population_dependent_weight_ledger,
     relative_weighted_odds_enhancement,
     two_channel_allocation,
     weighted_channel_allocation,
@@ -102,3 +104,62 @@ def test_branching_api_is_exported_without_a_physical_rate_claim() -> None:
     assert framework.weighted_channel_allocation is weighted_channel_allocation
     assert framework.relative_weighted_odds_enhancement is relative_weighted_odds_enhancement
     assert "does not derive physical states" in framework.branching.__doc__
+
+
+def test_population_dependent_derivative_is_exact() -> None:
+    population, rho, weight, slope = sp.symbols("N rho w s", positive=True)
+    result = population_dependent_weight_ledger(population, rho, weight, slope)
+    expected = -rho * (weight + population * slope) / (
+        population * weight + rho
+    ) ** 2
+    assert sp.simplify(result.comparison_fraction_derivative - expected) == 0
+    assert result.monotonicity == "decreasing"
+
+
+def test_constant_positive_weight_recovers_C_BRN_001() -> None:
+    population, rho, weight = sp.symbols("N rho w", positive=True)
+    result = population_dependent_weight_ledger(population, rho, weight, 0)
+    assert result.derivative_control == weight
+    assert result.comparison_fraction_derivative == -rho * weight / (
+        population * weight + rho
+    ) ** 2
+
+
+def test_positive_decreasing_weights_cover_all_three_signs() -> None:
+    population = sp.symbols("N", positive=True)
+    decreasing = population_dependent_weight_ledger(
+        population, 2, 1 / sp.sqrt(population), -1 / (2 * population ** sp.Rational(3, 2))
+    )
+    stationary = population_dependent_weight_ledger(
+        population, 2, 1 / population, -1 / population**2
+    )
+    increasing = population_dependent_weight_ledger(
+        population, 2, 1 / population**2, -2 / population**3
+    )
+    assert decreasing.monotonicity == "decreasing"
+    assert stationary.monotonicity == "stationary"
+    assert increasing.monotonicity == "increasing"
+
+
+def test_positive_weight_alone_is_not_a_monotonicity_oracle() -> None:
+    population = sp.symbols("N", positive=True)
+    result = population_dependent_weight_ledger(
+        population, 1, 1 / population**2, -2 / population**3
+    )
+    assert result.weight.is_positive
+    assert result.comparison_fraction_derivative.is_positive
+
+
+def test_undecidable_control_sign_is_rejected() -> None:
+    slope = sp.symbols("s", real=True)
+    with pytest.raises(ValueError, match="decidable sign"):
+        population_dependent_weight_ledger(2, 3, 5, slope)
+
+
+def test_population_dependent_ledger_preserves_physical_ceilings() -> None:
+    result = population_dependent_weight_ledger(2, 3, 5, -1)
+    assert isinstance(result, PopulationDependentWeightLedger)
+    assert result.physical_weight_law_is_separate_premise
+    assert result.exhaustive_channel_interpretation_is_separate_premise
+    text = " ".join(population_dependent_weight_ledger.__doc__.split())
+    assert "positive weight alone does not determine monotonicity" in text
