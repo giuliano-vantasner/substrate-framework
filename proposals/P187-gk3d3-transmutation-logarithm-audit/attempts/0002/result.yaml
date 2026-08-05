@@ -1,0 +1,35 @@
+attempt: 0002
+campaign: P187
+candidate: native_reproduction_and_claim_level_source_audit
+status: passed_with_qualified_source
+started_at: '2026-08-11T13:12:00Z'
+finished_at: '2026-08-11T13:18:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D3_transmutation_closes_the_log.py
+process:
+  exit_code: 0
+  elapsed_seconds: 0.41
+  maximum_resident_kibibytes: 52576
+  lexical_check_calls: 14
+  literal_check_calls: 14
+  dynamic_check_calls: 0
+  runtime_check_executions: 14
+  assertion_nodes: 1
+  terminal_tally: ALL_14_CHECKS_PASS
+compatibility:
+  numpy_surface: none
+  version_only_failure: false
+retained:
+  - exact_conditional_inverse_length_energy_ratio
+  - exact_log_exp_transmutation_reduction_on_positive_inputs
+  - exact_zero_matching_specialization_after_the_boundary_is_separately_declared
+  - exact_common_length_rescaling_invariance
+rejected_or_rework:
+  - live_AS7_lexical_substrings_as_orientation_and_parameter_authority
+  - physical_cutoff_granularity_and_charged_soliton_Compton_identifications_as_derived
+  - inherited_removal_of_Z_ref_and_parameter_free_total_coupling
+  - p_equals_zero_as_a_logarithm_or_a_unique_function_selection
+  - backsubstitution_and_self_subtraction_as_independent_closure_tests
+  - hardcoded_perturbativity_samples_as_general_one_loop_validity
+claim_or_threshold_changed: false
+verdict: source_is_evidence_for_a_corrected_conditional_C_VAC_004_composition_but_cannot_be_promoted_literally
+next_attempt: freeze_the_general_scale_matched_affine_formula_then_implement_exact_primary_and_independent_routes

@@ -1,0 +1,63 @@
+source_unit: GK3D3
+runtime_checks: 14
+assertion_nodes: 1
+checks:
+  GK3D3.0a:
+    verdict: retained_narrowly
+    retained: declared_symbols_are_positive_and_unassigned_inside_the_symbolic_derivation
+    ceiling: symbolic_freeness_does_not_establish_upstream_derivation_or_physical_provenance
+  GK3D3.0b:
+    verdict: rejected_as_claim_oracle
+    reason: lexical_substrings_in_a_live_dependency_file_do_not_establish_the_claim_orientation_authority_or_physical_labels
+    accepted_replacement: C_RGE_003_owns_the_energy_length_orientation_and_C_IDN_002_rejects_AS7_parameter_closure
+  GK3D3.0c:
+    verdict: retained_conditionally
+    retained: log_of_the_declared_positive_exponential_reduces_to_its_declared_exponent
+    ceiling: xi_over_a_is_defined_from_the_desired_exponent_and_b0_beta2_and_the_labels_remain_inputs
+  GK3D3.1a:
+    verdict: retained_after_generalization
+    retained: two_inverse_length_energy_maps_with_one_common_conversion_factor_cancel_that_factor
+    rejected: the_cutoff_granularity_charged_soliton_and_unit_Compton_identifications_are_derived
+  GK3D3.1b:
+    verdict: rejected_as_provenance_oracle
+    reason: a_free_symbol_set_cannot_detect_coefficients_fixed_to_one_or_justify_physical_identifications
+    accepted_replacement: every_conversion_matching_and_soliton_coefficient_is_explicit
+  GK3D3.2a:
+    verdict: retained_conditionally
+    retained: a_consistently_paired_C_RGE_003_energy_length_map_has_the_same_exact_logarithm
+    ceiling: the_source_overwrites_its_first_scale_ratio_expression_and_neither_physical_scale_map_is_derived
+  GK3D3.2b:
+    verdict: retained_after_boundary_repair
+    retained: on_an_explicit_zero_matching_branch_the_one_loop_exponent_gives_b_over_b0_g_squared
+    rejected: GK3D2_or_rung25_removes_the_affine_reference_value
+  GK3D3.2c:
+    verdict: retained_conditionally
+    retained: when_the_zero_matching_kinetic_coefficient_is_positive_its_inverse_is_b0_g_squared_over_b
+    rejected: b0_the_coupling_matter_weight_scale_identification_and_boundary_are_all_derived_or_parameter_free
+  GK3D3.2d:
+    verdict: retained_narrowly
+    retained: a_common_positive_rescaling_of_both_lengths_preserves_their_log_ratio
+    rejected: the_first_conjunct_subtracts_an_expression_from_itself_and_does_not_test_the_coupling_dataflow
+  GK3D3.3a:
+    verdict: rejected
+    reason: dimensional_power_zero_is_a_constant_not_a_logarithm_and_dimensional_analysis_does_not_select_the_loop_function
+    accepted_replacement: C_DIM_009_requires_a_separately_derived_loop_and_dimensionless_ratio_dependence
+  GK3D3.3b:
+    verdict: rejected_as_uniqueness_claim
+    reason: log_is_not_the_only_function_whose_composition_with_exp_X_is_rational_and_the_p_equals_zero_power_is_itself_constant_and_rational
+    counterfamilies: [one, log_y_squared, one_over_log_y, any_rational_function_of_log_y]
+    retained: log_exp_X_equals_X_on_the_declared_positive_domain
+  GK3D3.3c:
+    verdict: rejected_as_independent_oracle
+    reason: the_checked_product_identity_is_an_algebraic_restating_of_the_previously_defined_inverse
+  GK3D3.4a:
+    verdict: rejected_as_general_self_consistency
+    reason: the_check_inserts_unaccepted_b0_equals_7_and_beta_squared_equals_0_245_comparators_and_tests_two_weights_not_the_symbolic_domain_or_full_one_loop_validity
+    retained: those_supplied_numbers_satisfy_the_displayed_conventional_inequality_for_the_two_sample_weights
+  GK3D3.4b:
+    verdict: rejected_as_data_gate_oracle
+    reason: the_condition_only_rechecks_the_definition_of_g2_induced_and_never_inspects_inputs_or_source_dataflow
+assertion_audit:
+  node: assert_inside_local_check_helper
+  establishes: each_runtime_condition_evaluated_truthy
+  does_not_establish: headline_claim_scope_dependency_closure_or_mutation_sensitivity

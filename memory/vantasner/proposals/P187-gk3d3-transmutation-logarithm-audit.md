@@ -157,6 +157,41 @@ code is repaired to `np.trapezoid` or the canonical helper before scientific
 adjudication. Immutable source receives a recorded alias-only replay when
 required, and that environment event never rejects a candidate.
 
+## Source Audit Result
+
+The hash-pinned source passes all fourteen runtime checks without a NumPy
+compatibility event. Its exact cancellation of a shared inverse-length energy
+conversion, conditional `log(exp(X))=X` reduction, zero-matching algebra, and
+common length-rescaling identity survive as candidates after their premises
+are restored.
+
+The load-bearing physical and boundary claims do not survive their cited
+sources. C-RGE-003 leaves both length labels, both conversions, `b0`, the
+coupling, the reference scale, and physical interpretation supplied.
+C-IDN-002 proves that AS7's gravity-plus-length system has a one-dimensional
+nullspace, so its reported coupling is inverse reconstruction after a third
+coefficient is supplied, not an upstream over-determination. C-VAC-003 retains
+`Z_ref`; neither rung25 nor GK3D2 sets it to zero after charged matter is
+introduced.
+
+The source predicates do not repair those gaps. Check 0b searches mutable live
+file prose. Check 0c defines the desired exponential before taking its log.
+Checks 1a and 1b set both conversion factors and the soliton coefficient to one
+before testing cancellation and symbol count. Check 2a overwrites its first
+scale-ratio expression. Checks 2b and 2c inherit the rejected zero boundary and
+then invert it. Check 2d partly subtracts an expression from itself. Check 3c
+multiplies a defined reciprocal back to its input. Check 4b never inspects the
+data surface.
+
+The power-law argument is also false at claim scope. Dimensional exponent zero
+gives a constant, not a logarithm, and C-DIM-009 already shows that dimensions
+do not select a loop form factor. A logarithm is not the unique function whose
+composition with `exp(X)` is rational: constants, powers and rational
+functions of `log(y)`, and `1/log(y)` are immediate counterfamilies. The
+source's perturbativity check inserts `b0=7` and `beta^2=0.245` despite calling
+them derived free inputs, samples two matter weights, and does not establish a
+general loop-validity domain.
+
 ## Attempts and Continuation
 
 Attempt 0001 freezes v0.138.0, framework commit `ba1cbaf`, the GK3D3 hash and
@@ -167,6 +202,14 @@ rank-underdetermination ceilings but no governed GK3D3 result. Every later
 failed implementation, representation, scale map, boundary, candidate, or
 verifier route remains append-only with a materially different continuation.
 
+Attempt 0002 runs the immutable source natively in 0.41 seconds and records all
+fourteen executed checks, fourteen lexical and literal sites, one helper
+assertion, and no NumPy surface. It retains the exact conditional ratio,
+logarithm, zero-branch, and rescaling algebra while rejecting the source's
+physical scale derivation, erased affine boundary, uniqueness argument,
+parameter-free headline, and sampled perturbativity conclusion. The next route
+generalizes the conversions and composes the accepted claims directly.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length
@@ -176,13 +219,13 @@ governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| GK3D3 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | open |
+| GK3D3 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source reproduction, check adjudication, and attempt 0002 |
 | The two source lengths may be relabeled as cutoff and Compton scales | Type every physical identification as a separately supplied map | open |
 | Equal `hbar*c` conversions may hide a soliton or threshold coefficient | Derive the arbitrary-conversion formula and mutate each factor | open |
 | The transmutation relation may be presented as prediction of its supplied coupling | Preserve the beta coefficient, coupling, reference scale, conversion data, and formal-domain ceiling | open |
 | The affine `Z_ref` may be erased by inheritance from GK3D2 | Compose the general family first and test unequal-boundary counterexamples | open |
 | A conditional inverse kinetic coefficient may be called a physical coupling | State positivity, convention, matter, group, matching, and identification premises | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D3 has no NumPy surface |
 | Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
 
 ## Review and Promotion Plan
