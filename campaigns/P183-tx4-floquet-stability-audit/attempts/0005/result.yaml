@@ -1,0 +1,35 @@
+attempt: 0005
+campaign: P183
+candidate: D_symbolic_shape_Hessian_upgrade_freeze
+status: passed
+started_at: '2026-08-11T09:40:00Z'
+finished_at: '2026-08-11T09:42:00Z'
+proposal_revision:
+  from: 0002
+  to: 0003
+  candidate_set_changed: false
+  claim_identifiers_changed: false
+  selection_criteria_changed: false
+exact_oracle_frozen:
+  - differentiate_every_chart_integrand_entry_at_the_base_map
+  - extract_every_azimuthal_Fourier_zero_mode
+  - integrate_the_resulting_rational_functions_exactly_over_the_full_sphere
+  - derive_the_complete_gradient_and_ten_by_ten_Hessian_without_numeric_entry_insertion
+  - diagonalize_the_derived_exact_matrix
+  - derive_symmetry_tangents_independently_and_prove_kernel_equality
+fallback_ceiling: unresolved_symbolic_work_leaves_C_RMAP_003_numeric_only
+revision_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  repository: WORKFLOW_VALID_172_claims_172_accepted_0_proposals
+  migration_queue: 218_units_42_pending_0_partial
+  diff_check: passed
+staged_detection:
+  changed_symbols: 0
+  changed_files: 5
+  affected_count: 0
+  affected_processes: []
+  risk_level: low
+debt:
+  - exact_shape_derivation_and_independent_kernel_review
+next_attempt: commit_symbolic_oracle_freeze_then_run_exact_derivation

@@ -1,0 +1,38 @@
+attempt: 0004
+campaign: P183
+candidate: D_analytic_jet_numeric_shape_Hessian
+status: passed_numeric_discovery
+started_at: '2026-08-11T09:37:00Z'
+finished_at: '2026-08-11T09:40:00Z'
+command: .venv/bin/python campaigns/P183-tx4-floquet-stability-audit/attempts/0004/explore_shape_hessian.py
+method:
+  differentiation: second_order_real_jet_through_the_pointwise_complex_rational_map_integrand
+  integration: tensor_Gauss_Legendre_u_and_uniform_midpoint_phi
+  coefficient_finite_differences: false
+  precision: IEEE_754_complex128_and_float64
+  grids: [[24, 48], [32, 64], [48, 96], [64, 128]]
+  chunk_size: 1024
+process:
+  exit_code: 0
+  elapsed_seconds: 0.93
+  maximum_resident_kibibytes: 98844
+results:
+  base_value_finest: 5.808259320256469
+  exact_base_comparator: pi_plus_eight_thirds
+  finest_gradient_max: 7.906002241764298e-16
+  finest_small_eigenvalue_abs_max: 8.053766449354e-15
+  positive_eigenvalues_finest: [3.141592653590, 8.474925986923, 8.474925986923, 43.32448190846, 43.32448190846]
+  positive_spectrum_grid_stable: true
+integer_relation_discovery:
+  status: noncanonical_numeric_hint
+  candidates: [pi, 16_over_3_plus_pi_double, 64_over_3_plus_7_pi_double]
+  inserted_as_exact_input: false
+source_comparison:
+  source_large_modes_reproduced: true
+  source_five_h2_modes_replaced_by_analytic_derivative_roundoff_modes: true
+  source_exact_kernel_claim_proved: false
+debt:
+  - exact_integrand_derivative_Fourier_average_sphere_integral_and_full_matrix
+  - independent_symmetry_tangent_and_kernel_derivation
+  - finite_Floquet_and_rotor_APIs
+next_attempt: freeze_symbolic_upgrade_before_exact_shape_calculation

@@ -2,7 +2,7 @@
 description: Audit TX4 and separate exact co-rotating algebra from genuine stability
 author: vantasner
 created: '2026-08-11T09:20:00Z'
-updated: '2026-08-11T09:36:00Z'
+updated: '2026-08-11T09:42:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -161,6 +161,20 @@ zero/five-positive inertia, while a nonstationary coefficient shift and a
 negative quadratic mutation must break the corresponding verdict. These
 thresholds are structural gap and floating-error gates, not exact-zero or
 full-field claims.
+
+Attempt 0004's second-order real-jet differentiation found a much stronger
+structure without using integrated-value finite differences: all four grids
+give a roundoff-scale gradient, five roundoff-scale eigenvalues, and a stable
+positive spectrum numerically matching `pi`, `16/3+pi` twice, and
+`64/3+7*pi` twice. Revision 0003 freezes the proof obligation before any exact
+calculation. The exact route must differentiate the chart integrand at zero,
+take every azimuthal Fourier zero mode, integrate the resulting rational
+functions on the full sphere, derive the entire ten-by-ten Hessian rather than
+fit its eigenvalues, prove the gradient vanishes, diagonalize that derived
+matrix, and identify its kernel with independently derived symmetry tangents.
+Integer-relation recognition is discovery evidence only. If any symbolic
+integral remains unevaluated or any matrix entry is inserted from the numeric
+spectrum, C-RMAP-003 remains resolution-bounded numeric evidence.
 
 Any numerical Hessian or spectrum must otherwise name floating precision,
 exact objective/operator, coordinates, domain, boundary data, constraints,
