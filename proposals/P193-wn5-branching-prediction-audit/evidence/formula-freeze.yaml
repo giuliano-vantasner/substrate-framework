@@ -1,0 +1,56 @@
+campaign: P193
+base_release: v0.143.0
+selected_candidates: [B, D, E, F]
+source_evidence_candidate: A
+rejected_candidate: C
+governance_candidate: G
+provisional_claim: C-BRN-002
+promotion_planned: false
+dependencies: [C-BRN-001, C-OSC-001]
+domains:
+  intensity: exact_positive_dimensionless_real_S
+  order: nonnegative_integer_n
+  population: exact_positive_integer_N_with_positive_real_extension_for_partial_derivative
+  baseline_ratio: exact_positive_dimensionless_rho
+  weight_support: all_nonnegative_factorial_one_mass
+definitions:
+  weight: w_n=S^n/n!
+  weighted_fraction: B_soft=N*w_n/(N*w_n+rho)
+  comparison_fraction: B_gamma=rho/(N*w_n+rho)
+  relative_odds_against_order_one: E_n=N*w_n/w_1=N*S^(n-1)/n!_for_n_at_least_1
+exact_order_shape:
+  adjacent_weight_ratio: w_(n+1)/w_n=S/(n+1)
+  adjacent_comparison_difference: >-
+    B_gamma(n+1)-B_gamma(n)=rho*N*w_n*(n+1-S)/((n+1)*(N*w_(n+1)+rho)*(N*w_n+rho))
+  sign:
+    n_plus_1_less_than_S: negative
+    n_plus_1_equal_to_S: zero
+    n_plus_1_greater_than_S: positive
+  minimum_set:
+    noninteger_S: [floor_S]
+    positive_integer_S: [S_minus_1, S]
+  endpoint_zero_less_than_S_less_than_one: minimum_at_zero
+relative_odds_shape:
+  adjacent_ratio: E_(n+1)/E_n=S/(n+1)
+  equality_threshold: E_n=1_iff_N=n!/S^(n-1)
+  greater_than_one: E_n>1_iff_N>n!/S^(n-1)
+  less_than_one: E_n<1_iff_N<n!/S^(n-1)
+  integer_population_note: strict_threshold_uses_the_smallest_integer_strictly_above_n!/S^(n-1)
+population_dependence:
+  fixed_order_partial: partial_N_B_gamma=-rho*w_n/(N*w_n+rho)^2_less_than_zero
+  continuous_positive_weight_path: d_B_gamma/dN=-rho*(w(N)+N*w_prime(N))/(N*w(N)+rho)^2
+  path_sign_condition: sign_is_opposite_w_plus_N_w_prime
+  integer_path_condition: comparison_between_steps_depends_on_the_product_N_times_w_n
+named_weight_contrast_on_positive_orders:
+  w_n=n: B_gamma_strictly_decreases
+  w_n=n^k_for_k_positive: B_gamma_strictly_decreases
+  w_n=exp(-alpha*n)_for_alpha_positive: B_gamma_strictly_increases
+  discrimination_scope: exact_function_family_contrast_at_fixed_positive_N_rho_and_channel_definitions
+physical_ceiling:
+  - mathematical_fractions_do_not_derive_physical_rates_or_exhaustive_channels
+  - rho_and_N_remain_supplied_and_can_change_fraction_values
+  - order_n_requires_an_accepted_observable_and_cross_order_protocol
+  - fixed_N_and_rho_across_orders_are_additional_physical_premises
+  - zero_interaction_or_zero_spectral_density_blocks_a_rate_while_leaving_the_mass_positive
+  - no_measured_turnover_material_branching_yield_heat_or_observation_is_predicted
+scientific_threshold_changed: false

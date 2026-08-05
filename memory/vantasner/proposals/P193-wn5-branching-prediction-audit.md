@@ -149,6 +149,19 @@ under fixed N, rho, channels, and order meaning; it is not yet a physical
 prediction. The next attempt freezes the exact composition and decides novelty
 before any API change.
 
+Attempt 0003 freezes the exact accepted composition and rejects a new claim or
+wrapper structurally. C-BRN-001 already owns the weighted allocation,
+fixed-weight population partial, relative odds, and free-baseline fit;
+C-OSC-001 owns the factorial-one mass, adjacent ratio, and complete modes. The
+comparison-fraction adjacent difference has the exact sign of `n+1-S`, so
+noninteger S has one minimum at `floor(S)`, positive integer S has the tied
+minima `S-1,S`, and `0<S<1` has its minimum at the omitted order-zero endpoint.
+The relative-odds factor is `N*S^(n-1)/n!` with equality threshold
+`N=n!/S^(n-1)`. Along a population-dependent continuous weight path the sign
+instead depends on `w+N*w'`. Candidates B, D, E, and F are selected; A remains
+source evidence, C is rejected as duplicate, and G remains open. C-BRN-002 is
+reserved but unpromoted, and no canonical API change is warranted.
+
 ## Debt Ledger
 
 The P193 ledger tracks source predicates, accepted overlap, order and
@@ -159,9 +172,9 @@ dependencies, consumers, and governed state.
 | --- | --- | --- |
 | WN5 was exposed before P193 | Record exposure and claim no fresh blinding | discharged |
 | Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | discharged |
-| Accepted branching and factorial claims may already own the result | Complete claim, API, and theorem nonduplication review | open |
-| Fixed-order and population-dependent paths may be conflated | Derive partial, total, and integer-step conditions | open |
-| Enhancement may hide baseline or population inputs | Type and retain every input and equality threshold | open |
+| Accepted branching and factorial claims may already own the result | Complete claim, API, and theorem nonduplication review | discharged |
+| Fixed-order and population-dependent paths may be conflated | Derive partial, total, and integer-step conditions | discharged |
+| Enhancement may hide baseline or population inputs | Type and retain every input and equality threshold | discharged |
 | Mathematical fractions may be called physical predictions | Supply countermodels and premise inventory | open |
 | Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |

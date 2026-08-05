@@ -1,0 +1,47 @@
+campaign: P193
+provisional_claim: C-BRN-002
+decision: reserve_unpromoted
+accepted_owners:
+  C-BRN-001:
+    owns:
+      - exact_two_channel_fractions_and_endpoints
+      - weighted_positive_integer_population_specialization
+      - fixed_weight_population_partial_derivative
+      - relative_weighted_odds_enhancement
+      - free_baseline_arbitrary_target_fit
+    module: src/substrate_framework/branching.py
+    APIs:
+      - weighted_channel_allocation
+      - relative_weighted_odds_enhancement
+  C-OSC-001:
+    owns:
+      - all_nonnegative_factorial_one_mass
+      - exact_adjacent_weight_ratio
+      - complete_mode_sets_including_integer_ties
+    module: src/substrate_framework/bosonic_fock.py
+    APIs:
+      - factorial_one_mass
+      - factorial_one_modes
+  C-CMB-003:
+    owns:
+      - strict_log_concavity_and_existing_mode_ties
+      - normalized_generating_moment_and_tail_results
+    relevance: confirms_shape_but_is_not_needed_for_the_WN5_composition
+composition_cost:
+  new_parameters: []
+  new_assumptions: []
+  new_sample_space: false
+  new_solver: false
+  new_canonical_symbol_required: false
+  existing_API_expression: >-
+    weighted_channel_allocation(r_w,r_c,factorial_one_mass(n,intensity=S,support=all_nonnegative),N)
+novelty_tests:
+  exact_branch_fraction: direct_substitution_into_C_BRN_001
+  adjacent_difference_sign: monotone_transform_of_C_OSC_001_adjacent_ratio
+  minimum_set: inverse_image_of_C_OSC_001_complete_mode_set
+  enhancement: direct_C_BRN_001_relative_odds_with_C_OSC_001_weights
+  path_dependence: already_part_of_C_BRN_001s_fixed_weight_domain_ceiling_and_GB4_adjudication
+verdict: >-
+  The warranted WN5 object is a useful exact accepted composition but not a
+  distinct claim or API. Promoting C-BRN-002 would duplicate accepted premises
+  and create a one-call wrapper with no independent invariant.

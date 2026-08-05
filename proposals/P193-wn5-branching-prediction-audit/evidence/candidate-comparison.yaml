@@ -1,0 +1,36 @@
+campaign: P193
+ordered_criteria:
+  - novelty_beyond_accepted_composition_and_APIs
+  - exact_domain_support_and_common_dimension_typing
+  - fixed_order_versus_total_path_dependence
+  - parameter_and_baseline_economy
+  - integer_ties_endpoints_and_limits
+  - mutation_sensitive_threshold_logic
+  - physical_premise_completeness
+  - downstream_governance_fit
+candidates:
+  A:
+    decision: retain_as_source_evidence
+    reason: native_execution_passes_but_finite_oracles_do_not_support_the_full_headline
+  B:
+    decision: select
+    reason: accepted_APIs_and_claims_express_the_complete_warranted_object_without_new_assumptions
+  C:
+    decision: reject_as_duplicate
+    reason: a_new_claim_or_wrapper_would_repeat_C_BRN_001_and_C_OSC_001
+  D:
+    decision: select_as_exact_composition_detail
+    reason: equality_and_adjacent_ratio_thresholds_make_hidden_inputs_and_ties_explicit
+  E:
+    decision: select_as_domain_ceiling
+    reason: partial_total_and_integer_path_conditions_prevent_GB4_headline_rehabilitation
+  F:
+    decision: select_as_physical_ceiling
+    reason: free_inputs_and_zero_rate_countermodels_block_prediction_semantics
+  G:
+    decision: continue
+    reason: source_consumers_disposition_queue_memory_and_debt_remain_open
+comparator_values_used_for_selection: []
+provisional_claim: C-BRN-002
+claim_promotion: false
+scientific_threshold_changed: false
