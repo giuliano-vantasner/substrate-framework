@@ -7362,3 +7362,66 @@ units:
       version event affects a scientific verdict. The single integrated
       boundary is recorded in attempt 0011: it validates 807 memory files and
       passes all 1,757 tests in 189.45 seconds with exit zero.
+  MD3:
+    disposition: qualified
+    accepted_claims:
+      - C-OSC-001
+      - C-CMB-003
+      - C-VOP-001
+    qualification: >-
+      C-OSC-001 retains the standard one-mode Fock ladder and mathematical
+      factorial-one family, while C-CMB-003 retains its complete normalized
+      mass, modes, moments, and tail bounds. C-VOP-001 adds the exact normalized
+      coherent vector, annihilation eigenvalue, overlap, and number-measurement
+      Born law for a separately declared complex displacement. MD3's 41 native
+      predicates reproduce, but its finite truncated commutator is not globally
+      central and its weight helper inserts rather than independently derives
+      the normal-ordered coefficient. The repaired infinite-Fock derivation
+      supplies the theorem. Positive integer intensity has two adjacent modes,
+      S-1 and S. Nonzero coherent occupation support does not remove an accepted
+      classical phase bound, change cosine vacua, select a material S, quantize
+      or prepare the accepted medium, or derive a Huang-Rhys or Franck-Condon
+      material Hamiltonian. PN2 supplies no accepted band or occupation premise.
+      No interaction, transition, branching, isotope, reaction, channel,
+      physical occurrence probability, rate, or substrate conclusion follows.
+    evidence:
+      - campaigns/P198-md3-vertex-operator-audit/reviews/source_adjudication.md
+      - campaigns/P198-md3-vertex-operator-audit/reviews/C-VOP-001-claim-review.md
+      - campaigns/P198-md3-vertex-operator-audit/reviews/MD3-disposition-review.md
+      - campaigns/P198-md3-vertex-operator-audit/reviews/impact_analysis.md
+      - campaigns/P198-md3-vertex-operator-audit/evidence/source-reproduction.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/consumer-reproduction.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/compatibility-audit.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/source-audit.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/check-adjudication.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/formula-freeze.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/input-provenance.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/dependency-audit.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/consumer-audit.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/candidate-comparison.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/implementation-audit.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/primary-provenance.yaml
+      - campaigns/P198-md3-vertex-operator-audit/evidence/independent-provenance.yaml
+      - campaigns/P198-md3-vertex-operator-audit/verify.py
+      - campaigns/P198-md3-vertex-operator-audit/reviews/independent_coherent_state_review.py
+      - campaigns/P198-md3-vertex-operator-audit/reviews/replay_source_graph.py
+      - campaigns/P198-md3-vertex-operator-audit/attempts/0003/result.yaml
+      - campaigns/P198-md3-vertex-operator-audit/attempts/0004/result.yaml
+      - campaigns/P198-md3-vertex-operator-audit/attempts/0005/result.yaml
+      - campaigns/P198-md3-vertex-operator-audit/attempts/0006/result.yaml
+      - campaigns/P198-md3-vertex-operator-audit/attempts/0007/result.yaml
+      - campaigns/P198-md3-vertex-operator-audit/attempts/0008/result.yaml
+      - memory/vantasner/decisions/C-VOP-001-review.md
+      - memory/vantasner/decisions/MD3-qualified-review.md
+    note: >-
+      P198 closes 48 primary, 25 independent, and 20 source-graph checks after
+      preserving one contract-schema failure and correcting three source-oracle
+      overreads. Ten byte-pinned native records cover 372 predicates without
+      duplicate native execution; MD4, MD5, and MD6 remain pending reverse
+      consumers. MD3 and its graph have no NumPy quadrature compatibility
+      surface, so no version event affects a scientific verdict. The single
+      integrated boundary is recorded in attempt 0008: it validates 812 memory
+      files and passes all 1,779 tests in 167.47 seconds with exit zero.

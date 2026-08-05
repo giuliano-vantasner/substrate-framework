@@ -1614,6 +1614,15 @@ Conditional on the real virial slope formulas width_slope=(a-b)/2 and energy_slo
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-VOP-001
+
+On C-OSC-001's standard one-mode bosonic Fock space with orthonormal number basis |n>, let alpha be a separately declared complex number and let S=conjugate(alpha)*alpha. The norm-convergent vector |alpha>=exp(-S/2)*sum_{n=0}^infinity alpha^n/sqrt(n!)*|n> is normalized, obeys a|alpha>=alpha|alpha>, and has exact overlap <alpha|beta>=exp(-(S_alpha+S_beta)/2+conjugate(alpha)*beta). A measurement of the declared number operator on |alpha> has Born probability p_alpha(n)=exp(-S)*S^n/n!, with mean and variance S. At alpha=0 only the vacuum has nonzero probability; for alpha!=0 every nonnegative occupation has positive probability. C-CMB-003 therefore supplies the complete mode and tail corollaries: noninteger positive S has mode floor(S), while positive integer S has both adjacent modes S-1 and S. In the standard infinite Weyl representation, D(alpha)=exp(alpha*a_dagger-conjugate(alpha)*a) maps |0> to |alpha>; for real lambda and alpha=i*lambda its generator is i*lambda*(a+a_dagger). This conditional identification is not justified by treating a finite truncated commutator as globally central. The number law is a probability only for the declared coherent state and number measurement. It does not quantize or prepare the accepted classical medium, identify S with a classical peak, RMS phase, material variance, or supplied energy band, change the minima of a cosine potential, derive a Huang-Rhys or Franck-Condon material Hamiltonian, or supply an interaction, transition, branching, reaction, channel, physical occurrence probability, rate, or substrate realization.
+
+- Accepted in: `v0.147.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-OSC-001, C-CMB-003
+
 ## C-VTX-001
 
 For positive g, lambda, and v and positive integer n, declare the radial Abelian-Higgs convention phi=f(r)*exp(i*n*theta), A_theta=a(r)/(g*r), and energy per unit length 2*pi*integral r*dr*[f'^2/2+f^2*(n-a)^2/(2*r^2) +(a'/r)^2/(2*g^2)+lambda*(f^2-v^2)^2/4]. Exact variation gives f''+f'/r-f*(n-a)^2/r^2-lambda*f*(f^2-v^2)=0 and a''-a'/r+g^2*(n-a)*f^2=0. If f approaches v, finite angular energy uniquely requires a to approach n; the declared connection then has flux 2*pi*n/g, while the ungauged positive-winding profile has a logarithmic divergence. Vacuum linearization gives vector and scalar inverse lengths g*v and v*sqrt(2*lambda), both tending to zero as v tends to zero. This conditional model establishes no substrate, dual, chromoelectric, QCD, or confinement identity and no vortex existence.

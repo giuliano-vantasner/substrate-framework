@@ -1,0 +1,75 @@
+campaign: P198
+title: MD3 exact one-mode coherent-state vertex-operator audit
+source_baseline: substrate@6d1f4e0
+source_units: [MD3]
+base_release: v0.146.0
+accepted_release: v0.147.0
+adjudicated_at: '2026-08-11T22:35:00Z'
+selected_candidates:
+  - {id: A, reason: The normalized coherent vector adds exact state amplitudes eigenvalue overlap and Born measurement semantics beyond the accepted Fock ladder and factorial-one mass.}
+competing_candidates:
+  - {id: B, decision: retained_as_a_compact_multiplier_counterexample_that_preserves_pointwise_density}
+  - {id: C, decision: rejected_because_ordered_and_pure_creation_exponentials_are_distinct_operators_not_required_by_MD3}
+  - {id: D, decision: rejected_because_the_coherent_state_and_overlap_are_not_duplicates_of_the_existing_mass}
+  - {id: E, decision: rejected_because_no_independent_foundational_inconsistency_requires_medium_quantization}
+claims:
+  - {id: C-VOP-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-OSC-001, decision: unchanged_standard_one_mode_Fock_ladder_and_mathematical_factorial_one_family}
+  - {id: C-CMB-003, decision: unchanged_normalized_mass_modes_moments_and_tails}
+unpromoted_claims:
+  - {id: finite_truncated_commutator_proves_global_BCH, reason: The_top_edge_makes_the_full_commutator_noncentral_and_nested_commutators_nonzero.}
+  - {id: positive_integer_intensity_has_a_unique_floor_mode, reason: The_exact_modes_are_S_minus_1_and_S.}
+  - {id: an_accepted_single_vacuum_physics_bound_is_removed, reason: C_SG_019_is_entire_and_C_OSC_002_already_rejects_the_barrier_as_a_universal_accuracy_boundary.}
+  - {id: periodicity_selects_a_material_displacement, reason: Periodicity_is_independent_of_alpha_and_supplies_no_state_preparation_or_parameter_map.}
+  - {id: Huang_Rhys_or_Franck_Condon_material_correspondence_is_derived, reason: No_displaced_material_Hamiltonian_states_transition_or_parameter_provenance_is_supplied.}
+  - {id: PN2_band_growth_branching_isotope_or_rate_conclusions, reason: PN2_has_no_accepted_mapping_and_MD4_MD5_MD6_remain_pending.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_coherent_state_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VOP-001-claim-review.md
+  source_disposition_review: reviews/MD3-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  consumer_reproduction: evidence/consumer-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+source_disposition: {MD3: qualified}
+accepted_mappings: [C-OSC-001, C-CMB-003, C-VOP-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.147.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0008/result.yaml
+  tests_passed: 1779
+  pytest_seconds: 167.47
+  wall_seconds: 180.66
+  peak_rss_kib: 216724
+  exit_status: 0
+debt: []
+status: accepted

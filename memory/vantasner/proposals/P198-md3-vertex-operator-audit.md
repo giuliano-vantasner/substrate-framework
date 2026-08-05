@@ -2,7 +2,7 @@
 description: Separate coherent occupation support from compact phase vertices and classical cosine vacua
 author: vantasner
 created: '2026-08-11T22:10:00Z'
-updated: '2026-08-11T22:28:00Z'
+updated: '2026-08-11T22:41:01Z'
 tags:
 - substrate-framework
 - research-arc
@@ -10,8 +10,8 @@ tags:
 - vertex-operator
 - coherent-state
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P198 MD3 Vertex Operator Audit
 
@@ -131,6 +131,13 @@ byte-pinned records without duplicate execution, and 20 graph checks pass. The
 individual C-VOP-001 and MD3 reviews agree on a compatible exact theorem and a
 qualified source disposition while MD4 through MD6 remain pending.
 
+Attempt 0006 preserves the promotion-record ordering failure caused by
+referencing attempt files before creating them; scientific replay was not
+reached. Attempt 0007 closes the repaired post-move targeted boundary. Attempt
+0008 closes the single integrated promotion gate: 1,779 tests pass in 167.47
+seconds, the workflow validates 812 memory files, and the process exits zero
+after 180.66 wall seconds at 216,724 KiB peak RSS.
+
 ## Debt Ledger
 
 The ledger tracks every conflation that could turn an exact state identity
@@ -160,3 +167,5 @@ P198 closes only when a positive importable object exists, premises and
 dependency closure are explicit, competing concepts are adjudicated, strong
 oracles and mutations pass, every affected consumer replays, claim and source
 reviews agree, generated records synchronize, and the debt ledger is empty.
+C-VOP-001 is accepted in v0.147.0, MD3 is qualified, every listed debt is
+discharged, canonical records agree, and attempt 0008 satisfies this gate.

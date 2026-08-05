@@ -52,4 +52,4 @@ comparators_blinded_until: >-
   source graphs. P198 freezes operator families, imports, criteria, mutations,
   and physical ceilings before any renewed P198 execution, detailed predicate
   audit, implementation, or inspection of comparison values.
-status: active
+status: accepted

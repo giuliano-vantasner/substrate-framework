@@ -1,0 +1,36 @@
+attempt: 0007
+campaign: P198
+candidate: post_promotion_exact_targeted_replay
+status: passed
+started_at: '2026-08-11T22:36:00Z'
+finished_at: '2026-08-11T22:38:00Z'
+target_release: v0.147.0
+claim: C-VOP-001
+source_disposition: {MD3: qualified}
+accepted_mappings: [C-OSC-001, C-CMB-003, C-VOP-001]
+generated_state:
+  claims: 187
+  accepted_claims: 187
+  proposals: 0
+  memory_files: 812
+  migration_units: 218
+  migration_pending: 26
+  migration_partial: 0
+  migration_qualified: 179
+targeted_boundary:
+  primary_checks: 48
+  independent_checks: 25
+  graph_checks: 20
+  focused_tests: 59
+  exit_statuses_all_zero: true
+verifier_sha256:
+  primary: a78f42d77bc28aa6f00cb006a2922dabedabaafeafe2bb69f62e08a192c217bc
+  independent: 89393f518d42ce7ef870a04b40e9b051f12f2d0f60414bf05fdc9f37f9c2ae9e
+  graph: 9067ee5a179acefff192e2849c66396bae8fbe7211144d19c2a5d64a3564eb05
+release_sha256: c13247bf582c463bf62f966b48250f4cc1a1e747a7c812f3fbe95b82eee20e2b
+registry_sha256: 6b9261e08aab88aa4b0e191a761929a7e3e1d6ed0b28ba8fc8d0ad1ef2a020cb
+source_claims_sha256: 9255f1068ea8ddb013077383c7e3db98de46c9513502b672dc5670fa04443ddf
+compatibility_event: none
+version_only_scientific_failures: 0
+debt: []
+next_attempt: single_integrated_promotion_gate
