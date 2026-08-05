@@ -1,0 +1,20 @@
+attempt: 0005
+campaign: P186
+candidate: primary_exact_C_VAC_003_and_GK3D2_adjudication
+status: failed_technical_representation
+started_at: '2026-08-11T12:34:00Z'
+finished_at: '2026-08-11T12:34:00Z'
+command: >-
+  PYTHONPATH=src /usr/bin/time -f 'ELAPSED=%e MAXRSS_KIB=%M EXIT=%x'
+  .venv/bin/python
+  campaigns/P186-gk3d2-induced-kinetic-normalization-audit/verify.py
+process:
+  exit_code: 1
+  elapsed_seconds: 1.54
+  maximum_resident_kibibytes: 144744
+  checks_passed_before_failure: 11
+failure_class: verifier_representation
+failure: expanded_parameter_weight_was_compared_by_structural_equality_to_its_factored_form
+scientific_candidate_failed: false
+repair: compare_the_algebraic_difference_after_exact_simplification
+next_attempt: rerun_the_same_frozen_primary_verifier

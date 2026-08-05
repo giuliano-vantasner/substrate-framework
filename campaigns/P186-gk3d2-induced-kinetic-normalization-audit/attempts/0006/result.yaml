@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P186
+candidate: primary_exact_C_VAC_003_and_GK3D2_adjudication
+status: failed_technical_text_normalization
+started_at: '2026-08-11T12:35:00Z'
+finished_at: '2026-08-11T12:35:00Z'
+command: >-
+  PYTHONPATH=src /usr/bin/time -f 'ELAPSED=%e MAXRSS_KIB=%M EXIT=%x'
+  .venv/bin/python
+  campaigns/P186-gk3d2-induced-kinetic-normalization-audit/verify.py
+process:
+  exit_code: 1
+  elapsed_seconds: 5.06
+  maximum_resident_kibibytes: 150840
+  checks_passed_before_failure: 30
+failure_class: verifier_text_normalization
+failure: source_scope_phrases_were_split_by_docstring_line_wrapping
+scientific_candidate_failed: false
+repair: normalize_all_docstring_whitespace_before_phrase_checks
+next_attempt: rerun_the_same_frozen_primary_verifier

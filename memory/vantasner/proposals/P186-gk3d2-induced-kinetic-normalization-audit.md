@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T12:31:00Z'
+updated: '2026-08-11T12:36:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -248,6 +248,13 @@ scale-ordering, and hidden-float mutations change or reject the relevant
 verdict, while a paired reference-coordinate change preserves the same
 running function. This discharges implementation debt but not independent
 rederivation, source-graph replay, or governed promotion.
+
+Attempts 0005 and 0006 preserve two primary-verifier representation failures:
+structural comparison of expanded and factored SymPy expressions, and phrase
+comparison across docstring line wrapping. Neither changed a scientific
+formula or threshold. Attempt 0007 passes all 31 hash-pinned, exact, and
+mutation-sensitive primary checks after simplifying algebraic differences and
+normalizing documentation whitespace. Independent rederivation remains open.
 
 ## Debt Ledger
 
