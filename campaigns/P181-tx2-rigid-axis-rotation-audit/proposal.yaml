@@ -1,0 +1,71 @@
+id: P181
+base_release: v0.132.0
+base_commit: b88b2576fe0490be21895b87f5b3be77cf5bbd7f
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [TX2]
+question: >-
+  Does hash-pinned TX2 establish an exact convention-safe kinematic theorem
+  for rigid orthogonal rotation of an axisymmetric STF moment, including its
+  invariant eigenvalue degeneracy, harmonic derivatives, observer readouts,
+  and conditional power, without calling a rotated axisymmetric tensor
+  genuinely triaxial or treating a declared angular speed as solved source
+  dynamics, stability, gravity, radiation, or a physical state?
+invariants:
+  - C-MOM-001 fixes normalized I_STF and triple Q=3*I_STF conventions and separates declared moment kinematics from locally conserved source dynamics and gravity.
+  - C-GW-001 and C-GW-002 fix only conditional TT projection, convention covariance, angular power algebra, and polarization bases; they supply no gravitational action, coupling derivation, source equation, or radiation mechanism.
+  - C-GW-007 and C-GW-008 distinguish Cartesian tensor shape, observer-frame coordinates, and temporal polarization rank; two coordinates at one phase do not establish two independent modes.
+  - C-RMOM-001 fixes the exact conditional B2 normalized moment as diag(q,q,-2q) with q positive but supplies no rotation, angular speed, full field, local conserved stress, physical state, gravity, or radiation.
+  - C-RMOM-002 supplies one resolution-bounded dimensionless magnitude for a corrected stationary reduced branch, not a physical scale, inertia, rotating solution, stability theorem, or selected angular speed.
+  - Orthogonal conjugation preserves trace, determinant, characteristic polynomial, eigenvalues, multiplicities, and Frobenius norm; coordinate diagonal entries are not eigenvalues when off-diagonal components are present.
+  - A rigidly prescribed rotation is kinematic input. A dynamically self-consistent rotating or tumbling soliton requires field equations, stresses, constraints, boundary data, conserved charges, and stability evidence not inferred from the tensor path.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-MOM-001
+  - C-GW-001
+  - C-GW-002
+  - C-GW-003
+  - C-GW-005
+  - C-GW-007
+  - C-GW-008
+  - C-RMOM-001
+  - C-RMOM-002
+  - src/substrate_framework/conserved_moments.py
+  - src/substrate_framework/tt_angular.py
+  - src/substrate_framework/triaxial_l2.py
+  - src/substrate_framework/conditional_triaxial_radiation.py
+  - standard exact SO(3) tensor conjugation, characteristic-polynomial, trigonometric, and Fourier identities with every axis, sign, phase, and quadrupole convention declared
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - TX2 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Literal hash-pinned TX2 reproduction with complete tensor rotation derivative spectrum predicate assertion dependency and compatibility audit.
+  - id: B
+    description: Derive an exact general orthogonal-conjugation theorem and specialize it to aligned and perpendicular rotation of diag(q,q,-2q), preserving eigenvalue degeneracy while exposing the pure two-Omega derivative tensor.
+  - id: C
+    description: Compose Candidate B with accepted TT and scaled-STF conditional algebra to derive exact observer readouts temporal rank and convention-safe conditional power without importing physical gravity.
+  - id: D
+    description: Treat pairwise distinct Cartesian diagonal entries as genuine triaxiality and promote TX2's literal interpretation despite the nonzero off-diagonal entry and invariant repeated eigenvalue.
+  - id: E
+    description: Construct a dynamically self-consistent rotating or tumbling full field with selected Omega conserved stress stability and gravitational coupling instead of prescribing the tensor path.
+  - id: F
+    description: Close claim source dependency consumer disposition queue release documentation memory and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_STF_quadrupole_and_TT_convention_compatibility
+  - exact_SO3_invariants_eigenvalue_multiplicity_and_axis_recovery
+  - coordinate_components_principal_values_and_temporal_rank_kept_distinct
+  - exact_aligned_perpendicular_zero_speed_and_zero_amplitude_limits
+  - assumption_angular_speed_scale_and_dynamical_premise_economy
+  - symbolic_independent_rederivation_and_mutation_sensitivity
+  - novelty_beyond_C_GW_005_007_008_and_C_RMOM_001_002
+  - kinematic_conditional_waveform_physical_radiation_and_source_dynamics_separation
+  - dependency_consumer_and_governance_closure
+claims_proposed: [C-GW-009]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line TX2 body audit; the generated queue
+  and earlier reverse-consumer replay already exposed the source tensor,
+  aligned and perpendicular rotations, component formulas, claimed generic
+  triaxiality, pure two-Omega line, seven-check tally, and one assertion, so no
+  fresh source-result or runtime-output blinding is claimed
+status: frozen_with_prior_result_exposure
+revision: 0001

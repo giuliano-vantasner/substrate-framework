@@ -1,0 +1,55 @@
+attempt: 0001
+campaign: P181
+candidate: frozen_authority_recall_and_competing_concepts
+status: passed
+started_at: '2026-08-11T07:53:00Z'
+finished_at: '2026-08-11T07:55:00Z'
+base:
+  release: v0.132.0
+  release_sha256: 370471d17be24a34f909c34cfa42e8a33b8e92ce66ea1e9057ccdc72199d26bd
+  framework_commit: b88b2576fe0490be21895b87f5b3be77cf5bbd7f
+  accepted_claims: 170
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  unit: TX2
+  path: merged-framework/bridges/phase-40/bridge_TX2_rotating_triaxial_quadrupole.py
+  sha256: 7dd6852af20ef060ffa2f17950219fb79d7943e50fc64235a75a10d098f7d3b7
+  target_path_clean: true
+  source_repository_has_unrelated_later_changes: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+recall:
+  memory_queries: [TX2_rotating_triaxial_quadrupole, exact_TX2_mentions]
+  accepted_authority: [C-MOM-001, C-GW-001, C-GW-002, C-GW-003, C-GW-005, C-GW-007, C-GW-008, C-RMOM-001, C-RMOM-002]
+  nearest_canonical_modules: [conserved_moments.py, tt_angular.py, triaxial_l2.py, conditional_triaxial_radiation.py]
+  candidate_source_dependencies: [BX1, E2, QB1, QB3, TX1, TX3]
+exposure_before_freeze:
+  queue_headline_question_result_and_equation_synopsis: exposed
+  prior_source_graph_execution_tally: exposed
+  fresh_source_result_or_runtime_output_blinding_claimed: false
+  exact_source_line_dataflow_predicates_and_assertion_newly_audited: false
+candidates: [A, B, C, D, E, F]
+provisional_identifier_search: [C-GW-009, C-MOM-004]
+identifier_collisions: []
+claim_delta: [C-GW-009]
+prechange_impact:
+  conditional_scaled_stf_waveform: LOW_1_direct_0_processes
+  symmetric_trace_free: LOW_0_processes
+compatibility_policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_replay_backed_by_numpy.trapezoid
+  version_only_stop_is_scientific_failure: false
+freeze_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  repository: WORKFLOW_VALID_170_claims_170_accepted_0_proposals
+  migration_queue: 218_units_44_pending_0_partial
+  diff_check: passed
+debt:
+  - exact_TX2_implementation_predicates_assertion_values_and_dataflow_unaudited_in_P181
+  - coordinate_diagonals_eigenvalues_and_triaxiality_claim_require_exact_adjudication
+  - aligned_perpendicular_and_generic_axis_rotation_derivatives_require_independent_exact_rederivation
+  - quadrupole_convention_conditional_waveform_power_and_temporal_rank_require_explicit_closure
+  - declared_Omega_rigid_rotation_dynamic_solution_stability_and_physical_scope_require_separation
+  - nonduplication_dependencies_consumers_compatibility_and_source_disposition_open
+next_attempt: validate_and_commit_freeze_then_open_the_hash_pinned_TX2_body
