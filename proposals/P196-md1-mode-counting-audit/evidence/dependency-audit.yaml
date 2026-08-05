@@ -1,0 +1,40 @@
+campaign: P196
+source_unit: MD1
+promoted_claim_candidate: C-DOS-001
+claim_dependencies: []
+claim_input_policy: >-
+  C-DOS-001 independently declares its dimension dispersion measure branch
+  degeneracy volume gap and cutoff. Accepted source claims provide comparisons
+  and specializations but do not logically derive the general-d inputs.
+source_dependencies:
+  D3S:
+    disposition: qualified
+    accepted_claims: [C-LOC-001, C-KRN-001]
+    use: radial_measure_normalization_comparison_only
+    excluded: d3_scalar_medium_lift_Coulomb_ontology_or_dimension_selection
+  MC1:
+    disposition: qualified
+    accepted_claims: [C-MED-003, C-SG-001, C-SG-002, C-SG-003, C-SG-017]
+    use: one_dimensional_scalar_gap_and_speed_specialization_only
+    excluded: finite_box_cell_cutoff_or_d3_medium
+  MC2:
+    disposition: qualified
+    accepted_claims: [C-MED-003, C-SG-017, C-SG-018]
+    use: one_dimensional_gapped_dispersion_specialization_only
+    excluded: density_of_states_cutoff_finite_modes_or_material_spectrum
+  QCD5:
+    disposition: qualified
+    accepted_claims: [C-LIE-003, C-NVP-002, C-KRN-001, C-KRN-002, C-LIN-001]
+    use: none
+    excluded: physical_d3_selection_scalar_medium_lift_or_branch_count
+  WN6:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+    use: problem_context_and_amplitude_convention_ceiling_only
+    excluded: participating_mode_count_multimode_state_couplings_or_rate
+new_declared_inputs: [positive_integer_d, positive_integer_b, positive_V, positive_c, nonnegative_omega_0, positive_K, declared_continuum_measure]
+hidden_parameters: []
+dependency_cycle_introduced: false
+closure_verdict: closed_self_contained_exact_conditional_theorem
+debt: []
+

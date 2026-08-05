@@ -120,6 +120,13 @@ support counterexamples. Candidate A and conditional corollary C are selected;
 B remains a distinct future discrete theorem, D fails nonduplication, and E
 has no foundation trigger.
 
+Attempt 0006 closes the claim and graph review. C-DOS-001 is logically self-
+contained under declared inputs. Five qualified dependencies, MD1, and three
+pending reverse consumers form a nine-node graph covering 224 native checks;
+the graph passes 16 checks with zero compatibility aliases. MD2, MD4, and MD6
+reproduce but remain pending. Individual review recommends symbolic-verified,
+accepted, compatible-extension, active status.
+
 ## Debt Ledger
 
 Every new assumption or unresolved distinction remains here until a concrete
@@ -134,7 +141,7 @@ artifact discharges it.
 | Debye cutoff may be called microscopic | Distinguish target matching from a Brillouin zone | discharged by target-cutoff API ceiling |
 | General-d scalar lift may import pending structure | Keep dimension and isotropy as explicit claim inputs | discharged by explicit declaration |
 | Candidate may duplicate existing claims | Complete claim and API nonduplication audit | discharged |
-| Consumers and governed records may diverge | Replay graph and synchronize queue release docs and memory | open |
+| Consumers and governed records may diverge | Replay graph and synchronize queue release docs and memory | in progress; graph closed, promotion pending |
 
 ## Done Gate
 

@@ -1,0 +1,35 @@
+campaign: P196
+root_source_unit: MD1
+compatibility_preflight:
+  MD2: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0, alias_used: false}
+  MD4: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0, alias_used: false}
+  MD6: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0, alias_used: false}
+native_replay:
+  MD2:
+    path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py
+    sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+    terminal_tally: ALL_26_CHECKS_PASS
+    wall_seconds: 1.83
+    max_rss_kib: 59496
+    exit_status: 0
+  MD4:
+    path: merged-framework/bridges/phase-38/bridge_MD4_growth_threshold_and_the_rescue.py
+    sha256: 269b275b2eabddc0f2539ecd22b672692de8790316b91c0f264d98e3582bc144
+    terminal_tally: ALL_34_CHECKS_PASS
+    wall_seconds: 0.49
+    max_rss_kib: 52828
+    exit_status: 0
+  MD6:
+    path: merged-framework/bridges/phase-38/bridge_MD6_honesty_firewall_and_debt_ledger.py
+    sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf
+    terminal_tally: ALL_40_CHECKS_PASS
+    wall_seconds: 0.82
+    max_rss_kib: 54480
+    exit_status: 0
+total: {scripts: 3, checks: 100, exit_statuses_all_zero: true}
+authority_ceiling: >-
+  Native execution proves only that the pending consumers still satisfy their
+  own predicates. It neither promotes them nor permits their MD1 interpretations
+  to enter C-DOS-001.
+compatibility_events: 0
+version_only_scientific_failures: 0

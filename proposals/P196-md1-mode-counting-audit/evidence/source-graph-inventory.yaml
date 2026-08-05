@@ -1,0 +1,28 @@
+campaign: P196
+root_source_unit: MD1
+scope: five_direct_dependencies_root_and_three_direct_reverse_consumers
+nodes:
+  - {source_unit: D3S, relation: direct_dependency, native_tally: 13}
+  - {source_unit: MC1, relation: direct_dependency, native_tally: 24}
+  - {source_unit: MC2, relation: direct_dependency, native_tally: 21}
+  - {source_unit: QCD5, relation: direct_dependency, native_tally: 7}
+  - {source_unit: WN6, relation: direct_dependency, native_tally: 32}
+  - {source_unit: MD1, relation: root, native_tally: 27}
+  - {source_unit: MD2, relation: direct_reverse_consumer, native_tally: 26}
+  - {source_unit: MD4, relation: direct_reverse_consumer, native_tally: 34}
+  - {source_unit: MD6, relation: direct_reverse_consumer, native_tally: 40}
+expected_coverage:
+  unique_nodes: 9
+  native_checks: 224
+  dependency_and_root_records_reused: 6
+  reverse_consumers_freshly_executed: 3
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P196-md1-mode-counting-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_16_CHECKS_PASS
+authority_state_before_P196_promotion:
+  qualified_direct_dependencies: [D3S, MC1, MC2, QCD5, WN6]
+  pending_root: MD1
+  pending_reverse_consumers: [MD2, MD4, MD6]

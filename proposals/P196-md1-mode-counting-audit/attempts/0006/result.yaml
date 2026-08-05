@@ -1,0 +1,24 @@
+attempt: 0006
+campaign: P196
+candidate: claim_dependency_and_consumer_closure
+status: passed_review_boundary
+started_at: '2026-08-11T20:58:00Z'
+finished_at: '2026-08-11T21:04:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P196-md1-mode-counting-audit/reviews/replay_source_graph.py
+result:
+  graph_checks: 16
+  graph_exit_status: 0
+  unique_nodes: 9
+  native_checks_covered: 224
+  direct_dependencies_qualified: 5
+  reverse_consumers_reproduced: 3
+  reverse_consumers_still_pending: 3
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+claim_review: accepted_for_promotion
+claim: C-DOS-001
+claim_dependencies: []
+debt: []
+next_attempt: promote_claim_release_MD1_disposition_docs_memory_and_run_one_integrated_gate
+

@@ -1,0 +1,33 @@
+campaign: P196
+source_unit: MD1
+claim_candidate: C-DOS-001
+canonical_consumers:
+  module: src/substrate_framework/mode_counting.py
+  exports: src/substrate_framework/__init__.py
+  tests: {path: tests/test_mode_counting.py, passed: 17}
+  primary: {path: proposals/P196-md1-mode-counting-audit/verify.py, checks: 40}
+direct_source_consumers:
+  MD2:
+    disposition: pending
+    native_checks: 26
+    accepted_reuse_candidate: typed_continuum_DOS_and_total_count_only
+    ceiling: phase_variance_beta_couplings_cutoff_and_material_inputs_require_individual_review
+  MD4:
+    disposition: pending
+    native_checks: 34
+    accepted_reuse_candidate: supplied_target_count_and_branch_factor_only
+    ceiling: growth_rescue_participation_amplitude_and_material_scale_require_individual_review
+  MD6:
+    disposition: pending
+    native_checks: 40
+    accepted_reuse_candidate: source_ledger_and_explicit_DOS_ceiling_only
+    ceiling: firewall_tally_does_not_adjudicate_MD_science
+consumer_replay: {scripts: 3, native_checks: 100, exit_statuses_all_zero: true}
+compatibility_preflight: {scripts: 3, legacy_references: 0, eager_legacy_default_fallbacks: 0, aliases_used: 0, version_only_scientific_failures: 0}
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+canonical_existing_signatures_changed: []
+canonical_existing_values_changed: []
+scientific_threshold_changed: true
+threshold_change: density_of_states_added_with_stricter_continuum_branch_cutoff_rank_and_participation_typing
+
