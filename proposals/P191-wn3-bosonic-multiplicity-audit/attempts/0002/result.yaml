@@ -1,0 +1,43 @@
+attempt: 0002
+campaign: P191
+candidate: native_source_reproduction_and_predicate_audit
+status: passed_source_reproduction_headline_overstated
+started_at: '2026-08-11T16:58:00Z'
+finished_at: '2026-08-11T17:04:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py
+process:
+  exit_status: 0
+  wall_seconds: 0.54
+  max_rss_kib: 53540
+  static_check_calls: 19
+  literal_check_calls: 10
+  dynamic_check_calls: 9
+  runtime_check_executions: 48
+  assertion_nodes: 0
+  terminal_tally: ALL_48_CHECKS_PASS
+compatibility:
+  numpy_imports: 0
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_injected: 0
+  version_only_scientific_failures: 0
+retained:
+  - exact_activity_power_in_the_classical_cross_coefficient
+  - exact_finite_truncation_interior_commutator_and_top_edge_inequality
+  - exact_below_edge_factorial_norms_and_conditional_odd_matrix_element_algebra
+  - exact_conditional_cancellation_of_one_factorial
+requires_stronger_oracle:
+  - infinite_algebraic_Fock_domain_operator_theorem_and_induction
+  - exact_finite_top_state_defect_and_trace_obstruction
+  - parity_complete_sample_space_normalizers_and_mode_theorems
+  - countermodels_to_density_of_states_rate_and_universal_admissibility_labels
+rejected_headline_edges:
+  - finite_interior_block_is_a_global_CCR_representation
+  - factorial_norm_is_by_itself_a_density_of_distinct_final_states
+  - squared_algebraic_matrix_element_is_a_Fermi_Golden_Rule_rate_weight
+  - bosonic_multiplication_reopens_cosine_even_orders
+  - all_order_positive_family_is_derived_from_the_odd_only_composition
+  - WN2_guard_is_a_universal_physical_admissibility_oracle
+scientific_threshold_changed: false
+next_attempt: freeze_exact_Fock_domain_truncation_defect_and_parity_complete_composition

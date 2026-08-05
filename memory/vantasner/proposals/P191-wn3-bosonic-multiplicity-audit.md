@@ -2,7 +2,7 @@
 description: Audit WN3 and derive an exact bosonic Fock ladder and parity-complete composition ledger
 author: vantasner
 created: '2026-08-11T16:52:00Z'
-updated: '2026-08-11T16:57:00Z'
+updated: '2026-08-11T17:04:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -154,6 +154,20 @@ Every later failure will be appended with an implementation,
 representation, candidate, target, or foundation diagnosis and a materially
 different continuation.
 
+Attempt 0002 reproduces the hash-pinned source with exit zero and all forty-
+eight runtime checks. Static inventory finds nineteen check call sites, no
+assertions, and no NumPy compatibility surface. The exact activity scaling,
+finite interior commutator, below-edge factorial norms, positive-odd
+matrix-element algebra, and one-factorial cancellation survive. The headline
+does not: the exact finite commutator has a top-state defect; nine instances do
+not prove the infinite theorem; a repeated-creation norm is not a density of
+distinct single-mode states; and an algebraic square lacks the interaction,
+energy, spectral, and dimensional premises of a rate. Most decisively, the
+source's composition is positive-odd-only but its guard substitutes an
+all-positive-order family and calls even orders reopened. The next attempt
+therefore freezes the infinite algebraic domain, exact truncation defect,
+parity-complete sample spaces, and countermodel obligations.
+
 ## Debt Ledger
 
 The P191 ledger tracks source predicates, Fock domain, truncation, parity,
@@ -163,7 +177,7 @@ compatibility, dependencies, consumers, and governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | WN3 was exposed before P191 | Record exposure and claim no fresh blinding | discharged |
-| Source predicates and conclusions are not P191-adjudicated | Pin and classify every executable and narrative edge | open |
+| Source predicates and conclusions are not P191-adjudicated | Pin and classify every executable and narrative edge | discharged |
 | Finite matrices may masquerade as exact CCR | Prove the trace obstruction and explicit top-state defect | open |
 | The bosonic Fock domain and inner product may be hidden | Declare basis, algebraic domain, operator actions, and norm | open |
 | Bosonic multiplication may silently drop cosine parity | Preserve zero even orders through the full composition | open |

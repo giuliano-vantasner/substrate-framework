@@ -1,0 +1,15 @@
+campaign: P191
+source_unit: WN3
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py
+exit_status: 0
+runtime_check_executions: 48
+terminal_tally: ALL_48_CHECKS_PASS
+wall_seconds: 0.54
+max_rss_kib: 53540
+selected_outputs:
+  truncation_dimension: 12
+  tested_factorial_norm_orders: 0_through_8
+  activity_samples: [5, 7]
+  all_order_grid: 1_through_59
+  guard_grid: 1_through_11
+runtime_scope: exact_finite_and_symbolic_source_evidence_not_blanket_rate_or_process_derivation

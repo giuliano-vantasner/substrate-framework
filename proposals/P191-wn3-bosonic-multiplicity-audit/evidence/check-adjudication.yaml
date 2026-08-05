@@ -1,0 +1,52 @@
+campaign: P191
+source_unit: WN3
+runtime_checks: 48
+families:
+  - id: WN3.1-activity-scaled-cross-coefficient
+    runtime_instances: 4
+    status: retained_exact
+    mapping: [C-SG-019]
+    reason: Exact differentiation gives the declared activity power while retaining the accepted coefficient background and coordinate-scale ceiling.
+  - id: WN3.1-normalization-family
+    runtime_instances: 3
+    status: retained_exact_algebra_with_rate_label_ceiling
+    mapping: [C-SG-019]
+    reason: Activity one is one member of the exact coefficient family, but rescaling a coordinate without its kinetic and canonical normalization does not itself define or compare physical rates.
+  - id: WN3.2-truncated-commutator
+    runtime_instances: 2
+    status: retained_exact_finite_regression_requires_global_replacement
+    provisional_mapping: C-OSC-001
+    reason: The interior block is identity and the top entry differs, but the source does not state the exact defect I-D|D-1><D-1| or the trace obstruction to a full finite CCR.
+  - id: WN3.2-factorial-norms
+    runtime_instances: 9
+    status: retained_exact_finite_instances_requires_induction
+    provisional_mapping: C-OSC-001
+    reason: Orders zero through eight are exact below the twelve-level edge; an infinite algebraic-domain induction is required for the universal theorem.
+  - id: WN3.2-growth-and-method-label
+    runtime_instances: 2
+    status: one_exact_growth_one_tautological_precedent_check
+    provisional_mapping: C-OSC-001
+    reason: Factorial growth is exact, while sqrt(4!)=sqrt(24) does not prove derivation provenance, density-of-states semantics, or equivalence to the finite collective-spin ladder.
+  - id: WN3.3-odd-matrix-element-composition
+    runtime_instances: 15
+    status: retained_exact_conditional_rate_label_rejected
+    provisional_mapping: C-OSC-001
+    reason: For declared odd cosine coefficients and a separately declared normalized Fock ladder, the algebraic amplitude and square are exact; Fermi-Golden-Rule rate typing requires additional interaction, energy, and final-state premises.
+  - id: WN3.4-factorial-cancellation
+    runtime_instances: 4
+    status: retained_exact_conditional
+    provisional_mapping: C-OSC-001
+    reason: The odd-order algebra cancels one factorial exactly and retains the original parity zeros.
+  - id: WN3.4-sampled-peak-comparison
+    runtime_instances: 6
+    status: finite_all_order_regression_with_wrong_composed_sample_space
+    reason: The two samples reproduce on orders one through fifty-nine, but integer activities create first-argmax ties and the all-order family is not the odd-only cosine composition.
+  - id: WN3.5-admissibility-and-even_orders
+    runtime_instances: 3
+    status: rejected_process_substitution_and_unaccepted_guard
+    reason: The positive all-order lambda uses S^n/n! by declaration, not derivation from the parity-zero coefficient; multiplying by a Fock norm cannot make an even zero nonzero, and WN2's guard has no accepted universal authority.
+summary:
+  runtime_checks_with_exact_or_exact_conditional_core: 39
+  finite_or_underencoded_runtime_checks: 6
+  runtime_checks_with_rejected_interpretive_or_process_edge: 3
+  blanket_headline_accepted: false

@@ -1,0 +1,55 @@
+campaign: P191
+source_unit: WN3
+source_hash_matches_queue: true
+native_exit_status: 0
+source_constructions:
+  exact_or_exact_finite:
+    - activity_scaled_classical_cross_coefficients
+    - finite_D_interior_commutator_and_nonidentity_top_entry
+    - factorial_norms_for_orders_zero_through_eight_below_the_edge
+    - conditional_positive_odd_order_matrix_element_square
+    - conditional_cancellation_of_one_factorial
+  finite_or_underencoded:
+    - two_activity_sample_peaks_on_a_truncated_all_order_grid
+    - admissibility_guard_on_orders_one_through_eleven
+    - tautological_sqrt_factorial_precedent_check
+representation_audit:
+  source_dimension: 12
+  exact_commutator: I_minus_12_times_projector_on_level_11
+  full_finite_CCR_possible: false
+  obstruction: trace_of_any_finite_commutator_is_zero_but_trace_of_identity_is_dimension
+  source_interior_statement: exact_on_rows_and_columns_zero_through_ten
+  universal_norm_statement: not_established_by_nine_finite_instances
+composition_audit:
+  source_coefficient_support: positive_odd_orders_only
+  exact_conditional_amplitude: signed_A_power_n_over_sqrt_factorial_n_on_positive_odd_n
+  exact_conditional_square: A_power_2n_over_factorial_n_on_positive_odd_n
+  even_order_after_multiplication: zero
+  guard_family_support: every_positive_integer
+  parity_transition_derived: false
+  hidden_change: replaces_the_odd_cosine_process_with_a_distinct_all_order_family
+typing_audit:
+  factorial_norm_meaning: ladder_normalization_or_contraction_factor_for_repeated_creation
+  distinct_single_mode_final_states_counted_by_n_factorial: false
+  missing_for_Fermi_Golden_Rule_rate:
+    - canonically_normalized_free_Hamiltonian_and_field_to_mode_map
+    - complete_interaction_Hamiltonian_and_coupling_units
+    - normalized_initial_and_final_states
+    - energy_conservation_or_time_dependent_transition_setup
+    - final_state_measure_or_spectral_density
+    - hbar_and_rate_dimension_convention
+    - physical_activity_and_frequency_provenance
+logical_audit:
+  exact_survivors:
+    - C_SG_019_activity_and_coordinate_scale_dependence
+    - finite_truncation_regression
+    - candidate_infinite_Fock_ladder_and_factorial_norm
+    - parity_preserving_conditional_odd_matrix_element_algebra
+  unsupported_edges:
+    - finite_interior_matrix_is_an_exact_global_bosonic_representation
+    - factorial_norm_is_a_density_of_distinct_final_states
+    - algebraic_square_is_a_Fermi_Golden_Rule_rate
+    - even_orders_are_opened_by_the_bosonic_factor
+    - all_order_sample_peak_is_the_mode_of_the_odd_cosine_composition
+    - WN2_guard_supplies_physical_admissibility
+headline_verdict: mixed_exact_ladder_candidate_and_parity_preserving_composition_with_overstated_rate_density_and_all_order_process_claims

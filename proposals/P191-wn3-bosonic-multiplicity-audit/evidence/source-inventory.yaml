@@ -1,0 +1,22 @@
+campaign: P191
+source_unit: WN3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py
+sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88
+blob: 7a525a7a29aa71c7daeb83b559fb8cfc62d8f391
+size_bytes: 14375
+history:
+  commit_count: 1
+  sole_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+target_path_clean: true
+syntax:
+  ast_parse: passed
+  imports: [sys, sympy_as_sp]
+  functions: [check, cross_coeff_scaled, c_n_closed, argmax_over, is_admissible_weight]
+  static_check_calls: 19
+  literal_check_calls: 10
+  dynamic_check_calls: 9
+  assertion_nodes: 0
+  runtime_check_executions: 48
+prior_exposure: disclosed_in_proposal_and_attempt_0001
