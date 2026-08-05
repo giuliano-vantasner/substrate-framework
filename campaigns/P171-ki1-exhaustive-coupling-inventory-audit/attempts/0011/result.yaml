@@ -1,0 +1,20 @@
+attempt: 0011
+campaign: P171
+candidate: KI1_5_branch_mutation_sensitivity
+status: failed_source_guard_sensitivity
+started_at: '2026-08-11T01:25:00Z'
+finished_at: '2026-08-11T01:26:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 36
+  insensitive_mutation: remove_bare_eps_alternative_from_numeric_assignment_regex
+diagnosis: >-
+  KI1.5's advertised six positive witnesses contain epsilon but no bare eps.
+  Removing the regex's bare-eps alternative therefore leaves the entire
+  advertised twelve-line verdict unchanged. The guard is nonvacuous but does
+  not exercise every load-bearing identifier branch and cannot justify the
+  source's claim that the classifier would fail on every plausible pinning.
+scientific_result: KI1_5_guard_has_an_unexercised_assignment_branch
+next_attempt: record_the_insensitive_eps_mutation_and_use_only_exercised_mutants_in_the_positive_gate

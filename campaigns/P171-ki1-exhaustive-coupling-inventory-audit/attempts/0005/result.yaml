@@ -1,0 +1,21 @@
+attempt: 0005
+campaign: P171
+candidate: primary_pinned_tree_and_search_sensitivity_verifier
+status: failed_implementation_provenance
+started_at: '2026-08-11T01:13:00Z'
+finished_at: '2026-08-11T01:14:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 3
+  failed_check: pinned predecessor blob S4-dossier.md retains its audited bytes
+diagnosis: >-
+  The verifier table used the mutable-checkout S4 digest instead of the blob
+  digest at the frozen predecessor commit. Direct git-show hashing gives
+  1680127b0678d8969f7f08da0463ddab10f34e75554d3a842813275868030ed9.
+  This is an implementation/provenance defect in P171, not a KI1 scientific
+  result and not a NumPy compatibility event.
+preserved_output: >-
+  Three earlier pinned-blob checks passed; CheckLedger stopped on the S4 hash.
+next_attempt: correct_the_full_pinned_hash_table_and_rerun_the_primary_oracle

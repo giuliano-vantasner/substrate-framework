@@ -3126,6 +3126,58 @@ units:
       factor one thousand in tension, and no profile geometry enters. P026 and
       P029 evidence is hash-identical and reused. No claim, API, or release
       changes.
+  KI1:
+    disposition: refuted
+    accepted_claims: []
+    refutation: >-
+      KI1's exhaustive negative inventory is false at the governed predecessor
+      baseline and at the sole commit in its own file history. KI1.2 finds ten
+      executable MK/MR strays; the latent KI1.3 value/context predicate finds
+      executable MK2, MK3, and MK5; and KI1.4's omega-value regex finds MK2.
+      KI1 lists a mutable Git index, reads mutable worktree bytes, excludes all
+      of Phase 34, and has no committed snapshot matching the dossier's 1502
+      file tally. Its planted examples do not exercise bare eps and miss
+      annotated, constructor, dictionary, subscript, configuration, and Unicode
+      value forms. Tracked MK candidates refute corpus absence but remain
+      pending and select no accepted coupling or epsilon value. C-BPS-001
+      through C-BPS-003 retain their free-parameter ceilings independently.
+    evidence:
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/source_adjudication.md
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/source-reproduction.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/source-audit.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/check-adjudication.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/input-provenance.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/dependency-audit.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/consumer-audit.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/candidate-comparison.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/evidence/primary-provenance.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/independent_semantic_inventory_review.py
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/replay_source_graph.py
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0002/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0003/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0004/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0009/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0010/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0011/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0013/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0014/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0016/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0017/result.yaml
+      - campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0019/result.yaml
+      - memory/vantasner/decisions/KI1-refuted-review.md
+    note: >-
+      P171 closes forty-seven primary, twenty fresh independent semantic,
+      thirty-four graph checks, and thirteen focused consumer tests. Six graph
+      neighbors replay cleanly and KI1 alone fails exactly at KI1.2; none has a
+      NumPy integration-name surface.
+      Five source and graph specification failures plus three latent scientific
+      predicate failures and one mutation-sensitivity failure are preserved.
+      The integrated workflow and explicit full suite each pass all 1478 tests
+      with 692 valid memory files. No claim, API, accepted dependency, or
+      release changes.
   EM2:
     disposition: qualified
     accepted_claims:

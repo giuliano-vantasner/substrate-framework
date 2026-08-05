@@ -1,0 +1,25 @@
+source_unit: KI1
+repository_universe:
+  governed_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  exact_tree_entries: 1628
+  source_creation_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+  source_creation_tree_entries: 1601
+  source_runtime_contract: git_index_plus_mutable_worktree_bytes
+  independent_contract: exact_commit_blobs_plus_UTF8_and_AST_semantics
+search_definitions:
+  BPS_context: source_regex_reproduced_verbatim
+  numeric_assignment: source_case_sensitive_regex_reproduced_verbatim
+  BPS_sector: source_file_level_context_regex_reproduced_verbatim
+  omega_numeric: source_case_sensitive_regex_reproduced_verbatim
+  semantic_assignments: fresh_AST_annotated_constructor_subscript_and_dictionary_policy
+accepted_scientific_inputs:
+  - C-BPS-001
+  - C-BPS-002
+  - C-BPS-003
+pending_counterevidence:
+  MK1: candidate_mu_relation_not_accepted
+  MK2: candidate_lambda_and_omega_relations_not_accepted
+  MK3: candidate_epsilon_value_not_accepted
+empirical_comparators: []
+external_physics_imports: []
+scope: repository_provenance_and_accepted_parameter_ceiling_only

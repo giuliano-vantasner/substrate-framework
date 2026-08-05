@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P171
+candidate: corrected_primary_pinned_tree_verifier
+status: failed_implementation_path_inventory
+started_at: '2026-08-11T01:15:00Z'
+finished_at: '2026-08-11T01:16:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 21
+  stop: git_show_failed_for_guessed_KI3_filename
+diagnosis: >-
+  The verifier guessed KI3 through KI5 filenames from their labels. The pinned
+  tree instead names KI3 bracket_is_sharp, KI4 backsolve_circularity, and KI5
+  kappa_is_not_a_variational_bound. The Phase-34 exclusion finding is unchanged,
+  but its evidence must come from the exact tree inventory rather than guessed
+  paths. This is a P171 implementation defect, not scientific or compatibility
+  evidence.
+next_attempt: derive_the_phase34_KI2_through_KI5_paths_from_the_pinned_tree

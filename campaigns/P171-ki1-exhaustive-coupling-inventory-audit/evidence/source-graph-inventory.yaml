@@ -1,0 +1,15 @@
+nodes:
+  WZ4: {relation: free_omega_symbol_context, lexical_checks: 9, assertions: 1, replay: clean}
+  E4: {relation: symbolic_BPS_coupling_origin, lexical_checks: 5, assertions: 1, replay: clean}
+  KI1: {relation: refuted_root, lexical_checks: 5, assertions: 1, replay: expected_failure_at_KI1_2}
+  KI2: {relation: pending_narrative_consumer, lexical_checks: 6, assertions: 1, replay: clean}
+  MK1: {relation: later_mu_candidate_counterevidence, lexical_checks: 7, assertions: 1, replay: clean}
+  MK2: {relation: later_lambda_candidate_counterevidence, lexical_checks: 7, assertions: 1, replay: clean}
+  MK3: {relation: later_epsilon_candidate_counterevidence, lexical_checks: 6, assertions: 1, replay: clean}
+totals: {nodes: 7, lexical_checks: 45, assertions: 7, clean_nodes: 6, expected_refuted_nodes: 1}
+numpy_integration:
+  legacy_references: 0
+  current_references: 0
+  alias_only_nodes: []
+verifier: reviews/replay_source_graph.py
+result: ALL_34_CHECKS_PASS

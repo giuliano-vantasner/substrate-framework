@@ -1,0 +1,28 @@
+attempt: 0016
+campaign: P171
+candidate: compatibility_aware_source_graph_and_consumer_replay
+status: passed
+started_at: '2026-08-11T01:35:00Z'
+finished_at: '2026-08-11T01:36:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/
+  replay_source_graph.py
+result:
+  checks: 34
+  terminal_tally: ALL 34 CHECKS PASS [P171-KI1-SOURCE-GRAPH]
+graph:
+  nodes: [WZ4, E4, KI1, KI2, MK1, MK2, MK3]
+  lexical_predicates: 45
+  assertions: 7
+  clean_replays: [WZ4, E4, KI2, MK1, MK2, MK3]
+  expected_refutation: KI1_fails_after_KI1_1_at_KI1_2
+compatibility:
+  legacy_trapz_nodes: []
+  current_trapezoid_nodes: []
+  isolated_aliases: []
+scientific_result: >-
+  The direct source graph is executable and hash-pinned. KI1 alone fails at
+  its false corpus predicate; a clean downstream tally does not repair that
+  narrative dependency or grant the pending MK candidates authority.
+next_attempt: materialize_claim_level_refutation_and_governance_records

@@ -1,0 +1,8 @@
+scope: repository_provenance_and_governance
+external_source_used_for_selection: false
+physical_interpretation_imported: false
+reason: >-
+  KI1's falsifiable object is an exact statement about a pinned repository
+  tree and its scanner. External literature cannot repair false tracked-tree
+  predicates, and P171 promotes no physical coupling or identifiability claim.
+conclusion: no_external_literature_required_for_this_refutation

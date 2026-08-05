@@ -1,0 +1,40 @@
+source_unit: KI1
+lexical_checks: 5
+runtime_checks_reached: 2
+runtime_checks_passed: 1
+assertion_nodes: 1
+checks:
+  KI1.1:
+    verdict: valid_nonvacuity_control_only
+    qualification: >-
+      Five broad tokens are present under both source and pinned-blob scans,
+      but their presence tests scanner operation rather than completeness of
+      the distinct assignment and context predicates.
+  KI1.2:
+    verdict: refuted
+    qualification: >-
+      Ten executable MK and MR files match the source's BPS-coupling-context
+      predicate at both the sole source-history commit and the governed baseline.
+  KI1.3:
+    verdict: refuted
+    qualification: >-
+      The source's own literal-value and file-level BPS-context sets intersect
+      on executable MK2, MK3, and MK5. The predicate is latent because KI1.2
+      aborts first. Its regex also misses semantic constructors and containers.
+  KI1.4:
+    verdict: refuted
+    qualification: >-
+      The direct omega-value regex matches tracked MK2, which also contains a
+      candidate symbolic lambda route. S4's decline and WZ4's free symbol are
+      true local observations but do not restore the claimed corpus-wide zero.
+  KI1.5:
+    verdict: valid_examples_incomplete_sensitivity_guard
+    qualification: >-
+      All six advertised positives are caught and all six advertised negatives
+      rejected, but removal of the bare-eps branch is invisible and nine
+      plausible value forms escape. The entire Phase-34 exclusion is untested.
+assertions:
+  check_helper:
+    role: fail_fast_execution_mechanism
+    verdict: prevents_predicates_three_through_five_from_running_after_KI1_2
+headline: refuted_at_governed_baseline

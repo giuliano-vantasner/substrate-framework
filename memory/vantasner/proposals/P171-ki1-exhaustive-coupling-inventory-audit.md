@@ -2,7 +2,7 @@
 description: Audit KI1's exhaustive generalized-Skyrme coupling inventory
 author: vantasner
 created: '2026-08-11T00:58:00Z'
-updated: '2026-08-11T01:02:00Z'
+updated: '2026-08-11T01:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,7 +10,7 @@ tags:
 - negative-inventory
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 # P171 KI1 Exhaustive Coupling Inventory Audit
 
@@ -156,6 +156,15 @@ and the negative-inventory oracle. Every later path, search, encoding,
 compatibility, implementation, or scientific failure is preserved append-only
 before repair.
 
+Attempts 0002 through 0004 reproduce KI1's KI1.2 abort in the current checkout,
+the clean governed baseline, and the sole source-history commit. Attempts 0005
+through 0012 preserve hash, path, oracle-equivalence, target-predicate,
+scientific, mutation-sensitivity, and schema-parser failures before repair.
+Attempts 0013, 0014, and 0016 close 47 primary, 20 independent semantic, and 34
+source-graph checks; attempt 0017 closes 13 focused canonical BPS tests, and
+attempt 0019 records two clean 1,478-test terminal executions with 692 valid
+memory files.
+
 ## Debt Ledger
 
 The P171 ledger tracks the search universe, context and assignment semantics,
@@ -165,13 +174,13 @@ records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| The exact searched universe is unknown | Pin every included/excluded tracked role and root/commit behavior | open |
-| Regex zero hits may miss valid assignment forms | Inject diverse numeric witnesses and mutate patterns and file policy | open |
-| Generic symbols may create false positives | Require model context and pass unrelated-symbol/prose controls | open |
-| Alternative sextic symbols may use different conventions | Audit S4/WZ4 provenance, values, dimensions, and normalization separately | open |
-| Corpus absence may be inflated into physical underdetermination | Supply external/value countermodels and close accepted dependency scope | open |
-| Existing BPS science may be rerun ceremonially | Hash-audit P107 and replay only source-sensitive canonical gates | open |
-| Consumers and governed records may disagree | Replay affected paths and synchronize disposition, queue, memory, and effort | open |
+| The exact searched universe is unknown | Pin every included/excluded tracked role and root/commit behavior | closed: 1628 governed, 1601 creation, 1502 unreproduced |
+| Regex zero hits may miss valid assignment forms | Inject diverse numeric witnesses and mutate patterns and file policy | closed: nine misses and four independent syntax mutations |
+| Generic symbols may create false positives | Require model context and pass unrelated-symbol/prose controls | closed: explicit file-level false-positive countermodel |
+| Alternative sextic symbols may use different conventions | Audit S4/WZ4 provenance, values, dimensions, and normalization separately | closed: local observations survive but MK2 defeats the zero |
+| Corpus absence may be inflated into physical underdetermination | Supply external/value countermodels and close accepted dependency scope | closed: repository and physics scopes separated |
+| Existing BPS science may be rerun ceremonially | Hash-audit P107 and replay only source-sensitive canonical gates | closed: byte-identical evidence reused and 13 focused tests pass |
+| Consumers and governed records may disagree | Replay affected paths and synchronize disposition, queue, memory, and effort | closed: seven-node graph and refuted queue entry agree |
 
 ## Review and Promotion Plan
 
@@ -200,6 +209,12 @@ BPS scope remains intact, physical overreach is excluded, governed records
 agree, and the debt ledger is empty. A zero-hit search, an honest incomplete
 pattern battery, or a prose underdetermination statement alone is not
 completion.
+
+The better terminal disposition is `refuted`. KI1.2, latent KI1.3, and latent
+KI1.4 are false at the governed baseline; KI1.5 is locally nonvacuous but
+incomplete. Pending MK scripts refute corpus absence without becoming accepted
+physics. C-BPS-001 through C-BPS-003, v0.127.0, and all accepted artifacts stay
+unchanged.
 
 ## Cross-References
 

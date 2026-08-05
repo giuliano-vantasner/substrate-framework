@@ -1,0 +1,29 @@
+accepted_consumers:
+  canonical_module: src/substrate_framework/bps_energy.py
+  focused_tests: tests/test_bps_energy.py
+  focused_result: 13_passed
+  accepted_claims: [C-BPS-001, C-BPS-002, C-BPS-003]
+  effect_of_KI1_refutation: none
+pending_consumers:
+  KI2:
+    edge: relies_narratively_on_KI1_absence
+    effect: premise_is_false_and_must_be_reaudited_without_inheriting_KI1
+  MK1:
+    edge: cites_KI2_not_KI1
+    effect: tracked_candidate_counterevidence_only
+  MK2:
+    edge: directly_cites_KI1_and_KI2
+    effect: refutes_absence_but_retains_stale_1502_file_premise_and_pending_status
+  MK3:
+    edge: cites_KI2_not_KI1
+    effect: tracked_candidate_counterevidence_only
+source_graph:
+  nodes: [WZ4, E4, KI1, KI2, MK1, MK2, MK3]
+  lexical_predicates: 45
+  assertions: 7
+  expected_failed_node: KI1_at_KI1.2
+  clean_nodes: [WZ4, E4, KI2, MK1, MK2, MK3]
+canonical_symbol_change: false
+generated_docs_change_required: false
+release_change_required: false
+migration_memory_and_effort_records_change_required: true

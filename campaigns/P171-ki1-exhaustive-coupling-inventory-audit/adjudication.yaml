@@ -1,0 +1,75 @@
+campaign: P171
+title: KI1 exhaustive coupling inventory audit
+source_baseline: substrate@6d1f4e0
+source_units: [KI1]
+base_release: v0.127.0
+accepted_release: v0.127.0
+adjudicated_at: '2026-08-11T01:45:00Z'
+selected_candidates:
+  - {id: A, reason: Literal_reproduction_consistently_aborts_at_KI1_2.}
+  - {id: C, reason: Pinned_semantic_and_mutation_audits_refute_the_exhaustive_search.}
+  - {id: D, reason: Accepted_BPS_claims_retain_the_free_parameter_ceiling_independently.}
+  - {id: H, reason: Source_consumer_queue_memory_and_effort_records_receive_terminal_closure.}
+claims: []
+accepted_composition:
+  - {id: C-BPS-001, decision: unchanged_free_positive_lambda_and_mu_exact_bound}
+  - {id: C-BPS-002, decision: unchanged_conditional_attainment_ceiling}
+  - {id: C-BPS-003, decision: unchanged_controlled_free_epsilon_expansion}
+unpromoted_claims:
+  - {id: exhaustive_repository_absence, reason: False_at_the_governed_baseline.}
+  - {id: physical_nonidentifiability, reason: A_finite_repository_snapshot_cannot_prove_it.}
+  - {id: MK1_mu_relation, reason: Tracked_pending_counterevidence_is_not_accepted_authority.}
+  - {id: MK2_lambda_relation, reason: Tracked_pending_counterevidence_is_not_accepted_authority.}
+  - {id: MK3_epsilon_value, reason: Tracked_pending_counterevidence_is_not_accepted_authority.}
+evidence:
+  primary_verifier: verify.py
+  independent_review: reviews/independent_semantic_inventory_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_review: ../../memory/vantasner/decisions/KI1-refuted-review.md
+  native_attempt: attempts/0002/result.yaml
+  isolated_baseline_attempt: attempts/0003/result.yaml
+  creation_snapshot_attempt: attempts/0004/result.yaml
+  primary_attempt: attempts/0013/result.yaml
+  independent_attempt: attempts/0014/result.yaml
+  graph_attempt: attempts/0016/result.yaml
+  focused_consumer_attempt: attempts/0017/result.yaml
+  terminal_attempt: attempts/0019/result.yaml
+source_disposition:
+  KI1: refuted
+refutation:
+  KI1: >-
+    KI1.2 is false on ten executable strays at both the sole source-history
+    commit and governed baseline; latent KI1.3 and KI1.4 are also false; the
+    dossier count is unreproducible; and KI1.5 misses semantic assignments and
+    an entire excluded phase directory.
+compatibility:
+  installed_numpy: 2.5.1
+  numpy_imported_by_KI1: false
+  source_graph_legacy_integration_references: 0
+  scientific_candidate_failure_from_version: false
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/independent_semantic_inventory_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest tests/test_bps_energy.py -q
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+  - git diff --check
+debt: []
+status: refuted_no_release

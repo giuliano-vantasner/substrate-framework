@@ -341,6 +341,7 @@ Attempts are append-only and individually reproducible.
 | 0189 | P168 exact fixed-area field-energy, endpoint-work, geometry, dependency, compatibility, graph, consumer, and CF2 audit | `campaigns/P168-cf2-fixed-area-linearity-closure-audit/attempts/0001` through `0011`, then terminal no-release boundary | CF2 remains qualified through C-FLX-001 with v0.127.0 unchanged | Native CF2 passes all fifteen predicates. Thirty-nine primary, nineteen fresh exact, thirty-one graph, and forty-three focused checks or tests separate energy slope `Phi^2/(2A)` from endpoint slope `qPhi/A`, derive equality iff `q=Phi/2`, reject factor, charge, and geometry mutations, and retain logarithmic and spherical counterexamples. The six-node graph replays 66 lexical and runtime predicates plus eight assertions; immutable CF1 and CF5 aliases are backed by `np.trapezoid`. Hash-identical P027 evidence is reused. | Freeze CF3's exact SU3 center algebra and conditional loop-law consequences while keeping the declared area law, physical screening, and confinement interpretations separate. |
 | 0190 | P169 exact complete-center, abstract-triality, conditional loop-law, dependency, compatibility, graph, consumer, and CF3 audit | `campaigns/P169-cf3-center-wilson-closure-audit/attempts/0001` through `0008`, then terminal no-release boundary | CF3 remains qualified through C-LIE-002 and C-WIL-001 with v0.127.0 unchanged | Native CF3 passes all six predicates. Forty-four primary, twenty-five fresh exact, forty graph, and fifty-four focused checks or tests prove full-center completeness, abstract representation actions, conditional area/perimeter limits, and same-center law nonselection. The eight-node graph replays 76 lexical and runtime predicates plus nine assertions; immutable CF1 uses an alias backed by `np.trapezoid`. Hash-identical P028 evidence is reused, and one case-sensitive review-probe failure is preserved. | Freeze CF5's vortex-to-ideal-tube consistency and current-NumPy reproduction, treating its removed `np.trapz` spelling as compatibility rather than science and testing whether effective-area inversion predicts anything. |
 | 0191 | P170 current-NumPy reproduction, exact information, geometry, evidence-reuse, graph, consumer, and CF5 audit | `campaigns/P170-cf5-current-numpy-information-closure-audit/attempts/0001` through `0009`, then terminal no-release boundary | CF5 remains duplicate evidence for C-VTX-001, C-VTX-002, and C-FLX-001 with v0.127.0 unchanged | Native CF5 stops before its first predicate only at removed `np.trapz`; an isolated alias backed by `np.trapezoid` passes all six. Forty-one primary, twenty fresh exact, twenty-four graph, and thirty-nine focused checks or tests show that `A_eff` and its penetration ratio reversibly transform a supplied tension without independent profile geometry. The declared window accepts a factor 1000 in tension. The four-node graph replays 35 lexical and runtime predicates plus six assertions; immutable CF1 and CF5 alone need aliases. Hash-identical P026/P029 evidence is reused, and one graph-edge probe failure is preserved. | Freeze KI1 before source inspection; require a hash-complete search universe, tracked-file and generated/untracked boundaries, symbol-context disambiguation, numeric-assignment and alternative-coupling patterns, mutation-sensitive injected witnesses, E1/E2/E4/KI2/S4/WZ4 authority, all five predicates and one assertion, consumers, and nonduplication, and do not turn corpus absence into a physical uniqueness theorem, fitted coupling, derived yield coefficient, or substrate mechanism. |
+| 0192 | P171 pinned-tree reproduction, semantic assignment, mutation, graph, consumer, and KI1 audit | `campaigns/P171-ki1-exhaustive-coupling-inventory-audit/attempts/0001` through `0019`, then terminal no-release boundary | KI1 refuted with C-BPS-001 through C-BPS-003 and v0.127.0 unchanged | KI1 passes only its broad control and aborts at KI1.2 over 1628 files at the governed baseline and 1601 at its sole source-history commit; the dossier's 1502-file tally is unreproduced. KI1.2 has ten executable strays, latent KI1.3 has three executable overlaps, and KI1.4's omega regex finds MK2. The scanner reads mutable worktree bytes, excludes all of Phase 34, misses nine plausible assignment forms, admits file-context false positives, and fails to exercise bare `eps`. Forty-seven primary, twenty independent semantic, thirty-four graph checks, and thirteen focused tests pass. Six graph neighbors replay cleanly; KI1 alone fails exactly at KI1.2. No node has a NumPy integration-name surface. Pending MK files refute absence without selecting accepted values. | Freeze KI2 before source inspection; require exact parameter dimensions and conventions, distinguish a family of theories from a symmetry of fixed accepted claims, test how the proposed scaling changes the C-BPS-001 energy and bound, audit the epsilon definition and free-scale orbit without relying on refuted KI1, type all six predicates and one assertion, replay E3/E4/KI1/KI3/KI4/NY1/NY2/S4 plus MK1-MK3 reverse consumers, and do not turn a parameter redefinition, pending candidate derivation, or repository absence into physical underdetermination, a selected epsilon, yield coefficient, or substrate mechanism. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -357,7 +358,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 54 bridge units remain pending, 3 are migrated, 152 are qualified, 8 are duplicate evidence, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 53 bridge units remain pending, 3 are migrated, 152 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1840,21 +1841,31 @@ Hash-identical P026/P029 evidence is reused rather than ceremonially repeated.
 The terminal workflow and explicit full suite each pass all 1,478 tests with
 690 valid memory records.
 
+P171 refutes KI1 without a new claim, API, or release. The source aborts at
+KI1.2 at its sole history commit and the governed baseline; its dossier count
+is unreproduced. Three corpus predicates are false, its assignment guard misses
+semantic forms and one identifier branch, and its whole-directory exclusion is
+not exhaustive. The primary, independent semantic, seven-node graph, and
+focused routes pass 47, 20, 34, and 13 checks or tests. Pending MK candidates
+refute corpus absence without gaining authority, while C-BPS-001 through
+C-BPS-003 remain unchanged. No NumPy compatibility event occurs. The terminal
+workflow and explicit full suite each pass all 1,478 tests with 692 valid
+memory files.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P170 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 54 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope unit.
+The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P171 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 53 pending, 0 partial, 3 migrated, 152 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 54
-pending, 3 migrated, 152 qualified, 8 duplicate-evidence, and 1 out-of-scope
-bridge unit. The next queue unit is KI1, pinned at SHA-256
-`a1ec5f8e64e56165d2c51ad2389ecb455870572ba4ef9eca292151bde4ddb42b`.
-P171 must freeze KI1 before source execution and audit its claimed exhaustive
-absence of assigned generalized-Skyrme couplings. It must pin the exact search
-universe and tracked-file boundary, distinguish symbol mentions from numeric
-assignments and contextual false positives, inject load-bearing witnesses that
-the search must find, replay E1/E2/E4/KI2/S4/WZ4 authority and consumers, and
-must not turn corpus absence into a physical uniqueness theorem, fitted
-coupling, derived near-BPS yield, or substrate mechanism.
+The effort remains active. D4 is discharged, but D1 remains open with 53
+pending, 3 migrated, 152 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is KI2, pinned at SHA-256
+`9e16fc6fafa940f43d559ea0f6a9c2730940d1247f36f655375c2f75f6fd1e81`.
+P172 must freeze KI2 before source execution and audit its claimed structural
+epsilon underdetermination without importing refuted KI1. It must distinguish
+a family of parameterized theories from a symmetry of a fixed theory, replay
+the proposed flow against the accepted BPS energy and bound, pin dimensions
+and epsilon conventions, audit reverse MK consumers as pending candidates,
+and exclude any physical epsilon, yield, empirical fit, or substrate reading.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

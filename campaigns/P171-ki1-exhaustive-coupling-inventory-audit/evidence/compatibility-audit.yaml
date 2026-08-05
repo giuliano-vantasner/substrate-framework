@@ -1,0 +1,17 @@
+installed_numpy:
+  version: 2.5.1
+  preferred_function: numpy.trapezoid
+immutable_KI1:
+  numpy_imported: false
+  legacy_integration_references: 0
+  current_integration_references: 0
+  eager_legacy_fallbacks: 0
+source_graph:
+  nodes: [WZ4, E4, KI1, KI2, MK1, MK2, MK3]
+  legacy_integration_references: 0
+  current_integration_references: 0
+  isolated_aliases: []
+mutable_campaign_code:
+  legacy_integration_references: 0
+  numerical_quadrature_used: false
+classification: no_numpy_compatibility_event

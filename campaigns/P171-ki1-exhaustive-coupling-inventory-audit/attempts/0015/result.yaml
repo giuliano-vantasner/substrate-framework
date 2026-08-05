@@ -1,0 +1,23 @@
+attempt: 0015
+campaign: P171
+candidate: compatibility_aware_source_graph_and_consumer_replay
+status: failed_implementation_graph_edge
+started_at: '2026-08-11T01:33:00Z'
+finished_at: '2026-08-11T01:34:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/
+  replay_source_graph.py
+observed:
+  checks_passed_before_failure: 32
+  source_execution:
+    clean_nodes: [WZ4, E4, KI2, MK1, MK2, MK3]
+    expected_refuted_node: KI1_at_KI1.2
+  compatibility_aliases_required: []
+  failed_check: blanket_MK1_through_MK3_direct_KI1_citation_edge
+diagnosis: >-
+  MK2 directly cites KI1, whereas MK1 and MK3 cite KI2. All three are absent
+  from KI1 and all three are later counterevidence, but the source graph must
+  preserve the exact narrative-edge distinction. This is a graph
+  specification defect, not a source execution or scientific failure.
+next_attempt: encode_the_exact_MK_to_KI_citation_map

@@ -1,0 +1,12 @@
+accepted_BPS_evidence:
+  campaign: P107
+  primary_verifier_sha256: 91d3bcf4be848f3157d1b65fc6e6c0f1c8b1d23207f18816394facd6df1da7f0
+  independent_review_sha256: 93477f9601c414ffc1c740684a11339400313ad263d4315e563dab55eff28852
+  terminal_attempt_sha256: e56f20867b0a31f8183211ff1f4094c133a002e35cd2a1af3621c74e256a0921
+current_canonical_artifacts:
+  bps_module_sha256: 09e3bb41b98ba21f2909117ab1361020dfc7f12ef2722e9f620a65336bbe7d13
+  bps_tests_sha256: b52db01583cf351891074cd656ac51414bdb13d9dac2536398c9847cb0863edb
+reuse_decision: >-
+  P171 hash-audits unchanged accepted P107 evidence and replays only the
+  focused canonical BPS tests. Repeating P107's full exact derivation would not
+  test KI1's repository-universe or classifier claims.

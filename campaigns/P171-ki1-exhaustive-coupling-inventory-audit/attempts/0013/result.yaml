@@ -1,0 +1,33 @@
+attempt: 0013
+campaign: P171
+candidate: primary_pinned_tree_and_search_sensitivity_verifier
+status: passed
+started_at: '2026-08-11T01:29:00Z'
+finished_at: '2026-08-11T01:30:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+result:
+  checks: 47
+  terminal_tally: ALL 47 CHECKS PASS [P171-KI1-PINNED-TREE-AND-SEARCH-SENSITIVITY]
+source_predicates:
+  KI1.1: broad_controls_present_but_not_completeness_evidence
+  KI1.2: false_exactly_ten_executable_strays
+  KI1.3: false_exactly_three_executable_value_context_overlaps
+  KI1.4: false_MK2_matches_the_omega_value_regex
+  KI1.5: advertised_twelve_lines_pass_but_bare_eps_branch_is_unexercised
+mutation_results:
+  missed_plausible_value_forms: 9
+  file_level_false_positive_counterexample: passed
+  phase34_exclusion_counterexample: passed
+  three_exercised_pattern_mutations_rejected: true
+compatibility:
+  numpy_imported: false
+  legacy_trapz_references: 0
+  current_trapezoid_references: 0
+scientific_result: >-
+  KI1's exhaustive negative headline is refuted at the governed source
+  baseline. Later MK files are counterevidence to the corpus statement but
+  remain pending candidates, so they do not select accepted BPS coupling
+  values. C-BPS-001 through C-BPS-003 remain unchanged.
+next_attempt: fresh_independent_semantic_assignment_and_logic_review

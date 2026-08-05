@@ -1,0 +1,18 @@
+predeclared_order:
+  - pinned_universe_completeness_and_reproducibility
+  - model_context_and_assignment_semantics
+  - injected_witness_and_pattern_mutation_sensitivity
+  - accepted_claim_dependency_and_scope_fit
+  - assumption_parameter_and_API_economy
+  - consumer_nonduplication_and_governance_closure
+candidates:
+  A: {decision: reproduced_as_failure, reason: native_and_two_clean_committed_snapshots_abort_at_KI1_2}
+  B: {decision: rejected_false, reason: three_corpus_predicates_are_false_and_the_classifier_is_incomplete}
+  C: {decision: selected_as_source_diagnosis, reason: regex_file_policy_and_semantic_witnesses_expose_false_negatives_and_false_positives}
+  D: {decision: selected_only_as_unchanged_scientific_ceiling, reason: accepted_BPS_claims_keep_couplings_free_without_relying_on_KI1}
+  E: {decision: rejected_as_negative_inventory, reason: MK2_matches_the_omega_regex_and_supplies_a_pending_candidate_route}
+  F: {decision: rejected_category_error, reason: finite_repository_absence_cannot_prove_physical_nonidentifiability}
+  G: {decision: not_selected, reason: no_complete_stable_API_or_consumer_survives_and_campaign_semantics_are_source_specific}
+  H: {decision: selected_governance_closure, reason: refutation_requires_queue_memory_consumer_and_effort_synchronization}
+comparator_selected_candidate: false
+fresh_blinding_claimed: false

@@ -1,0 +1,18 @@
+registry_search:
+  accepted_BPS_free_parameter_ceiling: [C-BPS-001, C-BPS-002, C-BPS-003]
+  accepted_repository_absence_claim: null
+  accepted_KI1_dependency: null
+package_search:
+  BPS_energy_API: src/substrate_framework/bps_energy.py
+  repository_assignment_auditor_API: null
+distinct_valid_source_content:
+  - broad_search_nonvacuity_controls
+  - six_positive_and_six_negative_literal_examples
+rejected_new_objects:
+  - the_exhaustive_negative_inventory_is_false
+  - repository_absence_is_not_a_timeless_scientific_claim
+  - tracked_pending_derivations_do_not_select_coupling_values
+  - a_general_corpus_auditor_has_no_surviving_consumer_or_complete_semantics
+new_claim: null
+new_API: null
+disposition: refuted_not_duplicate_evidence

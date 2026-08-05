@@ -1,0 +1,38 @@
+attempt: 0003
+campaign: P171
+candidate: isolated_pinned_baseline_reproduction
+status: failed_scientific_predicate
+started_at: '2026-08-11T01:06:00Z'
+finished_at: '2026-08-11T01:09:00Z'
+checkout:
+  method: local_shared_clone_with_detached_commit
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  worktree_clean: true
+command: >-
+  .venv/bin/python <isolated-6d1f4e0>/merged-framework/bridges/phase-34/
+  bridge_KI1_exhaustive_coupling_search.py
+source:
+  sha256: a1ec5f8e64e56165d2c51ad2389ecb455870572ba4ef9eca292151bde4ddb42b
+  tracked_files_reported: 1628
+  readable_text_files: 1628
+  checks_passed_before_failure: 1
+  failed_check: KI1.2
+observed_executable_strays:
+  - MK1
+  - MK2
+  - MK4
+  - MK5
+  - MK6
+  - MR1
+  - MR2
+  - MR3
+  - MR5
+  - MR6
+diagnosis: >-
+  The same failure occurs in a clean detached checkout of the governed source
+  baseline. The dossier's stated 1502-file universe is stale, and dirty
+  working-tree state is not the cause.
+scientific_result: KI1_headline_false_at_governed_source_baseline
+debt:
+  - audit_the_source_creation_commit_and_the_narrower_numeric_assignment_claim
+next_attempt: source_creation_provenance_reproduction

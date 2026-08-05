@@ -1,0 +1,27 @@
+attempt: 0019
+campaign: P171
+candidate: terminal_repository_boundary
+status: passed
+started_at: '2026-08-11T01:51:00Z'
+finished_at: '2026-08-11T01:56:00Z'
+commands:
+  - scripts/validate.sh
+  - .venv/bin/python -m pytest
+result:
+  integrated_workflow:
+    repository: 163_claims_163_accepted_0_proposals
+    migration_queue: 218_units_53_pending_0_partial_1_refuted
+    memory_files_valid: 692
+    skill_valid: true
+    tests: 1478_passed
+    elapsed: 128.68_seconds
+    terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  explicit_full_suite:
+    tests: 1478_passed
+    elapsed: 129.91_seconds
+scientific_evidence_reused_at_unchanged_inputs:
+  primary: ALL_47_CHECKS_PASS
+  independent: ALL_20_CHECKS_PASS
+  graph: ALL_34_CHECKS_PASS
+  focused_consumers: 13_passed
+next_attempt: record_only_finalization_diff_and_commit

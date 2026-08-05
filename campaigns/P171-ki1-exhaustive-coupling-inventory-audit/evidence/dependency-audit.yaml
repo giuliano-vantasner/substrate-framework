@@ -1,0 +1,24 @@
+accepted_authority:
+  C-BPS-001:
+    role: exact_energy_bound_with_positive_free_lambda_and_mu
+    selects_coupling_or_physical_yield: false
+  C-BPS-002:
+    role: conditional_sector_attainment_and_zero_binding_identity
+    dependencies: [C-BPS-001, C-RDIFF-001]
+    selects_coupling_or_physical_yield: false
+  C-BPS-003:
+    role: controlled_local_epsilon_expansion
+    dependencies: [C-BPS-002, C-RDIFF-001]
+    selects_epsilon_or_physical_yield: false
+source_narrative:
+  E4: symbolic_origin_already_qualified_by_P107
+  S4: prose_omega_route_decline
+  WZ4: free_omega_symbol_context
+  KI2: pending_downstream_argument_with_KI1_as_a_narrative_premise
+  MK1: pending_mu_candidate_that_refutes_absence_only
+  MK2: pending_lambda_candidate_that_refutes_absence_only
+  MK3: pending_epsilon_candidate_that_refutes_absence_only
+accepted_registry_edges_to_KI1: []
+accepted_registry_challenges_from_KI1: []
+dependency_closure_for_refutation: complete
+dependency_closure_for_any_coupling_value: absent

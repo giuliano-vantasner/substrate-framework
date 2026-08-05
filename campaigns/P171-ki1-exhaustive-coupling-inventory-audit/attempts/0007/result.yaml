@@ -1,0 +1,28 @@
+attempt: 0007
+campaign: P171
+candidate: pinned_git_grep_control_replay
+status: failed_implementation_oracle_equivalence
+started_at: '2026-08-11T01:17:00Z'
+finished_at: '2026-08-11T01:18:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 22
+  failed_check: KI1's five broad control scans reproduce at the governed baseline
+  git_blob_counts:
+    '25.686': 42
+    F_pi_over_e: 62
+    kappa: 298
+    BPS: 66
+    rational_map: 34
+  mutable_source_run_counts: [40, 60, 301, 92, 32]
+diagnosis: >-
+  P171's exact-commit git-grep oracle skips binary-classified blobs and uses
+  PCRE line semantics, while KI1 decodes every working-tree file with ignored
+  UTF-8 errors and uses Python regexes. Exact count equality was therefore an
+  unjustified oracle-equivalence premise. Both implementations establish only
+  the advertised qualitative fact that all five broad control tokens occur.
+  The discrepancy reinforces that the source did not pin its bytes or decoder
+  contract; it does not by itself refute a scientific candidate.
+next_attempt: assert_exact_git_blob_counts_and_only_shared_nonzero_control_semantics

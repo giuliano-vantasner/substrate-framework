@@ -1,0 +1,20 @@
+attempt: 0008
+campaign: P171
+candidate: pinned_control_semantics
+status: failed_implementation_predicate
+started_at: '2026-08-11T01:19:00Z'
+finished_at: '2026-08-11T01:20:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 23
+  failed_check: broad present-token controls do not validate assignment completeness
+diagnosis: >-
+  The P171 check incorrectly required every control regex string to be absent
+  as a substring from the assignment regex. The token BPS legitimately occurs
+  inside the latter's optional suffix list, so textual substring disjointness
+  is not the logical distinction. The relevant fact is that no complete
+  control predicate equals the assignment, BPS-context, or omega-value
+  predicate whose coverage is at issue.
+next_attempt: replace_substring_logic_with_predicate_identity_logic

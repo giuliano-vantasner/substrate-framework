@@ -1,0 +1,25 @@
+source_unit: KI1
+direct_imports: [os, re, subprocess]
+source_module_imports: []
+scientific_predicates: {lexical: 5, reachable_before_abort: 2, passed_before_abort: 1}
+assertions: {total: 1, role: fail_fast_local_check_helper}
+universe:
+  enumeration: mutable_git_index_via_git_ls_files
+  content_reads: mutable_worktree_open_calls
+  commit_or_blob_pin: absent
+  governed_commit_files: 1628
+  source_creation_files: 1601
+  dossier_files: 1502
+  self_exclusion: entire_merged-framework_bridges_phase-34_directory
+semantic_findings:
+  - KI1_1_broad_controls_are_present_but_do_not_test_assignment_completeness
+  - KI1_2_is_false_on_exactly_ten_phase43_and_phase44_executable_strays
+  - KI1_3_is_false_on_MK2_MK3_and_MK5_executable_file_level_overlaps
+  - KI1_4_is_false_because_its_omega_regex_matches_MK2
+  - KI1_5_passes_its_twelve_examples_but_does_not_exercise_the_bare_eps_branch
+  - nine_plausible_value_forms_evade_the_literal_regex
+  - file_level_context_intersection_admits_unrelated_symbol_false_positives
+  - the_phase34_exclusion_hides_KI2_through_KI5_and_any_planted_neighbor
+  - tracked_candidate_derivations_refute_absence_but_do_not_gain_accepted_authority
+source_edited: false
+new_canonical_API: false

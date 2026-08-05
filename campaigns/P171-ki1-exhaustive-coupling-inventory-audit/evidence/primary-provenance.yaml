@@ -1,0 +1,25 @@
+primary_verifier:
+  path: campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+  sha256: 26f45ef8790ea35a28a662f6fca1e7470031dc7528e828d2fc0db78421dbe748
+  result: ALL_47_CHECKS_PASS
+independent_semantic_review:
+  path: campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/independent_semantic_inventory_review.py
+  sha256: 75379c40a5fb110045f34777b1f9fe1724532ba9ff825eb769d238075a8bc3d0
+  result: ALL_20_CHECKS_PASS
+source_graph:
+  path: campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/replay_source_graph.py
+  sha256: d99facbab2aa0739265993013d8bc26813cdf196941f55a990e3672fd6f2f790
+  result: ALL_34_CHECKS_PASS
+independence_statement: >-
+  The independent review imports neither KI1 nor the primary verifier. It
+  reads exact Git blobs, builds a fresh AST assignment recognizer, mutates four
+  syntax families, and supplies logical snapshot and physical-scope countermodels.
+mutation_surfaces:
+  - literal_identifier_branches
+  - annotated_assignments
+  - numeric_constructors
+  - subscript_targets
+  - dictionary_keys
+  - file_level_context
+  - entire_phase_directory_exclusion
+  - committed_tree_snapshot

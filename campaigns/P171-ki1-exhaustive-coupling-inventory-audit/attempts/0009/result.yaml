@@ -1,0 +1,24 @@
+attempt: 0009
+campaign: P171
+candidate: latent_KI1_3_pinned_overlap_reproduction
+status: failed_scientific_predicate
+started_at: '2026-08-11T01:21:00Z'
+finished_at: '2026-08-11T01:22:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 26
+  failed_source_predicate: KI1.3
+  pinned_executable_overlap:
+    - merged-framework/bridges/phase-43/bridge_MK2_lambda_from_medium_omega.py
+    - merged-framework/bridges/phase-43/bridge_MK3_epsilon_pinned.py
+    - merged-framework/bridges/phase-43/bridge_MK5_generalized_solve_kappa.py
+diagnosis: >-
+  KI1.3 is a second latent false predicate. Native KI1 never reaches it because
+  KI1.2 aborts first, but at the governed baseline its own literal assignment
+  and file-level BPS-context sets intersect on three executable Phase-43 files.
+  E4 remains symbolically declared and directly unvalued; that true local fact
+  does not restore the claimed corpus-wide disjointness.
+scientific_result: KI1_3_false_at_governed_source_baseline
+next_attempt: encode_the_exact_three_file_overlap_and_continue_all_remaining_predicates

@@ -1,0 +1,34 @@
+attempt: 0002
+campaign: P171
+candidate: literal_current_checkout_source_reproduction
+status: failed_scientific_predicate
+started_at: '2026-08-11T01:03:00Z'
+finished_at: '2026-08-11T01:05:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-34/bridge_KI1_exhaustive_coupling_search.py
+source:
+  sha256: a1ec5f8e64e56165d2c51ad2389ecb455870572ba4ef9eca292151bde4ddb42b
+  tracked_files_reported: 1628
+  readable_text_files: 1628
+  checks_passed_before_failure: 1
+  failed_check: KI1.2
+observed_executable_strays:
+  - MK1
+  - MK2
+  - MK4
+  - MK5
+  - MK6
+  - MR1
+  - MR2
+  - MR3
+  - MR5
+  - MR6
+diagnosis: >-
+  The source's tracked-file universe contains later executable coupling
+  consumers and derivations, so its claim that only E4's lineage carries the
+  BPS couplings is false in the current predecessor index. This is a
+  scientific/provenance predicate failure, not a NumPy compatibility event.
+debt:
+  - determine_whether_the_failure_is_dirty_index_drift_or_present_at_the_pinned_baseline
+next_attempt: isolated_pinned_baseline_reproduction

@@ -1,0 +1,16 @@
+attempt: 0017
+campaign: P171
+candidate: focused_accepted_BPS_consumer_replay
+status: passed
+started_at: '2026-08-11T01:46:00Z'
+finished_at: '2026-08-11T01:47:00Z'
+command: .venv/bin/python -m pytest tests/test_bps_energy.py -q
+result:
+  tests: 13
+  passed: 13
+  failed: 0
+reuse: >-
+  P107's byte-identical full derivation and independent proof are not repeated;
+  this focused replay confirms the unchanged canonical consumer after KI1's
+  record-only refutation.
+next_attempt: narrow_governance_and_memory_preflight

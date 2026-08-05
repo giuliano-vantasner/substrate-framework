@@ -1,0 +1,18 @@
+attempt: 0012
+campaign: P171
+candidate: primary_governance_scope_closure
+status: failed_implementation_schema_parser
+started_at: '2026-08-11T01:27:00Z'
+finished_at: '2026-08-11T01:28:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/verify.py
+observed:
+  checks_passed_before_failure: 42
+  stop: source_inventory_top_level_mapping_iterated_as_a_list
+diagnosis: >-
+  migration/source-claims.yaml stores candidate units beneath the top-level
+  units key. P171 iterated the mapping keys directly. All pinned-tree,
+  scientific-predicate, and mutation checks had already passed; this is only a
+  framework-record parser defect.
+next_attempt: read_source_inventory_units_from_the_declared_schema_key

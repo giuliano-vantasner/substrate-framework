@@ -1,0 +1,29 @@
+source_unit: KI1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-34/bridge_KI1_exhaustive_coupling_search.py
+sha256: a1ec5f8e64e56165d2c51ad2389ecb455870572ba4ef9eca292151bde4ddb42b
+observed_at: '2026-08-11T01:12:00Z'
+current_predecessor_checkout:
+  tracked_files_reported: 1628
+  runtime_pass_markers: 1
+  failed_predicate: KI1.2
+  executable_strays: [MK1, MK2, MK4, MK5, MK6, MR1, MR2, MR3, MR5, MR6]
+isolated_governed_baseline:
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  worktree_clean: true
+  tracked_files_reported: 1628
+  runtime_pass_markers: 1
+  failed_predicate: KI1.2
+  executable_strays: [MK1, MK2, MK4, MK5, MK6, MR1, MR2, MR3, MR5, MR6]
+source_creation_snapshot:
+  commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+  relationship: sole_commit_in_KI1_file_history
+  worktree_clean: true
+  tracked_files_reported: 1601
+  runtime_pass_markers: 1
+  failed_predicate: KI1.2
+  executable_strays: [MK1, MK2, MK4, MK5, MK6, MR1, MR2, MR3, MR5, MR6]
+dossier_tally: 1502
+dossier_tally_reproduced: false
+terminal_tally_reproduced: false
+classification: scientific_and_provenance_refutation_not_compatibility

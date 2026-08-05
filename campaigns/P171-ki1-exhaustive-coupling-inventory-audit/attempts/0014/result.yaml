@@ -1,0 +1,29 @@
+attempt: 0014
+campaign: P171
+candidate: fresh_independent_semantic_assignment_and_logic_review
+status: passed
+started_at: '2026-08-11T01:31:00Z'
+finished_at: '2026-08-11T01:32:00Z'
+command: >-
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python
+  campaigns/P171-ki1-exhaustive-coupling-inventory-audit/reviews/
+  independent_semantic_inventory_review.py
+result:
+  checks: 20
+  terminal_tally: ALL 20 CHECKS PASS [P171-INDEPENDENT-SEMANTIC-INVENTORY]
+independence:
+  imports_primary_verifier: false
+  imports_KI1: false
+  source_access: exact_git_blob
+  classifier: fresh_AST_semantic_assignment_recognizer
+mutation_results:
+  annotated_assignment_removed: rejected
+  numeric_constructor_support_removed: rejected
+  subscript_target_support_removed: rejected
+  dictionary_key_support_removed: rejected
+scientific_result: >-
+  Five semantic assignment forms independently evade KI1's literal regex;
+  file-context and directory-exclusion countermodels survive; and MK1 through
+  MK3 disprove repository absence without acquiring accepted scientific
+  authority.
+next_attempt: compatibility_aware_source_graph_and_consumer_replay
