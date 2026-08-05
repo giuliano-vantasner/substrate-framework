@@ -1,0 +1,20 @@
+attempt: 0008
+campaign: P192
+candidate: independent_symbolic_tail_verifier_initial_run
+status: failed
+started_at: '2026-08-11T18:47:00Z'
+finished_at: '2026-08-11T18:49:00Z'
+failure_class: representation
+primary_terminal_tally: ALL_115_CHECKS_PASS
+independent_checks_passed_before_stop: 35
+failure: >-
+  The independent raw later-ratio residual used the same structural equality
+  between two equivalent rational forms that stopped the initial primary run.
+repair: >-
+  Simplify the independent difference to zero and separately establish the
+  nonnegative residual on the declared integer domain.
+scientific_effect: none
+candidate_API_imported_by_independent_route: false
+formula_changed: false
+threshold_changed: false
+next_attempt: rerun_both_routes_to_clean_terminal_tallies

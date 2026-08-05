@@ -1,0 +1,19 @@
+attempt: 0006
+campaign: P192
+candidate: primary_symbolic_tail_verifier_initial_run
+status: failed
+started_at: '2026-08-11T18:43:00Z'
+finished_at: '2026-08-11T18:45:00Z'
+failure_class: representation
+checks_passed_before_stop: 94
+failure: >-
+  The exact nonnegative residual 1/2-5/(10+j) was compared structurally with
+  j/(2*(j+10)); SymPy retained an equivalent rational form and the equality
+  predicate returned false.
+repair: >-
+  Simplify the difference of the two forms to zero and separately require the
+  declared nonnegative-integer residual expression to be nonnegative.
+scientific_effect: none
+formula_changed: false
+threshold_changed: false
+next_attempt: rerun_primary_to_terminal_then_execute_the_independent_raw_route

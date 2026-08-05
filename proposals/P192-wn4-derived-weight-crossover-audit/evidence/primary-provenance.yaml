@@ -1,0 +1,17 @@
+campaign: P192
+claim_candidate: C-CMB-003
+verifier: verify.py
+sha256: 891f388752d9342ae428b28b7b51ef28f47e1601fda7dd8f092db4f1d74f8766
+imports_candidate_api: true
+pins:
+  source_sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2
+  release_sha256: f8ff33a61925f9e537f5a296aa7e674238399a22fc59e7eec7ec8520f4e3a852
+  formula_freeze_sha256: 6e486347ee07823b76057c36d0401df5bae1317fc362d684ffeb92ebfdc3caf9
+terminal_tally: ALL_115_CHECKS_PASS
+oracle_scope:
+  - source_identity_predicate_shape_and_compatibility
+  - exact_log_concavity_and_mode_ties
+  - PGF_coefficients_and_falling_factorial_moments
+  - geometric_point_and_upper_tail_bounds
+  - polynomial_scaled_mass_contraction
+  - load_bearing_mutations_and_physical_countermodels

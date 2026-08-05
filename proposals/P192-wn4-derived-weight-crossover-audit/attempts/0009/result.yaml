@@ -1,0 +1,19 @@
+attempt: 0009
+campaign: P192
+candidate: independent_adjacent_residual_normal_form
+status: failed
+started_at: '2026-08-11T18:49:00Z'
+finished_at: '2026-08-11T18:51:00Z'
+failure_class: representation
+primary_terminal_tally: ALL_115_CHECKS_PASS
+independent_checks_passed_before_stop: 46
+failure: >-
+  SymPy returned -(-S+n+1)/(n+1) while the independent final predicate used
+  (S-n-1)/(n+1) as a structural target. Their difference simplifies exactly
+  to zero.
+repair: compare_the_simplified_difference_with_zero
+scientific_effect: none
+candidate_API_imported_by_independent_route: false
+formula_changed: false
+threshold_changed: false
+next_attempt: rerun_both_routes_to_clean_terminal_tallies_and_record_provenance

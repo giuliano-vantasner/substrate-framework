@@ -1,0 +1,26 @@
+campaign: P192
+claim_candidate: C-CMB-003
+verifier: reviews/independent_factorial_one_review.py
+sha256: 0682213e20aa270e1c4767fb87f6ecf9c1e3abbc527e8b90b7710d1f59d9b98e
+imports:
+  - __future__.annotations
+  - hashlib
+  - pathlib.Path
+  - sympy
+  - substrate_framework.verification.CheckLedger
+imports_candidate_scientific_api: false
+imports_accepted_scientific_api: false
+pins:
+  source_sha256: 2377bb4ba817cd20c188d4adeeeb9169253e9b1231477ac2069b36cc923fc7e2
+  release_sha256: f8ff33a61925f9e537f5a296aa7e674238399a22fc59e7eec7ec8520f4e3a852
+  formula_freeze_sha256: 6e486347ee07823b76057c36d0401df5bae1317fc362d684ffeb92ebfdc3caf9
+terminal_tally: ALL_47_CHECKS_PASS
+fresh_constructions:
+  - raw_factorial_one_coefficients
+  - raw_neighbor_quotients
+  - brute_exact_integer_and_noninteger_modes
+  - raw_exponential_series_PGF
+  - raw_PGF_derivatives_and_variance_conversion
+  - raw_geometric_tail_majorant
+  - raw_polynomial_scaled_ratio_threshold
+  - zero_coupling_and_zero_spectral_density_countermodels

@@ -1,0 +1,19 @@
+attempt: 0007
+campaign: P192
+candidate: primary_physical_ceiling_oracle_initial_target
+status: failed
+started_at: '2026-08-11T18:45:00Z'
+finished_at: '2026-08-11T18:47:00Z'
+failure_class: verifier_target
+checks_passed_before_stop: 113
+failure: >-
+  The final physical-ceiling check searched the polynomial-tail factory
+  docstring for separate-premise prose, while the executable public contract
+  carries that ceiling on the returned immutable certificate field.
+repair: >-
+  Inspect physical_power_law_interpretation_is_separate_premise on the actual
+  certificate. Retain the existing PGF and geometric-bound docstring checks.
+scientific_effect: none
+formula_changed: false
+threshold_changed: false
+next_attempt: rerun_primary_to_terminal_and_then_run_the_independent_route

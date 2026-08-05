@@ -1,0 +1,26 @@
+attempt: 0010
+campaign: P192
+candidate: primary_and_independent_exact_verification
+status: passed
+started_at: '2026-08-11T18:51:00Z'
+finished_at: '2026-08-11T18:55:00Z'
+primary:
+  terminal_tally: ALL_115_CHECKS_PASS
+  imports_candidate_api: true
+  mutation_sensitive: true
+independent:
+  terminal_tally: ALL_47_CHECKS_PASS
+  imports_candidate_scientific_api: false
+  imports_accepted_scientific_api: false
+retained_claim_surface:
+  - strict_log_concavity_with_integer_tie_complete_modes
+  - normalized_PGF_and_all_falling_factorial_moments
+  - exact_geometric_point_and_upper_tail_majorants
+  - every_fixed_power_scaled_mass_tends_to_zero
+retained_ceilings:
+  - no_physical_Poisson_process_or_medium_mean
+  - no_phase_space_energy_gap_or_power_law_selection
+  - exact_step_residual_is_S_minus_n_plus_one
+compatibility_version_failures: 0
+scientific_threshold_changed: false
+next_attempt: complete_claim_dependency_consumer_and_source_graph_review

@@ -194,6 +194,41 @@ affected process, while its seven-commit-stale index misses known test and
 campaign consumers that the direct inventory retains for replay. No NumPy
 surface, fitted parameter, or physical-process claim is added.
 
+Attempt 0006 preserves a primary-verifier representation stop after ninety-
+four passing checks. SymPy retained an equivalent rational form for
+`1/2-5/(10+j)` instead of matching `j/(2*(j+10))` structurally. The repaired
+oracle simplifies their difference to zero and separately checks
+nonnegativity on the declared integer domain. No formula, threshold, mutation,
+or physical verdict changes; both terminal verifier tallies remain required.
+
+Attempt 0007 preserves a final primary-oracle target stop after 113 passing
+checks. The check searched the factory docstring for power-law physical-ceiling
+prose even though the executable public contract carries that ceiling on the
+returned immutable certificate. The repair inspects the actual boolean field
+and retains the PGF and geometric-bound docstring checks. No proof-shaped prose,
+formula, threshold, mutation, or verdict is changed.
+
+Attempt 0008 records a clean 115-check primary tally followed by an independent
+representation stop after thirty-five raw checks. The independent route met
+the same equivalent-rational-form comparison at the universal half-geometric
+residual. Its repair mirrors the exact zero-difference plus nonnegativity
+predicate and still imports no candidate scientific API. Formulae, thresholds,
+mutations, and verdicts remain frozen; both terminal tallies are rerun together.
+
+Attempt 0009 records the unchanged 115-check primary tally and an independent
+stop at its final predicate after forty-six passes. SymPy returned the adjacent
+residual as `-(-S+n+1)/(n+1)` while the oracle structurally expected
+`(S-n-1)/(n+1)`. Their difference is exactly zero. The repair checks that
+simplified difference and changes no scientific object or independent import.
+
+Attempt 0010 passes both serious boundaries: 115 primary mutation-sensitive
+checks and 47 independent raw-SymPy checks. The independent route imports only
+SymPy and the shared tally primitive; it reconstructs coefficients, mode sets,
+the PGF, derivatives, geometric majorants, polynomial-scaled contractions, and
+physical countermodels without candidate or accepted scientific APIs. The
+exact theorem and its mathematical-only ceiling survive unchanged. Individual
+claim review and the complete WN4 source graph remain open.
+
 ## Debt Ledger
 
 The P192 ledger tracks source predicates, accepted overlap, sample space,
