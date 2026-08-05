@@ -1,0 +1,50 @@
+campaign: P188
+source_unit: GK3D4
+source_sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35
+imports: [sympy]
+defined_functions: [check, trace_table]
+runtime_checks: 11
+assert_nodes: 1
+derived_locally:
+  - standard Pauli-half two-dimensional carrier trace metric
+  - standard Gell-Mann-half three-dimensional carrier trace metric
+  - derivatives of the literal rational one-half with respect to D and q
+  - algebraic cancellation inside a separately hardcoded common zero-boundary family
+  - conditional 3/8 arithmetic after inserting the 5/3 trace ratio
+declared_or_hardcoded:
+  - sector labels U(1)_Y SU(2)_L and SU(3)_c
+  - generic positive trace symbols for all three sectors
+  - the universal Dirac coefficient four-thirds
+  - one common b0 beta2 denominator and hence one common logarithm
+  - zero affine kinetic boundaries in all three sectors
+  - squared-charge substitution for the Abelian entry
+  - complete-generation trace ratio five-thirds
+  - identification of trace coordinates with physical gauge couplings
+  - physical weak-angle and substrate interpretations
+unused_or_absent_load_bearing_objects:
+  - no matter action determinant field or representation on one common carrier
+  - no bubble seagull Ward derivation regulator subtraction or counterterm
+  - no product-representation spectator multiplicities
+  - no scalar versus Weyl versus Dirac statistics ledger
+  - no factor-specific mass threshold matching scale or affine boundary
+  - no structure constants in the claimed Abelian-limit predicate
+  - no anomaly equations or proof of a unique charge table
+  - no gauge transformation action field equation propagator or physical sector map
+structural_predicate_weaknesses:
+  GK3D4.3a: hardcoded_key_set_and_self_definition_of_Z_i
+  GK3D4.3b: algebraic_Q_squared_substitution_without_nonabelian_structure_input
+  GK3D4.4a: cancellation_for_a_family_defined_to_share_one_denominator
+  GK3D4.5a: repeated_universal_coefficient_premise
+  GK3D4.5b: inserted_five_thirds_trace_ratio
+  GK3D4.5c: free_symbol_absence_after_exact_constants_were_inserted
+accepted_ceiling:
+  - C-LIE-001 and C-REP-002 retain the convention-specific fundamental traces.
+  - C-DIM-009 retains trace dimensionlessness and coupling-normalization covariance but supplies no dimensional lift.
+  - C-VAC-002 through C-VAC-004 retain conditional D4 matter loops and affine scale composition with boundaries and physical inputs explicit.
+  - C-REP-001 retains the 3/8 trace coordinate and its exact iff with a separately common inverse-trace coefficient.
+  - C-PGA-001 and C-RGE-005 retain local factor algebra and supplied spectator-degenerate product-matter invariants without a common action or matching law.
+headline_verdict_candidate: >-
+  The universal three-sector physical construction and upgraded weak-angle
+  prediction are not derived. Exact trace and conditional ratio content can
+  survive only through accepted composition after restoring product-matter,
+  statistics, normalization, affine-boundary, and matching premises.

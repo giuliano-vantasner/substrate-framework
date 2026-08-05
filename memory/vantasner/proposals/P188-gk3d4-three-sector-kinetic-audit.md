@@ -2,7 +2,7 @@
 description: Audit GK3D4 and derive a provenance-complete product-sector kinetic normalization ledger
 author: vantasner
 created: '2026-08-11T14:05:00Z'
-updated: '2026-08-11T14:11:00Z'
+updated: '2026-08-11T14:19:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -175,6 +175,19 @@ append-only with a materially different continuation. The matching manifest,
 179-claim registry, one-proposal workflow, memory disclosure contract, YAML,
 and diff gates pass before the source body opens.
 
+Attempt 0002 opens and runs the pinned source after compatibility preflight.
+It exits cleanly in 0.41 seconds with eleven runtime checks, eleven lexical
+call sites, one assertion node, 52,668 KiB peak RSS, and no NumPy surface. The
+Pauli-half and Gell-Mann-half trace metrics and two narrow dimensional facts
+are exact. The source does not construct a product matter carrier, determinant,
+statistics ledger, regulator, sector boundary, matching law, or anomaly solve.
+Its three-sector set is hardcoded, its Abelian limit contains no structure
+constant, its ratios are defined with one common zero-boundary denominator,
+and 3/8 follows only after inserting the five-thirds trace ratio. The green
+tally therefore reproduces the source but does not validate its universal or
+physical headline. The next route derives the actual product-carrier weights
+and factorwise affine counterfamily through accepted APIs.
+
 ## Debt Ledger
 
 The P188 ledger tracks source reachability, generator conventions, product
@@ -185,13 +198,13 @@ consumers, and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| GK3D4 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | open |
+| GK3D4 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source reproduction, source audit, check adjudication, and attempt 0002 |
 | Equal fundamental traces may be mistaken for equal physical sector weights | Derive the actual product-representation trace metric including spectators and matter multiplicities | open |
 | One Abelian D4 loop may be copied to non-Abelian sectors without an accepted determinant and background-field premise | Type every action, representation, loop, regulator, and group factor or reject the transfer | open |
 | Factor-specific tree, counterterm, and matching data may be erased | Preserve one affine boundary and scale ledger per independent factor | open |
 | A trace ratio may be called a physical coupling angle | Reproduce the C-REP-001 iff and mutate the common coefficient and Abelian normalization | open |
 | C-VAC-005 may duplicate accepted semantics | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D4 imports only SymPy and has no NumPy surface |
 | Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | open |
 
 ## Review and Promotion Plan

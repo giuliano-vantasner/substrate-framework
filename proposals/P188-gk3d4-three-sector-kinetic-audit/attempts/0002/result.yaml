@@ -1,0 +1,25 @@
+attempt: 0002
+campaign: P188
+candidate: hash_pinned_source_reproduction_and_predicate_audit
+status: passed_source_reproduction_headline_unvalidated
+started_at: '2026-08-11T14:12:00Z'
+finished_at: '2026-08-11T14:19:00Z'
+source:
+  sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35
+  exit_status: 0
+  runtime_checks: 11
+  lexical_check_calls: 11
+  assert_nodes: 1
+  elapsed_wall_seconds: 0.41
+  max_rss_kib: 52668
+compatibility:
+  numpy_surface: none
+  alias_replay_required: false
+  version_only_scientific_failures: 0
+audit:
+  exact_fundamental_trace_checks: 2
+  narrow_dimension_or_counterexample_checks: 2
+  conditional_or_structurally_weak_checks: 7
+  source_headline_validated: false
+scientific_threshold_changed: false
+next_attempt: derive_the_actual_product_carrier_trace_weights_and_factorwise_affine_counterfamily_then_complete_nonduplication

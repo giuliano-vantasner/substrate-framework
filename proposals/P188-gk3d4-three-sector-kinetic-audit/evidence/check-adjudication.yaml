@@ -1,0 +1,64 @@
+campaign: P188
+source_unit: GK3D4
+checks:
+  - id: GK3D4.1a
+    source_runtime: pass
+    status: retained_exact_duplicate
+    mapping: [C-REP-002, C-PGA-001]
+    reason: The Pauli-half fundamental trace metric is exact and accepted; it is a convention-specific carrier fact rather than a physical SU2 kinetic coefficient.
+  - id: GK3D4.1b
+    source_runtime: pass
+    status: retained_exact_duplicate
+    mapping: [C-LIE-001]
+    reason: The Gell-Mann-half fundamental trace metric is exact and accepted; equality with the separate SU2 fundamental index does not include product-representation spectator degeneracies or derive equal sector weights.
+  - id: GK3D4.2a
+    source_runtime: pass
+    status: retained_narrow_corrected
+    mapping: [C-DIM-009]
+    reason: The literal rational one-half is dimensionless, but this does not derive a D4 determinant or transport a D2 action, regulator, statistics choice, matching condition, or physical sector.
+  - id: GK3D4.2b
+    source_runtime: pass
+    status: retained_counterexample_only
+    mapping: [C-DIM-009]
+    reason: A fabricated D-dependent factor has nonzero derivative, but rejecting it does not make dimensionlessness sufficient for a loop or dimensional lift.
+  - id: GK3D4.3a
+    source_runtime: pass
+    status: overclaimed_from_hardcoded_construction
+    mapping: [C-PGA-001, C-VAC-002, C-VAC-003, C-VAC-004]
+    reason: The predicate hardcodes exactly three labels and defines each Z_i by the claimed common zero-boundary formula; it supplies no common matter representation, determinant, statistics, boundary, or matching law.
+  - id: GK3D4.3b
+    source_runtime: pass
+    status: retained_algebra_not_abelian_limit
+    mapping: [C-DIM-009, C-VAC-002]
+    reason: Inverting the inserted Q-squared coefficient is exact, but no structure constant appears and no non-Abelian construction is continuously specialized, so the advertised Abelian-limit guard does not execute its headline premise.
+  - id: GK3D4.4a
+    source_runtime: pass
+    status: retained_conditional_specialization
+    mapping: [C-VAC-003, C-VAC-004]
+    reason: b0 and beta2 cancel only because all sectors were defined with the same denominator and zero boundary; independent affine boundaries, logs, thresholds, and matter weights invalidate the general ratio.
+  - id: GK3D4.4b
+    source_runtime: pass
+    status: retained_conditional_specialization
+    mapping: [C-REP-001, C-VAC-003, C-VAC-004]
+    reason: The inverse trace ratio follows under the separately common zero-boundary coefficient law; the field content, normalization, matching, and boundary premises are not derived by this expression.
+  - id: GK3D4.5a
+    source_runtime: pass
+    status: retained_exact_duplicate_premise
+    mapping: [C-REP-001]
+    reason: C-REP-001 already owns the iff between trace and coupling angles and identifies the universal inverse-trace coefficient as a separately supplied premise.
+  - id: GK3D4.5b
+    source_runtime: pass
+    status: retained_conditional_arithmetic_rejected_physical_upgrade
+    mapping: [C-REP-001, C-ANO-001]
+    reason: Three-eighths follows after inserting the supplied five-thirds trace ratio and common coefficient, but anomaly cancellation has multiple charge branches and cannot select the Abelian normalization or physical weak angle.
+  - id: GK3D4.5c
+    source_runtime: pass
+    status: retained_conditional_arithmetic_rejected_prediction
+    mapping: [C-REP-001, C-VAC-003, C-VAC-004]
+    reason: The inserted constants leave no source free symbols, while allowed Abelian rescaling, independent boundaries, factorwise logs, and matching data remain outside the expression.
+summary:
+  retained_exact_duplicate: 2
+  retained_narrow_or_counterexample: 2
+  retained_conditional_only: 5
+  structurally_insensitive_or_overclaimed: 2
+  blanket_headline_accepted: false

@@ -21,5 +21,5 @@ queue_predicates:
   assert_statements: 1
   terminal_tally_literal_present: true
 candidate_dependencies: [EM5, GK1, GK3D1, GK3D2, GK3D3, QCD1, SM3, WM1, WM2, YM1]
-source_body_opened: false
+source_body_opened: true
 comparator_values_opened: false
