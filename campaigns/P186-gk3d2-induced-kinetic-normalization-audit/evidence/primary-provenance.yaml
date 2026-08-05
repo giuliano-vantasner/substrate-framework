@@ -1,0 +1,35 @@
+campaign: P186
+claims: [C-VAC-003]
+base_release: v0.137.0
+source_sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886
+rung25_sha256: a69197cd1925560af122f268edb71738ecc896df3a61f557ef9daf26d4bbd2fa
+primary:
+  path: campaigns/P186-gk3d2-induced-kinetic-normalization-audit/verify.py
+  terminal_tally: ALL_31_CHECKS_PASS_P186_GK3D2_C_VAC_003
+  checks: 31
+  elapsed_seconds: 4.84
+  maximum_resident_kibibytes: 151064
+  exit_code: 0
+independent:
+  path: campaigns/P186-gk3d2-induced-kinetic-normalization-audit/reviews/independent_scalar_kinetic_review.py
+  terminal_tally: ALL_28_CHECKS_PASS_P186_INDEPENDENT_C_VAC_003
+  checks: 28
+  elapsed_seconds: 2.60
+  maximum_resident_kibibytes: 147956
+  exit_code: 0
+source_native: {checks: 17, assertions: 1, elapsed_seconds: 0.60, maximum_resident_kibibytes: 54768, exit_code: 0}
+source_graph: {checks: 20, elapsed_seconds: 2.48, maximum_resident_kibibytes: 154448, exit_code: 0}
+focused: {tests: 80, elapsed_seconds: 9.38, exit_code: 0}
+staged_impact: {risk: LOW, changed_symbols: 188, changed_files: 31, affected_execution_flows: 0}
+source_graph_risk: MEDIUM
+durable_memory: {files_valid: 761, exit_code: 0}
+mutations:
+  - wrong_scalar_seagull_sign_and_coefficient
+  - wrong_scalar_parameter_weight
+  - wrong_scalar_and_Dirac_statistics_weights
+  - shifted_finite_local_counterterm
+  - shifted_affine_boundary_with_identical_loop_slope
+  - reversed_scale_order_on_the_explicit_zero_matching_branch
+  - paired_and_unpaired_reference_coordinate_changes
+oracle_ceiling: symbolic_verified_for_C_VAC_003
+integrated: pending_single_promotion_boundary

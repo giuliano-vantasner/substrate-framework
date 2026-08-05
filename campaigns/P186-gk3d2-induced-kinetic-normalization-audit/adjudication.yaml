@@ -1,0 +1,65 @@
+campaign: P186
+title: GK3D2 induced kinetic normalization audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK3D2]
+base_release: v0.137.0
+accepted_release: v0.138.0
+adjudicated_at: '2026-08-11T12:54:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_predicate_and_boundary_dataflow_are_source_evidence_only.}
+  - {id: B, reason: Complete_scalar_bubble_seagull_D4_regulator_and_subtraction_earn_C_VAC_003.}
+  - {id: C, reason: The_affine_inverse_kinetic_family_is_accepted_with_its_independent_reference_value.}
+  - {id: D, reason: Scalar_and_Dirac_weights_survive_only_for_separately_supplied_invariant_matter_inputs.}
+  - {id: E, reason: Free_explicit_zero_and_measured_matching_models_remain_distinct.}
+  - {id: F, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+claims:
+  - {id: C-VAC-003, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-GAU-001, decision: unchanged_connection_curvature_and_unconstrained_local_kinetic_coefficient}
+  - {id: C-DIM-009, decision: unchanged_dimension_tensor_and_connection_normalization_bookkeeping}
+  - {id: C-VAC-002, decision: unchanged_conditional_Dirac_D4_theorem_and_factor_four_comparator}
+  - {id: C-MAX-001, decision: unchanged_no_kinetic_variational_equation_and_non_pure_gauge_ceiling}
+unpromoted_claims:
+  - {id: scalar_slope_from_reduced_numerator_alone, reason: The_source_omits_the_scalar_action_bubble_seagull_regulator_scale_pole_and_counterterm.}
+  - {id: rung25_is_Z_of_Lambda_equals_zero, reason: Rung25_defines_no_kinetic_coefficient_charged_threshold_counterterm_or_matching_surface.}
+  - {id: additive_constant_removed, reason: The_affine_solution_retains_an_independent_reference_value_until_matching_is_declared.}
+  - {id: scale_order_controls_general_positivity, reason: Off_the_explicit_zero_matching_branch_the_sign_depends_on_Z_ref.}
+  - {id: one_dimensionless_number_and_total_coupling, reason: Boundary_matter_and_scale_coordinates_remain_unselected.}
+  - {id: physical_matter_group_dimension_or_substrate, reason: No_accepted_dependency_or_GK3D2_oracle_supplies_these_objects.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_scalar_kinetic_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VAC-003-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  literature_audit: evidence/literature-audit.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+source_disposition: {GK3D2: qualified}
+accepted_mappings: [C-GAU-001, C-DIM-009, C-VAC-002, C-MAX-001, C-VAC-003]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_current_name: numpy.trapezoid_or_shared_trapezoid_integral
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.138.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts/validate.sh
+  - git_diff_check
+debt: []
+status: accepted

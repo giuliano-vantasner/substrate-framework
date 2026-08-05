@@ -1,0 +1,18 @@
+attempt: 0012
+campaign: P186
+candidate: durable_memory_validation
+status: failed_record_enum
+started_at: '2026-08-11T12:59:00Z'
+finished_at: '2026-08-11T12:59:00Z'
+command: memory_validate_repository_memory
+process:
+  exit_code: 1
+  files_checked: 761
+  files_with_errors: 2
+failure_class: record_frontmatter_enum
+failures:
+  - C_VAC_003_decision_used_confidence_verified_and_status_accepted
+  - GK3D2_decision_used_confidence_verified_and_status_accepted
+repair: use_the_decision_template_enums_confidence_established_and_status_active
+scientific_claim_or_threshold_changed: false
+next_attempt: rerun_targeted_records_then_full_memory_validation

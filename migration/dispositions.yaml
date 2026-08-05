@@ -3541,6 +3541,69 @@ units:
       version event affects a scientific verdict. Direct reverse consumers
       GK3D2 through GK3D5 and transitive GK3D6, EL2, and HE5 are replayed with
       the conditional consumer ceiling explicit.
+  GK3D2:
+    disposition: qualified
+    accepted_claims:
+      - C-GAU-001
+      - C-DIM-009
+      - C-VAC-002
+      - C-MAX-001
+      - C-VAC-003
+    qualification: >-
+      C-VAC-003 retains GK3D2's exact conditional complex-scalar D4 loop after
+      supplying the missing scalar determinant, bubble, seagull, common shift-
+      invariant gauge-preserving regulator, subtraction scale, Laurent pole,
+      and finite counterterm family. The bubble-seagull Ward contraction is
+      derived before transversality is used. In the same tensor convention as
+      C-VAC-002, the one-species Dirac slope is exactly four times the complex-
+      scalar slope. For separately supplied invariant matter weights, the
+      connection-field coefficient is b=W_s/3+4*W_f/3. Its exact flow has the
+      affine family Z(mu)=Z_ref+b*log(mu_ref/mu)/(8*pi^2), with the local term,
+      finite matching offset, and reference value explicit. Setting Z_ref to
+      zero is a separately declared compositeness or matching condition; only
+      on that branch does positive b make the sign equivalent to scale
+      ordering. Hash-pinned rung25 defines no kinetic coefficient, charged-
+      matter threshold, counterterm, or matching surface, and C-MAX-001 proves
+      that deleting a kinetic term yields the current constraint rather than
+      forcing every connection to be pure gauge. Thus rung25 does not remove
+      the affine integration constant. No physical charged spectrum,
+      representation, group, reference scale, total coupling, preferred
+      dimension, observation, or substrate mechanism is accepted. GK3D3
+      through GK3D6 remain pending and inherit only the conditional slopes,
+      weight formula, affine family, and explicitly assumed zero-matching
+      specialization.
+    evidence:
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/reviews/source_adjudication.md
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/reviews/C-VAC-003-claim-review.md
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/source-reproduction.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/compatibility-audit.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/source-audit.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/check-adjudication.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/formula-freeze.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/literature-audit.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/input-provenance.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/dependency-audit.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/consumer-audit.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/candidate-comparison.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/evidence/primary-provenance.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/verify.py
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/reviews/independent_scalar_kinetic_review.py
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/reviews/replay_source_graph.py
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/attempts/0002/result.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/attempts/0003/result.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/attempts/0004/result.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/attempts/0007/result.yaml
+      - campaigns/P186-gk3d2-induced-kinetic-normalization-audit/attempts/0009/result.yaml
+      - memory/vantasner/decisions/C-VAC-003-review.md
+      - memory/vantasner/decisions/GK3D2-qualified-review.md
+    note: >-
+      P186 closes thirty-one primary and twenty-eight independent exact checks
+      plus eighty focused tests. GK3D2 and canonical P186 code contain no NumPy
+      quadrature surface, so no version event affects its scientific verdict.
+      Direct reverse consumers GK3D1, GK3D3, GK3D4, and GK3D6 and transitive
+      GK3D5, EL2, and HE5 are replayed with the affine-boundary ceiling explicit.
   BX1:
     disposition: qualified
     accepted_claims:

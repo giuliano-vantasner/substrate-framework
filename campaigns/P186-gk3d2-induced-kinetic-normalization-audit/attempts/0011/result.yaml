@@ -1,0 +1,32 @@
+attempt: 0011
+campaign: P186
+candidate: governed_source_graph_release_and_consumer_replay
+status: passed
+started_at: '2026-08-11T12:56:00Z'
+finished_at: '2026-08-11T12:57:00Z'
+commands:
+  - PYTHONPATH=src_python_scripts_validate_repository_py
+  - PYTHONPATH=src_python_reviews_replay_source_graph_py
+process:
+  exit_code: 0
+  elapsed_seconds: 2.48
+  maximum_resident_kibibytes: 154448
+  checks_passed: 20
+  terminal_tally: ALL_20_CHECKS_PASS_P186_GK3D2_SOURCE_GRAPH
+workflow:
+  claims: 178
+  accepted_claims: 178
+  proposals_in_registry: 0
+  migration_units: 218
+  pending_units: 38
+  partial_units: 0
+coverage:
+  - eight_hash_pinned_source_and_reverse_consumer_nodes
+  - exact_direct_cycle_and_transitive_reverse_consumer_depths
+  - downstream_individual_dispositions_and_consumer_ceiling
+  - claim_four_axis_status_and_dependency_closure
+  - 178_claim_release_and_current_manifest_equality
+  - GK3D2_and_canonical_NumPy_compatibility_absence
+  - pending_GK3D5_current_first_lazy_legacy_compatibility_classification
+verdict: graph_governance_and_version_compatibility_replay_passed
+next_attempt: durable_memory_validation_then_integrated_promotion_boundary

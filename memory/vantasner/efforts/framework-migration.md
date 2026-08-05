@@ -2071,19 +2071,43 @@ none changed an equation or threshold. GK3D1 and mutable P185 have no NumPy
 trapezoidal surface. GitNexus rates the 183-symbol, 31-file transaction LOW
 with no affected execution flow.
 
+P186 adds C-VAC-003's exact conditional complex-scalar D4
+bubble-plus-seagull theorem and complete affine inverse-kinetic boundary
+family. It derives the scalar Ward cancellation, Laurent residue, MS-bar
+finite-counterterm family, factor four against the accepted Dirac result,
+conditional one-third and four-thirds matter weights, and reference-coordinate
+covariance. GK3D2 is qualified through these objects. Its incomplete reduced-
+numerator helper, rung25 matching inference, erased affine constant, general
+scale-only positivity, unique logarithm, physical coupling, matter, group, and
+substrate readings remain unaccepted. The primary and independent routes pass
+31 and 28 checks, the eight-node source graph passes 20, and 80 focused tests
+pass. Two primary-verifier representation failures and one independent self-
+reference failure are preserved as technical attempts and changed no physics.
+GK3D2 and canonical P186 code have no NumPy quadrature surface; pending GK3D5
+uses the current trapezoidal API first with a lazy compatibility fallback, so a
+future version-only event cannot reject a scientific candidate. GitNexus rates
+the additive implementation LOW risk; the MEDIUM narrative consumer risk is
+contained by keeping GK3D3 through GK3D6 pending with the free-boundary ceiling.
+
 ## Canonicalization
-The registry, `v0.137.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-seven accepted claims. P001 through P185 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 39 pending, 0 partial, 3 migrated, 166 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The staged registry, `v0.138.0` manifest, current release, generated claim
+index, and generated framework memory agree on one hundred seventy-eight
+accepted claims. P001 through P186 are frozen under `campaigns/`; proposal,
+attempt, review-work, and effort memory remain distinct from accepted-state
+memory. The regenerated migration queue agrees on 38 pending, 0 partial, 3
+migrated, 167 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. The single integrated promotion boundary remains to be run.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 39
-pending, 3 migrated, 166 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is GK3D2, pinned at SHA-256
-`856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886`.
-P185 closes GK3D1 without accepting a total induced gauge normalization. The
-next action is to freeze GK3D2 against v0.137.0 and audit its scalar/Dirac loop
-weights, beta coefficients, boundary-condition argument, counterterm and
-matching freedom, dependencies, mutations, and physical scope before accepting
-any normalized four-dimensional gauge coupling.
+The effort remains active. D4 is discharged, but D1 remains open with 38
+pending, 3 migrated, 167 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. P186 closes GK3D2 without accepting a selected total
+gauge normalization. After the integrated v0.138.0 gate, the next queue unit is
+GK3D3, pinned at SHA-256
+`1c3f81d15ace3ec2c6326c89659596f5b9ff84ac23ef7f0143a53ad92b23b211`.
+Its scale identification, zero-boundary dependence, total coupling, physical
+matter, group, consumer ratios, and substrate scope must be independently
+audited against the affine reference-value ceiling.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

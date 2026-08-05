@@ -1,0 +1,16 @@
+attempt: 0013
+campaign: P186
+candidate: durable_memory_validation
+status: passed_after_record_repair
+started_at: '2026-08-11T13:00:00Z'
+finished_at: '2026-08-11T13:00:00Z'
+commands:
+  - memory_validate_two_P186_decisions
+  - memory_validate_repository_memory
+process:
+  exit_code: 0
+  memory_files_valid: 761
+repair_before_pass: use_established_and_active_decision_frontmatter_enums
+scientific_claim_or_threshold_changed: false
+verdict: all_durable_memory_records_valid
+next_attempt: integrated_promotion_boundary

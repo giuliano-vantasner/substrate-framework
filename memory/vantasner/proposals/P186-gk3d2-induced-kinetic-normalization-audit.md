@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T12:40:00Z'
+updated: '2026-08-11T13:00:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -264,6 +264,20 @@ generic-beta, or renormalization modules. It independently rebuilds the
 vertex weight, pole, finite family, slopes, factor four, affine solution, and
 boundary counterexamples. Source-graph and governance closure remain open.
 
+Attempt 0010 refreshes the code graph and records LOW additive implementation
+risk, zero affected indexed processes, and the indexer's explicit failure to
+materialize the new factory functions as function nodes. The result-dataclass
+and transaction routes still expose the expected file consumers; temporary
+GitNexus host artifacts were removed. Attempt 0011 passes 20 source-graph and
+governance checks across eight hash-pinned nodes. It keeps the GK3D1 prose
+cycle harmless, GK3D3 through GK3D6 individually pending, and GK3D5's current-
+first lazy quadrature fallback classified as compatibility rather than science.
+
+Attempt 0012 records that the two new decision files used semantically natural
+but schema-invalid frontmatter enums. Attempt 0013 repairs only those record
+coordinates and validates all 761 memory files. No equation, threshold, claim
+scope, or scientific verdict changed.
+
 ## Debt Ledger
 
 The P186 ledger tracks source reachability, scalar quantum premises,
@@ -279,9 +293,9 @@ governed state.
 | A differential slope may be presented as a total normalization | Integrate the affine family and retain its independent reference value | discharged by the affine API and same-slope unequal-boundary mutation; campaign replay remains |
 | The earlier no-matter result may be mislabeled a matching boundary | Compare theories, premises, and operator bases and require a separately declared matching condition | discharged at implementation level by conditional zero-matching and general-boundary counterexamples; claim review remains |
 | Bare and finite counterterm coordinates may be erased | Expose both and show load-bearing mutations with the same loop slope | discharged by finite-counterterm and boundary-coordinate APIs; campaign replay remains |
-| Group and matter weights may be called physical sectors | Preserve conditional multiplicities, charge squares, traces, and generator/coupling rescaling | open |
+| Group and matter weights may be called physical sectors | Preserve conditional multiplicities, charge squares, traces, and generator/coupling rescaling | discharged by conditional exact-weight APIs, claim scope, and consumer audit |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D2 has no NumPy surface |
-| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
+| Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | staged and graph-replayed; durable-memory and one integrated promotion gate remain |
 
 ## Review and Promotion Plan
 
