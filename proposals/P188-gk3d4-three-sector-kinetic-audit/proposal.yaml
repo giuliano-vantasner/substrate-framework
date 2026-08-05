@@ -1,0 +1,77 @@
+id: P188
+base_release: v0.139.0
+base_commit: 4f4a775fed68ce2c561fb7c86412fadab28077a0
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK3D4]
+question: >-
+  Does hash-pinned GK3D4 derive one common four-dimensional induced kinetic
+  construction for U(1), SU(2), and SU(3), including a physical 3/8 weak-angle
+  relation, or does it compose convention-specific generator traces with an
+  Abelian loop while leaving matter representations, spectator multiplicities,
+  sector couplings, affine matching data, and physical identifications supplied?
+invariants:
+  - C-PGA-001 supplies a faithful local su3 direct-sum su2 direct-sum u1 matrix representation but no matter representation, action, kinetic term, or coupling relation.
+  - C-DIM-009 proves that a trace factor is dimensionless but also that generator rescaling changes the trace quadratically and the coupling inversely, preserving only the product g squared times the trace index.
+  - C-VAC-002 supplies a conditional charged-Dirac D4 one-loop form factor and convention-invariant group weight while leaving the representation, group, finite matching, total kinetic coefficient, and physical sector free.
+  - C-VAC-003 supplies an affine one-connection kinetic family whose scalar and Dirac invariant weights, reference value, matching scales, group, and matter content remain independent inputs.
+  - C-VAC-004 preserves the affine reference coordinate and all scale identifications even after one-loop scale matching.
+  - C-NVP-001 and C-NVP-002 are exact complex-scalar D2 representation-weighted loop theorems and do not lift themselves to D4.
+  - C-REP-001 makes a trace angle equal a coupling angle only under a separately supplied common inverse-trace coefficient law and preserves positive Abelian normalization covariance.
+  - C-RGE-005 accepts factorwise Dynkin indices with spectator degeneracies as supplied product-matter data and derives neither field content, matching, common normalization, nor unification.
+  - Distinct simple or Abelian factors may have independent matter weights, couplings, local and finite counterterms, and matching boundaries unless an accepted action or symmetry relates them.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-GAU-001
+  - C-LIE-001
+  - C-REP-001
+  - C-REP-002
+  - C-PGA-001
+  - C-DIM-009
+  - C-VAC-001
+  - C-VAC-002
+  - C-VAC-003
+  - C-VAC-004
+  - C-NVP-001
+  - C-NVP-002
+  - C-RGE-005
+  - exact finite-matrix trace, tensor-product, direct-sum, Gram-matrix, affine-family, dimension, and rank algebra
+  - separately supplied exact product representations, charges, multiplicities, statistics, sector couplings, regulator and matching data as conditional inputs
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - GK3D4 and its hash-pinned dependencies and reverse consumers as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Reproduce GK3D4 exactly and audit every generator, trace, dimensional predicate, sector transfer, coupling formula, assertion, and headline conclusion edge.
+  - id: B
+    description: Compose the accepted D4 affine kinetic theorem separately for each declared gauge factor while retaining factor-specific invariant matter weights, reference values, couplings, and matching scales.
+  - id: C
+    description: Derive an exact product-representation kinetic Gram ledger whose entries are supplied matter-weighted generator traces, with block diagonality and cross-factor mixing decided by the actual representation rather than factor labels.
+  - id: D
+    description: Test the claimed universal construction against different representations, spectator multiplicities, statistics, masses, charges, regulators, and affine boundary data that preserve the named local factor algebra.
+  - id: E
+    description: Compare the source 3/8 coupling-angle interpretation with C-REP-001's conditional common inverse-trace law and Abelian normalization covariance.
+  - id: F
+    description: Determine whether Candidates B and C add a distinct reusable theorem or are already complete compositions of C-PGA-001, C-REP-001, C-VAC-002 through C-VAC-004, and C-RGE-005.
+  - id: G
+    description: Close source, claim, dependency, consumer, disposition, queue, release, documentation, memory, compatibility, and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted_loop_action_representation_and_product_factor_dependency_closure
+  - exact_generator_normalization_and_coupling_covariance
+  - matter_statistics_multiplicity_charge_and_spectator_degeneracy_provenance
+  - factorwise_affine_boundaries_and_matching_scales_retained
+  - block_diagonality_or_cross_mixing_derived_from_the_actual_trace_metric
+  - correct_zero_charge_trivial_representation_decoupling_and_rescaling_limits
+  - common_coefficient_and_weak_angle_premises_kept_distinct_from_trace_algebra
+  - parameter_assumption_import_and_dependency_economy
+  - independent_rederivation_and_load_bearing_mutation_sensitivity
+  - novelty_source_consumer_and_governance_closure
+claims_proposed: [C-VAC-005]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line GK3D4 body audit; the generated queue
+  already exposes equal fundamental SU(2) and SU(3) trace indices, an Abelian
+  squared-charge index, the claim that a dimensionless trace cannot alter the
+  D-dependent loop machinery, a three-sector kinetic conclusion, an upgraded
+  3/8 relation, eleven static checks, and one assertion, so no fresh source-
+  result blinding is claimed
+status: draft
+revision: 0001

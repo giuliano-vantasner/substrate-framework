@@ -1,0 +1,25 @@
+campaign: P188
+base_release: v0.139.0
+base_commit: 4f4a775fed68ce2c561fb7c86412fadab28077a0
+release_manifest_sha256: 0617c10955594b30c6d0d122476e360494d9e1b065efdf4f5c67728583388bb8
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: GK3D4
+phase: phase-41
+path: merged-framework/bridges/phase-41/bridge_GK3D4_three_sectors_one_construction.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D4_three_sectors_one_construction.py
+sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35
+git_blob: 1f47ed96a7bc7bbaf41ab3f3bad72e2e25eb174c
+size_bytes: 16903
+history_commits: [7222eed]
+target_path_worktree_status: clean
+queue_disposition: pending_adjudication
+queue_accepted_claims: []
+queue_predicates:
+  static_check_calls: 11
+  literal_check_calls: 11
+  dynamic_check_calls: 0
+  assert_statements: 1
+  terminal_tally_literal_present: true
+candidate_dependencies: [EM5, GK1, GK3D1, GK3D2, GK3D3, QCD1, SM3, WM1, WM2, YM1]
+source_body_opened: false
+comparator_values_opened: false

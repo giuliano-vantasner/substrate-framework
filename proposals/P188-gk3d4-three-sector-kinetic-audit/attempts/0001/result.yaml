@@ -1,0 +1,24 @@
+attempt: 0001
+campaign: P188
+candidate: source_blind_contract_freeze
+status: passed
+started_at: '2026-08-11T14:05:00Z'
+finished_at: '2026-08-11T14:11:00Z'
+base_release: v0.139.0
+base_commit: 4f4a775fed68ce2c561fb7c86412fadab28077a0
+source_sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35
+source_body_opened: false
+candidate_count: 7
+claims_reserved: [C-VAC-005]
+claim_collision_search: none_found_in_registry_campaigns_proposals_memory_source_or_tests
+compatibility_policy: version_only_stops_do_not_reject_scientific_candidates
+validation:
+  repository_claims: 179
+  repository_accepted_claims: 179
+  repository_active_proposals: 1
+  migration_pending: 37
+  memory_files_checked: 1
+  yaml_files_parsed: 3
+  diff_check: passed
+scientific_threshold_changed: false
+next_attempt: open_and_reproduce_the_hash_pinned_source_then_audit_predicate_dataflow
