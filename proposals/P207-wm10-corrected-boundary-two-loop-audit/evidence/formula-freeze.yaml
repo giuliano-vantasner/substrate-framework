@@ -1,0 +1,53 @@
+campaign: P207
+source_unit: WM10
+problem:
+  inverse_couplings: a_i_equals_4_pi_over_g_i_squared
+  downward_coordinate: u_equals_log_Lambda_over_mu
+  rhs: da_i_du_equals_b_i_over_2_pi_plus_sum_j_B_ij_over_8_pi_squared_a_j
+  high_boundary: a_0_equals_A_times_S
+  unknowns: [positive_boundary_amplitude_A, positive_log_span_T]
+  low_constraints:
+    matrix: [[0, 0, 1], [5/3, 1, 0]]
+    targets: [500/59, 1279/10]
+  readout: a_2_over_1279_over_10
+  reference_scale: 227969/2500
+accepted_coefficient_ledger:
+  one_loop: [41/10, -19/6, -7]
+  gauge_only_two_loop:
+    - [199/50, 27/10, 44/5]
+    - [9/10, 35/6, 12]
+    - [11/10, 9/2, -26]
+boundary_paths:
+  equal_boundary: [1, 1, 1]
+  supplied_WM7_boundary: [41/10, 25/6, 4]
+containment_obligations:
+  - matrix_scale_zero_with_supplied_WM7_boundary_matches_WM8_exact_solution
+  - matrix_scale_one_with_equal_boundary_matches_C_RGE_006_WM6_specialization
+  - matrix_scale_one_with_supplied_WM7_boundary_is_the_combined_conditional_solution
+  - canonical_inverse_and_independent_direct_coupling_routes_agree
+  - all_final_and_sampled_inverse_couplings_remain_positive
+  - low_constraint_residuals_pass_the_predeclared_tolerance
+  - DOP853_tolerance_refinement_and_Radau_agree
+mutations:
+  - zero_the_two_loop_matrix
+  - restore_equal_boundary_ratios
+  - transpose_or_sign_flip_the_two_loop_matrix
+  - change_one_boundary_ratio
+  - change_one_supplied_low_target
+  - add_an_independent_matching_offset_countermodel
+  - replace_the_measured_comparator_without_changing_the_solve
+interaction_ledger:
+  baseline: equal_boundary_zero_matrix
+  boundary_axis: supplied_boundary_zero_matrix
+  matrix_axis: equal_boundary_full_matrix
+  combined: supplied_boundary_full_matrix
+  cross_term: combined_minus_boundary_axis_minus_matrix_axis_plus_baseline
+  interpretation: nonlinear_interaction_not_two_additive_independent_physical_corrections
+physical_ceiling:
+  - supplied_boundary_scalar_and_generation_counts
+  - supplied_low_coordinates_reference_scale_normalization_and_matching_zero
+  - gauge_only_matrix_omits_same_order_Yukawa_terms
+  - no_threshold_matching_scheme_uncertainty_or_global_perturbativity_closure
+  - no_ab_initio_weak_angle_prediction_unification_or_Standard_Model_identity
+  - no_substrate_mechanism
+scientific_version_failures: 0

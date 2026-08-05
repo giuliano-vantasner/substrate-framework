@@ -1,0 +1,10 @@
+attempt: 0002
+campaign: P207
+timestamp_utc: '2026-08-05T23:02:00Z'
+kind: prefreeze_memory_contract_validation
+command: memory_validate_framework_memory
+exit_status: 1
+failure: Debt_Ledger_section_began_directly_with_a_table_instead_of_plain_prose
+scientific_candidate_affected: false
+repair: add_plain_prose_disclosure_before_the_unchanged_debt_table
+continuation: rerun_repository_memory_yaml_and_diff_freeze_gate_then_commit

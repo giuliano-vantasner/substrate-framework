@@ -1,0 +1,63 @@
+id: P207
+base_release: v0.150.0
+base_commit: baa6c0e
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WM10]
+question: >-
+  What conditional gauge-only two-loop inverse solution follows when
+  C-RGE-006 is specialized to WM7's supplied nonconcurrent boundary ratios,
+  and does WM10 add a new theorem or instead compose the already accepted
+  arbitrary-boundary solver with supplied field content and low coordinates?
+invariants:
+  - C-RGE-006 already accepts arbitrary positive three-factor boundary ratios and the C-RGE-005 one-loop vector and gauge-only two-loop matrix.
+  - C-RGE-006 types the result as conditional inverse inference from supplied boundary ratios low constraints reference scale readout and normalization.
+  - C-RGE-005 excludes same-order Yukawa terms thresholds matching scheme conversion physical field-content derivation and Standard-Model identity.
+  - WM7 supplies the boundary family and derives neither one physical scalar doublet nor three observed generations.
+  - WM8 supplies exact one-loop arbitrary-boundary composition and cannot make its scalar count physically selected by comparator proximity.
+  - WM9 retains shared-amplitude overlaps but does not derive scalar or generation multiplicity.
+  - Equal-boundary and zero-two-loop limits are containment tests not independent physical validation.
+  - Numerical agreement with the exposed weak-angle comparator cannot select the boundary coefficient ledger or interpretation.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events are never scientific failures.
+allowed_imports:
+  - C-RGE-004 C-RGE-005 and C-RGE-006 for supplied-coordinate inverse running exact one-loop containment and gauge-only two-loop numerical evidence
+  - C-REP-001 C-REP-003 C-MIX-002 and C-VAC-003 only at their trace table phase-count and affine-boundary ceilings
+  - terminal WM7 WM8 and WM9 mappings at v0.150.0 without rejected scalar-count or generation authority
+  - SciPy through the canonical gauge_running and numerics APIs with explicit status tolerances positivity residual and refinement records
+  - raw direct-coupling integration as an independent coordinate route
+  - hash-pinned WM10 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Treat WM10 as a direct arbitrary-boundary specialization of accepted C-RGE-006 with no new scientific claim.
+  - id: B
+    description: Promote a distinct corrected-boundary two-loop theorem only if C-RGE-006 does not already quantify over its boundary ratios.
+  - id: C
+    description: Reproduce the exact zero-matrix WM8 axis as a containment limit of the same problem.
+  - id: D
+    description: Reproduce the equal-boundary WM6 axis as a second containment limit without calling it independent physical validation.
+  - id: E
+    description: Compute the combined supplied-boundary gauge-only two-loop inverse solution with status residual positivity refinement and direct-coordinate evidence.
+  - id: F
+    description: Separate nonlinear boundary-matrix interaction and omitted same-order terms from additive independent-correction rhetoric.
+  - id: G
+    description: Select no new API if gauge_running already owns arbitrary positive boundary ratios and matrix scale.
+  - id: H
+    description: Give WM10 an individual terminal disposition and replay GC1 through GC6 without reverse authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact containment of zero-matrix and equal-boundary limits
+  - solver status residual positivity tolerance and method convergence
+  - independent direct-coupling coordinate agreement
+  - novelty beyond C-RGE-006's arbitrary-boundary quantifiers
+  - input boundary coefficient and normalization provenance
+  - nonlinear interaction and omitted-term accounting
+  - comparator absence from solve and prohibition on proximity selection
+  - dependency and reverse-consumer closure
+claims_proposed: [C-RGE-008]
+comparators_blinded_until: >-
+  The generated queue exposes WM10's seven check sites, one assertion, the
+  one-loop and equal-boundary containment headlines, and the truncated combined
+  readout 0.219207 with scale 1.62e14. Detailed source equations predicates
+  tolerances residuals mutations and native output remain unopened until this
+  contract formula freeze provenance memory validation and clean freeze commit
+  exist. Exposed values are barred from candidate selection and pass thresholds.
+status: active

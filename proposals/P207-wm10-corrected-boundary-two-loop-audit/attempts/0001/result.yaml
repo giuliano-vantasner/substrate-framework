@@ -1,0 +1,14 @@
+attempt: 0001
+campaign: P207
+timestamp_utc: '2026-08-05T23:00:00Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: baa6c0e65cda40374f133cdbff892dc7e5bb5a80
+base_release: v0.150.0
+source_unit: WM10
+candidates: [A, B, C, D, E, F, G, H]
+source_body_inspected: false
+native_source_executed: false
+exposed_queue_values: [0.216222, 0.21064, 0.219207, 1.62e14]
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction
