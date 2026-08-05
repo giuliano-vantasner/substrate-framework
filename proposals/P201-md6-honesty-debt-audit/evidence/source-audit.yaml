@@ -1,0 +1,51 @@
+campaign: P201
+source_unit: MD6
+native_execution: {checks: 40, exit_status: 0}
+exact_finite_scanner_surface:
+  scope: five_fixed_sibling_paths_MD1_through_MD5_read_without_internal_hash_checks
+  valued_matcher: untagged_ast_Assign_single_Name_target_direct_int_or_float_Constant_only
+  literal_matcher: casefolded_substring_search_after_removing_only_the_top_level_module_docstring_and_full_line_comments
+  self_tests: six_selected_positive_or_clean_fixtures
+  real_source_results: fifteen_empty_selected_match_lists
+  tag_checks: two_substring_guards_on_MD4_text
+exact_conditional_algebra:
+  - declared_d3_one_branch_continuum_shell_density_integrates_to_V_over_a_cubed_at_the_supplied_target_cutoff
+  - multiplying_that_integral_by_a_separately_inserted_three_gives_3V_over_a_cubed
+  - substituting_A_squared_equals_S_over_M_cancels_M_from_n_minus_M_A_squared
+  - fixed_positive_weight_partial_derivative_has_negative_sign_for_all_positive_rho
+source_oracle_gaps:
+  assignment:
+    misses: [AnnAssign, NamedExpr, destructuring_targets, attributes, subscripts, unary_numeric_constants, calls, constructors, aliases, imports, configuration, tables, closures]
+    consequence: empty_selected_match_list_is_not_parameter_independence_or_closed_data_flow
+  literals:
+    misses: [numeric_comparators_without_selected_words, aliases, constructed_strings, imported_data, configuration, dynamic_loads, equivalent_physical_inputs]
+    false_positives: [nested_docstrings, string_data, benign_larger_identifiers, negated_prose]
+    consequence: empty_selected_match_list_is_not_empirical_independence_or_pass_condition_provenance
+  tags:
+    gap: prefix_exemption_and_substring_presence_do_not_trace_uses_or_non_load_bearing_status
+    actual_MD4_use: COMPARATOR_WN6_log10_w_enters_a_pass_condition_and_ILLUSTRATION_beta_sq_enters_reported_thresholds
+  scope:
+    gap: files_are_not_hash_checked_at_runtime_MD6_is_not_self_scanned_and_import_or_dynamic_dependency_closure_is_not_computed
+  M_debt:
+    gap: accepted_C_DOS_001_keeps_dimension_branch_count_volume_cutoff_and_target_supplied_and_does_not_derive_a_microscopic_cell_count
+    cancellation_ceiling: substitution_A_squared_equals_S_over_M_is_conditional_reparameterization_not_a_participation_or_material_derivation
+  g_debt:
+    gap: the_d3_density_is_a_conditional_output_only_after_declaring_dimension_isotropy_branch_count_measure_dispersion_volume_and_cutoff
+  rho_debt:
+    gap: the_source_differentiates_at_fixed_w_and_B_gamma_magnitude_retains_nonzero_rho_dependence
+    correction: C_BRN_002_requires_the_total_derivative_control_w_plus_N_w_prime
+  mode_and_band:
+    gap: positive_integer_S_has_modes_S_minus_one_and_S_and_PN2_supplies_floor_with_remainder_not_exact_omega_equals_Omega_over_S
+  ledger_empty:
+    gap: the_named_check_condition_is_literal_True
+  no_new_residual:
+    gap: the_check_repeats_only_gap_independence_M_cancellation_and_rho_symbolhood_not_every_Phase_38_quantity
+unaccepted_headlines:
+  - every_named_scalar_is_semantically_unvalued
+  - tagged_constants_are_proven_non_load_bearing
+  - data_gate_is_closed_under_import_and_pass_condition_data_flow
+  - d3_and_three_branches_are_derived_from_the_accepted_medium
+  - M_g_of_omega_and_rho_physical_debts_are_discharged
+  - unique_n_star_or_exact_omega_ph_star
+  - source_debt_ledger_is_empty
+scientific_version_failures: 0

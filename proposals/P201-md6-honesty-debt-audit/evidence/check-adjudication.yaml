@@ -1,0 +1,51 @@
+campaign: P201
+source_unit: MD6
+runtime_predicates: 40
+groups:
+  self_tests:
+    count: 6
+    verdict: exact_selected_fixtures_only
+    ceiling: they_do_not_establish_completeness_specificity_or_data_flow
+  five_file_scans:
+    count: 15
+    verdict: exact_empty_results_under_the_declared_narrow_matchers
+    ceiling: no_semantic_parameter_empirical_external_or_import_closure
+  tagged_constant_guards:
+    count: 2
+    verdict: selected_substrings_exist
+    ceiling: not_exactly_two_constants_and_no_use_or_load_bearing_analysis
+  M_identities:
+    count: 4
+    verdict: exact_conditional_continuum_and_substitution_algebra
+    ceiling: supplied_d3_branch_count_target_cutoff_and_A_squared_definition
+  density_identities:
+    count: 2
+    verdict: exact_conditional_d3_Jacobian_and_gap_independent_integral
+    ceiling: no_accepted_material_spectrum_dimension_or_microscopic_cutoff
+  rho_free_inserted_expressions:
+    count: 4
+    verdict: exact_free_symbol_results_for_inserted_expressions
+    ceiling: one_expression_has_an_integer_mode_tie_and_none_derives_material_inputs
+  fixed_weight_derivative:
+    count: 1
+    verdict: exact_C_BRN_001_partial_derivative
+    ceiling: C_BRN_002_total_derivative_depends_on_w_plus_N_w_prime
+  derivative_samples:
+    count: 3
+    verdict: redundant_true_examples_of_the_fixed_weight_partial
+    ceiling: no_additional_universal_or_physical_evidence
+  rho_symbolhood:
+    count: 1
+    verdict: exact_SymPy_assumption_property
+    ceiling: does_not_prove_rho_is_absent_from_predictions_or_source_data_flow
+  ledger_empty:
+    count: 1
+    verdict: unconditional_validation_theater
+    condition: literal_True
+  no_new_residual:
+    count: 1
+    verdict: three_selected_identities_only
+    ceiling: not_an_inventory_or_closure_proof
+accepted_by_native_execution: 40
+accepted_as_semantic_headline_oracles: 0
+scientific_version_failures: 0

@@ -1,0 +1,17 @@
+attempt: 0003
+campaign: P201
+candidate: finite_ledger_authority_recomputation_nonduplication_and_terminal_qualification
+status: passed
+selected_candidates: [B, C, E, G]
+reproduction_only: [A]
+rejected_candidates: [D, F]
+claims_proposed: []
+canonical_API_delta: none
+recommended_source_disposition: qualified
+recommended_accepted_mapping: []
+selection_basis:
+  - exact_finite_scanner_surface_survives_at_pinned_scope
+  - semantic_debt_headlines_conflict_with_explicit_accepted_claim_ceilings
+  - P120_P195_and_source_audit_own_all_reusable_methods
+  - no_foundational_inconsistency_exists_independently_of_MD6
+next_attempt: implement_primary_and_independent_exact_mutation_routes

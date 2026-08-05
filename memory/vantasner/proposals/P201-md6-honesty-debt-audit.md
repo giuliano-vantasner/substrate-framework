@@ -95,6 +95,15 @@ and debt before source execution. Later attempts remain append-only and
 continue after representation, implementation, candidate, target, or
 foundation failures without weakening the terminal objective.
 
+Attempt 0002 reproduces all 40 native predicates with exit zero and no NumPy
+compatibility surface. It retains the narrow finite matcher results and three
+conditional algebraic surfaces while exposing the unconditional ledger-empty
+check, incomplete no-residual oracle, untraced tags, narrow assignment and
+literal matchers, undeclared dimensional lift, integer mode tie, fixed-weight
+derivative, and retained rho dependence. Attempt 0003 selects the finite ledger
+and accepted-authority recomputation, rejects a duplicate API and foundation
+revision, and predicts terminal qualification with no accepted claim mapping.
+
 ## Debt Ledger
 
 The initial ledger stays open until concrete evidence discharges each row.

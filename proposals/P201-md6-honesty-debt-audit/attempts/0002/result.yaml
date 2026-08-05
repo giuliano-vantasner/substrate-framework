@@ -1,0 +1,20 @@
+attempt: 0002
+campaign: P201
+candidate: native_reproduction_predicate_inventory_and_semantic_gap_audit
+status: passed
+source_execution: {checks: 40, exit_status: 0, wall_seconds: 0.70, max_rss_kib: 54424}
+source_AST: {check_sites: 23, literal_sites: 18, dynamic_sites: 5, assertions: 0}
+compatibility: {legacy_references: 0, current_references: 0, alias_used: false}
+exact_survivors:
+  - narrow_finite_scanner_and_fixture_results
+  - conditional_d3_continuum_Jacobian_and_integral
+  - conditional_M_cancellation_after_A_squared_equals_S_over_M
+  - fixed_weight_C_BRN_001_population_partial_derivative
+headline_failures:
+  - assignment_literal_tag_import_and_data_flow_completeness
+  - accepted_d3_three_branch_and_microscopic_cell_derivation
+  - physical_M_density_and_rho_debt_discharge
+  - unique_integer_mode_and_exact_omega_ph_star
+  - unconditional_ledger_empty_and_incomplete_no_residual_oracles
+scientific_version_failures: 0
+next_attempt: select_candidates_and_build_mutation_sensitive_primary_and_independent_routes
