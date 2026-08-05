@@ -5,7 +5,7 @@ canonical_consumers:
   module: src/substrate_framework/mode_counting.py
   exports: src/substrate_framework/__init__.py
   tests: {path: tests/test_mode_counting.py, passed: 17}
-  primary: {path: proposals/P196-md1-mode-counting-audit/verify.py, checks: 40}
+  primary: {path: campaigns/P196-md1-mode-counting-audit/verify.py, checks: 40}
 direct_source_consumers:
   MD2:
     disposition: pending
@@ -30,4 +30,3 @@ canonical_existing_signatures_changed: []
 canonical_existing_values_changed: []
 scientific_threshold_changed: true
 threshold_change: density_of_states_added_with_stricter_continuum_branch_cutoff_rank_and_participation_typing
-

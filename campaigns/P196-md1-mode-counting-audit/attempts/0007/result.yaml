@@ -1,0 +1,40 @@
+attempt: 0007
+campaign: P196
+candidate: governance_promotion_and_integrated_gate
+status: passed
+started_at: '2026-08-11T21:10:00Z'
+target_release: v0.145.0
+claim: C-DOS-001
+source_disposition: {MD1: qualified}
+accepted_mappings: [C-MED-003, C-SG-018, C-DOS-001]
+generated_state:
+  claims: 185
+  accepted_claims: 185
+  proposals: 0
+  memory_files: 802
+  migration_units: 218
+  migration_pending: 28
+  migration_partial: 0
+  migration_qualified: 177
+targeted_boundary:
+  native_checks: 27
+  primary_checks: 40
+  independent_checks: 28
+  graph_checks: 16
+  focused_tests: 17
+  exit_statuses_all_zero: true
+integrated_gate:
+  command: scripts/validate.sh
+  tests_passed: 1734
+  pytest_seconds: 172.52
+  wall_seconds: 186.03
+  maximum_resident_kib: 215092
+  exit_status: 0
+  terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+finished_at: '2026-08-11T21:14:00Z'
+release_sha256: 0b549525847c57f4e246a2bd56331389ce6a8352468823b126b7f16e27b3a329
+registry_sha256: 53b1713ee080878cc8f7b6d57ddff2f204e4d0e7312dbd00a36a24ca4a074d2f
+source_claims_sha256: 2e7593ff680e7bccc995a45037b8f0c52001ef3aee116897da1486d2b4104365
+compatibility_event: none
+scientific_threshold_changed: true
+debt: []

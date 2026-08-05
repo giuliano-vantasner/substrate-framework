@@ -7237,3 +7237,63 @@ units:
       a legacy NumPy compatibility alias, WN7 has no reverse source consumer,
       and no version event affects a scientific verdict. The single integrated
       boundary validates 797 memory files and passes all 1,717 tests.
+  MD1:
+    disposition: qualified
+    accepted_claims:
+      - C-MED-003
+      - C-SG-018
+      - C-DOS-001
+    qualification: >-
+      C-MED-003 and C-SG-018 retain their accepted one-spatial-coordinate
+      scalar medium and dispersion within that explicit domain. C-DOS-001
+      separately supplies the exact d-dimensional isotropic continuum density
+      of states, integrated phase-space count, and target-matched cutoff for
+      independently declared spatial dimension d and branch degeneracy b.
+      MD1's d=3 per-branch density and its b=3, N=3*V/a^3 cutoff algebra
+      survive only as conditional corollaries after those branch and target
+      inputs are supplied. Spatial dimension does not determine polarization
+      count. A continuum k-ball volume is not the exact number or rank of
+      modes in a finite periodic lattice; V/a^3 is not a derived integer cell
+      count without topology, divisibility, degrees of freedom, constraints,
+      and boundary data; and a target-matched cutoff is not a microscopic
+      Brillouin-zone boundary. Gap independence of the integrated continuum
+      count does not establish participation, coupling, state, channel, rate,
+      material, or substrate conclusions. MD1's WN6 premise check repeats
+      that ceiling and supplies no missing physical bridge.
+    evidence:
+      - campaigns/P196-md1-mode-counting-audit/reviews/source_adjudication.md
+      - campaigns/P196-md1-mode-counting-audit/reviews/C-DOS-001-claim-review.md
+      - campaigns/P196-md1-mode-counting-audit/reviews/MD1-disposition-review.md
+      - campaigns/P196-md1-mode-counting-audit/reviews/impact_analysis.md
+      - campaigns/P196-md1-mode-counting-audit/evidence/source-reproduction.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/consumer-reproduction.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/compatibility-audit.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/source-audit.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/check-adjudication.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/formula-freeze.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/input-provenance.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/dependency-audit.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/consumer-audit.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/candidate-comparison.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/implementation-audit.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P196-md1-mode-counting-audit/evidence/primary-provenance.yaml
+      - campaigns/P196-md1-mode-counting-audit/verify.py
+      - campaigns/P196-md1-mode-counting-audit/reviews/independent_mode_counting_review.py
+      - campaigns/P196-md1-mode-counting-audit/reviews/replay_source_graph.py
+      - campaigns/P196-md1-mode-counting-audit/attempts/0004/result.yaml
+      - campaigns/P196-md1-mode-counting-audit/attempts/0005/result.yaml
+      - campaigns/P196-md1-mode-counting-audit/attempts/0006/result.yaml
+      - campaigns/P196-md1-mode-counting-audit/attempts/0007/result.yaml
+      - memory/vantasner/decisions/C-DOS-001-review.md
+      - memory/vantasner/decisions/MD1-qualified-review.md
+    note: >-
+      P196 closes 40 primary, 28 independent, and 16 source-graph checks. Nine
+      byte-pinned native records cover 224 predicates without duplicate native
+      execution; MD2, MD4, and MD6 remain pending reverse consumers. MD1 and
+      its graph have no NumPy quadrature compatibility surface, so no version
+      event affects a scientific verdict. The single integrated boundary is
+      recorded in attempt 0007: it validates 802 memory files and passes all
+      1,734 tests in 172.52 seconds with exit zero.

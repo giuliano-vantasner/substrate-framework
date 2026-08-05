@@ -1,0 +1,75 @@
+campaign: P196
+title: MD1 exact continuum density-of-states and mode-counting audit
+source_baseline: substrate@6d1f4e0
+source_units: [MD1]
+base_release: v0.144.0
+accepted_release: v0.145.0
+adjudicated_at: '2026-08-11T21:10:00Z'
+selected_candidates:
+  - {id: A, reason: The general-d isotropic continuum theorem is exact under a declared phase-space measure and keeps dimension distinct from branch degeneracy.}
+  - {id: C, reason: The d3 three-branch Debye specialization survives only after branch count and target count are independently supplied.}
+competing_candidates:
+  - {id: B, decision: retained_as_a_distinct_future_discrete_problem_requiring_sites_components_constraints_topology_and_boundaries}
+  - {id: D, decision: rejected_because_the_density_of_states_and_integrated_count_are_not_duplicates_of_the_scalar_dispersion_or_inverse_kernel_claims}
+  - {id: E, decision: rejected_because_no_independent_foundational_inconsistency_requires_a_dimensional_lift}
+claims:
+  - {id: C-DOS-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-MED-003, decision: unchanged_one_spatial_coordinate_scalar_medium_only}
+  - {id: C-SG-018, decision: unchanged_one_dimensional_gapped_scalar_dispersion_only}
+unpromoted_claims:
+  - {id: spatial_dimension_determines_branch_degeneracy, reason: Dimension and field or polarization multiplicity are independent supplied data.}
+  - {id: continuum_ball_volume_is_exact_finite_periodic_rank, reason: Finite rank requires explicit sites components constraints topology divisibility and boundary data.}
+  - {id: V_over_a_cubed_is_a_derived_integer_cell_count, reason: The continuum parameters do not define a cell complex or integer divisibility.}
+  - {id: target_matched_cutoff_is_a_microscopic_Brillouin_zone_boundary, reason: Matching inverts a supplied target and derives no lattice reciprocal geometry.}
+  - {id: all_counted_modes_participate_in_a_physical_process, reason: No accepted state coupling spectral weight channel or dynamics is supplied.}
+  - {id: WN6_identifies_mode_count_as_the_unique_missing_bridge, reason: WN6 explicitly rejects that interpretation and gap independence does not repair it.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_mode_counting_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-DOS-001-claim-review.md
+  source_disposition_review: reviews/MD1-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  consumer_reproduction: evidence/consumer-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  gitnexus_impact: evidence/gitnexus-impact.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+source_disposition: {MD1: qualified}
+accepted_mappings: [C-MED-003, C-SG-018, C-DOS-001]
+compatibility:
+  source_numpy_surface: no_numpy_import_and_no_trapezoidal_access
+  mutable_numpy_surface: numpy_trapezoid_only_in_numeric_mutation_probe
+  consumer_legacy_surfaces: none
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.145.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_affected_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  attempt: attempts/0007/result.yaml
+  memory_files: 802
+  tests_passed: 1734
+  pytest_seconds: 172.52
+  wall_seconds: 186.03
+  maximum_resident_kib: 215092
+  exit_status: 0
+debt: []
+status: accepted

@@ -20,9 +20,10 @@ expected_coverage:
   compatibility_aliases: 0
   version_only_scientific_failures: 0
 actual_replay:
-  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P196-md1-mode-counting-audit/reviews/replay_source_graph.py
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python campaigns/P196-md1-mode-counting-audit/reviews/replay_source_graph.py
   terminal_tally: ALL_16_CHECKS_PASS
-authority_state_before_P196_promotion:
+authority_state_after_P196_promotion:
   qualified_direct_dependencies: [D3S, MC1, MC2, QCD5, WN6]
-  pending_root: MD1
+  qualified_root: MD1
+  accepted_root_mapping: [C-MED-003, C-SG-018, C-DOS-001]
   pending_reverse_consumers: [MD2, MD4, MD6]

@@ -2,7 +2,7 @@
 description: Derive the conditional continuum density of states while separating spatial dimension branch count and finite rank
 author: vantasner
 created: '2026-08-11T20:37:00Z'
-updated: '2026-08-11T20:42:00Z'
+updated: '2026-08-11T21:14:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -10,8 +10,8 @@ tags:
 - density-of-states
 - mode-counting
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P196 MD1 Mode Counting Audit
 
@@ -141,7 +141,7 @@ artifact discharges it.
 | Debye cutoff may be called microscopic | Distinguish target matching from a Brillouin zone | discharged by target-cutoff API ceiling |
 | General-d scalar lift may import pending structure | Keep dimension and isotropy as explicit claim inputs | discharged by explicit declaration |
 | Candidate may duplicate existing claims | Complete claim and API nonduplication audit | discharged |
-| Consumers and governed records may diverge | Replay graph and synchronize queue release docs and memory | in progress; graph closed, promotion pending |
+| Consumers and governed records may diverge | Replay graph and synchronize queue release docs and memory | discharged by qualified queue, v0.145.0, generated docs and memory, and terminal graph replay |
 
 ## Done Gate
 
@@ -149,3 +149,8 @@ P196 closes only when a positive exact theorem and importable implementation
 survive sensitive primary and independent verification, MD1 is individually
 adjudicated, dependency and consumer closure pass, generated records agree,
 one integrated gate passes at promotion, and the debt ledger is empty.
+
+All conditions are discharged. C-DOS-001 is accepted in v0.145.0, MD1 is
+qualified, MD2, MD4, and MD6 remain pending, and the single integrated gate
+validated 802 memory files and passed all 1,734 tests in 172.52 seconds
+(186.03 seconds wall, 215092 KiB peak RSS, exit zero).

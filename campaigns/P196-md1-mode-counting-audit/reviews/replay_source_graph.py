@@ -14,7 +14,7 @@ from substrate_framework.verification import CheckLedger
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE_ROOT = Path("/home/dan/substrate")
-PROPOSAL = Path(__file__).resolve().parents[1]
+CAMPAIGN = Path(__file__).resolve().parents[1]
 NODES = {
     "D3S": ("merged-framework/bridges/phase-19/bridge_D3S_coulomb_from_sg.py", "a5ff9c760cf8776115881d7a2e5e86c562cdf461f61f36784ff95c6381d24d71", 13),
     "MC1": ("merged-framework/bridges/phase-27/bridge_MC1_constitutive_reduction.py", "32ed770bb753a9d1f0e67620a66fa29355e84c430c150694ffdfdb3003a8d3f3", 24),
@@ -32,9 +32,9 @@ RECORDS = {
     "MC2": ("campaigns/P096-mc2-dispersion-tail-classification/evidence/source-reproduction.yaml", "7b8b5147c13c3e2aafae2bffa5a682c766800bb556deb60ca815e8f713c2fee9"),
     "QCD5": ("campaigns/P162-qcd5-dimensional-overdetermination-audit/evidence/source-reproduction.yaml", "25e8b6e6d6656dcd92dd5f2f4c20faa319c01855ae0f87708f0abcd02d393064"),
     "WN6": ("campaigns/P194-wn6-scale-verdict-audit/evidence/source-reproduction.yaml", "42f0a42b57da16032317b9b43c16cc5564f127eae37119499c3def1007ccd5e6"),
-    "MD1": ("proposals/P196-md1-mode-counting-audit/evidence/source-reproduction.yaml", "cf0b41000bbfebb983b3b27ee4b13070944d6631d50d02e3a8e766ffa2d32236"),
+    "MD1": ("campaigns/P196-md1-mode-counting-audit/evidence/source-reproduction.yaml", "cf0b41000bbfebb983b3b27ee4b13070944d6631d50d02e3a8e766ffa2d32236"),
 }
-CONSUMER_RECORD = PROPOSAL / "evidence/consumer-reproduction.yaml"
+CONSUMER_RECORD = CAMPAIGN / "evidence/consumer-reproduction.yaml"
 CONSUMER_RECORD_SHA256 = "6d6373ef1513c6f2891450bbef96311b7566ae35cc02e5837064f9366de41335"
 DIRECT_DEPENDENCIES = {"D3S", "MC1", "MC2", "QCD5", "WN6"}
 DIRECT_CONSUMERS = {"MD2", "MD4", "MD6"}
@@ -105,13 +105,13 @@ def main() -> int:
         and all(units[unit]["disposition"] == "pending_adjudication" for unit in DIRECT_CONSUMERS),
     )
     checks.check(
-        "MD1 remains pending before claim promotion",
-        units["MD1"]["disposition"] == "pending_adjudication"
-        and units["MD1"]["accepted_claims"] == [],
+        "MD1 is qualified through the exact accepted mapping",
+        units["MD1"]["disposition"] == "qualified"
+        and units["MD1"]["accepted_claims"]
+        == ["C-MED-003", "C-SG-018", "C-DOS-001"],
     )
     return checks.finish()
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -7,18 +7,18 @@ base_release:
   id: v0.144.0
   sha256: b995916d6e708d29f0f493562741d7ba35bc202ce2784f4aaed7d1dfd5232a0a
 formula_freeze:
-  path: proposals/P196-md1-mode-counting-audit/evidence/formula-freeze.yaml
+  path: campaigns/P196-md1-mode-counting-audit/evidence/formula-freeze.yaml
   sha256: de520bd631c3e244b2e538a92dbc65f92e26301a4d927b7b8b48280423b94540
 canonical_implementation:
   path: src/substrate_framework/mode_counting.py
   sha256: 9972d5117b511441ecdecde1b63d68b55bfbcba25b68a1754e5540cd8218ceeb
 primary:
-  path: proposals/P196-md1-mode-counting-audit/verify.py
+  path: campaigns/P196-md1-mode-counting-audit/verify.py
   sha256: cc15446350854e58cd1301d0cdea09e8d0867f6061af8060a05ab55e3daf4fea
   route: canonical_API_radial_shell_Jacobian_general_d_integrals_mutations_and_discrete_counterexamples
   tally: 40
 independent:
-  path: proposals/P196-md1-mode-counting-audit/reviews/independent_mode_counting_review.py
+  path: campaigns/P196-md1-mode-counting-audit/reviews/independent_mode_counting_review.py
   sha256: 38325d941edf287a940f8679f6e3712416447605354e96f6af06ea9a59e9419d
   route: fresh_raw_SymPy_shell_change_of_variables_threshold_limits_integrals_and_rank_counterexamples
   tally: 28
@@ -26,4 +26,3 @@ independence: >-
   The independent route imports neither the primary verifier nor the canonical
   mode-counting APIs. Shared infrastructure is limited to the tally primitive.
 compatibility_event: none
-
