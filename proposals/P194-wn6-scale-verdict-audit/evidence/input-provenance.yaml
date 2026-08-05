@@ -1,0 +1,23 @@
+revision: 0001
+campaign: P194
+base_release: v0.143.0
+base_commit: 5c018f6
+release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+registry_sha256: 6c4480c078ac23b903a69806af788cc95d9046419ab21dc507ecd9ef346520ac
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py
+source_sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+source_bytes: 16504
+source_lines: 265
+source_history: [7222eed]
+source_worktree_dirty_outside_pinned_file: true
+authority_inputs: [C-SG-001, C-SG-012, C-SG-019, C-OSC-001, C-CMB-003]
+qualified_evidence_units: [PN1, PN2, WN1, WN2, WN3, WN4, WN5]
+unrelated_candidate_dependency: S1
+forward_authority_forbidden: [WN7, MD1, MD2, MD3, MD4, MD5, MD6]
+fresh_blinding_claimed: false
+provisional_identifier: C-OSC-002
+provisional_identifier_search_collision: false
+reserved_identifier_not_reused: C-SG-020
+

@@ -1,0 +1,178 @@
+---
+description: Audit WN6 and derive the exact warranted phase-scale convention and approximation domain
+author: vantasner
+created: '2026-08-05T16:18:00Z'
+updated: '2026-08-05T16:24:00Z'
+tags:
+- substrate-framework
+- campaign-proposal
+- migration-WN6
+- phase-amplitude
+- approximation-domain
+category: proposals
+confidence: exploratory
+status: active
+---
+# P194 WN6 Scale Verdict Audit
+
+## Question and Positive Deliverable
+
+P194 must determine whether WN6 derives a dependency-closed phase-intensity
+scale and determinate physical limb verdict. The positive deliverable is an
+exact, importable convention and approximation-domain result, or an exactly
+justified existing-claim composition with every warranted inequality, domain,
+missing premise, and consumer mapped. Rejecting the physical verdict alone
+does not complete the campaign.
+
+## Base Release and Provenance
+
+The accepted base is v0.143.0 at clean commit `5c018f6`, with 183 accepted
+claims. The current release SHA-256 is
+`07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da`
+and the registry SHA-256 is
+`6c4480c078ac23b903a69806af788cc95d9046419ab21dc507ecd9ef346520ac`.
+The predecessor baseline is
+`substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64`; later dirty files do not
+alter the pinned source.
+
+WN6 is pending at
+`merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py`,
+SHA-256
+`07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10`,
+16,504 bytes and 265 lines, with sole source history commit `7222eed`. PN1
+maps C-SG-019, PN2 is qualified with no accepted physical claim, and WN1
+through WN5 map their recorded accepted claims. S1 is a qualified Skyrmion
+force source and is not a phase-amplitude authority.
+
+No fresh blinding is possible. The generated migration queue and prior
+consumer audits exposed WN6's `S=A^2` threshold, PN2-band values, and hard
+single-vacuum verdict. Candidates, ordered selection criteria, convention
+mutations, and physical ceilings freeze before renewed WN6 execution or
+complete source inspection. Durable-memory search found the PN1, PN2, WN1
+through WN5, and C-SG-019 reviews; reused facts were verified in the accepted
+registry and canonical modules.
+
+## Invariants, Conventions, and Allowed Imports
+
+C-SG-001 declares a dimensionless normalized sine-Gordon field, while
+C-SG-019 owns the exact entire local cosine expansion and requires separate
+remainder control for finite approximations. C-OSC-001 defines `S=q_0^2` only
+under a separately declared one-mode Fock coordinate
+`Q=q_0(a+a_dagger)`. It does not identify `q_0` with a classical peak or RMS
+phase amplitude.
+
+Peak amplitude squared, cycle-mean square, variance, and zero-point coordinate
+intensity remain distinct unless an explicit map is declared. The full cosine
+has no hard amplitude cutoff. A small-oscillation approximation needs a
+declared observable, tolerance, and error norm. PN2's physical energy band is
+not an accepted input, and WN7 or MD1 through MD6 cannot supply backward
+authority. Mutable quadrature uses `np.trapezoid` or `trapezoid_integral`;
+immutable legacy compatibility stops never reject a scientific candidate.
+
+## Candidate Preregistration
+
+The candidate set separates source reproduction, accepted composition, a
+possibly distinct phase-scale theorem, rigorous approximation control,
+conditional threshold algebra, convention countermodels, and governed
+closure.
+
+| Candidate | Description | Framework-fit prediction | Decisive test |
+| --- | --- | --- | --- |
+| A | Reproduce and adjudicate WN6 | Mixed exact and interpretive evidence | AST, runtime, dataflow, and conclusion audit |
+| B | Existing-claim convention ledger | Existing claims may own all warranted structure | Claim, API, and theorem nonduplication |
+| C | Distinct phase-amplitude theorem | Survives only with explicit normalization and consumer need | Exact dependency closure and API novelty |
+| D | Cosine remainder certificate | Replaces a hard cutoff with a tolerance-dependent bound | Exact inequalities, limits, and mutations |
+| E | Conditional limb inequalities | Survive only after sign and `S`-map typing | Symbolic equivalences and counterdomains |
+| F | Convention and physical countermodels | Peak/RMS/Fock and external-band changes should alter the verdict | Same accepted mathematics with incompatible readings |
+| G | Governed closure | Terminal only when source, consumers, queue, memory, and debt agree | Full affected replay and disposition gate |
+
+## Selection Criteria and Blinding
+
+Selection is ordered by accepted-convention compatibility; novelty beyond
+C-SG-019 and C-OSC-001; explicit amplitude sign, RMS, and coordinate
+normalization; exact domain and approximation-error typing; assumption and
+parameter economy; limiting cases and mutation sensitivity; physical premise
+and unit provenance; and downstream governance fit. Numerical closeness to a
+source sample cannot select a candidate. Exposure is recorded rather than
+relabeled as blinding.
+
+## Proposed Claim Delta
+
+P194 provisionally reserves C-OSC-002 for a distinct phase-amplitude or
+phase-intensity theorem. Registry, campaign, module, test, and durable-memory
+search found no reservation collision. C-SG-020 is already reserved by P132
+and will not be reused. C-OSC-002 remains reserved but unpromoted if accepted
+claims already own the complete warranted object or if WN6 supplies only a
+declared convention. No challenge or supersession is proposed.
+
+Likely consumers are the cosine and bosonic-Fock APIs, WN6 and WN7, MD1
+through MD6, governance, generated records, and memory. Every forward consumer
+remains separately pending unless individually adjudicated.
+
+## Implementation and Oracle Plan
+
+The source audit will pin syntax, imports, compatibility, runtime predicates,
+phase conventions, threshold equivalences, PN2 substitutions, single-vacuum
+logic, multi-mode extensions, missing-import statements, and every headline
+edge. Lexical check sites, runtime executions, and assertions remain separate
+inventories.
+
+SymPy exact algebra is the primary oracle because all load-bearing statements
+are algebraic, trigonometric, or analytic inequalities. It will distinguish a
+signed amplitude from its magnitude, derive cycle means under explicit
+waveforms, compare `q_0^2` with peak and RMS conventions, and prove or reject
+any proposed cosine remainder bound. An independent route will reconstruct
+the results without candidate scientific APIs. No numerical rerun can serve
+as independent evidence for an exact right-hand side.
+
+Mutations change the `S` map, amplitude sign, RMS factor, cosine period,
+quadratic coefficient, error tolerance, PN2 input provenance, mode count, and
+physical premises. Countermodels retain the accepted cosine and factorial-one
+mass while changing classical waveform, Fock normalization, external scale,
+or approximation tolerance. Candidate C or D earns an API only if
+nonduplication and consumer review find a coherent reusable surface.
+
+## Attempts and Continuation
+
+Attempt 0001 freezes the clean v0.143.0 base, source identity, unavoidable
+exposure, seven candidates, ordered criteria, provisional C-OSC-002, exact
+oracle hierarchy, compatibility rule, and debt before renewed WN6 execution or
+complete inspection. Failures remain append-only and trigger a materially
+different repair or candidate.
+
+## Debt Ledger
+
+The P194 ledger tracks source predicates, amplitude and intensity conventions,
+approximation domains, physical inputs, accepted overlap, compatibility,
+dependencies, consumers, and governed state.
+
+| Debt | Discharge condition | Status |
+| --- | --- | --- |
+| WN6 was exposed before P194 | Record exposure and claim no fresh blinding | discharged |
+| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | open |
+| Classical peak, RMS, variance, and Fock intensity may be conflated | Derive and type every map and counterexample | open |
+| A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | open |
+| PN2 physical band may be imported without authority | Trace units, state provenance, and accepted ceiling | open |
+| Conditional threshold algebra may omit a sign domain | Derive exact equivalences and counterdomains | open |
+| A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | open |
+| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | open |
+| Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
+| Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
+
+## Review and Promotion Plan
+
+Primary exact verification and an independent rederivation will separately
+review each serious claim. Claim-level review will decide whether C-OSC-002 is
+accepted or remains reserved, whether reusable logic belongs in an importable
+module, and which WN6 subclaims map accepted authority. Dependency, consumer,
+compatibility, source-graph, mutation, and nonduplication evidence must exist
+before disposition. A mixed source maps to `qualified`; rejected physical
+interpretations remain explicit. Canonical docs and memory are generated or
+synchronized only after claim review.
+
+## Done Gate
+
+P194 closes only when the positive convention/domain object, source
+adjudication, every affected consumer, governed records, one terminal
+integrated gate, and the debt ledger all satisfy AGENTS.md. Any failed route is
+preserved and followed by the next candidate.

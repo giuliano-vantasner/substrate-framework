@@ -1,0 +1,17 @@
+attempt: 0001
+campaign: P194
+candidate: preregistered_phase_scale_convention_and_domain_audit
+status: passed_freeze
+started_at: '2026-08-05T16:18:00Z'
+finished_at: '2026-08-05T16:24:00Z'
+base_release: v0.143.0
+base_commit: 5c018f6
+source_sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+release_sha256: 07040ba6cc29e6087c954cfbad108da100b2d53d05ba8982bdf0ba77435f45da
+registry_sha256: 6c4480c078ac23b903a69806af788cc95d9046419ab21dc507ecd9ef346520ac
+exposure: prior_generated_queue_and_consumer_audits
+candidates: [A, B, C, D, E, F, G]
+provisional_claim: C-OSC-002
+scientific_threshold_changed: false
+next_attempt: validate_freeze_then_reproduce_and_audit_hash_pinned_WN6
+
