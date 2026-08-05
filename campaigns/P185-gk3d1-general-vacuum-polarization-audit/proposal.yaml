@@ -1,0 +1,72 @@
+id: P185
+base_release: v0.136.0
+base_commit: 75c10d10a80e89bfd423c46cccc1b9bba4b56375
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GK3D1]
+question: >-
+  Does hash-pinned GK3D1 derive one convention-complete charged-Dirac one-loop
+  vacuum-polarization master whose finite D=2 limit and regulated D=4 Laurent,
+  subtraction, logarithmic-slope, tensor, trace, analytic-continuation, and
+  group-factor specializations are exact, or does it mix an imposed transverse
+  ansatz, discontinuous Clifford dimension, scalar and fermion conventions,
+  unrenormalized poles, scheme-dependent constants, or source ontology into an
+  induced physical four-dimensional gauge conclusion?
+invariants:
+  - C-DIM-009 fixes gauge-field and projector-coefficient mass dimensions but explicitly derives no loop determinant, numerator, regulator, subtraction, counterterm, logarithm, or preferred dimension.
+  - C-VAC-001 is a massive complex-scalar Euclidean D=2 bubble-plus-seagull theorem; its scalar numerator, determinant sign, seagull, massless infrared behavior, and local coefficient cannot be reused as a charged-Dirac result.
+  - C-NVP-001/002 are likewise complex-scalar D=2 representation theorems and grant no general-dimensional fermion loop, four-dimensional coefficient, or physical SU2/SU3 sector.
+  - C-MAX-001 imports a Maxwell kinetic coefficient and derives its classical equations; a loop correction remains additive to bare and counterterm coefficients and cannot erase their matching freedom.
+  - A transverse tensor written by ansatz is not a Ward-identity derivation; the regulated loop numerator, momentum-shift permission, contact terms if present, and contraction must close independently.
+  - Dimensional regularization analytically continues integration dimension, whereas the spinor trace convention near an integer dimension must be declared separately; floor(D/2) is not analytic in D.
+  - A D=4 pole and subtraction-scale logarithm require a declared regulator and renormalization scheme; only appropriately defined residues or scale derivatives can be scheme-independent.
+  - Minkowski and Euclidean kernels, metric signs, i0 prescriptions, branch thresholds, projector coefficients, and transverse scalar form factors remain separately typed.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-GAU-001
+  - C-DIM-009
+  - C-MAX-001
+  - C-VAC-001
+  - C-NVP-001
+  - C-NVP-002
+  - exact finite Clifford traces and gamma-matrix identities after the integer-dimensional representation convention is declared
+  - a separately declared free charged-Dirac Euclidean or Minkowski action, functional determinant, loop order, regulator, and quadratic-effective-action convention as conditional model inputs rather than accepted physical matter
+  - Feynman parameterization, dimensional Gaussian integrals, Gamma-function identities, Laurent series, and standard complex analysis with domains and branches explicit
+  - SymPy exact algebra and arbitrary-precision numerical quadrature used only as independent checks after exact formulas freeze
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - GK3D1 and its hash-pinned dependency and reverse-consumer nodes as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Reproduce GK3D1 exactly and audit every declared action, tensor, trace convention, integral, limit, series, predicate, assertion, and conclusion against the object actually computed.
+  - id: B
+    description: Derive a conditional general-dimensional charged-Dirac vacuum-polarization kernel from the declared loop numerator and regulator, with the Ward identity and projector/form-factor dictionary obtained rather than imposed.
+  - id: C
+    description: Extract the exact finite D=2 fermionic specialization and compare its limits and statistics against C-VAC-001 without mixing scalar and Dirac determinants.
+  - id: D
+    description: Derive the D=4-epsilon Laurent series, local counterterm freedom, declared subtraction-scheme finite kernel, and universal scale derivative while keeping the total kinetic normalization unselected.
+  - id: E
+    description: Compose a representation-trace factor only after generator and coupling normalization is explicit, without promoting physical U1, SU2, SU3, matter, dimensional lift, or substrate ontology.
+  - id: F
+    description: Close claim, source, dependency, future-consumer, disposition, queue, release, documentation, memory, and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - declared_quantum_action_statistics_loop_and_effective_action_conventions
+  - Ward_identity_derived_from_the_regulated_integrand_not_projector_ansatz
+  - exact_projector_coefficient_versus_transverse_form_factor_typing_and_dimensions
+  - analytic_D_continuation_separated_from_integer_spinor_trace_convention
+  - Euclidean_Minkowski_metric_i0_branch_and_threshold_consistency
+  - D2_limit_statistics_and_normalization_consistency_with_accepted_scalar_scope
+  - D4_pole_counterterm_subtraction_scale_and_scheme_dependence_made_explicit
+  - universal_residue_or_scale_derivative_separated_from_total_kinetic_normalization
+  - representation_and_coupling_normalization_invariance
+  - independent_rederivation_mutation_sensitivity_and_known_limits
+  - assumption_parameter_import_and_dependency_economy
+  - source_consumer_and_governance_closure
+claims_proposed: [C-VAC-002]
+comparators_blinded_until: >-
+  freeze commit before a new line-by-line GK3D1 body audit; the generated queue
+  already exposes the standard charged-Dirac general-D Feynman-parameter
+  master, transverse tensor, t_D equals 2 to the floor D over 2, D-dependent
+  Gamma and Delta powers, claimed D=2 and D=4 relation, nineteen static checks,
+  and one assertion, so no fresh source-result blinding is claimed
+status: draft
+revision: 0001

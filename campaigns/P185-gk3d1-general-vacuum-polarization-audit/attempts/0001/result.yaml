@@ -1,0 +1,30 @@
+attempt: 0001
+campaign: P185
+candidate: preregistration_and_authority_freeze
+status: passed
+started_at: '2026-08-11T11:36:00Z'
+finished_at: '2026-08-11T11:39:00Z'
+base_release: v0.136.0
+base_commit: 75c10d10a80e89bfd423c46cccc1b9bba4b56375
+release_sha256: 40cac131cd3b8a874e5b91449b69ee804214c987a15b63eea4f00b0dcba12374
+source:
+  unit: GK3D1
+  path: /home/dan/substrate/merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py
+  sha256: 9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb
+  git_blob: 89b66812f03245fb644715f02a7d6dd4b236aa66
+  history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+  size_bytes: 25636
+  target_path_clean: true
+freeze:
+  candidates: [A, B, C, D, E, F]
+  claims_proposed: [C-VAC-002]
+  identifier_collisions: 0
+  source_body_opened: false
+  fresh_result_blinding_claimed: false
+  numpy_policy: mutable_numpy_trapezoid_or_trapezoid_integral_and_immutable_alias_only
+validation:
+  repository_validator_exit_code: 0
+  memory_record_validator_exit_code: 0
+  yaml_parse_exit_code: 0
+  git_diff_check_exit_code: 0
+next_attempt: commit_the_freeze_then_reproduce_and_audit_GK3D1
