@@ -1,0 +1,14 @@
+attempt: 0001
+campaign: P206
+timestamp_utc: '2026-08-05T22:28:00Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: 61296bde97320f9903298ee7f6aad8b980a3d84d
+base_release: v0.150.0
+source_unit: WM9
+candidates: [A, B, C, D, E, F, G]
+source_body_inspected: false
+native_source_executed: false
+exposed_queue_claims: [shared_single_amplitude, distinct_mode_overlaps]
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction

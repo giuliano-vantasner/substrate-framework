@@ -1,0 +1,49 @@
+campaign: P206
+source_unit: WM9
+typed_objects:
+  background_profile: Phi_equals_A_times_shape
+  supplied_modes: eta_p_for_p_in_finite_index_set
+  normalized_overlaps: y_p_equals_integral_abs_eta_p_squared_times_Phi
+  exact_factorization: y_p_equals_A_times_I_p
+  shared_parameter_rank: one_when_every_profile_is_declared_to_share_A
+  field_species_count: not_determined_by_overlap_parameter_rank
+  representation_multiplicity: separately_supplied_under_C_REP_003
+  physical_generation_count: not_determined_by_C_MIX_002
+equivalent_or_competing_parameterizations:
+  - one_field_one_background_many_modes_with_shared_A
+  - multiple_field_labels_with_equal_amplitudes_A_p_equals_A
+  - one_profile_shape_with_independent_coupling_coefficients_lambda_p
+  - multiple_background_fields_with_identical_numeric_amplitudes
+  - independent_amplitudes_A_p
+  - a_basis_change_among_modes_that_preserves_the_background_count
+invariants_under_valid_reparameterization:
+  - overlap_values_after_substitution
+  - normalized_mode_orthogonality_when_supplied
+  - common_amplitude_factorization_when_declared
+noninvariants:
+  - cardinality_of_free_symbol_names_before_or_after_substitution
+  - number_of_source_variables_or_list_entries
+  - inferred_field_species_or_physical_multiplets
+mutations:
+  - rename_one_amplitude_symbol_then_impose_equality
+  - duplicate_a_field_label_with_the_same_amplitude
+  - give_each_mode_an_independent_coupling_coefficient
+  - rotate_the_mode_basis
+  - change_mode_count_without_changing_background_count
+  - change_background_count_without_changing_numeric_amplitude_values
+  - remove_the_physical_generation_or_Higgs_dictionary
+exact_obligations:
+  - reproduce_C_OVL_001_shared_amplitude_factorization
+  - distinguish_expression_symbol_rank_from_field_species_count
+  - construct_equal_value_different_species_countermodels
+  - trace_every_N_H_and_N_gen_input_to_accepted_authority
+  - reject_comparator_selected_multiplicity
+  - audit_all_reverse_consumers
+physical_ceiling:
+  - no_derived_condensate_or_VEV
+  - no_one_background_one_complex_doublet_theorem
+  - no_physical_generation_count_or_mode_to_generation_map
+  - no_scalar_multiplicity_or_Standard_Model_field_completeness
+  - no_weak_angle_prediction_or_residual_localization
+  - no_substrate_mechanism
+scientific_version_failures: 0
