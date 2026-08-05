@@ -249,6 +249,15 @@ finds no prior claim or API composing C-RGE-003 with C-VAC-003, so C-VAC-004
 remains provisionally distinct pending primary, independent, and consumer
 review.
 
+Attempt 0004 preserves a verifier-representation failure: two tests compared
+factored and expanded but algebraically identical SymPy trees directly. It
+changed no formula or threshold. Attempt 0005 checks simplified exact
+residuals and passes 51 focused tests across the new module and both accepted
+parent ledgers. Public imports and compilation pass. Fixed-length conversion,
+paired-conversion, affine-boundary, common-rescaling, orientation, zero-matter,
+and hidden-float mutations all exercise load-bearing paths, and the new module
+has no NumPy integration surface.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length
@@ -260,9 +269,9 @@ governed state.
 | --- | --- | --- |
 | GK3D3 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source reproduction, check adjudication, and attempt 0002 |
 | The two source lengths may be relabeled as cutoff and Compton scales | Type every physical identification as a separately supplied map | open |
-| Equal `hbar*c` conversions may hide a soliton or threshold coefficient | Derive the arbitrary-conversion formula and mutate each factor | open |
+| Equal `hbar*c` conversions may hide a soliton or threshold coefficient | Derive the arbitrary-conversion formula and mutate each factor | discharged by the generic map, fixed-length mutation, and paired-conversion cancellation tests |
 | The transmutation relation may be presented as prediction of its supplied coupling | Preserve the beta coefficient, coupling, reference scale, conversion data, and formal-domain ceiling | open |
-| The affine `Z_ref` may be erased by inheritance from GK3D2 | Compose the general family first and test unequal-boundary counterexamples | open |
+| The affine `Z_ref` may be erased by inheritance from GK3D2 | Compose the general family first and test unequal-boundary counterexamples | discharged by the canonical general family and affine-boundary tests |
 | A conditional inverse kinetic coefficient may be called a physical coupling | State positivity, convention, matter, group, matching, and identification premises | open |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D3 has no NumPy surface |
 | Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |

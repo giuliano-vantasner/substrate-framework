@@ -1,0 +1,38 @@
+claim: C-VAC-004
+canonical_module: src/substrate_framework/kinetic_scale_matching.py
+public_exports:
+  - InverseLengthKineticEvidence
+  - inverse_length_scale_kinetic_evidence
+  - OneLoopScaleMatchedKineticEvidence
+  - one_loop_scale_matched_kinetic_evidence
+dependencies:
+  - src/substrate_framework/scale_transmutation.py
+  - src/substrate_framework/vacuum_polarization.py
+canonical_reuse:
+  one_loop_scale_map: one_loop_inverse_energy_length_ledger
+  affine_kinetic_family: matter_induced_kinetic_evidence
+duplicate_solver_or_check_helper: false
+import_side_effects: none
+numeric_solver: none_exact_SymPy_algebra_only
+domain_policy:
+  lengths_energies_and_conversions: positive_exact
+  affine_coordinates_and_weights: delegated_to_C_VAC_003_API
+  zero_matching_inverse: requires_provably_positive_total_matter_coefficient
+  floats: rejected
+compatibility_preflight:
+  numpy_aliases: []
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+focused_validation:
+  tests: 51
+  command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_kinetic_scale_matching.py tests/test_scale_transmutation.py tests/test_scalar_qed4_kinetic.py
+  exit_code: 0
+  elapsed_seconds: 6.92
+mutations:
+  fixed_length_reference_conversion_change: changes_log_and_total
+  paired_conversion_change: preserves_consistent_one_loop_log_and_zero_branch
+  affine_boundary_change: changes_general_total_only
+  common_length_rescaling: preserves_log_and_total_but_changes_absolute_energies
+  orientation_change: changes_generic_log
+  zero_matter: preserves_general_Z_ref_and_rejects_inverse_branch

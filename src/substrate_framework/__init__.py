@@ -706,6 +706,12 @@ from .scale_transmutation import (
     two_length_log_constraint,
     two_length_speed_dimension_ledger,
 )
+from .kinetic_scale_matching import (
+    InverseLengthKineticEvidence,
+    OneLoopScaleMatchedKineticEvidence,
+    inverse_length_scale_kinetic_evidence,
+    one_loop_scale_matched_kinetic_evidence,
+)
 from .scale_provenance import (
     OneLoopScaleProvenanceLedger,
     ScaleDimensionLedger,
@@ -1063,6 +1069,7 @@ __all__ = [
     "RationalMapSphereEvidence",
     "MatchedSechOverlap",
     "OneLoopLengthRatioLedger",
+    "OneLoopScaleMatchedKineticEvidence",
     "QuarticBoundModeOverlapLedger",
     "conditional_overlap_mass_ledger",
     "matched_width_sech_overlap",
@@ -1077,6 +1084,7 @@ __all__ = [
     "TailSpacingLedger",
     "TranslatedSechOverlap",
     "TwoLengthDimensionLedger",
+    "InverseLengthKineticEvidence",
     "TransverseHalfLineProcaEvidence",
     "TwoChannelAllocation",
     "WeightedChannelAllocation",
@@ -1266,6 +1274,7 @@ __all__ = [
     "collective_coordinate_metric",
     "cutoff_length_from_pure_induced_newton",
     "coupling_squared_from_length_ratio",
+    "inverse_length_scale_kinetic_evidence",
     "classify_harmonic_tail_channels",
     "dimensionless_group_count",
     "degree_weighted_target_pairing",
@@ -1438,6 +1447,7 @@ __all__ = [
     "physical_phase_chain_scales",
     "one_loop_inverse_coupling_squared",
     "one_loop_inverse_energy_length_ledger",
+    "one_loop_scale_matched_kinetic_evidence",
     "one_loop_transmutation_scale",
     "pairwise_affine_crossing",
     "odd_harmonics",

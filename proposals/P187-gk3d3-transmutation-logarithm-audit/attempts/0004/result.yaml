@@ -1,0 +1,16 @@
+attempt: 0004
+campaign: P187
+candidate: canonical_module_first_targeted_test_run
+status: failed
+started_at: '2026-08-11T13:24:00Z'
+finished_at: '2026-08-11T13:27:00Z'
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_kinetic_scale_matching.py tests/test_scale_transmutation.py tests/test_scalar_qed4_kinetic.py
+process:
+  exit_code: 1
+  passed: 49
+  failed: 2
+diagnosed_layer: verifier_representation
+mechanism: two_tests_used_raw_SymPy_tree_equality_for_algebraically_identical_factored_and_expanded_rational_expressions
+scientific_formula_changed: false
+threshold_changed: false
+next_attempt: compare_simplified_exact_residuals_then_rerun_the_same_focused_scope
