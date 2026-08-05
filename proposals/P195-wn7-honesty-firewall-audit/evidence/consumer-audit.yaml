@@ -1,0 +1,34 @@
+campaign: P195
+root_source_unit: WN7
+inventory: migration/source-claims.yaml
+direct_source_consumers: []
+transitive_source_consumers: []
+canonical_consumers:
+  package_modules: []
+  package_exports: []
+  package_tests: []
+  accepted_claims: []
+campaign_consumers:
+  - proposals/P195-wn7-honesty-firewall-audit/verify.py
+  - proposals/P195-wn7-honesty-firewall-audit/reviews/independent_firewall_review.py
+  - proposals/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
+replay:
+  source_records_reused: 11
+  native_checks_covered: 429
+  freshly_executed_native_scripts: 0
+  duplicate_native_execution_records_counted: 0
+  graph_checks: 18
+compatibility_preflight:
+  scripts_scanned: 11
+  legacy_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_used: 0
+  version_only_scientific_failures: 0
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+interpretation: >-
+  WN7 is a leaf in the source queue. Terminal qualification therefore changes
+  no downstream source, canonical signature, accepted value, or scientific
+  threshold.
+debt: []
+

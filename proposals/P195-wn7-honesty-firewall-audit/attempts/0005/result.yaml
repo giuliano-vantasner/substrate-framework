@@ -1,0 +1,28 @@
+attempt: 0005
+campaign: P195
+candidate: direct_dependency_authority_and_leaf_consumer_closure
+status: passed_review_boundary
+started_at: '2026-08-11T20:26:00Z'
+finished_at: '2026-08-11T20:31:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
+result:
+  graph_checks: 18
+  graph_exit_status: 0
+  native_records_reused: 11
+  native_checks_covered: 429
+  freshly_executed_native_scripts: 0
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+  direct_dependencies_qualified: 10
+  reverse_source_consumers: 0
+authority_result: >-
+  Every predecessor remains limited to its accepted claim mapping. No scan,
+  fixture, dependency cycle, or green tally transfers firewall or scientific
+  authority to WN7.
+new_claim: null
+canonical_change: none
+release_change: none
+debt: []
+next_attempt: synchronize_terminal_disposition_campaign_memory_and_queue_then_run_one_integrated_gate

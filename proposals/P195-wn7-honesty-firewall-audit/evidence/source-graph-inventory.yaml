@@ -1,0 +1,38 @@
+campaign: P195
+root_source_unit: WN7
+scope: direct_declared_dependencies_plus_root
+execution_policy: >-
+  Reuse hash-pinned terminal native records because every node has already
+  crossed its own scientific boundary. Do not rerun unchanged scripts merely
+  to manufacture a fresh tally.
+nodes:
+  - {source_unit: CM1, relation: direct_dependency, native_tally: 13, record: campaigns/P115-cm1-screened-barrier-ceiling-audit/evidence/source-reproduction.yaml}
+  - {source_unit: GB4, relation: direct_dependency, native_tally: 23, record: campaigns/P125-gb4-weighted-branching-audit/evidence/source-reproduction.yaml}
+  - {source_unit: GB6, relation: direct_dependency_and_scanner_predecessor, native_tally: 29, record: campaigns/P127-gb6-honesty-firewall-audit/evidence/source-reproduction.yaml}
+  - {source_unit: PN4, relation: direct_dependency, native_tally: 27, record: campaigns/P112-pn4-lossy-paired-resolvent-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN1, relation: scanned_direct_dependency, native_tally: 44, record: campaigns/P189-wn1-factorial-suppression-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN2, relation: scanned_direct_dependency, native_tally: 70, record: campaigns/P190-wn2-coefficient-weight-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN3, relation: scanned_direct_dependency, native_tally: 48, record: campaigns/P191-wn3-bosonic-multiplicity-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN4, relation: scanned_direct_dependency, native_tally: 43, record: campaigns/P192-wn4-derived-weight-crossover-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN5, relation: scanned_direct_dependency, native_tally: 41, record: campaigns/P193-wn5-branching-prediction-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN6, relation: scanned_direct_dependency, native_tally: 32, record: campaigns/P194-wn6-scale-verdict-audit/evidence/source-reproduction.yaml}
+  - {source_unit: WN7, relation: root, native_tally: 59, record: proposals/P195-wn7-honesty-firewall-audit/evidence/source-reproduction.yaml}
+expected_coverage:
+  unique_nodes: 11
+  reused_native_checks: 429
+  freshly_executed_native_checks: 0
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P195-wn7-honesty-firewall-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_18_CHECKS_PASS
+  unique_nodes: 11
+  total_native_checks_covered: 429
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+authority_state_before_P195_terminal_sync:
+  qualified_direct_dependencies: [CM1, GB4, GB6, PN4, WN1, WN2, WN3, WN4, WN5, WN6]
+  pending_root: WN7
+  reverse_source_consumers: []
+  accepted_firewall_claims: []

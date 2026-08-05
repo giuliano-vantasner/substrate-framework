@@ -1,0 +1,65 @@
+campaign: P195
+source_unit: WN7
+authority_warning: >-
+  Candidate dependency edges, byte scans, and green replay transfer neither
+  accepted scientific authority nor rejected source prose into WN7.
+direct_dependencies:
+  CM1:
+    disposition: qualified
+    accepted_claims: [C-SCR-001]
+    surviving_surface: conditional screened-factor algebra only
+    excluded_surface: physical screening energy material rate or magnitude
+  GB4:
+    disposition: qualified
+    accepted_claims: [C-BRN-001]
+    surviving_surface: exact fixed-positive-weight allocation derivative
+    excluded_surface: arbitrary physical weight law channel completeness or rate
+  GB6:
+    disposition: qualified
+    accepted_claims: []
+    surviving_surface: finite source predicate evidence under P120 and P127 ceilings
+    excluded_surface: semantic firewall import closure data independence or mechanism proof
+  PN4:
+    disposition: qualified
+    accepted_claims: [C-RES-001]
+    surviving_surface: finite paired resolvent algebra
+    excluded_surface: dynamics probability material channel or yield
+  WN1:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001]
+    surviving_surface: exact cosine coefficients and inverse-factorial suppression
+    excluded_surface: matrix element rate physical channel or universal finite-fixture label
+  WN2:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001, C-CMB-002, C-BRN-001]
+    surviving_surface: accepted exact coefficient mass and conditional allocation mathematics
+    excluded_surface: universal physical admissibility or PN2 channel
+  WN3:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-CMB-001, C-OSC-001]
+    surviving_surface: exact one-mode Fock-coordinate intensity and accepted coefficient mathematics
+    excluded_surface: multimode state physical multiplicity rate or process
+  WN4:
+    disposition: qualified
+    accepted_claims: [C-OSC-001, C-CMB-003]
+    surviving_surface: normalized factorial-one mass recurrence moments and exact tail bounds
+    excluded_surface: physical Poisson process medium mean or unique regime crossover
+  WN5:
+    disposition: qualified
+    accepted_claims: [C-BRN-001, C-OSC-001]
+    surviving_surface: conditional exact allocation and one-mode intensity mathematics
+    excluded_surface: physical branching prediction robustness or rate
+  WN6:
+    disposition: qualified
+    accepted_claims: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002]
+    surviving_surface: exact cosine remainder harmonic convention and declared algebraic thresholds
+    excluded_surface: material amplitude PN2 scale winding multimode state unique bridge or rate
+accepted_firewall_claims: []
+hidden_imports: []
+new_parameters: []
+dependency_cycle_introduced: false
+closure_verdict: >-
+  All ten direct predecessors are terminal, their accepted claim mappings are
+  individually pinned, and none supplies WN7's semantic firewall headline.
+debt: []
+
