@@ -1,0 +1,25 @@
+claim: C-VAC-004
+code_consumers:
+  direct_generic_helper: one_loop_scale_matched_kinetic_evidence
+  public_package_export: src/substrate_framework/__init__.py
+  focused_tests: tests/test_kinetic_scale_matching.py
+  primary_verifier: proposals/P187-gk3d3-transmutation-logarithm-audit/verify.py
+  independent_reviewer_imports_canonical_API: false
+source_consumers:
+  GK3D1: already_qualified_predecessor_whose_future_closure_prose_gains_no_retroactive_authority
+  GK3D2: already_qualified_predecessor_whose_rejected_zero_boundary_is_not_repaired_retroactively
+  GK3D4: may_reuse_conditional_coefficients_and_common_scale_log_but_must_retain_sector_boundaries_groups_matter_and_scale_identifications
+  GK3D5: may_offer_a_future_candidate_IR_mass_map_but_must_independently_establish_the_excitation_and_its_conversion_to_the_matching_energy
+  GK3D6: may_reuse_the_general_conversion_formula_but_an_unpaired_O1_mass_factor_shifts_the_log_and_does_not_remove_Z_ref_or_prove_loop_accuracy
+  EL2: qualified_transitive_unit_receives_no_new_particle_or_gauge_interpretation
+  HE5: out_of_scope_transitive_parser_receives_no_scientific_authority
+compatibility:
+  no_surface: [GK3D1, GK3D2, GK3D3, GK3D4, GK3D6, EL2, HE5]
+  GK3D5: current_first_lazy_getattr_then_legacy_attribute_fallback_with_no_eager_default
+  version_only_scientific_failures: 0
+replay_required:
+  - hash_and_AST_inventory_for_all_eight_nodes
+  - source_dependency_cycle_and_forward_depths
+  - canonical_claim_dependency_closure
+  - package_and_parent_regression_tests
+  - queue_disposition_and_generated_records_after_promotion

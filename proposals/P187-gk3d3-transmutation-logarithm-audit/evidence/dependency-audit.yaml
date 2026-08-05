@@ -1,0 +1,26 @@
+claim: C-VAC-004
+direct_dependencies:
+  C-RGE-003:
+    status: accepted_active
+    imported_objects: [formal_one_loop_energy_relation, independent_inverse_energy_length_conversions, paired_length_ratio, common_rescaling_nullspace]
+  C-VAC-003:
+    status: accepted_active
+    imported_objects: [matter_coefficient, affine_kinetic_family, independent_Z_ref, explicit_zero_matching_specialization]
+transitive_closure:
+  - C-DIM-001
+  - C-RGE-001
+  - C-IDN-001
+  - C-GAU-001
+  - C-DIM-009
+  - C-VAC-002
+  - C-MAX-001
+comparators_not_dependencies:
+  C-IDN-002: confirms_later_gravity_length_backsubstitution_is_not_independent_parameter_closure
+  C-DIM-007: leaves_single_scale_tension_coefficient_free
+no_imports_from:
+  - GK3D3_source_headline_or_checks
+  - AS7_selected_numeric_coordinates
+  - physical_lattice_soliton_QCD_hadron_or_Planck_labels
+  - measured_gauge_coupling
+  - downstream_GK3D4_GK3D5_or_GK3D6
+closure_status: complete

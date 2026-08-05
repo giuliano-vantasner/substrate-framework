@@ -1,0 +1,17 @@
+campaign: P187
+root_source_unit: GK3D3
+nodes:
+  - {source_unit: GK3D1, depth: 1, role: qualified_narrative_cycle_predecessor, path: merged-framework/bridges/phase-41/bridge_GK3D1_master_polarization_general_D.py, sha256: 9a25110ba53adfb439d0cfd0570bd311b0a43a20f13d1351f45c3fa4075aeacb}
+  - {source_unit: GK3D2, depth: 1, role: qualified_narrative_cycle_predecessor, path: merged-framework/bridges/phase-41/bridge_GK3D2_induced_kinetic_normalization.py, sha256: 856096aba38812dc17fb07ce5cf7c0fa13eb2623665ccf871810734ac3ca0886}
+  - {source_unit: GK3D3, depth: 0, role: adjudicated_scale_matching_unit, path: merged-framework/bridges/phase-41/bridge_GK3D3_transmutation_closes_the_log.py, sha256: 1c3f81d15ace3ec2c6326c89659596f5b9ff84ac23ef7f0143a53ad92b23b211}
+  - {source_unit: GK3D4, depth: 1, role: pending_three_sector_total_normalization_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D4_three_sectors_one_construction.py, sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35}
+  - {source_unit: GK3D5, depth: 1, role: pending_charged_excitation_and_IR_scale_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py, sha256: 201d4fd2594a73c7b59dbe81e0e66f1d3d43a52605a26174c70bd072626992e2}
+  - {source_unit: GK3D6, depth: 1, role: pending_scale_factor_accuracy_and_ratio_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D6_oneloop_accuracy_and_exact_ratios.py, sha256: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036}
+  - {source_unit: EL2, depth: 2, role: qualified_transitive_consumer, path: merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py, sha256: db90b921e0b3d6966597a39817ad48219cd94fa27ff8aa2a1de4a64c3ccf6965}
+  - {source_unit: HE5, depth: 3, role: out_of_scope_transitive_consumer, path: merged-framework/bridges/phase-45/bridge_HE5_consumer_dependency_parse.py, sha256: 70a8402413e3bdde15a9d9b93fb4fc282f277b28a5943da9fad4a8cc6c561b81}
+direct_reverse_consumers_in_source_inventory: [GK3D1, GK3D2, GK3D4, GK3D5, GK3D6]
+forward_consumers_requiring_future_individual_adjudication: [GK3D4, GK3D5, GK3D6]
+narrative_cycle_rule: later_GK3D3_cannot_retroactively_strengthen_already_qualified_GK3D1_or_GK3D2
+transitive_forward_consumers: [EL2, HE5]
+canonical_claims: [C-RGE-003, C-IDN-002, C-DIM-009, C-VAC-003, C-VAC-004]
+consumer_ceiling: downstream_units_may_reuse_only_the_conditional_scale_log_affine_family_consistent_conversion_cancellation_and_explicit_zero_branch_not_physical_scale_labels_a_selected_boundary_parameter_free_coupling_log_uniqueness_or_perturbative_validity

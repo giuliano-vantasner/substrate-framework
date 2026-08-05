@@ -1,0 +1,33 @@
+attempt: 0012
+campaign: P187
+candidate: claim_source_and_impact_review
+status: passed_pending_governance_replay
+started_at: '2026-08-11T13:41:00Z'
+finished_at: '2026-08-11T13:48:00Z'
+impact:
+  index_nodes: 28719
+  index_edges: 44565
+  clusters: 393
+  processes: 2
+  new_generic_factory_risk: LOW
+  new_one_loop_factory_risk: LOW
+  parent_factory_risk: LOW
+  compare_base: ba1cbaf3dfcdd34d36fc22c1c6105c27cbac2d36
+  changed_symbols: 111
+  changed_files: 28
+  affected_processes: 0
+  comparison_risk: LOW
+review:
+  C-VAC-004: recommend_accept_at_exact_conditional_scope
+  GK3D3: recommend_qualified
+  source_governance_risk: MEDIUM
+consumer_inventory:
+  direct_including_narrative_cycle: [GK3D1, GK3D2, GK3D4, GK3D5, GK3D6]
+  forward_pending: [GK3D4, GK3D5, GK3D6]
+  transitive: [EL2, HE5]
+compatibility:
+  version_only_scientific_failures: 0
+  GK3D5_current_first_lazy_fallback: recorded
+temporary_gitnexus_artifacts_removed: [AGENTS_generated_block, CLAUDE.md, .claude_skill_copies]
+scientific_threshold_changed: false
+next_attempt: materialize_adjudication_and_replay_source_claim_release_queue_docs_and_memory_closure

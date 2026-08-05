@@ -1,0 +1,28 @@
+campaign: P187
+selection_order:
+  - accepted_scale_orientation_and_physical_label_provenance
+  - exact_length_energy_conversion_and_dimension_consistency
+  - affine_reference_value_retained_until_matching_is_declared
+  - one_loop_inputs_distinguished_from_predicted_outputs
+  - common_rescaling_and_conversion_reparameterization_covariance
+  - correct_limits_and_mutation_sensitivity
+  - assumption_parameter_import_and_dependency_economy
+  - independent_rederivation
+  - novelty_beyond_accepted_claims
+  - governance_closure
+selected:
+  - {id: A, role: hash_pinned_source_and_predicate_evidence_only}
+  - {id: B, role: accepted_generic_independent_conversion_scale_map}
+  - {id: C, role: accepted_consistent_one_loop_conversion_cancellation_and_affine_composition}
+  - {id: D, role: accepted_general_affine_family_and_separately_declared_zero_matching_specialization}
+  - {id: E, role: accepted_countermodels_and_scope_guards_not_physical_identifications}
+  - {id: F, role: selected_for_claim_source_consumer_release_documentation_memory_and_debt_closure}
+rejected_source_objects:
+  - {object: a_and_xi_force_cutoff_and_charged_soliton_Compton_labels, reason: physical_scale_maps_are_not_supplied_by_the_two_length_dimension_kernel_or_one_loop_relation}
+  - {object: common_hbar_c_and_unit_soliton_coefficient_are_derived, reason: independent_conversion_or_unpaired_soliton_factors_are_permitted_and_load_bearing}
+  - {object: Z_ref_is_removed_upstream, reason: C_VAC_003_retains_the_affine_boundary_and_requires_zero_matching_as_a_separate_premise}
+  - {object: b0_g_squared_and_b_are_all_derived_selected_numbers, reason: each_is_a_conditional_input_or_matter_weight_coordinate}
+  - {object: p_equals_zero_means_or_uniquely_selects_a_logarithm, reason: p_zero_is_constant_and_rational_functions_of_log_supply_exact_counterfamilies}
+  - {object: sample_inequality_proves_perturbative_self_consistency, reason: hardcoded_unaccepted_values_and_two_weights_do_not_establish_the_symbolic_or_full_loop_validity_domain}
+selection_reason: exact_composition_preserves_every_accepted_coordinate_and_requires_fewer_assumptions_than_the_source_physical_identification
+numeric_comparator_selected_candidate: false

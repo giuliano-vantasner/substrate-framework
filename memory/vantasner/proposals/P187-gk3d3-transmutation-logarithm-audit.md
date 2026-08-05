@@ -277,6 +277,14 @@ rebuilds the conversions, affine derivative, one-loop cancellation, general
 and zero branches, rank nullspace, soliton-factor and orientation mutations,
 zero-matter limit, and function counterfamilies.
 
+Attempt 0012 refreshes the GitNexus graph and finds LOW implementation risk,
+at most one direct internal caller per new factory, no affected indexed flow,
+and 111 changed symbols across 28 files from the P187 base. The distinct
+source-governance risk is MEDIUM: GK3D1 and GK3D2 are qualified narrative-cycle
+predecessors; GK3D4, GK3D5, and GK3D6 are forward consumers; EL2 and HE5 are
+transitive. Claim-level review recommends C-VAC-004 at its exact conditional
+scope and GK3D3 qualification. Temporary GitNexus host artifacts were removed.
+
 ## Debt Ledger
 
 The P187 ledger tracks source reachability, scale labels, inverse-length
@@ -287,11 +295,11 @@ governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | GK3D3 formulas, predicates, assertion, and headline dataflow are unopened | Pin and audit every declared object and conclusion edge | discharged by source reproduction, check adjudication, and attempt 0002 |
-| The two source lengths may be relabeled as cutoff and Compton scales | Type every physical identification as a separately supplied map | open |
+| The two source lengths may be relabeled as cutoff and Compton scales | Type every physical identification as a separately supplied map | discharged by claim scope, source adjudication, and soliton-factor countermodel |
 | Equal `hbar*c` conversions may hide a soliton or threshold coefficient | Derive the arbitrary-conversion formula and mutate each factor | discharged by the generic map, fixed-length mutation, and paired-conversion cancellation tests |
-| The transmutation relation may be presented as prediction of its supplied coupling | Preserve the beta coefficient, coupling, reference scale, conversion data, and formal-domain ceiling | open |
+| The transmutation relation may be presented as prediction of its supplied coupling | Preserve the beta coefficient, coupling, reference scale, conversion data, and formal-domain ceiling | discharged by the canonical input provenance and C-VAC-004 review |
 | The affine `Z_ref` may be erased by inheritance from GK3D2 | Compose the general family first and test unequal-boundary counterexamples | discharged by the canonical general family and affine-boundary tests |
-| A conditional inverse kinetic coefficient may be called a physical coupling | State positivity, convention, matter, group, matching, and identification premises | open |
+| A conditional inverse kinetic coefficient may be called a physical coupling | State positivity, convention, matter, group, matching, and identification premises | discharged by claim scope, source adjudication, and claim review |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D3 has no NumPy surface |
 | Dependencies, future consumers, and governed records may disagree | Replay the graph and synchronize disposition, queue, claims, release, docs, memory, and debt | open |
 
