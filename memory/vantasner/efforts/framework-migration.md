@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-05T22:20:00Z'
+updated: '2026-08-05T22:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.149.0`, containing one hundred eighty-nine
+The current accepted frontier is `v0.150.0`, containing one hundred ninety
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -138,7 +138,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 23 pending, 0 partially migrated, 3 migrated, 182 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 18 pending, 0 partially migrated, 3 migrated, 187 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -2338,27 +2338,39 @@ API checks pass after one disclosed pre-freeze exposure and three preserved
 verifier repairs. C-RGE-008 remains unpromoted. WM8 and mutable P205 have no
 quadrature surface; immutable S2's legacy syntax remains compatibility-only.
 
+P206 leaves v0.150.0 unchanged and qualifies WM9 through C-QBL-001,
+C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, and
+C-RGE-005. Three distinct supplied-mode overlaps share one supplied amplitude,
+but free-symbol cardinality is not field-species count: equal-amplitude
+multiple fields, equality constraints, independent mode couplings, and inert
+fields are decisive countermodels. C-QBL-001 supplies no stability-forced
+complex ontology, C-MIX-002 supplies no observed generation map, and
+C-GSM-001 supplies its vacuum. Twenty-five primary, 16 independent, 43
+terminal graph, and 68 focused API checks pass. The 16-node graph pins 129
+predicates and 21 assertions. C-OVL-004 and C-RGE-008 remain unpromoted, and
+WM9 plus its graph have no quadrature compatibility surface.
+
 ## Canonicalization
 The registry, `v0.150.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety accepted claims.
-P001 through P205 are frozen under `campaigns/`; proposal,
+P001 through P206 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 19 pending, 0 partial, 3
-migrated, 186 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P205 changes no accepted scientific surface, so its narrow record gate
+memory. The regenerated migration queue agrees on 18 pending, 0 partial, 3
+migrated, 187 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P206 changes no accepted scientific surface, so its narrow record gate
 follows the last full P202 release boundary rather than repeating all 1,815
 unchanged package tests.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 19
-pending, 3 migrated, 186 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 18
+pending, 3 migrated, 187 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM8 source cycle is fully terminal without backward authority. The next
-campaign audits WM9's scalar-multiplicity construction against the corrected
-WM7 and WM8 ceilings. The remaining condensation order is WM9, WM10, GC1 through GC6 on one branch and
+The WM7-WM9 source cycle is fully terminal without backward authority. The next
+campaign audits WM10's corrected two-loop boundary construction against the
+qualified WM7-WM9 ceilings. The remaining condensation order is WM10, GC1 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

@@ -48,11 +48,18 @@ selection_criteria:
   - independence from comparator proximity
   - alternative factorization countermodels
   - dependency and reverse-consumer closure
-claims_proposed: [C-OVL-004]
+claims_proposed: []
+reserved_unpromoted_claims: [C-OVL-004, C-RGE-008]
 comparators_blinded_until: >-
   The queue exposes WM9's one-amplitude and distinct-mode headlines, eight
   static check sites, one assertion, and a truncated result excerpt. The source
   body detailed predicates overlap values multiplicity conclusion and native
   output remain unopened until this contract formula freeze provenance memory
   validation and clean freeze commit exist.
-status: active
+comparators_used_for_selection:
+  - hash-pinned WM9 native output opened after freeze commit fe5c9aa
+  - C-OVL-001 canonical normalized-overlap API and physical ceilings
+  - raw equal-amplitude independent-amplitude independent-coupling and inert-field countermodels
+  - accepted C-QBL-001 C-QBL-003 C-MIX-002 C-GSM-001 C-REP-003 and C-RGE-005 authority ceilings
+status: accepted
+revision: 0002

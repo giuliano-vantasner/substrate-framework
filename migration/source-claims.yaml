@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 19
-  qualified: 186
+  pending_adjudication: 18
+  qualified: 187
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11726,8 +11726,56 @@ units:
   dynamic_check_calls: 6
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-QBL-001
+  - C-QBL-003
+  - C-OVL-001
+  - C-MIX-002
+  - C-GSM-001
+  - C-REP-001
+  - C-REP-003
+  - C-RGE-005
+  qualification: 'WM9''s exact surviving object is C-OVL-001 composition: for the supplied profile A*sech(kappa*x)
+    and supplied mode powers p=1,2,3, the normalized overlaps are distinct coefficients times the same
+    supplied amplitude A. The source then defines n_condensates as the cardinality of a SymPy free-symbol
+    set and n_modes as the length of the literal tuple (1,2,3). Neither is an invariant physical multiplicity
+    theorem. Three separately labeled fields may share one amplitude, three amplitudes may be constrained
+    equal without deleting field labels, one field may carry independent mode couplings, and an inert
+    field may expose no overlap symbol. WM9''s three-condensate alternative declares A_1,A_2,A_3 before
+    counting them, so it does not prove that equal scalar and mode counts require independent amplitudes.
+    C-QBL-001 explicitly derives no stability or forced complex ontology; C-QBL-003 derives no generations;
+    C-MIX-002 supplies no observed family map; C-GSM-001 supplies its vacuum and scalar kinetic premise;
+    and C-REP-003 with C-RGE-005 supplies field rows and scalar multiplicities. Comparator absence from
+    the executed dataflow is retained, as is WM7''s supplied one-doublet trace arithmetic, but neither
+    supplies the missing action and field dictionary. N_H=1, N_gen=3, structural exclusion of N_H/N_gen=1,
+    a physical weak-angle prediction, and the empty Phase-39 debt ledger are not accepted. C-OVL-004 and
+    C-RGE-008 remain reserved and unpromoted.'
+  evidence:
+  - campaigns/P206-wm9-scalar-multiplicity-audit/reviews/source_adjudication.md
+  - campaigns/P206-wm9-scalar-multiplicity-audit/reviews/accepted_composition_review.md
+  - campaigns/P206-wm9-scalar-multiplicity-audit/reviews/impact_analysis.md
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/source-reproduction.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/compatibility-audit.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/source-audit.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/check-adjudication.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/formula-freeze.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/input-provenance.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/dependency-audit.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/consumer-audit.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/candidate-comparison.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/implementation-audit.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/primary-provenance.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/evidence/independent-provenance.yaml
+  - campaigns/P206-wm9-scalar-multiplicity-audit/verify.py
+  - campaigns/P206-wm9-scalar-multiplicity-audit/reviews/independent_multiplicity_review.py
+  - campaigns/P206-wm9-scalar-multiplicity-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/WM9-qualified-review.md
+  note: P206 closes 25 primary, 16 independent, and 43 terminal source-graph checks plus 68 focused existing
+    API tests. The graph pins 16 nodes with 129 static predicates and 21 assertions. WM9, its graph, and
+    mutable P206 have no quadrature surface and create zero scientific version failures.
 - source_unit: TX1
   phase: phase-40
   path: merged-framework/bridges/phase-40/bridge_TX1_b2_intrinsic_quadrupole.py

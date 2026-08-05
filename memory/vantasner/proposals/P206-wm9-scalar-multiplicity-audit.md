@@ -2,7 +2,7 @@
 description: Audit WM9 shared-amplitude overlaps and scalar-multiplicity inference
 author: vantasner
 created: '2026-08-05T22:28:00Z'
-updated: '2026-08-05T22:28:00Z'
+updated: '2026-08-05T22:45:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - normalized-overlaps
 - multiplicity
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P206 WM9 Scalar Multiplicity Audit
 
@@ -99,14 +99,14 @@ compatibility event, and generated record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Detailed source predicates remain blinded | Reproduce once after committed freeze | open |
-| Shared symbol may be called one physical field | Test equality-constrained and relabeled parameterizations | open |
-| Mode count may be called generation count | Apply C-QBL-003 and C-MIX-002 ceilings | open |
-| One background may be called one complex doublet | Require action representation and field dictionary | open |
-| `N_H=1` may inherit comparator authority | Audit WM7 and WM8 without numerical selection | open |
-| C-OVL-004 may duplicate C-OVL-001 | Run claim and API nonduplication audit | open |
-| Reverse consumers may grant authority | Replay WM10 and GC consumers without imports | open |
-| Compatibility may masquerade as science | Audit all graph access shapes | open |
+| Detailed source predicates remain blinded | Reproduce once after committed freeze | discharged after freeze commit `fe5c9aa` |
+| Shared symbol may be called one physical field | Test equality-constrained and relabeled parameterizations | discharged by decisive countermodels |
+| Mode count may be called generation count | Apply C-QBL-003 and C-MIX-002 ceilings | discharged; no physical map accepted |
+| One background may be called one complex doublet | Require action representation and field dictionary | discharged by rejecting the unsupported identification |
+| `N_H=1` may inherit comparator authority | Audit WM7 and WM8 without numerical selection | discharged; comparator proximity excluded |
+| C-OVL-004 may duplicate C-OVL-001 | Run claim and API nonduplication audit | discharged; reserved and unpromoted |
+| Reverse consumers may grant authority | Replay WM10 and GC consumers without imports | discharged; all remain pending and nonauthoritative |
+| Compatibility may masquerade as science | Audit all graph access shapes | discharged; zero quadrature surface and zero scientific failures |
 
 ## Review and Promotion Plan
 
@@ -117,6 +117,9 @@ before disposition registration and queue generation.
 
 ## Done Gate
 
-P206 closes only when the exact overlap ledger, typed-count countermodels,
-authority, novelty, dependency and consumer graph, compatibility, disposition,
-generated state, and durable memory agree with an empty debt ledger.
+P206 closes with 25 primary, 16 independent, and 43 terminal graph checks plus
+68 focused API tests. WM9 is qualified as accepted overlap composition under
+C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001,
+C-REP-003, and C-RGE-005. `N_H=1`, `N_gen=3`, structural exclusion of equal
+multiplicity, and the empty Phase-39 debt claim are not accepted. No claim,
+canonical API, or release changes; C-OVL-004 and C-RGE-008 remain unpromoted.

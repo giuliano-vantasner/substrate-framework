@@ -1,0 +1,97 @@
+campaign: P206
+title: WM9 shared-amplitude scalar-multiplicity accepted-composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [WM9]
+base_release: v0.150.0
+accepted_release: v0.150.0
+audit_commit: 81b0a7f
+adjudicated_at: '2026-08-05T22:45:00Z'
+selected_candidates:
+  - {id: A, reason: C_OVL_001_exactly_owns_the_shared_amplitude_overlap_factorization.}
+  - {id: C, reason: Source_free_symbol_cardinality_is_a_parameterization_fact_not_species_count.}
+  - {id: D, reason: Equal_amplitude_multiple_fields_independent_mode_couplings_and_inert_fields_supply_decisive_countermodels.}
+  - {id: F, reason: Existing_normalized_overlap_and_supplied_table_claims_own_the_complete_corrected_object.}
+  - {id: G, reason: Individual_WM9_governance_closes_without_reverse_consumer_authority.}
+competing_candidates:
+  - {id: B, decision: rejected_no_accepted_action_representation_or_invariant_one_background_one_field_theorem}
+  - {id: E, decision: rejected_no_accepted_physical_N_H_or_N_gen_map}
+claims: []
+accepted_composition:
+  - {id: C-QBL-001, decision: unchanged_conditional_profile_and_no_stability_or_forced_complex_ontology}
+  - {id: C-QBL-003, decision: unchanged_conditional_scalar_modes_and_no_generation_or_flavor_map}
+  - {id: C-OVL-001, decision: unchanged_exact_shared_amplitude_normalized_overlap_and_physical_ceiling}
+  - {id: C-MIX-002, decision: unchanged_abstract_phase_count_and_no_observed_family_map}
+  - {id: C-GSM-001, decision: unchanged_supplied_vacuum_quadratic_mass_and_no_condensate_Higgs_ontology}
+  - {id: C-REP-001, decision: unchanged_conditional_finite_trace_coordinate}
+  - {id: C-REP-003, decision: unchanged_supplied_finite_field_rows_and_multiplicities}
+  - {id: C-RGE-005, decision: unchanged_supplied_scalar_multiplicity_and_beta_ledger_ceiling}
+unpromoted_claims:
+  - {id: C-OVL-004, reason: Free_symbol_rank_is_not_an_invariant_field_species_count_and_no_action_map_closes_the_gap.}
+  - {id: C-RGE-008, reason: WM9_adds_no_running_theorem_or_canonical_surface.}
+  - {id: framework_derived_scalar_multiplicity, reason: C_REP_003_and_C_RGE_005_supply_field_multiplicity_while_equal_amplitude_and_inert_field_countermodels_refute_the_source_inference.}
+  - {id: framework_derived_generation_count, reason: The_source_counts_a_literal_mode_tuple_and_C_MIX_002_derives_no_observed_family_map.}
+  - {id: structurally_excluded_equal_multiplicity, reason: The_three_symbol_alternative_is_declared_before_it_is_counted_and_equal_amplitude_multiple_fields_are_countermodels.}
+  - {id: phase_39_empty_debt, reason: Physical_field_generation_matching_and_running_provenance_debts_remain.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_multiplicity_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  accepted_composition_review: reviews/accepted_composition_review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_inventory: evidence/source-inventory.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+source_disposition: {WM9: qualified}
+accepted_mappings: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, C-RGE-005]
+compatibility:
+  installed_numpy: 2.5.1
+  no_quadrature_surface: [WM9, sixteen_node_graph, mutable_P206]
+  aliases_injected_during_science: []
+  version_only_scientific_failures: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_multiplicity_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - PYTHONPATH=src_pytest_four_focused_API_files
+  - PYTHONPATH=src_python_validate_repository
+  - PYTHONPATH=src_python_render_docs_check
+  - PYTHONPATH=src_python_render_memory_check
+  - memory_validate
+  - physics_skill_validate
+  - yaml_parse
+  - git_diff_check
+narrow_gate:
+  attempt: attempts/0006/result.yaml
+  primary_checks: 25
+  independent_checks: 16
+  terminal_graph_checks: 43
+  focused_tests: 68
+  repository_claims: 190
+  migration_units: 218
+  pending_units: 18
+  memory_files_validated: 837
+  exit_status: 0
+last_full_release_gate: {campaign: P202, tests_passed: 1815, pytest_seconds: 172.62}
+debt: []
+status: accepted_composition_no_release
