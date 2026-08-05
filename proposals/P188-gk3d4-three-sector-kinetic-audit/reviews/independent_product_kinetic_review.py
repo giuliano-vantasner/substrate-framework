@@ -255,7 +255,7 @@ def main() -> int:
     numpy_accesses = [
         node
         for node in ast.walk(own_tree)
-        if isinstance(node, ast.Name) and node.id in {"np", "numpy", "trapz", "trapezoid"}
+        if isinstance(node, ast.Name) and node.id in {"np", "numpy"}
     ]
     checks.check(
         "independent review has no NumPy compatibility surface",

@@ -1,6 +1,6 @@
 campaign: P188
 reviewer: reviews/independent_product_kinetic_review.py
-sha256: e96ca47f854dda1157f66e7cee8c105edbb1097935cc0d354181e6b6347fe577
+sha256: 648a741f487fd4ee241c8b52e474407678d06ab0496c2870232f3a1e80da6b97
 command: PYTHONPATH=src .venv/bin/python proposals/P188-gk3d4-three-sector-kinetic-audit/reviews/independent_product_kinetic_review.py
 oracle: fresh_raw_SymPy_matrices_traces_affine_algebra_and_anomaly_factorization
 exit_status: 0

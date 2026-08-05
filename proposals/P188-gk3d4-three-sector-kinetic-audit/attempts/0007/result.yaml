@@ -1,0 +1,28 @@
+attempt: 0007
+campaign: P188
+candidate: native_source_consumer_graph_replay
+status: passed_pending_terminal_governance
+started_at: '2026-08-11T14:36:00Z'
+finished_at: '2026-08-11T14:38:00Z'
+environment:
+  numpy: 2.5.1
+  numpy_trapezoid_available: true
+  numpy_legacy_trapezoid_available: false
+native_replay:
+  GK3D4: {checks: 11, exit_status: 0, wall_seconds: 0.53, max_rss_kib: 52568}
+  GK3D5: {checks: 13, exit_status: 0, wall_seconds: 15.71, max_rss_kib: 119672}
+  GK3D6: {checks: 10, exit_status: 0, wall_seconds: 0.50, max_rss_kib: 52508}
+  EL2: {checks: 11, exit_status: 0, wall_seconds: 16.36, max_rss_kib: 116508}
+  HE5: {checks: 7, exit_status: 0, wall_seconds: 0.86, max_rss_kib: 12464}
+compatibility:
+  no_trapezoidal_surface: [GK3D4, GK3D6, EL2, HE5]
+  GK3D5: immutable_current_first_lazy_fallback_selected_current_branch
+  aliases_injected: 0
+  version_only_scientific_failures: 0
+scientific_adjudication:
+  runtime_passes_promote_headlines: false
+  GK3D5_inherits_three_sector_ratio: false
+  GK3D6_inherits_three_sector_ratio: true
+  forward_consumers_remain_individually_governed: [GK3D5, GK3D6]
+scientific_threshold_changed: false
+next_attempt: complete_claim_level_source_review_impact_analysis_and_terminal_disposition

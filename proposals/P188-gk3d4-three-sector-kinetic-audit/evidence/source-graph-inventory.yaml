@@ -1,0 +1,30 @@
+campaign: P188
+root_source_unit: GK3D4
+nodes:
+  - {source_unit: GK3D4, depth: 0, role: adjudicated_three_sector_kinetic_unit, path: merged-framework/bridges/phase-41/bridge_GK3D4_three_sectors_one_construction.py, sha256: 046273d9a06f92ddbe9cd666d3b6de0f321b9709c371aeee8103394dd2a2ad35}
+  - {source_unit: GK3D5, depth: 1, role: pending_charged_excitation_consumer_without_ratio_reuse, path: merged-framework/bridges/phase-41/bridge_GK3D5_charged_excitation_exists_in_3D.py, sha256: 201d4fd2594a73c7b59dbe81e0e66f1d3d43a52605a26174c70bd072626992e2}
+  - {source_unit: GK3D6, depth: 1, role: pending_direct_ratio_and_three_eighths_consumer, path: merged-framework/bridges/phase-41/bridge_GK3D6_oneloop_accuracy_and_exact_ratios.py, sha256: e0ab2a2db57affe023e6838ed835656412cf01188225f31084e6a6a1baf8e036}
+  - {source_unit: EL2, depth: 2, role: qualified_transitive_GK3D5_consumer, path: merged-framework/bridges/phase-46/bridge_EL2_lepton_is_baryonless_fermion.py, sha256: db90b921e0b3d6966597a39817ad48219cd94fa27ff8aa2a1de4a64c3ccf6965}
+  - {source_unit: HE5, depth: 3, role: out_of_scope_transitive_EL2_consumer, path: merged-framework/bridges/phase-45/bridge_HE5_consumer_dependency_parse.py, sha256: 70a8402413e3bdde15a9d9b93fb4fc282f277b28a5943da9fad4a8cc6c561b81}
+direct_reverse_consumers: [GK3D5, GK3D6]
+transitive_reverse_consumers: [EL2, HE5]
+forward_consumers_requiring_future_individual_adjudication: [GK3D5, GK3D6]
+accepted_composition:
+  - C-LIE-001
+  - C-REP-002
+  - C-PGA-001
+  - C-DIM-009
+  - C-VAC-002
+  - C-VAC-003
+  - C-VAC-004
+  - C-REP-001
+  - C-RGE-005
+  - C-ANO-001
+consumer_ceiling: >-
+  Downstream units may reuse exact standard fundamental trace metrics, embedded
+  product generators, spectator-degenerate factor indices, affine kinetic
+  families, and the conditional trace/coupling iff. They may not erase
+  factorwise boundaries, logs, thresholds, representations, or Abelian
+  normalization; infer a universal common coefficient; call anomaly freedom a
+  unique charge selection; or promote a physical three-sector coupling or weak
+  angle.

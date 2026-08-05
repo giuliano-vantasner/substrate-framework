@@ -1,0 +1,45 @@
+campaign: P188
+auditor: substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+environment:
+  numpy: 2.5.1
+  current_trapezoid_available: true
+  legacy_trapezoid_available: false
+nodes:
+  GK3D4:
+    numpy_aliases: []
+    legacy_references: 0
+    current_references: 0
+    eager_legacy_default_fallbacks: 0
+    native_exit_status: 0
+  GK3D5:
+    numpy_aliases: [np]
+    direct_legacy_attributes: 1
+    dynamic_current_getattrs: 1
+    eager_legacy_default_fallbacks: 0
+    classification: immutable_current_first_lazy_fallback
+    selected_branch: current_trapezoid
+    native_exit_status: 0
+  GK3D6:
+    numpy_aliases: []
+    legacy_references: 0
+    current_references: 0
+    eager_legacy_default_fallbacks: 0
+    native_exit_status: 0
+  EL2:
+    numpy_aliases: [np]
+    legacy_references: 0
+    current_references: 0
+    eager_legacy_default_fallbacks: 0
+    native_exit_status: 0
+  HE5:
+    numpy_aliases: []
+    legacy_references: 0
+    current_references: 0
+    eager_legacy_default_fallbacks: 0
+    native_exit_status: 0
+mutable_P188:
+  legacy_references: 0
+  policy: use_numpy_trapezoid_or_shared_trapezoid_integral
+aliases_injected: 0
+version_only_stops: []
+scientific_failures_from_version_events: 0

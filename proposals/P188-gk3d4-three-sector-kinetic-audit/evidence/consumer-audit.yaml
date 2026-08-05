@@ -1,0 +1,36 @@
+campaign: P188
+root_source_unit: GK3D4
+canonical_consumers:
+  new_API: none
+  new_claim: none
+  new_release: none
+  reason: corrected_result_is_an_exact_composition_of_existing_accepted_APIs
+source_consumers:
+  GK3D5:
+    relationship: direct_narrative_consumer
+    reuse: identifies_the_candidate_excitation_referred_to_as_integrated_out_upstream
+    ceiling: does_not_reuse_or_repair_the_three_sector_ratio_common_boundary_or_three_eighths_claim
+    disposition: pending_adjudication
+  GK3D6:
+    relationship: direct_formula_and_narrative_consumer
+    reuse: explicitly_reuses_GK3D4_ratios_and_three_eighths
+    ceiling: common_scale_factor_cancellation_does_not_remove_independent_sector_boundaries_logs_thresholds_or_Abelian_normalization
+    disposition: pending_adjudication
+  EL2:
+    relationship: transitive_through_GK3D5
+    ceiling: already_qualified_and_receives_no_three_sector_or_physical_weak_angle_authority
+    disposition: qualified
+  HE5:
+    relationship: transitive_through_EL2
+    ceiling: parser_runtime_receives_no_scientific_authority
+    disposition: out_of_scope
+compatibility:
+  no_surface: [GK3D4, GK3D6, EL2, HE5]
+  GK3D5: current_first_lazy_fallback_with_no_eager_legacy_default
+  version_only_scientific_failures: 0
+replay_required:
+  - exact_hash_path_and_reverse_dependency_closure_for_all_five_nodes
+  - native_runtime_exit_and_terminal_tally_for_all_five_nodes
+  - accepted_composition_dependency_closure_and_no_new_claim_gate
+  - final_queue_disposition_and_durable_decision_record
+  - primary_independent_and_affected_accepted_API_regressions
