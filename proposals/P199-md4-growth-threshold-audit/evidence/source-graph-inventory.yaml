@@ -1,0 +1,31 @@
+campaign: P199
+root_source_unit: MD4
+scope: eight_direct_dependencies_root_and_two_direct_reverse_consumers
+nodes:
+  - {source_unit: AS7, relation: direct_dependency, native_tally: 6}
+  - {source_unit: MC1, relation: direct_dependency, native_tally: 24}
+  - {source_unit: MC3, relation: direct_dependency, native_tally: 29}
+  - {source_unit: MD1, relation: direct_dependency, native_tally: 27}
+  - {source_unit: MD2, relation: direct_dependency, native_tally: 26}
+  - {source_unit: MD3, relation: direct_dependency, native_tally: 41}
+  - {source_unit: PN2, relation: direct_dependency, native_tally: 25}
+  - {source_unit: WN6, relation: direct_dependency, native_tally: 32}
+  - {source_unit: MD4, relation: root, native_tally: 34}
+  - {source_unit: MD5, relation: direct_reverse_consumer, native_tally: 63}
+  - {source_unit: MD6, relation: direct_reverse_consumer, native_tally: 40}
+expected_coverage:
+  unique_nodes: 11
+  native_checks: 347
+  dependency_and_root_records_reused: 9
+  reverse_consumer_records_reused: 2
+  fresh_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P199-md4-growth-threshold-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_21_CHECKS_PASS
+authority_state_before_P199_promotion:
+  qualified_direct_dependencies: [AS7, MC1, MC3, MD1, MD2, MD3, PN2, WN6]
+  pending_root: MD4
+  pending_reverse_consumers: [MD5, MD6]

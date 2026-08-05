@@ -40,5 +40,4 @@ adverse_tests:
   - positive_local_drift_retains_positive_death_jumps
   - static_mass_ratio_differs_from_local_time_drift
   - floating_model_inputs_and_times_are_rejected
-debt:
-  - primary_and_independent_campaign_verification
+debt: []

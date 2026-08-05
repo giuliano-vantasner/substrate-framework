@@ -1,0 +1,37 @@
+campaign: P199
+indexed_repository: substrate-framework
+indexed_commit: 1a58aa09a29c2cc0fd32567dabc6695347aa33b5
+framework_head_at_audit: c86f968
+index_status: stale
+initial_cli_failure: status_does_not_accept_repo_selector
+queries:
+  semantic_query: birth_death_immigration_markov_factorial_one
+  query_processes: 1
+  new_leaf_module_found: false
+  nearby_existing_definitions:
+    - src/substrate_framework/bosonic_fock.py:normalized_factorial_one_mass
+    - src/substrate_framework/bosonic_fock.py:factorial_one_log_concavity_ratio
+    - tests/test_factorial_one_distribution.py
+  impact_target: normalized_factorial_one_mass
+  reported_upstream_count: 2
+  reported_risk: LOW
+  reported_direct_callers:
+    - factorial_one_geometric_point_bound
+    - factorial_one_geometric_tail_bound
+authority_warning: stale_graph_omits_the_new_module_and_is_not_authoritative
+manual_authoritative_impact:
+  existing_symbol_changed: false
+  existing_signature_changed: false
+  existing_value_changed: false
+  new_leaf_module: src/substrate_framework/birth_death.py
+  new_package_exports: 10
+  direct_existing_canonical_dependencies: [src/substrate_framework/bosonic_fock.py]
+  affected_existing_tests:
+    - tests/test_bosonic_fock.py
+    - tests/test_factorial_one_distribution.py
+    - tests/test_coherent_states.py
+  new_tests: tests/test_birth_death.py
+  pending_source_consumers: [MD5, MD6]
+  generated_consumers: [docs/generated/claim-index.md, memory/framework]
+risk: low_for_additive_API_but_requires_dependency_tests_and_two_consumer_records
+debt: []

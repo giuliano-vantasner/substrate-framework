@@ -1,0 +1,20 @@
+campaign: P199
+root_source_unit: MD4
+direct_reverse_consumers:
+  MD5:
+    disposition: pending
+    accepted_reuse_candidate: C_CMB_003_positive_static_mass_and_C_MKV_001_only_for_a_separately_declared_process
+    ceiling: isotope_branching_handshake_material_weight_and_same_curve_predictions_are_not_derived
+  MD6:
+    disposition: pending
+    accepted_reuse_candidate: lexical_and_native_replay_only
+    ceiling: scanner_and_debt_tally_do_not_adjudicate_MD4_or_MD5_physics
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+pending_reverse_consumers_preserved: 2
+generated_consumers:
+  - governance/claims.yaml
+  - governance/releases
+  - docs/generated/claim-index.md
+  - memory/framework
+  - migration/source-claims.yaml

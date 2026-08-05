@@ -1,0 +1,33 @@
+campaign: P199
+claim_candidate: C-MKV-001
+comparisons:
+  C-CMB-003:
+    owns:
+      - normalized_all_nonnegative_factorial_one_mass
+      - adjacent_ratio_modes_PGF_moments_and_tail_bounds
+    does_not_own:
+      - a_time_parameter_or_inverse_time_rate
+      - a_Markov_generator_initial_law_or_transition_kernel
+      - a_unique_dynamics_selected_by_the_static_mass
+  C-VOP-001:
+    owns:
+      - coherent_state_number_measurement_Born_law_for_a_declared_state
+    does_not_own:
+      - preparation_dynamics_or_a_time_evolving_occupation_process
+      - a_material_event_transition_channel_or_rate
+  C-DOS-001_and_C-QFL-001:
+    distinction: continuum_count_and_conditional_static_variance_not_integer_state_dynamics
+  deterministic_mean_candidate:
+    distinction: ensemble_mean_corollary_not_the_full_jump_process
+  pure_birth_competitor:
+    distinction: transient_Poisson_law_without_finite_stationary_restoring_process
+novel_surface:
+  - explicit_nonnegative_integer_state_CTMC_and_boundary
+  - exact_immigration_death_generator_and_local_drift
+  - exact_time_dependent_PGF_mean_and_transition_kernel
+  - exact_stationary_detailed_balance_with_C_CMB_003_mass
+  - constructive_alternative_generator_with_the_same_stationary_mass
+  - explicit_separation_of_local_drift_from_monotone_sample_paths
+duplicate_wrapper_rejected: relabeling_the_static_adjacent_mass_ratio_as_growth
+claim_is_distinct: true
+debt: []

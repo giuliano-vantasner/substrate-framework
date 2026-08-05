@@ -1,0 +1,27 @@
+attempt: 0005
+campaign: P199
+candidate: eleven_node_graph_claim_review_and_source_disposition_review
+status: passed
+source_graph:
+  nodes: 11
+  native_checks_covered: 347
+  fresh_native_executions: 0
+  replay_checks: 21
+  exit_status: 0
+  compatibility_aliases: 0
+reviews:
+  claim: reviews/C-MKV-001-claim-review.md
+  source_disposition: reviews/MD4-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  decisions_agree: true
+recommended_claim_axes:
+  verification: symbolic_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+recommended_MD4_disposition: qualified
+recommended_MD4_mapping: [C-CMB-003, C-MKV-001]
+pending_reverse_consumers_preserved: [MD5, MD6]
+version_only_scientific_failures: 0
+debt: []
+next_attempt: freeze_review_boundary_and_stage_claim_level_promotion

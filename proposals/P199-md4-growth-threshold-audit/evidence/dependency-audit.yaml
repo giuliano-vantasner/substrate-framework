@@ -1,0 +1,24 @@
+campaign: P199
+source_unit: MD4
+declared_source_dependencies:
+  AS7: {disposition: qualified, authority_use: no_numeric_coupling_or_granularity_import}
+  MC1: {disposition: qualified, authority_use: nondynamical_dimensional_medium_ceiling_only}
+  MC3: {disposition: qualified, authority_use: nondynamical_gap_and_host_ratio_ceiling_only}
+  MD1: {disposition: qualified, authority_use: continuum_counting_ceiling_only}
+  MD2: {disposition: qualified, authority_use: conditional_variance_ceiling_only}
+  MD3: {disposition: qualified, authority_use: static_number_measurement_context_only}
+  PN2: {disposition: qualified, accepted_mapping: [], authority_use: forbidden}
+  WN6: {disposition: qualified, authority_use: C_CMB_003_static_mass_only}
+proposed_claim_dependencies: [C-CMB-003]
+state_context_only: [C-OSC-001, C-VOP-001]
+dependency_closure_exact: true
+forbidden_imports:
+  - AS7_numeric_beta_or_granularity
+  - MD1_microscopic_cutoff_or_participating_mode_count
+  - MD2_material_displacement_or_growth_law
+  - MD3_material_state_preparation_or_channel_probability
+  - PN2_external_energy_band_or_occupation
+  - MD5_or_MD6_forward_claims
+  - physical_transition_branching_isotope_reaction_or_rate
+hidden_fitted_constants: []
+debt: []
