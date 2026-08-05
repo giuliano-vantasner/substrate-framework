@@ -1,0 +1,70 @@
+id: P189
+base_release: v0.139.0
+base_commit: 33fd27ca4f523536fec08e01a644c15b1e473f96
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [WN1]
+question: >-
+  Does hash-pinned WN1 add a distinct reusable exact theorem for the squared
+  magnitude and rigorous decimal suppression of factorial cosine
+  coefficients, or is it only a unit-normalized composition of C-SG-019 with
+  elementary bounds while its PN2 subdivision band and Golden-rule rate
+  interpretation remain unaccepted?
+invariants:
+  - C-SG-019 owns the exact background- and coordinate-dependent one-high cosine coefficient, its factorial decay, and its explicit non-quantum ceiling.
+  - The general nonzero coefficient magnitude squared retains amplitude squared, high-coordinate scale squared, and low-coordinate scale to power 2*n; 1/(n!)^2 is only the unit-normalized specialization.
+  - A classical Taylor coefficient is not a matrix element or transition amplitude, and squaring it does not create a rate without states, normalization, interaction, on-shell measure, spectral density, and validity premises.
+  - PN2 is qualified bookkeeping evidence only and supplies no accepted quantum subdivision process, physical mode, energy band, or transition channel.
+  - C-SPN-002 explicitly states that a squared ladder coefficient is not a rate and supplies no Golden-rule regime, spectral density, linewidth, or material realization.
+  - For each positive integer n, positivity of the exponential series gives e^n>n^n/n! and therefore 1/(n!)^2<(e/n)^(2*n); a finite grid can regress but cannot prove the universal quantifier.
+  - Exact rational series bounds and integer comparisons take priority over float or arbitrary-precision decimal evaluations when proving a strict bound.
+  - Float underflow or overflow is representation evidence only; the exact positive rational never becomes zero.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral; immutable legacy-name stops are version-only compatibility evidence and never scientific candidate failures.
+allowed_imports:
+  - C-SG-012
+  - C-SG-019
+  - C-SPN-002
+  - C-BRN-001
+  - exact positive-integer factorial, exponential-series, rational, logarithm, monotonicity, and integer-power algebra
+  - separately supplied exact amplitude, coordinate scales, positive integer order, and integer decade as conditional inputs
+  - src/substrate_framework/cosine_vertices.py
+  - pinned P109, P110, and P111 adjudications at the framework base commit
+  - pinned source inventory and exact Git metadata at substrate@6d1f4e0
+  - WN1 and its hash-pinned dependency and reverse-consumer units as noncanonical evidence only after this freeze
+candidates:
+  - id: A
+    description: Reproduce WN1 exactly and audit every coefficient, square, bound, decimal exponent, float-underflow predicate, import, assertion, and headline conclusion edge.
+  - id: B
+    description: Classify the exact surviving surface as a direct composition of C-SG-019 and approved elementary factorial inequalities with no new claim or API.
+  - id: C
+    description: Promote a distinct exact factorial-suppression theorem and pure package API only if universal squared-weight, exponential, decimal-decade, and representation ceilings add reusable consumer semantics beyond C-SG-019.
+  - id: D
+    description: Derive WN1's three decade exponents by exact rational bounds on e and integer block comparisons rather than trusting arbitrary-precision decimal output.
+  - id: E
+    description: Retain high-precision log-gamma or mpmath evaluation only as numerical regression against the exact inequalities and explicit error enclosure.
+  - id: F
+    description: Mutate amplitude, coordinate scales, background, parity, coefficient-versus-derivative normalization, squaring, and missing Golden-rule premises to delimit the physical interpretation.
+  - id: G
+    description: Close claim, API, source, dependency, consumer, disposition, queue, release, documentation, memory, compatibility, and debt governance without blanket promotion.
+uniqueness_evidence: null
+selection_criteria:
+  - exact_universal_quantifier_and_bound_direction
+  - C_SG_019_normalization_background_and_coordinate_scale_compatibility
+  - rational_or_integer_proof_before_decimal_evaluation
+  - amplitude_matrix_element_rate_and_probability_typing
+  - PN2_and_C_SPN_002_physical_premise_ceilings
+  - correct_n_equals_one_even_order_large_order_and_rescaling_limits
+  - float_underflow_separated_from_exact_positivity
+  - assumption_parameter_and_API_economy
+  - independent_rederivation_and_load_bearing_mutation_sensitivity
+  - novelty_consumer_reach_and_governance_closure
+claims_proposed: [C-CMB-001]
+comparators_blinded_until: >-
+  No fresh result or comparator blinding is claimed. The generated queue,
+  accepted P109-P111 records, parent effort, and an accidental pre-contract
+  source-body read already expose the unit coefficient square, factorial
+  inequality, PN2 decade inputs, arbitrary-precision exponents, and float
+  underflow demonstration. Structural criteria are frozen before any P189
+  implementation, source execution, predicate adjudication, or new value is
+  selected.
+status: draft
+revision: 0001

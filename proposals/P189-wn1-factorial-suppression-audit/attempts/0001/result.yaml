@@ -1,0 +1,40 @@
+attempt: 0001
+campaign: P189
+candidate: contract_and_structural_freeze
+status: passed
+started_at: '2026-08-11T14:54:00Z'
+finished_at: '2026-08-11T14:59:00Z'
+base:
+  release: v0.139.0
+  framework_commit: 33fd27ca4f523536fec08e01a644c15b1e473f96
+  accepted_claims: 179
+  source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source:
+  unit: WN1
+  path: merged-framework/bridges/phase-37/bridge_WN1_vertex_coefficient_magnitude.py
+  sha256: 3764b29955c3bd51c10278159e08a52ff616a7041510e56917b091f1a802cdde
+  blob: c154cf916571b8e7e07c0ac19771123165fc5f6e
+  size_bytes: 13511
+  target_path_clean: true
+  history_commits: 1
+exposure:
+  source_body_seen_before_contract: true
+  mechanism: accidental_display_while_identifying_regenerated_next_queue_unit
+  fresh_result_blinding_claimed: false
+frozen:
+  provisional_claim: C-CMB-001
+  candidate_count: 7
+  selection_criteria_count: 10
+  accepted_dependency_ceilings: [C-SG-019, C-SPN-002, C-BRN-001]
+  oracle_order: [exact_rational_and_integer, symbolic, enclosed_numeric_regression]
+  compatibility_policy: current_mutable_API_or_shared_helper_and_alias_only_immutable_replay
+validation:
+  repository: passed
+  workflow_claims: 179
+  proposals: 1
+  migration_pending: 36
+  memory: passed
+  yaml_parse: passed
+  diff_check: passed
+scientific_threshold_changed: false
+next_attempt: compatibility_preflight_native_reproduction_and_predicate_inventory
