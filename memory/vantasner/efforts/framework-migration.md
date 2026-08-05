@@ -2004,20 +2004,41 @@ shared APIs LOW risk with no affected execution process. The integrated
 promotion boundary validates 734 memory records and passes all 1,554
 repository tests with a clean terminal status.
 
+P182 adds C-GW-010's exact generic-observer conditional TT coefficient matrix
+and polarization ellipse for C-GW-009's prescribed perpendicular rotation.
+The determinant and phase Gram matrix give rank two away from the edge-on
+great circle, rank one edge-on, circular axis views, generic elliptical views,
+and source-sample semiaxis ratio `sqrt(3)/2`; observer azimuth is an orbit-
+phase shift and transverse-frame rotation preserves the invariants. TX3 is
+qualified through the corrected theorem. Its two traces share one
+`2*Omega` frequency rather than incommensurate phases, its edge view is not
+tested, and fixed-phase ratio cancellation has poles and does not remove
+fixed-time `Omega` dependence, amplitude, or frequency. Its tensor and
+waveform names, self-consistent-source, physical-mode, gravity, radiation,
+stability, observation, and TX4/TX5 readings remain unaccepted. Primary,
+independent, and ten-node graph routes pass 26, 15, and 10 checks, and 100
+focused tests pass. TX3 and the new canonical module have no NumPy integration
+surface. The optimized exact API reduced its own test path from interrupted
+minute-scale eager simplification to seconds without weakening the oracle.
+The integrated promotion boundary validates 739 memory records and passes all
+1,565 repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.133.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-one accepted claims. P001 through P181 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 43 pending, 0 partial, 3 migrated, 162 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.134.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred seventy-two accepted claims. P001 through P182 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 42 pending, 0 partial, 3 migrated, 163 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 43
-pending, 3 migrated, 162 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is TX3, pinned at SHA-256
-`ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837`.
-P182 must freeze TX3 before its own source-body audit and compare every
-observer-frame polarization, temporal-rank, phase, and Omega-independence
-statement with C-GW-002/008/009. It must preserve the distinction between an
-exact conditional TT readout of a prescribed tensor path and a dynamically
-solved conserved source, physical gravity, detector waveform, or radiation
-mechanism. TX3 inherits no blanket authority from TX2's qualification.
+The effort remains active. D4 is discharged, but D1 remains open with 42
+pending, 3 migrated, 163 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is TX4, pinned at SHA-256
+`c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f`.
+P183 must freeze TX4 before its own source-body audit and separate exact
+co-rotating-coordinate or finite collective-rotor algebra from a genuine
+Floquet spectrum of a specified full-field linearization. It must require the
+action, rotating solution, operator domain, constraints and gauge modes,
+boundary data, conserved structure, spectral completeness, refinement, and
+load-bearing mutations before any stability claim. TX4 inherits no
+self-consistent field, selected-`Omega`, stability, gravity, or radiation
+authority from TX1 through TX3.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

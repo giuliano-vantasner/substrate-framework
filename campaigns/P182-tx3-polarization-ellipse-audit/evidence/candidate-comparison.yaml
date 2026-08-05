@@ -1,0 +1,26 @@
+campaign: P182
+criteria_frozen_before_source_body_audit: true
+selected:
+  - {id: A, role: exact_hash_source_and_verifier_evidence_only}
+  - {id: B, role: accepted_exact_generic_observer_coefficient_and_ellipse_theorem}
+  - {id: C, role: accepted_composition_and_nonduplication_boundary_against_C_GW_003_007_008_009}
+  - {id: F, role: governed_claim_source_consumer_and_release_closure}
+rejected:
+  - id: D
+    reason: both_traces_share_one_2_Omega_frequency_two_nonzeros_at_one_time_do_not_decide_rank_and_fixed_phase_scale_cancellation_does_not_remove_fixed_time_Omega_dependence
+deferred:
+  - id: E
+    reason: a_self_consistent_rotating_conserved_full_field_selected_Omega_gravity_propagation_detector_and_radiation_mechanism_require_new_dynamical_inputs_outside_TX3
+selection_basis:
+  - accepted_STF_TT_rotation_and_temporal_rank_conventions
+  - exact_coefficient_matrix_determinant_and_Gram_invariants
+  - generic_direction_and_circular_linear_elliptical_limits
+  - transverse_frame_covariance_and_observer_azimuth_phase_shift
+  - fixed_phase_and_fixed_physical_time_Omega_scope
+  - assumption_and_parameter_economy
+  - independent_dyadic_and_full_projector_rederivation
+  - mutation_sensitivity_and_source_predicate_counterexamples
+  - physical_scope_and_governance_closure
+numeric_comparator_used_for_selection: false
+claim: C-GW-010
+verdict: distinct_narrow_compatible_composition

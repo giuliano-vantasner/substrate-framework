@@ -2,7 +2,7 @@
 description: Audit TX3 and construct an exact generic-observer polarization-ellipse theorem
 author: vantasner
 created: '2026-08-11T08:28:00Z'
-updated: '2026-08-11T08:33:00Z'
+updated: '2026-08-11T09:06:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - tt-polarization
 - rotating-quadrupole
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P182 TX3 Polarization-Ellipse Audit
 
@@ -152,14 +152,14 @@ state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| TX3's exact implementation, predicates, assertion, values, and dataflow are unaudited in P182 | Pin every definition, input, check, assertion, result sentence, and source dependency | open |
-| Generic-observer coefficient matrix and ellipse classification are unverified | Derive exact rank, determinant, axes, handedness information, and circular/linear/null limits | open |
-| Frame covariance, direction azimuth, and time origin may be conflated | Prove the transverse-frame double-angle transformation and isolate symmetry-related phase shifts | open |
-| Fixed-phase ratio cancellation may be mislabeled as physical `Omega` independence | Derive amplitude and phase dependence at fixed phase and fixed physical time, including zeros and poles | open |
-| Tensor convention and conditional waveform may be promoted as physical radiation | Replay scale covariance and preserve dynamics, gravity, propagation, detector, and observation ceilings | open |
-| C-GW-010 may duplicate accepted claims | Compare exact statements, APIs, assumptions, evidence, and consumers | open |
-| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | open |
-| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, docs, and debt | open |
+| TX3's exact implementation, predicates, assertion, values, and dataflow are unaudited in P182 | Pin every definition, input, check, assertion, result sentence, and source dependency | closed |
+| Generic-observer coefficient matrix and ellipse classification are unverified | Derive exact rank, determinant, axes, handedness information, and circular/linear/null limits | closed |
+| Frame covariance, direction azimuth, and time origin may be conflated | Prove the transverse-frame double-angle transformation and isolate symmetry-related phase shifts | closed |
+| Fixed-phase ratio cancellation may be mislabeled as physical `Omega` independence | Derive amplitude and phase dependence at fixed phase and fixed physical time, including zeros and poles | closed |
+| Tensor convention and conditional waveform may be promoted as physical radiation | Replay scale covariance and preserve dynamics, gravity, propagation, detector, and observation ceilings | closed |
+| C-GW-010 may duplicate accepted claims | Compare exact statements, APIs, assumptions, evidence, and consumers | closed |
+| Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | closed |
+| Dependencies, consumers, and governed records may disagree | Replay graph and synchronize disposition, queue, memory, claims, release, docs, and debt | closed |
 
 ## Review and Promotion Plan
 
@@ -187,6 +187,12 @@ overread as physical-time independence, dependencies and consumers replay,
 governed records agree, and the debt ledger is empty. Reproducing seven checks,
 finding two nonzero coordinates, or naming an ellipse alone keeps the campaign
 active.
+
+P182 met this gate in release v0.134.0 by accepting exact C-GW-010 and
+qualifying TX3 predicate by predicate. The source's algebraic ellipse seed
+survives, while its frequency, ratio, convention, dynamics, and physical scope
+are corrected. All eight debts are closed, and TX4 remains a separate pending
+consumer.
 
 ## Cross-References
 

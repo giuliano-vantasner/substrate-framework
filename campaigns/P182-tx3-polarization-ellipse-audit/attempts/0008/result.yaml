@@ -1,0 +1,16 @@
+attempt: 0008
+campaign: P182
+candidate: primary_exact_verifier_first_run
+status: failed
+started_at: '2026-08-11T08:55:00Z'
+finished_at: '2026-08-11T08:56:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P182-tx3-polarization-ellipse-audit/verify.py
+result:
+  passed_before_failure: 4
+  failure_check: advertised_perpendicular_linear_view_has_no_source_predicate
+failure:
+  class: source_inventory_implementation
+  mechanism: lexical_count_included_the_q_zero_generic_guard_as_a_third_Qdd_amplitudes_call
+  scientific_finding_changed: false
+diagnosis: source_still_constructs_only_n_gen_and_n_spin_and_never_constructs_n_perp
+next_attempt: key_the_inventory_to_the_missing_direction_symbol_and_printed_linear_headline_without_the_overbroad_call_count

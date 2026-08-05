@@ -1,0 +1,24 @@
+attempt: 0013
+campaign: P182
+candidate: F_promotion_preflight
+status: passed
+started_at: '2026-08-11T09:10:00Z'
+finished_at: '2026-08-11T09:12:00Z'
+commands:
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base "$PWD" "$PWD/memory"
+  - git diff --check
+repository: WORKFLOW_VALID_172_claims_172_accepted_0_proposals
+migration_queue: 218_units_42_pending_0_partial
+memory: 739_files_valid
+scientific:
+  primary: ALL_26_CHECKS_PASS
+  independent: ALL_15_CHECKS_PASS
+  source_graph: ALL_10_CHECKS_PASS
+  focused_tests: 100_passed
+compatibility:
+  TX3_and_canonical_module_legacy_access: 0
+  scientific_failures_from_version_events: 0
+debt:
+  - one_integrated_repository_gate_then_record_only_closure
+next_attempt: run_scripts_validate_once_without_duplicate_full_pytest

@@ -1,0 +1,21 @@
+campaign: P182
+accepted_base: v0.133.0
+inputs:
+  normalized_STF_and_triple_convention: C-MOM-001
+  conditional_TT_projector_basis_and_frame_rotation: [C-GW-001, C-GW-002]
+  inclination_waveform_comparator_only: C-GW-003
+  temporal_rank_definition: C-GW-007
+  scaled_STF_conditional_waveform_and_real_m2_rank: C-GW-008
+  prescribed_perpendicular_rotation_and_power: C-GW-009
+  static_B2_application_only: [C-RMOM-001, C-RMOM-002]
+  source_evidence: TX3_at_substrate_6d1f4e0_SHA256_ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837
+derived_in_P182:
+  - observer_triad_and_azimuth_phase_relation
+  - generic_natural_frame_plus_cross_formulas
+  - arbitrary_frame_harmonic_coefficient_matrix
+  - determinant_phase_Gram_rank_and_ellipse_classification
+  - fixed_phase_ratio_domain_and_fixed_time_Omega_derivative
+empirical_inputs: []
+fitted_parameters: []
+hidden_imports: []
+debt: []

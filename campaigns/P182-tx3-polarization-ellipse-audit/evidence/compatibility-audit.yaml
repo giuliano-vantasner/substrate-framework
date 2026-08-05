@@ -1,0 +1,19 @@
+campaign: P182
+policy:
+  mutable_integration: numpy.trapezoid_or_trapezoid_integral
+  immutable_legacy_event: version_only_not_scientific_failure
+  alias: explicit_legacy_name_bound_to_numpy.trapezoid_only
+TX3:
+  imports: [sympy]
+  direct_np_trapz: false
+  direct_np_trapezoid: false
+  imported_legacy_trapz: false
+  dynamic_legacy_access: false
+  eager_legacy_default_fallback: false
+  numerical_integration_needed: false
+  native_execution: passed
+mutable_P182:
+  numerical_integration_planned: false
+  legacy_np_trapz_calls: 0
+scientific_candidate_failures_from_compatibility: 0
+debt: []

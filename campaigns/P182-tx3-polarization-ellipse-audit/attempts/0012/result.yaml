@@ -1,0 +1,20 @@
+attempt: 0012
+campaign: P182
+candidate: F_source_graph_replay
+status: passed
+started_at: '2026-08-11T09:07:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P182-tx3-polarization-ellipse-audit/reviews/replay_source_graph.py
+expected_terminal: ALL_10_CHECKS_PASS_P182_TX3_SOURCE_GRAPH
+finished_at: '2026-08-11T09:09:00Z'
+process:
+  exit_code: 0
+  terminal_tally: ALL_10_CHECKS_PASS_P182_TX3_SOURCE_GRAPH
+graph:
+  nodes: [GW2, GW3, GW4, QB3, QB4, TX1, TX2, TX3, TX4, TX5]
+  accepted_dependencies_preserved: true
+  TX3_qualified_through_C_GW_010: true
+  TX4_TX5_future_dispositions_not_frozen: true
+  mutable_legacy_numpy_integration_access: false
+debt:
+  - repository_memory_generation_and_integrated_promotion_gate
+next_attempt: promotion_preflight_then_one_integrated_gate

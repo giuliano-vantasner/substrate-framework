@@ -6356,3 +6356,75 @@ units:
       affected execution process; staged impact is recorded separately. The
       integrated promotion boundary validates 734 memory records and passes
       all 1,554 repository tests with a clean terminal status.
+  TX3:
+    disposition: qualified
+    accepted_claims:
+      - C-MOM-001
+      - C-GW-001
+      - C-GW-002
+      - C-GW-007
+      - C-GW-008
+      - C-GW-009
+      - C-RMOM-001
+      - C-RMOM-002
+      - C-GW-010
+    qualification: >-
+      TX3's prescribed normalized moment has one pure twice-Omega second-
+      derivative tensor harmonic. C-GW-010 owns its exact generic-observer
+      conditional TT readouts, arbitrary observer azimuth and transverse-
+      frame covariance, coefficient determinant and phase Gram matrix,
+      temporal-rank and ellipse classification, rotation-axis circular limit,
+      edge-on linear limit, and source-sample semiaxis ratio sqrt(3)/2. The two
+      natural-frame traces are quadrature components of the same frequency,
+      not incommensurate phases. At fixed dimensionless phase and away from
+      plus zeros their ratio cancels the common q*Omega^2 scale, but it has
+      poles and retains Omega dependence after psi=Omega*t at fixed physical
+      time; the full conditional signal also retains Omega^2 amplitude and
+      twice-Omega frequency. TX3's printed h values omit the conditional
+      waveform coefficient and distance, and its Q is normalized I_STF rather
+      than triple Q. Its source never constructs the advertised edge-on linear
+      check, its constant-radius circular predicate accepts a static false
+      positive, and transversality and tracelessness alone do not prove
+      temporal rank. The conditional power coefficient duplicates C-GW-009.
+      No accepted dependency supplies a self-consistent rotating full field,
+      local conserved source, collective inertia, dynamically selected Omega,
+      stability, physical scale, gravitational action or coupling, propagated
+      waveform or flux, physical helicity or graviton population, detector
+      signal, observation, or substrate realization. The B4 exact null and
+      all TX4/TX5 stability or full-field conclusions remain unaccepted.
+    evidence:
+      - campaigns/P182-tx3-polarization-ellipse-audit/reviews/source_adjudication.md
+      - campaigns/P182-tx3-polarization-ellipse-audit/reviews/C-GW-010-claim-review.md
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/source-reproduction.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/compatibility-audit.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/source-audit.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/check-adjudication.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/input-provenance.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/dependency-audit.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/consumer-audit.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/candidate-comparison.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/evidence/primary-provenance.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/verify.py
+      - campaigns/P182-tx3-polarization-ellipse-audit/reviews/independent_ellipse_review.py
+      - campaigns/P182-tx3-polarization-ellipse-audit/reviews/replay_source_graph.py
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0003/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0004/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0005/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0006/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0007/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0008/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0009/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0010/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0011/result.yaml
+      - campaigns/P182-tx3-polarization-ellipse-audit/attempts/0012/result.yaml
+      - memory/vantasner/decisions/C-GW-010-review.md
+      - memory/vantasner/decisions/TX3-qualified-review.md
+    note: >-
+      P182 closes twenty-six primary and fifteen independent exact checks plus
+      one hundred focused tests before the integrated boundary. TX3 and the
+      canonical module have no NumPy integration surface, so no compatibility
+      event affects a scientific verdict. The integrated promotion boundary
+      validates 739 memory records and passes all 1,565 repository tests with
+      a clean terminal status; staged impact is recorded separately.

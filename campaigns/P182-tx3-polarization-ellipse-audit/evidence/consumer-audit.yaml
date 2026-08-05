@@ -1,0 +1,26 @@
+claim: C-GW-010
+direct_consumers:
+  - TX3_source_disposition
+  - src/substrate_framework/rotating_quadrupole_polarization.py
+  - src/substrate_framework/__init__.py
+  - tests/test_rotating_quadrupole_polarization.py
+  - campaigns/P182-tx3-polarization-ellipse-audit
+  - governance/claims.yaml
+  - governance/releases/v0.134.0.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-GW-010.md
+  - memory/framework/releases/v0.134.0.md
+  - memory/vantasner/decisions/C-GW-010-review.md
+  - memory/vantasner/decisions/TX3-qualified-review.md
+  - memory/vantasner/efforts/framework-migration.md
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+narrative_reverse_consumers:
+  TX4: pending_and_inherits_no_stability_or_no_free_parameter_authority
+  TX5: pending_and_inherits_no_full_field_stability_or_physical_radiation_authority
+accepted_claims_retroactively_changed: []
+focused_tests: 100_passed
+generated_consumers: current_for_v0.134.0
+integrated_tests: 1565_passed
+debt: []

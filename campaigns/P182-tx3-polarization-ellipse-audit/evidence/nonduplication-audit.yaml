@@ -1,0 +1,29 @@
+claim: C-GW-010
+registry_campaign_memory_collision_search:
+  exact_identifier_collision: false
+  provisional_identifier_collision: false
+comparisons:
+  C-GW-002:
+    overlap: normalized_complete_TT_basis_and_double_angle_frame_rotation
+    distinction: no_time_dependent_source_coefficient_matrix_ellipse_or_Omega_scope
+  C-GW-003:
+    overlap: same_inclination_factors_face_on_circular_and_edge_on_linear_limits_for_a_declared_circular_point_pair
+    distinction: point_pair_source_only_no_C_GW_009_rotated_axisymmetric_moment_no_arbitrary_observer_azimuth_or_frame_invariant_matrix_no_ratio_domain_or_fixed_time_Omega_adjudication
+  C-GW-007:
+    overlap: temporal_rank_definition_and_frame_invariance
+    distinction: no_prescribed_rigid_rotation_or_generic_observer_ellipse_coefficients
+  C-GW-008:
+    overlap: scale_safe_conditional_waveform_real_m2_quadrature_and_rank_two_natural_axis_example
+    distinction: no_all_inclination_ellipse_semiaxes_arbitrary_azimuth_or_C_GW_009_source_application
+  C-GW-009:
+    overlap: perpendicular_rotation_second_derivative_pure_2_Omega_axis_circular_readout_and_power
+    distinction: no_generic_observer_coefficient_matrix_rank_classification_frame_covariance_or_fixed_phase_ratio_domain
+novel_objects:
+  - exact_C_GW_009_generic_observer_natural_frame_readouts
+  - arbitrary_observer_azimuth_as_orbit_phase_shift
+  - arbitrary_transverse_frame_double_angle_coefficient_matrix
+  - invariant_phase_Gram_determinant_rank_and_ellipse_semiaxes
+  - complete_circular_elliptical_linear_classification_and_source_sample_axis_ratio
+  - fixed_dimensionless_phase_scale_cancellation_separated_from_fixed_physical_time_Omega_dependence
+new_physical_premises: []
+verdict: distinct_compatible_extension_by_exact_composition

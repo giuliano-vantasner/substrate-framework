@@ -1,0 +1,40 @@
+attempt: 0002
+campaign: P182
+candidate: A_literal_source_reproduction_and_predicate_audit
+status: passed
+started_at: '2026-08-11T08:34:00Z'
+finished_at: '2026-08-11T08:39:00Z'
+source:
+  sha256: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837
+  size_bytes: 14393
+execution:
+  reused_exact_hash_evidence: campaigns/P177-bx1-l2-box-artifact-audit/attempts/0016/result.yaml
+  mode: native
+  exit_code: 0
+  terminal_tally: ALL_7_CHECKS_PASS
+inventory:
+  lexical_check_calls: 7
+  runtime_check_executions: 7
+  assertion_nodes: 1
+  imported_modules: [sympy]
+  numpy_integration_surface: none
+surviving_exact_core:
+  - one_fixed_generic_direction_has_two_nonproportional_algebraic_TT_traces
+  - rotation_axis_readout_is_equal_quadrature_and_circular_conditionally
+  - normalized_I_STF_third_derivative_norm_squared_is_288_q2_Omega6
+  - fixed_dimensionless_phase_ratio_cancels_the_common_q_Omega2_scale_where_defined
+  - zero_anisotropy_and_static_limits_have_zero_second_derivative_readout
+failed_or_insensitive_headlines:
+  - incommensurate_phase_language_is_false_both_traces_have_the_same_2_Omega_frequency
+  - perpendicular_linear_view_is_printed_but_never_constructed_or_checked
+  - fixed_phase_ratio_has_zeros_and_poles_and_does_not_remove_fixed_physical_time_Omega_dependence
+  - h_labels_omit_the_conditional_waveform_prefactor_distance_and_tensor_convention
+  - transversality_and_tracelessness_do_not_prove_temporal_rank_or_physical_modes
+  - constant_coordinate_norm_predicate_is_insensitive_to_a_static_nonzero_point
+  - normalized_I_STF_is_misnamed_Q_and_physical_self_consistent_soliton_radiation_language_is_unclosed
+  - B4_exact_null_future_TX4_TX5_and_detector_or_gravity_readings_are_unaccepted
+debt:
+  - exact_generic_observer_coefficient_matrix_rank_ellipse_and_frame_covariance
+  - exact_fixed_phase_versus_fixed_time_Omega_scope_and_ratio_domain
+  - independent_rederivation_mutations_nonduplication_dependencies_consumers_and_governance
+next_attempt: derive_candidate_B_through_a_separate_pure_phase_parameterized_API

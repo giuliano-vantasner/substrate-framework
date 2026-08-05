@@ -75,6 +75,11 @@ from .rigid_quadrupole_rotation import (
     symmetric_tensor_characteristic_polynomial,
     tilted_axisymmetric_stf_rotation_about_z,
 )
+from .rotating_quadrupole_polarization import (
+    PerpendicularRotationTTPolarization,
+    conditional_perpendicular_rotation_polarization,
+    perpendicular_axisymmetric_stf_second_derivative,
+)
 from .boundary_correlations import (
     OrientedHalfLineParityLedger,
     ScalarBoundaryParityLedger,
@@ -1065,6 +1070,7 @@ __all__ = [
     "ConditionalAxisymmetricRadiationCoefficients",
     "ConditionalScaledSTFWaveform",
     "RigidAxisymmetricSTFRotation",
+    "PerpendicularRotationTTPolarization",
     "GovernanceError",
     "GravitySourceNormalizationLedger",
     "GroundCouplingLedger",
@@ -1515,6 +1521,8 @@ __all__ = [
     "symmetric_spin_rung",
     "symmetric_trace_free",
     "axisymmetric_stf_from_transverse_eigenvalue",
+    "conditional_perpendicular_rotation_polarization",
+    "perpendicular_axisymmetric_stf_second_derivative",
     "rigid_axisymmetric_stf_rotation",
     "rodrigues_rotation_matrix",
     "symmetric_tensor_characteristic_polynomial",

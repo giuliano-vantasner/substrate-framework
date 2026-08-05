@@ -1,0 +1,32 @@
+attempt: 0015
+campaign: P182
+candidate: final_staged_impact
+status: passed
+started_at: '2026-08-11T09:16:00Z'
+finished_at: '2026-08-11T09:18:00Z'
+commands:
+  - node .gitnexus/run.cjs analyze
+  - mcp__gitnexus__detect_changes repo=substrate-framework scope=staged
+graph_refresh:
+  nodes: 27436
+  edges: 42409
+  clusters: 381
+  flows: 2
+staged_change_detection:
+  changed_count: 121
+  changed_files: 47
+  affected_count: 0
+  affected_processes: []
+  risk_level: low
+host_artifacts_removed:
+  - AGENTS.md_generated_block
+  - CLAUDE.md
+  - .claude/skills/gitnexus
+scientific_gate_reused:
+  primary: ALL_26_CHECKS_PASS
+  independent: ALL_15_CHECKS_PASS
+  source_graph: ALL_10_CHECKS_PASS
+  focused_tests: 100_passed
+  integrated: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS_1565_pytest
+debt: []
+next_attempt: commit_then_freeze_P183_TX4_before_source_body

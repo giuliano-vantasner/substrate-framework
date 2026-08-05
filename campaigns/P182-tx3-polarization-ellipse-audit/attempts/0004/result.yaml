@@ -1,0 +1,17 @@
+attempt: 0004
+campaign: P182
+candidate: B_single_projector_template_optimization
+status: failed
+started_at: '2026-08-11T08:44:00Z'
+finished_at: '2026-08-11T08:46:00Z'
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_rotating_quadrupole_polarization.py
+result:
+  passed_before_interrupt: 4
+  failed: 0
+  elapsed_seconds: 113.66
+failure:
+  class: implementation_efficiency
+  mechanism: one_full_generic_symbolic_TT_projector_template_was_still_rebuilt_for_every_API_call_and_test_case
+diagnosis: no_scientific_assertion_failed_but_the_API_would_make_dependency_replay_ceremonially_expensive
+scientific_candidate_rejected: false
+next_attempt: canonicalize_the_exact_closed_second_derivative_and_coefficient_map_then_keep_full_projector_algebra_as_one_independent_verifier_only

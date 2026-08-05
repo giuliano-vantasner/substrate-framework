@@ -1,0 +1,74 @@
+campaign: P182
+title: TX3 generic-observer polarization-ellipse and Omega-scope audit
+source_baseline: substrate@6d1f4e0
+source_units: [TX3]
+base_release: v0.133.0
+accepted_release: v0.134.0
+adjudicated_at: '2026-08-11T09:06:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_is_retained_as_source_evidence_only.}
+  - {id: B, reason: Exact_generic_observer_coefficient_matrix_and_ellipse_invariants_earn_C_GW_010.}
+  - {id: C, reason: Accepted_TT_rank_rotation_and_point_pair_results_bound_the_new_claim_to_a_narrow_distinct_composition.}
+  - {id: F, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: D, decision: rejected_because_two_nonzero_instantaneous_coordinates_and_a_variable_ratio_are_not_a_complete_temporal_rank_or_Omega_independence_oracle}
+  - {id: E, decision: deferred_as_a_distinct_full_field_selected_Omega_stability_gravity_propagation_and_detector_problem}
+claims:
+  - {id: C-GW-010, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-GW-002, decision: unchanged_TT_basis_normalization_and_double_angle_frame_rotation}
+  - {id: C-GW-007, decision: unchanged_temporal_rank_definition_and_frame_invariance}
+  - {id: C-GW-008, decision: unchanged_scale_safe_conditional_waveform_and_real_m2_rank_algebra}
+  - {id: C-GW-009, decision: unchanged_prescribed_perpendicular_rotation_and_axis_readout}
+  - {id: C-GW-003, decision: unchanged_point_pair_inclination_comparator_not_a_dependency}
+  - {id: C-RMOM-001, decision: unchanged_exact_conditional_static_B2_application}
+  - {id: C-RMOM-002, decision: unchanged_qualified_dimensionless_magnitude_application}
+unpromoted_claims:
+  - {id: TX3_incommensurate_phases, reason: Both_traces_have_the_same_2_Omega_frequency_and_are_quadrature_components_in_the_natural_frame.}
+  - {id: TX3_source_generic_and_linear_checks, reason: One_sample_does_not_prove_genericity_and_the_advertised_edge_view_is_not_executed.}
+  - {id: TX3_Omega_discharged_or_no_free_parameter, reason: Only_a_common_scale_cancels_at_fixed_dimensionless_phase_where_the_ratio_is_defined_Omega_controls_fixed_time_phase_amplitude_and_frequency.}
+  - {id: TX3_h_and_Q_labels, reason: Source_h_omits_the_conditional_waveform_prefactor_and_distance_and_source_Q_is_normalized_I_STF.}
+  - {id: exact_self_consistent_rotating_soliton_or_conserved_source, reason: Prescribed_moment_kinematics_do_not_supply_full_field_equations_stress_inertia_or_selected_Omega.}
+  - {id: physical_modes_gravity_waveform_radiation_detector_or_observation, reason: Only_conditional_TT_algebra_is_imported.}
+  - {id: exact_B4_null, reason: TX1_supplies_only_a_resolution_bounded_rank_two_B4_null.}
+  - {id: TX4_TX5_stability_or_full_field_closure, reason: Future_sources_are_separately_pending_and_cannot_validate_TX3.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_ellipse_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-GW-010-claim-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  focused_attempt: attempts/0011/result.yaml
+  exact_attempt: attempts/0009/result.yaml
+  independent_attempt: attempts/0010/result.yaml
+  graph_attempt: attempts/0012/result.yaml
+  integrated_attempt: attempts/0014/result.yaml
+source_disposition: {TX3: qualified}
+accepted_mappings: [C-MOM-001, C-GW-001, C-GW-002, C-GW-007, C-GW-008, C-GW-009, C-RMOM-001, C-RMOM-002, C-GW-010]
+compatibility:
+  source_numpy_surface: none
+  mutable_current_name: numpy.trapezoid_or_shared_trapezoid_integral
+  version_only_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.134.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P182-tx3-polarization-ellipse-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P182-tx3-polarization-ellipse-audit/reviews/independent_ellipse_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P182-tx3-polarization-ellipse-audit/reviews/replay_source_graph.py
+  - pytest tests/test_rotating_quadrupole_polarization.py tests/test_rigid_quadrupole_rotation.py tests/test_conditional_triaxial_radiation.py tests/test_tt_angular.py tests/test_triaxial_l2.py tests/test_axisymmetric_radiation.py tests/test_conserved_moments.py tests/test_rational_map_moments.py tests/test_circular_pair.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

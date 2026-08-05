@@ -1,0 +1,24 @@
+claim: C-GW-010
+direct_dependencies: [C-GW-002, C-GW-007, C-GW-008, C-GW-009]
+transitive_dependencies:
+  - C-MOM-001
+  - C-GW-001
+  - C-MOM-003
+  - C-PDE-009
+  - C-PDE-004
+application_dependencies_not_needed_for_the_theorem: [C-RMOM-001, C-RMOM-002]
+comparators_not_dependencies: [C-GW-003]
+closure:
+  accepted: true
+  undeclared_constants: []
+  empirical_comparators: []
+  fitted_parameters: []
+  physical_source_dynamics: none
+  gravity_or_detector_model_beyond_declared_conditional_premise: none
+conventions:
+  q: repeated_transverse_eigenvalue_of_normalized_I_STF
+  s: explicit_nonzero_Q_s_equals_s_times_I_STF_scale
+  phase: dimensionless_prescribed_orbit_phase
+  Omega: prescribed_angular_speed_and_not_derived
+  G_and_R: conditional_waveform_symbols_with_R_nonzero
+debt: []

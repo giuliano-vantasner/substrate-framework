@@ -1,0 +1,26 @@
+attempt: 0007
+campaign: P182
+candidate: B_exact_closed_API_and_focused_replay
+status: passed
+started_at: '2026-08-11T08:52:00Z'
+finished_at: '2026-08-11T08:54:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python -m pytest -q
+  tests/test_rotating_quadrupole_polarization.py
+  tests/test_rigid_quadrupole_rotation.py
+  tests/test_conditional_triaxial_radiation.py tests/test_triaxial_l2.py
+result:
+  passed: 48
+  failed: 0
+  elapsed_seconds: 7.59
+new_test_file:
+  collected: 11
+  elapsed_seconds_after_optimization: approximately_2.34
+optimization:
+  canonical_API: exact_factored_second_derivative_coefficient_matrix_and_orthogonality_invariants
+  expensive_full_projector_route: reserved_for_one_independent_cross_check
+  scientific_scope_changed: false
+debt:
+  - primary_and_independent_verifier_mutation_and_source_predicate_audit
+  - nonduplication_dependency_consumer_claim_review_and_governance
+next_attempt: run_primary_exact_source_aware_verifier

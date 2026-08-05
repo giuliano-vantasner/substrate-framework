@@ -1,0 +1,26 @@
+attempt: 0014
+campaign: P182
+candidate: integrated_promotion_boundary
+status: passed
+started_at: '2026-08-11T09:08:00Z'
+finished_at: '2026-08-11T09:16:00Z'
+commands:
+  - scripts/validate.sh
+  - git diff --check
+pre_gate:
+  repository: WORKFLOW_VALID_172_claims_172_accepted_0_proposals
+  migration_queue: 218_units_42_pending_0_partial
+  memory: 739_files_valid
+  primary: ALL_26_CHECKS_PASS
+  independent: ALL_15_CHECKS_PASS
+  source_graph: ALL_10_CHECKS_PASS
+  focused_tests: 100_passed
+integrated_gate:
+  repository: WORKFLOW_VALID_172_claims_172_accepted_0_proposals
+  migration_queue: 218_units_42_pending_0_partial
+  memory: 739_files_valid
+  skill: valid
+  pytest: 1565_passed_in_158.45_seconds
+  terminal: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+debt: []
+next_attempt: finalize_staged_impact_and_commit_without_repeating_the_full_suite

@@ -1,0 +1,34 @@
+source_unit: TX3
+checks:
+  TX3.1:
+    verdict: qualified
+    retained: exact_rank_two_algebraic_TT_trace_for_the_sample_direction_after_full_coefficient_derivation
+    rejected: [incommensurate_phases, physical_modes, self_consistent_soliton, generic_theorem_from_one_sample]
+  TX3.2:
+    verdict: qualified
+    retained: fixed_dimensionless_phase_common_scale_cancellation_on_the_ratio_domain
+    rejected: [fixed_physical_time_Omega_independence, no_free_parameter, Omega_debt_discharged]
+  TX3.3:
+    verdict: verifier_insensitive_but_claim_recoverable
+    retained: exact_rotation_axis_conditional_circular_readout_from_C_GW_009_and_P182_rederivation
+    rejected: [physical_radiation, maximal_physical_two_mode_interpretation, claimed_static_triaxial_comparison]
+  TX3.4:
+    verdict: duplicate_qualified
+    retained: C_GW_009_conditional_power_288*G*q^2*Omega^6/5_in_normalized_convention
+    rejected: [derived_gravity, self_consistent_steady_emitter, absolute_units]
+  TX3.5:
+    verdict: qualified_projector_regression_only
+    retained: exact_transverse_traceless_projection
+    rejected: [temporal_rank_from_transversality, physical_mode_count]
+  TX3.G-A:
+    verdict: qualified
+    retained: exact_zero_anisotropy_limit
+    rejected: [exact_B4_null]
+  TX3.G-B:
+    verdict: accepted_limit_but_tautological_oracle
+    retained: exact_static_second_derivative_null
+    rejected: [full_static_source_or_gravity_statement]
+advertised_unchecked_claims:
+  perpendicular_line_of_sight_linear: requires_P182_exact_derivation
+  all_generic_directions_elliptical: requires_P182_exact_classification
+overall: candidate_B_positive_theorem_required_before_TX3_disposition

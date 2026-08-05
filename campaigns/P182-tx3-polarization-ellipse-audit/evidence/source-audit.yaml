@@ -1,0 +1,72 @@
+source_unit: TX3
+hash: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837
+body_tensor:
+  source_name: Q_body
+  expression: diag(q,q,-2*q)
+  actual_accepted_convention: normalized_I_STF
+  source_name_conflict: source_calls_it_Q_but_C_MOM_001_reserves_Q_for_3_times_I_STF
+rotation:
+  axis: positive_x
+  body_symmetry_axis: positive_z
+  orientation: right_handed
+  phase: Omega*t
+  status: prescribed_kinematics_only
+second_derivative:
+  expression: 6*q*Omega^2*Matrix([[0,0,0],[0,-cos(2*Omega*t),-sin(2*Omega*t)],[0,-sin(2*Omega*t),cos(2*Omega*t)]])
+  frequency: 2*Omega
+  DC: zero
+third_derivative_norm_squared:
+  expression: 288*q^2*Omega^6
+  time_dependence: constant
+projection:
+  formula: P*M*P-P*trace(P*M*P)/2_for_unit_n
+  generic_direction_checked: (1,1,1)/sqrt(3)
+  spin_direction_checked: (1,0,0)
+  advertised_perpendicular_linear_direction_constructed: false
+  waveform_prefactor_or_distance_applied: false
+predicates:
+  TX3.1:
+    actual: both_fixed_frame_expressions_nonzero_and_time_derivative_of_ratio_nonzero
+    supports: two_nonproportional_algebraic_traces_for_one_direction
+    does_not_support: incommensurate_frequencies_physical_modes_self_consistent_soliton_or_generic_direction_theorem
+  TX3.2:
+    actual: ratio_derivative_in_q_zero_and_phase_substitution_round_trip
+    supports: common_scale_cancellation_at_fixed_dimensionless_phase_where_h_plus_nonzero
+    does_not_support: fixed_physical_time_Omega_independence_ratio_domain_closure_or_no_free_parameters
+  TX3.3:
+    actual: spin_axis_coordinate_norm_time_constant_and_each_expression_not_identically_zero
+    supports_with_exact_harmonic_context: conditional_circular_axis_readout
+    verifier_gap: static_nonzero_coordinate_pair_would_pass_the_literal_predicate
+  TX3.4:
+    actual: one_fifth_times_third_derivative_norm_matches_288_over_5_and_is_constant
+    supports: C_GW_009_conditional_normalized_convention_power_composition
+    does_not_support: derived_gravity_self_consistent_emission_or_absolute_units
+  TX3.5:
+    actual: one_projected_tensor_is_transverse_and_traceless
+    supports: projector_application_for_one_direction
+    does_not_support: projector_operator_rank_temporal_rank_or_physical_polarization_count
+  TX3.G-A:
+    actual: q_to_zero_makes_the_second_derivative_readout_zero
+    supports: zero_anisotropy_limit
+    overclaim: B4_exact_null_is_not_accepted
+  TX3.G-B:
+    actual: differentiating_a_literal_constant_tensor_twice_gives_zero
+    supports: static_moment_conditional_null
+    verifier_strength: tautological_limit_guard
+terminology:
+  source_incommensurate_phases: false
+  corrected_relation: same_2_Omega_frequency_in_quadrature_in_the_natural_meridian_frame
+  source_generic: one_sample_only
+  source_h_symbols: unscaled_second_derivative_readouts_not_conditional_waveform_components
+  source_two_modes: exact_temporal_rank_requires_full_trace_coefficient_matrix
+physical_ceiling:
+  unaccepted:
+    - solved_rotating_full_field
+    - local_conserved_rotating_stress
+    - dynamically_selected_Omega
+    - physical_scale_and_inertia
+    - gravity_action_or_coupling
+    - propagated_or_detector_waveform
+    - physical_graviton_or_helicity_population
+    - radiation_mechanism_or_observation
+    - TX4_or_TX5_future_conclusions

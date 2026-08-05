@@ -1,0 +1,26 @@
+campaign: P182
+claim: C-GW-010
+base_release: v0.133.0
+source_sha256: ce6db5f59e61829c287e7cced5a53506838d31c77ba9e651dbceb9a241275837
+primary:
+  path: campaigns/P182-tx3-polarization-ellipse-audit/verify.py
+  terminal_tally: ALL_26_CHECKS_PASS_P182_TX3_C_GW_010
+  exit_code: 0
+independent:
+  path: campaigns/P182-tx3-polarization-ellipse-audit/reviews/independent_ellipse_review.py
+  terminal_tally: ALL_15_CHECKS_PASS_P182_INDEPENDENT_C_GW_010
+  exit_code: 0
+focused:
+  tests: 100
+  elapsed_seconds: 19.53
+  exit_code: 0
+mutations:
+  - wrong_tensor_normalization
+  - wrong_Omega_derivative_power
+  - wrong_off_diagonal_sign
+  - zero_q
+  - zero_Omega
+  - proportional_two_coordinate_trace
+  - static_false_circular_proxy
+  - one_component_TT_rank_counterexample
+oracle_ceiling: symbolic_verified

@@ -1,0 +1,24 @@
+attempt: 0009
+campaign: P182
+candidate: primary_exact_source_aware_verifier
+status: passed
+started_at: '2026-08-11T08:56:00Z'
+finished_at: '2026-08-11T08:58:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P182-tx3-polarization-ellipse-audit/verify.py
+process:
+  exit_code: 0
+  terminal_tally: ALL_26_CHECKS_PASS_P182_TX3_C_GW_010
+coverage:
+  - pinned_source_release_AST_and_compatibility
+  - exact_phase_derivative_and_pure_2_Omega_line
+  - arbitrary_observer_frame_and_natural_readout
+  - coefficient_matrix_determinant_Gram_and_temporal_rank
+  - circular_linear_elliptical_and_source_sample_limits
+  - ratio_domain_fixed_phase_cancellation_and_fixed_time_Omega_dependence
+  - frame_rotation_azimuth_shift_and_convention_covariance
+  - full_canonical_projector_cross_check
+  - source_predicate_sensitivity_counterexamples_and_conditional_power_duplicate
+debt:
+  - independent_no_new_module_rederivation
+  - nonduplication_dependency_consumer_claim_review_and_governance
+next_attempt: independent_dyadic_contraction_and_projector_rederivation

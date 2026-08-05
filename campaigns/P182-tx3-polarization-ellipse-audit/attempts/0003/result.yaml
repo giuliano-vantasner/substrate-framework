@@ -1,0 +1,19 @@
+attempt: 0003
+campaign: P182
+candidate: B_first_generic_frame_implementation
+status: failed
+started_at: '2026-08-11T08:40:00Z'
+finished_at: '2026-08-11T08:43:00Z'
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_rotating_quadrupole_polarization.py
+result:
+  passed_before_interrupt: 3
+  failed: 1
+  elapsed_seconds: 160.57
+failure:
+  class: representation_and_implementation_efficiency
+  exact_identity: cos(3*iota)=4*cos(iota)^3-3*cos(iota)
+  mechanism: determinant_was_mathematically_correct_but_not_reduced_before_a_structural_zero_comparison
+  performance: repeated_full_symbolic_TT_projection_for_actual_cosine_and_sine_phases_made_frame_covariance_tests_unacceptably_slow
+diagnosis: scientific_candidate_not_rejected
+preserved_evidence: exact_coefficient_matrix_and_gram_assertions_passed_before_the_determinant_representation_failure
+next_attempt: build_one_natural_frame_symbolic_template_then_obtain_phase_samples_and_frame_rotation_by_exact_substitution_and_2_angle_coordinate_rotation

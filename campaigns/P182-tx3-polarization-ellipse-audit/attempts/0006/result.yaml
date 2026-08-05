@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P182
+candidate: B_factored_closed_coefficient_map
+status: failed
+started_at: '2026-08-11T08:50:00Z'
+finished_at: '2026-08-11T08:51:00Z'
+command: PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_rotating_quadrupole_polarization.py
+result:
+  passed: 10
+  failed: 1
+  elapsed_seconds: 2.34
+failure:
+  class: test_representation
+  mechanism: simplified_ratio_used_tan_2psi_so_the_pole_was_not_stored_as_a_literal_cosine_denominator
+diagnosis: fixed_phase_scale_cancellation_and_pole_remain_exact_but_the_test_inspected_one_expression_tree
+scientific_candidate_rejected: false
+performance_improvement: exact_file_reduced_from_more_than_104_seconds_interrupted_to_2.34_seconds_complete
+next_attempt: test_the_ratio_domain_by_an_exact_plus_zero_and_generic_cross_nonzero_phase
