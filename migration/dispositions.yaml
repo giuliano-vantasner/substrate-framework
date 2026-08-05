@@ -6885,3 +6885,61 @@ units:
       boundary. WN1, every reverse consumer, and all mutable P189 code have no
       legacy NumPy quadrature surface, so no version event affects a scientific
       verdict. Twelve reverse consumers remain individually pending.
+  WN2:
+    disposition: qualified
+    accepted_claims:
+      - C-SG-019
+      - C-CMB-001
+      - C-CMB-002
+      - C-BRN-001
+    qualification: >-
+      C-SG-019 retains the exact zero-background parity and normalization
+      factors, C-CMB-001 retains inverse-square factorial suppression and
+      exact decade ceilings, C-CMB-002 retains the declared positive-integer
+      sample space, exact Bessel normalization, rational odd-tail enclosure,
+      and normalized concentration inequalities, and C-BRN-001 retains the
+      conditional positive-weight and general zero-endpoint allocation
+      domains. WN2's parity flip is exact floor arithmetic but not an accepted
+      physical absurdity criterion. A mode at one is not universally
+      inadmissible, changes when the declared activity changes, and cannot be
+      combined with a deterministic floor count without deriving a common
+      physical sample space. PN2 supplies no accepted physical band or
+      channel, and the finite admissibility guard plus its WN3/WN4 forward
+      example are rejected. No universal coefficient-weight refutation,
+      physical rate, material mechanism, or downstream conclusion is accepted.
+    evidence:
+      - campaigns/P190-wn2-coefficient-weight-audit/reviews/source_adjudication.md
+      - campaigns/P190-wn2-coefficient-weight-audit/reviews/C-CMB-002-claim-review.md
+      - campaigns/P190-wn2-coefficient-weight-audit/reviews/impact_analysis.md
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/source-reproduction.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/compatibility-audit.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/source-audit.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/check-adjudication.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/formula-freeze.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/input-provenance.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/dependency-audit.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/consumer-audit.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/candidate-comparison.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/implementation-audit.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/gitnexus-impact.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/primary-provenance.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/evidence/independent-provenance.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/verify.py
+      - campaigns/P190-wn2-coefficient-weight-audit/reviews/independent_odd_mass_review.py
+      - campaigns/P190-wn2-coefficient-weight-audit/reviews/replay_source_graph.py
+      - campaigns/P190-wn2-coefficient-weight-audit/attempts/0002/result.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/attempts/0003/result.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/attempts/0004/result.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/attempts/0005/result.yaml
+      - campaigns/P190-wn2-coefficient-weight-audit/attempts/0006/result.yaml
+      - memory/vantasner/decisions/C-CMB-002-review.md
+      - memory/vantasner/decisions/WN2-qualified-review.md
+    note: >-
+      P190 closes 56 primary and 22 independent exact checks, 76 focused
+      tests, and a twelve-node 524-check native semantic replay before the
+      integrated boundary. WN2, every consumer, and all mutable P190 code have
+      no legacy NumPy quadrature surface, so no version event affects a
+      scientific verdict. Eleven semantic consumers remain individually
+      pending.

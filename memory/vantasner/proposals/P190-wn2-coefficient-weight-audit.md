@@ -2,7 +2,7 @@
 description: Audit WN2 and derive an exact parity-thinned factorial mass and conditional allocation ledger
 author: vantasner
 created: '2026-08-11T15:58:00Z'
-updated: '2026-08-11T16:45:00Z'
+updated: '2026-08-11T16:50:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - factorial-concentration
 - branching-weight
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P190 WN2 Coefficient-Weight Audit
 
@@ -194,7 +194,16 @@ with no legacy NumPy surface. Individual claim review accepts C-CMB-002 as a
 symbolic compatible extension, and source review qualifies WN2 through
 C-SG-019, C-CMB-001, C-CMB-002, and C-BRN-001. WN3 and WN7 repeat the rejected
 guard and WN6 repeats the overbroad verdict, so all eleven consumers remain
-pending. The release and generated-governance transaction remains open.
+pending. At that review boundary, the release and generated-governance
+transaction remained open.
+
+Attempt 0006 closes the transaction in v0.141.0. The registry and release now
+contain 181 accepted claims, WN2 is qualified with four accepted mappings, the
+regenerated queue has 34 pending units, and canonical documentation and memory
+agree. The single integrated gate validates all 778 memory files and passes
+all 1,673 tests in 173.80 pytest seconds, 187.00 wall seconds, and 214,836 KiB
+peak RSS. No version event changes a scientific verdict, all eleven consumers
+remain separately pending, and the P190 debt ledger is empty.
 
 ## Debt Ledger
 
@@ -204,16 +213,16 @@ compatibility, dependencies, consumers, and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| WN2 was exposed before P190 | Record exposure and claim no fresh blinding | disclosed |
-| Source predicates and conclusion edges are not P190-adjudicated | Pin and classify every executable and narrative edge | open |
-| Finite tail bounds may masquerade as exact normalized mass | Derive the infinite sum and certify concentration with an independent tail | open |
-| A chosen sample space may be hidden | Declare parity support, order domain, and normalization measure | open |
-| Coefficient values may be called rates or probabilities | Supply full rate premises or retain the mathematical-only scope | open |
-| PN2 may be treated as a physical band or n=1 exclusion | Preserve its qualified bookkeeping ceiling | open |
-| WN3/WN4 forward-cycle claims may be imported | Exclude them until individually accepted | open |
-| C-CMB-002 may duplicate accepted mathematics | Complete claim, API, and consumer nonduplication before promotion | open |
-| Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | open |
-| Governed records may disagree | Replay and synchronize every affected path with empty debt | open |
+| WN2 was exposed before P190 | Record exposure and claim no fresh blinding | discharged |
+| Source predicates and conclusion edges are not P190-adjudicated | Pin and classify every executable and narrative edge | discharged |
+| Finite tail bounds may masquerade as exact normalized mass | Derive the infinite sum and certify concentration with an independent tail | discharged |
+| A chosen sample space may be hidden | Declare parity support, order domain, and normalization measure | discharged |
+| Coefficient values may be called rates or probabilities | Supply full rate premises or retain the mathematical-only scope | discharged |
+| PN2 may be treated as a physical band or n=1 exclusion | Preserve its qualified bookkeeping ceiling | discharged |
+| WN3/WN4 forward-cycle claims may be imported | Exclude them until individually accepted | discharged |
+| C-CMB-002 may duplicate accepted mathematics | Complete claim, API, and consumer nonduplication before promotion | discharged |
+| Compatibility may masquerade as science | Repair mutable access or alias-replay immutable access without candidate rejection | discharged |
+| Governed records may disagree | Replay and synchronize every affected path with empty debt | discharged |
 
 ## Review and Promotion Plan
 
@@ -231,6 +240,11 @@ sample-space and rate premise is explicit, candidates and mutations are
 adjudicated, dependencies and consumers replay, governed state agrees, and the
 debt ledger is empty. Refuting WN2's universal physical conclusion is evidence,
 not a substitute for the positive object.
+
+This gate passed in v0.141.0. C-CMB-002 supplies the positive exact mass
+object, C-BRN-001 supplies only the explicitly conditional allocation
+composition, WN2 is individually qualified, and no downstream source is
+blanket-promoted.
 
 ## Cross-References
 

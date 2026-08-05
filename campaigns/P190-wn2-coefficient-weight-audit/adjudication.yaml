@@ -65,5 +65,13 @@ validation_commands:
   - pytest_affected_tests
   - scripts_validate_sh
   - git_diff_check
+integrated_gate:
+  attempt: attempts/0006/result.yaml
+  memory_files: 778
+  tests_passed: 1673
+  pytest_seconds: 173.80
+  wall_seconds: 187.00
+  maximum_resident_kib: 214836
+  exit_status: 0
 debt: []
 status: accepted
