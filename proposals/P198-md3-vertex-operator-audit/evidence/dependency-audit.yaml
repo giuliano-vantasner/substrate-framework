@@ -1,0 +1,20 @@
+campaign: P198
+source_unit: MD3
+declared_source_dependencies:
+  PN1: {disposition: qualified, accepted_mapping: [C-SG-019], authority_use: comparison_ceiling_only}
+  PN2: {disposition: qualified, accepted_mapping: [], authority_use: forbidden}
+  PN3: {disposition: qualified, accepted_mapping: [C-SPN-002], authority_use: distinct_finite_ladder_comparison_only}
+  WN3: {disposition: qualified, accepted_mapping: [C-SG-019, C-CMB-001, C-OSC-001], authority_use: C_OSC_001_only}
+  WN4: {disposition: qualified, accepted_mapping: [C-OSC-001, C-CMB-003], authority_use: both}
+  WN6: {disposition: qualified, accepted_mapping: [C-SG-019, C-OSC-001, C-CMB-003, C-OSC-002], authority_use: C_OSC_001_and_C_CMB_003_with_other_claims_as_ceilings}
+proposed_claim_dependencies: [C-OSC-001, C-CMB-003]
+dependency_closure_exact: true
+forbidden_imports:
+  - PN2_external_24_MeV_and_meV_to_eV_band
+  - WN6_material_RMS_amplitude
+  - accepted_classical_medium_quantization
+  - Huang_Rhys_or_Franck_Condon_material_Hamiltonian
+  - physical_transition_channel_density_or_rate
+  - MD4_MD5_or_MD6_forward_claims
+hidden_fitted_constants: []
+debt: []

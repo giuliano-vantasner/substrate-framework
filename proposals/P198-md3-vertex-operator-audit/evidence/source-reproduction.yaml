@@ -1,0 +1,24 @@
+campaign: P198
+source_unit: MD3
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py
+sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128
+bytes: 10782
+command: PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-38/bridge_MD3_vertex_operator_removes_the_single_vacuum_bound.py
+exit_status: 0
+wall_seconds: 0.58
+static_check_calls: 20
+literal_check_calls: 13
+dynamic_check_calls: 7
+runtime_checks: 41
+terminal_tally: ALL_41_CHECKS_PASS
+imports: [sys, sympy, mpmath]
+numpy_surface: none
+sampled_quadrature: none
+compatibility_event: none
+status: reproduced_as_noncanonical_source_evidence
+ceiling: >-
+  Successful execution establishes only the predicates actually represented.
+  The finite interior commutator is not a global BCH oracle, the weight helper
+  inserts the normal-ordered coefficient rather than exponentiating the source
+  matrix, and integer intensity has an adjacent mode tie.

@@ -1,0 +1,24 @@
+campaign: P198
+root_source_unit: MD3
+direct_reverse_consumers:
+  MD4:
+    disposition: pending
+    accepted_reuse_candidate: coherent_state_number_probability_only_if_displacement_state_and_number_observable_are_declared
+    ceiling: growth_rescue_material_amplitude_and_PN2_band_are_not_derived
+  MD5:
+    disposition: pending
+    accepted_reuse_candidate: exact_number_probability_shape_only
+    ceiling: branching_isotope_handshake_and_same_curve_predictions_are_not_derived
+  MD6:
+    disposition: pending
+    accepted_reuse_candidate: lexical_and_native_replay_only
+    ceiling: scanner_and_debt_tally_do_not_adjudicate_MD3_or_later_physics
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+pending_reverse_consumers_preserved: 3
+generated_consumers:
+  - governance/claims.yaml
+  - governance/releases
+  - docs/generated/claim-index.md
+  - memory/framework
+  - migration/source-claims.yaml

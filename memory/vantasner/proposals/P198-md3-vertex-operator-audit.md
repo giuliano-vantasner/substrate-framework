@@ -2,7 +2,7 @@
 description: Separate coherent occupation support from compact phase vertices and classical cosine vacua
 author: vantasner
 created: '2026-08-11T22:10:00Z'
-updated: '2026-08-11T22:12:00Z'
+updated: '2026-08-11T22:18:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -113,6 +113,13 @@ does not select a scientific candidate. A failed scientific route must identify
 whether the fault is implementation, representation, operator choice, target,
 or foundation and then continue without lowering the bar.
 
+Attempt 0003 reproduces all 41 native checks with no compatibility event. It
+selects Candidate A and retains B as a counterexample. The exact coherent-state
+core survives, while the finite interior commutator is not a global BCH proof,
+the source weight helper inserts rather than derives its coefficient, positive
+integer intensity has tied modes S-1 and S, and scalar periodicity selects no
+material displacement or state.
+
 ## Debt Ledger
 
 The ledger tracks every conflation that could turn an exact state identity
@@ -121,11 +128,11 @@ into an unsupported physical claim.
 | Debt | Discharge | Status |
 | --- | --- | --- |
 | Prior MD3 execution prevents fresh blinding | Preserve P191/P192 exposure and freeze before renewed P198 work | discharged by validated attempt 0002 |
-| Vertex terminology can conflate distinct operators | Type every Hilbert space, operator, domain, and state | open |
-| Gaussian normalization and ordering are load bearing | Independently derive BCH coefficients and mutate the half factor | open |
-| Factorial-one mass may be called a physical probability or rate | Require preparation and observable semantics; retain the mathematical ceiling | open |
-| Occupation support may be confused with classical vacua | Give explicit countermodels and support taxonomy | open |
-| Claim may duplicate C-OSC-001 or C-CMB-003 | Complete claim-level nonduplication review | open |
+| Vertex terminology can conflate distinct operators | Type every Hilbert space, operator, domain, and state | discharged by source audit and Candidate B counterexample |
+| Gaussian normalization and ordering are load bearing | Independently derive BCH coefficients and mutate the half factor | open pending canonical and independent verification |
+| Factorial-one mass may be called a physical probability or rate | Require preparation and observable semantics; retain the mathematical ceiling | discharged by declared number measurement and material-process exclusion |
+| Occupation support may be confused with classical vacua | Give explicit countermodels and support taxonomy | discharged by compact multiplier and periodicity independence checks |
+| Claim may duplicate C-OSC-001 or C-CMB-003 | Complete claim-level nonduplication review | open; state amplitudes recurrence and overlap are provisionally distinct |
 | Downstream consumers may inherit MD3 wholesale | Replay exact graph and preserve individual dispositions | open |
 
 ## Review and Promotion Plan

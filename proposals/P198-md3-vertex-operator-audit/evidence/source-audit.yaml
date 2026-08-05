@@ -1,0 +1,42 @@
+campaign: P198
+source_unit: MD3
+native_execution: {checks: 41, exit_status: 0}
+exact_surviving_core:
+  - finite_truncated_ladder_has_the_expected_interior_CCR_and_top_edge_defect
+  - repeated_creation_of_the_vacuum_has_sqrt_n_factorial_coefficient_below_the_edge
+  - for_a_separately_declared_standard_infinite_Fock_representation_phi_equals_lambda_times_a_plus_a_dagger_makes_exp_i_phi_the_Weyl_displacement_D_i_lambda
+  - the_normalized_coherent_state_has_coefficients_exp_minus_S_over_2_alpha_to_n_over_sqrt_n_factorial
+  - number_measurement_on_that_declared_state_has_probability_exp_minus_S_S_to_n_over_n_factorial
+  - the_number_probabilities_normalize_and_have_mean_and_variance_S
+  - nonzero_displacement_has_unbounded_nonnegative_occupation_support
+  - scalar_exp_i_phi_and_one_minus_cos_phi_are_two_pi_periodic_as_functions_of_phi
+source_oracle_gaps:
+  finite_BCH:
+    source_check: commutator_is_central_on_the_interior_block
+    gap: the_full_truncated_commutator_has_a_top_edge_defect_and_nonzero_nested_commutators
+    repair: derive_the_coherent_series_in_the_standard_infinite_Fock_representation_and_test_recurrence_and_norm_independently
+  matrix_element:
+    source_check: six_weight_values_match_the_Poisson_formula
+    gap: weight_inserts_the_expected_normal_ordered_amplitude_and_never_exponentiates_phi_b_or_b_dagger
+    repair: independently_sum_raw_coefficients_and_check_the_annihilation_recurrence
+  integer_mode:
+    source_check: floor_S_equals_S_at_four_integer_samples
+    gap: positive_integer_S_has_tied_modes_S_minus_1_and_S
+    repair: retain_the_complete_mode_tuple
+  periodicity_inference:
+    source_check: exp_i_phi_and_one_minus_cos_phi_are_periodic_while_phi_squared_over_2_is_not
+    gap: periodicity_is_independent_of_the_displacement_amplitude_and_does_not_prepare_a_medium_state_or_select_S
+    repair: separate_compact_multiplier_classical_vacua_and_Fock_occupation_support
+  physical_correspondence:
+    source_check: normalized_mathematical_number_probability
+    gap: Huang_Rhys_Franck_Condon_and_material_labels_need_a_displaced_oscillator_Hamiltonian_state_observable_and_parameter_map
+    repair: accept_only_the_declared_number_measurement_probability
+unaccepted_headlines:
+  - an_accepted_single_vacuum_bound_was_removed
+  - periodicity_selects_or_permits_a_material_displacement_intensity
+  - the_accepted_classical_medium_is_quantized_or_prepared_in_a_coherent_state
+  - the_Huang_Rhys_or_Franck_Condon_material_correspondence_is_derived
+  - PN2_supplies_an_accepted_occupation_or_energy_band
+  - a_number_probability_is_a_transition_branching_or_reaction_probability
+  - the_positive_integer_mode_is_unique
+scientific_version_failures: 0

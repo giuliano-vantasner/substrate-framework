@@ -1,0 +1,32 @@
+campaign: P198
+indexed_repository: substrate-framework
+indexed_commit: 1a58aa09a29c2cc0fd32567dabc6695347aa33b5
+framework_head_at_audit: 24808a3
+index_commits_behind: 23
+initial_cli_failure: multiple_repositories_required_explicit_repo_selector
+repaired_queries:
+  query: bosonic_fock_coherent_state_vertex_operator_displacement
+  query_processes: 0
+  nearby_definitions:
+    - src/substrate_framework/bosonic_fock.py
+    - tests/test_bosonic_fock.py
+    - src/substrate_framework/coherence_gates.py
+  context_target: bosonic_fock_rung
+  context_status: found
+  impact_target: bosonic_fock_rung
+  reported_upstream_count: 0
+  reported_risk: LOW
+authority_warning: stale_graph_zero_consumer_result_is_not_authoritative
+manual_authoritative_impact:
+  existing_symbol_changed: false
+  existing_signature_changed: false
+  existing_value_changed: false
+  new_leaf_module: src/substrate_framework/coherent_states.py
+  new_package_exports: 7
+  direct_existing_canonical_dependencies: [src/substrate_framework/bosonic_fock.py]
+  affected_existing_tests: [tests/test_bosonic_fock.py, tests/test_factorial_one_distribution.py]
+  new_tests: tests/test_coherent_states.py
+  pending_source_consumers: [MD4, MD5, MD6]
+  generated_consumers: [docs/generated/claim-index.md, memory/framework]
+risk: low_for_additive_API_but_requires_dependency_tests_and_three_consumer_replays
+debt: []

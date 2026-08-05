@@ -1,0 +1,30 @@
+attempt: 0003
+campaign: P198
+candidate: source_reproduction_predicate_audit_and_candidate_selection
+status: passed_with_qualified_source_headline
+started_at: '2026-08-11T22:13:00Z'
+finished_at: '2026-08-11T22:18:00Z'
+source_execution:
+  terminal_tally: ALL_41_CHECKS_PASS
+  exit_status: 0
+  wall_seconds: 0.58
+compatibility:
+  legacy_numpy_references: 0
+  current_numpy_references: 0
+  alias_used: false
+  version_only_scientific_failures: 0
+selected_candidates: [A]
+retained_counterexamples: [B]
+rejected_candidates: [C, D, E]
+selected_claim_candidate: C-VOP-001
+accepted_dependency_closure: [C-OSC-001, C-CMB-003]
+source_corrections:
+  - finite_interior_commutator_is_not_a_global_BCH_proof
+  - weight_helper_inserts_the_expected_coefficient_instead_of_exponentiating_phi
+  - positive_integer_intensity_has_modes_S_minus_1_and_S
+  - periodicity_does_not_select_displacement_intensity_or_prepare_a_medium_state
+  - number_measurement_probability_is_not_a_material_event_or_transition_rate
+scientific_threshold_changed: true
+debt:
+  - implement_and_independently_verify_the_selected_exact_coherent_state_object
+next_attempt: canonical_implementation_primary_independent_and_focused_verification

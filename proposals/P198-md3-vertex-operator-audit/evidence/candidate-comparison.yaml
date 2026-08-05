@@ -1,0 +1,44 @@
+campaign: P198
+selection_frozen_before_renewed_source_execution: true
+fresh_blinding_claimed: false
+criteria:
+  - typed_Hilbert_space_operator_state_and_parameters
+  - exact_normalization_and_ordering
+  - independent_rederivation_and_mutation_sensitivity
+  - separation_of_Fock_Fourier_and_classical_support
+  - novelty
+  - no_material_or_rate_overreach
+candidates:
+  A:
+    decision: selected
+    reason: >-
+      The standard one-mode coherent vector adds exact state amplitudes,
+      annihilation eigenvalue, overlap, and number-measurement semantics beyond
+      the accepted ladder and mathematical mass while depending naturally on
+      C-OSC-001 and C-CMB-003.
+  B:
+    decision: retained_as_counterexample_not_promoted
+    reason: >-
+      Compact multiplication by exp(i*m*phi) is unitary, shifts Fourier labels,
+      and preserves pointwise density. It proves that vertex terminology alone
+      cannot identify a Weyl displacement or change classical potential vacua.
+  C:
+    decision: rejected_for_current_claim
+    reason: >-
+      Pure-creation and normal-ordered exponentials have different norms and
+      ordering data; MD3 uses the Weyl displacement and supplies no need to
+      promote a second operator family.
+  D:
+    decision: rejected
+    reason: >-
+      C-OSC-001 and C-CMB-003 do not yet construct the coherent state, prove its
+      eigenvector recurrence or overlap, or type the number law as a Born
+      probability for a declared state and observable.
+  E:
+    decision: rejected
+    reason: >-
+      No accepted inconsistency independently requires quantizing or revising
+      the classical medium.
+selected_claim_candidate: C-VOP-001
+selected_dependency_closure: [C-OSC-001, C-CMB-003]
+comparison_ceilings: [C-SG-019, C-OSC-002, C-SPN-002]

@@ -1,0 +1,38 @@
+campaign: P198
+source_unit: MD3
+static_sites: 20
+runtime_checks: 41
+all_runtime_conditions_true: true
+headline_coverage_complete: false
+groups:
+  truncated_ladder:
+    runtime_checks: 8
+    verdict: exact_below_edge_with_global_finite_CCR_explicitly_false
+  field_and_displacement_identification:
+    runtime_checks: 3
+    verdict: algebraic_identification_survives_but_finite_interior_centrality_does_not_prove_global_BCH
+  inserted_coherent_weights:
+    runtime_checks: 7
+    verdict: formulas_are_exact_in_infinite_Fock_space_but_source_helper_is_not_an_independent_operator_oracle
+  accepted_factorial_one_comparison:
+    runtime_checks: 2
+    verdict: exact_and_already_governed_by_C_OSC_001_and_C_CMB_003
+  scalar_periodicity_and_quadratic_counterexample:
+    runtime_checks: 4
+    verdict: exact_function_identities_with_no_inference_to_state_preparation_or_S
+  large_intensity_log_samples:
+    runtime_checks: 5
+    verdict: finite_numeric_evidence_replaced_by_exact_positive_mass_and_mode_theorems
+  crossover_and_mode_samples:
+    runtime_checks: 8
+    verdict: ratio_is_exact_but_each_positive_integer_has_two_adjacent_modes
+  rising_and_falling_samples:
+    runtime_checks: 4
+    verdict: exact_ratio_corollaries_with_no_material_band_authority
+verifier_sensitivity:
+  finite_edge_nested_commutator: source_headline_fails
+  missing_Gaussian_half_factor: normalization_fails
+  missing_conjugation: anti_Hermiticity_fails_for_complex_displacement
+  factorial_instead_of_sqrt_factorial: annihilation_recurrence_fails
+  unique_integer_mode: complete_mode_check_fails
+  occupation_equals_classical_vacua: compact_multiplier_counterexample_fails_the_inference
