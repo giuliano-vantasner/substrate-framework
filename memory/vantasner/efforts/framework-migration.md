@@ -2031,14 +2031,15 @@ The effort remains active. D4 is discharged, but D1 remains open with 42
 pending, 3 migrated, 163 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. The next queue unit is TX4, pinned at SHA-256
 `c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f`.
-P183 must freeze TX4 before its own source-body audit and separate exact
-co-rotating-coordinate or finite collective-rotor algebra from a genuine
-Floquet spectrum of a specified full-field linearization. It must require the
-action, rotating solution, operator domain, constraints and gauge modes,
-boundary data, conserved structure, spectral completeness, refinement, and
-load-bearing mutations before any stability claim. TX4 inherits no
-self-consistent field, selected-`Omega`, stability, gravity, or radiation
-authority from TX1 through TX3.
+P183 has frozen TX4 before its own source-body audit. Its six candidates
+separate literal reproduction, finite co-rotating algebra, a collective rotor,
+a restricted rational-map Hessian, genuine full-field stability, and governed
+closure. The audit must require the action, rotating solution, operator domain,
+constraints and gauge modes, boundary data, conserved structure, multiplier
+and Jordan classification, spectral completeness, refinement, and load-bearing
+mutations before any stability claim. TX4 inherits no self-consistent field,
+selected-`Omega`, stability, gravity, or radiation authority from TX1 through
+TX3. The next executable action is the committed-freeze body and runtime audit.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

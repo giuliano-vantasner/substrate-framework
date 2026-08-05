@@ -1,0 +1,69 @@
+attempt: 0001
+campaign: P183
+candidate: frozen_authority_recall_and_competing_concepts
+status: passed
+started_at: '2026-08-11T09:18:00Z'
+finished_at: '2026-08-11T09:26:00Z'
+base:
+  release: v0.134.0
+  release_sha256: 910087c9ccfa45867b6bf8a1bb47246481ccbabc2c00fdbfa2a5ae85c55060c6
+  framework_commit: 2466d440562a37004aae1eba245b4c6bf40fd950
+  accepted_claims: 172
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  unit: TX4
+  path: merged-framework/bridges/phase-40/bridge_TX4_floquet_stability.py
+  sha256: c88ff5fe65473756d36a29546fae4da417c56d7539dcfd8e58304bd0ab7b335f
+  git_blob: a8dd0757f4712cd15ddc6c4a0454b3e8aaf0779c
+  size_bytes: 24802
+  target_path_clean: true
+  source_repository_has_unrelated_later_changes: true
+  sole_history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+recall:
+  memory_queries: [TX4, Floquet, rotor_stability, co_rotating, relative_equilibrium]
+  accepted_authority: [C-ACT-001, C-COL-001, C-SYM-001, C-PDE-009, C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RMOM-001, C-RMOM-002, C-GW-009, C-GW-010]
+  nearest_canonical_modules: [collective_coordinates.py, symmetry_breaking.py, rational_maps.py, rational_map_radial.py, rational_map_moments.py, rigid_quadrupole_rotation.py]
+  candidate_source_dependencies: [E1, E2, M2, QB3, TX1, TX2, TX3, TX5]
+exposure_before_freeze:
+  queue_headline_question_result_and_equation_synopsis: exposed
+  prior_consumer_stability_and_restricted_Hessian_summary: exposed
+  source_static_check_calls: 8
+  source_assertions: 1
+  fresh_source_result_or_runtime_output_blinding_claimed: false
+  exact_source_actions_matrices_spectra_predicates_values_and_dataflow_newly_audited: false
+candidates: [A, B, C, D, E, F]
+provisional_identifier_search: [C-FLO-001, C-ROT-001, P183]
+identifier_collisions: []
+claim_delta: [C-FLO-001, C-ROT-001]
+prechange_impact:
+  collective_coordinate_metric: LOW_0_direct_0_processes
+  linear_symmetry_hessian_evidence: LOW_0_direct_0_processes
+  rigid_axisymmetric_stf_rotation: LOW_1_direct_0_processes
+  policy: prefer_additive_pure_API_and_replay_direct_import_and_test_consumers
+staged_freeze_detection:
+  changed_symbols: 2
+  changed_files: 4
+  affected_count: 0
+  affected_processes: []
+  risk_level: low
+compatibility_policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_replay_backed_by_numpy.trapezoid
+  version_only_stop_is_scientific_failure: false
+freeze_validation:
+  proposal_manifest: valid
+  proposal_memory: valid
+  memory: 740_files_valid
+  repository: WORKFLOW_VALID_172_claims_172_accepted_0_proposals
+  migration_queue: 218_units_42_pending_0_partial
+  diff_check: passed
+debt:
+  - exact_TX4_actions_equations_matrices_Hessians_spectra_predicates_assertion_values_and_dataflow_unaudited_in_P183
+  - rotating_background_action_EOM_solution_residual_and_selected_Omega_require_provenance
+  - co_rotating_reduction_requires_separate_spectrum_multiplier_Jordan_and_evolution_bound_audit
+  - collective_rotor_requires_complete_action_conservation_symmetry_quotient_and_nonduplication_audit
+  - restricted_rational_map_Hessian_requires_stationarity_metric_coordinate_refinement_symmetry_and_scope_audit
+  - full_field_operator_domain_constraints_boundary_data_completeness_and_independent_oracle_open
+  - dependencies_consumers_compatibility_source_disposition_and_governance_open
+next_attempt: commit_freeze_then_open_and_reproduce_the_hash_pinned_TX4_body
