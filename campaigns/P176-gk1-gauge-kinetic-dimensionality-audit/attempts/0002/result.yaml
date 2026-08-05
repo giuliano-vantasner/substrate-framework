@@ -1,0 +1,49 @@
+attempt: 0002
+campaign: P176
+candidate: A_literal_hash_pinned_GK1_reproduction
+status: passed_with_oracle_scope_gaps
+started_at: '2026-08-11T04:37:00Z'
+finished_at: '2026-08-11T04:39:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py
+environment:
+  python: framework_virtual_environment
+  source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74
+process:
+  exit_code: 0
+  elapsed_seconds: 0.36
+  lexical_check_calls: 11
+  runtime_checks: 11
+  assertion_nodes: 1
+  terminal_tally: ALL 11 CHECKS PASS
+compatibility:
+  numpy_imported: false
+  direct_np_trapz: false
+  direct_np_trapezoid: false
+  imported_legacy_trapz: false
+  dynamic_legacy_access: false
+  version_only_stop: false
+surviving_execution_evidence:
+  - The standard Pauli-half and Gell-Mann-half trace matrices are exactly one-half times the identity.
+  - The source-defined non-Abelian projector matrices are the source-defined two-dimensional Abelian projector times the trace scalar.
+  - The antisymmetric two-form and spatial magnetic component counts evaluate to one and zero at D equals two and six and three at D equals four.
+  - Canonical-field power counting gives dimension A equals D over two minus one and dimension e squared equals four minus D.
+  - The normalized Riesz expression has no g_eff symbol and reduces to one over four pi r at d equals three and s equals one.
+oracle_scope_gaps:
+  - The shared source integrand u times one-minus-u is the already rejected fermion-shaped numerator for the scripts' complex-scalar reading; C-VAC-001 and C-NVP-001/002 use the correct one-minus-two-u squared numerator with bubble and seagull completion.
+  - The claimed Abelian limit divides out or manually replaces the trace factor instead of transporting generator and coupling normalization, so it is an identity inside a defined tensor rather than a convention-preserving group limit.
+  - Empty free-symbol and zero-derivative tests show only that one selected trace value is a constant; they do not independently type the complete action or field convention.
+  - Pure e-squared dimensional counting proves only that e-squared times a dimensionless number has mass dimension two uniquely at D equals two. It does not prove that every momentum-independent polarization or every four-dimensional matching function is impossible when other masses scales counterterms or symmetry-breaking data are admitted.
+  - A dimensionless four-dimensional form factor need not be logarithmic; constants threshold functions and scheme-dependent terms are also dimensionally allowed.
+  - The p equals zero result shows that power counting alone cannot fix a cutoff dependence or coefficient; it is not a physical loop or regulator theorem.
+  - Differentiation with respect to a symbol absent by construction establishes nonidentifiability only for the normalized Riesz expression, not for every source-normalized Green function or action.
+  - The live-file string census is a documentation regression over six files, not a physics oracle and not immutable unless those consumer hashes are pinned.
+  - The result prose repeats rejected claims of a derived propagating gauge boson canonically normalized term computed unique coupling physical gauge sectors and substrate mechanism.
+diagnosis: >-
+  Native execution is valid source evidence, but the headline oracle exceeds
+  the predicates. Continue with exact convention-typed dimensional ledgers,
+  correct accepted loop formulas, meaningful mutations, and a hash-pinned
+  dependency and reverse-consumer replay.
+next_attempt: primary_exact_dimensionality_and_scope_verifier

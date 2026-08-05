@@ -1,0 +1,27 @@
+attempt: 0011
+campaign: P176
+candidate: integrated_promotion_workflow
+status: inconclusive
+started_at: '2026-08-11T05:06:00Z'
+command: scripts/validate.sh
+preconditions:
+  promoted_primary_verifier: ALL_50_CHECKS_PASS
+  repository: WORKFLOW_VALID_164_claims_164_accepted_0_proposals
+  queue: 218_units_48_pending_0_partial_157_qualified
+  generated_docs: current
+  generated_memory: current
+  debt: []
+finished_at: '2026-08-11T05:09:00Z'
+captured_results:
+  repository: WORKFLOW_VALID_164_claims_164_accepted_0_proposals
+  queue: 218_units_48_pending_0_partial
+  memory: ALL_705_FILES_VALID
+  skill: valid
+  pytest: started_and_process_reached_normal_full_suite_runtime
+transport_failure: >-
+  The orchestration layer detached the continuing exec session without
+  retaining its session identifier. The process later exited, but its final
+  exit code and pytest tally were not recoverable, so this attempt cannot earn
+  a terminal pass despite no observed scientific failure.
+scientific_failure: false
+next_attempt: controlled_integrated_gate_retry_with_retained_session_handle

@@ -1,0 +1,21 @@
+campaign: P176
+proposed_claims:
+  C-DIM-009:
+    direct_dependencies:
+      C-GAU-001: canonical_local_U1_connection_coupling_and_curvature_convention
+      C-NAG-001: non_Abelian_connection_curvature_and_trace_density_convention
+    compatible_accepted_specializations:
+      C-VAC-001: corrected_two_dimensional_Abelian_scalar_loop
+      C-NVP-001: corrected_two_dimensional_SU2_scalar_loop
+      C-NVP-002: corrected_two_dimensional_generic_finite_representation_scalar_loop
+    excluded:
+      - quantum_determinant_regulator_loop_or_renormalization_scheme
+      - bare_counterterm_or_total_kinetic_coefficient
+      - preferred_dimension_dimensional_lift_or_unique_logarithm
+      - physical_gauge_sector_observation_or_substrate_mechanism
+transitive_closure:
+  C-GAU-001: [C-U1-001]
+  C-NAG-001: [C-REP-002]
+hidden_imports: []
+dependency_closure: complete
+debt: []

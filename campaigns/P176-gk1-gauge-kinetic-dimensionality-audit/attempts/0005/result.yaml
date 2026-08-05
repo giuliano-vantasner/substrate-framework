@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P176
+candidate: repaired_primary_exact_dimensionality_and_scope_verifier
+status: passed
+started_at: '2026-08-11T04:46:00Z'
+finished_at: '2026-08-11T04:47:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+process:
+  exit_code: 0
+  runtime_checks: 50
+  terminal_tally: ALL 50 CHECKS PASS [P176-GK1-C-DIM-009]
+scientific_scope:
+  - exact_canonical_and_connection_field_dimension_ledgers
+  - exact_density_preserving_convention_translation
+  - mutation_sensitive_pure_coupling_D_equals_two_special_case
+  - mass_scale_counterfamily_valid_in_every_dimension
+  - four_dimensional_constant_rational_and_logarithmic_form_factor_counterfamily
+  - generator_trace_and_inverse_coupling_rescaling_invariant
+  - accepted_scalar_QED2_coefficient_specialization
+  - source_predicate_and_overclaim_adjudication
+compatibility: no_NumPy_integration_surface
+next_attempt: independent_action_and_Fourier_exponent_rederivation

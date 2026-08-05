@@ -1,0 +1,28 @@
+attempt: 0007
+campaign: P176
+candidate: hash_pinned_dependency_and_reverse_consumer_graph_replay
+status: passed
+started_at: '2026-08-11T04:50:00Z'
+finished_at: '2026-08-11T04:51:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/replay_source_graph.py
+  /home/dan/substrate
+process:
+  exit_code: 0
+  graph_nodes: 14
+  lexical_source_predicates: 168
+  runtime_source_predicates: 168
+  assertion_nodes: 15
+  verifier_checks: 28
+  terminal_tally: ALL 28 CHECKS PASS [P176-GK1-SOURCE-GRAPH]
+compatibility:
+  native_nodes: [EM3, EM5, EM7, W2, YM1, QCD1, AS3, GK1, GK3D1, GK3D2, GK3D3, GK3D4]
+  immutable_alias_only_nodes: [YM2, QCD2]
+  alias_definition: numpy_trapz_equals_numpy_trapezoid
+  scientific_effect: none_version_spelling_only
+consumer_finding: >-
+  GK3D1 GK3D2 GK3D3 and GK3D4 execute but remain pending consumers. Their
+  reliance on GK1's logarithm and three-sector narrative grants no accepted
+  loop matching kinetic normalization physical sector or substrate authority.
+next_attempt: impact_nonduplication_and_claim_level_review

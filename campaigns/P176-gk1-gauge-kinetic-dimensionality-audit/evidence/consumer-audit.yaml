@@ -1,0 +1,30 @@
+campaign: P176
+claims: [C-DIM-009]
+canonical_consumers:
+  direct:
+    - tests/test_gauge_dimensions.py
+    - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+    - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/independent_dimension_review.py
+  existing_before_campaign: []
+source_consumers:
+  GK3D1: pending_general_dimension_loop_that_must_derive_its_logarithm_dynamically
+  GK3D2: pending_kinetic_normalization_that_must_supply_action_matching_and_field_convention
+  GK3D3: pending_transmutation_route_that_cannot_inherit_logarithm_selection_from_dimensions
+  GK3D4: pending_three_sector_construction_that_cannot_inherit_physical_sector_authority
+graph_replay:
+  nodes: 14
+  lexical_predicates: 168
+  runtime_predicates: 168
+  assertions: 15
+  verifier_checks: 28
+  compatibility_alias_only: [YM2, QCD2]
+gitnexus:
+  risk: LOW
+  direct_internal_callers: 2
+  existing_external_callers: 0
+  affected_processes: 0
+consumer_decision: >-
+  C-DIM-009 is additive and changes no existing API. Pending GK3D consumers
+  receive only the exact dimension and convention ledger; their loop dynamics,
+  logarithms, normalization, physical sectors, and substrate claims remain queued.
+debt: []

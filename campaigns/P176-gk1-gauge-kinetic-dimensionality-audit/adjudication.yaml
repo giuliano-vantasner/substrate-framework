@@ -1,0 +1,99 @@
+campaign: P176
+title: GK1 gauge-kinetic dimensionality and convention-translation audit
+source_baseline: substrate@6d1f4e0
+source_units: [GK1]
+base_release: v0.127.0
+accepted_release: v0.128.0
+adjudicated_at: '2026-08-11T05:01:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_literal_execution_is_source_evidence_only.}
+  - {id: B, reason: Accepted_scalar_QED2_claims_own_the_corrected_loop_specialization.}
+  - {id: C, reason: Canonical_field_dimension_counting_is_exact_and_reusable.}
+  - {id: D, reason: Connection_field_counting_closes_the_normalization_translation.}
+  - {id: E, reason: Representation_factors_are_dimensionless_only_in_a_fixed_convention.}
+  - {id: F, reason: Four_dimensional_dynamics_requires_separate_quantum_matching_data.}
+  - {id: G, reason: Abelian_limits_must_transport_generator_and_coupling_normalizations_together.}
+  - {id: H, reason: Covariance_and_projector_algebra_leave_kinetic_dynamics_free.}
+  - {id: J, reason: The_distinct_exact_convention_theorem_earns_C_DIM_009.}
+  - {id: K, reason: Claim_release_disposition_queue_and_memory_close_together.}
+competing_candidates:
+  - {id: I, decision: rejected_as_incomplete_because_no_accepted_claim_owned_the_full_convention_translation_and_counterfamilies}
+claims:
+  - id: C-DIM-009
+    decision: accepted
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+accepted_composition:
+  - {id: C-REP-002, decision: unchanged_standard_SU2_trace_convention}
+  - {id: C-LIE-001, decision: unchanged_standard_SU3_trace_convention}
+  - {id: C-VAC-001, decision: unchanged_corrected_scalar_QED2_loop_and_no_lift_ceiling}
+  - {id: C-NVP-001, decision: unchanged_SU2_representation_typed_scalar_loop}
+  - {id: C-NVP-002, decision: unchanged_generic_finite_representation_scalar_loop}
+  - {id: C-KRN-001, decision: unchanged_normalized_Riesz_shape_scope}
+  - {id: C-KRN-002, decision: unchanged_dimension_lift_and_free_amplitude_ceiling}
+unpromoted_claims:
+  - {id: universal_two_dimensional_gauge_kinetic_origin, reason: An_independent_mass_scale_completes_the_kernel_dimension_in_every_D.}
+  - {id: four_dimensionality_requires_a_logarithm, reason: Constant_rational_and_logarithmic_form_factors_are_all_dimensionally_homogeneous.}
+  - {id: source_complex_scalar_integrand_is_correct, reason: The_fermion_shaped_numerator_omits_the_accepted_scalar_bubble_seagull_structure.}
+  - {id: source_Abelian_limit_preserves_conventions, reason: Dividing_by_the_same_trace_is_an_identity_not_a_generator_coupling_limit.}
+  - {id: normalized_Riesz_shape_fixes_the_kinetic_coefficient, reason: Its_free_amplitude_was_removed_by_construction.}
+  - {id: propagated_unique_total_couplings, reason: Bare_counterterm_and_matching_normalizations_remain_free.}
+  - {id: physical_U1_SU2_SU3_sectors_and_gauge_bosons, reason: No_action_matter_dictionary_or_observable_is_constructed.}
+  - {id: dimensional_lift_or_substrate_mechanism, reason: No_operator_map_or_cross_dimensional_dynamics_is_supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_dimension_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  native_attempt: attempts/0002/result.yaml
+  proposal_revision_attempt: attempts/0003/result.yaml
+  primary_failure: attempts/0004/result.yaml
+  primary_attempt: attempts/0009/result.yaml
+  independent_attempt: attempts/0006/result.yaml
+  graph_attempt: attempts/0007/result.yaml
+  impact_attempt: attempts/0008/result.yaml
+  focused_attempt: attempts/0010/result.yaml
+  transport_inconclusive_attempt: attempts/0011/result.yaml
+  terminal_attempt: attempts/0012/result.yaml
+  record_closure_attempt: attempts/0013/result.yaml
+source_disposition: {GK1: qualified}
+accepted_mappings:
+  - C-DIM-009
+  - C-REP-002
+  - C-LIE-001
+  - C-VAC-001
+  - C-NVP-001
+  - C-NVP-002
+  - C-KRN-001
+  - C-KRN-002
+compatibility:
+  GK1_native: true
+  immutable_alias_only_nodes: [YM2, QCD2]
+  alias_target: numpy.trapezoid
+  scientific_failures_from_version_events: 0
+release_change: v0.128.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/independent_dimension_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/replay_source_graph.py
+  - PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_gauge_dimensions.py tests/test_gauge_u1.py tests/test_nonabelian_gauge.py tests/test_vacuum_polarization.py tests/test_nonabelian_vacuum_polarization.py tests/test_su2_doublets.py tests/test_su3.py tests/test_momentum_kernels.py
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

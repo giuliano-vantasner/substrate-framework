@@ -1,0 +1,20 @@
+campaign: P176
+source_unit: GK1
+checks:
+  - {id: GK1.1, status: retained_exact_duplicate, mapping: C-REP-002, reason: The standard Pauli-half trace matrix is exact accepted representation algebra and not the entire difference between physical loop constructions.}
+  - {id: GK1.2, status: retained_exact_duplicate, mapping: C-LIE-001, reason: The standard Gell-Mann-half trace matrix is exact accepted algebra; equality of fundamental trace indices transfers no action dimension matter or physical sector.}
+  - {id: GK1.3, status: retained_as_defined_two_dimensional_factorization, mapping: [C-VAC-001, C-NVP-001, C-NVP-002], reason: The source-defined matrices share one two-by-two projector, while the predecessor complex-scalar loop interpretation uses the wrong numerator and lacks bubble-seagull completion.}
+  - {id: GK1.4, status: retained_with_convention_scope, mapping: C-DIM-009, reason: The fixed-basis trace index is dimensionless but convention dependent; only a coupled generator and inverse-coupling rescaling preserves the connection and g-squared trace weight.}
+  - {id: GK1.5, status: rejected_as_group_limit_retained_as_algebraic_identity, mapping: [C-DIM-009, C-NVP-002], reason: Dividing a defined trace-weighted tensor by its trace returns the base tensor but is not an Abelian group limit or field-action map.}
+  - {id: GK1.6, status: retained_exact_conditional_count, mapping: C-DIM-009, reason: Two-form and magnetic component counts are exact for supplied integer D; a two-by-two projector constructs only the D-two tensor and supplies no lift.}
+  - {id: GK1.7, status: partly_retained_with_counterfamily, mapping: C-DIM-009, reason: Pi_hat equals g-squared times a nonzero dimensionless constant has the required dimension iff D=2, but g-squared times M^(D-2) works in every D and dimensions do not select a four-dimensional logarithm.}
+  - {id: GK1.8, status: retained_as_nonidentifying_power_count, mapping: C-DIM-009, reason: The four-dimensional inverse-coupling exponent is zero; power counting alone supplies no cutoff dependence loop coefficient scheme or unique logarithm.}
+  - {id: GK1.9, status: retained_exact_duplicate_with_amplitude_ceiling, mapping: [C-KRN-001, C-KRN-002], reason: The normalized Riesz expression omits g_eff and cannot determine it, but independent source probe action and amplitude data remain unconstructed.}
+  - {id: GK1.10, status: retained_narrow_rejection, mapping: C-DIM-009, reason: A fixed dimensionless trace multiplier cannot add spacetime components; this rejects only the fabricated trace-factor lift and supplies no complete dimensional map.}
+  - {id: GK1.11, status: retained_as_documentation_regression_only, mapping: null, reason: Six hash-pinned strings enforce source prose consistency but do not derive scientific truth or supersede accepted claims.}
+headline_decision: >-
+  Promote C-DIM-009's exact convention-typed theorem. Qualify GK1 through that
+  claim and existing representation loop and Riesz claims. Reject a universal
+  polarization no-go logarithm selection propagating gauge boson unique total
+  coupling physical U1 SU2 SU3 sectors four-dimensional action or substrate mechanism.
+debt: []

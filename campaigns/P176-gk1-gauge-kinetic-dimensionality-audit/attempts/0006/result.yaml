@@ -1,0 +1,20 @@
+attempt: 0006
+campaign: P176
+candidate: independent_action_and_Fourier_exponent_rederivation
+status: passed
+started_at: '2026-08-11T04:48:00Z'
+finished_at: '2026-08-11T04:49:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/independent_dimension_review.py
+process:
+  exit_code: 0
+  runtime_checks: 22
+  terminal_tally: ALL 22 CHECKS PASS [P176-INDEPENDENT-C-DIM-009]
+independence: >-
+  The route imports neither GK1 nor the primary verifier nor
+  substrate_framework.gauge_dimensions. It independently solves action and
+  covariant-derivative exponent equations, Fourier-space kernel dimensions,
+  convention translation, form-factor counterexamples, generator rescaling,
+  additive kinetic-coefficient freedom, and Riesz amplitude nonidentifiability.
+next_attempt: hash_pinned_dependency_and_reverse_consumer_graph_replay

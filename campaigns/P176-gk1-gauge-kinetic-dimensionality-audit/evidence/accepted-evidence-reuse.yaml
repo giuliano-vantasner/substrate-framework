@@ -1,0 +1,14 @@
+campaign: P176
+reused:
+  - {claim: C-GAU-001, role: canonical_U1_connection_and_no_kinetic_coefficient_boundary, replay: focused_tests_at_terminal_gate}
+  - {claim: C-NAG-001, role: non_Abelian_curvature_and_no_action_coefficient_boundary, replay: focused_tests_at_terminal_gate}
+  - {claim: C-VAC-001, role: corrected_complex_scalar_QED2_specialization, replay: direct_API_call_in_primary_and_focused_tests}
+  - {claim: C-NVP-001, role: corrected_SU2_loop_scope, replay: focused_tests_at_terminal_gate}
+  - {claim: C-NVP-002, role: corrected_generic_finite_representation_loop_scope, replay: focused_tests_at_terminal_gate}
+  - {claim: C-KRN-001, role: normalized_Riesz_shape, replay: hash_pinned_source_graph_and_focused_tests}
+  - {claim: C-KRN-002, role: no_dimensional_lift_or_force_identification_ceiling, replay: focused_tests_at_terminal_gate}
+reuse_boundary: >-
+  Accepted exact formulas and their immutable scientific evidence are not
+  rerun ceremonially. P176 independently verifies only the new convention and
+  dimensional obligations and runs focused API consumers once before promotion.
+debt: []

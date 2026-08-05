@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T04:31:00Z'
+updated: '2026-08-11T05:04:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.127.0`, containing one hundred sixty-three
+The current accepted frontier is `v0.128.0`, containing one hundred sixty-four
 claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
@@ -137,7 +137,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 52 pending, 0 partially migrated, 3 migrated, 153 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 48 pending, 0 partially migrated, 3 migrated, 157 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -346,6 +346,7 @@ Attempts are append-only and individually reproducible.
 | 0194 | P173 exact endpoint-compatible counterexamples, representative ranges, inverse ambiguity, comparator mutation, formal-scope, graph, consumer, and KI3 audit | `campaigns/P173-ki3-bracket-sharpness-audit/attempts/0001` through `0016`, then terminal no-release boundary | KI3 qualified through C-XOV-001 with v0.127.0 unchanged | Native KI3 executes all five predicates, and its four selected functions have exact open ranges and distinct comparator-free half-level inverses. A continuous endpoint-compatible rational map passes the source derivative sample yet reaches 3/2 and has two positive preimages for 6/5; reversing its bump undershoots below zero. Thus endpoint limits imply interior inclusion, not exact range, outside exclusion, or uniqueness. The source assumes the excluding codomain, writes a closed bracket on a positive domain, uses stale 8.4563 input, and feeds comparator 0.929 into a thresholded verdict. Thirty-seven primary, seventeen independent, forty-seven graph, and twenty-four focused checks or tests pass over 52 source predicates and eleven assertions. The unchanged Lean execution is hash-reused and proves one Pade map only. Both full 1,478-test executions pass with 696 valid memory records. No NumPy compatibility stop occurs. | Freeze KI4 before source inspection; distinguish an algebraic inverse identity for a declared map from empirical calibration, posterior information gain, model prediction, and physical epsilon identification; audit dependence on KI3's rejected whole-bracket premise and all five predicates, formal scope, comparator use, reverse consumers, and governance closure. |
 | 0195 | P174 exact inverse-domain, observed-target conditioning, graph-direction, held-out prediction, comparator mutation, formal-scope, consumer, and KI4 audit | `campaigns/P174-ki4-backsolve-circularity-audit/attempts/0001` through `0010`, then terminal no-release boundary | KI4 qualified through C-IDN-002 and C-XOV-001 with v0.127.0 unchanged | Three exact inverse compositions survive on their proper open ranges as same-datum reconstruction. For a fixed injective map, one observed target selects one epsilon, so KI4's output-support union is not a zero-information parameter posterior. Ordinary calibration is acyclic; KI4 inserts an output-to-observed-input edge to manufacture a cycle. A held-out observable remains falsifiable. Comparator 0.929 enters KI4.4's pass threshold and KI4.5 hard-codes its verdict. Thirty-seven primary, fifteen independent, thirty-two graph, and forty-seven focused checks or tests pass over 41 predicate sites and seven assertions. Five unchanged graph executions and the Lean result are hash-reused; only MK3 and MR5 replay afresh. Both full 1,478-test executions pass with 698 valid memory records; one post-gate command-shape failure is preserved before a schema-aware narrow repair. | Freeze KI5 before source inspection; audit the exact signed-difference error algebra, variational premises, one-sided bounds, stale coordinates, comparator firewall, all five predicates, formal theorem, dependencies, reverse consumers, and do not turn selected width mutations or proximity to 0.929 into a rigorous kappa bound, profile-quality metric, physical binding result, or substrate mechanism. |
 | 0196 | P175 exact signed-slack, variational-premise, conditional-bound, convergence, finite-profile-probe, comparator, formal-scope, graph, consumer, and KI5 audit | `campaigns/P175-ki5-variational-bound-audit/attempts/0001` through `0013`, then terminal no-release boundary | KI5 qualified through C-RDIFF-001, C-RDIFF-002, and C-RPROF-002 with v0.127.0 unchanged | The exact signed upper-estimate error realizes both signs, while coupled slacks give conditional one-sided bounds and component error control gives potentially nonmonotone convergence. Eight selected width probes and an unchecked hard-wall BVP do not prove minimization or a full-model variational bound. Source 8.4574 is stale against accepted 8.4824173, comparator 0.929 controls KI5.4, and physical overbinding and universal profile-quality claims remain unaccepted. Thirty-nine primary, sixteen independent, thirty-one graph, and thirty-four focused checks or tests pass over 36 predicate sites and six assertions. Five graph executions and the Lean result are hash-reused; only KI5 executes afresh. Both full 1,478-test executions pass with 700 valid memory records. Two guessed-path failures and three verifier-representation failures are preserved before repair. | Freeze GK1 before source inspection; audit its cross-sector dimensional comparison, trace normalizations and representation factors, 1+1 versus 3+1 operator dimensions, abelian limits, all predicates and formal scope, dependencies and reverse consumers, and do not turn shared loop algebra into a generated physical gauge kinetic term or substrate mechanism. |
+| 0197 | P176 exact gauge dimensions, normalization translation, counterfamilies, graph, consumer, compatibility, and GK1 audit | `campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0001` through `0013`, then v0.128.0 promotion | C-DIM-009 accepted and GK1 qualified | Exact canonical and fresh routes derive both gauge-field dimension ledgers, the density-preserving conversion, the narrow scale-free D=2 implication, and mass-scale and four-dimensional form-factor counterfamilies. They reject GK1's wrong scalar numerator, trace-division Abelian limit, universal logarithm, unique coupling, physical sectors, dimensional lift, and substrate readings. Fifty primary, twenty-two independent, twenty-eight graph, and 102 focused checks or tests pass over 168 predicate sites and fifteen assertions. GK1 is native; immutable YM2 and QCD2 aliases are backed by `np.trapezoid`. GitNexus reports LOW additive impact and no affected process. The controlled integrated workflow passes all 1,490 tests with 705 memory records; one unchanged prior invocation is preserved as transport-inconclusive, and record-sensitive closure does not repeat the suite. | Freeze BX1 before source inspection; audit its l=2 fluctuation operator, radial transformation, boundary data, continuum threshold, node count, solver status, domain/mesh refinement, spectral cross-check, dependencies, reverse consumers, and compatibility without treating a box artifact or no-go as completion. |
 
 ## Validation
 Validation targets scientific predicates and dependency closure, with workflow checks used only where they protect a real boundary.
@@ -1906,22 +1907,38 @@ unchanged Lean theorem is reused at abstract sign-witness scope. Thirty-four
 focused tests and both full 1,478-test executions pass with 700 valid memory
 records. No NumPy version-only stop occurs.
 
+P176 adds C-DIM-009's exact canonical-field and connection-field gauge
+dimension ledgers, their density-preserving normalization translation, the
+narrow scale-free pure-coupling `D=2` implication, and exact mass-scale and
+four-dimensional form-factor counterfamilies. These counterfamilies prove that
+dimensional bookkeeping alone selects neither a universal dimension nor a
+logarithm. GK1 is qualified through the new theorem and accepted representation,
+scalar-loop, and Riesz-kernel ceilings. Its fermion-shaped scalar numerator,
+trace-division Abelian limit, unique total coupling, physical sectors,
+dimensional lift, and substrate mechanism remain unaccepted. Primary,
+independent, and fourteen-node graph routes pass 50, 22, and 28 checks over 168
+predicate sites and fifteen assertions; 102 focused package and dependency
+tests pass. GK1 runs natively, while immutable YM2 and QCD2 use isolated aliases
+backed by `np.trapezoid`, so version-only compatibility creates no scientific
+failure. The controlled integrated workflow passes all 1,490 tests with 705
+valid memory records; one unchanged prior invocation remains explicitly
+transport-inconclusive.
+
 ## Canonicalization
-The registry, `v0.127.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-three accepted claims. P001 through P175 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 49 pending, 0 partial, 3 migrated, 156 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.128.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-four accepted claims. P001 through P176 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 48 pending, 0 partial, 3 migrated, 157 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 49
-pending, 3 migrated, 156 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is GK1, pinned at SHA-256
-`c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74`.
-P176 must freeze GK1 before source execution and audit whether matching
-dimensionless trace factors can transfer a 1+1-dimensional vacuum-polarization
-construction into a 3+1-dimensional gauge kinetic operator, which measure and
-coupling imports are missing, and whether abelian limits test the claimed
-dimensional promotion.
-It must use accepted C-RDIFF authority, inspect the formal error theorem,
-replay reverse consumers, and exclude any physical binding, optimized profile,
-yield, or substrate interpretation.
+The effort remains active. D4 is discharged, but D1 remains open with 48
+pending, 3 migrated, 157 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is BX1, pinned at SHA-256
+`a80364df834f23b5ad006b54e7097e0a38d846405ba40408e558a8773aa74fb3`.
+P177 must freeze BX1 before source execution and audit the claimed l=2 box
+artifact with explicit fluctuation operator, radial transformation, origin and
+outer boundary conditions, continuum threshold, node counting, solver status,
+domain and mesh refinement, spectral cross-check, dependency authority, and
+reverse consumers. It must not celebrate a box artifact or absence of a bound
+state as the requested positive framework result, and it must classify any
+legacy NumPy spelling as compatibility evidence rather than physics.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

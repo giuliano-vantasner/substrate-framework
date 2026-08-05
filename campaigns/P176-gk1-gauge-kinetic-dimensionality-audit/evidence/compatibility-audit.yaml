@@ -1,0 +1,21 @@
+campaign: P176
+policy:
+  mutable_current_environment: numpy.trapezoid_or_substrate_framework.numerics.trapezoid_integral
+  immutable_legacy_evidence: alias_only_numpy_trapz_equals_numpy_trapezoid
+  version_stop_scientific_status: never_a_candidate_failure
+primary_source:
+  source_unit: GK1
+  numpy_imported: false
+  legacy_references: 0
+  current_references: 0
+  replay_mode: native
+graph:
+  native_nodes: [EM3, EM5, EM7, W2, YM1, QCD1, AS3, GK1, GK3D1, GK3D2, GK3D3, GK3D4]
+  immutable_alias_only_nodes: [YM2, QCD2]
+  eager_legacy_default_nodes: [YM2, QCD2]
+  alias_target: numpy.trapezoid
+mutable_campaign_and_framework:
+  numpy_integration_references: 0
+  legacy_references: 0
+scientific_effect: none
+debt: []

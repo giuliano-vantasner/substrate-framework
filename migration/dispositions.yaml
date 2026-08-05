@@ -3412,6 +3412,74 @@ units:
       unchanged formal result is reused at its abstract sign-witness scope.
       Thirty-four focused accepted-consumer tests and both full 1,478-test
       executions pass with 700 valid memory records.
+  GK1:
+    disposition: qualified
+    accepted_claims:
+      - C-DIM-009
+      - C-REP-002
+      - C-LIE-001
+      - C-VAC-001
+      - C-NVP-001
+      - C-NVP-002
+      - C-KRN-001
+      - C-KRN-002
+    qualification: >-
+      GK1's standard SU2 and SU3 trace factors, antisymmetric component counts,
+      and narrow pure-coupling dimensional identity survive. C-DIM-009 owns the
+      exact canonical and connection gauge-field ledgers: a scale-free
+      dimension-two projector coefficient proportional only to g squared
+      selects D=2, while g squared times M to the D-2 has the correct dimension
+      in every D, and constant, rational, and logarithmic four-dimensional
+      form factors are all homogeneous. The density-preserving conversion
+      B=g*A requires kappa_B=kappa_A/g squared, and a generator rescaling must
+      transform the coupling inversely; GK1's trace division is not an Abelian
+      limit. Its declared complex-scalar numerator conflicts with the accepted
+      bubble-seagull loop, and local covariance, projector algebra, live-file
+      census, and normalized Riesz shape do not determine a total kinetic
+      coefficient, logarithmic running, preferred dimension, dimensional
+      lift, propagating gauge particle, physical U1/SU2/SU3 sectors, observable,
+      or substrate mechanism. GK3D1 through GK3D4 remain pending and inherit no
+      blanket authority from this qualification.
+    evidence:
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/source_adjudication.md
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/source-reproduction.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/compatibility-audit.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/source-audit.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/check-adjudication.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/input-provenance.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/dependency-audit.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/consumer-audit.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/candidate-comparison.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/primary-provenance.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/evidence/literature-audit.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/independent_dimension_review.py
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/replay_source_graph.py
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0002/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0004/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0005/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0006/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0007/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0008/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0009/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0010/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0011/result.yaml
+      - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/attempts/0012/result.yaml
+      - memory/vantasner/decisions/C-DIM-009-review.md
+      - memory/vantasner/decisions/GK1-qualified-review.md
+    note: >-
+      P176 closes fifty primary, twenty-two independent, and twenty-eight typed
+      graph checks. The fourteen-node graph inventories 168 predicate sites
+      and fifteen assertions. GK1 runs natively; immutable YM2 and QCD2 use
+      isolated aliases backed by `np.trapezoid`, so their removed `np.trapz`
+      access creates no scientific failure. The focused package and accepted-
+      dependency replay passes 102 tests. The controlled integrated workflow
+      passes all 1,490 tests with 705 valid memory records; one prior workflow
+      invocation is preserved as transport-inconclusive because its detached
+      session lost the final exit code.
   EM2:
     disposition: qualified
     accepted_claims:

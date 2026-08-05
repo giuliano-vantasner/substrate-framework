@@ -1,0 +1,38 @@
+primary_verifier:
+  path: campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+  sha256: 7d8047ba7f4bfaa542b5177986f492a2700b37168d7ae63d32b75412295d5afd
+  result: ALL_50_CHECKS_PASS
+independent_rederivation:
+  path: campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/independent_dimension_review.py
+  sha256: 54375f3e9b35a4aed7ab402ad039011d9bed0cba0e06e3eafa7054bb4e3e8935
+  result: ALL_22_CHECKS_PASS
+source_graph:
+  path: campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/reviews/replay_source_graph.py
+  sha256: 2c735fb0f8925f02749248204e6eba379d58ccec6ac5f1639df67949006c511b
+  result: ALL_28_CHECKS_PASS
+canonical_module:
+  path: src/substrate_framework/gauge_dimensions.py
+  sha256: 3ff18f5c17605d243e9bb7e60e831d5d29c3df3f797678754e8792bc6ce55b2c
+package_tests:
+  path: tests/test_gauge_dimensions.py
+  sha256: 1b438df48430a8a2fb5b3559f05e80a9eb51044e54141dae119f47b399ac2478
+  focused_result: 102_TESTS_PASS
+frozen_inputs:
+  source:
+    sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74
+  proposal:
+    sha256: 291c21f5ce0fe61a427ec1e6037626f5131ce2d7e8b5129cedbf951953ca0c4f
+  proposal_revision:
+    sha256: 10e122e32527c608c0ad05daf962bc6eda7e49473638ad82504d0252b1f487c6
+independence_statement: >-
+  The independent review imports neither GK1, the primary verifier, nor the
+  canonical gauge-dimensions module. It separately reconstructs the action,
+  Fourier-kernel, convention-translation, counterfamily, and free-amplitude
+  arguments without empirical comparator input.
+mutation_surfaces:
+  - pure_coupling_dimension
+  - mass_completion_power
+  - connection_kinetic_coefficient_power
+  - inverse_generator_scale_power
+  - independent_Riesz_amplitude
+  - source_headline_scope

@@ -1,0 +1,15 @@
+campaign: P176
+external_sources_used_for_claim: []
+reason: >-
+  C-DIM-009 is an exact conditional natural-unit homogeneity and coordinate-
+  normalization theorem derived from declared accepted gauge conventions. It
+  does not import a quantum loop theorem, empirical comparator, regulator,
+  renormalization scheme, or literature coefficient.
+source_literature_mentions:
+  Stein_1970: source_only_Riesz_attribution_not_imported_into_C_DIM_009
+  Sakharov_induced_gravity: source_only_analogy_not_imported_into_C_DIM_009
+literature_ceiling: >-
+  Actual four-dimensional logarithms threshold functions and coefficients
+  require separately governed loop dynamics and renormalization evidence;
+  dimensional analysis alone selects none of them.
+debt: []

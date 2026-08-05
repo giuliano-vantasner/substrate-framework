@@ -1,0 +1,16 @@
+attempt: 0003
+campaign: P176
+candidate: J_distinct_convention_typed_dimension_theorem
+status: passed
+started_at: '2026-08-11T04:40:00Z'
+finished_at: '2026-08-11T04:43:00Z'
+trigger: source_aware_distinct_claim_discovery
+parent_frozen_proposal_sha256: 291c21f5ce0fe61a427ec1e6037626f5131ce2d7e8b5129cedbf951953ca0c4f
+claim_identifier: C-DIM-009
+collision_search: passed
+revision_validation:
+  repository_workflow: {accepted_claims: 163, pending_source_units: 49}
+  proposal_yaml_records_parsed: 6
+  proposal_memory_valid: true
+  diff_check: passed
+next_attempt: implement_and_mutation_test_the_dimension_ledgers

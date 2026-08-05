@@ -1,0 +1,48 @@
+revision: 0001
+campaign: P176
+parent_frozen_proposal_sha256: 291c21f5ce0fe61a427ec1e6037626f5131ce2d7e8b5129cedbf951953ca0c4f
+trigger: >-
+  Source-aware inspection exposed a distinct convention-typed dimension
+  theorem in preregistered candidates C D and J, while also exposing the
+  source's unsupported upgrade from the narrow pure-coupling ansatz to a
+  universal claim about polarization and four-dimensional form factors.
+unchanged:
+  - candidates_A_through_K_and_their_predeclared_structural_ordering
+  - explicit_prior_result_exposure_and_no_fresh_blinding_claim
+  - accepted_two_dimensional_loop_and_no_unique_total_coefficient_invariants
+  - field_coupling_action_measure_representation_and_compatibility_requirements
+claim_delta:
+  identifiers: [C-DIM-009]
+  dependencies: {C-DIM-009: [C-GAU-001, C-NAG-001]}
+  release_change: new_patch_release_if_individual_review_and_global_replay_pass
+  implementation_change:
+    - add_a_pure_gauge_dimension_module_with_canonical_and_connection_ledgers
+    - add_exact_unit_mutation_and_convention_conversion_tests
+claim_outline:
+  - Canonical kinetic normalization gives dimension A equals D over two minus one dimension g equals two minus D over two and projector coefficient dimension two.
+  - The special ansatz Pi_hat equals g squared times a nonzero dimensionless number is homogeneous only at D equals two.
+  - The mass-scale counterfamily g squared times M to the D minus two has dimension two for every D, so dimension counting alone proves no universal constant-polarization no-go.
+  - In D equals four a transverse projector coefficient Q times any dimensionless function of Q over M squared has dimension two, and dimension counting alone does not select a logarithm.
+  - For connection B equals g A and curvature F_B equals g F_A, the kinetic coefficient transforms by division by g squared and has dimension D minus four.
+  - A dimensionless fixed-basis trace index cannot change spacetime dimension, while generator rescaling must be accompanied by inverse coupling rescaling to preserve the covariant connection.
+source_corrections:
+  - retain_the_narrow_pure_coupling_D_equals_two_result
+  - reject_the_universal_constant_polarization_and_logarithm_wording
+  - replace_the_source_fermion_shaped_integrand_with_accepted_C_VAC_001_scope
+  - reject_manual_trace_replacement_as_a_convention_preserving_Abelian_limit
+  - retain_component_counting_only_as_a_supplied_D_comparison
+  - retain_Riesz_nonidentifiability_only_for_the_normalized_expression_without_sources_or_amplitude
+  - reject_propagating_boson_unique_coupling_physical_sector_and_substrate_readings
+collision_search:
+  command: >-
+    rg -n 'C-DIM-009|gauge dimension ledger|constant polarization|connection-normalized|connection field'
+    governance campaigns proposals memory src tests
+  result: identifier_and_exact_claim_surface_absent_before_revision
+selected_candidates: [A, B, C, D, E, F, G, H, J, K]
+oracle: >-
+  Exact SymPy and independent rational-exponent derivations of both field
+  conventions, source AST and native replay, mass-scale and dimensionless-
+  function counterfamilies, generator/coupling rescaling mutations, accepted
+  loop specialization, hash-pinned graph replay, claim review, and one terminal
+  global gate.
+status: frozen

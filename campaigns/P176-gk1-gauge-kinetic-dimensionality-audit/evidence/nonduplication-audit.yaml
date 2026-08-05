@@ -1,0 +1,20 @@
+campaign: P176
+proposed_claims:
+  C-DIM-009:
+    nearest: [C-GAU-001, C-NAG-001, C-MAX-001, C-VAC-001, C-NVP-001, C-NVP-002]
+    distinct_surface: >-
+      exact canonical and connection mass-dimension ledgers, density-preserving
+      convention translation, narrow pure-coupling D-two iff, explicit scale
+      and four-dimensional form-factor counterfamilies, and coupled generator-
+      trace and inverse-coupling rescaling
+    implementation: new_pure_gauge_dimensions_module_without_loop_duplication
+reserved_identifier_search:
+  C-DIM-009: no_existing_registry_campaign_memory_source_or_test_use_before_revision_0001
+API_search:
+  result: no_existing_importable_module_owns_both_normalization_ledgers_or_counterfamilies
+  retained_reuse:
+    - scalar_qed2_vacuum_polarization_for_the_accepted_D_two_specialization
+    - su2_fundamental_ledger_and_fundamental_generators_for_trace_data
+decision: distinct_additive_claim_subject_to_independent_review_and_global_replay
+duplicated_constants_or_solvers: false
+debt: []

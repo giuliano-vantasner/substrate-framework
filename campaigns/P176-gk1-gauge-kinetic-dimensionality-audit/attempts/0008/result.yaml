@@ -1,0 +1,32 @@
+attempt: 0008
+campaign: P176
+candidate: impact_nonduplication_and_claim_level_review
+status: passed
+started_at: '2026-08-11T04:52:00Z'
+finished_at: '2026-08-11T04:55:00Z'
+gitnexus:
+  refreshed_index_commit: 8e83f0b276bde1606c30f7d8d05ea0e89dcc5e85
+  indexed_symbols: 25909
+  indexed_relations: 40399
+  canonical_gauge_dimensions:
+    risk: LOW
+    direct_callers: 2
+    callers: [gauge_convention_translation, polarization_dimensions]
+    affected_processes: 0
+    affected_modules: 1
+  gauge_convention_translation:
+    risk: LOW
+    direct_callers: 0
+    affected_processes: 0
+  detect_changes:
+    risk: low
+    affected_processes: 0
+  analyzer_artifacts: removed_before_campaign_record
+textual_impact:
+  existing_importers_of_new_module: 0
+  opt_in_consumers:
+    - tests/test_gauge_dimensions.py
+    - campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+  modified_existing_canonical_symbols: []
+claim_collision_search: passed_no_prior_C_DIM_009_or_equivalent_surface
+next_attempt: claim_registry_release_disposition_docs_and_memory_transaction

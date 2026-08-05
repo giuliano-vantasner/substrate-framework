@@ -1,0 +1,25 @@
+campaign: P176
+source_unit: GK1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py
+sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74
+path_state: clean_at_governed_source_commit
+native:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-35/bridge_GK1_gauge_kinetic_dimensionality_boundary.py
+  exit_code: 0
+  elapsed_seconds: 0.36
+  lexical_checks: 11
+  runtime_checks: 11
+  assertions: 1
+  terminal_tally: ALL_11_CHECKS_PASS
+compatibility:
+  numpy_imported: false
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+scientific_reproduction: passed_all_executed_source_predicates
+headline_authority: >-
+  The tally establishes selected matrix traces projector definitions component
+  counts and power counting only. It does not establish the source's universal
+  polarization no-go logarithm selection propagating boson unique coupling
+  physical gauge sectors or substrate mechanism.

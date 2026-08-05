@@ -2,7 +2,7 @@
 description: Audit GK1's cross-sector gauge-kinetic dimensionality boundary
 author: vantasner
 created: '2026-08-11T04:33:00Z'
-updated: '2026-08-11T04:33:00Z'
+updated: '2026-08-11T05:01:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gauge-kinetic
 - dimensionality
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P176 GK1 Gauge-Kinetic Dimensionality Audit
 
@@ -95,11 +95,15 @@ closeness or narrative symmetry.
 
 ## Proposed Claim Delta
 
-No claim identifier is proposed at freeze. C-VAC-001, C-NVP-001, C-NVP-002,
-C-GAU-001, C-NAG-001, and C-MAX-001 may already cover the valid result and its
-ceilings. A new convention-translation claim would require distinct reusable
-content, collision-free identity, an importable API, consumers, independent
-verification, and individual four-axis review.
+No claim identifier was proposed at the pre-source freeze. Source-aware audit
+then selected preregistered candidates C, D, and J and opened recorded revision
+0001 for collision-free `C-DIM-009`. The proposed exact theorem will own the
+canonical-field and connection-field dimension ledgers, their full conversion,
+the narrow pure-coupling `D=2` implication, and counterfamilies showing why that
+implication is not a universal polarization no-go or logarithm theorem. Its
+proposed dependencies are C-GAU-001 and C-NAG-001. Acceptance requires a pure
+package API, exact tests, independent review, consumer replay, and a new patch
+release; otherwise the source will remain qualified through existing claims.
 
 ## Implementation and Oracle Plan
 
@@ -126,7 +130,24 @@ be repaired to current NumPy integration names before scientific classification.
 
 Attempt 0001 freezes the release, commit, hash, prior exposure, allowed imports,
 eleven candidates, selection criteria, empty initial claim delta, oracle, and
-compatibility policy before opening GK1's body.
+compatibility policy before opening GK1's body. Attempt 0002 reproduces all
+eleven native predicates without a compatibility event and records the gap
+between their exact algebra and the source's universal and physical prose.
+Attempt 0003 records revision 0001 and the collision-free `C-DIM-009` delta
+before implementation.
+Attempt 0004 preserves the first primary-verifier failure, where a literal
+accepted-claim phrase was too brittle for semantic scope. Attempt 0005 passes
+the repaired 50-check exact verifier. Attempts 0006 and 0007 pass the
+source-independent 22-check derivation and 28-check typed graph replay.
+Attempt 0008 records LOW impact and a clean nonduplication result. Attempt 0009
+makes collision evidence stable across promotion by anchoring it to frozen
+v0.127.0, and attempt 0010 passes 102 focused package and dependency tests.
+Attempt 0011 reaches the full-suite boundary but is preserved as transport-
+inconclusive because its detached session loses the final exit code. Attempt
+0012 repeats the unchanged integrated gate under a retained process handle and
+passes all 1,490 tests, 705 memory records, and the skill contract.
+Attempt 0013 closes regenerated and record-sensitive consumers without
+repeating the full suite.
 
 ## Debt Ledger
 
@@ -136,15 +157,15 @@ nonduplication, consumer propagation, compatibility, and governed records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| GK1's exact definitions and predicate reach are unknown | Pin every definition, check, assertion, import, and runtime result | open |
-| Coefficients may mix canonical and connection-field conventions | Derive both ledgers and the complete conversion | open |
-| Shared scalar algebra may be mistaken for a spacetime lift | Type the measure, operator, fields, and kernel in each dimension | open |
-| Representation traces may hide normalization changes | Trace every generator, coupling, and Abelian-limit conversion | open |
-| A loop contribution may be mistaken for a unique total kinetic term | Inventory bare, counterterm, matching-scale, and field-normalization freedoms | open |
-| Accepted claims may already own every surviving result | Compare exact statements, APIs, assumptions, and consumers | open |
-| Reverse consumers may inherit the dimensional overclaim | Inventory and replay the complete affected graph | open |
-| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | open |
+| GK1's exact definitions and predicate reach are unknown | Pin every definition, check, assertion, import, and runtime result | closed by source audit and 50-check verifier |
+| Coefficients may mix canonical and connection-field conventions | Derive both ledgers and the complete conversion | closed by C-DIM-009 and independent review |
+| Shared scalar algebra may be mistaken for a spacetime lift | Type the measure, operator, fields, and kernel in each dimension | closed by exact counterfamilies and scope ceilings |
+| Representation traces may hide normalization changes | Trace every generator, coupling, and Abelian-limit conversion | closed by exact joint rescaling identity |
+| A loop contribution may be mistaken for a unique total kinetic term | Inventory bare, counterterm, matching-scale, and field-normalization freedoms | closed by accepted ceilings and additive coefficient countermodels |
+| Accepted claims may already own every surviving result | Compare exact statements, APIs, assumptions, and consumers | closed; loop specialization is reused and convention theorem is novel |
+| Reverse consumers may inherit the dimensional overclaim | Inventory and replay the complete affected graph | closed by 14-node typed replay |
+| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | closed; GK1 native, YM2/QCD2 alias-only through `np.trapezoid` |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, and release state | closed by v0.128.0 promotion transaction |
 
 ## Review and Promotion Plan
 
@@ -156,6 +177,15 @@ Any genuinely distinct theorem must be extracted into the package and tests,
 reviewed independently, registered claim-by-claim, released, rendered, and
 synchronized before acceptance.
 
+## Outcome
+
+P176 accepts C-DIM-009 as the distinct exact convention and dimensionality
+theorem, extracts it into `gauge_dimensions.py`, and releases it in v0.128.0.
+GK1 is qualified through that claim plus the accepted representation, scalar-
+loop, and Riesz-kernel ceilings. Its universal two-dimensional, logarithmic,
+unique-coupling, physical-sector, dimensional-lift, and substrate readings are
+not promoted. The campaign debt ledger is empty.
+
 ## Done Gate
 
 P176 closes only when source predicates, convention-typed dimensions, action
@@ -166,6 +196,6 @@ next queue unit.
 
 ## Cross-References
 
-See C-GAU-001, C-MAX-001, C-VAC-001, C-LIE-001/003, C-REP-002, C-NAG-001,
+See C-DIM-009, C-GAU-001, C-MAX-001, C-VAC-001, C-LIE-001/003, C-REP-002, C-NAG-001,
 C-NVP-001/002, P134, P135, P147, P158-P161, EM3, EM5, EM7, W2, YM1, YM2,
 QCD1, QCD2, AS3, GK1, and the framework-migration effort.

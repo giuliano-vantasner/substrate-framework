@@ -1,0 +1,22 @@
+attempt: 0004
+campaign: P176
+candidate: primary_exact_dimensionality_and_scope_verifier
+status: failed
+started_at: '2026-08-11T04:44:00Z'
+finished_at: '2026-08-11T04:45:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P176-gk1-gauge-kinetic-dimensionality-audit/verify.py
+process:
+  exit_code: 1
+  checks_passed_before_failure: 43
+failed_check: accepted_U1_and_non_Abelian_covariance_leave_kinetic_dynamics_open
+mechanism: >-
+  The verifier searched C-NAG-001 for the literal phrase "supplies no action",
+  while the accepted statement uses the stronger structured wording "does not
+  derive an action coefficient or equation of motion". This is an oracle
+  representation defect, not a failure of the claim or implementation.
+repair: >-
+  Match the accepted action-coefficient and equation-of-motion ceiling exactly,
+  preserving the scientific predicate and rerun the same candidate.
+next_attempt: repaired_primary_exact_dimensionality_and_scope_verifier

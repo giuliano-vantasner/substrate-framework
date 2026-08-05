@@ -1,0 +1,71 @@
+campaign: P176
+source_unit: GK1
+source_sha256: c142538897e9168769483aeb978ea86587fa9a073e606aa204316238dfa24d74
+ast:
+  lines: 623
+  check_calls: 11
+  assert_nodes: 1
+  local_check_helper: true
+  imports: [os, sympy]
+  file_reads: [EM5, YM1, QCD1, EM7, YM2, QCD2]
+constructed_executable_objects:
+  - standard_Pauli_half_and_Gell_Mann_half_trace_matrices
+  - one_source_defined_two_by_two_Euclidean_projector
+  - trace_times_projector_tensor_definitions
+  - fermion_shaped_massless_parameter_integral
+  - antisymmetric_two_form_and_magnetic_component_counts
+  - canonical_field_and_coupling_mass_exponents
+  - pure_coupling_dimension_equation
+  - normalized_Riesz_shape_without_source_or_kinetic_amplitude
+  - six_file_literal_documentation_census
+absent_executable_objects:
+  - correct_complex_scalar_bubble_seagull_determinant_and_regulator
+  - general_dimension_loop_integral_or_renormalization_scheme
+  - bare_and_counterterm_kinetic_coefficients
+  - field_normalization_and_matching_scale
+  - convention_preserving_group_restriction_or_generator_coupling_rescaling
+  - a_four_dimensional_action_spectrum_or_observable
+  - a_substrate_to_quantum_matter_dictionary
+load_bearing_findings:
+  - >-
+    The source shares the u(1-u) numerator already rejected for its complex-
+    scalar reading. C-VAC-001 instead derives the (1-2u)^2 bubble-seagull
+    kernel and a fixed-positive-momentum massless divergence.
+  - >-
+    GK1.5 divides its trace-weighted tensor by the same trace value. This is an
+    identity inside its definition, not a convention-preserving Abelian limit;
+    T'=rho*T requires g'=g/rho and preserves g^2*T(R).
+  - >-
+    GK1.7 correctly proves that the special scale-free ansatz Pi_hat=g^2*c has
+    dimension two only at D=2. It does not test g^2*M^(D-2), which has the
+    required dimension in every D.
+  - >-
+    Dimensionless four-dimensional form factors are not forced to be
+    logarithmic. Constant, rational threshold, and logarithmic examples all
+    preserve scale homogeneity; dynamics and renormalization select among them.
+  - >-
+    GK1.8 proves only that power counting fixes exponent zero for a
+    four-dimensional inverse coupling. It determines neither a logarithm nor
+    its coefficient or subtraction.
+  - >-
+    GK1.9 differentiates a normalized Riesz shape with respect to a symbol
+    absent by construction. This correctly proves that expression cannot
+    identify g_eff, while leaving independent source and kinetic amplitudes free.
+  - >-
+    GK1.11 is a useful pinned documentation regression but chronology and
+    literal prose agreement do not create scientific authority.
+  - >-
+    The result prose repeats previously rejected propagation computed-coupling
+    physical gauge-sector and substrate claims.
+novel_exact_surface:
+  - canonical_and_connection_field_dimension_ledgers
+  - exact_density_preserving_normalization_translation
+  - narrow_pure_coupling_D_equals_two_iff
+  - scale_completion_and_four_dimensional_form_factor_counterfamilies
+  - convention_preserving_generator_trace_and_coupling_rescaling
+duplication:
+  standard_group_trace_algebra: C-REP-002_and_C-LIE-001
+  corrected_two_dimensional_scalar_loops: C-VAC-001_C-NVP-001_C-NVP-002
+  Riesz_shape_and_nonidentifiability: C-KRN-001_C-KRN-002
+  check_helper: src/substrate_framework/verification.py
+debt: []

@@ -1,0 +1,26 @@
+campaign: P176
+criteria_order:
+  - accepted_invariant_and_exact_source_scope_compatibility
+  - convention_typed_field_coupling_operator_and_measure_dimensions
+  - action_and_quantum_matching_premise_completeness
+  - representation_normalization_and_Abelian_limit_consistency
+  - assumption_and_parameter_economy
+  - exact_limits_mutation_sensitivity_consumer_reach_and_nonduplication
+candidates:
+  A: {decision: selected_as_source_adjudication_only, reason: Native_replay_passes_all_eleven_predicates_but_not_the_universal_or_physical_headline.}
+  B: {decision: selected_as_accepted_dependency_base, reason: Existing_claims_own_the_corrected_two_dimensional_scalar_loop_and_representation_factorization.}
+  C: {decision: selected, reason: Canonical_field_dimensions_close_exactly_and_retain_the_narrow_pure_coupling_D_two_result.}
+  D: {decision: selected, reason: Connection_field_dimensions_and_exact_coefficient_translation_prevent_normalization_mixing.}
+  E: {decision: selected_as_scope_boundary, reason: Fixed_basis_representation_factors_are_dimensionless_but_generator_rescaling_requires_inverse_coupling_rescaling.}
+  F: {decision: rejected_as_source_achievement, reason: GK1_constructs_no_four_dimensional_determinant_regulator_subtraction_counterterm_or_matching_problem.}
+  G: {decision: selected_as_falsifier, reason: The_source_divides_out_a_trace_number_instead_of_transporting_generator_and_coupling_conventions.}
+  H: {decision: selected_as_ceiling, reason: Covariance_curvature_and_projector_algebra_leave_the_kinetic_coefficient_and_physical_spectrum_open.}
+  I: {decision: rejected_as_complete_delta, reason: Existing_claims_do_not_own_the_two_normalization_ledgers_or_scale_counterfamilies.}
+  J: {decision: selected_for_C_DIM_009, reason: The_exact_distinct_reusable_theorem_closes_conventions_while_preserving_all_no_dynamics_ceilings.}
+  K: {decision: selected, reason: Claim_source_dependency_consumer_compatibility_release_queue_docs_and_memory_closure_are_required.}
+selection_basis: >-
+  C D E G H J and K are selected by exact closure counterexample reach API
+  economy and framework fit. Neither source tally nor group labels nor a
+  numerical comparator selects the claim.
+claim_delta: [C-DIM-009]
+debt: []

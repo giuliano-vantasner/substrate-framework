@@ -72,11 +72,10 @@ selection_criteria:
   - representation_normalization_and_abelian_limit_consistency
   - assumption_and_parameter_economy
   - exact_limits_mutation_sensitivity_consumer_reach_and_nonduplication
-claims_proposed: [C-DIM-009]
+claims_proposed: []
 comparators_blinded_until: >-
   freeze commit before opening the GK1 bridge body; the generated inventory,
   accepted EM5/YM1/QCD1 and YM2/QCD2 adjudications, durable memory, and parent
   effort already expose the shared-two-dimensional-kernel headline and
   dimensional-lift ceiling, so no fresh result blinding is claimed
-status: revised_after_source_audit
-revision: 0001
+status: frozen_with_prior_result_exposure
