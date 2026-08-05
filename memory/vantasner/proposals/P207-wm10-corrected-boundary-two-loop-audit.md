@@ -2,7 +2,7 @@
 description: Audit WM10's corrected-boundary gauge-only two-loop inverse solution
 author: vantasner
 created: '2026-08-05T23:00:00Z'
-updated: '2026-08-05T23:00:00Z'
+updated: '2026-08-05T23:28:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gauge-running
 - two-loop
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P207 WM10 Corrected-Boundary Two-Loop Audit
 
@@ -99,14 +99,14 @@ solver status, omitted term, comparator edge, consumer, and compatibility event.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Detailed source predicates remain blinded | Reproduce once after committed freeze | open |
-| Combined solve may duplicate C-RGE-006 | Audit accepted quantifiers and API | open |
-| Axis limits may be called independent validation | Classify them as containment | open |
-| Corrections may be called additive and independent | Compute the nonlinear cross term | open |
-| Scalar and generation counts may inherit WM9 authority | Enforce terminal WM9 ceiling | open |
-| Gauge-only result may be called full two-loop physics | Inventory omitted same-order and matching terms | open |
-| Reverse consumers may grant authority | Replay GC1 through GC6 without imports | open |
-| Compatibility may masquerade as science | Audit all graph access shapes | open |
+| Detailed source predicates remain blinded | Reproduce once after committed freeze | discharged after freeze commit `ebccbe9` |
+| Combined solve may duplicate C-RGE-006 | Audit accepted quantifiers and API | discharged; direct specialization only |
+| Axis limits may be called independent validation | Classify them as containment | discharged |
+| Corrections may be called additive and independent | Compute the nonlinear cross term | discharged at `-0.0000827877685999` |
+| Scalar and generation counts may inherit WM9 authority | Enforce terminal WM9 ceiling | discharged; no physical count inherited |
+| Gauge-only result may be called full two-loop physics | Inventory omitted same-order and matching terms | discharged by explicit ceiling |
+| Reverse consumers may grant authority | Replay GC1 through GC6 without imports | discharged; all remain pending |
+| Compatibility may masquerade as science | Audit all graph access shapes | discharged; zero quadrature surface and failures |
 
 ## Review and Promotion Plan
 
@@ -120,4 +120,6 @@ release gate. Evidence paths must exist before disposition registration.
 P207 closes only when the combined solution, containment axes, interaction
 ledger, authority, novelty, dependency and consumer graph, compatibility,
 disposition, generated state, and durable memory agree with empty campaign
-debt.
+debt. It closes with 38 primary, 15 independent, and 39 terminal graph checks
+plus twelve focused tests. WM10 is qualified as accepted composition; no claim,
+API, or release changes, and C-RGE-008 remains unpromoted.

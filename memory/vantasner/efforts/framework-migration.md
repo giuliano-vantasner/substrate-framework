@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-05T22:45:00Z'
+updated: '2026-08-05T23:28:00Z'
 tags:
 - substrate-framework
 - effort
@@ -138,7 +138,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 18 pending, 0 partially migrated, 3 migrated, 187 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 17 pending, 0 partially migrated, 3 migrated, 188 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -2350,27 +2350,40 @@ terminal graph, and 68 focused API checks pass. The 16-node graph pins 129
 predicates and 21 assertions. C-OVL-004 and C-RGE-008 remain unpromoted, and
 WM9 plus its graph have no quadrature compatibility surface.
 
+P207 leaves v0.150.0 unchanged and qualifies WM10 through C-MIX-002,
+C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, and C-VAC-003.
+The corrected-boundary gauge-only two-loop specialization gives conditional
+readout 0.2192066478076030 and supplied-unit scale 1.618331584571e14. Its
+zero-matrix and equal-boundary axes reproduce WM8 and WM6, and the four-corner
+cross term is -0.0000827877685999. C-RGE-006 already owns the general object.
+Thirty-eight primary, 15 independent, 39 terminal graph, and twelve focused
+checks pass after one memory-contract and three verifier-construction repairs.
+The source's default-only method, unchecked grid statuses, identical comparator
+repeat, finite-sample continuum overread, and prose-only residual attribution
+are corrected. C-RGE-008 remains unpromoted, and no quadrature compatibility
+event changes the verdict.
+
 ## Canonicalization
 The registry, `v0.150.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety accepted claims.
-P001 through P206 are frozen under `campaigns/`; proposal,
+P001 through P207 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 18 pending, 0 partial, 3
-migrated, 187 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P206 changes no accepted scientific surface, so its narrow record gate
+memory. The regenerated migration queue agrees on 17 pending, 0 partial, 3
+migrated, 188 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P207 changes no accepted scientific surface, so its narrow record gate
 follows the last full P202 release boundary rather than repeating all 1,815
 unchanged package tests.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 18
-pending, 3 migrated, 187 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 17
+pending, 3 migrated, 188 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM9 source cycle is fully terminal without backward authority. The next
-campaign audits WM10's corrected two-loop boundary construction against the
-qualified WM7-WM9 ceilings. The remaining condensation order is WM10, GC1 through GC6 on one branch and
+The WM7-WM10 source cycle is fully terminal without backward authority. The next
+campaign audits GC1 against the corrected overlap, binding, and running
+ceilings. The remaining condensation order is GC1 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

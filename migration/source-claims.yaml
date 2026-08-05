@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 18
-  qualified: 187
+  pending_adjudication: 17
+  qualified: 188
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -11498,8 +11498,57 @@ units:
   dynamic_check_calls: 6
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-MIX-002
+  - C-REP-001
+  - C-REP-003
+  - C-RGE-004
+  - C-RGE-005
+  - C-RGE-006
+  - C-VAC-003
+  qualification: WM10 is a direct specialization of C-RGE-006's already accepted arbitrary-positive-boundary
+    gauge-only inverse problem. The canonical solver gives corrected-boundary full-matrix readout 0.2192066478076030
+    and high scale 1.618331584571e14 in the supplied scale unit, with positive trajectories and residuals
+    below the declared gate. The corrected-boundary zero-matrix axis reproduces WM8 exactly, and the equal-boundary
+    full-matrix axis reproduces C-RGE-006/WM6. Their four-corner readout cross term is -0.0000827877685999,
+    so the declared effects are nonadditive on this conditional coordinate. DOP853 tolerance tightening,
+    Radau, and an independent direct-coupling solve agree. This is conditional inverse inference, not
+    an ab-initio prediction. The one- scalar field table, boundary ratios, two low coordinates, reference
+    scale, normalization, and zero matching offsets remain supplied; WM9 grants no physical scalar or
+    generation count. The source uses only default RK45, does not check its root residual magnitude, discards
+    each grid success flag, and repeats an identical solve instead of perturbing the comparator. Its nine-point
+    monotonic grid and the review's 25-point refinement are bounded numeric samples, not a smooth continuum
+    theorem. The prose-only residual-attribution result has no executable check, and uncomputed Yukawa,
+    threshold, matching, scheme, uncertainty, and higher- order effects are neither quantified nor proved
+    exhaustive. No forced physical correction, full Standard-Model two-loop prediction, unification, observation,
+    empty physical debt ledger, or substrate mechanism is accepted. C-RGE-008 remains reserved and unpromoted.
+  evidence:
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/reviews/source_adjudication.md
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/reviews/accepted_composition_review.md
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/reviews/impact_analysis.md
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/source-reproduction.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/compatibility-audit.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/source-audit.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/check-adjudication.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/formula-freeze.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/input-provenance.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/dependency-audit.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/consumer-audit.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/candidate-comparison.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/implementation-audit.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/primary-provenance.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/evidence/independent-provenance.yaml
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/verify.py
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/reviews/independent_direct_boundary_review.py
+  - campaigns/P207-wm10-corrected-boundary-two-loop-audit/reviews/replay_source_graph.py
+  - memory/vantasner/decisions/WM10-qualified-review.md
+  note: P207 closes 38 primary, 15 independent, and 39 terminal source-graph checks plus twelve focused
+    existing API tests after one memory-contract repair and three preserved verifier-construction repairs.
+    The graph pins 14 nodes with 125 static predicates and 16 assertions. WM10 its graph and mutable P207
+    have no quadrature surface and create zero scientific version failures.
 - source_unit: WM7
   phase: phase-39
   path: merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py

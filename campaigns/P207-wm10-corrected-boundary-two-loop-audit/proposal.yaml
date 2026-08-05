@@ -52,7 +52,8 @@ selection_criteria:
   - nonlinear interaction and omitted-term accounting
   - comparator absence from solve and prohibition on proximity selection
   - dependency and reverse-consumer closure
-claims_proposed: [C-RGE-008]
+claims_proposed: []
+reserved_unpromoted_claims: [C-RGE-008]
 comparators_blinded_until: >-
   The generated queue exposes WM10's seven check sites, one assertion, the
   one-loop and equal-boundary containment headlines, and the truncated combined
@@ -60,4 +61,11 @@ comparators_blinded_until: >-
   tolerances residuals mutations and native output remain unopened until this
   contract formula freeze provenance memory validation and clean freeze commit
   exist. Exposed values are barred from candidate selection and pass thresholds.
-status: active
+comparators_used_for_selection:
+  - hash-pinned WM10 native output opened after freeze commit ebccbe9
+  - C-RGE-006 arbitrary-boundary claim and canonical solver
+  - raw direct-coupling Radau and DOP853 rederivation
+  - exact and numeric four-corner containment and interaction ledger
+  - accepted omission and field-content ceilings
+status: accepted
+revision: 0002

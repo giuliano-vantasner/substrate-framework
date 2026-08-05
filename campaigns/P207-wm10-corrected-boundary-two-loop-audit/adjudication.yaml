@@ -1,0 +1,101 @@
+campaign: P207
+title: WM10 corrected-boundary gauge-only two-loop accepted-composition audit
+source_baseline: substrate@6d1f4e0
+source_units: [WM10]
+base_release: v0.150.0
+accepted_release: v0.150.0
+audit_commit: 4bae906
+adjudicated_at: '2026-08-05T23:28:00Z'
+selected_candidates:
+  - {id: A, reason: C_RGE_006_already_owns_the_arbitrary_positive_boundary_solve.}
+  - {id: C, reason: Exact_zero_matrix_containment_reproduces_WM8.}
+  - {id: D, reason: Equal_boundary_full_matrix_containment_reproduces_C_RGE_006.}
+  - {id: E, reason: Canonical_and_direct_coordinate_routes_reproduce_the_combined_conditional_solution.}
+  - {id: F, reason: Four_corner_difference_exposes_nonlinear_interaction_and_omission_scope.}
+  - {id: G, reason: Existing_gauge_running_API_owns_the_complete_object.}
+  - {id: H, reason: Individual_WM10_governance_closes_without_GC_reverse_authority.}
+competing_candidates:
+  - {id: B, decision: rejected_as_duplicate_of_C_RGE_006_arbitrary_boundary_quantifiers_and_API}
+claims: []
+accepted_composition:
+  - {id: C-MIX-002, decision: unchanged_generic_phase_count_and_no_physical_generation_map}
+  - {id: C-REP-001, decision: unchanged_conditional_trace_coordinate_and_normalization_covariance}
+  - {id: C-REP-003, decision: unchanged_supplied_finite_field_table_and_multiplicity_ceiling}
+  - {id: C-RGE-004, decision: unchanged_conditional_inverse_inference_from_supplied_low_coordinates}
+  - {id: C-RGE-005, decision: unchanged_supplied_gauge_only_one_and_two_loop_ledger_with_omissions}
+  - {id: C-RGE-006, decision: unchanged_arbitrary_boundary_exact_and_status_gated_numeric_solver}
+  - {id: C-VAC-003, decision: unchanged_affine_boundary_and_matching_family_ceiling}
+unpromoted_claims:
+  - {id: C-RGE-008, reason: C_RGE_006_already_owns_the_combined_arbitrary_boundary_object.}
+  - {id: ab_initio_weak_angle_prediction, reason: Boundary_content_low_coordinates_reference_scale_normalization_and_matching_are_supplied.}
+  - {id: physically_forced_two_corrections, reason: WM7_and_WM9_do_not_derive_scalar_or_generation_multiplicity_and_C_RGE_005_supplies_field_content.}
+  - {id: continuous_monotone_composition_theorem, reason: Source_nine_point_and_review_twenty_five_point_grids_are_bounded_numeric_samples_not_a_continuum_proof.}
+  - {id: exhaustive_residual_attribution, reason: The_source_result_is_unexecuted_and_named_omissions_are_not_computed_or_shown_exhaustive.}
+  - {id: empty_bridge_debt, reason: Physical_input_boundary_matching_same_order_and_residual_provenance_remain_open.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_direct_boundary_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  accepted_composition_review: reviews/accepted_composition_review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_inventory: evidence/source-inventory.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+    - attempts/0008/result.yaml
+    - attempts/0009/result.yaml
+    - attempts/0010/result.yaml
+source_disposition: {WM10: qualified}
+accepted_mappings: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+compatibility:
+  installed_numpy: 2.5.1
+  no_quadrature_surface: [WM10, fourteen_node_graph, mutable_P207]
+  aliases_injected_during_science: []
+  version_only_scientific_failures: 0
+release_change: null
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_direct_boundary_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - PYTHONPATH=src_pytest_tests_test_gauge_running
+  - PYTHONPATH=src_python_validate_repository
+  - PYTHONPATH=src_python_render_docs_check
+  - PYTHONPATH=src_python_render_memory_check
+  - memory_validate
+  - physics_skill_validate
+  - yaml_parse
+  - git_diff_check
+narrow_gate:
+  attempt: attempts/0010/result.yaml
+  primary_checks: 38
+  independent_checks: 15
+  terminal_graph_checks: 39
+  focused_tests: 12
+  repository_claims: 190
+  migration_units: 218
+  pending_units: 17
+  memory_files_validated: 839
+  exit_status: 0
+last_full_release_gate: {campaign: P202, tests_passed: 1815, pytest_seconds: 172.62}
+debt: []
+status: accepted_composition_no_release
