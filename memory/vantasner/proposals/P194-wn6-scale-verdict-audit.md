@@ -154,6 +154,19 @@ not make `M` separately identifiable or prevent absorption into an effective
 amplitude. The next attempt freezes a rigorous amplitude convention and
 cosine-remainder certificate before deciding C-OSC-002.
 
+Attempt 0003 freezes C-OSC-002 as a distinct positive theorem and selects
+Candidates C, D, E, and F. For every real `x`, with
+`V=1-cos(x)`, `Q=x^2/2`, and `E=Q-V`, the target is
+`0 <= E <= x^4/24`; hence the relative-to-quadratic error is at most
+`x^2/12`, and `|x| <= sqrt(12*epsilon)` is a rigorous sufficient domain for
+declared tolerance `epsilon>0`. At `x=pi` the exact relative error is
+`1-4/pi^2`, so the barrier is not a small-error oracle. A harmonic phase with
+peak `P` has cycle mean square `P^2/2` and RMS `|P|/sqrt(2)`. Therefore an RMS
+map gives the source threshold `A_RMS>sqrt(n)`, while a peak map gives
+`A_peak>sqrt(2*n)`. C-OSC-001's `q_0^2` remains a third, separately declared
+Fock-coordinate convention. This content is absent from C-SG-019 and
+C-OSC-001, so Candidate B is rejected and the importable API is warranted.
+
 ## Debt Ledger
 
 The P194 ledger tracks source predicates, amplitude and intensity conventions,
@@ -164,8 +177,8 @@ dependencies, consumers, and governed state.
 | --- | --- | --- |
 | WN6 was exposed before P194 | Record exposure and claim no fresh blinding | discharged |
 | Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | discharged |
-| Classical peak, RMS, variance, and Fock intensity may be conflated | Derive and type every map and counterexample | in progress |
-| A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | open |
+| Classical peak, RMS, variance, and Fock intensity may be conflated | Derive and type every map and counterexample | discharged |
+| A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | in progress |
 | PN2 physical band may be imported without authority | Trace units, state provenance, and accepted ceiling | discharged |
 | Conditional threshold algebra may omit a sign domain | Derive exact equivalences and counterdomains | discharged |
 | A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | open |

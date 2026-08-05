@@ -1,0 +1,29 @@
+attempt: 0003
+campaign: P194
+candidate: exact_cosine_remainder_and_amplitude_convention_freeze
+status: passed_formula_freeze
+started_at: '2026-08-05T16:32:00Z'
+finished_at: '2026-08-05T16:38:00Z'
+selected_candidates: [C, D, E, F]
+retained_evidence_candidate: A
+rejected_candidate: B
+rejected_candidate_reason: >-
+  C-SG-019 explicitly leaves finite remainder control open and no accepted API
+  distinguishes harmonic peak from RMS phase amplitude, so existing claims do
+  not own the complete positive object.
+provisional_claim: C-OSC-002
+claim_dependencies: [C-SG-019, C-OSC-001]
+new_exact_content:
+  - global_cosine_quadratic_gap_bounds
+  - tolerance_dependent_sufficient_domain
+  - exact_harmonic_peak_RMS_conversion
+  - convention_dependent_limb_threshold
+source_corrections:
+  - harmonic_RMS_squared_is_half_peak_squared
+  - pi_barrier_is_not_a_small_error_boundary
+  - q0_squared_is_not_a_classical_RMS_without_a_map
+  - period_counts_are_not_topological_windings
+scientific_threshold_changed: true
+reason: replaces_unquantified_hard_cutoff_with_predeclared_relative_error_tolerance
+next_attempt: implement_importable_API_and_mutation_sensitive_primary_and_independent_exact_verifiers
+

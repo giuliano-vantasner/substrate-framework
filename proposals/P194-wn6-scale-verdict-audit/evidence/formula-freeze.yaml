@@ -1,0 +1,59 @@
+campaign: P194
+attempt: 0003
+provisional_claim: C-OSC-002
+dependencies: [C-SG-019, C-OSC-001]
+domain:
+  phase_coordinate: x_in_R
+  harmonic_peak: P_in_R
+  angular_frequency: omega_in_R_nonzero
+  relative_tolerance: epsilon_positive
+definitions:
+  exact_cosine_potential: V(x)=1-cos(x)
+  quadratic_approximation: Q(x)=x^2/2
+  quadratic_gap: E(x)=Q(x)-V(x)
+  harmonic_phase: phi(t)=P*cos(omega*t+delta)
+  full_period: T=2*pi/abs(omega)
+exact_targets:
+  global_gap_nonnegative: 0<=E(x)
+  global_gap_upper_bound: E(x)<=x^4/24
+  relative_to_quadratic_bound: x!=0_implies_E(x)/Q(x)<=x^2/12
+  tolerance_domain: abs(x)<=sqrt(12*epsilon)_implies_E(x)/Q(x)<=epsilon
+  barrier_top_relative_error: E(pi)/Q(pi)=1-4/pi^2
+  harmonic_cycle_mean_square: average_over_one_period(phi(t)^2)=P^2/2
+  harmonic_rms: rms(phi)=abs(P)/sqrt(2)
+  RMS_convention: A_RMS>=0_implies_mean_square=A_RMS^2_and_peak=sqrt(2)*A_RMS
+  peak_convention: A_peak>=0_implies_mean_square=A_peak^2/2
+  harmonic_pointwise_barrier_consequence: abs(phi)<=pi_implies_A_RMS^2<=pi^2/2
+conditional_limb_targets:
+  positive_RMS_map: S=A_RMS^2_and_A_RMS>0_implies_S>n_iff_A_RMS>sqrt(n)
+  positive_peak_map: S=A_peak^2/2_and_A_peak>0_implies_S>n_iff_A_peak>sqrt(2*n)
+  accepted_Fock_map: C_OSC_001_defines_S=q0^2_not_either_classical_map
+proof_routes:
+  primary:
+    - 1-cos(x)=2*sin(x/2)^2<=x^2/2
+    - fourth_derivative_of_1-x^2/2+x^4/24-cos(x)_is_1-cos(x)_nonnegative_with_four_zero_initial_data
+    - exact_trigonometric_period_integral_for_harmonic_mean_square
+  independent:
+    - alternating_Taylor_separation_with_global_derivative_bound
+    - complex_exponential_or_double_angle_cycle_average
+mutations:
+  - remove_the_factor_one_half_from_the_quadratic
+  - replace_the_fourth_order_bound_denominator_24
+  - replace_RMS_factor_one_half_by_one
+  - use_peak_amplitude_in_the_RMS_limb_without_sqrt_two
+  - identify_q0_with_a_classical_RMS_without_a_declared_map
+  - label_period_count_as_topological_winding
+  - use_pi_as_a_universal_small_error_boundary
+novelty_boundary:
+  C_SG_019: owns_exact_entire_coefficients_but_explicitly_leaves_finite_remainder_control_open
+  C_OSC_001: owns_q0_squared_one_mode_intensity_but_no_classical_peak_or_RMS_map
+  source_WN6: supplies_no_valid_remainder_or_RMS_derivation
+proposed_public_API:
+  module: src/substrate_framework/cosine_vertices.py
+  functions:
+    - cosine_quadratic_gap
+    - cosine_quadratic_gap_bound
+    - harmonic_cycle_mean_square
+    - harmonic_rms_from_peak
+    - sufficient_cosine_quadratic_domain
+
