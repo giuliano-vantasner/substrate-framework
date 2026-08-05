@@ -1,0 +1,17 @@
+campaign: P198
+verifier: reviews/independent_coherent_state_review.py
+sha256: 89393f518d42ce7ef870a04b40e9b051f12f2d0f60414bf05fdc9f37f9c2ae9e
+command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P198-md3-vertex-operator-audit/reviews/independent_coherent_state_review.py
+terminal_tally: ALL_25_CHECKS_PASS
+exit_status: 0
+imports_canonical_coherent_state_API: false
+independent_surfaces:
+  - raw_coefficient_modulus_squares
+  - raw_series_normalization
+  - raw_annihilation_recurrence
+  - raw_probability_generating_function_and_moments
+  - raw_overlap_sum
+  - integer_mode_tie
+  - compact_multiplier_density_and_periodicity
+  - missing_Gaussian_factor_counterexample
+numpy_surface: none

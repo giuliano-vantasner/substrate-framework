@@ -1,0 +1,29 @@
+attempt: 0004
+campaign: P198
+candidate: exact_coherent_state_implementation_primary_independent_and_focused_verification
+status: passed
+started_at: '2026-08-11T22:18:00Z'
+finished_at: '2026-08-11T22:24:00Z'
+implementation:
+  module: src/substrate_framework/coherent_states.py
+  package_exports: 7
+  new_test_executions: 22
+verification:
+  primary_checks: 48
+  independent_checks: 25
+  focused_tests: 59
+  exit_statuses_all_zero: true
+mutations:
+  missing_Gaussian_half_factor: rejected
+  factorial_instead_of_sqrt_factorial: rejected
+  missing_complex_conjugation: rejected
+  finite_edge_as_global_CCR: rejected
+  unique_positive_integer_mode: rejected
+  occupation_support_equals_classical_vacua: rejected
+compatibility:
+  mutable_numpy_surface: none
+  version_only_scientific_failures: 0
+scientific_threshold_changed: true
+debt:
+  - complete_ten_node_source_graph_and_individual_claim_and_source_reviews
+next_attempt: source_graph_replay_claim_review_and_MD3_disposition_review

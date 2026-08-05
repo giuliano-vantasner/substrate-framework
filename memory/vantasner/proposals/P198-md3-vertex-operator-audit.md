@@ -2,7 +2,7 @@
 description: Separate coherent occupation support from compact phase vertices and classical cosine vacua
 author: vantasner
 created: '2026-08-11T22:10:00Z'
-updated: '2026-08-11T22:18:00Z'
+updated: '2026-08-11T22:24:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -120,6 +120,12 @@ the source weight helper inserts rather than derives its coefficient, positive
 integer intensity has tied modes S-1 and S, and scalar periodicity selects no
 material displacement or state.
 
+Attempt 0004 implements the exact coherent-state API. Forty-eight primary and
+25 independent raw-series checks pass with 59 focused package tests. Gaussian
+normalization, square-root factorial, complex conjugation, the finite edge,
+integer mode ties, and the occupation-versus-vacuum distinction are all
+mutation sensitive.
+
 ## Debt Ledger
 
 The ledger tracks every conflation that could turn an exact state identity
@@ -129,10 +135,10 @@ into an unsupported physical claim.
 | --- | --- | --- |
 | Prior MD3 execution prevents fresh blinding | Preserve P191/P192 exposure and freeze before renewed P198 work | discharged by validated attempt 0002 |
 | Vertex terminology can conflate distinct operators | Type every Hilbert space, operator, domain, and state | discharged by source audit and Candidate B counterexample |
-| Gaussian normalization and ordering are load bearing | Independently derive BCH coefficients and mutate the half factor | open pending canonical and independent verification |
+| Gaussian normalization and ordering are load bearing | Independently derive BCH coefficients and mutate the half factor | discharged by 48 primary and 25 independent checks |
 | Factorial-one mass may be called a physical probability or rate | Require preparation and observable semantics; retain the mathematical ceiling | discharged by declared number measurement and material-process exclusion |
 | Occupation support may be confused with classical vacua | Give explicit countermodels and support taxonomy | discharged by compact multiplier and periodicity independence checks |
-| Claim may duplicate C-OSC-001 or C-CMB-003 | Complete claim-level nonduplication review | open; state amplitudes recurrence and overlap are provisionally distinct |
+| Claim may duplicate C-OSC-001 or C-CMB-003 | Complete claim-level nonduplication review | discharged by state-amplitude recurrence overlap and Born-semantics audit |
 | Downstream consumers may inherit MD3 wholesale | Replay exact graph and preserve individual dispositions | open |
 
 ## Review and Promotion Plan

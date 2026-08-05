@@ -79,6 +79,15 @@ from .bosonic_fock import (
     normalized_factorial_one_mass,
     truncated_bosonic_fock_ladder,
 )
+from .coherent_states import (
+    CoherentStateLedger,
+    coherent_state_coefficient,
+    coherent_state_intensity,
+    coherent_state_ledger,
+    coherent_state_number_modes,
+    coherent_state_number_probability,
+    coherent_state_overlap,
+)
 from .factorial_suppression import (
     FactorialDecadeBound,
     FactorialSuppressionEvidence,

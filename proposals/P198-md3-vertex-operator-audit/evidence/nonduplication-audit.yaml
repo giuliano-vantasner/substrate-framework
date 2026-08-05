@@ -1,0 +1,38 @@
+campaign: P198
+claim_candidate: C-VOP-001
+comparisons:
+  C-OSC-001:
+    owns:
+      - one_mode_Fock_ladder_and_CCR_domain
+      - repeated_creation_factorial_norm
+      - conditional_cosine_low_sector_element
+      - mathematical_factorial_one_masses
+    does_not_own:
+      - normalized_coherent_state_coefficients
+      - annihilation_eigenvector_recurrence
+      - coherent_state_overlap
+      - number_measurement_Born_semantics_for_a_declared_state
+  C-CMB-003:
+    owns:
+      - normalized_all_nonnegative_factorial_one_mass
+      - complete_modes_PGF_moments_and_tail_bounds
+    does_not_own:
+      - a_Fock_state_whose_number_measurement_realizes_the_mass
+      - amplitude_phase_information_or_state_overlap
+  C-SG-019:
+    distinction: classical_local_cosine_coefficients_not_a_quantum_state_or_Weyl_displacement
+  C-OSC-002:
+    distinction: classical_peak_RMS_and_cosine_error_conventions_not_Fock_displacement_intensity
+  C-SPN-002:
+    distinction: finite_collective_SU2_ladder_not_one_mode_bosonic_Fock_space
+  compact_phase_multiplier:
+    distinction: unitary_Fourier_translation_preserving_pointwise_density_not_a_Weyl_displacement
+novel_surface:
+  - exact_normalized_coherent_vector_coefficients
+  - exact_annihilation_eigenvector_recurrence
+  - exact_coherent_overlap
+  - exact_number_Born_probability_for_the_declared_state_and_observable
+  - explicit_separation_of_occupation_support_from_classical_phase_and_vacua
+duplicate_wrapper_rejected: restating_factorial_one_mass_without_state_amplitudes
+claim_is_distinct: true
+debt: []

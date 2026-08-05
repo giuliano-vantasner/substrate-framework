@@ -1,0 +1,19 @@
+campaign: P198
+verifier: verify.py
+sha256: a78f42d77bc28aa6f00cb006a2922dabedabaafeafe2bb69f62e08a192c217bc
+command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P198-md3-vertex-operator-audit/verify.py
+terminal_tally: ALL_48_CHECKS_PASS
+exit_status: 0
+imports_canonical_coherent_state_API: true
+pins:
+  source_sha256: 2c50b4cacb8746a35f99c26d9f0edd0227314ab9410677aebc54c29812daf128
+  immutable_base_release_sha256: ac66e5ae6e46e878c6392892fb534a5fb7115dd6a2e50d59e2e4a429d8b82581
+  formula_freeze_sha256: 11fb7395aaf0a33389fbd51940eb67668ddc3427a106c2bae6d5157232db2d85
+load_bearing_mutations:
+  - Gaussian_half_factor
+  - square_root_factorial
+  - complex_conjugation_in_Weyl_generator
+  - finite_truncation_edge
+  - complete_positive_integer_mode_tie
+counterexample: compact_phase_multiplier_preserves_pointwise_density_and_has_no_displacement_intensity
+numpy_surface: none

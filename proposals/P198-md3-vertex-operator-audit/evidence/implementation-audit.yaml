@@ -1,0 +1,38 @@
+campaign: P198
+claim_candidate: C-VOP-001
+module:
+  path: src/substrate_framework/coherent_states.py
+  sha256: 624620ad34d3586d59ea38123ddfa9305f60c7c40a2ca0ac9c7b956c25372f39
+  imports_execute_simulation: false
+  numpy_import: false
+  legacy_numpy_trapz_references: 0
+  current_numpy_trapezoid_references: 0
+APIs:
+  - CoherentStateLedger
+  - coherent_state_intensity
+  - coherent_state_coefficient
+  - coherent_state_number_probability
+  - coherent_state_overlap
+  - coherent_state_number_modes
+  - coherent_state_ledger
+architecture:
+  new_leaf_module: true
+  existing_signatures_changed: []
+  existing_values_changed: []
+  canonical_dependency: src/substrate_framework/bosonic_fock.py
+  package_exports_added: 7
+tests:
+  path: tests/test_coherent_states.py
+  sha256: 10047ad1faebb52d4b2541e31261f8c7ada2f2b5b2c3acb59ce675485c9193c6
+  new_test_executions: 22
+  existing_dependency_test_executions: 37
+  total_focused_test_executions: 59
+  terminal_tally: 59_passed
+adverse_tests:
+  - missing_Gaussian_half_factor_breaks_normalization
+  - factorial_instead_of_sqrt_factorial_breaks_the_eigenvector_recurrence
+  - floating_displacements_are_rejected
+  - undecidable_complex_typing_is_rejected
+  - integer_mode_tie_is_complete
+  - phase_rotation_changes_amplitudes_but_not_probabilities
+debt: []
