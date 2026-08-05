@@ -1,0 +1,31 @@
+source_unit: SC1
+source_sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0
+objects_present:
+  - symbolic old-sign Gordon inverse metric for n(x) and positive symbolic v
+  - direct Christoffel-to-Einstein reconstruction through imported curvature helper
+  - source-defined scalar stress for U(t,x)
+  - four ray conditions in three squared-jet and potential coordinates
+  - exact source-defined full and relaxed SymPy solves
+  - half-boost ratios and old 5/6 witness
+objects_absent:
+  - accepted mostly-plus Gordon coefficient eta+(1-n^2)uu
+  - accepted canonical scalar plus-potential stress bracket
+  - independent G_tx=0=kappa*T_tx equation
+  - separate rest v=0 branch without division by v
+  - Lorentzian abs(v)<1 domain guard
+  - final K=0 geometry condition after the scalar stress vanishes
+  - scalar Euler equation conservation boundary data and material action
+authority_mismatches:
+  - {object: Gordon_metric, source: eta_plus_n2_minus_1_uu, accepted: eta_plus_1_minus_n2_uu, consequence: source_5_over_6_is_accepted_1_over_6}
+  - {object: scalar_stress, source: dU_dU_minus_g_half_norm_minus_V, accepted: dU_dU_minus_g_half_norm_plus_V, consequence: relaxed_family_and_blocker_diagnosis_change}
+  - {object: component_system, source: [xx, tz, yy, zz], accepted: every_symmetric_component_including_tx, consequence: source_system_is_incomplete}
+surviving_after_canonical_rederivation:
+  - nonzero-boost accepted Gordon tensor has the same nonzero-component ratios and G_xx=0
+  - full accepted Gordon-canonical-scalar compatibility locus is vacuum stress with K=0
+  - the no-nonvacuum conclusion survives only through C-GOR-002's independent derivation
+rejected_source_readings:
+  - SC1 audits the accepted canonical tensors as written
+  - G_xx alone is the canonical cosine-potential blocker
+  - reproducing G2's 5/6 proves object identity with C-GOR-001
+  - SC1 proves that SC2 solves the alternative route
+  - algebraic proportionality supplies a material or physical gravitational solution

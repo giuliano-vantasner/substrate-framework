@@ -1,0 +1,86 @@
+campaign: P178
+title: SC1 Gordon canonical-scalar compatibility audit
+source_baseline: substrate@6d1f4e0
+source_units: [SC1]
+base_release: v0.129.0
+accepted_release: v0.130.0
+adjudicated_at: '2026-08-11T06:49:00Z'
+selected_candidates:
+  - {id: A, reason: Hash_pinned_native_execution_is_retained_as_source_evidence_only.}
+  - {id: D, reason: The_exact_all_component_nonzero_rest_and_profile_locus_earns_C_GOR_002.}
+  - {id: G, reason: Claim_source_consumer_disposition_release_docs_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: B, decision: rejected_as_incomplete_because_accepted_inputs_do_not_state_the_new_if_and_only_if_locus}
+  - {id: C, decision: rejected_as_duplicate_because_C_LIN_001_owns_generic_rank_consistency_and_nullity}
+  - {id: E, decision: retained_as_a_rejection_guard_because_no_four_dimensional_breather_embedding_is_supplied}
+  - {id: F, decision: deferred_because_no_separately_derived_anisotropic_matter_action_is_required_for_the_classifier}
+claims:
+  - id: C-GOR-002
+    decision: accepted
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+accepted_composition:
+  - {id: C-GOR-001, decision: unchanged_accepted_Gordon_metric_and_transverse_Einstein_tensor}
+  - {id: C-STG-001, decision: unchanged_accepted_canonical_scalar_stress_and_dynamical_ceiling}
+  - {id: C-LIN-001, decision: unchanged_exact_rank_consistency_and_nullity_semantics}
+unpromoted_claims:
+  - {id: SC1_metric_and_five_sixths_witness, reason: The_source_uses_the_unaccepted_Gordon_coefficient_sign.}
+  - {id: SC1_scalar_stress, reason: The_source_uses_the_opposite_potential_sign_from_C_STG_001.}
+  - {id: G_xx_alone_closes_the_system, reason: The_tx_rest_and_remaining_curvature_equations_are_load_bearing.}
+  - {id: four_dimensional_sine_Gordon_breather_source, reason: No_transverse_embedding_units_action_or_boundary_data_are_supplied.}
+  - {id: SC2_solves_the_alternative_route, reason: SC2_execution_is_evidence_only_and_requires_independent_adjudication.}
+  - {id: material_physical_gravity_or_substrate_realization, reason: No_such_dictionary_scale_or_observable_is_supplied.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_gordon_scalar_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  individual_claim_review: reviews/C-GOR-002-claim-review.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  accepted_evidence_reuse: evidence/accepted-evidence-reuse.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  literature_audit: evidence/literature-audit.yaml
+  numerical_audit: evidence/numerical-audit.yaml
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  native_attempt: attempts/0004/result.yaml
+  focused_failure: attempts/0008/result.yaml
+  focused_repair: attempts/0009/result.yaml
+  primary_failures: [attempts/0010/result.yaml, attempts/0011/result.yaml, attempts/0012/result.yaml]
+  primary_attempt: attempts/0013/result.yaml
+  independent_attempt: attempts/0014/result.yaml
+  graph_attempts: [attempts/0015/result.yaml, attempts/0018/result.yaml, attempts/0019/result.yaml]
+  impact_attempt: attempts/0016/result.yaml
+  focused_attempt: attempts/0017/result.yaml
+  terminal_attempt: attempts/0020/result.yaml
+  staged_diff_attempt: attempts/0021/result.yaml
+source_disposition: {SC1: qualified}
+accepted_mappings:
+  - C-GOR-001
+  - C-STG-001
+  - C-GOR-002
+compatibility:
+  native_nodes: [G2, G3, SC1, SC2]
+  immutable_alias_only_nodes: []
+  scientific_failures_from_version_events: 0
+release_change: v0.130.0
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/independent_gordon_scalar_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/replay_source_graph.py
+  - pytest tests/test_gordon_scalar_compatibility.py tests/test_gordon_metric.py tests/test_einstein_scalar.py tests/test_linear_systems.py
+  - P142_C_GOR_001_verifier
+  - scripts/validate.sh
+  - git diff --check
+debt: []
+status: accepted

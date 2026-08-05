@@ -1,0 +1,23 @@
+attempt: 0010
+campaign: P178
+candidate: primary_source_aware_exact_verifier_first_run
+status: failed_symbolic_nonnegativity_representation
+started_at: '2026-08-11T06:31:00Z'
+finished_at: '2026-08-11T06:32:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+surviving_result:
+  checks_passed_before_failure: 21
+  source_hash_tally_and_compatibility: passed
+  old_metric_and_wrong_stress_authority_guards: passed
+  nonzero_boost_rank_minor_and_zero_locus: passed
+failure: >-
+  SymPy returned undecidable for a direct global nonnegativity query on
+  1-cos(theta), so the verifier stopped before the rest and profile branches.
+classification: symbolic_representation
+scientific_candidate_rejected: false
+repair: >-
+  Replace the undecidable query with the exact identity
+  1-cos(theta)=2*sin(theta/2)^2 and audit the explicit square's nonnegativity.
+next_attempt: repaired_primary_exact_verifier

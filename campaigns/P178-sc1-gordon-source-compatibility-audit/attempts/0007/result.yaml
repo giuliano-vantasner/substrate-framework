@@ -1,0 +1,27 @@
+attempt: 0007
+campaign: P178
+candidate: source_aware_revision_and_canonical_guard_impact_analysis
+status: passed
+started_at: '2026-08-11T06:26:00Z'
+finished_at: '2026-08-11T06:28:00Z'
+revision: evidence/proposal-revision-0001.yaml
+claim_reserved: C-GOR-002
+gitnexus:
+  indexed_commit: feb958b21df8a487a7683df39682fd40c878a0c2
+  target_unchanged_since_index: true
+  target: transverse_profile_einstein
+  risk: LOW
+  direct_callers: 0
+  affected_processes: 0
+direct_consumer_audit:
+  canonical_export: src/substrate_framework/__init__.py
+  focused_tests: tests/test_gordon_metric.py
+  historical_verifier: campaigns/P142-g2-gordon-metric-audit/verify.py
+  new_campaign: campaigns/P178-sc1-gordon-source-compatibility-audit
+change_scope: >-
+  Simplify the exact subluminal margin before testing positivity. Existing
+  rational valid inputs and rejected zero-index, float, luminal, and
+  superluminal inputs retain their behavior; add one symbolic parametrization
+  regression and replay the direct consumers.
+scientific_candidate_rejected: false
+next_attempt: implement_guard_repair_and_exact_compatibility_API

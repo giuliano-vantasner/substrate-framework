@@ -1,0 +1,22 @@
+campaign: P178
+provisional_claim: C-GOR-002
+decision: promote
+identifier_search:
+  searched: [C-GOR-002, C-LIN-002]
+  surfaces: [governance_registry, campaigns, proposals, durable_memory]
+  collisions: []
+nearest_claims:
+  - {claim: C-GOR-001, distinction: exact_Gordon_geometry_without_any_canonical_scalar_compatibility_locus}
+  - {claim: C-STG-001, distinction: canonical_scalar_stress_and_FLRW_solution_without_transverse_Gordon_composition}
+  - {claim: C-LIN-001, distinction: generic_finite_linear_system_semantics_without_tensor_domain_rest_branch_or_profile_locus}
+  - {claim: C-SG-012, distinction: normalized_one_plus_one_stress_without_four_dimensional_Gordon_metric}
+nearest_prior_evidence:
+  - {campaign: P142, surface: one_plus_one_Ttz_zero_mismatch_at_one_Gordon_witness}
+  - {campaign: P143, surface: free_metric_one_point_fit_rejection_and_separate_FLRW_positive_solution}
+novel_surface: >-
+  C-GOR-002 is the first exact necessary-and-sufficient all-component
+  compatibility locus for C-GOR-001's transverse metric and C-STG-001's
+  canonical scalar stress, including nonzero and rest boosts, zero support,
+  K=0, and reciprocal-affine index profiles.
+generic_rank_repackaged_as_physics: false
+debt: []

@@ -43,7 +43,10 @@ candidates:
     description: Seek a constructive compatible anisotropic or effective matter source only from a separately declared action and conserved stress, without defining T_ab=G_ab/kappa as a derivation.
   - id: G
     description: Close claim, source, dependency, consumer, compatibility, disposition, release, documentation, memory, and debt governance.
-uniqueness_evidence: null
+uniqueness_evidence: >-
+  Direct registry, campaign, package, test, and durable-memory comparison
+  found no prior Gordon canonical-scalar iff locus. C-LIN-001 owns only the
+  generic rank semantics; C-GOR-001 and C-STG-001 own the two input objects.
 selection_criteria:
   - accepted_metric_stress_signature_component_and_index_compatibility
   - exact_all_component_zero_support_coupling_and_conservation_closure
@@ -53,11 +56,11 @@ selection_criteria:
   - flat_rest_constant_index_on_shell_and_wrong_convention_limits
   - reusable_API_novelty_beyond_C_LIN_001_mutation_sensitivity_and_consumer_reach
   - physical_scope_honesty_and_governance_closure
-claims_proposed: []
+claims_proposed: [C-GOR-002]
 comparators_blinded_until: >-
   freeze commit before opening SC1's body; the generated queue already exposes
   SC1's advertised rank-one Gordon ray, selected component ratios, stress
   mismatch conclusion, five-check tally, and part of its result synopsis, so
   no fresh conclusion blinding is claimed; exact check literals, intermediate
   expressions, runtime output, and source-body implementation remain unopened
-status: frozen_with_queue_result_exposure
+status: source_aware_revision_0001

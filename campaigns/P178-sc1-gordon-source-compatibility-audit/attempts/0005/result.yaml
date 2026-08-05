@@ -1,0 +1,29 @@
+attempt: 0005
+campaign: P178
+candidate: D_preliminary_accepted_component_locus_derivation
+status: passed_discovery
+started_at: '2026-08-11T06:23:00Z'
+finished_at: '2026-08-11T06:24:00Z'
+method: >-
+  Rebuild the accepted mostly-plus Gordon covariant metric and canonical
+  four-dimensional scalar stress symbolically, then impose every independent
+  nonzero-component ray relation and the omitted tx zero component.
+accepted_inputs: [C-GOR-001, C-STG-001]
+nonzero_boost_result:
+  variables: [a_equals_Ut_squared, b_equals_Ux_squared, V]
+  ray_condition_matrix_rank: 3
+  first_three_minor: 8*N_squared*v_squared*(v_squared_minus_1)^5
+  domain: N_positive_and_0_less_than_abs_v_less_than_1
+  solution: {a: 0, b: 0, V: 0}
+  tx_condition: Ut_times_Ux_equals_0
+  remaining_Einstein_condition: curvature_kernel_K_equals_0
+rest_result:
+  zero_tt_equation: N_squared*a_plus_b_plus_2V_equals_0
+  zero_xx_equation: N_squared*a_plus_b_minus_2V_equals_0
+  real_square_consequence: {a: 0, b: 0, V: 0}
+  remaining_Einstein_condition: curvature_kernel_K_equals_0
+profile_locus: >-
+  K=(n*n_xx-2*n_x^2)/n^2 vanishes exactly when (1/n)_xx=0,
+  so on a connected interval the positive reciprocal index is affine.
+scientific_status: discovery_requires_canonical_API_tests_and_independent_rederivation
+next_attempt: exercise_accepted_API_with_symbolic_subluminal_parametrization

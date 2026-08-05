@@ -1,0 +1,39 @@
+source_unit: SC1
+checks:
+  - id: SC1.1
+    executable_result: pass
+    verdict: qualified_after_convention_correction
+    reason: >-
+      The accepted nonzero-boost tensor retains G_xx=0 and the displayed
+      ratios, but SC1 uses the wrong Gordon sign, omits abs(v)<1, divides by v,
+      and guards the rejected 5/6 witness.
+  - id: SC1.2
+    executable_result: pass
+    verdict: necessary_constraint_with_wrong_stress_formula
+    reason: >-
+      Canonical T_xx is also not an identity, but SC1 uses the opposite
+      potential sign and does not check T_tx.
+  - id: SC1.3
+    executable_result: pass
+    verdict: conclusion_recovered_only_by_C_GOR_002
+    reason: >-
+      The source solve is for noncanonical and incomplete equations. Fresh
+      accepted full-component nonzero and rest derivations independently force
+      U_t=U_x=V=K=0.
+  - id: SC1.GA
+    executable_result: pass
+    verdict: rejected_blocker_diagnosis
+    reason: >-
+      With canonical stress, dropping xx gives b=-2V rather than b=c/3. For
+      the nonnegative cosine potential this relaxed algebraic branch is still
+      vacuum, so xx alone is not the source's advertised fix.
+  - id: SC1.GB
+    executable_result: pass
+    verdict: rejected_authority_guard
+    reason: >-
+      It proves identity with G2's already-rejected sign convention and 5/6
+      witness, not with accepted C-GOR-001 and its 1/6 witness.
+summary:
+  accepted_through_new_derivation: [SC1.1_scoped, SC1.2_necessary, SC1.3_conclusion]
+  rejected: [SC1.GA, SC1.GB_5_over_6]
+  blanket_headline_supported_as_written: false

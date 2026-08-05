@@ -148,10 +148,11 @@ def transverse_profile_einstein(
     index = _positive_exact(refractive_index, "refractive_index")
     speed = _exact_real(velocity, "velocity")
     speed_squared = sp.simplify(speed**2)
-    if (1 - speed_squared).is_positive is not True:
+    subluminal_margin = sp.simplify(1 - speed_squared)
+    if subluminal_margin.is_positive is not True:
         raise ValueError("velocity must satisfy |velocity| < 1 exactly")
 
-    gamma_squared = sp.simplify(1 / (1 - speed_squared))
+    gamma_squared = sp.simplify(1 / subluminal_margin)
     gamma = sp.sqrt(gamma_squared)
     four_velocity = sp.Matrix([gamma, 0, 0, gamma * speed])
     metric = gordon_metric_mostly_plus(index, four_velocity)

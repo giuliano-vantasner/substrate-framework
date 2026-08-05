@@ -1,0 +1,20 @@
+attempt: 0012
+campaign: P178
+candidate: primary_runtime_scope_match_repair
+status: failed_source_code_string_fragment_match
+started_at: '2026-08-11T06:35:00Z'
+finished_at: '2026-08-11T06:35:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+surviving_result:
+  checks_passed_before_failure: 33
+  all_scientific_claim_and_mutation_checks: passed
+failure: >-
+  Whitespace matching still targeted Python source code, where closing and
+  opening quote delimiters lie between the G3 and route fragments. The
+  concatenated native output contains the actual semantic phrase.
+classification: source_code_string_fragment_matching
+scientific_candidate_rejected: false
+repair: apply_the_scope_regex_to_the_already_captured_native_output
+next_attempt: terminal_primary_exact_verifier

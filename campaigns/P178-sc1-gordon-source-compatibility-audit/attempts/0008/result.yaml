@@ -1,0 +1,31 @@
+attempt: 0008
+campaign: P178
+candidate: canonical_guard_API_and_focused_tests_first_run
+status: failed_test_representation
+started_at: '2026-08-11T06:29:00Z'
+finished_at: '2026-08-11T06:30:00Z'
+command: >-
+  pytest tests/test_gordon_scalar_compatibility.py tests/test_gordon_metric.py
+  tests/test_einstein_scalar.py tests/test_linear_systems.py
+process:
+  passed: 49
+  failed: 3
+failures:
+  - >-
+    The ray-system test compared determinants after different nonzero row
+    scalings. The module's rapidity-coordinate numerator normalization gives
+    8*N^2*r^2*sqrt(1+r^2), while the preliminary direct-v normalization gives
+    8*N^2*v^2*(v^2-1)^5; both are nonzero on their declared branch.
+  - >-
+    The wrong-potential-sign matrix equality was mathematically correct but
+    used structural SymPy equality before simplifying both matrices.
+  - >-
+    The reciprocal-affine witness used real x, so 1/(x+2) was not globally
+    provably positive and correctly failed the canonical domain guard.
+classification: test_representation_and_domain_declaration
+scientific_candidate_rejected: false
+repair:
+  - compare the declared rapidity-normalized determinant and its nonzero status
+  - simplify the potential-sign matrix residual componentwise
+  - declare a positive-coordinate interval for the reciprocal-affine witness
+next_attempt: focused_test_replay_after_representation_repairs

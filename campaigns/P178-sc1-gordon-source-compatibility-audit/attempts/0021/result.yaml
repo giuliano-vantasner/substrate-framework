@@ -1,0 +1,18 @@
+attempt: 0021
+campaign: P178
+candidate: explicit_staged_promotion_diff
+status: passed
+started_at: '2026-08-11T06:56:00Z'
+finished_at: '2026-08-11T06:56:00Z'
+commands:
+  - explicit_git_add_of_P178_API_governance_generated_queue_and_memory_paths
+  - git_diff_cached_check
+process:
+  exit_code: 0
+  staged_files_before_this_record: 58
+  insertions_before_this_record: 3298
+  deletions_before_this_record: 75
+unrelated_paths_staged: false
+whitespace_errors: false
+full_suite_repeated: false
+next_attempt: acceptance_commit_then_freeze_next_pending_SC2_campaign

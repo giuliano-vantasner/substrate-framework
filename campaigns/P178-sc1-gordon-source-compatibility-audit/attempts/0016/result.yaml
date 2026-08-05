@@ -1,0 +1,33 @@
+attempt: 0016
+campaign: P178
+candidate: canonical_guard_and_additive_API_impact_analysis
+status: passed
+started_at: '2026-08-11T06:42:00Z'
+finished_at: '2026-08-11T06:43:00Z'
+methods:
+  - GitNexus_upstream_impact_on_transverse_profile_einstein
+  - GitNexus_all_change_detection
+  - direct_import_call_and_test_inventory
+gitnexus:
+  index_commit: feb958b21df8a487a7683df39682fd40c878a0c2
+  target_unchanged_since_index: true
+  upstream_risk: LOW
+  indexed_direct_callers: 0
+  changed_symbols: 3
+  changed_files: 4
+  affected_processes: 0
+  change_risk: low
+limitations: >-
+  The additive compatibility module is absent from the pre-change index and
+  the hunk mapper attributes neighboring test functions. Zero graph consumers
+  is not used as proof of safety.
+direct_surface:
+  canonical_export: src/substrate_framework/__init__.py
+  exact_Gordon_tests: tests/test_gordon_metric.py
+  new_compatibility_tests: tests/test_gordon_scalar_compatibility.py
+  historical_consumer: campaigns/P142-g2-gordon-metric-audit/verify.py
+  new_consumers:
+    - campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+    - campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/replay_source_graph.py
+risk: LOW
+next_attempt: materialize_source_claim_and_nonduplication_evidence

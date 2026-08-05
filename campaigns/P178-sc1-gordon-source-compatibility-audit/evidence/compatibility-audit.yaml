@@ -1,0 +1,12 @@
+campaign: P178
+policy:
+  mutable: numpy.trapezoid_or_trapezoid_integral
+  immutable: explicit_alias_only_backed_by_numpy.trapezoid
+nodes:
+  G2: {legacy_references: 0, current_references: 0, alias_required: false}
+  G3: {legacy_references: 0, current_references: 0, alias_required: false}
+  SC1: {legacy_references: 0, current_references: 0, alias_required: false}
+  SC2: {legacy_references: 0, current_references: 0, alias_required: false}
+mutable_executable_legacy_access: 0
+version_only_stops: 0
+scientific_candidate_failures_from_version_events: 0

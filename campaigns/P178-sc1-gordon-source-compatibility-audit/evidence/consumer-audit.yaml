@@ -1,0 +1,26 @@
+campaign: P178
+changed_canonical_symbols:
+  - transverse_profile_einstein_subluminal_margin_guard
+additive_symbols:
+  - transverse_gordon_scalar_residual
+  - nonzero_boost_scalar_ray_system
+  - rest_boost_scalar_conditions
+  - reciprocal_index_identity
+direct_consumers:
+  - tests/test_gordon_metric.py
+  - tests/test_gordon_scalar_compatibility.py
+  - campaigns/P142-g2-gordon-metric-audit/verify.py
+  - campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+source_reverse_consumers:
+  - source_unit: SC2
+    disposition: pending_adjudication
+    accepted_claims: []
+    finding: >-
+      Native execution passes seven predicates, but its conclusion explicitly
+      imports SC1's old-object Gordon-closure prose. It receives no authority
+      and must be adjudicated independently next.
+unchanged_accepted_consumers:
+  - C-GOR-001
+  - C-STG-001
+  - C-LIN-001
+blanket_promotion: false

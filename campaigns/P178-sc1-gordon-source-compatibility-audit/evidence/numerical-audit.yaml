@@ -1,0 +1,7 @@
+campaign: P178
+claim: C-GOR-002
+numerical_claims: []
+verdict: not_applicable
+reason: >-
+  C-GOR-002 is exact symbolic algebra. SC2's numerical BVP executes only as a
+  pending reverse-consumer replay and is not adjudicated or promoted by P178.

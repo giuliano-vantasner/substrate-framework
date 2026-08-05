@@ -1,0 +1,21 @@
+attempt: 0019
+campaign: P178
+candidate: promoted_queue_transition_branch_replay
+status: passed
+started_at: '2026-08-11T06:50:00Z'
+finished_at: '2026-08-11T06:51:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/replay_source_graph.py
+process:
+  exit_code: 0
+  terminal_tally: ALL_21_CHECKS_PASS_P178_SC1_SOURCE_GRAPH
+authority:
+  SC1: {disposition: qualified, accepted_claims: [C-GOR-001, C-STG-001, C-GOR-002]}
+  SC2: {disposition: pending_adjudication, accepted_claims: []}
+blanket_authority_transfer: false
+scientific_recalculation_repeated: false
+reason: >-
+  The changed governed queue selects the exact qualification branch of the
+  replay-safe oracle; source bytes and scientific equations are unchanged.
+next_attempt: durable_memory_closure_and_integrated_promotion_gate

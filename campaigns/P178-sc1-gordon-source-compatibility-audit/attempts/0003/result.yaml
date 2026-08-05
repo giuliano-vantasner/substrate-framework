@@ -1,0 +1,23 @@
+attempt: 0003
+campaign: P178
+candidate: corrected_executable_numpy_compatibility_preflight
+status: passed
+started_at: '2026-08-11T06:20:00Z'
+finished_at: '2026-08-11T06:20:00Z'
+command: >-
+  read hash-pinned SC1 source text and call
+  audit_numpy_trapezoid_compatibility with its filename
+result:
+  numpy_aliases: []
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  direct_current_attributes: 0
+  dynamic_current_getattrs: 0
+  imported_current_names: 0
+  eager_legacy_default_fallbacks: 0
+compatibility:
+  alias_required: false
+  version_only_stop: false
+  scientific_candidate_failures_from_version_events: 0
+next_attempt: native_hash_pinned_SC1_reproduction

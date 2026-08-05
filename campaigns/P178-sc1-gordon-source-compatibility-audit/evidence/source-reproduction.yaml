@@ -1,0 +1,27 @@
+source_unit: SC1
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-36/bridge_SC1_gordon_coupled_overdetermined.py
+source_sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0
+target_path_clean_at_freeze: true
+history_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+native:
+  command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-36/bridge_SC1_gordon_coupled_overdetermined.py
+  exit_code: 0
+  elapsed_seconds: 4.51
+  lexical_check_calls: 5
+  runtime_checks: 5
+  assertion_nodes: 1
+  terminal_tally: ALL_5_CHECKS_PASS
+compatibility:
+  numpy_aliases: []
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  alias_required: false
+  version_only_stop: false
+source_internal_values:
+  old_sign_half_boost_Gtt: 5/6
+  component_ratios: [-2, 3, 4]
+  source_defined_stress_solution: {a: 0, b: 0, c: 0}
+  source_defined_relaxed_family: {a: 0, b: c/3}
+authority_warning: clean_execution_does_not_make_the_source_objects_accepted

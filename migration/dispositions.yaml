@@ -6101,3 +6101,61 @@ units:
       fifty runtime predicates plus five assertions. Sixty accepted dependency
       tests pass. No legacy NumPy integration event, canonical code change,
       accepted claim, or release change occurs.
+  SC1:
+    disposition: qualified
+    accepted_claims:
+      - C-GOR-001
+      - C-STG-001
+      - C-GOR-002
+    qualification: >-
+      SC1's component-ratio idea and vacuum endpoint survive only after
+      replacing its copied Gordon metric and scalar stress by the accepted
+      C-GOR-001 and C-STG-001 objects. C-GOR-002 owns the exact local result:
+      for every uniform subluminal boost and a real canonical scalar depending
+      on t and x, all covariant algebraic Einstein equations hold exactly on
+      the zero-gradient, zero-potential, zero-curvature-kernel locus, with the
+      positive reciprocal index affine on each connected interval. SC1's
+      Gordon coefficient has the wrong mostly-plus sign, its 5/6 witness is
+      rejected by C-GOR-001, and its scalar stress reverses the canonical
+      potential sign. It omits tx, divides by velocity without a rest branch,
+      and stops before the remaining curvature equation. Guard A and Guard B,
+      a four-dimensional sine-Gordon breather source, full scalar dynamics,
+      material or physical gravity, observation, substrate realization, and
+      the claim that SC2 solves the alternative route remain unaccepted. SC2
+      stays pending and receives no blanket authority.
+    evidence:
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/source_adjudication.md
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/C-GOR-002-claim-review.md
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/source-reproduction.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/compatibility-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/source-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/check-adjudication.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/input-provenance.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/dependency-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/consumer-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/candidate-comparison.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/accepted-evidence-reuse.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/primary-provenance.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/literature-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/numerical-audit.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/independent_gordon_scalar_review.py
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/replay_source_graph.py
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/attempts/0013/result.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/attempts/0014/result.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/attempts/0017/result.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/attempts/0018/result.yaml
+      - campaigns/P178-sc1-gordon-source-compatibility-audit/attempts/0020/result.yaml
+      - memory/vantasner/decisions/C-GOR-002-review.md
+      - memory/vantasner/decisions/SC1-qualified-review.md
+    note: >-
+      P178 closes thirty-five primary, fourteen independent, and twenty-one
+      graph checks plus fifty-three focused tests and the twenty-nine-check
+      historical C-GOR-001 verifier. G2, G3, SC1, and SC2 run natively and
+      contain no NumPy integration-name reference, so no version-only stop or
+      compatibility alias affects a scientific verdict. GitNexus rates the
+      narrow domain-guard repair LOW risk with no indexed execution flow.
+      The integrated promotion boundary validates 715 memory records and
+      passes all 1,514 repository tests with a clean terminal status.

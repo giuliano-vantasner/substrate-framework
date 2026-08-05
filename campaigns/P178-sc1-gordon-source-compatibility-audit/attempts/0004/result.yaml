@@ -1,0 +1,44 @@
+attempt: 0004
+campaign: P178
+candidate: A_literal_hash_pinned_SC1_native_reproduction
+status: passed_with_authority_and_oracle_gaps
+started_at: '2026-08-11T06:21:00Z'
+finished_at: '2026-08-11T06:22:00Z'
+command: >-
+  .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-36/bridge_SC1_gordon_coupled_overdetermined.py
+environment:
+  python: 3.12.2
+  numpy: 2.5.1
+  sympy: 1.14.0
+  source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  source_sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0
+process:
+  exit_code: 0
+  elapsed_seconds: 4.51
+  lexical_check_calls: 5
+  runtime_checks: 5
+  assertion_nodes: 1
+  terminal_tally: ALL 5 CHECKS PASS
+compatibility:
+  executable_numpy_references: 0
+  alias_required: false
+  version_only_stop: false
+surviving_source_internal_results:
+  - The source-sign Gordon tensor has G_xx identically zero and its displayed nonzero-component ratios depend only on nonzero v.
+  - Its source-defined stress-ratio system solves to zero jet squares and zero potential coordinate for generic symbolic inputs.
+  - Dropping the source-defined xx condition leaves a one-parameter algebraic family.
+  - Its old-sign v=1/2 specialization reproduces G2's unaccepted 5/6 witness.
+authority_and_oracle_gaps:
+  - SC1 uses g_contra=eta+(n^2-1)uu, while accepted mostly-plus C-GOR-001 requires eta+(1-n^2)uu and gives 1/6 rather than 5/6 at the witness.
+  - SC1 uses T_ab=d_aU*d_bU-g_ab*((dU)^2/2-V), while accepted C-STG-001 requires the plus-potential bracket ((dU)^2/2+V).
+  - SC1 omits the independent zero-component equation G_tx=0=kappa*U_t*U_x.
+  - The ratio proof divides by G_tt and v without separately classifying flat K=0 and rest v=0 loci.
+  - The source assumes v positive but its prose says arbitrary boost and never states the accepted subluminal Lorentzian domain abs(v)<1.
+  - Algebraic stress proportionality alone does not establish the scalar Euler equation, conservation, boundary data, a medium action, or physical gravity.
+diagnosis: >-
+  The clean tally establishes internal exact properties of SC1's source-defined
+  objects, but those objects are not the accepted Gordon and canonical scalar
+  pair. Re-derive the complete accepted component system, including all zero,
+  rest, and flat cases, before classifying the scientific conclusion.
+next_attempt: exact_accepted_Gordon_canonical_scalar_compatibility_locus

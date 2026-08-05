@@ -1,0 +1,58 @@
+campaign: P178
+revision: 0001
+created_at: '2026-08-11T06:28:00Z'
+trigger:
+  - SC1 uses the unaccepted old-sign Gordon metric and 5/6 witness rather than C-GOR-001.
+  - SC1 uses the wrong potential sign relative to C-STG-001 and omits G_tx=0=kappa*T_tx.
+  - The corrected accepted component system nevertheless has an exact necessary-and-sufficient vacuum locus.
+selected_candidate: D
+claims_proposed: [C-GOR-002]
+collision_search:
+  surfaces: [governance_registry, campaigns, proposals, durable_memory]
+  identifiers: [C-GOR-002, C-LIN-002]
+  collisions: []
+novelty_ceiling:
+  C-LIN-001: >-
+    Owns generic finite exact linear-system rank and consistency, so C-GOR-002
+    must state the Gordon-canonical-scalar domain, every tensor component,
+    physical variable constraints, rest branch, and reciprocal-index locus.
+provisional_statement: >-
+  For the accepted mostly-plus transverse Gordon metric with positive n(x),
+  uniform abs(v)<1 z flow, a real canonical scalar U(t,x) with real potential
+  value V, and positive kappa, G_ab=kappa*T_ab componentwise if and only if
+  U_t=U_x=V=K=0, where K=(n*n_xx-2*n_x^2)/n^2. For v nonzero, an exact
+  three-by-three ray-condition minor is 8*n^2*v^2*(v^2-1)^5. The v=0 branch
+  closes from the tt and xx equations plus real-square nonnegativity. K=0 is
+  equivalent to (1/n)_xx=0, so 1/n is affine on a connected interval. For the
+  separately declared potential 1-cos(U), the locus is the on-shell scalar
+  vacuum. No breather embedding, material action, selected coupling, physical
+  gravity, observation, or substrate realization follows.
+implementation:
+  module: src/substrate_framework/gordon_scalar_compatibility.py
+  canonical_dependencies: [gordon_metric.py, einstein_scalar.py, linear_systems.py]
+  accepted_guard_repair: simplify_one_minus_velocity_squared_before_domain_test
+oracle:
+  primary: exact_SymPy_component_residuals_ranks_minors_limits_and_mutations
+  independent: fresh_direct_metric_inverse_stress_and_component_elimination_without_proposed_helper
+  numeric_role: none
+required_branches:
+  - nonzero_subluminal_velocity_full_rank_minor
+  - rest_velocity_sum_of_real_squares
+  - all_zero_tensor_components_including_tx
+  - flat_curvature_kernel_and_reciprocal_affine_profile
+  - normalized_cosine_potential_on_shell_specialization
+mutations:
+  - old_Gordon_sign_restores_unaccepted_5_over_6_witness
+  - wrong_potential_sign_changes_stress_components
+  - dropped_tx_component_accepts_an_off_diagonal_mismatch
+  - dropped_xx_condition_reopens_a_spurious_family
+  - unsafe_division_by_v_loses_the_rest_branch
+  - omitted_curvature_kernel_accepts_nonzero_geometry_with_zero_stress
+  - unsimplified_velocity_margin_rejects_exact_subluminal_symbols
+comparators_blinded: false
+reason: queue_and_source_body_already_exposed_the_advertised_vacuum_conclusion
+debt:
+  - canonical_implementation_and_tests
+  - primary_and_independent_sensitive_verifiers
+  - source_dependency_consumer_and_nonduplication_replay
+  - individual_claim_review_and_governed_materialization

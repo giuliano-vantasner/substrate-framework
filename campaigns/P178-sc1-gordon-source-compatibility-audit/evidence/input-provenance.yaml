@@ -1,0 +1,28 @@
+campaign: P178
+accepted_imports:
+  - {claim: C-GOR-001, use: mostly_plus_Gordon_metric_transverse_Einstein_tensor_and_kernel}
+  - {claim: C-STG-001, use: canonical_four_dimensional_scalar_stress_and_equation_ceiling}
+  - {claim: C-LIN-001, use: exact_finite_linear_system_rank_and_uniqueness_semantics}
+  - {claim: C-GRV-001, use: coupling_dimension_and_free_normalization_ceiling_only}
+noncanonical_evidence:
+  - {source_unit: SC1, hash: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0}
+derived:
+  - canonical scalar stress on the accepted transverse Gordon metric
+  - four nonzero-boost ray conditions and omitted tx condition
+  - direct-v and rapidity-normalized rank-three minors
+  - rest tt and xx zero-component equations
+  - necessary-and-sufficient zero scalar-jet and zero-kernel locus
+  - reciprocal-index second-derivative identity
+declared:
+  - exact positive index on a connected interval
+  - exact uniform subluminal z velocity
+  - real scalar depending only on t and x
+  - real potential value and positive coupling
+  - mostly-plus signature and coordinate order t_x_y_z
+not_imported:
+  - G2_old_sign_metric_or_5_over_6
+  - SC1_wrong_sign_stress
+  - empirical_or_observed_coupling
+  - SC2_pending_solution_authority
+  - physical_medium_action_or_substrate_dictionary
+fitted_parameters: []

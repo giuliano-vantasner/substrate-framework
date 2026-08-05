@@ -2,7 +2,7 @@
 description: Audit SC1 and construct an exact Gordon scalar-source compatibility locus
 author: vantasner
 created: '2026-08-11T06:15:00Z'
-updated: '2026-08-11T06:18:00Z'
+updated: '2026-08-11T06:51:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - gordon-metric
 - source-compatibility
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P178 SC1 Gordon Source-Compatibility Audit
 
@@ -102,11 +102,24 @@ honesty. Exposed source conclusions cannot select a concept or tolerance.
 
 ## Proposed Claim Delta
 
-No claim identifier is assigned at freeze. Direct registry, campaign, and
-durable-memory searches find no `C-GOR-002` or `C-LIN-002`, but C-LIN-001
-already imposes a strong generic-rank novelty ceiling. Source-aware
-nonduplication must decide whether Candidate D contributes a distinct Gordon-
-source theorem before a proposal revision reserves an identifier.
+The source-aware revision provisionally reserves C-GOR-002 after direct
+registry, campaign, and durable-memory searches found no collision. C-LIN-001
+already imposes a strong generic-rank novelty ceiling, so the proposed delta is
+not a generic proportionality result. It is the domain-specific exact
+compatibility locus for the accepted C-GOR-001 tensor and C-STG-001 stress.
+
+For a positive `n(x)`, uniform subluminal z boost, real canonical scalar
+`U(t,x)`, real potential value `V`, and positive coupling, the proposed theorem
+states that the componentwise Einstein equations hold exactly only when
+`U_t=U_x=V=K=0`, where
+`K=(n*n_xx-2*n_x^2)/n^2`. Conversely those conditions make both tensors zero.
+For nonzero boost, a source-derived 3-by-3 component minor is
+`8*n^2*v^2*(v^2-1)^5`, hence nonzero on the declared domain. At rest, the zero
+`tt` and `xx` equations give `n^2*U_t^2+U_x^2+2V=0` and
+`n^2*U_t^2+U_x^2-2V=0`; real-square nonnegativity closes the remaining branch.
+Finally `K=0` is equivalent to `(1/n)_xx=0`, so the positive reciprocal index
+is affine on each connected interval. A normalized `1-cos(U)` specialization
+is an on-shell vacuum, not a four-dimensional breather derivation.
 
 SC1's disposition is the immediate consumer. G2 and G3 remain qualified only
 through C-GOR-001 and C-STG-001, and cannot gain blanket authority. Every
@@ -122,7 +135,7 @@ strongest practical oracle for exact tensor support, component minors,
 coupling consistency, gradient and potential elimination, special limits, and
 mutations. Numerical reruns of exact algebra count only as regression.
 
-Candidate D, if distinct, will live in a pure package API and consume the
+Candidate D will live in a pure package API and consume the
 accepted Gordon and scalar-stress constructors rather than copying them. It
 must distinguish a compatible nonzero locus, a trivial flat locus, an
 inconsistent locus with an explicit component certificate, and cases where a
@@ -139,6 +152,14 @@ importing a proposed compatibility helper. Flat index, rest boost, constant
 index, zero stress, proportional synthetic stress, inconsistent zero support,
 wrong sign, and off-shell scalar data are required controls.
 
+The source-aware revision also permits one narrow repair to the accepted
+Gordon constructor: simplify `1-v^2` before asking SymPy whether the margin is
+positive. This preserves every rejected numeric and superluminal input while
+admitting exact symbolic subluminal parameterizations such as
+`v=r/sqrt(1+r^2)`. GitNexus rates the indexed blast radius LOW with no callers
+or processes; direct inspection adds the focused Gordon tests and P142
+verifier as the actual regression surface.
+
 The dependency graph will start with G2, G3, SC1, their accepted canonical
 modules, and every direct import and reverse consumer discovered after freeze.
 Lexical check sites, runtime checks, and assertions remain separate counts.
@@ -150,9 +171,21 @@ Immutable NumPy compatibility is replayed only by an explicit alias backed by
 Attempt 0001 freezes v0.129.0, commit `36a9e39`, source hash and history,
 prior result exposure, accepted ceilings, seven competing candidates,
 selection criteria, empty initial claim delta, exact oracle, mutation plan,
-and compatibility policy before opening SC1's body. Every failed
-implementation, representation, concept, or validation route is preserved
-append-only with a materially different next action.
+and compatibility policy before opening SC1's body. Attempts 0002 through
+0004 repair a source-audit path invocation and establish native five-check
+reproduction with authority gaps. Attempt 0005 derives the provisional exact
+locus. Attempt 0006 preserves a symbolic-domain guard failure; attempt 0007
+records the source-aware proposal revision and LOW impact result. Attempts
+0008 and 0009 preserve then repair three test-representation and domain
+failures. Attempts 0010 through 0012 preserve progressively narrower primary-
+oracle representation failures before attempt 0013 passes all 35 checks.
+Attempts 0014 and 0015 pass the 14-check independent derivation and 21-check
+source graph. Attempt 0016 records the impact analysis; attempt 0017 passes 53
+focused tests, the 29-check historical verifier, both exact P178 routes,
+compilation, and diff hygiene. Attempts 0018 and 0019 make the graph oracle
+replay-safe and pass it before and after the exact SC1 qualification without
+granting SC2 authority. No failed route was converted into a scientific
+verdict, and no unchanged full suite was repeated.
 
 ## Debt Ledger
 
@@ -162,41 +195,41 @@ compatibility, and governed state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| SC1's exact implementation and predicate reach are unknown | Pin every definition, check, assertion, import, tensor, and runtime result | open |
-| The source stress may mix one-plus-one and four-dimensional conventions | Trace dimensions, embedding, support, index placement, and conservation | open |
-| One fitted coupling may hide inconsistent zero or nonzero components | Solve all independent component equations without unsafe division | open |
-| Algebraic proportionality may be mistaken for a sourced solution | Check matter equation, conservation, action, domain, and boundary data separately | open |
-| A generic classifier may duplicate C-LIN-001 | Compare exact statements, APIs, assumptions, evidence, and consumers | open |
-| A backward-defined effective stress may masquerade as matter | Require a separately declared action or reject the route | open |
-| Dependencies and reverse consumers may inherit blanket authority | Inventory and replay the complete affected graph | open |
-| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | open |
-| Governed records may disagree | Synchronize disposition, queue, memory, effort, claim and release state | open |
+| SC1's exact implementation and predicate reach are unknown | Pin every definition, check, assertion, import, tensor, and runtime result | discharged: five predicates, one assertion, all objects, outputs, and prose inventoried |
+| The source stress may mix one-plus-one and four-dimensional conventions | Trace dimensions, embedding, support, index placement, and conservation | discharged: wrong potential sign and missing four-dimensional premises isolated |
+| One fitted coupling may hide inconsistent zero or nonzero components | Solve all independent component equations without unsafe division | discharged: nonzero and rest branches close every covariant component |
+| Algebraic proportionality may be mistaken for a sourced solution | Check matter equation, conservation, action, domain, and boundary data separately | discharged: accepted claim is explicitly local and algebraic with dynamical ceiling |
+| A generic classifier may duplicate C-LIN-001 | Compare exact statements, APIs, assumptions, evidence, and consumers | discharged: generic candidate rejected; domain-specific iff locus is novel |
+| A backward-defined effective stress may masquerade as matter | Require a separately declared action or reject the route | discharged: no effective stress was defined backward from geometry |
+| Dependencies and reverse consumers may inherit blanket authority | Inventory and replay the complete affected graph | discharged: exact SC1 qualification passes while SC2 stays pending and unmapped |
+| Legacy NumPy access may masquerade as science | Preflight and alias-replay immutable compatibility failures | discharged: all four nodes are native with no integration-name event |
+| Governed records may disagree | Synchronize disposition, queue, memory, effort, claim and release state | discharged: v0.130.0, 166 claims, SC1 qualification, docs and memory agree |
 
-## Review and Promotion Plan
+## Review and Promotion Record
 
-Every SC1 predicate receives an individual verdict. Gordon geometry, scalar
+Every SC1 predicate received an individual verdict. Gordon geometry, scalar
 stress, tensor proportionality, scalar dynamics, conservation, physical
-interpretation, and result prose receive separate verification and review
-statuses. A distinct theorem must be independently rederived from raw
-artifacts, extracted into a pure tested API, replayed through consumers, and
-promoted claim-by-claim. If accepted claims own all valid content, SC1 receives
-the exact qualified or duplicate-evidence disposition without a ceremonial
-release.
+interpretation, and result prose received separate statuses. The exact theorem
+was independently rederived from raw artifacts, extracted into a pure tested
+API, replayed through consumers, and accepted claim-by-claim as C-GOR-002.
+SC1 is qualified through C-GOR-001, C-STG-001, and C-GOR-002; SC2 remains
+pending.
 
-The final transaction edits only `migration/dispositions.yaml` and regenerates
-the queue. Every evidence path is materialized before registration. Targeted
-scientific routes run before one integrated `scripts/validate.sh`; record-only
-closure is checked narrowly without repeating the full suite. Validation and
-commit remain separate invocations.
+The transaction edited `migration/dispositions.yaml` and regenerated the
+queue, generated docs, and accepted memory. Every registered evidence path was
+materialized first. Targeted scientific routes ran before the one integrated
+`scripts/validate.sh`; record-only closure is checked narrowly without
+repeating the full suite. Validation and commit remain separate invocations.
 
 ## Done Gate
 
-P178 closes only when the positive exact compatibility locus or an equally
-strong accepted composition exists, every source predicate and component is
-adjudicated, matter and conservation ceilings are explicit, dependencies and
-consumers replay, compatibility is classified, governed records agree, and
-the debt ledger is empty. A mismatch, obstruction, or no-go alone keeps the
-campaign active.
+The positive exact compatibility locus exists as C-GOR-002, every source
+predicate and component is adjudicated, matter and conservation ceilings are
+explicit, dependencies and consumers replay, compatibility is classified,
+governed records agree, and the debt ledger is empty. The campaign closes on
+the positive iff object and synchronized authority—not on SC1's mismatch. The
+single integrated boundary validates 715 memory records and passes all 1,514
+repository tests.
 
 ## Cross-References
 

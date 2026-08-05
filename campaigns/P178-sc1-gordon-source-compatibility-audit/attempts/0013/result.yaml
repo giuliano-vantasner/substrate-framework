@@ -1,0 +1,32 @@
+attempt: 0013
+campaign: P178
+candidate: D_primary_source_aware_exact_compatibility_verifier
+status: passed
+started_at: '2026-08-11T06:36:00Z'
+finished_at: '2026-08-11T06:37:00Z'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+process:
+  exit_code: 0
+  terminal_tally: ALL_35_CHECKS_PASS_P178_SC1_C_GOR_002
+verified:
+  - pinned source release and proposal revision
+  - five source predicates native exit and zero NumPy compatibility surface
+  - old Gordon sign wrong potential sign omitted tx and old 5/6 authority mismatches
+  - exact nonzero-boost full-rank zero-jet locus
+  - exact rest sum-of-squares zero-jet locus
+  - curvature-kernel zero and reciprocal-affine positive-index locus
+  - rest-geometry yy and zz equations that force the kernel to zero
+  - normalized cosine-potential on-shell vacuum specialization
+  - source relaxation and SC2-authority overreach ceilings
+mutations:
+  - copied_Gordon_sign
+  - alternate_Gordon_coefficients
+  - wrong_potential_sign
+  - omitted_tx
+  - dropped_xx
+  - nonzero_rest_squares
+  - nonzero_curvature_kernel
+  - unsimplified_symbolic_velocity_margin
+next_attempt: independent_direct_curvature_stress_and_elimination_rederivation

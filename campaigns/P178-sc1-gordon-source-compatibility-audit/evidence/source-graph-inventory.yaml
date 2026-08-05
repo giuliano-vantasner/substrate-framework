@@ -1,0 +1,19 @@
+campaign: P178
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+nodes:
+  - {source_unit: G2, role: qualified_direct_dependency, sha256: 666df886d7567d87796615753143ace56a4f06fb6e1de4ea53208b1fc6ba0f88, checks: 6, assertions: 1, accepted_claims: [C-GOR-001]}
+  - {source_unit: G3, role: qualified_context_dependency, sha256: 8d462ce2bfd57bfced9fdedd511e9d2711e0c2454bc0d0441c681288495719ba, checks: 11, assertions: 1, accepted_claims: [C-STG-001]}
+  - {source_unit: SC1, role: adjudicated_root, sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0, checks: 5, assertions: 1, accepted_claims: []}
+  - {source_unit: SC2, role: pending_direct_reverse_consumer, sha256: 64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425, checks: 7, assertions: 4, accepted_claims: []}
+totals:
+  nodes: 4
+  lexical_predicates: 29
+  assertion_nodes: 7
+execution_policy:
+  hash_reused_accepted_nodes: [G2, G3]
+  native_replayed_nodes: [SC1, SC2]
+  immutable_alias_only_nodes: []
+  scientific_candidate_failures_from_version_events: 0
+authority:
+  accepted_dependency_mappings_are_individual: true
+  reverse_consumer_execution_creates_authority: false

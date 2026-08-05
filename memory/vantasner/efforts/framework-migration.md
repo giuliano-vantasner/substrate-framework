@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-11T05:04:00Z'
+updated: '2026-08-11T06:51:00Z'
 tags:
 - substrate-framework
 - effort
@@ -23,8 +23,9 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.128.0`, containing one hundred sixty-four
-claims. P145 adds C-MED-005's exact SI electromagnetic-to-mechanical conversion
+The current accepted frontier is `v0.130.0`, containing one hundred sixty-six
+claims. The campaign ledger below preserves the sequential additions. P145 adds
+C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
 energy ledger and qualifies G5. P146 adds C-BND-001's exact scalar boundary-
 residual parity pullback, even/odd decomposition, outward-normal domain map,
@@ -137,7 +138,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 48 pending, 0 partially migrated, 3 migrated, 157 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 46 pending, 0 partially migrated, 3 migrated, 159 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -363,7 +364,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 53 bridge units remain pending, 3 are migrated, 152 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 46 bridge units remain pending, 3 are migrated, 159 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -1939,19 +1940,34 @@ scientific failure. GitNexus rates the additive API LOW risk with no affected
 process. The integrated promotion workflow validates 710 memory records and
 passes all 1,500 repository tests with a clean terminal status.
 
+P178 adds C-GOR-002's exact local compatibility locus between the accepted
+transverse Gordon Einstein tensor and a canonical scalar stress. Nonzero
+subluminal boosts close through an explicit rank-three minor; the rest branch
+closes through the zero `tt` and `xx` equations and real-square nonnegativity;
+the remaining equations require a reciprocal-affine positive index. SC1 is
+qualified through C-GOR-001, C-STG-001, and C-GOR-002 after correcting its
+Gordon coefficient, rejected `5/6` witness, potential sign, omitted `tx`, and
+missing rest and curvature branches. SC2 remains pending and unmapped. The
+primary, independent, and four-node graph routes pass 35, 14, and 21 checks;
+53 focused tests and the 29-check C-GOR-001 historical verifier pass. All four
+source nodes run natively with no NumPy integration-name event. GitNexus rates
+the narrow symbolic-domain guard repair LOW risk with no indexed process. The
+integrated promotion boundary validates 715 memory records and passes all
+1,514 repository tests with a clean terminal status.
+
 ## Canonicalization
-The registry, `v0.129.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-five accepted claims. P001 through P177 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 47 pending, 0 partial, 3 migrated, 158 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+The registry, `v0.130.0` manifest, current release, generated claim index, and generated framework memory agree on one hundred sixty-six accepted claims. P001 through P178 are frozen under `campaigns/`; proposal, attempt, review-work, and effort memory remain distinct from accepted-state memory. The migration queue agrees on 46 pending, 0 partial, 3 migrated, 159 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 47
-pending, 3 migrated, 158 qualified, 8 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. The next queue unit is SC1, pinned at SHA-256
-`70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0`.
-P178 must freeze SC1 before source execution and audit its claimed
-overdetermined Gordon sourcing-channel closure against accepted gravity,
-stress-energy, dependency, and consumer ceilings. It must not import BX1's
-rejected only-mode or corpus-wide mechanism prose, and any immutable NumPy
-spelling remains compatibility evidence rather than physics.
+The effort remains active. D4 is discharged, but D1 remains open with 46
+pending, 3 migrated, 159 qualified, 8 duplicate-evidence, 1 refuted, and 1
+out-of-scope bridge unit. The next queue unit is SC2, pinned at SHA-256
+`64dfc9c31edd8368cb0e2359ca646fc8f62fe306d6af7a326ff8934070b96425`.
+P179 must freeze SC2 before source-body audit and determine whether its
+Horndeski self-consistent route composes with accepted scalar-tensor and
+Gordon ceilings without inheriting SC1's rejected formulas or treating native
+execution as authority. Any immutable NumPy spelling remains compatibility
+evidence rather than physics.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

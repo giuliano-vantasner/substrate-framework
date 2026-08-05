@@ -1,0 +1,26 @@
+attempt: 0017
+campaign: P178
+candidate: focused_canonical_and_historical_consumer_replay
+status: passed
+started_at: '2026-08-11T06:44:00Z'
+finished_at: '2026-08-11T06:46:00Z'
+commands:
+  - >-
+    pytest tests/test_gordon_scalar_compatibility.py tests/test_gordon_metric.py
+    tests/test_einstein_scalar.py tests/test_linear_systems.py
+  - P142_C_GOR_001_verifier_with_hash_pinned_G2_source_and_dossier
+  - compileall_gordon_metric_gordon_scalar_compatibility_and_P178
+  - git diff --check
+results:
+  focused_tests: 53_passed
+  historical_C_GOR_001_verifier: ALL_29_CHECKS_PASS
+  primary_P178_verifier: ALL_35_CHECKS_PASS
+  independent_P178_verifier: ALL_14_CHECKS_PASS
+  compileall: passed
+  diff_check: passed
+full_suite_repeated: false
+scope: >-
+  Canonical Gordon geometry, canonical scalar stress, exact linear-system
+  semantics, new compatibility APIs, the broadened symbolic domain guard, and
+  the nearest accepted historical verifier.
+next_attempt: individual_C_GOR_002_claim_review_and_governance_materialization

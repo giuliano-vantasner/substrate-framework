@@ -1,0 +1,12 @@
+campaign: P178
+reused:
+  - {claim: C-GOR-001, campaign: P142, unchanged: true, use: canonical_Gordon_metric_and_Einstein_tensor}
+  - {claim: C-STG-001, campaign: P143, unchanged: true, use: canonical_scalar_stress_and_equation_ceiling}
+  - {claim: C-LIN-001, campaign: P022, unchanged: true, use: exact_rank_and_consistency_semantics}
+revalidation:
+  - exact_gordon_and_scalar_focused_tests
+  - P142_historical_verifier_after_guard_broadening
+not_reused_as_authority:
+  - SC1_source_tally
+  - SC2_pending_consumer_tally
+hash_reuse_avoids_duplicate_full_dependency_graph_execution: true

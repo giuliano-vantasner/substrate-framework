@@ -1,0 +1,13 @@
+campaign: P178
+claim: C-GOR-002
+accepted_dependencies:
+  - {claim: C-GOR-001, closure: accepted_in_v0.109.0}
+  - {claim: C-STG-001, closure: accepted_in_v0.110.0}
+  - {claim: C-LIN-001, closure: accepted_in_v0.20.0}
+source_dependencies:
+  - {source_unit: G2, disposition: qualified, accepted_claims: [C-GOR-001], use: accepted_mapping_only}
+  - {source_unit: G3, disposition: qualified, accepted_claims: [C-STG-001], use: accepted_mapping_only}
+  - {source_unit: SC1, disposition: pending_adjudication, accepted_claims: [], use: hash_pinned_noncanonical_evidence}
+cycles: []
+undeclared_imports: []
+closure_passes: true

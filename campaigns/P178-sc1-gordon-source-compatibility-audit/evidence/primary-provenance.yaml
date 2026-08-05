@@ -1,0 +1,19 @@
+campaign: P178
+claim: C-GOR-002
+verifier: campaigns/P178-sc1-gordon-source-compatibility-audit/verify.py
+pinned_inputs:
+  - {path: /home/dan/substrate/merged-framework/bridges/phase-36/bridge_SC1_gordon_coupled_overdetermined.py, sha256: 70799bff934f1f6986545a0bde0cb94fe016dd4b468b36614ac3e5d9bb74aec0}
+  - {path: governance/releases/v0.129.0.yaml, sha256: 0b1cb52fc82307b94a489579497524f07c52e5adba69114d199a146aa87a9227}
+  - {path: campaigns/P178-sc1-gordon-source-compatibility-audit/evidence/proposal-revision-0001.yaml, sha256: 6971a8a68ee866844170a917457f0d9b6af510de2820b764de91c1ce882ebfa6}
+oracle: exact_SymPy_algebra_plus_hash_pinned_source_execution
+maximum_verdict: symbolic_verified
+runtime:
+  exit_code: 0
+  checks: 35
+  terminal_tally: ALL_35_CHECKS_PASS_P178_SC1_C_GOR_002
+independent:
+  path: campaigns/P178-sc1-gordon-source-compatibility-audit/reviews/independent_gordon_scalar_review.py
+  imports_proposed_module: false
+  checks: 14
+  terminal_tally: ALL_14_CHECKS_PASS_P178_C_GOR_002_INDEPENDENT
+numeric_claims: []

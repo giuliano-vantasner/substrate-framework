@@ -53,6 +53,18 @@ def test_constant_index_is_flat_for_every_admissible_constant_boost() -> None:
         assert result.einstein_covariant == sp.zeros(4)
 
 
+def test_exact_symbolic_subluminal_parametrization_is_accepted() -> None:
+    x = sp.symbols("x", real=True)
+    rapidity_coordinate = sp.symbols("r", real=True)
+    index = sp.Function("n", positive=True)(x)
+    velocity = rapidity_coordinate / sp.sqrt(1 + rapidity_coordinate**2)
+    result = transverse_profile_einstein(index, x, velocity)
+    assert result.gamma_squared == 1 + rapidity_coordinate**2
+    assert sp.simplify(1 - result.velocity**2) == 1 / (
+        1 + rapidity_coordinate**2
+    )
+
+
 def test_correct_static_weak_index_expansion_differs_from_optical_family() -> None:
     epsilon = sp.symbols("epsilon", real=True)
     gordon = -1 / (1 + epsilon) ** 2

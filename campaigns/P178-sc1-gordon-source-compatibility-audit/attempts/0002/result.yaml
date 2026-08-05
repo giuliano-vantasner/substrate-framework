@@ -1,0 +1,17 @@
+attempt: 0002
+campaign: P178
+candidate: executable_numpy_compatibility_preflight
+status: failed_invocation_type
+started_at: '2026-08-11T06:19:00Z'
+finished_at: '2026-08-11T06:19:00Z'
+command: >-
+  call audit_numpy_trapezoid_compatibility with the hash-pinned SC1 Path
+failure: >-
+  The API accepts source text plus an optional filename, but the invocation
+  supplied a pathlib.Path as the source argument and ast.parse raised
+  TypeError before inspecting executable syntax.
+classification: invocation_type
+scientific_candidate_rejected: false
+numpy_version_event: false
+repair: read_the_immutable_source_text_and_pass_the_path_only_as_filename
+next_attempt: corrected_executable_compatibility_audit_then_native_reproduction
