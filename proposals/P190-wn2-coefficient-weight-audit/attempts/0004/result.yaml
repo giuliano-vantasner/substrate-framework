@@ -1,0 +1,24 @@
+attempt: 0004
+campaign: P190
+candidate: first_exact_API_and_dual_verifier_implementation
+status: failed_mutations_were_not_adverse
+started_at: '2026-08-11T16:18:00Z'
+finished_at: '2026-08-11T16:28:00Z'
+implementation:
+  module: src/substrate_framework/factorial_suppression.py
+  focused_tests: 76_passed
+primary_stop:
+  predicate: concentration_normalization_denominator
+  failed_mutation: replacing_the_total_upper_bound_with_the_lower_bound
+  cause: both_bounds_still_prove_the_loose_97.2_and_99.99_percent_thresholds
+independent_stop:
+  predicate: raw_normalization_upper_bound
+  failed_mutation: replacing_the_total_upper_bound_with_one
+  cause: a_smaller_denominator_also_preserves_lower_bound_thresholds
+additional_audit:
+  non_adverse_mode_mutation_found_before_rerun: reversing_three_values_preserves_the_middle_mode
+failure_layer: verifier_predicate_and_mutation_design
+scientific_candidate_rejected: false
+scientific_threshold_changed: false
+repair: require_the_exact_frozen_rational_margins_and_use_mutations_that_change_the_mode_index
+next_attempt: rerun_primary_independent_and_focused_oracles_with_adverse_mutations

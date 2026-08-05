@@ -1,0 +1,42 @@
+campaign: P190
+claim: C-CMB-002
+canonical_module: src/substrate_framework/factorial_suppression.py
+architecture:
+  change_type: additive_extension
+  reused_modules:
+    - substrate_framework.cosine_vertices
+    - substrate_framework.branching_in_verification_only
+  public_dataclasses: [OddFactorialMassEnclosure]
+  public_functions:
+    - parity_thinned_factorial_mass
+    - odd_factorial_total_mass
+    - normalized_parity_factorial_mass
+    - odd_factorial_mass_enclosure
+  internal_domain_helpers_added: [_exact_positive, _exact_positive_rational]
+  existing_public_signatures_changed: []
+  import_side_effects_added: false
+exactness:
+  symbolic_mass_and_total: SymPy_exact
+  rational_enclosure: exact_integer_and_rational_arithmetic
+  floating_inputs_rejected: true
+  quadrature_used: false
+  empirical_parameters_added: false
+typing_ceiling:
+  - ambient_sample_space_and_counting_measure_are_documented
+  - activity_is_declared_positive_and_dimensionless
+  - API_docs_disclaim_occurrence_rate_matrix_element_and_channel_inference
+  - allocation_composition_remains_in_existing_branching_API
+tests:
+  canonical: tests/test_odd_factorial_mass.py
+  focused_files:
+    - tests/test_odd_factorial_mass.py
+    - tests/test_factorial_suppression.py
+    - tests/test_branching.py
+    - tests/test_cosine_vertices.py
+    - tests/test_source_audit.py
+  focused_result: 76_passed
+public_exports: 5
+compatibility:
+  numpy_imports: 0
+  legacy_trapezoid_references: 0
+  current_trapezoid_references: 0

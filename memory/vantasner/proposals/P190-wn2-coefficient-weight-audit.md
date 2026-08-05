@@ -2,7 +2,7 @@
 description: Audit WN2 and derive an exact parity-thinned factorial mass and conditional allocation ledger
 author: vantasner
 created: '2026-08-11T15:58:00Z'
-updated: '2026-08-11T16:17:00Z'
+updated: '2026-08-11T16:38:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -168,6 +168,26 @@ one, while `z=4` has mode three because the adjacent odd mass ratios are
 `64/9` and `16/25`. Thus concentration is a theorem of a declared
 normalization, not a universal admissibility test. Implementation and an
 independent raw-series route remain open.
+
+Attempt 0004 implements the additive exact API and passes all seventy-six
+focused tests, but both serious verifiers stop for the right reason: selected
+normalization mutations were not adverse because smaller denominators still
+pass the source's loose concentration thresholds. Reviewing the remaining
+mutation deck also finds that reversing a three-value sequence preserves its
+middle mode. This is verifier-predicate debt, not a failed theorem. The repair
+requires the exact frozen rational margins and mode-index-changing mutations;
+no tolerance or scientific threshold changes.
+
+Attempt 0005 repairs the mutation deck and passes fifty-six primary checks,
+twenty-two independent raw-SymPy checks, and seventy-six focused tests. The
+additive API exposes one enclosure dataclass and four functions from the
+accepted factorial module; it changes no existing signature and imports no
+NumPy surface. Candidate C is selected on exact normalization, sample-space
+provenance, nonduplication, activity sensitivity, and consumer utility.
+Candidates D through G survive as oracle, conditional composition,
+countermodel, and typing evidence. GitNexus reports low code risk but misses
+untracked additions and semantic source edges, so twelve WN2-centered source
+consumers still require explicit replay before review or promotion.
 
 ## Debt Ledger
 

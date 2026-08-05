@@ -1,0 +1,21 @@
+campaign: P190
+claim: C-CMB-002
+reviewer: proposals/P190-wn2-coefficient-weight-audit/reviews/independent_odd_mass_review.py
+result: ALL_22_CHECKS_PASS
+scientific_imports:
+  candidate_module: false
+  cosine_vertices: false
+  branching: false
+  shared_primary_helpers: false
+shared_non_scientific_infrastructure:
+  - substrate_framework.verification.CheckLedger
+independent_route:
+  - raw_mixed_cosine_differentiation
+  - raw_math_factorial_mass
+  - direct_Bessel_series_expansion
+  - raw_integer_and_rational_tail_enclosure
+  - independent_concentration_margins
+  - raw_activity_mode_mutation
+  - raw_two_channel_fraction_algebra
+  - normalized_geometric_mode_one_counterexample
+independence_limit: standard_SymPy_semantics_and_shared_Python_runtime

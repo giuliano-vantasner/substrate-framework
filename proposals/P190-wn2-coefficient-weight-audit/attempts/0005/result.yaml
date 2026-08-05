@@ -1,0 +1,32 @@
+attempt: 0005
+campaign: P190
+candidate: exact_odd_factorial_mass_API_and_dual_oracle_verification
+status: passed_pending_consumer_replay_and_claim_review
+started_at: '2026-08-11T16:29:00Z'
+finished_at: '2026-08-11T16:38:00Z'
+positive_object:
+  module: src/substrate_framework/factorial_suppression.py
+  dataclass: OddFactorialMassEnclosure
+  public_functions: 4
+  public_exports: 5
+verification:
+  primary: ALL_56_CHECKS_PASS
+  independent: ALL_22_CHECKS_PASS
+  focused_tests: 76_passed
+  mutation_debt: empty
+  scientific_threshold_changed: false
+architecture:
+  existing_signatures_changed: 0
+  scientific_code_duplicated_in_independent_route: false
+  compatibility_surface: none
+candidate_selection:
+  selected: C
+  integrated: [D, E, F, G]
+  governance_pending: H
+  rejected_as_complete: [A, B]
+  comparator_selected: false
+impact:
+  graph_risk: low
+  graph_limitations_recorded: true
+  semantic_source_consumers_pending: 12
+next_attempt: replay_WN2_semantic_source_graph_and_complete_individual_claim_and_source_reviews

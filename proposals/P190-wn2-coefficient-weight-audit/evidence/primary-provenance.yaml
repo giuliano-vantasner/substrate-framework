@@ -1,0 +1,30 @@
+campaign: P190
+claim: C-CMB-002
+verifier: proposals/P190-wn2-coefficient-weight-audit/verify.py
+result: ALL_56_CHECKS_PASS
+imports_candidate_API: true
+imports_accepted_APIs:
+  - substrate_framework.factorial_suppression
+  - substrate_framework.branching
+  - substrate_framework.source_audit
+  - substrate_framework.verification
+pins:
+  source_sha256: dc9a7dbd79c908d1ec206392cdd81a34b5a39c08dcba31f2c164c3d92073504c
+  release_sha256: cd16ef67e1dd81998c16a5e402c6c127e798b6190d676b898723c7dcc75791df
+  formula_freeze_sha256: b9687f6ecd179c9b98170101d289f7fccae0530059651e5a0ed3d110c283f92f
+oracle:
+  - exact_cosine_square_composition
+  - Bessel_power_series_parity_filter
+  - exact_consecutive_odd_ratio
+  - rational_geometric_tail
+  - exact_concentration_margins
+  - activity_dependent_mode_countermodel
+  - positive_weight_and_zero_endpoint_branching_composition
+  - source_AST_and_compatibility_inventory
+mutation_families:
+  - activity_and_factorial_powers
+  - Bessel_sign_and_argument
+  - odd_tail_ratio
+  - first_omitted_term_and_geometric_denominator
+  - exact_concentration_normalization
+  - activity_dependent_mode

@@ -1,0 +1,36 @@
+campaign: P190
+reserved_claim: C-CMB-002
+status: distinct_exact_API_pending_consumer_replay
+nearest_claims:
+  C_SG_019:
+    owns: exact_cosine_coefficient_parity_activity_power_and_common_normalizations
+    does_not_own:
+      - normalization_across_orders
+      - Bessel_parity_filtered_total
+      - normalized_mass_or_tail_enclosure
+  C_CMB_001:
+    owns: inverse_square_factorial_sequence_recurrence_universal_suppression_and_decade_bounds
+    does_not_own:
+      - activity_dependent_odd_mass_family
+      - exact_infinite_normalization
+      - normalized_concentration_or_activity_dependent_mode
+  C_BRN_001:
+    owns: conditional_two_channel_normalization_for_supplied_rates_weights_and_population
+    does_not_own: factorial_mass_normalization_or_weight_derivation
+package_search:
+  existing_Bessel_odd_factorial_mass_API: false
+  existing_exact_odd_tail_enclosure_API: false
+  accepted_factorial_module_reused: true
+distinct_reusable_surface:
+  - exact_activity_dependent_parity_thinned_mass
+  - exact_Bessel_normalization
+  - normalized_mathematical_point_mass
+  - rational_geometric_tail_enclosure
+source_consumer_reach:
+  primary: [WN2]
+  explicit_narrative_dependants: [WN3, WN6, WN7]
+  transitive_candidates: [WN4, WN5, MD1, MD2, MD3, MD4, MD5, MD6]
+promotion_rule: >-
+  Promote only if both exact routes, focused tests, WN2 adjudication, the
+  complete semantic consumer replay, and individual review pass without
+  importing PN2, WN3, or WN4 as accepted premises.

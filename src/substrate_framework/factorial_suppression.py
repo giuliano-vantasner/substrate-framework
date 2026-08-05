@@ -38,6 +38,24 @@ def _exact_real(value: Any, *, name: str) -> sp.Expr:
     return expression
 
 
+def _exact_positive(value: Any, *, name: str) -> sp.Expr:
+    expression = _exact_real(value, name=name)
+    if expression.is_positive is not True:
+        raise ValueError(f"{name} must be explicitly positive")
+    return expression
+
+
+def _exact_positive_rational(value: Any, *, name: str) -> sp.Rational:
+    expression = sp.sympify(value)
+    if (
+        expression.has(sp.Float)
+        or expression.is_Rational is not True
+        or expression.is_positive is not True
+    ):
+        raise ValueError(f"{name} must be an exact positive rational")
+    return sp.Rational(expression)
+
+
 def exact_rational_log10_floor(value: Any) -> int:
     """Return ``floor(log10(value))`` using exact integer comparisons.
 
@@ -202,4 +220,119 @@ def factorial_decade_bound(decade: Any) -> FactorialDecadeBound:
         positive_exponent=positive_exponent,
         log10_upper_bound=-positive_exponent,
         exposed_order_is_separate_physical_premise=True,
+    )
+
+
+def parity_thinned_factorial_mass(
+    order: Any,
+    *,
+    activity: Any = 1,
+) -> sp.Expr:
+    r"""Return ``1_odd(n) * z**(2*n)/(n!)**2`` exactly.
+
+    The ambient sample space is the positive integers with counting measure;
+    the mass has support on the positive odd integers. ``activity`` is a
+    declared positive dimensionless normalization parameter. The returned
+    mathematical mass does not by itself define an occurrence law, matrix
+    element, transition rate, or physical channel.
+    """
+
+    n = _integer_at_least(order, name="order", minimum=1)
+    z = _exact_positive(activity, name="activity")
+    if n % 2 == 0:
+        return sp.Integer(0)
+    return sp.factor(z ** (2 * n) / sp.factorial(n) ** 2)
+
+
+def odd_factorial_total_mass(activity: Any = 1) -> sp.Expr:
+    r"""Return the exact total positive-odd factorial mass.
+
+    Parity filtering the defining power series gives
+
+    ``sum_{n positive odd} z**(2*n)/(n!)**2``
+    ``= (besseli(0, 2*z) - besselj(0, 2*z))/2``.
+    """
+
+    z = _exact_positive(activity, name="activity")
+    return (sp.besseli(0, 2 * z) - sp.besselj(0, 2 * z)) / 2
+
+
+def normalized_parity_factorial_mass(
+    order: Any,
+    *,
+    activity: Any = 1,
+) -> sp.Expr:
+    """Return the exact normalized mathematical mass at one integer order."""
+
+    mass = parity_thinned_factorial_mass(order, activity=activity)
+    if mass == 0:
+        return sp.Integer(0)
+    return sp.factor(mass / odd_factorial_total_mass(activity))
+
+
+@dataclass(frozen=True)
+class OddFactorialMassEnclosure:
+    """Exact rational enclosure for an odd factorial-mass normalization."""
+
+    activity: sp.Rational
+    maximum_odd_order: int
+    partial_mass: sp.Rational
+    first_omitted_order: int
+    first_omitted_mass: sp.Rational
+    tail_ratio_ceiling: sp.Rational
+    tail_mass_upper_bound: sp.Rational
+    total_mass_lower_bound: sp.Rational
+    total_mass_upper_bound: sp.Rational
+    normalized_tail_upper_bound: sp.Rational
+
+
+def odd_factorial_mass_enclosure(
+    maximum_odd_order: Any,
+    *,
+    activity: Any = 1,
+) -> OddFactorialMassEnclosure:
+    r"""Enclose the infinite mass by an exact geometric tail.
+
+    For positive odd ``M``, the first omitted order is ``M+2``. Consecutive
+    omitted odd terms have ratios bounded by
+    ``z**4/((M+3)**2*(M+4)**2)``. The caller must choose ``M`` so this bound is
+    below one. Rational ``activity`` keeps the complete certificate exact.
+    """
+
+    maximum = _integer_at_least(
+        maximum_odd_order,
+        name="maximum_odd_order",
+        minimum=1,
+    )
+    if maximum % 2 == 0:
+        raise ValueError("maximum_odd_order must be odd")
+    z = _exact_positive_rational(activity, name="activity")
+    partial = sp.Rational(
+        sum(
+            parity_thinned_factorial_mass(order, activity=z)
+            for order in range(1, maximum + 1, 2)
+        )
+    )
+    first_order = maximum + 2
+    first = sp.Rational(
+        parity_thinned_factorial_mass(first_order, activity=z)
+    )
+    ratio = sp.Rational(
+        z**4 / ((maximum + 3) ** 2 * (maximum + 4) ** 2)
+    )
+    if ratio >= 1:
+        raise ValueError("maximum_odd_order must make the tail ratio below one")
+    tail_upper = sp.factor(first / (1 - ratio))
+    total_upper = sp.factor(partial + tail_upper)
+    return OddFactorialMassEnclosure(
+        activity=z,
+        maximum_odd_order=maximum,
+        partial_mass=partial,
+        first_omitted_order=first_order,
+        first_omitted_mass=first,
+        tail_ratio_ceiling=ratio,
+        tail_mass_upper_bound=tail_upper,
+        total_mass_lower_bound=partial,
+        total_mass_upper_bound=total_upper,
+        normalized_tail_upper_bound=sp.factor(tail_upper / partial),
     )
