@@ -1,0 +1,17 @@
+campaign: P194
+source_unit: WN6
+source_sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+imports: [sys, sympy, mpmath]
+numpy_aliases: []
+direct_legacy_attributes: 0
+dynamic_legacy_getattrs: 0
+imported_legacy_names: 0
+direct_current_attributes: 0
+dynamic_current_getattrs: 0
+imported_current_names: 0
+eager_legacy_default_fallbacks: 0
+requires_legacy_alias: false
+execution_mode: native_current_environment
+version_only_stops: []
+scientific_failures_from_version_events: 0
+

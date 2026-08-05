@@ -1,0 +1,16 @@
+campaign: P194
+source_unit: WN6
+path: /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN6_scale_verdict_and_missing_bridge.py
+sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+execution: native
+terminal_tally: ALL_32_CHECKS_PASS
+wall_seconds: 0.48
+max_rss_kib: 52660
+exit_status: 0
+static_check_calls: 24
+literal_check_calls: 21
+dynamic_check_calls: 3
+assert_statements: 0
+runtime_checks: 32
+compatibility_alias_used: false
+

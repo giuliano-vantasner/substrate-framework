@@ -140,6 +140,20 @@ oracle hierarchy, compatibility rule, and debt before renewed WN6 execution or
 complete inspection. Failures remain append-only and trigger a materially
 different repair or candidate.
 
+Attempt 0002 reproduces hash-pinned WN6 natively with all 32 runtime checks,
+exit zero, 0.48 seconds wall time, and 52,660 KiB maximum resident memory. The
+AST has 24 check-call sites, 21 literal names, three dynamic sites, no
+assertions, and no NumPy compatibility surface. Exact cosine geometry,
+positive-amplitude threshold algebra, conditional logarithmic upper bounds,
+and conditional equal-mode threshold algebra survive. The headline does not:
+the source never derives an RMS measure, PN1's entire cosine expansion has no
+hard pi validity cutoff, PN2's scale band is external, coordinate period counts
+are not topological windings, and the multi-mode sum is defined rather than
+derived. Moreover `M*A^2=(sqrt(M)*A)^2`, so a nonzero partial derivative does
+not make `M` separately identifiable or prevent absorption into an effective
+amplitude. The next attempt freezes a rigorous amplitude convention and
+cosine-remainder certificate before deciding C-OSC-002.
+
 ## Debt Ledger
 
 The P194 ledger tracks source predicates, amplitude and intensity conventions,
@@ -149,13 +163,13 @@ dependencies, consumers, and governed state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | WN6 was exposed before P194 | Record exposure and claim no fresh blinding | discharged |
-| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | open |
-| Classical peak, RMS, variance, and Fock intensity may be conflated | Derive and type every map and counterexample | open |
+| Source predicates and conclusions are unadjudicated | Pin and classify every executable and narrative edge | discharged |
+| Classical peak, RMS, variance, and Fock intensity may be conflated | Derive and type every map and counterexample | in progress |
 | A hard single-vacuum cutoff may replace approximation control | Prove an exact tolerance-dependent bound or reject the cutoff | open |
-| PN2 physical band may be imported without authority | Trace units, state provenance, and accepted ceiling | open |
-| Conditional threshold algebra may omit a sign domain | Derive exact equivalences and counterdomains | open |
+| PN2 physical band may be imported without authority | Trace units, state provenance, and accepted ceiling | discharged |
+| Conditional threshold algebra may omit a sign domain | Derive exact equivalences and counterdomains | discharged |
 | A new claim may duplicate accepted cosine or oscillator results | Complete claim, API, and theorem nonduplication review | open |
-| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | open |
+| Compatibility may masquerade as science | Preflight legacy access and isolate version-only events | discharged |
 | Dependencies and reverse consumers may import pending conclusions | Replay and type every affected edge | open |
 | Governed records may disagree | Synchronize disposition, queue, memory, and any warranted claim/release | open |
 

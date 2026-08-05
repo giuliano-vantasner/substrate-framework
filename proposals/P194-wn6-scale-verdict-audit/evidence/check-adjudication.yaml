@@ -1,0 +1,37 @@
+campaign: P194
+source_unit: WN6
+runtime_checks: 32
+groups:
+  WN6_1_phase_unit:
+    verdict: exact_cosine_geometry_survives_but_the_RMS_and_material_readings_are_unchecked
+    accepted_authority: [C-SG-001, C-SG-012, C-SG-019]
+  WN6_2_limb_threshold:
+    verdict: conditional_positive_amplitude_algebra_only
+    accepted_authority: [C-OSC-001, C-CMB-003]
+    rejected_extension: PN2_band_as_an_accepted_physical_scale_or_period_counts_as_windings
+  WN6_3_single_vacuum_verdict:
+    verdict: rejected_as_an_approximation_and_physical_validity_claim
+    reason: C-SG-019_is_entire_and_no_error_tolerance_state_channel_or_rate_is_supplied
+  WN6_4_exponent_accounting:
+    verdict: conditional_exact_upper_bound_on_a_mathematical_mass
+    accepted_authority: [C-CMB-001, C-OSC-001]
+    rejected_extension: physical_channel_rescue_or_suppression_verdict
+  WN6_5_missing_bridge:
+    verdict: conditional_algebra_with_unaccepted_multi_mode_definition
+    retained: M_times_A_squared_greater_than_n_iff_M_greater_than_n_over_A_squared_for_positive_A
+    rejected_extensions:
+      - multi_mode_additivity_from_the_accepted_one_mode_claim
+      - separate_identifiability_of_M_from_M_times_A_squared
+      - M_or_DOS_as_the_unique_missing_physical_input
+  WN6_6_guards:
+    verdict: implementation_regression_only
+    reason: selected_exact_inequalities_do_not_test_the_RMS_domain_multi_mode_or_physical_premises
+accepted_composition:
+  declared_single_mode_intensity: S=q_0^2_under_C_OSC_001_only
+  conditional_amplitude_map: S=A^2_with_A_positive
+  conditional_limb: A>sqrt(n)
+  conditional_equal_mode_limb: M>n/A^2
+  cosine_period: 2*pi
+  hard_small_oscillation_cutoff: none
+scientific_threshold_changed: false
+

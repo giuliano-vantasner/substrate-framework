@@ -1,0 +1,40 @@
+attempt: 0002
+campaign: P194
+candidate: native_source_reproduction_and_predicate_audit
+status: passed_source_mixed_headline_overstated
+started_at: '2026-08-05T16:25:00Z'
+finished_at: '2026-08-05T16:31:00Z'
+source:
+  sha256: 07f049bac9eb99cb29ef6c3cd333aaecddc17492a73a8fc2aac7eb140ebcab10
+  terminal_tally: ALL_32_CHECKS_PASS
+  wall_seconds: 0.48
+  max_rss_kib: 52660
+  exit_status: 0
+inventory:
+  static_check_calls: 24
+  literal_check_calls: 21
+  dynamic_check_calls: 3
+  assertions: 0
+compatibility:
+  numpy_import: false
+  legacy_references: 0
+  alias_used: false
+  version_only_scientific_failures: 0
+diagnosis: target_representation_and_oracle_scope
+retained:
+  - exact_normalized_cosine_period_vacua_and_barriers
+  - conditional_positive_amplitude_limb_threshold
+  - conditional_factorial_one_log_upper_bounds
+  - conditional_equal_mode_threshold_algebra
+rejected_or_qualified:
+  - period_as_a_derived_RMS_or_material_amplitude
+  - coordinate_period_counts_as_topological_windings
+  - pi_barrier_as_PN1s_expansion_validity_or_small_error_boundary
+  - PN2_external_band_as_accepted_physical_input
+  - one_mode_Fock_intensity_as_classical_RMS_phase
+  - tautological_sum_definition_as_a_derived_multi_mode_state
+  - nonzero_M_derivative_as_non_absorbability_or_separate_identifiability
+  - M_or_DOS_as_the_unique_missing_physical_bridge
+scientific_threshold_changed: false
+next_attempt: freeze_exact_remainder_and_amplitude_convention_formula_then_test_novelty
+
