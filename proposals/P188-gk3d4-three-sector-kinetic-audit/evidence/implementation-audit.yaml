@@ -1,0 +1,24 @@
+campaign: P188
+canonical_code_change: none
+canonical_test_change: none
+new_API: none
+reason: >-
+  The corrected product-carrier traces, supplied spectator-degenerate matter
+  weights, factorwise affine kinetic families, scale-matched specialization,
+  trace/coupling iff, Abelian normalization covariance, and anomaly ceiling are
+  already exposed by accepted product_gauge, gauge_beta,
+  vacuum_polarization, kinetic_scale_matching, charge_traces, and
+  chiral_anomalies APIs. A new wrapper would duplicate those semantics.
+affected_accepted_tests:
+  - tests/test_product_gauge.py
+  - tests/test_gauge_beta.py
+  - tests/test_charge_traces.py
+  - tests/test_vacuum_polarization.py
+  - tests/test_dirac_vacuum_polarization.py
+  - tests/test_kinetic_scale_matching.py
+  - tests/test_chiral_anomalies.py
+  - tests/test_gauge_dimensions.py
+  - tests/test_nonabelian_vacuum_polarization.py
+focused_tests_passed: 131
+scientific_threshold_changed: false
+legacy_numpy_surface_in_mutable_P188: none

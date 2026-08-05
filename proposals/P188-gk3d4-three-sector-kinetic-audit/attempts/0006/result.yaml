@@ -1,0 +1,21 @@
+attempt: 0006
+campaign: P188
+candidate: accepted_API_replay_and_nonduplication_gate
+status: passed_pending_source_graph_and_review
+started_at: '2026-08-11T14:32:00Z'
+finished_at: '2026-08-11T14:35:00Z'
+verification:
+  primary_checks: 28
+  independent_checks: 21
+  focused_tests: 131
+  all_exit_statuses: 0
+nonduplication:
+  reserved_unpromoted_identifier: C-VAC-005
+  canonical_code_change: none
+  canonical_test_change: none
+  release_change: none
+  provisional_source_disposition: qualified
+compatibility:
+  version_only_scientific_failures: 0
+scientific_threshold_changed: false
+next_attempt: enumerate_and_replay_direct_and_transitive_source_consumers_then_complete_individual_review

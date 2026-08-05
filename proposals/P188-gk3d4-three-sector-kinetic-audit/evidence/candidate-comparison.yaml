@@ -1,0 +1,32 @@
+campaign: P188
+criteria_frozen_in_attempt: 0001
+comparator_selected_candidate: false
+candidates:
+  A:
+    verdict: retained_source_reproduction_only
+    reason: The eleven native checks reproduce exact raw traces and conditional arithmetic but do not construct their universal premises.
+  B:
+    verdict: selected_accepted_composition
+    reason: Factorwise C-VAC-003 and C-VAC-004 retain the exact affine families and expose the source ratio condition without hidden boundaries.
+  C:
+    verdict: retained_as_countermodel_no_new_claim
+    reason: C-PGA-001's existing embedded generators and C-RGE-005's existing spectator-degenerate indices already supply the exact product-carrier trace result.
+  D:
+    verdict: selected_sensitivity_family
+    reason: Spectator statistics representation boundary and logarithm mutations all change load-bearing weights or ratios while preserving factor labels.
+  E:
+    verdict: retained_exact_duplicate
+    reason: C-REP-001 already owns the supplied 3/8 trace coordinate its coupling-angle iff and Abelian normalization covariance.
+  F:
+    verdict: selected_no_new_claim
+    reason: The corrected product-sector object is fully expressed by accepted APIs and has no distinct uncovered consumer semantics.
+  G:
+    verdict: pending_governance_closure
+    reason: Source graph disposition queue and durable records remain to be synchronized.
+selection:
+  claim: none
+  reserved_unpromoted_identifier: C-VAC-005
+  canonical_API_change: none
+  release_change: none
+  provisional_source_disposition: qualified
+  accepted_composition: [C-PGA-001, C-DIM-009, C-VAC-002, C-VAC-003, C-VAC-004, C-REP-001, C-RGE-005, C-ANO-001]

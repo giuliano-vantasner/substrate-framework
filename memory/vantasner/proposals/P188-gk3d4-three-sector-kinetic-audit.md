@@ -2,7 +2,7 @@
 description: Audit GK3D4 and derive a provenance-complete product-sector kinetic normalization ledger
 author: vantasner
 created: '2026-08-11T14:05:00Z'
-updated: '2026-08-11T14:27:00Z'
+updated: '2026-08-11T14:35:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -210,6 +210,32 @@ three anomaly-free charge branches rather than an anomaly-selected source
 assignment. An independent raw derivation and final nonduplication decision
 remain open.
 
+Attempt 0004 preserves a verifier-representation failure: a compatibility
+predicate searched its own diagnostic strings and therefore reported a NumPy
+surface that was not executable. No equation or threshold changed. Attempt
+0005 inspects AST imports and names instead and passes 21 independent checks.
+It imports none of the product, loop, affine, trace, or anomaly claim APIs and
+reconstructs the full trace blocks, statistics weights, affine ratio residual,
+zero-common-log specialization, boundary and log mutations, supplied 3/8
+trace, coupling iff, Abelian rescaling, and three-branch anomaly factorization
+from raw SymPy expressions.
+
+The nonduplication gate is now decisive. C-PGA-001 already owns the embedded
+product generators, C-RGE-005 owns factorwise spectator-degenerate matter
+indices, C-VAC-002 through C-VAC-004 own the D4 loop and complete affine
+families, and C-REP-001 owns the trace/coupling iff. The product-carrier traces
+and source-specific countermodels add no independent consumer semantics.
+C-VAC-005 remains permanently reserved but unpromoted; P188 adds no package
+API or release merely to restate this accepted composition.
+
+Attempt 0006 reruns both exact routes and 131 affected accepted-API tests; all
+pass with clean exits. The test set covers product generators, spectator-
+degenerate beta weights, finite charge traces, scalar and Dirac D4 loops,
+scale matching, anomaly branches, gauge dimensions, and non-Abelian trace
+metrics. No canonical code or test changes are warranted. The remaining work
+is source-consumer graph replay, claim-level review of the no-new-claim
+decision, terminal GK3D4 governance, and parent-effort synchronization.
+
 ## Debt Ledger
 
 The P188 ledger tracks source reachability, generator conventions, product
@@ -225,7 +251,7 @@ consumers, and governed state.
 | One Abelian D4 loop may be copied to non-Abelian sectors without an accepted determinant and background-field premise | Type every action, representation, loop, regulator, and group factor or reject the transfer | discharged by dependency audit and the conditional C-VAC-002/003 plus C-PGA-001/C-RGE-005 composition |
 | Factor-specific tree, counterterm, and matching data may be erased | Preserve one affine boundary and scale ledger per independent factor | discharged by the exact factorwise affine family and ratio residual in attempt 0003 |
 | A trace ratio may be called a physical coupling angle | Reproduce the C-REP-001 iff and mutate the common coefficient and Abelian normalization | discharged by the exact common-law, independent-coefficient, and rho=2 countermodels in attempt 0003 |
-| C-VAC-005 may duplicate accepted semantics | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | open |
+| C-VAC-005 may duplicate accepted semantics | Complete claim, API, test, and consumer nonduplication review before implementation or promotion | discharged by the 28-check primary, 21-check independent, and nonduplication audits; identifier reserved without promotion |
 | Legacy NumPy access may masquerade as science | Repair mutable code or use immutable alias-only replay without candidate rejection | discharged: GK3D4 imports only SymPy and has no NumPy surface |
 | Dependencies, consumers, disposition, generated state, and memory may disagree | Replay the graph and synchronize every terminal record with materialized evidence | open |
 

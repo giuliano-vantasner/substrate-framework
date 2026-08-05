@@ -1,0 +1,15 @@
+attempt: 0004
+campaign: P188
+candidate: independent_raw_product_kinetic_rederivation
+status: failed_verifier_representation
+started_at: '2026-08-11T14:28:00Z'
+finished_at: '2026-08-11T14:29:00Z'
+passed_before_failure: 20
+failed_check: independent_review_has_no_NumPy_compatibility_surface
+mechanism: >-
+  The compatibility predicate searched the verifier's complete source text for
+  forbidden spellings, so its own diagnostic string literals triggered the
+  failure even though the AST imports no NumPy and executes no integration.
+scientific_formula_changed: false
+scientific_threshold_changed: false
+next_attempt: inspect_executable_AST_imports_and_attribute_access_instead_of_literal_diagnostic_text

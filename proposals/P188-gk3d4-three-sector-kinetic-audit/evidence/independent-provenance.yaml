@@ -1,0 +1,21 @@
+campaign: P188
+reviewer: reviews/independent_product_kinetic_review.py
+sha256: e96ca47f854dda1157f66e7cee8c105edbb1097935cc0d354181e6b6347fe577
+command: PYTHONPATH=src .venv/bin/python proposals/P188-gk3d4-three-sector-kinetic-audit/reviews/independent_product_kinetic_review.py
+oracle: fresh_raw_SymPy_matrices_traces_affine_algebra_and_anomaly_factorization
+exit_status: 0
+runtime_checks: 21
+lexical_check_calls: 21
+assert_nodes: 0
+scientific_imports_excluded:
+  - product_gauge
+  - gauge_beta
+  - vacuum_polarization
+  - kinetic_scale_matching
+  - charge_traces
+  - chiral_anomalies
+compatibility:
+  executable_AST_numpy_imports: 0
+  executable_AST_numpy_names: 0
+  version_only_scientific_failures: 0
+scientific_threshold_changed: false

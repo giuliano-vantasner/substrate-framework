@@ -1,0 +1,24 @@
+attempt: 0005
+campaign: P188
+candidate: repaired_independent_raw_product_kinetic_rederivation
+status: passed
+started_at: '2026-08-11T14:29:00Z'
+finished_at: '2026-08-11T14:32:00Z'
+repair_from: 0004
+repair: inspect_executable_AST_nodes_instead_of_diagnostic_string_literals
+verification:
+  oracle: raw_SymPy_without_scientific_claim_APIs
+  exit_status: 0
+  runtime_checks: 21
+results:
+  full_trace_blocks_rederived: true
+  cross_blocks_rederived: true
+  statistics_and_representation_mutations: passed
+  affine_ratio_residual_rederived: true
+  boundary_and_log_mutations: passed
+  trace_coupling_iff_rederived: true
+  Abelian_rescaling_counterfamily: passed
+  anomaly_three_branch_factorization: passed
+scientific_formula_changed: false
+scientific_threshold_changed: false
+next_attempt: run_affected_accepted_API_tests_and_complete_source_consumer_review
