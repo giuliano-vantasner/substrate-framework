@@ -1,0 +1,27 @@
+attempt: 0008
+campaign: P184
+candidate: independent_exact_C_SKY_002_rederivation
+status: passed
+started_at: '2026-08-11T11:05:00Z'
+finished_at: '2026-08-11T11:05:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P184-tx5-full-field-stability-audit/reviews/independent_skyrme_o4_review.py
+process:
+  exit_code: 0
+  elapsed_seconds: 1.50
+  maximum_resident_kibibytes: 143396
+  checks_passed: 10
+  terminal_tally: ALL_10_CHECKS_PASS_P184_INDEPENDENT_C_SKY_002
+independence:
+  imports_canonical_skyrme_o4_module: false
+  fresh_generic_real_variables: 16
+  quartic_minors_derived: 18
+  mass_gap_minors_derived: 18
+sensitivity:
+  - parallel_equality_witness_proves_mass_bound_sharpness
+  - quartic_sign_flip_is_negative_on_orthogonal_gradients
+  - missing_mass_identity_term_violates_bound_at_vacuum
+  - positive_Derrick_curvature_does_not_supply_stationarity
+oracle_ceiling: symbolic_verified
+claim_or_threshold_changed: false
+verdict: independent_route_passed
+next_attempt: claim_level_review_and_graph_replay

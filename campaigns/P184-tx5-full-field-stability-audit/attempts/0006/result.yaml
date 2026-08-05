@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P184
+candidate: primary_exact_verifier_first_execution
+status: failed_technical
+started_at: '2026-08-11T11:04:00Z'
+finished_at: '2026-08-11T11:04:00Z'
+command: PYTHONPATH=src .venv/bin/python campaigns/P184-tx5-full-field-stability-audit/verify.py
+process:
+  exit_code: 1
+  elapsed_seconds: 1.56
+  maximum_resident_kibibytes: 147800
+  checks_passed_before_failure: 18
+failure:
+  class: verifier_implementation
+  detail: scope_check_inspected_the_function_docstring_while_the_explicit_exclusion_sentence_lives_in_the_module_docstring
+scientific_result_changed: false
+repair: inspect_the_canonical_module_docstring_without_weakening_the_scope_requirement
+next_attempt: rerun_primary_and_independent_exact_verifiers
