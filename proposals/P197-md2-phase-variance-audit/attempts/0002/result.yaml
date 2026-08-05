@@ -1,0 +1,29 @@
+attempt: 0002
+campaign: P197
+candidate: validated_contract_and_manifest_freeze
+status: passed_freeze_boundary
+started_at: '2026-08-11T21:20:00Z'
+finished_at: '2026-08-11T21:23:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate --base /home/dan/substrate-framework /home/dan/substrate-framework/memory/vantasner/proposals/P197-md2-phase-variance-audit.md
+  - git diff --check
+result:
+  workflow_claims: 185
+  workflow_accepted: 185
+  active_proposals: 1
+  migration_units: 218
+  migration_pending: 28
+  repository_validation_exit_status: 0
+  memory_validation_exit_status: 0
+  diff_check_exit_status: 0
+pins:
+  proposal_sha256: 176088399de143411d27df5b01a0dbdbdc799462e6d56839fd0eea436c627106
+  memory_contract_sha256: 29f47ab3c7d463a8e149ad7385135f2d1bfc4c9558ab0cfef410f40ce782e2ad
+  source_sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+prior_exposure_preserved: true
+fresh_blinding_claimed: false
+scientific_candidate_selected: false
+debt:
+  - source_body_prior_exposure_remains_explicit
+next_attempt: source_compatibility_reproduction_and_predicate_adjudication

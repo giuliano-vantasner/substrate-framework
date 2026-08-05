@@ -1,0 +1,47 @@
+campaign: P197
+claim_candidate: C-QFL-001
+frozen_before_P197_source_execution: true
+declared_inputs:
+  hbar: positive_action
+  c: positive_speed
+  kappa: positive_d3_stiffness_with_dimension_energy_per_length
+  omega_0: positive_gap_frequency
+  K: positive_radial_UV_cutoff
+  V: positive_quantization_volume_canceling_from_the_continuum_limit
+  state: independently_declared_product_ground_state_of_scalar_harmonic_modes
+  dimension: exactly_3_for_the_closed_form_corollary
+per_mode_ground_state_variance: hbar*c^2/(2*V*kappa*omega_k)
+dispersion: omega_k=sqrt(omega_0^2+c^2*k^2)
+continuum_measure_per_branch: V*4*pi*k^2*dk/(2*pi)^3
+dimensionless_variables:
+  ell: c/omega_0
+  X: K*ell
+  beta_squared: hbar*c/(kappa*ell^2)
+kernel:
+  integral: J(X)=integral_0^X x^2/sqrt(1+x^2) dx
+  closed_form: J(X)=(X*sqrt(1+X^2)-asinh(X))/2
+continuum_variance:
+  exact: S=beta_squared*J(X)/(4*pi^2)
+  equivalent: S=hbar*c*J(K*c/omega_0)*omega_0^2/(4*pi^2*kappa*c^2)
+  large_X_leading: S~beta_squared*X^2/(8*pi^2)
+fixed_set_ledger:
+  inputs: nonempty_finite_sequence_of_nonnegative_variances_v_i
+  count: M=len(v)
+  total: S=sum_i(v_i)
+  arithmetic_mean: A_bar_squared=S/M
+  identity: M*A_bar_squared=S
+  ceiling: changing_the_admitted_sequence_can_change_M_A_bar_squared_and_S
+mutations:
+  - remove_ground_state_factor_one_half
+  - remove_Fourier_factor_two_pi_cubed
+  - replace_scalar_branch_one_by_three
+  - hold_arithmetic_mean_fixed_while_adding_modes
+  - add_zero_variance_mode_versus_positive_variance_mode
+  - replace_supplied_cutoff_by_MD1_target_without_declaring_target
+nonclaims:
+  - no_accepted_d3_lift_of_C_MED_003_or_C_SG_018
+  - no_derived_quantization_or_vacuum_state
+  - no_microscopic_cutoff_or_cell_scale
+  - no_absolute_material_variance
+  - no_mode_set_invariance_under_changing_cutoff
+  - no_growth_probability_channel_rate_or_substrate_prediction

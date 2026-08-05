@@ -1,0 +1,53 @@
+id: P197
+base_release: v0.145.0
+base_commit: 1c7c5d9
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MD2]
+question: >-
+  What exact conditional scalar-mode variance and weighted-sum theorem follows
+  from a declared canonical oscillator vacuum and C-DOS-001, and which part of
+  MD2 incorrectly lifts the accepted one-dimensional medium to three
+  dimensions or treats a fixed-set arithmetic identity as proof that changing
+  the admitted mode set cannot change the total variance?
+invariants:
+  - C-MED-003 and C-SG-018 remain one-spatial-coordinate classical scalar claims and provide no three-dimensional quantization.
+  - C-DOS-001 provides only a declared-d continuum density and supplied target cutoff; it derives no state occupation coupling participation or microscopic cutoff.
+  - Spatial dimension branch degeneracy oscillator normalization vacuum state cutoff and admitted mode set are independent supplied inputs.
+  - For a fixed finite nonempty set of nonnegative mode variances the total equals mode count times arithmetic mean, but varying the set can vary both the count and total.
+  - AS6 and AS7 provide no accepted beta-squared normalization value granularity or quantized-medium premise to MD2.
+  - A continuum zero-point integral is UV-cutoff dependent and cannot derive an absolute material phase variance without coefficient cutoff state and dimensional-lift provenance.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral never removed numpy.trapz.
+allowed_imports:
+  - C-DOS-001 exact continuum DOS and independently declared dimension branch and cutoff types
+  - exact harmonic-oscillator ground-state variance under a newly explicit canonical quantization premise
+  - separately declared positive hbar c stiffness volume gap radial cutoff and finite mode weights
+  - C-MED-003 and C-SG-018 as one-dimensional comparison ceilings only not as three-dimensional dependencies
+  - hash-pinned MD2 as noncanonical source evidence after the exposure record and freeze gate
+candidates:
+  - id: A
+    description: Promote a conditional d3 scalar continuum vacuum-variance integral and its exact J(X) closed form under an explicit canonical quadratic action state and supplied cutoff.
+  - id: B
+    description: Promote an exact finite periodic-box oscillator variance sum with explicit wavevectors normalization components boundary data and vacuum state.
+  - id: C
+    description: Promote only the general weighted-sum and arithmetic-mean factorization theorem with counterexamples showing that changing the admitted set can change the total.
+  - id: D
+    description: Reject all new mathematics as duplicate of C-DOS-001 or elementary identities if no distinct inverse-frequency moment survives review.
+  - id: E
+    description: Open a foundational three-dimensional quantized-medium lift only if accepted claims independently require it before MD2 is used.
+uniqueness_evidence: null
+selection_criteria:
+  - explicit separation of classical dispersion continuum measure quantization state cutoff and mode-set premises
+  - natural fit without lifting C-MED-003 or C-SG-018 out of one spatial coordinate
+  - exact normalization dimensions positivity and zero-gap and cutoff limits
+  - sensitivity to oscillator half factor Fourier measure stiffness gap cutoff and admitted-set mutations
+  - honest distinction between a fixed-set factorization and dependence under set growth
+  - novelty beyond C-DOS-001 C-OSC-002 and generic arithmetic means
+  - downstream usefulness without material growth channel or rate overreach
+claims_proposed: [C-QFL-001]
+comparators_blinded_until: >-
+  Fresh source-body blinding is impossible because the source was opened during
+  parallel intake before this manifest existed and P196 had already executed
+  MD2 as a reverse consumer. P197 records that failure and freezes premises,
+  candidates, criteria, mutations, and physical ceilings before any P197 source
+  execution, predicate audit, or implementation.
+status: active

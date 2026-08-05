@@ -1,0 +1,26 @@
+attempt: 0001
+campaign: P197
+candidate: durable_freeze_order
+status: failed_process_boundary
+started_at: '2026-08-11T21:15:00Z'
+finished_at: '2026-08-11T21:20:00Z'
+failure_class: representation_and_workflow
+mechanism: >-
+  A parallel intake command opened the MD2 source body while the main process
+  was reading the campaign templates, before the P197 proposal manifest and
+  durable memory contract existed. P196 had also already executed MD2 as a
+  reverse consumer, so fresh output blinding was unavailable independently.
+scientific_candidate_rejected: false
+preserved_exposure:
+  source_path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py
+  source_sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+  body_seen: true
+  executed_in_P197: false
+repair: >-
+  Freeze the exact source hash, accepted baseline, premises, five competing
+  concepts, structural criteria, mutations, physical ceilings, and exposure
+  statement now; validate both durable artifacts before any P197 execution or
+  detailed predicate audit.
+next_attempt: validated_contract_and_manifest_freeze
+debt:
+  - source_body_prior_exposure_must_remain_explicit

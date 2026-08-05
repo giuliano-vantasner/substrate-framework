@@ -1,0 +1,27 @@
+campaign: P197
+base_release:
+  id: v0.145.0
+  path: governance/releases/current.yaml
+  sha256: 0b549525847c57f4e246a2bd56331389ce6a8352468823b126b7f16e27b3a329
+registry:
+  path: governance/claims.yaml
+  sha256: 53b1713ee080878cc8f7b6d57ddff2f204e4d0e7312dbd00a36a24ca4a074d2f
+framework_commit: 1c7c5d9
+source_repository:
+  path: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  working_tree_dirty_outside_source_unit: true
+source:
+  source_unit: MD2
+  path: merged-framework/bridges/phase-38/bridge_MD2_phase_variance_and_the_overparametrization.py
+  sha256: 7dee2e731cc957c97ee151d3fd3349080460f2dc5781be8d4fd7869a589d2df0
+  bytes: 10265
+  git_history: [7222eed21720c5174dd35ba8f825d8b7e0a48f3f]
+prior_exposure:
+  source_body_seen_before_freeze: true
+  P197_execution_before_freeze: false
+  prior_P196_reverse_consumer_execution: true
+  fresh_blinding_claimed: false
+authority_inputs: [C-DOS-001]
+comparison_ceiling_inputs: [C-MED-003, C-SG-018, C-DIM-008, C-SYM-002, C-IDN-002, C-OSC-002]
+pending_or_unaccepted_inputs_forbidden: [MD2, MD3, MD4, MD5, MD6, AS6_beta_value, AS7_granularity, MD1_microscopic_cutoff]
