@@ -1,0 +1,10 @@
+campaign: P200
+claim_candidate: C-BRN-002
+verifier: reviews/independent_weight_review.py
+sha256: 3c03196510bb8914f14fbe625e123116b35e8017b4c45d7dee28e6e7d193da78
+command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P200-md5-branching-handshake-audit/reviews/independent_weight_review.py
+exit_status: 0
+checks: 12
+terminal_tally: ALL_12_CHECKS_PASS_P200_MD5_INDEPENDENT
+independence: {imports_claim_module: false, imports_shared_verification_ledger_only: true}
+scientific_version_failures: 0

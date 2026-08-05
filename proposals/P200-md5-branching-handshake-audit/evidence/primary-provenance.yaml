@@ -1,0 +1,9 @@
+campaign: P200
+claim_candidate: C-BRN-002
+verifier: verify.py
+sha256: 6e84a3811a97690e0245e8140a0e15f35dd210f7aecf0c7bf40fa7ad6f659897
+command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P200-md5-branching-handshake-audit/verify.py
+exit_status: 0
+checks: 19
+terminal_tally: ALL_19_CHECKS_PASS_P200_MD5_PRIMARY
+scientific_version_failures: 0

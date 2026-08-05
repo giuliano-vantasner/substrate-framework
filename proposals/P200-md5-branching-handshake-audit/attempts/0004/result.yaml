@@ -1,0 +1,20 @@
+attempt: 0004
+campaign: P200
+candidate: population_dependent_weight_implementation_primary_independent_and_focused_verification
+status: passed
+implementation:
+  module: src/substrate_framework/branching.py
+  package_exports_added: 2
+verification:
+  primary_checks: 19
+  independent_checks: 12
+  focused_tests: 21
+  exit_statuses_all_zero: true
+mutations:
+  erased_N_weight_derivative: rejected
+  positive_inverse_square_weight: reverses_verdict
+  inverse_weight: stationary_verdict
+  unique_integer_mode: rejected
+compatibility: {mutable_numpy_surface: none, version_only_scientific_failures: 0}
+debt: [complete_source_graph_and_individual_claim_and_source_reviews]
+next_attempt: source_graph_replay_claim_review_and_MD5_disposition_review

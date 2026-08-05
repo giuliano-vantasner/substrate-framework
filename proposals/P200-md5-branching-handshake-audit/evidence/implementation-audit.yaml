@@ -25,4 +25,4 @@ adverse_tests:
   - undecidable_control_sign_is_rejected
   - constant_weight_recovers_C_BRN_001
   - physical_weight_and_exhaustive_channel_ceilings_are_explicit
-debt: [primary_and_independent_campaign_verification]
+debt: []
