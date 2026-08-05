@@ -1,0 +1,38 @@
+attempt: 0001
+campaign: P191
+candidate: preregistered_WN3_bosonic_ladder_and_composition_audit
+status: passed
+started_at: '2026-08-11T16:52:00Z'
+finished_at: '2026-08-11T16:57:00Z'
+base_release: v0.141.0
+base_commit: 5666c2978f066b24e37bae8823dfff62c1c1f53c
+source:
+  unit: WN3
+  path: merged-framework/bridges/phase-37/bridge_WN3_amplitude_scale_and_multiplicity.py
+  sha256: 8a13c8b2af4d89297a11b3ef7460cc1f35fe274dc4affb2b9a7d3649bc237e88
+  blob: 7a525a7a29aa71c7daeb83b559fb8cfc62d8f391
+  size_bytes: 14375
+  sole_commit: 7222eed21720c5174dd35ba8f825d8b7e0a48f3f
+prior_exposure: fully_executed_and_partly_displayed_during_preregistered_prior_consumer_replay
+reserved_claim: C-OSC-001
+candidates: [A, B, C, D, E, F, G, H]
+frozen:
+  provisional_claim: C-OSC-001
+  candidate_count: 8
+  selection_criteria_count: 10
+  accepted_dependency_ceilings: [C-SG-019, C-SPN-002, C-CMB-001, C-CMB-002]
+  excluded_pending_premises: [WN4, WN5, WN6, WN7]
+  oracle_order: [exact_operator_and_integer, symbolic_series_and_inequality, finite_matrix_regression]
+  compatibility_policy: current_mutable_API_or_shared_helper_and_alias_only_immutable_replay
+  memory_search: no_matching_WN3_Fock_bosonic_multiplicity_or_creation_operator_entry
+validation:
+  repository: passed
+  workflow_claims: 181
+  proposals: 1
+  migration_pending: 34
+  memory_files: 779
+  memory: passed
+  yaml_parse: passed
+  diff_check: passed
+scientific_threshold_changed: false
+next_attempt: pin_source_predicates_then_derive_exact_Fock_and_parity_complete_composition
