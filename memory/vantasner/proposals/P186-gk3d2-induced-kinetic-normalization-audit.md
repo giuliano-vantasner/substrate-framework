@@ -2,7 +2,7 @@
 description: Audit GK3D2 and derive a scalar-loop and kinetic-boundary normalization ledger
 author: vantasner
 created: '2026-08-11T12:13:00Z'
-updated: '2026-08-11T12:36:00Z'
+updated: '2026-08-11T12:40:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -255,6 +255,14 @@ comparison across docstring line wrapping. Neither changed a scientific
 formula or threshold. Attempt 0007 passes all 31 hash-pinned, exact, and
 mutation-sensitive primary checks after simplifying algebraic differences and
 normalizing documentation whitespace. Independent rederivation remains open.
+
+Attempt 0008 preserves a self-referential independence predicate that matched
+its own forbidden substring after 27 scientific checks had passed. Attempt
+0009 replaces that predicate with an AST import-module inventory and passes 28
+raw-SymPy checks without importing the canonical scientific claim, Dirac,
+generic-beta, or renormalization modules. It independently rebuilds the
+vertex weight, pole, finite family, slopes, factor four, affine solution, and
+boundary counterexamples. Source-graph and governance closure remain open.
 
 ## Debt Ledger
 
