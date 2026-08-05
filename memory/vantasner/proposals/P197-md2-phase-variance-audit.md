@@ -2,7 +2,7 @@
 description: Derive a conditional scalar vacuum mode-sum while separating fixed-set factorization from mode-set dependence
 author: vantasner
 created: '2026-08-11T21:20:00Z'
-updated: '2026-08-11T21:20:00Z'
+updated: '2026-08-11T21:50:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -109,6 +109,16 @@ Attempt 0001 records that the source body was opened before the durable freeze
 artifacts existed. Attempt 0002 is the corrected contract-and-manifest freeze
 and must pass repository and memory validation before source execution.
 
+Attempt 0003 reproduces all 26 source checks with no compatibility event and
+separates the conditional integral from the physical overreads. Attempt 0004
+selects continuum Candidate A and fixed-set ceiling C. Attempts 0005 through
+0007 preserve three verifier-representation failures: fragile positivity
+inference, incorrect authoritative-text and tuple-target queries, and a self-
+referential independence scan. Attempt 0008 closes 40 primary, 27 independent,
+and 40 focused checks after explicit repairs. Attempt 0009 closes the ten-node,
+282-check source graph without duplicate native execution and completes the
+individual claim and MD2 reviews.
+
 ## Debt Ledger
 
 The ledger tracks every premise or mismatch that could turn a conditional
@@ -116,14 +126,14 @@ mode-sum identity into an unsupported physical conclusion.
 
 | Debt | Discharge | Status |
 | --- | --- | --- |
-| Source body was exposed before freeze | Preserve attempt 0001 and claim no fresh blinding | in progress |
-| Canonical quantization is absent from accepted medium claims | State it as an explicit theorem premise and test normalization | open |
-| C-MED-003 is one-dimensional while MD2 integrates d3 | Keep d explicit and reject an undeclared lift | open |
-| Cutoff and cell scale may be called derived microscopic data | Keep cutoff and target supplied under C-DOS-001 | open |
-| Fixed-set factorization may be overread as set-growth invariance | Supply exact counterexamples and typed ledger | open |
-| Beta and granularity may be imported from AS6/AS7 | Audit accepted mappings and forbid unaccepted values | open |
-| Claim may duplicate DOS or elementary arithmetic | Complete nonduplication review | open |
-| Downstream consumers may inherit MD2 wholesale | Replay exact graph and preserve consumer dispositions | open |
+| Source body was exposed before freeze | Preserve attempt 0001 and claim no fresh blinding | discharged by exposure record and validated attempt 0002 freeze |
+| Canonical quantization is absent from accepted medium claims | State it as an explicit theorem premise and test normalization | discharged by API, Gaussian rederivation, and claim ceiling |
+| C-MED-003 is one-dimensional while MD2 integrates d3 | Keep d explicit and reject an undeclared lift | discharged by dependency and source reviews |
+| Cutoff and cell scale may be called derived microscopic data | Keep cutoff and target supplied under C-DOS-001 | discharged by API typing and cutoff mutations |
+| Fixed-set factorization may be overread as set-growth invariance | Supply exact counterexamples and typed ledger | discharged by zero, positive, and equal-mean set extensions |
+| Beta and granularity may be imported from AS6/AS7 | Audit accepted mappings and forbid unaccepted values | discharged by exact dependency audit |
+| Claim may duplicate DOS or elementary arithmetic | Complete nonduplication review | discharged; inverse-frequency moment is distinct |
+| Downstream consumers may inherit MD2 wholesale | Replay exact graph and preserve consumer dispositions | discharged by 20-check graph and pending MD4-MD6 |
 
 ## Review and Promotion Plan
 

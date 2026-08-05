@@ -1,0 +1,32 @@
+campaign: P197
+source_unit: MD2
+claim_candidate: C-QFL-001
+canonical_consumers:
+  module: src/substrate_framework/quantum_mode_variance.py
+  exports: src/substrate_framework/__init__.py
+  tests: {path: tests/test_quantum_mode_variance.py, passed: 23}
+  primary: {path: proposals/P197-md2-phase-variance-audit/verify.py, checks: 40}
+direct_source_consumers:
+  MD4:
+    disposition: pending
+    native_checks: 34
+    accepted_reuse_candidate: conditional_total_variance_symbol_only
+    ceiling: growth_threshold_rescue_amplitude_participation_and_material_inputs_require_individual_review
+  MD5:
+    disposition: pending
+    native_checks: 63
+    accepted_reuse_candidate: conditional_variance_symbol_and_cutoff_dependence_only
+    ceiling: isotope_handshake_branching_material_and_prediction_claims_require_individual_review
+  MD6:
+    disposition: pending
+    native_checks: 40
+    accepted_reuse_candidate: explicit_quantization_state_cutoff_and_set_change_ceiling_only
+    ceiling: firewall_tally_does_not_adjudicate_MD_science
+consumer_records: {scripts: 3, native_checks_covered: 137, fresh_native_executions: 0}
+compatibility_preflight: {scripts: 3, legacy_references: 0, eager_legacy_default_fallbacks: 0, aliases_used: 0, version_only_scientific_failures: 0}
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+canonical_existing_signatures_changed: []
+canonical_existing_values_changed: []
+scientific_threshold_changed: true
+threshold_change: conditional_vacuum_moment_added_with_stricter_state_cutoff_dimension_and_set_change_typing

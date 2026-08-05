@@ -1,0 +1,25 @@
+attempt: 0009
+campaign: P197
+candidate: dependency_consumer_graph_and_individual_reviews
+status: passed_review_boundary
+started_at: '2026-08-11T21:45:00Z'
+finished_at: '2026-08-11T21:50:00Z'
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P197-md2-phase-variance-audit/reviews/replay_source_graph.py
+result:
+  graph_checks: 20
+  graph_exit_status: 0
+  unique_nodes: 10
+  native_checks_covered: 282
+  direct_dependencies_qualified: 6
+  reverse_consumers_covered: 3
+  fresh_native_consumer_executions: 0
+  reverse_consumers_still_pending: 3
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+claim_review: accepted_for_promotion
+claim: C-QFL-001
+claim_dependencies: [C-DOS-001]
+source_review: MD2_qualified_through_C_DOS_001_and_C_QFL_001
+debt: []
+next_attempt: promote_claim_release_MD2_disposition_docs_memory_and_run_one_integrated_gate
