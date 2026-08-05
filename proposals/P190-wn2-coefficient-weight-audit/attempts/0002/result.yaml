@@ -1,0 +1,39 @@
+attempt: 0002
+campaign: P190
+candidate: native_source_reproduction_and_predicate_audit
+status: passed_source_reproduction_headline_overstated
+started_at: '2026-08-11T16:04:00Z'
+finished_at: '2026-08-11T16:10:00Z'
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py
+process:
+  exit_status: 0
+  wall_seconds: 0.37
+  max_rss_kib: 50896
+  static_check_calls: 27
+  literal_check_calls: 21
+  dynamic_check_calls: 6
+  runtime_check_executions: 70
+  assertion_nodes: 0
+  terminal_tally: ALL_70_CHECKS_PASS
+compatibility:
+  numpy_imports: 0
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  aliases_injected: 0
+  version_only_scientific_failures: 0
+retained:
+  - exact_parity_floor_and_zero_endpoint_arithmetic
+  - conditional_N_over_factorial_squared_ratio
+  - exact_coarse_concentration_lower_bounds_on_a_declared_odd_order_sample_space
+requires_stronger_oracle:
+  - exact_infinite_odd_mass_and_independent_tail_enclosure
+  - universal_tail_proof_instead_of_direct_factorial_grid
+  - countermodels_to_the_invented_mode_and_all_integer_positivity_guard
+rejected_headline_edges:
+  - parity_discontinuity_is_intrinsically_physically_absurd
+  - a_mode_at_one_is_universally_kinematically_inadmissible
+  - coefficient_sequence_and_fixed_floor_count_define_one_common_probability_sample_space
+  - pending_WN3_WN4_can_validate_an_admissibility_guard
+scientific_threshold_changed: false
+next_attempt: freeze_exact_odd_mass_formula_tail_enclosure_and_countermodel_obligations

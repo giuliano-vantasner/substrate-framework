@@ -1,0 +1,42 @@
+campaign: P190
+source_unit: WN2
+source_hash_matches_queue: true
+native_exit_status: 0
+source_constructions:
+  exact_or_exact_finite:
+    - parity_thinned_unit_inverse_square_factorial_values
+    - exact_floor_counts_at_declared_rational_frequencies
+    - exact_parity_flip_for_consecutive_floor_cells
+    - conditional_zero_endpoint_two_channel_fraction
+    - conditional_relative_weight_substitution_N_over_factorial_squared
+    - finite_rational_concentration_lower_bounds
+  numeric_or_underencoded:
+    - sixty_digit_mpmath_population_thresholds_without_interval_enclosure
+    - universal_factorial_tail_justified_by_a_thirty_six_point_direct_factorial_grid
+    - admissibility_guard_tested_only_on_orders_one_through_eleven
+typing_audit:
+  accepted_weighted_specialization: positive_weight_only
+  accepted_general_allocation: either_zero_endpoint_permitted_when_total_is_positive
+  source_candidate_at_even_order: zero_endpoint_not_a_weighted_specialization
+  source_candidate_at_odd_order: positive_dimensionless_sequence_value_if_separately_supplied_as_weight
+  missing_for_physical_rate:
+    - normalized_states_and_complete_interaction
+    - final_state_measure_or_spectral_density
+    - channel_and_rate_dimensions
+    - physical_order_sample_space_and_measure
+    - accepted_PN2_subdivision_mode_and_band
+    - population_and_baseline_rate_provenance
+logical_audit:
+  exact_survivors:
+    - unit_vacuum_parity_support_from_C_SG_019
+    - factorial_suppression_and_threshold_bounds_from_C_CMB_001
+    - normalized_odd_sequence_concentration_pending_exact_infinite_oracle
+    - C_BRN_001_zero_endpoint_and_positive_weight_domain_distinction
+  unsupported_edges:
+    - parity_flip_is_physically_absurd_without_a_dynamical_continuity_premise
+    - a_distribution_with_mode_one_is_universally_inadmissible
+    - global_odd_order_normalization_and_a_fixed_floor_count_form_a_kinematic_contradiction
+    - GB4_requires_enhancement_greater_than_one_for_every_allowed_weight_and_population
+    - PN2_has_an_accepted_physical_band_or_excludes_a_physical_order
+    - future_WN3_WN4_shape_can_validate_the_guard
+headline_verdict: mixed_exact_ledger_with_a_novel_normalization_candidate_and_overstated_universal_physical_refutation

@@ -2,7 +2,7 @@
 description: Audit WN2 and derive an exact parity-thinned factorial mass and conditional allocation ledger
 author: vantasner
 created: '2026-08-11T15:58:00Z'
-updated: '2026-08-11T16:03:00Z'
+updated: '2026-08-11T16:10:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -145,6 +145,18 @@ candidates, ordered criteria, provisional C-CMB-002, exact oracle hierarchy,
 compatibility policy, and debt. Every later failure is preserved append-only
 with its implementation, representation, candidate, target, or foundation
 layer and a materially different continuation.
+
+Attempt 0002 reproduces the hash-pinned source with exit zero and all seventy
+runtime checks. Static inventory finds twenty-seven check call sites, no
+assertions, and no NumPy compatibility surface. Predicate adjudication retains
+exact floor, parity, zero-endpoint, conditional ratio, and coarse rational
+concentration arithmetic. It rejects the universal physical labels: neither
+mode one nor a parity zero is an accepted inadmissibility axiom, PN2 supplies
+no accepted physical band, and a normalized global order sample space cannot
+be silently identified with a deterministic floor count. Thirty-seven direct
+factorial-grid checks also underencode the stated universal induction. The
+next attempt therefore freezes an exact infinite odd-mass oracle and explicit
+countermodels rather than treating the source tally as its headline proof.
 
 ## Debt Ledger
 

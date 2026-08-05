@@ -1,0 +1,19 @@
+campaign: P190
+source_unit: WN2
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-37/bridge_WN2_coefficient_cannot_be_the_weight.py
+exit_status: 0
+runtime_check_executions: 70
+terminal_tally: ALL_70_CHECKS_PASS
+wall_seconds: 0.37
+max_rss_kib: 50896
+selected_outputs:
+  even_count_at_one_meV: 24000000000
+  odd_count_at_eleven_meV: 2181818181
+  relative_parity_flip_bound: less_than_1e-9
+  exposed_log10_population_thresholds:
+    10000000: greater_than_1.31e8
+    100000000000: greater_than_2.11e12
+  source_concentration_bounds:
+    order_one: greater_than_0.972
+    through_order_three: greater_than_0.9999
+runtime_scope: exact_finite_and_numeric_source_evidence_not_blanket_physical_refutation

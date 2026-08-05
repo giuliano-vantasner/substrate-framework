@@ -1,0 +1,17 @@
+campaign: P190
+source_unit: WN2
+auditor: substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+ast_parse: passed
+numpy_aliases: []
+direct_legacy_attributes: 0
+dynamic_legacy_getattrs: 0
+imported_legacy_names: 0
+direct_current_attributes: 0
+dynamic_current_getattrs: 0
+imported_current_names: 0
+eager_legacy_default_fallbacks: 0
+legacy_references: 0
+requires_legacy_alias: false
+version_only_failure: false
+scientific_effect: none
+compatibility_policy_result: no_alias_or_version_repair_required

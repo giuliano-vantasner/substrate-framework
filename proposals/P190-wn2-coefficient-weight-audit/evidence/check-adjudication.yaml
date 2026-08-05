@@ -1,0 +1,64 @@
+campaign: P190
+source_unit: WN2
+runtime_checks: 70
+families:
+  - id: R1.0-positive-weight-typing
+    runtime_instances: 1
+    status: retained_API_domain_not_universal_weight_axiom
+    mapping: [C-BRN-001]
+    reason: The weighted specialization requires a positive input, while the general allocation intentionally retains a zero endpoint.
+  - id: R1.1-floor-count-and-parity
+    runtime_instances: 2
+    status: retained_exact_arithmetic_with_unaccepted_physical_band
+    reason: The displayed rational floors and parity are exact; PN2 supplies no accepted material mode or band.
+  - id: R1.2-zero-endpoint-allocation
+    runtime_instances: 2
+    status: retained_exact_conditional
+    mapping: [C-SG-019, C-BRN-001]
+    reason: Vacuum even-order support is zero and the general allocation maps a zero first rate plus a positive second rate to the exact endpoint zero.
+  - id: R1.3-parity-flip-and-physical-label
+    runtime_instances: 3
+    status: exact_floor_sensitivity_physical_absurdity_rejected
+    reason: Consecutive floor cells of opposite parity can be arbitrarily close, but no accepted continuity law turns this arithmetic fact into physical absurdity.
+  - id: R2.0-relative-enhancement-form
+    runtime_instances: 1
+    status: retained_exact_conditional
+    mapping: [C-BRN-001]
+    reason: The ratio is independent of the comparison baseline only after the same positive channel normalizations are supplied.
+  - id: R2.1-factorial-substitution-grid
+    runtime_instances: 8
+    status: retained_exact_conditional
+    mapping: [C-CMB-001, C-BRN-001]
+    reason: Supplying q_n as a positive odd-order weight gives N*q_n/q_1 exactly; values below one do not contradict the allocation theorem.
+  - id: R2.2-exposed-population-thresholds
+    runtime_instances: 3
+    status: numeric_regression_with_exact_replacement
+    mapping: [C-CMB-001]
+    reason: The source uses unenclosed mpmath values and an unaccepted PN2 band; C-CMB-001 supplies conservative exact decade ceilings independently.
+  - id: R3.1-factorial-tail-grid
+    runtime_instances: 37
+    status: finite_grid_underencodes_universal_induction
+    reason: Direct factorial evaluation from five through forty is not the stated induction, though the inequality is elementary and can be replaced by a ratio proof.
+  - id: R3.2-coarse-tail-bound
+    runtime_instances: 2
+    status: retained_exact_but_loose
+    provisional_mapping: C-CMB-002
+    reason: The all-order majorant is valid but includes parity-forbidden terms and is far looser than the exact odd-subsequence ratio enclosure.
+  - id: R3.3-normalized-concentration
+    runtime_instances: 4
+    status: retained_exact_lower_bounds_pending_infinite_normalization
+    provisional_mapping: C-CMB-002
+    reason: The rational inequalities are valid for a declared odd positive-integer sample space; exact total mass and independent tail certification are still required.
+  - id: R3.4-kinematic-exclusion
+    runtime_instances: 4
+    status: retained_floor_arithmetic_rejected_contradiction
+    reason: Order one fails the displayed remainder inequality at the declared values, but mixing a normalized global order sample space with a deterministic floor rule does not create a contradiction, and PN2 is not accepted physics.
+  - id: R4-invented-admissibility-guard
+    runtime_instances: 3
+    status: rejected_unaccepted_criterion_and_forward_import
+    reason: Positivity at every integer and a mode away from one are not accepted universal criteria; ties are arbitrarily assigned to the first grid point and the positive counterexample borrows a pending WN3/WN4 shape.
+summary:
+  exact_or_exact_conditional_runtime_checks: 20
+  finite_numeric_or_underencoded_runtime_checks: 40
+  checks_with_rejected_interpretive_edge: 10
+  blanket_headline_accepted: false
