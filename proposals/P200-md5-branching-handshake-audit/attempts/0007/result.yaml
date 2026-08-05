@@ -1,0 +1,21 @@
+attempt: 0007
+campaign: P200
+candidate: corrected_absolute_path_review_boundary_validation
+status: passed
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate /home/dan/substrate-framework/memory
+  - git diff --check
+repository_validation:
+  claims: 188
+  accepted_claims: 188
+  active_proposals: 1
+  source_units: 218
+  pending_source_units: 25
+  partial_source_units: 0
+memory_validation: {files: 818, status: valid}
+diff_check: pass
+exit_status: 0
+scientific_boundary_changed_since_attempt_0005: false
+debt: []
+next_attempt: commit_review_boundary_then_stage_promotion

@@ -1,0 +1,16 @@
+campaign: P200
+root_source_unit: MD5
+direct_reverse_consumers:
+  MD6:
+    disposition: pending
+    accepted_reuse_candidate: lexical_and_native_replay_only
+    ceiling: scanner_and_debt_tally_do_not_adjudicate_MD5_physics_or_discharge_its_missing_material_maps
+consumer_dispositions_changed: []
+downstream_claims_promoted: []
+pending_reverse_consumers_preserved: 1
+generated_consumers:
+  - governance/claims.yaml
+  - governance/releases
+  - docs/generated/claim-index.md
+  - memory/framework
+  - migration/source-claims.yaml

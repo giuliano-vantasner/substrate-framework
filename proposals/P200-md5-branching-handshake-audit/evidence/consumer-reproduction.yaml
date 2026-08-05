@@ -1,0 +1,20 @@
+campaign: P200
+root_source_unit: MD5
+strategy: reuse_byte_pinned_native_record_without_duplicate_execution
+current_compatibility_preflight:
+  MD6: {legacy_references: 0, eager_legacy_default_fallbacks: 0, alias_used: false}
+reused_native_records:
+  MD6:
+    record: campaigns/P196-md1-mode-counting-audit/evidence/consumer-reproduction.yaml
+    record_sha256: 6d6373ef1513c6f2891450bbef96311b7566ae35cc02e5837064f9366de41335
+    source_sha256: 08b6d263323e3a09da39152c7409795d97477521f2fcf8d57b295922fefa1cbf
+    terminal_tally: ALL_40_CHECKS_PASS
+    exit_status: 0
+total: {scripts: 1, native_checks_covered: 40, fresh_native_executions: 0, exit_statuses_all_zero: true}
+authority_ceiling: >-
+  Byte-identical reproduction proves only that pending MD6 retains its own
+  predicates. It neither promotes MD6 nor permits MD5's material, isotope,
+  physical branching, reaction, rate, or debt-closure interpretations to enter
+  C-BRN-002.
+compatibility_events: 0
+version_only_scientific_failures: 0

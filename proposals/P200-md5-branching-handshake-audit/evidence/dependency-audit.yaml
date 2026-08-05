@@ -1,0 +1,25 @@
+campaign: P200
+source_unit: MD5
+declared_source_dependencies:
+  GB4: {disposition: qualified, authority_use: C_BRN_001_constant_weight_allocation_only}
+  MC3: {disposition: qualified, authority_use: host_parameter_and_isotope_ceiling_only}
+  MD2: {disposition: qualified, authority_use: conditional_static_variance_ceiling_only}
+  MD3: {disposition: qualified, authority_use: static_number_measurement_and_mass_context_only}
+  MD4: {disposition: qualified, authority_use: C_CMB_003_and_separately_declared_C_MKV_001_ceiling_only}
+  PN2: {disposition: qualified, accepted_mapping: [], authority_use: forbidden}
+  WN5: {disposition: qualified, authority_use: C_BRN_001_and_factorial_one_composition_context_only}
+  WN6: {disposition: qualified, authority_use: static_mass_and_parameter_ceiling_only}
+proposed_claim_dependencies: [C-BRN-001]
+state_context_only: [C-CMB-003]
+dependency_closure_exact: true
+forbidden_imports:
+  - MD2_material_population_independence_or_granularity_map
+  - MC3_exact_H_D_host_map_without_equal_curvature_and_phase_scale
+  - MD3_material_state_preparation_or_transition_matrix_element
+  - MD4_growth_channel_rescue_or_material_process
+  - PN2_external_energy_band_occupation_or_final_state
+  - WN5_or_WN6_physical_turnover_prediction
+  - MD6_forward_debt_closure
+  - physical_channel_exhaustiveness_interaction_reaction_or_rate
+hidden_fitted_constants: []
+debt: []

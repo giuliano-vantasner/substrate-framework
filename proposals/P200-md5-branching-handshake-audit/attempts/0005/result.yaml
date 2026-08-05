@@ -1,0 +1,32 @@
+attempt: 0005
+campaign: P200
+candidate: ten_node_graph_claim_review_and_source_disposition_review
+status: passed
+source_graph:
+  nodes: 10
+  native_checks_covered: 354
+  fresh_native_executions: 0
+  replay_checks: 19
+  exit_status: 0
+  compatibility_aliases: 0
+impact_analysis:
+  refreshed_index_commit: 38bccd4
+  API_upstream_impact: 0
+  affected_processes: 0
+  risk: low
+reviews:
+  claim: reviews/C-BRN-002-claim-review.md
+  source_disposition: reviews/MD5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  decisions_agree: true
+recommended_claim_axes:
+  verification: symbolic_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+recommended_MD5_disposition: qualified
+recommended_MD5_mapping: [C-BRN-001, C-CMB-003, C-BRN-002]
+pending_reverse_consumers_preserved: [MD6]
+version_only_scientific_failures: 0
+debt: []
+next_attempt: freeze_review_boundary_and_stage_claim_level_promotion

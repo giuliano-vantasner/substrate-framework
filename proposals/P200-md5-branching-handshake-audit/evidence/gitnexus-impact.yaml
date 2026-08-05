@@ -1,0 +1,45 @@
+campaign: P200
+indexed_repository: substrate-framework
+index_refresh:
+  prior_indexed_commit: 1a58aa09a29c2cc0fd32567dabc6695347aa33b5
+  refreshed_indexed_commit: 38bccd41d1e132543dfd6a340beed5a31b275eec
+  status_after_refresh: up_to_date
+  generated_context_artifacts_retained: false
+impact_query:
+  target: population_dependent_weight_ledger
+  direction: upstream
+  minimum_confidence: 0.8
+  maximum_depth: 3
+  tests_included: true
+  impacted_count: 0
+  direct_callers: 0
+  processes_affected: 0
+  modules_affected: 0
+  risk: LOW
+process_inventory:
+  processes: 1
+  only_process: Run_to_Check
+  affected: false
+change_detection:
+  comparison_base: d5a8125
+  changed_symbols: 45
+  changed_files: 21
+  affected_symbols: 0
+  affected_processes: 0
+  risk: low
+manual_authoritative_impact:
+  existing_function_signatures_changed: false
+  existing_function_values_changed: false
+  new_leaf_API:
+    - src/substrate_framework/branching.py:PopulationDependentWeightLedger
+    - src/substrate_framework/branching.py:population_dependent_weight_ledger
+  package_export_changed: src/substrate_framework/__init__.py
+  direct_tests: tests/test_branching.py
+  campaign_verifiers:
+    - proposals/P200-md5-branching-handshake-audit/verify.py
+    - proposals/P200-md5-branching-handshake-audit/reviews/independent_weight_review.py
+  source_graph_root: MD5
+  pending_source_consumers: [MD6]
+  generated_consumers: [docs/generated/claim-index.md, memory/framework, migration/source-claims.yaml]
+risk: low_for_additive_API_but_requires_exact_branching_tests_graph_replay_and_MD6_authority_ceiling
+debt: []

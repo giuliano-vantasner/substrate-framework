@@ -1,0 +1,28 @@
+campaign: P200
+claim_candidate: C-BRN-002
+comparisons:
+  C-BRN-001:
+    owns:
+      - exact_normalized_two_channel_allocation_for_separately_declared_common_dimension_inputs
+      - constant_positive_weight_population_partial_derivative
+      - common_scale_invariance_relative_odds_and_physical_ceilings
+    does_not_own:
+      - a_total_population_derivative_when_weight_depends_on_population
+      - the_necessary_and_sufficient_sign_control_w_plus_N_w_prime
+  C-CMB-003:
+    owns:
+      - normalized_all_nonnegative_factorial_one_mass_modes_moments_and_tails
+    does_not_own:
+      - a_population_law_material_weight_or_physical_branch
+  WN5_accepted_composition:
+    distinction: constant_order_factorial_one_weight_composed_with_C_BRN_001_not_a_general_population_dependent_criterion
+  expectation_candidate:
+    distinction: requires_unneeded_probability_integrability_and_interchange_premises
+novel_surface:
+  - explicit_positive_differentiable_weight_law_w_of_N
+  - exact_total_derivative_with_control_w_plus_N_w_prime
+  - complete_decreasing_stationary_increasing_trichotomy
+  - positive_weight_counterexample_to_the_unrestricted_monotonicity_headline
+duplicate_wrapper_rejected: relabeling_C_BRN_001_constant_weight_partial_derivative
+claim_is_distinct: true
+debt: []

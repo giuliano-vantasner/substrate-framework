@@ -1,0 +1,30 @@
+campaign: P200
+root_source_unit: MD5
+scope: eight_direct_dependencies_root_and_one_direct_reverse_consumer
+nodes:
+  - {source_unit: GB4, relation: direct_dependency, native_tally: 23}
+  - {source_unit: MC3, relation: direct_dependency, native_tally: 29}
+  - {source_unit: MD2, relation: direct_dependency, native_tally: 26}
+  - {source_unit: MD3, relation: direct_dependency, native_tally: 41}
+  - {source_unit: MD4, relation: direct_dependency, native_tally: 34}
+  - {source_unit: PN2, relation: direct_dependency, native_tally: 25}
+  - {source_unit: WN5, relation: direct_dependency, native_tally: 41}
+  - {source_unit: WN6, relation: direct_dependency, native_tally: 32}
+  - {source_unit: MD5, relation: root, native_tally: 63}
+  - {source_unit: MD6, relation: direct_reverse_consumer, native_tally: 40}
+expected_coverage:
+  unique_nodes: 10
+  native_checks: 354
+  dependency_and_root_records_reused: 9
+  reverse_consumer_records_reused: 1
+  fresh_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  compatibility_aliases: 0
+  version_only_scientific_failures: 0
+actual_replay:
+  command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python proposals/P200-md5-branching-handshake-audit/reviews/replay_source_graph.py
+  terminal_tally: ALL_19_CHECKS_PASS
+authority_state_before_P200_promotion:
+  qualified_direct_dependencies: [GB4, MC3, MD2, MD3, MD4, PN2, WN5, WN6]
+  pending_root: MD5
+  pending_reverse_consumers: [MD6]

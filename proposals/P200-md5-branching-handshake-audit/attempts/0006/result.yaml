@@ -1,0 +1,19 @@
+attempt: 0006
+campaign: P200
+candidate: review_boundary_targeted_validation
+status: failed
+failure_class: validation_invocation
+commands:
+  - PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - memory validate memory
+repository_validation:
+  exit_status: 0
+  claims: 188
+  pending_source_units: 25
+memory_validation:
+  exit_status: 1
+  error: Path_not_found_/home/dan/agent-memory/memory/memory
+diagnosis: The_memory_CLI_resolved_the_relative_argument_against_its_configured_repository_root.
+scientific_verdict_changed: false
+repair: Rerun_memory_validate_with_the_absolute_framework_memory_path.
+next_attempt: corrected_absolute_path_review_boundary_validation

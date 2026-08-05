@@ -2,7 +2,7 @@
 description: Separate structural weighted-allocation monotonicity from MD5 material isotope claims
 author: vantasner
 created: '2026-08-05T19:08:00Z'
-updated: '2026-08-05T19:08:00Z'
+updated: '2026-08-05T19:22:00Z'
 tags:
 - substrate-framework
 - research-arc
@@ -72,18 +72,26 @@ physical ceilings before renewed P200 source execution. Later attempts are
 append-only and must continue after implementation, representation, candidate,
 target, or foundation failures without weakening the claim.
 
+Attempts 0002 through 0004 reproduce all 63 source predicates, audit every
+check site, select the distinct total-derivative criterion, implement its pure
+API, and close 19 primary, 12 independent, and 21 focused tests. Attempt 0005
+replays a ten-node, 354-predicate dependency and consumer graph from pinned
+records without duplicate native execution. It also refreshes the code index,
+finds low additive API impact, and completes separate C-BRN-002 and MD5
+reviews. MD6 remains pending.
+
 ## Debt Ledger
 
 The current debt must be discharged before promotion.
 
 | Debt | Discharge | Status |
 | --- | --- | --- |
-| Prior source exposure prevents fresh blinding | Preserve exposure and freeze before renewed execution | open pending validated attempt 0001 |
-| Positive weight may hide population dependence | Derive and mutate the full w+Nw' condition | open |
-| Constant factorial-one substitution may duplicate accepted claims | Complete nonduplication audit | open |
-| Mathematical allocation may be called physical branching | Require common dimensions, exhaustive channels, and rate provenance | open |
-| Isotope handshake may import missing maps | Audit every host, state, and rate premise | open |
-| Reverse consumers may inherit MD5 wholesale | Replay exact graph and preserve individual dispositions | open |
+| Prior source exposure prevents fresh blinding | Preserve exposure and freeze before renewed execution | discharged by attempts 0001 and 0002 |
+| Positive weight may hide population dependence | Derive and mutate the full w+Nw' condition | discharged by 19 primary, 12 independent, and 21 focused checks |
+| Constant factorial-one substitution may duplicate accepted claims | Complete nonduplication audit | discharged; static composition remains C-BRN-001 plus C-CMB-003 while the total derivative is distinct |
+| Mathematical allocation may be called physical branching | Require common dimensions, exhaustive channels, and rate provenance | discharged by API ceilings and separate claim/source reviews |
+| Isotope handshake may import missing maps | Audit every host, state, and rate premise | discharged; no two-host state, parameter, interaction, or rate closure exists |
+| Reverse consumers may inherit MD5 wholesale | Replay exact graph and preserve individual dispositions | discharged by 19-check graph with MD6 pending |
 
 ## Review and Promotion Plan
 
