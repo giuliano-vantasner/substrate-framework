@@ -2,7 +2,7 @@
 description: Audit GC3's common-phase CP conclusion and one-condensate premise
 author: vantasner
 created: '2026-08-06T06:23:01Z'
-updated: '2026-08-06T06:23:01Z'
+updated: '2026-08-06T06:29:19Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -105,10 +105,13 @@ recorded with alias-only replay and never counted as scientific failure.
 
 Attempt 0001 freezes authority, eight candidates, exact matrix and invariant
 obligations, countermodel mutations, physical ceilings, graph scope, and
-compatibility policy before source access. After the clean freeze commit, P210
-will run an AST compatibility preflight, reproduce the hash-pinned source once,
-and adjudicate every predicate against accepted authority and independent exact
-derivation.
+compatibility policy before source access. Attempt 0002 reproduces all nine
+native checks after freeze commit `9e6fb3d` with no quadrature compatibility
+surface. Source inspection confirms the exact common-phase algebra but exposes
+undeclared physical premises: accepted EM6 does not force a complex substrate
+ontology, MH1 does not supply a Yukawa interaction, and FG3/FG4 explicitly do
+not establish CKM or physical CP. The finite random ensemble, separate external
+wells, and one equal-spacing toy cannot repair that authority gap.
 
 ## Debt Ledger
 
@@ -118,7 +121,7 @@ compatibility event, and generated record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Detailed source predicates remain blinded | Reproduce once after committed freeze | open |
+| Detailed source predicates remain blinded | Reproduce once after committed freeze | discharged after `9e6fb3d` |
 | Real coefficients and modes may be undeclared premises | Audit action, imports, and local assumptions | open |
 | A global phase may be confused with arbitrary complex structure | Run global, entrywise, and local-phase mutations | open |
 | Degenerate basis freedom may create spurious coordinate phases | Audit invariant and degenerate cases separately | open |

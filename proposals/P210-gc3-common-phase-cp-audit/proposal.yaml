@@ -64,3 +64,32 @@ comparators_blinded_until: >-
   exist.
 comparators_used_for_selection: []
 status: draft
+revision: 0002
+post_source_numeric_audit:
+  random_seed: 20260721
+  random_draws: 400
+  solved_well_domain: [-8.0, 16.0]
+  solved_well_grids: [4000, 8000]
+  solver: scipy_eigh_tridiagonal_lowest_index
+  integration: rectangle_sum_times_spacing
+  source_convergence_gate: three_source_quartet_relative_change_less_than_1e_minus_3
+  omitted_numeric_gates:
+    - domain_refinement
+    - eigenpair_residual
+    - one_source_relative_error_is_not_meaningful_for_an_exact_zero
+    - coexisting_source_field_equation
+  decisive_replacement: exact_common_phase_and_weak_basis_invariants_plus_explicit_premise_countermodels
+post_source_authority_audit:
+  EM6_complex_ontology: explicitly_not_accepted
+  MH1_Yukawa_interaction: explicitly_not_accepted
+  FG3_CKM_identity: explicitly_not_accepted
+  FG4_physical_CP_interpretation: explicitly_not_accepted
+  three_condensate_stability_and_count: pending_GC4_and_unavailable
+  condensate_count_equals_matrix_dimension: declared_not_derived
+opened_source_corrections:
+  - finite_random_samples_do_not_prove_bounded_away_from_zero
+  - a_sum_of_differently_phased_real_matrices_can_still_be_removable_in_special_cases
+  - separate_external_well_ground_states_are_not_a_multisoliton_solution
+  - one_equal_spacing_toy_does_not_establish_a_geometry_prediction
+  - source_phase_budget_overloads_N_for_condensate_count_and_matrix_dimension
+  - no_measured_global_name_is_not_a_complete_reachability_audit
