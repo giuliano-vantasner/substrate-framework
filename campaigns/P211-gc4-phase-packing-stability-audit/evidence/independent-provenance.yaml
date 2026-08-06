@@ -1,7 +1,7 @@
 campaign: P211
-artifact: proposals/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
+artifact: campaigns/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
 sha256: 150c14976ec682820d41cc1982f23a86d13dcf0ec74c6425604de57594c6f185
-command: PYTHONPATH=src_.venv/bin/python_proposals/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
+command: PYTHONPATH=src_.venv/bin/python_campaigns/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
 exit_status: 0
 runtime_checks: 26
 static_ledger_calls: 22

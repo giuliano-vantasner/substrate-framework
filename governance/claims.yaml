@@ -10572,3 +10572,113 @@ claims:
     accepted_in: v0.151.0
     challenges: []
     supersedes: []
+  - id: C-QBL-006
+    statement: >-
+      Conditional on C-QBL-001's equal positive profiles
+      f_1=A*sech(kappa*(x+d/2)) and
+      f_2=A*sech(kappa*(x-d/2)) with A,kappa,d>0, separately declare the
+      complex trial superposition Phi=f_1+exp(i*delta)*f_2 and the whole-line
+      functional E[Phi]=integral dx*[|Phi_x|^2+kappa^2*|Phi|^2-|Phi|^4/24].
+      With s=kappa*d and c=cos(delta), define
+      J31(s)=2*(sinh(s)*cosh(s)-s)/sinh(s)^3 and
+      J22(s)=4*(s*cosh(s)-sinh(s))/sinh(s)^3. Exact expansion, isolated-profile
+      subtraction, and the profile equation give I31=A^4*J31/kappa,
+      I22=A^4*J22/kappa, and
+      E_int=E[Phi]-E[f_1]-E[f_2]=-c*I31/6-(1+2*c^2)*I22/12. Thus the finite
+      interaction contains phase-independent, linear-cosine, and
+      cosine-squared terms and is not a pure cosine. At c=0 it is exactly
+      -I22/12. The exact tail limits are J31~4*exp(-s) and
+      J22~16*(s-1)*exp(-2*s), so for fixed nonzero c the leading interaction
+      is -2*A^4*c*exp(-s)/(3*kappa), whereas the perpendicular case has the
+      doubled exponential rate and linear prefactor. This is the energy of a
+      two-profile trial superposition. It establishes no common nonlinear
+      two-soliton or multi-profile solution, merger or persistence dynamics,
+      equilibrium separation, spectral orbital or nonlinear stability,
+      selected object count, physical condensate, generation, Standard-Model
+      map, or substrate realization.
+    provenance: campaigns/P211-gc4-phase-packing-stability-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-QBL-001
+      - C-QBL-003
+    evidence:
+      - campaigns/P211-gc4-phase-packing-stability-audit/verify.py
+      - campaigns/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
+      - campaigns/P211-gc4-phase-packing-stability-audit/reviews/C-QBL-006-claim-review.md
+      - campaigns/P211-gc4-phase-packing-stability-audit/reviews/source_adjudication.md
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/formula-freeze.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/dependency-audit.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/primary-provenance.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/independent-provenance.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/compatibility-audit.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/impact-analysis.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0004/result.yaml
+      - src/substrate_framework/phase_interactions.py
+      - tests/test_phase_interactions.py
+    assumptions:
+      - The complex functional is separately declared and is twice C-QBL-003's real scalar energy on a real field; no accepted claim promotes it to a physical condensate action.
+      - Both fixed trial profiles have the same positive amplitude inverse width and separation coordinate and individually obey C-QBL-001's quartic profile equation.
+      - The phase is spatially constant and c is exactly cos(delta). Changing the profile, nonlinear potential, phase field, width, amplitude, or number of profiles changes the interaction.
+      - Interaction energy means subtraction of two isolated profile energies. Its separation derivative is only a declared collective-coordinate generalized force and not field dynamics.
+      - Tail statements take s to positive infinity at fixed nonzero c; c=0 is a different leading-order branch.
+    comparators:
+      - GC4 at substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64; its grid values are reproduced exactly while its finite pure-cosine and stability readings are corrected
+      - Omitting the phase-independent and cosine-squared terms fails the exact perpendicular interaction and the source values
+      - Separation mutations expose opposite generalized-force signs for anti-phase and Z3 pair choices outside the sampled tail regime
+    accepted_in: v0.153.0
+    challenges: []
+    supersedes: []
+  - id: C-PHS-001
+    statement: >-
+      Let N>=2 scalar phases theta_1,...,theta_N be points on one circle and
+      let W=max_{i<j} cos(theta_i-theta_j) over the complete pair graph.
+      Sorting the phases gives a nearest circular gap at most 2*pi/N, and a
+      regular N-gon attains the bound, so the sharp optimum is
+      inf_{theta_1,...,theta_N} W=cos(2*pi/N). Therefore a complete scalar
+      phase graph can have every pairwise cosine strictly negative exactly
+      when N<=3, while every pairwise cosine can be nonpositive exactly when
+      N<=4. The strict capacity is achieved at N=3 by phases
+      (0,2*pi/3,4*pi/3), whose pairwise cosines are -1/2; the weak capacity is
+      achieved at N=4 by quadrature phases and includes zero cosines. These
+      are upper capacities, not occupancy selectors: N=2 also satisfies the
+      strict condition. Sparse interaction graphs can admit more scalar
+      phases, and higher-dimensional internal orientations can admit four
+      pairwise negative products, as the regular tetrahedral vectors show.
+      The theorem establishes no interaction kernel, force sign, common field
+      solution, equilibrium, merger or persistence dynamics, stability,
+      physical CP operation or violation, condensate or generation identity,
+      selected count three, Standard-Model map, or substrate realization.
+    provenance: campaigns/P211-gc4-phase-packing-stability-audit/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies: []
+    evidence:
+      - campaigns/P211-gc4-phase-packing-stability-audit/verify.py
+      - campaigns/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
+      - campaigns/P211-gc4-phase-packing-stability-audit/reviews/C-PHS-001-claim-review.md
+      - campaigns/P211-gc4-phase-packing-stability-audit/reviews/source_adjudication.md
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/formula-freeze.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/primary-provenance.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/independent-provenance.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/compatibility-audit.yaml
+      - campaigns/P211-gc4-phase-packing-stability-audit/evidence/impact-analysis.yaml
+      - src/substrate_framework/phase_interactions.py
+      - tests/test_phase_interactions.py
+    assumptions:
+      - The phases are scalar points modulo 2*pi and every unordered pair belongs to the complete interaction graph.
+      - Pairwise comparison uses cosine of the shortest circular separation; no kernel weight sign or dynamics is imported.
+      - Strict negativity and weak nonpositivity are different predicates with capacities three and four respectively.
+      - The optimal-worst-cosine theorem is a geometric capacity result and supplies neither required occupancy nor a physical meaning for N.
+    comparators:
+      - GC4's exact ordered-gap argument and regular Z3 witness survive while its merger stability and exact-count readings are rejected
+      - A four-cycle with alternating phases is a sparse-graph countermodel to complete-graph universality
+      - Four regular-tetrahedral vectors are a higher-internal-dimension countermodel to scalar-circle universality
+    accepted_in: v0.153.0
+    challenges: []
+    supersedes: []

@@ -61,8 +61,8 @@ comparators_blinded_until: >-
   fits, count proof, remaining predicates, guards, and native output remain
   unopened until this contract, formula freeze, provenance record, memory
   validation, clean repository validation, and freeze commit exist.
-status: active
-revision: 0002
+status: accepted
+revision: 0004
 opened_source_equations:
   energy: integral_dx_[abs(Phi_prime)^2+kappa^2*abs(Phi)^2-abs(Phi)^4/24]
   profile: sqrt(24)*kappa*exp(i*theta)*sech(kappa*(x-r))

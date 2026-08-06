@@ -1,7 +1,7 @@
 campaign: P211
-artifact: proposals/P211-gc4-phase-packing-stability-audit/verify.py
+artifact: campaigns/P211-gc4-phase-packing-stability-audit/verify.py
 sha256: bc9ef15e3f407a559f3c60e59f9b8bc551244227ac255d58191760dca2c6d0da
-command: PYTHONPATH=src_.venv/bin/python_proposals/P211-gc4-phase-packing-stability-audit/verify.py
+command: PYTHONPATH=src_.venv/bin/python_campaigns/P211-gc4-phase-packing-stability-audit/verify.py
 exit_status: 0
 runtime_checks: 39
 static_ledger_calls: 34

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 14
-  qualified: 191
+  pending_adjudication: 13
+  qualified: 192
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -13228,8 +13228,68 @@ units:
   dynamic_check_calls: 5
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-QBL-001
+  - C-QBL-003
+  - C-MIX-002
+  - C-QBL-006
+  - C-PHS-001
+  qualification: 'GC4''s declared two-profile quartic trial-energy samples are replaced by the exact C-QBL-006
+    formula. At finite separation it contains a phase-independent term, a linear cosine term, and a cosine-squared
+    term; only the fixed-nonzero-cosine leading tail is purely linear and decays at kappa. The perpendicular
+    interaction is exactly negative, not a numeric residue. Energy and its separation derivative do not
+    establish merger, persistence, or field stability, and the anti-phase and Z3 pair generalized forces
+    change sign outside the sampled tail regime. GC4''s three Z3 checks call the two-profile helper separately
+    and construct no common three-profile field, equation, equilibrium, spectrum, Lyapunov function, or
+    evolution. C-PHS-001 retains the sharp complete scalar-circle optimum cos(2*pi/N): strict pairwise
+    negativity has capacity three and weak nonpositivity has capacity four. This is an upper capacity,
+    not an occupancy selector; sparse graphs and higher-dimensional internal orientations change the result.
+    Accepted C-MIX-002 supplies no physical CP or generation lower bound. No stable three-condensate mechanism,
+    exact generation count, physical flavor map, Standard-Model, or substrate conclusion is accepted.'
+  evidence:
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/source_adjudication.md
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/C-QBL-006-claim-review.md
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/C-PHS-001-claim-review.md
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/GC4-disposition-review.md
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/impact_analysis.md
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/source-reproduction.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/compatibility-audit.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/source-audit.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/check-adjudication.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/formula-freeze.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/input-provenance.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/dependency-audit.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/consumer-audit.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/terminal-graph-replay.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/candidate-comparison.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/implementation-audit.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/impact-analysis.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/primary-provenance.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/independent-provenance.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/evidence/focused-test-replay.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/verify.py
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
+  - campaigns/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0001/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0002/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0003/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0004/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0005/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0006/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0007/result.yaml
+  - campaigns/P211-gc4-phase-packing-stability-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/C-QBL-006-review.md
+  - memory/vantasner/decisions/C-PHS-001-review.md
+  - memory/vantasner/decisions/GC4-qualified-review.md
+  note: P211 closes 39 primary, 26 independent, and 36 terminal source-graph checks plus 118 focused accepted-API
+    tests. The graph pins 13 nodes with 101 static predicates and 19 assertions. GC4 and mutable P211
+    have no quadrature surface; immutable E1's lazy current-first fallback selects numpy.trapezoid and
+    creates zero scientific version failures. The single integrated v0.153.0 boundary validates 858 memory
+    files and passes all 1,856 tests in 177.67 pytest seconds and 191.08 seconds total wall time with
+    exit zero.
 - source_unit: GC5
   phase: phase-42
   path: merged-framework/bridges/phase-42/bridge_GC5_two_role_structure_and_counts.py

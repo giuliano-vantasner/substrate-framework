@@ -984,6 +984,15 @@ On C^3 tensor C^2, let T_a be the eight standard fundamental SU3 generators of C
 - Compatibility: `compatible_extension`
 - Dependencies: C-LIE-001, C-REP-002
 
+## C-PHS-001
+
+Let N>=2 scalar phases theta_1,...,theta_N be points on one circle and let W=max_{i<j} cos(theta_i-theta_j) over the complete pair graph. Sorting the phases gives a nearest circular gap at most 2*pi/N, and a regular N-gon attains the bound, so the sharp optimum is inf_{theta_1,...,theta_N} W=cos(2*pi/N). Therefore a complete scalar phase graph can have every pairwise cosine strictly negative exactly when N<=3, while every pairwise cosine can be nonpositive exactly when N<=4. The strict capacity is achieved at N=3 by phases (0,2*pi/3,4*pi/3), whose pairwise cosines are -1/2; the weak capacity is achieved at N=4 by quadrature phases and includes zero cosines. These are upper capacities, not occupancy selectors: N=2 also satisfies the strict condition. Sparse interaction graphs can admit more scalar phases, and higher-dimensional internal orientations can admit four pairwise negative products, as the regular tetrahedral vectors show. The theorem establishes no interaction kernel, force sign, common field solution, equilibrium, merger or persistence dynamics, stability, physical CP operation or violation, condensate or generation identity, selected count three, Standard-Model map, or substrate realization.
+
+- Accepted in: `v0.153.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-PRB-001
 
 For a separately supplied real initial frequency x in [0,1] and real dimensionless selection ratio S, define the continuous exponential fixation family by U(x,0)=x and, for S nonzero, U(x,S)=(1-exp(-S*x))/(1-exp(-S)). The value at zero is the unique continuous extension. For every real S, U(0,S)=0, U(1,S)=1, and U lies in [0,1]; for nonzero S its x derivative is S*exp(-S*x)/(1-exp(-S))>0, and U(x,S)+U(1-x,-S)=1. Conditional on the separately declared backward equation U_xx+S*U_x=0 with absorbing boundary values zero and one, this is its unique solution: for S nonzero the two-constant boundary matrix has determinant exp(-S)-1, while S=0 gives the unique linear solution U=x. For 0<x<1, U is strictly increasing in S because its S derivative is a positive factor times the strict-convexity gap (1-x)+x*exp(S)-exp(S*x)>0; its limits as S tends to negative and positive infinity are zero and one. Thus every supplied target in (0,1) has a unique implicit S preimage, which is inverse inference rather than a prediction. The neutral expansion is U=x+S*x*(1-x)/2+S^2*x*(1-x)*(1-2*x)/12 -S^3*x^2*(1-x)^2/24+O(S^4). Separately, for positive intensities I1,I2, total N=I1+I2 and x=I1/N, the raw contrast is I1-I2=N*(2*x-1). A declared S=kappa*(I1-I2) scales by lambda^2 under a common amplitude rescaling when kappa is held fixed, but kappa->kappa/lambda^2 preserves S, and unit-normalizing the intensities preserves S with kappa_unit=kappa*N. Hence raw-amplitude scale sensitivity requires a separately established physical normalization and coefficient convention. These exact facts establish no Wright-Fisher or Moran microscopic process, quantum state or Born postulate, measurement or actualization rule, empirical deviation, observable amplitude norm, parameter value, medium action quantum, cutoff, dimensional instability, or substrate granularity.
@@ -1046,6 +1055,15 @@ Conditional on C-QBL-003's declared quartic whole-line energy, write its field p
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-QBL-003, C-OVL-001, C-OVL-002
+
+## C-QBL-006
+
+Conditional on C-QBL-001's equal positive profiles f_1=A*sech(kappa*(x+d/2)) and f_2=A*sech(kappa*(x-d/2)) with A,kappa,d>0, separately declare the complex trial superposition Phi=f_1+exp(i*delta)*f_2 and the whole-line functional E[Phi]=integral dx*[|Phi_x|^2+kappa^2*|Phi|^2-|Phi|^4/24]. With s=kappa*d and c=cos(delta), define J31(s)=2*(sinh(s)*cosh(s)-s)/sinh(s)^3 and J22(s)=4*(s*cosh(s)-sinh(s))/sinh(s)^3. Exact expansion, isolated-profile subtraction, and the profile equation give I31=A^4*J31/kappa, I22=A^4*J22/kappa, and E_int=E[Phi]-E[f_1]-E[f_2]=-c*I31/6-(1+2*c^2)*I22/12. Thus the finite interaction contains phase-independent, linear-cosine, and cosine-squared terms and is not a pure cosine. At c=0 it is exactly -I22/12. The exact tail limits are J31~4*exp(-s) and J22~16*(s-1)*exp(-2*s), so for fixed nonzero c the leading interaction is -2*A^4*c*exp(-s)/(3*kappa), whereas the perpendicular case has the doubled exponential rate and linear prefactor. This is the energy of a two-profile trial superposition. It establishes no common nonlinear two-soliton or multi-profile solution, merger or persistence dynamics, equilibrium separation, spectral orbital or nonlinear stability, selected object count, physical condensate, generation, Standard-Model map, or substrate realization.
+
+- Accepted in: `v0.153.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-QBL-001, C-QBL-003
 
 ## C-QFL-001
 

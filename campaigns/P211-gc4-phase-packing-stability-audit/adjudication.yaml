@@ -1,0 +1,93 @@
+campaign: P211
+title: GC4 quartic trial interaction and scalar phase capacity audit
+source_baseline: substrate@6d1f4e0
+source_units: [GC4]
+base_release: v0.152.0
+accepted_release: v0.153.0
+implementation_commit: f96593b2293d73518ceae18100a3f717dbf1cf70
+adjudicated_at: '2026-08-06T07:46:24Z'
+selected_candidates:
+  - {id: A, reason: Exact_functional_expansion_exposes_the_full_finite_phase_dependence.}
+  - {id: B, reason: Exact_asymptotics_separate_the_leading_and_perpendicular_tail_rates.}
+  - {id: C, reason: The_nearest_gap_bound_and_regular_polygon_witness_prove_the_sharp_capacity.}
+  - {id: D, reason: Smaller_occupancies_and_unbound_tail_motion_disprove_count_selection.}
+  - {id: E, reason: Sparse_graph_and_tetrahedral_countermodels_expose_the_capacity_premises.}
+  - {id: F, reason: Stability_is_withheld_without_a_common_solution_constraints_and_a_stability_oracle.}
+  - {id: H, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: G, decision: rejected_after_nonduplication_audit_confirmed_two_minimum_novel_surfaces}
+claims:
+  - {id: C-QBL-006, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-PHS-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-QBL-001, decision: unchanged_profile_and_no_stability_or_ontology_ceiling}
+  - {id: C-QBL-003, decision: unchanged_scalar_energy_Hessian_and_no_nonlinear_stability_ceiling}
+  - {id: C-MIX-002, decision: unchanged_abstract_phase_count_and_no_physical_CP_or_generation_ceiling}
+unpromoted_claims:
+  - {id: finite_interaction_is_pure_cosine, reason: The_exact_quartic_expansion_contains_constant_and_cosine_squared_terms.}
+  - {id: anti_phase_pairs_always_repel_and_persist, reason: The_exact_generalized_force_changes_sign_outside_the_sampled_tail_regime_and_supplies_no_dynamics.}
+  - {id: Z3_three_profile_configuration_is_stable, reason: Only_three_separate_two_profile_energies_are_computed.}
+  - {id: stability_forces_at_most_three, reason: The_exact_result_is_a_complete_scalar_phase_graph_capacity_not_a_stability_theorem.}
+  - {id: physical_CP_requires_at_least_three, reason: C_MIX_002_explicitly_supplies_no_physical_CP_or_generation_map.}
+  - {id: generation_count_exactly_three, reason: Neither_bound_has_the_required_physical_meaning_and_capacity_does_not_select_occupancy.}
+  - {id: physical_condensate_Standard_Model_or_substrate_mechanism, reason: Required_actions_states_maps_scales_and_oracles_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_phase_interaction_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  qball_claim_review: reviews/C-QBL-006-claim-review.md
+  phase_claim_review: reviews/C-PHS-001-claim-review.md
+  source_disposition_review: reviews/GC4-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  terminal_graph_replay: evidence/terminal-graph-replay.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+    - attempts/0008/result.yaml
+source_disposition: {GC4: qualified}
+accepted_mappings: [C-QBL-001, C-QBL-003, C-MIX-002, C-QBL-006, C-PHS-001]
+compatibility:
+  GC4_surface: none
+  graph_zero_surface_nodes: 12
+  E1_surface: lazy_current_first_safe_conditional
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.153.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_phase_interaction_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_phase_QBL_OVL_MIX_source_audit_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  tests_passed: 1856
+  pytest_seconds: 177.67
+  memory_files_validated: 858
+  wall_seconds: 191.08
+  maximum_resident_kib: 218880
+  exit_status: 0
+debt: []
+status: accepted

@@ -2,7 +2,7 @@
 description: Audit GC4 interaction, coexistence stability, and scalar phase capacity
 author: vantasner
 created: '2026-08-06T07:26:31Z'
-updated: '2026-08-06T07:44:23Z'
+updated: '2026-08-06T07:57:27Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - phase-packing
 - stability
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P211 GC4 Phase-Packing and Stability Audit
 
@@ -134,6 +134,12 @@ focused accepted-API tests, and 36 frozen-graph checks. Exact formulas reproduce
 the source's grid values without quadrature, while force-sign mutations show
 that anti-phase and Z3 pair forces reverse outside the sampled tail regime.
 
+Attempt 0007 records the single integrated v0.153.0 boundary: 858 memory files
+and all 1,856 tests pass in 177.67 pytest seconds and 191.08 seconds total wall
+time with exit zero. Attempt 0008 preserves a pre-gate queue-generator source-
+root mistake; the first run stopped before writing output, and the repaired
+parent root regenerated the same 218-unit queue with 13 pending units.
+
 ## Debt Ledger
 
 The P211 ledger tracks the functional, field type, phase, separation, kernel,
@@ -151,7 +157,7 @@ compatibility surface, consumers, and generated state.
 | Capacity may be mistaken for selected occupancy | Supply smaller-count and unbound countermodels | discharged by N=2 and dispersive-tail witnesses |
 | Pending GC5 may grant backward authority | Replay without importing GC5 | discharged by the frozen graph |
 | Compatibility may masquerade as science | Audit every executable access shape | discharged; E1's lazy current-first branch is compatibility-only |
-| Promotion and generated state remain open | Complete claim reviews, release, disposition, generation, and integrated gate | open |
+| Promotion and generated state remain open | Complete claim reviews, release, disposition, generation, and integrated gate | discharged by v0.153.0 and the 1,856-test boundary |
 
 ## Review and Promotion Plan
 
@@ -164,8 +170,8 @@ materialized evidence and a record-sensitive closeout.
 
 ## Done Gate
 
-P211 closes only when the exact interaction and capacity objects, stability and
+P211 is complete. The exact interaction and capacity objects, stability and
 count ceilings, countermodels, source-predicate adjudication, authority graph,
-compatibility audit, source disposition, generated state, and durable memory
-agree with an empty debt ledger. A converged pair-energy plot or an upper bound
-of three is not the requested stable three-object mechanism.
+compatibility audit, qualified GC4 disposition, generated state, and durable
+memory agree with an empty debt ledger. No converged pair-energy plot or upper
+bound was substituted for the absent stable three-object mechanism.

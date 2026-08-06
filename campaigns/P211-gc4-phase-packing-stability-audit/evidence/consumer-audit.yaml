@@ -2,7 +2,7 @@ campaign: P211
 canonical_module: src/substrate_framework/phase_interactions.py
 direct_consumers:
   - tests/test_phase_interactions.py
-  - proposals/P211-gc4-phase-packing-stability-audit/verify.py
+  - campaigns/P211-gc4-phase-packing-stability-audit/verify.py
 public_export: src/substrate_framework/__init__.py
 accepted_adjacent_consumers_replayed:
   - tests/test_quartic_qball.py

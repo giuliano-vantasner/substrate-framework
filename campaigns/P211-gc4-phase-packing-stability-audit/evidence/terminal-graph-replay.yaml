@@ -1,7 +1,7 @@
 campaign: P211
-artifact: proposals/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
+artifact: campaigns/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
 sha256: 498dc8c52ca68cfd462c9d36b29a91b072fb72a744e58243c678e5d5d7fdc78f
-command: PYTHONPATH=src_.venv/bin/python_proposals/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
+command: PYTHONPATH=src_.venv/bin/python_campaigns/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
 exit_status: 0
 runtime_checks: 36
 terminal_tally: ALL_36_CHECKS_PASS

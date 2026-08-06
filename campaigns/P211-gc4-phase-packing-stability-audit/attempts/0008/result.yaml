@@ -1,0 +1,15 @@
+attempt: 0008
+campaign: P211
+timestamp_utc: '2026-08-06T07:53:39Z'
+kind: generated_queue_source_root_repair
+initial_source_root: /home/dan/substrate/merged-framework
+initial_exit_status: 1
+initial_result: >-
+  The source inventory already prefixes every bridge path with
+  merged-framework, so the nested source root duplicated that component and
+  the generator stopped before writing output.
+mechanism: source_inventory_paths_are_relative_to_the_parent_source_root
+repair_source_root: /home/dan/substrate
+scientific_candidate_rejected: false
+status: repaired
+continuation: regenerate_from_the_correct_pinned_parent_root_then_run_the_integrated_gate

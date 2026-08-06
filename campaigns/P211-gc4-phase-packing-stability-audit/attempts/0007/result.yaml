@@ -1,0 +1,30 @@
+attempt: 0007
+campaign: P211
+timestamp_utc: '2026-08-06T07:52:55Z'
+kind: promotion_boundary_in_progress
+implementation_commit: f96593b2293d73518ceae18100a3f717dbf1cf70
+claims: [C-QBL-006, C-PHS-001]
+release: v0.153.0
+source_disposition: {GC4: qualified}
+pre_gate_results:
+  primary_checks: 39
+  independent_checks: 26
+  source_graph_checks: 36
+  focused_tests: 118
+  graph_nodes: 13
+  graph_static_predicates: 101
+  graph_assertions: 19
+  E1_compatibility_branch: lazy_current_first_numpy_trapezoid
+  version_only_scientific_failures: 0
+integrated_gate:
+  command: /usr/bin/time_-v_scripts_validate_sh
+  workflow_claims: 194
+  migration_pending: 13
+  memory_files_validated: 858
+  tests_passed: 1856
+  pytest_seconds: 177.67
+  wall_seconds: 191.08
+  maximum_resident_kib: 218880
+  exit_status: 0
+status: passed
+continuation: rerun_only_record_sensitive_repository_generation_memory_graph_and_diff_checks_then_commit
