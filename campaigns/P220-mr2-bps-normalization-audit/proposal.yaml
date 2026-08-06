@@ -48,5 +48,5 @@ comparators_blinded_until: >-
   values, predicates, output, and consumer details stay unopened until this
   contract, formula freeze, provenance record, validation record, and freeze
   commit exist.
-status: active
+status: accepted
 revision: 0003

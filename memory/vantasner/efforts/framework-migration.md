@@ -2555,27 +2555,39 @@ The integrated v0.158.0 boundary validates 893 memory records and passes all
 1,922 tests in 203.53 pytest seconds and 219.07 seconds total wall time, at
 219,228 KiB peak RSS and exit zero.
 
+P220 terminally classifies MR2 as duplicate evidence for C-BPS-001,
+C-VEC-002, and C-GSK-001 at unchanged v0.158.0. Its normalized density,
+same-current pi-squared coupling map, transformed bound, and both reduced c6
+coordinates are exact but already accepted. The MK5 route eliminates to the
+same coefficient identity, while the corrected 99.4165 MeV substitution
+retains supplied `N_c`, pion mass, and degree and is not a physical sector
+prediction. Twenty-five primary, 18 fresh independent, 10 graph checks, and 64
+focused tests pass. The graph pins 15 nodes, 99 predicates, and 20 assertions;
+MR2 has no integration surface, and pending MR3/MR5/MR6 use current SciPy
+`trapezoid`. The unchanged P219 1,922-test boundary is reused.
+
 ## Canonicalization
 The registry, `v0.158.0` manifest, current release, generated claim index, and
 generated framework memory agree on two hundred one accepted claims.
-P001 through P219 are frozen under `campaigns/`; proposal,
+P001 through P220 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 5 pending, 0 partial, 3
-migrated, 200 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P219 is the most recent accepted-surface and full integrated release
-boundary.
+memory. The regenerated migration queue agrees on 4 pending, 0 partial, 3
+migrated, 200 qualified, 9 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P219 remains the most recent accepted-surface and full integrated release
+boundary; P220 is the most recent no-release record boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 5
-pending, 3 migrated, 200 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 4
+pending, 3 migrated, 200 qualified, 9 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
 The WM7-WM10 source cycle, GC1-GC6, and MK1-MK6 are terminal without backward
-authority. P220 next audits MR2's pi-squared normalization correction against
-C-VEC-002, C-BPS-001, and the now-qualified MK6 ledger. The remaining order is
-MR2 through MR6.
+authority. P220 closes MR2 without duplicating accepted convention algebra or
+promoting its physical mass narrative. P221 next audits MR3's no-double-counting
+claim against C-VAR-002 and the terminal MR1/MR2 evidence. The remaining order
+is MR3 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

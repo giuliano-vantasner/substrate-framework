@@ -3928,6 +3928,38 @@ units:
       iff already accepted as C-SK-001. Its generic cancellation adds no distinct
       consumer, and its arbitrary-model and sector-bookkeeping readings are not
       consequences of the equations.
+  MR2:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-BPS-001
+      - C-VEC-002
+      - C-GSK-001
+    duplicates:
+      - C-BPS-001
+      - C-VEC-002
+      - C-GSK-001
+    evidence:
+      - campaigns/P220-mr2-bps-normalization-audit/verify.py
+      - campaigns/P220-mr2-bps-normalization-audit/reviews/independent_normalization_review.py
+      - campaigns/P220-mr2-bps-normalization-audit/reviews/replay_source_graph.py
+      - campaigns/P220-mr2-bps-normalization-audit/reviews/source_adjudication.md
+      - campaigns/P220-mr2-bps-normalization-audit/reviews/MR2-disposition-review.md
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/source-reproduction.yaml
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/source-audit.yaml
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/check-adjudication.yaml
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/dependency-audit.yaml
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/consumer-audit.yaml
+      - campaigns/P220-mr2-bps-normalization-audit/evidence/compatibility-audit.yaml
+      - memory/vantasner/decisions/MR2-duplicate-evidence-review.md
+    note: >-
+      P220 closes 25 primary, 18 independent, and 10 graph checks plus 64
+      focused tests. MR2 correctly isolates MK6's pi-squared convention error,
+      but its normalized density, same-current lambda map, bound, and reduced
+      coefficients are already C-BPS-001, C-VEC-002, and C-GSK-001. The MK5
+      route is dependent regression evidence; 99.417 MeV retains supplied N_c,
+      pion mass, and degree and is not a physical sector prediction. MR2 has no
+      NumPy integration surface; pending consumers use current SciPy trapezoid.
   EL1:
     disposition: qualified
     accepted_claims:

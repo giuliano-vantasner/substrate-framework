@@ -4,6 +4,7 @@ nodes: 15
 lexical_predicates: 99
 assertions: 20
 aggregate_checks: 10
+verifier_sha256: 0f63fb9d2509c0126a728e93ed8f28a2d8c972ffc9b6ecaa08f86a956fd17dfd
 accepted_inputs: [E2, E3, E4, S3, MK1, MK2, MK3, MK4, MK5, MK6]
 duplicate_predecessor: MR1
 pending_future_dependency: MR3

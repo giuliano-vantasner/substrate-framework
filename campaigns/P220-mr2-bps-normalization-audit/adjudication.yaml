@@ -1,0 +1,91 @@
+campaign: P220
+title: MR2 BPS normalization pi-squared audit
+source_baseline: substrate@6d1f4e0
+source_units: [MR2]
+base_release: v0.158.0
+accepted_release: v0.158.0
+freeze_commit: 2920bb1
+source_audit_commit: f621524
+implementation_commit: a70e23c
+review_commit: f339997
+adjudicated_at: '2026-08-06T12:31:00Z'
+selected_candidates:
+  - {id: A, reason: Same_current_density_elimination_exactly_reproduces_C_VEC_002.}
+  - {id: B, reason: Reduced_coefficient_elimination_is_dependent_C_GSK_001_regression.}
+  - {id: C, reason: Bound_translation_exactly_reproduces_C_BPS_001_and_P219.}
+  - {id: D, reason: Current_rescaling_mutations_expose_the_load_bearing_typing_premise.}
+  - {id: E, reason: Physical_input_firewall_rejects_mass_and_sector_conclusions.}
+  - {id: F, reason: Exact_nonduplication_selects_no_new_claim_or_API.}
+  - {id: G, reason: MR2_receives_an_individual_terminal_duplicate_evidence_disposition.}
+claims: []
+unchanged_claim_owners:
+  - {id: C-BPS-001, surface: normalized_density_bound_and_equivalent_lambda_A_coordinate}
+  - {id: C-VEC-002, surface: same_current_pi_squared_lambda_map}
+  - {id: C-GSK-001, surface: both_conditional_reduced_c6_coordinates}
+unpromoted_surfaces:
+  - {id: independent_MK5_route, reason: Eliminates_to_the_same_coefficient_identity.}
+  - {id: zero_parameter_mass, reason: Corrected_expression_retains_supplied_N_c_m_pi_and_degree.}
+  - {id: ten_percent_physical_sector, reason: No_accepted_state_action_coupling_or_attainment_map.}
+  - {id: physical_compacton_radius_correction, reason: No_physical_coordinate_or_coupling_map.}
+  - {id: complete_honesty_guard, reason: Selected_AST_needles_are_not_dependency_closure.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_normalization_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_disposition_review: reviews/MR2-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MR2: duplicate_evidence}
+accepted_mappings: [C-BPS-001, C-VEC-002, C-GSK-001]
+compatibility:
+  MR2_surface: native_no_numpy_or_scipy_integration
+  immutable_E2_E3: legacy_compatibility_provenance_only
+  pending_MR3_MR5_MR6: current_scipy_trapezoid
+  scientific_failures_from_version_events: 0
+release_change: none
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_normalization_review
+  - PYTHONPATH_src_python_source_graph_replay
+  - pytest_64_focused_BPS_vector_and_generalized_radial_tests
+  - record_sensitive_repository_generated_memory_skill_YAML_and_diff_checks
+integrated_gate:
+  status: passed
+  workflow_claims: 201
+  workflow_accepted_claims: 201
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 4
+  migration_partial: 0
+  migration_qualified: 200
+  migration_duplicate_evidence: 9
+  memory_records: 895
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  affected_yaml_files_valid: 28
+  final_targeted_checks: {primary: 25, independent: 18, graph: 10, focused_tests: 64}
+  diff_check: passed
+  reused_full_suite:
+    tests: 1922
+    boundary: P219_v0.158.0_at_7c98ec7
+    unchanged_inputs: [accepted_claims, package_APIs, package_files, tests, release]
+debt: []
+status: accepted

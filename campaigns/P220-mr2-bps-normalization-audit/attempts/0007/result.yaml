@@ -1,0 +1,32 @@
+campaign: P220
+attempt: 0007
+timestamp_utc: '2026-08-06T12:31:00Z'
+status: passed
+stage: terminal_duplicate_evidence_record_gate
+source_disposition: duplicate_evidence
+accepted_claim_owners: [C-BPS-001, C-VEC-002, C-GSK-001]
+release_change: none
+full_suite_reuse: P219_v0.158.0_1922_tests
+record_results:
+  proposal_count: 0
+  workflow_claims: 201
+  workflow_accepted_claims: 201
+  migration_total: 218
+  migration_pending: 4
+  migration_partial: 0
+  migration_qualified: 200
+  migration_duplicate_evidence: 9
+  memory_records: 895
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  affected_yaml_files_valid: 28
+  diff_check: passed
+final_targeted_replay:
+  primary: {checks: 25, elapsed_seconds: 2.41, maximum_resident_kib: 155324}
+  independent: {checks: 18, elapsed_seconds: 2.09, maximum_resident_kib: 148952}
+  graph: {checks: 10, elapsed_seconds: 2.60, maximum_resident_kib: 157924}
+  focused_tests_reused_from_attempt_0005: 64
+debt: []
+next_action: freeze_P221_MR3_no_double_counting_audit

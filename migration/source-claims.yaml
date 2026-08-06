@@ -7,10 +7,10 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
-  duplicate_evidence: 8
+  duplicate_evidence: 9
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 5
+  pending_adjudication: 4
   qualified: 200
   refuted: 1
 phase_counts:
@@ -14194,8 +14194,34 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: duplicate_evidence
+  accepted_claims:
+  - C-BPS-001
+  - C-VEC-002
+  - C-GSK-001
+  duplicates:
+  - C-BPS-001
+  - C-VEC-002
+  - C-GSK-001
+  evidence:
+  - campaigns/P220-mr2-bps-normalization-audit/verify.py
+  - campaigns/P220-mr2-bps-normalization-audit/reviews/independent_normalization_review.py
+  - campaigns/P220-mr2-bps-normalization-audit/reviews/replay_source_graph.py
+  - campaigns/P220-mr2-bps-normalization-audit/reviews/source_adjudication.md
+  - campaigns/P220-mr2-bps-normalization-audit/reviews/MR2-disposition-review.md
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/source-reproduction.yaml
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/source-audit.yaml
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/check-adjudication.yaml
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/dependency-audit.yaml
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/consumer-audit.yaml
+  - campaigns/P220-mr2-bps-normalization-audit/evidence/compatibility-audit.yaml
+  - memory/vantasner/decisions/MR2-duplicate-evidence-review.md
+  note: P220 closes 25 primary, 18 independent, and 10 graph checks plus 64 focused tests. MR2 correctly
+    isolates MK6's pi-squared convention error, but its normalized density, same-current lambda map, bound,
+    and reduced coefficients are already C-BPS-001, C-VEC-002, and C-GSK-001. The MK5 route is dependent
+    regression evidence; 99.417 MeV retains supplied N_c, pion mass, and degree and is not a physical
+    sector prediction. MR2 has no NumPy integration surface; pending consumers use current SciPy trapezoid.
 - source_unit: MR3
   phase: phase-44
   path: merged-framework/bridges/phase-44/bridge_MR3_no_double_counting.py

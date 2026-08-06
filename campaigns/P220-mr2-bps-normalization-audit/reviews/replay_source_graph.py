@@ -98,12 +98,17 @@ def main() -> int:
         all(units[label]["disposition"] == "qualified" for label in accepted_inputs)
         and units["MR1"]["disposition"] == "duplicate_evidence",
     )
+    proposal = yaml.safe_load((ROOT / "campaigns/P220-mr2-bps-normalization-audit/proposal.yaml").read_text())
+    expected_root = "duplicate_evidence" if proposal["status"] == "accepted" else "pending_adjudication"
     checks.check(
-        "root and later MR units have no backward accepted authority",
-        all(
+        "root terminalizes only through accepted owners while later MR units grant no authority",
+        units["MR2"]["disposition"] == expected_root
+        and set(units["MR2"]["accepted_claims"])
+        == ({"C-BPS-001", "C-VEC-002", "C-GSK-001"} if expected_root == "duplicate_evidence" else set())
+        and all(
             units[label]["disposition"] == "pending_adjudication"
             and units[label]["accepted_claims"] == []
-            for label in ("MR2", "MR3", "MR5", "MR6")
+            for label in ("MR3", "MR5", "MR6")
         ),
     )
     checks.check(

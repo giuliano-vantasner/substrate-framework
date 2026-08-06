@@ -10,8 +10,8 @@ tags:
 - convention-audit
 - nonduplication
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P220 MR2 BPS Normalization Audit
 
@@ -131,7 +131,7 @@ novelty, compatibility, consumers, and terminal records.
 | Correct source result may be promoted twice | Registry campaign module and memory nonduplication audit | discharged: exact owners identified and no claim/API remains |
 | Physical inputs may leak through corrected numerics | Free-symbol and accepted-dependency audit | discharged: N_c, m_pi, and B remain supplied |
 | Later MR units may grant backward authority | Pinned graph replay | discharged: 15-node static graph and durable executions |
-| Governed records remain unresolved | Source disposition and canonical synchronization | open |
+| Governed records remain unresolved | Source disposition and canonical synchronization | discharged: terminal queue, immutable campaign, decision, effort, docs, memory, skill, YAML, and diff checks pass |
 
 ## Review and Promotion Plan
 
@@ -146,6 +146,18 @@ targeted and record-sensitive validation.
 P220 closes only with independent convention routes, normalization mutations,
 source and consumer adjudication, a supported nonduplication decision,
 synchronized records, and an empty campaign debt ledger.
+
+The scientific gate is complete: 25 primary, 18 fresh independent, and 10
+graph checks plus 64 focused tests support terminal `duplicate_evidence`.
+Accepted claims, package APIs, tests, and v0.158.0 remain unchanged. Attempt
+0007 materializes the authoritative disposition, immutable campaign, decision
+memory, generated queue, and final record-sensitive gate.
+
+The final gate validates 201 accepted claims, no active proposals, 895 memory
+records, 28 affected YAML files, current generated docs and accepted memory, a
+valid physics skill, and a 7/0 preflight. The queue now has four pending units
+and nine duplicate-evidence units. Final replay again passes 25 primary, 18
+independent, and 10 graph checks. The debt ledger is empty.
 
 ## Cross-References
 
