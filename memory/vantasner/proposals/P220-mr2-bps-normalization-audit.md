@@ -111,6 +111,12 @@ shapes remain provenance only. The unchanged v0.158.0 1,922-test full boundary
 is reused because P220 changes no canonical code, accepted claim, release, or
 test.
 
+Attempt 0006 audits all eight predicates individually. MR2.1 through MR2.5 are
+exact duplicates, MR2.6 is dependent regression evidence, MR2.7's physical
+reading is rejected, and MR2.8 is lexical evidence only. The selected terminal
+decision is `duplicate_evidence` through C-BPS-001, C-VEC-002, and C-GSK-001,
+with no claim, API, or release change.
+
 ## Debt Ledger
 
 The ledger tracks source predicates, current normalization, lambda coordinate,

@@ -1,0 +1,27 @@
+campaign: P220
+attempt: 0006
+timestamp_utc: '2026-08-06T12:29:00Z'
+status: passed
+stage: independent_claim_level_and_disposition_review
+reviewed_predicates: [MR2.1, MR2.2, MR2.3, MR2.4, MR2.5, MR2.6, MR2.7, MR2.8]
+verification_axes:
+  exact_surfaces: symbolic_verified
+  numeric_surface: supplied_input_numeric_evidence
+  guard_surface: lexical_evidence_only
+review: audited
+compatibility:
+  exact_surfaces: native
+  immutable_legacy_events: provenance_only
+epistemic_results:
+  duplicate: [MR2.1, MR2.2, MR2.3, MR2.4, MR2.5]
+  dependent_regression: [MR2.6]
+  rejected_physical_reading: [MR2.7]
+  qualified_lexical_only: [MR2.8]
+decision:
+  source_disposition: duplicate_evidence
+  accepted_claim_owners: [C-BPS-001, C-VEC-002, C-GSK-001]
+  new_claims: []
+  new_APIs: []
+  release_change: none
+debt_remaining: [terminal_queue_campaign_memory_and_generated_record_synchronization]
+next_action: commit_review_then_terminalize_MR2
