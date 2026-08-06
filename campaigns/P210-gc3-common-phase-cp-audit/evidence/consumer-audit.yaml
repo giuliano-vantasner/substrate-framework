@@ -1,0 +1,26 @@
+campaign: P210
+source_unit: GC3
+direct_reverse_consumers: [GC4, GC5, GC6]
+consumer_status_at_freeze:
+  GC4: pending_adjudication
+  GC5: pending_adjudication
+  GC6: pending_adjudication
+new_API_consumers:
+  - tests/test_common_phase_matrices.py
+  - proposals/P210-gc3-common-phase-cp-audit/verify.py
+package_export_consumer: src/substrate_framework/__init__.py
+generated_consumers:
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - docs/generated/claim-dependencies.dot
+  - migration/source-claims.yaml
+  - memory/framework/claims/C-MIX-003.md
+  - memory/framework/releases/v0.152.0.md
+  - memory/vantasner/efforts/framework-migration.md
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  Pending GC4 GC5 and GC6 grant no backward authority. They may consume only
+  the conditional globally-phased-real matrix theorem and its explicit
+  non-implications, not GC3's one-condensate ontology three-source count stable
+  coexistence equal-spacing prediction or physical CP narrative.

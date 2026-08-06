@@ -1,0 +1,26 @@
+campaign: P210
+source_unit: GC3
+terminal_dependencies:
+  EM6: [C-QBL-001]
+  FG2: [C-QBL-001, C-QBL-003]
+  FG3: [C-MIX-001]
+  FG4: [C-MIX-001, C-MIX-002]
+  GC1: [C-QBL-001, C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, C-QBL-005]
+  MH1: [C-QBL-003, C-OVL-001]
+  MH2: [C-OVL-001, C-OVL-002]
+  WM10: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+  WM7: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+nonauthoritative_cycle_dependencies: [GC4, GC5]
+admitted_composition: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-001, C-MIX-002]
+new_claim_dependencies: {C-MIX-003: [C-MIX-001, C-MIX-002]}
+rejected_inheritance:
+  - EM6 supplies a conditional stationary profile and charge but explicitly no forced complex ontology or stability theorem.
+  - FG2 supplies a real scalar Hessian and two bound modes but no generation or Yukawa sector.
+  - FG3 supplies matrix decomposition algebra but explicitly no CKM or CP identity.
+  - FG4 supplies an abstract generic rephasing quotient and quartets but no physical CP operation or observed family map.
+  - MH1 supplies normalized expectations for declared real profiles but no Yukawa interaction physical condensate generation or mass.
+  - MH2 supplies separately declared external wells and no coexisting soliton solution.
+  - WM7 and WM10 supply no condensate count relative-phase action or flavor mechanism.
+  - GC4 and GC5 remain pending cycle nodes and cannot establish GC3 premises.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

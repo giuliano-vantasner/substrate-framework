@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-05T23:28:00Z'
+updated: '2026-08-06T07:19:49Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.150.0`, containing one hundred ninety
+The current accepted frontier is `v0.152.0`, containing one hundred ninety-two
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2393,27 +2393,43 @@ terminal graph checks plus 86 focused tests pass. The 14-node graph pins 107
 predicates and 20 assertions with no quadrature compatibility surface or
 scientific version failure.
 
+P210 promotes C-MIX-003 in v0.152.0 and qualifies GC3 through C-QBL-001,
+C-QBL-003, C-OVL-001, C-MIX-001, C-MIX-002, and C-MIX-003. The accepted
+positive object is exact and conditional: scalar global phases cancel from
+both rectangular Grams; real left Gram bases may be chosen; their relative
+basis has null quartet imaginary parts; and real antisymmetric Gram
+commutators have zero odd traces, with zero determinant in odd dimensions.
+Degenerate Grams retain arbitrary complex coordinate bases, so the invariant
+caveat is load bearing. Accepted predecessors do not force real coefficients,
+real modes, one common phase, a Yukawa interaction, physical CKM/CP, or a
+generation count. Source count K and matrix dimension N are independent, and
+an exact two-real-source construction already gives a nonzero quartet at N=3.
+Forty-two primary, 27 independent, 34 terminal-graph checks, and 99 focused
+tests pass. The 13-node graph pins 97 predicates and 18 assertions with zero
+quadrature surface. The integrated boundary validates 851 memory files and
+passes all 1,837 tests in 195.94 pytest seconds and 210.01 seconds total wall
+time with exit zero.
+
 ## Canonicalization
-The registry, `v0.151.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred ninety-one accepted claims.
-P001 through P209 are frozen under `campaigns/`; proposal,
+The registry, `v0.152.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred ninety-two accepted claims.
+P001 through P210 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 15 pending, 0 partial, 3
-migrated, 190 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P208 changes the accepted scientific surface and therefore runs the most
-recent full integrated release boundary. P209 changes only governed records
-and uses a record-sensitive narrow gate after exact, graph, and focused replay.
+memory. The regenerated migration queue agrees on 14 pending, 0 partial, 3
+migrated, 191 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P210 changes the accepted scientific surface and therefore runs the most
+recent full integrated release boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 15
-pending, 3 migrated, 190 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 14
+pending, 3 migrated, 191 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle and GC1-GC2 are terminal without backward authority.
-The next campaign audits GC3 against the accepted phase-count, overlap, and
-physical-CP ceilings. The remaining condensation order is GC3 through GC6 on one branch and
+The WM7-WM10 source cycle and GC1-GC3 are terminal without backward authority.
+The next campaign audits GC4 against the accepted soliton, overlap, and
+common-phase ceilings. The remaining condensation order is GC4 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

@@ -1,0 +1,14 @@
+attempt: 0011
+campaign: P210
+timestamp_utc: '2026-08-06T07:22:28Z'
+kind: record_sensitive_memory_path_repair
+initial_command: memory_validate_relative_memory
+initial_exit_status: 2
+initial_result: path_resolved_to_/home/dan/agent-memory/memory/memory_and_did_not_validate_the_repository
+mechanism: the_memory_CLI_auto_detected_its_own_base_for_the_relative_operand
+repair_command: memory_validate_/home/dan/substrate-framework/memory
+memory_files_validated: 851
+repair_exit_status: 0
+scientific_candidate_rejected: false
+status: passed
+continuation: regenerate_the_queue_then_finish_record_sensitive_checks_and_commit

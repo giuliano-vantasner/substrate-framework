@@ -2,7 +2,7 @@
 description: Audit GC3's common-phase CP conclusion and one-condensate premise
 author: vantasner
 created: '2026-08-06T06:23:01Z'
-updated: '2026-08-06T06:29:19Z'
+updated: '2026-08-06T07:19:49Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - common-phase
 - CP-invariants
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P210 GC3 Common-Phase CP Audit
 
@@ -116,6 +116,20 @@ ontology, MH1 does not supply a Yukawa interaction, and FG3/FG4 explicitly do
 not establish CKM or physical CP. The finite random ensemble, separate external
 wells, and one equal-spacing toy cannot repair that authority gap.
 
+Attempts 0003 through 0009 preserve the scale-relative numeric repair,
+GitNexus CLI fallback after its MCP transport closed, source-string casing,
+queue-schema and render-anchor repairs, correct inventory entry point, and
+terminal-graph root-set repair. The final exact routes pass 42 primary and 27
+independent checks; the 13-node terminal graph passes 34 checks over 97 static
+predicates and 18 assertions; and 99 focused accepted-API tests pass. Attempt
+0010 records the single integrated v0.152.0 boundary: 851 memory files and all
+1,837 tests pass in 195.94 pytest seconds and 210.01 seconds total wall time.
+Attempt 0011 preserves a record-only relative-path CLI mistake and the
+successful absolute-path replay over the same 851 memory files.
+Attempt 0012 preserves the failed obsolete proposal pathspec and rename-only
+commit `7658d87`; the substantive promotion follows in a separate commit
+without rewriting that provenance.
+
 ## Debt Ledger
 
 The P210 ledger tracks every phase, coefficient, profile, mode, matrix
@@ -125,30 +139,27 @@ compatibility event, and generated record.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | Detailed source predicates remain blinded | Reproduce once after committed freeze | discharged after `9e6fb3d` |
-| Real coefficients and modes may be undeclared premises | Audit action, imports, and local assumptions | open |
-| A global phase may be confused with arbitrary complex structure | Run global, entrywise, and local-phase mutations | open |
-| Degenerate basis freedom may create spurious coordinate phases | Audit invariant and degenerate cases separately | open |
-| The N=3 phase slot may be treated as a physical phase or count theorem | Mutate N and source every count premise | open |
-| Existing claims may already own all exact content | Complete claim and API nonduplication audit | open |
-| Pending cycle dependencies may grant authority | Replay GC4 and GC5 without imports | open |
-| Reverse consumers may be silently broken | Replay GC4 through GC6 after disposition | open |
-| Compatibility may masquerade as science | Audit every executable access shape | open |
+| Real coefficients and modes may be undeclared premises | Audit action, imports, and local assumptions | discharged by source and dependency audits |
+| A global phase may be confused with arbitrary complex structure | Run global, entrywise, and local-phase mutations | discharged by exact premise countermodels |
+| Degenerate basis freedom may create spurious coordinate phases | Audit invariant and degenerate cases separately | discharged by the identity-Gram Fourier-basis counterexample |
+| The N=3 phase slot may be treated as a physical phase or count theorem | Mutate N and source every count premise | discharged by K/N separation and the two-source construction |
+| Existing claims may already own all exact content | Complete claim and API nonduplication audit | discharged; C-MIX-003 is the minimum novel surface |
+| Pending cycle dependencies may grant authority | Replay GC4 and GC5 without imports | discharged by the terminal graph |
+| Reverse consumers may be silently broken | Replay GC4 through GC6 after disposition | discharged by the terminal graph and focused consumers |
+| Compatibility may masquerade as science | Audit every executable access shape | discharged with zero quadrature surface and zero scientific version failures |
 
 ## Review and Promotion Plan
 
-Every GC3 predicate receives an individual verdict. A new claim requires a
-canonical API, focused tests, independent review, registry and release update,
-generated documentation, synchronized memory, and one full promotion gate. If
-accepted claims already own the strongest content, P210 will qualify or refute
-GC3 through those claims, materialize all evidence first, regenerate the queue,
-and run only the record-sensitive narrow gate because the accepted release and
-canonical APIs remain unchanged.
+Every GC3 predicate received an individual verdict. C-MIX-003 has a canonical
+API, focused tests, independent review, registry and v0.152.0 release entries,
+generated documentation, synchronized memory, and one passing full promotion
+gate. GC3 is qualified rather than blanket accepted.
 
 ## Done Gate
 
-P210 closes only when the exact common-phase theorem, physical-premise audit,
+P210 is closed: the exact common-phase theorem, physical-premise audit,
 countermodels, degeneracy treatment, dimension provenance, source-predicate
-adjudication, authority graph, compatibility audit, disposition, generated
-state, and durable memory agree with an empty campaign debt ledger. Neither a
-symbolic identity under declared assumptions nor 400 random examples can close
-the universal physical claim alone.
+adjudication, authority graph, compatibility audit, qualified disposition,
+generated state, and durable memory agree with an empty debt ledger. Neither a
+symbolic identity under declared assumptions nor 400 random examples was used
+to close the rejected universal physical claim.

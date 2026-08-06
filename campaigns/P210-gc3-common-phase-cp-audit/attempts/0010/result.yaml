@@ -1,0 +1,26 @@
+attempt: 0010
+campaign: P210
+timestamp_utc: '2026-08-06T07:13:58Z'
+kind: promotion_boundary_in_progress
+implementation_commit: 86b3271bfa3bf0f7cb2f9a4e5a2fd8bac5117808
+claim: C-MIX-003
+release: v0.152.0
+source_disposition: {GC3: qualified}
+pre_gate_results:
+  primary_checks: 42
+  independent_checks: 27
+  source_graph_checks: 34
+  focused_tests: 99
+  version_only_scientific_failures: 0
+integrated_gate:
+  command: /usr/bin/time_-v_scripts_validate_sh
+  workflow_claims: 192
+  migration_pending: 14
+  memory_files_validated: 851
+  tests_passed: 1837
+  pytest_seconds: 195.94
+  wall_seconds: 210.01
+  maximum_resident_kib: 217756
+  exit_status: 0
+status: passed
+continuation: rerun_record_sensitive_repository_generation_memory_graph_and_diff_checks_then_commit

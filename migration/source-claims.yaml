@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 15
-  qualified: 190
+  pending_adjudication: 14
+  qualified: 191
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -13117,8 +13117,73 @@ units:
   dynamic_check_calls: 7
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-QBL-001
+  - C-QBL-003
+  - C-OVL-001
+  - C-MIX-001
+  - C-MIX-002
+  - C-MIX-003
+  qualification: 'GC3''s exact surviving theorem is conditional on matrices of the form Y_a=exp(i*theta_a)*R_a
+    with R_a finite and real. Both left and right Grams are real symmetric and phase independent, real
+    left eigenbases may be chosen, their relative basis is real orthogonal, and all quartet imaginary
+    parts vanish. The real Gram commutator is antisymmetric, its odd traces vanish, and its determinant
+    vanishes in odd dimension. Degenerate eigenspaces retain larger unitary basis freedom, so a complex
+    coordinate quartet in an arbitrary degenerate basis is not a physical invariant. One condensate as
+    a label does not enforce the real-matrix premise: independent complex couplings, complex modes, or
+    spatial phase structure can produce a complex Gram. EM6 does not force complex ontology, MH1 constructs
+    no Yukawa interaction, and FG3/FG4 establish no physical CKM or CP operation. The random and external-well
+    assemblies are finite matrix examples, not a lower-bound theorem or a stable coexisting condensate
+    solution. The source also conflates source count K with matrix dimension N; the corrected budget is
+    K-1 versus (N-1)(N-2)/2, and an exact two-real-source construction already yields a nonzero quartet
+    at N=3. One equal-spacing toy does not predict physical generation geometry. No universal one-condensate
+    CP no-go, required three-source count, stability, physical flavor map, observed phase, Standard-Model,
+    or substrate conclusion is accepted.'
+  evidence:
+  - campaigns/P210-gc3-common-phase-cp-audit/reviews/source_adjudication.md
+  - campaigns/P210-gc3-common-phase-cp-audit/reviews/C-MIX-003-claim-review.md
+  - campaigns/P210-gc3-common-phase-cp-audit/reviews/GC3-disposition-review.md
+  - campaigns/P210-gc3-common-phase-cp-audit/reviews/impact_analysis.md
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/source-reproduction.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/compatibility-audit.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/source-audit.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/check-adjudication.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/formula-freeze.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/input-provenance.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/dependency-audit.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/consumer-audit.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/candidate-comparison.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/implementation-audit.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/impact-analysis.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/primary-provenance.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/independent-provenance.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/focused-test-replay.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/evidence/terminal-graph-replay.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/verify.py
+  - campaigns/P210-gc3-common-phase-cp-audit/reviews/independent_common_phase_review.py
+  - campaigns/P210-gc3-common-phase-cp-audit/reviews/replay_source_graph.py
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0001/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0002/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0003/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0004/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0005/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0006/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0007/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0008/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0009/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0010/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0011/result.yaml
+  - campaigns/P210-gc3-common-phase-cp-audit/attempts/0012/result.yaml
+  - memory/vantasner/decisions/C-MIX-003-review.md
+  - memory/vantasner/decisions/GC3-qualified-review.md
+  note: P210 closes 42 primary, 27 independent, and 34 terminal source-graph checks plus 99 focused accepted-API
+    tests. The graph pins 13 nodes with 97 static predicates and 18 assertions. GC3, its graph, and mutable
+    P210 have no quadrature compatibility surface and create zero scientific version failures. The integrated
+    v0.152.0 boundary validates 851 memory files and passes all 1,837 tests in 195.94 pytest seconds and
+    210.01 seconds total wall time with exit zero.
 - source_unit: GC4
   phase: phase-42
   path: merged-framework/bridges/phase-42/bridge_GC4_stability_forces_three.py

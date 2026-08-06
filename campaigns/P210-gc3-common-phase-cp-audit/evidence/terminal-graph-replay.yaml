@@ -1,0 +1,17 @@
+campaign: P210
+artifact: campaigns/P210-gc3-common-phase-cp-audit/reviews/replay_source_graph.py
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  campaigns/P210-gc3-common-phase-cp-audit/reviews/replay_source_graph.py
+exit_status: 0
+runtime_checks: 34
+terminal_tally: ALL_34_CHECKS_PASS
+graph: {nodes: 13, static_check_calls: 97, assert_nodes: 18}
+terminal_dependencies: 9
+nonauthoritative_cycle_dependencies: 2
+pending_reverse_consumers: 3
+native_source_executions: 0
+compatibility:
+  graph_nodes_with_quadrature_surface: 0
+  version_only_scientific_failures: 0
+verdict: pass

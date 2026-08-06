@@ -62,9 +62,13 @@ comparators_blinded_until: >-
   predicates, guards, and native output remain unopened until this contract,
   formula freeze, provenance record, memory validation, and clean freeze commit
   exist.
-comparators_used_for_selection: []
-status: draft
-revision: 0002
+comparators_used_for_selection:
+  - hash-pinned_GC3_native_output_opened_after_freeze_commit_9e6fb3d
+  - accepted_C_QBL_001_C_QBL_003_C_OVL_001_C_MIX_001_and_C_MIX_002_ceilings
+  - independent_exact_rectangular_Gram_commutator_Fourier_and_degeneracy_derivations
+  - source_count_K_and_matrix_dimension_N_mutations
+status: accepted
+revision: 0004
 post_source_numeric_audit:
   random_seed: 20260721
   random_draws: 400

@@ -1,0 +1,17 @@
+attempt: 0012
+campaign: P210
+timestamp_utc: '2026-08-06T07:23:34Z'
+kind: promotion_staging_path_repair
+initial_command: git_add_including_removed_proposals_P210_path_then_git_commit
+initial_result: >-
+  The absent old proposal path made git add exit 128, while the following
+  command committed only the campaign moves that had already been staged.
+rename_only_commit: 7658d87
+mechanism: newline_separated_shell_commands_continued_after_the_failed_pathspec
+repair: >-
+  Preserve the rename-only provenance commit, stage only existing P210,
+  governance, generated, migration, and memory paths, verify the cached diff,
+  and create a follow-up substantive promotion commit.
+scientific_candidate_rejected: false
+status: repaired
+continuation: complete_the_substantive_promotion_commit_without_history_rewrite

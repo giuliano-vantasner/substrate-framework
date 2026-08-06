@@ -1,0 +1,14 @@
+attempt: 0007
+campaign: P210
+timestamp_utc: '2026-08-06T07:05:00Z'
+kind: registry_insertion_anchor_repair
+artifact: governance/claims.yaml
+command: .venv/bin/python scripts/render_docs.py
+initial_result: claims_index_50_missing_every_required_field
+mechanism: >-
+  The apply-patch insertion retained the C-MOM-001 anchor as an empty claim
+  before inserting C-MIX-003, then correctly repeated the full C-MOM-001 entry
+  after the new claim.
+repair: remove_only_the_empty_duplicate_anchor_and_preserve_both_complete_claim_entries
+scientific_candidate_rejected: false
+continuation: rerun_docs_then_memory_generation_and_repository_validation

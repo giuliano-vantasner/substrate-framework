@@ -1,0 +1,11 @@
+attempt: 0006
+campaign: P210
+timestamp_utc: '2026-08-06T07:02:00Z'
+kind: generated_queue_schema_probe_repair
+artifact: read_only_graph_compatibility_preflight
+initial_result: two_one_line_probes_indexed_the_top_level_mapping_as_a_unit_list
+mechanism: migration_source_claims_uses_a_top_level_units_key
+repair: index_yaml_mapping_units_before_building_the_source_unit_dictionary
+repaired_result: 13_graph_nodes_scanned_with_zero_legacy_current_or_eager_quadrature_references
+scientific_candidate_rejected: false
+continuation: encode_the_correct_queue_schema_in_the_terminal_graph_replay

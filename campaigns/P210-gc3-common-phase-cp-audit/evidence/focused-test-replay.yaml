@@ -1,10 +1,12 @@
 campaign: P210
-stage: pre_promotion_implementation
+stage: pre_integrated_promotion
 command: >-
   .venv/bin/python -m pytest -q tests/test_common_phase_matrices.py
   tests/test_matrix_decompositions.py tests/test_unitary_rephasing.py
+  tests/test_normalized_overlaps.py tests/test_qball_fluctuations.py
+  tests/test_quartic_qball.py tests/test_source_audit.py
 exit_status: 0
-tests_passed: 43
+tests_passed: 99
 tests_failed: 0
 coverage:
   - common_phase_left_and_right_Grams
@@ -16,5 +18,9 @@ coverage:
   - degenerate_complex_basis_counterexample
   - input_validation
   - existing_SVD_and_rephasing_consumers
+  - accepted_overlap_quartic_profile_and_real_mode_dependencies
+  - shared_compatibility_AST_auditor
   - zero_mutable_quadrature_surface
 verdict: pass
+elapsed_seconds: 9.42
+pre_promotion_subset: {tests_passed: 43, verdict: pass}

@@ -1,0 +1,12 @@
+attempt: 0009
+campaign: P210
+timestamp_utc: '2026-08-06T07:12:00Z'
+kind: terminal_graph_root_set_repair
+artifact: campaigns/P210-gc3-common-phase-cp-audit/reviews/replay_source_graph.py
+initial_result: first_graph_check_failed_before_any_node_replay
+mechanism: >-
+  The expected node set included root GC3, but the set equality compared only
+  dependencies and reverse consumers and therefore omitted the root role.
+repair: include_GC3_explicitly_as_the_root_without_changing_any_edge_or_node_inventory
+scientific_candidate_rejected: false
+continuation: rerun_the_terminal_graph_from_a_clean_process

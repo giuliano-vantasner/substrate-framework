@@ -1,0 +1,40 @@
+campaign: P210
+source_unit: GC3
+checks:
+  - id: GC3.1
+    decision: retained_exact_under_explicit_real_common_phase_premise
+    mapping: [C-OVL-001, C-MIX-003]
+    reason: The factorization is exact if real overlaps and one scalar phase are supplied; accepted predecessors do not turn those premises into a physical Yukawa theorem.
+  - id: GC3.2
+    decision: retained_exact_with_left_right_Gram_correction
+    mapping: [C-MIX-001, C-MIX-003]
+    reason: Both Y_dagger_Y and Y_Y_dagger are real symmetric for a globally phased real matrix, but the left basis belongs to the latter and degeneracies retain enlarged freedom.
+  - id: GC3.3
+    decision: algebra_retained_universal_condensate_headline_rejected
+    mapping: [C-MIX-002, C-MIX-003]
+    reason: A chosen real relative basis has zero quartet at every dimension; 400 random trials are regression only and one-condensate ontology does not enforce the theorem premises.
+  - id: GC3.4
+    decision: finite_complex_matrix_examples_retained_bounded_away_language_rejected
+    mapping: [C-MIX-002]
+    reason: The draws demonstrate finite nonzero examples but a sample minimum is no mathematical lower bound and differently phased sums have real or removable special cases.
+  - id: GC3.5
+    decision: toy_external_well_example_retained_multicondensate_reading_rejected
+    mapping: [C-OVL-001, C-MIX-002]
+    reason: The numeric assembly reproduces a zero-versus-nonzero matrix example; it solves separate external wells and no common condensate field equation stability or domain refinement.
+  - id: GC3.5b
+    decision: finite_suppression_value_retained_geometry_prediction_rejected
+    mapping: []
+    reason: One pair of declared geometries can differ numerically but does not establish a symmetry theorem exhaustive geometry class or physical prediction.
+  - id: GC3.6
+    decision: relative_phase_count_retained_with_independent_K_N_repair
+    mapping: [C-MIX-002, C-MIX-003]
+    reason: K source phases modulo one declared global shift give K-1 coordinates while matrix demand depends on N; at N=3 K=2 already meets the one-dimensional generic quotient demand.
+  - id: GC3.7
+    decision: numeric_guard_retained_and_strengthened_exactly
+    mapping: [C-MIX-002]
+    reason: The pipeline accepts one generic complex input; the exact Fourier quartet independently proves the nonzero route without seed or threshold dependence.
+  - id: GC3.8
+    decision: conclusion_confirmed_predicate_reachability_claim_qualified
+    mapping: []
+    reason: Static imports and file-access audit confirm no measured input in the pinned source, but a selected globals-name intersection alone is not a complete reachability oracle.
+terminal_tally_role: execution_evidence_only

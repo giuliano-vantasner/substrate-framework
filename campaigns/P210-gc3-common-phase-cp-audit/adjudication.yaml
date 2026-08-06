@@ -1,0 +1,96 @@
+campaign: P210
+title: GC3 common-phase matrix and CP-odd invariant audit
+source_baseline: substrate@6d1f4e0
+source_units: [GC3]
+base_release: v0.151.0
+accepted_release: v0.152.0
+implementation_commit: 86b3271bfa3bf0f7cb2f9a4e5a2fd8bac5117808
+adjudicated_at: '2026-08-06T07:02:59Z'
+selected_candidates:
+  - {id: A, reason: Exact_conjugate_transpose_multiplication_cancels_a_scalar_global_phase_from_both_Grams.}
+  - {id: B, reason: Real_spectral_bases_give_a_real_relative_basis_and_null_quartet_imaginary_parts.}
+  - {id: C, reason: Real_Gram_commutators_supply_basis_aware_odd_trace_and_odd_determinant_nulls.}
+  - {id: E, reason: Complex_coupling_local_phase_and_two_source_countermodels_expose_every_load_bearing_premise.}
+  - {id: F, reason: Independent_source_count_K_and_matrix_dimension_N_repair_the_phase_budget.}
+  - {id: H, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: D, decision: rejected_because_accepted_predecessors_do_not_force_the_real_common_phase_physical_premise}
+  - {id: G, decision: rejected_after_C_MIX_003_nonduplication_audit_established_a_minimum_novel_surface}
+claims:
+  - {id: C-MIX-003, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-QBL-001, decision: unchanged_conditional_profile_and_no_forced_ontology_ceiling}
+  - {id: C-QBL-003, decision: unchanged_real_scalar_Hessian_modes_and_nongeneration_ceiling}
+  - {id: C-OVL-001, decision: unchanged_real_profile_expectation_and_no_Yukawa_ceiling}
+  - {id: C-MIX-001, decision: unchanged_matrix_decomposition_basis_freedom_and_no_CKM_ceiling}
+  - {id: C-MIX-002, decision: unchanged_abstract_rephasing_quartet_and_no_physical_CP_ceiling}
+unpromoted_claims:
+  - {id: universal_one_condensate_CP_no_go, reason: A_scalar_field_label_does_not_forbid_independent_complex_couplings_modes_or_spatial_phase_structure.}
+  - {id: three_sources_required_at_three_matrix_dimensions, reason: An_exact_two_real_source_Fourier_construction_already_has_a_nonzero_quartet.}
+  - {id: random_multi_source_quartet_bounded_away_from_zero, reason: A_finite_positive_sample_minimum_is_not_a_global_lower_bound.}
+  - {id: external_well_assembly_is_a_stable_multicondensate, reason: No_common_field_equation_interaction_or_stability_oracle_is_supplied.}
+  - {id: unequal_generation_geometry_prediction, reason: One_equal_and_one_unequal_toy_geometry_do_not_form_a_symmetry_or_exhaustive_geometry_theorem.}
+  - {id: physical_Yukawa_CKM_CP_generation_or_substrate_mechanism, reason: Required_fields_interactions_CP_action_nonzero_spectra_maps_and_authority_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_common_phase_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-MIX-003-claim-review.md
+  source_disposition_review: reviews/GC3-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+  terminal_graph_replay: evidence/terminal-graph-replay.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+    - attempts/0008/result.yaml
+    - attempts/0009/result.yaml
+    - attempts/0010/result.yaml
+    - attempts/0011/result.yaml
+    - attempts/0012/result.yaml
+source_disposition: {GC3: qualified}
+accepted_mappings: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-001, C-MIX-002, C-MIX-003]
+compatibility:
+  immutable_source_surface: none
+  mutable_campaign_surface: none
+  canonical_surface: exact_and_floating_matrix_algebra_without_quadrature
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.152.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_common_phase_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_common_phase_matrix_overlap_and_qball_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  tests_passed: 1837
+  pytest_seconds: 195.94
+  memory_files_validated: 851
+  wall_seconds: 210.01
+  maximum_resident_kib: 217756
+  exit_status: 0
+debt: []
+status: accepted

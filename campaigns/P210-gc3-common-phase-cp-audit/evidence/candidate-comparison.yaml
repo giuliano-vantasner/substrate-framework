@@ -1,0 +1,37 @@
+campaign: P210
+selected:
+  - id: A
+    reason: Exact conjugate-transpose multiplication cancels an arbitrary scalar global phase from both rectangular Grams.
+  - id: B
+    reason: The real spectral theorem supplies real orthogonal left bases and therefore an all-real relative basis with vanishing quartet imaginary parts.
+  - id: C
+    reason: The real antisymmetric Gram commutator gives basis-aware odd-trace null identities and an odd-dimensional determinant null.
+  - id: E
+    reason: Exact complex-coupling local-phase and two-real-source countermodels expose every load-bearing common-phase-real premise.
+  - id: F
+    reason: Separating source count K from matrix dimension N repairs the phase budget and shows two sources can suffice algebraically at N=3.
+  - id: H
+    reason: GC3 can receive an individual terminal qualification without importing pending GC4 or GC5.
+not_selected:
+  - id: D
+    decision: rejected_as_universal_physical_premise
+    reason: >-
+      Accepted EM6 does not force a complex substrate ontology, accepted MH1
+      does not define a Yukawa interaction, and no accepted action forbids
+      independent complex couplings complex modes or spatial phase structure.
+  - id: G
+    decision: rejected_after_nonduplication_audit
+    reason: >-
+      C-MIX-001 and C-MIX-002 supply the component SVD relative-basis and
+      quartet machinery but do not state rectangular global-phase Gram
+      cancellation odd commutator-trace nullity or the degenerate-basis caveat
+      as one reusable theorem. C-MIX-003 is the minimum novel claim surface.
+selection_basis:
+  - exact_factorization_and_basis_invariance
+  - explicit_real_and_global_phase_premises
+  - degeneracy_stability
+  - exact_countermodel_sensitivity
+  - independent_K_and_N_provenance
+  - novelty_and_parameter_economy
+  - accepted_dependency_and_consumer_closure
+comparator_used_for_selection: false

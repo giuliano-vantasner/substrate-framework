@@ -1,0 +1,30 @@
+campaign: P210
+root: GC3
+terminal_dependencies: [EM6, FG2, FG3, FG4, GC1, MH1, MH2, WM10, WM7]
+nonauthoritative_cycle_dependencies: [GC4, GC5]
+direct_reverse_consumers: [GC4, GC5, GC6]
+nodes:
+  EM6: {static_check_calls: 11, assert_nodes: 2}
+  FG2: {static_check_calls: 7, assert_nodes: 3}
+  FG3: {static_check_calls: 6, assert_nodes: 1}
+  FG4: {static_check_calls: 7, assert_nodes: 1}
+  GC1: {static_check_calls: 9, assert_nodes: 2}
+  GC3: {static_check_calls: 9, assert_nodes: 1}
+  GC4: {static_check_calls: 8, assert_nodes: 1}
+  GC5: {static_check_calls: 8, assert_nodes: 1}
+  GC6: {static_check_calls: 6, assert_nodes: 1}
+  MH1: {static_check_calls: 4, assert_nodes: 1}
+  MH2: {static_check_calls: 5, assert_nodes: 2}
+  WM10: {static_check_calls: 7, assert_nodes: 1}
+  WM7: {static_check_calls: 10, assert_nodes: 1}
+totals: {nodes: 13, static_check_calls: 97, assert_nodes: 18}
+expected_coverage:
+  fresh_native_executions: 1
+  graph_replay_native_executions: 0
+  duplicate_native_execution_records_counted: 0
+  version_only_scientific_failures: 0
+authority_ceiling: >-
+  Hash AST mapping compatibility and status replay closes source governance
+  only. Nine terminal dependencies grant their accepted ceilings, two cycle
+  edges grant no premise, and three pending consumers remain separately
+  reviewable.

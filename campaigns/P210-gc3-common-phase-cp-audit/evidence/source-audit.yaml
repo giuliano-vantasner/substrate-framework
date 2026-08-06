@@ -1,0 +1,41 @@
+campaign: P210
+source_unit: GC3
+headline_verdict: corrected_qualified
+retained:
+  - A scalar global phase multiplying an exactly real finite matrix cancels from both left and right Gram matrices.
+  - Real symmetric left Grams admit real orthogonal eigenbases and an all-real relative basis.
+  - Every quartet imaginary part of that chosen real relative basis vanishes.
+  - A sum of differently phased real matrices can produce a nonzero quartet; the source random and solved-well cases are finite examples.
+  - A generic complex matrix control produces a nonzero quartet through the source pipeline.
+  - The pinned source contains no measured flavor value and has no NumPy quadrature compatibility surface.
+corrected:
+  - The theorem premise is globally phased real matrices not one condensate as an ontology label.
+  - Left singular bases diagonalize Y*Y_dagger whereas GC3.2 symbolically checks Y_dagger*Y; both are real under the premise but have different shapes for rectangular matrices.
+  - Up and down sector global phases need not be equal because each cancels in its own Gram.
+  - Finite random samples with positive minimum do not establish a mathematical lower bound away from zero.
+  - A sum of differently phased real matrices is generically complex but may remain removable or real in aligned special cases.
+  - The solved modes are ground states of separately supplied external wells and not modes of a proved coexisting-condensate or multisoliton field solution.
+  - Condensate or source count K and matrix or family dimension N are independent inputs; the corrected dimensional budget is K-1 versus (N-1)(N-2)/2.
+  - At N=3 two sources already supply one relative phase and an exact two-real-source Fourier construction has a nonzero quartet.
+  - A complex quartet in a chosen degenerate eigenbasis is not invariant under the enlarged eigenspace freedom; the Gram commutator remains the stable null diagnostic.
+  - The selected global-name intersection is not a complete reachability oracle although a full static import and file-access audit confirms no measured input in this source.
+rejected:
+  - One condensate as a bare label universally forbids every physical CP mechanism.
+  - EM6 forces the only possible complex phase of a substrate or physical Yukawa sector.
+  - MH1 constructs a Yukawa interaction or a generation matrix.
+  - FG3 and FG4 establish a physical CKM matrix or CP operation.
+  - Three condensates are required at matrix dimension three.
+  - Three random-source draws or the external-well assembly prove a stable three-condensate realization.
+  - One equally spaced toy geometry predicts that physical generation geometry is not equally spaced.
+  - The source pays FG4's physical residual or derives a measured nonzero phase.
+decisive_counterevidence:
+  - An arbitrary complex coupling matrix multiplied by one scalar global condensate factor retains its complex Gram and exact nonzero Fourier quartet.
+  - A matrix R0+i*R1 with noncommuting real symmetric R0 and R1 has a complex Gram and models entrywise or spatially varying phase structure.
+  - The exact Fourier-Takagi matrix decomposes as two real symmetric source matrices at phases zero and pi_over_two and has a nonzero quartet at N=3.
+  - The identity Gram admits a complex Fourier eigenbasis with a nonzero coordinate quartet while its commutator remains exactly zero.
+physical_ceiling:
+  - no_Yukawa_CKM_or_physical_CP_operation
+  - no_condensate_ontology_or_coexistence_stability
+  - no_generation_count_or_observed_family_map
+  - no_equal_spacing_prediction_or_measured_phase
+  - no_Standard_Model_or_substrate_realization

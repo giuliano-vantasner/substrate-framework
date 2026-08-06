@@ -1,0 +1,22 @@
+attempt: 0008
+campaign: P210
+timestamp_utc: '2026-08-06T07:08:00Z'
+kind: generated_queue_command_repair
+artifact: migration/source-claims.yaml
+initial_commands:
+  - inventory_source_with_queue_output_path
+  - inventory_claims_with_nonexistent_migration_source_inventory
+initial_result: >-
+  The first route selected the source-tree inventory generator rather than the
+  claim queue generator; the second selected the correct generator but named a
+  nonexistent inventory location and stopped with FileNotFoundError.
+mechanism: command_surface_and_pinned_inventory_path_mismatch
+repair_command: >-
+  .venv/bin/python scripts/inventory_claims.py --source-root
+  /home/dan/substrate --source-inventory
+  campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope
+  migration/scope.yaml --dispositions migration/dispositions.yaml --output
+  migration/source-claims.yaml
+repaired_result: queue_regenerated_with_14_pending_and_191_qualified_units
+scientific_candidate_rejected: false
+continuation: validate_terminal_graph_and_generated_docs_memory_against_the_repaired_queue

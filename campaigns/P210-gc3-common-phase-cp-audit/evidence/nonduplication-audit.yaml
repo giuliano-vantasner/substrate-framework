@@ -1,0 +1,19 @@
+campaign: P210
+claim: C-MIX-003
+nearest_claims:
+  C-MIX-001: Owns finite complex SVD Gram spectra basis freedoms and relative-basis conventions but not global-phase real-Gram null invariants.
+  C-MIX-002: Owns diagonal-rephasing quotient dimensions and invariant quartets but not the globally-phased-real matrix premise or Gram-commutator consequences.
+  C-OVL-001: Owns scalar normalized expectations for supplied real profiles but no off-diagonal matrix overlap or relative-basis theorem.
+  C-QBL-001: Owns one conditional stationary profile and charge curve but no matrix coupling theorem or forced complex ontology.
+novel_object: >-
+  C-MIX-003 types the exact left and right Gram cancellation for arbitrary
+  rectangular globally-phased real matrices, existence of real relative bases,
+  all-real quartets, real antisymmetric commutators with odd-trace and
+  odd-dimensional determinant nullity, and the enlarged degeneracy-basis
+  caveat in one reusable theorem.
+repository_search:
+  prior_C_MIX_003_occurrences_before_P210: 0
+  canonical_common_phase_module_before_P210: none
+  reused_APIs: [C-MIX-001_relative_basis_conventions, C-MIX-002_invariant_quartet]
+reserved_identifiers_checked: [C-MIX-003]
+result: promote_C_MIX_003_without_recasting_condensate_or_physical_CP_claims
