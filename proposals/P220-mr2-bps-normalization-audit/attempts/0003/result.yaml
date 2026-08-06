@@ -1,0 +1,19 @@
+campaign: P220
+attempt: 0003
+timestamp_utc: '2026-08-06T12:22:00Z'
+status: verifier_failed
+stage: first_primary_exact_nonduplication_run
+command: PYTHONPATH=src_.venv_bin_python_proposals_P220_verify.py
+exit_status: 1
+passed_checks_before_failure: 22
+elapsed_seconds: 1.77
+maximum_resident_kib: 147216
+failed_check: source_guard_is_selected_token_evidence_rather_than_dependency_closure
+diagnosis: >-
+  The verifier expected the forbidden comparator list to begin with 929/1000,
+  while the source list begins with 93892/100. The scientific derivations and
+  all prior checks passed; the failure is a brittle verifier spelling check.
+repair: inspect_the_assignment_AST_shape_instead_of_requiring_list_order
+scientific_candidate_rejected: false
+compatibility_failure: false
+next_action: rerun_the_same_primary_route_then_the_fresh_independent_route

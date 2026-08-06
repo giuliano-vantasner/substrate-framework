@@ -1,0 +1,14 @@
+campaign: P220
+canonical_module_change: none
+reason: exact_surviving_equations_are_already_importable_and_tested
+reused_APIs:
+  - substrate_framework.bps_energy.bps_bound_per_absolute_degree
+  - substrate_framework.hls_reduction.conditional_vector_current_sextic_matching
+  - substrate_framework.generalized_skyrme_radial.generalized_skyrme_reduced_coefficients
+campaign_code_role: thin_verification_and_governance_only
+duplicate_helpers_added_to_package: false
+integration_policy:
+  mutable_numpy: numpy.trapezoid
+  canonical_numeric: substrate_framework.numerics.trapezoid_integral
+  immutable_legacy: compatibility_provenance_only
+new_debt: []

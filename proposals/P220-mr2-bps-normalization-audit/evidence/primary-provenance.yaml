@@ -1,0 +1,18 @@
+campaign: P220
+verifier: verify.py
+sha256: 694e7d17a3c55ad7e2a6499ee7e574919728193b725506b1f5b89b20eaf394ee
+oracle: exact_SymPy_algebra_plus_registry_and_AST_governance_checks
+imports:
+  - substrate_framework.bps_energy.bps_bound_per_absolute_degree
+  - substrate_framework.generalized_skyrme_radial.generalized_skyrme_reduced_coefficients
+  - substrate_framework.hls_reduction.conditional_vector_current_sextic_matching
+  - substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+  - substrate_framework.verification.CheckLedger
+result: {exit_status: 0, checks: 25, elapsed_seconds: 2.37, maximum_resident_kib: 155352}
+mutations:
+  current_scales: [2, one_half, pi]
+  unnormalized_density: detected_2_pi_squared
+  missing_lambda_conversion: changes_reduced_coefficient
+  wrong_MK6_coordinate: exact_pi_squared_ratio
+  nonattainment_slack: positive_counterexample
+claim_scope: no_new_claim_exact_duplicate_and_physical_firewall

@@ -1,0 +1,19 @@
+campaign: P220
+criteria_order:
+  - identical_normalized_current_and_action_convention
+  - exact_coefficient_elimination
+  - accepted_dependency_closure
+  - current_rescaling_sensitivity
+  - novelty
+  - physical_interpretation_firewall
+candidates:
+  A: {result: exact, role: duplicate_C-VEC-002, selected_as_new_claim: false}
+  B: {result: exact_but_dependent, role: duplicate_C-GSK-001_regression, selected_as_new_claim: false}
+  C: {result: exact, role: duplicate_C-BPS-001_and_P219, selected_as_new_claim: false}
+  D: {result: mutation_breaks_untyped_map, role: sensitivity_evidence, selected_as_new_claim: false}
+  E: {result: physical_inputs_not_closed, role: firewall, selected_as_new_claim: false}
+  F: {result: selected, role: retain_no_claim_or_API, selected_as_new_claim: false}
+  G: {result: selected, role: terminal_duplicate_evidence_disposition, selected_as_new_claim: false}
+selection: [F, G]
+selection_reason: every_exact_survivor_has_an_accepted_owner_and_no_physical_dependency_closes
+comparator_influence: none_on_concept_selection

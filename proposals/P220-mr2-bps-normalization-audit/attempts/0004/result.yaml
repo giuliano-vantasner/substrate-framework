@@ -1,0 +1,33 @@
+campaign: P220
+attempt: 0004
+timestamp_utc: '2026-08-06T12:25:45Z'
+status: passed
+stage: mutation_sensitive_primary_and_fresh_independent_nonduplication
+primary:
+  command: PYTHONPATH=src_.venv_bin_python_proposals_P220_verify.py
+  sha256: 694e7d17a3c55ad7e2a6499ee7e574919728193b725506b1f5b89b20eaf394ee
+  exit_status: 0
+  checks: 25
+  elapsed_seconds: 2.37
+  maximum_resident_kib: 155352
+  terminal_tally: ALL_25_CHECKS_PASS_P220
+independent:
+  command: PYTHONPATH=src_.venv_bin_python_proposals_P220_independent_normalization_review.py
+  sha256: cae36f851fa681c9b5bc93f5feb4bcb4a4fd2d400c8254061b227f4f73db31df
+  exit_status: 0
+  checks: 18
+  elapsed_seconds: 2.09
+  maximum_resident_kib: 149032
+  terminal_tally: ALL_18_CHECKS_PASS_P220_INDEPENDENT
+sensitivity:
+  - omitted_target_volume_factor_changes_unit_integral_to_2_pi_squared
+  - current_rescalings_2_one_half_and_pi_change_the_coupling_map
+  - omitted_pi_squared_conversion_changes_c6
+  - wrong_coordinate_MK6_formula_is_exactly_pi_squared_larger
+  - positive_sector_slack_separates_bound_from_attained_energy
+result:
+  exact_duplicate_owners: [C-BPS-001, C-VEC-002, C-GSK-001, P219]
+  new_claims: []
+  new_APIs: []
+  physical_prediction: false
+next_action: replay_hash_pinned_graph_and_focused_existing_consumers

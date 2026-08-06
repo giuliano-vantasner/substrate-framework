@@ -1,0 +1,17 @@
+campaign: P220
+reviewer: reviews/independent_normalization_review.py
+sha256: cae36f851fa681c9b5bc93f5feb4bcb4a4fd2d400c8254061b227f4f73db31df
+oracle: fresh_direct_SymPy_derivation
+independence:
+  imports_source: false
+  imports_primary: false
+  imports_canonical_physics_APIs: false
+  imports_shared_tally_only: true
+  copied_expected_intermediate: false
+result: {exit_status: 0, checks: 18, elapsed_seconds: 2.09, maximum_resident_kib: 149032}
+conclusions:
+  - same_current_map_is_pi_squared_and_changes_under_current_rescaling
+  - corrected_formula_retains_N_c_m_pi_and_degree
+  - reduced_route_collapses_to_the_direct_bound
+  - positive_slack_refutes_bound_as_automatic_sector_energy
+  - no_novel_or_physical_claim_survives

@@ -1,0 +1,17 @@
+campaign: P220
+accepted_base: v0.158.0
+accepted_imports:
+  C-BPS-001: normalized_density_bound_equivalent_lambda_A_coordinate_and_attainment_ceiling
+  C-VEC-002: same_current_pi_squared_map_and_physical_field_firewall
+  C-GSK-001: conditional_reduced_coefficients_in_both_lambda_coordinates
+  C-VAR-002: bound_and_shared_functional_typing_context_only
+campaign_evidence:
+  P219: corrected_MK6_conditional_formula_and_rejected_physical_reading
+source_supplied_unaccepted_inputs: [N_c, m_pi, F_pi, lambda_A_equals_N_c_over_4F_pi, mu_equals_m_pi_F_pi_over_2]
+dependency_closure:
+  exact_convention_claims: closed_as_duplicates
+  physical_mass_or_sector_claims: not_closed
+  equality_attainment: not_supplied
+  novel_claim: none
+later_authority_excluded: [MR3, MR4, MR5, MR6]
+debt: []

@@ -1,0 +1,33 @@
+campaign: P220
+attempt: 0005
+timestamp_utc: '2026-08-06T12:25:45Z'
+status: passed
+stage: static_dependency_graph_and_focused_consumer_replay
+graph:
+  command: PYTHONPATH=src_.venv_bin_python_proposals_P220_replay_source_graph.py
+  sha256: 78ed9fedb99b8ce88c3a1d9b37993e01eab112097a9e98c8c5f14963cbb00bfd
+  exit_status: 0
+  nodes: 15
+  lexical_predicates: 99
+  assertions: 20
+  checks: 10
+  elapsed_seconds: 2.59
+  maximum_resident_kib: 158028
+focused_tests:
+  command: .venv_bin_python_-m_pytest_-q_test_bps_energy_test_hls_reduction_test_generalized_skyrme_radial
+  exit_status: 0
+  tests: 64
+  elapsed_seconds: 5.68
+  process_elapsed_seconds: 6.11
+  maximum_resident_kib: 160612
+compatibility:
+  immutable_legacy_inputs: [E2, E3]
+  handling: prior_compatibility_provenance_only
+  pending_current_scipy_trapezoid_consumers: [MR3, MR5, MR6]
+  scientific_version_failures: 0
+broad_suite:
+  rerun: false
+  reused_boundary: v0.158.0_at_7c98ec7
+  evidence: campaigns/P219-mk6-confrontation-tension-audit/attempts/0008/result.yaml
+  reason: no_canonical_code_claim_release_or_test_changed
+next_action: independent_disposition_review_and_terminal_record_synchronization

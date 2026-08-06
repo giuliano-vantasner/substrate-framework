@@ -1,0 +1,15 @@
+campaign: P220
+search_surfaces: [governance_registry, canonical_modules, campaigns, durable_memory]
+owners:
+  MR2_1: {claim: C-BPS-001, exact_surface: normalized_degree_density_and_2_pi_squared_mutation}
+  MR2_2: {claims: [C-VEC-002, C-BPS-001], exact_surface: same_current_lambda_map_and_bound_coordinate}
+  MR2_3: {claim: C-GSK-001, exact_surface: both_reduced_c6_coordinates}
+  MR2_4: {claim: C-BPS-001, exact_surface: square_completion_bound_and_equality_ceiling}
+  MR2_5: {owners: [C-VEC-002, C-BPS-001, P219], exact_surface: corrected_conditional_MK6_formula}
+  MR2_6: {owners: [C-GSK-001, C-BPS-001], exact_surface: dependent_reduced_regression}
+unowned_surfaces:
+  MR2_7: rejected_supplied_numeric_physical_interpretation
+  MR2_8: qualified_selected_token_AST_evidence_only
+new_claim_identifier: null
+new_API: null
+verdict: exact_nonduplication_proved

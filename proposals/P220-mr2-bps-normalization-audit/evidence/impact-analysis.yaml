@@ -1,0 +1,13 @@
+campaign: P220
+canonical_symbols_changed: []
+accepted_claims_changed: []
+release_changed: false
+tests_changed: []
+direct_source_consumers: [MR3, MR5, MR6]
+indirect_source_consumers: [MR4]
+generated_documents_affected: terminal_migration_disposition_and_campaign_index_only
+formal_theorems_affected: []
+memory_entries_affected:
+  - memory/vantasner/proposals/P220-mr2-bps-normalization-audit.md
+  - memory/vantasner/decisions/MR2-duplicate-evidence-review.md
+validation_policy: targeted_scientific_and_record_sensitive_only

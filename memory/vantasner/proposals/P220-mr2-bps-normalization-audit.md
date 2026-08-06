@@ -95,6 +95,21 @@ convention, coefficient, bound, and P219 correction content. MR2.6 reuses those
 same coefficients and is a dependent algebraic regression, MR2.7 is a supplied
 `N_c=3`, `m_pi=138.03 MeV` substitution rather than a physical prediction, and
 MR2.8 is only a selected-token AST guard. No provisional claim or API survives.
+Attempt 0003 preserves the first primary verifier's brittle list-order failure:
+22 scientific checks passed before a lexical expectation put `929/1000` first
+although the source begins its three-element list with `93892/100`. The repair
+audits the assignment's AST shape and does not change the scientific route.
+
+Attempt 0004 passes 25 primary and 18 fresh independent exact checks. Both
+routes derive the unit density, positive coupling map, transformed bound,
+corrected supplied-input expression, dependent reduced regression, and
+nonattainment slack. Current rescalings by two, one half, and pi all break the
+same-current map. Attempt 0005 passes ten graph checks over fifteen pinned
+nodes, 99 predicate sites, and 20 assertions, then 64 focused canonical tests.
+MR3, MR5, and MR6 use current SciPy `trapezoid`; immutable E2/E3 compatibility
+shapes remain provenance only. The unchanged v0.158.0 1,922-test full boundary
+is reused because P220 changes no canonical code, accepted claim, release, or
+test.
 
 ## Debt Ledger
 
@@ -105,11 +120,11 @@ novelty, compatibility, consumers, and terminal records.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | MR2 body and predicates remain unopened | Reproduce after committed freeze | discharged: P215 hash-identical execution reused and body audited |
-| Routes may share a copied intermediate | Eliminate independently to the same coefficient surface | diagnosed: MR2.6 is dependent; fresh verifier remains open |
-| Current rescaling may be hidden | Explicit wrong-normalization mutation | source lacks it; fresh verifier remains open |
-| Correct source result may be promoted twice | Registry campaign module and memory nonduplication audit | source-level duplication established; independent gate remains open |
+| Routes may share a copied intermediate | Eliminate independently to the same coefficient surface | discharged: both verifiers reduce MR2.6 to the same lambda-mu coefficient |
+| Current rescaling may be hidden | Explicit wrong-normalization mutation | discharged: three current scales break the same-current map |
+| Correct source result may be promoted twice | Registry campaign module and memory nonduplication audit | discharged: exact owners identified and no claim/API remains |
 | Physical inputs may leak through corrected numerics | Free-symbol and accepted-dependency audit | discharged: N_c, m_pi, and B remain supplied |
-| Later MR units may grant backward authority | Pinned graph replay | open |
+| Later MR units may grant backward authority | Pinned graph replay | discharged: 15-node static graph and durable executions |
 | Governed records remain unresolved | Source disposition and canonical synchronization | open |
 
 ## Review and Promotion Plan

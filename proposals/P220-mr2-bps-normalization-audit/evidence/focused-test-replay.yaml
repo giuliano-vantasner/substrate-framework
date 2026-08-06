@@ -1,0 +1,17 @@
+campaign: P220
+tests:
+  - tests/test_bps_energy.py
+  - tests/test_hls_reduction.py
+  - tests/test_generalized_skyrme_radial.py
+command: .venv_bin_python_-m_pytest_-q_three_target_files
+result: {exit_status: 0, passed: 64, elapsed_seconds: 5.68, maximum_resident_kib: 160612}
+scope:
+  - normalized_BPS_density_bound_and_equality_ceiling
+  - vector_current_elimination_and_lambda_coordinate_map
+  - generalized_reduced_coefficient_coordinates
+full_suite_reuse:
+  release: v0.158.0
+  commit: 7c98ec7
+  tests: 1922
+  evidence: campaigns/P219-mk6-confrontation-tension-audit/attempts/0008/result.yaml
+  reason: P220_changes_no_package_claim_release_or_test_surface

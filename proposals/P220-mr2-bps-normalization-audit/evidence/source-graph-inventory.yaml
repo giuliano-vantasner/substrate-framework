@@ -1,0 +1,22 @@
+campaign: P220
+root: MR2
+nodes: 15
+lexical_predicates: 99
+assertions: 20
+aggregate_checks: 10
+accepted_inputs: [E2, E3, E4, S3, MK1, MK2, MK3, MK4, MK5, MK6]
+duplicate_predecessor: MR1
+pending_future_dependency: MR3
+direct_reverse_consumers: [MR3, MR5, MR6]
+execution_policy:
+  reused_P215: [MR2, MR6]
+  reused_P174: [MR5]
+  static_until_own_frozen_campaign: [MR3]
+compatibility:
+  immutable_legacy_provenance_only: [E2, E3]
+  current_scipy_trapezoid: [MR3, MR5, MR6]
+  all_other_nodes: no_legacy_trapezoid_surface
+  scientific_version_failures: 0
+excluded_dirty_untracked_consumers: [phase47_BM, phase48_CE]
+reason_for_exclusion: absent_from_substrate_commit_6d1f4e0_and_pinned_queue
+debt: []
