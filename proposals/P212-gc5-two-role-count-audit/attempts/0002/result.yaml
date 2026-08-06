@@ -1,0 +1,41 @@
+attempt: 0002
+campaign: P212
+timestamp_utc: '2026-08-06T08:06:25Z'
+kind: compatibility_preflight_native_reproduction_and_source_inspection
+base_commit: 43ef65922bd63e7f17c861239e8ab4c189378b9d
+source_unit: GC5
+source_sha256: ffc638accff802c16804bd793b47e1cc5da018d5e0742ace57d9d3207e06b220
+native_exit_status: 0
+native_runtime_checks: 8
+lexical_check_calls: 8
+literal_check_calls: 2
+dynamic_check_calls: 6
+assert_nodes: 1
+terminal_tally: ALL_8_CHECKS_PASS
+elapsed_wall_seconds: 3.74
+maximum_resident_kib: 112756
+compatibility:
+  numpy_aliases: [np]
+  direct_legacy_attributes: 0
+  dynamic_legacy_getattrs: 0
+  imported_legacy_names: 0
+  eager_legacy_default_fallbacks: 0
+  current_references: 0
+  alias_replay_required: false
+  scientific_version_failures: 0
+source_findings:
+  exact_survivors:
+    - identical_self_centered_translated_families_have_equal_diagonal_self_overlaps
+    - separated_off_diagonal_decay_drives_singular_values_to_the_common_self_overlap
+    - the_complete_pair_cosine_surrogate_equals_one_half_of_resultant_norm_squared_minus_count
+    - one_and_antiphase_two_real_source_sums_are_globally_phased_real
+  corrected_overclaims:
+    - accepted_EM6_contains_no_stability_disjunction_theorem
+    - absence_of_required_U1_charge_does_not_imply_absence_of_a_complex_field_or_order_parameter
+    - MH2_external_wells_are_not_topological_anchors_or_generations
+    - the_pure_cosine_surrogate_is_not_the_exact_C_QBL_006_finite_interaction
+    - zero_resultant_phase_minima_are_nonunique_and_N4_has_a_square_weak_capacity_witness
+    - imaginary_entries_do_not_establish_a_nonzero_rephasing_invariant_or_physical_CP
+    - source_count_phase_supply_and_matrix_dimension_demand_have_no_accepted_budget_map
+verdict: source_reproduced_and_exact_post_source_obligations_frozen
+continuation: commit_post_source_record_then_derive_the_translation_limit_and_independent_count_countermodels

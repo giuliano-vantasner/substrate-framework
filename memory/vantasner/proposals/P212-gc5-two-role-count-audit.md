@@ -2,7 +2,7 @@
 description: Audit GC5 translated overlap degeneracy and two-role count claims
 author: vantasner
 created: '2026-08-06T08:01:44Z'
-updated: '2026-08-06T08:01:44Z'
+updated: '2026-08-06T08:06:25Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -119,6 +119,16 @@ policy before source inspection or execution. A failed two-role inference will
 redirect to the exact overlap-matrix object and another count model rather than
 end the campaign.
 
+Attempt 0002 finds zero direct, imported, dynamic, eager, or local-import NumPy
+quadrature compatibility surface and reproduces all eight native checks in
+3.74 seconds. The source uses translated external Pöschl wells, one displaced
+sech multiplier, a pure-cosine phase surrogate, random real matrices, and a
+source-count versus matrix-dimension budget. Opened inspection confirms the
+identical self-centered singular-value limit as the principal positive object,
+but the purported EM6 theorem, topological-anchor ontology, physical CP tests,
+stable three-condensate selection, and both exact counts conflict with accepted
+authority or fail their mathematical oracle.
+
 ## Debt Ledger
 
 The P212 ledger tracks density, multiplier, translation, amplitude, width,
@@ -128,14 +138,14 @@ counts, compatibility, consumers, and generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Source predicates remain blinded | Reproduce once after committed freeze | open |
+| Source predicates remain blinded | Reproduce once after committed freeze | discharged after `43ef659` |
 | Entrywise equality may be mistaken for spectral degeneracy | Derive singular-value bounds and limits | open |
 | Free profile data may manufacture a hierarchy | Enumerate and mutate every load-bearing input | open |
-| A stability label may import an absent theorem | Audit EM6 and every accepted dependency at source | open |
+| A stability label may import an absent theorem | Audit EM6 and every accepted dependency at source | discharged; the quote is nonauthoritative prose and C-QBL-001 withholds stability |
 | Field species, solutions, charges, and roles may be conflated | Materialize typed sets and incidence countermodels | open |
 | Capacity may be mistaken for occupied count | Test smaller counts and absent-selection models | open |
 | Pending GC6 may grant backward authority | Replay without importing GC6 | open |
-| Compatibility may masquerade as science | Audit every executable access shape | open |
+| Compatibility may masquerade as science | Audit every executable access shape | discharged; GC5 has zero quadrature surface |
 | Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | open |
 
 ## Review and Promotion Plan

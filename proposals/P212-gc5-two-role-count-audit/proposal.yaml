@@ -63,5 +63,17 @@ comparators_blinded_until: >-
   values, count logic, remaining predicates, guards, and native output remain
   unopened until this contract, formula freeze, provenance record, memory
   validation, clean repository validation, and freeze commit exist.
-status: draft
-revision: 0001
+status: active
+revision: 0002
+opened_source_equations:
+  naive_matrix: Y=sum_c_exp(i*theta_c)*I_c_with_(I_c)_ab=integral_eta_a*eta_b*Phi_c_dx
+  wells: H_R=-d_x^2-depth*sech((x-R)/width)^2_on_a_truncated_Dirichlet_interval
+  hierarchy_overlap: y_n=integral_abs(eta_n)^2*A*sech(kappa*x)_dx
+  phase_surrogate: sum_(a<b)_cos(theta_a-theta_b)
+  phase_identity: one_half*(abs(sum_a_exp(i*theta_a))^2-N)
+  phase_budget: N_H-1_greater_equal_(N_gen-1)*(N_gen-2)/2
+opened_source_parameters:
+  omega: 0.45
+  naive_well: {depth: 3.0, width: 1.0, count: 3}
+  hierarchy_well: {depth: 12.0, width: 0.7, spacing: 4.0, count: 6}
+  phase_optimizer_starts: 400
