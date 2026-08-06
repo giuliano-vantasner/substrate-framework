@@ -1,0 +1,10 @@
+campaign: P222
+reviewer: reviews/independent_rho_saturation_review.py
+sha256: 5de6701b5d65e20408578f1cda6a50a3d922f375b24c9ab37426adfdbb490aa0
+independence:
+  imports_source: false
+  imports_canonical_HLS_API: false
+  imports_primary_verifier: false
+  shared_framework_surface: substrate_framework.verification.CheckLedger_only
+method: direct_Pauli_matrix_trace_coefficient_and_simultaneous_scalar_elimination
+result: {exit_status: 0, checks: 19, elapsed_seconds: 1.69, maximum_resident_kib: 144428}

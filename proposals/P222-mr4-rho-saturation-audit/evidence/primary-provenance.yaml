@@ -1,0 +1,20 @@
+campaign: P222
+verifier: verify.py
+sha256: b1d2fca72e3a60d6878779189b184fed564a79d472e8aa0ef9dd26fa24636c32
+oracle: exact_SymPy_canonical_HLS_AST_registry_and_dependency_checks
+imports:
+  - substrate_framework.hls_reduction.conditional_hls_ksrf_matching
+  - substrate_framework.hls_reduction.leading_hls_connection_reduction
+  - substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+  - substrate_framework.verification.CheckLedger
+result: {exit_status: 0, checks: 30, elapsed_seconds: 2.71, maximum_resident_kib: 154700}
+mutations:
+  KSRF_a: [1, 4]
+  common_unit_coefficients: [8, 32]
+load_bearing_surfaces:
+  - leading_p4_e_equals_g
+  - p6_backreaction_ceiling
+  - conditional_a_fourth_root
+  - retained_mass_ratio_inputs
+  - ANW_comparator_dataflow
+claim_scope: no_new_claim_exact_duplicate_and_physical_firewall

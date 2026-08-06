@@ -1,0 +1,10 @@
+campaign: P222
+canonical_symbols_changed: []
+accepted_claims_changed: []
+release_changed: false
+tests_changed: []
+existing_owners:
+  - src/substrate_framework/hls_reduction.py
+  - tests/test_hls_reduction.py
+decision: no_duplicate_wrapper_or_composition_API
+reason: direct_scalar_substitution_has_no_distinct_consumer_or_theorem_reach

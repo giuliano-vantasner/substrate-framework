@@ -2,7 +2,7 @@
 description: Audit MR4 rho-saturation and dimensionless Skyrme-coupling claims
 author: vantasner
 created: '2026-08-06T13:14:17Z'
-updated: '2026-08-06T13:14:17Z'
+updated: '2026-08-06T13:22:40Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -84,6 +84,14 @@ the direct conditional composition of C-VEC-001 and C-SK-001 with supplied
 readings; and MR4.7 omits selected needles while the ANW fit is load-bearing.
 No distinct claim or API remains.
 
+Attempt 0004 preserves an incorrectly transcribed expected decimal; direct
+high-precision evaluation repaired it without changing the exact expression or
+tolerance. Attempt 0005 then passes 30 primary, 19 fresh independent, and eight
+graph checks plus 34 canonical HLS tests. Mutating `a`, the one-sixteenth trace
+factor, or the common-unit coefficient changes the verdict. With `a` unfixed,
+every positive coupling is realizable, so the two source convention readings
+are not a bound. Existing package, claims, release, and tests remain unchanged.
+
 ## Debt Ledger
 
 The ledger tracks every exact identity, declared coefficient, physical import,
@@ -92,11 +100,11 @@ derivative-order ceiling, compatibility surface, consumer, and governed record.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | MR4 body and predicates remain unopened | Open only after committed freeze | discharged: seven-predicate source audit |
-| HLS algebra may duplicate C-VEC-001 | Exact nonduplication and convention audit | duplicate found; exact verifier open |
-| KSRF may be laundered from premise to derivation | Dependency and mutation audit | diagnosed as supplied; exact verifier open |
-| A dimensionless value may be called parameter-free | Scaling and import inventory | diagnosed: m_V m_e and a remain; exact verifier open |
-| Leading reduction may be called a full-vector theorem | Derivative-order and EOM scope audit | diagnosed: C-VEC-001 p4/p6 ceiling; exact verifier open |
-| Later units may grant backward authority | Pinned MR5-MR6 replay | open |
+| HLS algebra may duplicate C-VEC-001 | Exact nonduplication and convention audit | discharged: exact duplicate verified |
+| KSRF may be laundered from premise to derivation | Dependency and mutation audit | discharged: a mutation fails and premise remains explicit |
+| A dimensionless value may be called parameter-free | Scaling and import inventory | discharged: m_V m_e a and scaling orbit remain visible |
+| Leading reduction may be called a full-vector theorem | Derivative-order and EOM scope audit | discharged: canonical p4/p6 ceiling passes |
+| Later units may grant backward authority | Pinned MR5-MR6 replay | discharged: eight graph checks retain both pending |
 | Governed records remain unresolved | Terminal disposition and synchronization | open |
 
 ## Review, Promotion, and Done Gate

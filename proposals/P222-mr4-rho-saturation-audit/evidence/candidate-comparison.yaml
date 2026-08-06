@@ -1,0 +1,12 @@
+campaign: P222
+criteria_frozen_before_remaining_source_values: true
+candidates:
+  A: {decision: retained_as_existing_context, reason: generic_exact_identity_owned_by_C_VEC_001_while_source_checks_one_point}
+  B: {decision: selected_as_duplicate_owner, reason: normalized_leading_e_equals_g_is_exactly_C_VEC_001}
+  C: {decision: rejected_for_new_claim, reason: square_root_closure_is_direct_C_VEC_001_C_SK_001_composition_plus_supplied_inputs}
+  D: {decision: selected_as_conditional_firewall, reason: a_m_V_m_e_and_common_unit_remain_visible}
+  E: {decision: selected_as_physical_firewall, reason: KSRF_and_particle_map_are_not_accepted}
+  F: {decision: selected, reason: no_new_claim_or_API_survives_nonduplication}
+  G: {decision: selected_for_governance, reason: MR4_and_reverse_consumers_need_terminal_status}
+selection_basis: [exact_convention, accepted_dependency_closure, assumption_economy, derivative_order, mutation_sensitivity, nonduplication]
+comparator_proximity_used_for_selection: false

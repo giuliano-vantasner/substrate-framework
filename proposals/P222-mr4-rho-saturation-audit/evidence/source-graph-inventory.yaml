@@ -1,0 +1,17 @@
+campaign: P222
+root: MR4
+nodes: 3
+lexical_predicates: 19
+assertions: 5
+aggregate_checks: 8
+verifier_sha256: 85d2c2b0dc314db566c301b2f69be6edd05f8e7e48dd5e48c6596e7790e0ab03
+result: {exit_status: 0, checks: 8, elapsed_seconds: 2.44, maximum_resident_kib: 157440}
+direct_reverse_consumers: [MR5, MR6]
+execution_policy:
+  reused_P215: [MR4, MR6]
+  reused_P174: [MR5]
+compatibility:
+  MR4: no_sampled_integration_surface
+  current_scipy_trapezoid: [MR5, MR6]
+  scientific_version_failures: 0
+debt: []

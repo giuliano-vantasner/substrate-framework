@@ -1,0 +1,19 @@
+campaign: P222
+claim_delta: []
+accepted_owners: [C-VEC-001, C-SK-001]
+conditional_composition_inputs:
+  - e_equals_g_at_leading_p4_order
+  - m_V_squared_equals_a_g_squared_F_squared
+  - U_equals_F_over_e
+source_specialization:
+  - a_equals_2
+  - U_equals_16_pi_m_e
+  - imported_m_rho_775_26_MeV
+  - imported_m_e_0_511_MeV
+unresolved_physical_imports:
+  - HLS_field_content
+  - KSRF_and_a_two
+  - physical_rho_and_pion_map
+  - particle_mass_authority
+  - full_vector_solution
+dependency_closure: exact_conditional_algebra_closed_but_physical_parameter_free_claim_open_and_rejected

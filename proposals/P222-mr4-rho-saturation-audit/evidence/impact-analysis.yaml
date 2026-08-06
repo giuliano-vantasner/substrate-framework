@@ -1,0 +1,11 @@
+campaign: P222
+canonical_symbols_changed: []
+accepted_claims_changed: []
+release_changed: false
+direct_source_consumers: [MR5, MR6]
+generated_documents_affected: terminal_migration_disposition_and_campaign_index_only
+formal_theorems_affected: []
+memory_entries_affected:
+  - memory/vantasner/proposals/P222-mr4-rho-saturation-audit.md
+  - memory/vantasner/decisions/MR4-duplicate-evidence-review.md
+validation_policy: targeted_scientific_and_record_sensitive_only_with_v0_159_full_suite_reuse

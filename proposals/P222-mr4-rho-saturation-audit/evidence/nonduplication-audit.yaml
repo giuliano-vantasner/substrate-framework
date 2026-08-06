@@ -1,0 +1,15 @@
+campaign: P222
+claim_delta: []
+registry_collision: exact
+owners:
+  C-VEC-001:
+    - leading_half_connection
+    - Maurer_Cartan_curvature_minus_one_quarter
+    - normalized_e_equals_g
+    - p4_leading_and_p6_backreaction_ceiling
+    - conditional_m_V_squared_equals_a_g_squared_F_squared
+    - dimensionless_e_equals_m_V_over_sqrt_a_F
+  C-SK-001:
+    - conditional_F_over_e_equals_16_pi_E_e_iff
+composition: e_squared_equals_m_V_over_sqrt_a_U_is_direct_elimination_without_new_premise_or_reach
+decision: no_new_claim_or_API

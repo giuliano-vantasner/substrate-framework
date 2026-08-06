@@ -1,0 +1,12 @@
+campaign: P222
+tests: [tests/test_hls_reduction.py]
+result: {exit_status: 0, passed: 34, elapsed_seconds: 2.53, maximum_resident_kib: 154836}
+scope:
+  - SU2_current_quartic_and_trace_normalization
+  - leading_HLS_half_connection_and_derivative_order
+  - conditional_KSRF_parameter_visibility
+full_suite_reuse:
+  release: v0.159.0
+  commit: 35c39fe
+  tests: 1929
+  reason: P222_changes_no_package_claim_release_or_test_surface

@@ -1,0 +1,14 @@
+campaign: P222
+attempt: 0004
+timestamp_utc: '2026-08-06T13:21:48Z'
+status: failed_expected_decimal_repaired
+stage: primary_exact_verifier
+exit_status: 1
+checks_passed_before_failure: 22
+failure: supplied_mass_ratio_decimal_regression
+cause: verifier_expected_decimal_was_transcribed_incorrectly
+expected_in_failed_check: 4.61976191361678
+exact_rederived_value: 4.61977486638101057
+scientific_interpretation: exact_expression_and_source_scope_unchanged
+repair: replace_only_the_decimal_regression_with_the_direct_high_precision_evaluation
+continuation: rerun_primary_without_relaxing_tolerance
