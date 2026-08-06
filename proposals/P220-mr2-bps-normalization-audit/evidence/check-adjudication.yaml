@@ -1,0 +1,23 @@
+campaign: P220
+source_unit: MR2
+lexical_check_calls: 8
+runtime_checks: 8
+assertion_nodes: 1
+checks:
+  - {id: MR2.1, scientific_surface: normalized_hedgehog_density, decision: duplicate_C-BPS-001}
+  - {id: MR2.2, scientific_surface: lambda_coordinate_map, decision: duplicate_C-VEC-002_and_C-BPS-001}
+  - {id: MR2.3, scientific_surface: reduced_sextic_coefficient, decision: duplicate_C-GSK-001}
+  - {id: MR2.4, scientific_surface: lambda_A_bound, decision: duplicate_C-BPS-001}
+  - {id: MR2.5, scientific_surface: corrected_MK6_formula, decision: duplicate_P219}
+  - {id: MR2.6, scientific_surface: reduced_integrand_cross_check, decision: dependent_regression}
+  - {id: MR2.7, scientific_surface: supplied_numeric_value, decision: rejected_as_physical}
+  - {id: MR2.8, scientific_surface: selected_AST_needles, decision: qualified_lexical_only}
+oracle_failures:
+  - current_normalization_is_not_mutated
+  - positive_root_typing_is_implicit
+  - reduced_route_reuses_the_same_coefficient_normalization
+  - lower_bound_attainment_is_not_established
+  - supplied_N_c_and_m_pi_are_called_zero_parameter
+  - selected_AST_absence_is_not_dependency_closure
+  - physical_ten_percent_contribution_is_not_defined_or_derived
+terminal_tally_interpretation: all_source_assertions_execute_but_do_not_create_a_novel_or_physical_claim

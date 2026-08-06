@@ -1,0 +1,80 @@
+campaign: P220
+source_unit: MR2
+predicates:
+  MR2.1:
+    source_verdict: exact_unit_hedgehog_normalization
+    framework_verdict: duplicate_evidence
+    owner: C-BPS-001
+    reason: >-
+      The unit hedgehog integral is a coordinate specialization of the already
+      accepted normalized pullback density whose integral is signed degree.
+      C-BPS-001 also records the 2*pi^2 wrong-normalization mutation.
+  MR2.2:
+    source_verdict: exact_same_current_convention_map
+    framework_verdict: duplicate_evidence
+    owners: [C-VEC-002, C-BPS-001]
+    reason: >-
+      For one common normalized current and positive couplings, equating the
+      two sextic densities gives lambda_A=pi^2*lambda_BPS. Both accepted claims
+      already state the map and the transformed bound.
+  MR2.3:
+    source_verdict: exact_conditional_reduced_coefficient
+    framework_verdict: duplicate_evidence
+    owner: C-GSK-001
+    reason: >-
+      The derived coefficient lambda_A^2*e^4*F^2/(8*pi^4), its lambda_BPS
+      coordinate, and the required convention map are already exact accepted
+      content. The substitution lambda_A=N_c/(4*F) is unaccepted physical
+      input and adds no coefficient closure.
+  MR2.4:
+    source_verdict: exact_conditional_bound_in_lambda_A_coordinate
+    framework_verdict: duplicate_evidence
+    owner: C-BPS-001
+    reason: >-
+      C-BPS-001 already completes the normalized square, states the equality
+      condition, and records the equivalent coefficient 2*lambda_A*mu*W.
+      MR2 does not prove equality attainment.
+  MR2.5:
+    source_verdict: corrects_MK6_by_exact_pi_squared_factor
+    framework_verdict: duplicate_conditional_consequence
+    owners: [C-VEC-002, C-BPS-001, P219]
+    reason: >-
+      Converting MK2's supplied lambda_A before applying the accepted bound
+      gives 8*sqrt(2)*N_c*m_pi*abs(B)/(15*pi). P219 already records this exact
+      correction and rejects zero-parameter or physical-mass interpretations.
+  MR2.6:
+    source_verdict: exact_reduced_integrand_regression
+    framework_verdict: dependent_duplicate_evidence
+    owners: [C-GSK-001, C-BPS-001]
+    reason: >-
+      The route starts from C-GSK-001's same c6 and c0 normalization and its
+      square completion eliminates to the same positive coupling equation.
+      Eliminating the shared intermediate leaves no independent premise or
+      solution set, so this is regression evidence rather than a second oracle.
+  MR2.7:
+    source_verdict: supplied_input_numeric_substitution_reproduces
+    framework_verdict: rejected_as_physical_claim
+    reason: >-
+      The 99.417 MeV value inserts N_c=3 and m_pi=138.03 MeV and assumes the
+      unaccepted MK2 product. It is neither zero-parameter nor an accepted
+      baryon-sector energy. Comparing it with a nucleon mass cannot establish
+      a ten-percent physical contribution.
+  MR2.8:
+    source_verdict: narrow_AST_guard_passes
+    framework_verdict: qualified_lexical_evidence_only
+    reason: >-
+      Reconstructed numeric needles and selected identifiers show only that a
+      short comparator list is absent from the executable AST. The corrected
+      expression still retains supplied N_c, m_pi, and B, so the guard does not
+      prove dependency closure, parameter freedom, or concept blinding.
+prose_only_surfaces:
+  MK4_radius_normalization:
+    verdict: not_promoted
+    reason: >-
+      P217 owns only a conditional compacton in declared coordinates. MR2 gives
+      no accepted physical coupling or coordinate map that changes that claim.
+  unaffected_earlier_campaigns:
+    verdict: governance_consistency_note_only
+    reason: accepted claims retain their own declared conventions and ceilings
+headline_verdict: correct_normalization_audit_with_no_novel_accepted_claim_surface
+expected_terminal_disposition: duplicate_evidence

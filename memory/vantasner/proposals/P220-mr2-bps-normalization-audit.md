@@ -87,6 +87,15 @@ Attempt 0001 freezes seven candidates, no provisional claim, three exact
 normalization routes, mutations, provenance, compatibility handling, and
 nonduplication criteria before the source body opens.
 
+Attempt 0002 reuses P215's hash-identical clean MR2 execution: eight runtime
+checks, one assertion, exit zero, and 1.076 seconds. MR2 imports neither NumPy
+nor SciPy and has no legacy trapezoidal integration surface. Claim-by-claim
+inspection finds that MR2.1 through MR2.5 duplicate accepted normalization,
+convention, coefficient, bound, and P219 correction content. MR2.6 reuses those
+same coefficients and is a dependent algebraic regression, MR2.7 is a supplied
+`N_c=3`, `m_pi=138.03 MeV` substitution rather than a physical prediction, and
+MR2.8 is only a selected-token AST guard. No provisional claim or API survives.
+
 ## Debt Ledger
 
 The ledger tracks source predicates, current normalization, lambda coordinate,
@@ -95,11 +104,11 @@ novelty, compatibility, consumers, and terminal records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MR2 body and predicates remain unopened | Reproduce after committed freeze | open |
-| Routes may share a copied intermediate | Eliminate independently to the same coefficient surface | open |
-| Current rescaling may be hidden | Explicit wrong-normalization mutation | open |
-| Correct source result may be promoted twice | Registry campaign module and memory nonduplication audit | open |
-| Physical inputs may leak through corrected numerics | Free-symbol and accepted-dependency audit | open |
+| MR2 body and predicates remain unopened | Reproduce after committed freeze | discharged: P215 hash-identical execution reused and body audited |
+| Routes may share a copied intermediate | Eliminate independently to the same coefficient surface | diagnosed: MR2.6 is dependent; fresh verifier remains open |
+| Current rescaling may be hidden | Explicit wrong-normalization mutation | source lacks it; fresh verifier remains open |
+| Correct source result may be promoted twice | Registry campaign module and memory nonduplication audit | source-level duplication established; independent gate remains open |
+| Physical inputs may leak through corrected numerics | Free-symbol and accepted-dependency audit | discharged: N_c, m_pi, and B remain supplied |
 | Later MR units may grant backward authority | Pinned graph replay | open |
 | Governed records remain unresolved | Source disposition and canonical synchronization | open |
 

@@ -1,0 +1,19 @@
+campaign: P220
+source_unit: MR2
+provisional_claims: []
+decision: retain_no_claim_or_canonical_API
+exact_duplicate_owners:
+  normalized_density_and_bound: C-BPS-001
+  same_current_lambda_map: C-VEC-002
+  reduced_coefficient_coordinates: C-GSK-001
+  corrected_MK6_conditional_formula: P219
+excluded:
+  - physical_baryon_current_or_state
+  - accepted_N_c_F_pi_m_pi_or_vector_coupling_map
+  - equality_attainment_or_physical_BPS_sector_energy
+  - zero_parameter_mass_prediction
+  - ten_percent_nucleon_mass_contribution
+  - independent_oracle_status_for_MR2_6
+  - physical_compacton_radius_correction
+expected_disposition: duplicate_evidence
+next_gate: mutation_sensitive_primary_fresh_independent_and_consumer_replay

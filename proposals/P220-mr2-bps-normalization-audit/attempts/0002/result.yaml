@@ -1,0 +1,36 @@
+campaign: P220
+attempt: 0002
+timestamp_utc: '2026-08-06T12:18:40Z'
+status: passed_with_source_claim_qualification
+stage: compatibility_preflight_reused_reproduction_and_body_audit
+source_sha256: 2e62ce2d6cbee805a988046a27a742e622931291e8e013a9aede6ce16e48e990
+execution:
+  new_source_run_performed: false
+  reused_evidence: campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-graph-inventory.yaml
+  justification: >-
+    P215 already executed the identical hash in the same pinned source tree and
+    current framework environment. Repeating it would add timing noise but no
+    scientific or compatibility information.
+  exit_status: 0
+  runtime_checks: 8
+  assertions: 1
+  elapsed_seconds: 1.076
+  verdict: clean_noncanonical
+compatibility:
+  numpy_imports: 0
+  scipy_imports: 0
+  direct_numpy_trapz: 0
+  imported_legacy_trapz: 0
+  dynamic_numpy_trapz: 0
+  eager_nested_legacy_fallback: 0
+  scientific_version_failure: false
+source_result:
+  exact_survivors_duplicate: [C-BPS-001, C-VEC-002, C-GSK-001, P219]
+  dependent_regression: MR2.6
+  supplied_input_numeric_only: MR2.7
+  lexical_guard_only: MR2.8
+  physical_claims_rejected:
+    - zero_parameter_mass_prediction
+    - ten_percent_physical_sector_contribution
+    - corrected_compacton_radius_normalization_without_declared_coordinate_map
+next_action: implement_mutation_sensitive_primary_and_fresh_independent_nonduplication_verifiers
