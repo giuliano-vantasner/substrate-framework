@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research PR Harvest"
+  short_description: "Process research PRs through durable harvest"
+  default_prompt: "Use $research-pr-harvest to autonomously process this PR through harvest, merge or close, and the linked issue handoff."

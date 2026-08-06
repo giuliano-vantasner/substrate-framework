@@ -64,6 +64,19 @@ Build the smallest dependency-first ladder. Each row names the strongest practic
 ## Importable Implementation
 Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric. Route canonical sampled trapezoidal integration through its compatibility helper; mutable standalone scripts for the current environment use `np.trapezoid`, never removed `np.trapz`, and tractable exact integrals stay symbolic. Preflight direct attributes, imported names, and dynamic `getattr` access; nested fallback defaults are eager, so use a two-step `None` fallback.
 
+## Harvest Checkpoints
+Record each locally complete unit as soon as it becomes independently correct and reusable. Use `$research-pr-harvest` to decide whether to merge it unchanged, refactor it into a clean unit, or leave it in PR history. A harvested unit does not complete the parent objective or promote its headline claim. Missing campaign links belong in the active frontier, not the debt ledger.
+
+- Canonical goal issue: <number/link>
+- PR issue reference: <`Advances #N` or `Fixes #N`>
+- Final issue handoff: <posted comment link or ready-to-post pending>
+
+| Unit | Local claim | Independent of headline? | Evidence | Commit/PR | Disposition |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
+
+At the final harvest boundary, update the canonical issue with unit-level lists and rationales for what merged, what requires refactor and the exact required change, and what remains only in PR history. Include landed paths/commits and the next decisive action so a fresh agent can resume from the issue alone.
+
 ## Attempts
 Append one row per scientific attempt. Preserve source, stdout/stderr, elapsed time, and exact command. A native immutable-source abort caused only by missing direct, imported, or dynamic `np.trapz`—including an eagerly evaluated nested fallback—is compatibility provenance: run an alias-only compatibility replay and use that replay for scientific adjudication rather than consuming or rejecting a candidate. Failure of the repaired scientific route triggers the next route; it never closes the arc.
 
@@ -88,7 +101,7 @@ List direct and indirect consumers and every replay command. Preflight direct/im
 Leave empty unless independent evidence shows accepted foundations are inconsistent. If opened, link a separate proposal containing the pre-existing inconsistency, two or more repair candidates, minimum-change decision, migration map, independent review, and full replay. Never use this section to rescue a favored concept.
 
 ## Debt Ledger
-Track every assumption, import, parameter, residual, unresolved convention, broken consumer, or documentation mismatch. Empty it before completion.
+Track every assumption, import, parameter, residual, unresolved convention, broken consumer, or documentation mismatch inside the scope proposed for promotion. Empty it before completion. Do not list the still-open parent objective or an unselected future route as debt.
 
 | Debt | Source | Effect | Discharge | Status |
 | --- | --- | --- | --- | --- |
@@ -97,7 +110,7 @@ Track every assumption, import, parameter, residual, unresolved convention, brok
 Link one `claim-review.md` instance per promoted claim. Record all four status axes and why verifier success establishes the exact headline claim.
 
 ## Results and Continuation
-Record accepted positive results and reproduction commands. For each failed route, record the next active candidate or repair. If the environment pauses, preserve the exact next executable action and keep status active.
+Record accepted positive results and reproduction commands. Also record harvested progress and the last strong milestone. For each failed route, record the next active candidate or repair. If an agent run reaches diminishing returns, hand off the exact campaign frontier to a fresh run without changing the objective or marking the arc complete.
 
 ## Promotion and Materialization
 Record extracted APIs/tests, accepted registry entries, immutable campaign location, release id, generated docs command, accepted-memory synchronization, and proposal/attempt memory separation.

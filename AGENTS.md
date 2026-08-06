@@ -21,6 +21,10 @@ An effort succeeds only when all of the following are true:
 
 Only the user may change the objective or accept a reduced scope. Runtime interruption, missing authority, or an external dependency may pause execution, but it does not turn incomplete work into success.
 
+These gates govern declaring the objective complete and promoting its headline claims. They are not a universal pull-request merge gate. Use `.agents/skills/research-pr-harvest/SKILL.md` to extract locally correct, novel, reusable units from an incomplete campaign while leaving its goal open. A merge creates provenance and reusable code, not accepted scientific authority. Missing parts of the larger goal are campaign frontier, not debt; debt is an unresolved defect, hidden assumption, broken consumer, or unsupported promise inside the scope being merged or promoted. Every harvest PR must name its canonical goal issue, and the final disposition must update that issue with unit-level lists and rationales for what merged, what requires refactor, and what remains only in PR history, plus landed links and the next decisive action.
+
+When the user supplies a pull-request URL or number, treat it as standing authorization to process that PR autonomously through the normal repository lifecycle: inspect, review, comment, correct PR metadata, create a focused harvest branch or follow-up PR, merge or close according to the evidence, and update the linked issue. Do not pause for routine operator confirmation. This authorization does not permit force-pushing a contributor branch, deleting unrelated branches, changing the user's objective, or promoting a claim that has not passed governance.
+
 ## Authority and provenance
 
 Use this authority order:
@@ -149,6 +153,8 @@ reconciliation, but a generic method is not a substitute for restoring the
 framework's dependency, invariant, convention, and consumer context.
 
 Do not lower the bar, inflate tolerances, convert a comparator into an input, or celebrate a no-go. A failure improves the next attempt; it does not finish the task.
+
+Do not make durable progress wait for the final capstone. When a utility, exact local result, solver, source construction, or verifier becomes independently correct and reusable, harvest it through a focused PR or commit. Keep speculative composition and failed-route narration in PR history unless they yield a separately reusable object. An individual agent run may hand off at the last strong milestone; the campaign objective remains open for a fresh run.
 
 ## Memory discipline
 

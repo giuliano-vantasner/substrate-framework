@@ -30,6 +30,7 @@ Read [governance.md](references/governance.md) before changing a claim, conventi
 - A campaign is an immutable research event, not canonical truth.
 - A proposal can challenge a claim; only an accepted claim can supersede one.
 - A verifier passing is necessary, but proves only its asserted predicate.
+- A campaign completion decision, scientific claim decision, and PR merge decision are independent. Use `research-pr-harvest` for the merge decision.
 - Numeric agreement is a comparator, never a concept-selection mechanism or hidden derivation input.
 - A failed concept is evidence about that concept. It is not permission to retrofit the framework around it.
 - An attempt is bounded and append-only. The effort continues until the success contract is met or the user changes the objective.
@@ -179,7 +180,7 @@ For accepted claims:
 
 ## Phase 10 — done gate
 
-Close only when every item in the success contract passes and the debt ledger is empty. An honest failure remains an active effort with a new candidate or repair queued. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
+Declare the campaign objective complete only when every item in the success contract passes and the debt ledger is empty. An honest failure leaves the objective active with a new candidate or repair queued. It does not prevent an individual PR or agent run from ending at a clean harvest checkpoint: use `research-pr-harvest` to merge independently correct, novel, reusable units, name and keep open the canonical goal issue, update that issue with the merged/refactor/history disposition and unit-level rationale, and hand the exact frontier to a fresh run. Missing work toward the larger goal is frontier rather than debt unless a merged or promoted unit promises it. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
 
 ## Working with delegated agents
 

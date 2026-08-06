@@ -1,6 +1,6 @@
 # Delegated Continuation PR Template
 
-This is the repository-local successor to the earlier continuation template. Negative and partial classifications remain useful attempt evidence, but they are not terminal outcomes for a positive framework objective.
+This template separates a bounded PR or agent run from the long-lived positive framework objective. Partial progress does not complete the goal, but independently correct, novel, reusable work may be harvested and merged without carrying failed-attempt or debt-ledger bloat into main.
 
 ```md
 ---
@@ -27,6 +27,19 @@ Link the proposal manifest, invariants, allowed imports, at least two candidates
 
 ## Significant Advance
 Describe the importable object, claim, or dependency closure this PR must add. Documentation-only reinterpretation and naive bolt-ons are insufficient.
+
+## Harvest Checkpoints
+Use `$research-pr-harvest` whenever a local unit becomes complete. Keep utilities, verified local results, and speculative composition in separable commits so later context fade cannot erase earlier value.
+
+- Canonical goal issue: <number/link>
+- PR issue reference: <`Advances #N` or `Fixes #N`>
+- Final issue handoff: <posted comment link or ready-to-post pending>
+
+| Unit | Local claim | Headline-independent? | Evidence | Merge disposition |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+After the merge boundary is known, update the canonical issue with three unit-level lists: merged and rationale, requires refactor and rationale plus exact required change, and left in PR history and rationale. Link landed paths/commits, the reviewed PR, and the next decisive action. If GitHub mutation is not authorized, preserve the exact ready-to-post comment and mark the handoff pending.
 
 ## Decomposition and Ownership
 List dependency-ordered local work and one child contract per authorized worker. Give workers disjoint write surfaces and raw sourced inputs.
@@ -63,16 +76,16 @@ Every failed row creates the next task.
 | Debt ledger empty |  |  |  |
 
 ## Debt Ledger
-Track every introduced assumption, import, parameter, residual, convention conflict, broken consumer, and narrative mismatch until discharged.
+Track every introduced assumption, import, parameter, residual, convention conflict, broken consumer, and narrative mismatch inside a unit proposed for merge or promotion until discharged. The uncompleted remainder of the parent goal is campaign frontier, not debt.
 
 ## Promotion Record
 List individually accepted claims, source API/tests, immutable campaign record, release id, generated outputs, memory synchronization, commit, PR, and review evidence.
 
 ## Results and Next Action
-Record the verified positive result. If incomplete, preserve the exact next executable action and leave the contract active.
+Record the verified positive result and every harvested unit. If the parent objective is incomplete, use `Advances #N`, preserve the exact next decisive action, and leave the goal active. A clean harvest handoff may end this PR or agent run without pretending the campaign is complete.
 
 ## Done Gate
-Check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh` run (including its full test suite) at the unchanged promotion boundary, and empty debt. Do not stop on an honest failure.
+For full campaign completion, check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh` run at the unchanged promotion boundary, and empty debt. For a progress merge, require only that each harvested unit passes its local claim, dependency, convention, consumer, and validation gates; keep the campaign open and do not promote unsupported headline claims.
 
 ## Cross-References
 Link parent/child contracts, proposal, claims, campaigns, source, tests, release, generated docs, and PR.
