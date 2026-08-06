@@ -1,0 +1,27 @@
+campaign: P224
+attempt: 0001
+timestamp_utc: '2026-08-06T13:55:51Z'
+status: passed
+stage: contract_formula_and_provenance_freeze
+base_release: v0.159.0
+base_commit: 1468b13
+source_unit: MR6
+source_sha256: 9443373f412cfe86b26bec6c35eb245ee83cd5dd5b65c76a5b3bb1c6d2106d9d
+candidates_frozen: [A, B, C, D, E, F, G, H]
+provisional_claims: []
+memory_recall:
+  MR6_search: prior_consumer_records_found_and_resourced_at_accepted_campaigns
+  ledger_confrontation_search: no_direct_memory_match
+accepted_source_audit:
+  result: existing_BPS_vector_generalized_radial_signed_difference_and_variational_claims_own_the_exposed_surfaces
+technical_attempt:
+  failed_read_path: src_substrate_framework_variational_composition.py
+  cause: module_is_named_variational.py
+  repair: read_the_actual_registry_backed_module_in_full
+remaining_source_body_blinded: true
+freeze_validation:
+  repository: {claims: 202, accepted: 202, proposals: 1, pending: 1, partial: 0}
+  memory: passed
+  yaml_files: 4
+  diff_check: passed
+next_action: validate_and_commit_freeze_before_source_body_or_execution

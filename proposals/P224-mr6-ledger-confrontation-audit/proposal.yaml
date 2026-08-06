@@ -1,0 +1,54 @@
+id: P224
+base_release: v0.159.0
+base_commit: 1468b13
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MR6]
+question: >-
+  Does MR6 add any distinct accepted theorem or numerical result beyond the
+  individually adjudicated MK and MR campaigns, and is its claimed overturn
+  ledger complete, convention-correct, dependency-closed, and current?
+invariants:
+  - Accepted registry claims and adjudicated immutable campaigns outrank MR6 chronology and prose.
+  - C-BPS-001 owns the normalized-density bound 2*lambda_BPS*mu*pi^2*abs(B)*W without existence attainment or physical mass closure.
+  - C-VEC-002 owns lambda_A=pi^2*lambda_BPS for the same normalized current and no physical vector or coupling value.
+  - C-BPS-002 and C-BPS-003 preserve attainment slack and controlled-remainder requirements.
+  - C-VAR-002 and C-VAR-003 prove only common-domain infimum statements and no physical double-counting diagnosis.
+  - C-GSK-001 owns the supplied-coefficient generalized radial model while P223 retains MR5 as duplicate noncanonical regression evidence.
+  - Every earlier MK and MR source unit has an individual terminal disposition; MR6 cannot reopen or supersede it by summary.
+  - Mutable sampled integration uses trapezoid_integral or numpy.trapezoid and immutable compatibility events never reject scientific candidates.
+allowed_imports:
+  - C-BPS-001 through C-BPS-003 at their exact normalization attainment and remainder ceilings
+  - C-VEC-002 at the same-current lambda convention map only
+  - C-GSK-001 and C-RDIFF-001 at their conditional algebraic ceilings only
+  - C-VAR-002 and C-VAR-003 at their common-domain variational ceilings only
+  - P214 through P223 adjudications as immutable source-disposition evidence
+  - hash-pinned MR6 only after the committed freeze
+candidates:
+  - {id: A, description: Reconstruct every MR6 ledger row directly from accepted claims and adjudicated campaigns rather than chronology.}
+  - {id: B, description: Verify all pi-squared lambda and BPS-bound conversions exactly in the accepted normalized-current convention.}
+  - {id: C, description: Separate rescaling-invariant structural conclusions from numerical predicates that depend on rejected physical inputs.}
+  - {id: D, description: Recompute every surviving numeric ledger value from its declared inputs and replace stale MR5 or MK values with governed results.}
+  - {id: E, description: Treat overturn and survive as provenance relations only unless a distinct claim theorem or consumer requires promotion.}
+  - {id: F, description: Audit the completeness guard against actual predicates data flow comparators and accepted dispositions.}
+  - {id: G, description: Add no claim or API if MR6 is entirely a summary of existing accepted claims and rejected source narratives.}
+  - {id: H, description: Give MR6 an individual terminal disposition and prove the migration queue and debt ledger close globally.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact convention and normalization correctness
+  - row-by-row agreement with accepted authority
+  - novelty beyond existing claims and campaign decisions
+  - dependency closure and parameter provenance
+  - structural versus numerical scope
+  - completeness and mutation sensitivity of the ledger oracle
+  - physical state mass binding and observation firewall
+  - global queue release documentation memory and debt closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue exposes six checks, three assertions, symbolic and numeric
+  scope, the claim of exactly four overturned Phase-43 checks, the pi-squared
+  BPS correction, and the approximate 99.42 MeV value. All remaining ledger
+  rows, formulas, values, predicates, guards, compatibility surfaces, and final
+  conclusions stay unopened until this contract, formula freeze, provenance
+  record, validation record, and freeze commit exist.
+status: active
+revision: 0001

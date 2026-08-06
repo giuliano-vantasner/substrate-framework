@@ -1,0 +1,32 @@
+campaign: P224
+base_release: v0.159.0
+source_unit: MR6
+source_sha256: 9443373f412cfe86b26bec6c35eb245ee83cd5dd5b65c76a5b3bb1c6d2106d9d
+queue_exposed_before_freeze:
+  - six_static_literal_checks_three_assertions_symbolic_and_numeric_oracles
+  - claimed_exactly_four_overturned_checks
+  - pi_squared_BPS_normalization_correction_and_99_42_MeV_value
+frozen_exact_surfaces:
+  lambda_conversion: lambda_A_equals_pi_squared_lambda_BPS
+  accepted_BPS_bound: two_lambda_BPS_mu_pi_squared_abs_B_W
+  source_coordinate_bound: two_lambda_A_mu_abs_B_W
+  conversion_ratio_for_lambda_A_inserted_as_lambda_BPS: pi_squared
+  signed_difference: positive_normalization_times_multiplicity_b_initial_minus_b_final
+  variational_sum: joint_infimum_not_generally_sum_of_separate_infima
+  mixed_variational_interaction: sign_indefinite
+frozen_type_distinctions:
+  - accepted_claim_change_vs_source_predicate_truth_change
+  - convention_conversion_vs_physical_parameter_derivation
+  - rescaling_invariant_structure_vs_imported_numeric_value
+  - lower_bound_vs_attained_sector_energy
+  - stationary_branch_coefficient_vs_mass_or_binding
+  - campaign_summary_vs_new_scientific_claim
+frozen_mutations:
+  - omit_or_reverse_the_pi_squared_lambda_conversion
+  - rescale_lambda_while_preserving_structural_edge_statements
+  - replace_MR5_source_kappa_with_P223s_governed_regression
+  - vary_N_c_pion_electron_or_rho_inputs
+  - add_or_remove_a_ledger_row_without_recomputing_the_count
+  - change_an_earlier_source_disposition
+nonduplication_target: [C-BPS-001, C-BPS-002, C-BPS-003, C-VEC-002, C-GSK-001, C-RDIFF-001, C-VAR-002, C-VAR-003, P214, P215, P217, P219, P220, P223]
+comparator_policy: structural_selection_before_remaining_source_values

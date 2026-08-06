@@ -1,0 +1,30 @@
+campaign: P224
+framework_base:
+  release: v0.159.0
+  commit: 1468b13
+  accepted_claims: 202
+  pending_source_units: 1
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path: merged-framework/bridges/phase-44/bridge_MR6_ledger_and_confrontation.py
+  sha256: 9443373f412cfe86b26bec6c35eb245ee83cd5dd5b65c76a5b3bb1c6d2106d9d
+  bytes: 22028
+  lines: 394
+  tracked_path_status: clean
+queue_inventory: {static_checks: 6, literal_checks: 6, assertions: 3, oracle_hints: [symbolic, numeric]}
+accepted_authority: [C-BPS-001, C-BPS-002, C-BPS-003, C-VEC-002, C-GSK-001, C-RDIFF-001, C-VAR-002, C-VAR-003]
+terminal_source_context:
+  MK1: qualified
+  MK2: qualified
+  MK3: qualified
+  MK4: qualified
+  MK5: qualified
+  MK6: qualified
+  MR1: duplicate_evidence
+  MR2: duplicate_evidence
+  MR3: qualified
+  MR4: duplicate_evidence
+  MR5: duplicate_evidence
+pending_nonauthority: [MR6]
+excluded_source_worktree_changes: unrelated_to_hash_pinned_path
