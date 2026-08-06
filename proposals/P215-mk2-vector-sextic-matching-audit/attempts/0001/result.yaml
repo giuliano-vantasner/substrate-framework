@@ -1,0 +1,20 @@
+campaign: P215
+attempt: 0001
+timestamp_utc: '2026-08-06T10:01:44Z'
+status: passed
+stage: pre_source_freeze
+base_release: v0.155.0
+base_commit: ecee9d5d2d15d5f77f3cabb34764cf7916601e10
+source_unit: MK2
+source_sha256: 351136bca28e413ddd54f1b15bf7084dffe32af565fc87e7220d1437a525eb07
+provisional_claim_ids: [C-VEC-002]
+frozen_candidates: [A, B, C, D, E, F, G, H, I]
+frozen_gates:
+  - exact algebraic elimination is separated from the full kinetic-vector inverse and its low-q expansion
+  - source lambda_A is converted to accepted lambda_BPS by lambda_A=pi^2*lambda_BPS
+  - U(2) group labeling is separated from a selected fundamental trace metric and the full invariant quadratic-form family
+  - mass coupling ratio identifiability is separated from deriving mass and coupling individually
+  - HLS KSRF anomaly N_c baryon-current particle and medium premises require accepted dependency closure
+  - later MK and MR units refuted KI1 and MK1's rejected physical readings grant no authority
+  - direct imported dynamic and eager NumPy legacy access will be scanned before native execution
+next_action: Validate the proposal memory and repository records, commit the freeze, then inspect and reproduce the hash-pinned MK2 source.

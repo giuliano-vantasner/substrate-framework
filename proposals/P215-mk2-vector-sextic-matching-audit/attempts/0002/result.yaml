@@ -1,0 +1,10 @@
+campaign: P215
+attempt: 0002
+timestamp_utc: '2026-08-06T10:04:00Z'
+status: repaired
+stage: freeze_commit_hygiene
+failure: git diff --cached --check stopped on trailing blank lines at EOF in four new YAML records.
+diagnosis: procedural_record_formatting
+scientific_state_changed: false
+repair: Remove only the four trailing EOF blank lines, preserve the failed gate, and rerun diff hygiene before committing.
+next_action: Commit the validated freeze and open the hash-pinned MK2 body.

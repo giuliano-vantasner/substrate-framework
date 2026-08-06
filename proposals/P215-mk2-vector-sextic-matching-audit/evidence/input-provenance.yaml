@@ -1,0 +1,55 @@
+campaign: P215
+timestamp_utc: '2026-08-06T10:01:44Z'
+framework_base:
+  release: v0.155.0
+  commit: ecee9d5d2d15d5f77f3cabb34764cf7916601e10
+  accepted_claims: 197
+  migration_queue:
+    primary_units: 218
+    pending_adjudication: 10
+    qualified: 195
+source_checkout:
+  root: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_outside_pinned_file: true
+source_unit:
+  id: MK2
+  path: merged-framework/bridges/phase-43/bridge_MK2_lambda_from_medium_omega.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK2_lambda_from_medium_omega.py
+  sha256: 351136bca28e413ddd54f1b15bf7084dffe32af565fc87e7220d1437a525eb07
+  bytes: 22413
+  candidate_dependencies: [KI1, KI2, MK1, S4, WZ2, WZ3, WZ4]
+preexposed_generated_metadata:
+  static_check_calls: 7
+  literal_check_calls: 7
+  dynamic_check_calls: 0
+  assert_statements: 1
+  terminal_tally_literal_present: true
+  exposed_formula_fragments:
+    - lambda_A^2=g_omega^2/(2*m_omega^2) from a low-q vector-current elimination
+    - a displayed fundamental U(2) trace metric is claimed to force m_omega=m_rho
+    - prior governed inventory evidence exposes a proposed lambda_A=N_c/(4*F_pi)
+  still_blinded:
+    - complete source equations and predicates
+    - parameter values and numerical comparators
+    - rejection guards imports native output and terminal details
+    - remaining derivation and consumer claims
+authority_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml entries C-EFT-001 C-BPS-001 C-BPS-002 C-BPS-003 C-VEC-001 C-CHI-001 C-CHI-002 C-WZW-001 C-WZW-002 C-TOP-002 and C-ANO-001
+  - src/substrate_framework/hls_reduction.py
+  - src/substrate_framework/bps_energy.py
+  - campaigns/P059-wz4-hls-vector-elimination
+  - campaigns/P140-s4-vector-meson-c4-audit
+  - campaigns/P171-ki1-exhaustive-coupling-inventory-audit
+  - campaigns/P214-mk1-medium-potential-matching-audit
+memory_queries:
+  - massive vector integrate out baryon current BPS Skyrme lambda
+  - hidden local symmetry U(2) omega rho coupling normalization
+  - massive vector baryon current sextic
+  - HLS U(2) omega rho
+memory_rule: Search results are navigation only and every reused fact is re-sourced above.
+reserved_identifier:
+  candidate: C-VEC-002
+  prefreeze_registry_hits: 0
+  status: provisional_only

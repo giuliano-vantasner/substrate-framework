@@ -1,0 +1,73 @@
+id: P215
+base_release: v0.155.0
+base_commit: ecee9d5d2d15d5f77f3cabb34764cf7916601e10
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MK2]
+question: >-
+  What exact sextic-current coefficient follows from stationary elimination
+  of a declared massive isoscalar vector, and do accepted claims or the U(2)
+  label independently derive its mass, coupling, baryon-current map, HLS
+  normalization, and BPS-Skyrme coupling convention?
+invariants:
+  - C-EFT-001 owns exact quadratic stationary elimination and treats a derivative inverse as a formal low-momentum truncation unless separate convergence and field premises are supplied.
+  - C-BPS-001 uses the convention with sextic density lambda_BPS^2*pi^4*B0^2 and takes lambda_BPS the target potential and the topological density as supplied data.
+  - C-VEC-001 owns a conditional leading SU(2) HLS connection reduction and explicitly derives no physical rho pion HLS sector KSRF relation singlet omega baryon current N_c or substrate realization.
+  - C-WZW-001 and C-WZW-002 fix mathematical five-form and level statements but no N_c baryon current physical anomaly coefficient vector coupling or particle map.
+  - A displayed fundamental trace metric is declared action data; the group name U(2) alone does not select it or exclude an independent invariant singlet quadratic form.
+  - The source coefficient lambda_A in -lambda_A^2*B_mu*B^mu must be distinguished from C-BPS-001's lambda_BPS in -lambda_BPS^2*pi^4*B_mu*B^mu with lambda_A=pi^2*lambda_BPS.
+  - A local low-q squared-current term is not the full nonlocal result of eliminating a kinetic vector field and requires a controlled q^2/m^2 ceiling.
+  - Refuted KI1 pending MK3 through MK6 and pending MR2 through MR6 grant no backward authority; qualified MK1 supplies no accepted physical pion decay scale or medium-to-BPS map.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never count as scientific candidate failures.
+allowed_imports:
+  - C-EFT-001 only for its exact quadratic algebra stationary chain rule and explicit finite inverse residual
+  - C-BPS-001 through C-BPS-003 only at their declared-model convention and conditional-sector ceilings
+  - C-VEC-001 C-CHI-001 and C-CHI-002 only at their exact current trace kinetic and conditional leading-connection ceilings
+  - C-WZW-001 C-WZW-002 C-TOP-002 and C-ANO-001 only at their accepted mathematical and anomaly-bookkeeping ceilings without N_c baryon or HLS ontology
+  - qualified WZ4 S4 KI1 KI2 and MK1 source adjudications without rejected physical interpretations
+  - exact linear algebra Lie-algebra invariant-form classification dimensional analysis convention conversion and identifiability countermodels
+  - SymPy for exact stationary substitution operator series trace metrics invariant forms and parameter-family mutations
+  - NumPy and SciPy only for hash-pinned source reproduction or a genuinely unresolved numerical obligation after equations tolerances and refinement freeze
+  - primary HLS literature after freeze only for convention and scope not for selecting a candidate or importing a phenomenological coefficient
+  - hash-pinned MK2 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Derive the exact algebraic Proca-current stationary reduction L_eff=-g_omega^2*B^2/(2*m_omega^2) after declaring the sign source normalization and neglect of derivatives.
+  - id: B
+    description: Retain the full kinetic-vector inverse and show that the local squared-current operator is the leading term of a q^2/m_omega^2 expansion rather than an exact full-field elimination.
+  - id: C
+    description: Convert explicitly between source lambda_A and C-BPS-001 lambda_BPS using lambda_A=pi^2*lambda_BPS before composing any bound or downstream consumer.
+  - id: D
+    description: Classify U(2)-invariant quadratic forms and test whether an independent singlet term defeats the claimed forced omega-rho mass degeneracy despite the displayed fundamental trace orthonormality.
+  - id: E
+    description: Treat KSRF HLS and anomaly relations as conditional premises and require a dependency-closed derivation of every g_omega m_omega F_pi and N_c factor rather than propagation of inserted symbols.
+  - id: F
+    description: Construct exact positive parameter families with fixed accepted SU(2) data but varying singlet mass coupling or ratio to test whether lambda_A or lambda_BPS is identifiable.
+  - id: G
+    description: Extract a reusable massive-vector current-matching API only if exact surviving content is novel beyond C-EFT-001 and existing convention APIs.
+  - id: H
+    description: Map every exact survivor to accepted claims and add no claim when the source contributes only conditional specializations or duplicated algebra.
+  - id: I
+    description: Give MK2 an individual terminal disposition and replay its predecessor and reverse-consumer graph without later-source authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact field source metric sign generator current and BPS-coupling convention
+  - accepted dependency closure and absence of backward authority
+  - assumption and parameter economy
+  - local versus nonlocal operator scope and controlled low-momentum remainder
+  - U(2) invariant-form generality rather than one selected trace metric
+  - dimensions positivity symmetry limiting behavior and identifiability
+  - sensitivity to source sign current normalization singlet metric mass coupling and pi-squared convention mutations
+  - novelty beyond C-EFT-001 C-VEC-001 C-BPS-001 and C-WZW-001 through C-WZW-002
+  - terminal authority consumer generated-state and memory closure
+claims_proposed: []
+reserved_unpromoted_claims: [C-VEC-002]
+comparators_blinded_until: >-
+  The generated queue exposes MK2's headline, seven static literal check sites,
+  one assertion, truncated claims that low-q vector elimination gives
+  lambda_A^2=g_omega^2/(2*m_omega^2), that a displayed U(2) fundamental trace
+  metric forces m_omega=m_rho, and earlier inventory evidence exposes the
+  proposed lambda_A=N_c/(4*F_pi). The source body, remaining equations,
+  parameter values, exact predicates, rejection guards, imports, native output,
+  and consumer details remain unopened until this manifest, prose contract,
+  formula freeze, provenance record, validation record, and freeze commit exist.
+status: draft

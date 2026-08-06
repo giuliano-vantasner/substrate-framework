@@ -2473,6 +2473,15 @@ P214 also tightens the existing contract, physics skill, and task templates to
 eliminate shared variables before independence claims, require typed
 cross-sector maps, and regenerate the migration queue from dispositions.
 
+P215 is active against MK2 at v0.155.0 and framework commit `ecee9d5`. Its
+committed-freeze gate separates exact algebraic vector-current elimination
+from the full kinetic-vector inverse, converts the source sextic convention by
+`lambda_A=pi^2*lambda_BPS`, tests the complete U(2)-invariant quadratic-form
+family rather than assuming one trace metric is forced, and requires accepted
+provenance for every HLS, KSRF, singlet, baryon-current, `N_c`, decay-scale,
+and physical-field premise. C-VEC-002 is provisional only pending an exact
+nonduplication audit.
+
 ## Canonicalization
 The registry, `v0.155.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety-seven accepted claims.
@@ -2491,10 +2500,9 @@ quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
 The WM7-WM10 source cycle, GC1-GC6, and MK1 are terminal without backward
-authority. The next campaign audits MK2's claimed vector-meson derivation of
-the BPS sextic coupling without importing refuted KI1 or MK1's rejected
-physical medium map. The remaining order is MK2 through MK6, then MR2 through
-MR6.
+authority. P215 now audits MK2's claimed vector-meson derivation of the BPS
+sextic coupling without importing refuted KI1 or MK1's rejected physical
+medium map. The remaining order is MK2 through MK6, then MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

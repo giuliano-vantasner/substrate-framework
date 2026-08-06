@@ -1,0 +1,62 @@
+campaign: P215
+timestamp_utc: '2026-08-06T10:01:44Z'
+declared_algebraic_vector_model:
+  lagrangian: L_0=(m_omega^2/2)*w_mu*w^mu+g_omega*w_mu*B^mu
+  premises:
+    - m_omega is positive
+    - the source sign and Lorentz contraction are exactly declared
+    - B_mu is supplied independently of w_mu
+  stationarity: w_mu=-g_omega*B_mu/m_omega^2
+  reduced_term: L_eff=-g_omega^2*B_mu*B^mu/(2*m_omega^2)
+  source_sextic_convention: L6=-lambda_A^2*B_mu*B^mu
+  conditional_match: lambda_A=abs(g_omega)/(sqrt(2)*m_omega)
+full_kinetic_vector_scope:
+  schematic_kernel: K=m_omega^2+D
+  exact_reduced_term: -J*K_inverse*J/2
+  leading_local_inverse: 1/m_omega^2
+  first_correction: -D/m_omega^4
+  requirement: The local B_mu*B^mu result needs declared low-q power counting and is not the exact full nonlocal inverse.
+bps_convention_map:
+  source_A: L6=-lambda_A^2*B_mu*B^mu
+  accepted_B: L6=-lambda_BPS^2*pi^4*B_mu*B^mu
+  equality_condition: lambda_A=pi^2*lambda_BPS
+  accepted_coupling_match: lambda_BPS=abs(g_omega)/(sqrt(2)*pi^2*m_omega)
+u2_metric_test:
+  displayed_basis: T_a=tau_a/2 and T_0=identity/2
+  displayed_trace: Tr(T_A*T_B)=delta_AB/2
+  selected_single_trace_mass_term: c*Tr(V_mu*V^mu)
+  independent_invariant_family: a*Tr(X*Y)+b*Tr(X)*Tr(Y)
+  decisive_countermodel: At fixed positive triplet coefficient choose b so the positive singlet coefficient differs; U(2) invariance alone therefore does not force degeneracy.
+parameter_identifiability:
+  fixed_ratio_family: g_omega=sqrt(2)*lambda_A*m_omega for arbitrary positive m_omega
+  varying_lambda_family: At fixed accepted SU(2) data vary a permitted positive singlet coupling-to-mass ratio.
+  consequence: A ratio match never derives g_omega and m_omega separately and no accepted claim presently fixes the singlet ratio.
+dependency_firewalls:
+  - KI1 is refuted and supplies no absence theorem.
+  - MK1 is qualified and supplies no accepted physical F_pi pion or medium-to-BPS map.
+  - C-VEC-001 supplies no singlet omega physical HLS action or KSRF theorem.
+  - C-WZW-001 and C-WZW-002 supply no N_c baryon-current or vector-coupling identification.
+  - Pending MK3 through MK6 and MR2 through MR6 cannot support MK2.
+mutations:
+  - reverse the source sign and require the stationary solution or reduced sign to change
+  - remove the one-half mass normalization and require the coefficient to change
+  - rescale B_mu and require lambda_A to rescale
+  - retain D and require the local exactness verdict to fail
+  - add b*Tr(X)*Tr(Y) and require forced U(2) degeneracy to fail
+  - vary singlet mass and coupling independently and require the claimed unique ratio to fail
+  - omit the pi-squared convention conversion and require BPS composition to fail
+  - remove any inserted N_c KSRF or F_pi premise and require the corresponding physical relation to fail
+counterexamples:
+  - a positive U(2)-invariant quadratic form with unequal singlet and triplet coefficients
+  - two positive vector models with identical displayed SU(2) trace data and different g_omega/m_omega ratios
+  - a finite nonzero derivative kernel whose exact inverse differs from 1/m_omega^2
+  - two pairs g_omega and m_omega with the same ratio showing the pair is not separately identified
+candidate_selection_exclusions:
+  - numerical agreement with vector-meson pion nucleon or decay-scale comparators
+  - later MK and MR conclusions
+  - refuted KI1 and rejected MK1 physical readings
+  - a single displayed trace metric treated as group-theoretic uniqueness
+  - symbol equality without field current action and convention maps
+provisional_claim:
+  id: C-VEC-002
+  promote_only_if: Exact surviving vector-current content is novel beyond C-EFT-001 C-VEC-001 C-BPS-001 and existing convention APIs.
