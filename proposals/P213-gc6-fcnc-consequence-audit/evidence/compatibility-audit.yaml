@@ -1,0 +1,37 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:45:17Z'
+policy: >-
+  Mutable code must use numpy.trapezoid or the canonical trapezoid_integral;
+  immutable version-only stops are preserved and replayed alias-only without
+  counting as scientific failures.
+executed_graph:
+  GC6:
+    path: merged-framework/bridges/phase-42/bridge_GC6_consequence_and_verdict.py
+    sha256: e09822946b9b44ade21632c7db42d2061e493b112a13fab9a44e74a6a6d18b17
+    execution: direct
+    quadrature_surface: none
+  WM7:
+    path: merged-framework/bridges/phase-39/bridge_WM7_induction_trace_field_content.py
+    sha256: a124346ed81c93b36f181f7e0fb1cd2d07387d3578ece17a6fe6c6a0f379a361
+    execution: dynamic_import
+    quadrature_surface: none
+  WM1:
+    path: merged-framework/bridges/phase-23/bridge_WM1_sin2thetaw_trace_ratio.py
+    sha256: 75dc34e168c39cd0af0a21cd4c7d039088ac74baefb6615ece98f5069f5b8953
+    execution: transitive_dynamic_import
+    quadrature_surface: none
+  SM2:
+    path: merged-framework/bridges/phase-9/bridge_SM2_generation_hypercharge_charges.py
+    sha256: cc5532e86128f010f6801dada96ae1ece5a6be845817127d69cf72810b9e33f1
+    execution: transitive_dynamic_import
+    quadrature_surface: none
+  SM4:
+    path: merged-framework/bridges/phase-9/bridge_SM4_coupling_running_unification.py
+    sha256: c0cc7ed32343afc65cf582d81b2455fdba96d2550e64e3e595e4c995ee53e3ac
+    execution: transitive_dynamic_import
+    quadrature_surface: none
+scan_shapes: [direct, imported, dynamic_getattr, eager_nested_default, local_import]
+native_version_stops: []
+alias_only_replays: []
+scientific_failures_from_version_events: 0
+status: passed

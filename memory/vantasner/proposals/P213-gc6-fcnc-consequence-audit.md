@@ -2,7 +2,7 @@
 description: Audit GC6 neutral-scalar flavor consequence and final GC verdict
 author: vantasner
 created: '2026-08-06T08:39:21Z'
-updated: '2026-08-06T08:39:21Z'
+updated: '2026-08-06T08:45:17Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -102,6 +102,16 @@ after a post-source nonduplication audit; count underdetermination and a
 software guard do not receive scientific identifiers merely for being useful
 counterevidence.
 
+Opened inspection confirms C-MIX-004 as the minimum novel surface. For a
+declared family `Y_a`, weights `v_a`, mass matrix `M=sum_a v_a*Y_a`, and
+biunitary mass basis `D=U_L^dagger*M*U_R`, the individual mass-basis couplings
+are `Gamma_a=U_L^dagger*Y_a*U_R` and reconstruct `D=sum_a v_a*Gamma_a`.
+Off-diagonal cancellation in the sum does not make each coupling diagonal.
+For complex symmetric `M`, a Takagi basis uses `U_R=conjugate(U_L)`; GC6's
+`U_L^dagger*I_a*U_L` transform is not the mass-basis coupling. C-OVL-002 already
+owns the source geometry's conditional tail dependence, so no new overlap
+identifier is proposed.
+
 ## Implementation and Oracle Plan
 
 SymPy will derive mass matrices, biunitary transformations, mass-basis neutral
@@ -130,6 +140,25 @@ policy before source inspection or execution. If a claimed three-doublet or
 FCNC mechanism fails, the campaign continues with the exact multi-scalar
 coupling object, a different localization formalism, or accepted composition
 rather than ending on the failed headline.
+
+Attempt 0002 finds zero quadrature compatibility surface across GC6, its WM7
+dynamic import, and WM7's WM1, SM2, and SM4 transitive imports. Native GC6
+reproduces all six checks in 0.90 seconds with exit zero. This establishes
+source provenance, not the physical headline.
+
+Attempt 0003 corrects the source's left-basis-on-both-sides transform to the
+biunitary mass-basis transform. The corrected ratios at spacings 3, 4, 5, and 6
+remain small in the declared model, but a denser 0.25 spacing scan shows rises
+from 4.75 through 5.25, refuting the source's sampled monotonic reading. An
+exact two-by-two Takagi countermodel has diagonal correct couplings while the
+source transform manufactures off-diagonal entries. The WM7 trace reduces
+exactly to `3*(8*n_gen+n_h)/(2*(32*n_gen+3*n_h))`, conditional on the supplied
+field table.
+
+Attempt 0004 freezes C-MIX-004 and candidates A, C, E, F, G, and H before
+implementation. Candidate B remains conditional numeric campaign evidence
+already bounded by C-OVL-002, while candidate D is rejected because the general
+biunitary multi-scalar reconstruction is not owned by C-OVL-003.
 
 ## Debt Ledger
 

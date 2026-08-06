@@ -1,0 +1,21 @@
+attempt: 0004
+campaign: P213
+timestamp_utc: '2026-08-06T08:45:17Z'
+kind: post_source_exact_claim_delta_freeze
+base_release: v0.154.0
+source_unit: GC6
+proposal_revision: 0002
+claim: C-MIX-004
+dependencies: [C-MIX-001]
+selected_candidates: [A, C, E, F, G, H]
+unselected_candidates: [B, D]
+comparators_used_for_selection: []
+freeze_validation:
+  repository_claims: 196
+  active_proposals: 1
+  migration_pending_units: 12
+  memory_files_validated: 866
+  campaign_yaml_files_parsed: 11
+  diff_check: passed
+status: passed
+continuation: commit_the_reproduction_and_exact_claim_delta_then_implement_the_canonical_ledger

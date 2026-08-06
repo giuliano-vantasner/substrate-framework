@@ -1,0 +1,46 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:45:17Z'
+source_unit: GC6
+predicates:
+  GC6.1:
+    source_verdict: passed
+    retained: selected_finite_box_external_well_computation_and_its_reported_ratios
+    corrected:
+      - The mass matrix requires a biunitary transformation U_L_dagger_I_a_U_R; the source applies the left singular basis on both sides.
+      - The external wells condensate centers amplitudes widths anchor spacings phases grid domain and thresholds are declared rather than derived.
+      - A four-spacing sample does not prove monotone suppression and the correct ratio increases on the sampled subinterval 4.75_to_5.25.
+      - A dimensionless ratio below a chosen threshold is not a physical FCNC safety oracle without scalar masses mixing interactions experimental map and uncertainty.
+    preliminary_disposition: qualified_numeric_model_evidence_not_discharged_physical_consequence
+  GC6.2:
+    source_verdict: passed
+    retained: exact_supplied_count_trace_value_27_over_70_and_monotone_count_family
+    corrected:
+      - GC5 does not derive N_H_equals_3 or N_gen_equals_3.
+      - WM7 is supplied-table composition and no physical boundary or full running prediction follows.
+    preliminary_disposition: accepted_composition_only
+  GC6.3:
+    source_verdict: passed
+    retained: exact_fermion_only_specialization_3_over_8
+    corrected: the_specialization_is_conditional_on_WM7s_supplied_table_and_normalization
+    preliminary_disposition: accepted_composition_only
+  GC6.4:
+    source_verdict: passed
+    retained: the_local_boundary_expression_is_exactly_rational_for_integer_inputs
+    corrected:
+      - Source_check_does_not_recompute_or_validate_either_downstream_value.
+      - P205s_coherent_three_scalar_coefficient_update_gives_0.238878442809_not_the_boundary_only_0.232261554419.
+      - C_RGE_005_omits_same_order_Yukawa_terms_and_C_RGE_006_supplies_no_physical_prediction.
+    preliminary_disposition: narrative_record_not_new_scientific_evidence
+  GC6.5:
+    source_verdict: passed
+    retained: named_runtime_load_regex_finds_no_named_PDG_bridge_in_six_files
+    corrected: aliases_transitive_data_literal_copying_reachable_helpers_and_nonimport_value_paths_are_not_excluded
+    preliminary_disposition: finite_lexical_software_evidence_only
+  GC6.6:
+    source_verdict: passed
+    retained: literal_declared_input_class_sets_are_subsets_of_the_literal_allowed_set
+    corrected:
+      - The_dictionary_is_an_asserted_summary_not_a_dataflow_or_dependency_oracle.
+      - Its_GC1_GC4_and_GC5_load_bearing_steps_import_rejected_physical_readings.
+    preliminary_disposition: verifier_insensitive_to_actual_dependency_values
+headline_verdict: source_tally_reproduced_but_physical_fcnc_discharge_counts_and_weak_sector_conclusion_not_established

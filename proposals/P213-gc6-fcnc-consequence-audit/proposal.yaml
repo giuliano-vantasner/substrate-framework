@@ -65,4 +65,27 @@ comparators_blinded_until: >-
   contract, formula freeze, provenance record, memory validation, repository
   validation, and freeze commit exist.
 status: active
-revision: 0001
+revision: 0002
+opened_source_equations:
+  external_wells: H_R=-d_x^2-12*sech((x-R)/0.7)^2_on_a_finite_Dirichlet_box
+  condensate_profiles: Phi_k=A*sech(kappa*(x-(k-1)*cond_sep))
+  source_couplings: I_k_ab=integral_eta_a_eta_b_Phi_k_dx
+  mass_matrix: M=sum_k_exp(i*theta_k)*I_k
+  source_mass_basis_coupling: U_left_dagger*I_k*U_left
+  corrected_mass_basis_coupling: U_left_dagger*I_k*U_right
+  hierarchy_ratio: sigma_max(M)/sigma_min(M)
+  source_fcnc_ratio: max_k_max_offdiag(source_transform(I_k))/max_diag(source_transform(I_k))
+  conditional_trace_boundary: 3*(8*n_gen+n_h)/(2*(32*n_gen+3*n_h))
+opened_source_parameters:
+  omega: 0.45
+  anchor_spacings: [3.0, 4.0, 5.0, 6.0]
+  external_well: {depth: 12.0, width: 0.7, anchors: [0, d, 2*d]}
+  condensate_spacing: 1.0
+  condensate_centers: [-1.0, 0.0, 1.0]
+  phase_weights: [0, 2*pi/3, 4*pi/3]
+  native_grid: 16000
+  one_refined_grid: 32000
+  convergence_relative_threshold: 0.5
+  hierarchy_threshold: 10.0
+  suppression_factor_threshold: 100.0
+  final_ratio_threshold: 0.0001

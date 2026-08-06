@@ -1,0 +1,28 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:45:17Z'
+source_unit: GC6
+source_sha256: e09822946b9b44ade21632c7db42d2061e493b112a13fab9a44e74a6a6d18b17
+command: .venv/bin/python_hash_pinned_GC6
+exit_status: 0
+wall_seconds: 0.90
+maximum_resident_kib: 92868
+runtime_checks: 6
+static_check_calls: 6
+assert_statements: 1
+terminal_tally: ALL_6_CHECKS_PASS
+numeric_outputs:
+  spacings: [3.0, 4.0, 5.0, 6.0]
+  mass_ratios: [4.273788567960786, 8.291715331853506, 14.943232796729376, 40.76909907824363]
+  source_left_basis_ratios: [0.01228574836029285, 0.0018281380978665298, 0.0010061654214178855, 0.00001660336961380689]
+  d6_grid_refinement_source_ratio: 0.000016603307956285432
+exact_outputs:
+  boundary_NH_0_to_3: [3/8, 25/66, 13/34, 27/70]
+  corpus_boundary: 25/66
+  source_derived_boundary: 27/70
+compatibility:
+  quadrature_surface_nodes: 0
+  scanned_executed_nodes: 5
+  native_version_stops: []
+  scientific_version_failures: 0
+scope: reproduction_only_not_scientific_acceptance
+status: passed

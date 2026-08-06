@@ -1,0 +1,48 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:45:17Z'
+base_release: v0.154.0
+source_unit: GC6
+claim_delta:
+  - id: C-MIX-004
+    provisional_statement: >-
+      For a finite declared family of same-size complex matrices Y_a and
+      complex weights v_a, set M=sum_a v_a*Y_a. If unitary U_L and U_R give a
+      declared diagonal mass basis D=U_L^dagger*M*U_R, then the separately
+      transformed matrices Gamma_a=U_L^dagger*Y_a*U_R obey
+      D=sum_a v_a*Gamma_a exactly. Off-diagonal cancellations in that sum do
+      not force the individual Gamma_a to be diagonal. In a declared
+      multi-scalar interaction, absence of tree-level neutral flavor change in
+      that fixed mass basis is equivalent to every Gamma_a being diagonal;
+      common alignment Y_a=c_a*Y is sufficient. For complex symmetric M with
+      a Takagi basis U, U_R=conjugate(U), so the correct transform is
+      U^dagger*Y_a*conjugate(U), not U^dagger*Y_a*U. Degenerate singular
+      subspaces retain additional basis freedom. The theorem supplies no field
+      content, scalar count, generation map, Yukawa interaction, spatial
+      profile, physical rate or bound, observation, Standard Model, or
+      substrate realization.
+    dependencies: [C-MIX-001]
+    verification_plan: exact_symbolic_matrix_algebra_and_independent_rederivation
+    compatibility: compatible_extension
+    consumers:
+      - src/substrate_framework/__init__.py
+      - tests/test_multi_scalar_flavor.py
+      - P213_primary_and_independent_verifiers
+      - GC6_source_disposition
+selected_candidates:
+  A: selected_as_minimum_novel_exact_surface
+  C: selected_as_conditional_geometry_ceiling
+  E: selected_as_exact_accepted_trace_composition
+  F: selected_as_coherent_count_counterfactual
+  G: selected_as_finite_software_guard_classification
+  H: selected_as_terminal_governance_route
+unselected_candidates:
+  B: >-
+    retained as campaign numeric evidence but not selected for a new claim;
+    C-OVL-002 already owns the relevant tail-rate dependence and the source
+    transform and monotonicity oracle are defective.
+  D: >-
+    rejected because C-OVL-003 does not own the general biunitary
+    multi-scalar mass-basis reconstruction and cancellation theorem.
+reserved_identifiers_not_promoted: []
+comparators_used_for_selection: []
+status: frozen_before_implementation

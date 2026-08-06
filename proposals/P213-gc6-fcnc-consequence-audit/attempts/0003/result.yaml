@@ -1,0 +1,43 @@
+attempt: 0003
+campaign: P213
+timestamp_utc: '2026-08-06T08:45:17Z'
+kind: mass_basis_sampling_and_trace_counteraudit
+source_transform: U_left_dagger_times_I_a_times_U_left
+required_transform: U_left_dagger_times_I_a_times_U_right
+correct_biunitary_ratios:
+  spacings: [3.0, 4.0, 5.0, 6.0]
+  values: [0.014240119057647625, 0.0021279882008063728, 0.001168891894026918, 0.000018871240327117744]
+  d6_grid_refinement: 0.00001887117013469171
+dense_spacing_scan:
+  domain: [2.5, 8.0]
+  spacing_step: 0.25
+  grid_points: 6000
+  hierarchy_strictly_increases_on_scan: true
+  fcnc_ratio_strictly_decreases_on_scan: false
+  increase_witnesses:
+    - {from_spacing: 4.75, to_spacing: 5.0, from_ratio: 0.0008822790822385645, to_ratio: 0.0011689242033335848}
+    - {from_spacing: 5.0, to_spacing: 5.25, from_ratio: 0.0011689242033335848, to_ratio: 0.0012419967990841393}
+exact_wrong_basis_countermodel:
+  left_takagi_basis: (1/sqrt(2))*[[1,i],[i,1]]
+  singular_diagonal: diag(1,2)
+  mass_matrix: [[-1/2,3*i/2],[3*i/2,1/2]]
+  real_sources:
+    - [[-1/2,0],[0,1/2]]
+    - [[0,3/2],[3/2,0]]
+  weights: [1,i]
+  correct_transform: U_dagger_times_I_a_times_conjugate(U)
+  correct_couplings_diagonal: true
+  source_transform: U_dagger_times_I_a_times_U
+  source_couplings_have_offdiagonal_entries: true
+exact_trace_family:
+  S1: 4*n_gen/3+n_h/10
+  S2: 4*n_gen/3+n_h/6
+  boundary: 3*(8*n_gen+n_h)/(2*(32*n_gen+3*n_h))
+  conditional_on_supplied_field_table: true
+diagnosis: >-
+  The source numeric model remains reproducible, but its matrix-basis oracle is
+  mathematically wrong, its selected spacings do not prove monotonicity, and
+  its count trace is conditional composition rather than a derived physical
+  boundary.
+status: passed
+continuation: freeze_C_MIX_004_as_the_exact_positive_object_and_relegate_the_geometry_and_trace_to_qualified_composition
