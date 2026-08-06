@@ -1,0 +1,18 @@
+campaign: P211
+installed_numpy: 2.5.1
+source_unit: GC4
+source_legacy_np_trapz_references: 0
+source_current_np_trapezoid_references: 0
+source_eager_legacy_default_fallbacks: 0
+source_direct_legacy_attributes: 0
+source_dynamic_legacy_getattrs: 0
+source_imported_legacy_names: 0
+alias_replay_required: false
+aliases_injected_during_science: []
+mutable_campaign_legacy_references: 0
+version_only_scientific_failures: 0
+policy_result: >-
+  GC4 has no quadrature compatibility surface under NumPy 2.5.1. The AST
+  preflight finds no direct imported dynamic or eager access to either NumPy
+  trapezoidal-integration name. Any future immutable version-name event remains
+  compatibility provenance and cannot reject a scientific candidate.

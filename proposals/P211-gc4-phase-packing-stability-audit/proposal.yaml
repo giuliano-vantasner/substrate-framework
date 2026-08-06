@@ -51,7 +51,7 @@ selection_criteria:
   - correct large-separation and coincident limits
   - novelty beyond accepted Q-ball overlap and phase claims
   - terminal authority and consumer closure
-claims_proposed: [C-PHS-001]
+claims_proposed: [C-QBL-006, C-PHS-001]
 reserved_unpromoted_claims: []
 comparators_blinded_until: >-
   The generated queue exposes GC4's headline, eight static check sites, one
@@ -61,5 +61,24 @@ comparators_blinded_until: >-
   fits, count proof, remaining predicates, guards, and native output remain
   unopened until this contract, formula freeze, provenance record, memory
   validation, clean repository validation, and freeze commit exist.
-status: draft
-revision: 0001
+status: active
+revision: 0002
+opened_source_equations:
+  energy: integral_dx_[abs(Phi_prime)^2+kappa^2*abs(Phi)^2-abs(Phi)^4/24]
+  profile: sqrt(24)*kappa*exp(i*theta)*sech(kappa*(x-r))
+  numeric_domain: [-90.0, 90.0]
+  numeric_grids: [40001, 80001]
+  numeric_rule: centered_numpy_gradient_plus_interior_rectangle_sum
+  declared_frequency: 0.45
+post_source_claim_delta:
+  C-QBL-006: exact_two_profile_trial_interaction_with_linear_and_quadratic_cosine_terms_and_no_stability_inference
+  C-PHS-001: exact_complete_graph_scalar_circle_optimum_strict_capacity_three_weak_capacity_four_and_no_count_selection
+opened_source_corrections:
+  - the_finite_separation_quartic_interaction_contains_phase_independent_and_cosine_squared_terms_not_only_a_bilinear_cosine
+  - the_reported_scaled_interaction_is_negative_not_the_claimed_positive_function
+  - energy_and_its_monotonic_sample_do_not_establish_merger_persistence_or_nonlinear_stability
+  - anti_phase_and_Z3_pair_forces_change_outside_the_sampled_large_separation_regime
+  - three_separate_pair_evaluations_are_not_the_energy_equation_or_stability_of_a_three_lump_field
+  - strict_phase_capacity_is_an_upper_bound_and_does_not_select_occupancy_three
+  - accepted_FG4_phase_count_has_no_physical_CP_or_generation_lower_bound
+  - the_globals_name_guard_is_not_a_complete_reachability_or_input_audit

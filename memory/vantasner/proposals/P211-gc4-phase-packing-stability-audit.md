@@ -2,7 +2,7 @@
 description: Audit GC4 interaction, coexistence stability, and scalar phase capacity
 author: vantasner
 created: '2026-08-06T07:26:31Z'
-updated: '2026-08-06T07:26:31Z'
+updated: '2026-08-06T07:31:27Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -81,12 +81,14 @@ and clean freeze commit.
 
 ## Proposed Claim Delta
 
-P211 reserves provisional C-PHS-001 for the minimum novel exact scalar-circle
-phase-capacity theorem and its strictness and nonselection caveats. It will
-depend on no physical claim unless opened source analysis proves a necessary
-accepted dependency. The identifier was absent from registry, campaign, and
-memory searches at freeze. Pair-energy formulas may remain campaign evidence
-if they are model-specific or already composed from accepted profiles.
+P211 reserves provisional C-QBL-006 for the exact two-profile interaction of
+the separately declared complex quartic energy and provisional C-PHS-001 for
+the minimum novel scalar-circle capacity theorem. The opened source makes both
+surfaces load bearing: the finite interaction contains linear, quadratic, and
+phase-independent cosine terms, while its large-separation leading term is
+linear in cosine. C-QBL-006 will depend on C-QBL-001 and C-QBL-003; C-PHS-001
+is elementary phase geometry with no physical dependency. Both identifiers
+were absent from registry, campaign, and memory searches at freeze.
 
 ## Implementation and Oracle Plan
 
@@ -114,6 +116,15 @@ numeric obligations, countermodels, physical ceilings, graph scope, and
 quadrature policy before source inspection or execution. Failure of a source
 stability claim will redirect to the exact phase-capacity and typed interaction
 objects rather than end the campaign.
+
+Attempt 0002 finds zero direct, imported, dynamic, or eager legacy NumPy
+quadrature access, then reproduces all eight native checks in 0.74 seconds.
+Opened inspection shows that the finite quartic interaction is not purely
+bilinear: its exact expansion includes phase-independent and cosine-squared
+terms. The strict scalar-circle cap survives, but the source computes only
+separate pair energies, supplies no common three-field solution or stability
+oracle, and imports a physical CP lower bound that accepted FG4 explicitly
+does not own.
 
 ## Debt Ledger
 

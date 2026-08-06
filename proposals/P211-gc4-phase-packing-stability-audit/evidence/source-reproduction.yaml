@@ -1,0 +1,24 @@
+campaign: P211
+source_unit: GC4
+source_path: /home/dan/substrate/merged-framework/bridges/phase-42/bridge_GC4_stability_forces_three.py
+source_sha256: 3292400544911dca74009a019b24b44f105f8aeb5c68a6172220903950f465bb
+source_bytes: 26753
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+command: .venv/bin/python_/home/dan/substrate/merged-framework/bridges/phase-42/bridge_GC4_stability_forces_three.py
+exit_status: 0
+runtime_checks: 8
+lexical_check_calls: 8
+assert_statements: 1
+terminal_tally: ALL_8_CHECKS_PASS
+elapsed_wall_seconds: 0.74
+maximum_resident_kib: 80140
+numeric_surface:
+  precision: IEEE_754_binary64_and_complex128
+  domain: [-90.0, 90.0]
+  grids: [40001, 80001]
+  derivative: numpy_gradient
+  integration: interior_rectangle_sum
+  separations: [6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0]
+  refinement_gate: one_value_at_40001_to_80001
+  omitted_gates: [domain_refinement, derivative_order_refinement, exact_integral_crosscheck, common_three_field_energy, constrained_spectrum, time_evolution]
+scientific_authority: noncanonical_source_evidence_only

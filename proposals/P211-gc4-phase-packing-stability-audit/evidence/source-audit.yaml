@@ -1,0 +1,14 @@
+campaign: P211
+source_unit: GC4
+predicates:
+  GC4.1: {source_verdict: pass, framework_verdict: qualified, reason: exact_trial_energy_reproduces_the_samples_but_energy_sign_does_not_prove_merger_persistence_or_stability}
+  GC4.2: {source_verdict: pass, framework_verdict: corrected, reason: only_the_leading_large_separation_term_is_cosine_and_the_exact_finite_interaction_also_has_constant_and_cosine_squared_terms}
+  GC4.3: {source_verdict: pass, framework_verdict: qualified, reason: the_fixed_nonzero_cosine_leading_term_decays_at_kappa_but_MH2_supplies_no_physical_hierarchy_and_the_subleading_rate_differs}
+  GC4.4: {source_verdict: pass, framework_verdict: qualified, reason: the_exact_perpendicular_interaction_is_negative_but_energy_sign_is_not_dynamics_and_the_weak_phase_capacity_is_four}
+  GC4.5: {source_verdict: pass, framework_verdict: qualified, reason: the_complete_graph_scalar_circle_capacity_is_exact_but_the_stability_and_merger_readings_are_not}
+  GC4.6: {source_verdict: pass, framework_verdict: rejected, reason: three_separate_pair_energies_are_not_a_three_lump_energy_solution_equilibrium_or_stability_oracle}
+  GC4.7: {source_verdict: pass, framework_verdict: rejected, reason: C_MIX_002_has_no_physical_CP_generation_lower_bound_and_capacity_at_most_three_does_not_select_exactly_three}
+  GC4.8: {source_verdict: pass, framework_verdict: qualified, reason: the_local_globals_name_set_is_empty_but_is_not_a_complete_reachability_audit_and_omega_is_declared}
+headline_verdict: qualified_not_established
+positive_objects: [C-QBL-006_exact_trial_pair_interaction, C-PHS-001_scalar_circle_capacity]
+unpromoted_objects: [merger_dynamics, persistence, stable_three_lump_solution, exact_count_three, generation_map, physical_CP_lower_bound, substrate_mechanism]

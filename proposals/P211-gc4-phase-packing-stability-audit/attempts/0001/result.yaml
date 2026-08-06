@@ -6,7 +6,7 @@ base_commit: f04062b920c9f63dddf1c38e47fe0254a1045053
 base_release: v0.152.0
 source_unit: GC4
 candidates: [A, B, C, D, E, F, G, H]
-claims_proposed: [C-PHS-001]
+claims_proposed: [C-QBL-006, C-PHS-001]
 source_body_inspected: false
 native_source_executed: false
 exposed_queue_topics: [trial_pair_interaction_sign, cosine_phase_dependence, exponential_decay, coexistence_stability, count_three]
