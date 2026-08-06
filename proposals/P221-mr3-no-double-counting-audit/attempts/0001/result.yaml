@@ -1,0 +1,21 @@
+campaign: P221
+attempt: 0001
+timestamp_utc: '2026-08-06T12:40:27Z'
+status: passed_with_repaired_memory_invocation
+stage: contract_formula_and_provenance_freeze
+base_release: v0.158.0
+base_commit: 097d184
+source_unit: MR3
+source_sha256: c5eaabaeede15909adb5d9ddb951353c376aaa381e669e35c6256d7015e7eddc
+candidates_frozen: [A, B, C, D, E, F, G]
+provisional_claims: []
+memory_recall:
+  semantic_search: passed
+  first_grep:
+    status: invocation_failed_before_search
+    cause: unsupported_limit_option
+  repaired_grep:
+    status: passed
+    result: C_VAR_002_and_P219_are_the_direct_nonduplication_owners
+remaining_comparators_blinded: true
+next_action: validate_contract_and_memory_then_commit_freeze_before_source_body_or_execution

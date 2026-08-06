@@ -1,0 +1,53 @@
+id: P221
+base_release: v0.158.0
+base_commit: 097d184
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MR3]
+question: >-
+  Does MR3 contain a distinct theorem about composing energy components on one
+  shared configuration beyond C-VAR-002 and C-GSK-001, and which of its
+  no-double-counting conclusions survive accepted dependency and state typing?
+invariants:
+  - C-VAR-002 already distinguishes a joint functional on one admissible set from the sum of separately minimized component functionals.
+  - C-GSK-001 declares one conditional nonnegative radial functional but supplies no physical action coefficients minimizer or baryon state.
+  - MK6 is qualified and MR2 is duplicate evidence; their corrected conditional values are not accepted physical sector masses.
+  - MR1 is duplicate evidence for C-SK-001 and does not allocate one mass to separate sectors.
+  - Absence of a lexical sum in the corpus cannot by itself prove a physical nonadditivity theorem.
+  - A lower bound contribution and an energy term evaluated on one supplied profile are not separately attained sector energies.
+  - Pending MR4 through MR6 grant no backward authority.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never reject scientific candidates.
+allowed_imports:
+  - C-VAR-002 at its exact finite shared-functional order theorem
+  - C-GSK-001 at its exact conditional nonnegative radial density ceiling
+  - C-BPS-001 and C-BPS-002 at their bound and attainment ceilings
+  - C-SK-001 only at its conditional common-unit identity
+  - P219 and terminal MR1 and MR2 adjudication evidence after direct verification
+  - hash-pinned MR3 only after the committed freeze
+candidates:
+  - {id: A, description: Recompute the two-near-mass predicate after the accepted pi-squared convention correction while retaining its supplied comparator status.}
+  - {id: B, description: Type the generalized model as one pointwise sum evaluated on one shared profile and distinguish its terms from separately minimized sector masses.}
+  - {id: C, description: Promote a distinct exact composition or component-contribution theorem only if its premises or reach exceed C-VAR-002.}
+  - {id: D, description: Treat lower-bound and term-fraction calculations as conditional evidence without assuming attainment physical coefficients or a state map.}
+  - {id: E, description: Reject the physical double-counting diagnosis because neither alleged sector mass nor an additive observable has accepted closure.}
+  - {id: F, description: Add no claim or API if all exact survivors are C-VAR-002 C-GSK-001 or prior campaign evidence.}
+  - {id: G, description: Give MR3 a terminal qualified or duplicate disposition and replay MR4 through MR6 without backward authority.}
+uniqueness_evidence: null
+selection_criteria:
+  - common admissible set and shared configuration typing
+  - novelty beyond C-VAR-002 and C-GSK-001
+  - accepted dependency closure and parameter economy
+  - bound versus attained energy distinction
+  - component-value versus separately minimized functional distinction
+  - mutation-sensitive comparator and minimizer logic
+  - physical state action and coefficient firewall
+  - terminal consumer and memory closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue exposes six checks, three assertions, the corrected
+  99.42 MeV and 10.6 percent values, one 936.6 MeV classical value, the false
+  both-near predicate, and the one-functional/no-literal-sum headline.
+  Remaining equations, values, solver details, predicates, output, and consumer
+  claims stay unopened until this contract, formula freeze, provenance record,
+  validation record, and freeze commit exist.
+status: draft
+revision: 0001

@@ -1,0 +1,27 @@
+campaign: P221
+base_release: v0.158.0
+source_unit: MR3
+source_sha256: c5eaabaeede15909adb5d9ddb951353c376aaa381e669e35c6256d7015e7eddc
+queue_exposed_before_freeze:
+  - six_static_and_literal_checks_three_assertions_and_symbolic_numeric_oracles
+  - corrected_BPS_supplied_value_99_42_MeV_and_10_6_percent
+  - classical_supplied_value_936_6_MeV
+  - false_both_within_five_percent_predicate
+  - one_generalized_functional_and_no_literal_sector_sum_headline
+frozen_exact_surfaces:
+  corrected_conditional_BPS_expression: 8*sqrt(2)*N_c*m_pi*absB/(15*pi)
+  joint_order: inf_x_sum_i_E_i_x_greater_or_equal_sum_i_inf_x_E_i_x
+  pointwise_excess: sum_i_E_i_x_minus_m_i
+frozen_type_distinctions:
+  - functional_term_value_on_one_profile_vs_separate_component_infimum
+  - topological_lower_bound_vs_attained_sector_energy
+  - supplied_numeric_comparator_vs_accepted_physical_prediction
+  - lexical_absence_of_sum_vs_mathematical_nonadditivity
+frozen_mutations:
+  - restore_MK6_wrong_pi_squared_coordinate
+  - give_components_incompatible_minimizers
+  - replace_actual_component_infimum_with_a_lower_bound
+  - add_positive_nonattainment_slack
+  - change_supplied_comparator_or_profile
+nonduplication_target: [C-VAR-002, C-GSK-001, C-BPS-001, C-BPS-002, P219, P220]
+comparator_policy: structural_selection_before_any_remaining_source_values

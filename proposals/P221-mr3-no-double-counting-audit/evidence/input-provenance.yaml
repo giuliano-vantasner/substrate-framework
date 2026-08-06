@@ -1,0 +1,27 @@
+campaign: P221
+framework_base:
+  release: v0.158.0
+  commit: 097d184
+  accepted_claims: 201
+  pending_source_units: 4
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path: merged-framework/bridges/phase-44/bridge_MR3_no_double_counting.py
+  sha256: c5eaabaeede15909adb5d9ddb951353c376aaa381e669e35c6256d7015e7eddc
+  bytes: 20506
+  lines: 380
+  tracked_path_status: clean
+queue_inventory: {static_checks: 6, literal_checks: 6, assertions: 3, oracle_hints: [symbolic, numeric]}
+accepted_authority: [C-VAR-002, C-GSK-001, C-BPS-001, C-BPS-002, C-SK-001]
+terminal_source_context:
+  MR1: duplicate_evidence
+  MR2: duplicate_evidence
+  MK5: qualified
+  MK6: qualified
+pending_nonauthority: [MR3, MR4, MR5, MR6]
+compatibility_prior_evidence:
+  source: campaigns/P220-mr2-bps-normalization-audit/evidence/source-graph-inventory.yaml
+  MR3: current_scipy_trapezoid
+  scientific_version_failure: false
+excluded_source_worktree_changes: unrelated_to_hash_pinned_path
