@@ -1,0 +1,31 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:39:21Z'
+source_unit: GC6
+source_body_opened: false
+frozen_obligations:
+  - Define fermion mass matrices scalar interaction matrices diagonalizing left and right bases and every neutral-scalar mass-basis coupling as distinct typed objects.
+  - Distinguish exact absence of tree-level off-diagonal neutral couplings from small supplied numerical ratios and from alignment by an imposed symmetry.
+  - Derive any spatial suppression from normalized profiles with explicit domain measure amplitudes widths centers separations and tail rates.
+  - Test whether the same free separation that changes a mass ratio also changes the claimed FCNC ratio and whether either output selects the separation.
+  - Rebuild every scalar-count trace with a coherent field table and coefficient update rather than changing only a displayed boundary or multiplicity symbol.
+  - Keep C-RGE-005 same-order Yukawa omissions explicit in every weak-sector conclusion.
+  - Audit the anti-fit guard over reachable values rather than accepting lexical or globals-only absence as a scientific theorem.
+  - Adjudicate all six static source predicates and the assertion individually and replay the terminal dependency graph without granting later units authority.
+exact_candidate_objects:
+  mass_matrix: M=sum_a_v_a_times_Y_a
+  mass_basis_coupling: Gamma_a=U_L_dagger_times_Y_a_times_U_R
+  no_tree_level_fcnc: every_Gamma_a_is_diagonal_in_the_declared_mass_basis
+  alignment_sufficient_condition: Y_a=c_a_times_Y_for_all_a
+  overlap_matrix: integral_conjugate(left_mode)_times_scalar_profile_times_right_mode_dx
+numeric_gate:
+  status_required: true
+  precision: float64_unless_source_requires_more
+  source_grid_and_tolerances: blinded
+  refinement_axes: [domain, spatial_mesh, quadrature_or_eigensolver_tolerance]
+  error_norm: scale_relative_maximum_or_operator_norm_fixed_after_opening
+  independent_method: exact_or_analytic_overlap_route_when_tractable
+compatibility_preflight:
+  mutable_policy: numpy_trapezoid_or_canonical_trapezoid_integral
+  immutable_policy: preserve_native_abort_then_alias_only_replay
+  scan_shapes: [direct, imported, dynamic_getattr, eager_nested_default, local_import]
+  version_only_abort_is_scientific_failure: false

@@ -1,0 +1,23 @@
+attempt: 0001
+campaign: P213
+timestamp_utc: '2026-08-06T08:39:21Z'
+kind: authority_recall_candidate_and_formula_freeze
+base_release: v0.154.0
+base_commit: 93f7308482755c2a33997ea0fa88114186c38baf
+source_unit: GC6
+source_sha256: e09822946b9b44ade21632c7db42d2061e493b112a13fab9a44e74a6a6d18b17
+source_body_opened: false
+candidates_registered: 8
+selection_criteria_frozen: true
+provisional_claim_ids: [C-MIX-004]
+compatibility_policy_frozen: true
+freeze_validation:
+  repository_claims: 196
+  active_proposals: 1
+  migration_units: 218
+  pending_units: 12
+  memory_files_validated: 866
+  yaml_files_parsed: 4
+  diff_check: passed
+status: passed
+continuation: commit_the_freeze_then_preflight_and_reproduce_the_hash_pinned_source

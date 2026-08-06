@@ -1,0 +1,47 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:39:21Z'
+framework_base:
+  release: v0.154.0
+  commit: 93f7308482755c2a33997ea0fa88114186c38baf
+  accepted_claims: 196
+  migration_queue:
+    primary_units: 218
+    pending_adjudication: 12
+    qualified: 193
+source_checkout:
+  root: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_outside_pinned_file: true
+source_unit:
+  id: GC6
+  path: merged-framework/bridges/phase-42/bridge_GC6_consequence_and_verdict.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-42/bridge_GC6_consequence_and_verdict.py
+  sha256: e09822946b9b44ade21632c7db42d2061e493b112a13fab9a44e74a6a6d18b17
+  bytes: 23292
+  static_check_calls: 6
+  literal_check_calls: 2
+  dynamic_check_calls: 4
+  assert_statements: 1
+  terminal_tally_literal_present: true
+  body_opened: false
+candidate_dependencies:
+  terminal:
+    EM6: [C-QBL-001]
+    FG2: [C-QBL-001, C-QBL-003]
+    FG4: [C-MIX-001, C-MIX-002]
+    GC1: [C-QBL-001, C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, C-QBL-005]
+    GC2: [C-QBL-001, C-QBL-003, C-OVL-001, C-OVL-002, C-MIX-002, C-QBL-005]
+    GC3: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-001, C-MIX-002, C-MIX-003]
+    GC4: [C-QBL-001, C-QBL-003, C-MIX-002, C-QBL-006, C-PHS-001]
+    GC5: [C-QBL-001, C-OVL-001, C-OVL-002, C-MIX-002, C-MIX-003, C-QBL-006, C-PHS-001, C-OVL-005, C-PHS-002]
+    MH2: [C-OVL-001, C-OVL-002]
+    WM2: [C-REP-001, C-LIE-001]
+    WM3: [C-RGE-004]
+    WM7: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+    WM8: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+    WM9: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, C-RGE-005]
+    WM10: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+claim_identifier_search:
+  candidate: C-MIX-004
+  registry_campaign_proposal_memory_source_test_docs_migration_hits: 0
+  status: provisionally_reserved_if_novel

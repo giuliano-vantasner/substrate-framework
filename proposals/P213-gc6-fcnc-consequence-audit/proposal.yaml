@@ -1,0 +1,68 @@
+id: P213
+base_release: v0.154.0
+base_commit: 93f7308482755c2a33997ea0fa88114186c38baf
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GC6]
+question: >-
+  What exact neutral-scalar flavor-coupling, localization-suppression, and
+  gauge-trace consequences follow from GC6's proposed corrected construction,
+  and do accepted claims actually supply three scalar doublets, three physical
+  generations, spatial natural flavor conservation, or a revised weak-sector
+  prediction?
+invariants:
+  - GC1 through GC5 are terminal only at their qualified mathematical ceilings and derive no physical scalar count generation count Yukawa sector or Standard Model construction.
+  - C-OVL-001 C-OVL-002 C-OVL-003 and C-OVL-005 are conditional overlap and compression theorems with supplied profiles modes centers widths amplitudes spaces and maps.
+  - C-MIX-001 C-MIX-002 and C-MIX-003 are finite matrix and rephasing theorems and supply no physical fermion mass basis neutral-scalar interaction or CP operation.
+  - C-QBL-001 C-QBL-003 and C-QBL-006 supply conditional profiles Hessian data and one trial interaction but no nonlinear stability occupancy or field ontology theorem.
+  - C-PHS-001 is a scalar-circle capacity and C-PHS-002 is a static equal-weight cosine identity neither of which selects physical occupancy.
+  - C-RGE-004 C-RGE-005 and C-RGE-006 require supplied field tables coefficients boundaries constraints and omissions and do not derive scalar or generation multiplicities.
+  - C-RGE-005 excludes same-order Yukawa terms so a claimed FCNC sector cannot simultaneously be omitted from and used to close its gauge-only running prediction.
+  - Field species scalar doublets localized profiles fermion modes generations Yukawa matrices mass bases and neutral-scalar couplings remain distinct typed objects requiring explicit maps.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never count as scientific candidate failures.
+allowed_imports:
+  - C-QBL-001 C-QBL-003 C-QBL-005 C-QBL-006 C-OVL-001 C-OVL-002 C-OVL-003 C-OVL-005 C-MIX-001 C-MIX-002 C-MIX-003 C-PHS-001 and C-PHS-002 only at accepted conditional mathematical ceilings
+  - C-REP-001 C-REP-003 C-ANO-001 C-RGE-004 C-RGE-005 C-RGE-006 C-VAC-003 and C-GSM-001 only with their supplied table representation boundary matching and ontology ceilings
+  - terminal EM6 FG2 FG4 GC1 through GC5 MH2 WM2 WM3 and WM7 through WM10 mappings at v0.154.0 without rejected physical interpretations
+  - elementary finite matrix change-of-basis singular-value norm and exact overlap inequalities with every load-bearing lemma independently reproduced
+  - SymPy for exact coupling matrices basis transforms alignment conditions overlap identities and trace counterfactuals
+  - NumPy and SciPy only for hash-pinned source reproduction or genuinely unresolved convergence after equations tolerances and error norms freeze
+  - hash-pinned GC6 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Derive an exact multi-scalar mass-basis neutral-coupling ledger whose off-diagonal entries are the tree-level flavor-changing object and whose simultaneous diagonality is the no-FCNC criterion.
+  - id: B
+    description: Derive a localized-overlap suppression bound or asymptotic rate for off-anchor scalar couplings with every profile width center amplitude and normalization explicit.
+  - id: C
+    description: Retain a conditional hierarchy-versus-off-diagonal tradeoff whose numerical suppression depends on free spacing and tail rates rather than selecting a physical construction.
+  - id: D
+    description: Select no new scientific claim if C-OVL-002 C-OVL-003 and C-OVL-005 already own every exact overlap and alignment survivor.
+  - id: E
+    description: Rebuild the WM7 gauge trace only as accepted supplied-table composition for each explicitly declared scalar count.
+  - id: F
+    description: Construct coherent count counterfactuals that update both representation rows and gauge coefficients and expose any boundary-only or count-only mutation.
+  - id: G
+    description: Classify the source anti-fit guard as a finite software predicate unless it proves a scientific invariant over all permitted value paths.
+  - id: H
+    description: Give GC6 an individual terminal disposition and close the full GC branch without importing later MK or MR units.
+uniqueness_evidence: null
+selection_criteria:
+  - exact field interaction and basis typing
+  - accepted invariant compatibility
+  - assumption and parameter economy
+  - basis covariance dimensions signs and limiting behavior
+  - sensitivity to widths spacings amplitudes scalar counts and Yukawa textures
+  - distinction between asymptotic suppression exact alignment and physical bounds
+  - novelty beyond accepted overlap compression and gauge-running claims
+  - terminal authority consumer and generated-state closure
+claims_proposed: [C-MIX-004]
+reserved_unpromoted_claims: []
+comparators_blinded_until: >-
+  The generated queue exposes GC6's headline, six static check sites, one
+  assertion, and truncated claims about a three-doublet FCNC consequence,
+  spatial suppression, and a WM7 trace update. The source body, exact profiles,
+  matrices, grids, tolerances, values, thresholds, remaining predicates,
+  guards, and native output remain unopened until this manifest, prose
+  contract, formula freeze, provenance record, memory validation, repository
+  validation, and freeze commit exist.
+status: active
+revision: 0001
