@@ -1,0 +1,19 @@
+campaign: P216
+attempt: 0006
+timestamp_utc: '2026-08-06T10:41:53Z'
+status: passed
+stage: primary_exact_verification
+verifier: proposals/P216-mk3-epsilon-pinning-audit/verify.py
+checks: 29
+elapsed_seconds: 2.96
+max_rss_kib: 153820
+result:
+  - exact local quotient and scale-product reconstruction survive conditionally
+  - accepted convention multiplies the source epsilon by pi squared
+  - the exact source less-than-one result becomes greater than one after convention correction
+  - no accepted map identifies the local ratio with C-BPS-003 epsilon
+  - MK1 MK2 and NY1 do not supply the claimed physical closures
+  - source factor non-tautology flow and comparator guards are incomplete or false as stated
+  - no new claim or package API survives nonduplication
+next_action: Complete a fresh independent exact route, hash-sensitive graph replay, and focused accepted-consumer tests.
+

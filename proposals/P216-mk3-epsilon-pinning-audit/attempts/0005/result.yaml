@@ -1,0 +1,13 @@
+campaign: P216
+attempt: 0005
+timestamp_utc: '2026-08-06T10:41:53Z'
+status: failed
+stage: primary_exact_verification
+checks_passed_before_stop: 20
+failure_layer: verifier_record_probe
+failure: >-
+  The governed MK1/MK2 ceiling check searched for wording that was
+  scientifically equivalent but not textually present in the structured
+  disposition qualification.
+scientific_state_changed: false
+repair: Require the qualified disposition fields and their actual stable physical-ceiling and pi-squared convention terms.

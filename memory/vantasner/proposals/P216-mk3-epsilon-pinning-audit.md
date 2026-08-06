@@ -124,6 +124,30 @@ premise, selection criterion, or scientific state changes. If the source's physi
 positive exact ledger and terminal adjudication rather than treating the
 failure as completion.
 
+Attempt 0003 reproduces all six source checks natively in 0.47 seconds with no
+NumPy integration surface. It exposes the load-bearing lambda-convention
+error, an unchecked 64-versus-128 prose contradiction, incomplete dependence
+and flow guards, and executable reconstruction of the nominally absent 0.929
+comparator.
+
+Attempt 0004 preserves a primary-verifier stop after eleven passes on a
+misspelled SymPy API before the scientific predicate was evaluated. Attempt
+0005 preserves the repaired route reaching twenty passes before a brittle
+governed-record wording probe. Requiring the structured dispositions and their
+actual convention and physical-ceiling terms changes no scientific result.
+
+Attempt 0006 completes twenty-nine primary exact checks. Even under all source
+premises, the accepted BPS convention multiplies the source epsilon by
+`pi^2`, moving the exact rational substitution from below one to above one.
+No accepted map supplies the product or identifies the quotient with
+C-BPS-003 epsilon.
+
+Attempt 0007 completes sixteen fresh independent and nine graph checks plus 61
+focused tests. The fifteen-node graph pins 108 predicates and 16 assertions;
+MK3 replays freshly, while unchanged expensive later consumers reuse P215's
+hash-guarded executions. MK3 has no integration surface, and inherited B1/E3
+version shapes remain compatibility provenance only.
+
 ## Debt Ledger
 
 The P216 ledger tracks the local definition and normalization, BPS convention,
@@ -132,14 +156,14 @@ predicates, compatibility, consumers, novelty, and generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MK3 predicates and remaining values remain blinded | Reproduce once after committed freeze | open |
-| Definition may be presented as derived observable | Type every input, normalization, and map | open |
-| Source and accepted BPS lambdas may be conflated | Replay the pi-squared conversion through every product and consumer | open |
-| MK1/MK2/NY1 rejected readings may grant authority | Remove each physical premise and audit the accepted graph | open |
-| Product pinning may be mistaken for individual coupling derivation | Construct exact same-product and different-product families | open |
-| KI2 and C-BPS-003 epsilons may be silently identified | Require an explicit definition map or reject the identification | open |
-| Later consumers may grant backward authority | Replay the terminal graph without later imports | open |
-| Compatibility may masquerade as science | Audit every executable integration-name access before native replay | open |
+| MK3 predicates and remaining values remain blinded | Reproduce once after committed freeze | discharged by attempt 0003 |
+| Definition may be presented as derived observable | Type every input, normalization, and map | discharged by attempts 0006 and 0007 |
+| Source and accepted BPS lambdas may be conflated | Replay the pi-squared conversion through every product and consumer | discharged by attempts 0006 and 0007 |
+| MK1/MK2/NY1 rejected readings may grant authority | Remove each physical premise and audit the accepted graph | discharged by attempts 0006 and 0007 |
+| Product pinning may be mistaken for individual coupling derivation | Construct exact same-product and different-product families | discharged by attempts 0006 and 0007 |
+| KI2 and C-BPS-003 epsilons may be silently identified | Require an explicit definition map or reject the identification | discharged by attempts 0006 and 0007 |
+| Later consumers may grant backward authority | Replay the terminal graph without later imports | discharged by attempt 0007 |
+| Compatibility may masquerade as science | Audit every executable integration-name access before native replay | discharged by attempts 0003 and 0007 |
 | Novelty and governed records remain unresolved | Complete nonduplication, disposition, generation, and closeout | open |
 
 ## Review and Promotion Plan

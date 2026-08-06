@@ -1,0 +1,26 @@
+campaign: P216
+source_unit: MK3
+base_release: v0.156.0
+freeze_commit: 482be21
+claim_delta: none
+primary_verifier: proposals/P216-mk3-epsilon-pinning-audit/verify.py
+checks: 29
+elapsed_seconds: 2.96
+max_rss_kib: 153820
+route:
+  - pinned source freeze compatibility scan and native reproduction
+  - exact local quotient dimension and arbitrary-normalization ledger
+  - scale-product inverse and same-product coupling families
+  - canonical fixed-theory BPS flow mutation
+  - source lambda_A and accepted lambda_BPS product conversion
+  - conditional C-SK scale with retained empirical input
+  - exact convention-sensitive numerical inequality reversal
+  - governed MK1 MK2 NY1 and C-BPS-003 ceiling audit
+  - source prose non-tautology flow and comparator-guard counterexamples
+  - post-source nonduplication and disposition checks
+precision: SymPy exact integers rationals pi and positive assumption-bearing symbols
+numeric_role: exact-rational inequality regression only
+compatibility: MK3 has no integration-name surface
+preserved_failures: [attempt_0004_sympy_API_typo, attempt_0005_brittle_record_wording]
+debt: []
+

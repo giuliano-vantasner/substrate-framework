@@ -1,0 +1,21 @@
+campaign: P216
+attempt: 0003
+timestamp_utc: '2026-08-06T10:41:53Z'
+status: passed
+stage: source_reproduction_and_audit
+source_unit: MK3
+source_sha256: 64254d0f6b9d6ff57f5a8b0a4b86a510e2bef230b4f3bec062533fac59516404
+native:
+  exit_code: 0
+  runtime_checks: 6
+  elapsed_seconds: 0.47
+  max_rss_kib: 54076
+compatibility: no_numpy_integration_surface
+findings:
+  - the local quotient and source-premise substitutions are exact algebra
+  - accepted lambda_BPS composition introduces a pi-squared factor missing from MK3
+  - MK1 and MK2 do not supply accepted physical coupling closures
+  - C-SK-001 retains supplied mass premises and empirical electron energy
+  - the source prose contains a 64-versus-128 factor contradiction
+  - the comparator guard reconstructs 0.929 executably and misses its uppercase identifier
+next_action: Run the mutation-sensitive primary exact verifier, repair any oracle defects, then obtain a fresh independent derivation.

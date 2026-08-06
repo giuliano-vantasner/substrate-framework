@@ -1,0 +1,15 @@
+campaign: P216
+root: MK3
+accepted_consumers: []
+pending_reverse_consumers:
+  MK4: assumes_the_MK3_epsilon_is_computed
+  MK5: inserts_the_MK3_numeric_epsilon
+  MK6: interprets_0.496_and_the_mass_ratio
+  MR2: claims_MK3_is_unaffected_by_normalization_repairs
+  MR6: repeats_that_MK3_survives
+consumer_decision: >-
+  All reverse consumers remain pending and receive no backward authority. Their
+  unchanged hash-pinned source executions were already replayed by P215 and are
+  reused; P216 freshly replays MK3 and audits each narrative edge.
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+

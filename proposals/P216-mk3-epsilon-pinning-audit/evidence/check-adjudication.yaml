@@ -1,0 +1,35 @@
+source_unit: MK3
+checks:
+  MK3.1:
+    verdict: qualified_exact_definition
+    surviving_object: epsilon=(F_pi/e)/(lambda_BPS*mu) for separately supplied positive inputs and a fixed declared normalization
+    correction: Dimensional algebra does not select the normalization or identify the quotient with C-BPS-003 epsilon.
+    accepted_mapping: [C-BPS-001, C-SK-001]
+  MK3.2:
+    verdict: qualified_conditional_wrong_accepted_convention
+    surviving_object: lambda_A=N_c/(4*F_pi) and mu=m_pi*F_pi/2 conditionally give lambda_A*mu=N_c*m_pi/8
+    correction: Both physical inputs are unaccepted and lambda_BPS*mu=N_c*m_pi/(8*pi^2) in C-BPS-001's convention.
+    accepted_mapping: [C-BPS-001, C-VEC-002]
+  MK3.3:
+    verdict: qualified_conditional_with_rejected_derivation
+    surviving_object: composing the source product with C-SK-001's supplied equality gives 128*pi*E_e/(3*m_pi)
+    correction: The source keeps E_e and m_pi empirical, assumes N_c=3, inherits rejected coupling maps, and contains an unchecked 64-versus-128 factor contradiction.
+    accepted_mapping: [C-SK-001, C-VEC-002]
+  MK3.4:
+    verdict: rejected_dependency_and_tautological_oracle
+    source_claim: accepted MK1 and MK2 relations remove the KI2 family and make the physical epsilon t-independent
+    reason: Those relations lack accepted physical closure; the code differentiates eps_final_Nc3 after t has already been omitted, while its forced flow still returns eps_step2/t^2.
+  MK3.5:
+    verdict: rejected_physical_inference_and_convention_sensitive_threshold
+    source_claim: source epsilon approximately 0.496 below one proves near-BPS self-consistency
+    reason: C-BPS-003 supplies no less-than-one criterion or map to this ratio, and the accepted lambda_BPS convention multiplies the conditional value by pi^2 to above one.
+  MK3.6:
+    verdict: partially_valid_computation_firewall_with_refuted_literal_guard
+    surviving_object: the epsilon expression itself is algebraically independent of the kappa comparator
+    correction: The executable file reconstructs 0.929 as KAPPA_EMP_VALUE and uses it in the guard; the case-sensitive lowercase identifier scan misses the uppercase name, and the recomputation repeats the same formula.
+assertions:
+  check_helper:
+    role: fail_fast_execution_mechanism
+    verdict: execution_mechanism_not_extra_claim
+terminal_source_disposition: qualified
+

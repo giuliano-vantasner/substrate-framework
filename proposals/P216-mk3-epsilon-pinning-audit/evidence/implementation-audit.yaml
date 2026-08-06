@@ -1,0 +1,14 @@
+campaign: P216
+new_package_apis: []
+new_tests: []
+reason: >-
+  Every exact survivor is already owned by canonical BPS, Skyrme-relation, and
+  vector-convention APIs or by P172's governed noncanonical ratio audit.
+  Duplicating a local epsilon function would create a second normalization
+  authority without an accepted claim.
+canonical_consumers_replayed:
+  - src/substrate_framework/bps_energy.py
+  - src/substrate_framework/skyrme_relations.py
+  - src/substrate_framework/hls_reduction.py
+  - src/substrate_framework/source_audit.py
+

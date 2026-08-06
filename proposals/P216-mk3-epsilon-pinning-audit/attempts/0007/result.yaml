@@ -1,0 +1,28 @@
+campaign: P216
+attempt: 0007
+timestamp_utc: '2026-08-06T10:41:53Z'
+status: passed
+stage: independent_graph_and_consumer_replay
+independent:
+  checks: 16
+  elapsed_seconds: 2.12
+  max_rss_kib: 153384
+graph:
+  nodes: 15
+  lexical_predicates: 108
+  assertions: 16
+  aggregate_checks: 9
+  elapsed_seconds: 2.44
+  max_rss_kib: 150596
+  reused_unchanged_nodes: [MK4, MK5, MK6, MR2, MR6]
+focused_tests:
+  passed: 61
+  pytest_seconds: 2.39
+  wall_seconds: 2.77
+  max_rss_kib: 155196
+compatibility:
+  MK3_surface: none
+  inherited_version_events: [B1, E3]
+  scientific_version_failures: 0
+next_action: Commit the implementation evidence, perform individual source review and impact audit, then synchronize the terminal qualified disposition.
+

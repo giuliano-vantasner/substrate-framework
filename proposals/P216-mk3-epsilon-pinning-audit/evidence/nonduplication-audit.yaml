@@ -1,0 +1,12 @@
+campaign: P216
+registry_search_terms: [epsilon, lambda_mu, scale_product, F_pi_over_e, lambda_A, lambda_BPS]
+existing_owners:
+  - {claim: C-BPS-001, surface: arbitrary_positive_lambda_mu_family_and_pi_four_convention}
+  - {claim: C-BPS-003, surface: abstract_controlled_near_BPS_expansion_coordinate}
+  - {claim: C-SK-001, surface: conditional_F_pi_over_e_equality_and_B1_cancellation}
+  - {claim: C-VEC-002, surface: source_to_BPS_lambda_convention_conversion}
+  - {campaign: P172, surface: local_ratio_normalization_family_product_sufficiency_and_fixed_theory_counterexample}
+distinct_survivor: none
+package_search: no_existing_or_needed_epsilon_pinning_API
+decision: no_new_claim_or_api
+

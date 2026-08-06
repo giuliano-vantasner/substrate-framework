@@ -1,0 +1,25 @@
+campaign: P216
+accepted_dependencies:
+  C-BPS-001:
+    supplies: positive lambda_BPS-mu parameter family pi-four convention dimensions density square residual and bound
+    withholds: coupling values selected potential physical epsilon and state map
+  C-BPS-003:
+    supplies: abstract positive expansion coordinate tending to zero under controlled sector expansions
+    withholds: map to the KI2 quotient numerical threshold or self-consistency at epsilon below one
+  C-SK-001:
+    supplies: conditional F_pi/e=16*pi*E_e iff between two supplied mass formulas
+    withholds: proof of either mass formula zero-import scale and physical prediction
+  C-VEC-002:
+    supplies: lambda_A=pi^2*lambda_BPS convention map and conditional vector-current algebra
+    withholds: physical HLS omega baryon current N_c KSRF F_pi mass coupling and medium map
+source_predecessors:
+  KI2: qualified_local_ratio_and_parameter_family_without_fixed_theory_symmetry
+  KI4: qualified_inverse_reconstruction_and_comparator_circularity_ceiling
+  MK1: qualified_conditional_match_without_physical_mu
+  MK2: qualified_conditional_match_without_physical_lambda_product
+  NY1: duplicate_conditional_scale_with_empirical_input
+  B1_E3_E4_HE4: governed_only_at_their_accepted_mappings
+backward_authority_excluded: [MK4, MK5, MK6, MR2, MR6]
+closure_result: No accepted dependency derives the MK3 physical product normalization or epsilon value.
+debt: []
+

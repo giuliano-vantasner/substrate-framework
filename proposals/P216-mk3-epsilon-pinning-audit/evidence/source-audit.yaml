@@ -1,0 +1,38 @@
+campaign: P216
+source_unit: MK3
+imports: [sympy, ast]
+definitions:
+  local_ratio: epsilon=(F_pi/e)/(lambda*mu)
+  source_lambda_convention: lambda_A
+  accepted_lambda_convention: lambda_BPS=lambda_A/pi^2
+  source_lambda_A_product: lambda_A*mu=N_c*m_pi/8
+  accepted_conditional_product: lambda_BPS*mu=N_c*m_pi/(8*pi^2)
+  conditional_skyrme_scale: F_pi/e=16*pi*E_e
+  source_conditional_epsilon: 128*pi*E_e/(3*m_pi)
+  accepted_conditional_epsilon: 128*pi^3*E_e/(3*m_pi)
+predicate_structure:
+  lexical_checks: 6
+  runtime_checks: 6
+  assertions: 1
+  helper_fail_fast: true
+exact_survivors:
+  - local quotient identity for supplied positive inputs
+  - scale/product inverse reconstruction for supplied positive entries
+  - source-convention substitution algebra conditional on every displayed MK1 MK2 and NY1 premise
+  - simultaneous free-coupling flow scales the local quotient by t^-2
+corrections:
+  - the accepted BPS convention changes the product by 1/pi^2 and the quotient by pi^2
+  - MK1 and MK2 do not supply accepted physical coupling relations
+  - NY1 retains two supplied mass formulas their equality and empirical E_e
+  - the local quotient has arbitrary normalization and no accepted map to C-BPS-003 epsilon
+  - less than one is not an accepted near-BPS self-consistency theorem
+  - source prose equates 128*pi/3 with 64*pi/3 and alternates 0.496 with 0.248
+  - MK3.3 never tests prior g or m_V dependence
+  - MK3.4 differentiates a t-free expression after dropping the flow rather than proving accepted closure
+  - MK3.6 reconstructs 0.929 executably and misses its uppercase identifier with a lowercase case-sensitive token
+headline_oracle_gap: >-
+  Every green source predicate is either conditional substitution algebra,
+  differentiation after the disputed substitutions, a convention-sensitive
+  numeric threshold, or a guard that does not test its literal claim. None
+  supplies the missing accepted product or physical epsilon map.
+

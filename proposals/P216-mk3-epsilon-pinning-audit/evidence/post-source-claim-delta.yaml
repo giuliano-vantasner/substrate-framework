@@ -1,0 +1,19 @@
+campaign: P216
+source_unit: MK3
+claim_decision:
+  promoted_new_claims: []
+  new_package_apis: []
+  accepted_claims_unchanged: [C-BPS-001, C-BPS-003, C-SK-001, C-VEC-002]
+  reason: >-
+    C-BPS-001 and P172 already own the positive parameter-family and local-ratio
+    ceiling, C-SK-001 owns the conditional scale equality, and C-VEC-002 owns
+    the lambda convention map. MK3 adds no distinct dependency-closed theorem.
+unpromoted_objects:
+  - {object: physical_epsilon_value, reason: missing accepted coupling product normalization and physical map}
+  - {object: broken_KI2_family, reason: MK1 and MK2 physical relations are unaccepted}
+  - {object: near_BPS_self_consistency, reason: no C-BPS-003 map or less-than-one theorem and convention mutation reverses verdict}
+  - {object: zero_import_mass_ratio_prediction, reason: empirical electron and pion masses plus N_c remain inputs}
+  - {object: comparator_absence_guard, reason: source reconstructs and reads 0.929 inside executable guard code}
+release_change: none_expected
+source_disposition: qualified
+

@@ -1,0 +1,11 @@
+campaign: P216
+attempt: 0004
+timestamp_utc: '2026-08-06T10:41:53Z'
+status: failed
+stage: primary_exact_verification
+checks_passed_before_stop: 11
+failure_layer: verifier_implementation
+failure: AttributeError because the verifier called nonexistent sympy.simpl instead of sympy.simplify on the saturation-residual scaling identity.
+scientific_predicate_evaluated: false
+scientific_state_changed: false
+repair: Replace only the misspelled SymPy API call and rerun the identical oracle.

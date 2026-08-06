@@ -69,3 +69,18 @@ comparators_blinded_until: >-
   details remain unopened until this manifest, prose contract, formula freeze,
   provenance record, validation record, and freeze commit exist.
 status: draft
+revision: 0002
+opened_source_equations:
+  local_ratio: epsilon=(F_pi/e)/(lambda*mu)
+  source_lambda: lambda_A=N_c/(4*F_pi)
+  source_mu: mu=m_pi*F_pi/2
+  source_product: lambda_A*mu=N_c*m_pi/8
+  conditional_skyrme_scale: F_pi/e=16*pi*E_e
+  source_final: epsilon=128*pi*E_e/(3*m_pi)
+  accepted_convention_final: epsilon=128*pi^3*E_e/(3*m_pi)
+claim_refinement:
+  decision: no_new_claim_or_API
+  reason: >-
+    Exact survivors duplicate accepted BPS, Skyrme-scale, and vector-convention
+    ledgers plus P172's governed local-ratio audit. MK3's physical pinning,
+    fixed-theory flow breaking, and self-consistency claims lack closure.

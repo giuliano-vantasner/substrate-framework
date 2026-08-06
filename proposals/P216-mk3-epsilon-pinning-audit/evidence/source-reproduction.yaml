@@ -1,0 +1,20 @@
+campaign: P216
+source_unit: MK3
+path: merged-framework/bridges/phase-43/bridge_MK3_epsilon_pinned.py
+absolute_path: /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK3_epsilon_pinned.py
+sha256: 64254d0f6b9d6ff57f5a8b0a4b86a510e2bef230b4f3bec062533fac59516404
+bytes: 19470
+command: .venv/bin/python /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK3_epsilon_pinned.py
+result:
+  exit_code: 0
+  runtime_checks: 6
+  terminal_tally: ALL 6 CHECKS PASS
+  elapsed_seconds: 0.47
+  max_rss_kib: 54076
+compatibility_event: none
+scientific_scope: >-
+  Native reachability proves only that the six source predicates execute. It
+  does not close the rejected MK1/MK2 physical premises, convert lambda_A to
+  lambda_BPS, map the local ratio to C-BPS-003 epsilon, or validate the
+  less-than-one near-BPS criterion.
+

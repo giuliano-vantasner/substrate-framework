@@ -1,0 +1,15 @@
+campaign: P216
+selected:
+  - {id: A, reason: exact supplied-input quotient identity survives}
+  - {id: B, reason: scale-product reconstruction is exact but conditional}
+  - {id: C, reason: pi-squared convention correction is load bearing}
+  - {id: D, reason: C-SK composition survives only with every supplied premise and empirical input}
+  - {id: E, reason: accepted positive families and normalization countermodels defeat selection}
+  - {id: F, reason: no map identifies the local ratio with C-BPS-003 epsilon}
+  - {id: G, reason: physical dependency firewall rejects the headline closure}
+  - {id: I, reason: terminal qualified disposition is required}
+not_selected:
+  - {id: H, reason: nonduplication finds no distinct claim or package surface}
+structural_selection_basis: dependency closure convention correctness exact counterfamilies normalization typing and premise economy
+comparator_selection_used: false
+

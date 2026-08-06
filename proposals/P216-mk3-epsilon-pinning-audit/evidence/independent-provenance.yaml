@@ -1,0 +1,20 @@
+campaign: P216
+claim_delta: none
+independent_review: proposals/P216-mk3-epsilon-pinning-audit/reviews/independent_epsilon_review.py
+checks: 16
+elapsed_seconds: 2.12
+max_rss_kib: 153384
+canonical_claim_api_imported: false
+primary_verifier_imported: false
+route:
+  - fresh monomial cancellation and normalization family
+  - fresh scale-product inverse and same-product coupling family
+  - fresh density-convention solve and product conversion
+  - fresh exact-rational less-than-one reversal
+  - fresh NY1 monomial cancellation with retained empirical input
+  - fresh flow and fixed-product constraint
+  - fresh AST comparator and prose contradiction inspection
+  - direct accepted-registry ceiling checks
+precision: SymPy exact
+debt: []
+

@@ -1,0 +1,19 @@
+campaign: P216
+source_unit: MK3
+direct_source:
+  imports: [sympy, ast]
+  numpy_legacy_references: 0
+  numpy_current_references: 0
+  eager_legacy_default_fallbacks: 0
+  dynamic_legacy_accesses: 0
+  native_execution_requires_alias: false
+graph_preflight:
+  B1: {legacy: 1, current: 1, eager: 1, handling: immutable_prior_alias_only_provenance}
+  E3: {legacy: 1, current: 1, eager: 0, handling: immutable_current_first_safe_fallback}
+  all_other_nodes: {legacy: 0, current: 0, eager: 0}
+scientific_version_failures: 0
+policy: >-
+  MK3 itself is native on the current NumPy environment. Inherited immutable
+  version surfaces are retained as compatibility provenance and do not lower a
+  scientific verdict or trigger redundant source execution.
+
