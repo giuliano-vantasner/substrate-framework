@@ -1,0 +1,26 @@
+campaign: P220
+framework_base: {release: v0.158.0, commit: 7c98ec7}
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path: merged-framework/bridges/phase-44/bridge_MR2_bps_normalization_pi_squared.py
+  sha256: 2e62ce2d6cbee805a988046a27a742e622931291e8e013a9aede6ce16e48e990
+  bytes: 20989
+  source_file_worktree_status: clean
+  unrelated_source_worktree_changes: excluded
+authority:
+  - governance/releases/v0.158.0.yaml
+  - governance/claims.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/adjudication.yaml
+  - campaigns/P218-mk5-generalized-skyrme-solve-audit/adjudication.yaml
+  - campaigns/P219-mk6-confrontation-tension-audit/adjudication.yaml
+  - src/substrate_framework/hls_reduction.py
+  - src/substrate_framework/bps_energy.py
+  - src/substrate_framework/generalized_skyrme_radial.py
+memory_queries:
+  - memory_search_MR2_BPS_normalization_pi_squared
+  - memory_grep_MR2
+compatibility_preflight:
+  required_before_execution: [direct, imported, dynamic, eager]
+  mutable_policy: numpy_trapezoid_or_trapezoid_integral
+  immutable_policy: alias_only_replay_backed_by_numpy_trapezoid_if_needed

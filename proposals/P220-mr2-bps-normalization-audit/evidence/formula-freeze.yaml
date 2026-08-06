@@ -1,0 +1,21 @@
+campaign: P220
+base_release: v0.158.0
+source_unit: MR2
+source_sha256: 2e62ce2d6cbee805a988046a27a742e622931291e8e013a9aede6ce16e48e990
+exposed_before_freeze:
+  - eight_static_and_literal_checks_one_assertion_and_terminal_tally_literal
+  - L6_equals_minus_lambda_A_squared_B_squared
+  - L6_equals_minus_lambda_BPS_squared_pi_fourth_B_squared
+  - lambda_A_equals_pi_squared_lambda_BPS
+  - MK5_c6_cross_check_and_MK6_pi_squared_correction
+frozen_exact_routes:
+  density_route: lambda_A_squared=lambda_BPS_squared*pi_fourth_for_positive_couplings
+  reduced_route: lambda_A_squared_over_pi_fourth=lambda_BPS_squared
+  bound_route: 2*lambda_BPS*mu*pi_squared*absB*W=2*lambda_A*mu*absB*W
+frozen_mutations:
+  - use_different_current_normalizations_without_conversion
+  - insert_lambda_A_into_lambda_BPS_bound
+  - remove_pi_squared_from_map
+  - call_a_supplied_conditional_value_a_zero_parameter_physical_mass
+nonduplication_target: [C-VEC-002, C-BPS-001, C-GSK-001, P219]
+comparator_policy: exact_nonduplication_and_dependency_selection_before_remaining_values
