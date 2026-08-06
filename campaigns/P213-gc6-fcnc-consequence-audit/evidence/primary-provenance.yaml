@@ -1,6 +1,6 @@
 campaign: P213
 timestamp_utc: '2026-08-06T08:58:09Z'
-artifact: verify.py
+artifact: campaigns/P213-gc6-fcnc-consequence-audit/verify.py
 sha256: 00d97f0af65f20a2246409ea44fc4d53f3a06e81009b0767e2e67d9d781ef45b
 runtime_checks: 40
 static_check_calls: 29

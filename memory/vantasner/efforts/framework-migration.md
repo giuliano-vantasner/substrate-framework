@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T08:34:20Z'
+updated: '2026-08-06T09:20:05Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.154.0`, containing one hundred ninety-six
+The current accepted frontier is `v0.155.0`, containing one hundred ninety-seven
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2441,27 +2441,43 @@ with zero quadrature surface. The integrated boundary validates 865 memory
 files and passes all 1,873 tests in 183.37 pytest seconds and 196.76 seconds
 total wall time with exit zero.
 
+P213 promotes C-MIX-004 in v0.155.0 and qualifies GC6 through the accepted
+overlap, matrix, phase, supplied-table, and gauge-running ceilings. The exact
+positive object reconstructs every individual coupling in one biunitary mass
+basis, distinguishes a diagonal weighted sum from diagonal summands, requires
+a nonzero combined coefficient for the alignment corollary, and uses the
+conjugate Takagi right basis. The source's finite-box family remains
+conditional model evidence after correcting its transform and exposing a
+nonmonotone spacing interval. No accepted premise derives three physical
+doublets or generations, phenomenological FCNC safety, a multiplicity ratio,
+complete weak-sector prediction, general anti-fit theorem, Standard-Model map,
+or substrate mechanism. Forty primary, 18 independent, 39 terminal-graph
+checks, and 192 focused tests pass. The 16-node graph pins 133 predicates and
+22 assertions with zero quadrature surface. The integrated boundary validates
+870 memory files and passes all 1,887 tests in 180.23 pytest seconds and 194.13
+seconds total wall time with exit zero.
+
 ## Canonicalization
-The registry, `v0.154.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred ninety-six accepted claims.
-P001 through P212 are frozen under `campaigns/`; proposal,
+The registry, `v0.155.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred ninety-seven accepted claims.
+P001 through P213 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 12 pending, 0 partial, 3
-migrated, 193 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P212 changes the accepted scientific surface and therefore runs the most
+memory. The regenerated migration queue agrees on 11 pending, 0 partial, 3
+migrated, 194 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P213 changes the accepted scientific surface and therefore runs the most
 recent full integrated release boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 12
-pending, 3 migrated, 193 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 11
+pending, 3 migrated, 194 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle and GC1-GC5 are terminal without backward authority.
-The next campaign audits GC6 against the accepted soliton, overlap, matrix,
-phase, and count ceilings. The remaining condensation order is GC6 on one branch and
-MK3 through MK6 then MR2 through MR6 on the other.
+The WM7-WM10 source cycle and GC1-GC6 are terminal without backward authority.
+The next campaign audits MK1 against the accepted Skyrme, pion-mass,
+normalization, and parameter-identifiability ceilings. The remaining order is
+MK1 through MK6, then MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

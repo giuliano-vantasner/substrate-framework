@@ -1,0 +1,30 @@
+attempt: 12
+campaign: P213
+timestamp_utc: '2026-08-06T09:20:05Z'
+kind: promotion_boundary
+implementation_commit: 8f5c8fbeac4ce394a9839f41a3d8e6c49877225e
+review_commit: bb9dfbdb8767e3307aaa704f0194120953e75ffc
+claim: C-MIX-004
+release: v0.155.0
+source_disposition: {GC6: qualified}
+pre_gate_results:
+  primary_checks: 40
+  independent_checks: 18
+  source_graph_checks: 39
+  focused_tests: 192
+  graph_nodes: 16
+  graph_static_predicates: 133
+  graph_assertions: 22
+  graph_zero_quadrature_nodes: 16
+  version_only_scientific_failures: 0
+integrated_gate:
+  command: /usr/bin/time_-v_scripts_validate_sh
+  tests_passed: 1887
+  pytest_seconds: 180.23
+  memory_files_validated: 870
+  wall_seconds: 194.13
+  maximum_resident_kib: 219912
+  exit_status: 0
+  status: passed
+status: passed
+continuation: finalize_record_only_promotion_state_with_narrow_consistency_checks

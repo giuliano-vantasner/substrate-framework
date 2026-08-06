@@ -1,6 +1,6 @@
 campaign: P213
 timestamp_utc: '2026-08-06T08:58:09Z'
-artifact: reviews/independent_flavor_review.py
+artifact: campaigns/P213-gc6-fcnc-consequence-audit/reviews/independent_flavor_review.py
 sha256: 2b0529c6dd7cf7504bff8b4732301cafa774db9323af89241850a03d2f584bdb
 imports_new_canonical_api: false
 runtime_checks: 18

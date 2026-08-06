@@ -2,7 +2,7 @@
 description: Audit GC6 neutral-scalar flavor consequence and final GC verdict
 author: vantasner
 created: '2026-08-06T08:39:21Z'
-updated: '2026-08-06T09:07:14Z'
+updated: '2026-08-06T09:20:05Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - neutral-scalar-couplings
 - flavor-alignment
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P213 GC6 Neutral-Scalar Consequence Audit
 
@@ -209,6 +209,17 @@ focused tests. The 16-node terminal source graph pins 133 predicates and 22
 assertions, passes 39 checks, imports no later unit, and has zero quadrature
 surface.
 
+Attempt 0011 preserves three procedural validator-invocation errors: a missing
+skill-directory argument, a missing memory path, and a repository-relative
+memory path without an explicit base. Corrected invocations validate the
+physics skill and all 516 Vantasner memory files without altering a scientific
+claim, threshold, or candidate.
+
+Attempt 0012 completes the v0.155.0 promotion boundary. The one full integrated
+gate validates 870 memory files and passes all 1,887 tests in 180.23 pytest
+seconds and 194.13 seconds wall time with 219,912 KiB peak RSS and exit zero.
+No second full gate is run for record-only finalization.
+
 ## Debt Ledger
 
 The P213 ledger tracks field species, scalar profiles, doublet labels, fermion
@@ -229,7 +240,7 @@ generated state.
 | A finite anti-fit guard may masquerade as science | Audit reachable value paths and counterexamples | discharged as finite lexical evidence only |
 | Later units may grant backward authority | Replay the terminal graph without MK or MR imports | discharged by attempt 0010 |
 | Compatibility may masquerade as science | Audit every executable legacy access shape | discharged with zero surface and zero scientific version failures |
-| Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | open |
+| Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | discharged by attempt 0012 |
 
 ## Review and Promotion Plan
 
@@ -243,9 +254,9 @@ each rejected physical conclusion explicitly.
 
 ## Done Gate
 
-P213 closes only when the neutral-scalar coupling object, alignment and
+The done gate passes. The neutral-scalar coupling object, alignment and
 suppression conditions, count and trace coherence, physical-interpretation
 ceilings, countermodels, source-predicate adjudication, authority graph,
 compatibility audit, source disposition, generated state, and durable memory
 agree with an empty debt ledger. A small sampled coupling ratio or restated
-phase verdict is not the requested positive derivation.
+phase verdict is not treated as the positive derivation.

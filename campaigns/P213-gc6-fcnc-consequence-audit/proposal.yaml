@@ -64,8 +64,8 @@ comparators_blinded_until: >-
   guards, and native output remain unopened until this manifest, prose
   contract, formula freeze, provenance record, memory validation, repository
   validation, and freeze commit exist.
-status: active
-revision: 0003
+status: accepted
+revision: 0004
 opened_source_equations:
   external_wells: H_R=-d_x^2-12*sech((x-R)/0.7)^2_on_a_finite_Dirichlet_box
   condensate_profiles: Phi_k=A*sech(kappa*(x-(k-1)*cond_sep))

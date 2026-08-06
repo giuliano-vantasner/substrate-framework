@@ -2,9 +2,9 @@ campaign: P213
 direct_consumers:
   - src/substrate_framework/__init__.py
   - tests/test_multi_scalar_flavor.py
-  - proposals/P213-gc6-fcnc-consequence-audit/verify.py
+  - campaigns/P213-gc6-fcnc-consequence-audit/verify.py
 independent_nonconsumer:
-  - proposals/P213-gc6-fcnc-consequence-audit/reviews/independent_flavor_review.py
+  - campaigns/P213-gc6-fcnc-consequence-audit/reviews/independent_flavor_review.py
 accepted_adjacent_consumers_replayed:
   - tests/test_matrix_decompositions.py
   - tests/test_overlap_compressions.py

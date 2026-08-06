@@ -1,6 +1,6 @@
 campaign: P213
 timestamp_utc: '2026-08-06T09:07:14Z'
-artifact: reviews/replay_source_graph.py
+artifact: campaigns/P213-gc6-fcnc-consequence-audit/reviews/replay_source_graph.py
 sha256: 1483e7a0151f371e8de8593eb8ed1714ab69e65f3f13fa203eace6480bbea5c0
 runtime_checks: 39
 static_check_calls: 39

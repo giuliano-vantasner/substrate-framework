@@ -1,0 +1,112 @@
+campaign: P213
+title: GC6 multi-scalar flavor and consequence audit
+source_baseline: substrate@6d1f4e0
+source_units: [GC6]
+base_release: v0.154.0
+accepted_release: v0.155.0
+implementation_commit: 8f5c8fbeac4ce394a9839f41a3d8e6c49877225e
+review_commit: bb9dfbdb8767e3307aaa704f0194120953e75ffc
+adjudicated_at: '2026-08-06T09:14:06Z'
+selected_candidates:
+  - {id: A, reason: Exact_biunitary_individual_couplings_supply_the_missing_multi_scalar_object.}
+  - {id: C, reason: The_source_geometry_survives_only_as_conditional_numeric_model_evidence.}
+  - {id: E, reason: The_WM7_supplied_table_family_is_exact_at_declared_counts.}
+  - {id: F, reason: Coherent_count_and_coefficient_mutations_expose_boundary_only_updates.}
+  - {id: G, reason: Source_anti_fit_checks_are_finite_software_predicates_not_scientific_theorems.}
+  - {id: H, reason: Individual_GC6_governance_closes_the_GC_branch_without_later_authority.}
+competing_candidates:
+  - {id: B, decision: rejected_as_new_claim_because_C_OVL_002_owns_the_conditional_tail_surface}
+  - {id: D, decision: rejected_because_C_MIX_004_is_a_minimum_novel_exact_surface}
+claims:
+  - {id: C-MIX-004, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-QBL-001, decision: unchanged_conditional_profile_and_no_scalar_ontology_or_stability_ceiling}
+  - {id: C-OVL-001, decision: unchanged_normalized_overlap_and_no_Yukawa_or_generation_ceiling}
+  - {id: C-OVL-002, decision: unchanged_translated_tail_and_free_geometry_ceiling}
+  - {id: C-OVL-003, decision: unchanged_finite_compression_and_no_physical_flavor_ceiling}
+  - {id: C-OVL-005, decision: unchanged_identical_translation_limit_and_no_physical_hierarchy_ceiling}
+  - {id: C-MIX-001, decision: unchanged_biunitary_decomposition_and_basis_freedom}
+  - {id: C-MIX-002, decision: unchanged_abstract_phase_count_and_no_generation_or_CP_ceiling}
+  - {id: C-MIX-003, decision: unchanged_common_phase_real_Gram_theorem_and_no_physical_Yukawa_ceiling}
+  - {id: C-QBL-006, decision: unchanged_trial_interaction_and_no_dynamics_or_occupancy_ceiling}
+  - {id: C-PHS-001, decision: unchanged_circle_capacity_and_no_occupancy_ceiling}
+  - {id: C-PHS-002, decision: unchanged_phase_surrogate_and_no_physical_energy_ceiling}
+  - {id: C-REP-001, decision: unchanged_supplied_trace_coordinate_and_normalization_ceiling}
+  - {id: C-REP-003, decision: unchanged_supplied_field_table_and_multiplicity_ceiling}
+  - {id: C-ANO-001, decision: unchanged_supplied_charge_table_and_no_carrier_derivation_ceiling}
+  - {id: C-RGE-004, decision: unchanged_conditional_inverse_inference_ceiling}
+  - {id: C-RGE-005, decision: unchanged_supplied_gauge_ledger_with_Yukawa_omission}
+  - {id: C-RGE-006, decision: unchanged_arbitrary_boundary_conditional_solver_ceiling}
+  - {id: C-VAC-003, decision: unchanged_affine_matching_and_free_reference_ceiling}
+unpromoted_claims:
+  - {id: three_Higgs_doublets, reason: GC5_derives_neither_physical_scalar_species_nor_count_three.}
+  - {id: three_physical_generations, reason: FG2_FG4_and_GC5_supply_no_physical_generation_derivation.}
+  - {id: spatial_natural_flavor_conservation, reason: The_source_uses_the_wrong_mass_basis_transform_and_the_correct_conditional_scan_is_not_monotone.}
+  - {id: physical_FCNC_discharge, reason: No_interaction_scalar_spectrum_mixing_experimental_map_or_uncertainty_is_supplied.}
+  - {id: N_H_over_N_gen_equals_one, reason: Both_physical_counts_and_their_map_are_unestablished.}
+  - {id: revised_weak_angle_prediction, reason: The_boundary_is_supplied_table_composition_and_same_order_Yukawa_terms_matching_and_inputs_are_omitted.}
+  - {id: general_anti_fit_theorem, reason: The_regex_and_literal_subset_checks_are_finite_insensitive_software_predicates.}
+  - {id: Standard_Model_or_substrate_mechanism, reason: Required_fields_actions_interactions_maps_scales_and_oracles_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_flavor_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-MIX-004-claim-review.md
+  source_disposition_review: reviews/GC6-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  claim_revision: evidence/claim-delta-revision-0003.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  terminal_graph_replay: evidence/terminal-graph-replay.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+    - attempts/0008/result.yaml
+    - attempts/0009/result.yaml
+    - attempts/0010/result.yaml
+    - attempts/0011/result.yaml
+    - attempts/0012/result.yaml
+source_disposition: {GC6: qualified}
+accepted_mappings: [C-QBL-001, C-OVL-001, C-OVL-002, C-OVL-003, C-OVL-005, C-MIX-001, C-MIX-002, C-MIX-003, C-MIX-004, C-QBL-006, C-PHS-001, C-PHS-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+compatibility:
+  GC6_surface: none
+  graph_zero_surface_nodes: 16
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.155.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_flavor_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_matrix_overlap_phase_gauge_source_audit_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  tests_passed: 1887
+  pytest_seconds: 180.23
+  memory_files_validated: 870
+  wall_seconds: 194.13
+  maximum_resident_kib: 219912
+  exit_status: 0
+debt: []
+status: accepted

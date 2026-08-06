@@ -1678,6 +1678,99 @@ units:
       scientific version failures. The single integrated v0.154.0 boundary
       validates 865 memory files and passes all 1,873 tests in 183.37 pytest
       seconds and 196.76 seconds total wall time with exit zero.
+  GC6:
+    disposition: qualified
+    accepted_claims:
+      - C-QBL-001
+      - C-OVL-001
+      - C-OVL-002
+      - C-OVL-003
+      - C-OVL-005
+      - C-MIX-001
+      - C-MIX-002
+      - C-MIX-003
+      - C-MIX-004
+      - C-QBL-006
+      - C-PHS-001
+      - C-PHS-002
+      - C-REP-001
+      - C-REP-003
+      - C-ANO-001
+      - C-RGE-004
+      - C-RGE-005
+      - C-RGE-006
+      - C-VAC-003
+    qualification: >-
+      GC6's surviving exact result is C-MIX-004's multi-scalar mass-basis
+      reconstruction. Individual couplings transform biunitarily as
+      U_L^dagger*Y_a*U_R and can contain off-diagonal entries that cancel in
+      the weighted diagonal mass sum. A complex-symmetric Takagi mass basis
+      uses the conjugate right basis; the source instead reuses the left basis
+      and can manufacture off-diagonal entries. Common matrix alignment is
+      sufficient only when its combined mass coefficient is nonzero, while
+      zero and repeated mass blocks retain basis freedom. The source's
+      finite-box well computation is reproducible conditional numeric evidence
+      with supplied wells, profiles, phases, spacings, domain, grid, and
+      thresholds. Its corrected ratio is not monotone on the inspected
+      4.75-to-5.25 spacing interval, and no physical interaction, scalar masses
+      or mixing, experimental map, or uncertainty turns a small dimensionless
+      ratio into an FCNC safety result. The WM7 supplied-table family is
+      exactly 3*(8*n_gen+n_h)/(2*(32*n_gen+3*n_h)), with conditional values
+      3/8, 25/66, and 27/70, but GC5 derives neither N_H=3 nor N_gen=3.
+      The narrated downstream value is not checked; a coherent three-scalar
+      coefficient update differs, and C-RGE-005 omits same-order Yukawa terms.
+      The named-load regex is finite lexical evidence, while the literal
+      input-class subsets are not dependency dataflow and import rejected GC
+      readings. No three physical doublets or generations, spatial natural
+      flavor conservation, physical FCNC discharge, multiplicity ratio,
+      weak-angle prediction, Standard-Model, observation, or substrate
+      conclusion is accepted.
+    evidence:
+      - campaigns/P213-gc6-fcnc-consequence-audit/reviews/source_adjudication.md
+      - campaigns/P213-gc6-fcnc-consequence-audit/reviews/C-MIX-004-claim-review.md
+      - campaigns/P213-gc6-fcnc-consequence-audit/reviews/GC6-disposition-review.md
+      - campaigns/P213-gc6-fcnc-consequence-audit/reviews/impact_analysis.md
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/source-reproduction.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/compatibility-audit.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/source-audit.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/check-adjudication.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/formula-freeze.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/input-provenance.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/dependency-audit.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/consumer-audit.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/terminal-graph-replay.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/candidate-comparison.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/implementation-audit.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/impact-analysis.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/primary-provenance.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/independent-provenance.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/evidence/focused-test-replay.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/verify.py
+      - campaigns/P213-gc6-fcnc-consequence-audit/reviews/independent_flavor_review.py
+      - campaigns/P213-gc6-fcnc-consequence-audit/reviews/replay_source_graph.py
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0001/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0002/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0003/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0004/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0005/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0006/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0007/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0008/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0009/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0010/result.yaml
+      - campaigns/P213-gc6-fcnc-consequence-audit/attempts/0011/result.yaml
+      - memory/vantasner/decisions/C-MIX-004-review.md
+      - memory/vantasner/decisions/GC6-qualified-review.md
+    note: >-
+      P213 closes 40 primary, 18 independent, and 39 terminal source-graph
+      checks plus 192 focused accepted-API tests. The graph pins 16 nodes with
+      133 static predicates and 22 assertions. GC6, mutable P213, canonical
+      APIs, and every graph node have zero quadrature surface and create zero
+      scientific version failures. The single integrated v0.155.0 boundary
+      validates 870 memory files and passes all 1,887 tests in 180.23 pytest
+      seconds and 194.13 seconds total wall time with exit zero.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:
