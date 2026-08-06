@@ -1,0 +1,31 @@
+attempt: 0006
+campaign: P209
+timestamp_utc: '2026-08-05T23:16:00Z'
+kind: terminal_record_promotion_gate
+status: passed
+source_disposition: qualified
+accepted_mapping: [C-QBL-001, C-QBL-003, C-OVL-001, C-OVL-002, C-MIX-002, C-QBL-005]
+claim_delta: []
+release_change: null
+primary_checks: 37
+independent_checks: 20
+terminal_graph_checks: 39
+focused_tests: 86
+full_pytest_repeated: false
+last_full_release_gate: {campaign: P208, tests_passed: 1821, pytest_seconds: 175.56}
+compatibility: {mutable_legacy_references: 0, graph_legacy_references: 0, version_only_scientific_failures: 0}
+workflow_validation:
+  repository: {claims: 191, accepted: 191, proposals: 0, units: 218, pending: 15, partial: 0}
+  generated_claim_index: current
+  generated_accepted_memory: current
+  memory_files_validated: 846
+  physics_skill: valid
+  yaml_parse: pass
+  git_diff_check: pass
+reason_no_full_pytest: >-
+  P209 changes no accepted claim release canonical package module package API
+  or test. Exact scientific and graph verifiers plus 86 focused existing API
+  tests and record-sensitive validators cover the changed surface.
+debt: []
+verdict: terminal_accepted_composition_no_release
+continuation: commit_P209_then_open_P210_GC3_relative_phase_and_CP_audit

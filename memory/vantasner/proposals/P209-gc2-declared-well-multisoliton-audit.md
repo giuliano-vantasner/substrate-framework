@@ -2,7 +2,7 @@
 description: Audit GC2's declared translated wells and multisoliton interpretation
 author: vantasner
 created: '2026-08-05T22:56:00Z'
-updated: '2026-08-05T23:02:00Z'
+updated: '2026-08-05T23:16:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - translated-localization
 - multisoliton
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P209 GC2 Declared-Well Multisoliton Audit
 
@@ -130,16 +130,16 @@ reverse consumer, compatibility event, and generated record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Detailed source predicates remain blinded | Reproduce once after committed freeze | open |
-| Fixed literals may be described as derived fields | AST and source-provenance audit | open |
-| A Hamiltonian family may be called one multisoliton | Require common field equation and simultaneous solution | open |
-| Localization metric may repeat GC1's universal inequality | Reconstruct centered mean and variance exactly | open |
-| The external well may be conflated with the quartic core | Compare both models without identification | open |
-| Three may be inherited from a list or phase-count slot | Mutate list length and audit count authority | open |
-| Existing claims may already own all corrected content | Complete claim and API nonduplication audit | open |
-| Pending cycle dependencies may grant authority | Replay GC3 through GC5 without imports | open |
-| Reverse consumers may be silently broken | Replay GC4 through GC6 after disposition | open |
-| Compatibility may masquerade as science | Audit every executable access shape | open |
+| Detailed source predicates remain blinded | Reproduce once after committed freeze | discharged after freeze commit `b97b48c` |
+| Fixed literals may be described as derived fields | AST and source-provenance audit | discharged; four MH2 literals and six centers recorded |
+| A Hamiltonian family may be called one multisoliton | Require common field equation and simultaneous solution | discharged by rejecting the absent field construction |
+| Localization metric may repeat GC1's universal inequality | Reconstruct centered mean and variance exactly | discharged by characteristic-function moments |
+| The external well may be conflated with the quartic core | Compare both models without identification | discharged by exact typed depth ratio and mutation |
+| Three may be inherited from a list or phase-count slot | Mutate list length and audit count authority | discharged; six and three are supplied cardinalities |
+| Existing claims may already own all corrected content | Complete claim and API nonduplication audit | discharged; no new claim or API |
+| Pending cycle dependencies may grant authority | Replay GC3 through GC5 without imports | discharged; no backward authority |
+| Reverse consumers may be silently broken | Replay GC4 through GC6 after disposition | discharged by the terminal graph |
+| Compatibility may masquerade as science | Audit every executable access shape | discharged; zero quadrature surface and failures |
 
 ## Review and Promotion Plan
 
@@ -159,3 +159,12 @@ source-predicate adjudication, authority graph, compatibility audit,
 disposition, generated state, and durable memory agree with an empty campaign
 debt ledger. Neither an unsupported multisoliton headline nor a finite numeric
 localization check can close the campaign alone.
+
+P209 qualifies GC2 through C-QBL-001, C-QBL-003, C-OVL-001, C-OVL-002,
+C-MIX-002, and C-QBL-005 with no new claim, API, or release. The exact
+translated moments and fixed/core depth comparison survive; the multisoliton,
+selected-three, exact-sine-count, positive-particle, mislabeled-centroid, and
+reachability-guard overreads do not. The primary, independent, and terminal
+graph routes pass 37, 20, and 39 checks, and 86 focused tests pass. The
+14-node graph pins 107 predicates and 20 assertions with zero scientific
+version failures. The campaign debt ledger is empty.

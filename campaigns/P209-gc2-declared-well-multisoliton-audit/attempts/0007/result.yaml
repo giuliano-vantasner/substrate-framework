@@ -1,0 +1,19 @@
+attempt: 0007
+campaign: P209
+timestamp_utc: '2026-08-05T23:19:00Z'
+kind: post_finalization_record_sensitive_cli_repair
+status: passed_after_cli_repair
+failed_command: >-
+  memory validate --base "$PWD" decision.md proposal.md effort.md
+failed_exit_status: 2
+failure_class: validator_invocation
+failure: memory_validate_accepts_exactly_one_positional_path
+terminal_gate_invalidated: false
+reason: >-
+  The terminal gate had already validated the one repository-local memory
+  directory containing all 846 records. This later spot-check syntax error
+  changes no scientific or governance result but is preserved append-only.
+repair: rerun_memory_validate_with_the_single_repository_memory_directory_path
+repair_exit_status: 0
+scientific_version_failures: 0
+continuation: regenerate_the_queue_for_the_added_attempt_path_then_commit_P209

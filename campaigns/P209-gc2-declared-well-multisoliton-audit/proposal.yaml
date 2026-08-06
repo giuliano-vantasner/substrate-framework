@@ -67,8 +67,8 @@ comparators_used_for_selection:
   - hash-pinned MH2 FG2 FG4 and WM9 source literals and statements
   - accepted C-OVL-002 C-QBL-003 C-QBL-005 C-OVL-001 and C-MIX-002 ceilings
   - independent exact translated-density moments and source-list mutations
-status: active
-revision: 0002
+status: accepted
+revision: 0003
 post_source_numeric_audit:
   operator: minus_d2_minus_12_sech_squared_of_x_minus_R_over_0_7
   domain: asymmetric_Dirichlet_box_minus_6_to_32

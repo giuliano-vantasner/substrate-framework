@@ -2378,26 +2378,42 @@ quadrature compatibility surface or scientific version failure. The integrated
 boundary validates 844 memory files and passes all 1,821 tests in 175.56 pytest
 seconds and 188.86 seconds total wall time with exit zero.
 
+P209 leaves v0.151.0 unchanged and qualifies GC2 through C-QBL-001,
+C-QBL-003, C-OVL-001, C-OVL-002, C-MIX-002, and C-QBL-005. MH2's hierarchy
+code declares six translated fixed-depth external wells, not three levels of
+one operator and not a simultaneous nonlinear multisoliton. Exact translated
+moments replace the source's mislabeled `E|x|` centroid and incomplete
+refinement. The fixed-well to quartic-core ratio grows only as a comparison of
+two declared models. The quartic translation zero survives, while GC2's
+exact-sine net count inherits FG2's rejected wall-contaminated third level and
+the remaining quartic level is negative. Only `p=2` among WM9's literal
+pure-sech trials is an eigenfunction, and neither FG2 nor FG4 derives observed
+count three. Thirty-seven primary, twenty independent, and thirty-nine
+terminal graph checks plus 86 focused tests pass. The 14-node graph pins 107
+predicates and 20 assertions with no quadrature compatibility surface or
+scientific version failure.
+
 ## Canonicalization
 The registry, `v0.151.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety-one accepted claims.
-P001 through P208 are frozen under `campaigns/`; proposal,
+P001 through P209 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 16 pending, 0 partial, 3
-migrated, 189 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P208 changes the accepted scientific surface and therefore runs one full
-integrated release boundary after targeted exact and graph checks.
+memory. The regenerated migration queue agrees on 15 pending, 0 partial, 3
+migrated, 190 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P208 changes the accepted scientific surface and therefore runs the most
+recent full integrated release boundary. P209 changes only governed records
+and uses a record-sensitive narrow gate after exact, graph, and focused replay.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 16
-pending, 3 migrated, 189 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 15
+pending, 3 migrated, 190 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle and GC1 are terminal without backward authority. The
-next campaign audits GC2 against the corrected local-identity, translated-well,
-and multisoliton ceilings. The remaining condensation order is GC2 through GC6 on one branch and
+The WM7-WM10 source cycle and GC1-GC2 are terminal without backward authority.
+The next campaign audits GC3 against the accepted phase-count, overlap, and
+physical-CP ceilings. The remaining condensation order is GC3 through GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

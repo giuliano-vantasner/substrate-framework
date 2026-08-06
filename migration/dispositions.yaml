@@ -1373,6 +1373,81 @@ units:
       version failures. The integrated boundary validates 844 memory files and
       passes all 1,821 tests in 175.56 pytest seconds and 188.86 seconds total
       wall time with exit zero.
+  GC2:
+    disposition: qualified
+    accepted_claims:
+      - C-QBL-001
+      - C-QBL-003
+      - C-OVL-001
+      - C-OVL-002
+      - C-MIX-002
+      - C-QBL-005
+    qualification: >-
+      GC2 correctly exposes that MH2's working hierarchy uses separately
+      supplied translated external wells with literal depth 12.0, width 0.7,
+      spacing 4.0, and N_GEN=6 rather than bound levels of the one quartic
+      Hessian. C-OVL-002 retains their exact isospectral translation and
+      supplied-parameter ceiling, while C-QBL-005 retains the distinct
+      conditional quartic core depth. The fixed-well to core-depth ratio grows
+      on the supplied center ladder, but it compares two declared models and
+      derives neither from the other. Exact translated ground-density moments
+      give mean R and centered variance w^2*polygamma(1,s)/2. The source instead
+      labels E|x| a centroid, refines only that quantity, omits width ratio and
+      domain convergence, and overreads an origin-relative localization ratio
+      as an object discriminator. Separate external Hamiltonians are not a
+      simultaneous nonlinear multisoliton, and source prose supplies no field
+      equation, interaction, stability, or selected constituent count. The
+      quartic translation tangent is exactly the C-QBL-003 zero mode, but after
+      removing it the remaining quartic level is negative, not a positive
+      particle state. GC2 hard-codes FG2's rejected wall-contaminated
+      exact-sine count three before subtracting its zero. Exact operator
+      application confirms only p=2 among WM9's literal pure-sech p=1,2,3
+      trials is a quartic eigenfunction; the actual second accepted mode is
+      sech*tanh. FG2 and FG4 both disclaim deriving observed count three,
+      C-MIX-002 supplies no family map, and WM9 counts a literal tuple. This is
+      absent authority and misattribution, not a count theorem. The globals-
+      name anti-fit guard does not inspect reachable source strings. No
+      multisoliton, selected generation count, exact-sine third level, positive
+      particle tower, hierarchy, stability, CP mechanism, physical flavor
+      map, Standard-Model, observation, or substrate conclusion is accepted.
+    evidence:
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/reviews/source_adjudication.md
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/reviews/accepted_composition_review.md
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/reviews/GC2-disposition-review.md
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/reviews/impact_analysis.md
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/source-reproduction.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/compatibility-audit.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/source-audit.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/check-adjudication.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/formula-freeze.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/input-provenance.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/dependency-audit.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/consumer-audit.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/candidate-comparison.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/implementation-audit.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/impact-analysis.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/primary-provenance.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/independent-provenance.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/evidence/focused-test-replay.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/verify.py
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/reviews/independent_declared_well_review.py
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/reviews/replay_source_graph.py
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0001/result.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0002/result.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0003/result.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0004/result.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0005/result.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0006/result.yaml
+      - campaigns/P209-gc2-declared-well-multisoliton-audit/attempts/0007/result.yaml
+      - memory/vantasner/decisions/GC2-qualified-review.md
+    note: >-
+      P209 closes 37 primary, 20 independent, and 39 terminal source-graph
+      checks plus 86 focused accepted-API tests. The graph pins 14 nodes with
+      107 static predicates and 20 assertions. GC2, its graph, and mutable P209
+      have no quadrature compatibility surface and create zero scientific
+      version failures. No accepted claim, canonical API, or release changes.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:
