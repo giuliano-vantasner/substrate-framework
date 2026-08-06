@@ -1,0 +1,68 @@
+id: P214
+base_release: v0.155.0
+base_commit: 388a6adebe66282a4b3e08f87af49a017b8056ff
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MK1]
+question: >-
+  What exact coefficient relation follows when a declared BPS-Skyrme
+  potential mu_BPS^2*(1-cos(F)) is matched to a declared normalized cosine
+  mass term, and do accepted claims independently identify that coefficient
+  with a substrate-medium parameter or derive a physical pion mass and decay
+  scale?
+invariants:
+  - C-BRK-001 fixes the generalized mass only after the periodic amplitude angle multiplier coordinate scale and kinetic coefficient are declared in one coordinate convention.
+  - C-CHI-002 owns the exact SU(2) trace and kinetic normalization ledger and explicitly derives no chiral action physical pion decay scale coefficient or substrate realization.
+  - C-BPS-001 treats positive lambda_BPS mu_BPS and the potential as supplied data and derives no potential selection coefficient value or physical map.
+  - C-MED-003 uses a dimensionless 1+1 field and an onsite energy-per-length coefficient mu_medium; it derives no microscopic material or cross-dimensional BPS coefficient map and retains a common coefficient scale.
+  - The symbol mu does not identify C-MED-003's onsite coefficient with C-BPS-001's square-root potential coupling; object type dimensions action measure and field map must agree explicitly.
+  - Local curvature matching does not establish global potential equality and a downstream tail obtained from the same kinetic and potential coefficients is not independent confirmation of their identification.
+  - Pending MK2 and later source units grant no backward authority.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never count as scientific candidate failures.
+allowed_imports:
+  - C-BRK-001 C-CHI-001 C-CHI-002 and C-GMR-001 only at their accepted conditional normalization and ontology ceilings
+  - C-BPS-001 C-BPS-002 C-BPS-003 and C-SK-001 only at their accepted declared-model and conditional-sector ceilings
+  - C-MED-003 C-SG-001 C-SG-002 C-SG-003 and C-SG-017 only at their accepted dimensional and normalized sine-Gordon ceilings
+  - qualified E1 E2 E3 E4 KI2 MC1 NY1 PG2 and S3 mappings without rejected physical interpretations
+  - elementary exact Taylor trace kinetic-Hessian coefficient-matching dimensional and identifiability algebra with each load-bearing factor independently rederived
+  - SymPy for exact identities series coefficient solutions convention mutations and tail linearization
+  - NumPy and SciPy only for hash-pinned source reproduction or a genuinely unresolved numeric obligation after equations and tolerances freeze
+  - hash-pinned MK1 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Derive the convention-covariant local coefficient match mu_BPS=m*F*sqrt(K)/q for positive mu_BPS from the generalized mass operator.
+  - id: B
+    description: Match the full periodic potentials rather than only their quadratic terms after an explicit field and action-density map fixes amplitude period and measure.
+  - id: C
+    description: Treat the q=2 K=1 relation mu_BPS=m*F/2 as an exact conditional specialization of C-BRK-001 and C-CHI-002 without a new scientific claim.
+  - id: D
+    description: Require an explicit typed cross-sector map from C-MED-003's 1+1 onsite coefficient and field to the BPS-Skyrme potential coefficient and SU(2) coordinate before any medium-supplied inference.
+  - id: E
+    description: Use a radial tail exponent only as a consequence of an independently fixed kinetic-potential ratio and reject it as independent evidence when it reuses the matched coefficient.
+  - id: F
+    description: Retain a one-parameter or larger coefficient family when only a gap ratio or potential shape is supplied and no absolute action normalization closes the scale.
+  - id: G
+    description: Provisionally extract a reusable BPS-to-periodic matching ledger only if the accepted periodic and trace APIs do not already expose every exact survivor.
+  - id: H
+    description: Give MK1 an individual terminal disposition and replay its dependency and reverse-consumer graph without importing MK2 or later authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact object type field coordinate action measure and coefficient convention
+  - accepted invariant compatibility and dependency closure
+  - assumption and parameter economy
+  - coordinate covariance dimensions signs positivity and limiting behavior
+  - sensitivity to angle multiplier kinetic metric trace prefactor and cross-sector map removal
+  - distinction between local curvature global equality and physical ontology
+  - novelty beyond C-BRK-001 C-CHI-002 C-BPS-001 and C-MED-003
+  - terminal authority consumer and generated-state closure
+claims_proposed: [C-BPS-004]
+reserved_unpromoted_claims: [C-BPS-004]
+comparators_blinded_until: >-
+  The generated queue exposes MK1's headline, seven static literal check sites,
+  one assertion, and truncated claims about V=1-cos(F), F=2*pi/F_pi,
+  mu_BPS=m_pi*F_pi/2, and a downstream tail confirmation. The source body,
+  exact equations beyond those excerpts, parameter values, predicates,
+  rejection guards, imports, native output, and consumer details remain
+  unopened until this manifest, prose contract, formula freeze, provenance
+  record, validation record, and freeze commit exist.
+status: active
+revision: 0001

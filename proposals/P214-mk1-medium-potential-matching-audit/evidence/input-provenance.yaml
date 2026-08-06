@@ -1,0 +1,58 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:26:17Z'
+framework_base:
+  release: v0.155.0
+  commit: 388a6adebe66282a4b3e08f87af49a017b8056ff
+  accepted_claims: 197
+  migration_queue:
+    primary_units: 218
+    pending_adjudication: 11
+    qualified: 194
+source_checkout:
+  root: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  dirty_outside_pinned_file: true
+source_unit:
+  id: MK1
+  path: merged-framework/bridges/phase-43/bridge_MK1_mu_from_medium_cosine.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK1_mu_from_medium_cosine.py
+  sha256: 98ff5459ae3c6cb64a9a7632fbaa8613f1f5b1adb68419de25ffa06b1c3a3222
+  bytes: 19743
+  static_check_calls: 7
+  literal_check_calls: 7
+  dynamic_check_calls: 0
+  assert_statements: 1
+  terminal_tally_literal_present: true
+  body_opened: false
+candidate_dependencies:
+  E1: {disposition: qualified, accepted_claims: [C-MOD-001, C-RMAP-001, C-RMAP-002]}
+  E2: {disposition: qualified, accepted_claims: [C-RPROF-001, C-RPROF-002]}
+  E3: {disposition: qualified, accepted_claims: [C-RDIFF-001, C-RDIFF-002]}
+  E4: {disposition: qualified, accepted_claims: [C-BPS-001, C-BPS-002, C-BPS-003]}
+  KI2: {disposition: qualified, accepted_claims: [C-BPS-001, C-SK-001]}
+  MC1: {disposition: qualified, accepted_claims: [C-MED-003, C-SG-001, C-SG-002, C-SG-003, C-SG-017]}
+  MK2: {disposition: pending_adjudication, accepted_claims: [], authority: none}
+  NY1: {disposition: duplicate_evidence, accepted_claims: [C-SK-001]}
+  PG2: {disposition: qualified, accepted_claims: [C-BRK-001, C-CHI-002, C-GMR-001]}
+  S3: {disposition: qualified, accepted_claims: [C-REP-001, C-WZW-001, C-WZW-002]}
+accepted_modules_read:
+  - src/substrate_framework/explicit_breaking.py
+  - src/substrate_framework/bps_energy.py
+  - src/substrate_framework/dimensional_sine_gordon.py
+accepted_tests_read:
+  - tests/test_explicit_breaking.py
+  - tests/test_bps_energy.py
+  - tests/test_dimensional_sine_gordon.py
+memory_recall:
+  queries:
+    - BPS Skyrme mu pion mass cosine potential normalization
+    - KI2 epsilon lambda mu free parameter identifiability
+  authority_rule: Every reused fact was checked against claims modules tests or immutable campaign evidence.
+claim_identifier_search:
+  candidate: C-BPS-004
+  registry_campaign_proposal_memory_source_test_docs_migration_hits_before_P214: 0
+  status: provisionally_reserved_if_novel
+blinding:
+  source_body_opened: false
+  source_executed: false
+  exposed_only: generated_queue_metadata_and_excerpts

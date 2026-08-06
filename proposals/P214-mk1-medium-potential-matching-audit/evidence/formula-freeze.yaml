@@ -1,0 +1,47 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:26:17Z'
+source_body_opened: false
+declared_objects:
+  bps_energy_density: rho_BPS=(lambda_BPS*pi^2*B0)^2+mu_BPS^2*V(U)
+  periodic_scalar_potential: P(pi)=A*(1-cos(q*pi/F_scale))
+  scalar_kinetic: L_kin=K*(partial_pi)^2/2
+  su2_coordinate: U=exp(i*q*tau3*pi/F_scale)
+  dimensional_medium: L_medium=lambda_medium*u_t^2/2-T*u_x^2/2-mu_medium*(1-cos(u))
+exact_candidate_relations:
+  origin_curvature: d2P_dpi2_at_zero=A*q^2/F_scale^2
+  generalized_mass_squared: m_generalized^2=A*q^2/(K*F_scale^2)
+  positive_bps_match: A=mu_BPS^2_and_m_generalized=m_implies_mu_BPS=m*F_scale*sqrt(K)/q
+  source_specialization: q=2_and_K=1_implies_mu_BPS=m*F_scale/2
+  trace_pair: Z=F_scale^2/16_and_C=m^2*F_scale^2/8_implies_K=q^2/4_and_A=2*C=m^2*F_scale^2/4
+  coordinate_covariance: trace_pair_implies_generalized_mass_squared=m^2_for_positive_q
+global_matching_gate:
+  requirement: >-
+    Equality of full periodic potentials requires the same dimensionless angle,
+    period, amplitude, action density measure, and field map; equality of one
+    origin Hessian is insufficient.
+cross_sector_identification_gate:
+  required_inputs:
+    - map from the dimensionless C-MED-003 field u to the SU(2) or BPS coordinate F(U)
+    - map between the 1+1 medium action density and the three-dimensional BPS energy density
+    - normalization converting mu_medium to mu_BPS^2 including dimensions and measure
+    - independent authority for any physical pion and decay-scale interpretation
+    - same kinetic convention used in the quadratic mass comparison
+tail_independence_gate:
+  rule: >-
+    A tail exponent derived by linearizing the same declared kinetic and
+    potential pair is a consequence or regression check. It is not independent
+    confirmation of the coefficient identification unless it imports an
+    independently measured or derived tail datum without reusing the match.
+predeclared_mutations:
+  - q_to_1_changes_mu_BPS_by_a_factor_of_2_at_fixed_K
+  - K_to_1_over_4_changes_mu_BPS_by_a_factor_of_2_at_fixed_q
+  - trace_prefactor_times_4_changes_the_generalized_mass_squared_times_4_at_fixed_kinetics
+  - remove_cross_sector_field_map_blocks_medium_to_BPS_identification
+  - common_medium_coefficient_rescaling_preserves_kinematic_ratios_but_changes_energy_and_action
+  - replace_cosine_by_same_curvature_quadratic_preserves_local_mass_but_breaks_global_periodicity
+candidate_priority: [C, A, B, D, E, F, G, H]
+claim_identifier:
+  provisional: C-BPS-004
+  promotion_condition: >-
+    Promote only if a novel exact BPS-specific matching theorem remains after
+    nonduplication against C-BRK-001 C-CHI-002 C-BPS-001 and their APIs.
