@@ -2,15 +2,15 @@
 description: Audit MR6 correction ledger confrontation and global migration closure
 author: vantasner
 created: '2026-08-06T13:55:51Z'
-updated: '2026-08-06T13:55:51Z'
+updated: '2026-08-06T14:21:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-MR6
 - ledger-audit
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P224 MR6 Ledger and Confrontation Audit
 
@@ -118,6 +118,12 @@ and MR6.5 retain qualified duplicate or regression scope; MR6.2, MR6.4, and
 MR6.6 are refuted at their physical or completeness scope. Review selects the
 terminal `duplicate_evidence` disposition with no canonical or release change.
 
+Attempt 0007 performs the terminal record transaction. MR6 maps to its three
+exact owners without changing v0.159.0, and the regenerated 218-unit queue has
+zero pending or partial units. The post-move graph passes eight checks, and the
+single final integrated boundary validates 906 memory records and passes all
+1,929 tests in 180.00 pytest seconds and 193.56 seconds total wall time.
+
 ## Debt Ledger
 
 The ledger tracks every MR6 row, accepted owner, convention conversion,
@@ -133,7 +139,7 @@ compatibility event, governed record, and global consumer.
 | Numeric rows may be stale after P223 | Recompute from current governed evidence | discharged: source kappa is stale and uncomputed in MR6 |
 | Physical confrontation may import masses or state maps | Parameter and interpretation firewall | discharged: all particle inputs remain supplied and unclosed |
 | Completeness guard may scan only selected needles | AST and data-flow counterexamples | discharged: comparators reach predicates and solved branches are omitted |
-| Global migration records and debt remain open | Terminal synchronization and full done gate | open |
+| Global migration records and debt remain open | Terminal synchronization and full done gate | discharged: governed zero-pending transaction and integrated gate |
 
 ## Review and Promotion Plan
 
@@ -145,10 +151,10 @@ then closes the source queue without altering accepted science.
 
 ## Done Gate
 
-P224 closes only when MR6 and every in-scope source unit are terminal, the
-positive ledger exists, all affected consumers and generated records agree,
-the framework debt ledger is empty, and no compatibility ceremony is confused
-with a scientific oracle.
+P224 is terminal: MR6 and every in-scope source unit have a governed
+disposition, the positive authority ledger exists, affected consumers and
+generated records agree, the framework debt ledger is empty, and no
+compatibility ceremony is confused with a scientific oracle.
 
 ## Cross-References
 

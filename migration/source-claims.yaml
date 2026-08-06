@@ -7,10 +7,9 @@ authority_warning: These are source candidate units and navigation hints, not ac
 primary_unit_role: bridge
 primary_unit_count: 218
 disposition_counts:
-  duplicate_evidence: 11
+  duplicate_evidence: 12
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 1
   qualified: 201
   refuted: 1
 phase_counts:
@@ -14471,8 +14470,36 @@ units:
   dynamic_check_calls: 0
   assert_statements: 3
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: duplicate_evidence
+  accepted_claims:
+  - C-BPS-001
+  - C-VEC-002
+  - C-VAR-002
+  duplicates:
+  - C-BPS-001
+  - C-VEC-002
+  - C-VAR-002
+  evidence:
+  - campaigns/P224-mr6-ledger-confrontation-audit/verify.py
+  - campaigns/P224-mr6-ledger-confrontation-audit/reviews/independent_ledger_review.py
+  - campaigns/P224-mr6-ledger-confrontation-audit/reviews/replay_source_graph.py
+  - campaigns/P224-mr6-ledger-confrontation-audit/reviews/source_adjudication.md
+  - campaigns/P224-mr6-ledger-confrontation-audit/reviews/MR6-disposition-review.md
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/authority-ledger.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/source-reproduction.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/source-audit.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/check-adjudication.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/dependency-audit.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/consumer-audit.yaml
+  - campaigns/P224-mr6-ledger-confrontation-audit/evidence/compatibility-audit.yaml
+  - memory/vantasner/decisions/MR6-duplicate-evidence-review.md
+  note: P224 closes 21 primary, 12 independent, and eight graph checks plus 88 focused tests. MR6's same-current
+    pi-squared conversion and nonstrict infimum order are already C-BPS-001, C-VEC-002, and C-VAR-002.
+    Only three executable ledger proxies exist, zero accepted claims change, the stale confrontation value
+    is not computed, one rank-one scale path cannot localize two parameters, and the guard omits solved
+    branches while comparators reach predicates. MR6 uses current SciPy trapezoid and no version-only
+    event is a scientific failure.
 - source_unit: HE1
   phase: phase-45
   path: merged-framework/bridges/phase-45/bridge_HE1_hbar_eff_from_corpus_E0.py

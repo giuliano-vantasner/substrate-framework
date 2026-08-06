@@ -1,0 +1,102 @@
+campaign: P224
+title: MR6 correction-ledger and confrontation audit
+source_baseline: substrate@6d1f4e0
+source_units: [MR6]
+base_release: v0.159.0
+accepted_release: v0.159.0
+freeze_commit: f1096a1
+source_audit_commit: 8ae2308
+implementation_commit: 2a23276
+review_commit: c28b1ab
+adjudicated_at: '2026-08-06T14:21:00Z'
+selected_candidates:
+  - {id: A, reason: Accepted_authority_reconstruction_shows_zero_claim_changes.}
+  - {id: B, reason: Exact_same_current_pi_squared_conversion_maps_to_existing_owners.}
+  - {id: C, reason: Rank_one_scaling_is_separated_from_supplied_numeric_context.}
+  - {id: D, reason: Current_governed_values_bound_but_do_not_promote_the_source_regression.}
+  - {id: E, reason: Overturn_language_is_retained_as_provenance_only.}
+  - {id: F, reason: AST_and_data_flow_counterexamples_refute_guard_completeness.}
+  - {id: G, reason: Nonduplication_selects_no_new_claim_or_API.}
+  - {id: H, reason: MR6_receives_the_final_terminal_duplicate_evidence_disposition.}
+claims: []
+unchanged_claim_owners:
+  - {id: C-BPS-001, surface: normalized_density_bound}
+  - {id: C-VEC-002, surface: same_current_pi_squared_lambda_conversion}
+  - {id: C-VAR-002, surface: common_domain_nonstrict_infimum_order}
+baseline_context:
+  - {id: C-BPS-002, surface: existence_attainment_ceiling}
+  - {id: C-BPS-003, surface: controlled_remainder_ceiling}
+  - {id: C-GSK-001, surface: supplied_coefficient_radial_model}
+  - {id: C-RDIFF-001, surface: exact_signed_difference_coordinate}
+unpromoted_surfaces:
+  - {id: complete_four_overturn_ledger, reason: Only_three_executable_proxies_and_zero_accepted_changes.}
+  - {id: corrected_physical_confrontation, reason: Stale_uncomputed_kappa_and_unclosed_physical_inputs.}
+  - {id: continuous_monotonicity, reason: Five_samples_do_not_prove_a_continuous_stationary_or_minimum_branch.}
+  - {id: independent_parameter_localization, reason: One_common_scale_path_has_rank_one.}
+  - {id: physical_pion_term_error, reason: No_accepted_action_state_scale_or_minimum_map.}
+  - {id: strict_infimum_increase, reason: Explicit_positive_addition_counterexample_retains_equal_infima.}
+  - {id: complete_guard, reason: Comparators_reach_predicates_and_every_solved_branch_is_omitted.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_ledger_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_disposition_review: reviews/MR6-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  authority_ledger: evidence/authority-ledger.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_numerical_evidence: evidence/primary-numerical-evidence.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MR6: duplicate_evidence}
+accepted_mappings: [C-BPS-001, C-VEC-002, C-VAR-002]
+compatibility:
+  MR6_surface: current_scipy_trapezoid
+  legacy_numpy_trapz_access: none
+  scientific_failures_from_version_events: 0
+release_change: none
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_ledger_review
+  - PYTHONPATH_src_python_source_graph_replay
+  - pytest_88_focused_BPS_variational_generalized_radial_difference_and_HLS_tests
+  - final_zero_pending_scripts_validate_and_diff_check
+integrated_gate:
+  status: passed
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 0
+  migration_partial: 0
+  migration_qualified: 201
+  migration_duplicate_evidence: 12
+  generated_docs_current: true
+  generated_memory_current: true
+  memory_records_valid: 906
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  final_targeted_checks: {primary: 21, independent: 12, graph: 8, focused_tests: 88}
+  final_graph_replay: {checks: 8, elapsed_seconds: 2.42, maximum_resident_kib: 157280}
+  full_suite:
+    tests: 1929
+    pytest_seconds: 180.00
+    integrated_elapsed_seconds: 193.56
+    maximum_resident_kib: 220244
+    exit_status: 0
+  diff_check: passed
+debt: []
+status: accepted

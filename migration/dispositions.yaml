@@ -4064,6 +4064,40 @@ units:
       or physical closure. A nine-point scan is not an every-e floor, and the
       executable guard misses multiple comparators and physical inputs. MR5
       and pending MR6 use current SciPy trapezoid.
+  MR6:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-BPS-001
+      - C-VEC-002
+      - C-VAR-002
+    duplicates:
+      - C-BPS-001
+      - C-VEC-002
+      - C-VAR-002
+    evidence:
+      - campaigns/P224-mr6-ledger-confrontation-audit/verify.py
+      - campaigns/P224-mr6-ledger-confrontation-audit/reviews/independent_ledger_review.py
+      - campaigns/P224-mr6-ledger-confrontation-audit/reviews/replay_source_graph.py
+      - campaigns/P224-mr6-ledger-confrontation-audit/reviews/source_adjudication.md
+      - campaigns/P224-mr6-ledger-confrontation-audit/reviews/MR6-disposition-review.md
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/authority-ledger.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/source-reproduction.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/source-audit.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/check-adjudication.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/dependency-audit.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/consumer-audit.yaml
+      - campaigns/P224-mr6-ledger-confrontation-audit/evidence/compatibility-audit.yaml
+      - memory/vantasner/decisions/MR6-duplicate-evidence-review.md
+    note: >-
+      P224 closes 21 primary, 12 independent, and eight graph checks plus 88
+      focused tests. MR6's same-current pi-squared conversion and nonstrict
+      infimum order are already C-BPS-001, C-VEC-002, and C-VAR-002. Only three
+      executable ledger proxies exist, zero accepted claims change, the stale
+      confrontation value is not computed, one rank-one scale path cannot
+      localize two parameters, and the guard omits solved branches while
+      comparators reach predicates. MR6 uses current SciPy trapezoid and no
+      version-only event is a scientific failure.
   EL1:
     disposition: qualified
     accepted_claims:

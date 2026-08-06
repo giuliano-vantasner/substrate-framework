@@ -2,14 +2,14 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T14:02:00Z'
+updated: '2026-08-06T14:21:00Z'
 tags:
 - substrate-framework
 - effort
 - corpus-migration
 category: efforts
-confidence: working
-status: active
+confidence: established
+status: archived
 ---
 # Substrate Corpus Migration
 
@@ -364,7 +364,7 @@ Every row must be discharged before the parent effort can close.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope is now measurable, but 23 bridge units remain pending, 3 are migrated, 182 are qualified, 8 are duplicate evidence, 1 is refuted, and 1 is out of scientific-claim scope | Every `migration/source-claims.yaml` unit reaches a reviewed non-pending disposition with accepted mappings or preserved qualification/refutation evidence | open |
+| D1: no predecessor claim registry | Sequential source corpus | Candidate-unit scope required every one of 218 bridge units to receive an individual governed disposition | `migration/source-claims.yaml` records 0 pending and 0 partial units, with accepted mappings or preserved qualification/refutation/duplicate evidence for every terminal unit | discharged |
 | D2: no accepted framework roots | Intentional null release | No scientific claim can yet serve as an accepted dependency | `v0.1.0` with C-SG-001 and C-SG-002 | discharged |
 | D3: dirty predecessor worktree | Ongoing Phase 47/48 work | Uncommitted artifacts cannot define the reproducible source baseline | Isolated snapshot inventory with tree SHA-256 `fa5366af628363d71bf91f219ac203c8009bca3a80f3de532c022e14e1b7e001` | discharged |
 | D4: migration scope inventory incomplete | Corpus size and mixed artifact roles | Completion could not be measured while duplicates, evidence, consumers, and primary claim units were conflated | `migration/scope.yaml` plus the validated 218-unit `migration/source-claims.yaml` queue | discharged |
@@ -2604,20 +2604,36 @@ misses executable comparators. Twenty-one primary, 11 fresh independent, eight
 graph checks, and 87 focused tests pass. MR5 and pending MR6 use current SciPy
 `trapezoid`; the unchanged P221 1,929-test boundary is reused.
 
+P224 terminally classifies MR6 as duplicate evidence for C-BPS-001,
+C-VEC-002, and C-VAR-002 at unchanged v0.159.0. Its exact same-current
+pi-squared conversion and nonstrict common-domain infimum order are already
+owned. Only three executable overturn proxies occur, none changes an accepted
+claim, and the double-counting row is not tested. The source's confrontation
+uses a stale uncomputed kappa, five samples on one rank-one common-scale path
+cannot localize two parameters, and positivity somewhere does not imply a
+strict infimum gap. The final guard omits every solved branch while empirical
+comparators reach predicates. Twenty-one primary, 12 fresh independent, eight
+graph checks, and 88 focused tests pass. MR6 uses current SciPy `trapezoid` and
+contains no legacy NumPy integration access. The final zero-pending boundary
+validates 906 memory records and passes all 1,929 tests in 180.00 pytest
+seconds and 193.56 seconds total wall time, at 220,244 KiB peak RSS and exit
+zero.
+
 ## Canonicalization
 The registry, `v0.159.0` manifest, current release, generated claim index, and
 generated framework memory agree on two hundred two accepted claims.
-P001 through P223 are frozen under `campaigns/`; proposal,
+P001 through P224 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 1 pending, 0 partial, 3
-migrated, 201 qualified, 11 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P221 is the most recent accepted-surface and full integrated release
-boundary; P223 is the latest terminal no-release campaign.
+memory. The regenerated migration queue agrees on 0 pending, 0 partial, 3
+migrated, 201 qualified, 12 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P221 remains the most recent accepted-surface release boundary; P224 is
+the terminal corpus-migration campaign and final integrated record boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 1
-pending, 3 migrated, 201 qualified, 11 duplicate-evidence, 1 refuted, and 1
-out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
+The effort is complete. D1 through D4 are discharged: all 218 in-scope bridge
+units have individual governed dispositions, with 0 pending, 0 partial, 3
+migrated, 201 qualified, 12 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
@@ -2626,9 +2642,10 @@ authority. P221 closes MR3 with the exact sign-indefinite interaction theorem
 without promoting its physical mass narrative. P222 closes MR4 as exact
 duplicate evidence without laundering KSRF or particle inputs into a derived
 coupling. P223 closes MR5's proposed parameter-free light-nucleus calculation
-and retains only duplicate conditional regression evidence. P224
-next audits MR6's ledger and confrontation claims. MR6 is the final pending
-source unit.
+and retains only duplicate conditional regression evidence. P224 closes MR6's
+ledger and confrontation as duplicate evidence. The accepted registry,
+v0.159.0 release, package, tests, generated documentation, migration queue, and
+durable memory agree, and the debt ledger is empty.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

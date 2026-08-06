@@ -6,6 +6,7 @@ assertions: 3
 aggregate_checks: 8
 verifier_sha256: b97f29ca6cd63727ce9383fa94e1d0b9137933e5693dcc5f5da695b7898ec9f2
 result: {exit_status: 0, checks: 8, elapsed_seconds: 2.72, maximum_resident_kib: 157532}
+terminal_result: {exit_status: 0, checks: 8, elapsed_seconds: 2.42, maximum_resident_kib: 157280}
 execution_policy:
   MR6: reused_P215_hash_identical_clean_noncanonical
 compatibility:
@@ -14,5 +15,5 @@ compatibility:
   scientific_version_failures: 0
 migration_queue:
   before: {pending: 1, source_units: [MR6]}
-  expected_after_terminal_transaction: {pending: 0, partial: 0}
+  after_terminal_transaction: {pending: 0, partial: 0}
 debt: []

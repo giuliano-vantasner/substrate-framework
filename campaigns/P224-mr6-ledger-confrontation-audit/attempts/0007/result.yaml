@@ -1,0 +1,37 @@
+campaign: P224
+attempt: 0007
+timestamp_utc: '2026-08-06T14:21:00Z'
+status: passed
+stage: terminal_duplicate_evidence_record_transaction
+source_disposition: duplicate_evidence
+accepted_claim_owners: [C-BPS-001, C-VEC-002, C-VAR-002]
+release_change: none
+record_results:
+  proposal_count: 0
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  migration_total: 218
+  migration_pending: 0
+  migration_partial: 0
+  migration_qualified: 201
+  migration_duplicate_evidence: 12
+  generated_docs_current: true
+  generated_memory_current: true
+  memory_records_valid: 906
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  diff_check: passed
+final_targeted_replay:
+  primary: {checks: 21, elapsed_seconds: 2.43, maximum_resident_kib: 156504}
+  independent: {checks: 12, elapsed_seconds: 1.73, maximum_resident_kib: 149684}
+  graph_preterminal: {checks: 8, elapsed_seconds: 2.72, maximum_resident_kib: 157532}
+  graph_terminal: {checks: 8, elapsed_seconds: 2.42, maximum_resident_kib: 157280}
+  focused_tests: {tests: 88, pytest_seconds: 5.37, elapsed_seconds: 5.73, maximum_resident_kib: 160692}
+full_integrated_gate:
+  tests: 1929
+  pytest_seconds: 180.00
+  elapsed_seconds: 193.56
+  maximum_resident_kib: 220244
+  exit_status: 0
+debt: []
+next_action: none_migration_complete
