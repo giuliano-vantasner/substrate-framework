@@ -142,6 +142,24 @@ singular-value perturbation bound; C-PHS-002 captures the exact cosine-
 resultant identity, all zero-resultant minima, and the four-phase square
 counterexample to the source's universal positive-pair reading.
 
+Attempt 0004 preserves a two-test SymPy phasor-canonicalization failure. The
+underlying resultant norm was already exactly zero; explicit complex expansion
+repairs the expression oracle without changing either claim or tolerance.
+
+Attempt 0005 preserves the primary and independent routes stopping on
+`sqrt((alpha+-epsilon)^2)` spellings. The strict residual gate already proves
+both endpoints positive, so exact squared comparisons repair the oracle without
+weakening it.
+
+Attempt 0006 preserves a primary-only symbolic differentiation bug after the
+independent route passed all 25 checks. The repair differentiates the
+unsubstituted phase expression instead of a numeric endpoint.
+
+Attempt 0007 completes the additive implementation. Forty-four primary and 25
+fresh independent exact checks pass, followed by 135 focused package and
+accepted-consumer tests. The canonical surfaces execute no quadrature and add
+no legacy NumPy compatibility path.
+
 ## Debt Ledger
 
 The P212 ledger tracks density, multiplier, translation, amplitude, width,
@@ -152,11 +170,11 @@ counts, compatibility, consumers, and generated state.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | Source predicates remain blinded | Reproduce once after committed freeze | discharged after `43ef659` |
-| Entrywise equality may be mistaken for spectral degeneracy | Derive singular-value bounds and limits | open |
-| Free profile data may manufacture a hierarchy | Enumerate and mutate every load-bearing input | open |
+| Entrywise equality may be mistaken for spectral degeneracy | Derive singular-value bounds and limits | discharged by the operator-norm cluster theorem |
+| Free profile data may manufacture a hierarchy | Enumerate and mutate every load-bearing input | discharged by unequal-self-overlap and residual mutations |
 | A stability label may import an absent theorem | Audit EM6 and every accepted dependency at source | discharged; the quote is nonauthoritative prose and C-QBL-001 withholds stability |
-| Field species, solutions, charges, and roles may be conflated | Materialize typed sets and incidence countermodels | open |
-| Capacity may be mistaken for occupied count | Test smaller counts and absent-selection models | open |
+| Field species, solutions, charges, and roles may be conflated | Materialize typed sets and incidence countermodels | discharged by three incompatible finite role models |
+| Capacity may be mistaken for occupied count | Test smaller counts and absent-selection models | discharged by all-N surrogate minima and the N=4 square |
 | Pending GC6 may grant backward authority | Replay without importing GC6 | open |
 | Compatibility may masquerade as science | Audit every executable access shape | discharged; GC5 has zero quadrature surface |
 | Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | open |

@@ -1,0 +1,13 @@
+attempt: 0006
+campaign: P212
+timestamp_utc: '2026-08-06T08:16:51Z'
+kind: symbolic_phase_derivative_repair
+initial_result: independent_25_checks_pass_primary_stopped_after_25_passes
+mechanism: >-
+  The primary verifier substituted phase cosine one before differentiating and
+  a preceding loop had reused the same local name, leaving a number where the
+  symbolic differentiation variable was required.
+repair: construct_one_unsubstituted_symbolic_interaction_for_the_phase_degree_check
+scientific_candidate_rejected: false
+status: repaired
+continuation: rerun_primary_then_reconfirm_the_unchanged_independent_route_only_if_shared_code_changes

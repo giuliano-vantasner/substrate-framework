@@ -1,0 +1,17 @@
+attempt: 0005
+campaign: P212
+timestamp_utc: '2026-08-06T08:16:11Z'
+kind: positive_singular_value_radical_repair
+initial_commands:
+  - primary_exact_verifier
+  - independent_exact_verifier
+initial_result: both_routes_stopped_at_the_same_endpoint_expression_comparison
+mechanism: >-
+  SymPy preserved sqrt((alpha plus or minus epsilon)^2) instead of reducing it
+  to the positive endpoint already guaranteed by zero<=epsilon<alpha.
+repair: >-
+  Compare exact squared singular values to squared positive endpoints while
+  retaining the strict positivity gate and the unsquared condition bound.
+scientific_candidate_rejected: false
+status: repaired
+continuation: rerun_both_exact_routes_without_changing_claims_or_tolerances

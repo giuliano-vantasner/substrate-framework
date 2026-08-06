@@ -1,0 +1,9 @@
+campaign: P212
+artifact: proposals/P212-gc5-two-role-count-audit/verify.py
+sha256: 2a752bab2bb4a8f14896f8ec46ca2977f1898da3ff00920ad0cc07f3ef2d7258
+command: PYTHONPATH=src_.venv/bin/python_proposals/P212-gc5-two-role-count-audit/verify.py
+exit_status: 0
+runtime_checks: 44
+static_check_calls: 33
+mutation_sensitive_calls: 2
+terminal_tally: ALL_44_CHECKS_PASS

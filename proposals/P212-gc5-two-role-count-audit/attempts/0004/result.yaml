@@ -1,0 +1,16 @@
+attempt: 0004
+campaign: P212
+timestamp_utc: '2026-08-06T08:11:34Z'
+kind: exact_phasor_canonicalization_repair
+initial_command: pytest_translated_overlap_and_phase_interaction_tests
+initial_result: 34_passed_2_failed
+mechanism: >-
+  SymPy rewrote selected roots of unity into incompatible radical and
+  exponential spellings, so raw matrix and resultant equality did not reduce
+  even though the independently computed resultant norm was exactly zero.
+repair: >-
+  Preserve unit phasors in the diagonal limit and canonicalize finite phasor
+  sums through explicit complex expansion before exact comparison.
+scientific_candidate_rejected: false
+status: repaired
+continuation: rerun_the_focused_exact_tests_then_build_primary_and_independent_verifiers

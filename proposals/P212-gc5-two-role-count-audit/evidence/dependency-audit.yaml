@@ -1,0 +1,13 @@
+campaign: P212
+claims:
+  C-OVL-005:
+    dependencies: [C-OVL-001]
+    imported_inputs: [finite_count, identical_translates, normalized_L2_mode, bounded_C0_multiplier, mutually_separating_centers, positive_self_overlap, unit_phase_weights]
+    excluded_inputs: [physical_Yukawa, generations, masses, selected_centers, selected_profiles, measured_hierarchy]
+  C-PHS-002:
+    dependencies: [C-PHS-001]
+    imported_inputs: [finite_scalar_phases, complete_equal_weight_pair_graph]
+    excluded_inputs: [C_QBL_006_energy_identification, dynamics, stability, physical_CP, occupied_count]
+pending_dependencies: []
+hidden_fitted_constants: []
+result: closed_at_v0.153.0

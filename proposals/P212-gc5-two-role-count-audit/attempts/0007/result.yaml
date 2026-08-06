@@ -1,0 +1,21 @@
+attempt: 0007
+campaign: P212
+timestamp_utc: '2026-08-06T08:18:08Z'
+kind: canonical_implementation_and_exact_verification
+base_commit: 623c1fb723ed9acdfd1ec94420ac47705af6222f
+claims: [C-OVL-005, C-PHS-002]
+canonical_modules:
+  - src/substrate_framework/translated_overlap_matrices.py
+  - src/substrate_framework/phase_interactions.py
+tests:
+  - tests/test_translated_overlap_matrices.py
+  - tests/test_phase_interactions.py
+primary_runtime_checks: 44
+primary_static_check_calls: 33
+primary_mutation_calls: 2
+independent_runtime_checks: 25
+independent_static_check_calls: 21
+focused_tests: 135
+scientific_version_failures: 0
+status: passed
+continuation: commit_implementation_then_materialize_claim_reviews_and_terminal_source_graph

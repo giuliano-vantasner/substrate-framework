@@ -1,0 +1,18 @@
+campaign: P212
+claims: [C-OVL-005, C-PHS-002]
+canonical_surfaces:
+  translated_overlap:
+    module: src/substrate_framework/translated_overlap_matrices.py
+    sha256: 831d74e9ad37063ea5bb4c33b1318d8b0f63f64e56aa10c94c196512df07ee68
+    exports: [SingularValueClusterBound, phase_weighted_self_overlap_limit, singular_value_cluster_bound]
+  complete_phase_cosine:
+    module: src/substrate_framework/phase_interactions.py
+    sha256: e0721610fd9cfe20f80c363d6d18791b64632b698f1edecc03d214a7712d8dc3
+    exports: [CompletePhaseCosineLedger, complete_phase_cosine_ledger]
+test_surfaces:
+  - {path: tests/test_translated_overlap_matrices.py, sha256: 3c0291324b1110eb0590f5138c08fd4303b7e21424b899e91b1f906492d9888d}
+  - {path: tests/test_phase_interactions.py, sha256: cb592023de65acc9baeb6b1067bfb36af8ee9c014c9bc70c180b20e47d2def61}
+import_side_effects: none
+quadrature_surface: none
+existing_symbols_changed: []
+result: additive_pure_documented_tested_APIs

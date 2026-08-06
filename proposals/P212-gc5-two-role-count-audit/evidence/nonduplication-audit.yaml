@@ -1,0 +1,13 @@
+campaign: P212
+registry_search:
+  C_OVL_004: reserved_unpromoted_by_P206
+  C_OVL_005: absent_before_P212
+  C_PHS_002: absent_before_P212
+accepted_nearest_surfaces:
+  C_OVL_001: one_normalized_matched_overlap_and_parameter_ledger
+  C_OVL_002: one_translated_density_multiplier_overlap_and_tail_class
+  C_PHS_001: worst_pair_cosine_capacity_not_sum_energy_minimization
+minimum_novel_deltas:
+  C_OVL_005: finite_phase_weighted_translation_matrix_limit_plus_uniform_singular_value_and_condition_bound
+  C_PHS_002: exact_complete_cosine_resultant_identity_global_minimum_and_nonunique_N4_minimizers
+result: two_minimum_novel_claims

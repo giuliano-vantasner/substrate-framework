@@ -494,6 +494,11 @@ from .normalized_overlaps import (
     reciprocal_overlap_scale_rescaling,
     sech_power_integral,
 )
+from .translated_overlap_matrices import (
+    SingularValueClusterBound,
+    phase_weighted_self_overlap_limit,
+    singular_value_cluster_bound,
+)
 from .overlap_compressions import (
     MultiplicationCompression,
     QuarticAsymmetricCompressionLedger,
@@ -913,8 +918,10 @@ from .quartic_qball import (
     quartic_qball_residual,
 )
 from .phase_interactions import (
+    CompletePhaseCosineLedger,
     QuarticSechPairInteraction,
     ScalarCirclePacking,
+    complete_phase_cosine_ledger,
     pairwise_phase_cosines,
     quartic_sech_pair_interaction,
     scalar_circle_packing,
@@ -1604,11 +1611,16 @@ __all__ = [
     "quartic_qball_residual",
     "QuarticSechPairInteraction",
     "ScalarCirclePacking",
+    "CompletePhaseCosineLedger",
+    "complete_phase_cosine_ledger",
     "pairwise_phase_cosines",
     "quartic_sech_pair_interaction",
     "scalar_circle_packing",
     "sech_pair_density_shape",
     "sech_pair_mixed_cubic_shape",
+    "SingularValueClusterBound",
+    "phase_weighted_self_overlap_limit",
+    "singular_value_cluster_bound",
     "retarded_point_source_radiation",
     "project_sine_harmonics",
     "positive_kinetic_mass_evidence",

@@ -157,6 +157,68 @@ class ScalarCirclePacking:
     nonpositive_possible: bool
 
 
+@dataclass(frozen=True)
+class CompletePhaseCosineLedger:
+    """Exact complete-graph cosine sum and resultant representation."""
+
+    count: int
+    phases: tuple[sp.Expr, ...]
+    phase_resultant: sp.Expr
+    resultant_squared: sp.Expr
+    pairwise_cosine_sum: sp.Expr
+    minimum: sp.Expr
+    excess_above_minimum: sp.Expr
+
+
+def complete_phase_cosine_ledger(
+    phases: Iterable[Any],
+) -> CompletePhaseCosineLedger:
+    """Return the exact identity for a complete scalar-phase cosine sum.
+
+    For ``N`` unit phasors,
+
+    ``sum_{a<b} cos(theta_a-theta_b)=(|sum_a exp(i*theta_a)|^2-N)/2``.
+
+    The minimum is therefore ``-N/2`` and is attained exactly when the
+    phasor resultant vanishes.  Regular polygons attain it for every
+    ``N>=2``, but the minimizing set need not be unique.  This static surrogate
+    is not a physical energy unless a separate interaction claim identifies
+    it as one.
+    """
+
+    values = tuple(sp.sympify(phase) for phase in phases)
+    if len(values) < 2:
+        raise ValueError("at least two phases are required")
+    if any(value.is_number and value.is_real is not True for value in values):
+        raise ValueError("phases must be real")
+    resultant = sp.trigsimp(
+        sp.expand_complex(sum(sp.exp(sp.I * value) for value in values))
+    )
+    resultant_squared = sp.trigsimp(
+        sp.expand_complex(resultant * sp.conjugate(resultant))
+    )
+    direct_sum = sp.trigsimp(
+        sum(
+            sp.cos(values[i] - values[j])
+            for i in range(len(values))
+            for j in range(i + 1, len(values))
+        )
+    )
+    minimum = -sp.Rational(len(values), 2)
+    excess = sp.simplify(resultant_squared / 2)
+    if sp.trigsimp(direct_sum - minimum - excess) != 0:
+        raise ValueError("failed to establish the complete cosine identity")
+    return CompletePhaseCosineLedger(
+        count=len(values),
+        phases=values,
+        phase_resultant=resultant,
+        resultant_squared=sp.simplify(resultant_squared),
+        pairwise_cosine_sum=sp.simplify(direct_sum),
+        minimum=minimum,
+        excess_above_minimum=excess,
+    )
+
+
 def scalar_circle_packing(count: int) -> ScalarCirclePacking:
     """Return the sharp worst-pair cosine for ``count`` scalar phases.
 

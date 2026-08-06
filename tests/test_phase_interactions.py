@@ -7,6 +7,7 @@ import sympy as sp
 
 import substrate_framework as sf
 from substrate_framework.phase_interactions import (
+    complete_phase_cosine_ledger,
     pairwise_phase_cosines,
     quartic_sech_pair_interaction,
     scalar_circle_packing,
@@ -16,6 +17,8 @@ from substrate_framework.phase_interactions import (
 
 
 def test_phase_interaction_public_api_is_exported() -> None:
+    assert sf.CompletePhaseCosineLedger is not None
+    assert sf.complete_phase_cosine_ledger is complete_phase_cosine_ledger
     assert sf.QuarticSechPairInteraction is not None
     assert sf.ScalarCirclePacking is not None
     assert sf.quartic_sech_pair_interaction is quartic_sech_pair_interaction
@@ -129,6 +132,37 @@ def test_vector_internal_space_changes_the_capacity_problem() -> None:
     assert not scalar_circle_packing(4).strictly_negative_possible
 
 
+def test_complete_cosine_sum_has_exact_resultant_minimum() -> None:
+    for count in range(2, 7):
+        phases = tuple(2 * sp.pi * index / count for index in range(count))
+        result = complete_phase_cosine_ledger(phases)
+        assert sp.simplify(result.phase_resultant) == 0
+        assert result.resultant_squared == 0
+        assert result.pairwise_cosine_sum == -sp.Rational(count, 2)
+        assert result.excess_above_minimum == 0
+
+
+def test_four_phase_minimum_is_nonunique_and_has_a_weak_square() -> None:
+    alpha = sp.pi / 3
+    antipodal_pairs = complete_phase_cosine_ledger(
+        (0, sp.pi, alpha, alpha + sp.pi)
+    )
+    square_phases = (0, sp.pi / 2, sp.pi, 3 * sp.pi / 2)
+    square = complete_phase_cosine_ledger(square_phases)
+    assert sp.simplify(antipodal_pairs.phase_resultant) == 0
+    assert antipodal_pairs.pairwise_cosine_sum == square.pairwise_cosine_sum == -2
+    assert max(pairwise_phase_cosines(square_phases)) == 0
+    assert max(pairwise_phase_cosines((0, sp.pi, alpha, alpha + sp.pi))) > 0
+
+
+def test_source_pure_cosine_surrogate_is_not_quartic_pair_energy() -> None:
+    source_surrogate = complete_phase_cosine_ledger((0, sp.pi))
+    assert source_surrogate.pairwise_cosine_sum == -1
+    interaction_equal = quartic_sech_pair_interaction(3, 1, 1, 1)
+    interaction_opposite = quartic_sech_pair_interaction(3, -1, 1, 1)
+    assert interaction_equal.interaction_energy < interaction_opposite.interaction_energy
+
+
 @pytest.mark.parametrize(
     "call",
     [
@@ -140,6 +174,8 @@ def test_vector_internal_space_changes_the_capacity_problem() -> None:
         lambda: pairwise_phase_cosines([0, sp.I]),
         lambda: scalar_circle_packing(True),
         lambda: scalar_circle_packing(1),
+        lambda: complete_phase_cosine_ledger([0]),
+        lambda: complete_phase_cosine_ledger([0, sp.I]),
     ],
 )
 def test_phase_interaction_inputs_are_typed(call) -> None:

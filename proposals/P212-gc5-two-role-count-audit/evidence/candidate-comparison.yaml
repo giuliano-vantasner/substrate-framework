@@ -1,0 +1,20 @@
+campaign: P212
+criteria_order:
+  - exact_field_density_multiplier_and_translation_fidelity
+  - typed_species_solution_charge_and_role_separation
+  - assumption_and_parameter_economy
+  - correct_coincident_and_separated_limits
+  - singular_value_fidelity
+  - mutation_sensitivity
+  - novelty
+  - terminal_closure
+decisions:
+  A: selected_exact_equal_diagonal_translation_structure
+  B: selected_exact_singular_value_cluster_limit
+  C: retained_as_an_unequal_input_countermodel_not_a_selected_hierarchy
+  D: selected_as_campaign_level_typed_role_countermodels
+  E: rejected_because_accepted_claims_supply_neither_role_occupancy_nor_both_counts
+  F: rejected_after_two_minimum_novel_exact_surfaces_were_identified
+  G: selected_for_additive_importable_implementation
+  H: selected_pending_terminal_graph_and_disposition
+comparator_values_used_for_selection: false
