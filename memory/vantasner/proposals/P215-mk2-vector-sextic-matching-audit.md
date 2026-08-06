@@ -2,7 +2,7 @@
 description: Audit MK2 vector-current elimination and BPS sextic-coupling closure
 author: vantasner
 created: '2026-08-06T10:01:44Z'
-updated: '2026-08-06T10:25:00Z'
+updated: '2026-08-06T10:32:25Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - vector-elimination
 - bps-sextic
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P215 MK2 Vector Sextic Matching Audit
 
@@ -157,6 +157,13 @@ eighty focused tests, twenty-five P059 primary, twenty-three P059 independent,
 thirty-six P140 primary, twenty-five P140 independent, twenty-nine P215
 primary, and fifteen P215 independent checks pass.
 
+Attempt 0008 promotes C-VEC-002 and closes MK2 at v0.156.0. The integrated
+workflow validates 198 accepted claims, nine pending source units, zero partial
+units, and 877 memory records; all 1,901 tests pass in 189.70 seconds, while
+the complete gate exits zero in 204.35 seconds at 218,884 KiB peak RSS. The
+workflow already contains the full pytest suite, so no identical second suite
+was run.
+
 ## Debt Ledger
 
 The P215 ledger tracks vector and current field types, kernel and source signs,
@@ -175,7 +182,7 @@ generated state.
 | Inserted HLS, KSRF, `N_c`, baryon, or physical maps may propagate circularly | Audit every dependency and premise-removal mutation | discharged by attempts 0006 and 0007 |
 | Later units may grant backward authority | Replay the terminal graph without later imports | discharged by attempt 0006 |
 | Compatibility may masquerade as science | Audit every executable integration-name access before native replay | discharged by attempts 0003 and 0006 |
-| Claim novelty and generated state remain unresolved | Complete nonduplication, review, disposition, generation, and proper closeout gate | open |
+| Claim novelty and generated state remain unresolved | Complete nonduplication, review, disposition, generation, and proper closeout gate | discharged by attempt 0008 |
 
 ## Review and Promotion Plan
 
@@ -193,6 +200,8 @@ P215 closes only when the exact positive elimination and convention ledger,
 mutation-sensitive primary and independent verification, every MK2 predicate,
 terminal disposition, downstream replay, compatibility audit, canonical
 records, and generated state agree with an empty campaign debt ledger.
+Those conditions pass at the v0.156.0 integrated boundary with C-VEC-002
+accepted, MK2 qualified, and no remaining P215 debt.
 
 ## Cross-References
 

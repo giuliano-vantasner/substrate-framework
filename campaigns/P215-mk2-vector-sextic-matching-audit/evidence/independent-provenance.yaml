@@ -1,6 +1,6 @@
 campaign: P215
 claim_delta: C-VEC-002
-independent_review: proposals/P215-mk2-vector-sextic-matching-audit/reviews/independent_vector_metric_review.py
+independent_review: campaigns/P215-mk2-vector-sextic-matching-audit/reviews/independent_vector_metric_review.py
 checks: 15
 canonical_claim_api_imported: false
 route:

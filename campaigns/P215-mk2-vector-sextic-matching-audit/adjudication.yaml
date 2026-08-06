@@ -1,0 +1,93 @@
+campaign: P215
+title: MK2 vector-current sextic and U2 metric audit
+source_baseline: substrate@6d1f4e0
+source_units: [MK2]
+base_release: v0.155.0
+accepted_release: v0.156.0
+implementation_commit: d23a0e1
+review_commit: 71d6b69
+adjudicated_at: '2026-08-06T10:22:22Z'
+selected_candidates:
+  - {id: A, reason: Exact_algebraic_vector_current_elimination_survives_conditionally.}
+  - {id: B, reason: Full_kinetic_inverse_enforces_the_low_momentum_scope_boundary.}
+  - {id: C, reason: Pi_squared_conversion_is_load_bearing_for_C_BPS_001.}
+  - {id: D, reason: Complete_U2_invariant_form_classification_supplies_the_novel_positive_object.}
+  - {id: F, reason: Exact_parameter_families_expose_mass_coupling_and_ratio_underidentification.}
+  - {id: G, reason: Novel_metric_and_convention_surface_is_extracted_as_C_VEC_002.}
+  - {id: I, reason: MK2_receives_an_individual_terminal_qualified_disposition.}
+competing_candidates:
+  - {id: E, decision: conditional_only_because_HLS_KSRF_baryon_N_c_and_physical_maps_are_unaccepted}
+  - {id: H, decision: generic_elimination_maps_C_EFT_001_but_does_not_duplicate_the_U2_metric_classification}
+claims:
+  - {id: C-VEC-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-EFT-001, decision: unchanged_generic_quadratic_elimination_and_inverse_residual}
+  - {id: C-BPS-001, decision: unchanged_pi4_sextic_convention_and_free_coupling_ceiling}
+  - {id: C-CHI-001, decision: unchanged_Pauli_trace_coordinate_convention}
+  - {id: C-VEC-001, decision: unchanged_SU2_leading_connection_and_conditional_KSRF_ceiling}
+  - {id: C-WZW-002, decision: unchanged_mathematical_level_without_N_c}
+  - {id: C-TOP-002, decision: unchanged_winding_current_without_physical_baryon_map}
+unpromoted_claims:
+  - {id: physical_HLS_U2_sector, reason: No_accepted_action_field_map_kinetic_term_or_physical_identification_exists.}
+  - {id: U2_forces_omega_rho_degeneracy, reason: Positive_invariant_double_trace_term_changes_the_singlet_coefficient.}
+  - {id: g_omega_equals_N_c_g_over_2, reason: Universality_quark_current_baryon_map_and_N_c_are_unaccepted.}
+  - {id: N_c_equals_3_from_WZW, reason: C_WZW_002_and_C_TOP_002_explicitly_withhold_this_identification.}
+  - {id: KSRF_a_equals_2_is_derived, reason: C_VEC_001_and_primary_literature_treat_it_as_a_selected_premise.}
+  - {id: lambda_BPS_equals_N_c_over_4Fpi, reason: Source_lambda_A_differs_by_pi_squared_and_physical_inputs_lack_closure.}
+  - {id: fixed_BPS_energy_scale, reason: MK1_and_MK2_physical_maps_are_unaccepted_and_the_convention_is_wrong.}
+  - {id: KI2_family_broken, reason: No_dependency_closed_coupling_relation_is_accepted.}
+  - {id: paid_parameter_debt, reason: Vector_singlet_current_N_c_F_pi_and_physical_maps_remain_unresolved.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_vector_metric_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VEC-002-claim-review.md
+  source_disposition_review: reviews/MK2-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  claim_revision: evidence/claim-delta-revision-0002.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MK2: qualified}
+accepted_mappings: [C-VEC-002, C-EFT-001, C-BPS-001, C-VEC-001, C-WZW-002, C-TOP-002]
+compatibility:
+  MK2_surface: none
+  WZ3_alias_only_backed_by: numpy.trapezoid
+  eager_legacy_default_fallbacks: 0
+  scientific_failures_from_version_events: 0
+release_change: v0.156.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_vector_metric_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_hls_effective_bps_wzw_source_audit
+  - scripts_validate_sh
+  - python_m_pytest
+  - git_diff_check
+integrated_gate:
+  status: passed
+  command: scripts/validate.sh
+  exit: 0
+  repository_verdict: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  pytest_passed: 1901
+  pytest_elapsed_seconds: 189.70
+  elapsed_seconds: 204.35
+  max_rss_kib: 218884
+  memory_records: 877
+  duplicate_full_suite_omitted: true
+debt: []
+status: accepted

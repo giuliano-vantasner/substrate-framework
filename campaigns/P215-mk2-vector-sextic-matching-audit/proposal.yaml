@@ -70,7 +70,7 @@ comparators_blinded_until: >-
   parameter values, exact predicates, rejection guards, imports, native output,
   and consumer details remain unopened until this manifest, prose contract,
   formula freeze, provenance record, validation record, and freeze commit exist.
-status: review
+status: accepted
 revision: 0002
 opened_source_equations:
   algebraic_vector_action: m_omega^2*w^2/2+g_omega*w*B

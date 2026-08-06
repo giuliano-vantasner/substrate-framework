@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T09:45:00Z'
+updated: '2026-08-06T10:32:25Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.155.0`, containing one hundred ninety-seven
+The current accepted frontier is `v0.156.0`, containing one hundred ninety-eight
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2473,36 +2473,45 @@ P214 also tightens the existing contract, physics skill, and task templates to
 eliminate shared variables before independence claims, require typed
 cross-sector maps, and regenerate the migration queue from dispositions.
 
-P215 is active against MK2 at v0.155.0 and framework commit `ecee9d5`. Its
-committed-freeze gate separates exact algebraic vector-current elimination
-from the full kinetic-vector inverse, converts the source sextic convention by
-`lambda_A=pi^2*lambda_BPS`, tests the complete U(2)-invariant quadratic-form
-family rather than assuming one trace metric is forced, and requires accepted
-provenance for every HLS, KSRF, singlet, baryon-current, `N_c`, decay-scale,
-and physical-field premise. C-VEC-002 is provisional only pending an exact
-nonduplication audit.
+P215 promotes C-VEC-002 in v0.156.0 and qualifies MK2 through the accepted
+quadratic-elimination, BPS-convention, chiral-trace, vector, winding, and WZW
+ceilings. The exact positive object classifies every real symmetric
+Ad(U(2))-invariant bilinear form as an independent singlet/triplet metric and
+derives the conditional algebraic vector-current coefficient in both source
+and accepted BPS conventions. The positive metric `diag(5,2,2,2)` refutes the
+claim that U(2) alone forces singlet-triplet degeneracy, and the full kinetic
+inverse restricts the local sextic term to a low-momentum expansion. No
+accepted dependency supplies a physical omega or rho, baryon-current map,
+`N_c=3`, universality, KSRF, `F_pi`, or the rejected MK1 medium map. Twenty-nine
+primary, 15 independent, 107 source-graph predicates, 17 source assertions,
+and 80 focused tests pass; all load-bearing mass, coupling, current,
+derivative, metric, KSRF-parameter, and pi-squared mutations change the
+verdict. Immutable WZ3 alone receives an alias backed by `numpy.trapezoid`.
+The integrated boundary validates 877 memory records and passes all 1,901
+tests in 189.70 pytest seconds and 204.35 seconds total wall time, at 218,884
+KiB peak RSS and exit zero.
 
 ## Canonicalization
-The registry, `v0.155.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred ninety-seven accepted claims.
-P001 through P214 are frozen under `campaigns/`; proposal,
+The registry, `v0.156.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred ninety-eight accepted claims.
+P001 through P215 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 10 pending, 0 partial, 3
-migrated, 195 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P213 remains the most recent accepted-surface change and full integrated
-release boundary; P214 uses a record-sensitive closeout.
+memory. The regenerated migration queue agrees on 9 pending, 0 partial, 3
+migrated, 196 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P215 is the most recent accepted-surface change and full integrated
+release boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 10
-pending, 3 migrated, 195 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 9
+pending, 3 migrated, 196 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle, GC1-GC6, and MK1 are terminal without backward
-authority. P215 now audits MK2's claimed vector-meson derivation of the BPS
-sextic coupling without importing refuted KI1 or MK1's rejected physical
-medium map. The remaining order is MK2 through MK6, then MR2 through MR6.
+The WM7-WM10 source cycle, GC1-GC6, MK1, and MK2 are terminal without backward
+authority. P216 next audits MK3's claimed epsilon pinning without importing
+MK1's rejected physical medium map, MK2's rejected physical coupling closure,
+or refuted KI1. The remaining order is MK3 through MK6, then MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

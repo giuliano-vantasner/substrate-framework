@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 10
-  qualified: 195
+  pending_adjudication: 9
+  qualified: 196
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -13666,8 +13666,62 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-VEC-002
+  - C-EFT-001
+  - C-BPS-001
+  - C-VEC-001
+  - C-WZW-002
+  - C-TOP-002
+  qualification: MK2's declared algebraic vector-current action exactly gives lambda_A=abs(g_omega)/(sqrt(2)*m_omega),
+    and its displayed Pauli-half basis has fundamental trace Gram identity/2. P215 promotes C-VEC-002
+    for the complete positive U2-invariant metric family diag(beta,alpha,alpha,alpha), the sharp single-trace
+    degeneracy condition alpha=beta, the conditional vector-current elimination, and the accepted convention
+    map lambda_A=pi^2*lambda_BPS. A kinetic vector instead has a nonlocal inverse whose local term needs
+    low-q power counting. U2 alone does not force singlet-triplet degeneracy. Accepted claims derive no
+    physical HLS sector, omega, rho, baryon current, quark-current map, N_c=3, universality, KSRF a=2,
+    F_pi, mass, coupling, or medium map. Therefore lambda_A=N_c/(4*F_pi) is only all-premise conditional
+    algebra, the source BPS product also misses 1/pi^2, and the fixed coupling, broken KI2 family, paid
+    parameter debt, and downstream physical closure are not accepted.
+  evidence:
+  - campaigns/P215-mk2-vector-sextic-matching-audit/reviews/source_adjudication.md
+  - campaigns/P215-mk2-vector-sextic-matching-audit/reviews/C-VEC-002-claim-review.md
+  - campaigns/P215-mk2-vector-sextic-matching-audit/reviews/MK2-disposition-review.md
+  - campaigns/P215-mk2-vector-sextic-matching-audit/reviews/impact_analysis.md
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-reproduction.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/compatibility-audit.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-audit.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/check-adjudication.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/formula-freeze.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/input-provenance.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/post-source-claim-delta.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/dependency-audit.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/consumer-audit.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/candidate-comparison.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/implementation-audit.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/impact-analysis.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/primary-provenance.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/independent-provenance.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/evidence/focused-test-replay.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/verify.py
+  - campaigns/P215-mk2-vector-sextic-matching-audit/reviews/independent_vector_metric_review.py
+  - campaigns/P215-mk2-vector-sextic-matching-audit/reviews/replay_source_graph.py
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0001/result.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0002/result.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0003/result.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0004/result.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0005/result.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0006/result.yaml
+  - campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0007/result.yaml
+  - memory/vantasner/decisions/C-VEC-002-review.md
+  - memory/vantasner/decisions/MK2-qualified-review.md
+  note: P215 closes 29 primary, 15 independent, and 7 aggregate graph checks plus 80 focused tests. The
+    15-node graph pins 107 predicates and 17 assertions; fourteen nonrefuted nodes replay cleanly, KI1
+    stops at its governed refutation, and WZ3 receives an alias-only np.trapezoid replay. No scientific
+    version failure occurs.
 - source_unit: MK3
   phase: phase-43
   path: merged-framework/bridges/phase-43/bridge_MK3_epsilon_pinned.py

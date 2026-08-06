@@ -1,0 +1,35 @@
+campaign: P215
+attempt: 0008
+timestamp_utc: '2026-08-06T10:22:22Z'
+status: passed
+stage: integrated_release_promotion
+release: v0.156.0
+claim: C-VEC-002
+planned_gates:
+  - P215 primary and independent exact verifiers
+  - affected P059 and P140 accepted predecessor verifiers
+  - pinned source graph replay
+  - focused and full test suites
+  - repository skill generated-doc memory YAML and diff validation
+result:
+  workflow_exit: 0
+  repository_verdict: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  pytest:
+    passed: 1901
+    elapsed_seconds: 189.70
+  integrated_gate:
+    elapsed_seconds: 204.35
+    max_rss_kib: 218884
+  generated_and_record_checks:
+    claims: 198
+    accepted_claims: 198
+    proposals: 0
+    migration_total: 218
+    migration_pending: 9
+    migration_partial: 0
+    memory_records: 877
+  note: >-
+    scripts/validate.sh contains the full pytest suite, so a second unchanged
+    pytest invocation was deliberately omitted as validation theater. The
+    targeted scientific, independent, mutation, predecessor, graph, and
+    focused-test gates had already passed before this integrated run.

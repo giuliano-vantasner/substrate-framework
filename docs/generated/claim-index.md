@@ -1695,6 +1695,15 @@ Let x be a nonempty exact real matrix with three columns, define L_i=i*x_i^a*sig
 - Compatibility: `compatible_extension`
 - Dependencies: C-EFT-001, C-CHI-001
 
+## C-VEC-002
+
+In the Hermitian Pauli-half basis T_0=I_2/2 and T_a=sigma_a/2 for a=1,2,3, every real symmetric Ad(U(2))-invariant bilinear form Q on u(2) has component Gram matrix diag(beta,alpha,alpha,alpha), equivalently Q(X,Y)=2*alpha*Tr(X*Y)+(beta-alpha)*Tr(X)*Tr(Y). It is positive definite exactly when alpha and beta are positive. The fundamental single-trace specialization and singlet-triplet degeneracy occur exactly at alpha=beta; U(2) invariance alone does not force that equality. Separately, for positive exact m and g, a supplied real current B, and the declared algebraic action L=m^2*w^2/2+g*w*B, stationary elimination gives w=-g*B/m^2 and L_eff=-g^2*B^2/(2*m^2). Thus the convention L6=-lambda_A^2*B^2 has lambda_A=g/(sqrt(2)*m), while C-BPS-001's convention L6=-lambda_BPS^2*pi^4*B^2 has lambda_BPS=lambda_A/pi^2. Restoring a vector kinetic differential operator replaces m^2 by a nonlocal kernel, so the displayed local term is only a leading low-momentum specialization under separately supplied power counting. This exact classification and conditional elimination derive no HLS field content, physical omega rho pion or baryon current, WZW or anomaly coefficient, N_c, universality, KSRF relation, mass, coupling value, decay scale, medium response, or substrate realization.
+
+- Accepted in: `v0.156.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-EFT-001, C-BPS-001, C-CHI-001
+
 ## C-VIR-001
 
 Conditional on the real virial slope formulas width_slope=(a-b)/2 and energy_slope=-(a+b)/2, both slopes equal -1/2 if and only if (a,b)=(0,1). The alternatives (1,0) and (1,1) give slopes (1/2,-1/2) and (0,-1), respectively, and fail the simultaneous target.
