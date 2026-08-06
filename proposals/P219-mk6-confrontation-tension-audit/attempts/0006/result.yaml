@@ -1,0 +1,14 @@
+campaign: P219
+attempt: 0006
+timestamp_utc: '2026-08-06T12:10:00Z'
+status: passed
+stage: claim_level_source_review_and_impact_analysis
+decision:
+  source_unit: MK6
+  disposition: qualified
+  claims_to_promote: [C-VAR-002]
+  physical_claims_promoted: []
+reviewed_predicates: [MK6.1, MK6.2, MK6.3, MK6.4, MK6.5, MK6.6]
+impact: {claims_added: 1, package_modules_changed: 1, tests_changed: 1, release_change: required}
+pending_consumers: [MR2, MR3, MR4, MR5, MR6]
+next_action: commit_review_boundary_then_execute_promotion_and_single_integrated_gate

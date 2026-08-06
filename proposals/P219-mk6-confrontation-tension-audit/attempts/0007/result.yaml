@@ -1,0 +1,10 @@
+campaign: P219
+attempt: 0007
+timestamp_utc: '2026-08-06T12:11:00Z'
+status: failed
+stage: review_boundary_repository_validation
+failure_class: proposal_schema
+error: invalid_status_under_review
+diagnosis: repository_schema_allows_draft_active_accepted_or_rejected_only
+repair: retain_active_until_promotion_without_changing_review_decisions
+next_action: rerun_record_sensitive_review_validation_then_commit_boundary

@@ -122,6 +122,17 @@ independent checks, nine graph checks, and 47 focused tests pass. Common and
 incompatible minimizer examples, pi-squared convention mutation, slack signs,
 and corrected source predicates make the verification sensitive.
 
+Attempt 0006 reviews C-VAR-002 and MK6.1 through MK6.6 individually. It accepts
+the generic exact variational theorem, qualifies MK6 through that theorem and
+existing conditional claims, rejects every physical mass, binding,
+double-counting, near-BPS, falsification, and debt-discharge extension, and
+requires one full integrated promotion boundary.
+
+Attempt 0007 preserves a repository-schema stop on the descriptive proposal
+status `under_review`. The schema permits only `draft`, `active`, `accepted`,
+or `rejected`, so the manifest remains `active` until promotion. No review
+decision or scientific surface changes.
+
 ## Debt Ledger
 
 The ledger tracks source predicates, lambda ownership, target-potential
