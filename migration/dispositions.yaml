@@ -2017,6 +2017,81 @@ units:
       surface; inherited E2 uses a safe current-first fallback. Hash-identical
       expensive reverse consumers reuse P215 execution evidence. Accepted
       claims, package APIs, tests, and v0.156.0 remain unchanged.
+  MK5:
+    disposition: qualified
+    accepted_claims:
+      - C-GSK-001
+      - C-GSK-002
+      - C-RMAP-001
+      - C-RMAP-002
+      - C-RPROF-001
+      - C-RPROF-002
+      - C-RDIFF-002
+      - C-BPS-001
+      - C-VEC-002
+    qualification: >-
+      MK5's exact surviving content is the conditional dimensionless
+      rational-map L2+L4+L6+L0 radial density, its independently varied
+      Euler-Lagrange equation, nonnegativity, Derrick scaling identity,
+      endpoint linearization, L2+L4 limit, squared-Jacobian angular factor,
+      and the lambda-convention coefficient map, all under separately supplied
+      inputs. C-GSK-002 adds resolution-bounded evidence for stationary
+      branches at supplied (c6,c0)=(1/2,1/4) and the accepted B=1,2,4 angular
+      inputs, using checked collocation, asymptotic Robin data, isolated domain,
+      tolerance, cutoff, and quadrature refinement, virial and residual gates,
+      an independent vacuum-complement shooting route, and load-bearing
+      mutations. The source's midpoint-plus-trapezoid angular regressions are
+      biased; its finite Dirichlet walls, coupled refinements, missing residual
+      gates, narrower executable coupling sweep, and reconstructed forbidden
+      comparator do not validate its broader conclusions. MK1 through MK3
+      supply no accepted physical coefficients or epsilon. No source physical
+      kappa, universal floor, asymptotic BPS theorem, binding prediction, paid
+      debt, particle, nucleus, observation, or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/source_adjudication.md
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/C-GSK-001-claim-review.md
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/C-GSK-002-claim-review.md
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/MK5-disposition-review.md
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/impact_analysis.md
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/source-reproduction.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/compatibility-audit.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/source-audit.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/check-adjudication.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/formula-freeze.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/input-provenance.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/post-source-claim-delta.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/dependency-audit.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/consumer-audit.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/candidate-comparison.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/implementation-audit.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/primary-numerical-evidence.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/impact-analysis.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/primary-provenance.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/independent-provenance.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/evidence/focused-test-replay.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/verify.py
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/independent_generalized_skyrme_review.py
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/reviews/replay_source_graph.py
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0003/result.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0004/result.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0005/result.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0006/result.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0007/result.yaml
+      - campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0008/result.yaml
+      - memory/vantasner/decisions/C-GSK-001-review.md
+      - memory/vantasner/decisions/C-GSK-002-review.md
+      - memory/vantasner/decisions/MK5-qualified-review.md
+    note: >-
+      P218 closes 27 primary, 12 fresh independent, and 9 aggregate graph
+      checks plus 65 focused tests. The twenty-node graph pins 133 predicates
+      and 24 assertions. MK5 uses current SciPy trapezoid and has no legacy
+      NumPy surface; inherited immutable direct, dynamic, and eager version
+      shapes use current-first or alias-only compatibility without becoming
+      scientific failures. Hash-identical expensive reverse consumers reuse
+      prior execution evidence. The integrated release boundary adds two
+      accepted claims and the generalized radial package API.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:

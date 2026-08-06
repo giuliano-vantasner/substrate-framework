@@ -57,7 +57,7 @@ comparators_blinded_until: >-
   equations, boundary data, solver settings, values, predicates, output, and
   consumer details stay unopened until this contract, formula freeze,
   provenance record, validation record, and freeze commit exist.
-status: under_review
+status: accepted
 revision: 0002
 opened_source_settings:
   boundary_data: f_at_1e_minus_4_equals_pi_and_f_at_rmax_equals_zero

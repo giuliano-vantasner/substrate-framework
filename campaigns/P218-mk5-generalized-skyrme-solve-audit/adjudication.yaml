@@ -1,0 +1,98 @@
+campaign: P218
+title: MK5 generalized Skyrme solve audit
+source_baseline: substrate@6d1f4e0
+source_units: [MK5]
+base_release: v0.156.0
+accepted_release: v0.157.0
+freeze_commit: d4e4756
+implementation_commit: dd21d1d
+review_commit: 07dc48a
+adjudicated_at: '2026-08-06T11:41:41Z'
+selected_candidates:
+  - {id: A, reason: Fresh_variation_selects_the_exact_conditional_extended_radial_model.}
+  - {id: B, reason: Squared_pullback_Jacobian_selects_I_rather_than_B_squared.}
+  - {id: C, reason: Checked_collocation_with_asymptotic_endpoints_constructs_the_canonical_branch_evidence.}
+  - {id: D, reason: Vacuum_complement_shooting_and_Simpson_supply_a_fresh_independent_route.}
+  - {id: E, reason: Isolated_refinements_bound_the_promoted_numeric_scope.}
+  - {id: F, reason: The_zero_coefficient_limit_recovers_C_RPROF_001_exactly.}
+  - {id: G, reason: C_VEC_002_types_the_lambda_conversion_without_supplying_a_value.}
+  - {id: H, reason: Supplied_coefficients_prevent_rejected_MK1_through_MK4_physical_premises_from_leaking.}
+  - {id: I, reason: Angular_sextic_and_tail_mutations_defeat_copied_value_oracles.}
+  - {id: K, reason: MK5_receives_an_individual_terminal_qualified_disposition.}
+competing_candidates:
+  - {id: J, decision: fallback_not_needed_after_repaired_independent_representation_passed_without_threshold_relaxation}
+claims:
+  - {id: C-GSK-001, decision: accepted_symbolic_verified_compatible_extension_active}
+  - {id: C-GSK-002, decision: accepted_numeric_evidence_compatible_extension_qualified}
+unpromoted_claims:
+  - {id: physical_coefficients, reason: MK1_through_MK3_do_not_supply_accepted_closure.}
+  - {id: source_kappa, reason: Biased_angular_inputs_weak_boundaries_and_rejected_physical_inputs.}
+  - {id: universal_floor, reason: Finite_narrow_sweep_with_unaccepted_coefficient_curve.}
+  - {id: asymptotic_BPS_limit, reason: Three_finite_scale_points_do_not_prove_an_asymptotic_theorem.}
+  - {id: physical_binding, reason: The_signed_reduced_difference_is_not_a_variational_bound_or_physical_map.}
+  - {id: comparator_blinding, reason: The_source_reconstructs_and_reads_the_nominally_forbidden_value.}
+  - {id: paid_debt, reason: Physical_residuals_and_dependencies_remain_unresolved_in_the_source.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_generalized_skyrme_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  exact_claim_review: reviews/C-GSK-001-claim-review.md
+  numeric_claim_review: reviews/C-GSK-002-claim-review.md
+  source_disposition_review: reviews/MK5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_numerical_evidence: evidence/primary-numerical-evidence.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MK5: qualified}
+accepted_mappings: [C-GSK-001, C-GSK-002, C-RMAP-001, C-RMAP-002, C-RPROF-001, C-RPROF-002, C-RDIFF-002, C-BPS-001, C-VEC-002]
+compatibility:
+  MK5_surface: current_scipy_trapezoid
+  inherited_version_shapes: [direct, dynamic, eager]
+  policy: current_first_or_alias_only_with_numpy_trapezoid_backend
+  scientific_failures_from_version_events: 0
+release_change: v0.157.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_generalized_skyrme_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_generalized_radial_rational_numerics_and_source_audit
+  - scripts_validate_sh_single_integrated_boundary
+  - git_diff_check
+integrated_gate:
+  status: passed
+  workflow_claims: 200
+  workflow_accepted_claims: 200
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 6
+  migration_partial: 0
+  migration_qualified: 199
+  memory_records: 888
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  affected_campaign_yaml_files: 30
+  tests: 1918
+  pytest_seconds: 194.71
+  total_wall_seconds: 209.51
+  maximum_resident_kib: 220344
+  exit_status: 0
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  diff_check: passed
+debt: []
+status: accepted

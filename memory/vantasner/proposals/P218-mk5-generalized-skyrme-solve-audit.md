@@ -10,8 +10,8 @@ tags:
 - generalized-skyrme
 - numerical-evidence
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P218 MK5 Generalized-Skyrme Solve Audit
 
@@ -135,6 +135,13 @@ supplied-coefficient branches, rejects all source physical closure, records the
 additive package/release impact, and requires one full integrated promotion
 gate.
 
+Attempt 0009 promotes the two individually accepted claims into v0.157.0,
+qualifies MK5, synchronizes canonical and generated records, and runs the
+single full integrated boundary required by the accepted API, test, claim, and
+release changes. All 1,918 tests pass in 194.71 seconds; the full workflow
+validates 888 memory records and takes 209.51 seconds at 220,344 KiB peak RSS
+with exit zero. The immutable attempt and adjudication record the exact gate.
+
 ## Debt Ledger
 
 The ledger tracks equations, coefficients, angular factors, endpoint laws,
@@ -153,7 +160,7 @@ premises, compatibility, consumers, novelty, and generated records.
 | Numeric agreement may become a physical claim | Keep claims conditional and comparator-blind | discharged by attempts 0003 and 0006 |
 | Compatibility may masquerade as science | Audit direct imported dynamic and eager integration access | discharged by attempts 0002 and 0007 |
 | Later consumers may grant backward authority | Replay terminal source graph | discharged by attempt 0007 |
-| Novelty and governed records remain unresolved | Nonduplication review implementation release and record gate | claim review complete; promotion synchronization open |
+| Novelty and governed records remain unresolved | Nonduplication review implementation release and record gate | discharged by attempts 0008 and 0009 |
 
 ## Review and Promotion Plan
 

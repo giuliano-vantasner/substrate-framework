@@ -2520,28 +2520,44 @@ independent, 9 graph checks, and 22 focused tests pass. The graph pins 70
 predicates and 13 assertions; MK4 already uses current SciPy `trapezoid`, and
 inherited E2's safe current-first fallback creates no scientific failure.
 
+P218 qualifies MK5 and adds C-GSK-001/002 in v0.157.0. The exact claim owns
+the conditional nonnegative rational-map L2+L4+L6+L0 radial density, fresh
+Euler-Lagrange equation, Derrick weights, endpoint linearization, L2+L4 limit,
+and typed lambda conversion. The numeric claim owns only three supplied-
+coefficient finite-domain stationary branches with checked collocation,
+isolated refinements, residual and virial ceilings, independent vacuum-
+complement shooting with Simpson quadrature, and angular/sextic mutations. The
+source's biased angular quadrature, weak finite-wall oracle, rejected physical
+inputs, residual floor, asymptotic and binding readings, comparator guard, and
+paid-debt claim are excluded. Twenty-seven primary, 12 independent, 9 graph
+checks, and 65 focused tests pass; the graph pins 133 predicates and 24
+assertions. MK5 uses current SciPy `trapezoid`; inherited legacy NumPy shapes
+remain current-first or alias-only compatibility provenance.
+The integrated v0.157.0 boundary validates 888 memory records and passes all
+1,918 tests in 194.71 pytest seconds and 209.51 seconds total wall time, at
+220,344 KiB peak RSS and exit zero.
+
 ## Canonicalization
-The registry, `v0.156.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred ninety-eight accepted claims.
-P001 through P217 are frozen under `campaigns/`; proposal,
+The registry, `v0.157.0` manifest, current release, generated claim index, and
+generated framework memory agree on two hundred accepted claims.
+P001 through P218 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 7 pending, 0 partial, 3
-migrated, 198 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P215 remains the most recent accepted-surface change and full integrated
-release boundary; P216 is a record-sensitive closeout.
+memory. The regenerated migration queue agrees on 6 pending, 0 partial, 3
+migrated, 199 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P218 is the most recent accepted-surface and full integrated release
+boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 7
-pending, 3 migrated, 198 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 6
+pending, 3 migrated, 199 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle, GC1-GC6, and MK1-MK4 are terminal without backward
-authority. P218 next audits MK5's full generalized-model solve, including its
-ODE equations, angular factors, boundary data, solver success, refinement,
-independent method, coupling provenance, and normalization conventions. The
-remaining order is MK5 and MK6, then MR2 through MR6.
+The WM7-WM10 source cycle, GC1-GC6, and MK1-MK5 are terminal without backward
+authority. P219 next audits MK6's binding-window and closure claims, including
+its dependence on MK5's rejected physical coefficients and the exact ceiling
+of C-GSK-002. The remaining order is MK6, then MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.
