@@ -1,0 +1,18 @@
+campaign: P218
+new_package_module: src/substrate_framework/generalized_skyrme_radial.py
+new_public_APIs:
+  - generalized_skyrme_radial_energy_density
+  - generalized_skyrme_radial_euler_lagrange_residual
+  - generalized_skyrme_reduced_coefficients
+  - generalized_skyrme_scaling_residual
+  - generalized_skyrme_endpoint_data
+  - generalized_skyrme_tail_robin_coefficient
+  - generalized_skyrme_radial_rhs
+  - generalized_skyrme_energy_components
+  - solve_generalized_skyrme_radial_profile
+new_evidence_types: [GeneralizedSkyrmeEndpointData, GeneralizedSkyrmeRadialProfileEvidence]
+new_tests: tests/test_generalized_skyrme_radial.py
+purity: imports_execute_no_solve_or_print
+integration: canonical_sampled_integration_calls_trapezoid_integral
+shared_solver: every_collocation_stage_calls_solve_bvp_evidence
+

@@ -1,0 +1,13 @@
+campaign: P218
+attempt: 0005
+timestamp_utc: '2026-08-06T11:38:00Z'
+status: failed
+stage: repaired_independent_review_registry_probe
+passes_before_stop: 10
+scientific_result: independent_vacuum_complement_shooting_and_Simpson_agree_with_like_for_like_collocation
+failure: expected_C_RPROF_002_phrase_does_not_establish_but_registry_uses_it_proves_no
+diagnosis: brittle_prose_substring_not_scientific_disagreement
+repair: inspect_accepted_axis_fields_and_actual_scope_clauses
+scientific_threshold_changed: false
+next_action: rerun only the independent verifier with structured registry checks
+

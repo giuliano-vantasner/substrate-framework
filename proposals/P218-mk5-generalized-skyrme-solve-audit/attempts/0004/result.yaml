@@ -1,0 +1,16 @@
+campaign: P218
+attempt: 0004
+timestamp_utc: '2026-08-06T11:35:00Z'
+status: failed
+stage: independent_direct_field_shooting
+passes_before_stop: 5
+failure: degree_four_tail_residual_exceeded_2e_minus_5
+diagnosis:
+  representation: direct_f_near_pi_at_inner_cutoff
+  mechanism: degree_four_origin_signal_is_obtained_by_subtracting_a_2e_minus_10_perturbation_from_pi_and_the_tail_root_is_ill_conditioned
+  observed_degree_four_residual: -4.546858575824912e-5
+  observed_degree_four_energy_coefficient: 5.197386265042524
+  primary_like_for_like_coefficient: 5.197385630613498
+repair: evolve_vacuum_complement_g_equals_pi_minus_f_to_preserve_the_origin_signal
+threshold_changed: false
+next_action: rerun the independent method in the repaired representation

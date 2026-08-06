@@ -1,0 +1,17 @@
+campaign: P218
+selected:
+  - {id: A, reason: exact_extended_functional_equation_positivity_and_scaling_are_novel}
+  - {id: B, reason: squared_Jacobian_angular_factor_is_exact_and_load_bearing}
+  - {id: C, reason: checked_collocation_with_Robin_data_converges}
+  - {id: D, reason: vacuum_complement_DOP853_and_Simpson_agree_like_for_like}
+  - {id: E, reason: domain_quadrature_tolerance_and_inner_cutoff_refinements_pass_separately}
+  - {id: F, reason: zero_extra_coefficient_limit_recovers_C_RPROF_001_exactly}
+  - {id: G, reason: lambda_convention_conversion_is_exact_before_reduction}
+  - {id: H, reason: physical_premise_removal_leaves_a_valid_supplied_parameter_model}
+  - {id: I, reason: angular_sextic_and_tail_mutations_materially_change_results}
+  - {id: K, reason: terminal_claim_and_source_governance_is_required}
+not_selected:
+  - {id: J, reason: repaired_vacuum_complement_representation_succeeds_after_preserved_direct_field_failure}
+structural_selection_basis: exact_variation_dependency_typing_endpoint_regularization_solver_status_isolated_convergence_independent_method_and_mutation_sensitivity
+comparator_selection_used: false
+

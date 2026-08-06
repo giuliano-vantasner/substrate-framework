@@ -1,0 +1,35 @@
+campaign: P218
+parameters: {c6: 0.5, c0: 0.25, inner_radius: 0.0001}
+angular_inputs: {B1: 1.0, B2: pi_plus_8_over_3, B4: 20.6496264884189}
+method: checked_adaptive_collocation_continuation_Robin_endpoints_shared_trapezoid
+domains:
+  R14:
+    b: {B1: 1.4326132559595686, B2: 2.7988805325146457, B4: 5.197385630613498}
+    kappa: 11.854641448794537
+  R20:
+    b: {B1: 1.4326169552044248, B2: 2.7988849885937213, B4: 5.197388698844833}
+    kappa: 11.854814480532013
+  R26:
+    b: {B1: 1.43261700039824, B2: 2.7988850369065896, B4: 5.197388725528848}
+    kappa: 11.854816551423387
+reference_solver:
+  tolerance: 1e-6
+  initial_points: 401
+  output_points: 8001
+  continuation_steps: 8
+  maximum_RMS_residual: 1.1e-6
+  maximum_boundary_residual: 2e-11
+  maximum_relative_virial_residual: 2e-6
+isolated_refinement_results:
+  tolerance_B2:
+    - {tolerance: 2e-6, max_RMS: 1.98845787610801e-6, b: 2.798884988462644}
+    - {tolerance: 1e-6, max_RMS: 9.786187059265797e-7, b: 2.798884988537636}
+    - {tolerance: 5e-7, max_RMS: 4.944894483417369e-7, b: 2.798884988616369}
+  inner_cutoff_B4:
+    - {inner: 2e-4, b: 5.19738869880662}
+    - {inner: 1e-4, b: 5.197388698828848}
+    - {inner: 5e-5, b: 5.1973886988288145}
+mutations:
+  I_equals_B_squared_kappa: 8.120194404459678
+  c6_zero_kappa: 8.850349850912577
+

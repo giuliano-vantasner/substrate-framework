@@ -886,6 +886,19 @@ from .rational_map_radial import (
     regular_origin_boundary_residual,
     solve_rational_map_radial_profile,
 )
+from .generalized_skyrme_radial import (
+    GeneralizedSkyrmeEndpointData,
+    GeneralizedSkyrmeRadialProfileEvidence,
+    generalized_skyrme_endpoint_data,
+    generalized_skyrme_energy_components,
+    generalized_skyrme_radial_energy_density,
+    generalized_skyrme_radial_euler_lagrange_residual,
+    generalized_skyrme_radial_rhs,
+    generalized_skyrme_reduced_coefficients,
+    generalized_skyrme_scaling_residual,
+    generalized_skyrme_tail_robin_coefficient,
+    solve_generalized_skyrme_radial_profile,
+)
 from .rational_map_moments import (
     FactorizedRationalMapEnergyMoments,
     RationalMapAngularSTFMoments,

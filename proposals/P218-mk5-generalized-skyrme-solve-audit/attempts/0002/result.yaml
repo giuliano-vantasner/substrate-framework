@@ -1,0 +1,14 @@
+campaign: P218
+attempt: 0002
+timestamp_utc: '2026-08-06T11:18:00Z'
+status: passed
+stage: native_reproduction_and_source_audit
+result: {checks: 8, elapsed_seconds: 63.93, max_rss_kib: 219540, exit_code: 0}
+compatibility_event: none
+source_values:
+  angular_integrals: {B1: 0.9975, B2: 5.7937, B4: 20.6255}
+  supplied_source_coefficients: {c6: 0.63682, c0: 0.26186}
+  source_energy_coefficients: {B1: 1.46534, B2: 2.86331, B4: 5.30973}
+  source_kappa: 12.3434
+next_action: replace physical premises and weak numerical oracles with conditional canonical and independent routes
+

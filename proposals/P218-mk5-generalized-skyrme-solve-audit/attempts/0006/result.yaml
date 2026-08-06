@@ -1,0 +1,12 @@
+campaign: P218
+attempt: 0006
+timestamp_utc: '2026-08-06T11:41:00Z'
+status: passed
+stage: repaired_independent_rederivation
+result: {checks: 12, elapsed_seconds: 13.44, max_rss_kib: 157180}
+method: vacuum_complement_DOP853_amplitude_shooting_with_Simpson_quadrature
+like_for_like_domain: {inner: 0.0001, outer: 14.0}
+agreement: {maximum_energy_coefficient_absolute_error: 3e-7, signed_difference_absolute_error: 1e-5}
+preserved_failures: [attempt_0004_direct_field_origin_cancellation, attempt_0005_brittle_registry_wording]
+next_action: source graph and focused package replay
+

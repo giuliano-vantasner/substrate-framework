@@ -1,0 +1,8 @@
+campaign: P218
+existing_surfaces: [C-RPROF-001, C-RPROF-002, C-BPS-001, C-VEC-002]
+distinct_exact_objects: [L6_radial_density, L0_radial_density, extended_Euler_Lagrange_equation, four_term_Derrick_identity, massive_tail_Robin_data]
+distinct_numeric_object: supplied_c6_half_c0_quarter_three_branch_extended_model_evidence
+new_claims: [C-GSK-001, C-GSK-002]
+new_module: src/substrate_framework/generalized_skyrme_radial.py
+duplicate_physical_claims: []
+

@@ -1,0 +1,28 @@
+campaign: P218
+accepted_dependencies:
+  C-RMAP-001:
+    supplies: exact_pullback_Jacobian_degree_average_and_squared_Jacobian_angular_functional
+    withholds: rational_map_minimum_physical_baryon_nucleus_or_action
+  C-RMAP-002:
+    supplies: accepted_degree_four_map_and_angular_value_20_6496264884189
+    withholds: full_3d_minimum_and_physical_state
+  C-RPROF-001:
+    supplies: exact_L2_L4_radial_density_equation_endpoint_powers_and_scaling_limit
+    withholds: L6_L0_terms_and_stationary_branch_existence
+  C-RPROF-002:
+    supplies: numeric_L2_L4_baseline_branches_and_independent_method_pattern
+    withholds: extended_model_branches_and_global_minimality
+  C-VEC-002:
+    supplies: lambda_A_equals_pi_squared_lambda_BPS_convention_map
+    withholds: physical_vector_current_coupling_or_parameter_value
+  C-BPS-001:
+    supplies: conditional_lambda_BPS_pi_four_sextic_normalization
+    withholds: selected_potential_couplings_or_equality_configuration
+source_predecessors:
+  E1_E2_E3_E4: governed_only_through_accepted_rational_map_radial_difference_and_BPS_mappings
+  HE4_KI3_KI4_KI5: qualified_context_only
+  MK1_MK2_MK3_MK4: qualified_without_physical_parameter_or_full_model_closure
+backward_authority_excluded: [MK6, MR2, MR3, MR4, MR5, MR6]
+closure_result: C-GSK-001 and C-GSK-002 close only for independently supplied dimensionless coefficients and declared truncated-domain numerical evidence.
+debt: []
+

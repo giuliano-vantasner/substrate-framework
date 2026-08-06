@@ -1,0 +1,11 @@
+campaign: P218
+attempt: 0003
+timestamp_utc: '2026-08-06T11:31:00Z'
+status: passed
+stage: exact_and_refined_primary_verification
+result: {checks: 27, elapsed_seconds: 7.90, max_rss_kib: 161592}
+reference: {c6: 0.5, c0: 0.25, outer_radius: 20.0, kappa: 11.85481448}
+refinements: [outer_domain, output_quadrature, solver_tolerance, inner_cutoff]
+mutations: [angular_I_to_B_squared, sextic_to_zero, massive_tail_to_massless]
+next_action: fresh DOP853 shooting and Simpson independent review
+

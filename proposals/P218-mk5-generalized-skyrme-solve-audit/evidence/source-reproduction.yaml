@@ -1,0 +1,8 @@
+campaign: P218
+source_unit: MK5
+sha256: a5ecb5d0d2ba96cf8083a9cfb32ddb44c2a4f4841bf776ebbccb91bc12b246f8
+bytes: 26426
+native: {exit_code: 0, runtime_checks: 8, assertions: 1, elapsed_seconds: 63.93, max_rss_kib: 219540}
+terminal_tally: ALL_8_CHECKS_PASS
+scope: native_tally_is_reproduction_not_headline_authority
+

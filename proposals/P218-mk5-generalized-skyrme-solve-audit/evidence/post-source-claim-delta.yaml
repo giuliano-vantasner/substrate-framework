@@ -1,0 +1,16 @@
+campaign: P218
+promoted_claims_pending_review: [C-GSK-001, C-GSK-002]
+new_apis_pending_review:
+  - generalized_skyrme_radial_energy_density
+  - generalized_skyrme_radial_euler_lagrange_residual
+  - generalized_skyrme_reduced_coefficients
+  - generalized_skyrme_scaling_residual
+  - generalized_skyrme_endpoint_data
+  - generalized_skyrme_tail_robin_coefficient
+  - generalized_skyrme_radial_rhs
+  - generalized_skyrme_energy_components
+  - solve_generalized_skyrme_radial_profile
+source_disposition: pending_review
+physical_claims_promoted: []
+continuation_required: true
+

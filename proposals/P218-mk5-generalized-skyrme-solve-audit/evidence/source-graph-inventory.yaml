@@ -1,0 +1,24 @@
+campaign: P218
+nodes: 20
+lexical_predicates: 133
+assertions: 24
+aggregate_checks: 9
+root: MK5
+qualified_predecessors: [E1, E2, E3, E4, HE4, KI3, KI4, KI5, MK1, MK2, MK3, MK4]
+reverse_consumers:
+  pending: [MK6, MR2, MR3, MR4, MR5, MR6]
+  duplicate_evidence: [MR1]
+root_execution: {source: evidence/source-reproduction.yaml, checks: 8, elapsed_seconds: 63.93, verdict: clean_noncanonical}
+reused_execution_evidence:
+  P215: [MK6, MR2, MR6]
+  P174: [MR5]
+static_hash_edge_replay: [MR1, MR3, MR4]
+compatibility:
+  current_first_safe_fallbacks: [E1, E2, E3, KI5]
+  root: current_scipy_trapezoid
+  eager_legacy_fallbacks: []
+  scientific_version_failures: 0
+excluded_dirty_untracked_consumers: [phase47_BM, phase48_CE]
+reason_for_exclusion: absent_from_substrate_commit_6d1f4e0_and_pinned_source_inventory
+debt: []
+

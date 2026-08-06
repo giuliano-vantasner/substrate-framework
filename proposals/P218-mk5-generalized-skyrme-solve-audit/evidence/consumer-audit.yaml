@@ -1,0 +1,20 @@
+campaign: P218
+root: MK5
+accepted_consumers:
+  - src/substrate_framework/generalized_skyrme_radial.py
+  - tests/test_generalized_skyrme_radial.py
+pending_reverse_consumers:
+  MK6: imports_source_physical_kappa_and_mass_narrative
+  MR2: corrects_BPS_lambda_normalization_used_by_MK5
+  MR3: reinterprets_MK5_combined_model_energy
+  MR4: proposes_a_derived_residual_coupling_for_MK5
+  MR5: reruns_MK5_at_that_proposed_coupling
+  MR6: summarizes_the_corrected_MK5_ledger
+duplicate_reverse_consumer:
+  MR1: already_maps_only_C-SK-001_mass_unit_identity
+consumer_decision: >-
+  New canonical consumers use only supplied dimensionless coefficients and
+  accepted angular inputs. Later source units remain nonauthoritative and will
+  receive sequential audits; no source physical value enters C-GSK-001/002.
+generated_consumers: [docs/generated/claim-index.md, memory/framework/claims, migration/source-claims.yaml]
+

@@ -1,0 +1,23 @@
+campaign: P218
+claims: [C-GSK-001, C-GSK-002]
+independent_review: proposals/P218-mk5-generalized-skyrme-solve-audit/reviews/independent_generalized_skyrme_review.py
+checks: 12
+elapsed_seconds: 13.44
+max_rss_kib: 157180
+canonical_generalized_module_imported: false
+primary_verifier_imported: false
+source_MK5_imported: false
+exact_route:
+  - fresh symbolic variation from an independently written density
+  - fresh dilation derivative
+  - direct accepted angular lower-bound audit
+numeric_route:
+  - vacuum-complement DOP853 amplitude shooting
+  - regular-origin asymptotics and massive Bessel-tail residual
+  - independent Simpson quadrature and virial components
+  - like-for-like R14 comparison with collocation
+failed_routes:
+  - {attempt: 0004, cause: direct_field_origin_subtraction_lost_degree_four_signal, repaired_by: vacuum_complement}
+  - {attempt: 0005, cause: brittle_registry_wording_probe, repaired_by: structured_axes_and_actual_scope_clauses}
+debt: []
+

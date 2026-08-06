@@ -1,0 +1,13 @@
+source_unit: MK5
+checks:
+  MK5.1: {verdict: qualified_conditional, mapping: [C-RPROF-001, C-VEC-002], correction: physical_MK1_MK2_substitutions_rejected}
+  MK5.2: {verdict: qualified_exact_with_biased_numeric_regression, mapping: [C-RMAP-001, C-RMAP-002], correction: use_accepted_angular_integrals}
+  MK5.3: {verdict: qualified_numeric_regression, mapping: [C-RPROF-001, C-RPROF-002, C-RDIFF-002], correction: source_biased_inputs_and_finite_Dirichlet_walls}
+  MK5.4: {verdict: requires_replacement_numeric_evidence, mapping: [], correction: conditional_supplied_coefficients_Robin_boundaries_residuals_and_isolated_refinements}
+  MK5.5: {verdict: qualified_algebra_without_physical_closure, mapping: [C-VEC-002], correction: accepted_epsilon_BPS_conversion_and_no_C_BPS_003_map}
+  MK5.6: {verdict: rejected_as_physical_residual_claim, mapping: [], correction: source_sweep_range_and_inputs_are_unaccepted}
+  MK5.7: {verdict: qualified_finite_scale_counterevidence, mapping: [C-BPS-003], correction: three_finite_scale_points_are_not_an_asymptotic_limit_theorem}
+  MK5.8: {verdict: rejected_literal_guard, mapping: [], correction: comparator_is_reconstructed_and_read_at_runtime}
+proposed_replacement_claims: [C-GSK-001, C-GSK-002]
+terminal_source_disposition: pending_claim_review
+

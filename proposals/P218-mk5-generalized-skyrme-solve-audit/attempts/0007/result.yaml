@@ -1,0 +1,10 @@
+campaign: P218
+attempt: 0007
+timestamp_utc: '2026-08-06T11:44:00Z'
+status: passed
+stage: source_graph_and_focused_package_replay
+source_graph: {nodes: 20, lexical_predicates: 133, assertions: 24, aggregate_checks: 9, elapsed_seconds: 2.42, max_rss_kib: 150812}
+focused_tests: {tests_passed: 65, elapsed_seconds: 11.92, total_wall_seconds: 12.38, max_rss_kib: 161448}
+execution_policy: MK5_single_native_run_and_hash_sensitive_reuse_for_unchanged_expensive_consumers
+next_action: commit implementation boundary and conduct claim-level review
+

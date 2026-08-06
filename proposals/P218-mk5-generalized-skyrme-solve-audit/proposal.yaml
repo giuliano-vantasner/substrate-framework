@@ -58,4 +58,19 @@ comparators_blinded_until: >-
   consumer details stay unopened until this contract, formula freeze,
   provenance record, validation record, and freeze commit exist.
 status: draft
-
+revision: 0002
+opened_source_settings:
+  boundary_data: f_at_1e_minus_4_equals_pi_and_f_at_rmax_equals_zero
+  solver: scipy_solve_bvp_with_14_step_linear_continuation
+  tolerance: 1e-6
+  maximum_nodes: 200000
+  angular_quadrature: midpoint_samples_reduced_by_scipy_trapezoid
+  source_sweep: e_in_[2.5,3,4,5.45,7,9]
+claim_refinement:
+  decision: replace_source_physical_claim_with_conditional_exact_and_numeric_claims
+  reason: >-
+    The extended radial model is novel and conditionally well typed, while the
+    source's physical inputs and several numerical oracles lack accepted
+    closure. C-GSK-002 uses separately supplied rational coefficients,
+    accepted angular inputs, asymptotic Robin data, isolated refinements, and
+    an independent method.

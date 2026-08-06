@@ -1,0 +1,14 @@
+campaign: P218
+source_unit: MK5
+numpy_import_aliases: [np]
+direct_numpy_legacy_attributes: 0
+dynamic_numpy_legacy_getattrs: 0
+imported_numpy_legacy_names: 0
+direct_numpy_current_attributes: 0
+dynamic_numpy_current_getattrs: 0
+imported_numpy_current_names: 0
+eager_legacy_default_fallbacks: 0
+scipy_current_imports: [solve_bvp, trapezoid]
+alias_needed: false
+scientific_version_failures: 0
+

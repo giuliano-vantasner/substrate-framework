@@ -1,0 +1,23 @@
+campaign: P218
+exact_candidate:
+  id: C-GSK-001
+  scope: conditional_dimensionless_rational_map_radial_model
+  parameters: {B: positive_integer, I: positive, c6: nonnegative, c0: nonnegative}
+  claims:
+    - exact_nonnegative_L2_L4_L6_L0_density
+    - exact_Euler_Lagrange_equation
+    - exact_Derrick_weights_E2_minus_E4_minus_3E6_plus_3E0
+    - exact_C_RPROF_001_limit_at_c6_equals_c0_equals_zero
+    - exact_lambda_A_equals_pi_squared_lambda_BPS_coefficient_conversion
+numeric_candidate:
+  id: C-GSK-002
+  scope: resolution_bounded_three_branch_evidence_on_truncated_radial_domains
+  supplied_parameters: {c6: 0.5, c0: 0.25}
+  angular_inputs: {B1: 1.0, B2: pi_plus_8_over_3, B4: 20.6496264884189}
+  reference_domain: {inner: 0.0001, outer: 20.0}
+  reference_energy_coefficients:
+    B1: 1.4326169552
+    B2: 2.7988849886
+    B4: 5.1973886988
+  reference_signed_difference_coefficient: 11.85481448
+  excluded: [half_line_existence, uniqueness, minimum, full_3d_solution, physical_baryon, nucleus, binding_prediction]

@@ -100,6 +100,35 @@ Attempt 0001 freezes eleven candidates, two provisional claims, the exact and
 numeric obligations, coefficient and angular conventions, physical firewall,
 compatibility policy, and continuation behavior before opening MK5.
 
+Attempt 0002 reproduces all eight source checks once in 63.93 seconds. MK5
+already uses SciPy's current `trapezoid`. Inspection finds exact finite-wall
+conditional content but also biased midpoint-plus-trapezoid angular inputs,
+Dirichlet rather than asymptotic endpoint data, no RMS or derivative-boundary
+residual gates, coupled mesh/quadrature changes, no tolerance or inner-cutoff
+refinement, a narrower executable sweep than the headline, and runtime
+reconstruction of the nominally forbidden comparator.
+
+Attempt 0003 completes twenty-seven primary checks. A new importable module
+independently varies the extended density, recovers C-RPROF-001 exactly,
+derives the four-term Derrick identity and massive Bessel tail, and solves the
+supplied benchmark `(c6,c0)=(1/2,1/4)` with checked collocation. Domain,
+quadrature, tolerance, and cutoff refinements are isolated; angular, sextic,
+and tail mutations materially change the verdict.
+
+Attempt 0004 preserves direct-field DOP853 shooting failure at degree four:
+subtracting an approximately `2e-10` origin signal from `pi` makes the tail
+root ill-conditioned in binary64. The threshold was not relaxed. Evolving the
+vacuum complement preserves that signal. Attempt 0005 preserves a later stop
+on a brittle registry wording probe after all numerical comparisons passed;
+structured axes and actual scope clauses replace it without changing science.
+
+Attempt 0006 completes twelve fresh independent checks. Vacuum-complement
+DOP853 shooting with Simpson quadrature agrees with like-for-like R=14
+collocation to under `3e-7` per energy coefficient and `1e-5` in the signed
+difference. Attempt 0007 completes nine graph checks and 65 focused tests. The
+twenty-node graph pins 133 predicates and 24 assertions with proportional
+reuse of unchanged expensive source executions.
+
 ## Debt Ledger
 
 The ledger tracks equations, coefficients, angular factors, endpoint laws,
@@ -108,17 +137,17 @@ premises, compatibility, consumers, novelty, and generated records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MK5 predicates settings and values remain blinded | Reproduce after committed freeze | open |
-| Extended Euler-Lagrange equation may be copied or wrong | Independent symbolic variation and mutation | open |
-| Sextic angular factor may conflate I and B squared | Exact angular reduction and counterexample | open |
-| Source solver may hide failure or boundary artifacts | Inspect status residuals data and isolated refinements | open |
-| Independent route may share the same representation | Eliminate shared intermediates and use distinct solver/quadrature | open |
-| Source coefficients may mix lambda conventions | Derive lambda_A and lambda_BPS reductions explicitly | open |
-| MK1-MK4 may leak rejected physical premises | Remove each premise and type surviving supplied parameters | open |
-| Numeric agreement may become a physical claim | Keep claims conditional and comparator-blind | open |
-| Compatibility may masquerade as science | Audit direct imported dynamic and eager integration access | open |
-| Later consumers may grant backward authority | Replay terminal source graph | open |
-| Novelty and governed records remain unresolved | Nonduplication review implementation release and record gate | open |
+| MK5 predicates settings and values remain blinded | Reproduce after committed freeze | discharged by attempt 0002 |
+| Extended Euler-Lagrange equation may be copied or wrong | Independent symbolic variation and mutation | discharged by attempts 0003 and 0006 |
+| Sextic angular factor may conflate I and B squared | Exact angular reduction and counterexample | discharged by attempts 0003 and 0006 |
+| Source solver may hide failure or boundary artifacts | Inspect status residuals data and isolated refinements | discharged by attempt 0003 |
+| Independent route may share the same representation | Eliminate shared intermediates and use distinct solver/quadrature | discharged by attempts 0004 through 0006 |
+| Source coefficients may mix lambda conventions | Derive lambda_A and lambda_BPS reductions explicitly | discharged by attempt 0003 |
+| MK1-MK4 may leak rejected physical premises | Remove each premise and type surviving supplied parameters | discharged by attempts 0002 through 0007 |
+| Numeric agreement may become a physical claim | Keep claims conditional and comparator-blind | discharged by attempts 0003 and 0006 |
+| Compatibility may masquerade as science | Audit direct imported dynamic and eager integration access | discharged by attempts 0002 and 0007 |
+| Later consumers may grant backward authority | Replay terminal source graph | discharged by attempt 0007 |
+| Novelty and governed records remain unresolved | Nonduplication review implementation release and record gate | implementation complete; claim review open |
 
 ## Review and Promotion Plan
 

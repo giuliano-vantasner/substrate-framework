@@ -1,0 +1,19 @@
+campaign: P218
+canonical_symbols_added: [C-GSK-001, C-GSK-002]
+canonical_symbols_changed: []
+package_files_added: [src/substrate_framework/generalized_skyrme_radial.py]
+package_files_changed: [src/substrate_framework/__init__.py]
+tests_added: [tests/test_generalized_skyrme_radial.py]
+release_change: required_on_acceptance
+direct_governed_consumers:
+  - governance/claims.yaml
+  - governance/releases
+  - docs/generated/claim-index.md
+  - memory/framework/claims
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+pending_scientific_consumers: [MK6, MR2, MR3, MR4, MR5, MR6]
+targeted_evidence: {primary_checks: 27, independent_checks: 12, graph_checks: 9, focused_tests: 65}
+full_suite_policy: required_because_claims_package_APIs_package_files_tests_and_release_change
+risk: new_exact_and_resolution_bounded_numeric_surface_with_explicit_scope_exclusions
+debt: []

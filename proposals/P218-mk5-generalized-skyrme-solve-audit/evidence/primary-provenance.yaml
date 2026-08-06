@@ -1,0 +1,22 @@
+campaign: P218
+source_unit: MK5
+base_release: v0.156.0
+freeze_commit: d4e4756
+claims: [C-GSK-001, C-GSK-002]
+primary_verifier: proposals/P218-mk5-generalized-skyrme-solve-audit/verify.py
+checks: 27
+elapsed_seconds: 7.90
+max_rss_kib: 161592
+exact_route:
+  - fresh symbolic variation from declared density
+  - exact positivity and C-RPROF-001 limit
+  - accepted lambda convention and reduced coefficient product
+  - exact Derrick scaling and endpoint indicial equations
+numeric_route:
+  - checked adaptive collocation continuation
+  - regular-origin and massive-tail Robin data
+  - per-branch RMS boundary monotonicity positivity and virial gates
+  - isolated domain quadrature tolerance and inner-cutoff refinements
+  - angular coefficient sextic coefficient and tail-law mutations
+compatibility: source_current_scipy_trapezoid_and_canonical_shared_trapezoid_integral
+debt: []
