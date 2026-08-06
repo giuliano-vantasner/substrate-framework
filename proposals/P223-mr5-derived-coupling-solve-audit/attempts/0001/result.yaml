@@ -1,0 +1,23 @@
+campaign: P223
+attempt: 0001
+timestamp_utc: '2026-08-06T13:33:16Z'
+status: passed
+stage: contract_formula_and_provenance_freeze
+base_release: v0.159.0
+base_commit: 627e250
+source_unit: MR5
+source_sha256: 0da10adafe3badb7f3eab225543bc601996df45b142f2d59b5d0ddd6dd9117d7
+candidates_frozen: [A, B, C, D, E, F, G, H]
+provisional_claims: []
+memory_recall:
+  MR5_search: prior_consumer_and_compatibility_records_found_and_resourced_at_campaign_sources
+  light_nucleus_search: no_direct_memory_match
+accepted_source_audit:
+  result: C_GSK_001_002_and_C_RDIFF_001_are_the_load_bearing_owners_and_exclude_physical_closure
+remaining_source_body_blinded: true
+freeze_validation:
+  repository: {claims: 202, accepted: 202, proposals: 1, pending: 2, partial: 0}
+  memory: passed
+  yaml_files: 4
+  diff_check: passed
+next_action: validate_and_commit_freeze_before_source_body_or_execution

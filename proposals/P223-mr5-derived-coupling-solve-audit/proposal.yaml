@@ -1,0 +1,58 @@
+id: P223
+base_release: v0.159.0
+base_commit: 627e250
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MR5]
+question: >-
+  Does MR5 add a distinct conditional generalized-Skyrme stationary-branch
+  result when it reruns MK5 at MR4's supplied coupling, or does it only sample
+  C-GSK-001/002 while its derived-coupling and physical light-nucleus claims
+  fail accepted dependency closure?
+invariants:
+  - C-GSK-001 owns the exact conditional L2+L4+L6+L0 radial model and reduced coefficients for separately supplied positive inputs.
+  - C-GSK-002 owns resolution-bounded stationary branches only at independently supplied coefficients and explicitly excludes physical nuclei binding and derived parameters.
+  - C-RDIFF-001 owns the exact signed linear difference while deriving no state map mass formula scale binding convention reaction or observation.
+  - C-RDIFF-002 and C-GSK-002 numeric differences are conditional coordinates not variational bounds or physical binding energies.
+  - MR4 is duplicate evidence for C-VEC-001 and C-SK-001 and supplies no accepted physical rho KSRF or parameter-free coupling.
+  - MR3 supplies an exact sign-indefinite infimum interaction theorem but no physical mass decomposition or double-counting diagnosis.
+  - A successful finite-domain solve is numeric evidence only and requires checked status equations boundaries residuals refinements and independent method agreement.
+  - Mutable sampled integration uses trapezoid_integral or numpy.trapezoid and immutable compatibility events never reject scientific candidates.
+allowed_imports:
+  - C-GSK-001 and C-GSK-002 at their exact supplied-coefficient and resolution-bounded branch ceilings
+  - C-RMAP-001 and C-RMAP-002 for typed angular inputs only
+  - C-RPROF-001 and C-RPROF-002 for the zero-extra-coefficient baseline only
+  - C-RDIFF-001 and C-RDIFF-002 for declared signed-difference coordinates only
+  - C-SK-001 C-VEC-001 C-VEC-002 and the P222 MR4 disposition at their exact conditional ceilings
+  - C-VAR-002 and C-VAR-003 only at their common-domain variational ceilings
+  - src/substrate_framework/generalized_skyrme_radial.py and numerics.py
+  - hash-pinned MR5 only after the committed freeze
+candidates:
+  - {id: A, description: Map MR5's density equation coefficients and normalizations exactly onto C-GSK-001 and reject any convention mismatch.}
+  - {id: B, description: Reproduce the supplied-coefficient stationary branches with the canonical checked BVP and independent route if MR5 occupies a genuinely new parameter point.}
+  - {id: C, description: Derive the exact coupling-to-coefficient scaling family and classify the reported coupling as a supplied coordinate rather than a physical derivation.}
+  - {id: D, description: Retain a distinct resolution-bounded branch claim only if source settings refinements and nonduplication exceed C-GSK-002.}
+  - {id: E, description: Map every kappa and mass combination through C-RDIFF-001 while preserving the no-bound and no-state-map ceilings.}
+  - {id: F, description: Reject parameter-free light-nucleus and derived-coupling conclusions when MR4 or particle inputs lack accepted closure.}
+  - {id: G, description: Add no claim or API if all exact and numeric survivors are direct evaluations of accepted generalized-radial APIs.}
+  - {id: H, description: Give MR5 an individual terminal disposition and replay MR6 without backward authority.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact equation convention and normalization match
+  - novelty beyond C-GSK-001 C-GSK-002 and C-RDIFF-001
+  - accepted dependency closure and explicit parameter typing
+  - solver success residual boundary and finite-domain controls
+  - isolated mesh domain tolerance continuation and quadrature refinement
+  - independent method agreement on the same boundary-value problem
+  - parameter sensitivity without comparator-based selection
+  - physical field state mass and binding firewall
+  - terminal consumer and memory closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue exposes six checks, one assertion, numeric scope, the
+  claimed MR4 coupling near 4.6198, the source's reported coefficient point and
+  branch outputs, and its comparisons with MK5. All remaining equations,
+  solver settings, predicates, guards, exact literals, compatibility surfaces,
+  and consumer conclusions stay unopened until this contract, formula freeze,
+  provenance record, validation record, and freeze commit exist.
+status: active
+revision: 0001

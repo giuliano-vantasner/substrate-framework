@@ -1,0 +1,39 @@
+campaign: P223
+base_release: v0.159.0
+source_unit: MR5
+source_sha256: 0da10adafe3badb7f3eab225543bc601996df45b142f2d59b5d0ddd6dd9117d7
+queue_exposed_before_freeze:
+  - six_static_literal_checks_one_assertion_and_numeric_oracle
+  - claimed_MR4_coupling_about_4_6198_and_MK5_comparison_at_5_45
+  - reported_c6_c0_b1_b2_b4_kappa_mass_and_ratio_values
+frozen_exact_surfaces:
+  reduced_c6: lambda_BPS_squared_times_e_fourth_times_F_squared_over_eight
+  reduced_c0: thirty_two_times_mu_squared_over_e_squared_F_fourth
+  dimensionless_energy: four_pi_integral_of_C_GSK_001_density
+  coefficient: energy_over_twelve_pi_squared
+  signed_difference: three_pi_squared_times_two_b2_minus_b4
+  coupling_scaling_at_fixed_lambda_mu_F: {c6: proportional_to_e_fourth, c0: proportional_to_e_inverse_second}
+frozen_type_distinctions:
+  - supplied_dimensionless_coupling_vs_accepted_physical_derivation
+  - stationary_branch_vs_minimum_or_full_three_dimensional_solution
+  - mathematical_degree_vs_baryon_or_nucleus
+  - reduced_coefficient_vs_mass_binding_energy_or_observation
+  - parameter_sensitivity_vs_parameter_free_prediction
+frozen_numeric_gates:
+  solver_status: successful_and_finite
+  boundary_data: regular_origin_and_massive_tail_Robin
+  primary_domain_sequence: [14.0, 20.0, 26.0]
+  primary_inner_cutoffs: [0.0002, 0.0001, 0.00005]
+  primary_tolerances: [0.000002, 0.000001, 0.0000005]
+  quadrature_samples: [2001, 4001, 8001]
+  residuals: equation_boundary_and_Derrick
+  independent_route: vacuum_complement_DOP853_with_Simpson_quadrature
+frozen_mutations:
+  - replace_MR4_coupling_with_MK5_supplied_coupling
+  - vary_coupling_while_holding_other_declared_inputs_fixed
+  - replace_I_with_B_squared
+  - set_c6_to_zero
+  - alter_c0_coupling_scaling
+  - remove_physical_state_and_mass_labels
+nonduplication_target: [C-GSK-001, C-GSK-002, C-RDIFF-001, C-RDIFF-002, P218, P222]
+comparator_policy: structural_selection_before_remaining_source_values
