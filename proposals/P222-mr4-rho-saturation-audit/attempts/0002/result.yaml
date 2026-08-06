@@ -1,0 +1,12 @@
+campaign: P222
+attempt: 0002
+timestamp_utc: '2026-08-06T13:15:46Z'
+status: failed_memory_contract_repaired
+stage: freeze_validation
+command: memory_validate_P222_proposal
+exit_status: 1
+scientific_verdict_reached: false
+failure_class: durable_memory_format
+cause: debt_ledger_section_began_directly_with_a_table
+repair: add_a_plain_prose_section_description_before_the_table
+continuation: rerun_freeze_validation_and_commit_before_opening_source

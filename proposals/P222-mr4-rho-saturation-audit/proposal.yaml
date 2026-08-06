@@ -1,0 +1,53 @@
+id: P222
+base_release: v0.159.0
+base_commit: 35c39fe
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MR4]
+question: >-
+  Does MR4 derive a distinct dimensionless Skyrme coupling beyond C-VEC-001,
+  or does it conditionally compose the already accepted leading HLS reduction,
+  a supplied KSRF coefficient, C-SK-001's common unit, and imported masses?
+invariants:
+  - C-VEC-001 already owns the exact leading half-connection reduction e=g and the conditional relation e=g=m_V/(sqrt(a)*F) under the separately declared mass law m_V^2=a*g^2*F^2.
+  - C-VEC-001 explicitly does not derive HLS field content a physical rho or pion the KSRF premise a=2 particle values or a substrate realization.
+  - C-SK-001 is a conditional equality iff F/e=16*pi*E_e and derives neither F nor e nor a physical mass assignment.
+  - C-VEC-002 supplies invariant U2 bilinear-form and current-elimination ceilings but no physical vector multiplet KSRF relation or mass input.
+  - MR3 is qualified and MR5-MR6 are pending; later units grant no backward authority.
+  - Dimensional consistency is necessary but cannot turn a supplied mass relation or physical mass into a framework derivation.
+  - Mutable sampled integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never reject scientific candidates.
+allowed_imports:
+  - C-VEC-001 at its exact current algebra leading reduction and conditional mass-law ceiling
+  - C-SK-001 at its exact conditional common-unit iff only
+  - C-VEC-002 at its invariant-form and convention ceilings only
+  - C-EFT-001 and C-CHI-001 only through C-VEC-001's accepted dependency closure
+  - P140 S4 adjudication and P215-P221 terminal evidence after direct verification
+  - hash-pinned MR4 only after the committed freeze
+candidates:
+  - {id: A, description: Reproduce the explicit SU2 one-form and Maurer-Cartan identities and map them to the accepted C-VEC-001 convention.}
+  - {id: B, description: Reproduce the leading heavy-vector elimination and normalized e=g coefficient while testing every sign trace and ordered-sum factor.}
+  - {id: C, description: Promote a distinct exact conditional closure for e only if composition with F/e and the vector mass law has reach beyond C-VEC-001 and C-SK-001.}
+  - {id: D, description: Retain the KSRF a=2 and rho electron inputs as declared conditional parameters and expose their scaling orbit and mutations.}
+  - {id: E, description: Reject the physical derived-coupling claim when KSRF field identities particle masses or state maps lack accepted closure.}
+  - {id: F, description: Add no claim or API if every exact survivor is already C-VEC-001 C-SK-001 or their direct algebraic composition.}
+  - {id: G, description: Give MR4 a terminal qualified or duplicate disposition and replay MR5-MR6 without backward authority.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact convention and trace normalization
+  - novelty beyond C-VEC-001 and C-SK-001
+  - accepted dependency closure
+  - assumption and parameter economy
+  - dimensional consistency without premise laundering
+  - leading-order versus full-vector scope
+  - KSRF coefficient and mass-input mutation sensitivity
+  - physical field state and particle firewall
+  - terminal consumer and memory closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue exposes seven checks, one assertion, symbolic scope, the
+  repaired HLS one-form and leading coefficient narrative, the imported-fit
+  value 5.45, and downstream prose value about 4.6198. Every remaining source
+  equation, predicate, guard, exact value, and consumer conclusion stays
+  unopened until this contract, formula freeze, provenance record, validation
+  record, and freeze commit exist.
+status: active
+revision: 0001

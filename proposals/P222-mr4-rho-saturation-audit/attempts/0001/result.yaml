@@ -1,0 +1,26 @@
+campaign: P222
+attempt: 0001
+timestamp_utc: '2026-08-06T13:14:17Z'
+status: passed_with_repaired_memory_recall_invocations
+stage: contract_formula_and_provenance_freeze
+base_release: v0.159.0
+base_commit: 35c39fe
+source_unit: MR4
+source_sha256: cefe7192b935ec18992e9cd76fd348ef81934ed9d20843ced3627973cec9d3d7
+candidates_frozen: [A, B, C, D, E, F, G]
+provisional_claims: []
+memory_recall:
+  semantic_search: completed_without_relevant_framework_match
+  first_grep:
+    status: invocation_failed_before_search
+    cause: unsupported_max_results_option
+  second_grep:
+    status: invocation_failed_before_search
+    cause: memory_grep_accepts_no_positional_path
+  repaired_grep:
+    status: passed
+    result: no_direct_MR4_or_KSRF_memory_match
+accepted_source_audit:
+  result: C_VEC_001_is_the_direct_exact_owner_and_already_excludes_physical_KSRF_closure
+remaining_source_body_blinded: true
+next_action: validate_and_commit_freeze_before_source_body_or_execution

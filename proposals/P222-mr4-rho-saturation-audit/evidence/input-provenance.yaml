@@ -1,0 +1,23 @@
+campaign: P222
+framework_base:
+  release: v0.159.0
+  commit: 35c39fe
+  accepted_claims: 202
+  pending_source_units: 3
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path: merged-framework/bridges/phase-44/bridge_MR4_e_from_rho_saturation.py
+  sha256: cefe7192b935ec18992e9cd76fd348ef81934ed9d20843ced3627973cec9d3d7
+  bytes: 21181
+  lines: 401
+  tracked_path_status: clean
+queue_inventory: {static_checks: 7, literal_checks: 7, assertions: 1, oracle_hints: [symbolic]}
+accepted_authority: [C-VEC-001, C-SK-001, C-VEC-002, C-EFT-001, C-CHI-001]
+terminal_source_context:
+  S4: qualified
+  MK2: qualified
+  MR1: duplicate_evidence
+  MR3: qualified
+pending_nonauthority: [MR4, MR5, MR6]
+excluded_source_worktree_changes: unrelated_to_hash_pinned_path

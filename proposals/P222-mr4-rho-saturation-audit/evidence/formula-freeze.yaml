@@ -1,0 +1,31 @@
+campaign: P222
+base_release: v0.159.0
+source_unit: MR4
+source_sha256: cefe7192b935ec18992e9cd76fd348ef81934ed9d20843ced3627973cec9d3d7
+queue_exposed_before_freeze:
+  - seven_static_literal_checks_one_assertion_and_symbolic_oracle
+  - explicit_SU2_one_form_and_Maurer_Cartan_repair_narrative
+  - leading_heavy_vector_coefficient_and_dimensionless_e_goal
+  - imported_ANW_e_5_45_and_downstream_MR5_value_about_4_6198
+frozen_exact_surfaces:
+  accepted_leading_reduction: e_equals_g
+  declared_vector_mass_law: m_V_squared_equals_a_times_g_squared_times_F_squared
+  conditional_mass_coordinate: e_equals_m_V_over_sqrt_a_F
+  declared_common_unit: U_equals_F_over_e
+  composed_closure: e_squared_equals_m_V_over_sqrt_a_U
+  a_two_common_unit_specialization: e_equals_sqrt_m_V_over_16_sqrt2_pi_E_e
+frozen_type_distinctions:
+  - exact_current_algebra_vs_declared_HLS_action_data
+  - conditional_mass_law_vs_derived_KSRF_or_physical_rho_relation
+  - dimensionless_output_vs_parameter_free_prediction
+  - leading_derivative_reduction_vs_full_vector_solution
+  - imported_particle_mass_vs_empirical_comparator_vs_framework_primitive
+frozen_mutations:
+  - change_a_away_from_two
+  - change_half_connection_or_curvature_sign
+  - change_ordered_sum_or_trace_normalization
+  - change_common_unit_coefficient
+  - vary_m_V_or_E_e_independently
+  - remove_KSRF_or_physical_field_identification
+nonduplication_target: [C-VEC-001, C-SK-001, C-VEC-002, P140, P215]
+comparator_policy: structural_selection_before_remaining_source_values
