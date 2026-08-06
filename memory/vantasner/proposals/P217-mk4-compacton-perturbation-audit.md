@@ -113,6 +113,12 @@ Attempt 0005 completes 22 focused BPS and source-audit tests. Exact survivors
 duplicate P107 and accepted conditional BPS ledgers; physical coupling closure,
 a controlled correction, and a full-model solution remain outside MK4.
 
+Attempt 0006 individually reviews MK4.1 through MK4.6 and proposes terminal
+qualification through existing BPS mappings and P107 duplicate evidence. It
+also corrects the generated queue's derivative transcription, conditions
+degree-linear energy cancellation on attainment, and confirms that no
+canonical symbol, accepted claim, package API, test, or release changes.
+
 ## Debt Ledger
 
 The ledger tracks the radial convention, profile domain, radius, edge
@@ -128,7 +134,7 @@ consumers, novelty, and generated records.
 | P107 duplication is unresolved | Claim/API/evidence comparison | discharged by attempts 0003 through 0005 |
 | Physical and later-source authority may leak | Dependency and terminal graph replay | discharged by attempt 0004 |
 | Compatibility may masquerade as science | Full executable access preflight | discharged by attempts 0002 and 0004 |
-| Governed records remain open | Terminal disposition and record gate | open |
+| Governed records remain open | Terminal disposition and record gate | review complete; synchronization open |
 
 ## Review and Promotion Plan
 

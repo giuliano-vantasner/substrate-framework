@@ -1,0 +1,17 @@
+campaign: P217
+attempt: 0006
+timestamp_utc: '2026-08-06T11:08:30Z'
+status: passed
+stage: individual_source_review_and_impact_analysis
+decision:
+  source_unit: MK4
+  disposition: qualified
+  accepted_mappings: [C-BPS-001, C-BPS-002, C-BPS-003]
+  duplicate_evidence_owner: campaigns/P107-e4-bps-zero-binding-audit
+  promoted_claims: []
+  new_package_apis: []
+reviewed_predicates: [MK4.1, MK4.2, MK4.3, MK4.4, MK4.5, MK4.6]
+impact: {canonical_symbols_changed: 0, accepted_claims_changed: 0, package_files_changed: 0, tests_changed: 0}
+pending_consumers: [MK5, MK6, MR2, MR6]
+next_action: commit review boundary then execute terminal record synchronization
+
