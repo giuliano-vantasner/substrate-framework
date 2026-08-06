@@ -9,8 +9,8 @@ statement: >-
   functionals on the real line, and every real value occurs by positive
   scaling of exact positive negative or zero examples. A common minimizer of A
   P Q implies I=0, but I=0 does not imply a common minimizer.
-verification: proposed_symbolic
-review: unaudited
+verification: symbolic_verified
+review: audited
 compatibility: compatible_extension
 epistemic: proposed
 dependencies: []

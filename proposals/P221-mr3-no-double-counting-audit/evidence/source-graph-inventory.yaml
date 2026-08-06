@@ -1,0 +1,21 @@
+campaign: P221
+root: MR3
+nodes: 4
+lexical_predicates: 25
+assertions: 8
+aggregate_checks: 10
+verifier_sha256: a8372369642618588f080a73a2241117434aa447f47bf69b310a8933dfb9eaba
+result: {exit_status: 0, checks: 10, elapsed_seconds: 2.35, maximum_resident_kib: 157664}
+pending_sibling: MR4
+direct_reverse_consumers: [MR5, MR6]
+execution_policy:
+  P221_native_root: MR3
+  reused_P215: [MR4, MR6]
+  reused_P174: [MR5]
+compatibility:
+  current_scipy_trapezoid: [MR3, MR5, MR6]
+  MR4: no_sampled_integration_surface
+  legacy_or_eager_events: []
+  scientific_version_failures: 0
+authority: MR4_MR5_MR6_remain_pending_and_grant_no_backward_support
+debt: []

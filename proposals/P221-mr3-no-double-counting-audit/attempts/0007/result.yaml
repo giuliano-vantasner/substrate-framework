@@ -1,0 +1,24 @@
+campaign: P221
+attempt: 0007
+timestamp_utc: '2026-08-06T13:00:15Z'
+status: passed
+stage: claim_source_and_consumer_review
+claim: C-VAR-003
+reviews:
+  - reviews/C-VAR-003-claim-review.md
+  - reviews/source_adjudication.md
+  - reviews/MR3-disposition-review.md
+  - reviews/impact_analysis.md
+source_graph:
+  checks: 10
+  exit_status: 0
+  elapsed_seconds: 2.35
+  native_execution_reuse: {MR3: P221, MR4: P215, MR5: P174, MR6: P215}
+claim_axes:
+  verification: symbolic_verified
+  review: accepted_for_promotion
+  compatibility: compatible_extension
+  epistemic: active_on_promotion
+source_disposition: qualified
+remaining_debt: governed_promotion_generation_and_single_full_gate
+next_action: commit_review_boundary_then_promote_C_VAR_003_and_terminalize_MR3

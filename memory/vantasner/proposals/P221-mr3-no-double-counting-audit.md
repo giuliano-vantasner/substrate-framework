@@ -2,7 +2,7 @@
 description: Audit MR3 shared-functional and no-double-counting claims
 author: vantasner
 created: '2026-08-06T12:40:27Z'
-updated: '2026-08-06T12:55:34Z'
+updated: '2026-08-06T13:00:15Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -115,6 +115,14 @@ negative, and zero coercive quadratics, arbitrary positive scaling, a common-
 minimizer sufficient case, and a zero-without-common-minimizer counterexample
 all pass. The MR3 BVP values remain one unrefined stationary-branch example.
 
+Attempt 0007 completes the claim, source, disposition, impact, and consumer
+reviews. A 10-check four-node replay hash-pins MR3-MR6 and reuses their prior
+native executions. MR5 and MR6 cite the source diagnosis but import no new API;
+MR4 is a pending input sibling. Review selects C-VAR-003 as
+`symbolic_verified`, `compatible_extension`, and active on promotion, while
+terminalizing MR3 as qualified and rejecting its physical and universal
+overreach.
+
 ## Debt Ledger
 
 The ledger tracks every source predicate, common configuration, component
@@ -129,8 +137,8 @@ compatibility surface, consumer, and governed record.
 | Supplied numerics may be called physical contributions | Dependency and comparator audit | diagnosed as unaccepted; review open |
 | Numeric solver evidence may be under-specified | Solver and refinement audit | diagnosed: no refinement or minimizer proof; no numeric claim retained |
 | Lexical absence may be treated as a theorem | Counterexample and scope audit | discharged: source forms naive_sum and exact both-sign/zero counterexamples pass |
-| Later MR units may grant backward authority | Pinned graph replay | open |
-| Governed records remain unresolved | Terminal disposition and synchronization | open |
+| Later MR units may grant backward authority | Pinned graph replay | discharged: 10 checks retain MR4-MR6 as pending |
+| Governed records remain unresolved | Terminal disposition and synchronization | open: promotion and one integrated gate |
 
 ## Review and Promotion Plan
 

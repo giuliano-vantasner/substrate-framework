@@ -1,0 +1,21 @@
+campaign: P221
+claim: C-VAR-003
+canonical_consumers:
+  - src/substrate_framework/__init__.py
+  - src/substrate_framework/variational.py
+  - tests/test_variational.py
+contextual_accepted_claims:
+  C-VAR-002: exact_joint_order_theorem_remains_unchanged
+  C-GSK-001: one_shared_radial_functional_illustration_only
+  C-BPS-001_C-BPS-002: lower_bound_and_attainment_ceiling_only
+direct_source_consumers:
+  MR5: names_MR3_diagnosis_but_imports_no_C_VAR_003_API_and_remains_pending
+  MR6: names_MR3_ledger_but_imports_no_C_VAR_003_API_and_remains_pending
+pending_sibling:
+  MR4: supplies_source_input_to_MR3_but_receives_no_backward_authority
+generated_consumers:
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-VAR-003.md
+  - memory/framework/releases/v0.159.0.md
+  - migration/source-claims.yaml
+broken_consumers: []

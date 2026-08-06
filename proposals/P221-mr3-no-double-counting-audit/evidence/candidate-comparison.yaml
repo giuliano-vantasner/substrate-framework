@@ -1,0 +1,19 @@
+campaign: P221
+criteria_frozen_before_remaining_source_values: true
+candidates:
+  A: {decision: retained_as_conditional_comparator_audit, reason: corrected_threshold_change_is_P219_P220_evidence_not_a_new_physical_claim}
+  B: {decision: selected_as_typed_context, reason: common_profile_terms_require_joint_functional_typing}
+  C: {decision: selected_for_claim, reason: four_infimum_interaction_is_exact_parameter_free_and_nonduplicate}
+  D: {decision: selected_as_scope_firewall, reason: bounds_and_profile_term_values_are_not_separately_attained_sector_masses}
+  E: {decision: selected_as_physical_firewall, reason: accepted_dependencies_supply_no_two_physical_masses_or_additive_observable}
+  F: {decision: rejected, reason: exact_nonduplication_finds_C_VAR_003_distinct_from_C_VAR_002}
+  G: {decision: selected_for_governance, reason: MR3_and_reverse_consumers_require_terminal_sequential_status}
+selection_basis:
+  - common_admissible_set_typing
+  - exact_four_infimum_structure
+  - empty_dependency_closure
+  - assumption_and_parameter_economy
+  - both_sign_and_zero_counterexamples
+  - novelty_beyond_C_VAR_002
+comparator_proximity_used_for_selection: false
+source_universal_or_physical_candidate: {decision: rejected, reason: one_unrefined_stationary_branch_and_unaccepted_inputs}
