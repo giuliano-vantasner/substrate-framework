@@ -1,0 +1,15 @@
+campaign: P222
+attempt: 0008
+timestamp_utc: '2026-08-06T13:29:00Z'
+status: passed_after_repair
+stage: skill_preflight_path_repair
+failure:
+  command: python_.agents_skill_scripts_preflight.py_help
+  exit_code: 2
+  cause: The_documented_preflight_is_a_shell_script_not_a_Python_script.
+repair:
+  command: .agents_skills_physics_erdos_loop_scripts_preflight.sh
+  result: {ok: 7, warnings: 0, exit_code: 0}
+scientific_effect: none
+debt: []
+next_action: commit_terminal_P222_and_freeze_P223

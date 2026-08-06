@@ -1,0 +1,14 @@
+campaign: P222
+attempt: 0010
+timestamp_utc: '2026-08-06T13:31:00Z'
+status: passed_after_repair
+stage: terminal_commit_pathspec_repair
+failure:
+  command: git_add_including_removed_proposal_directory
+  exit_code: 128
+  cause: The_already_moved_proposal_path_no_longer_exists_as_a_worktree_path.
+repair:
+  action: Stage_only_existing_changed_paths_while_retaining_the_already_indexed_rename.
+scientific_effect: none
+debt: []
+next_action: commit_terminal_P222_and_freeze_P223

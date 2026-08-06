@@ -9,8 +9,8 @@ tags:
 - migration-MR4
 - HLS-reduction
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P222 MR4 Rho-Saturation Audit
 
@@ -97,6 +97,29 @@ Attempt 0006 individually reviews all seven predicates and selects terminal
 conditional algebra and dimensional repair while rejecting full-vector,
 physical KSRF, parameter-free, convention-bound, and complete-guard readings.
 
+Attempt 0007 records the terminal duplicate-evidence disposition, archives the
+campaign, regenerates the source inventory, and checks the record-sensitive
+repository, generated documentation, generated memory, skill, YAML, and diff
+surfaces. The unchanged P221 v0.159.0 boundary supplies the proportional
+1,929-test integrated gate because no package, accepted claim, release, API, or
+test changed.
+
+Attempt 0008 preserves a technical preflight-path miss: an optional invocation
+used `.py` although the skill documents `preflight.sh`. The repaired shell
+preflight passes seven surfaces with no warnings. This path-only failure has no
+scientific effect and leaves no debt.
+
+Attempt 0009 preserves a malformed patch marker that was accidentally written
+into the adjudication YAML while the separate attempt-0008 record was created.
+Repository and direct YAML parsing exposed it immediately; removing only the
+stray duplicated block repairs both checks without changing any evidence or
+verdict.
+
+Attempt 0010 preserves a staging pathspec miss after archival: the command
+included the proposal directory that `git mv` had already removed from the
+worktree. Staging only existing paths while retaining the indexed rename
+repairs the commit transaction and has no scientific effect.
+
 ## Debt Ledger
 
 The ledger tracks every exact identity, declared coefficient, physical import,
@@ -110,15 +133,14 @@ derivative-order ceiling, compatibility surface, consumer, and governed record.
 | A dimensionless value may be called parameter-free | Scaling and import inventory | discharged: m_V m_e a and scaling orbit remain visible |
 | Leading reduction may be called a full-vector theorem | Derivative-order and EOM scope audit | discharged: canonical p4/p6 ceiling passes |
 | Later units may grant backward authority | Pinned MR5-MR6 replay | discharged: eight graph checks retain both pending |
-| Governed records remain unresolved | Terminal disposition and synchronization | open: record-only terminal transaction |
+| Governed records remain unresolved | Terminal disposition and synchronization | discharged: campaign inventory decision and effort agree |
 
-## Review, Promotion, and Done Gate
+## Terminal Outcome and Done Gate
 
-Every source predicate requires an individual four-axis review. A distinct
-claim requires a nonduplicate theorem, importable API, sensitive exact oracle,
-fresh review, consumer replay, release synchronization, and one proportional
-integrated gate. P222 closes only when the positive ledger exists, MR4 is
-terminal, all consumers agree, and debt is empty.
+Every source predicate received an individual review. The exact positive
+ledger maps the surviving algebra to C-VEC-001 and C-SK-001, all consumers
+agree on `duplicate_evidence`, and debt is empty. P222 closes without a release
+change or a new canonical API.
 
 ## Cross-References
 

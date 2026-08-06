@@ -1,0 +1,15 @@
+campaign: P222
+attempt: 0009
+timestamp_utc: '2026-08-06T13:30:00Z'
+status: passed_after_repair
+stage: terminal_record_yaml_repair
+failure:
+  checks: [validate_repository, affected_yaml_parse]
+  exit_code: 1
+  cause: A_malformed_patch_marker_was_written_into_adjudication_yaml_while_attempt_0008_was_created_separately.
+repair:
+  action: Remove_the_stray_marker_and_duplicated_attempt_body_from_adjudication_only.
+  preserved_record: attempts/0008/result.yaml
+scientific_effect: none
+debt: []
+next_action: rerun_record_sensitive_gate

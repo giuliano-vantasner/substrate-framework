@@ -1,0 +1,88 @@
+campaign: P222
+title: MR4 rho-saturation coupling audit
+source_baseline: substrate@6d1f4e0
+source_units: [MR4]
+base_release: v0.159.0
+accepted_release: v0.159.0
+freeze_commit: 4443fcf
+source_audit_commit: e19cd2a
+implementation_commit: 01d1f5f
+review_commit: 850b5ff
+adjudicated_at: '2026-08-06T13:28:00Z'
+selected_candidates:
+  - {id: A, reason: Explicit_SU2_one_form_and_Maurer_Cartan_algebra_maps_to_C_VEC_001.}
+  - {id: B, reason: Leading_heavy_vector_elimination_and_e_equals_g_are_exact_duplicates.}
+  - {id: D, reason: KSRF_a_and_particle_masses_remain_declared_conditional_inputs.}
+  - {id: E, reason: Physical_parameter_free_and_full_vector_readings_fail_dependency_closure.}
+  - {id: F, reason: Exact_nonduplication_selects_no_new_claim_or_API.}
+  - {id: G, reason: MR4_receives_an_individual_terminal_duplicate_evidence_disposition.}
+claims: []
+unchanged_claim_owners:
+  - {id: C-VEC-001, surface: leading_half_connection_curvature_e_equals_g_and_conditional_mass_coordinate}
+  - {id: C-SK-001, surface: conditional_common_unit_F_over_e_equals_16_pi_E_e}
+unpromoted_surfaces:
+  - {id: composed_coupling, reason: e_squared_equals_m_V_over_sqrt_a_U_is_direct_algebraic_composition_of_the_two_owners.}
+  - {id: physical_KSRF, reason: a_equals_2_and_the_rho_assignment_are_supplied_not_derived.}
+  - {id: parameter_free_value, reason: The_value_retains_a_rho_mass_electron_mass_and_KSRF_coefficient.}
+  - {id: convention_bound, reason: The_two_readings_are_parameter_choices_not_an_extremal_bound.}
+  - {id: full_vector_theorem, reason: The_source_uses_the_leading_algebraic_heavy_vector_EOM_only.}
+  - {id: complete_honesty_guard, reason: Selected_AST_needles_omit_load_bearing_inputs_and_data_flow.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_rho_saturation_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_disposition_review: reviews/MR4-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MR4: duplicate_evidence}
+accepted_mappings: [C-VEC-001, C-SK-001]
+compatibility:
+  MR4_surface: native_no_numpy_or_scipy_integration
+  immutable_legacy_events: compatibility_provenance_only
+  pending_MR5_MR6: current_scipy_trapezoid
+  scientific_failures_from_version_events: 0
+release_change: none
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_rho_saturation_review
+  - PYTHONPATH_src_python_source_graph_replay
+  - pytest_34_focused_HLS_reduction_tests
+  - record_sensitive_repository_generated_memory_skill_YAML_and_diff_checks
+integrated_gate:
+  status: passed
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 2
+  migration_partial: 0
+  migration_qualified: 201
+  migration_duplicate_evidence: 10
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  final_targeted_checks: {primary: 30, independent: 19, graph: 8, focused_tests: 34}
+  diff_check: passed
+  reused_full_suite:
+    tests: 1929
+    boundary: P221_v0.159.0_at_35c39fe
+    unchanged_inputs: [accepted_claims, package_APIs, package_files, tests, release]
+debt: []
+status: accepted

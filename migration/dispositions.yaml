@@ -4002,6 +4002,36 @@ units:
       never consumes derived_snapshot or recomputes the four solved branches.
       MR3, MR5, and MR6 use current SciPy trapezoid; no version event is a
       scientific failure.
+  MR4:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-VEC-001
+      - C-SK-001
+    duplicates:
+      - C-VEC-001
+      - C-SK-001
+    evidence:
+      - campaigns/P222-mr4-rho-saturation-audit/verify.py
+      - campaigns/P222-mr4-rho-saturation-audit/reviews/independent_rho_saturation_review.py
+      - campaigns/P222-mr4-rho-saturation-audit/reviews/replay_source_graph.py
+      - campaigns/P222-mr4-rho-saturation-audit/reviews/source_adjudication.md
+      - campaigns/P222-mr4-rho-saturation-audit/reviews/MR4-disposition-review.md
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/source-reproduction.yaml
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/source-audit.yaml
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/check-adjudication.yaml
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/dependency-audit.yaml
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/consumer-audit.yaml
+      - campaigns/P222-mr4-rho-saturation-audit/evidence/compatibility-audit.yaml
+      - memory/vantasner/decisions/MR4-duplicate-evidence-review.md
+    note: >-
+      P222 closes 30 primary, 19 independent, and eight graph checks plus 34
+      focused tests. MR4's exact one-form algebra, half-connection curvature,
+      one-sixteenth trace factor, and leading e=g normalization are already
+      C-VEC-001. Its coupling specialization directly composes C-VEC-001 with
+      C-SK-001 while retaining supplied a, rho mass, and electron mass; it is
+      neither parameter-free nor a full-vector theorem. MR4 has no integration
+      surface, and pending MR5-MR6 use current SciPy trapezoid.
   EL1:
     disposition: qualified
     accepted_claims:
