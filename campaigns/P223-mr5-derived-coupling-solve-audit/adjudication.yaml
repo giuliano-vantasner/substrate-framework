@@ -1,0 +1,94 @@
+campaign: P223
+title: MR5 derived-coupling stationary-branch audit
+source_baseline: substrate@6d1f4e0
+source_units: [MR5]
+base_release: v0.159.0
+accepted_release: v0.159.0
+freeze_commit: 6859e2e
+source_audit_commit: c9fc6f6
+implementation_commit: 88a6780
+review_commit: 695e086
+adjudicated_at: '2026-08-06T14:02:00Z'
+selected_candidates:
+  - {id: A, reason: Exact_density_equation_and_normalization_map_to_C_GSK_001.}
+  - {id: B, reason: Canonical_and_independent_branches_retain_the_new_point_as_regression_only.}
+  - {id: C, reason: Exact_opposite_coupling_scaling_preserves_only_a_supplied_product.}
+  - {id: E, reason: Signed_difference_maps_to_C_RDIFF_001_without_a_bound_or_state_map.}
+  - {id: F, reason: MR4_particle_mass_binding_and_nucleus_dependencies_do_not_close.}
+  - {id: G, reason: Nonduplication_selects_no_new_claim_or_API.}
+  - {id: H, reason: MR5_receives_an_individual_terminal_duplicate_evidence_disposition.}
+claims: []
+unchanged_claim_owners:
+  - {id: C-GSK-001, surface: arbitrary_supplied_coefficient_density_equation_scaling_and_solver_API}
+  - {id: C-RDIFF-001, surface: exact_positive_normalization_signed_difference_coordinate}
+baseline_context:
+  - {id: C-RPROF-002, surface: zero_extra_coefficient_stationary_branches}
+  - {id: C-RDIFF-002, surface: zero_extra_coefficient_signed_difference}
+unpromoted_surfaces:
+  - {id: new_parameter_point, reason: Existing_API_evaluation_with_supplied_empirical_inputs_and_no_new_invariant.}
+  - {id: interval_branch_minimum, reason: One_continuation_selected_stationary_branch_on_3_to_7_only.}
+  - {id: every_e_floor, reason: No_all_positive_domain_branch_uniqueness_global_minimum_or_enclosure.}
+  - {id: physical_coupling, reason: P222_accepts_no_physical_MR4_KSRF_closure.}
+  - {id: mass_ratio_and_light_nucleus, reason: No_accepted_action_state_scale_or_correction_map.}
+  - {id: convention_bracket, reason: P222_proves_the_two_values_are_not_an_ordered_bound.}
+  - {id: complete_guard, reason: Executable_comparators_and_physical_inputs_evade_the_selected_needles.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_derived_coupling_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_disposition_review: reviews/MR5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  primary_numerical_evidence: evidence/primary-numerical-evidence.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MR5: duplicate_evidence}
+accepted_mappings: [C-GSK-001, C-RDIFF-001]
+compatibility:
+  MR5_surface: current_scipy_trapezoid
+  MR6_surface: current_scipy_trapezoid
+  legacy_access: none
+  scientific_failures_from_version_events: 0
+release_change: none
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_derived_coupling_review
+  - PYTHONPATH_src_python_source_graph_replay
+  - pytest_87_focused_generalized_radial_difference_angular_and_HLS_tests
+  - record_sensitive_repository_generated_memory_skill_YAML_and_diff_checks
+integrated_gate:
+  status: passed
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 1
+  migration_partial: 0
+  migration_qualified: 201
+  migration_duplicate_evidence: 11
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  final_targeted_checks: {primary: 21, independent: 11, graph: 8, focused_tests: 87}
+  diff_check: passed
+  reused_full_suite:
+    tests: 1929
+    boundary: P221_v0.159.0_at_35c39fe
+    unchanged_inputs: [accepted_claims, package_APIs, package_files, tests, release]
+debt: []
+status: accepted

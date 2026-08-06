@@ -54,8 +54,8 @@ comparators_blinded_until: >-
   solver settings, predicates, guards, exact literals, compatibility surfaces,
   and consumer conclusions stay unopened until this contract, formula freeze,
   provenance record, validation record, and freeze commit exist.
-status: in_review
-revision: 0003
+status: accepted
+revision: 0004
 opened_source_settings:
   angular_quadrature: midpoint_nodes_then_nested_scipy_trapezoid_at_2000_by_400
   boundary_data: finite_wall_Dirichlet_f_inner_equals_pi_f_outer_equals_zero

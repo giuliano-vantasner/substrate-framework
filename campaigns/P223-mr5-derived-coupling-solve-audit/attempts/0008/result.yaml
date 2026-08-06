@@ -1,0 +1,30 @@
+campaign: P223
+attempt: 0008
+timestamp_utc: '2026-08-06T14:02:00Z'
+status: passed
+stage: terminal_duplicate_evidence_record_gate
+source_disposition: duplicate_evidence
+accepted_claim_owners: [C-GSK-001, C-RDIFF-001]
+release_change: none
+full_suite_reuse: P221_v0.159.0_1929_tests
+record_results:
+  proposal_count: 0
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  migration_total: 218
+  migration_pending: 1
+  migration_partial: 0
+  migration_qualified: 201
+  migration_duplicate_evidence: 11
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  physics_preflight: {ok: 7, warnings: 0}
+  diff_check: passed
+final_targeted_replay:
+  primary: {checks: 21, elapsed_seconds: 7.26, maximum_resident_kib: 162044}
+  independent: {checks: 11, elapsed_seconds: 27.73, maximum_resident_kib: 156584}
+  graph: {checks: 8, elapsed_seconds: 2.30, maximum_resident_kib: 157436}
+  focused_tests_reused_from_attempt_0006: 87
+debt: []
+next_action: freeze_P224_MR6_ledger_and_confrontation_audit

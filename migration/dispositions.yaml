@@ -4032,6 +4032,38 @@ units:
       C-SK-001 while retaining supplied a, rho mass, and electron mass; it is
       neither parameter-free nor a full-vector theorem. MR4 has no integration
       surface, and pending MR5-MR6 use current SciPy trapezoid.
+  MR5:
+    disposition: duplicate_evidence
+    accepted_claims:
+      - C-GSK-001
+      - C-RDIFF-001
+    duplicates:
+      - C-GSK-001
+      - C-RDIFF-001
+    evidence:
+      - campaigns/P223-mr5-derived-coupling-solve-audit/verify.py
+      - campaigns/P223-mr5-derived-coupling-solve-audit/reviews/independent_derived_coupling_review.py
+      - campaigns/P223-mr5-derived-coupling-solve-audit/reviews/replay_source_graph.py
+      - campaigns/P223-mr5-derived-coupling-solve-audit/reviews/source_adjudication.md
+      - campaigns/P223-mr5-derived-coupling-solve-audit/reviews/MR5-disposition-review.md
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/source-reproduction.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/source-audit.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/check-adjudication.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/primary-numerical-evidence.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/dependency-audit.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/consumer-audit.yaml
+      - campaigns/P223-mr5-derived-coupling-solve-audit/evidence/compatibility-audit.yaml
+      - memory/vantasner/decisions/MR5-duplicate-evidence-review.md
+    note: >-
+      P223 closes 21 primary, 11 independent, and eight graph checks plus 87
+      focused tests. MR5's exact density equation and signed difference are
+      already C-GSK-001 and C-RDIFF-001. Exact angular data, Robin boundaries,
+      and independent shooting repair its supplied-point kappa to 11.53644;
+      the point and bounded interval branch minimum add no accepted invariant
+      or physical closure. A nine-point scan is not an every-e floor, and the
+      executable guard misses multiple comparators and physical inputs. MR5
+      and pending MR6 use current SciPy trapezoid.
   EL1:
     disposition: qualified
     accepted_claims:

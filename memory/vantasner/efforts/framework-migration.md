@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T13:28:00Z'
+updated: '2026-08-06T14:02:00Z'
 tags:
 - substrate-framework
 - effort
@@ -2592,19 +2592,31 @@ fresh independent, eight graph checks, and 34 focused tests pass. MR4 has no
 integration surface; pending MR5-MR6 use current SciPy `trapezoid`. The
 unchanged P221 1,929-test boundary is reused.
 
+P223 terminally classifies MR5 as duplicate evidence for C-GSK-001 and
+C-RDIFF-001 at unchanged v0.159.0. Exact angular data, Robin boundaries,
+isolated refinements, and fresh DOP853 shooting repair its supplied-point
+signed difference from about 11.490 to 11.53644. A bounded search confirms one
+continuation-selected stationary-branch minimum near `e=4.3263` on `[3,7]`,
+but neither that point nor the branch scan is a global profile minimum, an
+all-positive-coupling floor, or a physical mass bound. MR4 supplies no accepted
+physical coupling, the particle/state inputs remain unclosed, and the guard
+misses executable comparators. Twenty-one primary, 11 fresh independent, eight
+graph checks, and 87 focused tests pass. MR5 and pending MR6 use current SciPy
+`trapezoid`; the unchanged P221 1,929-test boundary is reused.
+
 ## Canonicalization
 The registry, `v0.159.0` manifest, current release, generated claim index, and
 generated framework memory agree on two hundred two accepted claims.
-P001 through P222 are frozen under `campaigns/`; proposal,
+P001 through P223 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 2 pending, 0 partial, 3
-migrated, 201 qualified, 10 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 1 pending, 0 partial, 3
+migrated, 201 qualified, 11 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. P221 is the most recent accepted-surface and full integrated release
-boundary; P222 is the latest terminal no-release campaign.
+boundary; P223 is the latest terminal no-release campaign.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 2
-pending, 3 migrated, 201 qualified, 10 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 1
+pending, 3 migrated, 201 qualified, 11 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
@@ -2613,8 +2625,10 @@ The WM7-WM10 source cycle, GC1-GC6, and MK1-MK6 are terminal without backward
 authority. P221 closes MR3 with the exact sign-indefinite interaction theorem
 without promoting its physical mass narrative. P222 closes MR4 as exact
 duplicate evidence without laundering KSRF or particle inputs into a derived
-coupling. P223 next audits MR5's proposed parameter-free light-nucleus
-calculation. The remaining order is MR5 then MR6.
+coupling. P223 closes MR5's proposed parameter-free light-nucleus calculation
+and retains only duplicate conditional regression evidence. P224
+next audits MR6's ledger and confrontation claims. MR6 is the final pending
+source unit.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

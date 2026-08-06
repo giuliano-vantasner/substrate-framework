@@ -9,8 +9,8 @@ tags:
 - migration-MR5
 - generalized-skyrme
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P223 MR5 Derived-Coupling Solve Audit
 
@@ -126,6 +126,13 @@ while rejecting a distinct numeric claim, all-coupling or global floor,
 physical coupling, mass, binding, nucleus, convention-bracket, and complete-
 guard readings.
 
+Attempt 0008 records the terminal duplicate-evidence disposition, archives the
+campaign, regenerates the source inventory, and checks the record-sensitive
+repository, generated documentation, generated memory, skill, YAML, and diff
+surfaces. The unchanged P221 v0.159.0 boundary supplies the proportional
+1,929-test integrated gate because no package, accepted claim, release, API, or
+test changed.
+
 ## Debt Ledger
 
 The ledger tracks every supplied coefficient, coupling premise, branch-control
@@ -141,21 +148,15 @@ governed record.
 | Kappa may be called a bound or physical binding | C-RDIFF typing and counterexample audit | discharged: exact signed coordinate only |
 | Degree labels may be called nuclei or masses | State action scale and correction firewall | discharged: no accepted map or mass normalization |
 | MR6 may grant backward authority | Pinned consumer replay | discharged: eight graph checks retain MR6 pending |
-| Governed records remain unresolved | Terminal disposition and synchronization | open: record-only terminal transaction |
+| Governed records remain unresolved | Terminal disposition and synchronization | discharged: campaign inventory decision and effort agree |
 
-## Review and Promotion Plan
+## Terminal Outcome and Done Gate
 
-Every source predicate receives an individual four-axis review. A distinct
-claim requires nonduplicate reach, an importable API, sensitive numeric oracle,
-fresh independent route, consumer replay, release synchronization, and a
-proportional integrated gate. A duplicate or qualified decision instead names
-the exact owners and durable evidence without changing the release.
-
-## Done Gate
-
-P223 closes only when the positive ledger exists, MR5 is terminal, all
-consumers agree, debt is empty, and no version-only integration event has been
-misclassified as scientific evidence.
+Every source predicate received an individual review. The positive ledger maps
+the exact survivors to C-GSK-001 and C-RDIFF-001, retains the new point as
+noncanonical regression evidence, and rejects the universal and physical
+extensions. All consumers agree on `duplicate_evidence`, debt is empty, and
+P223 closes without a release or canonical API change.
 
 ## Cross-References
 
