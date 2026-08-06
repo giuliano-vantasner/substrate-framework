@@ -1,0 +1,24 @@
+campaign: P212
+change_kind: additive_canonical_APIs_and_claims
+new_module: src/substrate_framework/translated_overlap_matrices.py
+extended_module: src/substrate_framework/phase_interactions.py
+new_claims: [C-OVL-005, C-PHS-002]
+existing_symbol_changes: []
+existing_claim_changes: []
+symbol_collisions: []
+direct_consumers:
+  - tests/test_translated_overlap_matrices.py
+  - tests/test_phase_interactions.py
+  - proposals/P212-gc5-two-role-count-audit/verify.py
+  - proposals/P212-gc5-two-role-count-audit/reviews/independent_two_role_review.py
+indirect_consumers:
+  - src/substrate_framework/__init__.py
+  - generated_claim_documentation
+  - accepted_claim_and_release_memory_if_promoted
+accepted_replay:
+  - tests/test_normalized_overlaps.py
+  - tests/test_translated_localization.py
+  - tests/test_phase_interactions.py
+  - tests/test_common_phase_matrices.py
+source_consumers: [GC6]
+risk: low_additive_surface_with_claim_level_review_required

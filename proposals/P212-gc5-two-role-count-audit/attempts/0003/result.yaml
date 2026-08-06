@@ -1,0 +1,20 @@
+attempt: 0003
+campaign: P212
+timestamp_utc: '2026-08-06T08:06:25Z'
+kind: post_source_claim_delta_and_impact_freeze
+registry_search:
+  C_OVL_004: reserved_unpromoted_by_P206
+  C_OVL_005: absent_and_available
+  C_PHS_002: absent_and_available
+selected_candidates: [A, B, D, G, H]
+claims_proposed: [C-OVL-005, C-PHS-002]
+claim_dependencies:
+  C-OVL-005: [C-OVL-001]
+  C-PHS-002: [C-PHS-001]
+minimum_novel_surfaces:
+  - finite_identical_translation_matrix_limit_and_singular_value_perturbation_bound
+  - complete_scalar_phase_cosine_resultant_identity_minimum_and_N4_nonuniqueness
+existing_symbols_changed: []
+scientific_candidate_rejected: false
+status: frozen
+continuation: implement_additive_canonical_APIs_tests_primary_and_independent_exact_verifiers

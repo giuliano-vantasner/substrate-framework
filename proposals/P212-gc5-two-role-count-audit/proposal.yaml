@@ -53,7 +53,7 @@ selection_criteria:
   - sensitivity to unequal amplitudes couplings profiles and incidence maps
   - novelty beyond accepted overlap and multiplicity claims
   - terminal authority and consumer closure
-claims_proposed: [C-OVL-005]
+claims_proposed: [C-OVL-005, C-PHS-002]
 reserved_unpromoted_claims: []
 comparators_blinded_until: >-
   The generated queue exposes GC5's headline, eight static check sites, one
@@ -64,7 +64,7 @@ comparators_blinded_until: >-
   unopened until this contract, formula freeze, provenance record, memory
   validation, clean repository validation, and freeze commit exist.
 status: active
-revision: 0002
+revision: 0003
 opened_source_equations:
   naive_matrix: Y=sum_c_exp(i*theta_c)*I_c_with_(I_c)_ab=integral_eta_a*eta_b*Phi_c_dx
   wells: H_R=-d_x^2-depth*sech((x-R)/width)^2_on_a_truncated_Dirichlet_interval

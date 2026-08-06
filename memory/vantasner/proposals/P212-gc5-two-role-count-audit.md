@@ -94,6 +94,13 @@ ledger remains campaign evidence unless it states a genuine scientific
 invariant with closed dependencies; no count identifier is reserved merely to
 encode underdetermination.
 
+After source inspection, P212 also reserves C-PHS-002 for the exact complete-
+graph cosine/resultant identity and its nonunique minima. This surface was not
+visible before opening, but its selection uses the frozen phase, count, exact-
+oracle, and countermodel criteria rather than a comparator value. C-OVL-004
+remains reserved by P206, so the new overlap identifier deliberately advances
+to C-OVL-005.
+
 ## Implementation and Oracle Plan
 
 SymPy will derive tractable opened overlap kernels and exact limits. General
@@ -128,6 +135,12 @@ identical self-centered singular-value limit as the principal positive object,
 but the purported EM6 theorem, topological-anchor ontology, physical CP tests,
 stable three-condensate selection, and both exact counts conflict with accepted
 authority or fail their mathematical oracle.
+
+Attempt 0003 freezes the post-source claim delta before implementation.
+C-OVL-005 captures finite identical-translation matrix convergence and its
+singular-value perturbation bound; C-PHS-002 captures the exact cosine-
+resultant identity, all zero-resultant minima, and the four-phase square
+counterexample to the source's universal positive-pair reading.
 
 ## Debt Ledger
 
