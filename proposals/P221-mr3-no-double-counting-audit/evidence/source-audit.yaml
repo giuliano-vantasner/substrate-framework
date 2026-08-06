@@ -1,0 +1,56 @@
+campaign: P221
+source_unit: MR3
+predicates:
+  MR3.1:
+    source_verdict: supplied_comparator_ratios_reproduce
+    framework_verdict: qualified_conditional_comparator_only
+    reason: >-
+      The corrected 99.4165 MeV expression retains supplied N_c and pion mass;
+      the 936.7 MeV branch also imports electron pion and rho masses plus
+      pending MR4. Neither is an accepted physical sector mass. Recomputing the
+      first formula without the comparator establishes dataflow only.
+  MR3.2:
+    source_verdict: source_threshold_changes_from_true_to_false
+    framework_verdict: duplicate_correction_and_rejected_physical_diagnosis
+    owners: [P219, P220]
+    reason: >-
+      The second five-percent conjunct becomes false after the accepted
+      convention conversion, so the source predicate changes. The comparator,
+      threshold, classical branch, and physical state interpretation remain
+      supplied and cannot establish a framework-level diagnosis.
+  MR3.3:
+    source_verdict: one_stationary_branch_has_positive_mixed_increment
+    framework_verdict: qualified_numeric_example_only
+    reason: >-
+      Four separate finite-domain solve_bvp stationary branches give a positive
+      mixed infimum surrogate at one supplied coefficient set. There is no
+      mesh domain tolerance or method refinement and no minimizer proof. The
+      sign is not universal; C-VAR-003 supplies exact positive negative and zero
+      continuous nonnegative quadratic examples. The bridge also constructs
+      naive_sum itself after claiming no bridge forms that sum.
+  MR3.4:
+    source_verdict: sampled_full_profile_term_exceeds_declared_floor
+    framework_verdict: qualified_bound_versus_value_example_only
+    reason: >-
+      The result correctly distinguishes a lower bound from a term value on one
+      stationary full-profile branch, but calls that branch an actual minimizer
+      without proof. Agreement with MR2 uses the same c6 c0 normalization and
+      is dependent regression, not an independent physical route.
+  MR3.5:
+    source_verdict: exact_declared_ratio_identity
+    framework_verdict: duplicate_conditional_algebra_with_physical_assignment_rejected
+    owners: [C-SK-001, MR1]
+    reason: >-
+      Substituting the declared unit into the declared mass formula gives
+      48*pi^3*b identically. This does not derive either physical premise,
+      identify the B=1 branch with a nucleon, or make b a prediction.
+  MR3.6:
+    source_verdict: narrow_formula_and_identifier_guard_passes
+    framework_verdict: rejected_as_claimed_full_recomputation
+    reason: >-
+      The guard recomputes only e c6 c0 and E_BPS. derived_snapshot is unused;
+      none of b_cl b_L0 b_L6 b_full b60_full or the floor is recomputed or
+      compared despite the check text saying all four solved values are
+      bit-identical. Selected identifier absence is not full provenance.
+headline_verdict: physical_double_counting_diagnosis_lacks_accepted_objects_while_the_source_numeric_nonadditivity_is_one_unrefined_example
+positive_replacement: C-VAR-003_exact_mixed_infimum_interaction_theorem

@@ -1,0 +1,28 @@
+campaign: P221
+source_unit: MR3
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-44/bridge_MR3_no_double_counting.py
+sha256: c5eaabaeede15909adb5d9ddb951353c376aaa381e669e35c6256d7015e7eddc
+bytes: 20506
+lines: 380
+inventory: {static_check_calls: 6, runtime_check_executions: 6, assert_statements: 3}
+native_run:
+  command: /home/dan/substrate-framework/.venv/bin/python_bridge_MR3_no_double_counting.py
+  working_directory: /home/dan/substrate
+  elapsed_seconds: 3.48
+  maximum_resident_kib: 125988
+  exit_status: 0
+  terminal_tally: ALL_6_CHECKS_PASS
+solver_surface:
+  routine: scipy.integrate.solve_bvp
+  precision: float64
+  domains: {massless: [0.0001, 20.0], massive: [0.0001, approximately_27.75]}
+  initial_points: 3000
+  output_points: 40000
+  tolerance: 1.0e-6
+  maximum_nodes: 200000
+  continuation_steps: 14
+  boundary_data: f_left_equals_pi_f_right_equals_zero
+  success_gate: status_zero_at_seed_and_each_continuation_step
+  missing_oracles: [mesh_refinement, domain_refinement, tolerance_refinement, residual_norm, Derrick_residual, independent_method, minimizer_proof]
+interpretation: clean_noncanonical_reproduction_not_acceptance

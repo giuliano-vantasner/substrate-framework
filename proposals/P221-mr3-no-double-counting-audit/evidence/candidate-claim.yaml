@@ -1,0 +1,23 @@
+campaign: P221
+provisional_claim: C-VAR-003
+statement: >-
+  For a nonempty common domain X and real functionals A P Q whose infima for
+  A, A+P, A+Q, and A+P+Q are finite, define the mixed variational interaction
+  I=inf(A+P+Q)+inf(A)-inf(A+P)-inf(A+Q). The corresponding pointwise mixed
+  expression vanishes identically, so I is entirely an optimization effect.
+  It has no universal sign, even for continuous nonnegative coercive quadratic
+  functionals on the real line, and every real value occurs by positive
+  scaling of exact positive negative or zero examples. A common minimizer of A
+  P Q implies I=0, but I=0 does not imply a common minimizer.
+verification: proposed_symbolic
+review: unaudited
+compatibility: compatible_extension
+epistemic: proposed
+dependencies: []
+excluded:
+  - existence_or_attainment_for_any_field_model
+  - sign_or_magnitude_for_MR3_without_a_validated_minimum
+  - additive_or_nonadditive_physical_sector_ontology
+  - coefficient_state_mass_binding_or_observation
+  - double_counting_diagnosis_or_substrate_mechanism
+expected_consumers: [MR3, MR5, MR6, generic_variational_composition]

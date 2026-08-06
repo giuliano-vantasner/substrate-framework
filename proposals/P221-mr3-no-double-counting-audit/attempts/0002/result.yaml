@@ -1,0 +1,34 @@
+campaign: P221
+attempt: 0002
+timestamp_utc: '2026-08-06T12:44:13Z'
+status: passed_with_source_claim_corrections
+stage: compatibility_preflight_native_reproduction_body_audit_and_claim_delta
+source_sha256: c5eaabaeede15909adb5d9ddb951353c376aaa381e669e35c6256d7015e7eddc
+compatibility:
+  direct_numpy_trapz: 0
+  imported_legacy_trapz: 0
+  dynamic_numpy_trapz: 0
+  eager_nested_legacy_fallback: 0
+  current_scipy_trapezoid: true
+  scientific_version_failure: false
+execution:
+  command: framework_absolute_venv_python_bridge_MR3_no_double_counting.py
+  exit_status: 0
+  runtime_checks: 6
+  assertions: 3
+  elapsed_seconds: 3.48
+  maximum_resident_kib: 125988
+  terminal_tally: ALL_6_CHECKS_PASS
+source_corrections:
+  - every_numeric_coefficient_depends_on_pending_MR4_or_unaccepted_physical_inputs
+  - solve_bvp_stationary_branches_are_called_actual_minima_without_minimization_proof
+  - one_mesh_domain_tolerance_and_Dirichlet_wall_have_no_refinement_or_independent_method
+  - positive_interaction_for_one_supplied_example_does_not_prove_universal_nonadditivity
+  - source_claims_no_bridge_forms_the_sum_then_forms_naive_sum_itself
+  - floor_agreement_reuses_the_same_coefficients_and_is_dependent_regression
+  - honesty_guard_does_not_recompute_or_compare_any_of_the_four_BVP_outputs
+positive_claim_delta:
+  provisional_claim: C-VAR-003
+  object: exact_variational_interaction_mixed_difference_with_both_signs
+  dependencies: []
+next_action: commit_source_audit_then_implement_exact_interaction_ledger_and_fresh_review

@@ -66,10 +66,13 @@ and consumer conclusion remains unopened through the validated freeze commit.
 
 ## Proposed Claim Delta
 
-No identifier is proposed. A new theorem is permitted only if its exact premises
-or reach differ from C-VAR-002 and its field-model specialization is not already
-C-GSK-001. Otherwise P221 must preserve the source as duplicate or qualified
-evidence without adding a wrapper API.
+The committed freeze proposed no identifier. After source inspection, P221
+provisionally reserves C-VAR-003 for the mixed variational interaction
+`inf(A+P+Q)+inf(A)-inf(A+P)-inf(A+Q)`. C-VAR-002 does not fix this four-infimum
+mixed difference. C-VAR-003 will prove its pointwise cancellation, both signs
+and arbitrary real reach with nonnegative coercive quadratics, a common-
+minimizer sufficient condition, and failure of the converse. It imports no
+physical model or parameter.
 
 ## Implementation and Oracle Plan
 
@@ -91,6 +94,15 @@ The first exact memory grep used an unsupported `--limit` option and failed
 before search; the repaired invocation found C-VAR-002 and P219 as direct
 nonduplication owners.
 
+Attempt 0002 reproduces MR3 natively in 3.48 seconds with six checks, three
+solver assertions, exit zero, and 125,988 KiB peak RSS. Its current SciPy
+`trapezoid` surface has no compatibility event. The body audit finds that every
+numeric coefficient imports pending MR4 or unaccepted physical inputs; four
+single-resolution BVP stationary branches are called minima; one positive
+interaction is generalized to universal nonadditivity; the floor cross-check
+is dependent; and MR3.6 never recomputes its solved outputs. The opened source
+also reveals the distinct C-VAR-003 exact interaction object.
+
 ## Debt Ledger
 
 The ledger tracks every source predicate, common configuration, component
@@ -99,12 +111,12 @@ compatibility surface, consumer, and governed record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MR3 body and predicates remain unopened | Open only after committed freeze | open |
-| One-functional prose may duplicate C-VAR-002 | Exact nonduplication audit | open |
-| Bound or term values may be called sector masses | Slack and attainment audit | open |
-| Supplied numerics may be called physical contributions | Dependency and comparator audit | open |
-| Numeric solver evidence may be under-specified | Solver and refinement audit | open |
-| Lexical absence may be treated as a theorem | Counterexample and scope audit | open |
+| MR3 body and predicates remain unopened | Open only after committed freeze | discharged: native reproduction and six-predicate audit |
+| One-functional prose may duplicate C-VAR-002 | Exact nonduplication audit | distinct C-VAR-003 mixed interaction retained; implementation open |
+| Bound or term values may be called sector masses | Slack and attainment audit | diagnosed and excluded; exact verifier open |
+| Supplied numerics may be called physical contributions | Dependency and comparator audit | diagnosed as unaccepted; review open |
+| Numeric solver evidence may be under-specified | Solver and refinement audit | diagnosed: no refinement or minimizer proof; no numeric claim retained |
+| Lexical absence may be treated as a theorem | Counterexample and scope audit | diagnosed: source itself forms naive_sum; exact counterexamples open |
 | Later MR units may grant backward authority | Pinned graph replay | open |
 | Governed records remain unresolved | Terminal disposition and synchronization | open |
 

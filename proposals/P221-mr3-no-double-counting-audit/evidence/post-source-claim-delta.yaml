@@ -1,0 +1,16 @@
+campaign: P221
+source_unit: MR3
+provisional_claim: C-VAR-003
+decision: retain_for_exact_implementation_and_independent_review
+novel_surface: mixed_infimum_interaction_has_no_universal_sign_and_zero_is_not_common_minimizer_equivalence
+nonduplication:
+  C-VAR-002: owns_joint_infimum_vs_sum_of_component_infima_not_the_four_infimum_mixed_difference
+  C-GSK-001: owns_one_conditional_radial_functional_not_the_general_interaction_theorem
+  C-RDIFF-001: owns_signed_difference_of_upper_estimates_not_variational_mixed_infima
+excluded_source_surfaces:
+  - physical_double_counting_refutation
+  - universal_nonadditivity_or_superadditivity
+  - MR3_numeric_coefficients_and_branch_values
+  - actual_minimizer_language
+  - zero_parameter_or_falsifiable_mass_prediction
+next_gate: canonical_interaction_ledger_exact_primary_fresh_independent_and_numeric_source_scope_audit

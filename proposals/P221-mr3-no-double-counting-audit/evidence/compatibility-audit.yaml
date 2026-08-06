@@ -1,0 +1,15 @@
+campaign: P221
+source_unit: MR3
+numpy_ast:
+  direct_np_trapz: 0
+  imported_trapz: 0
+  dynamic_getattr_np_trapz: 0
+  eager_nested_fallbacks: 0
+  current_numpy_trapezoid: 0
+scipy_ast:
+  imported_current_trapezoid: 1
+  sampled_integration_calls: 2
+verdict: native_current_environment
+version_events: []
+scientific_failures_from_version_events: 0
+policy: mutable_new_NumPy_code_uses_numpy_trapezoid_and_canonical_code_uses_trapezoid_integral

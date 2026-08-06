@@ -41,7 +41,7 @@ selection_criteria:
   - mutation-sensitive comparator and minimizer logic
   - physical state action and coefficient firewall
   - terminal consumer and memory closure
-claims_proposed: []
+claims_proposed: [C-VAR-003]
 comparators_blinded_until: >-
   The generated queue exposes six checks, three assertions, the corrected
   99.42 MeV and 10.6 percent values, one 936.6 MeV classical value, the false
@@ -49,5 +49,5 @@ comparators_blinded_until: >-
   Remaining equations, values, solver details, predicates, output, and consumer
   claims stay unopened until this contract, formula freeze, provenance record,
   validation record, and freeze commit exist.
-status: draft
-revision: 0001
+status: active
+revision: 0002

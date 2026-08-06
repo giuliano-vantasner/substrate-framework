@@ -1,0 +1,21 @@
+campaign: P221
+source_unit: MR3
+lexical_check_calls: 6
+runtime_checks: 6
+assertion_nodes: 3
+checks:
+  - {id: MR3.1, scientific_surface: supplied_mass_ratios, decision: qualified_comparator_only}
+  - {id: MR3.2, scientific_surface: changed_five_percent_predicate, decision: duplicate_P219_P220_correction}
+  - {id: MR3.3, scientific_surface: positive_mixed_increment, decision: unrefined_stationary_branch_example}
+  - {id: MR3.4, scientific_surface: floor_versus_profile_term, decision: conditional_numeric_example}
+  - {id: MR3.5, scientific_surface: declared_mass_unit_ratio, decision: duplicate_C-SK-001_MR1}
+  - {id: MR3.6, scientific_surface: comparator_guard, decision: false_full_recomputation_claim}
+oracle_failures:
+  - pending_MR4_and_physical_inputs_are_treated_as_derived
+  - stationary_BVP_branches_are_called_minima
+  - no_resolution_domain_tolerance_or_method_refinement
+  - one_positive_interaction_is_generalized_to_no_additive_decomposition
+  - a_lexical_absence_claim_is_refuted_by_the_source_naive_sum
+  - the_floor_cross_check_reuses_the_same_coefficients
+  - derived_snapshot_is_unused_and_solved_outputs_are_not_recomputed
+terminal_tally_interpretation: all_six_source_predicates_execute_but_do_not_validate_the_headline_physical_or_universal_claim
