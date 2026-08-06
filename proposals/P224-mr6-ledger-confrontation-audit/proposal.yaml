@@ -50,8 +50,8 @@ comparators_blinded_until: >-
   rows, formulas, values, predicates, guards, compatibility surfaces, and final
   conclusions stay unopened until this contract, formula freeze, provenance
   record, validation record, and freeze commit exist.
-status: active
-revision: 0002
+status: in_review
+revision: 0003
 opened_source_settings:
   model: B1_supplied_coefficient_C_GSK_001_stationary_equation
   boundary_data: finite_wall_Dirichlet_f_inner_equals_pi_f_outer_equals_zero
@@ -62,7 +62,7 @@ opened_source_settings:
   energy_quadrature: scipy_trapezoid_at_40000_samples
   common_scale_samples: [0.0, 0.25, 0.5, 0.75, 1.0]
 claim_refinement:
-  decision: no_identifier_reserved_after_source_audit
+  decision: terminal_duplicate_evidence_no_identifier
   reason: >-
     The exact normalization and nonnegative-addition surfaces are already
     C-BPS-001 C-VEC-002 and C-VAR-002. The source ledger hard-codes multiple

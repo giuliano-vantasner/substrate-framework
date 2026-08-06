@@ -3,47 +3,47 @@ source_unit: MR6
 checks:
   MR6.1:
     verification: partially_symbolic_and_numeric
-    review: unaudited
-    compatibility: unassessed
-    epistemic: proposed
+    review: audited
+    compatibility: compatible_extension
+    epistemic: qualified
     survives: exact_pi_squared_formula_ratio_and_selected_historical_truth_value_changes
     excluded: complete_ledger_exactly_four_count_double_counting_refutation_and_blanket_survival_claims
     reason: Most_rows_exist_only_in_check_prose_and_the_MK6_3_proxy_does_not_test_double_counting.
   MR6.2:
     verification: source_numeric_evidence
-    review: unaudited
+    review: audited
     compatibility: conflict
-    epistemic: proposed
+    epistemic: refuted
     survives: conditional_source_arithmetic_only
     excluded: corrected_current_confrontation_derived_chain_and_physical_tension
     reason: MR4_and_physical_inputs_lack_closure_kappa_is_stale_and_not_computed_and_comparators_drive_the_predicate.
   MR6.3:
     verification: unverified
-    review: unaudited
-    compatibility: conflict
-    epistemic: proposed
+    review: audited
+    compatibility: compatible_extension
+    epistemic: qualified
     survives: five_point_common_scale_stationary_branch_scan
     excluded: monotonic_all_s_any_nonzero_sector_and_localization_on_lambda_mu
     reason: Finite_samples_on_one_common_scaling_path_do_not_prove_the_continuous_or_two_parameter_claims.
   MR6.4:
     verification: source_numeric_evidence
-    review: unaudited
+    review: audited
     compatibility: conflict
-    epistemic: proposed
+    epistemic: refuted
     survives: one_supplied_L0_only_stationary_branch_regression
     excluded: physical_pion_mass_term_universal_model_claim_and_observed_error_theorem
     reason: No_physical_action_state_scale_or_minimum_map_closes_and_the_comparator_drives_the_verdict.
   MR6.5:
     verification: exact_nonstrict_order_only
-    review: unaudited
+    review: audited
     compatibility: compatible_extension
-    epistemic: proposed
+    epistemic: qualified
     survives: pointwise_nonnegative_terms_and_infimum_nondecrease_under_common_domain_hypotheses
     excluded: strict_increase_stationary_branch_minimum_and_universal_coupling_floor
     reason: C_VAR_002_already_owns_the_nonstrict_order_and_strictness_requires_a_gap_or_common_minimizer_obstruction_not_positivity_somewhere.
   MR6.6:
     verification: refuted_by_AST_and_data_flow_audit
-    review: unaudited
+    review: audited
     compatibility: conflict
     epistemic: refuted
     survives: selected_two_number_and_identifier_scan_plus_partial_algebra_recomputation

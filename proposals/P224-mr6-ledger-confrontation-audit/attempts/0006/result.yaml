@@ -1,0 +1,23 @@
+campaign: P224
+attempt: 0006
+timestamp_utc: '2026-08-06T14:20:00Z'
+status: passed
+stage: individual_source_and_disposition_review
+source_predicates_reviewed: 6
+source_assertions_reviewed: 3
+selected_disposition: duplicate_evidence
+accepted_claim_owners: [C-BPS-001, C-VEC-002, C-VAR-002]
+context_only: [C-BPS-002, C-BPS-003, C-GSK-001, C-RDIFF-001]
+unpromoted_surfaces:
+  - exactly_four_complete_overturn_ledger
+  - physical_current_confrontation
+  - continuous_monotonicity_from_five_samples
+  - two_parameter_localization_from_one_common_scale
+  - physical_pion_mass_model_error
+  - strict_infimum_increase
+  - universal_coupling_floor
+  - complete_comparator_and_dependency_guard
+package_change: none
+claim_change: none
+release_change: none
+next_action: governed_terminal_record_and_zero_pending_global_transaction

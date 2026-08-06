@@ -112,6 +112,12 @@ survive; finite counterexamples restrict the variational conclusion to the
 nonstrict order already owned by C-VAR-002. Canonical values bound the stale
 source context, but no claim, API, test, or release change is warranted.
 
+Attempt 0006 audits all six predicates and three assertions individually. The
+exact duplicate owners are C-BPS-001, C-VEC-002, and C-VAR-002. MR6.1, MR6.3,
+and MR6.5 retain qualified duplicate or regression scope; MR6.2, MR6.4, and
+MR6.6 are refuted at their physical or completeness scope. Review selects the
+terminal `duplicate_evidence` disposition with no canonical or release change.
+
 ## Debt Ledger
 
 The ledger tracks every MR6 row, accepted owner, convention conversion,
