@@ -1,0 +1,71 @@
+campaign: P209
+source_unit: GC2
+checks:
+  - id: GC2.1
+    source_runtime: pass
+    status: retained_literal_external_well_provenance_rejected_multisoliton_identity
+    mapping: [C-OVL-002, C-QBL-005]
+    reason: >-
+      MH2's depth width spacing and six centers are supplied and independent of
+      the quartic core. Separate translated external Hamiltonians are not
+      soliton field objects, and source prose supplies no missing equation.
+  - id: GC2.2
+    source_runtime: pass
+    status: retained_conditional_core_shortfall_rejected_universal_impossibility
+    mapping: [C-QBL-001, C-OVL-002, C-QBL-005]
+    reason: >-
+      The exact fixed-depth to quartic-core ratio grows on the declared ladder,
+      but this compares two model declarations and proves no universal
+      one-condensate or multisoliton theorem.
+  - id: GC2.3
+    source_runtime: pass
+    status: corrected_to_exact_translation_localization
+    mapping: [C-OVL-002]
+    reason: >-
+      The translated ground density has exact mean R and translation-invariant
+      centered variance. The source calls E|x| a centroid, refines only E|x|,
+      and its origin-relative ratio cannot count physical objects.
+  - id: GC2.4
+    source_runtime: pass
+    status: retained_quartic_collective_zero_rejected_exact_sine_and_particle_counts
+    mapping: [C-QBL-001, C-QBL-003]
+    reason: >-
+      C-QBL-003 exactly identifies the quartic translation zero and one remaining
+      negative Hessian level. GC2's exact-sine count three is hard-coded from an
+      already rejected FG2 result and cannot yield two accepted internal states.
+  - id: GC2.5
+    source_runtime: pass
+    status: retained_supplied_count_provenance_corrected_cycle_language
+    mapping: [C-MIX-002]
+    reason: >-
+      FG2 and FG4 independently disclaim a count-three derivation, C-MIX-002
+      supplies no observed family map, and WM9 counts a literal tuple. This is
+      absent authority and a later misattribution, not a derivational cycle.
+  - id: GC2.6
+    source_runtime: pass
+    status: retained_exact_trial_function_residual
+    mapping: [C-QBL-003, C-OVL-001]
+    reason: >-
+      Exact application of the accepted quartic Hessian shows p=2 is the only
+      pure-sech eigenfunction among p=1,2,3. WM9's overlap tuple is supplied and
+      does not reproduce C-QBL-003's actual even and odd mode pair.
+  - id: GC2.7
+    source_runtime: pass
+    status: rejected_as_origin_dependent_single_shape_guard
+    mapping: [C-OVL-002]
+    reason: >-
+      Moving one fixed-width density away from an origin necessarily makes its
+      centered width small relative to displacement. The source uses E|x|, not
+      a centroid, and one core placement does not validate object ontology.
+  - id: GC2.8
+    source_runtime: pass
+    status: retained_no_observable_in_load_bearing_exact_route_rejected_reachability_oracle
+    mapping: []
+    reason: >-
+      The accepted adjudication does not select from observed comparators, but
+      intersecting names with globals ignores source-string values and selection
+      history and therefore cannot prove that no measured name is reachable.
+summary:
+  retained_exact_or_source_composition: 6
+  corrected_guard_or_numeric_predicate: 2
+  blanket_headline_accepted: false

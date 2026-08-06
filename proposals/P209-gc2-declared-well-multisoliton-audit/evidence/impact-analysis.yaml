@@ -1,0 +1,8 @@
+campaign: P209
+canonical_symbols_changed: []
+canonical_modules_changed: []
+accepted_claims_changed: []
+release_changed: false
+direct_governance_changes: [GC2_disposition, generated_migration_queue, migration_effort_memory]
+direct_reverse_consumers: [GC4, GC5, GC6]
+consumer_policy: pending_consumers_receive_no_backward_authority_and_remain_individually_reviewable

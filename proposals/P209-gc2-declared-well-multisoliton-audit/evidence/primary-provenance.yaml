@@ -1,0 +1,14 @@
+campaign: P209
+artifact: verify.py
+sha256: f305f0a011d96766a5a8361c9c989bd40c1ecac02772484ae297a77f8c67badb
+oracle: canonical_exact_APIs_plus_SymPy_characteristic_moments_AST_authority_and_mutations
+canonical_dependencies:
+  src/substrate_framework/translated_localization.py: 5a8bd4dbb77552c942c2b98afce67ff0f54431ccdc161e6408ebf7f2b6e985ec
+  src/substrate_framework/qball_fluctuations.py: 5cd790c6364b26475fe577b7657e60c398c92ad5e266c6770006ca0fc4f52d77
+  src/substrate_framework/verification.py: 278ea2593a0cacc5a72cbf4e6e7e6e5ad138206ac2da9134bed4ce12a00327cb
+  src/substrate_framework/source_audit.py: ee24c7a236dc6b8f70bba3d6cefb42f9b4ca5b206f1643de09438cf61a648cf7
+checks: 37
+exit_status: 0
+independence_ceiling: >-
+  Uses accepted canonical well and quartic APIs; the raw operator moment and
+  asymptotic derivations are repeated by the independent route.

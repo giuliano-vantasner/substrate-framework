@@ -1,0 +1,37 @@
+campaign: P209
+source_unit: GC2
+source_sha256: 07611b1eb63450e7e82ab696eafe8566a6931a9acae9ccfbebe1823765ac4a65
+retained_exact_objects:
+  external_well_family: H_R_equals_minus_d2_minus_12_sech_squared_of_x_minus_R_over_0_7
+  supplied_centers: R_n_equals_4n_for_n_zero_through_five
+  translated_ground_eigenvalue: independent_of_R
+  translated_density_mean: R
+  translated_centered_variance: width_squared_times_polygamma_1_of_s_over_2
+  quartic_core_depth: 6_kappa_squared_sech_squared_kappa_R
+  quartic_translation_level: exact_zero_Hessian_level
+  pure_sech_eigenfunction_from_WM9_tuple: p_equals_2_only
+source_corrections:
+  - MH2 declares N_GEN=6, so the executed external-well family is not a three-member construction.
+  - WELL_DEPTH=12.0, WELL_W=0.7, D_SPACING=4.0, N_GEN=6, and omega=0.45 are source literals rather than outputs.
+  - Each n invokes a separate translated one-well Hamiltonian; the source builds no one common multiwell operator and no simultaneous nonlinear field solution.
+  - The quantity named cent is E|x|, not the density centroid E[x].
+  - The width is centered about E[x], but the refinement predicate compares only E|x| and omits width ratio domain and residual convergence.
+  - Width over displacement tends to zero for any fixed-width translated density and therefore does not establish multiple field objects or a multisoliton.
+  - The planted depth and C-QBL-005 quartic core depth are distinct model declarations; their ratio grows on the supplied ladder but neither derives the other.
+  - GC2 hard-codes FG2's exact-sine count three even though FG2's terminal disposition rejects that wall-contaminated third level.
+  - Removing C-QBL-003's translation zero leaves one negative Hessian level, not a positive internal particle state.
+  - FG2 and FG4 both disclaim deriving the observed count three; WM9 obtains three from literal MODES=(1,2,3).
+  - The global-name anti-fit guard does not inspect the values of SRC_WM9 or source strings, so it cannot establish its stated reachability claim.
+mutations_and_counterexamples:
+  - Translating every external well changes every mean but no eigenvalue or centered variance.
+  - Changing the supplied center list from six entries to two or four changes the reported object count.
+  - Replacing fixed depth by the quartic core depth at each center destroys isospectrality.
+  - Combining the individual wells into one multiwell potential changes the operator and requires a new spectral problem.
+  - A single translated fixed-width density has width over displacement tending to zero without becoming a multisoliton.
+  - The p=1 and p=3 trial functions leave nonzero quartic-operator residuals while p=2 survives.
+  - An exact translation zero mode can exist while a finite-box bound-count claim remains invalid.
+headline_verdict_candidate: >-
+  GC2 correctly exposes supplied external wells, a literal count, one collective
+  zero mode, and trial-function misuse. It does not establish that those wells
+  are solitons, derive three, validate FG2's exact-sine count, or supply a
+  particle-generation tower. The strongest result is accepted-claim composition.

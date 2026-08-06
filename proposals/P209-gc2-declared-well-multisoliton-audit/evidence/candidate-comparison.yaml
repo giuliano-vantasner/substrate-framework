@@ -1,0 +1,18 @@
+campaign: P209
+criteria_frozen_before_source_body: true
+candidates:
+  A: {decision: selected, reason: C_OVL_002_exactly_owns_the_separately_declared_translated_isospectral_well_family.}
+  B: {decision: rejected, reason: GC2_supplies_no_common_nonlinear_field_equation_simultaneous_solution_interaction_or_stability_oracle.}
+  C: {decision: selected, reason: Exact_characteristic_function_moments_replace_the_mislabeled_and_incompletely_refined_source_statistic.}
+  D: {decision: selected_conditionally, reason: The_fixed_well_to_quartic_core_ratio_is_exact_but_compares_independently_declared_models.}
+  E: {decision: selected_as_input_diagnosis, reason: Six_and_three_are_source_literal_cardinalities_and_no_accepted_selection_theorem_fixes_either.}
+  F: {decision: selected, reason: One_operator_multiple_levels_separate_operators_and_multiple_field_solutions_have_distinct_domains_and_provenance.}
+  G: {decision: selected, reason: C_OVL_002_C_QBL_003_C_OVL_001_C_MIX_002_and_C_QBL_005_own_the_complete_corrected_content_without_a_new_API.}
+  H: {decision: selected, reason: Individual_qualification_and_nonauthoritative_consumer_replay_close_GC2_governance.}
+selection_not_used:
+  - source_ALL_8_CHECKS_PASS_tally
+  - source_multi_soliton_wording
+  - finite_ratio_thresholds_or_frequency_sample
+  - observed_generation_count_or_hierarchy
+  - pending_GC3_GC4_GC5_claims
+reserved_unpromoted_claims: [C-OVL-004]

@@ -1,0 +1,24 @@
+campaign: P209
+source_unit: GC2
+declared_dependencies: [EM6, FG2, FG4, GC1, GC3, GC4, GC5, MH1, MH2, WM10, WM7, WM9]
+terminal_dependencies:
+  EM6: [C-QBL-001]
+  FG2: [C-QBL-001, C-QBL-003]
+  FG4: [C-MIX-001, C-MIX-002]
+  GC1: [C-QBL-001, C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, C-QBL-005]
+  MH1: [C-QBL-003, C-OVL-001]
+  MH2: [C-OVL-001, C-OVL-002]
+  WM10: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+  WM7: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+  WM9: [C-QBL-001, C-QBL-003, C-OVL-001, C-MIX-002, C-GSM-001, C-REP-001, C-REP-003, C-RGE-005]
+nonauthoritative_cycle_dependencies: [GC3, GC4, GC5]
+admitted_composition: [C-QBL-001, C-QBL-003, C-OVL-001, C-OVL-002, C-MIX-002, C-QBL-005]
+rejected_inheritance:
+  - FG2's exact-sine third level and particle-generation reading are outside C-QBL-003.
+  - FG4's abstract N-dependent phase count supplies no observed family count through C-MIX-002.
+  - GC1 supplies a conditional quartic core relation and explicitly no multisoliton.
+  - MH2 supplies translated external-well algebra but no radial or multisoliton derivation.
+  - WM9's count three is a literal tuple and its N_gen=3 interpretation is not accepted.
+  - Pending GC3 GC4 and GC5 grant no backward authority.
+closure: accepted_registry_dependencies_are_present
+backward_authority: none

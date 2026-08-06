@@ -1,0 +1,13 @@
+attempt: 0004
+campaign: P209
+timestamp_utc: '2026-08-05T23:10:00Z'
+kind: primary_and_independent_exact_adjudication
+commands:
+  - PYTHONPATH=src_.venv/bin/python_proposals/P209-gc2-declared-well-multisoliton-audit/verify.py
+  - PYTHONPATH=src_.venv/bin/python_proposals/P209-gc2-declared-well-multisoliton-audit/reviews/independent_declared_well_review.py
+primary_checks: 37
+independent_checks: 20
+exit_status: 0
+scientific_version_failures: 0
+verdict: accepted_claim_composition_no_new_claim_or_API
+continuation: run_focused_existing_API_tests_and_terminal_source_graph_then_materialize_GC2_disposition

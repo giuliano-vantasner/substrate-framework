@@ -1,0 +1,18 @@
+campaign: P209
+canonical_modules_changed: []
+canonical_tests_changed: []
+campaign_verifiers:
+  - verify.py
+  - reviews/independent_declared_well_review.py
+  - reviews/replay_source_graph.py
+reused_modules:
+  - src/substrate_framework/translated_localization.py
+  - src/substrate_framework/qball_fluctuations.py
+  - src/substrate_framework/source_audit.py
+  - src/substrate_framework/verification.py
+decision: >-
+  No reusable implementation is added because accepted APIs already own the
+  translated well and quartic spectrum. Encoding unsupported multisoliton or
+  count-three conclusions would create a false canonical surface.
+mutable_np_trapz_references: 0
+mutable_np_trapezoid_policy: satisfied

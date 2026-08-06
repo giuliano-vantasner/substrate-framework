@@ -1,0 +1,12 @@
+campaign: P209
+source_unit: GC2
+direct_reverse_consumers: [GC4, GC5, GC6]
+pending_forward_consumers: [GC4, GC5, GC6]
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+consumer_replay: reviews/replay_source_graph.py
+native_consumer_executions: 0
+authority_result: >-
+  GC4 GC5 and GC6 remain pending and grant no backward authority. GC2
+  qualification changes its governed migration record and generated summaries;
+  each consumer must inherit only the accepted external-well and scalar-Hessian
+  ceilings, not a multisoliton or count-three conclusion.

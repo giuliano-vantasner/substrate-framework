@@ -1,0 +1,11 @@
+campaign: P209
+artifact: reviews/independent_declared_well_review.py
+sha256: 7d8347df712af9155860a463a7781491f83cb2c6d7233b5275c3356af508a620
+oracle: raw_SymPy_Poschl_operator_characteristic_moments_asymptotics_and_AST
+imports_canonical_localization_or_qball_API: false
+checks: 20
+exit_status: 0
+prior_failed_attempt: attempts/0003/result.yaml
+independence_ceiling: >-
+  Exact one-dimensional algebra proves translation and model typing but does
+  not construct a nonlinear multisoliton or physical generation dictionary.

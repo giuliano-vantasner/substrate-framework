@@ -1,0 +1,21 @@
+attempt: 0005
+campaign: P209
+timestamp_utc: '2026-08-05T23:13:00Z'
+kind: pre_disposition_exact_graph_and_focused_replay
+commands:
+  - PYTHONPATH=src_.venv/bin/python_proposals/P209-gc2-declared-well-multisoliton-audit/verify.py
+  - PYTHONPATH=src_.venv/bin/python_proposals/P209-gc2-declared-well-multisoliton-audit/reviews/independent_declared_well_review.py
+  - PYTHONPATH=src_.venv/bin/python_proposals/P209-gc2-declared-well-multisoliton-audit/reviews/replay_source_graph.py
+  - .venv/bin/python_-m_pytest_-q_five_focused_test_files
+primary_checks: 37
+independent_checks: 20
+pre_disposition_graph_checks: 37
+focused_tests: 86
+exit_status: 0
+graph_nodes: 14
+static_predicates: 107
+assert_nodes: 20
+native_graph_executions: 0
+scientific_version_failures: 0
+verdict: ready_to_commit_verification_then_register_qualified_GC2_disposition
+continuation: commit_exact_audit_then_materialize_disposition_regenerate_and_run_record_sensitive_terminal_gate

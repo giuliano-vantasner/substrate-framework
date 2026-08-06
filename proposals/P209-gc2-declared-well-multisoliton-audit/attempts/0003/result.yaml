@@ -1,0 +1,19 @@
+attempt: 0003
+campaign: P209
+timestamp_utc: '2026-08-05T23:06:00Z'
+kind: independent_exact_oracle_first_execution
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P209-gc2-declared-well-multisoliton-audit/reviews/independent_declared_well_review.py
+exit_status: 1
+checks_passed_before_abort: 12
+failure_class: verifier_representation
+failure: >-
+  SymPy trigsimp with method fu did not canonicalize the independently derived
+  quartic translation-tangent residual to the exact integer zero even though
+  ordinary simplify and exponential rewriting both reduce the same expression
+  exactly to zero.
+scientific_candidate_rejected: false
+scientific_version_failures: 0
+repair: use_general_exact_simplify_on_the_unchanged_zero_residual_predicate
+continuation: rerun_the_full_independent_route_then_add_mutation_and_graph_evidence

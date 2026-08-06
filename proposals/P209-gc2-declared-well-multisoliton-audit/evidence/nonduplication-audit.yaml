@@ -1,0 +1,13 @@
+campaign: P209
+objects:
+  translated_external_ground_family: {owner: C-OVL-002, new_claim_needed: false, new_API_needed: false}
+  translated_center_and_centered_variance: {owner: C-OVL-002_exact_ground_state_composition, new_claim_needed: false, new_API_needed: false}
+  quartic_core_depth_comparison: {owner: [C-QBL-005, C-OVL-002], new_claim_needed: false, new_API_needed: false}
+  quartic_negative_and_translation_levels: {owner: C-QBL-003, new_claim_needed: false, new_API_needed: false}
+  normalized_trial_overlap_family: {owner: C-OVL-001, new_claim_needed: false, new_API_needed: false}
+  abstract_phase_count_ceiling: {owner: C-MIX-002, new_claim_needed: false, new_API_needed: false}
+  dynamical_multisoliton: {owner: none, derivation_present: false}
+  selected_generation_count_three: {owner: none, derivation_present: false}
+reserved_claims:
+  C-OVL-004: unpromoted_no_new_localization_or_object_count_theorem
+result: accepted_composition_no_canonical_surface
