@@ -1,0 +1,30 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:45:00Z'
+canonical_code_changes: []
+canonical_test_changes: []
+reason: >-
+  periodic_potential_evidence, su2_trace_breaking_evidence,
+  normalized_sqrt_potential_average, and dimensional_sine_gordon_scales already
+  expose every reusable exact object. A BPS-specific positive-root wrapper
+  would duplicate these APIs and suggest a physical identification they do not
+  make.
+campaign_code:
+  primary: campaigns/P214-mk1-medium-potential-matching-audit/verify.py
+  independent: campaigns/P214-mk1-medium-potential-matching-audit/reviews/independent_matching_review.py
+  graph: campaigns/P214-mk1-medium-potential-matching-audit/reviews/replay_source_graph.py
+mutable_numpy_policy: numpy.trapezoid_or_trapezoid_integral
+mutable_legacy_references: 0
+immutable_alias_used: false
+source_code_modified: false
+workflow_process_changes:
+  - AGENTS.md
+  - .agents/skills/physics-erdos-loop/SKILL.md
+  - memory-templates/campaign-proposal.md
+  - memory-templates/claim-review.md
+  - memory-templates/effort-contract.md
+workflow_reason: >-
+  P214 exposed an algebraically dependent tail check presented as independent,
+  missing cross-sector object maps, and a generated-queue maintenance hazard.
+  The existing paragraphs were tightened to make those gates executable
+  without adding a new workflow layer.
+status: no_duplicate_extraction_required

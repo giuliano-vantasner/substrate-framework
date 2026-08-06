@@ -1,0 +1,48 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:45:00Z'
+source_unit: MK1
+checks:
+  MK1.1:
+    source_runtime: passed
+    scientific_verdict: qualified_exact_duplicate
+    accepted_mapping: [C-CHI-002, C-BPS-001]
+    rejected_words: [medium_supplied, physical_pion_potential]
+  MK1.2:
+    source_runtime: passed
+    scientific_verdict: qualified_declared_coordinate_convention
+    accepted_mapping: [C-CHI-002]
+    rejected_words: [unconditional_forced_parameterization]
+  MK1.3:
+    source_runtime: passed
+    scientific_verdict: qualified_exact_conditional_match
+    accepted_mapping: [C-BRK-001, C-CHI-002]
+    rejected_words: [forced_by_medium, overdetermined_by_accepted_content, debt_paid]
+  MK1.4:
+    source_runtime: passed
+    scientific_verdict: necessary_dimension_agreement_only
+    accepted_mapping: [C-BPS-001]
+    rejected_words: [dimension_equality_implies_identification]
+  MK1.5:
+    source_runtime: passed
+    scientific_verdict: qualified_exact_supplied_potential_average
+    accepted_mapping: [C-BPS-001]
+    rejected_words: [medium_selected_shape, no_free_shape]
+  MK1.6:
+    source_runtime: passed
+    scientific_verdict: rejected_interpretation
+    accepted_mapping: []
+    reason: >-
+      The scaling result follows tautologically from assuming MK1.3. C-MED-003
+      supplies a gap ratio but no physical pion or BPS map, and P172 rejects
+      the KI2 source flow as a symmetry of a fixed accepted BPS theory.
+  MK1.7:
+    source_runtime: passed
+    scientific_verdict: qualified_dependent_regression
+    accepted_mapping: [C-BRK-001, C-CHI-002]
+    rejected_words: [independent_confirmation]
+    reason: m_tail=2*mu_BPS/F_pi_has_the_same_positive_solution_as_MK1_3
+terminal_tally:
+  source: ALL 7 CHECKS PASS
+  authority_effect: none_without_individual_adjudication
+source_disposition: qualified
+accepted_claims: [C-BRK-001, C-CHI-002, C-BPS-001]

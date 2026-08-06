@@ -1,0 +1,45 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+replay:
+  path: campaigns/P214-mk1-medium-potential-matching-audit/reviews/replay_source_graph.py
+  sha256: cce51f1f35629840e0b2dd0e3a3cfa3de93878c0a5db47997ab7a7b00fc76397
+  command: PYTHONPATH=src .venv/bin/python campaigns/P214-mk1-medium-potential-matching-audit/reviews/replay_source_graph.py
+scope:
+  nodes: 17
+  lexical_predicates: 129
+  assertions: 18
+  predecessors: [E1, E2, E3, E4, KI2, MC1, MK2, NY1, PG2, S3]
+  audited_root: MK1
+  reverse_consumers: [MK2, MK3, MK4, MK5, MK6, MR2, MR6]
+nodes:
+  E1: {checks: 6, assertions: 1, seconds: 1.982, legacy: 1, current: 1, eager: 0}
+  E2: {checks: 6, assertions: 1, seconds: 20.084, legacy: 1, current: 1, eager: 0}
+  E3: {checks: 5, assertions: 1, seconds: 3.822, legacy: 1, current: 1, eager: 0}
+  E4: {checks: 5, assertions: 1, seconds: 0.434, legacy: 0, current: 0, eager: 0}
+  KI2: {checks: 6, assertions: 1, seconds: 0.483, legacy: 0, current: 0, eager: 0}
+  MC1: {checks: 24, assertions: 0, seconds: 2.957, legacy: 0, current: 0, eager: 0}
+  MK1: {checks: 7, assertions: 1, seconds: 1.373, legacy: 0, current: 0, eager: 0}
+  MK2: {checks: 7, assertions: 1, seconds: 0.528, legacy: 0, current: 0, eager: 0}
+  MK3: {checks: 6, assertions: 1, seconds: 0.523, legacy: 0, current: 0, eager: 0}
+  MK4: {checks: 6, assertions: 1, seconds: 2.544, legacy: 0, current: 0, eager: 0}
+  MK5: {checks: 8, assertions: 1, seconds: 66.962, legacy: 0, current: 0, eager: 0}
+  MK6: {checks: 6, assertions: 1, seconds: 0.501, legacy: 0, current: 0, eager: 0}
+  MR2: {checks: 8, assertions: 1, seconds: 1.105, legacy: 0, current: 0, eager: 0}
+  MR6: {checks: 6, assertions: 3, seconds: 6.188, legacy: 0, current: 0, eager: 0}
+  NY1: {checks: 9, assertions: 0, seconds: 0.434, legacy: 0, current: 0, eager: 0}
+  PG2: {checks: 4, assertions: 1, seconds: 0.624, legacy: 0, current: 0, eager: 0}
+  S3: {checks: 10, assertions: 2, seconds: 0.323, legacy: 0, current: 0, eager: 0}
+compatibility:
+  installed_numpy: 2.5.1
+  current_api_available: true
+  removed_legacy_api_available: false
+  safe_current_first_lazy_nodes: [E1, E2, E3]
+  eager_legacy_default_fallbacks: 0
+  alias_used: false
+authority:
+  reverse_consumers_replayed_as_evidence_only: true
+  later_units_imported_as_authority: []
+result:
+  exit_code: 0
+  aggregate_checks: 7
+  terminal_tally: ALL 7 CHECKS PASS [P214-GRAPH]

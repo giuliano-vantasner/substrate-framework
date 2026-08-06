@@ -1,0 +1,22 @@
+attempt: 0004
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+kind: primary_and_fresh_independent_exact_verification
+primary:
+  command: PYTHONPATH=src .venv/bin/python proposals/P214-mk1-medium-potential-matching-audit/verify.py
+  exit_code: 0
+  checks: 29
+independent:
+  command: PYTHONPATH=src .venv/bin/python proposals/P214-mk1-medium-potential-matching-audit/reviews/independent_matching_review.py
+  exit_code: 0
+  checks: 11
+results:
+  - general_positive_match_mu_BPS_equals_m_F_sqrtK_over_q
+  - exact_q2_K1_source_specialization
+  - coordinate_covariant_q1_and_q2_trace_pair
+  - exact_supplied_cosine_target_average
+  - tail_route_identical_to_the_original_match
+  - same_accepted_medium_admits_distinct_BPS_mu_without_F_map
+  - no_novel_claim_or_API
+status: passed
+continuation: replay_pinned_source_graph_and_focused_accepted_consumers

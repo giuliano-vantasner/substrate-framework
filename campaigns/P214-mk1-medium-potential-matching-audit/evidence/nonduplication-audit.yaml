@@ -1,0 +1,37 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+provisional_identifier: C-BPS-004
+accepted_surfaces:
+  C-BRK-001:
+    owns:
+      - A*(1-cos(q*x/F))_curvature_series_period_and_generalized_mass
+      - positive_K_coordinate_convention
+      - local_curvature_does_not_select_global_potential
+  C-CHI-002:
+    owns:
+      - SU2_trace_potential_and_ANW_kinetic_metric
+      - q1_K1_over_4_and_q2_K1_conversions
+      - coordinate_covariant_generalized_mass
+      - mixed_PG2_normalization_factor_four_counterexample
+  C-BPS-001:
+    owns:
+      - supplied_positive_mu_and_potential
+      - exact_round_S3_target_average_definition
+      - BPS_bound_with_no_potential_or_coupling_selection
+  P107_accepted_evidence:
+    owns:
+      - exact_W_32_sqrt2_over_15pi_for_supplied_V_1_minus_cos_chi
+package_surfaces:
+  periodic_potential_evidence: exposes_every_generalized_mass_input_and_output
+  su2_trace_breaking_evidence: exposes_the_complete_trace_kinetic_conversion
+  normalized_sqrt_potential_average: exposes_the_BPS_target_average_normalization
+decision:
+  new_claim: none
+  new_API: none
+  reserved_unpromoted_claims: [C-BPS-004]
+  reason: >-
+    Solving an already exposed generalized-mass expression for its positive
+    amplitude square root is accepted composition, not a new BPS theorem. The
+    source supplies no novel cross-sector map. A wrapper would duplicate the
+    existing pure APIs and create a false impression that the framework
+    selects a physical coefficient.

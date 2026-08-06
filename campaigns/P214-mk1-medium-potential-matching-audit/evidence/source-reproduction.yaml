@@ -1,0 +1,31 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:32:57Z'
+source:
+  path: /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK1_mu_from_medium_cosine.py
+  sha256: 98ff5459ae3c6cb64a9a7632fbaa8613f1f5b1adb68419de25ffa06b1c3a3222
+command: >-
+  /usr/bin/time -f 'TIME exit=%x wall=%e rss_kib=%M' .venv/bin/python
+  /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK1_mu_from_medium_cosine.py
+process:
+  exit_code: 0
+  wall_seconds: 1.34
+  peak_rss_kib: 58860
+inventory:
+  lexical_check_calls: 7
+  literal_check_calls: 7
+  runtime_check_executions: 7
+  assertion_nodes: 1
+  terminal_tally: ALL 7 CHECKS PASS
+compatibility_alias_used: false
+native_results:
+  MK1_1: passed
+  MK1_2: passed
+  MK1_3: passed
+  MK1_4: passed
+  MK1_5: passed
+  MK1_6: passed
+  MK1_7: passed
+authority: >-
+  Clean native execution establishes provenance and source behavior only. It
+  does not promote the medium identification, physical pion map, independence
+  claim, flow-breaking interpretation, or debt-paid conclusion.

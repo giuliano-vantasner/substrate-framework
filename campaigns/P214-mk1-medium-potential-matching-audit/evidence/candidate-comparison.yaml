@@ -1,0 +1,45 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+criteria_order:
+  - exact_object_field_coordinate_measure_and_coefficient_typing
+  - accepted_dependency_closure
+  - assumption_and_parameter_economy
+  - coordinate_covariance_dimensions_signs_and_limits
+  - mutation_sensitivity
+  - local_global_and_physical_distinction
+  - novelty
+  - terminal_closure
+decisions:
+  A:
+    decision: retained_as_exact_composition
+    result: mu_BPS=m*F*sqrt(K)/q
+    claim_effect: no_new_claim
+  B:
+    decision: retained_as_required_gate
+    result: full_matching_requires_equal_angle_period_amplitude_measure_and_field_map
+    claim_effect: prevents_local_Hessian_overreach
+  C:
+    decision: selected
+    result: q2_K1_relation_is_C_BRK_001_plus_C_CHI_002_composition
+    claim_effect: C_BPS_004_reserved_unpromoted
+  D:
+    decision: required_but_unsupplied
+    result: accepted_medium_has_no_BPS_field_measure_or_coefficient_map
+    claim_effect: rejects_medium_supplies_mu_interpretation
+  E:
+    decision: reclassified_as_dependent_regression
+    result: m_tail=2*mu_BPS/F_and_same_positive_solution_as_MK1_3
+    claim_effect: rejects_independent_confirmation_wording
+  F:
+    decision: retained_countermodel
+    result: same_medium_gap_with_distinct_absent_F_scales_gives_distinct_BPS_mu
+    claim_effect: parameter_debt_not_paid
+  G:
+    decision: rejected_as_duplicate_surface
+    result: existing_pure_APIs_expose_every_exact_survivor
+    claim_effect: no_package_edit
+  H:
+    decision: selected_for_review
+    result: qualified_disposition_provisional
+    claim_effect: pending_claim_level_review_and_registry_update
+comparator_values_used_for_selection: false

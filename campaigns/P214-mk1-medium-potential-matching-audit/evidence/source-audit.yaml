@@ -1,0 +1,67 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:32:57Z'
+source_unit: MK1
+predicate_verdicts:
+  MK1.1:
+    algebra: correct
+    ceiling: >-
+      The generic-unit-vector SU(2) trace identity is exact, but its potential
+      interpretation is supplied and its accepted content is already covered
+      by C-CHI-002 and the declared-potential ceiling of C-BPS-001.
+    candidate_mapping: [C-CHI-002, C-BPS-001]
+  MK1.2:
+    algebra: correct_conditionally
+    ceiling: >-
+      The positive solution q=2 follows only after declaring the ANW prefactor
+      and requiring the chosen pion coordinate to have K=1. C-CHI-002 already
+      owns q=1 with K=1/4, q=2 with K=1, and coordinate-covariant generalized
+      mass. Calling one coordinate forced without naming that target convention
+      overstates the result.
+    candidate_mapping: [C-CHI-002]
+  MK1.3:
+    algebra: correct_conditionally
+    ceiling: >-
+      For A=mu_BPS^2 q=2 K=1 the positive coefficient match is exactly
+      mu_BPS=m*pi_scale/2. The relation is a specialization of C-BRK-001 and
+      C-CHI-002. PG2 and MC1 do not supply a physical pion field decay scale or
+      cross-sector medium map, so forced-by-the-medium and overdetermined are
+      rejected.
+    candidate_mapping: [C-BRK-001, C-CHI-002]
+  MK1.4:
+    algebra: correct_as_necessary_dimension_check
+    ceiling: >-
+      In natural units the proposed product m*pi_scale has energy dimension
+      two, consistent with the BPS coupling convention. Equal dimensions are
+      necessary and do not identify the medium and BPS coefficients.
+    candidate_mapping: [C-BPS-001]
+  MK1.5:
+    algebra: correct_conditionally
+    ceiling: >-
+      For the supplied V=1-cos(F) and round-S3 measure the exact normalized
+      average is 32*sqrt(2)/(15*pi), independently present in P107 evidence.
+      The potential shape is still supplied; no medium selection follows.
+    candidate_mapping: [C-BPS-001]
+  MK1.6:
+    algebra: tautological_given_MK1_3
+    ceiling: >-
+      Solving the assumed relation after rescaling mu_BPS necessarily rescales
+      its symbol m_pi. C-MED-003 derives only a gap ratio and explicitly no
+      physical pion map or absolute coefficient. P172 also rejects the source
+      flow as a symmetry of a fixed BPS theory. The claimed medium obstruction
+      and paid parameter debt do not follow.
+    candidate_mapping: [C-MED-003]
+  MK1.7:
+    algebra: correct_but_not_independent
+    ceiling: >-
+      The displayed definitions simplify identically to
+      m_tail=2*mu_BPS/F_pi. Setting m_tail=m_pi solves the same equation
+      mu_BPS=m_pi*F_pi/2 as MK1.3. This is a regression consequence of the same
+      kinetic-potential normalization, not an independent confirmation or map.
+    candidate_mapping: [C-BRK-001, C-CHI-002]
+headline_verdict: >-
+  The exact q=2 K=1 matching algebra survives conditionally. The claims that
+  the substrate supplies mu_BPS, that m_pi is an accepted physical medium gap,
+  that the tail route is independent, that KI2's family is broken by accepted
+  content, and that half the parameter debt is paid are not supported.
+provisional_disposition: qualified
+provisional_accepted_claims: [C-BRK-001, C-CHI-002, C-BPS-001]

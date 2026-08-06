@@ -1,0 +1,40 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:45:00Z'
+accepted_dependency_closure:
+  exact_periodic_matching:
+    claims: [C-BRK-001]
+    objects: [A, q, F, K, scalar_coordinate]
+    ceiling: no_field_ontology_physical_mass_coefficient_or_substrate_map
+  su2_trace_and_kinetic_normalization:
+    claims: [C-CHI-001, C-CHI-002]
+    objects: [U, Pauli_basis, Z, C, q, F, scalar_kinetic_metric]
+    ceiling: no_framework_chiral_action_physical_pion_decay_scale_or_derived_coefficient
+  bps_energy_and_average:
+    claims: [C-BPS-001]
+    objects: [lambda_BPS, mu_BPS, V, W, degree_density]
+    ceiling: potential_and_couplings_are_supplied
+  dimensional_medium:
+    claims: [C-MED-003]
+    objects: [u, lambda_medium, T_medium, mu_medium, gap_frequency]
+    ceiling: no_material_map_and_common_action_scale_unfixed
+  normalized_sine_gordon:
+    claims: [C-SG-001, C-SG-002, C-SG-003, C-SG-017]
+    ceiling: conditional_1plus1_field_family_only
+source_predecessors:
+  terminal_and_usable_at_ceiling: [E1, E2, E3, E4, KI2, MC1, NY1, PG2, S3]
+  pending_and_nonauthoritative: [MK2]
+missing_for_headline:
+  - accepted_map_from_medium_u_to_SU2_or_BPS_field
+  - accepted_map_from_1plus1_action_density_to_3plus1_BPS_energy_density
+  - accepted_conversion_from_mu_medium_to_mu_BPS_squared
+  - accepted_physical_pion_identity
+  - accepted_decay_scale_F_pi_from_the_medium
+  - independent_tail_datum_not_reusing_the_same_coefficient_relation
+dimension_ledger:
+  natural_unit_mu_BPS: E^2
+  natural_unit_mu_medium: E^2
+  verdict: equal_dimensions_are_necessary_but_do_not_supply_the_missing_maps
+closure_verdict: >-
+  The exact conditional relation closes through accepted algebra. The physical
+  medium-supplied headline does not close and is not imported into any
+  accepted claim.

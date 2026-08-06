@@ -1,0 +1,29 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+verifier:
+  path: campaigns/P214-mk1-medium-potential-matching-audit/verify.py
+  sha256: ec4b936296a16bb0ca92b9ab75ba5bb190fe5ff07e92b87b2e9067ad6c022dcb
+source:
+  path: merged-framework/bridges/phase-43/bridge_MK1_mu_from_medium_cosine.py
+  sha256: 98ff5459ae3c6cb64a9a7632fbaa8613f1f5b1adb68419de25ffa06b1c3a3222
+frozen_contract:
+  path: campaigns/P214-mk1-medium-potential-matching-audit/evidence/formula-freeze.yaml
+  sha256: 497b0d9f333c8e55e8a44dc34f9b9873ecc49d03d6c77b7531da9375e10ad8c6
+accepted_modules:
+  - {path: src/substrate_framework/explicit_breaking.py, sha256: 6fdf845ed5501867295e6c1d50d560d7f623ce205310ff2f7213dd734b1e265f}
+  - {path: src/substrate_framework/bps_energy.py, sha256: 09e3bb41b98ba21f2909117ab1361020dfc7f12ef2722e9f620a65336bbe7d13}
+  - {path: src/substrate_framework/dimensional_sine_gordon.py, sha256: 4a5552209d459620cdfa88e09c2014112a5e9063b78ac03b34984c4ce0e49524}
+command: PYTHONPATH=src .venv/bin/python campaigns/P214-mk1-medium-potential-matching-audit/verify.py
+result:
+  exit_code: 0
+  checks: 29
+  terminal_tally: ALL 29 CHECKS PASS [P214]
+exact_surface:
+  generalized_mass_squared: mu_BPS^2*q^2/(K*F^2)
+  positive_match: mu_BPS=m*F*sqrt(K)/q
+  source_specialization: mu_BPS=m*F/2_at_q2_K1
+  trace_coordinate_covariance: q1_K1_over_4_and_q2_K1_both_give_m_squared
+  shape_average: 32*sqrt(2)/(15*pi)
+  tail_identity: m_tail=2*mu_BPS/F
+  medium_countermodel: fixed_gap_and_variable_absent_F_give_distinct_BPS_couplings
+status: passed

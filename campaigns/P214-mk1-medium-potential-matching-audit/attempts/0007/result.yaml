@@ -1,0 +1,30 @@
+attempt: 0007
+campaign: P214
+timestamp_utc: '2026-08-06T09:55:18Z'
+kind: generated_queue_hygiene_and_workflow_self_optimization
+generated_queue:
+  authority: migration/dispositions.yaml
+  generated_output: migration/source-claims.yaml
+  command: >-
+    .venv/bin/python scripts/inventory_claims.py --source-root
+    /home/dan/substrate --source-inventory
+    campaigns/P001-sine-gordon-root/evidence/source-inventory.yaml --scope
+    migration/scope.yaml --dispositions migration/dispositions.yaml --output
+    migration/source-claims.yaml
+  exit_code: 0
+  reproduced_MK1_disposition: qualified
+  reproduced_counts: {pending: 10, qualified: 195, total: 218}
+workflow_refinements:
+  - eliminate_shared_intermediate_variables_before_calling_a_downstream_check_independent
+  - require_explicit_field_kinetic_metric_action_measure_and_coefficient_maps_for_cross_sector_matching
+  - name_the_authoritative_migration_queue_generator_in_the_campaign_template
+files:
+  - AGENTS.md
+  - .agents/skills/physics-erdos-loop/SKILL.md
+  - memory-templates/campaign-proposal.md
+  - memory-templates/claim-review.md
+  - memory-templates/effort-contract.md
+scientific_candidate_changed: false
+accepted_claim_changed: false
+status: passed
+continuation: validate_skill_repository_memory_generated_state_and_diff_then_commit_the_record_only_boundary

@@ -1,0 +1,32 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:32:57Z'
+opened_source:
+  formulae:
+    - V(U)=(1/2)*Tr(1-U)=1-cos(F)
+    - L2=(F_pi^2/16)*Tr(dU*dU_dagger)
+    - F=alpha*pi/F_pi_with_source_solution_alpha=2
+    - mu_BPS^2*(1-cos(2*pi/F_pi))_matched_to_m_pi^2*pi^2/2
+    - W=(1/(2*pi^2))*integral_S3_sqrt(1-cos(F))*Omega
+    - L_unit=2/(e*F_pi)
+    - c0=4*e*mu_BPS^2*L_unit^3/F_pi
+    - m_tail=sqrt(c0/2)/L_unit
+  source_claimed_solution: mu_BPS=m_pi*F_pi/2
+  exact_tail_simplification: m_tail=2*mu_BPS/F_pi
+claim_decision:
+  promoted_new_claims: []
+  reserved_unpromoted_claims: [C-BPS-004]
+  reason: >-
+    C-BRK-001 already owns the general periodic generalized-mass formula and
+    C-CHI-002 owns the exact q=1 and q=2 SU(2) trace and kinetic conversions.
+    C-BPS-001 treats mu_BPS and V as supplied. The source adds no accepted
+    medium-to-BPS map, while its W value is already independently recorded in
+    P107 evidence. A BPS-specific wrapper would duplicate accepted APIs.
+selected_candidates:
+  A: exact_composition_evidence
+  B: global_matching_gate_retained
+  C: selected_no_new_claim
+  D: required_and_unsupplied_cross_sector_map
+  E: tail_classified_as_dependent_regression
+  F: retained_identifiability_countermodel
+  G: rejected_as_duplicate_API_surface
+  H: pending_terminal_review

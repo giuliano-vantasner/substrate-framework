@@ -1,0 +1,89 @@
+campaign: P214
+title: MK1 medium-to-BPS potential matching audit
+source_baseline: substrate@6d1f4e0
+source_units: [MK1]
+base_release: v0.155.0
+accepted_release: v0.155.0
+adjudicated_at: '2026-08-06T09:45:00Z'
+selected_candidates:
+  - {id: A, reason: Exact_positive_generalized_mass_match_survives_as_accepted_composition.}
+  - {id: B, reason: Global_potential_equality_requires_explicit_field_measure_period_and_amplitude_maps.}
+  - {id: C, reason: Q2_K1_relation_is_already_C_BRK_001_plus_C_CHI_002.}
+  - {id: D, reason: Medium_to_BPS_map_is_required_and_not_accepted.}
+  - {id: E, reason: Tail_route_is_a_dependent_regression_with_the_same_positive_solution.}
+  - {id: F, reason: Fixed_medium_gap_and_free_absent_decay_scale_leave_distinct_BPS_couplings.}
+  - {id: H, reason: MK1_receives_a_terminal_qualified_disposition_without_later_authority.}
+claims: []
+accepted_composition:
+  - {id: C-BRK-001, decision: unchanged_general_periodic_mass_and_local_global_ceiling}
+  - {id: C-CHI-002, decision: unchanged_SU2_trace_and_coordinate_covariant_mass_ceiling}
+  - {id: C-BPS-001, decision: unchanged_supplied_potential_target_average_and_bound_ceiling}
+unpromoted_claims:
+  - {id: C-BPS-004, reason: Reserved_identifier_would_duplicate_C_BRK_001_C_CHI_002_and_existing_APIs.}
+  - {id: medium_supplies_mu_BPS, reason: No_field_measure_dimensionful_coefficient_or_physical_pion_map_is_accepted.}
+  - {id: independent_tail_confirmation, reason: Source_definitions_reduce_to_m_tail_equals_2_mu_BPS_over_F_and_the_same_equation.}
+  - {id: KI2_family_broken_by_medium, reason: The_relation_is_assumed_and_C_MED_003_has_no_physical_pion_or_BPS_map.}
+  - {id: potential_shape_selected, reason: V_equals_1_minus_cos_F_is_supplied_model_data.}
+  - {id: parameter_debt_paid, reason: Physical_m_pi_F_pi_and_cross_sector_identification_remain_imports.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_matching_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  post_source_claim_delta: evidence/post-source-claim-delta.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_analysis: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+  source_adjudication: reviews/source_adjudication.md
+  claim_composition_review: reviews/existing_claim_composition_review.md
+  source_review: reviews/MK1-disposition-review.md
+  review_impact_analysis: reviews/impact_analysis.md
+  decision_memory: ../../memory/vantasner/decisions/MK1-qualified-review.md
+  workflow_self_optimization: attempts/0007/result.yaml
+  terminal_attempt: attempts/0008/result.yaml
+source_disposition:
+  MK1: qualified
+accepted_claims:
+  MK1: [C-BRK-001, C-CHI-002, C-BPS-001]
+compatibility:
+  installed_numpy: 2.5.1
+  graph_legacy_nodes: [E1, E2, E3]
+  safe_current_first_lazy: true
+  eager_legacy_default_fallbacks: 0
+  alias_used: false
+  scientific_candidate_failures: 0
+verification:
+  primary_checks: 29
+  independent_checks: 11
+  graph_nodes: 17
+  graph_lexical_predicates: 129
+  graph_assertions: 18
+  graph_checks: 7
+  focused_tests: 57
+  workflow_tests: 7
+  memory_files_validated: 872
+release_change: null
+validation_commands:
+  - PYTHONPATH=src .venv/bin/python campaigns/P214-mk1-medium-potential-matching-audit/verify.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P214-mk1-medium-potential-matching-audit/reviews/independent_matching_review.py
+  - PYTHONPATH=src .venv/bin/python campaigns/P214-mk1-medium-potential-matching-audit/reviews/replay_source_graph.py
+  - .venv/bin/python -m pytest -q tests/test_explicit_breaking.py tests/test_bps_energy.py tests/test_dimensional_sine_gordon.py tests/test_source_audit.py
+  - PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+  - .venv/bin/python scripts/render_docs.py --check
+  - .venv/bin/python .agents/skills/physics-erdos-loop/scripts/validate_skill.py .agents/skills/physics-erdos-loop
+  - memory validate --base "$PWD" "$PWD/memory"
+  - git diff --check
+debt: []
+status: accepted_qualified_no_release

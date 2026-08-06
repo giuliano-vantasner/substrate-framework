@@ -2,7 +2,7 @@
 description: Audit MK1 medium-to-BPS potential matching and coefficient closure
 author: vantasner
 created: '2026-08-06T09:26:17Z'
-updated: '2026-08-06T09:26:17Z'
+updated: '2026-08-06T09:58:25Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - bps-potential
 - normalization
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P214 MK1 Medium Potential Matching Audit
 
@@ -123,6 +123,55 @@ inspection. If the medium-to-BPS interpretation fails, P214 continues through
 the exact conditional matching object and terminal adjudication instead of
 ending on the obstruction.
 
+Attempt 0002 finds no NumPy surface in MK1 and no eager legacy fallback in its
+eleven-node declared graph. E1 through E3 use a safe current-first lazy branch;
+no alias is needed. Native MK1 reproduces seven runtime checks and its terminal
+tally in 1.34 seconds. Inspection confirms the conditional `q=2,K=1` match and
+the exact round-S3 average, but it also shows that the claimed independent tail
+route simplifies identically to `m_tail=2*mu_BPS/F_pi`; imposing
+`m_tail=m_pi` is the same equation as MK1.3. Accepted PG2 and MC1 ceilings do
+not supply a physical pion, decay scale, or medium-to-BPS action map.
+
+Attempt 0003 preserves the primary verifier stopping after eighteen exact
+checks because its tail-equivalence assertion compared `[F*m/2]` with the
+unspecialized family `[F*sqrt(K)*m/q]`. The repair substitutes the already
+frozen source convention `q=2,K=1` before comparing solution sets; it changes
+no candidate, formula, source verdict, or tolerance.
+
+Attempt 0004 completes twenty-nine primary and eleven fresh independent exact
+checks. Both routes derive the positive convention-covariant relation, the
+source specialization, coordinate covariance, the target average, tail
+circularity, and a same-medium/different-decay-scale countermodel. Existing
+pure APIs own every survivor, so C-BPS-004 remains reserved and no package
+wrapper is added.
+
+Attempt 0005 preserves and repairs a read-only reverse-consumer inventory query
+whose shell-quoted Python f-string contained invalid backslash escapes. It did
+not read source data or alter scientific state; the corrected query finds MK2
+through MK6, MR2, and MR6.
+
+Attempt 0006 replays seventeen pinned predecessor, root, and reverse-consumer
+nodes: 129 lexical predicates, 18 assertions, and every runtime tally pass.
+Only E1 through E3 expose a legacy name, each behind a current-first lazy branch
+with no eager-default bug, so NumPy 2.5.1 needs no alias. Later units remain
+noncanonical evidence only. Fifty-seven focused accepted-API and compatibility
+tests also pass.
+
+Attempt 0007 restores generated-queue discipline by regenerating
+`migration/source-claims.yaml` from `migration/dispositions.yaml`, reproducing
+10 pending and 195 qualified units. It then tightens existing workflow
+paragraphs so algebraically equivalent downstream checks are dependent
+regressions, cross-sector coefficient matches require explicit typed maps, and
+future campaigns invoke the authoritative queue generator. No new workflow
+layer, scientific claim, or tolerance is introduced.
+
+Attempt 0008 closes the record-only boundary. Repository validation reports
+197 accepted claims, zero active proposals, 218 units, and 10 pending; the
+physics skill is valid, generated claim documentation is current, all 872
+memory files and 29 campaign/migration YAML files validate, and diff hygiene
+passes. The unchanged v0.155.0 full suite is not repeated because P214 changes
+no accepted claim, release, or canonical API.
+
 ## Debt Ledger
 
 The P214 ledger tracks BPS and medium coefficient types, dimensions, action
@@ -132,14 +181,14 @@ dependency, pending authority, compatibility, consumers, and generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MK1 predicates remain blinded | Reproduce once after committed freeze | open |
-| The same symbol may hide different coefficient types | Build a typed dimensional and measure ledger | open |
-| A local Hessian may be presented as a global model identity | Compare full functions and periods | open |
-| A tail may circularly reuse the coefficient match | Trace every tail premise and construct a dependent-evidence audit | open |
-| PG2's rejected normalization may leak into MK1 | Replay exact q, K, Z, and C conventions | open |
-| Pending MK2 may grant backward authority | Replay the terminal graph without later imports | open |
-| Compatibility may masquerade as science | Audit all executable integration-name access before native replay | open |
-| Claim novelty and generated state remain unresolved | Complete nonduplication, review, disposition, generation, and the proper promotion or record-only gate | open |
+| MK1 predicates remain blinded | Reproduce once after committed freeze | discharged by attempt 0002 |
+| The same symbol may hide different coefficient types | Build a typed dimensional and measure ledger | discharged by attempts 0004 and 0006 |
+| A local Hessian may be presented as a global model identity | Compare full functions and periods | discharged by attempt 0004 |
+| A tail may circularly reuse the coefficient match | Trace every tail premise and construct a dependent-evidence audit | discharged by attempts 0002 and 0004 |
+| PG2's rejected normalization may leak into MK1 | Replay exact q, K, Z, and C conventions | discharged by attempt 0004 |
+| Pending MK2 may grant backward authority | Replay the terminal graph without later imports | discharged by attempt 0006 |
+| Compatibility may masquerade as science | Audit all executable integration-name access before native replay | discharged by attempts 0002 and 0006 |
+| Claim novelty and generated state remain unresolved | Complete nonduplication, review, disposition, generation, and the proper promotion or record-only gate | discharged by terminal review and record-sensitive closeout |
 
 ## Review and Promotion Plan
 
@@ -153,11 +202,12 @@ suite.
 
 ## Done Gate
 
-The campaign closes only when the exact positive matching ledger, dependency
-typing, source reproduction, mutation-sensitive verification, individual
-claim review, terminal source disposition, downstream replay, canonical
-records, and debt ledger all agree. A version-only NumPy event, failed physical
-interpretation, or passing source tally is not completion.
+The campaign done gate passes at a record-only boundary. The exact positive
+matching ledger, dependency typing, source reproduction, mutation-sensitive
+primary and independent verification, individual claim review, terminal
+qualified disposition, downstream replay, compatibility audit, canonical
+records, and generated state agree. C-BPS-004 remains reserved and unpromoted,
+the accepted release remains v0.155.0, and the P214 debt ledger is empty.
 
 ## Cross-References
 

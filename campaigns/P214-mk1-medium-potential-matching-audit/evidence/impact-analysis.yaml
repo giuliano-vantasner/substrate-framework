@@ -1,0 +1,35 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:45:00Z'
+change_class: terminal_source_disposition_without_claim_API_or_release_change
+canonical_symbols_changed: []
+accepted_claims_changed: []
+release_manifest_changed: false
+direct_records:
+  - migration/source-claims.yaml
+  - migration/dispositions.yaml
+  - memory/vantasner/decisions/MK1-qualified-review.md
+  - memory/vantasner/efforts/framework-migration.md
+  - AGENTS.md
+  - .agents/skills/physics-erdos-loop/SKILL.md
+  - memory-templates/campaign-proposal.md
+  - memory-templates/claim-review.md
+  - memory-templates/effort-contract.md
+generated_records: []
+reverse_consumers:
+  - MK2
+  - MK3
+  - MK4
+  - MK5
+  - MK6
+  - MR2
+  - MR6
+formal_theorems_affected: []
+package_tests_affected: []
+workflow_validator_affected: true
+release_tests_affected: []
+graph_index_needed: false
+reason_graph_index_not_needed: no_canonical_symbol_or_execution_flow_changes
+validation_boundary: >-
+  This is a record-only terminal disposition. Run targeted scientific,
+  repository, skill, migration, generated-claim no-drift, memory, YAML, and diff checks. Do not
+  rerun the unchanged full 1,887-test release gate merely for ceremony.

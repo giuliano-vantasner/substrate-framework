@@ -1,0 +1,16 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+command: >-
+  .venv/bin/python -m pytest -q tests/test_explicit_breaking.py
+  tests/test_bps_energy.py tests/test_dimensional_sine_gordon.py
+  tests/test_source_audit.py
+files:
+  - {path: tests/test_explicit_breaking.py, sha256: ddd4427ad7b46d62763dd58cf7a616cad173b0f91596c53e88a289192b1bf779}
+  - {path: tests/test_bps_energy.py, sha256: b52db01583cf351891074cd656ac51414bdb13d9dac2536398c9847cb0863edb}
+  - {path: tests/test_dimensional_sine_gordon.py, sha256: e447b97503e90d00d012a75ea8bb81e00465ef098247b979d499a9d96cb6be60}
+  - {path: tests/test_source_audit.py, sha256: 4d7c6009b2beeac3fa5cc71aeb4434c57494f7157690253bcf9e5e9059b6ef3f}
+result:
+  exit_code: 0
+  tests_passed: 57
+  seconds: 3.33
+status: passed

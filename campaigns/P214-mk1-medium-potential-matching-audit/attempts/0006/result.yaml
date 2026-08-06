@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+kind: pinned_source_graph_and_focused_consumer_replay
+graph:
+  nodes: 17
+  lexical_predicates: 129
+  assertions: 18
+  aggregate_checks: 7
+  clean_runtime_nodes: 17
+  eager_legacy_default_fallbacks: 0
+  scientific_version_failures: 0
+  later_authority_imports: 0
+focused_tests:
+  passed: 57
+  seconds: 3.33
+status: passed
+continuation: complete_claim_level_reviews_impact_analysis_and_terminal_adjudication

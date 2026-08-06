@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T09:20:05Z'
+updated: '2026-08-06T09:45:00Z'
 tags:
 - substrate-framework
 - effort
@@ -2457,27 +2457,44 @@ checks, and 192 focused tests pass. The 16-node graph pins 133 predicates and
 870 memory files and passes all 1,887 tests in 180.23 pytest seconds and 194.13
 seconds total wall time with exit zero.
 
+P214 qualifies MK1 at unchanged v0.155.0 through C-BRK-001, C-CHI-002, and
+C-BPS-001. The exact positive convention-covariant match is
+`mu_BPS=m*F*sqrt(K)/q`; the source relation is its `q=2,K=1` specialization,
+and the supplied one-cosine round-S3 average is exact. No accepted field,
+measure, coefficient, physical-pion, or decay-scale map connects C-MED-003 to
+the BPS energy. The source tail simplifies to `2*mu_BPS/F`, so it restates the
+same match rather than independently confirming it. The medium-supplied
+coupling, selected potential, broken KI2 family, paid debt, and downstream
+physical conclusions remain unaccepted. Twenty-nine primary, 11 independent,
+7 graph checks, and 57 focused tests pass. The 17-node graph pins 129 predicates
+and 18 assertions; E1 through E3 safely select `numpy.trapezoid` with no eager
+legacy fallback or scientific version failure.
+P214 also tightens the existing contract, physics skill, and task templates to
+eliminate shared variables before independence claims, require typed
+cross-sector maps, and regenerate the migration queue from dispositions.
+
 ## Canonicalization
 The registry, `v0.155.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety-seven accepted claims.
-P001 through P213 are frozen under `campaigns/`; proposal,
+P001 through P214 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 11 pending, 0 partial, 3
-migrated, 194 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P213 changes the accepted scientific surface and therefore runs the most
-recent full integrated release boundary.
+memory. The regenerated migration queue agrees on 10 pending, 0 partial, 3
+migrated, 195 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P213 remains the most recent accepted-surface change and full integrated
+release boundary; P214 uses a record-sensitive closeout.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 11
-pending, 3 migrated, 194 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 10
+pending, 3 migrated, 195 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle and GC1-GC6 are terminal without backward authority.
-The next campaign audits MK1 against the accepted Skyrme, pion-mass,
-normalization, and parameter-identifiability ceilings. The remaining order is
-MK1 through MK6, then MR2 through MR6.
+The WM7-WM10 source cycle, GC1-GC6, and MK1 are terminal without backward
+authority. The next campaign audits MK2's claimed vector-meson derivation of
+the BPS sextic coupling without importing refuted KI1 or MK1's rejected
+physical medium map. The remaining order is MK2 through MK6, then MR2 through
+MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

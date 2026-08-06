@@ -1,0 +1,17 @@
+attempt: 0005
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+kind: procedural_reverse_consumer_inventory_query_repair
+failed_command_shape: python_c_f_string_with_backslash_escaped_mapping_keys
+failure: SyntaxError_unexpected_character_after_line_continuation_character
+mechanism: >-
+  Backslash-escaped mapping keys were embedded inside a shell-quoted Python
+  f-string. The read-only inventory query never reached repository data and
+  made no filesystem change.
+repair: use_str_format_with_unescaped_mapping_key_literals
+corrected_result:
+  reverse_consumers: [MK2, MK3, MK4, MK5, MK6, MR2, MR6]
+  exit_code: 0
+scientific_candidate_changed: false
+status: failed_procedural_attempt_preserved_and_repaired
+continuation: execute_the_pinned_graph_replay

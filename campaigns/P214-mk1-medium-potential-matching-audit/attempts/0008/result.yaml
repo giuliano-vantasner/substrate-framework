@@ -1,0 +1,33 @@
+attempt: 0008
+campaign: P214
+timestamp_utc: '2026-08-06T09:57:00Z'
+kind: terminal_record_only_closeout
+boundary:
+  accepted_claim_change: false
+  release_change: false
+  canonical_API_change: false
+  source_disposition_change: MK1_pending_to_qualified
+already_closed_scientific_gates:
+  primary_checks: 29
+  independent_checks: 11
+  graph_checks: 7
+  graph_nodes: 17
+  focused_tests: 57
+  workflow_tests: 7
+full_integrated_gate:
+  rerun: false
+  reason: >-
+    P213's unchanged v0.155.0 release boundary already passed all 1,887 tests.
+    P214 changes no accepted claim release or canonical API, so repeating that
+    suite would be validation ceremony rather than new risk coverage.
+record_sensitive_validation:
+  repository: WORKFLOW_VALID_197_claims_0_proposals_218_units_10_pending_0_partial
+  physics_skill: valid
+  migration_generation: reproduced_from_dispositions
+  generated_docs: current
+  memory_files_validated: 872
+  yaml_files_parsed: 29
+  diff_check: passed
+  status: passed
+status: passed
+continuation: commit_the_terminal_record_only_boundary_then_begin_MK2

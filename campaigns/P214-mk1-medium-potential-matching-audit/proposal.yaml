@@ -54,7 +54,7 @@ selection_criteria:
   - distinction between local curvature global equality and physical ontology
   - novelty beyond C-BRK-001 C-CHI-002 C-BPS-001 and C-MED-003
   - terminal authority consumer and generated-state closure
-claims_proposed: [C-BPS-004]
+claims_proposed: []
 reserved_unpromoted_claims: [C-BPS-004]
 comparators_blinded_until: >-
   The generated queue exposes MK1's headline, seven static literal check sites,
@@ -64,5 +64,23 @@ comparators_blinded_until: >-
   rejection guards, imports, native output, and consumer details remain
   unopened until this manifest, prose contract, formula freeze, provenance
   record, validation record, and freeze commit exist.
-status: active
-revision: 0001
+status: accepted
+revision: 0003
+opened_source_equations:
+  bps_potential: mu_BPS^2*(1-cos(F))
+  anw_kinetic: (F_pi^2/16)*Tr(dU*dU_dagger)
+  source_coordinate: F=2*pi/F_pi
+  source_match: mu_BPS=m_pi*F_pi/2
+  shape_average: W=32*sqrt(2)/(15*pi)
+  radial_length_unit: L=2/(e*F_pi)
+  radial_potential_coefficient: c0=4*e*mu_BPS^2*L^3/F_pi
+  exact_tail_reduction: m_tail=sqrt(c0/2)/L=2*mu_BPS/F_pi
+opened_source_parameters:
+  all_load_bearing_inputs_symbolic: true
+  branch_grid_points: 13
+claim_refinement:
+  C_BPS_004: >-
+    Reserved but not promoted. The exact positive relation
+    mu_BPS=m*F*sqrt(K)/q is solved directly from C-BRK-001, the q=2 K=1
+    specialization and trace normalization are already C-CHI-002, and no
+    accepted medium-to-BPS map creates a novel BPS claim.

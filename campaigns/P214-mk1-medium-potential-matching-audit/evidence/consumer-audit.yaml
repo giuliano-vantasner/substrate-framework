@@ -1,0 +1,38 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:45:00Z'
+accepted_consumers:
+  C-BRK-001: unchanged
+  C-CHI-002: unchanged
+  C-BPS-001: unchanged
+  C-MED-003: unchanged
+pending_reverse_consumers:
+  MK2:
+    effect: >-
+      May use MK1's q=2 K=1 algebra only conditionally; it cannot treat a
+      physical medium-supplied mu_BPS as accepted input when deriving lambda.
+  MK3:
+    effect: Cannot pin epsilon from MK1 and MK2 because MK1's physical coefficient map is rejected and MK2 remains pending.
+  MK4:
+    effect: May study the supplied V=1-cos(F) model but cannot call its shape or coefficient medium-derived.
+  MK5:
+    effect: Cannot backsolve a physical kappa from an unaccepted MK1 coefficient identification.
+  MK6:
+    effect: Any comparator confrontation retains MK1's m_pi F_pi and cross-sector map as explicit imports rather than predictions.
+  MR2:
+    effect: Must audit BPS normalization independently and cannot promote MK1 by reverse citation.
+  MR6:
+    effect: Its ledger must preserve MK1's conditional ceiling and unresolved physical coefficient debt.
+historical_records:
+  P107: >-
+    Its statement that MK1 was pending is immutable provenance at v0.91.0;
+    P214 now makes MK1 terminal without changing P107's accepted claim.
+  P172: >-
+    Its statement that MK1 was pending is immutable provenance at v0.127.0;
+    P214 confirms that MK1 still does not select a physical epsilon or close
+    the accepted parameter family.
+generated_consumers: []
+generated_state_note: >-
+  No generated accepted-claim or release consumer changes because the accepted
+  claim set and release manifest are unchanged. The migration registries are
+  direct governed records rather than rendered documentation.
+release_effect: none

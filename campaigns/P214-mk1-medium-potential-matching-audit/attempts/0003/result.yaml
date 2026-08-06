@@ -1,0 +1,17 @@
+attempt: 0003
+campaign: P214
+timestamp_utc: '2026-08-06T09:36:00Z'
+kind: primary_verifier_implementation_repair
+command: PYTHONPATH=src .venv/bin/python proposals/P214-mk1-medium-potential-matching-audit/verify.py
+passed_before_stop: 18
+failed_check: tail_matching_solves_exactly_the_same_coefficient_equation_as_local_mass_matching
+mechanism: >-
+  The verifier compared the tail solution [F*m/2] with the unspecialized
+  curvature family [F*sqrt(K)*m/q] instead of substituting the already frozen
+  source convention q=2 K=1 into the latter. Both exact routes independently
+  print [F*m/2] after the declared specialization.
+scientific_candidate_changed: false
+tolerance_changed: false
+repair: compare_the_tail_solution_with_the_q2_K1_specialization_of_the_general_family
+status: failed_implementation_preserved
+continuation: rerun_the_repaired_primary_verifier_from_a_clean_process

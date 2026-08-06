@@ -1,0 +1,34 @@
+attempt: 0002
+campaign: P214
+timestamp_utc: '2026-08-06T09:32:57Z'
+kind: compatibility_preflight_native_reproduction_and_source_decomposition
+freeze_commit: 95dab62eb1be918317f28cb84ac5256525a1290b
+source_body_opened: true
+compatibility:
+  MK1_legacy_references: 0
+  MK1_current_references: 0
+  graph_eager_legacy_default_fallbacks: 0
+  alias_used: false
+native_reproduction:
+  exit_code: 0
+  runtime_checks: 7
+  terminal_tally: ALL 7 CHECKS PASS
+  wall_seconds: 1.34
+  peak_rss_kib: 58860
+scientific_result:
+  exact_survivors:
+    - conditional_SU2_trace_identity
+    - conditional_q2_K1_mu_match
+    - natural_unit_dimension_agreement
+    - supplied_cosine_round_S3_average
+    - dependent_tail_regression
+  rejected_interpretations:
+    - accepted_medium_supplies_BPS_mu
+    - accepted_physical_pion_and_decay_scale_map
+    - tail_route_is_independent
+    - accepted_content_breaks_the_KI2_family
+    - half_the_parameter_debt_is_paid
+  new_claims: []
+  reserved_unpromoted_claims: [C-BPS-004]
+status: passed_with_qualified_source_ceiling
+continuation: implement_primary_and_fresh_independent_exact_verifiers_then_replay_the_terminal_graph

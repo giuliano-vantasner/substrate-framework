@@ -1,0 +1,17 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:41:25Z'
+reviewer:
+  path: campaigns/P214-mk1-medium-potential-matching-audit/reviews/independent_matching_review.py
+  sha256: b1364d7765d2806c473fedbb4b5d027ff6d0b19a929055e48e73578f086522b0
+command: PYTHONPATH=src .venv/bin/python campaigns/P214-mk1-medium-potential-matching-audit/reviews/independent_matching_review.py
+method_independence:
+  - differentiates the periodic potential directly without importing explicit_breaking
+  - rederives the ANW kinetic metric from explicit matrices
+  - evaluates the shape average by a half-angle beta integral
+  - simplifies the radial tail before substituting the source relation
+  - constructs a symbolic medium common-scale orbit and absent-decay-scale countermodel
+result:
+  exit_code: 0
+  checks: 11
+  terminal_tally: ALL 11 CHECKS PASS [P214-INDEPENDENT]
+status: passed

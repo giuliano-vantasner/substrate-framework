@@ -1,0 +1,30 @@
+campaign: P214
+timestamp_utc: '2026-08-06T09:32:57Z'
+environment:
+  numpy: 2.5.1
+  numpy_trapezoid_available: true
+  numpy_trapz_available: false
+policy:
+  mutable: numpy.trapezoid_or_substrate_framework.numerics.trapezoid_integral
+  immutable: alias_only_replay_backed_by_numpy.trapezoid_when_required
+  scientific_failure_from_version_only_event: false
+scan_shapes: [direct_attribute, imported_name, dynamic_getattr, eager_nested_default, local_import]
+source_graph:
+  E1: {legacy_references: 1, current_references: 1, eager_legacy_default_fallbacks: 0, route: current_first_lazy_legacy_fallback}
+  E2: {legacy_references: 1, current_references: 1, eager_legacy_default_fallbacks: 0, route: current_first_lazy_legacy_fallback}
+  E3: {legacy_references: 1, current_references: 1, eager_legacy_default_fallbacks: 0, route: current_first_lazy_legacy_fallback}
+  E4: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  KI2: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  MC1: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  MK1: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  MK2: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  NY1: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  PG2: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+  S3: {legacy_references: 0, current_references: 0, eager_legacy_default_fallbacks: 0}
+native_MK1_requires_alias: false
+verdict: >-
+  MK1 has no NumPy surface. E1 through E3 select numpy.trapezoid in the
+  installed environment and evaluate the removed name only on the lazy branch;
+  no graph node has the eager-default bug. No compatibility repair or alias is
+  required for MK1 reproduction, and no scientific candidate is rejected on a
+  version event.

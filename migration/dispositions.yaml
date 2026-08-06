@@ -1771,6 +1771,65 @@ units:
       scientific version failures. The single integrated v0.155.0 boundary
       validates 870 memory files and passes all 1,887 tests in 180.23 pytest
       seconds and 194.13 seconds total wall time with exit zero.
+  MK1:
+    disposition: qualified
+    accepted_claims:
+      - C-BRK-001
+      - C-CHI-002
+      - C-BPS-001
+    qualification: >-
+      MK1's exact surviving content is the convention-covariant periodic
+      generalized-mass match, its q=2 K=1 specialization
+      mu_BPS=m_pi*F_pi/2, the SU(2) trace and ANW kinetic conversion,
+      natural-unit dimension agreement, and the supplied one-cosine round-S3
+      average 32*sqrt(2)/(15*pi). These map existing claims without a new
+      claim. PG2 and MC1 do not supply an accepted physical pion, decay scale,
+      field map, action-measure map, or conversion from the 1+1 medium onsite
+      coefficient to mu_BPS squared. The source tail definitions simplify to
+      m_tail=2*mu_BPS/F_pi, so setting m_tail=m_pi is the same equation rather
+      than independent confirmation. The medium-supplied coupling, selected
+      potential, broken KI2 family, paid parameter debt, and downstream
+      physical closure are not accepted.
+    evidence:
+      - campaigns/P214-mk1-medium-potential-matching-audit/reviews/source_adjudication.md
+      - campaigns/P214-mk1-medium-potential-matching-audit/reviews/existing_claim_composition_review.md
+      - campaigns/P214-mk1-medium-potential-matching-audit/reviews/MK1-disposition-review.md
+      - campaigns/P214-mk1-medium-potential-matching-audit/reviews/impact_analysis.md
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/source-reproduction.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/compatibility-audit.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/source-audit.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/check-adjudication.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/formula-freeze.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/input-provenance.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/post-source-claim-delta.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/dependency-audit.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/consumer-audit.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/candidate-comparison.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/implementation-audit.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/impact-analysis.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/primary-provenance.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/independent-provenance.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/evidence/focused-test-replay.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/verify.py
+      - campaigns/P214-mk1-medium-potential-matching-audit/reviews/independent_matching_review.py
+      - campaigns/P214-mk1-medium-potential-matching-audit/reviews/replay_source_graph.py
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0001/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0002/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0003/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0004/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0005/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0006/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0007/result.yaml
+      - campaigns/P214-mk1-medium-potential-matching-audit/attempts/0008/result.yaml
+      - memory/vantasner/decisions/MK1-qualified-review.md
+    note: >-
+      P214 closes 29 primary, 11 independent, and 7 aggregate terminal graph
+      checks plus 57 focused tests. The 17-node graph pins 129 predicates and
+      18 assertions. E1 through E3 use safe current-first lazy
+      numpy.trapezoid compatibility; no alias or scientific version failure
+      occurs. The accepted release remains v0.155.0 with 197 claims.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:
