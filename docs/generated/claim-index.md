@@ -1704,6 +1704,15 @@ For any differentiable one-coordinate Lagrangian L0 and any nonzero multiplier A
 - Compatibility: `native`
 - Dependencies: none
 
+## C-VAR-002
+
+Let X be a nonempty set, let n be a positive integer, and let E_1,...,E_n be real-valued functionals on X whose component infima m_i=inf_{x in X} E_i(x) are finite real numbers. Then the joint functional has a finite infimum M=inf_{x in X} sum_i E_i(x) and M>=sum_i m_i. Equality holds if and only if, for every epsilon>0, there exists one common x_epsilon in X such that 0<=E_i(x_epsilon)-m_i<epsilon for every i. If the joint infimum is attained, equality holds if and only if a joint minimizer is simultaneously a minimizer of every component; under equality every joint minimizer has that property. Pointwise, the joint excess above the sum of separate infima is exactly sum_i(E_i(x)-m_i), a finite sum of nonnegative component excesses. Thus a sum of energy terms evaluated on one shared configuration does not generally equal a sum of separately minimized component energies; incompatible component minimizers can make the joint inequality strict. This exact order theorem proves no existence or attainment for a particular field model and derives no action, coefficient, state, sector mass, binding energy, double-counting diagnosis, observation, or substrate mechanism.
+
+- Accepted in: `v0.158.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-VEC-001
 
 Let x be a nonempty exact real matrix with three columns, define L_i=i*x_i^a*sigma_a using the Pauli convention of C-CHI-001, let G_ij=x_i dot x_j, I1=Tr(G)^2, and I2=Tr(G^2), and use ordered sums over i,j. Then sum_ij |x_i cross x_j|^2=I1-I2 and sum_ij Tr([L_i,L_j]^2)=-8*(I1-I2). Separately declare positive exact kappa and dimensionless g. The quadratic density kappa*sum_ia(v_i^a-x_i^a/2)^2 has the unique stationary point v=x/2 and positive Hessian 2*kappa*I. If L obeys Maurer-Cartan flatness, the half connection Gamma_i=L_i/2 has F_ij(Gamma)=-[L_i,L_j]/4. Substitution into the separately declared curvature density -sum_ij Tr(F_ij*F_ij)/(2*g^2) gives -sum_ij Tr([L_i,L_j]^2)/(32*g^2)=(I1-I2)/(4*g^2), so the equally normalized leading Skyrme coupling is e=g. With L=O(p), this density is order p^4; the kinetic vector equation changes the field at order p^3/M^2 and first changes the action at order p^6/M^2 under the supplied heavy-scale counting. Conditional on the separately declared relation m_V^2=a*g^2*F^2 with positive dimensionless a and equal mass dimensions for m_V and F, e=g=m_V/(sqrt(a)*F) is dimensionless. This is an exact current-algebra and conditional leading-connection theorem. It does not derive HLS field content, a physical rho or pion, the KSRF premise or a=2, B1, c4, J1, a full-vector solution, Skyrmion stabilization, a medium response, particle values, or a substrate realization.

@@ -2537,27 +2537,45 @@ The integrated v0.157.0 boundary validates 888 memory records and passes all
 1,918 tests in 194.71 pytest seconds and 209.51 seconds total wall time, at
 220,344 KiB peak RSS and exit zero.
 
+P219 qualifies MK6 and adds C-VAR-002 in v0.158.0. The exact theorem states
+that the infimum of a finite sum of real functionals on one common admissible
+set is at least the sum of their component infima, with equality exactly under
+a common minimizing-sequence condition and, under joint attainment, a common
+minimizer. Incompatible quadratic minimizers give a strict counterexample.
+MK6 inserts MK2's lambda-A into the lambda-BPS bound, making its BPS mass
+exactly pi-squared too large; the corrected supplied-input value is about
+99.42 MeV, so its double-counting premise fails. NY1 is not a sector mass
+assignment, the source never forms its alleged additive sum, its power counting
+has no controlled expansion, and its physical inputs lack closure. Twenty-four
+primary, 17 independent, 9 graph checks, and 47 focused tests pass. The graph
+pins 157 predicates and 22 assertions; MK6 has no integration surface, while
+B1's immutable eager legacy access remains prior alias-only compatibility
+provenance backed by `np.trapezoid`.
+The integrated v0.158.0 boundary validates 893 memory records and passes all
+1,922 tests in 203.53 pytest seconds and 219.07 seconds total wall time, at
+219,228 KiB peak RSS and exit zero.
+
 ## Canonicalization
-The registry, `v0.157.0` manifest, current release, generated claim index, and
-generated framework memory agree on two hundred accepted claims.
-P001 through P218 are frozen under `campaigns/`; proposal,
+The registry, `v0.158.0` manifest, current release, generated claim index, and
+generated framework memory agree on two hundred one accepted claims.
+P001 through P219 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 6 pending, 0 partial, 3
-migrated, 199 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P218 is the most recent accepted-surface and full integrated release
+memory. The regenerated migration queue agrees on 5 pending, 0 partial, 3
+migrated, 200 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P219 is the most recent accepted-surface and full integrated release
 boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 6
-pending, 3 migrated, 199 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 5
+pending, 3 migrated, 200 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle, GC1-GC6, and MK1-MK5 are terminal without backward
-authority. P219 next audits MK6's binding-window and closure claims, including
-its dependence on MK5's rejected physical coefficients and the exact ceiling
-of C-GSK-002. The remaining order is MK6, then MR2 through MR6.
+The WM7-WM10 source cycle, GC1-GC6, and MK1-MK6 are terminal without backward
+authority. P220 next audits MR2's pi-squared normalization correction against
+C-VEC-002, C-BPS-001, and the now-qualified MK6 ledger. The remaining order is
+MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

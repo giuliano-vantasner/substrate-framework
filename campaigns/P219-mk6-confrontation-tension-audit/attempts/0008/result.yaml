@@ -1,0 +1,34 @@
+campaign: P219
+attempt: 0008
+timestamp_utc: '2026-08-06T12:12:00Z'
+status: passed
+stage: integrated_promotion_gate
+release: v0.158.0
+expected_claims: 201
+expected_migration: {total: 218, pending: 5, partial: 0, qualified: 200}
+commands:
+  - scripts/validate.sh
+  - git_diff_check
+scientific_rechecks: [primary_verifier, independent_rederivation, source_graph_replay, focused_tests]
+full_suite_required: true
+reason: accepted_claim_package_API_tests_generated_consumers_and_release_changed
+results:
+  workflow_claims: 201
+  workflow_accepted_claims: 201
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 5
+  migration_partial: 0
+  migration_qualified: 200
+  memory_records: 893
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  tests: 1922
+  pytest_seconds: 203.53
+  total_wall_seconds: 219.07
+  maximum_resident_kib: 219228
+  exit_status: 0
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+record_sensitive_closeout: passed
+debt: []

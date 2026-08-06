@@ -1,0 +1,92 @@
+campaign: P219
+title: MK6 confrontation and tension audit
+source_baseline: substrate@6d1f4e0
+source_units: [MK6]
+base_release: v0.157.0
+accepted_release: v0.158.0
+freeze_commit: ec67f0c
+source_audit_commit: 2f69959
+implementation_commit: 9442343
+review_commit: 0220f41
+adjudicated_at: '2026-08-06T12:12:00Z'
+selected_candidates:
+  - {id: A, reason: Direct_lambda_BPS_substitution_exposes_the_source_coordinate_error.}
+  - {id: B, reason: Equivalent_lambda_A_bound_independently_eliminates_to_the_corrected_formula.}
+  - {id: C, reason: Exact_shared_functional_theorem_supplies_the_positive_novel_object.}
+  - {id: E, reason: Accepted_dependency_firewall_removes_unaccepted_physical_inputs.}
+  - {id: G, reason: Pi_squared_common_minimizer_and_slack_mutations_make_the_oracle_sensitive.}
+  - {id: H, reason: MK6_receives_an_individual_terminal_qualified_disposition.}
+competing_candidates:
+  - {id: D, decision: retained_as_existing_C_RDIFF_001_context_without_new_claim}
+  - {id: F, decision: rejected_after_nonduplication_found_C_VAR_002_novel}
+claims:
+  - {id: C-VAR-002, decision: accepted_symbolic_verified_compatible_extension_active}
+unpromoted_claims:
+  - {id: zero_parameter_BPS_mass, reason: Wrong_lambda_coordinate_and_supplied_unaccepted_inputs.}
+  - {id: nucleon_agreement, reason: Corrected_value_defeats_the_source_threshold.}
+  - {id: double_counting, reason: False_premise_and_missing_common_functional_minimizer_logic.}
+  - {id: physical_near_BPS_failure, reason: No_controlled_expansion_remainder_or_accepted_parameter_regime.}
+  - {id: framework_falsification, reason: No_accepted_physical_prediction_is_under_comparison.}
+  - {id: paid_debt, reason: Physical_coefficients_states_and_maps_remain_unresolved.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_variational_composition_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VAR-002-claim-review.md
+  source_disposition_review: reviews/MK6-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MK6: qualified}
+accepted_mappings: [C-VAR-002, C-BPS-001, C-BPS-002, C-BPS-003, C-VEC-002, C-GSK-001, C-GSK-002, C-RDIFF-001, C-RDIFF-002, C-SK-001]
+compatibility:
+  MK6_surface: native_no_integration_name
+  B1_inherited: eager_legacy_alias_only_prior_provenance
+  E2_E3_inherited: safe_current_first_fallbacks
+  scientific_failures_from_version_events: 0
+release_change: v0.158.0
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_variational_review
+  - PYTHONPATH_src_python_source_graph_replay
+  - pytest_focused_variational_BPS_difference_and_generalized_model
+  - scripts_validate_sh_single_integrated_boundary
+  - git_diff_check
+integrated_gate:
+  status: passed
+  workflow_claims: 201
+  workflow_accepted_claims: 201
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 5
+  migration_partial: 0
+  migration_qualified: 200
+  memory_records: 893
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  affected_campaign_yaml_files: 28
+  tests: 1922
+  pytest_seconds: 203.53
+  total_wall_seconds: 219.07
+  maximum_resident_kib: 219228
+  exit_status: 0
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  diff_check: passed
+debt: []
+status: accepted

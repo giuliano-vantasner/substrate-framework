@@ -2092,6 +2092,81 @@ units:
       scientific failures. Hash-identical expensive reverse consumers reuse
       prior execution evidence. The integrated release boundary adds two
       accepted claims and the generalized radial package API.
+  MK6:
+    disposition: qualified
+    accepted_claims:
+      - C-VAR-002
+      - C-BPS-001
+      - C-BPS-002
+      - C-BPS-003
+      - C-VEC-002
+      - C-GSK-001
+      - C-GSK-002
+      - C-RDIFF-001
+      - C-RDIFF-002
+      - C-SK-001
+    qualification: >-
+      MK6's surviving structural lesson is that one joint sum functional on a
+      common admissible configuration cannot generally be interpreted as the
+      sum of separately minimized component energies. C-VAR-002 supplies the
+      exact finite-family infimum-of-sum lower bound, common
+      minimizing-sequence equality criterion, and attained common-minimizer
+      specialization. Its conditional BPS algebra must use C-VEC-002's
+      lambda_A=pi^2*lambda_BPS conversion: the source inserts MK2's lambda_A
+      into the lambda_BPS bound and makes its headline expression exactly
+      pi^2 too large. With the source's own supplied N_c and pion mass, the
+      corrected conditional value is about 99.42 MeV, so the premise that two
+      sectors independently reproduce the nucleon mass is false. NY1 is a
+      common-unit identity rather than an accepted sector assignment; the
+      source never forms its alleged additive sector sum; and its power
+      counting supplies no controlled expansion or physical parameter regime.
+      Profile coefficients, mass inputs, state maps, and comparators lack
+      accepted closure. No zero-parameter physical mass, nucleon agreement,
+      double counting, near-BPS failure, generalized-model falsification,
+      physical binding, paid debt, particle, nucleus, observation, or
+      substrate mechanism is accepted.
+    evidence:
+      - campaigns/P219-mk6-confrontation-tension-audit/reviews/source_adjudication.md
+      - campaigns/P219-mk6-confrontation-tension-audit/reviews/C-VAR-002-claim-review.md
+      - campaigns/P219-mk6-confrontation-tension-audit/reviews/MK6-disposition-review.md
+      - campaigns/P219-mk6-confrontation-tension-audit/reviews/impact_analysis.md
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/source-reproduction.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/compatibility-audit.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/source-audit.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/check-adjudication.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/formula-freeze.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/input-provenance.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/post-source-claim-delta.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/dependency-audit.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/consumer-audit.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/candidate-comparison.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/implementation-audit.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/impact-analysis.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/primary-provenance.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/independent-provenance.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/evidence/focused-test-replay.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/verify.py
+      - campaigns/P219-mk6-confrontation-tension-audit/reviews/independent_variational_composition_review.py
+      - campaigns/P219-mk6-confrontation-tension-audit/reviews/replay_source_graph.py
+      - campaigns/P219-mk6-confrontation-tension-audit/attempts/0002/result.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/attempts/0003/result.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/attempts/0004/result.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/attempts/0005/result.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/attempts/0006/result.yaml
+      - campaigns/P219-mk6-confrontation-tension-audit/attempts/0007/result.yaml
+      - memory/vantasner/decisions/C-VAR-002-review.md
+      - memory/vantasner/decisions/MK6-qualified-review.md
+    note: >-
+      P219 closes 24 primary, 17 fresh independent, and 9 aggregate graph
+      checks plus 47 focused tests. The nineteen-node graph pins 157 predicates
+      and 22 assertions. MK6 has no integration-name surface. B1's immutable
+      eager legacy fallback remains prior alias-only provenance backed by
+      numpy.trapezoid, while E2/E3 use safe current-first fallbacks; no version
+      event becomes a scientific failure. Unchanged expensive MR executions
+      are reused rather than repeated. The integrated release boundary adds one
+      exact claim and the variational ledger API.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:

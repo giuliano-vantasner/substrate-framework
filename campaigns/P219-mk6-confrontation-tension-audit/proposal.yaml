@@ -50,7 +50,7 @@ comparators_blinded_until: >-
   double-counting diagnosis. Remaining equations, constants, predicates,
   output, and consumer details stay unopened until this contract, formula
   freeze, provenance record, validation record, and freeze commit exist.
-status: active
+status: accepted
 revision: 0002
 opened_source_findings:
   source_lambda_symbol: lambda_A_from_MK2

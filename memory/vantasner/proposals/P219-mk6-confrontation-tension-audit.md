@@ -10,8 +10,8 @@ tags:
 - variational-composition
 - convention-audit
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P219 MK6 Confrontation and Tension Audit
 
@@ -133,6 +133,13 @@ status `under_review`. The schema permits only `draft`, `active`, `accepted`,
 or `rejected`, so the manifest remains `active` until promotion. No review
 decision or scientific surface changes.
 
+Attempt 0008 promotes C-VAR-002 into v0.158.0, qualifies MK6, synchronizes
+canonical and generated records, and runs the single integrated boundary
+required by the accepted claim, API, test, and release changes. All 1,922 tests
+pass in 203.53 seconds; the full workflow validates 893 memory records and
+takes 219.07 seconds at 219,228 KiB peak RSS with exit zero. The immutable
+attempt and adjudication record the exact gate.
+
 ## Debt Ledger
 
 The ledger tracks source predicates, lambda ownership, target-potential
@@ -149,7 +156,7 @@ difference, compatibility, novelty, consumers, and generated records.
 | Physical pion nucleon electron or binding maps may leak | Accepted-dependency and free-symbol audit | discharged by attempt 0005 |
 | Proposed theorem may duplicate existing work | Registry campaign module and memory search | discharged by attempt 0005 |
 | Later MR units may grant backward authority | Hash-pinned source graph replay | discharged by attempt 0005 |
-| Governed records remain unresolved | Claim review disposition and canonicalization | open |
+| Governed records remain unresolved | Claim review disposition and canonicalization | discharged by attempts 0006 and 0008 |
 
 ## Review and Promotion Plan
 
