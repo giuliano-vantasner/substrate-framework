@@ -1,0 +1,27 @@
+campaign: P216
+attempt: 0001
+timestamp_utc: '2026-08-06T10:35:36Z'
+status: failed
+stage: pre_source_freeze
+base_release: v0.156.0
+base_commit: 151475518752ef7443b5c56a9e6397f1a0c7b337
+source_unit: MK3
+source_sha256: 64254d0f6b9d6ff57f5a8b0a4b86a510e2bef230b4f3bec062533fac59516404
+provisional_claim_ids: []
+frozen_candidates: [A, B, C, D, E, F, G, H, I]
+frozen_gates:
+  - the local scale-over-product definition is separated from derivation of its inputs and from physical observable status
+  - KI2's local normalization is separated from C-BPS-003's abstract epsilon
+  - the source lambda_A product is converted to accepted lambda_BPS by the load-bearing pi-squared factor
+  - C-SK-001's conditional cancellation retains both mass premises their equality and empirical E_e
+  - accepted positive coupling families and arbitrary normalizations are tested before any source numerical value
+  - MK1 MK2 and NY1 rejected physical readings and later MK or MR units grant no authority
+  - direct imported dynamic and eager NumPy legacy access will be scanned before native execution
+failure_layer: record_schema
+failure: >-
+  Pre-source validation rejected proposal status proposed because the
+  governance schema accepts draft active in_review accepted rejected or
+  rework. YAML parsing also rejected an unquoted arrow-bearing flow scalar.
+scientific_state_changed: false
+next_action: Repair only the manifest status and YAML quoting, preserve the same frozen formulas and candidates, and rerun the narrow pre-source gate as attempt 0002.
+

@@ -1,0 +1,70 @@
+campaign: P216
+timestamp_utc: '2026-08-06T10:35:36Z'
+declared_local_ratio:
+  inputs: [F_pi, e, lambda_BPS, mu]
+  domain: all inputs positive
+  definition: epsilon_c=1/(e*(lambda_BPS*F_pi)*(mu/F_pi^2))
+  reduced_identity: epsilon_c=(F_pi/e)/(lambda_BPS*mu)
+  normalization: >-
+    A separately declared positive dimensionless factor c may multiply this
+    monomial; dimensional algebra alone does not select c.
+scale_product_ledger:
+  standard_scale: s=F_pi/e
+  bps_product: p=lambda_BPS*mu
+  quotient: epsilon_c=s/p
+  conditional_inverse: p=s/epsilon_c
+  consequence: >-
+    Any two supplied positive entries among s p and epsilon_c determine the
+    third. This is algebraic reconstruction and does not derive an entry.
+accepted_family_countermodels:
+  simultaneous_flow:
+    map: '[lambda_BPS, mu] -> [t*lambda_BPS, t*mu]'
+    epsilon_image: epsilon_c/t^2
+    fixed_theory_verdict: false because C-BPS-001 density square and bound change
+  arbitrary_target:
+    fixed_standard_scale: s>0
+    target: epsilon_target>0
+    selected_product: p=s/epsilon_target
+    consequence: The accepted positive coupling family realizes every positive local ratio.
+bps_convention_map:
+  source_sextic_coupling: lambda_A
+  accepted_sextic_coupling: lambda_BPS
+  equality: lambda_A=pi^2*lambda_BPS
+  source_product_premise: lambda_A*mu=N_c*m_pi/8
+  accepted_product_if_all_source_premises_hold: lambda_BPS*mu=N_c*m_pi/(8*pi^2)
+  source_style_epsilon_if_all_source_premises_hold: 8*(F_pi/e)/(N_c*m_pi)
+  accepted_convention_epsilon_if_all_source_premises_hold: 8*pi^2*(F_pi/e)/(N_c*m_pi)
+  authority: Both product substitutions remain conditional because MK2's physical premises were rejected.
+conditional_skyrme_scale:
+  relation: F_pi/e=16*pi*E_e
+  iff_premises:
+    - M_top=48*pi^3*B1*E_e
+    - M_ANW=3*pi^2*B1*F_pi/e
+    - M_top=M_ANW
+  retained_inputs: [B1, E_e, both mass formulas, their equality]
+  ceiling: The equality neither derives the premises nor removes the empirical E_e import.
+dependency_firewalls:
+  - MK1 supplies no accepted physical mu or medium-to-BPS map.
+  - MK2 supplies no accepted product N_c pion F_pi HLS baryon-current or physical-field closure.
+  - NY1 duplicates C-SK-001 and supplies no zero-import energy scale.
+  - KI2's ratio has no accepted identification with C-BPS-003 epsilon.
+  - Pending MK4 through MK6 and MR units cannot support MK3.
+mutations:
+  - vary lambda_BPS with every other accepted input fixed and require epsilon_c to change
+  - vary mu with every other accepted input fixed and require epsilon_c to change
+  - multiply the dimensionless normalization and require the local ratio to change
+  - omit lambda_A=pi^2*lambda_BPS and require accepted-convention composition to fail
+  - remove either C-SK-001 mass premise or their equality and require the scale closure to fail
+  - vary E_e and require every conditionally composed numerical scale to change
+  - remove N_c m_pi HLS KSRF or physical-map premises and require the corresponding source value to lose closure
+counterexamples:
+  - two positive lambda_BPS-mu products with identical F_pi/e and distinct epsilon_c
+  - two positive normalization constants with identical dimensional inputs and distinct local ratios
+  - the exact pi-squared separation between source and accepted BPS convention products
+  - arbitrary positive B1 cancellation showing that NY1 is not an independent scale oracle
+candidate_selection_exclusions:
+  - numerical proximity to binding energy particle mass yield or phenomenological epsilon comparators
+  - later MK or MR conclusions
+  - rejected physical readings of MK1 MK2 or NY1
+  - symbol and dimension equality without field action measure normalization and coefficient maps
+  - treating inverse substitution into a defining quotient as independent confirmation

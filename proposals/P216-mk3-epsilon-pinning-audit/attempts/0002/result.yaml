@@ -1,0 +1,28 @@
+campaign: P216
+attempt: 0002
+timestamp_utc: '2026-08-06T10:35:36Z'
+status: passed
+stage: pre_source_freeze_repair
+base_release: v0.156.0
+base_commit: 151475518752ef7443b5c56a9e6397f1a0c7b337
+source_unit: MK3
+source_sha256: 64254d0f6b9d6ff57f5a8b0a4b86a510e2bef230b4f3bec062533fac59516404
+repair_scope:
+  - set the proposal manifest to schema-valid draft status
+  - quote the unchanged simultaneous-flow YAML scalar
+  - correct the full base commit from the verified repository HEAD
+scientific_state_changed: false
+result:
+  yaml_files_valid: 5
+  memory_files_valid: 1
+  workflow:
+    claims: 198
+    accepted_claims: 198
+    active_proposals: 1
+    migration_total: 218
+    migration_pending: 9
+    migration_partial: 0
+  generated_docs_current: true
+  generated_memory_current: true
+  diff_check: passed
+next_action: Commit the repaired freeze, then inspect and reproduce the hash-pinned MK3 source.

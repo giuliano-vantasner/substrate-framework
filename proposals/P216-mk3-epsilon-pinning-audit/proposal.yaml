@@ -1,0 +1,71 @@
+id: P216
+base_release: v0.156.0
+base_commit: 151475518752ef7443b5c56a9e6397f1a0c7b337
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MK3]
+question: >-
+  Does MK3 derive a dependency-closed value of its locally defined
+  dimensionless epsilon, or only a conditional scale-over-product identity
+  whose value still depends on unaccepted coupling, convention, and physical
+  mapping premises?
+invariants:
+  - C-BPS-001 declares positive lambda_BPS and mu as supplied parameters and uses sextic coefficient lambda_BPS^2*pi^4*B0^2.
+  - KI2's local epsilon is a defined dimensionless monomial with an arbitrary normalization and is not C-BPS-003's abstract expansion coordinate.
+  - KI2's simultaneous lambda-mu flow changes the accepted BPS density square residual and bound, so it compares parameterized theories rather than acting as a symmetry of one fixed accepted theory.
+  - MK1 supplies only a conditional convention-covariant mass match and no accepted medium physical-pion decay-scale or BPS coupling map.
+  - MK2 supplies conditional vector-current elimination but no accepted physical HLS omega baryon-current N_c KSRF F_pi mass coupling or medium map.
+  - The source lambda_A convention obeys lambda_A=pi^2*lambda_BPS before any product or epsilon composition in the accepted BPS convention.
+  - C-SK-001 gives F_pi/e=16*pi*E_e only iff two separately supplied positive mass premises are equated and retains E_e as an empirical input.
+  - A supplied positive scale s and product p determine a declared quotient s/p but do not derive either input or identify it with a physical observable.
+  - Pending MK4 through MK6 and MR units grant no backward authority.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never count as scientific candidate failures.
+allowed_imports:
+  - C-BPS-001 through C-BPS-003 only at their declared-energy parameter and controlled-expansion ceilings
+  - C-SK-001 only as its conditional equality between two supplied mass formulas without a zero-import or physical prediction reading
+  - C-VEC-002 only for the exact lambda_A-to-lambda_BPS convention conversion and conditional algebraic vector-current match
+  - C-BRK-001 C-CHI-002 C-EFT-001 C-VEC-001 C-WZW-002 and C-TOP-002 only at their accepted mathematical ceilings
+  - qualified KI2 KI4 MK1 and MK2 plus duplicate NY1 only as governed source evidence without rejected extensions
+  - exact positive-real monomial dimensional convention and identifiability algebra
+  - SymPy for exact substitution elimination parameter families and mutation-sensitive identities
+  - NumPy only for hash-pinned source reproduction after compatibility preflight
+  - hash-pinned MK3 only after the committed freeze as noncanonical source evidence
+candidates:
+  - id: A
+    description: Reproduce epsilon=1/[e*(lambda*F_pi)*(mu/F_pi^2)]=(F_pi/e)/(lambda*mu) as exact algebra for separately supplied positive inputs.
+  - id: B
+    description: Treat a supplied positive standard scale s=F_pi/e and BPS product p=lambda_BPS*mu as sufficient but purely conditional data for epsilon=s/p.
+  - id: C
+    description: Convert MK2's source product through lambda_A=pi^2*lambda_BPS and test the resulting pi-squared change in every accepted-convention epsilon formula.
+  - id: D
+    description: Compose C-SK-001 conditionally while retaining both supplied mass premises and the empirical electron rest energy as explicit inputs.
+  - id: E
+    description: Construct accepted-family countermodels with fixed F_pi/e and varied lambda_BPS*mu, plus normalization families, to test whether epsilon is selected.
+  - id: F
+    description: Keep KI2's locally normalized quotient distinct from C-BPS-003's abstract near-BPS expansion coordinate and from any physical binding observable.
+  - id: G
+    description: Require accepted provenance for N_c pion mass decay scale physical fields and all medium maps before interpreting a conditional substitution as a derived value.
+  - id: H
+    description: Extract a reusable API or claim only if the scale-product ledger is novel beyond C-BPS-001 C-SK-001 C-VEC-002 and P172's governed composition.
+  - id: I
+    description: Give MK3 an individual terminal disposition and replay its predecessor and reverse-consumer graph without later-source authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact distinction among definition supplied input derived relation and physical observable
+  - accepted dependency closure without backward or rejected-source authority
+  - lambda_A versus lambda_BPS convention correctness including the pi-squared product factor
+  - parameter and normalization economy with explicit positive domains and dimensions
+  - sensitivity to product scale normalization mass-premise N_c pion and convention mutations
+  - identifiability across the full accepted positive lambda_BPS-mu family
+  - separation of conditional C-SK-001 cancellation from empirical or zero-import prediction
+  - novelty beyond accepted BPS Skyrme vector and identifiability ledgers
+  - terminal predicate consumer generated-state and memory closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue already exposes MK3's six-check shape, one assertion,
+  the local quotient epsilon=(F_pi/e)/(lambda*mu), the claimed source product
+  lambda*mu=N_c*m_pi/8, and the conditional NY1 scale
+  F_pi/e=16*pi*E_e. The remaining source equations, numerical substitutions,
+  exact predicates, guards, imports, output, comparator residuals, and consumer
+  details remain unopened until this manifest, prose contract, formula freeze,
+  provenance record, validation record, and freeze commit exist.
+status: draft
