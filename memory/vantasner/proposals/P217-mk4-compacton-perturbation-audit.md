@@ -2,15 +2,15 @@
 description: Audit MK4 conditional compacton and failed perturbative correction
 author: vantasner
 created: '2026-08-06T10:58:08Z'
-updated: '2026-08-06T10:58:08Z'
+updated: '2026-08-06T11:12:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-MK4
 - compacton
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P217 MK4 Compacton Perturbation Audit
 
@@ -134,7 +134,7 @@ consumers, novelty, and generated records.
 | P107 duplication is unresolved | Claim/API/evidence comparison | discharged by attempts 0003 through 0005 |
 | Physical and later-source authority may leak | Dependency and terminal graph replay | discharged by attempt 0004 |
 | Compatibility may masquerade as science | Full executable access preflight | discharged by attempts 0002 and 0004 |
-| Governed records remain open | Terminal disposition and record gate | review complete; synchronization open |
+| Governed records remain open | Terminal disposition and record gate | discharged by terminal P217 synchronization |
 
 ## Review and Promotion Plan
 
@@ -149,6 +149,11 @@ P217 closes only with an exact positive compacton/edge/regulator ledger,
 mutation-sensitive independent verification, individual predicates, terminal
 consumers, synchronized records, and empty debt. The perturbative failure by
 itself is insufficient.
+
+The P217 gate closes at unchanged v0.156.0 with MK4 qualified, every exact
+survivor mapped to existing claims or P107, seven pending units, no partial
+unit, and an empty campaign debt ledger. The parent corpus migration remains
+active and continues to MK5's full-model numerical claim.
 
 ## Cross-References
 

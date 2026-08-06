@@ -2507,28 +2507,41 @@ pins 108 predicates and 16 assertions; MK3 has no integration-name surface,
 and unchanged expensive later consumers reuse P215's hash-guarded execution
 evidence.
 
+P217 qualifies MK4 at unchanged v0.156.0 through C-BPS-001, C-BPS-002, and
+C-BPS-003, with P107 retaining ownership of the exact compacton and edge
+obstruction. The declared standard-potential profile exactly solves the radial
+equation at `R^3=2*sqrt(2)*lambda*B/mu`; its L2 edge density uses the first
+radial derivative and has a simple pole of coefficient two, while the explicit
+cutoff integral grows logarithmically and the separate L4 edge factors remain
+finite. The reduced radial identity is not a general equality-existence
+theorem, bound linearity needs attainment, and no regulator-independent
+first-order correction or full-model solution follows. Nineteen primary, 8
+independent, 9 graph checks, and 22 focused tests pass. The graph pins 70
+predicates and 13 assertions; MK4 already uses current SciPy `trapezoid`, and
+inherited E2's safe current-first fallback creates no scientific failure.
+
 ## Canonicalization
 The registry, `v0.156.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety-eight accepted claims.
-P001 through P216 are frozen under `campaigns/`; proposal,
+P001 through P217 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 8 pending, 0 partial, 3
-migrated, 197 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+memory. The regenerated migration queue agrees on 7 pending, 0 partial, 3
+migrated, 198 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
 unit. P215 remains the most recent accepted-surface change and full integrated
 release boundary; P216 is a record-sensitive closeout.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 8
-pending, 3 migrated, 197 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 7
+pending, 3 migrated, 198 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle, GC1-GC6, and MK1-MK3 are terminal without backward
-authority. P217 next audits MK4's compacton and perturbation-failure claims
-without importing MK1-MK3's rejected physical closure or treating a failed
-perturbative route as completion. The remaining order is MK4 through MK6, then
-MR2 through MR6.
+The WM7-WM10 source cycle, GC1-GC6, and MK1-MK4 are terminal without backward
+authority. P218 next audits MK5's full generalized-model solve, including its
+ODE equations, angular factors, boundary data, solver success, refinement,
+independent method, coupling provenance, and normalization conventions. The
+remaining order is MK5 and MK6, then MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

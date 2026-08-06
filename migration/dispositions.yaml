@@ -1957,6 +1957,66 @@ units:
       immutable B1 and E3 version shapes remain compatibility provenance only.
       Hash-identical expensive reverse consumers reuse P215 execution evidence.
       Accepted claims, package APIs, tests, and v0.156.0 remain unchanged.
+  MK4:
+    disposition: qualified
+    accepted_claims:
+      - C-BPS-001
+      - C-BPS-002
+      - C-BPS-003
+    qualification: >-
+      MK4's exact surviving content is the conditional standard-potential
+      compacton F(r)=2*acos(r/R) inside R and zero outside, with
+      R^3=2*sqrt(2)*lambda*B/mu in its declared reduced radial convention; the
+      L2 edge density r^2*F_r^2 has a simple pole of coefficient two and an
+      explicit cutoff integral growing as 2*R*log(1/delta), while the two L4
+      edge factors remain finite. The generated queue's F-double-prime wording
+      is a transcription error: the source body checks the first radial
+      derivative squared. The radial normalization is not an arbitrary-degree
+      equality-existence theorem, C-BPS-001 selects neither the potential nor
+      physical couplings, and C-BPS-002 converts bound linearity to energy
+      linearity only under attainment. A finite L4 term cannot cancel the
+      positive divergent L2 term. Explicit regularization retains cutoff
+      dependence, so the failed naive expectation does not supply a controlled
+      C-BPS-003 correction or full-model solution. P107 already owns every
+      exact compacton and edge result; no new claim, API, physical coupling,
+      near-BPS closure, or substrate mechanism is accepted.
+    evidence:
+      - campaigns/P217-mk4-compacton-perturbation-audit/reviews/source_adjudication.md
+      - campaigns/P217-mk4-compacton-perturbation-audit/reviews/MK4-disposition-review.md
+      - campaigns/P217-mk4-compacton-perturbation-audit/reviews/impact_analysis.md
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/source-reproduction.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/compatibility-audit.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/source-audit.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/check-adjudication.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/formula-freeze.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/input-provenance.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/post-source-claim-delta.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/dependency-audit.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/consumer-audit.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/candidate-comparison.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/implementation-audit.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/impact-analysis.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/primary-provenance.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/independent-provenance.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/evidence/focused-test-replay.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/verify.py
+      - campaigns/P217-mk4-compacton-perturbation-audit/reviews/independent_compacton_review.py
+      - campaigns/P217-mk4-compacton-perturbation-audit/reviews/replay_source_graph.py
+      - campaigns/P217-mk4-compacton-perturbation-audit/attempts/0002/result.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/attempts/0003/result.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/attempts/0004/result.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/attempts/0005/result.yaml
+      - campaigns/P217-mk4-compacton-perturbation-audit/attempts/0006/result.yaml
+      - memory/vantasner/decisions/MK4-qualified-review.md
+    note: >-
+      P217 closes 19 primary, 8 fresh independent, and 9 aggregate graph
+      checks plus 22 focused tests. The 11-node graph pins 70 predicates and
+      13 assertions. MK4 uses current SciPy trapezoid with no legacy NumPy
+      surface; inherited E2 uses a safe current-first fallback. Hash-identical
+      expensive reverse consumers reuse P215 execution evidence. Accepted
+      claims, package APIs, tests, and v0.156.0 remain unchanged.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:

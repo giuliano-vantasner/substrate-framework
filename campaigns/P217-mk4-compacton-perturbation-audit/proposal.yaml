@@ -51,7 +51,7 @@ comparators_blinded_until: >-
   logarithmic L2 edge divergence. Remaining equations, predicates, numerical
   probes, imports, output, and consumer details stay unopened until the
   contract, formula freeze, provenance record, validation, and freeze commit.
-status: under_review
+status: accepted
 revision: 0002
 opened_source_equations:
   radial_density: b0=-(2*B/pi)*sin(F)^2*dF/dr/(4*pi*r^2)

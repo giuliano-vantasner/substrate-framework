@@ -1,0 +1,87 @@
+campaign: P217
+title: MK4 compacton perturbation audit
+source_baseline: substrate@6d1f4e0
+source_units: [MK4]
+base_release: v0.156.0
+accepted_release: v0.156.0
+freeze_commit: bab7a05
+implementation_commit: 069efbe
+review_commit: 462323f
+adjudicated_at: '2026-08-06T11:12:00Z'
+selected_candidates:
+  - {id: A, reason: Exact_conditional_compacton_and_domain_survive.}
+  - {id: B, reason: Exact_edge_classification_separates_divergent_L2_from_finite_L4.}
+  - {id: C, reason: Explicit_cutoff_exposes_regulator_dependence.}
+  - {id: D, reason: Controlled_expansion_rules_reject_the_naive_expectation.}
+  - {id: F, reason: MK1_through_MK3_cannot_supply_physical_closure.}
+  - {id: G, reason: P107_nonduplication_prevents_a_second_claim_or_API.}
+  - {id: H, reason: MK4_receives_an_individual_terminal_qualified_disposition.}
+competing_candidates:
+  - {id: E, decision: deferred_as_separate_positive_boundary_layer_or_full_model_problem}
+claims:
+  - {id: C-BPS-001, decision: unchanged_conditional_equation_without_existence_or_potential_selection}
+  - {id: C-BPS-002, decision: unchanged_attainment_conditioned_energy_additivity}
+  - {id: C-BPS-003, decision: unchanged_controlled_expansion_requirement}
+unpromoted_claims:
+  - {id: arbitrary_degree_compacton_existence, reason: Reduced_radial_normalization_is_not_a_general_field_construction.}
+  - {id: physical_compacton, reason: Potential_and_couplings_are_not_selected_by_accepted_dependencies.}
+  - {id: finite_first_order_L2_correction, reason: Exact_cutoff_integral_diverges_logarithmically.}
+  - {id: regulator_independent_smoothing, reason: No_smoothing_family_or_controlled_remainder_is_supplied.}
+  - {id: solved_full_model, reason: Obstruction_evidence_does_not_construct_the_positive_continuation.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_compacton_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_disposition_review: reviews/MK4-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MK4: qualified}
+accepted_mappings: [C-BPS-001, C-BPS-002, C-BPS-003]
+duplicate_evidence_owner: campaigns/P107-e4-bps-zero-binding-audit
+compatibility:
+  MK4_surface: current_scipy_trapezoid
+  inherited_version_events: [E2]
+  scientific_failures_from_version_events: 0
+release_change: none
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_compacton_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_bps_and_source_audit
+  - record_sensitive_repository_generated_memory_skill_YAML_and_diff_checks
+integrated_gate:
+  status: passed
+  workflow_claims: 198
+  workflow_accepted_claims: 198
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 7
+  migration_partial: 0
+  memory_records: 881
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  affected_yaml_files_valid: 28
+  diff_check: passed
+  reused_full_suite:
+    tests: 1901
+    boundary: P215_v0.156.0
+    unchanged_inputs: [accepted_claims, package_APIs, package_files, tests, release]
+debt: []
+status: accepted
