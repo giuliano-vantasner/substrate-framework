@@ -1163,7 +1163,9 @@ from .wilson_loops import (
     static_potential_from_loop,
 )
 from .variational import (
+    FiniteFunctionalInfimumLedger,
     euler_lagrange_expression,
+    finite_functional_infimum_ledger,
     solve_euler_lagrange_acceleration,
 )
 
@@ -1780,7 +1782,9 @@ __all__ = [
     "u1_field_strength",
     "u1_holonomy",
     "uniform_tube_field",
+    "FiniteFunctionalInfimumLedger",
     "euler_lagrange_expression",
+    "finite_functional_infimum_ledger",
     "fundamental_generators",
     "fundamental_commutant_basis",
     "brownian_mean_phasor_window_average",

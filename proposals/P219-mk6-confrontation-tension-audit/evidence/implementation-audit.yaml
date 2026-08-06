@@ -1,0 +1,24 @@
+campaign: P219
+claim: C-VAR-002
+canonical_module: src/substrate_framework/variational.py
+public_API:
+  - FiniteFunctionalInfimumLedger
+  - finite_functional_infimum_ledger
+purity:
+  import_time_execution: false
+  simulations: false
+  printing: false
+  empirical_constants: false
+API_contract: >-
+  The caller supplies pointwise component values at one common configuration
+  and the exact finite component infima. The ledger derives component and total
+  excesses and rejects a provably negative excess. It does not infer infima,
+  existence, attainment, a field model, or physical interpretation.
+tests:
+  path: tests/test_variational.py
+  additions:
+    - exact_sum_of_excesses_identity
+    - common_minimizer_saturation
+    - incompatible_minimizer_strict_gap
+    - invalid_shape_and_false_lower_bound_rejection
+duplicate_local_helpers: false

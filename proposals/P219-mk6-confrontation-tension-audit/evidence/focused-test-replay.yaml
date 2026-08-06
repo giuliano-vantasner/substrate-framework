@@ -1,0 +1,15 @@
+campaign: P219
+command: pytest_variational_bps_energy_energy_differences_generalized_skyrme_radial
+files:
+  - tests/test_variational.py
+  - tests/test_bps_energy.py
+  - tests/test_energy_differences.py
+  - tests/test_generalized_skyrme_radial.py
+passed: 47
+seconds: 4.88
+exit_status: 0
+scope:
+  - new_functional_ledger
+  - accepted_BPS_bound_and_slack_surfaces
+  - signed_difference_context
+  - joint_generalized_functional_context

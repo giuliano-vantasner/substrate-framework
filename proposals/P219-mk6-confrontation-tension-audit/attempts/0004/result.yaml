@@ -1,0 +1,14 @@
+campaign: P219
+attempt: 0004
+timestamp_utc: '2026-08-06T12:04:00Z'
+status: failed
+stage: source_graph_first_run
+passed_before_stop: 5
+failed_check: prior_execution_reuse_schema_read
+failure_class: evidence_schema
+diagnosis: >-
+  P219 source reproduction stores runtime_check_executions under inventory,
+  while the replay read it under native_run. Hashes, lexical inventories,
+  dispositions, and reverse-consumer edges had already passed.
+repair: read_inventory_runtime_check_executions_without_rerunning_any_source
+next_action: rerun_static_graph_replay

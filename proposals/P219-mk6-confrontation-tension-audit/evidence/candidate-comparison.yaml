@@ -1,0 +1,14 @@
+campaign: P219
+criteria_frozen_before_remaining_source_values: true
+candidates:
+  A: {decision: selected_as_convention_route, reason: direct_C_BPS_001_coordinate}
+  B: {decision: selected_as_independent_coordinate_route, reason: eliminates_to_A_only_after_C_VEC_002_conversion}
+  C: {decision: selected_for_claim, reason: exact_novel_parameter_free_and_directly_types_one_joint_variational_problem}
+  D: {decision: retained_as_existing_claim_context, reason: C_RDIFF_001_already_owns_the_conditional_ledger}
+  E: {decision: selected_as_dependency_firewall, reason: removes_unaccepted_physical_inputs_without_changing_exact_math}
+  F: {decision: rejected, reason: repository_search_finds_no_existing_common_minimizing_sequence_claim_or_API}
+  G: {decision: selected_for_sensitivity, reason: pi_squared_and_minimizer_mutations_change_load_bearing_verdicts}
+  H: {decision: selected_for_governance, reason: MK6_and_reverse_consumers_need_terminal_sequential_status}
+selection_basis: [accepted_conventions, common_admissible_set, assumption_economy, exact_order_structure, mutation_sensitivity, novelty]
+comparator_proximity_used_for_selection: false
+source_physical_candidate: {decision: rejected, reason: wrong_lambda_coordinate_and_unaccepted_dependencies}

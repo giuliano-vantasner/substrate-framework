@@ -1,0 +1,19 @@
+campaign: P219
+claim: C-VAR-002
+claim_dependencies: []
+mathematical_premises:
+  - one_nonempty_admissible_set_X
+  - finite_nonempty_index_family
+  - real_valued_functional_E_i_on_X_for_each_index
+  - each_component_infimum_m_i_is_finite
+context_only:
+  - {claim: C-GSK-001, use: illustrates_one_shared_profile_functional_not_a_theorem_input}
+  - {claim: C-BPS-001, use: illustrates_lower_bound_versus_attainment_not_a_theorem_input}
+  - {claim: C-VAR-001, use: same_variational_module_only_not_a_dependency}
+MK6_inputs_excluded:
+  - lambda_A_lambda_BPS_physical_values
+  - N_c_and_pion_electron_nucleon_masses
+  - rational_map_profile_coefficients
+  - physical_state_or_binding_maps
+  - empirical_comparators
+closure: exact_and_empty

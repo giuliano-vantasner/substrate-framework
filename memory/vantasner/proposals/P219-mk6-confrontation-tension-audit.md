@@ -105,6 +105,23 @@ MeV, not 981.2 MeV; MK6.3's both-near-nucleon premise becomes false. The
 source also never supplies the shared-minimizer logic needed to turn one joint
 functional into a sum of separately minimized sector masses.
 
+Attempt 0003 preserves the first primary-verifier stop after eight passes. The
+near-BPS helper returns an expanded polynomial, while the assertion compared it
+structurally with the factored equivalent. The repaired oracle simplifies their
+difference exactly; no premise, value, or tolerance changes.
+
+Attempt 0004 preserves a source-graph schema stop after five passes. The replay
+looked for the root runtime tally under `native_run`, while P219 stores it in
+the explicit top-level inventory. The repair changes only that evidence path
+and launches no source execution.
+
+Attempt 0005 completes the positive implementation. C-VAR-002's canonical
+ledger records component infima, common-configuration values, component
+excesses, and their exact summed excess. Twenty-four primary checks, 17 fresh
+independent checks, nine graph checks, and 47 focused tests pass. Common and
+incompatible minimizer examples, pi-squared convention mutation, slack signs,
+and corrected source predicates make the verification sensitive.
+
 ## Debt Ledger
 
 The ledger tracks source predicates, lambda ownership, target-potential
@@ -115,12 +132,12 @@ difference, compatibility, novelty, consumers, and generated records.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | MK6 body and predicates remain unopened | Reproduce after committed freeze | discharged by attempt 0002 |
-| Lambda coordinate may be misapplied | Independent elimination in both conventions | source error identified; independent route open |
-| Lower bound may be called an attained mass | Explicit attainment and slack audit | source overreach identified; replacement proof open |
-| Sector components may be added after separate minimization | Shared-functional theorem and counterexample | implementation open |
-| Physical pion nucleon electron or binding maps may leak | Accepted-dependency and free-symbol audit | source leakage identified; graph audit open |
-| Proposed theorem may duplicate existing work | Registry campaign module and memory search | open |
-| Later MR units may grant backward authority | Hash-pinned source graph replay | open |
+| Lambda coordinate may be misapplied | Independent elimination in both conventions | discharged by attempts 0002 and 0005 |
+| Lower bound may be called an attained mass | Explicit attainment and slack audit | discharged by attempt 0005 |
+| Sector components may be added after separate minimization | Shared-functional theorem and counterexample | discharged by attempt 0005 |
+| Physical pion nucleon electron or binding maps may leak | Accepted-dependency and free-symbol audit | discharged by attempt 0005 |
+| Proposed theorem may duplicate existing work | Registry campaign module and memory search | discharged by attempt 0005 |
+| Later MR units may grant backward authority | Hash-pinned source graph replay | discharged by attempt 0005 |
 | Governed records remain unresolved | Claim review disposition and canonicalization | open |
 
 ## Review and Promotion Plan

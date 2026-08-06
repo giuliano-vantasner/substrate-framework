@@ -1,0 +1,21 @@
+campaign: P219
+claim_delta: [C-VAR-002]
+canonical_changes:
+  module: src/substrate_framework/variational.py
+  exports: src/substrate_framework/__init__.py
+  tests: tests/test_variational.py
+direct_consumers:
+  - governance/claims.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - memory/framework/claims
+  - memory/framework/releases
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+indirect_consumers:
+  - future_joint_functional_reviews
+  - MR3_no_double_counting_audit
+existing_symbols_changed: []
+release_change_required: true
+full_integrated_gate_required: true
+reason: accepted_claim_API_test_release_and_generated_consumers_change

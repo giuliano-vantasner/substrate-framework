@@ -1,0 +1,21 @@
+campaign: P219
+verifier: verify.py
+sha256: 383008aa636dbafc0343b620f7d86538291caeac9dc639f4fb00be1a5cec9f44
+checks: 24
+exit_status: 0
+terminal_tally: ALL_24_CHECKS_PASS_P219
+imports:
+  - substrate_framework.bps_energy
+  - substrate_framework.source_audit
+  - substrate_framework.variational
+  - substrate_framework.verification
+load_bearing_surfaces:
+  - dual_lambda_coordinate_elimination
+  - corrected_exact_and_numeric_BPS_bound
+  - bound_slack_counterexample
+  - exact_functional_excess_identity
+  - common_and_incompatible_minimizer_examples
+  - convention_and_shared_minimizer_mutations
+  - corrected_scale_power
+  - source_guard_and_unformed_sum_audits
+failed_predecessor_attempt: attempts/0003/result.yaml

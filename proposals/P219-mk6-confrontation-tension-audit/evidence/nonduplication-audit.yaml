@@ -1,0 +1,17 @@
+campaign: P219
+claim: C-VAR-002
+searches:
+  - C_VAR_002_identifier_across_governance_campaigns_proposals_memory_src_tests
+  - infimum_of_sum_and_sum_of_infima_across_registry_modules_tests_and_memory
+  - common_minimizer_and_common_minimizing_sequence_across_framework
+nearest_claims:
+  C-VAR-001: fixed_nonzero_multiplier_preserves_Euler_Lagrange_solution_set
+  C-BPS-001: exact_lower_bound_and_equality_residual_for_one_declared_energy
+  C-BPS-002: sectorwise_attainment_and_slack_ledger
+  C-GSK-001: one_declared_shared_profile_sum_functional
+distinction: >-
+  No accepted claim states the finite-family infimum-of-sum inequality, the
+  common minimizing-sequence equality criterion, or the joint-attainment
+  common-minimizer equivalence. Existing claims supply motivating contexts but
+  neither imply nor implement this general order theorem.
+verdict: novel

@@ -1,0 +1,14 @@
+campaign: P219
+reviewer: reviews/independent_variational_composition_review.py
+sha256: f73c6246698f8b839a7f1e9a34eb4fff25609956a68b810fcce80c3ba727d446
+checks: 17
+exit_status: 0
+terminal_tally: ALL_17_CHECKS_PASS_P219_INDEPENDENT
+independence:
+  imports_primary_verifier: false
+  imports_canonical_variational_module: false
+  imports_source_MK6: false
+  fresh_lambda_elimination: true
+  fresh_component_gap_proof: true
+  fresh_counterexamples: true
+  shared_primitive: CheckLedger_only

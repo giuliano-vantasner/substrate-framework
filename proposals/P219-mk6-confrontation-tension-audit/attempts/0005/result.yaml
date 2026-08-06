@@ -1,0 +1,22 @@
+campaign: P219
+attempt: 0005
+timestamp_utc: '2026-08-06T12:06:00Z'
+status: passed
+stage: canonical_implementation_primary_independent_graph_and_focused_tests
+claim: C-VAR-002
+primary_checks: 24
+independent_checks: 17
+graph_checks: 9
+focused_tests: {passed: 47, seconds: 4.88}
+source_graph: {nodes: 19, lexical_predicates: 157, assertions: 22}
+mutations:
+  - pi_squared_lambda_coordinate_error
+  - incompatible_component_minimizers
+  - lower_bound_slack_sign_choices
+  - source_five_percent_predicate_after_correction
+compatibility:
+  root: native_no_integration_surface
+  B1: immutable_prior_alias_only_eager_legacy_provenance
+  E2_E3: safe_current_first_fallback_provenance
+  scientific_version_failures: 0
+next_action: claim_level_review_MK6_disposition_and_impact_analysis

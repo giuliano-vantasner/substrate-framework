@@ -1,0 +1,15 @@
+campaign: P219
+attempt: 0003
+timestamp_utc: '2026-08-06T12:00:00Z'
+status: failed
+stage: primary_verifier_first_run
+passed_before_stop: 8
+failed_check: linearity_cancels_only_the_attained_leading_term_not_arbitrary_corrections
+failure_class: verifier_representation
+diagnosis: >-
+  near_bps_mass_difference intentionally returns an expanded polynomial, while
+  the verifier used structural equality against its factored equivalent.
+  Their exact simplified residual is zero; no scientific premise or tolerance
+  changes.
+repair: compare_the_symbolic_difference_after_simplification
+next_action: rerun_the_same_frozen_candidate_then_continue_to_independent_review

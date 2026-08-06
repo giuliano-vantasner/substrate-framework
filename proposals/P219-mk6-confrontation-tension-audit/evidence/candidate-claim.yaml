@@ -1,0 +1,22 @@
+campaign: P219
+candidate:
+  id: C-VAR-002
+  scope: exact_finite_functional_infimum_composition
+  statement_surface:
+    - finite_nonempty_family_of_real_valued_functionals
+    - one_common_nonempty_admissible_set
+    - finite_real_component_infima
+    - joint_infimum_at_least_sum_of_component_infima
+    - equality_iff_common_minimizing_sequence_condition
+    - under_joint_attainment_equality_iff_common_minimizer
+  proof:
+    pointwise: each_E_i_minus_m_i_is_nonnegative
+    sum: sum_E_i_minus_sum_m_i_equals_sum_component_excesses
+    forward_epsilon: joint_equality_gives_points_with_total_excess_below_epsilon_so_each_excess_is_below_epsilon
+    reverse_epsilon: apply_the_common_condition_at_epsilon_over_family_size_then_sum_excesses
+    attainment: a_zero_sum_of_finitely_many_nonnegative_excesses_has_every_excess_zero
+  excluded:
+    - existence_or_attainment_for_any_specific_field_model
+    - additivity_of_separately_minimized_sector_masses
+    - physical_action_state_mass_binding_or_double_counting_interpretation
+    - generalized_Skyrme_coefficient_or_numeric_prediction

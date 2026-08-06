@@ -1,0 +1,26 @@
+campaign: P219
+root: MK6
+nodes: 19
+lexical_predicates: 157
+assertions: 22
+aggregate_checks: 9
+qualified_predecessors: [B1, E2, E3, E4, HE4, MK1, MK2, MK3, MK4, MK5, S5]
+duplicate_predecessor: NY1
+direct_reverse_consumers: [MR1, MR2, MR3, MR6]
+later_siblings: [MR4, MR5]
+reverse_dispositions_before_review:
+  duplicate_evidence: [MR1]
+  pending: [MR2, MR3, MR4, MR5, MR6]
+execution_policy:
+  P219_root_reproduction: MK6
+  reused_P215: [MR2, MR4, MR6]
+  reused_P174: [MR5]
+  static_only: [MR1, MR3]
+compatibility:
+  B1: {legacy: 1, current: 1, eager: 1, handling: prior_immutable_alias_only_backed_by_numpy_trapezoid}
+  E2: {legacy: 1, current: 1, eager: 0, handling: safe_current_first_fallback}
+  E3: {legacy: 1, current: 1, eager: 0, handling: safe_current_first_fallback}
+  all_other_nodes: native_no_numpy_integration_surface
+  scientific_version_failures: 0
+excluded_dirty_untracked_consumers: [phase47_BM, phase48_CE]
+debt: []

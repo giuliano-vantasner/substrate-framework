@@ -1,0 +1,22 @@
+campaign: P219
+root: MK6
+accepted_consumers:
+  - src/substrate_framework/variational.py
+  - tests/test_variational.py
+contextual_consumers:
+  C-GSK-001: one_joint_profile_functional_illustration_only
+  C-BPS-001: lower_bound_and_attainment_illustration_only
+direct_source_consumers:
+  MR1: duplicate_C_SK_001_and_cannot_restore_MK6_physical_premises
+  MR2: independently_corrects_the_pi_squared_error_and_remains_pending
+  MR3: rejects_double_counting_and_remains_pending
+  MR6: summarizes_later_ledger_and_remains_pending
+later_siblings:
+  MR4: proposed_physical_coupling_closure_remains_pending
+  MR5: source_numeric_rerun_at_MR4_input_remains_pending
+decision: >-
+  C-VAR-002 is a generic exact order theorem and changes no existing symbol.
+  It may be cited by future joint-functional reviews but grants no physical
+  action, coefficient, state, mass, binding, or backward authority to MK6 or
+  the pending MR units.
+generated_consumers: [docs/generated/claim-index.md, memory/framework/claims, migration/source-claims.yaml]
