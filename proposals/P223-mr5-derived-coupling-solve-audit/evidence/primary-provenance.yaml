@@ -1,8 +1,8 @@
 campaign: P223
 verifier: verify.py
-sha256: cc6da46aadf7da21e20eba7f228449ec5df968ab345c8415bdf4c348dbc65164
+sha256: 40f1e4b4fcbb75a1812e7f0ebec9d3ab09bc652a36053700b350c96fdbf2a0bd
 command: PYTHONPATH_src_python_verify
-result: {exit_status: 0, checks: 21, elapsed_seconds: 7.27, maximum_resident_kib: 161704}
+result: {exit_status: 0, checks: 21, elapsed_seconds: 7.26, maximum_resident_kib: 162044}
 mutations:
   - source_comparator_guard_is_required_to_fail_its_completeness_claim
   - c6_prefactor_scale_1_25_moves_the_interval_branch_optimum_and_value

@@ -160,8 +160,8 @@ def main() -> int:
         and "FORBIDDEN = [929 / 1000.0" in source_text
         and yaml.safe_load(
             (CAMPAIGN / "evidence/check-adjudication.yaml").read_text()
-        )["checks"]["MR5.6"]["verification"]
-        == "refuted_by_AST_audit",
+        )["checks"]["MR5.6"]["epistemic"]
+        == "refuted",
     )
 
     radius = sp.symbols("r", positive=True)

@@ -119,6 +119,13 @@ not an all-positive-coupling theorem, a global profile minimum, or a physical
 mass floor. Every exact survivor is already C-GSK-001 or C-RDIFF-001; no claim,
 API, test, or release change is warranted.
 
+Attempt 0007 individually reviews all six predicates and selects terminal
+`duplicate_evidence` through C-GSK-001 and C-RDIFF-001. The review retains the
+exact model and signed-coordinate mappings plus the supplied-point regression,
+while rejecting a distinct numeric claim, all-coupling or global floor,
+physical coupling, mass, binding, nucleus, convention-bracket, and complete-
+guard readings.
+
 ## Debt Ledger
 
 The ledger tracks every supplied coefficient, coupling premise, branch-control
@@ -134,7 +141,7 @@ governed record.
 | Kappa may be called a bound or physical binding | C-RDIFF typing and counterexample audit | discharged: exact signed coordinate only |
 | Degree labels may be called nuclei or masses | State action scale and correction firewall | discharged: no accepted map or mass normalization |
 | MR6 may grant backward authority | Pinned consumer replay | discharged: eight graph checks retain MR6 pending |
-| Governed records remain unresolved | Terminal disposition and synchronization | open |
+| Governed records remain unresolved | Terminal disposition and synchronization | open: record-only terminal transaction |
 
 ## Review and Promotion Plan
 

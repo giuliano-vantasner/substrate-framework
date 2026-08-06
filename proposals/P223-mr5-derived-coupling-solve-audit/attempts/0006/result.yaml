@@ -4,7 +4,7 @@ timestamp_utc: '2026-08-06T13:55:00Z'
 status: passed
 stage: canonical_independent_graph_and_focused_verification
 results:
-  primary: {checks: 21, elapsed_seconds: 7.27, maximum_resident_kib: 161704}
+  primary: {checks: 21, elapsed_seconds: 7.26, maximum_resident_kib: 162044}
   independent: {checks: 11, elapsed_seconds: 27.73, maximum_resident_kib: 156584}
   graph: {checks: 8, elapsed_seconds: 2.34, maximum_resident_kib: 157440}
   focused: {tests: 87, pytest_seconds: 11.84, maximum_resident_kib: 161064}

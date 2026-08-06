@@ -1,0 +1,22 @@
+campaign: P223
+attempt: 0007
+timestamp_utc: '2026-08-06T13:58:00Z'
+status: passed
+stage: individual_source_and_disposition_review
+source_predicates_reviewed: 6
+selected_disposition: duplicate_evidence
+accepted_claim_owners: [C-GSK-001, C-RDIFF-001]
+context_only: [C-GSK-002, C-RPROF-002, C-RDIFF-002]
+unpromoted_surfaces:
+  - supplied_parameter_stationary_branch_point
+  - bounded_interval_continuation_branch_minimum
+  - derived_physical_coupling
+  - every_positive_coupling_floor
+  - particle_mass_and_ratio
+  - physical_binding_or_light_nucleus
+  - convention_bracket
+  - complete_comparator_guard
+package_change: none
+claim_change: none
+release_change: none
+next_action: governed_terminal_record_transaction

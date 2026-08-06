@@ -54,8 +54,8 @@ comparators_blinded_until: >-
   solver settings, predicates, guards, exact literals, compatibility surfaces,
   and consumer conclusions stay unopened until this contract, formula freeze,
   provenance record, validation record, and freeze commit exist.
-status: active
-revision: 0002
+status: in_review
+revision: 0003
 opened_source_settings:
   angular_quadrature: midpoint_nodes_then_nested_scipy_trapezoid_at_2000_by_400
   boundary_data: finite_wall_Dirichlet_f_inner_equals_pi_f_outer_equals_zero
@@ -66,9 +66,10 @@ opened_source_settings:
   energy_quadrature: scipy_trapezoid_at_40000_samples
   source_sweep: nine_discrete_points_from_3_to_7
 claim_refinement:
-  decision: no_identifier_reserved_after_source_audit
+  decision: terminal_duplicate_evidence_no_identifier
   reason: >-
     The exact coefficient and equation surfaces are C-GSK-001, while the
     source's discrete sweep does not prove a continuous or global floor and
-    its physical coupling premise was rejected by P222. A distinct conditional
-    numeric point remains open only through the preregistered stronger oracle.
+    its physical coupling premise was rejected by P222. The stronger oracle
+    shows the new supplied point is regression evidence with no distinct
+    invariant, API, or accepted predictive reach.
