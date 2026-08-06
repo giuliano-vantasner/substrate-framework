@@ -1,0 +1,19 @@
+attempt: 0001
+campaign: P210
+timestamp_utc: '2026-08-06T06:23:01Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: 9311c5104869b4c229adb8c4154fdb93c068c088
+base_release: v0.151.0
+source_unit: GC3
+candidates: [A, B, C, D, E, F, G, H]
+claims_proposed: []
+source_body_inspected: false
+native_source_executed: false
+exposed_queue_claims:
+  - common_phase_factorization
+  - real_Gram_matrix
+  - real_relative_basis_and_zero_quartet
+  - four_hundred_random_examples
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction

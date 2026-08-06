@@ -1,0 +1,60 @@
+revision: 0001
+campaign: P210
+source_unit: GC3
+conditional_matrix_model:
+  matrices:
+    - Y_u_equals_exp_i_theta_u_times_R_u
+    - Y_d_equals_exp_i_theta_d_times_R_d
+  premises:
+    - R_u_and_R_d_are_real_finite_matrices
+    - theta_u_and_theta_d_are_global_scalars
+  gram_identity: Y_dagger_Y_equals_R_transpose_R
+  consequence: each_Gram_matrix_is_real_symmetric_and_phase_independent
+relative_basis_obligations:
+  - choose_real_orthogonal_left_Gram_eigenbases_when_the_Gram_matrices_are_real_symmetric
+  - form_V_equals_O_u_transpose_times_O_d_and_prove_V_is_real_orthogonal
+  - prove_every_quartet_imaginary_part_Im_V_ia_V_jb_conj_V_ib_conj_V_ja_vanishes
+  - retain_the_full_degenerate_eigenspace_freedom_and_do_not_treat_an_arbitrary_complex_basis_choice_as_physical_CP
+weak_basis_obligations:
+  - H_u_and_H_d_real_symmetric_implies_their_commutator_is_real_antisymmetric
+  - every_odd_power_trace_of_a_real_antisymmetric_commutator_vanishes
+  - in_dimension_three_the_commutator_determinant_vanishes
+  - distinguish_conditional_zero_invariants_from_a_universal_model_theorem
+premise_audit:
+  - identify_every_source_assumption_that_makes_profiles_modes_amplitudes_and_couplings_real
+  - identify_whether_one_global_phase_is_derived_or_declared
+  - test_an_independent_complex_coupling_with_the_same_single_condensate_symbol
+  - test_complex_mode_or_boundary_phase_data
+  - test_a_position_dependent_condensate_phase_inside_the_overlap_integral
+  - test_entrywise_phase_mutations_that_create_a_complex_Gram_matrix_or_nonzero_quartet
+dimension_audit:
+  - repeat_the_conditional_common_phase_theorem_for_arbitrary_positive_N
+  - mutate_N_and_require_no_selection_of_three
+  - keep_C_MIX_002_parameter_count_separate_from_a_nonzero_CP_phase
+source_forensics_after_freeze:
+  - classify_every_coupling_profile_mode_phase_matrix_dimension_and_random_seed_as_literal_imported_or_derived
+  - compare_every_GC3_predicate_to_the_exact_conditional_theorem_and_to_accepted_C_MIX_001_C_MIX_002_and_C_OVL_001
+  - record_static_check_sites_runtime_executions_and_assertion_nodes_separately
+  - classify_random_trials_as_regression_when_exact_algebra_fixes_the_right_hand_side
+mutations:
+  - vary_each_global_phase_without_changing_either_Gram_matrix
+  - replace_one_global_phase_by_entrywise_phases
+  - add_one_independent_complex_coupling_while_retaining_one_condensate
+  - make_one_mode_complex_or_give_it_complex_boundary_data
+  - make_the_condensate_phase_position_dependent
+  - set_a_Gram_matrix_to_a_degenerate_multiple_of_the_identity_and_change_its_basis
+  - change_matrix_dimension_from_three_to_two_or_four
+physical_ceiling:
+  - no_universal_one_condensate_no_CP_theorem_without_a_closed_interaction_and_mode_premise
+  - no_observed_CKM_matrix_or_nonzero_KM_phase
+  - no_generation_count_or_selected_N_equals_three
+  - no_Yukawa_or_fermion_mass_identification_from_an_abstract_overlap_alone
+  - no_multi_condensate_stability_or_phase_selection_theorem
+  - no_Standard_Model_or_substrate_realization
+compatibility_preflight:
+  canonical_integration: trapezoid_integral
+  mutable_numpy_integration: numpy.trapezoid
+  access_shapes: [direct, imported, dynamic, eager_fallback]
+  immutable_policy: alias_only_recorded_replay_before_scientific_adjudication
+  version_only_abort_is_scientific_failure: false
+scientific_version_failures: 0

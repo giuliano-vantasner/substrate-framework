@@ -1,0 +1,42 @@
+campaign: P210
+framework_base_commit: 9311c5104869b4c229adb8c4154fdb93c068c088
+base_release: v0.151.0
+base_release_sha256: d4a34703c842ced4804bf3ad87378529f753cd75a532c7ef559dcef46627d6a5
+claims_registry_sha256: 989b2990129401385eed5c8e792e8edf3584d5f579592d1bad18673b65f8bbf5
+accepted_claim_count: 191
+migration_counts: {pending: 15, partial: 0, qualified: 190}
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_unit: GC3
+source_path: merged-framework/bridges/phase-42/bridge_GC3_cp_needs_relative_phases.py
+source_absolute_path: /home/dan/substrate/merged-framework/bridges/phase-42/bridge_GC3_cp_needs_relative_phases.py
+source_sha256: 0e44cc80e118cd38366c033c508774bf9a7cab981e8ea3cf054998958426dad8
+source_git_blob: e6c785f9c7211299421ba3a49163f942701da566
+source_blob_commit: 7222eed
+source_bytes: 29123
+source_history_commits: 1
+canonical_sources:
+  src/substrate_framework/matrix_decompositions.py: 7d0948eda4ac60674edb643b70b6bda4444016caa88f8a06b1349ff2d55e1935
+  src/substrate_framework/unitary_rephasing.py: 2a4535c1565c8bcd6700c18bf07b73cb7d6b2c748a2390d2e42b82c2f7faed3f
+  src/substrate_framework/normalized_overlaps.py: 83bcc31038f5502780da42d91bbb109f7a84b53d578a4fdccda96ff63cfbe226
+terminal_direct_dependencies:
+  EM6: [C-QBL-001]
+  FG2: [C-QBL-001, C-QBL-003]
+  FG3: [C-MIX-001]
+  FG4: [C-MIX-001, C-MIX-002]
+  GC1: [C-QBL-001, C-QBL-002, C-QBL-003, C-OVL-001, C-OVL-002, C-QBL-005]
+  MH1: [C-QBL-003, C-OVL-001]
+  MH2: [C-OVL-001, C-OVL-002]
+  WM10: [C-MIX-002, C-REP-001, C-REP-003, C-RGE-004, C-RGE-005, C-RGE-006, C-VAC-003]
+  WM7: [C-MIX-002, C-REP-001, C-REP-003, C-ANO-001, C-RGE-005, C-VAC-003]
+pending_cycle_dependencies: [GC4, GC5]
+direct_reverse_consumers: [GC4, GC5, GC6]
+source_exposure_before_freeze:
+  queue_headline_and_result_excerpt: true
+  exposed_claims:
+    - common_phase_times_real_matrix
+    - real_symmetric_Gram_matrix
+    - real_relative_basis_and_vanishing_quartet
+    - four_hundred_random_examples
+  source_body: false
+  native_execution: false
+  exact_matrices_distributions_seeds_tolerances_remaining_predicates_and_guards: false

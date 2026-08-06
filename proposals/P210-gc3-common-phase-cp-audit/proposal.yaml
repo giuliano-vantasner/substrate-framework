@@ -1,0 +1,66 @@
+id: P210
+base_release: v0.151.0
+base_commit: 9311c51
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GC3]
+question: >-
+  What exact CP-odd conclusions follow when one or more Yukawa-like matrices
+  are assumed to have a single removable overall phase times a real matrix,
+  and does one condensate itself enforce that matrix form for every allowed
+  coupling and mode or merely supply one conditional realization of it?
+invariants:
+  - C-MIX-001 owns exact finite complex SVD Gram spectra basis freedoms and relative-basis composition but no physical Yukawa CKM or CP interpretation.
+  - C-MIX-002 owns the abstract unitary rephasing quotient and invariant quartets but no physical CP phase observed family map or generation count.
+  - C-OVL-001 owns normalized overlaps against supplied profiles and modes but no Yukawa identification condensate dynamics or generation identity.
+  - A matrix of the form exp(i*theta)*R with R real has a real Gram matrix but that conditional algebra does not establish that a physical model supplies only one phase or only real coefficients and modes.
+  - Degenerate Gram eigenspaces permit nonunique complex basis choices so a basis-dependent apparent phase is not physical evidence.
+  - The dimension N is an input to finite-matrix algebra unless an accepted independent theorem selects a family count.
+  - Pending GC4 and GC5 are nonauthoritative cycle edges and cannot support GC3.
+  - Numerical random trials cannot strengthen an exact symbolic identity and comparator closeness cannot select a concept.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events are never scientific failures.
+allowed_imports:
+  - C-MIX-001 and C-MIX-002 only at their accepted abstract matrix and rephasing ceilings
+  - C-OVL-001 only for normalized overlap construction with supplied profiles and modes
+  - terminal EM6 FG2 FG3 FG4 GC1 MH1 MH2 WM7 and WM10 mappings at v0.151.0 without rejected physical interpretations
+  - SymPy for exact common-phase cancellation real-Gram commutator and quartet identities
+  - NumPy only for source reproduction or regression of an opened finite-matrix obligation whose right-hand side is not already fixed exactly
+  - hash-pinned GC3 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Prove the exact conditional theorem Y=exp(i*theta)*R with real R implies Y-dagger-Y is real symmetric and phase independent.
+  - id: B
+    description: For two common-phase real matrices choose real left singular bases and prove their relative basis has vanishing invariant CP-odd quartets.
+  - id: C
+    description: Strengthen the conclusion with weak-basis invariants of two real symmetric Gram matrices while retaining degeneracy caveats.
+  - id: D
+    description: Accept the universal one-condensate premise only if an accepted interaction theorem enforces shared phase real coefficients real modes and no additional complex structures.
+  - id: E
+    description: Refute universal enforcement with one-condensate countermodels containing independent complex couplings complex modes derivative structures or position-dependent phase.
+  - id: F
+    description: Treat the N=3 phase-count slot as abstract parameter counting rather than a derived nonzero physical phase or a generation-count theorem.
+  - id: G
+    description: Select no new claim or API if C-MIX-001 C-MIX-002 and C-OVL-001 own the strongest corrected exact content.
+  - id: H
+    description: Give GC3 an individual terminal disposition and replay pending GC4 GC5 and GC6 without reverse authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact matrix factorization and rephasing-invariant CP-odd diagnostics
+  - dependency closure for common phase real coefficients and real modes
+  - global versus entrywise or position-dependent phase separation
+  - basis-freedom and degeneracy stability
+  - dimension and generation-count provenance
+  - assumption and parameter economy
+  - novelty beyond accepted matrix overlap and rephasing claims
+  - physical-ceiling and source-graph closure
+claims_proposed: []
+reserved_unpromoted_claims: []
+comparators_blinded_until: >-
+  The generated queue exposes GC3's headline, nine static check sites, one
+  assertion, and truncated claims about common-phase factorization, real Gram
+  matrices, real relative bases, vanishing quartets, and 400 random examples.
+  The source body, exact matrices, distributions, seeds, tolerances, remaining
+  predicates, guards, and native output remain unopened until this contract,
+  formula freeze, provenance record, memory validation, and clean freeze commit
+  exist.
+comparators_used_for_selection: []
+status: draft
