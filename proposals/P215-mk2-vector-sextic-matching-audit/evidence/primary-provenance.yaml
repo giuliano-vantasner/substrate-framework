@@ -1,0 +1,23 @@
+campaign: P215
+source_unit: MK2
+base_release: v0.155.0
+freeze_commit: d7b798f2
+implementation_commit: d23a0e1
+claim_delta: C-VEC-002
+primary_verifier: proposals/P215-mk2-vector-sextic-matching-audit/verify.py
+checks: 29
+route:
+  - pinned source freeze and native reproduction
+  - canonical C-EFT-001 quadratic elimination specialization
+  - accepted BPS pi-squared convention map
+  - finite inverse residual and exact nonzero derivative counterexample
+  - complete symbolic U2 adjoint-invariant-form solve
+  - positive unequal singlet-triplet countermodel
+  - fixed-ratio and varying-ratio identifiability families
+  - conditional general-a HLS algebra and a=2 mutation
+  - accepted WZW winding vector and BPS ceiling audit
+  - post-source nonduplication and source disposition checks
+precision: SymPy exact integers rationals pi and assumption-bearing symbols
+numeric_oracle: none
+compatibility: MK2 has no integration surface
+debt: []

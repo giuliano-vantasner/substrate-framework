@@ -1,0 +1,19 @@
+campaign: P215
+claim_delta: C-VEC-002
+independent_review: proposals/P215-mk2-vector-sextic-matching-audit/reviews/independent_vector_metric_review.py
+checks: 15
+canonical_claim_api_imported: false
+route:
+  - fresh scalar variation and stationary substitution
+  - fresh source-to-BPS convention solve
+  - fresh full inverse and Taylor correction
+  - fresh generic symmetric U2 invariant-form linear solve
+  - fresh positive unequal invariant metric
+  - fresh fixed-ratio parameter family
+  - fresh general-a conditional cancellation
+  - direct accepted registry ceiling checks
+preserved_failures:
+  - attempt_0004_positive_vector_symbol_excluded_stationary_solution
+  - attempt_0005_brittle_registry_prose_location
+precision: SymPy exact
+debt: []
