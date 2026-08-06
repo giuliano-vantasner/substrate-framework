@@ -2,7 +2,7 @@
 description: Audit GC4 interaction, coexistence stability, and scalar phase capacity
 author: vantasner
 created: '2026-08-06T07:26:31Z'
-updated: '2026-08-06T07:31:27Z'
+updated: '2026-08-06T07:44:23Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -126,6 +126,14 @@ separate pair energies, supplies no common three-field solution or stability
 oracle, and imports a physical CP lower bound that accepted FG4 explicitly
 does not own.
 
+Attempts 0003 through 0006 preserve the GitNexus repository-selector and
+generated-editor cleanup, one factored-versus-expanded verifier comparison,
+and the wider graph's E1 lazy current-first compatibility surface. The final
+implementation passes 39 primary and 26 fresh independent exact checks, 118
+focused accepted-API tests, and 36 frozen-graph checks. Exact formulas reproduce
+the source's grid values without quadrature, while force-sign mutations show
+that anti-phase and Z3 pair forces reverse outside the sampled tail regime.
+
 ## Debt Ledger
 
 The P211 ledger tracks the functional, field type, phase, separation, kernel,
@@ -135,14 +143,15 @@ compatibility surface, consumers, and generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Source predicates remain blinded | Reproduce once after committed freeze | open |
-| Trial energy may be mistaken for dynamics | Separate energy, force, equilibrium, and stability | open |
-| A leading cosine may omit nonlinear phase harmonics | Expand the actual functional exactly | open |
-| A pairwise rule may not apply to every graph edge | Audit complete and sparse interaction graphs | open |
-| Strict negativity may be weakened silently | Prove strict and weak capacities separately | open |
-| Capacity may be mistaken for selected occupancy | Supply smaller-count and unbound countermodels | open |
-| Pending GC5 may grant backward authority | Replay without importing GC5 | open |
-| Compatibility may masquerade as science | Audit every executable access shape | open |
+| Source predicates remain blinded | Reproduce once after committed freeze | discharged after `3e6fc45` |
+| Trial energy may be mistaken for dynamics | Separate energy, force, equilibrium, and stability | discharged by exact typed ledger and force mutation |
+| A leading cosine may omit nonlinear phase harmonics | Expand the actual functional exactly | discharged by constant, cosine, and cosine-squared terms |
+| A pairwise rule may not apply to every graph edge | Audit complete and sparse interaction graphs | discharged by the four-cycle countermodel |
+| Strict negativity may be weakened silently | Prove strict and weak capacities separately | discharged as capacities three and four |
+| Capacity may be mistaken for selected occupancy | Supply smaller-count and unbound countermodels | discharged by N=2 and dispersive-tail witnesses |
+| Pending GC5 may grant backward authority | Replay without importing GC5 | discharged by the frozen graph |
+| Compatibility may masquerade as science | Audit every executable access shape | discharged; E1's lazy current-first branch is compatibility-only |
+| Promotion and generated state remain open | Complete claim reviews, release, disposition, generation, and integrated gate | open |
 
 ## Review and Promotion Plan
 

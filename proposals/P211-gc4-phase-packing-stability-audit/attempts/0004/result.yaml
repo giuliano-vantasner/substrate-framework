@@ -1,0 +1,10 @@
+attempt: 0004
+campaign: P211
+timestamp_utc: '2026-08-06T07:39:45Z'
+kind: independent_verifier_factorization_representation_repair
+artifact: reviews/independent_phase_interaction_review.py
+initial_result: stopped_after_five_passes_on_factored_versus_expanded_linear_coefficient_comparison
+mechanism: SymPy_Poly_returned_4f3g_plus_4fg3_while_the_expected_expression_was_factored_as_4fg_times_f2_plus_g2
+repair: compare_the_expanded_exact_residual_to_zero
+scientific_candidate_rejected: false
+continuation: rerun_the_independent_rederivation_from_a_clean_process

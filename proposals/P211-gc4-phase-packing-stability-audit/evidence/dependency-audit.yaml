@@ -1,0 +1,17 @@
+campaign: P211
+claims:
+  C-QBL-006:
+    dependencies: [C-QBL-001, C-QBL-003]
+    reason: exact_profile_and_declared_quartic_energy_convention
+  C-PHS-001:
+    dependencies: []
+    reason: elementary_complete_graph_scalar_circle_geometry
+accepted_ceiling_replays:
+  C-MIX-002: abstract_phase_dimension_only_no_physical_CP_or_generation_map
+  C-MIX-003: no_condensate_stability_or_count
+  C-OVL-001: no_common_multisoliton_or_Yukawa_map
+pending_authority_excluded: [GC5]
+hidden_imports: []
+fitted_constants: []
+measured_comparators: []
+verdict: closed

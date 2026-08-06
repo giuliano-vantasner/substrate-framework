@@ -1,0 +1,11 @@
+attempt: 0003
+campaign: P211
+timestamp_utc: '2026-08-06T07:31:27Z'
+kind: impact_query_repository_selector_repair
+initial_command: gitnexus_query_without_repo_selector
+initial_result: failed_because_four_repositories_are_indexed
+repair: rerun_each_query_with_-r_substrate-framework
+repair_exit_status: 0
+scientific_candidate_rejected: false
+generated_editor_artifacts_removed: true
+continuation: implement_the_low_risk_additive_exact_APIs_and_replay_declared_consumers

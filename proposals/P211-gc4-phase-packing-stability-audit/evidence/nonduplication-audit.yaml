@@ -1,0 +1,16 @@
+campaign: P211
+search_scopes: [governance/claims.yaml, src/substrate_framework, tests, campaigns, proposals, memory]
+searched_concepts:
+  - exact_quartic_two_sech_complex_phase_interaction
+  - scalar_circle_complete_graph_phase_capacity
+  - optimal_worst_pairwise_cosine
+  - strict_and_weak_cosine_packing
+nearest_claims:
+  C-QBL-001: owns_one_profile_equation_and_charge_but_no_two_profile_energy
+  C-QBL-003: owns_one_profile_scalar_Hessian_but_no_complex_superposition_interaction
+  C-MIX-002: owns_unitary_rephasing_dimension_but_no_circle_packing
+  C-MIX-003: owns_common_phase_Gram_nulls_but_no_pairwise_phase_capacity
+novel_surfaces:
+  - C-QBL-006_exact_finite_interaction_and_asymptotic_phase_terms
+  - C-PHS-001_sharp_scalar_circle_optimum_and_capacity_caveats
+verdict: minimum_novel_surfaces_confirmed

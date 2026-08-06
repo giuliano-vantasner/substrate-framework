@@ -1,0 +1,17 @@
+campaign: P211
+canonical_module: src/substrate_framework/phase_interactions.py
+direct_consumers:
+  - tests/test_phase_interactions.py
+  - proposals/P211-gc4-phase-packing-stability-audit/verify.py
+public_export: src/substrate_framework/__init__.py
+accepted_adjacent_consumers_replayed:
+  - tests/test_quartic_qball.py
+  - tests/test_qball_fluctuations.py
+  - tests/test_normalized_overlaps.py
+  - tests/test_translated_localization.py
+  - tests/test_common_phase_matrices.py
+  - tests/test_source_audit.py
+source_reverse_consumers: [GC1, GC2, GC3, GC5, GC6]
+reverse_authority_used: false
+focused_tests_passed: 118
+verdict: closed

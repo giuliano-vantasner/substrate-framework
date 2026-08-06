@@ -1,0 +1,35 @@
+campaign: P211
+tool: GitNexus_CLI
+index_commit: f268822
+index_nodes: 32042
+index_edges: 49791
+initial_query_result: failed_missing_repository_selector_with_four_indexes_available
+repair: rerun_all_queries_with_-r_substrate-framework
+risk: low_additive_surface
+existing_symbol_collisions: []
+direct_consumers:
+  - tests/test_phase_interactions.py
+  - proposals/P211-gc4-phase-packing-stability-audit/verify.py
+  - proposals/P211-gc4-phase-packing-stability-audit/reviews/independent_phase_interaction_review.py
+indirect_replay:
+  - src/substrate_framework/__init__.py
+  - src/substrate_framework/quartic_qball.py
+  - src/substrate_framework/qball_fluctuations.py
+  - tests/test_quartic_qball.py
+  - tests/test_qball_fluctuations.py
+  - tests/test_common_phase_matrices.py
+generated_side_effects_removed:
+  - CLAUDE.md
+  - .claude/skills/gitnexus
+  - appended_AGENTS_gitnexus_block
+finding: >-
+  No existing canonical phase-packing or quartic pair-interaction definition
+  was found. The change is additive; accepted quartic and common-phase APIs are
+  unchanged and are replay consumers rather than edited symbols.
+precommit_detect_changes:
+  command: gitnexus_detect-changes_-r_substrate-framework_-s_all
+  reported_changed_tracked_files: 2
+  reported_changed_symbols: 4
+  affected_processes: 0
+  risk: low
+  limitation: newly_created_untracked_symbols_are_not_present_in_the_pre_edit_index_and_are_covered_by_the_explicit_consumer_inventory

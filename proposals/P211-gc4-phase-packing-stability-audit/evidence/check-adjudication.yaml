@@ -1,0 +1,12 @@
+campaign: P211
+source_unit: GC4
+checks:
+  GC4.1: {decision: qualified, retained: exact_declared_trial_pair_energy_values, rejected: [merger_dynamics, persistence, coexistence_stability]}
+  GC4.2: {decision: corrected, retained: fixed_nonzero_cosine_leading_tail, rejected: [pure_cosine_at_finite_separation, same_positive_scaled_function, sign_carried_entirely_by_cosine]}
+  GC4.3: {decision: qualified, retained: leading_tail_rate_kappa, rejected: [unique_force_range, MH2_physical_hierarchy_map]}
+  GC4.4: {decision: qualified, retained: exact_negative_perpendicular_trial_interaction, rejected: [numeric_residue_status, merger_dynamics, universal_four_object_exclusion]}
+  GC4.5: {decision: qualified, retained: sharp_complete_graph_scalar_circle_capacity, rejected: [stability_implication, merger_implication, numeric_search_as_proof]}
+  GC4.6: {decision: rejected, retained: three_separate_Z3_pair_values, rejected: [three_profile_energy, common_solution, equilibrium, spectral_stability, nonlinear_stability]}
+  GC4.7: {decision: rejected, retained: abstract_algebraic_substitution_only, rejected: [physical_CP_lower_bound, generation_count_three, order_parameter_to_matrix_dimension_identification]}
+  GC4.8: {decision: qualified, retained: no_static_measured_name_or_file_network_import, rejected: [complete_reachability, no_free_input, accepted_stability_window]}
+source_disposition: qualified

@@ -1,0 +1,12 @@
+campaign: P211
+criteria_frozen_before_source: true
+candidates:
+  A: {decision: selected, reason: exact_functional_expansion_exposes_every_finite_phase_power}
+  B: {decision: selected, reason: asymptotics_separate_the_kappa_and_two_kappa_tail_rates_and_force_derivative}
+  C: {decision: selected, reason: ordered_gap_bound_and_regular_polygon_witness_prove_the_sharp_scalar_circle_optimum}
+  D: {decision: selected_as_nonselection_ceiling, reason: counts_two_and_three_both_satisfy_the_strict_rule}
+  E: {decision: selected, reason: sparse_cycle_and_tetrahedral_internal_space_break_universal_capacity_readings}
+  F: {decision: selected_as_required_ceiling, reason: no_common_solution_constraints_spectrum_Lyapunov_or_evolution_oracle_exists}
+  G: {decision: rejected, reason: nonduplication_audit_finds_two_minimum_novel_exact_surfaces}
+  H: {decision: selected, reason: terminal_governance_excludes_pending_cycle_authority_and_replays_reverse_consumers}
+selection_basis: structural_exactness_and_framework_fit_not_source_numeric_closeness

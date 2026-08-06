@@ -1,0 +1,19 @@
+campaign: P211
+root: GC4
+nodes: [E1, EM6, FG2, FG4, GC1, GC2, GC3, GC4, GC5, GC6, MH2, WM10, WM7]
+direct_authority_dependencies: [E1, EM6, FG2, FG4, GC1, GC2, GC3, MH2, WM10, WM7]
+nonauthoritative_cycle_dependencies: [GC5]
+reverse_consumers: [GC1, GC2, GC3, GC5, GC6]
+node_count: 13
+static_check_calls: 101
+assert_statements: 19
+native_source_executions_by_graph_replay: 0
+compatibility_confirmation_executions: [E1]
+future_status_policy: >-
+  Cycle and reverse-consumer roles are frozen, but their future terminal
+  dispositions are not asserted. Direct authority dependencies must remain
+  terminal. The root may be active before promotion and qualified afterward.
+quadrature_policy: >-
+  Every node is AST scanned. E1 alone has one current and one legacy reference
+  in a lazy current-first conditional, confirmed once under installed NumPy;
+  every other node has zero surface.

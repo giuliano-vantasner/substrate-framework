@@ -1,0 +1,11 @@
+campaign: P211
+artifact: proposals/P211-gc4-phase-packing-stability-audit/verify.py
+sha256: bc9ef15e3f407a559f3c60e59f9b8bc551244227ac255d58191760dca2c6d0da
+command: PYTHONPATH=src_.venv/bin/python_proposals/P211-gc4-phase-packing-stability-audit/verify.py
+exit_status: 0
+runtime_checks: 39
+static_ledger_calls: 34
+assert_statements: 0
+terminal_tally: ALL_39_CHECKS_PASS
+oracle: exact_SymPy_identities_limits_mutations_and_finite_countermodels
+verdict: pass

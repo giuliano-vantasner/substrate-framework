@@ -1,0 +1,21 @@
+campaign: P211
+module: src/substrate_framework/phase_interactions.py
+tests: tests/test_phase_interactions.py
+public_exports:
+  - QuarticSechPairInteraction
+  - quartic_sech_pair_interaction
+  - ScalarCirclePacking
+  - scalar_circle_packing
+  - pairwise_phase_cosines
+  - sech_pair_mixed_cubic_shape
+  - sech_pair_density_shape
+properties:
+  import_side_effects: none
+  simulations_on_import: false
+  prints_on_import: false
+  mutable_global_state: false
+  quadrature: none
+  numpy_legacy_surface: none
+  expected_values_derived_not_hardcoded: true
+  physical_stability_claims: none
+verdict: pass

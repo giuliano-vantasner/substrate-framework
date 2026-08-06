@@ -1,0 +1,30 @@
+attempt: 0005
+campaign: P211
+timestamp_utc: '2026-08-06T07:39:45Z'
+kind: exact_implementation_countermodels_and_independent_review
+base_commit: f268822
+selected_candidates: [A, B, C, D, E, F, H]
+rejected_candidates:
+  G: registry_API_and_memory_searches_confirm_both_exact_surfaces_are_novel
+implementation:
+  module: src/substrate_framework/phase_interactions.py
+  symbols:
+    - QuarticSechPairInteraction
+    - quartic_sech_pair_interaction
+    - ScalarCirclePacking
+    - scalar_circle_packing
+    - pairwise_phase_cosines
+primary_checks: 39
+independent_checks: 26
+focused_tests: 118
+new_module_tests: 19
+scientific_version_failures: 0
+preserved_repairs:
+  - attempt_0003_GitNexus_repository_selector_and_generated_editor_artifact_cleanup
+  - attempt_0004_factored_versus_expanded_independent_coefficient_residual
+scientific_verdict: >-
+  C-QBL-006 and C-PHS-001 survive exact primary and independent verification.
+  GC4's finite pure-cosine, force-universality, stable triple, and exact-count
+  conclusions fail exact terms, force-sign mutations, graph and dimension
+  countermodels, and accepted physical ceilings.
+continuation: replay_the_frozen_source_graph_then_commit_the_verified_implementation

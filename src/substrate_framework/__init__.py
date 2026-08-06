@@ -912,6 +912,15 @@ from .quartic_qball import (
     quartic_qball_profile,
     quartic_qball_residual,
 )
+from .phase_interactions import (
+    QuarticSechPairInteraction,
+    ScalarCirclePacking,
+    pairwise_phase_cosines,
+    quartic_sech_pair_interaction,
+    scalar_circle_packing,
+    sech_pair_density_shape,
+    sech_pair_mixed_cubic_shape,
+)
 from .qball_fluctuations import (
     FluctuationSpectrumEvidence,
     quartic_fluctuation_bound_eigenvalues,
@@ -1593,6 +1602,13 @@ __all__ = [
     "quartic_qball_inverse_width",
     "quartic_qball_profile",
     "quartic_qball_residual",
+    "QuarticSechPairInteraction",
+    "ScalarCirclePacking",
+    "pairwise_phase_cosines",
+    "quartic_sech_pair_interaction",
+    "scalar_circle_packing",
+    "sech_pair_density_shape",
+    "sech_pair_mixed_cubic_shape",
     "retarded_point_source_radiation",
     "project_sine_harmonics",
     "positive_kinetic_mass_evidence",

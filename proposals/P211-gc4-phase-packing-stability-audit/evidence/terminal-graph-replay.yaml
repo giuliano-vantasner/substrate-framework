@@ -1,0 +1,19 @@
+campaign: P211
+artifact: proposals/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
+sha256: 498dc8c52ca68cfd462c9d36b29a91b072fb72a744e58243c678e5d5d7fdc78f
+command: PYTHONPATH=src_.venv/bin/python_proposals/P211-gc4-phase-packing-stability-audit/reviews/replay_source_graph.py
+exit_status: 0
+runtime_checks: 36
+terminal_tally: ALL_36_CHECKS_PASS
+graph: {nodes: 13, static_check_calls: 101, assert_nodes: 19}
+direct_authority_dependencies: 10
+nonauthoritative_cycle_dependencies: 1
+reverse_consumers: 5
+native_source_executions_by_replay: 0
+compatibility:
+  zero_surface_nodes: 12
+  E1_lazy_current_first_references: {current: 1, legacy: 1, eager: 0}
+  installed_branch: numpy_trapezoid
+  version_only_scientific_failures: 0
+future_status_assertions: none_for_cycle_or_reverse_consumers
+verdict: pass

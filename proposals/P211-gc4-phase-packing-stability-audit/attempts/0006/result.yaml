@@ -1,0 +1,18 @@
+attempt: 0006
+campaign: P211
+timestamp_utc: '2026-08-06T07:43:55Z'
+kind: graph_compatibility_surface_classification_repair
+artifact: reviews/replay_source_graph.py
+initial_result: graph_zero_surface_check_failed_after_all_13_hash_and_inventory_pairs_passed
+mechanism: >-
+  Immutable E1 contains one current and one legacy reference in the safe lazy
+  expression np.trapezoid if hasattr(np,trapezoid) else np.trapz.
+repair: >-
+  Require every other node to have zero surface, require E1's exact lazy
+  current-first shape with no eager fallback, and confirm one clean E1 native
+  execution selects the installed current branch.
+E1_native_exit_status: 0
+E1_terminal_tally: ALL_6_CHECKS_PASS
+scientific_version_failures: 0
+scientific_candidate_rejected: false
+continuation: rerun_the_graph_with_the_classified_compatibility_surface
