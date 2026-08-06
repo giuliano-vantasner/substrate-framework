@@ -1,0 +1,33 @@
+campaign: P219
+attempt: 0002
+timestamp_utc: '2026-08-06T11:54:00Z'
+status: passed_with_source_claim_corrections
+stage: compatibility_preflight_source_reproduction_and_body_audit
+source_sha256: ef900954d9782bbf2589ff3e33045577ebdce3860d1a3ed7a6a6827e0ae81788
+compatibility:
+  direct_numpy_trapz: 0
+  imported_legacy_trapz: 0
+  dynamic_numpy_trapz: 0
+  eager_nested_legacy_fallback: 0
+  scientific_version_failure: false
+invocations:
+  - command: relative_framework_venv_from_source_workdir
+    status: invocation_failed_before_import
+    exit_status: 127
+    diagnosis: relative_interpreter_path_resolved_inside_source_directory
+  - command: absolute_framework_venv_from_source_workdir
+    status: source_reproduced
+    exit_status: 0
+    runtime_checks: 6
+    assertions: 1
+    elapsed_seconds: 0.50
+    maximum_resident_kib: 53924
+source_verdict: clean_noncanonical_reproduction_only
+load_bearing_correction:
+  source_coordinate: lambda_A=N_c/(4*F_pi)
+  accepted_coordinate: lambda_BPS=lambda_A/pi^2
+  source_bound: 8*sqrt(2)*pi*N_c*m_pi*B/15
+  corrected_conditional_bound: 8*sqrt(2)*N_c*m_pi*B/(15*pi)
+  error_factor: pi^2
+  corrected_B1_at_supplied_Nc3_mpi13803_over100_MeV: 99.4165288953323
+next_action: preserve_predicate_audit_then_implement_and_independently_prove_shared_functional_theorem

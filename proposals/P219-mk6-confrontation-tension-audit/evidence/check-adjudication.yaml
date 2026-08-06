@@ -1,0 +1,20 @@
+campaign: P219
+source_unit: MK6
+lexical_check_calls: 6
+runtime_checks: 6
+assertion_nodes: 1
+checks:
+  - {id: MK6.1, scientific_surface: BPS_substitution, decision: corrected}
+  - {id: MK6.2, scientific_surface: empirical_mass_threshold, decision: rejected}
+  - {id: MK6.3, scientific_surface: double_counting_diagnosis, decision: rejected}
+  - {id: MK6.4, scientific_surface: scale_power_counting, decision: qualified}
+  - {id: MK6.5, scientific_surface: mass_ratio_comparator, decision: rejected}
+  - {id: MK6.6, scientific_surface: narrow_AST_guard, decision: qualified_lexical_only}
+oracle_failures:
+  - wrong_lambda_coordinate_is_not_mutated
+  - lower_bound_attainment_is_assumed
+  - common_functional_versus_separate_minima_is_not_checked
+  - same_expression_recomputation_is_called_anti_circularity
+  - comparator_AST_guard_does_not_audit_all_comparators_or_selection
+  - printed_headline_values_are_not_asserted_exactly
+terminal_tally_interpretation: all_source_assertions_execute_but_do_not_validate_the_headline_physical_claim

@@ -1,0 +1,58 @@
+campaign: P219
+source_unit: MK6
+predicates:
+  MK6.1:
+    source_verdict: passes_internal_algebra
+    framework_verdict: corrected_and_unaccepted_as_physical
+    reason: >-
+      The source substitutes lambda_A=N_c/(4*F_pi) into the C-BPS-001
+      lambda_BPS bound. C-VEC-002 requires division by pi^2 first. The
+      corrected conditional formula is 8*sqrt(2)*N_c*m_pi*B/(15*pi), not the
+      source pi-multiplied expression. N_c, m_pi, W, lambda_A, and mu are also
+      supplied or lack accepted physical closure, so zero-parameter is false.
+  MK6.2:
+    source_verdict: threshold_passes_only_for_wrong_convention
+    framework_verdict: rejected
+    reason: >-
+      At the source's supplied N_c=3 and m_pi=138.03 MeV, accepted convention
+      conversion gives 99.4165 MeV, about 10.59 percent of the supplied
+      nucleon comparator, rather than 981.2 MeV within five percent. The guard
+      merely recomputes the same expression and uses a tolerance while calling
+      it bit-identical.
+  MK6.3:
+    source_verdict: source_boolean_passes
+    framework_verdict: rejected
+    reason: >-
+      Its both-account predicate depends on MK6.2 and becomes false after the
+      pi-squared correction. NY1 is a conditional common-unit identity rather
+      than an accepted classical-sector mass assignment. The joint functional
+      is minimized on one shared profile; the source never sums its displayed
+      936.5 and 981.2 values and the 1114.4 value cannot localize its cause.
+  MK6.4:
+    source_verdict: conditional_power_counting_algebra_partly_survives
+    framework_verdict: qualified_only
+    reason: >-
+      A separately declared scale estimate has an (F_pi/m_pi)^(4/3) power and
+      differs from the local epsilon coordinate. In the accepted lambda
+      convention its omitted constant gains pi^(4/3) and retains B and N_c.
+      No controlled expansion, coefficient, error, or accepted physical input
+      makes it the actual near-BPS control parameter or proves an O(1) regime.
+  MK6.5:
+    source_verdict: conditional_numeric_substitution_reproduces
+    framework_verdict: rejected_as_framework_confrontation
+    reason: >-
+      Both profile coefficients, the electron and proton inputs, unit map, and
+      physical state interpretation are outside the accepted dependency
+      closure. The prose reports 1833.6 and 0.14 percent while executable
+      inputs produce 1832.7 and 0.19 percent. No accepted model is falsified.
+  MK6.6:
+    source_verdict: narrow_kappa_literal_guard_passes
+    framework_verdict: qualified_lexical_evidence_only
+    reason: >-
+      The AST scan excludes selected reconstructed kappa needles and selected
+      identifiers but does not establish concept-selection blinding or input
+      provenance. It explicitly embeds other empirical comparators. Its free
+      symbol check retains supplied N_c and m_pi and cannot establish a
+      zero-input prediction.
+headline_verdict: source_tension_diagnosis_does_not_survive_accepted_conventions_or_dependencies
+positive_replacement: exact_shared_functional_infimum_theorem_and_typed_convention_ledger

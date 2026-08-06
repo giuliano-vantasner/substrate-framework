@@ -96,6 +96,15 @@ of comparator blinding. A failed source diagnosis triggers convention repair,
 a different variational representation, or duplicate-only qualification; it
 does not end the positive framework effort.
 
+Attempt 0002 records one pre-import invocation-path failure and the corrected
+single native reproduction: all six source checks pass in 0.50 seconds with no
+NumPy integration surface. Source inspection then finds the load-bearing
+convention error. MK2's `N_c/(4F_pi)` is `lambda_A`, so C-VEC-002 divides it
+by `pi^2` before C-BPS-001. The conditional supplied-input result is 99.4165
+MeV, not 981.2 MeV; MK6.3's both-near-nucleon premise becomes false. The
+source also never supplies the shared-minimizer logic needed to turn one joint
+functional into a sum of separately minimized sector masses.
+
 ## Debt Ledger
 
 The ledger tracks source predicates, lambda ownership, target-potential
@@ -105,11 +114,11 @@ difference, compatibility, novelty, consumers, and generated records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MK6 body and predicates remain unopened | Reproduce after committed freeze | open |
-| Lambda coordinate may be misapplied | Independent elimination in both conventions | open |
-| Lower bound may be called an attained mass | Explicit attainment and slack audit | open |
-| Sector components may be added after separate minimization | Shared-functional theorem and counterexample | open |
-| Physical pion nucleon electron or binding maps may leak | Accepted-dependency and free-symbol audit | open |
+| MK6 body and predicates remain unopened | Reproduce after committed freeze | discharged by attempt 0002 |
+| Lambda coordinate may be misapplied | Independent elimination in both conventions | source error identified; independent route open |
+| Lower bound may be called an attained mass | Explicit attainment and slack audit | source overreach identified; replacement proof open |
+| Sector components may be added after separate minimization | Shared-functional theorem and counterexample | implementation open |
+| Physical pion nucleon electron or binding maps may leak | Accepted-dependency and free-symbol audit | source leakage identified; graph audit open |
 | Proposed theorem may duplicate existing work | Registry campaign module and memory search | open |
 | Later MR units may grant backward authority | Hash-pinned source graph replay | open |
 | Governed records remain unresolved | Claim review disposition and canonicalization | open |

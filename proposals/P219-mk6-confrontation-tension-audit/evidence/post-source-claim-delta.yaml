@@ -1,0 +1,16 @@
+campaign: P219
+provisional_claim: C-VAR-002
+decision: retain_for_implementation_and_independent_review
+scope: >-
+  Exact finite-family theorem for real-valued functionals bounded below on one
+  common nonempty admissible set: infimum of the sum is at least the sum of
+  component infima; equality is equivalent to a common minimizing sequence,
+  and under joint attainment it is equivalent to a common minimizer.
+excluded:
+  - physical_generalized_Skyrme_action_or_state
+  - existence_or_attainment_for_any_field_model
+  - additive_sector_mass_interpretation
+  - coefficient_value_or_empirical_prediction
+  - MK6_BPS_mass_double_counting_or_falsification_claim
+expected_dependencies: []
+compatibility_context: [C-GSK-001, C-BPS-001, C-VAR-001]

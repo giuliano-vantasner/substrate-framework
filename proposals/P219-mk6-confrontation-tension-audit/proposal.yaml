@@ -50,5 +50,19 @@ comparators_blinded_until: >-
   double-counting diagnosis. Remaining equations, constants, predicates,
   output, and consumer details stay unopened until this contract, formula
   freeze, provenance record, validation record, and freeze commit exist.
-status: draft
-revision: 0001
+status: active
+revision: 0002
+opened_source_findings:
+  source_lambda_symbol: lambda_A_from_MK2
+  source_bound_coordinate: incorrectly_treated_as_lambda_BPS
+  correction_factor: divide_source_BPS_mass_by_pi_squared
+  corrected_supplied_input_mass_MeV: 99.4165288953323
+  double_counting_predicate_after_correction: false
+  scale_power_survivor: conditional_F_pi_over_m_pi_to_four_thirds_with_changed_constant
+claim_refinement:
+  decision: retain_C_VAR_002_and_reject_source_physical_claims
+  reason: >-
+    The source diagnosis fails accepted convention and dependency closure, but
+    the exact common-functional theorem is novel, positive, and directly
+    prevents separately minimized sector values from being misread as an
+    additive decomposition of one joint variational problem.
