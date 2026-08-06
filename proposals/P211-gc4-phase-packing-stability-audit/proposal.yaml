@@ -1,0 +1,65 @@
+id: P211
+base_release: v0.152.0
+base_commit: f04062b920c9f63dddf1c38e47fe0254a1045053
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [GC4]
+question: >-
+  What exact interaction and phase-packing conclusions follow for the declared
+  localized complex trial profiles, and do they establish a stable finite
+  coexistence or select exactly three condensates rather than only a
+  conditional pairwise phase-capacity bound?
+invariants:
+  - C-QBL-001 supplies one exact quartic stationary profile but no VK spectral orbital or nonlinear stability theorem and no forced complex ontology.
+  - C-QBL-003 supplies an unconstrained scalar Hessian with a negative mode and does not establish fixed-charge or nonlinear Q-ball stability.
+  - C-OVL-001 and C-OVL-002 supply conditional one-profile overlap and translated-well formulas but no common nonlinear multisoliton solution.
+  - C-MIX-003 supplies conditional common-phase matrix algebra and no condensate stability or selected count.
+  - A static trial-field interaction-energy sign is not a force without separation differentiation and is not dynamical stability without equations constraints and a stability oracle.
+  - Strict pairwise cosine negativity nonpositivity and sparse interaction graphs are distinct phase-packing problems.
+  - Pending GC5 is a nonauthoritative cycle edge and cannot support GC4.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events are never scientific failures.
+allowed_imports:
+  - C-QBL-001 C-QBL-003 C-QBL-005 C-OVL-001 C-OVL-002 and C-MIX-003 only at their accepted conditional mathematical ceilings
+  - terminal E1 EM6 FG2 FG4 GC1 GC2 GC3 MH2 WM7 and WM10 mappings at v0.152.0 without rejected physical interpretations
+  - elementary circle geometry Fourier sums and finite graph theory with every imported lemma independently reproduced
+  - SymPy for exact phase identities derivatives and tractable sech overlap integrals
+  - NumPy only for hash-pinned source reproduction or regression of an unresolved finite integral after equations and thresholds freeze
+  - hash-pinned GC4 only after the freeze gate as noncanonical source evidence
+candidates:
+  - id: A
+    description: Derive the exact cross-energy of the declared complex trial-field superposition from the displayed energy functional before assigning attraction or repulsion.
+  - id: B
+    description: Isolate any large-separation leading kernel K(d)cos(delta) and derive force sign and decay from K and its derivative with explicit remainder control.
+  - id: C
+    description: Prove the exact scalar-circle capacity theorem that strict pairwise cosine negativity permits at most three phases while nonpositivity permits four.
+  - id: D
+    description: Test whether the capacity theorem supplies only an upper bound rather than existence selection or stability at exactly three.
+  - id: E
+    description: Construct collective radial translation sparse-graph unequal-kernel and higher-internal-dimension countermodels to universal three-condensate stability.
+  - id: F
+    description: Require a common nonlinear field solution conserved constraints and a spectral Lyapunov or evolution oracle before accepting coexistence stability.
+  - id: G
+    description: Select no new claim if accepted overlap Q-ball or matrix claims already own every surviving exact result.
+  - id: H
+    description: Give GC4 an individual terminal disposition and replay GC5 and the remaining reverse consumers without granting them authority.
+uniqueness_evidence: null
+selection_criteria:
+  - exact functional and field-type fidelity
+  - separation of energy force equilibrium and dynamical stability
+  - strict versus weak phase inequalities
+  - assumption and parameter economy
+  - dimension graph and kernel dependence
+  - correct large-separation and coincident limits
+  - novelty beyond accepted Q-ball overlap and phase claims
+  - terminal authority and consumer closure
+claims_proposed: [C-PHS-001]
+reserved_unpromoted_claims: []
+comparators_blinded_until: >-
+  The generated queue exposes GC4's headline, eight static check sites, one
+  assertion, and truncated claims about in-phase attraction, anti-phase
+  repulsion, cosine dependence, exponential decay, stability, and a count of
+  three. The source body, exact functional, fields, grids, phases, tolerances,
+  fits, count proof, remaining predicates, guards, and native output remain
+  unopened until this contract, formula freeze, provenance record, memory
+  validation, clean repository validation, and freeze commit exist.
+status: draft
+revision: 0001

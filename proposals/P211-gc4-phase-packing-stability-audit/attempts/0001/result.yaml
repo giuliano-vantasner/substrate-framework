@@ -1,0 +1,15 @@
+attempt: 0001
+campaign: P211
+timestamp_utc: '2026-08-06T07:26:31Z'
+kind: preregistration_authority_and_formula_freeze
+base_commit: f04062b920c9f63dddf1c38e47fe0254a1045053
+base_release: v0.152.0
+source_unit: GC4
+candidates: [A, B, C, D, E, F, G, H]
+claims_proposed: [C-PHS-001]
+source_body_inspected: false
+native_source_executed: false
+exposed_queue_topics: [trial_pair_interaction_sign, cosine_phase_dependence, exponential_decay, coexistence_stability, count_three]
+scientific_version_failures: 0
+verdict: ready_for_repository_and_memory_validation_then_freeze_commit
+continuation: commit_freeze_then_run_AST_compatibility_preflight_and_one_hash_pinned_native_reproduction

@@ -1,0 +1,24 @@
+campaign: P211
+frozen_at: '2026-08-06T07:26:31Z'
+exact_obligations:
+  - Recompute the declared superposition energy minus isolated energies from the actual opened functional without copying the source result.
+  - If E_int(d,delta)=K(d)*cos(delta) survives then derive force as minus the separation derivative and keep the signs of K and K_prime explicit.
+  - Prove that pairwise cos(theta_i-theta_j)<0 on a scalar phase circle implies count at most three.
+  - Exhibit three phases satisfying the strict rule and four satisfying only the weak cos<=0 rule.
+  - Prove that an upper capacity does not select occupancy and that a monotone repulsive pair energy has no finite-separation minimum on an unconfined translation coordinate.
+  - Mutate the interaction graph kernel signs phase dimension and strictness to test every count premise.
+numeric_obligations:
+  - State the opened source equation domain grid integration rule precision and error norm before reproducing any finite values.
+  - Check solver or quadrature status and run grid domain and fit-window refinement only for obligations not fixed exactly.
+  - Compare any fitted decay with an independently derived asymptotic rate and show load-bearing phase or kernel mutations change the verdict.
+forbidden_inferences:
+  - static_interaction_sign_implies_merger_or_persistence_dynamics
+  - pairwise_repulsion_implies_bound_finite_coexistence
+  - capacity_at_most_three_implies_exactly_three_exists_or_is_selected
+  - one_complex_profile_implies_independent_physical_condensates
+  - finite_grid_or_fit_agreement_implies_a_global_theorem
+compatibility_preflight:
+  mutable_policy: numpy_trapezoid_or_trapezoid_integral
+  immutable_policy: record_native_version_stop_then_alias_only_replay
+  scan_shapes: [direct_attribute, imported_name, dynamic_getattr, eager_fallback]
+  version_only_events_are_scientific_failures: false

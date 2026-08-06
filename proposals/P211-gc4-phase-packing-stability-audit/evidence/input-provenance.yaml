@@ -1,0 +1,23 @@
+campaign: P211
+captured_at: '2026-08-06T07:26:31Z'
+framework_commit: f04062b920c9f63dddf1c38e47fe0254a1045053
+base_release: v0.152.0
+accepted_claims: 192
+migration_units: 218
+migration_counts:
+  pending_adjudication: 14
+  migrated: 3
+  qualified: 191
+  duplicate_evidence: 8
+  refuted: 1
+  out_of_scope: 1
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-42/bridge_GC4_stability_forces_three.py
+source_sha256: 3292400544911dca74009a019b24b44f105f8aeb5c68a6172220903950f465bb
+source_bytes: 26753
+source_body_inspected: false
+native_source_executed: false
+queue_exposure_only: true
+memory_role: nonauthoritative_index_and_work_record
+source_worktree_dirty_outside_pinned_file: true
