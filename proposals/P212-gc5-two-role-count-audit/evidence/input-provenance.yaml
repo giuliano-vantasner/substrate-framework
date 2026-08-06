@@ -1,0 +1,23 @@
+campaign: P212
+captured_at: '2026-08-06T08:01:44Z'
+framework_commit: d4f7cf61c9454f7357083fa640f91801c5dd0372
+base_release: v0.153.0
+accepted_claims: 194
+migration_units: 218
+migration_counts:
+  pending_adjudication: 13
+  migrated: 3
+  qualified: 192
+  duplicate_evidence: 8
+  refuted: 1
+  out_of_scope: 1
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_path: merged-framework/bridges/phase-42/bridge_GC5_two_role_structure_and_counts.py
+source_sha256: ffc638accff802c16804bd793b47e1cc5da018d5e0742ace57d9d3207e06b220
+source_bytes: 27885
+source_body_inspected: false
+native_source_executed: false
+queue_exposure_only: true
+memory_role: nonauthoritative_index_and_work_record
+source_worktree_dirty_outside_pinned_file: true

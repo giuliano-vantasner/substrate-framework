@@ -1,0 +1,27 @@
+campaign: P212
+frozen_at: '2026-08-06T08:01:44Z'
+exact_obligations:
+  - Write any opened overlap matrix directly from its declared normalized densities multipliers centers amplitudes widths and integration measure.
+  - For identical translated families prove Y_ij equals one cross-correlation kernel evaluated at R_i-R_j and that every diagonal is the same self-overlap.
+  - If the off-diagonal kernel vanishes with separation prove singular-value convergence to the common diagonal using an explicit matrix-norm bound rather than sampled closeness.
+  - Distinguish equal diagonal entries equal singular-value limits finite-separation splitting and a physical mass hierarchy.
+  - Derive every count from an explicit finite set and map and test injectivity surjectivity label invariance and dormant or shared-field countermodels.
+  - Keep topological charge Noether charge complex field order parameter localized solution stability and binding interaction as separate predicates.
+  - Test whether unequal amplitudes profiles couplings widths offsets or role-incidence maps change the degeneracy and count verdicts.
+  - Audit every GC5 source predicate individually and replay the accepted dependency graph without importing pending GC6.
+numeric_obligations:
+  - State the opened source equation domain grid integration rule precision normalization error metric and terminal status before reproducing any finite value.
+  - Check every solver or quadrature status and run mesh domain tolerance and separation refinement only for obligations not already fixed exactly.
+  - Compare numeric singular values with exact translation-covariant or asymptotic bounds and require load-bearing profile amplitude or incidence mutations to change the verdict.
+forbidden_inferences:
+  - topological_stability_implies_absence_of_a_complex_field_or_order_parameter
+  - absence_of_one_Noether_charge_implies_absence_of_every_binding_interaction
+  - scalar_phase_capacity_three_implies_three_occupied_stable_solutions
+  - one_shared_symbol_or_profile_implies_one_physical_field_species
+  - one_localized_object_per_label_implies_observed_generation_identity
+  - source_code_boolean_or_finite_grid_agreement_implies_a_role_or_count_theorem
+compatibility_preflight:
+  mutable_policy: numpy_trapezoid_or_trapezoid_integral
+  immutable_policy: record_native_version_stop_then_alias_only_replay
+  scan_shapes: [direct_attribute, imported_name, dynamic_getattr, eager_fallback]
+  version_only_events_are_scientific_failures: false
