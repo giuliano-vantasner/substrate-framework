@@ -468,6 +468,12 @@ from .common_phase_matrices import (
     odd_antisymmetric_trace,
     real_gram_relative_basis,
 )
+from .multi_scalar_flavor import (
+    MultiScalarMassBasisLedger,
+    multi_scalar_mass_basis_ledger,
+    off_diagonal_part,
+    takagi_multi_scalar_mass_basis_ledger,
+)
 from .numerics import (
     BVPEvidence,
     IVPEvidence,
@@ -1247,6 +1253,7 @@ __all__ = [
     "StaticPointSourceCountermodel",
     "BiunitaryDecomposition",
     "CommonPhaseGrams",
+    "MultiScalarMassBasisLedger",
     "RealL2TTReadout",
     "RealSymmetricRotation",
     "RealGramRelativeBasis",
@@ -1470,6 +1477,9 @@ __all__ = [
     "regular_l_mode_origin_mismatch",
     "relative_left_basis",
     "odd_antisymmetric_trace",
+    "multi_scalar_mass_basis_ledger",
+    "off_diagonal_part",
+    "takagi_multi_scalar_mass_basis_ledger",
     "unitarity_residual",
     "gauged_scalar_kinetic_density",
     "gaussian_sine_neumann_drive",

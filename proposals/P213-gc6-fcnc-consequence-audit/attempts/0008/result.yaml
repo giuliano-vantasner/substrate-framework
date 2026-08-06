@@ -1,0 +1,14 @@
+attempt: 0008
+campaign: P213
+timestamp_utc: '2026-08-06T08:56:09Z'
+kind: aligned_zero_mass_edge_claim_refinement
+trigger: pre_commit_exact_claim_wording_audit
+original_wording: common_alignment_is_sufficient
+counterexample: Y_family_[Y,-Y]_with_weights_[1,1]_and_nondiagonal_Y
+mechanism: combined_alignment_coefficient_vanishes_so_mass_matrix_is_fully_degenerate
+repair: require_sum_a_v_a_c_a_nonzero_for_the_alignment_sufficiency_corollary
+candidate_selection_changed: false
+claim_identifier_changed: false
+scientific_candidate_rejected: false
+status: repaired
+continuation: add_the_edge_counterexample_to_both_routes_and_rerun_affected_checks

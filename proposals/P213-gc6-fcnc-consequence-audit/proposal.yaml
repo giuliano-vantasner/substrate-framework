@@ -65,7 +65,7 @@ comparators_blinded_until: >-
   contract, formula freeze, provenance record, memory validation, repository
   validation, and freeze commit exist.
 status: active
-revision: 0002
+revision: 0003
 opened_source_equations:
   external_wells: H_R=-d_x^2-12*sech((x-R)/0.7)^2_on_a_finite_Dirichlet_box
   condensate_profiles: Phi_k=A*sech(kappa*(x-(k-1)*cond_sep))
@@ -89,3 +89,10 @@ opened_source_parameters:
   hierarchy_threshold: 10.0
   suppression_factor_threshold: 100.0
   final_ratio_threshold: 0.0001
+claim_refinement:
+  C-MIX-004_alignment_condition: >-
+    If Y_a=c_a*Y, common alignment is sufficient in any mass basis only when
+    the combined coefficient sum_a(v_a*c_a) is nonzero; then each transformed
+    coupling is c_a*D/sum_b(v_b*c_b). A zero combined coefficient makes M zero
+    and leaves an arbitrary degenerate mass basis, so alignment alone does not
+    force individual diagonality there.

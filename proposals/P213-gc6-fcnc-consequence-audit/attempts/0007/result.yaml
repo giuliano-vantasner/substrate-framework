@@ -1,0 +1,16 @@
+attempt: 0007
+campaign: P213
+timestamp_utc: '2026-08-06T08:54:43Z'
+kind: independent_trace_expression_canonicalization_repair
+initial_command: fresh_independent_flavor_review
+checks_passed_before_stop: 9
+initial_result: structurally_different_equal_rational_expressions_compared_false
+mechanism: >-
+  SymPy retained the expected trace family with an expanded numerator and
+  denominator while the independently derived expression was factored; their
+  simplified difference is exactly zero.
+repair: compare_the_exact_simplified_difference_to_zero
+primary_route_status: ALL_38_CHECKS_PASS
+scientific_candidate_rejected: false
+status: repaired
+continuation: rerun_only_the_independent_route_because_the_primary_route_and_shared_code_are_unchanged

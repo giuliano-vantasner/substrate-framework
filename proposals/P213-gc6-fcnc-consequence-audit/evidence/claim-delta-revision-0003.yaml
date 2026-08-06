@@ -1,0 +1,39 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:56:09Z'
+supersedes_proposal_wording_only: evidence/post-source-claim-delta.yaml
+reason: >-
+  The frozen statement omitted the zero combined aligned coefficient edge
+  case. If every Y_a=c_a*Y but sum_a(v_a*c_a)=0, the mass matrix vanishes and
+  an arbitrary degenerate mass basis need not diagonalize the individual
+  aligned couplings.
+claim:
+  id: C-MIX-004
+  refined_statement: >-
+    Let a finite nonempty family of same-size square complex matrices Y_a and
+    complex weights v_a define M=sum_a v_a*Y_a. For any unitary U_L and U_R
+    such that D=U_L^dagger*M*U_R is diagonal, define
+    Gamma_a=U_L^dagger*Y_a*U_R. Then D=sum_a v_a*Gamma_a exactly. Vanishing
+    off-diagonal entries of D constrain only their weighted sums and do not
+    force any individual Gamma_a to be diagonal. Conditional on a separately
+    declared multi-scalar interaction, neutral couplings are flavor diagonal
+    in this fixed mass basis exactly when every Gamma_a is diagonal. If
+    Y_a=c_a*Y and C=sum_a v_a*c_a is nonzero, alignment is sufficient because
+    Gamma_a=c_a*D/C; if C=0, M=0 and the conclusion does not follow. For a
+    complex symmetric mass matrix with Takagi basis U, the right basis is
+    conjugate(U), so the correct transform is U^dagger*Y_a*conjugate(U), not
+    U^dagger*Y_a*U. Repeated singular values retain additional simultaneous
+    basis freedom. The theorem supplies no field content, scalar or generation
+    count, interaction derivation, spatial suppression, physical rate or
+    bound, observation, Standard Model, or substrate realization.
+  dependencies: [C-MIX-001]
+exact_counterexample:
+  reference: [[0, 1], [1, 0]]
+  couplings: [Y, -Y]
+  weights: [1, 1]
+  combined_coefficient: 0
+  mass_matrix: [[0, 0], [0, 0]]
+  declared_mass_basis: identity
+  individual_couplings_diagonal: false
+selection_changed: false
+claim_identifier_changed: false
+status: frozen_before_promotion

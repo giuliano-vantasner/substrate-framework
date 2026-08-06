@@ -2,7 +2,7 @@
 description: Audit GC6 neutral-scalar flavor consequence and final GC verdict
 author: vantasner
 created: '2026-08-06T08:39:21Z'
-updated: '2026-08-06T08:45:17Z'
+updated: '2026-08-06T08:58:09Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -112,6 +112,13 @@ For complex symmetric `M`, a Takagi basis uses `U_R=conjugate(U_L)`; GC6's
 owns the source geometry's conditional tail dependence, so no new overlap
 identifier is proposed.
 
+The alignment corollary retains one necessary edge condition. If
+`Y_a=c_a*Y` and `C=sum_a v_a*c_a` is nonzero, then
+`Gamma_a=c_a*D/C` is diagonal. If `C=0`, the mass matrix vanishes and an
+arbitrary degenerate mass basis need not diagonalize the individual aligned
+couplings. This condition is part of C-MIX-004 rather than hidden in a basis
+choice.
+
 ## Implementation and Oracle Plan
 
 SymPy will derive mass matrices, biunitary transformations, mass-basis neutral
@@ -159,6 +166,38 @@ Attempt 0004 freezes C-MIX-004 and candidates A, C, E, F, G, and H before
 implementation. Candidate B remains conditional numeric campaign evidence
 already bounded by C-OVL-002, while candidate D is rejected because the general
 biunitary multi-scalar reconstruction is not owned by C-OVL-003.
+
+Attempt 0005 preserves the primary verifier stopping after four provenance
+checks because YAML loaded the unquoted revision token `0002` as integer `2`.
+The type-aware comparison repairs the oracle before any scientific check ran;
+no claim, tolerance, or candidate changed.
+
+Attempt 0006 preserves the repaired primary route passing 36 checks before a
+brittle registry prose pin searched for wording not present in C-OVL-005. The
+check now pins the accepted statement's actual `physical mass or hierarchy`
+ceiling; all prior exact, mutation, numeric, and refinement results remain
+unchanged.
+
+Attempt 0007 preserves the fresh independent route passing nine exact checks
+before structurally comparing factored and expanded versions of the same trace
+family. Their simplified difference is exactly zero, so only that independent
+oracle is repaired and rerun; the already closed 38-check primary route is not
+repeated.
+
+Attempt 0008 tightens the alignment corollary before commit. The aligned family
+`(Y,-Y)` with weights `(1,1)` has zero mass matrix while a declared identity
+mass basis leaves nondiagonal individual couplings. C-MIX-004 therefore requires
+nonzero `sum_a v_a*c_a` for alignment alone to imply diagonality; the candidate,
+identifier, and selection remain unchanged.
+
+Attempt 0009 completes the additive implementation. Forty primary checks cover
+the canonical exact theorem, mutations, source finite-box reproduction,
+corrected biunitary ratios, grid refinement, trace family, authority ceilings,
+and spacing counterexample. Eighteen fresh checks rederive the matrix theorem
+without the new API and replace the finite-box eigensolver with exact whole-line
+Pöschl modes plus adaptive quadrature. All 192 focused package and accepted-
+consumer tests pass, and the new canonical module has no NumPy or quadrature
+surface.
 
 ## Debt Ledger
 

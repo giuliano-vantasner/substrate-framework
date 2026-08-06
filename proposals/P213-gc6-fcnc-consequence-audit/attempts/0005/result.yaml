@@ -1,0 +1,15 @@
+attempt: 0005
+campaign: P213
+timestamp_utc: '2026-08-06T08:53:34Z'
+kind: yaml_revision_type_oracle_repair
+initial_command: primary_exact_and_numeric_verifier
+checks_passed_before_stop: 4
+initial_result: proposal_revision_comparison_failed
+mechanism: >-
+  YAML parses the unquoted fixed-width token 0002 as integer 2, while the
+  verifier compared it to the string 0002.
+repair: compare_the_loaded_manifest_revision_to_integer_2
+scientific_checks_executed_before_stop: 0
+scientific_candidate_rejected: false
+status: repaired
+continuation: rerun_the_primary_route_then_run_the_fresh_independent_route

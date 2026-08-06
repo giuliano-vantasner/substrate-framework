@@ -1,0 +1,32 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:58:09Z'
+claim: C-MIX-004
+canonical_module:
+  path: src/substrate_framework/multi_scalar_flavor.py
+  sha256: b69ac02a391c696a555a9e3e6ad1b10cc760e3543e96e3d1493a83a4079ae874
+  imports_numpy: false
+  quadrature_surface: none
+  import_side_effects: none
+canonical_api:
+  - MultiScalarMassBasisLedger
+  - off_diagonal_part
+  - multi_scalar_mass_basis_ledger
+  - takagi_multi_scalar_mass_basis_ledger
+test_module:
+  path: tests/test_multi_scalar_flavor.py
+  sha256: 0fab4fd409ca6705ee47bc5526429aac51684a965f07493fcf8a5d9f61c09d5a
+  tests: 14
+exact_surfaces:
+  - D_equals_sum_a_v_a_Gamma_a
+  - offdiagonal_sum_cancellation_does_not_force_individual_diagonality
+  - fixed_mass_basis_all_Gamma_diagonal_criterion
+  - nonzero_combined_coefficient_alignment_corollary
+  - zero_combined_coefficient_counterexample
+  - correct_complex_symmetric_Takagi_right_basis
+  - degenerate_mass_basis_freedom
+physical_exclusions:
+  - no_derived_Yukawa_interaction
+  - no_scalar_or_generation_count
+  - no_spatial_suppression_or_physical_FCNC_bound
+  - no_Standard_Model_or_substrate_map
+status: passed

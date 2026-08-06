@@ -1,0 +1,15 @@
+campaign: P213
+timestamp_utc: '2026-08-06T08:58:09Z'
+artifact: reviews/independent_flavor_review.py
+sha256: 2b0529c6dd7cf7504bff8b4732301cafa774db9323af89241850a03d2f584bdb
+imports_new_canonical_api: false
+runtime_checks: 18
+static_check_calls: 18
+mutation_sensitive_calls: 0
+assert_statements: 0
+exact_oracle: fresh_SymPy_matrix_rederivation
+numeric_oracle: exact_whole_line_Poschl_ground_shapes_plus_SciPy_adaptive_quadrature
+quadrature_tolerances: {epsabs: 1.0e-11, epsrel: 1.0e-11, refined: 2.0e-12}
+terminal_tally: ALL_18_CHECKS_PASS
+exit_status: 0
+status: passed

@@ -1,0 +1,16 @@
+attempt: 0006
+campaign: P213
+timestamp_utc: '2026-08-06T08:54:05Z'
+kind: registry_ceiling_phrase_pin_repair
+initial_command: repaired_primary_exact_and_numeric_verifier
+checks_passed_before_stop: 36
+initial_result: accepted_overlap_ceiling_phrase_check_failed
+mechanism: >-
+  The verifier searched C-OVL-005 for the phrase physical mixing matrix, while
+  the accepted statement records the relevant ceiling as physical mass or
+  hierarchy and separately excludes Yukawa and generation interpretations.
+repair: pin_the_actual_accepted_statement_phrase_without_changing_the_scientific_predicate
+scientific_checks_passed_before_stop: 20
+scientific_candidate_rejected: false
+status: repaired
+continuation: rerun_the_primary_route_then_execute_the_independent_route
